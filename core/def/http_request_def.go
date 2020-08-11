@@ -24,6 +24,7 @@ type HttpRequestDef struct {
 	RequestFields []*FieldDef
 	Path          string
 	Method        string
+	ContentType   string
 }
 
 type HttpRequestDefBuilder struct {
@@ -47,6 +48,11 @@ func (builder *HttpRequestDefBuilder) WithPath(path string) *HttpRequestDefBuild
 
 func (builder *HttpRequestDefBuilder) WithMethod(method string) *HttpRequestDefBuilder {
 	builder.httpRequestDef.Method = method
+	return builder
+}
+
+func (builder *HttpRequestDefBuilder) WithContentType(contentType string) *HttpRequestDefBuilder {
+	builder.httpRequestDef.ContentType = contentType
 	return builder
 }
 

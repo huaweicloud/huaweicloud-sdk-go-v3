@@ -9,7 +9,8 @@ import (
 func GenReqDefForCreateTracker(request *model.CreateTrackerRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v3/{project_id}/tracker")
+    WithPath("/v3/{project_id}/tracker").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -176,7 +177,8 @@ func GenRespForListTrackers() (*model.ListTrackersResponse, *def.HttpResponseDef
 func GenReqDefForUpdateTracker(request *model.UpdateTrackerRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPut).
-    WithPath("/v3/{project_id}/tracker")
+    WithPath("/v3/{project_id}/tracker").
+    WithContentType("application/json;charset=UTF-8")
 
 
 

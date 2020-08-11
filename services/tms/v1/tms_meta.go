@@ -9,7 +9,8 @@ import (
 func GenReqDefForCreatePredefineTags(request *model.CreatePredefineTagsRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v1.0/predefine_tags/action")
+    WithPath("/v1.0/predefine_tags/action").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -38,7 +39,8 @@ func GenRespForCreatePredefineTags() (*model.CreatePredefineTagsResponse, *def.H
 func GenReqDefForDeletePredefineTags(request *model.DeletePredefineTagsRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v1.0/predefine_tags/action")
+    WithPath("/v1.0/predefine_tags/action").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -172,7 +174,8 @@ func GenRespForShowApiVersion() (*model.ShowApiVersionResponse, *def.HttpRespons
 func GenReqDefForUpdatePredefineTags(request *model.UpdatePredefineTagsRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPut).
-    WithPath("/v1.0/predefine_tags")
+    WithPath("/v1.0/predefine_tags").
+    WithContentType("application/json;charset=UTF-8")
 
 
 

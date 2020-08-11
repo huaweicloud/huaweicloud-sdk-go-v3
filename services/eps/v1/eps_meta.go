@@ -9,7 +9,8 @@ import (
 func GenReqDefForCreateEP(request *model.CreateEPRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v1.0/enterprise-projects")
+    WithPath("/v1.0/enterprise-projects").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -38,7 +39,8 @@ func GenRespForCreateEP() (*model.CreateEPResponse, *def.HttpResponseDef) {
 func GenReqDefForDisableEP(request *model.DisableEPRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v1.0/enterprise-projects/{enterprise_project_id}/action")
+    WithPath("/v1.0/enterprise-projects/{enterprise_project_id}/action").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("enterprise_project_id").
@@ -70,7 +72,8 @@ func GenRespForDisableEP() (*model.DisableEPResponse, *def.HttpResponseDef) {
 func GenReqDefForEnableEP(request *model.EnableEPRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v1.0/enterprise-projects/{enterprise_project_id}/action")
+    WithPath("/v1.0/enterprise-projects/{enterprise_project_id}/action").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("enterprise_project_id").
@@ -179,7 +182,8 @@ func GenRespForListEP() (*model.ListEPResponse, *def.HttpResponseDef) {
 func GenReqDefForMigrateResource(request *model.MigrateResourceRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v1.0/enterprise-projects/{enterprise_project_id}/resources-migrate")
+    WithPath("/v1.0/enterprise-projects/{enterprise_project_id}/resources-migrate").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("enterprise_project_id").
@@ -211,7 +215,8 @@ func GenRespForMigrateResource() (*model.MigrateResourceResponse, *def.HttpRespo
 func GenReqDefForModifyEP(request *model.ModifyEPRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPut).
-    WithPath("/v1.0/enterprise-projects/{enterprise_project_id}")
+    WithPath("/v1.0/enterprise-projects/{enterprise_project_id}").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("enterprise_project_id").
@@ -333,7 +338,8 @@ func GenRespForShowEPQuota() (*model.ShowEPQuotaResponse, *def.HttpResponseDef) 
 func GenReqDefForShowResourceBindEP(request *model.ShowResourceBindEPRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v1.0/enterprise-projects/{enterprise_project_id}/resources/filter")
+    WithPath("/v1.0/enterprise-projects/{enterprise_project_id}/resources/filter").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("enterprise_project_id").

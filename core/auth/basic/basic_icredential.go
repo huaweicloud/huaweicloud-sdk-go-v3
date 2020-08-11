@@ -26,9 +26,10 @@ import (
 )
 
 type Credentials struct {
-	AK        string
-	SK        string
-	ProjectId string
+	AK            string
+	SK            string
+	ProjectId     string
+	SecurityToken string
 }
 
 func (s Credentials) ProcessAuthRequest(req *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {
@@ -39,8 +40,12 @@ func (s Credentials) ProcessAuthRequest(req *request.DefaultHttpRequest) (*reque
 		reqBuilder.AddHeaderParam("X-Project-Id", s.ProjectId)
 	}
 
+	if s.SecurityToken != "" {
+		reqBuilder.AddHeaderParam("X-Security-Token", s.SecurityToken)
+	}
+
 	if _, ok := req.GetHeaderParams()["Content-Type"]; ok {
-		if strings.Contains(req.GetHeaderParams()["Content-Type"], "application/json") {
+		if !strings.Contains(req.GetHeaderParams()["Content-Type"], "application/json") {
 			reqBuilder.AddHeaderParam("X-Sdk-Content-Sha256", "UNSIGNED-PAYLOAD")
 		}
 	}
@@ -79,6 +84,11 @@ func (builder *CredentialsBuilder) WithSk(sk string) *CredentialsBuilder {
 
 func (builder *CredentialsBuilder) WithProjectId(projectId string) *CredentialsBuilder {
 	builder.Credentials.ProjectId = projectId
+	return builder
+}
+
+func (builder *CredentialsBuilder) WithSecurityToken(token string) *CredentialsBuilder {
+	builder.Credentials.SecurityToken = token
 	return builder
 }
 

@@ -9,7 +9,8 @@ import (
 func GenReqDefForRunTemplateJobV2(request *model.RunTemplateJobV2Request) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v1/jobs/template")
+    WithPath("/v1/jobs/template").
+    WithContentType("application/json;charset=UTF-8")
 
 
 

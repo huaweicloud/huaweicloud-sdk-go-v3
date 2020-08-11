@@ -40,7 +40,8 @@ func GenRespForAcceptVpcPeering() (*model.AcceptVpcPeeringResponse, *def.HttpRes
 func GenReqDefForCreatePort(request *model.CreatePortRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v1/{project_id}/ports")
+    WithPath("/v1/{project_id}/ports").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -69,7 +70,8 @@ func GenRespForCreatePort() (*model.CreatePortResponse, *def.HttpResponseDef) {
 func GenReqDefForCreateSecurityGroup(request *model.CreateSecurityGroupRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v1/{project_id}/security-groups")
+    WithPath("/v1/{project_id}/security-groups").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -98,7 +100,8 @@ func GenRespForCreateSecurityGroup() (*model.CreateSecurityGroupResponse, *def.H
 func GenReqDefForCreateSecurityGroupRule(request *model.CreateSecurityGroupRuleRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v1/{project_id}/security-group-rules")
+    WithPath("/v1/{project_id}/security-group-rules").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -127,7 +130,8 @@ func GenRespForCreateSecurityGroupRule() (*model.CreateSecurityGroupRuleResponse
 func GenReqDefForCreateSubnet(request *model.CreateSubnetRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v1/{project_id}/subnets")
+    WithPath("/v1/{project_id}/subnets").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -156,7 +160,8 @@ func GenRespForCreateSubnet() (*model.CreateSubnetResponse, *def.HttpResponseDef
 func GenReqDefForCreateVpcPeering(request *model.CreateVpcPeeringRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v2.0/vpc/peerings")
+    WithPath("/v2.0/vpc/peerings").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -787,7 +792,8 @@ func GenRespForShowVpcPeering() (*model.ShowVpcPeeringResponse, *def.HttpRespons
 func GenReqDefForUpdatePort(request *model.UpdatePortRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPut).
-    WithPath("/v1/{project_id}/ports/{port_id}")
+    WithPath("/v1/{project_id}/ports/{port_id}").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("port_id").
@@ -819,7 +825,8 @@ func GenRespForUpdatePort() (*model.UpdatePortResponse, *def.HttpResponseDef) {
 func GenReqDefForUpdateSubnet(request *model.UpdateSubnetRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPut).
-    WithPath("/v1/{project_id}/vpcs/{vpc_id}/subnets/{subnet_id}")
+    WithPath("/v1/{project_id}/vpcs/{vpc_id}/subnets/{subnet_id}").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("vpc_id").
@@ -854,7 +861,8 @@ func GenRespForUpdateSubnet() (*model.UpdateSubnetResponse, *def.HttpResponseDef
 func GenReqDefForUpdateVpcPeering(request *model.UpdateVpcPeeringRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPut).
-    WithPath("/v2.0/vpc/peerings/{peering_id}")
+    WithPath("/v2.0/vpc/peerings/{peering_id}").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("peering_id").
@@ -886,7 +894,8 @@ func GenRespForUpdateVpcPeering() (*model.UpdateVpcPeeringResponse, *def.HttpRes
 func GenReqDefForCreatePrivateip(request *model.CreatePrivateipRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v1/{project_id}/privateips")
+    WithPath("/v1/{project_id}/privateips").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -1014,7 +1023,8 @@ func GenRespForShowPrivateip() (*model.ShowPrivateipResponse, *def.HttpResponseD
 func GenReqDefForCreateVpc(request *model.CreateVpcRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v1/{project_id}/vpcs")
+    WithPath("/v1/{project_id}/vpcs").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -1043,7 +1053,8 @@ func GenRespForCreateVpc() (*model.CreateVpcResponse, *def.HttpResponseDef) {
 func GenReqDefForCreateVpcRoute(request *model.CreateVpcRouteRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v2.0/vpc/routes")
+    WithPath("/v2.0/vpc/routes").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -1285,7 +1296,8 @@ func GenRespForShowVpcRoute() (*model.ShowVpcRouteResponse, *def.HttpResponseDef
 func GenReqDefForUpdateVpc(request *model.UpdateVpcRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPut).
-    WithPath("/v1/{project_id}/vpcs/{vpc_id}")
+    WithPath("/v1/{project_id}/vpcs/{vpc_id}").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("vpc_id").

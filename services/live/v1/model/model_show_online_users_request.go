@@ -1,0 +1,21 @@
+/*
+    * LiveAPI
+    *
+    * 直播服务源站所有接口
+    *
+*/
+
+package model
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+)
+
+// Request Object
+type ShowOnlineUsersRequest struct {
+	Domain string `json:"domain"`
+	AppName string `json:"app_name,omitempty"`
+	StreamName string `json:"stream_name,omitempty"`
+	StartTime *sdktime.SdkTime `json:"start_time,omitempty"`
+	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
+	Step int32 `json:"step,omitempty"`
+}

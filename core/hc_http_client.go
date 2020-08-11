@@ -73,6 +73,9 @@ func (hc *HcHttpClient) buildRequest(req interface{}, reqDef *def.HttpRequestDef
 		WithPath(reqDef.Path).
 		WithBody(reqDef.BodyJson)
 
+	if reqDef.ContentType != "" {
+		builder.AddHeaderParam("Content-Type", reqDef.ContentType)
+	}
 	builder.AddHeaderParam("User-Agent", "huaweicloud-sdk-go/3.0")
 
 	builder, err := hc.fillParamsFromReq(req, reqDef, builder)

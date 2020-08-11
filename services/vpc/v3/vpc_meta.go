@@ -9,7 +9,8 @@ import (
 func GenReqDefForBatchCreateSubNetworkInterfaceV3(request *model.BatchCreateSubNetworkInterfaceV3Request) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v3/{project_id}/vpc/sub-network-interfaces/batch-create")
+    WithPath("/v3/{project_id}/vpc/sub-network-interfaces/batch-create").
+    WithContentType("application/json")
 
 
 
@@ -38,7 +39,8 @@ func GenRespForBatchCreateSubNetworkInterfaceV3() (*model.BatchCreateSubNetworkI
 func GenReqDefForCreateSubNetworkInterface(request *model.CreateSubNetworkInterfaceRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v3/{project_id}/vpc/sub-network-interfaces")
+    WithPath("/v3/{project_id}/vpc/sub-network-interfaces").
+    WithContentType("application/json")
 
 
 
@@ -212,7 +214,8 @@ func GenRespForShowSubNetworkInterfacesQuantity() (*model.ShowSubNetworkInterfac
 func GenReqDefForUpdateSubNetworkInterface(request *model.UpdateSubNetworkInterfaceRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPut).
-    WithPath("/v3/{project_id}/vpc/sub-network-interfaces/{sub_network_interface_id}")
+    WithPath("/v3/{project_id}/vpc/sub-network-interfaces/{sub_network_interface_id}").
+    WithContentType("application/json")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("sub_network_interface_id").

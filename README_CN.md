@@ -39,9 +39,11 @@
 
 ## 开始使用
 
+以使用虚拟私有云VPC SDK为例，您需要安装`github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2`：
+
 1. 导入依赖模块:
 
-    ```go
+    ``` go
     import (
         "fmt"
         "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
@@ -57,14 +59,14 @@
 
     2.1 默认配置
 
-    ```go
+    ``` go
     # Use default configuration
     httpConfig := config.DefaultHttpConfig()
     ```
 
     2.2 网络代理（可选）
 
-    ```go
+    ``` go
     // 根据需要配置网络代理
     httpConfig.WithProxy(config.NewProxy().
         WithSchema("http").
@@ -86,41 +88,90 @@
     // 根据需要配置是否跳过SSL证书校验
     httpConfig.WithIgnoreSSLVerification(true);
 
-3. 初始化客户端:
+3. 初始化认证信息
 
-    ```go
+    **说明**：
+    华为云服务存在两种部署方式，Region级服务和Global级服务。Global级服务当前仅支持IAM, TMS, EPS。
+    
+    Region级服务仅需要提供 projectId。Global级服务需要提供domainId。
+
+    - `ak` 华为云账号 Access Key 。
+    - `sk` 华为云账号 Secret Access Key 。
+    - `projectId` 云服务所在项目 ID ，根据你想操作的项目所属区域选择对应的项目 ID 。
+    - `domainId` 华为云账号ID 。
+    - `securityToken` 采用临时AK/SK认证场景下的安全票据。
+
+    3.1 使用永久AK/SK
+    
+    ``` go
+    // Region级服务
+    auth := basic.NewCredentialsBuilder().
+                WithAk(ak).
+                WithSk(sk).
+                WithProjectId(projectId).
+                Build()
+   
+    // Global级服务
+    auth := global.NewCredentialsBuilder().
+                WithAk(ak).
+                WithSk(sk).
+                WithDomainId(domainId).
+                Build()
+    ```
+    
+    3.2 使用临时AK/SK
+    
+    首选需要获得临时AK、SK和SecurityToken，获取可以从永久AK/SK获得，或者通过委托授权首选获得。
+    
+    通过永久AK/SK获得可以参考文档：https://support.huaweicloud.com/api-iam/iam_04_0002.html, 对应IAM SDK 中的createTemporaryAccessKeyByToken方法。
+    
+    通过委托授权获得可以参考文档：https://support.huaweicloud.com/api-iam/iam_04_0101.html, 对应IAM SDK 中的createTemporaryAccessKeyByAgency方法。
+    
+    ``` go
+    // Region级服务
+    auth := basic.NewCredentialsBuilder().
+                WithAk(ak).
+                WithSk(sk).
+                WithProjectId(projectId).
+                WithSecurityToken(securityToken).
+                Build()
+   
+    // Global级服务
+    auth := global.NewCredentialsBuilder().
+                WithAk(ak).
+                WithSk(sk).
+                WithDomainId(domainId).
+                WithSecurityToken(securityToken).
+                Build()
+    ```
+
+4. 初始化客户端:
+
+    ``` go
+    // 初始化指定云服务的客户端 New{Service}Client ，以初始化 NewVpcClient 为例
     client := vpc.NewVpcClient(
         vpc.VpcClientBuilder().
-            WithEndpoint("{your endpoint}").
-            WithCredential(
-                basic.NewCredentialsBuilder().
-                    WithAk("{your ak string}").
-                    WithSk("{your sk string}").
-                    WithProjectId("{your project id}").
-                    Build()).
+            WithEndpoint(endpoint).
+            WithCredential(auth).
             WithHttpConfig(config.DefaultHttpConfig()).  
             Build())
     ```
 
     **说明:**
-    - `ak` 华为云账号Access Key。
-    - `sk` 华为云账号Secret Access Key。
-    - `project_id` 云服务所在项目 ID。
     - `endpoint` 华为云各服务应用区域和各服务的终端节点，详情请查看[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
     
-4. 发送请求并查看响应.
+5. 发送请求并查看响应.
 
-    ```go
-    # 初始化请求
-    request := &model.CreateVpcRequest{
-        Body: &model.CreateVpcRequestBody{
-            Vpc: &model.CreateVpcOption{
-                Cidr: "192.168.1.0/24",
-                Name: "TestVpc",
+    ``` go
+    // 初始化请求,，以调用接口 ListVpcs 为例
+    request := &model.ListVpcsRequest{
+        Body: &model.ListVpcsRequestBody{
+            Vpc: &model.ListVpcsOption{
+                limit: 1,
             },
         },
     }
-    response, err := client.CreateVpc(request)
+    response, err := client.ListVpcs(request)
     if err == nil {
         fmt.Printf("%+v\n",response.Vpc)
     } else {
@@ -128,15 +179,15 @@
     }
     ```
 
-5. 异常处理
+6. 异常处理
 
     | 一级分类 | 一级分类说明 |
     | :---- | :---- | 
     | ServiceResponseError | service response error |
     | url.Error | connect endpoint error |
     
-    ```go
-    response, err := client.CreateVpc(request)
+    ``` go
+    response, err := client.ListVpcs(request)
     if err == nil {
         fmt.Println(response)
     } else {
@@ -144,7 +195,7 @@
     }
     ```
 
-6. 原始Http侦听器
+7. 原始Http侦听器
 
     在某些场景下可能对业务发出的Http请求进行Debug，需要看到原始的Http请求和返回信息，SDK提供侦听器功能来获取原始的为加密的Http请求和返回信息。
 
@@ -179,60 +230,60 @@
 
 ## 代码实例
 
-使用如下代码同步查询特定 Region 下的 VPC 清单，调用前请根据实际情况替换如下变量：`{your ak string}`、 `{your sk string}`、 `{your endpoint}` 以及 `{your project id}`。
+- 使用如下代码在特定 Region 下创建 VPC ，实际使用中请将 `vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"` 替换为您使用的产品/服务相应的 `{service} "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/{service}/{version}"`，且初始化为{service}.New{Service}Client。
+- 调用前请根据实际情况替换如下变量： `{your ak string}`、`{your sk string}`、`{your endpoint string}` 以及 `{your project id}`。
 
-```go
-package main
+    ``` go
+    package main
 
-import (
-    "fmt"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
-    vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
-    "net/http"
-)
+    import (
+        "fmt"
+        "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+        "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+        "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
+        vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+        "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
+        "net/http"
+    )
 
-func RequestHandler(request http.Request) {
-    fmt.Println(request)
-}
+    func RequestHandler(request http.Request) {
+        fmt.Println(request)
+    }
 
-func ResponseHandler(response http.Response) {
-    fmt.Println(response)
-}
+    func ResponseHandler(response http.Response) {
+        fmt.Println(response)
+    }
 
-func main() {
-    client := vpc.NewVpcClient(
-        vpc.VpcClientBuilder().
-            WithEndpoint("{your endpoint}").
-            WithCredential(
-                basic.NewCredentialsBuilder().
-                    WithAk("{your ak string}").
-                    WithSk("{your sk string}").
-                    WithProjectId("{your project id}").
-                    Build()).
-            WithHttpConfig(config.DefaultHttpConfig().
-                WithIgnoreSSLVerification(true).
-                WithHttpHandler(httphandler.
-                    NewHttpHandler().
-                        AddRequestHandler(RequestHandler).
-                        AddResponseHandler(ResponseHandler))).
-            Build())
+    func main() {
+        client := vpc.NewVpcClient(
+            vpc.VpcClientBuilder().
+                WithEndpoint("{your endpoint}").
+                WithCredential(
+                    basic.NewCredentialsBuilder().
+                        WithAk("{your ak string}").
+                        WithSk("{your sk string}").
+                        WithProjectId("{your project id}").
+                        Build()).
+                WithHttpConfig(config.DefaultHttpConfig().
+                    WithIgnoreSSLVerification(true).
+                    WithHttpHandler(httphandler.
+                        NewHttpHandler().
+                            AddRequestHandler(RequestHandler).
+                            AddResponseHandler(ResponseHandler))).
+                Build())
 
-    request := &model.CreateVpcRequest{
-        Body: &model.CreateVpcRequestBody{
-            Vpc: &model.CreateVpcOption{
-                Cidr: "192.168.1.0/24",
-                Name: "TestVpc",
+        request := &model.ListVpcsRequest{
+            Body: &model.ListVpcsRequestBody{
+                Vpc: &model.ListVpcsOption{
+                    limit: 1,
+                },
             },
-        },
+        }
+        response, err := client.ListVpcs(request)
+        if err == nil {
+            fmt.Println("%+v\n",response.Vpc)
+        } else {
+            fmt.Println(err)
+        }
     }
-    response, err := client.CreateVpc(request)
-    if err == nil {
-        fmt.Println("%+v\n",response.Vpc)
-    } else {
-        fmt.Println(err)
-    }
-}
-```
+    ```

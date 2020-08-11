@@ -151,7 +151,8 @@ func GenRespForCheckProjectPermissionForAgency() (*model.CheckProjectPermissionF
 func GenReqDefForCreateAgency(request *model.CreateAgencyRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v3.0/OS-AGENCY/agencies")
+    WithPath("/v3.0/OS-AGENCY/agencies").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -180,7 +181,8 @@ func GenRespForCreateAgency() (*model.CreateAgencyResponse, *def.HttpResponseDef
 func GenReqDefForCreateAgencyCustomPolicy(request *model.CreateAgencyCustomPolicyRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v3.0/OS-ROLE/roles")
+    WithPath("/v3.0/OS-ROLE/roles").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -209,7 +211,8 @@ func GenRespForCreateAgencyCustomPolicy() (*model.CreateAgencyCustomPolicyRespon
 func GenReqDefForCreateCloudServiceCustomPolicy(request *model.CreateCloudServiceCustomPolicyRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v3.0/OS-ROLE/roles")
+    WithPath("/v3.0/OS-ROLE/roles").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -544,7 +547,8 @@ func GenRespForKeystoneCheckUserInGroup() (*model.KeystoneCheckUserInGroupRespon
 func GenReqDefForKeystoneCreateGroup(request *model.KeystoneCreateGroupRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v3/groups")
+    WithPath("/v3/groups").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -573,7 +577,8 @@ func GenRespForKeystoneCreateGroup() (*model.KeystoneCreateGroupResponse, *def.H
 func GenReqDefForKeystoneCreateProject(request *model.KeystoneCreateProjectRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v3/projects")
+    WithPath("/v3/projects").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -1451,7 +1456,8 @@ func GenRespForKeystoneShowVersion() (*model.KeystoneShowVersionResponse, *def.H
 func GenReqDefForKeystoneUpdateGroup(request *model.KeystoneUpdateGroupRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPatch).
-    WithPath("/v3/groups/{group_id}")
+    WithPath("/v3/groups/{group_id}").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("group_id").
@@ -1483,7 +1489,8 @@ func GenRespForKeystoneUpdateGroup() (*model.KeystoneUpdateGroupResponse, *def.H
 func GenReqDefForKeystoneUpdateProject(request *model.KeystoneUpdateProjectRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPatch).
-    WithPath("/v3/projects/{project_id}")
+    WithPath("/v3/projects/{project_id}").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("project_id").
@@ -1806,7 +1813,8 @@ func GenRespForShowProjectDetailsAndStatus() (*model.ShowProjectDetailsAndStatus
 func GenReqDefForUpdateAgency(request *model.UpdateAgencyRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPut).
-    WithPath("/v3.0/OS-AGENCY/agencies/{agency_id}")
+    WithPath("/v3.0/OS-AGENCY/agencies/{agency_id}").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("agency_id").
@@ -1838,7 +1846,8 @@ func GenRespForUpdateAgency() (*model.UpdateAgencyResponse, *def.HttpResponseDef
 func GenReqDefForUpdateAgencyCustomPolicy(request *model.UpdateAgencyCustomPolicyRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPatch).
-    WithPath("/v3.0/OS-ROLE/roles/{role_id}")
+    WithPath("/v3.0/OS-ROLE/roles/{role_id}").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("role_id").
@@ -1870,7 +1879,8 @@ func GenRespForUpdateAgencyCustomPolicy() (*model.UpdateAgencyCustomPolicyRespon
 func GenReqDefForUpdateCloudServiceCustomPolicy(request *model.UpdateCloudServiceCustomPolicyRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPatch).
-    WithPath("/v3.0/OS-ROLE/roles/{role_id}")
+    WithPath("/v3.0/OS-ROLE/roles/{role_id}").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("role_id").
@@ -1902,7 +1912,8 @@ func GenRespForUpdateCloudServiceCustomPolicy() (*model.UpdateCloudServiceCustom
 func GenReqDefForUpdateProjectStatus(request *model.UpdateProjectStatusRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPut).
-    WithPath("/v3-ext/projects/{project_id}")
+    WithPath("/v3-ext/projects/{project_id}").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("project_id").
@@ -1934,7 +1945,8 @@ func GenRespForUpdateProjectStatus() (*model.UpdateProjectStatusResponse, *def.H
 func GenReqDefForCreatePermanentAccessKey(request *model.CreatePermanentAccessKeyRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v3.0/OS-CREDENTIAL/credentials")
+    WithPath("/v3.0/OS-CREDENTIAL/credentials").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -1963,7 +1975,8 @@ func GenRespForCreatePermanentAccessKey() (*model.CreatePermanentAccessKeyRespon
 func GenReqDefForCreateTemporaryAccessKeyByAgency(request *model.CreateTemporaryAccessKeyByAgencyRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v3.0/OS-CREDENTIAL/securitytokens")
+    WithPath("/v3.0/OS-CREDENTIAL/securitytokens").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -1992,7 +2005,8 @@ func GenRespForCreateTemporaryAccessKeyByAgency() (*model.CreateTemporaryAccessK
 func GenReqDefForCreateTemporaryAccessKeyByToken(request *model.CreateTemporaryAccessKeyByTokenRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v3.0/OS-CREDENTIAL/securitytokens")
+    WithPath("/v3.0/OS-CREDENTIAL/securitytokens").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -2114,7 +2128,8 @@ func GenRespForShowPermanentAccessKey() (*model.ShowPermanentAccessKeyResponse, 
 func GenReqDefForUpdatePermanentAccessKey(request *model.UpdatePermanentAccessKeyRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPut).
-    WithPath("/v3.0/OS-CREDENTIAL/credentials/{access_key}")
+    WithPath("/v3.0/OS-CREDENTIAL/credentials/{access_key}").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("access_key").
@@ -2146,7 +2161,8 @@ func GenRespForUpdatePermanentAccessKey() (*model.UpdatePermanentAccessKeyRespon
 func GenReqDefForCreateUser(request *model.CreateUserRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v3.0/OS-USER/users")
+    WithPath("/v3.0/OS-USER/users").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -2175,7 +2191,8 @@ func GenRespForCreateUser() (*model.CreateUserResponse, *def.HttpResponseDef) {
 func GenReqDefForKeystoneCreateUser(request *model.KeystoneCreateUserRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v3/users")
+    WithPath("/v3/users").
+    WithContentType("application/json;charset=UTF-8")
 
 
 
@@ -2334,7 +2351,8 @@ func GenRespForKeystoneShowUser() (*model.KeystoneShowUserResponse, *def.HttpRes
 func GenReqDefForKeystoneUpdateUserByAdmin(request *model.KeystoneUpdateUserByAdminRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPatch).
-    WithPath("/v3/users/{user_id}")
+    WithPath("/v3/users/{user_id}").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("user_id").
@@ -2366,7 +2384,8 @@ func GenRespForKeystoneUpdateUserByAdmin() (*model.KeystoneUpdateUserByAdminResp
 func GenReqDefForKeystoneUpdateUserPassword(request *model.KeystoneUpdateUserPasswordRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPost).
-    WithPath("/v3/users/{user_id}/password")
+    WithPath("/v3/users/{user_id}/password").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("user_id").
@@ -2429,7 +2448,8 @@ func GenRespForShowUser() (*model.ShowUserResponse, *def.HttpResponseDef) {
 func GenReqDefForUpdateUser(request *model.UpdateUserRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPut).
-    WithPath("/v3.0/OS-USER/users/{user_id}")
+    WithPath("/v3.0/OS-USER/users/{user_id}").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("user_id").
@@ -2461,7 +2481,8 @@ func GenRespForUpdateUser() (*model.UpdateUserResponse, *def.HttpResponseDef) {
 func GenReqDefForUpdateUserInformation(request *model.UpdateUserInformationRequest) *def.HttpRequestDef {
     reqDefBuilder := def.NewHttpRequestDefBuilder().
     WithMethod(http.MethodPut).
-    WithPath("/v3.0/OS-USER/users/{user_id}/info")
+    WithPath("/v3.0/OS-USER/users/{user_id}/info").
+    WithContentType("application/json;charset=UTF-8")
 
     reqDefBuilder.WithRequestField(def.NewFieldDef().
     WithName("user_id").
