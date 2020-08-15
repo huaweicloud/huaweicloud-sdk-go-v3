@@ -1,11 +1,16 @@
 /*
-    * EIP
-    *
-    * 云服务接口
-    *
-*/
+ * EIP
+ *
+ * 云服务接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 标签
 type TagResp struct {
@@ -13,4 +18,9 @@ type TagResp struct {
 	Key string `json:"key,omitempty"`
 	// 值列表。
 	Values []string `json:"values,omitempty"`
+}
+
+func (o TagResp) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"TagResp", string(data)}, " ")
 }

@@ -1,11 +1,16 @@
 /*
-    * Classroom
-    *
-    * devcloud classedge api
-    *
-*/
+ * Classroom
+ *
+ * devcloud classedge api
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 type ExerciseCard struct {
 	// 习题名称
@@ -18,4 +23,9 @@ type ExerciseCard struct {
 	ResourceSubType int32 `json:"resource_sub_type"`
 	// 习题分值
 	TargetScore int32 `json:"target_score"`
+}
+
+func (o ExerciseCard) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ExerciseCard", string(data)}, " ")
 }

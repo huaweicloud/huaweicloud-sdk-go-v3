@@ -1,13 +1,18 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type BatchCreateSubNetworkInterfaceOption struct {
 	// 功能说明：虚拟子网ID 取值范围：标准UUID
 	VirsubnetId string `json:"virsubnet_id"`
@@ -21,4 +26,9 @@ type BatchCreateSubNetworkInterfaceOption struct {
 	Ipv6Enable bool `json:"ipv6_enable,omitempty"`
 	// 功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
 	ProjectId string `json:"project_id,omitempty"`
+}
+
+func (o BatchCreateSubNetworkInterfaceOption) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"BatchCreateSubNetworkInterfaceOption", string(data)}, " ")
 }

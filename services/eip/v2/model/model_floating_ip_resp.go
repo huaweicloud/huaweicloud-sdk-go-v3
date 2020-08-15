@@ -1,13 +1,16 @@
 /*
-    * EIP
-    *
-    * 云服务接口
-    *
-*/
+ * EIP
+ *
+ * 云服务接口
+ *
+ */
 
 package model
+
 import (
+	"encoding/json"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"strings"
 )
 
 // floatingip对象
@@ -25,7 +28,7 @@ type FloatingIpResp struct {
 	// 所属路由器id。
 	RouterId string `json:"router_id,omitempty"`
 	// 网络状态，可以为ACTIVE， DOWN或ERROR。  DOWN：未绑定  ACTIVE：绑定  ERROR：异常
-	Status string `json:"status,omitempty"`
+	Status FloatingIpRespStatus `json:"status,omitempty"`
 	// 项目id。
 	TenantId string `json:"tenant_id,omitempty"`
 	// 项目id。
@@ -38,4 +41,42 @@ type FloatingIpResp struct {
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 	// 资源更新时间  采用UTC时间  格式：YYYY-MM-DDTHH:MM:SS
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
+}
+
+func (o FloatingIpResp) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"FloatingIpResp", string(data)}, " ")
+}
+
+type FloatingIpRespStatus struct {
+	value string
+}
+
+type FloatingIpRespStatusEnum struct {
+	ACTIVE FloatingIpRespStatus
+	DOWN   FloatingIpRespStatus
+	ERROR  FloatingIpRespStatus
+}
+
+func GetFloatingIpRespStatusEnum() FloatingIpRespStatusEnum {
+	return FloatingIpRespStatusEnum{
+		ACTIVE: FloatingIpRespStatus{
+			value: "ACTIVE",
+		},
+		DOWN: FloatingIpRespStatus{
+			value: "DOWN",
+		},
+		ERROR: FloatingIpRespStatus{
+			value: "ERROR",
+		},
+	}
+}
+
+func (c FloatingIpRespStatus) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *FloatingIpRespStatus) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
 }

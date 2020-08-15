@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 创建弹性云服务器（按需）接口Body体。
 type PostPaidServer struct {
@@ -31,10 +36,10 @@ type PostPaidServer struct {
 	// 云服务器名称。  取值范围：  - 只能由中文字符、英文字母、数字及“_”、“-”、“.”组成，且长度为[1-64]个字符。 - 创建的云服务器器数量（count字段对应的值）大于1时，为区分不同云服务器，创建过程中系统会自动在名称后加“-0000”的类似标记。故此时名称的长度为[1-59]个字符。  > 说明： >  > 云服务器虚拟机内部(hostname)命名规则遵循 RFC 952和RFC 1123命名规范，建议使用a-zA-z或0-9以及中划线\"-\"组成的名称命名，\"_\"将在弹性云服务器内部默认转化为\"-\"。
 	Name string `json:"name"`
 	// 待创建云服务器的网卡信息。  约束：  - 网卡对应的子网（subnet）必须属于vpcid对应的VPC。 - 当前单个云服务器支持最多挂载12张网卡。
-	Nics []PostPaidServerNic `json:"nics"`
+	Nics             []PostPaidServerNic           `json:"nics"`
 	OsschedulerHints *PostPaidServerSchedulerHints `json:"os:scheduler_hints,omitempty"`
-	Publicip *PostPaidServerPublicip `json:"publicip,omitempty"`
-	RootVolume *PostPaidServerRootVolume `json:"root_volume"`
+	Publicip         *PostPaidServerPublicip       `json:"publicip,omitempty"`
+	RootVolume       *PostPaidServerRootVolume     `json:"root_volume"`
 	// 云服务器对应安全组信息。  约束：当该值指定为空时，默认给云服务器绑定default安全组。
 	SecurityGroups []PostPaidServerSecurityGroup `json:"security_groups,omitempty"`
 	// 弹性云服务器的标签。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
@@ -47,4 +52,9 @@ type PostPaidServer struct {
 	Vpcid string `json:"vpcid"`
 	// 云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
 	Description string `json:"description,omitempty"`
+}
+
+func (o PostPaidServer) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"PostPaidServer", string(data)}, " ")
 }

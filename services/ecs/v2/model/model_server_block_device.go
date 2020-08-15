@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 查询云服务器指定磁盘挂载信息响应信息
 type ServerBlockDevice struct {
@@ -25,4 +30,9 @@ type ServerBlockDevice struct {
 	Size int32 `json:"size,omitempty"`
 	// 磁盘总线类型 。  取值范围：virtio、scsi
 	Bus string `json:"bus,omitempty"`
+}
+
+func (o ServerBlockDevice) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ServerBlockDevice", string(data)}, " ")
 }

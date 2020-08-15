@@ -1,11 +1,16 @@
 /*
-    * EIP
-    *
-    * 云服务接口
-    *
-*/
+ * EIP
+ *
+ * 云服务接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 资源配额实例详情
 type QuotaShowResp struct {
@@ -17,4 +22,9 @@ type QuotaShowResp struct {
 	Quota int32 `json:"quota,omitempty"`
 	// 允许修改的配额最小值
 	Min int32 `json:"min,omitempty"`
+}
+
+func (o QuotaShowResp) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"QuotaShowResp", string(data)}, " ")
 }

@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 云服务器可挂载网卡和卷数。
 type ServerAttachableQuantity struct {
@@ -17,4 +22,9 @@ type ServerAttachableQuantity struct {
 	FreeDisk int32 `json:"free_disk"`
 	// 可挂载网卡数。
 	FreeNic int32 `json:"free_nic"`
+}
+
+func (o ServerAttachableQuantity) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ServerAttachableQuantity", string(data)}, " ")
 }

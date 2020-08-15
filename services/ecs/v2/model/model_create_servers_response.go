@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // Response Object
 type CreateServersResponse struct {
@@ -15,4 +20,9 @@ type CreateServersResponse struct {
 	OrderId string `json:"order_id,omitempty"`
 	// 云服务器ID列表。  通过云服务器ID查询云服务器详情 ，若返回404 可能云服务器还在创建或者已经创建失败。
 	ServerIds []string `json:"serverIds,omitempty"`
+}
+
+func (o CreateServersResponse) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"CreateServersResponse", string(data)}, " ")
 }

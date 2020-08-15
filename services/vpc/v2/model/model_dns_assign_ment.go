@@ -1,13 +1,18 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type DnsAssignMent struct {
 	// 端口hostname
 	Hostname string `json:"hostname,omitempty"`
@@ -15,4 +20,9 @@ type DnsAssignMent struct {
 	IpAddress string `json:"ip_address,omitempty"`
 	// 端口内网fqdn
 	Fqdn string `json:"fqdn,omitempty"`
+}
+
+func (o DnsAssignMent) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"DnsAssignMent", string(data)}, " ")
 }

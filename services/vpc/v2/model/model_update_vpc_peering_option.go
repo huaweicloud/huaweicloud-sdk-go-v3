@@ -1,11 +1,16 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 更新peering对象
 type UpdateVpcPeeringOption struct {
@@ -13,4 +18,9 @@ type UpdateVpcPeeringOption struct {
 	Name string `json:"name,omitempty"`
 	// 功能说明：对等连接描述 取值范围：0-255个字符，支持数字、字母、中文字符
 	Description string `json:"description,omitempty"`
+}
+
+func (o UpdateVpcPeeringOption) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"UpdateVpcPeeringOption", string(data)}, " ")
 }

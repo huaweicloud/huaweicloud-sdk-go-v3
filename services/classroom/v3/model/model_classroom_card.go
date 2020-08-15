@@ -1,11 +1,16 @@
 /*
-    * Classroom
-    *
-    * devcloud classedge api
-    *
-*/
+ * Classroom
+ *
+ * devcloud classedge api
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 type ClassroomCard struct {
 	// 课堂ID
@@ -18,4 +23,9 @@ type ClassroomCard struct {
 	Credit float32 `json:"credit"`
 	// 课堂当前的状态，normal：课堂处于正常状态，archive：课堂已归档
 	Status string `json:"status"`
+}
+
+func (o ClassroomCard) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ClassroomCard", string(data)}, " ")
 }

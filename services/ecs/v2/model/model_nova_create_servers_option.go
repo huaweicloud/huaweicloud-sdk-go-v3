@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 //  弹性云服务器信息
 type NovaCreateServersOption struct {
@@ -25,7 +30,7 @@ type NovaCreateServersOption struct {
 	ConfigDrive string `json:"config_drive,omitempty"`
 	// 扩展属性，指定弹性云服务器的安全组，默认为default。  指定network创建弹性云服务器时该字段有效。对于已存在端口，安全组请求无效。
 	SecurityGroups []NovaServerSecurityGroup `json:"security_groups,omitempty"`
-	// 扩展属性，指定弹性云服务器的网卡信息。有多个租户网络时必须指定。 
+	// 扩展属性，指定弹性云服务器的网卡信息。有多个租户网络时必须指定。
 	Networks []NovaServerNetwork `json:"networks"`
 	// 扩展属性，指定keypair的名称。
 	KeyName string `json:"key_name,omitempty"`
@@ -40,7 +45,41 @@ type NovaCreateServersOption struct {
 	// 表示创建弹性云服务器最大数量。  默认值与min_count的取值一致。  约束：  参数max_count的取值必须大于参数min_count的取值。  当min_count、max_count同时设置时，创弹性云服务器的数量取决于服务器的资源情况。根据资源情况，在min_count至max_count的取值范围内创建最大数量的弹性云服务器。  - 说明： -  - 指定镜像创建弹性云服务器时，支持使用该字段。
 	MaxCount int32 `json:"max_count,omitempty"`
 	// diskConfig的方式，取值为AUTO、MANUAL。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。  当前不支持该功能。
-	OSDCFdiskConfig string `json:"OS-DCF:diskConfig,omitempty"`
+	OSDCFdiskConfig NovaCreateServersOptionOSDCFdiskConfig `json:"OS-DCF:diskConfig,omitempty"`
 	// 扩展属性，表示弹性云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”等特殊符号。  > 说明： >  > - V2接口不支持该字段。 > - V2.1接口支持该字段，此时，需在请求Header中增加一组Key-Value值。其中，Key固定为“X-OpenStack-Nova-API-Version” ，Value为微版本号，当Value的值为2.19时，支持使用该字段。
 	Description string `json:"description,omitempty"`
+}
+
+func (o NovaCreateServersOption) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"NovaCreateServersOption", string(data)}, " ")
+}
+
+type NovaCreateServersOptionOSDCFdiskConfig struct {
+	value string
+}
+
+type NovaCreateServersOptionOSDCFdiskConfigEnum struct {
+	AUTO   NovaCreateServersOptionOSDCFdiskConfig
+	MANUAL NovaCreateServersOptionOSDCFdiskConfig
+}
+
+func GetNovaCreateServersOptionOSDCFdiskConfigEnum() NovaCreateServersOptionOSDCFdiskConfigEnum {
+	return NovaCreateServersOptionOSDCFdiskConfigEnum{
+		AUTO: NovaCreateServersOptionOSDCFdiskConfig{
+			value: "AUTO",
+		},
+		MANUAL: NovaCreateServersOptionOSDCFdiskConfig{
+			value: "MANUAL",
+		},
+	}
+}
+
+func (c NovaCreateServersOptionOSDCFdiskConfig) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *NovaCreateServersOptionOSDCFdiskConfig) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
 }

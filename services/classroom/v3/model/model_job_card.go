@@ -1,11 +1,16 @@
 /*
-    * Classroom
-    *
-    * devcloud classedge api
-    *
-*/
+ * Classroom
+ *
+ * devcloud classedge api
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 type JobCard struct {
 	// 作业名称
@@ -28,4 +33,9 @@ type JobCard struct {
 	IsScoreVisibility string `json:"is_score_visibility"`
 	// 作业下发时间, 日期格式：yyyy-MM-dd HH:mm:ss
 	SendTime string `json:"send_time"`
+}
+
+func (o JobCard) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"JobCard", string(data)}, " ")
 }

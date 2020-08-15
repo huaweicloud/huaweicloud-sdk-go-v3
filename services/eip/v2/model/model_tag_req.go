@@ -1,11 +1,16 @@
 /*
-    * EIP
-    *
-    * 云服务接口
-    *
-*/
+ * EIP
+ *
+ * 云服务接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 标签
 type TagReq struct {
@@ -13,4 +18,9 @@ type TagReq struct {
 	Key string `json:"key"`
 	// 值列表。每个值最大长度255个unicode字符，如果values为空列表，则表示any_value。value之间为或的关系。
 	Values []string `json:"values"`
+}
+
+func (o TagReq) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"TagReq", string(data)}, " ")
 }

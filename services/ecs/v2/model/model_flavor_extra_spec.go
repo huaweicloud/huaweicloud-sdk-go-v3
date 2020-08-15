@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 云服务器规格的扩展字段。
 type FlavorExtraSpec struct {
@@ -39,4 +44,9 @@ type FlavorExtraSpec struct {
 	QuotamaxPps string `json:"quota:max_pps,omitempty"`
 	// 计费类型  - 计费场景，不配置时都支持 - period，包周期 - demand，按需
 	Condoperationcharge string `json:"cond:operation:charge,omitempty"`
+}
+
+func (o FlavorExtraSpec) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"FlavorExtraSpec", string(data)}, " ")
 }

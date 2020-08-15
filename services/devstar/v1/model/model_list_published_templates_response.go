@@ -1,11 +1,16 @@
 /*
-    * Devstar
-    *
-    * Devstar API
-    *
-*/
+ * Devstar
+ *
+ * Devstar API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // Response Object
 type ListPublishedTemplatesResponse struct {
@@ -13,4 +18,9 @@ type ListPublishedTemplatesResponse struct {
 	Count int32 `json:"count,omitempty"`
 	// 返回模板的列表
 	Templates []TemplateSimpleInfo `json:"templates,omitempty"`
+}
+
+func (o ListPublishedTemplatesResponse) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ListPublishedTemplatesResponse", string(data)}, " ")
 }

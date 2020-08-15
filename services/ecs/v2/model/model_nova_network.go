@@ -1,13 +1,18 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
 
-//  
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type NovaNetwork struct {
 	// IP地址。
 	Addr string `json:"addr"`
@@ -17,4 +22,9 @@ type NovaNetwork struct {
 	OSEXTIPSMACmacAddr string `json:"OS-EXT-IPS-MAC:mac_addr"`
 	// 扩展属性，分配IP地址方式。
 	OSEXTIPStype string `json:"OS-EXT-IPS:type"`
+}
+
+func (o NovaNetwork) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"NovaNetwork", string(data)}, " ")
 }

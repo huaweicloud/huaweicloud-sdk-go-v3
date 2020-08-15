@@ -1,11 +1,16 @@
 /*
-    * Classroom
-    *
-    * devcloud classedge api
-    *
-*/
+ * Classroom
+ *
+ * devcloud classedge api
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 type ClassroomMember struct {
 	// 成员ID
@@ -26,4 +31,9 @@ type ClassroomMember struct {
 	JobFinishedCount int32 `json:"job_finished_count"`
 	// 该成员作业完成率
 	JobFinishedRate float32 `json:"job_finished_rate"`
+}
+
+func (o ClassroomMember) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ClassroomMember", string(data)}, " ")
 }

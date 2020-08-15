@@ -36,7 +36,7 @@ func (s Credentials) ProcessAuthRequest(req *request.DefaultHttpRequest) (*reque
 	reqBuilder := req.Builder()
 
 	if s.ProjectId != "" {
-		reqBuilder.AddPathParam("project_id", s.ProjectId)
+		reqBuilder.AddAutoFilledPathParam("project_id", s.ProjectId)
 		reqBuilder.AddHeaderParam("X-Project-Id", s.ProjectId)
 	}
 
@@ -54,10 +54,12 @@ func (s Credentials) ProcessAuthRequest(req *request.DefaultHttpRequest) (*reque
 	if err != nil {
 		return nil, err
 	}
+
 	headerParams, err := signer.Sign(r, s.AK, s.SK)
 	if err != nil {
 		return nil, err
 	}
+
 	for key, value := range headerParams {
 		req.AddHeaderParam(key, value)
 	}

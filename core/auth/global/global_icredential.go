@@ -36,7 +36,7 @@ func (s Credentials) ProcessAuthRequest(req *request.DefaultHttpRequest) (*reque
 	reqBuilder := req.Builder()
 
 	if s.DomainId != "" {
-		reqBuilder.AddPathParam("domain_id", s.DomainId)
+		reqBuilder.AddAutoFilledPathParam("domain_id", s.DomainId)
 		reqBuilder.AddHeaderParam("X-Domain-Id", s.DomainId)
 	}
 

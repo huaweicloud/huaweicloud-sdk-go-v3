@@ -1,11 +1,16 @@
 /*
-    * Devstar
-    *
-    * Devstar API
-    *
-*/
+ * Devstar
+ *
+ * Devstar API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 type PropertiesInfo struct {
 	// key
@@ -30,4 +35,9 @@ type PropertiesInfo struct {
 	RegTip string `json:"regTip,omitempty"`
 	// 是否显示
 	IsShow bool `json:"isShow,omitempty"`
+}
+
+func (o PropertiesInfo) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"PropertiesInfo", string(data)}, " ")
 }

@@ -1,13 +1,18 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type UpdatePortOption struct {
 	// 功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线）
 	Name string `json:"name,omitempty"`
@@ -17,4 +22,9 @@ type UpdatePortOption struct {
 	AllowedAddressPairs []AllowedAddressPair `json:"allowed_address_pairs,omitempty"`
 	// 功能说明：DHCP的扩展Option(扩展属性)
 	ExtraDhcpOpts []ExtraDhcpOpt `json:"extra_dhcp_opts,omitempty"`
+}
+
+func (o UpdatePortOption) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"UpdatePortOption", string(data)}, " ")
 }

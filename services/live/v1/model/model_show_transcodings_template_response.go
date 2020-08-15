@@ -1,11 +1,16 @@
 /*
-    * LiveAPI
-    *
-    * 直播服务源站所有接口
-    *
-*/
+ * LiveAPI
+ *
+ * 直播服务源站所有接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // Response Object
 type ShowTranscodingsTemplateResponse struct {
@@ -15,4 +20,9 @@ type ShowTranscodingsTemplateResponse struct {
 	Domain string `json:"domain,omitempty"`
 	// 转码模板
 	Templates []AppQualityInfo `json:"templates,omitempty"`
+}
+
+func (o ShowTranscodingsTemplateResponse) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ShowTranscodingsTemplateResponse", string(data)}, " ")
 }

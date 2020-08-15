@@ -1,11 +1,16 @@
 /*
-    * EIP
-    *
-    * 云服务接口
-    *
-*/
+ * EIP
+ *
+ * 云服务接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 标签
 type ResourceTagOption struct {
@@ -13,4 +18,9 @@ type ResourceTagOption struct {
 	Key string `json:"key"`
 	// 值列表。长度不超过43个字符。由英文字母、数字、下划线、点、中划线、中文字符组成。
 	Value string `json:"value"`
+}
+
+func (o ResourceTagOption) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ResourceTagOption", string(data)}, " ")
 }

@@ -1,13 +1,18 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type ServerLimits struct {
 	// 镜像元数据最大的长度。
 	MaxImageMeta int32 `json:"maxImageMeta"`
@@ -61,4 +66,9 @@ type ServerLimits struct {
 	TotalSpotRAMUsed int32 `json:"totalSpotRAMUsed,omitempty"`
 	// 使用该flavor可以申请的弹性云服务器数量。  值为“-1”时，表示无数量限制。
 	LimitByFlavor []ProjectFlavorLimit `json:"limit_by_flavor,omitempty"`
+}
+
+func (o ServerLimits) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ServerLimits", string(data)}, " ")
 }

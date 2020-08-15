@@ -1,13 +1,18 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type Vpc struct {
 	// 功能说明：虚拟私有云ID 取值范围：带\"-\"的UUID
 	Id string `json:"id"`
@@ -20,7 +25,45 @@ type Vpc struct {
 	// 功能说明：路由信息列表，详情参见route对象
 	Routes []Route `json:"routes"`
 	// 功能说明：虚拟私有云的状态 取值范围： - CREATING：创建中 - OK：创建成功
-	Status string `json:"status"`
+	Status VpcStatus `json:"status"`
 	// 功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
 	EnterpriseProjectId string `json:"enterprise_project_id"`
+}
+
+func (o Vpc) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"Vpc", string(data)}, " ")
+}
+
+type VpcStatus struct {
+	value string
+}
+
+type VpcStatusEnum struct {
+	CREATING VpcStatus
+	OK       VpcStatus
+	ERROR    VpcStatus
+}
+
+func GetVpcStatusEnum() VpcStatusEnum {
+	return VpcStatusEnum{
+		CREATING: VpcStatus{
+			value: "CREATING",
+		},
+		OK: VpcStatus{
+			value: "OK",
+		},
+		ERROR: VpcStatus{
+			value: "ERROR",
+		},
+	}
+}
+
+func (c VpcStatus) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *VpcStatus) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
 }

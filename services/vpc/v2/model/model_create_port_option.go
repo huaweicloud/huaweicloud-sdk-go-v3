@@ -1,13 +1,18 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type CreatePortOption struct {
 	// 功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线），默认为空
 	Name string `json:"name,omitempty"`
@@ -27,4 +32,9 @@ type CreatePortOption struct {
 	ExtraDhcpOpts []ExtraDhcpOpt `json:"extra_dhcp_opts,omitempty"`
 	// 功能说明：端口所属项目ID
 	TenantId string `json:"tenant_id,omitempty"`
+}
+
+func (o CreatePortOption) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"CreatePortOption", string(data)}, " ")
 }

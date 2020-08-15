@@ -1,11 +1,16 @@
 /*
-    * EIP
-    *
-    * 云服务接口
-    *
-*/
+ * EIP
+ *
+ * 云服务接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 资源实例详情
 type ListResourceResp struct {
@@ -17,4 +22,9 @@ type ListResourceResp struct {
 	ResourceName string `json:"resource_name,omitempty"`
 	// 标签列表，没有标签默认为空数组
 	Tags []ResourceTagResp `json:"tags,omitempty"`
+}
+
+func (o ListResourceResp) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ListResourceResp", string(data)}, " ")
 }

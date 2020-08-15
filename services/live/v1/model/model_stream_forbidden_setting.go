@@ -1,13 +1,16 @@
 /*
-    * LiveAPI
-    *
-    * 直播服务源站所有接口
-    *
-*/
+ * LiveAPI
+ *
+ * 直播服务源站所有接口
+ *
+ */
 
 package model
+
 import (
+	"encoding/json"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"strings"
 )
 
 type StreamForbiddenSetting struct {
@@ -19,4 +22,9 @@ type StreamForbiddenSetting struct {
 	StreamName string `json:"stream_name"`
 	// 恢复流时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间，不指定则永久禁播
 	ResumeTime *sdktime.SdkTime `json:"resume_time,omitempty"`
+}
+
+func (o StreamForbiddenSetting) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"StreamForbiddenSetting", string(data)}, " ")
 }

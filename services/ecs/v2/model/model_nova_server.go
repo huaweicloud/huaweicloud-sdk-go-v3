@@ -1,26 +1,31 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
 
-//  
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type NovaServer struct {
 	// 云服务器名称。
 	Name string `json:"name"`
 	// 云服务器唯一标识。
 	Id string `json:"id"`
 	// 云服务器当前状态信息。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE
-	Status string `json:"status"`
+	Status NovaServerStatus `json:"status"`
 	// 云服务器创建时间。 时间格式例如：2019-05-22T07:48:53Z
 	Created string `json:"created"`
 	// 云服务器上一次更新时间。时间格式例如：2019-05-22T07:48:53Z
-	Updated string `json:"updated"`
-	Flavor *NovaServerFlavor `json:"flavor"`
-	Image *NovaServerImage `json:"image"`
+	Updated string            `json:"updated"`
+	Flavor  *NovaServerFlavor `json:"flavor"`
+	Image   *NovaServerImage  `json:"image"`
 	// 云服务器所属租户ID。即项目id，与project_id表示相同的概念。
 	TenantId string `json:"tenant_id"`
 	// SSH密钥名称。
@@ -38,7 +43,7 @@ type NovaServer struct {
 	// 云服务器相关标记快捷链接信息。
 	Links []NovaLink `json:"links"`
 	// 扩展属性，磁盘配置方式。对镜像启动云服务器生效。  取值范围：  - AUTO: API使用单个分区构建目标磁盘大小的云服务器。 API会自动调整文件系统以适应整个分区。 - MANUAL：API使用源映像中的分区方案和文件系统构建服务器。如果目标磁盘较大，则API不分区剩余的磁盘空间。
-	OSDCFdiskConfig string `json:"OS-DCF:diskConfig"`
+	OSDCFdiskConfig NovaServerOSDCFdiskConfig `json:"OS-DCF:diskConfig"`
 	// 扩展属性，可用分区编码。
 	OSEXTAZavailabilityZone string `json:"OS-EXT-AZ:availability_zone"`
 	// 扩展属性，与主机宿主名称。
@@ -50,20 +55,20 @@ type NovaServer struct {
 	// 扩展属性，云服务器电源状态。  取值范围：0，1，2，3，4  - 0 : pending - 1 : running - 2 : paused - 3 : shutdown - 4 : crashed
 	OSEXTSTSpowerState int32 `json:"OS-EXT-STS:power_state"`
 	// 扩展属性，云服务器任务状态。   取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
-	OSEXTSTStaskState string `json:"OS-EXT-STS:task_state"`
+	OSEXTSTStaskState NovaServerOSEXTSTStaskState `json:"OS-EXT-STS:task_state"`
 	// 扩展属性，云服务器状态。  取值范围：   ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
-	OSEXTSTSvmState string `json:"OS-EXT-STS:vm_state"`
+	OSEXTSTSvmState NovaServerOSEXTSTSvmState `json:"OS-EXT-STS:vm_state"`
 	// 扩展属性，云服务器启动时间。时间格式例如：2019-05-22T07:48:19.000000
 	OSSRVUSGlaunchedAt string `json:"OS-SRV-USG:launched_at"`
 	// 扩展属性，云服务器关闭时间。  时间格式例如：2019-05-22T07:48:19.000000
 	OSSRVUSGterminatedAt string `json:"OS-SRV-USG:terminated_at"`
 	// 云服务器挂载的云磁盘信息。
 	OsExtendedVolumesvolumesAttached []NovaServerVolume `json:"os-extended-volumes:volumes_attached"`
-	Fault *NovaServerFault `json:"fault,omitempty"`
+	Fault                            *NovaServerFault   `json:"fault,omitempty"`
 	// 弹性云服务器的描述信息。  微版本2.19后支持
 	Description string `json:"description,omitempty"`
 	// nova-compute状态。  - UP：服务正常 - UNKNOWN：状态未知 - DOWN：服务异常 - MAINTENANCE：维护状态 - 空字符串：弹性云服务器无主机信息
-	HostStatus string `json:"host_status"`
+	HostStatus NovaServerHostStatus `json:"host_status"`
 	// 弹性云服务器的主机名。  微版本2.3后支持
 	OSEXTSRVATTRhostname string `json:"OS-EXT-SRV-ATTR:hostname,omitempty"`
 	// 批量创建场景，弹性云服务器的预留ID。  微版本2.3后支持
@@ -90,4 +95,298 @@ type NovaServer struct {
 	ConfigDrive string `json:"config_drive"`
 	// 预留属性
 	Progress int32 `json:"progress"`
+}
+
+func (o NovaServer) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"NovaServer", string(data)}, " ")
+}
+
+type NovaServerStatus struct {
+	value string
+}
+
+type NovaServerStatusEnum struct {
+	ACTIVE            NovaServerStatus
+	BUILD             NovaServerStatus
+	DELETED           NovaServerStatus
+	ERROR             NovaServerStatus
+	HARD_REBOOT       NovaServerStatus
+	MIGRATING         NovaServerStatus
+	REBOOT            NovaServerStatus
+	RESIZE            NovaServerStatus
+	REVERT_RESIZE     NovaServerStatus
+	SHELVED           NovaServerStatus
+	SHELVED_OFFLOADED NovaServerStatus
+	SHUTOFF           NovaServerStatus
+	UNKNOWN           NovaServerStatus
+	VERIFY_RESIZE     NovaServerStatus
+}
+
+func GetNovaServerStatusEnum() NovaServerStatusEnum {
+	return NovaServerStatusEnum{
+		ACTIVE: NovaServerStatus{
+			value: "ACTIVE",
+		},
+		BUILD: NovaServerStatus{
+			value: " BUILD",
+		},
+		DELETED: NovaServerStatus{
+			value: "DELETED",
+		},
+		ERROR: NovaServerStatus{
+			value: "ERROR",
+		},
+		HARD_REBOOT: NovaServerStatus{
+			value: "HARD_REBOOT",
+		},
+		MIGRATING: NovaServerStatus{
+			value: "MIGRATING",
+		},
+		REBOOT: NovaServerStatus{
+			value: "REBOOT",
+		},
+		RESIZE: NovaServerStatus{
+			value: "RESIZE",
+		},
+		REVERT_RESIZE: NovaServerStatus{
+			value: "REVERT_RESIZE",
+		},
+		SHELVED: NovaServerStatus{
+			value: "SHELVED",
+		},
+		SHELVED_OFFLOADED: NovaServerStatus{
+			value: "SHELVED_OFFLOADED",
+		},
+		SHUTOFF: NovaServerStatus{
+			value: "SHUTOFF",
+		},
+		UNKNOWN: NovaServerStatus{
+			value: "UNKNOWN",
+		},
+		VERIFY_RESIZE: NovaServerStatus{
+			value: "VERIFY_RESIZE",
+		},
+	}
+}
+
+func (c NovaServerStatus) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *NovaServerStatus) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
+}
+
+type NovaServerOSDCFdiskConfig struct {
+	value string
+}
+
+type NovaServerOSDCFdiskConfigEnum struct {
+	AUTO   NovaServerOSDCFdiskConfig
+	MANUAL NovaServerOSDCFdiskConfig
+}
+
+func GetNovaServerOSDCFdiskConfigEnum() NovaServerOSDCFdiskConfigEnum {
+	return NovaServerOSDCFdiskConfigEnum{
+		AUTO: NovaServerOSDCFdiskConfig{
+			value: "AUTO",
+		},
+		MANUAL: NovaServerOSDCFdiskConfig{
+			value: "MANUAL",
+		},
+	}
+}
+
+func (c NovaServerOSDCFdiskConfig) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *NovaServerOSDCFdiskConfig) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
+}
+
+type NovaServerOSEXTSTStaskState struct {
+	value string
+}
+
+type NovaServerOSEXTSTStaskStateEnum struct {
+	SHOUTOFF          NovaServerOSEXTSTStaskState
+	RESIZE            NovaServerOSEXTSTStaskState
+	REBUILD           NovaServerOSEXTSTStaskState
+	VERIFY_RESIZE     NovaServerOSEXTSTStaskState
+	REVERT_RESIZE     NovaServerOSEXTSTStaskState
+	PAUSED            NovaServerOSEXTSTStaskState
+	MIGRATING         NovaServerOSEXTSTStaskState
+	SUSPENDED         NovaServerOSEXTSTStaskState
+	RESCUE            NovaServerOSEXTSTStaskState
+	ERROR             NovaServerOSEXTSTStaskState
+	DELETED           NovaServerOSEXTSTStaskState
+	SOFT_DELETED      NovaServerOSEXTSTStaskState
+	SHELVED           NovaServerOSEXTSTStaskState
+	SHELVED_OFFLOADED NovaServerOSEXTSTStaskState
+}
+
+func GetNovaServerOSEXTSTStaskStateEnum() NovaServerOSEXTSTStaskStateEnum {
+	return NovaServerOSEXTSTStaskStateEnum{
+		SHOUTOFF: NovaServerOSEXTSTStaskState{
+			value: "SHOUTOFF",
+		},
+		RESIZE: NovaServerOSEXTSTStaskState{
+			value: " RESIZE",
+		},
+		REBUILD: NovaServerOSEXTSTStaskState{
+			value: " REBUILD",
+		},
+		VERIFY_RESIZE: NovaServerOSEXTSTStaskState{
+			value: " VERIFY_RESIZE",
+		},
+		REVERT_RESIZE: NovaServerOSEXTSTStaskState{
+			value: " REVERT_RESIZE",
+		},
+		PAUSED: NovaServerOSEXTSTStaskState{
+			value: " PAUSED",
+		},
+		MIGRATING: NovaServerOSEXTSTStaskState{
+			value: " MIGRATING",
+		},
+		SUSPENDED: NovaServerOSEXTSTStaskState{
+			value: " SUSPENDED",
+		},
+		RESCUE: NovaServerOSEXTSTStaskState{
+			value: " RESCUE",
+		},
+		ERROR: NovaServerOSEXTSTStaskState{
+			value: " ERROR",
+		},
+		DELETED: NovaServerOSEXTSTStaskState{
+			value: " DELETED",
+		},
+		SOFT_DELETED: NovaServerOSEXTSTStaskState{
+			value: "SOFT_DELETED",
+		},
+		SHELVED: NovaServerOSEXTSTStaskState{
+			value: "SHELVED",
+		},
+		SHELVED_OFFLOADED: NovaServerOSEXTSTStaskState{
+			value: "SHELVED_OFFLOADED",
+		},
+	}
+}
+
+func (c NovaServerOSEXTSTStaskState) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *NovaServerOSEXTSTStaskState) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
+}
+
+type NovaServerOSEXTSTSvmState struct {
+	value string
+}
+
+type NovaServerOSEXTSTSvmStateEnum struct {
+	ACTIVE            NovaServerOSEXTSTSvmState
+	BUILDING          NovaServerOSEXTSTSvmState
+	STOPPED           NovaServerOSEXTSTSvmState
+	RESIZED           NovaServerOSEXTSTSvmState
+	PAUSED            NovaServerOSEXTSTSvmState
+	SUSPENDED         NovaServerOSEXTSTSvmState
+	RESCUED           NovaServerOSEXTSTSvmState
+	ERROR             NovaServerOSEXTSTSvmState
+	DELETED           NovaServerOSEXTSTSvmState
+	SOFT_DELETED      NovaServerOSEXTSTSvmState
+	SHELVED           NovaServerOSEXTSTSvmState
+	SHELVED_OFFLOADED NovaServerOSEXTSTSvmState
+}
+
+func GetNovaServerOSEXTSTSvmStateEnum() NovaServerOSEXTSTSvmStateEnum {
+	return NovaServerOSEXTSTSvmStateEnum{
+		ACTIVE: NovaServerOSEXTSTSvmState{
+			value: "ACTIVE",
+		},
+		BUILDING: NovaServerOSEXTSTSvmState{
+			value: "BUILDING",
+		},
+		STOPPED: NovaServerOSEXTSTSvmState{
+			value: "STOPPED",
+		},
+		RESIZED: NovaServerOSEXTSTSvmState{
+			value: "RESIZED",
+		},
+		PAUSED: NovaServerOSEXTSTSvmState{
+			value: "PAUSED",
+		},
+		SUSPENDED: NovaServerOSEXTSTSvmState{
+			value: "SUSPENDED",
+		},
+		RESCUED: NovaServerOSEXTSTSvmState{
+			value: "RESCUED",
+		},
+		ERROR: NovaServerOSEXTSTSvmState{
+			value: "ERROR",
+		},
+		DELETED: NovaServerOSEXTSTSvmState{
+			value: "DELETED",
+		},
+		SOFT_DELETED: NovaServerOSEXTSTSvmState{
+			value: "SOFT_DELETED",
+		},
+		SHELVED: NovaServerOSEXTSTSvmState{
+			value: "SHELVED",
+		},
+		SHELVED_OFFLOADED: NovaServerOSEXTSTSvmState{
+			value: "SHELVED_OFFLOADED",
+		},
+	}
+}
+
+func (c NovaServerOSEXTSTSvmState) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *NovaServerOSEXTSTSvmState) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
+}
+
+type NovaServerHostStatus struct {
+	value string
+}
+
+type NovaServerHostStatusEnum struct {
+	UP          NovaServerHostStatus
+	UNKNOWN     NovaServerHostStatus
+	DOWN        NovaServerHostStatus
+	MAINTENANCE NovaServerHostStatus
+}
+
+func GetNovaServerHostStatusEnum() NovaServerHostStatusEnum {
+	return NovaServerHostStatusEnum{
+		UP: NovaServerHostStatus{
+			value: "UP",
+		},
+		UNKNOWN: NovaServerHostStatus{
+			value: "UNKNOWN",
+		},
+		DOWN: NovaServerHostStatus{
+			value: "DOWN",
+		},
+		MAINTENANCE: NovaServerHostStatus{
+			value: "MAINTENANCE",
+		},
+	}
+}
+
+func (c NovaServerHostStatus) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *NovaServerHostStatus) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
 }

@@ -1,13 +1,18 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
 
-//  
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type NovaKeypair struct {
 	// 密钥对应指纹信息。
 	Fingerprint string `json:"fingerprint"`
@@ -21,4 +26,9 @@ type NovaKeypair struct {
 	UserId string `json:"user_id"`
 	// 密钥类型，默认“ssh”  微版本2.2以上支持
 	Type string `json:"type,omitempty"`
+}
+
+func (o NovaKeypair) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"NovaKeypair", string(data)}, " ")
 }

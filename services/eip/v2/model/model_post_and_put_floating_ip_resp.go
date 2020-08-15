@@ -1,11 +1,16 @@
 /*
-    * EIP
-    *
-    * 云服务接口
-    *
-*/
+ * EIP
+ *
+ * 云服务接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // floatingip对象
 type PostAndPutFloatingIpResp struct {
@@ -22,11 +27,49 @@ type PostAndPutFloatingIpResp struct {
 	// 所属路由器id。
 	RouterId string `json:"router_id,omitempty"`
 	// 网络状态，可以为ACTIVE， DOWN或ERROR。  DOWN：未绑定  ACTIVE：绑定  ERROR：异常
-	Status string `json:"status,omitempty"`
+	Status PostAndPutFloatingIpRespStatus `json:"status,omitempty"`
 	// 项目id。
 	TenantId string `json:"tenant_id,omitempty"`
 	// DNS名称(目前仅广州局点支持)
 	DnsName string `json:"dns_name,omitempty"`
 	// DNS域地址(目前仅广州局点支持)
 	DnsDomain string `json:"dns_domain,omitempty"`
+}
+
+func (o PostAndPutFloatingIpResp) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"PostAndPutFloatingIpResp", string(data)}, " ")
+}
+
+type PostAndPutFloatingIpRespStatus struct {
+	value string
+}
+
+type PostAndPutFloatingIpRespStatusEnum struct {
+	ACTIVE PostAndPutFloatingIpRespStatus
+	DOWN   PostAndPutFloatingIpRespStatus
+	ERROR  PostAndPutFloatingIpRespStatus
+}
+
+func GetPostAndPutFloatingIpRespStatusEnum() PostAndPutFloatingIpRespStatusEnum {
+	return PostAndPutFloatingIpRespStatusEnum{
+		ACTIVE: PostAndPutFloatingIpRespStatus{
+			value: "ACTIVE",
+		},
+		DOWN: PostAndPutFloatingIpRespStatus{
+			value: "DOWN",
+		},
+		ERROR: PostAndPutFloatingIpRespStatus{
+			value: "ERROR",
+		},
+	}
+}
+
+func (c PostAndPutFloatingIpRespStatus) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *PostAndPutFloatingIpRespStatus) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
 }

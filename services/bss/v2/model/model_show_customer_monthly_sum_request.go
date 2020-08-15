@@ -1,0 +1,27 @@
+/*
+ * Bss
+ *
+ * Business Support System API
+ *
+ */
+
+package model
+
+import (
+	"encoding/json"
+	"strings"
+)
+
+// Request Object
+type ShowCustomerMonthlySumRequest struct {
+	BillCycle           string `json:"bill_cycle"`
+	ServiceTypeCode     string `json:"service_type_code,omitempty"`
+	EnterpriseProjectId string `json:"enterprise_project_id,omitempty"`
+	Offset              int32  `json:"offset,omitempty"`
+	Limit               int32  `json:"limit,omitempty"`
+}
+
+func (o ShowCustomerMonthlySumRequest) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ShowCustomerMonthlySumRequest", string(data)}, " ")
+}

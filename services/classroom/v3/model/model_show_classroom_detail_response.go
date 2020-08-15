@@ -1,11 +1,16 @@
 /*
-    * Classroom
-    *
-    * devcloud classedge api
-    *
-*/
+ * Classroom
+ *
+ * devcloud classedge api
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // Response Object
 type ShowClassroomDetailResponse struct {
@@ -43,4 +48,9 @@ type ShowClassroomDetailResponse struct {
 	MemberCount int32 `json:"member_count,omitempty"`
 	// 课堂当前的状态，normal：课堂处于正常状态，archive：课堂已归档
 	Status string `json:"status,omitempty"`
+}
+
+func (o ShowClassroomDetailResponse) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ShowClassroomDetailResponse", string(data)}, " ")
 }

@@ -1,11 +1,16 @@
 /*
-    * LiveAPI
-    *
-    * 直播服务源站所有接口
-    *
-*/
+ * LiveAPI
+ *
+ * 直播服务源站所有接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // Response Object
 type ListRecordConfigsResponse struct {
@@ -13,4 +18,9 @@ type ListRecordConfigsResponse struct {
 	Total int32 `json:"total,omitempty"`
 	// 录制配置数组
 	RecordConfig []RecordConfigInfo `json:"record_config,omitempty"`
+}
+
+func (o ListRecordConfigsResponse) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ListRecordConfigsResponse", string(data)}, " ")
 }

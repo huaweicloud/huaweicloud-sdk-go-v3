@@ -1,11 +1,16 @@
 /*
-    * Devstar
-    *
-    * Devstar API
-    *
-*/
+ * Devstar
+ *
+ * Devstar API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // Response Object
 type ShowTemplateDetailResponse struct {
@@ -26,6 +31,11 @@ type ShowTemplateDetailResponse struct {
 	// 项目id
 	ProjectUuid string `json:"project_uuid,omitempty"`
 	// 模板状态
-	Status int32 `json:"status,omitempty"`
+	Status     int32            `json:"status,omitempty"`
 	Properties []PropertiesInfo `json:"properties,omitempty"`
+}
+
+func (o ShowTemplateDetailResponse) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ShowTemplateDetailResponse", string(data)}, " ")
 }

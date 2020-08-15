@@ -1,11 +1,16 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // vpc对象
 type CreateVpcOption struct {
@@ -17,4 +22,9 @@ type CreateVpcOption struct {
 	Description string `json:"description,omitempty"`
 	// 功能说明：企业项目ID。创建虚拟私有云时，给虚拟私有云绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：\"0\"
 	EnterpriseProjectId string `json:"enterprise_project_id,omitempty"`
+}
+
+func (o CreateVpcOption) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"CreateVpcOption", string(data)}, " ")
 }

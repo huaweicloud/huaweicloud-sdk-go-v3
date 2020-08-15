@@ -1,11 +1,16 @@
 /*
-    * Classroom
-    *
-    * devcloud classedge api
-    *
-*/
+ * Classroom
+ *
+ * devcloud classedge api
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // Response Object
 type ShowJobDetailResponse struct {
@@ -23,4 +28,9 @@ type ShowJobDetailResponse struct {
 	ScoreJobNum int32 `json:"score_job_num,omitempty"`
 	// 作业提交人数
 	SubmitJobNum int32 `json:"submit_job_num,omitempty"`
+}
+
+func (o ShowJobDetailResponse) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ShowJobDetailResponse", string(data)}, " ")
 }

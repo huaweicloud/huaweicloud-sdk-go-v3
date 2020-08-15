@@ -1,13 +1,18 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type SecurityGroup struct {
 	// 安全组名称
 	Name string `json:"name"`
@@ -21,4 +26,9 @@ type SecurityGroup struct {
 	EnterpriseProjectId string `json:"enterprise_project_id,omitempty"`
 	// 安全组规则
 	SecurityGroupRules []SecurityGroupRule `json:"security_group_rules"`
+}
+
+func (o SecurityGroup) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"SecurityGroup", string(data)}, " ")
 }

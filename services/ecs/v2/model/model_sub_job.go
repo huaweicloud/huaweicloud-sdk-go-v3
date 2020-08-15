@@ -1,16 +1,21 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type SubJob struct {
 	// Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
-	Status string `json:"status,omitempty"`
+	Status   SubJobStatus    `json:"status,omitempty"`
 	Entities *SubJobEntities `json:"entities,omitempty"`
 	// 子任务的ID。
 	JobId string `json:"job_id,omitempty"`
@@ -24,4 +29,46 @@ type SubJob struct {
 	ErrorCode string `json:"error_code,omitempty"`
 	// Job执行失败时的错误原因。  Job执行成功后，该值为null。
 	FailReason string `json:"fail_reason,omitempty"`
+}
+
+func (o SubJob) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"SubJob", string(data)}, " ")
+}
+
+type SubJobStatus struct {
+	value string
+}
+
+type SubJobStatusEnum struct {
+	SUCCESS SubJobStatus
+	RUNNING SubJobStatus
+	FAIL    SubJobStatus
+	INIT    SubJobStatus
+}
+
+func GetSubJobStatusEnum() SubJobStatusEnum {
+	return SubJobStatusEnum{
+		SUCCESS: SubJobStatus{
+			value: "SUCCESS",
+		},
+		RUNNING: SubJobStatus{
+			value: "RUNNING",
+		},
+		FAIL: SubJobStatus{
+			value: "FAIL",
+		},
+		INIT: SubJobStatus{
+			value: "INIT",
+		},
+	}
+}
+
+func (c SubJobStatus) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *SubJobStatus) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
 }

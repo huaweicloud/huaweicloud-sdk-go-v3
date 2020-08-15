@@ -1,11 +1,16 @@
 /*
-    * LiveAPI
-    *
-    * 直播服务源站所有接口
-    *
-*/
+ * LiveAPI
+ *
+ * 直播服务源站所有接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // Response Object
 type ShowBandwidthResponse struct {
@@ -13,4 +18,9 @@ type ShowBandwidthResponse struct {
 	Total int32 `json:"total,omitempty"`
 	// 带宽信息
 	BandwidthInfo []BandwidthInfo `json:"bandwidth_info,omitempty"`
+}
+
+func (o ShowBandwidthResponse) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ShowBandwidthResponse", string(data)}, " ")
 }

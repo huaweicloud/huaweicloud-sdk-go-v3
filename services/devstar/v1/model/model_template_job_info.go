@@ -1,11 +1,16 @@
 /*
-    * Devstar
-    *
-    * Devstar API
-    *
-*/
+ * Devstar
+ *
+ * Devstar API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 type TemplateJobInfo struct {
 	// 应用名称
@@ -16,5 +21,10 @@ type TemplateJobInfo struct {
 	RepoType int32 `json:"repo_type"`
 	// 应用的动态参数json
 	Properties map[string]interface{} `json:"properties,omitempty"`
-	RepoInfo *RepositoryInfo `json:"repo_info,omitempty"`
+	RepoInfo   *RepositoryInfo        `json:"repo_info,omitempty"`
+}
+
+func (o TemplateJobInfo) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"TemplateJobInfo", string(data)}, " ")
 }

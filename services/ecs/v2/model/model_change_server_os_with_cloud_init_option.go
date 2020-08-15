@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 重装操作系统body体。
 type ChangeServerOsWithCloudInitOption struct {
@@ -16,8 +21,13 @@ type ChangeServerOsWithCloudInitOption struct {
 	// 用户ID。 说明 如果使用秘钥方式切换操作系统，则该字段为必选字段。
 	Userid string `json:"userid,omitempty"`
 	// 切换系统所使用的新镜像的ID，格式为UUID。
-	Imageid string `json:"imageid"`
+	Imageid  string                  `json:"imageid"`
 	Metadata *ChangeSeversOsMetadata `json:"metadata,omitempty"`
 	// 取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。 mode取值为withStopServer时，对开机状态的弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
 	Mode string `json:"mode,omitempty"`
+}
+
+func (o ChangeServerOsWithCloudInitOption) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ChangeServerOsWithCloudInitOption", string(data)}, " ")
 }

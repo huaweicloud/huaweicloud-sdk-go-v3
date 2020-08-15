@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 弹性云服务器故障信息。
 type ServerFault struct {
@@ -17,4 +22,9 @@ type ServerFault struct {
 	Message string `json:"message,omitempty"`
 	// 异常详情信息。
 	Details string `json:"details,omitempty"`
+}
+
+func (o ServerFault) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ServerFault", string(data)}, " ")
 }

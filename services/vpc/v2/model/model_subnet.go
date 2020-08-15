@@ -1,13 +1,18 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type Subnet struct {
 	// 子网ID
 	Id string `json:"id"`
@@ -38,7 +43,7 @@ type Subnet struct {
 	// 子网所在VPC标识
 	VpcId string `json:"vpc_id"`
 	// 功能说明：子网的状态 取值范围： - ACTIVE：表示子网已挂载到ROUTER上 - UNKNOWN：表示子网还未挂载到ROUTER上 - ERROR：表示子网状态故障
-	Status string `json:"status"`
+	Status SubnetStatus `json:"status"`
 	// 对应网络（OpenStack Neutron接口）id
 	NeutronNetworkId string `json:"neutron_network_id"`
 	// 对应子网（OpenStack Neutron接口）id
@@ -47,4 +52,42 @@ type Subnet struct {
 	NeutronSubnetIdV6 string `json:"neutron_subnet_id_v6"`
 	// 子网配置的NTP地址
 	ExtraDhcpOpts []ExtraDhcpOption `json:"extra_dhcp_opts"`
+}
+
+func (o Subnet) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"Subnet", string(data)}, " ")
+}
+
+type SubnetStatus struct {
+	value string
+}
+
+type SubnetStatusEnum struct {
+	ACTIVE  SubnetStatus
+	UNKNOWN SubnetStatus
+	ERROR   SubnetStatus
+}
+
+func GetSubnetStatusEnum() SubnetStatusEnum {
+	return SubnetStatusEnum{
+		ACTIVE: SubnetStatus{
+			value: "ACTIVE",
+		},
+		UNKNOWN: SubnetStatus{
+			value: "UNKNOWN",
+		},
+		ERROR: SubnetStatus{
+			value: "ERROR",
+		},
+	}
+}
+
+func (c SubnetStatus) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *SubnetStatus) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
 }

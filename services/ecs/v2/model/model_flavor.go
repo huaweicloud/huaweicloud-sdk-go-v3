@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 云服务器规格。
 type Flavor struct {
@@ -34,7 +39,12 @@ type Flavor struct {
 	// 扩展属性，flavor是否给所有租户使用。  - true：表示给所有租户使用。 - false：表示给指定租户使用。  缺省值为true。
 	OsFlavorAccessisPublic bool `json:"os-flavor-access:is_public"`
 	// 规格相关快捷链接地址。
-	Links []FlavorLink `json:"links"`
-	OsExtraSpecs *FlavorExtraSpec `json:"os_extra_specs"`
+	Links              []FlavorLink              `json:"links"`
+	OsExtraSpecs       *FlavorExtraSpec          `json:"os_extra_specs"`
 	AttachableQuantity *ServerAttachableQuantity `json:"attachableQuantity,omitempty"`
+}
+
+func (o Flavor) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"Flavor", string(data)}, " ")
 }

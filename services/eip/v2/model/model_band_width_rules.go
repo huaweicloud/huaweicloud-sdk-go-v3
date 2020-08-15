@@ -1,11 +1,16 @@
 /*
-    * EIP
-    *
-    * 云服务接口
-    *
-*/
+ * EIP
+ *
+ * 云服务接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 带宽规则对象
 type BandWidthRules struct {
@@ -21,4 +26,9 @@ type BandWidthRules struct {
 	EgressGuarentedSize int32 `json:"egress_guarented_size,omitempty"`
 	// 功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
 	PublicipInfo []PublicipInfoResp `json:"publicip_info,omitempty"`
+}
+
+func (o BandWidthRules) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"BandWidthRules", string(data)}, " ")
 }

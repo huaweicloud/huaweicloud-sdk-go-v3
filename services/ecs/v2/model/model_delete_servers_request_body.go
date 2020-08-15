@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // This is a auto create Body Object
 type DeleteServersRequestBody struct {
@@ -15,4 +20,9 @@ type DeleteServersRequestBody struct {
 	DeleteVolume bool `json:"delete_volume,omitempty"`
 	// 所需要删除的云服务器列表。
 	Servers []ServerId `json:"servers"`
+}
+
+func (o DeleteServersRequestBody) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"DeleteServersRequestBody", string(data)}, " ")
 }

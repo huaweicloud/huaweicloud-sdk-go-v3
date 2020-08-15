@@ -1,13 +1,18 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type CreateSecurityGroupRuleOption struct {
 	// 安全组ID
 	SecurityGroupId string `json:"security_group_id"`
@@ -27,4 +32,9 @@ type CreateSecurityGroupRuleOption struct {
 	RemoteIpPrefix string `json:"remote_ip_prefix,omitempty"`
 	// 功能说明：对端安全组ID 约束：和remote_ip_prefix互斥
 	RemoteGroupId string `json:"remote_group_id,omitempty"`
+}
+
+func (o CreateSecurityGroupRuleOption) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"CreateSecurityGroupRuleOption", string(data)}, " ")
 }

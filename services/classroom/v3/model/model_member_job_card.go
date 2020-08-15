@@ -1,11 +1,16 @@
 /*
-    * Classroom
-    *
-    * devcloud classedge api
-    *
-*/
+ * Classroom
+ *
+ * devcloud classedge api
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 type MemberJobCard struct {
 	// 作业名称
@@ -18,4 +23,9 @@ type MemberJobCard struct {
 	SendTime string `json:"send_time"`
 	// 作业最后一次提交时间, 日期格式：yyyy-MM-dd HH:mm:ss
 	LastSubmitTime string `json:"last_submit_time"`
+}
+
+func (o MemberJobCard) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"MemberJobCard", string(data)}, " ")
 }

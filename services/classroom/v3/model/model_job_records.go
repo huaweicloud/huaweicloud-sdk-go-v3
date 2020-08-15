@@ -1,11 +1,16 @@
 /*
-    * Classroom
-    *
-    * devcloud classedge api
-    *
-*/
+ * Classroom
+ *
+ * devcloud classedge api
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 type JobRecords struct {
 	// 第XX次提交
@@ -24,4 +29,9 @@ type JobRecords struct {
 	ComplexityFileAvg string `json:"complexity_file_avg"`
 	// 习题判题耗时(毫秒)
 	AutoScoreUsingTime int32 `json:"auto_score_using_time"`
+}
+
+func (o JobRecords) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"JobRecords", string(data)}, " ")
 }

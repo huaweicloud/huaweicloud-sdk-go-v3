@@ -1,13 +1,18 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type Port struct {
 	// 端口ID
 	Id string `json:"id"`
@@ -15,7 +20,7 @@ type Port struct {
 	Name string `json:"name"`
 	// 端口所属网络的ID
 	NetworkId string `json:"network_id"`
-	// 功能说明：管理状态 约束：只支持true，默认为true 
+	// 功能说明：管理状态 约束：只支持true，默认为true
 	AdminStateUp bool `json:"admin_state_up"`
 	// 功能描述：端口MAC地址 约束：由系统分配，不支持指定
 	MacAddress string `json:"mac_address"`
@@ -24,18 +29,18 @@ type Port struct {
 	// 功能说明：端口所属设备ID 约束：不支持设置和更新，由系统自动维护
 	DeviceId string `json:"device_id"`
 	// 功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、network:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
-	DeviceOwner string `json:"device_owner"`
+	DeviceOwner PortDeviceOwner `json:"device_owner"`
 	// 项目ID
 	TenantId string `json:"tenant_id"`
 	// 功能说明：端口状态，Hana硬直通虚拟机端口状态总为DOWN 取值范围：ACTIVE、BUILD、DOWN
-	Status string `json:"status"`
+	Status PortStatus `json:"status"`
 	// 安全组的ID列表
 	SecurityGroups []string `json:"security_groups"`
 	// 功能说明：IP/Mac对列表 约束：IP地址不允许为 “0.0.0.0” 如果配置地址池较大（CIDR掩码小于24位），建议为该port配置一个单独的安全组。
 	AllowedAddressPairs []AllowedAddressPair `json:"allowed_address_pairs"`
 	// 功能说明：DHCP的扩展Option(扩展属性)
 	ExtraDhcpOpts []ExtraDhcpOpt `json:"extra_dhcp_opts"`
-	// 功能说明：绑定的vNIC类型 取值范围：  - normal（软交换）  - direct: SRIOV硬直通（不支持） 
+	// 功能说明：绑定的vNIC类型 取值范围：  - normal（软交换）  - direct: SRIOV硬直通（不支持）
 	BindingvnicType string `json:"binding:vnic_type"`
 	// 功能说明：主网卡默认内网域名信息 约束：不支持设置和更新，由系统自动维护
 	DnsAssignment []DnsAssignMent `json:"dns_assignment"`
@@ -51,4 +56,79 @@ type Port struct {
 	InstanceType string `json:"instance_type"`
 	// 功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
 	PortSecurityEnabled bool `json:"port_security_enabled"`
+}
+
+func (o Port) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"Port", string(data)}, " ")
+}
+
+type PortDeviceOwner struct {
+	value string
+}
+
+type PortDeviceOwnerEnum struct {
+	NETWORKDHCP                         PortDeviceOwner
+	NETWORKVIP_PORT                     PortDeviceOwner
+	NETWORKROUTER_INTERFACE_DISTRIBUTED PortDeviceOwner
+	NETWORKROUTER_CENTRALIZED_SNAT      PortDeviceOwner
+}
+
+func GetPortDeviceOwnerEnum() PortDeviceOwnerEnum {
+	return PortDeviceOwnerEnum{
+		NETWORKDHCP: PortDeviceOwner{
+			value: "network:dhcp",
+		},
+		NETWORKVIP_PORT: PortDeviceOwner{
+			value: "network:VIP_PORT",
+		},
+		NETWORKROUTER_INTERFACE_DISTRIBUTED: PortDeviceOwner{
+			value: "network:router_interface_distributed",
+		},
+		NETWORKROUTER_CENTRALIZED_SNAT: PortDeviceOwner{
+			value: "network:router_centralized_snat",
+		},
+	}
+}
+
+func (c PortDeviceOwner) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *PortDeviceOwner) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
+}
+
+type PortStatus struct {
+	value string
+}
+
+type PortStatusEnum struct {
+	ACTIVE PortStatus
+	BUILD  PortStatus
+	DOWN   PortStatus
+}
+
+func GetPortStatusEnum() PortStatusEnum {
+	return PortStatusEnum{
+		ACTIVE: PortStatus{
+			value: "ACTIVE",
+		},
+		BUILD: PortStatus{
+			value: "BUILD",
+		},
+		DOWN: PortStatus{
+			value: "DOWN",
+		},
+	}
+}
+
+func (c PortStatus) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *PortStatus) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
 }

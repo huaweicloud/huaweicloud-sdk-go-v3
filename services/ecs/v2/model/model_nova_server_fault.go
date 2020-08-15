@@ -1,13 +1,18 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type NovaServerFault struct {
 	// 错误码。
 	Code int32 `json:"code,omitempty"`
@@ -17,4 +22,9 @@ type NovaServerFault struct {
 	Message string `json:"message,omitempty"`
 	// 异常详情信息。
 	Details string `json:"details,omitempty"`
+}
+
+func (o NovaServerFault) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"NovaServerFault", string(data)}, " ")
 }

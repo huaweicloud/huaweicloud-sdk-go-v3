@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 弹性云服务器规格信息。
 type ServerFlavor struct {
@@ -19,4 +24,9 @@ type ServerFlavor struct {
 	Vcpus string `json:"vcpus"`
 	// 该云服务器规格对应的内存大小，单位为MB。
 	Ram string `json:"ram"`
+}
+
+func (o ServerFlavor) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ServerFlavor", string(data)}, " ")
 }

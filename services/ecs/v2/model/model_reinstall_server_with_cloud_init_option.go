@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 重装操作系统body。
 type ReinstallServerWithCloudInitOption struct {
@@ -14,8 +19,13 @@ type ReinstallServerWithCloudInitOption struct {
 	// 密钥名称。
 	Keyname string `json:"keyname,omitempty"`
 	// 用户ID。当传入keyname参数时，此参数为必选。
-	Userid string `json:"userid,omitempty"`
+	Userid   string                  `json:"userid,omitempty"`
 	Metadata *ReinstallSeverMetadata `json:"metadata,omitempty"`
 	// 取值为withStopServer ，支持开机状态下重装弹性云服务器。 mode取值为withStopServer时，对开机状态的弹性云服务器执行重装操作，系统自动对云服务器先执行关机，再重装操作系统。
 	Mode string `json:"mode,omitempty"`
+}
+
+func (o ReinstallServerWithCloudInitOption) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ReinstallServerWithCloudInitOption", string(data)}, " ")
 }

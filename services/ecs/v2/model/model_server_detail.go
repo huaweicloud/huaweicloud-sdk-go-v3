@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 云服务器详情。
 type ServerDetail struct {
@@ -20,8 +25,8 @@ type ServerDetail struct {
 	// 弹性云服务器的网络属性。
 	Addresses map[string][]ServerAddress `json:"addresses"`
 	// 弹性云服务器使用的密钥对名称。
-	KeyName string `json:"key_name"`
-	Image *ServerImage `json:"image"`
+	KeyName string       `json:"key_name"`
+	Image   *ServerImage `json:"image"`
 	// 扩展属性，弹性云服务器当前任务的状态。
 	OSEXTSTStaskState string `json:"OS-EXT-STS:task_state"`
 	// 扩展属性，弹性云服务器当前状态。
@@ -29,8 +34,8 @@ type ServerDetail struct {
 	// 扩展属性，弹性云服务器别名。
 	OSEXTSRVATTRinstanceName string `json:"OS-EXT-SRV-ATTR:instance_name"`
 	// 扩展属性，弹性云服务器所在虚拟化主机名。
-	OSEXTSRVATTRhypervisorHostname string `json:"OS-EXT-SRV-ATTR:hypervisor_hostname"`
-	Flavor *ServerFlavor `json:"flavor"`
+	OSEXTSRVATTRhypervisorHostname string        `json:"OS-EXT-SRV-ATTR:hypervisor_hostname"`
+	Flavor                         *ServerFlavor `json:"flavor"`
 	// 弹性云服务器ID，格式为UUID。
 	Id string `json:"id"`
 	// 弹性云服务器所属安全组列表。
@@ -50,8 +55,8 @@ type ServerDetail struct {
 	// 预留属性。
 	AccessIPv4 string `json:"accessIPv4"`
 	// 预留属性。
-	AccessIPv6 string `json:"accessIPv6"`
-	Fault *ServerFault `json:"fault,omitempty"`
+	AccessIPv6 string       `json:"accessIPv6"`
+	Fault      *ServerFault `json:"fault,omitempty"`
 	// 弹性云服务器进度。
 	Progress int32 `json:"progress,omitempty"`
 	// 扩展属性，弹性云服务器电源状态。
@@ -87,10 +92,15 @@ type ServerDetail struct {
 	// 弹性云服务器是否为锁定状态。  - true：锁定 - false：未锁定
 	Locked bool `json:"locked"`
 	// 弹性云服务器标签。
-	Tags []string `json:"tags,omitempty"`
+	Tags             []string              `json:"tags,omitempty"`
 	OsschedulerHints *ServerSchedulerHints `json:"os:scheduler_hints,omitempty"`
 	// 弹性云服务器所属的企业项目ID。
 	EnterpriseProjectId string `json:"enterprise_project_id,omitempty"`
 	// 弹性云服务器系统标签。
 	SysTags []ServerSystemTag `json:"sys_tags,omitempty"`
+}
+
+func (o ServerDetail) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ServerDetail", string(data)}, " ")
 }

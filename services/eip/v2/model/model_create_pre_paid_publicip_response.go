@@ -1,11 +1,16 @@
 /*
-    * EIP
-    *
-    * 云服务接口
-    *
-*/
+ * EIP
+ *
+ * 云服务接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // Response Object
 type CreatePrePaidPublicipResponse struct {
@@ -14,4 +19,9 @@ type CreatePrePaidPublicipResponse struct {
 	OrderId string `json:"order_id,omitempty"`
 	// 弹性公网IP的ID（预付费场景返回该字段）
 	PublicipId string `json:"publicip_id,omitempty"`
+}
+
+func (o CreatePrePaidPublicipResponse) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"CreatePrePaidPublicipResponse", string(data)}, " ")
 }

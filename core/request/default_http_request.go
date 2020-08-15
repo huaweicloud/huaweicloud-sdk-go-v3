@@ -28,17 +28,21 @@ import (
 )
 
 type DefaultHttpRequest struct {
-	endpoint     string
-	path         string
-	method       string
-	queryParams  map[string]string
-	pathParams   map[string]string
-	headerParams map[string]string
-	body         interface{}
+	endpoint             string
+	path                 string
+	method               string
+	queryParams          map[string]string
+	pathParams           map[string]string
+	autoFilledPathParams map[string]string
+	headerParams         map[string]string
+	body                 interface{}
 }
 
 func (httpRequest *DefaultHttpRequest) fillParamsInPath() *DefaultHttpRequest {
 	for key, value := range httpRequest.pathParams {
+		httpRequest.path = strings.ReplaceAll(httpRequest.path, "{"+key+"}", value)
+	}
+	for key, value := range httpRequest.autoFilledPathParams {
 		httpRequest.path = strings.ReplaceAll(httpRequest.path, "{"+key+"}", value)
 	}
 	return httpRequest
@@ -159,9 +163,10 @@ type HttpRequestBuilder struct {
 
 func NewHttpRequestBuilder() *HttpRequestBuilder {
 	httpRequest := &DefaultHttpRequest{
-		queryParams:  make(map[string]string),
-		headerParams: make(map[string]string),
-		pathParams:   make(map[string]string),
+		queryParams:          make(map[string]string),
+		headerParams:         make(map[string]string),
+		pathParams:           make(map[string]string),
+		autoFilledPathParams: make(map[string]string),
 	}
 	httpRequestBuilder := &HttpRequestBuilder{
 		httpRequest: httpRequest,
@@ -191,6 +196,11 @@ func (builder *HttpRequestBuilder) AddQueryParam(key string, value string) *Http
 
 func (builder *HttpRequestBuilder) AddPathParam(key string, value string) *HttpRequestBuilder {
 	builder.httpRequest.pathParams[key] = value
+	return builder
+}
+
+func (builder *HttpRequestBuilder) AddAutoFilledPathParam(key string, value string) *HttpRequestBuilder {
+	builder.httpRequest.autoFilledPathParams[key] = value
 	return builder
 }
 

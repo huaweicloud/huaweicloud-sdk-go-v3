@@ -1,11 +1,16 @@
 /*
-    * EIP
-    *
-    * 云服务接口
-    *
-*/
+ * EIP
+ *
+ * 云服务接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 创建floatingip对象
 type CreateFloatingIpOption struct {
@@ -17,4 +22,9 @@ type CreateFloatingIpOption struct {
 	PortId string `json:"port_id,omitempty"`
 	// 关联端口的私有IP地址。
 	FixedIpAddress string `json:"fixed_ip_address,omitempty"`
+}
+
+func (o CreateFloatingIpOption) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"CreateFloatingIpOption", string(data)}, " ")
 }

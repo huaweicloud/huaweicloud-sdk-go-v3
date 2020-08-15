@@ -1,13 +1,18 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type UpdateVpcOption struct {
 	// 功能说明：虚拟私有云名称  取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  约束：如果名称不为空，则同一个租户下的VPC不允许重名。
 	Name string `json:"name,omitempty"`
@@ -17,4 +22,9 @@ type UpdateVpcOption struct {
 	Cidr string `json:"cidr,omitempty"`
 	// 功能说明：路由信息列表，详情参见route对象
 	Routes []Route `json:"routes,omitempty"`
+}
+
+func (o UpdateVpcOption) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"UpdateVpcOption", string(data)}, " ")
 }

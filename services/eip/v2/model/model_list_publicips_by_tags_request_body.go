@@ -1,11 +1,16 @@
 /*
-    * EIP
-    *
-    * 云服务接口
-    *
-*/
+ * EIP
+ *
+ * 云服务接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 通过标签过滤弹性公网IP的请求体
 type ListPublicipsByTagsRequestBody struct {
@@ -16,7 +21,41 @@ type ListPublicipsByTagsRequestBody struct {
 	// 索引位置， 从offset指定的下一条数据开始查询。 查询第一页数据时，不需要传入此参数，查询后续页码数据时，将查询前一页数据时响应体中的值带入此参数（action为count时无此参数）
 	Offset int32 `json:"offset,omitempty"`
 	// 操作标识：  filter分页查询  count查询总数
-	Action string `json:"action"`
+	Action ListPublicipsByTagsRequestBodyAction `json:"action"`
 	// 搜索字段，key为要匹配的字段，当前仅支持resource_name。value为匹配的值。此字段为固定字典值。
 	Matches []MatchReq `json:"matches,omitempty"`
+}
+
+func (o ListPublicipsByTagsRequestBody) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ListPublicipsByTagsRequestBody", string(data)}, " ")
+}
+
+type ListPublicipsByTagsRequestBodyAction struct {
+	value string
+}
+
+type ListPublicipsByTagsRequestBodyActionEnum struct {
+	FILTER ListPublicipsByTagsRequestBodyAction
+	COUNT  ListPublicipsByTagsRequestBodyAction
+}
+
+func GetListPublicipsByTagsRequestBodyActionEnum() ListPublicipsByTagsRequestBodyActionEnum {
+	return ListPublicipsByTagsRequestBodyActionEnum{
+		FILTER: ListPublicipsByTagsRequestBodyAction{
+			value: "filter",
+		},
+		COUNT: ListPublicipsByTagsRequestBodyAction{
+			value: "count",
+		},
+	}
+}
+
+func (c ListPublicipsByTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *ListPublicipsByTagsRequestBodyAction) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
 }

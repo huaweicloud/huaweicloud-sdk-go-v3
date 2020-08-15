@@ -1,11 +1,16 @@
 /*
-    * EIP
-    *
-    * 云服务接口
-    *
-*/
+ * EIP
+ *
+ * 云服务接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 共享带宽插入/移除弹性公网IP的publicip_info字段
 type RemovePublicipInfo struct {
@@ -13,4 +18,9 @@ type RemovePublicipInfo struct {
 	PublicipType string `json:"publicip_type,omitempty"`
 	// 功能说明：带宽对应的弹性公网IP或IPv6端口PORT的唯一标识
 	PublicipId string `json:"publicip_id"`
+}
+
+func (o RemovePublicipInfo) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"RemovePublicipInfo", string(data)}, " ")
 }

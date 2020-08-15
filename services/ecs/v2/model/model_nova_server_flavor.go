@@ -1,13 +1,18 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
 
-//  
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type NovaServerFlavor struct {
 	// 云服务器类型ID。  微版本2.47后不支持。
 	Id string `json:"id,omitempty"`
@@ -27,4 +32,9 @@ type NovaServerFlavor struct {
 	OriginalName string `json:"original_name,omitempty"`
 	// flavor扩展字段。  在微版本2.47后支持。
 	ExtraSpecs map[string]string `json:"extra_specs,omitempty"`
+}
+
+func (o NovaServerFlavor) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"NovaServerFlavor", string(data)}, " ")
 }

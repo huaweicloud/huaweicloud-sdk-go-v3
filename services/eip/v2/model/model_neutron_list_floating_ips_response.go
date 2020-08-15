@@ -1,11 +1,16 @@
 /*
-    * EIP
-    *
-    * 云服务接口
-    *
-*/
+ * EIP
+ *
+ * 云服务接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // Response Object
 type NeutronListFloatingIpsResponse struct {
@@ -13,4 +18,9 @@ type NeutronListFloatingIpsResponse struct {
 	Floatingips []FloatingIpResp `json:"floatingips,omitempty"`
 	// marker分页结构
 	FloatingipsLinks []Pager `json:"floatingips_links,omitempty"`
+}
+
+func (o NeutronListFloatingIpsResponse) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"NeutronListFloatingIpsResponse", string(data)}, " ")
 }

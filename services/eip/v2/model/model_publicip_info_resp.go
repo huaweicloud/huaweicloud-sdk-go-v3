@@ -1,11 +1,16 @@
 /*
-    * EIP
-    *
-    * 云服务接口
-    *
-*/
+ * EIP
+ *
+ * 云服务接口
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // PublicipInfo对象
 type PublicipInfoResp struct {
@@ -18,5 +23,38 @@ type PublicipInfoResp struct {
 	// 功能说明：IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
 	Publicipv6Address string `json:"publicipv6_address,omitempty"`
 	// IP版本信息  取值范围：  4：IPv4  6：IPv6
-	IpVersion int32 `json:"ip_version,omitempty"`
+	IpVersion PublicipInfoRespIpVersion `json:"ip_version,omitempty"`
+}
+
+func (o PublicipInfoResp) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"PublicipInfoResp", string(data)}, " ")
+}
+
+type PublicipInfoRespIpVersion struct {
+	value int32
+}
+
+type PublicipInfoRespIpVersionEnum struct {
+	_4 PublicipInfoRespIpVersion
+	_6 PublicipInfoRespIpVersion
+}
+
+func GetPublicipInfoRespIpVersionEnum() PublicipInfoRespIpVersionEnum {
+	return PublicipInfoRespIpVersionEnum{
+		_4: PublicipInfoRespIpVersion{
+			value: 4,
+		}, _6: PublicipInfoRespIpVersion{
+			value: 6,
+		},
+	}
+}
+
+func (c PublicipInfoRespIpVersion) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *PublicipInfoRespIpVersion) UnmarshalJSON(b []byte) error {
+	c.value = int32(strings.Trim(string(b[:]), "\""))
+	return nil
 }

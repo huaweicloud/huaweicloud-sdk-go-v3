@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 云服务器详情。
 type UpdateServerResult struct {
@@ -20,11 +25,11 @@ type UpdateServerResult struct {
 	// 云服务器元数据。
 	Metadata map[string]string `json:"metadata"`
 	// 弹性云服务器的网络属性。
-	Addresses map[string][]ServerAddress `json:"addresses"`
+	Addresses map[string][]UpdateServerAddress `json:"addresses"`
 	// 弹性云服务器创建时间。  时间格式例如：2019-05-22T03:19:19Z
 	Created string `json:"created"`
 	// 弹性云服务器所在主机的主机ID。
-	HostId string `json:"hostId"`
+	HostId string        `json:"hostId"`
 	Flavor *SimpleFlavor `json:"flavor"`
 	// 扩展属性， diskConfig的类型。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
 	OSDCFdiskConfig string `json:"OS-DCF:diskConfig,omitempty"`
@@ -50,4 +55,9 @@ type UpdateServerResult struct {
 	Status string `json:"status"`
 	// 弹性云服务器的主机名。
 	OSEXTSRVATTRhostname string `json:"OS-EXT-SRV-ATTR:hostname"`
+}
+
+func (o UpdateServerResult) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"UpdateServerResult", string(data)}, " ")
 }

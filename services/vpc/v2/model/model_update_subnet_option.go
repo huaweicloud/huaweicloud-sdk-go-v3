@@ -1,13 +1,18 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type UpdateSubnetOption struct {
 	// 功能说明：子网名称 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
 	Name string `json:"name"`
@@ -25,4 +30,9 @@ type UpdateSubnetOption struct {
 	DnsList []string `json:"dnsList,omitempty"`
 	// 子网配置的NTP地址
 	ExtraDhcpOpts []ExtraDhcpOption `json:"extra_dhcp_opts,omitempty"`
+}
+
+func (o UpdateSubnetOption) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"UpdateSubnetOption", string(data)}, " ")
 }

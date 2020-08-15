@@ -1,24 +1,104 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
 
+import (
+	"encoding/json"
+	"strings"
+)
+
 // Request Object
 type ListPortsRequest struct {
-	Name string `json:"name,omitempty"`
-	Id string `json:"id,omitempty"`
-	Limit int32 `json:"limit,omitempty"`
-	AdminStateUp bool `json:"admin_state_up,omitempty"`
-	NetworkId string `json:"network_id,omitempty"`
-	MacAddress string `json:"mac_address,omitempty"`
-	DeviceId string `json:"device_id,omitempty"`
-	DeviceOwner string `json:"device_owner,omitempty"`
-	Status string `json:"status,omitempty"`
-	Marker string `json:"marker,omitempty"`
-	FixedIps string `json:"fixed_ips,omitempty"`
-	EnterpriseProjectId string `json:"enterprise_project_id,omitempty"`
+	Name                string                      `json:"name,omitempty"`
+	Id                  string                      `json:"id,omitempty"`
+	Limit               int32                       `json:"limit,omitempty"`
+	AdminStateUp        bool                        `json:"admin_state_up,omitempty"`
+	NetworkId           string                      `json:"network_id,omitempty"`
+	MacAddress          string                      `json:"mac_address,omitempty"`
+	DeviceId            string                      `json:"device_id,omitempty"`
+	DeviceOwner         ListPortsRequestDeviceOwner `json:"device_owner,omitempty"`
+	Status              ListPortsRequestStatus      `json:"status,omitempty"`
+	Marker              string                      `json:"marker,omitempty"`
+	FixedIps            string                      `json:"fixed_ips,omitempty"`
+	EnterpriseProjectId string                      `json:"enterprise_project_id,omitempty"`
+}
+
+func (o ListPortsRequest) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ListPortsRequest", string(data)}, " ")
+}
+
+type ListPortsRequestDeviceOwner struct {
+	value string
+}
+
+type ListPortsRequestDeviceOwnerEnum struct {
+	NETWORKDHCP                         ListPortsRequestDeviceOwner
+	NETWORKVIP_PORT                     ListPortsRequestDeviceOwner
+	NETWORKROUTER_INTERFACE_DISTRIBUTED ListPortsRequestDeviceOwner
+	NETWORKROUTER_CENTRALIZED_SNAT      ListPortsRequestDeviceOwner
+}
+
+func GetListPortsRequestDeviceOwnerEnum() ListPortsRequestDeviceOwnerEnum {
+	return ListPortsRequestDeviceOwnerEnum{
+		NETWORKDHCP: ListPortsRequestDeviceOwner{
+			value: "network:dhcp",
+		},
+		NETWORKVIP_PORT: ListPortsRequestDeviceOwner{
+			value: "network:VIP_PORT",
+		},
+		NETWORKROUTER_INTERFACE_DISTRIBUTED: ListPortsRequestDeviceOwner{
+			value: "network:router_interface_distributed",
+		},
+		NETWORKROUTER_CENTRALIZED_SNAT: ListPortsRequestDeviceOwner{
+			value: "network:router_centralized_snat",
+		},
+	}
+}
+
+func (c ListPortsRequestDeviceOwner) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *ListPortsRequestDeviceOwner) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
+}
+
+type ListPortsRequestStatus struct {
+	value string
+}
+
+type ListPortsRequestStatusEnum struct {
+	ACTIVE ListPortsRequestStatus
+	BUILD  ListPortsRequestStatus
+	DOWN   ListPortsRequestStatus
+}
+
+func GetListPortsRequestStatusEnum() ListPortsRequestStatusEnum {
+	return ListPortsRequestStatusEnum{
+		ACTIVE: ListPortsRequestStatus{
+			value: "ACTIVE",
+		},
+		BUILD: ListPortsRequestStatus{
+			value: "BUILD",
+		},
+		DOWN: ListPortsRequestStatus{
+			value: "DOWN",
+		},
+	}
+}
+
+func (c ListPortsRequestStatus) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *ListPortsRequestStatus) UnmarshalJSON(b []byte) error {
+	c.value = string(strings.Trim(string(b[:]), "\""))
+	return nil
 }

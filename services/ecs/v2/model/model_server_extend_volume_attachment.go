@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 挂载到弹性云服务器上的磁盘。
 type ServerExtendVolumeAttachment struct {
@@ -17,4 +22,9 @@ type ServerExtendVolumeAttachment struct {
 	BootIndex string `json:"bootIndex,omitempty"`
 	// 云硬盘挂载盘符，即磁盘挂载点。
 	Device string `json:"device"`
+}
+
+func (o ServerExtendVolumeAttachment) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ServerExtendVolumeAttachment", string(data)}, " ")
 }

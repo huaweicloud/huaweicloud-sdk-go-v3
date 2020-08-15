@@ -1,13 +1,18 @@
 /*
-    * VPC
-    *
-    * VPC Open API
-    *
-*/
+ * VPC
+ *
+ * VPC Open API
+ *
+ */
 
 package model
 
-// 
+import (
+	"encoding/json"
+	"strings"
+)
+
+//
 type SecurityGroupRule struct {
 	// 安全组规则ID
 	Id string `json:"id"`
@@ -31,4 +36,9 @@ type SecurityGroupRule struct {
 	RemoteGroupId string `json:"remote_group_id"`
 	// 安全组所属项目ID
 	TenantId string `json:"tenant_id"`
+}
+
+func (o SecurityGroupRule) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"SecurityGroupRule", string(data)}, " ")
 }

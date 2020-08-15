@@ -1,11 +1,16 @@
 /*
-    * ecs
-    *
-    * ECS Open API
-    *
-*/
+ * ecs
+ *
+ * ECS Open API
+ *
+ */
 
 package model
+
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 更新云服务器Body体。
 type UpdateServerOption struct {
@@ -15,4 +20,9 @@ type UpdateServerOption struct {
 	Description string `json:"description,omitempty"`
 	// 修改云服务hostname。  命令规范：长度为 [1-64] 个字符，允许使用点号(.)分隔字符成多段，每段允许使用大小写字母、数字或连字符(-)，但不能连续使用点号(.)或连字符(-),不能以点号(.)或连字符(-)开头或结尾，不能出现（.-）和（-.）。
 	Hostname string `json:"hostname,omitempty"`
+}
+
+func (o UpdateServerOption) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"UpdateServerOption", string(data)}, " ")
 }
