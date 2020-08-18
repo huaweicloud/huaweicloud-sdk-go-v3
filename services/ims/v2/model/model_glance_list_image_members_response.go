@@ -17,7 +17,7 @@ type GlanceListImageMembersResponse struct {
 	// 成员信息
 	Members []GlanceImageMembers `json:"members,omitempty"`
 	// 视图信息
-	Schema string `json:"schema,omitempty"`
+	Schema *string `json:"schema,omitempty"`
 }
 
 func (o GlanceListImageMembersResponse) String() string {

@@ -15,9 +15,9 @@ import (
 // Response Object
 type DecryptDataResponse struct {
 	// 密钥ID。
-	KeyId string `json:"key_id,omitempty"`
+	KeyId *string `json:"key_id,omitempty"`
 	// 明文。
-	PlainText string `json:"plain_text,omitempty"`
+	PlainText *string `json:"plain_text,omitempty"`
 }
 
 func (o DecryptDataResponse) String() string {

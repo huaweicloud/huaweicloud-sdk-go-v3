@@ -14,11 +14,11 @@ import (
 
 type RelativeResource struct {
 	// 关联资源Id
-	RelativeResourceId string `json:"relativeResourceId,omitempty"`
+	RelativeResourceId *string `json:"relativeResourceId,omitempty"`
 	// 关联资源名称
-	RelativeResourceName string `json:"relativeResourceName,omitempty"`
+	RelativeResourceName *string `json:"relativeResourceName,omitempty"`
 	// 关联云服务名称
-	RelativeCloudServiceType string `json:"relativeCloudServiceType,omitempty"`
+	RelativeCloudServiceType *string `json:"relativeCloudServiceType,omitempty"`
 }
 
 func (o RelativeResource) String() string {

@@ -16,7 +16,7 @@ import (
 type ShowInstanceResponse struct {
 	Instance *InstancesVo `json:"instance,omitempty"`
 	// 状态
-	Status string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty"`
 }
 
 func (o ShowInstanceResponse) String() string {

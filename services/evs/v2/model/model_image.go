@@ -14,11 +14,11 @@ import (
 
 type Image struct {
 	// 云硬盘导出镜像的容器类型。  目前支持ami、ari、aki、ovf、bare。默认是bare。
-	ContainerFormat string `json:"container_format,omitempty"`
+	ContainerFormat *string `json:"container_format,omitempty"`
 	// 云硬盘导出镜像的格式。  目前支持vhd、zvhd、zvhd2、raw、qcow2。默认是vhd。
-	DiskFormat string `json:"disk_format,omitempty"`
+	DiskFormat *string `json:"disk_format,omitempty"`
 	// 云硬盘描述信息。
-	DisplayDescription string `json:"display_description,omitempty"`
+	DisplayDescription *string `json:"display_description,omitempty"`
 	// 云硬盘ID。
 	Id string `json:"id"`
 	// 云硬盘导出镜像的ID。

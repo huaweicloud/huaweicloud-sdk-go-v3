@@ -14,7 +14,7 @@ import (
 
 type TemplateInfo struct {
 	// 转码模板ID。
-	TemplateId int32               `json:"template_id,omitempty"`
+	TemplateId *int32              `json:"template_id,omitempty"`
 	Template   *QueryTransTemplate `json:"template,omitempty"`
 	Error      *XCodeError         `json:"error,omitempty"`
 }

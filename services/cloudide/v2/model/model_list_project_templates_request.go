@@ -14,8 +14,8 @@ import (
 
 // Request Object
 type ListProjectTemplatesRequest struct {
-	Arch    string `json:"arch,omitempty"`
-	StackId string `json:"stack_id"`
+	Arch    *string `json:"arch,omitempty"`
+	StackId string  `json:"stack_id"`
 }
 
 func (o ListProjectTemplatesRequest) String() string {

@@ -20,19 +20,19 @@ type ShowDetailsOfAppV2Response struct {
 	// 更新时间
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 	// APP的key
-	AppKey string `json:"app_key,omitempty"`
+	AppKey *string `json:"app_key,omitempty"`
 	// 名称
-	Name string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty"`
 	// 描述
-	Remark string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty"`
 	// 编号
-	Id string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 	// 密钥
-	AppSecret string `json:"app_secret,omitempty"`
+	AppSecret *string `json:"app_secret,omitempty"`
 	// 注册时间
 	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
 	// 状态
-	Status int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty"`
 	// APP的类型  默认为apig，暂不支持其他类型
 	AppType ShowDetailsOfAppV2ResponseAppType `json:"app_type,omitempty"`
 }

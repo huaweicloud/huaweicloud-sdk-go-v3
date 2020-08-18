@@ -14,11 +14,11 @@ import (
 
 type TemplateSimpleInfo struct {
 	// 模板id
-	Id string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 	// 模板名
-	Title string `json:"title,omitempty"`
+	Title *string `json:"title,omitempty"`
 	// 模板描述
-	Description string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o TemplateSimpleInfo) String() string {

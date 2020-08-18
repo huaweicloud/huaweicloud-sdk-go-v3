@@ -19,11 +19,11 @@ type RegionLocales struct {
 	// 区域的英文名称。
 	EnUs string `json:"en-us"`
 	// 区域的葡萄牙语名称。
-	PtBr string `json:"pt-br,omitempty"`
+	PtBr *string `json:"pt-br,omitempty"`
 	// 区域的美国西班牙语名称。
-	EsUs string `json:"es-us,omitempty"`
+	EsUs *string `json:"es-us,omitempty"`
 	// 区域的西班牙语名称。
-	EsEs string `json:"es-es,omitempty"`
+	EsEs *string `json:"es-es,omitempty"`
 }
 
 func (o RegionLocales) String() string {

@@ -14,11 +14,11 @@ import (
 
 type GetParametersForImportRequestBody struct {
 	// 密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
-	KeyId string `json:"key_id,omitempty"`
+	KeyId *string `json:"key_id,omitempty"`
 	// 密钥材料加密算法，枚举如下：  - RSAES_PKCS1_V1_5  - RSAES_OAEP_SHA_1  - RSAES_OAEP_SHA_256
 	WrappingAlgorithm GetParametersForImportRequestBodyWrappingAlgorithm `json:"wrapping_algorithm,omitempty"`
 	// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
-	Sequence string `json:"sequence,omitempty"`
+	Sequence *string `json:"sequence,omitempty"`
 }
 
 func (o GetParametersForImportRequestBody) String() string {

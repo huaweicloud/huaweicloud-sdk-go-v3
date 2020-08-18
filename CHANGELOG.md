@@ -1,3 +1,13 @@
+# 0.0.4-beta 2020-08-18
+## HuaweiCloud SDK Core
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix the problem of missing default values of Go basic type when serializing.
+ - ### Change
+    - None
+
+
 # 0.0.3-beta 2020-08-14
 ## HuaweiCloud SDK APIG
  - ### Features

@@ -21,7 +21,7 @@ type ServicePolicyRoleOption struct {
 	// 自定义策略的描述信息。
 	Description string `json:"description"`
 	// 自定义策略的中文描述信息。
-	DescriptionCn string         `json:"description_cn,omitempty"`
+	DescriptionCn *string        `json:"description_cn,omitempty"`
 	Policy        *ServicePolicy `json:"policy"`
 }
 

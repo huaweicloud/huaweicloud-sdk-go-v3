@@ -12,12 +12,12 @@ import (
 	"strings"
 )
 
-// 卷、快照的link
+// 云硬盘uri自描述信息。
 type Link struct {
 	// 对应的快捷链接。
-	Href string `json:"href"`
+	Href *string `json:"href,omitempty"`
 	// 快捷链接标记名称。
-	Rel string `json:"rel"`
+	Rel *string `json:"rel,omitempty"`
 }
 
 func (o Link) String() string {

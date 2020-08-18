@@ -14,11 +14,11 @@ import (
 
 // Request Object
 type ListIssuedCouponQuotasRequest struct {
-	QuotaId           string `json:"quota_id,omitempty"`
-	IndirectPartnerId string `json:"indirect_partner_id,omitempty"`
-	ParentQuotaId     string `json:"parent_quota_id,omitempty"`
-	Offset            int32  `json:"offset,omitempty"`
-	Limit             int32  `json:"limit,omitempty"`
+	QuotaId           *string `json:"quota_id,omitempty"`
+	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
+	ParentQuotaId     *string `json:"parent_quota_id,omitempty"`
+	Offset            *int32  `json:"offset,omitempty"`
+	Limit             *int32  `json:"limit,omitempty"`
 }
 
 func (o ListIssuedCouponQuotasRequest) String() string {

@@ -139,7 +139,7 @@ func (hc *HcHttpClient) extractResponse(resp *response.DefaultHttpResponse, resp
 
 	err = jsoniter.Unmarshal(data, responseDef.BodyJson)
 	if err != nil {
-		return resp, err
+		responseDef.BodyJson = string(data)
 	}
 
 	resp.BodyJson = responseDef.BodyJson

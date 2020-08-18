@@ -14,8 +14,8 @@ import (
 
 // Request Object
 type ShowTemplateDetailRequest struct {
-	XLanguage  string `json:"X-Language,omitempty"`
-	TemplateId string `json:"template_id"`
+	XLanguage  *string `json:"X-Language,omitempty"`
+	TemplateId string  `json:"template_id"`
 }
 
 func (o ShowTemplateDetailRequest) String() string {

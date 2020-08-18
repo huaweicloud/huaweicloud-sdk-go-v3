@@ -14,11 +14,11 @@ import (
 
 type SourceStorage struct {
 	// 位置
-	Location string `json:"location,omitempty"`
+	Location *string `json:"location,omitempty"`
 	// 参数值
 	Parameters map[string]string `json:"parameters,omitempty"`
 	// 类型
-	Type string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o SourceStorage) String() string {

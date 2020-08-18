@@ -19,7 +19,7 @@ type PageInfo struct {
 	// 当前页总数
 	CurrentCount int32 `json:"current_count"`
 	// 当前页最后一条记录，最后一页时无next_marker字段
-	NextMarker string `json:"next_marker,omitempty"`
+	NextMarker *string `json:"next_marker,omitempty"`
 }
 
 func (o PageInfo) String() string {

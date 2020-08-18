@@ -14,7 +14,7 @@ import (
 
 type EnterprisePersonNew struct {
 	// |参数名称：认证人角色| |参数的约束及描述：该参数非必填，legalPerson ：法人代表 authorizedPerson：授权人|
-	CertifierRole string `json:"certifier_role,omitempty"`
+	CertifierRole *string `json:"certifier_role,omitempty"`
 	// |参数名称：法人身份证号| |参数的约束及描述：该参数必填，且只允许字符串|
 	LegelIdNumber string `json:"legel_id_number"`
 	// |参数名称：法人姓名| |参数的约束及描述：该参数必填，且只允许字符串|

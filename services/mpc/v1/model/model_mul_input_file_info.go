@@ -14,7 +14,7 @@ import (
 
 type MulInputFileInfo struct {
 	// 语言标签。
-	Language string      `json:"language,omitempty"`
+	Language *string     `json:"language,omitempty"`
 	Input    *ObsObjInfo `json:"input,omitempty"`
 }
 

@@ -20,7 +20,7 @@ type ObsObjInfo struct {
 	// OBS对象路径，遵守OSS Object定义。  - 当用于指示input时,需要指定到具体对象。 - 当用于指示output时, 只需指定到转码结果期望存放的路径。
 	Object string `json:"object"`
 	// 文件名，仅用于输出。  - 当指定了此参数时，输出的对象名为object/file_name 。 - 当不指定此参数时，输出的对象名为object/xxx，其中xxx由MPC指定。
-	FileName string `json:"file_name,omitempty"`
+	FileName *string `json:"file_name,omitempty"`
 }
 
 func (o ObsObjInfo) String() string {

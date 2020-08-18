@@ -14,7 +14,7 @@ import (
 
 // Request Object
 type CreateStreamForbiddenRequest struct {
-	SpecifyProject string                  `json:"specify_project,omitempty"`
+	SpecifyProject *string                 `json:"specify_project,omitempty"`
 	Body           *StreamForbiddenSetting `json:"body,omitempty"`
 }
 

@@ -14,10 +14,10 @@ import (
 
 type VaultCreate struct {
 	// 备份策略ID，不设置时为null，不自动备份。
-	BackupPolicyId string         `json:"backup_policy_id,omitempty"`
+	BackupPolicyId *string        `json:"backup_policy_id,omitempty"`
 	Billing        *BillingCreate `json:"billing"`
 	// 描述
-	Description string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty"`
 	// 存储库名称
 	Name string `json:"name"`
 	// 绑定的备份资源，未在创建时绑定资源填[]
@@ -25,9 +25,9 @@ type VaultCreate struct {
 	// 标签列表 tags不允许为空列表。 tags中最多包含10个key。 tags中key不允许重复。
 	Tags []Tag `json:"tags,omitempty"`
 	// 企业项目ID，默认为‘0’。
-	EnterpriseProjectId string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 是否支持自动挂载。
-	AutoBind bool `json:"auto_bind,omitempty"`
+	AutoBind *bool `json:"auto_bind,omitempty"`
 	//
 	BindRules map[string]interface{} `json:"bind_rules,omitempty"`
 }

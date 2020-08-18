@@ -53,17 +53,17 @@ type ServerLimits struct {
 	// 已使用的服务器组个数。
 	TotalServerGroupsUsed int32 `json:"totalServerGroupsUsed"`
 	// 竞价实例的最大申请数量。
-	MaxTotalSpotInstances int32 `json:"maxTotalSpotInstances,omitempty"`
+	MaxTotalSpotInstances *int32 `json:"maxTotalSpotInstances,omitempty"`
 	// 竞价实例的CPU核数最大申请数量。
-	MaxTotalSpotCores int32 `json:"maxTotalSpotCores,omitempty"`
+	MaxTotalSpotCores *int32 `json:"maxTotalSpotCores,omitempty"`
 	// 竞价实例的内存最大申请容量（单位：MB）。
-	MaxTotalSpotRAMSize int32 `json:"maxTotalSpotRAMSize,omitempty"`
+	MaxTotalSpotRAMSize *int32 `json:"maxTotalSpotRAMSize,omitempty"`
 	// 当前竞价实例的使用个数。
-	TotalSpotInstancesUsed int32 `json:"totalSpotInstancesUsed,omitempty"`
+	TotalSpotInstancesUsed *int32 `json:"totalSpotInstancesUsed,omitempty"`
 	// 当前竞价实例已使用的CPU核数。
-	TotalSpotCoresUsed int32 `json:"totalSpotCoresUsed,omitempty"`
+	TotalSpotCoresUsed *int32 `json:"totalSpotCoresUsed,omitempty"`
 	// 当前竞价实例的内存使用容量（单位：MB）。
-	TotalSpotRAMUsed int32 `json:"totalSpotRAMUsed,omitempty"`
+	TotalSpotRAMUsed *int32 `json:"totalSpotRAMUsed,omitempty"`
 	// 使用该flavor可以申请的弹性云服务器数量。  值为“-1”时，表示无数量限制。
 	LimitByFlavor []ProjectFlavorLimit `json:"limit_by_flavor,omitempty"`
 }

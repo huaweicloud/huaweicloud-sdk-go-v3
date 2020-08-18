@@ -18,7 +18,7 @@ type KeystoneCreateUserResult struct {
 	// IAM用户名。
 	Name string `json:"name"`
 	// IAM用户描述信息。
-	Description string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty"`
 	// IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
 	PasswordExpiresAt string     `json:"password_expires_at"`
 	Links             *LinksSelf `json:"links"`

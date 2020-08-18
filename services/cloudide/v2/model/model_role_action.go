@@ -14,13 +14,13 @@ import (
 
 type RoleAction struct {
 	// 动作名
-	ActionCname string `json:"action_cname,omitempty"`
+	ActionCname *string `json:"action_cname,omitempty"`
 	// 执行动作
 	Actions RoleActionActions `json:"actions,omitempty"`
 	// id
-	Id string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 	// 角色id
-	RoleId string `json:"role_id,omitempty"`
+	RoleId *string `json:"role_id,omitempty"`
 }
 
 func (o RoleAction) String() string {

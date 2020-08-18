@@ -15,7 +15,7 @@ import (
 // Response Object
 type BatchDeleteMembersResponse struct {
 	// 异步任务ID。
-	JobId string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty"`
 }
 
 func (o BatchDeleteMembersResponse) String() string {

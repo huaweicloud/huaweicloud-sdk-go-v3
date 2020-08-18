@@ -17,17 +17,17 @@ type ShowJobResponse struct {
 	// 任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
 	Status ShowJobResponseStatus `json:"status,omitempty"`
 	// 任务ID。
-	JobId string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty"`
 	// 任务类型。
-	JobType string `json:"job_type,omitempty"`
+	JobType *string `json:"job_type,omitempty"`
 	// 任务开始执行时间。格式为UTC时间。
-	BeginTime string `json:"begin_time,omitempty"`
+	BeginTime *string `json:"begin_time,omitempty"`
 	// 任务结束时间。格式为UTC时间。
-	EndTime string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty"`
 	// 错误码。
-	ErrorCode string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty"`
 	// 失败原因。
-	FailReason string       `json:"fail_reason,omitempty"`
+	FailReason *string      `json:"fail_reason,omitempty"`
 	Entities   *JobEntities `json:"entities,omitempty"`
 }
 

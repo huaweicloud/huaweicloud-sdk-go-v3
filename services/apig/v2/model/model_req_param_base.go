@@ -20,29 +20,29 @@ type ReqParamBase struct {
 	// 参数位置
 	Location ReqParamBaseLocation `json:"location"`
 	// 参数默认值
-	DefaultValue string `json:"default_value,omitempty"`
+	DefaultValue *string `json:"default_value,omitempty"`
 	// 参数示例值
-	SampleValue string `json:"sample_value,omitempty"`
+	SampleValue *string `json:"sample_value,omitempty"`
 	// 是否必须 - 1：是 - 2：否  location为PATH时，required默认为1，其他场景required默认为2
-	Required int32 `json:"required,omitempty"`
+	Required *int32 `json:"required,omitempty"`
 	// 是否开启校验 - 1：开启校验 - 2：不开启校验
-	ValidEnable int32 `json:"valid_enable,omitempty"`
+	ValidEnable *int32 `json:"valid_enable,omitempty"`
 	// 描述信息。长度不超过255个字符 > 中文字符必须为UTF-8或者unicode编码。
-	Remark string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty"`
 	// 参数枚举值
-	Enumerations string `json:"enumerations,omitempty"`
+	Enumerations *string `json:"enumerations,omitempty"`
 	// 参数最小值  参数类型为NUMBER时有效
-	MinNum int32 `json:"min_num,omitempty"`
+	MinNum *int32 `json:"min_num,omitempty"`
 	// 参数最大值  参数类型为NUMBER时有效
-	MaxNum int32 `json:"max_num,omitempty"`
+	MaxNum *int32 `json:"max_num,omitempty"`
 	// 参数最小长度  参数类型为STRING时有效
-	MinSize int32 `json:"min_size,omitempty"`
+	MinSize *int32 `json:"min_size,omitempty"`
 	// 参数最大长度  参数类型为STRING时有效
-	MaxSize int32 `json:"max_size,omitempty"`
+	MaxSize *int32 `json:"max_size,omitempty"`
 	// 正则校验规则  暂不支持
-	Regular string `json:"regular,omitempty"`
+	Regular *string `json:"regular,omitempty"`
 	// JSON校验规则  暂不支持
-	JsonSchema string `json:"json_schema,omitempty"`
+	JsonSchema *string `json:"json_schema,omitempty"`
 	// 是否透传 - 1：是 - 2：否
 	PassThrough ReqParamBasePassThrough `json:"pass_through,omitempty"`
 }

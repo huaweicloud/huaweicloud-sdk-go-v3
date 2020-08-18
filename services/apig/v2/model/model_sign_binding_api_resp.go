@@ -15,33 +15,33 @@ import (
 
 type SignBindingApiResp struct {
 	// API的发布编号
-	PublishId string `json:"publish_id,omitempty"`
+	PublishId *string `json:"publish_id,omitempty"`
 	// API编号
-	ApiId string `json:"api_id,omitempty"`
+	ApiId *string `json:"api_id,omitempty"`
 	// 签名密钥的密钥
-	SignSecret string `json:"sign_secret,omitempty"`
+	SignSecret *string `json:"sign_secret,omitempty"`
 	// API所属分组的名称
-	GroupName string `json:"group_name,omitempty"`
+	GroupName *string `json:"group_name,omitempty"`
 	// 签名密钥的编号
-	SignId string `json:"sign_id,omitempty"`
+	SignId *string `json:"sign_id,omitempty"`
 	// 签名密钥的key
-	SignKey string `json:"sign_key,omitempty"`
+	SignKey *string `json:"sign_key,omitempty"`
 	// 绑定时间
 	BindingTime *sdktime.SdkTime `json:"binding_time,omitempty"`
 	// API所属环境的编号
-	EnvId string `json:"env_id,omitempty"`
+	EnvId *string `json:"env_id,omitempty"`
 	// API所属环境的名称
-	EnvName string `json:"env_name,omitempty"`
+	EnvName *string `json:"env_name,omitempty"`
 	// 签名密钥的名称
-	SignName string `json:"sign_name,omitempty"`
+	SignName *string `json:"sign_name,omitempty"`
 	// API类型
-	ApiType int32 `json:"api_type,omitempty"`
+	ApiType *int32 `json:"api_type,omitempty"`
 	// API名称
-	ApiName string `json:"api_name,omitempty"`
+	ApiName *string `json:"api_name,omitempty"`
 	// 绑定关系的ID
-	Id string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 	// API描述
-	ApiRemark string `json:"api_remark,omitempty"`
+	ApiRemark *string `json:"api_remark,omitempty"`
 }
 
 func (o SignBindingApiResp) String() string {

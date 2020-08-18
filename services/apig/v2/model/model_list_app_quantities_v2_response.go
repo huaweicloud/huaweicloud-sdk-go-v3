@@ -15,9 +15,9 @@ import (
 // Response Object
 type ListAppQuantitiesV2Response struct {
 	// 已进行API访问授权的APP个数
-	AuthedNums int32 `json:"authed_nums,omitempty"`
+	AuthedNums *int32 `json:"authed_nums,omitempty"`
 	// 未进行API访问授权的APP个数
-	UnauthedNums int32 `json:"unauthed_nums,omitempty"`
+	UnauthedNums *int32 `json:"unauthed_nums,omitempty"`
 }
 
 func (o ListAppQuantitiesV2Response) String() string {

@@ -14,8 +14,8 @@ import (
 
 // Request Object
 type ShowJobDetailRequest struct {
-	XLanguage string `json:"X-Language,omitempty"`
-	JobId     string `json:"job_id"`
+	XLanguage *string `json:"X-Language,omitempty"`
+	JobId     string  `json:"job_id"`
 }
 
 func (o ShowJobDetailRequest) String() string {

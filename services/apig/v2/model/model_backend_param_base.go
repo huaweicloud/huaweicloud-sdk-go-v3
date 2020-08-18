@@ -18,7 +18,7 @@ type BackendParamBase struct {
 	// 参数名称。 字符串由英文字母、数字、中划线、下划线、英文句号组成，且只能以英文开头。
 	Name string `json:"name"`
 	// 描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
-	Remark string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty"`
 	// 参数位置：PATH、QUERY、HEADER
 	Location BackendParamBaseLocation `json:"location"`
 	// 参数值。字符长度不超过255，类别为REQUEST时，值为req_params中的参数名称；类别为CONSTANT时，值为参数真正的值；类别为SYSTEM时，值为网关参数名称

@@ -14,11 +14,11 @@ import (
 
 type ObsObject struct {
 	// 对象的key
-	FileName string `json:"file_name,omitempty"`
+	FileName *string `json:"file_name,omitempty"`
 	// 文件大小
-	Size int64 `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty"`
 	// 文件的最后修改时间
-	LastModified string `json:"last_modified,omitempty"`
+	LastModified *string `json:"last_modified,omitempty"`
 }
 
 func (o ObsObject) String() string {

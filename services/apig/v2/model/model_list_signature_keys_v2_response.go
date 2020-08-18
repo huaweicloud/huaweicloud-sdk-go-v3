@@ -15,11 +15,11 @@ import (
 // Response Object
 type ListSignatureKeysV2Response struct {
 	// 符合条件的签名密钥的数量
-	Total int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty"`
 	// 本次查询到的签名密钥列表
 	Signs []SignatureCreateResp `json:"signs,omitempty"`
 	// 本次返回的列表长度
-	Size int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty"`
 }
 
 func (o ListSignatureKeysV2Response) String() string {

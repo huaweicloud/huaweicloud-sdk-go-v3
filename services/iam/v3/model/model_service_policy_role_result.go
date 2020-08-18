@@ -23,7 +23,7 @@ type ServicePolicyRoleResult struct {
 	Links       *LinksSelf     `json:"links"`
 	Policy      *ServicePolicy `json:"policy"`
 	// 自定义策略的中文描述信息。
-	DescriptionCn string `json:"description_cn,omitempty"`
+	DescriptionCn *string `json:"description_cn,omitempty"`
 	// 自定义策略所属账号ID。
 	DomainId string `json:"domain_id"`
 	// 自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
@@ -33,11 +33,11 @@ type ServicePolicyRoleResult struct {
 	// 自定义策略名。
 	Name string `json:"name"`
 	// 自定义策略更新时间。
-	UpdatedTime string `json:"updated_time,omitempty"`
+	UpdatedTime *string `json:"updated_time,omitempty"`
 	// 自定义策略创建时间。
-	CreatedTime string `json:"created_time,omitempty"`
+	CreatedTime *string `json:"created_time,omitempty"`
 	// 自定义策略的引用次数。
-	References string `json:"references,omitempty"`
+	References *string `json:"references,omitempty"`
 }
 
 func (o ServicePolicyRoleResult) String() string {

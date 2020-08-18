@@ -14,17 +14,17 @@ import (
 
 type OutputVideoPara struct {
 	// 输出视频对应的模板ID
-	TemplateId int32 `json:"template_id,omitempty"`
+	TemplateId *int32 `json:"template_id,omitempty"`
 	// 视频大小
-	Size int64 `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty"`
 	// 视频封装格式
-	Pack  string     `json:"pack,omitempty"`
+	Pack  *string    `json:"pack,omitempty"`
 	Video *VideoInfo `json:"video,omitempty"`
 	Audio *AudioInfo `json:"audio,omitempty"`
 	// 输出片源文件名
-	FileName string `json:"file_name,omitempty"`
+	FileName *string `json:"file_name,omitempty"`
 	// 折算后视频时长
-	ConverDuration float64     `json:"conver_duration,omitempty"`
+	ConverDuration *float64    `json:"conver_duration,omitempty"`
 	Error          *XCodeError `json:"error,omitempty"`
 }
 

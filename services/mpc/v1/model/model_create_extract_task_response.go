@@ -15,16 +15,16 @@ import (
 // Response Object
 type CreateExtractTaskResponse struct {
 	// 任务ID
-	TaskId string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty"`
 	// 任务状态
-	Status string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty"`
 	// 任务创建时间
-	CreateTime string      `json:"create_time,omitempty"`
+	CreateTime *string     `json:"create_time,omitempty"`
 	Output     *ObsObjInfo `json:"output,omitempty"`
 	// 解析文件名称
-	OutputFileName string `json:"output_file_name,omitempty"`
+	OutputFileName *string `json:"output_file_name,omitempty"`
 	// 任务描述，如当任务异常时，此字段为异常的具体信息
-	Description string    `json:"description,omitempty"`
+	Description *string   `json:"description,omitempty"`
 	Metadata    *MetaData `json:"metadata,omitempty"`
 }
 

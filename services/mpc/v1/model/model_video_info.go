@@ -14,15 +14,15 @@ import (
 
 type VideoInfo struct {
 	// 视频宽度
-	Width int32 `json:"width,omitempty"`
+	Width *int32 `json:"width,omitempty"`
 	// 视频高度
-	Height int32 `json:"height,omitempty"`
+	Height *int32 `json:"height,omitempty"`
 	// 视频码率
-	Bitrate int32 `json:"bitrate,omitempty"`
+	Bitrate *int32 `json:"bitrate,omitempty"`
 	// 帧率。    取值范围：0或[5,60]，0表示自适应。    单位：帧每秒。    > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
-	FrameRate int32 `json:"frame_rate,omitempty"`
+	FrameRate *int32 `json:"frame_rate,omitempty"`
 	// 视频编码格式
-	Codec string `json:"codec,omitempty"`
+	Codec *string `json:"codec,omitempty"`
 }
 
 func (o VideoInfo) String() string {

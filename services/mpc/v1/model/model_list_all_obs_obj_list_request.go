@@ -14,9 +14,9 @@ import (
 
 // Request Object
 type ListAllObsObjListRequest struct {
-	Bucket string `json:"bucket"`
-	Prefix string `json:"prefix,omitempty"`
-	Type   string `json:"type,omitempty"`
+	Bucket string  `json:"bucket"`
+	Prefix *string `json:"prefix,omitempty"`
+	Type   *string `json:"type,omitempty"`
 }
 
 func (o ListAllObsObjListRequest) String() string {

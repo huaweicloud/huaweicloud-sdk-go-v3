@@ -24,19 +24,19 @@ type ShowUserResult struct {
 	Name  string     `json:"name"`
 	Links *LinksSelf `json:"links"`
 	// IAM用户在外部系统中的ID。
-	XuserId string `json:"xuser_id,omitempty"`
+	XuserId *string `json:"xuser_id,omitempty"`
 	// IAM用户在外部系统中的类型。
-	XuserType string `json:"xuser_type,omitempty"`
+	XuserType *string `json:"xuser_type,omitempty"`
 	// IAM用户手机号的国家码。
-	Areacode string `json:"areacode,omitempty"`
+	Areacode *string `json:"areacode,omitempty"`
 	// IAM用户邮箱。
-	Email string `json:"email,omitempty"`
+	Email *string `json:"email,omitempty"`
 	// IAM用户手机号。
-	Phone string `json:"phone,omitempty"`
+	Phone *string `json:"phone,omitempty"`
 	// IAM用户密码状态。true：需要修改密码，false：正常。
-	PwdStatus bool `json:"pwd_status,omitempty"`
+	PwdStatus *bool `json:"pwd_status,omitempty"`
 	// IAM用户更新时间。
-	UpdateTime string `json:"update_time,omitempty"`
+	UpdateTime *string `json:"update_time,omitempty"`
 }
 
 func (o ShowUserResult) String() string {

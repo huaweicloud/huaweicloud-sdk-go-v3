@@ -14,7 +14,7 @@ import (
 
 // Request Object
 type ListPartnerBalancesRequest struct {
-	IndirectPartnerId string `json:"indirect_partner_id,omitempty"`
+	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 
 func (o ListPartnerBalancesRequest) String() string {

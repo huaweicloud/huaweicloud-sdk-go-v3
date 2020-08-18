@@ -18,7 +18,7 @@ type BucketAuthorizedReq struct {
 	// 操作标记，取值[0,1]，0表示取消授权，1表示授权
 	Operation BucketAuthorizedReqOperation `json:"operation"`
 	// 租户Id
-	ProjectId string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty"`
 }
 
 func (o BucketAuthorizedReq) String() string {

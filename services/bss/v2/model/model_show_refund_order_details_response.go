@@ -17,7 +17,7 @@ type ShowRefundOrderDetailsResponse struct {
 	// |参数名称：资源信息列表。具体请参见表2 OrderRefundInfoV2。| |参数约束以及描述：资源信息列表。具体请参见表2 OrderRefundInfoV2。|
 	RefundInfos []OrderRefundInfoV2 `json:"refund_infos,omitempty"`
 	// |参数名称：总记录数。| |参数的约束及描述：总记录数。|
-	TotalCount int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 }
 
 func (o ShowRefundOrderDetailsResponse) String() string {

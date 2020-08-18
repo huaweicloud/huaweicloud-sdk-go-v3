@@ -14,7 +14,7 @@ import (
 
 type RollbackSnapshotOption struct {
 	// 回滚的目标云硬盘名称。
-	Name string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty"`
 	// 回滚的目标云硬盘UUID。
 	VolumeId string `json:"volume_id"`
 }

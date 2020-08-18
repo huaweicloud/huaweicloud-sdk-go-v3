@@ -54,7 +54,7 @@ type BackupResp struct {
 	// 复制记录
 	ReplicationRecords []ReplicationRecordGet `json:"replication_records"`
 	// 企业项目id,默认为‘0’。
-	EnterpriseProjectId string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o BackupResp) String() string {

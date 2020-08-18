@@ -14,7 +14,7 @@ import (
 
 type AuditReport struct {
 	// 疑似黑边位置信息，参数格式：top:bottom:left:right
-	BlackPosition string `json:"black_position,omitempty"`
+	BlackPosition *string `json:"black_position,omitempty"`
 }
 
 func (o AuditReport) String() string {

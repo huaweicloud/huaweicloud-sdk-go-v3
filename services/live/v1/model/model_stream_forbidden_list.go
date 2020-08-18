@@ -18,7 +18,7 @@ type StreamForbiddenList struct {
 	// 流名称
 	StreamName string `json:"stream_name"`
 	// 恢复流时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间，不指定则永久禁播
-	ResumeTime string `json:"resume_time,omitempty"`
+	ResumeTime *string `json:"resume_time,omitempty"`
 }
 
 func (o StreamForbiddenList) String() string {

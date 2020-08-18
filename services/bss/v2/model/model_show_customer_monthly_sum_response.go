@@ -25,17 +25,17 @@ type ShowCustomerMonthlySumResponse struct {
 	// |参数名称：信用账户金额。| |参数的约束及描述：信用账户金额。|
 	CreditAmount float32 `json:"credit_amount,omitempty"`
 	// |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
-	Currency string `json:"currency,omitempty"`
+	Currency *string `json:"currency,omitempty"`
 	// |参数名称：总欠费金额。| |参数的约束及描述：总欠费金额。|
 	DebtAmount float32 `json:"debt_amount,omitempty"`
 	// |参数名称：现金券金额，预留。| |参数的约束及描述：现金券金额，预留。|
 	FlexipurchaseCouponAmount float32 `json:"flexipurchase_coupon_amount,omitempty"`
 	// |参数名称：金额单位。1：元2：角3：分| |参数的约束及描述：金额单位。1：元2：角3：分|
-	MeasureId int32 `json:"measure_id,omitempty"`
+	MeasureId *int32 `json:"measure_id,omitempty"`
 	// |参数名称：储值卡金额，预留。| |参数的约束及描述：储值卡金额，预留。|
 	StoredValueCardAmount float32 `json:"stored_value_card_amount,omitempty"`
 	// |参数名称：总条数，必须大于等于0。| |参数的约束及描述：总条数，必须大于等于0。|
-	TotalCount int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 	// |参数名称：欠费核销金额| |参数的约束及描述：欠费核销金额|
 	WriteoffAmount float32 `json:"writeoff_amount,omitempty"`
 }

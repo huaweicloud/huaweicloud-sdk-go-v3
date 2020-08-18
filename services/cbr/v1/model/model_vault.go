@@ -15,7 +15,7 @@ import (
 type Vault struct {
 	Billing *Billing `json:"billing"`
 	// 存储库自定义描述信息。
-	Description string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty"`
 	// 保管库ID
 	Id string `json:"id"`
 	// 保管库名称
@@ -29,15 +29,15 @@ type Vault struct {
 	// 存储库标签
 	Tags []Tag `json:"tags,omitempty"`
 	// 企业项目id，默认为‘0’。
-	EnterpriseProjectId string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 是否自动绑定，默认为false，不支持。
-	AutoBind string `json:"auto_bind,omitempty"`
+	AutoBind *string `json:"auto_bind,omitempty"`
 	// 绑定规则
-	BindRules string `json:"bind_rules,omitempty"`
+	BindRules *string `json:"bind_rules,omitempty"`
 	// 用户id
-	UserId string `json:"user_id,omitempty"`
+	UserId *string `json:"user_id,omitempty"`
 	// 创建时间
-	CreatedAt string `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty"`
 }
 
 func (o Vault) String() string {

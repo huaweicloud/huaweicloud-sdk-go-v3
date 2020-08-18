@@ -15,9 +15,9 @@ import (
 // Response Object
 type ListApiGroupsV2Response struct {
 	// 满足条件的分组总数
-	Total int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty"`
 	// 本次返回的列表长度
-	Size int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty"`
 	// 分组列表
 	Groups []ApiGroupDetailResp `json:"groups,omitempty"`
 }

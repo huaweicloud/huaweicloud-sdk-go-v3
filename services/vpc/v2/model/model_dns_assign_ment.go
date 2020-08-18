@@ -15,11 +15,11 @@ import (
 //
 type DnsAssignMent struct {
 	// 端口hostname
-	Hostname string `json:"hostname,omitempty"`
+	Hostname *string `json:"hostname,omitempty"`
 	// 端口IP地址
-	IpAddress string `json:"ip_address,omitempty"`
+	IpAddress *string `json:"ip_address,omitempty"`
 	// 端口内网fqdn
-	Fqdn string `json:"fqdn,omitempty"`
+	Fqdn *string `json:"fqdn,omitempty"`
 }
 
 func (o DnsAssignMent) String() string {

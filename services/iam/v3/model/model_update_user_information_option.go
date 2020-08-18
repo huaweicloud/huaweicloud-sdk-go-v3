@@ -15,9 +15,9 @@ import (
 //
 type UpdateUserInformationOption struct {
 	// IAM用户的新邮箱，符合邮箱格式，长度小于等于255字符。
-	Email string `json:"email,omitempty"`
+	Email *string `json:"email,omitempty"`
 	// IAM用户的国家码+新手机号，手机号为纯数字，长度小于等于32字符。
-	Mobile string `json:"mobile,omitempty"`
+	Mobile *string `json:"mobile,omitempty"`
 }
 
 func (o UpdateUserInformationOption) String() string {

@@ -14,7 +14,7 @@ import (
 
 type PolicyCreate struct {
 	// 是否启用策略
-	Enabled bool `json:"enabled,omitempty"`
+	Enabled *bool `json:"enabled,omitempty"`
 	// 策略名称，长度限制：1- 64，只能由中文、字母、数字、“_”、“-”组成。
 	Name                string           `json:"name"`
 	OperationDefinition *PolicyoOdCreate `json:"operation_definition"`

@@ -14,9 +14,9 @@ import (
 
 type ResourceInfo struct {
 	// 资源类型
-	ResourceType string `json:"resourceType,omitempty"`
+	ResourceType *string `json:"resourceType,omitempty"`
 	// 资源Id
-	ResourceId string `json:"resourceId,omitempty"`
+	ResourceId *string `json:"resourceId,omitempty"`
 }
 
 func (o ResourceInfo) String() string {

@@ -43,43 +43,43 @@ type ImageInfo struct {
 	// 镜像平台分类
 	Platform ImageInfoPlatform `json:"__platform"`
 	// 市场镜像的产品ID
-	Productcode string `json:"__productcode,omitempty"`
+	Productcode *string `json:"__productcode,omitempty"`
 	// 镜像来源表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性。
-	SupportDiskintensive string `json:"__support_diskintensive,omitempty"`
+	SupportDiskintensive *string `json:"__support_diskintensive,omitempty"`
 	// 表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性。
-	SupportHighperformance string `json:"__support_highperformance,omitempty"`
+	SupportHighperformance *string `json:"__support_highperformance,omitempty"`
 	// 如果镜像支持KVM，取值为true，否则无需增加该属性。
-	SupportKvm string `json:"__support_kvm,omitempty"`
+	SupportKvm *string `json:"__support_kvm,omitempty"`
 	// 表示该镜像是支持KVM虚拟化平台下的GPU类型，如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
-	SupportKvmGpuType string `json:"__support_kvm_gpu_type,omitempty"`
+	SupportKvmGpuType *string `json:"__support_kvm_gpu_type,omitempty"`
 	// 如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
-	SupportKvmInfiniband string `json:"__support_kvm_infiniband,omitempty"`
+	SupportKvmInfiniband *string `json:"__support_kvm_infiniband,omitempty"`
 	// 表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性。
-	SupportLargememory string `json:"__support_largememory,omitempty"`
+	SupportLargememory *string `json:"__support_largememory,omitempty"`
 	// 如果镜像支持XEN，取值为true，否则无需增加该属性。
-	SupportXen string `json:"__support_xen,omitempty"`
+	SupportXen *string `json:"__support_xen,omitempty"`
 	// 表示该镜像是支持XEN虚拟化平台下的GPU优化类型，如果不支持XEN虚拟化下GPU类型，无需添加该属性            。该属性与“__support_xen”和“__support_kvm”属性不共存。
-	SupportXenGpuType string `json:"__support_xen_gpu_type,omitempty"`
+	SupportXenGpuType *string `json:"__support_xen_gpu_type,omitempty"`
 	// 如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”             和“__support_kvm”属性不共存。
-	SupportXenHana string `json:"__support_xen_hana,omitempty"`
+	SupportXenHana *string `json:"__support_xen_hana,omitempty"`
 	// 表示当前镜像是否支持发布为市场镜像,true表示支持,false 表示不支持
-	SystemSupportMarket bool `json:"__system_support_market,omitempty"`
+	SystemSupportMarket *bool `json:"__system_support_market,omitempty"`
 	// 目前暂时不使用
-	Checksum string `json:"checksum,omitempty"`
+	Checksum *string `json:"checksum,omitempty"`
 	// 容器类型
 	ContainerFormat string `json:"container_format"`
 	// 创建时间。格式为UTC时间
 	CreatedAt string `json:"created_at"`
 	// 是否是删除的镜像，取值为true或者false
-	Deleted bool `json:"deleted,omitempty"`
+	Deleted *bool `json:"deleted,omitempty"`
 	// 删除时间。格式为UTC时间
-	DeletedAt string `json:"deleted_at,omitempty"`
+	DeletedAt *string `json:"deleted_at,omitempty"`
 	// 镜像的格式，目前支持vhd，zvhd、raw，qcow2。默认值是vhd
-	DiskFormat string `json:"disk_format,omitempty"`
+	DiskFormat *string `json:"disk_format,omitempty"`
 	// 表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目，取值为UUID，表示属于             该UUID对应的企业项目。
 	EnterpriseProjectId string `json:"enterprise_project_id"`
 	// 镜像文件下载和上传链接
-	File string `json:"file,omitempty"`
+	File *string `json:"file,omitempty"`
 	// 镜像ID
 	Id string `json:"id"`
 	// 镜像运行需要的最小磁盘容量，单位为GB。取值为40～1024GB。
@@ -93,11 +93,11 @@ type ImageInfo struct {
 	// 是否是受保护的，受保护的镜像不允许删除。取值为true或false
 	Protected bool `json:"protected"`
 	// 镜像视图
-	Schema string `json:"schema,omitempty"`
+	Schema *string `json:"schema,omitempty"`
 	// 镜像链接信息
 	Self string `json:"self"`
 	// 目前暂时不使用
-	Size int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty"`
 	// 镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待 上传镜像文件。saving：表示镜像 正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用
 	Status ImageInfoStatus `json:"status"`
 	// 镜像标签列表

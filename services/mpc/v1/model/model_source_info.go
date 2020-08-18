@@ -14,11 +14,11 @@ import (
 
 type SourceInfo struct {
 	// 片源时长
-	Duration int32 `json:"duration,omitempty"`
+	Duration *int32 `json:"duration,omitempty"`
 	// 片源格式
-	Format string `json:"format,omitempty"`
+	Format *string `json:"format,omitempty"`
 	// 片源大小
-	Size      int64      `json:"size,omitempty"`
+	Size      *int64     `json:"size,omitempty"`
 	VideoInfo *VideoInfo `json:"video_info,omitempty"`
 	// 音频信息
 	AudioInfo []AudioInfo `json:"audio_info,omitempty"`

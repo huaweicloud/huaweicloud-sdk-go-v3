@@ -24,9 +24,9 @@ type Billing struct {
 	// 对象类型
 	ObjectType BillingObjectType `json:"object_type,omitempty"`
 	// 订单ID
-	OrderId string `json:"order_id,omitempty"`
+	OrderId *string `json:"order_id,omitempty"`
 	// 产品ID
-	ProductId string `json:"product_id,omitempty"`
+	ProductId *string `json:"product_id,omitempty"`
 	// 保护类型
 	ProtectType BillingProtectType `json:"protect_type"`
 	// 容量，单位GB
@@ -36,11 +36,11 @@ type Billing struct {
 	// 保管库状态
 	Status BillingStatus `json:"status"`
 	// 存储库桶名
-	StorageUnit string `json:"storage_unit,omitempty"`
+	StorageUnit *string `json:"storage_unit,omitempty"`
 	// 已使用容量，单位MB
 	Used int32 `json:"used"`
 	// 冻结场景
-	FrozenScene string `json:"frozen_scene,omitempty"`
+	FrozenScene *string `json:"frozen_scene,omitempty"`
 }
 
 func (o Billing) String() string {

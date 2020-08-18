@@ -19,11 +19,11 @@ type VolumeType struct {
 	Name       string                `json:"name"`
 	ExtraSpecs *VolumeTypeExtraSpecs `json:"extra_specs,omitempty"`
 	// 云硬盘类型的描述信息。
-	Description string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty"`
 	// 预留属性。
-	QosSpecsId string `json:"qos_specs_id,omitempty"`
+	QosSpecsId *string `json:"qos_specs_id,omitempty"`
 	// 预留属性。
-	IsPublic bool `json:"is_public,omitempty"`
+	IsPublic *bool `json:"is_public,omitempty"`
 }
 
 func (o VolumeType) String() string {

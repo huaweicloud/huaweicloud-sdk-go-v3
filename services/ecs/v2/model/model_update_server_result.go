@@ -32,7 +32,7 @@ type UpdateServerResult struct {
 	HostId string        `json:"hostId"`
 	Flavor *SimpleFlavor `json:"flavor"`
 	// 扩展属性， diskConfig的类型。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
-	OSDCFdiskConfig string `json:"OS-DCF:diskConfig,omitempty"`
+	OSDCFdiskConfig *string `json:"OS-DCF:diskConfig,omitempty"`
 	// 创建弹性云服务器的用户ID，格式为UUID。
 	UserId string `json:"user_id"`
 	// 弹性云服务器名称。
@@ -46,9 +46,9 @@ type UpdateServerResult struct {
 	// 弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
 	Updated string `json:"updated"`
 	// 弹性云服务器是否为锁定状态。  - true：锁定 - false：未锁定
-	Locked bool `json:"locked,omitempty"`
+	Locked *bool `json:"locked,omitempty"`
 	// 弹性云服务器的描述信息。
-	Description string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty"`
 	// 云服务器的标签列表。  微版本2.26后支持，如果不使用微版本查询，响应中无tags字段。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。 - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
 	Tags []string `json:"tags"`
 	// 弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE

@@ -14,9 +14,9 @@ import (
 
 type LimitValue struct {
 	// |参数名称：属性值1| |参数约束及描述：属性值1|
-	Value1 string `json:"value1,omitempty"`
+	Value1 *string `json:"value1,omitempty"`
 	// |参数名称：属性值2| |参数约束及描述：属性值2|
-	Value2 string `json:"value2,omitempty"`
+	Value2 *string `json:"value2,omitempty"`
 }
 
 func (o LimitValue) String() string {

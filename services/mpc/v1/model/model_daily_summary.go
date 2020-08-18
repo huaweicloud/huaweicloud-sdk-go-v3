@@ -14,11 +14,11 @@ import (
 
 type DailySummary struct {
 	// 转码源文件时长，单位：分钟，精确到小数点后两位。
-	Duration float32 `json:"duration,omitempty"`
+	Duration *float32 `json:"duration,omitempty"`
 	// 任务数
-	TaskCount int64 `json:"task_count,omitempty"`
+	TaskCount *int64 `json:"task_count,omitempty"`
 	// 日期,格式样例：2018/03/01.
-	Date string `json:"date,omitempty"`
+	Date *string `json:"date,omitempty"`
 }
 
 func (o DailySummary) String() string {

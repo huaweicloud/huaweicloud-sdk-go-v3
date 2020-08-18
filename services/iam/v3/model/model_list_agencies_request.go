@@ -14,8 +14,8 @@ import (
 
 // Request Object
 type ListAgenciesRequest struct {
-	TrustDomainId string `json:"trust_domain_id,omitempty"`
-	Name          string `json:"name,omitempty"`
+	TrustDomainId *string `json:"trust_domain_id,omitempty"`
+	Name          *string `json:"name,omitempty"`
 }
 
 func (o ListAgenciesRequest) String() string {

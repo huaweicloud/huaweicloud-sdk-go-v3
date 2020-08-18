@@ -15,7 +15,7 @@ import (
 // Response Object
 type ShowUserInstancesResponse struct {
 	// 非默认用户主密钥个数。
-	InstanceNum string `json:"instance_num,omitempty"`
+	InstanceNum *string `json:"instance_num,omitempty"`
 }
 
 func (o ShowUserInstancesResponse) String() string {

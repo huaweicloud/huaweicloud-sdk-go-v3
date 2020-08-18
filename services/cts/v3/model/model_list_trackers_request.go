@@ -14,7 +14,7 @@ import (
 
 // Request Object
 type ListTrackersRequest struct {
-	TrackerName string                         `json:"tracker_name,omitempty"`
+	TrackerName *string                        `json:"tracker_name,omitempty"`
 	TrackerType ListTrackersRequestTrackerType `json:"tracker_type,omitempty"`
 }
 

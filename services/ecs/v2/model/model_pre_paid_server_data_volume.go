@@ -19,19 +19,19 @@ type PrePaidServerDataVolume struct {
 	// 数据盘大小，容量单位为GB，输入大小范围为[10,32768]。
 	Size int32 `json:"size"`
 	// 是否为共享磁盘。true为共享盘，false为普通云硬盘。  > 说明： >  > 该字段已废弃，请使用multiattach。
-	Shareable bool `json:"shareable,omitempty"`
+	Shareable *bool `json:"shareable,omitempty"`
 	// 创建共享磁盘的信息。  - true：创建的磁盘为共享盘。 - false：创建的磁盘为普通云硬盘。  > 说明： >  > shareable当前为废弃字段，如果确实需要同时使用shareable字段和multiattach字段，此时，请确保两个字段的参数值相同。当不指定该字段时，系统默认创建普通云硬盘。
-	Multiattach bool `json:"multiattach,omitempty"`
+	Multiattach *bool `json:"multiattach,omitempty"`
 	// 数据卷是否使用SCSI锁。  - true表示云硬盘的设备类型为SCSI类型，即允许ECS操作系统直接访问底层存储介质。支持SCSI锁命令。 - false表示云硬盘的设备类型为VBD (虚拟块存储设备 , Virtual Block Device)类型，即为默认类型，VBD只能支持简单的SCSI读写命令。 - 该字段不存在时，云硬盘默认为VBD类型。  > 说明： >  > 此参数为boolean类型，若传入非boolean类型字符，程序将按照【false】方式处理。
-	Hwpassthrough bool                                `json:"hw:passthrough,omitempty"`
+	Hwpassthrough *bool                               `json:"hw:passthrough,omitempty"`
 	Extendparam   *PrePaidServerDataVolumeExtendParam `json:"extendparam,omitempty"`
 	// 云服务器数据盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
 	ClusterType PrePaidServerDataVolumeClusterType `json:"cluster_type,omitempty"`
 	// 数据镜像的ID，UUID格式。
-	ClusterId string                           `json:"cluster_id,omitempty"`
+	ClusterId *string                          `json:"cluster_id,omitempty"`
 	Metadata  *PrePaidServerDataVolumeMetadata `json:"metadata,omitempty"`
 	// 数据镜像的ID，UUID格式。  如果使用数据盘镜像创建数据盘，则data_image_id为必选参数，且不支持使用metadata。
-	DataImageId string `json:"data_image_id,omitempty"`
+	DataImageId *string `json:"data_image_id,omitempty"`
 }
 
 func (o PrePaidServerDataVolume) String() string {

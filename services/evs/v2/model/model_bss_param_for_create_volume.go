@@ -21,7 +21,7 @@ type BssParamForCreateVolume struct {
 	// 功能说明：是否自动续订。chargingMode为prePaid时该参数会生效。默认值为false。 取值范围： * true：自动续订，自动续订周期与订购周期相同 * false：不自动续订
 	IsAutoRenew BssParamForCreateVolumeIsAutoRenew `json:"isAutoRenew,omitempty"`
 	// 功能说明：订购周期数，chargingMode为prePaid时该参数会生效，并且该参数为为必选。 取值范围： * periodType为month时，为[1-9] * periodType为year时，为[1-1]
-	PeriodNum int32 `json:"periodNum,omitempty"`
+	PeriodNum *int32 `json:"periodNum,omitempty"`
 	// 功能说明：订购周期单位。chargingMode为prePaid时该参数会生效，并且该参数为必选。 取值范围： * month：月 * year：年
 	PeriodType BssParamForCreateVolumePeriodType `json:"periodType,omitempty"`
 }

@@ -20,7 +20,7 @@ type ApiPublishReq struct {
 	// API的编号，即：需要进行发布或下线的API的编号
 	ApiId string `json:"api_id"`
 	// 对发布动作的简述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
-	Remark string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty"`
 }
 
 func (o ApiPublishReq) String() string {

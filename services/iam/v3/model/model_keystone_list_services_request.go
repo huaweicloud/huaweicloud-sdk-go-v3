@@ -14,7 +14,7 @@ import (
 
 // Request Object
 type KeystoneListServicesRequest struct {
-	Type string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o KeystoneListServicesRequest) String() string {

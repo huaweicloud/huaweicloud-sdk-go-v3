@@ -15,11 +15,11 @@ import (
 // Response Object
 type AssociateDomainV2Response struct {
 	// 自定义域名
-	UrlDomain string `json:"url_domain,omitempty"`
+	UrlDomain *string `json:"url_domain,omitempty"`
 	// 域名的编号
-	Id string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 	// CNAME解析状态 - 1: 未解析 - 2: 解析中 - 3: 解析成功 - 4: 解析失败
-	Status int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty"`
 }
 
 func (o AssociateDomainV2Response) String() string {

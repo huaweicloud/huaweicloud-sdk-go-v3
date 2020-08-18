@@ -14,9 +14,9 @@ import (
 
 // Request Object
 type ListProvincesRequest struct {
-	XLanguage string `json:"X-Language,omitempty"`
-	Offset    int32  `json:"offset,omitempty"`
-	Limit     int32  `json:"limit,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+	Offset    *int32  `json:"offset,omitempty"`
+	Limit     *int32  `json:"limit,omitempty"`
 }
 
 func (o ListProvincesRequest) String() string {

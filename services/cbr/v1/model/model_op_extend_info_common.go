@@ -18,7 +18,7 @@ type OpExtendInfoCommon struct {
 	// 请求id
 	RequestId string `json:"request_id"`
 	// 备份任务id
-	TaskId string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty"`
 }
 
 func (o OpExtendInfoCommon) String() string {

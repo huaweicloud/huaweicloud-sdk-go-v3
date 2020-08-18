@@ -25,7 +25,7 @@ type NovaKeypair struct {
 	// 密钥所属用户ID。
 	UserId string `json:"user_id"`
 	// 密钥类型，默认“ssh”  微版本2.2以上支持
-	Type string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o NovaKeypair) String() string {

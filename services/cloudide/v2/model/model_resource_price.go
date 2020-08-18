@@ -16,11 +16,11 @@ type ResourcePrice struct {
 	// cpu架构 x86|arm
 	Arch ResourcePriceArch `json:"arch,omitempty"`
 	// 价格
-	Price float32 `json:"price,omitempty"`
+	Price *float32 `json:"price,omitempty"`
 	// 规格。 类型为'storage'时，size值可以为5GB，10GB，20GB。 类型为'cpuMemory'时，arch为'x86'，size值可以为1U1G，2U4G；arch为'arm'，size值可以为4U8G。
-	Size string `json:"size,omitempty"`
+	Size *string `json:"size,omitempty"`
 	// 类型。目前可以取值storage，cpuMemory
-	Type string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o ResourcePrice) String() string {

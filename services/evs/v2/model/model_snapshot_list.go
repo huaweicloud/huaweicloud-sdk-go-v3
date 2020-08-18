@@ -19,13 +19,13 @@ type SnapshotList struct {
 	// 云硬盘快照的状态。
 	Status string `json:"status"`
 	// 云硬盘快照名称。
-	Name string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty"`
 	// 云硬盘快照描述信息。
-	Description string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty"`
 	// 云硬盘快照创建时间。
 	CreatedAt string `json:"created_at"`
 	// 云硬盘快照更新时间。
-	UpdatedAt string `json:"updated_at,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 	// 云硬盘快照的元数据信息。
 	Metadata map[string]string `json:"metadata,omitempty"`
 	// 快照所属的云硬盘。
@@ -37,9 +37,9 @@ type SnapshotList struct {
 	// 快照进度。
 	OsExtendedSnapshotAttributesprogress string `json:"os-extended-snapshot-attributes:progress"`
 	// 专属存储ID。
-	DedicatedStorageId string `json:"dedicated_storage_id,omitempty"`
+	DedicatedStorageId *string `json:"dedicated_storage_id,omitempty"`
 	// 专属存储名称。
-	DedicatedStorageName string `json:"dedicated_storage_name,omitempty"`
+	DedicatedStorageName *string `json:"dedicated_storage_name,omitempty"`
 	// 服务类型。
 	ServiceType string `json:"service_type"`
 }

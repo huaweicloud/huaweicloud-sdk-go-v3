@@ -17,13 +17,13 @@ type PolicyRoleResult struct {
 	// 自定义策略所属账号ID。
 	DomainId string `json:"domain_id"`
 	// 自定义策略的引用次数。
-	References int32 `json:"references,omitempty"`
+	References *int32 `json:"references,omitempty"`
 	// 自定义策略更新时间。
-	UpdatedTime string `json:"updated_time,omitempty"`
+	UpdatedTime *string `json:"updated_time,omitempty"`
 	// 自定义策略创建时间。
-	CreatedTime string `json:"created_time,omitempty"`
+	CreatedTime *string `json:"created_time,omitempty"`
 	// 自定义策略的中文描述信息。
-	DescriptionCn string `json:"description_cn,omitempty"`
+	DescriptionCn *string `json:"description_cn,omitempty"`
 	// 自定义策略所在目录。
 	Catalog string `json:"catalog"`
 	// 自定义策略名。

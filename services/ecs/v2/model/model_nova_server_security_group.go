@@ -15,7 +15,7 @@ import (
 //
 type NovaServerSecurityGroup struct {
 	// 安全组名称或者uuid。
-	Name string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o NovaServerSecurityGroup) String() string {

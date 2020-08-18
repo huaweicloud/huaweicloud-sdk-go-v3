@@ -14,23 +14,23 @@ import (
 
 type Job struct {
 	// 任务Id
-	JobId string `json:"jobId,omitempty"`
+	JobId *string `json:"jobId,omitempty"`
 	// 任务类型
-	JobType int32 `json:"jobType,omitempty"`
+	JobType *int32 `json:"jobType,omitempty"`
 	// 任务状态
-	JobStatus int32 `json:"jobStatus,omitempty"`
+	JobStatus *int32 `json:"jobStatus,omitempty"`
 	// 实体列表
 	Entities []Entity `json:"entities,omitempty"`
 	// 子任务列表
 	SubJobs []Job `json:"subJobs,omitempty"`
 	// 任务开始时间
-	BeginTime string `json:"beginTime,omitempty"`
+	BeginTime *string `json:"beginTime,omitempty"`
 	// 任务结束时间
-	EndTime string `json:"endTime,omitempty"`
+	EndTime *string `json:"endTime,omitempty"`
 	// 任务运行代码
-	ExecuteCode string `json:"executeCode,omitempty"`
+	ExecuteCode *string `json:"executeCode,omitempty"`
 	// 任务运行信息
-	ExecuteMessage string `json:"executeMessage,omitempty"`
+	ExecuteMessage *string `json:"executeMessage,omitempty"`
 }
 
 func (o Job) String() string {

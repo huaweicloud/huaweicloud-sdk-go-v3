@@ -15,11 +15,11 @@ import (
 //
 type KeystoneUpdateGroupOption struct {
 	// 用户组描述信息，长度小于等于255字节。name与description至少填写一个。
-	Description string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty"`
 	// 用户组所属账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/zh-cn_topic_0057845624.html)。
-	DomainId string `json:"domain_id,omitempty"`
+	DomainId *string `json:"domain_id,omitempty"`
 	// 用户组名，长度小于等于64字节。name与description至少填写一个。
-	Name string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o KeystoneUpdateGroupOption) String() string {

@@ -14,13 +14,13 @@ import (
 
 // Request Object
 type ListResizeFlavorsRequest struct {
-	InstanceUuid     string                          `json:"instance_uuid,omitempty"`
-	Limit            int32                           `json:"limit,omitempty"`
-	Marker           string                          `json:"marker,omitempty"`
+	InstanceUuid     *string                         `json:"instance_uuid,omitempty"`
+	Limit            *int32                          `json:"limit,omitempty"`
+	Marker           *string                         `json:"marker,omitempty"`
 	SortDir          ListResizeFlavorsRequestSortDir `json:"sort_dir,omitempty"`
 	SortKey          ListResizeFlavorsRequestSortKey `json:"sort_key,omitempty"`
-	SourceFlavorId   string                          `json:"source_flavor_id,omitempty"`
-	SourceFlavorName string                          `json:"source_flavor_name,omitempty"`
+	SourceFlavorId   *string                         `json:"source_flavor_id,omitempty"`
+	SourceFlavorName *string                         `json:"source_flavor_name,omitempty"`
 }
 
 func (o ListResizeFlavorsRequest) String() string {

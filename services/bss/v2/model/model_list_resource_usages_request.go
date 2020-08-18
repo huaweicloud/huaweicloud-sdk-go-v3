@@ -14,7 +14,7 @@ import (
 
 // Request Object
 type ListResourceUsagesRequest struct {
-	XLanguage string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
 }
 
 func (o ListResourceUsagesRequest) String() string {

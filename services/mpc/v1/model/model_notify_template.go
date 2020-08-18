@@ -14,13 +14,13 @@ import (
 
 type NotifyTemplate struct {
 	// 模板名称
-	TemplateName string `json:"template_name,omitempty"`
+	TemplateName *string `json:"template_name,omitempty"`
 	// 模板内容
-	TemplateContent string `json:"template_content,omitempty"`
+	TemplateContent *string `json:"template_content,omitempty"`
 	// 协议名称
-	Protocol string `json:"protocol,omitempty"`
+	Protocol *string `json:"protocol,omitempty"`
 	// 通知消息的事件类型。当前固定为0, 0表示转码完成事件。
-	Event int32 `json:"event,omitempty"`
+	Event *int32 `json:"event,omitempty"`
 }
 
 func (o NotifyTemplate) String() string {

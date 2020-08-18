@@ -15,11 +15,11 @@ import (
 // Response Object
 type CheckAppV2Response struct {
 	// 名称
-	Name string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty"`
 	// 描述
-	Remark string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty"`
 	// 编号
-	Id string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o CheckAppV2Response) String() string {

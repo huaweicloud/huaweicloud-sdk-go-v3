@@ -24,19 +24,19 @@ type CreateTranscodingReq struct {
 	Thumbnail        *Thumbnail         `json:"thumbnail,omitempty"`
 	DigitalWatermark *DigitalWatermark  `json:"digital_watermark,omitempty"`
 	// 项目ID
-	ProjectId string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty"`
 	// 项目ID
-	CanonicalGrantId string `json:"canonicalGrant_id,omitempty"`
+	CanonicalGrantId *string `json:"canonicalGrant_id,omitempty"`
 	// 是否vip用户
-	VipUser bool `json:"vip_user,omitempty"`
+	VipUser *bool `json:"vip_user,omitempty"`
 	// 任务Id
-	TaskId string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty"`
 	// 租户域名
-	DomainName string `json:"domain_name,omitempty"`
+	DomainName *string `json:"domain_name,omitempty"`
 	// 租户Id
-	TenantProjectId string `json:"tenant_project_id,omitempty"`
+	TenantProjectId *string `json:"tenant_project_id,omitempty"`
 	// 任务优先级，取值如下： - 9代表高优先级。 - 6代表中优先级，默认为6。  暂时只支持6和9。
-	Priority       int32           `json:"priority,omitempty"`
+	Priority       *int32          `json:"priority,omitempty"`
 	Audit          *Audit          `json:"audit,omitempty"`
 	Subtitle       *Subtitle       `json:"subtitle,omitempty"`
 	SpecialEffect  *SpecialEffect  `json:"special_effect,omitempty"`

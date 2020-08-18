@@ -14,9 +14,9 @@ import (
 
 type StatSummary struct {
 	// 精确到小数点后两位。
-	Value float64 `json:"value,omitempty"`
+	Value *float64 `json:"value,omitempty"`
 	// 日期,精确到天,格式样例：2018/03/01。
-	Date string `json:"date,omitempty"`
+	Date *string `json:"date,omitempty"`
 }
 
 func (o StatSummary) String() string {

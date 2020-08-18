@@ -14,7 +14,7 @@ import (
 
 // Request Object
 type KeystoneListPermissionsRequest struct {
-	Name string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o KeystoneListPermissionsRequest) String() string {

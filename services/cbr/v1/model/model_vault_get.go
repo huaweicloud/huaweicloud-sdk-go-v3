@@ -15,7 +15,7 @@ import (
 type VaultGet struct {
 	Billing *Billing `json:"billing"`
 	// 描述
-	Description string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty"`
 	// 保管库id
 	Id string `json:"id"`
 	// 保管库名称
@@ -27,19 +27,19 @@ type VaultGet struct {
 	Resources  *VaultResourceIntancesResp `json:"resources"`
 	Tags       *TagsResp                  `json:"tags,omitempty"`
 	// 企业项目id
-	EnterpriseProjectId string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 是否自动绑定，默认为false，不支持。
-	AutoBind bool `json:"auto_bind,omitempty"`
+	AutoBind *bool `json:"auto_bind,omitempty"`
 	// 绑定规则
-	BindRules string `json:"bind_rules,omitempty"`
+	BindRules *string `json:"bind_rules,omitempty"`
 	// 用户id
-	UserId string `json:"user_id,omitempty"`
+	UserId *string `json:"user_id,omitempty"`
 	// 创建时间,例如:\"2020-02-05T10:38:34.209782\"
 	CreatedAt string `json:"created_at"`
 	// 更新时间,例如:\"2020-02-05T10:38:34.209782\"
 	UpdatedAt string `json:"updated_at"`
 	// 版本
-	Version string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty"`
 }
 
 func (o VaultGet) String() string {

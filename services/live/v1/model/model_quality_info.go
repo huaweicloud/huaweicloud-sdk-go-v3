@@ -14,7 +14,7 @@ import (
 
 type QualityInfo struct {
 	// 模板名称。
-	TemplateName string `json:"templateName,omitempty"`
+	TemplateName *string `json:"templateName,omitempty"`
 	// 包含如下取值： - FHD： 超高清，系统缺省名称 - HD： 高清，系统缺省名称 - SD： 标清，系统缺省名称 - LD： 流畅，系统缺省名称 - XXX： 租户自定义名称。用户自定义名称不能与系统缺省名称冲突；多个自定义名称不能重复
 	Quality string `json:"quality"`
 	// 是否使用窄带高清转码，模板组里不同模板的PVC选项必须相同。 - on：启用。 - off：不启用。 默认为off
@@ -30,13 +30,13 @@ type QualityInfo struct {
 	// 转码视频的码率（单位：Kbps）。 取值范围：40-30000。
 	Bitrate int32 `json:"bitrate"`
 	// 转码视频帧率（单位：fps）。 取值范围：0-30，0表示保持帧率不变。
-	VideoFrameRate int32 `json:"video_frame_rate,omitempty"`
+	VideoFrameRate *int32 `json:"video_frame_rate,omitempty"`
 	// 转码输出支持的协议类型。当前只支持RTMP和HLS，且模板组里不同模板的输出协议类型必须相同。 - RTMP - HLS - DASH  默认为RTMP。
 	Protocol QualityInfoProtocol `json:"protocol,omitempty"`
 	// I帧间隔（单位：帧）。  取值范围：0-500。  默认为25。
-	IFrameInterval int32 `json:"iFrameInterval,omitempty"`
+	IFrameInterval *int32 `json:"iFrameInterval,omitempty"`
 	// 按时间设置I帧间隔，与“iFrameInterval”选择一个设置即可。  取值范围：[0,10]  默认值：4
-	Gop int32 `json:"gop,omitempty"`
+	Gop *int32 `json:"gop,omitempty"`
 }
 
 func (o QualityInfo) String() string {

@@ -15,7 +15,7 @@ import (
 // Response Object
 type CreateEncryptTaskResponse struct {
 	// 加密任务Id
-	TaskId string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty"`
 }
 
 func (o CreateEncryptTaskResponse) String() string {

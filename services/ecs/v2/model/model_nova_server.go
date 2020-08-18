@@ -66,27 +66,27 @@ type NovaServer struct {
 	OsExtendedVolumesvolumesAttached []NovaServerVolume `json:"os-extended-volumes:volumes_attached"`
 	Fault                            *NovaServerFault   `json:"fault,omitempty"`
 	// 弹性云服务器的描述信息。  微版本2.19后支持
-	Description string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty"`
 	// nova-compute状态。  - UP：服务正常 - UNKNOWN：状态未知 - DOWN：服务异常 - MAINTENANCE：维护状态 - 空字符串：弹性云服务器无主机信息
 	HostStatus NovaServerHostStatus `json:"host_status"`
 	// 弹性云服务器的主机名。  微版本2.3后支持
-	OSEXTSRVATTRhostname string `json:"OS-EXT-SRV-ATTR:hostname,omitempty"`
+	OSEXTSRVATTRhostname *string `json:"OS-EXT-SRV-ATTR:hostname,omitempty"`
 	// 批量创建场景，弹性云服务器的预留ID。  微版本2.3后支持
-	OSEXTSRVATTRreservationId string `json:"OS-EXT-SRV-ATTR:reservation_id,omitempty"`
+	OSEXTSRVATTRreservationId *string `json:"OS-EXT-SRV-ATTR:reservation_id,omitempty"`
 	// 批量创建场景，弹性云服务器的启动顺序。  微版本2.3后支持
-	OSEXTSRVATTRlaunchIndex int32 `json:"OS-EXT-SRV-ATTR:launch_index,omitempty"`
+	OSEXTSRVATTRlaunchIndex *int32 `json:"OS-EXT-SRV-ATTR:launch_index,omitempty"`
 	// 若使用AMI格式的镜像，则表示kernel image的UUID；否则，留空。  微版本2.3后支持
-	OSEXTSRVATTRkernelId string `json:"OS-EXT-SRV-ATTR:kernel_id,omitempty"`
+	OSEXTSRVATTRkernelId *string `json:"OS-EXT-SRV-ATTR:kernel_id,omitempty"`
 	// 若使用AMI格式镜像，则表示ramdisk image的UUID；否则，留空。  微版本2.3后支持
-	OSEXTSRVATTRramdiskId string `json:"OS-EXT-SRV-ATTR:ramdisk_id,omitempty"`
+	OSEXTSRVATTRramdiskId *string `json:"OS-EXT-SRV-ATTR:ramdisk_id,omitempty"`
 	// 弹性云服务器系统盘的设备名称。  微版本2.3后支持
-	OSEXTSRVATTRrootDeviceName string `json:"OS-EXT-SRV-ATTR:root_device_name,omitempty"`
+	OSEXTSRVATTRrootDeviceName *string `json:"OS-EXT-SRV-ATTR:root_device_name,omitempty"`
 	// 创建弹性云服务器时指定的user_data。  微版本2.3后支持
-	OSEXTSRVATTRuserData string `json:"OS-EXT-SRV-ATTR:user_data,omitempty"`
+	OSEXTSRVATTRuserData *string `json:"OS-EXT-SRV-ATTR:user_data,omitempty"`
 	// 云服务器的标签列表。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
 	Tags []string `json:"tags"`
 	// 当云服务器被锁时为True，否则为False。  微版本2.9后支持
-	Locked bool `json:"locked,omitempty"`
+	Locked *bool `json:"locked,omitempty"`
 	// 预留属性。
 	AccessIPv4 string `json:"accessIPv4"`
 	// 预留属性。

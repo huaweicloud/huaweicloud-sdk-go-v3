@@ -15,7 +15,7 @@ import (
 // Response Object
 type CreateWatermarkTemplateResponse struct {
 	// 水印模板Id
-	TemplateId int32 `json:"template_id,omitempty"`
+	TemplateId *int32 `json:"template_id,omitempty"`
 }
 
 func (o CreateWatermarkTemplateResponse) String() string {

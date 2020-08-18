@@ -14,9 +14,9 @@ import (
 
 // Request Object
 type ListSubnetsRequest struct {
-	Limit  int32  `json:"limit,omitempty"`
-	Marker string `json:"marker,omitempty"`
-	VpcId  string `json:"vpc_id,omitempty"`
+	Limit  *int32  `json:"limit,omitempty"`
+	Marker *string `json:"marker,omitempty"`
+	VpcId  *string `json:"vpc_id,omitempty"`
 }
 
 func (o ListSubnetsRequest) String() string {

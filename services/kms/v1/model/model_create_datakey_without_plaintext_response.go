@@ -15,9 +15,9 @@ import (
 // Response Object
 type CreateDatakeyWithoutPlaintextResponse struct {
 	// 密钥ID。
-	KeyId string `json:"key_id,omitempty"`
+	KeyId *string `json:"key_id,omitempty"`
 	// DEK密文16进制，两位表示1byte。
-	CipherText string `json:"cipher_text,omitempty"`
+	CipherText *string `json:"cipher_text,omitempty"`
 }
 
 func (o CreateDatakeyWithoutPlaintextResponse) String() string {

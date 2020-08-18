@@ -17,7 +17,7 @@ type ListNotifyEventResponse struct {
 	// 事件名称
 	EventName []string `json:"event_name,omitempty"`
 	// 点播通知事件总数
-	Total int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty"`
 }
 
 func (o ListNotifyEventResponse) String() string {

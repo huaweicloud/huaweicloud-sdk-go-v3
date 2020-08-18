@@ -19,7 +19,7 @@ type UpdateImageRequestBody struct {
 	// 需要更新的属性名称，需要在属性名称前加“/”。
 	Path string `json:"path"`
 	// 需要更新属性的值。
-	Value string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o UpdateImageRequestBody) String() string {

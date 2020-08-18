@@ -14,7 +14,7 @@ import (
 
 // Request Object
 type ListPermanentAccessKeysRequest struct {
-	UserId string `json:"user_id,omitempty"`
+	UserId *string `json:"user_id,omitempty"`
 }
 
 func (o ListPermanentAccessKeysRequest) String() string {

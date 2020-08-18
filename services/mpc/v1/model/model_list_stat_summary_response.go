@@ -17,9 +17,9 @@ type ListStatSummaryResponse struct {
 	// 统计概览信息
 	Summary []StatSummary `json:"summary,omitempty"`
 	// 该指标的总值，单位：GB,精确到小数点后两位。
-	Total float32 `json:"total,omitempty"`
+	Total *float32 `json:"total,omitempty"`
 	// 统计类型
-	StatType string `json:"stat_type,omitempty"`
+	StatType *string `json:"stat_type,omitempty"`
 }
 
 func (o ListStatSummaryResponse) String() string {

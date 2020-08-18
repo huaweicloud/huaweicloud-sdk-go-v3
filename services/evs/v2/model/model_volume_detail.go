@@ -29,7 +29,7 @@ type VolumeDetail struct {
 	// 预留属性。
 	OsVolHostAttrhost string `json:"os-vol-host-attr:host"`
 	// 源云硬盘ID，如果是从源云硬盘创建，则有值。  当前云硬盘服务不支持该字段。
-	SourceVolid string `json:"source_volid,omitempty"`
+	SourceVolid *string `json:"source_volid,omitempty"`
 	// 快照ID，如果是从快照创建，则有值。
 	SnapshotId string `json:"snapshot_id"`
 	// 云硬盘描述。
@@ -39,21 +39,20 @@ type VolumeDetail struct {
 	// 云硬盘所属的租户ID。租户ID就是项目ID。
 	OsVolTenantAttrtenantId string `json:"os-vol-tenant-attr:tenant_id"`
 	// 云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
-	VolumeImageMetadata map[string]interface{} `json:"volume_image_metadata"`
+	VolumeImageMetadata map[string]map[string]interface{} `json:"volume_image_metadata"`
 	// 云硬盘类型。 目前支持“SSD”，“SAS”和“SATA”三种。 “SSD”为超高IO云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
 	VolumeType string `json:"volume_type"`
 	// 云硬盘大小，单位为GB。
-	Size string `json:"size"`
+	Size int32 `json:"size"`
 	// 预留属性。
-	ConsistencygroupId string `json:"consistencygroup_id,omitempty"`
+	ConsistencygroupId *string `json:"consistencygroup_id,omitempty"`
 	// 是否为启动云硬盘。 true：表示为启动云硬盘。 false：表示为非启动云硬盘。
-	Bootable string `json:"bootable"`
-	// 云硬盘的元数据。请参见•[metadata参数说明](https://support.huaweicloud.com/api-evs/evs_04_2006.html#evs_04_2006__evs_04_2010_li29114110314)。 如果元数据中不包含hw:passthrough字段，云硬盘默认为VBD类型。 如果元数据中不包含__system__encrypted字段，云硬盘默认为不加密。
-	Metadata map[string]interface{} `json:"metadata"`
+	Bootable string          `json:"bootable"`
+	Metadata *VolumeMetadata `json:"metadata"`
 	// 云硬盘更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
 	UpdatedAt string `json:"updated_at"`
 	// 当前云硬盘服务不支持该字段。
-	Encrypted string `json:"encrypted,omitempty"`
+	Encrypted *bool `json:"encrypted,omitempty"`
 	// 预留属性。
 	ReplicationStatus string `json:"replication_status"`
 	// 预留属性。
@@ -71,15 +70,15 @@ type VolumeDetail struct {
 	// 是否为共享云硬盘。
 	Multiattach bool `json:"multiattach"`
 	// 云硬盘所属的专属存储池ID。
-	DedicatedStorageId string `json:"dedicated_storage_id,omitempty"`
+	DedicatedStorageId *string `json:"dedicated_storage_id,omitempty"`
 	// 云硬盘所属的专属存储池的名称。
-	DedicatedStorageName string `json:"dedicated_storage_name,omitempty"`
+	DedicatedStorageName *string `json:"dedicated_storage_name,omitempty"`
 	// 云硬盘的标签。 如果云硬盘有标签，则会有该字段，否则该字段为空。
-	Tags map[string]interface{} `json:"tags"`
+	Tags map[string]string `json:"tags"`
 	// 云硬盘挂载时的唯一标识。
-	Wwn string `json:"wwn,omitempty"`
+	Wwn *string `json:"wwn,omitempty"`
 	// 云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
-	EnterpriseProjectId string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o VolumeDetail) String() string {

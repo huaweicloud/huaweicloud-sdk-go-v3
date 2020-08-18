@@ -15,9 +15,9 @@ import (
 // Response Object
 type ListRequestThrottlingPoliciesBindedToApiV2Response struct {
 	// 满足条件的流控策略总数
-	Total int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty"`
 	// 本次查询返回的列表长度
-	Size int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty"`
 	// 本次查询返回的流控策略列表
 	Throttles []ThrottleBindingThrottleResp `json:"throttles,omitempty"`
 }

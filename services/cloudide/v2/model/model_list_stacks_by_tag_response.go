@@ -16,7 +16,7 @@ import (
 type ListStacksByTagResponse struct {
 	Stack *StacksTag `json:"stack,omitempty"`
 	// 状态
-	Status string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty"`
 }
 
 func (o ListStacksByTagResponse) String() string {

@@ -16,7 +16,7 @@ type VaultBindRules struct {
 	// 字段key
 	Key string `json:"key"`
 	// 字段的值
-	Value string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o VaultBindRules) String() string {

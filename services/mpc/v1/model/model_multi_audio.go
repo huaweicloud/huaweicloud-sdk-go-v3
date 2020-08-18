@@ -18,7 +18,7 @@ type MultiAudio struct {
 	// 音频文件
 	AudioFiles []AudioFile `json:"audio_files,omitempty"`
 	// 默认语言
-	DefaultLanguage string `json:"default_language,omitempty"`
+	DefaultLanguage *string `json:"default_language,omitempty"`
 }
 
 func (o MultiAudio) String() string {

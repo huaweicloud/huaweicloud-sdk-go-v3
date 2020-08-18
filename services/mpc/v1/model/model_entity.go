@@ -14,31 +14,31 @@ import (
 
 type Entity struct {
 	// 资源Id
-	ResourceId string `json:"resourceId,omitempty"`
+	ResourceId *string `json:"resourceId,omitempty"`
 	// 资源名称
-	ResourceName string `json:"resourceName,omitempty"`
+	ResourceName *string `json:"resourceName,omitempty"`
 	// 云服务类型编码
-	CloudServiceType string `json:"cloudServiceType,omitempty"`
+	CloudServiceType *string `json:"cloudServiceType,omitempty"`
 	// 资源类型
-	ResourceType string `json:"resourceType,omitempty"`
+	ResourceType *string `json:"resourceType,omitempty"`
 	// 资源规格编码
-	ResourceSpecCode string `json:"resourceSpecCode,omitempty"`
+	ResourceSpecCode *string `json:"resourceSpecCode,omitempty"`
 	// 规格类型
-	SpecType string `json:"specType,omitempty"`
+	SpecType *string `json:"specType,omitempty"`
 	// 规格属性大小
 	SpecSize float32 `json:"specSize,omitempty"`
 	// 规格属性的单位
-	Measure int32 `json:"measure,omitempty"`
+	Measure *int32 `json:"measure,omitempty"`
 	// 处理时间
-	ProcessedTime string `json:"processedTime,omitempty"`
+	ProcessedTime *string `json:"processedTime,omitempty"`
 	// 是否主要资源
-	IsMainResource int32 `json:"isMainResource,omitempty"`
+	IsMainResource *int32 `json:"isMainResource,omitempty"`
 	// 主要资源列表
 	MainResources []RelativeResource `json:"mainResources,omitempty"`
 	// 子资源列表
 	SubResources []RelativeResource `json:"subResources,omitempty"`
 	// 扩展参数
-	ExtendParams string `json:"extendParams,omitempty"`
+	ExtendParams *string `json:"extendParams,omitempty"`
 }
 
 func (o Entity) String() string {

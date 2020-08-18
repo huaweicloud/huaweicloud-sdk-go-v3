@@ -15,11 +15,11 @@ import (
 // Request Object
 type ListTranscodingTaskRequest struct {
 	TaskId    []int64 `json:"task_id,omitempty"`
-	Status    string  `json:"status,omitempty"`
-	StartTime string  `json:"start_time,omitempty"`
-	EndTime   string  `json:"end_time,omitempty"`
-	Page      int32   `json:"page,omitempty"`
-	Size      int32   `json:"size,omitempty"`
+	Status    *string `json:"status,omitempty"`
+	StartTime *string `json:"start_time,omitempty"`
+	EndTime   *string `json:"end_time,omitempty"`
+	Page      *int32  `json:"page,omitempty"`
+	Size      *int32  `json:"size,omitempty"`
 }
 
 func (o ListTranscodingTaskRequest) String() string {

@@ -14,7 +14,7 @@ import (
 
 // Request Object
 type ListQuotasRequest struct {
-	Type string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o ListQuotasRequest) String() string {

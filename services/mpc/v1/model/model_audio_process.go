@@ -16,7 +16,7 @@ type AudioProcess struct {
 	// 音量调整方式： - auto：表示自动调整音量。 - dynamic：表示人为调整，需设定音量调整幅值。
 	Volume AudioProcessVolume `json:"volume,omitempty"`
 	// 音量调整幅值，需指定volume为dynamic。  取值范围：[-15,15]  单位：dB
-	VolumeExpr int32 `json:"volume_expr,omitempty"`
+	VolumeExpr *int32 `json:"volume_expr,omitempty"`
 }
 
 func (o AudioProcess) String() string {

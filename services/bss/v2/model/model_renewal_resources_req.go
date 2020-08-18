@@ -16,7 +16,7 @@ type RenewalResourcesReq struct {
 	// |参数名称：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订| |参数的约束及描述：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订|
 	ExpirePolicy int32 `json:"expire_policy"`
 	// |参数名称：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。| |参数的约束及描述：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。|
-	IsAutoPay int32 `json:"is_auto_pay,omitempty"`
+	IsAutoPay *int32 `json:"is_auto_pay,omitempty"`
 	// |参数名称：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3|
 	PeriodNum int32 `json:"period_num"`
 	// |参数名称：周期类型：2：月；3：年| |参数的约束及描述：周期类型：2：月；3：年|

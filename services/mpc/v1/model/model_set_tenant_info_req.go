@@ -14,7 +14,7 @@ import (
 
 type SetTenantInfoReq struct {
 	// 是否已开通服务，0标示否，1标示已开通
-	IsOpen int32 `json:"is_open,omitempty"`
+	IsOpen *int32 `json:"is_open,omitempty"`
 }
 
 func (o SetTenantInfoReq) String() string {

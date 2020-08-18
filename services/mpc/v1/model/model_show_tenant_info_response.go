@@ -15,11 +15,11 @@ import (
 // Response Object
 type ShowTenantInfoResponse struct {
 	// 租户状态,0表示正常，1表示冻结，2表示删除
-	Status int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty"`
 	// 是否实名认证，0标示否，1标示已实名
-	IsVerified int32 `json:"is_verified,omitempty"`
+	IsVerified *int32 `json:"is_verified,omitempty"`
 	// 是否已开通服务，0标示否，1标示已开通
-	IsOpen int32 `json:"is_open,omitempty"`
+	IsOpen *int32 `json:"is_open,omitempty"`
 }
 
 func (o ShowTenantInfoResponse) String() string {

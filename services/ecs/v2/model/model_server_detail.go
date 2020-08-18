@@ -51,14 +51,14 @@ type ServerDetail struct {
 	// 弹性云服务器所属租户ID，即项目id，和project_id表示相同的概念，格式为UUID。
 	TenantId string `json:"tenant_id"`
 	// 扩展属性， diskConfig的类型。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
-	OSDCFdiskConfig string `json:"OS-DCF:diskConfig,omitempty"`
+	OSDCFdiskConfig *string `json:"OS-DCF:diskConfig,omitempty"`
 	// 预留属性。
 	AccessIPv4 string `json:"accessIPv4"`
 	// 预留属性。
 	AccessIPv6 string       `json:"accessIPv6"`
 	Fault      *ServerFault `json:"fault,omitempty"`
 	// 弹性云服务器进度。
-	Progress int32 `json:"progress,omitempty"`
+	Progress *int32 `json:"progress,omitempty"`
 	// 扩展属性，弹性云服务器电源状态。
 	OSEXTSTSpowerState int32 `json:"OS-EXT-STS:power_state"`
 	// config drive信息。
@@ -72,13 +72,13 @@ type ServerDetail struct {
 	// 挂载到弹性云服务器上的磁盘。
 	OsExtendedVolumesvolumesAttached []ServerExtendVolumeAttachment `json:"os-extended-volumes:volumes_attached"`
 	// 弹性云服务器的描述信息。
-	Description string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty"`
 	// nova-compute状态。  - UP：服务正常 - UNKNOWN：状态未知 - DOWN：服务异常 - MAINTENANCE：维护状态 - 空字符串：弹性云服务器无主机信息
 	HostStatus string `json:"host_status"`
 	// 弹性云服务器的主机名。
 	OSEXTSRVATTRhostname string `json:"OS-EXT-SRV-ATTR:hostname"`
 	// 批量创建场景，弹性云服务器的预留ID。
-	OSEXTSRVATTRreservationId string `json:"OS-EXT-SRV-ATTR:reservation_id,omitempty"`
+	OSEXTSRVATTRreservationId *string `json:"OS-EXT-SRV-ATTR:reservation_id,omitempty"`
 	// 批量创建场景，弹性云服务器的启动顺序。
 	OSEXTSRVATTRlaunchIndex int32 `json:"OS-EXT-SRV-ATTR:launch_index"`
 	// 若使用AMI格式的镜像，则表示kernel image的UUID；否则，留空。
@@ -88,14 +88,14 @@ type ServerDetail struct {
 	// 弹性云服务器系统盘的设备名称。
 	OSEXTSRVATTRrootDeviceName string `json:"OS-EXT-SRV-ATTR:root_device_name"`
 	// 创建弹性云服务器时指定的user_data。
-	OSEXTSRVATTRuserData string `json:"OS-EXT-SRV-ATTR:user_data,omitempty"`
+	OSEXTSRVATTRuserData *string `json:"OS-EXT-SRV-ATTR:user_data,omitempty"`
 	// 弹性云服务器是否为锁定状态。  - true：锁定 - false：未锁定
 	Locked bool `json:"locked"`
 	// 弹性云服务器标签。
 	Tags             []string              `json:"tags,omitempty"`
 	OsschedulerHints *ServerSchedulerHints `json:"os:scheduler_hints,omitempty"`
 	// 弹性云服务器所属的企业项目ID。
-	EnterpriseProjectId string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 弹性云服务器系统标签。
 	SysTags []ServerSystemTag `json:"sys_tags,omitempty"`
 }

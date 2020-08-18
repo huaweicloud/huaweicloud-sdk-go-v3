@@ -24,7 +24,7 @@ type AnimatedGraphicsOutputParam struct {
 	// 结束时间。  单位：毫秒。  end、start差值最多60秒。
 	End int32 `json:"end"`
 	// 动图帧率。  取值范围：[1,75]
-	FrameRate int32 `json:"frame_rate,omitempty"`
+	FrameRate *int32 `json:"frame_rate,omitempty"`
 }
 
 func (o AnimatedGraphicsOutputParam) String() string {

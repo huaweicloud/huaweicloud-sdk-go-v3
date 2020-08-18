@@ -15,9 +15,9 @@ import (
 // Response Object
 type StartInstanceResponse struct {
 	// 返回值
-	Result string `json:"result,omitempty"`
+	Result *string `json:"result,omitempty"`
 	// 状态
-	Status string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty"`
 }
 
 func (o StartInstanceResponse) String() string {

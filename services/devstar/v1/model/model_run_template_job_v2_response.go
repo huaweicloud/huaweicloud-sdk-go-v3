@@ -15,7 +15,7 @@ import (
 // Response Object
 type RunTemplateJobV2Response struct {
 	// 任务id
-	JobId string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty"`
 }
 
 func (o RunTemplateJobV2Response) String() string {

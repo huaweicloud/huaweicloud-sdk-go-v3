@@ -14,7 +14,7 @@ import (
 
 type ApiPolicyRespBase struct {
 	// 编号
-	Id string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 	// 关联的策略组合模式： - ALL：满足全部条件 - ANY：满足任一条件
 	EffectMode ApiPolicyRespBaseEffectMode `json:"effect_mode"`
 	// 策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
@@ -24,7 +24,7 @@ type ApiPolicyRespBase struct {
 	// 策略条件列表
 	Conditions []CoditionResp `json:"conditions"`
 	// 后端自定义认证对象的ID
-	AuthorizerId string `json:"authorizer_id,omitempty"`
+	AuthorizerId *string `json:"authorizer_id,omitempty"`
 }
 
 func (o ApiPolicyRespBase) String() string {

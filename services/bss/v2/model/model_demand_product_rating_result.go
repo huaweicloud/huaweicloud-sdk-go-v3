@@ -20,13 +20,13 @@ type DemandProductRatingResult struct {
 	// |参数名称：折扣优惠明细| |参数的约束及描述：包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息|
 	DiscountRatingResults []DemandDiscountRatingResult `json:"discount_rating_results,omitempty"`
 	// |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
-	Id string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 	// |参数名称：度量单位标识| |参数约束及描述：1：元|
-	MeasureId int32 `json:"measure_id,omitempty"`
+	MeasureId *int32 `json:"measure_id,omitempty"`
 	// |参数名称：官网价| |参数约束及描述：官网价|
 	OfficialWebsiteAmount float32 `json:"official_website_amount,omitempty"`
 	// |参数名称：寻到的产品ID| |参数约束及描述：寻到的产品ID|
-	ProductId string `json:"product_id,omitempty"`
+	ProductId *string `json:"product_id,omitempty"`
 }
 
 func (o DemandProductRatingResult) String() string {

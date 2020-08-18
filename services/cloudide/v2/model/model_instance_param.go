@@ -14,19 +14,19 @@ import (
 
 type InstanceParam struct {
 	// 代理商id，标签为tutorial时使用
-	AgentId string `json:"agent_id,omitempty"`
+	AgentId *string `json:"agent_id,omitempty"`
 	// cpu架构 x86|arm
 	Arch InstanceParamArch `json:"arch,omitempty"`
 	// cpu规格.arm架构支持4U8G，x86架构支持1U1G,2U4G,2U8G 与技术栈配置的规格对应，可通过技术栈管理ListStacksByTag接口获取。如果标签不为空，以标签配置的技术栈规格为准。 quantum技术栈，x86架构cpu规格为2U8G;其他技术栈，x86架构cpu规格为1U1G,2U4G
 	CpuMemory InstanceParamCpuMemory `json:"cpu_memory"`
 	// 描述
-	Description string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty"`
 	// 实例名。 可以输入中文、数字、字母、下划线、点、破折号。长度介于3-100之间
 	DisplayName string `json:"display_name"`
 	// 是否临时实例。 false页面会显示
-	IsTemporary bool `json:"is_temporary,omitempty"`
+	IsTemporary *bool `json:"is_temporary,omitempty"`
 	// 场景标签
-	LabelTag string `json:"label_tag,omitempty"`
+	LabelTag *string `json:"label_tag,omitempty"`
 	// 场景插件列表
 	PluginEnableList []string `json:"plugin_enable_list,omitempty"`
 	// 场景插件参数
@@ -36,13 +36,13 @@ type InstanceParam struct {
 	// 实例的生命周期 arm架构,生命周期只能设置成30，60。x86架构可取值为30，60，240，1440和-1。除-1外，其它值的单位为“分钟”。实例在到达生命周期后，将会被暂停（已保存的数据不会被删除）。-1表示实例不会自动停止。
 	RefreshInterval string `json:"refresh_interval"`
 	// 解放号的仓库id，标签为jfh时使用
-	RepositoryId int64 `json:"repository_id,omitempty"`
+	RepositoryId *int64 `json:"repository_id,omitempty"`
 	// 技术栈ID 目前可取值all，java，go，python，cpp，nodejs，quantum，blockchain，dcn，vue，ruby。
 	StackId string `json:"stack_id"`
 	// 任务类型，标签为tutorial时使用
-	TaskType string `json:"task_type,omitempty"`
+	TaskType *string `json:"task_type,omitempty"`
 	// 解放号的token，标签为jfh时使用
-	Token string `json:"token,omitempty"`
+	Token *string `json:"token,omitempty"`
 }
 
 func (o InstanceParam) String() string {

@@ -14,27 +14,27 @@ import (
 
 type PropertiesInfo struct {
 	// key
-	Key string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty"`
 	// 默认值
-	DefaultValue string `json:"defaultValue,omitempty"`
+	DefaultValue *string `json:"defaultValue,omitempty"`
 	// 模板的描述信息
-	Label string `json:"label,omitempty"`
+	Label *string `json:"label,omitempty"`
 	// 类型 txet 或 select
-	Type string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty"`
 	// 提示信息
-	HelpText string `json:"helpText,omitempty"`
+	HelpText *string `json:"helpText,omitempty"`
 	// 是否只读
-	ReadOnly bool `json:"readOnly,omitempty"`
+	ReadOnly *bool `json:"readOnly,omitempty"`
 	// 是否必填
-	Required bool `json:"required,omitempty"`
+	Required *bool `json:"required,omitempty"`
 	// 正则校验类型
-	RegType string `json:"regType,omitempty"`
+	RegType *string `json:"regType,omitempty"`
 	// 正则表达式
-	RegPattern string `json:"regPattern,omitempty"`
+	RegPattern *string `json:"regPattern,omitempty"`
 	// 正则提示信息
-	RegTip string `json:"regTip,omitempty"`
+	RegTip *string `json:"regTip,omitempty"`
 	// 是否显示
-	IsShow bool `json:"isShow,omitempty"`
+	IsShow *bool `json:"isShow,omitempty"`
 }
 
 func (o PropertiesInfo) String() string {

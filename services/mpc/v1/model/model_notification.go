@@ -14,13 +14,13 @@ import (
 
 type Notification struct {
 	// 消息事件的名称.
-	EventName string `json:"event_name,omitempty"`
+	EventName *string `json:"event_name,omitempty"`
 	// 事件通知模板选中状态
 	Status NotificationStatus `json:"status,omitempty"`
 	// 事件通知主题的URN.
-	Topic string `json:"topic,omitempty"`
+	Topic *string `json:"topic,omitempty"`
 	// 订阅消息类型.
-	MsgType int32 `json:"msg_type,omitempty"`
+	MsgType *int32 `json:"msg_type,omitempty"`
 }
 
 func (o Notification) String() string {

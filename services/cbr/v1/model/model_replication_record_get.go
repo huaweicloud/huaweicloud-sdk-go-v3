@@ -15,33 +15,33 @@ import (
 //
 type ReplicationRecordGet struct {
 	// 复制的开始时间
-	CreatedAt string `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty"`
 	// 复制的目的备份ID
-	DestinationBackupId string `json:"destination_backup_id,omitempty"`
+	DestinationBackupId *string `json:"destination_backup_id,omitempty"`
 	// 复制的目的备份记录ID
-	DestinationCheckpointId string `json:"destination_checkpoint_id,omitempty"`
+	DestinationCheckpointId *string `json:"destination_checkpoint_id,omitempty"`
 	// 复制的目标项目ID
-	DestinationProjectId string `json:"destination_project_id,omitempty"`
+	DestinationProjectId *string `json:"destination_project_id,omitempty"`
 	// 复制的目标区域
-	DestinationRegion string `json:"destination_region,omitempty"`
+	DestinationRegion *string `json:"destination_region,omitempty"`
 	// 目标存储库ID
-	DestinationVaultId string `json:"destination_vault_id,omitempty"`
+	DestinationVaultId *string `json:"destination_vault_id,omitempty"`
 	// 复制附加信息
-	ExtraInfo string `json:"extra_info,omitempty"`
+	ExtraInfo *string `json:"extra_info,omitempty"`
 	// 复制记录ID
 	Id string `json:"id"`
 	// 复制的源备份ID
-	SourceBackupId string `json:"source_backup_id,omitempty"`
+	SourceBackupId *string `json:"source_backup_id,omitempty"`
 	// 复制的源备份记录ID
-	SourceCheckpointId string `json:"source_checkpoint_id,omitempty"`
+	SourceCheckpointId *string `json:"source_checkpoint_id,omitempty"`
 	// 复制的源项目ID
-	SourceProjectId string `json:"source_project_id,omitempty"`
+	SourceProjectId *string `json:"source_project_id,omitempty"`
 	// 复制的源区域
-	SourceRegion string `json:"source_region,omitempty"`
+	SourceRegion *string `json:"source_region,omitempty"`
 	// 复制的状态
 	Status ReplicationRecordGetStatus `json:"status,omitempty"`
 	// 备份所在的存储库ID
-	VaultId string `json:"vault_id,omitempty"`
+	VaultId *string `json:"vault_id,omitempty"`
 }
 
 func (o ReplicationRecordGet) String() string {

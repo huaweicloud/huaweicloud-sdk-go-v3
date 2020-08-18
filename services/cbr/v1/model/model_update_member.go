@@ -17,7 +17,7 @@ type UpdateMember struct {
 	// 备份共享状态
 	Status UpdateMemberStatus `json:"status"`
 	// 共享的备份将存入的存储库，仅支持uuid 更新member状态的时候，如果是接受，必须传入vault_id，如果是拒绝，则无需
-	VaultId string `json:"vault_id,omitempty"`
+	VaultId *string `json:"vault_id,omitempty"`
 }
 
 func (o UpdateMember) String() string {

@@ -15,7 +15,7 @@ import (
 // Response Object
 type ImportImageQuickResponse struct {
 	// 异步任务ID。
-	JobId string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty"`
 }
 
 func (o ImportImageQuickResponse) String() string {

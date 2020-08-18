@@ -15,7 +15,7 @@ import (
 // Response Object
 type CreateGrantResponse struct {
 	// 授权ID，64字节。
-	GrantId string `json:"grant_id,omitempty"`
+	GrantId *string `json:"grant_id,omitempty"`
 }
 
 func (o CreateGrantResponse) String() string {

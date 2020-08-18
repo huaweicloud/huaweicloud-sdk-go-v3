@@ -15,9 +15,9 @@ import (
 // Response Object
 type ListApisUnbindedToAppV2Response struct {
 	// 符合条件的API总数
-	Total int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty"`
 	// 本次返回的列表长度
-	Size int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty"`
 	// 本次返回的API列表
 	Apis []AppAuthUnBindedApiResp `json:"apis,omitempty"`
 }

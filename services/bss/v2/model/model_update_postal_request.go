@@ -14,7 +14,7 @@ import (
 
 // Request Object
 type UpdatePostalRequest struct {
-	XLanguage string           `json:"X-Language,omitempty"`
+	XLanguage *string          `json:"X-Language,omitempty"`
 	Body      *UpdatePostalReq `json:"body,omitempty"`
 }
 

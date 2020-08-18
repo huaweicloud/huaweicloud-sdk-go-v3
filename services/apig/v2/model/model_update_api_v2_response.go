@@ -20,7 +20,7 @@ type UpdateApiV2Response struct {
 	// API类型 - 1：公有API - 2：私有API
 	Type int32 `json:"type"`
 	// API的版本
-	Version string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty"`
 	// API的请求协议 - HTTP - HTTPS - BOTH：同时支持HTTP和HTTPS
 	ReqProtocol UpdateApiV2ResponseReqProtocol `json:"req_protocol"`
 	// API的请求方式
@@ -31,53 +31,53 @@ type UpdateApiV2Response struct {
 	AuthType UpdateApiV2ResponseAuthType `json:"auth_type"`
 	AuthOpt  *AuthOpt                    `json:"auth_opt,omitempty"`
 	// 是否支持跨域 - TRUE：支持 - FALSE：不支持
-	Cors bool `json:"cors,omitempty"`
+	Cors *bool `json:"cors,omitempty"`
 	// API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
 	MatchMode UpdateApiV2ResponseMatchMode `json:"match_mode,omitempty"`
 	// 后端类型 - HTTP：web后端 - FUNCTION：函数工作流 - MOCK：模拟的后端
 	BackendType UpdateApiV2ResponseBackendType `json:"backend_type"`
 	// API描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
-	Remark string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty"`
 	// API所属的分组编号
 	GroupId string `json:"group_id"`
 	// API请求体描述，可以是请求体示例、媒体类型、参数等信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。
-	BodyRemark string `json:"body_remark,omitempty"`
+	BodyRemark *string `json:"body_remark,omitempty"`
 	// 正常响应示例，描述API的正常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。
-	ResultNormalSample string `json:"result_normal_sample,omitempty"`
+	ResultNormalSample *string `json:"result_normal_sample,omitempty"`
 	// 失败返回示例，描述API的异常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。
-	ResultFailureSample string `json:"result_failure_sample,omitempty"`
+	ResultFailureSample *string `json:"result_failure_sample,omitempty"`
 	// 前端自定义认证对象的ID
-	AuthorizerId string `json:"authorizer_id,omitempty"`
+	AuthorizerId *string `json:"authorizer_id,omitempty"`
 	// 标签。  支持英文，数字，下划线，且只能以英文开头。支持输入多个标签，不同标签以英文逗号分割。
 	Tags []string `json:"tags,omitempty"`
 	// 分组自定义响应ID
-	ResponseId string `json:"response_id,omitempty"`
+	ResponseId *string `json:"response_id,omitempty"`
 	// 集成应用ID  暂不支持
-	RomaAppId string `json:"roma_app_id,omitempty"`
+	RomaAppId *string `json:"roma_app_id,omitempty"`
 	// API绑定的自定义域名  暂不支持
-	DomainName string `json:"domain_name,omitempty"`
+	DomainName *string `json:"domain_name,omitempty"`
 	// 标签  待废弃，优先使用tags字段
-	Tag string `json:"tag,omitempty"`
+	Tag *string `json:"tag,omitempty"`
 	// API编号
-	Id string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 	// API的状态
-	Status int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty"`
 	// 是否需要编排
-	ArrangeNecessary int32 `json:"arrange_necessary,omitempty"`
+	ArrangeNecessary *int32 `json:"arrange_necessary,omitempty"`
 	// API注册时间
 	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
 	// API修改时间
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 	// API所属分组的名称
-	GroupName string `json:"group_name,omitempty"`
+	GroupName *string `json:"group_name,omitempty"`
 	// API所属分组的版本  默认V1，其他版本暂不支持
-	GroupVersion string `json:"group_version,omitempty"`
+	GroupVersion *string `json:"group_version,omitempty"`
 	// 发布的环境id
-	RunEnvId string `json:"run_env_id,omitempty"`
+	RunEnvId *string `json:"run_env_id,omitempty"`
 	// 发布的环境名称
-	RunEnvName string `json:"run_env_name,omitempty"`
+	RunEnvName *string `json:"run_env_name,omitempty"`
 	// 发布记录编号  存在多个发布记录时，编号之间用|隔开
-	PublishId string   `json:"publish_id,omitempty"`
+	PublishId *string  `json:"publish_id,omitempty"`
 	FuncInfo  *ApiFunc `json:"func_info,omitempty"`
 	MockInfo  *ApiMock `json:"mock_info,omitempty"`
 	// API的请求参数列表

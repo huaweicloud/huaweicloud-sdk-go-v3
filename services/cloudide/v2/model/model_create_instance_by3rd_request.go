@@ -14,7 +14,7 @@ import (
 
 // Request Object
 type CreateInstanceBy3rdRequest struct {
-	InstanceLabel string             `json:"instance_label,omitempty"`
+	InstanceLabel *string            `json:"instance_label,omitempty"`
 	Body          *InstanceEdgeParam `json:"body,omitempty"`
 }
 

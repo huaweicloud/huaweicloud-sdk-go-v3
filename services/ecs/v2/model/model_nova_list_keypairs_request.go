@@ -14,9 +14,9 @@ import (
 
 // Request Object
 type NovaListKeypairsRequest struct {
-	Limit               int32  `json:"limit,omitempty"`
-	Marker              string `json:"marker,omitempty"`
-	OpenStackAPIVersion string `json:"OpenStack-API-Version,omitempty"`
+	Limit               *int32  `json:"limit,omitempty"`
+	Marker              *string `json:"marker,omitempty"`
+	OpenStackAPIVersion *string `json:"OpenStack-API-Version,omitempty"`
 }
 
 func (o NovaListKeypairsRequest) String() string {

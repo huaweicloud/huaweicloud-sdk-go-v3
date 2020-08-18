@@ -15,7 +15,7 @@ import (
 // Response Object
 type GlanceListImageSchemasResponse struct {
 	// 视图名称。
-	Name string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty"`
 	// 镜像属性说明，主要是对基础属性的说明，包含每个属性的取值类型、用途等。
 	Properties map[string]interface{} `json:"properties,omitempty"`
 	// 视图链接。

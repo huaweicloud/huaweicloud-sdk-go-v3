@@ -29,13 +29,13 @@ type BillingCreate struct {
 	// 创建类型，按年(year)或者按月(month)
 	PeriodType BillingCreatePeriodType `json:"period_type,omitempty"`
 	// 创建类型的数量
-	PeriodNum int32 `json:"period_num,omitempty"`
+	PeriodNum *int32 `json:"period_num,omitempty"`
 	// 到期后是否自动续期，默认不续期
-	IsAutoRenew bool `json:"is_auto_renew,omitempty"`
+	IsAutoRenew *bool `json:"is_auto_renew,omitempty"`
 	// 是否自动付费，默认为不自动付费
-	IsAutoPay bool `json:"is_auto_pay,omitempty"`
+	IsAutoPay *bool `json:"is_auto_pay,omitempty"`
 	// 跳转URL
-	ConsoleUrl string                   `json:"console_url,omitempty"`
+	ConsoleUrl *string                  `json:"console_url,omitempty"`
 	ExtraInfo  *BillbingCreateExtraInfo `json:"extra_info,omitempty"`
 }
 

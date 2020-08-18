@@ -15,7 +15,7 @@ import (
 // Response Object
 type CreatePostalResponse struct {
 	// |参数名称：邮寄地址ID| |参数约束及描述：邮寄地址ID|
-	AddressId string `json:"address_id,omitempty"`
+	AddressId *string `json:"address_id,omitempty"`
 }
 
 func (o CreatePostalResponse) String() string {

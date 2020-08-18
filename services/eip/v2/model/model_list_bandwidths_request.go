@@ -14,9 +14,9 @@ import (
 
 // Request Object
 type ListBandwidthsRequest struct {
-	Marker              string                         `json:"marker,omitempty"`
-	Limit               int32                          `json:"limit,omitempty"`
-	EnterpriseProjectId string                         `json:"enterprise_project_id,omitempty"`
+	Marker              *string                        `json:"marker,omitempty"`
+	Limit               *int32                         `json:"limit,omitempty"`
+	EnterpriseProjectId *string                        `json:"enterprise_project_id,omitempty"`
 	ShareType           ListBandwidthsRequestShareType `json:"share_type,omitempty"`
 }
 

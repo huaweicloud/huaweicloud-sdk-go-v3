@@ -14,11 +14,11 @@ import (
 
 type ObsBucket struct {
 	// 桶名称
-	Bucket string `json:"bucket,omitempty"`
+	Bucket *string `json:"bucket,omitempty"`
 	// 桶的创建时间
-	CreationDate string `json:"creation_date,omitempty"`
+	CreationDate *string `json:"creation_date,omitempty"`
 	// 授权结果，取值[0,1]，0表示未授权给转码服务，1表示已授权转码服务
-	IsAuthorized int32 `json:"is_authorized,omitempty"`
+	IsAuthorized *int32 `json:"is_authorized,omitempty"`
 }
 
 func (o ObsBucket) String() string {

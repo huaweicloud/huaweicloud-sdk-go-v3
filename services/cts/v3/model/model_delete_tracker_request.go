@@ -14,7 +14,7 @@ import (
 
 // Request Object
 type DeleteTrackerRequest struct {
-	TrackerName string                          `json:"tracker_name,omitempty"`
+	TrackerName *string                         `json:"tracker_name,omitempty"`
 	TrackerType DeleteTrackerRequestTrackerType `json:"tracker_type,omitempty"`
 }
 

@@ -14,9 +14,9 @@ import (
 
 type KeyDescriptionInfo struct {
 	// 密钥ID。
-	KeyId string `json:"key_id,omitempty"`
+	KeyId *string `json:"key_id,omitempty"`
 	// 密钥描述。
-	KeyDescription string `json:"key_description,omitempty"`
+	KeyDescription *string `json:"key_description,omitempty"`
 }
 
 func (o KeyDescriptionInfo) String() string {

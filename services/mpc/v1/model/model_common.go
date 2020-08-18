@@ -18,9 +18,9 @@ type Common struct {
 	// 是否开启高清低码功能。  取值如下： - false：关闭。 - true：开启。
 	Pvc bool `json:"PVC"`
 	// PVC版本（PVC开启时，此字段才生效） “2.0_normal”：感知编码2.0（降码率30%~40%） “2.0_high”：感知编码2.0+画质增强
-	PVCVersion string `json:"PVC_version,omitempty"`
+	PVCVersion *string `json:"PVC_version,omitempty"`
 	// PVC感知编码强度（PVC开启时，此字段才生效），默认取值 “100” “100”：主观质量不变 “70”：主观质量适当下降
-	PVCStrength string `json:"PVC_strength,omitempty"`
+	PVCStrength *string `json:"PVC_strength,omitempty"`
 	// HLS分片间隔，仅封装类型“pack_type”取值为1或3时，该参数生效。  取值范围：[2，10]。  单位：秒。
 	HlsInterval int32 `json:"hls_interval"`
 	// DASH间隔，仅封装类型“pack_type”取值为2或3时，该参数生效。  取值范围：[2，10]。  单位：秒。

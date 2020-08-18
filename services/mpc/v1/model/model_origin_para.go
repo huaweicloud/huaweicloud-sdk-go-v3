@@ -14,9 +14,9 @@ import (
 
 type OriginPara struct {
 	// 片源时长
-	Duration int64 `json:"duration,omitempty"`
+	Duration *int64 `json:"duration,omitempty"`
 	// 文件格式
-	FileFormat string     `json:"file_format,omitempty"`
+	FileFormat *string    `json:"file_format,omitempty"`
 	Video      *VideoInfo `json:"video,omitempty"`
 	Audio      *AudioInfo `json:"audio,omitempty"`
 }

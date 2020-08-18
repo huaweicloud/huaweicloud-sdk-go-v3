@@ -14,7 +14,7 @@ import (
 
 type TransTemplate struct {
 	// 租户Id
-	TenantId string `json:"tenant_id,omitempty"`
+	TenantId *string `json:"tenant_id,omitempty"`
 	// 转码模板名称。
 	TemplateName string  `json:"template_name"`
 	Video        *Video  `json:"video,omitempty"`

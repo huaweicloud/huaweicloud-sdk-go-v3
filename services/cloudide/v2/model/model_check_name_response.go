@@ -15,9 +15,9 @@ import (
 // Response Object
 type CheckNameResponse struct {
 	// 返回值
-	Result bool `json:"result,omitempty"`
+	Result *bool `json:"result,omitempty"`
 	// 状态
-	Status string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty"`
 }
 
 func (o CheckNameResponse) String() string {

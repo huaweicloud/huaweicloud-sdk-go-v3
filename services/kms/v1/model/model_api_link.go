@@ -14,9 +14,9 @@ import (
 
 type ApiLink struct {
 	// API的URL地址。
-	Href string `json:"href,omitempty"`
+	Href *string `json:"href,omitempty"`
 	// 默认值self。
-	Rel string `json:"rel,omitempty"`
+	Rel *string `json:"rel,omitempty"`
 }
 
 func (o ApiLink) String() string {

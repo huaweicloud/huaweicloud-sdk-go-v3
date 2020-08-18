@@ -14,13 +14,13 @@ import (
 
 type TenantInfoReq struct {
 	// 租户状态。 - 0：解冻正常； - 1：冻结； - 2：删除/终止
-	Status int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty"`
 	// 资源类型
 	Resources []Resource `json:"resources,omitempty"`
 	// 云服务根据该字段，实现相应的效果。 - 1:冻结可释放； - 2：冻结不可释放； - 3：冻结后不可续费；  默认值：1
-	Effect int32 `json:"effect,omitempty"`
+	Effect *int32 `json:"effect,omitempty"`
 	// 云服务状态的业务场景。只作为场景描述，CBC不使用这个字段去控制云服务操作。 - ARREAR：欠费 - POLICE：公安冻结 - ILLEGAL：违规冻结 - VERIFY：客户未实名认证 - PARTNER：合作伙伴冻结  默认值：ARREAR
-	Scene string `json:"scene,omitempty"`
+	Scene *string `json:"scene,omitempty"`
 }
 
 func (o TenantInfoReq) String() string {

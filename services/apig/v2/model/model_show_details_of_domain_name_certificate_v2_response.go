@@ -15,11 +15,11 @@ import (
 // Response Object
 type ShowDetailsOfDomainNameCertificateV2Response struct {
 	// 证书域名
-	CommonName string `json:"common_name,omitempty"`
+	CommonName *string `json:"common_name,omitempty"`
 	// SAN域名
 	San []string `json:"san,omitempty"`
 	// 证书版本
-	Version string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty"`
 	// 公司、组织
 	Organization []string `json:"organization,omitempty"`
 	// 部门
@@ -31,15 +31,15 @@ type ShowDetailsOfDomainNameCertificateV2Response struct {
 	// 国家
 	Country []string `json:"country,omitempty"`
 	// 证书有效期起始时间
-	NotBefore string `json:"not_before,omitempty"`
+	NotBefore *string `json:"not_before,omitempty"`
 	// 证书有效期截止时间
-	NotAfter string `json:"not_after,omitempty"`
+	NotAfter *string `json:"not_after,omitempty"`
 	// 序列号
-	SerialNumber string `json:"serial_number,omitempty"`
+	SerialNumber *string `json:"serial_number,omitempty"`
 	// 颁发者
 	Issuer []string `json:"issuer,omitempty"`
 	// 签名算法
-	SignatureAlgorithm string `json:"signature_algorithm,omitempty"`
+	SignatureAlgorithm *string `json:"signature_algorithm,omitempty"`
 }
 
 func (o ShowDetailsOfDomainNameCertificateV2Response) String() string {

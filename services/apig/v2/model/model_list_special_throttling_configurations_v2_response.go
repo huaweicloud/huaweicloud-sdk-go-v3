@@ -15,9 +15,9 @@ import (
 // Response Object
 type ListSpecialThrottlingConfigurationsV2Response struct {
 	// 符合条件的特殊设置总数
-	Total int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty"`
 	// 本次查询返回的列表长度
-	Size int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty"`
 	// 本次查询返回的特殊配置列表
 	ThrottleSpecials []ThrottleSpecialResp `json:"throttle_specials,omitempty"`
 }

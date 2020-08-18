@@ -16,11 +16,11 @@ import (
 // Request Object
 type ShowOnlineUsersRequest struct {
 	Domain     string           `json:"domain"`
-	AppName    string           `json:"app_name,omitempty"`
-	StreamName string           `json:"stream_name,omitempty"`
+	AppName    *string          `json:"app_name,omitempty"`
+	StreamName *string          `json:"stream_name,omitempty"`
 	StartTime  *sdktime.SdkTime `json:"start_time,omitempty"`
 	EndTime    *sdktime.SdkTime `json:"end_time,omitempty"`
-	Step       int32            `json:"step,omitempty"`
+	Step       *int32           `json:"step,omitempty"`
 }
 
 func (o ShowOnlineUsersRequest) String() string {

@@ -14,7 +14,7 @@ import (
 
 // Request Object
 type ListOsVersionsRequest struct {
-	Tag string `json:"tag,omitempty"`
+	Tag *string `json:"tag,omitempty"`
 }
 
 func (o ListOsVersionsRequest) String() string {

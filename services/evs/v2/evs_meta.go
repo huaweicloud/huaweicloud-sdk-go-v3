@@ -10,7 +10,7 @@ func GenReqDefForBatchCreateVolumeTags(request *model.BatchCreateVolumeTagsReque
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/cloudvolumes/{volume_id}/tags/action").
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("volume_id").
@@ -41,7 +41,7 @@ func GenReqDefForBatchDeleteVolumeTags(request *model.BatchDeleteVolumeTagsReque
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/cloudvolumes/{volume_id}/tags/action").
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("volume_id").
@@ -72,7 +72,7 @@ func GenReqDefForCinderExportToImage(request *model.CinderExportToImageRequest) 
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/volumes/{volume_id}/action").
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("volume_id").
@@ -183,7 +183,7 @@ func GenReqDefForCreateSnapshot(request *model.CreateSnapshotRequest) *def.HttpR
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/cloudsnapshots").
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithBodyJson(request.Body)
 
@@ -210,7 +210,7 @@ func GenReqDefForCreateVolume(request *model.CreateVolumeRequest) *def.HttpReque
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2.1/{project_id}/cloudvolumes").
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithBodyJson(request.Body)
 
@@ -375,7 +375,7 @@ func GenReqDefForListVolumesByTags(request *model.ListVolumesByTagsRequest) *def
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/cloudvolumes/resource_instances/action").
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithBodyJson(request.Body)
 
@@ -478,7 +478,7 @@ func GenReqDefForResizeVolume(request *model.ResizeVolumeRequest) *def.HttpReque
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2.1/{project_id}/cloudvolumes/{volume_id}/action").
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("volume_id").
@@ -509,7 +509,7 @@ func GenReqDefForRollbackSnapshot(request *model.RollbackSnapshotRequest) *def.H
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/cloudsnapshots/{snapshot_id}/rollback").
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("snapshot_id").
@@ -652,7 +652,7 @@ func GenReqDefForUpdateSnapshot(request *model.UpdateSnapshotRequest) *def.HttpR
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/cloudsnapshots/{snapshot_id}").
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("snapshot_id").
@@ -683,7 +683,7 @@ func GenReqDefForUpdateVolume(request *model.UpdateVolumeRequest) *def.HttpReque
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/cloudvolumes/{volume_id}").
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("volume_id").

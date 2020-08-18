@@ -15,7 +15,7 @@ import (
 //
 type PolicyAssociateVault struct {
 	// 关联的远端存储库ID
-	DestinationVaultId string `json:"destination_vault_id,omitempty"`
+	DestinationVaultId *string `json:"destination_vault_id,omitempty"`
 	// 存储库ID
 	VaultId string `json:"vault_id"`
 }

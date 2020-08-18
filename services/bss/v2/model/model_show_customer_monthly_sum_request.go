@@ -14,11 +14,11 @@ import (
 
 // Request Object
 type ShowCustomerMonthlySumRequest struct {
-	BillCycle           string `json:"bill_cycle"`
-	ServiceTypeCode     string `json:"service_type_code,omitempty"`
-	EnterpriseProjectId string `json:"enterprise_project_id,omitempty"`
-	Offset              int32  `json:"offset,omitempty"`
-	Limit               int32  `json:"limit,omitempty"`
+	BillCycle           string  `json:"bill_cycle"`
+	ServiceTypeCode     *string `json:"service_type_code,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	Offset              *int32  `json:"offset,omitempty"`
+	Limit               *int32  `json:"limit,omitempty"`
 }
 
 func (o ShowCustomerMonthlySumRequest) String() string {

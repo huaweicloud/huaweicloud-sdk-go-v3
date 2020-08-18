@@ -15,7 +15,7 @@ import (
 // Response Object
 type UpdateTenantStatusResponse struct {
 	// 任务Id
-	JobId string `json:"jobId,omitempty"`
+	JobId *string `json:"jobId,omitempty"`
 }
 
 func (o UpdateTenantStatusResponse) String() string {

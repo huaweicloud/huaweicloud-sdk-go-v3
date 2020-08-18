@@ -14,13 +14,13 @@ import (
 
 // Request Object
 type ListRequestThrottlingPolicyV2Request struct {
-	ProjectId     string `json:"project_id"`
-	InstanceId    string `json:"instance_id"`
-	Id            string `json:"id,omitempty"`
-	Name          string `json:"name,omitempty"`
-	Offset        int64  `json:"offset,omitempty"`
-	Limit         int32  `json:"limit,omitempty"`
-	PreciseSearch string `json:"precise_search,omitempty"`
+	ProjectId     string  `json:"project_id"`
+	InstanceId    string  `json:"instance_id"`
+	Id            *string `json:"id,omitempty"`
+	Name          *string `json:"name,omitempty"`
+	Offset        *int64  `json:"offset,omitempty"`
+	Limit         *int32  `json:"limit,omitempty"`
+	PreciseSearch *string `json:"precise_search,omitempty"`
 }
 
 func (o ListRequestThrottlingPolicyV2Request) String() string {

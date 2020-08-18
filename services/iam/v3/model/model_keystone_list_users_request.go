@@ -14,9 +14,9 @@ import (
 
 // Request Object
 type KeystoneListUsersRequest struct {
-	Enabled           bool   `json:"enabled,omitempty"`
-	Name              string `json:"name,omitempty"`
-	PasswordExpiresAt string `json:"password_expires_at,omitempty"`
+	Enabled           *bool   `json:"enabled,omitempty"`
+	Name              *string `json:"name,omitempty"`
+	PasswordExpiresAt *string `json:"password_expires_at,omitempty"`
 }
 
 func (o KeystoneListUsersRequest) String() string {

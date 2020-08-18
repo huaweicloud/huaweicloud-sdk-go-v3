@@ -19,7 +19,7 @@ type GlanceUpdateImageRequestBody struct {
 	// 所要操作的属性名称。 replace和remove操作取值只能是镜像当前已有的属性、add操作取值只能是镜像当前不存在的属性，需要在属性名称前加”/”
 	Path string `json:"path"`
 	// 所需更新/添加属性的值
-	Value string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o GlanceUpdateImageRequestBody) String() string {

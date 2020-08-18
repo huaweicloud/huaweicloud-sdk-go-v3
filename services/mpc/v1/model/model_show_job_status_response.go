@@ -16,9 +16,9 @@ import (
 type ShowJobStatusResponse struct {
 	Job *Job `json:"job,omitempty"`
 	// 任务返回码
-	RetCode string `json:"retCode,omitempty"`
+	RetCode *string `json:"retCode,omitempty"`
 	// 任务信息
-	RetSuccess string `json:"retSuccess,omitempty"`
+	RetSuccess *string `json:"retSuccess,omitempty"`
 }
 
 func (o ShowJobStatusResponse) String() string {

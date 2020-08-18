@@ -17,8 +17,8 @@ type ListMemberJobRecordsRequest struct {
 	JobId      string `json:"job_id"`
 	ExerciseId string `json:"exercise_id"`
 	MemberId   string `json:"member_id"`
-	Offset     int32  `json:"offset,omitempty"`
-	Limit      int32  `json:"limit,omitempty"`
+	Offset     *int32 `json:"offset,omitempty"`
+	Limit      *int32 `json:"limit,omitempty"`
 }
 
 func (o ListMemberJobRecordsRequest) String() string {

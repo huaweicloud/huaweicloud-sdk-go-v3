@@ -14,7 +14,7 @@ import (
 
 // Request Object
 type NovaCreateKeypairRequest struct {
-	OpenStackAPIVersion string                        `json:"OpenStack-API-Version,omitempty"`
+	OpenStackAPIVersion *string                       `json:"OpenStack-API-Version,omitempty"`
 	Body                *NovaCreateKeypairRequestBody `json:"body,omitempty"`
 }
 

@@ -20,7 +20,7 @@ type Audio struct {
 	// 音频采样率。  取值如下：  - 1：AUDIO_SAMPLE_AUTO - 2：AUDIO_SAMPLE_22050（22050Hz） - 3：AUDIO_SAMPLE_32000（32000Hz） - 4：AUDIO_SAMPLE_44100（44100Hz） - 5：AUDIO_SAMPLE_48000（48000Hz） - 6：AUDIO_SAMPLE_96000（96000Hz）
 	SampleRate int32 `json:"sample_rate"`
 	// 音频码率。  取值范围：0或[8,1000]。  单位：kbit/s。
-	Bitrate int32 `json:"bitrate,omitempty"`
+	Bitrate *int32 `json:"bitrate,omitempty"`
 	// 声道数。  取值如下： - 1：AUDIO_CHANNELS_1 - 2：AUDIO_CHANNELS_2 - 6：AUDIO_CHANNELS_5_1
 	Channels int32 `json:"channels"`
 }

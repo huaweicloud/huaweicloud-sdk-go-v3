@@ -14,7 +14,7 @@ import (
 
 type Resource struct {
 	// 租户Id
-	TenantId string `json:"tenantId,omitempty"`
+	TenantId *string `json:"tenantId,omitempty"`
 	// 资源信息列表
 	ResourceInfos []ResourceInfo `json:"resourceInfos,omitempty"`
 }

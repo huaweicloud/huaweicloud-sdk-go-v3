@@ -15,7 +15,7 @@ import (
 // VPC通道详情。vpc_channel_status = 1，则这个object类型为必填信息
 type ApiBackendVpcReq struct {
 	// 代理主机
-	VpcChannelProxyHost string `json:"vpc_channel_proxy_host,omitempty"`
+	VpcChannelProxyHost *string `json:"vpc_channel_proxy_host,omitempty"`
 	// VPC通道编号
 	VpcChannelId string `json:"vpc_channel_id"`
 }

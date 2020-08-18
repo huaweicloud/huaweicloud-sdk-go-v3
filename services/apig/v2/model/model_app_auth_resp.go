@@ -15,14 +15,14 @@ import (
 
 type AppAuthResp struct {
 	// API编号
-	ApiId      string          `json:"api_id,omitempty"`
+	ApiId      *string         `json:"api_id,omitempty"`
 	AuthResult *AuthResultResp `json:"auth_result,omitempty"`
 	// 授权时间
 	AuthTime *sdktime.SdkTime `json:"auth_time,omitempty"`
 	// 授权关系编号
-	Id string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 	// APP编号
-	AppId string `json:"app_id,omitempty"`
+	AppId *string `json:"app_id,omitempty"`
 	// 授权者 - PROVIDER：API提供者授权 - CONSUMER：API消费者授权
 	AuthRole AppAuthRespAuthRole `json:"auth_role,omitempty"`
 	// 授权通道类型 - NORMAL：普通通道 - GREEN：绿色通道  暂不支持，默认NORMAL

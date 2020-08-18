@@ -18,9 +18,9 @@ type ApiPolicyFunctionBase struct {
 	// 调用类型 - async： 异步 - sync：同步
 	InvocationType ApiPolicyFunctionBaseInvocationType `json:"invocation_type"`
 	// 版本。字符长度不超过64
-	Version string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty"`
 	// API网关请求后端服务的超时时间。  单位：毫秒。请求参数值不在合法范围内时将使用默认值
-	Timeout int32 `json:"timeout,omitempty"`
+	Timeout *int32 `json:"timeout,omitempty"`
 }
 
 func (o ApiPolicyFunctionBase) String() string {

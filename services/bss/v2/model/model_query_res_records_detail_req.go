@@ -14,27 +14,27 @@ import (
 
 type QueryResRecordsDetailReq struct {
 	// |参数名称：账单类型| |参数的约束及描述：该参数非必填，且只允许整数,1：消费-新购；2：消费-续订；3：消费-变更；4：退款-退订；5：消费-使用；8：消费-自动续订；9：调账-补偿；12：消费-按时计费；13：消费-退订手续费；14：消费-服务支持计划月末扣费；16：调账-扣费|
-	BillType int32 `json:"bill_type,omitempty"`
+	BillType *int32 `json:"bill_type,omitempty"`
 	// |参数名称：支付方式| |参数的约束及描述：该参数非必填，且只允许整数,1 : 包周期；3: 按需。10: 预留实例|
-	ChargeMode int32 `json:"charge_mode,omitempty"`
+	ChargeMode *int32 `json:"charge_mode,omitempty"`
 	// |参数名称：云服务类型编码| |参数的约束及描述：该参数非必填，最大长度：64，且只允许字符串，例如ECS的云服务类型编码为“hws.service.type.ec2”|
-	CloudServiceType string `json:"cloud_service_type,omitempty"`
+	CloudServiceType *string `json:"cloud_service_type,omitempty"`
 	// |参数名称：消费月份| |参数的约束及描述：该参数必填，最大长度：8，比如2018-12|
 	Cycle string `json:"cycle"`
 	// |参数名称：企业项目ID| |参数的约束及描述：该参数非必，最大长度：64，且只允许字符串|
-	EnterpriseProjectId string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// |参数名称：返回是否包含应付金额为0的记录| |参数的约束及描述：该参数非必填，且只允许布尔型，true: 包含；false: 不包含|
-	IncludeZeroRecord bool `json:"include_zero_record,omitempty"`
+	IncludeZeroRecord *bool `json:"include_zero_record,omitempty"`
 	// |参数名称：页面大小| |参数的约束及描述：该参数非必填，且只允许1-100的数字，默认10|
-	Limit int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
 	// |参数名称：偏移量| |参数的约束及描述：该参数非必填，且只允许数字，默认为1|
-	Offset int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
 	// |参数名称：云服务区编码| |参数的约束及描述：该参数非必填，最大长度：64，且只允许字符串，例如：“cn-north-1”|
-	Region string `json:"region,omitempty"`
+	Region *string `json:"region,omitempty"`
 	// |参数名称：资源实例ID| |参数的约束及描述：该参数非必填，最大长度：64，且只允字符串|
-	ResInstanceId string `json:"res_instance_id,omitempty"`
+	ResInstanceId *string `json:"res_instance_id,omitempty"`
 	// |参数名称：资源类型编码| |参数的约束及描述：该参数非必填，最大长度：64，且只允许字符串，例如ECS的VM为“hws.resource.type.vm”|
-	ResourceType string `json:"resource_type,omitempty"`
+	ResourceType *string `json:"resource_type,omitempty"`
 }
 
 func (o QueryResRecordsDetailReq) String() string {

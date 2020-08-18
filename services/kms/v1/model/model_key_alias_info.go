@@ -14,9 +14,9 @@ import (
 
 type KeyAliasInfo struct {
 	// 密钥ID。
-	KeyId string `json:"key_id,omitempty"`
+	KeyId *string `json:"key_id,omitempty"`
 	// 密钥别名。
-	KeyAlias string `json:"key_alias,omitempty"`
+	KeyAlias *string `json:"key_alias,omitempty"`
 }
 
 func (o KeyAliasInfo) String() string {

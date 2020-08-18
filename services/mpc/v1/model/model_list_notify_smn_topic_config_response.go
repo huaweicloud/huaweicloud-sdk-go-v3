@@ -17,7 +17,7 @@ type ListNotifySmnTopicConfigResponse struct {
 	// 事件通知模板信息
 	Notifications []Notification `json:"notifications,omitempty"`
 	// 事件通知模板总数
-	Total int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty"`
 }
 
 func (o ListNotifySmnTopicConfigResponse) String() string {

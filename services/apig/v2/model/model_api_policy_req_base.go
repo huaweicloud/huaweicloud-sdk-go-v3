@@ -22,7 +22,7 @@ type ApiPolicyReqBase struct {
 	// 策略条件列表
 	Conditions []ApiConditionBase `json:"conditions"`
 	// 后端自定义认证对象的ID
-	AuthorizerId string `json:"authorizer_id,omitempty"`
+	AuthorizerId *string `json:"authorizer_id,omitempty"`
 }
 
 func (o ApiPolicyReqBase) String() string {

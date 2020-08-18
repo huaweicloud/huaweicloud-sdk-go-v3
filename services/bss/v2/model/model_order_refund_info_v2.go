@@ -16,7 +16,7 @@ type OrderRefundInfoV2 struct {
 	// |参数名称：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。| |参数的约束及描述：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。|
 	Amount float32 `json:"amount"`
 	// |参数名称：退订金额、已消费金额或收取退订手续费对应的原订单ID。| |参数约束及描述：退订金额、已消费金额或收取退订手续费对应的原订单ID。|
-	BaseOrderId string `json:"base_order_id,omitempty"`
+	BaseOrderId *string `json:"base_order_id,omitempty"`
 	// |参数名称：客户ID。| |参数约束及描述：客户ID。|
 	CustomerId string `json:"customer_id"`
 	// |参数名称：该记录的ID。| |参数约束及描述：该记录的ID。|

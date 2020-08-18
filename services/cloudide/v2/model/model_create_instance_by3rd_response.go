@@ -16,7 +16,7 @@ import (
 type CreateInstanceBy3rdResponse struct {
 	Result *InstancesVo `json:"result,omitempty"`
 	// 状态
-	Status string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty"`
 }
 
 func (o CreateInstanceBy3rdResponse) String() string {

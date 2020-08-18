@@ -21,7 +21,7 @@ type NovaSimpleKeypair struct {
 	// 密钥对应publicKey信息。
 	PublicKey string `json:"public_key"`
 	// 密钥类型，默认“ssh”  微版本2.2以上支持
-	Type string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o NovaSimpleKeypair) String() string {

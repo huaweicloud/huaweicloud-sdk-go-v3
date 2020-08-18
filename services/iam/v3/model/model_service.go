@@ -17,8 +17,8 @@ type Service struct {
 	// 服务名。
 	Name string `json:"name"`
 	// 服务描述信息。
-	Description string `json:"description,omitempty"`
-	Links       *Links `json:"links"`
+	Description *string `json:"description,omitempty"`
+	Links       *Links  `json:"links"`
 	// 服务ID。
 	Id string `json:"id"`
 	// 服务类型。

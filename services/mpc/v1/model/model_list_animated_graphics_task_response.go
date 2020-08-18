@@ -15,7 +15,7 @@ import (
 // Response Object
 type ListAnimatedGraphicsTaskResponse struct {
 	// 任务总数
-	Total int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty"`
 	// 任务列表
 	Tasks []AnimatedGraphicsTask `json:"tasks,omitempty"`
 }

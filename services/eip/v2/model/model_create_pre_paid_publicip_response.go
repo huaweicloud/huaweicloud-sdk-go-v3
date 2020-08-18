@@ -16,9 +16,9 @@ import (
 type CreatePrePaidPublicipResponse struct {
 	Publicip *PublicipCreateResp `json:"publicip,omitempty"`
 	// 订单号（预付费场景返回该字段）
-	OrderId string `json:"order_id,omitempty"`
+	OrderId *string `json:"order_id,omitempty"`
 	// 弹性公网IP的ID（预付费场景返回该字段）
-	PublicipId string `json:"publicip_id,omitempty"`
+	PublicipId *string `json:"publicip_id,omitempty"`
 }
 
 func (o CreatePrePaidPublicipResponse) String() string {
