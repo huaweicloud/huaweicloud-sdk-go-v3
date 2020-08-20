@@ -9,6 +9,8 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"strings"
 )
 
@@ -105,8 +107,17 @@ func (c ApiCreateReqProtocol) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiCreateReqProtocol) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ApiCreateReqMethod struct {
@@ -158,8 +169,17 @@ func (c ApiCreateReqMethod) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiCreateReqMethod) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ApiCreateAuthType struct {
@@ -195,8 +215,17 @@ func (c ApiCreateAuthType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiCreateAuthType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ApiCreateMatchMode struct {
@@ -224,8 +253,17 @@ func (c ApiCreateMatchMode) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiCreateMatchMode) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ApiCreateBackendType struct {
@@ -257,6 +295,15 @@ func (c ApiCreateBackendType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiCreateBackendType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

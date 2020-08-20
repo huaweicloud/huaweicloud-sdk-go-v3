@@ -9,6 +9,8 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"strings"
 )
 
@@ -49,6 +51,15 @@ func (c UpdatePublicipOptionIpVersion) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdatePublicipOptionIpVersion) UnmarshalJSON(b []byte) error {
-	c.value = int32(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

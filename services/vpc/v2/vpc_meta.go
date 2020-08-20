@@ -906,6 +906,34 @@ func GenRespForListPrivateips() (*model.ListPrivateipsResponse, *def.HttpRespons
 	return resp, responseDef
 }
 
+func GenReqDefForShowNetworkIpAvailabilities(request *model.ShowNetworkIpAvailabilitiesRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2.0/network-ip-availabilities/{network_id}")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("network_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForShowNetworkIpAvailabilities() (*model.ShowNetworkIpAvailabilitiesResponse, *def.HttpResponseDef) {
+	resp := new(model.ShowNetworkIpAvailabilitiesResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
 func GenReqDefForShowPrivateip(request *model.ShowPrivateipRequest) *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

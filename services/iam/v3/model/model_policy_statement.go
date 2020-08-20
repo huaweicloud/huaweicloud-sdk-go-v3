@@ -9,6 +9,8 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"strings"
 )
 
@@ -19,7 +21,7 @@ type PolicyStatement struct {
 	// 作用。包含两种：允许（Allow）和拒绝（Deny），既有Allow又有Deny的授权语句时，遵循Deny优先的原则。
 	Effect PolicyStatementEffect `json:"Effect"`
 	// 限制条件。不超过10个。
-	Condition map[string]interface{} `json:"Condition,omitempty"`
+	Condition *interface{} `json:"Condition,omitempty"`
 	// 资源。数组长度不超过10，每个字符串长度不超过128，规则如下：   > - 可填 * 的五段式：<service-name>:<region>:<account-id>:<resource-type>:<resource-path>，例：\"obs:*:*:bucket:*\"。   > - region字段为*或用户可访问的region。service必须存在且resource属于对应service。   > - 当该自定义策略为委托自定义策略时，该字段类型为Object，值为：```\"Resource\": {\"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"]}```。
 	Resource []string `json:"Resource,omitempty"`
 }
@@ -54,6 +56,15 @@ func (c PolicyStatementEffect) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PolicyStatementEffect) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

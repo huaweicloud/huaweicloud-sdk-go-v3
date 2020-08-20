@@ -9,6 +9,8 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"strings"
 )
 
@@ -79,8 +81,17 @@ func (c ReqParamType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ReqParamType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ReqParamLocation struct {
@@ -112,8 +123,17 @@ func (c ReqParamLocation) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ReqParamLocation) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ReqParamPassThrough struct {
@@ -141,6 +161,15 @@ func (c ReqParamPassThrough) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ReqParamPassThrough) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

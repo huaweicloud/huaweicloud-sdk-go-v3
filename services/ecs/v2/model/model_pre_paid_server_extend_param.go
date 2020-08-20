@@ -9,6 +9,8 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"strings"
 )
 
@@ -74,8 +76,17 @@ func (c PrePaidServerExtendParamChargingMode) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PrePaidServerExtendParamChargingMode) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type PrePaidServerExtendParamPeriodType struct {
@@ -103,8 +114,17 @@ func (c PrePaidServerExtendParamPeriodType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PrePaidServerExtendParamPeriodType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type PrePaidServerExtendParamIsAutoRenew struct {
@@ -132,8 +152,17 @@ func (c PrePaidServerExtendParamIsAutoRenew) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PrePaidServerExtendParamIsAutoRenew) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type PrePaidServerExtendParamIsAutoPay struct {
@@ -161,8 +190,17 @@ func (c PrePaidServerExtendParamIsAutoPay) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PrePaidServerExtendParamIsAutoPay) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type PrePaidServerExtendParamInterruptionPolicy struct {
@@ -186,6 +224,15 @@ func (c PrePaidServerExtendParamInterruptionPolicy) MarshalJSON() ([]byte, error
 }
 
 func (c *PrePaidServerExtendParamInterruptionPolicy) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

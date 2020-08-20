@@ -9,6 +9,8 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"strings"
 )
 
@@ -67,7 +69,7 @@ type GlanceCreateImageMetadataResponse struct {
 	// 镜像虚拟大小。单位为字节。
 	VirtualSize *int32 `json:"virtual_size,omitempty"`
 	// 镜像属性的集合，不表示具体的镜像属性
-	Properties map[string]interface{} `json:"properties,omitempty"`
+	Properties *interface{} `json:"properties,omitempty"`
 }
 
 func (o GlanceCreateImageMetadataResponse) String() string {
@@ -108,8 +110,17 @@ func (c GlanceCreateImageMetadataResponseDiskFormat) MarshalJSON() ([]byte, erro
 }
 
 func (c *GlanceCreateImageMetadataResponseDiskFormat) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceCreateImageMetadataResponseStatus struct {
@@ -149,8 +160,17 @@ func (c GlanceCreateImageMetadataResponseStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceCreateImageMetadataResponseStatus) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceCreateImageMetadataResponseOsType struct {
@@ -182,8 +202,17 @@ func (c GlanceCreateImageMetadataResponseOsType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceCreateImageMetadataResponseOsType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceCreateImageMetadataResponseOsBit struct {
@@ -211,8 +240,17 @@ func (c GlanceCreateImageMetadataResponseOsBit) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceCreateImageMetadataResponseOsBit) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceCreateImageMetadataResponseVirtualEnvType struct {
@@ -244,6 +282,15 @@ func (c GlanceCreateImageMetadataResponseVirtualEnvType) MarshalJSON() ([]byte, 
 }
 
 func (c *GlanceCreateImageMetadataResponseVirtualEnvType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

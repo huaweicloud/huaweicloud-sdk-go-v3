@@ -9,6 +9,8 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"strings"
 )
 
@@ -33,7 +35,7 @@ type CreateVolumeOption struct {
 	// 云硬盘名称。 如果为创建单个云硬盘，name为云硬盘名称。最大支持255个字节。 创建的云硬盘数量（count字段对应的值）大于1时，为区分不同云硬盘，创建过程中系统会自动在名称后加“-0000”的类似标记。例如：volume-0001、volume-0002。最大支持250个字节。
 	Name *string `json:"name,omitempty"`
 	// 是否为共享云硬盘。true为共享盘，false为普通云硬盘。 该字段已经废弃，请使用multiattach。
-	Shareable *string `json:"shareable,omitempty"`
+	Shareable CreateVolumeOptionShareable `json:"shareable,omitempty"`
 	// 云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
 	Size *int32 `json:"size,omitempty"`
 	// 快照ID，指定该参数表示创建云硬盘方式为从快照创建云硬盘
@@ -47,6 +49,44 @@ type CreateVolumeOption struct {
 func (o CreateVolumeOption) String() string {
 	data, _ := json.Marshal(o)
 	return strings.Join([]string{"CreateVolumeOption", string(data)}, " ")
+}
+
+type CreateVolumeOptionShareable struct {
+	value string
+}
+
+type CreateVolumeOptionShareableEnum struct {
+	TRUE  CreateVolumeOptionShareable
+	FALSE CreateVolumeOptionShareable
+}
+
+func GetCreateVolumeOptionShareableEnum() CreateVolumeOptionShareableEnum {
+	return CreateVolumeOptionShareableEnum{
+		TRUE: CreateVolumeOptionShareable{
+			value: "true",
+		},
+		FALSE: CreateVolumeOptionShareable{
+			value: "false",
+		},
+	}
+}
+
+func (c CreateVolumeOptionShareable) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *CreateVolumeOptionShareable) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type CreateVolumeOptionVolumeType struct {
@@ -82,6 +122,15 @@ func (c CreateVolumeOptionVolumeType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateVolumeOptionVolumeType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

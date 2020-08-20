@@ -9,6 +9,7 @@ package model
 
 import (
 	"encoding/json"
+
 	"strings"
 )
 
@@ -21,7 +22,7 @@ type Resources struct {
 	// Project名称
 	ProjectName string `json:"project_name"`
 	// 资源详情
-	ResourceDetail map[string]interface{} `json:"resource_detail"`
+	ResourceDetail *interface{} `json:"resource_detail"`
 	// 资源ID
 	ResourceId string `json:"resource_id"`
 	// 资源名称

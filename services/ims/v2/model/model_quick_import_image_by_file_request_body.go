@@ -9,6 +9,8 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"strings"
 )
 
@@ -72,8 +74,17 @@ func (c QuickImportImageByFileRequestBodyType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *QuickImportImageByFileRequestBodyType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type QuickImportImageByFileRequestBodyArchitecture struct {
@@ -101,8 +112,17 @@ func (c QuickImportImageByFileRequestBodyArchitecture) MarshalJSON() ([]byte, er
 }
 
 func (c *QuickImportImageByFileRequestBodyArchitecture) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type QuickImportImageByFileRequestBodyOsType struct {
@@ -130,6 +150,15 @@ func (c QuickImportImageByFileRequestBodyOsType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *QuickImportImageByFileRequestBodyOsType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

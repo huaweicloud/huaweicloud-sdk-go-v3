@@ -366,6 +366,18 @@ func (c *VpcClient) ListPrivateips(request *model.ListPrivateipsRequest) (*model
 	}
 }
 
+//显示一个指定网络中的IPv4地址使用情况。 包括此网络中的IP总数以及已用IP总数，以及网络下每一个子网的IP地址总数和可用IP地址总数。  > 须知  - 系统预留地址指的是子网的第1个以及最后4个地址，一般用于网关、DHCP等服务。 - 这里以及下文描述的IP地址总数、已用IP地址总数不包含系统预留地址。 - 在分配IP时，用户可以指定系统预留的IP地址。但是不论IP是如何分配的，只要是处于系统预留IP地址段的IP均不会被统计到已用IP地址数目和IP地址总数中。
+func (c *VpcClient) ShowNetworkIpAvailabilities(request *model.ShowNetworkIpAvailabilitiesRequest) (*model.ShowNetworkIpAvailabilitiesResponse, error) {
+	requestDef := GenReqDefForShowNetworkIpAvailabilities(request)
+	resp, responseDef := GenRespForShowNetworkIpAvailabilities()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
 //指定ID查询私有IP。
 func (c *VpcClient) ShowPrivateip(request *model.ShowPrivateipRequest) (*model.ShowPrivateipResponse, error) {
 	requestDef := GenReqDefForShowPrivateip(request)

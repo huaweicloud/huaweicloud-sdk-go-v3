@@ -9,6 +9,7 @@ package model
 
 import (
 	"encoding/json"
+
 	"strings"
 )
 
@@ -29,7 +30,7 @@ type VaultCreate struct {
 	// 是否支持自动挂载。
 	AutoBind *bool `json:"auto_bind,omitempty"`
 	//
-	BindRules map[string]interface{} `json:"bind_rules,omitempty"`
+	BindRules *interface{} `json:"bind_rules,omitempty"`
 }
 
 func (o VaultCreate) String() string {

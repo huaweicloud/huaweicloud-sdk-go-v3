@@ -9,6 +9,8 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"strings"
 )
 
@@ -47,9 +49,9 @@ type Port struct {
 	// 功能说明：主网卡默认内网DNS名称 约束：不支持设置和更新，由系统自动维护
 	DnsName string `json:"dns_name"`
 	// 功能说明：vif的详细信息，  \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 约束：管理员权限，普通租户不可指定
-	BindingvifDetails map[string]interface{} `json:"binding:vif_details"`
+	BindingvifDetails *interface{} `json:"binding:vif_details"`
 	// 功能说明：提供用户设置自定义信息(扩展属性)
-	Bindingprofile map[string]interface{} `json:"binding:profile"`
+	Bindingprofile *interface{} `json:"binding:profile"`
 	// 功能说明：端口所属实例ID，例如RDS实例ID 约束：不支持设置和更新，由系统自动维护
 	InstanceId string `json:"instance_id"`
 	// 功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
@@ -96,8 +98,17 @@ func (c PortDeviceOwner) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PortDeviceOwner) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type PortStatus struct {
@@ -129,6 +140,15 @@ func (c PortStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PortStatus) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

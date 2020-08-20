@@ -10,6 +10,7 @@ package model
 import (
 	"encoding/json"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+
 	"strings"
 )
 
@@ -115,8 +116,17 @@ func (c ApiInfoPerPageReqProtocol) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiInfoPerPageReqProtocol) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ApiInfoPerPageReqMethod struct {
@@ -168,8 +178,17 @@ func (c ApiInfoPerPageReqMethod) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiInfoPerPageReqMethod) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ApiInfoPerPageAuthType struct {
@@ -205,8 +224,17 @@ func (c ApiInfoPerPageAuthType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiInfoPerPageAuthType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ApiInfoPerPageMatchMode struct {
@@ -234,8 +262,17 @@ func (c ApiInfoPerPageMatchMode) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiInfoPerPageMatchMode) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ApiInfoPerPageBackendType struct {
@@ -267,6 +304,15 @@ func (c ApiInfoPerPageBackendType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiInfoPerPageBackendType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

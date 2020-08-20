@@ -9,6 +9,8 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"strings"
 )
 
@@ -82,8 +84,17 @@ func (c GlanceListImagesRequestImagetype) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceListImagesRequestImagetype) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceListImagesRequestOsBit struct {
@@ -111,8 +122,17 @@ func (c GlanceListImagesRequestOsBit) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceListImagesRequestOsBit) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceListImagesRequestOsType struct {
@@ -144,8 +164,17 @@ func (c GlanceListImagesRequestOsType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceListImagesRequestOsType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceListImagesRequestPlatform struct {
@@ -213,8 +242,17 @@ func (c GlanceListImagesRequestPlatform) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceListImagesRequestPlatform) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceListImagesRequestDiskFormat struct {
@@ -250,8 +288,17 @@ func (c GlanceListImagesRequestDiskFormat) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceListImagesRequestDiskFormat) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceListImagesRequestStatus struct {
@@ -291,8 +338,17 @@ func (c GlanceListImagesRequestStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceListImagesRequestStatus) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceListImagesRequestVisibility struct {
@@ -324,6 +380,15 @@ func (c GlanceListImagesRequestVisibility) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceListImagesRequestVisibility) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

@@ -10,6 +10,7 @@ package model
 import (
 	"encoding/json"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+
 	"strings"
 )
 
@@ -127,8 +128,17 @@ func (c UpdateApiV2ResponseReqProtocol) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateApiV2ResponseReqProtocol) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type UpdateApiV2ResponseReqMethod struct {
@@ -180,8 +190,17 @@ func (c UpdateApiV2ResponseReqMethod) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateApiV2ResponseReqMethod) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type UpdateApiV2ResponseAuthType struct {
@@ -217,8 +236,17 @@ func (c UpdateApiV2ResponseAuthType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateApiV2ResponseAuthType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type UpdateApiV2ResponseMatchMode struct {
@@ -246,8 +274,17 @@ func (c UpdateApiV2ResponseMatchMode) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateApiV2ResponseMatchMode) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type UpdateApiV2ResponseBackendType struct {
@@ -279,6 +316,15 @@ func (c UpdateApiV2ResponseBackendType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateApiV2ResponseBackendType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

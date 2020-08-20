@@ -9,6 +9,7 @@ package model
 
 import (
 	"encoding/json"
+
 	"strings"
 )
 
@@ -17,7 +18,7 @@ type GlanceShowImageMemberSchemasResponse struct {
 	// 视图名称。
 	Name *string `json:"name,omitempty"`
 	// 镜像成员属性说明，主要是对基础属性的说明，包含每个属性的取值类型、用途等。
-	Properties map[string]interface{} `json:"properties,omitempty"`
+	Properties *interface{} `json:"properties,omitempty"`
 }
 
 func (o GlanceShowImageMemberSchemasResponse) String() string {

@@ -9,6 +9,8 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"strings"
 )
@@ -67,8 +69,17 @@ func (c UpdateAppV2ResponseCreator) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateAppV2ResponseCreator) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type UpdateAppV2ResponseAppType struct {
@@ -96,6 +107,15 @@ func (c UpdateAppV2ResponseAppType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateAppV2ResponseAppType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

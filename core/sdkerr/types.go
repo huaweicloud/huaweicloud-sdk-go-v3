@@ -86,38 +86,40 @@ func NewServiceResponseError(resp *http.Response) *ServiceResponseError {
 		RequestId:  resp.Header.Get("X-Request-Id"),
 	}
 
-	dataBuf := make(map[string]string)
 	data, err := ioutil.ReadAll(resp.Body)
 	if err == nil {
-		if err := jsoniter.Unmarshal(data, &dataBuf); err != nil {
+		dataBuf := make(map[string]string)
+		err := jsoniter.Unmarshal(data, &dataBuf)
+		if err != nil {
+			dataBuf := make(map[string]map[string]string)
+			err := jsoniter.Unmarshal(data, &dataBuf)
+			for _, value := range dataBuf {
+				if err == nil && value["code"] != "" {
+					sr.ErrorCode = value["code"]
+				}
+				if err == nil && value["message"] != "" {
+					sr.ErrorMessage = value["message"]
+				}
+			}
+		} else {
+			if sr.ErrorCode == "" && sr.ErrorMessage == "" {
+				sr.ErrorCode = dataBuf["error_code"]
+				sr.ErrorMessage = dataBuf["error_msg"]
+			}
+
+			if sr.ErrorCode == "" && sr.ErrorMessage == "" {
+				sr.ErrorCode = dataBuf["code"]
+				sr.ErrorMessage = dataBuf["message"]
+			}
+		}
+
+		if sr.ErrorMessage == "" {
 			sr.ErrorMessage = string(data)
 		}
 	}
+
 	if err := resp.Body.Close(); err == nil {
 		resp.Body = ioutil.NopCloser(bytes.NewBuffer(data))
-	}
-
-	if sr.ErrorCode == "" && sr.ErrorMessage == "" {
-		sr.ErrorCode = dataBuf["error_code"]
-		sr.ErrorMessage = dataBuf["error_msg"]
-	}
-
-	if sr.ErrorCode == "" && sr.ErrorMessage == "" {
-		sr.ErrorCode = dataBuf["code"]
-		sr.ErrorMessage = dataBuf["message"]
-	}
-
-	if sr.ErrorCode == "" && sr.ErrorMessage == "" {
-		for _, value := range dataBuf {
-			buf := make(map[string]string)
-			err := jsoniter.Unmarshal([]byte(value), &buf)
-			if err == nil && buf["code"] != "" {
-				sr.ErrorCode = buf["code"]
-			}
-			if err == nil && buf["message"] != "" {
-				sr.ErrorMessage = buf["message"]
-			}
-		}
 	}
 
 	return sr

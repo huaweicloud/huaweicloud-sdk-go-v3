@@ -10,6 +10,7 @@ package model
 import (
 	"encoding/json"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+
 	"strings"
 )
 
@@ -78,8 +79,17 @@ func (c PublicipShowRespBandwidthShareType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PublicipShowRespBandwidthShareType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type PublicipShowRespStatus struct {
@@ -151,8 +161,17 @@ func (c PublicipShowRespStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PublicipShowRespStatus) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type PublicipShowRespIpVersion struct {
@@ -179,6 +198,15 @@ func (c PublicipShowRespIpVersion) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PublicipShowRespIpVersion) UnmarshalJSON(b []byte) error {
-	c.value = int32(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

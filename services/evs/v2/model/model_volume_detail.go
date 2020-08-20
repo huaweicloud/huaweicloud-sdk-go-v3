@@ -9,6 +9,7 @@ package model
 
 import (
 	"encoding/json"
+
 	"strings"
 )
 
@@ -39,7 +40,7 @@ type VolumeDetail struct {
 	// 云硬盘所属的租户ID。租户ID就是项目ID。
 	OsVolTenantAttrtenantId string `json:"os-vol-tenant-attr:tenant_id"`
 	// 云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
-	VolumeImageMetadata map[string]map[string]interface{} `json:"volume_image_metadata"`
+	VolumeImageMetadata map[string]interface{} `json:"volume_image_metadata"`
 	// 云硬盘类型。 目前支持“SSD”，“SAS”和“SATA”三种。 “SSD”为超高IO云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
 	VolumeType string `json:"volume_type"`
 	// 云硬盘大小，单位为GB。
@@ -61,8 +62,8 @@ type VolumeDetail struct {
 	OsVolMigStatusAttrmigstat string `json:"os-vol-mig-status-attr:migstat"`
 	// 预留属性。
 	OsVolMigStatusAttrnameId string `json:"os-vol-mig-status-attr:name_id"`
-	// 是否为共享云硬盘。
-	Shareable bool `json:"shareable"`
+	// 是否为共享云硬盘。true为共享盘，false为普通云硬盘。 该字段已经废弃，请使用multiattach。
+	Shareable string `json:"shareable"`
 	// 预留属性。
 	UserId string `json:"user_id"`
 	// 服务类型，结果为EVS、DSS、DESS。

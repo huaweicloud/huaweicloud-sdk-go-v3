@@ -9,6 +9,7 @@ package model
 
 import (
 	"encoding/json"
+
 	"strings"
 )
 
@@ -36,7 +37,7 @@ type UpdateVolumeResponse struct {
 	// 云硬盘所属的项目ID。
 	OsVolTenantAttrtenantId *string `json:"os-vol-tenant-attr:tenant_id,omitempty"`
 	// 是否为共享云硬盘。
-	Shareable UpdateVolumeResponseShareable `json:"shareable,omitempty"`
+	Shareable *string `json:"shareable,omitempty"`
 	// 云硬盘大小。
 	Size *int32 `json:"size,omitempty"`
 	// 快照ID。
@@ -46,7 +47,7 @@ type UpdateVolumeResponse struct {
 	// 云硬盘状态。
 	Status *string `json:"status,omitempty"`
 	// 云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
-	VolumeImageMetadata map[string]interface{} `json:"volume_image_metadata,omitempty"`
+	VolumeImageMetadata *interface{} `json:"volume_image_metadata,omitempty"`
 	// 云硬盘类型。
 	VolumeType *string `json:"volume_type,omitempty"`
 	// 云硬盘描述。
@@ -58,33 +59,4 @@ type UpdateVolumeResponse struct {
 func (o UpdateVolumeResponse) String() string {
 	data, _ := json.Marshal(o)
 	return strings.Join([]string{"UpdateVolumeResponse", string(data)}, " ")
-}
-
-type UpdateVolumeResponseShareable struct {
-	value string
-}
-
-type UpdateVolumeResponseShareableEnum struct {
-	TRUE  UpdateVolumeResponseShareable
-	FALSE UpdateVolumeResponseShareable
-}
-
-func GetUpdateVolumeResponseShareableEnum() UpdateVolumeResponseShareableEnum {
-	return UpdateVolumeResponseShareableEnum{
-		TRUE: UpdateVolumeResponseShareable{
-			value: "true",
-		},
-		FALSE: UpdateVolumeResponseShareable{
-			value: "false",
-		},
-	}
-}
-
-func (c UpdateVolumeResponseShareable) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *UpdateVolumeResponseShareable) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
 }

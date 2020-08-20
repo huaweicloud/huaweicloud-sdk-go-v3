@@ -9,6 +9,7 @@ package model
 
 import (
 	"encoding/json"
+
 	"strings"
 )
 
@@ -19,8 +20,8 @@ type KeystoneUpdateProjectResult struct {
 	// 项目描述信息。
 	Description string `json:"description"`
 	// 项目的其他信息。
-	Extra map[string]interface{} `json:"extra,omitempty"`
-	Links *LinksSelf             `json:"links"`
+	Extra *interface{} `json:"extra,omitempty"`
+	Links *LinksSelf   `json:"links"`
 	// 项目是否可用。
 	Enabled bool `json:"enabled"`
 	// 项目ID。

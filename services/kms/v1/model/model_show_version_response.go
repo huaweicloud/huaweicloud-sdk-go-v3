@@ -9,13 +9,14 @@ package model
 
 import (
 	"encoding/json"
+
 	"strings"
 )
 
 // Response Object
 type ShowVersionResponse struct {
 	// 描述version 对象的列表，详情请参见 ApiVersionDetail字段数据结构说明。
-	Version map[string]interface{} `json:"version,omitempty"`
+	Version *interface{} `json:"version,omitempty"`
 }
 
 func (o ShowVersionResponse) String() string {

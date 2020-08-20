@@ -9,6 +9,8 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"strings"
 )
 
@@ -144,8 +146,17 @@ func (c GlanceShowImageResponseImageSourceType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceShowImageResponseImageSourceType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceShowImageResponseImagetype struct {
@@ -177,8 +188,17 @@ func (c GlanceShowImageResponseImagetype) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceShowImageResponseImagetype) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceShowImageResponseIsregistered struct {
@@ -206,8 +226,17 @@ func (c GlanceShowImageResponseIsregistered) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceShowImageResponseIsregistered) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceShowImageResponseOsBit struct {
@@ -235,8 +264,17 @@ func (c GlanceShowImageResponseOsBit) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceShowImageResponseOsBit) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceShowImageResponseOsType struct {
@@ -268,8 +306,17 @@ func (c GlanceShowImageResponseOsType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceShowImageResponseOsType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceShowImageResponsePlatform struct {
@@ -337,8 +384,17 @@ func (c GlanceShowImageResponsePlatform) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceShowImageResponsePlatform) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceShowImageResponseDiskFormat struct {
@@ -378,8 +434,17 @@ func (c GlanceShowImageResponseDiskFormat) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceShowImageResponseDiskFormat) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceShowImageResponseStatus struct {
@@ -419,8 +484,17 @@ func (c GlanceShowImageResponseStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceShowImageResponseStatus) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceShowImageResponseVirtualEnvType struct {
@@ -452,8 +526,17 @@ func (c GlanceShowImageResponseVirtualEnvType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceShowImageResponseVirtualEnvType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceShowImageResponseVisibility struct {
@@ -485,8 +568,17 @@ func (c GlanceShowImageResponseVisibility) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceShowImageResponseVisibility) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceShowImageResponseSupportFcInject struct {
@@ -514,8 +606,17 @@ func (c GlanceShowImageResponseSupportFcInject) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceShowImageResponseSupportFcInject) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceShowImageResponseHwFirmwareType struct {
@@ -543,8 +644,17 @@ func (c GlanceShowImageResponseHwFirmwareType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceShowImageResponseHwFirmwareType) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceShowImageResponseSupportArm struct {
@@ -572,8 +682,17 @@ func (c GlanceShowImageResponseSupportArm) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceShowImageResponseSupportArm) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type GlanceShowImageResponseIsOffshelved struct {
@@ -601,6 +720,15 @@ func (c GlanceShowImageResponseIsOffshelved) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlanceShowImageResponseIsOffshelved) UnmarshalJSON(b []byte) error {
-	c.value = string(strings.Trim(string(b[:]), "\""))
-	return nil
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err != nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

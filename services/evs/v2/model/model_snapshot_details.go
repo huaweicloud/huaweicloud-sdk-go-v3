@@ -9,6 +9,7 @@ package model
 
 import (
 	"encoding/json"
+
 	"strings"
 )
 
@@ -27,7 +28,7 @@ type SnapshotDetails struct {
 	// 快照更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	// 云硬盘快照的元数据信息。
-	Metadata map[string]interface{} `json:"metadata,omitempty"`
+	Metadata *interface{} `json:"metadata,omitempty"`
 	// 快照所属的云硬盘ID。
 	VolumeId *string `json:"volume_id,omitempty"`
 	// 云硬盘快照大小，单位为GB。
