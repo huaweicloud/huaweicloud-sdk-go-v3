@@ -9,8 +9,9 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-
 	"strings"
 )
 
@@ -131,7 +132,7 @@ func (c *ShowDetailsOfApiV2ResponseReqProtocol) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -193,7 +194,7 @@ func (c *ShowDetailsOfApiV2ResponseReqMethod) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -239,7 +240,7 @@ func (c *ShowDetailsOfApiV2ResponseAuthType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -277,7 +278,7 @@ func (c *ShowDetailsOfApiV2ResponseMatchMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -319,7 +320,7 @@ func (c *ShowDetailsOfApiV2ResponseBackendType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}

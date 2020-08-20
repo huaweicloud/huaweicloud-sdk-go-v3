@@ -155,7 +155,7 @@ func (c *UpdateImageResponseImageSourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -197,7 +197,7 @@ func (c *UpdateImageResponseImagetype) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -235,7 +235,7 @@ func (c *UpdateImageResponseIsConfigInit) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -273,7 +273,7 @@ func (c *UpdateImageResponseIsregistered) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -311,7 +311,7 @@ func (c *UpdateImageResponseOsBit) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -353,7 +353,7 @@ func (c *UpdateImageResponseOsType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -431,7 +431,7 @@ func (c *UpdateImageResponsePlatform) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -481,7 +481,7 @@ func (c *UpdateImageResponseStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -523,7 +523,7 @@ func (c *UpdateImageResponseVirtualEnvType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -561,7 +561,7 @@ func (c *UpdateImageResponseVisibility) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -599,7 +599,7 @@ func (c *UpdateImageResponseArchitecture) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -637,7 +637,7 @@ func (c *UpdateImageResponseSupportFcInject) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -675,7 +675,7 @@ func (c *UpdateImageResponseHwFirmwareType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -713,7 +713,7 @@ func (c *UpdateImageResponseSupportArm) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}

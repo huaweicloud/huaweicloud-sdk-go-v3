@@ -107,7 +107,7 @@ func (c *ApiCreateBaseReqProtocol) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -169,7 +169,7 @@ func (c *ApiCreateBaseReqMethod) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -215,7 +215,7 @@ func (c *ApiCreateBaseAuthType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -253,7 +253,7 @@ func (c *ApiCreateBaseMatchMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -295,7 +295,7 @@ func (c *ApiCreateBaseBackendType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}

@@ -149,7 +149,7 @@ func (c *GlanceUpdateImageResponseImageSourceType) UnmarshalJSON(b []byte) error
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -191,7 +191,7 @@ func (c *GlanceUpdateImageResponseImagetype) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -229,7 +229,7 @@ func (c *GlanceUpdateImageResponseIsregistered) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -267,7 +267,7 @@ func (c *GlanceUpdateImageResponseOsBit) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -309,7 +309,7 @@ func (c *GlanceUpdateImageResponseOsType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -387,7 +387,7 @@ func (c *GlanceUpdateImageResponsePlatform) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -437,7 +437,7 @@ func (c *GlanceUpdateImageResponseDiskFormat) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -487,7 +487,7 @@ func (c *GlanceUpdateImageResponseStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -529,7 +529,7 @@ func (c *GlanceUpdateImageResponseVirtualEnvType) UnmarshalJSON(b []byte) error 
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -571,7 +571,7 @@ func (c *GlanceUpdateImageResponseVisibility) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -609,7 +609,7 @@ func (c *GlanceUpdateImageResponseSupportFcInject) UnmarshalJSON(b []byte) error
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -647,7 +647,7 @@ func (c *GlanceUpdateImageResponseHwFirmwareType) UnmarshalJSON(b []byte) error 
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -685,7 +685,7 @@ func (c *GlanceUpdateImageResponseSupportArm) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
@@ -723,7 +723,7 @@ func (c *GlanceUpdateImageResponseIsOffshelved) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err != nil {
+		if err == nil {
 			c.value = val.(string)
 			return nil
 		}
