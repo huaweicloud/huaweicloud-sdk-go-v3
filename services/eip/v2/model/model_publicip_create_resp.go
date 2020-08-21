@@ -131,15 +131,15 @@ type PublicipCreateRespIpVersion struct {
 }
 
 type PublicipCreateRespIpVersionEnum struct {
-	_4 PublicipCreateRespIpVersion
-	_6 PublicipCreateRespIpVersion
+	E_4 PublicipCreateRespIpVersion
+	E_6 PublicipCreateRespIpVersion
 }
 
 func GetPublicipCreateRespIpVersionEnum() PublicipCreateRespIpVersionEnum {
 	return PublicipCreateRespIpVersionEnum{
-		_4: PublicipCreateRespIpVersion{
+		E_4: PublicipCreateRespIpVersion{
 			value: 4,
-		}, _6: PublicipCreateRespIpVersion{
+		}, E_6: PublicipCreateRespIpVersion{
 			value: 6,
 		},
 	}

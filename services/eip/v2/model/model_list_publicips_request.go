@@ -36,15 +36,15 @@ type ListPublicipsRequestIpVersion struct {
 }
 
 type ListPublicipsRequestIpVersionEnum struct {
-	_4 ListPublicipsRequestIpVersion
-	_6 ListPublicipsRequestIpVersion
+	E_4 ListPublicipsRequestIpVersion
+	E_6 ListPublicipsRequestIpVersion
 }
 
 func GetListPublicipsRequestIpVersionEnum() ListPublicipsRequestIpVersionEnum {
 	return ListPublicipsRequestIpVersionEnum{
-		_4: ListPublicipsRequestIpVersion{
+		E_4: ListPublicipsRequestIpVersion{
 			value: 4,
-		}, _6: ListPublicipsRequestIpVersion{
+		}, E_6: ListPublicipsRequestIpVersion{
 			value: 6,
 		},
 	}

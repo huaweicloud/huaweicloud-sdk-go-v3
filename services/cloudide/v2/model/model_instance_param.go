@@ -95,24 +95,24 @@ type InstanceParamCpuMemory struct {
 }
 
 type InstanceParamCpuMemoryEnum struct {
-	_1_U1_G InstanceParamCpuMemory
-	_2_U4_G InstanceParamCpuMemory
-	_2_U8_G InstanceParamCpuMemory
-	_4_U8_G InstanceParamCpuMemory
+	E_1_U1_G InstanceParamCpuMemory
+	E_2_U4_G InstanceParamCpuMemory
+	E_2_U8_G InstanceParamCpuMemory
+	E_4_U8_G InstanceParamCpuMemory
 }
 
 func GetInstanceParamCpuMemoryEnum() InstanceParamCpuMemoryEnum {
 	return InstanceParamCpuMemoryEnum{
-		_1_U1_G: InstanceParamCpuMemory{
+		E_1_U1_G: InstanceParamCpuMemory{
 			value: "1U1G",
 		},
-		_2_U4_G: InstanceParamCpuMemory{
+		E_2_U4_G: InstanceParamCpuMemory{
 			value: "2U4G",
 		},
-		_2_U8_G: InstanceParamCpuMemory{
+		E_2_U8_G: InstanceParamCpuMemory{
 			value: "2U8G",
 		},
-		_4_U8_G: InstanceParamCpuMemory{
+		E_4_U8_G: InstanceParamCpuMemory{
 			value: "4U8G",
 		},
 	}
@@ -141,20 +141,20 @@ type InstanceParamPvcQuantity struct {
 }
 
 type InstanceParamPvcQuantityEnum struct {
-	_5_GB  InstanceParamPvcQuantity
-	_10_GB InstanceParamPvcQuantity
-	_20_GB InstanceParamPvcQuantity
+	E_5_GB  InstanceParamPvcQuantity
+	E_10_GB InstanceParamPvcQuantity
+	E_20_GB InstanceParamPvcQuantity
 }
 
 func GetInstanceParamPvcQuantityEnum() InstanceParamPvcQuantityEnum {
 	return InstanceParamPvcQuantityEnum{
-		_5_GB: InstanceParamPvcQuantity{
+		E_5_GB: InstanceParamPvcQuantity{
 			value: "5GB",
 		},
-		_10_GB: InstanceParamPvcQuantity{
+		E_10_GB: InstanceParamPvcQuantity{
 			value: "10GB",
 		},
-		_20_GB: InstanceParamPvcQuantity{
+		E_20_GB: InstanceParamPvcQuantity{
 			value: "20GB",
 		},
 	}

@@ -32,16 +32,16 @@ type CreatePrePaidPublicipOptionIpVersion struct {
 }
 
 type CreatePrePaidPublicipOptionIpVersionEnum struct {
-	_4 CreatePrePaidPublicipOptionIpVersion
-	_6 CreatePrePaidPublicipOptionIpVersion
+	E_4 CreatePrePaidPublicipOptionIpVersion
+	E_6 CreatePrePaidPublicipOptionIpVersion
 }
 
 func GetCreatePrePaidPublicipOptionIpVersionEnum() CreatePrePaidPublicipOptionIpVersionEnum {
 	return CreatePrePaidPublicipOptionIpVersionEnum{
-		_4: CreatePrePaidPublicipOptionIpVersion{
+		E_4: CreatePrePaidPublicipOptionIpVersion{
 			value: "4",
 		},
-		_6: CreatePrePaidPublicipOptionIpVersion{
+		E_6: CreatePrePaidPublicipOptionIpVersion{
 			value: "6",
 		},
 	}

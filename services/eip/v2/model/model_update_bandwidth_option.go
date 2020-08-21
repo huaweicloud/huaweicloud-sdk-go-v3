@@ -34,9 +34,9 @@ type UpdateBandwidthOptionChargeMode struct {
 }
 
 type UpdateBandwidthOptionChargeModeEnum struct {
-	BANDWIDTH    UpdateBandwidthOptionChargeMode
-	TRAFFIC      UpdateBandwidthOptionChargeMode
-	_95PEAK_PLUS UpdateBandwidthOptionChargeMode
+	BANDWIDTH     UpdateBandwidthOptionChargeMode
+	TRAFFIC       UpdateBandwidthOptionChargeMode
+	E_95PEAK_PLUS UpdateBandwidthOptionChargeMode
 }
 
 func GetUpdateBandwidthOptionChargeModeEnum() UpdateBandwidthOptionChargeModeEnum {
@@ -47,7 +47,7 @@ func GetUpdateBandwidthOptionChargeModeEnum() UpdateBandwidthOptionChargeModeEnu
 		TRAFFIC: UpdateBandwidthOptionChargeMode{
 			value: "traffic",
 		},
-		_95PEAK_PLUS: UpdateBandwidthOptionChargeMode{
+		E_95PEAK_PLUS: UpdateBandwidthOptionChargeMode{
 			value: "95peak_plus",
 		},
 	}

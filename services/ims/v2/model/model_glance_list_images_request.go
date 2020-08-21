@@ -102,16 +102,16 @@ type GlanceListImagesRequestOsBit struct {
 }
 
 type GlanceListImagesRequestOsBitEnum struct {
-	_32 GlanceListImagesRequestOsBit
-	_64 GlanceListImagesRequestOsBit
+	E_32 GlanceListImagesRequestOsBit
+	E_64 GlanceListImagesRequestOsBit
 }
 
 func GetGlanceListImagesRequestOsBitEnum() GlanceListImagesRequestOsBitEnum {
 	return GlanceListImagesRequestOsBitEnum{
-		_32: GlanceListImagesRequestOsBit{
+		E_32: GlanceListImagesRequestOsBit{
 			value: "32",
 		},
-		_64: GlanceListImagesRequestOsBit{
+		E_64: GlanceListImagesRequestOsBit{
 			value: "64",
 		},
 	}

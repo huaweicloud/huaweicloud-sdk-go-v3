@@ -288,16 +288,16 @@ type UpdateImageResponseOsBit struct {
 }
 
 type UpdateImageResponseOsBitEnum struct {
-	_32 UpdateImageResponseOsBit
-	_64 UpdateImageResponseOsBit
+	E_32 UpdateImageResponseOsBit
+	E_64 UpdateImageResponseOsBit
 }
 
 func GetUpdateImageResponseOsBitEnum() UpdateImageResponseOsBitEnum {
 	return UpdateImageResponseOsBitEnum{
-		_32: UpdateImageResponseOsBit{
+		E_32: UpdateImageResponseOsBit{
 			value: "32",
 		},
-		_64: UpdateImageResponseOsBit{
+		E_64: UpdateImageResponseOsBit{
 			value: "64",
 		},
 	}

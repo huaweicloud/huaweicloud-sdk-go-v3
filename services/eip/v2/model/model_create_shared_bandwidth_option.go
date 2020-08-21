@@ -36,9 +36,9 @@ type CreateSharedBandwidthOptionChargeMode struct {
 }
 
 type CreateSharedBandwidthOptionChargeModeEnum struct {
-	BANDWIDTH    CreateSharedBandwidthOptionChargeMode
-	TRAFFIC      CreateSharedBandwidthOptionChargeMode
-	_95PEAK_PLUS CreateSharedBandwidthOptionChargeMode
+	BANDWIDTH     CreateSharedBandwidthOptionChargeMode
+	TRAFFIC       CreateSharedBandwidthOptionChargeMode
+	E_95PEAK_PLUS CreateSharedBandwidthOptionChargeMode
 }
 
 func GetCreateSharedBandwidthOptionChargeModeEnum() CreateSharedBandwidthOptionChargeModeEnum {
@@ -49,7 +49,7 @@ func GetCreateSharedBandwidthOptionChargeModeEnum() CreateSharedBandwidthOptionC
 		TRAFFIC: CreateSharedBandwidthOptionChargeMode{
 			value: "traffic",
 		},
-		_95PEAK_PLUS: CreateSharedBandwidthOptionChargeMode{
+		E_95PEAK_PLUS: CreateSharedBandwidthOptionChargeMode{
 			value: "95peak_plus",
 		},
 	}

@@ -145,16 +145,16 @@ type ListImagesRequestOsBit struct {
 }
 
 type ListImagesRequestOsBitEnum struct {
-	_32 ListImagesRequestOsBit
-	_64 ListImagesRequestOsBit
+	E_32 ListImagesRequestOsBit
+	E_64 ListImagesRequestOsBit
 }
 
 func GetListImagesRequestOsBitEnum() ListImagesRequestOsBitEnum {
 	return ListImagesRequestOsBitEnum{
-		_32: ListImagesRequestOsBit{
+		E_32: ListImagesRequestOsBit{
 			value: "32",
 		},
-		_64: ListImagesRequestOsBit{
+		E_64: ListImagesRequestOsBit{
 			value: "64",
 		},
 	}

@@ -139,16 +139,16 @@ type ReqParamBasePassThrough struct {
 }
 
 type ReqParamBasePassThroughEnum struct {
-	_1 ReqParamBasePassThrough
-	_2 ReqParamBasePassThrough
+	E_1 ReqParamBasePassThrough
+	E_2 ReqParamBasePassThrough
 }
 
 func GetReqParamBasePassThroughEnum() ReqParamBasePassThroughEnum {
 	return ReqParamBasePassThroughEnum{
-		_1: ReqParamBasePassThrough{
+		E_1: ReqParamBasePassThrough{
 			value: "1",
 		},
-		_2: ReqParamBasePassThrough{
+		E_2: ReqParamBasePassThrough{
 			value: "2",
 		},
 	}

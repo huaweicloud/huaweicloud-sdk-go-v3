@@ -121,24 +121,24 @@ type InstancesVoCpuMemory struct {
 }
 
 type InstancesVoCpuMemoryEnum struct {
-	_1_U1_G InstancesVoCpuMemory
-	_2_U4_G InstancesVoCpuMemory
-	_2_U8_G InstancesVoCpuMemory
-	_4_U8_G InstancesVoCpuMemory
+	E_1_U1_G InstancesVoCpuMemory
+	E_2_U4_G InstancesVoCpuMemory
+	E_2_U8_G InstancesVoCpuMemory
+	E_4_U8_G InstancesVoCpuMemory
 }
 
 func GetInstancesVoCpuMemoryEnum() InstancesVoCpuMemoryEnum {
 	return InstancesVoCpuMemoryEnum{
-		_1_U1_G: InstancesVoCpuMemory{
+		E_1_U1_G: InstancesVoCpuMemory{
 			value: "1U1G",
 		},
-		_2_U4_G: InstancesVoCpuMemory{
+		E_2_U4_G: InstancesVoCpuMemory{
 			value: "2U4G",
 		},
-		_2_U8_G: InstancesVoCpuMemory{
+		E_2_U8_G: InstancesVoCpuMemory{
 			value: "2U8G",
 		},
-		_4_U8_G: InstancesVoCpuMemory{
+		E_4_U8_G: InstancesVoCpuMemory{
 			value: "4U8G",
 		},
 	}
@@ -167,20 +167,20 @@ type InstancesVoPvcQuantity struct {
 }
 
 type InstancesVoPvcQuantityEnum struct {
-	_5_GB  InstancesVoPvcQuantity
-	_10_GB InstancesVoPvcQuantity
-	_20_GB InstancesVoPvcQuantity
+	E_5_GB  InstancesVoPvcQuantity
+	E_10_GB InstancesVoPvcQuantity
+	E_20_GB InstancesVoPvcQuantity
 }
 
 func GetInstancesVoPvcQuantityEnum() InstancesVoPvcQuantityEnum {
 	return InstancesVoPvcQuantityEnum{
-		_5_GB: InstancesVoPvcQuantity{
+		E_5_GB: InstancesVoPvcQuantity{
 			value: "5GB",
 		},
-		_10_GB: InstancesVoPvcQuantity{
+		E_10_GB: InstancesVoPvcQuantity{
 			value: "10GB",
 		},
-		_20_GB: InstancesVoPvcQuantity{
+		E_20_GB: InstancesVoPvcQuantity{
 			value: "20GB",
 		},
 	}

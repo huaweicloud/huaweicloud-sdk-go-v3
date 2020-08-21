@@ -288,16 +288,16 @@ type ImageInfoOsBit struct {
 }
 
 type ImageInfoOsBitEnum struct {
-	_32 ImageInfoOsBit
-	_64 ImageInfoOsBit
+	E_32 ImageInfoOsBit
+	E_64 ImageInfoOsBit
 }
 
 func GetImageInfoOsBitEnum() ImageInfoOsBitEnum {
 	return ImageInfoOsBitEnum{
-		_32: ImageInfoOsBit{
+		E_32: ImageInfoOsBit{
 			value: "32",
 		},
-		_64: ImageInfoOsBit{
+		E_64: ImageInfoOsBit{
 			value: "64",
 		},
 	}

@@ -220,16 +220,16 @@ type GlanceCreateImageMetadataResponseOsBit struct {
 }
 
 type GlanceCreateImageMetadataResponseOsBitEnum struct {
-	_32 GlanceCreateImageMetadataResponseOsBit
-	_64 GlanceCreateImageMetadataResponseOsBit
+	E_32 GlanceCreateImageMetadataResponseOsBit
+	E_64 GlanceCreateImageMetadataResponseOsBit
 }
 
 func GetGlanceCreateImageMetadataResponseOsBitEnum() GlanceCreateImageMetadataResponseOsBitEnum {
 	return GlanceCreateImageMetadataResponseOsBitEnum{
-		_32: GlanceCreateImageMetadataResponseOsBit{
+		E_32: GlanceCreateImageMetadataResponseOsBit{
 			value: "32",
 		},
-		_64: GlanceCreateImageMetadataResponseOsBit{
+		E_64: GlanceCreateImageMetadataResponseOsBit{
 			value: "64",
 		},
 	}

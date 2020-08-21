@@ -1,3 +1,31 @@
+# 0.0.7-beta 2020-08-20
+## HuaweiCloud SDK Core
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix the problem that some enum variables are unreadable.
+ - ### Change
+    - Add 'E' as prefix to enum Variables which start with '_'.
+
+# 0.0.6-beta 2020-08-20
+## HuaweiCloud SDK Core
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix the problem of missing the imports when the struct contains enum variables.
+ - ### Change
+    - None
+
+# 0.0.5-beta 2020-08-19
+## HuaweiCloud SDK Core
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix the deserialization failure of enum variables.
+    - Fix the deserialization failure of error response in some scenarios.
+ - ### Change
+    - None
+
 # 0.0.4-beta 2020-08-18
 ## HuaweiCloud SDK Core
  - ### Features

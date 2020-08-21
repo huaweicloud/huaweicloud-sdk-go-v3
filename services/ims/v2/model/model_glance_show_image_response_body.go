@@ -244,16 +244,16 @@ type GlanceShowImageResponseBodyOsBit struct {
 }
 
 type GlanceShowImageResponseBodyOsBitEnum struct {
-	_32 GlanceShowImageResponseBodyOsBit
-	_64 GlanceShowImageResponseBodyOsBit
+	E_32 GlanceShowImageResponseBodyOsBit
+	E_64 GlanceShowImageResponseBodyOsBit
 }
 
 func GetGlanceShowImageResponseBodyOsBitEnum() GlanceShowImageResponseBodyOsBitEnum {
 	return GlanceShowImageResponseBodyOsBitEnum{
-		_32: GlanceShowImageResponseBodyOsBit{
+		E_32: GlanceShowImageResponseBodyOsBit{
 			value: "32",
 		},
-		_64: GlanceShowImageResponseBodyOsBit{
+		E_64: GlanceShowImageResponseBodyOsBit{
 			value: "64",
 		},
 	}

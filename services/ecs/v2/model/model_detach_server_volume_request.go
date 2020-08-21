@@ -31,16 +31,16 @@ type DetachServerVolumeRequestDeleteFlag struct {
 }
 
 type DetachServerVolumeRequestDeleteFlagEnum struct {
-	_0 DetachServerVolumeRequestDeleteFlag
-	_1 DetachServerVolumeRequestDeleteFlag
+	E_0 DetachServerVolumeRequestDeleteFlag
+	E_1 DetachServerVolumeRequestDeleteFlag
 }
 
 func GetDetachServerVolumeRequestDeleteFlagEnum() DetachServerVolumeRequestDeleteFlagEnum {
 	return DetachServerVolumeRequestDeleteFlagEnum{
-		_0: DetachServerVolumeRequestDeleteFlag{
+		E_0: DetachServerVolumeRequestDeleteFlag{
 			value: "0",
 		},
-		_1: DetachServerVolumeRequestDeleteFlag{
+		E_1: DetachServerVolumeRequestDeleteFlag{
 			value: "1",
 		},
 	}

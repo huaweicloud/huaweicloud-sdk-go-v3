@@ -32,15 +32,15 @@ type UpdatePublicipOptionIpVersion struct {
 }
 
 type UpdatePublicipOptionIpVersionEnum struct {
-	_4 UpdatePublicipOptionIpVersion
-	_6 UpdatePublicipOptionIpVersion
+	E_4 UpdatePublicipOptionIpVersion
+	E_6 UpdatePublicipOptionIpVersion
 }
 
 func GetUpdatePublicipOptionIpVersionEnum() UpdatePublicipOptionIpVersionEnum {
 	return UpdatePublicipOptionIpVersionEnum{
-		_4: UpdatePublicipOptionIpVersion{
+		E_4: UpdatePublicipOptionIpVersion{
 			value: 4,
-		}, _6: UpdatePublicipOptionIpVersion{
+		}, E_6: UpdatePublicipOptionIpVersion{
 			value: 6,
 		},
 	}

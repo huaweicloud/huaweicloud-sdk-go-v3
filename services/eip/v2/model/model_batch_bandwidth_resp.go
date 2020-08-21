@@ -48,9 +48,9 @@ type BatchBandwidthRespChargeMode struct {
 }
 
 type BatchBandwidthRespChargeModeEnum struct {
-	BANDWIDTH    BatchBandwidthRespChargeMode
-	TRAFFIC      BatchBandwidthRespChargeMode
-	_95PEAK_PLUS BatchBandwidthRespChargeMode
+	BANDWIDTH     BatchBandwidthRespChargeMode
+	TRAFFIC       BatchBandwidthRespChargeMode
+	E_95PEAK_PLUS BatchBandwidthRespChargeMode
 }
 
 func GetBatchBandwidthRespChargeModeEnum() BatchBandwidthRespChargeModeEnum {
@@ -61,7 +61,7 @@ func GetBatchBandwidthRespChargeModeEnum() BatchBandwidthRespChargeModeEnum {
 		TRAFFIC: BatchBandwidthRespChargeMode{
 			value: "traffic",
 		},
-		_95PEAK_PLUS: BatchBandwidthRespChargeMode{
+		E_95PEAK_PLUS: BatchBandwidthRespChargeMode{
 			value: "95peak_plus",
 		},
 	}

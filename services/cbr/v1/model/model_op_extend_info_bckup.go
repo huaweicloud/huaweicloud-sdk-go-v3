@@ -39,16 +39,16 @@ type OpExtendInfoBckupAppConsistencyStatus struct {
 }
 
 type OpExtendInfoBckupAppConsistencyStatusEnum struct {
-	_0 OpExtendInfoBckupAppConsistencyStatus
-	_1 OpExtendInfoBckupAppConsistencyStatus
+	E_0 OpExtendInfoBckupAppConsistencyStatus
+	E_1 OpExtendInfoBckupAppConsistencyStatus
 }
 
 func GetOpExtendInfoBckupAppConsistencyStatusEnum() OpExtendInfoBckupAppConsistencyStatusEnum {
 	return OpExtendInfoBckupAppConsistencyStatusEnum{
-		_0: OpExtendInfoBckupAppConsistencyStatus{
+		E_0: OpExtendInfoBckupAppConsistencyStatus{
 			value: "0",
 		},
-		_1: OpExtendInfoBckupAppConsistencyStatus{
+		E_1: OpExtendInfoBckupAppConsistencyStatus{
 			value: "1",
 		},
 	}

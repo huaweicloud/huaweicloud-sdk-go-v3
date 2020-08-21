@@ -60,9 +60,9 @@ type BandwidthRespChargeMode struct {
 }
 
 type BandwidthRespChargeModeEnum struct {
-	BANDWIDTH    BandwidthRespChargeMode
-	TRAFFIC      BandwidthRespChargeMode
-	_95PEAK_PLUS BandwidthRespChargeMode
+	BANDWIDTH     BandwidthRespChargeMode
+	TRAFFIC       BandwidthRespChargeMode
+	E_95PEAK_PLUS BandwidthRespChargeMode
 }
 
 func GetBandwidthRespChargeModeEnum() BandwidthRespChargeModeEnum {
@@ -73,7 +73,7 @@ func GetBandwidthRespChargeModeEnum() BandwidthRespChargeModeEnum {
 		TRAFFIC: BandwidthRespChargeMode{
 			value: "traffic",
 		},
-		_95PEAK_PLUS: BandwidthRespChargeMode{
+		E_95PEAK_PLUS: BandwidthRespChargeMode{
 			value: "95peak_plus",
 		},
 	}

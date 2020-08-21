@@ -33,16 +33,16 @@ type BucketAuthorizedReqOperation struct {
 }
 
 type BucketAuthorizedReqOperationEnum struct {
-	_0 BucketAuthorizedReqOperation
-	_1 BucketAuthorizedReqOperation
+	E_0 BucketAuthorizedReqOperation
+	E_1 BucketAuthorizedReqOperation
 }
 
 func GetBucketAuthorizedReqOperationEnum() BucketAuthorizedReqOperationEnum {
 	return BucketAuthorizedReqOperationEnum{
-		_0: BucketAuthorizedReqOperation{
+		E_0: BucketAuthorizedReqOperation{
 			value: "0",
 		},
-		_1: BucketAuthorizedReqOperation{
+		E_1: BucketAuthorizedReqOperation{
 			value: "1",
 		},
 	}
