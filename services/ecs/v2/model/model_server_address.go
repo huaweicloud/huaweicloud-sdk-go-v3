@@ -21,7 +21,7 @@ type ServerAddress struct {
 	// IP地址。
 	Addr string `json:"addr"`
 	// IP地址类型。  - fixed：代表私有IP地址。 - floating：代表浮动IP地址。
-	OSEXTIPStype ServerAddressOSEXTIPStype `json:"OS-EXT-IPS:type,omitempty"`
+	OSEXTIPStype *ServerAddressOSEXTIPStype `json:"OS-EXT-IPS:type,omitempty"`
 	// MAC地址。
 	OSEXTIPSMACmacAddr *string `json:"OS-EXT-IPS-MAC:mac_addr,omitempty"`
 	// IP地址对应的端口ID。

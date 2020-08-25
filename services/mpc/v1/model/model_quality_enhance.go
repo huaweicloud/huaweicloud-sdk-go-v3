@@ -16,11 +16,11 @@ import (
 
 type QualityEnhance struct {
 	// 针对一般质量、无明显问题的普通片源，通过增强、锐化等技术明显提升主观效果。单纯该处理操作前后，分辨率、帧率等参数不发生变化。 可和old_repair、super_resolution、super_framerate、SDRToHDR组合使用。
-	NormalEnhance QualityEnhanceNormalEnhance `json:"normal_enhance,omitempty"`
+	NormalEnhance *QualityEnhanceNormalEnhance `json:"normal_enhance,omitempty"`
 	// 针对旧片、老片，画质主观质量比较低的片源，通过降噪、去压缩失真等视频增强技术，提升画质主观效果。
-	Revive QualityEnhanceRevive `json:"revive,omitempty"`
+	Revive *QualityEnhanceRevive `json:"revive,omitempty"`
 	// 超动态范围，提升视频动态范围，明显提升片源动态范围。单纯该处理操作前后，分辨率、帧率等参数不发生变化，动态范围、色域范围、码率发生变化。 可和normal_ enhance组合使用。SDRtoHDR10（默认）,SDRtoHLG（暂不支持）
-	SdrToHdr QualityEnhanceSdrToHdr `json:"sdr_to_hdr,omitempty"`
+	SdrToHdr *QualityEnhanceSdrToHdr `json:"sdr_to_hdr,omitempty"`
 }
 
 func (o QualityEnhance) String() string {

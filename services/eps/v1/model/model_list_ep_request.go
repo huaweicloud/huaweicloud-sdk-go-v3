@@ -16,13 +16,13 @@ import (
 
 // Request Object
 type ListEpRequest struct {
-	Id      *string              `json:"id,omitempty"`
-	Name    *string              `json:"name,omitempty"`
-	Status  *int32               `json:"status,omitempty"`
-	Limit   *int32               `json:"limit,omitempty"`
-	Offset  int32                `json:"offset"`
-	SortKey ListEpRequestSortKey `json:"sort_key,omitempty"`
-	SortDir ListEpRequestSortDir `json:"sort_dir,omitempty"`
+	Id      *string               `json:"id,omitempty"`
+	Name    *string               `json:"name,omitempty"`
+	Status  *int32                `json:"status,omitempty"`
+	Limit   *int32                `json:"limit,omitempty"`
+	Offset  int32                 `json:"offset"`
+	SortKey *ListEpRequestSortKey `json:"sort_key,omitempty"`
+	SortDir *ListEpRequestSortDir `json:"sort_dir,omitempty"`
 }
 
 func (o ListEpRequest) String() string {

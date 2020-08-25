@@ -18,7 +18,7 @@ type RoleAction struct {
 	// 动作名
 	ActionCname *string `json:"action_cname,omitempty"`
 	// 执行动作
-	Actions RoleActionActions `json:"actions,omitempty"`
+	Actions *RoleActionActions `json:"actions,omitempty"`
 	// id
 	Id *string `json:"id,omitempty"`
 	// 角色id

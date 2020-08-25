@@ -19,7 +19,7 @@ type Pager struct {
 	// 页码url
 	Href *string `json:"href,omitempty"`
 	// next:下一页  previous:前一页
-	Rel PagerRel `json:"rel,omitempty"`
+	Rel *PagerRel `json:"rel,omitempty"`
 }
 
 func (o Pager) String() string {

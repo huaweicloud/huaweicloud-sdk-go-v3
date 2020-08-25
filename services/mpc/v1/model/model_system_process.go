@@ -16,9 +16,9 @@ import (
 
 type SystemProcess struct {
 	// 追加转码类型。  取值如下： - SUBTITLE：追加字幕 - AUDIO：追加音频 - VIDEO：追加视频（原有追加新分辨率视频）
-	AppendType SystemProcessAppendType `json:"append_type,omitempty"`
-	HlsIndex   *ObsObjInfo             `json:"hls_index,omitempty"`
-	DashIndex  *ObsObjInfo             `json:"dash_index,omitempty"`
+	AppendType *SystemProcessAppendType `json:"append_type,omitempty"`
+	HlsIndex   *ObsObjInfo              `json:"hls_index,omitempty"`
+	DashIndex  *ObsObjInfo              `json:"dash_index,omitempty"`
 }
 
 func (o SystemProcess) String() string {

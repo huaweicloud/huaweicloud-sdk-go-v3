@@ -19,7 +19,7 @@ type NovaServerBlockDeviceMapping struct {
 	// 卷设备的源头类型，当前只支持volume、image、snapshot、blank类型。  当使用卷创建云服务器时，source_type设置为volume；当使用镜像创建云服务器时，source_type设置为image；当使用快照创建云服务器时，source_type设置为snapshot；当创建空数据卷时，source_type设置为blank。  - 说明： -  - 当卷设备的源头类型为snapshot时，且boot_index为0，则该快照对应的云硬盘必须为系统盘。
 	SourceType NovaServerBlockDeviceMappingSourceType `json:"source_type"`
 	// 卷设备的目标类型，当前仅支持volume类型。  - volume：卷。 - local：本地文件，当前不支持该类型。
-	DestinationType NovaServerBlockDeviceMappingDestinationType `json:"destination_type,omitempty"`
+	DestinationType *NovaServerBlockDeviceMappingDestinationType `json:"destination_type,omitempty"`
 	// local文件系统格式，例如：swap, ext4。  当前不支持该功能。
 	GuestFormat *string `json:"guest_format,omitempty"`
 	// 卷设备名称。  > 说明： >  > 该字段已经废弃。 >  > 用户指定的device_name不会生效，系统会默认生成一个device_name。

@@ -22,7 +22,7 @@ type PrePaidServerRootVolume struct {
 	Size        *int32                              `json:"size,omitempty"`
 	Extendparam *PrePaidServerRootVolumeExtendParam `json:"extendparam,omitempty"`
 	// 云服务器系统盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
-	ClusterType PrePaidServerRootVolumeClusterType `json:"cluster_type,omitempty"`
+	ClusterType *PrePaidServerRootVolumeClusterType `json:"cluster_type,omitempty"`
 	// 使用SDI规格创建虚拟机时请关注该参数，如果该参数值为true，说明创建的为scsi类型的卷
 	ClusterId *string `json:"cluster_id,omitempty"`
 	// 使用SDI规格创建虚拟机时请关注该参数，如果该参数值为true，说明创建的为scsi类型的卷  > 说明： >  > 此参数为boolean类型，若传入非boolean类型字符，程序将按照false方式处理。

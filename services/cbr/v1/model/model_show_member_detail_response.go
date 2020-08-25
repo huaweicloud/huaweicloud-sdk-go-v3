@@ -17,7 +17,7 @@ import (
 // Response Object
 type ShowMemberDetailResponse struct {
 	// 共享状态
-	Status ShowMemberDetailResponseStatus `json:"status,omitempty"`
+	Status *ShowMemberDetailResponseStatus `json:"status,omitempty"`
 	// 共享时间，例如:\"2020-02-05T10:38:34.209782\"
 	CreatedAt *string `json:"created_at,omitempty"`
 	// 更新时间，例如:\"2020-02-05T10:38:34.209782\"

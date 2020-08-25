@@ -16,10 +16,10 @@ import (
 
 type ThumbnailPara struct {
 	// 采样类型。  取值如下： - \"PERCENT\"：根据视频时长的百分比间隔采样。 - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。 默认值：\"TIME\"
-	Type ThumbnailParaType `json:"type,omitempty"`
+	Type *ThumbnailParaType `json:"type,omitempty"`
 	// 根据视频时长百分比间隔采样时的百分比值。
 	Percent *int32 `json:"percent,omitempty"`
-	// 采样截图的时间间隔值。  默认值：12.  单位：秒
+	// 采样截图的时间间隔值。  默认值：12。  单位：秒
 	Time *int32 `json:"time,omitempty"`
 	// 采样类型为“TIME”模式的开始时间，和“time”配合使用。  默认值：0。  单位：秒。
 	StartTime *int32 `json:"start_time,omitempty"`

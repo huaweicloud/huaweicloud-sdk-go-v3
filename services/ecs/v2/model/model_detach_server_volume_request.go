@@ -16,9 +16,9 @@ import (
 
 // Request Object
 type DetachServerVolumeRequest struct {
-	ServerId   string                              `json:"server_id"`
-	VolumeId   string                              `json:"volume_id"`
-	DeleteFlag DetachServerVolumeRequestDeleteFlag `json:"delete_flag,omitempty"`
+	ServerId   string                               `json:"server_id"`
+	VolumeId   string                               `json:"volume_id"`
+	DeleteFlag *DetachServerVolumeRequestDeleteFlag `json:"delete_flag,omitempty"`
 }
 
 func (o DetachServerVolumeRequest) String() string {

@@ -18,7 +18,7 @@ import (
 // Response Object
 type ShowDetailsOfAppV2Response struct {
 	// APP的创建者 - USER：用户自行创建 - MARKET：云市场分配
-	Creator ShowDetailsOfAppV2ResponseCreator `json:"creator,omitempty"`
+	Creator *ShowDetailsOfAppV2ResponseCreator `json:"creator,omitempty"`
 	// 更新时间
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 	// APP的key
@@ -36,7 +36,7 @@ type ShowDetailsOfAppV2Response struct {
 	// 状态
 	Status *int32 `json:"status,omitempty"`
 	// APP的类型  默认为apig，暂不支持其他类型
-	AppType ShowDetailsOfAppV2ResponseAppType `json:"app_type,omitempty"`
+	AppType *ShowDetailsOfAppV2ResponseAppType `json:"app_type,omitempty"`
 }
 
 func (o ShowDetailsOfAppV2Response) String() string {

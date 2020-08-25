@@ -18,7 +18,7 @@ type QueryTranscodingsTaskResponse struct {
 	// 任务ID。
 	TaskId *string `json:"task_id,omitempty"`
 	// 任务执行状态。
-	Status QueryTranscodingsTaskResponseStatus `json:"status,omitempty"`
+	Status *QueryTranscodingsTaskResponseStatus `json:"status,omitempty"`
 	// 转码任务启动时间
 	CreateTime *string `json:"create_time,omitempty"`
 	// 转码任务结束时间

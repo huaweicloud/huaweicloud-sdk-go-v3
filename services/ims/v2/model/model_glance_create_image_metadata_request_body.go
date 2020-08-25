@@ -21,7 +21,7 @@ type GlanceCreateImageMetadataRequestBody struct {
 	// 容器格式。默认取值为bare。
 	ContainerFormat *string `json:"container_format,omitempty"`
 	// 镜像文件格式。目前支持vhd，zvhd、zvhd2、raw，qcow2。默认取值为vhd
-	DiskFormat GlanceCreateImageMetadataRequestBodyDiskFormat `json:"disk_format,omitempty"`
+	DiskFormat *GlanceCreateImageMetadataRequestBodyDiskFormat `json:"disk_format,omitempty"`
 	// 镜像运行需要的最小磁盘，单位为GB 。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。
 	MinDisk *int32 `json:"min_disk,omitempty"`
 	// 镜像运行需要的最小内存，单位为MB。参数取值依据云主机云服务器的规格限制。默认取值为0。

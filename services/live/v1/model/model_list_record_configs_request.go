@@ -16,12 +16,12 @@ import (
 
 // Request Object
 type ListRecordConfigsRequest struct {
-	Domain     string                             `json:"domain"`
-	AppName    *string                            `json:"app_name,omitempty"`
-	StreamName *string                            `json:"stream_name,omitempty"`
-	Page       *int32                             `json:"page,omitempty"`
-	Size       *int32                             `json:"size,omitempty"`
-	RecordType ListRecordConfigsRequestRecordType `json:"record_type,omitempty"`
+	Domain     string                              `json:"domain"`
+	AppName    *string                             `json:"app_name,omitempty"`
+	StreamName *string                             `json:"stream_name,omitempty"`
+	Page       *int32                              `json:"page,omitempty"`
+	Size       *int32                              `json:"size,omitempty"`
+	RecordType *ListRecordConfigsRequestRecordType `json:"record_type,omitempty"`
 }
 
 func (o ListRecordConfigsRequest) String() string {

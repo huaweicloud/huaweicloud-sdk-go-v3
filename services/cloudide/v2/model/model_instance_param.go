@@ -18,7 +18,7 @@ type InstanceParam struct {
 	// 代理商id，标签为tutorial时使用
 	AgentId *string `json:"agent_id,omitempty"`
 	// cpu架构 x86|arm
-	Arch InstanceParamArch `json:"arch,omitempty"`
+	Arch *InstanceParamArch `json:"arch,omitempty"`
 	// cpu规格.arm架构支持4U8G，x86架构支持1U1G,2U4G,2U8G 与技术栈配置的规格对应，可通过技术栈管理ListStacksByTag接口获取。如果标签不为空，以标签配置的技术栈规格为准。 quantum技术栈，x86架构cpu规格为2U8G;其他技术栈，x86架构cpu规格为1U1G,2U4G
 	CpuMemory InstanceParamCpuMemory `json:"cpu_memory"`
 	// 描述

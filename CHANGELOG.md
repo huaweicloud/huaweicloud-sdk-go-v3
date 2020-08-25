@@ -1,3 +1,12 @@
+# 0.0.8-beta 2020-08-25
+## HuaweiCloud SDK Core
+ - ### Features
+    - None
+ - ### Bug Fix
+    - None
+ - ### Change
+    - Change optional enum variable type to pointer.
+
 # 0.0.7-beta 2020-08-20
 ## HuaweiCloud SDK Core
  - ### Features

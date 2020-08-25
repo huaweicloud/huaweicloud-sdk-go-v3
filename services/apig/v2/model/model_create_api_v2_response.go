@@ -35,7 +35,7 @@ type CreateApiV2Response struct {
 	// 是否支持跨域 - TRUE：支持 - FALSE：不支持
 	Cors *bool `json:"cors,omitempty"`
 	// API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
-	MatchMode CreateApiV2ResponseMatchMode `json:"match_mode,omitempty"`
+	MatchMode *CreateApiV2ResponseMatchMode `json:"match_mode,omitempty"`
 	// 后端类型 - HTTP：web后端 - FUNCTION：函数工作流 - MOCK：模拟的后端
 	BackendType CreateApiV2ResponseBackendType `json:"backend_type"`
 	// API描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。

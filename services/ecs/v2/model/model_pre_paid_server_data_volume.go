@@ -28,7 +28,7 @@ type PrePaidServerDataVolume struct {
 	Hwpassthrough *bool                               `json:"hw:passthrough,omitempty"`
 	Extendparam   *PrePaidServerDataVolumeExtendParam `json:"extendparam,omitempty"`
 	// 云服务器数据盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
-	ClusterType PrePaidServerDataVolumeClusterType `json:"cluster_type,omitempty"`
+	ClusterType *PrePaidServerDataVolumeClusterType `json:"cluster_type,omitempty"`
 	// 数据镜像的ID，UUID格式。
 	ClusterId *string                          `json:"cluster_id,omitempty"`
 	Metadata  *PrePaidServerDataVolumeMetadata `json:"metadata,omitempty"`

@@ -32,7 +32,7 @@ type TextWatermark struct {
 	// 字体颜色。 目前颜色支持 black，blue，white，green，red，yellow，brown，gold，pink，orange，purple。
 	FontColor *string `json:"font_color,omitempty"`
 	// 水印叠加母体 取值如下： - input：水印叠加在输入片源上，转码输出后实际大小按图像等比例缩放 - output：水印叠加在转码输出文件上。
-	Base TextWatermarkBase `json:"base,omitempty"`
+	Base *TextWatermarkBase `json:"base,omitempty"`
 }
 
 func (o TextWatermark) String() string {

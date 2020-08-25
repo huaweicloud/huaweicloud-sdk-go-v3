@@ -46,7 +46,7 @@ type ReqParam struct {
 	// JSON校验规则  暂不支持
 	JsonSchema *string `json:"json_schema,omitempty"`
 	// 是否透传 - 1：是 - 2：否
-	PassThrough ReqParamPassThrough `json:"pass_through,omitempty"`
+	PassThrough *ReqParamPassThrough `json:"pass_through,omitempty"`
 	// 参数编号
 	Id *string `json:"id,omitempty"`
 }

@@ -54,7 +54,7 @@ func (c *CtsClient) ListTraces(request *model.ListTracesRequest) (*model.ListTra
 	}
 }
 
-//开通云审计服务成功后，您可以在追踪器信息页面查看系统自动创建的追踪器的详细信息。详细信息主要包括追踪器名称，用于存储操作事件的OBS桶名称和OBS桶中的事件文件前缀。
+//开通云审计服务成功后，您可以在追踪器信息页面查看追踪器的详细信息。详细信息主要包括追踪器名称，用于存储操作事件的OBS桶名称和OBS桶中的事件文件前缀。
 func (c *CtsClient) ListTrackers(request *model.ListTrackersRequest) (*model.ListTrackersResponse, error) {
 	requestDef := GenReqDefForListTrackers(request)
 	resp, responseDef := GenRespForListTrackers()

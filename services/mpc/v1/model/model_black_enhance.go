@@ -16,7 +16,7 @@ import (
 
 type BlackEnhance struct {
 	// 提前反馈“疑似黑边”开关，取值为on或off。
-	EarlyReport BlackEnhanceEarlyReport `json:"early_report,omitempty"`
+	EarlyReport *BlackEnhanceEarlyReport `json:"early_report,omitempty"`
 	// 参数格式：top:bottom:left:right
 	Position *string `json:"position,omitempty"`
 	// 黑边剪裁检测起始时间

@@ -26,9 +26,9 @@ type AppAuthResp struct {
 	// APP编号
 	AppId *string `json:"app_id,omitempty"`
 	// 授权者 - PROVIDER：API提供者授权 - CONSUMER：API消费者授权
-	AuthRole AppAuthRespAuthRole `json:"auth_role,omitempty"`
+	AuthRole *AppAuthRespAuthRole `json:"auth_role,omitempty"`
 	// 授权通道类型 - NORMAL：普通通道 - GREEN：绿色通道  暂不支持，默认NORMAL
-	AuthTunnel AppAuthRespAuthTunnel `json:"auth_tunnel,omitempty"`
+	AuthTunnel *AppAuthRespAuthTunnel `json:"auth_tunnel,omitempty"`
 	// 绿色通道的白名单配置
 	AuthWhitelist []string `json:"auth_whitelist,omitempty"`
 	// 绿色通道的黑名单配置

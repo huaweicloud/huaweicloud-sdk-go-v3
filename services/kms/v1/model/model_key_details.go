@@ -38,7 +38,7 @@ type KeyDetails struct {
 	// 密钥材料失效时间，时间戳，即从1970年1月1日至该时间的总秒数。
 	ExpirationTime *string `json:"expiration_time,omitempty"`
 	// 密钥来源，默认为“kms”，枚举如下：  - kms表示密钥材料由kms生成kms表示密钥材料由kms生成  - external表示密钥材料由外部导入
-	Origin KeyDetailsOrigin `json:"origin,omitempty"`
+	Origin *KeyDetailsOrigin `json:"origin,omitempty"`
 	// 密钥轮换状态，默认为“false”，表示关闭密钥轮换功能。
 	KeyRotationEnabled *string `json:"key_rotation_enabled,omitempty"`
 	// 企业项目ID，默认为“0”。  - 对于开通企业项目的用户，表示资源处于默认企业项目下。  - 对于未开通企业项目的用户，表示资源未处于企业项目下。

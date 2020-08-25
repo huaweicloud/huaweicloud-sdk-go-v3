@@ -23,7 +23,7 @@ type ListKeysResponse struct {
 	// 获取下一页所需要传递的“marker”值。当“truncated”为“false”时，“next_marker”为空。
 	NextMarker *string `json:"next_marker,omitempty"`
 	// 是否还有下一页： - “true”表示还有数据。 - “false”表示已经是最后一页。
-	Truncated ListKeysResponseTruncated `json:"truncated,omitempty"`
+	Truncated *ListKeysResponseTruncated `json:"truncated,omitempty"`
 	// 密钥总条数。
 	Total *int32 `json:"total,omitempty"`
 }

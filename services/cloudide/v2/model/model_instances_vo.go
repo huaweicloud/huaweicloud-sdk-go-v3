@@ -18,10 +18,10 @@ type InstancesVo struct {
 	// 角色权限列表
 	ActionList []RoleAction `json:"action_list,omitempty"`
 	// cpu架构 x86|arm
-	Arch       InstancesVoArch `json:"arch,omitempty"`
-	Attributes *Attributes     `json:"attributes,omitempty"`
+	Arch       *InstancesVoArch `json:"arch,omitempty"`
+	Attributes *Attributes      `json:"attributes,omitempty"`
 	// cpu规格.arm架构支持4U8G，x86架构支持1U1G,2U4G,2U8G 与技术栈配置的规格对应，可通过技术栈管理ListStacksByTag接口获取。如果标签不为空，以标签配置的技术栈规格为准。 quantum技术栈，x86架构cpu规格为2U8G;其他技术栈，x86架构cpu规格为1U1G,2U4G
-	CpuMemory InstancesVoCpuMemory `json:"cpu_memory,omitempty"`
+	CpuMemory *InstancesVoCpuMemory `json:"cpu_memory,omitempty"`
 	// 创建时间
 	CreatedTime *string `json:"created_time,omitempty"`
 	// 描述
@@ -51,7 +51,7 @@ type InstancesVo struct {
 	// 是否私有平台
 	Private *bool `json:"private,omitempty"`
 	// PVC规格 5GB|10GB|20GB
-	PvcQuantity InstancesVoPvcQuantity `json:"pvc_quantity,omitempty"`
+	PvcQuantity *InstancesVoPvcQuantity `json:"pvc_quantity,omitempty"`
 	// 实例的生命周期 arm架构,生命周期只能设置成30，60。x86架构可取值为30，60，240，1440和-1。除-1外，其它值的单位为“分钟”。实例在到达生命周期后，将会被暂停（已保存的数据不会被删除）。-1表示实例不会自动停止。
 	RefreshInterval *int64 `json:"refresh_interval,omitempty"`
 	// 区域
@@ -66,7 +66,7 @@ type InstancesVo struct {
 	// 技术栈ID 目前可取值all，java，go，python，cpp，nodejs，quantum，blockchain，dcn，vue，ruby。
 	StackId *string `json:"stack_id,omitempty"`
 	// 实例状态
-	Status InstancesVoStatus `json:"status,omitempty"`
+	Status *InstancesVoStatus `json:"status,omitempty"`
 	// 子组织
 	SubOrg *string `json:"sub_org,omitempty"`
 	// 更新时间

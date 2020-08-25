@@ -16,12 +16,12 @@ import (
 
 // Request Object
 type ListPredefineTagsRequest struct {
-	Key         *string                             `json:"key,omitempty"`
-	Value       *string                             `json:"value,omitempty"`
-	Limit       *int32                              `json:"limit,omitempty"`
-	Marker      *string                             `json:"marker,omitempty"`
-	OrderField  *string                             `json:"order_field,omitempty"`
-	OrderMethod ListPredefineTagsRequestOrderMethod `json:"order_method,omitempty"`
+	Key         *string                              `json:"key,omitempty"`
+	Value       *string                              `json:"value,omitempty"`
+	Limit       *int32                               `json:"limit,omitempty"`
+	Marker      *string                              `json:"marker,omitempty"`
+	OrderField  *string                              `json:"order_field,omitempty"`
+	OrderMethod *ListPredefineTagsRequestOrderMethod `json:"order_method,omitempty"`
 }
 
 func (o ListPredefineTagsRequest) String() string {

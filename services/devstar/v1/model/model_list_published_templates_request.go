@@ -16,10 +16,10 @@ import (
 
 // Request Object
 type ListPublishedTemplatesRequest struct {
-	XLanguage ListPublishedTemplatesRequestXLanguage `json:"X-Language,omitempty"`
-	Keyword   *string                                `json:"keyword,omitempty"`
-	Offset    *int32                                 `json:"offset,omitempty"`
-	Limit     *int32                                 `json:"limit,omitempty"`
+	XLanguage *ListPublishedTemplatesRequestXLanguage `json:"X-Language,omitempty"`
+	Keyword   *string                                 `json:"keyword,omitempty"`
+	Offset    *int32                                  `json:"offset,omitempty"`
+	Limit     *int32                                  `json:"limit,omitempty"`
 }
 
 func (o ListPublishedTemplatesRequest) String() string {

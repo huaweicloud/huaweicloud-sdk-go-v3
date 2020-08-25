@@ -22,7 +22,7 @@ type PublicipShowResp struct {
 	// 带宽名称
 	BandwidthName *string `json:"bandwidth_name,omitempty"`
 	// 表示共享带宽或者独享带宽  取值范围：PER，WHOLE。  WHOLE表示共享带宽  PER表示独享带宽  约束：其中IPv6暂不支持WHOLE类型带宽。
-	BandwidthShareType PublicipShowRespBandwidthShareType `json:"bandwidth_share_type,omitempty"`
+	BandwidthShareType *PublicipShowRespBandwidthShareType `json:"bandwidth_share_type,omitempty"`
 	// 带宽大小，单位为Mbit/s。
 	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
 	// 弹性公网IP申请时间（UTC）
@@ -39,7 +39,7 @@ type PublicipShowResp struct {
 	// IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
 	PublicIpAddress *string `json:"public_ip_address,omitempty"`
 	// 功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
-	Status PublicipShowRespStatus `json:"status,omitempty"`
+	Status *PublicipShowRespStatus `json:"status,omitempty"`
 	// 项目ID
 	TenantId *string `json:"tenant_id,omitempty"`
 	// 弹性公网IP的类型
@@ -47,7 +47,7 @@ type PublicipShowResp struct {
 	// IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
 	PublicIpv6Address *string `json:"public_ipv6_address,omitempty"`
 	// IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
-	IpVersion PublicipShowRespIpVersion `json:"ip_version,omitempty"`
+	IpVersion *PublicipShowRespIpVersion `json:"ip_version,omitempty"`
 }
 
 func (o PublicipShowResp) String() string {

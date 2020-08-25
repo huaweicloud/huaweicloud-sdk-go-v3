@@ -20,11 +20,11 @@ type Billing struct {
 	// 创建模式
 	ChargingMode BillingChargingMode `json:"charging_mode"`
 	// 云平台
-	CloudType BillingCloudType `json:"cloud_type,omitempty"`
+	CloudType *BillingCloudType `json:"cloud_type,omitempty"`
 	// [规格，崩溃一致性（crash_consistent）或应用一致性（app_consistent）](tag:hws,hws_hk,fcs_vm,ctc) [规格，默认为崩溃一致性（crash_consistent）](tag:dt,ocb,tlf,sbc)
 	ConsistentLevel string `json:"consistent_level"`
 	// 对象类型
-	ObjectType BillingObjectType `json:"object_type,omitempty"`
+	ObjectType *BillingObjectType `json:"object_type,omitempty"`
 	// 订单ID
 	OrderId *string `json:"order_id,omitempty"`
 	// 产品ID

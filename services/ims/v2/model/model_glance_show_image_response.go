@@ -25,21 +25,21 @@ type GlanceShowImageResponse struct {
 	// 镜像文件的大小，单位为字节。目前取值为大于0的字符串。
 	ImageSize *string `json:"__image_size,omitempty"`
 	// 镜像后端存储类型，目前只支持uds
-	ImageSourceType GlanceShowImageResponseImageSourceType `json:"__image_source_type,omitempty"`
+	ImageSourceType *GlanceShowImageResponseImageSourceType `json:"__image_source_type,omitempty"`
 	// 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
-	Imagetype GlanceShowImageResponseImagetype `json:"__imagetype,omitempty"`
+	Imagetype *GlanceShowImageResponseImagetype `json:"__imagetype,omitempty"`
 	// 是否是注册过的镜像，取值为“true”或者“false”。
-	Isregistered GlanceShowImageResponseIsregistered `json:"__isregistered,omitempty"`
+	Isregistered *GlanceShowImageResponseIsregistered `json:"__isregistered,omitempty"`
 	// 父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
 	Originalimagename *string `json:"__originalimagename,omitempty"`
 	// 操作系统位数，一般取值为“32”或者“64”。
-	OsBit GlanceShowImageResponseOsBit `json:"__os_bit,omitempty"`
+	OsBit *GlanceShowImageResponseOsBit `json:"__os_bit,omitempty"`
 	// 操作系统类型，目前取值Linux， Windows，Other。
-	OsType GlanceShowImageResponseOsType `json:"__os_type,omitempty"`
+	OsType *GlanceShowImageResponseOsType `json:"__os_type,omitempty"`
 	// 操作系统具体版本。
 	OsVersion *string `json:"__os_version,omitempty"`
 	// 镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS。
-	Platform GlanceShowImageResponsePlatform `json:"__platform,omitempty"`
+	Platform *GlanceShowImageResponsePlatform `json:"__platform,omitempty"`
 	// 市场镜像的产品ID。
 	Productcode *string `json:"__productcode,omitempty"`
 	// 表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性。
@@ -71,7 +71,7 @@ type GlanceShowImageResponse struct {
 	// 删除时间。格式为UTC时间
 	DeletedAt *string `json:"deleted_at,omitempty"`
 	// 镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
-	DiskFormat GlanceShowImageResponseDiskFormat `json:"disk_format,omitempty"`
+	DiskFormat *GlanceShowImageResponseDiskFormat `json:"disk_format,omitempty"`
 	// 镜像文件下载和上传链接。
 	File *string `json:"file,omitempty"`
 	// 镜像ID。
@@ -93,27 +93,27 @@ type GlanceShowImageResponse struct {
 	// 目前暂时不使用。
 	Size *int64 `json:"size,omitempty"`
 	// 镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
-	Status GlanceShowImageResponseStatus `json:"status,omitempty"`
+	Status *GlanceShowImageResponseStatus `json:"status,omitempty"`
 	// 镜像标签列表，提供用户可以自定义管理私有镜像的能力。用户可以通过镜像标签接口为每个镜像增加不同的标签，在查询接口中可以根据标签进行过滤。
 	Tags []string `json:"tags,omitempty"`
 	// 更新时间。格式为UTC时间。
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	// 镜像使用环境类型：FusionCompute，Ironic，DataImage。
-	VirtualEnvType GlanceShowImageResponseVirtualEnvType `json:"virtual_env_type,omitempty"`
+	VirtualEnvType *GlanceShowImageResponseVirtualEnvType `json:"virtual_env_type,omitempty"`
 	// 目前暂时不使用。
 	VirtualSize *int32 `json:"virtual_size,omitempty"`
 	// 是否被其他租户可见，取值如下：private：私有镜像public：公共镜像shared：共享镜像
-	Visibility GlanceShowImageResponseVisibility `json:"visibility,omitempty"`
+	Visibility *GlanceShowImageResponseVisibility `json:"visibility,omitempty"`
 	// 表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
-	SupportFcInject GlanceShowImageResponseSupportFcInject `json:"__support_fc_inject,omitempty"`
+	SupportFcInject *GlanceShowImageResponseSupportFcInject `json:"__support_fc_inject,omitempty"`
 	// 表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
-	HwFirmwareType GlanceShowImageResponseHwFirmwareType `json:"hw_firmware_type,omitempty"`
+	HwFirmwareType *GlanceShowImageResponseHwFirmwareType `json:"hw_firmware_type,omitempty"`
 	// 是否为ARM架构类型的镜像，取值为“true”或者“false”。
-	SupportArm GlanceShowImageResponseSupportArm `json:"__support_arm,omitempty"`
+	SupportArm *GlanceShowImageResponseSupportArm `json:"__support_arm,omitempty"`
 	// 表示当前市场镜像是否下架。 true：已下架 false：未下架
-	IsOffshelved GlanceShowImageResponseIsOffshelved `json:"__is_offshelved,omitempty"`
+	IsOffshelved *GlanceShowImageResponseIsOffshelved `json:"__is_offshelved,omitempty"`
 }
 
 func (o GlanceShowImageResponse) String() string {

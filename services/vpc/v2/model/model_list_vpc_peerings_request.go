@@ -16,13 +16,13 @@ import (
 
 // Request Object
 type ListVpcPeeringsRequest struct {
-	Limit    *int32                       `json:"limit,omitempty"`
-	Marker   *string                      `json:"marker,omitempty"`
-	Id       *string                      `json:"id,omitempty"`
-	Name     *string                      `json:"name,omitempty"`
-	Status   ListVpcPeeringsRequestStatus `json:"status,omitempty"`
-	TenantId *string                      `json:"tenant_id,omitempty"`
-	VpcId    *string                      `json:"vpc_id,omitempty"`
+	Limit    *int32                        `json:"limit,omitempty"`
+	Marker   *string                       `json:"marker,omitempty"`
+	Id       *string                       `json:"id,omitempty"`
+	Name     *string                       `json:"name,omitempty"`
+	Status   *ListVpcPeeringsRequestStatus `json:"status,omitempty"`
+	TenantId *string                       `json:"tenant_id,omitempty"`
+	VpcId    *string                       `json:"vpc_id,omitempty"`
 }
 
 func (o ListVpcPeeringsRequest) String() string {

@@ -16,7 +16,7 @@ import (
 
 type Video struct {
 	// 输出策略。  取值如下： - discard - transcode  >- 当视频参数中的“output_policy”为\"discard\"，且音频参数中的“output_policy”为“transcode”时，表示只输出音频。 >- 当视频参数中的“output_policy”为\"transcode\"，且音频参数中的“output_policy”为“discard”时，表示只输出视频。 >- 同时为\"discard\"时不合法。 >- 同时为“transcode”时，表示输出音视频。
-	OutputPolicy VideoOutputPolicy `json:"output_policy,omitempty"`
+	OutputPolicy *VideoOutputPolicy `json:"output_policy,omitempty"`
 	// 视频编码格式。  取值如下：  - 1：表示H.264。 - 2：表示H.265。
 	Codec *int32 `json:"codec,omitempty"`
 	// 输出平均码率。  取值范围：0或[40,30000]之间的整数。  单位：kbit/s  若设置为0，则输出平均码率为自适应值。

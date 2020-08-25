@@ -22,7 +22,7 @@ type SignatureReq struct {
 	// 签名密钥的key。支持英文，数字，下划线，中划线，且只能以英文字母开头，8 ~ 32字符。未填写时后台自动生成。
 	SignKey *string `json:"sign_key,omitempty"`
 	// 签名密钥类型。
-	SignType SignatureReqSignType `json:"sign_type,omitempty"`
+	SignType *SignatureReqSignType `json:"sign_type,omitempty"`
 }
 
 func (o SignatureReq) String() string {

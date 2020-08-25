@@ -30,7 +30,7 @@ type FloatingIpResp struct {
 	// 所属路由器id。
 	RouterId *string `json:"router_id,omitempty"`
 	// 网络状态，可以为ACTIVE， DOWN或ERROR。  DOWN：未绑定  ACTIVE：绑定  ERROR：异常
-	Status FloatingIpRespStatus `json:"status,omitempty"`
+	Status *FloatingIpRespStatus `json:"status,omitempty"`
 	// 项目id。
 	TenantId *string `json:"tenant_id,omitempty"`
 	// 项目id。

@@ -17,7 +17,7 @@ import (
 //
 type SubJob struct {
 	// Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
-	Status   SubJobStatus    `json:"status,omitempty"`
+	Status   *SubJobStatus   `json:"status,omitempty"`
 	Entities *SubJobEntities `json:"entities,omitempty"`
 	// 子任务的ID。
 	JobId *string `json:"job_id,omitempty"`

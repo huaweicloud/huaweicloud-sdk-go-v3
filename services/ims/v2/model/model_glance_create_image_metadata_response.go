@@ -25,7 +25,7 @@ type GlanceCreateImageMetadataResponse struct {
 	// 容器格式。取值为bare。
 	ContainerFormat *string `json:"container_format,omitempty"`
 	// 镜像文件格式。目前支持vhd、zvhd、raw、qcow2。默认值是vhd。
-	DiskFormat GlanceCreateImageMetadataResponseDiskFormat `json:"disk_format,omitempty"`
+	DiskFormat *GlanceCreateImageMetadataResponseDiskFormat `json:"disk_format,omitempty"`
 	// 镜像标签列表。长度为1～255位。
 	Tags []string `json:"tags,omitempty"`
 	// 镜像运行最小内存，单位为MB。取值参考ECS规格限制，一般设置为0。云服务器的规格限制，请参见规格清单。
@@ -33,7 +33,7 @@ type GlanceCreateImageMetadataResponse struct {
 	// 镜像运行需要的最小磁盘容量，单位为GB 。取值为40～1024GB。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。
 	MinDisk *int32 `json:"min_disk,omitempty"`
 	// 镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
-	Status GlanceCreateImageMetadataResponseStatus `json:"status,omitempty"`
+	Status *GlanceCreateImageMetadataResponseStatus `json:"status,omitempty"`
 	// 创建时间。格式为UTC时间。
 	CreatedAt *string `json:"created_at,omitempty"`
 	// 更新时间。格式为UTC时间。
@@ -55,15 +55,15 @@ type GlanceCreateImageMetadataResponse struct {
 	// 镜像的操作系统具体版本。
 	OsVersion *string `json:"__os_version,omitempty"`
 	// 镜像的操作系统类型，取值由__os_version确定。支持Windows、Linux和other。
-	OsType GlanceCreateImageMetadataResponseOsType `json:"__os_type,omitempty"`
+	OsType *GlanceCreateImageMetadataResponseOsType `json:"__os_type,omitempty"`
 	// 表示镜像支持的操作系统平台。取值由__os_version确定
 	Platform *string `json:"__platform,omitempty"`
 	// 表示操作系统位数。取值由__os_version确定，取值为32或64。
-	OsBit GlanceCreateImageMetadataResponseOsBit `json:"__os_bit,omitempty"`
+	OsBit *GlanceCreateImageMetadataResponseOsBit `json:"__os_bit,omitempty"`
 	// 镜像类型。取值为private，表示私有镜像。
 	Imagetype *string `json:"__imagetype,omitempty"`
 	// 平台类型。镜像使用环境类型：FusionCompute、Ironic、DataImage。如果是云主机云服务器镜像，则取值为FusionCompute。如果是数据卷镜像则取值是DataImage。如果是物理机裸金属服务器镜像，则取值是Ironic。
-	VirtualEnvType GlanceCreateImageMetadataResponseVirtualEnvType `json:"virtual_env_type,omitempty"`
+	VirtualEnvType *GlanceCreateImageMetadataResponseVirtualEnvType `json:"virtual_env_type,omitempty"`
 	// 镜像所属项目ID。
 	Owner *string `json:"owner,omitempty"`
 	// 镜像虚拟大小。单位为字节。

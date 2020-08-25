@@ -46,7 +46,7 @@ type ReqParamBase struct {
 	// JSON校验规则  暂不支持
 	JsonSchema *string `json:"json_schema,omitempty"`
 	// 是否透传 - 1：是 - 2：否
-	PassThrough ReqParamBasePassThrough `json:"pass_through,omitempty"`
+	PassThrough *ReqParamBasePassThrough `json:"pass_through,omitempty"`
 }
 
 func (o ReqParamBase) String() string {

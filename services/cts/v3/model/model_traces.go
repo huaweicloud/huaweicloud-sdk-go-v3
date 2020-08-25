@@ -20,7 +20,7 @@ type Traces struct {
 	// 标识查询事件列表对应的事件名称。由0-9,a-z,A-Z,'-','.','_',组成，长度为1～64个字符，且以首字符必须为字母。
 	TraceName *string `json:"trace_name,omitempty"`
 	// 标识事件等级，目前有三种：正常（normal），警告（warning），事故（incident）。
-	TraceRating TracesTraceRating `json:"trace_rating,omitempty"`
+	TraceRating *TracesTraceRating `json:"trace_rating,omitempty"`
 	// 标识事件发生源头类型，管理类事件主要包括API调用（ApiCall），Console页面调用（ConsoleAction）和系统间调用（SystemAction）。 数据类事件主要包括ObsSDK，ObsAPI。
 	TraceType *string `json:"trace_type,omitempty"`
 	// 标识事件对应接口请求内容，即资源操作请求体。

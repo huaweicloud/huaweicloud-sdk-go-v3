@@ -21,7 +21,7 @@ type AuthResultResp struct {
 	// APP名称
 	AppName *string `json:"app_name,omitempty"`
 	// 授权结果 - SUCCESS：授权成功 - SKIPPED：跳过 - FILAED：授权失败
-	Status AuthResultRespStatus `json:"status,omitempty"`
+	Status *AuthResultRespStatus `json:"status,omitempty"`
 	// 授权失败错误信息
 	ErrorMsg *string `json:"error_msg,omitempty"`
 	// 授权失败错误码

@@ -30,7 +30,7 @@ type UpdateSignatureKeyV2Response struct {
 	// 签名密钥的key
 	SignKey *string `json:"sign_key,omitempty"`
 	// 签名密钥类型。
-	SignType UpdateSignatureKeyV2ResponseSignType `json:"sign_type,omitempty"`
+	SignType *UpdateSignatureKeyV2ResponseSignType `json:"sign_type,omitempty"`
 }
 
 func (o UpdateSignatureKeyV2Response) String() string {

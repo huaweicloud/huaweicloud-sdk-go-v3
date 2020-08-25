@@ -26,7 +26,7 @@ type OperationLog struct {
 	// 任务id
 	Id string `json:"id"`
 	// 任务类型
-	OperationType OperationLogOperationType `json:"operation_type,omitempty"`
+	OperationType *OperationLogOperationType `json:"operation_type,omitempty"`
 	// 策略ID
 	PolicyId *string `json:"policy_id,omitempty"`
 	// 项目ID

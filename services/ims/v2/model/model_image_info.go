@@ -115,11 +115,11 @@ type ImageInfo struct {
 	// 镜像架构类型。取值包括： x86 arm
 	Architecture ImageInfoArchitecture `json:"architecture"`
 	// 表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
-	SupportFcInject ImageInfoSupportFcInject `json:"__support_fc_inject,omitempty"`
+	SupportFcInject *ImageInfoSupportFcInject `json:"__support_fc_inject,omitempty"`
 	// 云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
-	HwFirmwareType ImageInfoHwFirmwareType `json:"hw_firmware_type,omitempty"`
+	HwFirmwareType *ImageInfoHwFirmwareType `json:"hw_firmware_type,omitempty"`
 	// 是否是ARM架构类型的镜像，取值为“true”或者“false”。
-	SupportArm ImageInfoSupportArm `json:"__support_arm,omitempty"`
+	SupportArm *ImageInfoSupportArm `json:"__support_arm,omitempty"`
 }
 
 func (o ImageInfo) String() string {

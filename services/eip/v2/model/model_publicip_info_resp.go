@@ -25,7 +25,7 @@ type PublicipInfoResp struct {
 	// 功能说明：IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
 	Publicipv6Address *string `json:"publicipv6_address,omitempty"`
 	// IP版本信息  取值范围：  4：IPv4  6：IPv6
-	IpVersion PublicipInfoRespIpVersion `json:"ip_version,omitempty"`
+	IpVersion *PublicipInfoRespIpVersion `json:"ip_version,omitempty"`
 }
 
 func (o PublicipInfoResp) String() string {

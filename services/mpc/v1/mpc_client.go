@@ -126,114 +126,6 @@ func (c *MpcClient) ListExtractTask(request *model.ListExtractTaskRequest) (*mod
 	}
 }
 
-//云服务操作异步查询接口：云运营系统通过此接口，异步查询云服务的操作结果。
-func (c *MpcClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*model.ShowJobStatusResponse, error) {
-	requestDef := GenReqDefForShowJobStatus(request)
-	resp, responseDef := GenRespForShowJobStatus()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//查询桶列表（仅供Console调用）。
-func (c *MpcClient) ListAllBuckets(request *model.ListAllBucketsRequest) (*model.ListAllBucketsResponse, error) {
-	requestDef := GenReqDefForListAllBuckets(request)
-	resp, responseDef := GenRespForListAllBuckets()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//桶授权或取消授权（仅供Console调用）。
-func (c *MpcClient) UpdateBucketAuthorized(request *model.UpdateBucketAuthorizedRequest) (*model.UpdateBucketAuthorizedResponse, error) {
-	requestDef := GenReqDefForUpdateBucketAuthorized(request)
-	resp, responseDef := GenRespForUpdateBucketAuthorized()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//查询桶里的object（仅供Console调用）。
-func (c *MpcClient) ListAllObsObjList(request *model.ListAllObsObjListRequest) (*model.ListAllObsObjListResponse, error) {
-	requestDef := GenReqDefForListAllObsObjList(request)
-	resp, responseDef := GenRespForListAllObsObjList()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//创建视频增强模板
-func (c *MpcClient) CreateQualityEnhanceTemplate(request *model.CreateQualityEnhanceTemplateRequest) (*model.CreateQualityEnhanceTemplateResponse, error) {
-	requestDef := GenReqDefForCreateQualityEnhanceTemplate(request)
-	resp, responseDef := GenRespForCreateQualityEnhanceTemplate()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//删除用户视频增强模板。
-func (c *MpcClient) DeleteQualityEnhanceTemplate(request *model.DeleteQualityEnhanceTemplateRequest) (*model.DeleteQualityEnhanceTemplateResponse, error) {
-	requestDef := GenReqDefForDeleteQualityEnhanceTemplate(request)
-	resp, responseDef := GenRespForDeleteQualityEnhanceTemplate()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//查询视频增强预置模板，返回所有结果。
-func (c *MpcClient) ListQualityEnhanceDefaultTemplate(request *model.ListQualityEnhanceDefaultTemplateRequest) (*model.ListQualityEnhanceDefaultTemplateResponse, error) {
-	requestDef := GenReqDefForListQualityEnhanceDefaultTemplate(request)
-	resp, responseDef := GenRespForListQualityEnhanceDefaultTemplate()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//查询用户自定义视频增强模板。 支持指定模板ID查询，或分页全量查询。模板ID，最多10个。
-func (c *MpcClient) ListQualityEnhanceTemplate(request *model.ListQualityEnhanceTemplateRequest) (*model.ListQualityEnhanceTemplateResponse, error) {
-	requestDef := GenReqDefForListQualityEnhanceTemplate(request)
-	resp, responseDef := GenRespForListQualityEnhanceTemplate()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//更新视频增强模板。
-func (c *MpcClient) UpdateQualityEnhanceTemplate(request *model.UpdateQualityEnhanceTemplateRequest) (*model.UpdateQualityEnhanceTemplateResponse, error) {
-	requestDef := GenReqDefForUpdateQualityEnhanceTemplate(request)
-	resp, responseDef := GenRespForUpdateQualityEnhanceTemplate()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
 //查询媒资转码详情
 func (c *MpcClient) ListTranscodeDetail(request *model.ListTranscodeDetailRequest) (*model.ListTranscodeDetailResponse, error) {
 	requestDef := GenReqDefForListTranscodeDetail(request)
@@ -306,78 +198,6 @@ func (c *MpcClient) ListRemuxTask(request *model.ListRemuxTaskRequest) (*model.L
 	}
 }
 
-//## 典型场景 ##   转码Console查询转码服务端所有事件，并将查询到的事件展示在页面供用户配置  ## 接口功能 ##   查询转码服务端所有事件 。  ## 接口约束 ##   无。
-func (c *MpcClient) ListNotifyEvent(request *model.ListNotifyEventRequest) (*model.ListNotifyEventResponse, error) {
-	requestDef := GenReqDefForListNotifyEvent(request)
-	resp, responseDef := GenRespForListNotifyEvent()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//## 典型场景 ##   查询转码服务端事件通知。  ## 接口功能 ##   查询转码服务端事件通知。  ## 接口约束 ##   无。
-func (c *MpcClient) ListNotifySmnTopicConfig(request *model.ListNotifySmnTopicConfigRequest) (*model.ListNotifySmnTopicConfigResponse, error) {
-	requestDef := GenReqDefForListNotifySmnTopicConfig(request)
-	resp, responseDef := GenRespForListNotifySmnTopicConfig()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//查询规定的消息通知模板内容。
-func (c *MpcClient) ListNotifyTemplate(request *model.ListNotifyTemplateRequest) (*model.ListNotifyTemplateResponse, error) {
-	requestDef := GenReqDefForListNotifyTemplate(request)
-	resp, responseDef := GenRespForListNotifyTemplate()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//配置转码服务端事件通知。
-func (c *MpcClient) NotifySmnTopicConfig(request *model.NotifySmnTopicConfigRequest) (*model.NotifySmnTopicConfigResponse, error) {
-	requestDef := GenReqDefForNotifySmnTopicConfig(request)
-	resp, responseDef := GenRespForNotifySmnTopicConfig()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//查询点播概览信息（仅供Console调用）。
-func (c *MpcClient) ListStatSummary(request *model.ListStatSummaryRequest) (*model.ListStatSummaryResponse, error) {
-	requestDef := GenReqDefForListStatSummary(request)
-	resp, responseDef := GenRespForListStatSummary()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//查询转码概览信息，（仅供Console调用）。 转码Console有个概览页面，用于展示登录租户最近一个月或最近一周转码时长（分钟）、转码任务数量。仅展示转码成功的，按结束时间算。
-func (c *MpcClient) ListSummary(request *model.ListSummaryRequest) (*model.ListSummaryResponse, error) {
-	requestDef := GenReqDefForListSummary(request)
-	resp, responseDef := GenRespForListSummary()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
 //新建转码模板组，最多支持一进六出。
 func (c *MpcClient) CreateTemplateGroup(request *model.CreateTemplateGroupRequest) (*model.CreateTemplateGroupResponse, error) {
 	requestDef := GenReqDefForCreateTemplateGroup(request)
@@ -418,42 +238,6 @@ func (c *MpcClient) ListTemplateGroup(request *model.ListTemplateGroupRequest) (
 func (c *MpcClient) UpdateTemplateGroup(request *model.UpdateTemplateGroupRequest) (*model.UpdateTemplateGroupResponse, error) {
 	requestDef := GenReqDefForUpdateTemplateGroup(request)
 	resp, responseDef := GenRespForUpdateTemplateGroup()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//## 典型场景 ##   更新租户状态。  ## 接口功能 ##   更新租户状态。  ## 接口约束 ##   无。
-func (c *MpcClient) UpdateTenantStatus(request *model.UpdateTenantStatusRequest) (*model.UpdateTenantStatusResponse, error) {
-	requestDef := GenReqDefForUpdateTenantStatus(request)
-	resp, responseDef := GenRespForUpdateTenantStatus()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//## 典型场景 ##   查询租户信息，查询租户的欠费、冻结状态、是否实名认证、是否开通服务  ## 接口功能 ##   查询租户信息，查询租户的欠费、冻结状态、是否实名认证、是否开通服务  ## 接口约束 ##   无
-func (c *MpcClient) ShowTenantInfo(request *model.ShowTenantInfoRequest) (*model.ShowTenantInfoResponse, error) {
-	requestDef := GenReqDefForShowTenantInfo(request)
-	resp, responseDef := GenRespForShowTenantInfo()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//## 典型场景 ##   修改租户信息，如开通点播服务  ## 接口功能 ##   修改租户信息，如开通点播服务  ## 接口约束 ##   无
-func (c *MpcClient) UpdateTenantInfo(request *model.UpdateTenantInfoRequest) (*model.UpdateTenantInfoResponse, error) {
-	requestDef := GenReqDefForUpdateTenantInfo(request)
-	resp, responseDef := GenRespForUpdateTenantInfo()
 
 	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
 		return nil, err
@@ -514,18 +298,6 @@ func (c *MpcClient) CreateTranscodingTask(request *model.CreateTranscodingTaskRe
 func (c *MpcClient) DeleteTranscodingTask(request *model.DeleteTranscodingTaskRequest) (*model.DeleteTranscodingTaskResponse, error) {
 	requestDef := GenReqDefForDeleteTranscodingTask(request)
 	resp, responseDef := GenRespForDeleteTranscodingTask()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
-
-//删除转码任务(仅供Console调用)。
-func (c *MpcClient) DeleteTranscodingTaskByConsole(request *model.DeleteTranscodingTaskByConsoleRequest) (*model.DeleteTranscodingTaskByConsoleResponse, error) {
-	requestDef := GenReqDefForDeleteTranscodingTaskByConsole(request)
-	resp, responseDef := GenRespForDeleteTranscodingTaskByConsole()
 
 	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
 		return nil, err

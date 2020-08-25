@@ -16,7 +16,7 @@ import (
 
 // Request Object
 type ShowQuotaRequest struct {
-	Type ShowQuotaRequestType `json:"type,omitempty"`
+	Type *ShowQuotaRequestType `json:"type,omitempty"`
 }
 
 func (o ShowQuotaRequest) String() string {

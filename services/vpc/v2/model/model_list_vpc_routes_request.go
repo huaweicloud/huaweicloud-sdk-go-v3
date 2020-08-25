@@ -16,13 +16,13 @@ import (
 
 // Request Object
 type ListVpcRoutesRequest struct {
-	Limit       *int32                   `json:"limit,omitempty"`
-	Marker      *string                  `json:"marker,omitempty"`
-	Id          *string                  `json:"id,omitempty"`
-	Type        ListVpcRoutesRequestType `json:"type,omitempty"`
-	VpcId       *string                  `json:"vpc_id,omitempty"`
-	Destination *string                  `json:"destination,omitempty"`
-	TenantId    *string                  `json:"tenant_id,omitempty"`
+	Limit       *int32                    `json:"limit,omitempty"`
+	Marker      *string                   `json:"marker,omitempty"`
+	Id          *string                   `json:"id,omitempty"`
+	Type        *ListVpcRoutesRequestType `json:"type,omitempty"`
+	VpcId       *string                   `json:"vpc_id,omitempty"`
+	Destination *string                   `json:"destination,omitempty"`
+	TenantId    *string                   `json:"tenant_id,omitempty"`
 }
 
 func (o ListVpcRoutesRequest) String() string {

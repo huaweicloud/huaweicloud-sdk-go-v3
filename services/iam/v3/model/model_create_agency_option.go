@@ -27,7 +27,7 @@ type CreateAgencyOption struct {
 	// 委托描述信息，长度不大于255位。
 	Description *string `json:"description,omitempty"`
 	// 委托的期限。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。不填写该参数则默认为\"null\"也表示委托的期限为永久。
-	Duration CreateAgencyOptionDuration `json:"duration,omitempty"`
+	Duration *CreateAgencyOptionDuration `json:"duration,omitempty"`
 }
 
 func (o CreateAgencyOption) String() string {

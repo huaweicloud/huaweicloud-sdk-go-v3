@@ -27,7 +27,7 @@ type ProtectablesResp struct {
 	// 大小，单位GB
 	Size *string `json:"size,omitempty"`
 	// 资源状态
-	Status ProtectablesRespStatus `json:"status,omitempty"`
+	Status *ProtectablesRespStatus `json:"status,omitempty"`
 	// [待备份资源的类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo](tag:hws,hws_hk,fcs_vm,ctc) [待备份资源的类型: OS::Nova::Server,  OS::Cinder::Volume](tag:dt,ocb,tlf,sbc)
 	Type string `json:"type"`
 }

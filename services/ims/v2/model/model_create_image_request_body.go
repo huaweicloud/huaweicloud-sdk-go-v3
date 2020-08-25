@@ -45,11 +45,11 @@ type CreateImageRequestBody struct {
 	// 创建加密镜像的用户主密钥，具体取值请参考《密钥管理服务用户指南》获取。
 	CmkId *string `json:"cmk_id,omitempty"`
 	// 镜像的类型。 取值为ECS、BMS、FusionCompute、Ironic。默认使用“ECS”。 ECS/FusionCompute：表示是ECS服务器的镜像。 BMS/Ironic：表示是BMS服务器的镜像。
-	Type CreateImageRequestBodyType `json:"type,omitempty"`
+	Type *CreateImageRequestBodyType `json:"type,omitempty"`
 	// 是否使用镜像文件快速导入方式，导入系统盘镜像。 是，配置为true。 否，配置为false。 关于镜像文件快速导入的约束与限制请参见镜像文件快速导入。
 	IsQuickImport *bool `json:"is_quick_import,omitempty"`
 	// 镜像的架构类型。取值包括： x86 arm 默认使用“x86”。 当架构类型为arm时，镜像引导方式将自动转为UEFI的引导方式。
-	Architecture CreateImageRequestBodyArchitecture `json:"architecture,omitempty"`
+	Architecture *CreateImageRequestBodyArchitecture `json:"architecture,omitempty"`
 	// 数据盘的卷ID。当数据盘创建系统盘镜像时，该参数必选
 	VolumeId *string `json:"volume_id,omitempty"`
 }

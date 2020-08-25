@@ -33,7 +33,7 @@ type PostPaidServerExtendParam struct {
 	// 购买的竞价实例时长。  - 仅interruption_policy=immediate 时该字段有效 。 - pot_duration_hours大于0。最大值由预测系统给出可以从flavor的extra_specs的cond:spot_block:operation:longest_duration_hours字段中查询。
 	SpotDurationHours *int32 `json:"spot_duration_hours,omitempty"`
 	// 竞价实例中断策略，当前支持immediate。  - 当interruption_policy=immediate时表示释放策略为立即释放。
-	InterruptionPolicy PostPaidServerExtendParamInterruptionPolicy `json:"interruption_policy,omitempty"`
+	InterruptionPolicy *PostPaidServerExtendParamInterruptionPolicy `json:"interruption_policy,omitempty"`
 	// 表示购买的“竞价实例时长”的个数。  - 仅spot_duration_hours>0 时该字段有效。 - spot_duration_hours小于6时，spot_duration_count值必须为1。 - spot_duration_hours等于6时，spot_duration_count大于等于1。  spot_duration_count的最大值由预测系统给出可以从flavor的extra_specs的cond:spot_block:operation:longest_duration_count字段中查询。
 	SpotDurationCount *int32 `json:"spot_duration_count,omitempty"`
 }

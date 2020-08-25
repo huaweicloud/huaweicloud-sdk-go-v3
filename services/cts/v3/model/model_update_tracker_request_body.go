@@ -20,7 +20,7 @@ type UpdateTrackerRequestBody struct {
 	// 标识追踪器名称。 当\"tracker_type\"参数值为\"system\"时该参数为默认值\"system\"。 当\"tracker_type\"参数值为\"data\"时该参数需要指定追踪器名称\"。
 	TrackerName string `json:"tracker_name"`
 	// 标识追踪器状态，该接口中可修改的状态包括正常（enabled）和停止（disabled）。如果选择修改状态为停止，则修改成功后追踪器停止记录事件。
-	Status UpdateTrackerRequestBodyStatus `json:"status,omitempty"`
+	Status *UpdateTrackerRequestBodyStatus `json:"status,omitempty"`
 	// 是否打开事件分析。
 	IsLtsEnabled *bool           `json:"is_lts_enabled,omitempty"`
 	ObsInfo      *TrackerObsInfo `json:"obs_info,omitempty"`

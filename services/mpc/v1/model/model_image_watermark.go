@@ -32,7 +32,7 @@ type ImageWatermark struct {
 	// 水印图片高，值有两种形式： - 整数型代表水印图片高的像素值，范围[8，4096]，单位px。 - 小数型代表相对输出视频分辨率高的比率，范围(0，1)，支持4位小数，如0.9999，超出部分系统自动丢弃。
 	Height *string `json:"height,omitempty"`
 	// 水印叠加母体  取值如下： - input ：水印叠加在输入片源上，转码输出后实际大小按图像等比例缩放 - output ：水印叠加在转码输出文件上。
-	Base ImageWatermarkBase `json:"base,omitempty"`
+	Base *ImageWatermarkBase `json:"base,omitempty"`
 }
 
 func (o ImageWatermark) String() string {

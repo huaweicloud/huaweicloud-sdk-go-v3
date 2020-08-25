@@ -27,23 +27,23 @@ type UpdateImageResponse struct {
 	// 镜像文件的大小，单位为字节
 	ImageSize *string `json:"__image_size,omitempty"`
 	// 镜像后端存储类型，目前只支持uds
-	ImageSourceType UpdateImageResponseImageSourceType `json:"__image_source_type,omitempty"`
+	ImageSourceType *UpdateImageResponseImageSourceType `json:"__image_source_type,omitempty"`
 	// 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
-	Imagetype UpdateImageResponseImagetype `json:"__imagetype,omitempty"`
+	Imagetype *UpdateImageResponseImagetype `json:"__imagetype,omitempty"`
 	// 是否完成了初始化配置。取值为true或false。如果用户确定完成了初始化配置，则可以设置为true，否            则设置为false。默认为false。
-	IsConfigInit UpdateImageResponseIsConfigInit `json:"__is_config_init,omitempty"`
+	IsConfigInit *UpdateImageResponseIsConfigInit `json:"__is_config_init,omitempty"`
 	// 是否是注册过的镜像，取值为“true”或者“false”
-	Isregistered UpdateImageResponseIsregistered `json:"__isregistered,omitempty"`
+	Isregistered *UpdateImageResponseIsregistered `json:"__isregistered,omitempty"`
 	// 父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
 	Originalimagename *string `json:"__originalimagename,omitempty"`
 	// 操作系统位数，一般取值为“32”或者“64”
-	OsBit UpdateImageResponseOsBit `json:"__os_bit,omitempty"`
+	OsBit *UpdateImageResponseOsBit `json:"__os_bit,omitempty"`
 	// 操作系统类型，目前取值Linux， Windows，Other
-	OsType UpdateImageResponseOsType `json:"__os_type,omitempty"`
+	OsType *UpdateImageResponseOsType `json:"__os_type,omitempty"`
 	// 操作系统具体版本
 	OsVersion *string `json:"__os_version,omitempty"`
 	// 镜像平台分类
-	Platform UpdateImageResponsePlatform `json:"__platform,omitempty"`
+	Platform *UpdateImageResponsePlatform `json:"__platform,omitempty"`
 	// 市场镜像的产品ID
 	Productcode *string `json:"__productcode,omitempty"`
 	// 镜像来源表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性。
@@ -101,25 +101,25 @@ type UpdateImageResponse struct {
 	// 目前暂时不使用
 	Size *int32 `json:"size,omitempty"`
 	// 镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待 上传镜像文件。saving：表示镜像 正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用
-	Status UpdateImageResponseStatus `json:"status,omitempty"`
+	Status *UpdateImageResponseStatus `json:"status,omitempty"`
 	// 镜像标签列表
 	Tags []string `json:"tags,omitempty"`
 	// 更新时间。格式为UTC时间
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	// 镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取Dat            aImage，如果是裸金属服务器镜像，则取值是Ironic
-	VirtualEnvType UpdateImageResponseVirtualEnvType `json:"virtual_env_type,omitempty"`
+	VirtualEnvType *UpdateImageResponseVirtualEnvType `json:"virtual_env_type,omitempty"`
 	// 目前暂时不使用
 	VirtualSize *int32 `json:"virtual_size,omitempty"`
 	// 是否被其他租户可见，取值为private或public
-	Visibility UpdateImageResponseVisibility `json:"visibility,omitempty"`
+	Visibility *UpdateImageResponseVisibility `json:"visibility,omitempty"`
 	// 镜像架构类型。取值包括： x86 arm
-	Architecture UpdateImageResponseArchitecture `json:"architecture,omitempty"`
+	Architecture *UpdateImageResponseArchitecture `json:"architecture,omitempty"`
 	// 表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
-	SupportFcInject UpdateImageResponseSupportFcInject `json:"__support_fc_inject,omitempty"`
+	SupportFcInject *UpdateImageResponseSupportFcInject `json:"__support_fc_inject,omitempty"`
 	// 云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
-	HwFirmwareType UpdateImageResponseHwFirmwareType `json:"hw_firmware_type,omitempty"`
+	HwFirmwareType *UpdateImageResponseHwFirmwareType `json:"hw_firmware_type,omitempty"`
 	// 是否是ARM架构类型的镜像，取值为“true”或者“false”。
-	SupportArm UpdateImageResponseSupportArm `json:"__support_arm,omitempty"`
+	SupportArm *UpdateImageResponseSupportArm `json:"__support_arm,omitempty"`
 }
 
 func (o UpdateImageResponse) String() string {

@@ -17,7 +17,7 @@ import (
 // Response Object
 type ShowJobResponse struct {
 	// 任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
-	Status ShowJobResponseStatus `json:"status,omitempty"`
+	Status *ShowJobResponseStatus `json:"status,omitempty"`
 	// 任务ID。
 	JobId *string `json:"job_id,omitempty"`
 	// 任务类型。

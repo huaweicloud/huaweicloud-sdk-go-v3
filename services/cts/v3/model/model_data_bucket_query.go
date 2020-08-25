@@ -19,9 +19,8 @@ type DataBucketQuery struct {
 	// 标识OBS桶名称。由数字或字母开头，支持小写字母、数字、“-”、“.”，长度为3～63个字符。
 	DataBucketName *string `json:"data_bucket_name,omitempty"`
 	// 追踪桶日志是否支持搜索。
-	SearchEnabled *bool `json:"search_enabled,omitempty"`
-	// 追踪操作。
-	DataEvent DataBucketQueryDataEvent `json:"data_event,omitempty"`
+	SearchEnabled *bool                      `json:"search_enabled,omitempty"`
+	DataEvent     []DataBucketQueryDataEvent `json:"data_event,omitempty"`
 }
 
 func (o DataBucketQuery) String() string {
@@ -34,17 +33,17 @@ type DataBucketQueryDataEvent struct {
 }
 
 type DataBucketQueryDataEventEnum struct {
-	READ  DataBucketQueryDataEvent
 	WRITE DataBucketQueryDataEvent
+	READ  DataBucketQueryDataEvent
 }
 
 func GetDataBucketQueryDataEventEnum() DataBucketQueryDataEventEnum {
 	return DataBucketQueryDataEventEnum{
-		READ: DataBucketQueryDataEvent{
-			value: "READ",
-		},
 		WRITE: DataBucketQueryDataEvent{
 			value: "WRITE",
+		},
+		READ: DataBucketQueryDataEvent{
+			value: "READ",
 		},
 	}
 }

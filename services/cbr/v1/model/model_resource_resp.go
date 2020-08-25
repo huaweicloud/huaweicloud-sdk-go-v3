@@ -21,7 +21,7 @@ type ResourceResp struct {
 	// 待备份资源名称
 	Name string `json:"name"`
 	// 保护状态
-	ProtectStatus ResourceRespProtectStatus `json:"protect_status,omitempty"`
+	ProtectStatus *ResourceRespProtectStatus `json:"protect_status,omitempty"`
 	// 资源已分配容量,单位为GB
 	Size *int32 `json:"size,omitempty"`
 	// [待备份资源的类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo](tag:hws,hws_hk,fcs_vm,ctc) [待备份资源的类型: OS::Nova::Server,  OS::Cinder::Volume](tag:dt,ocb,tlf,sbc)

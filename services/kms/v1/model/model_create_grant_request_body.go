@@ -26,7 +26,7 @@ type CreateGrantRequestBody struct {
 	// 可退役授权的用户ID，1~64字节，满足正则匹配“^[a-zA-Z0-9]{1，64}$”。 例如：0d0466b00d0466b00d0466b00d0466b0
 	RetiringPrincipal *string `json:"retiring_principal,omitempty"`
 	// 授权类型。有效值：“user”，“domain”。默认值为“user”。
-	GranteePrincipalType CreateGrantRequestBodyGranteePrincipalType `json:"grantee_principal_type,omitempty"`
+	GranteePrincipalType *CreateGrantRequestBodyGranteePrincipalType `json:"grantee_principal_type,omitempty"`
 	// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
 	Sequence *string `json:"sequence,omitempty"`
 }

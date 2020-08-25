@@ -16,8 +16,8 @@ import (
 
 // Request Object
 type ListPoliciesRequest struct {
-	OperationType ListPoliciesRequestOperationType `json:"operation_type,omitempty"`
-	VaultId       *string                          `json:"vault_id,omitempty"`
+	OperationType *ListPoliciesRequestOperationType `json:"operation_type,omitempty"`
+	VaultId       *string                           `json:"vault_id,omitempty"`
 }
 
 func (o ListPoliciesRequest) String() string {

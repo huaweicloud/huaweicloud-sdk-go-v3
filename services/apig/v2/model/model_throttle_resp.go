@@ -35,7 +35,7 @@ type ThrottleResp struct {
 	// 流控策略的名称
 	Name *string `json:"name,omitempty"`
 	// 流控的时间单位
-	TimeUnit ThrottleRespTimeUnit `json:"time_unit,omitempty"`
+	TimeUnit *ThrottleRespTimeUnit `json:"time_unit,omitempty"`
 	// 单个API流控时间内能够被访问的次数限制
 	ApiCallLimits *int32 `json:"api_call_limits,omitempty"`
 	// 流控策略的ID

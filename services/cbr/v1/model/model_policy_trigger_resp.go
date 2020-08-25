@@ -21,7 +21,7 @@ type PolicyTriggerResp struct {
 	Name       *string                      `json:"name,omitempty"`
 	Properties *PolicyTriggerPropertiesResp `json:"properties"`
 	// 调度器类型,目前只支持 time: 定时调度。
-	Type PolicyTriggerRespType `json:"type,omitempty"`
+	Type *PolicyTriggerRespType `json:"type,omitempty"`
 }
 
 func (o PolicyTriggerResp) String() string {

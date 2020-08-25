@@ -41,7 +41,7 @@ type ReplicationRecordGet struct {
 	// 复制的源区域
 	SourceRegion *string `json:"source_region,omitempty"`
 	// 复制的状态
-	Status ReplicationRecordGetStatus `json:"status,omitempty"`
+	Status *ReplicationRecordGetStatus `json:"status,omitempty"`
 	// 备份所在的存储库ID
 	VaultId *string `json:"vault_id,omitempty"`
 }

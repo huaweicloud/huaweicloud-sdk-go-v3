@@ -18,7 +18,7 @@ type ThumbTask struct {
 	// 任务ID。  截图服务接受任务后产生的任务ID。一次最多10个。
 	TaskId *string `json:"task_id,omitempty"`
 	// 任务状态
-	Status ThumbTaskStatus `json:"status,omitempty"`
+	Status *ThumbTaskStatus `json:"status,omitempty"`
 	// 起始时间。  格式为yyyymmddhhmmss。必须是与时区无关的UTC时间，指定task_id时该参数无效。
 	CreateTime *string `json:"create_time,omitempty"`
 	// 结束时间。  格式为yyyymmddhhmmss。必须是与时区无关的UTC时间，指定task_id时该参数无效。

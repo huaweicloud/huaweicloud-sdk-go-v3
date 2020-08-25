@@ -16,8 +16,8 @@ import (
 
 // Request Object
 type KeystoneListEndpointsRequest struct {
-	Interface KeystoneListEndpointsRequestInterface `json:"interface,omitempty"`
-	ServiceId *string                               `json:"service_id,omitempty"`
+	Interface *KeystoneListEndpointsRequestInterface `json:"interface,omitempty"`
+	ServiceId *string                                `json:"service_id,omitempty"`
 }
 
 func (o KeystoneListEndpointsRequest) String() string {
