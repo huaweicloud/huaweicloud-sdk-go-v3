@@ -15,6 +15,7 @@ import (
 
 // Request Object
 type AssociateAgencyWithDomainPermissionRequest struct {
+	DomainId string `json:"domain_id"`
 	AgencyId string `json:"agency_id"`
 	RoleId   string `json:"role_id"`
 }

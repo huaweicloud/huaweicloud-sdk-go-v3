@@ -139,9 +139,9 @@ func (c *EvsClient) DeleteVolume(request *model.DeleteVolumeRequest) (*model.Del
 }
 
 //查询云硬盘快照详细列表信息。
-func (c *EvsClient) ListSnapshotsDetails(request *model.ListSnapshotsDetailsRequest) (*model.ListSnapshotsDetailsResponse, error) {
-	requestDef := GenReqDefForListSnapshotsDetails(request)
-	resp, responseDef := GenRespForListSnapshotsDetails()
+func (c *EvsClient) ListSnapshots(request *model.ListSnapshotsRequest) (*model.ListSnapshotsResponse, error) {
+	requestDef := GenReqDefForListSnapshots(request)
+	resp, responseDef := GenRespForListSnapshots()
 
 	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
 		return nil, err
@@ -162,10 +162,10 @@ func (c *EvsClient) ListVolumeTags(request *model.ListVolumeTagsRequest) (*model
 	}
 }
 
-//通过标签查询云硬盘资源实例详情。
-func (c *EvsClient) ListVolumesByTags(request *model.ListVolumesByTagsRequest) (*model.ListVolumesByTagsResponse, error) {
-	requestDef := GenReqDefForListVolumesByTags(request)
-	resp, responseDef := GenRespForListVolumesByTags()
+//查询所有云硬盘的详细信息。
+func (c *EvsClient) ListVolumes(request *model.ListVolumesRequest) (*model.ListVolumesResponse, error) {
+	requestDef := GenReqDefForListVolumes(request)
+	resp, responseDef := GenRespForListVolumes()
 
 	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
 		return nil, err
@@ -174,10 +174,10 @@ func (c *EvsClient) ListVolumesByTags(request *model.ListVolumesByTagsRequest) (
 	}
 }
 
-//查询所有云硬盘的详细信息。
-func (c *EvsClient) ListVolumesDetails(request *model.ListVolumesDetailsRequest) (*model.ListVolumesDetailsResponse, error) {
-	requestDef := GenReqDefForListVolumesDetails(request)
-	resp, responseDef := GenRespForListVolumesDetails()
+//通过标签查询云硬盘资源实例详情。
+func (c *EvsClient) ListVolumesByTags(request *model.ListVolumesByTagsRequest) (*model.ListVolumesByTagsResponse, error) {
+	requestDef := GenReqDefForListVolumesByTags(request)
+	resp, responseDef := GenRespForListVolumesByTags()
 
 	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
 		return nil, err

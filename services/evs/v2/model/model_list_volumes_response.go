@@ -14,7 +14,7 @@ import (
 )
 
 // Response Object
-type ListVolumesDetailsResponse struct {
+type ListVolumesResponse struct {
 	// 查询到的云硬盘总数量，不受分页影响。
 	Count *int32 `json:"count,omitempty"`
 	// 云硬盘列表查询位置标记。如果本次查询只返回部分列表信息时，会返回查询到的当前磁盘mark标记的url，可以继续使用这个url查询剩余列表信息。
@@ -23,7 +23,7 @@ type ListVolumesDetailsResponse struct {
 	Volumes []VolumeDetail `json:"volumes,omitempty"`
 }
 
-func (o ListVolumesDetailsResponse) String() string {
+func (o ListVolumesResponse) String() string {
 	data, _ := json.Marshal(o)
-	return strings.Join([]string{"ListVolumesDetailsResponse", string(data)}, " ")
+	return strings.Join([]string{"ListVolumesResponse", string(data)}, " ")
 }

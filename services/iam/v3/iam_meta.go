@@ -6,11 +6,48 @@ import (
 	"net/http"
 )
 
+func GenReqDefForAssociateAgencyWithAllProjectsPermission(request *model.AssociateAgencyWithAllProjectsPermissionRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}/inherited_to_projects")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("agency_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("role_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForAssociateAgencyWithAllProjectsPermission() (*model.AssociateAgencyWithAllProjectsPermissionResponse, *def.HttpResponseDef) {
+	resp := new(model.AssociateAgencyWithAllProjectsPermissionResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
 func GenReqDefForAssociateAgencyWithDomainPermission(request *model.AssociateAgencyWithDomainPermissionRequest) *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("agency_id").
 		WithLocationType(def.Path))
@@ -71,11 +108,48 @@ func GenRespForAssociateAgencyWithProjectPermission() (*model.AssociateAgencyWit
 	return resp, responseDef
 }
 
+func GenReqDefForCheckAllProjectsPermissionForAgency(request *model.CheckAllProjectsPermissionForAgencyRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodHead).
+		WithPath("/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}/inherited_to_projects")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("agency_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("role_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForCheckAllProjectsPermissionForAgency() (*model.CheckAllProjectsPermissionForAgencyResponse, *def.HttpResponseDef) {
+	resp := new(model.CheckAllProjectsPermissionForAgencyResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
 func GenReqDefForCheckDomainPermissionForAgency(request *model.CheckDomainPermissionForAgencyRequest) *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodHead).
 		WithPath("/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("agency_id").
 		WithLocationType(def.Path))
@@ -310,6 +384,9 @@ func GenReqDefForKeystoneAssociateGroupWithAllProjectPermission(request *model.K
 		WithPath("/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/{role_id}/inherited_to_projects")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("group_id").
 		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -340,6 +417,9 @@ func GenReqDefForKeystoneAssociateGroupWithDomainPermission(request *model.Keyst
 		WithMethod(http.MethodPut).
 		WithPath("/v3/domains/{domain_id}/groups/{group_id}/roles/{role_id}")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("group_id").
 		WithLocationType(def.Path))
@@ -405,6 +485,9 @@ func GenReqDefForKeystoneCheckDomainPermissionForGroup(request *model.KeystoneCh
 		WithMethod(http.MethodHead).
 		WithPath("/v3/domains/{domain_id}/groups/{group_id}/roles/{role_id}")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("group_id").
 		WithLocationType(def.Path))
@@ -632,6 +715,9 @@ func GenReqDefForKeystoneListDomainPermissionsForGroup(request *model.KeystoneLi
 		WithPath("/v3/domains/{domain_id}/groups/{group_id}/roles")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("group_id").
 		WithLocationType(def.Path))
 
@@ -691,6 +777,9 @@ func GenReqDefForKeystoneListGroups(request *model.KeystoneListGroupsRequest) *d
 		WithPath("/v3/groups")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("name").
 		WithLocationType(def.Query))
 
@@ -720,6 +809,9 @@ func GenReqDefForKeystoneListPermissions(request *model.KeystoneListPermissionsR
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -777,6 +869,9 @@ func GenReqDefForKeystoneListProjects(request *model.KeystoneListProjectsRequest
 		WithMethod(http.MethodGet).
 		WithPath("/v3/projects")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("name").
 		WithLocationType(def.Query))
@@ -952,6 +1047,9 @@ func GenReqDefForKeystoneRemoveDomainPermissionFromGroup(request *model.Keystone
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/domains/{domain_id}/groups/{group_id}/roles/{role_id}")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("group_id").
 		WithLocationType(def.Path))
@@ -1213,6 +1311,10 @@ func GenReqDefForKeystoneShowSecurityCompliance(request *model.KeystoneShowSecur
 		WithPath("/v3/domains/{domain_id}/config/security_compliance")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("project_id").
 		WithLocationType(def.Path))
 
@@ -1236,6 +1338,9 @@ func GenReqDefForKeystoneShowSecurityComplianceByOption(request *model.KeystoneS
 		WithMethod(http.MethodGet).
 		WithPath("/v3/domains/{domain_id}/config/security_compliance/{option}")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("option").
 		WithLocationType(def.Path))
@@ -1379,6 +1484,9 @@ func GenReqDefForListAgencies(request *model.ListAgenciesRequest) *def.HttpReque
 		WithPath("/v3.0/OS-AGENCY/agencies")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("trust_domain_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1399,6 +1507,37 @@ func GenReqDefForListAgencies(request *model.ListAgenciesRequest) *def.HttpReque
 
 func GenRespForListAgencies() (*model.ListAgenciesResponse, *def.HttpResponseDef) {
 	resp := new(model.ListAgenciesResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForListAllProjectsPermissionsForAgency(request *model.ListAllProjectsPermissionsForAgencyRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/inherited_to_projects")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("agency_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForListAllProjectsPermissionsForAgency() (*model.ListAllProjectsPermissionsForAgencyResponse, *def.HttpResponseDef) {
+	resp := new(model.ListAllProjectsPermissionsForAgencyResponse)
 	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
 	responseDef := respDefBuilder.Build()
 	return resp, responseDef
@@ -1433,6 +1572,9 @@ func GenReqDefForListDomainPermissionsForAgency(request *model.ListDomainPermiss
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("agency_id").
 		WithLocationType(def.Path))
@@ -1487,11 +1629,48 @@ func GenRespForListProjectPermissionsForAgency() (*model.ListProjectPermissionsF
 	return resp, responseDef
 }
 
+func GenReqDefForRemoveAllProjectsPermissionFromAgency(request *model.RemoveAllProjectsPermissionFromAgencyRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}/inherited_to_projects")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("agency_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("role_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForRemoveAllProjectsPermissionFromAgency() (*model.RemoveAllProjectsPermissionFromAgencyResponse, *def.HttpResponseDef) {
+	resp := new(model.RemoveAllProjectsPermissionFromAgencyResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
 func GenReqDefForRemoveDomainPermissionFromAgency(request *model.RemoveDomainPermissionFromAgencyRequest) *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("agency_id").
 		WithLocationType(def.Path))
@@ -1608,6 +1787,178 @@ func GenRespForShowCustomPolicy() (*model.ShowCustomPolicyResponse, *def.HttpRes
 	return resp, responseDef
 }
 
+func GenReqDefForShowDomainApiAclPolicy(request *model.ShowDomainApiAclPolicyRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/api-acl-policy")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForShowDomainApiAclPolicy() (*model.ShowDomainApiAclPolicyResponse, *def.HttpResponseDef) {
+	resp := new(model.ShowDomainApiAclPolicyResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForShowDomainConsoleAclPolicy(request *model.ShowDomainConsoleAclPolicyRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/console-acl-policy")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForShowDomainConsoleAclPolicy() (*model.ShowDomainConsoleAclPolicyResponse, *def.HttpResponseDef) {
+	resp := new(model.ShowDomainConsoleAclPolicyResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForShowDomainLoginPolicy(request *model.ShowDomainLoginPolicyRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/login-policy")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForShowDomainLoginPolicy() (*model.ShowDomainLoginPolicyResponse, *def.HttpResponseDef) {
+	resp := new(model.ShowDomainLoginPolicyResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForShowDomainPasswordPolicy(request *model.ShowDomainPasswordPolicyRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/password-policy")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForShowDomainPasswordPolicy() (*model.ShowDomainPasswordPolicyResponse, *def.HttpResponseDef) {
+	resp := new(model.ShowDomainPasswordPolicyResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForShowDomainProtectPolicy(request *model.ShowDomainProtectPolicyRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/protect-policy")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForShowDomainProtectPolicy() (*model.ShowDomainProtectPolicyResponse, *def.HttpResponseDef) {
+	resp := new(model.ShowDomainProtectPolicyResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForShowDomainQuota(request *model.ShowDomainQuotaRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3.0/OS-QUOTA/domains/{domain_id}")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("type").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForShowDomainQuota() (*model.ShowDomainQuotaResponse, *def.HttpResponseDef) {
+	resp := new(model.ShowDomainQuotaResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
 func GenReqDefForShowProjectDetailsAndStatus(request *model.ShowProjectDetailsAndStatusRequest) *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1631,6 +1982,34 @@ func GenReqDefForShowProjectDetailsAndStatus(request *model.ShowProjectDetailsAn
 
 func GenRespForShowProjectDetailsAndStatus() (*model.ShowProjectDetailsAndStatusResponse, *def.HttpResponseDef) {
 	resp := new(model.ShowProjectDetailsAndStatusResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForShowProjectQuota(request *model.ShowProjectQuotaRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3.0/OS-QUOTA/projects/{project_id}")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForShowProjectQuota() (*model.ShowProjectQuotaResponse, *def.HttpResponseDef) {
+	resp := new(model.ShowProjectQuotaResponse)
 	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
 	responseDef := respDefBuilder.Build()
 	return resp, responseDef
@@ -1724,6 +2103,161 @@ func GenReqDefForUpdateCloudServiceCustomPolicy(request *model.UpdateCloudServic
 
 func GenRespForUpdateCloudServiceCustomPolicy() (*model.UpdateCloudServiceCustomPolicyResponse, *def.HttpResponseDef) {
 	resp := new(model.UpdateCloudServiceCustomPolicyResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForUpdateDomainApiAclPolicy(request *model.UpdateDomainApiAclPolicyRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/api-acl-policy").
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithBodyJson(request.Body)
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForUpdateDomainApiAclPolicy() (*model.UpdateDomainApiAclPolicyResponse, *def.HttpResponseDef) {
+	resp := new(model.UpdateDomainApiAclPolicyResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForUpdateDomainConsoleAclPolicy(request *model.UpdateDomainConsoleAclPolicyRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/console-acl-policy").
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithBodyJson(request.Body)
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForUpdateDomainConsoleAclPolicy() (*model.UpdateDomainConsoleAclPolicyResponse, *def.HttpResponseDef) {
+	resp := new(model.UpdateDomainConsoleAclPolicyResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForUpdateDomainLoginPolicy(request *model.UpdateDomainLoginPolicyRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/login-policy").
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithBodyJson(request.Body)
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForUpdateDomainLoginPolicy() (*model.UpdateDomainLoginPolicyResponse, *def.HttpResponseDef) {
+	resp := new(model.UpdateDomainLoginPolicyResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForUpdateDomainPasswordPolicy(request *model.UpdateDomainPasswordPolicyRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/password-policy").
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithBodyJson(request.Body)
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForUpdateDomainPasswordPolicy() (*model.UpdateDomainPasswordPolicyResponse, *def.HttpResponseDef) {
+	resp := new(model.UpdateDomainPasswordPolicyResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForUpdateDomainProtectPolicy(request *model.UpdateDomainProtectPolicyRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/protect-policy").
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithBodyJson(request.Body)
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForUpdateDomainProtectPolicy() (*model.UpdateDomainProtectPolicyResponse, *def.HttpResponseDef) {
+	resp := new(model.UpdateDomainProtectPolicyResponse)
 	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
 	responseDef := respDefBuilder.Build()
 	return resp, responseDef
@@ -2072,6 +2606,9 @@ func GenReqDefForKeystoneListUsers(request *model.KeystoneListUsersRequest) *def
 		WithPath("/v3/users")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("enabled").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2190,6 +2727,54 @@ func GenRespForKeystoneUpdateUserPassword() (*model.KeystoneUpdateUserPasswordRe
 	return resp, responseDef
 }
 
+func GenReqDefForListUserLoginProtects(request *model.ListUserLoginProtectsRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3.0/OS-USER/login-protects")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForListUserLoginProtects() (*model.ListUserLoginProtectsResponse, *def.HttpResponseDef) {
+	resp := new(model.ListUserLoginProtectsResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForListUserMfaDevices(request *model.ListUserMfaDevicesRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3.0/OS-MFA/virtual-mfa-devices")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForListUserMfaDevices() (*model.ListUserMfaDevicesResponse, *def.HttpResponseDef) {
+	resp := new(model.ListUserMfaDevicesResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
 func GenReqDefForShowUser(request *model.ShowUserRequest) *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -2213,6 +2798,62 @@ func GenReqDefForShowUser(request *model.ShowUserRequest) *def.HttpRequestDef {
 
 func GenRespForShowUser() (*model.ShowUserResponse, *def.HttpResponseDef) {
 	resp := new(model.ShowUserResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForShowUserLoginProtect(request *model.ShowUserLoginProtectRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3.0/OS-USER/users/{user_id}/login-protect")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("user_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForShowUserLoginProtect() (*model.ShowUserLoginProtectResponse, *def.HttpResponseDef) {
+	resp := new(model.ShowUserLoginProtectResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForShowUserMfaDevice(request *model.ShowUserMfaDeviceRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3.0/OS-MFA/users/{user_id}/virtual-mfa-device")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("user_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForShowUserMfaDevice() (*model.ShowUserMfaDeviceResponse, *def.HttpResponseDef) {
+	resp := new(model.ShowUserMfaDeviceResponse)
 	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
 	responseDef := respDefBuilder.Build()
 	return resp, responseDef

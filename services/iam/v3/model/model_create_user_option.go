@@ -18,7 +18,7 @@ type CreateUserOption struct {
 	// IAM用户名。长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
 	Name string `json:"name"`
 	// IAM用户所属的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId string `json:"domain_id"`
 	// IAM用户密码。   - 系统默认密码最小长度为6字符，在6-32字符之间支持用户自定义密码长度。   - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。   - 不能包含手机号和邮箱。   - 必须满足账户设置中密码策略的要求。
 	Password *string `json:"password,omitempty"`
 	// IAM用户邮箱，需符合邮箱格式，长度小于等于255字符。

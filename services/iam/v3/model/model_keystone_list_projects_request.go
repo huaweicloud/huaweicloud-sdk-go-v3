@@ -15,6 +15,7 @@ import (
 
 // Request Object
 type KeystoneListProjectsRequest struct {
+	DomainId *string `json:"domain_id,omitempty"`
 	Name     *string `json:"name,omitempty"`
 	ParentId *string `json:"parent_id,omitempty"`
 	Enabled  *bool   `json:"enabled,omitempty"`

@@ -14,7 +14,7 @@ import (
 )
 
 // Response Object
-type ListSnapshotsDetailsResponse struct {
+type ListSnapshotsResponse struct {
 	// 快照的总数量，不受limi参数的影响。
 	Count *int32 `json:"count,omitempty"`
 	// 快照信息。
@@ -23,7 +23,7 @@ type ListSnapshotsDetailsResponse struct {
 	SnapshotsLinks []Link `json:"snapshots_links,omitempty"`
 }
 
-func (o ListSnapshotsDetailsResponse) String() string {
+func (o ListSnapshotsResponse) String() string {
 	data, _ := json.Marshal(o)
-	return strings.Join([]string{"ListSnapshotsDetailsResponse", string(data)}, " ")
+	return strings.Join([]string{"ListSnapshotsResponse", string(data)}, " ")
 }

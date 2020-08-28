@@ -22,16 +22,14 @@ package core
 import (
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
-	"os"
 	"reflect"
+	"strings"
 )
 
 type HcHttpClientBuilder struct {
-	credentialsType string
+	credentialsType []string
 	credentials     auth.ICredential
 	endpoint        string
 	httpConfig      *config.HttpConfig
@@ -39,13 +37,13 @@ type HcHttpClientBuilder struct {
 
 func NewHcHttpClientBuilder() *HcHttpClientBuilder {
 	hcHttpClientBuilder := &HcHttpClientBuilder{
-		credentialsType: "basic.Credentials",
+		credentialsType: []string{"basic.Credentials"},
 	}
 	return hcHttpClientBuilder
 }
 
 func (builder *HcHttpClientBuilder) WithCredentialsType(credentialsType string) *HcHttpClientBuilder {
-	builder.credentialsType = credentialsType
+	builder.credentialsType = strings.Split(credentialsType, ",")
 	return builder
 }
 
@@ -70,10 +68,19 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 	}
 
 	if builder.credentials == nil {
-		builder.LoadCredentialFromEnv()
+		builder.credentials = auth.LoadCredentialFromEnv(builder.credentialsType[0])
 	}
 
-	if reflect.TypeOf(builder.credentials).String() != builder.credentialsType {
+	match := false
+	givenCredentialsType := reflect.TypeOf(builder.credentials).String()
+	for _, credentialsType := range builder.credentialsType {
+		if credentialsType == givenCredentialsType {
+			match = true
+			break
+		}
+	}
+
+	if !match {
 		panic(fmt.Sprintf("Need credential type is %s, actually is %s", builder.credentialsType, reflect.TypeOf(builder.credentials).String()))
 	}
 
@@ -81,25 +88,4 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 
 	hcHttpClient := NewHcHttpClient(defaultHttpClient).WithEndpoint(builder.endpoint).WithCredential(builder.credentials)
 	return hcHttpClient
-}
-
-func (builder *HcHttpClientBuilder) LoadCredentialFromEnv() {
-	ak := os.Getenv("HUAWEICLOUD_SDK_AK")
-	sk := os.Getenv("HUAWEICLOUD_SDK_SK")
-	projectId := os.Getenv("HUAWEICLOUD_SDK_PROJECT_ID")
-	domainId := os.Getenv("HUAWEICLOUD_SDK_DOMAIN_ID")
-	if builder.credentialsType == "basic.Credentials" {
-		builder.credentials = basic.NewCredentialsBuilder().
-			WithAk(ak).
-			WithSk(sk).
-			WithProjectId(projectId).
-			Build()
-	}
-	if builder.credentialsType == "global.Credentials" {
-		builder.credentials = global.NewCredentialsBuilder().
-			WithAk(ak).
-			WithSk(sk).
-			WithDomainId(domainId).
-			Build()
-	}
 }

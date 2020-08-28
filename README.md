@@ -271,14 +271,7 @@ Take using VPC SDK for example, you need to import `github.com/huaweicloud/huawe
                             AddResponseHandler(ResponseHandler))).
                 Build())
 
-        request := &model.ListVpcsRequest{
-            Body: &model.ListVpcsRequestBody{
-                Vpc: &model.ListVpcsOption{
-                    Cidr: "192.168.1.0/24",
-                    Name: "TestVpc",
-                },
-            },
-        }
+        request := &model.ListVpcsRequest{}
         response, err := client.ListVpcs(request)
         if err == nil {
             fmt.Println("%+v\n",response.Vpc)

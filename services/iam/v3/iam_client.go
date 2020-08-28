@@ -18,7 +18,19 @@ func IamClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)为委托授予全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)为委托授予所有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) AssociateAgencyWithAllProjectsPermission(request *model.AssociateAgencyWithAllProjectsPermissionRequest) (*model.AssociateAgencyWithAllProjectsPermissionResponse, error) {
+	requestDef := GenReqDefForAssociateAgencyWithAllProjectsPermission(request)
+	resp, responseDef := GenRespForAssociateAgencyWithAllProjectsPermission()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)为委托授予全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) AssociateAgencyWithDomainPermission(request *model.AssociateAgencyWithDomainPermissionRequest) (*model.AssociateAgencyWithDomainPermissionResponse, error) {
 	requestDef := GenReqDefForAssociateAgencyWithDomainPermission(request)
 	resp, responseDef := GenRespForAssociateAgencyWithDomainPermission()
@@ -30,7 +42,7 @@ func (c *IamClient) AssociateAgencyWithDomainPermission(request *model.Associate
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)为委托授予项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)为委托授予项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) AssociateAgencyWithProjectPermission(request *model.AssociateAgencyWithProjectPermissionRequest) (*model.AssociateAgencyWithProjectPermissionResponse, error) {
 	requestDef := GenReqDefForAssociateAgencyWithProjectPermission(request)
 	resp, responseDef := GenRespForAssociateAgencyWithProjectPermission()
@@ -42,7 +54,19 @@ func (c *IamClient) AssociateAgencyWithProjectPermission(request *model.Associat
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询委托是否拥有全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)检查委托是否具有所有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) CheckAllProjectsPermissionForAgency(request *model.CheckAllProjectsPermissionForAgencyRequest) (*model.CheckAllProjectsPermissionForAgencyResponse, error) {
+	requestDef := GenReqDefForCheckAllProjectsPermissionForAgency(request)
+	resp, responseDef := GenRespForCheckAllProjectsPermissionForAgency()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询委托是否拥有全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) CheckDomainPermissionForAgency(request *model.CheckDomainPermissionForAgencyRequest) (*model.CheckDomainPermissionForAgencyResponse, error) {
 	requestDef := GenReqDefForCheckDomainPermissionForAgency(request)
 	resp, responseDef := GenRespForCheckDomainPermissionForAgency()
@@ -54,7 +78,7 @@ func (c *IamClient) CheckDomainPermissionForAgency(request *model.CheckDomainPer
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询委托是否拥有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询委托是否拥有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) CheckProjectPermissionForAgency(request *model.CheckProjectPermissionForAgencyRequest) (*model.CheckProjectPermissionForAgencyResponse, error) {
 	requestDef := GenReqDefForCheckProjectPermissionForAgency(request)
 	resp, responseDef := GenRespForCheckProjectPermissionForAgency()
@@ -66,7 +90,7 @@ func (c *IamClient) CheckProjectPermissionForAgency(request *model.CheckProjectP
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)创建委托。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)创建委托。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) CreateAgency(request *model.CreateAgencyRequest) (*model.CreateAgencyResponse, error) {
 	requestDef := GenReqDefForCreateAgency(request)
 	resp, responseDef := GenRespForCreateAgency()
@@ -102,7 +126,7 @@ func (c *IamClient) CreateCloudServiceCustomPolicy(request *model.CreateCloudSer
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)删除委托。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除委托。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) DeleteAgency(request *model.DeleteAgencyRequest) (*model.DeleteAgencyResponse, error) {
 	requestDef := GenReqDefForDeleteAgency(request)
 	resp, responseDef := GenRespForDeleteAgency()
@@ -126,7 +150,7 @@ func (c *IamClient) DeleteCustomPolicy(request *model.DeleteCustomPolicyRequest)
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)添加IAM用户到用户组。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)添加IAM用户到用户组。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneAddUserToGroup(request *model.KeystoneAddUserToGroupRequest) (*model.KeystoneAddUserToGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneAddUserToGroup(request)
 	resp, responseDef := GenRespForKeystoneAddUserToGroup()
@@ -150,7 +174,7 @@ func (c *IamClient) KeystoneAssociateGroupWithAllProjectPermission(request *mode
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)为用户组授予全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)为用户组授予全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneAssociateGroupWithDomainPermission(request *model.KeystoneAssociateGroupWithDomainPermissionRequest) (*model.KeystoneAssociateGroupWithDomainPermissionResponse, error) {
 	requestDef := GenReqDefForKeystoneAssociateGroupWithDomainPermission(request)
 	resp, responseDef := GenRespForKeystoneAssociateGroupWithDomainPermission()
@@ -162,7 +186,7 @@ func (c *IamClient) KeystoneAssociateGroupWithDomainPermission(request *model.Ke
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)为用户组授予项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)为用户组授予项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneAssociateGroupWithProjectPermission(request *model.KeystoneAssociateGroupWithProjectPermissionRequest) (*model.KeystoneAssociateGroupWithProjectPermissionResponse, error) {
 	requestDef := GenReqDefForKeystoneAssociateGroupWithProjectPermission(request)
 	resp, responseDef := GenRespForKeystoneAssociateGroupWithProjectPermission()
@@ -174,7 +198,7 @@ func (c *IamClient) KeystoneAssociateGroupWithProjectPermission(request *model.K
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询用户组是否拥有全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组是否拥有全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneCheckDomainPermissionForGroup(request *model.KeystoneCheckDomainPermissionForGroupRequest) (*model.KeystoneCheckDomainPermissionForGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneCheckDomainPermissionForGroup(request)
 	resp, responseDef := GenRespForKeystoneCheckDomainPermissionForGroup()
@@ -186,7 +210,7 @@ func (c *IamClient) KeystoneCheckDomainPermissionForGroup(request *model.Keyston
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询用户组是否拥有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组是否拥有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneCheckProjectPermissionForGroup(request *model.KeystoneCheckProjectPermissionForGroupRequest) (*model.KeystoneCheckProjectPermissionForGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneCheckProjectPermissionForGroup(request)
 	resp, responseDef := GenRespForKeystoneCheckProjectPermissionForGroup()
@@ -198,7 +222,7 @@ func (c *IamClient) KeystoneCheckProjectPermissionForGroup(request *model.Keysto
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询IAM用户是否在用户组中。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户是否在用户组中。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneCheckUserInGroup(request *model.KeystoneCheckUserInGroupRequest) (*model.KeystoneCheckUserInGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneCheckUserInGroup(request)
 	resp, responseDef := GenRespForKeystoneCheckUserInGroup()
@@ -210,7 +234,7 @@ func (c *IamClient) KeystoneCheckUserInGroup(request *model.KeystoneCheckUserInG
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)创建用户组。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)创建用户组。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneCreateGroup(request *model.KeystoneCreateGroupRequest) (*model.KeystoneCreateGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneCreateGroup(request)
 	resp, responseDef := GenRespForKeystoneCreateGroup()
@@ -234,7 +258,7 @@ func (c *IamClient) KeystoneCreateProject(request *model.KeystoneCreateProjectRe
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)删除用户组。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除用户组。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneDeleteGroup(request *model.KeystoneDeleteGroupRequest) (*model.KeystoneDeleteGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneDeleteGroup(request)
 	resp, responseDef := GenRespForKeystoneDeleteGroup()
@@ -270,7 +294,7 @@ func (c *IamClient) KeystoneListAuthProjects(request *model.KeystoneListAuthProj
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询全局服务中的用户组权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询全局服务中的用户组权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneListDomainPermissionsForGroup(request *model.KeystoneListDomainPermissionsForGroupRequest) (*model.KeystoneListDomainPermissionsForGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneListDomainPermissionsForGroup(request)
 	resp, responseDef := GenRespForKeystoneListDomainPermissionsForGroup()
@@ -294,7 +318,7 @@ func (c *IamClient) KeystoneListEndpoints(request *model.KeystoneListEndpointsRe
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询用户组列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneListGroups(request *model.KeystoneListGroupsRequest) (*model.KeystoneListGroupsResponse, error) {
 	requestDef := GenReqDefForKeystoneListGroups(request)
 	resp, responseDef := GenRespForKeystoneListGroups()
@@ -306,7 +330,7 @@ func (c *IamClient) KeystoneListGroups(request *model.KeystoneListGroupsRequest)
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询权限列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询权限列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneListPermissions(request *model.KeystoneListPermissionsRequest) (*model.KeystoneListPermissionsResponse, error) {
 	requestDef := GenReqDefForKeystoneListPermissions(request)
 	resp, responseDef := GenRespForKeystoneListPermissions()
@@ -318,7 +342,7 @@ func (c *IamClient) KeystoneListPermissions(request *model.KeystoneListPermissio
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询项目服务中的用户组权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询项目服务中的用户组权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneListProjectPermissionsForGroup(request *model.KeystoneListProjectPermissionsForGroupRequest) (*model.KeystoneListProjectPermissionsForGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneListProjectPermissionsForGroup(request)
 	resp, responseDef := GenRespForKeystoneListProjectPermissionsForGroup()
@@ -378,7 +402,7 @@ func (c *IamClient) KeystoneListServices(request *model.KeystoneListServicesRequ
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询用户组中所包含的IAM用户。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组中所包含的IAM用户。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneListUsersForGroupByAdmin(request *model.KeystoneListUsersForGroupByAdminRequest) (*model.KeystoneListUsersForGroupByAdminResponse, error) {
 	requestDef := GenReqDefForKeystoneListUsersForGroupByAdmin(request)
 	resp, responseDef := GenRespForKeystoneListUsersForGroupByAdmin()
@@ -402,7 +426,7 @@ func (c *IamClient) KeystoneListVersions(request *model.KeystoneListVersionsRequ
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)移除用户组的全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)移除用户组的全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneRemoveDomainPermissionFromGroup(request *model.KeystoneRemoveDomainPermissionFromGroupRequest) (*model.KeystoneRemoveDomainPermissionFromGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneRemoveDomainPermissionFromGroup(request)
 	resp, responseDef := GenRespForKeystoneRemoveDomainPermissionFromGroup()
@@ -414,7 +438,7 @@ func (c *IamClient) KeystoneRemoveDomainPermissionFromGroup(request *model.Keyst
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)移除用户组的项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)移除用户组的项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneRemoveProjectPermissionFromGroup(request *model.KeystoneRemoveProjectPermissionFromGroupRequest) (*model.KeystoneRemoveProjectPermissionFromGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneRemoveProjectPermissionFromGroup(request)
 	resp, responseDef := GenRespForKeystoneRemoveProjectPermissionFromGroup()
@@ -426,7 +450,7 @@ func (c *IamClient) KeystoneRemoveProjectPermissionFromGroup(request *model.Keys
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)移除用户组中的IAM用户。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)移除用户组中的IAM用户。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneRemoveUserFromGroup(request *model.KeystoneRemoveUserFromGroupRequest) (*model.KeystoneRemoveUserFromGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneRemoveUserFromGroup(request)
 	resp, responseDef := GenRespForKeystoneRemoveUserFromGroup()
@@ -462,7 +486,7 @@ func (c *IamClient) KeystoneShowEndpoint(request *model.KeystoneShowEndpointRequ
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询用户组详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneShowGroup(request *model.KeystoneShowGroupRequest) (*model.KeystoneShowGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneShowGroup(request)
 	resp, responseDef := GenRespForKeystoneShowGroup()
@@ -474,7 +498,7 @@ func (c *IamClient) KeystoneShowGroup(request *model.KeystoneShowGroupRequest) (
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询权限详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询权限详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneShowPermission(request *model.KeystoneShowPermissionRequest) (*model.KeystoneShowPermissionResponse, error) {
 	requestDef := GenReqDefForKeystoneShowPermission(request)
 	resp, responseDef := GenRespForKeystoneShowPermission()
@@ -558,7 +582,7 @@ func (c *IamClient) KeystoneShowVersion(request *model.KeystoneShowVersionReques
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)更新用户组信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)更新用户组信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneUpdateGroup(request *model.KeystoneUpdateGroupRequest) (*model.KeystoneUpdateGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneUpdateGroup(request)
 	resp, responseDef := GenRespForKeystoneUpdateGroup()
@@ -582,10 +606,22 @@ func (c *IamClient) KeystoneUpdateProject(request *model.KeystoneUpdateProjectRe
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询指定条件下的委托列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询指定条件下的委托列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) ListAgencies(request *model.ListAgenciesRequest) (*model.ListAgenciesResponse, error) {
 	requestDef := GenReqDefForListAgencies(request)
 	resp, responseDef := GenRespForListAgencies()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询委托所有项目服务权限列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) ListAllProjectsPermissionsForAgency(request *model.ListAllProjectsPermissionsForAgencyRequest) (*model.ListAllProjectsPermissionsForAgencyResponse, error) {
+	requestDef := GenReqDefForListAllProjectsPermissionsForAgency(request)
+	resp, responseDef := GenRespForListAllProjectsPermissionsForAgency()
 
 	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
 		return nil, err
@@ -606,7 +642,7 @@ func (c *IamClient) ListCustomPolicies(request *model.ListCustomPoliciesRequest)
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询全局服务中的委托权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询全局服务中的委托权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) ListDomainPermissionsForAgency(request *model.ListDomainPermissionsForAgencyRequest) (*model.ListDomainPermissionsForAgencyResponse, error) {
 	requestDef := GenReqDefForListDomainPermissionsForAgency(request)
 	resp, responseDef := GenRespForListDomainPermissionsForAgency()
@@ -618,7 +654,7 @@ func (c *IamClient) ListDomainPermissionsForAgency(request *model.ListDomainPerm
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询项目服务中的委托权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询项目服务中的委托权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) ListProjectPermissionsForAgency(request *model.ListProjectPermissionsForAgencyRequest) (*model.ListProjectPermissionsForAgencyResponse, error) {
 	requestDef := GenReqDefForListProjectPermissionsForAgency(request)
 	resp, responseDef := GenRespForListProjectPermissionsForAgency()
@@ -630,7 +666,19 @@ func (c *IamClient) ListProjectPermissionsForAgency(request *model.ListProjectPe
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)移除委托的全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)移除委托的所有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) RemoveAllProjectsPermissionFromAgency(request *model.RemoveAllProjectsPermissionFromAgencyRequest) (*model.RemoveAllProjectsPermissionFromAgencyResponse, error) {
+	requestDef := GenReqDefForRemoveAllProjectsPermissionFromAgency(request)
+	resp, responseDef := GenRespForRemoveAllProjectsPermissionFromAgency()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)移除委托的全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) RemoveDomainPermissionFromAgency(request *model.RemoveDomainPermissionFromAgencyRequest) (*model.RemoveDomainPermissionFromAgencyResponse, error) {
 	requestDef := GenReqDefForRemoveDomainPermissionFromAgency(request)
 	resp, responseDef := GenRespForRemoveDomainPermissionFromAgency()
@@ -642,7 +690,7 @@ func (c *IamClient) RemoveDomainPermissionFromAgency(request *model.RemoveDomain
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)移除委托的项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)移除委托的项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) RemoveProjectPermissionFromAgency(request *model.RemoveProjectPermissionFromAgencyRequest) (*model.RemoveProjectPermissionFromAgencyResponse, error) {
 	requestDef := GenReqDefForRemoveProjectPermissionFromAgency(request)
 	resp, responseDef := GenRespForRemoveProjectPermissionFromAgency()
@@ -654,7 +702,7 @@ func (c *IamClient) RemoveProjectPermissionFromAgency(request *model.RemoveProje
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询委托详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询委托详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) ShowAgency(request *model.ShowAgencyRequest) (*model.ShowAgencyResponse, error) {
 	requestDef := GenReqDefForShowAgency(request)
 	resp, responseDef := GenRespForShowAgency()
@@ -678,6 +726,78 @@ func (c *IamClient) ShowCustomPolicy(request *model.ShowCustomPolicyRequest) (*m
 	}
 }
 
+//该接口可以用于查询账号接口访问控制策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) ShowDomainApiAclPolicy(request *model.ShowDomainApiAclPolicyRequest) (*model.ShowDomainApiAclPolicyResponse, error) {
+	requestDef := GenReqDefForShowDomainApiAclPolicy(request)
+	resp, responseDef := GenRespForShowDomainApiAclPolicy()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于查询账号控制台访问控制策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) ShowDomainConsoleAclPolicy(request *model.ShowDomainConsoleAclPolicyRequest) (*model.ShowDomainConsoleAclPolicyResponse, error) {
+	requestDef := GenReqDefForShowDomainConsoleAclPolicy(request)
+	resp, responseDef := GenRespForShowDomainConsoleAclPolicy()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于查询账号登录策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) ShowDomainLoginPolicy(request *model.ShowDomainLoginPolicyRequest) (*model.ShowDomainLoginPolicyResponse, error) {
+	requestDef := GenReqDefForShowDomainLoginPolicy(request)
+	resp, responseDef := GenRespForShowDomainLoginPolicy()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于查询账号密码策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) ShowDomainPasswordPolicy(request *model.ShowDomainPasswordPolicyRequest) (*model.ShowDomainPasswordPolicyResponse, error) {
+	requestDef := GenReqDefForShowDomainPasswordPolicy(request)
+	resp, responseDef := GenRespForShowDomainPasswordPolicy()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于查询账号操作保护策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) ShowDomainProtectPolicy(request *model.ShowDomainProtectPolicyRequest) (*model.ShowDomainProtectPolicyResponse, error) {
+	requestDef := GenReqDefForShowDomainProtectPolicy(request)
+	resp, responseDef := GenRespForShowDomainProtectPolicy()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于查询账号配额。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) ShowDomainQuota(request *model.ShowDomainQuotaRequest) (*model.ShowDomainQuotaResponse, error) {
+	requestDef := GenReqDefForShowDomainQuota(request)
+	resp, responseDef := GenRespForShowDomainQuota()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
 //该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询项目详情与状态。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) ShowProjectDetailsAndStatus(request *model.ShowProjectDetailsAndStatusRequest) (*model.ShowProjectDetailsAndStatusResponse, error) {
 	requestDef := GenReqDefForShowProjectDetailsAndStatus(request)
@@ -690,7 +810,19 @@ func (c *IamClient) ShowProjectDetailsAndStatus(request *model.ShowProjectDetail
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)修改委托。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于查询项目配额。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) ShowProjectQuota(request *model.ShowProjectQuotaRequest) (*model.ShowProjectQuotaResponse, error) {
+	requestDef := GenReqDefForShowProjectQuota(request)
+	resp, responseDef := GenRespForShowProjectQuota()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改委托。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) UpdateAgency(request *model.UpdateAgencyRequest) (*model.UpdateAgencyResponse, error) {
 	requestDef := GenReqDefForUpdateAgency(request)
 	resp, responseDef := GenRespForUpdateAgency()
@@ -718,6 +850,66 @@ func (c *IamClient) UpdateAgencyCustomPolicy(request *model.UpdateAgencyCustomPo
 func (c *IamClient) UpdateCloudServiceCustomPolicy(request *model.UpdateCloudServiceCustomPolicyRequest) (*model.UpdateCloudServiceCustomPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateCloudServiceCustomPolicy(request)
 	resp, responseDef := GenRespForUpdateCloudServiceCustomPolicy()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改账号接口访问策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) UpdateDomainApiAclPolicy(request *model.UpdateDomainApiAclPolicyRequest) (*model.UpdateDomainApiAclPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateDomainApiAclPolicy(request)
+	resp, responseDef := GenRespForUpdateDomainApiAclPolicy()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改账号控制台访问策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) UpdateDomainConsoleAclPolicy(request *model.UpdateDomainConsoleAclPolicyRequest) (*model.UpdateDomainConsoleAclPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateDomainConsoleAclPolicy(request)
+	resp, responseDef := GenRespForUpdateDomainConsoleAclPolicy()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改账号登录策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) UpdateDomainLoginPolicy(request *model.UpdateDomainLoginPolicyRequest) (*model.UpdateDomainLoginPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateDomainLoginPolicy(request)
+	resp, responseDef := GenRespForUpdateDomainLoginPolicy()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改账号密码策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) UpdateDomainPasswordPolicy(request *model.UpdateDomainPasswordPolicyRequest) (*model.UpdateDomainPasswordPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateDomainPasswordPolicy(request)
+	resp, responseDef := GenRespForUpdateDomainPasswordPolicy()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改账号操作保护策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) UpdateDomainProtectPolicy(request *model.UpdateDomainProtectPolicyRequest) (*model.UpdateDomainProtectPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateDomainProtectPolicy(request)
+	resp, responseDef := GenRespForUpdateDomainProtectPolicy()
 
 	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
 		return nil, err
@@ -834,7 +1026,7 @@ func (c *IamClient) CreateUser(request *model.CreateUserRequest) (*model.CreateU
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)创建IAM用户。IAM用户首次登录时需要修改密码。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)创建IAM用户。IAM用户首次登录时需要修改密码。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneCreateUser(request *model.KeystoneCreateUserRequest) (*model.KeystoneCreateUserResponse, error) {
 	requestDef := GenReqDefForKeystoneCreateUser(request)
 	resp, responseDef := GenRespForKeystoneCreateUser()
@@ -846,7 +1038,7 @@ func (c *IamClient) KeystoneCreateUser(request *model.KeystoneCreateUserRequest)
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)删除指定IAM用户。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除指定IAM用户。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneDeleteUser(request *model.KeystoneDeleteUserRequest) (*model.KeystoneDeleteUserResponse, error) {
 	requestDef := GenReqDefForKeystoneDeleteUser(request)
 	resp, responseDef := GenRespForKeystoneDeleteUser()
@@ -858,7 +1050,7 @@ func (c *IamClient) KeystoneDeleteUser(request *model.KeystoneDeleteUserRequest)
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询IAM用户所属用户组，或IAM用户查询自己所属用户组。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户所属用户组，或IAM用户查询自己所属用户组。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneListGroupsForUser(request *model.KeystoneListGroupsForUserRequest) (*model.KeystoneListGroupsForUserResponse, error) {
 	requestDef := GenReqDefForKeystoneListGroupsForUser(request)
 	resp, responseDef := GenRespForKeystoneListGroupsForUser()
@@ -870,7 +1062,7 @@ func (c *IamClient) KeystoneListGroupsForUser(request *model.KeystoneListGroupsF
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询IAM用户列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneListUsers(request *model.KeystoneListUsersRequest) (*model.KeystoneListUsersResponse, error) {
 	requestDef := GenReqDefForKeystoneListUsers(request)
 	resp, responseDef := GenRespForKeystoneListUsers()
@@ -882,7 +1074,7 @@ func (c *IamClient) KeystoneListUsers(request *model.KeystoneListUsersRequest) (
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)查询IAM用户详情，或IAM用户查询自己的用户详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户详情，或IAM用户查询自己的用户详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneShowUser(request *model.KeystoneShowUserRequest) (*model.KeystoneShowUserResponse, error) {
 	requestDef := GenReqDefForKeystoneShowUser(request)
 	resp, responseDef := GenRespForKeystoneShowUser()
@@ -894,7 +1086,7 @@ func (c *IamClient) KeystoneShowUser(request *model.KeystoneShowUserRequest) (*m
 	}
 }
 
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)修改IAM用户信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改IAM用户信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) KeystoneUpdateUserByAdmin(request *model.KeystoneUpdateUserByAdminRequest) (*model.KeystoneUpdateUserByAdminResponse, error) {
 	requestDef := GenReqDefForKeystoneUpdateUserByAdmin(request)
 	resp, responseDef := GenRespForKeystoneUpdateUserByAdmin()
@@ -918,10 +1110,58 @@ func (c *IamClient) KeystoneUpdateUserPassword(request *model.KeystoneUpdateUser
 	}
 }
 
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户的登录保护状态列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) ListUserLoginProtects(request *model.ListUserLoginProtectsRequest) (*model.ListUserLoginProtectsResponse, error) {
+	requestDef := GenReqDefForListUserLoginProtects(request)
+	resp, responseDef := GenRespForListUserLoginProtects()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户的MFA绑定信息列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) ListUserMfaDevices(request *model.ListUserMfaDevicesRequest) (*model.ListUserMfaDevicesResponse, error) {
+	requestDef := GenReqDefForListUserMfaDevices(request)
+	resp, responseDef := GenRespForListUserMfaDevices()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
 //该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户详情，或IAM用户查询自己的详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) ShowUser(request *model.ShowUserRequest) (*model.ShowUserResponse, error) {
 	requestDef := GenReqDefForShowUser(request)
 	resp, responseDef := GenRespForShowUser()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询指定IAM用户的登录保护状态信息，或IAM用户查询自己的登录保护状态信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) ShowUserLoginProtect(request *model.ShowUserLoginProtectRequest) (*model.ShowUserLoginProtectResponse, error) {
+	requestDef := GenReqDefForShowUserLoginProtect(request)
+	resp, responseDef := GenRespForShowUserLoginProtect()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询指定IAM用户的MFA绑定信息，或IAM用户查询自己的MFA绑定信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) ShowUserMfaDevice(request *model.ShowUserMfaDeviceRequest) (*model.ShowUserMfaDeviceResponse, error) {
+	requestDef := GenReqDefForShowUserMfaDevice(request)
+	resp, responseDef := GenRespForShowUserMfaDevice()
 
 	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
 		return nil, err

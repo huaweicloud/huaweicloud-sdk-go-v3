@@ -272,13 +272,7 @@
                             AddResponseHandler(ResponseHandler))).
                 Build())
 
-        request := &model.ListVpcsRequest{
-            Body: &model.ListVpcsRequestBody{
-                Vpc: &model.ListVpcsOption{
-                    limit: 1,
-                },
-            },
-        }
+        request := &model.ListVpcsRequest{}
         response, err := client.ListVpcs(request)
         if err == nil {
             fmt.Println("%+v\n",response.Vpc)

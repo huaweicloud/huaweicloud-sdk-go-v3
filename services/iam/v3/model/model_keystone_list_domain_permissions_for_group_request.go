@@ -15,7 +15,8 @@ import (
 
 // Request Object
 type KeystoneListDomainPermissionsForGroupRequest struct {
-	GroupId string `json:"group_id"`
+	DomainId string `json:"domain_id"`
+	GroupId  string `json:"group_id"`
 }
 
 func (o KeystoneListDomainPermissionsForGroupRequest) String() string {

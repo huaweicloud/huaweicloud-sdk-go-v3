@@ -289,7 +289,7 @@ func GenRespForDeleteVolume() (*model.DeleteVolumeResponse, *def.HttpResponseDef
 	return resp, responseDef
 }
 
-func GenReqDefForListSnapshotsDetails(request *model.ListSnapshotsDetailsRequest) *def.HttpRequestDef {
+func GenReqDefForListSnapshots(request *model.ListSnapshotsRequest) *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cloudsnapshots/detail")
@@ -340,8 +340,8 @@ func GenReqDefForListSnapshotsDetails(request *model.ListSnapshotsDetailsRequest
 	return requestDef
 }
 
-func GenRespForListSnapshotsDetails() (*model.ListSnapshotsDetailsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListSnapshotsDetailsResponse)
+func GenRespForListSnapshots() (*model.ListSnapshotsResponse, *def.HttpResponseDef) {
+	resp := new(model.ListSnapshotsResponse)
 	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
 	responseDef := respDefBuilder.Build()
 	return resp, responseDef
@@ -371,34 +371,7 @@ func GenRespForListVolumeTags() (*model.ListVolumeTagsResponse, *def.HttpRespons
 	return resp, responseDef
 }
 
-func GenReqDefForListVolumesByTags(request *model.ListVolumesByTagsRequest) *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v2/{project_id}/cloudvolumes/resource_instances/action").
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenRespForListVolumesByTags() (*model.ListVolumesByTagsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListVolumesByTagsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListVolumesDetails(request *model.ListVolumesDetailsRequest) *def.HttpRequestDef {
+func GenReqDefForListVolumes(request *model.ListVolumesRequest) *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cloudvolumes/detail")
@@ -467,8 +440,35 @@ func GenReqDefForListVolumesDetails(request *model.ListVolumesDetailsRequest) *d
 	return requestDef
 }
 
-func GenRespForListVolumesDetails() (*model.ListVolumesDetailsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListVolumesDetailsResponse)
+func GenRespForListVolumes() (*model.ListVolumesResponse, *def.HttpResponseDef) {
+	resp := new(model.ListVolumesResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForListVolumesByTags(request *model.ListVolumesByTagsRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/cloudvolumes/resource_instances/action").
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithBodyJson(request.Body)
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForListVolumesByTags() (*model.ListVolumesByTagsResponse, *def.HttpResponseDef) {
+	resp := new(model.ListVolumesByTagsResponse)
 	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
 	responseDef := respDefBuilder.Build()
 	return resp, responseDef

@@ -16,7 +16,8 @@ import (
 
 // Request Object
 type KeystoneShowSecurityComplianceByOptionRequest struct {
-	Option KeystoneShowSecurityComplianceByOptionRequestOption `json:"option"`
+	DomainId string                                              `json:"domain_id"`
+	Option   KeystoneShowSecurityComplianceByOptionRequestOption `json:"option"`
 }
 
 func (o KeystoneShowSecurityComplianceByOptionRequest) String() string {

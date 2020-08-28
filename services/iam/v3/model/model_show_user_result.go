@@ -22,8 +22,8 @@ type ShowUserResult struct {
 	// IAM用户所属账号ID。
 	DomainId string `json:"domain_id"`
 	// IAM用户名。
-	Name  string     `json:"name"`
-	Links *LinksSelf `json:"links"`
+	Name  string `json:"name"`
+	Links *Links `json:"links"`
 	// IAM用户在外部系统中的ID。
 	XuserId *string `json:"xuser_id,omitempty"`
 	// IAM用户在外部系统中的类型。
@@ -38,6 +38,12 @@ type ShowUserResult struct {
 	PwdStatus *bool `json:"pwd_status,omitempty"`
 	// IAM用户更新时间。
 	UpdateTime *string `json:"update_time,omitempty"`
+	// IAM用户创建时间。
+	CreateTime *string `json:"create_time,omitempty"`
+	// IAM用户最后登录时间。
+	LastLoginTime *string `json:"last_login_time,omitempty"`
+	// IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+	PwdStength *string `json:"pwd_stength,omitempty"`
 }
 
 func (o ShowUserResult) String() string {

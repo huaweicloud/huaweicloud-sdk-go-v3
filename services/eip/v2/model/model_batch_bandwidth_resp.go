@@ -18,8 +18,8 @@ import (
 type BatchBandwidthResp struct {
 	// 功能说明：带宽类型，共享带宽默认为share。  取值范围：share，bgp，telcom，sbgp等。  share：共享带宽  bgp：动态bgp  telcom ：联通  sbgp：静态bgp
 	BandwidthType *string `json:"bandwidth_type,omitempty"`
-	// 功能说明：账单信息  如果billinginfo不为空，说明是包周期的带宽
-	Billinginfo *string `json:"billinginfo,omitempty"`
+	// 功能说明：账单信息  如果billing_info不为空，说明是包周期的带宽
+	BillingInfo *string `json:"billing_info,omitempty"`
 	// 功能说明：按流量计费,按带宽计费还是按增强型95计费。  取值范围：bandwidth，traffic，95peak_plus(按增强型95计费)不返回或者为空时表示是bandwidth。  约束：只有共享带宽支持95peak_plus（按增强型95计费），按增强型95计费时需要指定保底百分比，默认是20%。
 	ChargeMode *BatchBandwidthRespChargeMode `json:"charge_mode,omitempty"`
 	// 功能说明：带宽唯一标识

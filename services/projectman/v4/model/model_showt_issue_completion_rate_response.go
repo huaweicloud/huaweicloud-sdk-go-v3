@@ -1,0 +1,27 @@
+/*
+ * ProjectMan
+ *
+ * devcloud projectman api
+ *
+ */
+
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// Response Object
+type ShowtIssueCompletionRateResponse struct {
+	// 不同类型的工作项完成率
+	IssueCompletionRates []IssueCompletionRateV4IssueCompletionRates `json:"issue_completion_rates,omitempty"`
+	// 总数
+	Total *int32 `json:"total,omitempty"`
+}
+
+func (o ShowtIssueCompletionRateResponse) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ShowtIssueCompletionRateResponse", string(data)}, " ")
+}

@@ -1,3 +1,45 @@
+# 0.0.9-beta 2020-08-28
+## HuaweiCloud SDK CloudPipeline
+ - ### Features
+    - Support CloudPipeline service.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+## HuaweiCloud SDK EIP
+ - ### Features
+    - Support more APIs: tags related APIs and shared bandwidth related APIs.
+ - ### Bug Fix
+    - Interface BatchCreateBandwidth: modify field billing_info. 
+ - ### Change
+    - None
+
+## HuaweiCloud SDK IAM
+ - ### Features
+    - Support more APIs: consistency of console related APIs.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+## HuaweiCloud SDK ProjectMan
+ - ### Features
+    - Support Project Management service.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+## HuaweiCloud SDK VPC
+ - ### Features
+    - Support more APIs: security group, security group rules, available IP count related APIs.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+
 # 0.0.8-beta 2020-08-25
 ## HuaweiCloud SDK Core
  - ### Features
@@ -6,6 +48,15 @@
     - None
  - ### Change
     - Change optional enum variable type to pointer.
+
+## HuaweiCloud SDK ELB
+ - ### Features
+    - Support Elastic Load Balance service.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
 
 # 0.0.7-beta 2020-08-20
 ## HuaweiCloud SDK Core
@@ -16,6 +67,7 @@
  - ### Change
     - Add 'E' as prefix to enum Variables which start with '_'.
 
+
 # 0.0.6-beta 2020-08-20
 ## HuaweiCloud SDK Core
  - ### Features
@@ -24,6 +76,7 @@
     - Fix the problem of missing the imports when the struct contains enum variables.
  - ### Change
     - None
+
 
 # 0.0.5-beta 2020-08-19
 ## HuaweiCloud SDK Core
@@ -34,6 +87,7 @@
     - Fix the deserialization failure of error response in some scenarios.
  - ### Change
     - None
+
 
 # 0.0.4-beta 2020-08-18
 ## HuaweiCloud SDK Core

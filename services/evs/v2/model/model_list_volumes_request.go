@@ -14,7 +14,7 @@ import (
 )
 
 // Request Object
-type ListVolumesDetailsRequest struct {
+type ListVolumesRequest struct {
 	Marker               *string `json:"marker,omitempty"`
 	Name                 *string `json:"name,omitempty"`
 	Limit                *int32  `json:"limit,omitempty"`
@@ -34,7 +34,7 @@ type ListVolumesDetailsRequest struct {
 	EnterpriseProjectId  *string `json:"enterprise_project_id,omitempty"`
 }
 
-func (o ListVolumesDetailsRequest) String() string {
+func (o ListVolumesRequest) String() string {
 	data, _ := json.Marshal(o)
-	return strings.Join([]string{"ListVolumesDetailsRequest", string(data)}, " ")
+	return strings.Join([]string{"ListVolumesRequest", string(data)}, " ")
 }

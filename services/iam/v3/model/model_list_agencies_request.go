@@ -15,6 +15,7 @@ import (
 
 // Request Object
 type ListAgenciesRequest struct {
+	DomainId      string  `json:"domain_id"`
 	TrustDomainId *string `json:"trust_domain_id,omitempty"`
 	Name          *string `json:"name,omitempty"`
 }

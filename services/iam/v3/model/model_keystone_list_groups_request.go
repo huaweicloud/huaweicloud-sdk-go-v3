@@ -15,7 +15,8 @@ import (
 
 // Request Object
 type KeystoneListGroupsRequest struct {
-	Name *string `json:"name,omitempty"`
+	DomainId *string `json:"domain_id,omitempty"`
+	Name     *string `json:"name,omitempty"`
 }
 
 func (o KeystoneListGroupsRequest) String() string {

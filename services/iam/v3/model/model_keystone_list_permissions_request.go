@@ -15,7 +15,8 @@ import (
 
 // Request Object
 type KeystoneListPermissionsRequest struct {
-	Name *string `json:"name,omitempty"`
+	Name     *string `json:"name,omitempty"`
+	DomainId *string `json:"domain_id,omitempty"`
 }
 
 func (o KeystoneListPermissionsRequest) String() string {
