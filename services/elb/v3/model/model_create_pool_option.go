@@ -35,8 +35,6 @@ type CreatePoolOption struct {
 	SlowStart          *CreatePoolSlowStartOption          `json:"slow_start,omitempty"`
 	// 是否开启删除保护，默认不开启
 	MemberDeletionProtectionEnable *bool `json:"member_deletion_protection_enable,omitempty"`
-	// 指定的资源id，只有管理员权限,才可以传入id
-	Id *string `json:"id,omitempty"`
 }
 
 func (o CreatePoolOption) String() string {

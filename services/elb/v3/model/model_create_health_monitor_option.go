@@ -43,8 +43,6 @@ type CreateHealthMonitorOption struct {
 	Type string `json:"type"`
 	// 功能说明：健康检查测试member健康时发送的http请求路径。 默认为“/”。使用说明：以“/”开头。仅当type为HTTP时生效。
 	UrlPath *string `json:"url_path,omitempty"`
-	// 指定的资源id，只有管理员权限,才可以传入id
-	Id *string `json:"id,omitempty"`
 }
 
 func (o CreateHealthMonitorOption) String() string {

@@ -25,8 +25,6 @@ type CreateIpGroupOption struct {
 	IpList []CreateIpGroupIpOption `json:"ip_list"`
 	// 企业项目id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-	// 指定的资源id，只有管理员权限,才可以传入id
-	Id *string `json:"id,omitempty"`
 }
 
 func (o CreateIpGroupOption) String() string {

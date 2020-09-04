@@ -16,6 +16,8 @@ import (
 // Response Object
 type CreateIpGroupResponse struct {
 	Ipgroup *IpGroup `json:"ipgroup,omitempty"`
+	// 请求id
+	RequestId *string `json:"request_id,omitempty"`
 }
 
 func (o CreateIpGroupResponse) String() string {

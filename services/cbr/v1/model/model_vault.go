@@ -32,9 +32,9 @@ type Vault struct {
 	// 企业项目id，默认为‘0’。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 是否自动绑定，默认为false，不支持。
-	AutoBind *string `json:"auto_bind,omitempty"`
+	AutoBind *bool `json:"auto_bind,omitempty"`
 	// 绑定规则
-	BindRules *string `json:"bind_rules,omitempty"`
+	BindRules *interface{} `json:"bind_rules,omitempty"`
 	// 用户id
 	UserId *string `json:"user_id,omitempty"`
 	// 创建时间

@@ -20,13 +20,13 @@ type ShowDetailsOfRequestThrottlingPolicyV2Response struct {
 	// 流控绑定的API数量
 	BindNum *int32 `json:"bind_num,omitempty"`
 	// 是否包含特殊流控配置 - 1：包含 - 2：不包含
-	IsIncludeSpecialThrottle *int32 `json:"is_include_special_throttle,omitempty"`
+	IsIncludeSpecialThrottle *ShowDetailsOfRequestThrottlingPolicyV2ResponseIsIncludeSpecialThrottle `json:"is_include_special_throttle,omitempty"`
 	// 创建时间
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 	// 描述
 	Remark *string `json:"remark,omitempty"`
 	// 流控策略的类型 - 1：独享，表示绑定到流控策略的单个API流控时间内能够被调用多少次。 - 2：共享，表示绑定到流控策略的所有API流控时间内能够被调用多少次
-	Type *int32 `json:"type,omitempty"`
+	Type *ShowDetailsOfRequestThrottlingPolicyV2ResponseType `json:"type,omitempty"`
 	// 流控的时长
 	TimeInterval *int32 `json:"time_interval,omitempty"`
 	// 单个IP流控时间内能够访问API的次数限制
@@ -50,6 +50,80 @@ type ShowDetailsOfRequestThrottlingPolicyV2Response struct {
 func (o ShowDetailsOfRequestThrottlingPolicyV2Response) String() string {
 	data, _ := json.Marshal(o)
 	return strings.Join([]string{"ShowDetailsOfRequestThrottlingPolicyV2Response", string(data)}, " ")
+}
+
+type ShowDetailsOfRequestThrottlingPolicyV2ResponseIsIncludeSpecialThrottle struct {
+	value int32
+}
+
+type ShowDetailsOfRequestThrottlingPolicyV2ResponseIsIncludeSpecialThrottleEnum struct {
+	E_1 ShowDetailsOfRequestThrottlingPolicyV2ResponseIsIncludeSpecialThrottle
+	E_2 ShowDetailsOfRequestThrottlingPolicyV2ResponseIsIncludeSpecialThrottle
+}
+
+func GetShowDetailsOfRequestThrottlingPolicyV2ResponseIsIncludeSpecialThrottleEnum() ShowDetailsOfRequestThrottlingPolicyV2ResponseIsIncludeSpecialThrottleEnum {
+	return ShowDetailsOfRequestThrottlingPolicyV2ResponseIsIncludeSpecialThrottleEnum{
+		E_1: ShowDetailsOfRequestThrottlingPolicyV2ResponseIsIncludeSpecialThrottle{
+			value: 1,
+		}, E_2: ShowDetailsOfRequestThrottlingPolicyV2ResponseIsIncludeSpecialThrottle{
+			value: 2,
+		},
+	}
+}
+
+func (c ShowDetailsOfRequestThrottlingPolicyV2ResponseIsIncludeSpecialThrottle) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *ShowDetailsOfRequestThrottlingPolicyV2ResponseIsIncludeSpecialThrottle) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type ShowDetailsOfRequestThrottlingPolicyV2ResponseType struct {
+	value int32
+}
+
+type ShowDetailsOfRequestThrottlingPolicyV2ResponseTypeEnum struct {
+	E_1 ShowDetailsOfRequestThrottlingPolicyV2ResponseType
+	E_2 ShowDetailsOfRequestThrottlingPolicyV2ResponseType
+}
+
+func GetShowDetailsOfRequestThrottlingPolicyV2ResponseTypeEnum() ShowDetailsOfRequestThrottlingPolicyV2ResponseTypeEnum {
+	return ShowDetailsOfRequestThrottlingPolicyV2ResponseTypeEnum{
+		E_1: ShowDetailsOfRequestThrottlingPolicyV2ResponseType{
+			value: 1,
+		}, E_2: ShowDetailsOfRequestThrottlingPolicyV2ResponseType{
+			value: 2,
+		},
+	}
+}
+
+func (c ShowDetailsOfRequestThrottlingPolicyV2ResponseType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *ShowDetailsOfRequestThrottlingPolicyV2ResponseType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }
 
 type ShowDetailsOfRequestThrottlingPolicyV2ResponseTimeUnit struct {

@@ -78,6 +78,8 @@ type LoadBalancer struct {
 	Publicips []PublicIpInfo `json:"publicips,omitempty"`
 	// 功能描述：下联面子网ID  loadbalancer使用的下联面端口会动态的从这些网络中占用IP
 	ElbVirsubnetIds []string `json:"elb_virsubnet_ids,omitempty"`
+	// 功能描述：下联面子网类型
+	ElbVirsubnetType *string `json:"elb_virsubnet_type,omitempty"`
 	// 是否启用跨VPC后端转发
 	IpTargetEnable *bool `json:"ip_target_enable,omitempty"`
 	// 是否开启删除保护

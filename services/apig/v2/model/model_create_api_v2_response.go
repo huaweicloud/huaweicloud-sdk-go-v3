@@ -20,7 +20,7 @@ type CreateApiV2Response struct {
 	// API名称长度。  为3 ~ 64位的字符串，字符串由中文、英文字母、数字、下划线组成，且只能以英文或中文开头。 > 中文字符必须为UTF-8或者unicode编码。
 	Name string `json:"name"`
 	// API类型 - 1：公有API - 2：私有API
-	Type int32 `json:"type"`
+	Type CreateApiV2ResponseType `json:"type"`
 	// API的版本
 	Version *string `json:"version,omitempty"`
 	// API的请求协议 - HTTP - HTTPS - BOTH：同时支持HTTP和HTTPS
@@ -98,6 +98,43 @@ type CreateApiV2Response struct {
 func (o CreateApiV2Response) String() string {
 	data, _ := json.Marshal(o)
 	return strings.Join([]string{"CreateApiV2Response", string(data)}, " ")
+}
+
+type CreateApiV2ResponseType struct {
+	value int32
+}
+
+type CreateApiV2ResponseTypeEnum struct {
+	E_1 CreateApiV2ResponseType
+	E_2 CreateApiV2ResponseType
+}
+
+func GetCreateApiV2ResponseTypeEnum() CreateApiV2ResponseTypeEnum {
+	return CreateApiV2ResponseTypeEnum{
+		E_1: CreateApiV2ResponseType{
+			value: 1,
+		}, E_2: CreateApiV2ResponseType{
+			value: 2,
+		},
+	}
+}
+
+func (c CreateApiV2ResponseType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *CreateApiV2ResponseType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }
 
 type CreateApiV2ResponseReqProtocol struct {

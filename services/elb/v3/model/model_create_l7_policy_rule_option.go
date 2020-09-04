@@ -27,8 +27,6 @@ type CreateL7PolicyRuleOption struct {
 	Key *string `json:"key,omitempty"`
 	// 匹配内容的值。不能包含空格。当type为HOST_NAME时，取值范围：String (100)，字符串只能包含英文字母、数字、“-”或“.”，且必须以字母或数字开头。当type为PATH时，取值范围：String (128)。当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:| /()[]{}，且必须以\"/\"开头。
 	Value string `json:"value"`
-	// 指定的资源id
-	Id *string `json:"id,omitempty"`
 }
 
 func (o CreateL7PolicyRuleOption) String() string {

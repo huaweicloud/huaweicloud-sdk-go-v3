@@ -24,7 +24,7 @@ type BackupExtendInfo struct {
 	// 卷备份副本的快照id
 	SnapshotId *string `json:"snapshot_id,omitempty"`
 	// 是否支持lazyloading快速恢复
-	SupportLld *string `json:"support_lld,omitempty"`
+	SupportLld *bool `json:"support_lld,omitempty"`
 	// 备份支持恢复的方式，当前取值包含na,snapshot和backup。如果该字段取值为snapshot，代表备份此时已经支持创建整机镜像；如果该字段取值为backup，备份支持通过云服务器上硬盘的备份进行恢复；如果该字段取值为na，备份不支持恢复。
 	SupportedRestoreMode *BackupExtendInfoSupportedRestoreMode `json:"supported_restore_mode,omitempty"`
 	// 备份注册镜像ID列表

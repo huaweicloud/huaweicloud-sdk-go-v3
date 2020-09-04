@@ -21,6 +21,8 @@ type FlavorInfo struct {
 	Cps int32 `json:"cps"`
 	// 7层每秒查询数
 	Qps *int32 `json:"qps,omitempty"`
+	// 带宽
+	Bandwidth *int32 `json:"bandwidth,omitempty"`
 }
 
 func (o FlavorInfo) String() string {

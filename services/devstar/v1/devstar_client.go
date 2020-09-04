@@ -18,10 +18,22 @@ func DevstarClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//通过DevStar的模板进行应用代码创建  新建任务时会返回任务ID，通过任务ID可以查看任务的状态以及最终代码生成的地址  - 接口鉴权方式 通过华为云服务获取的用户token  - 代码生成位置 应用代码生成后的地址，目前支持codehub地址和压缩包下载地址。
-func (c *DevstarClient) RunTemplateJobV2(request *model.RunTemplateJobV2Request) (*model.RunTemplateJobV2Response, error) {
-	requestDef := GenReqDefForRunTemplateJobV2(request)
-	resp, responseDef := GenRespForRunTemplateJobV2()
+//下载模板产物
+func (c *DevstarClient) DownloadApplicationCode(request *model.DownloadApplicationCodeRequest) (*model.DownloadApplicationCodeResponse, error) {
+	requestDef := GenReqDefForDownloadApplicationCode(request)
+	resp, responseDef := GenRespForDownloadApplicationCode()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//通过DevStar的模板进行应用代码创建  通过 DevStar 模板创建生成应用代码的任务，并将应用代码存储于指定的 CodeHub 仓库中，可以通过返回的任务 ID 查询相关任务状态  - 接口鉴权方式 通过华为云服务获取的用户token  - 代码生成位置 应用代码生成后的地址，目前支持codehub地址和压缩包下载地址。
+func (c *DevstarClient) RunDevstarTemplateJob(request *model.RunDevstarTemplateJobRequest) (*model.RunDevstarTemplateJobResponse, error) {
+	requestDef := GenReqDefForRunDevstarTemplateJob(request)
+	resp, responseDef := GenRespForRunDevstarTemplateJob()
 
 	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
 		return nil, err

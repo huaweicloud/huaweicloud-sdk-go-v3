@@ -25,15 +25,17 @@ type UpdateVaultResponse struct {
 	// 项目id
 	ProjectId string `json:"project_id"`
 	//
-	ProviderId string                     `json:"provider_id"`
-	Resources  *VaultResourceIntancesResp `json:"resources"`
-	Tags       *TagsResp                  `json:"tags,omitempty"`
+	ProviderId string `json:"provider_id"`
+	// 资源
+	Resources []VaultResourceIntancesResp `json:"resources"`
+	// 标签
+	Tags []TagsResp `json:"tags,omitempty"`
 	// 企业项目id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 是否自动绑定，默认为false，不支持。
 	AutoBind *bool `json:"auto_bind,omitempty"`
 	// 绑定规则
-	BindRules *string `json:"bind_rules,omitempty"`
+	BindRules *interface{} `json:"bind_rules,omitempty"`
 	// 用户id
 	UserId *string `json:"user_id,omitempty"`
 	// 创建时间,例如:\"2020-02-05T10:38:34.209782\"

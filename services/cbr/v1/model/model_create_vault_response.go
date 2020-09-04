@@ -15,7 +15,7 @@ import (
 
 // Response Object
 type CreateVaultResponse struct {
-	Vault *VaultGet `json:"vault,omitempty"`
+	Vault *Vault `json:"vault,omitempty"`
 }
 
 func (o CreateVaultResponse) String() string {

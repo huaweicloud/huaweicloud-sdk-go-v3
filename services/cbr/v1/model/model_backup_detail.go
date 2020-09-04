@@ -44,7 +44,7 @@ type BackupDetail struct {
 	// 资源名称
 	ResourceName string `json:"resource_name"`
 	// 资源大小，单位为GB
-	ResourceSize string `json:"resource_size"`
+	ResourceSize int32 `json:"resource_size"`
 	// 资源类型
 	ResourceType BackupDetailResourceType `json:"resource_type"`
 	// 备份状态

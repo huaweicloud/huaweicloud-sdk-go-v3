@@ -56,8 +56,6 @@ type CreateListenerOption struct {
 	Ipgroup       *CreateListenerIpGroupOption `json:"ipgroup,omitempty"`
 	// 获取客户端真实IP
 	TransparentClientIpEnable *bool `json:"transparent_client_ip_enable,omitempty"`
-	// 指定的资源id，只有管理员权限,才可以传入id
-	Id *string `json:"id,omitempty"`
 }
 
 func (o CreateListenerOption) String() string {

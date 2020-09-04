@@ -29,8 +29,6 @@ type CreateRuleOption struct {
 	Value string `json:"value"`
 	// 是否反向匹配；取值范围：true/false。默认值：false；该字段为预留字段，暂未启用。
 	Invert *bool `json:"invert,omitempty"`
-	// 指定的资源id，只有管理员权限,才可以传入id
-	Id *string `json:"id,omitempty"`
 }
 
 func (o CreateRuleOption) String() string {

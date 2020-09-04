@@ -27,9 +27,9 @@ type ResourceResp struct {
 	// [待备份资源的类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo](tag:hws,hws_hk,fcs_vm,ctc) [待备份资源的类型: OS::Nova::Server,  OS::Cinder::Volume](tag:dt,ocb,tlf,sbc)
 	Type string `json:"type"`
 	// 副本大小
-	BackupSize *string `json:"backup_size,omitempty"`
+	BackupSize *int32 `json:"backup_size,omitempty"`
 	// 副本数量
-	BackupCount *string `json:"backup_count,omitempty"`
+	BackupCount *int32 `json:"backup_count,omitempty"`
 }
 
 func (o ResourceResp) String() string {

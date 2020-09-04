@@ -30,6 +30,7 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
 	jsoniter "github.com/json-iterator/go"
 	"io/ioutil"
+	"strings"
 )
 
 type HcHttpClient struct {
@@ -76,7 +77,7 @@ func (hc *HcHttpClient) buildRequest(req interface{}, reqDef *def.HttpRequestDef
 	if reqDef.ContentType != "" {
 		builder.AddHeaderParam("Content-Type", reqDef.ContentType)
 	}
-	builder.AddHeaderParam("User-Agent", "huaweicloud-sdk-go/3.0")
+	builder.AddHeaderParam("User-Agent", "huaweicloud-usdk-go/3.0")
 
 	builder, err := hc.fillParamsFromReq(req, reqDef, builder)
 	if err != nil {
@@ -137,9 +138,29 @@ func (hc *HcHttpClient) extractResponse(resp *response.DefaultHttpResponse, resp
 		resp.Response.Body = ioutil.NopCloser(bytes.NewBuffer(data))
 	}
 
+	if len(data) == 0 {
+		return resp, nil
+	}
+
 	err = jsoniter.Unmarshal(data, responseDef.BodyJson)
 	if err != nil {
-		responseDef.BodyJson = string(data)
+		if strings.HasPrefix(string(data), "{") {
+			return nil, sdkerr.ServiceResponseError{
+				StatusCode:   resp.GetStatusCode(),
+				RequestId:    resp.GetHeader("X-Request-Id"),
+				ErrorMessage: err.Error(),
+			}
+		}
+
+		dataOfListOrString := "{ \"body\" : " + string(data) + "}"
+		err = jsoniter.Unmarshal([]byte(dataOfListOrString), responseDef.BodyJson)
+		if err != nil {
+			return nil, sdkerr.ServiceResponseError{
+				StatusCode:   resp.GetStatusCode(),
+				RequestId:    resp.GetHeader("X-Request-Id"),
+				ErrorMessage: err.Error(),
+			}
+		}
 	}
 
 	resp.BodyJson = responseDef.BodyJson

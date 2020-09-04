@@ -26,7 +26,7 @@ type ThrottleReq struct {
 	// API流量限制是指时长内一个API能够被访问的次数上限。该值不超过系统默认配额限制，系统默认配额为200tps，用户可根据实际情况修改该系统默认配额。输入的值不超过2147483647。正整数。
 	ApiCallLimits int32 `json:"api_call_limits"`
 	// 流控策略的类型 - 1：独享，表示绑定到流控策略的单个API流控时间内能够被调用多少次。 - 2：共享，表示绑定到流控策略的所有API流控时间内能够被调用多少次。
-	Type *int32 `json:"type,omitempty"`
+	Type *ThrottleReqType `json:"type,omitempty"`
 	// 是否开启动态流控： - TRUE - FALSE  暂不支持
 	EnableAdaptiveControl *string `json:"enable_adaptive_control,omitempty"`
 	// 用户流量限制是指一个API在时长之内每一个用户能访问的次数上限，该数值不超过API流量限制值。输入的值不超过2147483647。正整数。
@@ -85,5 +85,42 @@ func (c *ThrottleReqTimeUnit) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type ThrottleReqType struct {
+	value int32
+}
+
+type ThrottleReqTypeEnum struct {
+	E_1 ThrottleReqType
+	E_2 ThrottleReqType
+}
+
+func GetThrottleReqTypeEnum() ThrottleReqTypeEnum {
+	return ThrottleReqTypeEnum{
+		E_1: ThrottleReqType{
+			value: 1,
+		}, E_2: ThrottleReqType{
+			value: 2,
+		},
+	}
+}
+
+func (c ThrottleReqType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *ThrottleReqType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

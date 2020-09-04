@@ -622,6 +622,9 @@ func GenReqDefForListHealthMonitors(request *model.ListHealthMonitorsRequest) *d
 		WithName("admin_state_up").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("max_retries_down").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("timeout").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -960,9 +963,6 @@ func GenReqDefForListLoadBalancers(request *model.ListLoadBalancersRequest) *def
 		WithName("ipv6_vip_port_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("tags").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("availability_zone_list").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -985,6 +985,9 @@ func GenReqDefForListLoadBalancers(request *model.ListLoadBalancersRequest) *def
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("tags").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("tags-any").
@@ -1768,7 +1771,7 @@ func GenReqDefForCountPreoccupyIpNum(request *model.CountPreoccupyIpNumRequest) 
 		WithName("loadbalancer_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("availability_zone_number").
+		WithName("availability_zone_id").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

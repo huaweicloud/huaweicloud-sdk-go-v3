@@ -26,9 +26,9 @@ type ReqParamBase struct {
 	// 参数示例值
 	SampleValue *string `json:"sample_value,omitempty"`
 	// 是否必须 - 1：是 - 2：否  location为PATH时，required默认为1，其他场景required默认为2
-	Required *int32 `json:"required,omitempty"`
+	Required *ReqParamBaseRequired `json:"required,omitempty"`
 	// 是否开启校验 - 1：开启校验 - 2：不开启校验
-	ValidEnable *int32 `json:"valid_enable,omitempty"`
+	ValidEnable *ReqParamBaseValidEnable `json:"valid_enable,omitempty"`
 	// 描述信息。长度不超过255个字符 > 中文字符必须为UTF-8或者unicode编码。
 	Remark *string `json:"remark,omitempty"`
 	// 参数枚举值
@@ -131,6 +131,80 @@ func (c *ReqParamBaseLocation) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type ReqParamBaseRequired struct {
+	value int32
+}
+
+type ReqParamBaseRequiredEnum struct {
+	E_1 ReqParamBaseRequired
+	E_2 ReqParamBaseRequired
+}
+
+func GetReqParamBaseRequiredEnum() ReqParamBaseRequiredEnum {
+	return ReqParamBaseRequiredEnum{
+		E_1: ReqParamBaseRequired{
+			value: 1,
+		}, E_2: ReqParamBaseRequired{
+			value: 2,
+		},
+	}
+}
+
+func (c ReqParamBaseRequired) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *ReqParamBaseRequired) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type ReqParamBaseValidEnable struct {
+	value int32
+}
+
+type ReqParamBaseValidEnableEnum struct {
+	E_1 ReqParamBaseValidEnable
+	E_2 ReqParamBaseValidEnable
+}
+
+func GetReqParamBaseValidEnableEnum() ReqParamBaseValidEnableEnum {
+	return ReqParamBaseValidEnableEnum{
+		E_1: ReqParamBaseValidEnable{
+			value: 1,
+		}, E_2: ReqParamBaseValidEnable{
+			value: 2,
+		},
+	}
+}
+
+func (c ReqParamBaseValidEnable) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *ReqParamBaseValidEnable) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }
 

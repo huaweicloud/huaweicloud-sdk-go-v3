@@ -9,8 +9,9 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-
 	"strings"
 )
 
@@ -36,7 +37,7 @@ type ThrottleBindingThrottleResp struct {
 	// 创建时间
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 	// 是否包含特殊流控 - 1：包含 - 2：不包含
-	IsIncludeSpecialThrottle *int32 `json:"is_include_special_throttle,omitempty"`
+	IsIncludeSpecialThrottle *ThrottleBindingThrottleRespIsIncludeSpecialThrottle `json:"is_include_special_throttle,omitempty"`
 	// 流控策略生效的环境（即在哪个环境上有效）
 	EnvName *string `json:"env_name,omitempty"`
 	// 流控策略的类型
@@ -54,4 +55,41 @@ type ThrottleBindingThrottleResp struct {
 func (o ThrottleBindingThrottleResp) String() string {
 	data, _ := json.Marshal(o)
 	return strings.Join([]string{"ThrottleBindingThrottleResp", string(data)}, " ")
+}
+
+type ThrottleBindingThrottleRespIsIncludeSpecialThrottle struct {
+	value int32
+}
+
+type ThrottleBindingThrottleRespIsIncludeSpecialThrottleEnum struct {
+	E_1 ThrottleBindingThrottleRespIsIncludeSpecialThrottle
+	E_2 ThrottleBindingThrottleRespIsIncludeSpecialThrottle
+}
+
+func GetThrottleBindingThrottleRespIsIncludeSpecialThrottleEnum() ThrottleBindingThrottleRespIsIncludeSpecialThrottleEnum {
+	return ThrottleBindingThrottleRespIsIncludeSpecialThrottleEnum{
+		E_1: ThrottleBindingThrottleRespIsIncludeSpecialThrottle{
+			value: 1,
+		}, E_2: ThrottleBindingThrottleRespIsIncludeSpecialThrottle{
+			value: 2,
+		},
+	}
+}
+
+func (c ThrottleBindingThrottleRespIsIncludeSpecialThrottle) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *ThrottleBindingThrottleRespIsIncludeSpecialThrottle) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

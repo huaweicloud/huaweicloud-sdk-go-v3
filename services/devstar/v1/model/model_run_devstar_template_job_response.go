@@ -14,12 +14,12 @@ import (
 )
 
 // Response Object
-type RunTemplateJobV2Response struct {
+type RunDevstarTemplateJobResponse struct {
 	// 任务id
 	JobId *string `json:"job_id,omitempty"`
 }
 
-func (o RunTemplateJobV2Response) String() string {
+func (o RunDevstarTemplateJobResponse) String() string {
 	data, _ := json.Marshal(o)
-	return strings.Join([]string{"RunTemplateJobV2Response", string(data)}, " ")
+	return strings.Join([]string{"RunDevstarTemplateJobResponse", string(data)}, " ")
 }

@@ -37,8 +37,6 @@ type CreateL7PolicyOption struct {
 	RedirectUrl *string `json:"redirect_url,omitempty"`
 	// 转发策略关联的转发规则对象。详细参考表 l7rule字段说明。rules列表中最多含有2个rule对象，且每个rule的type字段不可相同。
 	Rules []CreateL7PolicyRuleOption `json:"rules,omitempty"`
-	// 指定的资源id，只有管理员权限,才可以传入id
-	Id *string `json:"id,omitempty"`
 }
 
 func (o CreateL7PolicyOption) String() string {

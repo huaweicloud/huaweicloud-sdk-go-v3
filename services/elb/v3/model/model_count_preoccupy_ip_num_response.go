@@ -16,6 +16,8 @@ import (
 // Response Object
 type CountPreoccupyIpNumResponse struct {
 	PreoccupyIp *PreoccupyIp `json:"preoccupy_ip,omitempty"`
+	// 请求ID。 注：自动生成 。
+	RequestId *string `json:"request_id,omitempty"`
 }
 
 func (o CountPreoccupyIpNumResponse) String() string {
