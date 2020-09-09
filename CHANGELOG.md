@@ -1,3 +1,21 @@
+## 0.0.11-beta 2020-09-09
+## HuaweiCloud SDK CBR
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix the problem that resources related interfaces have wrong data type.
+ - ### Change
+    - None
+
+## HuaweiCloud SDK VPC
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix the problem that security group related interfaces have wrong data type.
+ - ### Change
+    - None
+
+
 ## 0.0.10-beta 2020-09-04
 ## HuaweiCloud SDK Core
  - ### Features
@@ -6,22 +24,6 @@
     - Fix the problem that the enumeration code cannot be generated for integer enumeration parameters without format defined in yaml.
  - ### Change
     - Modify User Agent of Http Request header.
-
-## HuaweiCloud SDK DevStar
- - ### Features
-    - Support more APIs: DownloadApplicationCode
- - ### Bug Fix
-    - None
- - ### Change
-    - None
-
-## HuaweiCloud SDK DMS
- - ### Features
-    - Support Distributed Message Service, provide Kafka premium instances and RabbitMQ premium instances.
- - ### Bug Fix
-    - None
- - ### Change
-    - None
 
 
 # 0.0.9-beta 2020-08-28

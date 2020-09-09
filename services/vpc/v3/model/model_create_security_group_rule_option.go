@@ -26,7 +26,7 @@ type CreateSecurityGroupRuleOption struct {
 	// 功能说明：协议类型 取值范围：icmp、tcp、udp、icmpv6或IP协议号(0~255) 约束：为空表示支持所有协议。协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
 	Protocol *string `json:"protocol,omitempty"`
 	// 功能说明：端口取值范围 取值范围：支持单端口(80)，连续端口(1-30)以及不连续端口(22,3389,80) 约束：端口值的范围1~65535
-	Multiport *int32 `json:"multiport,omitempty"`
+	Multiport *string `json:"multiport,omitempty"`
 	// 功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：与remote_group_id、remote_address_group_id互斥
 	RemoteIpPrefix *string `json:"remote_ip_prefix,omitempty"`
 	// 功能说明：远端安全组ID，表示该安全组内的流量允许或拒绝 取值范围：租户下存在的安全组ID 约束：与remote_ip_prefix，remote_address_group_id功能互斥

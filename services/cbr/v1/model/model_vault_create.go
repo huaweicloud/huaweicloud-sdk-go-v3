@@ -28,9 +28,10 @@ type VaultCreate struct {
 	// 企业项目ID，默认为‘0’。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 是否支持自动挂载。
-	AutoBind *bool `json:"auto_bind,omitempty"`
-	//
-	BindRules *interface{} `json:"bind_rules,omitempty"`
+	AutoBind  *bool           `json:"auto_bind,omitempty"`
+	BindRules *VaultBindRules `json:"bind_rules,omitempty"`
+	// 是否自动扩容。按需存储库支持自动扩容，包周期存储库不支持扩容。
+	AutoExpand *bool `json:"auto_expand,omitempty"`
 }
 
 func (o VaultCreate) String() string {

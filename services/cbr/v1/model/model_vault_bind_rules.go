@@ -14,10 +14,8 @@ import (
 )
 
 type VaultBindRules struct {
-	// 字段key
-	Key string `json:"key"`
-	// 字段的值
-	Value *string `json:"value,omitempty"`
+	// 按tags过滤自动绑定的资源
+	Tags []Tag `json:"tags,omitempty"`
 }
 
 func (o VaultBindRules) String() string {

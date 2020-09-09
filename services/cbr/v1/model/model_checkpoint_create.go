@@ -22,9 +22,9 @@ type CheckpointCreate struct {
 	// 项目ID
 	ProjectId string `json:"project_id"`
 	// 状态
-	Status    CheckpointCreateStatus `json:"status"`
-	Vault     *CheckpointPlanCreate  `json:"vault,omitempty"`
-	ExtraInfo *BackupExtendInfo      `json:"extra_info,omitempty"`
+	Status    CheckpointCreateStatus   `json:"status"`
+	Vault     *CheckpointPlanCreate    `json:"vault,omitempty"`
+	ExtraInfo *CheckpointExtraInfoResp `json:"extra_info,omitempty"`
 }
 
 func (o CheckpointCreate) String() string {

@@ -29,8 +29,9 @@ type SecurityGroupInfo struct {
 	// 功能说明：安全组更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
 	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
 	// 功能说明：安全组所属的企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
-	EnterpriseProjectId string             `json:"enterprise_project_id"`
-	SecurityGroupRule   *SecurityGroupRule `json:"security_group_rule"`
+	EnterpriseProjectId string `json:"enterprise_project_id"`
+	// 安全组规则
+	SecurityGroupRules []SecurityGroupRule `json:"security_group_rules"`
 }
 
 func (o SecurityGroupInfo) String() string {

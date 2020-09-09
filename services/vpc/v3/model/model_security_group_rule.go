@@ -29,7 +29,7 @@ type SecurityGroupRule struct {
 	// 功能说明：IP地址协议类型 取值范围：IPv4，IPv6 约束：不填默认值为IPv4
 	Ethertype string `json:"ethertype"`
 	// 功能说明：端口取值范围 取值范围：支持单端口(80)，连续端口(1-30)以及不连续端口(22,3389,80)
-	Multiport int32 `json:"multiport"`
+	Multiport string `json:"multiport"`
 	// 功能说明：安全组规则生效策略 取值范围：allow 允许，deny 拒绝 约束：默认值为deny
 	Action string `json:"action"`
 	// 功能说明：优先级 取值范围：1~100，1代表最高优先级
