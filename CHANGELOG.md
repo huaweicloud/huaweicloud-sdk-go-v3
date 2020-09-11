@@ -1,3 +1,28 @@
+## 0.0.12-beta 2020-09-11
+## HuaweiCloud SDK KPS
+ - ### Features
+    - Support KPS service.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+## HuaweiCloud SDK EVS
+ - ### Features
+    - Support EVS service.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+## HuaweiCloud SDK CBR
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix response value type definition errors.
+ - ### Change
+    - None
+
 ## 0.0.11-beta 2020-09-09
 ## HuaweiCloud SDK CBR
  - ### Features

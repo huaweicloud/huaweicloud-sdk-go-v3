@@ -1,0 +1,27 @@
+/*
+ * kps
+ *
+ * kps v3 版本API
+ *
+ */
+
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// Response Object
+type ListFailedTaskResponse struct {
+	// 失败任务总数。
+	Total *interface{} `json:"total,omitempty"`
+	// 失败的任务列表
+	Tasks []FailedTasks `json:"tasks,omitempty"`
+}
+
+func (o ListFailedTaskResponse) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"ListFailedTaskResponse", string(data)}, " ")
+}

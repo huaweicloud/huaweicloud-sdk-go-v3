@@ -16,8 +16,6 @@ import (
 // This is a auto create Body Object
 type UpdateIpGroupRequestBody struct {
 	Ipgroup *UpdateIpGroupOption `json:"ipgroup"`
-	// 请求ID。 注：自动生成 。
-	RequestId string `json:"request_id"`
 }
 
 func (o UpdateIpGroupRequestBody) String() string {

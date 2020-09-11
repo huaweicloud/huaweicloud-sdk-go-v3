@@ -31,7 +31,6 @@ type ListListenersRequest struct {
 	Http2Enable               *bool    `json:"http2_enable,omitempty"`
 	LoadbalancerId            []string `json:"loadbalancer_id,omitempty"`
 	TlsCiphersPolicy          []string `json:"tls_ciphers_policy,omitempty"`
-	Tags                      []string `json:"tags,omitempty"`
 	MemberAddress             []string `json:"member_address,omitempty"`
 	MemberDeviceId            []string `json:"member_device_id,omitempty"`
 	EnterpriseProjectId       []string `json:"enterprise_project_id,omitempty"`

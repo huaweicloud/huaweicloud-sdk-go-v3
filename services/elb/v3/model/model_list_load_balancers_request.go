@@ -42,10 +42,6 @@ type ListLoadBalancersRequest struct {
 	MemberDeviceId           []string `json:"member_device_id,omitempty"`
 	MemberAddress            []string `json:"member_address,omitempty"`
 	EnterpriseProjectId      []string `json:"enterprise_project_id,omitempty"`
-	Tags                     []string `json:"tags,omitempty"`
-	TagsAny                  []string `json:"tags-any,omitempty"`
-	NotTags                  []string `json:"not-tags,omitempty"`
-	NotTagsAny               []string `json:"not-tags-any,omitempty"`
 	Publicips                []string `json:"publicips,omitempty"`
 	IpVersion                []int32  `json:"ip_version,omitempty"`
 	DeletionProtectionEnable *bool    `json:"deletion_protection_enable,omitempty"`

@@ -130,8 +130,12 @@ func (hc *HcHttpClient) extractResponse(resp *response.DefaultHttpResponse, resp
 
 	data, err := ioutil.ReadAll(resp.Response.Body)
 	if err != nil {
-		return resp, err
+		if closeErr := resp.Response.Body.Close(); closeErr != nil {
+			return nil, err
+		}
+		return nil, err
 	}
+
 	if err := resp.Response.Body.Close(); err != nil {
 		return nil, err
 	} else {
