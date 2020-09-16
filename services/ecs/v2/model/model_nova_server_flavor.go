@@ -18,7 +18,7 @@ type NovaServerFlavor struct {
 	// 云服务器类型ID。  微版本2.47后不支持。
 	Id *string `json:"id,omitempty"`
 	// 云服务器类型相关标记快捷链接信息。  微版本2.47后不支持。
-	Links []NovaLink `json:"links,omitempty"`
+	Links *[]NovaLink `json:"links,omitempty"`
 	// 该云服务器规格对应的CPU核数。  在微版本2.47后支持。
 	Vcpus *int32 `json:"vcpus,omitempty"`
 	// 该云服务器规格对应的内存大小，单位为MB。  在微版本2.47后支持。

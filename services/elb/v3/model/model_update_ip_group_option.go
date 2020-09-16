@@ -20,7 +20,7 @@ type UpdateIpGroupOption struct {
 	// IP地址组的名称
 	Name *string `json:"name,omitempty"`
 	// IP地址组中包含的ip列表。
-	IpList []UpadateIpGroupIpOption `json:"ip_list,omitempty"`
+	IpList *[]UpadateIpGroupIpOption `json:"ip_list,omitempty"`
 }
 
 func (o UpdateIpGroupOption) String() string {

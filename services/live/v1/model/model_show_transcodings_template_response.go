@@ -20,7 +20,7 @@ type ShowTranscodingsTemplateResponse struct {
 	// 播放域名
 	Domain *string `json:"domain,omitempty"`
 	// 转码模板
-	Templates []AppQualityInfo `json:"templates,omitempty"`
+	Templates *[]AppQualityInfo `json:"templates,omitempty"`
 }
 
 func (o ShowTranscodingsTemplateResponse) String() string {

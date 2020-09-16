@@ -23,9 +23,9 @@ type CheckpointParam struct {
 	// 备份名称
 	Name *string `json:"name,omitempty"`
 	// 待备份的资源id列表:uuid
-	Resources []string `json:"resources,omitempty"`
+	Resources *[]string `json:"resources,omitempty"`
 	//
-	ResourceDetails []Resource `json:"resource_details,omitempty"`
+	ResourceDetails *[]Resource `json:"resource_details,omitempty"`
 }
 
 func (o CheckpointParam) String() string {

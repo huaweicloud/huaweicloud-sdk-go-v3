@@ -16,7 +16,7 @@ import (
 // Response Object
 type AssociateRequestThrottlingPolicyV2Response struct {
 	// API与流控策略的绑定关系列表
-	ThrottleApplys []ThrottleBindingResp `json:"throttle_applys,omitempty"`
+	ThrottleApplys *[]ThrottleBindingResp `json:"throttle_applys,omitempty"`
 }
 
 func (o AssociateRequestThrottlingPolicyV2Response) String() string {

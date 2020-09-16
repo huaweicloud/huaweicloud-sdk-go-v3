@@ -23,9 +23,9 @@ type MetaData struct {
 	// 总码率。
 	Bitrate *int32 `json:"bitrate,omitempty"`
 	// 视频流元数据。
-	Video []VideoInfo `json:"video,omitempty"`
+	Video *[]VideoInfo `json:"video,omitempty"`
 	// 音频流元数据。
-	Audio []AudioInfo `json:"audio,omitempty"`
+	Audio *[]AudioInfo `json:"audio,omitempty"`
 }
 
 func (o MetaData) String() string {

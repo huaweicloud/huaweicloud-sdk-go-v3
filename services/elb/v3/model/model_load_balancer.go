@@ -75,9 +75,9 @@ type LoadBalancer struct {
 	// 功能描述：预留弹性flavor。
 	L7ScaleFlavorId string `json:"l7_scale_flavor_id"`
 	// 功能描述：弹性公网EIP信息
-	Publicips []PublicIpInfo `json:"publicips,omitempty"`
+	Publicips *[]PublicIpInfo `json:"publicips,omitempty"`
 	// 功能描述：下联面子网ID  loadbalancer使用的下联面端口会动态的从这些网络中占用IP
-	ElbVirsubnetIds []string `json:"elb_virsubnet_ids,omitempty"`
+	ElbVirsubnetIds *[]string `json:"elb_virsubnet_ids,omitempty"`
 	// 功能描述：下联面子网类型
 	ElbVirsubnetType *string `json:"elb_virsubnet_type,omitempty"`
 	// 是否启用跨VPC后端转发

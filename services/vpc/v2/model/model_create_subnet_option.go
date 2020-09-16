@@ -34,11 +34,11 @@ type CreateSubnetOption struct {
 	// 功能说明：子网dns服务器地址2 约束：ip格式，不支持IPv6地址
 	SecondaryDns *string `json:"secondary_dns,omitempty"`
 	// 功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集，不支持IPv6地址。
-	DnsList []string `json:"dnsList,omitempty"`
+	DnsList *[]string `json:"dnsList,omitempty"`
 	// 功能说明：子网所在的可用分区标识 约束：系统存在的可用分区标识
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 	// 子网配置的NTP地址
-	ExtraDhcpOpts []ExtraDhcpOption `json:"extra_dhcp_opts,omitempty"`
+	ExtraDhcpOpts *[]ExtraDhcpOption `json:"extra_dhcp_opts,omitempty"`
 }
 
 func (o CreateSubnetOption) String() string {

@@ -22,7 +22,7 @@ type SourceInfo struct {
 	Size      *int64     `json:"size,omitempty"`
 	VideoInfo *VideoInfo `json:"video_info,omitempty"`
 	// 音频信息
-	AudioInfo []AudioInfo `json:"audio_info,omitempty"`
+	AudioInfo *[]AudioInfo `json:"audio_info,omitempty"`
 }
 
 func (o SourceInfo) String() string {

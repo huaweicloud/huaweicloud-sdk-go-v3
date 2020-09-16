@@ -15,8 +15,8 @@ import (
 
 // Request Object
 type GlanceUpdateImageRequest struct {
-	ImageId string                         `json:"image_id"`
-	Body    []GlanceUpdateImageRequestBody `json:"body,omitempty"`
+	ImageId string                          `json:"image_id"`
+	Body    *[]GlanceUpdateImageRequestBody `json:"body,omitempty"`
 }
 
 func (o GlanceUpdateImageRequest) String() string {

@@ -31,11 +31,11 @@ type CreateAlarmRequestBody struct {
 	// 告警类型。 仅针对事件告警的参数，枚举类型：EVENT.SYS或者EVENT.CUSTOM
 	AlarmType *CreateAlarmRequestBodyAlarmType `json:"alarm_type,omitempty"`
 	// 告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
-	AlarmActions []AlarmActions `json:"alarm_actions,omitempty"`
+	AlarmActions *[]AlarmActions `json:"alarm_actions,omitempty"`
 	// 数据不足触发的动作（该参数已废弃，建议无需配置）。
-	InsufficientdataActions []AlarmActions `json:"insufficientdata_actions,omitempty"`
+	InsufficientdataActions *[]AlarmActions `json:"insufficientdata_actions,omitempty"`
 	// 告警恢复触发的动作
-	OkActions []AlarmActions `json:"ok_actions,omitempty"`
+	OkActions *[]AlarmActions `json:"ok_actions,omitempty"`
 }
 
 func (o CreateAlarmRequestBody) String() string {

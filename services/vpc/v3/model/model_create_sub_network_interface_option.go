@@ -30,7 +30,7 @@ type CreateSubNetworkInterfaceOption struct {
 	// 功能说明：辅助弹性网卡的IPv6地址 取值范围：不填则随机分配
 	Ipv6IpAddress *string `json:"ipv6_ip_address,omitempty"`
 	// 功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
-	SecurityGroups []string `json:"security_groups,omitempty"`
+	SecurityGroups *[]string `json:"security_groups,omitempty"`
 	// 功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
 	ProjectId *string `json:"project_id,omitempty"`
 }

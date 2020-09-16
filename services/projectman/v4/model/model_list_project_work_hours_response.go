@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListProjectWorkHoursResponse struct {
 	// 工时列表
-	WorkHours []ShowProjectWorkHoursResponseBodyWorkHours `json:"work_hours,omitempty"`
+	WorkHours *[]ShowProjectWorkHoursResponseBodyWorkHours `json:"work_hours,omitempty"`
 	// 总数
 	Total *int32 `json:"total,omitempty"`
 }

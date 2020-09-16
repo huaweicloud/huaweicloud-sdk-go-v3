@@ -20,7 +20,7 @@ type ListEnvironmentsV2Response struct {
 	// 本次返回的列表长度
 	Size *int32 `json:"size,omitempty"`
 	// 本次返回的环境列表
-	Envs []EnvResp `json:"envs,omitempty"`
+	Envs *[]EnvResp `json:"envs,omitempty"`
 }
 
 func (o ListEnvironmentsV2Response) String() string {

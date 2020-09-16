@@ -103,7 +103,7 @@ type UpdateImageResponse struct {
 	// 镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待 上传镜像文件。saving：表示镜像 正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用
 	Status *UpdateImageResponseStatus `json:"status,omitempty"`
 	// 镜像标签列表
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 	// 更新时间。格式为UTC时间
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	// 镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取Dat            aImage，如果是裸金属服务器镜像，则取值是Ironic

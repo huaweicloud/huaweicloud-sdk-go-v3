@@ -15,7 +15,7 @@ import (
 
 // Response Object
 type CreateEventsResponse struct {
-	Body []CreateEventsResponseBody `json:"body,omitempty"`
+	Body *[]CreateEventsResponseBody `json:"body,omitempty"`
 }
 
 func (o CreateEventsResponse) String() string {

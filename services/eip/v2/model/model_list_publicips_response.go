@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListPublicipsResponse struct {
 	// 弹性公网IP对象
-	Publicips []PublicipShowResp `json:"publicips,omitempty"`
+	Publicips *[]PublicipShowResp `json:"publicips,omitempty"`
 }
 
 func (o ListPublicipsResponse) String() string {

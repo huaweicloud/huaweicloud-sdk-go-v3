@@ -18,7 +18,7 @@ type ListAnimatedGraphicsTaskResponse struct {
 	// 任务总数
 	Total *int32 `json:"total,omitempty"`
 	// 任务列表
-	Tasks []AnimatedGraphicsTask `json:"tasks,omitempty"`
+	Tasks *[]AnimatedGraphicsTask `json:"tasks,omitempty"`
 }
 
 func (o ListAnimatedGraphicsTaskResponse) String() string {

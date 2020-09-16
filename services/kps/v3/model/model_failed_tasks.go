@@ -21,7 +21,7 @@ type FailedTasks struct {
 	// 任务的操作类型。 - FAILED_RESET 重置 - FAILED_REPLACE 替换 - FAILED_UNBIND 解绑
 	OperateType *FailedTasksOperateType `json:"operate_type,omitempty"`
 	// 任务时间
-	TaskTime *string `json:"task_time,omitempty"`
+	TaskTime *int64 `json:"task_time,omitempty"`
 	// 任务失败错误码
 	TaskErrorCode *string `json:"task_error_code,omitempty"`
 	// 任务失败错误码

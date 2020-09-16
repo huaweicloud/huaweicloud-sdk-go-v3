@@ -20,7 +20,7 @@ type ListPredefineTagsResponse struct {
 	// 查询到的标签总数
 	TotalCount *int32 `json:"total_count,omitempty"`
 	// 查询到的标签列表
-	Tags []PredefineTag `json:"tags,omitempty"`
+	Tags *[]PredefineTag `json:"tags,omitempty"`
 }
 
 func (o ListPredefineTagsResponse) String() string {

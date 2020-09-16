@@ -40,9 +40,9 @@ type CreateListenerOption struct {
 	// 监听器的监听端口。
 	ProtocolPort int32 `json:"protocol_port"`
 	// 监听器使用的SNI证书（带域名的服务器证书）ID的列表。 各SNI证书的域名不允许重复。 各SNI证书域名总数不超过30。
-	SniContainerRefs []string `json:"sni_container_refs,omitempty"`
+	SniContainerRefs *[]string `json:"sni_container_refs,omitempty"`
 	// 标签列表
-	Tags []Tag `json:"tags,omitempty"`
+	Tags *[]Tag `json:"tags,omitempty"`
 	// 监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。 取值包括：tls-1-0-inherit,tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict，tls-1-2-fs六种安全策略
 	TlsCiphersPolicy *CreateListenerOptionTlsCiphersPolicy `json:"tls_ciphers_policy,omitempty"`
 	// 是否关闭后端服务器的重试。 仅protocol为HTTP、HTTPS时支持指定该字段。

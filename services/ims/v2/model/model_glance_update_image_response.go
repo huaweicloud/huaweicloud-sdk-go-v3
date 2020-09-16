@@ -95,7 +95,7 @@ type GlanceUpdateImageResponse struct {
 	// 镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
 	Status *GlanceUpdateImageResponseStatus `json:"status,omitempty"`
 	// 镜像标签列表，提供用户可以自定义管理私有镜像的能力。用户可以通过镜像标签接口为每个镜像增加不同的标签，在查询接口中可以根据标签进行过滤。
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 	// 更新时间。格式为UTC时间。
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	// 镜像使用环境类型：FusionCompute，Ironic，DataImage。

@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListEncryptTaskResponse struct {
 	// 任务列表
-	TaskArray []EachEncryptRsp `json:"task_array,omitempty"`
+	TaskArray *[]EachEncryptRsp `json:"task_array,omitempty"`
 	// 是否截断
 	IsTruncated *int32 `json:"is_truncated,omitempty"`
 	// 查询结果数量

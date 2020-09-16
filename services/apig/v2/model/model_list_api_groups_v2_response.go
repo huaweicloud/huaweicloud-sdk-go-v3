@@ -20,7 +20,7 @@ type ListApiGroupsV2Response struct {
 	// 本次返回的列表长度
 	Size *int32 `json:"size,omitempty"`
 	// 分组列表
-	Groups []ApiGroupDetailResp `json:"groups,omitempty"`
+	Groups *[]ApiGroupDetailResp `json:"groups,omitempty"`
 }
 
 func (o ListApiGroupsV2Response) String() string {

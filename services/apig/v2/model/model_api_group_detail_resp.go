@@ -16,7 +16,7 @@ import (
 
 type ApiGroupDetailResp struct {
 	// 分组上绑定的独立域名列表
-	UrlDomains []UrlDomainsResp `json:"url_domains,omitempty"`
+	UrlDomains *[]UrlDomainsResp `json:"url_domains,omitempty"`
 	// 流控时长内分组下的API的总访问次数限制，默认不限，请根据服务的负载能力自行设置  暂不支持
 	CallLimits *int32 `json:"call_limits,omitempty"`
 	// 最近修改时间
@@ -32,7 +32,7 @@ type ApiGroupDetailResp struct {
 	// 系统默认分配的子域名
 	SlDomain string `json:"sl_domain"`
 	// 系统默认分配的子域名列表
-	SlDomains []string `json:"sl_domains,omitempty"`
+	SlDomains *[]string `json:"sl_domains,omitempty"`
 	// 编号
 	Id string `json:"id"`
 	// 流控时长  暂不支持

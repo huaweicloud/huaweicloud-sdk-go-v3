@@ -21,7 +21,7 @@ type Role struct {
 	// 角色
 	Role *string `json:"role,omitempty"`
 	// 角色执行操作列表
-	RoleActionses []RoleAction `json:"role_actionses,omitempty"`
+	RoleActionses *[]RoleAction `json:"role_actionses,omitempty"`
 }
 
 func (o Role) String() string {

@@ -35,7 +35,7 @@ type Stacks struct {
 	// 技术栈ID 目前可取值all，java，go，python，cpp，nodejs，quantum，blockchain，dcn，vue，ruby。
 	StackId *string `json:"stack_id,omitempty"`
 	// tags
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 }
 
 func (o Stacks) String() string {

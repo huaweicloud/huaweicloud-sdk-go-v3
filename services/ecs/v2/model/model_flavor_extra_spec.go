@@ -28,7 +28,7 @@ type FlavorExtraSpec struct {
 	// 虚拟化类型。  - 如果值为“FusionCompute”，表示弹性云服务器使用基于XEN的虚拟化技术。 - 如果值为“CloudCompute”，表示弹性云服务器使用基于KVM的虚拟化技术。
 	EcsvirtualizationEnvTypes *string `json:"ecs:virtualization_env_types,omitempty"`
 	// 显卡是否直通。  值为“true”，表示GPU直通。
-	PciPassthroughenableGpu bool `json:"pci_passthrough:enable_gpu"`
+	PciPassthroughenableGpu string `json:"pci_passthrough:enable_gpu"`
 	// G1型和G2型云服务器应用的技术，包括GPU虚拟化和GPU直通。  - 如果该规格的云服务器使用GPU虚拟化技术，且GPU卡的型号为M60-1Q，参数值可设置为“m60_1q:virt:1”。 - 如果该规格的云服务器使用GPU直通技术，且GPU卡的型号为M60，参数值可设置为“m60:direct_graphics:1”。
 	PciPassthroughgpuSpecs string `json:"pci_passthrough:gpu_specs"`
 	// P1型v本地直通GPU的型号和数量，参数值可设置为“nvidia-p100:1”，表示使用该规格创建的弹性云服务器将占用1张NVIDIA P100显卡。

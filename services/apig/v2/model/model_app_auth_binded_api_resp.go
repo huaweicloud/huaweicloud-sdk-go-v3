@@ -49,9 +49,9 @@ type AppAuthBindedApiResp struct {
 	// 授权通道类型 - NORMAL：普通通道 - GREEN：绿色通道  暂不支持，默认NORMAL
 	AuthTunnel *AppAuthBindedApiRespAuthTunnel `json:"auth_tunnel,omitempty"`
 	// 绿色通道的白名单配置
-	AuthWhitelist []string `json:"auth_whitelist,omitempty"`
+	AuthWhitelist *[]string `json:"auth_whitelist,omitempty"`
 	// 绿色通道的黑名单配置
-	AuthBlacklist []string `json:"auth_blacklist,omitempty"`
+	AuthBlacklist *[]string `json:"auth_blacklist,omitempty"`
 }
 
 func (o AppAuthBindedApiResp) String() string {

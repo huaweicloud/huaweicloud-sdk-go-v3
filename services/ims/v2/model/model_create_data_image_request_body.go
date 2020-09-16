@@ -23,7 +23,7 @@ type CreateDataImageRequestBody struct {
 	// 表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目；取值为UUID，表示属于该UUID对应的企业项目。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
-	ImageTags []ImageTag `json:"image_tags,omitempty"`
+	ImageTags *[]ImageTag `json:"image_tags,omitempty"`
 	// OBS桶中外部镜像文件地址。格式为<OBS桶名>:<OBS镜像文件名称>。 此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
 	ImageUrl string `json:"image_url"`
 	// 最小数据盘大小。取值范围40-2048GB。
@@ -33,7 +33,7 @@ type CreateDataImageRequestBody struct {
 	// 操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
 	OsType CreateDataImageRequestBodyOsType `json:"os_type"`
 	// 镜像标签列表。默认为空。 tags和image_tags只能使用一个。
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 }
 
 func (o CreateDataImageRequestBody) String() string {

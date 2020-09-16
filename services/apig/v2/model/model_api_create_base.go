@@ -49,7 +49,7 @@ type ApiCreateBase struct {
 	// 前端自定义认证对象的ID
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
 	// 标签。  支持英文，数字，下划线，且只能以英文开头。支持输入多个标签，不同标签以英文逗号分割。
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 	// 分组自定义响应ID
 	ResponseId *string `json:"response_id,omitempty"`
 	// 集成应用ID  暂不支持
@@ -61,13 +61,13 @@ type ApiCreateBase struct {
 	MockInfo *ApiMockCreate `json:"mock_info,omitempty"`
 	FuncInfo *ApiFuncCreate `json:"func_info,omitempty"`
 	// API的请求参数列表
-	ReqParams []ReqParamBase `json:"req_params,omitempty"`
+	ReqParams *[]ReqParamBase `json:"req_params,omitempty"`
 	// API的后端参数列表
-	BackendParams []BackendParamBase `json:"backend_params,omitempty"`
+	BackendParams *[]BackendParamBase `json:"backend_params,omitempty"`
 	// mock策略后端列表
-	PolicyMocks []ApiPolicyMockCreate `json:"policy_mocks,omitempty"`
+	PolicyMocks *[]ApiPolicyMockCreate `json:"policy_mocks,omitempty"`
 	// 函数工作流策略后端列表
-	PolicyFunctions []ApiPolicyFunctionCreate `json:"policy_functions,omitempty"`
+	PolicyFunctions *[]ApiPolicyFunctionCreate `json:"policy_functions,omitempty"`
 }
 
 func (o ApiCreateBase) String() string {

@@ -16,7 +16,7 @@ import (
 // Response Object
 type NovaListAvailabilityZonesResponse struct {
 	// 可用域信息。
-	AvailabilityZoneInfo []NovaAvailabilityZone `json:"availabilityZoneInfo,omitempty"`
+	AvailabilityZoneInfo *[]NovaAvailabilityZone `json:"availabilityZoneInfo,omitempty"`
 }
 
 func (o NovaListAvailabilityZonesResponse) String() string {

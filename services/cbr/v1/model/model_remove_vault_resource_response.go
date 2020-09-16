@@ -16,7 +16,7 @@ import (
 // Response Object
 type RemoveVaultResourceResponse struct {
 	// 移除的资源ID
-	RemoveResourceIds []string `json:"remove_resource_ids,omitempty"`
+	RemoveResourceIds *[]string `json:"remove_resource_ids,omitempty"`
 }
 
 func (o RemoveVaultResourceResponse) String() string {

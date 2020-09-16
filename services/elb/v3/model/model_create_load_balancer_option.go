@@ -40,7 +40,7 @@ type CreateLoadBalancerOption struct {
 	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 负载均衡的标签列表。示例如下：\"tags\":[{\"key\":\"aaaa\",\"value\":\"mmmaaaaa\"}]
-	Tags []Tag `json:"tags,omitempty"`
+	Tags *[]Tag `json:"tags,omitempty"`
 	// 负载均衡器的管理状态。说明：负载均衡器的管理状态。只支持设定为true。
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 	// 七层Flavor。
@@ -49,10 +49,10 @@ type CreateLoadBalancerOption struct {
 	BillingInfo   *string       `json:"billing_info,omitempty"`
 	Ipv6Bandwidth *BandwidthRef `json:"ipv6_bandwidth,omitempty"`
 	// 公网EIP的ID，目前只支持一个
-	PublicipIds []string                          `json:"publicip_ids,omitempty"`
+	PublicipIds *[]string                         `json:"publicip_ids,omitempty"`
 	Publicip    *CreateLoadBalancerPublicIpOption `json:"publicip,omitempty"`
 	// 下联面网络id列表 若该字段不指定，在loadbalancer所属的VPC中任意选一个网络id，优选双栈网络
-	ElbVirsubnetIds []string `json:"elb_virsubnet_ids,omitempty"`
+	ElbVirsubnetIds *[]string `json:"elb_virsubnet_ids,omitempty"`
 	// 是否启用跨VPC后端转发
 	IpTargetEnable *bool `json:"ip_target_enable,omitempty"`
 	// 是否开启删除保护，默认不开启

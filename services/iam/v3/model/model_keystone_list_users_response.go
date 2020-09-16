@@ -17,7 +17,7 @@ import (
 type KeystoneListUsersResponse struct {
 	Links *Links `json:"links,omitempty"`
 	// IAM用户信息列表。
-	Users []KeystoneListUsersResult `json:"users,omitempty"`
+	Users *[]KeystoneListUsersResult `json:"users,omitempty"`
 }
 
 func (o KeystoneListUsersResponse) String() string {

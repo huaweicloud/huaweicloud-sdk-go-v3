@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListPortsResponse struct {
 	// port列表对象
-	Ports []Port `json:"ports,omitempty"`
+	Ports *[]Port `json:"ports,omitempty"`
 }
 
 func (o ListPortsResponse) String() string {

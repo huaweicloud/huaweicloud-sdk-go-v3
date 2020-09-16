@@ -16,8 +16,8 @@ import (
 // Response Object
 type ListMetricsResponse struct {
 	// 指标信息列表
-	Metrics  []MetricInfo `json:"metrics,omitempty"`
-	MetaData *MetaData    `json:"meta_data,omitempty"`
+	Metrics  *[]MetricInfo `json:"metrics,omitempty"`
+	MetaData *MetaData     `json:"meta_data,omitempty"`
 }
 
 func (o ListMetricsResponse) String() string {

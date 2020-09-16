@@ -15,9 +15,9 @@ import (
 
 type MultiAudio struct {
 	// 音轨信息
-	TracksInfo []TracksInfo `json:"tracks_info,omitempty"`
+	TracksInfo *[]TracksInfo `json:"tracks_info,omitempty"`
 	// 音频文件
-	AudioFiles []AudioFile `json:"audio_files,omitempty"`
+	AudioFiles *[]AudioFile `json:"audio_files,omitempty"`
 	// 默认语言
 	DefaultLanguage *string `json:"default_language,omitempty"`
 }

@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListAvailabilityZonesResponse struct {
 	// 可用区列表
-	AvailabilityZones [][]AvailabilityZone `json:"availability_zones,omitempty"`
+	AvailabilityZones *[][]AvailabilityZone `json:"availability_zones,omitempty"`
 	// 请求ID。 注：自动生成
 	RequestId *string `json:"request_id,omitempty"`
 }

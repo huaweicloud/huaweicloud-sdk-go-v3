@@ -21,7 +21,7 @@ type LoadBalancerPoolStatus struct {
 	Name          *string                  `json:"name,omitempty"`
 	Healthmonitor *PoolHealthMonitorStatus `json:"healthmonitor,omitempty"`
 	// 后端服务器。
-	Members []PoolMemberStatus `json:"members,omitempty"`
+	Members *[]PoolMemberStatus `json:"members,omitempty"`
 	// 后端服务器组ID。
 	Id *string `json:"id,omitempty"`
 	// 操作状态。 可以为：ONLINE、OFFLINE、DEGRADED、DISABLED或NO_MONITOR。说明：该字段为预留字段，暂未启用，默认为ONLINE。

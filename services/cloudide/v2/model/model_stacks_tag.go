@@ -15,9 +15,9 @@ import (
 
 type StacksTag struct {
 	// 技术栈列表
-	StackList []Stacks `json:"stack_list,omitempty"`
+	StackList *[]Stacks `json:"stack_list,omitempty"`
 	// 技术栈tag集合
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 }
 
 func (o StacksTag) String() string {

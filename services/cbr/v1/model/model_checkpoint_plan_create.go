@@ -19,9 +19,9 @@ type CheckpointPlanCreate struct {
 	// 存储库名称
 	Name string `json:"name"`
 	// 备份对象
-	Resources []CheckpointResourceResp `json:"resources,omitempty"`
+	Resources *[]CheckpointResourceResp `json:"resources,omitempty"`
 	// 备份时跳过的资源列表
-	SkippedResources []CheckpointCreateSkippedResource `json:"skipped_resources,omitempty"`
+	SkippedResources *[]CheckpointCreateSkippedResource `json:"skipped_resources,omitempty"`
 }
 
 func (o CheckpointPlanCreate) String() string {

@@ -16,9 +16,9 @@ import (
 // Response Object
 type ListVpcRoutesResponse struct {
 	// route对象列表
-	Routes []VpcRoute `json:"routes,omitempty"`
+	Routes *[]VpcRoute `json:"routes,omitempty"`
 	// 分页信息
-	RoutesLinks []NeutronPageLink `json:"routes_links,omitempty"`
+	RoutesLinks *[]NeutronPageLink `json:"routes_links,omitempty"`
 }
 
 func (o ListVpcRoutesResponse) String() string {

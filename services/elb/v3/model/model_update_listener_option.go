@@ -32,7 +32,7 @@ type UpdateListenerOption struct {
 	// 监听器名称
 	Name *string `json:"name,omitempty"`
 	// 监听器使用的SNI证书（带域名的服务器证书）ID的列表。 各SNI证书的域名不允许重复。 各SNI证书域名总数不超过30。
-	SniContainerRefs []string `json:"sni_container_refs,omitempty"`
+	SniContainerRefs *[]string `json:"sni_container_refs,omitempty"`
 	// 监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。 取值包括：tls-1-0-inherit,tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict, tls-1-2-fst 六种安全策略
 	TlsCiphersPolicy *UpdateListenerOptionTlsCiphersPolicy `json:"tls_ciphers_policy,omitempty"`
 	// 是否关闭后端服务器的重试。 当前仅七层的性能共享型实例支持指定该字段。

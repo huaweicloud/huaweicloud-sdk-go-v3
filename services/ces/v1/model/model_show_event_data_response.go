@@ -16,7 +16,7 @@ import (
 // Response Object
 type ShowEventDataResponse struct {
 	//
-	Datapoints []EventDataInfo `json:"datapoints,omitempty"`
+	Datapoints *[]EventDataInfo `json:"datapoints,omitempty"`
 }
 
 func (o ShowEventDataResponse) String() string {

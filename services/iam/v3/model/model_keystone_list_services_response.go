@@ -16,8 +16,8 @@ import (
 // Response Object
 type KeystoneListServicesResponse struct {
 	// 服务信息列表。
-	Services []Service `json:"services,omitempty"`
-	Links    *Links    `json:"links,omitempty"`
+	Services *[]Service `json:"services,omitempty"`
+	Links    *Links     `json:"links,omitempty"`
 }
 
 func (o KeystoneListServicesResponse) String() string {

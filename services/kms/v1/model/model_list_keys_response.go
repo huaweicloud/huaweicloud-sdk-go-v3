@@ -17,9 +17,9 @@ import (
 // Response Object
 type ListKeysResponse struct {
 	// key_id列表。
-	Keys []string `json:"keys,omitempty"`
+	Keys *[]string `json:"keys,omitempty"`
 	// 密钥详情列表。详情参见KeyDetails
-	KeyDetails []KeyDetails `json:"key_details,omitempty"`
+	KeyDetails *[]KeyDetails `json:"key_details,omitempty"`
 	// 获取下一页所需要传递的“marker”值。当“truncated”为“false”时，“next_marker”为空。
 	NextMarker *string `json:"next_marker,omitempty"`
 	// 是否还有下一页： - “true”表示还有数据。 - “false”表示已经是最后一页。

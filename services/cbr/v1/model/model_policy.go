@@ -26,7 +26,7 @@ type Policy struct {
 	OperationType PolicyOperationType `json:"operation_type"`
 	Trigger       *PolicyTriggerResp  `json:"trigger"`
 	// 关联的存储库
-	AssociatedVaults []PolicyAssociateVault `json:"associated_vaults,omitempty"`
+	AssociatedVaults *[]PolicyAssociateVault `json:"associated_vaults,omitempty"`
 }
 
 func (o Policy) String() string {

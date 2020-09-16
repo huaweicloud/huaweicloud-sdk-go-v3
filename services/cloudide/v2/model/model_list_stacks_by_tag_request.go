@@ -15,7 +15,7 @@ import (
 
 // Request Object
 type ListStacksByTagRequest struct {
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 }
 
 func (o ListStacksByTagRequest) String() string {

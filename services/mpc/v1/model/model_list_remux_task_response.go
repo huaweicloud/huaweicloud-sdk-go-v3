@@ -18,7 +18,7 @@ type ListRemuxTaskResponse struct {
 	// 任务总数
 	Total *int32 `json:"total,omitempty"`
 	// 任务列表
-	Tasks []RemuxTask `json:"tasks,omitempty"`
+	Tasks *[]RemuxTask `json:"tasks,omitempty"`
 }
 
 func (o ListRemuxTaskResponse) String() string {

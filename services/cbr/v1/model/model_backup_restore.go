@@ -15,7 +15,7 @@ import (
 
 type BackupRestore struct {
 	// 恢复的映射关系(整机恢复时必填，卷恢复时可选但是不会用到填写的值）
-	Mappings []BackupRestoreServerMapping `json:"mappings,omitempty"`
+	Mappings *[]BackupRestoreServerMapping `json:"mappings,omitempty"`
 	// 恢复后是否开始，默认开机。
 	PowerOn *bool `json:"power_on,omitempty"`
 	// 恢复的目标虚拟机ID（整机恢复时必填）

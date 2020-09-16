@@ -15,8 +15,8 @@ import (
 
 // Response Object
 type ListKeypairsResponse struct {
-	// SSH密钥对信息列表
-	Keypairs []ListKeypairs `json:"keypairs,omitempty"`
+	// SSH密钥对信息详情
+	Keypairs *[]interface{} `json:"keypairs,omitempty"`
 }
 
 func (o ListKeypairsResponse) String() string {

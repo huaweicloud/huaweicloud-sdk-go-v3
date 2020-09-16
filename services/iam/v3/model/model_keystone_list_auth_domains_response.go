@@ -16,7 +16,7 @@ import (
 // Response Object
 type KeystoneListAuthDomainsResponse struct {
 	// 账号信息列表。
-	Domains []Domains  `json:"domains,omitempty"`
+	Domains *[]Domains `json:"domains,omitempty"`
 	Links   *LinksSelf `json:"links,omitempty"`
 }
 

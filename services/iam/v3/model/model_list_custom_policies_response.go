@@ -17,7 +17,7 @@ import (
 type ListCustomPoliciesResponse struct {
 	Links *Links `json:"links,omitempty"`
 	// 自定义策略信息列表。
-	Roles []PolicyRoleResult `json:"roles,omitempty"`
+	Roles *[]PolicyRoleResult `json:"roles,omitempty"`
 }
 
 func (o ListCustomPoliciesResponse) String() string {

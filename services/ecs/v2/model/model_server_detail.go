@@ -93,12 +93,12 @@ type ServerDetail struct {
 	// 弹性云服务器是否为锁定状态。  - true：锁定 - false：未锁定
 	Locked bool `json:"locked"`
 	// 弹性云服务器标签。
-	Tags             []string              `json:"tags,omitempty"`
+	Tags             *[]string             `json:"tags,omitempty"`
 	OsschedulerHints *ServerSchedulerHints `json:"os:scheduler_hints,omitempty"`
 	// 弹性云服务器所属的企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 弹性云服务器系统标签。
-	SysTags []ServerSystemTag `json:"sys_tags,omitempty"`
+	SysTags *[]ServerSystemTag `json:"sys_tags,omitempty"`
 }
 
 func (o ServerDetail) String() string {

@@ -16,7 +16,7 @@ import (
 // Response Object
 type ShowReplicationCapabilitiesResponse struct {
 	// 支持复制的区域列表
-	Regions []ProtectableReplicationCapabilitiesRespRegion `json:"regions,omitempty"`
+	Regions *[]ProtectableReplicationCapabilitiesRespRegion `json:"regions,omitempty"`
 }
 
 func (o ShowReplicationCapabilitiesResponse) String() string {

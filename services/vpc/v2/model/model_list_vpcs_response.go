@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListVpcsResponse struct {
 	// vpc对象列表
-	Vpcs []Vpc `json:"vpcs,omitempty"`
+	Vpcs *[]Vpc `json:"vpcs,omitempty"`
 }
 
 func (o ListVpcsResponse) String() string {

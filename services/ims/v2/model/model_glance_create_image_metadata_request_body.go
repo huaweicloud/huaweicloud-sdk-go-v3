@@ -31,7 +31,7 @@ type GlanceCreateImageMetadataRequestBody struct {
 	// 镜像是否被保护，保护后的镜像不可删除。默认取值为false。
 	Protected *bool `json:"protected,omitempty"`
 	// 镜像标签列表。长度为1-255位。默认为空。
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 	// 其他租户是否可见。默认取值为private。创建镜像元数据时，visibility取值只能为private。
 	Visibility *string `json:"visibility,omitempty"`
 }

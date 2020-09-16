@@ -15,9 +15,9 @@ import (
 
 // Request Object
 type ListWatermarkTemplateRequest struct {
-	TemplateId []int32 `json:"template_id,omitempty"`
-	Page       *int32  `json:"page,omitempty"`
-	Size       *int32  `json:"size,omitempty"`
+	TemplateId *[]int32 `json:"template_id,omitempty"`
+	Page       *int32   `json:"page,omitempty"`
+	Size       *int32   `json:"size,omitempty"`
 }
 
 func (o ListWatermarkTemplateRequest) String() string {

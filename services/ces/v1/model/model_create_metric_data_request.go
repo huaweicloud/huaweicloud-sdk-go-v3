@@ -15,7 +15,7 @@ import (
 
 // Request Object
 type CreateMetricDataRequest struct {
-	Body []MetricDataItem `json:"body,omitempty"`
+	Body *[]MetricDataItem `json:"body,omitempty"`
 }
 
 func (o CreateMetricDataRequest) String() string {

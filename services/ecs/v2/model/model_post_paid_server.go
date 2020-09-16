@@ -22,8 +22,8 @@ type PostPaidServer struct {
 	// 创建云服务器数量。  约束：  - 不传该字段时默认取值为1。 - 租户的配额足够时，最大值为500。
 	Count *int32 `json:"count,omitempty"`
 	// 云服务器对应数据盘相关配置。每一个数据结构代表一块待创建的数据盘。 约束：目前新创建的弹性云服务器最多可挂载23块数据盘。
-	DataVolumes []PostPaidServerDataVolume `json:"data_volumes,omitempty"`
-	Extendparam *PostPaidServerExtendParam `json:"extendparam,omitempty"`
+	DataVolumes *[]PostPaidServerDataVolume `json:"data_volumes,omitempty"`
+	Extendparam *PostPaidServerExtendParam  `json:"extendparam,omitempty"`
 	// 待创建云服务器的系统规格的ID。  已上线的规格请参见《[弹性云服务器产品介绍](https://support.huaweicloud.com/ecs/index.html)》的“实例类型与规格”章节。
 	FlavorRef string `json:"flavorRef"`
 	// 待创建云服务器的系统镜像，需要指定已创建镜像的ID，ID格式为通用唯一识别码（Universally Unique Identifier，简称UUID）。
@@ -42,11 +42,11 @@ type PostPaidServer struct {
 	Publicip         *PostPaidServerPublicip       `json:"publicip,omitempty"`
 	RootVolume       *PostPaidServerRootVolume     `json:"root_volume"`
 	// 云服务器对应安全组信息。  约束：当该值指定为空时，默认给云服务器绑定default安全组。
-	SecurityGroups []PostPaidServerSecurityGroup `json:"security_groups,omitempty"`
+	SecurityGroups *[]PostPaidServerSecurityGroup `json:"security_groups,omitempty"`
 	// 弹性云服务器的标签。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
-	ServerTags []PostPaidServerTag `json:"server_tags,omitempty"`
+	ServerTags *[]PostPaidServerTag `json:"server_tags,omitempty"`
 	// 弹性云服务器的标签。  标签的格式为“key.value”。其中，key的长度不超过36个字符，value的长度不超过43个字符。  标签命名时，需满足如下要求：  - 标签的key值只能包含大写字母（A~Z）、小写字母（a~z）、数字（0-9）、下划线（_）、中划线（-）以及中文字符。 - 标签的value值只能包含大写字母（A~Z）、小写字母（a~z）、数字（0-9）、下划线（_）、中划线（-）、小数点（.）以及中文字符。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 	// 创建云服务器过程中待注入用户数据。支持注入文本、文本文件或gzip文件。  更多关于待注入用户数据的信息，请参见《弹性云服务器用户指南 》的“用户数据注入”章节。  约束：  - 注入内容，需要进行base64格式编码。注入内容（编码之前的内容）最大长度32KB。 - 创建密码方式鉴权的Linux弹性云服务器时，该字段可为root用户注入自定义初始化密码，具体注入密码的使用方法请参见接口描述（设置登录鉴权方式）。 示例（base64编码前）：  - Linux弹性云服务器  ``` #! /bin/bash echo user_test >> /home/user.txt  ```  - Windows弹性云服务器  ``` rem cmd echo 111 > c:\\aaa.tx ```
 	UserData *string `json:"user_data,omitempty"`
 	// 待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。

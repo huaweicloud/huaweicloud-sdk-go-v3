@@ -19,7 +19,7 @@ type KeypairDetail struct {
 	// SSH密钥对的名称
 	Name *string `json:"name,omitempty"`
 	// SSH密钥对的ID
-	Id *string `json:"id,omitempty"`
+	Id *int64 `json:"id,omitempty"`
 	// SSH密钥对的类型
 	Type *KeypairDetailType `json:"type,omitempty"`
 	// 租户级或者用户级
@@ -37,13 +37,13 @@ type KeypairDetail struct {
 	// SSH密钥对所属的用户信息
 	UserId *string `json:"user_id,omitempty"`
 	// SSH密钥对创建的时间，时间戳，即从1970年1月1日至该时间的总秒数
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 	// SSH密钥对删除的时间，时间戳，即从1970年1月1日至该时间的总秒数
-	DeleteTime *string `json:"delete_time,omitempty"`
+	DeleteTime *int64 `json:"delete_time,omitempty"`
 	// SSH密钥对的更新时间，时间戳，即从1970年1月1日至该时间的总秒数
-	UpdateTime *string `json:"update_time,omitempty"`
+	UpdateTime *int64 `json:"update_time,omitempty"`
 	// 冻结状态 - 0：正常状态 - 1：普通冻结 - 2：公安冻结 - 3：普通冻结及公安冻结 - 4：违规冻结 - 5：普通冻结及违规冻结 - 6：公安冻结及违规冻结 - 7：普通冻结、公安冻结及违规冻结 - 8：未实名认证冻结 - 9：普通冻结及未实名认证冻结 - 10：公安冻结及未实名认证冻结
-	FrozenState *interface{} `json:"frozen_state,omitempty"`
+	FrozenState *int32 `json:"frozen_state,omitempty"`
 }
 
 func (o KeypairDetail) String() string {

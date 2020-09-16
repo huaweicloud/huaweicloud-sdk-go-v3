@@ -16,7 +16,7 @@ import (
 
 type InstancesVo struct {
 	// 角色权限列表
-	ActionList []RoleAction `json:"action_list,omitempty"`
+	ActionList *[]RoleAction `json:"action_list,omitempty"`
 	// cpu架构 x86|arm
 	Arch       *InstancesVoArch `json:"arch,omitempty"`
 	Attributes *Attributes      `json:"attributes,omitempty"`

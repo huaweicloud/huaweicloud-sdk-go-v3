@@ -16,7 +16,7 @@ import (
 // Response Object
 type ShowVolumeTagsResponse struct {
 	// 标签列表。
-	Tags []Tag `json:"tags,omitempty"`
+	Tags *[]Tag `json:"tags,omitempty"`
 }
 
 func (o ShowVolumeTagsResponse) String() string {

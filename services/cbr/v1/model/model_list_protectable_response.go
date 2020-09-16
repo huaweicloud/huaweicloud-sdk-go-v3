@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListProtectableResponse struct {
 	// 可保护性查询实例
-	Instances []ProtectablesResp `json:"instances,omitempty"`
+	Instances *[]ProtectablesResp `json:"instances,omitempty"`
 }
 
 func (o ListProtectableResponse) String() string {

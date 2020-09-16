@@ -15,13 +15,13 @@ import (
 
 type StacksAttribute struct {
 	// 规格列表
-	Specs []string `json:"specs,omitempty"`
+	Specs *[]string `json:"specs,omitempty"`
 	// 提示id
 	Suggest *string `json:"suggest,omitempty"`
 	// 提示信息
 	SuggestTitle *string `json:"suggest_title,omitempty"`
 	// 卷容量列表
-	Volumes []string `json:"volumes,omitempty"`
+	Volumes *[]string `json:"volumes,omitempty"`
 }
 
 func (o StacksAttribute) String() string {

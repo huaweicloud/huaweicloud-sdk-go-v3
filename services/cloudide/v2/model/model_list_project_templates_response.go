@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListProjectTemplatesResponse struct {
 	// 模板列表
-	Templates []ProjectTemplates `json:"templates,omitempty"`
+	Templates *[]ProjectTemplates `json:"templates,omitempty"`
 	// 状态
 	Status *string `json:"status,omitempty"`
 }

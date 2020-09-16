@@ -16,7 +16,7 @@ import (
 // Response Object
 type UpdateVolumeResponse struct {
 	// 是否挂载信息。
-	Attachments []Attachment `json:"attachments,omitempty"`
+	Attachments *[]Attachment `json:"attachments,omitempty"`
 	// 云硬盘所属AZ。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 	// 是否为可启动云硬盘。
@@ -26,7 +26,7 @@ type UpdateVolumeResponse struct {
 	// 云硬盘ID。
 	Id *string `json:"id,omitempty"`
 	// 云硬盘uri自描述信息
-	Links    []Link          `json:"links,omitempty"`
+	Links    *[]Link         `json:"links,omitempty"`
 	Metadata *VolumeMetadata `json:"metadata,omitempty"`
 	// 是否为可共享云硬盘。
 	Multiattach *bool `json:"multiattach,omitempty"`

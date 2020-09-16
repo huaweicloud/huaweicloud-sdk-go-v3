@@ -16,7 +16,7 @@ import (
 // Response Object
 type NovaListServerSecurityGroupsResponse struct {
 	// security_group列表
-	SecurityGroups []NovaSecurityGroup `json:"security_groups,omitempty"`
+	SecurityGroups *[]NovaSecurityGroup `json:"security_groups,omitempty"`
 }
 
 func (o NovaListServerSecurityGroupsResponse) String() string {

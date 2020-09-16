@@ -16,7 +16,7 @@ import (
 // Response Object
 type ShowAlarmResponse struct {
 	//
-	MetricAlarms []MetricAlarms `json:"metric_alarms,omitempty"`
+	MetricAlarms *[]MetricAlarms `json:"metric_alarms,omitempty"`
 }
 
 func (o ShowAlarmResponse) String() string {

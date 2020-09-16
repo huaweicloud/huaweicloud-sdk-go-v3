@@ -28,7 +28,7 @@ type Vault struct {
 	// 存储库资源
 	Resources []ResourceResp `json:"resources"`
 	// 存储库标签
-	Tags []Tag `json:"tags,omitempty"`
+	Tags *[]Tag `json:"tags,omitempty"`
 	// 企业项目id，默认为‘0’。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 是否自动绑定，默认为false，不支持。

@@ -15,7 +15,7 @@ import (
 
 type StartPipelineParameters struct {
 	// 启动流水线时的构建参数
-	BuildParams []StartPipelineBuildParams `json:"build_params,omitempty"`
+	BuildParams *[]StartPipelineBuildParams `json:"build_params,omitempty"`
 }
 
 func (o StartPipelineParameters) String() string {

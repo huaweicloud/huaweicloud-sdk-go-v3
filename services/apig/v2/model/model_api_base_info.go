@@ -49,7 +49,7 @@ type ApiBaseInfo struct {
 	// 前端自定义认证对象的ID
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
 	// 标签。  支持英文，数字，下划线，且只能以英文开头。支持输入多个标签，不同标签以英文逗号分割。
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 	// 分组自定义响应ID
 	ResponseId *string `json:"response_id,omitempty"`
 	// 集成应用ID  暂不支持

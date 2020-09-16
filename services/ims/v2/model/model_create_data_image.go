@@ -22,7 +22,7 @@ type CreateDataImage struct {
 	// 数据盘描述。
 	Description *string `json:"description,omitempty"`
 	// 数据盘镜像标签。
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 }
 
 func (o CreateDataImage) String() string {

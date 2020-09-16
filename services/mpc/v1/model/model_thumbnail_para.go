@@ -26,7 +26,7 @@ type ThumbnailPara struct {
 	// 采样类型为“TIME”模式的持续时间，和“time”、“start_time”配合使用，表示从视频文件的第“start_time”开始，持续时间为“duration”，每间隔“time”生成一张截图。 取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值： ToEND。  单位：秒。 > “duration”必须大于等0，若设置为0，则截图持续时间从“start_time”到视频结束。
 	Duration *int32 `json:"duration,omitempty"`
 	// 指定时间截图时的时间点数组。
-	Dots []int32 `json:"dots,omitempty"`
+	Dots *[]int32 `json:"dots,omitempty"`
 	// 截图输出文件名。  - 如果只抽一张图（即：按DOTS方式，指定1个时间点）则按该指定文件名输出图片。  - 如果抽多张图（即：按DOTS方式指定多个时间点或按TIME间隔截图）则输出图片名在该指定文件名基础上在增加时间点（示例：output_filename_10.jpg）。  - 如果指定了压缩抽帧图片生成tar包，则tar包按该指定文件名输出。
 	OutputFilename *string `json:"output_filename,omitempty"`
 	// 截图文件格式。  取值如下：  1：表示jpg格式

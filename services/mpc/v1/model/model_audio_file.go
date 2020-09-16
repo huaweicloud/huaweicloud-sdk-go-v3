@@ -15,8 +15,8 @@ import (
 
 type AudioFile struct {
 	// 音轨信息
-	TracksInfo []TracksInfo `json:"tracks_info,omitempty"`
-	Input      *ObsObjInfo  `json:"input,omitempty"`
+	TracksInfo *[]TracksInfo `json:"tracks_info,omitempty"`
+	Input      *ObsObjInfo   `json:"input,omitempty"`
 }
 
 func (o AudioFile) String() string {

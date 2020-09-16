@@ -15,7 +15,7 @@ import (
 
 type ShowProjectWorkHoursRequestBody struct {
 	// 查询的用户id列表
-	UserIds []string `json:"user_ids,omitempty"`
+	UserIds *[]string `json:"user_ids,omitempty"`
 	// 工时类型，以逗号分隔,21:研发设计,22:后端开发,23:前端开发(Web),24:前端开发(小程序),25:前端开发(App),26:测试验证,27:缺陷修复,28:UI设计,29:会议,30:公共事务,31:培训,32:研究,33:其它,34:调休请假
 	WorkHoursTypes *string `json:"work_hours_types,omitempty"`
 	// 工时日期，以逗号分隔，年-月-日

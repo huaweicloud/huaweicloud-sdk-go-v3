@@ -15,7 +15,7 @@ import (
 
 type Quotas struct {
 	// 资源配额列表，详情请参见Resources
-	Resources []Resources `json:"resources,omitempty"`
+	Resources *[]Resources `json:"resources,omitempty"`
 }
 
 func (o Quotas) String() string {

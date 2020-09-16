@@ -16,7 +16,7 @@ import (
 // Response Object
 type BatchListMetricDataResponse struct {
 	//
-	Metrics []BatchMetricData `json:"metrics,omitempty"`
+	Metrics *[]BatchMetricData `json:"metrics,omitempty"`
 }
 
 func (o BatchListMetricDataResponse) String() string {

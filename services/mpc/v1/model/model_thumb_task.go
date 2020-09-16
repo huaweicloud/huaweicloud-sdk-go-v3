@@ -30,7 +30,7 @@ type ThumbTask struct {
 	// 任务描述。
 	Description *string `json:"description,omitempty"`
 	// 截图文件信息。
-	ThumbnailInfo []PicInfo `json:"thumbnail_info,omitempty"`
+	ThumbnailInfo *[]PicInfo `json:"thumbnail_info,omitempty"`
 }
 
 func (o ThumbTask) String() string {

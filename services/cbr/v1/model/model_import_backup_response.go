@@ -16,7 +16,7 @@ import (
 // Response Object
 type ImportBackupResponse struct {
 	// 同步备份副本接口的返回信息
-	Sync []BackupSyncRespBody `json:"sync,omitempty"`
+	Sync *[]BackupSyncRespBody `json:"sync,omitempty"`
 }
 
 func (o ImportBackupResponse) String() string {

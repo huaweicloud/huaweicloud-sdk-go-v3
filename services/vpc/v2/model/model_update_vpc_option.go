@@ -22,7 +22,7 @@ type UpdateVpcOption struct {
 	// 功能说明：虚拟私有云下可用子网的范围  取值范围：  - 10.0.0.0/8 ~ 10.255.255.240/28 - 172.16.0.0/12 ~ 172.31.255.240/28 - 192.168.0.0/16 ~ 192.168.255.240/28  约束：必须是ipv4 cidr格式，例如：192.168.0.0/16
 	Cidr *string `json:"cidr,omitempty"`
 	// 功能说明：路由信息列表，详情参见route对象
-	Routes []Route `json:"routes,omitempty"`
+	Routes *[]Route `json:"routes,omitempty"`
 }
 
 func (o UpdateVpcOption) String() string {

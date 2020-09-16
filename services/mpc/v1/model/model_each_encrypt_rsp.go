@@ -25,7 +25,7 @@ type EachEncryptRsp struct {
 	Input   *ObsObjInfo `json:"input,omitempty"`
 	Output  *ObsObjInfo `json:"output,omitempty"`
 	// 加密生成的文件名，数组类型，可能包含多个，包含加密文件名。
-	OutputFileName []string `json:"output_file_name,omitempty"`
+	OutputFileName *[]string `json:"output_file_name,omitempty"`
 	// 加密任务描述，当加密出现异常时，此字段为异常的原因。
 	Description *string `json:"description,omitempty"`
 }

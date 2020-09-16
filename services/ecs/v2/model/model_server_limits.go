@@ -66,7 +66,7 @@ type ServerLimits struct {
 	// 当前竞价实例的内存使用容量（单位：MB）。
 	TotalSpotRAMUsed *int32 `json:"totalSpotRAMUsed,omitempty"`
 	// 使用该flavor可以申请的弹性云服务器数量。  值为“-1”时，表示无数量限制。
-	LimitByFlavor []ProjectFlavorLimit `json:"limit_by_flavor,omitempty"`
+	LimitByFlavor *[]ProjectFlavorLimit `json:"limit_by_flavor,omitempty"`
 }
 
 func (o ServerLimits) String() string {

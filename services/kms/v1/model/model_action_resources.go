@@ -20,7 +20,7 @@ type ActionResources struct {
 	// 资源名称，默认为空字符串。
 	ResourceName *string `json:"resource_name,omitempty"`
 	// 标签列表，没有标签，数组默认为空。
-	Tags []TagItem `json:"tags,omitempty"`
+	Tags *[]TagItem `json:"tags,omitempty"`
 }
 
 func (o ActionResources) String() string {

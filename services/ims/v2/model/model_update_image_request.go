@@ -15,8 +15,8 @@ import (
 
 // Request Object
 type UpdateImageRequest struct {
-	ImageId string                   `json:"image_id"`
-	Body    []UpdateImageRequestBody `json:"body,omitempty"`
+	ImageId string                    `json:"image_id"`
+	Body    *[]UpdateImageRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateImageRequest) String() string {

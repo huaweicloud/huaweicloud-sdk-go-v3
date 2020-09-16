@@ -16,7 +16,7 @@ import (
 // Response Object
 type GlanceListImageMemberSchemasResponse struct {
 	// 视图链接。
-	Links []Links `json:"links,omitempty"`
+	Links *[]Links `json:"links,omitempty"`
 	// 视图名称。
 	Name *string `json:"name,omitempty"`
 	// 镜像属性说明，主要是对基础属性的说明，包含每个属性的取值类型，用途。

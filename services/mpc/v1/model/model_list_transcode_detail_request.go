@@ -15,7 +15,7 @@ import (
 
 // Request Object
 type ListTranscodeDetailRequest struct {
-	TaskId []string `json:"task_id,omitempty"`
+	TaskId *[]string `json:"task_id,omitempty"`
 }
 
 func (o ListTranscodeDetailRequest) String() string {

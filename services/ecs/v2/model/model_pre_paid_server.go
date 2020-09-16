@@ -38,9 +38,9 @@ type PrePaidServer struct {
 	IsAutoRename *bool                    `json:"isAutoRename,omitempty"`
 	RootVolume   *PrePaidServerRootVolume `json:"root_volume"`
 	// 云服务器对应数据盘相关配置。每一个数据结构代表一块待创建的数据盘。   约束：目前新创建的弹性云服务器最多可挂载23块数据盘。
-	DataVolumes []PrePaidServerDataVolume `json:"data_volumes,omitempty"`
+	DataVolumes *[]PrePaidServerDataVolume `json:"data_volumes,omitempty"`
 	// 云服务器对应安全组信息。  约束：当该值指定为空时，默认给云服务器绑定default安全组。
-	SecurityGroups []PrePaidServerSecurityGroup `json:"security_groups,omitempty"`
+	SecurityGroups *[]PrePaidServerSecurityGroup `json:"security_groups,omitempty"`
 	// 待创建云服务器所在的可用分区，需要指定可用分区（AZ）的名称。  请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
 	AvailabilityZone string                    `json:"availability_zone"`
 	Extendparam      *PrePaidServerExtendParam `json:"extendparam,omitempty"`
@@ -48,9 +48,9 @@ type PrePaidServer struct {
 	Metadata         map[string]string            `json:"metadata,omitempty"`
 	OsschedulerHints *PrePaidServerSchedulerHints `json:"os:scheduler_hints,omitempty"`
 	// 弹性云服务器的标签。  标签的格式为“key.value”。其中，key的长度不超过36个字符，value的长度不超过43个字符。  标签命名时，需满足如下要求：  - 标签的key值只能包含大写字母（A~Z）、小写字母（a~z）、数字（0-9）、下划线（_）、中划线（-）以及中文字符。 - 标签的value值只能包含大写字母（A~Z）、小写字母（a~z）、数字（0-9）、下划线（_）、中划线（-）、小数点（.）以及中文字符。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 	// 弹性云服务器的标签。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
-	ServerTags []PrePaidServerTag `json:"server_tags,omitempty"`
+	ServerTags *[]PrePaidServerTag `json:"server_tags,omitempty"`
 	// 云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
 	Description *string `json:"description,omitempty"`
 }

@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListUserMfaDevicesResponse struct {
 	// 虚拟MFA设备信息列表。
-	VirtualMfaDevices []MfaDeviceResult `json:"virtual_mfa_devices,omitempty"`
+	VirtualMfaDevices *[]MfaDeviceResult `json:"virtual_mfa_devices,omitempty"`
 }
 
 func (o ListUserMfaDevicesResponse) String() string {

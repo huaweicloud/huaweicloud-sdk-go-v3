@@ -20,7 +20,7 @@ type ListEnvironmentVariablesV2Response struct {
 	// 本次返回的列表长度
 	Size *int32 `json:"size,omitempty"`
 	// 本次返回的环境变量列表
-	Variables []EnvVariableResp `json:"variables,omitempty"`
+	Variables *[]EnvVariableResp `json:"variables,omitempty"`
 }
 
 func (o ListEnvironmentVariablesV2Response) String() string {

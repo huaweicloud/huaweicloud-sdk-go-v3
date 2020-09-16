@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListPermanentAccessKeysResponse struct {
 	// 认证结果信息列表。
-	Credentials []Credentials `json:"credentials,omitempty"`
+	Credentials *[]Credentials `json:"credentials,omitempty"`
 }
 
 func (o ListPermanentAccessKeysResponse) String() string {

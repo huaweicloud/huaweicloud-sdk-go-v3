@@ -19,7 +19,7 @@ type ListCertificatesResponse struct {
 	RequestId *string   `json:"request_id,omitempty"`
 	PageInfo  *PageInfo `json:"page_info,omitempty"`
 	// 证书对象列表。
-	Certificates []Certificate `json:"certificates,omitempty"`
+	Certificates *[]Certificate `json:"certificates,omitempty"`
 }
 
 func (o ListCertificatesResponse) String() string {

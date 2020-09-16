@@ -20,7 +20,7 @@ type ListRequestThrottlingPoliciesBindedToApiV2Response struct {
 	// 本次查询返回的列表长度
 	Size *int32 `json:"size,omitempty"`
 	// 本次查询返回的流控策略列表
-	Throttles []ThrottleBindingThrottleResp `json:"throttles,omitempty"`
+	Throttles *[]ThrottleBindingThrottleResp `json:"throttles,omitempty"`
 }
 
 func (o ListRequestThrottlingPoliciesBindedToApiV2Response) String() string {

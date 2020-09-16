@@ -24,7 +24,7 @@ type VaultCreate struct {
 	// 绑定的备份资源，未在创建时绑定资源填[]
 	Resources []ResourceCreate `json:"resources"`
 	// 标签列表 tags不允许为空列表。 tags中最多包含10个key。 tags中key不允许重复。
-	Tags []Tag `json:"tags,omitempty"`
+	Tags *[]Tag `json:"tags,omitempty"`
 	// 企业项目ID，默认为‘0’。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 是否支持自动挂载。

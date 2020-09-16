@@ -20,9 +20,9 @@ type LoadBalancerListenerStatus struct {
 	// provisioning状态。 可以为ACTIVE、PENDING_CREATE 或者ERROR。
 	ProvisioningStatus *string `json:"provisioning_status,omitempty"`
 	// 挂载在监听器下的后端主机组。
-	Pools []LoadBalancerPoolStatus `json:"pools,omitempty"`
+	Pools *[]LoadBalancerPoolStatus `json:"pools,omitempty"`
 	// 7层转发策略
-	L7policies []LoadBalancerPolicyStatus `json:"l7policies,omitempty"`
+	L7policies *[]LoadBalancerPolicyStatus `json:"l7policies,omitempty"`
 	// 监听器ID。
 	Id *string `json:"id,omitempty"`
 	// 操作状态。 可以为：ONLINE、OFFLINE、DEGRADED、DISABLED或NO_MONITOR。说明：该字段为预留字段，暂未启用，默认为ONLINE。

@@ -1,3 +1,20 @@
+## 0.0.12.1-beta 2020-09-16
+## HuaweiCloud SDK ECS
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix parameter type of interfaces.
+ - ### Change
+    - None
+
+## HuaweiCloud SDK All
+ - ### Features
+    - None
+ - ### Bug Fix
+    - None
+ - ### Change
+    - When the optional parameter type is list, the parameter type will be changed to a pointer, for example, []string to *[]string
+
 ## 0.0.12-beta 2020-09-11
 ## HuaweiCloud SDK KPS
  - ### Features

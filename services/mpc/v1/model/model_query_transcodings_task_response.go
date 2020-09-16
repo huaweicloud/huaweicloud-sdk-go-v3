@@ -24,11 +24,11 @@ type QueryTranscodingsTaskResponse struct {
 	// 转码任务结束时间
 	EndTime *string `json:"end_time,omitempty"`
 	// 转码任务对应的转码模板ID
-	TransTemplateId []int32     `json:"trans_template_id,omitempty"`
+	TransTemplateId *[]int32    `json:"trans_template_id,omitempty"`
 	Input           *ObsObjInfo `json:"input,omitempty"`
 	Output          *ObsObjInfo `json:"output,omitempty"`
 	// 转码生成的文件名，数组类型，可能包含多个，包含截图文件名。
-	OutputFileName []string `json:"output_file_name,omitempty"`
+	OutputFileName *[]string `json:"output_file_name,omitempty"`
 	// 转码任务的返回码。
 	ErrorCode *string `json:"error_code,omitempty"`
 	// 转码任务描述，当转码出现异常时，此字段为异常的原因。
@@ -42,7 +42,7 @@ type QueryTranscodingsTaskResponse struct {
 	// 截图压缩包名。
 	ThumbnailOutputname *string `json:"thumbnail_outputname,omitempty"`
 	// 截图文件信息。
-	PicInfo     []PicInfo    `json:"pic_info,omitempty"`
+	PicInfo     *[]PicInfo   `json:"pic_info,omitempty"`
 	AuditReport *AuditReport `json:"audit_report,omitempty"`
 }
 

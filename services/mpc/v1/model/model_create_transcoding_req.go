@@ -17,13 +17,13 @@ type CreateTranscodingReq struct {
 	Input  *ObsObjInfo `json:"input,omitempty"`
 	Output *ObsObjInfo `json:"output,omitempty"`
 	// 转码模板ID，数组，每一路转码输出对应一个转码配置模板ID，最多支持9个模板ID。  多个转码模板中如下参数可变，其他都必须一致：  - 视频bitrate，height，width。
-	TransTemplateId []int32 `json:"trans_template_id,omitempty"`
+	TransTemplateId *[]int32 `json:"trans_template_id,omitempty"`
 	// 输出文件名称，每一路转码输出对应一个名称，需要与转码模板ID数组的顺序对应。  - 若设置该参数，表示输出文件按该参数命名。 - 若不设置该参数，表示输出文件按默认方式命名。
-	OutputFilenames []string `json:"output_filenames,omitempty"`
+	OutputFilenames *[]string `json:"output_filenames,omitempty"`
 	// 图片水印参数，数组，最多支持20个成员。
-	Watermarks       []WatermarkRequest `json:"watermarks,omitempty"`
-	Thumbnail        *Thumbnail         `json:"thumbnail,omitempty"`
-	DigitalWatermark *DigitalWatermark  `json:"digital_watermark,omitempty"`
+	Watermarks       *[]WatermarkRequest `json:"watermarks,omitempty"`
+	Thumbnail        *Thumbnail          `json:"thumbnail,omitempty"`
+	DigitalWatermark *DigitalWatermark   `json:"digital_watermark,omitempty"`
 	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 	// 项目ID
@@ -50,7 +50,7 @@ type CreateTranscodingReq struct {
 	QualityEnhance *QualityEnhance `json:"quality_enhance,omitempty"`
 	SystemProcess  *SystemProcess  `json:"system_process,omitempty"`
 	// 转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码。
-	AvParameters []AvParameters `json:"av_parameters,omitempty"`
+	AvParameters *[]AvParameters `json:"av_parameters,omitempty"`
 }
 
 func (o CreateTranscodingReq) String() string {

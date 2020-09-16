@@ -21,7 +21,7 @@ type RunningTasks struct {
 	// 操作类型。 - FAILED_RESET 重置 - FAILED_REPLACE 替换 - FAILED_UNBIND 解绑
 	OperateType *RunningTasksOperateType `json:"operate_type,omitempty"`
 	// 任务时间
-	TaskTime *string `json:"task_time,omitempty"`
+	TaskTime *int64 `json:"task_time,omitempty"`
 	// 虚拟机名称
 	ServerName *string `json:"server_name,omitempty"`
 	// 虚拟机ID

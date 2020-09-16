@@ -30,7 +30,7 @@ type InstanceParam struct {
 	// 场景标签
 	LabelTag *string `json:"label_tag,omitempty"`
 	// 场景插件列表
-	PluginEnableList []string `json:"plugin_enable_list,omitempty"`
+	PluginEnableList *[]string `json:"plugin_enable_list,omitempty"`
 	// 场景插件参数
 	PluginVars map[string]string `json:"plugin_vars,omitempty"`
 	// PVC规格 5GB|10GB|20GB

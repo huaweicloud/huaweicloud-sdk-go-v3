@@ -19,7 +19,7 @@ type OpExtendInfoRemoveResources struct {
 	// 删除的备份数量
 	TotalCount *int32 `json:"total_count,omitempty"`
 	//
-	Resources []Resource `json:"resources,omitempty"`
+	Resources *[]Resource `json:"resources,omitempty"`
 }
 
 func (o OpExtendInfoRemoveResources) String() string {

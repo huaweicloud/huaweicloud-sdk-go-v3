@@ -27,7 +27,7 @@ type BatchBandwidthResp struct {
 	// 功能说明：带宽名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
 	Name *string `json:"name,omitempty"`
 	// 功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
-	PublicipInfo []PublicipInfoResp `json:"publicip_info,omitempty"`
+	PublicipInfo *[]PublicipInfoResp `json:"publicip_info,omitempty"`
 	// 功能说明：带宽类型，标识是否是共享带宽  取值范围：WHOLE，PER  WHOLE表示共享带宽；PER，表示独享带宽
 	ShareType *BatchBandwidthRespShareType `json:"share_type,omitempty"`
 	// 功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。

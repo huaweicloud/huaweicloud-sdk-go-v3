@@ -16,7 +16,7 @@ import (
 // Response Object
 type ShowMembersDetailResponse struct {
 	// 添加备份共享成员响应信息
-	Members []Member `json:"members,omitempty"`
+	Members *[]Member `json:"members,omitempty"`
 }
 
 func (o ShowMembersDetailResponse) String() string {

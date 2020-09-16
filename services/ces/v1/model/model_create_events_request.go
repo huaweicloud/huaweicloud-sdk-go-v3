@@ -15,8 +15,8 @@ import (
 
 // Request Object
 type CreateEventsRequest struct {
-	ContentType string      `json:"Content-Type"`
-	Body        []EventItem `json:"body,omitempty"`
+	ContentType string       `json:"Content-Type"`
+	Body        *[]EventItem `json:"body,omitempty"`
 }
 
 func (o CreateEventsRequest) String() string {

@@ -16,7 +16,7 @@ import (
 // Response Object
 type ShowPublicipTagsResponse struct {
 	// 标签列表
-	Tags []ResourceTagResp `json:"tags,omitempty"`
+	Tags *[]ResourceTagResp `json:"tags,omitempty"`
 }
 
 func (o ShowPublicipTagsResponse) String() string {

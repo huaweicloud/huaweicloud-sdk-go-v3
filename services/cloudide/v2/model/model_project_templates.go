@@ -30,7 +30,7 @@ type ProjectTemplates struct {
 	Region *string        `json:"region,omitempty"`
 	Source *SourceStorage `json:"source,omitempty"`
 	// tags
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 	// 模板id
 	TemplateId *int64 `json:"template_id,omitempty"`
 }

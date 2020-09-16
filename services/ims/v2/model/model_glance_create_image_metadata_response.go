@@ -27,7 +27,7 @@ type GlanceCreateImageMetadataResponse struct {
 	// 镜像文件格式。目前支持vhd、zvhd、raw、qcow2。默认值是vhd。
 	DiskFormat *GlanceCreateImageMetadataResponseDiskFormat `json:"disk_format,omitempty"`
 	// 镜像标签列表。长度为1～255位。
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 	// 镜像运行最小内存，单位为MB。取值参考ECS规格限制，一般设置为0。云服务器的规格限制，请参见规格清单。
 	MinRam *int32 `json:"min_ram,omitempty"`
 	// 镜像运行需要的最小磁盘容量，单位为GB 。取值为40～1024GB。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。

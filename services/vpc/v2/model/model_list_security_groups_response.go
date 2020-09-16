@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListSecurityGroupsResponse struct {
 	// 安全组列表对象
-	SecurityGroups []SecurityGroup `json:"security_groups,omitempty"`
+	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
 }
 
 func (o ListSecurityGroupsResponse) String() string {

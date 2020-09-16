@@ -26,7 +26,7 @@ type BandWidthRules struct {
 	// 出网保障带宽大小，单位M bps。取值范围[0,x]，其中x为所属带宽剩余的保障额。
 	EgressGuarentedSize *int32 `json:"egress_guarented_size,omitempty"`
 	// 功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
-	PublicipInfo []PublicipInfoResp `json:"publicip_info,omitempty"`
+	PublicipInfo *[]PublicipInfoResp `json:"publicip_info,omitempty"`
 }
 
 func (o BandWidthRules) String() string {

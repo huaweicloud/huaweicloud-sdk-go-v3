@@ -17,19 +17,19 @@ import (
 // 创建镜像请求参数体
 type CreateImageRequestBody struct {
 	// 需要转换的数据盘信息，其中，当使用云服务器上的数据盘进行私有数据盘镜像创建时，该字段必选。 如果不是用于制作数据盘镜像，该字段默认为空。
-	DataImages []CreateDataImage `json:"data_images,omitempty"`
+	DataImages *[]CreateDataImage `json:"data_images,omitempty"`
 	// 镜像描述信息。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
 	Description *string `json:"description,omitempty"`
 	// 表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目。取值为UUID，表示属于该UUID对应的企业项目。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 新规范的镜像标签列表。默认为空。tags和image_tags只能使用一个。
-	ImageTags []TagKeyValue `json:"image_tags,omitempty"`
+	ImageTags *[]TagKeyValue `json:"image_tags,omitempty"`
 	// 需要转换的云服务器ID。使用instance_id字段，从云服务器制作私有镜像时，该字段填写云服务器ID。
 	InstanceId *string `json:"instance_id,omitempty"`
 	// 镜像名称
 	Name string `json:"name"`
 	// 镜像标签列表。默认为空。tags和image_tags只能使用一个。
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 	// 表示镜像支持的最大内存，单位为MB。
 	MaxRam *int32 `json:"max_ram,omitempty"`
 	// 表示镜像支持的最小内存，单位为MB，默认为0，表示不受限制。

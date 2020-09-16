@@ -16,7 +16,7 @@ import (
 // Response Object
 type ShowServerTagsResponse struct {
 	// 标签列表
-	Tags []ServerTag `json:"tags,omitempty"`
+	Tags *[]ServerTag `json:"tags,omitempty"`
 }
 
 func (o ShowServerTagsResponse) String() string {

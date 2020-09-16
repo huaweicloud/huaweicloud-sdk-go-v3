@@ -20,7 +20,7 @@ type ListAppsV2Response struct {
 	// 本次查询返回的列表长度
 	Size *int32 `json:"size,omitempty"`
 	// APP列表
-	Apps []AppInfoWithBindNumResp `json:"apps,omitempty"`
+	Apps *[]AppInfoWithBindNumResp `json:"apps,omitempty"`
 }
 
 func (o ListAppsV2Response) String() string {

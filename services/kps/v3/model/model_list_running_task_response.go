@@ -16,9 +16,9 @@ import (
 // Response Object
 type ListRunningTaskResponse struct {
 	// 正在处理的任务总数。
-	Total *interface{} `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty"`
 	// 正在处理的任务列表。
-	Tasks []RunningTasks `json:"tasks,omitempty"`
+	Tasks *[]RunningTasks `json:"tasks,omitempty"`
 }
 
 func (o ListRunningTaskResponse) String() string {

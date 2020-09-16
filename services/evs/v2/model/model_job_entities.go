@@ -24,7 +24,7 @@ type JobEntities struct {
 	// 云硬盘的名称。
 	Name *string `json:"name,omitempty"`
 	// 子Job的信息。当存在子Job信息时，entities中的其他字段将不会返回。
-	SubJobs []SubJob `json:"sub_jobs,omitempty"`
+	SubJobs *[]SubJob `json:"sub_jobs,omitempty"`
 }
 
 func (o JobEntities) String() string {

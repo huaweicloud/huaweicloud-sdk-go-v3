@@ -63,7 +63,7 @@ type PublicipShowResp struct {
 	// 默认不显示。该字段仅仅用于表示eip的bgp类型是否是真实的静态sbgp * 1. 如果为true，则该eip可以切换bgp类型 * 2. 如果为false，则该eip不可以切换bgp类型
 	FakeNetworkType *bool `json:"fake_network_type,omitempty"`
 	// 默认不显示。用户标签
-	Tags []TagsInfo `json:"tags,omitempty"`
+	Tags *[]TagsInfo `json:"tags,omitempty"`
 	// 默认不显示。记录实例的更上一层归属。例如associate_instance_type为PORT，此字段记录PORT的device_id和device_owner信息。仅有限场景记录。
 	AssociateInstanceMetadata *string `json:"associate_instance_metadata,omitempty"`
 }

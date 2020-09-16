@@ -27,11 +27,11 @@ type NovaCreateServersOption struct {
 	// 如果需要使用密码方式登录云服务器，可使用adminPass字段指定云服务器管理员帐户初始登录密码。其中，Linux管理员帐户为root，Windows管理员帐户为Administrator。
 	AdminPass *string `json:"adminPass,omitempty"`
 	// 扩展属性，指定弹性云服务器存储设备的v2接口。是存储资源的新版本接口，指定卷场景不能批创弹性云服务器。  裸金属服务器场景不支持。
-	BlockDeviceMappingV2 []NovaServerBlockDeviceMapping `json:"block_device_mapping_v2,omitempty"`
+	BlockDeviceMappingV2 *[]NovaServerBlockDeviceMapping `json:"block_device_mapping_v2,omitempty"`
 	// 扩展属性，开启后在弹性云服务器创建时挂载config_drive向弹性云服务器内部传递信息。  当前不支持该功能。
 	ConfigDrive *string `json:"config_drive,omitempty"`
 	// 扩展属性，指定弹性云服务器的安全组，默认为default。  指定network创建弹性云服务器时该字段有效。对于已存在端口，安全组请求无效。
-	SecurityGroups []NovaServerSecurityGroup `json:"security_groups,omitempty"`
+	SecurityGroups *[]NovaServerSecurityGroup `json:"security_groups,omitempty"`
 	// 扩展属性，指定弹性云服务器的网卡信息。有多个租户网络时必须指定。
 	Networks []NovaServerNetwork `json:"networks"`
 	// 扩展属性，指定keypair的名称。

@@ -19,7 +19,7 @@ type ListHealthMonitorsResponse struct {
 	RequestId *string   `json:"request_id,omitempty"`
 	PageInfo  *PageInfo `json:"page_info,omitempty"`
 	// 健康检查对象。
-	Healthmonitors []HealthMonitor `json:"healthmonitors,omitempty"`
+	Healthmonitors *[]HealthMonitor `json:"healthmonitors,omitempty"`
 }
 
 func (o ListHealthMonitorsResponse) String() string {

@@ -24,7 +24,7 @@ type LoadBalancerPolicyStatus struct {
 	// 策略名称。
 	Name *string `json:"name,omitempty"`
 	// 规则。
-	Rules []RuleRef `json:"rules,omitempty"`
+	Rules *[]RuleRef `json:"rules,omitempty"`
 }
 
 func (o LoadBalancerPolicyStatus) String() string {

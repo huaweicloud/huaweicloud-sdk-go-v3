@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListPoliciesResponse struct {
 	//
-	Policies []Policy `json:"policies,omitempty"`
+	Policies *[]Policy `json:"policies,omitempty"`
 }
 
 func (o ListPoliciesResponse) String() string {

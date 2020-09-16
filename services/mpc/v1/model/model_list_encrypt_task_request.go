@@ -16,7 +16,7 @@ import (
 
 // Request Object
 type ListEncryptTaskRequest struct {
-	TaskId    []string                      `json:"task_id,omitempty"`
+	TaskId    *[]string                     `json:"task_id,omitempty"`
 	Status    *ListEncryptTaskRequestStatus `json:"status,omitempty"`
 	StartTime *string                       `json:"start_time,omitempty"`
 	EndTime   *string                       `json:"end_time,omitempty"`

@@ -16,8 +16,8 @@ import (
 // Response Object
 type ListAllProjectsPermissionsForAgencyResponse struct {
 	// 权限信息列表。
-	Roles []AgencyAllProjectRole `json:"roles,omitempty"`
-	Links *LinksSelf             `json:"links,omitempty"`
+	Roles *[]AgencyAllProjectRole `json:"roles,omitempty"`
+	Links *LinksSelf              `json:"links,omitempty"`
 }
 
 func (o ListAllProjectsPermissionsForAgencyResponse) String() string {

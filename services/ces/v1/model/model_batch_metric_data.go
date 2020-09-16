@@ -24,7 +24,7 @@ type BatchMetricData struct {
 	// 指标名称，例如弹性云服务器监控指标中的cpu_util。
 	MetricName string `json:"metric_name"`
 	// 指标维度列表
-	Dimensions []MetricsDimension `json:"dimensions,omitempty"`
+	Dimensions *[]MetricsDimension `json:"dimensions,omitempty"`
 }
 
 func (o BatchMetricData) String() string {

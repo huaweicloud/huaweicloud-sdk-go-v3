@@ -16,8 +16,8 @@ import (
 // Response Object
 type ListAlarmsResponse struct {
 	//
-	MetricAlarms []MetricAlarms `json:"metric_alarms,omitempty"`
-	MetaData     *MetaData      `json:"meta_data,omitempty"`
+	MetricAlarms *[]MetricAlarms `json:"metric_alarms,omitempty"`
+	MetaData     *MetaData       `json:"meta_data,omitempty"`
 }
 
 func (o ListAlarmsResponse) String() string {

@@ -15,7 +15,7 @@ import (
 
 // Response Object
 type ListOsVersionsResponse struct {
-	Body []ListOsVersionsResponseBody `json:"body,omitempty"`
+	Body *[]ListOsVersionsResponseBody `json:"body,omitempty"`
 }
 
 func (o ListOsVersionsResponse) String() string {

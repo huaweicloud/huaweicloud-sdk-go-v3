@@ -51,7 +51,7 @@ type ShowDetailsOfApiV2Response struct {
 	// 前端自定义认证对象的ID
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
 	// 标签。  支持英文，数字，下划线，且只能以英文开头。支持输入多个标签，不同标签以英文逗号分割。
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 	// 分组自定义响应ID
 	ResponseId *string `json:"response_id,omitempty"`
 	// 集成应用ID  暂不支持
@@ -83,16 +83,16 @@ type ShowDetailsOfApiV2Response struct {
 	FuncInfo  *ApiFunc `json:"func_info,omitempty"`
 	MockInfo  *ApiMock `json:"mock_info,omitempty"`
 	// API的请求参数列表
-	ReqParams []ReqParam `json:"req_params,omitempty"`
+	ReqParams *[]ReqParam `json:"req_params,omitempty"`
 	// API的后端参数列表
-	BackendParams []BackendParam `json:"backend_params,omitempty"`
+	BackendParams *[]BackendParam `json:"backend_params,omitempty"`
 	// 函数工作流策略后端列表
-	PolicyFunctions []ApiPolicyFunctionResp `json:"policy_functions,omitempty"`
+	PolicyFunctions *[]ApiPolicyFunctionResp `json:"policy_functions,omitempty"`
 	// mock策略后端列表
-	PolicyMocks []ApiPolicyMockResp `json:"policy_mocks,omitempty"`
-	BackendApi  *BackendApi         `json:"backend_api,omitempty"`
+	PolicyMocks *[]ApiPolicyMockResp `json:"policy_mocks,omitempty"`
+	BackendApi  *BackendApi          `json:"backend_api,omitempty"`
 	// web策略后端列表
-	PolicyHttps []ApiPolicyHttpResp `json:"policy_https,omitempty"`
+	PolicyHttps *[]ApiPolicyHttpResp `json:"policy_https,omitempty"`
 }
 
 func (o ShowDetailsOfApiV2Response) String() string {

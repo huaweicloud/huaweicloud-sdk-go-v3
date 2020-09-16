@@ -18,8 +18,8 @@ type ListWatermarkTemplateResponse struct {
 	// 水印模板总数。
 	Total *int32 `json:"total,omitempty"`
 	// 水印模板
-	Templates []WatermarkTemplate `json:"templates,omitempty"`
-	Error     *XCodeError         `json:"error,omitempty"`
+	Templates *[]WatermarkTemplate `json:"templates,omitempty"`
+	Error     *XCodeError          `json:"error,omitempty"`
 }
 
 func (o ListWatermarkTemplateResponse) String() string {

@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListProjectsV4Response struct {
 	// 项目信息列表
-	Projects []ListProjectsV4ResponseBodyProjects `json:"projects,omitempty"`
+	Projects *[]ListProjectsV4ResponseBodyProjects `json:"projects,omitempty"`
 	// 项目总数
 	Total *int32 `json:"total,omitempty"`
 }

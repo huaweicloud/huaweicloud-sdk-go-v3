@@ -19,13 +19,13 @@ type CreateWholeImageRequestBody struct {
 	// 表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目。取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 新规范的镜像标签列表。默认为空。tags和image_tags只能使用一个。
-	ImageTags []TagKeyValue `json:"image_tags,omitempty"`
+	ImageTags *[]TagKeyValue `json:"image_tags,omitempty"`
 	// 弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
 	InstanceId *string `json:"instance_id,omitempty"`
 	// 镜像名称。 名称的首尾字母不能为空格。 名称的长度至为1～128位。 名称包含以下4种字符： 大写字母 小写字母 数字 特殊字符包含-、.、_、空格和中文。
 	Name string `json:"name"`
 	// 镜像标签列表。tags和image_tags只能使用一个。
-	Tags []string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty"`
 	// 使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
 	BackupId *string `json:"backup_id,omitempty"`
 	// 使用备份创建整机镜像时，该字段区分是CBR服务的备份还是CSBS服务的备份，取值为：CBR/CSBS。 使用ECS创建整机镜像时，该字段不填

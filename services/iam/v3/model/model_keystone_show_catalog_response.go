@@ -16,7 +16,7 @@ import (
 // Response Object
 type KeystoneShowCatalogResponse struct {
 	// 服务目录信息列表。
-	Catalog []Catalog  `json:"catalog,omitempty"`
+	Catalog *[]Catalog `json:"catalog,omitempty"`
 	Links   *LinksSelf `json:"links,omitempty"`
 }
 
