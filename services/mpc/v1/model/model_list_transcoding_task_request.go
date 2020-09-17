@@ -15,7 +15,7 @@ import (
 
 // Request Object
 type ListTranscodingTaskRequest struct {
-	TaskId    *[]int64 `json:"task_id,omitempty"`
+	TaskId    *[]string `json:"task_id,omitempty"`
 	Status    *string  `json:"status,omitempty"`
 	StartTime *string  `json:"start_time,omitempty"`
 	EndTime   *string  `json:"end_time,omitempty"`
