@@ -1,3 +1,53 @@
+## 0.0.13-beta 2020-09-16
+## HuaweiCloud SDK ECS
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix parameter type of interfaces.
+ - ### Change
+    - None
+
+## HuaweiCloud SDK BSS
+ - ### Features
+    - None
+ - ### Bug Fix
+    - None
+ - ### Change
+    - Update interfaces.
+
+## HuaweiCloud SDK EIP
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix the problem that not support transfer multiple values.
+ - ### Change
+    - None
+
+## HuaweiCloud SDK ELB
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix the problem that some parameters are wrong.
+ - ### Change
+    - None
+
+## HuaweiCloud SDK IMS
+ - ### Features
+    - None
+ - ### Bug Fix
+    - None
+ - ### Change
+    - Adjust descriptions of interfaces.
+
+## HuaweiCloud SDK Live
+ - ### Features
+    - None
+ - ### Bug Fix
+    - None
+ - ### Change
+    - Adjust descriptions of banned interface.
+
+
 ## 0.0.12.1-beta 2020-09-16
 ## HuaweiCloud SDK ECS
  - ### Features

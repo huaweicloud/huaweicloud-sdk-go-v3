@@ -30,7 +30,7 @@ type ImageInfo struct {
 	ImageSourceType ImageInfoImageSourceType `json:"__image_source_type"`
 	// 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
 	Imagetype ImageInfoImagetype `json:"__imagetype"`
-	// 是否完成了初始化配置。取值为true或false。如果用户确定完成了初始化配置，则可以设置为true，否            则设置为false。默认为false。
+	// 是否完成了初始化配置。取值为true或false。如果用户确定完成了初始化配置，则可以设置为true，否则设置为false。默认为false。
 	IsConfigInit ImageInfoIsConfigInit `json:"__is_config_init"`
 	// 是否是注册过的镜像，取值为“true”或者“false”
 	Isregistered ImageInfoIsregistered `json:"__isregistered"`
@@ -72,13 +72,9 @@ type ImageInfo struct {
 	ContainerFormat string `json:"container_format"`
 	// 创建时间。格式为UTC时间
 	CreatedAt string `json:"created_at"`
-	// 是否是删除的镜像，取值为true或者false
-	Deleted *bool `json:"deleted,omitempty"`
-	// 删除时间。格式为UTC时间
-	DeletedAt *string `json:"deleted_at,omitempty"`
 	// 镜像的格式，目前支持vhd，zvhd、raw，qcow2。默认值是vhd
 	DiskFormat *string `json:"disk_format,omitempty"`
-	// 表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目，取值为UUID，表示属于             该UUID对应的企业项目。
+	// 表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目，取值为UUID，表示属于该UUID对应的企业项目。
 	EnterpriseProjectId string `json:"enterprise_project_id"`
 	// 镜像文件下载和上传链接
 	File *string `json:"file,omitempty"`
@@ -120,6 +116,16 @@ type ImageInfo struct {
 	HwFirmwareType *ImageInfoHwFirmwareType `json:"hw_firmware_type,omitempty"`
 	// 是否是ARM架构类型的镜像，取值为“true”或者“false”。
 	SupportArm *ImageInfoSupportArm `json:"__support_arm,omitempty"`
+	// 镜像支持的最大内存，单位为MB。取值可以参考云服务器规格限制，一般不设置。
+	MaxRam *string `json:"max_ram,omitempty"`
+	// 加密镜像所使用的密钥ID。
+	SystemCmkid *string `json:"__system__cmkid,omitempty"`
+	// 镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
+	OsFeatureList *string `json:"__os_feature_list,omitempty"`
+	// 收费镜像标识。
+	AccountCode *string `json:"__account_code,omitempty"`
+	// 镜像是否支持网卡多队列。取值为“true”或者“false”。
+	HwVifMultiqueueEnabled *string `json:"hw_vif_multiqueue_enabled,omitempty"`
 }
 
 func (o ImageInfo) String() string {
@@ -379,7 +385,7 @@ type ImageInfoPlatformEnum struct {
 	FEDORA       ImageInfoPlatform
 	OTHER        ImageInfoPlatform
 	CORE_OS      ImageInfoPlatform
-	EULE_OS      ImageInfoPlatform
+	EULER_OS     ImageInfoPlatform
 }
 
 func GetImageInfoPlatformEnum() ImageInfoPlatformEnum {
@@ -417,8 +423,8 @@ func GetImageInfoPlatformEnum() ImageInfoPlatformEnum {
 		CORE_OS: ImageInfoPlatform{
 			value: "CoreOS",
 		},
-		EULE_OS: ImageInfoPlatform{
-			value: "EuleOS",
+		EULER_OS: ImageInfoPlatform{
+			value: "EulerOS",
 		},
 	}
 }

@@ -21,7 +21,7 @@ type StreamForbiddenSetting struct {
 	AppName string `json:"app_name"`
 	// 流名称
 	StreamName string `json:"stream_name"`
-	// 恢复流时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间，不指定则永久禁播
+	// 恢复流时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间，不指定则默认7天，最大禁推为90天
 	ResumeTime *sdktime.SdkTime `json:"resume_time,omitempty"`
 }
 
