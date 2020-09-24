@@ -244,34 +244,3 @@ func GenRespForShowPublicip() (*model.ShowPublicipResponse, *def.HttpResponseDef
 	responseDef := respDefBuilder.Build()
 	return resp, responseDef
 }
-
-func GenReqDefForUpdatePublicips(request *model.UpdatePublicipsRequest) *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v3/{project_id}/eip/publicips/{publicip_id}").
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("publicip_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenRespForUpdatePublicips() (*model.UpdatePublicipsResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdatePublicipsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}

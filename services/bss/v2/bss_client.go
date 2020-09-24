@@ -5,21 +5,21 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/bss/v2/model"
 )
 
-type CSBPartnerOpenAPIClient struct {
+type BssClient struct {
 	hcClient *http_client.HcHttpClient
 }
 
-func NewCSBPartnerOpenAPIClient(hcClient *http_client.HcHttpClient) *CSBPartnerOpenAPIClient {
-	return &CSBPartnerOpenAPIClient{hcClient: hcClient}
+func NewBssClient(hcClient *http_client.HcHttpClient) *BssClient {
+	return &BssClient{hcClient: hcClient}
 }
 
-func CSBPartnerOpenAPIClientBuilder() *http_client.HcHttpClientBuilder {
+func BssClientBuilder() *http_client.HcHttpClientBuilder {
 	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
 	return builder
 }
 
 //功能描述：设置包周期资源自动续费
-func (c *CSBPartnerOpenAPIClient) AutoRenewalResources(request *model.AutoRenewalResourcesRequest) (*model.AutoRenewalResourcesResponse, error) {
+func (c *BssClient) AutoRenewalResources(request *model.AutoRenewalResourcesRequest) (*model.AutoRenewalResourcesResponse, error) {
 	requestDef := GenReqDefForAutoRenewalResources(request)
 	resp, responseDef := GenRespForAutoRenewalResources()
 
@@ -31,7 +31,7 @@ func (c *CSBPartnerOpenAPIClient) AutoRenewalResources(request *model.AutoRenewa
 }
 
 //功能描述：设置伙伴折扣
-func (c *CSBPartnerOpenAPIClient) BatchSetSubCustomerDiscount(request *model.BatchSetSubCustomerDiscountRequest) (*model.BatchSetSubCustomerDiscountResponse, error) {
+func (c *BssClient) BatchSetSubCustomerDiscount(request *model.BatchSetSubCustomerDiscountRequest) (*model.BatchSetSubCustomerDiscountResponse, error) {
 	requestDef := GenReqDefForBatchSetSubCustomerDiscount(request)
 	resp, responseDef := GenRespForBatchSetSubCustomerDiscount()
 
@@ -43,7 +43,7 @@ func (c *CSBPartnerOpenAPIClient) BatchSetSubCustomerDiscount(request *model.Bat
 }
 
 //功能描述：取消包年/包月资源自动续费
-func (c *CSBPartnerOpenAPIClient) CancelAutoRenewalResources(request *model.CancelAutoRenewalResourcesRequest) (*model.CancelAutoRenewalResourcesResponse, error) {
+func (c *BssClient) CancelAutoRenewalResources(request *model.CancelAutoRenewalResourcesRequest) (*model.CancelAutoRenewalResourcesResponse, error) {
 	requestDef := GenReqDefForCancelAutoRenewalResources(request)
 	resp, responseDef := GenRespForCancelAutoRenewalResources()
 
@@ -55,7 +55,7 @@ func (c *CSBPartnerOpenAPIClient) CancelAutoRenewalResources(request *model.Canc
 }
 
 //功能描述：取消包周期订单
-func (c *CSBPartnerOpenAPIClient) CancelCustomerOrder(request *model.CancelCustomerOrderRequest) (*model.CancelCustomerOrderResponse, error) {
+func (c *BssClient) CancelCustomerOrder(request *model.CancelCustomerOrderRequest) (*model.CancelCustomerOrderResponse, error) {
 	requestDef := GenReqDefForCancelCustomerOrder(request)
 	resp, responseDef := GenRespForCancelCustomerOrder()
 
@@ -67,7 +67,7 @@ func (c *CSBPartnerOpenAPIClient) CancelCustomerOrder(request *model.CancelCusto
 }
 
 //功能描述：退订包周期资源
-func (c *CSBPartnerOpenAPIClient) CancelResourcesSubscription(request *model.CancelResourcesSubscriptionRequest) (*model.CancelResourcesSubscriptionResponse, error) {
+func (c *BssClient) CancelResourcesSubscription(request *model.CancelResourcesSubscriptionRequest) (*model.CancelResourcesSubscriptionResponse, error) {
 	requestDef := GenReqDefForCancelResourcesSubscription(request)
 	resp, responseDef := GenRespForCancelResourcesSubscription()
 
@@ -79,7 +79,7 @@ func (c *CSBPartnerOpenAPIClient) CancelResourcesSubscription(request *model.Can
 }
 
 //功能描述：实名认证变更申请
-func (c *CSBPartnerOpenAPIClient) ChangeEnterpriseRealnameAuthentication(request *model.ChangeEnterpriseRealnameAuthenticationRequest) (*model.ChangeEnterpriseRealnameAuthenticationResponse, error) {
+func (c *BssClient) ChangeEnterpriseRealnameAuthentication(request *model.ChangeEnterpriseRealnameAuthenticationRequest) (*model.ChangeEnterpriseRealnameAuthenticationResponse, error) {
 	requestDef := GenReqDefForChangeEnterpriseRealnameAuthentication(request)
 	resp, responseDef := GenRespForChangeEnterpriseRealnameAuthentication()
 
@@ -91,7 +91,7 @@ func (c *CSBPartnerOpenAPIClient) ChangeEnterpriseRealnameAuthentication(request
 }
 
 //功能描述：校验客户的注册信息
-func (c *CSBPartnerOpenAPIClient) CheckUserIdentity(request *model.CheckUserIdentityRequest) (*model.CheckUserIdentityResponse, error) {
+func (c *BssClient) CheckUserIdentity(request *model.CheckUserIdentityRequest) (*model.CheckUserIdentityResponse, error) {
 	requestDef := GenReqDefForCheckUserIdentity(request)
 	resp, responseDef := GenRespForCheckUserIdentity()
 
@@ -103,7 +103,7 @@ func (c *CSBPartnerOpenAPIClient) CheckUserIdentity(request *model.CheckUserIden
 }
 
 //功能描述：客户开通自身的企业项目功能
-func (c *CSBPartnerOpenAPIClient) CreateEnterpriseProjectAuth(request *model.CreateEnterpriseProjectAuthRequest) (*model.CreateEnterpriseProjectAuthResponse, error) {
+func (c *BssClient) CreateEnterpriseProjectAuth(request *model.CreateEnterpriseProjectAuthRequest) (*model.CreateEnterpriseProjectAuthResponse, error) {
 	requestDef := GenReqDefForCreateEnterpriseProjectAuth(request)
 	resp, responseDef := GenRespForCreateEnterpriseProjectAuth()
 
@@ -115,7 +115,7 @@ func (c *CSBPartnerOpenAPIClient) CreateEnterpriseProjectAuth(request *model.Cre
 }
 
 //功能描述：企业实名认证申请V2
-func (c *CSBPartnerOpenAPIClient) CreateEnterpriseRealnameAuthentication(request *model.CreateEnterpriseRealnameAuthenticationRequest) (*model.CreateEnterpriseRealnameAuthenticationResponse, error) {
+func (c *BssClient) CreateEnterpriseRealnameAuthentication(request *model.CreateEnterpriseRealnameAuthenticationRequest) (*model.CreateEnterpriseRealnameAuthenticationResponse, error) {
 	requestDef := GenReqDefForCreateEnterpriseRealnameAuthentication(request)
 	resp, responseDef := GenRespForCreateEnterpriseRealnameAuthentication()
 
@@ -127,7 +127,7 @@ func (c *CSBPartnerOpenAPIClient) CreateEnterpriseRealnameAuthentication(request
 }
 
 //功能描述：伙伴给子客户发券
-func (c *CSBPartnerOpenAPIClient) CreatePartnerCoupons(request *model.CreatePartnerCouponsRequest) (*model.CreatePartnerCouponsResponse, error) {
+func (c *BssClient) CreatePartnerCoupons(request *model.CreatePartnerCouponsRequest) (*model.CreatePartnerCouponsResponse, error) {
 	requestDef := GenReqDefForCreatePartnerCoupons(request)
 	resp, responseDef := GenRespForCreatePartnerCoupons()
 
@@ -139,7 +139,7 @@ func (c *CSBPartnerOpenAPIClient) CreatePartnerCoupons(request *model.CreatePart
 }
 
 //功能描述：个人实名认证申请
-func (c *CSBPartnerOpenAPIClient) CreatePersonalRealnameAuth(request *model.CreatePersonalRealnameAuthRequest) (*model.CreatePersonalRealnameAuthResponse, error) {
+func (c *BssClient) CreatePersonalRealnameAuth(request *model.CreatePersonalRealnameAuthRequest) (*model.CreatePersonalRealnameAuthResponse, error) {
 	requestDef := GenReqDefForCreatePersonalRealnameAuth(request)
 	resp, responseDef := GenRespForCreatePersonalRealnameAuth()
 
@@ -151,7 +151,7 @@ func (c *CSBPartnerOpenAPIClient) CreatePersonalRealnameAuth(request *model.Crea
 }
 
 //功能描述：新增邮寄地址
-func (c *CSBPartnerOpenAPIClient) CreatePostal(request *model.CreatePostalRequest) (*model.CreatePostalResponse, error) {
+func (c *BssClient) CreatePostal(request *model.CreatePostalRequest) (*model.CreatePostalResponse, error) {
 	requestDef := GenReqDefForCreatePostal(request)
 	resp, responseDef := GenRespForCreatePostal()
 
@@ -163,7 +163,7 @@ func (c *CSBPartnerOpenAPIClient) CreatePostal(request *model.CreatePostalReques
 }
 
 //功能描述：在伙伴销售平台创建客户时同步创建华为云账号，并将客户在伙伴销售平台上的账号与华为云账号进行映射。同时，创建的华为云账号与伙伴账号关联绑定。
-func (c *CSBPartnerOpenAPIClient) CreateSubCustomer(request *model.CreateSubCustomerRequest) (*model.CreateSubCustomerResponse, error) {
+func (c *BssClient) CreateSubCustomer(request *model.CreateSubCustomerRequest) (*model.CreateSubCustomerResponse, error) {
 	requestDef := GenReqDefForCreateSubCustomer(request)
 	resp, responseDef := GenRespForCreateSubCustomer()
 
@@ -175,7 +175,7 @@ func (c *CSBPartnerOpenAPIClient) CreateSubCustomer(request *model.CreateSubCust
 }
 
 //功能描述：创建企业子账号
-func (c *CSBPartnerOpenAPIClient) CreateSubEnterpriseAccount(request *model.CreateSubEnterpriseAccountRequest) (*model.CreateSubEnterpriseAccountResponse, error) {
+func (c *BssClient) CreateSubEnterpriseAccount(request *model.CreateSubEnterpriseAccountRequest) (*model.CreateSubEnterpriseAccountResponse, error) {
 	requestDef := GenReqDefForCreateSubEnterpriseAccount(request)
 	resp, responseDef := GenRespForCreateSubEnterpriseAccount()
 
@@ -187,7 +187,7 @@ func (c *CSBPartnerOpenAPIClient) CreateSubEnterpriseAccount(request *model.Crea
 }
 
 //功能描述：删除邮寄地址
-func (c *CSBPartnerOpenAPIClient) DeletePostal(request *model.DeletePostalRequest) (*model.DeletePostalResponse, error) {
+func (c *BssClient) DeletePostal(request *model.DeletePostalRequest) (*model.DeletePostalResponse, error) {
 	requestDef := GenReqDefForDeletePostal(request)
 	resp, responseDef := GenRespForDeletePostal()
 
@@ -199,7 +199,7 @@ func (c *CSBPartnerOpenAPIClient) DeletePostal(request *model.DeletePostalReques
 }
 
 //功能描述：根据省份查询城市列表
-func (c *CSBPartnerOpenAPIClient) ListCities(request *model.ListCitiesRequest) (*model.ListCitiesResponse, error) {
+func (c *BssClient) ListCities(request *model.ListCitiesRequest) (*model.ListCitiesResponse, error) {
 	requestDef := GenReqDefForListCities(request)
 	resp, responseDef := GenRespForListCities()
 
@@ -211,7 +211,7 @@ func (c *CSBPartnerOpenAPIClient) ListCities(request *model.ListCitiesRequest) (
 }
 
 //功能描述：根据城市查询区县列表
-func (c *CSBPartnerOpenAPIClient) ListCounties(request *model.ListCountiesRequest) (*model.ListCountiesResponse, error) {
+func (c *BssClient) ListCounties(request *model.ListCountiesRequest) (*model.ListCountiesResponse, error) {
 	requestDef := GenReqDefForListCounties(request)
 	resp, responseDef := GenRespForListCounties()
 
@@ -223,7 +223,7 @@ func (c *CSBPartnerOpenAPIClient) ListCounties(request *model.ListCountiesReques
 }
 
 //功能描述：查询优惠券额度发放回收记录
-func (c *CSBPartnerOpenAPIClient) ListCouponQuotasRecords(request *model.ListCouponQuotasRecordsRequest) (*model.ListCouponQuotasRecordsResponse, error) {
+func (c *BssClient) ListCouponQuotasRecords(request *model.ListCouponQuotasRecordsRequest) (*model.ListCouponQuotasRecordsResponse, error) {
 	requestDef := GenReqDefForListCouponQuotasRecords(request)
 	resp, responseDef := GenRespForListCouponQuotasRecords()
 
@@ -235,7 +235,7 @@ func (c *CSBPartnerOpenAPIClient) ListCouponQuotasRecords(request *model.ListCou
 }
 
 //功能描述：查询客户按需资源列表
-func (c *CSBPartnerOpenAPIClient) ListCustomerOnDemandResources(request *model.ListCustomerOnDemandResourcesRequest) (*model.ListCustomerOnDemandResourcesResponse, error) {
+func (c *BssClient) ListCustomerOnDemandResources(request *model.ListCustomerOnDemandResourcesRequest) (*model.ListCustomerOnDemandResourcesResponse, error) {
 	requestDef := GenReqDefForListCustomerOnDemandResources(request)
 	resp, responseDef := GenRespForListCustomerOnDemandResources()
 
@@ -247,7 +247,7 @@ func (c *CSBPartnerOpenAPIClient) ListCustomerOnDemandResources(request *model.L
 }
 
 //功能描述：查询订单列表
-func (c *CSBPartnerOpenAPIClient) ListCustomerOrders(request *model.ListCustomerOrdersRequest) (*model.ListCustomerOrdersResponse, error) {
+func (c *BssClient) ListCustomerOrders(request *model.ListCustomerOrdersRequest) (*model.ListCustomerOrdersResponse, error) {
 	requestDef := GenReqDefForListCustomerOrders(request)
 	resp, responseDef := GenRespForListCustomerOrders()
 
@@ -259,7 +259,7 @@ func (c *CSBPartnerOpenAPIClient) ListCustomerOrders(request *model.ListCustomer
 }
 
 //功能描述：批量查询伙伴子客户账户余额
-func (c *CSBPartnerOpenAPIClient) ListCustomersBalancesDetail(request *model.ListCustomersBalancesDetailRequest) (*model.ListCustomersBalancesDetailResponse, error) {
+func (c *BssClient) ListCustomersBalancesDetail(request *model.ListCustomersBalancesDetailRequest) (*model.ListCustomersBalancesDetailResponse, error) {
 	requestDef := GenReqDefForListCustomersBalancesDetail(request)
 	resp, responseDef := GenRespForListCustomersBalancesDetail()
 
@@ -271,7 +271,7 @@ func (c *CSBPartnerOpenAPIClient) ListCustomersBalancesDetail(request *model.Lis
 }
 
 //功能描述：客户在客户自建平台查询自己的资源详单，用于反映各类资源的消耗情况。资源详单数据有延迟，最大延迟24小时。
-func (c *CSBPartnerOpenAPIClient) ListCustomerselfResourceRecordDetails(request *model.ListCustomerselfResourceRecordDetailsRequest) (*model.ListCustomerselfResourceRecordDetailsResponse, error) {
+func (c *BssClient) ListCustomerselfResourceRecordDetails(request *model.ListCustomerselfResourceRecordDetailsRequest) (*model.ListCustomerselfResourceRecordDetailsResponse, error) {
 	requestDef := GenReqDefForListCustomerselfResourceRecordDetails(request)
 	resp, responseDef := GenRespForListCustomerselfResourceRecordDetails()
 
@@ -283,7 +283,7 @@ func (c *CSBPartnerOpenAPIClient) ListCustomerselfResourceRecordDetails(request 
 }
 
 //功能描述：查询资源消费记录（客户）
-func (c *CSBPartnerOpenAPIClient) ListCustomerselfResourceRecords(request *model.ListCustomerselfResourceRecordsRequest) (*model.ListCustomerselfResourceRecordsResponse, error) {
+func (c *BssClient) ListCustomerselfResourceRecords(request *model.ListCustomerselfResourceRecordsRequest) (*model.ListCustomerselfResourceRecordsResponse, error) {
 	requestDef := GenReqDefForListCustomerselfResourceRecords(request)
 	resp, responseDef := GenRespForListCustomerselfResourceRecords()
 
@@ -295,7 +295,7 @@ func (c *CSBPartnerOpenAPIClient) ListCustomerselfResourceRecords(request *model
 }
 
 //功能描述：查询企业子可回收余额
-func (c *CSBPartnerOpenAPIClient) ListEnterpriseMultiAccount(request *model.ListEnterpriseMultiAccountRequest) (*model.ListEnterpriseMultiAccountResponse, error) {
+func (c *BssClient) ListEnterpriseMultiAccount(request *model.ListEnterpriseMultiAccountRequest) (*model.ListEnterpriseMultiAccountResponse, error) {
 	requestDef := GenReqDefForListEnterpriseMultiAccount(request)
 	resp, responseDef := GenRespForListEnterpriseMultiAccount()
 
@@ -307,7 +307,7 @@ func (c *CSBPartnerOpenAPIClient) ListEnterpriseMultiAccount(request *model.List
 }
 
 //功能描述：查询精英服务商列表
-func (c *CSBPartnerOpenAPIClient) ListIndirectPartners(request *model.ListIndirectPartnersRequest) (*model.ListIndirectPartnersResponse, error) {
+func (c *BssClient) ListIndirectPartners(request *model.ListIndirectPartnersRequest) (*model.ListIndirectPartnersResponse, error) {
 	requestDef := GenReqDefForListIndirectPartners(request)
 	resp, responseDef := GenRespForListIndirectPartners()
 
@@ -319,7 +319,7 @@ func (c *CSBPartnerOpenAPIClient) ListIndirectPartners(request *model.ListIndire
 }
 
 //功能描述：一级经销商查询发给二级经销商的额度
-func (c *CSBPartnerOpenAPIClient) ListIssuedCouponQuotas(request *model.ListIssuedCouponQuotasRequest) (*model.ListIssuedCouponQuotasResponse, error) {
+func (c *BssClient) ListIssuedCouponQuotas(request *model.ListIssuedCouponQuotasRequest) (*model.ListIssuedCouponQuotasResponse, error) {
 	requestDef := GenReqDefForListIssuedCouponQuotas(request)
 	resp, responseDef := GenRespForListIssuedCouponQuotas()
 
@@ -331,7 +331,7 @@ func (c *CSBPartnerOpenAPIClient) ListIssuedCouponQuotas(request *model.ListIssu
 }
 
 //功能描述：查询已发放的优惠券列表
-func (c *CSBPartnerOpenAPIClient) ListIssuedPartnerCoupons(request *model.ListIssuedPartnerCouponsRequest) (*model.ListIssuedPartnerCouponsResponse, error) {
+func (c *BssClient) ListIssuedPartnerCoupons(request *model.ListIssuedPartnerCouponsRequest) (*model.ListIssuedPartnerCouponsResponse, error) {
 	requestDef := GenReqDefForListIssuedPartnerCoupons(request)
 	resp, responseDef := GenRespForListIssuedPartnerCoupons()
 
@@ -343,7 +343,7 @@ func (c *CSBPartnerOpenAPIClient) ListIssuedPartnerCoupons(request *model.ListIs
 }
 
 //功能描述：按需资源询价
-func (c *CSBPartnerOpenAPIClient) ListOnDemandResourceRatings(request *model.ListOnDemandResourceRatingsRequest) (*model.ListOnDemandResourceRatingsResponse, error) {
+func (c *BssClient) ListOnDemandResourceRatings(request *model.ListOnDemandResourceRatingsRequest) (*model.ListOnDemandResourceRatingsResponse, error) {
 	requestDef := GenReqDefForListOnDemandResourceRatings(request)
 	resp, responseDef := GenRespForListOnDemandResourceRatings()
 
@@ -355,7 +355,7 @@ func (c *CSBPartnerOpenAPIClient) ListOnDemandResourceRatings(request *model.Lis
 }
 
 //功能描述：查询订单详情
-func (c *CSBPartnerOpenAPIClient) ListOrderCouponsByOrderId(request *model.ListOrderCouponsByOrderIdRequest) (*model.ListOrderCouponsByOrderIdResponse, error) {
+func (c *BssClient) ListOrderCouponsByOrderId(request *model.ListOrderCouponsByOrderIdRequest) (*model.ListOrderCouponsByOrderIdResponse, error) {
 	requestDef := GenReqDefForListOrderCouponsByOrderId(request)
 	resp, responseDef := GenRespForListOrderCouponsByOrderId()
 
@@ -367,7 +367,7 @@ func (c *CSBPartnerOpenAPIClient) ListOrderCouponsByOrderId(request *model.ListO
 }
 
 //功能描述：查询调账回收记录
-func (c *CSBPartnerOpenAPIClient) ListPartnerAdjustRecords(request *model.ListPartnerAdjustRecordsRequest) (*model.ListPartnerAdjustRecordsResponse, error) {
+func (c *BssClient) ListPartnerAdjustRecords(request *model.ListPartnerAdjustRecordsRequest) (*model.ListPartnerAdjustRecordsResponse, error) {
 	requestDef := GenReqDefForListPartnerAdjustRecords(request)
 	resp, responseDef := GenRespForListPartnerAdjustRecords()
 
@@ -379,7 +379,7 @@ func (c *CSBPartnerOpenAPIClient) ListPartnerAdjustRecords(request *model.ListPa
 }
 
 //功能描述：查询伙伴账户余额
-func (c *CSBPartnerOpenAPIClient) ListPartnerBalances(request *model.ListPartnerBalancesRequest) (*model.ListPartnerBalancesResponse, error) {
+func (c *BssClient) ListPartnerBalances(request *model.ListPartnerBalancesRequest) (*model.ListPartnerBalancesResponse, error) {
 	requestDef := GenReqDefForListPartnerBalances(request)
 	resp, responseDef := GenRespForListPartnerBalances()
 
@@ -391,7 +391,7 @@ func (c *CSBPartnerOpenAPIClient) ListPartnerBalances(request *model.ListPartner
 }
 
 //功能描述：查询优惠券的发放回收记录
-func (c *CSBPartnerOpenAPIClient) ListPartnerCouponsRecord(request *model.ListPartnerCouponsRecordRequest) (*model.ListPartnerCouponsRecordResponse, error) {
+func (c *BssClient) ListPartnerCouponsRecord(request *model.ListPartnerCouponsRecordRequest) (*model.ListPartnerCouponsRecordResponse, error) {
 	requestDef := GenReqDefForListPartnerCouponsRecord(request)
 	resp, responseDef := GenRespForListPartnerCouponsRecord()
 
@@ -403,7 +403,7 @@ func (c *CSBPartnerOpenAPIClient) ListPartnerCouponsRecord(request *model.ListPa
 }
 
 //功能描述：查询伙伴代付订单列表
-func (c *CSBPartnerOpenAPIClient) ListPartnerPayOrders(request *model.ListPartnerPayOrdersRequest) (*model.ListPartnerPayOrdersResponse, error) {
+func (c *BssClient) ListPartnerPayOrders(request *model.ListPartnerPayOrdersRequest) (*model.ListPartnerPayOrdersResponse, error) {
 	requestDef := GenReqDefForListPartnerPayOrders(request)
 	resp, responseDef := GenRespForListPartnerPayOrders()
 
@@ -415,7 +415,7 @@ func (c *CSBPartnerOpenAPIClient) ListPartnerPayOrders(request *model.ListPartne
 }
 
 //功能描述：查询客户包年/包月资源列表
-func (c *CSBPartnerOpenAPIClient) ListPayPerUseCustomerResources(request *model.ListPayPerUseCustomerResourcesRequest) (*model.ListPayPerUseCustomerResourcesResponse, error) {
+func (c *BssClient) ListPayPerUseCustomerResources(request *model.ListPayPerUseCustomerResourcesRequest) (*model.ListPayPerUseCustomerResourcesResponse, error) {
 	requestDef := GenReqDefForListPayPerUseCustomerResources(request)
 	resp, responseDef := GenRespForListPayPerUseCustomerResources()
 
@@ -427,7 +427,7 @@ func (c *CSBPartnerOpenAPIClient) ListPayPerUseCustomerResources(request *model.
 }
 
 //功能描述：查询邮寄地址
-func (c *CSBPartnerOpenAPIClient) ListPostalAddress(request *model.ListPostalAddressRequest) (*model.ListPostalAddressResponse, error) {
+func (c *BssClient) ListPostalAddress(request *model.ListPostalAddressRequest) (*model.ListPostalAddressResponse, error) {
 	requestDef := GenReqDefForListPostalAddress(request)
 	resp, responseDef := GenRespForListPostalAddress()
 
@@ -439,7 +439,7 @@ func (c *CSBPartnerOpenAPIClient) ListPostalAddress(request *model.ListPostalAdd
 }
 
 //功能描述：根据国家查询省份列表
-func (c *CSBPartnerOpenAPIClient) ListProvinces(request *model.ListProvincesRequest) (*model.ListProvincesResponse, error) {
+func (c *BssClient) ListProvinces(request *model.ListProvincesRequest) (*model.ListProvincesResponse, error) {
 	requestDef := GenReqDefForListProvinces(request)
 	resp, responseDef := GenRespForListProvinces()
 
@@ -451,7 +451,7 @@ func (c *CSBPartnerOpenAPIClient) ListProvinces(request *model.ListProvincesRequ
 }
 
 //功能描述：查询优惠券额度列表
-func (c *CSBPartnerOpenAPIClient) ListQuotaCoupons(request *model.ListQuotaCouponsRequest) (*model.ListQuotaCouponsResponse, error) {
+func (c *BssClient) ListQuotaCoupons(request *model.ListQuotaCouponsRequest) (*model.ListQuotaCouponsResponse, error) {
 	requestDef := GenReqDefForListQuotaCoupons(request)
 	resp, responseDef := GenRespForListQuotaCoupons()
 
@@ -463,7 +463,7 @@ func (c *CSBPartnerOpenAPIClient) ListQuotaCoupons(request *model.ListQuotaCoupo
 }
 
 //功能描述：包周期资源订购询价
-func (c *CSBPartnerOpenAPIClient) ListRateOnPeriodDetail(request *model.ListRateOnPeriodDetailRequest) (*model.ListRateOnPeriodDetailResponse, error) {
+func (c *BssClient) ListRateOnPeriodDetail(request *model.ListRateOnPeriodDetailRequest) (*model.ListRateOnPeriodDetailResponse, error) {
 	requestDef := GenReqDefForListRateOnPeriodDetail(request)
 	resp, responseDef := GenRespForListRateOnPeriodDetail()
 
@@ -475,7 +475,7 @@ func (c *CSBPartnerOpenAPIClient) ListRateOnPeriodDetail(request *model.ListRate
 }
 
 //功能描述：查询套餐内使用量
-func (c *CSBPartnerOpenAPIClient) ListResourceUsages(request *model.ListResourceUsagesRequest) (*model.ListResourceUsagesResponse, error) {
+func (c *BssClient) ListResourceUsages(request *model.ListResourceUsagesRequest) (*model.ListResourceUsagesResponse, error) {
 	requestDef := GenReqDefForListResourceUsages(request)
 	resp, responseDef := GenRespForListResourceUsages()
 
@@ -487,7 +487,7 @@ func (c *CSBPartnerOpenAPIClient) ListResourceUsages(request *model.ListResource
 }
 
 //功能描述：查询硬件库存
-func (c *CSBPartnerOpenAPIClient) ListSkuInventories(request *model.ListSkuInventoriesRequest) (*model.ListSkuInventoriesResponse, error) {
+func (c *BssClient) ListSkuInventories(request *model.ListSkuInventoriesRequest) (*model.ListSkuInventoriesResponse, error) {
 	requestDef := GenReqDefForListSkuInventories(request)
 	resp, responseDef := GenRespForListSkuInventories()
 
@@ -499,7 +499,7 @@ func (c *CSBPartnerOpenAPIClient) ListSkuInventories(request *model.ListSkuInven
 }
 
 //功能描述：查询优惠券列表
-func (c *CSBPartnerOpenAPIClient) ListSubCustomerCoupons(request *model.ListSubCustomerCouponsRequest) (*model.ListSubCustomerCouponsResponse, error) {
+func (c *BssClient) ListSubCustomerCoupons(request *model.ListSubCustomerCouponsRequest) (*model.ListSubCustomerCouponsResponse, error) {
 	requestDef := GenReqDefForListSubCustomerCoupons(request)
 	resp, responseDef := GenRespForListSubCustomerCoupons()
 
@@ -511,7 +511,7 @@ func (c *CSBPartnerOpenAPIClient) ListSubCustomerCoupons(request *model.ListSubC
 }
 
 //功能描述：查询伙伴折扣
-func (c *CSBPartnerOpenAPIClient) ListSubCustomerDiscounts(request *model.ListSubCustomerDiscountsRequest) (*model.ListSubCustomerDiscountsResponse, error) {
+func (c *BssClient) ListSubCustomerDiscounts(request *model.ListSubCustomerDiscountsRequest) (*model.ListSubCustomerDiscountsResponse, error) {
 	requestDef := GenReqDefForListSubCustomerDiscounts(request)
 	resp, responseDef := GenRespForListSubCustomerDiscounts()
 
@@ -523,7 +523,7 @@ func (c *CSBPartnerOpenAPIClient) ListSubCustomerDiscounts(request *model.ListSu
 }
 
 //功能描述：查询客户消费记录
-func (c *CSBPartnerOpenAPIClient) ListSubCustomerResFeeRecords(request *model.ListSubCustomerResFeeRecordsRequest) (*model.ListSubCustomerResFeeRecordsResponse, error) {
+func (c *BssClient) ListSubCustomerResFeeRecords(request *model.ListSubCustomerResFeeRecordsRequest) (*model.ListSubCustomerResFeeRecordsResponse, error) {
 	requestDef := GenReqDefForListSubCustomerResFeeRecords(request)
 	resp, responseDef := GenRespForListSubCustomerResFeeRecords()
 
@@ -535,7 +535,7 @@ func (c *CSBPartnerOpenAPIClient) ListSubCustomerResFeeRecords(request *model.Li
 }
 
 //功能描述：查询客户列表
-func (c *CSBPartnerOpenAPIClient) ListSubCustomers(request *model.ListSubCustomersRequest) (*model.ListSubCustomersResponse, error) {
+func (c *BssClient) ListSubCustomers(request *model.ListSubCustomersRequest) (*model.ListSubCustomersResponse, error) {
 	requestDef := GenReqDefForListSubCustomers(request)
 	resp, responseDef := GenRespForListSubCustomers()
 
@@ -547,7 +547,7 @@ func (c *CSBPartnerOpenAPIClient) ListSubCustomers(request *model.ListSubCustome
 }
 
 //功能描述：合作伙伴可查询客户的消费汇总账单，消费按月汇总
-func (c *CSBPartnerOpenAPIClient) ListSubcustomerMonthlyBills(request *model.ListSubcustomerMonthlyBillsRequest) (*model.ListSubcustomerMonthlyBillsResponse, error) {
+func (c *BssClient) ListSubcustomerMonthlyBills(request *model.ListSubcustomerMonthlyBillsRequest) (*model.ListSubcustomerMonthlyBillsResponse, error) {
 	requestDef := GenReqDefForListSubcustomerMonthlyBills(request)
 	resp, responseDef := GenRespForListSubcustomerMonthlyBills()
 
@@ -559,7 +559,7 @@ func (c *CSBPartnerOpenAPIClient) ListSubcustomerMonthlyBills(request *model.Lis
 }
 
 //功能描述：支付包周期订单
-func (c *CSBPartnerOpenAPIClient) PayOrders(request *model.PayOrdersRequest) (*model.PayOrdersResponse, error) {
+func (c *BssClient) PayOrders(request *model.PayOrdersRequest) (*model.PayOrdersResponse, error) {
 	requestDef := GenReqDefForPayOrders(request)
 	resp, responseDef := GenRespForPayOrders()
 
@@ -571,7 +571,7 @@ func (c *CSBPartnerOpenAPIClient) PayOrders(request *model.PayOrdersRequest) (*m
 }
 
 //功能描述：一级经销商给二级经销商回收额度
-func (c *CSBPartnerOpenAPIClient) ReclaimCouponQuotas(request *model.ReclaimCouponQuotasRequest) (*model.ReclaimCouponQuotasResponse, error) {
+func (c *BssClient) ReclaimCouponQuotas(request *model.ReclaimCouponQuotasRequest) (*model.ReclaimCouponQuotasResponse, error) {
 	requestDef := GenReqDefForReclaimCouponQuotas(request)
 	resp, responseDef := GenRespForReclaimCouponQuotas()
 
@@ -583,7 +583,7 @@ func (c *CSBPartnerOpenAPIClient) ReclaimCouponQuotas(request *model.ReclaimCoup
 }
 
 //功能描述：合作伙伴可以回收二级渠道账户余额
-func (c *CSBPartnerOpenAPIClient) ReclaimIndirectPartnerAccount(request *model.ReclaimIndirectPartnerAccountRequest) (*model.ReclaimIndirectPartnerAccountResponse, error) {
+func (c *BssClient) ReclaimIndirectPartnerAccount(request *model.ReclaimIndirectPartnerAccountRequest) (*model.ReclaimIndirectPartnerAccountResponse, error) {
 	requestDef := GenReqDefForReclaimIndirectPartnerAccount(request)
 	resp, responseDef := GenRespForReclaimIndirectPartnerAccount()
 
@@ -595,7 +595,7 @@ func (c *CSBPartnerOpenAPIClient) ReclaimIndirectPartnerAccount(request *model.R
 }
 
 //功能描述：伙伴回收子客户优惠券
-func (c *CSBPartnerOpenAPIClient) ReclaimPartnerCoupons(request *model.ReclaimPartnerCouponsRequest) (*model.ReclaimPartnerCouponsResponse, error) {
+func (c *BssClient) ReclaimPartnerCoupons(request *model.ReclaimPartnerCouponsRequest) (*model.ReclaimPartnerCouponsResponse, error) {
 	requestDef := GenReqDefForReclaimPartnerCoupons(request)
 	resp, responseDef := GenRespForReclaimPartnerCoupons()
 
@@ -607,7 +607,7 @@ func (c *CSBPartnerOpenAPIClient) ReclaimPartnerCoupons(request *model.ReclaimPa
 }
 
 //功能描述：企业主账号从企业子账号回收拨款
-func (c *CSBPartnerOpenAPIClient) ReclaimSubEnterpriseAmount(request *model.ReclaimSubEnterpriseAmountRequest) (*model.ReclaimSubEnterpriseAmountResponse, error) {
+func (c *BssClient) ReclaimSubEnterpriseAmount(request *model.ReclaimSubEnterpriseAmountRequest) (*model.ReclaimSubEnterpriseAmountResponse, error) {
 	requestDef := GenReqDefForReclaimSubEnterpriseAmount(request)
 	resp, responseDef := GenRespForReclaimSubEnterpriseAmount()
 
@@ -619,7 +619,7 @@ func (c *CSBPartnerOpenAPIClient) ReclaimSubEnterpriseAmount(request *model.Recl
 }
 
 //功能描述：回收子客户余额（支持一级回收二级的子客户余额）
-func (c *CSBPartnerOpenAPIClient) ReclaimToPartnerAccount(request *model.ReclaimToPartnerAccountRequest) (*model.ReclaimToPartnerAccountResponse, error) {
+func (c *BssClient) ReclaimToPartnerAccount(request *model.ReclaimToPartnerAccountRequest) (*model.ReclaimToPartnerAccountResponse, error) {
 	requestDef := GenReqDefForReclaimToPartnerAccount(request)
 	resp, responseDef := GenRespForReclaimToPartnerAccount()
 
@@ -631,7 +631,7 @@ func (c *CSBPartnerOpenAPIClient) ReclaimToPartnerAccount(request *model.Reclaim
 }
 
 //功能描述：续订包周期资源
-func (c *CSBPartnerOpenAPIClient) RenewalResources(request *model.RenewalResourcesRequest) (*model.RenewalResourcesResponse, error) {
+func (c *BssClient) RenewalResources(request *model.RenewalResourcesRequest) (*model.RenewalResourcesResponse, error) {
 	requestDef := GenReqDefForRenewalResources(request)
 	resp, responseDef := GenRespForRenewalResources()
 
@@ -643,7 +643,7 @@ func (c *CSBPartnerOpenAPIClient) RenewalResources(request *model.RenewalResourc
 }
 
 //功能描述：发送短信验证码
-func (c *CSBPartnerOpenAPIClient) SendSmsVerificationCode(request *model.SendSmsVerificationCodeRequest) (*model.SendSmsVerificationCodeResponse, error) {
+func (c *BssClient) SendSmsVerificationCode(request *model.SendSmsVerificationCodeRequest) (*model.SendSmsVerificationCodeResponse, error) {
 	requestDef := GenReqDefForSendSmsVerificationCode(request)
 	resp, responseDef := GenRespForSendSmsVerificationCode()
 
@@ -655,7 +655,7 @@ func (c *CSBPartnerOpenAPIClient) SendSmsVerificationCode(request *model.SendSms
 }
 
 //功能描述：发送验证码
-func (c *CSBPartnerOpenAPIClient) SendVerificationMessageCode(request *model.SendVerificationMessageCodeRequest) (*model.SendVerificationMessageCodeResponse, error) {
+func (c *BssClient) SendVerificationMessageCode(request *model.SendVerificationMessageCodeRequest) (*model.SendVerificationMessageCodeResponse, error) {
 	requestDef := GenReqDefForSendVerificationMessageCode(request)
 	resp, responseDef := GenRespForSendVerificationMessageCode()
 
@@ -667,7 +667,7 @@ func (c *CSBPartnerOpenAPIClient) SendVerificationMessageCode(request *model.Sen
 }
 
 //功能描述：查询客户账户余额
-func (c *CSBPartnerOpenAPIClient) ShowCusotmerAccountBalances(request *model.ShowCusotmerAccountBalancesRequest) (*model.ShowCusotmerAccountBalancesResponse, error) {
+func (c *BssClient) ShowCusotmerAccountBalances(request *model.ShowCusotmerAccountBalancesRequest) (*model.ShowCusotmerAccountBalancesResponse, error) {
 	requestDef := GenReqDefForShowCusotmerAccountBalances(request)
 	resp, responseDef := GenRespForShowCusotmerAccountBalances()
 
@@ -679,7 +679,7 @@ func (c *CSBPartnerOpenAPIClient) ShowCusotmerAccountBalances(request *model.Sho
 }
 
 //功能描述：客户可以查询自身的消费汇总单的功能，消费按月汇总。每天刷新一次，更新前一天的数据。
-func (c *CSBPartnerOpenAPIClient) ShowCustomerMonthlySum(request *model.ShowCustomerMonthlySumRequest) (*model.ShowCustomerMonthlySumResponse, error) {
+func (c *BssClient) ShowCustomerMonthlySum(request *model.ShowCustomerMonthlySumRequest) (*model.ShowCustomerMonthlySumResponse, error) {
 	requestDef := GenReqDefForShowCustomerMonthlySum(request)
 	resp, responseDef := GenRespForShowCustomerMonthlySum()
 
@@ -691,7 +691,7 @@ func (c *CSBPartnerOpenAPIClient) ShowCustomerMonthlySum(request *model.ShowCust
 }
 
 //功能描述：查询订单详情
-func (c *CSBPartnerOpenAPIClient) ShowCustomerOrderDetails(request *model.ShowCustomerOrderDetailsRequest) (*model.ShowCustomerOrderDetailsResponse, error) {
+func (c *BssClient) ShowCustomerOrderDetails(request *model.ShowCustomerOrderDetailsRequest) (*model.ShowCustomerOrderDetailsResponse, error) {
 	requestDef := GenReqDefForShowCustomerOrderDetails(request)
 	resp, responseDef := GenRespForShowCustomerOrderDetails()
 
@@ -703,7 +703,7 @@ func (c *CSBPartnerOpenAPIClient) ShowCustomerOrderDetails(request *model.ShowCu
 }
 
 //功能描述：查询企业主的可拨款余额
-func (c *CSBPartnerOpenAPIClient) ShowMultiAccountTransferAmount(request *model.ShowMultiAccountTransferAmountRequest) (*model.ShowMultiAccountTransferAmountResponse, error) {
+func (c *BssClient) ShowMultiAccountTransferAmount(request *model.ShowMultiAccountTransferAmountRequest) (*model.ShowMultiAccountTransferAmountResponse, error) {
 	requestDef := GenReqDefForShowMultiAccountTransferAmount(request)
 	resp, responseDef := GenRespForShowMultiAccountTransferAmount()
 
@@ -715,7 +715,7 @@ func (c *CSBPartnerOpenAPIClient) ShowMultiAccountTransferAmount(request *model.
 }
 
 //功能描述：查询实名认证审核结果
-func (c *CSBPartnerOpenAPIClient) ShowRealnameAuthenticationReviewResult(request *model.ShowRealnameAuthenticationReviewResultRequest) (*model.ShowRealnameAuthenticationReviewResultResponse, error) {
+func (c *BssClient) ShowRealnameAuthenticationReviewResult(request *model.ShowRealnameAuthenticationReviewResultRequest) (*model.ShowRealnameAuthenticationReviewResultResponse, error) {
 	requestDef := GenReqDefForShowRealnameAuthenticationReviewResult(request)
 	resp, responseDef := GenRespForShowRealnameAuthenticationReviewResult()
 
@@ -727,7 +727,7 @@ func (c *CSBPartnerOpenAPIClient) ShowRealnameAuthenticationReviewResult(request
 }
 
 //功能描述：查询退款订单的金额详情
-func (c *CSBPartnerOpenAPIClient) ShowRefundOrderDetails(request *model.ShowRefundOrderDetailsRequest) (*model.ShowRefundOrderDetailsResponse, error) {
+func (c *BssClient) ShowRefundOrderDetails(request *model.ShowRefundOrderDetailsRequest) (*model.ShowRefundOrderDetailsResponse, error) {
 	requestDef := GenReqDefForShowRefundOrderDetails(request)
 	resp, responseDef := GenRespForShowRefundOrderDetails()
 
@@ -739,7 +739,7 @@ func (c *CSBPartnerOpenAPIClient) ShowRefundOrderDetails(request *model.ShowRefu
 }
 
 //功能描述：向精英服务商发放代金券额度
-func (c *CSBPartnerOpenAPIClient) UpdateCouponQuotas(request *model.UpdateCouponQuotasRequest) (*model.UpdateCouponQuotasResponse, error) {
+func (c *BssClient) UpdateCouponQuotas(request *model.UpdateCouponQuotasRequest) (*model.UpdateCouponQuotasResponse, error) {
 	requestDef := GenReqDefForUpdateCouponQuotas(request)
 	resp, responseDef := GenRespForUpdateCouponQuotas()
 
@@ -751,7 +751,7 @@ func (c *CSBPartnerOpenAPIClient) UpdateCouponQuotas(request *model.UpdateCoupon
 }
 
 //功能描述：从伙伴账户调账给子客户
-func (c *CSBPartnerOpenAPIClient) UpdateCustomerAccountAmount(request *model.UpdateCustomerAccountAmountRequest) (*model.UpdateCustomerAccountAmountResponse, error) {
+func (c *BssClient) UpdateCustomerAccountAmount(request *model.UpdateCustomerAccountAmountRequest) (*model.UpdateCustomerAccountAmountResponse, error) {
 	requestDef := GenReqDefForUpdateCustomerAccountAmount(request)
 	resp, responseDef := GenRespForUpdateCustomerAccountAmount()
 
@@ -763,7 +763,7 @@ func (c *CSBPartnerOpenAPIClient) UpdateCustomerAccountAmount(request *model.Upd
 }
 
 //功能描述：从伙伴账户调账给二级渠道
-func (c *CSBPartnerOpenAPIClient) UpdateIndirectPartnerAccount(request *model.UpdateIndirectPartnerAccountRequest) (*model.UpdateIndirectPartnerAccountResponse, error) {
+func (c *BssClient) UpdateIndirectPartnerAccount(request *model.UpdateIndirectPartnerAccountRequest) (*model.UpdateIndirectPartnerAccountResponse, error) {
 	requestDef := GenReqDefForUpdateIndirectPartnerAccount(request)
 	resp, responseDef := GenRespForUpdateIndirectPartnerAccount()
 
@@ -775,7 +775,7 @@ func (c *CSBPartnerOpenAPIClient) UpdateIndirectPartnerAccount(request *model.Up
 }
 
 //功能描述：修改邮寄地址
-func (c *CSBPartnerOpenAPIClient) UpdatePostal(request *model.UpdatePostalRequest) (*model.UpdatePostalResponse, error) {
+func (c *BssClient) UpdatePostal(request *model.UpdatePostalRequest) (*model.UpdatePostalResponse, error) {
 	requestDef := GenReqDefForUpdatePostal(request)
 	resp, responseDef := GenRespForUpdatePostal()
 
@@ -787,7 +787,7 @@ func (c *CSBPartnerOpenAPIClient) UpdatePostal(request *model.UpdatePostalReques
 }
 
 //功能描述：企业主账号向企业子账号拨款
-func (c *CSBPartnerOpenAPIClient) UpdateSubEnterpriseAmount(request *model.UpdateSubEnterpriseAmountRequest) (*model.UpdateSubEnterpriseAmountResponse, error) {
+func (c *BssClient) UpdateSubEnterpriseAmount(request *model.UpdateSubEnterpriseAmountRequest) (*model.UpdateSubEnterpriseAmountResponse, error) {
 	requestDef := GenReqDefForUpdateSubEnterpriseAmount(request)
 	resp, responseDef := GenRespForUpdateSubEnterpriseAmount()
 

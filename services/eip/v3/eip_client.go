@@ -65,15 +65,3 @@ func (c *EipClient) ShowPublicip(request *model.ShowPublicipRequest) (*model.Sho
 		return resp, nil
 	}
 }
-
-//更新弹性公网IP
-func (c *EipClient) UpdatePublicips(request *model.UpdatePublicipsRequest) (*model.UpdatePublicipsResponse, error) {
-	requestDef := GenReqDefForUpdatePublicips(request)
-	resp, responseDef := GenRespForUpdatePublicips()
-
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
-		return nil, err
-	} else {
-		return resp, nil
-	}
-}
