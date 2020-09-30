@@ -17,8 +17,8 @@ import (
 type BatchMetricData struct {
 	// 指标单位
 	Unit *string `json:"unit,omitempty"`
-	//   指标数据列表。由于查询数据时，云监控会根据所选择的聚合粒度向前取整from参数，所以datapoints中包含的数据点有可能会多于预期。
-	Datapoints []Datapoint `json:"datapoints"`
+	// 指标数据列表。由于查询数据时，云监控会根据所选择的聚合粒度向前取整from参数，所以datapoints中包含的数据点有可能会多于预期。
+	Datapoints []DatapointForBatchMetric `json:"datapoints"`
 	// 指标命名空间，格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32
 	Namespace *string `json:"namespace,omitempty"`
 	// 指标名称，例如弹性云服务器监控指标中的cpu_util。

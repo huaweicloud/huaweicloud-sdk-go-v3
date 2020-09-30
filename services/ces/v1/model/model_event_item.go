@@ -13,7 +13,7 @@ import (
 	"strings"
 )
 
-//
+// 请求参数。
 type EventItem struct {
 	// 事件名称。  必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64。
 	EventName string `json:"event_name"`

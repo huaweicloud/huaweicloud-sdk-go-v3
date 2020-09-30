@@ -15,10 +15,6 @@ import (
 
 //
 type Resource struct {
-	// 名称
-	Name *string `json:"name,omitempty"`
-	// 值
-	Value *string `json:"value,omitempty"`
 	// 配额类型。  枚举值说明：  alarm，告警规则
 	Type string `json:"type"`
 	// 已使用配额数。

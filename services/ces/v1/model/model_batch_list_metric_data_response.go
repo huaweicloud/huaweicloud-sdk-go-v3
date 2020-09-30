@@ -15,7 +15,7 @@ import (
 
 // Response Object
 type BatchListMetricDataResponse struct {
-	//
+	// 监控指标。
 	Metrics *[]BatchMetricData `json:"metrics,omitempty"`
 }
 

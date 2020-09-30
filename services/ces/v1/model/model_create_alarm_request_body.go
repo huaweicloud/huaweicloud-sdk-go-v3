@@ -18,7 +18,7 @@ import (
 type CreateAlarmRequestBody struct {
 	// 告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
 	AlarmName string `json:"alarm_name"`
-	//
+	// 告警描述，长度0-256。
 	AlarmDescription *string        `json:"alarm_description,omitempty"`
 	Metric           *MetricInfoExt `json:"metric"`
 	Condition        *Condition     `json:"condition"`
@@ -36,6 +36,8 @@ type CreateAlarmRequestBody struct {
 	InsufficientdataActions *[]AlarmActions `json:"insufficientdata_actions,omitempty"`
 	// 告警恢复触发的动作
 	OkActions *[]AlarmActions `json:"ok_actions,omitempty"`
+	// 企业项目ID。默认值为0，表示默认的企业项目default。说明：此参数在“华东-上海一”区域上线。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o CreateAlarmRequestBody) String() string {

@@ -1,3 +1,13 @@
+## 0.0.15-beta 2020-09-30
+## HuaweiCloud SDK AS
+ - ### Features
+    - Support Auto Scaling service.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+
 ## 0.0.14-beta 2020-09-24
 ## HuaweiCloud SDK BSS
  - ### Features

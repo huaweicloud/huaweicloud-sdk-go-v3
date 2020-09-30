@@ -13,7 +13,7 @@ import (
 	"strings"
 )
 
-//
+// 响应参数。
 type CreateEventsResponseBody struct {
 	// 事件ID。
 	EventId string `json:"event_id"`

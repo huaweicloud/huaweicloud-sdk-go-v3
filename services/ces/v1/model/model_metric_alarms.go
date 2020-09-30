@@ -33,12 +33,20 @@ type MetricAlarms struct {
 	AlarmActions *[]AlarmActions `json:"alarm_actions,omitempty"`
 	// 告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值：  notification：通知。  notificationList：告警状态发生变化时，被通知对象的列表。
 	OkActions *[]AlarmActions `json:"ok_actions,omitempty"`
+	// 数据不足触发的动作。  结构如下：  {  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： 数据不足触发告警通知类型，取值为notification。 notificationList：数据不足触发告警通知时，被通知对象的ID列表。
+	InsufficientdataActions *[]AlarmActions `json:"insufficientdata_actions,omitempty"`
+	// 告警规则生效的开始时间，告警规则仅在生效时间内发送通知消息。例如alarm_action_begin_time为8:00，alarm_action_end_time为20:00时，则对应的告警规则仅在08:00-20:00发送通知消息。
+	AlarmActionBeginTime *string `json:"alarm_action_begin_time,omitempty"`
+	// 告警规则生效的结束时间，告警规则仅在生效时间内发送通知消息。例如alarm_action_begin_time为8:00，alarm_action_end_time为20:00时，则对应的告警规则仅在08:00-20:00发送通知消息。
+	AlarmActionEndTime *string `json:"alarm_action_end_time,omitempty"`
 	// 告警规则的ID。
 	AlarmId string `json:"alarm_id"`
 	// 告警状态变更的时间，UNIX时间戳，单位毫秒。
 	UpdateTime int64 `json:"update_time"`
 	// 告警状态，取值说明：  ok，正常 alarm，告警 insufficient_data，数据不足
 	AlarmState string `json:"alarm_state"`
+	// 企业项目ID。 取值为all_granted_eps时，表示所有企业项目; 取值为0时，表示默认的企业项目default。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o MetricAlarms) String() string {

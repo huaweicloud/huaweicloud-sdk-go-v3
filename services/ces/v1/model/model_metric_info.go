@@ -21,8 +21,6 @@ type MetricInfo struct {
 	MetricName string `json:"metric_name"`
 	// 指标命名空间，，例如弹性云服务器命名空间。格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32。说明： 当alarm_type为（EVENT.SYS| EVENT.CUSTOM）时允许为空。
 	Namespace string `json:"namespace"`
-	// 指标单位
-	Unit *string `json:"unit,omitempty"`
 }
 
 func (o MetricInfo) String() string {

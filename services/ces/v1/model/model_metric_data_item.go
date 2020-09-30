@@ -13,7 +13,7 @@ import (
 	"strings"
 )
 
-//
+// 添加一条或多条自定义指标监控数据，请求参数。
 type MetricDataItem struct {
 	Metric *MetricInfo `json:"metric"`
 	// 数据的有效期，超出该有效期则自动删除该数据，单位秒，最大值604800。
