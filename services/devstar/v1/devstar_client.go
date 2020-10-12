@@ -14,7 +14,7 @@ func NewDevstarClient(hcClient *http_client.HcHttpClient) *DevstarClient {
 }
 
 func DevstarClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
 	return builder
 }
 
