@@ -32,6 +32,8 @@ type CreateCustomerV2Req struct {
 	CooperationType *string `json:"cooperation_type,omitempty"`
 	// |参数名称：二级渠道ID| |参数的约束及描述：该参数非必填，二级渠道ID，最大长度64|
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
+	// |参数名称：是否返回关联结果| |参数的约束及描述：该参数非必填|
+	IncludeAssociationResult *bool `json:"include_association_result,omitempty"`
 }
 
 func (o CreateCustomerV2Req) String() string {

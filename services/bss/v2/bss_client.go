@@ -234,6 +234,18 @@ func (c *BssClient) ListCouponQuotasRecords(request *model.ListCouponQuotasRecor
 	}
 }
 
+//功能描述：客户在客户自建平台查询自己的流水账单
+func (c *BssClient) ListCustomerBillsFeeRecords(request *model.ListCustomerBillsFeeRecordsRequest) (*model.ListCustomerBillsFeeRecordsResponse, error) {
+	requestDef := GenReqDefForListCustomerBillsFeeRecords(request)
+	resp, responseDef := GenRespForListCustomerBillsFeeRecords()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
 //功能描述：查询客户按需资源列表
 func (c *BssClient) ListCustomerOnDemandResources(request *model.ListCustomerOnDemandResourcesRequest) (*model.ListCustomerOnDemandResourcesResponse, error) {
 	requestDef := GenReqDefForListCustomerOnDemandResources(request)
@@ -298,6 +310,30 @@ func (c *BssClient) ListCustomerselfResourceRecords(request *model.ListCustomers
 func (c *BssClient) ListEnterpriseMultiAccount(request *model.ListEnterpriseMultiAccountRequest) (*model.ListEnterpriseMultiAccountResponse, error) {
 	requestDef := GenReqDefForListEnterpriseMultiAccount(request)
 	resp, responseDef := GenRespForListEnterpriseMultiAccount()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//功能描述：企业主账号在客户自建平台查询企业组织结构
+func (c *BssClient) ListEnterpriseOrganizations(request *model.ListEnterpriseOrganizationsRequest) (*model.ListEnterpriseOrganizationsResponse, error) {
+	requestDef := GenReqDefForListEnterpriseOrganizations(request)
+	resp, responseDef := GenRespForListEnterpriseOrganizations()
+
+	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+		return nil, err
+	} else {
+		return resp, nil
+	}
+}
+
+//功能描述：企业主账号在客户自建平台查询企业子账号信息列表
+func (c *BssClient) ListEnterpriseSubCustomers(request *model.ListEnterpriseSubCustomersRequest) (*model.ListEnterpriseSubCustomersResponse, error) {
+	requestDef := GenReqDefForListEnterpriseSubCustomers(request)
+	resp, responseDef := GenRespForListEnterpriseSubCustomers()
 
 	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
 		return nil, err

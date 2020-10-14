@@ -540,6 +540,80 @@ func GenRespForListCouponQuotasRecords() (*model.ListCouponQuotasRecordsResponse
 	return resp, responseDef
 }
 
+func GenReqDefForListCustomerBillsFeeRecords(request *model.ListCustomerBillsFeeRecordsRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/bills/customer-bills/fee-records")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("bill_cycle").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("provider_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("service_type_code").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("resource_type_code").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("region_code").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("charging_mode").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("bill_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("trade_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("include_zero_record").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("status").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("method").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("sub_customer_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("limit").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForListCustomerBillsFeeRecords() (*model.ListCustomerBillsFeeRecordsResponse, *def.HttpResponseDef) {
+	resp := new(model.ListCustomerBillsFeeRecordsResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
 func GenReqDefForListCustomerOnDemandResources(request *model.ListCustomerOnDemandResourcesRequest) *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -730,6 +804,9 @@ func GenReqDefForListCustomerselfResourceRecords(request *model.ListCustomerself
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("sub_customer_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("trade_id").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("X-Language").
@@ -786,6 +863,80 @@ func GenReqDefForListEnterpriseMultiAccount(request *model.ListEnterpriseMultiAc
 
 func GenRespForListEnterpriseMultiAccount() (*model.ListEnterpriseMultiAccountResponse, *def.HttpResponseDef) {
 	resp := new(model.ListEnterpriseMultiAccountResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForListEnterpriseOrganizations(request *model.ListEnterpriseOrganizationsRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/enterprises/multi-accounts/enterprise-organizations")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("recursive_query").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("parent_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForListEnterpriseOrganizations() (*model.ListEnterpriseOrganizationsResponse, *def.HttpResponseDef) {
+	resp := new(model.ListEnterpriseOrganizationsResponse)
+	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
+	responseDef := respDefBuilder.Build()
+	return resp, responseDef
+}
+
+func GenReqDefForListEnterpriseSubCustomers(request *model.ListEnterpriseSubCustomersRequest) *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/enterprises/multi-accounts/sub-customers")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("sub_customer_account_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("sub_customer_display_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("fuzzy_query").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("org_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("domain_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenRespForListEnterpriseSubCustomers() (*model.ListEnterpriseSubCustomersResponse, *def.HttpResponseDef) {
+	resp := new(model.ListEnterpriseSubCustomersResponse)
 	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
 	responseDef := respDefBuilder.Build()
 	return resp, responseDef

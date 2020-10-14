@@ -92,6 +92,8 @@ type ResFeeRecordV2 struct {
 	SpecSizeMeasureId *int32 `json:"spec_size_measure_id,omitempty"`
 	// |参数名称：消费的客户账号ID。| |参数约束及描述：如果是查询自己，这个地方是自身的ID; 如果是查询某个企业子客户，这个地方是企业子客户ID如果是查询以及下面的所有子客户，这个地方是消费的实际客户ID; 如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。|
 	CustomerId *string `json:"customer_id,omitempty"`
+	// |参数名称：订单ID 或 交易ID，扣费维度的唯一标识| |参数约束及描述：订单ID 或 交易ID，扣费维度的唯一标识|
+	TradeId *string `json:"trade_id,omitempty"`
 }
 
 func (o ResFeeRecordV2) String() string {

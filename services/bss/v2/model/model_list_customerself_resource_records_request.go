@@ -28,6 +28,7 @@ type ListCustomerselfResourceRecordsRequest struct {
 	IncludeZeroRecord   *bool   `json:"include_zero_record,omitempty"`
 	Method              *string `json:"method,omitempty"`
 	SubCustomerId       *string `json:"sub_customer_id,omitempty"`
+	TradeId             *string `json:"trade_id,omitempty"`
 }
 
 func (o ListCustomerselfResourceRecordsRequest) String() string {

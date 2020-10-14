@@ -86,6 +86,10 @@ func GenReqDefForListAnimatedGraphicsTask(request *model.ListAnimatedGraphicsTas
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("x-language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("project_id").
 		WithLocationType(def.Path))
 
@@ -280,6 +284,10 @@ func GenReqDefForListExtractTask(request *model.ListExtractTaskRequest) *def.Htt
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("size").
 		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("x-language").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("project_id").
@@ -686,6 +694,10 @@ func GenReqDefForListThumbnailsTask(request *model.ListThumbnailsTaskRequest) *d
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("x-language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("project_id").
 		WithLocationType(def.Path))
 
@@ -782,6 +794,10 @@ func GenReqDefForListTranscodingTask(request *model.ListTranscodingTaskRequest) 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("size").
 		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("x-language").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("project_id").

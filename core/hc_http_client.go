@@ -128,28 +128,42 @@ func (hc *HcHttpClient) extractResponse(resp *response.DefaultHttpResponse, resp
 		return resp, sdkerr.NewServiceResponseError(resp.Response)
 	}
 
+	bodyErr := hc.deserializeResponseBody(resp, responseDef)
+	if bodyErr != nil {
+		return nil, bodyErr
+	}
+
+	headersErr := hc.deserializeResponseHeaders(resp, responseDef)
+	if headersErr != nil {
+		return nil, headersErr
+	}
+
+	return resp, nil
+}
+
+func (hc *HcHttpClient) deserializeResponseBody(resp *response.DefaultHttpResponse, responseDef *def.HttpResponseDef) error {
 	data, err := ioutil.ReadAll(resp.Response.Body)
 	if err != nil {
 		if closeErr := resp.Response.Body.Close(); closeErr != nil {
-			return nil, err
+			return err
 		}
-		return nil, err
+		return err
 	}
 
 	if err := resp.Response.Body.Close(); err != nil {
-		return nil, err
+		return err
 	} else {
 		resp.Response.Body = ioutil.NopCloser(bytes.NewBuffer(data))
 	}
 
 	if len(data) == 0 {
-		return resp, nil
+		return nil
 	}
 
 	err = jsoniter.Unmarshal(data, responseDef.BodyJson)
 	if err != nil {
 		if strings.HasPrefix(string(data), "{") {
-			return nil, sdkerr.ServiceResponseError{
+			return sdkerr.ServiceResponseError{
 				StatusCode:   resp.GetStatusCode(),
 				RequestId:    resp.GetHeader("X-Request-Id"),
 				ErrorMessage: err.Error(),
@@ -159,7 +173,7 @@ func (hc *HcHttpClient) extractResponse(resp *response.DefaultHttpResponse, resp
 		dataOfListOrString := "{ \"body\" : " + string(data) + "}"
 		err = jsoniter.Unmarshal([]byte(dataOfListOrString), responseDef.BodyJson)
 		if err != nil {
-			return nil, sdkerr.ServiceResponseError{
+			return sdkerr.ServiceResponseError{
 				StatusCode:   resp.GetStatusCode(),
 				RequestId:    resp.GetHeader("X-Request-Id"),
 				ErrorMessage: err.Error(),
@@ -168,5 +182,25 @@ func (hc *HcHttpClient) extractResponse(resp *response.DefaultHttpResponse, resp
 	}
 
 	resp.BodyJson = responseDef.BodyJson
-	return resp, nil
+	return nil
+}
+
+func (hc *HcHttpClient) deserializeResponseHeaders(resp *response.DefaultHttpResponse, responseDef *def.HttpResponseDef) error {
+	headers := make(map[string]string)
+	for header := range resp.Response.Header {
+		headers[header] = resp.Response.Header.Get(header)
+	}
+	headersJsonStr, _ := json.Marshal(headers)
+
+	if headersJsonStr != nil && len(headersJsonStr) != 0 {
+		err := jsoniter.Unmarshal(headersJsonStr, responseDef.BodyJson)
+		if err != nil {
+			return sdkerr.ServiceResponseError{
+				StatusCode:   resp.GetStatusCode(),
+				RequestId:    resp.GetHeader("X-Request-Id"),
+				ErrorMessage: err.Error(),
+			}
+		}
+	}
+	return nil
 }
