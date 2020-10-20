@@ -79,7 +79,7 @@ type LoadBalancer struct {
 	// 功能描述：下联面子网ID  loadbalancer使用的下联面端口会动态的从这些网络中占用IP
 	ElbVirsubnetIds *[]string `json:"elb_virsubnet_ids,omitempty"`
 	// 功能描述：下联面子网类型
-	ElbVirsubnetType *string `json:"elb_virsubnet_type,omitempty"`
+	ElbVirsubnetType *LoadBalancerElbVirsubnetType `json:"elb_virsubnet_type,omitempty"`
 	// 是否启用跨VPC后端转发
 	IpTargetEnable *bool `json:"ip_target_enable,omitempty"`
 	// 是否开启删除保护
@@ -131,6 +131,44 @@ func (c LoadBalancerOperatingStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *LoadBalancerOperatingStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type LoadBalancerElbVirsubnetType struct {
+	value string
+}
+
+type LoadBalancerElbVirsubnetTypeEnum struct {
+	IPV4      LoadBalancerElbVirsubnetType
+	DUALSTACK LoadBalancerElbVirsubnetType
+}
+
+func GetLoadBalancerElbVirsubnetTypeEnum() LoadBalancerElbVirsubnetTypeEnum {
+	return LoadBalancerElbVirsubnetTypeEnum{
+		IPV4: LoadBalancerElbVirsubnetType{
+			value: "ipv4",
+		},
+		DUALSTACK: LoadBalancerElbVirsubnetType{
+			value: "dualstack",
+		},
+	}
+}
+
+func (c LoadBalancerElbVirsubnetType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *LoadBalancerElbVirsubnetType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

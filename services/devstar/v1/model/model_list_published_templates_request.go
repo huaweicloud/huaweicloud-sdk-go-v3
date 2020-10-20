@@ -1,7 +1,7 @@
 /*
- * Devstar
+ * DevStar
  *
- * Devstar API
+ * DevStar API
  *
  */
 

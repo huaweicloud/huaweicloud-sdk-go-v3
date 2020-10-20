@@ -21,7 +21,7 @@ type CreateIpGroupOption struct {
 	Description *string `json:"description,omitempty"`
 	// IP地址组的名称
 	Name *string `json:"name,omitempty"`
-	// IP地址组中包含的ip或网段列表。 []，表示不放通或不禁止任何ip。 单ipgroup下的ip或网段总和不超过300个。
+	// IP地址组中包含的ip或网段列表。[]表示任意ip。
 	IpList []CreateIpGroupIpOption `json:"ip_list"`
 	// 企业项目id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

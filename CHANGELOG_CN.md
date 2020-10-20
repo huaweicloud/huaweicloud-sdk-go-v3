@@ -1,5 +1,15 @@
+## 0.0.18-beta 2020-10-20
+## HuaweiCloud SDK ELB
+ - ### 新增特性
+    - 增加v2版本接口
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 无
+
+
 ## 0.0.17-beta 2020-10-14
-## HuaweiCloud SDK Bss
+## HuaweiCloud SDK BSS
  - ### 新增特性
     - 伙伴中心支持导出产品目录价
  - ### 解决问题
@@ -386,3 +396,13 @@
     - 统一身份认证服务（IAM）
     - 标签管理服务（TMS）
     - 虚拟私有云（VPC）
+
+# 3.0.17-beta 2020-10-16
+## HuaweiCloud SDK DevStar
+ - ### 新增特性
+    - title由Devstar更改为DevStar
+    - 补充DevStar自动化测试用例
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 无    

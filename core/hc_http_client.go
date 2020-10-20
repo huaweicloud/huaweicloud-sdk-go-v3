@@ -22,6 +22,8 @@ package core
 import (
 	"bytes"
 	"encoding/json"
+	"errors"
+	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
@@ -30,6 +32,7 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
 	jsoniter "github.com/json-iterator/go"
 	"io/ioutil"
+	"reflect"
 	"strings"
 )
 
@@ -92,35 +95,70 @@ func (hc *HcHttpClient) buildRequest(req interface{}, reqDef *def.HttpRequestDef
 }
 
 func (hc *HcHttpClient) fillParamsFromReq(req interface{}, reqDef *def.HttpRequestDef, builder *request.HttpRequestBuilder) (*request.HttpRequestBuilder, error) {
-	toBytes, err := hc.convertToBytes(req)
-	if err != nil {
-		return nil, err
-	}
+	attrMaps := hc.GetFieldJsonTags(req)
 
 	for _, fieldDef := range reqDef.RequestFields {
-		value := jsoniter.Get(toBytes.Bytes(), fieldDef.Name).ToString()
-		if value == "" {
-			continue
-		}
-		switch fieldDef.LocationType {
-		case def.Header:
-			builder.AddHeaderParam(fieldDef.Name, value)
-		case def.Path:
-			builder.AddPathParam(fieldDef.Name, value)
-		case def.Query:
-			builder.AddQueryParam(fieldDef.Name, value)
+		if _, ok := attrMaps[fieldDef.Name]; ok {
+			value, err := hc.GetFieldValueByName(attrMaps[fieldDef.Name], req)
+			if err != nil {
+				return nil, err
+			}
+			if value == nil {
+				continue
+			}
+			switch fieldDef.LocationType {
+			case def.Header:
+				builder.AddHeaderParam(fieldDef.Name, fmt.Sprintf("%v", value))
+			case def.Path:
+				builder.AddPathParam(fieldDef.Name, fmt.Sprintf("%v", value))
+			case def.Query:
+				builder.AddQueryParam(fieldDef.Name, value)
+			}
 		}
 	}
-	return builder, err
+	return builder, nil
 }
 
-func (hc *HcHttpClient) convertToBytes(req interface{}) (*bytes.Buffer, error) {
-	buf := &bytes.Buffer{}
-	err := json.NewEncoder(buf).Encode(req)
-	if err != nil {
-		return nil, err
+func (hc *HcHttpClient) GetFieldJsonTags(structName interface{}) map[string]def.FieldJsonTag {
+	attrMaps := make(map[string]def.FieldJsonTag)
+	t := reflect.TypeOf(structName)
+	if t.Kind() == reflect.Ptr {
+		t = t.Elem()
 	}
-	return buf, nil
+
+	fieldNum := t.NumField()
+	for i := 0; i < fieldNum; i++ {
+		jsonTag := t.Field(i).Tag.Get("json")
+		if jsonTag != "" {
+			jsonName := strings.Split(jsonTag, ",")[0]
+			attrMaps[jsonName] = def.FieldJsonTag{
+				FieldName: t.Field(i).Name,
+				JsonName:  jsonName,
+				JsonTag:   jsonTag,
+			}
+		}
+	}
+	return attrMaps
+}
+
+func (hc *HcHttpClient) GetFieldValueByName(fieldJsonTag def.FieldJsonTag, structName interface{}) (interface{}, error) {
+	v := reflect.ValueOf(structName)
+	if v.Kind() == reflect.Ptr {
+		v = v.Elem()
+	}
+
+	value := v.FieldByName(fieldJsonTag.FieldName)
+	if value.Kind() == reflect.Ptr || value.Kind() == reflect.Struct || value.Kind() == reflect.Interface {
+		if value.IsNil() {
+			if strings.Contains(fieldJsonTag.JsonTag, "omitempty") {
+				return nil, nil
+			}
+			return nil, errors.New("request field " + fieldJsonTag.FieldName + " read null value")
+		}
+		return value.Elem(), nil
+	}
+
+	return value, nil
 }
 
 func (hc *HcHttpClient) extractResponse(resp *response.DefaultHttpResponse, responseDef *def.HttpResponseDef) (*response.DefaultHttpResponse, error) {
@@ -133,11 +171,7 @@ func (hc *HcHttpClient) extractResponse(resp *response.DefaultHttpResponse, resp
 		return nil, bodyErr
 	}
 
-	headersErr := hc.deserializeResponseHeaders(resp, responseDef)
-	if headersErr != nil {
-		return nil, headersErr
-	}
-
+	hc.deserializeResponseHeaders(resp, responseDef)
 	return resp, nil
 }
 
@@ -185,22 +219,13 @@ func (hc *HcHttpClient) deserializeResponseBody(resp *response.DefaultHttpRespon
 	return nil
 }
 
-func (hc *HcHttpClient) deserializeResponseHeaders(resp *response.DefaultHttpResponse, responseDef *def.HttpResponseDef) error {
+func (hc *HcHttpClient) deserializeResponseHeaders(resp *response.DefaultHttpResponse, responseDef *def.HttpResponseDef) {
 	headers := make(map[string]string)
 	for header := range resp.Response.Header {
 		headers[header] = resp.Response.Header.Get(header)
 	}
-	headersJsonStr, _ := json.Marshal(headers)
-
-	if headersJsonStr != nil && len(headersJsonStr) != 0 {
-		err := jsoniter.Unmarshal(headersJsonStr, responseDef.BodyJson)
-		if err != nil {
-			return sdkerr.ServiceResponseError{
-				StatusCode:   resp.GetStatusCode(),
-				RequestId:    resp.GetHeader("X-Request-Id"),
-				ErrorMessage: err.Error(),
-			}
-		}
+	headersJsonStr, err := json.Marshal(headers)
+	if err == nil && len(headersJsonStr) != 0 {
+		_ = jsoniter.Unmarshal(headersJsonStr, responseDef.BodyJson)
 	}
-	return nil
 }

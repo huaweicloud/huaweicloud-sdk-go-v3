@@ -21,7 +21,7 @@ type IpGroup struct {
 	Description string `json:"description"`
 	// IP地址组的id。
 	Id string `json:"id"`
-	// IP地址组中包含的ip对象。
+	// IP地址组中包含的ip或网段列表。[]表示任意ip。
 	IpList []IpInfo `json:"ip_list"`
 	// 与IP地址组关联的监听器的id列表。
 	Listeners []ListenerRef `json:"listeners"`
