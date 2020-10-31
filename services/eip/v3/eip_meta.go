@@ -6,241 +6,246 @@ import (
 	"net/http"
 )
 
-func GenReqDefForAssociatePublicips(request *model.AssociatePublicipsRequest) *def.HttpRequestDef {
+func GenReqDefForAssociatePublicips() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v3/{project_id}/eip/publicips/{publicip_id}/associate-instance").
+		WithResponse(new(model.AssociatePublicipsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("publicip_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("PublicipId").
+		WithJsonTag("publicip_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForAssociatePublicips() (*model.AssociatePublicipsResponse, *def.HttpResponseDef) {
-	resp := new(model.AssociatePublicipsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDisassociatePublicips(request *model.DisassociatePublicipsRequest) *def.HttpRequestDef {
+func GenReqDefForDisassociatePublicips() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v3/{project_id}/eip/publicips/{publicip_id}/disassociate-instance").
+		WithResponse(new(model.DisassociatePublicipsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("publicip_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("PublicipId").
+		WithJsonTag("publicip_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDisassociatePublicips() (*model.DisassociatePublicipsResponse, *def.HttpResponseDef) {
-	resp := new(model.DisassociatePublicipsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListPublicips(request *model.ListPublicipsRequest) *def.HttpRequestDef {
+func GenReqDefForListPublicips() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v3/{project_id}/eip/publicips")
+		WithPath("/v3/{project_id}/eip/publicips").
+		WithResponse(new(model.ListPublicipsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("marker").
+		WithName("Marker").
+		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("fields").
+		WithName("Fields").
+		WithJsonTag("fields").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("sort_key").
+		WithName("SortKey").
+		WithJsonTag("sort_key").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("sort_dir").
+		WithName("SortDir").
+		WithJsonTag("sort_dir").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("id").
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ip_version").
+		WithName("IpVersion").
+		WithJsonTag("ip_version").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("public_ip_address").
+		WithName("PublicIpAddress").
+		WithJsonTag("public_ip_address").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("public_ip_address_like").
+		WithName("PublicIpAddressLike").
+		WithJsonTag("public_ip_address_like").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("public_ipv6_address").
+		WithName("PublicIpv6Address").
+		WithJsonTag("public_ipv6_address").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("public_ipv6_address_like").
+		WithName("PublicIpv6AddressLike").
+		WithJsonTag("public_ipv6_address_like").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("type").
+		WithName("Type").
+		WithJsonTag("type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("network_type").
+		WithName("NetworkType").
+		WithJsonTag("network_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("publicip_pool_name").
+		WithName("PublicipPoolName").
+		WithJsonTag("publicip_pool_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("alias_like").
+		WithName("AliasLike").
+		WithJsonTag("alias_like").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("alias").
+		WithName("Alias").
+		WithJsonTag("alias").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("description").
+		WithName("Description").
+		WithJsonTag("description").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("vnic.private_ip_address").
+		WithName("VnicPrivateIpAddress").
+		WithJsonTag("vnic.private_ip_address").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("vnic.private_ip_address_like").
+		WithName("VnicPrivateIpAddressLike").
+		WithJsonTag("vnic.private_ip_address_like").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("vnic.device_id").
+		WithName("VnicDeviceId").
+		WithJsonTag("vnic.device_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("vnic.device_owner").
+		WithName("VnicDeviceOwner").
+		WithJsonTag("vnic.device_owner").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("vnic.vpc_id").
+		WithName("VnicVpcId").
+		WithJsonTag("vnic.vpc_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("vnic.port_id").
+		WithName("VnicPortId").
+		WithJsonTag("vnic.port_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("vnic.device_owner_prefixlike").
+		WithName("VnicDeviceOwnerPrefixlike").
+		WithJsonTag("vnic.device_owner_prefixlike").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("vnic.instance_type").
+		WithName("VnicInstanceType").
+		WithJsonTag("vnic.instance_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("vnic.instance_id").
+		WithName("VnicInstanceId").
+		WithJsonTag("vnic.instance_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("bandwidth.id").
+		WithName("BandwidthId").
+		WithJsonTag("bandwidth.id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("bandwidth.name").
+		WithName("BandwidthName").
+		WithJsonTag("bandwidth.name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("bandwidth.name_like").
+		WithName("BandwidthNameLike").
+		WithJsonTag("bandwidth.name_like").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("bandwidth.size").
+		WithName("BandwidthSize").
+		WithJsonTag("bandwidth.size").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("bandwidth.share_type").
+		WithName("BandwidthShareType").
+		WithJsonTag("bandwidth.share_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("bandwidth.charge_mode").
+		WithName("BandwidthChargeMode").
+		WithJsonTag("bandwidth.charge_mode").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("billing_info").
+		WithName("BillingInfo").
+		WithJsonTag("billing_info").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("billing_mode").
+		WithName("BillingMode").
+		WithJsonTag("billing_mode").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("associate_instance_type").
+		WithName("AssociateInstanceType").
+		WithJsonTag("associate_instance_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("associate_instance_id").
+		WithName("AssociateInstanceId").
+		WithJsonTag("associate_instance_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("enterprise_project_id").
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("group_name").
+		WithName("GroupName").
+		WithJsonTag("group_name").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListPublicips() (*model.ListPublicipsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListPublicipsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowPublicip(request *model.ShowPublicipRequest) *def.HttpRequestDef {
+func GenReqDefForShowPublicip() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v3/{project_id}/eip/publicips/{publicip_id}")
+		WithPath("/v3/{project_id}/eip/publicips/{publicip_id}").
+		WithResponse(new(model.ShowPublicipResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("publicip_id").
+		WithName("PublicipId").
+		WithJsonTag("publicip_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("fields").
+		WithName("Fields").
+		WithJsonTag("fields").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
-}
-
-func GenRespForShowPublicip() (*model.ShowPublicipResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowPublicipResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
 }

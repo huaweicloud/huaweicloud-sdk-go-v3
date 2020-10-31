@@ -22,7 +22,7 @@ type Flavor struct {
 	Name string `json:"name"`
 	// 共享。
 	Shared bool `json:"shared"`
-	// 项目ID。包括flavor所属的项目ID及其共享型的项目ID。
+	// 项目ID
 	ProjectId string `json:"project_id"`
 	// L4和L7 分别表示四层和七层flavor。查询支持按type过滤
 	Type string `json:"type"`

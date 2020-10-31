@@ -6,1046 +6,805 @@ import (
 	"net/http"
 )
 
-func GenReqDefForCreateAnimatedGraphicsTask(request *model.CreateAnimatedGraphicsTaskRequest) *def.HttpRequestDef {
+func GenReqDefForCreateAnimatedGraphicsTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/animated-graphics").
+		WithResponse(new(model.CreateAnimatedGraphicsTaskResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateAnimatedGraphicsTask() (*model.CreateAnimatedGraphicsTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateAnimatedGraphicsTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteAnimatedGraphicsTask(request *model.DeleteAnimatedGraphicsTaskRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteAnimatedGraphicsTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/animated-graphics")
+		WithPath("/v1/{project_id}/animated-graphics").
+		WithResponse(new(model.DeleteAnimatedGraphicsTaskResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteAnimatedGraphicsTask() (*model.DeleteAnimatedGraphicsTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteAnimatedGraphicsTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListAnimatedGraphicsTask(request *model.ListAnimatedGraphicsTaskRequest) *def.HttpRequestDef {
+func GenReqDefForListAnimatedGraphicsTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/animated-graphics")
+		WithPath("/v1/{project_id}/animated-graphics").
+		WithResponse(new(model.ListAnimatedGraphicsTaskResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("start_time").
+		WithName("StartTime").
+		WithJsonTag("start_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("end_time").
+		WithName("EndTime").
+		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page").
+		WithName("Page").
+		WithJsonTag("page").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("size").
+		WithName("Size").
+		WithJsonTag("size").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("x-language").
+		WithName("XLanguage").
+		WithJsonTag("x-language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListAnimatedGraphicsTask() (*model.ListAnimatedGraphicsTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.ListAnimatedGraphicsTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateEncryptTask(request *model.CreateEncryptTaskRequest) *def.HttpRequestDef {
+func GenReqDefForCreateEncryptTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/encryptions").
+		WithResponse(new(model.CreateEncryptTaskResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateEncryptTask() (*model.CreateEncryptTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateEncryptTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteEncryptTask(request *model.DeleteEncryptTaskRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteEncryptTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/encryptions")
+		WithPath("/v1/{project_id}/encryptions").
+		WithResponse(new(model.DeleteEncryptTaskResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteEncryptTask() (*model.DeleteEncryptTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteEncryptTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListEncryptTask(request *model.ListEncryptTaskRequest) *def.HttpRequestDef {
+func GenReqDefForListEncryptTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/encryptions")
+		WithPath("/v1/{project_id}/encryptions").
+		WithResponse(new(model.ListEncryptTaskResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("start_time").
+		WithName("StartTime").
+		WithJsonTag("start_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("end_time").
+		WithName("EndTime").
+		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page").
+		WithName("Page").
+		WithJsonTag("page").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("size").
+		WithName("Size").
+		WithJsonTag("size").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListEncryptTask() (*model.ListEncryptTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.ListEncryptTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateExtractTask(request *model.CreateExtractTaskRequest) *def.HttpRequestDef {
+func GenReqDefForCreateExtractTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/extract-metadata").
+		WithResponse(new(model.CreateExtractTaskResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateExtractTask() (*model.CreateExtractTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateExtractTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteExtractTask(request *model.DeleteExtractTaskRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteExtractTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/extract-metadata")
+		WithPath("/v1/{project_id}/extract-metadata").
+		WithResponse(new(model.DeleteExtractTaskResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteExtractTask() (*model.DeleteExtractTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteExtractTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListExtractTask(request *model.ListExtractTaskRequest) *def.HttpRequestDef {
+func GenReqDefForListExtractTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/extract-metadata")
+		WithPath("/v1/{project_id}/extract-metadata").
+		WithResponse(new(model.ListExtractTaskResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("start_time").
+		WithName("StartTime").
+		WithJsonTag("start_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("end_time").
+		WithName("EndTime").
+		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page").
+		WithName("Page").
+		WithJsonTag("page").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("size").
+		WithName("Size").
+		WithJsonTag("size").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("x-language").
+		WithName("XLanguage").
+		WithJsonTag("x-language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListExtractTask() (*model.ListExtractTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.ListExtractTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListTranscodeDetail(request *model.ListTranscodeDetailRequest) *def.HttpRequestDef {
+func GenReqDefForListTranscodeDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/transcodings/detail")
+		WithPath("/v1/{project_id}/transcodings/detail").
+		WithResponse(new(model.ListTranscodeDetailResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListTranscodeDetail() (*model.ListTranscodeDetailResponse, *def.HttpResponseDef) {
-	resp := new(model.ListTranscodeDetailResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCancelRemuxTask(request *model.CancelRemuxTaskRequest) *def.HttpRequestDef {
+func GenReqDefForCancelRemuxTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/remux")
+		WithPath("/v1/{project_id}/remux").
+		WithResponse(new(model.CancelRemuxTaskResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCancelRemuxTask() (*model.CancelRemuxTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.CancelRemuxTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateRemuxTask(request *model.CreateRemuxTaskRequest) *def.HttpRequestDef {
+func GenReqDefForCreateRemuxTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/remux").
+		WithResponse(new(model.CreateRemuxTaskResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateRemuxTask() (*model.CreateRemuxTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateRemuxTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateRetryRemuxTask(request *model.CreateRetryRemuxTaskRequest) *def.HttpRequestDef {
+func GenReqDefForCreateRetryRemuxTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{project_id}/remux").
+		WithResponse(new(model.CreateRetryRemuxTaskResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateRetryRemuxTask() (*model.CreateRetryRemuxTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateRetryRemuxTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteRemuxTask(request *model.DeleteRemuxTaskRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteRemuxTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/remux/task")
+		WithPath("/v1/{project_id}/remux/task").
+		WithResponse(new(model.DeleteRemuxTaskResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteRemuxTask() (*model.DeleteRemuxTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteRemuxTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListRemuxTask(request *model.ListRemuxTaskRequest) *def.HttpRequestDef {
+func GenReqDefForListRemuxTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/remux")
+		WithPath("/v1/{project_id}/remux").
+		WithResponse(new(model.ListRemuxTaskResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("start_time").
+		WithName("StartTime").
+		WithJsonTag("start_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("end_time").
+		WithName("EndTime").
+		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("input_bucket").
+		WithName("InputBucket").
+		WithJsonTag("input_bucket").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("input_object").
+		WithName("InputObject").
+		WithJsonTag("input_object").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page").
+		WithName("Page").
+		WithJsonTag("page").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("size").
+		WithName("Size").
+		WithJsonTag("size").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListRemuxTask() (*model.ListRemuxTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.ListRemuxTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateTemplateGroup(request *model.CreateTemplateGroupRequest) *def.HttpRequestDef {
+func GenReqDefForCreateTemplateGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/template_group/transcodings").
+		WithResponse(new(model.CreateTemplateGroupResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateTemplateGroup() (*model.CreateTemplateGroupResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateTemplateGroupResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteTemplateGroup(request *model.DeleteTemplateGroupRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteTemplateGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/template_group/transcodings")
+		WithPath("/v1/{project_id}/template_group/transcodings").
+		WithResponse(new(model.DeleteTemplateGroupResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("group_id").
+		WithName("GroupId").
+		WithJsonTag("group_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteTemplateGroup() (*model.DeleteTemplateGroupResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteTemplateGroupResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListTemplateGroup(request *model.ListTemplateGroupRequest) *def.HttpRequestDef {
+func GenReqDefForListTemplateGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/template_group/transcodings")
+		WithPath("/v1/{project_id}/template_group/transcodings").
+		WithResponse(new(model.ListTemplateGroupResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("group_id").
+		WithName("GroupId").
+		WithJsonTag("group_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("group_name").
+		WithName("GroupName").
+		WithJsonTag("group_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page").
+		WithName("Page").
+		WithJsonTag("page").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("size").
+		WithName("Size").
+		WithJsonTag("size").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListTemplateGroup() (*model.ListTemplateGroupResponse, *def.HttpResponseDef) {
-	resp := new(model.ListTemplateGroupResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateTemplateGroup(request *model.UpdateTemplateGroupRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateTemplateGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{project_id}/template_group/transcodings").
+		WithResponse(new(model.UpdateTemplateGroupResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdateTemplateGroup() (*model.UpdateTemplateGroupResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateTemplateGroupResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateThumbnailsTask(request *model.CreateThumbnailsTaskRequest) *def.HttpRequestDef {
+func GenReqDefForCreateThumbnailsTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/thumbnails").
+		WithResponse(new(model.CreateThumbnailsTaskResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateThumbnailsTask() (*model.CreateThumbnailsTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateThumbnailsTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteThumbnailsTask(request *model.DeleteThumbnailsTaskRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteThumbnailsTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/thumbnails")
+		WithPath("/v1/{project_id}/thumbnails").
+		WithResponse(new(model.DeleteThumbnailsTaskResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteThumbnailsTask() (*model.DeleteThumbnailsTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteThumbnailsTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListThumbnailsTask(request *model.ListThumbnailsTaskRequest) *def.HttpRequestDef {
+func GenReqDefForListThumbnailsTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/thumbnails")
+		WithPath("/v1/{project_id}/thumbnails").
+		WithResponse(new(model.ListThumbnailsTaskResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("start_time").
+		WithName("StartTime").
+		WithJsonTag("start_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("end_time").
+		WithName("EndTime").
+		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page").
+		WithName("Page").
+		WithJsonTag("page").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("size").
+		WithName("Size").
+		WithJsonTag("size").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("x-language").
+		WithName("XLanguage").
+		WithJsonTag("x-language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListThumbnailsTask() (*model.ListThumbnailsTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.ListThumbnailsTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateTranscodingTask(request *model.CreateTranscodingTaskRequest) *def.HttpRequestDef {
+func GenReqDefForCreateTranscodingTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/transcodings").
+		WithResponse(new(model.CreateTranscodingTaskResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateTranscodingTask() (*model.CreateTranscodingTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateTranscodingTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteTranscodingTask(request *model.DeleteTranscodingTaskRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteTranscodingTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/transcodings")
+		WithPath("/v1/{project_id}/transcodings").
+		WithResponse(new(model.DeleteTranscodingTaskResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteTranscodingTask() (*model.DeleteTranscodingTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteTranscodingTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListTranscodingTask(request *model.ListTranscodingTaskRequest) *def.HttpRequestDef {
+func GenReqDefForListTranscodingTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/transcodings")
+		WithPath("/v1/{project_id}/transcodings").
+		WithResponse(new(model.ListTranscodingTaskResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("start_time").
+		WithName("StartTime").
+		WithJsonTag("start_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("end_time").
+		WithName("EndTime").
+		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page").
+		WithName("Page").
+		WithJsonTag("page").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("size").
+		WithName("Size").
+		WithJsonTag("size").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("x-language").
+		WithName("XLanguage").
+		WithJsonTag("x-language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListTranscodingTask() (*model.ListTranscodingTaskResponse, *def.HttpResponseDef) {
-	resp := new(model.ListTranscodingTaskResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateTransTemplate(request *model.CreateTransTemplateRequest) *def.HttpRequestDef {
+func GenReqDefForCreateTransTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/template/transcodings").
+		WithResponse(new(model.CreateTransTemplateResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateTransTemplate() (*model.CreateTransTemplateResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateTransTemplateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteTemplate(request *model.DeleteTemplateRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/template/transcodings")
+		WithPath("/v1/{project_id}/template/transcodings").
+		WithResponse(new(model.DeleteTemplateResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("template_id").
+		WithName("TemplateId").
+		WithJsonTag("template_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteTemplate() (*model.DeleteTemplateResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteTemplateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListTemplate(request *model.ListTemplateRequest) *def.HttpRequestDef {
+func GenReqDefForListTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/template/transcodings")
+		WithPath("/v1/{project_id}/template/transcodings").
+		WithResponse(new(model.ListTemplateResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("template_id").
+		WithName("TemplateId").
+		WithJsonTag("template_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page").
+		WithName("Page").
+		WithJsonTag("page").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("size").
+		WithName("Size").
+		WithJsonTag("size").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListTemplate() (*model.ListTemplateResponse, *def.HttpResponseDef) {
-	resp := new(model.ListTemplateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateTransTemplate(request *model.UpdateTransTemplateRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateTransTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{project_id}/template/transcodings").
+		WithResponse(new(model.UpdateTransTemplateResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdateTransTemplate() (*model.UpdateTransTemplateResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateTransTemplateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateWatermarkTemplate(request *model.CreateWatermarkTemplateRequest) *def.HttpRequestDef {
+func GenReqDefForCreateWatermarkTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/template/watermark").
+		WithResponse(new(model.CreateWatermarkTemplateResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateWatermarkTemplate() (*model.CreateWatermarkTemplateResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateWatermarkTemplateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteWatermarkTemplate(request *model.DeleteWatermarkTemplateRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteWatermarkTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/template/watermark")
+		WithPath("/v1/{project_id}/template/watermark").
+		WithResponse(new(model.DeleteWatermarkTemplateResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("template_id").
+		WithName("TemplateId").
+		WithJsonTag("template_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteWatermarkTemplate() (*model.DeleteWatermarkTemplateResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteWatermarkTemplateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListWatermarkTemplate(request *model.ListWatermarkTemplateRequest) *def.HttpRequestDef {
+func GenReqDefForListWatermarkTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/template/watermark")
+		WithPath("/v1/{project_id}/template/watermark").
+		WithResponse(new(model.ListWatermarkTemplateResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("template_id").
+		WithName("TemplateId").
+		WithJsonTag("template_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page").
+		WithName("Page").
+		WithJsonTag("page").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("size").
+		WithName("Size").
+		WithJsonTag("size").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListWatermarkTemplate() (*model.ListWatermarkTemplateResponse, *def.HttpResponseDef) {
-	resp := new(model.ListWatermarkTemplateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateWatermarkTemplate(request *model.UpdateWatermarkTemplateRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateWatermarkTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{project_id}/template/watermark").
+		WithResponse(new(model.UpdateWatermarkTemplateResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
-}
-
-func GenRespForUpdateWatermarkTemplate() (*model.UpdateWatermarkTemplateResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateWatermarkTemplateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
 }

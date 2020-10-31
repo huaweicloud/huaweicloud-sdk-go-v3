@@ -9,8 +9,9 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-
 	"strings"
 )
 
@@ -28,9 +29,45 @@ type EpDetail struct {
 	CreatedAt *sdktime.SdkTime `json:"created_at"`
 	// 修改时间，格式为UTC格式。如：2018-05-28T02:21:36Z。
 	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
+	// 项目类型。prod-商用项目；poc-测试项目
+	Type EpDetailType `json:"type"`
 }
 
 func (o EpDetail) String() string {
 	data, _ := json.Marshal(o)
 	return strings.Join([]string{"EpDetail", string(data)}, " ")
+}
+
+type EpDetailType struct {
+	value string
+}
+
+type EpDetailTypeEnum struct {
+	PROD_PROC EpDetailType
+}
+
+func GetEpDetailTypeEnum() EpDetailTypeEnum {
+	return EpDetailTypeEnum{
+		PROD_PROC: EpDetailType{
+			value: "prod; proc",
+		},
+	}
+}
+
+func (c EpDetailType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *EpDetailType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

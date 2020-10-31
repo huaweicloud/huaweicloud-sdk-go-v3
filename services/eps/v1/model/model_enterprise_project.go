@@ -19,6 +19,8 @@ type EnterpriseProject struct {
 	Name string `json:"name"`
 	// 最大长度512个字符。
 	Description *string `json:"description,omitempty"`
+	// 企业项目类型
+	Type *string `json:"type,omitempty"`
 }
 
 func (o EnterpriseProject) String() string {

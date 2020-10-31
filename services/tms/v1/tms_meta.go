@@ -6,178 +6,130 @@ import (
 	"net/http"
 )
 
-func GenReqDefForCreatePredefineTags(request *model.CreatePredefineTagsRequest) *def.HttpRequestDef {
+func GenReqDefForCreatePredefineTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1.0/predefine_tags/action").
+		WithResponse(new(model.CreatePredefineTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreatePredefineTags() (*model.CreatePredefineTagsResponse, *def.HttpResponseDef) {
-	resp := new(model.CreatePredefineTagsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeletePredefineTags(request *model.DeletePredefineTagsRequest) *def.HttpRequestDef {
+func GenReqDefForDeletePredefineTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1.0/predefine_tags/action").
+		WithResponse(new(model.DeletePredefineTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeletePredefineTags() (*model.DeletePredefineTagsResponse, *def.HttpResponseDef) {
-	resp := new(model.DeletePredefineTagsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListApiVersions(request *model.ListApiVersionsRequest) *def.HttpRequestDef {
+func GenReqDefForListApiVersions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/")
+		WithPath("/").
+		WithResponse(new(model.ListApiVersionsResponse))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+	// request
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListApiVersions() (*model.ListApiVersionsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListApiVersionsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListPredefineTags(request *model.ListPredefineTagsRequest) *def.HttpRequestDef {
+func GenReqDefForListPredefineTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1.0/predefine_tags")
+		WithPath("/v1.0/predefine_tags").
+		WithResponse(new(model.ListPredefineTagsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("key").
+		WithName("Key").
+		WithJsonTag("key").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("value").
+		WithName("Value").
+		WithJsonTag("value").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("marker").
+		WithName("Marker").
+		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("order_field").
+		WithName("OrderField").
+		WithJsonTag("order_field").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("order_method").
+		WithName("OrderMethod").
+		WithJsonTag("order_method").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListPredefineTags() (*model.ListPredefineTagsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListPredefineTagsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowApiVersion(request *model.ShowApiVersionRequest) *def.HttpRequestDef {
+func GenReqDefForShowApiVersion() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/{api_version}")
+		WithPath("/{api_version}").
+		WithResponse(new(model.ShowApiVersionResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("api_version").
+		WithName("ApiVersion").
+		WithJsonTag("api_version").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowApiVersion() (*model.ShowApiVersionResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowApiVersionResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdatePredefineTags(request *model.UpdatePredefineTagsRequest) *def.HttpRequestDef {
+func GenReqDefForUpdatePredefineTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1.0/predefine_tags").
+		WithResponse(new(model.UpdatePredefineTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
-}
-
-func GenRespForUpdatePredefineTags() (*model.UpdatePredefineTagsResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdatePredefineTagsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
 }

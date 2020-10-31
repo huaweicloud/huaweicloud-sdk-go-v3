@@ -6,1665 +6,1363 @@ import (
 	"net/http"
 )
 
-func GenReqDefForCreateHealthmonitor(request *model.CreateHealthmonitorRequest) *def.HttpRequestDef {
+func GenReqDefForCreateHealthmonitor() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/elb/healthmonitors").
+		WithResponse(new(model.CreateHealthmonitorResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateHealthmonitor() (*model.CreateHealthmonitorResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateHealthmonitorResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateL7policy(request *model.CreateL7policyRequest) *def.HttpRequestDef {
+func GenReqDefForCreateL7policy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/elb/l7policies").
+		WithResponse(new(model.CreateL7policyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateL7policy() (*model.CreateL7policyResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateL7policyResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateL7rule(request *model.CreateL7ruleRequest) *def.HttpRequestDef {
+func GenReqDefForCreateL7rule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/elb/l7policies/{l7policy_id}/rules").
+		WithResponse(new(model.CreateL7ruleResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("l7policy_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("L7policyId").
+		WithJsonTag("l7policy_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateL7rule() (*model.CreateL7ruleResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateL7ruleResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateListener(request *model.CreateListenerRequest) *def.HttpRequestDef {
+func GenReqDefForCreateListener() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/elb/listeners").
+		WithResponse(new(model.CreateListenerResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateListener() (*model.CreateListenerResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateListenerResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateLoadbalancer(request *model.CreateLoadbalancerRequest) *def.HttpRequestDef {
+func GenReqDefForCreateLoadbalancer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/elb/loadbalancers").
+		WithResponse(new(model.CreateLoadbalancerResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateLoadbalancer() (*model.CreateLoadbalancerResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateLoadbalancerResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateMember(request *model.CreateMemberRequest) *def.HttpRequestDef {
+func GenReqDefForCreateMember() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/elb/pools/{pool_id}/members").
+		WithResponse(new(model.CreateMemberResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("pool_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("PoolId").
+		WithJsonTag("pool_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateMember() (*model.CreateMemberResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateMemberResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreatePool(request *model.CreatePoolRequest) *def.HttpRequestDef {
+func GenReqDefForCreatePool() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/elb/pools").
+		WithResponse(new(model.CreatePoolResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreatePool() (*model.CreatePoolResponse, *def.HttpResponseDef) {
-	resp := new(model.CreatePoolResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateWhitelist(request *model.CreateWhitelistRequest) *def.HttpRequestDef {
+func GenReqDefForCreateWhitelist() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/elb/whitelists").
+		WithResponse(new(model.CreateWhitelistResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateWhitelist() (*model.CreateWhitelistResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateWhitelistResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteHealthmonitor(request *model.DeleteHealthmonitorRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteHealthmonitor() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/elb/healthmonitors/{healthmonitor_id}")
+		WithPath("/v2/{project_id}/elb/healthmonitors/{healthmonitor_id}").
+		WithResponse(new(model.DeleteHealthmonitorResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("healthmonitor_id").
+		WithName("HealthmonitorId").
+		WithJsonTag("healthmonitor_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteHealthmonitor() (*model.DeleteHealthmonitorResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteHealthmonitorResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteL7policy(request *model.DeleteL7policyRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteL7policy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/elb/l7policies/{l7policy_id}")
+		WithPath("/v2/{project_id}/elb/l7policies/{l7policy_id}").
+		WithResponse(new(model.DeleteL7policyResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("l7policy_id").
+		WithName("L7policyId").
+		WithJsonTag("l7policy_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteL7policy() (*model.DeleteL7policyResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteL7policyResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteL7rule(request *model.DeleteL7ruleRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteL7rule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/elb/l7policies/{l7policy_id}/rules/{l7rule_id}")
+		WithPath("/v2/{project_id}/elb/l7policies/{l7policy_id}/rules/{l7rule_id}").
+		WithResponse(new(model.DeleteL7ruleResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("l7policy_id").
+		WithName("L7policyId").
+		WithJsonTag("l7policy_id").
 		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("l7rule_id").
+		WithName("L7ruleId").
+		WithJsonTag("l7rule_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteL7rule() (*model.DeleteL7ruleResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteL7ruleResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteListener(request *model.DeleteListenerRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteListener() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/elb/listeners/{listener_id}")
+		WithPath("/v2/{project_id}/elb/listeners/{listener_id}").
+		WithResponse(new(model.DeleteListenerResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("listener_id").
+		WithName("ListenerId").
+		WithJsonTag("listener_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("cascade").
+		WithName("Cascade").
+		WithJsonTag("cascade").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteListener() (*model.DeleteListenerResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteListenerResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteLoadbalancer(request *model.DeleteLoadbalancerRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteLoadbalancer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/elb/loadbalancers/{loadbalancer_id}")
+		WithPath("/v2/{project_id}/elb/loadbalancers/{loadbalancer_id}").
+		WithResponse(new(model.DeleteLoadbalancerResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("loadbalancer_id").
+		WithName("LoadbalancerId").
+		WithJsonTag("loadbalancer_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("cascade").
+		WithName("Cascade").
+		WithJsonTag("cascade").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteLoadbalancer() (*model.DeleteLoadbalancerResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteLoadbalancerResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteMember(request *model.DeleteMemberRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteMember() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/elb/pools/{pool_id}/members/{member_id}")
+		WithPath("/v2/{project_id}/elb/pools/{pool_id}/members/{member_id}").
+		WithResponse(new(model.DeleteMemberResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("pool_id").
+		WithName("PoolId").
+		WithJsonTag("pool_id").
 		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("member_id").
+		WithName("MemberId").
+		WithJsonTag("member_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteMember() (*model.DeleteMemberResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteMemberResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeletePool(request *model.DeletePoolRequest) *def.HttpRequestDef {
+func GenReqDefForDeletePool() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/elb/pools/{pool_id}")
+		WithPath("/v2/{project_id}/elb/pools/{pool_id}").
+		WithResponse(new(model.DeletePoolResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("pool_id").
+		WithName("PoolId").
+		WithJsonTag("pool_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeletePool() (*model.DeletePoolResponse, *def.HttpResponseDef) {
-	resp := new(model.DeletePoolResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteWhitelist(request *model.DeleteWhitelistRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteWhitelist() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/elb/whitelists/{whitelist_id}")
+		WithPath("/v2/{project_id}/elb/whitelists/{whitelist_id}").
+		WithResponse(new(model.DeleteWhitelistResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("whitelist_id").
+		WithName("WhitelistId").
+		WithJsonTag("whitelist_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteWhitelist() (*model.DeleteWhitelistResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteWhitelistResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListHealthmonitors(request *model.ListHealthmonitorsRequest) *def.HttpRequestDef {
+func GenReqDefForListHealthmonitors() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/healthmonitors")
+		WithPath("/v2/{project_id}/elb/healthmonitors").
+		WithResponse(new(model.ListHealthmonitorsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("marker").
+		WithName("Marker").
+		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page_reverse").
+		WithName("PageReverse").
+		WithJsonTag("page_reverse").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("id").
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("name").
+		WithName("Name").
+		WithJsonTag("name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("delay").
+		WithName("Delay").
+		WithJsonTag("delay").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("max_retries").
+		WithName("MaxRetries").
+		WithJsonTag("max_retries").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("admin_state_up").
+		WithName("AdminStateUp").
+		WithJsonTag("admin_state_up").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("timeout").
+		WithName("Timeout").
+		WithJsonTag("timeout").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("type").
+		WithName("Type").
+		WithJsonTag("type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("monitor_port").
+		WithName("MonitorPort").
+		WithJsonTag("monitor_port").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("expected_codes").
+		WithName("ExpectedCodes").
+		WithJsonTag("expected_codes").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_name").
+		WithName("DomainName").
+		WithJsonTag("domain_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("url_path").
+		WithName("UrlPath").
+		WithJsonTag("url_path").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("http_method").
+		WithName("HttpMethod").
+		WithJsonTag("http_method").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListHealthmonitors() (*model.ListHealthmonitorsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListHealthmonitorsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListL7policies(request *model.ListL7policiesRequest) *def.HttpRequestDef {
+func GenReqDefForListL7policies() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/l7policies")
+		WithPath("/v2/{project_id}/elb/l7policies").
+		WithResponse(new(model.ListL7policiesResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("marker").
+		WithName("Marker").
+		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page_reverse").
+		WithName("PageReverse").
+		WithJsonTag("page_reverse").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("id").
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("name").
+		WithName("Name").
+		WithJsonTag("name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("description").
+		WithName("Description").
+		WithJsonTag("description").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("admin_state_up").
+		WithName("AdminStateUp").
+		WithJsonTag("admin_state_up").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("listener_id").
+		WithName("ListenerId").
+		WithJsonTag("listener_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("action").
+		WithName("Action").
+		WithJsonTag("action").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("redirect_pool_id").
+		WithName("RedirectPoolId").
+		WithJsonTag("redirect_pool_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("redirect_listener_id").
+		WithName("RedirectListenerId").
+		WithJsonTag("redirect_listener_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("redirect_url").
+		WithName("RedirectUrl").
+		WithJsonTag("redirect_url").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("position").
+		WithName("Position").
+		WithJsonTag("position").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("provisioning_status").
+		WithName("ProvisioningStatus").
+		WithJsonTag("provisioning_status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("enterprise_project_id").
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("display_all_rules").
+		WithName("DisplayAllRules").
+		WithJsonTag("display_all_rules").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListL7policies() (*model.ListL7policiesResponse, *def.HttpResponseDef) {
-	resp := new(model.ListL7policiesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListL7rules(request *model.ListL7rulesRequest) *def.HttpRequestDef {
+func GenReqDefForListL7rules() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/l7policies/{l7policy_id}/rules")
+		WithPath("/v2/{project_id}/elb/l7policies/{l7policy_id}/rules").
+		WithResponse(new(model.ListL7rulesResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("l7policy_id").
+		WithName("L7policyId").
+		WithJsonTag("l7policy_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("marker").
+		WithName("Marker").
+		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page_reverse").
+		WithName("PageReverse").
+		WithJsonTag("page_reverse").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("id").
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("admin_state_up").
+		WithName("AdminStateUp").
+		WithJsonTag("admin_state_up").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("type").
+		WithName("Type").
+		WithJsonTag("type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("compare_type").
+		WithName("CompareType").
+		WithJsonTag("compare_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("invert").
+		WithName("Invert").
+		WithJsonTag("invert").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("key").
+		WithName("Key").
+		WithJsonTag("key").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("value").
+		WithName("Value").
+		WithJsonTag("value").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("provisioning_status").
+		WithName("ProvisioningStatus").
+		WithJsonTag("provisioning_status").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListL7rules() (*model.ListL7rulesResponse, *def.HttpResponseDef) {
-	resp := new(model.ListL7rulesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListListeners(request *model.ListListenersRequest) *def.HttpRequestDef {
+func GenReqDefForListListeners() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/listeners")
+		WithPath("/v2/{project_id}/elb/listeners").
+		WithResponse(new(model.ListListenersResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("marker").
+		WithName("Marker").
+		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page_reverse").
+		WithName("PageReverse").
+		WithJsonTag("page_reverse").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("id").
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("name").
+		WithName("Name").
+		WithJsonTag("name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("description").
+		WithName("Description").
+		WithJsonTag("description").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("default_pool_id").
+		WithName("DefaultPoolId").
+		WithJsonTag("default_pool_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("default_tls_container_ref").
+		WithName("DefaultTlsContainerRef").
+		WithJsonTag("default_tls_container_ref").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("client_ca_tls_container_ref").
+		WithName("ClientCaTlsContainerRef").
+		WithJsonTag("client_ca_tls_container_ref").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("protocol").
+		WithName("Protocol").
+		WithJsonTag("protocol").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("protocol_port").
+		WithName("ProtocolPort").
+		WithJsonTag("protocol_port").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("tls_ciphers_policy").
+		WithName("TlsCiphersPolicy").
+		WithJsonTag("tls_ciphers_policy").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("member_timeout").
+		WithName("MemberTimeout").
+		WithJsonTag("member_timeout").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("client_timeout").
+		WithName("ClientTimeout").
+		WithJsonTag("client_timeout").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("keepalive_timeout").
+		WithName("KeepaliveTimeout").
+		WithJsonTag("keepalive_timeout").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("tls_container_id").
+		WithName("TlsContainerId").
+		WithJsonTag("tls_container_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListListeners() (*model.ListListenersResponse, *def.HttpResponseDef) {
-	resp := new(model.ListListenersResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListLoadbalancers(request *model.ListLoadbalancersRequest) *def.HttpRequestDef {
+func GenReqDefForListLoadbalancers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/loadbalancers")
+		WithPath("/v2/{project_id}/elb/loadbalancers").
+		WithResponse(new(model.ListLoadbalancersResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("marker").
+		WithName("Marker").
+		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page_reverse").
+		WithName("PageReverse").
+		WithJsonTag("page_reverse").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("id").
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("description").
+		WithName("Description").
+		WithJsonTag("description").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("name").
+		WithName("Name").
+		WithJsonTag("name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("operating_status").
+		WithName("OperatingStatus").
+		WithJsonTag("operating_status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("provisioning_status").
+		WithName("ProvisioningStatus").
+		WithJsonTag("provisioning_status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("vip_address").
+		WithName("VipAddress").
+		WithJsonTag("vip_address").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("vip_port_id").
+		WithName("VipPortId").
+		WithJsonTag("vip_port_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("vip_subnet_id").
+		WithName("VipSubnetId").
+		WithJsonTag("vip_subnet_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("vpc_id").
+		WithName("VpcId").
+		WithJsonTag("vpc_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("enterprise_project_id").
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("admin_state_up").
+		WithName("AdminStateUp").
+		WithJsonTag("admin_state_up").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("member_address").
+		WithName("MemberAddress").
+		WithJsonTag("member_address").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("member_device_id").
+		WithName("MemberDeviceId").
+		WithJsonTag("member_device_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListLoadbalancers() (*model.ListLoadbalancersResponse, *def.HttpResponseDef) {
-	resp := new(model.ListLoadbalancersResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListMenbers(request *model.ListMenbersRequest) *def.HttpRequestDef {
+func GenReqDefForListMenbers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/pools/{pool_id}/members")
+		WithPath("/v2/{project_id}/elb/pools/{pool_id}/members").
+		WithResponse(new(model.ListMenbersResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("pool_id").
+		WithName("PoolId").
+		WithJsonTag("pool_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("marker").
+		WithName("Marker").
+		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page_reverse").
+		WithName("PageReverse").
+		WithJsonTag("page_reverse").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("id").
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("name").
+		WithName("Name").
+		WithJsonTag("name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("address").
+		WithName("Address").
+		WithJsonTag("address").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("protocol_port").
+		WithName("ProtocolPort").
+		WithJsonTag("protocol_port").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("subnet_id").
+		WithName("SubnetId").
+		WithJsonTag("subnet_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("admin_state_up").
+		WithName("AdminStateUp").
+		WithJsonTag("admin_state_up").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("weight").
+		WithName("Weight").
+		WithJsonTag("weight").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListMenbers() (*model.ListMenbersResponse, *def.HttpResponseDef) {
-	resp := new(model.ListMenbersResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListPools(request *model.ListPoolsRequest) *def.HttpRequestDef {
+func GenReqDefForListPools() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/pools")
+		WithPath("/v2/{project_id}/elb/pools").
+		WithResponse(new(model.ListPoolsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("marker").
+		WithName("Marker").
+		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page_reverse").
+		WithName("PageReverse").
+		WithJsonTag("page_reverse").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("id").
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("name").
+		WithName("Name").
+		WithJsonTag("name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("description").
+		WithName("Description").
+		WithJsonTag("description").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("healthmonitor_id").
+		WithName("HealthmonitorId").
+		WithJsonTag("healthmonitor_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("loadbalancer_id").
+		WithName("LoadbalancerId").
+		WithJsonTag("loadbalancer_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("protocol").
+		WithName("Protocol").
+		WithJsonTag("protocol").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("lb_algorithm").
+		WithName("LbAlgorithm").
+		WithJsonTag("lb_algorithm").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("member_address").
+		WithName("MemberAddress").
+		WithJsonTag("member_address").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("member_device_id").
+		WithName("MemberDeviceId").
+		WithJsonTag("member_device_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("enterprise_project_id").
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListPools() (*model.ListPoolsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListPoolsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListWhitelists(request *model.ListWhitelistsRequest) *def.HttpRequestDef {
+func GenReqDefForListWhitelists() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/whitelists")
+		WithPath("/v2/{project_id}/elb/whitelists").
+		WithResponse(new(model.ListWhitelistsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("marker").
+		WithName("Marker").
+		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page_reverse").
+		WithName("PageReverse").
+		WithJsonTag("page_reverse").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("id").
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("enable_whitelist").
+		WithName("EnableWhitelist").
+		WithJsonTag("enable_whitelist").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("listener_id").
+		WithName("ListenerId").
+		WithJsonTag("listener_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("whitelist").
+		WithName("Whitelist").
+		WithJsonTag("whitelist").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListWhitelists() (*model.ListWhitelistsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListWhitelistsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowHealthmonitors(request *model.ShowHealthmonitorsRequest) *def.HttpRequestDef {
+func GenReqDefForShowHealthmonitors() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/healthmonitors/{healthmonitor_id}")
+		WithPath("/v2/{project_id}/elb/healthmonitors/{healthmonitor_id}").
+		WithResponse(new(model.ShowHealthmonitorsResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("healthmonitor_id").
+		WithName("HealthmonitorId").
+		WithJsonTag("healthmonitor_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowHealthmonitors() (*model.ShowHealthmonitorsResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowHealthmonitorsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowL7policy(request *model.ShowL7policyRequest) *def.HttpRequestDef {
+func GenReqDefForShowL7policy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/l7policies/{l7policy_id}")
+		WithPath("/v2/{project_id}/elb/l7policies/{l7policy_id}").
+		WithResponse(new(model.ShowL7policyResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("l7policy_id").
+		WithName("L7policyId").
+		WithJsonTag("l7policy_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowL7policy() (*model.ShowL7policyResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowL7policyResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowL7rule(request *model.ShowL7ruleRequest) *def.HttpRequestDef {
+func GenReqDefForShowL7rule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/l7policies/{l7policy_id}/rules/{l7rule_id}")
+		WithPath("/v2/{project_id}/elb/l7policies/{l7policy_id}/rules/{l7rule_id}").
+		WithResponse(new(model.ShowL7ruleResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("l7policy_id").
+		WithName("L7policyId").
+		WithJsonTag("l7policy_id").
 		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("l7rule_id").
+		WithName("L7ruleId").
+		WithJsonTag("l7rule_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowL7rule() (*model.ShowL7ruleResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowL7ruleResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowListener(request *model.ShowListenerRequest) *def.HttpRequestDef {
+func GenReqDefForShowListener() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/listeners/{listener_id}")
+		WithPath("/v2/{project_id}/elb/listeners/{listener_id}").
+		WithResponse(new(model.ShowListenerResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("listener_id").
+		WithName("ListenerId").
+		WithJsonTag("listener_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowListener() (*model.ShowListenerResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowListenerResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowLoadbalancer(request *model.ShowLoadbalancerRequest) *def.HttpRequestDef {
+func GenReqDefForShowLoadbalancer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/loadbalancers/{loadbalancer_id}")
+		WithPath("/v2/{project_id}/elb/loadbalancers/{loadbalancer_id}").
+		WithResponse(new(model.ShowLoadbalancerResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("loadbalancer_id").
+		WithName("LoadbalancerId").
+		WithJsonTag("loadbalancer_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowLoadbalancer() (*model.ShowLoadbalancerResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowLoadbalancerResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowLoadbalancersStatus(request *model.ShowLoadbalancersStatusRequest) *def.HttpRequestDef {
+func GenReqDefForShowLoadbalancersStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/loadbalancers/{loadbalancer_id}/statuses")
+		WithPath("/v2/{project_id}/elb/loadbalancers/{loadbalancer_id}/statuses").
+		WithResponse(new(model.ShowLoadbalancersStatusResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("loadbalancer_id").
+		WithName("LoadbalancerId").
+		WithJsonTag("loadbalancer_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowLoadbalancersStatus() (*model.ShowLoadbalancersStatusResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowLoadbalancersStatusResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowMember(request *model.ShowMemberRequest) *def.HttpRequestDef {
+func GenReqDefForShowMember() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/pools/{pool_id}/members/{member_id}")
+		WithPath("/v2/{project_id}/elb/pools/{pool_id}/members/{member_id}").
+		WithResponse(new(model.ShowMemberResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("pool_id").
+		WithName("PoolId").
+		WithJsonTag("pool_id").
 		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("member_id").
+		WithName("MemberId").
+		WithJsonTag("member_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowMember() (*model.ShowMemberResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowMemberResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowPool(request *model.ShowPoolRequest) *def.HttpRequestDef {
+func GenReqDefForShowPool() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/pools/{pool_id}")
+		WithPath("/v2/{project_id}/elb/pools/{pool_id}").
+		WithResponse(new(model.ShowPoolResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("pool_id").
+		WithName("PoolId").
+		WithJsonTag("pool_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowPool() (*model.ShowPoolResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowPoolResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowWhitelist(request *model.ShowWhitelistRequest) *def.HttpRequestDef {
+func GenReqDefForShowWhitelist() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/whitelists/{whitelist_id}")
+		WithPath("/v2/{project_id}/elb/whitelists/{whitelist_id}").
+		WithResponse(new(model.ShowWhitelistResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("whitelist_id").
+		WithName("WhitelistId").
+		WithJsonTag("whitelist_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowWhitelist() (*model.ShowWhitelistResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowWhitelistResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateHealthmonitor(request *model.UpdateHealthmonitorRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateHealthmonitor() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/elb/healthmonitors/{healthmonitor_id}").
+		WithResponse(new(model.UpdateHealthmonitorResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("healthmonitor_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("HealthmonitorId").
+		WithJsonTag("healthmonitor_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdateHealthmonitor() (*model.UpdateHealthmonitorResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateHealthmonitorResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateL7policies(request *model.UpdateL7policiesRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateL7policies() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/elb/l7policies/{l7policy_id}").
+		WithResponse(new(model.UpdateL7policiesResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("l7policy_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("L7policyId").
+		WithJsonTag("l7policy_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdateL7policies() (*model.UpdateL7policiesResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateL7policiesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateL7rule(request *model.UpdateL7ruleRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateL7rule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/elb/l7policies/{l7policy_id}/rules/{l7rule_id}").
+		WithResponse(new(model.UpdateL7ruleResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("l7policy_id").
+		WithName("L7policyId").
+		WithJsonTag("l7policy_id").
 		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("l7rule_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("L7ruleId").
+		WithJsonTag("l7rule_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdateL7rule() (*model.UpdateL7ruleResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateL7ruleResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateListener(request *model.UpdateListenerRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateListener() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/elb/listeners/{listener_id}").
+		WithResponse(new(model.UpdateListenerResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("listener_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("ListenerId").
+		WithJsonTag("listener_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdateListener() (*model.UpdateListenerResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateListenerResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateLoadbalancer(request *model.UpdateLoadbalancerRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateLoadbalancer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/elb/loadbalancers/{loadbalancer_id}").
+		WithResponse(new(model.UpdateLoadbalancerResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("loadbalancer_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("LoadbalancerId").
+		WithJsonTag("loadbalancer_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdateLoadbalancer() (*model.UpdateLoadbalancerResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateLoadbalancerResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateMember(request *model.UpdateMemberRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateMember() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/elb/pools/{pool_id}/members/{member_id}").
+		WithResponse(new(model.UpdateMemberResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("member_id").
+		WithName("MemberId").
+		WithJsonTag("member_id").
 		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("pool_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("PoolId").
+		WithJsonTag("pool_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdateMember() (*model.UpdateMemberResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateMemberResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdatePool(request *model.UpdatePoolRequest) *def.HttpRequestDef {
+func GenReqDefForUpdatePool() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/elb/pools/{pool_id}").
+		WithResponse(new(model.UpdatePoolResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("pool_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("PoolId").
+		WithJsonTag("pool_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdatePool() (*model.UpdatePoolResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdatePoolResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateWhitelist(request *model.UpdateWhitelistRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateWhitelist() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/elb/whitelists/{whitelist_id}").
+		WithResponse(new(model.UpdateWhitelistResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("whitelist_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("WhitelistId").
+		WithJsonTag("whitelist_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdateWhitelist() (*model.UpdateWhitelistResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateWhitelistResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateCertificate(request *model.CreateCertificateRequest) *def.HttpRequestDef {
+func GenReqDefForCreateCertificate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/elb/certificates").
+		WithResponse(new(model.CreateCertificateResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateCertificate() (*model.CreateCertificateResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateCertificateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteCertificate(request *model.DeleteCertificateRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteCertificate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/elb/certificates/{certificate_id}")
+		WithPath("/v2/{project_id}/elb/certificates/{certificate_id}").
+		WithResponse(new(model.DeleteCertificateResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("certificate_id").
+		WithName("CertificateId").
+		WithJsonTag("certificate_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteCertificate() (*model.DeleteCertificateResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteCertificateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListCertificates(request *model.ListCertificatesRequest) *def.HttpRequestDef {
+func GenReqDefForListCertificates() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/certificates")
+		WithPath("/v2/{project_id}/elb/certificates").
+		WithResponse(new(model.ListCertificatesResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("marker").
+		WithName("Marker").
+		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page_reverse").
+		WithName("PageReverse").
+		WithJsonTag("page_reverse").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("id").
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("name").
+		WithName("Name").
+		WithJsonTag("name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("description").
+		WithName("Description").
+		WithJsonTag("description").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("type").
+		WithName("Type").
+		WithJsonTag("type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain").
+		WithName("Domain").
+		WithJsonTag("domain").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("private_key").
+		WithName("PrivateKey").
+		WithJsonTag("private_key").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("certificate").
+		WithName("Certificate").
+		WithJsonTag("certificate").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListCertificates() (*model.ListCertificatesResponse, *def.HttpResponseDef) {
-	resp := new(model.ListCertificatesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowCertificate(request *model.ShowCertificateRequest) *def.HttpRequestDef {
+func GenReqDefForShowCertificate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/elb/certificates/{certificate_id}")
+		WithPath("/v2/{project_id}/elb/certificates/{certificate_id}").
+		WithResponse(new(model.ShowCertificateResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("certificate_id").
+		WithName("CertificateId").
+		WithJsonTag("certificate_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowCertificate() (*model.ShowCertificateResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowCertificateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateCertificate(request *model.UpdateCertificateRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateCertificate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/elb/certificates/{certificate_id}").
+		WithResponse(new(model.UpdateCertificateResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("certificate_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("CertificateId").
+		WithJsonTag("certificate_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
-}
-
-func GenRespForUpdateCertificate() (*model.UpdateCertificateResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateCertificateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
 }

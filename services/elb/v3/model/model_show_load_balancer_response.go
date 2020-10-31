@@ -15,7 +15,7 @@ import (
 
 // Response Object
 type ShowLoadBalancerResponse struct {
-	// 请求ID。 注：自动生成 。
+	// 请求ID。  注：自动生成 。
 	RequestId    *string       `json:"request_id,omitempty"`
 	Loadbalancer *LoadBalancer `json:"loadbalancer,omitempty"`
 }

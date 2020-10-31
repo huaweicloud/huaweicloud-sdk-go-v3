@@ -1,3 +1,64 @@
+## 0.0.19-beta 2020-10-31
+## HuaweiCloud SDK Core
+ - ### 新增特性
+    - 无
+ - ### 解决问题
+    - Fix: query参数中包含枚举变量时请求失败
+    - [Issue 7](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/7) 解决json.Marshal变成{}对象的问题
+ - ### 特性变更
+    - 无
+
+## HuaweiCloud SDK CBR
+ - ### 新增特性
+    - 新增支持接口：TAG标签相关接口
+ - ### 解决问题
+    - [Issue 17](https://github.com/huaweicloud/huaweicloud-sdk-java-v3/issues/17) 修复ListBackups接口响应体问题
+ - ### 特性变更
+    - 无
+
+## HuaweiCloud SDK CTS
+ - ### 新增特性
+    - 新增支持接口：ListQuotas（查询租户追踪器配额信息）
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 无
+
+## HuaweiCloud SDK EPS
+ - ### 新增特性
+    - 无
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 接口名称调整，原有的`*EP`接口展开为`*EnterpriseProject`，涉及接口：
+     1. ListEP → ListEnterpriseProject
+     2. CreateEP → CreateEnterpriseProject
+     3. ShowEP → ShowEnterpriseProject
+     4. ModifyEP → ModifyEnterpriseProject
+     5. EnableEP → EnableEnterpriseProject
+     6. ShowEPQuota → ShowEnterpriseProjectQuota
+     7. ShowResourceBindEP → ShowResourceBindEnterpriseProject
+     8. DisableEP → DisableEnterpriseProject
+
+## HuaweiCloud SDK Iam
+ - ### 新增特性
+    - 无
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 接口名称调整，涉及接口：
+     1. KeystoneCreateUserTokenByPasswordAndMFA → KeystoneCreateUserTokenByPasswordAndMfa
+     2. CreateUnscopeTokenByIDPInitiated → CreateUnscopeTokenByIdpInitiated
+
+## HuaweiCloud SDK ProjectMan
+ - ### 新增特性
+    - 新增支持接口：迭代信息、用户信息、项目成员、项目信息、项目指标、项目统计等相关方法的接口
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 无
+
+
 ## 0.0.18-beta 2020-10-20
 ## HuaweiCloud SDK ELB
  - ### 新增特性
@@ -396,13 +457,3 @@
     - 统一身份认证服务（IAM）
     - 标签管理服务（TMS）
     - 虚拟私有云（VPC）
-
-# 3.0.17-beta 2020-10-16
-## HuaweiCloud SDK DevStar
- - ### 新增特性
-    - title由Devstar更改为DevStar
-    - 补充DevStar自动化测试用例
- - ### 解决问题
-    - 无
- - ### 特性变更
-    - 无    

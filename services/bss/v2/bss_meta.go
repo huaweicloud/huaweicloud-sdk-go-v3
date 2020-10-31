@@ -6,2310 +6,1953 @@ import (
 	"net/http"
 )
 
-func GenReqDefForAutoRenewalResources(request *model.AutoRenewalResourcesRequest) *def.HttpRequestDef {
+func GenReqDefForAutoRenewalResources() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2/orders/subscriptions/resources/autorenew/{resource_id}")
+		WithPath("/v2/orders/subscriptions/resources/autorenew/{resource_id}").
+		WithResponse(new(model.AutoRenewalResourcesResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("resource_id").
+		WithName("ResourceId").
+		WithJsonTag("resource_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForAutoRenewalResources() (*model.AutoRenewalResourcesResponse, *def.HttpResponseDef) {
-	resp := new(model.AutoRenewalResourcesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForBatchSetSubCustomerDiscount(request *model.BatchSetSubCustomerDiscountRequest) *def.HttpRequestDef {
+func GenReqDefForBatchSetSubCustomerDiscount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/partners/discounts").
+		WithResponse(new(model.BatchSetSubCustomerDiscountResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForBatchSetSubCustomerDiscount() (*model.BatchSetSubCustomerDiscountResponse, *def.HttpResponseDef) {
-	resp := new(model.BatchSetSubCustomerDiscountResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCancelAutoRenewalResources(request *model.CancelAutoRenewalResourcesRequest) *def.HttpRequestDef {
+func GenReqDefForCancelAutoRenewalResources() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2/orders/subscriptions/resources/autorenew/{resource_id}")
+		WithPath("/v2/orders/subscriptions/resources/autorenew/{resource_id}").
+		WithResponse(new(model.CancelAutoRenewalResourcesResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("resource_id").
+		WithName("ResourceId").
+		WithJsonTag("resource_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCancelAutoRenewalResources() (*model.CancelAutoRenewalResourcesResponse, *def.HttpResponseDef) {
-	resp := new(model.CancelAutoRenewalResourcesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCancelCustomerOrder(request *model.CancelCustomerOrderRequest) *def.HttpRequestDef {
+func GenReqDefForCancelCustomerOrder() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/orders/customer-orders/cancel").
+		WithResponse(new(model.CancelCustomerOrderResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCancelCustomerOrder() (*model.CancelCustomerOrderResponse, *def.HttpResponseDef) {
-	resp := new(model.CancelCustomerOrderResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCancelResourcesSubscription(request *model.CancelResourcesSubscriptionRequest) *def.HttpRequestDef {
+func GenReqDefForCancelResourcesSubscription() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/orders/subscriptions/resources/unsubscribe").
+		WithResponse(new(model.CancelResourcesSubscriptionResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCancelResourcesSubscription() (*model.CancelResourcesSubscriptionResponse, *def.HttpResponseDef) {
-	resp := new(model.CancelResourcesSubscriptionResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForChangeEnterpriseRealnameAuthentication(request *model.ChangeEnterpriseRealnameAuthenticationRequest) *def.HttpRequestDef {
+func GenReqDefForChangeEnterpriseRealnameAuthentication() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/customers/realname-auths/enterprise").
+		WithResponse(new(model.ChangeEnterpriseRealnameAuthenticationResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForChangeEnterpriseRealnameAuthentication() (*model.ChangeEnterpriseRealnameAuthenticationResponse, *def.HttpResponseDef) {
-	resp := new(model.ChangeEnterpriseRealnameAuthenticationResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCheckUserIdentity(request *model.CheckUserIdentityRequest) *def.HttpRequestDef {
+func GenReqDefForCheckUserIdentity() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/partners/sub-customers/users/check-identity").
+		WithResponse(new(model.CheckUserIdentityResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCheckUserIdentity() (*model.CheckUserIdentityResponse, *def.HttpResponseDef) {
-	resp := new(model.CheckUserIdentityResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateEnterpriseProjectAuth(request *model.CreateEnterpriseProjectAuthRequest) *def.HttpRequestDef {
+func GenReqDefForCreateEnterpriseProjectAuth() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2/enterprises/enterprise-projects/authority")
+		WithPath("/v2/enterprises/enterprise-projects/authority").
+		WithResponse(new(model.CreateEnterpriseProjectAuthResponse))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+	// request
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateEnterpriseProjectAuth() (*model.CreateEnterpriseProjectAuthResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateEnterpriseProjectAuthResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateEnterpriseRealnameAuthentication(request *model.CreateEnterpriseRealnameAuthenticationRequest) *def.HttpRequestDef {
+func GenReqDefForCreateEnterpriseRealnameAuthentication() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/customers/realname-auths/enterprise").
+		WithResponse(new(model.CreateEnterpriseRealnameAuthenticationResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateEnterpriseRealnameAuthentication() (*model.CreateEnterpriseRealnameAuthenticationResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateEnterpriseRealnameAuthenticationResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreatePartnerCoupons(request *model.CreatePartnerCouponsRequest) *def.HttpRequestDef {
+func GenReqDefForCreatePartnerCoupons() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/promotions/benefits/partner-coupons").
+		WithResponse(new(model.CreatePartnerCouponsResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreatePartnerCoupons() (*model.CreatePartnerCouponsResponse, *def.HttpResponseDef) {
-	resp := new(model.CreatePartnerCouponsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreatePersonalRealnameAuth(request *model.CreatePersonalRealnameAuthRequest) *def.HttpRequestDef {
+func GenReqDefForCreatePersonalRealnameAuth() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/customers/realname-auths/individual").
+		WithResponse(new(model.CreatePersonalRealnameAuthResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreatePersonalRealnameAuth() (*model.CreatePersonalRealnameAuthResponse, *def.HttpResponseDef) {
-	resp := new(model.CreatePersonalRealnameAuthResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreatePostal(request *model.CreatePostalRequest) *def.HttpRequestDef {
+func GenReqDefForCreatePostal() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/customers/postal-addresses").
+		WithResponse(new(model.CreatePostalResponse)).
 		WithContentType("application/json")
 
+	// request
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithBodyJson(request.Body)
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreatePostal() (*model.CreatePostalResponse, *def.HttpResponseDef) {
-	resp := new(model.CreatePostalResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateSubCustomer(request *model.CreateSubCustomerRequest) *def.HttpRequestDef {
+func GenReqDefForCreateSubCustomer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/partners/sub-customers").
+		WithResponse(new(model.CreateSubCustomerResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateSubCustomer() (*model.CreateSubCustomerResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateSubCustomerResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateSubEnterpriseAccount(request *model.CreateSubEnterpriseAccountRequest) *def.HttpRequestDef {
+func GenReqDefForCreateSubEnterpriseAccount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/enterprises/multi-accounts/sub-customers").
+		WithResponse(new(model.CreateSubEnterpriseAccountResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateSubEnterpriseAccount() (*model.CreateSubEnterpriseAccountResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateSubEnterpriseAccountResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeletePostal(request *model.DeletePostalRequest) *def.HttpRequestDef {
+func GenReqDefForDeletePostal() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2/customers/postal-addresses/{address_id}")
+		WithPath("/v2/customers/postal-addresses/{address_id}").
+		WithResponse(new(model.DeletePostalResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("address_id").
+		WithName("AddressId").
+		WithJsonTag("address_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeletePostal() (*model.DeletePostalResponse, *def.HttpResponseDef) {
-	resp := new(model.DeletePostalResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListCities(request *model.ListCitiesRequest) *def.HttpRequestDef {
+func GenReqDefForListCities() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/systems/configs/cities")
+		WithPath("/v2/systems/configs/cities").
+		WithResponse(new(model.ListCitiesResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("province_code").
+		WithName("ProvinceCode").
+		WithJsonTag("province_code").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListCities() (*model.ListCitiesResponse, *def.HttpResponseDef) {
-	resp := new(model.ListCitiesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListCounties(request *model.ListCountiesRequest) *def.HttpRequestDef {
+func GenReqDefForListCounties() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/systems/configs/counties")
+		WithPath("/v2/systems/configs/counties").
+		WithResponse(new(model.ListCountiesResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("city_code").
+		WithName("CityCode").
+		WithJsonTag("city_code").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListCounties() (*model.ListCountiesResponse, *def.HttpResponseDef) {
-	resp := new(model.ListCountiesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListCouponQuotasRecords(request *model.ListCouponQuotasRecordsRequest) *def.HttpRequestDef {
+func GenReqDefForListCouponQuotasRecords() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/partners/coupon-quotas/records")
+		WithPath("/v2/partners/coupon-quotas/records").
+		WithResponse(new(model.ListCouponQuotasRecordsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("indirect_partner_id").
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("quota_id").
+		WithName("QuotaId").
+		WithJsonTag("quota_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("operation_time_begin").
+		WithName("OperationTimeBegin").
+		WithJsonTag("operation_time_begin").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("operation_time_end").
+		WithName("OperationTimeEnd").
+		WithJsonTag("operation_time_end").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("parent_quota_id").
+		WithName("ParentQuotaId").
+		WithJsonTag("parent_quota_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("operation_type").
+		WithName("OperationType").
+		WithJsonTag("operation_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListCouponQuotasRecords() (*model.ListCouponQuotasRecordsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListCouponQuotasRecordsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListCustomerBillsFeeRecords(request *model.ListCustomerBillsFeeRecordsRequest) *def.HttpRequestDef {
+func GenReqDefForListCustomerBillsFeeRecords() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/bills/customer-bills/fee-records")
+		WithPath("/v2/bills/customer-bills/fee-records").
+		WithResponse(new(model.ListCustomerBillsFeeRecordsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("bill_cycle").
+		WithName("BillCycle").
+		WithJsonTag("bill_cycle").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("provider_type").
+		WithName("ProviderType").
+		WithJsonTag("provider_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("service_type_code").
+		WithName("ServiceTypeCode").
+		WithJsonTag("service_type_code").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("resource_type_code").
+		WithName("ResourceTypeCode").
+		WithJsonTag("resource_type_code").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("region_code").
+		WithName("RegionCode").
+		WithJsonTag("region_code").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("charging_mode").
+		WithName("ChargingMode").
+		WithJsonTag("charging_mode").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("bill_type").
+		WithName("BillType").
+		WithJsonTag("bill_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("trade_id").
+		WithName("TradeId").
+		WithJsonTag("trade_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("enterprise_project_id").
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("include_zero_record").
+		WithName("IncludeZeroRecord").
+		WithJsonTag("include_zero_record").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("method").
+		WithName("Method").
+		WithJsonTag("method").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("sub_customer_id").
+		WithName("SubCustomerId").
+		WithJsonTag("sub_customer_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListCustomerBillsFeeRecords() (*model.ListCustomerBillsFeeRecordsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListCustomerBillsFeeRecordsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListCustomerOnDemandResources(request *model.ListCustomerOnDemandResourcesRequest) *def.HttpRequestDef {
+func GenReqDefForListCustomerOnDemandResources() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/partners/sub-customers/on-demand-resources/query").
+		WithResponse(new(model.ListCustomerOnDemandResourcesResponse)).
 		WithContentType("application/json")
 
+	// request
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithBodyJson(request.Body)
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListCustomerOnDemandResources() (*model.ListCustomerOnDemandResourcesResponse, *def.HttpResponseDef) {
-	resp := new(model.ListCustomerOnDemandResourcesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListCustomerOrders(request *model.ListCustomerOrdersRequest) *def.HttpRequestDef {
+func GenReqDefForListCustomerOrders() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/orders/customer-orders")
+		WithPath("/v2/orders/customer-orders").
+		WithResponse(new(model.ListCustomerOrdersResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("order_id").
+		WithName("OrderId").
+		WithJsonTag("order_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("customer_id").
+		WithName("CustomerId").
+		WithJsonTag("customer_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("create_time_begin").
+		WithName("CreateTimeBegin").
+		WithJsonTag("create_time_begin").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("create_time_end").
+		WithName("CreateTimeEnd").
+		WithJsonTag("create_time_end").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("service_type_code").
+		WithName("ServiceTypeCode").
+		WithJsonTag("service_type_code").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("order_type").
+		WithName("OrderType").
+		WithJsonTag("order_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("order_by").
+		WithName("OrderBy").
+		WithJsonTag("order_by").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("payment_time_begin").
+		WithName("PaymentTimeBegin").
+		WithJsonTag("payment_time_begin").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("payment_time_end").
+		WithName("PaymentTimeEnd").
+		WithJsonTag("payment_time_end").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("indirect_partner_id").
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListCustomerOrders() (*model.ListCustomerOrdersResponse, *def.HttpResponseDef) {
-	resp := new(model.ListCustomerOrdersResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListCustomersBalancesDetail(request *model.ListCustomersBalancesDetailRequest) *def.HttpRequestDef {
+func GenReqDefForListCustomersBalancesDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/accounts/customer-accounts/balances/batch-query").
+		WithResponse(new(model.ListCustomersBalancesDetailResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListCustomersBalancesDetail() (*model.ListCustomersBalancesDetailResponse, *def.HttpResponseDef) {
-	resp := new(model.ListCustomersBalancesDetailResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListCustomerselfResourceRecordDetails(request *model.ListCustomerselfResourceRecordDetailsRequest) *def.HttpRequestDef {
+func GenReqDefForListCustomerselfResourceRecordDetails() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/bills/customer-bills/res-records/query").
+		WithResponse(new(model.ListCustomerselfResourceRecordDetailsResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListCustomerselfResourceRecordDetails() (*model.ListCustomerselfResourceRecordDetailsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListCustomerselfResourceRecordDetailsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListCustomerselfResourceRecords(request *model.ListCustomerselfResourceRecordsRequest) *def.HttpRequestDef {
+func GenReqDefForListCustomerselfResourceRecords() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/bills/customer-bills/res-fee-records")
+		WithPath("/v2/bills/customer-bills/res-fee-records").
+		WithResponse(new(model.ListCustomerselfResourceRecordsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("cycle").
+		WithName("Cycle").
+		WithJsonTag("cycle").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("cloud_service_type").
+		WithName("CloudServiceType").
+		WithJsonTag("cloud_service_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("region").
+		WithName("Region").
+		WithJsonTag("region").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("charge_mode").
+		WithName("ChargeMode").
+		WithJsonTag("charge_mode").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("bill_type").
+		WithName("BillType").
+		WithJsonTag("bill_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("resource_id").
+		WithName("ResourceId").
+		WithJsonTag("resource_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("enterprise_project_id").
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("include_zero_record").
+		WithName("IncludeZeroRecord").
+		WithJsonTag("include_zero_record").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("method").
+		WithName("Method").
+		WithJsonTag("method").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("sub_customer_id").
+		WithName("SubCustomerId").
+		WithJsonTag("sub_customer_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("trade_id").
+		WithName("TradeId").
+		WithJsonTag("trade_id").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListCustomerselfResourceRecords() (*model.ListCustomerselfResourceRecordsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListCustomerselfResourceRecordsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListEnterpriseMultiAccount(request *model.ListEnterpriseMultiAccountRequest) *def.HttpRequestDef {
+func GenReqDefForListEnterpriseMultiAccount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/enterprises/multi-accounts/retrieve-amount")
+		WithPath("/v2/enterprises/multi-accounts/retrieve-amount").
+		WithResponse(new(model.ListEnterpriseMultiAccountResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("sub_customer_id").
+		WithName("SubCustomerId").
+		WithJsonTag("sub_customer_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("balance_type").
+		WithName("BalanceType").
+		WithJsonTag("balance_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListEnterpriseMultiAccount() (*model.ListEnterpriseMultiAccountResponse, *def.HttpResponseDef) {
-	resp := new(model.ListEnterpriseMultiAccountResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListEnterpriseOrganizations(request *model.ListEnterpriseOrganizationsRequest) *def.HttpRequestDef {
+func GenReqDefForListEnterpriseOrganizations() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/enterprises/multi-accounts/enterprise-organizations")
+		WithPath("/v2/enterprises/multi-accounts/enterprise-organizations").
+		WithResponse(new(model.ListEnterpriseOrganizationsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("recursive_query").
+		WithName("RecursiveQuery").
+		WithJsonTag("recursive_query").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("parent_id").
+		WithName("ParentId").
+		WithJsonTag("parent_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListEnterpriseOrganizations() (*model.ListEnterpriseOrganizationsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListEnterpriseOrganizationsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListEnterpriseSubCustomers(request *model.ListEnterpriseSubCustomersRequest) *def.HttpRequestDef {
+func GenReqDefForListEnterpriseSubCustomers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/enterprises/multi-accounts/sub-customers")
+		WithPath("/v2/enterprises/multi-accounts/sub-customers").
+		WithResponse(new(model.ListEnterpriseSubCustomersResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("sub_customer_account_name").
+		WithName("SubCustomerAccountName").
+		WithJsonTag("sub_customer_account_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("sub_customer_display_name").
+		WithName("SubCustomerDisplayName").
+		WithJsonTag("sub_customer_display_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("fuzzy_query").
+		WithName("FuzzyQuery").
+		WithJsonTag("fuzzy_query").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("org_id").
+		WithName("OrgId").
+		WithJsonTag("org_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListEnterpriseSubCustomers() (*model.ListEnterpriseSubCustomersResponse, *def.HttpResponseDef) {
-	resp := new(model.ListEnterpriseSubCustomersResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListIndirectPartners(request *model.ListIndirectPartnersRequest) *def.HttpRequestDef {
+func GenReqDefForListIndirectPartners() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/partners/indirect-partners/query").
+		WithResponse(new(model.ListIndirectPartnersResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListIndirectPartners() (*model.ListIndirectPartnersResponse, *def.HttpResponseDef) {
-	resp := new(model.ListIndirectPartnersResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListIssuedCouponQuotas(request *model.ListIssuedCouponQuotasRequest) *def.HttpRequestDef {
+func GenReqDefForListIssuedCouponQuotas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/partners/issued-coupon-quotas")
+		WithPath("/v2/partners/issued-coupon-quotas").
+		WithResponse(new(model.ListIssuedCouponQuotasResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("quota_id").
+		WithName("QuotaId").
+		WithJsonTag("quota_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("indirect_partner_id").
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("parent_quota_id").
+		WithName("ParentQuotaId").
+		WithJsonTag("parent_quota_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListIssuedCouponQuotas() (*model.ListIssuedCouponQuotasResponse, *def.HttpResponseDef) {
-	resp := new(model.ListIssuedCouponQuotasResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListIssuedPartnerCoupons(request *model.ListIssuedPartnerCouponsRequest) *def.HttpRequestDef {
+func GenReqDefForListIssuedPartnerCoupons() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/promotions/benefits/partner-coupons")
+		WithPath("/v2/promotions/benefits/partner-coupons").
+		WithResponse(new(model.ListIssuedPartnerCouponsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("coupon_id").
+		WithName("CouponId").
+		WithJsonTag("coupon_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("customer_id").
+		WithName("CustomerId").
+		WithJsonTag("customer_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("order_id").
+		WithName("OrderId").
+		WithJsonTag("order_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("coupon_type").
+		WithName("CouponType").
+		WithJsonTag("coupon_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("create_time_begin").
+		WithName("CreateTimeBegin").
+		WithJsonTag("create_time_begin").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("create_time_end").
+		WithName("CreateTimeEnd").
+		WithJsonTag("create_time_end").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("effective_time_begin").
+		WithName("EffectiveTimeBegin").
+		WithJsonTag("effective_time_begin").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("effective_time_end").
+		WithName("EffectiveTimeEnd").
+		WithJsonTag("effective_time_end").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("expire_time_begin").
+		WithName("ExpireTimeBegin").
+		WithJsonTag("expire_time_begin").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("expire_time_end").
+		WithName("ExpireTimeEnd").
+		WithJsonTag("expire_time_end").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("indirect_partner_id").
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListIssuedPartnerCoupons() (*model.ListIssuedPartnerCouponsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListIssuedPartnerCouponsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListOnDemandResourceRatings(request *model.ListOnDemandResourceRatingsRequest) *def.HttpRequestDef {
+func GenReqDefForListOnDemandResourceRatings() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/bills/ratings/on-demand-resources").
+		WithResponse(new(model.ListOnDemandResourceRatingsResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListOnDemandResourceRatings() (*model.ListOnDemandResourceRatingsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListOnDemandResourceRatingsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListOrderCouponsByOrderId(request *model.ListOrderCouponsByOrderIdRequest) *def.HttpRequestDef {
+func GenReqDefForListOrderCouponsByOrderId() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/orders/customer-orders/order-coupons")
+		WithPath("/v2/orders/customer-orders/order-coupons").
+		WithResponse(new(model.ListOrderCouponsByOrderIdResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("order_id").
+		WithName("OrderId").
+		WithJsonTag("order_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListOrderCouponsByOrderId() (*model.ListOrderCouponsByOrderIdResponse, *def.HttpResponseDef) {
-	resp := new(model.ListOrderCouponsByOrderIdResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListPartnerAdjustRecords(request *model.ListPartnerAdjustRecordsRequest) *def.HttpRequestDef {
+func GenReqDefForListPartnerAdjustRecords() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/accounts/partner-accounts/adjust-records")
+		WithPath("/v2/accounts/partner-accounts/adjust-records").
+		WithResponse(new(model.ListPartnerAdjustRecordsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("customer_id").
+		WithName("CustomerId").
+		WithJsonTag("customer_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("operation_type").
+		WithName("OperationType").
+		WithJsonTag("operation_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("operation_time_begin").
+		WithName("OperationTimeBegin").
+		WithJsonTag("operation_time_begin").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("operation_time_end").
+		WithName("OperationTimeEnd").
+		WithJsonTag("operation_time_end").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("trans_id").
+		WithName("TransId").
+		WithJsonTag("trans_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("indirect_partner_id").
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListPartnerAdjustRecords() (*model.ListPartnerAdjustRecordsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListPartnerAdjustRecordsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListPartnerBalances(request *model.ListPartnerBalancesRequest) *def.HttpRequestDef {
+func GenReqDefForListPartnerBalances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/accounts/partner-accounts/balances")
+		WithPath("/v2/accounts/partner-accounts/balances").
+		WithResponse(new(model.ListPartnerBalancesResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("indirect_partner_id").
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListPartnerBalances() (*model.ListPartnerBalancesResponse, *def.HttpResponseDef) {
-	resp := new(model.ListPartnerBalancesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListPartnerCouponsRecord(request *model.ListPartnerCouponsRecordRequest) *def.HttpRequestDef {
+func GenReqDefForListPartnerCouponsRecord() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/promotions/benefits/partner-coupons/records/query")
+		WithPath("/v2/promotions/benefits/partner-coupons/records/query").
+		WithResponse(new(model.ListPartnerCouponsRecordResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("operation_types").
+		WithName("OperationTypes").
+		WithJsonTag("operation_types").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("quota_id").
+		WithName("QuotaId").
+		WithJsonTag("quota_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("quota_type").
+		WithName("QuotaType").
+		WithJsonTag("quota_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("coupon_ids").
+		WithName("CouponIds").
+		WithJsonTag("coupon_ids").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("customer_id").
+		WithName("CustomerId").
+		WithJsonTag("customer_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("operation_time_begin").
+		WithName("OperationTimeBegin").
+		WithJsonTag("operation_time_begin").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("operation_time_end").
+		WithName("OperationTimeEnd").
+		WithJsonTag("operation_time_end").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("result").
+		WithName("Result").
+		WithJsonTag("result").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("indirect_partner_id").
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListPartnerCouponsRecord() (*model.ListPartnerCouponsRecordResponse, *def.HttpResponseDef) {
-	resp := new(model.ListPartnerCouponsRecordResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListPartnerPayOrders(request *model.ListPartnerPayOrdersRequest) *def.HttpRequestDef {
+func GenReqDefForListPartnerPayOrders() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/orders/customer-orders/partner-pay-orders")
+		WithPath("/v2/orders/customer-orders/partner-pay-orders").
+		WithResponse(new(model.ListPartnerPayOrdersResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("order_id").
+		WithName("OrderId").
+		WithJsonTag("order_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("customer_id").
+		WithName("CustomerId").
+		WithJsonTag("customer_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("indirect_partner_id").
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListPartnerPayOrders() (*model.ListPartnerPayOrdersResponse, *def.HttpResponseDef) {
-	resp := new(model.ListPartnerPayOrdersResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListPayPerUseCustomerResources(request *model.ListPayPerUseCustomerResourcesRequest) *def.HttpRequestDef {
+func GenReqDefForListPayPerUseCustomerResources() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/orders/suscriptions/resources/query").
+		WithResponse(new(model.ListPayPerUseCustomerResourcesResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListPayPerUseCustomerResources() (*model.ListPayPerUseCustomerResourcesResponse, *def.HttpResponseDef) {
-	resp := new(model.ListPayPerUseCustomerResourcesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListPostalAddress(request *model.ListPostalAddressRequest) *def.HttpRequestDef {
+func GenReqDefForListPostalAddress() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/customers/postal-addresses")
+		WithPath("/v2/customers/postal-addresses").
+		WithResponse(new(model.ListPostalAddressResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListPostalAddress() (*model.ListPostalAddressResponse, *def.HttpResponseDef) {
-	resp := new(model.ListPostalAddressResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListProvinces(request *model.ListProvincesRequest) *def.HttpRequestDef {
+func GenReqDefForListProvinces() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/systems/configs/provinces")
+		WithPath("/v2/systems/configs/provinces").
+		WithResponse(new(model.ListProvincesResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListProvinces() (*model.ListProvincesResponse, *def.HttpResponseDef) {
-	resp := new(model.ListProvincesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListQuotaCoupons(request *model.ListQuotaCouponsRequest) *def.HttpRequestDef {
+func GenReqDefForListQuotaCoupons() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/partners/coupon-quotas/query").
+		WithResponse(new(model.ListQuotaCouponsResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListQuotaCoupons() (*model.ListQuotaCouponsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListQuotaCouponsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListRateOnPeriodDetail(request *model.ListRateOnPeriodDetailRequest) *def.HttpRequestDef {
+func GenReqDefForListRateOnPeriodDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/bills/ratings/period-resources/subscribe-rate").
+		WithResponse(new(model.ListRateOnPeriodDetailResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListRateOnPeriodDetail() (*model.ListRateOnPeriodDetailResponse, *def.HttpResponseDef) {
-	resp := new(model.ListRateOnPeriodDetailResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListResourceUsages(request *model.ListResourceUsagesRequest) *def.HttpRequestDef {
+func GenReqDefForListResourceTypes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v2/payments/free-resources/usages/query")
+		WithMethod(http.MethodGet).
+		WithPath("/v2/bases/resource-types").
+		WithResponse(new(model.ListResourceTypesResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("ResourceTypeCode").
+		WithJsonTag("resource_type_code").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListResourceUsages() (*model.ListResourceUsagesResponse, *def.HttpResponseDef) {
-	resp := new(model.ListResourceUsagesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
+func GenReqDefForListResourceUsages() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/payments/free-resources/usages/query").
+		WithResponse(new(model.ListResourceUsagesResponse))
+
+	// request
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
 }
 
-func GenReqDefForListSkuInventories(request *model.ListSkuInventoriesRequest) *def.HttpRequestDef {
+func GenReqDefForListServiceResources() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/products/service-resources").
+		WithResponse(new(model.ListServiceResourcesResponse))
+
+	// request
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServiceTypeCode").
+		WithJsonTag("service_type_code").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListServiceTypes() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/bases/service-types").
+		WithResponse(new(model.ListServiceTypesResponse))
+
+	// request
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServiceTypeCode").
+		WithJsonTag("service_type_code").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListSkuInventories() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/orders/inventories/sku-inventories/query").
+		WithResponse(new(model.ListSkuInventoriesResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListSkuInventories() (*model.ListSkuInventoriesResponse, *def.HttpResponseDef) {
-	resp := new(model.ListSkuInventoriesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListSubCustomerCoupons(request *model.ListSubCustomerCouponsRequest) *def.HttpRequestDef {
+func GenReqDefForListSubCustomerCoupons() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/promotions/benefits/coupons")
+		WithPath("/v2/promotions/benefits/coupons").
+		WithResponse(new(model.ListSubCustomerCouponsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("coupon_id").
+		WithName("CouponId").
+		WithJsonTag("coupon_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("order_id").
+		WithName("OrderId").
+		WithJsonTag("order_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("promotion_plan_id").
+		WithName("PromotionPlanId").
+		WithJsonTag("promotion_plan_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("coupon_type").
+		WithName("CouponType").
+		WithJsonTag("coupon_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("active_start_time").
+		WithName("ActiveStartTime").
+		WithJsonTag("active_start_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("active_end_time").
+		WithName("ActiveEndTime").
+		WithJsonTag("active_end_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("source_id").
+		WithName("SourceId").
+		WithJsonTag("source_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("indirect_partner_id").
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListSubCustomerCoupons() (*model.ListSubCustomerCouponsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListSubCustomerCouponsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListSubCustomerDiscounts(request *model.ListSubCustomerDiscountsRequest) *def.HttpRequestDef {
+func GenReqDefForListSubCustomerDiscounts() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/partners/discounts")
+		WithPath("/v2/partners/discounts").
+		WithResponse(new(model.ListSubCustomerDiscountsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("customer_id").
+		WithName("CustomerId").
+		WithJsonTag("customer_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("indirect_partner_id").
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListSubCustomerDiscounts() (*model.ListSubCustomerDiscountsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListSubCustomerDiscountsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListSubCustomerResFeeRecords(request *model.ListSubCustomerResFeeRecordsRequest) *def.HttpRequestDef {
+func GenReqDefForListSubCustomerResFeeRecords() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/bills/partner-bills/subcustomer-bills/res-fee-records")
+		WithPath("/v2/bills/partner-bills/subcustomer-bills/res-fee-records").
+		WithResponse(new(model.ListSubCustomerResFeeRecordsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("customer_id").
+		WithName("CustomerId").
+		WithJsonTag("customer_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("cycle").
+		WithName("Cycle").
+		WithJsonTag("cycle").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("cloud_service_type").
+		WithName("CloudServiceType").
+		WithJsonTag("cloud_service_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("region").
+		WithName("Region").
+		WithJsonTag("region").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("charge_mode").
+		WithName("ChargeMode").
+		WithJsonTag("charge_mode").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("bill_type").
+		WithName("BillType").
+		WithJsonTag("bill_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("resource_id").
+		WithName("ResourceId").
+		WithJsonTag("resource_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("include_zero_record").
+		WithName("IncludeZeroRecord").
+		WithJsonTag("include_zero_record").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("indirect_partner_id").
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListSubCustomerResFeeRecords() (*model.ListSubCustomerResFeeRecordsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListSubCustomerResFeeRecordsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListSubCustomers(request *model.ListSubCustomersRequest) *def.HttpRequestDef {
+func GenReqDefForListSubCustomers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/partners/sub-customers/query").
+		WithResponse(new(model.ListSubCustomersResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListSubCustomers() (*model.ListSubCustomersResponse, *def.HttpResponseDef) {
-	resp := new(model.ListSubCustomersResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListSubcustomerMonthlyBills(request *model.ListSubcustomerMonthlyBillsRequest) *def.HttpRequestDef {
+func GenReqDefForListSubcustomerMonthlyBills() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/bills/partner-bills/subcustomer-bills/monthly-sum")
+		WithPath("/v2/bills/partner-bills/subcustomer-bills/monthly-sum").
+		WithResponse(new(model.ListSubcustomerMonthlyBillsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("customer_id").
+		WithName("CustomerId").
+		WithJsonTag("customer_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("cycle").
+		WithName("Cycle").
+		WithJsonTag("cycle").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("cloud_service_type").
+		WithName("CloudServiceType").
+		WithJsonTag("cloud_service_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("charge_mode").
+		WithName("ChargeMode").
+		WithJsonTag("charge_mode").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("bill_type").
+		WithName("BillType").
+		WithJsonTag("bill_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("indirect_partner_id").
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListSubcustomerMonthlyBills() (*model.ListSubcustomerMonthlyBillsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListSubcustomerMonthlyBillsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForPayOrders(request *model.PayOrdersRequest) *def.HttpRequestDef {
+func GenReqDefForPayOrders() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/orders/customer-orders/pay").
+		WithResponse(new(model.PayOrdersResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForPayOrders() (*model.PayOrdersResponse, *def.HttpResponseDef) {
-	resp := new(model.PayOrdersResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForReclaimCouponQuotas(request *model.ReclaimCouponQuotasRequest) *def.HttpRequestDef {
+func GenReqDefForReclaimCouponQuotas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/partners/coupon-quotas/indirect-partner-reclaim").
+		WithResponse(new(model.ReclaimCouponQuotasResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForReclaimCouponQuotas() (*model.ReclaimCouponQuotasResponse, *def.HttpResponseDef) {
-	resp := new(model.ReclaimCouponQuotasResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForReclaimIndirectPartnerAccount(request *model.ReclaimIndirectPartnerAccountRequest) *def.HttpRequestDef {
+func GenReqDefForReclaimIndirectPartnerAccount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/accounts/partner-accounts/indirect-partner-reclaim").
+		WithResponse(new(model.ReclaimIndirectPartnerAccountResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForReclaimIndirectPartnerAccount() (*model.ReclaimIndirectPartnerAccountResponse, *def.HttpResponseDef) {
-	resp := new(model.ReclaimIndirectPartnerAccountResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForReclaimPartnerCoupons(request *model.ReclaimPartnerCouponsRequest) *def.HttpRequestDef {
+func GenReqDefForReclaimPartnerCoupons() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/promotions/benefits/partner-coupons/reclaim").
+		WithResponse(new(model.ReclaimPartnerCouponsResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForReclaimPartnerCoupons() (*model.ReclaimPartnerCouponsResponse, *def.HttpResponseDef) {
-	resp := new(model.ReclaimPartnerCouponsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForReclaimSubEnterpriseAmount(request *model.ReclaimSubEnterpriseAmountRequest) *def.HttpRequestDef {
+func GenReqDefForReclaimSubEnterpriseAmount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/enterprises/multi-accounts/retrieve-amount").
+		WithResponse(new(model.ReclaimSubEnterpriseAmountResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForReclaimSubEnterpriseAmount() (*model.ReclaimSubEnterpriseAmountResponse, *def.HttpResponseDef) {
-	resp := new(model.ReclaimSubEnterpriseAmountResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForReclaimToPartnerAccount(request *model.ReclaimToPartnerAccountRequest) *def.HttpRequestDef {
+func GenReqDefForReclaimToPartnerAccount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/accounts/partner-accounts/reclaim").
+		WithResponse(new(model.ReclaimToPartnerAccountResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForReclaimToPartnerAccount() (*model.ReclaimToPartnerAccountResponse, *def.HttpResponseDef) {
-	resp := new(model.ReclaimToPartnerAccountResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForRenewalResources(request *model.RenewalResourcesRequest) *def.HttpRequestDef {
+func GenReqDefForRenewalResources() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/orders/subscriptions/resources/renew").
+		WithResponse(new(model.RenewalResourcesResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForRenewalResources() (*model.RenewalResourcesResponse, *def.HttpResponseDef) {
-	resp := new(model.RenewalResourcesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForSendSmsVerificationCode(request *model.SendSmsVerificationCodeRequest) *def.HttpRequestDef {
+func GenReqDefForSendSmsVerificationCode() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/enterprises/multi-accounts/sm-verification-code").
+		WithResponse(new(model.SendSmsVerificationCodeResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForSendSmsVerificationCode() (*model.SendSmsVerificationCodeResponse, *def.HttpResponseDef) {
-	resp := new(model.SendSmsVerificationCodeResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForSendVerificationMessageCode(request *model.SendVerificationMessageCodeRequest) *def.HttpRequestDef {
+func GenReqDefForSendVerificationMessageCode() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/bases/verificationcode/send").
+		WithResponse(new(model.SendVerificationMessageCodeResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForSendVerificationMessageCode() (*model.SendVerificationMessageCodeResponse, *def.HttpResponseDef) {
-	resp := new(model.SendVerificationMessageCodeResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowCusotmerAccountBalances(request *model.ShowCusotmerAccountBalancesRequest) *def.HttpRequestDef {
+func GenReqDefForShowCusotmerAccountBalances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/accounts/customer-accounts/balances")
+		WithPath("/v2/accounts/customer-accounts/balances").
+		WithResponse(new(model.ShowCusotmerAccountBalancesResponse))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+	// request
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowCusotmerAccountBalances() (*model.ShowCusotmerAccountBalancesResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowCusotmerAccountBalancesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowCustomerMonthlySum(request *model.ShowCustomerMonthlySumRequest) *def.HttpRequestDef {
+func GenReqDefForShowCustomerMonthlySum() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/bills/customer-bills/monthly-sum")
+		WithPath("/v2/bills/customer-bills/monthly-sum").
+		WithResponse(new(model.ShowCustomerMonthlySumResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("bill_cycle").
+		WithName("BillCycle").
+		WithJsonTag("bill_cycle").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("service_type_code").
+		WithName("ServiceTypeCode").
+		WithJsonTag("service_type_code").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("enterprise_project_id").
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("method").
+		WithName("Method").
+		WithJsonTag("method").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("sub_customer_id").
+		WithName("SubCustomerId").
+		WithJsonTag("sub_customer_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowCustomerMonthlySum() (*model.ShowCustomerMonthlySumResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowCustomerMonthlySumResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowCustomerOrderDetails(request *model.ShowCustomerOrderDetailsRequest) *def.HttpRequestDef {
+func GenReqDefForShowCustomerOrderDetails() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/orders/customer-orders/details/{order_id}")
+		WithPath("/v2/orders/customer-orders/details/{order_id}").
+		WithResponse(new(model.ShowCustomerOrderDetailsResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("order_id").
+		WithName("OrderId").
+		WithJsonTag("order_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("indirect_partner_id").
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowCustomerOrderDetails() (*model.ShowCustomerOrderDetailsResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowCustomerOrderDetailsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowMultiAccountTransferAmount(request *model.ShowMultiAccountTransferAmountRequest) *def.HttpRequestDef {
+func GenReqDefForShowMultiAccountTransferAmount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/enterprises/multi-accounts/transfer-amount")
+		WithPath("/v2/enterprises/multi-accounts/transfer-amount").
+		WithResponse(new(model.ShowMultiAccountTransferAmountResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("balance_type").
+		WithName("BalanceType").
+		WithJsonTag("balance_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowMultiAccountTransferAmount() (*model.ShowMultiAccountTransferAmountResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowMultiAccountTransferAmountResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowRealnameAuthenticationReviewResult(request *model.ShowRealnameAuthenticationReviewResultRequest) *def.HttpRequestDef {
+func GenReqDefForShowRealnameAuthenticationReviewResult() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/customers/realname-auths/result")
+		WithPath("/v2/customers/realname-auths/result").
+		WithResponse(new(model.ShowRealnameAuthenticationReviewResultResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("customer_id").
+		WithName("CustomerId").
+		WithJsonTag("customer_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowRealnameAuthenticationReviewResult() (*model.ShowRealnameAuthenticationReviewResultResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowRealnameAuthenticationReviewResultResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowRefundOrderDetails(request *model.ShowRefundOrderDetailsRequest) *def.HttpRequestDef {
+func GenReqDefForShowRefundOrderDetails() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/orders/customer-orders/refund-orders")
+		WithPath("/v2/orders/customer-orders/refund-orders").
+		WithResponse(new(model.ShowRefundOrderDetailsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("order_id").
+		WithName("OrderId").
+		WithJsonTag("order_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowRefundOrderDetails() (*model.ShowRefundOrderDetailsResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowRefundOrderDetailsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateCouponQuotas(request *model.UpdateCouponQuotasRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateCouponQuotas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/partners/coupon-quotas/indirect-partner-adjust").
+		WithResponse(new(model.UpdateCouponQuotasResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdateCouponQuotas() (*model.UpdateCouponQuotasResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateCouponQuotasResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateCustomerAccountAmount(request *model.UpdateCustomerAccountAmountRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateCustomerAccountAmount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/accounts/partner-accounts/adjust-amount").
+		WithResponse(new(model.UpdateCustomerAccountAmountResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdateCustomerAccountAmount() (*model.UpdateCustomerAccountAmountResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateCustomerAccountAmountResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateIndirectPartnerAccount(request *model.UpdateIndirectPartnerAccountRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateIndirectPartnerAccount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/accounts/partner-accounts/indirect-partner-adjust").
+		WithResponse(new(model.UpdateIndirectPartnerAccountResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdateIndirectPartnerAccount() (*model.UpdateIndirectPartnerAccountResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateIndirectPartnerAccountResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdatePostal(request *model.UpdatePostalRequest) *def.HttpRequestDef {
+func GenReqDefForUpdatePostal() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/customers/postal-addresses").
+		WithResponse(new(model.UpdatePostalResponse)).
 		WithContentType("application/json")
 
+	// request
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithBodyJson(request.Body)
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdatePostal() (*model.UpdatePostalResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdatePostalResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateSubEnterpriseAmount(request *model.UpdateSubEnterpriseAmountRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateSubEnterpriseAmount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/enterprises/multi-accounts/transfer-amount").
+		WithResponse(new(model.UpdateSubEnterpriseAmountResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
-}
-
-func GenRespForUpdateSubEnterpriseAmount() (*model.UpdateSubEnterpriseAmountResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateSubEnterpriseAmountResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
 }

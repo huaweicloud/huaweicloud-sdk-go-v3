@@ -27,9 +27,9 @@ type ListProjectWorkHoursRequestBody struct {
 	// 工时结束日期，年-月-日
 	EndTime *string `json:"end_time,omitempty"`
 	// 偏移量
-	Offset string `json:"offset"`
+	Offset int32 `json:"offset"`
 	// 每页显示数量，每页最多显示100条
-	Limit string `json:"limit"`
+	Limit int32 `json:"limit"`
 }
 
 func (o ListProjectWorkHoursRequestBody) String() string {

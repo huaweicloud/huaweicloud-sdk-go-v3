@@ -27,7 +27,7 @@ type CreateHealthMonitorOption struct {
 	HttpMethod *string `json:"http_method,omitempty"`
 	// 健康检查连续成功多少次后，将后端服务器的健康检查状态由offline判定为online，取值范围[1，10]。
 	MaxRetries int32 `json:"max_retries"`
-	// 健康检查连续失败多少次后，将后端服务器的健康检查状态由online判定为offline，取值范围[1，10]。 默认值：3
+	// 健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE
 	MaxRetriesDown *int32 `json:"max_retries_down,omitempty"`
 	// 健康检查端口号。默认为空，表示使用后端云服务器组的端口。
 	MonitorPort *int32 `json:"monitor_port,omitempty"`

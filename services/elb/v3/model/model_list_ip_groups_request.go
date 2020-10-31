@@ -15,13 +15,13 @@ import (
 
 // Request Object
 type ListIpGroupsRequest struct {
-	Marker      *string   `json:"marker,omitempty"`
-	Limit       *int32    `json:"limit,omitempty"`
-	PageReverse *bool     `json:"page_reverse,omitempty"`
-	Id          *[]string `json:"id,omitempty"`
-	Name        *[]string `json:"name,omitempty"`
 	Description *[]string `json:"description,omitempty"`
+	Id          *[]string `json:"id,omitempty"`
 	IpList      *[]string `json:"ip_list,omitempty"`
+	Limit       *int32    `json:"limit,omitempty"`
+	Marker      *string   `json:"marker,omitempty"`
+	Name        *[]string `json:"name,omitempty"`
+	PageReverse *bool     `json:"page_reverse,omitempty"`
 }
 
 func (o ListIpGroupsRequest) String() string {

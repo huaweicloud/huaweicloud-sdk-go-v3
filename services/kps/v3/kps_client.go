@@ -20,144 +20,132 @@ func KpsClientBuilder() *http_client.HcHttpClientBuilder {
 
 //给指定的虚拟机绑定（替换或重置，替换需提供虚拟机已配置的SSH密钥对私钥；重置不需要提供虚拟机的SSH密钥对私钥）新的SSH密钥对。
 func (c *KpsClient) AssociateKeypair(request *model.AssociateKeypairRequest) (*model.AssociateKeypairResponse, error) {
-	requestDef := GenReqDefForAssociateKeypair(request)
-	resp, responseDef := GenRespForAssociateKeypair()
+	requestDef := GenReqDefForAssociateKeypair()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.AssociateKeypairResponse), nil
 	}
 }
 
 //创建和导入SSH密钥对
 func (c *KpsClient) CreateKeypair(request *model.CreateKeypairRequest) (*model.CreateKeypairResponse, error) {
-	requestDef := GenReqDefForCreateKeypair(request)
-	resp, responseDef := GenRespForCreateKeypair()
+	requestDef := GenReqDefForCreateKeypair()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.CreateKeypairResponse), nil
 	}
 }
 
 //删除操作失败的任务信息。
 func (c *KpsClient) DeleteAllFailedTask(request *model.DeleteAllFailedTaskRequest) (*model.DeleteAllFailedTaskResponse, error) {
-	requestDef := GenReqDefForDeleteAllFailedTask(request)
-	resp, responseDef := GenRespForDeleteAllFailedTask()
+	requestDef := GenReqDefForDeleteAllFailedTask()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.DeleteAllFailedTaskResponse), nil
 	}
 }
 
 //删除失败的任务。
 func (c *KpsClient) DeleteFailedTask(request *model.DeleteFailedTaskRequest) (*model.DeleteFailedTaskResponse, error) {
-	requestDef := GenReqDefForDeleteFailedTask(request)
-	resp, responseDef := GenRespForDeleteFailedTask()
+	requestDef := GenReqDefForDeleteFailedTask()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.DeleteFailedTaskResponse), nil
 	}
 }
 
 //删除SSH密钥对。
 func (c *KpsClient) DeleteKeypair(request *model.DeleteKeypairRequest) (*model.DeleteKeypairResponse, error) {
-	requestDef := GenReqDefForDeleteKeypair(request)
-	resp, responseDef := GenRespForDeleteKeypair()
+	requestDef := GenReqDefForDeleteKeypair()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.DeleteKeypairResponse), nil
 	}
 }
 
 //给指定的虚拟机解除绑定SSH密钥对并恢复SSH密码登录。
 func (c *KpsClient) DisassociateKeypair(request *model.DisassociateKeypairRequest) (*model.DisassociateKeypairResponse, error) {
-	requestDef := GenReqDefForDisassociateKeypair(request)
-	resp, responseDef := GenRespForDisassociateKeypair()
+	requestDef := GenReqDefForDisassociateKeypair()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.DisassociateKeypairResponse), nil
 	}
 }
 
 //查询绑定、解绑等操作失败的任务信息。
 func (c *KpsClient) ListFailedTask(request *model.ListFailedTaskRequest) (*model.ListFailedTaskResponse, error) {
-	requestDef := GenReqDefForListFailedTask(request)
-	resp, responseDef := GenRespForListFailedTask()
+	requestDef := GenReqDefForListFailedTask()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ListFailedTaskResponse), nil
 	}
 }
 
 //查询SSH密钥对详细信息
 func (c *KpsClient) ListKeypairDetail(request *model.ListKeypairDetailRequest) (*model.ListKeypairDetailResponse, error) {
-	requestDef := GenReqDefForListKeypairDetail(request)
-	resp, responseDef := GenRespForListKeypairDetail()
+	requestDef := GenReqDefForListKeypairDetail()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ListKeypairDetailResponse), nil
 	}
 }
 
 //根据SSH密钥对接口返回的task_id，查询SSH密钥对当前任务的执行状态。
 func (c *KpsClient) ListKeypairTask(request *model.ListKeypairTaskRequest) (*model.ListKeypairTaskResponse, error) {
-	requestDef := GenReqDefForListKeypairTask(request)
-	resp, responseDef := GenRespForListKeypairTask()
+	requestDef := GenReqDefForListKeypairTask()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ListKeypairTaskResponse), nil
 	}
 }
 
 //查询SSH密钥对列表
 func (c *KpsClient) ListKeypairs(request *model.ListKeypairsRequest) (*model.ListKeypairsResponse, error) {
-	requestDef := GenReqDefForListKeypairs(request)
-	resp, responseDef := GenRespForListKeypairs()
+	requestDef := GenReqDefForListKeypairs()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ListKeypairsResponse), nil
 	}
 }
 
 //查询正在处理的任务信息。
 func (c *KpsClient) ListRunningTask(request *model.ListRunningTaskRequest) (*model.ListRunningTaskResponse, error) {
-	requestDef := GenReqDefForListRunningTask(request)
-	resp, responseDef := GenRespForListRunningTask()
+	requestDef := GenReqDefForListRunningTask()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ListRunningTaskResponse), nil
 	}
 }
 
 //更新SSH密钥对描述。
 func (c *KpsClient) UpdateKeypairDescription(request *model.UpdateKeypairDescriptionRequest) (*model.UpdateKeypairDescriptionResponse, error) {
-	requestDef := GenReqDefForUpdateKeypairDescription(request)
-	resp, responseDef := GenRespForUpdateKeypairDescription()
+	requestDef := GenReqDefForUpdateKeypairDescription()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.UpdateKeypairDescriptionResponse), nil
 	}
 }

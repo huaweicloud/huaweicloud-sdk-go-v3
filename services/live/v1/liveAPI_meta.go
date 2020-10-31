@@ -6,484 +6,394 @@ import (
 	"net/http"
 )
 
-func GenReqDefForCreateRecordConfig(request *model.CreateRecordConfigRequest) *def.HttpRequestDef {
+func GenReqDefForCreateRecordConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/record/config").
+		WithResponse(new(model.CreateRecordConfigResponse)).
 		WithContentType("application/json; charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateRecordConfig() (*model.CreateRecordConfigResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateRecordConfigResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateStreamForbidden(request *model.CreateStreamForbiddenRequest) *def.HttpRequestDef {
+func GenReqDefForCreateStreamForbidden() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/stream/blocks").
+		WithResponse(new(model.CreateStreamForbiddenResponse)).
 		WithContentType("application/json; charset=UTF-8")
 
+	// request
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("specify_project").
+		WithName("SpecifyProject").
+		WithJsonTag("specify_project").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithBodyJson(request.Body)
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateStreamForbidden() (*model.CreateStreamForbiddenResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateStreamForbiddenResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateTranscodingsTemplate(request *model.CreateTranscodingsTemplateRequest) *def.HttpRequestDef {
+func GenReqDefForCreateTranscodingsTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/template/transcodings").
+		WithResponse(new(model.CreateTranscodingsTemplateResponse)).
 		WithContentType("application/json; charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateTranscodingsTemplate() (*model.CreateTranscodingsTemplateResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateTranscodingsTemplateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteRecordConfig(request *model.DeleteRecordConfigRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteRecordConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/record/config")
+		WithPath("/v1/{project_id}/record/config").
+		WithResponse(new(model.DeleteRecordConfigResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain").
+		WithName("Domain").
+		WithJsonTag("domain").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("app_name").
+		WithName("AppName").
+		WithJsonTag("app_name").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteRecordConfig() (*model.DeleteRecordConfigResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteRecordConfigResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteStreamForbidden(request *model.DeleteStreamForbiddenRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteStreamForbidden() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/stream/blocks")
+		WithPath("/v1/{project_id}/stream/blocks").
+		WithResponse(new(model.DeleteStreamForbiddenResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("specify_project").
+		WithName("SpecifyProject").
+		WithJsonTag("specify_project").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain").
+		WithName("Domain").
+		WithJsonTag("domain").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("app_name").
+		WithName("AppName").
+		WithJsonTag("app_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("stream_name").
+		WithName("StreamName").
+		WithJsonTag("stream_name").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteStreamForbidden() (*model.DeleteStreamForbiddenResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteStreamForbiddenResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForDeleteTranscodingsTemplate(request *model.DeleteTranscodingsTemplateRequest) *def.HttpRequestDef {
+func GenReqDefForDeleteTranscodingsTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/template/transcodings")
+		WithPath("/v1/{project_id}/template/transcodings").
+		WithResponse(new(model.DeleteTranscodingsTemplateResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain").
+		WithName("Domain").
+		WithJsonTag("domain").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("app_name").
+		WithName("AppName").
+		WithJsonTag("app_name").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForDeleteTranscodingsTemplate() (*model.DeleteTranscodingsTemplateResponse, *def.HttpResponseDef) {
-	resp := new(model.DeleteTranscodingsTemplateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListRecordConfigs(request *model.ListRecordConfigsRequest) *def.HttpRequestDef {
+func GenReqDefForListRecordConfigs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/record/config")
+		WithPath("/v1/{project_id}/record/config").
+		WithResponse(new(model.ListRecordConfigsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain").
+		WithName("Domain").
+		WithJsonTag("domain").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("app_name").
+		WithName("AppName").
+		WithJsonTag("app_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("stream_name").
+		WithName("StreamName").
+		WithJsonTag("stream_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page").
+		WithName("Page").
+		WithJsonTag("page").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("size").
+		WithName("Size").
+		WithJsonTag("size").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("record_type").
+		WithName("RecordType").
+		WithJsonTag("record_type").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListRecordConfigs() (*model.ListRecordConfigsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListRecordConfigsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListStreamForbidden(request *model.ListStreamForbiddenRequest) *def.HttpRequestDef {
+func GenReqDefForListStreamForbidden() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/stream/blocks")
+		WithPath("/v1/{project_id}/stream/blocks").
+		WithResponse(new(model.ListStreamForbiddenResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("specify_project").
+		WithName("SpecifyProject").
+		WithJsonTag("specify_project").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain").
+		WithName("Domain").
+		WithJsonTag("domain").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("app_name").
+		WithName("AppName").
+		WithJsonTag("app_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("stream_name").
+		WithName("StreamName").
+		WithJsonTag("stream_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page").
+		WithName("Page").
+		WithJsonTag("page").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("size").
+		WithName("Size").
+		WithJsonTag("size").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListStreamForbidden() (*model.ListStreamForbiddenResponse, *def.HttpResponseDef) {
-	resp := new(model.ListStreamForbiddenResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowBandwidth(request *model.ShowBandwidthRequest) *def.HttpRequestDef {
+func GenReqDefForShowBandwidth() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/stream/bandwidth")
+		WithPath("/v1/{project_id}/stream/bandwidth").
+		WithResponse(new(model.ShowBandwidthResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain").
+		WithName("Domain").
+		WithJsonTag("domain").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("start_time").
+		WithName("StartTime").
+		WithJsonTag("start_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("end_time").
+		WithName("EndTime").
+		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("step").
+		WithName("Step").
+		WithJsonTag("step").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowBandwidth() (*model.ShowBandwidthResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowBandwidthResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowOnlineUsers(request *model.ShowOnlineUsersRequest) *def.HttpRequestDef {
+func GenReqDefForShowOnlineUsers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/stream/users")
+		WithPath("/v1/{project_id}/stream/users").
+		WithResponse(new(model.ShowOnlineUsersResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain").
+		WithName("Domain").
+		WithJsonTag("domain").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("app_name").
+		WithName("AppName").
+		WithJsonTag("app_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("stream_name").
+		WithName("StreamName").
+		WithJsonTag("stream_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("start_time").
+		WithName("StartTime").
+		WithJsonTag("start_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("end_time").
+		WithName("EndTime").
+		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("step").
+		WithName("Step").
+		WithJsonTag("step").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowOnlineUsers() (*model.ShowOnlineUsersResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowOnlineUsersResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowTraffic(request *model.ShowTrafficRequest) *def.HttpRequestDef {
+func GenReqDefForShowTraffic() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/stream/traffic")
+		WithPath("/v1/{project_id}/stream/traffic").
+		WithResponse(new(model.ShowTrafficResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain").
+		WithName("Domain").
+		WithJsonTag("domain").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("start_time").
+		WithName("StartTime").
+		WithJsonTag("start_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("end_time").
+		WithName("EndTime").
+		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("step").
+		WithName("Step").
+		WithJsonTag("step").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowTraffic() (*model.ShowTrafficResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowTrafficResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowTranscodingsTemplate(request *model.ShowTranscodingsTemplateRequest) *def.HttpRequestDef {
+func GenReqDefForShowTranscodingsTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/template/transcodings")
+		WithPath("/v1/{project_id}/template/transcodings").
+		WithResponse(new(model.ShowTranscodingsTemplateResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain").
+		WithName("Domain").
+		WithJsonTag("domain").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("app_name").
+		WithName("AppName").
+		WithJsonTag("app_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page").
+		WithName("Page").
+		WithJsonTag("page").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("size").
+		WithName("Size").
+		WithJsonTag("size").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowTranscodingsTemplate() (*model.ShowTranscodingsTemplateResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowTranscodingsTemplateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateStreamForbidden(request *model.UpdateStreamForbiddenRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateStreamForbidden() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{project_id}/stream/blocks").
+		WithResponse(new(model.UpdateStreamForbiddenResponse)).
 		WithContentType("application/json; charset=UTF-8")
 
+	// request
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("specify_project").
+		WithName("SpecifyProject").
+		WithJsonTag("specify_project").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithBodyJson(request.Body)
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdateStreamForbidden() (*model.UpdateStreamForbiddenResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateStreamForbiddenResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateTranscodingsTemplate(request *model.UpdateTranscodingsTemplateRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateTranscodingsTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{project_id}/template/transcodings").
+		WithResponse(new(model.UpdateTranscodingsTemplateResponse)).
 		WithContentType("application/json; charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
-}
-
-func GenRespForUpdateTranscodingsTemplate() (*model.UpdateTranscodingsTemplateResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateTranscodingsTemplateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
 }

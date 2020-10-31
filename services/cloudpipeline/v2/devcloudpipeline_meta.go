@@ -6,415 +6,326 @@ import (
 	"net/http"
 )
 
-func GenReqDefForBatchShowPipelinesStatus(request *model.BatchShowPipelinesStatusRequest) *def.HttpRequestDef {
+func GenReqDefForBatchShowPipelinesStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v3/pipelines/status")
+		WithPath("/v3/pipelines/status").
+		WithResponse(new(model.BatchShowPipelinesStatusResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("pipeline_ids").
+		WithName("PipelineIds").
+		WithJsonTag("pipeline_ids").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForBatchShowPipelinesStatus() (*model.BatchShowPipelinesStatusResponse, *def.HttpResponseDef) {
-	resp := new(model.BatchShowPipelinesStatusResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreatePipelineByTemplate(request *model.CreatePipelineByTemplateRequest) *def.HttpRequestDef {
+func GenReqDefForCreatePipelineByTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v3/templates/task").
+		WithResponse(new(model.CreatePipelineByTemplateResponse)).
 		WithContentType("application/json")
 
+	// request
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithBodyJson(request.Body)
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreatePipelineByTemplate() (*model.CreatePipelineByTemplateResponse, *def.HttpResponseDef) {
-	resp := new(model.CreatePipelineByTemplateResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListTemplates(request *model.ListTemplatesRequest) *def.HttpRequestDef {
+func GenReqDefForListTemplates() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v3/templates")
+		WithPath("/v3/templates").
+		WithResponse(new(model.ListTemplatesResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("template_type").
+		WithName("TemplateType").
+		WithJsonTag("template_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("is_build_in").
+		WithName("IsBuildIn").
+		WithJsonTag("is_build_in").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("offset").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("name").
+		WithName("Name").
+		WithJsonTag("name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("sort").
+		WithName("Sort").
+		WithJsonTag("sort").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("asc").
+		WithName("Asc").
+		WithJsonTag("asc").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListTemplates() (*model.ListTemplatesResponse, *def.HttpResponseDef) {
-	resp := new(model.ListTemplatesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForRegisterAgent(request *model.RegisterAgentRequest) *def.HttpRequestDef {
+func GenReqDefForRegisterAgent() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/agentregister/v1/agent/register").
+		WithResponse(new(model.RegisterAgentResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForRegisterAgent() (*model.RegisterAgentResponse, *def.HttpResponseDef) {
-	resp := new(model.RegisterAgentResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForRemovePipeline(request *model.RemovePipelineRequest) *def.HttpRequestDef {
+func GenReqDefForRemovePipeline() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v3/pipelines/{pipeline_id}")
+		WithPath("/v3/pipelines/{pipeline_id}").
+		WithResponse(new(model.RemovePipelineResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("pipeline_id").
+		WithName("PipelineId").
+		WithJsonTag("pipeline_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForRemovePipeline() (*model.RemovePipelineResponse, *def.HttpResponseDef) {
-	resp := new(model.RemovePipelineResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowAgentStatus(request *model.ShowAgentStatusRequest) *def.HttpRequestDef {
+func GenReqDefForShowAgentStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/agents/{agent_id}/status")
+		WithPath("/v1/agents/{agent_id}/status").
+		WithResponse(new(model.ShowAgentStatusResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("agent_id").
+		WithName("AgentId").
+		WithJsonTag("agent_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowAgentStatus() (*model.ShowAgentStatusResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowAgentStatusResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowInstanceStatus(request *model.ShowInstanceStatusRequest) *def.HttpRequestDef {
+func GenReqDefForShowInstanceStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v3/templates/{task_id}/status")
+		WithPath("/v3/templates/{task_id}/status").
+		WithResponse(new(model.ShowInstanceStatusResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("task_id").
+		WithName("TaskId").
+		WithJsonTag("task_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowInstanceStatus() (*model.ShowInstanceStatusResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowInstanceStatusResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowPipleineStatus(request *model.ShowPipleineStatusRequest) *def.HttpRequestDef {
+func GenReqDefForShowPipleineStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v3/pipelines/{pipeline_id}/status")
+		WithPath("/v3/pipelines/{pipeline_id}/status").
+		WithResponse(new(model.ShowPipleineStatusResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("pipeline_id").
+		WithName("PipelineId").
+		WithJsonTag("pipeline_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("build_id").
+		WithName("BuildId").
+		WithJsonTag("build_id").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowPipleineStatus() (*model.ShowPipleineStatusResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowPipleineStatusResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowTemplateDetail(request *model.ShowTemplateDetailRequest) *def.HttpRequestDef {
+func GenReqDefForShowTemplateDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v3/templates/{template_id}")
+		WithPath("/v3/templates/{template_id}").
+		WithResponse(new(model.ShowTemplateDetailResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("template_id").
+		WithName("TemplateId").
+		WithJsonTag("template_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("template_type").
+		WithName("TemplateType").
+		WithJsonTag("template_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("source").
+		WithName("Source").
+		WithJsonTag("source").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowTemplateDetail() (*model.ShowTemplateDetailResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowTemplateDetailResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForStartNewPipeline(request *model.StartNewPipelineRequest) *def.HttpRequestDef {
+func GenReqDefForStartNewPipeline() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v3/pipelines/{pipeline_id}/start").
+		WithResponse(new(model.StartNewPipelineResponse)).
 		WithContentType("application/json")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("pipeline_id").
+		WithName("PipelineId").
+		WithJsonTag("pipeline_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithBodyJson(request.Body)
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForStartNewPipeline() (*model.StartNewPipelineResponse, *def.HttpResponseDef) {
-	resp := new(model.StartNewPipelineResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForStartPipeline(request *model.StartPipelineRequest) *def.HttpRequestDef {
+func GenReqDefForStartPipeline() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v3/pipelines/start")
+		WithPath("/v3/pipelines/start").
+		WithResponse(new(model.StartPipelineResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("pipeline_id").
+		WithName("PipelineId").
+		WithJsonTag("pipeline_id").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForStartPipeline() (*model.StartPipelineResponse, *def.HttpResponseDef) {
-	resp := new(model.StartPipelineResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForStopPipeline(request *model.StopPipelineRequest) *def.HttpRequestDef {
+func GenReqDefForStopPipeline() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v3/pipelines/stop")
+		WithPath("/v3/pipelines/stop").
+		WithResponse(new(model.StopPipelineResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("pipeline_id").
+		WithName("PipelineId").
+		WithJsonTag("pipeline_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("build_id").
+		WithName("BuildId").
+		WithJsonTag("build_id").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Language").
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
-}
-
-func GenRespForStopPipeline() (*model.StopPipelineResponse, *def.HttpResponseDef) {
-	resp := new(model.StopPipelineResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
 }

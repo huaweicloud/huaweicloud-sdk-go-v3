@@ -20,168 +20,154 @@ func LiveAPIClientBuilder() *http_client.HcHttpClientBuilder {
 
 //创建录制配置接口
 func (c *LiveAPIClient) CreateRecordConfig(request *model.CreateRecordConfigRequest) (*model.CreateRecordConfigResponse, error) {
-	requestDef := GenReqDefForCreateRecordConfig(request)
-	resp, responseDef := GenRespForCreateRecordConfig()
+	requestDef := GenReqDefForCreateRecordConfig()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.CreateRecordConfigResponse), nil
 	}
 }
 
 //禁止直播推流
 func (c *LiveAPIClient) CreateStreamForbidden(request *model.CreateStreamForbiddenRequest) (*model.CreateStreamForbiddenResponse, error) {
-	requestDef := GenReqDefForCreateStreamForbidden(request)
-	resp, responseDef := GenRespForCreateStreamForbidden()
+	requestDef := GenReqDefForCreateStreamForbidden()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.CreateStreamForbiddenResponse), nil
 	}
 }
 
 //创建直播转码模板
 func (c *LiveAPIClient) CreateTranscodingsTemplate(request *model.CreateTranscodingsTemplateRequest) (*model.CreateTranscodingsTemplateResponse, error) {
-	requestDef := GenReqDefForCreateTranscodingsTemplate(request)
-	resp, responseDef := GenRespForCreateTranscodingsTemplate()
+	requestDef := GenReqDefForCreateTranscodingsTemplate()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.CreateTranscodingsTemplateResponse), nil
 	}
 }
 
 //删除录制配置接口
 func (c *LiveAPIClient) DeleteRecordConfig(request *model.DeleteRecordConfigRequest) (*model.DeleteRecordConfigResponse, error) {
-	requestDef := GenReqDefForDeleteRecordConfig(request)
-	resp, responseDef := GenRespForDeleteRecordConfig()
+	requestDef := GenReqDefForDeleteRecordConfig()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.DeleteRecordConfigResponse), nil
 	}
 }
 
 //恢复直播推流接口
 func (c *LiveAPIClient) DeleteStreamForbidden(request *model.DeleteStreamForbiddenRequest) (*model.DeleteStreamForbiddenResponse, error) {
-	requestDef := GenReqDefForDeleteStreamForbidden(request)
-	resp, responseDef := GenRespForDeleteStreamForbidden()
+	requestDef := GenReqDefForDeleteStreamForbidden()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.DeleteStreamForbiddenResponse), nil
 	}
 }
 
 //删除直播转码模板
 func (c *LiveAPIClient) DeleteTranscodingsTemplate(request *model.DeleteTranscodingsTemplateRequest) (*model.DeleteTranscodingsTemplateResponse, error) {
-	requestDef := GenReqDefForDeleteTranscodingsTemplate(request)
-	resp, responseDef := GenRespForDeleteTranscodingsTemplate()
+	requestDef := GenReqDefForDeleteTranscodingsTemplate()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.DeleteTranscodingsTemplateResponse), nil
 	}
 }
 
 //查询录制配置接口
 func (c *LiveAPIClient) ListRecordConfigs(request *model.ListRecordConfigsRequest) (*model.ListRecordConfigsResponse, error) {
-	requestDef := GenReqDefForListRecordConfigs(request)
-	resp, responseDef := GenRespForListRecordConfigs()
+	requestDef := GenReqDefForListRecordConfigs()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ListRecordConfigsResponse), nil
 	}
 }
 
 //查询禁播黑名单列表
 func (c *LiveAPIClient) ListStreamForbidden(request *model.ListStreamForbiddenRequest) (*model.ListStreamForbiddenResponse, error) {
-	requestDef := GenReqDefForListStreamForbidden(request)
-	resp, responseDef := GenRespForListStreamForbidden()
+	requestDef := GenReqDefForListStreamForbidden()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ListStreamForbiddenResponse), nil
 	}
 }
 
 //查询直播加速的播流域名网络带宽监控数据
 func (c *LiveAPIClient) ShowBandwidth(request *model.ShowBandwidthRequest) (*model.ShowBandwidthResponse, error) {
-	requestDef := GenReqDefForShowBandwidth(request)
-	resp, responseDef := GenRespForShowBandwidth()
+	requestDef := GenReqDefForShowBandwidth()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ShowBandwidthResponse), nil
 	}
 }
 
 //查询加速的直播播放在线人数
 func (c *LiveAPIClient) ShowOnlineUsers(request *model.ShowOnlineUsersRequest) (*model.ShowOnlineUsersResponse, error) {
-	requestDef := GenReqDefForShowOnlineUsers(request)
-	resp, responseDef := GenRespForShowOnlineUsers()
+	requestDef := GenReqDefForShowOnlineUsers()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ShowOnlineUsersResponse), nil
 	}
 }
 
 //查询直播加速的播流域名网络流量监控数据
 func (c *LiveAPIClient) ShowTraffic(request *model.ShowTrafficRequest) (*model.ShowTrafficResponse, error) {
-	requestDef := GenReqDefForShowTraffic(request)
-	resp, responseDef := GenRespForShowTraffic()
+	requestDef := GenReqDefForShowTraffic()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ShowTrafficResponse), nil
 	}
 }
 
 //查询直播转码模板
 func (c *LiveAPIClient) ShowTranscodingsTemplate(request *model.ShowTranscodingsTemplateRequest) (*model.ShowTranscodingsTemplateResponse, error) {
-	requestDef := GenReqDefForShowTranscodingsTemplate(request)
-	resp, responseDef := GenRespForShowTranscodingsTemplate()
+	requestDef := GenReqDefForShowTranscodingsTemplate()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ShowTranscodingsTemplateResponse), nil
 	}
 }
 
 //修改禁推属性
 func (c *LiveAPIClient) UpdateStreamForbidden(request *model.UpdateStreamForbiddenRequest) (*model.UpdateStreamForbiddenResponse, error) {
-	requestDef := GenReqDefForUpdateStreamForbidden(request)
-	resp, responseDef := GenRespForUpdateStreamForbidden()
+	requestDef := GenReqDefForUpdateStreamForbidden()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.UpdateStreamForbiddenResponse), nil
 	}
 }
 
 //修改直播转码模板
 func (c *LiveAPIClient) UpdateTranscodingsTemplate(request *model.UpdateTranscodingsTemplateRequest) (*model.UpdateTranscodingsTemplateResponse, error) {
-	requestDef := GenReqDefForUpdateTranscodingsTemplate(request)
-	resp, responseDef := GenRespForUpdateTranscodingsTemplate()
+	requestDef := GenReqDefForUpdateTranscodingsTemplate()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.UpdateTranscodingsTemplateResponse), nil
 	}
 }

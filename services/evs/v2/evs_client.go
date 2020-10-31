@@ -20,264 +20,242 @@ func EvsClientBuilder() *http_client.HcHttpClientBuilder {
 
 //为指定云硬盘批量添加标签。  添加标签时，如果云硬盘的标签已存在相同key，则会覆盖已有标签。 单个云硬盘最多支持创建10个标签。
 func (c *EvsClient) BatchCreateVolumeTags(request *model.BatchCreateVolumeTagsRequest) (*model.BatchCreateVolumeTagsResponse, error) {
-	requestDef := GenReqDefForBatchCreateVolumeTags(request)
-	resp, responseDef := GenRespForBatchCreateVolumeTags()
+	requestDef := GenReqDefForBatchCreateVolumeTags()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.BatchCreateVolumeTagsResponse), nil
 	}
 }
 
 //为指定云硬盘批量删除标签。
 func (c *EvsClient) BatchDeleteVolumeTags(request *model.BatchDeleteVolumeTagsRequest) (*model.BatchDeleteVolumeTagsResponse, error) {
-	requestDef := GenReqDefForBatchDeleteVolumeTags(request)
-	resp, responseDef := GenRespForBatchDeleteVolumeTags()
+	requestDef := GenReqDefForBatchDeleteVolumeTags()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.BatchDeleteVolumeTagsResponse), nil
 	}
 }
 
 //将系统盘或数据盘的数据导出为IMS镜像，导出的镜像在IMS的私有镜像列表中可以查 看并使用。
 func (c *EvsClient) CinderExportToImage(request *model.CinderExportToImageRequest) (*model.CinderExportToImageResponse, error) {
-	requestDef := GenReqDefForCinderExportToImage(request)
-	resp, responseDef := GenRespForCinderExportToImage()
+	requestDef := GenReqDefForCinderExportToImage()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.CinderExportToImageResponse), nil
 	}
 }
 
 //查询所有的可用分区信息。
 func (c *EvsClient) CinderListAvailabilityZones(request *model.CinderListAvailabilityZonesRequest) (*model.CinderListAvailabilityZonesResponse, error) {
-	requestDef := GenReqDefForCinderListAvailabilityZones(request)
-	resp, responseDef := GenRespForCinderListAvailabilityZones()
+	requestDef := GenReqDefForCinderListAvailabilityZones()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.CinderListAvailabilityZonesResponse), nil
 	}
 }
 
 //查询租户的详细配额。
 func (c *EvsClient) CinderListQuotas(request *model.CinderListQuotasRequest) (*model.CinderListQuotasResponse, error) {
-	requestDef := GenReqDefForCinderListQuotas(request)
-	resp, responseDef := GenRespForCinderListQuotas()
+	requestDef := GenReqDefForCinderListQuotas()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.CinderListQuotasResponse), nil
 	}
 }
 
 //查询云硬盘类型列表。
 func (c *EvsClient) CinderListVolumeTypes(request *model.CinderListVolumeTypesRequest) (*model.CinderListVolumeTypesResponse, error) {
-	requestDef := GenReqDefForCinderListVolumeTypes(request)
-	resp, responseDef := GenRespForCinderListVolumeTypes()
+	requestDef := GenReqDefForCinderListVolumeTypes()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.CinderListVolumeTypesResponse), nil
 	}
 }
 
 //创建云硬盘快照。
 func (c *EvsClient) CreateSnapshot(request *model.CreateSnapshotRequest) (*model.CreateSnapshotResponse, error) {
-	requestDef := GenReqDefForCreateSnapshot(request)
-	resp, responseDef := GenRespForCreateSnapshot()
+	requestDef := GenReqDefForCreateSnapshot()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.CreateSnapshotResponse), nil
 	}
 }
 
 //创建按需或包周期云硬盘。 在创建包周期云硬盘的场景下： - 如果您需要查看订单可用的优惠券，请参考\"[查询订单可用优惠券](https://support.huaweicloud.com/api-oce/zh-cn_topic_0092953630.html)\"。 - 如果您需要支付订单，请参考\"[支付包周期产品订单](https://support.huaweicloud.com/api-oce/zh-cn_topic_0075746561.html)\"。 - 如果您需要查询订单的资源开通详情，请参考\"[查询订单的资源开通详情](https://support.huaweicloud.com/api-oce/api_order_00001.html)\"。 - 如果您需要退订该包周期资源，请参考“[退订包周期资源](https://support.huaweicloud.com/api-oce/zh-cn_topic_0082522030.html)”。
 func (c *EvsClient) CreateVolume(request *model.CreateVolumeRequest) (*model.CreateVolumeResponse, error) {
-	requestDef := GenReqDefForCreateVolume(request)
-	resp, responseDef := GenRespForCreateVolume()
+	requestDef := GenReqDefForCreateVolume()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.CreateVolumeResponse), nil
 	}
 }
 
 //删除云硬盘快照。
 func (c *EvsClient) DeleteSnapshot(request *model.DeleteSnapshotRequest) (*model.DeleteSnapshotResponse, error) {
-	requestDef := GenReqDefForDeleteSnapshot(request)
-	resp, responseDef := GenRespForDeleteSnapshot()
+	requestDef := GenReqDefForDeleteSnapshot()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.DeleteSnapshotResponse), nil
 	}
 }
 
 //删除一个云硬盘。
 func (c *EvsClient) DeleteVolume(request *model.DeleteVolumeRequest) (*model.DeleteVolumeResponse, error) {
-	requestDef := GenReqDefForDeleteVolume(request)
-	resp, responseDef := GenRespForDeleteVolume()
+	requestDef := GenReqDefForDeleteVolume()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.DeleteVolumeResponse), nil
 	}
 }
 
 //查询云硬盘快照详细列表信息。
 func (c *EvsClient) ListSnapshots(request *model.ListSnapshotsRequest) (*model.ListSnapshotsResponse, error) {
-	requestDef := GenReqDefForListSnapshots(request)
-	resp, responseDef := GenRespForListSnapshots()
+	requestDef := GenReqDefForListSnapshots()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ListSnapshotsResponse), nil
 	}
 }
 
 //获取某个租户的所有云硬盘资源的标签信息。
 func (c *EvsClient) ListVolumeTags(request *model.ListVolumeTagsRequest) (*model.ListVolumeTagsResponse, error) {
-	requestDef := GenReqDefForListVolumeTags(request)
-	resp, responseDef := GenRespForListVolumeTags()
+	requestDef := GenReqDefForListVolumeTags()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ListVolumeTagsResponse), nil
 	}
 }
 
 //查询所有云硬盘的详细信息。
 func (c *EvsClient) ListVolumes(request *model.ListVolumesRequest) (*model.ListVolumesResponse, error) {
-	requestDef := GenReqDefForListVolumes(request)
-	resp, responseDef := GenRespForListVolumes()
+	requestDef := GenReqDefForListVolumes()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ListVolumesResponse), nil
 	}
 }
 
 //通过标签查询云硬盘资源实例详情。
 func (c *EvsClient) ListVolumesByTags(request *model.ListVolumesByTagsRequest) (*model.ListVolumesByTagsResponse, error) {
-	requestDef := GenReqDefForListVolumesByTags(request)
-	resp, responseDef := GenRespForListVolumesByTags()
+	requestDef := GenReqDefForListVolumesByTags()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ListVolumesByTagsResponse), nil
 	}
 }
 
 //对按需或者包周期云硬盘进行扩容。 在扩容包周期云硬盘的场景下： - 如果您需要查看订单可用的优惠券，请参考\"[查询订单可用优惠券](https://support.huaweicloud.com/api-oce/zh-cn_topic_0092953630.html)\"。 - 如果您需要支付订单，请参考\"[支付包周期产品订单](https://support.huaweicloud.com/api-oce/zh-cn_topic_0075746561.html)\"。 - 如果您需要查询订单的资源开通详情，请参考\"[查询订单的资源开通详情](https://support.huaweicloud.com/api-oce/api_order_00001.html)\"。 - 如果您需要退订该包周期资源，请参考“[退订包周期资源](https://support.huaweicloud.com/api-oce/zh-cn_topic_0082522030.html)”。
 func (c *EvsClient) ResizeVolume(request *model.ResizeVolumeRequest) (*model.ResizeVolumeResponse, error) {
-	requestDef := GenReqDefForResizeVolume(request)
-	resp, responseDef := GenRespForResizeVolume()
+	requestDef := GenReqDefForResizeVolume()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ResizeVolumeResponse), nil
 	}
 }
 
 //将快照数据回滚到云硬盘。支持企业项目授权功能。
 func (c *EvsClient) RollbackSnapshot(request *model.RollbackSnapshotRequest) (*model.RollbackSnapshotResponse, error) {
-	requestDef := GenReqDefForRollbackSnapshot(request)
-	resp, responseDef := GenRespForRollbackSnapshot()
+	requestDef := GenReqDefForRollbackSnapshot()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.RollbackSnapshotResponse), nil
 	}
 }
 
 //查询Job的执行状态。 可用于查询创建云硬盘，扩容云硬盘，删除云硬盘等API的执行状态。
 func (c *EvsClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
-	requestDef := GenReqDefForShowJob(request)
-	resp, responseDef := GenRespForShowJob()
+	requestDef := GenReqDefForShowJob()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ShowJobResponse), nil
 	}
 }
 
 //查询单个云硬盘快照信息。支持企业项目授权功能。
 func (c *EvsClient) ShowSnapshot(request *model.ShowSnapshotRequest) (*model.ShowSnapshotResponse, error) {
-	requestDef := GenReqDefForShowSnapshot(request)
-	resp, responseDef := GenRespForShowSnapshot()
+	requestDef := GenReqDefForShowSnapshot()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ShowSnapshotResponse), nil
 	}
 }
 
 //查询单个云硬盘的详细信息。支持企业项目授权功能。
 func (c *EvsClient) ShowVolume(request *model.ShowVolumeRequest) (*model.ShowVolumeResponse, error) {
-	requestDef := GenReqDefForShowVolume(request)
-	resp, responseDef := GenRespForShowVolume()
+	requestDef := GenReqDefForShowVolume()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ShowVolumeResponse), nil
 	}
 }
 
 //查询指定云硬盘的标签信息。
 func (c *EvsClient) ShowVolumeTags(request *model.ShowVolumeTagsRequest) (*model.ShowVolumeTagsResponse, error) {
-	requestDef := GenReqDefForShowVolumeTags(request)
-	resp, responseDef := GenRespForShowVolumeTags()
+	requestDef := GenReqDefForShowVolumeTags()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ShowVolumeTagsResponse), nil
 	}
 }
 
 //更新云硬盘快照。支持企业项目授权功能。
 func (c *EvsClient) UpdateSnapshot(request *model.UpdateSnapshotRequest) (*model.UpdateSnapshotResponse, error) {
-	requestDef := GenReqDefForUpdateSnapshot(request)
-	resp, responseDef := GenRespForUpdateSnapshot()
+	requestDef := GenReqDefForUpdateSnapshot()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.UpdateSnapshotResponse), nil
 	}
 }
 
 //更新一个云硬盘的名称和描述。
 func (c *EvsClient) UpdateVolume(request *model.UpdateVolumeRequest) (*model.UpdateVolumeResponse, error) {
-	requestDef := GenReqDefForUpdateVolume(request)
-	resp, responseDef := GenRespForUpdateVolume()
+	requestDef := GenReqDefForUpdateVolume()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.UpdateVolumeResponse), nil
 	}
 }

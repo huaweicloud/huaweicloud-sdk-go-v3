@@ -25,7 +25,7 @@ type CreateProjectV4RequestBody struct {
 	// 项目要绑定的企业项目ID
 	EnterpriseId *string `json:"enterprise_id,omitempty"`
 	// 用户创建的项目模板id
-	TemplateId *string `json:"template_id,omitempty"`
+	TemplateId *int32 `json:"template_id,omitempty"`
 }
 
 func (o CreateProjectV4RequestBody) String() string {

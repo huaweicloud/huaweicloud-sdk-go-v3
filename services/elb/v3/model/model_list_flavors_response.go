@@ -18,7 +18,7 @@ type ListFlavorsResponse struct {
 	// 规格列表。
 	Flavors  *[]Flavor `json:"flavors,omitempty"`
 	PageInfo *PageInfo `json:"page_info,omitempty"`
-	// 请求ID。 注：自动生成 。
+	// 请求ID。  注：自动生成 。
 	RequestId *string `json:"request_id,omitempty"`
 }
 

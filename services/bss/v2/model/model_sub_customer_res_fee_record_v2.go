@@ -56,6 +56,8 @@ type SubCustomerResFeeRecordV2 struct {
 	BillType *int32 `json:"bill_type,omitempty"`
 	// |参数名称：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。| |参数约束及描述：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。|
 	PeriodType *string `json:"period_type,omitempty"`
+	// |参数名称：产品规格描述。| |参数约束及描述：产品规格描述，举例为：普通IO|100.0GB。|
+	ProductSpecDesc *string `json:"product_spec_desc,omitempty"`
 	// |参数名称：预留实例使用量。| |参数约束及描述： 预留实例使用量。|
 	RiUsage float32 `json:"ri_usage,omitempty"`
 	// |参数名称：预留实例使用量单位。| |参数的约束及描述：预留实例使用量单位。|

@@ -1,3 +1,64 @@
+## 0.0.19-beta 2020-10-31
+## HuaweiCloud SDK Core
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix: fix the problem that when query parameter contains enumerated variables the request will fail.
+    - [Issue 7](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/7) resolve the problem of using json.Marshal() returns object{}.
+ - ### Change
+    - None
+
+## HuaweiCloud SDK CBR
+ - ### Features
+    - Support more interfaces: interfaces related to `TAG`.
+ - ### Bug Fix
+    - [Issue 17](https://github.com/huaweicloud/huaweicloud-sdk-java-v3/issues/17) fix the problem of interface: ListBackups.
+ - ### Change
+    - None
+
+## HuaweiCloud SDK CTS
+ - ### Features
+    - Support more interface: ListQuotas
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+## HuaweiCloud SDK EPS
+ - ### Features
+    - None
+ - ### Bug Fix
+    - None
+ - ### Change
+    - Adjust interfaces' names, replace abbreviations of `EP` with `EnterpriseProject`, the involved interfaces are:
+     1. ListEP → ListEnterpriseProject
+     2. CreateEP → CreateEnterpriseProject
+     3. ShowEP → ShowEnterpriseProject
+     4. ModifyEP → ModifyEnterpriseProject
+     5. EnableEP → EnableEnterpriseProject
+     6. ShowEPQuota → ShowEnterpriseProjectQuota
+     7. ShowResourceBindEP → ShowResourceBindEnterpriseProject
+     8. DisableEP → DisableEnterpriseProject
+
+## HuaweiCloud SDK Iam
+ - ### Features
+    - None
+ - ### Bug Fix
+    - None
+ - ### Change
+    - Adjust interfaces' names, the involved interfaces are:
+     1. KeystoneCreateUserTokenByPasswordAndMFA → KeystoneCreateUserTokenByPasswordAndMfa
+     2. CreateUnscopeTokenByIDPInitiated → CreateUnscopeTokenByIdpInitiated
+
+## HuaweiCloud SDK ProjectMan
+ - ### Features
+    - Support more interfaces: iteration information, user information, project members, project information, project indicators, project statistics, etc.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+
 ## 0.0.18-beta 2020-10-20
 ## HuaweiCloud SDK ELB
  - ### Features
@@ -395,13 +456,3 @@
     - Identity and Access Management(IAM)
     - Tag Management Service(TMS)
     - Virtual Private Cloud(VPC)
-   
-# 3.0.17-beta 2020-10-16
-## HuaweiCloud SDK DevStar
- - ### Features
-    - Change of title from Devstar to DevStar.
-    - Supplemental DevStar Automation Test Cases.
- - ### Bug Fix
-    - None
- - ### Change
-    - None 

@@ -29,7 +29,7 @@ type L7Rule struct {
 	Value string `json:"value"`
 	// provisioning状态，可以为ACTIVE、PENDING_CREATE 或者ERROR。 说明：该字段无实际含义，默认为ACTIVE。
 	ProvisioningStatus string `json:"provisioning_status"`
-	// 是否反向匹配，true/false。 使用说明：固定为false。该字段能更新但不会生效。
+	// 是否反向匹配。 使用说明：固定为false。该字段能更新但不会生效。
 	Invert bool `json:"invert"`
 	// 规则ID。
 	Id string `json:"id"`

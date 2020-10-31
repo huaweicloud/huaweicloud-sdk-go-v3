@@ -16,7 +16,7 @@ import (
 // Response Object
 type CreateIpGroupResponse struct {
 	Ipgroup *IpGroup `json:"ipgroup,omitempty"`
-	// 请求id
+	// 请求ID。  注：自动生成 。
 	RequestId *string `json:"request_id,omitempty"`
 }
 

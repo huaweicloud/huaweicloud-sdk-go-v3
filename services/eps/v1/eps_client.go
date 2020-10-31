@@ -19,133 +19,122 @@ func EpsClientBuilder() *http_client.HcHttpClientBuilder {
 }
 
 //创建企业项目。
-func (c *EpsClient) CreateEP(request *model.CreateEPRequest) (*model.CreateEPResponse, error) {
-	requestDef := GenReqDefForCreateEP(request)
-	resp, responseDef := GenRespForCreateEP()
+func (c *EpsClient) CreateEnterpriseProject(request *model.CreateEnterpriseProjectRequest) (*model.CreateEnterpriseProjectResponse, error) {
+	requestDef := GenReqDefForCreateEnterpriseProject()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.CreateEnterpriseProjectResponse), nil
 	}
 }
 
 //停用企业项目。
-func (c *EpsClient) DisableEP(request *model.DisableEPRequest) (*model.DisableEPResponse, error) {
-	requestDef := GenReqDefForDisableEP(request)
-	resp, responseDef := GenRespForDisableEP()
+func (c *EpsClient) DisableEnterpriseProject(request *model.DisableEnterpriseProjectRequest) (*model.DisableEnterpriseProjectResponse, error) {
+	requestDef := GenReqDefForDisableEnterpriseProject()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.DisableEnterpriseProjectResponse), nil
 	}
 }
 
 //启用企业项目。
-func (c *EpsClient) EnableEP(request *model.EnableEPRequest) (*model.EnableEPResponse, error) {
-	requestDef := GenReqDefForEnableEP(request)
-	resp, responseDef := GenRespForEnableEP()
+func (c *EpsClient) EnableEnterpriseProject(request *model.EnableEnterpriseProjectRequest) (*model.EnableEnterpriseProjectResponse, error) {
+	requestDef := GenReqDefForEnableEnterpriseProject()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.EnableEnterpriseProjectResponse), nil
 	}
 }
 
 //查询企业项目的API版本列表。
 func (c *EpsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*model.ListApiVersionsResponse, error) {
-	requestDef := GenReqDefForListApiVersions(request)
-	resp, responseDef := GenRespForListApiVersions()
+	requestDef := GenReqDefForListApiVersions()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ListApiVersionsResponse), nil
 	}
 }
 
 //查询当前用户已授权的企业项目列表，用户可以使用企业项目绑定资源。
-func (c *EpsClient) ListEP(request *model.ListEPRequest) (*model.ListEPResponse, error) {
-	requestDef := GenReqDefForListEP(request)
-	resp, responseDef := GenRespForListEP()
+func (c *EpsClient) ListEnterpriseProject(request *model.ListEnterpriseProjectRequest) (*model.ListEnterpriseProjectResponse, error) {
+	requestDef := GenReqDefForListEnterpriseProject()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ListEnterpriseProjectResponse), nil
 	}
 }
 
 //迁移资源到目标企业项目。
 func (c *EpsClient) MigrateResource(request *model.MigrateResourceRequest) (*model.MigrateResourceResponse, error) {
-	requestDef := GenReqDefForMigrateResource(request)
-	resp, responseDef := GenRespForMigrateResource()
+	requestDef := GenReqDefForMigrateResource()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.MigrateResourceResponse), nil
 	}
 }
 
 //修改企业项目。当前仅支持修改名称和描述。
-func (c *EpsClient) ModifyEP(request *model.ModifyEPRequest) (*model.ModifyEPResponse, error) {
-	requestDef := GenReqDefForModifyEP(request)
-	resp, responseDef := GenRespForModifyEP()
+func (c *EpsClient) ModifyEnterpriseProject(request *model.ModifyEnterpriseProjectRequest) (*model.ModifyEnterpriseProjectResponse, error) {
+	requestDef := GenReqDefForModifyEnterpriseProject()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ModifyEnterpriseProjectResponse), nil
 	}
 }
 
 //查询指定的企业项目API版本号详情
 func (c *EpsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model.ShowApiVersionResponse, error) {
-	requestDef := GenReqDefForShowApiVersion(request)
-	resp, responseDef := GenRespForShowApiVersion()
+	requestDef := GenReqDefForShowApiVersion()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ShowApiVersionResponse), nil
 	}
 }
 
 //查询企业项目详情。
-func (c *EpsClient) ShowEP(request *model.ShowEPRequest) (*model.ShowEPResponse, error) {
-	requestDef := GenReqDefForShowEP(request)
-	resp, responseDef := GenRespForShowEP()
+func (c *EpsClient) ShowEnterpriseProject(request *model.ShowEnterpriseProjectRequest) (*model.ShowEnterpriseProjectResponse, error) {
+	requestDef := GenReqDefForShowEnterpriseProject()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ShowEnterpriseProjectResponse), nil
 	}
 }
 
 //查询企业项目的配额信息。
-func (c *EpsClient) ShowEPQuota(request *model.ShowEPQuotaRequest) (*model.ShowEPQuotaResponse, error) {
-	requestDef := GenReqDefForShowEPQuota(request)
-	resp, responseDef := GenRespForShowEPQuota()
+func (c *EpsClient) ShowEnterpriseProjectQuota(request *model.ShowEnterpriseProjectQuotaRequest) (*model.ShowEnterpriseProjectQuotaResponse, error) {
+	requestDef := GenReqDefForShowEnterpriseProjectQuota()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ShowEnterpriseProjectQuotaResponse), nil
 	}
 }
 
 //查询企业项目下绑定的资源详情。
-func (c *EpsClient) ShowResourceBindEP(request *model.ShowResourceBindEPRequest) (*model.ShowResourceBindEPResponse, error) {
-	requestDef := GenReqDefForShowResourceBindEP(request)
-	resp, responseDef := GenRespForShowResourceBindEP()
+func (c *EpsClient) ShowResourceBindEnterpriseProject(request *model.ShowResourceBindEnterpriseProjectRequest) (*model.ShowResourceBindEnterpriseProjectResponse, error) {
+	requestDef := GenReqDefForShowResourceBindEnterpriseProject()
 
-	if _, err := c.hcClient.Sync(request, requestDef, responseDef); err != nil {
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp, nil
+		return resp.(*model.ShowResourceBindEnterpriseProjectResponse), nil
 	}
 }

@@ -6,1211 +6,1000 @@ import (
 	"net/http"
 )
 
-func GenReqDefForBatchAddMembers(request *model.BatchAddMembersRequest) *def.HttpRequestDef {
+func GenReqDefForBatchAddMembers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/cloudimages/members").
+		WithResponse(new(model.BatchAddMembersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForBatchAddMembers() (*model.BatchAddMembersResponse, *def.HttpResponseDef) {
-	resp := new(model.BatchAddMembersResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForBatchDeleteMembers(request *model.BatchDeleteMembersRequest) *def.HttpRequestDef {
+func GenReqDefForBatchDeleteMembers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/cloudimages/members").
+		WithResponse(new(model.BatchDeleteMembersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForBatchDeleteMembers() (*model.BatchDeleteMembersResponse, *def.HttpResponseDef) {
-	resp := new(model.BatchDeleteMembersResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForBatchUpdateMembers(request *model.BatchUpdateMembersRequest) *def.HttpRequestDef {
+func GenReqDefForBatchUpdateMembers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/cloudimages/members").
+		WithResponse(new(model.BatchUpdateMembersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForBatchUpdateMembers() (*model.BatchUpdateMembersResponse, *def.HttpResponseDef) {
-	resp := new(model.BatchUpdateMembersResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCopyImageCrossRegion(request *model.CopyImageCrossRegionRequest) *def.HttpRequestDef {
+func GenReqDefForCopyImageCrossRegion() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/cloudimages/{image_id}/cross_region_copy").
+		WithResponse(new(model.CopyImageCrossRegionResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCopyImageCrossRegion() (*model.CopyImageCrossRegionResponse, *def.HttpResponseDef) {
-	resp := new(model.CopyImageCrossRegionResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCopyImageInRegion(request *model.CopyImageInRegionRequest) *def.HttpRequestDef {
+func GenReqDefForCopyImageInRegion() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/cloudimages/{image_id}/copy").
+		WithResponse(new(model.CopyImageInRegionResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCopyImageInRegion() (*model.CopyImageInRegionResponse, *def.HttpResponseDef) {
-	resp := new(model.CopyImageInRegionResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateDataImage(request *model.CreateDataImageRequest) *def.HttpRequestDef {
+func GenReqDefForCreateDataImage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/cloudimages/dataimages/action").
+		WithResponse(new(model.CreateDataImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateDataImage() (*model.CreateDataImageResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateDataImageResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateImage(request *model.CreateImageRequest) *def.HttpRequestDef {
+func GenReqDefForCreateImage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/cloudimages/action").
+		WithResponse(new(model.CreateImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateImage() (*model.CreateImageResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateImageResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateOrUpdateTags(request *model.CreateOrUpdateTagsRequest) *def.HttpRequestDef {
+func GenReqDefForCreateOrUpdateTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/cloudimages/tags").
+		WithResponse(new(model.CreateOrUpdateTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateOrUpdateTags() (*model.CreateOrUpdateTagsResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateOrUpdateTagsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForCreateWholeImage(request *model.CreateWholeImageRequest) *def.HttpRequestDef {
+func GenReqDefForCreateWholeImage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/cloudimages/wholeimages/action").
+		WithResponse(new(model.CreateWholeImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForCreateWholeImage() (*model.CreateWholeImageResponse, *def.HttpResponseDef) {
-	resp := new(model.CreateWholeImageResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForExportImage(request *model.ExportImageRequest) *def.HttpRequestDef {
+func GenReqDefForExportImage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/cloudimages/{image_id}/file").
+		WithResponse(new(model.ExportImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForExportImage() (*model.ExportImageResponse, *def.HttpResponseDef) {
-	resp := new(model.ExportImageResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForImportImageQuick(request *model.ImportImageQuickRequest) *def.HttpRequestDef {
+func GenReqDefForImportImageQuick() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/cloudimages/quickimport/action").
+		WithResponse(new(model.ImportImageQuickResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForImportImageQuick() (*model.ImportImageQuickResponse, *def.HttpResponseDef) {
-	resp := new(model.ImportImageQuickResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListImages(request *model.ListImagesRequest) *def.HttpRequestDef {
+func GenReqDefForListImages() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/cloudimages")
+		WithPath("/v2/cloudimages").
+		WithResponse(new(model.ListImagesResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__imagetype").
+		WithName("Imagetype").
+		WithJsonTag("__imagetype").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__isregistered").
+		WithName("Isregistered").
+		WithJsonTag("__isregistered").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__os_bit").
+		WithName("OsBit").
+		WithJsonTag("__os_bit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__os_type").
+		WithName("OsType").
+		WithJsonTag("__os_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__platform").
+		WithName("Platform").
+		WithJsonTag("__platform").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_diskintensive").
+		WithName("SupportDiskintensive").
+		WithJsonTag("__support_diskintensive").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_highperformance").
+		WithName("SupportHighperformance").
+		WithJsonTag("__support_highperformance").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_kvm").
+		WithName("SupportKvm").
+		WithJsonTag("__support_kvm").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_kvm_gpu_type").
+		WithName("SupportKvmGpuType").
+		WithJsonTag("__support_kvm_gpu_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_kvm_infiniband").
+		WithName("SupportKvmInfiniband").
+		WithJsonTag("__support_kvm_infiniband").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_largememory").
+		WithName("SupportLargememory").
+		WithJsonTag("__support_largememory").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_xen").
+		WithName("SupportXen").
+		WithJsonTag("__support_xen").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_xen_gpu_type").
+		WithName("SupportXenGpuType").
+		WithJsonTag("__support_xen_gpu_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_xen_hana").
+		WithName("SupportXenHana").
+		WithJsonTag("__support_xen_hana").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("container_format").
+		WithName("ContainerFormat").
+		WithJsonTag("container_format").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("disk_format").
+		WithName("DiskFormat").
+		WithJsonTag("disk_format").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("enterprise_project_id").
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("id").
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("marker").
+		WithName("Marker").
+		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("member_status").
+		WithName("MemberStatus").
+		WithJsonTag("member_status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("min_disk").
+		WithName("MinDisk").
+		WithJsonTag("min_disk").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("min_ram").
+		WithName("MinRam").
+		WithJsonTag("min_ram").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("name").
+		WithName("Name").
+		WithJsonTag("name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("owner").
+		WithName("Owner").
+		WithJsonTag("owner").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("protected").
+		WithName("Protected").
+		WithJsonTag("protected").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("sort_dir").
+		WithName("SortDir").
+		WithJsonTag("sort_dir").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("sort_key").
+		WithName("SortKey").
+		WithJsonTag("sort_key").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("tag").
+		WithName("Tag").
+		WithJsonTag("tag").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("virtual_env_type").
+		WithName("VirtualEnvType").
+		WithJsonTag("virtual_env_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("visibility").
+		WithName("Visibility").
+		WithJsonTag("visibility").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("flavor_id").
+		WithName("FlavorId").
+		WithJsonTag("flavor_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("created_at").
+		WithName("CreatedAt").
+		WithJsonTag("created_at").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("updated_at").
+		WithName("UpdatedAt").
+		WithJsonTag("updated_at").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("architecture").
+		WithName("Architecture").
+		WithJsonTag("architecture").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("X-Sdk-Date").
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListImages() (*model.ListImagesResponse, *def.HttpResponseDef) {
-	resp := new(model.ListImagesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListOsVersions(request *model.ListOsVersionsRequest) *def.HttpRequestDef {
+func GenReqDefForListOsVersions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/cloudimages/os_version")
+		WithPath("/v1/cloudimages/os_version").
+		WithResponse(new(model.ListOsVersionsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("tag").
+		WithName("Tag").
+		WithJsonTag("tag").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListOsVersions() (*model.ListOsVersionsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListOsVersionsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForListTags(request *model.ListTagsRequest) *def.HttpRequestDef {
+func GenReqDefForListTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/cloudimages/tags")
+		WithPath("/v1/cloudimages/tags").
+		WithResponse(new(model.ListTagsResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("page").
+		WithName("Page").
+		WithJsonTag("page").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__imagetype").
+		WithName("Imagetype").
+		WithJsonTag("__imagetype").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("id").
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("name").
+		WithName("Name").
+		WithJsonTag("name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("min_disk").
+		WithName("MinDisk").
+		WithJsonTag("min_disk").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__platform").
+		WithName("Platform").
+		WithJsonTag("__platform").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__os_type").
+		WithName("OsType").
+		WithJsonTag("__os_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("member_status").
+		WithName("MemberStatus").
+		WithJsonTag("member_status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("virtual_env_type").
+		WithName("VirtualEnvType").
+		WithJsonTag("virtual_env_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("enterprise_project_id").
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("architecture").
+		WithName("Architecture").
+		WithJsonTag("architecture").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("created_at").
+		WithName("CreatedAt").
+		WithJsonTag("created_at").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("updated_at").
+		WithName("UpdatedAt").
+		WithJsonTag("updated_at").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForListTags() (*model.ListTagsResponse, *def.HttpResponseDef) {
-	resp := new(model.ListTagsResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForRegisterImage(request *model.RegisterImageRequest) *def.HttpRequestDef {
+func GenReqDefForRegisterImage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/cloudimages/{image_id}/upload").
+		WithResponse(new(model.RegisterImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForRegisterImage() (*model.RegisterImageResponse, *def.HttpResponseDef) {
-	resp := new(model.RegisterImageResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowImageQuota(request *model.ShowImageQuotaRequest) *def.HttpRequestDef {
+func GenReqDefForShowImageQuota() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/cloudimages/quota")
+		WithPath("/v1/cloudimages/quota").
+		WithResponse(new(model.ShowImageQuotaResponse))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+	// request
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowImageQuota() (*model.ShowImageQuotaResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowImageQuotaResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForUpdateImage(request *model.UpdateImageRequest) *def.HttpRequestDef {
+func GenReqDefForUpdateImage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPatch).
 		WithPath("/v2/cloudimages/{image_id}").
+		WithResponse(new(model.UpdateImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForUpdateImage() (*model.UpdateImageResponse, *def.HttpResponseDef) {
-	resp := new(model.UpdateImageResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForShowJob(request *model.ShowJobRequest) *def.HttpRequestDef {
+func GenReqDefForShowJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/jobs/{job_id}")
+		WithPath("/v1/{project_id}/jobs/{job_id}").
+		WithResponse(new(model.ShowJobResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("job_id").
+		WithName("JobId").
+		WithJsonTag("job_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForShowJob() (*model.ShowJobResponse, *def.HttpResponseDef) {
-	resp := new(model.ShowJobResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceAddImageMember(request *model.GlanceAddImageMemberRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceAddImageMember() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/images/{image_id}/members").
+		WithResponse(new(model.GlanceAddImageMemberResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceAddImageMember() (*model.GlanceAddImageMemberResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceAddImageMemberResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceCreateImageMetadata(request *model.GlanceCreateImageMetadataRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceCreateImageMetadata() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/images").
+		WithResponse(new(model.GlanceCreateImageMetadataResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	reqDefBuilder.WithBodyJson(request.Body)
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceCreateImageMetadata() (*model.GlanceCreateImageMetadataResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceCreateImageMetadataResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceCreateTag(request *model.GlanceCreateTagRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceCreateTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/v2/images/{image_id}/tags/{tag}")
+		WithPath("/v2/images/{image_id}/tags/{tag}").
+		WithResponse(new(model.GlanceCreateTagResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("tag").
+		WithName("Tag").
+		WithJsonTag("tag").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceCreateTag() (*model.GlanceCreateTagResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceCreateTagResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceDeleteImage(request *model.GlanceDeleteImageRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceDeleteImage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/images/{image_id}").
+		WithResponse(new(model.GlanceDeleteImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceDeleteImage() (*model.GlanceDeleteImageResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceDeleteImageResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceDeleteImageMember(request *model.GlanceDeleteImageMemberRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceDeleteImageMember() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2/images/{image_id}/members/{member_id}")
+		WithPath("/v2/images/{image_id}/members/{member_id}").
+		WithResponse(new(model.GlanceDeleteImageMemberResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("member_id").
+		WithName("MemberId").
+		WithJsonTag("member_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceDeleteImageMember() (*model.GlanceDeleteImageMemberResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceDeleteImageMemberResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceDeleteTag(request *model.GlanceDeleteTagRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceDeleteTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2/images/{image_id}/tags/{tag}")
+		WithPath("/v2/images/{image_id}/tags/{tag}").
+		WithResponse(new(model.GlanceDeleteTagResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("tag").
+		WithName("Tag").
+		WithJsonTag("tag").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceDeleteTag() (*model.GlanceDeleteTagResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceDeleteTagResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceListImageMemberSchemas(request *model.GlanceListImageMemberSchemasRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceListImageMemberSchemas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/schemas/members")
+		WithPath("/v2/schemas/members").
+		WithResponse(new(model.GlanceListImageMemberSchemasResponse))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+	// request
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceListImageMemberSchemas() (*model.GlanceListImageMemberSchemasResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceListImageMemberSchemasResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceListImageMembers(request *model.GlanceListImageMembersRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceListImageMembers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/images/{image_id}/members")
+		WithPath("/v2/images/{image_id}/members").
+		WithResponse(new(model.GlanceListImageMembersResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceListImageMembers() (*model.GlanceListImageMembersResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceListImageMembersResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceListImageSchemas(request *model.GlanceListImageSchemasRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceListImageSchemas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/schemas/images")
+		WithPath("/v2/schemas/images").
+		WithResponse(new(model.GlanceListImageSchemasResponse))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+	// request
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceListImageSchemas() (*model.GlanceListImageSchemasResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceListImageSchemasResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceListImages(request *model.GlanceListImagesRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceListImages() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/images")
+		WithPath("/v2/images").
+		WithResponse(new(model.GlanceListImagesResponse))
+
+	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__imagetype").
+		WithName("Imagetype").
+		WithJsonTag("__imagetype").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__isregistered").
+		WithName("Isregistered").
+		WithJsonTag("__isregistered").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__os_bit").
+		WithName("OsBit").
+		WithJsonTag("__os_bit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__os_type").
+		WithName("OsType").
+		WithJsonTag("__os_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__platform").
+		WithName("Platform").
+		WithJsonTag("__platform").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_diskintensive").
+		WithName("SupportDiskintensive").
+		WithJsonTag("__support_diskintensive").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_highperformance").
+		WithName("SupportHighperformance").
+		WithJsonTag("__support_highperformance").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_kvm").
+		WithName("SupportKvm").
+		WithJsonTag("__support_kvm").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_kvm_gpu_type").
+		WithName("SupportKvmGpuType").
+		WithJsonTag("__support_kvm_gpu_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_kvm_infiniband").
+		WithName("SupportKvmInfiniband").
+		WithJsonTag("__support_kvm_infiniband").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_largememory").
+		WithName("SupportLargememory").
+		WithJsonTag("__support_largememory").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_xen").
+		WithName("SupportXen").
+		WithJsonTag("__support_xen").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_xen_gpu_type").
+		WithName("SupportXenGpuType").
+		WithJsonTag("__support_xen_gpu_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("__support_xen_hana").
+		WithName("SupportXenHana").
+		WithJsonTag("__support_xen_hana").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("container_format").
+		WithName("ContainerFormat").
+		WithJsonTag("container_format").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("disk_format").
+		WithName("DiskFormat").
+		WithJsonTag("disk_format").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("id").
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("limit").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("marker").
+		WithName("Marker").
+		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("member_status").
+		WithName("MemberStatus").
+		WithJsonTag("member_status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("min_disk").
+		WithName("MinDisk").
+		WithJsonTag("min_disk").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("min_ram").
+		WithName("MinRam").
+		WithJsonTag("min_ram").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("name").
+		WithName("Name").
+		WithJsonTag("name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("owner").
+		WithName("Owner").
+		WithJsonTag("owner").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("protected").
+		WithName("Protected").
+		WithJsonTag("protected").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("sort_dir").
+		WithName("SortDir").
+		WithJsonTag("sort_dir").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("sort_key").
+		WithName("SortKey").
+		WithJsonTag("sort_key").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("status").
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("tag").
+		WithName("Tag").
+		WithJsonTag("tag").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("visibility").
+		WithName("Visibility").
+		WithJsonTag("visibility").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("created_at").
+		WithName("CreatedAt").
+		WithJsonTag("created_at").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("updated_at").
+		WithName("UpdatedAt").
+		WithJsonTag("updated_at").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceListImages() (*model.GlanceListImagesResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceListImagesResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceShowImage(request *model.GlanceShowImageRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceShowImage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/images/{image_id}")
+		WithPath("/v2/images/{image_id}").
+		WithResponse(new(model.GlanceShowImageResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceShowImage() (*model.GlanceShowImageResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceShowImageResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceShowImageMember(request *model.GlanceShowImageMemberRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceShowImageMember() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/images/{image_id}/members/{member_id}")
+		WithPath("/v2/images/{image_id}/members/{member_id}").
+		WithResponse(new(model.GlanceShowImageMemberResponse))
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("member_id").
+		WithName("MemberId").
+		WithJsonTag("member_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceShowImageMember() (*model.GlanceShowImageMemberResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceShowImageMemberResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceShowImageMemberSchemas(request *model.GlanceShowImageMemberSchemasRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceShowImageMemberSchemas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/schemas/member")
+		WithPath("/v2/schemas/member").
+		WithResponse(new(model.GlanceShowImageMemberSchemasResponse))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+	// request
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceShowImageMemberSchemas() (*model.GlanceShowImageMemberSchemasResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceShowImageMemberSchemasResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceShowImageSchemas(request *model.GlanceShowImageSchemasRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceShowImageSchemas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/schemas/image")
+		WithPath("/v2/schemas/image").
+		WithResponse(new(model.GlanceShowImageSchemasResponse))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
-		WithLocationType(def.Path))
+	// request
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceShowImageSchemas() (*model.GlanceShowImageSchemasResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceShowImageSchemasResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceUpdateImage(request *model.GlanceUpdateImageRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceUpdateImage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPatch).
 		WithPath("/v2/images/{image_id}").
+		WithResponse(new(model.GlanceUpdateImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenRespForGlanceUpdateImage() (*model.GlanceUpdateImageResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceUpdateImageResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
-}
-
-func GenReqDefForGlanceUpdateImageMember(request *model.GlanceUpdateImageMemberRequest) *def.HttpRequestDef {
+func GenReqDefForGlanceUpdateImageMember() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/images/{image_id}/members/{member_id}").
+		WithResponse(new(model.GlanceUpdateImageMemberResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
+	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("image_id").
+		WithName("ImageId").
+		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("member_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithBodyJson(request.Body)
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("project_id").
+		WithName("MemberId").
+		WithJsonTag("member_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("domain_id").
-		WithLocationType(def.Path))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
-}
-
-func GenRespForGlanceUpdateImageMember() (*model.GlanceUpdateImageMemberResponse, *def.HttpResponseDef) {
-	resp := new(model.GlanceUpdateImageMemberResponse)
-	respDefBuilder := def.NewHttpResponseDefBuilder().WithBodyJson(resp)
-	responseDef := respDefBuilder.Build()
-	return resp, responseDef
 }

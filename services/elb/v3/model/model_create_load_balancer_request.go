@@ -15,8 +15,7 @@ import (
 
 // Request Object
 type CreateLoadBalancerRequest struct {
-	XAuthProjectToken *string                        `json:"X-Auth-Project-Token,omitempty"`
-	Body              *CreateLoadBalancerRequestBody `json:"body,omitempty"`
+	Body *CreateLoadBalancerRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateLoadBalancerRequest) String() string {

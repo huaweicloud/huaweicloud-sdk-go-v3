@@ -15,9 +15,9 @@ import (
 
 // 指标维度
 type MetricsDimension struct {
-	// 维度名
+	// 资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控指标名称可查看https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html。
 	Name *string `json:"name,omitempty"`
-	// 维度值
+	// 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755
 	Value *string `json:"value,omitempty"`
 }
 
