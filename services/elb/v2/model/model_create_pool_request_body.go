@@ -15,7 +15,7 @@ import (
 
 // This is a auto create Body Object
 type CreatePoolRequestBody struct {
-	Pool *CreatePoolV2Req `json:"pool"`
+	Pool *CreatePoolReq `json:"pool"`
 }
 
 func (o CreatePoolRequestBody) String() string {

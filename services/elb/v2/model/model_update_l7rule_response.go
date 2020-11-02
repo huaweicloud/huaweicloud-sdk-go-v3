@@ -15,7 +15,7 @@ import (
 
 // Response Object
 type UpdateL7ruleResponse struct {
-	Rule *L7ruleV2Resp `json:"rule,omitempty"`
+	Rule *L7ruleResp `json:"rule,omitempty"`
 }
 
 func (o UpdateL7ruleResponse) String() string {

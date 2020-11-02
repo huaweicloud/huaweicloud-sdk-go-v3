@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListLoadbalancersResponse struct {
 	// 负载均衡器对象列表
-	Loadbalancers *[]LoadbalancerV2Resp `json:"loadbalancers,omitempty"`
+	Loadbalancers *[]LoadbalancerResp `json:"loadbalancers,omitempty"`
 }
 
 func (o ListLoadbalancersResponse) String() string {

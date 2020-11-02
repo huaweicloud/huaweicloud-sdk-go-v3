@@ -15,7 +15,7 @@ import (
 
 // This is a auto create Body Object
 type CreateMemberRequestBody struct {
-	Member *CreateMemberV2Req `json:"member"`
+	Member *CreateMemberReq `json:"member"`
 }
 
 func (o CreateMemberRequestBody) String() string {

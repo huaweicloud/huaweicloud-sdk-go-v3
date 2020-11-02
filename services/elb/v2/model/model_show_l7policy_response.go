@@ -15,7 +15,7 @@ import (
 
 // Response Object
 type ShowL7policyResponse struct {
-	L7policy *L7policyV2Resp `json:"l7policy,omitempty"`
+	L7policy *L7policyResp `json:"l7policy,omitempty"`
 }
 
 func (o ShowL7policyResponse) String() string {

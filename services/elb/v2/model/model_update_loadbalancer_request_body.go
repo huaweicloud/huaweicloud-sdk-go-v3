@@ -15,7 +15,7 @@ import (
 
 // This is a auto create Body Object
 type UpdateLoadbalancerRequestBody struct {
-	Loadbalancer *UpdateLoadbalancerV2Req `json:"loadbalancer"`
+	Loadbalancer *UpdateLoadbalancerReq `json:"loadbalancer"`
 }
 
 func (o UpdateLoadbalancerRequestBody) String() string {

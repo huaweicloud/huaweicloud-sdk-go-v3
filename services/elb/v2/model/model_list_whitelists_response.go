@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListWhitelistsResponse struct {
 	// 白名单对象的列表
-	Whitelists *[]WhitelistV2Resp `json:"whitelists,omitempty"`
+	Whitelists *[]WhitelistResp `json:"whitelists,omitempty"`
 }
 
 func (o ListWhitelistsResponse) String() string {

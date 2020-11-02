@@ -15,7 +15,7 @@ import (
 
 // This is a auto create Body Object
 type CreateL7ruleRequestBody struct {
-	L7rule *CreateL7ruleV2Req `json:"l7rule"`
+	Rule *CreateL7ruleReq `json:"rule"`
 }
 
 func (o CreateL7ruleRequestBody) String() string {

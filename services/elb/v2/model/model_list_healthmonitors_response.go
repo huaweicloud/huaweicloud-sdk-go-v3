@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListHealthmonitorsResponse struct {
 	// 健康检查对象的列表
-	Healthmonitors *[]HealthmonitorV2Resp `json:"healthmonitors,omitempty"`
+	Healthmonitors *[]HealthmonitorResp `json:"healthmonitors,omitempty"`
 }
 
 func (o ListHealthmonitorsResponse) String() string {

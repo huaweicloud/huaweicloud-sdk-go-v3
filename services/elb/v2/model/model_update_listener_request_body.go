@@ -15,7 +15,7 @@ import (
 
 // This is a auto create Body Object
 type UpdateListenerRequestBody struct {
-	Listener *UpdateListenerV2Req `json:"listener"`
+	Listener *UpdateListenerReq `json:"listener"`
 }
 
 func (o UpdateListenerRequestBody) String() string {

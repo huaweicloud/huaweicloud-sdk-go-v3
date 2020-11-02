@@ -15,7 +15,7 @@ import (
 
 // Response Object
 type ListCertificatesResponse struct {
-	Certificates *CertificateV2Resp `json:"certificates,omitempty"`
+	Certificates *CertificateResp `json:"certificates,omitempty"`
 	// 证书的个数
 	InstanceNum *int32 `json:"instance_num,omitempty"`
 }

@@ -15,7 +15,7 @@ import (
 
 // Response Object
 type ShowLoadbalancerResponse struct {
-	Loadbalancer *LoadbalancerV2Resp `json:"loadbalancer,omitempty"`
+	Loadbalancer *LoadbalancerResp `json:"loadbalancer,omitempty"`
 }
 
 func (o ShowLoadbalancerResponse) String() string {

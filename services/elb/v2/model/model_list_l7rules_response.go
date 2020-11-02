@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListL7rulesResponse struct {
 	// 转发规则对象的列表
-	Rules *[]L7ruleV2Resp `json:"rules,omitempty"`
+	Rules *[]L7ruleResp `json:"rules,omitempty"`
 }
 
 func (o ListL7rulesResponse) String() string {

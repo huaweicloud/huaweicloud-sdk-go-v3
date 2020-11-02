@@ -26,7 +26,7 @@ type Condition struct {
 	// 数据的单位，最大长度为32位。
 	Unit *string `json:"unit,omitempty"`
 	// 告警阈值，取值范围[0, Number.MAX_VALUE]，Number.MAX_VALUE值为1.7976931348623157e+108。具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。
-	Value int32 `json:"value"`
+	Value float64 `json:"value"`
 }
 
 func (o Condition) String() string {

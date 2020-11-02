@@ -15,7 +15,7 @@ import (
 
 // Response Object
 type CreatePoolResponse struct {
-	Pool *PoolV2Resp `json:"pool,omitempty"`
+	Pool *PoolResp `json:"pool,omitempty"`
 }
 
 func (o CreatePoolResponse) String() string {

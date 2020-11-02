@@ -15,7 +15,7 @@ import (
 
 // This is a auto create Body Object
 type CreateHealthmonitorRequestBody struct {
-	Healthmonitor *CreateHealthmonitorV2Req `json:"healthmonitor"`
+	Healthmonitor *CreateHealthmonitorReq `json:"healthmonitor"`
 }
 
 func (o CreateHealthmonitorRequestBody) String() string {

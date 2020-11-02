@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListListenersResponse struct {
 	// 监听器对象列表
-	Listeners *[]ListenerV2Resp `json:"listeners,omitempty"`
+	Listeners *[]ListenerResp `json:"listeners,omitempty"`
 }
 
 func (o ListListenersResponse) String() string {

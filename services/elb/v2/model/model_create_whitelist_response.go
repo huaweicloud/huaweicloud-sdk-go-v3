@@ -15,7 +15,7 @@ import (
 
 // Response Object
 type CreateWhitelistResponse struct {
-	Whitelist *WhitelistV2Resp `json:"whitelist,omitempty"`
+	Whitelist *WhitelistResp `json:"whitelist,omitempty"`
 }
 
 func (o CreateWhitelistResponse) String() string {

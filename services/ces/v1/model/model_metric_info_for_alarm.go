@@ -13,7 +13,7 @@ import (
 	"strings"
 )
 
-// 创建规则中的监控信息
+// 创建规则中的监控指标信息
 type MetricInfoForAlarm struct {
 	// 指标维度
 	Dimensions []MetricsDimension `json:"dimensions"`

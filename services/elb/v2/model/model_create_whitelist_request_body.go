@@ -15,7 +15,7 @@ import (
 
 // This is a auto create Body Object
 type CreateWhitelistRequestBody struct {
-	Whitelist *CreateWhitelistV2Req `json:"whitelist"`
+	Whitelist *CreateWhitelistReq `json:"whitelist"`
 }
 
 func (o CreateWhitelistRequestBody) String() string {

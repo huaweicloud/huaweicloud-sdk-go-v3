@@ -16,7 +16,7 @@ import (
 // Response Object
 type ListMenbersResponse struct {
 	// 后端云服务器对象的列表
-	Members *[]MemberV2Resp `json:"members,omitempty"`
+	Members *[]MemberResp `json:"members,omitempty"`
 }
 
 func (o ListMenbersResponse) String() string {

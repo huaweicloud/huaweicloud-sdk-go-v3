@@ -15,7 +15,7 @@ import (
 
 // This is a auto create Body Object
 type UpdateL7policiesRequestBody struct {
-	L7policy *UpdateL7policyV2Req `json:"l7policy"`
+	L7policy *UpdateL7policyReq `json:"l7policy"`
 }
 
 func (o UpdateL7policiesRequestBody) String() string {

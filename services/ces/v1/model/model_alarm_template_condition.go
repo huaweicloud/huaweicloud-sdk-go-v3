@@ -26,7 +26,7 @@ type AlarmTemplateCondition struct {
 	// 数据的单位，最大长度为32位。
 	Unit *string `json:"unit,omitempty"`
 	// 告警阈值，取值范围[0, Number.MAX_VALUE]，Number.MAX_VALUE值为1.7976931348623157e+108。具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。
-	Value int32 `json:"value"`
+	Value float64 `json:"value"`
 	// 发送告警的周期，值可为0, 300, 600, 900, 1800, 3600, 10800, 21600, 43200, 86400；0表示只告警一次，300表示每5分钟告警一次，600表示每10分钟告警一次，900表示每15分钟告警一次，1800表示每30分钟告警一次，3600表示每1小时告警一次，10800表示每3小时告警一次，21600表示每6小时告警一次，43200表示每12小时告警一次，86400表示每1天告警一次。
 	SuppressDuration *int32 `json:"suppress_duration,omitempty"`
 }

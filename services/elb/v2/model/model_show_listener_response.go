@@ -15,7 +15,7 @@ import (
 
 // Response Object
 type ShowListenerResponse struct {
-	Listener *ListenerV2Resp `json:"listener,omitempty"`
+	Listener *ListenerResp `json:"listener,omitempty"`
 }
 
 func (o ShowListenerResponse) String() string {
