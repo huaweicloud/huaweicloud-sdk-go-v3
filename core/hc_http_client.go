@@ -149,7 +149,8 @@ func (hc *HcHttpClient) GetFieldValueByName(name string, jsonTag map[string]stri
 			}
 			return reflect.ValueOf(nil), errors.New("request field " + name + " read null value")
 		}
-		return value.Elem(), nil
+		// For field value is struct
+		value = value.Elem()
 	}
 
 	if value.Kind() == reflect.Struct {
