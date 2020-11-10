@@ -110,6 +110,12 @@ func (hc *HcHttpClient) fillParamsFromReq(req interface{}, reqDef *def.HttpReque
 		case def.Path:
 			builder.AddPathParam(fieldDef.JsonTag, fmt.Sprintf("%v", value))
 		case def.Query:
+			if value.Kind() == reflect.Struct {
+				value, err = hc.convertStructValue(value)
+			}
+			if err != nil {
+				return nil, err
+			}
 			builder.AddQueryParam(fieldDef.JsonTag, value)
 		case def.Body:
 			builder.WithBody(value.Interface())
@@ -149,20 +155,23 @@ func (hc *HcHttpClient) GetFieldValueByName(name string, jsonTag map[string]stri
 			}
 			return reflect.ValueOf(nil), errors.New("request field " + name + " read null value")
 		}
-		// For field value is struct
-		value = value.Elem()
+		return value.Elem(), nil
 	}
 
 	if value.Kind() == reflect.Struct {
-		v, err := jsoniter.Marshal(value.Interface())
-		if strings.HasPrefix(string(v), "\"") {
-			return reflect.ValueOf(strings.Trim(string(v), "\"")), err
-		} else {
-			return reflect.ValueOf(string(v)), err
-		}
+		return hc.convertStructValue(value)
 	}
 
 	return value, nil
+}
+
+func (hc *HcHttpClient) convertStructValue(value reflect.Value) (reflect.Value, error) {
+	v, err := jsoniter.Marshal(value.Interface())
+	if strings.HasPrefix(string(v), "\"") {
+		return reflect.ValueOf(strings.Trim(string(v), "\"")), err
+	} else {
+		return reflect.ValueOf(string(v)), err
+	}
 }
 
 func (hc *HcHttpClient) extractResponse(resp *response.DefaultHttpResponse, reqDef *def.HttpRequestDef) (interface{}, error) {
