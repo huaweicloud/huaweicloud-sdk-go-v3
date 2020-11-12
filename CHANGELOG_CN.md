@@ -1,3 +1,47 @@
+## 0.0.21-beta 2020-11-11
+## HuaweiCloud SDK Core
+ - ### 新增特性
+    - 无
+ - ### 解决问题
+    - 同步[Pull requests #11](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/pull/11)修改
+ - ### 特性变更
+    - 无
+
+# HuaweiCloud SDK CBR
+ - ### 新增特性
+    - 无
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 创建存储库接口(CreateVault)新增存储库turbo类型
+    - 修改策略接口(UpdatePolicy)删除多余字段
+
+## HuaweiCloud SDK CES
+ - ### 新增特性
+    - 新增接口响应示例，调整字段描述
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 无
+
+## HuaweiCloud SDK CloudPipeline
+ - ### 新增特性
+    - 无
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 生成客户端文件的名字调整：devcloudpipeline_client → cloudPipeline_client
+    - 生成Meta文件的名字调整：devcloudpipeline_meta → cloudPipeline_meta
+
+## HuaweiCloud SDK DevStar
+ - ### 新增特性
+    - 无
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 修改接口参数，调整示例代码
+
+
 ## 0.0.20-beta 2020-11-02
 ## HuaweiCloud SDK CES
  - ### 新增特性

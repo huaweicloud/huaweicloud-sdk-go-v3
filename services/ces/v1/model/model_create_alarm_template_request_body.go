@@ -23,7 +23,7 @@ type CreateAlarmTemplateRequestBody struct {
 	Namespace string `json:"namespace"`
 	// 资源类型对应的指标监控维度，选择弹性云服务器，则维度为云服务器，dimension_name值为instance_id。
 	DimensionName string `json:"dimension_name"`
-	// 创建自定义告警模板添加添加一个或者多个指标的告警规则；目前最多可增加30组告警规则策略。
+	// 创建自定义告警模板添加一个或者多个指标的告警规则；目前最多可增加30组告警规则策略。
 	TemplateItems []TemplateItem `json:"template_items"`
 }
 

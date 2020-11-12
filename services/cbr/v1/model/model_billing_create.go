@@ -20,7 +20,7 @@ type BillingCreate struct {
 	CloudType *BillingCreateCloudType `json:"cloud_type,omitempty"`
 	// [规格，崩溃一致性（crash_consistent）或应用一致性（app_consistent）](tag:hws,hws_hk,fcs_vm,ctc) [规格，默认为崩溃一致性（crash_consistent）](tag:dt,ocb,tlf,sbc)
 	ConsistentLevel string `json:"consistent_level"`
-	// 对象类型：云服务器（server），云硬盘（disk）。
+	// 对象类型：云服务器（server），云硬盘（disk），文件系统（turbo）。
 	ObjectType BillingCreateObjectType `json:"object_type"`
 	// 保护类型：备份（backup）、复制(replication)
 	ProtectType BillingCreateProtectType `json:"protect_type"`
@@ -91,6 +91,7 @@ type BillingCreateObjectType struct {
 type BillingCreateObjectTypeEnum struct {
 	SERVER BillingCreateObjectType
 	DISK   BillingCreateObjectType
+	TURBO  BillingCreateObjectType
 }
 
 func GetBillingCreateObjectTypeEnum() BillingCreateObjectTypeEnum {
@@ -100,6 +101,9 @@ func GetBillingCreateObjectTypeEnum() BillingCreateObjectTypeEnum {
 		},
 		DISK: BillingCreateObjectType{
 			value: "disk",
+		},
+		TURBO: BillingCreateObjectType{
+			value: "turbo",
 		},
 	}
 }

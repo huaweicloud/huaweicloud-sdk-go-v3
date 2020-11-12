@@ -101,16 +101,23 @@ func (hc *HcHttpClient) fillParamsFromReq(req interface{}, reqDef *def.HttpReque
 		if err != nil {
 			return nil, err
 		}
+
 		if !value.IsValid() {
 			continue
 		}
+
+		v, err := flattenEnumStruct(value)
+		if err != nil {
+			return nil, err
+		}
+
 		switch fieldDef.LocationType {
 		case def.Header:
-			builder.AddHeaderParam(fieldDef.JsonTag, fmt.Sprintf("%v", value))
+			builder.AddHeaderParam(fieldDef.JsonTag, fmt.Sprintf("%v", v))
 		case def.Path:
-			builder.AddPathParam(fieldDef.JsonTag, fmt.Sprintf("%v", value))
+			builder.AddPathParam(fieldDef.JsonTag, fmt.Sprintf("%v", v))
 		case def.Query:
-			builder.AddQueryParam(fieldDef.JsonTag, value)
+			builder.AddQueryParam(fieldDef.JsonTag, v)
 		case def.Body:
 			builder.WithBody(value.Interface())
 		}
@@ -149,19 +156,24 @@ func (hc *HcHttpClient) GetFieldValueByName(name string, jsonTag map[string]stri
 			}
 			return reflect.ValueOf(nil), errors.New("request field " + name + " read null value")
 		}
-		// For field value is struct
-		value = value.Elem()
+		return value.Elem(), nil
 	}
 
+	return value, nil
+}
+
+func flattenEnumStruct(value reflect.Value) (reflect.Value, error) {
 	if value.Kind() == reflect.Struct {
-		v, err := jsoniter.Marshal(value.Interface())
-		if strings.HasPrefix(string(v), "\"") {
-			return reflect.ValueOf(strings.Trim(string(v), "\"")), err
-		} else {
-			return reflect.ValueOf(string(v)), err
+		v, e := jsoniter.Marshal(value.Interface())
+		if e == nil {
+			if strings.HasPrefix(string(v), "\"") {
+				return reflect.ValueOf(strings.Trim(string(v), "\"")), nil
+			} else {
+				return reflect.ValueOf(string(v)), nil
+			}
 		}
+		return reflect.ValueOf(nil), e
 	}
-
 	return value, nil
 }
 

@@ -25,7 +25,7 @@ type ThumbnailPara struct {
 	StartTime *int32 `json:"start_time,omitempty"`
 	// 采样类型为“TIME”模式的持续时间，和“time”、“start_time”配合使用，表示从视频文件的第“start_time”开始，持续时间为“duration”，每间隔“time”生成一张截图。 取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值： ToEND。  单位：秒。 > “duration”必须大于等0，若设置为0，则截图持续时间从“start_time”到视频结束。
 	Duration *int32 `json:"duration,omitempty"`
-	// 指定时间截图时的时间点数组。
+	// 指定时间截图时的时间点数组，最多支持10个。
 	Dots *[]int32 `json:"dots,omitempty"`
 	// 截图输出文件名。  - 如果只抽一张图（即：按DOTS方式，指定1个时间点）则按该指定文件名输出图片。  - 如果抽多张图（即：按DOTS方式指定多个时间点或按TIME间隔截图）则输出图片名在该指定文件名基础上在增加时间点（示例：output_filename_10.jpg）。  - 如果指定了压缩抽帧图片生成tar包，则tar包按该指定文件名输出。
 	OutputFilename *string `json:"output_filename,omitempty"`
@@ -37,7 +37,7 @@ type ThumbnailPara struct {
 	Width *int32 `json:"width,omitempty"`
 	// 图片高度  取值范围：(96,2160]  单位：px
 	Height *int32 `json:"height,omitempty"`
-	// 截图最长边的尺寸。宽边尺寸按照该尺寸与原始视频像素等比缩放计算。  取值范围：[240,3840]  单位：像素 > 该参数和width/height选择使用，以width/height优先，若width/height都不等于0，则图片尺寸按width/height得出；反之，则图片尺寸按 max_length 得出。
+	// 截图最长边的尺寸。宽边尺寸按照该尺寸与原始视频像素等比缩放计算。  取值范围：[240,3840]  默认值：480  单位：像素 > 该参数和width/height选择使用，以width/height优先，若width/height都不等于0，则图片尺寸按width/height得出；反之，则图片尺寸按 max_length 得出。 > 若该参数和width/height都未选择，则取max_length默认为480
 	MaxLength *int32 `json:"max_length,omitempty"`
 }
 

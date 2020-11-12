@@ -1,3 +1,47 @@
+## 0.0.21-beta 2020-11-11
+## HuaweiCloud SDK Core
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Update core code from [Pull requests #11](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/pull/11).
+ - ### Change
+    - None
+
+## HuaweiCloud SDK CBR
+ - ### Features
+    - None
+ - ### Bug Fix
+    - None
+ - ### Change
+    - Interface adjustment: property `object_type` in interface `CreateVault` support key `turbo`.
+    - Interface adjustment: property `description` in interface `UpdatePolicy` is removed.
+
+## HuaweiCloud SDK CES
+ - ### Features
+    - Add examples of interface response and adjust some filed description.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+## HuaweiCloud SDK CloudPipeline
+ - ### Features
+    - None
+ - ### Bug Fix
+    - None
+ - ### Change
+    - Modify the name of generated Client class: devcloudpipeline_client → cloudPipeline_client
+    - Modify the name of generated Meta class: devcloudpipeline_meta → cloudPipeline_meta
+
+## HuaweiCloud SDK DevStar
+ - ### Features
+    - None
+ - ### Bug Fix
+    - None
+ - ### Change
+    - Modify interface parameters and adjust sample code.
+
+
 ## 0.0.20-beta 2020-11-02
 ## HuaweiCloud SDK CES
  - ### Features

@@ -11,7 +11,7 @@ func GenReqDefForBatchListMetricData() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/V1.0/{project_id}/batch-query-metric-data").
 		WithResponse(new(model.BatchListMetricDataResponse)).
-		WithContentType("application/json;charset=UTF-8")
+		WithContentType("application/json")
 
 	// request
 
@@ -35,7 +35,7 @@ func GenReqDefForCreateAlarm() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/V1.0/{project_id}/alarms").
 		WithResponse(new(model.CreateAlarmResponse)).
-		WithContentType("application/json;charset=UTF-8")
+		WithContentType("application/json")
 
 	// request
 
@@ -54,7 +54,7 @@ func GenReqDefForCreateAlarmTemplate() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/V1.0/{project_id}/alarm-template").
 		WithResponse(new(model.CreateAlarmTemplateResponse)).
-		WithContentType("application/json;charset=UTF-8")
+		WithContentType("application/json")
 
 	// request
 
@@ -78,7 +78,7 @@ func GenReqDefForCreateEvents() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/V1.0/{project_id}/events").
 		WithResponse(new(model.CreateEventsResponse)).
-		WithContentType("application/json;charset=UTF-8")
+		WithContentType("application/json")
 
 	// request
 
@@ -105,7 +105,7 @@ func GenReqDefForCreateMetricData() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/V1.0/{project_id}/metric-data").
 		WithResponse(new(model.CreateMetricDataResponse)).
-		WithContentType("application/json;charset=UTF-8")
+		WithContentType("application/json")
 
 	// request
 
@@ -539,7 +539,7 @@ func GenReqDefForUpdateAlarmAction() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/V1.0/{project_id}/alarms/{alarm_id}/action").
 		WithResponse(new(model.UpdateAlarmActionResponse)).
-		WithContentType("application/json;charset=UTF-8")
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -567,7 +567,7 @@ func GenReqDefForUpdateAlarmTemplate() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/V1.0/{project_id}/alarm-template/{template_id}").
 		WithResponse(new(model.UpdateAlarmTemplateResponse)).
-		WithContentType("application/json;charset=UTF-8")
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

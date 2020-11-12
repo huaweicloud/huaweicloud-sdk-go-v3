@@ -15,7 +15,7 @@ import (
 
 type ModifyTransTemplateReq struct {
 	// 转码模板ID
-	TemplateId int64 `json:"template_id"`
+	TemplateId int32 `json:"template_id"`
 	// 转码模板名称。
 	TemplateName string  `json:"template_name"`
 	Video        *Video  `json:"video,omitempty"`

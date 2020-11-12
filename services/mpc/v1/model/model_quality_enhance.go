@@ -19,7 +19,7 @@ type QualityEnhance struct {
 	NormalEnhance *QualityEnhanceNormalEnhance `json:"normal_enhance,omitempty"`
 	// 针对旧片、老片，画质主观质量比较低的片源，通过降噪、去压缩失真等视频增强技术，提升画质主观效果。
 	Revive *QualityEnhanceRevive `json:"revive,omitempty"`
-	// 超动态范围，提升视频动态范围，明显提升片源动态范围。单纯该处理操作前后，分辨率、帧率等参数不发生变化，动态范围、色域范围、码率发生变化。 可和normal_ enhance组合使用。SDRtoHDR10（默认）,SDRtoHLG（暂不支持）
+	// 超动态范围，提升视频动态范围，明显提升片源动态范围。单纯该处理操作前后，分辨率、帧率等参数不发生变化，动态范围、色域范围、码率发生变化。 可和normal_ enhance组合使用。 取值范围： - SDRtoHDR10 ：转换模式1，为标准模式 - SDRtoHDRFLAT”：转换模式2，清新模式，基本不改变源片的饱和度，适用于饱和度高的SDR源片转换为HDR
 	SdrToHdr *QualityEnhanceSdrToHdr `json:"sdr_to_hdr,omitempty"`
 }
 
@@ -101,13 +101,17 @@ type QualityEnhanceSdrToHdr struct {
 }
 
 type QualityEnhanceSdrToHdrEnum struct {
-	SD_RTO_HDR10 QualityEnhanceSdrToHdr
+	SD_RTO_HDR10      QualityEnhanceSdrToHdr
+	SD_RTO_HDR10_FLAT QualityEnhanceSdrToHdr
 }
 
 func GetQualityEnhanceSdrToHdrEnum() QualityEnhanceSdrToHdrEnum {
 	return QualityEnhanceSdrToHdrEnum{
 		SD_RTO_HDR10: QualityEnhanceSdrToHdr{
 			value: "SDRtoHDR10",
+		},
+		SD_RTO_HDR10_FLAT: QualityEnhanceSdrToHdr{
+			value: "SDRtoHDR10FLAT",
 		},
 	}
 }

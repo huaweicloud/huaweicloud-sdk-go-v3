@@ -133,6 +133,7 @@ func (httpRequest *DefaultHttpRequest) fillQueryParams(req *http.Request) {
 	if len(httpRequest.GetQueryParams()) == 0 {
 		return
 	}
+
 	q := req.URL.Query()
 	for key, value := range httpRequest.GetQueryParams() {
 		if reflect.TypeOf(value).Kind() == reflect.Struct && value.(reflect.Value).Kind() == reflect.Slice {

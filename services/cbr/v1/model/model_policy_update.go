@@ -14,8 +14,6 @@ import (
 )
 
 type PolicyUpdate struct {
-	// 描述
-	Description *string `json:"description,omitempty"`
 	// 是否启用策略
 	Enabled *bool `json:"enabled,omitempty"`
 	// 策略名称

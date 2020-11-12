@@ -1,5 +1,5 @@
 /*
- * devcloudpipeline
+ * CloudPipeline
  *
  * devcloud pipeline api
  *

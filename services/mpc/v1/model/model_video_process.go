@@ -20,7 +20,7 @@ type VideoProcess struct {
 	BlackEnhance *BlackEnhance `json:"black_enhance,omitempty"`
 	// 长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
 	Adaptation *VideoProcessAdaptation `json:"adaptation,omitempty"`
-	// 是否开启上采样，可取值为0,1: 0表示上采样关闭， 1表示上采样开启.
+	// 是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
 	Upsample *int32 `json:"upsample,omitempty"`
 }
 
