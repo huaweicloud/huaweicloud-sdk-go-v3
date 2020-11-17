@@ -33,8 +33,6 @@ type PolicyState struct {
 	PolicyDefinitionId *string `json:"policy_definition_id,omitempty"`
 	// 合规状态评估时间
 	EvaluationTime *string `json:"evaluation_time,omitempty"`
-	// 合规状态信息
-	Information *string `json:"information,omitempty"`
 }
 
 func (o PolicyState) String() string {

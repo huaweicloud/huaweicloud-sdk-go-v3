@@ -14,7 +14,7 @@ func NewEpsClient(hcClient *http_client.HcHttpClient) *EpsClient {
 }
 
 func EpsClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
 	return builder
 }
 

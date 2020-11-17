@@ -15,7 +15,8 @@ import (
 
 // Request Object
 type ShowBuiltInPolicyDefinitionRequest struct {
-	PolicyDefinitionId string `json:"policy_definition_id"`
+	PolicyDefinitionId string  `json:"policy_definition_id"`
+	XLanguage          *string `json:"X-Language,omitempty"`
 }
 
 func (o ShowBuiltInPolicyDefinitionRequest) String() string {

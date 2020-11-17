@@ -216,14 +216,14 @@ func (c *RmsClient) ListResources(request *model.ListResourcesRequest) (*model.L
 	}
 }
 
-//查询有权限资源的标签，返回标签的键值
-func (c *RmsClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsResponse, error) {
-	requestDef := GenReqDefForListTags()
+//指定资源ID，返回该资源的详细信息
+func (c *RmsClient) ShowResourceById(request *model.ShowResourceByIdRequest) (*model.ShowResourceByIdResponse, error) {
+	requestDef := GenReqDefForShowResourceById()
 
 	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListTagsResponse), nil
+		return resp.(*model.ShowResourceByIdResponse), nil
 	}
 }
 

@@ -359,6 +359,193 @@ func (c *VpcClient) ShowPrivateip(request *model.ShowPrivateipRequest) (*model.S
 	}
 }
 
+//插入一条网络ACL规则到某一网络ACL策略中。
+func (c *VpcClient) NeutronAddFirewallRule(request *model.NeutronAddFirewallRuleRequest) (*model.NeutronAddFirewallRuleResponse, error) {
+	requestDef := GenReqDefForNeutronAddFirewallRule()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronAddFirewallRuleResponse), nil
+	}
+}
+
+//创建网络ACL组
+func (c *VpcClient) NeutronCreateFirewallGroup(request *model.NeutronCreateFirewallGroupRequest) (*model.NeutronCreateFirewallGroupResponse, error) {
+	requestDef := GenReqDefForNeutronCreateFirewallGroup()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronCreateFirewallGroupResponse), nil
+	}
+}
+
+//创建网络ACL策略。
+func (c *VpcClient) NeutronCreateFirewallPolicy(request *model.NeutronCreateFirewallPolicyRequest) (*model.NeutronCreateFirewallPolicyResponse, error) {
+	requestDef := GenReqDefForNeutronCreateFirewallPolicy()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronCreateFirewallPolicyResponse), nil
+	}
+}
+
+//创建网络ACL规则。
+func (c *VpcClient) NeutronCreateFirewallRule(request *model.NeutronCreateFirewallRuleRequest) (*model.NeutronCreateFirewallRuleResponse, error) {
+	requestDef := GenReqDefForNeutronCreateFirewallRule()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronCreateFirewallRuleResponse), nil
+	}
+}
+
+//删除网络ACL组
+func (c *VpcClient) NeutronDeleteFirewallGroup(request *model.NeutronDeleteFirewallGroupRequest) (*model.NeutronDeleteFirewallGroupResponse, error) {
+	requestDef := GenReqDefForNeutronDeleteFirewallGroup()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronDeleteFirewallGroupResponse), nil
+	}
+}
+
+//删除网络ACL策略。
+func (c *VpcClient) NeutronDeleteFirewallPolicy(request *model.NeutronDeleteFirewallPolicyRequest) (*model.NeutronDeleteFirewallPolicyResponse, error) {
+	requestDef := GenReqDefForNeutronDeleteFirewallPolicy()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronDeleteFirewallPolicyResponse), nil
+	}
+}
+
+//删除网络ACL规则。
+func (c *VpcClient) NeutronDeleteFirewallRule(request *model.NeutronDeleteFirewallRuleRequest) (*model.NeutronDeleteFirewallRuleResponse, error) {
+	requestDef := GenReqDefForNeutronDeleteFirewallRule()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronDeleteFirewallRuleResponse), nil
+	}
+}
+
+//查询提交请求的租户有权限操作的所有网络ACL组信息。单次查询最多返回2000条数据，超过2000后会返回分页标记。
+func (c *VpcClient) NeutronListFirewallGroups(request *model.NeutronListFirewallGroupsRequest) (*model.NeutronListFirewallGroupsResponse, error) {
+	requestDef := GenReqDefForNeutronListFirewallGroups()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronListFirewallGroupsResponse), nil
+	}
+}
+
+//查询提交请求的租户有权限操作的所有网络ACL策略信息。单次查询最多返回2000条数据，超过2000后会返回分页标记。
+func (c *VpcClient) NeutronListFirewallPolicies(request *model.NeutronListFirewallPoliciesRequest) (*model.NeutronListFirewallPoliciesResponse, error) {
+	requestDef := GenReqDefForNeutronListFirewallPolicies()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronListFirewallPoliciesResponse), nil
+	}
+}
+
+//查询提交请求的租户有权限操作的所有网络ACL规则信息。单次查询最多返回2000条数据，超过2000后会返回分页标记。
+func (c *VpcClient) NeutronListFirewallRules(request *model.NeutronListFirewallRulesRequest) (*model.NeutronListFirewallRulesResponse, error) {
+	requestDef := GenReqDefForNeutronListFirewallRules()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronListFirewallRulesResponse), nil
+	}
+}
+
+//从某一网络ACL策略中移除一条网络ACL规则。
+func (c *VpcClient) NeutronRemoveFirewallRule(request *model.NeutronRemoveFirewallRuleRequest) (*model.NeutronRemoveFirewallRuleResponse, error) {
+	requestDef := GenReqDefForNeutronRemoveFirewallRule()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronRemoveFirewallRuleResponse), nil
+	}
+}
+
+//查询特定网络ACL组详情。
+func (c *VpcClient) NeutronShowFirewallGroup(request *model.NeutronShowFirewallGroupRequest) (*model.NeutronShowFirewallGroupResponse, error) {
+	requestDef := GenReqDefForNeutronShowFirewallGroup()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronShowFirewallGroupResponse), nil
+	}
+}
+
+//查询特定网络ACL策略详情。
+func (c *VpcClient) NeutronShowFirewallPolicy(request *model.NeutronShowFirewallPolicyRequest) (*model.NeutronShowFirewallPolicyResponse, error) {
+	requestDef := GenReqDefForNeutronShowFirewallPolicy()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronShowFirewallPolicyResponse), nil
+	}
+}
+
+//查询特定网络ACL规则。
+func (c *VpcClient) NeutronShowFirewallRule(request *model.NeutronShowFirewallRuleRequest) (*model.NeutronShowFirewallRuleResponse, error) {
+	requestDef := GenReqDefForNeutronShowFirewallRule()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronShowFirewallRuleResponse), nil
+	}
+}
+
+//更新网络ACL组。
+func (c *VpcClient) NeutronUpdateFirewallGroup(request *model.NeutronUpdateFirewallGroupRequest) (*model.NeutronUpdateFirewallGroupResponse, error) {
+	requestDef := GenReqDefForNeutronUpdateFirewallGroup()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronUpdateFirewallGroupResponse), nil
+	}
+}
+
+//更新网络ACL策略。
+func (c *VpcClient) NeutronUpdateFirewallPolicy(request *model.NeutronUpdateFirewallPolicyRequest) (*model.NeutronUpdateFirewallPolicyResponse, error) {
+	requestDef := GenReqDefForNeutronUpdateFirewallPolicy()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronUpdateFirewallPolicyResponse), nil
+	}
+}
+
+//更新网络ACL规则。
+func (c *VpcClient) NeutronUpdateFirewallRule(request *model.NeutronUpdateFirewallRuleRequest) (*model.NeutronUpdateFirewallRuleResponse, error) {
+	requestDef := GenReqDefForNeutronUpdateFirewallRule()
+
+	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronUpdateFirewallRuleResponse), nil
+	}
+}
+
 //创建虚拟私有云。
 func (c *VpcClient) CreateVpc(request *model.CreateVpcRequest) (*model.CreateVpcResponse, error) {
 	requestDef := GenReqDefForCreateVpc()

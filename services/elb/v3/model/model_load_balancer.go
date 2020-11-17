@@ -64,8 +64,6 @@ type LoadBalancer struct {
 	AvailabilityZoneList []string `json:"availability_zone_list"`
 	// 功能描述：企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-	// 功能描述：预留资源账单信息，默认为空表示按需计费， 非空为包周期。 约束：admin权限才能更新此字段。
-	BillingInfo string `json:"billing_info"`
 	// 功能描述：四层Flavor。
 	L4FlavorId string `json:"l4_flavor_id"`
 	// 功能描述：预留L4 弹性flavor。

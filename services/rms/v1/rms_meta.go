@@ -286,6 +286,11 @@ func GenReqDefForShowBuiltInPolicyDefinition() *def.HttpRequestDef {
 		WithJsonTag("policy_definition_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
 	// response
 
 	requestDef := reqDefBuilder.Build()
@@ -435,10 +440,6 @@ func GenReqDefForListResources() *def.HttpRequestDef {
 		WithJsonTag("ep_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Tag").
-		WithJsonTag("tag").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
@@ -453,26 +454,25 @@ func GenReqDefForListResources() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListTags() *def.HttpRequestDef {
+func GenReqDefForShowResourceById() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/resource-manager/domains/{domain_id}/tags").
-		WithResponse(new(model.ListTagsResponse))
+		WithPath("/v1/resource-manager/domains/{domain_id}/provider/{provider}/type/{type}/resources/{resource_id}").
+		WithResponse(new(model.ShowResourceByIdResponse))
 
 	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TagKey").
-		WithJsonTag("tag_key").
-		WithLocationType(def.Query))
+		WithName("Provider").
+		WithJsonTag("provider").
+		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Marker").
-		WithJsonTag("marker").
-		WithLocationType(def.Query))
+		WithName("Type").
+		WithJsonTag("type").
+		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
+		WithName("ResourceId").
+		WithJsonTag("resource_id").
+		WithLocationType(def.Path))
 
 	// response
 

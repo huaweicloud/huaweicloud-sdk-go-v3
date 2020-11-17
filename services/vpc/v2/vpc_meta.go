@@ -704,6 +704,411 @@ func GenReqDefForShowPrivateip() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForNeutronAddFirewallRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2.0/fwaas/firewall_policies/{firewall_policy_id}/insert_rule").
+		WithResponse(new(model.NeutronAddFirewallRuleResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	// request
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FirewallPolicyId").
+		WithJsonTag("firewall_policy_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronCreateFirewallGroup() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2.0/fwaas/firewall_groups").
+		WithResponse(new(model.NeutronCreateFirewallGroupResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	// request
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronCreateFirewallPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2.0/fwaas/firewall_policies").
+		WithResponse(new(model.NeutronCreateFirewallPolicyResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	// request
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronCreateFirewallRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2.0/fwaas/firewall_rules").
+		WithResponse(new(model.NeutronCreateFirewallRuleResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	// request
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronDeleteFirewallGroup() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2.0/fwaas/firewall_groups/{firewall_group_id}").
+		WithResponse(new(model.NeutronDeleteFirewallGroupResponse))
+
+	// request
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FirewallGroupId").
+		WithJsonTag("firewall_group_id").
+		WithLocationType(def.Path))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronDeleteFirewallPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2.0/fwaas/firewall_policies/{firewall_policy_id}").
+		WithResponse(new(model.NeutronDeleteFirewallPolicyResponse))
+
+	// request
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FirewallPolicyId").
+		WithJsonTag("firewall_policy_id").
+		WithLocationType(def.Path))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronDeleteFirewallRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2.0/fwaas/firewall_rules/{firewall_rule_id}").
+		WithResponse(new(model.NeutronDeleteFirewallRuleResponse))
+
+	// request
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FirewallRuleId").
+		WithJsonTag("firewall_rule_id").
+		WithLocationType(def.Path))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronListFirewallGroups() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2.0/fwaas/firewall_groups").
+		WithResponse(new(model.NeutronListFirewallGroupsResponse))
+
+	// request
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Name").
+		WithJsonTag("name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Description").
+		WithJsonTag("description").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IngressFirewallPolicyId").
+		WithJsonTag("ingress_firewall_policy_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EgressFirewallPolicyId").
+		WithJsonTag("egress_firewall_policy_id").
+		WithLocationType(def.Query))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronListFirewallPolicies() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2.0/fwaas/firewall_policies").
+		WithResponse(new(model.NeutronListFirewallPoliciesResponse))
+
+	// request
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Name").
+		WithJsonTag("name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Description").
+		WithJsonTag("description").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TenantId").
+		WithJsonTag("tenant_id").
+		WithLocationType(def.Query))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronListFirewallRules() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2.0/fwaas/firewall_rules").
+		WithResponse(new(model.NeutronListFirewallRulesResponse))
+
+	// request
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Name").
+		WithJsonTag("name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Description").
+		WithJsonTag("description").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Action").
+		WithJsonTag("action").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TenantId").
+		WithJsonTag("tenant_id").
+		WithLocationType(def.Query))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronRemoveFirewallRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2.0/fwaas/firewall_policies/{firewall_policy_id}/remove_rule").
+		WithResponse(new(model.NeutronRemoveFirewallRuleResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	// request
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FirewallPolicyId").
+		WithJsonTag("firewall_policy_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronShowFirewallGroup() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2.0/fwaas/firewall_groups/{firewall_group_id}").
+		WithResponse(new(model.NeutronShowFirewallGroupResponse))
+
+	// request
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FirewallGroupId").
+		WithJsonTag("firewall_group_id").
+		WithLocationType(def.Path))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronShowFirewallPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2.0/fwaas/firewall_policies/{firewall_policy_id}").
+		WithResponse(new(model.NeutronShowFirewallPolicyResponse))
+
+	// request
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FirewallPolicyId").
+		WithJsonTag("firewall_policy_id").
+		WithLocationType(def.Path))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronShowFirewallRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2.0/fwaas/firewall_rules/{firewall_rule_id}").
+		WithResponse(new(model.NeutronShowFirewallRuleResponse))
+
+	// request
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FirewallRuleId").
+		WithJsonTag("firewall_rule_id").
+		WithLocationType(def.Path))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronUpdateFirewallGroup() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2.0/fwaas/firewall_groups/{firewall_group_id}").
+		WithResponse(new(model.NeutronUpdateFirewallGroupResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	// request
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FirewallGroupId").
+		WithJsonTag("firewall_group_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronUpdateFirewallPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2.0/fwaas/firewall_policies/{firewall_policy_id}").
+		WithResponse(new(model.NeutronUpdateFirewallPolicyResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	// request
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FirewallPolicyId").
+		WithJsonTag("firewall_policy_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNeutronUpdateFirewallRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2.0/fwaas/firewall_rules/{firewall_rule_id}").
+		WithResponse(new(model.NeutronUpdateFirewallRuleResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	// request
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FirewallRuleId").
+		WithJsonTag("firewall_rule_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateVpc() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

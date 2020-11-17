@@ -1,3 +1,46 @@
+## 0.0.22-beta 2020-11-17
+## HuaweiCloud SDK AS
+ - ### Features
+    - None
+ - ### Bug Fix
+    - [Issue 8](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/8) Fix the problem that creating scaling policy failed.
+ - ### Change
+    - None
+
+## HuaweiCloud SDK DMS
+ - ### Features
+    - Support Distributed Message Services, provide Kafka premium instances and RabbitMQ premium instances with dedicated resources.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+ 
+## HuaweiCloud SDK ECS
+ - ### Features
+    - None
+ - ### Bug Fix
+    - None
+ - ### Change
+    - Property adjustment:  increase property `dry_run` in interfaces `CreatePostPaidServers` and `CreateServers` which means whether parameters will be checked before sending real requests. 
+
+
+## HuaweiCloud SDK NAT
+ - ### Features
+    - Support NAT Gateway service.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None 
+
+## HuaweiCloud SDK VPC
+ - ### Features
+    - Support more interfaces: interfaces related to Network ACLs. 
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None 
+
+
 ## 0.0.21-beta 2020-11-11
 ## HuaweiCloud SDK Core
  - ### Features

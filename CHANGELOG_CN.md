@@ -1,3 +1,45 @@
+## 0.0.22-beta 2020-11-17
+## HuaweiCloud SDK AS
+ - ### 新增特性
+    - 无
+ - ### 解决问题
+    - [Issue 8](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/8) Fix the problem that creating scaling policy failed.
+ - ### 特性变更
+    - 无
+
+## HuaweiCloud SDK DMS
+ - ### 新增特性
+    - 支持分布式消息服务，提供Kafka专享版和RabbitMQ专享版
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 无
+
+## HuaweiCloud SDK ECS
+ - ### 新增特性
+    - 无
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 创建虚拟机接口（按需和包周期）增加 `dry_run` 属性，表示是否预检此次请求
+
+## HuaweiCloud SDK NAT
+ - ### 新增特性
+    - 支持NAT网关服务
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 无
+
+## HuaweiCloud SDK VPC
+ - ### 新增特性
+    - 支持网络ACL相关接口
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 无
+
+
 ## 0.0.21-beta 2020-11-11
 ## HuaweiCloud SDK Core
  - ### 新增特性

@@ -11,6 +11,7 @@ import (
 	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"strings"
 )
 
@@ -25,9 +26,9 @@ type VpcPeering struct {
 	RequestVpcInfo *VpcInfo         `json:"request_vpc_info"`
 	AcceptVpcInfo  *VpcInfo         `json:"accept_vpc_info"`
 	// 功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
-	CreatedAt string `json:"created_at"`
+	CreatedAt *sdktime.SdkTime `json:"created_at"`
 	// 功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
-	UpdatedAt string `json:"updated_at"`
+	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
 	// 对等连接描述
 	Description string `json:"description"`
 }
