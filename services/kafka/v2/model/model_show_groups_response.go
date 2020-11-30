@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowGroupsResponse struct {
-	Group *ShowGroupsRespGroup `json:"group,omitempty"`
+	Group          *ShowGroupsRespGroup `json:"group,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o ShowGroupsResponse) String() string {

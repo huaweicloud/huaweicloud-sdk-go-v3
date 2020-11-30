@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteSinkTaskResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteSinkTaskResponse) String() string {

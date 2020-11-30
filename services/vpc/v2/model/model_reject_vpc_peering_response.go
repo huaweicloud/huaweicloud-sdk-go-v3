@@ -30,7 +30,8 @@ type RejectVpcPeeringResponse struct {
 	// 功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 	// 对等连接描述
-	Description *string `json:"description,omitempty"`
+	Description    *string `json:"description,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RejectVpcPeeringResponse) String() string {

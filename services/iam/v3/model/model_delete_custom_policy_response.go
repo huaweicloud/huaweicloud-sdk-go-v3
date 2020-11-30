@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteCustomPolicyResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteCustomPolicyResponse) String() string {

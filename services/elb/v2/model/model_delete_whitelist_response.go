@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteWhitelistResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteWhitelistResponse) String() string {

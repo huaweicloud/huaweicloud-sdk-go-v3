@@ -20,7 +20,8 @@ type ShowPartitionEndMessageResponse struct {
 	// 分区编号。
 	Partition *int32 `json:"partition,omitempty"`
 	// 最新消息位置。
-	MessageOffset *int32 `json:"message_offset,omitempty"`
+	MessageOffset  *int32 `json:"message_offset,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowPartitionEndMessageResponse) String() string {

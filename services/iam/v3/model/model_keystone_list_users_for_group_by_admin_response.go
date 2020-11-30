@@ -17,7 +17,8 @@ import (
 type KeystoneListUsersForGroupByAdminResponse struct {
 	Links *Links `json:"links,omitempty"`
 	// IAM用户信息列表。
-	Users *[]KeystoneUserResult `json:"users,omitempty"`
+	Users          *[]KeystoneUserResult `json:"users,omitempty"`
+	HttpStatusCode int                   `json:"-"`
 }
 
 func (o KeystoneListUsersForGroupByAdminResponse) String() string {

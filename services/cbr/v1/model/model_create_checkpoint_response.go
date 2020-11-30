@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreateCheckpointResponse struct {
-	Checkpoint *CheckpointCreate `json:"checkpoint,omitempty"`
+	Checkpoint     *CheckpointCreate `json:"checkpoint,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o CreateCheckpointResponse) String() string {

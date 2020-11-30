@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type UpdateAgencyResponse struct {
-	Agency *AgencyResult `json:"agency,omitempty"`
+	Agency         *AgencyResult `json:"agency,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o UpdateAgencyResponse) String() string {

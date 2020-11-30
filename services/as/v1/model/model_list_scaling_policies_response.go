@@ -23,6 +23,7 @@ type ListScalingPoliciesResponse struct {
 	Limit *int32 `json:"limit,omitempty"`
 	// 伸缩策略列表
 	ScalingPolicies *[]ScalingPolicyDetail `json:"scaling_policies,omitempty"`
+	HttpStatusCode  int                    `json:"-"`
 }
 
 func (o ListScalingPoliciesResponse) String() string {

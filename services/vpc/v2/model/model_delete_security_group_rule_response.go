@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteSecurityGroupRuleResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteSecurityGroupRuleResponse) String() string {

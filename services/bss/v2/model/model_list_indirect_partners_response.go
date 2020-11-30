@@ -19,6 +19,7 @@ type ListIndirectPartnersResponse struct {
 	Count *int32 `json:"count,omitempty"`
 	// |参数名称：二级渠道邀请记录列表| |参数约束以及描述：二级渠道邀请记录列表|
 	IndirectPartners *[]IndirectPartnerInfo `json:"indirect_partners,omitempty"`
+	HttpStatusCode   int                    `json:"-"`
 }
 
 func (o ListIndirectPartnersResponse) String() string {

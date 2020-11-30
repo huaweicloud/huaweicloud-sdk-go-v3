@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type NovaCreateKeypairResponse struct {
-	Keypair *NovaKeypair `json:"keypair,omitempty"`
+	Keypair        *NovaKeypair `json:"keypair,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o NovaCreateKeypairResponse) String() string {

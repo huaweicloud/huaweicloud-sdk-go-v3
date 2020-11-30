@@ -6,11 +6,11 @@ import (
 )
 
 type KafkaClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewKafkaClient(hcClient *http_client.HcHttpClient) *KafkaClient {
-	return &KafkaClient{hcClient: hcClient}
+	return &KafkaClient{HcClient: hcClient}
 }
 
 func KafkaClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func KafkaClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *KafkaClient) BatchCreateOrDeleteInstanceTag(request *model.BatchCreateOrDeleteInstanceTagRequest) (*model.BatchCreateOrDeleteInstanceTagResponse, error) {
 	requestDef := GenReqDefForBatchCreateOrDeleteInstanceTag()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchCreateOrDeleteInstanceTagResponse), nil
@@ -33,7 +33,7 @@ func (c *KafkaClient) BatchCreateOrDeleteInstanceTag(request *model.BatchCreateO
 func (c *KafkaClient) BatchDeleteInstanceTopic(request *model.BatchDeleteInstanceTopicRequest) (*model.BatchDeleteInstanceTopicResponse, error) {
 	requestDef := GenReqDefForBatchDeleteInstanceTopic()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchDeleteInstanceTopicResponse), nil
@@ -44,7 +44,7 @@ func (c *KafkaClient) BatchDeleteInstanceTopic(request *model.BatchDeleteInstanc
 func (c *KafkaClient) BatchRestartOrDeleteInstances(request *model.BatchRestartOrDeleteInstancesRequest) (*model.BatchRestartOrDeleteInstancesResponse, error) {
 	requestDef := GenReqDefForBatchRestartOrDeleteInstances()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchRestartOrDeleteInstancesResponse), nil
@@ -55,7 +55,7 @@ func (c *KafkaClient) BatchRestartOrDeleteInstances(request *model.BatchRestartO
 func (c *KafkaClient) CreateConnector(request *model.CreateConnectorRequest) (*model.CreateConnectorResponse, error) {
 	requestDef := GenReqDefForCreateConnector()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateConnectorResponse), nil
@@ -66,7 +66,7 @@ func (c *KafkaClient) CreateConnector(request *model.CreateConnectorRequest) (*m
 func (c *KafkaClient) CreateInstanceTopic(request *model.CreateInstanceTopicRequest) (*model.CreateInstanceTopicResponse, error) {
 	requestDef := GenReqDefForCreateInstanceTopic()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateInstanceTopicResponse), nil
@@ -77,7 +77,7 @@ func (c *KafkaClient) CreateInstanceTopic(request *model.CreateInstanceTopicRequ
 func (c *KafkaClient) CreatePartition(request *model.CreatePartitionRequest) (*model.CreatePartitionResponse, error) {
 	requestDef := GenReqDefForCreatePartition()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePartitionResponse), nil
@@ -88,7 +88,7 @@ func (c *KafkaClient) CreatePartition(request *model.CreatePartitionRequest) (*m
 func (c *KafkaClient) CreatePostPaidInstance(request *model.CreatePostPaidInstanceRequest) (*model.CreatePostPaidInstanceResponse, error) {
 	requestDef := GenReqDefForCreatePostPaidInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePostPaidInstanceResponse), nil
@@ -99,7 +99,7 @@ func (c *KafkaClient) CreatePostPaidInstance(request *model.CreatePostPaidInstan
 func (c *KafkaClient) CreateSinkTask(request *model.CreateSinkTaskRequest) (*model.CreateSinkTaskResponse, error) {
 	requestDef := GenReqDefForCreateSinkTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateSinkTaskResponse), nil
@@ -110,7 +110,7 @@ func (c *KafkaClient) CreateSinkTask(request *model.CreateSinkTaskRequest) (*mod
 func (c *KafkaClient) DeleteBackgroundTask(request *model.DeleteBackgroundTaskRequest) (*model.DeleteBackgroundTaskResponse, error) {
 	requestDef := GenReqDefForDeleteBackgroundTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteBackgroundTaskResponse), nil
@@ -121,7 +121,7 @@ func (c *KafkaClient) DeleteBackgroundTask(request *model.DeleteBackgroundTaskRe
 func (c *KafkaClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteInstanceResponse), nil
@@ -132,7 +132,7 @@ func (c *KafkaClient) DeleteInstance(request *model.DeleteInstanceRequest) (*mod
 func (c *KafkaClient) DeleteSinkTask(request *model.DeleteSinkTaskRequest) (*model.DeleteSinkTaskResponse, error) {
 	requestDef := GenReqDefForDeleteSinkTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteSinkTaskResponse), nil
@@ -143,7 +143,7 @@ func (c *KafkaClient) DeleteSinkTask(request *model.DeleteSinkTaskRequest) (*mod
 func (c *KafkaClient) ListAvailableZones(request *model.ListAvailableZonesRequest) (*model.ListAvailableZonesResponse, error) {
 	requestDef := GenReqDefForListAvailableZones()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListAvailableZonesResponse), nil
@@ -154,7 +154,7 @@ func (c *KafkaClient) ListAvailableZones(request *model.ListAvailableZonesReques
 func (c *KafkaClient) ListBackgroundTasks(request *model.ListBackgroundTasksRequest) (*model.ListBackgroundTasksResponse, error) {
 	requestDef := GenReqDefForListBackgroundTasks()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListBackgroundTasksResponse), nil
@@ -165,7 +165,7 @@ func (c *KafkaClient) ListBackgroundTasks(request *model.ListBackgroundTasksRequ
 func (c *KafkaClient) ListInstanceTopics(request *model.ListInstanceTopicsRequest) (*model.ListInstanceTopicsResponse, error) {
 	requestDef := GenReqDefForListInstanceTopics()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListInstanceTopicsResponse), nil
@@ -176,7 +176,7 @@ func (c *KafkaClient) ListInstanceTopics(request *model.ListInstanceTopicsReques
 func (c *KafkaClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
 	requestDef := GenReqDefForListInstances()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListInstancesResponse), nil
@@ -187,7 +187,7 @@ func (c *KafkaClient) ListInstances(request *model.ListInstancesRequest) (*model
 func (c *KafkaClient) ListProducts(request *model.ListProductsRequest) (*model.ListProductsResponse, error) {
 	requestDef := GenReqDefForListProducts()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListProductsResponse), nil
@@ -198,7 +198,7 @@ func (c *KafkaClient) ListProducts(request *model.ListProductsRequest) (*model.L
 func (c *KafkaClient) ListSinkTasks(request *model.ListSinkTasksRequest) (*model.ListSinkTasksResponse, error) {
 	requestDef := GenReqDefForListSinkTasks()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSinkTasksResponse), nil
@@ -209,7 +209,7 @@ func (c *KafkaClient) ListSinkTasks(request *model.ListSinkTasksRequest) (*model
 func (c *KafkaClient) ResetManagerPassword(request *model.ResetManagerPasswordRequest) (*model.ResetManagerPasswordResponse, error) {
 	requestDef := GenReqDefForResetManagerPassword()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ResetManagerPasswordResponse), nil
@@ -220,7 +220,7 @@ func (c *KafkaClient) ResetManagerPassword(request *model.ResetManagerPasswordRe
 func (c *KafkaClient) ResetMessageOffset(request *model.ResetMessageOffsetRequest) (*model.ResetMessageOffsetResponse, error) {
 	requestDef := GenReqDefForResetMessageOffset()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ResetMessageOffsetResponse), nil
@@ -231,7 +231,7 @@ func (c *KafkaClient) ResetMessageOffset(request *model.ResetMessageOffsetReques
 func (c *KafkaClient) ResetPassword(request *model.ResetPasswordRequest) (*model.ResetPasswordResponse, error) {
 	requestDef := GenReqDefForResetPassword()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ResetPasswordResponse), nil
@@ -242,7 +242,7 @@ func (c *KafkaClient) ResetPassword(request *model.ResetPasswordRequest) (*model
 func (c *KafkaClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
 	requestDef := GenReqDefForResizeInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ResizeInstanceResponse), nil
@@ -253,7 +253,7 @@ func (c *KafkaClient) ResizeInstance(request *model.ResizeInstanceRequest) (*mod
 func (c *KafkaClient) RestartManager(request *model.RestartManagerRequest) (*model.RestartManagerResponse, error) {
 	requestDef := GenReqDefForRestartManager()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RestartManagerResponse), nil
@@ -264,7 +264,7 @@ func (c *KafkaClient) RestartManager(request *model.RestartManagerRequest) (*mod
 func (c *KafkaClient) ShowBackgroundTask(request *model.ShowBackgroundTaskRequest) (*model.ShowBackgroundTaskResponse, error) {
 	requestDef := GenReqDefForShowBackgroundTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowBackgroundTaskResponse), nil
@@ -275,7 +275,7 @@ func (c *KafkaClient) ShowBackgroundTask(request *model.ShowBackgroundTaskReques
 func (c *KafkaClient) ShowCesHierarchy(request *model.ShowCesHierarchyRequest) (*model.ShowCesHierarchyResponse, error) {
 	requestDef := GenReqDefForShowCesHierarchy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowCesHierarchyResponse), nil
@@ -286,7 +286,7 @@ func (c *KafkaClient) ShowCesHierarchy(request *model.ShowCesHierarchyRequest) (
 func (c *KafkaClient) ShowCluster(request *model.ShowClusterRequest) (*model.ShowClusterResponse, error) {
 	requestDef := GenReqDefForShowCluster()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowClusterResponse), nil
@@ -297,7 +297,7 @@ func (c *KafkaClient) ShowCluster(request *model.ShowClusterRequest) (*model.Sho
 func (c *KafkaClient) ShowCoordinators(request *model.ShowCoordinatorsRequest) (*model.ShowCoordinatorsResponse, error) {
 	requestDef := GenReqDefForShowCoordinators()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowCoordinatorsResponse), nil
@@ -308,7 +308,7 @@ func (c *KafkaClient) ShowCoordinators(request *model.ShowCoordinatorsRequest) (
 func (c *KafkaClient) ShowGroups(request *model.ShowGroupsRequest) (*model.ShowGroupsResponse, error) {
 	requestDef := GenReqDefForShowGroups()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowGroupsResponse), nil
@@ -319,7 +319,7 @@ func (c *KafkaClient) ShowGroups(request *model.ShowGroupsRequest) (*model.ShowG
 func (c *KafkaClient) ShowInstance(request *model.ShowInstanceRequest) (*model.ShowInstanceResponse, error) {
 	requestDef := GenReqDefForShowInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowInstanceResponse), nil
@@ -330,7 +330,7 @@ func (c *KafkaClient) ShowInstance(request *model.ShowInstanceRequest) (*model.S
 func (c *KafkaClient) ShowInstanceExtendProductInfo(request *model.ShowInstanceExtendProductInfoRequest) (*model.ShowInstanceExtendProductInfoResponse, error) {
 	requestDef := GenReqDefForShowInstanceExtendProductInfo()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowInstanceExtendProductInfoResponse), nil
@@ -341,7 +341,7 @@ func (c *KafkaClient) ShowInstanceExtendProductInfo(request *model.ShowInstanceE
 func (c *KafkaClient) ShowInstanceTags(request *model.ShowInstanceTagsRequest) (*model.ShowInstanceTagsResponse, error) {
 	requestDef := GenReqDefForShowInstanceTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowInstanceTagsResponse), nil
@@ -352,7 +352,7 @@ func (c *KafkaClient) ShowInstanceTags(request *model.ShowInstanceTagsRequest) (
 func (c *KafkaClient) ShowInstanceTopicDetail(request *model.ShowInstanceTopicDetailRequest) (*model.ShowInstanceTopicDetailResponse, error) {
 	requestDef := GenReqDefForShowInstanceTopicDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowInstanceTopicDetailResponse), nil
@@ -363,7 +363,7 @@ func (c *KafkaClient) ShowInstanceTopicDetail(request *model.ShowInstanceTopicDe
 func (c *KafkaClient) ShowMaintainWindows(request *model.ShowMaintainWindowsRequest) (*model.ShowMaintainWindowsResponse, error) {
 	requestDef := GenReqDefForShowMaintainWindows()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowMaintainWindowsResponse), nil
@@ -374,7 +374,7 @@ func (c *KafkaClient) ShowMaintainWindows(request *model.ShowMaintainWindowsRequ
 func (c *KafkaClient) ShowMessages(request *model.ShowMessagesRequest) (*model.ShowMessagesResponse, error) {
 	requestDef := GenReqDefForShowMessages()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowMessagesResponse), nil
@@ -385,7 +385,7 @@ func (c *KafkaClient) ShowMessages(request *model.ShowMessagesRequest) (*model.S
 func (c *KafkaClient) ShowPartitionBeginningMessage(request *model.ShowPartitionBeginningMessageRequest) (*model.ShowPartitionBeginningMessageResponse, error) {
 	requestDef := GenReqDefForShowPartitionBeginningMessage()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowPartitionBeginningMessageResponse), nil
@@ -396,7 +396,7 @@ func (c *KafkaClient) ShowPartitionBeginningMessage(request *model.ShowPartition
 func (c *KafkaClient) ShowPartitionEndMessage(request *model.ShowPartitionEndMessageRequest) (*model.ShowPartitionEndMessageResponse, error) {
 	requestDef := GenReqDefForShowPartitionEndMessage()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowPartitionEndMessageResponse), nil
@@ -407,7 +407,7 @@ func (c *KafkaClient) ShowPartitionEndMessage(request *model.ShowPartitionEndMes
 func (c *KafkaClient) ShowPartitionMessage(request *model.ShowPartitionMessageRequest) (*model.ShowPartitionMessageResponse, error) {
 	requestDef := GenReqDefForShowPartitionMessage()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowPartitionMessageResponse), nil
@@ -418,7 +418,7 @@ func (c *KafkaClient) ShowPartitionMessage(request *model.ShowPartitionMessageRe
 func (c *KafkaClient) ShowProjectTags(request *model.ShowProjectTagsRequest) (*model.ShowProjectTagsResponse, error) {
 	requestDef := GenReqDefForShowProjectTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowProjectTagsResponse), nil
@@ -429,7 +429,7 @@ func (c *KafkaClient) ShowProjectTags(request *model.ShowProjectTagsRequest) (*m
 func (c *KafkaClient) ShowSinkTaskDetail(request *model.ShowSinkTaskDetailRequest) (*model.ShowSinkTaskDetailResponse, error) {
 	requestDef := GenReqDefForShowSinkTaskDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowSinkTaskDetailResponse), nil
@@ -440,7 +440,7 @@ func (c *KafkaClient) ShowSinkTaskDetail(request *model.ShowSinkTaskDetailReques
 func (c *KafkaClient) UpdateInstance(request *model.UpdateInstanceRequest) (*model.UpdateInstanceResponse, error) {
 	requestDef := GenReqDefForUpdateInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateInstanceResponse), nil
@@ -451,7 +451,7 @@ func (c *KafkaClient) UpdateInstance(request *model.UpdateInstanceRequest) (*mod
 func (c *KafkaClient) UpdateInstanceAutoCreateTopic(request *model.UpdateInstanceAutoCreateTopicRequest) (*model.UpdateInstanceAutoCreateTopicResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceAutoCreateTopic()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateInstanceAutoCreateTopicResponse), nil
@@ -462,7 +462,7 @@ func (c *KafkaClient) UpdateInstanceAutoCreateTopic(request *model.UpdateInstanc
 func (c *KafkaClient) UpdateInstanceCrossVpcIp(request *model.UpdateInstanceCrossVpcIpRequest) (*model.UpdateInstanceCrossVpcIpResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceCrossVpcIp()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateInstanceCrossVpcIpResponse), nil
@@ -473,7 +473,7 @@ func (c *KafkaClient) UpdateInstanceCrossVpcIp(request *model.UpdateInstanceCros
 func (c *KafkaClient) UpdateInstanceTopic(request *model.UpdateInstanceTopicRequest) (*model.UpdateInstanceTopicResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceTopic()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateInstanceTopicResponse), nil
@@ -484,7 +484,7 @@ func (c *KafkaClient) UpdateInstanceTopic(request *model.UpdateInstanceTopicRequ
 func (c *KafkaClient) UpdateSinkTaskQuota(request *model.UpdateSinkTaskQuotaRequest) (*model.UpdateSinkTaskQuotaResponse, error) {
 	requestDef := GenReqDefForUpdateSinkTaskQuota()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateSinkTaskQuotaResponse), nil
@@ -495,7 +495,7 @@ func (c *KafkaClient) UpdateSinkTaskQuota(request *model.UpdateSinkTaskQuotaRequ
 func (c *KafkaClient) UpdateTopicReplica(request *model.UpdateTopicReplicaRequest) (*model.UpdateTopicReplicaResponse, error) {
 	requestDef := GenReqDefForUpdateTopicReplica()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateTopicReplicaResponse), nil

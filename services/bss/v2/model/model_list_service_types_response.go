@@ -16,7 +16,8 @@ import (
 // Response Object
 type ListServiceTypesResponse struct {
 	// |参数名称：返回数据| |参数约束以及描述：返回数据|
-	ServiceTypes *[]ServiceType `json:"service_types,omitempty"`
+	ServiceTypes   *[]ServiceType `json:"service_types,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ListServiceTypesResponse) String() string {

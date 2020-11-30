@@ -25,7 +25,8 @@ type ListKeysResponse struct {
 	// 是否还有下一页： - “true”表示还有数据。 - “false”表示已经是最后一页。
 	Truncated *ListKeysResponseTruncated `json:"truncated,omitempty"`
 	// 密钥总条数。
-	Total *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListKeysResponse) String() string {

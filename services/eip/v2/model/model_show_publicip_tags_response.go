@@ -16,7 +16,8 @@ import (
 // Response Object
 type ShowPublicipTagsResponse struct {
 	// 标签列表
-	Tags *[]ResourceTagResp `json:"tags,omitempty"`
+	Tags           *[]ResourceTagResp `json:"tags,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ShowPublicipTagsResponse) String() string {

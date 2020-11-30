@@ -18,6 +18,7 @@ type ListAlarmTemplatesResponse struct {
 	// 自定义告警模板详细信息。
 	AlarmTemplates *[]AlarmTemplate `json:"alarm_templates,omitempty"`
 	MetaData       *MetaData        `json:"meta_data,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ListAlarmTemplatesResponse) String() string {

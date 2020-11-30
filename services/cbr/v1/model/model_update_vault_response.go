@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type UpdateVaultResponse struct {
-	Vault *Vault `json:"vault,omitempty"`
+	Vault          *Vault `json:"vault,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o UpdateVaultResponse) String() string {

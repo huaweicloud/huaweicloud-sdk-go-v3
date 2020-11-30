@@ -6,11 +6,11 @@ import (
 )
 
 type RabbitMQClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewRabbitMQClient(hcClient *http_client.HcHttpClient) *RabbitMQClient {
-	return &RabbitMQClient{hcClient: hcClient}
+	return &RabbitMQClient{HcClient: hcClient}
 }
 
 func RabbitMQClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func RabbitMQClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *RabbitMQClient) BatchCreateOrDeleteInstanceTag(request *model.BatchCreateOrDeleteInstanceTagRequest) (*model.BatchCreateOrDeleteInstanceTagResponse, error) {
 	requestDef := GenReqDefForBatchCreateOrDeleteInstanceTag()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchCreateOrDeleteInstanceTagResponse), nil
@@ -33,7 +33,7 @@ func (c *RabbitMQClient) BatchCreateOrDeleteInstanceTag(request *model.BatchCrea
 func (c *RabbitMQClient) BatchRestartOrDeleteInstances(request *model.BatchRestartOrDeleteInstancesRequest) (*model.BatchRestartOrDeleteInstancesResponse, error) {
 	requestDef := GenReqDefForBatchRestartOrDeleteInstances()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchRestartOrDeleteInstancesResponse), nil
@@ -44,7 +44,7 @@ func (c *RabbitMQClient) BatchRestartOrDeleteInstances(request *model.BatchResta
 func (c *RabbitMQClient) CreatePostPaidInstance(request *model.CreatePostPaidInstanceRequest) (*model.CreatePostPaidInstanceResponse, error) {
 	requestDef := GenReqDefForCreatePostPaidInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePostPaidInstanceResponse), nil
@@ -55,7 +55,7 @@ func (c *RabbitMQClient) CreatePostPaidInstance(request *model.CreatePostPaidIns
 func (c *RabbitMQClient) DeleteBackgroundTask(request *model.DeleteBackgroundTaskRequest) (*model.DeleteBackgroundTaskResponse, error) {
 	requestDef := GenReqDefForDeleteBackgroundTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteBackgroundTaskResponse), nil
@@ -66,7 +66,7 @@ func (c *RabbitMQClient) DeleteBackgroundTask(request *model.DeleteBackgroundTas
 func (c *RabbitMQClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteInstanceResponse), nil
@@ -77,7 +77,7 @@ func (c *RabbitMQClient) DeleteInstance(request *model.DeleteInstanceRequest) (*
 func (c *RabbitMQClient) ListAvailableZones(request *model.ListAvailableZonesRequest) (*model.ListAvailableZonesResponse, error) {
 	requestDef := GenReqDefForListAvailableZones()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListAvailableZonesResponse), nil
@@ -88,7 +88,7 @@ func (c *RabbitMQClient) ListAvailableZones(request *model.ListAvailableZonesReq
 func (c *RabbitMQClient) ListBackgroundTasks(request *model.ListBackgroundTasksRequest) (*model.ListBackgroundTasksResponse, error) {
 	requestDef := GenReqDefForListBackgroundTasks()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListBackgroundTasksResponse), nil
@@ -99,7 +99,7 @@ func (c *RabbitMQClient) ListBackgroundTasks(request *model.ListBackgroundTasksR
 func (c *RabbitMQClient) ListInstancesDetails(request *model.ListInstancesDetailsRequest) (*model.ListInstancesDetailsResponse, error) {
 	requestDef := GenReqDefForListInstancesDetails()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListInstancesDetailsResponse), nil
@@ -110,7 +110,7 @@ func (c *RabbitMQClient) ListInstancesDetails(request *model.ListInstancesDetail
 func (c *RabbitMQClient) ListPlugins(request *model.ListPluginsRequest) (*model.ListPluginsResponse, error) {
 	requestDef := GenReqDefForListPlugins()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPluginsResponse), nil
@@ -121,7 +121,7 @@ func (c *RabbitMQClient) ListPlugins(request *model.ListPluginsRequest) (*model.
 func (c *RabbitMQClient) ListProducts(request *model.ListProductsRequest) (*model.ListProductsResponse, error) {
 	requestDef := GenReqDefForListProducts()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListProductsResponse), nil
@@ -132,7 +132,7 @@ func (c *RabbitMQClient) ListProducts(request *model.ListProductsRequest) (*mode
 func (c *RabbitMQClient) ResetPassword(request *model.ResetPasswordRequest) (*model.ResetPasswordResponse, error) {
 	requestDef := GenReqDefForResetPassword()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ResetPasswordResponse), nil
@@ -143,7 +143,7 @@ func (c *RabbitMQClient) ResetPassword(request *model.ResetPasswordRequest) (*mo
 func (c *RabbitMQClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
 	requestDef := GenReqDefForResizeInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ResizeInstanceResponse), nil
@@ -154,7 +154,7 @@ func (c *RabbitMQClient) ResizeInstance(request *model.ResizeInstanceRequest) (*
 func (c *RabbitMQClient) ShowBackgroundTask(request *model.ShowBackgroundTaskRequest) (*model.ShowBackgroundTaskResponse, error) {
 	requestDef := GenReqDefForShowBackgroundTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowBackgroundTaskResponse), nil
@@ -165,7 +165,7 @@ func (c *RabbitMQClient) ShowBackgroundTask(request *model.ShowBackgroundTaskReq
 func (c *RabbitMQClient) ShowInstance(request *model.ShowInstanceRequest) (*model.ShowInstanceResponse, error) {
 	requestDef := GenReqDefForShowInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowInstanceResponse), nil
@@ -176,7 +176,7 @@ func (c *RabbitMQClient) ShowInstance(request *model.ShowInstanceRequest) (*mode
 func (c *RabbitMQClient) ShowInstanceExtendProductInfo(request *model.ShowInstanceExtendProductInfoRequest) (*model.ShowInstanceExtendProductInfoResponse, error) {
 	requestDef := GenReqDefForShowInstanceExtendProductInfo()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowInstanceExtendProductInfoResponse), nil
@@ -187,7 +187,7 @@ func (c *RabbitMQClient) ShowInstanceExtendProductInfo(request *model.ShowInstan
 func (c *RabbitMQClient) ShowInstanceTags(request *model.ShowInstanceTagsRequest) (*model.ShowInstanceTagsResponse, error) {
 	requestDef := GenReqDefForShowInstanceTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowInstanceTagsResponse), nil
@@ -198,7 +198,7 @@ func (c *RabbitMQClient) ShowInstanceTags(request *model.ShowInstanceTagsRequest
 func (c *RabbitMQClient) ShowMaintainWindows(request *model.ShowMaintainWindowsRequest) (*model.ShowMaintainWindowsResponse, error) {
 	requestDef := GenReqDefForShowMaintainWindows()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowMaintainWindowsResponse), nil
@@ -209,7 +209,7 @@ func (c *RabbitMQClient) ShowMaintainWindows(request *model.ShowMaintainWindowsR
 func (c *RabbitMQClient) ShowProjectTags(request *model.ShowProjectTagsRequest) (*model.ShowProjectTagsResponse, error) {
 	requestDef := GenReqDefForShowProjectTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowProjectTagsResponse), nil
@@ -220,7 +220,7 @@ func (c *RabbitMQClient) ShowProjectTags(request *model.ShowProjectTagsRequest) 
 func (c *RabbitMQClient) UpdateInstance(request *model.UpdateInstanceRequest) (*model.UpdateInstanceResponse, error) {
 	requestDef := GenReqDefForUpdateInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateInstanceResponse), nil
@@ -231,7 +231,7 @@ func (c *RabbitMQClient) UpdateInstance(request *model.UpdateInstanceRequest) (*
 func (c *RabbitMQClient) UpdatePlugins(request *model.UpdatePluginsRequest) (*model.UpdatePluginsResponse, error) {
 	requestDef := GenReqDefForUpdatePlugins()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePluginsResponse), nil

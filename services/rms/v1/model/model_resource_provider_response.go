@@ -23,8 +23,6 @@ type ResourceProviderResponse struct {
 	CategoryDisplayName *string `json:"category_display_name,omitempty"`
 	// 资源类型列表
 	ResourceTypes *[]ResourceTypeResponse `json:"resource_types,omitempty"`
-	// 排序序号
-	Order *int64 `json:"order,omitempty"`
 }
 
 func (o ResourceProviderResponse) String() string {

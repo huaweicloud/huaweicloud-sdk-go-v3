@@ -16,7 +16,8 @@ import (
 // Response Object
 type ListHooksResponse struct {
 	// hook列表。
-	Hooks *[]Hook `json:"hooks,omitempty"`
+	Hooks          *[]Hook `json:"hooks,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListHooksResponse) String() string {

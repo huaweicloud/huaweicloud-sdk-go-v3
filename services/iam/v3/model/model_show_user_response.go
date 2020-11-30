@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowUserResponse struct {
-	User *ShowUserResult `json:"user,omitempty"`
+	User           *ShowUserResult `json:"user,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o ShowUserResponse) String() string {

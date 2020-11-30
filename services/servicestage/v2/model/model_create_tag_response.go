@@ -16,7 +16,8 @@ import (
 // Response Object
 type CreateTagResponse struct {
 	// tag标签名称。
-	Name *string `json:"name,omitempty"`
+	Name           *string `json:"name,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateTagResponse) String() string {

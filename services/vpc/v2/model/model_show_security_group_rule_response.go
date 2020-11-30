@@ -16,6 +16,7 @@ import (
 // Response Object
 type ShowSecurityGroupRuleResponse struct {
 	SecurityGroupRule *SecurityGroupRule `json:"security_group_rule,omitempty"`
+	HttpStatusCode    int                `json:"-"`
 }
 
 func (o ShowSecurityGroupRuleResponse) String() string {

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteThumbnailsTaskResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteThumbnailsTaskResponse) String() string {

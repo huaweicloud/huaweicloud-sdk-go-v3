@@ -17,6 +17,7 @@ import (
 type CreateLoginTokenResponse struct {
 	Logintoken         *LoginToken `json:"logintoken,omitempty"`
 	XSubjectLoginToken *string     `json:"X-Subject-LoginToken,omitempty"`
+	HttpStatusCode     int         `json:"-"`
 }
 
 func (o CreateLoginTokenResponse) String() string {

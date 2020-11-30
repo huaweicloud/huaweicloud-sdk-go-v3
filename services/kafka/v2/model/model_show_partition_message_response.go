@@ -16,7 +16,8 @@ import (
 // Response Object
 type ShowPartitionMessageResponse struct {
 	// 消息列表。
-	Message *[]ShowPartitionMessageRespMessage `json:"message,omitempty"`
+	Message        *[]ShowPartitionMessageRespMessage `json:"message,omitempty"`
+	HttpStatusCode int                                `json:"-"`
 }
 
 func (o ShowPartitionMessageResponse) String() string {

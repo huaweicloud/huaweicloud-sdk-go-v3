@@ -21,6 +21,7 @@ type ShowInstanceTopicDetailResponse struct {
 	Partitions *[]ShowInstanceTopicDetailRespPartitions `json:"partitions,omitempty"`
 	// 订阅该topic的消费组名称列表。
 	GroupSubscribed *[]string `json:"group_subscribed,omitempty"`
+	HttpStatusCode  int       `json:"-"`
 }
 
 func (o ShowInstanceTopicDetailResponse) String() string {

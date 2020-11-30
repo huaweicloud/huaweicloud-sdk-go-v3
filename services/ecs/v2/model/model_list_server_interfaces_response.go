@@ -17,6 +17,7 @@ import (
 type ListServerInterfacesResponse struct {
 	// 云服务器网卡信息列表
 	InterfaceAttachments *[]InterfaceAttachment `json:"interfaceAttachments,omitempty"`
+	HttpStatusCode       int                    `json:"-"`
 }
 
 func (o ListServerInterfacesResponse) String() string {

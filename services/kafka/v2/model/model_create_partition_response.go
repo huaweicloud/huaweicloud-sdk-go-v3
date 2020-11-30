@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type CreatePartitionResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CreatePartitionResponse) String() string {

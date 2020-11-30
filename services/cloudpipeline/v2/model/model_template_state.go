@@ -26,8 +26,9 @@ type TemplateState struct {
 	// 任务在流水线页面展示名字
 	DisplayName string `json:"display_name"`
 	// 流水线可挂载任务类型
-	DslMethod  string         `json:"dsl_method"`
-	Parameters *ExtendedProps `json:"parameters"`
+	DslMethod string `json:"dsl_method"`
+	// 任务参数,map类型数据
+	Parameters *interface{} `json:"parameters"`
 	// 是否手动执行
 	IsManualExecution bool `json:"is_manual_execution"`
 	// 任务参数是否校验

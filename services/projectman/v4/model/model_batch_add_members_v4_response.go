@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type BatchAddMembersV4Response struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o BatchAddMembersV4Response) String() string {

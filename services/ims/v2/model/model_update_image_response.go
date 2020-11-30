@@ -126,6 +126,7 @@ type UpdateImageResponse struct {
 	AccountCode *string `json:"__account_code,omitempty"`
 	// 镜像是否支持网卡多队列。取值为“true”或者“false”。
 	HwVifMultiqueueEnabled *string `json:"hw_vif_multiqueue_enabled,omitempty"`
+	HttpStatusCode         int     `json:"-"`
 }
 
 func (o UpdateImageResponse) String() string {

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type BatchCreateServerTagsResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o BatchCreateServerTagsResponse) String() string {

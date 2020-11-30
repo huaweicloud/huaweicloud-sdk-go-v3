@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeletePublicipTagResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeletePublicipTagResponse) String() string {

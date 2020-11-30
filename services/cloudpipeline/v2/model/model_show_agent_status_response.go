@@ -18,7 +18,8 @@ type ShowAgentStatusResponse struct {
 	// Agent状态
 	Status *string `json:"status,omitempty"`
 	// AgentID
-	AgentId *string `json:"agent_id,omitempty"`
+	AgentId        *string `json:"agent_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowAgentStatusResponse) String() string {

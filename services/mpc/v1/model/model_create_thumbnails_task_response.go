@@ -27,7 +27,8 @@ type CreateThumbnailsTaskResponse struct {
 	// 指定的截图时间点
 	ThumbnailTime *string `json:"thumbnail_time,omitempty"`
 	// 截图任务描述，当截图出现异常时，此字段为异常的原因
-	Description *string `json:"description,omitempty"`
+	Description    *string `json:"description,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateThumbnailsTaskResponse) String() string {

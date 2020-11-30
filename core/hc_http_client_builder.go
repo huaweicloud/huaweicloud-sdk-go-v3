@@ -29,7 +29,7 @@ import (
 )
 
 type HcHttpClientBuilder struct {
-	credentialsType []string
+	CredentialsType []string
 	credentials     auth.ICredential
 	endpoint        string
 	httpConfig      *config.HttpConfig
@@ -37,13 +37,13 @@ type HcHttpClientBuilder struct {
 
 func NewHcHttpClientBuilder() *HcHttpClientBuilder {
 	hcHttpClientBuilder := &HcHttpClientBuilder{
-		credentialsType: []string{"basic.Credentials"},
+		CredentialsType: []string{"basic.Credentials"},
 	}
 	return hcHttpClientBuilder
 }
 
 func (builder *HcHttpClientBuilder) WithCredentialsType(credentialsType string) *HcHttpClientBuilder {
-	builder.credentialsType = strings.Split(credentialsType, ",")
+	builder.CredentialsType = strings.Split(credentialsType, ",")
 	return builder
 }
 
@@ -68,12 +68,12 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 	}
 
 	if builder.credentials == nil {
-		builder.credentials = auth.LoadCredentialFromEnv(builder.credentialsType[0])
+		builder.credentials = auth.LoadCredentialFromEnv(builder.CredentialsType[0])
 	}
 
 	match := false
 	givenCredentialsType := reflect.TypeOf(builder.credentials).String()
-	for _, credentialsType := range builder.credentialsType {
+	for _, credentialsType := range builder.CredentialsType {
 		if credentialsType == givenCredentialsType {
 			match = true
 			break
@@ -81,7 +81,7 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 	}
 
 	if !match {
-		panic(fmt.Sprintf("Need credential type is %s, actually is %s", builder.credentialsType, reflect.TypeOf(builder.credentials).String()))
+		panic(fmt.Sprintf("Need credential type is %s, actually is %s", builder.CredentialsType, reflect.TypeOf(builder.credentials).String()))
 	}
 
 	defaultHttpClient := impl.NewDefaultHttpClient(builder.httpConfig)

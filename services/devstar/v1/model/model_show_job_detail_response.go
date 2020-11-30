@@ -22,7 +22,8 @@ type ShowJobDetailResponse struct {
 	// 任务的状态
 	JobStatus *interface{} `json:"job_status,omitempty"`
 	// 任务结果信息
-	JobResult *string `json:"job_result,omitempty"`
+	JobResult      *string `json:"job_result,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowJobDetailResponse) String() string {

@@ -41,6 +41,7 @@ type ShowDetailsOfDomainNameCertificateV2Response struct {
 	Issuer *[]string `json:"issuer,omitempty"`
 	// 签名算法
 	SignatureAlgorithm *string `json:"signature_algorithm,omitempty"`
+	HttpStatusCode     int     `json:"-"`
 }
 
 func (o ShowDetailsOfDomainNameCertificateV2Response) String() string {

@@ -20,7 +20,8 @@ type ListApisUnbindedToAppV2Response struct {
 	// 本次返回的列表长度
 	Size *int32 `json:"size,omitempty"`
 	// 本次返回的API列表
-	Apis *[]AppAuthUnBindedApiResp `json:"apis,omitempty"`
+	Apis           *[]AppAuthUnBindedApiResp `json:"apis,omitempty"`
+	HttpStatusCode int                       `json:"-"`
 }
 
 func (o ListApisUnbindedToAppV2Response) String() string {

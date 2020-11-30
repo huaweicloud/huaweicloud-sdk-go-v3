@@ -1533,6 +1533,38 @@ func GenReqDefForListSubcustomerMonthlyBills() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListUsageTypes() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/products/usage-types").
+		WithResponse(new(model.ListUsageTypesResponse))
+
+	// request
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceTypeCode").
+		WithJsonTag("resource_type_code").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForPayOrders() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1900,6 +1932,25 @@ func GenReqDefForUpdateIndirectPartnerAccount() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/accounts/partner-accounts/indirect-partner-adjust").
 		WithResponse(new(model.UpdateIndirectPartnerAccountResponse)).
+		WithContentType("application/json")
+
+	// request
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdatePeriodToOnDemand() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/orders/subscriptions/resources/to-on-demand").
+		WithResponse(new(model.UpdatePeriodToOnDemandResponse)).
 		WithContentType("application/json")
 
 	// request

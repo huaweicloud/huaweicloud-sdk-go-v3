@@ -19,6 +19,7 @@ type ShowSubNetworkInterfacesQuantityResponse struct {
 	RequestId *string `json:"request_id,omitempty"`
 	// 辅助弹性网卡数目
 	SubNetworkInterfaces *int32 `json:"sub_network_interfaces,omitempty"`
+	HttpStatusCode       int    `json:"-"`
 }
 
 func (o ShowSubNetworkInterfacesQuantityResponse) String() string {

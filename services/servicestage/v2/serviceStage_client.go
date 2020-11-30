@@ -6,11 +6,11 @@ import (
 )
 
 type ServiceStageClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewServiceStageClient(hcClient *http_client.HcHttpClient) *ServiceStageClient {
-	return &ServiceStageClient{hcClient: hcClient}
+	return &ServiceStageClient{HcClient: hcClient}
 }
 
 func ServiceStageClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func ServiceStageClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *ServiceStageClient) ChangeApplication(request *model.ChangeApplicationRequest) (*model.ChangeApplicationResponse, error) {
 	requestDef := GenReqDefForChangeApplication()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ChangeApplicationResponse), nil
@@ -33,7 +33,7 @@ func (c *ServiceStageClient) ChangeApplication(request *model.ChangeApplicationR
 func (c *ServiceStageClient) ChangeApplicationConfiguration(request *model.ChangeApplicationConfigurationRequest) (*model.ChangeApplicationConfigurationResponse, error) {
 	requestDef := GenReqDefForChangeApplicationConfiguration()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ChangeApplicationConfigurationResponse), nil
@@ -44,7 +44,7 @@ func (c *ServiceStageClient) ChangeApplicationConfiguration(request *model.Chang
 func (c *ServiceStageClient) ChangeComponent(request *model.ChangeComponentRequest) (*model.ChangeComponentResponse, error) {
 	requestDef := GenReqDefForChangeComponent()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ChangeComponentResponse), nil
@@ -55,7 +55,7 @@ func (c *ServiceStageClient) ChangeComponent(request *model.ChangeComponentReque
 func (c *ServiceStageClient) ChangeEnvironment(request *model.ChangeEnvironmentRequest) (*model.ChangeEnvironmentResponse, error) {
 	requestDef := GenReqDefForChangeEnvironment()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ChangeEnvironmentResponse), nil
@@ -66,7 +66,7 @@ func (c *ServiceStageClient) ChangeEnvironment(request *model.ChangeEnvironmentR
 func (c *ServiceStageClient) ChangeInstance(request *model.ChangeInstanceRequest) (*model.ChangeInstanceResponse, error) {
 	requestDef := GenReqDefForChangeInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ChangeInstanceResponse), nil
@@ -77,7 +77,7 @@ func (c *ServiceStageClient) ChangeInstance(request *model.ChangeInstanceRequest
 func (c *ServiceStageClient) ChangeResourceInEnvironment(request *model.ChangeResourceInEnvironmentRequest) (*model.ChangeResourceInEnvironmentResponse, error) {
 	requestDef := GenReqDefForChangeResourceInEnvironment()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ChangeResourceInEnvironmentResponse), nil
@@ -88,7 +88,7 @@ func (c *ServiceStageClient) ChangeResourceInEnvironment(request *model.ChangeRe
 func (c *ServiceStageClient) CreateApplication(request *model.CreateApplicationRequest) (*model.CreateApplicationResponse, error) {
 	requestDef := GenReqDefForCreateApplication()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateApplicationResponse), nil
@@ -99,7 +99,7 @@ func (c *ServiceStageClient) CreateApplication(request *model.CreateApplicationR
 func (c *ServiceStageClient) CreateComponent(request *model.CreateComponentRequest) (*model.CreateComponentResponse, error) {
 	requestDef := GenReqDefForCreateComponent()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateComponentResponse), nil
@@ -110,7 +110,7 @@ func (c *ServiceStageClient) CreateComponent(request *model.CreateComponentReque
 func (c *ServiceStageClient) CreateEnvironment(request *model.CreateEnvironmentRequest) (*model.CreateEnvironmentResponse, error) {
 	requestDef := GenReqDefForCreateEnvironment()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateEnvironmentResponse), nil
@@ -121,7 +121,7 @@ func (c *ServiceStageClient) CreateEnvironment(request *model.CreateEnvironmentR
 func (c *ServiceStageClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
 	requestDef := GenReqDefForCreateInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateInstanceResponse), nil
@@ -132,7 +132,7 @@ func (c *ServiceStageClient) CreateInstance(request *model.CreateInstanceRequest
 func (c *ServiceStageClient) DeleteApplication(request *model.DeleteApplicationRequest) (*model.DeleteApplicationResponse, error) {
 	requestDef := GenReqDefForDeleteApplication()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteApplicationResponse), nil
@@ -143,7 +143,7 @@ func (c *ServiceStageClient) DeleteApplication(request *model.DeleteApplicationR
 func (c *ServiceStageClient) DeleteApplicationConfiguration(request *model.DeleteApplicationConfigurationRequest) (*model.DeleteApplicationConfigurationResponse, error) {
 	requestDef := GenReqDefForDeleteApplicationConfiguration()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteApplicationConfigurationResponse), nil
@@ -154,7 +154,7 @@ func (c *ServiceStageClient) DeleteApplicationConfiguration(request *model.Delet
 func (c *ServiceStageClient) DeleteComponent(request *model.DeleteComponentRequest) (*model.DeleteComponentResponse, error) {
 	requestDef := GenReqDefForDeleteComponent()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteComponentResponse), nil
@@ -165,7 +165,7 @@ func (c *ServiceStageClient) DeleteComponent(request *model.DeleteComponentReque
 func (c *ServiceStageClient) DeleteEnvironment(request *model.DeleteEnvironmentRequest) (*model.DeleteEnvironmentResponse, error) {
 	requestDef := GenReqDefForDeleteEnvironment()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteEnvironmentResponse), nil
@@ -176,7 +176,7 @@ func (c *ServiceStageClient) DeleteEnvironment(request *model.DeleteEnvironmentR
 func (c *ServiceStageClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteInstanceResponse), nil
@@ -187,7 +187,7 @@ func (c *ServiceStageClient) DeleteInstance(request *model.DeleteInstanceRequest
 func (c *ServiceStageClient) ListApplications(request *model.ListApplicationsRequest) (*model.ListApplicationsResponse, error) {
 	requestDef := GenReqDefForListApplications()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListApplicationsResponse), nil
@@ -198,7 +198,7 @@ func (c *ServiceStageClient) ListApplications(request *model.ListApplicationsReq
 func (c *ServiceStageClient) ListComponents(request *model.ListComponentsRequest) (*model.ListComponentsResponse, error) {
 	requestDef := GenReqDefForListComponents()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListComponentsResponse), nil
@@ -209,7 +209,7 @@ func (c *ServiceStageClient) ListComponents(request *model.ListComponentsRequest
 func (c *ServiceStageClient) ListEnvironments(request *model.ListEnvironmentsRequest) (*model.ListEnvironmentsResponse, error) {
 	requestDef := GenReqDefForListEnvironments()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListEnvironmentsResponse), nil
@@ -220,7 +220,7 @@ func (c *ServiceStageClient) ListEnvironments(request *model.ListEnvironmentsReq
 func (c *ServiceStageClient) ListInstanceSnapshots(request *model.ListInstanceSnapshotsRequest) (*model.ListInstanceSnapshotsResponse, error) {
 	requestDef := GenReqDefForListInstanceSnapshots()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListInstanceSnapshotsResponse), nil
@@ -231,7 +231,7 @@ func (c *ServiceStageClient) ListInstanceSnapshots(request *model.ListInstanceSn
 func (c *ServiceStageClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
 	requestDef := GenReqDefForListInstances()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListInstancesResponse), nil
@@ -242,7 +242,7 @@ func (c *ServiceStageClient) ListInstances(request *model.ListInstancesRequest) 
 func (c *ServiceStageClient) ShowApplicationConfiguration(request *model.ShowApplicationConfigurationRequest) (*model.ShowApplicationConfigurationResponse, error) {
 	requestDef := GenReqDefForShowApplicationConfiguration()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowApplicationConfigurationResponse), nil
@@ -253,7 +253,7 @@ func (c *ServiceStageClient) ShowApplicationConfiguration(request *model.ShowApp
 func (c *ServiceStageClient) ShowApplicationDetail(request *model.ShowApplicationDetailRequest) (*model.ShowApplicationDetailResponse, error) {
 	requestDef := GenReqDefForShowApplicationDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowApplicationDetailResponse), nil
@@ -264,7 +264,7 @@ func (c *ServiceStageClient) ShowApplicationDetail(request *model.ShowApplicatio
 func (c *ServiceStageClient) ShowComponentDetail(request *model.ShowComponentDetailRequest) (*model.ShowComponentDetailResponse, error) {
 	requestDef := GenReqDefForShowComponentDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowComponentDetailResponse), nil
@@ -275,7 +275,7 @@ func (c *ServiceStageClient) ShowComponentDetail(request *model.ShowComponentDet
 func (c *ServiceStageClient) ShowEnvironmentDetail(request *model.ShowEnvironmentDetailRequest) (*model.ShowEnvironmentDetailResponse, error) {
 	requestDef := GenReqDefForShowEnvironmentDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowEnvironmentDetailResponse), nil
@@ -286,7 +286,7 @@ func (c *ServiceStageClient) ShowEnvironmentDetail(request *model.ShowEnvironmen
 func (c *ServiceStageClient) ShowInstanceDetail(request *model.ShowInstanceDetailRequest) (*model.ShowInstanceDetailResponse, error) {
 	requestDef := GenReqDefForShowInstanceDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowInstanceDetailResponse), nil
@@ -297,7 +297,7 @@ func (c *ServiceStageClient) ShowInstanceDetail(request *model.ShowInstanceDetai
 func (c *ServiceStageClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*model.ShowJobDetailResponse, error) {
 	requestDef := GenReqDefForShowJobDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowJobDetailResponse), nil
@@ -308,7 +308,7 @@ func (c *ServiceStageClient) ShowJobDetail(request *model.ShowJobDetailRequest) 
 func (c *ServiceStageClient) UpdateInstanceAction(request *model.UpdateInstanceActionRequest) (*model.UpdateInstanceActionResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceAction()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateInstanceActionResponse), nil
@@ -319,7 +319,7 @@ func (c *ServiceStageClient) UpdateInstanceAction(request *model.UpdateInstanceA
 func (c *ServiceStageClient) CreateFile(request *model.CreateFileRequest) (*model.CreateFileResponse, error) {
 	requestDef := GenReqDefForCreateFile()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateFileResponse), nil
@@ -330,7 +330,7 @@ func (c *ServiceStageClient) CreateFile(request *model.CreateFileRequest) (*mode
 func (c *ServiceStageClient) CreateHook(request *model.CreateHookRequest) (*model.CreateHookResponse, error) {
 	requestDef := GenReqDefForCreateHook()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateHookResponse), nil
@@ -341,7 +341,7 @@ func (c *ServiceStageClient) CreateHook(request *model.CreateHookRequest) (*mode
 func (c *ServiceStageClient) CreateOAuth(request *model.CreateOAuthRequest) (*model.CreateOAuthResponse, error) {
 	requestDef := GenReqDefForCreateOAuth()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateOAuthResponse), nil
@@ -352,7 +352,7 @@ func (c *ServiceStageClient) CreateOAuth(request *model.CreateOAuthRequest) (*mo
 func (c *ServiceStageClient) CreatePasswordAuth(request *model.CreatePasswordAuthRequest) (*model.CreatePasswordAuthResponse, error) {
 	requestDef := GenReqDefForCreatePasswordAuth()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePasswordAuthResponse), nil
@@ -363,7 +363,7 @@ func (c *ServiceStageClient) CreatePasswordAuth(request *model.CreatePasswordAut
 func (c *ServiceStageClient) CreatePersonalAuth(request *model.CreatePersonalAuthRequest) (*model.CreatePersonalAuthResponse, error) {
 	requestDef := GenReqDefForCreatePersonalAuth()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePersonalAuthResponse), nil
@@ -374,7 +374,7 @@ func (c *ServiceStageClient) CreatePersonalAuth(request *model.CreatePersonalAut
 func (c *ServiceStageClient) CreateProject(request *model.CreateProjectRequest) (*model.CreateProjectResponse, error) {
 	requestDef := GenReqDefForCreateProject()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateProjectResponse), nil
@@ -385,7 +385,7 @@ func (c *ServiceStageClient) CreateProject(request *model.CreateProjectRequest) 
 func (c *ServiceStageClient) CreateTag(request *model.CreateTagRequest) (*model.CreateTagResponse, error) {
 	requestDef := GenReqDefForCreateTag()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateTagResponse), nil
@@ -396,7 +396,7 @@ func (c *ServiceStageClient) CreateTag(request *model.CreateTagRequest) (*model.
 func (c *ServiceStageClient) DeleteAuthorize(request *model.DeleteAuthorizeRequest) (*model.DeleteAuthorizeResponse, error) {
 	requestDef := GenReqDefForDeleteAuthorize()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteAuthorizeResponse), nil
@@ -407,7 +407,7 @@ func (c *ServiceStageClient) DeleteAuthorize(request *model.DeleteAuthorizeReque
 func (c *ServiceStageClient) DeleteFile(request *model.DeleteFileRequest) (*model.DeleteFileResponse, error) {
 	requestDef := GenReqDefForDeleteFile()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteFileResponse), nil
@@ -418,7 +418,7 @@ func (c *ServiceStageClient) DeleteFile(request *model.DeleteFileRequest) (*mode
 func (c *ServiceStageClient) DeleteHook(request *model.DeleteHookRequest) (*model.DeleteHookResponse, error) {
 	requestDef := GenReqDefForDeleteHook()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteHookResponse), nil
@@ -429,7 +429,7 @@ func (c *ServiceStageClient) DeleteHook(request *model.DeleteHookRequest) (*mode
 func (c *ServiceStageClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
 	requestDef := GenReqDefForDeleteTag()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteTagResponse), nil
@@ -440,7 +440,7 @@ func (c *ServiceStageClient) DeleteTag(request *model.DeleteTagRequest) (*model.
 func (c *ServiceStageClient) ListAuthorizations(request *model.ListAuthorizationsRequest) (*model.ListAuthorizationsResponse, error) {
 	requestDef := GenReqDefForListAuthorizations()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListAuthorizationsResponse), nil
@@ -451,7 +451,7 @@ func (c *ServiceStageClient) ListAuthorizations(request *model.ListAuthorization
 func (c *ServiceStageClient) ListBranches(request *model.ListBranchesRequest) (*model.ListBranchesResponse, error) {
 	requestDef := GenReqDefForListBranches()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListBranchesResponse), nil
@@ -462,7 +462,7 @@ func (c *ServiceStageClient) ListBranches(request *model.ListBranchesRequest) (*
 func (c *ServiceStageClient) ListCommits(request *model.ListCommitsRequest) (*model.ListCommitsResponse, error) {
 	requestDef := GenReqDefForListCommits()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListCommitsResponse), nil
@@ -473,7 +473,7 @@ func (c *ServiceStageClient) ListCommits(request *model.ListCommitsRequest) (*mo
 func (c *ServiceStageClient) ListHooks(request *model.ListHooksRequest) (*model.ListHooksResponse, error) {
 	requestDef := GenReqDefForListHooks()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListHooksResponse), nil
@@ -484,7 +484,7 @@ func (c *ServiceStageClient) ListHooks(request *model.ListHooksRequest) (*model.
 func (c *ServiceStageClient) ListNamespaces(request *model.ListNamespacesRequest) (*model.ListNamespacesResponse, error) {
 	requestDef := GenReqDefForListNamespaces()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListNamespacesResponse), nil
@@ -495,7 +495,7 @@ func (c *ServiceStageClient) ListNamespaces(request *model.ListNamespacesRequest
 func (c *ServiceStageClient) ListProjects(request *model.ListProjectsRequest) (*model.ListProjectsResponse, error) {
 	requestDef := GenReqDefForListProjects()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListProjectsResponse), nil
@@ -506,7 +506,7 @@ func (c *ServiceStageClient) ListProjects(request *model.ListProjectsRequest) (*
 func (c *ServiceStageClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsResponse, error) {
 	requestDef := GenReqDefForListTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListTagsResponse), nil
@@ -517,7 +517,7 @@ func (c *ServiceStageClient) ListTags(request *model.ListTagsRequest) (*model.Li
 func (c *ServiceStageClient) ListTrees(request *model.ListTreesRequest) (*model.ListTreesResponse, error) {
 	requestDef := GenReqDefForListTrees()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListTreesResponse), nil
@@ -528,7 +528,7 @@ func (c *ServiceStageClient) ListTrees(request *model.ListTreesRequest) (*model.
 func (c *ServiceStageClient) ShowContent(request *model.ShowContentRequest) (*model.ShowContentResponse, error) {
 	requestDef := GenReqDefForShowContent()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowContentResponse), nil
@@ -539,7 +539,7 @@ func (c *ServiceStageClient) ShowContent(request *model.ShowContentRequest) (*mo
 func (c *ServiceStageClient) ShowProjectDetail(request *model.ShowProjectDetailRequest) (*model.ShowProjectDetailResponse, error) {
 	requestDef := GenReqDefForShowProjectDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowProjectDetailResponse), nil
@@ -550,7 +550,7 @@ func (c *ServiceStageClient) ShowProjectDetail(request *model.ShowProjectDetailR
 func (c *ServiceStageClient) ShowRedirectUrl(request *model.ShowRedirectUrlRequest) (*model.ShowRedirectUrlResponse, error) {
 	requestDef := GenReqDefForShowRedirectUrl()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowRedirectUrlResponse), nil
@@ -561,7 +561,7 @@ func (c *ServiceStageClient) ShowRedirectUrl(request *model.ShowRedirectUrlReque
 func (c *ServiceStageClient) UpdateFile(request *model.UpdateFileRequest) (*model.UpdateFileResponse, error) {
 	requestDef := GenReqDefForUpdateFile()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateFileResponse), nil
@@ -572,7 +572,7 @@ func (c *ServiceStageClient) UpdateFile(request *model.UpdateFileRequest) (*mode
 func (c *ServiceStageClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListFlavorsResponse), nil
@@ -583,7 +583,7 @@ func (c *ServiceStageClient) ListFlavors(request *model.ListFlavorsRequest) (*mo
 func (c *ServiceStageClient) ListRuntimes(request *model.ListRuntimesRequest) (*model.ListRuntimesResponse, error) {
 	requestDef := GenReqDefForListRuntimes()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListRuntimesResponse), nil
@@ -594,7 +594,7 @@ func (c *ServiceStageClient) ListRuntimes(request *model.ListRuntimesRequest) (*
 func (c *ServiceStageClient) ListTemplates(request *model.ListTemplatesRequest) (*model.ListTemplatesResponse, error) {
 	requestDef := GenReqDefForListTemplates()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListTemplatesResponse), nil

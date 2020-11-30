@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type RemoveProjectPermissionFromAgencyResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o RemoveProjectPermissionFromAgencyResponse) String() string {

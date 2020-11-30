@@ -18,8 +18,9 @@ type ListSecurityGroupsResponse struct {
 	// 安全组列表响应体
 	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
 	// 请求ID
-	RequestId *string   `json:"request_id,omitempty"`
-	PageInfo  *PageInfo `json:"page_info,omitempty"`
+	RequestId      *string   `json:"request_id,omitempty"`
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListSecurityGroupsResponse) String() string {

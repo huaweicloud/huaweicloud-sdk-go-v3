@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type EnablePolicyAssignmentResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o EnablePolicyAssignmentResponse) String() string {

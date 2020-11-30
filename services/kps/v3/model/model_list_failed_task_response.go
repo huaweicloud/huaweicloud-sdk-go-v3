@@ -18,7 +18,8 @@ type ListFailedTaskResponse struct {
 	// 失败任务总数。
 	Total *int32 `json:"total,omitempty"`
 	// 失败的任务列表
-	Tasks *[]FailedTasks `json:"tasks,omitempty"`
+	Tasks          *[]FailedTasks `json:"tasks,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ListFailedTaskResponse) String() string {

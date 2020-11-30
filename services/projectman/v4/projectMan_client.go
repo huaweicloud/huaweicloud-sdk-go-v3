@@ -6,11 +6,11 @@ import (
 )
 
 type ProjectManClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewProjectManClient(hcClient *http_client.HcHttpClient) *ProjectManClient {
-	return &ProjectManClient{hcClient: hcClient}
+	return &ProjectManClient{HcClient: hcClient}
 }
 
 func ProjectManClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func ProjectManClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *ProjectManClient) AddApplyJoinProjectForAgc(request *model.AddApplyJoinProjectForAgcRequest) (*model.AddApplyJoinProjectForAgcResponse, error) {
 	requestDef := GenReqDefForAddApplyJoinProjectForAgc()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AddApplyJoinProjectForAgcResponse), nil
@@ -33,7 +33,7 @@ func (c *ProjectManClient) AddApplyJoinProjectForAgc(request *model.AddApplyJoin
 func (c *ProjectManClient) AddMemberV4(request *model.AddMemberV4Request) (*model.AddMemberV4Response, error) {
 	requestDef := GenReqDefForAddMemberV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AddMemberV4Response), nil
@@ -44,7 +44,7 @@ func (c *ProjectManClient) AddMemberV4(request *model.AddMemberV4Request) (*mode
 func (c *ProjectManClient) BatchAddMembersV4(request *model.BatchAddMembersV4Request) (*model.BatchAddMembersV4Response, error) {
 	requestDef := GenReqDefForBatchAddMembersV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchAddMembersV4Response), nil
@@ -55,7 +55,7 @@ func (c *ProjectManClient) BatchAddMembersV4(request *model.BatchAddMembersV4Req
 func (c *ProjectManClient) BatchDeleteIterationsV4(request *model.BatchDeleteIterationsV4Request) (*model.BatchDeleteIterationsV4Response, error) {
 	requestDef := GenReqDefForBatchDeleteIterationsV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchDeleteIterationsV4Response), nil
@@ -66,7 +66,7 @@ func (c *ProjectManClient) BatchDeleteIterationsV4(request *model.BatchDeleteIte
 func (c *ProjectManClient) BatchDeleteMembersV4(request *model.BatchDeleteMembersV4Request) (*model.BatchDeleteMembersV4Response, error) {
 	requestDef := GenReqDefForBatchDeleteMembersV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchDeleteMembersV4Response), nil
@@ -77,7 +77,7 @@ func (c *ProjectManClient) BatchDeleteMembersV4(request *model.BatchDeleteMember
 func (c *ProjectManClient) CheckProjectNameV4(request *model.CheckProjectNameV4Request) (*model.CheckProjectNameV4Response, error) {
 	requestDef := GenReqDefForCheckProjectNameV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CheckProjectNameV4Response), nil
@@ -88,7 +88,7 @@ func (c *ProjectManClient) CheckProjectNameV4(request *model.CheckProjectNameV4R
 func (c *ProjectManClient) CreateIterationV4(request *model.CreateIterationV4Request) (*model.CreateIterationV4Response, error) {
 	requestDef := GenReqDefForCreateIterationV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateIterationV4Response), nil
@@ -99,7 +99,7 @@ func (c *ProjectManClient) CreateIterationV4(request *model.CreateIterationV4Req
 func (c *ProjectManClient) CreateProjectV4(request *model.CreateProjectV4Request) (*model.CreateProjectV4Response, error) {
 	requestDef := GenReqDefForCreateProjectV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateProjectV4Response), nil
@@ -110,7 +110,7 @@ func (c *ProjectManClient) CreateProjectV4(request *model.CreateProjectV4Request
 func (c *ProjectManClient) DeleteIterationV4(request *model.DeleteIterationV4Request) (*model.DeleteIterationV4Response, error) {
 	requestDef := GenReqDefForDeleteIterationV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteIterationV4Response), nil
@@ -121,7 +121,7 @@ func (c *ProjectManClient) DeleteIterationV4(request *model.DeleteIterationV4Req
 func (c *ProjectManClient) DeleteProjectV4(request *model.DeleteProjectV4Request) (*model.DeleteProjectV4Response, error) {
 	requestDef := GenReqDefForDeleteProjectV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteProjectV4Response), nil
@@ -132,7 +132,7 @@ func (c *ProjectManClient) DeleteProjectV4(request *model.DeleteProjectV4Request
 func (c *ProjectManClient) ListDomainNotAddedProjectsV4(request *model.ListDomainNotAddedProjectsV4Request) (*model.ListDomainNotAddedProjectsV4Response, error) {
 	requestDef := GenReqDefForListDomainNotAddedProjectsV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListDomainNotAddedProjectsV4Response), nil
@@ -143,7 +143,7 @@ func (c *ProjectManClient) ListDomainNotAddedProjectsV4(request *model.ListDomai
 func (c *ProjectManClient) ListProjectBugStaticsV4(request *model.ListProjectBugStaticsV4Request) (*model.ListProjectBugStaticsV4Response, error) {
 	requestDef := GenReqDefForListProjectBugStaticsV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListProjectBugStaticsV4Response), nil
@@ -154,7 +154,7 @@ func (c *ProjectManClient) ListProjectBugStaticsV4(request *model.ListProjectBug
 func (c *ProjectManClient) ListProjectDemandStaticV4(request *model.ListProjectDemandStaticV4Request) (*model.ListProjectDemandStaticV4Response, error) {
 	requestDef := GenReqDefForListProjectDemandStaticV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListProjectDemandStaticV4Response), nil
@@ -165,7 +165,7 @@ func (c *ProjectManClient) ListProjectDemandStaticV4(request *model.ListProjectD
 func (c *ProjectManClient) ListProjectIterationsV4(request *model.ListProjectIterationsV4Request) (*model.ListProjectIterationsV4Response, error) {
 	requestDef := GenReqDefForListProjectIterationsV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListProjectIterationsV4Response), nil
@@ -176,7 +176,7 @@ func (c *ProjectManClient) ListProjectIterationsV4(request *model.ListProjectIte
 func (c *ProjectManClient) ListProjectMembersV4(request *model.ListProjectMembersV4Request) (*model.ListProjectMembersV4Response, error) {
 	requestDef := GenReqDefForListProjectMembersV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListProjectMembersV4Response), nil
@@ -187,7 +187,7 @@ func (c *ProjectManClient) ListProjectMembersV4(request *model.ListProjectMember
 func (c *ProjectManClient) ListProjectsV4(request *model.ListProjectsV4Request) (*model.ListProjectsV4Response, error) {
 	requestDef := GenReqDefForListProjectsV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListProjectsV4Response), nil
@@ -198,7 +198,7 @@ func (c *ProjectManClient) ListProjectsV4(request *model.ListProjectsV4Request) 
 func (c *ProjectManClient) RemoveProject(request *model.RemoveProjectRequest) (*model.RemoveProjectResponse, error) {
 	requestDef := GenReqDefForRemoveProject()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RemoveProjectResponse), nil
@@ -209,7 +209,7 @@ func (c *ProjectManClient) RemoveProject(request *model.RemoveProjectRequest) (*
 func (c *ProjectManClient) ShowCurUserInfo(request *model.ShowCurUserInfoRequest) (*model.ShowCurUserInfoResponse, error) {
 	requestDef := GenReqDefForShowCurUserInfo()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowCurUserInfoResponse), nil
@@ -220,7 +220,7 @@ func (c *ProjectManClient) ShowCurUserInfo(request *model.ShowCurUserInfoRequest
 func (c *ProjectManClient) ShowCurUserRole(request *model.ShowCurUserRoleRequest) (*model.ShowCurUserRoleResponse, error) {
 	requestDef := GenReqDefForShowCurUserRole()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowCurUserRoleResponse), nil
@@ -231,7 +231,7 @@ func (c *ProjectManClient) ShowCurUserRole(request *model.ShowCurUserRoleRequest
 func (c *ProjectManClient) ShowIterationV4(request *model.ShowIterationV4Request) (*model.ShowIterationV4Response, error) {
 	requestDef := GenReqDefForShowIterationV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowIterationV4Response), nil
@@ -242,7 +242,7 @@ func (c *ProjectManClient) ShowIterationV4(request *model.ShowIterationV4Request
 func (c *ProjectManClient) ShowProjectSummaryV4(request *model.ShowProjectSummaryV4Request) (*model.ShowProjectSummaryV4Response, error) {
 	requestDef := GenReqDefForShowProjectSummaryV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowProjectSummaryV4Response), nil
@@ -253,7 +253,7 @@ func (c *ProjectManClient) ShowProjectSummaryV4(request *model.ShowProjectSummar
 func (c *ProjectManClient) UpdateIterationV4(request *model.UpdateIterationV4Request) (*model.UpdateIterationV4Response, error) {
 	requestDef := GenReqDefForUpdateIterationV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateIterationV4Response), nil
@@ -264,7 +264,7 @@ func (c *ProjectManClient) UpdateIterationV4(request *model.UpdateIterationV4Req
 func (c *ProjectManClient) UpdateMembesRoleV4(request *model.UpdateMembesRoleV4Request) (*model.UpdateMembesRoleV4Response, error) {
 	requestDef := GenReqDefForUpdateMembesRoleV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateMembesRoleV4Response), nil
@@ -275,7 +275,7 @@ func (c *ProjectManClient) UpdateMembesRoleV4(request *model.UpdateMembesRoleV4R
 func (c *ProjectManClient) UpdateNickNameV4(request *model.UpdateNickNameV4Request) (*model.UpdateNickNameV4Response, error) {
 	requestDef := GenReqDefForUpdateNickNameV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateNickNameV4Response), nil
@@ -286,7 +286,7 @@ func (c *ProjectManClient) UpdateNickNameV4(request *model.UpdateNickNameV4Reque
 func (c *ProjectManClient) UpdateProjectV4(request *model.UpdateProjectV4Request) (*model.UpdateProjectV4Response, error) {
 	requestDef := GenReqDefForUpdateProjectV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateProjectV4Response), nil
@@ -297,7 +297,7 @@ func (c *ProjectManClient) UpdateProjectV4(request *model.UpdateProjectV4Request
 func (c *ProjectManClient) BatchDeleteIssuesV4(request *model.BatchDeleteIssuesV4Request) (*model.BatchDeleteIssuesV4Response, error) {
 	requestDef := GenReqDefForBatchDeleteIssuesV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchDeleteIssuesV4Response), nil
@@ -308,7 +308,7 @@ func (c *ProjectManClient) BatchDeleteIssuesV4(request *model.BatchDeleteIssuesV
 func (c *ProjectManClient) CreateIssueV4(request *model.CreateIssueV4Request) (*model.CreateIssueV4Response, error) {
 	requestDef := GenReqDefForCreateIssueV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateIssueV4Response), nil
@@ -319,7 +319,7 @@ func (c *ProjectManClient) CreateIssueV4(request *model.CreateIssueV4Request) (*
 func (c *ProjectManClient) DeleteIssueV4(request *model.DeleteIssueV4Request) (*model.DeleteIssueV4Response, error) {
 	requestDef := GenReqDefForDeleteIssueV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteIssueV4Response), nil
@@ -330,7 +330,7 @@ func (c *ProjectManClient) DeleteIssueV4(request *model.DeleteIssueV4Request) (*
 func (c *ProjectManClient) ListChildIssuesV4(request *model.ListChildIssuesV4Request) (*model.ListChildIssuesV4Response, error) {
 	requestDef := GenReqDefForListChildIssuesV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListChildIssuesV4Response), nil
@@ -341,7 +341,7 @@ func (c *ProjectManClient) ListChildIssuesV4(request *model.ListChildIssuesV4Req
 func (c *ProjectManClient) ListIssueCommentsV4(request *model.ListIssueCommentsV4Request) (*model.ListIssueCommentsV4Response, error) {
 	requestDef := GenReqDefForListIssueCommentsV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListIssueCommentsV4Response), nil
@@ -352,7 +352,7 @@ func (c *ProjectManClient) ListIssueCommentsV4(request *model.ListIssueCommentsV
 func (c *ProjectManClient) ListIssueRecordsV4(request *model.ListIssueRecordsV4Request) (*model.ListIssueRecordsV4Response, error) {
 	requestDef := GenReqDefForListIssueRecordsV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListIssueRecordsV4Response), nil
@@ -363,7 +363,7 @@ func (c *ProjectManClient) ListIssueRecordsV4(request *model.ListIssueRecordsV4R
 func (c *ProjectManClient) ListIssuesV4(request *model.ListIssuesV4Request) (*model.ListIssuesV4Response, error) {
 	requestDef := GenReqDefForListIssuesV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListIssuesV4Response), nil
@@ -374,7 +374,7 @@ func (c *ProjectManClient) ListIssuesV4(request *model.ListIssuesV4Request) (*mo
 func (c *ProjectManClient) ListProjectWorkHours(request *model.ListProjectWorkHoursRequest) (*model.ListProjectWorkHoursResponse, error) {
 	requestDef := GenReqDefForListProjectWorkHours()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListProjectWorkHoursResponse), nil
@@ -385,7 +385,7 @@ func (c *ProjectManClient) ListProjectWorkHours(request *model.ListProjectWorkHo
 func (c *ProjectManClient) ShowIssueV4(request *model.ShowIssueV4Request) (*model.ShowIssueV4Response, error) {
 	requestDef := GenReqDefForShowIssueV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowIssueV4Response), nil
@@ -396,7 +396,7 @@ func (c *ProjectManClient) ShowIssueV4(request *model.ShowIssueV4Request) (*mode
 func (c *ProjectManClient) ShowProjectWorkHours(request *model.ShowProjectWorkHoursRequest) (*model.ShowProjectWorkHoursResponse, error) {
 	requestDef := GenReqDefForShowProjectWorkHours()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowProjectWorkHoursResponse), nil
@@ -407,7 +407,7 @@ func (c *ProjectManClient) ShowProjectWorkHours(request *model.ShowProjectWorkHo
 func (c *ProjectManClient) ShowtIssueCompletionRate(request *model.ShowtIssueCompletionRateRequest) (*model.ShowtIssueCompletionRateResponse, error) {
 	requestDef := GenReqDefForShowtIssueCompletionRate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowtIssueCompletionRateResponse), nil
@@ -418,7 +418,7 @@ func (c *ProjectManClient) ShowtIssueCompletionRate(request *model.ShowtIssueCom
 func (c *ProjectManClient) UpdateIssueV4(request *model.UpdateIssueV4Request) (*model.UpdateIssueV4Response, error) {
 	requestDef := GenReqDefForUpdateIssueV4()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateIssueV4Response), nil

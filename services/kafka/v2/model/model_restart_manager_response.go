@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type RestartManagerResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o RestartManagerResponse) String() string {

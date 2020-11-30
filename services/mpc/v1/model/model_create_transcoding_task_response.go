@@ -16,7 +16,8 @@ import (
 // Response Object
 type CreateTranscodingTaskResponse struct {
 	// 任务ID。 如果返回值为200 OK，为接受任务后产生的任务ID。
-	TaskId *int32 `json:"task_id,omitempty"`
+	TaskId         *int32 `json:"task_id,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o CreateTranscodingTaskResponse) String() string {

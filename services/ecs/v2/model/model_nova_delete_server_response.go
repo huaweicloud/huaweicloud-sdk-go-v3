@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type NovaDeleteServerResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o NovaDeleteServerResponse) String() string {

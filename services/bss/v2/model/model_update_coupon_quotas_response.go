@@ -19,6 +19,7 @@ type UpdateCouponQuotasResponse struct {
 	ErrorDetails *[]ErrorDetail `json:"error_details,omitempty"`
 	// |参数名称：成功的客户ID和对应的券ID列表| |参数约束以及描述：成功的客户ID和对应的券ID列表|
 	SimpleQuotaInfos *[]QuotaSimpleInfo `json:"simple_quota_infos,omitempty"`
+	HttpStatusCode   int                `json:"-"`
 }
 
 func (o UpdateCouponQuotasResponse) String() string {

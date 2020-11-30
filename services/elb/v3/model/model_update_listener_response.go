@@ -16,8 +16,9 @@ import (
 // Response Object
 type UpdateListenerResponse struct {
 	// 请求ID。  注：自动生成 。
-	RequestId *string   `json:"request_id,omitempty"`
-	Listener  *Listener `json:"listener,omitempty"`
+	RequestId      *string   `json:"request_id,omitempty"`
+	Listener       *Listener `json:"listener,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o UpdateListenerResponse) String() string {

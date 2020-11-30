@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type NovaAssociateSecurityGroupResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o NovaAssociateSecurityGroupResponse) String() string {

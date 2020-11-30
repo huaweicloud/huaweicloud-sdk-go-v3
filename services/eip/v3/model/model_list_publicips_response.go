@@ -21,7 +21,8 @@ type ListPublicipsResponse struct {
 	Publicips *[]PublicipShowResp `json:"publicips,omitempty"`
 	PageInfo  *PageInfoOption     `json:"page_info,omitempty"`
 	// 公网IP总条目数
-	Total *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListPublicipsResponse) String() string {

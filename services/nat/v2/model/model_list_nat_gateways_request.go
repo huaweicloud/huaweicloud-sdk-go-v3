@@ -45,7 +45,6 @@ type ListNatGatewaysRequestStatusEnum struct {
 	PENDING_CREATE ListNatGatewaysRequestStatus
 	PENDING_UPDATE ListNatGatewaysRequestStatus
 	PENDING_DELETE ListNatGatewaysRequestStatus
-	EIP_FREEZED    ListNatGatewaysRequestStatus
 	INACTIVE       ListNatGatewaysRequestStatus
 }
 
@@ -62,9 +61,6 @@ func GetListNatGatewaysRequestStatusEnum() ListNatGatewaysRequestStatusEnum {
 		},
 		PENDING_DELETE: ListNatGatewaysRequestStatus{
 			value: "PENDING_DELETE",
-		},
-		EIP_FREEZED: ListNatGatewaysRequestStatus{
-			value: "EIP_FREEZED",
 		},
 		INACTIVE: ListNatGatewaysRequestStatus{
 			value: "INACTIVE",

@@ -22,7 +22,8 @@ type ListScalingGroupsResponse struct {
 	// 查询记录数
 	Limit *int32 `json:"limit,omitempty"`
 	// 伸缩组列表
-	ScalingGroups *[]ScalingGroups `json:"scaling_groups,omitempty"`
+	ScalingGroups  *[]ScalingGroups `json:"scaling_groups,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ListScalingGroupsResponse) String() string {

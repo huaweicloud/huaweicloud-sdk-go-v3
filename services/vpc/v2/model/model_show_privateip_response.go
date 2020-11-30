@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowPrivateipResponse struct {
-	Privateip *Privateip `json:"privateip,omitempty"`
+	Privateip      *Privateip `json:"privateip,omitempty"`
+	HttpStatusCode int        `json:"-"`
 }
 
 func (o ShowPrivateipResponse) String() string {

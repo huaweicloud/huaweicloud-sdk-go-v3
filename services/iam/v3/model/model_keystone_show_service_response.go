@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type KeystoneShowServiceResponse struct {
-	Service *Service `json:"service,omitempty"`
+	Service        *Service `json:"service,omitempty"`
+	HttpStatusCode int      `json:"-"`
 }
 
 func (o KeystoneShowServiceResponse) String() string {

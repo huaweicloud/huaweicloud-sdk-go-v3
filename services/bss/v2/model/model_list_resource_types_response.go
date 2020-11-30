@@ -16,7 +16,8 @@ import (
 // Response Object
 type ListResourceTypesResponse struct {
 	// |参数名称：返回数据| |参数约束以及描述：返回数据|
-	ResourceTypes *[]ResourceType `json:"resource_types,omitempty"`
+	ResourceTypes  *[]ResourceType `json:"resource_types,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o ListResourceTypesResponse) String() string {

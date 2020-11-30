@@ -6,11 +6,11 @@ import (
 )
 
 type BssClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewBssClient(hcClient *http_client.HcHttpClient) *BssClient {
-	return &BssClient{hcClient: hcClient}
+	return &BssClient{HcClient: hcClient}
 }
 
 func BssClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func BssClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *BssClient) AutoRenewalResources(request *model.AutoRenewalResourcesRequest) (*model.AutoRenewalResourcesResponse, error) {
 	requestDef := GenReqDefForAutoRenewalResources()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AutoRenewalResourcesResponse), nil
@@ -33,7 +33,7 @@ func (c *BssClient) AutoRenewalResources(request *model.AutoRenewalResourcesRequ
 func (c *BssClient) BatchSetSubCustomerDiscount(request *model.BatchSetSubCustomerDiscountRequest) (*model.BatchSetSubCustomerDiscountResponse, error) {
 	requestDef := GenReqDefForBatchSetSubCustomerDiscount()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchSetSubCustomerDiscountResponse), nil
@@ -44,7 +44,7 @@ func (c *BssClient) BatchSetSubCustomerDiscount(request *model.BatchSetSubCustom
 func (c *BssClient) CancelAutoRenewalResources(request *model.CancelAutoRenewalResourcesRequest) (*model.CancelAutoRenewalResourcesResponse, error) {
 	requestDef := GenReqDefForCancelAutoRenewalResources()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CancelAutoRenewalResourcesResponse), nil
@@ -55,7 +55,7 @@ func (c *BssClient) CancelAutoRenewalResources(request *model.CancelAutoRenewalR
 func (c *BssClient) CancelCustomerOrder(request *model.CancelCustomerOrderRequest) (*model.CancelCustomerOrderResponse, error) {
 	requestDef := GenReqDefForCancelCustomerOrder()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CancelCustomerOrderResponse), nil
@@ -66,7 +66,7 @@ func (c *BssClient) CancelCustomerOrder(request *model.CancelCustomerOrderReques
 func (c *BssClient) CancelResourcesSubscription(request *model.CancelResourcesSubscriptionRequest) (*model.CancelResourcesSubscriptionResponse, error) {
 	requestDef := GenReqDefForCancelResourcesSubscription()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CancelResourcesSubscriptionResponse), nil
@@ -77,7 +77,7 @@ func (c *BssClient) CancelResourcesSubscription(request *model.CancelResourcesSu
 func (c *BssClient) ChangeEnterpriseRealnameAuthentication(request *model.ChangeEnterpriseRealnameAuthenticationRequest) (*model.ChangeEnterpriseRealnameAuthenticationResponse, error) {
 	requestDef := GenReqDefForChangeEnterpriseRealnameAuthentication()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ChangeEnterpriseRealnameAuthenticationResponse), nil
@@ -88,7 +88,7 @@ func (c *BssClient) ChangeEnterpriseRealnameAuthentication(request *model.Change
 func (c *BssClient) CheckUserIdentity(request *model.CheckUserIdentityRequest) (*model.CheckUserIdentityResponse, error) {
 	requestDef := GenReqDefForCheckUserIdentity()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CheckUserIdentityResponse), nil
@@ -99,7 +99,7 @@ func (c *BssClient) CheckUserIdentity(request *model.CheckUserIdentityRequest) (
 func (c *BssClient) CreateEnterpriseProjectAuth(request *model.CreateEnterpriseProjectAuthRequest) (*model.CreateEnterpriseProjectAuthResponse, error) {
 	requestDef := GenReqDefForCreateEnterpriseProjectAuth()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateEnterpriseProjectAuthResponse), nil
@@ -110,7 +110,7 @@ func (c *BssClient) CreateEnterpriseProjectAuth(request *model.CreateEnterpriseP
 func (c *BssClient) CreateEnterpriseRealnameAuthentication(request *model.CreateEnterpriseRealnameAuthenticationRequest) (*model.CreateEnterpriseRealnameAuthenticationResponse, error) {
 	requestDef := GenReqDefForCreateEnterpriseRealnameAuthentication()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateEnterpriseRealnameAuthenticationResponse), nil
@@ -121,7 +121,7 @@ func (c *BssClient) CreateEnterpriseRealnameAuthentication(request *model.Create
 func (c *BssClient) CreatePartnerCoupons(request *model.CreatePartnerCouponsRequest) (*model.CreatePartnerCouponsResponse, error) {
 	requestDef := GenReqDefForCreatePartnerCoupons()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePartnerCouponsResponse), nil
@@ -132,7 +132,7 @@ func (c *BssClient) CreatePartnerCoupons(request *model.CreatePartnerCouponsRequ
 func (c *BssClient) CreatePersonalRealnameAuth(request *model.CreatePersonalRealnameAuthRequest) (*model.CreatePersonalRealnameAuthResponse, error) {
 	requestDef := GenReqDefForCreatePersonalRealnameAuth()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePersonalRealnameAuthResponse), nil
@@ -143,7 +143,7 @@ func (c *BssClient) CreatePersonalRealnameAuth(request *model.CreatePersonalReal
 func (c *BssClient) CreatePostal(request *model.CreatePostalRequest) (*model.CreatePostalResponse, error) {
 	requestDef := GenReqDefForCreatePostal()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePostalResponse), nil
@@ -154,7 +154,7 @@ func (c *BssClient) CreatePostal(request *model.CreatePostalRequest) (*model.Cre
 func (c *BssClient) CreateSubCustomer(request *model.CreateSubCustomerRequest) (*model.CreateSubCustomerResponse, error) {
 	requestDef := GenReqDefForCreateSubCustomer()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateSubCustomerResponse), nil
@@ -165,7 +165,7 @@ func (c *BssClient) CreateSubCustomer(request *model.CreateSubCustomerRequest) (
 func (c *BssClient) CreateSubEnterpriseAccount(request *model.CreateSubEnterpriseAccountRequest) (*model.CreateSubEnterpriseAccountResponse, error) {
 	requestDef := GenReqDefForCreateSubEnterpriseAccount()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateSubEnterpriseAccountResponse), nil
@@ -176,7 +176,7 @@ func (c *BssClient) CreateSubEnterpriseAccount(request *model.CreateSubEnterpris
 func (c *BssClient) DeletePostal(request *model.DeletePostalRequest) (*model.DeletePostalResponse, error) {
 	requestDef := GenReqDefForDeletePostal()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeletePostalResponse), nil
@@ -187,7 +187,7 @@ func (c *BssClient) DeletePostal(request *model.DeletePostalRequest) (*model.Del
 func (c *BssClient) ListCities(request *model.ListCitiesRequest) (*model.ListCitiesResponse, error) {
 	requestDef := GenReqDefForListCities()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListCitiesResponse), nil
@@ -198,7 +198,7 @@ func (c *BssClient) ListCities(request *model.ListCitiesRequest) (*model.ListCit
 func (c *BssClient) ListCounties(request *model.ListCountiesRequest) (*model.ListCountiesResponse, error) {
 	requestDef := GenReqDefForListCounties()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListCountiesResponse), nil
@@ -209,7 +209,7 @@ func (c *BssClient) ListCounties(request *model.ListCountiesRequest) (*model.Lis
 func (c *BssClient) ListCouponQuotasRecords(request *model.ListCouponQuotasRecordsRequest) (*model.ListCouponQuotasRecordsResponse, error) {
 	requestDef := GenReqDefForListCouponQuotasRecords()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListCouponQuotasRecordsResponse), nil
@@ -220,7 +220,7 @@ func (c *BssClient) ListCouponQuotasRecords(request *model.ListCouponQuotasRecor
 func (c *BssClient) ListCustomerBillsFeeRecords(request *model.ListCustomerBillsFeeRecordsRequest) (*model.ListCustomerBillsFeeRecordsResponse, error) {
 	requestDef := GenReqDefForListCustomerBillsFeeRecords()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListCustomerBillsFeeRecordsResponse), nil
@@ -231,7 +231,7 @@ func (c *BssClient) ListCustomerBillsFeeRecords(request *model.ListCustomerBills
 func (c *BssClient) ListCustomerOnDemandResources(request *model.ListCustomerOnDemandResourcesRequest) (*model.ListCustomerOnDemandResourcesResponse, error) {
 	requestDef := GenReqDefForListCustomerOnDemandResources()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListCustomerOnDemandResourcesResponse), nil
@@ -242,7 +242,7 @@ func (c *BssClient) ListCustomerOnDemandResources(request *model.ListCustomerOnD
 func (c *BssClient) ListCustomerOrders(request *model.ListCustomerOrdersRequest) (*model.ListCustomerOrdersResponse, error) {
 	requestDef := GenReqDefForListCustomerOrders()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListCustomerOrdersResponse), nil
@@ -253,7 +253,7 @@ func (c *BssClient) ListCustomerOrders(request *model.ListCustomerOrdersRequest)
 func (c *BssClient) ListCustomersBalancesDetail(request *model.ListCustomersBalancesDetailRequest) (*model.ListCustomersBalancesDetailResponse, error) {
 	requestDef := GenReqDefForListCustomersBalancesDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListCustomersBalancesDetailResponse), nil
@@ -264,7 +264,7 @@ func (c *BssClient) ListCustomersBalancesDetail(request *model.ListCustomersBala
 func (c *BssClient) ListCustomerselfResourceRecordDetails(request *model.ListCustomerselfResourceRecordDetailsRequest) (*model.ListCustomerselfResourceRecordDetailsResponse, error) {
 	requestDef := GenReqDefForListCustomerselfResourceRecordDetails()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListCustomerselfResourceRecordDetailsResponse), nil
@@ -275,7 +275,7 @@ func (c *BssClient) ListCustomerselfResourceRecordDetails(request *model.ListCus
 func (c *BssClient) ListCustomerselfResourceRecords(request *model.ListCustomerselfResourceRecordsRequest) (*model.ListCustomerselfResourceRecordsResponse, error) {
 	requestDef := GenReqDefForListCustomerselfResourceRecords()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListCustomerselfResourceRecordsResponse), nil
@@ -286,7 +286,7 @@ func (c *BssClient) ListCustomerselfResourceRecords(request *model.ListCustomers
 func (c *BssClient) ListEnterpriseMultiAccount(request *model.ListEnterpriseMultiAccountRequest) (*model.ListEnterpriseMultiAccountResponse, error) {
 	requestDef := GenReqDefForListEnterpriseMultiAccount()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListEnterpriseMultiAccountResponse), nil
@@ -297,7 +297,7 @@ func (c *BssClient) ListEnterpriseMultiAccount(request *model.ListEnterpriseMult
 func (c *BssClient) ListEnterpriseOrganizations(request *model.ListEnterpriseOrganizationsRequest) (*model.ListEnterpriseOrganizationsResponse, error) {
 	requestDef := GenReqDefForListEnterpriseOrganizations()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListEnterpriseOrganizationsResponse), nil
@@ -308,7 +308,7 @@ func (c *BssClient) ListEnterpriseOrganizations(request *model.ListEnterpriseOrg
 func (c *BssClient) ListEnterpriseSubCustomers(request *model.ListEnterpriseSubCustomersRequest) (*model.ListEnterpriseSubCustomersResponse, error) {
 	requestDef := GenReqDefForListEnterpriseSubCustomers()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListEnterpriseSubCustomersResponse), nil
@@ -319,7 +319,7 @@ func (c *BssClient) ListEnterpriseSubCustomers(request *model.ListEnterpriseSubC
 func (c *BssClient) ListIndirectPartners(request *model.ListIndirectPartnersRequest) (*model.ListIndirectPartnersResponse, error) {
 	requestDef := GenReqDefForListIndirectPartners()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListIndirectPartnersResponse), nil
@@ -330,7 +330,7 @@ func (c *BssClient) ListIndirectPartners(request *model.ListIndirectPartnersRequ
 func (c *BssClient) ListIssuedCouponQuotas(request *model.ListIssuedCouponQuotasRequest) (*model.ListIssuedCouponQuotasResponse, error) {
 	requestDef := GenReqDefForListIssuedCouponQuotas()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListIssuedCouponQuotasResponse), nil
@@ -341,7 +341,7 @@ func (c *BssClient) ListIssuedCouponQuotas(request *model.ListIssuedCouponQuotas
 func (c *BssClient) ListIssuedPartnerCoupons(request *model.ListIssuedPartnerCouponsRequest) (*model.ListIssuedPartnerCouponsResponse, error) {
 	requestDef := GenReqDefForListIssuedPartnerCoupons()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListIssuedPartnerCouponsResponse), nil
@@ -352,7 +352,7 @@ func (c *BssClient) ListIssuedPartnerCoupons(request *model.ListIssuedPartnerCou
 func (c *BssClient) ListOnDemandResourceRatings(request *model.ListOnDemandResourceRatingsRequest) (*model.ListOnDemandResourceRatingsResponse, error) {
 	requestDef := GenReqDefForListOnDemandResourceRatings()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListOnDemandResourceRatingsResponse), nil
@@ -363,7 +363,7 @@ func (c *BssClient) ListOnDemandResourceRatings(request *model.ListOnDemandResou
 func (c *BssClient) ListOrderCouponsByOrderId(request *model.ListOrderCouponsByOrderIdRequest) (*model.ListOrderCouponsByOrderIdResponse, error) {
 	requestDef := GenReqDefForListOrderCouponsByOrderId()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListOrderCouponsByOrderIdResponse), nil
@@ -374,7 +374,7 @@ func (c *BssClient) ListOrderCouponsByOrderId(request *model.ListOrderCouponsByO
 func (c *BssClient) ListPartnerAdjustRecords(request *model.ListPartnerAdjustRecordsRequest) (*model.ListPartnerAdjustRecordsResponse, error) {
 	requestDef := GenReqDefForListPartnerAdjustRecords()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPartnerAdjustRecordsResponse), nil
@@ -385,7 +385,7 @@ func (c *BssClient) ListPartnerAdjustRecords(request *model.ListPartnerAdjustRec
 func (c *BssClient) ListPartnerBalances(request *model.ListPartnerBalancesRequest) (*model.ListPartnerBalancesResponse, error) {
 	requestDef := GenReqDefForListPartnerBalances()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPartnerBalancesResponse), nil
@@ -396,7 +396,7 @@ func (c *BssClient) ListPartnerBalances(request *model.ListPartnerBalancesReques
 func (c *BssClient) ListPartnerCouponsRecord(request *model.ListPartnerCouponsRecordRequest) (*model.ListPartnerCouponsRecordResponse, error) {
 	requestDef := GenReqDefForListPartnerCouponsRecord()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPartnerCouponsRecordResponse), nil
@@ -407,7 +407,7 @@ func (c *BssClient) ListPartnerCouponsRecord(request *model.ListPartnerCouponsRe
 func (c *BssClient) ListPartnerPayOrders(request *model.ListPartnerPayOrdersRequest) (*model.ListPartnerPayOrdersResponse, error) {
 	requestDef := GenReqDefForListPartnerPayOrders()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPartnerPayOrdersResponse), nil
@@ -418,7 +418,7 @@ func (c *BssClient) ListPartnerPayOrders(request *model.ListPartnerPayOrdersRequ
 func (c *BssClient) ListPayPerUseCustomerResources(request *model.ListPayPerUseCustomerResourcesRequest) (*model.ListPayPerUseCustomerResourcesResponse, error) {
 	requestDef := GenReqDefForListPayPerUseCustomerResources()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPayPerUseCustomerResourcesResponse), nil
@@ -429,7 +429,7 @@ func (c *BssClient) ListPayPerUseCustomerResources(request *model.ListPayPerUseC
 func (c *BssClient) ListPostalAddress(request *model.ListPostalAddressRequest) (*model.ListPostalAddressResponse, error) {
 	requestDef := GenReqDefForListPostalAddress()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPostalAddressResponse), nil
@@ -440,7 +440,7 @@ func (c *BssClient) ListPostalAddress(request *model.ListPostalAddressRequest) (
 func (c *BssClient) ListProvinces(request *model.ListProvincesRequest) (*model.ListProvincesResponse, error) {
 	requestDef := GenReqDefForListProvinces()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListProvincesResponse), nil
@@ -451,7 +451,7 @@ func (c *BssClient) ListProvinces(request *model.ListProvincesRequest) (*model.L
 func (c *BssClient) ListQuotaCoupons(request *model.ListQuotaCouponsRequest) (*model.ListQuotaCouponsResponse, error) {
 	requestDef := GenReqDefForListQuotaCoupons()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListQuotaCouponsResponse), nil
@@ -462,7 +462,7 @@ func (c *BssClient) ListQuotaCoupons(request *model.ListQuotaCouponsRequest) (*m
 func (c *BssClient) ListRateOnPeriodDetail(request *model.ListRateOnPeriodDetailRequest) (*model.ListRateOnPeriodDetailResponse, error) {
 	requestDef := GenReqDefForListRateOnPeriodDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListRateOnPeriodDetailResponse), nil
@@ -473,7 +473,7 @@ func (c *BssClient) ListRateOnPeriodDetail(request *model.ListRateOnPeriodDetail
 func (c *BssClient) ListResourceTypes(request *model.ListResourceTypesRequest) (*model.ListResourceTypesResponse, error) {
 	requestDef := GenReqDefForListResourceTypes()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListResourceTypesResponse), nil
@@ -484,7 +484,7 @@ func (c *BssClient) ListResourceTypes(request *model.ListResourceTypesRequest) (
 func (c *BssClient) ListResourceUsages(request *model.ListResourceUsagesRequest) (*model.ListResourceUsagesResponse, error) {
 	requestDef := GenReqDefForListResourceUsages()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListResourceUsagesResponse), nil
@@ -495,7 +495,7 @@ func (c *BssClient) ListResourceUsages(request *model.ListResourceUsagesRequest)
 func (c *BssClient) ListServiceResources(request *model.ListServiceResourcesRequest) (*model.ListServiceResourcesResponse, error) {
 	requestDef := GenReqDefForListServiceResources()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListServiceResourcesResponse), nil
@@ -506,7 +506,7 @@ func (c *BssClient) ListServiceResources(request *model.ListServiceResourcesRequ
 func (c *BssClient) ListServiceTypes(request *model.ListServiceTypesRequest) (*model.ListServiceTypesResponse, error) {
 	requestDef := GenReqDefForListServiceTypes()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListServiceTypesResponse), nil
@@ -517,7 +517,7 @@ func (c *BssClient) ListServiceTypes(request *model.ListServiceTypesRequest) (*m
 func (c *BssClient) ListSkuInventories(request *model.ListSkuInventoriesRequest) (*model.ListSkuInventoriesResponse, error) {
 	requestDef := GenReqDefForListSkuInventories()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSkuInventoriesResponse), nil
@@ -528,7 +528,7 @@ func (c *BssClient) ListSkuInventories(request *model.ListSkuInventoriesRequest)
 func (c *BssClient) ListSubCustomerCoupons(request *model.ListSubCustomerCouponsRequest) (*model.ListSubCustomerCouponsResponse, error) {
 	requestDef := GenReqDefForListSubCustomerCoupons()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSubCustomerCouponsResponse), nil
@@ -539,7 +539,7 @@ func (c *BssClient) ListSubCustomerCoupons(request *model.ListSubCustomerCoupons
 func (c *BssClient) ListSubCustomerDiscounts(request *model.ListSubCustomerDiscountsRequest) (*model.ListSubCustomerDiscountsResponse, error) {
 	requestDef := GenReqDefForListSubCustomerDiscounts()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSubCustomerDiscountsResponse), nil
@@ -550,7 +550,7 @@ func (c *BssClient) ListSubCustomerDiscounts(request *model.ListSubCustomerDisco
 func (c *BssClient) ListSubCustomerResFeeRecords(request *model.ListSubCustomerResFeeRecordsRequest) (*model.ListSubCustomerResFeeRecordsResponse, error) {
 	requestDef := GenReqDefForListSubCustomerResFeeRecords()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSubCustomerResFeeRecordsResponse), nil
@@ -561,7 +561,7 @@ func (c *BssClient) ListSubCustomerResFeeRecords(request *model.ListSubCustomerR
 func (c *BssClient) ListSubCustomers(request *model.ListSubCustomersRequest) (*model.ListSubCustomersResponse, error) {
 	requestDef := GenReqDefForListSubCustomers()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSubCustomersResponse), nil
@@ -572,10 +572,21 @@ func (c *BssClient) ListSubCustomers(request *model.ListSubCustomersRequest) (*m
 func (c *BssClient) ListSubcustomerMonthlyBills(request *model.ListSubcustomerMonthlyBillsRequest) (*model.ListSubcustomerMonthlyBillsResponse, error) {
 	requestDef := GenReqDefForListSubcustomerMonthlyBills()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSubcustomerMonthlyBillsResponse), nil
+	}
+}
+
+//功能描述：客户在伙伴销售平台或自建平台查询包年/包月或按需产品的列表
+func (c *BssClient) ListUsageTypes(request *model.ListUsageTypesRequest) (*model.ListUsageTypesResponse, error) {
+	requestDef := GenReqDefForListUsageTypes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUsageTypesResponse), nil
 	}
 }
 
@@ -583,7 +594,7 @@ func (c *BssClient) ListSubcustomerMonthlyBills(request *model.ListSubcustomerMo
 func (c *BssClient) PayOrders(request *model.PayOrdersRequest) (*model.PayOrdersResponse, error) {
 	requestDef := GenReqDefForPayOrders()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.PayOrdersResponse), nil
@@ -594,7 +605,7 @@ func (c *BssClient) PayOrders(request *model.PayOrdersRequest) (*model.PayOrders
 func (c *BssClient) ReclaimCouponQuotas(request *model.ReclaimCouponQuotasRequest) (*model.ReclaimCouponQuotasResponse, error) {
 	requestDef := GenReqDefForReclaimCouponQuotas()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ReclaimCouponQuotasResponse), nil
@@ -605,7 +616,7 @@ func (c *BssClient) ReclaimCouponQuotas(request *model.ReclaimCouponQuotasReques
 func (c *BssClient) ReclaimIndirectPartnerAccount(request *model.ReclaimIndirectPartnerAccountRequest) (*model.ReclaimIndirectPartnerAccountResponse, error) {
 	requestDef := GenReqDefForReclaimIndirectPartnerAccount()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ReclaimIndirectPartnerAccountResponse), nil
@@ -616,7 +627,7 @@ func (c *BssClient) ReclaimIndirectPartnerAccount(request *model.ReclaimIndirect
 func (c *BssClient) ReclaimPartnerCoupons(request *model.ReclaimPartnerCouponsRequest) (*model.ReclaimPartnerCouponsResponse, error) {
 	requestDef := GenReqDefForReclaimPartnerCoupons()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ReclaimPartnerCouponsResponse), nil
@@ -627,7 +638,7 @@ func (c *BssClient) ReclaimPartnerCoupons(request *model.ReclaimPartnerCouponsRe
 func (c *BssClient) ReclaimSubEnterpriseAmount(request *model.ReclaimSubEnterpriseAmountRequest) (*model.ReclaimSubEnterpriseAmountResponse, error) {
 	requestDef := GenReqDefForReclaimSubEnterpriseAmount()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ReclaimSubEnterpriseAmountResponse), nil
@@ -638,7 +649,7 @@ func (c *BssClient) ReclaimSubEnterpriseAmount(request *model.ReclaimSubEnterpri
 func (c *BssClient) ReclaimToPartnerAccount(request *model.ReclaimToPartnerAccountRequest) (*model.ReclaimToPartnerAccountResponse, error) {
 	requestDef := GenReqDefForReclaimToPartnerAccount()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ReclaimToPartnerAccountResponse), nil
@@ -649,7 +660,7 @@ func (c *BssClient) ReclaimToPartnerAccount(request *model.ReclaimToPartnerAccou
 func (c *BssClient) RenewalResources(request *model.RenewalResourcesRequest) (*model.RenewalResourcesResponse, error) {
 	requestDef := GenReqDefForRenewalResources()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RenewalResourcesResponse), nil
@@ -660,7 +671,7 @@ func (c *BssClient) RenewalResources(request *model.RenewalResourcesRequest) (*m
 func (c *BssClient) SendSmsVerificationCode(request *model.SendSmsVerificationCodeRequest) (*model.SendSmsVerificationCodeResponse, error) {
 	requestDef := GenReqDefForSendSmsVerificationCode()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.SendSmsVerificationCodeResponse), nil
@@ -671,7 +682,7 @@ func (c *BssClient) SendSmsVerificationCode(request *model.SendSmsVerificationCo
 func (c *BssClient) SendVerificationMessageCode(request *model.SendVerificationMessageCodeRequest) (*model.SendVerificationMessageCodeResponse, error) {
 	requestDef := GenReqDefForSendVerificationMessageCode()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.SendVerificationMessageCodeResponse), nil
@@ -682,7 +693,7 @@ func (c *BssClient) SendVerificationMessageCode(request *model.SendVerificationM
 func (c *BssClient) ShowCusotmerAccountBalances(request *model.ShowCusotmerAccountBalancesRequest) (*model.ShowCusotmerAccountBalancesResponse, error) {
 	requestDef := GenReqDefForShowCusotmerAccountBalances()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowCusotmerAccountBalancesResponse), nil
@@ -693,7 +704,7 @@ func (c *BssClient) ShowCusotmerAccountBalances(request *model.ShowCusotmerAccou
 func (c *BssClient) ShowCustomerMonthlySum(request *model.ShowCustomerMonthlySumRequest) (*model.ShowCustomerMonthlySumResponse, error) {
 	requestDef := GenReqDefForShowCustomerMonthlySum()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowCustomerMonthlySumResponse), nil
@@ -704,7 +715,7 @@ func (c *BssClient) ShowCustomerMonthlySum(request *model.ShowCustomerMonthlySum
 func (c *BssClient) ShowCustomerOrderDetails(request *model.ShowCustomerOrderDetailsRequest) (*model.ShowCustomerOrderDetailsResponse, error) {
 	requestDef := GenReqDefForShowCustomerOrderDetails()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowCustomerOrderDetailsResponse), nil
@@ -715,7 +726,7 @@ func (c *BssClient) ShowCustomerOrderDetails(request *model.ShowCustomerOrderDet
 func (c *BssClient) ShowMultiAccountTransferAmount(request *model.ShowMultiAccountTransferAmountRequest) (*model.ShowMultiAccountTransferAmountResponse, error) {
 	requestDef := GenReqDefForShowMultiAccountTransferAmount()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowMultiAccountTransferAmountResponse), nil
@@ -726,7 +737,7 @@ func (c *BssClient) ShowMultiAccountTransferAmount(request *model.ShowMultiAccou
 func (c *BssClient) ShowRealnameAuthenticationReviewResult(request *model.ShowRealnameAuthenticationReviewResultRequest) (*model.ShowRealnameAuthenticationReviewResultResponse, error) {
 	requestDef := GenReqDefForShowRealnameAuthenticationReviewResult()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowRealnameAuthenticationReviewResultResponse), nil
@@ -737,7 +748,7 @@ func (c *BssClient) ShowRealnameAuthenticationReviewResult(request *model.ShowRe
 func (c *BssClient) ShowRefundOrderDetails(request *model.ShowRefundOrderDetailsRequest) (*model.ShowRefundOrderDetailsResponse, error) {
 	requestDef := GenReqDefForShowRefundOrderDetails()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowRefundOrderDetailsResponse), nil
@@ -748,7 +759,7 @@ func (c *BssClient) ShowRefundOrderDetails(request *model.ShowRefundOrderDetails
 func (c *BssClient) UpdateCouponQuotas(request *model.UpdateCouponQuotasRequest) (*model.UpdateCouponQuotasResponse, error) {
 	requestDef := GenReqDefForUpdateCouponQuotas()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateCouponQuotasResponse), nil
@@ -759,7 +770,7 @@ func (c *BssClient) UpdateCouponQuotas(request *model.UpdateCouponQuotasRequest)
 func (c *BssClient) UpdateCustomerAccountAmount(request *model.UpdateCustomerAccountAmountRequest) (*model.UpdateCustomerAccountAmountResponse, error) {
 	requestDef := GenReqDefForUpdateCustomerAccountAmount()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateCustomerAccountAmountResponse), nil
@@ -770,10 +781,21 @@ func (c *BssClient) UpdateCustomerAccountAmount(request *model.UpdateCustomerAcc
 func (c *BssClient) UpdateIndirectPartnerAccount(request *model.UpdateIndirectPartnerAccountRequest) (*model.UpdateIndirectPartnerAccountResponse, error) {
 	requestDef := GenReqDefForUpdateIndirectPartnerAccount()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateIndirectPartnerAccountResponse), nil
+	}
+}
+
+//功能描述：设置或者取消包周期资源到期转按需
+func (c *BssClient) UpdatePeriodToOnDemand(request *model.UpdatePeriodToOnDemandRequest) (*model.UpdatePeriodToOnDemandResponse, error) {
+	requestDef := GenReqDefForUpdatePeriodToOnDemand()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePeriodToOnDemandResponse), nil
 	}
 }
 
@@ -781,7 +803,7 @@ func (c *BssClient) UpdateIndirectPartnerAccount(request *model.UpdateIndirectPa
 func (c *BssClient) UpdatePostal(request *model.UpdatePostalRequest) (*model.UpdatePostalResponse, error) {
 	requestDef := GenReqDefForUpdatePostal()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePostalResponse), nil
@@ -792,7 +814,7 @@ func (c *BssClient) UpdatePostal(request *model.UpdatePostalRequest) (*model.Upd
 func (c *BssClient) UpdateSubEnterpriseAmount(request *model.UpdateSubEnterpriseAmountRequest) (*model.UpdateSubEnterpriseAmountResponse, error) {
 	requestDef := GenReqDefForUpdateSubEnterpriseAmount()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateSubEnterpriseAmountResponse), nil

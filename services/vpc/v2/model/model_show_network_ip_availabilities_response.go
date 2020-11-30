@@ -16,6 +16,7 @@ import (
 // Response Object
 type ShowNetworkIpAvailabilitiesResponse struct {
 	NetworkIpAvailability *NetworkIpAvailability `json:"network_ip_availability,omitempty"`
+	HttpStatusCode        int                    `json:"-"`
 }
 
 func (o ShowNetworkIpAvailabilitiesResponse) String() string {

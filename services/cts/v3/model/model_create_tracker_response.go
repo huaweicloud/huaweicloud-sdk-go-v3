@@ -41,6 +41,7 @@ type CreateTrackerResponse struct {
 	IsSupportTraceFilesEncryption *bool            `json:"is_support_trace_files_encryption,omitempty"`
 	ObsInfo                       *ObsInfo         `json:"obs_info,omitempty"`
 	DataBucket                    *DataBucketQuery `json:"data_bucket,omitempty"`
+	HttpStatusCode                int              `json:"-"`
 }
 
 func (o CreateTrackerResponse) String() string {

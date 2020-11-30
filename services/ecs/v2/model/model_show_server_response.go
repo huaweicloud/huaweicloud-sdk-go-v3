@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowServerResponse struct {
-	Server *ServerDetail `json:"server,omitempty"`
+	Server         *ServerDetail `json:"server,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ShowServerResponse) String() string {

@@ -18,7 +18,8 @@ type RemovePipelineResponse struct {
 	// 流水线ID
 	PipelineId *string `json:"pipeline_id,omitempty"`
 	// 流水线名字
-	PipelineName *string `json:"pipeline_name,omitempty"`
+	PipelineName   *string `json:"pipeline_name,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RemovePipelineResponse) String() string {

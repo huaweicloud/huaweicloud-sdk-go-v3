@@ -28,7 +28,8 @@ type ShowJobDetailResponse struct {
 	// 老师手动评分人数
 	ScoreJobNum *int32 `json:"score_job_num,omitempty"`
 	// 作业提交人数
-	SubmitJobNum *int32 `json:"submit_job_num,omitempty"`
+	SubmitJobNum   *int32 `json:"submit_job_num,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowJobDetailResponse) String() string {

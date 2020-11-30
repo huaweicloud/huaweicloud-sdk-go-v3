@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type UpdatePolicyResponse struct {
-	Policy *Policy `json:"policy,omitempty"`
+	Policy         *Policy `json:"policy,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdatePolicyResponse) String() string {

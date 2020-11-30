@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type UpdateNickNameV4Response struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateNickNameV4Response) String() string {

@@ -16,7 +16,8 @@ import (
 // Response Object
 type BatchRestartOrDeleteInstancesResponse struct {
 	// 修改实例的结果。
-	Results *[]BatchRestartOrDeleteInstanceRespResults `json:"results,omitempty"`
+	Results        *[]BatchRestartOrDeleteInstanceRespResults `json:"results,omitempty"`
+	HttpStatusCode int                                        `json:"-"`
 }
 
 func (o BatchRestartOrDeleteInstancesResponse) String() string {

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type AutoRenewalResourcesResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o AutoRenewalResourcesResponse) String() string {

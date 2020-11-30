@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreatePublicipResponse struct {
-	Publicip *PublicipCreateResp `json:"publicip,omitempty"`
+	Publicip       *PublicipCreateResp `json:"publicip,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o CreatePublicipResponse) String() string {

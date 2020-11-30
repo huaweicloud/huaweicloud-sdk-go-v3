@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type CreateTrackerConfigResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CreateTrackerConfigResponse) String() string {

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type UpdateInstanceAutoCreateTopicResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateInstanceAutoCreateTopicResponse) String() string {

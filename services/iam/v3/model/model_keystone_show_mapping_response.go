@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type KeystoneShowMappingResponse struct {
-	Mapping *MappingResult `json:"mapping,omitempty"`
+	Mapping        *MappingResult `json:"mapping,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o KeystoneShowMappingResponse) String() string {

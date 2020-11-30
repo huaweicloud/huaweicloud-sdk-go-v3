@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type KeystoneUpdateGroupResponse struct {
-	Group *KeystoneGroupResultWithLinksSelf `json:"group,omitempty"`
+	Group          *KeystoneGroupResultWithLinksSelf `json:"group,omitempty"`
+	HttpStatusCode int                               `json:"-"`
 }
 
 func (o KeystoneUpdateGroupResponse) String() string {

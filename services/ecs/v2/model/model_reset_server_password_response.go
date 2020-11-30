@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type ResetServerPasswordResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o ResetServerPasswordResponse) String() string {

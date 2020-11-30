@@ -20,6 +20,7 @@ type ListHealthMonitorsResponse struct {
 	PageInfo  *PageInfo `json:"page_info,omitempty"`
 	// 健康检查对象。
 	Healthmonitors *[]HealthMonitor `json:"healthmonitors,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ListHealthMonitorsResponse) String() string {

@@ -16,7 +16,8 @@ import (
 // Response Object
 type CreateEventsResponse struct {
 	// 响应参数。
-	Body *[]CreateEventsResponseBody `json:"body,omitempty"`
+	Body           *[]CreateEventsResponseBody `json:"body,omitempty"`
+	HttpStatusCode int                         `json:"-"`
 }
 
 func (o CreateEventsResponse) String() string {

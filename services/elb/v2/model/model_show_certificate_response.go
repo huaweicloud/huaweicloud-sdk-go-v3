@@ -39,7 +39,8 @@ type ShowCertificateResponse struct {
 	// SSL证书的创建时间。 UTC时间，格式为：yyyy-MM-dd HH:mm:ss ，如2020-05-28 08:30:09
 	CreateTime *string `json:"create_time,omitempty"`
 	// SSL证书的更新时间。 UTC时间，格式为：yyyy-MM-dd HH:mm:ss ，如2020-05-28 08:30:09
-	UpdateTime *string `json:"update_time,omitempty"`
+	UpdateTime     *string `json:"update_time,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowCertificateResponse) String() string {

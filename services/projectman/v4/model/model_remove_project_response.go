@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type RemoveProjectResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o RemoveProjectResponse) String() string {

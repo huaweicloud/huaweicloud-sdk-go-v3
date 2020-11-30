@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteImportedKeyMaterialResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteImportedKeyMaterialResponse) String() string {

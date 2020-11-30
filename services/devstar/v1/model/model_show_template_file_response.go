@@ -24,7 +24,8 @@ type ShowTemplateFileResponse struct {
 	// 文件相对路径
 	FilePath *string `json:"file_path,omitempty"`
 	// 文件类型
-	FileType *string `json:"file_type,omitempty"`
+	FileType       *string `json:"file_type,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowTemplateFileResponse) String() string {

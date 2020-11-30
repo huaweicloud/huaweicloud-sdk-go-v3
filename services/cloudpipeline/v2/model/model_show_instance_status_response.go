@@ -24,7 +24,8 @@ type ShowInstanceStatusResponse struct {
 	// 流水线名字
 	PipelineName *string `json:"pipeline_name,omitempty"`
 	// 流水线详情页面url
-	PipelineUrl *string `json:"pipeline_url,omitempty"`
+	PipelineUrl    *string `json:"pipeline_url,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowInstanceStatusResponse) String() string {

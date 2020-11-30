@@ -26,7 +26,8 @@ type GlanceShowImageMemberResponse struct {
 	// 成员ID
 	MemberId *string `json:"member_id,omitempty"`
 	// 共享视图
-	Schema *string `json:"schema,omitempty"`
+	Schema         *string `json:"schema,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o GlanceShowImageMemberResponse) String() string {

@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreatePasswordAuthResponse struct {
-	Authorization *AuthorizationVo `json:"authorization,omitempty"`
+	Authorization  *AuthorizationVo `json:"authorization,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o CreatePasswordAuthResponse) String() string {

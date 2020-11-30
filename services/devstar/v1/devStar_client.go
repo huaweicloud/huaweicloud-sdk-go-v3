@@ -6,11 +6,11 @@ import (
 )
 
 type DevStarClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewDevStarClient(hcClient *http_client.HcHttpClient) *DevStarClient {
-	return &DevStarClient{hcClient: hcClient}
+	return &DevStarClient{HcClient: hcClient}
 }
 
 func DevStarClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func DevStarClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *DevStarClient) DownloadApplicationCode(request *model.DownloadApplicationCodeRequest) (*model.DownloadApplicationCodeResponse, error) {
 	requestDef := GenReqDefForDownloadApplicationCode()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DownloadApplicationCodeResponse), nil
@@ -33,7 +33,7 @@ func (c *DevStarClient) DownloadApplicationCode(request *model.DownloadApplicati
 func (c *DevStarClient) RunCodehubTemplateJob(request *model.RunCodehubTemplateJobRequest) (*model.RunCodehubTemplateJobResponse, error) {
 	requestDef := GenReqDefForRunCodehubTemplateJob()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RunCodehubTemplateJobResponse), nil
@@ -44,7 +44,7 @@ func (c *DevStarClient) RunCodehubTemplateJob(request *model.RunCodehubTemplateJ
 func (c *DevStarClient) RunDevstarTemplateJob(request *model.RunDevstarTemplateJobRequest) (*model.RunDevstarTemplateJobResponse, error) {
 	requestDef := GenReqDefForRunDevstarTemplateJob()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RunDevstarTemplateJobResponse), nil
@@ -55,7 +55,7 @@ func (c *DevStarClient) RunDevstarTemplateJob(request *model.RunDevstarTemplateJ
 func (c *DevStarClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*model.ShowJobDetailResponse, error) {
 	requestDef := GenReqDefForShowJobDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowJobDetailResponse), nil
@@ -66,7 +66,7 @@ func (c *DevStarClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*mod
 func (c *DevStarClient) ShowTemplateFile(request *model.ShowTemplateFileRequest) (*model.ShowTemplateFileResponse, error) {
 	requestDef := GenReqDefForShowTemplateFile()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowTemplateFileResponse), nil
@@ -77,7 +77,7 @@ func (c *DevStarClient) ShowTemplateFile(request *model.ShowTemplateFileRequest)
 func (c *DevStarClient) CreateTemplateViewHistories(request *model.CreateTemplateViewHistoriesRequest) (*model.CreateTemplateViewHistoriesResponse, error) {
 	requestDef := GenReqDefForCreateTemplateViewHistories()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateTemplateViewHistoriesResponse), nil
@@ -88,7 +88,7 @@ func (c *DevStarClient) CreateTemplateViewHistories(request *model.CreateTemplat
 func (c *DevStarClient) ListPublishedTemplates(request *model.ListPublishedTemplatesRequest) (*model.ListPublishedTemplatesResponse, error) {
 	requestDef := GenReqDefForListPublishedTemplates()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPublishedTemplatesResponse), nil
@@ -99,7 +99,7 @@ func (c *DevStarClient) ListPublishedTemplates(request *model.ListPublishedTempl
 func (c *DevStarClient) ListTemplateViewHistories(request *model.ListTemplateViewHistoriesRequest) (*model.ListTemplateViewHistoriesResponse, error) {
 	requestDef := GenReqDefForListTemplateViewHistories()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListTemplateViewHistoriesResponse), nil
@@ -110,7 +110,7 @@ func (c *DevStarClient) ListTemplateViewHistories(request *model.ListTemplateVie
 func (c *DevStarClient) ListTemplatesV2(request *model.ListTemplatesV2Request) (*model.ListTemplatesV2Response, error) {
 	requestDef := GenReqDefForListTemplatesV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListTemplatesV2Response), nil
@@ -121,7 +121,7 @@ func (c *DevStarClient) ListTemplatesV2(request *model.ListTemplatesV2Request) (
 func (c *DevStarClient) ShowTemplateV3(request *model.ShowTemplateV3Request) (*model.ShowTemplateV3Response, error) {
 	requestDef := GenReqDefForShowTemplateV3()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowTemplateV3Response), nil
@@ -132,7 +132,7 @@ func (c *DevStarClient) ShowTemplateV3(request *model.ShowTemplateV3Request) (*m
 func (c *DevStarClient) ShowTemplateDetail(request *model.ShowTemplateDetailRequest) (*model.ShowTemplateDetailResponse, error) {
 	requestDef := GenReqDefForShowTemplateDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowTemplateDetailResponse), nil

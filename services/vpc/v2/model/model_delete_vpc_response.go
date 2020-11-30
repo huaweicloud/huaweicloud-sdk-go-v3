@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteVpcResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteVpcResponse) String() string {

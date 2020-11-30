@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type KeystoneAssociateGroupWithProjectPermissionResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o KeystoneAssociateGroupWithProjectPermissionResponse) String() string {

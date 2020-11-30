@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type RemovePublicipsFromSharedBandwidthResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o RemovePublicipsFromSharedBandwidthResponse) String() string {

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type CreateVaultTagsResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CreateVaultTagsResponse) String() string {

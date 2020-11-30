@@ -6,11 +6,11 @@ import (
 )
 
 type EipClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewEipClient(hcClient *http_client.HcHttpClient) *EipClient {
-	return &EipClient{hcClient: hcClient}
+	return &EipClient{HcClient: hcClient}
 }
 
 func EipClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func EipClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *EipClient) AddPublicipsIntoSharedBandwidth(request *model.AddPublicipsIntoSharedBandwidthRequest) (*model.AddPublicipsIntoSharedBandwidthResponse, error) {
 	requestDef := GenReqDefForAddPublicipsIntoSharedBandwidth()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AddPublicipsIntoSharedBandwidthResponse), nil
@@ -33,7 +33,7 @@ func (c *EipClient) AddPublicipsIntoSharedBandwidth(request *model.AddPublicipsI
 func (c *EipClient) BatchCreateSharedBandwidths(request *model.BatchCreateSharedBandwidthsRequest) (*model.BatchCreateSharedBandwidthsResponse, error) {
 	requestDef := GenReqDefForBatchCreateSharedBandwidths()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchCreateSharedBandwidthsResponse), nil
@@ -44,7 +44,7 @@ func (c *EipClient) BatchCreateSharedBandwidths(request *model.BatchCreateShared
 func (c *EipClient) CreateSharedBandwidth(request *model.CreateSharedBandwidthRequest) (*model.CreateSharedBandwidthResponse, error) {
 	requestDef := GenReqDefForCreateSharedBandwidth()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateSharedBandwidthResponse), nil
@@ -55,7 +55,7 @@ func (c *EipClient) CreateSharedBandwidth(request *model.CreateSharedBandwidthRe
 func (c *EipClient) DeleteSharedBandwidth(request *model.DeleteSharedBandwidthRequest) (*model.DeleteSharedBandwidthResponse, error) {
 	requestDef := GenReqDefForDeleteSharedBandwidth()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteSharedBandwidthResponse), nil
@@ -66,7 +66,7 @@ func (c *EipClient) DeleteSharedBandwidth(request *model.DeleteSharedBandwidthRe
 func (c *EipClient) ListBandwidths(request *model.ListBandwidthsRequest) (*model.ListBandwidthsResponse, error) {
 	requestDef := GenReqDefForListBandwidths()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListBandwidthsResponse), nil
@@ -77,7 +77,7 @@ func (c *EipClient) ListBandwidths(request *model.ListBandwidthsRequest) (*model
 func (c *EipClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuotasResponse, error) {
 	requestDef := GenReqDefForListQuotas()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListQuotasResponse), nil
@@ -88,7 +88,7 @@ func (c *EipClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuo
 func (c *EipClient) RemovePublicipsFromSharedBandwidth(request *model.RemovePublicipsFromSharedBandwidthRequest) (*model.RemovePublicipsFromSharedBandwidthResponse, error) {
 	requestDef := GenReqDefForRemovePublicipsFromSharedBandwidth()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RemovePublicipsFromSharedBandwidthResponse), nil
@@ -99,7 +99,7 @@ func (c *EipClient) RemovePublicipsFromSharedBandwidth(request *model.RemovePubl
 func (c *EipClient) ShowBandwidth(request *model.ShowBandwidthRequest) (*model.ShowBandwidthResponse, error) {
 	requestDef := GenReqDefForShowBandwidth()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowBandwidthResponse), nil
@@ -110,7 +110,7 @@ func (c *EipClient) ShowBandwidth(request *model.ShowBandwidthRequest) (*model.S
 func (c *EipClient) UpdateBandwidth(request *model.UpdateBandwidthRequest) (*model.UpdateBandwidthResponse, error) {
 	requestDef := GenReqDefForUpdateBandwidth()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateBandwidthResponse), nil
@@ -121,7 +121,7 @@ func (c *EipClient) UpdateBandwidth(request *model.UpdateBandwidthRequest) (*mod
 func (c *EipClient) UpdatePrePaidBandwidth(request *model.UpdatePrePaidBandwidthRequest) (*model.UpdatePrePaidBandwidthResponse, error) {
 	requestDef := GenReqDefForUpdatePrePaidBandwidth()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePrePaidBandwidthResponse), nil
@@ -132,7 +132,7 @@ func (c *EipClient) UpdatePrePaidBandwidth(request *model.UpdatePrePaidBandwidth
 func (c *EipClient) BatchCreatePublicipTags(request *model.BatchCreatePublicipTagsRequest) (*model.BatchCreatePublicipTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreatePublicipTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchCreatePublicipTagsResponse), nil
@@ -143,7 +143,7 @@ func (c *EipClient) BatchCreatePublicipTags(request *model.BatchCreatePublicipTa
 func (c *EipClient) BatchDeletePublicipTags(request *model.BatchDeletePublicipTagsRequest) (*model.BatchDeletePublicipTagsResponse, error) {
 	requestDef := GenReqDefForBatchDeletePublicipTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchDeletePublicipTagsResponse), nil
@@ -154,7 +154,7 @@ func (c *EipClient) BatchDeletePublicipTags(request *model.BatchDeletePublicipTa
 func (c *EipClient) CreatePrePaidPublicip(request *model.CreatePrePaidPublicipRequest) (*model.CreatePrePaidPublicipResponse, error) {
 	requestDef := GenReqDefForCreatePrePaidPublicip()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePrePaidPublicipResponse), nil
@@ -165,7 +165,7 @@ func (c *EipClient) CreatePrePaidPublicip(request *model.CreatePrePaidPublicipRe
 func (c *EipClient) CreatePublicip(request *model.CreatePublicipRequest) (*model.CreatePublicipResponse, error) {
 	requestDef := GenReqDefForCreatePublicip()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePublicipResponse), nil
@@ -176,7 +176,7 @@ func (c *EipClient) CreatePublicip(request *model.CreatePublicipRequest) (*model
 func (c *EipClient) CreatePublicipTag(request *model.CreatePublicipTagRequest) (*model.CreatePublicipTagResponse, error) {
 	requestDef := GenReqDefForCreatePublicipTag()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePublicipTagResponse), nil
@@ -187,7 +187,7 @@ func (c *EipClient) CreatePublicipTag(request *model.CreatePublicipTagRequest) (
 func (c *EipClient) DeletePublicip(request *model.DeletePublicipRequest) (*model.DeletePublicipResponse, error) {
 	requestDef := GenReqDefForDeletePublicip()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeletePublicipResponse), nil
@@ -198,7 +198,7 @@ func (c *EipClient) DeletePublicip(request *model.DeletePublicipRequest) (*model
 func (c *EipClient) DeletePublicipTag(request *model.DeletePublicipTagRequest) (*model.DeletePublicipTagResponse, error) {
 	requestDef := GenReqDefForDeletePublicipTag()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeletePublicipTagResponse), nil
@@ -209,7 +209,7 @@ func (c *EipClient) DeletePublicipTag(request *model.DeletePublicipTagRequest) (
 func (c *EipClient) ListPublicipTags(request *model.ListPublicipTagsRequest) (*model.ListPublicipTagsResponse, error) {
 	requestDef := GenReqDefForListPublicipTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPublicipTagsResponse), nil
@@ -220,7 +220,7 @@ func (c *EipClient) ListPublicipTags(request *model.ListPublicipTagsRequest) (*m
 func (c *EipClient) ListPublicips(request *model.ListPublicipsRequest) (*model.ListPublicipsResponse, error) {
 	requestDef := GenReqDefForListPublicips()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPublicipsResponse), nil
@@ -231,7 +231,7 @@ func (c *EipClient) ListPublicips(request *model.ListPublicipsRequest) (*model.L
 func (c *EipClient) ListPublicipsByTags(request *model.ListPublicipsByTagsRequest) (*model.ListPublicipsByTagsResponse, error) {
 	requestDef := GenReqDefForListPublicipsByTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPublicipsByTagsResponse), nil
@@ -242,7 +242,7 @@ func (c *EipClient) ListPublicipsByTags(request *model.ListPublicipsByTagsReques
 func (c *EipClient) ShowPublicip(request *model.ShowPublicipRequest) (*model.ShowPublicipResponse, error) {
 	requestDef := GenReqDefForShowPublicip()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowPublicipResponse), nil
@@ -253,7 +253,7 @@ func (c *EipClient) ShowPublicip(request *model.ShowPublicipRequest) (*model.Sho
 func (c *EipClient) ShowPublicipTags(request *model.ShowPublicipTagsRequest) (*model.ShowPublicipTagsResponse, error) {
 	requestDef := GenReqDefForShowPublicipTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowPublicipTagsResponse), nil
@@ -264,7 +264,7 @@ func (c *EipClient) ShowPublicipTags(request *model.ShowPublicipTagsRequest) (*m
 func (c *EipClient) UpdatePublicip(request *model.UpdatePublicipRequest) (*model.UpdatePublicipResponse, error) {
 	requestDef := GenReqDefForUpdatePublicip()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePublicipResponse), nil
@@ -275,7 +275,7 @@ func (c *EipClient) UpdatePublicip(request *model.UpdatePublicipRequest) (*model
 func (c *EipClient) NeutronCreateFloatingIp(request *model.NeutronCreateFloatingIpRequest) (*model.NeutronCreateFloatingIpResponse, error) {
 	requestDef := GenReqDefForNeutronCreateFloatingIp()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronCreateFloatingIpResponse), nil
@@ -286,7 +286,7 @@ func (c *EipClient) NeutronCreateFloatingIp(request *model.NeutronCreateFloating
 func (c *EipClient) NeutronDeleteFloatingIp(request *model.NeutronDeleteFloatingIpRequest) (*model.NeutronDeleteFloatingIpResponse, error) {
 	requestDef := GenReqDefForNeutronDeleteFloatingIp()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronDeleteFloatingIpResponse), nil
@@ -297,7 +297,7 @@ func (c *EipClient) NeutronDeleteFloatingIp(request *model.NeutronDeleteFloating
 func (c *EipClient) NeutronListFloatingIps(request *model.NeutronListFloatingIpsRequest) (*model.NeutronListFloatingIpsResponse, error) {
 	requestDef := GenReqDefForNeutronListFloatingIps()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronListFloatingIpsResponse), nil
@@ -308,7 +308,7 @@ func (c *EipClient) NeutronListFloatingIps(request *model.NeutronListFloatingIps
 func (c *EipClient) NeutronShowFloatingIp(request *model.NeutronShowFloatingIpRequest) (*model.NeutronShowFloatingIpResponse, error) {
 	requestDef := GenReqDefForNeutronShowFloatingIp()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronShowFloatingIpResponse), nil
@@ -319,7 +319,7 @@ func (c *EipClient) NeutronShowFloatingIp(request *model.NeutronShowFloatingIpRe
 func (c *EipClient) NeutronUpdateFloatingIp(request *model.NeutronUpdateFloatingIpRequest) (*model.NeutronUpdateFloatingIpResponse, error) {
 	requestDef := GenReqDefForNeutronUpdateFloatingIp()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronUpdateFloatingIpResponse), nil

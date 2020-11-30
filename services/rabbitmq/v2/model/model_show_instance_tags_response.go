@@ -16,7 +16,8 @@ import (
 // Response Object
 type ShowInstanceTagsResponse struct {
 	// 标签列表
-	Tags *[]CreateInstanceReqTags `json:"tags,omitempty"`
+	Tags           *[]CreateInstanceReqTags `json:"tags,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o ShowInstanceTagsResponse) String() string {

@@ -34,7 +34,8 @@ type ShowCurUserInfoResponse struct {
 	// 性别
 	Gender *string `json:"gender,omitempty"`
 	// 用户类型 User 云用户 Federation 联邦账号
-	UserType *string `json:"user_type,omitempty"`
+	UserType       *string `json:"user_type,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowCurUserInfoResponse) String() string {

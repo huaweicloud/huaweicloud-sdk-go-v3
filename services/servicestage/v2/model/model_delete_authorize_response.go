@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteAuthorizeResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteAuthorizeResponse) String() string {

@@ -30,7 +30,8 @@ type ShowJobResponse struct {
 	// job执行失败时的错误码。
 	ErrorCode *string `json:"error_code,omitempty"`
 	// job执行失败时的错误原因。
-	FailReason *string `json:"fail_reason,omitempty"`
+	FailReason     *string `json:"fail_reason,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowJobResponse) String() string {

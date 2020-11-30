@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type UpdateMembesRoleV4Response struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateMembesRoleV4Response) String() string {

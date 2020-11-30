@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type CheckDomainPermissionForAgencyResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CheckDomainPermissionForAgencyResponse) String() string {

@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowDomainApiAclPolicyResponse struct {
-	ApiAclPolicy *AclPolicyResult `json:"api_acl_policy,omitempty"`
+	ApiAclPolicy   *AclPolicyResult `json:"api_acl_policy,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ShowDomainApiAclPolicyResponse) String() string {

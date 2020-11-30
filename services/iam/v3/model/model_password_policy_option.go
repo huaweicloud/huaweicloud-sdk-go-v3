@@ -27,6 +27,8 @@ type PasswordPolicyOption struct {
 	PasswordNotUsernameOrInvert bool `json:"password_not_username_or_invert"`
 	// 密码有效期（天），取值范围[0,180]，设置0表示关闭该策略。
 	PasswordValidityPeriod int32 `json:"password_validity_period"`
+	// 至少包含字符种类的个数，取值区间[2,4]。
+	PasswordCharCombination int32 `json:"password_char_combination"`
 }
 
 func (o PasswordPolicyOption) String() string {

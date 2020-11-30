@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type AssociateAgencyWithAllProjectsPermissionResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o AssociateAgencyWithAllProjectsPermissionResponse) String() string {

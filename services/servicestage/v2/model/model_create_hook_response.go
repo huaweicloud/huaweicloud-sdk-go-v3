@@ -20,7 +20,8 @@ type CreateHookResponse struct {
 	// hook类型。
 	Type *string `json:"type,omitempty"`
 	// 回滚URL。
-	CallbackUrl *string `json:"callback_url,omitempty"`
+	CallbackUrl    *string `json:"callback_url,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateHookResponse) String() string {

@@ -92,7 +92,8 @@ type UpdateApiV2Response struct {
 	PolicyMocks *[]ApiPolicyMockResp `json:"policy_mocks,omitempty"`
 	BackendApi  *BackendApi          `json:"backend_api,omitempty"`
 	// web策略后端列表
-	PolicyHttps *[]ApiPolicyHttpResp `json:"policy_https,omitempty"`
+	PolicyHttps    *[]ApiPolicyHttpResp `json:"policy_https,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o UpdateApiV2Response) String() string {

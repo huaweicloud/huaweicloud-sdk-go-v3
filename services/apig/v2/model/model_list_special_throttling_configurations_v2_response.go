@@ -21,6 +21,7 @@ type ListSpecialThrottlingConfigurationsV2Response struct {
 	Size *int32 `json:"size,omitempty"`
 	// 本次查询返回的特殊配置列表
 	ThrottleSpecials *[]ThrottleSpecialResp `json:"throttle_specials,omitempty"`
+	HttpStatusCode   int                    `json:"-"`
 }
 
 func (o ListSpecialThrottlingConfigurationsV2Response) String() string {

@@ -16,7 +16,8 @@ import (
 // Response Object
 type ListVolumeTagsResponse struct {
 	// 所有云硬盘的标签信息
-	Tags map[string][]string `json:"tags,omitempty"`
+	Tags           map[string][]string `json:"tags,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o ListVolumeTagsResponse) String() string {

@@ -6,11 +6,11 @@ import (
 )
 
 type ElbClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewElbClient(hcClient *http_client.HcHttpClient) *ElbClient {
-	return &ElbClient{hcClient: hcClient}
+	return &ElbClient{HcClient: hcClient}
 }
 
 func ElbClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func ElbClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *ElbClient) CreateHealthmonitor(request *model.CreateHealthmonitorRequest) (*model.CreateHealthmonitorResponse, error) {
 	requestDef := GenReqDefForCreateHealthmonitor()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateHealthmonitorResponse), nil
@@ -33,7 +33,7 @@ func (c *ElbClient) CreateHealthmonitor(request *model.CreateHealthmonitorReques
 func (c *ElbClient) CreateL7policy(request *model.CreateL7policyRequest) (*model.CreateL7policyResponse, error) {
 	requestDef := GenReqDefForCreateL7policy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateL7policyResponse), nil
@@ -44,7 +44,7 @@ func (c *ElbClient) CreateL7policy(request *model.CreateL7policyRequest) (*model
 func (c *ElbClient) CreateL7rule(request *model.CreateL7ruleRequest) (*model.CreateL7ruleResponse, error) {
 	requestDef := GenReqDefForCreateL7rule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateL7ruleResponse), nil
@@ -55,7 +55,7 @@ func (c *ElbClient) CreateL7rule(request *model.CreateL7ruleRequest) (*model.Cre
 func (c *ElbClient) CreateListener(request *model.CreateListenerRequest) (*model.CreateListenerResponse, error) {
 	requestDef := GenReqDefForCreateListener()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateListenerResponse), nil
@@ -66,7 +66,7 @@ func (c *ElbClient) CreateListener(request *model.CreateListenerRequest) (*model
 func (c *ElbClient) CreateLoadbalancer(request *model.CreateLoadbalancerRequest) (*model.CreateLoadbalancerResponse, error) {
 	requestDef := GenReqDefForCreateLoadbalancer()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateLoadbalancerResponse), nil
@@ -77,7 +77,7 @@ func (c *ElbClient) CreateLoadbalancer(request *model.CreateLoadbalancerRequest)
 func (c *ElbClient) CreateMember(request *model.CreateMemberRequest) (*model.CreateMemberResponse, error) {
 	requestDef := GenReqDefForCreateMember()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateMemberResponse), nil
@@ -88,7 +88,7 @@ func (c *ElbClient) CreateMember(request *model.CreateMemberRequest) (*model.Cre
 func (c *ElbClient) CreatePool(request *model.CreatePoolRequest) (*model.CreatePoolResponse, error) {
 	requestDef := GenReqDefForCreatePool()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePoolResponse), nil
@@ -99,7 +99,7 @@ func (c *ElbClient) CreatePool(request *model.CreatePoolRequest) (*model.CreateP
 func (c *ElbClient) CreateWhitelist(request *model.CreateWhitelistRequest) (*model.CreateWhitelistResponse, error) {
 	requestDef := GenReqDefForCreateWhitelist()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateWhitelistResponse), nil
@@ -110,7 +110,7 @@ func (c *ElbClient) CreateWhitelist(request *model.CreateWhitelistRequest) (*mod
 func (c *ElbClient) DeleteHealthmonitor(request *model.DeleteHealthmonitorRequest) (*model.DeleteHealthmonitorResponse, error) {
 	requestDef := GenReqDefForDeleteHealthmonitor()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteHealthmonitorResponse), nil
@@ -121,7 +121,7 @@ func (c *ElbClient) DeleteHealthmonitor(request *model.DeleteHealthmonitorReques
 func (c *ElbClient) DeleteL7policy(request *model.DeleteL7policyRequest) (*model.DeleteL7policyResponse, error) {
 	requestDef := GenReqDefForDeleteL7policy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteL7policyResponse), nil
@@ -132,7 +132,7 @@ func (c *ElbClient) DeleteL7policy(request *model.DeleteL7policyRequest) (*model
 func (c *ElbClient) DeleteL7rule(request *model.DeleteL7ruleRequest) (*model.DeleteL7ruleResponse, error) {
 	requestDef := GenReqDefForDeleteL7rule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteL7ruleResponse), nil
@@ -143,7 +143,7 @@ func (c *ElbClient) DeleteL7rule(request *model.DeleteL7ruleRequest) (*model.Del
 func (c *ElbClient) DeleteListener(request *model.DeleteListenerRequest) (*model.DeleteListenerResponse, error) {
 	requestDef := GenReqDefForDeleteListener()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteListenerResponse), nil
@@ -154,7 +154,7 @@ func (c *ElbClient) DeleteListener(request *model.DeleteListenerRequest) (*model
 func (c *ElbClient) DeleteLoadbalancer(request *model.DeleteLoadbalancerRequest) (*model.DeleteLoadbalancerResponse, error) {
 	requestDef := GenReqDefForDeleteLoadbalancer()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteLoadbalancerResponse), nil
@@ -165,7 +165,7 @@ func (c *ElbClient) DeleteLoadbalancer(request *model.DeleteLoadbalancerRequest)
 func (c *ElbClient) DeleteMember(request *model.DeleteMemberRequest) (*model.DeleteMemberResponse, error) {
 	requestDef := GenReqDefForDeleteMember()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteMemberResponse), nil
@@ -176,7 +176,7 @@ func (c *ElbClient) DeleteMember(request *model.DeleteMemberRequest) (*model.Del
 func (c *ElbClient) DeletePool(request *model.DeletePoolRequest) (*model.DeletePoolResponse, error) {
 	requestDef := GenReqDefForDeletePool()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeletePoolResponse), nil
@@ -187,7 +187,7 @@ func (c *ElbClient) DeletePool(request *model.DeletePoolRequest) (*model.DeleteP
 func (c *ElbClient) DeleteWhitelist(request *model.DeleteWhitelistRequest) (*model.DeleteWhitelistResponse, error) {
 	requestDef := GenReqDefForDeleteWhitelist()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteWhitelistResponse), nil
@@ -198,7 +198,7 @@ func (c *ElbClient) DeleteWhitelist(request *model.DeleteWhitelistRequest) (*mod
 func (c *ElbClient) ListHealthmonitors(request *model.ListHealthmonitorsRequest) (*model.ListHealthmonitorsResponse, error) {
 	requestDef := GenReqDefForListHealthmonitors()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListHealthmonitorsResponse), nil
@@ -209,7 +209,7 @@ func (c *ElbClient) ListHealthmonitors(request *model.ListHealthmonitorsRequest)
 func (c *ElbClient) ListL7policies(request *model.ListL7policiesRequest) (*model.ListL7policiesResponse, error) {
 	requestDef := GenReqDefForListL7policies()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListL7policiesResponse), nil
@@ -220,7 +220,7 @@ func (c *ElbClient) ListL7policies(request *model.ListL7policiesRequest) (*model
 func (c *ElbClient) ListL7rules(request *model.ListL7rulesRequest) (*model.ListL7rulesResponse, error) {
 	requestDef := GenReqDefForListL7rules()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListL7rulesResponse), nil
@@ -231,7 +231,7 @@ func (c *ElbClient) ListL7rules(request *model.ListL7rulesRequest) (*model.ListL
 func (c *ElbClient) ListListeners(request *model.ListListenersRequest) (*model.ListListenersResponse, error) {
 	requestDef := GenReqDefForListListeners()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListListenersResponse), nil
@@ -242,7 +242,7 @@ func (c *ElbClient) ListListeners(request *model.ListListenersRequest) (*model.L
 func (c *ElbClient) ListLoadbalancers(request *model.ListLoadbalancersRequest) (*model.ListLoadbalancersResponse, error) {
 	requestDef := GenReqDefForListLoadbalancers()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListLoadbalancersResponse), nil
@@ -253,7 +253,7 @@ func (c *ElbClient) ListLoadbalancers(request *model.ListLoadbalancersRequest) (
 func (c *ElbClient) ListMenbers(request *model.ListMenbersRequest) (*model.ListMenbersResponse, error) {
 	requestDef := GenReqDefForListMenbers()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListMenbersResponse), nil
@@ -264,7 +264,7 @@ func (c *ElbClient) ListMenbers(request *model.ListMenbersRequest) (*model.ListM
 func (c *ElbClient) ListPools(request *model.ListPoolsRequest) (*model.ListPoolsResponse, error) {
 	requestDef := GenReqDefForListPools()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPoolsResponse), nil
@@ -275,7 +275,7 @@ func (c *ElbClient) ListPools(request *model.ListPoolsRequest) (*model.ListPools
 func (c *ElbClient) ListWhitelists(request *model.ListWhitelistsRequest) (*model.ListWhitelistsResponse, error) {
 	requestDef := GenReqDefForListWhitelists()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListWhitelistsResponse), nil
@@ -286,7 +286,7 @@ func (c *ElbClient) ListWhitelists(request *model.ListWhitelistsRequest) (*model
 func (c *ElbClient) ShowHealthmonitors(request *model.ShowHealthmonitorsRequest) (*model.ShowHealthmonitorsResponse, error) {
 	requestDef := GenReqDefForShowHealthmonitors()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowHealthmonitorsResponse), nil
@@ -297,7 +297,7 @@ func (c *ElbClient) ShowHealthmonitors(request *model.ShowHealthmonitorsRequest)
 func (c *ElbClient) ShowL7policy(request *model.ShowL7policyRequest) (*model.ShowL7policyResponse, error) {
 	requestDef := GenReqDefForShowL7policy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowL7policyResponse), nil
@@ -308,7 +308,7 @@ func (c *ElbClient) ShowL7policy(request *model.ShowL7policyRequest) (*model.Sho
 func (c *ElbClient) ShowL7rule(request *model.ShowL7ruleRequest) (*model.ShowL7ruleResponse, error) {
 	requestDef := GenReqDefForShowL7rule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowL7ruleResponse), nil
@@ -319,7 +319,7 @@ func (c *ElbClient) ShowL7rule(request *model.ShowL7ruleRequest) (*model.ShowL7r
 func (c *ElbClient) ShowListener(request *model.ShowListenerRequest) (*model.ShowListenerResponse, error) {
 	requestDef := GenReqDefForShowListener()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowListenerResponse), nil
@@ -330,7 +330,7 @@ func (c *ElbClient) ShowListener(request *model.ShowListenerRequest) (*model.Sho
 func (c *ElbClient) ShowLoadbalancer(request *model.ShowLoadbalancerRequest) (*model.ShowLoadbalancerResponse, error) {
 	requestDef := GenReqDefForShowLoadbalancer()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowLoadbalancerResponse), nil
@@ -341,7 +341,7 @@ func (c *ElbClient) ShowLoadbalancer(request *model.ShowLoadbalancerRequest) (*m
 func (c *ElbClient) ShowLoadbalancersStatus(request *model.ShowLoadbalancersStatusRequest) (*model.ShowLoadbalancersStatusResponse, error) {
 	requestDef := GenReqDefForShowLoadbalancersStatus()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowLoadbalancersStatusResponse), nil
@@ -352,7 +352,7 @@ func (c *ElbClient) ShowLoadbalancersStatus(request *model.ShowLoadbalancersStat
 func (c *ElbClient) ShowMember(request *model.ShowMemberRequest) (*model.ShowMemberResponse, error) {
 	requestDef := GenReqDefForShowMember()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowMemberResponse), nil
@@ -363,7 +363,7 @@ func (c *ElbClient) ShowMember(request *model.ShowMemberRequest) (*model.ShowMem
 func (c *ElbClient) ShowPool(request *model.ShowPoolRequest) (*model.ShowPoolResponse, error) {
 	requestDef := GenReqDefForShowPool()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowPoolResponse), nil
@@ -374,7 +374,7 @@ func (c *ElbClient) ShowPool(request *model.ShowPoolRequest) (*model.ShowPoolRes
 func (c *ElbClient) ShowWhitelist(request *model.ShowWhitelistRequest) (*model.ShowWhitelistResponse, error) {
 	requestDef := GenReqDefForShowWhitelist()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowWhitelistResponse), nil
@@ -385,7 +385,7 @@ func (c *ElbClient) ShowWhitelist(request *model.ShowWhitelistRequest) (*model.S
 func (c *ElbClient) UpdateHealthmonitor(request *model.UpdateHealthmonitorRequest) (*model.UpdateHealthmonitorResponse, error) {
 	requestDef := GenReqDefForUpdateHealthmonitor()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateHealthmonitorResponse), nil
@@ -396,7 +396,7 @@ func (c *ElbClient) UpdateHealthmonitor(request *model.UpdateHealthmonitorReques
 func (c *ElbClient) UpdateL7policies(request *model.UpdateL7policiesRequest) (*model.UpdateL7policiesResponse, error) {
 	requestDef := GenReqDefForUpdateL7policies()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateL7policiesResponse), nil
@@ -407,7 +407,7 @@ func (c *ElbClient) UpdateL7policies(request *model.UpdateL7policiesRequest) (*m
 func (c *ElbClient) UpdateL7rule(request *model.UpdateL7ruleRequest) (*model.UpdateL7ruleResponse, error) {
 	requestDef := GenReqDefForUpdateL7rule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateL7ruleResponse), nil
@@ -418,7 +418,7 @@ func (c *ElbClient) UpdateL7rule(request *model.UpdateL7ruleRequest) (*model.Upd
 func (c *ElbClient) UpdateListener(request *model.UpdateListenerRequest) (*model.UpdateListenerResponse, error) {
 	requestDef := GenReqDefForUpdateListener()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateListenerResponse), nil
@@ -429,7 +429,7 @@ func (c *ElbClient) UpdateListener(request *model.UpdateListenerRequest) (*model
 func (c *ElbClient) UpdateLoadbalancer(request *model.UpdateLoadbalancerRequest) (*model.UpdateLoadbalancerResponse, error) {
 	requestDef := GenReqDefForUpdateLoadbalancer()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateLoadbalancerResponse), nil
@@ -440,7 +440,7 @@ func (c *ElbClient) UpdateLoadbalancer(request *model.UpdateLoadbalancerRequest)
 func (c *ElbClient) UpdateMember(request *model.UpdateMemberRequest) (*model.UpdateMemberResponse, error) {
 	requestDef := GenReqDefForUpdateMember()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateMemberResponse), nil
@@ -451,7 +451,7 @@ func (c *ElbClient) UpdateMember(request *model.UpdateMemberRequest) (*model.Upd
 func (c *ElbClient) UpdatePool(request *model.UpdatePoolRequest) (*model.UpdatePoolResponse, error) {
 	requestDef := GenReqDefForUpdatePool()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePoolResponse), nil
@@ -462,7 +462,7 @@ func (c *ElbClient) UpdatePool(request *model.UpdatePoolRequest) (*model.UpdateP
 func (c *ElbClient) UpdateWhitelist(request *model.UpdateWhitelistRequest) (*model.UpdateWhitelistResponse, error) {
 	requestDef := GenReqDefForUpdateWhitelist()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateWhitelistResponse), nil
@@ -473,7 +473,7 @@ func (c *ElbClient) UpdateWhitelist(request *model.UpdateWhitelistRequest) (*mod
 func (c *ElbClient) CreateCertificate(request *model.CreateCertificateRequest) (*model.CreateCertificateResponse, error) {
 	requestDef := GenReqDefForCreateCertificate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateCertificateResponse), nil
@@ -484,7 +484,7 @@ func (c *ElbClient) CreateCertificate(request *model.CreateCertificateRequest) (
 func (c *ElbClient) DeleteCertificate(request *model.DeleteCertificateRequest) (*model.DeleteCertificateResponse, error) {
 	requestDef := GenReqDefForDeleteCertificate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteCertificateResponse), nil
@@ -495,7 +495,7 @@ func (c *ElbClient) DeleteCertificate(request *model.DeleteCertificateRequest) (
 func (c *ElbClient) ListCertificates(request *model.ListCertificatesRequest) (*model.ListCertificatesResponse, error) {
 	requestDef := GenReqDefForListCertificates()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListCertificatesResponse), nil
@@ -506,7 +506,7 @@ func (c *ElbClient) ListCertificates(request *model.ListCertificatesRequest) (*m
 func (c *ElbClient) ShowCertificate(request *model.ShowCertificateRequest) (*model.ShowCertificateResponse, error) {
 	requestDef := GenReqDefForShowCertificate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowCertificateResponse), nil
@@ -517,7 +517,7 @@ func (c *ElbClient) ShowCertificate(request *model.ShowCertificateRequest) (*mod
 func (c *ElbClient) UpdateCertificate(request *model.UpdateCertificateRequest) (*model.UpdateCertificateResponse, error) {
 	requestDef := GenReqDefForUpdateCertificate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateCertificateResponse), nil

@@ -6,11 +6,11 @@ import (
 )
 
 type KmsClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewKmsClient(hcClient *http_client.HcHttpClient) *KmsClient {
-	return &KmsClient{hcClient: hcClient}
+	return &KmsClient{HcClient: hcClient}
 }
 
 func KmsClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func KmsClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *KmsClient) BatchCreateKmsTags(request *model.BatchCreateKmsTagsRequest) (*model.BatchCreateKmsTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateKmsTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchCreateKmsTagsResponse), nil
@@ -33,7 +33,7 @@ func (c *KmsClient) BatchCreateKmsTags(request *model.BatchCreateKmsTagsRequest)
 func (c *KmsClient) CancelGrant(request *model.CancelGrantRequest) (*model.CancelGrantResponse, error) {
 	requestDef := GenReqDefForCancelGrant()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CancelGrantResponse), nil
@@ -44,7 +44,7 @@ func (c *KmsClient) CancelGrant(request *model.CancelGrantRequest) (*model.Cance
 func (c *KmsClient) CancelKeyDeletion(request *model.CancelKeyDeletionRequest) (*model.CancelKeyDeletionResponse, error) {
 	requestDef := GenReqDefForCancelKeyDeletion()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CancelKeyDeletionResponse), nil
@@ -55,7 +55,7 @@ func (c *KmsClient) CancelKeyDeletion(request *model.CancelKeyDeletionRequest) (
 func (c *KmsClient) CancelSelfGrant(request *model.CancelSelfGrantRequest) (*model.CancelSelfGrantResponse, error) {
 	requestDef := GenReqDefForCancelSelfGrant()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CancelSelfGrantResponse), nil
@@ -66,7 +66,7 @@ func (c *KmsClient) CancelSelfGrant(request *model.CancelSelfGrantRequest) (*mod
 func (c *KmsClient) CreateDatakey(request *model.CreateDatakeyRequest) (*model.CreateDatakeyResponse, error) {
 	requestDef := GenReqDefForCreateDatakey()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateDatakeyResponse), nil
@@ -77,7 +77,7 @@ func (c *KmsClient) CreateDatakey(request *model.CreateDatakeyRequest) (*model.C
 func (c *KmsClient) CreateDatakeyWithoutPlaintext(request *model.CreateDatakeyWithoutPlaintextRequest) (*model.CreateDatakeyWithoutPlaintextResponse, error) {
 	requestDef := GenReqDefForCreateDatakeyWithoutPlaintext()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateDatakeyWithoutPlaintextResponse), nil
@@ -88,7 +88,7 @@ func (c *KmsClient) CreateDatakeyWithoutPlaintext(request *model.CreateDatakeyWi
 func (c *KmsClient) CreateGrant(request *model.CreateGrantRequest) (*model.CreateGrantResponse, error) {
 	requestDef := GenReqDefForCreateGrant()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateGrantResponse), nil
@@ -99,7 +99,7 @@ func (c *KmsClient) CreateGrant(request *model.CreateGrantRequest) (*model.Creat
 func (c *KmsClient) CreateKey(request *model.CreateKeyRequest) (*model.CreateKeyResponse, error) {
 	requestDef := GenReqDefForCreateKey()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateKeyResponse), nil
@@ -110,7 +110,7 @@ func (c *KmsClient) CreateKey(request *model.CreateKeyRequest) (*model.CreateKey
 func (c *KmsClient) CreateKmsTag(request *model.CreateKmsTagRequest) (*model.CreateKmsTagResponse, error) {
 	requestDef := GenReqDefForCreateKmsTag()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateKmsTagResponse), nil
@@ -121,7 +121,7 @@ func (c *KmsClient) CreateKmsTag(request *model.CreateKmsTagRequest) (*model.Cre
 func (c *KmsClient) CreateParametersForImport(request *model.CreateParametersForImportRequest) (*model.CreateParametersForImportResponse, error) {
 	requestDef := GenReqDefForCreateParametersForImport()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateParametersForImportResponse), nil
@@ -132,7 +132,7 @@ func (c *KmsClient) CreateParametersForImport(request *model.CreateParametersFor
 func (c *KmsClient) CreateRandom(request *model.CreateRandomRequest) (*model.CreateRandomResponse, error) {
 	requestDef := GenReqDefForCreateRandom()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateRandomResponse), nil
@@ -143,7 +143,7 @@ func (c *KmsClient) CreateRandom(request *model.CreateRandomRequest) (*model.Cre
 func (c *KmsClient) DecryptData(request *model.DecryptDataRequest) (*model.DecryptDataResponse, error) {
 	requestDef := GenReqDefForDecryptData()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DecryptDataResponse), nil
@@ -154,7 +154,7 @@ func (c *KmsClient) DecryptData(request *model.DecryptDataRequest) (*model.Decry
 func (c *KmsClient) DecryptDatakey(request *model.DecryptDatakeyRequest) (*model.DecryptDatakeyResponse, error) {
 	requestDef := GenReqDefForDecryptDatakey()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DecryptDatakeyResponse), nil
@@ -165,7 +165,7 @@ func (c *KmsClient) DecryptDatakey(request *model.DecryptDatakeyRequest) (*model
 func (c *KmsClient) DeleteImportedKeyMaterial(request *model.DeleteImportedKeyMaterialRequest) (*model.DeleteImportedKeyMaterialResponse, error) {
 	requestDef := GenReqDefForDeleteImportedKeyMaterial()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteImportedKeyMaterialResponse), nil
@@ -176,7 +176,7 @@ func (c *KmsClient) DeleteImportedKeyMaterial(request *model.DeleteImportedKeyMa
 func (c *KmsClient) DeleteKey(request *model.DeleteKeyRequest) (*model.DeleteKeyResponse, error) {
 	requestDef := GenReqDefForDeleteKey()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteKeyResponse), nil
@@ -187,7 +187,7 @@ func (c *KmsClient) DeleteKey(request *model.DeleteKeyRequest) (*model.DeleteKey
 func (c *KmsClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
 	requestDef := GenReqDefForDeleteTag()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteTagResponse), nil
@@ -198,7 +198,7 @@ func (c *KmsClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTag
 func (c *KmsClient) DisableKey(request *model.DisableKeyRequest) (*model.DisableKeyResponse, error) {
 	requestDef := GenReqDefForDisableKey()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DisableKeyResponse), nil
@@ -209,7 +209,7 @@ func (c *KmsClient) DisableKey(request *model.DisableKeyRequest) (*model.Disable
 func (c *KmsClient) DisableKeyRotation(request *model.DisableKeyRotationRequest) (*model.DisableKeyRotationResponse, error) {
 	requestDef := GenReqDefForDisableKeyRotation()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DisableKeyRotationResponse), nil
@@ -220,7 +220,7 @@ func (c *KmsClient) DisableKeyRotation(request *model.DisableKeyRotationRequest)
 func (c *KmsClient) EnableKey(request *model.EnableKeyRequest) (*model.EnableKeyResponse, error) {
 	requestDef := GenReqDefForEnableKey()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.EnableKeyResponse), nil
@@ -231,7 +231,7 @@ func (c *KmsClient) EnableKey(request *model.EnableKeyRequest) (*model.EnableKey
 func (c *KmsClient) EnableKeyRotation(request *model.EnableKeyRotationRequest) (*model.EnableKeyRotationResponse, error) {
 	requestDef := GenReqDefForEnableKeyRotation()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.EnableKeyRotationResponse), nil
@@ -242,7 +242,7 @@ func (c *KmsClient) EnableKeyRotation(request *model.EnableKeyRotationRequest) (
 func (c *KmsClient) EncryptData(request *model.EncryptDataRequest) (*model.EncryptDataResponse, error) {
 	requestDef := GenReqDefForEncryptData()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.EncryptDataResponse), nil
@@ -253,7 +253,7 @@ func (c *KmsClient) EncryptData(request *model.EncryptDataRequest) (*model.Encry
 func (c *KmsClient) EncryptDatakey(request *model.EncryptDatakeyRequest) (*model.EncryptDatakeyResponse, error) {
 	requestDef := GenReqDefForEncryptDatakey()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.EncryptDatakeyResponse), nil
@@ -264,7 +264,7 @@ func (c *KmsClient) EncryptDatakey(request *model.EncryptDatakeyRequest) (*model
 func (c *KmsClient) ImportKeyMaterial(request *model.ImportKeyMaterialRequest) (*model.ImportKeyMaterialResponse, error) {
 	requestDef := GenReqDefForImportKeyMaterial()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ImportKeyMaterialResponse), nil
@@ -275,7 +275,7 @@ func (c *KmsClient) ImportKeyMaterial(request *model.ImportKeyMaterialRequest) (
 func (c *KmsClient) ListGrants(request *model.ListGrantsRequest) (*model.ListGrantsResponse, error) {
 	requestDef := GenReqDefForListGrants()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListGrantsResponse), nil
@@ -286,7 +286,7 @@ func (c *KmsClient) ListGrants(request *model.ListGrantsRequest) (*model.ListGra
 func (c *KmsClient) ListKeyDetail(request *model.ListKeyDetailRequest) (*model.ListKeyDetailResponse, error) {
 	requestDef := GenReqDefForListKeyDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListKeyDetailResponse), nil
@@ -297,7 +297,7 @@ func (c *KmsClient) ListKeyDetail(request *model.ListKeyDetailRequest) (*model.L
 func (c *KmsClient) ListKeys(request *model.ListKeysRequest) (*model.ListKeysResponse, error) {
 	requestDef := GenReqDefForListKeys()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListKeysResponse), nil
@@ -308,7 +308,7 @@ func (c *KmsClient) ListKeys(request *model.ListKeysRequest) (*model.ListKeysRes
 func (c *KmsClient) ListKmsByTags(request *model.ListKmsByTagsRequest) (*model.ListKmsByTagsResponse, error) {
 	requestDef := GenReqDefForListKmsByTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListKmsByTagsResponse), nil
@@ -319,7 +319,7 @@ func (c *KmsClient) ListKmsByTags(request *model.ListKmsByTagsRequest) (*model.L
 func (c *KmsClient) ListKmsTags(request *model.ListKmsTagsRequest) (*model.ListKmsTagsResponse, error) {
 	requestDef := GenReqDefForListKmsTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListKmsTagsResponse), nil
@@ -330,7 +330,7 @@ func (c *KmsClient) ListKmsTags(request *model.ListKmsTagsRequest) (*model.ListK
 func (c *KmsClient) ListRetirableGrants(request *model.ListRetirableGrantsRequest) (*model.ListRetirableGrantsResponse, error) {
 	requestDef := GenReqDefForListRetirableGrants()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListRetirableGrantsResponse), nil
@@ -341,7 +341,7 @@ func (c *KmsClient) ListRetirableGrants(request *model.ListRetirableGrantsReques
 func (c *KmsClient) ShowKeyRotationStatus(request *model.ShowKeyRotationStatusRequest) (*model.ShowKeyRotationStatusResponse, error) {
 	requestDef := GenReqDefForShowKeyRotationStatus()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowKeyRotationStatusResponse), nil
@@ -352,7 +352,7 @@ func (c *KmsClient) ShowKeyRotationStatus(request *model.ShowKeyRotationStatusRe
 func (c *KmsClient) ShowKmsTags(request *model.ShowKmsTagsRequest) (*model.ShowKmsTagsResponse, error) {
 	requestDef := GenReqDefForShowKmsTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowKmsTagsResponse), nil
@@ -363,7 +363,7 @@ func (c *KmsClient) ShowKmsTags(request *model.ShowKmsTagsRequest) (*model.ShowK
 func (c *KmsClient) ShowUserInstances(request *model.ShowUserInstancesRequest) (*model.ShowUserInstancesResponse, error) {
 	requestDef := GenReqDefForShowUserInstances()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowUserInstancesResponse), nil
@@ -374,7 +374,7 @@ func (c *KmsClient) ShowUserInstances(request *model.ShowUserInstancesRequest) (
 func (c *KmsClient) ShowUserQuotas(request *model.ShowUserQuotasRequest) (*model.ShowUserQuotasResponse, error) {
 	requestDef := GenReqDefForShowUserQuotas()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowUserQuotasResponse), nil
@@ -385,7 +385,7 @@ func (c *KmsClient) ShowUserQuotas(request *model.ShowUserQuotasRequest) (*model
 func (c *KmsClient) UpdateKeyAlias(request *model.UpdateKeyAliasRequest) (*model.UpdateKeyAliasResponse, error) {
 	requestDef := GenReqDefForUpdateKeyAlias()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateKeyAliasResponse), nil
@@ -396,7 +396,7 @@ func (c *KmsClient) UpdateKeyAlias(request *model.UpdateKeyAliasRequest) (*model
 func (c *KmsClient) UpdateKeyDescription(request *model.UpdateKeyDescriptionRequest) (*model.UpdateKeyDescriptionResponse, error) {
 	requestDef := GenReqDefForUpdateKeyDescription()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateKeyDescriptionResponse), nil
@@ -407,7 +407,7 @@ func (c *KmsClient) UpdateKeyDescription(request *model.UpdateKeyDescriptionRequ
 func (c *KmsClient) UpdateKeyRotationInterval(request *model.UpdateKeyRotationIntervalRequest) (*model.UpdateKeyRotationIntervalResponse, error) {
 	requestDef := GenReqDefForUpdateKeyRotationInterval()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateKeyRotationIntervalResponse), nil
@@ -418,7 +418,7 @@ func (c *KmsClient) UpdateKeyRotationInterval(request *model.UpdateKeyRotationIn
 func (c *KmsClient) ShowVersion(request *model.ShowVersionRequest) (*model.ShowVersionResponse, error) {
 	requestDef := GenReqDefForShowVersion()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowVersionResponse), nil
@@ -429,7 +429,7 @@ func (c *KmsClient) ShowVersion(request *model.ShowVersionRequest) (*model.ShowV
 func (c *KmsClient) ShowVersions(request *model.ShowVersionsRequest) (*model.ShowVersionsResponse, error) {
 	requestDef := GenReqDefForShowVersions()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowVersionsResponse), nil

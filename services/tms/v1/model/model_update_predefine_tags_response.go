@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type UpdatePredefineTagsResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdatePredefineTagsResponse) String() string {

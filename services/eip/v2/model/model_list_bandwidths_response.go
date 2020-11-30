@@ -16,7 +16,8 @@ import (
 // Response Object
 type ListBandwidthsResponse struct {
 	// 带宽列表对象
-	Bandwidths *[]BandwidthResp `json:"bandwidths,omitempty"`
+	Bandwidths     *[]BandwidthResp `json:"bandwidths,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ListBandwidthsResponse) String() string {

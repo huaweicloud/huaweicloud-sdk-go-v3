@@ -243,6 +243,15 @@ func (hc *HcHttpClient) deserializeResponse(resp *response.DefaultHttpResponse, 
 		}
 	}
 
+	// add HttpStatusCode
+	v := reflect.ValueOf(reqDef.Response)
+	if v.Kind() == reflect.Ptr {
+		v = v.Elem()
+	}
+
+	field := v.FieldByName("HttpStatusCode")
+	field.Set(reflect.ValueOf(resp.GetStatusCode()))
+
 	return nil
 }
 

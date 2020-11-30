@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type CancelCustomerOrderResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CancelCustomerOrderResponse) String() string {

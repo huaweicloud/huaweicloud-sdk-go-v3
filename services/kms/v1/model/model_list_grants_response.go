@@ -23,7 +23,8 @@ type ListGrantsResponse struct {
 	// 是否还有下一页：  - “true”表示还有数据。  - “false”表示已经是最后一页。
 	Truncated *ListGrantsResponseTruncated `json:"truncated,omitempty"`
 	// grant总条数。
-	Total *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListGrantsResponse) String() string {

@@ -54,6 +54,7 @@ type UpdateVolumeResponse struct {
 	Description *string `json:"description,omitempty"`
 	// 预留属性。
 	OsVolumeReplicationextendedStatus *string `json:"os-volume-replication:extended_status,omitempty"`
+	HttpStatusCode                    int     `json:"-"`
 }
 
 func (o UpdateVolumeResponse) String() string {

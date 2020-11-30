@@ -18,7 +18,8 @@ type ListApplicationsResponse struct {
 	// 应用总数。
 	Count *int32 `json:"count,omitempty"`
 	// 应用列表。
-	Applications *[]ApplicationView `json:"applications,omitempty"`
+	Applications   *[]ApplicationView `json:"applications,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ListApplicationsResponse) String() string {

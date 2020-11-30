@@ -16,7 +16,8 @@ import (
 // Response Object
 type RunDevstarTemplateJobResponse struct {
 	// 任务id
-	JobId *string `json:"job_id,omitempty"`
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RunDevstarTemplateJobResponse) String() string {

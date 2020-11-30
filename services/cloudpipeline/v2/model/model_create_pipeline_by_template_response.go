@@ -16,7 +16,8 @@ import (
 // Response Object
 type CreatePipelineByTemplateResponse struct {
 	// 实例ID
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId         *string `json:"task_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreatePipelineByTemplateResponse) String() string {

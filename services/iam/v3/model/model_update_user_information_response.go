@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type UpdateUserInformationResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateUserInformationResponse) String() string {

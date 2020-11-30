@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type AddApplyJoinProjectForAgcResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o AddApplyJoinProjectForAgcResponse) String() string {

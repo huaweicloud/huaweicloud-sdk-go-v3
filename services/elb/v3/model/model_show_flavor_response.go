@@ -16,8 +16,9 @@ import (
 // Response Object
 type ShowFlavorResponse struct {
 	// 请求ID。  注：自动生成 。
-	RequestId *string `json:"request_id,omitempty"`
-	Flavor    *Flavor `json:"flavor,omitempty"`
+	RequestId      *string `json:"request_id,omitempty"`
+	Flavor         *Flavor `json:"flavor,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowFlavorResponse) String() string {

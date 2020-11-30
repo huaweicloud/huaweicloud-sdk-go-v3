@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type NovaDeleteKeypairResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o NovaDeleteKeypairResponse) String() string {

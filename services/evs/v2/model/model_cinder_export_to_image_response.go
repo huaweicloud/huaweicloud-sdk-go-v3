@@ -16,6 +16,7 @@ import (
 // Response Object
 type CinderExportToImageResponse struct {
 	OsVolumeUploadImage *Image `json:"os-volume_upload_image,omitempty"`
+	HttpStatusCode      int    `json:"-"`
 }
 
 func (o CinderExportToImageResponse) String() string {

@@ -42,10 +42,13 @@ type TemplateView struct {
 	// 是否关注
 	IsWatch bool `json:"is_watch"`
 	// 模板描述
-	Description string         `json:"description"`
-	Parameter   *TemplateParam `json:"parameter"`
-	Flow        *FlowItem      `json:"flow"`
-	States      *StateItem     `json:"states"`
+	Description string `json:"description"`
+	// 模板参数
+	Parameter []TemplateParam `json:"parameter"`
+	// 编排flow，map类型数据
+	Flow *interface{} `json:"flow"`
+	// 子任务states，map类型数据
+	States *interface{} `json:"states"`
 }
 
 func (o TemplateView) String() string {

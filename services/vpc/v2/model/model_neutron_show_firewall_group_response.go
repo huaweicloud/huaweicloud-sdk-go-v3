@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type NeutronShowFirewallGroupResponse struct {
-	FirewallGroup *NeutronFirewallGroup `json:"firewall_group,omitempty"`
+	FirewallGroup  *NeutronFirewallGroup `json:"firewall_group,omitempty"`
+	HttpStatusCode int                   `json:"-"`
 }
 
 func (o NeutronShowFirewallGroupResponse) String() string {

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type BatchDeleteIssuesV4Response struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o BatchDeleteIssuesV4Response) String() string {

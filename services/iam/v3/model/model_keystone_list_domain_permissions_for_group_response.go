@@ -17,7 +17,8 @@ import (
 type KeystoneListDomainPermissionsForGroupResponse struct {
 	Links *Links `json:"links,omitempty"`
 	// 权限信息列表。
-	Roles *[]RoleResult `json:"roles,omitempty"`
+	Roles          *[]RoleResult `json:"roles,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o KeystoneListDomainPermissionsForGroupResponse) String() string {

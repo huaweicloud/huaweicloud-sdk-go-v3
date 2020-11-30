@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreateUserResponse struct {
-	User *CreateUserResult `json:"user,omitempty"`
+	User           *CreateUserResult `json:"user,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o CreateUserResponse) String() string {

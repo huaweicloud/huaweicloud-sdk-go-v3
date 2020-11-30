@@ -96,6 +96,7 @@ type ShowInstanceResponse struct {
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 	// IPv6的连接地址。
 	Ipv6ConnectAddresses *[]string `json:"ipv6_connect_addresses,omitempty"`
+	HttpStatusCode       int       `json:"-"`
 }
 
 func (o ShowInstanceResponse) String() string {

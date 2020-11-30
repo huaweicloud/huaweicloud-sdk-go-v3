@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type UpdateHealthmonitorResponse struct {
-	Healthmonitor *HealthmonitorResp `json:"healthmonitor,omitempty"`
+	Healthmonitor  *HealthmonitorResp `json:"healthmonitor,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o UpdateHealthmonitorResponse) String() string {

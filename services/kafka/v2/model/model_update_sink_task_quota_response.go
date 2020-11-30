@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type UpdateSinkTaskQuotaResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateSinkTaskQuotaResponse) String() string {

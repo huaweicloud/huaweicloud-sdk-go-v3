@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type ReclaimPartnerCouponsResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o ReclaimPartnerCouponsResponse) String() string {

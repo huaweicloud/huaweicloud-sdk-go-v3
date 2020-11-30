@@ -18,7 +18,8 @@ type CreateConnectorResponse struct {
 	// 任务ID。
 	JobId *string `json:"job_id,omitempty"`
 	// 实例转储ID。
-	ConnectorId *string `json:"connector_id,omitempty"`
+	ConnectorId    *string `json:"connector_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateConnectorResponse) String() string {

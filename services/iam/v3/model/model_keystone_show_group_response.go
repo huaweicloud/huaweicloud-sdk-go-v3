@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type KeystoneShowGroupResponse struct {
-	Group *KeystoneGroupResult `json:"group,omitempty"`
+	Group          *KeystoneGroupResult `json:"group,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o KeystoneShowGroupResponse) String() string {

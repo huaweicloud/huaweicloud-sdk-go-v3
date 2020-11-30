@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteAlarmResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteAlarmResponse) String() string {

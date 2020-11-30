@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type KeystoneUpdateProjectResponse struct {
-	Project *KeystoneUpdateProjectResult `json:"project,omitempty"`
+	Project        *KeystoneUpdateProjectResult `json:"project,omitempty"`
+	HttpStatusCode int                          `json:"-"`
 }
 
 func (o KeystoneUpdateProjectResponse) String() string {

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type CancelRemuxTaskResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CancelRemuxTaskResponse) String() string {

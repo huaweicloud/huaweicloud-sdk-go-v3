@@ -19,7 +19,8 @@ type ListRateOnPeriodDetailResponse struct {
 	// |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数的约束及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
 	OptionalDiscountRatingResults *[]OptionalDiscountRatingResult `json:"optional_discount_rating_results,omitempty"`
 	// |参数名称：币种| |参数约束及描述：比如CNY|
-	Currency *string `json:"currency,omitempty"`
+	Currency       *string `json:"currency,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListRateOnPeriodDetailResponse) String() string {

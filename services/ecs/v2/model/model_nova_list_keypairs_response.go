@@ -16,7 +16,8 @@ import (
 // Response Object
 type NovaListKeypairsResponse struct {
 	// 密钥信息列表。
-	Keypairs *[]NovaListKeypairsResult `json:"keypairs,omitempty"`
+	Keypairs       *[]NovaListKeypairsResult `json:"keypairs,omitempty"`
+	HttpStatusCode int                       `json:"-"`
 }
 
 func (o NovaListKeypairsResponse) String() string {

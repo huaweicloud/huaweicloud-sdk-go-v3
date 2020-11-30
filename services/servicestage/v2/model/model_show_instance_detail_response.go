@@ -42,6 +42,7 @@ type ShowInstanceDetailResponse struct {
 	// 部署资源列表。
 	ReferResources *[]ReferResources   `json:"refer_resources,omitempty"`
 	StatusDetail   *InstanceStatusView `json:"status_detail,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o ShowInstanceDetailResponse) String() string {

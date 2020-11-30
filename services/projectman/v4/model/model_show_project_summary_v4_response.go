@@ -22,7 +22,8 @@ type ShowProjectSummaryV4Response struct {
 	// 按工作项类型统计列表
 	IssueCompletionRates *[]IssueCompletionRateResponseV4 `json:"issue_completion_rates,omitempty"`
 	// 项目id
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId      *string `json:"project_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowProjectSummaryV4Response) String() string {

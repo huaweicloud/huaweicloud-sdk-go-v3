@@ -19,7 +19,8 @@ type ListListenersResponse struct {
 	RequestId *string   `json:"request_id,omitempty"`
 	PageInfo  *PageInfo `json:"page_info,omitempty"`
 	// listener的列表。
-	Listeners *[]Listener `json:"listeners,omitempty"`
+	Listeners      *[]Listener `json:"listeners,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o ListListenersResponse) String() string {

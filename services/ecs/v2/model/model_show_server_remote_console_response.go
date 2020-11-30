@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowServerRemoteConsoleResponse struct {
-	RemoteConsole *ServerRemoteConsole `json:"remote_console,omitempty"`
+	RemoteConsole  *ServerRemoteConsole `json:"remote_console,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o ShowServerRemoteConsoleResponse) String() string {

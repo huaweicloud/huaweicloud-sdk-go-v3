@@ -15,6 +15,8 @@ import (
 
 // Request Object
 type ListCustomPoliciesRequest struct {
+	Page    *int32 `json:"page,omitempty"`
+	PerPage *int32 `json:"per_page,omitempty"`
 }
 
 func (o ListCustomPoliciesRequest) String() string {

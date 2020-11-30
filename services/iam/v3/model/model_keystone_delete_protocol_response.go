@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type KeystoneDeleteProtocolResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o KeystoneDeleteProtocolResponse) String() string {

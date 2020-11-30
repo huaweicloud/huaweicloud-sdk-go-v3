@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowScalingPolicyResponse struct {
-	ScalingPolicy *ScalingPolicyDetail `json:"scaling_policy,omitempty"`
+	ScalingPolicy  *ScalingPolicyDetail `json:"scaling_policy,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o ShowScalingPolicyResponse) String() string {

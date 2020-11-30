@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreateSubnetResponse struct {
-	Subnet *Subnet `json:"subnet,omitempty"`
+	Subnet         *Subnet `json:"subnet,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateSubnetResponse) String() string {

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type UpdateWatermarkTemplateResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateWatermarkTemplateResponse) String() string {

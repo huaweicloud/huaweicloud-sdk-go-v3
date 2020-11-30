@@ -6,11 +6,11 @@ import (
 )
 
 type CloudPipelineClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewCloudPipelineClient(hcClient *http_client.HcHttpClient) *CloudPipelineClient {
-	return &CloudPipelineClient{hcClient: hcClient}
+	return &CloudPipelineClient{HcClient: hcClient}
 }
 
 func CloudPipelineClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func CloudPipelineClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *CloudPipelineClient) BatchShowPipelinesStatus(request *model.BatchShowPipelinesStatusRequest) (*model.BatchShowPipelinesStatusResponse, error) {
 	requestDef := GenReqDefForBatchShowPipelinesStatus()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchShowPipelinesStatusResponse), nil
@@ -33,10 +33,21 @@ func (c *CloudPipelineClient) BatchShowPipelinesStatus(request *model.BatchShowP
 func (c *CloudPipelineClient) CreatePipelineByTemplate(request *model.CreatePipelineByTemplateRequest) (*model.CreatePipelineByTemplateResponse, error) {
 	requestDef := GenReqDefForCreatePipelineByTemplate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePipelineByTemplateResponse), nil
+	}
+}
+
+//获取项目下流水线执行状况
+func (c *CloudPipelineClient) ListPipleineBuildResult(request *model.ListPipleineBuildResultRequest) (*model.ListPipleineBuildResultResponse, error) {
+	requestDef := GenReqDefForListPipleineBuildResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPipleineBuildResultResponse), nil
 	}
 }
 
@@ -44,7 +55,7 @@ func (c *CloudPipelineClient) CreatePipelineByTemplate(request *model.CreatePipe
 func (c *CloudPipelineClient) ListTemplates(request *model.ListTemplatesRequest) (*model.ListTemplatesResponse, error) {
 	requestDef := GenReqDefForListTemplates()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListTemplatesResponse), nil
@@ -55,7 +66,7 @@ func (c *CloudPipelineClient) ListTemplates(request *model.ListTemplatesRequest)
 func (c *CloudPipelineClient) RegisterAgent(request *model.RegisterAgentRequest) (*model.RegisterAgentResponse, error) {
 	requestDef := GenReqDefForRegisterAgent()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RegisterAgentResponse), nil
@@ -66,7 +77,7 @@ func (c *CloudPipelineClient) RegisterAgent(request *model.RegisterAgentRequest)
 func (c *CloudPipelineClient) RemovePipeline(request *model.RemovePipelineRequest) (*model.RemovePipelineResponse, error) {
 	requestDef := GenReqDefForRemovePipeline()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RemovePipelineResponse), nil
@@ -77,7 +88,7 @@ func (c *CloudPipelineClient) RemovePipeline(request *model.RemovePipelineReques
 func (c *CloudPipelineClient) ShowAgentStatus(request *model.ShowAgentStatusRequest) (*model.ShowAgentStatusResponse, error) {
 	requestDef := GenReqDefForShowAgentStatus()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowAgentStatusResponse), nil
@@ -88,7 +99,7 @@ func (c *CloudPipelineClient) ShowAgentStatus(request *model.ShowAgentStatusRequ
 func (c *CloudPipelineClient) ShowInstanceStatus(request *model.ShowInstanceStatusRequest) (*model.ShowInstanceStatusResponse, error) {
 	requestDef := GenReqDefForShowInstanceStatus()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowInstanceStatusResponse), nil
@@ -99,7 +110,7 @@ func (c *CloudPipelineClient) ShowInstanceStatus(request *model.ShowInstanceStat
 func (c *CloudPipelineClient) ShowPipleineStatus(request *model.ShowPipleineStatusRequest) (*model.ShowPipleineStatusResponse, error) {
 	requestDef := GenReqDefForShowPipleineStatus()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowPipleineStatusResponse), nil
@@ -110,7 +121,7 @@ func (c *CloudPipelineClient) ShowPipleineStatus(request *model.ShowPipleineStat
 func (c *CloudPipelineClient) ShowTemplateDetail(request *model.ShowTemplateDetailRequest) (*model.ShowTemplateDetailResponse, error) {
 	requestDef := GenReqDefForShowTemplateDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowTemplateDetailResponse), nil
@@ -121,7 +132,7 @@ func (c *CloudPipelineClient) ShowTemplateDetail(request *model.ShowTemplateDeta
 func (c *CloudPipelineClient) StartNewPipeline(request *model.StartNewPipelineRequest) (*model.StartNewPipelineResponse, error) {
 	requestDef := GenReqDefForStartNewPipeline()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.StartNewPipelineResponse), nil
@@ -132,7 +143,7 @@ func (c *CloudPipelineClient) StartNewPipeline(request *model.StartNewPipelineRe
 func (c *CloudPipelineClient) StartPipeline(request *model.StartPipelineRequest) (*model.StartPipelineResponse, error) {
 	requestDef := GenReqDefForStartPipeline()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.StartPipelineResponse), nil
@@ -143,7 +154,7 @@ func (c *CloudPipelineClient) StartPipeline(request *model.StartPipelineRequest)
 func (c *CloudPipelineClient) StopPipeline(request *model.StopPipelineRequest) (*model.StopPipelineResponse, error) {
 	requestDef := GenReqDefForStopPipeline()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.StopPipelineResponse), nil

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteServerMetadataResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteServerMetadataResponse) String() string {

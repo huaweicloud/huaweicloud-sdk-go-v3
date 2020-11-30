@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteWatermarkTemplateResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteWatermarkTemplateResponse) String() string {

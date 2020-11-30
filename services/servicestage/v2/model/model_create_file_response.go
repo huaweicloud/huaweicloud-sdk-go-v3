@@ -16,7 +16,8 @@ import (
 // Response Object
 type CreateFileResponse struct {
 	// 文件路径。
-	Path *string `json:"path,omitempty"`
+	Path           *string `json:"path,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateFileResponse) String() string {

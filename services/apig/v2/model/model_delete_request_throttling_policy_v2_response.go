@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteRequestThrottlingPolicyV2Response struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteRequestThrottlingPolicyV2Response) String() string {

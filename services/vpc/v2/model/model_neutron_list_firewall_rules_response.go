@@ -19,6 +19,7 @@ type NeutronListFirewallRulesResponse struct {
 	FirewallRules *[]NeutronFirewallRule `json:"firewall_rules,omitempty"`
 	// 分页信息
 	FirewallRulesLinks *[]NeutronPageLink `json:"firewall_rules_links,omitempty"`
+	HttpStatusCode     int                `json:"-"`
 }
 
 func (o NeutronListFirewallRulesResponse) String() string {

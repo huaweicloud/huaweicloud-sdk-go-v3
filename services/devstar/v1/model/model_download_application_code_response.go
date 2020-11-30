@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DownloadApplicationCodeResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DownloadApplicationCodeResponse) String() string {

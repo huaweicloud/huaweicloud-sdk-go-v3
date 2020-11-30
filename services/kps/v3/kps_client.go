@@ -6,11 +6,11 @@ import (
 )
 
 type KpsClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewKpsClient(hcClient *http_client.HcHttpClient) *KpsClient {
-	return &KpsClient{hcClient: hcClient}
+	return &KpsClient{HcClient: hcClient}
 }
 
 func KpsClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func KpsClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *KpsClient) AssociateKeypair(request *model.AssociateKeypairRequest) (*model.AssociateKeypairResponse, error) {
 	requestDef := GenReqDefForAssociateKeypair()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AssociateKeypairResponse), nil
@@ -33,7 +33,7 @@ func (c *KpsClient) AssociateKeypair(request *model.AssociateKeypairRequest) (*m
 func (c *KpsClient) CreateKeypair(request *model.CreateKeypairRequest) (*model.CreateKeypairResponse, error) {
 	requestDef := GenReqDefForCreateKeypair()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateKeypairResponse), nil
@@ -44,7 +44,7 @@ func (c *KpsClient) CreateKeypair(request *model.CreateKeypairRequest) (*model.C
 func (c *KpsClient) DeleteAllFailedTask(request *model.DeleteAllFailedTaskRequest) (*model.DeleteAllFailedTaskResponse, error) {
 	requestDef := GenReqDefForDeleteAllFailedTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteAllFailedTaskResponse), nil
@@ -55,7 +55,7 @@ func (c *KpsClient) DeleteAllFailedTask(request *model.DeleteAllFailedTaskReques
 func (c *KpsClient) DeleteFailedTask(request *model.DeleteFailedTaskRequest) (*model.DeleteFailedTaskResponse, error) {
 	requestDef := GenReqDefForDeleteFailedTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteFailedTaskResponse), nil
@@ -66,7 +66,7 @@ func (c *KpsClient) DeleteFailedTask(request *model.DeleteFailedTaskRequest) (*m
 func (c *KpsClient) DeleteKeypair(request *model.DeleteKeypairRequest) (*model.DeleteKeypairResponse, error) {
 	requestDef := GenReqDefForDeleteKeypair()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteKeypairResponse), nil
@@ -77,7 +77,7 @@ func (c *KpsClient) DeleteKeypair(request *model.DeleteKeypairRequest) (*model.D
 func (c *KpsClient) DisassociateKeypair(request *model.DisassociateKeypairRequest) (*model.DisassociateKeypairResponse, error) {
 	requestDef := GenReqDefForDisassociateKeypair()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DisassociateKeypairResponse), nil
@@ -88,7 +88,7 @@ func (c *KpsClient) DisassociateKeypair(request *model.DisassociateKeypairReques
 func (c *KpsClient) ListFailedTask(request *model.ListFailedTaskRequest) (*model.ListFailedTaskResponse, error) {
 	requestDef := GenReqDefForListFailedTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListFailedTaskResponse), nil
@@ -99,7 +99,7 @@ func (c *KpsClient) ListFailedTask(request *model.ListFailedTaskRequest) (*model
 func (c *KpsClient) ListKeypairDetail(request *model.ListKeypairDetailRequest) (*model.ListKeypairDetailResponse, error) {
 	requestDef := GenReqDefForListKeypairDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListKeypairDetailResponse), nil
@@ -110,7 +110,7 @@ func (c *KpsClient) ListKeypairDetail(request *model.ListKeypairDetailRequest) (
 func (c *KpsClient) ListKeypairTask(request *model.ListKeypairTaskRequest) (*model.ListKeypairTaskResponse, error) {
 	requestDef := GenReqDefForListKeypairTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListKeypairTaskResponse), nil
@@ -121,7 +121,7 @@ func (c *KpsClient) ListKeypairTask(request *model.ListKeypairTaskRequest) (*mod
 func (c *KpsClient) ListKeypairs(request *model.ListKeypairsRequest) (*model.ListKeypairsResponse, error) {
 	requestDef := GenReqDefForListKeypairs()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListKeypairsResponse), nil
@@ -132,7 +132,7 @@ func (c *KpsClient) ListKeypairs(request *model.ListKeypairsRequest) (*model.Lis
 func (c *KpsClient) ListRunningTask(request *model.ListRunningTaskRequest) (*model.ListRunningTaskResponse, error) {
 	requestDef := GenReqDefForListRunningTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListRunningTaskResponse), nil
@@ -143,7 +143,7 @@ func (c *KpsClient) ListRunningTask(request *model.ListRunningTaskRequest) (*mod
 func (c *KpsClient) UpdateKeypairDescription(request *model.UpdateKeypairDescriptionRequest) (*model.UpdateKeypairDescriptionResponse, error) {
 	requestDef := GenReqDefForUpdateKeypairDescription()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateKeypairDescriptionResponse), nil

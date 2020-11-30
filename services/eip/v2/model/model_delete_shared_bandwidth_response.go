@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteSharedBandwidthResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteSharedBandwidthResponse) String() string {

@@ -18,7 +18,8 @@ type ListBackgroundTasksResponse struct {
 	// 任务数量。
 	TaskCount *string `json:"task_count,omitempty"`
 	// 任务列表。
-	Tasks *[]ListBackgroundTasksRespTasks `json:"tasks,omitempty"`
+	Tasks          *[]ListBackgroundTasksRespTasks `json:"tasks,omitempty"`
+	HttpStatusCode int                             `json:"-"`
 }
 
 func (o ListBackgroundTasksResponse) String() string {

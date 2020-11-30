@@ -17,6 +17,7 @@ import (
 type ListSkuInventoriesResponse struct {
 	// |参数名称：总记录数| |参数约束以及描述：总记录数|
 	SkuInventories *[]SkuInventory `json:"sku_inventories,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o ListSkuInventoriesResponse) String() string {

@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowClusterResponse struct {
-	Cluster *ShowClusterRespCluster `json:"cluster,omitempty"`
+	Cluster        *ShowClusterRespCluster `json:"cluster,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o ShowClusterResponse) String() string {

@@ -23,6 +23,7 @@ type ListScalingPolicyExecuteLogsResponse struct {
 	Limit *int32 `json:"limit,omitempty"`
 	// 伸缩策略执行日志列表。
 	ScalingPolicyExecuteLog *[]ScalingPolicyExecuteLogList `json:"scaling_policy_execute_log,omitempty"`
+	HttpStatusCode          int                            `json:"-"`
 }
 
 func (o ListScalingPolicyExecuteLogsResponse) String() string {

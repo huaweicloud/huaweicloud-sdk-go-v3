@@ -24,7 +24,8 @@ type AssociateCertificateV2Response struct {
 	// 自定义域名的编号
 	Id *string `json:"id,omitempty"`
 	// 解析状态值
-	Status *int32 `json:"status,omitempty"`
+	Status         *int32 `json:"status,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o AssociateCertificateV2Response) String() string {

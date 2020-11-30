@@ -27,6 +27,7 @@ type ListOnDemandResourceRatingsResponse struct {
 	Currency *string `json:"currency,omitempty"`
 	// |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
 	ProductRatingResults *[]DemandProductRatingResult `json:"product_rating_results,omitempty"`
+	HttpStatusCode       int                          `json:"-"`
 }
 
 func (o ListOnDemandResourceRatingsResponse) String() string {

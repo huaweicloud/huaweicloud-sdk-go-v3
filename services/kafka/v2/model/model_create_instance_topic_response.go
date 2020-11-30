@@ -16,7 +16,8 @@ import (
 // Response Object
 type CreateInstanceTopicResponse struct {
 	// topic名称。
-	Name *string `json:"name,omitempty"`
+	Name           *string `json:"name,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateInstanceTopicResponse) String() string {

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeletePermanentAccessKeyResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeletePermanentAccessKeyResponse) String() string {

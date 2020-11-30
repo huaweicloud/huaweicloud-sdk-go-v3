@@ -17,6 +17,7 @@ import (
 type RemoveVaultResourceResponse struct {
 	// 移除的资源ID
 	RemoveResourceIds *[]string `json:"remove_resource_ids,omitempty"`
+	HttpStatusCode    int       `json:"-"`
 }
 
 func (o RemoveVaultResourceResponse) String() string {

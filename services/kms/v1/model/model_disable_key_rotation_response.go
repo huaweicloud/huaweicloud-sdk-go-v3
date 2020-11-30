@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DisableKeyRotationResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DisableKeyRotationResponse) String() string {

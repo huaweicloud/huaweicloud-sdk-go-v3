@@ -68,7 +68,8 @@ type ShowTemplateV3Response struct {
 	// 模板标签
 	Topic *[]TopicCategory `json:"topic,omitempty"`
 	// 模板标签
-	Tags *[]TagInfo `json:"tags,omitempty"`
+	Tags           *[]TagInfo `json:"tags,omitempty"`
+	HttpStatusCode int        `json:"-"`
 }
 
 func (o ShowTemplateV3Response) String() string {

@@ -30,7 +30,8 @@ type StartPipelineResponse struct {
 	// 执行人
 	Executor *string `json:"executor,omitempty"`
 	// 流水线名字
-	PipelineName *string `json:"pipeline_name,omitempty"`
+	PipelineName   *string `json:"pipeline_name,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o StartPipelineResponse) String() string {

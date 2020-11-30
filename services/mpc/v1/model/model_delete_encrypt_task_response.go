@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteEncryptTaskResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteEncryptTaskResponse) String() string {

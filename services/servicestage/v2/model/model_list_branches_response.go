@@ -16,7 +16,8 @@ import (
 // Response Object
 type ListBranchesResponse struct {
 	// 项目分支列表。
-	Branches *[]string `json:"branches,omitempty"`
+	Branches       *[]string `json:"branches,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListBranchesResponse) String() string {

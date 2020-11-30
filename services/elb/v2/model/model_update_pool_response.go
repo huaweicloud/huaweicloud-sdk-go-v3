@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type UpdatePoolResponse struct {
-	Pool *PoolResp `json:"pool,omitempty"`
+	Pool           *PoolResp `json:"pool,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o UpdatePoolResponse) String() string {

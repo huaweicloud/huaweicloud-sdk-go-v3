@@ -16,6 +16,7 @@ import (
 // Response Object
 type ShowDomainPasswordPolicyResponse struct {
 	PasswordPolicy *PasswordPolicyResult `json:"password_policy,omitempty"`
+	HttpStatusCode int                   `json:"-"`
 }
 
 func (o ShowDomainPasswordPolicyResponse) String() string {

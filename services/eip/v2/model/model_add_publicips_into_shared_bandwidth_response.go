@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type AddPublicipsIntoSharedBandwidthResponse struct {
-	Bandwidth *BandwidthRespInsert `json:"bandwidth,omitempty"`
+	Bandwidth      *BandwidthRespInsert `json:"bandwidth,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o AddPublicipsIntoSharedBandwidthResponse) String() string {

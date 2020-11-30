@@ -16,6 +16,7 @@ import (
 // Response Object
 type AssociateVaultPolicyResponse struct {
 	AssociatePolicy *VaultPolicyResp `json:"associate_policy,omitempty"`
+	HttpStatusCode  int              `json:"-"`
 }
 
 func (o AssociateVaultPolicyResponse) String() string {

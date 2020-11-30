@@ -1,0 +1,25 @@
+/*
+ * BMS
+ *
+ * BMS Open API
+ *
+ */
+
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// security_groups数据结构说明
+type SecurityGroupsList struct {
+	// 安全组名称或者UUID
+	Name *string `json:"name,omitempty"`
+}
+
+func (o SecurityGroupsList) String() string {
+	data, _ := json.Marshal(o)
+	return strings.Join([]string{"SecurityGroupsList", string(data)}, " ")
+}

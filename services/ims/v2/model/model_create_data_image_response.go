@@ -16,7 +16,8 @@ import (
 // Response Object
 type CreateDataImageResponse struct {
 	// 异步任务ID。
-	JobId *string `json:"job_id,omitempty"`
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateDataImageResponse) String() string {

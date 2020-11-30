@@ -6,11 +6,11 @@ import (
 )
 
 type AsClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewAsClient(hcClient *http_client.HcHttpClient) *AsClient {
-	return &AsClient{hcClient: hcClient}
+	return &AsClient{HcClient: hcClient}
 }
 
 func AsClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func AsClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *AsClient) BatchDeleteScalingConfigs(request *model.BatchDeleteScalingConfigsRequest) (*model.BatchDeleteScalingConfigsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteScalingConfigs()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchDeleteScalingConfigsResponse), nil
@@ -33,7 +33,7 @@ func (c *AsClient) BatchDeleteScalingConfigs(request *model.BatchDeleteScalingCo
 func (c *AsClient) CompleteLifecycleAction(request *model.CompleteLifecycleActionRequest) (*model.CompleteLifecycleActionResponse, error) {
 	requestDef := GenReqDefForCompleteLifecycleAction()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CompleteLifecycleActionResponse), nil
@@ -44,7 +44,7 @@ func (c *AsClient) CompleteLifecycleAction(request *model.CompleteLifecycleActio
 func (c *AsClient) CreateLifyCycleHook(request *model.CreateLifyCycleHookRequest) (*model.CreateLifyCycleHookResponse, error) {
 	requestDef := GenReqDefForCreateLifyCycleHook()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateLifyCycleHookResponse), nil
@@ -55,7 +55,7 @@ func (c *AsClient) CreateLifyCycleHook(request *model.CreateLifyCycleHookRequest
 func (c *AsClient) CreateScalingConfig(request *model.CreateScalingConfigRequest) (*model.CreateScalingConfigResponse, error) {
 	requestDef := GenReqDefForCreateScalingConfig()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateScalingConfigResponse), nil
@@ -66,7 +66,7 @@ func (c *AsClient) CreateScalingConfig(request *model.CreateScalingConfigRequest
 func (c *AsClient) CreateScalingGroup(request *model.CreateScalingGroupRequest) (*model.CreateScalingGroupResponse, error) {
 	requestDef := GenReqDefForCreateScalingGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateScalingGroupResponse), nil
@@ -77,7 +77,7 @@ func (c *AsClient) CreateScalingGroup(request *model.CreateScalingGroupRequest) 
 func (c *AsClient) CreateScalingNotification(request *model.CreateScalingNotificationRequest) (*model.CreateScalingNotificationResponse, error) {
 	requestDef := GenReqDefForCreateScalingNotification()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateScalingNotificationResponse), nil
@@ -88,7 +88,7 @@ func (c *AsClient) CreateScalingNotification(request *model.CreateScalingNotific
 func (c *AsClient) CreateScalingPolicy(request *model.CreateScalingPolicyRequest) (*model.CreateScalingPolicyResponse, error) {
 	requestDef := GenReqDefForCreateScalingPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateScalingPolicyResponse), nil
@@ -99,7 +99,7 @@ func (c *AsClient) CreateScalingPolicy(request *model.CreateScalingPolicyRequest
 func (c *AsClient) CreateScalingTags(request *model.CreateScalingTagsRequest) (*model.CreateScalingTagsResponse, error) {
 	requestDef := GenReqDefForCreateScalingTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateScalingTagsResponse), nil
@@ -110,7 +110,7 @@ func (c *AsClient) CreateScalingTags(request *model.CreateScalingTagsRequest) (*
 func (c *AsClient) DeleteLifecycleHook(request *model.DeleteLifecycleHookRequest) (*model.DeleteLifecycleHookResponse, error) {
 	requestDef := GenReqDefForDeleteLifecycleHook()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteLifecycleHookResponse), nil
@@ -121,7 +121,7 @@ func (c *AsClient) DeleteLifecycleHook(request *model.DeleteLifecycleHookRequest
 func (c *AsClient) DeleteScalingConfig(request *model.DeleteScalingConfigRequest) (*model.DeleteScalingConfigResponse, error) {
 	requestDef := GenReqDefForDeleteScalingConfig()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteScalingConfigResponse), nil
@@ -132,7 +132,7 @@ func (c *AsClient) DeleteScalingConfig(request *model.DeleteScalingConfigRequest
 func (c *AsClient) DeleteScalingGroup(request *model.DeleteScalingGroupRequest) (*model.DeleteScalingGroupResponse, error) {
 	requestDef := GenReqDefForDeleteScalingGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteScalingGroupResponse), nil
@@ -143,7 +143,7 @@ func (c *AsClient) DeleteScalingGroup(request *model.DeleteScalingGroupRequest) 
 func (c *AsClient) DeleteScalingInstance(request *model.DeleteScalingInstanceRequest) (*model.DeleteScalingInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteScalingInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteScalingInstanceResponse), nil
@@ -154,7 +154,7 @@ func (c *AsClient) DeleteScalingInstance(request *model.DeleteScalingInstanceReq
 func (c *AsClient) DeleteScalingNotification(request *model.DeleteScalingNotificationRequest) (*model.DeleteScalingNotificationResponse, error) {
 	requestDef := GenReqDefForDeleteScalingNotification()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteScalingNotificationResponse), nil
@@ -165,7 +165,7 @@ func (c *AsClient) DeleteScalingNotification(request *model.DeleteScalingNotific
 func (c *AsClient) DeleteScalingPolicy(request *model.DeleteScalingPolicyRequest) (*model.DeleteScalingPolicyResponse, error) {
 	requestDef := GenReqDefForDeleteScalingPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteScalingPolicyResponse), nil
@@ -176,7 +176,7 @@ func (c *AsClient) DeleteScalingPolicy(request *model.DeleteScalingPolicyRequest
 func (c *AsClient) DeleteScalingTags(request *model.DeleteScalingTagsRequest) (*model.DeleteScalingTagsResponse, error) {
 	requestDef := GenReqDefForDeleteScalingTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteScalingTagsResponse), nil
@@ -187,7 +187,7 @@ func (c *AsClient) DeleteScalingTags(request *model.DeleteScalingTagsRequest) (*
 func (c *AsClient) EnableOrDisableScalingGroup(request *model.EnableOrDisableScalingGroupRequest) (*model.EnableOrDisableScalingGroupResponse, error) {
 	requestDef := GenReqDefForEnableOrDisableScalingGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.EnableOrDisableScalingGroupResponse), nil
@@ -198,7 +198,7 @@ func (c *AsClient) EnableOrDisableScalingGroup(request *model.EnableOrDisableSca
 func (c *AsClient) ExecuteScalingPolicy(request *model.ExecuteScalingPolicyRequest) (*model.ExecuteScalingPolicyResponse, error) {
 	requestDef := GenReqDefForExecuteScalingPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ExecuteScalingPolicyResponse), nil
@@ -209,7 +209,7 @@ func (c *AsClient) ExecuteScalingPolicy(request *model.ExecuteScalingPolicyReque
 func (c *AsClient) ListHookInstances(request *model.ListHookInstancesRequest) (*model.ListHookInstancesResponse, error) {
 	requestDef := GenReqDefForListHookInstances()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListHookInstancesResponse), nil
@@ -220,7 +220,7 @@ func (c *AsClient) ListHookInstances(request *model.ListHookInstancesRequest) (*
 func (c *AsClient) ListLifeCycleHooks(request *model.ListLifeCycleHooksRequest) (*model.ListLifeCycleHooksResponse, error) {
 	requestDef := GenReqDefForListLifeCycleHooks()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListLifeCycleHooksResponse), nil
@@ -231,7 +231,7 @@ func (c *AsClient) ListLifeCycleHooks(request *model.ListLifeCycleHooksRequest) 
 func (c *AsClient) ListResourceInstances(request *model.ListResourceInstancesRequest) (*model.ListResourceInstancesResponse, error) {
 	requestDef := GenReqDefForListResourceInstances()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListResourceInstancesResponse), nil
@@ -242,7 +242,7 @@ func (c *AsClient) ListResourceInstances(request *model.ListResourceInstancesReq
 func (c *AsClient) ListScalingActivityLogs(request *model.ListScalingActivityLogsRequest) (*model.ListScalingActivityLogsResponse, error) {
 	requestDef := GenReqDefForListScalingActivityLogs()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListScalingActivityLogsResponse), nil
@@ -253,7 +253,7 @@ func (c *AsClient) ListScalingActivityLogs(request *model.ListScalingActivityLog
 func (c *AsClient) ListScalingConfigs(request *model.ListScalingConfigsRequest) (*model.ListScalingConfigsResponse, error) {
 	requestDef := GenReqDefForListScalingConfigs()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListScalingConfigsResponse), nil
@@ -264,7 +264,7 @@ func (c *AsClient) ListScalingConfigs(request *model.ListScalingConfigsRequest) 
 func (c *AsClient) ListScalingGroups(request *model.ListScalingGroupsRequest) (*model.ListScalingGroupsResponse, error) {
 	requestDef := GenReqDefForListScalingGroups()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListScalingGroupsResponse), nil
@@ -275,7 +275,7 @@ func (c *AsClient) ListScalingGroups(request *model.ListScalingGroupsRequest) (*
 func (c *AsClient) ListScalingInstances(request *model.ListScalingInstancesRequest) (*model.ListScalingInstancesResponse, error) {
 	requestDef := GenReqDefForListScalingInstances()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListScalingInstancesResponse), nil
@@ -286,7 +286,7 @@ func (c *AsClient) ListScalingInstances(request *model.ListScalingInstancesReque
 func (c *AsClient) ListScalingNotifications(request *model.ListScalingNotificationsRequest) (*model.ListScalingNotificationsResponse, error) {
 	requestDef := GenReqDefForListScalingNotifications()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListScalingNotificationsResponse), nil
@@ -297,7 +297,7 @@ func (c *AsClient) ListScalingNotifications(request *model.ListScalingNotificati
 func (c *AsClient) ListScalingPolicies(request *model.ListScalingPoliciesRequest) (*model.ListScalingPoliciesResponse, error) {
 	requestDef := GenReqDefForListScalingPolicies()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListScalingPoliciesResponse), nil
@@ -308,7 +308,7 @@ func (c *AsClient) ListScalingPolicies(request *model.ListScalingPoliciesRequest
 func (c *AsClient) ListScalingPolicyExecuteLogs(request *model.ListScalingPolicyExecuteLogsRequest) (*model.ListScalingPolicyExecuteLogsResponse, error) {
 	requestDef := GenReqDefForListScalingPolicyExecuteLogs()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListScalingPolicyExecuteLogsResponse), nil
@@ -319,7 +319,7 @@ func (c *AsClient) ListScalingPolicyExecuteLogs(request *model.ListScalingPolicy
 func (c *AsClient) ListScalingTagInfosByResourceId(request *model.ListScalingTagInfosByResourceIdRequest) (*model.ListScalingTagInfosByResourceIdResponse, error) {
 	requestDef := GenReqDefForListScalingTagInfosByResourceId()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListScalingTagInfosByResourceIdResponse), nil
@@ -330,7 +330,7 @@ func (c *AsClient) ListScalingTagInfosByResourceId(request *model.ListScalingTag
 func (c *AsClient) ListScalingTagInfosByTenantId(request *model.ListScalingTagInfosByTenantIdRequest) (*model.ListScalingTagInfosByTenantIdResponse, error) {
 	requestDef := GenReqDefForListScalingTagInfosByTenantId()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListScalingTagInfosByTenantIdResponse), nil
@@ -341,7 +341,7 @@ func (c *AsClient) ListScalingTagInfosByTenantId(request *model.ListScalingTagIn
 func (c *AsClient) ShowLifeCycleHook(request *model.ShowLifeCycleHookRequest) (*model.ShowLifeCycleHookResponse, error) {
 	requestDef := GenReqDefForShowLifeCycleHook()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowLifeCycleHookResponse), nil
@@ -352,7 +352,7 @@ func (c *AsClient) ShowLifeCycleHook(request *model.ShowLifeCycleHookRequest) (*
 func (c *AsClient) ShowPolicyAndInstanceQuota(request *model.ShowPolicyAndInstanceQuotaRequest) (*model.ShowPolicyAndInstanceQuotaResponse, error) {
 	requestDef := GenReqDefForShowPolicyAndInstanceQuota()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowPolicyAndInstanceQuotaResponse), nil
@@ -363,7 +363,7 @@ func (c *AsClient) ShowPolicyAndInstanceQuota(request *model.ShowPolicyAndInstan
 func (c *AsClient) ShowResourceQuota(request *model.ShowResourceQuotaRequest) (*model.ShowResourceQuotaResponse, error) {
 	requestDef := GenReqDefForShowResourceQuota()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowResourceQuotaResponse), nil
@@ -374,7 +374,7 @@ func (c *AsClient) ShowResourceQuota(request *model.ShowResourceQuotaRequest) (*
 func (c *AsClient) ShowScalingConfig(request *model.ShowScalingConfigRequest) (*model.ShowScalingConfigResponse, error) {
 	requestDef := GenReqDefForShowScalingConfig()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowScalingConfigResponse), nil
@@ -385,7 +385,7 @@ func (c *AsClient) ShowScalingConfig(request *model.ShowScalingConfigRequest) (*
 func (c *AsClient) ShowScalingGroup(request *model.ShowScalingGroupRequest) (*model.ShowScalingGroupResponse, error) {
 	requestDef := GenReqDefForShowScalingGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowScalingGroupResponse), nil
@@ -396,7 +396,7 @@ func (c *AsClient) ShowScalingGroup(request *model.ShowScalingGroupRequest) (*mo
 func (c *AsClient) ShowScalingPolicy(request *model.ShowScalingPolicyRequest) (*model.ShowScalingPolicyResponse, error) {
 	requestDef := GenReqDefForShowScalingPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowScalingPolicyResponse), nil
@@ -407,7 +407,7 @@ func (c *AsClient) ShowScalingPolicy(request *model.ShowScalingPolicyRequest) (*
 func (c *AsClient) UpdateLifeCycleHook(request *model.UpdateLifeCycleHookRequest) (*model.UpdateLifeCycleHookResponse, error) {
 	requestDef := GenReqDefForUpdateLifeCycleHook()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateLifeCycleHookResponse), nil
@@ -418,7 +418,7 @@ func (c *AsClient) UpdateLifeCycleHook(request *model.UpdateLifeCycleHookRequest
 func (c *AsClient) UpdateScalingGroup(request *model.UpdateScalingGroupRequest) (*model.UpdateScalingGroupResponse, error) {
 	requestDef := GenReqDefForUpdateScalingGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateScalingGroupResponse), nil
@@ -429,7 +429,7 @@ func (c *AsClient) UpdateScalingGroup(request *model.UpdateScalingGroupRequest) 
 func (c *AsClient) UpdateScalingGroupInstance(request *model.UpdateScalingGroupInstanceRequest) (*model.UpdateScalingGroupInstanceResponse, error) {
 	requestDef := GenReqDefForUpdateScalingGroupInstance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateScalingGroupInstanceResponse), nil
@@ -440,7 +440,7 @@ func (c *AsClient) UpdateScalingGroupInstance(request *model.UpdateScalingGroupI
 func (c *AsClient) UpdateScalingPolicy(request *model.UpdateScalingPolicyRequest) (*model.UpdateScalingPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateScalingPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateScalingPolicyResponse), nil

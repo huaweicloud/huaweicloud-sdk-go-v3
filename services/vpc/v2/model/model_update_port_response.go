@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type UpdatePortResponse struct {
-	Port *Port `json:"port,omitempty"`
+	Port           *Port `json:"port,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o UpdatePortResponse) String() string {

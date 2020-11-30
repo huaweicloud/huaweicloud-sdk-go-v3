@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type ImportKeyMaterialResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o ImportKeyMaterialResponse) String() string {

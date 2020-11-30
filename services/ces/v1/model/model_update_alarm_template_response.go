@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type UpdateAlarmTemplateResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateAlarmTemplateResponse) String() string {

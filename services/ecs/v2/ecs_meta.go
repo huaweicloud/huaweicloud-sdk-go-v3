@@ -801,6 +801,29 @@ func GenReqDefForNovaListServersDetails() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForNovaShowKeypair() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2.1/{project_id}/os-keypairs/{keypair_name}").
+		WithResponse(new(model.NovaShowKeypairResponse))
+
+	// request
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("KeypairName").
+		WithJsonTag("keypair_name").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OpenStackAPIVersion").
+		WithJsonTag("OpenStack-API-Version").
+		WithLocationType(def.Header))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForNovaShowServer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

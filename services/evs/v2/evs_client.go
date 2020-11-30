@@ -6,11 +6,11 @@ import (
 )
 
 type EvsClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewEvsClient(hcClient *http_client.HcHttpClient) *EvsClient {
-	return &EvsClient{hcClient: hcClient}
+	return &EvsClient{HcClient: hcClient}
 }
 
 func EvsClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func EvsClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *EvsClient) BatchCreateVolumeTags(request *model.BatchCreateVolumeTagsRequest) (*model.BatchCreateVolumeTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateVolumeTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchCreateVolumeTagsResponse), nil
@@ -33,7 +33,7 @@ func (c *EvsClient) BatchCreateVolumeTags(request *model.BatchCreateVolumeTagsRe
 func (c *EvsClient) BatchDeleteVolumeTags(request *model.BatchDeleteVolumeTagsRequest) (*model.BatchDeleteVolumeTagsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteVolumeTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchDeleteVolumeTagsResponse), nil
@@ -44,7 +44,7 @@ func (c *EvsClient) BatchDeleteVolumeTags(request *model.BatchDeleteVolumeTagsRe
 func (c *EvsClient) CinderExportToImage(request *model.CinderExportToImageRequest) (*model.CinderExportToImageResponse, error) {
 	requestDef := GenReqDefForCinderExportToImage()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CinderExportToImageResponse), nil
@@ -55,7 +55,7 @@ func (c *EvsClient) CinderExportToImage(request *model.CinderExportToImageReques
 func (c *EvsClient) CinderListAvailabilityZones(request *model.CinderListAvailabilityZonesRequest) (*model.CinderListAvailabilityZonesResponse, error) {
 	requestDef := GenReqDefForCinderListAvailabilityZones()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CinderListAvailabilityZonesResponse), nil
@@ -66,7 +66,7 @@ func (c *EvsClient) CinderListAvailabilityZones(request *model.CinderListAvailab
 func (c *EvsClient) CinderListQuotas(request *model.CinderListQuotasRequest) (*model.CinderListQuotasResponse, error) {
 	requestDef := GenReqDefForCinderListQuotas()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CinderListQuotasResponse), nil
@@ -77,7 +77,7 @@ func (c *EvsClient) CinderListQuotas(request *model.CinderListQuotasRequest) (*m
 func (c *EvsClient) CinderListVolumeTypes(request *model.CinderListVolumeTypesRequest) (*model.CinderListVolumeTypesResponse, error) {
 	requestDef := GenReqDefForCinderListVolumeTypes()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CinderListVolumeTypesResponse), nil
@@ -88,7 +88,7 @@ func (c *EvsClient) CinderListVolumeTypes(request *model.CinderListVolumeTypesRe
 func (c *EvsClient) CreateSnapshot(request *model.CreateSnapshotRequest) (*model.CreateSnapshotResponse, error) {
 	requestDef := GenReqDefForCreateSnapshot()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateSnapshotResponse), nil
@@ -99,7 +99,7 @@ func (c *EvsClient) CreateSnapshot(request *model.CreateSnapshotRequest) (*model
 func (c *EvsClient) CreateVolume(request *model.CreateVolumeRequest) (*model.CreateVolumeResponse, error) {
 	requestDef := GenReqDefForCreateVolume()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateVolumeResponse), nil
@@ -110,7 +110,7 @@ func (c *EvsClient) CreateVolume(request *model.CreateVolumeRequest) (*model.Cre
 func (c *EvsClient) DeleteSnapshot(request *model.DeleteSnapshotRequest) (*model.DeleteSnapshotResponse, error) {
 	requestDef := GenReqDefForDeleteSnapshot()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteSnapshotResponse), nil
@@ -121,7 +121,7 @@ func (c *EvsClient) DeleteSnapshot(request *model.DeleteSnapshotRequest) (*model
 func (c *EvsClient) DeleteVolume(request *model.DeleteVolumeRequest) (*model.DeleteVolumeResponse, error) {
 	requestDef := GenReqDefForDeleteVolume()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteVolumeResponse), nil
@@ -132,7 +132,7 @@ func (c *EvsClient) DeleteVolume(request *model.DeleteVolumeRequest) (*model.Del
 func (c *EvsClient) ListSnapshots(request *model.ListSnapshotsRequest) (*model.ListSnapshotsResponse, error) {
 	requestDef := GenReqDefForListSnapshots()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSnapshotsResponse), nil
@@ -143,7 +143,7 @@ func (c *EvsClient) ListSnapshots(request *model.ListSnapshotsRequest) (*model.L
 func (c *EvsClient) ListVolumeTags(request *model.ListVolumeTagsRequest) (*model.ListVolumeTagsResponse, error) {
 	requestDef := GenReqDefForListVolumeTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListVolumeTagsResponse), nil
@@ -154,7 +154,7 @@ func (c *EvsClient) ListVolumeTags(request *model.ListVolumeTagsRequest) (*model
 func (c *EvsClient) ListVolumes(request *model.ListVolumesRequest) (*model.ListVolumesResponse, error) {
 	requestDef := GenReqDefForListVolumes()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListVolumesResponse), nil
@@ -165,7 +165,7 @@ func (c *EvsClient) ListVolumes(request *model.ListVolumesRequest) (*model.ListV
 func (c *EvsClient) ListVolumesByTags(request *model.ListVolumesByTagsRequest) (*model.ListVolumesByTagsResponse, error) {
 	requestDef := GenReqDefForListVolumesByTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListVolumesByTagsResponse), nil
@@ -176,7 +176,7 @@ func (c *EvsClient) ListVolumesByTags(request *model.ListVolumesByTagsRequest) (
 func (c *EvsClient) ResizeVolume(request *model.ResizeVolumeRequest) (*model.ResizeVolumeResponse, error) {
 	requestDef := GenReqDefForResizeVolume()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ResizeVolumeResponse), nil
@@ -187,7 +187,7 @@ func (c *EvsClient) ResizeVolume(request *model.ResizeVolumeRequest) (*model.Res
 func (c *EvsClient) RollbackSnapshot(request *model.RollbackSnapshotRequest) (*model.RollbackSnapshotResponse, error) {
 	requestDef := GenReqDefForRollbackSnapshot()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RollbackSnapshotResponse), nil
@@ -198,7 +198,7 @@ func (c *EvsClient) RollbackSnapshot(request *model.RollbackSnapshotRequest) (*m
 func (c *EvsClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
 	requestDef := GenReqDefForShowJob()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowJobResponse), nil
@@ -209,7 +209,7 @@ func (c *EvsClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobRespon
 func (c *EvsClient) ShowSnapshot(request *model.ShowSnapshotRequest) (*model.ShowSnapshotResponse, error) {
 	requestDef := GenReqDefForShowSnapshot()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowSnapshotResponse), nil
@@ -220,7 +220,7 @@ func (c *EvsClient) ShowSnapshot(request *model.ShowSnapshotRequest) (*model.Sho
 func (c *EvsClient) ShowVolume(request *model.ShowVolumeRequest) (*model.ShowVolumeResponse, error) {
 	requestDef := GenReqDefForShowVolume()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowVolumeResponse), nil
@@ -231,7 +231,7 @@ func (c *EvsClient) ShowVolume(request *model.ShowVolumeRequest) (*model.ShowVol
 func (c *EvsClient) ShowVolumeTags(request *model.ShowVolumeTagsRequest) (*model.ShowVolumeTagsResponse, error) {
 	requestDef := GenReqDefForShowVolumeTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowVolumeTagsResponse), nil
@@ -242,7 +242,7 @@ func (c *EvsClient) ShowVolumeTags(request *model.ShowVolumeTagsRequest) (*model
 func (c *EvsClient) UpdateSnapshot(request *model.UpdateSnapshotRequest) (*model.UpdateSnapshotResponse, error) {
 	requestDef := GenReqDefForUpdateSnapshot()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateSnapshotResponse), nil
@@ -253,7 +253,7 @@ func (c *EvsClient) UpdateSnapshot(request *model.UpdateSnapshotRequest) (*model
 func (c *EvsClient) UpdateVolume(request *model.UpdateVolumeRequest) (*model.UpdateVolumeResponse, error) {
 	requestDef := GenReqDefForUpdateVolume()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateVolumeResponse), nil

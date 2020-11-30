@@ -17,6 +17,7 @@ import (
 type AddVaultResourceResponse struct {
 	// 已添加的资源ID列表
 	AddResourceIds *[]string `json:"add_resource_ids,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o AddVaultResourceResponse) String() string {

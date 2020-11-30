@@ -20,7 +20,8 @@ type ListApisNotBoundWithSignatureKeyV2Response struct {
 	// 本次查询返回的API列表长度
 	Size *int32 `json:"size,omitempty"`
 	// 本次查询返回的API列表
-	Apis *[]SignUnbindingApiResp `json:"apis,omitempty"`
+	Apis           *[]SignUnbindingApiResp `json:"apis,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o ListApisNotBoundWithSignatureKeyV2Response) String() string {

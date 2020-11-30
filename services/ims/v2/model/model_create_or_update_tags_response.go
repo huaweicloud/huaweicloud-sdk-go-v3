@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type CreateOrUpdateTagsResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CreateOrUpdateTagsResponse) String() string {

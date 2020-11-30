@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type AddServerGroupMemberResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o AddServerGroupMemberResponse) String() string {

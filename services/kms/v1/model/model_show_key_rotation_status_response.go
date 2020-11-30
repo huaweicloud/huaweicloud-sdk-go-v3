@@ -23,6 +23,7 @@ type ShowKeyRotationStatusResponse struct {
 	LastRotationTime *string `json:"last_rotation_time,omitempty"`
 	// 密钥轮换次数。
 	NumberOfRotations *int32 `json:"number_of_rotations,omitempty"`
+	HttpStatusCode    int    `json:"-"`
 }
 
 func (o ShowKeyRotationStatusResponse) String() string {

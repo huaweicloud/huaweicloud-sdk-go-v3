@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreateTemplateGroupResponse struct {
-	TemplateGroup *TemplateGroup `json:"template_group,omitempty"`
+	TemplateGroup  *TemplateGroup `json:"template_group,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o CreateTemplateGroupResponse) String() string {

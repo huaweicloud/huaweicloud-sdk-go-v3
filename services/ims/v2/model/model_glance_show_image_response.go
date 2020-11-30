@@ -113,7 +113,8 @@ type GlanceShowImageResponse struct {
 	// 是否为ARM架构类型的镜像，取值为“true”或者“false”。
 	SupportArm *GlanceShowImageResponseSupportArm `json:"__support_arm,omitempty"`
 	// 表示当前市场镜像是否下架。 true：已下架 false：未下架
-	IsOffshelved *GlanceShowImageResponseIsOffshelved `json:"__is_offshelved,omitempty"`
+	IsOffshelved   *GlanceShowImageResponseIsOffshelved `json:"__is_offshelved,omitempty"`
+	HttpStatusCode int                                  `json:"-"`
 }
 
 func (o GlanceShowImageResponse) String() string {

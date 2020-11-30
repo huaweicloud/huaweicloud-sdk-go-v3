@@ -17,7 +17,8 @@ import (
 type KeystoneListAuthProjectsResponse struct {
 	Links *LinksSelf `json:"links,omitempty"`
 	// 项目信息列表。
-	Projects *[]AuthProjectResult `json:"projects,omitempty"`
+	Projects       *[]AuthProjectResult `json:"projects,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o KeystoneListAuthProjectsResponse) String() string {

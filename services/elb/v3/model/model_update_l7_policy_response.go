@@ -16,8 +16,9 @@ import (
 // Response Object
 type UpdateL7PolicyResponse struct {
 	// 请求ID。  注：自动生成 。
-	RequestId *string   `json:"request_id,omitempty"`
-	L7policy  *L7Policy `json:"l7policy,omitempty"`
+	RequestId      *string   `json:"request_id,omitempty"`
+	L7policy       *L7Policy `json:"l7policy,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o UpdateL7PolicyResponse) String() string {

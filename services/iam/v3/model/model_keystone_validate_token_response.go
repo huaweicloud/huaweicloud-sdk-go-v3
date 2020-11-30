@@ -15,8 +15,9 @@ import (
 
 // Response Object
 type KeystoneValidateTokenResponse struct {
-	Token         *TokenResult `json:"token,omitempty"`
-	XSubjectToken *string      `json:"X-Subject-Token,omitempty"`
+	Token          *TokenResult `json:"token,omitempty"`
+	XSubjectToken  *string      `json:"X-Subject-Token,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o KeystoneValidateTokenResponse) String() string {

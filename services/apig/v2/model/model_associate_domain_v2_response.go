@@ -21,7 +21,8 @@ type AssociateDomainV2Response struct {
 	// 域名的编号
 	Id *string `json:"id,omitempty"`
 	// CNAME解析状态 - 1: 未解析 - 2: 解析中 - 3: 解析成功 - 4: 解析失败
-	Status *AssociateDomainV2ResponseStatus `json:"status,omitempty"`
+	Status         *AssociateDomainV2ResponseStatus `json:"status,omitempty"`
+	HttpStatusCode int                              `json:"-"`
 }
 
 func (o AssociateDomainV2Response) String() string {

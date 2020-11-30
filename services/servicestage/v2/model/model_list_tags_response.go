@@ -16,7 +16,8 @@ import (
 // Response Object
 type ListTagsResponse struct {
 	// 项目tag标签列表。
-	Tags *[]string `json:"tags,omitempty"`
+	Tags           *[]string `json:"tags,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListTagsResponse) String() string {

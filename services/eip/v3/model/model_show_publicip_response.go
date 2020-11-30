@@ -16,8 +16,9 @@ import (
 // Response Object
 type ShowPublicipResponse struct {
 	// 本次请求的编号
-	RequestId *string           `json:"request_id,omitempty"`
-	Publicip  *PublicipShowResp `json:"publicip,omitempty"`
+	RequestId      *string           `json:"request_id,omitempty"`
+	Publicip       *PublicipShowResp `json:"publicip,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ShowPublicipResponse) String() string {

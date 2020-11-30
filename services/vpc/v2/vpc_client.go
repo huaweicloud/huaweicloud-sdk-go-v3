@@ -6,11 +6,11 @@ import (
 )
 
 type VpcClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewVpcClient(hcClient *http_client.HcHttpClient) *VpcClient {
-	return &VpcClient{hcClient: hcClient}
+	return &VpcClient{HcClient: hcClient}
 }
 
 func VpcClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func VpcClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *VpcClient) AcceptVpcPeering(request *model.AcceptVpcPeeringRequest) (*model.AcceptVpcPeeringResponse, error) {
 	requestDef := GenReqDefForAcceptVpcPeering()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AcceptVpcPeeringResponse), nil
@@ -33,7 +33,7 @@ func (c *VpcClient) AcceptVpcPeering(request *model.AcceptVpcPeeringRequest) (*m
 func (c *VpcClient) CreatePort(request *model.CreatePortRequest) (*model.CreatePortResponse, error) {
 	requestDef := GenReqDefForCreatePort()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePortResponse), nil
@@ -44,7 +44,7 @@ func (c *VpcClient) CreatePort(request *model.CreatePortRequest) (*model.CreateP
 func (c *VpcClient) CreateSecurityGroup(request *model.CreateSecurityGroupRequest) (*model.CreateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForCreateSecurityGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateSecurityGroupResponse), nil
@@ -55,7 +55,7 @@ func (c *VpcClient) CreateSecurityGroup(request *model.CreateSecurityGroupReques
 func (c *VpcClient) CreateSecurityGroupRule(request *model.CreateSecurityGroupRuleRequest) (*model.CreateSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForCreateSecurityGroupRule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateSecurityGroupRuleResponse), nil
@@ -66,7 +66,7 @@ func (c *VpcClient) CreateSecurityGroupRule(request *model.CreateSecurityGroupRu
 func (c *VpcClient) CreateSubnet(request *model.CreateSubnetRequest) (*model.CreateSubnetResponse, error) {
 	requestDef := GenReqDefForCreateSubnet()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateSubnetResponse), nil
@@ -77,7 +77,7 @@ func (c *VpcClient) CreateSubnet(request *model.CreateSubnetRequest) (*model.Cre
 func (c *VpcClient) CreateVpcPeering(request *model.CreateVpcPeeringRequest) (*model.CreateVpcPeeringResponse, error) {
 	requestDef := GenReqDefForCreateVpcPeering()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateVpcPeeringResponse), nil
@@ -88,7 +88,7 @@ func (c *VpcClient) CreateVpcPeering(request *model.CreateVpcPeeringRequest) (*m
 func (c *VpcClient) DeletePort(request *model.DeletePortRequest) (*model.DeletePortResponse, error) {
 	requestDef := GenReqDefForDeletePort()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeletePortResponse), nil
@@ -99,7 +99,7 @@ func (c *VpcClient) DeletePort(request *model.DeletePortRequest) (*model.DeleteP
 func (c *VpcClient) DeleteSecurityGroup(request *model.DeleteSecurityGroupRequest) (*model.DeleteSecurityGroupResponse, error) {
 	requestDef := GenReqDefForDeleteSecurityGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteSecurityGroupResponse), nil
@@ -110,7 +110,7 @@ func (c *VpcClient) DeleteSecurityGroup(request *model.DeleteSecurityGroupReques
 func (c *VpcClient) DeleteSecurityGroupRule(request *model.DeleteSecurityGroupRuleRequest) (*model.DeleteSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForDeleteSecurityGroupRule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteSecurityGroupRuleResponse), nil
@@ -121,7 +121,7 @@ func (c *VpcClient) DeleteSecurityGroupRule(request *model.DeleteSecurityGroupRu
 func (c *VpcClient) DeleteSubnet(request *model.DeleteSubnetRequest) (*model.DeleteSubnetResponse, error) {
 	requestDef := GenReqDefForDeleteSubnet()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteSubnetResponse), nil
@@ -132,7 +132,7 @@ func (c *VpcClient) DeleteSubnet(request *model.DeleteSubnetRequest) (*model.Del
 func (c *VpcClient) DeleteVpcPeering(request *model.DeleteVpcPeeringRequest) (*model.DeleteVpcPeeringResponse, error) {
 	requestDef := GenReqDefForDeleteVpcPeering()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteVpcPeeringResponse), nil
@@ -143,7 +143,7 @@ func (c *VpcClient) DeleteVpcPeering(request *model.DeleteVpcPeeringRequest) (*m
 func (c *VpcClient) ListPorts(request *model.ListPortsRequest) (*model.ListPortsResponse, error) {
 	requestDef := GenReqDefForListPorts()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPortsResponse), nil
@@ -154,7 +154,7 @@ func (c *VpcClient) ListPorts(request *model.ListPortsRequest) (*model.ListPorts
 func (c *VpcClient) ListSecurityGroupRules(request *model.ListSecurityGroupRulesRequest) (*model.ListSecurityGroupRulesResponse, error) {
 	requestDef := GenReqDefForListSecurityGroupRules()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSecurityGroupRulesResponse), nil
@@ -165,7 +165,7 @@ func (c *VpcClient) ListSecurityGroupRules(request *model.ListSecurityGroupRules
 func (c *VpcClient) ListSecurityGroups(request *model.ListSecurityGroupsRequest) (*model.ListSecurityGroupsResponse, error) {
 	requestDef := GenReqDefForListSecurityGroups()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSecurityGroupsResponse), nil
@@ -176,7 +176,7 @@ func (c *VpcClient) ListSecurityGroups(request *model.ListSecurityGroupsRequest)
 func (c *VpcClient) ListSubnets(request *model.ListSubnetsRequest) (*model.ListSubnetsResponse, error) {
 	requestDef := GenReqDefForListSubnets()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSubnetsResponse), nil
@@ -187,7 +187,7 @@ func (c *VpcClient) ListSubnets(request *model.ListSubnetsRequest) (*model.ListS
 func (c *VpcClient) ListVpcPeerings(request *model.ListVpcPeeringsRequest) (*model.ListVpcPeeringsResponse, error) {
 	requestDef := GenReqDefForListVpcPeerings()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListVpcPeeringsResponse), nil
@@ -198,7 +198,7 @@ func (c *VpcClient) ListVpcPeerings(request *model.ListVpcPeeringsRequest) (*mod
 func (c *VpcClient) RejectVpcPeering(request *model.RejectVpcPeeringRequest) (*model.RejectVpcPeeringResponse, error) {
 	requestDef := GenReqDefForRejectVpcPeering()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RejectVpcPeeringResponse), nil
@@ -209,7 +209,7 @@ func (c *VpcClient) RejectVpcPeering(request *model.RejectVpcPeeringRequest) (*m
 func (c *VpcClient) ShowPort(request *model.ShowPortRequest) (*model.ShowPortResponse, error) {
 	requestDef := GenReqDefForShowPort()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowPortResponse), nil
@@ -220,7 +220,7 @@ func (c *VpcClient) ShowPort(request *model.ShowPortRequest) (*model.ShowPortRes
 func (c *VpcClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuotaResponse, error) {
 	requestDef := GenReqDefForShowQuota()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowQuotaResponse), nil
@@ -231,7 +231,7 @@ func (c *VpcClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuota
 func (c *VpcClient) ShowSecurityGroup(request *model.ShowSecurityGroupRequest) (*model.ShowSecurityGroupResponse, error) {
 	requestDef := GenReqDefForShowSecurityGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowSecurityGroupResponse), nil
@@ -242,7 +242,7 @@ func (c *VpcClient) ShowSecurityGroup(request *model.ShowSecurityGroupRequest) (
 func (c *VpcClient) ShowSecurityGroupRule(request *model.ShowSecurityGroupRuleRequest) (*model.ShowSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForShowSecurityGroupRule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowSecurityGroupRuleResponse), nil
@@ -253,7 +253,7 @@ func (c *VpcClient) ShowSecurityGroupRule(request *model.ShowSecurityGroupRuleRe
 func (c *VpcClient) ShowSubnet(request *model.ShowSubnetRequest) (*model.ShowSubnetResponse, error) {
 	requestDef := GenReqDefForShowSubnet()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowSubnetResponse), nil
@@ -264,7 +264,7 @@ func (c *VpcClient) ShowSubnet(request *model.ShowSubnetRequest) (*model.ShowSub
 func (c *VpcClient) ShowVpcPeering(request *model.ShowVpcPeeringRequest) (*model.ShowVpcPeeringResponse, error) {
 	requestDef := GenReqDefForShowVpcPeering()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowVpcPeeringResponse), nil
@@ -275,7 +275,7 @@ func (c *VpcClient) ShowVpcPeering(request *model.ShowVpcPeeringRequest) (*model
 func (c *VpcClient) UpdatePort(request *model.UpdatePortRequest) (*model.UpdatePortResponse, error) {
 	requestDef := GenReqDefForUpdatePort()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePortResponse), nil
@@ -286,7 +286,7 @@ func (c *VpcClient) UpdatePort(request *model.UpdatePortRequest) (*model.UpdateP
 func (c *VpcClient) UpdateSubnet(request *model.UpdateSubnetRequest) (*model.UpdateSubnetResponse, error) {
 	requestDef := GenReqDefForUpdateSubnet()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateSubnetResponse), nil
@@ -297,7 +297,7 @@ func (c *VpcClient) UpdateSubnet(request *model.UpdateSubnetRequest) (*model.Upd
 func (c *VpcClient) UpdateVpcPeering(request *model.UpdateVpcPeeringRequest) (*model.UpdateVpcPeeringResponse, error) {
 	requestDef := GenReqDefForUpdateVpcPeering()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateVpcPeeringResponse), nil
@@ -308,7 +308,7 @@ func (c *VpcClient) UpdateVpcPeering(request *model.UpdateVpcPeeringRequest) (*m
 func (c *VpcClient) CreatePrivateip(request *model.CreatePrivateipRequest) (*model.CreatePrivateipResponse, error) {
 	requestDef := GenReqDefForCreatePrivateip()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePrivateipResponse), nil
@@ -319,7 +319,7 @@ func (c *VpcClient) CreatePrivateip(request *model.CreatePrivateipRequest) (*mod
 func (c *VpcClient) DeletePrivateip(request *model.DeletePrivateipRequest) (*model.DeletePrivateipResponse, error) {
 	requestDef := GenReqDefForDeletePrivateip()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeletePrivateipResponse), nil
@@ -330,7 +330,7 @@ func (c *VpcClient) DeletePrivateip(request *model.DeletePrivateipRequest) (*mod
 func (c *VpcClient) ListPrivateips(request *model.ListPrivateipsRequest) (*model.ListPrivateipsResponse, error) {
 	requestDef := GenReqDefForListPrivateips()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPrivateipsResponse), nil
@@ -341,7 +341,7 @@ func (c *VpcClient) ListPrivateips(request *model.ListPrivateipsRequest) (*model
 func (c *VpcClient) ShowNetworkIpAvailabilities(request *model.ShowNetworkIpAvailabilitiesRequest) (*model.ShowNetworkIpAvailabilitiesResponse, error) {
 	requestDef := GenReqDefForShowNetworkIpAvailabilities()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowNetworkIpAvailabilitiesResponse), nil
@@ -352,7 +352,7 @@ func (c *VpcClient) ShowNetworkIpAvailabilities(request *model.ShowNetworkIpAvai
 func (c *VpcClient) ShowPrivateip(request *model.ShowPrivateipRequest) (*model.ShowPrivateipResponse, error) {
 	requestDef := GenReqDefForShowPrivateip()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowPrivateipResponse), nil
@@ -363,7 +363,7 @@ func (c *VpcClient) ShowPrivateip(request *model.ShowPrivateipRequest) (*model.S
 func (c *VpcClient) NeutronAddFirewallRule(request *model.NeutronAddFirewallRuleRequest) (*model.NeutronAddFirewallRuleResponse, error) {
 	requestDef := GenReqDefForNeutronAddFirewallRule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronAddFirewallRuleResponse), nil
@@ -374,7 +374,7 @@ func (c *VpcClient) NeutronAddFirewallRule(request *model.NeutronAddFirewallRule
 func (c *VpcClient) NeutronCreateFirewallGroup(request *model.NeutronCreateFirewallGroupRequest) (*model.NeutronCreateFirewallGroupResponse, error) {
 	requestDef := GenReqDefForNeutronCreateFirewallGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronCreateFirewallGroupResponse), nil
@@ -385,7 +385,7 @@ func (c *VpcClient) NeutronCreateFirewallGroup(request *model.NeutronCreateFirew
 func (c *VpcClient) NeutronCreateFirewallPolicy(request *model.NeutronCreateFirewallPolicyRequest) (*model.NeutronCreateFirewallPolicyResponse, error) {
 	requestDef := GenReqDefForNeutronCreateFirewallPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronCreateFirewallPolicyResponse), nil
@@ -396,7 +396,7 @@ func (c *VpcClient) NeutronCreateFirewallPolicy(request *model.NeutronCreateFire
 func (c *VpcClient) NeutronCreateFirewallRule(request *model.NeutronCreateFirewallRuleRequest) (*model.NeutronCreateFirewallRuleResponse, error) {
 	requestDef := GenReqDefForNeutronCreateFirewallRule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronCreateFirewallRuleResponse), nil
@@ -407,7 +407,7 @@ func (c *VpcClient) NeutronCreateFirewallRule(request *model.NeutronCreateFirewa
 func (c *VpcClient) NeutronDeleteFirewallGroup(request *model.NeutronDeleteFirewallGroupRequest) (*model.NeutronDeleteFirewallGroupResponse, error) {
 	requestDef := GenReqDefForNeutronDeleteFirewallGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronDeleteFirewallGroupResponse), nil
@@ -418,7 +418,7 @@ func (c *VpcClient) NeutronDeleteFirewallGroup(request *model.NeutronDeleteFirew
 func (c *VpcClient) NeutronDeleteFirewallPolicy(request *model.NeutronDeleteFirewallPolicyRequest) (*model.NeutronDeleteFirewallPolicyResponse, error) {
 	requestDef := GenReqDefForNeutronDeleteFirewallPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronDeleteFirewallPolicyResponse), nil
@@ -429,7 +429,7 @@ func (c *VpcClient) NeutronDeleteFirewallPolicy(request *model.NeutronDeleteFire
 func (c *VpcClient) NeutronDeleteFirewallRule(request *model.NeutronDeleteFirewallRuleRequest) (*model.NeutronDeleteFirewallRuleResponse, error) {
 	requestDef := GenReqDefForNeutronDeleteFirewallRule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronDeleteFirewallRuleResponse), nil
@@ -440,7 +440,7 @@ func (c *VpcClient) NeutronDeleteFirewallRule(request *model.NeutronDeleteFirewa
 func (c *VpcClient) NeutronListFirewallGroups(request *model.NeutronListFirewallGroupsRequest) (*model.NeutronListFirewallGroupsResponse, error) {
 	requestDef := GenReqDefForNeutronListFirewallGroups()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronListFirewallGroupsResponse), nil
@@ -451,7 +451,7 @@ func (c *VpcClient) NeutronListFirewallGroups(request *model.NeutronListFirewall
 func (c *VpcClient) NeutronListFirewallPolicies(request *model.NeutronListFirewallPoliciesRequest) (*model.NeutronListFirewallPoliciesResponse, error) {
 	requestDef := GenReqDefForNeutronListFirewallPolicies()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronListFirewallPoliciesResponse), nil
@@ -462,7 +462,7 @@ func (c *VpcClient) NeutronListFirewallPolicies(request *model.NeutronListFirewa
 func (c *VpcClient) NeutronListFirewallRules(request *model.NeutronListFirewallRulesRequest) (*model.NeutronListFirewallRulesResponse, error) {
 	requestDef := GenReqDefForNeutronListFirewallRules()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronListFirewallRulesResponse), nil
@@ -473,7 +473,7 @@ func (c *VpcClient) NeutronListFirewallRules(request *model.NeutronListFirewallR
 func (c *VpcClient) NeutronRemoveFirewallRule(request *model.NeutronRemoveFirewallRuleRequest) (*model.NeutronRemoveFirewallRuleResponse, error) {
 	requestDef := GenReqDefForNeutronRemoveFirewallRule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronRemoveFirewallRuleResponse), nil
@@ -484,7 +484,7 @@ func (c *VpcClient) NeutronRemoveFirewallRule(request *model.NeutronRemoveFirewa
 func (c *VpcClient) NeutronShowFirewallGroup(request *model.NeutronShowFirewallGroupRequest) (*model.NeutronShowFirewallGroupResponse, error) {
 	requestDef := GenReqDefForNeutronShowFirewallGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronShowFirewallGroupResponse), nil
@@ -495,7 +495,7 @@ func (c *VpcClient) NeutronShowFirewallGroup(request *model.NeutronShowFirewallG
 func (c *VpcClient) NeutronShowFirewallPolicy(request *model.NeutronShowFirewallPolicyRequest) (*model.NeutronShowFirewallPolicyResponse, error) {
 	requestDef := GenReqDefForNeutronShowFirewallPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronShowFirewallPolicyResponse), nil
@@ -506,7 +506,7 @@ func (c *VpcClient) NeutronShowFirewallPolicy(request *model.NeutronShowFirewall
 func (c *VpcClient) NeutronShowFirewallRule(request *model.NeutronShowFirewallRuleRequest) (*model.NeutronShowFirewallRuleResponse, error) {
 	requestDef := GenReqDefForNeutronShowFirewallRule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronShowFirewallRuleResponse), nil
@@ -517,7 +517,7 @@ func (c *VpcClient) NeutronShowFirewallRule(request *model.NeutronShowFirewallRu
 func (c *VpcClient) NeutronUpdateFirewallGroup(request *model.NeutronUpdateFirewallGroupRequest) (*model.NeutronUpdateFirewallGroupResponse, error) {
 	requestDef := GenReqDefForNeutronUpdateFirewallGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronUpdateFirewallGroupResponse), nil
@@ -528,7 +528,7 @@ func (c *VpcClient) NeutronUpdateFirewallGroup(request *model.NeutronUpdateFirew
 func (c *VpcClient) NeutronUpdateFirewallPolicy(request *model.NeutronUpdateFirewallPolicyRequest) (*model.NeutronUpdateFirewallPolicyResponse, error) {
 	requestDef := GenReqDefForNeutronUpdateFirewallPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronUpdateFirewallPolicyResponse), nil
@@ -539,7 +539,7 @@ func (c *VpcClient) NeutronUpdateFirewallPolicy(request *model.NeutronUpdateFire
 func (c *VpcClient) NeutronUpdateFirewallRule(request *model.NeutronUpdateFirewallRuleRequest) (*model.NeutronUpdateFirewallRuleResponse, error) {
 	requestDef := GenReqDefForNeutronUpdateFirewallRule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NeutronUpdateFirewallRuleResponse), nil
@@ -550,7 +550,7 @@ func (c *VpcClient) NeutronUpdateFirewallRule(request *model.NeutronUpdateFirewa
 func (c *VpcClient) CreateVpc(request *model.CreateVpcRequest) (*model.CreateVpcResponse, error) {
 	requestDef := GenReqDefForCreateVpc()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateVpcResponse), nil
@@ -561,7 +561,7 @@ func (c *VpcClient) CreateVpc(request *model.CreateVpcRequest) (*model.CreateVpc
 func (c *VpcClient) CreateVpcRoute(request *model.CreateVpcRouteRequest) (*model.CreateVpcRouteResponse, error) {
 	requestDef := GenReqDefForCreateVpcRoute()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateVpcRouteResponse), nil
@@ -572,7 +572,7 @@ func (c *VpcClient) CreateVpcRoute(request *model.CreateVpcRouteRequest) (*model
 func (c *VpcClient) DeleteVpc(request *model.DeleteVpcRequest) (*model.DeleteVpcResponse, error) {
 	requestDef := GenReqDefForDeleteVpc()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteVpcResponse), nil
@@ -583,7 +583,7 @@ func (c *VpcClient) DeleteVpc(request *model.DeleteVpcRequest) (*model.DeleteVpc
 func (c *VpcClient) DeleteVpcRoute(request *model.DeleteVpcRouteRequest) (*model.DeleteVpcRouteResponse, error) {
 	requestDef := GenReqDefForDeleteVpcRoute()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteVpcRouteResponse), nil
@@ -594,7 +594,7 @@ func (c *VpcClient) DeleteVpcRoute(request *model.DeleteVpcRouteRequest) (*model
 func (c *VpcClient) ListVpcRoutes(request *model.ListVpcRoutesRequest) (*model.ListVpcRoutesResponse, error) {
 	requestDef := GenReqDefForListVpcRoutes()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListVpcRoutesResponse), nil
@@ -605,7 +605,7 @@ func (c *VpcClient) ListVpcRoutes(request *model.ListVpcRoutesRequest) (*model.L
 func (c *VpcClient) ListVpcs(request *model.ListVpcsRequest) (*model.ListVpcsResponse, error) {
 	requestDef := GenReqDefForListVpcs()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListVpcsResponse), nil
@@ -616,7 +616,7 @@ func (c *VpcClient) ListVpcs(request *model.ListVpcsRequest) (*model.ListVpcsRes
 func (c *VpcClient) ShowVpc(request *model.ShowVpcRequest) (*model.ShowVpcResponse, error) {
 	requestDef := GenReqDefForShowVpc()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowVpcResponse), nil
@@ -627,7 +627,7 @@ func (c *VpcClient) ShowVpc(request *model.ShowVpcRequest) (*model.ShowVpcRespon
 func (c *VpcClient) ShowVpcRoute(request *model.ShowVpcRouteRequest) (*model.ShowVpcRouteResponse, error) {
 	requestDef := GenReqDefForShowVpcRoute()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowVpcRouteResponse), nil
@@ -638,7 +638,7 @@ func (c *VpcClient) ShowVpcRoute(request *model.ShowVpcRouteRequest) (*model.Sho
 func (c *VpcClient) UpdateVpc(request *model.UpdateVpcRequest) (*model.UpdateVpcResponse, error) {
 	requestDef := GenReqDefForUpdateVpc()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateVpcResponse), nil

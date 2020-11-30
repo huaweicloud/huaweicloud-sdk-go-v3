@@ -19,7 +19,8 @@ type ListL7RulesResponse struct {
 	RequestId *string   `json:"request_id,omitempty"`
 	PageInfo  *PageInfo `json:"page_info,omitempty"`
 	// 规则对象列表。
-	Rules *[]L7Rule `json:"rules,omitempty"`
+	Rules          *[]L7Rule `json:"rules,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListL7RulesResponse) String() string {

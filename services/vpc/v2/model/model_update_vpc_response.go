@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type UpdateVpcResponse struct {
-	Vpc *Vpc `json:"vpc,omitempty"`
+	Vpc            *Vpc `json:"vpc,omitempty"`
+	HttpStatusCode int  `json:"-"`
 }
 
 func (o UpdateVpcResponse) String() string {

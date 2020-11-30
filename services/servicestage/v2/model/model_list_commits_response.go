@@ -16,7 +16,8 @@ import (
 // Response Object
 type ListCommitsResponse struct {
 	// 提交记录列表。
-	Commits *[]CommitsCommits `json:"commits,omitempty"`
+	Commits        *[]CommitsCommits `json:"commits,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ListCommitsResponse) String() string {

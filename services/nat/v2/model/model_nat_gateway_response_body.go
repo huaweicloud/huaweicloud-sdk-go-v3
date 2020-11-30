@@ -18,27 +18,27 @@ import (
 // 公网NAT网关实例的响应体。
 type NatGatewayResponseBody struct {
 	// 公网NAT网关实例的ID。
-	Id *string `json:"id,omitempty"`
+	Id string `json:"id"`
 	// 项目的ID。
-	TenantId *string `json:"tenant_id,omitempty"`
-	// 公网NAT网关实例的名字。
-	Name *string `json:"name,omitempty"`
-	// 公网NAT网关实例的描述。
-	Description *string `json:"description,omitempty"`
+	TenantId string `json:"tenant_id"`
+	// 公网NAT网关实例的名字，长度限制为64。
+	Name string `json:"name"`
+	// 公网NAT网关实例的描述，长度限制为255。
+	Description string `json:"description"`
 	// 公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
-	Spec *NatGatewayResponseBodySpec `json:"spec,omitempty"`
+	Spec NatGatewayResponseBodySpec `json:"spec"`
 	// 公网NAT网关实例的状态。
-	Status *NatGatewayResponseBodyStatus `json:"status,omitempty"`
+	Status NatGatewayResponseBodyStatus `json:"status"`
 	// 解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
-	AdminStateUp *bool `json:"admin_state_up,omitempty"`
+	AdminStateUp bool `json:"admin_state_up"`
 	// 公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+	CreatedAt *sdktime.SdkTime `json:"created_at"`
 	// VPC的id。
-	RouterId *string `json:"router_id,omitempty"`
-	// NAT网关下行口（DVR的下一跳）所属的network id。
-	InternalNetworkId *string `json:"internal_network_id,omitempty"`
+	RouterId string `json:"router_id"`
+	// 公网NAT网关下行口（DVR的下一跳）所属的network id。
+	InternalNetworkId string `json:"internal_network_id"`
 	// 企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId string `json:"enterprise_project_id"`
 }
 
 func (o NatGatewayResponseBody) String() string {
@@ -101,7 +101,6 @@ type NatGatewayResponseBodyStatusEnum struct {
 	PENDING_CREATE NatGatewayResponseBodyStatus
 	PENDING_UPDATE NatGatewayResponseBodyStatus
 	PENDING_DELETE NatGatewayResponseBodyStatus
-	EIP_FREEZED    NatGatewayResponseBodyStatus
 	INACTIVE       NatGatewayResponseBodyStatus
 }
 
@@ -118,9 +117,6 @@ func GetNatGatewayResponseBodyStatusEnum() NatGatewayResponseBodyStatusEnum {
 		},
 		PENDING_DELETE: NatGatewayResponseBodyStatus{
 			value: "PENDING_DELETE",
-		},
-		EIP_FREEZED: NatGatewayResponseBodyStatus{
-			value: "EIP_FREEZED",
 		},
 		INACTIVE: NatGatewayResponseBodyStatus{
 			value: "INACTIVE",

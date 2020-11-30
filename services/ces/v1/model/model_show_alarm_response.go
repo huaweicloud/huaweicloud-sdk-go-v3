@@ -16,7 +16,8 @@ import (
 // Response Object
 type ShowAlarmResponse struct {
 	// 告警对象列表。
-	MetricAlarms *[]MetricAlarms `json:"metric_alarms,omitempty"`
+	MetricAlarms   *[]MetricAlarms `json:"metric_alarms,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o ShowAlarmResponse) String() string {

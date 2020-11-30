@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type KeystoneShowSecurityComplianceByOptionResponse struct {
-	Config *ConfigByOption `json:"config,omitempty"`
+	Config         *ConfigByOption `json:"config,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o KeystoneShowSecurityComplianceByOptionResponse) String() string {

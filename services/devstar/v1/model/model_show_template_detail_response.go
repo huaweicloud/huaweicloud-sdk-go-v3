@@ -32,8 +32,9 @@ type ShowTemplateDetailResponse struct {
 	// 项目id
 	ProjectUuid *string `json:"project_uuid,omitempty"`
 	// 模板状态
-	Status     *int32            `json:"status,omitempty"`
-	Properties *[]PropertiesInfo `json:"properties,omitempty"`
+	Status         *int32            `json:"status,omitempty"`
+	Properties     *[]PropertiesInfo `json:"properties,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ShowTemplateDetailResponse) String() string {

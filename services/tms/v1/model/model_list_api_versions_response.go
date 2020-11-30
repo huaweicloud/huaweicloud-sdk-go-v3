@@ -16,7 +16,8 @@ import (
 // Response Object
 type ListApiVersionsResponse struct {
 	// 版本列表
-	Versions *[]VersionDetail `json:"versions,omitempty"`
+	Versions       *[]VersionDetail `json:"versions,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ListApiVersionsResponse) String() string {

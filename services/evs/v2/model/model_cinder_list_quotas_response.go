@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CinderListQuotasResponse struct {
-	QuotaSet *QuotaList `json:"quota_set,omitempty"`
+	QuotaSet       *QuotaList `json:"quota_set,omitempty"`
+	HttpStatusCode int        `json:"-"`
 }
 
 func (o CinderListQuotasResponse) String() string {

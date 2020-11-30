@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CopyCheckpointResponse struct {
-	Replication *CheckpointReplicateRespBody `json:"replication,omitempty"`
+	Replication    *CheckpointReplicateRespBody `json:"replication,omitempty"`
+	HttpStatusCode int                          `json:"-"`
 }
 
 func (o CopyCheckpointResponse) String() string {

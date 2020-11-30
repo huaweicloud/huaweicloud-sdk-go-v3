@@ -6,11 +6,11 @@ import (
 )
 
 type IamClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewIamClient(hcClient *http_client.HcHttpClient) *IamClient {
-	return &IamClient{hcClient: hcClient}
+	return &IamClient{HcClient: hcClient}
 }
 
 func IamClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func IamClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *IamClient) AssociateAgencyWithAllProjectsPermission(request *model.AssociateAgencyWithAllProjectsPermissionRequest) (*model.AssociateAgencyWithAllProjectsPermissionResponse, error) {
 	requestDef := GenReqDefForAssociateAgencyWithAllProjectsPermission()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AssociateAgencyWithAllProjectsPermissionResponse), nil
@@ -33,7 +33,7 @@ func (c *IamClient) AssociateAgencyWithAllProjectsPermission(request *model.Asso
 func (c *IamClient) AssociateAgencyWithDomainPermission(request *model.AssociateAgencyWithDomainPermissionRequest) (*model.AssociateAgencyWithDomainPermissionResponse, error) {
 	requestDef := GenReqDefForAssociateAgencyWithDomainPermission()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AssociateAgencyWithDomainPermissionResponse), nil
@@ -44,7 +44,7 @@ func (c *IamClient) AssociateAgencyWithDomainPermission(request *model.Associate
 func (c *IamClient) AssociateAgencyWithProjectPermission(request *model.AssociateAgencyWithProjectPermissionRequest) (*model.AssociateAgencyWithProjectPermissionResponse, error) {
 	requestDef := GenReqDefForAssociateAgencyWithProjectPermission()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AssociateAgencyWithProjectPermissionResponse), nil
@@ -55,7 +55,7 @@ func (c *IamClient) AssociateAgencyWithProjectPermission(request *model.Associat
 func (c *IamClient) CheckAllProjectsPermissionForAgency(request *model.CheckAllProjectsPermissionForAgencyRequest) (*model.CheckAllProjectsPermissionForAgencyResponse, error) {
 	requestDef := GenReqDefForCheckAllProjectsPermissionForAgency()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CheckAllProjectsPermissionForAgencyResponse), nil
@@ -66,7 +66,7 @@ func (c *IamClient) CheckAllProjectsPermissionForAgency(request *model.CheckAllP
 func (c *IamClient) CheckDomainPermissionForAgency(request *model.CheckDomainPermissionForAgencyRequest) (*model.CheckDomainPermissionForAgencyResponse, error) {
 	requestDef := GenReqDefForCheckDomainPermissionForAgency()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CheckDomainPermissionForAgencyResponse), nil
@@ -77,7 +77,7 @@ func (c *IamClient) CheckDomainPermissionForAgency(request *model.CheckDomainPer
 func (c *IamClient) CheckProjectPermissionForAgency(request *model.CheckProjectPermissionForAgencyRequest) (*model.CheckProjectPermissionForAgencyResponse, error) {
 	requestDef := GenReqDefForCheckProjectPermissionForAgency()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CheckProjectPermissionForAgencyResponse), nil
@@ -88,7 +88,7 @@ func (c *IamClient) CheckProjectPermissionForAgency(request *model.CheckProjectP
 func (c *IamClient) CreateAgency(request *model.CreateAgencyRequest) (*model.CreateAgencyResponse, error) {
 	requestDef := GenReqDefForCreateAgency()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateAgencyResponse), nil
@@ -99,7 +99,7 @@ func (c *IamClient) CreateAgency(request *model.CreateAgencyRequest) (*model.Cre
 func (c *IamClient) CreateAgencyCustomPolicy(request *model.CreateAgencyCustomPolicyRequest) (*model.CreateAgencyCustomPolicyResponse, error) {
 	requestDef := GenReqDefForCreateAgencyCustomPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateAgencyCustomPolicyResponse), nil
@@ -110,7 +110,7 @@ func (c *IamClient) CreateAgencyCustomPolicy(request *model.CreateAgencyCustomPo
 func (c *IamClient) CreateCloudServiceCustomPolicy(request *model.CreateCloudServiceCustomPolicyRequest) (*model.CreateCloudServiceCustomPolicyResponse, error) {
 	requestDef := GenReqDefForCreateCloudServiceCustomPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateCloudServiceCustomPolicyResponse), nil
@@ -121,7 +121,7 @@ func (c *IamClient) CreateCloudServiceCustomPolicy(request *model.CreateCloudSer
 func (c *IamClient) CreateLoginToken(request *model.CreateLoginTokenRequest) (*model.CreateLoginTokenResponse, error) {
 	requestDef := GenReqDefForCreateLoginToken()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateLoginTokenResponse), nil
@@ -132,7 +132,7 @@ func (c *IamClient) CreateLoginToken(request *model.CreateLoginTokenRequest) (*m
 func (c *IamClient) CreateMetadata(request *model.CreateMetadataRequest) (*model.CreateMetadataResponse, error) {
 	requestDef := GenReqDefForCreateMetadata()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateMetadataResponse), nil
@@ -143,7 +143,7 @@ func (c *IamClient) CreateMetadata(request *model.CreateMetadataRequest) (*model
 func (c *IamClient) CreateUnscopeTokenByIdpInitiated(request *model.CreateUnscopeTokenByIdpInitiatedRequest) (*model.CreateUnscopeTokenByIdpInitiatedResponse, error) {
 	requestDef := GenReqDefForCreateUnscopeTokenByIdpInitiated()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateUnscopeTokenByIdpInitiatedResponse), nil
@@ -154,7 +154,7 @@ func (c *IamClient) CreateUnscopeTokenByIdpInitiated(request *model.CreateUnscop
 func (c *IamClient) DeleteAgency(request *model.DeleteAgencyRequest) (*model.DeleteAgencyResponse, error) {
 	requestDef := GenReqDefForDeleteAgency()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteAgencyResponse), nil
@@ -165,10 +165,21 @@ func (c *IamClient) DeleteAgency(request *model.DeleteAgencyRequest) (*model.Del
 func (c *IamClient) DeleteCustomPolicy(request *model.DeleteCustomPolicyRequest) (*model.DeleteCustomPolicyResponse, error) {
 	requestDef := GenReqDefForDeleteCustomPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteCustomPolicyResponse), nil
+	}
+}
+
+//该接口可以用于移除用户组的所有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) DeleteDomainGroupInheritedRole(request *model.DeleteDomainGroupInheritedRoleRequest) (*model.DeleteDomainGroupInheritedRoleResponse, error) {
+	requestDef := GenReqDefForDeleteDomainGroupInheritedRole()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDomainGroupInheritedRoleResponse), nil
 	}
 }
 
@@ -176,21 +187,10 @@ func (c *IamClient) DeleteCustomPolicy(request *model.DeleteCustomPolicyRequest)
 func (c *IamClient) KeystoneAddUserToGroup(request *model.KeystoneAddUserToGroupRequest) (*model.KeystoneAddUserToGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneAddUserToGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneAddUserToGroupResponse), nil
-	}
-}
-
-//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)为用户组授予所有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
-func (c *IamClient) KeystoneAssociateGroupWithAllProjectPermission(request *model.KeystoneAssociateGroupWithAllProjectPermissionRequest) (*model.KeystoneAssociateGroupWithAllProjectPermissionResponse, error) {
-	requestDef := GenReqDefForKeystoneAssociateGroupWithAllProjectPermission()
-
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.KeystoneAssociateGroupWithAllProjectPermissionResponse), nil
 	}
 }
 
@@ -198,7 +198,7 @@ func (c *IamClient) KeystoneAssociateGroupWithAllProjectPermission(request *mode
 func (c *IamClient) KeystoneAssociateGroupWithDomainPermission(request *model.KeystoneAssociateGroupWithDomainPermissionRequest) (*model.KeystoneAssociateGroupWithDomainPermissionResponse, error) {
 	requestDef := GenReqDefForKeystoneAssociateGroupWithDomainPermission()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneAssociateGroupWithDomainPermissionResponse), nil
@@ -209,7 +209,7 @@ func (c *IamClient) KeystoneAssociateGroupWithDomainPermission(request *model.Ke
 func (c *IamClient) KeystoneAssociateGroupWithProjectPermission(request *model.KeystoneAssociateGroupWithProjectPermissionRequest) (*model.KeystoneAssociateGroupWithProjectPermissionResponse, error) {
 	requestDef := GenReqDefForKeystoneAssociateGroupWithProjectPermission()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneAssociateGroupWithProjectPermissionResponse), nil
@@ -220,7 +220,7 @@ func (c *IamClient) KeystoneAssociateGroupWithProjectPermission(request *model.K
 func (c *IamClient) KeystoneCheckDomainPermissionForGroup(request *model.KeystoneCheckDomainPermissionForGroupRequest) (*model.KeystoneCheckDomainPermissionForGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneCheckDomainPermissionForGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneCheckDomainPermissionForGroupResponse), nil
@@ -231,7 +231,7 @@ func (c *IamClient) KeystoneCheckDomainPermissionForGroup(request *model.Keyston
 func (c *IamClient) KeystoneCheckProjectPermissionForGroup(request *model.KeystoneCheckProjectPermissionForGroupRequest) (*model.KeystoneCheckProjectPermissionForGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneCheckProjectPermissionForGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneCheckProjectPermissionForGroupResponse), nil
@@ -242,10 +242,21 @@ func (c *IamClient) KeystoneCheckProjectPermissionForGroup(request *model.Keysto
 func (c *IamClient) KeystoneCheckUserInGroup(request *model.KeystoneCheckUserInGroupRequest) (*model.KeystoneCheckUserInGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneCheckUserInGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneCheckUserInGroupResponse), nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组是否拥有所有项目指定权限。  该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) KeystoneCheckroleForGroup(request *model.KeystoneCheckroleForGroupRequest) (*model.KeystoneCheckroleForGroupResponse, error) {
+	requestDef := GenReqDefForKeystoneCheckroleForGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.KeystoneCheckroleForGroupResponse), nil
 	}
 }
 
@@ -253,7 +264,7 @@ func (c *IamClient) KeystoneCheckUserInGroup(request *model.KeystoneCheckUserInG
 func (c *IamClient) KeystoneCreateGroup(request *model.KeystoneCreateGroupRequest) (*model.KeystoneCreateGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneCreateGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneCreateGroupResponse), nil
@@ -264,7 +275,7 @@ func (c *IamClient) KeystoneCreateGroup(request *model.KeystoneCreateGroupReques
 func (c *IamClient) KeystoneCreateIdentityProvider(request *model.KeystoneCreateIdentityProviderRequest) (*model.KeystoneCreateIdentityProviderResponse, error) {
 	requestDef := GenReqDefForKeystoneCreateIdentityProvider()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneCreateIdentityProviderResponse), nil
@@ -275,7 +286,7 @@ func (c *IamClient) KeystoneCreateIdentityProvider(request *model.KeystoneCreate
 func (c *IamClient) KeystoneCreateMapping(request *model.KeystoneCreateMappingRequest) (*model.KeystoneCreateMappingResponse, error) {
 	requestDef := GenReqDefForKeystoneCreateMapping()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneCreateMappingResponse), nil
@@ -286,7 +297,7 @@ func (c *IamClient) KeystoneCreateMapping(request *model.KeystoneCreateMappingRe
 func (c *IamClient) KeystoneCreateProject(request *model.KeystoneCreateProjectRequest) (*model.KeystoneCreateProjectResponse, error) {
 	requestDef := GenReqDefForKeystoneCreateProject()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneCreateProjectResponse), nil
@@ -297,7 +308,7 @@ func (c *IamClient) KeystoneCreateProject(request *model.KeystoneCreateProjectRe
 func (c *IamClient) KeystoneCreateProtocol(request *model.KeystoneCreateProtocolRequest) (*model.KeystoneCreateProtocolResponse, error) {
 	requestDef := GenReqDefForKeystoneCreateProtocol()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneCreateProtocolResponse), nil
@@ -308,7 +319,7 @@ func (c *IamClient) KeystoneCreateProtocol(request *model.KeystoneCreateProtocol
 func (c *IamClient) KeystoneCreateScopedToken(request *model.KeystoneCreateScopedTokenRequest) (*model.KeystoneCreateScopedTokenResponse, error) {
 	requestDef := GenReqDefForKeystoneCreateScopedToken()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneCreateScopedTokenResponse), nil
@@ -319,7 +330,7 @@ func (c *IamClient) KeystoneCreateScopedToken(request *model.KeystoneCreateScope
 func (c *IamClient) KeystoneDeleteGroup(request *model.KeystoneDeleteGroupRequest) (*model.KeystoneDeleteGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneDeleteGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneDeleteGroupResponse), nil
@@ -330,7 +341,7 @@ func (c *IamClient) KeystoneDeleteGroup(request *model.KeystoneDeleteGroupReques
 func (c *IamClient) KeystoneDeleteIdentityProvider(request *model.KeystoneDeleteIdentityProviderRequest) (*model.KeystoneDeleteIdentityProviderResponse, error) {
 	requestDef := GenReqDefForKeystoneDeleteIdentityProvider()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneDeleteIdentityProviderResponse), nil
@@ -341,7 +352,7 @@ func (c *IamClient) KeystoneDeleteIdentityProvider(request *model.KeystoneDelete
 func (c *IamClient) KeystoneDeleteMapping(request *model.KeystoneDeleteMappingRequest) (*model.KeystoneDeleteMappingResponse, error) {
 	requestDef := GenReqDefForKeystoneDeleteMapping()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneDeleteMappingResponse), nil
@@ -352,10 +363,21 @@ func (c *IamClient) KeystoneDeleteMapping(request *model.KeystoneDeleteMappingRe
 func (c *IamClient) KeystoneDeleteProtocol(request *model.KeystoneDeleteProtocolRequest) (*model.KeystoneDeleteProtocolResponse, error) {
 	requestDef := GenReqDefForKeystoneDeleteProtocol()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneDeleteProtocolResponse), nil
+	}
+}
+
+//该接口可以用于管理员查询用户组所有项目服务权限列表。  \\n\\n该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) KeystoneListAllProjectPermissionsForGroup(request *model.KeystoneListAllProjectPermissionsForGroupRequest) (*model.KeystoneListAllProjectPermissionsForGroupResponse, error) {
+	requestDef := GenReqDefForKeystoneListAllProjectPermissionsForGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.KeystoneListAllProjectPermissionsForGroupResponse), nil
 	}
 }
 
@@ -363,7 +385,7 @@ func (c *IamClient) KeystoneDeleteProtocol(request *model.KeystoneDeleteProtocol
 func (c *IamClient) KeystoneListAuthDomains(request *model.KeystoneListAuthDomainsRequest) (*model.KeystoneListAuthDomainsResponse, error) {
 	requestDef := GenReqDefForKeystoneListAuthDomains()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListAuthDomainsResponse), nil
@@ -374,7 +396,7 @@ func (c *IamClient) KeystoneListAuthDomains(request *model.KeystoneListAuthDomai
 func (c *IamClient) KeystoneListAuthProjects(request *model.KeystoneListAuthProjectsRequest) (*model.KeystoneListAuthProjectsResponse, error) {
 	requestDef := GenReqDefForKeystoneListAuthProjects()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListAuthProjectsResponse), nil
@@ -385,7 +407,7 @@ func (c *IamClient) KeystoneListAuthProjects(request *model.KeystoneListAuthProj
 func (c *IamClient) KeystoneListDomainPermissionsForGroup(request *model.KeystoneListDomainPermissionsForGroupRequest) (*model.KeystoneListDomainPermissionsForGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneListDomainPermissionsForGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListDomainPermissionsForGroupResponse), nil
@@ -396,7 +418,7 @@ func (c *IamClient) KeystoneListDomainPermissionsForGroup(request *model.Keyston
 func (c *IamClient) KeystoneListEndpoints(request *model.KeystoneListEndpointsRequest) (*model.KeystoneListEndpointsResponse, error) {
 	requestDef := GenReqDefForKeystoneListEndpoints()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListEndpointsResponse), nil
@@ -407,7 +429,7 @@ func (c *IamClient) KeystoneListEndpoints(request *model.KeystoneListEndpointsRe
 func (c *IamClient) KeystoneListGroups(request *model.KeystoneListGroupsRequest) (*model.KeystoneListGroupsResponse, error) {
 	requestDef := GenReqDefForKeystoneListGroups()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListGroupsResponse), nil
@@ -418,7 +440,7 @@ func (c *IamClient) KeystoneListGroups(request *model.KeystoneListGroupsRequest)
 func (c *IamClient) KeystoneListIdentityProviders(request *model.KeystoneListIdentityProvidersRequest) (*model.KeystoneListIdentityProvidersResponse, error) {
 	requestDef := GenReqDefForKeystoneListIdentityProviders()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListIdentityProvidersResponse), nil
@@ -429,7 +451,7 @@ func (c *IamClient) KeystoneListIdentityProviders(request *model.KeystoneListIde
 func (c *IamClient) KeystoneListMappings(request *model.KeystoneListMappingsRequest) (*model.KeystoneListMappingsResponse, error) {
 	requestDef := GenReqDefForKeystoneListMappings()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListMappingsResponse), nil
@@ -440,7 +462,7 @@ func (c *IamClient) KeystoneListMappings(request *model.KeystoneListMappingsRequ
 func (c *IamClient) KeystoneListPermissions(request *model.KeystoneListPermissionsRequest) (*model.KeystoneListPermissionsResponse, error) {
 	requestDef := GenReqDefForKeystoneListPermissions()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListPermissionsResponse), nil
@@ -451,7 +473,7 @@ func (c *IamClient) KeystoneListPermissions(request *model.KeystoneListPermissio
 func (c *IamClient) KeystoneListProjectPermissionsForGroup(request *model.KeystoneListProjectPermissionsForGroupRequest) (*model.KeystoneListProjectPermissionsForGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneListProjectPermissionsForGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListProjectPermissionsForGroupResponse), nil
@@ -462,7 +484,7 @@ func (c *IamClient) KeystoneListProjectPermissionsForGroup(request *model.Keysto
 func (c *IamClient) KeystoneListProjects(request *model.KeystoneListProjectsRequest) (*model.KeystoneListProjectsResponse, error) {
 	requestDef := GenReqDefForKeystoneListProjects()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListProjectsResponse), nil
@@ -473,7 +495,7 @@ func (c *IamClient) KeystoneListProjects(request *model.KeystoneListProjectsRequ
 func (c *IamClient) KeystoneListProjectsForUser(request *model.KeystoneListProjectsForUserRequest) (*model.KeystoneListProjectsForUserResponse, error) {
 	requestDef := GenReqDefForKeystoneListProjectsForUser()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListProjectsForUserResponse), nil
@@ -484,7 +506,7 @@ func (c *IamClient) KeystoneListProjectsForUser(request *model.KeystoneListProje
 func (c *IamClient) KeystoneListProtocols(request *model.KeystoneListProtocolsRequest) (*model.KeystoneListProtocolsResponse, error) {
 	requestDef := GenReqDefForKeystoneListProtocols()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListProtocolsResponse), nil
@@ -495,7 +517,7 @@ func (c *IamClient) KeystoneListProtocols(request *model.KeystoneListProtocolsRe
 func (c *IamClient) KeystoneListRegions(request *model.KeystoneListRegionsRequest) (*model.KeystoneListRegionsResponse, error) {
 	requestDef := GenReqDefForKeystoneListRegions()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListRegionsResponse), nil
@@ -506,7 +528,7 @@ func (c *IamClient) KeystoneListRegions(request *model.KeystoneListRegionsReques
 func (c *IamClient) KeystoneListServices(request *model.KeystoneListServicesRequest) (*model.KeystoneListServicesResponse, error) {
 	requestDef := GenReqDefForKeystoneListServices()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListServicesResponse), nil
@@ -517,7 +539,7 @@ func (c *IamClient) KeystoneListServices(request *model.KeystoneListServicesRequ
 func (c *IamClient) KeystoneListUsersForGroupByAdmin(request *model.KeystoneListUsersForGroupByAdminRequest) (*model.KeystoneListUsersForGroupByAdminResponse, error) {
 	requestDef := GenReqDefForKeystoneListUsersForGroupByAdmin()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListUsersForGroupByAdminResponse), nil
@@ -528,7 +550,7 @@ func (c *IamClient) KeystoneListUsersForGroupByAdmin(request *model.KeystoneList
 func (c *IamClient) KeystoneListVersions(request *model.KeystoneListVersionsRequest) (*model.KeystoneListVersionsResponse, error) {
 	requestDef := GenReqDefForKeystoneListVersions()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListVersionsResponse), nil
@@ -539,7 +561,7 @@ func (c *IamClient) KeystoneListVersions(request *model.KeystoneListVersionsRequ
 func (c *IamClient) KeystoneRemoveDomainPermissionFromGroup(request *model.KeystoneRemoveDomainPermissionFromGroupRequest) (*model.KeystoneRemoveDomainPermissionFromGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneRemoveDomainPermissionFromGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneRemoveDomainPermissionFromGroupResponse), nil
@@ -550,7 +572,7 @@ func (c *IamClient) KeystoneRemoveDomainPermissionFromGroup(request *model.Keyst
 func (c *IamClient) KeystoneRemoveProjectPermissionFromGroup(request *model.KeystoneRemoveProjectPermissionFromGroupRequest) (*model.KeystoneRemoveProjectPermissionFromGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneRemoveProjectPermissionFromGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneRemoveProjectPermissionFromGroupResponse), nil
@@ -561,7 +583,7 @@ func (c *IamClient) KeystoneRemoveProjectPermissionFromGroup(request *model.Keys
 func (c *IamClient) KeystoneRemoveUserFromGroup(request *model.KeystoneRemoveUserFromGroupRequest) (*model.KeystoneRemoveUserFromGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneRemoveUserFromGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneRemoveUserFromGroupResponse), nil
@@ -572,7 +594,7 @@ func (c *IamClient) KeystoneRemoveUserFromGroup(request *model.KeystoneRemoveUse
 func (c *IamClient) KeystoneShowCatalog(request *model.KeystoneShowCatalogRequest) (*model.KeystoneShowCatalogResponse, error) {
 	requestDef := GenReqDefForKeystoneShowCatalog()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneShowCatalogResponse), nil
@@ -583,7 +605,7 @@ func (c *IamClient) KeystoneShowCatalog(request *model.KeystoneShowCatalogReques
 func (c *IamClient) KeystoneShowEndpoint(request *model.KeystoneShowEndpointRequest) (*model.KeystoneShowEndpointResponse, error) {
 	requestDef := GenReqDefForKeystoneShowEndpoint()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneShowEndpointResponse), nil
@@ -594,7 +616,7 @@ func (c *IamClient) KeystoneShowEndpoint(request *model.KeystoneShowEndpointRequ
 func (c *IamClient) KeystoneShowGroup(request *model.KeystoneShowGroupRequest) (*model.KeystoneShowGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneShowGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneShowGroupResponse), nil
@@ -605,7 +627,7 @@ func (c *IamClient) KeystoneShowGroup(request *model.KeystoneShowGroupRequest) (
 func (c *IamClient) KeystoneShowIdentityProvider(request *model.KeystoneShowIdentityProviderRequest) (*model.KeystoneShowIdentityProviderResponse, error) {
 	requestDef := GenReqDefForKeystoneShowIdentityProvider()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneShowIdentityProviderResponse), nil
@@ -616,7 +638,7 @@ func (c *IamClient) KeystoneShowIdentityProvider(request *model.KeystoneShowIden
 func (c *IamClient) KeystoneShowMapping(request *model.KeystoneShowMappingRequest) (*model.KeystoneShowMappingResponse, error) {
 	requestDef := GenReqDefForKeystoneShowMapping()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneShowMappingResponse), nil
@@ -627,7 +649,7 @@ func (c *IamClient) KeystoneShowMapping(request *model.KeystoneShowMappingReques
 func (c *IamClient) KeystoneShowPermission(request *model.KeystoneShowPermissionRequest) (*model.KeystoneShowPermissionResponse, error) {
 	requestDef := GenReqDefForKeystoneShowPermission()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneShowPermissionResponse), nil
@@ -638,7 +660,7 @@ func (c *IamClient) KeystoneShowPermission(request *model.KeystoneShowPermission
 func (c *IamClient) KeystoneShowProject(request *model.KeystoneShowProjectRequest) (*model.KeystoneShowProjectResponse, error) {
 	requestDef := GenReqDefForKeystoneShowProject()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneShowProjectResponse), nil
@@ -649,7 +671,7 @@ func (c *IamClient) KeystoneShowProject(request *model.KeystoneShowProjectReques
 func (c *IamClient) KeystoneShowProtocol(request *model.KeystoneShowProtocolRequest) (*model.KeystoneShowProtocolResponse, error) {
 	requestDef := GenReqDefForKeystoneShowProtocol()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneShowProtocolResponse), nil
@@ -660,7 +682,7 @@ func (c *IamClient) KeystoneShowProtocol(request *model.KeystoneShowProtocolRequ
 func (c *IamClient) KeystoneShowRegion(request *model.KeystoneShowRegionRequest) (*model.KeystoneShowRegionResponse, error) {
 	requestDef := GenReqDefForKeystoneShowRegion()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneShowRegionResponse), nil
@@ -671,7 +693,7 @@ func (c *IamClient) KeystoneShowRegion(request *model.KeystoneShowRegionRequest)
 func (c *IamClient) KeystoneShowSecurityCompliance(request *model.KeystoneShowSecurityComplianceRequest) (*model.KeystoneShowSecurityComplianceResponse, error) {
 	requestDef := GenReqDefForKeystoneShowSecurityCompliance()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneShowSecurityComplianceResponse), nil
@@ -682,7 +704,7 @@ func (c *IamClient) KeystoneShowSecurityCompliance(request *model.KeystoneShowSe
 func (c *IamClient) KeystoneShowSecurityComplianceByOption(request *model.KeystoneShowSecurityComplianceByOptionRequest) (*model.KeystoneShowSecurityComplianceByOptionResponse, error) {
 	requestDef := GenReqDefForKeystoneShowSecurityComplianceByOption()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneShowSecurityComplianceByOptionResponse), nil
@@ -693,7 +715,7 @@ func (c *IamClient) KeystoneShowSecurityComplianceByOption(request *model.Keysto
 func (c *IamClient) KeystoneShowService(request *model.KeystoneShowServiceRequest) (*model.KeystoneShowServiceResponse, error) {
 	requestDef := GenReqDefForKeystoneShowService()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneShowServiceResponse), nil
@@ -704,7 +726,7 @@ func (c *IamClient) KeystoneShowService(request *model.KeystoneShowServiceReques
 func (c *IamClient) KeystoneShowVersion(request *model.KeystoneShowVersionRequest) (*model.KeystoneShowVersionResponse, error) {
 	requestDef := GenReqDefForKeystoneShowVersion()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneShowVersionResponse), nil
@@ -715,7 +737,7 @@ func (c *IamClient) KeystoneShowVersion(request *model.KeystoneShowVersionReques
 func (c *IamClient) KeystoneUpdateGroup(request *model.KeystoneUpdateGroupRequest) (*model.KeystoneUpdateGroupResponse, error) {
 	requestDef := GenReqDefForKeystoneUpdateGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneUpdateGroupResponse), nil
@@ -726,7 +748,7 @@ func (c *IamClient) KeystoneUpdateGroup(request *model.KeystoneUpdateGroupReques
 func (c *IamClient) KeystoneUpdateIdentityProvider(request *model.KeystoneUpdateIdentityProviderRequest) (*model.KeystoneUpdateIdentityProviderResponse, error) {
 	requestDef := GenReqDefForKeystoneUpdateIdentityProvider()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneUpdateIdentityProviderResponse), nil
@@ -737,7 +759,7 @@ func (c *IamClient) KeystoneUpdateIdentityProvider(request *model.KeystoneUpdate
 func (c *IamClient) KeystoneUpdateMapping(request *model.KeystoneUpdateMappingRequest) (*model.KeystoneUpdateMappingResponse, error) {
 	requestDef := GenReqDefForKeystoneUpdateMapping()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneUpdateMappingResponse), nil
@@ -748,7 +770,7 @@ func (c *IamClient) KeystoneUpdateMapping(request *model.KeystoneUpdateMappingRe
 func (c *IamClient) KeystoneUpdateProject(request *model.KeystoneUpdateProjectRequest) (*model.KeystoneUpdateProjectResponse, error) {
 	requestDef := GenReqDefForKeystoneUpdateProject()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneUpdateProjectResponse), nil
@@ -759,7 +781,7 @@ func (c *IamClient) KeystoneUpdateProject(request *model.KeystoneUpdateProjectRe
 func (c *IamClient) KeystoneUpdateProtocol(request *model.KeystoneUpdateProtocolRequest) (*model.KeystoneUpdateProtocolResponse, error) {
 	requestDef := GenReqDefForKeystoneUpdateProtocol()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneUpdateProtocolResponse), nil
@@ -770,7 +792,7 @@ func (c *IamClient) KeystoneUpdateProtocol(request *model.KeystoneUpdateProtocol
 func (c *IamClient) ListAgencies(request *model.ListAgenciesRequest) (*model.ListAgenciesResponse, error) {
 	requestDef := GenReqDefForListAgencies()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListAgenciesResponse), nil
@@ -781,7 +803,7 @@ func (c *IamClient) ListAgencies(request *model.ListAgenciesRequest) (*model.Lis
 func (c *IamClient) ListAllProjectsPermissionsForAgency(request *model.ListAllProjectsPermissionsForAgencyRequest) (*model.ListAllProjectsPermissionsForAgencyResponse, error) {
 	requestDef := GenReqDefForListAllProjectsPermissionsForAgency()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListAllProjectsPermissionsForAgencyResponse), nil
@@ -792,7 +814,7 @@ func (c *IamClient) ListAllProjectsPermissionsForAgency(request *model.ListAllPr
 func (c *IamClient) ListCustomPolicies(request *model.ListCustomPoliciesRequest) (*model.ListCustomPoliciesResponse, error) {
 	requestDef := GenReqDefForListCustomPolicies()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListCustomPoliciesResponse), nil
@@ -803,7 +825,7 @@ func (c *IamClient) ListCustomPolicies(request *model.ListCustomPoliciesRequest)
 func (c *IamClient) ListDomainPermissionsForAgency(request *model.ListDomainPermissionsForAgencyRequest) (*model.ListDomainPermissionsForAgencyResponse, error) {
 	requestDef := GenReqDefForListDomainPermissionsForAgency()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListDomainPermissionsForAgencyResponse), nil
@@ -814,7 +836,7 @@ func (c *IamClient) ListDomainPermissionsForAgency(request *model.ListDomainPerm
 func (c *IamClient) ListProjectPermissionsForAgency(request *model.ListProjectPermissionsForAgencyRequest) (*model.ListProjectPermissionsForAgencyResponse, error) {
 	requestDef := GenReqDefForListProjectPermissionsForAgency()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListProjectPermissionsForAgencyResponse), nil
@@ -825,7 +847,7 @@ func (c *IamClient) ListProjectPermissionsForAgency(request *model.ListProjectPe
 func (c *IamClient) RemoveAllProjectsPermissionFromAgency(request *model.RemoveAllProjectsPermissionFromAgencyRequest) (*model.RemoveAllProjectsPermissionFromAgencyResponse, error) {
 	requestDef := GenReqDefForRemoveAllProjectsPermissionFromAgency()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RemoveAllProjectsPermissionFromAgencyResponse), nil
@@ -836,7 +858,7 @@ func (c *IamClient) RemoveAllProjectsPermissionFromAgency(request *model.RemoveA
 func (c *IamClient) RemoveDomainPermissionFromAgency(request *model.RemoveDomainPermissionFromAgencyRequest) (*model.RemoveDomainPermissionFromAgencyResponse, error) {
 	requestDef := GenReqDefForRemoveDomainPermissionFromAgency()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RemoveDomainPermissionFromAgencyResponse), nil
@@ -847,7 +869,7 @@ func (c *IamClient) RemoveDomainPermissionFromAgency(request *model.RemoveDomain
 func (c *IamClient) RemoveProjectPermissionFromAgency(request *model.RemoveProjectPermissionFromAgencyRequest) (*model.RemoveProjectPermissionFromAgencyResponse, error) {
 	requestDef := GenReqDefForRemoveProjectPermissionFromAgency()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RemoveProjectPermissionFromAgencyResponse), nil
@@ -858,7 +880,7 @@ func (c *IamClient) RemoveProjectPermissionFromAgency(request *model.RemoveProje
 func (c *IamClient) ShowAgency(request *model.ShowAgencyRequest) (*model.ShowAgencyResponse, error) {
 	requestDef := GenReqDefForShowAgency()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowAgencyResponse), nil
@@ -869,7 +891,7 @@ func (c *IamClient) ShowAgency(request *model.ShowAgencyRequest) (*model.ShowAge
 func (c *IamClient) ShowCustomPolicy(request *model.ShowCustomPolicyRequest) (*model.ShowCustomPolicyResponse, error) {
 	requestDef := GenReqDefForShowCustomPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowCustomPolicyResponse), nil
@@ -880,7 +902,7 @@ func (c *IamClient) ShowCustomPolicy(request *model.ShowCustomPolicyRequest) (*m
 func (c *IamClient) ShowDomainApiAclPolicy(request *model.ShowDomainApiAclPolicyRequest) (*model.ShowDomainApiAclPolicyResponse, error) {
 	requestDef := GenReqDefForShowDomainApiAclPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowDomainApiAclPolicyResponse), nil
@@ -891,7 +913,7 @@ func (c *IamClient) ShowDomainApiAclPolicy(request *model.ShowDomainApiAclPolicy
 func (c *IamClient) ShowDomainConsoleAclPolicy(request *model.ShowDomainConsoleAclPolicyRequest) (*model.ShowDomainConsoleAclPolicyResponse, error) {
 	requestDef := GenReqDefForShowDomainConsoleAclPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowDomainConsoleAclPolicyResponse), nil
@@ -902,7 +924,7 @@ func (c *IamClient) ShowDomainConsoleAclPolicy(request *model.ShowDomainConsoleA
 func (c *IamClient) ShowDomainLoginPolicy(request *model.ShowDomainLoginPolicyRequest) (*model.ShowDomainLoginPolicyResponse, error) {
 	requestDef := GenReqDefForShowDomainLoginPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowDomainLoginPolicyResponse), nil
@@ -913,7 +935,7 @@ func (c *IamClient) ShowDomainLoginPolicy(request *model.ShowDomainLoginPolicyRe
 func (c *IamClient) ShowDomainPasswordPolicy(request *model.ShowDomainPasswordPolicyRequest) (*model.ShowDomainPasswordPolicyResponse, error) {
 	requestDef := GenReqDefForShowDomainPasswordPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowDomainPasswordPolicyResponse), nil
@@ -924,7 +946,7 @@ func (c *IamClient) ShowDomainPasswordPolicy(request *model.ShowDomainPasswordPo
 func (c *IamClient) ShowDomainProtectPolicy(request *model.ShowDomainProtectPolicyRequest) (*model.ShowDomainProtectPolicyResponse, error) {
 	requestDef := GenReqDefForShowDomainProtectPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowDomainProtectPolicyResponse), nil
@@ -935,7 +957,7 @@ func (c *IamClient) ShowDomainProtectPolicy(request *model.ShowDomainProtectPoli
 func (c *IamClient) ShowDomainQuota(request *model.ShowDomainQuotaRequest) (*model.ShowDomainQuotaResponse, error) {
 	requestDef := GenReqDefForShowDomainQuota()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowDomainQuotaResponse), nil
@@ -946,7 +968,7 @@ func (c *IamClient) ShowDomainQuota(request *model.ShowDomainQuotaRequest) (*mod
 func (c *IamClient) ShowMetadata(request *model.ShowMetadataRequest) (*model.ShowMetadataResponse, error) {
 	requestDef := GenReqDefForShowMetadata()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowMetadataResponse), nil
@@ -957,7 +979,7 @@ func (c *IamClient) ShowMetadata(request *model.ShowMetadataRequest) (*model.Sho
 func (c *IamClient) ShowProjectDetailsAndStatus(request *model.ShowProjectDetailsAndStatusRequest) (*model.ShowProjectDetailsAndStatusResponse, error) {
 	requestDef := GenReqDefForShowProjectDetailsAndStatus()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowProjectDetailsAndStatusResponse), nil
@@ -968,7 +990,7 @@ func (c *IamClient) ShowProjectDetailsAndStatus(request *model.ShowProjectDetail
 func (c *IamClient) ShowProjectQuota(request *model.ShowProjectQuotaRequest) (*model.ShowProjectQuotaResponse, error) {
 	requestDef := GenReqDefForShowProjectQuota()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowProjectQuotaResponse), nil
@@ -979,7 +1001,7 @@ func (c *IamClient) ShowProjectQuota(request *model.ShowProjectQuotaRequest) (*m
 func (c *IamClient) UpdateAgency(request *model.UpdateAgencyRequest) (*model.UpdateAgencyResponse, error) {
 	requestDef := GenReqDefForUpdateAgency()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateAgencyResponse), nil
@@ -990,7 +1012,7 @@ func (c *IamClient) UpdateAgency(request *model.UpdateAgencyRequest) (*model.Upd
 func (c *IamClient) UpdateAgencyCustomPolicy(request *model.UpdateAgencyCustomPolicyRequest) (*model.UpdateAgencyCustomPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateAgencyCustomPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateAgencyCustomPolicyResponse), nil
@@ -1001,7 +1023,7 @@ func (c *IamClient) UpdateAgencyCustomPolicy(request *model.UpdateAgencyCustomPo
 func (c *IamClient) UpdateCloudServiceCustomPolicy(request *model.UpdateCloudServiceCustomPolicyRequest) (*model.UpdateCloudServiceCustomPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateCloudServiceCustomPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateCloudServiceCustomPolicyResponse), nil
@@ -1012,7 +1034,7 @@ func (c *IamClient) UpdateCloudServiceCustomPolicy(request *model.UpdateCloudSer
 func (c *IamClient) UpdateDomainApiAclPolicy(request *model.UpdateDomainApiAclPolicyRequest) (*model.UpdateDomainApiAclPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateDomainApiAclPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateDomainApiAclPolicyResponse), nil
@@ -1023,10 +1045,21 @@ func (c *IamClient) UpdateDomainApiAclPolicy(request *model.UpdateDomainApiAclPo
 func (c *IamClient) UpdateDomainConsoleAclPolicy(request *model.UpdateDomainConsoleAclPolicyRequest) (*model.UpdateDomainConsoleAclPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateDomainConsoleAclPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateDomainConsoleAclPolicyResponse), nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)为用户组授予所有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) UpdateDomainGroupInheritRole(request *model.UpdateDomainGroupInheritRoleRequest) (*model.UpdateDomainGroupInheritRoleResponse, error) {
+	requestDef := GenReqDefForUpdateDomainGroupInheritRole()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDomainGroupInheritRoleResponse), nil
 	}
 }
 
@@ -1034,7 +1067,7 @@ func (c *IamClient) UpdateDomainConsoleAclPolicy(request *model.UpdateDomainCons
 func (c *IamClient) UpdateDomainLoginPolicy(request *model.UpdateDomainLoginPolicyRequest) (*model.UpdateDomainLoginPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateDomainLoginPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateDomainLoginPolicyResponse), nil
@@ -1045,7 +1078,7 @@ func (c *IamClient) UpdateDomainLoginPolicy(request *model.UpdateDomainLoginPoli
 func (c *IamClient) UpdateDomainPasswordPolicy(request *model.UpdateDomainPasswordPolicyRequest) (*model.UpdateDomainPasswordPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateDomainPasswordPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateDomainPasswordPolicyResponse), nil
@@ -1056,7 +1089,7 @@ func (c *IamClient) UpdateDomainPasswordPolicy(request *model.UpdateDomainPasswo
 func (c *IamClient) UpdateDomainProtectPolicy(request *model.UpdateDomainProtectPolicyRequest) (*model.UpdateDomainProtectPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateDomainProtectPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateDomainProtectPolicyResponse), nil
@@ -1067,7 +1100,7 @@ func (c *IamClient) UpdateDomainProtectPolicy(request *model.UpdateDomainProtect
 func (c *IamClient) UpdateProjectStatus(request *model.UpdateProjectStatusRequest) (*model.UpdateProjectStatusResponse, error) {
 	requestDef := GenReqDefForUpdateProjectStatus()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateProjectStatusResponse), nil
@@ -1078,7 +1111,7 @@ func (c *IamClient) UpdateProjectStatus(request *model.UpdateProjectStatusReques
 func (c *IamClient) CreatePermanentAccessKey(request *model.CreatePermanentAccessKeyRequest) (*model.CreatePermanentAccessKeyResponse, error) {
 	requestDef := GenReqDefForCreatePermanentAccessKey()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePermanentAccessKeyResponse), nil
@@ -1089,7 +1122,7 @@ func (c *IamClient) CreatePermanentAccessKey(request *model.CreatePermanentAcces
 func (c *IamClient) CreateTemporaryAccessKeyByAgency(request *model.CreateTemporaryAccessKeyByAgencyRequest) (*model.CreateTemporaryAccessKeyByAgencyResponse, error) {
 	requestDef := GenReqDefForCreateTemporaryAccessKeyByAgency()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateTemporaryAccessKeyByAgencyResponse), nil
@@ -1100,7 +1133,7 @@ func (c *IamClient) CreateTemporaryAccessKeyByAgency(request *model.CreateTempor
 func (c *IamClient) CreateTemporaryAccessKeyByToken(request *model.CreateTemporaryAccessKeyByTokenRequest) (*model.CreateTemporaryAccessKeyByTokenResponse, error) {
 	requestDef := GenReqDefForCreateTemporaryAccessKeyByToken()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateTemporaryAccessKeyByTokenResponse), nil
@@ -1111,7 +1144,7 @@ func (c *IamClient) CreateTemporaryAccessKeyByToken(request *model.CreateTempora
 func (c *IamClient) DeletePermanentAccessKey(request *model.DeletePermanentAccessKeyRequest) (*model.DeletePermanentAccessKeyResponse, error) {
 	requestDef := GenReqDefForDeletePermanentAccessKey()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeletePermanentAccessKeyResponse), nil
@@ -1122,7 +1155,7 @@ func (c *IamClient) DeletePermanentAccessKey(request *model.DeletePermanentAcces
 func (c *IamClient) ListPermanentAccessKeys(request *model.ListPermanentAccessKeysRequest) (*model.ListPermanentAccessKeysResponse, error) {
 	requestDef := GenReqDefForListPermanentAccessKeys()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPermanentAccessKeysResponse), nil
@@ -1133,7 +1166,7 @@ func (c *IamClient) ListPermanentAccessKeys(request *model.ListPermanentAccessKe
 func (c *IamClient) ShowPermanentAccessKey(request *model.ShowPermanentAccessKeyRequest) (*model.ShowPermanentAccessKeyResponse, error) {
 	requestDef := GenReqDefForShowPermanentAccessKey()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowPermanentAccessKeyResponse), nil
@@ -1144,10 +1177,32 @@ func (c *IamClient) ShowPermanentAccessKey(request *model.ShowPermanentAccessKey
 func (c *IamClient) UpdatePermanentAccessKey(request *model.UpdatePermanentAccessKeyRequest) (*model.UpdatePermanentAccessKeyResponse, error) {
 	requestDef := GenReqDefForUpdatePermanentAccessKey()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePermanentAccessKeyResponse), nil
+	}
+}
+
+//该接口可以用于绑定MFA设备。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) CreateBindingDevice(request *model.CreateBindingDeviceRequest) (*model.CreateBindingDeviceResponse, error) {
+	requestDef := GenReqDefForCreateBindingDevice()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateBindingDeviceResponse), nil
+	}
+}
+
+//该接口可以用于创建MFA设备。  该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) CreateMfaDevice(request *model.CreateMfaDeviceRequest) (*model.CreateMfaDeviceResponse, error) {
+	requestDef := GenReqDefForCreateMfaDevice()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateMfaDeviceResponse), nil
 	}
 }
 
@@ -1155,10 +1210,32 @@ func (c *IamClient) UpdatePermanentAccessKey(request *model.UpdatePermanentAcces
 func (c *IamClient) CreateUser(request *model.CreateUserRequest) (*model.CreateUserResponse, error) {
 	requestDef := GenReqDefForCreateUser()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateUserResponse), nil
+	}
+}
+
+//该接口可以用于解绑MFA设备   该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) DeleteBindingDevice(request *model.DeleteBindingDeviceRequest) (*model.DeleteBindingDeviceResponse, error) {
+	requestDef := GenReqDefForDeleteBindingDevice()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBindingDeviceResponse), nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除MFA设备。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) DeleteMfaDevice(request *model.DeleteMfaDeviceRequest) (*model.DeleteMfaDeviceResponse, error) {
+	requestDef := GenReqDefForDeleteMfaDevice()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteMfaDeviceResponse), nil
 	}
 }
 
@@ -1166,7 +1243,7 @@ func (c *IamClient) CreateUser(request *model.CreateUserRequest) (*model.CreateU
 func (c *IamClient) KeystoneCreateUser(request *model.KeystoneCreateUserRequest) (*model.KeystoneCreateUserResponse, error) {
 	requestDef := GenReqDefForKeystoneCreateUser()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneCreateUserResponse), nil
@@ -1177,7 +1254,7 @@ func (c *IamClient) KeystoneCreateUser(request *model.KeystoneCreateUserRequest)
 func (c *IamClient) KeystoneDeleteUser(request *model.KeystoneDeleteUserRequest) (*model.KeystoneDeleteUserResponse, error) {
 	requestDef := GenReqDefForKeystoneDeleteUser()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneDeleteUserResponse), nil
@@ -1188,7 +1265,7 @@ func (c *IamClient) KeystoneDeleteUser(request *model.KeystoneDeleteUserRequest)
 func (c *IamClient) KeystoneListGroupsForUser(request *model.KeystoneListGroupsForUserRequest) (*model.KeystoneListGroupsForUserResponse, error) {
 	requestDef := GenReqDefForKeystoneListGroupsForUser()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListGroupsForUserResponse), nil
@@ -1199,7 +1276,7 @@ func (c *IamClient) KeystoneListGroupsForUser(request *model.KeystoneListGroupsF
 func (c *IamClient) KeystoneListUsers(request *model.KeystoneListUsersRequest) (*model.KeystoneListUsersResponse, error) {
 	requestDef := GenReqDefForKeystoneListUsers()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneListUsersResponse), nil
@@ -1210,7 +1287,7 @@ func (c *IamClient) KeystoneListUsers(request *model.KeystoneListUsersRequest) (
 func (c *IamClient) KeystoneShowUser(request *model.KeystoneShowUserRequest) (*model.KeystoneShowUserResponse, error) {
 	requestDef := GenReqDefForKeystoneShowUser()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneShowUserResponse), nil
@@ -1221,7 +1298,7 @@ func (c *IamClient) KeystoneShowUser(request *model.KeystoneShowUserRequest) (*m
 func (c *IamClient) KeystoneUpdateUserByAdmin(request *model.KeystoneUpdateUserByAdminRequest) (*model.KeystoneUpdateUserByAdminResponse, error) {
 	requestDef := GenReqDefForKeystoneUpdateUserByAdmin()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneUpdateUserByAdminResponse), nil
@@ -1232,7 +1309,7 @@ func (c *IamClient) KeystoneUpdateUserByAdmin(request *model.KeystoneUpdateUserB
 func (c *IamClient) KeystoneUpdateUserPassword(request *model.KeystoneUpdateUserPasswordRequest) (*model.KeystoneUpdateUserPasswordResponse, error) {
 	requestDef := GenReqDefForKeystoneUpdateUserPassword()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneUpdateUserPasswordResponse), nil
@@ -1243,7 +1320,7 @@ func (c *IamClient) KeystoneUpdateUserPassword(request *model.KeystoneUpdateUser
 func (c *IamClient) ListUserLoginProtects(request *model.ListUserLoginProtectsRequest) (*model.ListUserLoginProtectsResponse, error) {
 	requestDef := GenReqDefForListUserLoginProtects()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListUserLoginProtectsResponse), nil
@@ -1254,7 +1331,7 @@ func (c *IamClient) ListUserLoginProtects(request *model.ListUserLoginProtectsRe
 func (c *IamClient) ListUserMfaDevices(request *model.ListUserMfaDevicesRequest) (*model.ListUserMfaDevicesResponse, error) {
 	requestDef := GenReqDefForListUserMfaDevices()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListUserMfaDevicesResponse), nil
@@ -1265,7 +1342,7 @@ func (c *IamClient) ListUserMfaDevices(request *model.ListUserMfaDevicesRequest)
 func (c *IamClient) ShowUser(request *model.ShowUserRequest) (*model.ShowUserResponse, error) {
 	requestDef := GenReqDefForShowUser()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowUserResponse), nil
@@ -1276,7 +1353,7 @@ func (c *IamClient) ShowUser(request *model.ShowUserRequest) (*model.ShowUserRes
 func (c *IamClient) ShowUserLoginProtect(request *model.ShowUserLoginProtectRequest) (*model.ShowUserLoginProtectResponse, error) {
 	requestDef := GenReqDefForShowUserLoginProtect()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowUserLoginProtectResponse), nil
@@ -1287,10 +1364,21 @@ func (c *IamClient) ShowUserLoginProtect(request *model.ShowUserLoginProtectRequ
 func (c *IamClient) ShowUserMfaDevice(request *model.ShowUserMfaDeviceRequest) (*model.ShowUserMfaDeviceResponse, error) {
 	requestDef := GenReqDefForShowUserMfaDevice()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowUserMfaDeviceResponse), nil
+	}
+}
+
+//该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改账号操作保护。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+func (c *IamClient) UpdateLoginProtect(request *model.UpdateLoginProtectRequest) (*model.UpdateLoginProtectResponse, error) {
+	requestDef := GenReqDefForUpdateLoginProtect()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLoginProtectResponse), nil
 	}
 }
 
@@ -1298,7 +1386,7 @@ func (c *IamClient) ShowUserMfaDevice(request *model.ShowUserMfaDeviceRequest) (
 func (c *IamClient) UpdateUser(request *model.UpdateUserRequest) (*model.UpdateUserResponse, error) {
 	requestDef := GenReqDefForUpdateUser()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateUserResponse), nil
@@ -1309,7 +1397,7 @@ func (c *IamClient) UpdateUser(request *model.UpdateUserRequest) (*model.UpdateU
 func (c *IamClient) UpdateUserInformation(request *model.UpdateUserInformationRequest) (*model.UpdateUserInformationResponse, error) {
 	requestDef := GenReqDefForUpdateUserInformation()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateUserInformationResponse), nil
@@ -1320,7 +1408,7 @@ func (c *IamClient) UpdateUserInformation(request *model.UpdateUserInformationRe
 func (c *IamClient) KeystoneCreateAgencyToken(request *model.KeystoneCreateAgencyTokenRequest) (*model.KeystoneCreateAgencyTokenResponse, error) {
 	requestDef := GenReqDefForKeystoneCreateAgencyToken()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneCreateAgencyTokenResponse), nil
@@ -1331,7 +1419,7 @@ func (c *IamClient) KeystoneCreateAgencyToken(request *model.KeystoneCreateAgenc
 func (c *IamClient) KeystoneCreateUserTokenByPassword(request *model.KeystoneCreateUserTokenByPasswordRequest) (*model.KeystoneCreateUserTokenByPasswordResponse, error) {
 	requestDef := GenReqDefForKeystoneCreateUserTokenByPassword()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneCreateUserTokenByPasswordResponse), nil
@@ -1342,7 +1430,7 @@ func (c *IamClient) KeystoneCreateUserTokenByPassword(request *model.KeystoneCre
 func (c *IamClient) KeystoneCreateUserTokenByPasswordAndMfa(request *model.KeystoneCreateUserTokenByPasswordAndMfaRequest) (*model.KeystoneCreateUserTokenByPasswordAndMfaResponse, error) {
 	requestDef := GenReqDefForKeystoneCreateUserTokenByPasswordAndMfa()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneCreateUserTokenByPasswordAndMfaResponse), nil
@@ -1353,7 +1441,7 @@ func (c *IamClient) KeystoneCreateUserTokenByPasswordAndMfa(request *model.Keyst
 func (c *IamClient) KeystoneValidateToken(request *model.KeystoneValidateTokenRequest) (*model.KeystoneValidateTokenResponse, error) {
 	requestDef := GenReqDefForKeystoneValidateToken()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.KeystoneValidateTokenResponse), nil

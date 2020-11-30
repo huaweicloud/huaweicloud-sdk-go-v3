@@ -135,7 +135,8 @@ type ShowInstanceResponse struct {
 	// Kafka实例私有连接地址。
 	KafkaPrivateConnectAddress *string `json:"kafka_private_connect_address,omitempty"`
 	// 云监控版本。
-	CesVersion *string `json:"ces_version,omitempty"`
+	CesVersion     *string `json:"ces_version,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowInstanceResponse) String() string {

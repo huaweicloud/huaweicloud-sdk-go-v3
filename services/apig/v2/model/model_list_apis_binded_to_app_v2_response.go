@@ -20,7 +20,8 @@ type ListApisBindedToAppV2Response struct {
 	// 本次返回的列表长度
 	Size *int32 `json:"size,omitempty"`
 	// 本次返回的API列表
-	Auths *[]AppAuthBindedApiResp `json:"auths,omitempty"`
+	Auths          *[]AppAuthBindedApiResp `json:"auths,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o ListApisBindedToAppV2Response) String() string {

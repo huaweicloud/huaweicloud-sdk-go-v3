@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type UpdateWhitelistResponse struct {
-	Whitelist *WhitelistResp `json:"whitelist,omitempty"`
+	Whitelist      *WhitelistResp `json:"whitelist,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o UpdateWhitelistResponse) String() string {

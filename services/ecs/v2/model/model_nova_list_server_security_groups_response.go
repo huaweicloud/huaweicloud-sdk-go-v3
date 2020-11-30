@@ -17,6 +17,7 @@ import (
 type NovaListServerSecurityGroupsResponse struct {
 	// security_group列表
 	SecurityGroups *[]NovaSecurityGroup `json:"security_groups,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o NovaListServerSecurityGroupsResponse) String() string {

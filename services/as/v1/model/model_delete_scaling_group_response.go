@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteScalingGroupResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteScalingGroupResponse) String() string {

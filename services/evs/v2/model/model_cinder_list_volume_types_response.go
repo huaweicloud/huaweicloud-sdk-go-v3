@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CinderListVolumeTypesResponse struct {
-	VolumeTypes *[]VolumeType `json:"volume_types,omitempty"`
+	VolumeTypes    *[]VolumeType `json:"volume_types,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o CinderListVolumeTypesResponse) String() string {

@@ -16,6 +16,7 @@ import (
 // Response Object
 type KeystoneCreateIdentityProviderResponse struct {
 	IdentityProvider *IdentityprovidersResult `json:"identity_provider,omitempty"`
+	HttpStatusCode   int                      `json:"-"`
 }
 
 func (o KeystoneCreateIdentityProviderResponse) String() string {

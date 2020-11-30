@@ -24,7 +24,8 @@ type ShowEvaluationStateByAssignmentIdResponse struct {
 	// 评估任务结束时间
 	EndTime *string `json:"end_time,omitempty"`
 	// 评估任务失败信息
-	ErrorMessage *string `json:"error_message,omitempty"`
+	ErrorMessage   *string `json:"error_message,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowEvaluationStateByAssignmentIdResponse) String() string {

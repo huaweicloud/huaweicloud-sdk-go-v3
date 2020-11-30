@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteLifecycleHookResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteLifecycleHookResponse) String() string {

@@ -18,7 +18,8 @@ type ListApiGroupsQuantitiesV2Response struct {
 	// 未上架的API分组个数  暂不支持
 	OffsellNums *int32 `json:"offsell_nums,omitempty"`
 	// 已上架的API分组个数
-	OnsellNums *int32 `json:"onsell_nums,omitempty"`
+	OnsellNums     *int32 `json:"onsell_nums,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListApiGroupsQuantitiesV2Response) String() string {

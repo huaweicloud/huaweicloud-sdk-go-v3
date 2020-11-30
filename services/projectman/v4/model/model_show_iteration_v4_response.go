@@ -38,7 +38,8 @@ type ShowIterationV4Response struct {
 	// 工单总数
 	Total *int32 `json:"total,omitempty"`
 	// 迭代更新时间
-	UpdatedTime *string `json:"updated_time,omitempty"`
+	UpdatedTime    *string `json:"updated_time,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowIterationV4Response) String() string {

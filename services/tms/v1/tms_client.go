@@ -6,11 +6,11 @@ import (
 )
 
 type TmsClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewTmsClient(hcClient *http_client.HcHttpClient) *TmsClient {
-	return &TmsClient{hcClient: hcClient}
+	return &TmsClient{HcClient: hcClient}
 }
 
 func TmsClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func TmsClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *TmsClient) CreatePredefineTags(request *model.CreatePredefineTagsRequest) (*model.CreatePredefineTagsResponse, error) {
 	requestDef := GenReqDefForCreatePredefineTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePredefineTagsResponse), nil
@@ -33,7 +33,7 @@ func (c *TmsClient) CreatePredefineTags(request *model.CreatePredefineTagsReques
 func (c *TmsClient) DeletePredefineTags(request *model.DeletePredefineTagsRequest) (*model.DeletePredefineTagsResponse, error) {
 	requestDef := GenReqDefForDeletePredefineTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeletePredefineTagsResponse), nil
@@ -44,7 +44,7 @@ func (c *TmsClient) DeletePredefineTags(request *model.DeletePredefineTagsReques
 func (c *TmsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*model.ListApiVersionsResponse, error) {
 	requestDef := GenReqDefForListApiVersions()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListApiVersionsResponse), nil
@@ -55,7 +55,7 @@ func (c *TmsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*mod
 func (c *TmsClient) ListPredefineTags(request *model.ListPredefineTagsRequest) (*model.ListPredefineTagsResponse, error) {
 	requestDef := GenReqDefForListPredefineTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPredefineTagsResponse), nil
@@ -66,7 +66,7 @@ func (c *TmsClient) ListPredefineTags(request *model.ListPredefineTagsRequest) (
 func (c *TmsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model.ShowApiVersionResponse, error) {
 	requestDef := GenReqDefForShowApiVersion()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowApiVersionResponse), nil
@@ -77,7 +77,7 @@ func (c *TmsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model
 func (c *TmsClient) UpdatePredefineTags(request *model.UpdatePredefineTagsRequest) (*model.UpdatePredefineTagsResponse, error) {
 	requestDef := GenReqDefForUpdatePredefineTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePredefineTagsResponse), nil

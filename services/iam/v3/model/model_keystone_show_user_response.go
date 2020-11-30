@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type KeystoneShowUserResponse struct {
-	User *KeystoneShowUserResult `json:"user,omitempty"`
+	User           *KeystoneShowUserResult `json:"user,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o KeystoneShowUserResponse) String() string {

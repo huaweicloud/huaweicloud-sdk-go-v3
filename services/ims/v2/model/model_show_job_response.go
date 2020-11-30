@@ -29,8 +29,9 @@ type ShowJobResponse struct {
 	// 错误码。
 	ErrorCode *string `json:"error_code,omitempty"`
 	// 失败原因。
-	FailReason *string      `json:"fail_reason,omitempty"`
-	Entities   *JobEntities `json:"entities,omitempty"`
+	FailReason     *string      `json:"fail_reason,omitempty"`
+	Entities       *JobEntities `json:"entities,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ShowJobResponse) String() string {

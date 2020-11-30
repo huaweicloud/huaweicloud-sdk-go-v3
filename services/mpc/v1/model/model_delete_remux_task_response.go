@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteRemuxTaskResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteRemuxTaskResponse) String() string {

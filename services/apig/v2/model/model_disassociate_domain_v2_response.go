@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DisassociateDomainV2Response struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DisassociateDomainV2Response) String() string {

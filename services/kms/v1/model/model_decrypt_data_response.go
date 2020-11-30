@@ -18,7 +18,8 @@ type DecryptDataResponse struct {
 	// 密钥ID。
 	KeyId *string `json:"key_id,omitempty"`
 	// 明文。
-	PlainText *string `json:"plain_text,omitempty"`
+	PlainText      *string `json:"plain_text,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DecryptDataResponse) String() string {

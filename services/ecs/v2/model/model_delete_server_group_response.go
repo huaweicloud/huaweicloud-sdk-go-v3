@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteServerGroupResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteServerGroupResponse) String() string {

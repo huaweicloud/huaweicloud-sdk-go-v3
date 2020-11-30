@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowNatGatewaySnatRuleResponse struct {
-	SnatRule *NatGatewaySnatRuleResponseBody `json:"snat_rule,omitempty"`
+	SnatRule       *NatGatewaySnatRuleResponseBody `json:"snat_rule,omitempty"`
+	HttpStatusCode int                             `json:"-"`
 }
 
 func (o ShowNatGatewaySnatRuleResponse) String() string {

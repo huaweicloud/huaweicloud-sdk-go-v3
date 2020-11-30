@@ -48,7 +48,8 @@ type ShowClassroomDetailResponse struct {
 	// 课堂下成员数量
 	MemberCount *int32 `json:"member_count,omitempty"`
 	// 课堂当前的状态，normal：课堂处于正常状态，archive：课堂已归档
-	Status *string `json:"status,omitempty"`
+	Status         *string `json:"status,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowClassroomDetailResponse) String() string {

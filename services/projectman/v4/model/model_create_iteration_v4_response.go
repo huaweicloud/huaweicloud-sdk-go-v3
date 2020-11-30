@@ -16,7 +16,8 @@ import (
 // Response Object
 type CreateIterationV4Response struct {
 	// 迭代id
-	Id *int32 `json:"id,omitempty"`
+	Id             *int32 `json:"id,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o CreateIterationV4Response) String() string {

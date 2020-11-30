@@ -21,6 +21,7 @@ type ListApiQuantitiesV2Response struct {
 	NumsOnRelease *int32 `json:"nums_on_release,omitempty"`
 	// 未发布到release环境的API个数
 	NumsOffRelease *int32 `json:"nums_off_release,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListApiQuantitiesV2Response) String() string {

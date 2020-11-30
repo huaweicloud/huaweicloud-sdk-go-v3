@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowOpLogResponse struct {
-	OperationLog *OperationLog `json:"operation_log,omitempty"`
+	OperationLog   *OperationLog `json:"operation_log,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ShowOpLogResponse) String() string {

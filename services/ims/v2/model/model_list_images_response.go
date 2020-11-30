@@ -16,7 +16,8 @@ import (
 // Response Object
 type ListImagesResponse struct {
 	// 镜像列表
-	Images *[]ImageInfo `json:"images,omitempty"`
+	Images         *[]ImageInfo `json:"images,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ListImagesResponse) String() string {

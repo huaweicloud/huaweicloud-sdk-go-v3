@@ -20,7 +20,8 @@ type EncryptDatakeyResponse struct {
 	// DEK密文16进制，两位表示1byte。
 	CipherText *string `json:"cipher_text,omitempty"`
 	// DEK字节长度。
-	DatakeyLength *string `json:"datakey_length,omitempty"`
+	DatakeyLength  *string `json:"datakey_length,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o EncryptDatakeyResponse) String() string {

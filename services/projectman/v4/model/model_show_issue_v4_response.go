@@ -48,7 +48,8 @@ type ShowIssueV4Response struct {
 	Status      *IssueItemSfv4Status              `json:"status,omitempty"`
 	Tracker     *IssueItemSfv4Tracker             `json:"tracker,omitempty"`
 	// 更新时间 年-月-日 时:分:秒
-	UpdatedTime *string `json:"updated_time,omitempty"`
+	UpdatedTime    *string `json:"updated_time,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowIssueV4Response) String() string {

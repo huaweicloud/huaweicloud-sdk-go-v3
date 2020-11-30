@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type BatchCreateOrDeleteQueueTagResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o BatchCreateOrDeleteQueueTagResponse) String() string {

@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type NeutronShowFloatingIpResponse struct {
-	Floatingip *FloatingIpResp `json:"floatingip,omitempty"`
+	Floatingip     *FloatingIpResp `json:"floatingip,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o NeutronShowFloatingIpResponse) String() string {

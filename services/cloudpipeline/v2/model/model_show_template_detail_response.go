@@ -42,10 +42,14 @@ type ShowTemplateDetailResponse struct {
 	// 是否关注
 	IsWatch *bool `json:"is_watch,omitempty"`
 	// 模板描述
-	Description *string        `json:"description,omitempty"`
-	Parameter   *TemplateParam `json:"parameter,omitempty"`
-	Flow        *FlowItem      `json:"flow,omitempty"`
-	States      *StateItem     `json:"states,omitempty"`
+	Description *string `json:"description,omitempty"`
+	// 模板参数
+	Parameter *[]TemplateParam `json:"parameter,omitempty"`
+	// 编排flow，map类型数据
+	Flow *interface{} `json:"flow,omitempty"`
+	// 子任务states，map类型数据
+	States         *interface{} `json:"states,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ShowTemplateDetailResponse) String() string {

@@ -29,7 +29,8 @@ type CreateOrDeletePublishRecordForApiV2Response struct {
 	// 发布时间
 	PublishTime *sdktime.SdkTime `json:"publish_time,omitempty"`
 	// 在线的版本号
-	VersionId *string `json:"version_id,omitempty"`
+	VersionId      *string `json:"version_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateOrDeletePublishRecordForApiV2Response) String() string {

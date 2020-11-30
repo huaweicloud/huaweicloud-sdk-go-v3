@@ -36,7 +36,8 @@ type CreateAnAppV2Response struct {
 	// 状态
 	Status *int32 `json:"status,omitempty"`
 	// APP的类型  默认为apig，暂不支持其他类型
-	AppType *CreateAnAppV2ResponseAppType `json:"app_type,omitempty"`
+	AppType        *CreateAnAppV2ResponseAppType `json:"app_type,omitempty"`
+	HttpStatusCode int                           `json:"-"`
 }
 
 func (o CreateAnAppV2Response) String() string {

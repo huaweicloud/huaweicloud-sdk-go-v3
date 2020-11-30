@@ -33,7 +33,8 @@ type CreateSpecialThrottlingConfigurationV2Response struct {
 	// 作用的APP编号
 	AppId *string `json:"app_id,omitempty"`
 	// 特殊对象类型：APP、USER
-	ObjectType *string `json:"object_type,omitempty"`
+	ObjectType     *string `json:"object_type,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateSpecialThrottlingConfigurationV2Response) String() string {

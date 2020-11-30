@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowUserLoginProtectResponse struct {
-	LoginProtect *LoginProtectResult `json:"login_protect,omitempty"`
+	LoginProtect   *LoginProtectResult `json:"login_protect,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o ShowUserLoginProtectResponse) String() string {

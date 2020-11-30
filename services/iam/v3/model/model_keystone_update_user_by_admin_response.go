@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type KeystoneUpdateUserByAdminResponse struct {
-	User *KeystoneUpdateUserByAdminResult `json:"user,omitempty"`
+	User           *KeystoneUpdateUserByAdminResult `json:"user,omitempty"`
+	HttpStatusCode int                              `json:"-"`
 }
 
 func (o KeystoneUpdateUserByAdminResponse) String() string {

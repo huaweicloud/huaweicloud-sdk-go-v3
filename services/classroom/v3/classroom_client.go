@@ -6,11 +6,11 @@ import (
 )
 
 type ClassroomClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewClassroomClient(hcClient *http_client.HcHttpClient) *ClassroomClient {
-	return &ClassroomClient{hcClient: hcClient}
+	return &ClassroomClient{HcClient: hcClient}
 }
 
 func ClassroomClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func ClassroomClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *ClassroomClient) ListClassroomMembers(request *model.ListClassroomMembersRequest) (*model.ListClassroomMembersResponse, error) {
 	requestDef := GenReqDefForListClassroomMembers()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListClassroomMembersResponse), nil
@@ -33,7 +33,7 @@ func (c *ClassroomClient) ListClassroomMembers(request *model.ListClassroomMembe
 func (c *ClassroomClient) ListClassrooms(request *model.ListClassroomsRequest) (*model.ListClassroomsResponse, error) {
 	requestDef := GenReqDefForListClassrooms()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListClassroomsResponse), nil
@@ -44,7 +44,7 @@ func (c *ClassroomClient) ListClassrooms(request *model.ListClassroomsRequest) (
 func (c *ClassroomClient) ShowClassroomDetail(request *model.ShowClassroomDetailRequest) (*model.ShowClassroomDetailResponse, error) {
 	requestDef := GenReqDefForShowClassroomDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowClassroomDetailResponse), nil
@@ -55,7 +55,7 @@ func (c *ClassroomClient) ShowClassroomDetail(request *model.ShowClassroomDetail
 func (c *ClassroomClient) ListClassroomMemberJobs(request *model.ListClassroomMemberJobsRequest) (*model.ListClassroomMemberJobsResponse, error) {
 	requestDef := GenReqDefForListClassroomMemberJobs()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListClassroomMemberJobsResponse), nil
@@ -66,7 +66,7 @@ func (c *ClassroomClient) ListClassroomMemberJobs(request *model.ListClassroomMe
 func (c *ClassroomClient) ListJobs(request *model.ListJobsRequest) (*model.ListJobsResponse, error) {
 	requestDef := GenReqDefForListJobs()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListJobsResponse), nil
@@ -77,7 +77,7 @@ func (c *ClassroomClient) ListJobs(request *model.ListJobsRequest) (*model.ListJ
 func (c *ClassroomClient) ListMemberJobRecords(request *model.ListMemberJobRecordsRequest) (*model.ListMemberJobRecordsResponse, error) {
 	requestDef := GenReqDefForListMemberJobRecords()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListMemberJobRecordsResponse), nil
@@ -88,7 +88,7 @@ func (c *ClassroomClient) ListMemberJobRecords(request *model.ListMemberJobRecor
 func (c *ClassroomClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*model.ShowJobDetailResponse, error) {
 	requestDef := GenReqDefForShowJobDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowJobDetailResponse), nil
@@ -99,7 +99,7 @@ func (c *ClassroomClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*m
 func (c *ClassroomClient) ShowJobExercises(request *model.ShowJobExercisesRequest) (*model.ShowJobExercisesResponse, error) {
 	requestDef := GenReqDefForShowJobExercises()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowJobExercisesResponse), nil

@@ -34,9 +34,11 @@ type TemplateParam struct {
 	// 是否静态参数
 	IsStatic bool `json:"is_static"`
 	// 是否默认参数
-	IsDefault   bool             `json:"is_default"`
-	Limits      *ParamTypeLimits `json:"limits"`
-	Constraints *Constraint      `json:"constraints"`
+	IsDefault bool `json:"is_default"`
+	// array类型数据
+	Limits []ParamTypeLimits `json:"limits"`
+	// array类型数据
+	Constraints []Constraint `json:"constraints"`
 }
 
 func (o TemplateParam) String() string {

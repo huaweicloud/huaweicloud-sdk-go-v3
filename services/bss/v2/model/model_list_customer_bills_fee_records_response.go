@@ -20,7 +20,8 @@ type ListCustomerBillsFeeRecordsResponse struct {
 	// |参数名称：资源费用记录数据。具体请参见表 MonthlyBillRes。| |参数约束以及描述：资源费用记录数据。具体请参见表 MonthlyBillRes。|
 	Records *[]MonthlyBillRecord `json:"records,omitempty"`
 	// |参数名称：币种。| |参数约束及描述：币种。|
-	Currency *string `json:"currency,omitempty"`
+	Currency       *string `json:"currency,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListCustomerBillsFeeRecordsResponse) String() string {

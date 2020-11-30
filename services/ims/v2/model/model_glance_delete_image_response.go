@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type GlanceDeleteImageResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o GlanceDeleteImageResponse) String() string {

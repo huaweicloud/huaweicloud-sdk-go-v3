@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteAnimatedGraphicsTaskResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteAnimatedGraphicsTaskResponse) String() string {

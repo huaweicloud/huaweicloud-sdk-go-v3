@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type UpdateScalingGroupInstanceResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateScalingGroupInstanceResponse) String() string {

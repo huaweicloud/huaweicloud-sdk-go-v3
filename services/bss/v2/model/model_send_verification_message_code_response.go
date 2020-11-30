@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type SendVerificationMessageCodeResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o SendVerificationMessageCodeResponse) String() string {

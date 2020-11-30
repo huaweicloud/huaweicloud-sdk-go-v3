@@ -6,11 +6,11 @@ import (
 )
 
 type CtsClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewCtsClient(hcClient *http_client.HcHttpClient) *CtsClient {
-	return &CtsClient{hcClient: hcClient}
+	return &CtsClient{HcClient: hcClient}
 }
 
 func CtsClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func CtsClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *CtsClient) CreateTracker(request *model.CreateTrackerRequest) (*model.CreateTrackerResponse, error) {
 	requestDef := GenReqDefForCreateTracker()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateTrackerResponse), nil
@@ -33,7 +33,7 @@ func (c *CtsClient) CreateTracker(request *model.CreateTrackerRequest) (*model.C
 func (c *CtsClient) DeleteTracker(request *model.DeleteTrackerRequest) (*model.DeleteTrackerResponse, error) {
 	requestDef := GenReqDefForDeleteTracker()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteTrackerResponse), nil
@@ -44,7 +44,7 @@ func (c *CtsClient) DeleteTracker(request *model.DeleteTrackerRequest) (*model.D
 func (c *CtsClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuotasResponse, error) {
 	requestDef := GenReqDefForListQuotas()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListQuotasResponse), nil
@@ -55,7 +55,7 @@ func (c *CtsClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuo
 func (c *CtsClient) ListTraces(request *model.ListTracesRequest) (*model.ListTracesResponse, error) {
 	requestDef := GenReqDefForListTraces()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListTracesResponse), nil
@@ -66,7 +66,7 @@ func (c *CtsClient) ListTraces(request *model.ListTracesRequest) (*model.ListTra
 func (c *CtsClient) ListTrackers(request *model.ListTrackersRequest) (*model.ListTrackersResponse, error) {
 	requestDef := GenReqDefForListTrackers()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListTrackersResponse), nil
@@ -77,7 +77,7 @@ func (c *CtsClient) ListTrackers(request *model.ListTrackersRequest) (*model.Lis
 func (c *CtsClient) UpdateTracker(request *model.UpdateTrackerRequest) (*model.UpdateTrackerResponse, error) {
 	requestDef := GenReqDefForUpdateTracker()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateTrackerResponse), nil

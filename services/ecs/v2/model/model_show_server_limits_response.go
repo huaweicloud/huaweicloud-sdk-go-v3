@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowServerLimitsResponse struct {
-	Absolute *ServerLimits `json:"absolute,omitempty"`
+	Absolute       *ServerLimits `json:"absolute,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ShowServerLimitsResponse) String() string {

@@ -16,7 +16,8 @@ import (
 // Response Object
 type ListRuntimesResponse struct {
 	// 运行时列表。
-	Runtimes *[]RuntimeTypeView `json:"runtimes,omitempty"`
+	Runtimes       *[]RuntimeTypeView `json:"runtimes,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ListRuntimesResponse) String() string {

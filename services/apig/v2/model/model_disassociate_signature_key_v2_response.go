@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DisassociateSignatureKeyV2Response struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DisassociateSignatureKeyV2Response) String() string {

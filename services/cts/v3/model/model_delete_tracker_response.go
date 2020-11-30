@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteTrackerResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteTrackerResponse) String() string {

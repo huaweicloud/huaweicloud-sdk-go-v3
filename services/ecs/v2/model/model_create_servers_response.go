@@ -20,7 +20,8 @@ type CreateServersResponse struct {
 	// 订单号，创建包年包月的弹性云服务器时返回该参数。
 	OrderId *string `json:"order_id,omitempty"`
 	// 云服务器ID列表。  通过云服务器ID查询云服务器详情 ，若返回404 可能云服务器还在创建或者已经创建失败。
-	ServerIds *[]string `json:"serverIds,omitempty"`
+	ServerIds      *[]string `json:"serverIds,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o CreateServersResponse) String() string {

@@ -20,7 +20,8 @@ type ShowResourceBindEnterpriseProjectResponse struct {
 	// 查询失败的企业项目下的资源
 	Errors *[]Errors `json:"errors,omitempty"`
 	// 企业项目下的资源总数
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowResourceBindEnterpriseProjectResponse) String() string {

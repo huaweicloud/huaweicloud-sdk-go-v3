@@ -16,7 +16,8 @@ import (
 // Response Object
 type ShowProjectTagsResponse struct {
 	// 标签列表
-	Tags *[]ShowProjectTagsRespTags `json:"tags,omitempty"`
+	Tags           *[]ShowProjectTagsRespTags `json:"tags,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o ShowProjectTagsResponse) String() string {

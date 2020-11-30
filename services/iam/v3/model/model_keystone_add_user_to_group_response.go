@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type KeystoneAddUserToGroupResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o KeystoneAddUserToGroupResponse) String() string {

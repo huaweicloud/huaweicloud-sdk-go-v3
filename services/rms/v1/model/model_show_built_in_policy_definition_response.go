@@ -30,7 +30,8 @@ type ShowBuiltInPolicyDefinitionResponse struct {
 	// 关键词列表
 	Keywords *[]string `json:"keywords,omitempty"`
 	// 策略参数
-	Parameters map[string]PolicyParameterDefinition `json:"parameters,omitempty"`
+	Parameters     map[string]PolicyParameterDefinition `json:"parameters,omitempty"`
+	HttpStatusCode int                                  `json:"-"`
 }
 
 func (o ShowBuiltInPolicyDefinitionResponse) String() string {

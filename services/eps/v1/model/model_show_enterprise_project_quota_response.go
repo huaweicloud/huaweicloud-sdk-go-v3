@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowEnterpriseProjectQuotaResponse struct {
-	Quotas *QuotasDetail `json:"quotas,omitempty"`
+	Quotas         *QuotasDetail `json:"quotas,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ShowEnterpriseProjectQuotaResponse) String() string {

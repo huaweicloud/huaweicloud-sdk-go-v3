@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type KeystoneUpdateUserPasswordResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o KeystoneUpdateUserPasswordResponse) String() string {

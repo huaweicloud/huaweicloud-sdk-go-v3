@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type MigrateResourceResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o MigrateResourceResponse) String() string {

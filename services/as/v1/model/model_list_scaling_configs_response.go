@@ -23,6 +23,7 @@ type ListScalingConfigsResponse struct {
 	Limit *int32 `json:"limit,omitempty"`
 	// 伸缩配置列表
 	ScalingConfigurations *[]ScalingConfiguration `json:"scaling_configurations,omitempty"`
+	HttpStatusCode        int                     `json:"-"`
 }
 
 func (o ListScalingConfigsResponse) String() string {

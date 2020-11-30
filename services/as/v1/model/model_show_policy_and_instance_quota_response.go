@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowPolicyAndInstanceQuotaResponse struct {
-	AllQuotas *PolicyInstanceQuotas `json:"AllQuotas,omitempty"`
+	AllQuotas      *PolicyInstanceQuotas `json:"AllQuotas,omitempty"`
+	HttpStatusCode int                   `json:"-"`
 }
 
 func (o ShowPolicyAndInstanceQuotaResponse) String() string {

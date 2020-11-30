@@ -31,6 +31,8 @@ type PasswordPolicyResult struct {
 	PasswordRequirements string `json:"password_requirements"`
 	// 密码有效期（天）。
 	PasswordValidityPeriod int32 `json:"password_validity_period"`
+	// 至少包含字符种类的个数，取值区间[2,4]。
+	PasswordCharCombination int32 `json:"password_char_combination"`
 }
 
 func (o PasswordPolicyResult) String() string {

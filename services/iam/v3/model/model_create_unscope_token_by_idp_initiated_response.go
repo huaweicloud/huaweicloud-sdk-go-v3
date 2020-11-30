@@ -15,8 +15,9 @@ import (
 
 // Response Object
 type CreateUnscopeTokenByIdpInitiatedResponse struct {
-	Token         *IdpToken `json:"token,omitempty"`
-	XSubjectToken *string   `json:"X-Subject-Token,omitempty"`
+	Token          *IdpToken `json:"token,omitempty"`
+	XSubjectToken  *string   `json:"X-Subject-Token,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o CreateUnscopeTokenByIdpInitiatedResponse) String() string {

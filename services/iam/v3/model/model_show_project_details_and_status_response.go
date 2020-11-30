@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowProjectDetailsAndStatusResponse struct {
-	Project *ProjectDetailsAndStatusResult `json:"project,omitempty"`
+	Project        *ProjectDetailsAndStatusResult `json:"project,omitempty"`
+	HttpStatusCode int                            `json:"-"`
 }
 
 func (o ShowProjectDetailsAndStatusResponse) String() string {

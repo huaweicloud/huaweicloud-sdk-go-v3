@@ -22,7 +22,8 @@ type ShowProjectDetailResponse struct {
 	// 仓库项目ID。
 	ProjectId *string `json:"project_id,omitempty"`
 	// 仓库项目。
-	Project *string `json:"project,omitempty"`
+	Project        *string `json:"project,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowProjectDetailResponse) String() string {

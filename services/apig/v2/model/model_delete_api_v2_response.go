@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteApiV2Response struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteApiV2Response) String() string {

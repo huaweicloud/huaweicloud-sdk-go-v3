@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type UpdateKeyAliasResponse struct {
-	KeyInfo *KeyAliasInfo `json:"key_info,omitempty"`
+	KeyInfo        *KeyAliasInfo `json:"key_info,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o UpdateKeyAliasResponse) String() string {

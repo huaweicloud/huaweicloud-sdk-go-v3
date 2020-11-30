@@ -17,6 +17,7 @@ import (
 type UpdateScalingPolicyResponse struct {
 	// 伸缩策略ID。
 	ScalingPolicyId *string `json:"scaling_policy_id,omitempty"`
+	HttpStatusCode  int     `json:"-"`
 }
 
 func (o UpdateScalingPolicyResponse) String() string {

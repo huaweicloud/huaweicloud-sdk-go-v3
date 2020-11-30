@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type KeystoneShowPermissionResponse struct {
-	Role *RoleResult `json:"role,omitempty"`
+	Role           *RoleResult `json:"role,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o KeystoneShowPermissionResponse) String() string {

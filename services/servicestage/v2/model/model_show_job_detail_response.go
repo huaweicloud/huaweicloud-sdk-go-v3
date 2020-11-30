@@ -19,7 +19,8 @@ type ShowJobDetailResponse struct {
 	TaskCount *int32   `json:"task_count,omitempty"`
 	Job       *JobInfo `json:"job,omitempty"`
 	// 部署任务列表。
-	Tasks *[]TaskInfo `json:"tasks,omitempty"`
+	Tasks          *[]TaskInfo `json:"tasks,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o ShowJobDetailResponse) String() string {

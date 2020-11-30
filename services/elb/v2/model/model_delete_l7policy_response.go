@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteL7policyResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteL7policyResponse) String() string {

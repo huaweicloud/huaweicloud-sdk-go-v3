@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type KeystoneUpdateProtocolResponse struct {
-	Protocol *ProtocolResult `json:"protocol,omitempty"`
+	Protocol       *ProtocolResult `json:"protocol,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o KeystoneUpdateProtocolResponse) String() string {

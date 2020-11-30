@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type CompleteLifecycleActionResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CompleteLifecycleActionResponse) String() string {

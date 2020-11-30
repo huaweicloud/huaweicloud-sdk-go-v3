@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CopyBackupResponse struct {
-	Replication *BackupReplicateRespBody `json:"replication,omitempty"`
+	Replication    *BackupReplicateRespBody `json:"replication,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o CopyBackupResponse) String() string {

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type CreateEnterpriseProjectAuthResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CreateEnterpriseProjectAuthResponse) String() string {

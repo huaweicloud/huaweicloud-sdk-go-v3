@@ -24,7 +24,8 @@ type ShowCesHierarchyResponse struct {
 	// 队列信息。
 	Queues *[]ShowCeshierarchyRespQueues `json:"queues,omitempty"`
 	// 消费组信息。
-	Groups *[]string `json:"groups,omitempty"`
+	Groups         *[]string `json:"groups,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ShowCesHierarchyResponse) String() string {

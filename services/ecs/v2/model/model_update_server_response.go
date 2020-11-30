@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type UpdateServerResponse struct {
-	Server *UpdateServerResult `json:"server,omitempty"`
+	Server         *UpdateServerResult `json:"server,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o UpdateServerResponse) String() string {

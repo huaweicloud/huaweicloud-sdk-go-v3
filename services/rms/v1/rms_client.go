@@ -6,11 +6,11 @@ import (
 )
 
 type RmsClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewRmsClient(hcClient *http_client.HcHttpClient) *RmsClient {
-	return &RmsClient{hcClient: hcClient}
+	return &RmsClient{HcClient: hcClient}
 }
 
 func RmsClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func RmsClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *RmsClient) ShowResourceHistory(request *model.ShowResourceHistoryRequest) (*model.ShowResourceHistoryResponse, error) {
 	requestDef := GenReqDefForShowResourceHistory()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowResourceHistoryResponse), nil
@@ -33,7 +33,7 @@ func (c *RmsClient) ShowResourceHistory(request *model.ShowResourceHistoryReques
 func (c *RmsClient) CreatePolicyAssignments(request *model.CreatePolicyAssignmentsRequest) (*model.CreatePolicyAssignmentsResponse, error) {
 	requestDef := GenReqDefForCreatePolicyAssignments()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePolicyAssignmentsResponse), nil
@@ -44,7 +44,7 @@ func (c *RmsClient) CreatePolicyAssignments(request *model.CreatePolicyAssignmen
 func (c *RmsClient) DeletePolicyAssignment(request *model.DeletePolicyAssignmentRequest) (*model.DeletePolicyAssignmentResponse, error) {
 	requestDef := GenReqDefForDeletePolicyAssignment()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeletePolicyAssignmentResponse), nil
@@ -55,7 +55,7 @@ func (c *RmsClient) DeletePolicyAssignment(request *model.DeletePolicyAssignment
 func (c *RmsClient) DisablePolicyAssignment(request *model.DisablePolicyAssignmentRequest) (*model.DisablePolicyAssignmentResponse, error) {
 	requestDef := GenReqDefForDisablePolicyAssignment()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DisablePolicyAssignmentResponse), nil
@@ -66,7 +66,7 @@ func (c *RmsClient) DisablePolicyAssignment(request *model.DisablePolicyAssignme
 func (c *RmsClient) EnablePolicyAssignment(request *model.EnablePolicyAssignmentRequest) (*model.EnablePolicyAssignmentResponse, error) {
 	requestDef := GenReqDefForEnablePolicyAssignment()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.EnablePolicyAssignmentResponse), nil
@@ -77,7 +77,7 @@ func (c *RmsClient) EnablePolicyAssignment(request *model.EnablePolicyAssignment
 func (c *RmsClient) ListBuiltInPolicyDefinitions(request *model.ListBuiltInPolicyDefinitionsRequest) (*model.ListBuiltInPolicyDefinitionsResponse, error) {
 	requestDef := GenReqDefForListBuiltInPolicyDefinitions()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListBuiltInPolicyDefinitionsResponse), nil
@@ -88,7 +88,7 @@ func (c *RmsClient) ListBuiltInPolicyDefinitions(request *model.ListBuiltInPolic
 func (c *RmsClient) ListPolicyAssignments(request *model.ListPolicyAssignmentsRequest) (*model.ListPolicyAssignmentsResponse, error) {
 	requestDef := GenReqDefForListPolicyAssignments()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPolicyAssignmentsResponse), nil
@@ -99,7 +99,7 @@ func (c *RmsClient) ListPolicyAssignments(request *model.ListPolicyAssignmentsRe
 func (c *RmsClient) ListPolicyStatesByAssignmentId(request *model.ListPolicyStatesByAssignmentIdRequest) (*model.ListPolicyStatesByAssignmentIdResponse, error) {
 	requestDef := GenReqDefForListPolicyStatesByAssignmentId()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPolicyStatesByAssignmentIdResponse), nil
@@ -110,7 +110,7 @@ func (c *RmsClient) ListPolicyStatesByAssignmentId(request *model.ListPolicyStat
 func (c *RmsClient) ListPolicyStatesByDomainId(request *model.ListPolicyStatesByDomainIdRequest) (*model.ListPolicyStatesByDomainIdResponse, error) {
 	requestDef := GenReqDefForListPolicyStatesByDomainId()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPolicyStatesByDomainIdResponse), nil
@@ -121,7 +121,7 @@ func (c *RmsClient) ListPolicyStatesByDomainId(request *model.ListPolicyStatesBy
 func (c *RmsClient) ListPolicyStatesByResourceId(request *model.ListPolicyStatesByResourceIdRequest) (*model.ListPolicyStatesByResourceIdResponse, error) {
 	requestDef := GenReqDefForListPolicyStatesByResourceId()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPolicyStatesByResourceIdResponse), nil
@@ -132,7 +132,7 @@ func (c *RmsClient) ListPolicyStatesByResourceId(request *model.ListPolicyStates
 func (c *RmsClient) RunEvaluationByPolicyAssignmentId(request *model.RunEvaluationByPolicyAssignmentIdRequest) (*model.RunEvaluationByPolicyAssignmentIdResponse, error) {
 	requestDef := GenReqDefForRunEvaluationByPolicyAssignmentId()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RunEvaluationByPolicyAssignmentIdResponse), nil
@@ -143,7 +143,7 @@ func (c *RmsClient) RunEvaluationByPolicyAssignmentId(request *model.RunEvaluati
 func (c *RmsClient) ShowBuiltInPolicyDefinition(request *model.ShowBuiltInPolicyDefinitionRequest) (*model.ShowBuiltInPolicyDefinitionResponse, error) {
 	requestDef := GenReqDefForShowBuiltInPolicyDefinition()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowBuiltInPolicyDefinitionResponse), nil
@@ -154,7 +154,7 @@ func (c *RmsClient) ShowBuiltInPolicyDefinition(request *model.ShowBuiltInPolicy
 func (c *RmsClient) ShowEvaluationStateByAssignmentId(request *model.ShowEvaluationStateByAssignmentIdRequest) (*model.ShowEvaluationStateByAssignmentIdResponse, error) {
 	requestDef := GenReqDefForShowEvaluationStateByAssignmentId()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowEvaluationStateByAssignmentIdResponse), nil
@@ -165,7 +165,7 @@ func (c *RmsClient) ShowEvaluationStateByAssignmentId(request *model.ShowEvaluat
 func (c *RmsClient) ShowPolicyAssignment(request *model.ShowPolicyAssignmentRequest) (*model.ShowPolicyAssignmentResponse, error) {
 	requestDef := GenReqDefForShowPolicyAssignment()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowPolicyAssignmentResponse), nil
@@ -176,7 +176,7 @@ func (c *RmsClient) ShowPolicyAssignment(request *model.ShowPolicyAssignmentRequ
 func (c *RmsClient) UpdatePolicyAssignment(request *model.UpdatePolicyAssignmentRequest) (*model.UpdatePolicyAssignmentResponse, error) {
 	requestDef := GenReqDefForUpdatePolicyAssignment()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePolicyAssignmentResponse), nil
@@ -187,7 +187,7 @@ func (c *RmsClient) UpdatePolicyAssignment(request *model.UpdatePolicyAssignment
 func (c *RmsClient) ShowResourceRelations(request *model.ShowResourceRelationsRequest) (*model.ShowResourceRelationsResponse, error) {
 	requestDef := GenReqDefForShowResourceRelations()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowResourceRelationsResponse), nil
@@ -198,7 +198,7 @@ func (c *RmsClient) ShowResourceRelations(request *model.ShowResourceRelationsRe
 func (c *RmsClient) ListProviders(request *model.ListProvidersRequest) (*model.ListProvidersResponse, error) {
 	requestDef := GenReqDefForListProviders()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListProvidersResponse), nil
@@ -209,7 +209,7 @@ func (c *RmsClient) ListProviders(request *model.ListProvidersRequest) (*model.L
 func (c *RmsClient) ListResources(request *model.ListResourcesRequest) (*model.ListResourcesResponse, error) {
 	requestDef := GenReqDefForListResources()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListResourcesResponse), nil
@@ -220,7 +220,7 @@ func (c *RmsClient) ListResources(request *model.ListResourcesRequest) (*model.L
 func (c *RmsClient) ShowResourceById(request *model.ShowResourceByIdRequest) (*model.ShowResourceByIdResponse, error) {
 	requestDef := GenReqDefForShowResourceById()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowResourceByIdResponse), nil
@@ -231,7 +231,7 @@ func (c *RmsClient) ShowResourceById(request *model.ShowResourceByIdRequest) (*m
 func (c *RmsClient) CreateTrackerConfig(request *model.CreateTrackerConfigRequest) (*model.CreateTrackerConfigResponse, error) {
 	requestDef := GenReqDefForCreateTrackerConfig()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateTrackerConfigResponse), nil
@@ -242,7 +242,7 @@ func (c *RmsClient) CreateTrackerConfig(request *model.CreateTrackerConfigReques
 func (c *RmsClient) DeleteTrackerConfig(request *model.DeleteTrackerConfigRequest) (*model.DeleteTrackerConfigResponse, error) {
 	requestDef := GenReqDefForDeleteTrackerConfig()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteTrackerConfigResponse), nil
@@ -253,7 +253,7 @@ func (c *RmsClient) DeleteTrackerConfig(request *model.DeleteTrackerConfigReques
 func (c *RmsClient) ShowTrackerConfig(request *model.ShowTrackerConfigRequest) (*model.ShowTrackerConfigResponse, error) {
 	requestDef := GenReqDefForShowTrackerConfig()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowTrackerConfigResponse), nil

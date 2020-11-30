@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type KeystoneShowEndpointResponse struct {
-	Endpoint *Endpoint `json:"endpoint,omitempty"`
+	Endpoint       *Endpoint `json:"endpoint,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o KeystoneShowEndpointResponse) String() string {

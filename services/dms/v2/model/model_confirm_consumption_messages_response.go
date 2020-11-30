@@ -18,7 +18,8 @@ type ConfirmConsumptionMessagesResponse struct {
 	// 确认成功的数目（如果为N，则表示前N条消息确认成功）。
 	Success *int32 `json:"success,omitempty"`
 	// 确认失败的数目（如果为N，则表示后N条消息确认失败）。
-	Fail *int32 `json:"fail,omitempty"`
+	Fail           *int32 `json:"fail,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ConfirmConsumptionMessagesResponse) String() string {

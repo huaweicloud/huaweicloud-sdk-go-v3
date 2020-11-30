@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowListenerResponse struct {
-	Listener *ListenerResp `json:"listener,omitempty"`
+	Listener       *ListenerResp `json:"listener,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ShowListenerResponse) String() string {

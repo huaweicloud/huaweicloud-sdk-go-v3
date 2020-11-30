@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteNatGatewaySnatRuleResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteNatGatewaySnatRuleResponse) String() string {

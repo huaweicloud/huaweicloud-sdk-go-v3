@@ -16,8 +16,9 @@ import (
 // Response Object
 type ListPolicyAssignmentsResponse struct {
 	// 规则列表
-	Value    *[]PolicyAssignment `json:"value,omitempty"`
-	PageInfo *PageInfo           `json:"page_info,omitempty"`
+	Value          *[]PolicyAssignment `json:"value,omitempty"`
+	PageInfo       *PageInfo           `json:"page_info,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o ListPolicyAssignmentsResponse) String() string {

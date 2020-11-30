@@ -16,7 +16,8 @@ import (
 // Response Object
 type ShowRedirectUrlResponse struct {
 	// 授权重定向URL。
-	Url *string `json:"url,omitempty"`
+	Url            *string `json:"url,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowRedirectUrlResponse) String() string {

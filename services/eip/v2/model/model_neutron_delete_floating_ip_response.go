@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type NeutronDeleteFloatingIpResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o NeutronDeleteFloatingIpResponse) String() string {

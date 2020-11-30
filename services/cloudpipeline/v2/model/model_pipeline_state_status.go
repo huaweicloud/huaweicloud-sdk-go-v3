@@ -33,8 +33,9 @@ type PipelineStateStatus struct {
 	// 错误码
 	ErrorCode string `json:"error_code"`
 	// 错误信息
-	ErrorMsg string               `json:"error_msg"`
-	Children *PipelineStateStatus `json:"children"`
+	ErrorMsg string `json:"error_msg"`
+	// 子任务运行信息(对任务来说是空的)
+	Children []PipelineStateStatus `json:"children"`
 	// 任务运行记录跳转链接
 	DetailUrl string `json:"detail_url"`
 }

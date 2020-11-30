@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreateMemberResponse struct {
-	Member *MemberResp `json:"member,omitempty"`
+	Member         *MemberResp `json:"member,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o CreateMemberResponse) String() string {

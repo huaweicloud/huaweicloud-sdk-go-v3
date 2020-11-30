@@ -16,7 +16,8 @@ import (
 // Response Object
 type ListScalingTagInfosByTenantIdResponse struct {
 	// 资源标签。
-	Tags *[]TagsMultiValue `json:"tags,omitempty"`
+	Tags           *[]TagsMultiValue `json:"tags,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ListScalingTagInfosByTenantIdResponse) String() string {

@@ -25,8 +25,9 @@ type CreateExtractTaskResponse struct {
 	// 解析文件名称
 	OutputFileName *string `json:"output_file_name,omitempty"`
 	// 任务描述，如当任务异常时，此字段为异常的具体信息
-	Description *string   `json:"description,omitempty"`
-	Metadata    *MetaData `json:"metadata,omitempty"`
+	Description    *string   `json:"description,omitempty"`
+	Metadata       *MetaData `json:"metadata,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o CreateExtractTaskResponse) String() string {

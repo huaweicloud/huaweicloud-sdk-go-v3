@@ -16,7 +16,8 @@ import (
 // Response Object
 type ListTreesResponse struct {
 	// 仓库文件列表。
-	Paths *[]string `json:"paths,omitempty"`
+	Paths          *[]string `json:"paths,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListTreesResponse) String() string {

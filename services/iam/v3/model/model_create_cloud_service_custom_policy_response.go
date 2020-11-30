@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreateCloudServiceCustomPolicyResponse struct {
-	Role *ServicePolicyRoleResult `json:"role,omitempty"`
+	Role           *ServicePolicyRoleResult `json:"role,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o CreateCloudServiceCustomPolicyResponse) String() string {

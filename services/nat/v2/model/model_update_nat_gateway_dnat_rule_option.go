@@ -18,7 +18,7 @@ import (
 type UpdateNatGatewayDnatRuleOption struct {
 	// NAT网关的id。
 	NatGatewayId string `json:"nat_gateway_id"`
-	// DNAT规则的描述。
+	// DNAT规则的描述，长度限制为255。
 	Description *string `json:"description,omitempty"`
 	// 虚拟机或者裸机的Port ID，与private_ip参数二选一。
 	PortId *string `json:"port_id,omitempty"`

@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type UpdatePermanentAccessKeyResponse struct {
-	Credential *UpdateCredentialResult `json:"credential,omitempty"`
+	Credential     *UpdateCredentialResult `json:"credential,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o UpdatePermanentAccessKeyResponse) String() string {

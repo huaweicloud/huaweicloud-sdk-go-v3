@@ -26,7 +26,8 @@ type CreateProjectV4Response struct {
 	// 项目类型
 	ProjectType *string `json:"project_type,omitempty"`
 	// 创建者的数字id
-	UserNumId *int32 `json:"user_num_id,omitempty"`
+	UserNumId      *int32 `json:"user_num_id,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o CreateProjectV4Response) String() string {

@@ -16,7 +16,8 @@ import (
 // Response Object
 type CreateSinkTaskResponse struct {
 	// 任务ID。
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId         *string `json:"task_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateSinkTaskResponse) String() string {

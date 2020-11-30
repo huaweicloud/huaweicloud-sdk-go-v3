@@ -43,7 +43,8 @@ type ShowDetailsOfApiGroupV2Response struct {
 	// 状态
 	Status *int32 `json:"status,omitempty"`
 	// 是否为默认分组
-	IsDefault *int32 `json:"is_default,omitempty"`
+	IsDefault      *int32 `json:"is_default,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowDetailsOfApiGroupV2Response) String() string {

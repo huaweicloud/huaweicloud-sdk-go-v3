@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type CreateMetricDataResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CreateMetricDataResponse) String() string {

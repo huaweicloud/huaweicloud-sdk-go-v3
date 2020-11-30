@@ -6,11 +6,11 @@ import (
 )
 
 type CbrClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewCbrClient(hcClient *http_client.HcHttpClient) *CbrClient {
-	return &CbrClient{hcClient: hcClient}
+	return &CbrClient{HcClient: hcClient}
 }
 
 func CbrClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func CbrClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *CbrClient) AddMember(request *model.AddMemberRequest) (*model.AddMemberResponse, error) {
 	requestDef := GenReqDefForAddMember()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AddMemberResponse), nil
@@ -33,7 +33,7 @@ func (c *CbrClient) AddMember(request *model.AddMemberRequest) (*model.AddMember
 func (c *CbrClient) AddVaultResource(request *model.AddVaultResourceRequest) (*model.AddVaultResourceResponse, error) {
 	requestDef := GenReqDefForAddVaultResource()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AddVaultResourceResponse), nil
@@ -44,7 +44,7 @@ func (c *CbrClient) AddVaultResource(request *model.AddVaultResourceRequest) (*m
 func (c *CbrClient) AssociateVaultPolicy(request *model.AssociateVaultPolicyRequest) (*model.AssociateVaultPolicyResponse, error) {
 	requestDef := GenReqDefForAssociateVaultPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AssociateVaultPolicyResponse), nil
@@ -55,7 +55,7 @@ func (c *CbrClient) AssociateVaultPolicy(request *model.AssociateVaultPolicyRequ
 func (c *CbrClient) BatchCreateAndDeleteVaultTags(request *model.BatchCreateAndDeleteVaultTagsRequest) (*model.BatchCreateAndDeleteVaultTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateAndDeleteVaultTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchCreateAndDeleteVaultTagsResponse), nil
@@ -66,7 +66,7 @@ func (c *CbrClient) BatchCreateAndDeleteVaultTags(request *model.BatchCreateAndD
 func (c *CbrClient) CopyBackup(request *model.CopyBackupRequest) (*model.CopyBackupResponse, error) {
 	requestDef := GenReqDefForCopyBackup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CopyBackupResponse), nil
@@ -77,7 +77,7 @@ func (c *CbrClient) CopyBackup(request *model.CopyBackupRequest) (*model.CopyBac
 func (c *CbrClient) CopyCheckpoint(request *model.CopyCheckpointRequest) (*model.CopyCheckpointResponse, error) {
 	requestDef := GenReqDefForCopyCheckpoint()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CopyCheckpointResponse), nil
@@ -88,7 +88,7 @@ func (c *CbrClient) CopyCheckpoint(request *model.CopyCheckpointRequest) (*model
 func (c *CbrClient) CreateCheckpoint(request *model.CreateCheckpointRequest) (*model.CreateCheckpointResponse, error) {
 	requestDef := GenReqDefForCreateCheckpoint()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateCheckpointResponse), nil
@@ -99,7 +99,7 @@ func (c *CbrClient) CreateCheckpoint(request *model.CreateCheckpointRequest) (*m
 func (c *CbrClient) CreatePolicy(request *model.CreatePolicyRequest) (*model.CreatePolicyResponse, error) {
 	requestDef := GenReqDefForCreatePolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePolicyResponse), nil
@@ -110,7 +110,7 @@ func (c *CbrClient) CreatePolicy(request *model.CreatePolicyRequest) (*model.Cre
 func (c *CbrClient) CreateVault(request *model.CreateVaultRequest) (*model.CreateVaultResponse, error) {
 	requestDef := GenReqDefForCreateVault()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateVaultResponse), nil
@@ -121,7 +121,7 @@ func (c *CbrClient) CreateVault(request *model.CreateVaultRequest) (*model.Creat
 func (c *CbrClient) CreateVaultTags(request *model.CreateVaultTagsRequest) (*model.CreateVaultTagsResponse, error) {
 	requestDef := GenReqDefForCreateVaultTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateVaultTagsResponse), nil
@@ -132,7 +132,7 @@ func (c *CbrClient) CreateVaultTags(request *model.CreateVaultTagsRequest) (*mod
 func (c *CbrClient) DeleteBackup(request *model.DeleteBackupRequest) (*model.DeleteBackupResponse, error) {
 	requestDef := GenReqDefForDeleteBackup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteBackupResponse), nil
@@ -143,7 +143,7 @@ func (c *CbrClient) DeleteBackup(request *model.DeleteBackupRequest) (*model.Del
 func (c *CbrClient) DeleteMember(request *model.DeleteMemberRequest) (*model.DeleteMemberResponse, error) {
 	requestDef := GenReqDefForDeleteMember()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteMemberResponse), nil
@@ -154,7 +154,7 @@ func (c *CbrClient) DeleteMember(request *model.DeleteMemberRequest) (*model.Del
 func (c *CbrClient) DeletePolicy(request *model.DeletePolicyRequest) (*model.DeletePolicyResponse, error) {
 	requestDef := GenReqDefForDeletePolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeletePolicyResponse), nil
@@ -165,7 +165,7 @@ func (c *CbrClient) DeletePolicy(request *model.DeletePolicyRequest) (*model.Del
 func (c *CbrClient) DeleteVault(request *model.DeleteVaultRequest) (*model.DeleteVaultResponse, error) {
 	requestDef := GenReqDefForDeleteVault()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteVaultResponse), nil
@@ -176,7 +176,7 @@ func (c *CbrClient) DeleteVault(request *model.DeleteVaultRequest) (*model.Delet
 func (c *CbrClient) DeleteVaultTag(request *model.DeleteVaultTagRequest) (*model.DeleteVaultTagResponse, error) {
 	requestDef := GenReqDefForDeleteVaultTag()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteVaultTagResponse), nil
@@ -187,7 +187,7 @@ func (c *CbrClient) DeleteVaultTag(request *model.DeleteVaultTagRequest) (*model
 func (c *CbrClient) DisassociateVaultPolicy(request *model.DisassociateVaultPolicyRequest) (*model.DisassociateVaultPolicyResponse, error) {
 	requestDef := GenReqDefForDisassociateVaultPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DisassociateVaultPolicyResponse), nil
@@ -198,7 +198,7 @@ func (c *CbrClient) DisassociateVaultPolicy(request *model.DisassociateVaultPoli
 func (c *CbrClient) ImportBackup(request *model.ImportBackupRequest) (*model.ImportBackupResponse, error) {
 	requestDef := GenReqDefForImportBackup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ImportBackupResponse), nil
@@ -209,7 +209,7 @@ func (c *CbrClient) ImportBackup(request *model.ImportBackupRequest) (*model.Imp
 func (c *CbrClient) ListBackups(request *model.ListBackupsRequest) (*model.ListBackupsResponse, error) {
 	requestDef := GenReqDefForListBackups()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListBackupsResponse), nil
@@ -220,7 +220,7 @@ func (c *CbrClient) ListBackups(request *model.ListBackupsRequest) (*model.ListB
 func (c *CbrClient) ListOpLogs(request *model.ListOpLogsRequest) (*model.ListOpLogsResponse, error) {
 	requestDef := GenReqDefForListOpLogs()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListOpLogsResponse), nil
@@ -231,7 +231,7 @@ func (c *CbrClient) ListOpLogs(request *model.ListOpLogsRequest) (*model.ListOpL
 func (c *CbrClient) ListPolicies(request *model.ListPoliciesRequest) (*model.ListPoliciesResponse, error) {
 	requestDef := GenReqDefForListPolicies()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPoliciesResponse), nil
@@ -242,7 +242,7 @@ func (c *CbrClient) ListPolicies(request *model.ListPoliciesRequest) (*model.Lis
 func (c *CbrClient) ListProtectable(request *model.ListProtectableRequest) (*model.ListProtectableResponse, error) {
 	requestDef := GenReqDefForListProtectable()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListProtectableResponse), nil
@@ -253,10 +253,21 @@ func (c *CbrClient) ListProtectable(request *model.ListProtectableRequest) (*mod
 func (c *CbrClient) ListVault(request *model.ListVaultRequest) (*model.ListVaultResponse, error) {
 	requestDef := GenReqDefForListVault()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListVaultResponse), nil
+	}
+}
+
+//支持资源迁移到另一个存储库，不删除备份。
+func (c *CbrClient) MigrateVaultResource(request *model.MigrateVaultResourceRequest) (*model.MigrateVaultResourceResponse, error) {
+	requestDef := GenReqDefForMigrateVaultResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MigrateVaultResourceResponse), nil
 	}
 }
 
@@ -264,7 +275,7 @@ func (c *CbrClient) ListVault(request *model.ListVaultRequest) (*model.ListVault
 func (c *CbrClient) RemoveVaultResource(request *model.RemoveVaultResourceRequest) (*model.RemoveVaultResourceResponse, error) {
 	requestDef := GenReqDefForRemoveVaultResource()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RemoveVaultResourceResponse), nil
@@ -275,7 +286,7 @@ func (c *CbrClient) RemoveVaultResource(request *model.RemoveVaultResourceReques
 func (c *CbrClient) RestoreBackup(request *model.RestoreBackupRequest) (*model.RestoreBackupResponse, error) {
 	requestDef := GenReqDefForRestoreBackup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.RestoreBackupResponse), nil
@@ -286,7 +297,7 @@ func (c *CbrClient) RestoreBackup(request *model.RestoreBackupRequest) (*model.R
 func (c *CbrClient) ShowBackup(request *model.ShowBackupRequest) (*model.ShowBackupResponse, error) {
 	requestDef := GenReqDefForShowBackup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowBackupResponse), nil
@@ -297,7 +308,7 @@ func (c *CbrClient) ShowBackup(request *model.ShowBackupRequest) (*model.ShowBac
 func (c *CbrClient) ShowCheckpoint(request *model.ShowCheckpointRequest) (*model.ShowCheckpointResponse, error) {
 	requestDef := GenReqDefForShowCheckpoint()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowCheckpointResponse), nil
@@ -308,7 +319,7 @@ func (c *CbrClient) ShowCheckpoint(request *model.ShowCheckpointRequest) (*model
 func (c *CbrClient) ShowMemberDetail(request *model.ShowMemberDetailRequest) (*model.ShowMemberDetailResponse, error) {
 	requestDef := GenReqDefForShowMemberDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowMemberDetailResponse), nil
@@ -319,7 +330,7 @@ func (c *CbrClient) ShowMemberDetail(request *model.ShowMemberDetailRequest) (*m
 func (c *CbrClient) ShowMembersDetail(request *model.ShowMembersDetailRequest) (*model.ShowMembersDetailResponse, error) {
 	requestDef := GenReqDefForShowMembersDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowMembersDetailResponse), nil
@@ -330,7 +341,7 @@ func (c *CbrClient) ShowMembersDetail(request *model.ShowMembersDetailRequest) (
 func (c *CbrClient) ShowOpLog(request *model.ShowOpLogRequest) (*model.ShowOpLogResponse, error) {
 	requestDef := GenReqDefForShowOpLog()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowOpLogResponse), nil
@@ -341,7 +352,7 @@ func (c *CbrClient) ShowOpLog(request *model.ShowOpLogRequest) (*model.ShowOpLog
 func (c *CbrClient) ShowPolicy(request *model.ShowPolicyRequest) (*model.ShowPolicyResponse, error) {
 	requestDef := GenReqDefForShowPolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowPolicyResponse), nil
@@ -352,7 +363,7 @@ func (c *CbrClient) ShowPolicy(request *model.ShowPolicyRequest) (*model.ShowPol
 func (c *CbrClient) ShowProtectable(request *model.ShowProtectableRequest) (*model.ShowProtectableResponse, error) {
 	requestDef := GenReqDefForShowProtectable()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowProtectableResponse), nil
@@ -363,7 +374,7 @@ func (c *CbrClient) ShowProtectable(request *model.ShowProtectableRequest) (*mod
 func (c *CbrClient) ShowReplicationCapabilities(request *model.ShowReplicationCapabilitiesRequest) (*model.ShowReplicationCapabilitiesResponse, error) {
 	requestDef := GenReqDefForShowReplicationCapabilities()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowReplicationCapabilitiesResponse), nil
@@ -374,7 +385,7 @@ func (c *CbrClient) ShowReplicationCapabilities(request *model.ShowReplicationCa
 func (c *CbrClient) ShowVault(request *model.ShowVaultRequest) (*model.ShowVaultResponse, error) {
 	requestDef := GenReqDefForShowVault()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowVaultResponse), nil
@@ -385,7 +396,7 @@ func (c *CbrClient) ShowVault(request *model.ShowVaultRequest) (*model.ShowVault
 func (c *CbrClient) ShowVaultProjectTag(request *model.ShowVaultProjectTagRequest) (*model.ShowVaultProjectTagResponse, error) {
 	requestDef := GenReqDefForShowVaultProjectTag()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowVaultProjectTagResponse), nil
@@ -396,7 +407,7 @@ func (c *CbrClient) ShowVaultProjectTag(request *model.ShowVaultProjectTagReques
 func (c *CbrClient) ShowVaultResourceInstances(request *model.ShowVaultResourceInstancesRequest) (*model.ShowVaultResourceInstancesResponse, error) {
 	requestDef := GenReqDefForShowVaultResourceInstances()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowVaultResourceInstancesResponse), nil
@@ -407,7 +418,7 @@ func (c *CbrClient) ShowVaultResourceInstances(request *model.ShowVaultResourceI
 func (c *CbrClient) ShowVaultTag(request *model.ShowVaultTagRequest) (*model.ShowVaultTagResponse, error) {
 	requestDef := GenReqDefForShowVaultTag()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowVaultTagResponse), nil
@@ -418,7 +429,7 @@ func (c *CbrClient) ShowVaultTag(request *model.ShowVaultTagRequest) (*model.Sho
 func (c *CbrClient) UpdateMemberStatus(request *model.UpdateMemberStatusRequest) (*model.UpdateMemberStatusResponse, error) {
 	requestDef := GenReqDefForUpdateMemberStatus()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateMemberStatusResponse), nil
@@ -429,7 +440,7 @@ func (c *CbrClient) UpdateMemberStatus(request *model.UpdateMemberStatusRequest)
 func (c *CbrClient) UpdatePolicy(request *model.UpdatePolicyRequest) (*model.UpdatePolicyResponse, error) {
 	requestDef := GenReqDefForUpdatePolicy()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePolicyResponse), nil
@@ -440,7 +451,7 @@ func (c *CbrClient) UpdatePolicy(request *model.UpdatePolicyRequest) (*model.Upd
 func (c *CbrClient) UpdateVault(request *model.UpdateVaultRequest) (*model.UpdateVaultResponse, error) {
 	requestDef := GenReqDefForUpdateVault()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateVaultResponse), nil

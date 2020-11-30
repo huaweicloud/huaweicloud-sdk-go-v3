@@ -6,11 +6,11 @@ import (
 )
 
 type VpcClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewVpcClient(hcClient *http_client.HcHttpClient) *VpcClient {
-	return &VpcClient{hcClient: hcClient}
+	return &VpcClient{HcClient: hcClient}
 }
 
 func VpcClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func VpcClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *VpcClient) BatchCreateSubNetworkInterface(request *model.BatchCreateSubNetworkInterfaceRequest) (*model.BatchCreateSubNetworkInterfaceResponse, error) {
 	requestDef := GenReqDefForBatchCreateSubNetworkInterface()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchCreateSubNetworkInterfaceResponse), nil
@@ -33,7 +33,7 @@ func (c *VpcClient) BatchCreateSubNetworkInterface(request *model.BatchCreateSub
 func (c *VpcClient) CreateSecurityGroup(request *model.CreateSecurityGroupRequest) (*model.CreateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForCreateSecurityGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateSecurityGroupResponse), nil
@@ -44,7 +44,7 @@ func (c *VpcClient) CreateSecurityGroup(request *model.CreateSecurityGroupReques
 func (c *VpcClient) CreateSecurityGroupRule(request *model.CreateSecurityGroupRuleRequest) (*model.CreateSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForCreateSecurityGroupRule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateSecurityGroupRuleResponse), nil
@@ -55,7 +55,7 @@ func (c *VpcClient) CreateSecurityGroupRule(request *model.CreateSecurityGroupRu
 func (c *VpcClient) CreateSubNetworkInterface(request *model.CreateSubNetworkInterfaceRequest) (*model.CreateSubNetworkInterfaceResponse, error) {
 	requestDef := GenReqDefForCreateSubNetworkInterface()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateSubNetworkInterfaceResponse), nil
@@ -66,7 +66,7 @@ func (c *VpcClient) CreateSubNetworkInterface(request *model.CreateSubNetworkInt
 func (c *VpcClient) DeleteSecurityGroup(request *model.DeleteSecurityGroupRequest) (*model.DeleteSecurityGroupResponse, error) {
 	requestDef := GenReqDefForDeleteSecurityGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteSecurityGroupResponse), nil
@@ -77,7 +77,7 @@ func (c *VpcClient) DeleteSecurityGroup(request *model.DeleteSecurityGroupReques
 func (c *VpcClient) DeleteSecurityGroupRule(request *model.DeleteSecurityGroupRuleRequest) (*model.DeleteSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForDeleteSecurityGroupRule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteSecurityGroupRuleResponse), nil
@@ -88,7 +88,7 @@ func (c *VpcClient) DeleteSecurityGroupRule(request *model.DeleteSecurityGroupRu
 func (c *VpcClient) DeleteSubNetworkInterface(request *model.DeleteSubNetworkInterfaceRequest) (*model.DeleteSubNetworkInterfaceResponse, error) {
 	requestDef := GenReqDefForDeleteSubNetworkInterface()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteSubNetworkInterfaceResponse), nil
@@ -99,7 +99,7 @@ func (c *VpcClient) DeleteSubNetworkInterface(request *model.DeleteSubNetworkInt
 func (c *VpcClient) ListSecurityGroupRules(request *model.ListSecurityGroupRulesRequest) (*model.ListSecurityGroupRulesResponse, error) {
 	requestDef := GenReqDefForListSecurityGroupRules()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSecurityGroupRulesResponse), nil
@@ -110,7 +110,7 @@ func (c *VpcClient) ListSecurityGroupRules(request *model.ListSecurityGroupRules
 func (c *VpcClient) ListSecurityGroups(request *model.ListSecurityGroupsRequest) (*model.ListSecurityGroupsResponse, error) {
 	requestDef := GenReqDefForListSecurityGroups()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSecurityGroupsResponse), nil
@@ -121,7 +121,7 @@ func (c *VpcClient) ListSecurityGroups(request *model.ListSecurityGroupsRequest)
 func (c *VpcClient) ListSubNetworkInterfaces(request *model.ListSubNetworkInterfacesRequest) (*model.ListSubNetworkInterfacesResponse, error) {
 	requestDef := GenReqDefForListSubNetworkInterfaces()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSubNetworkInterfacesResponse), nil
@@ -132,7 +132,7 @@ func (c *VpcClient) ListSubNetworkInterfaces(request *model.ListSubNetworkInterf
 func (c *VpcClient) ShowSecurityGroup(request *model.ShowSecurityGroupRequest) (*model.ShowSecurityGroupResponse, error) {
 	requestDef := GenReqDefForShowSecurityGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowSecurityGroupResponse), nil
@@ -143,7 +143,7 @@ func (c *VpcClient) ShowSecurityGroup(request *model.ShowSecurityGroupRequest) (
 func (c *VpcClient) ShowSecurityGroupRule(request *model.ShowSecurityGroupRuleRequest) (*model.ShowSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForShowSecurityGroupRule()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowSecurityGroupRuleResponse), nil
@@ -154,7 +154,7 @@ func (c *VpcClient) ShowSecurityGroupRule(request *model.ShowSecurityGroupRuleRe
 func (c *VpcClient) ShowSubNetworkInterface(request *model.ShowSubNetworkInterfaceRequest) (*model.ShowSubNetworkInterfaceResponse, error) {
 	requestDef := GenReqDefForShowSubNetworkInterface()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowSubNetworkInterfaceResponse), nil
@@ -165,7 +165,7 @@ func (c *VpcClient) ShowSubNetworkInterface(request *model.ShowSubNetworkInterfa
 func (c *VpcClient) ShowSubNetworkInterfacesQuantity(request *model.ShowSubNetworkInterfacesQuantityRequest) (*model.ShowSubNetworkInterfacesQuantityResponse, error) {
 	requestDef := GenReqDefForShowSubNetworkInterfacesQuantity()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowSubNetworkInterfacesQuantityResponse), nil
@@ -176,7 +176,7 @@ func (c *VpcClient) ShowSubNetworkInterfacesQuantity(request *model.ShowSubNetwo
 func (c *VpcClient) UpdateSecurityGroup(request *model.UpdateSecurityGroupRequest) (*model.UpdateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForUpdateSecurityGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateSecurityGroupResponse), nil
@@ -187,7 +187,7 @@ func (c *VpcClient) UpdateSecurityGroup(request *model.UpdateSecurityGroupReques
 func (c *VpcClient) UpdateSubNetworkInterface(request *model.UpdateSubNetworkInterfaceRequest) (*model.UpdateSubNetworkInterfaceResponse, error) {
 	requestDef := GenReqDefForUpdateSubNetworkInterface()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateSubNetworkInterfaceResponse), nil

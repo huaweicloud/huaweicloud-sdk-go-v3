@@ -36,15 +36,16 @@ type CreateIssueV4Response struct {
 	// 工作项项id
 	Id *int32 `json:"id,omitempty"`
 	// 标题
-	Name        *string                           `json:"name,omitempty"`
-	Project     *IssueProjectResponseV4           `json:"project,omitempty"`
-	Iteration   *IssueItemSfv4Iteration           `json:"iteration,omitempty"`
-	Module      *IssueItemSfv4Module              `json:"module,omitempty"`
-	ParentIssue *CreateIssueResponseV4ParentIssue `json:"parent_issue,omitempty"`
-	Priority    *IssueItemSfv4Priority            `json:"priority,omitempty"`
-	Severity    *IssueItemSfv4Severity            `json:"severity,omitempty"`
-	Status      *IssueItemSfv4Status              `json:"status,omitempty"`
-	Tracker     *IssueItemSfv4Tracker             `json:"tracker,omitempty"`
+	Name           *string                           `json:"name,omitempty"`
+	Project        *IssueProjectResponseV4           `json:"project,omitempty"`
+	Iteration      *IssueItemSfv4Iteration           `json:"iteration,omitempty"`
+	Module         *IssueItemSfv4Module              `json:"module,omitempty"`
+	ParentIssue    *CreateIssueResponseV4ParentIssue `json:"parent_issue,omitempty"`
+	Priority       *IssueItemSfv4Priority            `json:"priority,omitempty"`
+	Severity       *IssueItemSfv4Severity            `json:"severity,omitempty"`
+	Status         *IssueItemSfv4Status              `json:"status,omitempty"`
+	Tracker        *IssueItemSfv4Tracker             `json:"tracker,omitempty"`
+	HttpStatusCode int                               `json:"-"`
 }
 
 func (o CreateIssueV4Response) String() string {

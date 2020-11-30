@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreateVpcRouteResponse struct {
-	Route *VpcRoute `json:"route,omitempty"`
+	Route          *VpcRoute `json:"route,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o CreateVpcRouteResponse) String() string {

@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowVpcPeeringResponse struct {
-	Peering *VpcPeering `json:"peering,omitempty"`
+	Peering        *VpcPeering `json:"peering,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o ShowVpcPeeringResponse) String() string {

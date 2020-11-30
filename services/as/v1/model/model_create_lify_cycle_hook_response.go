@@ -32,7 +32,8 @@ type CreateLifyCycleHookResponse struct {
 	// 自定义通知消息。
 	NotificationMetadata *string `json:"notification_metadata,omitempty"`
 	// 生命周期挂钩创建时间，遵循UTC时间。
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime     *sdktime.SdkTime `json:"create_time,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o CreateLifyCycleHookResponse) String() string {

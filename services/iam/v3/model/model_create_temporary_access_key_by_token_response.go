@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreateTemporaryAccessKeyByTokenResponse struct {
-	Credential *Credential `json:"credential,omitempty"`
+	Credential     *Credential `json:"credential,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o CreateTemporaryAccessKeyByTokenResponse) String() string {

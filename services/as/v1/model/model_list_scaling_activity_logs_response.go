@@ -23,6 +23,7 @@ type ListScalingActivityLogsResponse struct {
 	Limit *int32 `json:"limit,omitempty"`
 	// 伸缩活动日志列表。
 	ScalingActivityLog *[]ScalingActivityLogList `json:"scaling_activity_log,omitempty"`
+	HttpStatusCode     int                       `json:"-"`
 }
 
 func (o ListScalingActivityLogsResponse) String() string {

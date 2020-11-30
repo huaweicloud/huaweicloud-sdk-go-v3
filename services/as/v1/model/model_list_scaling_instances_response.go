@@ -23,6 +23,7 @@ type ListScalingInstancesResponse struct {
 	Limit *int32 `json:"limit,omitempty"`
 	// 伸缩组实例详情。
 	ScalingGroupInstances *[]ScalingGroupInstance `json:"scaling_group_instances,omitempty"`
+	HttpStatusCode        int                     `json:"-"`
 }
 
 func (o ListScalingInstancesResponse) String() string {

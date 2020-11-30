@@ -18,7 +18,8 @@ type ListChildIssuesV4Response struct {
 	// 工作项列表
 	Issues *[]IssueResponseV4 `json:"issues,omitempty"`
 	// 总数
-	Total *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListChildIssuesV4Response) String() string {

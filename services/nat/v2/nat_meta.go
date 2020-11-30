@@ -6,11 +6,11 @@ import (
 	"net/http"
 )
 
-func GenReqDefForBatchCreateDnatRules() *def.HttpRequestDef {
+func GenReqDefForBatchCreateNatGatewayDnatRules() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/dnat_rules/batch").
-		WithResponse(new(model.BatchCreateDnatRulesResponse)).
+		WithResponse(new(model.BatchCreateNatGatewayDnatRulesResponse)).
 		WithContentType("application/json")
 
 	// request

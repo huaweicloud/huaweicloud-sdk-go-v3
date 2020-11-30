@@ -22,7 +22,8 @@ type ShowMessagesResponse struct {
 	// 总页数。
 	OffsetsCount *int32 `json:"offsets_count,omitempty"`
 	// 当前页数。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset         *int32 `json:"offset,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowMessagesResponse) String() string {

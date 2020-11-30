@@ -23,7 +23,8 @@ type UpdateEnvironmentV2Response struct {
 	// 描述信息
 	Remark *string `json:"remark,omitempty"`
 	// 环境id
-	Id *string `json:"id,omitempty"`
+	Id             *string `json:"id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateEnvironmentV2Response) String() string {

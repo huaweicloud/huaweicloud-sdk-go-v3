@@ -36,7 +36,8 @@ type ResettingAppSecretV2Response struct {
 	// 状态
 	Status *int32 `json:"status,omitempty"`
 	// APP的类型  默认为apig，暂不支持其他类型
-	AppType *ResettingAppSecretV2ResponseAppType `json:"app_type,omitempty"`
+	AppType        *ResettingAppSecretV2ResponseAppType `json:"app_type,omitempty"`
+	HttpStatusCode int                                  `json:"-"`
 }
 
 func (o ResettingAppSecretV2Response) String() string {

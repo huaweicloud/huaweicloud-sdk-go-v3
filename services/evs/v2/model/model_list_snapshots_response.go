@@ -21,6 +21,7 @@ type ListSnapshotsResponse struct {
 	Snapshots *[]SnapshotList `json:"snapshots,omitempty"`
 	// 云硬盘快照列表查询位置标记。当查询时指定limit时会返回该字段，返回该字段表示本次查询只查出了部分云硬盘快照信息。
 	SnapshotsLinks *[]Link `json:"snapshots_links,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListSnapshotsResponse) String() string {

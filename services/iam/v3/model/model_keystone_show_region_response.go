@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type KeystoneShowRegionResponse struct {
-	Region *Region `json:"region,omitempty"`
+	Region         *Region `json:"region,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o KeystoneShowRegionResponse) String() string {

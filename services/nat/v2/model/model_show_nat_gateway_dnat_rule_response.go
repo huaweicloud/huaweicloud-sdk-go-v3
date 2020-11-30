@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowNatGatewayDnatRuleResponse struct {
-	DnatRule *NatGatewayDnatRuleResponseBody `json:"dnat_rule,omitempty"`
+	DnatRule       *NatGatewayDnatRuleResponseBody `json:"dnat_rule,omitempty"`
+	HttpStatusCode int                             `json:"-"`
 }
 
 func (o ShowNatGatewayDnatRuleResponse) String() string {

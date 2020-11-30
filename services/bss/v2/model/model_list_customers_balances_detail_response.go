@@ -17,6 +17,7 @@ import (
 type ListCustomersBalancesDetailResponse struct {
 	// |参数名称：总额，即最终优惠后的金额，| |参数约束以及描述：总额，即最终优惠后的金额，|
 	CustomerBalances *[]CustomerBalancesV2 `json:"customer_balances,omitempty"`
+	HttpStatusCode   int                   `json:"-"`
 }
 
 func (o ListCustomersBalancesDetailResponse) String() string {

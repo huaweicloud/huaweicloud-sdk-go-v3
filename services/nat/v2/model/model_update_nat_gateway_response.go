@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type UpdateNatGatewayResponse struct {
-	NatGateway *NatGatewayResponseBody `json:"nat_gateway,omitempty"`
+	NatGateway     *NatGatewayResponseBody `json:"nat_gateway,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o UpdateNatGatewayResponse) String() string {

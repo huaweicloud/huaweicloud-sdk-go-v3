@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type KeystoneDeleteIdentityProviderResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o KeystoneDeleteIdentityProviderResponse) String() string {

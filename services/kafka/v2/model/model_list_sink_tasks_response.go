@@ -22,7 +22,8 @@ type ListSinkTasksResponse struct {
 	// 总的支持任务个数。
 	MaxTasks *int32 `json:"max_tasks,omitempty"`
 	// 任务总数的配额。
-	QuotaTasks *int32 `json:"quota_tasks,omitempty"`
+	QuotaTasks     *int32 `json:"quota_tasks,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListSinkTasksResponse) String() string {

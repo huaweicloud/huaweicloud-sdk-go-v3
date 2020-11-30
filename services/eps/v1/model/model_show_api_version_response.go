@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowApiVersionResponse struct {
-	Version *VersionDetail `json:"version,omitempty"`
+	Version        *VersionDetail `json:"version,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowApiVersionResponse) String() string {

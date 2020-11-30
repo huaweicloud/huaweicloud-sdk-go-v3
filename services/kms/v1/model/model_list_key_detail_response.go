@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ListKeyDetailResponse struct {
-	KeyInfo *KeyDetails `json:"key_info,omitempty"`
+	KeyInfo        *KeyDetails `json:"key_info,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o ListKeyDetailResponse) String() string {

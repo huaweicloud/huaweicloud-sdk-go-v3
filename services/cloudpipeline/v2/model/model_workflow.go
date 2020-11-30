@@ -15,8 +15,10 @@ import (
 
 // 流水线参数详情
 type Workflow struct {
-	Parameter *PipelineParam `json:"parameter"`
-	Source    *Source        `json:"source"`
+	// 任务类型,list类型数据
+	Parameter []PipelineParam `json:"parameter"`
+	// 源码仓,list类型数据
+	Source []Source `json:"source"`
 	// 流水线名字
 	Name string `json:"name"`
 	// 项目ID

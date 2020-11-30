@@ -18,7 +18,8 @@ type ListPublicipsByTagsResponse struct {
 	// resource对象列表
 	Resources *[]ListResourceResp `json:"resources,omitempty"`
 	// 总记录数
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListPublicipsByTagsResponse) String() string {

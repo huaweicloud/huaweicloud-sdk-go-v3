@@ -45,6 +45,7 @@ type ShowDetailsOfRequestThrottlingPolicyV2Response struct {
 	UserCallLimits *int32 `json:"user_call_limits,omitempty"`
 	// 是否开启动态流控  暂不支持
 	EnableAdaptiveControl *string `json:"enable_adaptive_control,omitempty"`
+	HttpStatusCode        int     `json:"-"`
 }
 
 func (o ShowDetailsOfRequestThrottlingPolicyV2Response) String() string {

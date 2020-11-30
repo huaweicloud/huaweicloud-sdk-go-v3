@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type KeystoneCreateProjectResponse struct {
-	Project *AuthProjectResult `json:"project,omitempty"`
+	Project        *AuthProjectResult `json:"project,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o KeystoneCreateProjectResponse) String() string {

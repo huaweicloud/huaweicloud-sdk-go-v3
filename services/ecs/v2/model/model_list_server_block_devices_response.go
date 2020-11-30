@@ -18,6 +18,7 @@ type ListServerBlockDevicesResponse struct {
 	AttachableQuantity *BlockDeviceAttachableQuantity `json:"attachableQuantity,omitempty"`
 	// 云服务器挂载信息列表。
 	VolumeAttachments *[]ServerBlockDevice `json:"volumeAttachments,omitempty"`
+	HttpStatusCode    int                  `json:"-"`
 }
 
 func (o ListServerBlockDevicesResponse) String() string {

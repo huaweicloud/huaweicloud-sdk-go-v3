@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type KeystoneListVersionsResponse struct {
-	Versions *Versions `json:"versions,omitempty"`
+	Versions       *Versions `json:"versions,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o KeystoneListVersionsResponse) String() string {

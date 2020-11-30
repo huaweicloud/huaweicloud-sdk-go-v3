@@ -31,7 +31,8 @@ type CreatePolicyAssignmentsResponse struct {
 	// 规则的策略ID
 	PolicyDefinitionId *string `json:"policy_definition_id,omitempty"`
 	// 规则参数
-	Parameters map[string]PolicyParameterValue `json:"parameters,omitempty"`
+	Parameters     map[string]PolicyParameterValue `json:"parameters,omitempty"`
+	HttpStatusCode int                             `json:"-"`
 }
 
 func (o CreatePolicyAssignmentsResponse) String() string {

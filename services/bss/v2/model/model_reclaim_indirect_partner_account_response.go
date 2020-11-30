@@ -16,7 +16,8 @@ import (
 // Response Object
 type ReclaimIndirectPartnerAccountResponse struct {
 	// |参数名称：回收流水| |参数约束及描述：回收流水|
-	TransId *string `json:"trans_id,omitempty"`
+	TransId        *string `json:"trans_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ReclaimIndirectPartnerAccountResponse) String() string {

@@ -28,6 +28,7 @@ type ShowResourceGroupResponse struct {
 	MetaData   *MetaData `json:"meta_data,omitempty"`
 	// 创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	HttpStatusCode      int     `json:"-"`
 }
 
 func (o ShowResourceGroupResponse) String() string {

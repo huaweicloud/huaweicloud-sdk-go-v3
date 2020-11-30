@@ -26,9 +26,11 @@ type ShowPipleineStatusResponse struct {
 	// 开始执行时间
 	StartTime *string `json:"start_time,omitempty"`
 	// 结束执行时间
-	EndTime    *string              `json:"end_time,omitempty"`
-	Parameters *PipelineParameter   `json:"parameters,omitempty"`
-	States     *PipelineStateStatus `json:"states,omitempty"`
+	EndTime *string `json:"end_time,omitempty"`
+	// 流水线参数
+	Parameters *[]PipelineParameter `json:"parameters,omitempty"`
+	// 流水线执行情况
+	States *[]PipelineStateStatus `json:"states,omitempty"`
 	// 执行耗时
 	ElapsedTime *string `json:"elapsed_time,omitempty"`
 	// 流水线运行状态
@@ -36,7 +38,8 @@ type ShowPipleineStatusResponse struct {
 	// 流水线执行结果
 	Outcome *string `json:"outcome,omitempty"`
 	// 流水线详情页地址
-	DetailUrl *string `json:"detail_url,omitempty"`
+	DetailUrl      *string `json:"detail_url,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowPipleineStatusResponse) String() string {

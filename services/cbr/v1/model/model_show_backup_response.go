@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowBackupResponse struct {
-	Backup *BackupDetail `json:"backup,omitempty"`
+	Backup         *BackupDetail `json:"backup,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ShowBackupResponse) String() string {

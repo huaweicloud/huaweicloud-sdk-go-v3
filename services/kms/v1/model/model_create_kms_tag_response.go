@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type CreateKmsTagResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CreateKmsTagResponse) String() string {

@@ -20,7 +20,8 @@ type CreateDatakeyResponse struct {
 	// DEK明文16进制，两位表示1byte。
 	PlainText *string `json:"plain_text,omitempty"`
 	// DEK密文16进制，两位表示1byte。
-	CipherText *string `json:"cipher_text,omitempty"`
+	CipherText     *string `json:"cipher_text,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateDatakeyResponse) String() string {

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type KeystoneRemoveUserFromGroupResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o KeystoneRemoveUserFromGroupResponse) String() string {

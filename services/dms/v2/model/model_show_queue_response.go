@@ -37,7 +37,8 @@ type ShowQueueResponse struct {
 	// 该队列下的消费组数量。
 	GroupCount *int32 `json:"group_count,omitempty"`
 	// 仅Kafka队列才有该参数。
-	KafkaTopic *string `json:"kafka_topic,omitempty"`
+	KafkaTopic     *string `json:"kafka_topic,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowQueueResponse) String() string {

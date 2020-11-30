@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type BatchCreateAndDeleteVaultTagsResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o BatchCreateAndDeleteVaultTagsResponse) String() string {

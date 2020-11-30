@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type BatchCreatePublicipTagsResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o BatchCreatePublicipTagsResponse) String() string {

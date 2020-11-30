@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreateSharedBandwidthResponse struct {
-	Bandwidth *BandwidthResp `json:"bandwidth,omitempty"`
+	Bandwidth      *BandwidthResp `json:"bandwidth,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o CreateSharedBandwidthResponse) String() string {

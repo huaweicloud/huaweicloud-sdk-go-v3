@@ -19,7 +19,8 @@ type ListPoolsResponse struct {
 	RequestId *string   `json:"request_id,omitempty"`
 	PageInfo  *PageInfo `json:"page_info,omitempty"`
 	// 后端服务器组列表。
-	Pools *[]Pool `json:"pools,omitempty"`
+	Pools          *[]Pool `json:"pools,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListPoolsResponse) String() string {

@@ -21,7 +21,7 @@ type CreateNatGatewaySnatRuleOption struct {
 	Cidr *string `json:"cidr,omitempty"`
 	// 规则使用的网络id。与cidr参数二选一。
 	NetworkId *string `json:"network_id,omitempty"`
-	// SNAT规则的描述。
+	// SNAT规则的描述，长度限制为255。
 	Description *string `json:"description,omitempty"`
 	// 0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
 	SourceType *int32 `json:"source_type,omitempty"`

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type ResetMessageOffsetResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o ResetMessageOffsetResponse) String() string {

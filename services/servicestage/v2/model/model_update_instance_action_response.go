@@ -16,7 +16,8 @@ import (
 // Response Object
 type UpdateInstanceActionResponse struct {
 	// Job ID。
-	JobId *string `json:"job_id,omitempty"`
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateInstanceActionResponse) String() string {

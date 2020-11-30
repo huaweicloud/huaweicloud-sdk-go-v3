@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type NeutronDeleteFirewallGroupResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o NeutronDeleteFirewallGroupResponse) String() string {

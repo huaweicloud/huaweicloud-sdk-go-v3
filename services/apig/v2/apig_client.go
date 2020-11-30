@@ -6,11 +6,11 @@ import (
 )
 
 type ApigClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewApigClient(hcClient *http_client.HcHttpClient) *ApigClient {
-	return &ApigClient{hcClient: hcClient}
+	return &ApigClient{HcClient: hcClient}
 }
 
 func ApigClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func ApigClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *ApigClient) AssociateCertificateV2(request *model.AssociateCertificateV2Request) (*model.AssociateCertificateV2Response, error) {
 	requestDef := GenReqDefForAssociateCertificateV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AssociateCertificateV2Response), nil
@@ -33,7 +33,7 @@ func (c *ApigClient) AssociateCertificateV2(request *model.AssociateCertificateV
 func (c *ApigClient) AssociateDomainV2(request *model.AssociateDomainV2Request) (*model.AssociateDomainV2Response, error) {
 	requestDef := GenReqDefForAssociateDomainV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AssociateDomainV2Response), nil
@@ -44,7 +44,7 @@ func (c *ApigClient) AssociateDomainV2(request *model.AssociateDomainV2Request) 
 func (c *ApigClient) AssociateSignatureKeyV2(request *model.AssociateSignatureKeyV2Request) (*model.AssociateSignatureKeyV2Response, error) {
 	requestDef := GenReqDefForAssociateSignatureKeyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AssociateSignatureKeyV2Response), nil
@@ -55,7 +55,7 @@ func (c *ApigClient) AssociateSignatureKeyV2(request *model.AssociateSignatureKe
 func (c *ApigClient) CreateEnvironmentV2(request *model.CreateEnvironmentV2Request) (*model.CreateEnvironmentV2Response, error) {
 	requestDef := GenReqDefForCreateEnvironmentV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateEnvironmentV2Response), nil
@@ -66,7 +66,7 @@ func (c *ApigClient) CreateEnvironmentV2(request *model.CreateEnvironmentV2Reque
 func (c *ApigClient) CreateEnvironmentVariableV2(request *model.CreateEnvironmentVariableV2Request) (*model.CreateEnvironmentVariableV2Response, error) {
 	requestDef := GenReqDefForCreateEnvironmentVariableV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateEnvironmentVariableV2Response), nil
@@ -77,7 +77,7 @@ func (c *ApigClient) CreateEnvironmentVariableV2(request *model.CreateEnvironmen
 func (c *ApigClient) CreateRequestThrottlingPolicyV2(request *model.CreateRequestThrottlingPolicyV2Request) (*model.CreateRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForCreateRequestThrottlingPolicyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateRequestThrottlingPolicyV2Response), nil
@@ -88,7 +88,7 @@ func (c *ApigClient) CreateRequestThrottlingPolicyV2(request *model.CreateReques
 func (c *ApigClient) CreateSignatureKeyV2(request *model.CreateSignatureKeyV2Request) (*model.CreateSignatureKeyV2Response, error) {
 	requestDef := GenReqDefForCreateSignatureKeyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateSignatureKeyV2Response), nil
@@ -99,7 +99,7 @@ func (c *ApigClient) CreateSignatureKeyV2(request *model.CreateSignatureKeyV2Req
 func (c *ApigClient) CreateSpecialThrottlingConfigurationV2(request *model.CreateSpecialThrottlingConfigurationV2Request) (*model.CreateSpecialThrottlingConfigurationV2Response, error) {
 	requestDef := GenReqDefForCreateSpecialThrottlingConfigurationV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateSpecialThrottlingConfigurationV2Response), nil
@@ -110,7 +110,7 @@ func (c *ApigClient) CreateSpecialThrottlingConfigurationV2(request *model.Creat
 func (c *ApigClient) DeleteEnvironmentV2(request *model.DeleteEnvironmentV2Request) (*model.DeleteEnvironmentV2Response, error) {
 	requestDef := GenReqDefForDeleteEnvironmentV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteEnvironmentV2Response), nil
@@ -121,7 +121,7 @@ func (c *ApigClient) DeleteEnvironmentV2(request *model.DeleteEnvironmentV2Reque
 func (c *ApigClient) DeleteEnvironmentVariableV2(request *model.DeleteEnvironmentVariableV2Request) (*model.DeleteEnvironmentVariableV2Response, error) {
 	requestDef := GenReqDefForDeleteEnvironmentVariableV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteEnvironmentVariableV2Response), nil
@@ -132,7 +132,7 @@ func (c *ApigClient) DeleteEnvironmentVariableV2(request *model.DeleteEnvironmen
 func (c *ApigClient) DeleteRequestThrottlingPolicyV2(request *model.DeleteRequestThrottlingPolicyV2Request) (*model.DeleteRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForDeleteRequestThrottlingPolicyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteRequestThrottlingPolicyV2Response), nil
@@ -143,7 +143,7 @@ func (c *ApigClient) DeleteRequestThrottlingPolicyV2(request *model.DeleteReques
 func (c *ApigClient) DeleteSignatureKeyV2(request *model.DeleteSignatureKeyV2Request) (*model.DeleteSignatureKeyV2Response, error) {
 	requestDef := GenReqDefForDeleteSignatureKeyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteSignatureKeyV2Response), nil
@@ -154,7 +154,7 @@ func (c *ApigClient) DeleteSignatureKeyV2(request *model.DeleteSignatureKeyV2Req
 func (c *ApigClient) DeleteSpecialThrottlingConfigurationV2(request *model.DeleteSpecialThrottlingConfigurationV2Request) (*model.DeleteSpecialThrottlingConfigurationV2Response, error) {
 	requestDef := GenReqDefForDeleteSpecialThrottlingConfigurationV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteSpecialThrottlingConfigurationV2Response), nil
@@ -165,7 +165,7 @@ func (c *ApigClient) DeleteSpecialThrottlingConfigurationV2(request *model.Delet
 func (c *ApigClient) DisassociateCertificateV2(request *model.DisassociateCertificateV2Request) (*model.DisassociateCertificateV2Response, error) {
 	requestDef := GenReqDefForDisassociateCertificateV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DisassociateCertificateV2Response), nil
@@ -176,7 +176,7 @@ func (c *ApigClient) DisassociateCertificateV2(request *model.DisassociateCertif
 func (c *ApigClient) DisassociateDomainV2(request *model.DisassociateDomainV2Request) (*model.DisassociateDomainV2Response, error) {
 	requestDef := GenReqDefForDisassociateDomainV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DisassociateDomainV2Response), nil
@@ -187,7 +187,7 @@ func (c *ApigClient) DisassociateDomainV2(request *model.DisassociateDomainV2Req
 func (c *ApigClient) DisassociateSignatureKeyV2(request *model.DisassociateSignatureKeyV2Request) (*model.DisassociateSignatureKeyV2Response, error) {
 	requestDef := GenReqDefForDisassociateSignatureKeyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DisassociateSignatureKeyV2Response), nil
@@ -198,7 +198,7 @@ func (c *ApigClient) DisassociateSignatureKeyV2(request *model.DisassociateSigna
 func (c *ApigClient) ListApiGroupsQuantitiesV2(request *model.ListApiGroupsQuantitiesV2Request) (*model.ListApiGroupsQuantitiesV2Response, error) {
 	requestDef := GenReqDefForListApiGroupsQuantitiesV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListApiGroupsQuantitiesV2Response), nil
@@ -209,7 +209,7 @@ func (c *ApigClient) ListApiGroupsQuantitiesV2(request *model.ListApiGroupsQuant
 func (c *ApigClient) ListApiQuantitiesV2(request *model.ListApiQuantitiesV2Request) (*model.ListApiQuantitiesV2Response, error) {
 	requestDef := GenReqDefForListApiQuantitiesV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListApiQuantitiesV2Response), nil
@@ -220,7 +220,7 @@ func (c *ApigClient) ListApiQuantitiesV2(request *model.ListApiQuantitiesV2Reque
 func (c *ApigClient) ListApisBindedToSignatureKeyV2(request *model.ListApisBindedToSignatureKeyV2Request) (*model.ListApisBindedToSignatureKeyV2Response, error) {
 	requestDef := GenReqDefForListApisBindedToSignatureKeyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListApisBindedToSignatureKeyV2Response), nil
@@ -231,7 +231,7 @@ func (c *ApigClient) ListApisBindedToSignatureKeyV2(request *model.ListApisBinde
 func (c *ApigClient) ListApisNotBoundWithSignatureKeyV2(request *model.ListApisNotBoundWithSignatureKeyV2Request) (*model.ListApisNotBoundWithSignatureKeyV2Response, error) {
 	requestDef := GenReqDefForListApisNotBoundWithSignatureKeyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListApisNotBoundWithSignatureKeyV2Response), nil
@@ -242,7 +242,7 @@ func (c *ApigClient) ListApisNotBoundWithSignatureKeyV2(request *model.ListApisN
 func (c *ApigClient) ListAppQuantitiesV2(request *model.ListAppQuantitiesV2Request) (*model.ListAppQuantitiesV2Response, error) {
 	requestDef := GenReqDefForListAppQuantitiesV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListAppQuantitiesV2Response), nil
@@ -253,7 +253,7 @@ func (c *ApigClient) ListAppQuantitiesV2(request *model.ListAppQuantitiesV2Reque
 func (c *ApigClient) ListEnvironmentVariablesV2(request *model.ListEnvironmentVariablesV2Request) (*model.ListEnvironmentVariablesV2Response, error) {
 	requestDef := GenReqDefForListEnvironmentVariablesV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListEnvironmentVariablesV2Response), nil
@@ -264,7 +264,7 @@ func (c *ApigClient) ListEnvironmentVariablesV2(request *model.ListEnvironmentVa
 func (c *ApigClient) ListEnvironmentsV2(request *model.ListEnvironmentsV2Request) (*model.ListEnvironmentsV2Response, error) {
 	requestDef := GenReqDefForListEnvironmentsV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListEnvironmentsV2Response), nil
@@ -275,7 +275,7 @@ func (c *ApigClient) ListEnvironmentsV2(request *model.ListEnvironmentsV2Request
 func (c *ApigClient) ListRequestThrottlingPolicyV2(request *model.ListRequestThrottlingPolicyV2Request) (*model.ListRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForListRequestThrottlingPolicyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListRequestThrottlingPolicyV2Response), nil
@@ -286,7 +286,7 @@ func (c *ApigClient) ListRequestThrottlingPolicyV2(request *model.ListRequestThr
 func (c *ApigClient) ListSignatureKeysBindedToApiV2(request *model.ListSignatureKeysBindedToApiV2Request) (*model.ListSignatureKeysBindedToApiV2Response, error) {
 	requestDef := GenReqDefForListSignatureKeysBindedToApiV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSignatureKeysBindedToApiV2Response), nil
@@ -297,7 +297,7 @@ func (c *ApigClient) ListSignatureKeysBindedToApiV2(request *model.ListSignature
 func (c *ApigClient) ListSignatureKeysV2(request *model.ListSignatureKeysV2Request) (*model.ListSignatureKeysV2Response, error) {
 	requestDef := GenReqDefForListSignatureKeysV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSignatureKeysV2Response), nil
@@ -308,7 +308,7 @@ func (c *ApigClient) ListSignatureKeysV2(request *model.ListSignatureKeysV2Reque
 func (c *ApigClient) ListSpecialThrottlingConfigurationsV2(request *model.ListSpecialThrottlingConfigurationsV2Request) (*model.ListSpecialThrottlingConfigurationsV2Response, error) {
 	requestDef := GenReqDefForListSpecialThrottlingConfigurationsV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListSpecialThrottlingConfigurationsV2Response), nil
@@ -319,7 +319,7 @@ func (c *ApigClient) ListSpecialThrottlingConfigurationsV2(request *model.ListSp
 func (c *ApigClient) ShowDetailsOfDomainNameCertificateV2(request *model.ShowDetailsOfDomainNameCertificateV2Request) (*model.ShowDetailsOfDomainNameCertificateV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfDomainNameCertificateV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowDetailsOfDomainNameCertificateV2Response), nil
@@ -330,7 +330,7 @@ func (c *ApigClient) ShowDetailsOfDomainNameCertificateV2(request *model.ShowDet
 func (c *ApigClient) ShowDetailsOfEnvironmentVariableV2(request *model.ShowDetailsOfEnvironmentVariableV2Request) (*model.ShowDetailsOfEnvironmentVariableV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfEnvironmentVariableV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowDetailsOfEnvironmentVariableV2Response), nil
@@ -341,7 +341,7 @@ func (c *ApigClient) ShowDetailsOfEnvironmentVariableV2(request *model.ShowDetai
 func (c *ApigClient) ShowDetailsOfRequestThrottlingPolicyV2(request *model.ShowDetailsOfRequestThrottlingPolicyV2Request) (*model.ShowDetailsOfRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfRequestThrottlingPolicyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowDetailsOfRequestThrottlingPolicyV2Response), nil
@@ -352,7 +352,7 @@ func (c *ApigClient) ShowDetailsOfRequestThrottlingPolicyV2(request *model.ShowD
 func (c *ApigClient) UpdateEnvironmentV2(request *model.UpdateEnvironmentV2Request) (*model.UpdateEnvironmentV2Response, error) {
 	requestDef := GenReqDefForUpdateEnvironmentV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateEnvironmentV2Response), nil
@@ -363,7 +363,7 @@ func (c *ApigClient) UpdateEnvironmentV2(request *model.UpdateEnvironmentV2Reque
 func (c *ApigClient) UpdateRequestThrottlingPolicyV2(request *model.UpdateRequestThrottlingPolicyV2Request) (*model.UpdateRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForUpdateRequestThrottlingPolicyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateRequestThrottlingPolicyV2Response), nil
@@ -374,7 +374,7 @@ func (c *ApigClient) UpdateRequestThrottlingPolicyV2(request *model.UpdateReques
 func (c *ApigClient) UpdateSignatureKeyV2(request *model.UpdateSignatureKeyV2Request) (*model.UpdateSignatureKeyV2Response, error) {
 	requestDef := GenReqDefForUpdateSignatureKeyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateSignatureKeyV2Response), nil
@@ -385,7 +385,7 @@ func (c *ApigClient) UpdateSignatureKeyV2(request *model.UpdateSignatureKeyV2Req
 func (c *ApigClient) UpdateSpecialThrottlingConfigurationV2(request *model.UpdateSpecialThrottlingConfigurationV2Request) (*model.UpdateSpecialThrottlingConfigurationV2Response, error) {
 	requestDef := GenReqDefForUpdateSpecialThrottlingConfigurationV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateSpecialThrottlingConfigurationV2Response), nil
@@ -396,7 +396,7 @@ func (c *ApigClient) UpdateSpecialThrottlingConfigurationV2(request *model.Updat
 func (c *ApigClient) AssociateRequestThrottlingPolicyV2(request *model.AssociateRequestThrottlingPolicyV2Request) (*model.AssociateRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForAssociateRequestThrottlingPolicyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AssociateRequestThrottlingPolicyV2Response), nil
@@ -407,7 +407,7 @@ func (c *ApigClient) AssociateRequestThrottlingPolicyV2(request *model.Associate
 func (c *ApigClient) BatchDisassociateThrottlingPolicyV2(request *model.BatchDisassociateThrottlingPolicyV2Request) (*model.BatchDisassociateThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForBatchDisassociateThrottlingPolicyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchDisassociateThrottlingPolicyV2Response), nil
@@ -418,7 +418,7 @@ func (c *ApigClient) BatchDisassociateThrottlingPolicyV2(request *model.BatchDis
 func (c *ApigClient) CreateApiGroupV2(request *model.CreateApiGroupV2Request) (*model.CreateApiGroupV2Response, error) {
 	requestDef := GenReqDefForCreateApiGroupV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateApiGroupV2Response), nil
@@ -429,7 +429,7 @@ func (c *ApigClient) CreateApiGroupV2(request *model.CreateApiGroupV2Request) (*
 func (c *ApigClient) CreateApiV2(request *model.CreateApiV2Request) (*model.CreateApiV2Response, error) {
 	requestDef := GenReqDefForCreateApiV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateApiV2Response), nil
@@ -440,7 +440,7 @@ func (c *ApigClient) CreateApiV2(request *model.CreateApiV2Request) (*model.Crea
 func (c *ApigClient) CreateOrDeletePublishRecordForApiV2(request *model.CreateOrDeletePublishRecordForApiV2Request) (*model.CreateOrDeletePublishRecordForApiV2Response, error) {
 	requestDef := GenReqDefForCreateOrDeletePublishRecordForApiV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateOrDeletePublishRecordForApiV2Response), nil
@@ -451,7 +451,7 @@ func (c *ApigClient) CreateOrDeletePublishRecordForApiV2(request *model.CreateOr
 func (c *ApigClient) DeleteApiGroupV2(request *model.DeleteApiGroupV2Request) (*model.DeleteApiGroupV2Response, error) {
 	requestDef := GenReqDefForDeleteApiGroupV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteApiGroupV2Response), nil
@@ -462,7 +462,7 @@ func (c *ApigClient) DeleteApiGroupV2(request *model.DeleteApiGroupV2Request) (*
 func (c *ApigClient) DeleteApiV2(request *model.DeleteApiV2Request) (*model.DeleteApiV2Response, error) {
 	requestDef := GenReqDefForDeleteApiV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteApiV2Response), nil
@@ -473,7 +473,7 @@ func (c *ApigClient) DeleteApiV2(request *model.DeleteApiV2Request) (*model.Dele
 func (c *ApigClient) DisassociateRequestThrottlingPolicyV2(request *model.DisassociateRequestThrottlingPolicyV2Request) (*model.DisassociateRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForDisassociateRequestThrottlingPolicyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DisassociateRequestThrottlingPolicyV2Response), nil
@@ -484,7 +484,7 @@ func (c *ApigClient) DisassociateRequestThrottlingPolicyV2(request *model.Disass
 func (c *ApigClient) ListApiGroupsV2(request *model.ListApiGroupsV2Request) (*model.ListApiGroupsV2Response, error) {
 	requestDef := GenReqDefForListApiGroupsV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListApiGroupsV2Response), nil
@@ -495,7 +495,7 @@ func (c *ApigClient) ListApiGroupsV2(request *model.ListApiGroupsV2Request) (*mo
 func (c *ApigClient) ListApisBindedToRequestThrottlingPolicyV2(request *model.ListApisBindedToRequestThrottlingPolicyV2Request) (*model.ListApisBindedToRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForListApisBindedToRequestThrottlingPolicyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListApisBindedToRequestThrottlingPolicyV2Response), nil
@@ -506,7 +506,7 @@ func (c *ApigClient) ListApisBindedToRequestThrottlingPolicyV2(request *model.Li
 func (c *ApigClient) ListApisUnbindedToRequestThrottlingPolicyV2(request *model.ListApisUnbindedToRequestThrottlingPolicyV2Request) (*model.ListApisUnbindedToRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForListApisUnbindedToRequestThrottlingPolicyV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListApisUnbindedToRequestThrottlingPolicyV2Response), nil
@@ -517,7 +517,7 @@ func (c *ApigClient) ListApisUnbindedToRequestThrottlingPolicyV2(request *model.
 func (c *ApigClient) ListApisV2(request *model.ListApisV2Request) (*model.ListApisV2Response, error) {
 	requestDef := GenReqDefForListApisV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListApisV2Response), nil
@@ -528,7 +528,7 @@ func (c *ApigClient) ListApisV2(request *model.ListApisV2Request) (*model.ListAp
 func (c *ApigClient) ListRequestThrottlingPoliciesBindedToApiV2(request *model.ListRequestThrottlingPoliciesBindedToApiV2Request) (*model.ListRequestThrottlingPoliciesBindedToApiV2Response, error) {
 	requestDef := GenReqDefForListRequestThrottlingPoliciesBindedToApiV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListRequestThrottlingPoliciesBindedToApiV2Response), nil
@@ -539,7 +539,7 @@ func (c *ApigClient) ListRequestThrottlingPoliciesBindedToApiV2(request *model.L
 func (c *ApigClient) ShowDetailsOfApiGroupV2(request *model.ShowDetailsOfApiGroupV2Request) (*model.ShowDetailsOfApiGroupV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfApiGroupV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowDetailsOfApiGroupV2Response), nil
@@ -550,7 +550,7 @@ func (c *ApigClient) ShowDetailsOfApiGroupV2(request *model.ShowDetailsOfApiGrou
 func (c *ApigClient) ShowDetailsOfApiV2(request *model.ShowDetailsOfApiV2Request) (*model.ShowDetailsOfApiV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfApiV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowDetailsOfApiV2Response), nil
@@ -561,7 +561,7 @@ func (c *ApigClient) ShowDetailsOfApiV2(request *model.ShowDetailsOfApiV2Request
 func (c *ApigClient) UpdateApiGroupV2(request *model.UpdateApiGroupV2Request) (*model.UpdateApiGroupV2Response, error) {
 	requestDef := GenReqDefForUpdateApiGroupV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateApiGroupV2Response), nil
@@ -572,7 +572,7 @@ func (c *ApigClient) UpdateApiGroupV2(request *model.UpdateApiGroupV2Request) (*
 func (c *ApigClient) UpdateApiV2(request *model.UpdateApiV2Request) (*model.UpdateApiV2Response, error) {
 	requestDef := GenReqDefForUpdateApiV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateApiV2Response), nil
@@ -583,7 +583,7 @@ func (c *ApigClient) UpdateApiV2(request *model.UpdateApiV2Request) (*model.Upda
 func (c *ApigClient) CancelingAuthorizationV2(request *model.CancelingAuthorizationV2Request) (*model.CancelingAuthorizationV2Response, error) {
 	requestDef := GenReqDefForCancelingAuthorizationV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CancelingAuthorizationV2Response), nil
@@ -594,7 +594,7 @@ func (c *ApigClient) CancelingAuthorizationV2(request *model.CancelingAuthorizat
 func (c *ApigClient) CheckAppV2(request *model.CheckAppV2Request) (*model.CheckAppV2Response, error) {
 	requestDef := GenReqDefForCheckAppV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CheckAppV2Response), nil
@@ -605,7 +605,7 @@ func (c *ApigClient) CheckAppV2(request *model.CheckAppV2Request) (*model.CheckA
 func (c *ApigClient) CreateAnAppV2(request *model.CreateAnAppV2Request) (*model.CreateAnAppV2Response, error) {
 	requestDef := GenReqDefForCreateAnAppV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateAnAppV2Response), nil
@@ -616,7 +616,7 @@ func (c *ApigClient) CreateAnAppV2(request *model.CreateAnAppV2Request) (*model.
 func (c *ApigClient) CreateAuthorizingAppsV2(request *model.CreateAuthorizingAppsV2Request) (*model.CreateAuthorizingAppsV2Response, error) {
 	requestDef := GenReqDefForCreateAuthorizingAppsV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateAuthorizingAppsV2Response), nil
@@ -627,7 +627,7 @@ func (c *ApigClient) CreateAuthorizingAppsV2(request *model.CreateAuthorizingApp
 func (c *ApigClient) DeleteAppV2(request *model.DeleteAppV2Request) (*model.DeleteAppV2Response, error) {
 	requestDef := GenReqDefForDeleteAppV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteAppV2Response), nil
@@ -638,7 +638,7 @@ func (c *ApigClient) DeleteAppV2(request *model.DeleteAppV2Request) (*model.Dele
 func (c *ApigClient) ListApisBindedToAppV2(request *model.ListApisBindedToAppV2Request) (*model.ListApisBindedToAppV2Response, error) {
 	requestDef := GenReqDefForListApisBindedToAppV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListApisBindedToAppV2Response), nil
@@ -649,7 +649,7 @@ func (c *ApigClient) ListApisBindedToAppV2(request *model.ListApisBindedToAppV2R
 func (c *ApigClient) ListApisUnbindedToAppV2(request *model.ListApisUnbindedToAppV2Request) (*model.ListApisUnbindedToAppV2Response, error) {
 	requestDef := GenReqDefForListApisUnbindedToAppV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListApisUnbindedToAppV2Response), nil
@@ -660,7 +660,7 @@ func (c *ApigClient) ListApisUnbindedToAppV2(request *model.ListApisUnbindedToAp
 func (c *ApigClient) ListAppsBindedToApiV2(request *model.ListAppsBindedToApiV2Request) (*model.ListAppsBindedToApiV2Response, error) {
 	requestDef := GenReqDefForListAppsBindedToApiV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListAppsBindedToApiV2Response), nil
@@ -671,7 +671,7 @@ func (c *ApigClient) ListAppsBindedToApiV2(request *model.ListAppsBindedToApiV2R
 func (c *ApigClient) ListAppsV2(request *model.ListAppsV2Request) (*model.ListAppsV2Response, error) {
 	requestDef := GenReqDefForListAppsV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListAppsV2Response), nil
@@ -682,7 +682,7 @@ func (c *ApigClient) ListAppsV2(request *model.ListAppsV2Request) (*model.ListAp
 func (c *ApigClient) ResettingAppSecretV2(request *model.ResettingAppSecretV2Request) (*model.ResettingAppSecretV2Response, error) {
 	requestDef := GenReqDefForResettingAppSecretV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ResettingAppSecretV2Response), nil
@@ -693,7 +693,7 @@ func (c *ApigClient) ResettingAppSecretV2(request *model.ResettingAppSecretV2Req
 func (c *ApigClient) ShowDetailsOfAppV2(request *model.ShowDetailsOfAppV2Request) (*model.ShowDetailsOfAppV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfAppV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowDetailsOfAppV2Response), nil
@@ -704,7 +704,7 @@ func (c *ApigClient) ShowDetailsOfAppV2(request *model.ShowDetailsOfAppV2Request
 func (c *ApigClient) UpdateAppV2(request *model.UpdateAppV2Request) (*model.UpdateAppV2Response, error) {
 	requestDef := GenReqDefForUpdateAppV2()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateAppV2Response), nil

@@ -44,7 +44,8 @@ type ShowResourceByIdResponse struct {
 	// 资源Tag
 	Tags map[string]string `json:"tags,omitempty"`
 	// 资源详细属性
-	Properties map[string]interface{} `json:"properties,omitempty"`
+	Properties     map[string]interface{} `json:"properties,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o ShowResourceByIdResponse) String() string {

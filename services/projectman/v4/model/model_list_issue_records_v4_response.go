@@ -21,7 +21,8 @@ type ListIssueRecordsV4Response struct {
 	CreatedTime *string          `json:"created_time,omitempty"`
 	Records     *[]IssueRecordV4 `json:"records,omitempty"`
 	// 操作记录总数
-	Total *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListIssueRecordsV4Response) String() string {

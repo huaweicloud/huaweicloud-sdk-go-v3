@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type RestoreBackupResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o RestoreBackupResponse) String() string {

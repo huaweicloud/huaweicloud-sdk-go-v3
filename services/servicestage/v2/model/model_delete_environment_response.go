@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteEnvironmentResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteEnvironmentResponse) String() string {

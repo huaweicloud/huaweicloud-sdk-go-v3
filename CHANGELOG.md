@@ -1,3 +1,92 @@
+## 0.0.23-beta 2020-11-30
+## HuaweiCloud SDK BCS
+ - ### Features
+    - Support BlockChain Service.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None 
+
+## HuaweiCloud SDK BMS
+ - ### Features
+    - Support Bare Metal Server service.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+## HuaweiCloud SDK BSS
+ - ### Features
+    - Support more interfaces: ListUsageTypes, ModPeriodToOnDemand.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None 
+
+## HuaweiCloud SDK CBR
+ - ### Features
+    - Support more interfaces: MigrateVaultResource
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+## HuaweiCloud SDK CES
+ - ### Features
+    - Support more interfaces: 
+     - ListEvents
+     - ListEventDetail
+     - CreateResourceGroup
+     - UpdateResourceGroup
+     - DeleteResourceGroup
+     - ListResourceGroup
+     - UpdateAlarm
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+## HuaweiCloud SDK DCS
+ - ### Features
+    - Support Distributed Cache Service.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+## HuaweiCloud SDK ECS
+ - ### Features
+    - None 
+ - ### Bug Fix
+    - None
+ - ### Change
+    - [Issue 21](https://github.com/huaweicloud/huaweicloud-sdk-java-v3/issues/21) Open related interface.
+
+## HuaweiCloud SDK FunctionGraph
+ - ### Features
+    - Support FunctionGraph service.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+## HuaweiCloud SDK IAM
+ - ### Features
+    - Support more interfaces.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+## HuaweiCloud SDK Live
+ - ### Features
+    - None
+ - ### Bug Fix
+    - None
+ - ### Change
+    - Name of service client modification: LiveAPIClient → LiveClient.
+
+
 ## 0.0.22-beta 2020-11-17
 ## HuaweiCloud SDK AS
  - ### Features

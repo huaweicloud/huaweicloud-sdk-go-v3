@@ -16,6 +16,7 @@ import (
 // Response Object
 type UpdateDomainConsoleAclPolicyResponse struct {
 	ConsoleAclPolicy *AclPolicyResult `json:"console_acl_policy,omitempty"`
+	HttpStatusCode   int              `json:"-"`
 }
 
 func (o UpdateDomainConsoleAclPolicyResponse) String() string {

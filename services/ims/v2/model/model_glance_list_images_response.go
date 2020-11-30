@@ -22,7 +22,8 @@ type GlanceListImagesResponse struct {
 	// 描述镜像列表模式的URL。
 	Schema *string `json:"schema,omitempty"`
 	// 查询下一页的URL。当查询镜像列表最后一页时，不存在next。
-	Next *string `json:"next,omitempty"`
+	Next           *string `json:"next,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o GlanceListImagesResponse) String() string {

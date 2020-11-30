@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreateKeyResponse struct {
-	KeyInfo *KeKInfo `json:"key_info,omitempty"`
+	KeyInfo        *KeKInfo `json:"key_info,omitempty"`
+	HttpStatusCode int      `json:"-"`
 }
 
 func (o CreateKeyResponse) String() string {

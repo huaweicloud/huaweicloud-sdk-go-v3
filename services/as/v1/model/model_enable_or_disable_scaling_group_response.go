@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type EnableOrDisableScalingGroupResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o EnableOrDisableScalingGroupResponse) String() string {

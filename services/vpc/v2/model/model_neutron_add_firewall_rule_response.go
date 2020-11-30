@@ -30,7 +30,8 @@ type NeutronAddFirewallRuleResponse struct {
 	// 功能说明：网络ACL策略所属项目ID
 	TenantId *string `json:"tenant_id,omitempty"`
 	// 功能说明：网络ACL策略所属项目ID
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId      *string `json:"project_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o NeutronAddFirewallRuleResponse) String() string {

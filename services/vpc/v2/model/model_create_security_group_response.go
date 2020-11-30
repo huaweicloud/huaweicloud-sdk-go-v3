@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreateSecurityGroupResponse struct {
-	SecurityGroup *SecurityGroup `json:"security_group,omitempty"`
+	SecurityGroup  *SecurityGroup `json:"security_group,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o CreateSecurityGroupResponse) String() string {

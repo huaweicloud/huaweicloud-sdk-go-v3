@@ -30,7 +30,8 @@ type ShowMetadataResponse struct {
 	// 导入或更新Metadata文件的时间。
 	UpdateTime *string `json:"update_time,omitempty"`
 	// Metadata文件的内容。
-	Data *string `json:"data,omitempty"`
+	Data           *string `json:"data,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowMetadataResponse) String() string {

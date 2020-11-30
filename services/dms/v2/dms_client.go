@@ -6,11 +6,11 @@ import (
 )
 
 type DmsClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewDmsClient(hcClient *http_client.HcHttpClient) *DmsClient {
-	return &DmsClient{hcClient: hcClient}
+	return &DmsClient{HcClient: hcClient}
 }
 
 func DmsClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func DmsClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *DmsClient) BatchCreateOrDeleteQueueTag(request *model.BatchCreateOrDeleteQueueTagRequest) (*model.BatchCreateOrDeleteQueueTagResponse, error) {
 	requestDef := GenReqDefForBatchCreateOrDeleteQueueTag()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchCreateOrDeleteQueueTagResponse), nil
@@ -33,7 +33,7 @@ func (c *DmsClient) BatchCreateOrDeleteQueueTag(request *model.BatchCreateOrDele
 func (c *DmsClient) ConfirmConsumptionMessages(request *model.ConfirmConsumptionMessagesRequest) (*model.ConfirmConsumptionMessagesResponse, error) {
 	requestDef := GenReqDefForConfirmConsumptionMessages()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ConfirmConsumptionMessagesResponse), nil
@@ -44,7 +44,7 @@ func (c *DmsClient) ConfirmConsumptionMessages(request *model.ConfirmConsumption
 func (c *DmsClient) ConfirmDeadLettersMessages(request *model.ConfirmDeadLettersMessagesRequest) (*model.ConfirmDeadLettersMessagesResponse, error) {
 	requestDef := GenReqDefForConfirmDeadLettersMessages()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ConfirmDeadLettersMessagesResponse), nil
@@ -55,7 +55,7 @@ func (c *DmsClient) ConfirmDeadLettersMessages(request *model.ConfirmDeadLetters
 func (c *DmsClient) ConsumeDeadlettersMessage(request *model.ConsumeDeadlettersMessageRequest) (*model.ConsumeDeadlettersMessageResponse, error) {
 	requestDef := GenReqDefForConsumeDeadlettersMessage()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ConsumeDeadlettersMessageResponse), nil
@@ -66,7 +66,7 @@ func (c *DmsClient) ConsumeDeadlettersMessage(request *model.ConsumeDeadlettersM
 func (c *DmsClient) ConsumeMessages(request *model.ConsumeMessagesRequest) (*model.ConsumeMessagesResponse, error) {
 	requestDef := GenReqDefForConsumeMessages()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ConsumeMessagesResponse), nil
@@ -77,7 +77,7 @@ func (c *DmsClient) ConsumeMessages(request *model.ConsumeMessagesRequest) (*mod
 func (c *DmsClient) CreateConsumerGroup(request *model.CreateConsumerGroupRequest) (*model.CreateConsumerGroupResponse, error) {
 	requestDef := GenReqDefForCreateConsumerGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateConsumerGroupResponse), nil
@@ -88,7 +88,7 @@ func (c *DmsClient) CreateConsumerGroup(request *model.CreateConsumerGroupReques
 func (c *DmsClient) CreateQueue(request *model.CreateQueueRequest) (*model.CreateQueueResponse, error) {
 	requestDef := GenReqDefForCreateQueue()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateQueueResponse), nil
@@ -99,7 +99,7 @@ func (c *DmsClient) CreateQueue(request *model.CreateQueueRequest) (*model.Creat
 func (c *DmsClient) DeleteQueue(request *model.DeleteQueueRequest) (*model.DeleteQueueResponse, error) {
 	requestDef := GenReqDefForDeleteQueue()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteQueueResponse), nil
@@ -110,7 +110,7 @@ func (c *DmsClient) DeleteQueue(request *model.DeleteQueueRequest) (*model.Delet
 func (c *DmsClient) DeleteSpecifiedConsumerGroup(request *model.DeleteSpecifiedConsumerGroupRequest) (*model.DeleteSpecifiedConsumerGroupResponse, error) {
 	requestDef := GenReqDefForDeleteSpecifiedConsumerGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteSpecifiedConsumerGroupResponse), nil
@@ -121,7 +121,7 @@ func (c *DmsClient) DeleteSpecifiedConsumerGroup(request *model.DeleteSpecifiedC
 func (c *DmsClient) ListConsumerGroups(request *model.ListConsumerGroupsRequest) (*model.ListConsumerGroupsResponse, error) {
 	requestDef := GenReqDefForListConsumerGroups()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListConsumerGroupsResponse), nil
@@ -132,7 +132,7 @@ func (c *DmsClient) ListConsumerGroups(request *model.ListConsumerGroupsRequest)
 func (c *DmsClient) ListQueues(request *model.ListQueuesRequest) (*model.ListQueuesResponse, error) {
 	requestDef := GenReqDefForListQueues()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListQueuesResponse), nil
@@ -143,7 +143,7 @@ func (c *DmsClient) ListQueues(request *model.ListQueuesRequest) (*model.ListQue
 func (c *DmsClient) SendMessages(request *model.SendMessagesRequest) (*model.SendMessagesResponse, error) {
 	requestDef := GenReqDefForSendMessages()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.SendMessagesResponse), nil
@@ -154,7 +154,7 @@ func (c *DmsClient) SendMessages(request *model.SendMessagesRequest) (*model.Sen
 func (c *DmsClient) ShowProjectTags(request *model.ShowProjectTagsRequest) (*model.ShowProjectTagsResponse, error) {
 	requestDef := GenReqDefForShowProjectTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowProjectTagsResponse), nil
@@ -165,7 +165,7 @@ func (c *DmsClient) ShowProjectTags(request *model.ShowProjectTagsRequest) (*mod
 func (c *DmsClient) ShowQueue(request *model.ShowQueueRequest) (*model.ShowQueueResponse, error) {
 	requestDef := GenReqDefForShowQueue()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowQueueResponse), nil
@@ -176,7 +176,7 @@ func (c *DmsClient) ShowQueue(request *model.ShowQueueRequest) (*model.ShowQueue
 func (c *DmsClient) ShowQueueTags(request *model.ShowQueueTagsRequest) (*model.ShowQueueTagsResponse, error) {
 	requestDef := GenReqDefForShowQueueTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowQueueTagsResponse), nil
@@ -187,7 +187,7 @@ func (c *DmsClient) ShowQueueTags(request *model.ShowQueueTagsRequest) (*model.S
 func (c *DmsClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
 	requestDef := GenReqDefForShowQuotas()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowQuotasResponse), nil

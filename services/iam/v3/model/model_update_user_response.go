@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type UpdateUserResponse struct {
-	User *UpdateUserResult `json:"user,omitempty"`
+	User           *UpdateUserResult `json:"user,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o UpdateUserResponse) String() string {

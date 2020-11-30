@@ -18,7 +18,8 @@ type ListVaultResponse struct {
 	// 存储库实例列表
 	Vaults *[]Vault `json:"vaults,omitempty"`
 	// 存储库个数
-	Count *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListVaultResponse) String() string {

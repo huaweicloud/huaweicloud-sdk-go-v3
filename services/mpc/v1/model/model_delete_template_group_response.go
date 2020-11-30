@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteTemplateGroupResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteTemplateGroupResponse) String() string {

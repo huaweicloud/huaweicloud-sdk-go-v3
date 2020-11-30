@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type UpdateKeypairDescriptionResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateKeypairDescriptionResponse) String() string {

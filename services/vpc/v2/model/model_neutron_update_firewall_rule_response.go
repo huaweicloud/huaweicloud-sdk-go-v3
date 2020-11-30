@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type NeutronUpdateFirewallRuleResponse struct {
-	FirewallRule *NeutronFirewallRule `json:"firewall_rule,omitempty"`
+	FirewallRule   *NeutronFirewallRule `json:"firewall_rule,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o NeutronUpdateFirewallRuleResponse) String() string {

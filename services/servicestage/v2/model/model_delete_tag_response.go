@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteTagResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteTagResponse) String() string {

@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreateServerGroupResponse struct {
-	ServerGroup *CreateServerGroupResult `json:"server_group,omitempty"`
+	ServerGroup    *CreateServerGroupResult `json:"server_group,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o CreateServerGroupResponse) String() string {

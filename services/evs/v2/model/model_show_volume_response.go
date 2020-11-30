@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowVolumeResponse struct {
-	Volume *VolumeDetail `json:"volume,omitempty"`
+	Volume         *VolumeDetail `json:"volume,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ShowVolumeResponse) String() string {

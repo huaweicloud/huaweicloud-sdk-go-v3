@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreateKeypairResponse struct {
-	Keypair *CreateKeypairResp `json:"keypair,omitempty"`
+	Keypair        *CreateKeypairResp `json:"keypair,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o CreateKeypairResponse) String() string {

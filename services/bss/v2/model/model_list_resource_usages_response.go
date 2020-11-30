@@ -17,6 +17,7 @@ import (
 type ListResourceUsagesResponse struct {
 	// |参数名称：套餐包使用量信息| |参数的约束及描述：套餐包使用量信息|
 	PackageUsageInfos *[]PackageUsageInfo `json:"package_usage_infos,omitempty"`
+	HttpStatusCode    int                 `json:"-"`
 }
 
 func (o ListResourceUsagesResponse) String() string {

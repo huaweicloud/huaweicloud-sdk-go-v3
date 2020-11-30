@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowSnapshotResponse struct {
-	Snapshot *SnapshotDetails `json:"snapshot,omitempty"`
+	Snapshot       *SnapshotDetails `json:"snapshot,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ShowSnapshotResponse) String() string {

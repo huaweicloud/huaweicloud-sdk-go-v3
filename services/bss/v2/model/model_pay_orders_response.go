@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type PayOrdersResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o PayOrdersResponse) String() string {

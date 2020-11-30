@@ -16,7 +16,8 @@ import (
 // Response Object
 type ConsumeDeadlettersMessageResponse struct {
 	// 消息数组。
-	Body *[]ConsumeDeadlettersMessage `json:"body,omitempty"`
+	Body           *[]ConsumeDeadlettersMessage `json:"body,omitempty"`
+	HttpStatusCode int                          `json:"-"`
 }
 
 func (o ConsumeDeadlettersMessageResponse) String() string {

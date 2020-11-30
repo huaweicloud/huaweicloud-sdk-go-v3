@@ -24,7 +24,8 @@ type ShowDetailsOfEnvironmentVariableV2Response struct {
 	// 环境变量编号
 	Id *string `json:"id,omitempty"`
 	// 变量名
-	VariableName *string `json:"variable_name,omitempty"`
+	VariableName   *string `json:"variable_name,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowDetailsOfEnvironmentVariableV2Response) String() string {

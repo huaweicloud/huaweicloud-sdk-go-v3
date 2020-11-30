@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteLoadbalancerResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteLoadbalancerResponse) String() string {

@@ -22,7 +22,8 @@ type CreateParametersForImportResponse struct {
 	// 导入参数到期时间，时间戳，即从1970年1月1日至该时间的总秒数。
 	ExpirationTime *string `json:"expiration_time,omitempty"`
 	// 加密密钥材料的公钥，base64格式。
-	PublicKey *string `json:"public_key,omitempty"`
+	PublicKey      *string `json:"public_key,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateParametersForImportResponse) String() string {

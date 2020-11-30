@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type NovaCreateServersResponse struct {
-	Server *NovaCreateServersResult `json:"server,omitempty"`
+	Server         *NovaCreateServersResult `json:"server,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o NovaCreateServersResponse) String() string {

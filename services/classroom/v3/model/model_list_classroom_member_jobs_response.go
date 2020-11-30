@@ -18,7 +18,8 @@ type ListClassroomMemberJobsResponse struct {
 	// 课堂下作业列表信息
 	Jobs *[]MemberJobCard `json:"jobs,omitempty"`
 	// 学生作业总数
-	Total *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListClassroomMemberJobsResponse) String() string {

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type CreateRetryRemuxTaskResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CreateRetryRemuxTaskResponse) String() string {

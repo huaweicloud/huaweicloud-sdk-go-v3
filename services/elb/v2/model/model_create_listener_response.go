@@ -55,6 +55,7 @@ type CreateListenerResponse struct {
 	ProjectId *string `json:"project_id,omitempty"`
 	// 监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略
 	TlsCiphersPolicy *string `json:"tls_ciphers_policy,omitempty"`
+	HttpStatusCode   int     `json:"-"`
 }
 
 func (o CreateListenerResponse) String() string {

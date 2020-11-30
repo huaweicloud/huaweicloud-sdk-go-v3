@@ -26,6 +26,7 @@ type ShowSinkTaskDetailResponse struct {
 	// 返回任务转存的topics列表或者正则表达式。
 	Topics                   *string                                         `json:"topics,omitempty"`
 	ObsDestinationDescriptor *ShowSinkTaskDetailRespObsDestinationDescriptor `json:"obs_destination_descriptor,omitempty"`
+	HttpStatusCode           int                                             `json:"-"`
 }
 
 func (o ShowSinkTaskDetailResponse) String() string {

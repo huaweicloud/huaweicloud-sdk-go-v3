@@ -6,11 +6,11 @@ import (
 )
 
 type MpcClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewMpcClient(hcClient *http_client.HcHttpClient) *MpcClient {
-	return &MpcClient{hcClient: hcClient}
+	return &MpcClient{HcClient: hcClient}
 }
 
 func MpcClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func MpcClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *MpcClient) CreateAnimatedGraphicsTask(request *model.CreateAnimatedGraphicsTaskRequest) (*model.CreateAnimatedGraphicsTaskResponse, error) {
 	requestDef := GenReqDefForCreateAnimatedGraphicsTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateAnimatedGraphicsTaskResponse), nil
@@ -33,7 +33,7 @@ func (c *MpcClient) CreateAnimatedGraphicsTask(request *model.CreateAnimatedGrap
 func (c *MpcClient) DeleteAnimatedGraphicsTask(request *model.DeleteAnimatedGraphicsTaskRequest) (*model.DeleteAnimatedGraphicsTaskResponse, error) {
 	requestDef := GenReqDefForDeleteAnimatedGraphicsTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteAnimatedGraphicsTaskResponse), nil
@@ -44,7 +44,7 @@ func (c *MpcClient) DeleteAnimatedGraphicsTask(request *model.DeleteAnimatedGrap
 func (c *MpcClient) ListAnimatedGraphicsTask(request *model.ListAnimatedGraphicsTaskRequest) (*model.ListAnimatedGraphicsTaskResponse, error) {
 	requestDef := GenReqDefForListAnimatedGraphicsTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListAnimatedGraphicsTaskResponse), nil
@@ -55,7 +55,7 @@ func (c *MpcClient) ListAnimatedGraphicsTask(request *model.ListAnimatedGraphics
 func (c *MpcClient) CreateEncryptTask(request *model.CreateEncryptTaskRequest) (*model.CreateEncryptTaskResponse, error) {
 	requestDef := GenReqDefForCreateEncryptTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateEncryptTaskResponse), nil
@@ -66,7 +66,7 @@ func (c *MpcClient) CreateEncryptTask(request *model.CreateEncryptTaskRequest) (
 func (c *MpcClient) DeleteEncryptTask(request *model.DeleteEncryptTaskRequest) (*model.DeleteEncryptTaskResponse, error) {
 	requestDef := GenReqDefForDeleteEncryptTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteEncryptTaskResponse), nil
@@ -77,7 +77,7 @@ func (c *MpcClient) DeleteEncryptTask(request *model.DeleteEncryptTaskRequest) (
 func (c *MpcClient) ListEncryptTask(request *model.ListEncryptTaskRequest) (*model.ListEncryptTaskResponse, error) {
 	requestDef := GenReqDefForListEncryptTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListEncryptTaskResponse), nil
@@ -88,7 +88,7 @@ func (c *MpcClient) ListEncryptTask(request *model.ListEncryptTaskRequest) (*mod
 func (c *MpcClient) CreateExtractTask(request *model.CreateExtractTaskRequest) (*model.CreateExtractTaskResponse, error) {
 	requestDef := GenReqDefForCreateExtractTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateExtractTaskResponse), nil
@@ -99,7 +99,7 @@ func (c *MpcClient) CreateExtractTask(request *model.CreateExtractTaskRequest) (
 func (c *MpcClient) DeleteExtractTask(request *model.DeleteExtractTaskRequest) (*model.DeleteExtractTaskResponse, error) {
 	requestDef := GenReqDefForDeleteExtractTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteExtractTaskResponse), nil
@@ -110,7 +110,7 @@ func (c *MpcClient) DeleteExtractTask(request *model.DeleteExtractTaskRequest) (
 func (c *MpcClient) ListExtractTask(request *model.ListExtractTaskRequest) (*model.ListExtractTaskResponse, error) {
 	requestDef := GenReqDefForListExtractTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListExtractTaskResponse), nil
@@ -121,7 +121,7 @@ func (c *MpcClient) ListExtractTask(request *model.ListExtractTaskRequest) (*mod
 func (c *MpcClient) ListTranscodeDetail(request *model.ListTranscodeDetailRequest) (*model.ListTranscodeDetailResponse, error) {
 	requestDef := GenReqDefForListTranscodeDetail()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListTranscodeDetailResponse), nil
@@ -132,7 +132,7 @@ func (c *MpcClient) ListTranscodeDetail(request *model.ListTranscodeDetailReques
 func (c *MpcClient) CancelRemuxTask(request *model.CancelRemuxTaskRequest) (*model.CancelRemuxTaskResponse, error) {
 	requestDef := GenReqDefForCancelRemuxTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CancelRemuxTaskResponse), nil
@@ -143,7 +143,7 @@ func (c *MpcClient) CancelRemuxTask(request *model.CancelRemuxTaskRequest) (*mod
 func (c *MpcClient) CreateRemuxTask(request *model.CreateRemuxTaskRequest) (*model.CreateRemuxTaskResponse, error) {
 	requestDef := GenReqDefForCreateRemuxTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateRemuxTaskResponse), nil
@@ -154,7 +154,7 @@ func (c *MpcClient) CreateRemuxTask(request *model.CreateRemuxTaskRequest) (*mod
 func (c *MpcClient) CreateRetryRemuxTask(request *model.CreateRetryRemuxTaskRequest) (*model.CreateRetryRemuxTaskResponse, error) {
 	requestDef := GenReqDefForCreateRetryRemuxTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateRetryRemuxTaskResponse), nil
@@ -165,7 +165,7 @@ func (c *MpcClient) CreateRetryRemuxTask(request *model.CreateRetryRemuxTaskRequ
 func (c *MpcClient) DeleteRemuxTask(request *model.DeleteRemuxTaskRequest) (*model.DeleteRemuxTaskResponse, error) {
 	requestDef := GenReqDefForDeleteRemuxTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteRemuxTaskResponse), nil
@@ -176,7 +176,7 @@ func (c *MpcClient) DeleteRemuxTask(request *model.DeleteRemuxTaskRequest) (*mod
 func (c *MpcClient) ListRemuxTask(request *model.ListRemuxTaskRequest) (*model.ListRemuxTaskResponse, error) {
 	requestDef := GenReqDefForListRemuxTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListRemuxTaskResponse), nil
@@ -187,7 +187,7 @@ func (c *MpcClient) ListRemuxTask(request *model.ListRemuxTaskRequest) (*model.L
 func (c *MpcClient) CreateTemplateGroup(request *model.CreateTemplateGroupRequest) (*model.CreateTemplateGroupResponse, error) {
 	requestDef := GenReqDefForCreateTemplateGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateTemplateGroupResponse), nil
@@ -198,7 +198,7 @@ func (c *MpcClient) CreateTemplateGroup(request *model.CreateTemplateGroupReques
 func (c *MpcClient) DeleteTemplateGroup(request *model.DeleteTemplateGroupRequest) (*model.DeleteTemplateGroupResponse, error) {
 	requestDef := GenReqDefForDeleteTemplateGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteTemplateGroupResponse), nil
@@ -209,7 +209,7 @@ func (c *MpcClient) DeleteTemplateGroup(request *model.DeleteTemplateGroupReques
 func (c *MpcClient) ListTemplateGroup(request *model.ListTemplateGroupRequest) (*model.ListTemplateGroupResponse, error) {
 	requestDef := GenReqDefForListTemplateGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListTemplateGroupResponse), nil
@@ -220,7 +220,7 @@ func (c *MpcClient) ListTemplateGroup(request *model.ListTemplateGroupRequest) (
 func (c *MpcClient) UpdateTemplateGroup(request *model.UpdateTemplateGroupRequest) (*model.UpdateTemplateGroupResponse, error) {
 	requestDef := GenReqDefForUpdateTemplateGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateTemplateGroupResponse), nil
@@ -231,7 +231,7 @@ func (c *MpcClient) UpdateTemplateGroup(request *model.UpdateTemplateGroupReques
 func (c *MpcClient) CreateThumbnailsTask(request *model.CreateThumbnailsTaskRequest) (*model.CreateThumbnailsTaskResponse, error) {
 	requestDef := GenReqDefForCreateThumbnailsTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateThumbnailsTaskResponse), nil
@@ -242,7 +242,7 @@ func (c *MpcClient) CreateThumbnailsTask(request *model.CreateThumbnailsTaskRequ
 func (c *MpcClient) DeleteThumbnailsTask(request *model.DeleteThumbnailsTaskRequest) (*model.DeleteThumbnailsTaskResponse, error) {
 	requestDef := GenReqDefForDeleteThumbnailsTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteThumbnailsTaskResponse), nil
@@ -253,7 +253,7 @@ func (c *MpcClient) DeleteThumbnailsTask(request *model.DeleteThumbnailsTaskRequ
 func (c *MpcClient) ListThumbnailsTask(request *model.ListThumbnailsTaskRequest) (*model.ListThumbnailsTaskResponse, error) {
 	requestDef := GenReqDefForListThumbnailsTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListThumbnailsTaskResponse), nil
@@ -264,7 +264,7 @@ func (c *MpcClient) ListThumbnailsTask(request *model.ListThumbnailsTaskRequest)
 func (c *MpcClient) CreateTranscodingTask(request *model.CreateTranscodingTaskRequest) (*model.CreateTranscodingTaskResponse, error) {
 	requestDef := GenReqDefForCreateTranscodingTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateTranscodingTaskResponse), nil
@@ -275,7 +275,7 @@ func (c *MpcClient) CreateTranscodingTask(request *model.CreateTranscodingTaskRe
 func (c *MpcClient) DeleteTranscodingTask(request *model.DeleteTranscodingTaskRequest) (*model.DeleteTranscodingTaskResponse, error) {
 	requestDef := GenReqDefForDeleteTranscodingTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteTranscodingTaskResponse), nil
@@ -286,7 +286,7 @@ func (c *MpcClient) DeleteTranscodingTask(request *model.DeleteTranscodingTaskRe
 func (c *MpcClient) ListTranscodingTask(request *model.ListTranscodingTaskRequest) (*model.ListTranscodingTaskResponse, error) {
 	requestDef := GenReqDefForListTranscodingTask()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListTranscodingTaskResponse), nil
@@ -297,7 +297,7 @@ func (c *MpcClient) ListTranscodingTask(request *model.ListTranscodingTaskReques
 func (c *MpcClient) CreateTransTemplate(request *model.CreateTransTemplateRequest) (*model.CreateTransTemplateResponse, error) {
 	requestDef := GenReqDefForCreateTransTemplate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateTransTemplateResponse), nil
@@ -308,7 +308,7 @@ func (c *MpcClient) CreateTransTemplate(request *model.CreateTransTemplateReques
 func (c *MpcClient) DeleteTemplate(request *model.DeleteTemplateRequest) (*model.DeleteTemplateResponse, error) {
 	requestDef := GenReqDefForDeleteTemplate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteTemplateResponse), nil
@@ -319,7 +319,7 @@ func (c *MpcClient) DeleteTemplate(request *model.DeleteTemplateRequest) (*model
 func (c *MpcClient) ListTemplate(request *model.ListTemplateRequest) (*model.ListTemplateResponse, error) {
 	requestDef := GenReqDefForListTemplate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListTemplateResponse), nil
@@ -330,7 +330,7 @@ func (c *MpcClient) ListTemplate(request *model.ListTemplateRequest) (*model.Lis
 func (c *MpcClient) UpdateTransTemplate(request *model.UpdateTransTemplateRequest) (*model.UpdateTransTemplateResponse, error) {
 	requestDef := GenReqDefForUpdateTransTemplate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateTransTemplateResponse), nil
@@ -341,7 +341,7 @@ func (c *MpcClient) UpdateTransTemplate(request *model.UpdateTransTemplateReques
 func (c *MpcClient) CreateWatermarkTemplate(request *model.CreateWatermarkTemplateRequest) (*model.CreateWatermarkTemplateResponse, error) {
 	requestDef := GenReqDefForCreateWatermarkTemplate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateWatermarkTemplateResponse), nil
@@ -352,7 +352,7 @@ func (c *MpcClient) CreateWatermarkTemplate(request *model.CreateWatermarkTempla
 func (c *MpcClient) DeleteWatermarkTemplate(request *model.DeleteWatermarkTemplateRequest) (*model.DeleteWatermarkTemplateResponse, error) {
 	requestDef := GenReqDefForDeleteWatermarkTemplate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteWatermarkTemplateResponse), nil
@@ -363,7 +363,7 @@ func (c *MpcClient) DeleteWatermarkTemplate(request *model.DeleteWatermarkTempla
 func (c *MpcClient) ListWatermarkTemplate(request *model.ListWatermarkTemplateRequest) (*model.ListWatermarkTemplateResponse, error) {
 	requestDef := GenReqDefForListWatermarkTemplate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListWatermarkTemplateResponse), nil
@@ -374,7 +374,7 @@ func (c *MpcClient) ListWatermarkTemplate(request *model.ListWatermarkTemplateRe
 func (c *MpcClient) UpdateWatermarkTemplate(request *model.UpdateWatermarkTemplateRequest) (*model.UpdateWatermarkTemplateResponse, error) {
 	requestDef := GenReqDefForUpdateWatermarkTemplate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateWatermarkTemplateResponse), nil

@@ -6,11 +6,11 @@ import (
 )
 
 type EcsClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewEcsClient(hcClient *http_client.HcHttpClient) *EcsClient {
-	return &EcsClient{hcClient: hcClient}
+	return &EcsClient{HcClient: hcClient}
 }
 
 func EcsClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func EcsClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *EcsClient) AddServerGroupMember(request *model.AddServerGroupMemberRequest) (*model.AddServerGroupMemberResponse, error) {
 	requestDef := GenReqDefForAddServerGroupMember()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AddServerGroupMemberResponse), nil
@@ -33,7 +33,7 @@ func (c *EcsClient) AddServerGroupMember(request *model.AddServerGroupMemberRequ
 func (c *EcsClient) AttachServerVolume(request *model.AttachServerVolumeRequest) (*model.AttachServerVolumeResponse, error) {
 	requestDef := GenReqDefForAttachServerVolume()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AttachServerVolumeResponse), nil
@@ -44,7 +44,7 @@ func (c *EcsClient) AttachServerVolume(request *model.AttachServerVolumeRequest)
 func (c *EcsClient) BatchAddServerNics(request *model.BatchAddServerNicsRequest) (*model.BatchAddServerNicsResponse, error) {
 	requestDef := GenReqDefForBatchAddServerNics()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchAddServerNicsResponse), nil
@@ -55,7 +55,7 @@ func (c *EcsClient) BatchAddServerNics(request *model.BatchAddServerNicsRequest)
 func (c *EcsClient) BatchCreateServerTags(request *model.BatchCreateServerTagsRequest) (*model.BatchCreateServerTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateServerTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchCreateServerTagsResponse), nil
@@ -66,7 +66,7 @@ func (c *EcsClient) BatchCreateServerTags(request *model.BatchCreateServerTagsRe
 func (c *EcsClient) BatchDeleteServerNics(request *model.BatchDeleteServerNicsRequest) (*model.BatchDeleteServerNicsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteServerNics()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchDeleteServerNicsResponse), nil
@@ -77,7 +77,7 @@ func (c *EcsClient) BatchDeleteServerNics(request *model.BatchDeleteServerNicsRe
 func (c *EcsClient) BatchDeleteServerTags(request *model.BatchDeleteServerTagsRequest) (*model.BatchDeleteServerTagsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteServerTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchDeleteServerTagsResponse), nil
@@ -88,7 +88,7 @@ func (c *EcsClient) BatchDeleteServerTags(request *model.BatchDeleteServerTagsRe
 func (c *EcsClient) BatchRebootServers(request *model.BatchRebootServersRequest) (*model.BatchRebootServersResponse, error) {
 	requestDef := GenReqDefForBatchRebootServers()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchRebootServersResponse), nil
@@ -99,7 +99,7 @@ func (c *EcsClient) BatchRebootServers(request *model.BatchRebootServersRequest)
 func (c *EcsClient) BatchStartServers(request *model.BatchStartServersRequest) (*model.BatchStartServersResponse, error) {
 	requestDef := GenReqDefForBatchStartServers()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchStartServersResponse), nil
@@ -110,7 +110,7 @@ func (c *EcsClient) BatchStartServers(request *model.BatchStartServersRequest) (
 func (c *EcsClient) BatchStopServers(request *model.BatchStopServersRequest) (*model.BatchStopServersResponse, error) {
 	requestDef := GenReqDefForBatchStopServers()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchStopServersResponse), nil
@@ -121,7 +121,7 @@ func (c *EcsClient) BatchStopServers(request *model.BatchStopServersRequest) (*m
 func (c *EcsClient) ChangeServerOsWithCloudInit(request *model.ChangeServerOsWithCloudInitRequest) (*model.ChangeServerOsWithCloudInitResponse, error) {
 	requestDef := GenReqDefForChangeServerOsWithCloudInit()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ChangeServerOsWithCloudInitResponse), nil
@@ -132,7 +132,7 @@ func (c *EcsClient) ChangeServerOsWithCloudInit(request *model.ChangeServerOsWit
 func (c *EcsClient) CreatePostPaidServers(request *model.CreatePostPaidServersRequest) (*model.CreatePostPaidServersResponse, error) {
 	requestDef := GenReqDefForCreatePostPaidServers()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreatePostPaidServersResponse), nil
@@ -143,7 +143,7 @@ func (c *EcsClient) CreatePostPaidServers(request *model.CreatePostPaidServersRe
 func (c *EcsClient) CreateServerGroup(request *model.CreateServerGroupRequest) (*model.CreateServerGroupResponse, error) {
 	requestDef := GenReqDefForCreateServerGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateServerGroupResponse), nil
@@ -154,7 +154,7 @@ func (c *EcsClient) CreateServerGroup(request *model.CreateServerGroupRequest) (
 func (c *EcsClient) CreateServers(request *model.CreateServersRequest) (*model.CreateServersResponse, error) {
 	requestDef := GenReqDefForCreateServers()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateServersResponse), nil
@@ -165,7 +165,7 @@ func (c *EcsClient) CreateServers(request *model.CreateServersRequest) (*model.C
 func (c *EcsClient) DeleteServerGroup(request *model.DeleteServerGroupRequest) (*model.DeleteServerGroupResponse, error) {
 	requestDef := GenReqDefForDeleteServerGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteServerGroupResponse), nil
@@ -176,7 +176,7 @@ func (c *EcsClient) DeleteServerGroup(request *model.DeleteServerGroupRequest) (
 func (c *EcsClient) DeleteServerGroupMember(request *model.DeleteServerGroupMemberRequest) (*model.DeleteServerGroupMemberResponse, error) {
 	requestDef := GenReqDefForDeleteServerGroupMember()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteServerGroupMemberResponse), nil
@@ -187,7 +187,7 @@ func (c *EcsClient) DeleteServerGroupMember(request *model.DeleteServerGroupMemb
 func (c *EcsClient) DeleteServerMetadata(request *model.DeleteServerMetadataRequest) (*model.DeleteServerMetadataResponse, error) {
 	requestDef := GenReqDefForDeleteServerMetadata()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteServerMetadataResponse), nil
@@ -198,7 +198,7 @@ func (c *EcsClient) DeleteServerMetadata(request *model.DeleteServerMetadataRequ
 func (c *EcsClient) DeleteServers(request *model.DeleteServersRequest) (*model.DeleteServersResponse, error) {
 	requestDef := GenReqDefForDeleteServers()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteServersResponse), nil
@@ -209,7 +209,7 @@ func (c *EcsClient) DeleteServers(request *model.DeleteServersRequest) (*model.D
 func (c *EcsClient) DetachServerVolume(request *model.DetachServerVolumeRequest) (*model.DetachServerVolumeResponse, error) {
 	requestDef := GenReqDefForDetachServerVolume()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DetachServerVolumeResponse), nil
@@ -220,7 +220,7 @@ func (c *EcsClient) DetachServerVolume(request *model.DetachServerVolumeRequest)
 func (c *EcsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListFlavorsResponse), nil
@@ -231,7 +231,7 @@ func (c *EcsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 func (c *EcsClient) ListResizeFlavors(request *model.ListResizeFlavorsRequest) (*model.ListResizeFlavorsResponse, error) {
 	requestDef := GenReqDefForListResizeFlavors()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListResizeFlavorsResponse), nil
@@ -242,7 +242,7 @@ func (c *EcsClient) ListResizeFlavors(request *model.ListResizeFlavorsRequest) (
 func (c *EcsClient) ListServerBlockDevices(request *model.ListServerBlockDevicesRequest) (*model.ListServerBlockDevicesResponse, error) {
 	requestDef := GenReqDefForListServerBlockDevices()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListServerBlockDevicesResponse), nil
@@ -253,7 +253,7 @@ func (c *EcsClient) ListServerBlockDevices(request *model.ListServerBlockDevices
 func (c *EcsClient) ListServerInterfaces(request *model.ListServerInterfacesRequest) (*model.ListServerInterfacesResponse, error) {
 	requestDef := GenReqDefForListServerInterfaces()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListServerInterfacesResponse), nil
@@ -264,7 +264,7 @@ func (c *EcsClient) ListServerInterfaces(request *model.ListServerInterfacesRequ
 func (c *EcsClient) ListServersDetails(request *model.ListServersDetailsRequest) (*model.ListServersDetailsResponse, error) {
 	requestDef := GenReqDefForListServersDetails()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListServersDetailsResponse), nil
@@ -275,7 +275,7 @@ func (c *EcsClient) ListServersDetails(request *model.ListServersDetailsRequest)
 func (c *EcsClient) NovaAssociateSecurityGroup(request *model.NovaAssociateSecurityGroupRequest) (*model.NovaAssociateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForNovaAssociateSecurityGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NovaAssociateSecurityGroupResponse), nil
@@ -286,7 +286,7 @@ func (c *EcsClient) NovaAssociateSecurityGroup(request *model.NovaAssociateSecur
 func (c *EcsClient) NovaCreateKeypair(request *model.NovaCreateKeypairRequest) (*model.NovaCreateKeypairResponse, error) {
 	requestDef := GenReqDefForNovaCreateKeypair()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NovaCreateKeypairResponse), nil
@@ -297,7 +297,7 @@ func (c *EcsClient) NovaCreateKeypair(request *model.NovaCreateKeypairRequest) (
 func (c *EcsClient) NovaCreateServers(request *model.NovaCreateServersRequest) (*model.NovaCreateServersResponse, error) {
 	requestDef := GenReqDefForNovaCreateServers()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NovaCreateServersResponse), nil
@@ -308,7 +308,7 @@ func (c *EcsClient) NovaCreateServers(request *model.NovaCreateServersRequest) (
 func (c *EcsClient) NovaDeleteKeypair(request *model.NovaDeleteKeypairRequest) (*model.NovaDeleteKeypairResponse, error) {
 	requestDef := GenReqDefForNovaDeleteKeypair()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NovaDeleteKeypairResponse), nil
@@ -319,7 +319,7 @@ func (c *EcsClient) NovaDeleteKeypair(request *model.NovaDeleteKeypairRequest) (
 func (c *EcsClient) NovaDeleteServer(request *model.NovaDeleteServerRequest) (*model.NovaDeleteServerResponse, error) {
 	requestDef := GenReqDefForNovaDeleteServer()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NovaDeleteServerResponse), nil
@@ -330,7 +330,7 @@ func (c *EcsClient) NovaDeleteServer(request *model.NovaDeleteServerRequest) (*m
 func (c *EcsClient) NovaDisassociateSecurityGroup(request *model.NovaDisassociateSecurityGroupRequest) (*model.NovaDisassociateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForNovaDisassociateSecurityGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NovaDisassociateSecurityGroupResponse), nil
@@ -341,7 +341,7 @@ func (c *EcsClient) NovaDisassociateSecurityGroup(request *model.NovaDisassociat
 func (c *EcsClient) NovaListAvailabilityZones(request *model.NovaListAvailabilityZonesRequest) (*model.NovaListAvailabilityZonesResponse, error) {
 	requestDef := GenReqDefForNovaListAvailabilityZones()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NovaListAvailabilityZonesResponse), nil
@@ -352,7 +352,7 @@ func (c *EcsClient) NovaListAvailabilityZones(request *model.NovaListAvailabilit
 func (c *EcsClient) NovaListKeypairs(request *model.NovaListKeypairsRequest) (*model.NovaListKeypairsResponse, error) {
 	requestDef := GenReqDefForNovaListKeypairs()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NovaListKeypairsResponse), nil
@@ -363,7 +363,7 @@ func (c *EcsClient) NovaListKeypairs(request *model.NovaListKeypairsRequest) (*m
 func (c *EcsClient) NovaListServerSecurityGroups(request *model.NovaListServerSecurityGroupsRequest) (*model.NovaListServerSecurityGroupsResponse, error) {
 	requestDef := GenReqDefForNovaListServerSecurityGroups()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NovaListServerSecurityGroupsResponse), nil
@@ -374,10 +374,21 @@ func (c *EcsClient) NovaListServerSecurityGroups(request *model.NovaListServerSe
 func (c *EcsClient) NovaListServersDetails(request *model.NovaListServersDetailsRequest) (*model.NovaListServersDetailsResponse, error) {
 	requestDef := GenReqDefForNovaListServersDetails()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NovaListServersDetailsResponse), nil
+	}
+}
+
+//根据SSH密钥名称查询指定SSH密钥。
+func (c *EcsClient) NovaShowKeypair(request *model.NovaShowKeypairRequest) (*model.NovaShowKeypairResponse, error) {
+	requestDef := GenReqDefForNovaShowKeypair()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NovaShowKeypairResponse), nil
 	}
 }
 
@@ -385,7 +396,7 @@ func (c *EcsClient) NovaListServersDetails(request *model.NovaListServersDetails
 func (c *EcsClient) NovaShowServer(request *model.NovaShowServerRequest) (*model.NovaShowServerResponse, error) {
 	requestDef := GenReqDefForNovaShowServer()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.NovaShowServerResponse), nil
@@ -396,7 +407,7 @@ func (c *EcsClient) NovaShowServer(request *model.NovaShowServerRequest) (*model
 func (c *EcsClient) ReinstallServerWithCloudInit(request *model.ReinstallServerWithCloudInitRequest) (*model.ReinstallServerWithCloudInitResponse, error) {
 	requestDef := GenReqDefForReinstallServerWithCloudInit()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ReinstallServerWithCloudInitResponse), nil
@@ -407,7 +418,7 @@ func (c *EcsClient) ReinstallServerWithCloudInit(request *model.ReinstallServerW
 func (c *EcsClient) ResetServerPassword(request *model.ResetServerPasswordRequest) (*model.ResetServerPasswordResponse, error) {
 	requestDef := GenReqDefForResetServerPassword()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ResetServerPasswordResponse), nil
@@ -418,7 +429,7 @@ func (c *EcsClient) ResetServerPassword(request *model.ResetServerPasswordReques
 func (c *EcsClient) ResizePostPaidServer(request *model.ResizePostPaidServerRequest) (*model.ResizePostPaidServerResponse, error) {
 	requestDef := GenReqDefForResizePostPaidServer()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ResizePostPaidServerResponse), nil
@@ -429,7 +440,7 @@ func (c *EcsClient) ResizePostPaidServer(request *model.ResizePostPaidServerRequ
 func (c *EcsClient) ResizeServer(request *model.ResizeServerRequest) (*model.ResizeServerResponse, error) {
 	requestDef := GenReqDefForResizeServer()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ResizeServerResponse), nil
@@ -440,7 +451,7 @@ func (c *EcsClient) ResizeServer(request *model.ResizeServerRequest) (*model.Res
 func (c *EcsClient) ShowResetPasswordFlag(request *model.ShowResetPasswordFlagRequest) (*model.ShowResetPasswordFlagResponse, error) {
 	requestDef := GenReqDefForShowResetPasswordFlag()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowResetPasswordFlagResponse), nil
@@ -451,7 +462,7 @@ func (c *EcsClient) ShowResetPasswordFlag(request *model.ShowResetPasswordFlagRe
 func (c *EcsClient) ShowServer(request *model.ShowServerRequest) (*model.ShowServerResponse, error) {
 	requestDef := GenReqDefForShowServer()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowServerResponse), nil
@@ -462,7 +473,7 @@ func (c *EcsClient) ShowServer(request *model.ShowServerRequest) (*model.ShowSer
 func (c *EcsClient) ShowServerLimits(request *model.ShowServerLimitsRequest) (*model.ShowServerLimitsResponse, error) {
 	requestDef := GenReqDefForShowServerLimits()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowServerLimitsResponse), nil
@@ -473,7 +484,7 @@ func (c *EcsClient) ShowServerLimits(request *model.ShowServerLimitsRequest) (*m
 func (c *EcsClient) ShowServerRemoteConsole(request *model.ShowServerRemoteConsoleRequest) (*model.ShowServerRemoteConsoleResponse, error) {
 	requestDef := GenReqDefForShowServerRemoteConsole()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowServerRemoteConsoleResponse), nil
@@ -484,7 +495,7 @@ func (c *EcsClient) ShowServerRemoteConsole(request *model.ShowServerRemoteConso
 func (c *EcsClient) ShowServerTags(request *model.ShowServerTagsRequest) (*model.ShowServerTagsResponse, error) {
 	requestDef := GenReqDefForShowServerTags()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowServerTagsResponse), nil
@@ -495,7 +506,7 @@ func (c *EcsClient) ShowServerTags(request *model.ShowServerTagsRequest) (*model
 func (c *EcsClient) UpdateServer(request *model.UpdateServerRequest) (*model.UpdateServerResponse, error) {
 	requestDef := GenReqDefForUpdateServer()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateServerResponse), nil
@@ -506,7 +517,7 @@ func (c *EcsClient) UpdateServer(request *model.UpdateServerRequest) (*model.Upd
 func (c *EcsClient) UpdateServerMetadata(request *model.UpdateServerMetadataRequest) (*model.UpdateServerMetadataResponse, error) {
 	requestDef := GenReqDefForUpdateServerMetadata()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateServerMetadataResponse), nil
@@ -517,7 +528,7 @@ func (c *EcsClient) UpdateServerMetadata(request *model.UpdateServerMetadataRequ
 func (c *EcsClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
 	requestDef := GenReqDefForShowJob()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowJobResponse), nil

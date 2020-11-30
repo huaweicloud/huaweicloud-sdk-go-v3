@@ -23,7 +23,8 @@ type ShowContentResponse struct {
 	// 编码方式：base64或者text/plain。
 	Encoding *ShowContentResponseEncoding `json:"encoding,omitempty"`
 	// 文件内容。
-	Content *string `json:"content,omitempty"`
+	Content        *string `json:"content,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowContentResponse) String() string {

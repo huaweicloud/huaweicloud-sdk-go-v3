@@ -16,6 +16,7 @@ import (
 // Response Object
 type ListSubCustomerDiscountsResponse struct {
 	SubCustomerDiscount *QuerySubCustomerDiscountV2 `json:"sub_customer_discount,omitempty"`
+	HttpStatusCode      int                         `json:"-"`
 }
 
 func (o ListSubCustomerDiscountsResponse) String() string {

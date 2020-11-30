@@ -19,6 +19,7 @@ type NeutronListFirewallGroupsResponse struct {
 	FirewallGroups *[]NeutronFirewallGroup `json:"firewall_groups,omitempty"`
 	// 分页信息
 	FirewallGroupsLinks *[]NeutronPageLink `json:"firewall_groups_links,omitempty"`
+	HttpStatusCode      int                `json:"-"`
 }
 
 func (o NeutronListFirewallGroupsResponse) String() string {

@@ -18,7 +18,8 @@ type ShowtIssueCompletionRateResponse struct {
 	// 不同类型的工作项完成率
 	IssueCompletionRates *[]IssueCompletionRateV4IssueCompletionRates `json:"issue_completion_rates,omitempty"`
 	// 总数
-	Total *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowtIssueCompletionRateResponse) String() string {

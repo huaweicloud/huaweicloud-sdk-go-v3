@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type CancelingAuthorizationV2Response struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CancelingAuthorizationV2Response) String() string {

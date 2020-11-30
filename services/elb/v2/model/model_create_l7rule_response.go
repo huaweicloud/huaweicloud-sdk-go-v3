@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type CreateL7ruleResponse struct {
-	Rule *L7ruleResp `json:"rule,omitempty"`
+	Rule           *L7ruleResp `json:"rule,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o CreateL7ruleResponse) String() string {

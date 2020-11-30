@@ -19,6 +19,7 @@ type NeutronListFloatingIpsResponse struct {
 	Floatingips *[]FloatingIpResp `json:"floatingips,omitempty"`
 	// marker分页结构
 	FloatingipsLinks *[]Pager `json:"floatingips_links,omitempty"`
+	HttpStatusCode   int      `json:"-"`
 }
 
 func (o NeutronListFloatingIpsResponse) String() string {

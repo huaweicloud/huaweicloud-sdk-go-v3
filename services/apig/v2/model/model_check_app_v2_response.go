@@ -20,7 +20,8 @@ type CheckAppV2Response struct {
 	// 描述
 	Remark *string `json:"remark,omitempty"`
 	// 编号
-	Id *string `json:"id,omitempty"`
+	Id             *string `json:"id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CheckAppV2Response) String() string {

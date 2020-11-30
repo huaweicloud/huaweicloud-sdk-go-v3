@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteScalingNotificationResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteScalingNotificationResponse) String() string {

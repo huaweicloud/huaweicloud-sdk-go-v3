@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type UpdatePostalResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdatePostalResponse) String() string {

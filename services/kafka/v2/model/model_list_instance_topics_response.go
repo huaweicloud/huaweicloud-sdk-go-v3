@@ -20,7 +20,8 @@ type ListInstanceTopicsResponse struct {
 	// 分页查询的大小。
 	Size *int32 `json:"size,omitempty"`
 	// Topic列表。
-	Topics *[]ListInstanceTopicsRespTopics `json:"topics,omitempty"`
+	Topics         *[]ListInstanceTopicsRespTopics `json:"topics,omitempty"`
+	HttpStatusCode int                             `json:"-"`
 }
 
 func (o ListInstanceTopicsResponse) String() string {

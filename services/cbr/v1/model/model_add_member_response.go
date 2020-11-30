@@ -18,7 +18,8 @@ type AddMemberResponse struct {
 	// 添加备份共享成员响应信息
 	Members *[]Member `json:"members,omitempty"`
 	//
-	Count *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o AddMemberResponse) String() string {

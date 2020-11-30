@@ -20,6 +20,7 @@ type ListSecurityGroupRulesResponse struct {
 	// 安全组规则列表响应体
 	SecurityGroupRules *[]SecurityGroupRule `json:"security_group_rules,omitempty"`
 	PageInfo           *PageInfo            `json:"page_info,omitempty"`
+	HttpStatusCode     int                  `json:"-"`
 }
 
 func (o ListSecurityGroupRulesResponse) String() string {

@@ -6,11 +6,11 @@ import (
 )
 
 type EpsClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewEpsClient(hcClient *http_client.HcHttpClient) *EpsClient {
-	return &EpsClient{hcClient: hcClient}
+	return &EpsClient{HcClient: hcClient}
 }
 
 func EpsClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func EpsClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *EpsClient) CreateEnterpriseProject(request *model.CreateEnterpriseProjectRequest) (*model.CreateEnterpriseProjectResponse, error) {
 	requestDef := GenReqDefForCreateEnterpriseProject()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateEnterpriseProjectResponse), nil
@@ -33,7 +33,7 @@ func (c *EpsClient) CreateEnterpriseProject(request *model.CreateEnterpriseProje
 func (c *EpsClient) DisableEnterpriseProject(request *model.DisableEnterpriseProjectRequest) (*model.DisableEnterpriseProjectResponse, error) {
 	requestDef := GenReqDefForDisableEnterpriseProject()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DisableEnterpriseProjectResponse), nil
@@ -44,7 +44,7 @@ func (c *EpsClient) DisableEnterpriseProject(request *model.DisableEnterprisePro
 func (c *EpsClient) EnableEnterpriseProject(request *model.EnableEnterpriseProjectRequest) (*model.EnableEnterpriseProjectResponse, error) {
 	requestDef := GenReqDefForEnableEnterpriseProject()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.EnableEnterpriseProjectResponse), nil
@@ -55,7 +55,7 @@ func (c *EpsClient) EnableEnterpriseProject(request *model.EnableEnterpriseProje
 func (c *EpsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*model.ListApiVersionsResponse, error) {
 	requestDef := GenReqDefForListApiVersions()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListApiVersionsResponse), nil
@@ -66,7 +66,7 @@ func (c *EpsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*mod
 func (c *EpsClient) ListEnterpriseProject(request *model.ListEnterpriseProjectRequest) (*model.ListEnterpriseProjectResponse, error) {
 	requestDef := GenReqDefForListEnterpriseProject()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListEnterpriseProjectResponse), nil
@@ -77,7 +77,7 @@ func (c *EpsClient) ListEnterpriseProject(request *model.ListEnterpriseProjectRe
 func (c *EpsClient) MigrateResource(request *model.MigrateResourceRequest) (*model.MigrateResourceResponse, error) {
 	requestDef := GenReqDefForMigrateResource()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.MigrateResourceResponse), nil
@@ -88,7 +88,7 @@ func (c *EpsClient) MigrateResource(request *model.MigrateResourceRequest) (*mod
 func (c *EpsClient) ModifyEnterpriseProject(request *model.ModifyEnterpriseProjectRequest) (*model.ModifyEnterpriseProjectResponse, error) {
 	requestDef := GenReqDefForModifyEnterpriseProject()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ModifyEnterpriseProjectResponse), nil
@@ -99,7 +99,7 @@ func (c *EpsClient) ModifyEnterpriseProject(request *model.ModifyEnterpriseProje
 func (c *EpsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model.ShowApiVersionResponse, error) {
 	requestDef := GenReqDefForShowApiVersion()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowApiVersionResponse), nil
@@ -110,7 +110,7 @@ func (c *EpsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model
 func (c *EpsClient) ShowEnterpriseProject(request *model.ShowEnterpriseProjectRequest) (*model.ShowEnterpriseProjectResponse, error) {
 	requestDef := GenReqDefForShowEnterpriseProject()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowEnterpriseProjectResponse), nil
@@ -121,7 +121,7 @@ func (c *EpsClient) ShowEnterpriseProject(request *model.ShowEnterpriseProjectRe
 func (c *EpsClient) ShowEnterpriseProjectQuota(request *model.ShowEnterpriseProjectQuotaRequest) (*model.ShowEnterpriseProjectQuotaResponse, error) {
 	requestDef := GenReqDefForShowEnterpriseProjectQuota()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowEnterpriseProjectQuotaResponse), nil
@@ -132,7 +132,7 @@ func (c *EpsClient) ShowEnterpriseProjectQuota(request *model.ShowEnterpriseProj
 func (c *EpsClient) ShowResourceBindEnterpriseProject(request *model.ShowResourceBindEnterpriseProjectRequest) (*model.ShowResourceBindEnterpriseProjectResponse, error) {
 	requestDef := GenReqDefForShowResourceBindEnterpriseProject()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowResourceBindEnterpriseProjectResponse), nil

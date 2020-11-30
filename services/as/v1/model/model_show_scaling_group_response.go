@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowScalingGroupResponse struct {
-	ScalingGroup *ScalingGroups `json:"scaling_group,omitempty"`
+	ScalingGroup   *ScalingGroups `json:"scaling_group,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowScalingGroupResponse) String() string {

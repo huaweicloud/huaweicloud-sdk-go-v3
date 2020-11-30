@@ -17,7 +17,8 @@ import (
 type ListCertificatesResponse struct {
 	Certificates *CertificateResp `json:"certificates,omitempty"`
 	// 证书的个数
-	InstanceNum *int32 `json:"instance_num,omitempty"`
+	InstanceNum    *int32 `json:"instance_num,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListCertificatesResponse) String() string {

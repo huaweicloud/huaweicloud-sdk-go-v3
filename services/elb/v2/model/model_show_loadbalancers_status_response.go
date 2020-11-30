@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type ShowLoadbalancersStatusResponse struct {
-	Statuses *StatusResp `json:"statuses,omitempty"`
+	Statuses       *StatusResp `json:"statuses,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o ShowLoadbalancersStatusResponse) String() string {

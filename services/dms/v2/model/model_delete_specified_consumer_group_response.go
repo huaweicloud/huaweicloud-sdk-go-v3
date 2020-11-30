@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteSpecifiedConsumerGroupResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteSpecifiedConsumerGroupResponse) String() string {

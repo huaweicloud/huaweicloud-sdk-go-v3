@@ -16,6 +16,7 @@ import (
 // Response Object
 type ModifyEnterpriseProjectResponse struct {
 	EnterpriseProject *EpDetail `json:"enterprise_project,omitempty"`
+	HttpStatusCode    int       `json:"-"`
 }
 
 func (o ModifyEnterpriseProjectResponse) String() string {

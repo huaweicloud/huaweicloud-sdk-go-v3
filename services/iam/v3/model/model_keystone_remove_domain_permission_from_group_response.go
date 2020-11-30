@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type KeystoneRemoveDomainPermissionFromGroupResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o KeystoneRemoveDomainPermissionFromGroupResponse) String() string {

@@ -15,7 +15,8 @@ import (
 
 // Response Object
 type UpdateDomainLoginPolicyResponse struct {
-	LoginPolicy *LoginPolicyResult `json:"login_policy,omitempty"`
+	LoginPolicy    *LoginPolicyResult `json:"login_policy,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o UpdateDomainLoginPolicyResponse) String() string {

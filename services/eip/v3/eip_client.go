@@ -6,11 +6,11 @@ import (
 )
 
 type EipClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewEipClient(hcClient *http_client.HcHttpClient) *EipClient {
-	return &EipClient{hcClient: hcClient}
+	return &EipClient{HcClient: hcClient}
 }
 
 func EipClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func EipClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *EipClient) AssociatePublicips(request *model.AssociatePublicipsRequest) (*model.AssociatePublicipsResponse, error) {
 	requestDef := GenReqDefForAssociatePublicips()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.AssociatePublicipsResponse), nil
@@ -33,7 +33,7 @@ func (c *EipClient) AssociatePublicips(request *model.AssociatePublicipsRequest)
 func (c *EipClient) DisassociatePublicips(request *model.DisassociatePublicipsRequest) (*model.DisassociatePublicipsResponse, error) {
 	requestDef := GenReqDefForDisassociatePublicips()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DisassociatePublicipsResponse), nil
@@ -44,7 +44,7 @@ func (c *EipClient) DisassociatePublicips(request *model.DisassociatePublicipsRe
 func (c *EipClient) ListPublicips(request *model.ListPublicipsRequest) (*model.ListPublicipsResponse, error) {
 	requestDef := GenReqDefForListPublicips()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListPublicipsResponse), nil
@@ -55,7 +55,7 @@ func (c *EipClient) ListPublicips(request *model.ListPublicipsRequest) (*model.L
 func (c *EipClient) ShowPublicip(request *model.ShowPublicipRequest) (*model.ShowPublicipResponse, error) {
 	requestDef := GenReqDefForShowPublicip()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowPublicipResponse), nil

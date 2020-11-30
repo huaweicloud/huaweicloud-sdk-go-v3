@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type DeleteSubnetResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteSubnetResponse) String() string {

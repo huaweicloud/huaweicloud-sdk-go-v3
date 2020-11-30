@@ -69,7 +69,8 @@ type GlanceCreateImageMetadataResponse struct {
 	// 镜像虚拟大小。单位为字节。
 	VirtualSize *int32 `json:"virtual_size,omitempty"`
 	// 镜像属性的集合，不表示具体的镜像属性
-	Properties *interface{} `json:"properties,omitempty"`
+	Properties     *interface{} `json:"properties,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o GlanceCreateImageMetadataResponse) String() string {

@@ -22,7 +22,8 @@ type ShowCusotmerAccountBalancesResponse struct {
 	// |参数名称：度量单位：1：元2：角3：分| |参数的约束及描述：度量单位：1：元2：角3：分|
 	MeasureId *int32 `json:"measure_id,omitempty"`
 	// |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
-	Currency *string `json:"currency,omitempty"`
+	Currency       *string `json:"currency,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowCusotmerAccountBalancesResponse) String() string {

@@ -20,7 +20,8 @@ type ListEncryptTaskResponse struct {
 	// 是否截断
 	IsTruncated *int32 `json:"is_truncated,omitempty"`
 	// 查询结果数量
-	Total *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListEncryptTaskResponse) String() string {

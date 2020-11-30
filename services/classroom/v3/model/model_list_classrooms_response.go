@@ -18,7 +18,8 @@ type ListClassroomsResponse struct {
 	// 课堂列表
 	Classrooms *[]ClassroomCard `json:"classrooms,omitempty"`
 	// 课堂总数
-	Total *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListClassroomsResponse) String() string {

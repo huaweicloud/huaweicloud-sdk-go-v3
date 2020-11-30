@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type CancelGrantResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CancelGrantResponse) String() string {

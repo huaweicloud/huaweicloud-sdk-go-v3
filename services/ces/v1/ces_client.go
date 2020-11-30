@@ -6,11 +6,11 @@ import (
 )
 
 type CesClient struct {
-	hcClient *http_client.HcHttpClient
+	HcClient *http_client.HcHttpClient
 }
 
 func NewCesClient(hcClient *http_client.HcHttpClient) *CesClient {
-	return &CesClient{hcClient: hcClient}
+	return &CesClient{HcClient: hcClient}
 }
 
 func CesClientBuilder() *http_client.HcHttpClientBuilder {
@@ -22,7 +22,7 @@ func CesClientBuilder() *http_client.HcHttpClientBuilder {
 func (c *CesClient) BatchListMetricData(request *model.BatchListMetricDataRequest) (*model.BatchListMetricDataResponse, error) {
 	requestDef := GenReqDefForBatchListMetricData()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.BatchListMetricDataResponse), nil
@@ -33,7 +33,7 @@ func (c *CesClient) BatchListMetricData(request *model.BatchListMetricDataReques
 func (c *CesClient) CreateAlarm(request *model.CreateAlarmRequest) (*model.CreateAlarmResponse, error) {
 	requestDef := GenReqDefForCreateAlarm()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateAlarmResponse), nil
@@ -44,7 +44,7 @@ func (c *CesClient) CreateAlarm(request *model.CreateAlarmRequest) (*model.Creat
 func (c *CesClient) CreateAlarmTemplate(request *model.CreateAlarmTemplateRequest) (*model.CreateAlarmTemplateResponse, error) {
 	requestDef := GenReqDefForCreateAlarmTemplate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateAlarmTemplateResponse), nil
@@ -55,7 +55,7 @@ func (c *CesClient) CreateAlarmTemplate(request *model.CreateAlarmTemplateReques
 func (c *CesClient) CreateEvents(request *model.CreateEventsRequest) (*model.CreateEventsResponse, error) {
 	requestDef := GenReqDefForCreateEvents()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateEventsResponse), nil
@@ -66,10 +66,21 @@ func (c *CesClient) CreateEvents(request *model.CreateEventsRequest) (*model.Cre
 func (c *CesClient) CreateMetricData(request *model.CreateMetricDataRequest) (*model.CreateMetricDataResponse, error) {
 	requestDef := GenReqDefForCreateMetricData()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.CreateMetricDataResponse), nil
+	}
+}
+
+//创建资源分组，资源分组支持将各类资源按照业务集中进行分组管理，可以从分组角度查看监控与告警信息，以提升运维效率。
+func (c *CesClient) CreateResourceGroup(request *model.CreateResourceGroupRequest) (*model.CreateResourceGroupResponse, error) {
+	requestDef := GenReqDefForCreateResourceGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateResourceGroupResponse), nil
 	}
 }
 
@@ -77,7 +88,7 @@ func (c *CesClient) CreateMetricData(request *model.CreateMetricDataRequest) (*m
 func (c *CesClient) DeleteAlarm(request *model.DeleteAlarmRequest) (*model.DeleteAlarmResponse, error) {
 	requestDef := GenReqDefForDeleteAlarm()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteAlarmResponse), nil
@@ -88,10 +99,21 @@ func (c *CesClient) DeleteAlarm(request *model.DeleteAlarmRequest) (*model.Delet
 func (c *CesClient) DeleteAlarmTemplate(request *model.DeleteAlarmTemplateRequest) (*model.DeleteAlarmTemplateResponse, error) {
 	requestDef := GenReqDefForDeleteAlarmTemplate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.DeleteAlarmTemplateResponse), nil
+	}
+}
+
+//删除一条资源分组。
+func (c *CesClient) DeleteResourceGroup(request *model.DeleteResourceGroupRequest) (*model.DeleteResourceGroupResponse, error) {
+	requestDef := GenReqDefForDeleteResourceGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteResourceGroupResponse), nil
 	}
 }
 
@@ -99,7 +121,7 @@ func (c *CesClient) DeleteAlarmTemplate(request *model.DeleteAlarmTemplateReques
 func (c *CesClient) ListAlarmHistories(request *model.ListAlarmHistoriesRequest) (*model.ListAlarmHistoriesResponse, error) {
 	requestDef := GenReqDefForListAlarmHistories()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListAlarmHistoriesResponse), nil
@@ -110,7 +132,7 @@ func (c *CesClient) ListAlarmHistories(request *model.ListAlarmHistoriesRequest)
 func (c *CesClient) ListAlarmTemplates(request *model.ListAlarmTemplatesRequest) (*model.ListAlarmTemplatesResponse, error) {
 	requestDef := GenReqDefForListAlarmTemplates()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListAlarmTemplatesResponse), nil
@@ -121,10 +143,32 @@ func (c *CesClient) ListAlarmTemplates(request *model.ListAlarmTemplatesRequest)
 func (c *CesClient) ListAlarms(request *model.ListAlarmsRequest) (*model.ListAlarmsResponse, error) {
 	requestDef := GenReqDefForListAlarms()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListAlarmsResponse), nil
+	}
+}
+
+//根据事件监控名称，查询该事件发生的详细信息。
+func (c *CesClient) ListEventDetail(request *model.ListEventDetailRequest) (*model.ListEventDetailResponse, error) {
+	requestDef := GenReqDefForListEventDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEventDetailResponse), nil
+	}
+}
+
+//查询事件监控列表，包括系统事件和自定义事件。
+func (c *CesClient) ListEvents(request *model.ListEventsRequest) (*model.ListEventsResponse, error) {
+	requestDef := GenReqDefForListEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEventsResponse), nil
 	}
 }
 
@@ -132,10 +176,21 @@ func (c *CesClient) ListAlarms(request *model.ListAlarmsRequest) (*model.ListAla
 func (c *CesClient) ListMetrics(request *model.ListMetricsRequest) (*model.ListMetricsResponse, error) {
 	requestDef := GenReqDefForListMetrics()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ListMetricsResponse), nil
+	}
+}
+
+//查询所创建的所有资源分组。
+func (c *CesClient) ListResourceGroup(request *model.ListResourceGroupRequest) (*model.ListResourceGroupResponse, error) {
+	requestDef := GenReqDefForListResourceGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceGroupResponse), nil
 	}
 }
 
@@ -143,7 +198,7 @@ func (c *CesClient) ListMetrics(request *model.ListMetricsRequest) (*model.ListM
 func (c *CesClient) ShowAlarm(request *model.ShowAlarmRequest) (*model.ShowAlarmResponse, error) {
 	requestDef := GenReqDefForShowAlarm()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowAlarmResponse), nil
@@ -154,7 +209,7 @@ func (c *CesClient) ShowAlarm(request *model.ShowAlarmRequest) (*model.ShowAlarm
 func (c *CesClient) ShowEventData(request *model.ShowEventDataRequest) (*model.ShowEventDataResponse, error) {
 	requestDef := GenReqDefForShowEventData()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowEventDataResponse), nil
@@ -165,7 +220,7 @@ func (c *CesClient) ShowEventData(request *model.ShowEventDataRequest) (*model.S
 func (c *CesClient) ShowMetricData(request *model.ShowMetricDataRequest) (*model.ShowMetricDataResponse, error) {
 	requestDef := GenReqDefForShowMetricData()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowMetricDataResponse), nil
@@ -176,7 +231,7 @@ func (c *CesClient) ShowMetricData(request *model.ShowMetricDataRequest) (*model
 func (c *CesClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
 	requestDef := GenReqDefForShowQuotas()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowQuotasResponse), nil
@@ -187,10 +242,21 @@ func (c *CesClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuo
 func (c *CesClient) ShowResourceGroup(request *model.ShowResourceGroupRequest) (*model.ShowResourceGroupResponse, error) {
 	requestDef := GenReqDefForShowResourceGroup()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.ShowResourceGroupResponse), nil
+	}
+}
+
+//修改告警规则。
+func (c *CesClient) UpdateAlarm(request *model.UpdateAlarmRequest) (*model.UpdateAlarmResponse, error) {
+	requestDef := GenReqDefForUpdateAlarm()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAlarmResponse), nil
 	}
 }
 
@@ -198,7 +264,7 @@ func (c *CesClient) ShowResourceGroup(request *model.ShowResourceGroupRequest) (
 func (c *CesClient) UpdateAlarmAction(request *model.UpdateAlarmActionRequest) (*model.UpdateAlarmActionResponse, error) {
 	requestDef := GenReqDefForUpdateAlarmAction()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateAlarmActionResponse), nil
@@ -209,9 +275,20 @@ func (c *CesClient) UpdateAlarmAction(request *model.UpdateAlarmActionRequest) (
 func (c *CesClient) UpdateAlarmTemplate(request *model.UpdateAlarmTemplateRequest) (*model.UpdateAlarmTemplateResponse, error) {
 	requestDef := GenReqDefForUpdateAlarmTemplate()
 
-	if resp, err := c.hcClient.Sync(request, requestDef); err != nil {
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
 		return resp.(*model.UpdateAlarmTemplateResponse), nil
+	}
+}
+
+//更新资源分组，资源分组支持将各类资源按照业务集中进行分组管理，可以从分组角度查看监控与告警信息，以提升运维效率。
+func (c *CesClient) UpdateResourceGroup(request *model.UpdateResourceGroupRequest) (*model.UpdateResourceGroupResponse, error) {
+	requestDef := GenReqDefForUpdateResourceGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateResourceGroupResponse), nil
 	}
 }

@@ -15,6 +15,7 @@ import (
 
 // Response Object
 type GlanceDeleteTagResponse struct {
+	HttpStatusCode int `json:"-"`
 }
 
 func (o GlanceDeleteTagResponse) String() string {
