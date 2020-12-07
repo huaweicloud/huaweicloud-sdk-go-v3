@@ -183,7 +183,7 @@ func (c *EipClient) CreatePublicipTag(request *model.CreatePublicipTagRequest) (
 	}
 }
 
-//删除弹性公网IP。
+//删除弹性公网IP,绑定状态eip不允许直接删除。
 func (c *EipClient) DeletePublicip(request *model.DeletePublicipRequest) (*model.DeletePublicipResponse, error) {
 	requestDef := GenReqDefForDeletePublicip()
 
