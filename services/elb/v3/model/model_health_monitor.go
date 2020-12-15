@@ -15,7 +15,7 @@ import (
 
 // 健康检查对象
 type HealthMonitor struct {
-	// 功能说明：管理状态true/false。使用说明：默认为true，true表示开启健康检查，false表示关闭健康检查。
+	// 功能说明：管理状态true/false。true表示开启健康检查，false表示关闭健康检查。
 	AdminStateUp bool `json:"admin_state_up"`
 	// 健康检查间隔
 	Delay int32 `json:"delay"`
@@ -43,7 +43,7 @@ type HealthMonitor struct {
 	Timeout int32 `json:"timeout"`
 	// 健康检查类型
 	Type string `json:"type"`
-	// 功能说明：健康检查测试member健康时发送的http请求路径。默认为“/”。使用说明：以“/”开头。仅当type为HTTP时生效。
+	// 功能说明：健康检查测试member健康时发送的http请求路径。使用说明：以“/”开头。仅当type为HTTP时生效。
 	UrlPath string `json:"url_path"`
 }
 

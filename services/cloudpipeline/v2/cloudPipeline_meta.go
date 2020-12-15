@@ -10,7 +10,8 @@ func GenReqDefForBatchShowPipelinesStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/pipelines/status").
-		WithResponse(new(model.BatchShowPipelinesStatusResponse))
+		WithResponse(new(model.BatchShowPipelinesStatusResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -61,7 +62,8 @@ func GenReqDefForListPipleineBuildResult() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/pipelines/build-result").
-		WithResponse(new(model.ListPipleineBuildResultResponse))
+		WithResponse(new(model.ListPipleineBuildResultResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -101,7 +103,8 @@ func GenReqDefForListTemplates() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/templates").
-		WithResponse(new(model.ListTemplatesResponse))
+		WithResponse(new(model.ListTemplatesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -168,7 +171,8 @@ func GenReqDefForRemovePipeline() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/pipelines/{pipeline_id}").
-		WithResponse(new(model.RemovePipelineResponse))
+		WithResponse(new(model.RemovePipelineResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -191,7 +195,8 @@ func GenReqDefForShowAgentStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/agents/{agent_id}/status").
-		WithResponse(new(model.ShowAgentStatusResponse))
+		WithResponse(new(model.ShowAgentStatusResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -214,7 +219,8 @@ func GenReqDefForShowInstanceStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/templates/{task_id}/status").
-		WithResponse(new(model.ShowInstanceStatusResponse))
+		WithResponse(new(model.ShowInstanceStatusResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -237,7 +243,8 @@ func GenReqDefForShowPipleineStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/pipelines/{pipeline_id}/status").
-		WithResponse(new(model.ShowPipleineStatusResponse))
+		WithResponse(new(model.ShowPipleineStatusResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -265,7 +272,8 @@ func GenReqDefForShowTemplateDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/templates/{template_id}").
-		WithResponse(new(model.ShowTemplateDetailResponse))
+		WithResponse(new(model.ShowTemplateDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -354,7 +362,8 @@ func GenReqDefForStopPipeline() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v3/pipelines/stop").
-		WithResponse(new(model.StopPipelineResponse))
+		WithResponse(new(model.StopPipelineResponse)).
+		WithContentType("application/json")
 
 	// request
 

@@ -10,7 +10,8 @@ func GenReqDefForAssociateAgencyWithAllProjectsPermission() *def.HttpRequestDef 
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}/inherited_to_projects").
-		WithResponse(new(model.AssociateAgencyWithAllProjectsPermissionResponse))
+		WithResponse(new(model.AssociateAgencyWithAllProjectsPermissionResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -36,7 +37,8 @@ func GenReqDefForAssociateAgencyWithDomainPermission() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}").
-		WithResponse(new(model.AssociateAgencyWithDomainPermissionResponse))
+		WithResponse(new(model.AssociateAgencyWithDomainPermissionResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -62,7 +64,8 @@ func GenReqDefForAssociateAgencyWithProjectPermission() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v3.0/OS-AGENCY/projects/{project_id}/agencies/{agency_id}/roles/{role_id}").
-		WithResponse(new(model.AssociateAgencyWithProjectPermissionResponse))
+		WithResponse(new(model.AssociateAgencyWithProjectPermissionResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -88,7 +91,8 @@ func GenReqDefForCheckAllProjectsPermissionForAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodHead).
 		WithPath("/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}/inherited_to_projects").
-		WithResponse(new(model.CheckAllProjectsPermissionForAgencyResponse))
+		WithResponse(new(model.CheckAllProjectsPermissionForAgencyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -114,7 +118,8 @@ func GenReqDefForCheckDomainPermissionForAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodHead).
 		WithPath("/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}").
-		WithResponse(new(model.CheckDomainPermissionForAgencyResponse))
+		WithResponse(new(model.CheckDomainPermissionForAgencyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -140,7 +145,8 @@ func GenReqDefForCheckProjectPermissionForAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodHead).
 		WithPath("/v3.0/OS-AGENCY/projects/{project_id}/agencies/{agency_id}/roles/{role_id}").
-		WithResponse(new(model.CheckProjectPermissionForAgencyResponse))
+		WithResponse(new(model.CheckProjectPermissionForAgencyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -301,7 +307,8 @@ func GenReqDefForDeleteAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3.0/OS-AGENCY/agencies/{agency_id}").
-		WithResponse(new(model.DeleteAgencyResponse))
+		WithResponse(new(model.DeleteAgencyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -319,7 +326,8 @@ func GenReqDefForDeleteCustomPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3.0/OS-ROLE/roles/{role_id}").
-		WithResponse(new(model.DeleteCustomPolicyResponse))
+		WithResponse(new(model.DeleteCustomPolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -337,7 +345,8 @@ func GenReqDefForDeleteDomainGroupInheritedRole() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/{role_id}/inherited_to_projects").
-		WithResponse(new(model.DeleteDomainGroupInheritedRoleResponse))
+		WithResponse(new(model.DeleteDomainGroupInheritedRoleResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -363,7 +372,8 @@ func GenReqDefForKeystoneAddUserToGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v3/groups/{group_id}/users/{user_id}").
-		WithResponse(new(model.KeystoneAddUserToGroupResponse))
+		WithResponse(new(model.KeystoneAddUserToGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -385,7 +395,8 @@ func GenReqDefForKeystoneAssociateGroupWithDomainPermission() *def.HttpRequestDe
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v3/domains/{domain_id}/groups/{group_id}/roles/{role_id}").
-		WithResponse(new(model.KeystoneAssociateGroupWithDomainPermissionResponse))
+		WithResponse(new(model.KeystoneAssociateGroupWithDomainPermissionResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -411,7 +422,8 @@ func GenReqDefForKeystoneAssociateGroupWithProjectPermission() *def.HttpRequestD
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v3/projects/{project_id}/groups/{group_id}/roles/{role_id}").
-		WithResponse(new(model.KeystoneAssociateGroupWithProjectPermissionResponse))
+		WithResponse(new(model.KeystoneAssociateGroupWithProjectPermissionResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -437,7 +449,8 @@ func GenReqDefForKeystoneCheckDomainPermissionForGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodHead).
 		WithPath("/v3/domains/{domain_id}/groups/{group_id}/roles/{role_id}").
-		WithResponse(new(model.KeystoneCheckDomainPermissionForGroupResponse))
+		WithResponse(new(model.KeystoneCheckDomainPermissionForGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -463,7 +476,8 @@ func GenReqDefForKeystoneCheckProjectPermissionForGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodHead).
 		WithPath("/v3/projects/{project_id}/groups/{group_id}/roles/{role_id}").
-		WithResponse(new(model.KeystoneCheckProjectPermissionForGroupResponse))
+		WithResponse(new(model.KeystoneCheckProjectPermissionForGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -489,7 +503,8 @@ func GenReqDefForKeystoneCheckUserInGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodHead).
 		WithPath("/v3/groups/{group_id}/users/{user_id}").
-		WithResponse(new(model.KeystoneCheckUserInGroupResponse))
+		WithResponse(new(model.KeystoneCheckUserInGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -511,7 +526,8 @@ func GenReqDefForKeystoneCheckroleForGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodHead).
 		WithPath("/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/{role_id}/inherited_to_projects").
-		WithResponse(new(model.KeystoneCheckroleForGroupResponse))
+		WithResponse(new(model.KeystoneCheckroleForGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -673,7 +689,8 @@ func GenReqDefForKeystoneDeleteGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/groups/{group_id}").
-		WithResponse(new(model.KeystoneDeleteGroupResponse))
+		WithResponse(new(model.KeystoneDeleteGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -691,7 +708,8 @@ func GenReqDefForKeystoneDeleteIdentityProvider() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/OS-FEDERATION/identity_providers/{id}").
-		WithResponse(new(model.KeystoneDeleteIdentityProviderResponse))
+		WithResponse(new(model.KeystoneDeleteIdentityProviderResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -709,7 +727,8 @@ func GenReqDefForKeystoneDeleteMapping() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/OS-FEDERATION/mappings/{id}").
-		WithResponse(new(model.KeystoneDeleteMappingResponse))
+		WithResponse(new(model.KeystoneDeleteMappingResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -727,7 +746,8 @@ func GenReqDefForKeystoneDeleteProtocol() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}").
-		WithResponse(new(model.KeystoneDeleteProtocolResponse))
+		WithResponse(new(model.KeystoneDeleteProtocolResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -749,7 +769,8 @@ func GenReqDefForKeystoneListAllProjectPermissionsForGroup() *def.HttpRequestDef
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/inherited_to_projects").
-		WithResponse(new(model.KeystoneListAllProjectPermissionsForGroupResponse))
+		WithResponse(new(model.KeystoneListAllProjectPermissionsForGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -771,7 +792,8 @@ func GenReqDefForKeystoneListAuthDomains() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/auth/domains").
-		WithResponse(new(model.KeystoneListAuthDomainsResponse))
+		WithResponse(new(model.KeystoneListAuthDomainsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -785,7 +807,8 @@ func GenReqDefForKeystoneListAuthProjects() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/auth/projects").
-		WithResponse(new(model.KeystoneListAuthProjectsResponse))
+		WithResponse(new(model.KeystoneListAuthProjectsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -799,7 +822,8 @@ func GenReqDefForKeystoneListDomainPermissionsForGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/domains/{domain_id}/groups/{group_id}/roles").
-		WithResponse(new(model.KeystoneListDomainPermissionsForGroupResponse))
+		WithResponse(new(model.KeystoneListDomainPermissionsForGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -821,7 +845,8 @@ func GenReqDefForKeystoneListEndpoints() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/endpoints").
-		WithResponse(new(model.KeystoneListEndpointsResponse))
+		WithResponse(new(model.KeystoneListEndpointsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -844,7 +869,8 @@ func GenReqDefForKeystoneListGroups() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/groups").
-		WithResponse(new(model.KeystoneListGroupsResponse))
+		WithResponse(new(model.KeystoneListGroupsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -867,7 +893,8 @@ func GenReqDefForKeystoneListIdentityProviders() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/OS-FEDERATION/identity_providers").
-		WithResponse(new(model.KeystoneListIdentityProvidersResponse))
+		WithResponse(new(model.KeystoneListIdentityProvidersResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -881,7 +908,8 @@ func GenReqDefForKeystoneListMappings() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/OS-FEDERATION/mappings").
-		WithResponse(new(model.KeystoneListMappingsResponse))
+		WithResponse(new(model.KeystoneListMappingsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -895,7 +923,8 @@ func GenReqDefForKeystoneListPermissions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/roles").
-		WithResponse(new(model.KeystoneListPermissionsResponse))
+		WithResponse(new(model.KeystoneListPermissionsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -926,7 +955,8 @@ func GenReqDefForKeystoneListProjectPermissionsForGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/projects/{project_id}/groups/{group_id}/roles").
-		WithResponse(new(model.KeystoneListProjectPermissionsForGroupResponse))
+		WithResponse(new(model.KeystoneListProjectPermissionsForGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -948,7 +978,8 @@ func GenReqDefForKeystoneListProjects() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/projects").
-		WithResponse(new(model.KeystoneListProjectsResponse))
+		WithResponse(new(model.KeystoneListProjectsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -991,7 +1022,8 @@ func GenReqDefForKeystoneListProjectsForUser() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/users/{user_id}/projects").
-		WithResponse(new(model.KeystoneListProjectsForUserResponse))
+		WithResponse(new(model.KeystoneListProjectsForUserResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1009,7 +1041,8 @@ func GenReqDefForKeystoneListProtocols() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/OS-FEDERATION/identity_providers/{idp_id}/protocols").
-		WithResponse(new(model.KeystoneListProtocolsResponse))
+		WithResponse(new(model.KeystoneListProtocolsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1027,7 +1060,8 @@ func GenReqDefForKeystoneListRegions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/regions").
-		WithResponse(new(model.KeystoneListRegionsResponse))
+		WithResponse(new(model.KeystoneListRegionsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1041,7 +1075,8 @@ func GenReqDefForKeystoneListServices() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/services").
-		WithResponse(new(model.KeystoneListServicesResponse))
+		WithResponse(new(model.KeystoneListServicesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1060,7 +1095,8 @@ func GenReqDefForKeystoneListUsersForGroupByAdmin() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/groups/{group_id}/users").
-		WithResponse(new(model.KeystoneListUsersForGroupByAdminResponse))
+		WithResponse(new(model.KeystoneListUsersForGroupByAdminResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1078,7 +1114,8 @@ func GenReqDefForKeystoneListVersions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/").
-		WithResponse(new(model.KeystoneListVersionsResponse))
+		WithResponse(new(model.KeystoneListVersionsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1092,7 +1129,8 @@ func GenReqDefForKeystoneRemoveDomainPermissionFromGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/domains/{domain_id}/groups/{group_id}/roles/{role_id}").
-		WithResponse(new(model.KeystoneRemoveDomainPermissionFromGroupResponse))
+		WithResponse(new(model.KeystoneRemoveDomainPermissionFromGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1118,7 +1156,8 @@ func GenReqDefForKeystoneRemoveProjectPermissionFromGroup() *def.HttpRequestDef 
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/projects/{project_id}/groups/{group_id}/roles/{role_id}").
-		WithResponse(new(model.KeystoneRemoveProjectPermissionFromGroupResponse))
+		WithResponse(new(model.KeystoneRemoveProjectPermissionFromGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1144,7 +1183,8 @@ func GenReqDefForKeystoneRemoveUserFromGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/groups/{group_id}/users/{user_id}").
-		WithResponse(new(model.KeystoneRemoveUserFromGroupResponse))
+		WithResponse(new(model.KeystoneRemoveUserFromGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1166,7 +1206,8 @@ func GenReqDefForKeystoneShowCatalog() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/auth/catalog").
-		WithResponse(new(model.KeystoneShowCatalogResponse))
+		WithResponse(new(model.KeystoneShowCatalogResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1180,7 +1221,8 @@ func GenReqDefForKeystoneShowEndpoint() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/endpoints/{endpoint_id}").
-		WithResponse(new(model.KeystoneShowEndpointResponse))
+		WithResponse(new(model.KeystoneShowEndpointResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1198,7 +1240,8 @@ func GenReqDefForKeystoneShowGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/groups/{group_id}").
-		WithResponse(new(model.KeystoneShowGroupResponse))
+		WithResponse(new(model.KeystoneShowGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1216,7 +1259,8 @@ func GenReqDefForKeystoneShowIdentityProvider() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/OS-FEDERATION/identity_providers/{id}").
-		WithResponse(new(model.KeystoneShowIdentityProviderResponse))
+		WithResponse(new(model.KeystoneShowIdentityProviderResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1234,7 +1278,8 @@ func GenReqDefForKeystoneShowMapping() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/OS-FEDERATION/mappings/{id}").
-		WithResponse(new(model.KeystoneShowMappingResponse))
+		WithResponse(new(model.KeystoneShowMappingResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1252,7 +1297,8 @@ func GenReqDefForKeystoneShowPermission() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/roles/{role_id}").
-		WithResponse(new(model.KeystoneShowPermissionResponse))
+		WithResponse(new(model.KeystoneShowPermissionResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1270,7 +1316,8 @@ func GenReqDefForKeystoneShowProject() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/projects/{project_id}").
-		WithResponse(new(model.KeystoneShowProjectResponse))
+		WithResponse(new(model.KeystoneShowProjectResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1288,7 +1335,8 @@ func GenReqDefForKeystoneShowProtocol() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}").
-		WithResponse(new(model.KeystoneShowProtocolResponse))
+		WithResponse(new(model.KeystoneShowProtocolResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1310,7 +1358,8 @@ func GenReqDefForKeystoneShowRegion() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/regions/{region_id}").
-		WithResponse(new(model.KeystoneShowRegionResponse))
+		WithResponse(new(model.KeystoneShowRegionResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1328,7 +1377,8 @@ func GenReqDefForKeystoneShowSecurityCompliance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/domains/{domain_id}/config/security_compliance").
-		WithResponse(new(model.KeystoneShowSecurityComplianceResponse))
+		WithResponse(new(model.KeystoneShowSecurityComplianceResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1346,7 +1396,8 @@ func GenReqDefForKeystoneShowSecurityComplianceByOption() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/domains/{domain_id}/config/security_compliance/{option}").
-		WithResponse(new(model.KeystoneShowSecurityComplianceByOptionResponse))
+		WithResponse(new(model.KeystoneShowSecurityComplianceByOptionResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1368,7 +1419,8 @@ func GenReqDefForKeystoneShowService() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/services/{service_id}").
-		WithResponse(new(model.KeystoneShowServiceResponse))
+		WithResponse(new(model.KeystoneShowServiceResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1386,7 +1438,8 @@ func GenReqDefForKeystoneShowVersion() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3").
-		WithResponse(new(model.KeystoneShowVersionResponse))
+		WithResponse(new(model.KeystoneShowVersionResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1519,7 +1572,8 @@ func GenReqDefForListAgencies() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-AGENCY/agencies").
-		WithResponse(new(model.ListAgenciesResponse))
+		WithResponse(new(model.ListAgenciesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1546,7 +1600,8 @@ func GenReqDefForListAllProjectsPermissionsForAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/inherited_to_projects").
-		WithResponse(new(model.ListAllProjectsPermissionsForAgencyResponse))
+		WithResponse(new(model.ListAllProjectsPermissionsForAgencyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1568,7 +1623,8 @@ func GenReqDefForListCustomPolicies() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-ROLE/roles").
-		WithResponse(new(model.ListCustomPoliciesResponse))
+		WithResponse(new(model.ListCustomPoliciesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1591,7 +1647,8 @@ func GenReqDefForListDomainPermissionsForAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles").
-		WithResponse(new(model.ListDomainPermissionsForAgencyResponse))
+		WithResponse(new(model.ListDomainPermissionsForAgencyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1613,7 +1670,8 @@ func GenReqDefForListProjectPermissionsForAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-AGENCY/projects/{project_id}/agencies/{agency_id}/roles").
-		WithResponse(new(model.ListProjectPermissionsForAgencyResponse))
+		WithResponse(new(model.ListProjectPermissionsForAgencyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1635,7 +1693,8 @@ func GenReqDefForRemoveAllProjectsPermissionFromAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}/inherited_to_projects").
-		WithResponse(new(model.RemoveAllProjectsPermissionFromAgencyResponse))
+		WithResponse(new(model.RemoveAllProjectsPermissionFromAgencyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1661,7 +1720,8 @@ func GenReqDefForRemoveDomainPermissionFromAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}").
-		WithResponse(new(model.RemoveDomainPermissionFromAgencyResponse))
+		WithResponse(new(model.RemoveDomainPermissionFromAgencyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1687,7 +1747,8 @@ func GenReqDefForRemoveProjectPermissionFromAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3.0/OS-AGENCY/projects/{project_id}/agencies/{agency_id}/roles/{role_id}").
-		WithResponse(new(model.RemoveProjectPermissionFromAgencyResponse))
+		WithResponse(new(model.RemoveProjectPermissionFromAgencyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1713,7 +1774,8 @@ func GenReqDefForShowAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-AGENCY/agencies/{agency_id}").
-		WithResponse(new(model.ShowAgencyResponse))
+		WithResponse(new(model.ShowAgencyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1731,7 +1793,8 @@ func GenReqDefForShowCustomPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-ROLE/roles/{role_id}").
-		WithResponse(new(model.ShowCustomPolicyResponse))
+		WithResponse(new(model.ShowCustomPolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1749,7 +1812,8 @@ func GenReqDefForShowDomainApiAclPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/api-acl-policy").
-		WithResponse(new(model.ShowDomainApiAclPolicyResponse))
+		WithResponse(new(model.ShowDomainApiAclPolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1767,7 +1831,8 @@ func GenReqDefForShowDomainConsoleAclPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/console-acl-policy").
-		WithResponse(new(model.ShowDomainConsoleAclPolicyResponse))
+		WithResponse(new(model.ShowDomainConsoleAclPolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1785,7 +1850,8 @@ func GenReqDefForShowDomainLoginPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/login-policy").
-		WithResponse(new(model.ShowDomainLoginPolicyResponse))
+		WithResponse(new(model.ShowDomainLoginPolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1803,7 +1869,8 @@ func GenReqDefForShowDomainPasswordPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/password-policy").
-		WithResponse(new(model.ShowDomainPasswordPolicyResponse))
+		WithResponse(new(model.ShowDomainPasswordPolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1821,7 +1888,8 @@ func GenReqDefForShowDomainProtectPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/protect-policy").
-		WithResponse(new(model.ShowDomainProtectPolicyResponse))
+		WithResponse(new(model.ShowDomainProtectPolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1839,7 +1907,8 @@ func GenReqDefForShowDomainQuota() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-QUOTA/domains/{domain_id}").
-		WithResponse(new(model.ShowDomainQuotaResponse))
+		WithResponse(new(model.ShowDomainQuotaResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1862,7 +1931,8 @@ func GenReqDefForShowMetadata() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3-ext/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}/metadata").
-		WithResponse(new(model.ShowMetadataResponse))
+		WithResponse(new(model.ShowMetadataResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1884,7 +1954,8 @@ func GenReqDefForShowProjectDetailsAndStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3-ext/projects/{project_id}").
-		WithResponse(new(model.ShowProjectDetailsAndStatusResponse))
+		WithResponse(new(model.ShowProjectDetailsAndStatusResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1902,7 +1973,8 @@ func GenReqDefForShowProjectQuota() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-QUOTA/projects/{project_id}").
-		WithResponse(new(model.ShowProjectQuotaResponse))
+		WithResponse(new(model.ShowProjectQuotaResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2035,7 +2107,8 @@ func GenReqDefForUpdateDomainGroupInheritRole() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/{role_id}/inherited_to_projects").
-		WithResponse(new(model.UpdateDomainGroupInheritRoleResponse))
+		WithResponse(new(model.UpdateDomainGroupInheritRoleResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2210,7 +2283,8 @@ func GenReqDefForDeletePermanentAccessKey() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3.0/OS-CREDENTIAL/credentials/{access_key}").
-		WithResponse(new(model.DeletePermanentAccessKeyResponse))
+		WithResponse(new(model.DeletePermanentAccessKeyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2228,7 +2302,8 @@ func GenReqDefForListPermanentAccessKeys() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-CREDENTIAL/credentials").
-		WithResponse(new(model.ListPermanentAccessKeysResponse))
+		WithResponse(new(model.ListPermanentAccessKeysResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -2247,7 +2322,8 @@ func GenReqDefForShowPermanentAccessKey() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-CREDENTIAL/credentials/{access_key}").
-		WithResponse(new(model.ShowPermanentAccessKeyResponse))
+		WithResponse(new(model.ShowPermanentAccessKeyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2364,7 +2440,8 @@ func GenReqDefForDeleteMfaDevice() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3.0/OS-MFA/virtual-mfa-devices").
-		WithResponse(new(model.DeleteMfaDeviceResponse))
+		WithResponse(new(model.DeleteMfaDeviceResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -2406,7 +2483,8 @@ func GenReqDefForKeystoneDeleteUser() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/users/{user_id}").
-		WithResponse(new(model.KeystoneDeleteUserResponse))
+		WithResponse(new(model.KeystoneDeleteUserResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2424,7 +2502,8 @@ func GenReqDefForKeystoneListGroupsForUser() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/users/{user_id}/groups").
-		WithResponse(new(model.KeystoneListGroupsForUserResponse))
+		WithResponse(new(model.KeystoneListGroupsForUserResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2442,7 +2521,8 @@ func GenReqDefForKeystoneListUsers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/users").
-		WithResponse(new(model.KeystoneListUsersResponse))
+		WithResponse(new(model.KeystoneListUsersResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -2473,7 +2553,8 @@ func GenReqDefForKeystoneShowUser() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/users/{user_id}").
-		WithResponse(new(model.KeystoneShowUserResponse))
+		WithResponse(new(model.KeystoneShowUserResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2537,7 +2618,8 @@ func GenReqDefForListUserLoginProtects() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-USER/login-protects").
-		WithResponse(new(model.ListUserLoginProtectsResponse))
+		WithResponse(new(model.ListUserLoginProtectsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -2551,7 +2633,8 @@ func GenReqDefForListUserMfaDevices() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-MFA/virtual-mfa-devices").
-		WithResponse(new(model.ListUserMfaDevicesResponse))
+		WithResponse(new(model.ListUserMfaDevicesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -2565,7 +2648,8 @@ func GenReqDefForShowUser() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-USER/users/{user_id}").
-		WithResponse(new(model.ShowUserResponse))
+		WithResponse(new(model.ShowUserResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2583,7 +2667,8 @@ func GenReqDefForShowUserLoginProtect() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-USER/users/{user_id}/login-protect").
-		WithResponse(new(model.ShowUserLoginProtectResponse))
+		WithResponse(new(model.ShowUserLoginProtectResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2601,7 +2686,8 @@ func GenReqDefForShowUserMfaDevice() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3.0/OS-MFA/users/{user_id}/virtual-mfa-device").
-		WithResponse(new(model.ShowUserMfaDeviceResponse))
+		WithResponse(new(model.ShowUserMfaDeviceResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2778,7 +2864,8 @@ func GenReqDefForKeystoneValidateToken() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/auth/tokens").
-		WithResponse(new(model.KeystoneValidateTokenResponse))
+		WithResponse(new(model.KeystoneValidateTokenResponse)).
+		WithContentType("application/json")
 
 	// request
 

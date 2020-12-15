@@ -29,7 +29,8 @@ func GenReqDefForDeleteAnimatedGraphicsTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/animated-graphics").
-		WithResponse(new(model.DeleteAnimatedGraphicsTaskResponse))
+		WithResponse(new(model.DeleteAnimatedGraphicsTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -48,7 +49,8 @@ func GenReqDefForListAnimatedGraphicsTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/animated-graphics").
-		WithResponse(new(model.ListAnimatedGraphicsTaskResponse))
+		WithResponse(new(model.ListAnimatedGraphicsTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -111,7 +113,8 @@ func GenReqDefForDeleteEncryptTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/encryptions").
-		WithResponse(new(model.DeleteEncryptTaskResponse))
+		WithResponse(new(model.DeleteEncryptTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -130,7 +133,8 @@ func GenReqDefForListEncryptTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/encryptions").
-		WithResponse(new(model.ListEncryptTaskResponse))
+		WithResponse(new(model.ListEncryptTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -188,7 +192,8 @@ func GenReqDefForDeleteExtractTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/extract-metadata").
-		WithResponse(new(model.DeleteExtractTaskResponse))
+		WithResponse(new(model.DeleteExtractTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -207,7 +212,8 @@ func GenReqDefForListExtractTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/extract-metadata").
-		WithResponse(new(model.ListExtractTaskResponse))
+		WithResponse(new(model.ListExtractTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -251,7 +257,8 @@ func GenReqDefForListTranscodeDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/transcodings/detail").
-		WithResponse(new(model.ListTranscodeDetailResponse))
+		WithResponse(new(model.ListTranscodeDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -270,7 +277,8 @@ func GenReqDefForCancelRemuxTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/remux").
-		WithResponse(new(model.CancelRemuxTaskResponse))
+		WithResponse(new(model.CancelRemuxTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -327,7 +335,8 @@ func GenReqDefForDeleteRemuxTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/remux/task").
-		WithResponse(new(model.DeleteRemuxTaskResponse))
+		WithResponse(new(model.DeleteRemuxTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -346,7 +355,8 @@ func GenReqDefForListRemuxTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/remux").
-		WithResponse(new(model.ListRemuxTaskResponse))
+		WithResponse(new(model.ListRemuxTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -412,7 +422,8 @@ func GenReqDefForDeleteTemplateGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/template_group/transcodings").
-		WithResponse(new(model.DeleteTemplateGroupResponse))
+		WithResponse(new(model.DeleteTemplateGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -431,7 +442,8 @@ func GenReqDefForListTemplateGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/template_group/transcodings").
-		WithResponse(new(model.ListTemplateGroupResponse))
+		WithResponse(new(model.ListTemplateGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -500,7 +512,8 @@ func GenReqDefForDeleteThumbnailsTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/thumbnails").
-		WithResponse(new(model.DeleteThumbnailsTaskResponse))
+		WithResponse(new(model.DeleteThumbnailsTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -519,7 +532,8 @@ func GenReqDefForListThumbnailsTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/thumbnails").
-		WithResponse(new(model.ListThumbnailsTaskResponse))
+		WithResponse(new(model.ListThumbnailsTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -582,7 +596,8 @@ func GenReqDefForDeleteTranscodingTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/transcodings").
-		WithResponse(new(model.DeleteTranscodingTaskResponse))
+		WithResponse(new(model.DeleteTranscodingTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -601,7 +616,8 @@ func GenReqDefForListTranscodingTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/transcodings").
-		WithResponse(new(model.ListTranscodingTaskResponse))
+		WithResponse(new(model.ListTranscodingTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -664,7 +680,8 @@ func GenReqDefForDeleteTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/template/transcodings").
-		WithResponse(new(model.DeleteTemplateResponse))
+		WithResponse(new(model.DeleteTemplateResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -683,7 +700,8 @@ func GenReqDefForListTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/template/transcodings").
-		WithResponse(new(model.ListTemplateResponse))
+		WithResponse(new(model.ListTemplateResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -748,7 +766,8 @@ func GenReqDefForDeleteWatermarkTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/template/watermark").
-		WithResponse(new(model.DeleteWatermarkTemplateResponse))
+		WithResponse(new(model.DeleteWatermarkTemplateResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -767,7 +786,8 @@ func GenReqDefForListWatermarkTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/template/watermark").
-		WithResponse(new(model.ListWatermarkTemplateResponse))
+		WithResponse(new(model.ListWatermarkTemplateResponse)).
+		WithContentType("application/json")
 
 	// request
 

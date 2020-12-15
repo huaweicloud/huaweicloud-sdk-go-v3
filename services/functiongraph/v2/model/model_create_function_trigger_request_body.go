@@ -22,7 +22,7 @@ type CreateFunctionTriggerRequestBody struct {
 	// 消息代码。
 	EventTypeCode *string `json:"event_type_code,omitempty"`
 	// 事件结构体。
-	EventData map[string]string `json:"event_data"`
+	EventData *interface{} `json:"event_data"`
 }
 
 func (o CreateFunctionTriggerRequestBody) String() string {

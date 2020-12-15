@@ -29,6 +29,28 @@ func (c *FunctionGraphClient) AsyncInvokeFunction(request *model.AsyncInvokeFunc
 	}
 }
 
+//创建依赖包。
+func (c *FunctionGraphClient) CreateDependency(request *model.CreateDependencyRequest) (*model.CreateDependencyResponse, error) {
+	requestDef := GenReqDefForCreateDependency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDependencyResponse), nil
+	}
+}
+
+//创建测试事件。
+func (c *FunctionGraphClient) CreateEvent(request *model.CreateEventRequest) (*model.CreateEventResponse, error) {
+	requestDef := GenReqDefForCreateEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEventResponse), nil
+	}
+}
+
 //创建指定的函数。
 func (c *FunctionGraphClient) CreateFunction(request *model.CreateFunctionRequest) (*model.CreateFunctionResponse, error) {
 	requestDef := GenReqDefForCreateFunction()
@@ -62,6 +84,28 @@ func (c *FunctionGraphClient) CreateVersionAlias(request *model.CreateVersionAli
 	}
 }
 
+//删除指定的依赖包。
+func (c *FunctionGraphClient) DeleteDependency(request *model.DeleteDependencyRequest) (*model.DeleteDependencyResponse, error) {
+	requestDef := GenReqDefForDeleteDependency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDependencyResponse), nil
+	}
+}
+
+//删除测试事件。
+func (c *FunctionGraphClient) DeleteEvent(request *model.DeleteEventRequest) (*model.DeleteEventResponse, error) {
+	requestDef := GenReqDefForDeleteEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEventResponse), nil
+	}
+}
+
 //删除指定的函数或者特定的版本（不允许删除latest版本）。  如果URN中包含函数版本或者别名，则删除特定的函数版本或者别名指向的版本以及该版本关联的trigger。 如果URN中不包含版本或者别名，则删除整个函数，包含所有版本以及别名，触发器。
 func (c *FunctionGraphClient) DeleteFunction(request *model.DeleteFunctionRequest) (*model.DeleteFunctionResponse, error) {
 	requestDef := GenReqDefForDeleteFunction()
@@ -92,6 +136,28 @@ func (c *FunctionGraphClient) InvokeFunction(request *model.InvokeFunctionReques
 		return nil, err
 	} else {
 		return resp.(*model.InvokeFunctionResponse), nil
+	}
+}
+
+//获取依赖包列表。
+func (c *FunctionGraphClient) ListDependencies(request *model.ListDependenciesRequest) (*model.ListDependenciesResponse, error) {
+	requestDef := GenReqDefForListDependencies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDependenciesResponse), nil
+	}
+}
+
+//获取指定函数的测试事件列表。
+func (c *FunctionGraphClient) ListEvents(request *model.ListEventsRequest) (*model.ListEventsResponse, error) {
+	requestDef := GenReqDefForListEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEventsResponse), nil
 	}
 }
 
@@ -161,6 +227,28 @@ func (c *FunctionGraphClient) ListVersionAliases(request *model.ListVersionAlias
 	}
 }
 
+//获取指定依赖包。
+func (c *FunctionGraphClient) ShowDependency(request *model.ShowDependencyRequest) (*model.ShowDependencyResponse, error) {
+	requestDef := GenReqDefForShowDependency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDependencyResponse), nil
+	}
+}
+
+//获取测试事件详细信息。
+func (c *FunctionGraphClient) ShowEvent(request *model.ShowEventRequest) (*model.ShowEventResponse, error) {
+	requestDef := GenReqDefForShowEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEventResponse), nil
+	}
+}
+
 //获取指定函数的代码。
 func (c *FunctionGraphClient) ShowFunctionCode(request *model.ShowFunctionCodeRequest) (*model.ShowFunctionCodeResponse, error) {
 	requestDef := GenReqDefForShowFunctionCode()
@@ -194,6 +282,28 @@ func (c *FunctionGraphClient) ShowVersionAlias(request *model.ShowVersionAliasRe
 	}
 }
 
+//更新依赖包指定依赖包。
+func (c *FunctionGraphClient) UpdateDependency(request *model.UpdateDependencyRequest) (*model.UpdateDependencyResponse, error) {
+	requestDef := GenReqDefForUpdateDependency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDependencyResponse), nil
+	}
+}
+
+//更新测试事件。
+func (c *FunctionGraphClient) UpdateEvent(request *model.UpdateEventRequest) (*model.UpdateEventResponse, error) {
+	requestDef := GenReqDefForUpdateEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEventResponse), nil
+	}
+}
+
 //修改指定的函数的代码。
 func (c *FunctionGraphClient) UpdateFunctionCode(request *model.UpdateFunctionCodeRequest) (*model.UpdateFunctionCodeResponse, error) {
 	requestDef := GenReqDefForUpdateFunctionCode()
@@ -213,6 +323,17 @@ func (c *FunctionGraphClient) UpdateFunctionConfig(request *model.UpdateFunction
 		return nil, err
 	} else {
 		return resp.(*model.UpdateFunctionConfigResponse), nil
+	}
+}
+
+//为函数绑定预留实例
+func (c *FunctionGraphClient) UpdateFunctionReservedInstances(request *model.UpdateFunctionReservedInstancesRequest) (*model.UpdateFunctionReservedInstancesResponse, error) {
+	requestDef := GenReqDefForUpdateFunctionReservedInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFunctionReservedInstancesResponse), nil
 	}
 }
 
@@ -238,7 +359,7 @@ func (c *FunctionGraphClient) BatchDeleteFunctionTriggers(request *model.BatchDe
 	}
 }
 
-//创建触发器。  - 可以创建的触发器类型包括TIMER、APIG、CTS、DDS、DMS、DIS、LTS、OBS、SMN、KAFKA。 - DDS和KAFKA触发器创建时默认为DISABLE状态，其他触发器默认为ACTIVE状态。 - TIMER、DDS、DMS、KAFKA、LTS触发器支持禁用，其他触发器不支持。
+//创建触发器。  - 可以创建的触发器类型包括TIMER、APIG、CTS、DDS、DMS、DIS、LTS、OBS、SMN、KAFKA。 - DDS和KAFKA触发器创建时默认为DISABLED状态，其他触发器默认为ACTIVE状态。 - TIMER、DDS、DMS、KAFKA、LTS触发器支持禁用，其他触发器不支持。
 func (c *FunctionGraphClient) CreateFunctionTrigger(request *model.CreateFunctionTriggerRequest) (*model.CreateFunctionTriggerResponse, error) {
 	requestDef := GenReqDefForCreateFunctionTrigger()
 

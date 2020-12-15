@@ -10,7 +10,8 @@ func GenReqDefForDownloadApplicationCode() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/application-codes").
-		WithResponse(new(model.DownloadApplicationCodeResponse))
+		WithResponse(new(model.DownloadApplicationCodeResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -82,7 +83,8 @@ func GenReqDefForShowJobDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/jobs/{job_id}").
-		WithResponse(new(model.ShowJobDetailResponse))
+		WithResponse(new(model.ShowJobDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -105,7 +107,8 @@ func GenReqDefForShowTemplateFile() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/templates/{template_id}/files").
-		WithResponse(new(model.ShowTemplateFileResponse))
+		WithResponse(new(model.ShowTemplateFileResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -161,7 +164,8 @@ func GenReqDefForListPublishedTemplates() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/templates").
-		WithResponse(new(model.ListPublishedTemplatesResponse))
+		WithResponse(new(model.ListPublishedTemplatesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -193,7 +197,8 @@ func GenReqDefForListTemplateViewHistories() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/templates/view-histories").
-		WithResponse(new(model.ListTemplateViewHistoriesResponse))
+		WithResponse(new(model.ListTemplateViewHistoriesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -246,7 +251,8 @@ func GenReqDefForShowTemplateV3() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/templates/{template_id}").
-		WithResponse(new(model.ShowTemplateV3Response))
+		WithResponse(new(model.ShowTemplateV3Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -269,7 +275,8 @@ func GenReqDefForShowTemplateDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/templates/{template_id}").
-		WithResponse(new(model.ShowTemplateDetailResponse))
+		WithResponse(new(model.ShowTemplateDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

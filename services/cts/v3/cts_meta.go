@@ -29,7 +29,8 @@ func GenReqDefForDeleteTracker() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/trackers").
-		WithResponse(new(model.DeleteTrackerResponse))
+		WithResponse(new(model.DeleteTrackerResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -52,7 +53,8 @@ func GenReqDefForListQuotas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/quotas").
-		WithResponse(new(model.ListQuotasResponse))
+		WithResponse(new(model.ListQuotasResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -66,7 +68,8 @@ func GenReqDefForListTraces() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/traces").
-		WithResponse(new(model.ListTracesResponse))
+		WithResponse(new(model.ListTracesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -137,7 +140,8 @@ func GenReqDefForListTrackers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/trackers").
-		WithResponse(new(model.ListTrackersResponse))
+		WithResponse(new(model.ListTrackersResponse)).
+		WithContentType("application/json")
 
 	// request
 

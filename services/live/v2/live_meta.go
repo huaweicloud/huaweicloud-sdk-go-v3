@@ -10,7 +10,8 @@ func GenReqDefForListBandwidthDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/stats/bandwidth/detail").
-		WithResponse(new(model.ListBandwidthDetailResponse))
+		WithResponse(new(model.ListBandwidthDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -63,7 +64,8 @@ func GenReqDefForListDomainBandwidthPeak() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/stats/bandwidth/peak").
-		WithResponse(new(model.ListDomainBandwidthPeakResponse))
+		WithResponse(new(model.ListDomainBandwidthPeakResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -112,7 +114,8 @@ func GenReqDefForListDomainTrafficDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/stats/traffic/detail").
-		WithResponse(new(model.ListDomainTrafficDetailResponse))
+		WithResponse(new(model.ListDomainTrafficDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -165,7 +168,8 @@ func GenReqDefForListDomainTrafficSummary() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/stats/traffic/summary").
-		WithResponse(new(model.ListDomainTrafficSummaryResponse))
+		WithResponse(new(model.ListDomainTrafficSummaryResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -214,7 +218,8 @@ func GenReqDefForListHistoryStreams() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/stats/history/streams").
-		WithResponse(new(model.ListHistoryStreamsResponse))
+		WithResponse(new(model.ListHistoryStreamsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -251,7 +256,8 @@ func GenReqDefForListQueryHttpCode() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/stats/httpcodes").
-		WithResponse(new(model.ListQueryHttpCodeResponse))
+		WithResponse(new(model.ListQueryHttpCodeResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -296,7 +302,8 @@ func GenReqDefForListRecordData() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/stats/record").
-		WithResponse(new(model.ListRecordDataResponse))
+		WithResponse(new(model.ListRecordDataResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -325,7 +332,8 @@ func GenReqDefForListSnapshotData() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/stats/snapshot").
-		WithResponse(new(model.ListSnapshotDataResponse))
+		WithResponse(new(model.ListSnapshotDataResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -358,7 +366,8 @@ func GenReqDefForListTranscodeData() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/stats/transcode").
-		WithResponse(new(model.ListTranscodeDataResponse))
+		WithResponse(new(model.ListTranscodeDataResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -391,7 +400,8 @@ func GenReqDefForListUsersOfStream() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/stats/user").
-		WithResponse(new(model.ListUsersOfStreamResponse))
+		WithResponse(new(model.ListUsersOfStreamResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -444,7 +454,8 @@ func GenReqDefForShowStreamCount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/stats/stream-count").
-		WithResponse(new(model.ShowStreamCountResponse))
+		WithResponse(new(model.ShowStreamCountResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -477,7 +488,8 @@ func GenReqDefForShowUpBandwidth() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/stats/up-bandwidth/detail").
-		WithResponse(new(model.ShowUpBandwidthResponse))
+		WithResponse(new(model.ShowUpBandwidthResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -530,7 +542,8 @@ func GenReqDefForListSingleStreamBitrate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/stats/stream/bitrate").
-		WithResponse(new(model.ListSingleStreamBitrateResponse))
+		WithResponse(new(model.ListSingleStreamBitrateResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -571,7 +584,8 @@ func GenReqDefForListSingleStreamFramerate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/stats/stream/framerate").
-		WithResponse(new(model.ListSingleStreamFramerateResponse))
+		WithResponse(new(model.ListSingleStreamFramerateResponse)).
+		WithContentType("application/json")
 
 	// request
 

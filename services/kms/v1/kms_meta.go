@@ -363,7 +363,8 @@ func GenReqDefForDeleteTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/{version_id}/{project_id}/kms/{key_id}/tags/{key}").
-		WithResponse(new(model.DeleteTagResponse))
+		WithResponse(new(model.DeleteTagResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -646,7 +647,8 @@ func GenReqDefForListKmsTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/{version_id}/{project_id}/kms/tags").
-		WithResponse(new(model.ListKmsTagsResponse))
+		WithResponse(new(model.ListKmsTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -710,7 +712,8 @@ func GenReqDefForShowKmsTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/{version_id}/{project_id}/kms/{key_id}/tags").
-		WithResponse(new(model.ShowKmsTagsResponse))
+		WithResponse(new(model.ShowKmsTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -732,7 +735,8 @@ func GenReqDefForShowUserInstances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/{version_id}/{project_id}/kms/user-instances").
-		WithResponse(new(model.ShowUserInstancesResponse))
+		WithResponse(new(model.ShowUserInstancesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -750,7 +754,8 @@ func GenReqDefForShowUserQuotas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/{version_id}/{project_id}/kms/user-quotas").
-		WithResponse(new(model.ShowUserQuotasResponse))
+		WithResponse(new(model.ShowUserQuotasResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -837,7 +842,8 @@ func GenReqDefForShowVersion() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/{version_id}").
-		WithResponse(new(model.ShowVersionResponse))
+		WithResponse(new(model.ShowVersionResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -855,7 +861,8 @@ func GenReqDefForShowVersions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/").
-		WithResponse(new(model.ShowVersionsResponse))
+		WithResponse(new(model.ShowVersionsResponse)).
+		WithContentType("application/json")
 
 	// request
 

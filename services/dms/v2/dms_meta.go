@@ -99,7 +99,8 @@ func GenReqDefForConsumeDeadlettersMessage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/queues/{queue_id}/groups/{consumer_group_id}/deadletters").
-		WithResponse(new(model.ConsumeDeadlettersMessageResponse))
+		WithResponse(new(model.ConsumeDeadlettersMessageResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -141,7 +142,8 @@ func GenReqDefForConsumeMessages() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/queues/{queue_id}/groups/{consumer_group_id}/messages").
-		WithResponse(new(model.ConsumeMessagesResponse))
+		WithResponse(new(model.ConsumeMessagesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -241,7 +243,8 @@ func GenReqDefForDeleteQueue() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/queues/{queue_id}").
-		WithResponse(new(model.DeleteQueueResponse))
+		WithResponse(new(model.DeleteQueueResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -263,7 +266,8 @@ func GenReqDefForDeleteSpecifiedConsumerGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/queues/{queue_id}/groups/{group_id}").
-		WithResponse(new(model.DeleteSpecifiedConsumerGroupResponse))
+		WithResponse(new(model.DeleteSpecifiedConsumerGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -289,7 +293,8 @@ func GenReqDefForListConsumerGroups() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/queues/{queue_id}/groups").
-		WithResponse(new(model.ListConsumerGroupsResponse))
+		WithResponse(new(model.ListConsumerGroupsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -328,7 +333,8 @@ func GenReqDefForListQueues() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/queues").
-		WithResponse(new(model.ListQueuesResponse))
+		WithResponse(new(model.ListQueuesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -378,7 +384,8 @@ func GenReqDefForShowProjectTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/queue/tags").
-		WithResponse(new(model.ShowProjectTagsResponse))
+		WithResponse(new(model.ShowProjectTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -396,7 +403,8 @@ func GenReqDefForShowQueue() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/queues/{queue_id}").
-		WithResponse(new(model.ShowQueueResponse))
+		WithResponse(new(model.ShowQueueResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -423,7 +431,8 @@ func GenReqDefForShowQueueTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/queue/{queue_id}/tags").
-		WithResponse(new(model.ShowQueueTagsResponse))
+		WithResponse(new(model.ShowQueueTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -445,7 +454,8 @@ func GenReqDefForShowQuotas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/quotas").
-		WithResponse(new(model.ShowQuotasResponse))
+		WithResponse(new(model.ShowQuotasResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

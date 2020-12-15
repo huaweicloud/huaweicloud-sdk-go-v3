@@ -86,7 +86,8 @@ func GenReqDefForDeleteSecurityGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/vpc/security-groups/{security_group_id}").
-		WithResponse(new(model.DeleteSecurityGroupResponse))
+		WithResponse(new(model.DeleteSecurityGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -104,7 +105,8 @@ func GenReqDefForDeleteSecurityGroupRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/vpc/security-group-rules/{security_group_rule_id}").
-		WithResponse(new(model.DeleteSecurityGroupRuleResponse))
+		WithResponse(new(model.DeleteSecurityGroupRuleResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -122,7 +124,8 @@ func GenReqDefForDeleteSubNetworkInterface() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/vpc/sub-network-interfaces/{sub_network_interface_id}").
-		WithResponse(new(model.DeleteSubNetworkInterfaceResponse))
+		WithResponse(new(model.DeleteSubNetworkInterfaceResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -140,7 +143,8 @@ func GenReqDefForListSecurityGroupRules() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/vpc/security-group-rules").
-		WithResponse(new(model.ListSecurityGroupRulesResponse))
+		WithResponse(new(model.ListSecurityGroupRulesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -191,7 +195,8 @@ func GenReqDefForListSecurityGroups() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/vpc/security-groups").
-		WithResponse(new(model.ListSecurityGroupsResponse))
+		WithResponse(new(model.ListSecurityGroupsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -230,7 +235,8 @@ func GenReqDefForListSubNetworkInterfaces() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/vpc/sub-network-interfaces").
-		WithResponse(new(model.ListSubNetworkInterfacesResponse))
+		WithResponse(new(model.ListSubNetworkInterfacesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -281,7 +287,8 @@ func GenReqDefForShowSecurityGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/vpc/security-groups/{security_group_id}").
-		WithResponse(new(model.ShowSecurityGroupResponse))
+		WithResponse(new(model.ShowSecurityGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -299,7 +306,8 @@ func GenReqDefForShowSecurityGroupRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/vpc/security-group-rules/{security_group_rule_id}").
-		WithResponse(new(model.ShowSecurityGroupRuleResponse))
+		WithResponse(new(model.ShowSecurityGroupRuleResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -317,7 +325,8 @@ func GenReqDefForShowSubNetworkInterface() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/vpc/sub-network-interfaces/{sub_network_interface_id}").
-		WithResponse(new(model.ShowSubNetworkInterfaceResponse))
+		WithResponse(new(model.ShowSubNetworkInterfaceResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -335,7 +344,8 @@ func GenReqDefForShowSubNetworkInterfacesQuantity() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/vpc/sub-network-interfaces/count").
-		WithResponse(new(model.ShowSubNetworkInterfacesQuantityResponse))
+		WithResponse(new(model.ShowSubNetworkInterfacesQuantityResponse)).
+		WithContentType("application/json")
 
 	// request
 

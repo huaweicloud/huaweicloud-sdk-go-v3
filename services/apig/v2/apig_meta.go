@@ -238,7 +238,8 @@ func GenReqDefForDeleteEnvironmentV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/envs/{env_id}").
-		WithResponse(new(model.DeleteEnvironmentV2Response))
+		WithResponse(new(model.DeleteEnvironmentV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -264,7 +265,8 @@ func GenReqDefForDeleteEnvironmentVariableV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/env-variables/{env_variable_id}").
-		WithResponse(new(model.DeleteEnvironmentVariableV2Response))
+		WithResponse(new(model.DeleteEnvironmentVariableV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -290,7 +292,8 @@ func GenReqDefForDeleteRequestThrottlingPolicyV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/throttles/{throttle_id}").
-		WithResponse(new(model.DeleteRequestThrottlingPolicyV2Response))
+		WithResponse(new(model.DeleteRequestThrottlingPolicyV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -316,7 +319,8 @@ func GenReqDefForDeleteSignatureKeyV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/signs/{sign_id}").
-		WithResponse(new(model.DeleteSignatureKeyV2Response))
+		WithResponse(new(model.DeleteSignatureKeyV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -342,7 +346,8 @@ func GenReqDefForDeleteSpecialThrottlingConfigurationV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/throttles/{throttle_id}/throttle-specials/{strategy_id}").
-		WithResponse(new(model.DeleteSpecialThrottlingConfigurationV2Response))
+		WithResponse(new(model.DeleteSpecialThrottlingConfigurationV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -372,7 +377,8 @@ func GenReqDefForDisassociateCertificateV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/api-groups/{group_id}/domains/{domain_id}/certificate/{certificate_id}").
-		WithResponse(new(model.DisassociateCertificateV2Response))
+		WithResponse(new(model.DisassociateCertificateV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -402,7 +408,8 @@ func GenReqDefForDisassociateDomainV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/api-groups/{group_id}/domains/{domain_id}").
-		WithResponse(new(model.DisassociateDomainV2Response))
+		WithResponse(new(model.DisassociateDomainV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -428,7 +435,8 @@ func GenReqDefForDisassociateSignatureKeyV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/sign-bindings/{sign_bindings_id}").
-		WithResponse(new(model.DisassociateSignatureKeyV2Response))
+		WithResponse(new(model.DisassociateSignatureKeyV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -454,7 +462,8 @@ func GenReqDefForListApiGroupsQuantitiesV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/resources/outline/groups").
-		WithResponse(new(model.ListApiGroupsQuantitiesV2Response))
+		WithResponse(new(model.ListApiGroupsQuantitiesV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -476,7 +485,8 @@ func GenReqDefForListApiQuantitiesV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/resources/outline/apis").
-		WithResponse(new(model.ListApiQuantitiesV2Response))
+		WithResponse(new(model.ListApiQuantitiesV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -498,7 +508,8 @@ func GenReqDefForListApisBindedToSignatureKeyV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/sign-bindings/binded-apis").
-		WithResponse(new(model.ListApisBindedToSignatureKeyV2Response))
+		WithResponse(new(model.ListApisBindedToSignatureKeyV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -549,7 +560,8 @@ func GenReqDefForListApisNotBoundWithSignatureKeyV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/sign-bindings/unbinded-apis").
-		WithResponse(new(model.ListApisNotBoundWithSignatureKeyV2Response))
+		WithResponse(new(model.ListApisNotBoundWithSignatureKeyV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -600,7 +612,8 @@ func GenReqDefForListAppQuantitiesV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/resources/outline/apps").
-		WithResponse(new(model.ListAppQuantitiesV2Response))
+		WithResponse(new(model.ListAppQuantitiesV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -622,7 +635,8 @@ func GenReqDefForListEnvironmentVariablesV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/env-variables").
-		WithResponse(new(model.ListEnvironmentVariablesV2Response))
+		WithResponse(new(model.ListEnvironmentVariablesV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -669,7 +683,8 @@ func GenReqDefForListEnvironmentsV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/envs").
-		WithResponse(new(model.ListEnvironmentsV2Response))
+		WithResponse(new(model.ListEnvironmentsV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -704,7 +719,8 @@ func GenReqDefForListRequestThrottlingPolicyV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/throttles").
-		WithResponse(new(model.ListRequestThrottlingPolicyV2Response))
+		WithResponse(new(model.ListRequestThrottlingPolicyV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -747,7 +763,8 @@ func GenReqDefForListSignatureKeysBindedToApiV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/sign-bindings/binded-signs").
-		WithResponse(new(model.ListSignatureKeysBindedToApiV2Response))
+		WithResponse(new(model.ListSignatureKeysBindedToApiV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -794,7 +811,8 @@ func GenReqDefForListSignatureKeysV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/signs").
-		WithResponse(new(model.ListSignatureKeysV2Response))
+		WithResponse(new(model.ListSignatureKeysV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -837,7 +855,8 @@ func GenReqDefForListSpecialThrottlingConfigurationsV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/throttles/{throttle_id}/throttle-specials").
-		WithResponse(new(model.ListSpecialThrottlingConfigurationsV2Response))
+		WithResponse(new(model.ListSpecialThrottlingConfigurationsV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -880,7 +899,8 @@ func GenReqDefForShowDetailsOfDomainNameCertificateV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/api-groups/{group_id}/domains/{domain_id}/certificate/{certificate_id}").
-		WithResponse(new(model.ShowDetailsOfDomainNameCertificateV2Response))
+		WithResponse(new(model.ShowDetailsOfDomainNameCertificateV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -910,7 +930,8 @@ func GenReqDefForShowDetailsOfEnvironmentVariableV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/env-variables/{env_variable_id}").
-		WithResponse(new(model.ShowDetailsOfEnvironmentVariableV2Response))
+		WithResponse(new(model.ShowDetailsOfEnvironmentVariableV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -936,7 +957,8 @@ func GenReqDefForShowDetailsOfRequestThrottlingPolicyV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/throttles/{throttle_id}").
-		WithResponse(new(model.ShowDetailsOfRequestThrottlingPolicyV2Response))
+		WithResponse(new(model.ShowDetailsOfRequestThrottlingPolicyV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1230,7 +1252,8 @@ func GenReqDefForDeleteApiGroupV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/api-groups/{group_id}").
-		WithResponse(new(model.DeleteApiGroupV2Response))
+		WithResponse(new(model.DeleteApiGroupV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1256,7 +1279,8 @@ func GenReqDefForDeleteApiV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apis/{api_id}").
-		WithResponse(new(model.DeleteApiV2Response))
+		WithResponse(new(model.DeleteApiV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1282,7 +1306,8 @@ func GenReqDefForDisassociateRequestThrottlingPolicyV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/throttle-bindings/{throttle_binding_id}").
-		WithResponse(new(model.DisassociateRequestThrottlingPolicyV2Response))
+		WithResponse(new(model.DisassociateRequestThrottlingPolicyV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1308,7 +1333,8 @@ func GenReqDefForListApiGroupsV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/api-groups").
-		WithResponse(new(model.ListApiGroupsV2Response))
+		WithResponse(new(model.ListApiGroupsV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1351,7 +1377,8 @@ func GenReqDefForListApisBindedToRequestThrottlingPolicyV2() *def.HttpRequestDef
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/throttle-bindings/binded-apis").
-		WithResponse(new(model.ListApisBindedToRequestThrottlingPolicyV2Response))
+		WithResponse(new(model.ListApisBindedToRequestThrottlingPolicyV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1402,7 +1429,8 @@ func GenReqDefForListApisUnbindedToRequestThrottlingPolicyV2() *def.HttpRequestD
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/throttle-bindings/unbinded-apis").
-		WithResponse(new(model.ListApisUnbindedToRequestThrottlingPolicyV2Response))
+		WithResponse(new(model.ListApisUnbindedToRequestThrottlingPolicyV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1453,7 +1481,8 @@ func GenReqDefForListApisV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apis").
-		WithResponse(new(model.ListApisV2Response))
+		WithResponse(new(model.ListApisV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1524,7 +1553,8 @@ func GenReqDefForListRequestThrottlingPoliciesBindedToApiV2() *def.HttpRequestDe
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/throttle-bindings/binded-throttles").
-		WithResponse(new(model.ListRequestThrottlingPoliciesBindedToApiV2Response))
+		WithResponse(new(model.ListRequestThrottlingPoliciesBindedToApiV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1571,7 +1601,8 @@ func GenReqDefForShowDetailsOfApiGroupV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/api-groups/{group_id}").
-		WithResponse(new(model.ShowDetailsOfApiGroupV2Response))
+		WithResponse(new(model.ShowDetailsOfApiGroupV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1597,7 +1628,8 @@ func GenReqDefForShowDetailsOfApiV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apis/{api_id}").
-		WithResponse(new(model.ShowDetailsOfApiV2Response))
+		WithResponse(new(model.ShowDetailsOfApiV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1685,7 +1717,8 @@ func GenReqDefForCancelingAuthorizationV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/app-auths/{app_auth_id}").
-		WithResponse(new(model.CancelingAuthorizationV2Response))
+		WithResponse(new(model.CancelingAuthorizationV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1711,7 +1744,8 @@ func GenReqDefForCheckAppV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/validation/{app_id}").
-		WithResponse(new(model.CheckAppV2Response))
+		WithResponse(new(model.CheckAppV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1791,7 +1825,8 @@ func GenReqDefForDeleteAppV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}").
-		WithResponse(new(model.DeleteAppV2Response))
+		WithResponse(new(model.DeleteAppV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1817,7 +1852,8 @@ func GenReqDefForListApisBindedToAppV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/app-auths/binded-apis").
-		WithResponse(new(model.ListApisBindedToAppV2Response))
+		WithResponse(new(model.ListApisBindedToAppV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1872,7 +1908,8 @@ func GenReqDefForListApisUnbindedToAppV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/app-auths/unbinded-apis").
-		WithResponse(new(model.ListApisUnbindedToAppV2Response))
+		WithResponse(new(model.ListApisUnbindedToAppV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1923,7 +1960,8 @@ func GenReqDefForListAppsBindedToApiV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/app-auths/binded-apps").
-		WithResponse(new(model.ListAppsBindedToApiV2Response))
+		WithResponse(new(model.ListAppsBindedToApiV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1970,7 +2008,8 @@ func GenReqDefForListAppsV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps").
-		WithResponse(new(model.ListAppsV2Response))
+		WithResponse(new(model.ListAppsV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2056,7 +2095,8 @@ func GenReqDefForShowDetailsOfAppV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}").
-		WithResponse(new(model.ShowDetailsOfAppV2Response))
+		WithResponse(new(model.ShowDetailsOfAppV2Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

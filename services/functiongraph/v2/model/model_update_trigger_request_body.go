@@ -29,8 +29,8 @@ type UpdateTriggerRequestBodyTriggerStatus struct {
 }
 
 type UpdateTriggerRequestBodyTriggerStatusEnum struct {
-	ACTIVE  UpdateTriggerRequestBodyTriggerStatus
-	DISABLE UpdateTriggerRequestBodyTriggerStatus
+	ACTIVE   UpdateTriggerRequestBodyTriggerStatus
+	DISABLED UpdateTriggerRequestBodyTriggerStatus
 }
 
 func GetUpdateTriggerRequestBodyTriggerStatusEnum() UpdateTriggerRequestBodyTriggerStatusEnum {
@@ -38,8 +38,8 @@ func GetUpdateTriggerRequestBodyTriggerStatusEnum() UpdateTriggerRequestBodyTrig
 		ACTIVE: UpdateTriggerRequestBodyTriggerStatus{
 			value: "ACTIVE",
 		},
-		DISABLE: UpdateTriggerRequestBodyTriggerStatus{
-			value: "DISABLE",
+		DISABLED: UpdateTriggerRequestBodyTriggerStatus{
+			value: "DISABLED",
 		},
 	}
 }

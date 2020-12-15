@@ -27,8 +27,6 @@ type ListEventDetailRequest struct {
 	To          *int64                          `json:"to,omitempty"`
 	Start       *int32                          `json:"start,omitempty"`
 	Limit       *int32                          `json:"limit,omitempty"`
-	// 上报自定义事件。请求参数。
-	Body *[]EventItem `json:"body,omitempty"`
 }
 
 func (o ListEventDetailRequest) String() string {

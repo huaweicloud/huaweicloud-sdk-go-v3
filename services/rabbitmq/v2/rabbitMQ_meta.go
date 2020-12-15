@@ -83,7 +83,8 @@ func GenReqDefForDeleteBackgroundTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/instances/{instance_id}/tasks/{task_id}").
-		WithResponse(new(model.DeleteBackgroundTaskResponse))
+		WithResponse(new(model.DeleteBackgroundTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -109,7 +110,8 @@ func GenReqDefForDeleteInstance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/instances/{instance_id}").
-		WithResponse(new(model.DeleteInstanceResponse))
+		WithResponse(new(model.DeleteInstanceResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -131,7 +133,8 @@ func GenReqDefForListAvailableZones() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/available-zones").
-		WithResponse(new(model.ListAvailableZonesResponse))
+		WithResponse(new(model.ListAvailableZonesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -145,7 +148,8 @@ func GenReqDefForListBackgroundTasks() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/tasks").
-		WithResponse(new(model.ListBackgroundTasksResponse))
+		WithResponse(new(model.ListBackgroundTasksResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -184,7 +188,8 @@ func GenReqDefForListInstancesDetails() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances").
-		WithResponse(new(model.ListInstancesDetailsResponse))
+		WithResponse(new(model.ListInstancesDetailsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -231,7 +236,8 @@ func GenReqDefForListPlugins() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/rabbitmq/plugins").
-		WithResponse(new(model.ListPluginsResponse))
+		WithResponse(new(model.ListPluginsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -253,7 +259,8 @@ func GenReqDefForListProducts() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/products").
-		WithResponse(new(model.ListProductsResponse))
+		WithResponse(new(model.ListProductsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -326,7 +333,8 @@ func GenReqDefForShowBackgroundTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/tasks/{task_id}").
-		WithResponse(new(model.ShowBackgroundTaskResponse))
+		WithResponse(new(model.ShowBackgroundTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -352,7 +360,8 @@ func GenReqDefForShowInstance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}").
-		WithResponse(new(model.ShowInstanceResponse))
+		WithResponse(new(model.ShowInstanceResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -374,7 +383,8 @@ func GenReqDefForShowInstanceExtendProductInfo() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/extend").
-		WithResponse(new(model.ShowInstanceExtendProductInfoResponse))
+		WithResponse(new(model.ShowInstanceExtendProductInfoResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -405,7 +415,8 @@ func GenReqDefForShowInstanceTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/rabbitmq/{instance_id}/tags").
-		WithResponse(new(model.ShowInstanceTagsResponse))
+		WithResponse(new(model.ShowInstanceTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -427,7 +438,8 @@ func GenReqDefForShowMaintainWindows() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/instances/maintain-windows").
-		WithResponse(new(model.ShowMaintainWindowsResponse))
+		WithResponse(new(model.ShowMaintainWindowsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -441,7 +453,8 @@ func GenReqDefForShowProjectTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/rabbitmq/tags").
-		WithResponse(new(model.ShowProjectTagsResponse))
+		WithResponse(new(model.ShowProjectTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

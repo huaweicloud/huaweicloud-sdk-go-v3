@@ -48,7 +48,8 @@ func GenReqDefForDeleteAllFailedTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/failed-tasks").
-		WithResponse(new(model.DeleteAllFailedTaskResponse))
+		WithResponse(new(model.DeleteAllFailedTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -62,7 +63,8 @@ func GenReqDefForDeleteFailedTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/failed-tasks/{task_id}").
-		WithResponse(new(model.DeleteFailedTaskResponse))
+		WithResponse(new(model.DeleteFailedTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -80,7 +82,8 @@ func GenReqDefForDeleteKeypair() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/keypairs/{keypair_name}").
-		WithResponse(new(model.DeleteKeypairResponse))
+		WithResponse(new(model.DeleteKeypairResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -117,7 +120,8 @@ func GenReqDefForListFailedTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/failed-tasks").
-		WithResponse(new(model.ListFailedTaskResponse))
+		WithResponse(new(model.ListFailedTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -131,7 +135,8 @@ func GenReqDefForListKeypairDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/keypairs/{keypair_name}").
-		WithResponse(new(model.ListKeypairDetailResponse))
+		WithResponse(new(model.ListKeypairDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -149,7 +154,8 @@ func GenReqDefForListKeypairTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/tasks/{task_id}").
-		WithResponse(new(model.ListKeypairTaskResponse))
+		WithResponse(new(model.ListKeypairTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -167,7 +173,8 @@ func GenReqDefForListKeypairs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/keypairs").
-		WithResponse(new(model.ListKeypairsResponse))
+		WithResponse(new(model.ListKeypairsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -181,7 +188,8 @@ func GenReqDefForListRunningTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/running-tasks").
-		WithResponse(new(model.ListRunningTaskResponse))
+		WithResponse(new(model.ListRunningTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 

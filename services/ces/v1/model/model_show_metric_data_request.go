@@ -17,14 +17,15 @@ import (
 // Request Object
 type ShowMetricDataRequest struct {
 	ContentType string                      `json:"Content-Type"`
+	Namespace   string                      `json:"namespace"`
+	MetricName  string                      `json:"metric_name"`
 	Dim0        string                      `json:"dim.0"`
 	Dim1        *string                     `json:"dim.1,omitempty"`
 	Dim2        *string                     `json:"dim.2,omitempty"`
+	Dim3        *string                     `json:"dim.3,omitempty"`
 	Filter      ShowMetricDataRequestFilter `json:"filter"`
-	From        int64                       `json:"from"`
-	MetricName  string                      `json:"metric_name"`
-	Namespace   string                      `json:"namespace"`
 	Period      int32                       `json:"period"`
+	From        int64                       `json:"from"`
 	To          int64                       `json:"to"`
 }
 

@@ -231,7 +231,8 @@ func GenReqDefForListImages() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/cloudimages").
-		WithResponse(new(model.ListImagesResponse))
+		WithResponse(new(model.ListImagesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -395,7 +396,8 @@ func GenReqDefForListOsVersions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/cloudimages/os_version").
-		WithResponse(new(model.ListOsVersionsResponse))
+		WithResponse(new(model.ListOsVersionsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -417,7 +419,8 @@ func GenReqDefForListTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/cloudimages/tags").
-		WithResponse(new(model.ListTagsResponse))
+		WithResponse(new(model.ListTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -515,7 +518,8 @@ func GenReqDefForShowImageQuota() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/cloudimages/quota").
-		WithResponse(new(model.ShowImageQuotaResponse))
+		WithResponse(new(model.ShowImageQuotaResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -552,7 +556,8 @@ func GenReqDefForShowJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/jobs/{job_id}").
-		WithResponse(new(model.ShowJobResponse))
+		WithResponse(new(model.ShowJobResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -612,7 +617,8 @@ func GenReqDefForGlanceCreateTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/images/{image_id}/tags/{tag}").
-		WithResponse(new(model.GlanceCreateTagResponse))
+		WithResponse(new(model.GlanceCreateTagResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -657,7 +663,8 @@ func GenReqDefForGlanceDeleteImageMember() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/images/{image_id}/members/{member_id}").
-		WithResponse(new(model.GlanceDeleteImageMemberResponse))
+		WithResponse(new(model.GlanceDeleteImageMemberResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -679,7 +686,8 @@ func GenReqDefForGlanceDeleteTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/images/{image_id}/tags/{tag}").
-		WithResponse(new(model.GlanceDeleteTagResponse))
+		WithResponse(new(model.GlanceDeleteTagResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -701,7 +709,8 @@ func GenReqDefForGlanceListImageMemberSchemas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/schemas/members").
-		WithResponse(new(model.GlanceListImageMemberSchemasResponse))
+		WithResponse(new(model.GlanceListImageMemberSchemasResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -715,7 +724,8 @@ func GenReqDefForGlanceListImageMembers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/images/{image_id}/members").
-		WithResponse(new(model.GlanceListImageMembersResponse))
+		WithResponse(new(model.GlanceListImageMembersResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -733,7 +743,8 @@ func GenReqDefForGlanceListImageSchemas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/schemas/images").
-		WithResponse(new(model.GlanceListImageSchemasResponse))
+		WithResponse(new(model.GlanceListImageSchemasResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -747,7 +758,8 @@ func GenReqDefForGlanceListImages() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/images").
-		WithResponse(new(model.GlanceListImagesResponse))
+		WithResponse(new(model.GlanceListImagesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -890,7 +902,8 @@ func GenReqDefForGlanceShowImage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/images/{image_id}").
-		WithResponse(new(model.GlanceShowImageResponse))
+		WithResponse(new(model.GlanceShowImageResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -908,7 +921,8 @@ func GenReqDefForGlanceShowImageMember() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/images/{image_id}/members/{member_id}").
-		WithResponse(new(model.GlanceShowImageMemberResponse))
+		WithResponse(new(model.GlanceShowImageMemberResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -930,7 +944,8 @@ func GenReqDefForGlanceShowImageMemberSchemas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/schemas/member").
-		WithResponse(new(model.GlanceShowImageMemberSchemasResponse))
+		WithResponse(new(model.GlanceShowImageMemberSchemasResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -944,7 +959,8 @@ func GenReqDefForGlanceShowImageSchemas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/schemas/image").
-		WithResponse(new(model.GlanceShowImageSchemasResponse))
+		WithResponse(new(model.GlanceShowImageSchemasResponse)).
+		WithContentType("application/json")
 
 	// request
 

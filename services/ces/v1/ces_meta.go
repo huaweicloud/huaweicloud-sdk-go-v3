@@ -147,7 +147,8 @@ func GenReqDefForDeleteAlarm() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/V1.0/{project_id}/alarms/{alarm_id}").
-		WithResponse(new(model.DeleteAlarmResponse))
+		WithResponse(new(model.DeleteAlarmResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -165,7 +166,8 @@ func GenReqDefForDeleteAlarmTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/V1.0/{project_id}/alarm-template/{template_id}").
-		WithResponse(new(model.DeleteAlarmTemplateResponse))
+		WithResponse(new(model.DeleteAlarmTemplateResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -188,7 +190,8 @@ func GenReqDefForDeleteResourceGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/V1.0/{project_id}/resource-groups/{group_id}").
-		WithResponse(new(model.DeleteResourceGroupResponse))
+		WithResponse(new(model.DeleteResourceGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -211,7 +214,8 @@ func GenReqDefForListAlarmHistories() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/V1.0/{project_id}/alarm-histories").
-		WithResponse(new(model.ListAlarmHistoriesResponse))
+		WithResponse(new(model.ListAlarmHistoriesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -271,7 +275,8 @@ func GenReqDefForListAlarmTemplates() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/V1.0/{project_id}/alarm-template").
-		WithResponse(new(model.ListAlarmTemplatesResponse))
+		WithResponse(new(model.ListAlarmTemplatesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -311,7 +316,8 @@ func GenReqDefForListAlarms() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/V1.0/{project_id}/alarms").
-		WithResponse(new(model.ListAlarmsResponse))
+		WithResponse(new(model.ListAlarmsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -342,7 +348,7 @@ func GenReqDefForListAlarms() *def.HttpRequestDef {
 func GenReqDefForListEventDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/V1.0/{project_id}/events/{event_name}").
+		WithPath("/V1.0/{project_id}/event/{event_name}").
 		WithResponse(new(model.ListEventDetailResponse)).
 		WithContentType("application/json")
 
@@ -394,10 +400,6 @@ func GenReqDefForListEventDetail() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	// response
 
 	requestDef := reqDefBuilder.Build()
@@ -408,7 +410,8 @@ func GenReqDefForListEvents() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/V1.0/{project_id}/events").
-		WithResponse(new(model.ListEventsResponse))
+		WithResponse(new(model.ListEventsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -452,7 +455,8 @@ func GenReqDefForListMetrics() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/V1.0/{project_id}/metrics").
-		WithResponse(new(model.ListMetricsResponse))
+		WithResponse(new(model.ListMetricsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -504,7 +508,8 @@ func GenReqDefForListResourceGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/V1.0/{project_id}/resource-groups").
-		WithResponse(new(model.ListResourceGroupResponse))
+		WithResponse(new(model.ListResourceGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -544,7 +549,8 @@ func GenReqDefForShowAlarm() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/V1.0/{project_id}/alarms/{alarm_id}").
-		WithResponse(new(model.ShowAlarmResponse))
+		WithResponse(new(model.ShowAlarmResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -567,10 +573,15 @@ func GenReqDefForShowEventData() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/V1.0/{project_id}/event-data").
-		WithResponse(new(model.ShowEventDataResponse))
+		WithResponse(new(model.ShowEventDataResponse)).
+		WithContentType("application/json")
 
 	// request
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Namespace").
+		WithJsonTag("namespace").
+		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Dim0").
 		WithJsonTag("dim.0").
@@ -584,20 +595,20 @@ func GenReqDefForShowEventData() *def.HttpRequestDef {
 		WithJsonTag("dim.2").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("From").
-		WithJsonTag("from").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Namespace").
-		WithJsonTag("namespace").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("To").
-		WithJsonTag("to").
+		WithName("Dim3").
+		WithJsonTag("dim.3").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Type").
 		WithJsonTag("type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("From").
+		WithJsonTag("from").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("To").
+		WithJsonTag("to").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -615,10 +626,19 @@ func GenReqDefForShowMetricData() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/V1.0/{project_id}/metric-data").
-		WithResponse(new(model.ShowMetricDataResponse))
+		WithResponse(new(model.ShowMetricDataResponse)).
+		WithContentType("application/json")
 
 	// request
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Namespace").
+		WithJsonTag("namespace").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MetricName").
+		WithJsonTag("metric_name").
+		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Dim0").
 		WithJsonTag("dim.0").
@@ -632,24 +652,20 @@ func GenReqDefForShowMetricData() *def.HttpRequestDef {
 		WithJsonTag("dim.2").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Dim3").
+		WithJsonTag("dim.3").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Filter").
 		WithJsonTag("filter").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("From").
-		WithJsonTag("from").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("MetricName").
-		WithJsonTag("metric_name").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Namespace").
-		WithJsonTag("namespace").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Period").
 		WithJsonTag("period").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("From").
+		WithJsonTag("from").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("To").
@@ -671,7 +687,8 @@ func GenReqDefForShowQuotas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/V1.0/{project_id}/quotas").
-		WithResponse(new(model.ShowQuotasResponse))
+		WithResponse(new(model.ShowQuotasResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -690,7 +707,8 @@ func GenReqDefForShowResourceGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/V1.0/{project_id}/resource-groups/{group_id}").
-		WithResponse(new(model.ShowResourceGroupResponse))
+		WithResponse(new(model.ShowResourceGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

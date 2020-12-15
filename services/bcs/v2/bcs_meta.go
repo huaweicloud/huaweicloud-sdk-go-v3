@@ -94,7 +94,8 @@ func GenReqDefForDeleteBlockchain() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/blockchains/{blockchain_id}").
-		WithResponse(new(model.DeleteBlockchainResponse))
+		WithResponse(new(model.DeleteBlockchainResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -121,7 +122,8 @@ func GenReqDefForDownloadBlockchainCert() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/blockchains/{blockchain_id}/cert").
-		WithResponse(new(model.DownloadBlockchainCertResponse))
+		WithResponse(new(model.DownloadBlockchainCertResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -213,7 +215,8 @@ func GenReqDefForListBlockchainChannels() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/blockchains/{blockchain_id}/channels").
-		WithResponse(new(model.ListBlockchainChannelsResponse))
+		WithResponse(new(model.ListBlockchainChannelsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -231,7 +234,8 @@ func GenReqDefForListBlockchains() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/blockchains").
-		WithResponse(new(model.ListBlockchainsResponse))
+		WithResponse(new(model.ListBlockchainsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -291,7 +295,8 @@ func GenReqDefForListMembers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/members").
-		WithResponse(new(model.ListMembersResponse))
+		WithResponse(new(model.ListMembersResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -305,7 +310,8 @@ func GenReqDefForListNotifications() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/notifications").
-		WithResponse(new(model.ListNotificationsResponse))
+		WithResponse(new(model.ListNotificationsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -319,7 +325,8 @@ func GenReqDefForListQuotas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/quotas").
-		WithResponse(new(model.ListQuotasResponse))
+		WithResponse(new(model.ListQuotasResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -333,7 +340,8 @@ func GenReqDefForShowBlockchainDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/blockchains/{blockchain_id}").
-		WithResponse(new(model.ShowBlockchainDetailResponse))
+		WithResponse(new(model.ShowBlockchainDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -351,7 +359,8 @@ func GenReqDefForShowBlockchainNodes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/blockchains/{blockchain_id}/nodes").
-		WithResponse(new(model.ShowBlockchainNodesResponse))
+		WithResponse(new(model.ShowBlockchainNodesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -369,7 +378,8 @@ func GenReqDefForShowBlockchainStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/blockchains/{blockchain_id}/status").
-		WithResponse(new(model.ShowBlockchainStatusResponse))
+		WithResponse(new(model.ShowBlockchainStatusResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

@@ -10,7 +10,8 @@ func GenReqDefForShowResourceHistory() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/resource-manager/domains/{domain_id}/resources/{resource_id}/history").
-		WithResponse(new(model.ShowResourceHistoryResponse))
+		WithResponse(new(model.ShowResourceHistoryResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -68,7 +69,8 @@ func GenReqDefForDeletePolicyAssignment() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}").
-		WithResponse(new(model.DeletePolicyAssignmentResponse))
+		WithResponse(new(model.DeletePolicyAssignmentResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -86,7 +88,8 @@ func GenReqDefForDisablePolicyAssignment() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}/disable").
-		WithResponse(new(model.DisablePolicyAssignmentResponse))
+		WithResponse(new(model.DisablePolicyAssignmentResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -104,7 +107,8 @@ func GenReqDefForEnablePolicyAssignment() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}/enable").
-		WithResponse(new(model.EnablePolicyAssignmentResponse))
+		WithResponse(new(model.EnablePolicyAssignmentResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -122,7 +126,8 @@ func GenReqDefForListBuiltInPolicyDefinitions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/resource-manager/policy-definitions").
-		WithResponse(new(model.ListBuiltInPolicyDefinitionsResponse))
+		WithResponse(new(model.ListBuiltInPolicyDefinitionsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -141,7 +146,8 @@ func GenReqDefForListPolicyAssignments() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/resource-manager/domains/{domain_id}/policy-assignments").
-		WithResponse(new(model.ListPolicyAssignmentsResponse))
+		WithResponse(new(model.ListPolicyAssignmentsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -155,7 +161,8 @@ func GenReqDefForListPolicyStatesByAssignmentId() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}/policy-states").
-		WithResponse(new(model.ListPolicyStatesByAssignmentIdResponse))
+		WithResponse(new(model.ListPolicyStatesByAssignmentIdResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -194,7 +201,8 @@ func GenReqDefForListPolicyStatesByDomainId() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/resource-manager/domains/{domain_id}/policy-states").
-		WithResponse(new(model.ListPolicyStatesByDomainIdResponse))
+		WithResponse(new(model.ListPolicyStatesByDomainIdResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -229,7 +237,8 @@ func GenReqDefForListPolicyStatesByResourceId() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/resource-manager/domains/{domain_id}/resources/{resource_id}/policy-states").
-		WithResponse(new(model.ListPolicyStatesByResourceIdResponse))
+		WithResponse(new(model.ListPolicyStatesByResourceIdResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -260,7 +269,8 @@ func GenReqDefForRunEvaluationByPolicyAssignmentId() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}/policy-states/run-evaluation").
-		WithResponse(new(model.RunEvaluationByPolicyAssignmentIdResponse))
+		WithResponse(new(model.RunEvaluationByPolicyAssignmentIdResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -278,7 +288,8 @@ func GenReqDefForShowBuiltInPolicyDefinition() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/resource-manager/policy-definitions/{policy_definition_id}").
-		WithResponse(new(model.ShowBuiltInPolicyDefinitionResponse))
+		WithResponse(new(model.ShowBuiltInPolicyDefinitionResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -301,7 +312,8 @@ func GenReqDefForShowEvaluationStateByAssignmentId() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}/policy-states/evaluation-state").
-		WithResponse(new(model.ShowEvaluationStateByAssignmentIdResponse))
+		WithResponse(new(model.ShowEvaluationStateByAssignmentIdResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -319,7 +331,8 @@ func GenReqDefForShowPolicyAssignment() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}").
-		WithResponse(new(model.ShowPolicyAssignmentResponse))
+		WithResponse(new(model.ShowPolicyAssignmentResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -360,7 +373,8 @@ func GenReqDefForShowResourceRelations() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/resource-manager/domains/{domain_id}/resources/{resource_id}/relations").
-		WithResponse(new(model.ShowResourceRelationsResponse))
+		WithResponse(new(model.ShowResourceRelationsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -391,7 +405,8 @@ func GenReqDefForListProviders() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/resource-manager/domains/{domain_id}/providers").
-		WithResponse(new(model.ListProvidersResponse))
+		WithResponse(new(model.ListProvidersResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -419,7 +434,8 @@ func GenReqDefForListResources() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/resource-manager/domains/{domain_id}/provider/{provider}/type/{type}/resources").
-		WithResponse(new(model.ListResourcesResponse))
+		WithResponse(new(model.ListResourcesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -458,7 +474,8 @@ func GenReqDefForShowResourceById() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/resource-manager/domains/{domain_id}/provider/{provider}/type/{type}/resources/{resource_id}").
-		WithResponse(new(model.ShowResourceByIdResponse))
+		WithResponse(new(model.ShowResourceByIdResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -503,7 +520,8 @@ func GenReqDefForDeleteTrackerConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/resource-manager/domains/{domain_id}/tracker-config").
-		WithResponse(new(model.DeleteTrackerConfigResponse))
+		WithResponse(new(model.DeleteTrackerConfigResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -517,7 +535,8 @@ func GenReqDefForShowTrackerConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/resource-manager/domains/{domain_id}/tracker-config").
-		WithResponse(new(model.ShowTrackerConfigResponse))
+		WithResponse(new(model.ShowTrackerConfigResponse)).
+		WithContentType("application/json")
 
 	// request
 

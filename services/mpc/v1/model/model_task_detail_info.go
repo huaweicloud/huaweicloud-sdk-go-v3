@@ -30,8 +30,6 @@ type TaskDetailInfo struct {
 	// 用户数据。
 	UserData    *string      `json:"user_data,omitempty"`
 	AuditReport *AuditReport `json:"audit_report,omitempty"`
-	// 质检文件输出路径
-	OutputUrl *string `json:"output_url,omitempty"`
 	// 转码任务错误码。
 	ErrorCode *string `json:"error_code,omitempty"`
 	// 转码任务描述，当转码出现异常时，此字段为异常的原因。

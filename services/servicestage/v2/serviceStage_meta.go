@@ -248,7 +248,8 @@ func GenReqDefForDeleteApplication() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/cas/applications/{application_id}").
-		WithResponse(new(model.DeleteApplicationResponse))
+		WithResponse(new(model.DeleteApplicationResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -266,7 +267,8 @@ func GenReqDefForDeleteApplicationConfiguration() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/cas/applications/{application_id}/configuration").
-		WithResponse(new(model.DeleteApplicationConfigurationResponse))
+		WithResponse(new(model.DeleteApplicationConfigurationResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -289,7 +291,8 @@ func GenReqDefForDeleteComponent() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/cas/applications/{application_id}/components/{component_id}").
-		WithResponse(new(model.DeleteComponentResponse))
+		WithResponse(new(model.DeleteComponentResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -316,7 +319,8 @@ func GenReqDefForDeleteEnvironment() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/cas/environments/{environment_id}").
-		WithResponse(new(model.DeleteEnvironmentResponse))
+		WithResponse(new(model.DeleteEnvironmentResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -334,7 +338,8 @@ func GenReqDefForDeleteInstance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/cas/applications/{application_id}/components/{component_id}/instances/{instance_id}").
-		WithResponse(new(model.DeleteInstanceResponse))
+		WithResponse(new(model.DeleteInstanceResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -365,7 +370,8 @@ func GenReqDefForListApplications() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cas/applications").
-		WithResponse(new(model.ListApplicationsResponse))
+		WithResponse(new(model.ListApplicationsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -396,7 +402,8 @@ func GenReqDefForListComponents() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cas/applications/{application_id}/components").
-		WithResponse(new(model.ListComponentsResponse))
+		WithResponse(new(model.ListComponentsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -431,7 +438,8 @@ func GenReqDefForListEnvironments() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cas/environments").
-		WithResponse(new(model.ListEnvironmentsResponse))
+		WithResponse(new(model.ListEnvironmentsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -462,7 +470,8 @@ func GenReqDefForListInstanceSnapshots() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cas/applications/{application_id}/components/{component_id}/instances/{instance_id}/snapshots").
-		WithResponse(new(model.ListInstanceSnapshotsResponse))
+		WithResponse(new(model.ListInstanceSnapshotsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -505,7 +514,8 @@ func GenReqDefForListInstances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cas/applications/{application_id}/components/{component_id}/instances").
-		WithResponse(new(model.ListInstancesResponse))
+		WithResponse(new(model.ListInstancesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -544,7 +554,8 @@ func GenReqDefForShowApplicationConfiguration() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cas/applications/{application_id}/configuration").
-		WithResponse(new(model.ShowApplicationConfigurationResponse))
+		WithResponse(new(model.ShowApplicationConfigurationResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -567,7 +578,8 @@ func GenReqDefForShowApplicationDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cas/applications/{application_id}").
-		WithResponse(new(model.ShowApplicationDetailResponse))
+		WithResponse(new(model.ShowApplicationDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -585,7 +597,8 @@ func GenReqDefForShowComponentDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cas/applications/{application_id}/components/{component_id}").
-		WithResponse(new(model.ShowComponentDetailResponse))
+		WithResponse(new(model.ShowComponentDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -607,7 +620,8 @@ func GenReqDefForShowEnvironmentDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cas/environments/{environment_id}").
-		WithResponse(new(model.ShowEnvironmentDetailResponse))
+		WithResponse(new(model.ShowEnvironmentDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -625,7 +639,8 @@ func GenReqDefForShowInstanceDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cas/applications/{application_id}/components/{component_id}/instances/{instance_id}").
-		WithResponse(new(model.ShowInstanceDetailResponse))
+		WithResponse(new(model.ShowInstanceDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -651,7 +666,8 @@ func GenReqDefForShowJobDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cas/jobs/{job_id}").
-		WithResponse(new(model.ShowJobDetailResponse))
+		WithResponse(new(model.ShowJobDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -929,7 +945,8 @@ func GenReqDefForDeleteAuthorize() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/git/auths/{name}").
-		WithResponse(new(model.DeleteAuthorizeResponse))
+		WithResponse(new(model.DeleteAuthorizeResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -947,7 +964,8 @@ func GenReqDefForDeleteFile() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/git/files/{namespace}/{project}/{path}").
-		WithResponse(new(model.DeleteFileResponse))
+		WithResponse(new(model.DeleteFileResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -991,7 +1009,8 @@ func GenReqDefForDeleteHook() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/git/repos/{namespace}/{project}/hooks/{hook_id}").
-		WithResponse(new(model.DeleteHookResponse))
+		WithResponse(new(model.DeleteHookResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1022,7 +1041,8 @@ func GenReqDefForDeleteTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/git/repos/{namespace}/{project}/tags/{tag_name}").
-		WithResponse(new(model.DeleteTagResponse))
+		WithResponse(new(model.DeleteTagResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1053,7 +1073,8 @@ func GenReqDefForListAuthorizations() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/git/auths").
-		WithResponse(new(model.ListAuthorizationsResponse))
+		WithResponse(new(model.ListAuthorizationsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1067,7 +1088,8 @@ func GenReqDefForListBranches() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/git/repos/{namespace}/{project}/branches").
-		WithResponse(new(model.ListBranchesResponse))
+		WithResponse(new(model.ListBranchesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1094,7 +1116,8 @@ func GenReqDefForListCommits() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/git/repos/{namespace}/{project}/commits").
-		WithResponse(new(model.ListCommitsResponse))
+		WithResponse(new(model.ListCommitsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1126,7 +1149,8 @@ func GenReqDefForListHooks() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/git/repos/{namespace}/{project}/hooks").
-		WithResponse(new(model.ListHooksResponse))
+		WithResponse(new(model.ListHooksResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1153,7 +1177,8 @@ func GenReqDefForListNamespaces() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/git/repos/namespaces").
-		WithResponse(new(model.ListNamespacesResponse))
+		WithResponse(new(model.ListNamespacesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1172,7 +1197,8 @@ func GenReqDefForListProjects() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/git/repos/{namespace}/projects").
-		WithResponse(new(model.ListProjectsResponse))
+		WithResponse(new(model.ListProjectsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1195,7 +1221,8 @@ func GenReqDefForListTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/git/repos/{namespace}/{project}/tags").
-		WithResponse(new(model.ListTagsResponse))
+		WithResponse(new(model.ListTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1222,7 +1249,8 @@ func GenReqDefForListTrees() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/git/files/{namespace}/{project}/trees").
-		WithResponse(new(model.ListTreesResponse))
+		WithResponse(new(model.ListTreesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1254,7 +1282,8 @@ func GenReqDefForShowContent() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/git/files/{namespace}/{project}/{path}").
-		WithResponse(new(model.ShowContentResponse))
+		WithResponse(new(model.ShowContentResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1290,7 +1319,8 @@ func GenReqDefForShowProjectDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/git/repos/project-info").
-		WithResponse(new(model.ShowProjectDetailResponse))
+		WithResponse(new(model.ShowProjectDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1314,7 +1344,8 @@ func GenReqDefForShowRedirectUrl() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/git/auths/{repo_type}/redirect").
-		WithResponse(new(model.ShowRedirectUrlResponse))
+		WithResponse(new(model.ShowRedirectUrlResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1378,7 +1409,8 @@ func GenReqDefForListFlavors() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cas/metadata/flavors").
-		WithResponse(new(model.ListFlavorsResponse))
+		WithResponse(new(model.ListFlavorsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1392,7 +1424,8 @@ func GenReqDefForListRuntimes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cas/metadata/runtimes").
-		WithResponse(new(model.ListRuntimesResponse))
+		WithResponse(new(model.ListRuntimesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1406,7 +1439,8 @@ func GenReqDefForListTemplates() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cas/metadata/templates").
-		WithResponse(new(model.ListTemplatesResponse))
+		WithResponse(new(model.ListTemplatesResponse)).
+		WithContentType("application/json")
 
 	// request
 

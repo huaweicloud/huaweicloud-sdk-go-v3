@@ -285,7 +285,8 @@ func GenReqDefForDeleteServerGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/cloudservers/os-server-groups/{server_group_id}").
-		WithResponse(new(model.DeleteServerGroupResponse))
+		WithResponse(new(model.DeleteServerGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -326,7 +327,8 @@ func GenReqDefForDeleteServerMetadata() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/cloudservers/{server_id}/metadata/{key}").
-		WithResponse(new(model.DeleteServerMetadataResponse))
+		WithResponse(new(model.DeleteServerMetadataResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -367,7 +369,8 @@ func GenReqDefForDetachServerVolume() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/cloudservers/{server_id}/detachvolume/{volume_id}").
-		WithResponse(new(model.DetachServerVolumeResponse))
+		WithResponse(new(model.DetachServerVolumeResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -394,7 +397,8 @@ func GenReqDefForListFlavors() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/cloudservers/flavors").
-		WithResponse(new(model.ListFlavorsResponse))
+		WithResponse(new(model.ListFlavorsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -413,7 +417,8 @@ func GenReqDefForListResizeFlavors() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/cloudservers/resize_flavors").
-		WithResponse(new(model.ListResizeFlavorsResponse))
+		WithResponse(new(model.ListResizeFlavorsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -456,7 +461,8 @@ func GenReqDefForListServerBlockDevices() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/cloudservers/{server_id}/block_device").
-		WithResponse(new(model.ListServerBlockDevicesResponse))
+		WithResponse(new(model.ListServerBlockDevicesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -474,7 +480,8 @@ func GenReqDefForListServerInterfaces() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/cloudservers/{server_id}/os-interface").
-		WithResponse(new(model.ListServerInterfacesResponse))
+		WithResponse(new(model.ListServerInterfacesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -492,7 +499,8 @@ func GenReqDefForListServersDetails() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/cloudservers/detail").
-		WithResponse(new(model.ListServersDetailsResponse))
+		WithResponse(new(model.ListServersDetailsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -618,7 +626,8 @@ func GenReqDefForNovaDeleteKeypair() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2.1/{project_id}/os-keypairs/{keypair_name}").
-		WithResponse(new(model.NovaDeleteKeypairResponse))
+		WithResponse(new(model.NovaDeleteKeypairResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -636,7 +645,8 @@ func GenReqDefForNovaDeleteServer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2.1/{project_id}/servers/{server_id}").
-		WithResponse(new(model.NovaDeleteServerResponse))
+		WithResponse(new(model.NovaDeleteServerResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -677,7 +687,8 @@ func GenReqDefForNovaListAvailabilityZones() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.1/{project_id}/os-availability-zone").
-		WithResponse(new(model.NovaListAvailabilityZonesResponse))
+		WithResponse(new(model.NovaListAvailabilityZonesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -691,7 +702,8 @@ func GenReqDefForNovaListKeypairs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.1/{project_id}/os-keypairs").
-		WithResponse(new(model.NovaListKeypairsResponse))
+		WithResponse(new(model.NovaListKeypairsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -719,7 +731,8 @@ func GenReqDefForNovaListServerSecurityGroups() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.1/{project_id}/servers/{server_id}/os-security-groups").
-		WithResponse(new(model.NovaListServerSecurityGroupsResponse))
+		WithResponse(new(model.NovaListServerSecurityGroupsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -737,7 +750,8 @@ func GenReqDefForNovaListServersDetails() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.1/{project_id}/servers/detail").
-		WithResponse(new(model.NovaListServersDetailsResponse))
+		WithResponse(new(model.NovaListServersDetailsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -805,7 +819,8 @@ func GenReqDefForNovaShowKeypair() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.1/{project_id}/os-keypairs/{keypair_name}").
-		WithResponse(new(model.NovaShowKeypairResponse))
+		WithResponse(new(model.NovaShowKeypairResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -828,7 +843,8 @@ func GenReqDefForNovaShowServer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.1/{project_id}/servers/{server_id}").
-		WithResponse(new(model.NovaShowServerResponse))
+		WithResponse(new(model.NovaShowServerResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -943,7 +959,8 @@ func GenReqDefForShowResetPasswordFlag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/cloudservers/{server_id}/os-resetpwd-flag").
-		WithResponse(new(model.ShowResetPasswordFlagResponse))
+		WithResponse(new(model.ShowResetPasswordFlagResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -961,7 +978,8 @@ func GenReqDefForShowServer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/cloudservers/{server_id}").
-		WithResponse(new(model.ShowServerResponse))
+		WithResponse(new(model.ShowServerResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -979,7 +997,8 @@ func GenReqDefForShowServerLimits() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/cloudservers/limits").
-		WithResponse(new(model.ShowServerLimitsResponse))
+		WithResponse(new(model.ShowServerLimitsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1016,7 +1035,8 @@ func GenReqDefForShowServerTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/cloudservers/{server_id}/tags").
-		WithResponse(new(model.ShowServerTagsResponse))
+		WithResponse(new(model.ShowServerTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1080,7 +1100,8 @@ func GenReqDefForShowJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/jobs/{job_id}").
-		WithResponse(new(model.ShowJobResponse))
+		WithResponse(new(model.ShowJobResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

@@ -32,7 +32,8 @@ type RemuxTask struct {
 	UserData    *string           `json:"user_data,omitempty"`
 	OutputParam *RemuxOutputParam `json:"output_param,omitempty"`
 	// 任务完成进度百分比值。
-	CompleteRatio *int32 `json:"complete_ratio,omitempty"`
+	CompleteRatio  *int32    `json:"complete_ratio,omitempty"`
+	OutputMetadata *MetaData `json:"output_metadata,omitempty"`
 }
 
 func (o RemuxTask) String() string {

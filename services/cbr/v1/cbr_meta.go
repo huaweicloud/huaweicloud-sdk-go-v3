@@ -224,7 +224,8 @@ func GenReqDefForDeleteBackup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/backups/{backup_id}").
-		WithResponse(new(model.DeleteBackupResponse))
+		WithResponse(new(model.DeleteBackupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -242,7 +243,8 @@ func GenReqDefForDeleteMember() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/backups/{backup_id}/members/{member_id}").
-		WithResponse(new(model.DeleteMemberResponse))
+		WithResponse(new(model.DeleteMemberResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -264,7 +266,8 @@ func GenReqDefForDeletePolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/policies/{policy_id}").
-		WithResponse(new(model.DeletePolicyResponse))
+		WithResponse(new(model.DeletePolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -282,7 +285,8 @@ func GenReqDefForDeleteVault() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/vaults/{vault_id}").
-		WithResponse(new(model.DeleteVaultResponse))
+		WithResponse(new(model.DeleteVaultResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -300,7 +304,8 @@ func GenReqDefForDeleteVaultTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/vault/{vault_id}/tags/{key}").
-		WithResponse(new(model.DeleteVaultTagResponse))
+		WithResponse(new(model.DeleteVaultTagResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -364,7 +369,8 @@ func GenReqDefForListBackups() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/backups").
-		WithResponse(new(model.ListBackupsResponse))
+		WithResponse(new(model.ListBackupsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -463,7 +469,8 @@ func GenReqDefForListOpLogs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/operation-logs").
-		WithResponse(new(model.ListOpLogsResponse))
+		WithResponse(new(model.ListOpLogsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -526,7 +533,8 @@ func GenReqDefForListPolicies() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/policies").
-		WithResponse(new(model.ListPoliciesResponse))
+		WithResponse(new(model.ListPoliciesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -549,7 +557,8 @@ func GenReqDefForListProtectable() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/protectables/{protectable_type}/instances").
-		WithResponse(new(model.ListProtectableResponse))
+		WithResponse(new(model.ListProtectableResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -596,7 +605,8 @@ func GenReqDefForListVault() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/vaults").
-		WithResponse(new(model.ListVaultResponse))
+		WithResponse(new(model.ListVaultResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -724,7 +734,8 @@ func GenReqDefForShowBackup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/backups/{backup_id}").
-		WithResponse(new(model.ShowBackupResponse))
+		WithResponse(new(model.ShowBackupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -742,7 +753,8 @@ func GenReqDefForShowCheckpoint() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/checkpoints/{checkpoint_id}").
-		WithResponse(new(model.ShowCheckpointResponse))
+		WithResponse(new(model.ShowCheckpointResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -760,7 +772,8 @@ func GenReqDefForShowMemberDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/backups/{backup_id}/members/{member_id}").
-		WithResponse(new(model.ShowMemberDetailResponse))
+		WithResponse(new(model.ShowMemberDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -782,7 +795,8 @@ func GenReqDefForShowMembersDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/backups/{backup_id}/members").
-		WithResponse(new(model.ShowMembersDetailResponse))
+		WithResponse(new(model.ShowMembersDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -833,7 +847,8 @@ func GenReqDefForShowOpLog() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/operation-logs/{operation_log_id}").
-		WithResponse(new(model.ShowOpLogResponse))
+		WithResponse(new(model.ShowOpLogResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -851,7 +866,8 @@ func GenReqDefForShowPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/policies/{policy_id}").
-		WithResponse(new(model.ShowPolicyResponse))
+		WithResponse(new(model.ShowPolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -869,7 +885,8 @@ func GenReqDefForShowProtectable() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/protectables/{protectable_type}/instances/{instance_id}").
-		WithResponse(new(model.ShowProtectableResponse))
+		WithResponse(new(model.ShowProtectableResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -891,7 +908,8 @@ func GenReqDefForShowReplicationCapabilities() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/replication-capabilities").
-		WithResponse(new(model.ShowReplicationCapabilitiesResponse))
+		WithResponse(new(model.ShowReplicationCapabilitiesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -905,7 +923,8 @@ func GenReqDefForShowVault() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/vaults/{vault_id}").
-		WithResponse(new(model.ShowVaultResponse))
+		WithResponse(new(model.ShowVaultResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -923,7 +942,8 @@ func GenReqDefForShowVaultProjectTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/vault/tags").
-		WithResponse(new(model.ShowVaultProjectTagResponse))
+		WithResponse(new(model.ShowVaultProjectTagResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -956,7 +976,8 @@ func GenReqDefForShowVaultTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/vault/{vault_id}/tags").
-		WithResponse(new(model.ShowVaultTagResponse))
+		WithResponse(new(model.ShowVaultTagResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

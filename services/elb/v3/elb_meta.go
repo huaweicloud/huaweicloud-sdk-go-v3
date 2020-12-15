@@ -170,7 +170,8 @@ func GenReqDefForDeleteCertificate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/elb/certificates/{certificate_id}").
-		WithResponse(new(model.DeleteCertificateResponse))
+		WithResponse(new(model.DeleteCertificateResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -188,7 +189,8 @@ func GenReqDefForDeleteHealthMonitor() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/elb/healthmonitors/{healthmonitor_id}").
-		WithResponse(new(model.DeleteHealthMonitorResponse))
+		WithResponse(new(model.DeleteHealthMonitorResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -206,7 +208,8 @@ func GenReqDefForDeleteL7Policy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/elb/l7policies/{l7policy_id}").
-		WithResponse(new(model.DeleteL7PolicyResponse))
+		WithResponse(new(model.DeleteL7PolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -224,7 +227,8 @@ func GenReqDefForDeleteL7Rule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/elb/l7policies/{l7policy_id}/rules/{l7rule_id}").
-		WithResponse(new(model.DeleteL7RuleResponse))
+		WithResponse(new(model.DeleteL7RuleResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -246,7 +250,8 @@ func GenReqDefForDeleteListener() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/elb/listeners/{listener_id}").
-		WithResponse(new(model.DeleteListenerResponse))
+		WithResponse(new(model.DeleteListenerResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -264,7 +269,8 @@ func GenReqDefForDeleteLoadBalancer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/elb/loadbalancers/{loadbalancer_id}").
-		WithResponse(new(model.DeleteLoadBalancerResponse))
+		WithResponse(new(model.DeleteLoadBalancerResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -282,7 +288,8 @@ func GenReqDefForDeleteMember() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/elb/pools/{pool_id}/members/{member_id}").
-		WithResponse(new(model.DeleteMemberResponse))
+		WithResponse(new(model.DeleteMemberResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -304,7 +311,8 @@ func GenReqDefForDeletePool() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/elb/pools/{pool_id}").
-		WithResponse(new(model.DeletePoolResponse))
+		WithResponse(new(model.DeletePoolResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -322,7 +330,8 @@ func GenReqDefForListAvailabilityZones() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/availability-zones").
-		WithResponse(new(model.ListAvailabilityZonesResponse))
+		WithResponse(new(model.ListAvailabilityZonesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -336,7 +345,8 @@ func GenReqDefForListCertificates() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/certificates").
-		WithResponse(new(model.ListCertificatesResponse))
+		WithResponse(new(model.ListCertificatesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -387,7 +397,8 @@ func GenReqDefForListFlavors() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/flavors").
-		WithResponse(new(model.ListFlavorsResponse))
+		WithResponse(new(model.ListFlavorsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -430,7 +441,8 @@ func GenReqDefForListHealthMonitors() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/healthmonitors").
-		WithResponse(new(model.ListHealthMonitorsResponse))
+		WithResponse(new(model.ListHealthMonitorsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -513,7 +525,8 @@ func GenReqDefForListL7Policies() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/l7policies").
-		WithResponse(new(model.ListL7PoliciesResponse))
+		WithResponse(new(model.ListL7PoliciesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -592,7 +605,8 @@ func GenReqDefForListL7Rules() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/l7policies/{l7policy_id}/rules").
-		WithResponse(new(model.ListL7RulesResponse))
+		WithResponse(new(model.ListL7RulesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -659,7 +673,8 @@ func GenReqDefForListListeners() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/listeners").
-		WithResponse(new(model.ListListenersResponse))
+		WithResponse(new(model.ListListenersResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -770,7 +785,8 @@ func GenReqDefForListLoadBalancers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/loadbalancers").
-		WithResponse(new(model.ListLoadBalancersResponse))
+		WithResponse(new(model.ListLoadBalancersResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -905,7 +921,8 @@ func GenReqDefForListMembers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/pools/{pool_id}/members").
-		WithResponse(new(model.ListMembersResponse))
+		WithResponse(new(model.ListMembersResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -972,7 +989,8 @@ func GenReqDefForListPools() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/pools").
-		WithResponse(new(model.ListPoolsResponse))
+		WithResponse(new(model.ListPoolsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1051,7 +1069,8 @@ func GenReqDefForShowCertificate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/certificates/{certificate_id}").
-		WithResponse(new(model.ShowCertificateResponse))
+		WithResponse(new(model.ShowCertificateResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1069,7 +1088,8 @@ func GenReqDefForShowFlavor() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/flavors/{flavor_id}").
-		WithResponse(new(model.ShowFlavorResponse))
+		WithResponse(new(model.ShowFlavorResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1087,7 +1107,8 @@ func GenReqDefForShowHealthMonitor() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/healthmonitors/{healthmonitor_id}").
-		WithResponse(new(model.ShowHealthMonitorResponse))
+		WithResponse(new(model.ShowHealthMonitorResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1105,7 +1126,8 @@ func GenReqDefForShowL7Policy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/l7policies/{l7policy_id}").
-		WithResponse(new(model.ShowL7PolicyResponse))
+		WithResponse(new(model.ShowL7PolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1123,7 +1145,8 @@ func GenReqDefForShowL7Rule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/l7policies/{l7policy_id}/rules/{l7rule_id}").
-		WithResponse(new(model.ShowL7RuleResponse))
+		WithResponse(new(model.ShowL7RuleResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1145,7 +1168,8 @@ func GenReqDefForShowListener() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/listeners/{listener_id}").
-		WithResponse(new(model.ShowListenerResponse))
+		WithResponse(new(model.ShowListenerResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1163,7 +1187,8 @@ func GenReqDefForShowLoadBalancer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/loadbalancers/{loadbalancer_id}").
-		WithResponse(new(model.ShowLoadBalancerResponse))
+		WithResponse(new(model.ShowLoadBalancerResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1181,7 +1206,8 @@ func GenReqDefForShowLoadBalancerStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/loadbalancers/{loadbalancer_id}/statuses").
-		WithResponse(new(model.ShowLoadBalancerStatusResponse))
+		WithResponse(new(model.ShowLoadBalancerStatusResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1199,7 +1225,8 @@ func GenReqDefForShowMember() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/pools/{pool_id}/members/{member_id}").
-		WithResponse(new(model.ShowMemberResponse))
+		WithResponse(new(model.ShowMemberResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1221,7 +1248,8 @@ func GenReqDefForShowPool() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/pools/{pool_id}").
-		WithResponse(new(model.ShowPoolResponse))
+		WithResponse(new(model.ShowPoolResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1239,7 +1267,8 @@ func GenReqDefForShowQuota() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/quotas").
-		WithResponse(new(model.ShowQuotaResponse))
+		WithResponse(new(model.ShowQuotaResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1253,7 +1282,8 @@ func GenReqDefForShowQuotaDefaults() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/quotas/defaults").
-		WithResponse(new(model.ShowQuotaDefaultsResponse))
+		WithResponse(new(model.ShowQuotaDefaultsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1459,7 +1489,8 @@ func GenReqDefForCountPreoccupyIpNum() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/preoccupy-ip-num").
-		WithResponse(new(model.CountPreoccupyIpNumResponse))
+		WithResponse(new(model.CountPreoccupyIpNumResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1513,7 +1544,8 @@ func GenReqDefForDeleteIpGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v3/{project_id}/elb/ipgroups/{ipgroup_id}").
-		WithResponse(new(model.DeleteIpGroupResponse))
+		WithResponse(new(model.DeleteIpGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1531,7 +1563,8 @@ func GenReqDefForListIpGroups() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/ipgroups").
-		WithResponse(new(model.ListIpGroupsResponse))
+		WithResponse(new(model.ListIpGroupsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1574,7 +1607,8 @@ func GenReqDefForShowIpGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/elb/ipgroups/{ipgroup_id}").
-		WithResponse(new(model.ShowIpGroupResponse))
+		WithResponse(new(model.ShowIpGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

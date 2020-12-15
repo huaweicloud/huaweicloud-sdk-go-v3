@@ -79,7 +79,8 @@ func GenReqDefForCinderListAvailabilityZones() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/os-availability-zone").
-		WithResponse(new(model.CinderListAvailabilityZonesResponse))
+		WithResponse(new(model.CinderListAvailabilityZonesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -93,7 +94,8 @@ func GenReqDefForCinderListQuotas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/os-quota-sets/{target_project_id}").
-		WithResponse(new(model.CinderListQuotasResponse))
+		WithResponse(new(model.CinderListQuotasResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -116,7 +118,8 @@ func GenReqDefForCinderListVolumeTypes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/types").
-		WithResponse(new(model.CinderListVolumeTypesResponse))
+		WithResponse(new(model.CinderListVolumeTypesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -168,7 +171,8 @@ func GenReqDefForDeleteSnapshot() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/cloudsnapshots/{snapshot_id}").
-		WithResponse(new(model.DeleteSnapshotResponse))
+		WithResponse(new(model.DeleteSnapshotResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -186,7 +190,8 @@ func GenReqDefForDeleteVolume() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/cloudvolumes/{volume_id}").
-		WithResponse(new(model.DeleteVolumeResponse))
+		WithResponse(new(model.DeleteVolumeResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -204,7 +209,8 @@ func GenReqDefForListSnapshots() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cloudsnapshots/detail").
-		WithResponse(new(model.ListSnapshotsResponse))
+		WithResponse(new(model.ListSnapshotsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -263,7 +269,8 @@ func GenReqDefForListVolumeTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cloudvolumes/tags").
-		WithResponse(new(model.ListVolumeTagsResponse))
+		WithResponse(new(model.ListVolumeTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -277,7 +284,8 @@ func GenReqDefForListVolumes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cloudvolumes/detail").
-		WithResponse(new(model.ListVolumesResponse))
+		WithResponse(new(model.ListVolumesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -425,7 +433,8 @@ func GenReqDefForShowJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/jobs/{job_id}").
-		WithResponse(new(model.ShowJobResponse))
+		WithResponse(new(model.ShowJobResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -443,7 +452,8 @@ func GenReqDefForShowSnapshot() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cloudsnapshots/{snapshot_id}").
-		WithResponse(new(model.ShowSnapshotResponse))
+		WithResponse(new(model.ShowSnapshotResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -461,7 +471,8 @@ func GenReqDefForShowVolume() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cloudvolumes/{volume_id}").
-		WithResponse(new(model.ShowVolumeResponse))
+		WithResponse(new(model.ShowVolumeResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -479,7 +490,8 @@ func GenReqDefForShowVolumeTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/cloudvolumes/{volume_id}/tags").
-		WithResponse(new(model.ShowVolumeTagsResponse))
+		WithResponse(new(model.ShowVolumeTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

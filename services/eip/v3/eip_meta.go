@@ -56,7 +56,8 @@ func GenReqDefForListPublicips() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/eip/publicips").
-		WithResponse(new(model.ListPublicipsResponse))
+		WithResponse(new(model.ListPublicipsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -231,7 +232,8 @@ func GenReqDefForShowPublicip() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/eip/publicips/{publicip_id}").
-		WithResponse(new(model.ShowPublicipResponse))
+		WithResponse(new(model.ShowPublicipResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

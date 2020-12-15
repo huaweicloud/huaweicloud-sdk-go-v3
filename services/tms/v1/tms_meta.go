@@ -48,7 +48,8 @@ func GenReqDefForListApiVersions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/").
-		WithResponse(new(model.ListApiVersionsResponse))
+		WithResponse(new(model.ListApiVersionsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -62,7 +63,8 @@ func GenReqDefForListPredefineTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1.0/predefine_tags").
-		WithResponse(new(model.ListPredefineTagsResponse))
+		WithResponse(new(model.ListPredefineTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -101,7 +103,8 @@ func GenReqDefForShowApiVersion() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/{api_version}").
-		WithResponse(new(model.ShowApiVersionResponse))
+		WithResponse(new(model.ShowApiVersionResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

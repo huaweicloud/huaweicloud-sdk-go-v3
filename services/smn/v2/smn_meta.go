@@ -60,7 +60,8 @@ func GenReqDefForCancelSubscription() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/notifications/subscriptions/{subscription_urn}").
-		WithResponse(new(model.CancelSubscriptionResponse))
+		WithResponse(new(model.CancelSubscriptionResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -143,7 +144,8 @@ func GenReqDefForDeleteMessageTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/notifications/message_template/{message_template_id}").
-		WithResponse(new(model.DeleteMessageTemplateResponse))
+		WithResponse(new(model.DeleteMessageTemplateResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -161,7 +163,8 @@ func GenReqDefForDeleteResourceTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/{resource_type}/{resource_id}/tags/{key}").
-		WithResponse(new(model.DeleteResourceTagResponse))
+		WithResponse(new(model.DeleteResourceTagResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -187,7 +190,8 @@ func GenReqDefForDeleteTopic() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/notifications/topics/{topic_urn}").
-		WithResponse(new(model.DeleteTopicResponse))
+		WithResponse(new(model.DeleteTopicResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -205,7 +209,8 @@ func GenReqDefForDeleteTopicAttributeByName() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/notifications/topics/{topic_urn}/attributes/{name}").
-		WithResponse(new(model.DeleteTopicAttributeByNameResponse))
+		WithResponse(new(model.DeleteTopicAttributeByNameResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -227,7 +232,8 @@ func GenReqDefForDeleteTopicAttributes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/notifications/topics/{topic_urn}/attributes").
-		WithResponse(new(model.DeleteTopicAttributesResponse))
+		WithResponse(new(model.DeleteTopicAttributesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -245,7 +251,8 @@ func GenReqDefForListMessageTemplateDetails() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/notifications/message_template/{message_template_id}").
-		WithResponse(new(model.ListMessageTemplateDetailsResponse))
+		WithResponse(new(model.ListMessageTemplateDetailsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -263,7 +270,8 @@ func GenReqDefForListMessageTemplates() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/notifications/message_template").
-		WithResponse(new(model.ListMessageTemplatesResponse))
+		WithResponse(new(model.ListMessageTemplatesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -294,7 +302,8 @@ func GenReqDefForListProjectTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/{resource_type}/tags").
-		WithResponse(new(model.ListProjectTagsResponse))
+		WithResponse(new(model.ListProjectTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -335,7 +344,8 @@ func GenReqDefForListResourceTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/{resource_type}/{resource_id}/tags").
-		WithResponse(new(model.ListResourceTagsResponse))
+		WithResponse(new(model.ListResourceTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -357,7 +367,8 @@ func GenReqDefForListSubscriptions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/notifications/subscriptions").
-		WithResponse(new(model.ListSubscriptionsResponse))
+		WithResponse(new(model.ListSubscriptionsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -380,7 +391,8 @@ func GenReqDefForListSubscriptionsByTopic() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/notifications/topics/{topic_urn}/subscriptions").
-		WithResponse(new(model.ListSubscriptionsByTopicResponse))
+		WithResponse(new(model.ListSubscriptionsByTopicResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -407,7 +419,8 @@ func GenReqDefForListTopicAttributes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/notifications/topics/{topic_urn}/attributes").
-		WithResponse(new(model.ListTopicAttributesResponse))
+		WithResponse(new(model.ListTopicAttributesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -430,7 +443,8 @@ func GenReqDefForListTopicDetails() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/notifications/topics/{topic_urn}").
-		WithResponse(new(model.ListTopicDetailsResponse))
+		WithResponse(new(model.ListTopicDetailsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -448,7 +462,8 @@ func GenReqDefForListTopics() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/notifications/topics").
-		WithResponse(new(model.ListTopicsResponse))
+		WithResponse(new(model.ListTopicsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -471,7 +486,8 @@ func GenReqDefForListVersion() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/{api_version}").
-		WithResponse(new(model.ListVersionResponse))
+		WithResponse(new(model.ListVersionResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -489,7 +505,8 @@ func GenReqDefForListVersions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/").
-		WithResponse(new(model.ListVersionsResponse))
+		WithResponse(new(model.ListVersionsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -618,7 +635,8 @@ func GenReqDefForDeleteApplication() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/notifications/applications/{application_urn}").
-		WithResponse(new(model.DeleteApplicationResponse))
+		WithResponse(new(model.DeleteApplicationResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -636,7 +654,8 @@ func GenReqDefForListApplicationAttributes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/notifications/applications/{application_urn}").
-		WithResponse(new(model.ListApplicationAttributesResponse))
+		WithResponse(new(model.ListApplicationAttributesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -654,7 +673,8 @@ func GenReqDefForListApplications() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/notifications/applications").
-		WithResponse(new(model.ListApplicationsResponse))
+		WithResponse(new(model.ListApplicationsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -754,7 +774,8 @@ func GenReqDefForDeleteApplicationEndpoint() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/notifications/endpoints/{endpoint_urn}").
-		WithResponse(new(model.DeleteApplicationEndpointResponse))
+		WithResponse(new(model.DeleteApplicationEndpointResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -772,7 +793,8 @@ func GenReqDefForListApplicationEndpointAttributes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/notifications/endpoints/{endpoint_urn}").
-		WithResponse(new(model.ListApplicationEndpointAttributesResponse))
+		WithResponse(new(model.ListApplicationEndpointAttributesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -790,7 +812,8 @@ func GenReqDefForListApplicationEndpoints() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/notifications/applications/{application_urn}/endpoints").
-		WithResponse(new(model.ListApplicationEndpointsResponse))
+		WithResponse(new(model.ListApplicationEndpointsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

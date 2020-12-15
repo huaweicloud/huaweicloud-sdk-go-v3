@@ -222,7 +222,8 @@ func GenReqDefForDeleteBackgroundTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/instances/{instance_id}/tasks/{task_id}").
-		WithResponse(new(model.DeleteBackgroundTaskResponse))
+		WithResponse(new(model.DeleteBackgroundTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -248,7 +249,8 @@ func GenReqDefForDeleteInstance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/instances/{instance_id}").
-		WithResponse(new(model.DeleteInstanceResponse))
+		WithResponse(new(model.DeleteInstanceResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -270,7 +272,8 @@ func GenReqDefForDeleteSinkTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/connectors/{connector_id}/sink-tasks/{task_id}").
-		WithResponse(new(model.DeleteSinkTaskResponse))
+		WithResponse(new(model.DeleteSinkTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -296,7 +299,8 @@ func GenReqDefForListAvailableZones() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/available-zones").
-		WithResponse(new(model.ListAvailableZonesResponse))
+		WithResponse(new(model.ListAvailableZonesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -310,7 +314,8 @@ func GenReqDefForListBackgroundTasks() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/tasks").
-		WithResponse(new(model.ListBackgroundTasksResponse))
+		WithResponse(new(model.ListBackgroundTasksResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -349,7 +354,8 @@ func GenReqDefForListInstanceTopics() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/topics").
-		WithResponse(new(model.ListInstanceTopicsResponse))
+		WithResponse(new(model.ListInstanceTopicsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -371,7 +377,8 @@ func GenReqDefForListInstances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances").
-		WithResponse(new(model.ListInstancesResponse))
+		WithResponse(new(model.ListInstancesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -418,7 +425,8 @@ func GenReqDefForListProducts() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/products").
-		WithResponse(new(model.ListProductsResponse))
+		WithResponse(new(model.ListProductsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -437,7 +445,8 @@ func GenReqDefForListSinkTasks() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/connectors/{connector_id}/sink-tasks").
-		WithResponse(new(model.ListSinkTasksResponse))
+		WithResponse(new(model.ListSinkTasksResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -571,7 +580,8 @@ func GenReqDefForRestartManager() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/instances/{instance_id}/restart-kafka-manager").
-		WithResponse(new(model.RestartManagerResponse))
+		WithResponse(new(model.RestartManagerResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -593,7 +603,8 @@ func GenReqDefForShowBackgroundTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/tasks/{task_id}").
-		WithResponse(new(model.ShowBackgroundTaskResponse))
+		WithResponse(new(model.ShowBackgroundTaskResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -619,7 +630,8 @@ func GenReqDefForShowCesHierarchy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/ces-hierarchy").
-		WithResponse(new(model.ShowCesHierarchyResponse))
+		WithResponse(new(model.ShowCesHierarchyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -641,7 +653,8 @@ func GenReqDefForShowCluster() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/management/cluster").
-		WithResponse(new(model.ShowClusterResponse))
+		WithResponse(new(model.ShowClusterResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -663,7 +676,8 @@ func GenReqDefForShowCoordinators() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/management/coordinators").
-		WithResponse(new(model.ShowCoordinatorsResponse))
+		WithResponse(new(model.ShowCoordinatorsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -685,7 +699,8 @@ func GenReqDefForShowGroups() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/management/groups/{group}").
-		WithResponse(new(model.ShowGroupsResponse))
+		WithResponse(new(model.ShowGroupsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -711,7 +726,8 @@ func GenReqDefForShowInstance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}").
-		WithResponse(new(model.ShowInstanceResponse))
+		WithResponse(new(model.ShowInstanceResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -733,7 +749,8 @@ func GenReqDefForShowInstanceExtendProductInfo() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/extend").
-		WithResponse(new(model.ShowInstanceExtendProductInfoResponse))
+		WithResponse(new(model.ShowInstanceExtendProductInfoResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -764,7 +781,8 @@ func GenReqDefForShowInstanceTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/kafka/{instance_id}/tags").
-		WithResponse(new(model.ShowInstanceTagsResponse))
+		WithResponse(new(model.ShowInstanceTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -786,7 +804,8 @@ func GenReqDefForShowInstanceTopicDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/management/topics/{topic}").
-		WithResponse(new(model.ShowInstanceTopicDetailResponse))
+		WithResponse(new(model.ShowInstanceTopicDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -812,7 +831,8 @@ func GenReqDefForShowMaintainWindows() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/instances/maintain-windows").
-		WithResponse(new(model.ShowMaintainWindowsResponse))
+		WithResponse(new(model.ShowMaintainWindowsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -826,7 +846,8 @@ func GenReqDefForShowMessages() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/management/topics/{topic}/messages").
-		WithResponse(new(model.ShowMessagesResponse))
+		WithResponse(new(model.ShowMessagesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -873,7 +894,8 @@ func GenReqDefForShowPartitionBeginningMessage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/management/topics/{topic}/partitions/{partition}/beginning-message").
-		WithResponse(new(model.ShowPartitionBeginningMessageResponse))
+		WithResponse(new(model.ShowPartitionBeginningMessageResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -903,7 +925,8 @@ func GenReqDefForShowPartitionEndMessage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/management/topics/{topic}/partitions/{partition}/end-message").
-		WithResponse(new(model.ShowPartitionEndMessageResponse))
+		WithResponse(new(model.ShowPartitionEndMessageResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -933,7 +956,8 @@ func GenReqDefForShowPartitionMessage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/instances/{instance_id}/management/topics/{topic}/partitions/{partition}/message").
-		WithResponse(new(model.ShowPartitionMessageResponse))
+		WithResponse(new(model.ShowPartitionMessageResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -968,7 +992,8 @@ func GenReqDefForShowProjectTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/kafka/tags").
-		WithResponse(new(model.ShowProjectTagsResponse))
+		WithResponse(new(model.ShowProjectTagsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -986,7 +1011,8 @@ func GenReqDefForShowSinkTaskDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/connectors/{connector_id}/sink-tasks/{task_id}").
-		WithResponse(new(model.ShowSinkTaskDetailResponse))
+		WithResponse(new(model.ShowSinkTaskDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

@@ -10,7 +10,8 @@ func GenReqDefForAddApplyJoinProjectForAgc() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/projects/{project_id}/members/agc-join").
-		WithResponse(new(model.AddApplyJoinProjectForAgcResponse))
+		WithResponse(new(model.AddApplyJoinProjectForAgcResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -190,7 +191,8 @@ func GenReqDefForDeleteIterationV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v4/projects/{project_id}/iterations/{iteration_id}").
-		WithResponse(new(model.DeleteIterationV4Response))
+		WithResponse(new(model.DeleteIterationV4Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -212,7 +214,8 @@ func GenReqDefForDeleteProjectV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v4/projects/{project_id}").
-		WithResponse(new(model.DeleteProjectV4Response))
+		WithResponse(new(model.DeleteProjectV4Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -230,7 +233,8 @@ func GenReqDefForListDomainNotAddedProjectsV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/projects/domain/not-added").
-		WithResponse(new(model.ListDomainNotAddedProjectsV4Response))
+		WithResponse(new(model.ListDomainNotAddedProjectsV4Response)).
+		WithContentType("application/json")
 
 	// request
 
@@ -253,7 +257,8 @@ func GenReqDefForListProjectBugStaticsV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/projects/{project_id}/bug-statistic").
-		WithResponse(new(model.ListProjectBugStaticsV4Response))
+		WithResponse(new(model.ListProjectBugStaticsV4Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -271,7 +276,8 @@ func GenReqDefForListProjectDemandStaticV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/projects/{project_id}/demand-statistic").
-		WithResponse(new(model.ListProjectDemandStaticV4Response))
+		WithResponse(new(model.ListProjectDemandStaticV4Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -289,7 +295,8 @@ func GenReqDefForListProjectIterationsV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/projects/{project_id}/iterations").
-		WithResponse(new(model.ListProjectIterationsV4Response))
+		WithResponse(new(model.ListProjectIterationsV4Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -307,7 +314,8 @@ func GenReqDefForListProjectMembersV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/projects/{project_id}/members").
-		WithResponse(new(model.ListProjectMembersV4Response))
+		WithResponse(new(model.ListProjectMembersV4Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -334,7 +342,8 @@ func GenReqDefForListProjectsV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/projects").
-		WithResponse(new(model.ListProjectsV4Response))
+		WithResponse(new(model.ListProjectsV4Response)).
+		WithContentType("application/json")
 
 	// request
 
@@ -377,7 +386,8 @@ func GenReqDefForRemoveProject() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v4/projects/{project_id}/quit").
-		WithResponse(new(model.RemoveProjectResponse))
+		WithResponse(new(model.RemoveProjectResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -395,7 +405,8 @@ func GenReqDefForShowCurUserInfo() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/user").
-		WithResponse(new(model.ShowCurUserInfoResponse))
+		WithResponse(new(model.ShowCurUserInfoResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -409,7 +420,8 @@ func GenReqDefForShowCurUserRole() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/projects/{project_id}/user-role").
-		WithResponse(new(model.ShowCurUserRoleResponse))
+		WithResponse(new(model.ShowCurUserRoleResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -427,7 +439,8 @@ func GenReqDefForShowIterationV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/iterations/{iteration_id}").
-		WithResponse(new(model.ShowIterationV4Response))
+		WithResponse(new(model.ShowIterationV4Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -445,7 +458,8 @@ func GenReqDefForShowProjectSummaryV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/projects/{project_id}/summary").
-		WithResponse(new(model.ShowProjectSummaryV4Response))
+		WithResponse(new(model.ShowProjectSummaryV4Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -601,7 +615,8 @@ func GenReqDefForDeleteIssueV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v4/projects/{project_id}/issues/{issue_id}").
-		WithResponse(new(model.DeleteIssueV4Response))
+		WithResponse(new(model.DeleteIssueV4Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -623,7 +638,8 @@ func GenReqDefForListChildIssuesV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/projects/{project_id}/issues/{issue_id}/child").
-		WithResponse(new(model.ListChildIssuesV4Response))
+		WithResponse(new(model.ListChildIssuesV4Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -645,7 +661,8 @@ func GenReqDefForListIssueCommentsV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/projects/{project_id}/issues/{issue_id}/comments").
-		WithResponse(new(model.ListIssueCommentsV4Response))
+		WithResponse(new(model.ListIssueCommentsV4Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -676,7 +693,8 @@ func GenReqDefForListIssueRecordsV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/projects/{project_id}/issue/{issue_id}/records").
-		WithResponse(new(model.ListIssueRecordsV4Response))
+		WithResponse(new(model.ListIssueRecordsV4Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -749,7 +767,8 @@ func GenReqDefForShowIssueV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/projects/{project_id}/issues/{issue_id}").
-		WithResponse(new(model.ShowIssueV4Response))
+		WithResponse(new(model.ShowIssueV4Response)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -794,7 +813,8 @@ func GenReqDefForShowtIssueCompletionRate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/projects/{project_id}/issue-completion-rate").
-		WithResponse(new(model.ShowtIssueCompletionRateResponse))
+		WithResponse(new(model.ShowtIssueCompletionRateResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

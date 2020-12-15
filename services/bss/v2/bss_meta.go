@@ -10,7 +10,8 @@ func GenReqDefForAutoRenewalResources() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/orders/subscriptions/resources/autorenew/{resource_id}").
-		WithResponse(new(model.AutoRenewalResourcesResponse))
+		WithResponse(new(model.AutoRenewalResourcesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -47,7 +48,8 @@ func GenReqDefForCancelAutoRenewalResources() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/orders/subscriptions/resources/autorenew/{resource_id}").
-		WithResponse(new(model.CancelAutoRenewalResourcesResponse))
+		WithResponse(new(model.CancelAutoRenewalResourcesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -141,7 +143,8 @@ func GenReqDefForCreateEnterpriseProjectAuth() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/enterprises/enterprise-projects/authority").
-		WithResponse(new(model.CreateEnterpriseProjectAuthResponse))
+		WithResponse(new(model.CreateEnterpriseProjectAuthResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -274,7 +277,8 @@ func GenReqDefForDeletePostal() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/customers/postal-addresses/{address_id}").
-		WithResponse(new(model.DeletePostalResponse))
+		WithResponse(new(model.DeletePostalResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -292,7 +296,8 @@ func GenReqDefForListCities() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/systems/configs/cities").
-		WithResponse(new(model.ListCitiesResponse))
+		WithResponse(new(model.ListCitiesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -324,7 +329,8 @@ func GenReqDefForListCounties() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/systems/configs/counties").
-		WithResponse(new(model.ListCountiesResponse))
+		WithResponse(new(model.ListCountiesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -356,7 +362,8 @@ func GenReqDefForListCouponQuotasRecords() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/partners/coupon-quotas/records").
-		WithResponse(new(model.ListCouponQuotasRecordsResponse))
+		WithResponse(new(model.ListCouponQuotasRecordsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -403,7 +410,8 @@ func GenReqDefForListCustomerBillsFeeRecords() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/bills/customer-bills/fee-records").
-		WithResponse(new(model.ListCustomerBillsFeeRecordsResponse))
+		WithResponse(new(model.ListCustomerBillsFeeRecordsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -507,7 +515,8 @@ func GenReqDefForListCustomerOrders() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/orders/customer-orders").
-		WithResponse(new(model.ListCustomerOrdersResponse))
+		WithResponse(new(model.ListCustomerOrdersResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -612,7 +621,8 @@ func GenReqDefForListCustomerselfResourceRecords() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/bills/customer-bills/res-fee-records").
-		WithResponse(new(model.ListCustomerselfResourceRecordsResponse))
+		WithResponse(new(model.ListCustomerselfResourceRecordsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -684,7 +694,8 @@ func GenReqDefForListEnterpriseMultiAccount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/enterprises/multi-accounts/retrieve-amount").
-		WithResponse(new(model.ListEnterpriseMultiAccountResponse))
+		WithResponse(new(model.ListEnterpriseMultiAccountResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -715,7 +726,8 @@ func GenReqDefForListEnterpriseOrganizations() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/enterprises/multi-accounts/enterprise-organizations").
-		WithResponse(new(model.ListEnterpriseOrganizationsResponse))
+		WithResponse(new(model.ListEnterpriseOrganizationsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -738,7 +750,8 @@ func GenReqDefForListEnterpriseSubCustomers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/enterprises/multi-accounts/sub-customers").
-		WithResponse(new(model.ListEnterpriseSubCustomersResponse))
+		WithResponse(new(model.ListEnterpriseSubCustomersResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -796,7 +809,8 @@ func GenReqDefForListIssuedCouponQuotas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/partners/issued-coupon-quotas").
-		WithResponse(new(model.ListIssuedCouponQuotasResponse))
+		WithResponse(new(model.ListIssuedCouponQuotasResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -831,7 +845,8 @@ func GenReqDefForListIssuedPartnerCoupons() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/promotions/benefits/partner-coupons").
-		WithResponse(new(model.ListIssuedPartnerCouponsResponse))
+		WithResponse(new(model.ListIssuedPartnerCouponsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -921,7 +936,8 @@ func GenReqDefForListOrderCouponsByOrderId() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/orders/customer-orders/order-coupons").
-		WithResponse(new(model.ListOrderCouponsByOrderIdResponse))
+		WithResponse(new(model.ListOrderCouponsByOrderIdResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -940,7 +956,8 @@ func GenReqDefForListPartnerAdjustRecords() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/accounts/partner-accounts/adjust-records").
-		WithResponse(new(model.ListPartnerAdjustRecordsResponse))
+		WithResponse(new(model.ListPartnerAdjustRecordsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -987,7 +1004,8 @@ func GenReqDefForListPartnerBalances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/accounts/partner-accounts/balances").
-		WithResponse(new(model.ListPartnerBalancesResponse))
+		WithResponse(new(model.ListPartnerBalancesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1006,7 +1024,8 @@ func GenReqDefForListPartnerCouponsRecord() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/promotions/benefits/partner-coupons/records/query").
-		WithResponse(new(model.ListPartnerCouponsRecordResponse))
+		WithResponse(new(model.ListPartnerCouponsRecordResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1065,7 +1084,8 @@ func GenReqDefForListPartnerPayOrders() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/orders/customer-orders/partner-pay-orders").
-		WithResponse(new(model.ListPartnerPayOrdersResponse))
+		WithResponse(new(model.ListPartnerPayOrdersResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1123,7 +1143,8 @@ func GenReqDefForListPostalAddress() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/customers/postal-addresses").
-		WithResponse(new(model.ListPostalAddressResponse))
+		WithResponse(new(model.ListPostalAddressResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1146,7 +1167,8 @@ func GenReqDefForListProvinces() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/systems/configs/provinces").
-		WithResponse(new(model.ListProvincesResponse))
+		WithResponse(new(model.ListProvincesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1212,7 +1234,8 @@ func GenReqDefForListResourceTypes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/bases/resource-types").
-		WithResponse(new(model.ListResourceTypesResponse))
+		WithResponse(new(model.ListResourceTypesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1236,7 +1259,8 @@ func GenReqDefForListResourceUsages() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/payments/free-resources/usages/query").
-		WithResponse(new(model.ListResourceUsagesResponse))
+		WithResponse(new(model.ListResourceUsagesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1255,7 +1279,8 @@ func GenReqDefForListServiceResources() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/products/service-resources").
-		WithResponse(new(model.ListServiceResourcesResponse))
+		WithResponse(new(model.ListServiceResourcesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1287,7 +1312,8 @@ func GenReqDefForListServiceTypes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/bases/service-types").
-		WithResponse(new(model.ListServiceTypesResponse))
+		WithResponse(new(model.ListServiceTypesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1330,7 +1356,8 @@ func GenReqDefForListSubCustomerCoupons() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/promotions/benefits/coupons").
-		WithResponse(new(model.ListSubCustomerCouponsResponse))
+		WithResponse(new(model.ListSubCustomerCouponsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1389,7 +1416,8 @@ func GenReqDefForListSubCustomerDiscounts() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/partners/discounts").
-		WithResponse(new(model.ListSubCustomerDiscountsResponse))
+		WithResponse(new(model.ListSubCustomerDiscountsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1412,7 +1440,8 @@ func GenReqDefForListSubCustomerResFeeRecords() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/bills/partner-bills/subcustomer-bills/res-fee-records").
-		WithResponse(new(model.ListSubCustomerResFeeRecordsResponse))
+		WithResponse(new(model.ListSubCustomerResFeeRecordsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1490,7 +1519,8 @@ func GenReqDefForListSubcustomerMonthlyBills() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/bills/partner-bills/subcustomer-bills/monthly-sum").
-		WithResponse(new(model.ListSubcustomerMonthlyBillsResponse))
+		WithResponse(new(model.ListSubcustomerMonthlyBillsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1537,7 +1567,8 @@ func GenReqDefForListUsageTypes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/products/usage-types").
-		WithResponse(new(model.ListUsageTypesResponse))
+		WithResponse(new(model.ListUsageTypesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1740,7 +1771,8 @@ func GenReqDefForShowCusotmerAccountBalances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/accounts/customer-accounts/balances").
-		WithResponse(new(model.ShowCusotmerAccountBalancesResponse))
+		WithResponse(new(model.ShowCusotmerAccountBalancesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1754,7 +1786,8 @@ func GenReqDefForShowCustomerMonthlySum() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/bills/customer-bills/monthly-sum").
-		WithResponse(new(model.ShowCustomerMonthlySumResponse))
+		WithResponse(new(model.ShowCustomerMonthlySumResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1797,7 +1830,8 @@ func GenReqDefForShowCustomerOrderDetails() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/orders/customer-orders/details/{order_id}").
-		WithResponse(new(model.ShowCustomerOrderDetailsResponse))
+		WithResponse(new(model.ShowCustomerOrderDetailsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1828,7 +1862,8 @@ func GenReqDefForShowMultiAccountTransferAmount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/enterprises/multi-accounts/transfer-amount").
-		WithResponse(new(model.ShowMultiAccountTransferAmountResponse))
+		WithResponse(new(model.ShowMultiAccountTransferAmountResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1855,7 +1890,8 @@ func GenReqDefForShowRealnameAuthenticationReviewResult() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/customers/realname-auths/result").
-		WithResponse(new(model.ShowRealnameAuthenticationReviewResultResponse))
+		WithResponse(new(model.ShowRealnameAuthenticationReviewResultResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1874,7 +1910,8 @@ func GenReqDefForShowRefundOrderDetails() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/orders/customer-orders/refund-orders").
-		WithResponse(new(model.ShowRefundOrderDetailsResponse))
+		WithResponse(new(model.ShowRefundOrderDetailsResponse)).
+		WithContentType("application/json")
 
 	// request
 

@@ -10,7 +10,8 @@ func GenReqDefForListClassroomMembers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/classrooms/{classroom_id}/members").
-		WithResponse(new(model.ListClassroomMembersResponse))
+		WithResponse(new(model.ListClassroomMembersResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -41,7 +42,8 @@ func GenReqDefForListClassrooms() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/classrooms").
-		WithResponse(new(model.ListClassroomsResponse))
+		WithResponse(new(model.ListClassroomsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -68,7 +70,8 @@ func GenReqDefForShowClassroomDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/classrooms/{classroom_id}").
-		WithResponse(new(model.ShowClassroomDetailResponse))
+		WithResponse(new(model.ShowClassroomDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -86,7 +89,8 @@ func GenReqDefForListClassroomMemberJobs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/classrooms/{classroom_id}/jobs").
-		WithResponse(new(model.ListClassroomMemberJobsResponse))
+		WithResponse(new(model.ListClassroomMemberJobsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -117,7 +121,8 @@ func GenReqDefForListJobs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/jobs").
-		WithResponse(new(model.ListJobsResponse))
+		WithResponse(new(model.ListJobsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -148,7 +153,8 @@ func GenReqDefForListMemberJobRecords() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/jobs/{job_id}/exercises/{exercise_id}/records").
-		WithResponse(new(model.ListMemberJobRecordsResponse))
+		WithResponse(new(model.ListMemberJobRecordsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -183,7 +189,8 @@ func GenReqDefForShowJobDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/jobs/{job_id}").
-		WithResponse(new(model.ShowJobDetailResponse))
+		WithResponse(new(model.ShowJobDetailResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -201,7 +208,8 @@ func GenReqDefForShowJobExercises() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/jobs/{job_id}/exercises").
-		WithResponse(new(model.ShowJobExercisesResponse))
+		WithResponse(new(model.ShowJobExercisesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

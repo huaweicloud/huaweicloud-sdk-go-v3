@@ -9,14 +9,13 @@ package model
 
 import (
 	"encoding/json"
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type RemuxOutputParam struct {
-	// 输出格式。
-	Format *RemuxOutputParamFormat `json:"format,omitempty"`
+	// 输出格式。取值范围： - HLS - MP4
+	Format *string `json:"format,omitempty"`
 	// 分片时长，仅当“format”为“HLS”时有效。  取值范围：[2，10]。  默认值： 5。  单位：秒。
 	SegmentDuration *int32 `json:"segment_duration,omitempty"`
 	// 输出媒体是否去除片源的中metadata信息。
@@ -26,42 +25,4 @@ type RemuxOutputParam struct {
 func (o RemuxOutputParam) String() string {
 	data, _ := json.Marshal(o)
 	return strings.Join([]string{"RemuxOutputParam", string(data)}, " ")
-}
-
-type RemuxOutputParamFormat struct {
-	value string
-}
-
-type RemuxOutputParamFormatEnum struct {
-	HLS RemuxOutputParamFormat
-	MP4 RemuxOutputParamFormat
-}
-
-func GetRemuxOutputParamFormatEnum() RemuxOutputParamFormatEnum {
-	return RemuxOutputParamFormatEnum{
-		HLS: RemuxOutputParamFormat{
-			value: "HLS",
-		},
-		MP4: RemuxOutputParamFormat{
-			value: "MP4",
-		},
-	}
-}
-
-func (c RemuxOutputParamFormat) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *RemuxOutputParamFormat) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

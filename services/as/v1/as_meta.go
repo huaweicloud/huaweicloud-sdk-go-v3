@@ -182,7 +182,8 @@ func GenReqDefForDeleteLifecycleHook() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_lifecycle_hook/{scaling_group_id}/{lifecycle_hook_name}").
-		WithResponse(new(model.DeleteLifecycleHookResponse))
+		WithResponse(new(model.DeleteLifecycleHookResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -204,7 +205,8 @@ func GenReqDefForDeleteScalingConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_configuration/{scaling_configuration_id}").
-		WithResponse(new(model.DeleteScalingConfigResponse))
+		WithResponse(new(model.DeleteScalingConfigResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -222,7 +224,8 @@ func GenReqDefForDeleteScalingGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_group/{scaling_group_id}").
-		WithResponse(new(model.DeleteScalingGroupResponse))
+		WithResponse(new(model.DeleteScalingGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -245,7 +248,8 @@ func GenReqDefForDeleteScalingInstance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_group_instance/{instance_id}").
-		WithResponse(new(model.DeleteScalingInstanceResponse))
+		WithResponse(new(model.DeleteScalingInstanceResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -268,7 +272,8 @@ func GenReqDefForDeleteScalingNotification() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_notification/{scaling_group_id}/{topic_urn}").
-		WithResponse(new(model.DeleteScalingNotificationResponse))
+		WithResponse(new(model.DeleteScalingNotificationResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -290,7 +295,8 @@ func GenReqDefForDeleteScalingPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_policy/{scaling_policy_id}").
-		WithResponse(new(model.DeleteScalingPolicyResponse))
+		WithResponse(new(model.DeleteScalingPolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -381,7 +387,8 @@ func GenReqDefForListHookInstances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_instance_hook/{scaling_group_id}/list").
-		WithResponse(new(model.ListHookInstancesResponse))
+		WithResponse(new(model.ListHookInstancesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -404,7 +411,8 @@ func GenReqDefForListLifeCycleHooks() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_lifecycle_hook/{scaling_group_id}/list").
-		WithResponse(new(model.ListLifeCycleHooksResponse))
+		WithResponse(new(model.ListLifeCycleHooksResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -445,7 +453,8 @@ func GenReqDefForListScalingActivityLogs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_activity_log/{scaling_group_id}").
-		WithResponse(new(model.ListScalingActivityLogsResponse))
+		WithResponse(new(model.ListScalingActivityLogsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -480,7 +489,8 @@ func GenReqDefForListScalingConfigs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_configuration").
-		WithResponse(new(model.ListScalingConfigsResponse))
+		WithResponse(new(model.ListScalingConfigsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -511,7 +521,8 @@ func GenReqDefForListScalingGroups() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_group").
-		WithResponse(new(model.ListScalingGroupsResponse))
+		WithResponse(new(model.ListScalingGroupsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -546,7 +557,8 @@ func GenReqDefForListScalingInstances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_group_instance/{scaling_group_id}/list").
-		WithResponse(new(model.ListScalingInstancesResponse))
+		WithResponse(new(model.ListScalingInstancesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -585,7 +597,8 @@ func GenReqDefForListScalingNotifications() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_notification/{scaling_group_id}").
-		WithResponse(new(model.ListScalingNotificationsResponse))
+		WithResponse(new(model.ListScalingNotificationsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -603,7 +616,8 @@ func GenReqDefForListScalingPolicies() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_policy/{scaling_group_id}/list").
-		WithResponse(new(model.ListScalingPoliciesResponse))
+		WithResponse(new(model.ListScalingPoliciesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -642,7 +656,8 @@ func GenReqDefForListScalingPolicyExecuteLogs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_policy_execute_log/{scaling_policy_id}").
-		WithResponse(new(model.ListScalingPolicyExecuteLogsResponse))
+		WithResponse(new(model.ListScalingPolicyExecuteLogsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -693,7 +708,8 @@ func GenReqDefForListScalingTagInfosByResourceId() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/{resource_type}/{resource_id}/tags").
-		WithResponse(new(model.ListScalingTagInfosByResourceIdResponse))
+		WithResponse(new(model.ListScalingTagInfosByResourceIdResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -715,7 +731,8 @@ func GenReqDefForListScalingTagInfosByTenantId() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/{resource_type}/tags").
-		WithResponse(new(model.ListScalingTagInfosByTenantIdResponse))
+		WithResponse(new(model.ListScalingTagInfosByTenantIdResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -733,7 +750,8 @@ func GenReqDefForShowLifeCycleHook() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_lifecycle_hook/{scaling_group_id}/{lifecycle_hook_name}").
-		WithResponse(new(model.ShowLifeCycleHookResponse))
+		WithResponse(new(model.ShowLifeCycleHookResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -755,7 +773,8 @@ func GenReqDefForShowPolicyAndInstanceQuota() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/quotas/{scaling_group_id}").
-		WithResponse(new(model.ShowPolicyAndInstanceQuotaResponse))
+		WithResponse(new(model.ShowPolicyAndInstanceQuotaResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -773,7 +792,8 @@ func GenReqDefForShowResourceQuota() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/quotas").
-		WithResponse(new(model.ShowResourceQuotaResponse))
+		WithResponse(new(model.ShowResourceQuotaResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -787,7 +807,8 @@ func GenReqDefForShowScalingConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_configuration/{scaling_configuration_id}").
-		WithResponse(new(model.ShowScalingConfigResponse))
+		WithResponse(new(model.ShowScalingConfigResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -805,7 +826,8 @@ func GenReqDefForShowScalingGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_group/{scaling_group_id}").
-		WithResponse(new(model.ShowScalingGroupResponse))
+		WithResponse(new(model.ShowScalingGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -823,7 +845,8 @@ func GenReqDefForShowScalingPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_policy/{scaling_policy_id}").
-		WithResponse(new(model.ShowScalingPolicyResponse))
+		WithResponse(new(model.ShowScalingPolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

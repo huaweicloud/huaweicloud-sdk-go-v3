@@ -21,7 +21,7 @@ type CreateFunctionTriggerResponse struct {
 	TriggerId *string `json:"trigger_id,omitempty"`
 	// 触发器类型。  - TIMER: \"定时触发器。\" - APIG: \"APIG触发器。\" - CTS: \"云审计服务触发器。\" - DDS: \"文档数据库服务触发器。\" - DMS: \"分布式服务触发器。\" - DIS: \"数据接入服务触发器。\" - LTS: \"云日志服务触发器。\" - OBS: \"对象存储触发器。\" - SMN: \"消息通知服务触发器。\" - KAFKA: \"专享版消息通知服务触发器。\"
 	TriggerTypeCode *CreateFunctionTriggerResponseTriggerTypeCode `json:"trigger_type_code,omitempty"`
-	// \"触发器状态\"  - ACTIVE: 启用状态。 - DISABLE: 禁用状态。
+	// \"触发器状态\"  - ACTIVE: 启用状态。 - DISABLED: 禁用状态。
 	TriggerStatus *CreateFunctionTriggerResponseTriggerStatus `json:"trigger_status,omitempty"`
 	// 触发器源事件。
 	EventData *interface{} `json:"event_data,omitempty"`
@@ -112,8 +112,8 @@ type CreateFunctionTriggerResponseTriggerStatus struct {
 }
 
 type CreateFunctionTriggerResponseTriggerStatusEnum struct {
-	ACTIVE  CreateFunctionTriggerResponseTriggerStatus
-	DISABLE CreateFunctionTriggerResponseTriggerStatus
+	ACTIVE   CreateFunctionTriggerResponseTriggerStatus
+	DISABLED CreateFunctionTriggerResponseTriggerStatus
 }
 
 func GetCreateFunctionTriggerResponseTriggerStatusEnum() CreateFunctionTriggerResponseTriggerStatusEnum {
@@ -121,8 +121,8 @@ func GetCreateFunctionTriggerResponseTriggerStatusEnum() CreateFunctionTriggerRe
 		ACTIVE: CreateFunctionTriggerResponseTriggerStatus{
 			value: "ACTIVE",
 		},
-		DISABLE: CreateFunctionTriggerResponseTriggerStatus{
-			value: "DISABLE",
+		DISABLED: CreateFunctionTriggerResponseTriggerStatus{
+			value: "DISABLED",
 		},
 	}
 }

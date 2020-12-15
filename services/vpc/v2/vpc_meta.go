@@ -10,7 +10,8 @@ func GenReqDefForAcceptVpcPeering() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2.0/vpc/peerings/{peering_id}/accept").
-		WithResponse(new(model.AcceptVpcPeeringResponse))
+		WithResponse(new(model.AcceptVpcPeeringResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -123,7 +124,8 @@ func GenReqDefForDeletePort() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/ports/{port_id}").
-		WithResponse(new(model.DeletePortResponse))
+		WithResponse(new(model.DeletePortResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -141,7 +143,8 @@ func GenReqDefForDeleteSecurityGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/security-groups/{security_group_id}").
-		WithResponse(new(model.DeleteSecurityGroupResponse))
+		WithResponse(new(model.DeleteSecurityGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -159,7 +162,8 @@ func GenReqDefForDeleteSecurityGroupRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/security-group-rules/{security_group_rule_id}").
-		WithResponse(new(model.DeleteSecurityGroupRuleResponse))
+		WithResponse(new(model.DeleteSecurityGroupRuleResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -177,7 +181,8 @@ func GenReqDefForDeleteSubnet() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/vpcs/{vpc_id}/subnets/{subnet_id}").
-		WithResponse(new(model.DeleteSubnetResponse))
+		WithResponse(new(model.DeleteSubnetResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -199,7 +204,8 @@ func GenReqDefForDeleteVpcPeering() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2.0/vpc/peerings/{peering_id}").
-		WithResponse(new(model.DeleteVpcPeeringResponse))
+		WithResponse(new(model.DeleteVpcPeeringResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -217,7 +223,8 @@ func GenReqDefForListPorts() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/ports").
-		WithResponse(new(model.ListPortsResponse))
+		WithResponse(new(model.ListPortsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -280,7 +287,8 @@ func GenReqDefForListSecurityGroupRules() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/security-group-rules").
-		WithResponse(new(model.ListSecurityGroupRulesResponse))
+		WithResponse(new(model.ListSecurityGroupRulesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -307,7 +315,8 @@ func GenReqDefForListSecurityGroups() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/security-groups").
-		WithResponse(new(model.ListSecurityGroupsResponse))
+		WithResponse(new(model.ListSecurityGroupsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -338,7 +347,8 @@ func GenReqDefForListSubnets() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/subnets").
-		WithResponse(new(model.ListSubnetsResponse))
+		WithResponse(new(model.ListSubnetsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -365,7 +375,8 @@ func GenReqDefForListVpcPeerings() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.0/vpc/peerings").
-		WithResponse(new(model.ListVpcPeeringsResponse))
+		WithResponse(new(model.ListVpcPeeringsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -408,7 +419,8 @@ func GenReqDefForRejectVpcPeering() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2.0/vpc/peerings/{peering_id}/reject").
-		WithResponse(new(model.RejectVpcPeeringResponse))
+		WithResponse(new(model.RejectVpcPeeringResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -426,7 +438,8 @@ func GenReqDefForShowPort() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/ports/{port_id}").
-		WithResponse(new(model.ShowPortResponse))
+		WithResponse(new(model.ShowPortResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -444,7 +457,8 @@ func GenReqDefForShowQuota() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/quotas").
-		WithResponse(new(model.ShowQuotaResponse))
+		WithResponse(new(model.ShowQuotaResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -463,7 +477,8 @@ func GenReqDefForShowSecurityGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/security-groups/{security_group_id}").
-		WithResponse(new(model.ShowSecurityGroupResponse))
+		WithResponse(new(model.ShowSecurityGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -481,7 +496,8 @@ func GenReqDefForShowSecurityGroupRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/security-group-rules/{security_group_rule_id}").
-		WithResponse(new(model.ShowSecurityGroupRuleResponse))
+		WithResponse(new(model.ShowSecurityGroupRuleResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -499,7 +515,8 @@ func GenReqDefForShowSubnet() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/subnets/{subnet_id}").
-		WithResponse(new(model.ShowSubnetResponse))
+		WithResponse(new(model.ShowSubnetResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -517,7 +534,8 @@ func GenReqDefForShowVpcPeering() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.0/vpc/peerings/{peering_id}").
-		WithResponse(new(model.ShowVpcPeeringResponse))
+		WithResponse(new(model.ShowVpcPeeringResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -627,7 +645,8 @@ func GenReqDefForDeletePrivateip() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/privateips/{privateip_id}").
-		WithResponse(new(model.DeletePrivateipResponse))
+		WithResponse(new(model.DeletePrivateipResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -645,7 +664,8 @@ func GenReqDefForListPrivateips() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/subnets/{subnet_id}/privateips").
-		WithResponse(new(model.ListPrivateipsResponse))
+		WithResponse(new(model.ListPrivateipsResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -672,7 +692,8 @@ func GenReqDefForShowNetworkIpAvailabilities() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.0/network-ip-availabilities/{network_id}").
-		WithResponse(new(model.ShowNetworkIpAvailabilitiesResponse))
+		WithResponse(new(model.ShowNetworkIpAvailabilitiesResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -690,7 +711,8 @@ func GenReqDefForShowPrivateip() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/privateips/{privateip_id}").
-		WithResponse(new(model.ShowPrivateipResponse))
+		WithResponse(new(model.ShowPrivateipResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -788,7 +810,8 @@ func GenReqDefForNeutronDeleteFirewallGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2.0/fwaas/firewall_groups/{firewall_group_id}").
-		WithResponse(new(model.NeutronDeleteFirewallGroupResponse))
+		WithResponse(new(model.NeutronDeleteFirewallGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -806,7 +829,8 @@ func GenReqDefForNeutronDeleteFirewallPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2.0/fwaas/firewall_policies/{firewall_policy_id}").
-		WithResponse(new(model.NeutronDeleteFirewallPolicyResponse))
+		WithResponse(new(model.NeutronDeleteFirewallPolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -824,7 +848,8 @@ func GenReqDefForNeutronDeleteFirewallRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2.0/fwaas/firewall_rules/{firewall_rule_id}").
-		WithResponse(new(model.NeutronDeleteFirewallRuleResponse))
+		WithResponse(new(model.NeutronDeleteFirewallRuleResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -842,7 +867,8 @@ func GenReqDefForNeutronListFirewallGroups() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.0/fwaas/firewall_groups").
-		WithResponse(new(model.NeutronListFirewallGroupsResponse))
+		WithResponse(new(model.NeutronListFirewallGroupsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -885,7 +911,8 @@ func GenReqDefForNeutronListFirewallPolicies() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.0/fwaas/firewall_policies").
-		WithResponse(new(model.NeutronListFirewallPoliciesResponse))
+		WithResponse(new(model.NeutronListFirewallPoliciesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -924,7 +951,8 @@ func GenReqDefForNeutronListFirewallRules() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.0/fwaas/firewall_rules").
-		WithResponse(new(model.NeutronListFirewallRulesResponse))
+		WithResponse(new(model.NeutronListFirewallRulesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -990,7 +1018,8 @@ func GenReqDefForNeutronShowFirewallGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.0/fwaas/firewall_groups/{firewall_group_id}").
-		WithResponse(new(model.NeutronShowFirewallGroupResponse))
+		WithResponse(new(model.NeutronShowFirewallGroupResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1008,7 +1037,8 @@ func GenReqDefForNeutronShowFirewallPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.0/fwaas/firewall_policies/{firewall_policy_id}").
-		WithResponse(new(model.NeutronShowFirewallPolicyResponse))
+		WithResponse(new(model.NeutronShowFirewallPolicyResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1026,7 +1056,8 @@ func GenReqDefForNeutronShowFirewallRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.0/fwaas/firewall_rules/{firewall_rule_id}").
-		WithResponse(new(model.NeutronShowFirewallRuleResponse))
+		WithResponse(new(model.NeutronShowFirewallRuleResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1151,7 +1182,8 @@ func GenReqDefForDeleteVpc() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/vpcs/{vpc_id}").
-		WithResponse(new(model.DeleteVpcResponse))
+		WithResponse(new(model.DeleteVpcResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1169,7 +1201,8 @@ func GenReqDefForDeleteVpcRoute() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2.0/vpc/routes/{route_id}").
-		WithResponse(new(model.DeleteVpcRouteResponse))
+		WithResponse(new(model.DeleteVpcRouteResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1187,7 +1220,8 @@ func GenReqDefForListVpcRoutes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.0/vpc/routes").
-		WithResponse(new(model.ListVpcRoutesResponse))
+		WithResponse(new(model.ListVpcRoutesResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1230,7 +1264,8 @@ func GenReqDefForListVpcs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/vpcs").
-		WithResponse(new(model.ListVpcsResponse))
+		WithResponse(new(model.ListVpcsResponse)).
+		WithContentType("application/json")
 
 	// request
 
@@ -1261,7 +1296,8 @@ func GenReqDefForShowVpc() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/vpcs/{vpc_id}").
-		WithResponse(new(model.ShowVpcResponse))
+		WithResponse(new(model.ShowVpcResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1279,7 +1315,8 @@ func GenReqDefForShowVpcRoute() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.0/vpc/routes/{route_id}").
-		WithResponse(new(model.ShowVpcRouteResponse))
+		WithResponse(new(model.ShowVpcRouteResponse)).
+		WithContentType("application/json")
 
 	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

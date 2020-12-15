@@ -23,9 +23,9 @@ type NatGatewayDnatRuleResponseBody struct {
 	TenantId string `json:"tenant_id"`
 	// DNAT规则的描述。长度限制为255。
 	Description string `json:"description"`
-	// 虚拟机或者裸机的Port ID，与private_ip参数二选一。
+	// 虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
 	PortId *string `json:"port_id,omitempty"`
-	// 用户私有IP地址，例如专线连接的私有云地址，与port_id参数二选一。
+	// 用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
 	PrivateIp *string `json:"private_ip,omitempty"`
 	// 虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
 	InternalServicePort int32 `json:"internal_service_port"`
