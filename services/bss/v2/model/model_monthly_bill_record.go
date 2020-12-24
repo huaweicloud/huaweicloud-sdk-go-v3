@@ -1,5 +1,5 @@
 /*
- * Bss
+ * BSS
  *
  * Business Support System API
  *
@@ -66,6 +66,8 @@ type MonthlyBillRecord struct {
 	DebtAmount float32 `json:"debt_amount,omitempty"`
 	// |参数名称：欠费核销金额。单位为元| |参数的约束及描述：欠费核销金额。单位为元|
 	WriteoffAmount float32 `json:"writeoff_amount,omitempty"`
+	// |参数名称：云服务区名称| |参数的约束及描述：云服务区名称|
+	RegionName *string `json:"region_name,omitempty"`
 }
 
 func (o MonthlyBillRecord) String() string {

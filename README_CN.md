@@ -51,6 +51,7 @@
         "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
         vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
         "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
+        region "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/region"
         "net/http"
     )
     ```
@@ -91,9 +92,11 @@
 3. 初始化认证信息
 
     **说明**：
-    华为云服务存在两种部署方式，Region级服务和Global级服务。Global级服务当前仅支持IAM, TMS, EPS。
+    华为云服务存在两种部署方式，Region级服务和Global级服务。Global级服务当前仅支持BSS, DevStar, EPS, IAM, RMS。
     
-    Region级服务仅需要提供 projectId。Global级服务需要提供domainId。
+    Region级服务仅需要提供projectId。Global级服务需要提供domainId。
+    
+    使用Region创建客户端场景ProjectId、DomainId支持自动获取，无需再次配置。
 
     - `ak` 华为云账号 Access Key 。
     - `sk` 华为云账号 Secret Access Key 。
@@ -145,7 +148,9 @@
                 Build()
     ```
 
-4. 初始化客户端:
+4. 初始化客户端（两种方式）
+
+    4.1 指定云服务Endpoint方式
 
     ``` go
     // 初始化指定云服务的客户端 New{Service}Client ，以初始化 NewVpcClient 为例
@@ -160,6 +165,22 @@
     **说明:**
     - `endpoint` 华为云各服务应用区域和各服务的终端节点，详情请查看[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
     
+    4.2 指定Region方式（推荐）
+    
+    ``` go
+    // 初始化指定云服务的客户端 New{Service}Client ，以初始化 NewIamClient 为例
+    client := iam.NewIamClient(
+        iam.IamClientBuilder().
+            WithRegion(region.CN_NORTH_4).
+            WithCredential(auth).
+            WithHttpConfig(config.DefaultHttpConfig()).  
+            Build())
+    ```
+   
+    **说明：**
+     - 指定Region方式创建客户端场景，支持自动获取用户的regionId以及domainId，认证Credential中无需再次指定。
+     - 不适用于`多ProjectId`场景。
+
 5. 发送请求并查看响应.
 
     ``` go

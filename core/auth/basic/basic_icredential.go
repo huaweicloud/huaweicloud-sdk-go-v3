@@ -20,32 +20,63 @@
 package basic
 
 import (
+	"fmt"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/iam"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/signer"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
 	"strings"
 )
 
+const (
+	ProjectIdInHeader     = "X-Project-Id"
+	SecurityTokenInHeader = "X-Security-Token"
+	ContentTypeInHeader   = "Content-Type"
+)
+
 type Credentials struct {
+	IamEndpoint   string
 	AK            string
 	SK            string
 	ProjectId     string
 	SecurityToken string
 }
 
-func (s Credentials) ProcessAuthRequest(req *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {
+func (s Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) auth.ICredential {
+	if s.ProjectId != "" {
+		return s
+	}
+
+	req, err := s.ProcessAuthRequest(client, iam.GetKeystoneListProjectsRequest(s.IamEndpoint, region))
+	if err != nil {
+		panic(fmt.Sprintf("failed to get project id, %s", err.Error()))
+	}
+
+	id, err := iam.KeystoneListProjects(client, req)
+	if err != nil {
+		panic(fmt.Sprintf("failed to get project id, %s", err.Error()))
+	}
+
+	s.ProjectId = id
+	return s
+}
+
+func (s Credentials) ProcessAuthRequest(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {
 	reqBuilder := req.Builder()
 
 	if s.ProjectId != "" {
-		reqBuilder.AddAutoFilledPathParam("project_id", s.ProjectId)
-		reqBuilder.AddHeaderParam("X-Project-Id", s.ProjectId)
+		reqBuilder = reqBuilder.
+			AddAutoFilledPathParam("project_id", s.ProjectId).
+			AddHeaderParam(ProjectIdInHeader, s.ProjectId)
 	}
 
 	if s.SecurityToken != "" {
-		reqBuilder.AddHeaderParam("X-Security-Token", s.SecurityToken)
+		reqBuilder.AddHeaderParam(SecurityTokenInHeader, s.SecurityToken)
 	}
 
-	if _, ok := req.GetHeaderParams()["Content-Type"]; ok {
-		if !strings.Contains(req.GetHeaderParams()["Content-Type"], "application/json") {
+	if _, ok := req.GetHeaderParams()[ContentTypeInHeader]; ok {
+		if !strings.Contains(req.GetHeaderParams()[ContentTypeInHeader], "application/json") {
 			reqBuilder.AddHeaderParam("X-Sdk-Content-Sha256", "UNSIGNED-PAYLOAD")
 		}
 	}
@@ -71,7 +102,14 @@ type CredentialsBuilder struct {
 }
 
 func NewCredentialsBuilder() *CredentialsBuilder {
-	return &CredentialsBuilder{Credentials: Credentials{}}
+	return &CredentialsBuilder{Credentials: Credentials{
+		IamEndpoint: iam.DefaultIamEndpoint,
+	}}
+}
+
+func (builder *CredentialsBuilder) WithIamEndpointOverride(endpoint string) *CredentialsBuilder {
+	builder.Credentials.IamEndpoint = endpoint
+	return builder
 }
 
 func (builder *CredentialsBuilder) WithAk(ak string) *CredentialsBuilder {

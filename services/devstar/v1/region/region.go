@@ -1,0 +1,5 @@
+package region
+
+import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
+
+var CN_NORTH_1 = region.NewRegion("cn-north-1", "https://devstar.cn-north-1.myhuaweicloud.com")

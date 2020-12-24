@@ -40,9 +40,8 @@ type FlavorsResp struct {
 	// 是否是公共规格。false：私有规格；true：公共规格
 	OsFlavorAccessisPublic *bool `json:"os-flavor-access:is_public,omitempty"`
 	// 规格相关快捷链接地址，详情请参见表3 links字段数据结构说明。
-	Links              *[]LinksInfo              `json:"links,omitempty"`
-	OsExtraSpecs       *OsExtraSpecs             `json:"os_extra_specs"`
-	AttachableQuantity *ServerAttachableQuantity `json:"attachableQuantity,omitempty"`
+	Links        *[]LinksInfo  `json:"links,omitempty"`
+	OsExtraSpecs *OsExtraSpecs `json:"os_extra_specs"`
 }
 
 func (o FlavorsResp) String() string {

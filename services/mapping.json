@@ -1,0 +1,1597 @@
+[
+    {
+        "name": "\u8ba1\u7b97",
+        "products": [
+            {
+                "name": "\u5f39\u6027\u4e91\u670d\u52a1\u5668",
+                "productshort": "ECS",
+                "link": "https://www.huaweicloud.com/product/ecs.html",
+                "has_data": true,
+                "api_count": 92,
+                "is_global": false,
+                "is_recommend": true
+            },
+            {
+                "name": "GPU\u52a0\u901f\u4e91\u670d\u52a1\u5668",
+                "productshort": "GACS",
+                "link": "https://www.huaweicloud.com/product/gpu.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "FPGA\u52a0\u901f\u4e91\u670d\u52a1\u5668",
+                "productshort": "FACS",
+                "link": "https://www.huaweicloud.com/product/fcs.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u88f8\u91d1\u5c5e\u670d\u52a1\u5668",
+                "productshort": "BMS",
+                "link": "https://www.huaweicloud.com/product/bms.html",
+                "has_data": true,
+                "api_count": 22,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e13\u5c5e\u4e3b\u673a",
+                "productshort": "DeH",
+                "link": "https://www.huaweicloud.com/product/deh.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5f39\u6027\u4f38\u7f29",
+                "productshort": "AS",
+                "link": "https://www.huaweicloud.com/product/as.html",
+                "has_data": true,
+                "api_count": 47,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u955c\u50cf\u670d\u52a1",
+                "productshort": "IMS",
+                "link": "https://www.huaweicloud.com/product/ims.html",
+                "has_data": true,
+                "api_count": 37,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u51fd\u6570\u5de5\u4f5c\u6d41",
+                "productshort": "FunctionGraph",
+                "link": "https://www.huaweicloud.com/product/functiongraph.html",
+                "has_data": true,
+                "api_count": 35,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u624b\u673a",
+                "productshort": "CloudPhone",
+                "link": "https://www.huaweicloud.com/product/cloudphone.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u5b58\u50a8",
+        "products": [
+            {
+                "name": "\u5bf9\u8c61\u5b58\u50a8\u670d\u52a1",
+                "productshort": "OBS",
+                "link": "https://www.huaweicloud.com/product/obs.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u786c\u76d8",
+                "productshort": "EVS",
+                "link": "https://www.huaweicloud.com/product/evs.html",
+                "has_data": true,
+                "api_count": 24,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u786c\u76d8\u5907\u4efd",
+                "productshort": "VBS",
+                "link": "https://www.huaweicloud.com/product/vbs.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u670d\u52a1\u5668\u5907\u4efd",
+                "productshort": "CSBS",
+                "link": "https://www.huaweicloud.com/product/csbs.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5185\u5bb9\u5206\u53d1\u7f51\u7edc",
+                "productshort": "CDN",
+                "link": "https://www.huaweicloud.com/product/cdn.html",
+                "has_data": true,
+                "api_count": 30,
+                "is_global": true,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5b58\u50a8\u5bb9\u707e\u670d\u52a1",
+                "productshort": "SDRS",
+                "link": "https://www.huaweicloud.com/product/sdrs.html",
+                "has_data": true,
+                "api_count": 48,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5f39\u6027\u6587\u4ef6\u670d\u52a1(SFS)",
+                "productshort": "SFS",
+                "link": "https://www.huaweicloud.com/product/sfs.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5f39\u6027\u6587\u4ef6\u670d\u52a1(SFS Turbo)",
+                "productshort": "SFSTurbo",
+                "link": "",
+                "has_data": true,
+                "api_count": 5,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6570\u636e\u5feb\u9012\u670d\u52a1",
+                "productshort": "DES",
+                "link": "https://www.huaweicloud.com/product/des.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u76f4\u64ad\u52a0\u901f",
+                "productshort": "LSA",
+                "link": "https://www.huaweicloud.com/product/lsa.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u5907\u4efd",
+                "productshort": "CBR",
+                "link": "https://www.huaweicloud.com/product/cbr.html",
+                "has_data": true,
+                "api_count": 38,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u7f51\u7edc",
+        "products": [
+            {
+                "name": "\u865a\u62df\u79c1\u6709\u4e91",
+                "productshort": "VPC",
+                "link": "https://www.huaweicloud.com/product/vpc.html",
+                "has_data": true,
+                "api_count": 103,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5f39\u6027\u8d1f\u8f7d\u5747\u8861",
+                "productshort": "ELB",
+                "link": "https://www.huaweicloud.com/product/elb.html",
+                "has_data": true,
+                "api_count": 46,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "NAT\u7f51\u5173",
+                "productshort": "NAT",
+                "link": "https://www.huaweicloud.com/product/nat.html",
+                "has_data": true,
+                "api_count": 16,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5f39\u6027\u516c\u7f51IP",
+                "productshort": "EIP",
+                "link": "https://www.huaweicloud.com/product/eip.html",
+                "has_data": true,
+                "api_count": 28,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u4e13\u7ebf",
+                "productshort": "DC",
+                "link": "https://www.huaweicloud.com/product/dc.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u865a\u62df\u4e13\u7528\u7f51\u7edc",
+                "productshort": "VPN",
+                "link": "https://www.huaweicloud.com/product/vpn.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u89e3\u6790\u670d\u52a1",
+                "productshort": "DNS",
+                "link": "https://www.huaweicloud.com/product/dns.html",
+                "has_data": true,
+                "api_count": 47,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "VPC\u7ec8\u7aef\u8282\u70b9 ",
+                "productshort": "VPCEP",
+                "link": "https://www.huaweicloud.com/product/vpcep.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u6570\u636e\u5e93",
+        "products": [
+            {
+                "name": "\u4e91\u6570\u636e\u5e93",
+                "productshort": "RDS",
+                "link": "https://www.huaweicloud.com/product/mysql.html",
+                "has_data": true,
+                "api_count": 44,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6587\u6863\u6570\u636e\u5e93\u670d\u52a1",
+                "productshort": "DDS",
+                "link": "https://www.huaweicloud.com/product/dds.html",
+                "has_data": true,
+                "api_count": 31,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5206\u5e03\u5f0f\u6570\u636e\u5e93\u4e2d\u95f4\u4ef6",
+                "productshort": "DDM",
+                "link": "https://www.huaweicloud.com/product/ddm.html",
+                "has_data": true,
+                "api_count": 21,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6570\u636e\u590d\u5236\u670d\u52a1",
+                "productshort": "DRS",
+                "link": "https://www.huaweicloud.com/product/drs.html",
+                "has_data": true,
+                "api_count": 16,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6570\u636e\u7ba1\u7406\u670d\u52a1",
+                "productshort": "DAS",
+                "link": "https://www.huaweicloud.com/product/das.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u591a\u6a21NoSQL\u670d\u52a1",
+                "productshort": "NoSQL",
+                "link": "https://www.huaweicloud.com/product/nosql.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u6570\u636e\u5e93\u4ea7\u54c1\u603b\u89c8",
+                "productshort": "DBS",
+                "link": "https://www.huaweicloud.com/product/dbs.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u6570\u636e\u5e93 TaurusDB",
+                "productshort": "TaurusDB",
+                "link": "https://www.huaweicloud.com/product/taurus.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u5bb9\u5668\u670d\u52a1",
+        "products": [
+            {
+                "name": "\u4e91\u5bb9\u5668\u5f15\u64ce",
+                "productshort": "CCE",
+                "link": "https://www.huaweicloud.com/product/cce.html",
+                "has_data": true,
+                "api_count": 27,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u5bb9\u5668\u5b9e\u4f8b",
+                "productshort": "CCI",
+                "link": "https://www.huaweicloud.com/product/cci.html",
+                "has_data": true,
+                "api_count": 39,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5bb9\u5668\u955c\u50cf\u670d\u52a1",
+                "productshort": "SWR",
+                "link": "https://www.huaweicloud.com/product/swr.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5e94\u7528\u7f16\u6392\u670d\u52a1",
+                "productshort": "AOS",
+                "link": "https://www.huaweicloud.com/product/aos.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u5b89\u5168",
+        "products": [
+            {
+                "name": "Web\u5e94\u7528\u9632\u706b\u5899",
+                "productshort": "WAF",
+                "link": "https://www.huaweicloud.com/product/waf.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "DDoS\u9ad8\u9632",
+                "productshort": "AAD",
+                "link": "https://www.huaweicloud.com/product/aad.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "Anti-DDoS\u6d41\u91cf\u6e05\u6d17",
+                "productshort": "Anti-DDoS",
+                "link": "https://www.huaweicloud.com/product/antiddos.html",
+                "has_data": true,
+                "api_count": 14,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6f0f\u6d1e\u626b\u63cf\u670d\u52a1",
+                "productshort": "VSS",
+                "link": "https://www.huaweicloud.com/product/vss.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4f01\u4e1a\u4e3b\u673a\u5b89\u5168",
+                "productshort": "HSS",
+                "link": "https://www.huaweicloud.com/product/hss.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6570\u636e\u52a0\u5bc6\u670d\u52a1-\u5bc6\u94a5\u7ba1\u7406",
+                "productshort": "KMS",
+                "link": "https://www.huaweicloud.com/product/dew.html",
+                "has_data": true,
+                "api_count": 38,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6570\u636e\u52a0\u5bc6\u670d\u52a1-\u5bc6\u94a5\u5bf9\u7ba1\u7406",
+                "productshort": "KPS",
+                "link": "https://www.huaweicloud.com/product/dew.html",
+                "has_data": true,
+                "api_count": 12,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6570\u636e\u5e93\u5b89\u5168\u670d\u52a1",
+                "productshort": "DBSS",
+                "link": "https://www.huaweicloud.com/product/dbss.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5b89\u5168\u4e13\u5bb6\u670d\u52a1",
+                "productshort": "SES",
+                "link": "https://www.huaweicloud.com/product/ses.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6001\u52bf\u611f\u77e5",
+                "productshort": "SA",
+                "link": "https://www.huaweicloud.com/product/ssa.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "SSL\u8bc1\u4e66\u7ba1\u7406",
+                "productshort": "SCM",
+                "link": "https://www.huaweicloud.com/product/scm.html",
+                "has_data": true,
+                "api_count": 6,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u5821\u5792\u673a",
+                "productshort": "CBH",
+                "link": "https://www.huaweicloud.com/product/cbh.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5bb9\u5668\u5b89\u5168\u670d\u52a1",
+                "productshort": "CGS",
+                "link": "https://www.huaweicloud.com/product/cgs.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6570\u636e\u5b89\u5168\u4e2d\u5fc3",
+                "productshort": "DSC",
+                "link": "https://www.huaweicloud.com/product/dsc.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u8fd0\u8425",
+        "products": [
+            {
+                "name": "\u8fd0\u8425\u80fd\u529b\u5f00\u653e",
+                "productshort": "BSS",
+                "link": "",
+                "has_data": true,
+                "api_count": 73,
+                "is_global": true,
+                "is_recommend": true
+            }
+        ]
+    },
+    {
+        "name": "\u5e94\u7528\u670d\u52a1",
+        "products": [
+            {
+                "name": "\u5e94\u7528\u7ba1\u7406\u4e0e\u8fd0\u7ef4\u5e73\u53f0",
+                "productshort": "ServiceStage",
+                "link": "https://www.huaweicloud.com/product/servicestage.html",
+                "has_data": true,
+                "api_count": 53,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5fae\u670d\u52a1\u5f15\u64ce",
+                "productshort": "CSE",
+                "link": "https://www.huaweicloud.com/product/cse.html",
+                "has_data": true,
+                "api_count": 23,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u6027\u80fd\u6d4b\u8bd5\u670d\u52a1",
+                "productshort": "CPTS",
+                "link": "https://www.huaweicloud.com/product/cpts.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6d88\u606f\u901a\u77e5\u670d\u52a1",
+                "productshort": "SMN",
+                "link": "https://www.huaweicloud.com/product/smn.html",
+                "has_data": true,
+                "api_count": 38,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5206\u5e03\u5f0f\u6d88\u606f\u670d\u52a1 DMS",
+                "productshort": "DMS",
+                "link": "https://www.huaweicloud.com/product/dms.html",
+                "has_data": true,
+                "api_count": 41,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5e94\u7528\u6027\u80fd\u7ba1\u7406",
+                "productshort": "APM",
+                "link": "https://www.huaweicloud.com/product/apm.html",
+                "has_data": true,
+                "api_count": 14,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "API\u7f51\u5173",
+                "productshort": "APIG",
+                "link": "https://www.huaweicloud.com/product/apig.html",
+                "has_data": true,
+                "api_count": 205,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5e94\u7528\u8fd0\u7ef4\u7ba1\u7406",
+                "productshort": "AOM",
+                "link": "https://www.huaweicloud.com/product/aom.html",
+                "has_data": true,
+                "api_count": 12,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5206\u5e03\u5f0f\u6d88\u606f\u670d\u52a1 Kafka",
+                "productshort": "Kafka",
+                "link": "https://www.huaweicloud.com/product/dmskafka.html",
+                "has_data": true,
+                "api_count": 43,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5206\u5e03\u5f0f\u6d88\u606f\u670d\u52a1 RabbitMQ",
+                "productshort": "RabbitMQ",
+                "link": "https://www.huaweicloud.com/product/rabbitmq.html",
+                "has_data": true,
+                "api_count": 18,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5206\u5e03\u5f0f\u7f13\u5b58\u670d\u52a1",
+                "productshort": "DCS",
+                "link": "https://www.huaweicloud.com/product/dcs.html",
+                "has_data": true,
+                "api_count": 55,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u7ba1\u7406\u4e0e\u90e8\u7f72",
+        "products": [
+            {
+                "name": "\u4e91\u76d1\u63a7\u670d\u52a1",
+                "productshort": "CES",
+                "link": "https://www.huaweicloud.com/product/ces.html",
+                "has_data": true,
+                "api_count": 18,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u65e5\u5fd7\u670d\u52a1",
+                "productshort": "LTS",
+                "link": "https://www.huaweicloud.com/product/lts.html",
+                "has_data": true,
+                "api_count": 12,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u7edf\u4e00\u8eab\u4efd\u8ba4\u8bc1\u670d\u52a1",
+                "productshort": "IAM",
+                "link": "https://www.huaweicloud.com/product/iam.html",
+                "has_data": true,
+                "api_count": 131,
+                "is_global": true,
+                "is_recommend": true
+            },
+            {
+                "name": "\u4e91\u5ba1\u8ba1\u670d\u52a1",
+                "productshort": "CTS",
+                "link": "https://www.huaweicloud.com/product/cts.html",
+                "has_data": true,
+                "api_count": 6,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6807\u7b7e\u7ba1\u7406\u670d\u52a1",
+                "productshort": "TMS",
+                "link": "https://www.huaweicloud.com/product/tms.html",
+                "has_data": true,
+                "api_count": 6,
+                "is_global": true,
+                "is_recommend": false
+            },
+            {
+                "name": "\u8d44\u6e90\u6a21\u677f\u670d\u52a1",
+                "productshort": "RTS",
+                "link": "https://www.huaweicloud.com/product/rts.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4f01\u4e1a\u9879\u76ee\u7ba1\u7406\u670d\u52a1",
+                "productshort": "EPS",
+                "link": "",
+                "has_data": true,
+                "api_count": 11,
+                "is_global": true,
+                "is_recommend": false
+            },
+            {
+                "name": "\u8d44\u6e90\u7ba1\u7406\u670d\u52a1",
+                "productshort": "RMS",
+                "link": "",
+                "has_data": true,
+                "api_count": 22,
+                "is_global": true,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "EI \u4f01\u4e1a\u667a\u80fd",
+        "products": [
+            {
+                "name": "\u673a\u5668\u5b66\u4e60\u670d\u52a1",
+                "productshort": "MLS",
+                "link": "https://www.huaweicloud.com/product/mls.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6570\u636e\u63a5\u5165\u670d\u52a1",
+                "productshort": "DIS",
+                "link": "https://www.huaweicloud.com/product/dis.html",
+                "has_data": true,
+                "api_count": 17,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6570\u636e\u4ed3\u5e93\u670d\u52a1",
+                "productshort": "DWS",
+                "link": "https://www.huaweicloud.com/product/dws.html",
+                "has_data": true,
+                "api_count": 13,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u641c\u7d22\u670d\u52a1",
+                "productshort": "CSS",
+                "link": "https://www.huaweicloud.com/product/es.html",
+                "has_data": true,
+                "api_count": 25,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u81ea\u7136\u8bed\u8a00\u5904\u7406",
+                "productshort": "NLP",
+                "link": "https://www.huaweicloud.com/product/nlp.html",
+                "has_data": true,
+                "api_count": 16,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5bf9\u8bdd\u673a\u5668\u4eba\u670d\u52a1",
+                "productshort": "CBS",
+                "link": "https://www.huaweicloud.com/product/cbs.html",
+                "has_data": true,
+                "api_count": 7,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4eba\u8138\u8bc6\u522b\u670d\u52a1",
+                "productshort": "FRS",
+                "link": "https://www.huaweicloud.com/product/face.html",
+                "has_data": true,
+                "api_count": 49,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5185\u5bb9\u5ba1\u6838",
+                "productshort": "Moderation",
+                "link": "https://www.huaweicloud.com/product/moderation.html",
+                "has_data": true,
+                "api_count": 6,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5546\u8d85\u89c6\u9891\u5206\u6790",
+                "productshort": "Smart Retail",
+                "link": "https://www.huaweicloud.com/product/smartretail.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u56ed\u533a\u89c6\u9891\u5206\u6790",
+                "productshort": "Smart Campus",
+                "link": "https://www.huaweicloud.com/product/smartcampus.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4ea4\u901a\u89c6\u9891\u5206\u6790",
+                "productshort": "Smart Traffic",
+                "link": "https://www.huaweicloud.com/product/smarttraffic.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6587\u5b57\u8bc6\u522b",
+                "productshort": "OCR",
+                "link": "https://www.huaweicloud.com/product/ocr.html",
+                "has_data": true,
+                "api_count": 23,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u56fe\u50cf\u8bc6\u522b",
+                "productshort": "Image",
+                "link": "https://www.huaweicloud.com/product/image.html",
+                "has_data": true,
+                "api_count": 2,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6570\u636e\u6e56\u5de5\u5382",
+                "productshort": "DLF",
+                "link": "https://www.huaweicloud.com/product/dlf.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6df1\u5ea6\u5b66\u4e60\u670d\u52a1",
+                "productshort": "DLS",
+                "link": "https://www.huaweicloud.com/product/dls.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u56fe\u5f15\u64ce\u670d\u52a1",
+                "productshort": "GES",
+                "link": "https://www.huaweicloud.com/product/ges.html",
+                "has_data": true,
+                "api_count": 24,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5b9e\u65f6\u6d41\u8ba1\u7b97\u670d\u52a1",
+                "productshort": "CS",
+                "link": "https://www.huaweicloud.com/product/cs.html",
+                "has_data": true,
+                "api_count": 47,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "MapReduce\u670d\u52a1",
+                "productshort": "MRS",
+                "link": "https://www.huaweicloud.com/product/mrs.html",
+                "has_data": true,
+                "api_count": 25,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6570\u636e\u6e56\u63a2\u7d22",
+                "productshort": "DLI",
+                "link": "https://www.huaweicloud.com/product/dli.html",
+                "has_data": true,
+                "api_count": 67,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u56fe\u50cf\u641c\u7d22",
+                "productshort": "ImageSearch",
+                "link": "https://www.huaweicloud.com/product/imagesearch.html",
+                "has_data": true,
+                "api_count": 8,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u63a8\u8350\u7cfb\u7edf",
+                "productshort": "RES",
+                "link": "https://www.huaweicloud.com/product/res.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u667a\u80fd\u6c34\u52a1",
+                "productshort": "iWater",
+                "link": "https://www.huaweicloud.com/product/iwater.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u667a\u80fd\u5236\u9020",
+                "productshort": "iManufacturing",
+                "link": "https://www.huaweicloud.com/product/imanufacturing.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u667a\u80fd\u4ea4\u901a",
+                "productshort": "iTransport",
+                "link": "https://www.huaweicloud.com/product/itransport.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u667a\u80fd\u7535\u529b",
+                "productshort": "iPower",
+                "link": "https://www.huaweicloud.com/product/ipower.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u667a\u80fd\u91d1\u878d",
+                "productshort": "iFinance",
+                "link": "https://www.huaweicloud.com/product/ifinance.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u667a\u80fd\u96f6\u552e",
+                "productshort": "iRetail",
+                "link": "https://www.huaweicloud.com/product/iretail.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6279\u5904\u7406\u670d\u52a1",
+                "productshort": "Batch",
+                "link": "https://www.huaweicloud.com/product/batch.html",
+                "has_data": true,
+                "api_count": 16,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u673a\u5668\u7ffb\u8bd1\u670d\u52a1",
+                "productshort": "MTS",
+                "link": "https://www.huaweicloud.com/product/mts.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u89c6\u9891\u63a5\u5165\u670d\u52a1",
+                "productshort": "VIS",
+                "link": "https://www.huaweicloud.com/product/vis.html",
+                "has_data": true,
+                "api_count": 30,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "AI\u5f00\u53d1\u5e73\u53f0",
+                "productshort": "ModelArts",
+                "link": "https://www.huaweicloud.com/product/modelarts.html",
+                "has_data": true,
+                "api_count": 56,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "Huawei HiLens",
+                "productshort": "HiLens",
+                "link": "https://www.huaweicloud.com/product/hilens.html",
+                "has_data": true,
+                "api_count": 22,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u89c6\u9891\u6307\u7eb9",
+                "productshort": "VFP",
+                "link": "https://www.huaweicloud.com/product/vfp.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u89c6\u9891\u7f16\u8f91",
+                "productshort": "VCP",
+                "link": "https://www.huaweicloud.com/product/vcp.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u673a\u5668\u7ffb\u8bd1",
+                "productshort": "MT",
+                "link": "https://www.huaweicloud.com/product/nlpmt.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5b9a\u5236\u8bed\u97f3\u8bc6\u522b",
+                "productshort": "ASRC",
+                "link": "https://www.huaweicloud.com/product/asrc.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u77e5\u8bc6\u56fe\u8c31",
+                "productshort": "KG",
+                "link": "https://www.huaweicloud.com/product/nlpkg.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u89c6\u9891\u5206\u6790\u670d\u52a1",
+                "productshort": "VAS",
+                "link": "",
+                "has_data": true,
+                "api_count": 56,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u8bed\u97f3\u4ea4\u4e92\u670d\u52a1",
+                "productshort": "SIS",
+                "link": "",
+                "has_data": true,
+                "api_count": 11,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u7f51\u7edc\u667a\u80fd\u4f53",
+                "productshort": "NAIE",
+                "link": "https://www.huaweicloud.com/product/naie.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u8fb9\u7f18\u4e91\u670d\u52a1",
+        "products": [
+            {
+                "name": "\u667a\u80fd\u8fb9\u7f18\u5e73\u53f0",
+                "productshort": "IEF",
+                "link": "https://www.huaweicloud.com/product/ief.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u8f6f\u4ef6\u5f00\u53d1\u670d\u52a1",
+        "products": [
+            {
+                "name": "\u9879\u76ee\u7ba1\u7406",
+                "productshort": "ProjectMan",
+                "link": "https://www.huaweicloud.com/product/projectman.html",
+                "has_data": true,
+                "api_count": 94,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4ee3\u7801\u6258\u7ba1",
+                "productshort": "CodeHub",
+                "link": "https://www.huaweicloud.com/product/codehub.html",
+                "has_data": true,
+                "api_count": 47,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6d41\u6c34\u7ebf",
+                "productshort": "CloudPipeline",
+                "link": "https://www.huaweicloud.com/product/cloudpipeline.html",
+                "has_data": true,
+                "api_count": 13,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4ee3\u7801\u68c0\u67e5",
+                "productshort": "CodeCheck",
+                "link": "https://www.huaweicloud.com/product/codecheck.html",
+                "has_data": true,
+                "api_count": 11,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u7f16\u8bd1\u6784\u5efa",
+                "productshort": "CloudBuild",
+                "link": "https://www.huaweicloud.com/product/cloudbuild.html",
+                "has_data": true,
+                "api_count": 4,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u90e8\u7f72",
+                "productshort": "CloudDeploy",
+                "link": "https://www.huaweicloud.com/product/clouddeploy.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u53d1\u5e03",
+                "productshort": "CloudRelease",
+                "link": "https://www.huaweicloud.com/product/cloudrelease.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u79fb\u52a8\u5e94\u7528\u6d4b\u8bd5",
+                "productshort": "MobileAppTest",
+                "link": "https://www.huaweicloud.com/product/mobileapptest.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u6d4b",
+                "productshort": "CloudTest",
+                "link": "https://www.huaweicloud.com/product/cloudtest.html",
+                "has_data": true,
+                "api_count": 13,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "Classroom",
+                "productshort": "Classroom",
+                "link": "https://www.huaweicloud.com/product/classroom.html",
+                "has_data": true,
+                "api_count": 8,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u610f\u89c1\u53cd\u9988",
+                "productshort": "VOC",
+                "link": "",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "CloudIDE",
+                "productshort": "CloudIDE",
+                "link": "https://www.huaweicloud.com/product/cloudide.html",
+                "has_data": true,
+                "api_count": 13,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u4f01\u4e1a\u534f\u540c",
+        "products": [
+            {
+                "name": "\u534e\u4e3a\u4e91WeLink",
+                "productshort": "WeLink",
+                "link": "https://www.huaweicloud.com/product/welink.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u534e\u4e3a\u4e91\u4f1a\u8bae",
+                "productshort": "Meeting",
+                "link": "https://www.huaweicloud.com/product/cloudvc.html",
+                "has_data": true,
+                "api_count": 124,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u8fc1\u79fb",
+        "products": [
+            {
+                "name": "\u4e91\u8fc1\u79fb\u4e2d\u5fc3",
+                "productshort": "CMC",
+                "link": "https://www.huaweicloud.com/product/cmc.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5bf9\u8c61\u5b58\u50a8\u8fc1\u79fb\u670d\u52a1",
+                "productshort": "OMS",
+                "link": "https://www.huaweicloud.com/product/oms.html",
+                "has_data": true,
+                "api_count": 9,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e91\u6570\u636e\u8fc1\u79fb",
+                "productshort": "CDM",
+                "link": "https://www.huaweicloud.com/product/cdm.html",
+                "has_data": true,
+                "api_count": 18,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6570\u636e\u590d\u5236\u670d\u52a1",
+                "productshort": "DRS",
+                "link": "https://www.huaweicloud.com/product/drs.html",
+                "has_data": true,
+                "api_count": 16,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e3b\u673a\u8fc1\u79fb\u670d\u52a1",
+                "productshort": "SMS",
+                "link": "https://www.huaweicloud.com/product/sms.html",
+                "has_data": true,
+                "api_count": 27,
+                "is_global": true,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u89c6\u9891",
+        "products": [
+            {
+                "name": "\u5a92\u4f53\u8f6c\u7801",
+                "productshort": "MPC",
+                "link": "https://www.huaweicloud.com/product/mpc.html",
+                "has_data": true,
+                "api_count": 31,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u89c6\u9891\u70b9\u64ad",
+                "productshort": "VOD",
+                "link": "https://www.huaweicloud.com/product/vod.html",
+                "has_data": true,
+                "api_count": 50,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u89c6\u9891\u76f4\u64ad",
+                "productshort": "Live",
+                "link": "https://www.huaweicloud.com/product/live.html",
+                "has_data": true,
+                "api_count": 14,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u878d\u5408\u89c6\u9891\u4e91\u670d\u52a1",
+                "productshort": "CVCS",
+                "link": "https://www.huaweicloud.com/product/cvcs.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5a92\u4f53\u667a\u80fd",
+                "productshort": "Media AI",
+                "link": "https://www.huaweicloud.com/product/mai.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u534e\u4e3a\u597d\u671b\u4e91\u670d\u52a1",
+                "productshort": "IVM",
+                "link": "https://www.huaweicloud.com/product/ivm.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u4e91\u901a\u4fe1",
+        "products": [
+            {
+                "name": "\u8054\u7edc\u4e2d\u5fc3",
+                "productshort": "ContactCenter",
+                "link": "https://www.huaweicloud.com/product/cloudcc.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u8bed\u97f3\u901a\u8bdd",
+                "productshort": "VoiceCall",
+                "link": "https://www.huaweicloud.com/product/voice.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u6d88\u606f&\u77ed\u4fe1",
+                "productshort": "MSGSMS",
+                "link": "https://www.huaweicloud.com/product/msgsms.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u9690\u79c1\u4fdd\u62a4\u901a\u8bdd",
+                "productshort": "PrivateNumber",
+                "link": "https://www.huaweicloud.com/product/privatenumber.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u7269\u8054\u7f51",
+        "products": [
+            {
+                "name": "\u667a\u80fd\u8fb9\u7f18\u5e73\u53f0",
+                "productshort": "IEF",
+                "link": "https://www.huaweicloud.com/product/ief.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "OceanBooster",
+                "productshort": "OceanBooster",
+                "link": "https://www.huaweicloud.com/product/oceanbooster.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u8bbe\u5907\u53d1\u653e",
+                "productshort": "IoTDP",
+                "link": "https://www.huaweicloud.com/product/iotps.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u8f66\u8def\u534f\u540c\u5e73\u53f0",
+                "productshort": "ocv2x",
+                "link": "https://www.huaweicloud.com/product/oceanconnectv2x.html",
+                "has_data": true,
+                "api_count": 4,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "OceanConnect \u8f66\u8054\u7f51",
+                "productshort": "OCIOV",
+                "link": "",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u8bbe\u5907\u63a5\u5165",
+                "productshort": "IoTDA",
+                "link": "https://www.huaweicloud.com/product/iothub.html",
+                "has_data": true,
+                "api_count": 73,
+                "is_global": false,
+                "is_recommend": true
+            },
+            {
+                "name": "\u7269\u8054\u7f51\u5e94\u7528\u6784\u5efa\u5668",
+                "productshort": "OCStudio",
+                "link": "https://www.huaweicloud.com/product/oceanbooster.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u7269\u8054\u7f51\u6570\u636e\u5206\u6790",
+                "productshort": "IoTAnalytics",
+                "link": "https://www.huaweicloud.com/product/iotanalytics-platform.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": " \u8def\u7f51\u6570\u5b57\u5316\u670d\u52a1",
+                "productshort": "DRIS",
+                "link": "https://www.huaweicloud.com/product/v2x.html",
+                "has_data": true,
+                "api_count": 28,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u4e13\u5c5e\u4e91",
+        "products": [
+            {
+                "name": "\u4e13\u5c5e\u8ba1\u7b97\u96c6\u7fa4\u670d\u52a1",
+                "productshort": "DCC",
+                "link": "https://www.huaweicloud.com/product/dcc.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u88f8\u91d1\u5c5e\u670d\u52a1\u5668",
+                "productshort": "BMS",
+                "link": "https://www.huaweicloud.com/product/bms.html",
+                "has_data": true,
+                "api_count": 22,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e13\u5c5e\u5206\u5e03\u5f0f\u5b58\u50a8\u670d\u52a1",
+                "productshort": "DSS",
+                "link": "https://www.huaweicloud.com/product/dss.html",
+                "has_data": true,
+                "api_count": 4,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u4e13\u5c5e\u4f01\u4e1a\u5b58\u50a8\u670d\u52a1",
+                "productshort": "DESS",
+                "link": "https://www.huaweicloud.com/product/dess.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5168\u6808\u4e13\u5c5e\u670d\u52a1",
+                "productshort": "FCS",
+                "link": "https://www.huaweicloud.com/product/decfcs.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u4f01\u4e1a\u7f51\u7edc",
+        "products": [
+            {
+                "name": "\u4e91\u7ba1\u7406\u7f51\u7edc",
+                "productshort": "CMN",
+                "link": "https://www.huaweicloud.com/product/cmn.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            },
+            {
+                "name": "\u89c6\u9891\u52a0\u901f\u670d\u52a1",
+                "productshort": "VGVAS",
+                "link": "https://www.huaweicloud.com/product/vgvas.html",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u5e94\u7528\u4e0e\u6570\u636e\u96c6\u6210",
+        "products": [
+            {
+                "name": "\u5e94\u7528\u4e0e\u6570\u636e\u96c6\u6210\u5e73\u53f0",
+                "productshort": "ROMA",
+                "link": "https://www.huaweicloud.com/product/roma.html",
+                "has_data": true,
+                "api_count": 264,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u5f00\u53d1\u8005\u5de5\u5177",
+        "products": [
+            {
+                "name": "API Explorer",
+                "productshort": "APIExplorer",
+                "link": "",
+                "has_data": true,
+                "api_count": 8,
+                "is_global": true,
+                "is_recommend": true
+            },
+            {
+                "name": "DevStar",
+                "productshort": "DevStar",
+                "link": "https://developer.huaweicloud.com/resource/devstar.html",
+                "has_data": true,
+                "api_count": 11,
+                "is_global": true,
+                "is_recommend": false
+            },
+            {
+                "name": "\u5f00\u6e90\u5e73\u53f0",
+                "productshort": "OpenSource",
+                "link": "",
+                "has_data": false,
+                "api_count": 0,
+                "is_global": false,
+                "is_recommend": false
+            }
+        ]
+    },
+    {
+        "name": "\u652f\u6301\u4e0e\u670d\u52a1",
+        "products": [
+            {
+                "name": "\u5de5\u5355\u7ba1\u7406",
+                "productshort": "OSM",
+                "link": "",
+                "has_data": true,
+                "api_count": 61,
+                "is_global": true,
+                "is_recommend": false
+            }
+        ]
+    }
+]

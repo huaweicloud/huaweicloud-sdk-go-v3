@@ -29,7 +29,7 @@ func (c *BssClient) AutoRenewalResources(request *model.AutoRenewalResourcesRequ
 	}
 }
 
-//功能描述：设置伙伴折扣
+//功能描述：合作伙伴可以为客户设置产品折扣，可指定有效期。被授予折扣后，客户在购买华为云产品（特殊产品除外）时，可享受伙伴授予折扣。
 func (c *BssClient) BatchSetSubCustomerDiscount(request *model.BatchSetSubCustomerDiscountRequest) (*model.BatchSetSubCustomerDiscountResponse, error) {
 	requestDef := GenReqDefForBatchSetSubCustomerDiscount()
 
@@ -51,7 +51,7 @@ func (c *BssClient) CancelAutoRenewalResources(request *model.CancelAutoRenewalR
 	}
 }
 
-//功能描述：取消包周期订单
+//功能描述：客户可以对待支付的订单进行取消操作
 func (c *BssClient) CancelCustomerOrder(request *model.CancelCustomerOrderRequest) (*model.CancelCustomerOrderResponse, error) {
 	requestDef := GenReqDefForCancelCustomerOrder()
 
@@ -62,7 +62,7 @@ func (c *BssClient) CancelCustomerOrder(request *model.CancelCustomerOrderReques
 	}
 }
 
-//功能描述：退订包周期资源
+//功能描述：客户购买包年包月资源后，支持客户退订包年包月实例。退订资源实例包括资源续费部分和当前正在使用的部分，退订后资源将无法使用
 func (c *BssClient) CancelResourcesSubscription(request *model.CancelResourcesSubscriptionRequest) (*model.CancelResourcesSubscriptionResponse, error) {
 	requestDef := GenReqDefForCancelResourcesSubscription()
 
@@ -73,7 +73,7 @@ func (c *BssClient) CancelResourcesSubscription(request *model.CancelResourcesSu
 	}
 }
 
-//功能描述：实名认证变更申请
+//功能描述：客户可以进行实名认证变更申请。
 func (c *BssClient) ChangeEnterpriseRealnameAuthentication(request *model.ChangeEnterpriseRealnameAuthenticationRequest) (*model.ChangeEnterpriseRealnameAuthenticationResponse, error) {
 	requestDef := GenReqDefForChangeEnterpriseRealnameAuthentication()
 
@@ -84,7 +84,7 @@ func (c *BssClient) ChangeEnterpriseRealnameAuthentication(request *model.Change
 	}
 }
 
-//功能描述：校验客户的注册信息
+//功能描述：客户注册时可检查客户的登录名称、手机号或者邮箱是否可以用于注册。
 func (c *BssClient) CheckUserIdentity(request *model.CheckUserIdentityRequest) (*model.CheckUserIdentityResponse, error) {
 	requestDef := GenReqDefForCheckUserIdentity()
 
@@ -95,7 +95,7 @@ func (c *BssClient) CheckUserIdentity(request *model.CheckUserIdentityRequest) (
 	}
 }
 
-//功能描述：客户开通自身的企业项目功能
+//功能描述：客户在客户自建平台开通客户企业项目权限
 func (c *BssClient) CreateEnterpriseProjectAuth(request *model.CreateEnterpriseProjectAuthRequest) (*model.CreateEnterpriseProjectAuthResponse, error) {
 	requestDef := GenReqDefForCreateEnterpriseProjectAuth()
 
@@ -106,7 +106,7 @@ func (c *BssClient) CreateEnterpriseProjectAuth(request *model.CreateEnterpriseP
 	}
 }
 
-//功能描述：企业实名认证申请V2
+//功能描述：企业客户可以进行企业实名认证申请。
 func (c *BssClient) CreateEnterpriseRealnameAuthentication(request *model.CreateEnterpriseRealnameAuthenticationRequest) (*model.CreateEnterpriseRealnameAuthenticationResponse, error) {
 	requestDef := GenReqDefForCreateEnterpriseRealnameAuthentication()
 
@@ -117,7 +117,7 @@ func (c *BssClient) CreateEnterpriseRealnameAuthentication(request *model.Create
 	}
 }
 
-//功能描述：伙伴给子客户发券
+//功能描述：伙伴在伙伴销售平台使用额度为客户发放优惠券。
 func (c *BssClient) CreatePartnerCoupons(request *model.CreatePartnerCouponsRequest) (*model.CreatePartnerCouponsResponse, error) {
 	requestDef := GenReqDefForCreatePartnerCoupons()
 
@@ -128,7 +128,7 @@ func (c *BssClient) CreatePartnerCoupons(request *model.CreatePartnerCouponsRequ
 	}
 }
 
-//功能描述：个人实名认证申请
+//功能描述：个人客户可以进行个人实名认证申请。
 func (c *BssClient) CreatePersonalRealnameAuth(request *model.CreatePersonalRealnameAuthRequest) (*model.CreatePersonalRealnameAuthResponse, error) {
 	requestDef := GenReqDefForCreatePersonalRealnameAuth()
 
@@ -139,7 +139,7 @@ func (c *BssClient) CreatePersonalRealnameAuth(request *model.CreatePersonalReal
 	}
 }
 
-//功能描述：新增邮寄地址
+//功能描述：客户可以新增自己的邮寄地址信息。
 func (c *BssClient) CreatePostal(request *model.CreatePostalRequest) (*model.CreatePostalResponse, error) {
 	requestDef := GenReqDefForCreatePostal()
 
@@ -150,7 +150,7 @@ func (c *BssClient) CreatePostal(request *model.CreatePostalRequest) (*model.Cre
 	}
 }
 
-//功能描述：在伙伴销售平台创建客户时同步创建华为云账号，并将客户在伙伴销售平台上的账号与华为云账号进行映射。同时，创建的华为云账号与伙伴账号关联绑定。
+//功能描述：在伙伴销售平台创建客户时同步创建华为云账号，并将客户在伙伴销售平台上的账号与华为云账号进行映射。同时，创建的华为云账号与伙伴账号关联绑定。华为云伙伴能力中心（一级经销商）可以注册精英服务商伙伴（二级经销商）的子客户。注册完成后，子客户可以自动和精英服务商伙伴绑定。
 func (c *BssClient) CreateSubCustomer(request *model.CreateSubCustomerRequest) (*model.CreateSubCustomerResponse, error) {
 	requestDef := GenReqDefForCreateSubCustomer()
 
@@ -161,7 +161,7 @@ func (c *BssClient) CreateSubCustomer(request *model.CreateSubCustomerRequest) (
 	}
 }
 
-//功能描述：创建企业子账号
+//功能描述：企业主账号在客户自建平台创建企业子账号
 func (c *BssClient) CreateSubEnterpriseAccount(request *model.CreateSubEnterpriseAccountRequest) (*model.CreateSubEnterpriseAccountResponse, error) {
 	requestDef := GenReqDefForCreateSubEnterpriseAccount()
 
@@ -172,7 +172,7 @@ func (c *BssClient) CreateSubEnterpriseAccount(request *model.CreateSubEnterpris
 	}
 }
 
-//功能描述：删除邮寄地址
+//功能描述：客户可以删除自己的邮寄地址信息。
 func (c *BssClient) DeletePostal(request *model.DeletePostalRequest) (*model.DeletePostalResponse, error) {
 	requestDef := GenReqDefForDeletePostal()
 
@@ -183,7 +183,7 @@ func (c *BssClient) DeletePostal(request *model.DeletePostalRequest) (*model.Del
 	}
 }
 
-//功能描述：根据省份查询城市列表
+//功能描述：伙伴在伙伴销售平台上查询城市信息。
 func (c *BssClient) ListCities(request *model.ListCitiesRequest) (*model.ListCitiesResponse, error) {
 	requestDef := GenReqDefForListCities()
 
@@ -194,7 +194,18 @@ func (c *BssClient) ListCities(request *model.ListCitiesRequest) (*model.ListCit
 	}
 }
 
-//功能描述：根据城市查询区县列表
+//功能描述：查询用量单位进制
+func (c *BssClient) ListConversions(request *model.ListConversionsRequest) (*model.ListConversionsResponse, error) {
+	requestDef := GenReqDefForListConversions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConversionsResponse), nil
+	}
+}
+
+//功能描述：伙伴在伙伴销售平台上查询区县信息。
 func (c *BssClient) ListCounties(request *model.ListCountiesRequest) (*model.ListCountiesResponse, error) {
 	requestDef := GenReqDefForListCounties()
 
@@ -227,7 +238,7 @@ func (c *BssClient) ListCustomerBillsFeeRecords(request *model.ListCustomerBills
 	}
 }
 
-//功能描述：查询客户按需资源列表
+//功能描述：客户在伙伴销售平台查询已开通的按需资源
 func (c *BssClient) ListCustomerOnDemandResources(request *model.ListCustomerOnDemandResourcesRequest) (*model.ListCustomerOnDemandResourcesResponse, error) {
 	requestDef := GenReqDefForListCustomerOnDemandResources()
 
@@ -238,7 +249,7 @@ func (c *BssClient) ListCustomerOnDemandResources(request *model.ListCustomerOnD
 	}
 }
 
-//功能描述：查询订单列表
+//功能描述：客户购买包年包月资源后，可以查看待审核、处理中、已取消、已完成和待支付等状态的订单
 func (c *BssClient) ListCustomerOrders(request *model.ListCustomerOrdersRequest) (*model.ListCustomerOrdersResponse, error) {
 	requestDef := GenReqDefForListCustomerOrders()
 
@@ -271,7 +282,7 @@ func (c *BssClient) ListCustomerselfResourceRecordDetails(request *model.ListCus
 	}
 }
 
-//功能描述：查询资源消费记录（客户）
+//功能描述：客户在客户自建平台查询每个资源的消费明细数据
 func (c *BssClient) ListCustomerselfResourceRecords(request *model.ListCustomerselfResourceRecordsRequest) (*model.ListCustomerselfResourceRecordsResponse, error) {
 	requestDef := GenReqDefForListCustomerselfResourceRecords()
 
@@ -282,7 +293,7 @@ func (c *BssClient) ListCustomerselfResourceRecords(request *model.ListCustomers
 	}
 }
 
-//功能描述：查询企业子可回收余额
+//功能描述：企业主账号在客户自建平台查询企业子账号的可回收余额
 func (c *BssClient) ListEnterpriseMultiAccount(request *model.ListEnterpriseMultiAccountRequest) (*model.ListEnterpriseMultiAccountResponse, error) {
 	requestDef := GenReqDefForListEnterpriseMultiAccount()
 
@@ -315,7 +326,7 @@ func (c *BssClient) ListEnterpriseSubCustomers(request *model.ListEnterpriseSubC
 	}
 }
 
-//功能描述：查询精英服务商列表
+//功能描述：华为云伙伴能力中心（一级经销商）可以查询精英服务商（二级经销商）列表。
 func (c *BssClient) ListIndirectPartners(request *model.ListIndirectPartnersRequest) (*model.ListIndirectPartnersResponse, error) {
 	requestDef := GenReqDefForListIndirectPartners()
 
@@ -337,7 +348,7 @@ func (c *BssClient) ListIssuedCouponQuotas(request *model.ListIssuedCouponQuotas
 	}
 }
 
-//功能描述：查询已发放的优惠券列表
+//功能描述：合作伙伴可以查询已发放的优惠券列表。
 func (c *BssClient) ListIssuedPartnerCoupons(request *model.ListIssuedPartnerCouponsRequest) (*model.ListIssuedPartnerCouponsResponse, error) {
 	requestDef := GenReqDefForListIssuedPartnerCoupons()
 
@@ -345,6 +356,17 @@ func (c *BssClient) ListIssuedPartnerCoupons(request *model.ListIssuedPartnerCou
 		return nil, err
 	} else {
 		return resp.(*model.ListIssuedPartnerCouponsResponse), nil
+	}
+}
+
+//功能描述：查询用量单位列表
+func (c *BssClient) ListMeasureUnits(request *model.ListMeasureUnitsRequest) (*model.ListMeasureUnitsResponse, error) {
+	requestDef := GenReqDefForListMeasureUnits()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMeasureUnitsResponse), nil
 	}
 }
 
@@ -359,7 +381,7 @@ func (c *BssClient) ListOnDemandResourceRatings(request *model.ListOnDemandResou
 	}
 }
 
-//功能描述：查询订单详情
+//功能描述：客户在客户自建平台查看订单可用的优惠券列表
 func (c *BssClient) ListOrderCouponsByOrderId(request *model.ListOrderCouponsByOrderIdRequest) (*model.ListOrderCouponsByOrderIdResponse, error) {
 	requestDef := GenReqDefForListOrderCouponsByOrderId()
 
@@ -392,7 +414,7 @@ func (c *BssClient) ListPartnerBalances(request *model.ListPartnerBalancesReques
 	}
 }
 
-//功能描述：查询优惠券的发放回收记录
+//功能描述：合作伙伴可查看给客户发放和回收优惠券的操作记录。
 func (c *BssClient) ListPartnerCouponsRecord(request *model.ListPartnerCouponsRecordRequest) (*model.ListPartnerCouponsRecordResponse, error) {
 	requestDef := GenReqDefForListPartnerCouponsRecord()
 
@@ -403,7 +425,7 @@ func (c *BssClient) ListPartnerCouponsRecord(request *model.ListPartnerCouponsRe
 	}
 }
 
-//功能描述：查询伙伴代付订单列表
+//功能描述：伙伴在伙伴销售平台查询客户的代支付订单列表。
 func (c *BssClient) ListPartnerPayOrders(request *model.ListPartnerPayOrdersRequest) (*model.ListPartnerPayOrdersResponse, error) {
 	requestDef := GenReqDefForListPartnerPayOrders()
 
@@ -414,7 +436,7 @@ func (c *BssClient) ListPartnerPayOrders(request *model.ListPartnerPayOrdersRequ
 	}
 }
 
-//功能描述：查询客户包年/包月资源列表
+//功能描述：客户在客户自建平台查询某个或所有的包年包月资源
 func (c *BssClient) ListPayPerUseCustomerResources(request *model.ListPayPerUseCustomerResourcesRequest) (*model.ListPayPerUseCustomerResourcesResponse, error) {
 	requestDef := GenReqDefForListPayPerUseCustomerResources()
 
@@ -425,7 +447,7 @@ func (c *BssClient) ListPayPerUseCustomerResources(request *model.ListPayPerUseC
 	}
 }
 
-//功能描述：查询邮寄地址
+//功能描述：客户可以查询自己的邮寄地址信息。
 func (c *BssClient) ListPostalAddress(request *model.ListPostalAddressRequest) (*model.ListPostalAddressResponse, error) {
 	requestDef := GenReqDefForListPostalAddress()
 
@@ -436,7 +458,7 @@ func (c *BssClient) ListPostalAddress(request *model.ListPostalAddressRequest) (
 	}
 }
 
-//功能描述：根据国家查询省份列表
+//功能描述：伙伴在伙伴销售平台上查询省份信息。
 func (c *BssClient) ListProvinces(request *model.ListProvincesRequest) (*model.ListProvincesResponse, error) {
 	requestDef := GenReqDefForListProvinces()
 
@@ -447,7 +469,7 @@ func (c *BssClient) ListProvinces(request *model.ListProvincesRequest) (*model.L
 	}
 }
 
-//功能描述：查询优惠券额度列表
+//功能描述：合作伙伴可以查看所拥有的优惠劵额度。
 func (c *BssClient) ListQuotaCoupons(request *model.ListQuotaCouponsRequest) (*model.ListQuotaCouponsResponse, error) {
 	requestDef := GenReqDefForListQuotaCoupons()
 
@@ -469,7 +491,7 @@ func (c *BssClient) ListRateOnPeriodDetail(request *model.ListRateOnPeriodDetail
 	}
 }
 
-//功能描述：查询资源类型
+//功能描述：客户在客户自建平台查询资源类型的列表。
 func (c *BssClient) ListResourceTypes(request *model.ListResourceTypesRequest) (*model.ListResourceTypesResponse, error) {
 	requestDef := GenReqDefForListResourceTypes()
 
@@ -480,7 +502,7 @@ func (c *BssClient) ListResourceTypes(request *model.ListResourceTypesRequest) (
 	}
 }
 
-//功能描述：查询套餐内使用量
+//功能描述：客户在客户自建平台查询套餐内的使用量
 func (c *BssClient) ListResourceUsages(request *model.ListResourceUsagesRequest) (*model.ListResourceUsagesResponse, error) {
 	requestDef := GenReqDefForListResourceUsages()
 
@@ -491,7 +513,7 @@ func (c *BssClient) ListResourceUsages(request *model.ListResourceUsagesRequest)
 	}
 }
 
-//功能描述：根据云服务类型查询资源列表
+//功能描述：伙伴在伙伴销售平台根据云服务类型查询关联的资源类型编码和名称，用于查询按需产品的价格或包年/包月产品的价格。
 func (c *BssClient) ListServiceResources(request *model.ListServiceResourcesRequest) (*model.ListServiceResourcesResponse, error) {
 	requestDef := GenReqDefForListServiceResources()
 
@@ -502,7 +524,7 @@ func (c *BssClient) ListServiceResources(request *model.ListServiceResourcesRequ
 	}
 }
 
-//功能描述：查询云服务类型列表
+//功能描述：伙伴在伙伴销售平台查询云服务类型的列表。
 func (c *BssClient) ListServiceTypes(request *model.ListServiceTypesRequest) (*model.ListServiceTypesResponse, error) {
 	requestDef := GenReqDefForListServiceTypes()
 
@@ -524,7 +546,7 @@ func (c *BssClient) ListSkuInventories(request *model.ListSkuInventoriesRequest)
 	}
 }
 
-//功能描述：查询优惠券列表
+//功能描述：伙伴可以查询自身的优惠券信息。
 func (c *BssClient) ListSubCustomerCoupons(request *model.ListSubCustomerCouponsRequest) (*model.ListSubCustomerCouponsResponse, error) {
 	requestDef := GenReqDefForListSubCustomerCoupons()
 
@@ -535,7 +557,7 @@ func (c *BssClient) ListSubCustomerCoupons(request *model.ListSubCustomerCoupons
 	}
 }
 
-//功能描述：查询伙伴折扣
+//功能描述：合作伙伴可以查看为客户设置的折扣，每次查询一个客户。如果该客户没有设置折扣，返回null。精英服务商（二级经销商）也可以通过该接口查询子客户的折扣。
 func (c *BssClient) ListSubCustomerDiscounts(request *model.ListSubCustomerDiscountsRequest) (*model.ListSubCustomerDiscountsResponse, error) {
 	requestDef := GenReqDefForListSubCustomerDiscounts()
 
@@ -546,7 +568,7 @@ func (c *BssClient) ListSubCustomerDiscounts(request *model.ListSubCustomerDisco
 	}
 }
 
-//功能描述：查询客户消费记录
+//功能描述：合作伙伴可以查看客户的消费记录
 func (c *BssClient) ListSubCustomerResFeeRecords(request *model.ListSubCustomerResFeeRecordsRequest) (*model.ListSubCustomerResFeeRecordsResponse, error) {
 	requestDef := GenReqDefForListSubCustomerResFeeRecords()
 
@@ -557,7 +579,7 @@ func (c *BssClient) ListSubCustomerResFeeRecords(request *model.ListSubCustomerR
 	}
 }
 
-//功能描述：查询客户列表
+//功能描述：伙伴可以查询合作伙伴的客户信息列表。
 func (c *BssClient) ListSubCustomers(request *model.ListSubCustomersRequest) (*model.ListSubCustomersResponse, error) {
 	requestDef := GenReqDefForListSubCustomers()
 
@@ -579,7 +601,7 @@ func (c *BssClient) ListSubcustomerMonthlyBills(request *model.ListSubcustomerMo
 	}
 }
 
-//功能描述：客户在伙伴销售平台或自建平台查询包年/包月或按需产品的列表
+//功能描述：伙伴在伙伴销售平台查询资源的使用量类型列表。
 func (c *BssClient) ListUsageTypes(request *model.ListUsageTypesRequest) (*model.ListUsageTypesResponse, error) {
 	requestDef := GenReqDefForListUsageTypes()
 
@@ -590,7 +612,7 @@ func (c *BssClient) ListUsageTypes(request *model.ListUsageTypesRequest) (*model
 	}
 }
 
-//功能描述：支付包周期订单
+//功能描述：客户可以对待支付状态的包年包月产品订单进行支付
 func (c *BssClient) PayOrders(request *model.PayOrdersRequest) (*model.PayOrdersResponse, error) {
 	requestDef := GenReqDefForPayOrders()
 
@@ -623,7 +645,7 @@ func (c *BssClient) ReclaimIndirectPartnerAccount(request *model.ReclaimIndirect
 	}
 }
 
-//功能描述：伙伴回收子客户优惠券
+//功能描述：对于合作伙伴已经下发给客户的优惠券，如遇发错或其他特殊情况，合作伙伴有回收的权利。优惠券回收后，客户将不再拥有该优惠券。
 func (c *BssClient) ReclaimPartnerCoupons(request *model.ReclaimPartnerCouponsRequest) (*model.ReclaimPartnerCouponsResponse, error) {
 	requestDef := GenReqDefForReclaimPartnerCoupons()
 
@@ -634,7 +656,7 @@ func (c *BssClient) ReclaimPartnerCoupons(request *model.ReclaimPartnerCouponsRe
 	}
 }
 
-//功能描述：企业主账号从企业子账号回收拨款
+//功能描述：企业主账号在客户自建平台回收给企业子账号的拨款
 func (c *BssClient) ReclaimSubEnterpriseAmount(request *model.ReclaimSubEnterpriseAmountRequest) (*model.ReclaimSubEnterpriseAmountResponse, error) {
 	requestDef := GenReqDefForReclaimSubEnterpriseAmount()
 
@@ -656,7 +678,7 @@ func (c *BssClient) ReclaimToPartnerAccount(request *model.ReclaimToPartnerAccou
 	}
 }
 
-//功能描述：续订包周期资源
+//功能描述：客户的包年包月资源即将到期时，可进行包年包月资源的续订
 func (c *BssClient) RenewalResources(request *model.RenewalResourcesRequest) (*model.RenewalResourcesResponse, error) {
 	requestDef := GenReqDefForRenewalResources()
 
@@ -667,7 +689,7 @@ func (c *BssClient) RenewalResources(request *model.RenewalResourcesRequest) (*m
 	}
 }
 
-//功能描述：发送短信验证码
+//功能描述：企业主账号在客户自建平台发送短信验证码
 func (c *BssClient) SendSmsVerificationCode(request *model.SendSmsVerificationCodeRequest) (*model.SendSmsVerificationCodeResponse, error) {
 	requestDef := GenReqDefForSendSmsVerificationCode()
 
@@ -678,7 +700,7 @@ func (c *BssClient) SendSmsVerificationCode(request *model.SendSmsVerificationCo
 	}
 }
 
-//功能描述：发送验证码
+//功能描述：客户注册时，如果填写了手机号，可以向对应的手机发送注册验证码，校验信息的正确性。使用个人银行卡方式进行实名认证时，通过该接口向指定的手机发送验证码。
 func (c *BssClient) SendVerificationMessageCode(request *model.SendVerificationMessageCodeRequest) (*model.SendVerificationMessageCodeResponse, error) {
 	requestDef := GenReqDefForSendVerificationMessageCode()
 
@@ -700,7 +722,7 @@ func (c *BssClient) ShowCusotmerAccountBalances(request *model.ShowCusotmerAccou
 	}
 }
 
-//功能描述：客户可以查询自身的消费汇总单的功能，消费按月汇总。每天刷新一次，更新前一天的数据。
+//功能描述：客户在客户自建平台查询自身的消费汇总账单，此账单按月汇总消费数据。消费汇总账单数据仅包含前一天24点前的数据
 func (c *BssClient) ShowCustomerMonthlySum(request *model.ShowCustomerMonthlySumRequest) (*model.ShowCustomerMonthlySumResponse, error) {
 	requestDef := GenReqDefForShowCustomerMonthlySum()
 
@@ -711,7 +733,7 @@ func (c *BssClient) ShowCustomerMonthlySum(request *model.ShowCustomerMonthlySum
 	}
 }
 
-//功能描述：查询订单详情
+//功能描述：客户可以查看订单详情
 func (c *BssClient) ShowCustomerOrderDetails(request *model.ShowCustomerOrderDetailsRequest) (*model.ShowCustomerOrderDetailsResponse, error) {
 	requestDef := GenReqDefForShowCustomerOrderDetails()
 
@@ -722,7 +744,7 @@ func (c *BssClient) ShowCustomerOrderDetails(request *model.ShowCustomerOrderDet
 	}
 }
 
-//功能描述：查询企业主的可拨款余额
+//功能描述：企业主账号在客户自建平台查询自己的可拨款余额
 func (c *BssClient) ShowMultiAccountTransferAmount(request *model.ShowMultiAccountTransferAmountRequest) (*model.ShowMultiAccountTransferAmountResponse, error) {
 	requestDef := GenReqDefForShowMultiAccountTransferAmount()
 
@@ -733,7 +755,7 @@ func (c *BssClient) ShowMultiAccountTransferAmount(request *model.ShowMultiAccou
 	}
 }
 
-//功能描述：查询实名认证审核结果
+//功能描述：如果实名认证申请或实名认证变更申请的响应中，显示需要人工审核，使用该接口查询审核结果。
 func (c *BssClient) ShowRealnameAuthenticationReviewResult(request *model.ShowRealnameAuthenticationReviewResultRequest) (*model.ShowRealnameAuthenticationReviewResultResponse, error) {
 	requestDef := GenReqDefForShowRealnameAuthenticationReviewResult()
 
@@ -744,7 +766,7 @@ func (c *BssClient) ShowRealnameAuthenticationReviewResult(request *model.ShowRe
 	}
 }
 
-//功能描述：查询退款订单的金额详情
+//功能描述：客户在伙伴销售平台查询某次退订订单或者降配订单的退款金额来自哪些资源和对应订单
 func (c *BssClient) ShowRefundOrderDetails(request *model.ShowRefundOrderDetailsRequest) (*model.ShowRefundOrderDetailsResponse, error) {
 	requestDef := GenReqDefForShowRefundOrderDetails()
 
@@ -788,7 +810,7 @@ func (c *BssClient) UpdateIndirectPartnerAccount(request *model.UpdateIndirectPa
 	}
 }
 
-//功能描述：设置或者取消包周期资源到期转按需
+//功能描述：客户可以设置包年包月资源到期后转为按需资源计费。包年包月计费模式到期后，按需的计费模式即生效
 func (c *BssClient) UpdatePeriodToOnDemand(request *model.UpdatePeriodToOnDemandRequest) (*model.UpdatePeriodToOnDemandResponse, error) {
 	requestDef := GenReqDefForUpdatePeriodToOnDemand()
 
@@ -799,7 +821,7 @@ func (c *BssClient) UpdatePeriodToOnDemand(request *model.UpdatePeriodToOnDemand
 	}
 }
 
-//功能描述：修改邮寄地址
+//功能描述：客户可以修改自己的邮寄地址信息。
 func (c *BssClient) UpdatePostal(request *model.UpdatePostalRequest) (*model.UpdatePostalResponse, error) {
 	requestDef := GenReqDefForUpdatePostal()
 
@@ -810,7 +832,7 @@ func (c *BssClient) UpdatePostal(request *model.UpdatePostalRequest) (*model.Upd
 	}
 }
 
-//功能描述：企业主账号向企业子账号拨款
+//功能描述：企业主账号在客户自建平台向企业子账号拨款
 func (c *BssClient) UpdateSubEnterpriseAmount(request *model.UpdateSubEnterpriseAmountRequest) (*model.UpdateSubEnterpriseAmountResponse, error) {
 	requestDef := GenReqDefForUpdateSubEnterpriseAmount()
 

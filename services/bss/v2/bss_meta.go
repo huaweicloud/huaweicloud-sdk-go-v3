@@ -325,6 +325,31 @@ func GenReqDefForListCities() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListConversions() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/bases/conversions").
+		WithResponse(new(model.ListConversionsResponse)).
+		WithContentType("application/json")
+
+	// request
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MeasureType").
+		WithJsonTag("measure_type").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListCounties() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -906,6 +931,26 @@ func GenReqDefForListIssuedPartnerCoupons() *def.HttpRequestDef {
 		WithName("IndirectPartnerId").
 		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListMeasureUnits() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/bases/measurements").
+		WithResponse(new(model.ListMeasureUnitsResponse)).
+		WithContentType("application/json")
+
+	// request
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
 
 	// response
 

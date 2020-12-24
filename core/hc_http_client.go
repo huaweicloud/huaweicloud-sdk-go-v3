@@ -86,7 +86,7 @@ func (hc *HcHttpClient) buildRequest(req interface{}, reqDef *def.HttpRequestDef
 		return nil, err
 	}
 
-	httpRequest, err := hc.credential.ProcessAuthRequest(builder.Build())
+	httpRequest, err := hc.credential.ProcessAuthRequest(hc.httpClient, builder.Build())
 	if err != nil {
 		return nil, err
 	}

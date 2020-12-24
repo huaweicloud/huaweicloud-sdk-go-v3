@@ -10,6 +10,7 @@ type SdkTime time.Time
 
 func (t *SdkTime) UnmarshalJSON(data []byte) error {
 	tmp := strings.Trim(string(data[:]), "\"")
+
 	now, err := time.ParseInLocation(`2006-01-02T15:04:05Z`, tmp, time.UTC)
 	if err == nil {
 		*t = SdkTime(now)

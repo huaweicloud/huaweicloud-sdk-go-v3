@@ -1,5 +1,5 @@
 /*
- * Bss
+ * BSS
  *
  * Business Support System API
  *

@@ -1,5 +1,5 @@
 /*
- * smn
+ * SMN
  *
  * SMN Open API
  *

@@ -45,6 +45,7 @@ Take using VPC SDK for example, you need to import `github.com/huaweicloud/huawe
         "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
         vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
         "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
+        region "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/region"
         "net/http"
     )
     ```
@@ -87,10 +88,12 @@ Take using VPC SDK for example, you need to import `github.com/huaweicloud/huawe
 
     **Notice:**
     There are two types of HUAWEI CLOUD services, regional services and global services. 
-    Global services currently only support IAM, TMS, EPS.
+    Global services currently only support BSS, DevStar, EPS, IAM, RMS.
 
     For Regional services' authentication, projectId is required. 
     For global services' authentication, domainId is required. 
+    
+    If you use {Service}Region to initialize {Service}Client, projectId/domainId supports automatic acquisition, you don't need to configure it when initializing Credentials.
 
     - `ak` is the access key ID for your account.
     - `sk` is the secret access key for your account.
@@ -142,8 +145,9 @@ Take using VPC SDK for example, you need to import `github.com/huaweicloud/huawe
                 Build()
     ```
 
-4. Initialize the {Service}Client instance
-
+4. Initialize the {Service}Client instance (Two ways)
+        
+    4.1 Specify Endpoint when initializing {Service}Client
     ``` go
     // Initialize specified New{Service}Client, take NewVpcClient for example
     client := vpc.NewVpcClient(
@@ -158,6 +162,22 @@ Take using VPC SDK for example, you need to import `github.com/huaweicloud/huawe
 
     - `endpoint` is the service specific endpoints, see [Regions and Endpoints](https://developer.huaweicloud.com/intl/en-us/endpoint)
 
+    4.2 Specify Region when initializing {Service}Client **(Recommended)**
+    
+    ``` go
+    // Initialize specified New{Service}Client, take NewIamClient for example
+    client := iam.NewIamClient(
+        iam.IamClientBuilder().
+            WithRegion(region.CN_NORTH_4).
+            WithCredential(auth).
+            WithHttpConfig(config.DefaultHttpConfig()).  
+            Build())
+    ```
+    **where:**
+
+    - If you use {Service}Region to initialize {Service}Client, projectId/domainId supports automatic acquisition, you don't need to configure it when initializing Credentials.
+    - Multiple ProjectId situation is not supported.
+    
 5. Send a request and print response.
 
     ``` go

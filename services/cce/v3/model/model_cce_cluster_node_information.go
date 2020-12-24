@@ -1,5 +1,5 @@
 /*
- * cce
+ * CCE
  *
  * CCE开放API
  *

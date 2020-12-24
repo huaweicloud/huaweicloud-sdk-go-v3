@@ -139,6 +139,17 @@ func (c *LiveClient) ShowStreamCount(request *model.ShowStreamCountRequest) (*mo
 	}
 }
 
+//查询播放画像信息。  最大查询跨度1天，最大查询周期31天。
+func (c *LiveClient) ShowStreamPortrait(request *model.ShowStreamPortraitRequest) (*model.ShowStreamPortraitResponse, error) {
+	requestDef := GenReqDefForShowStreamPortrait()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStreamPortraitResponse), nil
+	}
+}
+
 //查询上行带宽数据。  最大查询跨度31天，最大查询周期90天。
 func (c *LiveClient) ShowUpBandwidth(request *model.ShowUpBandwidthRequest) (*model.ShowUpBandwidthResponse, error) {
 	requestDef := GenReqDefForShowUpBandwidth()

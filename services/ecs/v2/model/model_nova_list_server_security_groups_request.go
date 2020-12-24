@@ -1,5 +1,5 @@
 /*
- * ecs
+ * ECS
  *
  * ECS Open API
  *

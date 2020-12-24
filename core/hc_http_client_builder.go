@@ -22,8 +22,10 @@ package core
 import (
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/env"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
 	"reflect"
 	"strings"
 )
@@ -33,6 +35,7 @@ type HcHttpClientBuilder struct {
 	credentials     auth.ICredential
 	endpoint        string
 	httpConfig      *config.HttpConfig
+	region          *region.Region
 }
 
 func NewHcHttpClientBuilder() *HcHttpClientBuilder {
@@ -52,6 +55,11 @@ func (builder *HcHttpClientBuilder) WithEndpoint(endpoint string) *HcHttpClientB
 	return builder
 }
 
+func (builder *HcHttpClientBuilder) WithRegion(region *region.Region) *HcHttpClientBuilder {
+	builder.region = region
+	return builder
+}
+
 func (builder *HcHttpClientBuilder) WithHttpConfig(httpConfig *config.HttpConfig) *HcHttpClientBuilder {
 	builder.httpConfig = httpConfig
 	return builder
@@ -68,7 +76,7 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 	}
 
 	if builder.credentials == nil {
-		builder.credentials = auth.LoadCredentialFromEnv(builder.CredentialsType[0])
+		builder.credentials = env.LoadCredentialFromEnv(builder.CredentialsType[0])
 	}
 
 	match := false
@@ -85,6 +93,11 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 	}
 
 	defaultHttpClient := impl.NewDefaultHttpClient(builder.httpConfig)
+
+	if builder.region != nil {
+		builder.endpoint = builder.region.Endpoint
+		builder.credentials = builder.credentials.ProcessAuthParams(defaultHttpClient, builder.region.Id)
+	}
 
 	hcHttpClient := NewHcHttpClient(defaultHttpClient).WithEndpoint(builder.endpoint).WithCredential(builder.credentials)
 	return hcHttpClient

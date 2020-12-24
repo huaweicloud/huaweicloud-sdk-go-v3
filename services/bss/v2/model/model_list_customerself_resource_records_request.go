@@ -1,5 +1,5 @@
 /*
- * Bss
+ * BSS
  *
  * Business Support System API
  *
@@ -19,7 +19,7 @@ type ListCustomerselfResourceRecordsRequest struct {
 	Cycle               string  `json:"cycle"`
 	CloudServiceType    *string `json:"cloud_service_type,omitempty"`
 	Region              *string `json:"region,omitempty"`
-	ChargeMode          string  `json:"charge_mode"`
+	ChargeMode          *string `json:"charge_mode,omitempty"`
 	BillType            *int32  `json:"bill_type,omitempty"`
 	Offset              *int32  `json:"offset,omitempty"`
 	Limit               *int32  `json:"limit,omitempty"`

@@ -1,5 +1,5 @@
 /*
- * Bss
+ * BSS
  *
  * Business Support System API
  *
@@ -26,7 +26,7 @@ type QueryResRecordsDetailReq struct {
 	ResInstanceId *string `json:"res_instance_id,omitempty"`
 	// |参数名称：支付方式| |参数的约束及描述：该参数非必填，且只允许整数,1 : 包周期；3: 按需。10: 预留实例|
 	ChargeMode *int32 `json:"charge_mode,omitempty"`
-	// |参数名称：账单类型| |参数的约束及描述：该参数非必填，且只允许整数,1：消费-新购；2：消费-续订；3：消费-变更；4：退款-退订；5：消费-使用；8：消费-自动续订；9：调账-补偿；12：消费-按时计费；13：消费-退订手续费；14：消费-服务支持计划月末扣费；16：调账-扣费|
+	// |参数名称：账单类型| |参数的约束及描述：该参数非必填，且只允许整数,1：消费-新购；2：消费-续订；3：消费-变更；4：退款-退订；5：消费-使用；8：消费-自动续订；9：调账-补偿；12：消费-按时计费；13：消费-退订手续费；14：消费-服务支持计划月末扣费；16：调账-扣费; 17：消费-保底差额 |
 	BillType *int32 `json:"bill_type,omitempty"`
 	// |参数名称：企业项目ID| |参数的约束及描述：该参数非必，最大长度：64，且只允许字符串|
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
