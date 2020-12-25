@@ -16,8 +16,8 @@ import (
 // Response Object
 type ListMaintenanceWindowsResponse struct {
 	// 支持的维护时间窗列表。
-	MaintainWindows *[]MaintainWindows `json:"maintain_windows,omitempty"`
-	HttpStatusCode  int                `json:"-"`
+	MaintainWindows *[]MaintainWindowsEntity `json:"maintain_windows,omitempty"`
+	HttpStatusCode  int                      `json:"-"`
 }
 
 func (o ListMaintenanceWindowsResponse) String() string {

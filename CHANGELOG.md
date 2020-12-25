@@ -1,3 +1,45 @@
+## 0.0.27-beta 2020-12-25
+## HuaweiCloud SDK DCS
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix the problem of compilation failure in Mac OS.
+ - ### Change
+    - Query parameter in interface `ListInstances` modification: id → instance_id.
+
+## HuaweiCloud SDK DDS
+ - ### Features
+    - Support Document Database Service.
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+## HuaweiCloud SDK Kafka
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix the problem of compilation failure in Mac OS.
+ - ### Change
+    - None
+
+## HuaweiCloud SDK RabbitMQ
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix the problem of compilation failure in Mac OS.
+ - ### Change
+    - None
+
+## HuaweiCloud SDK RMS
+ - ### Features
+    - Support more interfaces: `Resources` related interfaces and `Region` related interfaces. 
+ - ### Bug Fix
+    - None
+ - ### Change
+    - None
+
+
 ## 0.0.26-beta 2020-12-23
 ## HuaweiCloud SDK Core
  - ### Features

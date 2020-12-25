@@ -1,3 +1,45 @@
+## 0.0.27-beta 2020-12-25
+## HuaweiCloud SDK DCS
+ - ### 新增特性
+    - 无
+ - ### 解决问题
+    - 修复SDK在Mac操作系统上无法正常编译的问题
+ - ### 特性变更
+    - 接口ListInstances请求Query参数名称调整：id → instance_id
+
+## HuaweiCloud SDK DDS
+ - ### 新增特性
+    - 支持文档数据库服务
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 无
+
+## HuaweiCloud SDK Kafka
+ - ### 新增特性
+    - 无
+ - ### 解决问题
+    - 修复SDK在Mac操作系统上无法正常编译的问题
+ - ### 特性变更
+    - 无
+
+## HuaweiCloud SDK RabbitMQ
+ - ### 新增特性
+    - 无
+ - ### 解决问题
+    - 修复SDK在Mac操作系统上无法正常编译的问题
+ - ### 特性变更
+    - 无
+
+## HuaweiCloud SDK RMS
+ - ### 新增特性
+    - 新增支持接口：资源查询相关接口、Region查询相关接口
+ - ### 解决问题
+    - 无
+ - ### 特性变更
+    - 无
+
+
 ## 0.0.26-beta 2020-12-23
 ## HuaweiCloud SDK Core
  - ### 新增特性

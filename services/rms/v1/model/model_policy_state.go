@@ -17,6 +17,8 @@ import (
 type PolicyState struct {
 	// 合规状态所属用户ID
 	DomainId *string `json:"domain_id,omitempty"`
+	// 合规状态所属资源区域ID
+	RegionId *string `json:"region_id,omitempty"`
 	// 合规状态所属资源ID
 	ResourceId *string `json:"resource_id,omitempty"`
 	// 合规状态所属资源名字
@@ -29,6 +31,8 @@ type PolicyState struct {
 	ComplianceState *string `json:"compliance_state,omitempty"`
 	// 合规状态所属规则ID
 	PolicyAssignmentId *string `json:"policy_assignment_id,omitempty"`
+	// 合规状态所属规则名字
+	PolicyAssignmentName *string `json:"policy_assignment_name,omitempty"`
 	// 合规状态所属策略ID
 	PolicyDefinitionId *string `json:"policy_definition_id,omitempty"`
 	// 合规状态评估时间

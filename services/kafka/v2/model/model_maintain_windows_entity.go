@@ -13,7 +13,7 @@ import (
 	"strings"
 )
 
-type ShowMaintainWindowsRespMaintainWindows struct {
+type MaintainWindowsEntity struct {
 	// 是否为默认时间段。
 	Default *bool `json:"default,omitempty"`
 	// 维护时间窗结束时间。
@@ -24,7 +24,7 @@ type ShowMaintainWindowsRespMaintainWindows struct {
 	Seq *int32 `json:"seq,omitempty"`
 }
 
-func (o ShowMaintainWindowsRespMaintainWindows) String() string {
+func (o MaintainWindowsEntity) String() string {
 	data, _ := json.Marshal(o)
-	return strings.Join([]string{"ShowMaintainWindowsRespMaintainWindows", string(data)}, " ")
+	return strings.Join([]string{"MaintainWindowsEntity", string(data)}, " ")
 }

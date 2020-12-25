@@ -15,7 +15,7 @@ import (
 
 // Request Object
 type ListInstancesRequest struct {
-	Id             *string `json:"id,omitempty"`
+	InstanceId     *string `json:"instance_id,omitempty"`
 	IncludeFailure *string `json:"include_failure,omitempty"`
 	Name           *string `json:"name,omitempty"`
 	Offset         *int32  `json:"offset,omitempty"`

@@ -183,6 +183,17 @@ func (c *RmsClient) UpdatePolicyAssignment(request *model.UpdatePolicyAssignment
 	}
 }
 
+//Returns a list of domain-visible regions
+func (c *RmsClient) ListRegions(request *model.ListRegionsRequest) (*model.ListRegionsResponse, error) {
+	requestDef := GenReqDefForListRegions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRegionsResponse), nil
+	}
+}
+
 //指定资源ID，查询该资源与其他资源的关联关系，可以指定关系方向为\"in\" 或者\"out\"
 func (c *RmsClient) ShowResourceRelations(request *model.ShowResourceRelationsRequest) (*model.ShowResourceRelationsResponse, error) {
 	requestDef := GenReqDefForShowResourceRelations()
@@ -191,6 +202,17 @@ func (c *RmsClient) ShowResourceRelations(request *model.ShowResourceRelationsRe
 		return nil, err
 	} else {
 		return resp.(*model.ShowResourceRelationsResponse), nil
+	}
+}
+
+//返回当前租户下所有资源，需要当前用户有rms:resources:list权限。
+func (c *RmsClient) ListAllResources(request *model.ListAllResourcesRequest) (*model.ListAllResourcesResponse, error) {
+	requestDef := GenReqDefForListAllResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAllResourcesResponse), nil
 	}
 }
 

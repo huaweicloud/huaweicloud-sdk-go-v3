@@ -648,8 +648,8 @@ func GenReqDefForListInstances() *def.HttpRequestDef {
 	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Id").
-		WithJsonTag("id").
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("IncludeFailure").
