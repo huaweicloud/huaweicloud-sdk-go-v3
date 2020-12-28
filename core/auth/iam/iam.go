@@ -2,10 +2,12 @@ package iam
 
 import (
 	"bytes"
+	"errors"
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/response"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
 	jsoniter "github.com/json-iterator/go"
 	"io/ioutil"
 	"reflect"
@@ -52,7 +54,12 @@ func KeystoneListProjects(client *impl.DefaultHttpClient, req *request.DefaultHt
 		return "", err
 	}
 
-	return (*keystoneListProjectResponse.Projects)[0].Id, nil
+	if len(*keystoneListProjectResponse.Projects) > 0 {
+
+		return (*keystoneListProjectResponse.Projects)[0].Id, nil
+	}
+
+	return "", errors.New("no project found")
 }
 
 type KeystoneListAuthDomainsResponse struct {
@@ -88,10 +95,19 @@ func KeystoneListAuthDomains(client *impl.DefaultHttpClient, req *request.Defaul
 		return "", err
 	}
 
-	return (*keystoneListAuthDomainsResponse.Domains)[0].Id, nil
+	if len(*keystoneListAuthDomainsResponse.Domains) > 0 {
+
+		return (*keystoneListAuthDomainsResponse.Domains)[0].Id, nil
+	}
+
+	return "", errors.New("no domain found")
 }
 
 func GetResponseBody(resp *response.DefaultHttpResponse) ([]byte, error) {
+	if resp.GetStatusCode() >= 400 {
+		return nil, sdkerr.NewServiceResponseError(resp.Response)
+	}
+
 	data, err := ioutil.ReadAll(resp.Response.Body)
 
 	if err != nil {

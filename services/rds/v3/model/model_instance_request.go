@@ -53,6 +53,8 @@ type InstanceRequest struct {
 	// 只读实例的主实例ID。创建只读实例时必选，其它场景不可选。
 	ReplicaOfId  *string       `json:"replica_of_id,omitempty"`
 	RestorePoint *RestorePoint `json:"restore_point,omitempty"`
+	// 仅限Microsoft SQL Server实例使用。取值范围：根据查询SQL Server可用字符集的字符集查询列表查询可设置的字符集。
+	Collation *string `json:"collation,omitempty"`
 	// 标签列表。单个实例总标签数上限10个。
 	Tags *[]InstanceRequestTags `json:"tags,omitempty"`
 }

@@ -1,3 +1,21 @@
+## 0.0.28-beta 2020-12-28
+## HuaweiCloud SDK Core
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Fix response exception when using temporary AK/SK.
+ - ### Change
+    - None
+
+## HuaweiCloud SDK DCS
+ - ### Features
+    - None
+ - ### Bug Fix
+    - Change property type of `port` from string to integer.
+ - ### Change
+    - None
+
+
 ## 0.0.27-beta 2020-12-25
 ## HuaweiCloud SDK DCS
  - ### Features

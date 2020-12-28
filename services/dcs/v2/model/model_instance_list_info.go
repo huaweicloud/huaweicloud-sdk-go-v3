@@ -63,7 +63,7 @@ type InstanceListInfo struct {
 	// Redis缓存实例是否开启公网访问功能。 - true：开启 - false：不开启
 	EnablePublicip *bool `json:"enable_publicip,omitempty"`
 	// 缓存的端口。
-	Port *string `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty"`
 	// 用户id。
 	UserId *string `json:"user_id,omitempty"`
 	// 用户名。
