@@ -77,7 +77,7 @@ type InstanceListInfo struct {
 	// 实例状态。详细状态说明见[缓存实例状态说明](https://support.huaweicloud.com/api-dcs/dcs-api-0312047.html)。
 	Status *string `json:"status,omitempty"`
 	// 实例标签键值。
-	Tags *[]Tag `json:"tags,omitempty"`
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }

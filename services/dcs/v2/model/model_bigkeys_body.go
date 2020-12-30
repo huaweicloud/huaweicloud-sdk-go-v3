@@ -23,7 +23,7 @@ type BigkeysBody struct {
 	// 大key所在的分片，仅在实例类型为集群时支持,格式为ip:port
 	Shard *string `json:"shard,omitempty"`
 	// 大key所在的db
-	Db *string `json:"db,omitempty"`
+	Db *int32 `json:"db,omitempty"`
 	// key的value大小。
 	Size *int32 `json:"size,omitempty"`
 	// key大小的单位。type为string时，单位是：byte；type为list/set/zset/hash时，单位是：count

@@ -22,7 +22,7 @@ type SlowlogItem struct {
 	// 执行开始时间,格式为“2020-06-19T07:06:07Z”
 	StartTime *string `json:"start_time,omitempty"`
 	// 持续时间，单位是ms
-	Duration *int32 `json:"duration,omitempty"`
+	Duration *string `json:"duration,omitempty"`
 	// 慢命令所在的分片名称，仅在实例类型为集群时支持
 	ShardName *string `json:"shard_name,omitempty"`
 }
