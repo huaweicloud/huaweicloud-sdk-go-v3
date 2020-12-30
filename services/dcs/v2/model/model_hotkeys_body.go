@@ -10,9 +10,8 @@ package model
 import (
 	"encoding/json"
 	"errors"
-	"strings"
-
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+	"strings"
 )
 
 // 热key记录结构体
