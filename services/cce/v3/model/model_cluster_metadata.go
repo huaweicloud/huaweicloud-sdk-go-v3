@@ -30,6 +30,10 @@ type ClusterMetadata struct {
 }
 
 func (o ClusterMetadata) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ClusterMetadata struct{}"
+	}
+
 	return strings.Join([]string{"ClusterMetadata", string(data)}, " ")
 }

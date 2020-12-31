@@ -21,6 +21,10 @@ type DeleteDomainGroupInheritedRoleRequest struct {
 }
 
 func (o DeleteDomainGroupInheritedRoleRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteDomainGroupInheritedRoleRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteDomainGroupInheritedRoleRequest", string(data)}, " ")
 }

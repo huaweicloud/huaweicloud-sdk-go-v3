@@ -33,6 +33,10 @@ type OrderRefundInfoV2 struct {
 }
 
 func (o OrderRefundInfoV2) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OrderRefundInfoV2 struct{}"
+	}
+
 	return strings.Join([]string{"OrderRefundInfoV2", string(data)}, " ")
 }

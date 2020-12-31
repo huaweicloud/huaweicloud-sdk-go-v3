@@ -53,7 +53,11 @@ type ThrottleBindingThrottleResp struct {
 }
 
 func (o ThrottleBindingThrottleResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ThrottleBindingThrottleResp struct{}"
+	}
+
 	return strings.Join([]string{"ThrottleBindingThrottleResp", string(data)}, " ")
 }
 

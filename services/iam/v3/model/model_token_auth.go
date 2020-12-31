@@ -19,6 +19,10 @@ type TokenAuth struct {
 }
 
 func (o TokenAuth) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TokenAuth struct{}"
+	}
+
 	return strings.Join([]string{"TokenAuth", string(data)}, " ")
 }

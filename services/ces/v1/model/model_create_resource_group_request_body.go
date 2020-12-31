@@ -22,6 +22,10 @@ type CreateResourceGroupRequestBody struct {
 }
 
 func (o CreateResourceGroupRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateResourceGroupRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateResourceGroupRequestBody", string(data)}, " ")
 }

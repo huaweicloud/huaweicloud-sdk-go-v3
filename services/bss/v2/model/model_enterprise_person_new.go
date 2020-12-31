@@ -23,6 +23,10 @@ type EnterprisePersonNew struct {
 }
 
 func (o EnterprisePersonNew) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EnterprisePersonNew struct{}"
+	}
+
 	return strings.Join([]string{"EnterprisePersonNew", string(data)}, " ")
 }

@@ -24,6 +24,10 @@ type PrePaidServerRootVolumeExtendParam struct {
 }
 
 func (o PrePaidServerRootVolumeExtendParam) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PrePaidServerRootVolumeExtendParam struct{}"
+	}
+
 	return strings.Join([]string{"PrePaidServerRootVolumeExtendParam", string(data)}, " ")
 }

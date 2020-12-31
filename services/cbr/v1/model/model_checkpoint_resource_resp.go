@@ -34,7 +34,11 @@ type CheckpointResourceResp struct {
 }
 
 func (o CheckpointResourceResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CheckpointResourceResp struct{}"
+	}
+
 	return strings.Join([]string{"CheckpointResourceResp", string(data)}, " ")
 }
 

@@ -21,6 +21,10 @@ type ShowAddonInstanceRequest struct {
 }
 
 func (o ShowAddonInstanceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowAddonInstanceRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowAddonInstanceRequest", string(data)}, " ")
 }

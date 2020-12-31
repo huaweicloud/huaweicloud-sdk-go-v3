@@ -21,6 +21,10 @@ type ResourceTags struct {
 }
 
 func (o ResourceTags) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResourceTags struct{}"
+	}
+
 	return strings.Join([]string{"ResourceTags", string(data)}, " ")
 }

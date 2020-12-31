@@ -21,6 +21,10 @@ type ListPermanentAccessKeysResponse struct {
 }
 
 func (o ListPermanentAccessKeysResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListPermanentAccessKeysResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListPermanentAccessKeysResponse", string(data)}, " ")
 }

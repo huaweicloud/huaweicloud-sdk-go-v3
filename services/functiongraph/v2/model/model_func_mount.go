@@ -26,6 +26,10 @@ type FuncMount struct {
 }
 
 func (o FuncMount) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "FuncMount struct{}"
+	}
+
 	return strings.Join([]string{"FuncMount", string(data)}, " ")
 }

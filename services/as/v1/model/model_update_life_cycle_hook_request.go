@@ -21,6 +21,10 @@ type UpdateLifeCycleHookRequest struct {
 }
 
 func (o UpdateLifeCycleHookRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateLifeCycleHookRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateLifeCycleHookRequest", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type RollbackSnapshotOption struct {
 }
 
 func (o RollbackSnapshotOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RollbackSnapshotOption struct{}"
+	}
+
 	return strings.Join([]string{"RollbackSnapshotOption", string(data)}, " ")
 }

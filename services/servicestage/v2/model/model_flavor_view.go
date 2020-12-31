@@ -30,6 +30,10 @@ type FlavorView struct {
 }
 
 func (o FlavorView) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "FlavorView struct{}"
+	}
+
 	return strings.Join([]string{"FlavorView", string(data)}, " ")
 }

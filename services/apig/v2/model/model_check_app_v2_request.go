@@ -21,6 +21,10 @@ type CheckAppV2Request struct {
 }
 
 func (o CheckAppV2Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CheckAppV2Request struct{}"
+	}
+
 	return strings.Join([]string{"CheckAppV2Request", string(data)}, " ")
 }

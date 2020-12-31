@@ -23,6 +23,10 @@ type V3NodeCreateRequest struct {
 }
 
 func (o V3NodeCreateRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "V3NodeCreateRequest struct{}"
+	}
+
 	return strings.Join([]string{"V3NodeCreateRequest", string(data)}, " ")
 }

@@ -23,6 +23,10 @@ type CreateMessageTemplateRequestBody struct {
 }
 
 func (o CreateMessageTemplateRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateMessageTemplateRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateMessageTemplateRequestBody", string(data)}, " ")
 }

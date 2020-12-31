@@ -22,7 +22,11 @@ type CreateOAuthRequest struct {
 }
 
 func (o CreateOAuthRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateOAuthRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateOAuthRequest", string(data)}, " ")
 }
 

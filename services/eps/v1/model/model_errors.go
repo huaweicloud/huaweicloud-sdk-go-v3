@@ -26,6 +26,10 @@ type Errors struct {
 }
 
 func (o Errors) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Errors struct{}"
+	}
+
 	return strings.Join([]string{"Errors", string(data)}, " ")
 }

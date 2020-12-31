@@ -21,6 +21,10 @@ type KeystoneAssociateGroupWithDomainPermissionRequest struct {
 }
 
 func (o KeystoneAssociateGroupWithDomainPermissionRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneAssociateGroupWithDomainPermissionRequest struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneAssociateGroupWithDomainPermissionRequest", string(data)}, " ")
 }

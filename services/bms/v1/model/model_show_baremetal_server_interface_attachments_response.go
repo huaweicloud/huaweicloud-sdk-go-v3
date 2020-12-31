@@ -21,6 +21,10 @@ type ShowBaremetalServerInterfaceAttachmentsResponse struct {
 }
 
 func (o ShowBaremetalServerInterfaceAttachmentsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowBaremetalServerInterfaceAttachmentsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowBaremetalServerInterfaceAttachmentsResponse", string(data)}, " ")
 }

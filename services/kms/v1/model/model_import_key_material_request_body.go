@@ -27,6 +27,10 @@ type ImportKeyMaterialRequestBody struct {
 }
 
 func (o ImportKeyMaterialRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ImportKeyMaterialRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"ImportKeyMaterialRequestBody", string(data)}, " ")
 }

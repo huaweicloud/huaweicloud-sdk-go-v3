@@ -20,6 +20,10 @@ type DeleteLifecycleHookRequest struct {
 }
 
 func (o DeleteLifecycleHookRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteLifecycleHookRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteLifecycleHookRequest", string(data)}, " ")
 }

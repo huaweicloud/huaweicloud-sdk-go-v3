@@ -87,7 +87,11 @@ type ListFunctionResult struct {
 }
 
 func (o ListFunctionResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListFunctionResult struct{}"
+	}
+
 	return strings.Join([]string{"ListFunctionResult", string(data)}, " ")
 }
 

@@ -19,6 +19,10 @@ type BatchCreateServerTagsResponse struct {
 }
 
 func (o BatchCreateServerTagsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchCreateServerTagsResponse struct{}"
+	}
+
 	return strings.Join([]string{"BatchCreateServerTagsResponse", string(data)}, " ")
 }

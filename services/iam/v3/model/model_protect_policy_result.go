@@ -20,6 +20,10 @@ type ProtectPolicyResult struct {
 }
 
 func (o ProtectPolicyResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ProtectPolicyResult struct{}"
+	}
+
 	return strings.Join([]string{"ProtectPolicyResult", string(data)}, " ")
 }

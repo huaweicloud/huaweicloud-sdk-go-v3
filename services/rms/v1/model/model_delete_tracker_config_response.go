@@ -19,6 +19,10 @@ type DeleteTrackerConfigResponse struct {
 }
 
 func (o DeleteTrackerConfigResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteTrackerConfigResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteTrackerConfigResponse", string(data)}, " ")
 }

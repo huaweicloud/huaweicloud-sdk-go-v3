@@ -19,6 +19,10 @@ type CreateInstanceRequest struct {
 }
 
 func (o CreateInstanceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateInstanceRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateInstanceRequest", string(data)}, " ")
 }

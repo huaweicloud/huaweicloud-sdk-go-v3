@@ -20,6 +20,10 @@ type AgencyTokenScope struct {
 }
 
 func (o AgencyTokenScope) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AgencyTokenScope struct{}"
+	}
+
 	return strings.Join([]string{"AgencyTokenScope", string(data)}, " ")
 }

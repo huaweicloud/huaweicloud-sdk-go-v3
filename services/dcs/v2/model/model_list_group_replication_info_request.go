@@ -19,6 +19,10 @@ type ListGroupReplicationInfoRequest struct {
 }
 
 func (o ListGroupReplicationInfoRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListGroupReplicationInfoRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListGroupReplicationInfoRequest", string(data)}, " ")
 }

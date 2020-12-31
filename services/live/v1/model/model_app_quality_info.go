@@ -21,6 +21,10 @@ type AppQualityInfo struct {
 }
 
 func (o AppQualityInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AppQualityInfo struct{}"
+	}
+
 	return strings.Join([]string{"AppQualityInfo", string(data)}, " ")
 }

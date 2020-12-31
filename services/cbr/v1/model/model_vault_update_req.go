@@ -19,6 +19,10 @@ type VaultUpdateReq struct {
 }
 
 func (o VaultUpdateReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VaultUpdateReq struct{}"
+	}
+
 	return strings.Join([]string{"VaultUpdateReq", string(data)}, " ")
 }

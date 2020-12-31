@@ -26,6 +26,10 @@ type ProfileResp struct {
 }
 
 func (o ProfileResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ProfileResp struct{}"
+	}
+
 	return strings.Join([]string{"ProfileResp", string(data)}, " ")
 }

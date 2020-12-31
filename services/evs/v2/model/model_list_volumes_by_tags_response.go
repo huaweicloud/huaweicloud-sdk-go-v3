@@ -23,6 +23,10 @@ type ListVolumesByTagsResponse struct {
 }
 
 func (o ListVolumesByTagsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListVolumesByTagsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListVolumesByTagsResponse", string(data)}, " ")
 }

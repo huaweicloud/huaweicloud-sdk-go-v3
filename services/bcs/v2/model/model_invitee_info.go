@@ -28,6 +28,10 @@ type InviteeInfo struct {
 }
 
 func (o InviteeInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InviteeInfo struct{}"
+	}
+
 	return strings.Join([]string{"InviteeInfo", string(data)}, " ")
 }

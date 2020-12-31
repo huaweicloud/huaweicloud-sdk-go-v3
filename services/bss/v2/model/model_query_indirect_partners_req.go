@@ -29,6 +29,10 @@ type QueryIndirectPartnersReq struct {
 }
 
 func (o QueryIndirectPartnersReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QueryIndirectPartnersReq struct{}"
+	}
+
 	return strings.Join([]string{"QueryIndirectPartnersReq", string(data)}, " ")
 }

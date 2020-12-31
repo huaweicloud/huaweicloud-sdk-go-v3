@@ -19,6 +19,10 @@ type DeleteMessageTemplateRequest struct {
 }
 
 func (o DeleteMessageTemplateRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteMessageTemplateRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteMessageTemplateRequest", string(data)}, " ")
 }

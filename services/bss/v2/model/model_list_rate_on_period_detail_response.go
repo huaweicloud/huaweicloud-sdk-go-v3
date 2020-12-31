@@ -24,6 +24,10 @@ type ListRateOnPeriodDetailResponse struct {
 }
 
 func (o ListRateOnPeriodDetailResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListRateOnPeriodDetailResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListRateOnPeriodDetailResponse", string(data)}, " ")
 }

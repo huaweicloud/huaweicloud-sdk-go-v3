@@ -21,6 +21,10 @@ type CreateConnectorRequest struct {
 }
 
 func (o CreateConnectorRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateConnectorRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateConnectorRequest", string(data)}, " ")
 }

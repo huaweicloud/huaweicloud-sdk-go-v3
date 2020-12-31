@@ -40,7 +40,11 @@ type ScalingGroupInstance struct {
 }
 
 func (o ScalingGroupInstance) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ScalingGroupInstance struct{}"
+	}
+
 	return strings.Join([]string{"ScalingGroupInstance", string(data)}, " ")
 }
 

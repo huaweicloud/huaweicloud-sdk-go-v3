@@ -20,6 +20,10 @@ type RemovePublicipsFromSharedBandwidthRequest struct {
 }
 
 func (o RemovePublicipsFromSharedBandwidthRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RemovePublicipsFromSharedBandwidthRequest struct{}"
+	}
+
 	return strings.Join([]string{"RemovePublicipsFromSharedBandwidthRequest", string(data)}, " ")
 }

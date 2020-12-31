@@ -22,6 +22,10 @@ type ShowBandwidthRequest struct {
 }
 
 func (o ShowBandwidthRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowBandwidthRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowBandwidthRequest", string(data)}, " ")
 }

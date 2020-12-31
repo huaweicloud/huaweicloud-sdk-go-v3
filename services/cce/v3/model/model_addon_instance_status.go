@@ -28,7 +28,11 @@ type AddonInstanceStatus struct {
 }
 
 func (o AddonInstanceStatus) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AddonInstanceStatus struct{}"
+	}
+
 	return strings.Join([]string{"AddonInstanceStatus", string(data)}, " ")
 }
 

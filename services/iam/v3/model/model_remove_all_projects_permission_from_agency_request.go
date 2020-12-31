@@ -21,6 +21,10 @@ type RemoveAllProjectsPermissionFromAgencyRequest struct {
 }
 
 func (o RemoveAllProjectsPermissionFromAgencyRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RemoveAllProjectsPermissionFromAgencyRequest struct{}"
+	}
+
 	return strings.Join([]string{"RemoveAllProjectsPermissionFromAgencyRequest", string(data)}, " ")
 }

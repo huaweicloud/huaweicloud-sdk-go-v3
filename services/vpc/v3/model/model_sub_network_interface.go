@@ -47,6 +47,10 @@ type SubNetworkInterface struct {
 }
 
 func (o SubNetworkInterface) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SubNetworkInterface struct{}"
+	}
+
 	return strings.Join([]string{"SubNetworkInterface", string(data)}, " ")
 }

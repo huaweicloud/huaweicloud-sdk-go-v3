@@ -26,6 +26,10 @@ type ComponentCreate struct {
 }
 
 func (o ComponentCreate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ComponentCreate struct{}"
+	}
+
 	return strings.Join([]string{"ComponentCreate", string(data)}, " ")
 }

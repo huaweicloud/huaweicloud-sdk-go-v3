@@ -26,6 +26,10 @@ type InstanceSnapshotView struct {
 }
 
 func (o InstanceSnapshotView) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceSnapshotView struct{}"
+	}
+
 	return strings.Join([]string{"InstanceSnapshotView", string(data)}, " ")
 }

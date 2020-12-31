@@ -19,6 +19,10 @@ type UpdateDomainConsoleAclPolicyRequestBody struct {
 }
 
 func (o UpdateDomainConsoleAclPolicyRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateDomainConsoleAclPolicyRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateDomainConsoleAclPolicyRequestBody", string(data)}, " ")
 }

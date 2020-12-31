@@ -27,7 +27,11 @@ type CompleteLifecycleActionRequestBody struct {
 }
 
 func (o CompleteLifecycleActionRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CompleteLifecycleActionRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CompleteLifecycleActionRequestBody", string(data)}, " ")
 }
 

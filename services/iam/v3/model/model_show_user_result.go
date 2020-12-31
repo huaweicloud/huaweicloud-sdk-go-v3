@@ -51,6 +51,10 @@ type ShowUserResult struct {
 }
 
 func (o ShowUserResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowUserResult struct{}"
+	}
+
 	return strings.Join([]string{"ShowUserResult", string(data)}, " ")
 }

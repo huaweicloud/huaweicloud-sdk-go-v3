@@ -19,6 +19,10 @@ type SendSmsVerificationCodeRequest struct {
 }
 
 func (o SendSmsVerificationCodeRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SendSmsVerificationCodeRequest struct{}"
+	}
+
 	return strings.Join([]string{"SendSmsVerificationCodeRequest", string(data)}, " ")
 }

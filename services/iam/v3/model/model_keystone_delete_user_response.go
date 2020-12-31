@@ -19,6 +19,10 @@ type KeystoneDeleteUserResponse struct {
 }
 
 func (o KeystoneDeleteUserResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneDeleteUserResponse struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneDeleteUserResponse", string(data)}, " ")
 }

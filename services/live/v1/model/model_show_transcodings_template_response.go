@@ -25,6 +25,10 @@ type ShowTranscodingsTemplateResponse struct {
 }
 
 func (o ShowTranscodingsTemplateResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowTranscodingsTemplateResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowTranscodingsTemplateResponse", string(data)}, " ")
 }

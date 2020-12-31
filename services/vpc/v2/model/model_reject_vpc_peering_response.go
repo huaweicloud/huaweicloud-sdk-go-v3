@@ -35,7 +35,11 @@ type RejectVpcPeeringResponse struct {
 }
 
 func (o RejectVpcPeeringResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RejectVpcPeeringResponse struct{}"
+	}
+
 	return strings.Join([]string{"RejectVpcPeeringResponse", string(data)}, " ")
 }
 

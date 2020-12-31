@@ -19,6 +19,10 @@ type KeystoneCreateUserTokenByPasswordAndMfaRequestBody struct {
 }
 
 func (o KeystoneCreateUserTokenByPasswordAndMfaRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneCreateUserTokenByPasswordAndMfaRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneCreateUserTokenByPasswordAndMfaRequestBody", string(data)}, " ")
 }

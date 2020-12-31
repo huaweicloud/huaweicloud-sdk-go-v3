@@ -18,6 +18,10 @@ type ShowTrackerConfigRequest struct {
 }
 
 func (o ShowTrackerConfigRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowTrackerConfigRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowTrackerConfigRequest", string(data)}, " ")
 }

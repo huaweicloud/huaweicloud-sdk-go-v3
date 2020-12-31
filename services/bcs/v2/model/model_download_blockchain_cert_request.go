@@ -22,7 +22,11 @@ type DownloadBlockchainCertRequest struct {
 }
 
 func (o DownloadBlockchainCertRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DownloadBlockchainCertRequest struct{}"
+	}
+
 	return strings.Join([]string{"DownloadBlockchainCertRequest", string(data)}, " ")
 }
 

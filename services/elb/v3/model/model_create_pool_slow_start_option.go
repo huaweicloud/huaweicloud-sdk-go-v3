@@ -22,6 +22,10 @@ type CreatePoolSlowStartOption struct {
 }
 
 func (o CreatePoolSlowStartOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePoolSlowStartOption struct{}"
+	}
+
 	return strings.Join([]string{"CreatePoolSlowStartOption", string(data)}, " ")
 }

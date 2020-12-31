@@ -22,7 +22,11 @@ type UpdateDataIpRequest struct {
 }
 
 func (o UpdateDataIpRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateDataIpRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateDataIpRequest", string(data)}, " ")
 }
 

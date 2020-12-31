@@ -19,6 +19,10 @@ type CreateMbTasksReportRequest struct {
 }
 
 func (o CreateMbTasksReportRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateMbTasksReportRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateMbTasksReportRequest", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type Ipv6Bandwidth struct {
 }
 
 func (o Ipv6Bandwidth) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Ipv6Bandwidth struct{}"
+	}
+
 	return strings.Join([]string{"Ipv6Bandwidth", string(data)}, " ")
 }

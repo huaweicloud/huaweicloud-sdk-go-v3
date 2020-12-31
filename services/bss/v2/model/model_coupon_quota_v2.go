@@ -41,6 +41,10 @@ type CouponQuotaV2 struct {
 }
 
 func (o CouponQuotaV2) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CouponQuotaV2 struct{}"
+	}
+
 	return strings.Join([]string{"CouponQuotaV2", string(data)}, " ")
 }

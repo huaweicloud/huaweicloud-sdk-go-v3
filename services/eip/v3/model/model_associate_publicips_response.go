@@ -22,6 +22,10 @@ type AssociatePublicipsResponse struct {
 }
 
 func (o AssociatePublicipsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AssociatePublicipsResponse struct{}"
+	}
+
 	return strings.Join([]string{"AssociatePublicipsResponse", string(data)}, " ")
 }

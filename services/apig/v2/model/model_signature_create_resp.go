@@ -36,6 +36,10 @@ type SignatureCreateResp struct {
 }
 
 func (o SignatureCreateResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SignatureCreateResp struct{}"
+	}
+
 	return strings.Join([]string{"SignatureCreateResp", string(data)}, " ")
 }

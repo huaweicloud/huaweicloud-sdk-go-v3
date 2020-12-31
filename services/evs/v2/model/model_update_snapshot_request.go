@@ -20,6 +20,10 @@ type UpdateSnapshotRequest struct {
 }
 
 func (o UpdateSnapshotRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateSnapshotRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateSnapshotRequest", string(data)}, " ")
 }

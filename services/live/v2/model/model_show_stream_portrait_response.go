@@ -22,6 +22,10 @@ type ShowStreamPortraitResponse struct {
 }
 
 func (o ShowStreamPortraitResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowStreamPortraitResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowStreamPortraitResponse", string(data)}, " ")
 }

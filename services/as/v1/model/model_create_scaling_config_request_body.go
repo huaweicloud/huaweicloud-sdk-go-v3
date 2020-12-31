@@ -21,6 +21,10 @@ type CreateScalingConfigRequestBody struct {
 }
 
 func (o CreateScalingConfigRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateScalingConfigRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateScalingConfigRequestBody", string(data)}, " ")
 }

@@ -25,6 +25,10 @@ type UnsubscribeResourcesReq struct {
 }
 
 func (o UnsubscribeResourcesReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UnsubscribeResourcesReq struct{}"
+	}
+
 	return strings.Join([]string{"UnsubscribeResourcesReq", string(data)}, " ")
 }

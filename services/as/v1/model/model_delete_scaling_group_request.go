@@ -21,7 +21,11 @@ type DeleteScalingGroupRequest struct {
 }
 
 func (o DeleteScalingGroupRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteScalingGroupRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteScalingGroupRequest", string(data)}, " ")
 }
 

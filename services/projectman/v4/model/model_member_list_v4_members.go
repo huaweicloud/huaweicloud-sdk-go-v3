@@ -37,6 +37,10 @@ type MemberListV4Members struct {
 }
 
 func (o MemberListV4Members) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MemberListV4Members struct{}"
+	}
+
 	return strings.Join([]string{"MemberListV4Members", string(data)}, " ")
 }

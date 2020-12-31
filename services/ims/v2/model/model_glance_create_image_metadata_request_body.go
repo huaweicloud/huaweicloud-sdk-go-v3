@@ -37,7 +37,11 @@ type GlanceCreateImageMetadataRequestBody struct {
 }
 
 func (o GlanceCreateImageMetadataRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GlanceCreateImageMetadataRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"GlanceCreateImageMetadataRequestBody", string(data)}, " ")
 }
 

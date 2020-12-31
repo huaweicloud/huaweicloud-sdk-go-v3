@@ -19,6 +19,10 @@ type UpdateIndirectPartnerAccountRequest struct {
 }
 
 func (o UpdateIndirectPartnerAccountRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateIndirectPartnerAccountRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateIndirectPartnerAccountRequest", string(data)}, " ")
 }

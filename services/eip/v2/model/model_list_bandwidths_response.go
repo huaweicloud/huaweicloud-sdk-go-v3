@@ -21,6 +21,10 @@ type ListBandwidthsResponse struct {
 }
 
 func (o ListBandwidthsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListBandwidthsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListBandwidthsResponse", string(data)}, " ")
 }

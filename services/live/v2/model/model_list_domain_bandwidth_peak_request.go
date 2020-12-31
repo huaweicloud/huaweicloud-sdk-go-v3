@@ -25,6 +25,10 @@ type ListDomainBandwidthPeakRequest struct {
 }
 
 func (o ListDomainBandwidthPeakRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListDomainBandwidthPeakRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListDomainBandwidthPeakRequest", string(data)}, " ")
 }

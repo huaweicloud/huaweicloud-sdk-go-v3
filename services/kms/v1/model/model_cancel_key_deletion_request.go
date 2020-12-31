@@ -20,6 +20,10 @@ type CancelKeyDeletionRequest struct {
 }
 
 func (o CancelKeyDeletionRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CancelKeyDeletionRequest struct{}"
+	}
+
 	return strings.Join([]string{"CancelKeyDeletionRequest", string(data)}, " ")
 }

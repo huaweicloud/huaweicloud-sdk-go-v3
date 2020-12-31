@@ -22,6 +22,10 @@ type ListQueryHttpCodeResponse struct {
 }
 
 func (o ListQueryHttpCodeResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListQueryHttpCodeResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListQueryHttpCodeResponse", string(data)}, " ")
 }

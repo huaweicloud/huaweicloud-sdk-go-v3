@@ -39,6 +39,10 @@ type ShowCurUserInfoResponse struct {
 }
 
 func (o ShowCurUserInfoResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowCurUserInfoResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowCurUserInfoResponse", string(data)}, " ")
 }

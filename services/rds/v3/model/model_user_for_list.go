@@ -20,6 +20,10 @@ type UserForList struct {
 }
 
 func (o UserForList) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UserForList struct{}"
+	}
+
 	return strings.Join([]string{"UserForList", string(data)}, " ")
 }

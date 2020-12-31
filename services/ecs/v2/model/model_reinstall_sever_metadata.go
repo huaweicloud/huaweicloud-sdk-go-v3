@@ -20,6 +20,10 @@ type ReinstallSeverMetadata struct {
 }
 
 func (o ReinstallSeverMetadata) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ReinstallSeverMetadata struct{}"
+	}
+
 	return strings.Join([]string{"ReinstallSeverMetadata", string(data)}, " ")
 }

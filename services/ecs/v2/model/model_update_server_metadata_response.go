@@ -21,6 +21,10 @@ type UpdateServerMetadataResponse struct {
 }
 
 func (o UpdateServerMetadataResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateServerMetadataResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateServerMetadataResponse", string(data)}, " ")
 }

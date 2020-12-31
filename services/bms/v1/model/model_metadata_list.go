@@ -47,7 +47,11 @@ type MetadataList struct {
 }
 
 func (o MetadataList) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MetadataList struct{}"
+	}
+
 	return strings.Join([]string{"MetadataList", string(data)}, " ")
 }
 

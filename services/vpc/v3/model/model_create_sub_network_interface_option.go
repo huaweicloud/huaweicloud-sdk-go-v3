@@ -36,6 +36,10 @@ type CreateSubNetworkInterfaceOption struct {
 }
 
 func (o CreateSubNetworkInterfaceOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateSubNetworkInterfaceOption struct{}"
+	}
+
 	return strings.Join([]string{"CreateSubNetworkInterfaceOption", string(data)}, " ")
 }

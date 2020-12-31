@@ -23,6 +23,10 @@ type ResizeVolumeResponse struct {
 }
 
 func (o ResizeVolumeResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResizeVolumeResponse struct{}"
+	}
+
 	return strings.Join([]string{"ResizeVolumeResponse", string(data)}, " ")
 }

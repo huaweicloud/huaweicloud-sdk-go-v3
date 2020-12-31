@@ -26,6 +26,10 @@ type ProxyNodeMonitoredObject struct {
 }
 
 func (o ProxyNodeMonitoredObject) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ProxyNodeMonitoredObject struct{}"
+	}
+
 	return strings.Join([]string{"ProxyNodeMonitoredObject", string(data)}, " ")
 }

@@ -23,6 +23,10 @@ type NovaAvailabilityZone struct {
 }
 
 func (o NovaAvailabilityZone) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaAvailabilityZone struct{}"
+	}
+
 	return strings.Join([]string{"NovaAvailabilityZone", string(data)}, " ")
 }

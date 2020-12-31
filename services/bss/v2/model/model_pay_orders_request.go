@@ -19,6 +19,10 @@ type PayOrdersRequest struct {
 }
 
 func (o PayOrdersRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PayOrdersRequest struct{}"
+	}
+
 	return strings.Join([]string{"PayOrdersRequest", string(data)}, " ")
 }

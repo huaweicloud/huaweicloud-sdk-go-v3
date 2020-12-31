@@ -19,6 +19,10 @@ type AddApplyJoinProjectForAgcResponse struct {
 }
 
 func (o AddApplyJoinProjectForAgcResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AddApplyJoinProjectForAgcResponse struct{}"
+	}
+
 	return strings.Join([]string{"AddApplyJoinProjectForAgcResponse", string(data)}, " ")
 }

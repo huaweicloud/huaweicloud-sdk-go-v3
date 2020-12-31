@@ -20,6 +20,10 @@ type ListHookInstancesRequest struct {
 }
 
 func (o ListHookInstancesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListHookInstancesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListHookInstancesRequest", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type UpdateCustomerAccountAmountResponse struct {
 }
 
 func (o UpdateCustomerAccountAmountResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateCustomerAccountAmountResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateCustomerAccountAmountResponse", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type UpdateVolumeRequestBody struct {
 }
 
 func (o UpdateVolumeRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateVolumeRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateVolumeRequestBody", string(data)}, " ")
 }

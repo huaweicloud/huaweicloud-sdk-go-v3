@@ -20,6 +20,10 @@ type RestartInstanceRequest struct {
 }
 
 func (o RestartInstanceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RestartInstanceRequest struct{}"
+	}
+
 	return strings.Join([]string{"RestartInstanceRequest", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type BatchDelelteIssuesRequestV4 struct {
 }
 
 func (o BatchDelelteIssuesRequestV4) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchDelelteIssuesRequestV4 struct{}"
+	}
+
 	return strings.Join([]string{"BatchDelelteIssuesRequestV4", string(data)}, " ")
 }

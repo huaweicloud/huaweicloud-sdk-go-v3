@@ -26,6 +26,10 @@ type TemplateView struct {
 }
 
 func (o TemplateView) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TemplateView struct{}"
+	}
+
 	return strings.Join([]string{"TemplateView", string(data)}, " ")
 }

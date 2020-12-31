@@ -20,6 +20,10 @@ type ChangeEnvironmentRequest struct {
 }
 
 func (o ChangeEnvironmentRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeEnvironmentRequest struct{}"
+	}
+
 	return strings.Join([]string{"ChangeEnvironmentRequest", string(data)}, " ")
 }

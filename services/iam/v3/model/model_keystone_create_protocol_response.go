@@ -20,6 +20,10 @@ type KeystoneCreateProtocolResponse struct {
 }
 
 func (o KeystoneCreateProtocolResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneCreateProtocolResponse struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneCreateProtocolResponse", string(data)}, " ")
 }

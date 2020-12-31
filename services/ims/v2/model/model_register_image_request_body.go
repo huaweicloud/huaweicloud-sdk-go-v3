@@ -20,6 +20,10 @@ type RegisterImageRequestBody struct {
 }
 
 func (o RegisterImageRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RegisterImageRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"RegisterImageRequestBody", string(data)}, " ")
 }

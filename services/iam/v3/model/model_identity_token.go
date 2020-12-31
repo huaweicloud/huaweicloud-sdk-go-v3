@@ -22,6 +22,10 @@ type IdentityToken struct {
 }
 
 func (o IdentityToken) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IdentityToken struct{}"
+	}
+
 	return strings.Join([]string{"IdentityToken", string(data)}, " ")
 }

@@ -32,6 +32,10 @@ type CreateRuleOption struct {
 }
 
 func (o CreateRuleOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateRuleOption struct{}"
+	}
+
 	return strings.Join([]string{"CreateRuleOption", string(data)}, " ")
 }

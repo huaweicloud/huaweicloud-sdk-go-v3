@@ -19,6 +19,10 @@ type DeleteApplicationConfigurationResponse struct {
 }
 
 func (o DeleteApplicationConfigurationResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteApplicationConfigurationResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteApplicationConfigurationResponse", string(data)}, " ")
 }

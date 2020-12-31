@@ -20,6 +20,10 @@ type RestoreInstanceRequest struct {
 }
 
 func (o RestoreInstanceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RestoreInstanceRequest struct{}"
+	}
+
 	return strings.Join([]string{"RestoreInstanceRequest", string(data)}, " ")
 }

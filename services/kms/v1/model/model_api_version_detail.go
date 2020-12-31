@@ -29,6 +29,10 @@ type ApiVersionDetail struct {
 }
 
 func (o ApiVersionDetail) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApiVersionDetail struct{}"
+	}
+
 	return strings.Join([]string{"ApiVersionDetail", string(data)}, " ")
 }

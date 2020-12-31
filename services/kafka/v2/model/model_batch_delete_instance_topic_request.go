@@ -21,6 +21,10 @@ type BatchDeleteInstanceTopicRequest struct {
 }
 
 func (o BatchDeleteInstanceTopicRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchDeleteInstanceTopicRequest struct{}"
+	}
+
 	return strings.Join([]string{"BatchDeleteInstanceTopicRequest", string(data)}, " ")
 }

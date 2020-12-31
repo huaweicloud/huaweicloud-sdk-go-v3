@@ -23,7 +23,11 @@ type NovaLink struct {
 }
 
 func (o NovaLink) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaLink struct{}"
+	}
+
 	return strings.Join([]string{"NovaLink", string(data)}, " ")
 }
 

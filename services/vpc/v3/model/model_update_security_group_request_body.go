@@ -21,6 +21,10 @@ type UpdateSecurityGroupRequestBody struct {
 }
 
 func (o UpdateSecurityGroupRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateSecurityGroupRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateSecurityGroupRequestBody", string(data)}, " ")
 }

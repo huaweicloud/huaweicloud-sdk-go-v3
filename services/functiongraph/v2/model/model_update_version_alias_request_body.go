@@ -30,6 +30,10 @@ type UpdateVersionAliasRequestBody struct {
 }
 
 func (o UpdateVersionAliasRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateVersionAliasRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateVersionAliasRequestBody", string(data)}, " ")
 }

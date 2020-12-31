@@ -22,6 +22,10 @@ type ShowL7RuleResponse struct {
 }
 
 func (o ShowL7RuleResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowL7RuleResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowL7RuleResponse", string(data)}, " ")
 }

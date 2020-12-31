@@ -18,6 +18,10 @@ type GlanceListImageSchemasRequest struct {
 }
 
 func (o GlanceListImageSchemasRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GlanceListImageSchemasRequest struct{}"
+	}
+
 	return strings.Join([]string{"GlanceListImageSchemasRequest", string(data)}, " ")
 }

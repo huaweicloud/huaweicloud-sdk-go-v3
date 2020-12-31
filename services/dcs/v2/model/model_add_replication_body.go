@@ -20,6 +20,10 @@ type AddReplicationBody struct {
 }
 
 func (o AddReplicationBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AddReplicationBody struct{}"
+	}
+
 	return strings.Join([]string{"AddReplicationBody", string(data)}, " ")
 }

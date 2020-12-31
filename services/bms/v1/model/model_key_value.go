@@ -20,6 +20,10 @@ type KeyValue struct {
 }
 
 func (o KeyValue) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeyValue struct{}"
+	}
+
 	return strings.Join([]string{"KeyValue", string(data)}, " ")
 }

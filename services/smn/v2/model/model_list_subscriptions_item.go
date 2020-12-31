@@ -31,6 +31,10 @@ type ListSubscriptionsItem struct {
 }
 
 func (o ListSubscriptionsItem) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListSubscriptionsItem struct{}"
+	}
+
 	return strings.Join([]string{"ListSubscriptionsItem", string(data)}, " ")
 }

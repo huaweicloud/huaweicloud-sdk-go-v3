@@ -22,6 +22,10 @@ type MfaDeviceResult struct {
 }
 
 func (o MfaDeviceResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MfaDeviceResult struct{}"
+	}
+
 	return strings.Join([]string{"MfaDeviceResult", string(data)}, " ")
 }

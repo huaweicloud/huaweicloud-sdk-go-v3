@@ -20,6 +20,10 @@ type ShowServerLimitsResponse struct {
 }
 
 func (o ShowServerLimitsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowServerLimitsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowServerLimitsResponse", string(data)}, " ")
 }

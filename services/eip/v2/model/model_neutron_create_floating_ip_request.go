@@ -19,6 +19,10 @@ type NeutronCreateFloatingIpRequest struct {
 }
 
 func (o NeutronCreateFloatingIpRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NeutronCreateFloatingIpRequest struct{}"
+	}
+
 	return strings.Join([]string{"NeutronCreateFloatingIpRequest", string(data)}, " ")
 }

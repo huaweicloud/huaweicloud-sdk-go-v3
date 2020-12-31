@@ -19,6 +19,10 @@ type CreateVpcRouteRequest struct {
 }
 
 func (o CreateVpcRouteRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateVpcRouteRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateVpcRouteRequest", string(data)}, " ")
 }

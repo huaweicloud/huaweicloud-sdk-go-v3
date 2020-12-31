@@ -49,7 +49,11 @@ type UpdateRequestThrottlingPolicyV2Response struct {
 }
 
 func (o UpdateRequestThrottlingPolicyV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateRequestThrottlingPolicyV2Response struct{}"
+	}
+
 	return strings.Join([]string{"UpdateRequestThrottlingPolicyV2Response", string(data)}, " ")
 }
 

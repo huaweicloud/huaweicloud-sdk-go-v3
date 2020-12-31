@@ -19,6 +19,10 @@ type CreateWholeImageRequest struct {
 }
 
 func (o CreateWholeImageRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateWholeImageRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateWholeImageRequest", string(data)}, " ")
 }

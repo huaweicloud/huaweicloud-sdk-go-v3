@@ -24,6 +24,10 @@ type VaultPolicyResp struct {
 }
 
 func (o VaultPolicyResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VaultPolicyResp struct{}"
+	}
+
 	return strings.Join([]string{"VaultPolicyResp", string(data)}, " ")
 }

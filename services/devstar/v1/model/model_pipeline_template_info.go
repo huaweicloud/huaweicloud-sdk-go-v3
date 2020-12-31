@@ -23,6 +23,10 @@ type PipelineTemplateInfo struct {
 }
 
 func (o PipelineTemplateInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PipelineTemplateInfo struct{}"
+	}
+
 	return strings.Join([]string{"PipelineTemplateInfo", string(data)}, " ")
 }

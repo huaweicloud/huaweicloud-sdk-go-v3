@@ -21,6 +21,10 @@ type StartNewPipelineRequest struct {
 }
 
 func (o StartNewPipelineRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StartNewPipelineRequest struct{}"
+	}
+
 	return strings.Join([]string{"StartNewPipelineRequest", string(data)}, " ")
 }

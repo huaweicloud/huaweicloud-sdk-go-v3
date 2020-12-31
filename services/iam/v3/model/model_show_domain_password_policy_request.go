@@ -19,6 +19,10 @@ type ShowDomainPasswordPolicyRequest struct {
 }
 
 func (o ShowDomainPasswordPolicyRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowDomainPasswordPolicyRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowDomainPasswordPolicyRequest", string(data)}, " ")
 }

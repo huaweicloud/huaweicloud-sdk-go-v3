@@ -22,6 +22,10 @@ type MbTaskParameter struct {
 }
 
 func (o MbTaskParameter) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MbTaskParameter struct{}"
+	}
+
 	return strings.Join([]string{"MbTaskParameter", string(data)}, " ")
 }

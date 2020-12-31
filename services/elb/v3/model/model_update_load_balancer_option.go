@@ -41,6 +41,10 @@ type UpdateLoadBalancerOption struct {
 }
 
 func (o UpdateLoadBalancerOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateLoadBalancerOption struct{}"
+	}
+
 	return strings.Join([]string{"UpdateLoadBalancerOption", string(data)}, " ")
 }

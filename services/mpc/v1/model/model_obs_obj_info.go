@@ -25,6 +25,10 @@ type ObsObjInfo struct {
 }
 
 func (o ObsObjInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ObsObjInfo struct{}"
+	}
+
 	return strings.Join([]string{"ObsObjInfo", string(data)}, " ")
 }

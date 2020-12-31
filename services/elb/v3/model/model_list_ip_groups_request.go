@@ -25,6 +25,10 @@ type ListIpGroupsRequest struct {
 }
 
 func (o ListIpGroupsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListIpGroupsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListIpGroupsRequest", string(data)}, " ")
 }

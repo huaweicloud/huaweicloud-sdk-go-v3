@@ -23,7 +23,11 @@ type ReqDeletePredefineTag struct {
 }
 
 func (o ReqDeletePredefineTag) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ReqDeletePredefineTag struct{}"
+	}
+
 	return strings.Join([]string{"ReqDeletePredefineTag", string(data)}, " ")
 }
 

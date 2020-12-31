@@ -47,7 +47,11 @@ type BackendApi struct {
 }
 
 func (o BackendApi) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BackendApi struct{}"
+	}
+
 	return strings.Join([]string{"BackendApi", string(data)}, " ")
 }
 

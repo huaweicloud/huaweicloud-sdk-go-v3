@@ -19,6 +19,10 @@ type BatchUpdateMembersRequest struct {
 }
 
 func (o BatchUpdateMembersRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchUpdateMembersRequest struct{}"
+	}
+
 	return strings.Join([]string{"BatchUpdateMembersRequest", string(data)}, " ")
 }

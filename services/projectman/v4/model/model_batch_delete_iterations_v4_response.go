@@ -19,6 +19,10 @@ type BatchDeleteIterationsV4Response struct {
 }
 
 func (o BatchDeleteIterationsV4Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchDeleteIterationsV4Response struct{}"
+	}
+
 	return strings.Join([]string{"BatchDeleteIterationsV4Response", string(data)}, " ")
 }

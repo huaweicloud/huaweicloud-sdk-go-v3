@@ -20,6 +20,10 @@ type DisassociatePublicipsRequest struct {
 }
 
 func (o DisassociatePublicipsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DisassociatePublicipsRequest struct{}"
+	}
+
 	return strings.Join([]string{"DisassociatePublicipsRequest", string(data)}, " ")
 }

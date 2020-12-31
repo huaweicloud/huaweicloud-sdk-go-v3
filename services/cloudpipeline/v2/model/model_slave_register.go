@@ -32,6 +32,10 @@ type SlaveRegister struct {
 }
 
 func (o SlaveRegister) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SlaveRegister struct{}"
+	}
+
 	return strings.Join([]string{"SlaveRegister", string(data)}, " ")
 }

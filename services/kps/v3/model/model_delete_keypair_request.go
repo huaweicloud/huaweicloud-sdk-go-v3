@@ -19,6 +19,10 @@ type DeleteKeypairRequest struct {
 }
 
 func (o DeleteKeypairRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteKeypairRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteKeypairRequest", string(data)}, " ")
 }

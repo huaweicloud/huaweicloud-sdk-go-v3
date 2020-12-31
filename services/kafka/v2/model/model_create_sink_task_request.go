@@ -21,6 +21,10 @@ type CreateSinkTaskRequest struct {
 }
 
 func (o CreateSinkTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateSinkTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateSinkTaskRequest", string(data)}, " ")
 }

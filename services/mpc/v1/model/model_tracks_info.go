@@ -21,6 +21,10 @@ type TracksInfo struct {
 }
 
 func (o TracksInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TracksInfo struct{}"
+	}
+
 	return strings.Join([]string{"TracksInfo", string(data)}, " ")
 }

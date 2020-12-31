@@ -24,6 +24,10 @@ type CreateRequestBodyCceClusterInfo struct {
 }
 
 func (o CreateRequestBodyCceClusterInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateRequestBodyCceClusterInfo struct{}"
+	}
+
 	return strings.Join([]string{"CreateRequestBodyCceClusterInfo", string(data)}, " ")
 }

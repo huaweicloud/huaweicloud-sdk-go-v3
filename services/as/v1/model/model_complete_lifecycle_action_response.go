@@ -19,6 +19,10 @@ type CompleteLifecycleActionResponse struct {
 }
 
 func (o CompleteLifecycleActionResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CompleteLifecycleActionResponse struct{}"
+	}
+
 	return strings.Join([]string{"CompleteLifecycleActionResponse", string(data)}, " ")
 }

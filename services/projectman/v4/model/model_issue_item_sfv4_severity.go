@@ -22,6 +22,10 @@ type IssueItemSfv4Severity struct {
 }
 
 func (o IssueItemSfv4Severity) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IssueItemSfv4Severity struct{}"
+	}
+
 	return strings.Join([]string{"IssueItemSfv4Severity", string(data)}, " ")
 }

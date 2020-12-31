@@ -30,6 +30,10 @@ type ListFunctionStatisticsResponseBody struct {
 }
 
 func (o ListFunctionStatisticsResponseBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListFunctionStatisticsResponseBody struct{}"
+	}
+
 	return strings.Join([]string{"ListFunctionStatisticsResponseBody", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type UpdateWhitelistRequestBody struct {
 }
 
 func (o UpdateWhitelistRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateWhitelistRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateWhitelistRequestBody", string(data)}, " ")
 }

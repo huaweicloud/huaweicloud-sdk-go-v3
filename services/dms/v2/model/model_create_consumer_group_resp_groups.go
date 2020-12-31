@@ -21,6 +21,10 @@ type CreateConsumerGroupRespGroups struct {
 }
 
 func (o CreateConsumerGroupRespGroups) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateConsumerGroupRespGroups struct{}"
+	}
+
 	return strings.Join([]string{"CreateConsumerGroupRespGroups", string(data)}, " ")
 }

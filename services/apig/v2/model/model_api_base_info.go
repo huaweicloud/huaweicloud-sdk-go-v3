@@ -61,7 +61,11 @@ type ApiBaseInfo struct {
 }
 
 func (o ApiBaseInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApiBaseInfo struct{}"
+	}
+
 	return strings.Join([]string{"ApiBaseInfo", string(data)}, " ")
 }
 

@@ -21,6 +21,10 @@ type AdjustToIndirectPartnerReq struct {
 }
 
 func (o AdjustToIndirectPartnerReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AdjustToIndirectPartnerReq struct{}"
+	}
+
 	return strings.Join([]string{"AdjustToIndirectPartnerReq", string(data)}, " ")
 }

@@ -26,6 +26,10 @@ type UpdateVpcOption struct {
 }
 
 func (o UpdateVpcOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateVpcOption struct{}"
+	}
+
 	return strings.Join([]string{"UpdateVpcOption", string(data)}, " ")
 }

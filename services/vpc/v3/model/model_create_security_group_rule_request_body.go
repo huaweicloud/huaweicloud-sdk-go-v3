@@ -21,6 +21,10 @@ type CreateSecurityGroupRuleRequestBody struct {
 }
 
 func (o CreateSecurityGroupRuleRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateSecurityGroupRuleRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateSecurityGroupRuleRequestBody", string(data)}, " ")
 }

@@ -23,6 +23,10 @@ type ListBackgroundTaskResponse struct {
 }
 
 func (o ListBackgroundTaskResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListBackgroundTaskResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListBackgroundTaskResponse", string(data)}, " ")
 }

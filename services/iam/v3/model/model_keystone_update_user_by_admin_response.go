@@ -20,6 +20,10 @@ type KeystoneUpdateUserByAdminResponse struct {
 }
 
 func (o KeystoneUpdateUserByAdminResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneUpdateUserByAdminResponse struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneUpdateUserByAdminResponse", string(data)}, " ")
 }

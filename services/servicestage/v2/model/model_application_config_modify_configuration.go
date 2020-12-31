@@ -20,6 +20,10 @@ type ApplicationConfigModifyConfiguration struct {
 }
 
 func (o ApplicationConfigModifyConfiguration) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApplicationConfigModifyConfiguration struct{}"
+	}
+
 	return strings.Join([]string{"ApplicationConfigModifyConfiguration", string(data)}, " ")
 }

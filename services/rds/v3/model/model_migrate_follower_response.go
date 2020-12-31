@@ -21,6 +21,10 @@ type MigrateFollowerResponse struct {
 }
 
 func (o MigrateFollowerResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MigrateFollowerResponse struct{}"
+	}
+
 	return strings.Join([]string{"MigrateFollowerResponse", string(data)}, " ")
 }

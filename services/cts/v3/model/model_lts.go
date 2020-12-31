@@ -24,6 +24,10 @@ type Lts struct {
 }
 
 func (o Lts) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Lts struct{}"
+	}
+
 	return strings.Join([]string{"Lts", string(data)}, " ")
 }

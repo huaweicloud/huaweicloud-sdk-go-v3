@@ -25,6 +25,10 @@ type DeleteFileRequest struct {
 }
 
 func (o DeleteFileRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteFileRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteFileRequest", string(data)}, " ")
 }

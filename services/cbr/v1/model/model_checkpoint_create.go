@@ -28,7 +28,11 @@ type CheckpointCreate struct {
 }
 
 func (o CheckpointCreate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CheckpointCreate struct{}"
+	}
+
 	return strings.Join([]string{"CheckpointCreate", string(data)}, " ")
 }
 

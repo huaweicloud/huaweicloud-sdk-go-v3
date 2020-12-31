@@ -23,6 +23,10 @@ type OpExtendInfoRemoveResources struct {
 }
 
 func (o OpExtendInfoRemoveResources) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OpExtendInfoRemoveResources struct{}"
+	}
+
 	return strings.Join([]string{"OpExtendInfoRemoveResources", string(data)}, " ")
 }

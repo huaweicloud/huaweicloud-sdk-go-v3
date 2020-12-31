@@ -22,6 +22,10 @@ type ScopeDomainOption struct {
 }
 
 func (o ScopeDomainOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ScopeDomainOption struct{}"
+	}
+
 	return strings.Join([]string{"ScopeDomainOption", string(data)}, " ")
 }

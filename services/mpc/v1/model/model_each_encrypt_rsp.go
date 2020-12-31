@@ -33,6 +33,10 @@ type EachEncryptRsp struct {
 }
 
 func (o EachEncryptRsp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EachEncryptRsp struct{}"
+	}
+
 	return strings.Join([]string{"EachEncryptRsp", string(data)}, " ")
 }

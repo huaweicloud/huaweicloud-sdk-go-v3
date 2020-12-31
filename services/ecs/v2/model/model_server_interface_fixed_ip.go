@@ -21,6 +21,10 @@ type ServerInterfaceFixedIp struct {
 }
 
 func (o ServerInterfaceFixedIp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServerInterfaceFixedIp struct{}"
+	}
+
 	return strings.Join([]string{"ServerInterfaceFixedIp", string(data)}, " ")
 }

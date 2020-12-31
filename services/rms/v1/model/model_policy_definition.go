@@ -34,6 +34,10 @@ type PolicyDefinition struct {
 }
 
 func (o PolicyDefinition) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PolicyDefinition struct{}"
+	}
+
 	return strings.Join([]string{"PolicyDefinition", string(data)}, " ")
 }

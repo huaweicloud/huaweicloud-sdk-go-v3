@@ -33,7 +33,11 @@ type HotkeysBody struct {
 }
 
 func (o HotkeysBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HotkeysBody struct{}"
+	}
+
 	return strings.Join([]string{"HotkeysBody", string(data)}, " ")
 }
 

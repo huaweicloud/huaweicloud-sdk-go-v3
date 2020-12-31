@@ -24,7 +24,11 @@ type DeleteNodeRequest struct {
 }
 
 func (o DeleteNodeRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteNodeRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteNodeRequest", string(data)}, " ")
 }
 

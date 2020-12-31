@@ -22,6 +22,10 @@ type ProtocolLinks struct {
 }
 
 func (o ProtocolLinks) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ProtocolLinks struct{}"
+	}
+
 	return strings.Join([]string{"ProtocolLinks", string(data)}, " ")
 }

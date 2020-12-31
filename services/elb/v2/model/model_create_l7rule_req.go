@@ -33,7 +33,11 @@ type CreateL7ruleReq struct {
 }
 
 func (o CreateL7ruleReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateL7ruleReq struct{}"
+	}
+
 	return strings.Join([]string{"CreateL7ruleReq", string(data)}, " ")
 }
 

@@ -21,6 +21,10 @@ type ChangeInstanceResponse struct {
 }
 
 func (o ChangeInstanceResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeInstanceResponse struct{}"
+	}
+
 	return strings.Join([]string{"ChangeInstanceResponse", string(data)}, " ")
 }

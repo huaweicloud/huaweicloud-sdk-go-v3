@@ -30,6 +30,10 @@ type V3DataVolume struct {
 }
 
 func (o V3DataVolume) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "V3DataVolume struct{}"
+	}
+
 	return strings.Join([]string{"V3DataVolume", string(data)}, " ")
 }

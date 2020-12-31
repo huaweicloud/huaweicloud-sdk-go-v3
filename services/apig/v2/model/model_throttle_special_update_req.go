@@ -19,6 +19,10 @@ type ThrottleSpecialUpdateReq struct {
 }
 
 func (o ThrottleSpecialUpdateReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ThrottleSpecialUpdateReq struct{}"
+	}
+
 	return strings.Join([]string{"ThrottleSpecialUpdateReq", string(data)}, " ")
 }

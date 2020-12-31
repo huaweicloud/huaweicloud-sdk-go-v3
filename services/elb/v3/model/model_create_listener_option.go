@@ -59,7 +59,11 @@ type CreateListenerOption struct {
 }
 
 func (o CreateListenerOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateListenerOption struct{}"
+	}
+
 	return strings.Join([]string{"CreateListenerOption", string(data)}, " ")
 }
 

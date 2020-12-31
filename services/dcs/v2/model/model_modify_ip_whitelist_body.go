@@ -22,6 +22,10 @@ type ModifyIpWhitelistBody struct {
 }
 
 func (o ModifyIpWhitelistBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ModifyIpWhitelistBody struct{}"
+	}
+
 	return strings.Join([]string{"ModifyIpWhitelistBody", string(data)}, " ")
 }

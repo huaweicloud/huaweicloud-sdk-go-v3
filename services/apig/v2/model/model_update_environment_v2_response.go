@@ -28,6 +28,10 @@ type UpdateEnvironmentV2Response struct {
 }
 
 func (o UpdateEnvironmentV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateEnvironmentV2Response struct{}"
+	}
+
 	return strings.Join([]string{"UpdateEnvironmentV2Response", string(data)}, " ")
 }

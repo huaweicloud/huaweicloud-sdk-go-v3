@@ -21,6 +21,10 @@ type UpdateSinkTaskQuotaRequest struct {
 }
 
 func (o UpdateSinkTaskQuotaRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateSinkTaskQuotaRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateSinkTaskQuotaRequest", string(data)}, " ")
 }

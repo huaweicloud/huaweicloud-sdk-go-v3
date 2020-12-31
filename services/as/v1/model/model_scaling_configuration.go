@@ -28,6 +28,10 @@ type ScalingConfiguration struct {
 }
 
 func (o ScalingConfiguration) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ScalingConfiguration struct{}"
+	}
+
 	return strings.Join([]string{"ScalingConfiguration", string(data)}, " ")
 }

@@ -39,7 +39,11 @@ type L7ruleResp struct {
 }
 
 func (o L7ruleResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "L7ruleResp struct{}"
+	}
+
 	return strings.Join([]string{"L7ruleResp", string(data)}, " ")
 }
 

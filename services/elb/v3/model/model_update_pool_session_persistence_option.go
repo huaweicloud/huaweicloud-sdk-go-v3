@@ -24,6 +24,10 @@ type UpdatePoolSessionPersistenceOption struct {
 }
 
 func (o UpdatePoolSessionPersistenceOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdatePoolSessionPersistenceOption struct{}"
+	}
+
 	return strings.Join([]string{"UpdatePoolSessionPersistenceOption", string(data)}, " ")
 }

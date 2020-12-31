@@ -20,6 +20,10 @@ type BatchShowPipelinesStatusRequest struct {
 }
 
 func (o BatchShowPipelinesStatusRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchShowPipelinesStatusRequest struct{}"
+	}
+
 	return strings.Join([]string{"BatchShowPipelinesStatusRequest", string(data)}, " ")
 }

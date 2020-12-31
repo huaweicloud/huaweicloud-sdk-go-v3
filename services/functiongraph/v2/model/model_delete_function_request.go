@@ -19,6 +19,10 @@ type DeleteFunctionRequest struct {
 }
 
 func (o DeleteFunctionRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteFunctionRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteFunctionRequest", string(data)}, " ")
 }

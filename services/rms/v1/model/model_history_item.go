@@ -31,6 +31,10 @@ type HistoryItem struct {
 }
 
 func (o HistoryItem) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HistoryItem struct{}"
+	}
+
 	return strings.Join([]string{"HistoryItem", string(data)}, " ")
 }

@@ -26,7 +26,11 @@ type PolicyCreate struct {
 }
 
 func (o PolicyCreate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PolicyCreate struct{}"
+	}
+
 	return strings.Join([]string{"PolicyCreate", string(data)}, " ")
 }
 

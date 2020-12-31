@@ -22,6 +22,10 @@ type BatchOpsResult struct {
 }
 
 func (o BatchOpsResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchOpsResult struct{}"
+	}
+
 	return strings.Join([]string{"BatchOpsResult", string(data)}, " ")
 }

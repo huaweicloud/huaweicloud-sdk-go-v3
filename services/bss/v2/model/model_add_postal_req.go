@@ -33,6 +33,10 @@ type AddPostalReq struct {
 }
 
 func (o AddPostalReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AddPostalReq struct{}"
+	}
+
 	return strings.Join([]string{"AddPostalReq", string(data)}, " ")
 }

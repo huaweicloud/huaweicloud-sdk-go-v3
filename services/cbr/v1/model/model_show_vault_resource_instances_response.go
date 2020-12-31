@@ -23,6 +23,10 @@ type ShowVaultResourceInstancesResponse struct {
 }
 
 func (o ShowVaultResourceInstancesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowVaultResourceInstancesResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowVaultResourceInstancesResponse", string(data)}, " ")
 }

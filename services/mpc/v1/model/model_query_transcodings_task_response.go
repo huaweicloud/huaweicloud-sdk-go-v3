@@ -49,7 +49,11 @@ type QueryTranscodingsTaskResponse struct {
 }
 
 func (o QueryTranscodingsTaskResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QueryTranscodingsTaskResponse struct{}"
+	}
+
 	return strings.Join([]string{"QueryTranscodingsTaskResponse", string(data)}, " ")
 }
 

@@ -21,6 +21,10 @@ type CreateEnterpriseRealnameAuthenticationResponse struct {
 }
 
 func (o CreateEnterpriseRealnameAuthenticationResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateEnterpriseRealnameAuthenticationResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateEnterpriseRealnameAuthenticationResponse", string(data)}, " ")
 }

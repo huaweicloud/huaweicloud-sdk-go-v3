@@ -25,6 +25,10 @@ type ResizePrePaidServerOption struct {
 }
 
 func (o ResizePrePaidServerOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResizePrePaidServerOption struct{}"
+	}
+
 	return strings.Join([]string{"ResizePrePaidServerOption", string(data)}, " ")
 }

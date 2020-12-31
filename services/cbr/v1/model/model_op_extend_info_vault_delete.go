@@ -21,6 +21,10 @@ type OpExtendInfoVaultDelete struct {
 }
 
 func (o OpExtendInfoVaultDelete) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OpExtendInfoVaultDelete struct{}"
+	}
+
 	return strings.Join([]string{"OpExtendInfoVaultDelete", string(data)}, " ")
 }

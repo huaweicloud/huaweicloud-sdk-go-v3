@@ -26,6 +26,10 @@ type StreamForbiddenSetting struct {
 }
 
 func (o StreamForbiddenSetting) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StreamForbiddenSetting struct{}"
+	}
+
 	return strings.Join([]string{"StreamForbiddenSetting", string(data)}, " ")
 }

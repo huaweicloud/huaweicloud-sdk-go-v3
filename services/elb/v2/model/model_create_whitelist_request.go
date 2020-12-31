@@ -19,6 +19,10 @@ type CreateWhitelistRequest struct {
 }
 
 func (o CreateWhitelistRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateWhitelistRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateWhitelistRequest", string(data)}, " ")
 }

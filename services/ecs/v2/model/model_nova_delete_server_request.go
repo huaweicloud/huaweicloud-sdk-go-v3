@@ -19,6 +19,10 @@ type NovaDeleteServerRequest struct {
 }
 
 func (o NovaDeleteServerRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaDeleteServerRequest struct{}"
+	}
+
 	return strings.Join([]string{"NovaDeleteServerRequest", string(data)}, " ")
 }

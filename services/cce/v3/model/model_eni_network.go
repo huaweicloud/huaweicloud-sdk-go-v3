@@ -22,6 +22,10 @@ type EniNetwork struct {
 }
 
 func (o EniNetwork) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EniNetwork struct{}"
+	}
+
 	return strings.Join([]string{"EniNetwork", string(data)}, " ")
 }

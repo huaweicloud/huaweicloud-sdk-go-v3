@@ -18,6 +18,10 @@ type ListNotificationsRequest struct {
 }
 
 func (o ListNotificationsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListNotificationsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListNotificationsRequest", string(data)}, " ")
 }

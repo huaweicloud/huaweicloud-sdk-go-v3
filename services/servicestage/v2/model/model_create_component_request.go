@@ -20,6 +20,10 @@ type CreateComponentRequest struct {
 }
 
 func (o CreateComponentRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateComponentRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateComponentRequest", string(data)}, " ")
 }

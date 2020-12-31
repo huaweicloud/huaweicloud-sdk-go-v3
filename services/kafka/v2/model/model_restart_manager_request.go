@@ -20,6 +20,10 @@ type RestartManagerRequest struct {
 }
 
 func (o RestartManagerRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RestartManagerRequest struct{}"
+	}
+
 	return strings.Join([]string{"RestartManagerRequest", string(data)}, " ")
 }

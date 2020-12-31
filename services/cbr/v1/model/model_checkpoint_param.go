@@ -29,6 +29,10 @@ type CheckpointParam struct {
 }
 
 func (o CheckpointParam) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CheckpointParam struct{}"
+	}
+
 	return strings.Join([]string{"CheckpointParam", string(data)}, " ")
 }

@@ -26,6 +26,10 @@ type CreateRequestBodyTurboInfo struct {
 }
 
 func (o CreateRequestBodyTurboInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateRequestBodyTurboInfo struct{}"
+	}
+
 	return strings.Join([]string{"CreateRequestBodyTurboInfo", string(data)}, " ")
 }

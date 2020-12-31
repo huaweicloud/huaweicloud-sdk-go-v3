@@ -21,6 +21,10 @@ type BatchCreateOrDeleteResourceTagsRequest struct {
 }
 
 func (o BatchCreateOrDeleteResourceTagsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchCreateOrDeleteResourceTagsRequest struct{}"
+	}
+
 	return strings.Join([]string{"BatchCreateOrDeleteResourceTagsRequest", string(data)}, " ")
 }

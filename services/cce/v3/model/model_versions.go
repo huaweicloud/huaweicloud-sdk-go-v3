@@ -32,6 +32,10 @@ type Versions struct {
 }
 
 func (o Versions) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Versions struct{}"
+	}
+
 	return strings.Join([]string{"Versions", string(data)}, " ")
 }

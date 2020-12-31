@@ -33,7 +33,11 @@ type ListTracesRequest struct {
 }
 
 func (o ListTracesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListTracesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListTracesRequest", string(data)}, " ")
 }
 

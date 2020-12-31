@@ -28,6 +28,10 @@ type NodeResponse struct {
 }
 
 func (o NodeResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NodeResponse struct{}"
+	}
+
 	return strings.Join([]string{"NodeResponse", string(data)}, " ")
 }

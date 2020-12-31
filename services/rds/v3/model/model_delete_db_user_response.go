@@ -21,6 +21,10 @@ type DeleteDbUserResponse struct {
 }
 
 func (o DeleteDbUserResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteDbUserResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteDbUserResponse", string(data)}, " ")
 }

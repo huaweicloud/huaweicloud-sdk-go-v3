@@ -20,6 +20,10 @@ type ShowUserQuotasResponse struct {
 }
 
 func (o ShowUserQuotasResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowUserQuotasResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowUserQuotasResponse", string(data)}, " ")
 }

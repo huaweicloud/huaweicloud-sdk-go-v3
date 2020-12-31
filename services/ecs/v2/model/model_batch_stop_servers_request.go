@@ -19,6 +19,10 @@ type BatchStopServersRequest struct {
 }
 
 func (o BatchStopServersRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchStopServersRequest struct{}"
+	}
+
 	return strings.Join([]string{"BatchStopServersRequest", string(data)}, " ")
 }

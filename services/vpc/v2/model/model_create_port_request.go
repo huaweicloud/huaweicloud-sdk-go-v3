@@ -19,6 +19,10 @@ type CreatePortRequest struct {
 }
 
 func (o CreatePortRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePortRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreatePortRequest", string(data)}, " ")
 }

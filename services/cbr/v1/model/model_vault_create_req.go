@@ -18,6 +18,10 @@ type VaultCreateReq struct {
 }
 
 func (o VaultCreateReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VaultCreateReq struct{}"
+	}
+
 	return strings.Join([]string{"VaultCreateReq", string(data)}, " ")
 }

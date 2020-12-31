@@ -30,6 +30,10 @@ type BackupReplicateReqBody struct {
 }
 
 func (o BackupReplicateReqBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BackupReplicateReqBody struct{}"
+	}
+
 	return strings.Join([]string{"BackupReplicateReqBody", string(data)}, " ")
 }

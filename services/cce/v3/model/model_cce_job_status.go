@@ -21,6 +21,10 @@ type CceJobStatus struct {
 }
 
 func (o CceJobStatus) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CceJobStatus struct{}"
+	}
+
 	return strings.Join([]string{"CceJobStatus", string(data)}, " ")
 }

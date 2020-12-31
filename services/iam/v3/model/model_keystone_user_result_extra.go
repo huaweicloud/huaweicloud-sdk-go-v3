@@ -24,6 +24,10 @@ type KeystoneUserResultExtra struct {
 }
 
 func (o KeystoneUserResultExtra) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneUserResultExtra struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneUserResultExtra", string(data)}, " ")
 }

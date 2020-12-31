@@ -19,6 +19,10 @@ type KeystoneCheckDomainPermissionForGroupResponse struct {
 }
 
 func (o KeystoneCheckDomainPermissionForGroupResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneCheckDomainPermissionForGroupResponse struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneCheckDomainPermissionForGroupResponse", string(data)}, " ")
 }

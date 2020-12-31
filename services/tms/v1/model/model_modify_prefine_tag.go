@@ -20,6 +20,10 @@ type ModifyPrefineTag struct {
 }
 
 func (o ModifyPrefineTag) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ModifyPrefineTag struct{}"
+	}
+
 	return strings.Join([]string{"ModifyPrefineTag", string(data)}, " ")
 }

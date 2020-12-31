@@ -20,6 +20,10 @@ type OsfederationIdentityprovider struct {
 }
 
 func (o OsfederationIdentityprovider) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OsfederationIdentityprovider struct{}"
+	}
+
 	return strings.Join([]string{"OsfederationIdentityprovider", string(data)}, " ")
 }

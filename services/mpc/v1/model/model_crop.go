@@ -19,6 +19,10 @@ type Crop struct {
 }
 
 func (o Crop) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Crop struct{}"
+	}
+
 	return strings.Join([]string{"Crop", string(data)}, " ")
 }

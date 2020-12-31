@@ -19,6 +19,10 @@ type CreatePortRequestBody struct {
 }
 
 func (o CreatePortRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePortRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreatePortRequestBody", string(data)}, " ")
 }

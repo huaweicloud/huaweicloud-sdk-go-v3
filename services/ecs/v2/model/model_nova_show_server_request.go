@@ -20,6 +20,10 @@ type NovaShowServerRequest struct {
 }
 
 func (o NovaShowServerRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaShowServerRequest struct{}"
+	}
+
 	return strings.Join([]string{"NovaShowServerRequest", string(data)}, " ")
 }

@@ -31,6 +31,10 @@ type ApplicationItem struct {
 }
 
 func (o ApplicationItem) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApplicationItem struct{}"
+	}
+
 	return strings.Join([]string{"ApplicationItem", string(data)}, " ")
 }

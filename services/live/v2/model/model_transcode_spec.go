@@ -21,6 +21,10 @@ type TranscodeSpec struct {
 }
 
 func (o TranscodeSpec) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TranscodeSpec struct{}"
+	}
+
 	return strings.Join([]string{"TranscodeSpec", string(data)}, " ")
 }

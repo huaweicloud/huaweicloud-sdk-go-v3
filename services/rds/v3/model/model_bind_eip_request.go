@@ -23,6 +23,10 @@ type BindEipRequest struct {
 }
 
 func (o BindEipRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BindEipRequest struct{}"
+	}
+
 	return strings.Join([]string{"BindEipRequest", string(data)}, " ")
 }

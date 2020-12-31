@@ -20,6 +20,10 @@ type NovaShowKeypairResponse struct {
 }
 
 func (o NovaShowKeypairResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaShowKeypairResponse struct{}"
+	}
+
 	return strings.Join([]string{"NovaShowKeypairResponse", string(data)}, " ")
 }

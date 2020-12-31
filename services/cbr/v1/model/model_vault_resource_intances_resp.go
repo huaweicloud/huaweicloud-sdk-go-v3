@@ -22,6 +22,10 @@ type VaultResourceIntancesResp struct {
 }
 
 func (o VaultResourceIntancesResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VaultResourceIntancesResp struct{}"
+	}
+
 	return strings.Join([]string{"VaultResourceIntancesResp", string(data)}, " ")
 }

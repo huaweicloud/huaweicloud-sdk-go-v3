@@ -23,7 +23,11 @@ type ListBigkeyScanTasksRequest struct {
 }
 
 func (o ListBigkeyScanTasksRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListBigkeyScanTasksRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListBigkeyScanTasksRequest", string(data)}, " ")
 }
 

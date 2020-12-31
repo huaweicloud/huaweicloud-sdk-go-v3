@@ -21,6 +21,10 @@ type NodeNicSpec struct {
 }
 
 func (o NodeNicSpec) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NodeNicSpec struct{}"
+	}
+
 	return strings.Join([]string{"NodeNicSpec", string(data)}, " ")
 }

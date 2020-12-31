@@ -35,7 +35,11 @@ type BackupInfo struct {
 }
 
 func (o BackupInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BackupInfo struct{}"
+	}
+
 	return strings.Join([]string{"BackupInfo", string(data)}, " ")
 }
 

@@ -20,6 +20,10 @@ type BatchTagActionRequest struct {
 }
 
 func (o BatchTagActionRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchTagActionRequest struct{}"
+	}
+
 	return strings.Join([]string{"BatchTagActionRequest", string(data)}, " ")
 }

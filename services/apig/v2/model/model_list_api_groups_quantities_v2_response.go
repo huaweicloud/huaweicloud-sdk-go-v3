@@ -23,6 +23,10 @@ type ListApiGroupsQuantitiesV2Response struct {
 }
 
 func (o ListApiGroupsQuantitiesV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListApiGroupsQuantitiesV2Response struct{}"
+	}
+
 	return strings.Join([]string{"ListApiGroupsQuantitiesV2Response", string(data)}, " ")
 }

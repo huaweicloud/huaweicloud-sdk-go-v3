@@ -20,6 +20,10 @@ type ReinstallBaremetalServerOsRequest struct {
 }
 
 func (o ReinstallBaremetalServerOsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ReinstallBaremetalServerOsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ReinstallBaremetalServerOsRequest", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type HandleNotificationOrg struct {
 }
 
 func (o HandleNotificationOrg) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HandleNotificationOrg struct{}"
+	}
+
 	return strings.Join([]string{"HandleNotificationOrg", string(data)}, " ")
 }

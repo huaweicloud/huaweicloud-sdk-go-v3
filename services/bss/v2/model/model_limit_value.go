@@ -21,6 +21,10 @@ type LimitValue struct {
 }
 
 func (o LimitValue) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LimitValue struct{}"
+	}
+
 	return strings.Join([]string{"LimitValue", string(data)}, " ")
 }

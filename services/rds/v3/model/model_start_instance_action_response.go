@@ -21,6 +21,10 @@ type StartInstanceActionResponse struct {
 }
 
 func (o StartInstanceActionResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StartInstanceActionResponse struct{}"
+	}
+
 	return strings.Join([]string{"StartInstanceActionResponse", string(data)}, " ")
 }

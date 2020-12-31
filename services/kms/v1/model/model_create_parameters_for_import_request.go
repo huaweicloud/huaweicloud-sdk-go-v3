@@ -20,6 +20,10 @@ type CreateParametersForImportRequest struct {
 }
 
 func (o CreateParametersForImportRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateParametersForImportRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateParametersForImportRequest", string(data)}, " ")
 }

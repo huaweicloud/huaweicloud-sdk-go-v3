@@ -26,6 +26,10 @@ type OutputThumbnailPara struct {
 }
 
 func (o OutputThumbnailPara) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OutputThumbnailPara struct{}"
+	}
+
 	return strings.Join([]string{"OutputThumbnailPara", string(data)}, " ")
 }

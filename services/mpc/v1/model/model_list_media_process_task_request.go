@@ -25,7 +25,11 @@ type ListMediaProcessTaskRequest struct {
 }
 
 func (o ListMediaProcessTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListMediaProcessTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListMediaProcessTaskRequest", string(data)}, " ")
 }
 

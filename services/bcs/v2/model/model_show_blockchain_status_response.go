@@ -25,6 +25,10 @@ type ShowBlockchainStatusResponse struct {
 }
 
 func (o ShowBlockchainStatusResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowBlockchainStatusResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowBlockchainStatusResponse", string(data)}, " ")
 }

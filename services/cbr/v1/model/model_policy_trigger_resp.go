@@ -25,7 +25,11 @@ type PolicyTriggerResp struct {
 }
 
 func (o PolicyTriggerResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PolicyTriggerResp struct{}"
+	}
+
 	return strings.Join([]string{"PolicyTriggerResp", string(data)}, " ")
 }
 

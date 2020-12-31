@@ -18,6 +18,10 @@ type ListTagsOfTenantRequest struct {
 }
 
 func (o ListTagsOfTenantRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListTagsOfTenantRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListTagsOfTenantRequest", string(data)}, " ")
 }

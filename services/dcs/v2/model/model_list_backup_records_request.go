@@ -23,6 +23,10 @@ type ListBackupRecordsRequest struct {
 }
 
 func (o ListBackupRecordsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListBackupRecordsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListBackupRecordsRequest", string(data)}, " ")
 }

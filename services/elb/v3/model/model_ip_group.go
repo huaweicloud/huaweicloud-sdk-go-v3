@@ -34,6 +34,10 @@ type IpGroup struct {
 }
 
 func (o IpGroup) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IpGroup struct{}"
+	}
+
 	return strings.Join([]string{"IpGroup", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type NodePoolMetadata struct {
 }
 
 func (o NodePoolMetadata) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NodePoolMetadata struct{}"
+	}
+
 	return strings.Join([]string{"NodePoolMetadata", string(data)}, " ")
 }

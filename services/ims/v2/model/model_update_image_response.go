@@ -130,7 +130,11 @@ type UpdateImageResponse struct {
 }
 
 func (o UpdateImageResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateImageResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateImageResponse", string(data)}, " ")
 }
 

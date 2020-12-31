@@ -27,6 +27,10 @@ type PipelineBuildResult struct {
 }
 
 func (o PipelineBuildResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PipelineBuildResult struct{}"
+	}
+
 	return strings.Join([]string{"PipelineBuildResult", string(data)}, " ")
 }

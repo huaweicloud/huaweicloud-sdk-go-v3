@@ -36,7 +36,11 @@ type ThumbTask struct {
 }
 
 func (o ThumbTask) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ThumbTask struct{}"
+	}
+
 	return strings.Join([]string{"ThumbTask", string(data)}, " ")
 }
 

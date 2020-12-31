@@ -21,7 +21,11 @@ type CreatePersonalAuthRequest struct {
 }
 
 func (o CreatePersonalAuthRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePersonalAuthRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreatePersonalAuthRequest", string(data)}, " ")
 }
 

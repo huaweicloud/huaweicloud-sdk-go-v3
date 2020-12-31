@@ -19,6 +19,10 @@ type CreatePredefineTagsResponse struct {
 }
 
 func (o CreatePredefineTagsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePredefineTagsResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreatePredefineTagsResponse", string(data)}, " ")
 }

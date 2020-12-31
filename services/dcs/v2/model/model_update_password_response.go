@@ -30,7 +30,11 @@ type UpdatePasswordResponse struct {
 }
 
 func (o UpdatePasswordResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdatePasswordResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdatePasswordResponse", string(data)}, " ")
 }
 

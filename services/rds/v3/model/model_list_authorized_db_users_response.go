@@ -23,6 +23,10 @@ type ListAuthorizedDbUsersResponse struct {
 }
 
 func (o ListAuthorizedDbUsersResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListAuthorizedDbUsersResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListAuthorizedDbUsersResponse", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type UpdateDomainGroupInheritRoleRequest struct {
 }
 
 func (o UpdateDomainGroupInheritRoleRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateDomainGroupInheritRoleRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateDomainGroupInheritRoleRequest", string(data)}, " ")
 }

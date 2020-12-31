@@ -26,6 +26,10 @@ type NovaNetwork struct {
 }
 
 func (o NovaNetwork) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaNetwork struct{}"
+	}
+
 	return strings.Join([]string{"NovaNetwork", string(data)}, " ")
 }

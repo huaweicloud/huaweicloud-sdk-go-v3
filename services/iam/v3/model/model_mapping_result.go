@@ -23,6 +23,10 @@ type MappingResult struct {
 }
 
 func (o MappingResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MappingResult struct{}"
+	}
+
 	return strings.Join([]string{"MappingResult", string(data)}, " ")
 }

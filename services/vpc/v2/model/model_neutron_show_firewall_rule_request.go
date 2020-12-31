@@ -19,6 +19,10 @@ type NeutronShowFirewallRuleRequest struct {
 }
 
 func (o NeutronShowFirewallRuleRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NeutronShowFirewallRuleRequest struct{}"
+	}
+
 	return strings.Join([]string{"NeutronShowFirewallRuleRequest", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type PreoccupyIp struct {
 }
 
 func (o PreoccupyIp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PreoccupyIp struct{}"
+	}
+
 	return strings.Join([]string{"PreoccupyIp", string(data)}, " ")
 }

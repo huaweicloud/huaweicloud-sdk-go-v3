@@ -21,6 +21,10 @@ type DownloadSlowlogRequestBody struct {
 }
 
 func (o DownloadSlowlogRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DownloadSlowlogRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"DownloadSlowlogRequestBody", string(data)}, " ")
 }

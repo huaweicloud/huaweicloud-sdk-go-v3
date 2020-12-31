@@ -23,6 +23,10 @@ type PublishAppMessageResponse struct {
 }
 
 func (o PublishAppMessageResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PublishAppMessageResponse struct{}"
+	}
+
 	return strings.Join([]string{"PublishAppMessageResponse", string(data)}, " ")
 }

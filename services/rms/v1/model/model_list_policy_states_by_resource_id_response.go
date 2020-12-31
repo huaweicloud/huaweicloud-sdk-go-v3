@@ -22,6 +22,10 @@ type ListPolicyStatesByResourceIdResponse struct {
 }
 
 func (o ListPolicyStatesByResourceIdResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListPolicyStatesByResourceIdResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListPolicyStatesByResourceIdResponse", string(data)}, " ")
 }

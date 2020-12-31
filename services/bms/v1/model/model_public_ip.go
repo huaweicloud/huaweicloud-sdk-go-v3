@@ -21,6 +21,10 @@ type PublicIp struct {
 }
 
 func (o PublicIp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PublicIp struct{}"
+	}
+
 	return strings.Join([]string{"PublicIp", string(data)}, " ")
 }

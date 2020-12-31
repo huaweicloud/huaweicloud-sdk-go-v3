@@ -23,7 +23,11 @@ type UpdateCredentialOption struct {
 }
 
 func (o UpdateCredentialOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateCredentialOption struct{}"
+	}
+
 	return strings.Join([]string{"UpdateCredentialOption", string(data)}, " ")
 }
 

@@ -25,6 +25,10 @@ type ShowInstanceTopicDetailResponse struct {
 }
 
 func (o ShowInstanceTopicDetailResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowInstanceTopicDetailResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowInstanceTopicDetailResponse", string(data)}, " ")
 }

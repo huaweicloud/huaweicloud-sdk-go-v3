@@ -39,6 +39,10 @@ type PeriodProductInfo struct {
 }
 
 func (o PeriodProductInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PeriodProductInfo struct{}"
+	}
+
 	return strings.Join([]string{"PeriodProductInfo", string(data)}, " ")
 }

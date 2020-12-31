@@ -19,6 +19,10 @@ type DeleteSnapshotRequest struct {
 }
 
 func (o DeleteSnapshotRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteSnapshotRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteSnapshotRequest", string(data)}, " ")
 }

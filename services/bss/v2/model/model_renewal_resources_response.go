@@ -21,6 +21,10 @@ type RenewalResourcesResponse struct {
 }
 
 func (o RenewalResourcesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RenewalResourcesResponse struct{}"
+	}
+
 	return strings.Join([]string{"RenewalResourcesResponse", string(data)}, " ")
 }

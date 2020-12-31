@@ -22,7 +22,11 @@ type SystemProcess struct {
 }
 
 func (o SystemProcess) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SystemProcess struct{}"
+	}
+
 	return strings.Join([]string{"SystemProcess", string(data)}, " ")
 }
 

@@ -25,6 +25,10 @@ type ListEncryptTaskResponse struct {
 }
 
 func (o ListEncryptTaskResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListEncryptTaskResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListEncryptTaskResponse", string(data)}, " ")
 }

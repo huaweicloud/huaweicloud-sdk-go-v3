@@ -23,7 +23,11 @@ type Ha struct {
 }
 
 func (o Ha) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Ha struct{}"
+	}
+
 	return strings.Join([]string{"Ha", string(data)}, " ")
 }
 

@@ -19,6 +19,10 @@ type StacksConfig struct {
 }
 
 func (o StacksConfig) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StacksConfig struct{}"
+	}
+
 	return strings.Join([]string{"StacksConfig", string(data)}, " ")
 }

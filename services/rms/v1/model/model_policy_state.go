@@ -40,6 +40,10 @@ type PolicyState struct {
 }
 
 func (o PolicyState) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PolicyState struct{}"
+	}
+
 	return strings.Join([]string{"PolicyState", string(data)}, " ")
 }

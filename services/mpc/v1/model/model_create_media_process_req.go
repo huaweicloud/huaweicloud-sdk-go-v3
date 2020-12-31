@@ -21,6 +21,10 @@ type CreateMediaProcessReq struct {
 }
 
 func (o CreateMediaProcessReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateMediaProcessReq struct{}"
+	}
+
 	return strings.Join([]string{"CreateMediaProcessReq", string(data)}, " ")
 }

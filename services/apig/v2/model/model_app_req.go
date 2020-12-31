@@ -25,6 +25,10 @@ type AppReq struct {
 }
 
 func (o AppReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AppReq struct{}"
+	}
+
 	return strings.Join([]string{"AppReq", string(data)}, " ")
 }

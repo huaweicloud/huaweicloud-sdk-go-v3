@@ -38,7 +38,11 @@ type ShowBigkeyScanTaskDetailsResponse struct {
 }
 
 func (o ShowBigkeyScanTaskDetailsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowBigkeyScanTaskDetailsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowBigkeyScanTaskDetailsResponse", string(data)}, " ")
 }
 

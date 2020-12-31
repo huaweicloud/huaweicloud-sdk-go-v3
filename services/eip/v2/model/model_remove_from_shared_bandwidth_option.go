@@ -25,7 +25,11 @@ type RemoveFromSharedBandwidthOption struct {
 }
 
 func (o RemoveFromSharedBandwidthOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RemoveFromSharedBandwidthOption struct{}"
+	}
+
 	return strings.Join([]string{"RemoveFromSharedBandwidthOption", string(data)}, " ")
 }
 

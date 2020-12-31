@@ -20,6 +20,10 @@ type TotalMetaData struct {
 }
 
 func (o TotalMetaData) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TotalMetaData struct{}"
+	}
+
 	return strings.Join([]string{"TotalMetaData", string(data)}, " ")
 }

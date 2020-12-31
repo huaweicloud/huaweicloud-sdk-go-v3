@@ -20,7 +20,11 @@ type ListCollationsRequest struct {
 }
 
 func (o ListCollationsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListCollationsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListCollationsRequest", string(data)}, " ")
 }
 

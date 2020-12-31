@@ -19,6 +19,10 @@ type CreateExtractTaskRequest struct {
 }
 
 func (o CreateExtractTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateExtractTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateExtractTaskRequest", string(data)}, " ")
 }

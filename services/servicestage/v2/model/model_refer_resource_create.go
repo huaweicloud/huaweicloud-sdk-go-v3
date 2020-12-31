@@ -25,6 +25,10 @@ type ReferResourceCreate struct {
 }
 
 func (o ReferResourceCreate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ReferResourceCreate struct{}"
+	}
+
 	return strings.Join([]string{"ReferResourceCreate", string(data)}, " ")
 }

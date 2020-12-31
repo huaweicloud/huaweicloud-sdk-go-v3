@@ -40,7 +40,11 @@ type ShowJobInfosResponse struct {
 }
 
 func (o ShowJobInfosResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowJobInfosResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowJobInfosResponse", string(data)}, " ")
 }
 

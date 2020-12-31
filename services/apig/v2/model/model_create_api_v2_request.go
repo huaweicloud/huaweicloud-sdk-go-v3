@@ -21,6 +21,10 @@ type CreateApiV2Request struct {
 }
 
 func (o CreateApiV2Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateApiV2Request struct{}"
+	}
+
 	return strings.Join([]string{"CreateApiV2Request", string(data)}, " ")
 }

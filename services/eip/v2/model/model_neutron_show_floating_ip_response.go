@@ -20,6 +20,10 @@ type NeutronShowFloatingIpResponse struct {
 }
 
 func (o NeutronShowFloatingIpResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NeutronShowFloatingIpResponse struct{}"
+	}
+
 	return strings.Join([]string{"NeutronShowFloatingIpResponse", string(data)}, " ")
 }

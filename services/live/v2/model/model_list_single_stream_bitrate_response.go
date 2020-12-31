@@ -22,6 +22,10 @@ type ListSingleStreamBitrateResponse struct {
 }
 
 func (o ListSingleStreamBitrateResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListSingleStreamBitrateResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListSingleStreamBitrateResponse", string(data)}, " ")
 }

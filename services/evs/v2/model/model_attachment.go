@@ -32,6 +32,10 @@ type Attachment struct {
 }
 
 func (o Attachment) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Attachment struct{}"
+	}
+
 	return strings.Join([]string{"Attachment", string(data)}, " ")
 }

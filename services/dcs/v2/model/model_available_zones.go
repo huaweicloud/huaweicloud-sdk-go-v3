@@ -29,7 +29,11 @@ type AvailableZones struct {
 }
 
 func (o AvailableZones) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AvailableZones struct{}"
+	}
+
 	return strings.Join([]string{"AvailableZones", string(data)}, " ")
 }
 

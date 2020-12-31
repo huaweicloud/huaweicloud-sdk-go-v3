@@ -36,6 +36,10 @@ type L7Rule struct {
 }
 
 func (o L7Rule) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "L7Rule struct{}"
+	}
+
 	return strings.Join([]string{"L7Rule", string(data)}, " ")
 }

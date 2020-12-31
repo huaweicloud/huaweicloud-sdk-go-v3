@@ -21,6 +21,10 @@ type DeleteRequestThrottlingPolicyV2Request struct {
 }
 
 func (o DeleteRequestThrottlingPolicyV2Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteRequestThrottlingPolicyV2Request struct{}"
+	}
+
 	return strings.Join([]string{"DeleteRequestThrottlingPolicyV2Request", string(data)}, " ")
 }

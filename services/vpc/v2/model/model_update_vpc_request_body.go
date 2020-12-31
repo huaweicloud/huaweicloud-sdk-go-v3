@@ -19,6 +19,10 @@ type UpdateVpcRequestBody struct {
 }
 
 func (o UpdateVpcRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateVpcRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateVpcRequestBody", string(data)}, " ")
 }

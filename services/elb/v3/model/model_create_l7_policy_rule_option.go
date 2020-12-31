@@ -30,6 +30,10 @@ type CreateL7PolicyRuleOption struct {
 }
 
 func (o CreateL7PolicyRuleOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateL7PolicyRuleOption struct{}"
+	}
+
 	return strings.Join([]string{"CreateL7PolicyRuleOption", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type UpdateIterationV4Response struct {
 }
 
 func (o UpdateIterationV4Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateIterationV4Response struct{}"
+	}
+
 	return strings.Join([]string{"UpdateIterationV4Response", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type CreateHotkeyScanTaskRequest struct {
 }
 
 func (o CreateHotkeyScanTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateHotkeyScanTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateHotkeyScanTaskRequest", string(data)}, " ")
 }

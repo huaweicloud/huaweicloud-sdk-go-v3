@@ -29,6 +29,10 @@ type AssociateCertificateV2Response struct {
 }
 
 func (o AssociateCertificateV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AssociateCertificateV2Response struct{}"
+	}
+
 	return strings.Join([]string{"AssociateCertificateV2Response", string(data)}, " ")
 }

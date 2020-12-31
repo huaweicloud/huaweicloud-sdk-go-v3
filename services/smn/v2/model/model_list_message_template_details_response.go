@@ -35,6 +35,10 @@ type ListMessageTemplateDetailsResponse struct {
 }
 
 func (o ListMessageTemplateDetailsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListMessageTemplateDetailsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListMessageTemplateDetailsResponse", string(data)}, " ")
 }

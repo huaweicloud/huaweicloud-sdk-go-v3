@@ -20,6 +20,10 @@ type NovaSecurityGroupCommonIpRange struct {
 }
 
 func (o NovaSecurityGroupCommonIpRange) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaSecurityGroupCommonIpRange struct{}"
+	}
+
 	return strings.Join([]string{"NovaSecurityGroupCommonIpRange", string(data)}, " ")
 }

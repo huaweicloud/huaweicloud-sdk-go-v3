@@ -21,6 +21,10 @@ type HookCreate struct {
 }
 
 func (o HookCreate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HookCreate struct{}"
+	}
+
 	return strings.Join([]string{"HookCreate", string(data)}, " ")
 }

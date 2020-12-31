@@ -19,6 +19,10 @@ type PolicyTriggerPropertiesReq struct {
 }
 
 func (o PolicyTriggerPropertiesReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PolicyTriggerPropertiesReq struct{}"
+	}
+
 	return strings.Join([]string{"PolicyTriggerPropertiesReq", string(data)}, " ")
 }

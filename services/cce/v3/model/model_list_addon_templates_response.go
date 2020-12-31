@@ -25,6 +25,10 @@ type ListAddonTemplatesResponse struct {
 }
 
 func (o ListAddonTemplatesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListAddonTemplatesResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListAddonTemplatesResponse", string(data)}, " ")
 }

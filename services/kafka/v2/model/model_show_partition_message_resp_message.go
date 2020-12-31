@@ -30,6 +30,10 @@ type ShowPartitionMessageRespMessage struct {
 }
 
 func (o ShowPartitionMessageRespMessage) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowPartitionMessageRespMessage struct{}"
+	}
+
 	return strings.Join([]string{"ShowPartitionMessageRespMessage", string(data)}, " ")
 }

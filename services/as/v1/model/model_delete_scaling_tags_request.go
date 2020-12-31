@@ -22,7 +22,11 @@ type DeleteScalingTagsRequest struct {
 }
 
 func (o DeleteScalingTagsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteScalingTagsRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteScalingTagsRequest", string(data)}, " ")
 }
 

@@ -19,6 +19,10 @@ type DeleteScalingConfigRequest struct {
 }
 
 func (o DeleteScalingConfigRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteScalingConfigRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteScalingConfigRequest", string(data)}, " ")
 }

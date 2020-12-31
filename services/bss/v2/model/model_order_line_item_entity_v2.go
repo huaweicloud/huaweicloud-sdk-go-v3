@@ -48,6 +48,10 @@ type OrderLineItemEntityV2 struct {
 }
 
 func (o OrderLineItemEntityV2) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OrderLineItemEntityV2 struct{}"
+	}
+
 	return strings.Join([]string{"OrderLineItemEntityV2", string(data)}, " ")
 }

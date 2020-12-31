@@ -22,7 +22,11 @@ type SetDbUserPwdRequest struct {
 }
 
 func (o SetDbUserPwdRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SetDbUserPwdRequest struct{}"
+	}
+
 	return strings.Join([]string{"SetDbUserPwdRequest", string(data)}, " ")
 }
 

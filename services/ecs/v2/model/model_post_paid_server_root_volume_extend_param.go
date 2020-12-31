@@ -24,6 +24,10 @@ type PostPaidServerRootVolumeExtendParam struct {
 }
 
 func (o PostPaidServerRootVolumeExtendParam) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PostPaidServerRootVolumeExtendParam struct{}"
+	}
+
 	return strings.Join([]string{"PostPaidServerRootVolumeExtendParam", string(data)}, " ")
 }

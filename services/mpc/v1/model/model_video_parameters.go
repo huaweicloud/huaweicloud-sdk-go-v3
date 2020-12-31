@@ -52,7 +52,11 @@ type VideoParameters struct {
 }
 
 func (o VideoParameters) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VideoParameters struct{}"
+	}
+
 	return strings.Join([]string{"VideoParameters", string(data)}, " ")
 }
 

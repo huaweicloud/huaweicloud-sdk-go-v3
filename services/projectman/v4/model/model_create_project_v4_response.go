@@ -31,6 +31,10 @@ type CreateProjectV4Response struct {
 }
 
 func (o CreateProjectV4Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateProjectV4Response struct{}"
+	}
+
 	return strings.Join([]string{"CreateProjectV4Response", string(data)}, " ")
 }

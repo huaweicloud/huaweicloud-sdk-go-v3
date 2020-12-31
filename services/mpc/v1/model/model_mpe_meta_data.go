@@ -43,6 +43,10 @@ type MpeMetaData struct {
 }
 
 func (o MpeMetaData) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MpeMetaData struct{}"
+	}
+
 	return strings.Join([]string{"MpeMetaData", string(data)}, " ")
 }

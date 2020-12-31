@@ -19,6 +19,10 @@ type ListConfigurationsRequest struct {
 }
 
 func (o ListConfigurationsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListConfigurationsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListConfigurationsRequest", string(data)}, " ")
 }

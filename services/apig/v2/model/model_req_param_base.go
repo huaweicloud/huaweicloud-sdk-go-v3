@@ -50,7 +50,11 @@ type ReqParamBase struct {
 }
 
 func (o ReqParamBase) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ReqParamBase struct{}"
+	}
+
 	return strings.Join([]string{"ReqParamBase", string(data)}, " ")
 }
 

@@ -29,6 +29,10 @@ type MessageTemplate struct {
 }
 
 func (o MessageTemplate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MessageTemplate struct{}"
+	}
+
 	return strings.Join([]string{"MessageTemplate", string(data)}, " ")
 }

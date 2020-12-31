@@ -19,6 +19,10 @@ type BatchDeleteMembersRequest struct {
 }
 
 func (o BatchDeleteMembersRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchDeleteMembersRequest struct{}"
+	}
+
 	return strings.Join([]string{"BatchDeleteMembersRequest", string(data)}, " ")
 }

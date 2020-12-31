@@ -19,6 +19,10 @@ type DeleteListenerResponse struct {
 }
 
 func (o DeleteListenerResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteListenerResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteListenerResponse", string(data)}, " ")
 }

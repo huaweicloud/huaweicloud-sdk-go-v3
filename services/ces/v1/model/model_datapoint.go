@@ -32,6 +32,10 @@ type Datapoint struct {
 }
 
 func (o Datapoint) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Datapoint struct{}"
+	}
+
 	return strings.Join([]string{"Datapoint", string(data)}, " ")
 }

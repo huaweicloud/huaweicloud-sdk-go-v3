@@ -23,6 +23,10 @@ type OpExtendInfoSync struct {
 }
 
 func (o OpExtendInfoSync) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OpExtendInfoSync struct{}"
+	}
+
 	return strings.Join([]string{"OpExtendInfoSync", string(data)}, " ")
 }

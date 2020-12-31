@@ -31,6 +31,10 @@ type DemandProductRatingResult struct {
 }
 
 func (o DemandProductRatingResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DemandProductRatingResult struct{}"
+	}
+
 	return strings.Join([]string{"DemandProductRatingResult", string(data)}, " ")
 }

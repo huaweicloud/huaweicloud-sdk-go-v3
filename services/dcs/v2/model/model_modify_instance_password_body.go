@@ -21,6 +21,10 @@ type ModifyInstancePasswordBody struct {
 }
 
 func (o ModifyInstancePasswordBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ModifyInstancePasswordBody struct{}"
+	}
+
 	return strings.Join([]string{"ModifyInstancePasswordBody", string(data)}, " ")
 }

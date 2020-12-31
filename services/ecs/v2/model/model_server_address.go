@@ -29,7 +29,11 @@ type ServerAddress struct {
 }
 
 func (o ServerAddress) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServerAddress struct{}"
+	}
+
 	return strings.Join([]string{"ServerAddress", string(data)}, " ")
 }
 

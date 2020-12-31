@@ -25,6 +25,10 @@ type ListApisBindedToRequestThrottlingPolicyV2Response struct {
 }
 
 func (o ListApisBindedToRequestThrottlingPolicyV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListApisBindedToRequestThrottlingPolicyV2Response struct{}"
+	}
+
 	return strings.Join([]string{"ListApisBindedToRequestThrottlingPolicyV2Response", string(data)}, " ")
 }

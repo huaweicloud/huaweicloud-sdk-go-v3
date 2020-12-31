@@ -20,6 +20,10 @@ type MigrateResourceRequest struct {
 }
 
 func (o MigrateResourceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MigrateResourceRequest struct{}"
+	}
+
 	return strings.Join([]string{"MigrateResourceRequest", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type CreateListenerResponse struct {
 }
 
 func (o CreateListenerResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateListenerResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateListenerResponse", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type RemovePublicipInfo struct {
 }
 
 func (o RemovePublicipInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RemovePublicipInfo struct{}"
+	}
+
 	return strings.Join([]string{"RemovePublicipInfo", string(data)}, " ")
 }

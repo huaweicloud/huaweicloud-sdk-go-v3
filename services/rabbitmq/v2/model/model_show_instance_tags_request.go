@@ -20,6 +20,10 @@ type ShowInstanceTagsRequest struct {
 }
 
 func (o ShowInstanceTagsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowInstanceTagsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowInstanceTagsRequest", string(data)}, " ")
 }

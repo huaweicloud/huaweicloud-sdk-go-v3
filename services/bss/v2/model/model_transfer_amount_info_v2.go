@@ -29,6 +29,10 @@ type TransferAmountInfoV2 struct {
 }
 
 func (o TransferAmountInfoV2) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TransferAmountInfoV2 struct{}"
+	}
+
 	return strings.Join([]string{"TransferAmountInfoV2", string(data)}, " ")
 }

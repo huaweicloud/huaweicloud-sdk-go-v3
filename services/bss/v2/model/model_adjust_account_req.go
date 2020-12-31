@@ -23,6 +23,10 @@ type AdjustAccountReq struct {
 }
 
 func (o AdjustAccountReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AdjustAccountReq struct{}"
+	}
+
 	return strings.Join([]string{"AdjustAccountReq", string(data)}, " ")
 }

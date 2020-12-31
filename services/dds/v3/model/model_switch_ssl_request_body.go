@@ -19,6 +19,10 @@ type SwitchSslRequestBody struct {
 }
 
 func (o SwitchSslRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SwitchSslRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"SwitchSslRequestBody", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type QuotaSimpleInfo struct {
 }
 
 func (o QuotaSimpleInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QuotaSimpleInfo struct{}"
+	}
+
 	return strings.Join([]string{"QuotaSimpleInfo", string(data)}, " ")
 }

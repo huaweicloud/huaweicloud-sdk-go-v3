@@ -37,7 +37,11 @@ type ShowLifeCycleHookResponse struct {
 }
 
 func (o ShowLifeCycleHookResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowLifeCycleHookResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowLifeCycleHookResponse", string(data)}, " ")
 }
 

@@ -21,6 +21,10 @@ type ProtectableReplicationCapabilitiesRespRegion struct {
 }
 
 func (o ProtectableReplicationCapabilitiesRespRegion) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ProtectableReplicationCapabilitiesRespRegion struct{}"
+	}
+
 	return strings.Join([]string{"ProtectableReplicationCapabilitiesRespRegion", string(data)}, " ")
 }

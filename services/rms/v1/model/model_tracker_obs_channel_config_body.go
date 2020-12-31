@@ -22,6 +22,10 @@ type TrackerObsChannelConfigBody struct {
 }
 
 func (o TrackerObsChannelConfigBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TrackerObsChannelConfigBody struct{}"
+	}
+
 	return strings.Join([]string{"TrackerObsChannelConfigBody", string(data)}, " ")
 }

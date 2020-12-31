@@ -19,6 +19,10 @@ type CreateMpeCallBackRequest struct {
 }
 
 func (o CreateMpeCallBackRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateMpeCallBackRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateMpeCallBackRequest", string(data)}, " ")
 }

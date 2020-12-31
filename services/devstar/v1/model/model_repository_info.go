@@ -23,6 +23,10 @@ type RepositoryInfo struct {
 }
 
 func (o RepositoryInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RepositoryInfo struct{}"
+	}
+
 	return strings.Join([]string{"RepositoryInfo", string(data)}, " ")
 }

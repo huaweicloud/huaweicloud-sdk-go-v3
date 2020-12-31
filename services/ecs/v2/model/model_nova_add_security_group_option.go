@@ -20,6 +20,10 @@ type NovaAddSecurityGroupOption struct {
 }
 
 func (o NovaAddSecurityGroupOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaAddSecurityGroupOption struct{}"
+	}
+
 	return strings.Join([]string{"NovaAddSecurityGroupOption", string(data)}, " ")
 }

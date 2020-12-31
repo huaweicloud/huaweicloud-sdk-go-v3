@@ -46,7 +46,11 @@ type OperationLog struct {
 }
 
 func (o OperationLog) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OperationLog struct{}"
+	}
+
 	return strings.Join([]string{"OperationLog", string(data)}, " ")
 }
 

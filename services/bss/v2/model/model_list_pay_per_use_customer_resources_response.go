@@ -23,6 +23,10 @@ type ListPayPerUseCustomerResourcesResponse struct {
 }
 
 func (o ListPayPerUseCustomerResourcesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListPayPerUseCustomerResourcesResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListPayPerUseCustomerResourcesResponse", string(data)}, " ")
 }

@@ -37,6 +37,10 @@ type OpExtendInfoReplication struct {
 }
 
 func (o OpExtendInfoReplication) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OpExtendInfoReplication struct{}"
+	}
+
 	return strings.Join([]string{"OpExtendInfoReplication", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type UpdateDomainProtectPolicyRequest struct {
 }
 
 func (o UpdateDomainProtectPolicyRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateDomainProtectPolicyRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateDomainProtectPolicyRequest", string(data)}, " ")
 }

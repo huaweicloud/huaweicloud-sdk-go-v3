@@ -21,6 +21,10 @@ type CreateIterationV4Response struct {
 }
 
 func (o CreateIterationV4Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateIterationV4Response struct{}"
+	}
+
 	return strings.Join([]string{"CreateIterationV4Response", string(data)}, " ")
 }

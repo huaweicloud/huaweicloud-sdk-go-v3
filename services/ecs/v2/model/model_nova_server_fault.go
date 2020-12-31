@@ -26,6 +26,10 @@ type NovaServerFault struct {
 }
 
 func (o NovaServerFault) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaServerFault struct{}"
+	}
+
 	return strings.Join([]string{"NovaServerFault", string(data)}, " ")
 }

@@ -55,7 +55,11 @@ type LoadbalancerResp struct {
 }
 
 func (o LoadbalancerResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LoadbalancerResp struct{}"
+	}
+
 	return strings.Join([]string{"LoadbalancerResp", string(data)}, " ")
 }
 

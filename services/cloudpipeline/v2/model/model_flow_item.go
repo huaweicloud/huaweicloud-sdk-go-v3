@@ -18,6 +18,10 @@ type FlowItem struct {
 }
 
 func (o FlowItem) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "FlowItem struct{}"
+	}
+
 	return strings.Join([]string{"FlowItem", string(data)}, " ")
 }

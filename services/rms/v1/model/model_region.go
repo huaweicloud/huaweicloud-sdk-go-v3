@@ -22,6 +22,10 @@ type Region struct {
 }
 
 func (o Region) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Region struct{}"
+	}
+
 	return strings.Join([]string{"Region", string(data)}, " ")
 }

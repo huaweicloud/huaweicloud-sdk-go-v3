@@ -20,6 +20,10 @@ type LoadBalancerRef struct {
 }
 
 func (o LoadBalancerRef) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LoadBalancerRef struct{}"
+	}
+
 	return strings.Join([]string{"LoadBalancerRef", string(data)}, " ")
 }

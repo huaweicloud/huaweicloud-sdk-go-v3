@@ -23,6 +23,10 @@ type StreamForbiddenList struct {
 }
 
 func (o StreamForbiddenList) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StreamForbiddenList struct{}"
+	}
+
 	return strings.Join([]string{"StreamForbiddenList", string(data)}, " ")
 }

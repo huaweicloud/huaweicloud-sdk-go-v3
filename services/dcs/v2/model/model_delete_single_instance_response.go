@@ -19,6 +19,10 @@ type DeleteSingleInstanceResponse struct {
 }
 
 func (o DeleteSingleInstanceResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteSingleInstanceResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteSingleInstanceResponse", string(data)}, " ")
 }

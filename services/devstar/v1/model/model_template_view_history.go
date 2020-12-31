@@ -21,6 +21,10 @@ type TemplateViewHistory struct {
 }
 
 func (o TemplateViewHistory) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TemplateViewHistory struct{}"
+	}
+
 	return strings.Join([]string{"TemplateViewHistory", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type ResettingAppSecretV2Request struct {
 }
 
 func (o ResettingAppSecretV2Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResettingAppSecretV2Request struct{}"
+	}
+
 	return strings.Join([]string{"ResettingAppSecretV2Request", string(data)}, " ")
 }

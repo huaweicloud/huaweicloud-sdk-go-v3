@@ -20,6 +20,10 @@ type CancelGrantRequest struct {
 }
 
 func (o CancelGrantRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CancelGrantRequest struct{}"
+	}
+
 	return strings.Join([]string{"CancelGrantRequest", string(data)}, " ")
 }

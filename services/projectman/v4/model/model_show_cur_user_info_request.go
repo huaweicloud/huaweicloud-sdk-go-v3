@@ -18,6 +18,10 @@ type ShowCurUserInfoRequest struct {
 }
 
 func (o ShowCurUserInfoRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowCurUserInfoRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowCurUserInfoRequest", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type ShowPermanentAccessKeyRequest struct {
 }
 
 func (o ShowPermanentAccessKeyRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowPermanentAccessKeyRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowPermanentAccessKeyRequest", string(data)}, " ")
 }

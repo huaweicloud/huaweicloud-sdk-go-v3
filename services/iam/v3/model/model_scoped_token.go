@@ -20,6 +20,10 @@ type ScopedToken struct {
 }
 
 func (o ScopedToken) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ScopedToken struct{}"
+	}
+
 	return strings.Join([]string{"ScopedToken", string(data)}, " ")
 }

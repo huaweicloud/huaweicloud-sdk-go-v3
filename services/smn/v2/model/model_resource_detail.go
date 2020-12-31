@@ -25,6 +25,10 @@ type ResourceDetail struct {
 }
 
 func (o ResourceDetail) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResourceDetail struct{}"
+	}
+
 	return strings.Join([]string{"ResourceDetail", string(data)}, " ")
 }

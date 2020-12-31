@@ -20,6 +20,10 @@ type DoManualBackupRequest struct {
 }
 
 func (o DoManualBackupRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DoManualBackupRequest struct{}"
+	}
+
 	return strings.Join([]string{"DoManualBackupRequest", string(data)}, " ")
 }

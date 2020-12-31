@@ -36,6 +36,10 @@ type NovaServerFlavor struct {
 }
 
 func (o NovaServerFlavor) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaServerFlavor struct{}"
+	}
+
 	return strings.Join([]string{"NovaServerFlavor", string(data)}, " ")
 }

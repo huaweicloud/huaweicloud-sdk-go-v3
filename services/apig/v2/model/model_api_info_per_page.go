@@ -84,7 +84,11 @@ type ApiInfoPerPage struct {
 }
 
 func (o ApiInfoPerPage) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApiInfoPerPage struct{}"
+	}
+
 	return strings.Join([]string{"ApiInfoPerPage", string(data)}, " ")
 }
 

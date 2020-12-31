@@ -19,6 +19,10 @@ type UpdatePeriodToOnDemandRequest struct {
 }
 
 func (o UpdatePeriodToOnDemandRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdatePeriodToOnDemandRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdatePeriodToOnDemandRequest", string(data)}, " ")
 }

@@ -38,7 +38,11 @@ type ProfileInfo struct {
 }
 
 func (o ProfileInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ProfileInfo struct{}"
+	}
+
 	return strings.Join([]string{"ProfileInfo", string(data)}, " ")
 }
 

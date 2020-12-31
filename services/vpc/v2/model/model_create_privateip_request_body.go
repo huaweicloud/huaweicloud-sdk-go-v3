@@ -20,6 +20,10 @@ type CreatePrivateipRequestBody struct {
 }
 
 func (o CreatePrivateipRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePrivateipRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreatePrivateipRequestBody", string(data)}, " ")
 }

@@ -48,6 +48,10 @@ type TemplateState struct {
 }
 
 func (o TemplateState) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TemplateState struct{}"
+	}
+
 	return strings.Join([]string{"TemplateState", string(data)}, " ")
 }

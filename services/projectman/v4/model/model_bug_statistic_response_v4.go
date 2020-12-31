@@ -32,6 +32,10 @@ type BugStatisticResponseV4 struct {
 }
 
 func (o BugStatisticResponseV4) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BugStatisticResponseV4 struct{}"
+	}
+
 	return strings.Join([]string{"BugStatisticResponseV4", string(data)}, " ")
 }

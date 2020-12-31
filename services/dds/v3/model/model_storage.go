@@ -22,6 +22,10 @@ type Storage struct {
 }
 
 func (o Storage) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Storage struct{}"
+	}
+
 	return strings.Join([]string{"Storage", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type ShowNatGatewaySnatRuleResponse struct {
 }
 
 func (o ShowNatGatewaySnatRuleResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowNatGatewaySnatRuleResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowNatGatewaySnatRuleResponse", string(data)}, " ")
 }

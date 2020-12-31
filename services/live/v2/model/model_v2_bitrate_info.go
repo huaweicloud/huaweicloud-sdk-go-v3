@@ -30,6 +30,10 @@ type V2BitrateInfo struct {
 }
 
 func (o V2BitrateInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "V2BitrateInfo struct{}"
+	}
+
 	return strings.Join([]string{"V2BitrateInfo", string(data)}, " ")
 }

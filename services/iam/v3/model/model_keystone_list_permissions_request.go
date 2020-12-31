@@ -22,6 +22,10 @@ type KeystoneListPermissionsRequest struct {
 }
 
 func (o KeystoneListPermissionsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneListPermissionsRequest struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneListPermissionsRequest", string(data)}, " ")
 }

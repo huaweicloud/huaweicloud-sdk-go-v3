@@ -18,6 +18,10 @@ type LoadBalancerStatusL7Rule struct {
 }
 
 func (o LoadBalancerStatusL7Rule) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LoadBalancerStatusL7Rule struct{}"
+	}
+
 	return strings.Join([]string{"LoadBalancerStatusL7Rule", string(data)}, " ")
 }

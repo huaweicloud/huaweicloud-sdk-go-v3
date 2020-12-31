@@ -22,6 +22,10 @@ type DeleteStreamForbiddenRequest struct {
 }
 
 func (o DeleteStreamForbiddenRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteStreamForbiddenRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteStreamForbiddenRequest", string(data)}, " ")
 }

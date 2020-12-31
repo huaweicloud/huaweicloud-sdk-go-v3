@@ -20,6 +20,10 @@ type UpdateHealthmonitorResponse struct {
 }
 
 func (o UpdateHealthmonitorResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateHealthmonitorResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateHealthmonitorResponse", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type DeleteIssueV4Request struct {
 }
 
 func (o DeleteIssueV4Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteIssueV4Request struct{}"
+	}
+
 	return strings.Join([]string{"DeleteIssueV4Request", string(data)}, " ")
 }

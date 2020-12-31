@@ -22,6 +22,10 @@ type Nics struct {
 }
 
 func (o Nics) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Nics struct{}"
+	}
+
 	return strings.Join([]string{"Nics", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type CceClusterNodeInformationMetadata struct {
 }
 
 func (o CceClusterNodeInformationMetadata) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CceClusterNodeInformationMetadata struct{}"
+	}
+
 	return strings.Join([]string{"CceClusterNodeInformationMetadata", string(data)}, " ")
 }

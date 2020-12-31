@@ -23,6 +23,10 @@ type StopInstanceResponse struct {
 }
 
 func (o StopInstanceResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StopInstanceResponse struct{}"
+	}
+
 	return strings.Join([]string{"StopInstanceResponse", string(data)}, " ")
 }

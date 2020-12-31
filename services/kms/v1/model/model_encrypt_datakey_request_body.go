@@ -27,6 +27,10 @@ type EncryptDatakeyRequestBody struct {
 }
 
 func (o EncryptDatakeyRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EncryptDatakeyRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"EncryptDatakeyRequestBody", string(data)}, " ")
 }

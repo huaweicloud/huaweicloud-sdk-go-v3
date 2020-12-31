@@ -28,7 +28,11 @@ type DeleteClusterRequest struct {
 }
 
 func (o DeleteClusterRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteClusterRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteClusterRequest", string(data)}, " ")
 }
 

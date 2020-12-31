@@ -44,6 +44,10 @@ type StatusStatistic struct {
 }
 
 func (o StatusStatistic) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StatusStatistic struct{}"
+	}
+
 	return strings.Join([]string{"StatusStatistic", string(data)}, " ")
 }

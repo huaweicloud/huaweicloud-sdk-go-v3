@@ -18,6 +18,10 @@ type ResourceReferAlias struct {
 }
 
 func (o ResourceReferAlias) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResourceReferAlias struct{}"
+	}
+
 	return strings.Join([]string{"ResourceReferAlias", string(data)}, " ")
 }

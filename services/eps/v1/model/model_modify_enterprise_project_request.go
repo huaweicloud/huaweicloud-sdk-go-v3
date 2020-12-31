@@ -20,6 +20,10 @@ type ModifyEnterpriseProjectRequest struct {
 }
 
 func (o ModifyEnterpriseProjectRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ModifyEnterpriseProjectRequest struct{}"
+	}
+
 	return strings.Join([]string{"ModifyEnterpriseProjectRequest", string(data)}, " ")
 }

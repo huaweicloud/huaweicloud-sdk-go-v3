@@ -21,6 +21,10 @@ type BatchCreateSharedBandwidthsResponse struct {
 }
 
 func (o BatchCreateSharedBandwidthsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchCreateSharedBandwidthsResponse struct{}"
+	}
+
 	return strings.Join([]string{"BatchCreateSharedBandwidthsResponse", string(data)}, " ")
 }

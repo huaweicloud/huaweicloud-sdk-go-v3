@@ -32,7 +32,11 @@ type ConfigurationParameter struct {
 }
 
 func (o ConfigurationParameter) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ConfigurationParameter struct{}"
+	}
+
 	return strings.Join([]string{"ConfigurationParameter", string(data)}, " ")
 }
 

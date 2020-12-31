@@ -19,6 +19,10 @@ type NovaDisassociateSecurityGroupResponse struct {
 }
 
 func (o NovaDisassociateSecurityGroupResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaDisassociateSecurityGroupResponse struct{}"
+	}
+
 	return strings.Join([]string{"NovaDisassociateSecurityGroupResponse", string(data)}, " ")
 }

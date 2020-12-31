@@ -25,6 +25,10 @@ type Conversion struct {
 }
 
 func (o Conversion) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Conversion struct{}"
+	}
+
 	return strings.Join([]string{"Conversion", string(data)}, " ")
 }

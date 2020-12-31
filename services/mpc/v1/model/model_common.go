@@ -25,6 +25,10 @@ type Common struct {
 }
 
 func (o Common) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Common struct{}"
+	}
+
 	return strings.Join([]string{"Common", string(data)}, " ")
 }

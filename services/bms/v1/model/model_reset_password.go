@@ -20,6 +20,10 @@ type ResetPassword struct {
 }
 
 func (o ResetPassword) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResetPassword struct{}"
+	}
+
 	return strings.Join([]string{"ResetPassword", string(data)}, " ")
 }

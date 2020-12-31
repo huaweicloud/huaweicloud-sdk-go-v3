@@ -20,6 +20,10 @@ type ChangeBaremetalNameServer struct {
 }
 
 func (o ChangeBaremetalNameServer) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeBaremetalNameServer struct{}"
+	}
+
 	return strings.Join([]string{"ChangeBaremetalNameServer", string(data)}, " ")
 }

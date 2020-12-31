@@ -25,6 +25,10 @@ type AgencyAssumedbyUser struct {
 }
 
 func (o AgencyAssumedbyUser) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AgencyAssumedbyUser struct{}"
+	}
+
 	return strings.Join([]string{"AgencyAssumedbyUser", string(data)}, " ")
 }

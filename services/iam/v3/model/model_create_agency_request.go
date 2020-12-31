@@ -19,6 +19,10 @@ type CreateAgencyRequest struct {
 }
 
 func (o CreateAgencyRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateAgencyRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateAgencyRequest", string(data)}, " ")
 }

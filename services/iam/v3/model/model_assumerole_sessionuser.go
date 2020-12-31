@@ -20,6 +20,10 @@ type AssumeroleSessionuser struct {
 }
 
 func (o AssumeroleSessionuser) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AssumeroleSessionuser struct{}"
+	}
+
 	return strings.Join([]string{"AssumeroleSessionuser", string(data)}, " ")
 }

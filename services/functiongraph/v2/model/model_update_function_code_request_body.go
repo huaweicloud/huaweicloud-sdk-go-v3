@@ -86,7 +86,11 @@ type UpdateFunctionCodeRequestBody struct {
 }
 
 func (o UpdateFunctionCodeRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateFunctionCodeRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateFunctionCodeRequestBody", string(data)}, " ")
 }
 

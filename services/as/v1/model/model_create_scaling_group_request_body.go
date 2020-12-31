@@ -59,7 +59,11 @@ type CreateScalingGroupRequestBody struct {
 }
 
 func (o CreateScalingGroupRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateScalingGroupRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateScalingGroupRequestBody", string(data)}, " ")
 }
 

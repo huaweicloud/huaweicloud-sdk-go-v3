@@ -20,6 +20,10 @@ type CreateLifyCycleHookRequest struct {
 }
 
 func (o CreateLifyCycleHookRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateLifyCycleHookRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateLifyCycleHookRequest", string(data)}, " ")
 }

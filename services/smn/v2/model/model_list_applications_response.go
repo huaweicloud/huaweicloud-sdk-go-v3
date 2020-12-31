@@ -24,6 +24,10 @@ type ListApplicationsResponse struct {
 }
 
 func (o ListApplicationsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListApplicationsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListApplicationsResponse", string(data)}, " ")
 }

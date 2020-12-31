@@ -30,6 +30,10 @@ type V2FramerateInfo struct {
 }
 
 func (o V2FramerateInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "V2FramerateInfo struct{}"
+	}
+
 	return strings.Join([]string{"V2FramerateInfo", string(data)}, " ")
 }

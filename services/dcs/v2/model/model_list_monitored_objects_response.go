@@ -27,6 +27,10 @@ type ListMonitoredObjectsResponse struct {
 }
 
 func (o ListMonitoredObjectsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListMonitoredObjectsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListMonitoredObjectsResponse", string(data)}, " ")
 }

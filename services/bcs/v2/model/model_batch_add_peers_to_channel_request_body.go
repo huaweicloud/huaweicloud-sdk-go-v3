@@ -20,6 +20,10 @@ type BatchAddPeersToChannelRequestBody struct {
 }
 
 func (o BatchAddPeersToChannelRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchAddPeersToChannelRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"BatchAddPeersToChannelRequestBody", string(data)}, " ")
 }

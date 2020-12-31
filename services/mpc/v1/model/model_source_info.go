@@ -28,6 +28,10 @@ type SourceInfo struct {
 }
 
 func (o SourceInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SourceInfo struct{}"
+	}
+
 	return strings.Join([]string{"SourceInfo", string(data)}, " ")
 }

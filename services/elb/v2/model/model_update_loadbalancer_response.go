@@ -20,6 +20,10 @@ type UpdateLoadbalancerResponse struct {
 }
 
 func (o UpdateLoadbalancerResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateLoadbalancerResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateLoadbalancerResponse", string(data)}, " ")
 }

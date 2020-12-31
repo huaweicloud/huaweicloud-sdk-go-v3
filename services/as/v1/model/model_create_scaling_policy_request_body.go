@@ -31,7 +31,11 @@ type CreateScalingPolicyRequestBody struct {
 }
 
 func (o CreateScalingPolicyRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateScalingPolicyRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateScalingPolicyRequestBody", string(data)}, " ")
 }
 

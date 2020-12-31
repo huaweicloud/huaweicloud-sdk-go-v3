@@ -19,6 +19,10 @@ type BatchCreateAndDeleteVaultTagsResponse struct {
 }
 
 func (o BatchCreateAndDeleteVaultTagsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchCreateAndDeleteVaultTagsResponse struct{}"
+	}
+
 	return strings.Join([]string{"BatchCreateAndDeleteVaultTagsResponse", string(data)}, " ")
 }

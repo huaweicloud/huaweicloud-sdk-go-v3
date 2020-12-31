@@ -22,6 +22,10 @@ type ConfigByOption struct {
 }
 
 func (o ConfigByOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ConfigByOption struct{}"
+	}
+
 	return strings.Join([]string{"ConfigByOption", string(data)}, " ")
 }

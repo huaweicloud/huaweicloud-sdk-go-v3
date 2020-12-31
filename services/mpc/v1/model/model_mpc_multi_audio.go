@@ -22,6 +22,10 @@ type MpcMultiAudio struct {
 }
 
 func (o MpcMultiAudio) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MpcMultiAudio struct{}"
+	}
+
 	return strings.Join([]string{"MpcMultiAudio", string(data)}, " ")
 }

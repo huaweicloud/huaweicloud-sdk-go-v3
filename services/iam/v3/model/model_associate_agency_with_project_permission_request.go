@@ -21,6 +21,10 @@ type AssociateAgencyWithProjectPermissionRequest struct {
 }
 
 func (o AssociateAgencyWithProjectPermissionRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AssociateAgencyWithProjectPermissionRequest struct{}"
+	}
+
 	return strings.Join([]string{"AssociateAgencyWithProjectPermissionRequest", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type ComCce struct {
 }
 
 func (o ComCce) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ComCce struct{}"
+	}
+
 	return strings.Join([]string{"ComCce", string(data)}, " ")
 }

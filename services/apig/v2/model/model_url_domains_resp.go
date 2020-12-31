@@ -27,6 +27,10 @@ type UrlDomainsResp struct {
 }
 
 func (o UrlDomainsResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UrlDomainsResp struct{}"
+	}
+
 	return strings.Join([]string{"UrlDomainsResp", string(data)}, " ")
 }

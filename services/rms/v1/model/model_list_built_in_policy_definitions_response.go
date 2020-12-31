@@ -22,6 +22,10 @@ type ListBuiltInPolicyDefinitionsResponse struct {
 }
 
 func (o ListBuiltInPolicyDefinitionsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListBuiltInPolicyDefinitionsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListBuiltInPolicyDefinitionsResponse", string(data)}, " ")
 }

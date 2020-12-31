@@ -21,6 +21,10 @@ type PeerAddress struct {
 }
 
 func (o PeerAddress) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PeerAddress struct{}"
+	}
+
 	return strings.Join([]string{"PeerAddress", string(data)}, " ")
 }

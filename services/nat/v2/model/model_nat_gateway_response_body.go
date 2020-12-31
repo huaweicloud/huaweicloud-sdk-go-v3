@@ -42,7 +42,11 @@ type NatGatewayResponseBody struct {
 }
 
 func (o NatGatewayResponseBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NatGatewayResponseBody struct{}"
+	}
+
 	return strings.Join([]string{"NatGatewayResponseBody", string(data)}, " ")
 }
 

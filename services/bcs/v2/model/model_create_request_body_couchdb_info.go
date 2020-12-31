@@ -22,6 +22,10 @@ type CreateRequestBodyCouchdbInfo struct {
 }
 
 func (o CreateRequestBodyCouchdbInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateRequestBodyCouchdbInfo struct{}"
+	}
+
 	return strings.Join([]string{"CreateRequestBodyCouchdbInfo", string(data)}, " ")
 }

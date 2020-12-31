@@ -28,6 +28,10 @@ type UpdateCredentialResult struct {
 }
 
 func (o UpdateCredentialResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateCredentialResult struct{}"
+	}
+
 	return strings.Join([]string{"UpdateCredentialResult", string(data)}, " ")
 }

@@ -25,6 +25,10 @@ type CheckUserIdentityResponse struct {
 }
 
 func (o CheckUserIdentityResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CheckUserIdentityResponse struct{}"
+	}
+
 	return strings.Join([]string{"CheckUserIdentityResponse", string(data)}, " ")
 }

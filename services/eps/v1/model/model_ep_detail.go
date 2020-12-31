@@ -34,7 +34,11 @@ type EpDetail struct {
 }
 
 func (o EpDetail) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EpDetail struct{}"
+	}
+
 	return strings.Join([]string{"EpDetail", string(data)}, " ")
 }
 

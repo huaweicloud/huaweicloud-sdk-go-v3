@@ -37,7 +37,11 @@ type CreateDataImageRequestBody struct {
 }
 
 func (o CreateDataImageRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateDataImageRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateDataImageRequestBody", string(data)}, " ")
 }
 

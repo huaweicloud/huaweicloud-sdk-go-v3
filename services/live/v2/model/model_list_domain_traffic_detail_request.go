@@ -26,6 +26,10 @@ type ListDomainTrafficDetailRequest struct {
 }
 
 func (o ListDomainTrafficDetailRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListDomainTrafficDetailRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListDomainTrafficDetailRequest", string(data)}, " ")
 }

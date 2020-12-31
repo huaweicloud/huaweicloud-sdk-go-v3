@@ -25,6 +25,10 @@ type PostPaidServerNic struct {
 }
 
 func (o PostPaidServerNic) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PostPaidServerNic struct{}"
+	}
+
 	return strings.Join([]string{"PostPaidServerNic", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type PrePaidServerIpv6Bandwidth struct {
 }
 
 func (o PrePaidServerIpv6Bandwidth) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PrePaidServerIpv6Bandwidth struct{}"
+	}
+
 	return strings.Join([]string{"PrePaidServerIpv6Bandwidth", string(data)}, " ")
 }

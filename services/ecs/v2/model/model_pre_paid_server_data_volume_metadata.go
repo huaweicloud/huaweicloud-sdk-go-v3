@@ -22,6 +22,10 @@ type PrePaidServerDataVolumeMetadata struct {
 }
 
 func (o PrePaidServerDataVolumeMetadata) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PrePaidServerDataVolumeMetadata struct{}"
+	}
+
 	return strings.Join([]string{"PrePaidServerDataVolumeMetadata", string(data)}, " ")
 }

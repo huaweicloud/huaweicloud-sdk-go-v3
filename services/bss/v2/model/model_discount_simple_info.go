@@ -21,6 +21,10 @@ type DiscountSimpleInfo struct {
 }
 
 func (o DiscountSimpleInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DiscountSimpleInfo struct{}"
+	}
+
 	return strings.Join([]string{"DiscountSimpleInfo", string(data)}, " ")
 }

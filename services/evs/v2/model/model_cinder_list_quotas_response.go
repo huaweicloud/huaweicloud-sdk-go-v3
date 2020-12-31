@@ -20,6 +20,10 @@ type CinderListQuotasResponse struct {
 }
 
 func (o CinderListQuotasResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CinderListQuotasResponse struct{}"
+	}
+
 	return strings.Join([]string{"CinderListQuotasResponse", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type DeletePermanentAccessKeyResponse struct {
 }
 
 func (o DeletePermanentAccessKeyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeletePermanentAccessKeyResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeletePermanentAccessKeyResponse", string(data)}, " ")
 }

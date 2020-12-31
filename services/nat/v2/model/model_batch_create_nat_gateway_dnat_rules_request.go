@@ -19,6 +19,10 @@ type BatchCreateNatGatewayDnatRulesRequest struct {
 }
 
 func (o BatchCreateNatGatewayDnatRulesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchCreateNatGatewayDnatRulesRequest struct{}"
+	}
+
 	return strings.Join([]string{"BatchCreateNatGatewayDnatRulesRequest", string(data)}, " ")
 }

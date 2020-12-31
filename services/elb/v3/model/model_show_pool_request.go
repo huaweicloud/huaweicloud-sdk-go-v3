@@ -19,6 +19,10 @@ type ShowPoolRequest struct {
 }
 
 func (o ShowPoolRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowPoolRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowPoolRequest", string(data)}, " ")
 }

@@ -21,7 +21,11 @@ type DeleteTrackerRequest struct {
 }
 
 func (o DeleteTrackerRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteTrackerRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteTrackerRequest", string(data)}, " ")
 }
 

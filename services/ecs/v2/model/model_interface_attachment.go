@@ -27,6 +27,10 @@ type InterfaceAttachment struct {
 }
 
 func (o InterfaceAttachment) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InterfaceAttachment struct{}"
+	}
+
 	return strings.Join([]string{"InterfaceAttachment", string(data)}, " ")
 }

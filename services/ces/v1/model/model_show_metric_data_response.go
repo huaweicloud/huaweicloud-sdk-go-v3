@@ -23,6 +23,10 @@ type ShowMetricDataResponse struct {
 }
 
 func (o ShowMetricDataResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowMetricDataResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowMetricDataResponse", string(data)}, " ")
 }

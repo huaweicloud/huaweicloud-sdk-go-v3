@@ -19,6 +19,10 @@ type SwitchoverReplicaSetRequest struct {
 }
 
 func (o SwitchoverReplicaSetRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SwitchoverReplicaSetRequest struct{}"
+	}
+
 	return strings.Join([]string{"SwitchoverReplicaSetRequest", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type KeystoneValidateTokenResponse struct {
 }
 
 func (o KeystoneValidateTokenResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneValidateTokenResponse struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneValidateTokenResponse", string(data)}, " ")
 }

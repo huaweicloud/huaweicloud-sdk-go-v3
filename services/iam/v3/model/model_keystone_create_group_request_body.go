@@ -19,6 +19,10 @@ type KeystoneCreateGroupRequestBody struct {
 }
 
 func (o KeystoneCreateGroupRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneCreateGroupRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneCreateGroupRequestBody", string(data)}, " ")
 }

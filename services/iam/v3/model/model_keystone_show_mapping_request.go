@@ -19,6 +19,10 @@ type KeystoneShowMappingRequest struct {
 }
 
 func (o KeystoneShowMappingRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneShowMappingRequest struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneShowMappingRequest", string(data)}, " ")
 }

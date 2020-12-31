@@ -19,6 +19,10 @@ type AccountManager struct {
 }
 
 func (o AccountManager) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AccountManager struct{}"
+	}
+
 	return strings.Join([]string{"AccountManager", string(data)}, " ")
 }

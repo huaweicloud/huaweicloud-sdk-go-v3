@@ -29,6 +29,10 @@ type GroupResponseItem struct {
 }
 
 func (o GroupResponseItem) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GroupResponseItem struct{}"
+	}
+
 	return strings.Join([]string{"GroupResponseItem", string(data)}, " ")
 }

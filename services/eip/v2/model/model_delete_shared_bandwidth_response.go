@@ -19,6 +19,10 @@ type DeleteSharedBandwidthResponse struct {
 }
 
 func (o DeleteSharedBandwidthResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteSharedBandwidthResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteSharedBandwidthResponse", string(data)}, " ")
 }

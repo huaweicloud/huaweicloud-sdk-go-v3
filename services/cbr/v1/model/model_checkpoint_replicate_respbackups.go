@@ -21,6 +21,10 @@ type CheckpointReplicateRespbackups struct {
 }
 
 func (o CheckpointReplicateRespbackups) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CheckpointReplicateRespbackups struct{}"
+	}
+
 	return strings.Join([]string{"CheckpointReplicateRespbackups", string(data)}, " ")
 }

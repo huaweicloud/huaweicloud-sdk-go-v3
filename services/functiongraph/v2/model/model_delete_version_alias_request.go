@@ -20,6 +20,10 @@ type DeleteVersionAliasRequest struct {
 }
 
 func (o DeleteVersionAliasRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteVersionAliasRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteVersionAliasRequest", string(data)}, " ")
 }

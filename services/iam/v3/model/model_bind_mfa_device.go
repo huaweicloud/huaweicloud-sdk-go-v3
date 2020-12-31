@@ -26,6 +26,10 @@ type BindMfaDevice struct {
 }
 
 func (o BindMfaDevice) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BindMfaDevice struct{}"
+	}
+
 	return strings.Join([]string{"BindMfaDevice", string(data)}, " ")
 }

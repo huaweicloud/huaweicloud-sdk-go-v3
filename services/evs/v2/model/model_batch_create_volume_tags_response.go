@@ -19,6 +19,10 @@ type BatchCreateVolumeTagsResponse struct {
 }
 
 func (o BatchCreateVolumeTagsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchCreateVolumeTagsResponse struct{}"
+	}
+
 	return strings.Join([]string{"BatchCreateVolumeTagsResponse", string(data)}, " ")
 }

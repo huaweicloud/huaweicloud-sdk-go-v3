@@ -41,7 +41,11 @@ type BandwidthRespInsert struct {
 }
 
 func (o BandwidthRespInsert) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BandwidthRespInsert struct{}"
+	}
+
 	return strings.Join([]string{"BandwidthRespInsert", string(data)}, " ")
 }
 

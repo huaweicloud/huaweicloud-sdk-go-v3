@@ -28,6 +28,10 @@ type CreateAlarmTemplateRequestBody struct {
 }
 
 func (o CreateAlarmTemplateRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateAlarmTemplateRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateAlarmTemplateRequestBody", string(data)}, " ")
 }

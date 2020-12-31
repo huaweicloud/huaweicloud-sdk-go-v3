@@ -22,6 +22,10 @@ type KeystoneListRegionsResponse struct {
 }
 
 func (o KeystoneListRegionsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneListRegionsResponse struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneListRegionsResponse", string(data)}, " ")
 }

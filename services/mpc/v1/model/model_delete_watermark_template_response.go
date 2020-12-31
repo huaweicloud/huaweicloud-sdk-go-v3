@@ -19,6 +19,10 @@ type DeleteWatermarkTemplateResponse struct {
 }
 
 func (o DeleteWatermarkTemplateResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteWatermarkTemplateResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteWatermarkTemplateResponse", string(data)}, " ")
 }

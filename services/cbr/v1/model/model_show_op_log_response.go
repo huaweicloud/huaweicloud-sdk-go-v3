@@ -20,6 +20,10 @@ type ShowOpLogResponse struct {
 }
 
 func (o ShowOpLogResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowOpLogResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowOpLogResponse", string(data)}, " ")
 }

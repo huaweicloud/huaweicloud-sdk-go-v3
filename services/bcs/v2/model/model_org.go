@@ -23,6 +23,10 @@ type Org struct {
 }
 
 func (o Org) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Org struct{}"
+	}
+
 	return strings.Join([]string{"Org", string(data)}, " ")
 }

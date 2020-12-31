@@ -22,6 +22,10 @@ type BackupStrategy struct {
 }
 
 func (o BackupStrategy) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BackupStrategy struct{}"
+	}
+
 	return strings.Join([]string{"BackupStrategy", string(data)}, " ")
 }

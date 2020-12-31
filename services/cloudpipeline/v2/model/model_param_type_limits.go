@@ -28,6 +28,10 @@ type ParamTypeLimits struct {
 }
 
 func (o ParamTypeLimits) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ParamTypeLimits struct{}"
+	}
+
 	return strings.Join([]string{"ParamTypeLimits", string(data)}, " ")
 }

@@ -26,6 +26,10 @@ type ShowCoordinatorsRespCoordinators struct {
 }
 
 func (o ShowCoordinatorsRespCoordinators) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowCoordinatorsRespCoordinators struct{}"
+	}
+
 	return strings.Join([]string{"ShowCoordinatorsRespCoordinators", string(data)}, " ")
 }

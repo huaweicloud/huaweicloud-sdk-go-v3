@@ -19,6 +19,10 @@ type NovaDeleteKeypairRequest struct {
 }
 
 func (o NovaDeleteKeypairRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaDeleteKeypairRequest struct{}"
+	}
+
 	return strings.Join([]string{"NovaDeleteKeypairRequest", string(data)}, " ")
 }

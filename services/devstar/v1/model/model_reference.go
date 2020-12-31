@@ -25,6 +25,10 @@ type Reference struct {
 }
 
 func (o Reference) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Reference struct{}"
+	}
+
 	return strings.Join([]string{"Reference", string(data)}, " ")
 }

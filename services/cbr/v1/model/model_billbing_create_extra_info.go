@@ -22,6 +22,10 @@ type BillbingCreateExtraInfo struct {
 }
 
 func (o BillbingCreateExtraInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BillbingCreateExtraInfo struct{}"
+	}
+
 	return strings.Join([]string{"BillbingCreateExtraInfo", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type CustomerInfoV2 struct {
 }
 
 func (o CustomerInfoV2) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CustomerInfoV2 struct{}"
+	}
+
 	return strings.Join([]string{"CustomerInfoV2", string(data)}, " ")
 }

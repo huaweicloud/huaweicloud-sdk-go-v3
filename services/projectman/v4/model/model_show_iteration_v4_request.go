@@ -19,6 +19,10 @@ type ShowIterationV4Request struct {
 }
 
 func (o ShowIterationV4Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowIterationV4Request struct{}"
+	}
+
 	return strings.Join([]string{"ShowIterationV4Request", string(data)}, " ")
 }

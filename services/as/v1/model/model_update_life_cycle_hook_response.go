@@ -37,7 +37,11 @@ type UpdateLifeCycleHookResponse struct {
 }
 
 func (o UpdateLifeCycleHookResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateLifeCycleHookResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateLifeCycleHookResponse", string(data)}, " ")
 }
 

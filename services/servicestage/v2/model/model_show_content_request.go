@@ -23,6 +23,10 @@ type ShowContentRequest struct {
 }
 
 func (o ShowContentRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowContentRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowContentRequest", string(data)}, " ")
 }

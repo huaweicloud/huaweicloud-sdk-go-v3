@@ -27,6 +27,10 @@ type IdentityprovidersResult struct {
 }
 
 func (o IdentityprovidersResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IdentityprovidersResult struct{}"
+	}
+
 	return strings.Join([]string{"IdentityprovidersResult", string(data)}, " ")
 }

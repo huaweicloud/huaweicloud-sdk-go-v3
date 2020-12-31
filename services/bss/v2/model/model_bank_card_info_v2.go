@@ -25,6 +25,10 @@ type BankCardInfoV2 struct {
 }
 
 func (o BankCardInfoV2) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BankCardInfoV2 struct{}"
+	}
+
 	return strings.Join([]string{"BankCardInfoV2", string(data)}, " ")
 }

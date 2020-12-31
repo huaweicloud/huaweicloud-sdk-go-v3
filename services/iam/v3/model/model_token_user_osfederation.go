@@ -22,6 +22,10 @@ type TokenUserOsfederation struct {
 }
 
 func (o TokenUserOsfederation) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TokenUserOsfederation struct{}"
+	}
+
 	return strings.Join([]string{"TokenUserOsfederation", string(data)}, " ")
 }

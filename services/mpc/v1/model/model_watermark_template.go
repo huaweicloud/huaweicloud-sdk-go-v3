@@ -43,7 +43,11 @@ type WatermarkTemplate struct {
 }
 
 func (o WatermarkTemplate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "WatermarkTemplate struct{}"
+	}
+
 	return strings.Join([]string{"WatermarkTemplate", string(data)}, " ")
 }
 

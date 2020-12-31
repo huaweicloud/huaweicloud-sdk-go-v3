@@ -19,6 +19,10 @@ type NovaListKeypairsResult struct {
 }
 
 func (o NovaListKeypairsResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaListKeypairsResult struct{}"
+	}
+
 	return strings.Join([]string{"NovaListKeypairsResult", string(data)}, " ")
 }

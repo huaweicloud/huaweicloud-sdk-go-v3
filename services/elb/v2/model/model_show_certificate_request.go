@@ -19,6 +19,10 @@ type ShowCertificateRequest struct {
 }
 
 func (o ShowCertificateRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowCertificateRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowCertificateRequest", string(data)}, " ")
 }

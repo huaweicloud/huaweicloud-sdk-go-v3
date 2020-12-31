@@ -39,7 +39,11 @@ type SubJobs struct {
 }
 
 func (o SubJobs) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SubJobs struct{}"
+	}
+
 	return strings.Join([]string{"SubJobs", string(data)}, " ")
 }
 

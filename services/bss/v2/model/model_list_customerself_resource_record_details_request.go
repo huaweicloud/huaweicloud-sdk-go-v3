@@ -19,6 +19,10 @@ type ListCustomerselfResourceRecordDetailsRequest struct {
 }
 
 func (o ListCustomerselfResourceRecordDetailsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListCustomerselfResourceRecordDetailsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListCustomerselfResourceRecordDetailsRequest", string(data)}, " ")
 }

@@ -18,6 +18,10 @@ type ListRunningTaskRequest struct {
 }
 
 func (o ListRunningTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListRunningTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListRunningTaskRequest", string(data)}, " ")
 }

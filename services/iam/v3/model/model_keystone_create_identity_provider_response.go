@@ -20,6 +20,10 @@ type KeystoneCreateIdentityProviderResponse struct {
 }
 
 func (o KeystoneCreateIdentityProviderResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneCreateIdentityProviderResponse struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneCreateIdentityProviderResponse", string(data)}, " ")
 }

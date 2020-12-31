@@ -30,6 +30,10 @@ type ListenersInStatusResp struct {
 }
 
 func (o ListenersInStatusResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListenersInStatusResp struct{}"
+	}
+
 	return strings.Join([]string{"ListenersInStatusResp", string(data)}, " ")
 }

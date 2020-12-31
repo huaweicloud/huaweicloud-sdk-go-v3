@@ -32,6 +32,10 @@ type ShowClusterRespClusterBrokers struct {
 }
 
 func (o ShowClusterRespClusterBrokers) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowClusterRespClusterBrokers struct{}"
+	}
+
 	return strings.Join([]string{"ShowClusterRespClusterBrokers", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type ShowFunctionConfigRequest struct {
 }
 
 func (o ShowFunctionConfigRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowFunctionConfigRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowFunctionConfigRequest", string(data)}, " ")
 }

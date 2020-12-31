@@ -29,7 +29,11 @@ type DataVolumes struct {
 }
 
 func (o DataVolumes) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DataVolumes struct{}"
+	}
+
 	return strings.Join([]string{"DataVolumes", string(data)}, " ")
 }
 

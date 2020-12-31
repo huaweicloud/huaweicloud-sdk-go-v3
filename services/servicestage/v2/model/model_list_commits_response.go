@@ -21,6 +21,10 @@ type ListCommitsResponse struct {
 }
 
 func (o ListCommitsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListCommitsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListCommitsResponse", string(data)}, " ")
 }

@@ -32,7 +32,11 @@ type BackendParam struct {
 }
 
 func (o BackendParam) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BackendParam struct{}"
+	}
+
 	return strings.Join([]string{"BackendParam", string(data)}, " ")
 }
 

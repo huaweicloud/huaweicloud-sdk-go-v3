@@ -25,7 +25,11 @@ type BulkCreateAndDeleteVaultTagsReq struct {
 }
 
 func (o BulkCreateAndDeleteVaultTagsReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BulkCreateAndDeleteVaultTagsReq struct{}"
+	}
+
 	return strings.Join([]string{"BulkCreateAndDeleteVaultTagsReq", string(data)}, " ")
 }
 

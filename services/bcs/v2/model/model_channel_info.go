@@ -25,6 +25,10 @@ type ChannelInfo struct {
 }
 
 func (o ChannelInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChannelInfo struct{}"
+	}
+
 	return strings.Join([]string{"ChannelInfo", string(data)}, " ")
 }

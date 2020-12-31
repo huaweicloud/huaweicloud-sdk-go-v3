@@ -18,6 +18,10 @@ type TemplateExtend struct {
 }
 
 func (o TemplateExtend) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TemplateExtend struct{}"
+	}
+
 	return strings.Join([]string{"TemplateExtend", string(data)}, " ")
 }

@@ -40,6 +40,10 @@ type VnicInfo struct {
 }
 
 func (o VnicInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VnicInfo struct{}"
+	}
+
 	return strings.Join([]string{"VnicInfo", string(data)}, " ")
 }

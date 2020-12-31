@@ -19,6 +19,10 @@ type GlanceDeleteTagResponse struct {
 }
 
 func (o GlanceDeleteTagResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GlanceDeleteTagResponse struct{}"
+	}
+
 	return strings.Join([]string{"GlanceDeleteTagResponse", string(data)}, " ")
 }

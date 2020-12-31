@@ -22,7 +22,11 @@ type DetachServerVolumeRequest struct {
 }
 
 func (o DetachServerVolumeRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DetachServerVolumeRequest struct{}"
+	}
+
 	return strings.Join([]string{"DetachServerVolumeRequest", string(data)}, " ")
 }
 

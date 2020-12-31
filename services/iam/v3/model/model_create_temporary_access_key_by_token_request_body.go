@@ -19,6 +19,10 @@ type CreateTemporaryAccessKeyByTokenRequestBody struct {
 }
 
 func (o CreateTemporaryAccessKeyByTokenRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateTemporaryAccessKeyByTokenRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateTemporaryAccessKeyByTokenRequestBody", string(data)}, " ")
 }

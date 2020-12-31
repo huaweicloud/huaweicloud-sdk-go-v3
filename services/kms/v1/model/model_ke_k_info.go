@@ -21,6 +21,10 @@ type KeKInfo struct {
 }
 
 func (o KeKInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeKInfo struct{}"
+	}
+
 	return strings.Join([]string{"KeKInfo", string(data)}, " ")
 }

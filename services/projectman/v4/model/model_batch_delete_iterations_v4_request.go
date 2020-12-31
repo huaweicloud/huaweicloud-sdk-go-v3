@@ -20,6 +20,10 @@ type BatchDeleteIterationsV4Request struct {
 }
 
 func (o BatchDeleteIterationsV4Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchDeleteIterationsV4Request struct{}"
+	}
+
 	return strings.Join([]string{"BatchDeleteIterationsV4Request", string(data)}, " ")
 }

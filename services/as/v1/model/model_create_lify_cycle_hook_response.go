@@ -37,7 +37,11 @@ type CreateLifyCycleHookResponse struct {
 }
 
 func (o CreateLifyCycleHookResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateLifyCycleHookResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateLifyCycleHookResponse", string(data)}, " ")
 }
 

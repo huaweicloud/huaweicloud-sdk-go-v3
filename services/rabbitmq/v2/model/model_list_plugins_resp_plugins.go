@@ -26,6 +26,10 @@ type ListPluginsRespPlugins struct {
 }
 
 func (o ListPluginsRespPlugins) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListPluginsRespPlugins struct{}"
+	}
+
 	return strings.Join([]string{"ListPluginsRespPlugins", string(data)}, " ")
 }

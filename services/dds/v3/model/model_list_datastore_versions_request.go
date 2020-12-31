@@ -20,7 +20,11 @@ type ListDatastoreVersionsRequest struct {
 }
 
 func (o ListDatastoreVersionsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListDatastoreVersionsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListDatastoreVersionsRequest", string(data)}, " ")
 }
 

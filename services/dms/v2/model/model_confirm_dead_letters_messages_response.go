@@ -23,6 +23,10 @@ type ConfirmDeadLettersMessagesResponse struct {
 }
 
 func (o ConfirmDeadLettersMessagesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ConfirmDeadLettersMessagesResponse struct{}"
+	}
+
 	return strings.Join([]string{"ConfirmDeadLettersMessagesResponse", string(data)}, " ")
 }

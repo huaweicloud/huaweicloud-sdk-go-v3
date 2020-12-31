@@ -20,6 +20,10 @@ type CreateSubnetResponse struct {
 }
 
 func (o CreateSubnetResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateSubnetResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateSubnetResponse", string(data)}, " ")
 }

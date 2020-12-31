@@ -41,7 +41,11 @@ type UpdateAppV2Response struct {
 }
 
 func (o UpdateAppV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateAppV2Response struct{}"
+	}
+
 	return strings.Join([]string{"UpdateAppV2Response", string(data)}, " ")
 }
 

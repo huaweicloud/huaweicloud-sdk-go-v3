@@ -19,6 +19,10 @@ type ChangeFailoverStrategyResponse struct {
 }
 
 func (o ChangeFailoverStrategyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeFailoverStrategyResponse struct{}"
+	}
+
 	return strings.Join([]string{"ChangeFailoverStrategyResponse", string(data)}, " ")
 }

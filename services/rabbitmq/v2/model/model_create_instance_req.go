@@ -59,7 +59,11 @@ type CreateInstanceReq struct {
 }
 
 func (o CreateInstanceReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateInstanceReq struct{}"
+	}
+
 	return strings.Join([]string{"CreateInstanceReq", string(data)}, " ")
 }
 

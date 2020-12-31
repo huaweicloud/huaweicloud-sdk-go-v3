@@ -31,7 +31,11 @@ type Disk struct {
 }
 
 func (o Disk) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Disk struct{}"
+	}
+
 	return strings.Join([]string{"Disk", string(data)}, " ")
 }
 

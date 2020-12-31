@@ -20,6 +20,10 @@ type PoolRef struct {
 }
 
 func (o PoolRef) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PoolRef struct{}"
+	}
+
 	return strings.Join([]string{"PoolRef", string(data)}, " ")
 }

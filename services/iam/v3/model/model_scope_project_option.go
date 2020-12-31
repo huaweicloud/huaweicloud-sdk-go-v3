@@ -23,6 +23,10 @@ type ScopeProjectOption struct {
 }
 
 func (o ScopeProjectOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ScopeProjectOption struct{}"
+	}
+
 	return strings.Join([]string{"ScopeProjectOption", string(data)}, " ")
 }

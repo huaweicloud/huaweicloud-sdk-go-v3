@@ -19,6 +19,10 @@ type UpdateCertificateRequestBody struct {
 }
 
 func (o UpdateCertificateRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateCertificateRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateCertificateRequestBody", string(data)}, " ")
 }

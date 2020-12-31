@@ -19,6 +19,10 @@ type ListApplicationAttributesRequest struct {
 }
 
 func (o ListApplicationAttributesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListApplicationAttributesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListApplicationAttributesRequest", string(data)}, " ")
 }

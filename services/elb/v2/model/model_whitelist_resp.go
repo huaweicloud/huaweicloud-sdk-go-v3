@@ -28,6 +28,10 @@ type WhitelistResp struct {
 }
 
 func (o WhitelistResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "WhitelistResp struct{}"
+	}
+
 	return strings.Join([]string{"WhitelistResp", string(data)}, " ")
 }

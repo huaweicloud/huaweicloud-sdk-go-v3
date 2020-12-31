@@ -45,7 +45,11 @@ type OsExtraSpecs struct {
 }
 
 func (o OsExtraSpecs) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OsExtraSpecs struct{}"
+	}
+
 	return strings.Join([]string{"OsExtraSpecs", string(data)}, " ")
 }
 

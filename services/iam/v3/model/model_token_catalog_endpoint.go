@@ -28,6 +28,10 @@ type TokenCatalogEndpoint struct {
 }
 
 func (o TokenCatalogEndpoint) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TokenCatalogEndpoint struct{}"
+	}
+
 	return strings.Join([]string{"TokenCatalogEndpoint", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type UpdateInstanceNameResponse struct {
 }
 
 func (o UpdateInstanceNameResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateInstanceNameResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateInstanceNameResponse", string(data)}, " ")
 }

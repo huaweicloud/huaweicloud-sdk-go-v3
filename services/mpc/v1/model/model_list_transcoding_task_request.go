@@ -25,6 +25,10 @@ type ListTranscodingTaskRequest struct {
 }
 
 func (o ListTranscodingTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListTranscodingTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListTranscodingTaskRequest", string(data)}, " ")
 }

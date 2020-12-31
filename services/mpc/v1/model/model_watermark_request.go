@@ -24,6 +24,10 @@ type WatermarkRequest struct {
 }
 
 func (o WatermarkRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "WatermarkRequest struct{}"
+	}
+
 	return strings.Join([]string{"WatermarkRequest", string(data)}, " ")
 }

@@ -33,6 +33,10 @@ type InstanceParam struct {
 	PluginEnableList *[]string `json:"plugin_enable_list,omitempty"`
 	// 场景插件参数
 	PluginVars map[string]string `json:"plugin_vars,omitempty"`
+	// 云服务器对应的portId，标签为webshell-internal时使用
+	PortId *string `json:"port_id,omitempty"`
+	// 云服务器ip，标签为webshell-internal时使用
+	PrivateIp *string `json:"private_ip,omitempty"`
 	// PVC规格 5GB|10GB|20GB
 	PvcQuantity InstanceParamPvcQuantity `json:"pvc_quantity"`
 	// 实例的生命周期 arm架构,生命周期只能设置成30，60。x86架构可取值为30，60，240，1440和-1。除-1外，其它值的单位为“分钟”。实例在到达生命周期后，将会被暂停（已保存的数据不会被删除）。-1表示实例不会自动停止。
@@ -45,10 +49,16 @@ type InstanceParam struct {
 	TaskType *string `json:"task_type,omitempty"`
 	// 解放号的token，标签为jfh时使用
 	Token *string `json:"token,omitempty"`
+	// 云服务器对应的vpcId，标签为webshell-internal时使用
+	VpcId *string `json:"vpc_id,omitempty"`
 }
 
 func (o InstanceParam) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceParam struct{}"
+	}
+
 	return strings.Join([]string{"InstanceParam", string(data)}, " ")
 }
 

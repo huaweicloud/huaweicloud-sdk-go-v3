@@ -56,6 +56,10 @@ type Absolute struct {
 }
 
 func (o Absolute) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Absolute struct{}"
+	}
+
 	return strings.Join([]string{"Absolute", string(data)}, " ")
 }

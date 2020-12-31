@@ -20,6 +20,10 @@ type Login struct {
 }
 
 func (o Login) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Login struct{}"
+	}
+
 	return strings.Join([]string{"Login", string(data)}, " ")
 }

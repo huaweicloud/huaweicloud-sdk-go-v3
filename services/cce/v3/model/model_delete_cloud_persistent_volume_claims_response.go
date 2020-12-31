@@ -26,6 +26,10 @@ type DeleteCloudPersistentVolumeClaimsResponse struct {
 }
 
 func (o DeleteCloudPersistentVolumeClaimsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteCloudPersistentVolumeClaimsResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteCloudPersistentVolumeClaimsResponse", string(data)}, " ")
 }

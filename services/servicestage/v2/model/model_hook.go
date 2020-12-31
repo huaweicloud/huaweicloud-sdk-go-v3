@@ -23,6 +23,10 @@ type Hook struct {
 }
 
 func (o Hook) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Hook struct{}"
+	}
+
 	return strings.Join([]string{"Hook", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type CreateLoadbalancerRequestBody struct {
 }
 
 func (o CreateLoadbalancerRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateLoadbalancerRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateLoadbalancerRequestBody", string(data)}, " ")
 }

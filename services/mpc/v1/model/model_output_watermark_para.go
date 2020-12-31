@@ -19,6 +19,10 @@ type OutputWatermarkPara struct {
 }
 
 func (o OutputWatermarkPara) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OutputWatermarkPara struct{}"
+	}
+
 	return strings.Join([]string{"OutputWatermarkPara", string(data)}, " ")
 }

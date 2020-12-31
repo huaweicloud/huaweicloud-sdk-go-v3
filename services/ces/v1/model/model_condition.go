@@ -32,6 +32,10 @@ type Condition struct {
 }
 
 func (o Condition) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Condition struct{}"
+	}
+
 	return strings.Join([]string{"Condition", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type CouponSimpleInfo struct {
 }
 
 func (o CouponSimpleInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CouponSimpleInfo struct{}"
+	}
+
 	return strings.Join([]string{"CouponSimpleInfo", string(data)}, " ")
 }

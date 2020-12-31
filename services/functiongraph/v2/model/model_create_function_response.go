@@ -85,7 +85,11 @@ type CreateFunctionResponse struct {
 }
 
 func (o CreateFunctionResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateFunctionResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateFunctionResponse", string(data)}, " ")
 }
 

@@ -20,6 +20,10 @@ type BatchRestartOrDeleteInstancesRequest struct {
 }
 
 func (o BatchRestartOrDeleteInstancesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchRestartOrDeleteInstancesRequest struct{}"
+	}
+
 	return strings.Join([]string{"BatchRestartOrDeleteInstancesRequest", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type ShowResetPwdResponse struct {
 }
 
 func (o ShowResetPwdResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowResetPwdResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowResetPwdResponse", string(data)}, " ")
 }

@@ -27,6 +27,10 @@ type RestorePoint struct {
 }
 
 func (o RestorePoint) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RestorePoint struct{}"
+	}
+
 	return strings.Join([]string{"RestorePoint", string(data)}, " ")
 }

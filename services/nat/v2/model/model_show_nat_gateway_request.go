@@ -19,6 +19,10 @@ type ShowNatGatewayRequest struct {
 }
 
 func (o ShowNatGatewayRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowNatGatewayRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowNatGatewayRequest", string(data)}, " ")
 }

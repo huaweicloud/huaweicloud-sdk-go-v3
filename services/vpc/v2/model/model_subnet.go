@@ -57,7 +57,11 @@ type Subnet struct {
 }
 
 func (o Subnet) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Subnet struct{}"
+	}
+
 	return strings.Join([]string{"Subnet", string(data)}, " ")
 }
 

@@ -19,6 +19,10 @@ type DeleteVersionAliasResponse struct {
 }
 
 func (o DeleteVersionAliasResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteVersionAliasResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteVersionAliasResponse", string(data)}, " ")
 }

@@ -40,7 +40,11 @@ type ApiFunc struct {
 }
 
 func (o ApiFunc) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApiFunc struct{}"
+	}
+
 	return strings.Join([]string{"ApiFunc", string(data)}, " ")
 }
 

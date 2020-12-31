@@ -29,6 +29,10 @@ type DownloadSlowlogResult struct {
 }
 
 func (o DownloadSlowlogResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DownloadSlowlogResult struct{}"
+	}
+
 	return strings.Join([]string{"DownloadSlowlogResult", string(data)}, " ")
 }

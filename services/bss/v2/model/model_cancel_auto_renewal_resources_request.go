@@ -19,6 +19,10 @@ type CancelAutoRenewalResourcesRequest struct {
 }
 
 func (o CancelAutoRenewalResourcesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CancelAutoRenewalResourcesRequest struct{}"
+	}
+
 	return strings.Join([]string{"CancelAutoRenewalResourcesRequest", string(data)}, " ")
 }

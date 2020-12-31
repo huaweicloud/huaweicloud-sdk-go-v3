@@ -19,6 +19,10 @@ type UpdateSnapshotRequestBody struct {
 }
 
 func (o UpdateSnapshotRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateSnapshotRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateSnapshotRequestBody", string(data)}, " ")
 }

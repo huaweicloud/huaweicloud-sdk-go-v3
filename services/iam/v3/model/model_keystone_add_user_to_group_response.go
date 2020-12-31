@@ -19,6 +19,10 @@ type KeystoneAddUserToGroupResponse struct {
 }
 
 func (o KeystoneAddUserToGroupResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneAddUserToGroupResponse struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneAddUserToGroupResponse", string(data)}, " ")
 }

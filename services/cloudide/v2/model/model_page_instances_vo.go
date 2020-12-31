@@ -27,6 +27,10 @@ type PageInstancesVo struct {
 }
 
 func (o PageInstancesVo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PageInstancesVo struct{}"
+	}
+
 	return strings.Join([]string{"PageInstancesVo", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type SimpleFlavor struct {
 }
 
 func (o SimpleFlavor) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SimpleFlavor struct{}"
+	}
+
 	return strings.Join([]string{"SimpleFlavor", string(data)}, " ")
 }

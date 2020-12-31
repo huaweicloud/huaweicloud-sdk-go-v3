@@ -24,6 +24,10 @@ type ErrorLog struct {
 }
 
 func (o ErrorLog) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ErrorLog struct{}"
+	}
+
 	return strings.Join([]string{"ErrorLog", string(data)}, " ")
 }

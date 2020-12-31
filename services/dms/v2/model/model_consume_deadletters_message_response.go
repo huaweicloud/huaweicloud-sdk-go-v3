@@ -21,6 +21,10 @@ type ConsumeDeadlettersMessageResponse struct {
 }
 
 func (o ConsumeDeadlettersMessageResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ConsumeDeadlettersMessageResponse struct{}"
+	}
+
 	return strings.Join([]string{"ConsumeDeadlettersMessageResponse", string(data)}, " ")
 }

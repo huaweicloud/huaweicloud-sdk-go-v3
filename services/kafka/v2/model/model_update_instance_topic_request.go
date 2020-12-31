@@ -21,6 +21,10 @@ type UpdateInstanceTopicRequest struct {
 }
 
 func (o UpdateInstanceTopicRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateInstanceTopicRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateInstanceTopicRequest", string(data)}, " ")
 }

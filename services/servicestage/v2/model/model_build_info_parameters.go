@@ -24,6 +24,10 @@ type BuildInfoParameters struct {
 }
 
 func (o BuildInfoParameters) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BuildInfoParameters struct{}"
+	}
+
 	return strings.Join([]string{"BuildInfoParameters", string(data)}, " ")
 }

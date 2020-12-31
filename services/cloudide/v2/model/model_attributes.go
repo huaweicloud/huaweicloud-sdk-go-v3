@@ -23,6 +23,10 @@ type Attributes struct {
 }
 
 func (o Attributes) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Attributes struct{}"
+	}
+
 	return strings.Join([]string{"Attributes", string(data)}, " ")
 }

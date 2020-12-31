@@ -19,6 +19,10 @@ type CreateMigrationTaskRequest struct {
 }
 
 func (o CreateMigrationTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateMigrationTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateMigrationTaskRequest", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type ListFunctionTriggersResponse struct {
 }
 
 func (o ListFunctionTriggersResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListFunctionTriggersResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListFunctionTriggersResponse", string(data)}, " ")
 }

@@ -49,6 +49,10 @@ type SecurityGroupRule struct {
 }
 
 func (o SecurityGroupRule) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SecurityGroupRule struct{}"
+	}
+
 	return strings.Join([]string{"SecurityGroupRule", string(data)}, " ")
 }

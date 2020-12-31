@@ -31,6 +31,10 @@ type GlanceShowImageMemberResponse struct {
 }
 
 func (o GlanceShowImageMemberResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GlanceShowImageMemberResponse struct{}"
+	}
+
 	return strings.Join([]string{"GlanceShowImageMemberResponse", string(data)}, " ")
 }

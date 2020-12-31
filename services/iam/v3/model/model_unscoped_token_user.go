@@ -24,6 +24,10 @@ type UnscopedTokenUser struct {
 }
 
 func (o UnscopedTokenUser) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UnscopedTokenUser struct{}"
+	}
+
 	return strings.Join([]string{"UnscopedTokenUser", string(data)}, " ")
 }

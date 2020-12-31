@@ -19,6 +19,10 @@ type ResetPwdResponse struct {
 }
 
 func (o ResetPwdResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResetPwdResponse struct{}"
+	}
+
 	return strings.Join([]string{"ResetPwdResponse", string(data)}, " ")
 }

@@ -25,6 +25,10 @@ type CreateDatakeyResponse struct {
 }
 
 func (o CreateDatakeyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateDatakeyResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateDatakeyResponse", string(data)}, " ")
 }

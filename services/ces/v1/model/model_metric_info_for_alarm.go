@@ -28,6 +28,10 @@ type MetricInfoForAlarm struct {
 }
 
 func (o MetricInfoForAlarm) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MetricInfoForAlarm struct{}"
+	}
+
 	return strings.Join([]string{"MetricInfoForAlarm", string(data)}, " ")
 }

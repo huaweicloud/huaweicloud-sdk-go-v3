@@ -51,6 +51,10 @@ type AlarmHistoryInfo struct {
 }
 
 func (o AlarmHistoryInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AlarmHistoryInfo struct{}"
+	}
+
 	return strings.Join([]string{"AlarmHistoryInfo", string(data)}, " ")
 }

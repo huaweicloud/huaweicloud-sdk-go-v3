@@ -23,6 +23,10 @@ type ShowVaultTagResponse struct {
 }
 
 func (o ShowVaultTagResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowVaultTagResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowVaultTagResponse", string(data)}, " ")
 }

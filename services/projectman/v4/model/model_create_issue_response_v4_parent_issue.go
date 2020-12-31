@@ -22,6 +22,10 @@ type CreateIssueResponseV4ParentIssue struct {
 }
 
 func (o CreateIssueResponseV4ParentIssue) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateIssueResponseV4ParentIssue struct{}"
+	}
+
 	return strings.Join([]string{"CreateIssueResponseV4ParentIssue", string(data)}, " ")
 }

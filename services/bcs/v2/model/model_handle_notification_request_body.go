@@ -27,7 +27,11 @@ type HandleNotificationRequestBody struct {
 }
 
 func (o HandleNotificationRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HandleNotificationRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"HandleNotificationRequestBody", string(data)}, " ")
 }
 

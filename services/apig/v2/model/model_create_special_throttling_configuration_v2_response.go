@@ -38,6 +38,10 @@ type CreateSpecialThrottlingConfigurationV2Response struct {
 }
 
 func (o CreateSpecialThrottlingConfigurationV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateSpecialThrottlingConfigurationV2Response struct{}"
+	}
+
 	return strings.Join([]string{"CreateSpecialThrottlingConfigurationV2Response", string(data)}, " ")
 }

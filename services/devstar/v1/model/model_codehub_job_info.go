@@ -29,7 +29,11 @@ type CodehubJobInfo struct {
 }
 
 func (o CodehubJobInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CodehubJobInfo struct{}"
+	}
+
 	return strings.Join([]string{"CodehubJobInfo", string(data)}, " ")
 }
 

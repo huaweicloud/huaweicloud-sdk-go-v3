@@ -22,6 +22,10 @@ type ConfirmConsumptionMessagesRequest struct {
 }
 
 func (o ConfirmConsumptionMessagesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ConfirmConsumptionMessagesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ConfirmConsumptionMessagesRequest", string(data)}, " ")
 }

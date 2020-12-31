@@ -20,6 +20,10 @@ type ServerId struct {
 }
 
 func (o ServerId) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServerId struct{}"
+	}
+
 	return strings.Join([]string{"ServerId", string(data)}, " ")
 }

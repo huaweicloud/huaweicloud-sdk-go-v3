@@ -22,7 +22,11 @@ type ChangeFailoverStrategyRequest struct {
 }
 
 func (o ChangeFailoverStrategyRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeFailoverStrategyRequest struct{}"
+	}
+
 	return strings.Join([]string{"ChangeFailoverStrategyRequest", string(data)}, " ")
 }
 

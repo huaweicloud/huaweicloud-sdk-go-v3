@@ -24,6 +24,10 @@ type UpdateLoginProtectRespon struct {
 }
 
 func (o UpdateLoginProtectRespon) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateLoginProtectRespon struct{}"
+	}
+
 	return strings.Join([]string{"UpdateLoginProtectRespon", string(data)}, " ")
 }

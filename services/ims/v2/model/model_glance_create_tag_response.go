@@ -19,6 +19,10 @@ type GlanceCreateTagResponse struct {
 }
 
 func (o GlanceCreateTagResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GlanceCreateTagResponse struct{}"
+	}
+
 	return strings.Join([]string{"GlanceCreateTagResponse", string(data)}, " ")
 }

@@ -30,7 +30,11 @@ type PrePaidServerRootVolume struct {
 }
 
 func (o PrePaidServerRootVolume) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PrePaidServerRootVolume struct{}"
+	}
+
 	return strings.Join([]string{"PrePaidServerRootVolume", string(data)}, " ")
 }
 

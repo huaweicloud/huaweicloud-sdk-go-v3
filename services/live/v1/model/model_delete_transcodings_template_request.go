@@ -20,6 +20,10 @@ type DeleteTranscodingsTemplateRequest struct {
 }
 
 func (o DeleteTranscodingsTemplateRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteTranscodingsTemplateRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteTranscodingsTemplateRequest", string(data)}, " ")
 }

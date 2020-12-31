@@ -23,7 +23,11 @@ type MatchReq struct {
 }
 
 func (o MatchReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MatchReq struct{}"
+	}
+
 	return strings.Join([]string{"MatchReq", string(data)}, " ")
 }
 

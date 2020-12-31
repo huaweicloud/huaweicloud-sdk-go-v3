@@ -23,6 +23,10 @@ type RemuxOutputParam struct {
 }
 
 func (o RemuxOutputParam) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RemuxOutputParam struct{}"
+	}
+
 	return strings.Join([]string{"RemuxOutputParam", string(data)}, " ")
 }

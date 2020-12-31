@@ -55,7 +55,11 @@ type AppAuthBindedApiResp struct {
 }
 
 func (o AppAuthBindedApiResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AppAuthBindedApiResp struct{}"
+	}
+
 	return strings.Join([]string{"AppAuthBindedApiResp", string(data)}, " ")
 }
 

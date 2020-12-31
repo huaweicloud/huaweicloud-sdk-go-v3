@@ -19,6 +19,10 @@ type KeystoneCreateProjectRequestBody struct {
 }
 
 func (o KeystoneCreateProjectRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneCreateProjectRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneCreateProjectRequestBody", string(data)}, " ")
 }

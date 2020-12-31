@@ -20,6 +20,10 @@ type CinderExportToImageRequest struct {
 }
 
 func (o CinderExportToImageRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CinderExportToImageRequest struct{}"
+	}
+
 	return strings.Join([]string{"CinderExportToImageRequest", string(data)}, " ")
 }

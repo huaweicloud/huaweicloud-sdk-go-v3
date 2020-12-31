@@ -83,6 +83,10 @@ type VolumeDetail struct {
 }
 
 func (o VolumeDetail) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VolumeDetail struct{}"
+	}
+
 	return strings.Join([]string{"VolumeDetail", string(data)}, " ")
 }

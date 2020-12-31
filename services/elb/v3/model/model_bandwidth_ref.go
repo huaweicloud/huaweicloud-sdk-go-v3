@@ -20,6 +20,10 @@ type BandwidthRef struct {
 }
 
 func (o BandwidthRef) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BandwidthRef struct{}"
+	}
+
 	return strings.Join([]string{"BandwidthRef", string(data)}, " ")
 }

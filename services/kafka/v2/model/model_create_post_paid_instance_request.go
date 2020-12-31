@@ -20,6 +20,10 @@ type CreatePostPaidInstanceRequest struct {
 }
 
 func (o CreatePostPaidInstanceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePostPaidInstanceRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreatePostPaidInstanceRequest", string(data)}, " ")
 }

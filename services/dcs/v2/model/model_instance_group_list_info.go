@@ -24,6 +24,10 @@ type InstanceGroupListInfo struct {
 }
 
 func (o InstanceGroupListInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceGroupListInfo struct{}"
+	}
+
 	return strings.Join([]string{"InstanceGroupListInfo", string(data)}, " ")
 }

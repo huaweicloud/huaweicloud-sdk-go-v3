@@ -23,6 +23,10 @@ type ListEnterpriseMultiAccountResponse struct {
 }
 
 func (o ListEnterpriseMultiAccountResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListEnterpriseMultiAccountResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListEnterpriseMultiAccountResponse", string(data)}, " ")
 }

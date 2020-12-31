@@ -28,6 +28,10 @@ type ServerFlavor struct {
 }
 
 func (o ServerFlavor) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServerFlavor struct{}"
+	}
+
 	return strings.Join([]string{"ServerFlavor", string(data)}, " ")
 }

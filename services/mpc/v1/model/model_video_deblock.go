@@ -21,6 +21,10 @@ type VideoDeblock struct {
 }
 
 func (o VideoDeblock) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VideoDeblock struct{}"
+	}
+
 	return strings.Join([]string{"VideoDeblock", string(data)}, " ")
 }

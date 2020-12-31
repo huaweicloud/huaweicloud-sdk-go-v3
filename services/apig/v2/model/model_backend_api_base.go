@@ -43,7 +43,11 @@ type BackendApiBase struct {
 }
 
 func (o BackendApiBase) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BackendApiBase struct{}"
+	}
+
 	return strings.Join([]string{"BackendApiBase", string(data)}, " ")
 }
 

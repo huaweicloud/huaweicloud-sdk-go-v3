@@ -30,7 +30,11 @@ type ListConfigurationsResponse struct {
 }
 
 func (o ListConfigurationsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListConfigurationsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListConfigurationsResponse", string(data)}, " ")
 }
 

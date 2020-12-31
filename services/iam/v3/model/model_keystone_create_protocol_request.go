@@ -21,6 +21,10 @@ type KeystoneCreateProtocolRequest struct {
 }
 
 func (o KeystoneCreateProtocolRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneCreateProtocolRequest struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneCreateProtocolRequest", string(data)}, " ")
 }

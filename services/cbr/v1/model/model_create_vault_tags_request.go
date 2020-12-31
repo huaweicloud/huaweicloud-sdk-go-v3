@@ -20,6 +20,10 @@ type CreateVaultTagsRequest struct {
 }
 
 func (o CreateVaultTagsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateVaultTagsRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateVaultTagsRequest", string(data)}, " ")
 }

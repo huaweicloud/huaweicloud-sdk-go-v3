@@ -21,6 +21,10 @@ type ShowBaremetalServerVolumeInfoResponse struct {
 }
 
 func (o ShowBaremetalServerVolumeInfoResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowBaremetalServerVolumeInfoResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowBaremetalServerVolumeInfoResponse", string(data)}, " ")
 }

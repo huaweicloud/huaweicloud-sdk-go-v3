@@ -33,6 +33,10 @@ type ListInstanceRequestBody struct {
 }
 
 func (o ListInstanceRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListInstanceRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"ListInstanceRequestBody", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type CreatePartitionResponse struct {
 }
 
 func (o CreatePartitionResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePartitionResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreatePartitionResponse", string(data)}, " ")
 }

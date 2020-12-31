@@ -21,6 +21,10 @@ type KeystoneCheckroleForGroupRequest struct {
 }
 
 func (o KeystoneCheckroleForGroupRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneCheckroleForGroupRequest struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneCheckroleForGroupRequest", string(data)}, " ")
 }

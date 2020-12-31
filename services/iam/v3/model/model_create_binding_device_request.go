@@ -19,6 +19,10 @@ type CreateBindingDeviceRequest struct {
 }
 
 func (o CreateBindingDeviceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateBindingDeviceRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateBindingDeviceRequest", string(data)}, " ")
 }

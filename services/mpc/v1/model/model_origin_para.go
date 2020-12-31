@@ -25,6 +25,10 @@ type OriginPara struct {
 }
 
 func (o OriginPara) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OriginPara struct{}"
+	}
+
 	return strings.Join([]string{"OriginPara", string(data)}, " ")
 }

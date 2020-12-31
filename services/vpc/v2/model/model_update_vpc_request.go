@@ -20,6 +20,10 @@ type UpdateVpcRequest struct {
 }
 
 func (o UpdateVpcRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateVpcRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateVpcRequest", string(data)}, " ")
 }

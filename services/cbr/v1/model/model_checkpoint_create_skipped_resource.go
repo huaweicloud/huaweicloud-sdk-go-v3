@@ -28,6 +28,10 @@ type CheckpointCreateSkippedResource struct {
 }
 
 func (o CheckpointCreateSkippedResource) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CheckpointCreateSkippedResource struct{}"
+	}
+
 	return strings.Join([]string{"CheckpointCreateSkippedResource", string(data)}, " ")
 }

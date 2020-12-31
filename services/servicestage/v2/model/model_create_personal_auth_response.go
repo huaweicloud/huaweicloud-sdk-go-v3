@@ -20,6 +20,10 @@ type CreatePersonalAuthResponse struct {
 }
 
 func (o CreatePersonalAuthResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePersonalAuthResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreatePersonalAuthResponse", string(data)}, " ")
 }

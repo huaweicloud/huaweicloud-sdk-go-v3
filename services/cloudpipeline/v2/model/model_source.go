@@ -40,6 +40,10 @@ type Source struct {
 }
 
 func (o Source) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Source struct{}"
+	}
+
 	return strings.Join([]string{"Source", string(data)}, " ")
 }

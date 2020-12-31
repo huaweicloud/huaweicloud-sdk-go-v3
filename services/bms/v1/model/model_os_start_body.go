@@ -19,6 +19,10 @@ type OsStartBody struct {
 }
 
 func (o OsStartBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OsStartBody struct{}"
+	}
+
 	return strings.Join([]string{"OsStartBody", string(data)}, " ")
 }

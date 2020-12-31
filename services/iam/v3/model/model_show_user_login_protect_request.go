@@ -19,6 +19,10 @@ type ShowUserLoginProtectRequest struct {
 }
 
 func (o ShowUserLoginProtectRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowUserLoginProtectRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowUserLoginProtectRequest", string(data)}, " ")
 }

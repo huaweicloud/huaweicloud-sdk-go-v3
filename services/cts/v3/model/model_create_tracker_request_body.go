@@ -32,7 +32,11 @@ type CreateTrackerRequestBody struct {
 }
 
 func (o CreateTrackerRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateTrackerRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateTrackerRequestBody", string(data)}, " ")
 }
 

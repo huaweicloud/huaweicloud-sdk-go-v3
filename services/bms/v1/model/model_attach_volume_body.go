@@ -19,6 +19,10 @@ type AttachVolumeBody struct {
 }
 
 func (o AttachVolumeBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AttachVolumeBody struct{}"
+	}
+
 	return strings.Join([]string{"AttachVolumeBody", string(data)}, " ")
 }

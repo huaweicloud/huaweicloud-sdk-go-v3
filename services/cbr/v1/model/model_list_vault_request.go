@@ -30,7 +30,11 @@ type ListVaultRequest struct {
 }
 
 func (o ListVaultRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListVaultRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListVaultRequest", string(data)}, " ")
 }
 

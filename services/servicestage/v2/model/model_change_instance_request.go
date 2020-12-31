@@ -22,6 +22,10 @@ type ChangeInstanceRequest struct {
 }
 
 func (o ChangeInstanceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeInstanceRequest struct{}"
+	}
+
 	return strings.Join([]string{"ChangeInstanceRequest", string(data)}, " ")
 }

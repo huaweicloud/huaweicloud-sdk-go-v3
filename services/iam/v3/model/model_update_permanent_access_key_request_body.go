@@ -19,6 +19,10 @@ type UpdatePermanentAccessKeyRequestBody struct {
 }
 
 func (o UpdatePermanentAccessKeyRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdatePermanentAccessKeyRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdatePermanentAccessKeyRequestBody", string(data)}, " ")
 }

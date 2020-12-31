@@ -19,6 +19,10 @@ type AcceptVpcPeeringRequest struct {
 }
 
 func (o AcceptVpcPeeringRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AcceptVpcPeeringRequest struct{}"
+	}
+
 	return strings.Join([]string{"AcceptVpcPeeringRequest", string(data)}, " ")
 }

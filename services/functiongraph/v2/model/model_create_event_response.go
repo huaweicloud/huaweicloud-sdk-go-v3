@@ -27,6 +27,10 @@ type CreateEventResponse struct {
 }
 
 func (o CreateEventResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateEventResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateEventResponse", string(data)}, " ")
 }

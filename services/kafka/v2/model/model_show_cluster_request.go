@@ -20,6 +20,10 @@ type ShowClusterRequest struct {
 }
 
 func (o ShowClusterRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowClusterRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowClusterRequest", string(data)}, " ")
 }

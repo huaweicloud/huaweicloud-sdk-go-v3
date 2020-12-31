@@ -21,6 +21,10 @@ type CreateInstanceReqTags struct {
 }
 
 func (o CreateInstanceReqTags) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateInstanceReqTags struct{}"
+	}
+
 	return strings.Join([]string{"CreateInstanceReqTags", string(data)}, " ")
 }

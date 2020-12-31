@@ -22,6 +22,10 @@ type ListSingleStreamFramerateResponse struct {
 }
 
 func (o ListSingleStreamFramerateResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListSingleStreamFramerateResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListSingleStreamFramerateResponse", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type TagMatch struct {
 }
 
 func (o TagMatch) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TagMatch struct{}"
+	}
+
 	return strings.Join([]string{"TagMatch", string(data)}, " ")
 }

@@ -74,7 +74,11 @@ type InstancesVo struct {
 }
 
 func (o InstancesVo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstancesVo struct{}"
+	}
+
 	return strings.Join([]string{"InstancesVo", string(data)}, " ")
 }
 

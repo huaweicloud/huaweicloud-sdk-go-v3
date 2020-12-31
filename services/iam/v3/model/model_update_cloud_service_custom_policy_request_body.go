@@ -19,6 +19,10 @@ type UpdateCloudServiceCustomPolicyRequestBody struct {
 }
 
 func (o UpdateCloudServiceCustomPolicyRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateCloudServiceCustomPolicyRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateCloudServiceCustomPolicyRequestBody", string(data)}, " ")
 }

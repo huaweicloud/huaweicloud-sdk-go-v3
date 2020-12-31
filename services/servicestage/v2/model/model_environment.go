@@ -43,6 +43,10 @@ type Environment struct {
 }
 
 func (o Environment) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Environment struct{}"
+	}
+
 	return strings.Join([]string{"Environment", string(data)}, " ")
 }

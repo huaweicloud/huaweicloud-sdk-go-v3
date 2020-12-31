@@ -21,6 +21,10 @@ type ModifyInstanceConfigurationResponse struct {
 }
 
 func (o ModifyInstanceConfigurationResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ModifyInstanceConfigurationResponse struct{}"
+	}
+
 	return strings.Join([]string{"ModifyInstanceConfigurationResponse", string(data)}, " ")
 }

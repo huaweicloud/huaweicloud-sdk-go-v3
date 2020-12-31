@@ -22,6 +22,10 @@ type DataPointForAlarmHistory struct {
 }
 
 func (o DataPointForAlarmHistory) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DataPointForAlarmHistory struct{}"
+	}
+
 	return strings.Join([]string{"DataPointForAlarmHistory", string(data)}, " ")
 }

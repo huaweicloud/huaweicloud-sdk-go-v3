@@ -31,6 +31,10 @@ type ListOnDemandResourceRatingsResponse struct {
 }
 
 func (o ListOnDemandResourceRatingsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListOnDemandResourceRatingsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListOnDemandResourceRatingsResponse", string(data)}, " ")
 }

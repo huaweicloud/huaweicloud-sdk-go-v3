@@ -23,6 +23,10 @@ type ConfigurationForUpdate struct {
 }
 
 func (o ConfigurationForUpdate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ConfigurationForUpdate struct{}"
+	}
+
 	return strings.Join([]string{"ConfigurationForUpdate", string(data)}, " ")
 }

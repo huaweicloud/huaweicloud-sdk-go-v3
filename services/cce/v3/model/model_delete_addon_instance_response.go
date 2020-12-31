@@ -20,6 +20,10 @@ type DeleteAddonInstanceResponse struct {
 }
 
 func (o DeleteAddonInstanceResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteAddonInstanceResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteAddonInstanceResponse", string(data)}, " ")
 }

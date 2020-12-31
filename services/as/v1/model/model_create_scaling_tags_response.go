@@ -19,6 +19,10 @@ type CreateScalingTagsResponse struct {
 }
 
 func (o CreateScalingTagsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateScalingTagsResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateScalingTagsResponse", string(data)}, " ")
 }

@@ -25,7 +25,11 @@ type DataBucketQuery struct {
 }
 
 func (o DataBucketQuery) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DataBucketQuery struct{}"
+	}
+
 	return strings.Join([]string{"DataBucketQuery", string(data)}, " ")
 }
 

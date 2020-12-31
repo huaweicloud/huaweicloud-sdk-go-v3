@@ -23,6 +23,10 @@ type CommonCreateTaskReq struct {
 }
 
 func (o CommonCreateTaskReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CommonCreateTaskReq struct{}"
+	}
+
 	return strings.Join([]string{"CommonCreateTaskReq", string(data)}, " ")
 }

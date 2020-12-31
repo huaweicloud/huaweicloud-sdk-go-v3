@@ -23,6 +23,10 @@ type ComponentModify struct {
 }
 
 func (o ComponentModify) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ComponentModify struct{}"
+	}
+
 	return strings.Join([]string{"ComponentModify", string(data)}, " ")
 }

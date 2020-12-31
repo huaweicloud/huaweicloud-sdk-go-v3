@@ -21,6 +21,10 @@ type KeystoneCheckProjectPermissionForGroupRequest struct {
 }
 
 func (o KeystoneCheckProjectPermissionForGroupRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneCheckProjectPermissionForGroupRequest struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneCheckProjectPermissionForGroupRequest", string(data)}, " ")
 }

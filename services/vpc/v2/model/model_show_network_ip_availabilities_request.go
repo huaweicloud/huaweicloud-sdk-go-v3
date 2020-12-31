@@ -19,6 +19,10 @@ type ShowNetworkIpAvailabilitiesRequest struct {
 }
 
 func (o ShowNetworkIpAvailabilitiesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowNetworkIpAvailabilitiesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowNetworkIpAvailabilitiesRequest", string(data)}, " ")
 }

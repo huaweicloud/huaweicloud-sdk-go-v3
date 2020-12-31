@@ -19,6 +19,10 @@ type CreateSecurityGroupRequest struct {
 }
 
 func (o CreateSecurityGroupRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateSecurityGroupRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateSecurityGroupRequest", string(data)}, " ")
 }

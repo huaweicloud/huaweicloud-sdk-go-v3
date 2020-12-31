@@ -29,6 +29,10 @@ type IndirectPartnerInfo struct {
 }
 
 func (o IndirectPartnerInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IndirectPartnerInfo struct{}"
+	}
+
 	return strings.Join([]string{"IndirectPartnerInfo", string(data)}, " ")
 }

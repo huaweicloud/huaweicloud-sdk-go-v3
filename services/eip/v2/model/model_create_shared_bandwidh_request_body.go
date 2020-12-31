@@ -19,6 +19,10 @@ type CreateSharedBandwidhRequestBody struct {
 }
 
 func (o CreateSharedBandwidhRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateSharedBandwidhRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateSharedBandwidhRequestBody", string(data)}, " ")
 }

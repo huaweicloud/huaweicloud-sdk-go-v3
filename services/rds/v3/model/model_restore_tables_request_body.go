@@ -21,6 +21,10 @@ type RestoreTablesRequestBody struct {
 }
 
 func (o RestoreTablesRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RestoreTablesRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"RestoreTablesRequestBody", string(data)}, " ")
 }

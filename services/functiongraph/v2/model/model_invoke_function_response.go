@@ -27,6 +27,10 @@ type InvokeFunctionResponse struct {
 }
 
 func (o InvokeFunctionResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InvokeFunctionResponse struct{}"
+	}
+
 	return strings.Join([]string{"InvokeFunctionResponse", string(data)}, " ")
 }

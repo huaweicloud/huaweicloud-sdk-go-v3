@@ -19,6 +19,10 @@ type NovaDisassociateSecurityGroupRequestBody struct {
 }
 
 func (o NovaDisassociateSecurityGroupRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaDisassociateSecurityGroupRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"NovaDisassociateSecurityGroupRequestBody", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type ListTranscodeDetailResponse struct {
 }
 
 func (o ListTranscodeDetailResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListTranscodeDetailResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListTranscodeDetailResponse", string(data)}, " ")
 }

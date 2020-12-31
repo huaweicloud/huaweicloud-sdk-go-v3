@@ -19,6 +19,10 @@ type ChangeOpsWindowResponse struct {
 }
 
 func (o ChangeOpsWindowResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeOpsWindowResponse struct{}"
+	}
+
 	return strings.Join([]string{"ChangeOpsWindowResponse", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type GlanceDeleteImageRequestBody struct {
 }
 
 func (o GlanceDeleteImageRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GlanceDeleteImageRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"GlanceDeleteImageRequestBody", string(data)}, " ")
 }

@@ -22,7 +22,11 @@ type ShowFunctionTriggerRequest struct {
 }
 
 func (o ShowFunctionTriggerRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowFunctionTriggerRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowFunctionTriggerRequest", string(data)}, " ")
 }
 

@@ -21,6 +21,10 @@ type ListInstanceMetricResponse struct {
 }
 
 func (o ListInstanceMetricResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListInstanceMetricResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListInstanceMetricResponse", string(data)}, " ")
 }

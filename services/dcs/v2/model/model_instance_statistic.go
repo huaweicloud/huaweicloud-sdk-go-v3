@@ -36,6 +36,10 @@ type InstanceStatistic struct {
 }
 
 func (o InstanceStatistic) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceStatistic struct{}"
+	}
+
 	return strings.Join([]string{"InstanceStatistic", string(data)}, " ")
 }

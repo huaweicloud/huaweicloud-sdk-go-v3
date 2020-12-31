@@ -18,6 +18,10 @@ type ShowCusotmerAccountBalancesRequest struct {
 }
 
 func (o ShowCusotmerAccountBalancesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowCusotmerAccountBalancesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowCusotmerAccountBalancesRequest", string(data)}, " ")
 }

@@ -49,7 +49,11 @@ type UpdateListenerOption struct {
 }
 
 func (o UpdateListenerOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateListenerOption struct{}"
+	}
+
 	return strings.Join([]string{"UpdateListenerOption", string(data)}, " ")
 }
 

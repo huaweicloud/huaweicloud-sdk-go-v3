@@ -19,6 +19,10 @@ type CreateMergeChannelsTaskRequest struct {
 }
 
 func (o CreateMergeChannelsTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateMergeChannelsTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateMergeChannelsTaskRequest", string(data)}, " ")
 }

@@ -26,6 +26,10 @@ type TokenCatalog struct {
 }
 
 func (o TokenCatalog) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TokenCatalog struct{}"
+	}
+
 	return strings.Join([]string{"TokenCatalog", string(data)}, " ")
 }

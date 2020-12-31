@@ -85,7 +85,11 @@ type UpdateFunctionConfigResponse struct {
 }
 
 func (o UpdateFunctionConfigResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateFunctionConfigResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateFunctionConfigResponse", string(data)}, " ")
 }
 

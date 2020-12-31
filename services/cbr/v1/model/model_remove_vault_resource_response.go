@@ -21,6 +21,10 @@ type RemoveVaultResourceResponse struct {
 }
 
 func (o RemoveVaultResourceResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RemoveVaultResourceResponse struct{}"
+	}
+
 	return strings.Join([]string{"RemoveVaultResourceResponse", string(data)}, " ")
 }

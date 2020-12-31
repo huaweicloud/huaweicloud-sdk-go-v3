@@ -36,6 +36,10 @@ type CreateThumbReq struct {
 }
 
 func (o CreateThumbReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateThumbReq struct{}"
+	}
+
 	return strings.Join([]string{"CreateThumbReq", string(data)}, " ")
 }

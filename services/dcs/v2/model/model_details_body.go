@@ -34,6 +34,10 @@ type DetailsBody struct {
 }
 
 func (o DetailsBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DetailsBody struct{}"
+	}
+
 	return strings.Join([]string{"DetailsBody", string(data)}, " ")
 }

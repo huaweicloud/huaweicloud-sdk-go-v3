@@ -59,7 +59,11 @@ type Traces struct {
 }
 
 func (o Traces) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Traces struct{}"
+	}
+
 	return strings.Join([]string{"Traces", string(data)}, " ")
 }
 

@@ -22,6 +22,10 @@ type ApiBackendVpcReq struct {
 }
 
 func (o ApiBackendVpcReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApiBackendVpcReq struct{}"
+	}
+
 	return strings.Join([]string{"ApiBackendVpcReq", string(data)}, " ")
 }

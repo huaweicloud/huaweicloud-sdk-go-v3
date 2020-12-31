@@ -33,6 +33,10 @@ type AuthProjectResult struct {
 }
 
 func (o AuthProjectResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AuthProjectResult struct{}"
+	}
+
 	return strings.Join([]string{"AuthProjectResult", string(data)}, " ")
 }

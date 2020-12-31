@@ -22,6 +22,10 @@ type StatisticValue struct {
 }
 
 func (o StatisticValue) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StatisticValue struct{}"
+	}
+
 	return strings.Join([]string{"StatisticValue", string(data)}, " ")
 }

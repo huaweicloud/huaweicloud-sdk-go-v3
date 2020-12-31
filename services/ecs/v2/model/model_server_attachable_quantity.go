@@ -26,6 +26,10 @@ type ServerAttachableQuantity struct {
 }
 
 func (o ServerAttachableQuantity) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServerAttachableQuantity struct{}"
+	}
+
 	return strings.Join([]string{"ServerAttachableQuantity", string(data)}, " ")
 }

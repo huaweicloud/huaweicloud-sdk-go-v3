@@ -35,6 +35,10 @@ type KeystoneUpdateProjectResult struct {
 }
 
 func (o KeystoneUpdateProjectResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneUpdateProjectResult struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneUpdateProjectResult", string(data)}, " ")
 }

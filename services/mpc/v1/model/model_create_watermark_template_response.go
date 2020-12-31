@@ -21,6 +21,10 @@ type CreateWatermarkTemplateResponse struct {
 }
 
 func (o CreateWatermarkTemplateResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateWatermarkTemplateResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateWatermarkTemplateResponse", string(data)}, " ")
 }

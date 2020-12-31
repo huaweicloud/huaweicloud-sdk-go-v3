@@ -20,6 +20,10 @@ type CopyBackupRequest struct {
 }
 
 func (o CopyBackupRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CopyBackupRequest struct{}"
+	}
+
 	return strings.Join([]string{"CopyBackupRequest", string(data)}, " ")
 }

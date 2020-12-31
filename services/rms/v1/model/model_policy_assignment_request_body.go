@@ -27,6 +27,10 @@ type PolicyAssignmentRequestBody struct {
 }
 
 func (o PolicyAssignmentRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PolicyAssignmentRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"PolicyAssignmentRequestBody", string(data)}, " ")
 }

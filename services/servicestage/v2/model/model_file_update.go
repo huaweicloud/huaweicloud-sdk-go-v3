@@ -23,6 +23,10 @@ type FileUpdate struct {
 }
 
 func (o FileUpdate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "FileUpdate struct{}"
+	}
+
 	return strings.Join([]string{"FileUpdate", string(data)}, " ")
 }

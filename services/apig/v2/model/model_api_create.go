@@ -74,7 +74,11 @@ type ApiCreate struct {
 }
 
 func (o ApiCreate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApiCreate struct{}"
+	}
+
 	return strings.Join([]string{"ApiCreate", string(data)}, " ")
 }
 

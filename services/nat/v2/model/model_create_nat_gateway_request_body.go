@@ -19,6 +19,10 @@ type CreateNatGatewayRequestBody struct {
 }
 
 func (o CreateNatGatewayRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateNatGatewayRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateNatGatewayRequestBody", string(data)}, " ")
 }

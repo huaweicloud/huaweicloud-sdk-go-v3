@@ -19,6 +19,10 @@ type CommonQueryTaskRsp struct {
 }
 
 func (o CommonQueryTaskRsp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CommonQueryTaskRsp struct{}"
+	}
+
 	return strings.Join([]string{"CommonQueryTaskRsp", string(data)}, " ")
 }

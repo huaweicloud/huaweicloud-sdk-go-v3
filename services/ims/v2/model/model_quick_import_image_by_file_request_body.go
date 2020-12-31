@@ -41,7 +41,11 @@ type QuickImportImageByFileRequestBody struct {
 }
 
 func (o QuickImportImageByFileRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QuickImportImageByFileRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"QuickImportImageByFileRequestBody", string(data)}, " ")
 }
 

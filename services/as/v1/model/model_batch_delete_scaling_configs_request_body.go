@@ -20,6 +20,10 @@ type BatchDeleteScalingConfigsRequestBody struct {
 }
 
 func (o BatchDeleteScalingConfigsRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchDeleteScalingConfigsRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"BatchDeleteScalingConfigsRequestBody", string(data)}, " ")
 }

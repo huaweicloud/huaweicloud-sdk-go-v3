@@ -32,6 +32,10 @@ type MediaProcessTaskInfo struct {
 }
 
 func (o MediaProcessTaskInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MediaProcessTaskInfo struct{}"
+	}
+
 	return strings.Join([]string{"MediaProcessTaskInfo", string(data)}, " ")
 }

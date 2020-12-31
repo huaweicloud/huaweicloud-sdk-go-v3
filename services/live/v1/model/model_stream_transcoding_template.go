@@ -23,6 +23,10 @@ type StreamTranscodingTemplate struct {
 }
 
 func (o StreamTranscodingTemplate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StreamTranscodingTemplate struct{}"
+	}
+
 	return strings.Join([]string{"StreamTranscodingTemplate", string(data)}, " ")
 }

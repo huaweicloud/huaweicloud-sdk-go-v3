@@ -22,6 +22,10 @@ type ChangeInstanceStatusBody struct {
 }
 
 func (o ChangeInstanceStatusBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeInstanceStatusBody struct{}"
+	}
+
 	return strings.Join([]string{"ChangeInstanceStatusBody", string(data)}, " ")
 }

@@ -35,6 +35,10 @@ type ShowBuiltInPolicyDefinitionResponse struct {
 }
 
 func (o ShowBuiltInPolicyDefinitionResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowBuiltInPolicyDefinitionResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowBuiltInPolicyDefinitionResponse", string(data)}, " ")
 }

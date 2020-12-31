@@ -19,6 +19,10 @@ type CheckpointReplicateReq struct {
 }
 
 func (o CheckpointReplicateReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CheckpointReplicateReq struct{}"
+	}
+
 	return strings.Join([]string{"CheckpointReplicateReq", string(data)}, " ")
 }

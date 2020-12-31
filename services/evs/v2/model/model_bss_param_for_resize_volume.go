@@ -21,7 +21,11 @@ type BssParamForResizeVolume struct {
 }
 
 func (o BssParamForResizeVolume) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BssParamForResizeVolume struct{}"
+	}
+
 	return strings.Join([]string{"BssParamForResizeVolume", string(data)}, " ")
 }
 

@@ -23,6 +23,10 @@ type ClusterCert struct {
 }
 
 func (o ClusterCert) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ClusterCert struct{}"
+	}
+
 	return strings.Join([]string{"ClusterCert", string(data)}, " ")
 }

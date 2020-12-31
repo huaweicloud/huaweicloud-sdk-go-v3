@@ -21,6 +21,10 @@ type DeleteComponentRequest struct {
 }
 
 func (o DeleteComponentRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteComponentRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteComponentRequest", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type ChannelConfigBody struct {
 }
 
 func (o ChannelConfigBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChannelConfigBody struct{}"
+	}
+
 	return strings.Join([]string{"ChannelConfigBody", string(data)}, " ")
 }

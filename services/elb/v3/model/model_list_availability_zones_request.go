@@ -18,6 +18,10 @@ type ListAvailabilityZonesRequest struct {
 }
 
 func (o ListAvailabilityZonesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListAvailabilityZonesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListAvailabilityZonesRequest", string(data)}, " ")
 }

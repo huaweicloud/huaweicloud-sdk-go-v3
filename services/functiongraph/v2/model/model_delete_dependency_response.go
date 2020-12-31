@@ -19,6 +19,10 @@ type DeleteDependencyResponse struct {
 }
 
 func (o DeleteDependencyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteDependencyResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteDependencyResponse", string(data)}, " ")
 }

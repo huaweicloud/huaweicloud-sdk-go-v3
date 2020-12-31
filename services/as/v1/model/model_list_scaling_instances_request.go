@@ -25,7 +25,11 @@ type ListScalingInstancesRequest struct {
 }
 
 func (o ListScalingInstancesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListScalingInstancesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListScalingInstancesRequest", string(data)}, " ")
 }
 

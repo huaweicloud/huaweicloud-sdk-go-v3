@@ -21,6 +21,10 @@ type ListStatisticsOfRunningInstancesResponse struct {
 }
 
 func (o ListStatisticsOfRunningInstancesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListStatisticsOfRunningInstancesResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListStatisticsOfRunningInstancesResponse", string(data)}, " ")
 }

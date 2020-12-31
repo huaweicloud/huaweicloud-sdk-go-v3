@@ -20,6 +20,10 @@ type CreateTemplateGroupResponse struct {
 }
 
 func (o CreateTemplateGroupResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateTemplateGroupResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateTemplateGroupResponse", string(data)}, " ")
 }

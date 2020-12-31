@@ -19,6 +19,10 @@ type DownloadApplicationCodeResponse struct {
 }
 
 func (o DownloadApplicationCodeResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DownloadApplicationCodeResponse struct{}"
+	}
+
 	return strings.Join([]string{"DownloadApplicationCodeResponse", string(data)}, " ")
 }

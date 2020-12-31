@@ -25,6 +25,10 @@ type ListApisNotBoundWithSignatureKeyV2Response struct {
 }
 
 func (o ListApisNotBoundWithSignatureKeyV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListApisNotBoundWithSignatureKeyV2Response struct{}"
+	}
+
 	return strings.Join([]string{"ListApisNotBoundWithSignatureKeyV2Response", string(data)}, " ")
 }

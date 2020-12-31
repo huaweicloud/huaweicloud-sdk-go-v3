@@ -20,6 +20,10 @@ type BatchDeletePublicipTagsRequest struct {
 }
 
 func (o BatchDeletePublicipTagsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchDeletePublicipTagsRequest struct{}"
+	}
+
 	return strings.Join([]string{"BatchDeletePublicipTagsRequest", string(data)}, " ")
 }

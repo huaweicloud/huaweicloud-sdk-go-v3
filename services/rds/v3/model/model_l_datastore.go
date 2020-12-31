@@ -22,6 +22,10 @@ type LDatastore struct {
 }
 
 func (o LDatastore) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LDatastore struct{}"
+	}
+
 	return strings.Join([]string{"LDatastore", string(data)}, " ")
 }

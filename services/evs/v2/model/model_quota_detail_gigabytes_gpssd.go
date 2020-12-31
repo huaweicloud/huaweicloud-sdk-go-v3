@@ -26,6 +26,10 @@ type QuotaDetailGigabytesGpssd struct {
 }
 
 func (o QuotaDetailGigabytesGpssd) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QuotaDetailGigabytesGpssd struct{}"
+	}
+
 	return strings.Join([]string{"QuotaDetailGigabytesGpssd", string(data)}, " ")
 }

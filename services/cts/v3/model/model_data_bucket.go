@@ -22,7 +22,11 @@ type DataBucket struct {
 }
 
 func (o DataBucket) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DataBucket struct{}"
+	}
+
 	return strings.Join([]string{"DataBucket", string(data)}, " ")
 }
 

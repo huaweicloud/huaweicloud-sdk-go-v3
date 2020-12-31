@@ -27,7 +27,11 @@ type TrackerObsInfo struct {
 }
 
 func (o TrackerObsInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TrackerObsInfo struct{}"
+	}
+
 	return strings.Join([]string{"TrackerObsInfo", string(data)}, " ")
 }
 

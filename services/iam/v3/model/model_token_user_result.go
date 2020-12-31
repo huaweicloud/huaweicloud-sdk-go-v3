@@ -25,6 +25,10 @@ type TokenUserResult struct {
 }
 
 func (o TokenUserResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TokenUserResult struct{}"
+	}
+
 	return strings.Join([]string{"TokenUserResult", string(data)}, " ")
 }

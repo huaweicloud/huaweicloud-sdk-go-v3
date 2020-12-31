@@ -19,6 +19,10 @@ type DeleteSubNetworkInterfaceResponse struct {
 }
 
 func (o DeleteSubNetworkInterfaceResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteSubNetworkInterfaceResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteSubNetworkInterfaceResponse", string(data)}, " ")
 }

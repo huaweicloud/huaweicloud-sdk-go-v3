@@ -19,6 +19,10 @@ type DeleteAlarmRequest struct {
 }
 
 func (o DeleteAlarmRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteAlarmRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteAlarmRequest", string(data)}, " ")
 }

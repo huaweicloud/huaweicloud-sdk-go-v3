@@ -26,6 +26,10 @@ type ScopedTokenUser struct {
 }
 
 func (o ScopedTokenUser) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ScopedTokenUser struct{}"
+	}
+
 	return strings.Join([]string{"ScopedTokenUser", string(data)}, " ")
 }

@@ -49,7 +49,11 @@ type V3ClusterSpec struct {
 }
 
 func (o V3ClusterSpec) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "V3ClusterSpec struct{}"
+	}
+
 	return strings.Join([]string{"V3ClusterSpec", string(data)}, " ")
 }
 

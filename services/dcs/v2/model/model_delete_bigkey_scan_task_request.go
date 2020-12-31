@@ -20,6 +20,10 @@ type DeleteBigkeyScanTaskRequest struct {
 }
 
 func (o DeleteBigkeyScanTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteBigkeyScanTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteBigkeyScanTaskRequest", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type ShowBackupPolicyResponse struct {
 }
 
 func (o ShowBackupPolicyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowBackupPolicyResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowBackupPolicyResponse", string(data)}, " ")
 }

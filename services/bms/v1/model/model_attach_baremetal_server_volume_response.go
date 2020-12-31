@@ -21,6 +21,10 @@ type AttachBaremetalServerVolumeResponse struct {
 }
 
 func (o AttachBaremetalServerVolumeResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AttachBaremetalServerVolumeResponse struct{}"
+	}
+
 	return strings.Join([]string{"AttachBaremetalServerVolumeResponse", string(data)}, " ")
 }

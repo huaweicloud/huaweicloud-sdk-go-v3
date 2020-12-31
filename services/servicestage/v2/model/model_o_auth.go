@@ -23,6 +23,10 @@ type OAuth struct {
 }
 
 func (o OAuth) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OAuth struct{}"
+	}
+
 	return strings.Join([]string{"OAuth", string(data)}, " ")
 }

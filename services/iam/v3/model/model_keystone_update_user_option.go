@@ -30,6 +30,10 @@ type KeystoneUpdateUserOption struct {
 }
 
 func (o KeystoneUpdateUserOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneUpdateUserOption struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneUpdateUserOption", string(data)}, " ")
 }

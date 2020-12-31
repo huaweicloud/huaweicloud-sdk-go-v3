@@ -21,6 +21,10 @@ type ListUserMfaDevicesResponse struct {
 }
 
 func (o ListUserMfaDevicesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListUserMfaDevicesResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListUserMfaDevicesResponse", string(data)}, " ")
 }

@@ -25,6 +25,10 @@ type MeasureUnitRest struct {
 }
 
 func (o MeasureUnitRest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MeasureUnitRest struct{}"
+	}
+
 	return strings.Join([]string{"MeasureUnitRest", string(data)}, " ")
 }

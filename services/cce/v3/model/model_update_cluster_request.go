@@ -22,6 +22,10 @@ type UpdateClusterRequest struct {
 }
 
 func (o UpdateClusterRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateClusterRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateClusterRequest", string(data)}, " ")
 }

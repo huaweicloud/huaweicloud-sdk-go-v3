@@ -32,7 +32,11 @@ type NovaListServersDetailsRequest struct {
 }
 
 func (o NovaListServersDetailsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaListServersDetailsRequest struct{}"
+	}
+
 	return strings.Join([]string{"NovaListServersDetailsRequest", string(data)}, " ")
 }
 

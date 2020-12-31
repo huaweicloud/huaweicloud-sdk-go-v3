@@ -48,6 +48,10 @@ type UpdateApiGroupV2Response struct {
 }
 
 func (o UpdateApiGroupV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateApiGroupV2Response struct{}"
+	}
+
 	return strings.Join([]string{"UpdateApiGroupV2Response", string(data)}, " ")
 }

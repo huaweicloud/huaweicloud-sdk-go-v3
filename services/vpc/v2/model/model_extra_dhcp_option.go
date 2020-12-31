@@ -23,7 +23,11 @@ type ExtraDhcpOption struct {
 }
 
 func (o ExtraDhcpOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ExtraDhcpOption struct{}"
+	}
+
 	return strings.Join([]string{"ExtraDhcpOption", string(data)}, " ")
 }
 

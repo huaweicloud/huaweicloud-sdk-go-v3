@@ -27,7 +27,11 @@ type ListUsersOfStreamRequest struct {
 }
 
 func (o ListUsersOfStreamRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListUsersOfStreamRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListUsersOfStreamRequest", string(data)}, " ")
 }
 

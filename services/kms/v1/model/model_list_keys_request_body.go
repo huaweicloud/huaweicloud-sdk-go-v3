@@ -25,6 +25,10 @@ type ListKeysRequestBody struct {
 }
 
 func (o ListKeysRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListKeysRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"ListKeysRequestBody", string(data)}, " ")
 }

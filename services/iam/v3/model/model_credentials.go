@@ -28,6 +28,10 @@ type Credentials struct {
 }
 
 func (o Credentials) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Credentials struct{}"
+	}
+
 	return strings.Join([]string{"Credentials", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type ChangeServerOsWithCloudInitRequest struct {
 }
 
 func (o ChangeServerOsWithCloudInitRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeServerOsWithCloudInitRequest struct{}"
+	}
+
 	return strings.Join([]string{"ChangeServerOsWithCloudInitRequest", string(data)}, " ")
 }

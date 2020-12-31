@@ -19,6 +19,10 @@ type CouchDbInfo struct {
 }
 
 func (o CouchDbInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CouchDbInfo struct{}"
+	}
+
 	return strings.Join([]string{"CouchDbInfo", string(data)}, " ")
 }

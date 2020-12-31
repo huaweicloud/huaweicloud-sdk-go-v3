@@ -32,6 +32,10 @@ type ResourceTypeResponse struct {
 }
 
 func (o ResourceTypeResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResourceTypeResponse struct{}"
+	}
+
 	return strings.Join([]string{"ResourceTypeResponse", string(data)}, " ")
 }

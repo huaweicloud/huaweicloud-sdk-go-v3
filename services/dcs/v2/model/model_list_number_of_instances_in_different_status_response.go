@@ -47,6 +47,10 @@ type ListNumberOfInstancesInDifferentStatusResponse struct {
 }
 
 func (o ListNumberOfInstancesInDifferentStatusResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListNumberOfInstancesInDifferentStatusResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListNumberOfInstancesInDifferentStatusResponse", string(data)}, " ")
 }

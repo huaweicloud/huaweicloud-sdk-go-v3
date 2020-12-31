@@ -18,6 +18,10 @@ type ClusterInformation struct {
 }
 
 func (o ClusterInformation) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ClusterInformation struct{}"
+	}
+
 	return strings.Join([]string{"ClusterInformation", string(data)}, " ")
 }

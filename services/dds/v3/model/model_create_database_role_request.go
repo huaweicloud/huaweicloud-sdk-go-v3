@@ -20,6 +20,10 @@ type CreateDatabaseRoleRequest struct {
 }
 
 func (o CreateDatabaseRoleRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateDatabaseRoleRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateDatabaseRoleRequest", string(data)}, " ")
 }

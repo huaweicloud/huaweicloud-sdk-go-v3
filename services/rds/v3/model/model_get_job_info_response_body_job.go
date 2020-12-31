@@ -36,7 +36,11 @@ type GetJobInfoResponseBodyJob struct {
 }
 
 func (o GetJobInfoResponseBodyJob) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GetJobInfoResponseBodyJob struct{}"
+	}
+
 	return strings.Join([]string{"GetJobInfoResponseBodyJob", string(data)}, " ")
 }
 

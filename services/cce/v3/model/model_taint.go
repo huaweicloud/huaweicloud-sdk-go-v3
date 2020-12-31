@@ -25,7 +25,11 @@ type Taint struct {
 }
 
 func (o Taint) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Taint struct{}"
+	}
+
 	return strings.Join([]string{"Taint", string(data)}, " ")
 }
 

@@ -30,6 +30,10 @@ type PublicipBandwidthInfo struct {
 }
 
 func (o PublicipBandwidthInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PublicipBandwidthInfo struct{}"
+	}
+
 	return strings.Join([]string{"PublicipBandwidthInfo", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type ResizeInstanceVolumeResponse struct {
 }
 
 func (o ResizeInstanceVolumeResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResizeInstanceVolumeResponse struct{}"
+	}
+
 	return strings.Join([]string{"ResizeInstanceVolumeResponse", string(data)}, " ")
 }

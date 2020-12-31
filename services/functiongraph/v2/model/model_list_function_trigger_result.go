@@ -31,7 +31,11 @@ type ListFunctionTriggerResult struct {
 }
 
 func (o ListFunctionTriggerResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListFunctionTriggerResult struct{}"
+	}
+
 	return strings.Join([]string{"ListFunctionTriggerResult", string(data)}, " ")
 }
 

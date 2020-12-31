@@ -21,6 +21,10 @@ type Node struct {
 }
 
 func (o Node) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Node struct{}"
+	}
+
 	return strings.Join([]string{"Node", string(data)}, " ")
 }

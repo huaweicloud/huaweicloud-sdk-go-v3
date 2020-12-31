@@ -19,6 +19,10 @@ type DeleteVaultRequest struct {
 }
 
 func (o DeleteVaultRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteVaultRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteVaultRequest", string(data)}, " ")
 }

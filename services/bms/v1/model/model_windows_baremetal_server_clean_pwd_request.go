@@ -19,6 +19,10 @@ type WindowsBaremetalServerCleanPwdRequest struct {
 }
 
 func (o WindowsBaremetalServerCleanPwdRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "WindowsBaremetalServerCleanPwdRequest struct{}"
+	}
+
 	return strings.Join([]string{"WindowsBaremetalServerCleanPwdRequest", string(data)}, " ")
 }

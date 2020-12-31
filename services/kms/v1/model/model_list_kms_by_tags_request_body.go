@@ -29,6 +29,10 @@ type ListKmsByTagsRequestBody struct {
 }
 
 func (o ListKmsByTagsRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListKmsByTagsRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"ListKmsByTagsRequestBody", string(data)}, " ")
 }

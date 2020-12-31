@@ -23,6 +23,10 @@ type ShowTrackerConfigResponse struct {
 }
 
 func (o ShowTrackerConfigResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowTrackerConfigResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowTrackerConfigResponse", string(data)}, " ")
 }

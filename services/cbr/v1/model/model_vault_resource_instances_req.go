@@ -41,7 +41,11 @@ type VaultResourceInstancesReq struct {
 }
 
 func (o VaultResourceInstancesReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VaultResourceInstancesReq struct{}"
+	}
+
 	return strings.Join([]string{"VaultResourceInstancesReq", string(data)}, " ")
 }
 

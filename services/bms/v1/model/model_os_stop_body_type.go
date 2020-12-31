@@ -23,7 +23,11 @@ type OsStopBodyType struct {
 }
 
 func (o OsStopBodyType) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OsStopBodyType struct{}"
+	}
+
 	return strings.Join([]string{"OsStopBodyType", string(data)}, " ")
 }
 

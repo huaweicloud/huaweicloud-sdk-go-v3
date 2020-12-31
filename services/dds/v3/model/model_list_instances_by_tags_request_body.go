@@ -28,7 +28,11 @@ type ListInstancesByTagsRequestBody struct {
 }
 
 func (o ListInstancesByTagsRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListInstancesByTagsRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"ListInstancesByTagsRequestBody", string(data)}, " ")
 }
 

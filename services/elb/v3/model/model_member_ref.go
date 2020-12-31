@@ -20,6 +20,10 @@ type MemberRef struct {
 }
 
 func (o MemberRef) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MemberRef struct{}"
+	}
+
 	return strings.Join([]string{"MemberRef", string(data)}, " ")
 }

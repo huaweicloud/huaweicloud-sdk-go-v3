@@ -19,6 +19,10 @@ type ShowDependencyRequest struct {
 }
 
 func (o ShowDependencyRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowDependencyRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowDependencyRequest", string(data)}, " ")
 }

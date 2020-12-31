@@ -23,7 +23,11 @@ type CreatePrePaidPublicipOption struct {
 }
 
 func (o CreatePrePaidPublicipOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePrePaidPublicipOption struct{}"
+	}
+
 	return strings.Join([]string{"CreatePrePaidPublicipOption", string(data)}, " ")
 }
 

@@ -47,7 +47,11 @@ type InstanceConfig struct {
 }
 
 func (o InstanceConfig) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceConfig struct{}"
+	}
+
 	return strings.Join([]string{"InstanceConfig", string(data)}, " ")
 }
 

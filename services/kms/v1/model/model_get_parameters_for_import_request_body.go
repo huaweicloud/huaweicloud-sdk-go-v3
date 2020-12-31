@@ -24,7 +24,11 @@ type GetParametersForImportRequestBody struct {
 }
 
 func (o GetParametersForImportRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GetParametersForImportRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"GetParametersForImportRequestBody", string(data)}, " ")
 }
 

@@ -21,6 +21,10 @@ type TemplateArgs struct {
 }
 
 func (o TemplateArgs) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TemplateArgs struct{}"
+	}
+
 	return strings.Join([]string{"TemplateArgs", string(data)}, " ")
 }

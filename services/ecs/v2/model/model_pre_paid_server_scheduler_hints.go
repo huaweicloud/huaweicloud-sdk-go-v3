@@ -25,7 +25,11 @@ type PrePaidServerSchedulerHints struct {
 }
 
 func (o PrePaidServerSchedulerHints) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PrePaidServerSchedulerHints struct{}"
+	}
+
 	return strings.Join([]string{"PrePaidServerSchedulerHints", string(data)}, " ")
 }
 

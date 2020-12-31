@@ -22,6 +22,10 @@ type TagsInfo struct {
 }
 
 func (o TagsInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TagsInfo struct{}"
+	}
+
 	return strings.Join([]string{"TagsInfo", string(data)}, " ")
 }

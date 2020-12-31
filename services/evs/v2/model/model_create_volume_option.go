@@ -47,7 +47,11 @@ type CreateVolumeOption struct {
 }
 
 func (o CreateVolumeOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateVolumeOption struct{}"
+	}
+
 	return strings.Join([]string{"CreateVolumeOption", string(data)}, " ")
 }
 

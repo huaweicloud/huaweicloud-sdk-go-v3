@@ -31,6 +31,10 @@ type LimitInfoV2 struct {
 }
 
 func (o LimitInfoV2) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LimitInfoV2 struct{}"
+	}
+
 	return strings.Join([]string{"LimitInfoV2", string(data)}, " ")
 }

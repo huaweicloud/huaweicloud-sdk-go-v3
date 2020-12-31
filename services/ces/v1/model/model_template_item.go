@@ -23,6 +23,10 @@ type TemplateItem struct {
 }
 
 func (o TemplateItem) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TemplateItem struct{}"
+	}
+
 	return strings.Join([]string{"TemplateItem", string(data)}, " ")
 }

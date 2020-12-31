@@ -20,6 +20,10 @@ type CreateVaultResponse struct {
 }
 
 func (o CreateVaultResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateVaultResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateVaultResponse", string(data)}, " ")
 }

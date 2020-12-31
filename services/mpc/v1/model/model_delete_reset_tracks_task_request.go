@@ -19,6 +19,10 @@ type DeleteResetTracksTaskRequest struct {
 }
 
 func (o DeleteResetTracksTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteResetTracksTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteResetTracksTaskRequest", string(data)}, " ")
 }

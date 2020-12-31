@@ -21,6 +21,10 @@ type UpdatePluginsRequest struct {
 }
 
 func (o UpdatePluginsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdatePluginsRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdatePluginsRequest", string(data)}, " ")
 }

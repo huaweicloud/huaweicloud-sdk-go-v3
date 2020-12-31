@@ -20,6 +20,10 @@ type DeleteMigrateTaskRequest struct {
 }
 
 func (o DeleteMigrateTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteMigrateTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteMigrateTaskRequest", string(data)}, " ")
 }

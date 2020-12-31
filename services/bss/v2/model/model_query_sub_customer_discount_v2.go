@@ -25,6 +25,10 @@ type QuerySubCustomerDiscountV2 struct {
 }
 
 func (o QuerySubCustomerDiscountV2) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QuerySubCustomerDiscountV2 struct{}"
+	}
+
 	return strings.Join([]string{"QuerySubCustomerDiscountV2", string(data)}, " ")
 }

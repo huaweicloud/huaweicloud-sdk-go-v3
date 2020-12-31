@@ -19,6 +19,10 @@ type ChangeMasterStandbyResponse struct {
 }
 
 func (o ChangeMasterStandbyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeMasterStandbyResponse struct{}"
+	}
+
 	return strings.Join([]string{"ChangeMasterStandbyResponse", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type StatusResp struct {
 }
 
 func (o StatusResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StatusResp struct{}"
+	}
+
 	return strings.Join([]string{"StatusResp", string(data)}, " ")
 }

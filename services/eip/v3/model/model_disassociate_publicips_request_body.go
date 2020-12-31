@@ -19,6 +19,10 @@ type DisassociatePublicipsRequestBody struct {
 }
 
 func (o DisassociatePublicipsRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DisassociatePublicipsRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"DisassociatePublicipsRequestBody", string(data)}, " ")
 }

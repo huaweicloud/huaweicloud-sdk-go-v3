@@ -21,6 +21,10 @@ type AzInfo struct {
 }
 
 func (o AzInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AzInfo struct{}"
+	}
+
 	return strings.Join([]string{"AzInfo", string(data)}, " ")
 }

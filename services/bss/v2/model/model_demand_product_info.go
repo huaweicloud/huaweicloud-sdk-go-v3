@@ -41,6 +41,10 @@ type DemandProductInfo struct {
 }
 
 func (o DemandProductInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DemandProductInfo struct{}"
+	}
+
 	return strings.Join([]string{"DemandProductInfo", string(data)}, " ")
 }

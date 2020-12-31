@@ -23,6 +23,10 @@ type ObsFileAddr struct {
 }
 
 func (o ObsFileAddr) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ObsFileAddr struct{}"
+	}
+
 	return strings.Join([]string{"ObsFileAddr", string(data)}, " ")
 }

@@ -23,6 +23,10 @@ type ServiceType struct {
 }
 
 func (o ServiceType) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServiceType struct{}"
+	}
+
 	return strings.Join([]string{"ServiceType", string(data)}, " ")
 }

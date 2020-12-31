@@ -20,6 +20,10 @@ type UpdateQualityEnhanceTemplateReq struct {
 }
 
 func (o UpdateQualityEnhanceTemplateReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateQualityEnhanceTemplateReq struct{}"
+	}
+
 	return strings.Join([]string{"UpdateQualityEnhanceTemplateReq", string(data)}, " ")
 }

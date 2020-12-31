@@ -21,6 +21,10 @@ type ShowDetailsOfEnvironmentVariableV2Request struct {
 }
 
 func (o ShowDetailsOfEnvironmentVariableV2Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowDetailsOfEnvironmentVariableV2Request struct{}"
+	}
+
 	return strings.Join([]string{"ShowDetailsOfEnvironmentVariableV2Request", string(data)}, " ")
 }

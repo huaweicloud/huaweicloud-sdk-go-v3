@@ -23,6 +23,10 @@ type ListIndirectPartnersResponse struct {
 }
 
 func (o ListIndirectPartnersResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListIndirectPartnersResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListIndirectPartnersResponse", string(data)}, " ")
 }

@@ -92,7 +92,11 @@ type ApiCommon struct {
 }
 
 func (o ApiCommon) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApiCommon struct{}"
+	}
+
 	return strings.Join([]string{"ApiCommon", string(data)}, " ")
 }
 

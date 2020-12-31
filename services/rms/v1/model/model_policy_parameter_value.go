@@ -20,6 +20,10 @@ type PolicyParameterValue struct {
 }
 
 func (o PolicyParameterValue) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PolicyParameterValue struct{}"
+	}
+
 	return strings.Join([]string{"PolicyParameterValue", string(data)}, " ")
 }

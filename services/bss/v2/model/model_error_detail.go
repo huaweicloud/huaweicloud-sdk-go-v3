@@ -23,6 +23,10 @@ type ErrorDetail struct {
 }
 
 func (o ErrorDetail) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ErrorDetail struct{}"
+	}
+
 	return strings.Join([]string{"ErrorDetail", string(data)}, " ")
 }

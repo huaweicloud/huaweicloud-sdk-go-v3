@@ -20,6 +20,10 @@ type PwdAuth struct {
 }
 
 func (o PwdAuth) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PwdAuth struct{}"
+	}
+
 	return strings.Join([]string{"PwdAuth", string(data)}, " ")
 }

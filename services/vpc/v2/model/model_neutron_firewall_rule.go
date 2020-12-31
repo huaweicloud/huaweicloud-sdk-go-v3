@@ -45,7 +45,11 @@ type NeutronFirewallRule struct {
 }
 
 func (o NeutronFirewallRule) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NeutronFirewallRule struct{}"
+	}
+
 	return strings.Join([]string{"NeutronFirewallRule", string(data)}, " ")
 }
 

@@ -19,6 +19,10 @@ type CreateScalingGroupRequest struct {
 }
 
 func (o CreateScalingGroupRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateScalingGroupRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateScalingGroupRequest", string(data)}, " ")
 }

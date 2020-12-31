@@ -19,6 +19,10 @@ type ShowApplicationDetailRequest struct {
 }
 
 func (o ShowApplicationDetailRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowApplicationDetailRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowApplicationDetailRequest", string(data)}, " ")
 }

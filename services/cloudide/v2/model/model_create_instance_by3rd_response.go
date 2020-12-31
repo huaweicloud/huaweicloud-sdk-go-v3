@@ -22,6 +22,10 @@ type CreateInstanceBy3rdResponse struct {
 }
 
 func (o CreateInstanceBy3rdResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateInstanceBy3rdResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateInstanceBy3rdResponse", string(data)}, " ")
 }

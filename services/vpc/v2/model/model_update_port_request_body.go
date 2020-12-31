@@ -19,6 +19,10 @@ type UpdatePortRequestBody struct {
 }
 
 func (o UpdatePortRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdatePortRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdatePortRequestBody", string(data)}, " ")
 }

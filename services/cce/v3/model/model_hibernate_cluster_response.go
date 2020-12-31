@@ -19,6 +19,10 @@ type HibernateClusterResponse struct {
 }
 
 func (o HibernateClusterResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HibernateClusterResponse struct{}"
+	}
+
 	return strings.Join([]string{"HibernateClusterResponse", string(data)}, " ")
 }

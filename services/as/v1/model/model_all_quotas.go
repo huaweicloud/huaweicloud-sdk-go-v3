@@ -20,6 +20,10 @@ type AllQuotas struct {
 }
 
 func (o AllQuotas) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AllQuotas struct{}"
+	}
+
 	return strings.Join([]string{"AllQuotas", string(data)}, " ")
 }

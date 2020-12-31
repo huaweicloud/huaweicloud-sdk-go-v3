@@ -20,6 +20,10 @@ type ShowKmsTagsRequest struct {
 }
 
 func (o ShowKmsTagsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowKmsTagsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowKmsTagsRequest", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type AssociateKeypairResponse struct {
 }
 
 func (o AssociateKeypairResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AssociateKeypairResponse struct{}"
+	}
+
 	return strings.Join([]string{"AssociateKeypairResponse", string(data)}, " ")
 }

@@ -24,6 +24,10 @@ type EpQuotas struct {
 }
 
 func (o EpQuotas) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EpQuotas struct{}"
+	}
+
 	return strings.Join([]string{"EpQuotas", string(data)}, " ")
 }

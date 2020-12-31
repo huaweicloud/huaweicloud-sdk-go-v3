@@ -26,7 +26,11 @@ type RoleAction struct {
 }
 
 func (o RoleAction) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RoleAction struct{}"
+	}
+
 	return strings.Join([]string{"RoleAction", string(data)}, " ")
 }
 

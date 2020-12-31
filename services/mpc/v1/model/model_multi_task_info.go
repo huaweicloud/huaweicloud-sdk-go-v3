@@ -21,6 +21,10 @@ type MultiTaskInfo struct {
 }
 
 func (o MultiTaskInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MultiTaskInfo struct{}"
+	}
+
 	return strings.Join([]string{"MultiTaskInfo", string(data)}, " ")
 }

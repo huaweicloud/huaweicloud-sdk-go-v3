@@ -22,6 +22,10 @@ type UpdateUserInformationOption struct {
 }
 
 func (o UpdateUserInformationOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateUserInformationOption struct{}"
+	}
+
 	return strings.Join([]string{"UpdateUserInformationOption", string(data)}, " ")
 }

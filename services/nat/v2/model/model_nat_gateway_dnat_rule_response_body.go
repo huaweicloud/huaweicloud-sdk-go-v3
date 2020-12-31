@@ -52,7 +52,11 @@ type NatGatewayDnatRuleResponseBody struct {
 }
 
 func (o NatGatewayDnatRuleResponseBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NatGatewayDnatRuleResponseBody struct{}"
+	}
+
 	return strings.Join([]string{"NatGatewayDnatRuleResponseBody", string(data)}, " ")
 }
 

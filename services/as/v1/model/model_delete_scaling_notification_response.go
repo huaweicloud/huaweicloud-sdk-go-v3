@@ -19,6 +19,10 @@ type DeleteScalingNotificationResponse struct {
 }
 
 func (o DeleteScalingNotificationResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteScalingNotificationResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteScalingNotificationResponse", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type RunEvaluationByPolicyAssignmentIdResponse struct {
 }
 
 func (o RunEvaluationByPolicyAssignmentIdResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RunEvaluationByPolicyAssignmentIdResponse struct{}"
+	}
+
 	return strings.Join([]string{"RunEvaluationByPolicyAssignmentIdResponse", string(data)}, " ")
 }

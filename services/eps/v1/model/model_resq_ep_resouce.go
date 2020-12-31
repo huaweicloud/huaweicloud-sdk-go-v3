@@ -28,6 +28,10 @@ type ResqEpResouce struct {
 }
 
 func (o ResqEpResouce) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResqEpResouce struct{}"
+	}
+
 	return strings.Join([]string{"ResqEpResouce", string(data)}, " ")
 }

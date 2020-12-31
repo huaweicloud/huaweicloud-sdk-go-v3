@@ -20,6 +20,10 @@ type ResetReplicaReq struct {
 }
 
 func (o ResetReplicaReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResetReplicaReq struct{}"
+	}
+
 	return strings.Join([]string{"ResetReplicaReq", string(data)}, " ")
 }

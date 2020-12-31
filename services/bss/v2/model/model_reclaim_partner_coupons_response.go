@@ -19,6 +19,10 @@ type ReclaimPartnerCouponsResponse struct {
 }
 
 func (o ReclaimPartnerCouponsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ReclaimPartnerCouponsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ReclaimPartnerCouponsResponse", string(data)}, " ")
 }

@@ -26,6 +26,10 @@ type ServerExtendVolumeAttachment struct {
 }
 
 func (o ServerExtendVolumeAttachment) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServerExtendVolumeAttachment struct{}"
+	}
+
 	return strings.Join([]string{"ServerExtendVolumeAttachment", string(data)}, " ")
 }

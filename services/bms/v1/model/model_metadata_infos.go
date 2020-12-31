@@ -20,6 +20,10 @@ type MetadataInfos struct {
 }
 
 func (o MetadataInfos) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MetadataInfos struct{}"
+	}
+
 	return strings.Join([]string{"MetadataInfos", string(data)}, " ")
 }

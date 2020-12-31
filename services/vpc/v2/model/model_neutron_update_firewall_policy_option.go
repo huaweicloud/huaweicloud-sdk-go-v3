@@ -26,6 +26,10 @@ type NeutronUpdateFirewallPolicyOption struct {
 }
 
 func (o NeutronUpdateFirewallPolicyOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NeutronUpdateFirewallPolicyOption struct{}"
+	}
+
 	return strings.Join([]string{"NeutronUpdateFirewallPolicyOption", string(data)}, " ")
 }

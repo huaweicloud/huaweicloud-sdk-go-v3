@@ -22,6 +22,10 @@ type EntityMetricList struct {
 }
 
 func (o EntityMetricList) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EntityMetricList struct{}"
+	}
+
 	return strings.Join([]string{"EntityMetricList", string(data)}, " ")
 }

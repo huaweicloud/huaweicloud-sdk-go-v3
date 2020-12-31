@@ -37,7 +37,11 @@ type ShowTagsRequestBody struct {
 }
 
 func (o ShowTagsRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowTagsRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"ShowTagsRequestBody", string(data)}, " ")
 }
 

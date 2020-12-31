@@ -19,6 +19,10 @@ type DeleteAgencyRequest struct {
 }
 
 func (o DeleteAgencyRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteAgencyRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteAgencyRequest", string(data)}, " ")
 }

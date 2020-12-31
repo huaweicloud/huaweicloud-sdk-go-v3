@@ -19,6 +19,10 @@ type DeleteTemplateGroupRequest struct {
 }
 
 func (o DeleteTemplateGroupRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteTemplateGroupRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteTemplateGroupRequest", string(data)}, " ")
 }

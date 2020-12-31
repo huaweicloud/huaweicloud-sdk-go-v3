@@ -22,6 +22,10 @@ type UpdateTopicReplicaRequest struct {
 }
 
 func (o UpdateTopicReplicaRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateTopicReplicaRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateTopicReplicaRequest", string(data)}, " ")
 }

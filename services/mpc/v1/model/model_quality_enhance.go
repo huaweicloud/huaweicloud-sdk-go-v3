@@ -24,7 +24,11 @@ type QualityEnhance struct {
 }
 
 func (o QualityEnhance) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QualityEnhance struct{}"
+	}
+
 	return strings.Join([]string{"QualityEnhance", string(data)}, " ")
 }
 

@@ -21,6 +21,10 @@ type CreateLoginTokenResponse struct {
 }
 
 func (o CreateLoginTokenResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateLoginTokenResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateLoginTokenResponse", string(data)}, " ")
 }

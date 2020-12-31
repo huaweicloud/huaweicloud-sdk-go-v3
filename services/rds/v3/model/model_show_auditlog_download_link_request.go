@@ -21,6 +21,10 @@ type ShowAuditlogDownloadLinkRequest struct {
 }
 
 func (o ShowAuditlogDownloadLinkRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowAuditlogDownloadLinkRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowAuditlogDownloadLinkRequest", string(data)}, " ")
 }

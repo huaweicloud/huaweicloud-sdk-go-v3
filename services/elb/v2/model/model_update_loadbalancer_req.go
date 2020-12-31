@@ -24,6 +24,10 @@ type UpdateLoadbalancerReq struct {
 }
 
 func (o UpdateLoadbalancerReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateLoadbalancerReq struct{}"
+	}
+
 	return strings.Join([]string{"UpdateLoadbalancerReq", string(data)}, " ")
 }

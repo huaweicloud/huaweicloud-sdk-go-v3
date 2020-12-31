@@ -34,6 +34,10 @@ type ShowSinkTaskDetailRespObsDestinationDescriptor struct {
 }
 
 func (o ShowSinkTaskDetailRespObsDestinationDescriptor) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowSinkTaskDetailRespObsDestinationDescriptor struct{}"
+	}
+
 	return strings.Join([]string{"ShowSinkTaskDetailRespObsDestinationDescriptor", string(data)}, " ")
 }

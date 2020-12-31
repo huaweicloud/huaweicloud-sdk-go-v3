@@ -19,6 +19,10 @@ type KeystoneShowIdentityProviderRequest struct {
 }
 
 func (o KeystoneShowIdentityProviderRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneShowIdentityProviderRequest struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneShowIdentityProviderRequest", string(data)}, " ")
 }

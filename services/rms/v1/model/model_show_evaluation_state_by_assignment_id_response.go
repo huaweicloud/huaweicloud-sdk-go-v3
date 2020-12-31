@@ -29,6 +29,10 @@ type ShowEvaluationStateByAssignmentIdResponse struct {
 }
 
 func (o ShowEvaluationStateByAssignmentIdResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowEvaluationStateByAssignmentIdResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowEvaluationStateByAssignmentIdResponse", string(data)}, " ")
 }

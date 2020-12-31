@@ -21,6 +21,10 @@ type RunDevstarTemplateJobResponse struct {
 }
 
 func (o RunDevstarTemplateJobResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RunDevstarTemplateJobResponse struct{}"
+	}
+
 	return strings.Join([]string{"RunDevstarTemplateJobResponse", string(data)}, " ")
 }

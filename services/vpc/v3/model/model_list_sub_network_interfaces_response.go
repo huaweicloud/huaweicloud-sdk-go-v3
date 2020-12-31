@@ -24,6 +24,10 @@ type ListSubNetworkInterfacesResponse struct {
 }
 
 func (o ListSubNetworkInterfacesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListSubNetworkInterfacesResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListSubNetworkInterfacesResponse", string(data)}, " ")
 }

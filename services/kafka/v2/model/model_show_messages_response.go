@@ -27,6 +27,10 @@ type ShowMessagesResponse struct {
 }
 
 func (o ShowMessagesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowMessagesResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowMessagesResponse", string(data)}, " ")
 }

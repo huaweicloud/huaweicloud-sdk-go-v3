@@ -21,6 +21,10 @@ type Province struct {
 }
 
 func (o Province) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Province struct{}"
+	}
+
 	return strings.Join([]string{"Province", string(data)}, " ")
 }

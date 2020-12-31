@@ -23,6 +23,10 @@ type RevokeGrantRequestBody struct {
 }
 
 func (o RevokeGrantRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RevokeGrantRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"RevokeGrantRequestBody", string(data)}, " ")
 }

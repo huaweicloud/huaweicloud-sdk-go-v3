@@ -31,7 +31,11 @@ type VpcRoute struct {
 }
 
 func (o VpcRoute) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VpcRoute struct{}"
+	}
+
 	return strings.Join([]string{"VpcRoute", string(data)}, " ")
 }
 

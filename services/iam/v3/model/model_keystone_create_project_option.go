@@ -26,6 +26,10 @@ type KeystoneCreateProjectOption struct {
 }
 
 func (o KeystoneCreateProjectOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneCreateProjectOption struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneCreateProjectOption", string(data)}, " ")
 }

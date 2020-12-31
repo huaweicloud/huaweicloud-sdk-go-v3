@@ -20,6 +20,10 @@ type KeystoneRemoveUserFromGroupRequest struct {
 }
 
 func (o KeystoneRemoveUserFromGroupRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneRemoveUserFromGroupRequest struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneRemoveUserFromGroupRequest", string(data)}, " ")
 }

@@ -23,6 +23,10 @@ type StartNewPipelineResponse struct {
 }
 
 func (o StartNewPipelineResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StartNewPipelineResponse struct{}"
+	}
+
 	return strings.Join([]string{"StartNewPipelineResponse", string(data)}, " ")
 }

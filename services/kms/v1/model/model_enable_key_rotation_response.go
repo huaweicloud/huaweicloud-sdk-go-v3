@@ -19,6 +19,10 @@ type EnableKeyRotationResponse struct {
 }
 
 func (o EnableKeyRotationResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EnableKeyRotationResponse struct{}"
+	}
+
 	return strings.Join([]string{"EnableKeyRotationResponse", string(data)}, " ")
 }

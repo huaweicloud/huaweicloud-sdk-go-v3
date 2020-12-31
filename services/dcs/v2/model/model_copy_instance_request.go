@@ -20,6 +20,10 @@ type CopyInstanceRequest struct {
 }
 
 func (o CopyInstanceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CopyInstanceRequest struct{}"
+	}
+
 	return strings.Join([]string{"CopyInstanceRequest", string(data)}, " ")
 }

@@ -23,6 +23,10 @@ type AccessToken struct {
 }
 
 func (o AccessToken) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AccessToken struct{}"
+	}
+
 	return strings.Join([]string{"AccessToken", string(data)}, " ")
 }

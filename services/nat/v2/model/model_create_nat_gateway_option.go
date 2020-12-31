@@ -31,7 +31,11 @@ type CreateNatGatewayOption struct {
 }
 
 func (o CreateNatGatewayOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateNatGatewayOption struct{}"
+	}
+
 	return strings.Join([]string{"CreateNatGatewayOption", string(data)}, " ")
 }
 

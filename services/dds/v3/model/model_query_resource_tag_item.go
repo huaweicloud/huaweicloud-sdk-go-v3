@@ -21,6 +21,10 @@ type QueryResourceTagItem struct {
 }
 
 func (o QueryResourceTagItem) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QueryResourceTagItem struct{}"
+	}
+
 	return strings.Join([]string{"QueryResourceTagItem", string(data)}, " ")
 }

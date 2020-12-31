@@ -30,6 +30,10 @@ type ShowCredential struct {
 }
 
 func (o ShowCredential) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowCredential struct{}"
+	}
+
 	return strings.Join([]string{"ShowCredential", string(data)}, " ")
 }

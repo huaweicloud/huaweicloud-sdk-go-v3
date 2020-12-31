@@ -21,6 +21,10 @@ type ApplicationModify struct {
 }
 
 func (o ApplicationModify) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApplicationModify struct{}"
+	}
+
 	return strings.Join([]string{"ApplicationModify", string(data)}, " ")
 }

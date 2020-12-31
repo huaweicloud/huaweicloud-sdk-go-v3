@@ -19,6 +19,10 @@ type ShowServerTagsRequest struct {
 }
 
 func (o ShowServerTagsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowServerTagsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowServerTagsRequest", string(data)}, " ")
 }

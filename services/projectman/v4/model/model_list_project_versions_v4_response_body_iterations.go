@@ -27,6 +27,10 @@ type ListProjectVersionsV4ResponseBodyIterations struct {
 }
 
 func (o ListProjectVersionsV4ResponseBodyIterations) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListProjectVersionsV4ResponseBodyIterations struct{}"
+	}
+
 	return strings.Join([]string{"ListProjectVersionsV4ResponseBodyIterations", string(data)}, " ")
 }

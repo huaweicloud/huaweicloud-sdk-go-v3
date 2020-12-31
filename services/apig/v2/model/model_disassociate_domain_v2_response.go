@@ -19,6 +19,10 @@ type DisassociateDomainV2Response struct {
 }
 
 func (o DisassociateDomainV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DisassociateDomainV2Response struct{}"
+	}
+
 	return strings.Join([]string{"DisassociateDomainV2Response", string(data)}, " ")
 }

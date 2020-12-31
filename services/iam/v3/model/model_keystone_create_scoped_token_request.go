@@ -19,6 +19,10 @@ type KeystoneCreateScopedTokenRequest struct {
 }
 
 func (o KeystoneCreateScopedTokenRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneCreateScopedTokenRequest struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneCreateScopedTokenRequest", string(data)}, " ")
 }

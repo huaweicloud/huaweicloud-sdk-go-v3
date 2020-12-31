@@ -20,6 +20,10 @@ type DeleteRecordConfigRequest struct {
 }
 
 func (o DeleteRecordConfigRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteRecordConfigRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteRecordConfigRequest", string(data)}, " ")
 }

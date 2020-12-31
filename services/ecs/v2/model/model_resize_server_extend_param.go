@@ -20,6 +20,10 @@ type ResizeServerExtendParam struct {
 }
 
 func (o ResizeServerExtendParam) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResizeServerExtendParam struct{}"
+	}
+
 	return strings.Join([]string{"ResizeServerExtendParam", string(data)}, " ")
 }

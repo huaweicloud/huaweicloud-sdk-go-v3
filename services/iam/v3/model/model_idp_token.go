@@ -25,6 +25,10 @@ type IdpToken struct {
 }
 
 func (o IdpToken) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IdpToken struct{}"
+	}
+
 	return strings.Join([]string{"IdpToken", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type CreateMessageTemplateRequest struct {
 }
 
 func (o CreateMessageTemplateRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateMessageTemplateRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateMessageTemplateRequest", string(data)}, " ")
 }

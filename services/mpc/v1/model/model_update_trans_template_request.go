@@ -19,6 +19,10 @@ type UpdateTransTemplateRequest struct {
 }
 
 func (o UpdateTransTemplateRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateTransTemplateRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateTransTemplateRequest", string(data)}, " ")
 }

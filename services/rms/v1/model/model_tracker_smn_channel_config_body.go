@@ -24,6 +24,10 @@ type TrackerSmnChannelConfigBody struct {
 }
 
 func (o TrackerSmnChannelConfigBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TrackerSmnChannelConfigBody struct{}"
+	}
+
 	return strings.Join([]string{"TrackerSmnChannelConfigBody", string(data)}, " ")
 }

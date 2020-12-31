@@ -19,6 +19,10 @@ type CreateDataImageRequest struct {
 }
 
 func (o CreateDataImageRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateDataImageRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateDataImageRequest", string(data)}, " ")
 }

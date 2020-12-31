@@ -20,6 +20,10 @@ type ShowVpcPeeringResponse struct {
 }
 
 func (o ShowVpcPeeringResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowVpcPeeringResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowVpcPeeringResponse", string(data)}, " ")
 }

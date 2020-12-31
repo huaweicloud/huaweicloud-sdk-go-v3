@@ -21,6 +21,10 @@ type DisassociateEcsServerInfo struct {
 }
 
 func (o DisassociateEcsServerInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DisassociateEcsServerInfo struct{}"
+	}
+
 	return strings.Join([]string{"DisassociateEcsServerInfo", string(data)}, " ")
 }

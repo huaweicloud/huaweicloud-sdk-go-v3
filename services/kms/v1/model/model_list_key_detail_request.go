@@ -20,6 +20,10 @@ type ListKeyDetailRequest struct {
 }
 
 func (o ListKeyDetailRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListKeyDetailRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListKeyDetailRequest", string(data)}, " ")
 }

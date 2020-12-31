@@ -47,6 +47,10 @@ type OrderInstanceV2 struct {
 }
 
 func (o OrderInstanceV2) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OrderInstanceV2 struct{}"
+	}
+
 	return strings.Join([]string{"OrderInstanceV2", string(data)}, " ")
 }

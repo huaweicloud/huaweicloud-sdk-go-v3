@@ -19,6 +19,10 @@ type NovaAssociateSecurityGroupResponse struct {
 }
 
 func (o NovaAssociateSecurityGroupResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaAssociateSecurityGroupResponse struct{}"
+	}
+
 	return strings.Join([]string{"NovaAssociateSecurityGroupResponse", string(data)}, " ")
 }

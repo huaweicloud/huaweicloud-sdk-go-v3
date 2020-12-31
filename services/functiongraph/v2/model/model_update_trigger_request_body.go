@@ -20,7 +20,11 @@ type UpdateTriggerRequestBody struct {
 }
 
 func (o UpdateTriggerRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateTriggerRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateTriggerRequestBody", string(data)}, " ")
 }
 

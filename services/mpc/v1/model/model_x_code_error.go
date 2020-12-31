@@ -21,6 +21,10 @@ type XCodeError struct {
 }
 
 func (o XCodeError) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "XCodeError struct{}"
+	}
+
 	return strings.Join([]string{"XCodeError", string(data)}, " ")
 }

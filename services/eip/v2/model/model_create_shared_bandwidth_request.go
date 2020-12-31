@@ -19,6 +19,10 @@ type CreateSharedBandwidthRequest struct {
 }
 
 func (o CreateSharedBandwidthRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateSharedBandwidthRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateSharedBandwidthRequest", string(data)}, " ")
 }

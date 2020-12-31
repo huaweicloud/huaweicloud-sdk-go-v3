@@ -20,6 +20,10 @@ type BatchListMetricDataRequest struct {
 }
 
 func (o BatchListMetricDataRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchListMetricDataRequest struct{}"
+	}
+
 	return strings.Join([]string{"BatchListMetricDataRequest", string(data)}, " ")
 }

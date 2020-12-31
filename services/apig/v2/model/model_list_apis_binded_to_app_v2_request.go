@@ -28,6 +28,10 @@ type ListApisBindedToAppV2Request struct {
 }
 
 func (o ListApisBindedToAppV2Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListApisBindedToAppV2Request struct{}"
+	}
+
 	return strings.Join([]string{"ListApisBindedToAppV2Request", string(data)}, " ")
 }

@@ -29,6 +29,10 @@ type PeriodProductRatingResult struct {
 }
 
 func (o PeriodProductRatingResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PeriodProductRatingResult struct{}"
+	}
+
 	return strings.Join([]string{"PeriodProductRatingResult", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type CreateSubNetworkInterfaceResponse struct {
 }
 
 func (o CreateSubNetworkInterfaceResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateSubNetworkInterfaceResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateSubNetworkInterfaceResponse", string(data)}, " ")
 }

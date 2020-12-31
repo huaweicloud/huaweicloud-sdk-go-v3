@@ -21,7 +21,11 @@ type ListTemplateViewHistoriesRequest struct {
 }
 
 func (o ListTemplateViewHistoriesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListTemplateViewHistoriesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListTemplateViewHistoriesRequest", string(data)}, " ")
 }
 

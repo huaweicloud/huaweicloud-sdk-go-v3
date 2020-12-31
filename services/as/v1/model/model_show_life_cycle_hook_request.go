@@ -20,6 +20,10 @@ type ShowLifeCycleHookRequest struct {
 }
 
 func (o ShowLifeCycleHookRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowLifeCycleHookRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowLifeCycleHookRequest", string(data)}, " ")
 }

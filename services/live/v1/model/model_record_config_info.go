@@ -35,7 +35,11 @@ type RecordConfigInfo struct {
 }
 
 func (o RecordConfigInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RecordConfigInfo struct{}"
+	}
+
 	return strings.Join([]string{"RecordConfigInfo", string(data)}, " ")
 }
 

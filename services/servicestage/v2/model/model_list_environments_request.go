@@ -23,7 +23,11 @@ type ListEnvironmentsRequest struct {
 }
 
 func (o ListEnvironmentsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListEnvironmentsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListEnvironmentsRequest", string(data)}, " ")
 }
 

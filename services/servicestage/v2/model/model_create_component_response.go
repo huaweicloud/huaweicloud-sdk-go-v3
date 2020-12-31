@@ -42,6 +42,10 @@ type CreateComponentResponse struct {
 }
 
 func (o CreateComponentResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateComponentResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateComponentResponse", string(data)}, " ")
 }

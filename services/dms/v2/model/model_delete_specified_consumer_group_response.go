@@ -19,6 +19,10 @@ type DeleteSpecifiedConsumerGroupResponse struct {
 }
 
 func (o DeleteSpecifiedConsumerGroupResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteSpecifiedConsumerGroupResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteSpecifiedConsumerGroupResponse", string(data)}, " ")
 }

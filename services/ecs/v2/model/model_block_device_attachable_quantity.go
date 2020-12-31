@@ -24,6 +24,10 @@ type BlockDeviceAttachableQuantity struct {
 }
 
 func (o BlockDeviceAttachableQuantity) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BlockDeviceAttachableQuantity struct{}"
+	}
+
 	return strings.Join([]string{"BlockDeviceAttachableQuantity", string(data)}, " ")
 }

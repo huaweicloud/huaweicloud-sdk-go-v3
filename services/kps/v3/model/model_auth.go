@@ -23,7 +23,11 @@ type Auth struct {
 }
 
 func (o Auth) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Auth struct{}"
+	}
+
 	return strings.Join([]string{"Auth", string(data)}, " ")
 }
 

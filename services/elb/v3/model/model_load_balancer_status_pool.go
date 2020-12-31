@@ -29,6 +29,10 @@ type LoadBalancerStatusPool struct {
 }
 
 func (o LoadBalancerStatusPool) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LoadBalancerStatusPool struct{}"
+	}
+
 	return strings.Join([]string{"LoadBalancerStatusPool", string(data)}, " ")
 }

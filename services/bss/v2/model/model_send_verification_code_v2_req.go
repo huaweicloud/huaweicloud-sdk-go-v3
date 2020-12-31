@@ -29,6 +29,10 @@ type SendVerificationCodeV2Req struct {
 }
 
 func (o SendVerificationCodeV2Req) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SendVerificationCodeV2Req struct{}"
+	}
+
 	return strings.Join([]string{"SendVerificationCodeV2Req", string(data)}, " ")
 }

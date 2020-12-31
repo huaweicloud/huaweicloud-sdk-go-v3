@@ -21,6 +21,10 @@ type TagItem struct {
 }
 
 func (o TagItem) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TagItem struct{}"
+	}
+
 	return strings.Join([]string{"TagItem", string(data)}, " ")
 }

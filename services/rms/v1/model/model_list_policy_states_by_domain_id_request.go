@@ -23,6 +23,10 @@ type ListPolicyStatesByDomainIdRequest struct {
 }
 
 func (o ListPolicyStatesByDomainIdRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListPolicyStatesByDomainIdRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListPolicyStatesByDomainIdRequest", string(data)}, " ")
 }

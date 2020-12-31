@@ -19,6 +19,10 @@ type EnablePolicyAssignmentRequest struct {
 }
 
 func (o EnablePolicyAssignmentRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EnablePolicyAssignmentRequest struct{}"
+	}
+
 	return strings.Join([]string{"EnablePolicyAssignmentRequest", string(data)}, " ")
 }

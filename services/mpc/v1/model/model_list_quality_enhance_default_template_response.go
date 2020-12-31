@@ -23,6 +23,10 @@ type ListQualityEnhanceDefaultTemplateResponse struct {
 }
 
 func (o ListQualityEnhanceDefaultTemplateResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListQualityEnhanceDefaultTemplateResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListQualityEnhanceDefaultTemplateResponse", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type NovaServerVolume struct {
 }
 
 func (o NovaServerVolume) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaServerVolume struct{}"
+	}
+
 	return strings.Join([]string{"NovaServerVolume", string(data)}, " ")
 }

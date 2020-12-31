@@ -31,7 +31,11 @@ type GetTaskDetailListRspJobs struct {
 }
 
 func (o GetTaskDetailListRspJobs) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GetTaskDetailListRspJobs struct{}"
+	}
+
 	return strings.Join([]string{"GetTaskDetailListRspJobs", string(data)}, " ")
 }
 

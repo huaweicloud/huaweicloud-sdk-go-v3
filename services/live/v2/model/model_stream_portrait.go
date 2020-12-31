@@ -33,6 +33,10 @@ type StreamPortrait struct {
 }
 
 func (o StreamPortrait) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StreamPortrait struct{}"
+	}
+
 	return strings.Join([]string{"StreamPortrait", string(data)}, " ")
 }

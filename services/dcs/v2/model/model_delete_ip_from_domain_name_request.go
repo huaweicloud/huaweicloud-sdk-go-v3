@@ -21,6 +21,10 @@ type DeleteIpFromDomainNameRequest struct {
 }
 
 func (o DeleteIpFromDomainNameRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteIpFromDomainNameRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteIpFromDomainNameRequest", string(data)}, " ")
 }

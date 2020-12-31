@@ -44,7 +44,11 @@ type ShowCertificateResponse struct {
 }
 
 func (o ShowCertificateResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowCertificateResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowCertificateResponse", string(data)}, " ")
 }
 

@@ -22,6 +22,10 @@ type CreateNotificationRequestBody struct {
 }
 
 func (o CreateNotificationRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateNotificationRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateNotificationRequestBody", string(data)}, " ")
 }

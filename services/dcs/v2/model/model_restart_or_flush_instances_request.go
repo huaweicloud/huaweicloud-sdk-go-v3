@@ -19,6 +19,10 @@ type RestartOrFlushInstancesRequest struct {
 }
 
 func (o RestartOrFlushInstancesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RestartOrFlushInstancesRequest struct{}"
+	}
+
 	return strings.Join([]string{"RestartOrFlushInstancesRequest", string(data)}, " ")
 }

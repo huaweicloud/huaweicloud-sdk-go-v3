@@ -19,6 +19,10 @@ type ShowServerRemoteConsoleRequestBody struct {
 }
 
 func (o ShowServerRemoteConsoleRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowServerRemoteConsoleRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"ShowServerRemoteConsoleRequestBody", string(data)}, " ")
 }

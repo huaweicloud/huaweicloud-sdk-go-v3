@@ -49,6 +49,10 @@ type CreateServers struct {
 }
 
 func (o CreateServers) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateServers struct{}"
+	}
+
 	return strings.Join([]string{"CreateServers", string(data)}, " ")
 }

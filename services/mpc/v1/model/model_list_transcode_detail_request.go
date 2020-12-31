@@ -19,6 +19,10 @@ type ListTranscodeDetailRequest struct {
 }
 
 func (o ListTranscodeDetailRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListTranscodeDetailRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListTranscodeDetailRequest", string(data)}, " ")
 }

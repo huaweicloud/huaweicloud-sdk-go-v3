@@ -22,6 +22,10 @@ type TemplateCddl struct {
 }
 
 func (o TemplateCddl) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TemplateCddl struct{}"
+	}
+
 	return strings.Join([]string{"TemplateCddl", string(data)}, " ")
 }

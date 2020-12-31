@@ -31,6 +31,10 @@ type ExternalAccesses struct {
 }
 
 func (o ExternalAccesses) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ExternalAccesses struct{}"
+	}
+
 	return strings.Join([]string{"ExternalAccesses", string(data)}, " ")
 }

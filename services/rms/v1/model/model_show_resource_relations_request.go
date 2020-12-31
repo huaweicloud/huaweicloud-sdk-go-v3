@@ -23,7 +23,11 @@ type ShowResourceRelationsRequest struct {
 }
 
 func (o ShowResourceRelationsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowResourceRelationsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowResourceRelationsRequest", string(data)}, " ")
 }
 

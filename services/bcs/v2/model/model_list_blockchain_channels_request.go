@@ -19,6 +19,10 @@ type ListBlockchainChannelsRequest struct {
 }
 
 func (o ListBlockchainChannelsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListBlockchainChannelsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListBlockchainChannelsRequest", string(data)}, " ")
 }

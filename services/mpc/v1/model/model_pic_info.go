@@ -19,6 +19,10 @@ type PicInfo struct {
 }
 
 func (o PicInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PicInfo struct{}"
+	}
+
 	return strings.Join([]string{"PicInfo", string(data)}, " ")
 }

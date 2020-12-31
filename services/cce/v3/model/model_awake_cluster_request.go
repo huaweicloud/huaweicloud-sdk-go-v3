@@ -20,6 +20,10 @@ type AwakeClusterRequest struct {
 }
 
 func (o AwakeClusterRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AwakeClusterRequest struct{}"
+	}
+
 	return strings.Join([]string{"AwakeClusterRequest", string(data)}, " ")
 }

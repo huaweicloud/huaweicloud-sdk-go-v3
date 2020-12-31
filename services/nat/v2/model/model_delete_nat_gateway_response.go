@@ -19,6 +19,10 @@ type DeleteNatGatewayResponse struct {
 }
 
 func (o DeleteNatGatewayResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteNatGatewayResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteNatGatewayResponse", string(data)}, " ")
 }

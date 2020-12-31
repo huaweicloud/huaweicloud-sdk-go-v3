@@ -22,7 +22,11 @@ type QueryMatchItem struct {
 }
 
 func (o QueryMatchItem) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QueryMatchItem struct{}"
+	}
+
 	return strings.Join([]string{"QueryMatchItem", string(data)}, " ")
 }
 

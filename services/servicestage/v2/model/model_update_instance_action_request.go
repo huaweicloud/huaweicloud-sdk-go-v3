@@ -22,6 +22,10 @@ type UpdateInstanceActionRequest struct {
 }
 
 func (o UpdateInstanceActionRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateInstanceActionRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateInstanceActionRequest", string(data)}, " ")
 }

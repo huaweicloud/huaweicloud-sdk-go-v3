@@ -21,6 +21,10 @@ type CreateResourceGroupResponse struct {
 }
 
 func (o CreateResourceGroupResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateResourceGroupResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateResourceGroupResponse", string(data)}, " ")
 }

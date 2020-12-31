@@ -30,6 +30,10 @@ type KeystoneCreateUserResult struct {
 }
 
 func (o KeystoneCreateUserResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneCreateUserResult struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneCreateUserResult", string(data)}, " ")
 }

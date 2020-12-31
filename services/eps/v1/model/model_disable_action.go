@@ -21,7 +21,11 @@ type DisableAction struct {
 }
 
 func (o DisableAction) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DisableAction struct{}"
+	}
+
 	return strings.Join([]string{"DisableAction", string(data)}, " ")
 }
 

@@ -22,6 +22,10 @@ type BatchAddMembersRequestBody struct {
 }
 
 func (o BatchAddMembersRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchAddMembersRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"BatchAddMembersRequestBody", string(data)}, " ")
 }

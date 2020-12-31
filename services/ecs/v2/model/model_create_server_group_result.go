@@ -28,6 +28,10 @@ type CreateServerGroupResult struct {
 }
 
 func (o CreateServerGroupResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateServerGroupResult struct{}"
+	}
+
 	return strings.Join([]string{"CreateServerGroupResult", string(data)}, " ")
 }

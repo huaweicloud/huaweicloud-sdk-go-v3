@@ -20,6 +20,10 @@ type CompleteLifecycleActionRequest struct {
 }
 
 func (o CompleteLifecycleActionRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CompleteLifecycleActionRequest struct{}"
+	}
+
 	return strings.Join([]string{"CompleteLifecycleActionRequest", string(data)}, " ")
 }

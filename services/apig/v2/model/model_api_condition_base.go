@@ -26,7 +26,11 @@ type ApiConditionBase struct {
 }
 
 func (o ApiConditionBase) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApiConditionBase struct{}"
+	}
+
 	return strings.Join([]string{"ApiConditionBase", string(data)}, " ")
 }
 

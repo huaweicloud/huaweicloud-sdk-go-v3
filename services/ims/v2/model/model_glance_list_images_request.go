@@ -51,7 +51,11 @@ type GlanceListImagesRequest struct {
 }
 
 func (o GlanceListImagesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GlanceListImagesRequest struct{}"
+	}
+
 	return strings.Join([]string{"GlanceListImagesRequest", string(data)}, " ")
 }
 

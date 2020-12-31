@@ -39,7 +39,11 @@ type PostAndPutFloatingIpResp struct {
 }
 
 func (o PostAndPutFloatingIpResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PostAndPutFloatingIpResp struct{}"
+	}
+
 	return strings.Join([]string{"PostAndPutFloatingIpResp", string(data)}, " ")
 }
 

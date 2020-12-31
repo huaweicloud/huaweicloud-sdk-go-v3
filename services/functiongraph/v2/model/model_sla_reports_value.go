@@ -21,6 +21,10 @@ type SlaReportsValue struct {
 }
 
 func (o SlaReportsValue) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SlaReportsValue struct{}"
+	}
+
 	return strings.Join([]string{"SlaReportsValue", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type UpdateWatermarkTemplateResponse struct {
 }
 
 func (o UpdateWatermarkTemplateResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateWatermarkTemplateResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateWatermarkTemplateResponse", string(data)}, " ")
 }

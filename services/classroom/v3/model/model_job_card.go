@@ -37,6 +37,10 @@ type JobCard struct {
 }
 
 func (o JobCard) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "JobCard struct{}"
+	}
+
 	return strings.Join([]string{"JobCard", string(data)}, " ")
 }

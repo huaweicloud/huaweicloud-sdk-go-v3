@@ -19,6 +19,10 @@ type DeleteFunctionTriggerResponse struct {
 }
 
 func (o DeleteFunctionTriggerResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteFunctionTriggerResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteFunctionTriggerResponse", string(data)}, " ")
 }

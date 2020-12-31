@@ -22,6 +22,10 @@ type CreateDatabaseRoleRequestBody struct {
 }
 
 func (o CreateDatabaseRoleRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateDatabaseRoleRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateDatabaseRoleRequestBody", string(data)}, " ")
 }

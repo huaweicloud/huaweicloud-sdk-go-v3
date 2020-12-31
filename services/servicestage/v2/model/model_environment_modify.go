@@ -23,6 +23,10 @@ type EnvironmentModify struct {
 }
 
 func (o EnvironmentModify) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EnvironmentModify struct{}"
+	}
+
 	return strings.Join([]string{"EnvironmentModify", string(data)}, " ")
 }

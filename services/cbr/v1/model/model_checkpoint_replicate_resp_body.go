@@ -33,6 +33,10 @@ type CheckpointReplicateRespBody struct {
 }
 
 func (o CheckpointReplicateRespBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CheckpointReplicateRespBody struct{}"
+	}
+
 	return strings.Join([]string{"CheckpointReplicateRespBody", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type UpdateAgencyCustomPolicyResponse struct {
 }
 
 func (o UpdateAgencyCustomPolicyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateAgencyCustomPolicyResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateAgencyCustomPolicyResponse", string(data)}, " ")
 }

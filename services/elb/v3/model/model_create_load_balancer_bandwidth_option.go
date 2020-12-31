@@ -29,7 +29,11 @@ type CreateLoadBalancerBandwidthOption struct {
 }
 
 func (o CreateLoadBalancerBandwidthOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateLoadBalancerBandwidthOption struct{}"
+	}
+
 	return strings.Join([]string{"CreateLoadBalancerBandwidthOption", string(data)}, " ")
 }
 

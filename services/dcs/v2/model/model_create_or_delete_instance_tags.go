@@ -21,6 +21,10 @@ type CreateOrDeleteInstanceTags struct {
 }
 
 func (o CreateOrDeleteInstanceTags) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateOrDeleteInstanceTags struct{}"
+	}
+
 	return strings.Join([]string{"CreateOrDeleteInstanceTags", string(data)}, " ")
 }

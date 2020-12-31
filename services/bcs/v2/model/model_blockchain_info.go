@@ -21,6 +21,10 @@ type BlockchainInfo struct {
 }
 
 func (o BlockchainInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BlockchainInfo struct{}"
+	}
+
 	return strings.Join([]string{"BlockchainInfo", string(data)}, " ")
 }

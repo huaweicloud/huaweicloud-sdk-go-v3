@@ -19,6 +19,10 @@ type DeleteDependencyRequest struct {
 }
 
 func (o DeleteDependencyRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteDependencyRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteDependencyRequest", string(data)}, " ")
 }

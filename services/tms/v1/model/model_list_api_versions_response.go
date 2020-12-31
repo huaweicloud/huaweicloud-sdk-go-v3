@@ -21,6 +21,10 @@ type ListApiVersionsResponse struct {
 }
 
 func (o ListApiVersionsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListApiVersionsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListApiVersionsResponse", string(data)}, " ")
 }

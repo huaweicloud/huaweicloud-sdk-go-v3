@@ -19,6 +19,10 @@ type ShowSubnetRequest struct {
 }
 
 func (o ShowSubnetRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowSubnetRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowSubnetRequest", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type Route struct {
 }
 
 func (o Route) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Route struct{}"
+	}
+
 	return strings.Join([]string{"Route", string(data)}, " ")
 }

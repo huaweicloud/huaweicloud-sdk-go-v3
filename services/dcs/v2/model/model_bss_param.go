@@ -28,7 +28,11 @@ type BssParam struct {
 }
 
 func (o BssParam) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BssParam struct{}"
+	}
+
 	return strings.Join([]string{"BssParam", string(data)}, " ")
 }
 

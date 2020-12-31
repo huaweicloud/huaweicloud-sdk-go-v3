@@ -28,6 +28,10 @@ type TemplateGroup struct {
 }
 
 func (o TemplateGroup) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TemplateGroup struct{}"
+	}
+
 	return strings.Join([]string{"TemplateGroup", string(data)}, " ")
 }

@@ -27,6 +27,10 @@ type EventInfoDetail struct {
 }
 
 func (o EventInfoDetail) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EventInfoDetail struct{}"
+	}
+
 	return strings.Join([]string{"EventInfoDetail", string(data)}, " ")
 }

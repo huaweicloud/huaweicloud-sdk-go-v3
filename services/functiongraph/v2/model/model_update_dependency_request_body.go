@@ -30,7 +30,11 @@ type UpdateDependencyRequestBody struct {
 }
 
 func (o UpdateDependencyRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateDependencyRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateDependencyRequestBody", string(data)}, " ")
 }
 

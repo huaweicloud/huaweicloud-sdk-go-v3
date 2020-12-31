@@ -31,7 +31,11 @@ type CreateLifeCycleHookRequestBody struct {
 }
 
 func (o CreateLifeCycleHookRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateLifeCycleHookRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateLifeCycleHookRequestBody", string(data)}, " ")
 }
 

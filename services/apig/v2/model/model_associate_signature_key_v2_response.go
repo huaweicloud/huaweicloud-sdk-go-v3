@@ -21,6 +21,10 @@ type AssociateSignatureKeyV2Response struct {
 }
 
 func (o AssociateSignatureKeyV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AssociateSignatureKeyV2Response struct{}"
+	}
+
 	return strings.Join([]string{"AssociateSignatureKeyV2Response", string(data)}, " ")
 }

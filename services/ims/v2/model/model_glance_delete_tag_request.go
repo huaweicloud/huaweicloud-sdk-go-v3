@@ -20,6 +20,10 @@ type GlanceDeleteTagRequest struct {
 }
 
 func (o GlanceDeleteTagRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GlanceDeleteTagRequest struct{}"
+	}
+
 	return strings.Join([]string{"GlanceDeleteTagRequest", string(data)}, " ")
 }

@@ -37,7 +37,11 @@ type PostPaidServerDataVolume struct {
 }
 
 func (o PostPaidServerDataVolume) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PostPaidServerDataVolume struct{}"
+	}
+
 	return strings.Join([]string{"PostPaidServerDataVolume", string(data)}, " ")
 }
 

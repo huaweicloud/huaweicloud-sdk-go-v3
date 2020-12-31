@@ -21,6 +21,10 @@ type OperateKeyRequestBody struct {
 }
 
 func (o OperateKeyRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OperateKeyRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"OperateKeyRequestBody", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type AclPolicyResult struct {
 }
 
 func (o AclPolicyResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AclPolicyResult struct{}"
+	}
+
 	return strings.Join([]string{"AclPolicyResult", string(data)}, " ")
 }

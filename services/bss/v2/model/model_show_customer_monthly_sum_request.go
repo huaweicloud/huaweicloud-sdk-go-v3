@@ -25,6 +25,10 @@ type ShowCustomerMonthlySumRequest struct {
 }
 
 func (o ShowCustomerMonthlySumRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowCustomerMonthlySumRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowCustomerMonthlySumRequest", string(data)}, " ")
 }

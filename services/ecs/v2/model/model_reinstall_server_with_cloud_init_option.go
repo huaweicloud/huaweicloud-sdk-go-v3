@@ -27,6 +27,10 @@ type ReinstallServerWithCloudInitOption struct {
 }
 
 func (o ReinstallServerWithCloudInitOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ReinstallServerWithCloudInitOption struct{}"
+	}
+
 	return strings.Join([]string{"ReinstallServerWithCloudInitOption", string(data)}, " ")
 }

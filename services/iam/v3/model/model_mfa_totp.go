@@ -19,6 +19,10 @@ type MfaTotp struct {
 }
 
 func (o MfaTotp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MfaTotp struct{}"
+	}
+
 	return strings.Join([]string{"MfaTotp", string(data)}, " ")
 }

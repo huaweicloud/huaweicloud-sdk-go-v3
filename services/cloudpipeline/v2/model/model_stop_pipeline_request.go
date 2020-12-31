@@ -21,6 +21,10 @@ type StopPipelineRequest struct {
 }
 
 func (o StopPipelineRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StopPipelineRequest struct{}"
+	}
+
 	return strings.Join([]string{"StopPipelineRequest", string(data)}, " ")
 }

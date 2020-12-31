@@ -19,6 +19,10 @@ type MigrateResourceResponse struct {
 }
 
 func (o MigrateResourceResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MigrateResourceResponse struct{}"
+	}
+
 	return strings.Join([]string{"MigrateResourceResponse", string(data)}, " ")
 }

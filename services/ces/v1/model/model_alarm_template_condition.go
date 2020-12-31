@@ -32,6 +32,10 @@ type AlarmTemplateCondition struct {
 }
 
 func (o AlarmTemplateCondition) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AlarmTemplateCondition struct{}"
+	}
+
 	return strings.Join([]string{"AlarmTemplateCondition", string(data)}, " ")
 }

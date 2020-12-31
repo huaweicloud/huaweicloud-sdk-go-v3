@@ -19,6 +19,10 @@ type ShowPublicipTagsRequest struct {
 }
 
 func (o ShowPublicipTagsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowPublicipTagsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowPublicipTagsRequest", string(data)}, " ")
 }

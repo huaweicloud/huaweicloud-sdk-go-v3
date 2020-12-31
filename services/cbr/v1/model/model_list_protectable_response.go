@@ -21,6 +21,10 @@ type ListProtectableResponse struct {
 }
 
 func (o ListProtectableResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListProtectableResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListProtectableResponse", string(data)}, " ")
 }

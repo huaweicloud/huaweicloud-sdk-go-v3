@@ -30,7 +30,11 @@ type CreateDependencyRequestBody struct {
 }
 
 func (o CreateDependencyRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateDependencyRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateDependencyRequestBody", string(data)}, " ")
 }
 

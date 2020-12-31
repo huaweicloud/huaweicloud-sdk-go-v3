@@ -25,6 +25,10 @@ type OsReinstall struct {
 }
 
 func (o OsReinstall) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OsReinstall struct{}"
+	}
+
 	return strings.Join([]string{"OsReinstall", string(data)}, " ")
 }

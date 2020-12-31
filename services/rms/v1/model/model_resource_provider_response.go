@@ -26,6 +26,10 @@ type ResourceProviderResponse struct {
 }
 
 func (o ResourceProviderResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResourceProviderResponse struct{}"
+	}
+
 	return strings.Join([]string{"ResourceProviderResponse", string(data)}, " ")
 }

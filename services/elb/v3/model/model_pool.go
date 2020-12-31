@@ -46,6 +46,10 @@ type Pool struct {
 }
 
 func (o Pool) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Pool struct{}"
+	}
+
 	return strings.Join([]string{"Pool", string(data)}, " ")
 }

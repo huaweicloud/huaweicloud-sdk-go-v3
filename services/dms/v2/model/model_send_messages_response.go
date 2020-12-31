@@ -21,6 +21,10 @@ type SendMessagesResponse struct {
 }
 
 func (o SendMessagesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SendMessagesResponse struct{}"
+	}
+
 	return strings.Join([]string{"SendMessagesResponse", string(data)}, " ")
 }

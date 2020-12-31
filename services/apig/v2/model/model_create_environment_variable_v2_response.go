@@ -29,6 +29,10 @@ type CreateEnvironmentVariableV2Response struct {
 }
 
 func (o CreateEnvironmentVariableV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateEnvironmentVariableV2Response struct{}"
+	}
+
 	return strings.Join([]string{"CreateEnvironmentVariableV2Response", string(data)}, " ")
 }

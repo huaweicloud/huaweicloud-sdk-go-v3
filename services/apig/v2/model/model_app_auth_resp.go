@@ -36,7 +36,11 @@ type AppAuthResp struct {
 }
 
 func (o AppAuthResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AppAuthResp struct{}"
+	}
+
 	return strings.Join([]string{"AppAuthResp", string(data)}, " ")
 }
 

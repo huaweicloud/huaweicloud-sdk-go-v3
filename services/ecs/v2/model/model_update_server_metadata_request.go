@@ -20,6 +20,10 @@ type UpdateServerMetadataRequest struct {
 }
 
 func (o UpdateServerMetadataRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateServerMetadataRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateServerMetadataRequest", string(data)}, " ")
 }

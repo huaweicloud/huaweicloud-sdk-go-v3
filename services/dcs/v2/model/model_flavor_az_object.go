@@ -21,6 +21,10 @@ type FlavorAzObject struct {
 }
 
 func (o FlavorAzObject) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "FlavorAzObject struct{}"
+	}
+
 	return strings.Join([]string{"FlavorAzObject", string(data)}, " ")
 }

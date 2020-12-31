@@ -30,6 +30,10 @@ type PolicyFilterDefinition struct {
 }
 
 func (o PolicyFilterDefinition) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PolicyFilterDefinition struct{}"
+	}
+
 	return strings.Join([]string{"PolicyFilterDefinition", string(data)}, " ")
 }

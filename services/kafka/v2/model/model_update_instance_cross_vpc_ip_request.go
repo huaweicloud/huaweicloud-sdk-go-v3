@@ -21,6 +21,10 @@ type UpdateInstanceCrossVpcIpRequest struct {
 }
 
 func (o UpdateInstanceCrossVpcIpRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateInstanceCrossVpcIpRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateInstanceCrossVpcIpRequest", string(data)}, " ")
 }

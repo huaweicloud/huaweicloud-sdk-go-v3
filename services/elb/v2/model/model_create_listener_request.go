@@ -19,6 +19,10 @@ type CreateListenerRequest struct {
 }
 
 func (o CreateListenerRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateListenerRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateListenerRequest", string(data)}, " ")
 }

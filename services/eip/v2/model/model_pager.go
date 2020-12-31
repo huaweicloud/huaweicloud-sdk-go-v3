@@ -23,7 +23,11 @@ type Pager struct {
 }
 
 func (o Pager) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Pager struct{}"
+	}
+
 	return strings.Join([]string{"Pager", string(data)}, " ")
 }
 

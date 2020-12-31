@@ -27,6 +27,10 @@ type ApplicationEndpoint struct {
 }
 
 func (o ApplicationEndpoint) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApplicationEndpoint struct{}"
+	}
+
 	return strings.Join([]string{"ApplicationEndpoint", string(data)}, " ")
 }

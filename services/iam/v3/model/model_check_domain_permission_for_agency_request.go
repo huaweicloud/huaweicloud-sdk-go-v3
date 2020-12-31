@@ -21,6 +21,10 @@ type CheckDomainPermissionForAgencyRequest struct {
 }
 
 func (o CheckDomainPermissionForAgencyRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CheckDomainPermissionForAgencyRequest struct{}"
+	}
+
 	return strings.Join([]string{"CheckDomainPermissionForAgencyRequest", string(data)}, " ")
 }

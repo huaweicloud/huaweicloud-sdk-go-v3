@@ -20,6 +20,10 @@ type EnableOrDisableScalingGroupRequest struct {
 }
 
 func (o EnableOrDisableScalingGroupRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EnableOrDisableScalingGroupRequest struct{}"
+	}
+
 	return strings.Join([]string{"EnableOrDisableScalingGroupRequest", string(data)}, " ")
 }

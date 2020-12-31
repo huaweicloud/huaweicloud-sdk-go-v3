@@ -35,6 +35,10 @@ type ShowMetadataResponse struct {
 }
 
 func (o ShowMetadataResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowMetadataResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowMetadataResponse", string(data)}, " ")
 }

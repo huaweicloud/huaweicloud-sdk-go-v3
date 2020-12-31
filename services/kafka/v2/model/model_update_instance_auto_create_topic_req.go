@@ -19,6 +19,10 @@ type UpdateInstanceAutoCreateTopicReq struct {
 }
 
 func (o UpdateInstanceAutoCreateTopicReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateInstanceAutoCreateTopicReq struct{}"
+	}
+
 	return strings.Join([]string{"UpdateInstanceAutoCreateTopicReq", string(data)}, " ")
 }

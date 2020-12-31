@@ -25,7 +25,11 @@ type ListPredefineTagsRequest struct {
 }
 
 func (o ListPredefineTagsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListPredefineTagsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListPredefineTagsRequest", string(data)}, " ")
 }
 

@@ -20,6 +20,10 @@ type UpdateKeyRotationIntervalRequest struct {
 }
 
 func (o UpdateKeyRotationIntervalRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateKeyRotationIntervalRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateKeyRotationIntervalRequest", string(data)}, " ")
 }

@@ -48,6 +48,10 @@ type FlavorExtraSpec struct {
 }
 
 func (o FlavorExtraSpec) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "FlavorExtraSpec struct{}"
+	}
+
 	return strings.Join([]string{"FlavorExtraSpec", string(data)}, " ")
 }

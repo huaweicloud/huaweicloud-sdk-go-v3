@@ -19,6 +19,10 @@ type ListMeasureUnitsRequest struct {
 }
 
 func (o ListMeasureUnitsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListMeasureUnitsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListMeasureUnitsRequest", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type ShowResetPwdRequest struct {
 }
 
 func (o ShowResetPwdRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowResetPwdRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowResetPwdRequest", string(data)}, " ")
 }

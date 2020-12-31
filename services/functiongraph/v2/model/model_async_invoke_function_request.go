@@ -21,6 +21,10 @@ type AsyncInvokeFunctionRequest struct {
 }
 
 func (o AsyncInvokeFunctionRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AsyncInvokeFunctionRequest struct{}"
+	}
+
 	return strings.Join([]string{"AsyncInvokeFunctionRequest", string(data)}, " ")
 }

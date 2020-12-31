@@ -29,6 +29,10 @@ type NodeMetadata struct {
 }
 
 func (o NodeMetadata) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NodeMetadata struct{}"
+	}
+
 	return strings.Join([]string{"NodeMetadata", string(data)}, " ")
 }

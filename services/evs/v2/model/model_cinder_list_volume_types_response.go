@@ -20,6 +20,10 @@ type CinderListVolumeTypesResponse struct {
 }
 
 func (o CinderListVolumeTypesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CinderListVolumeTypesResponse struct{}"
+	}
+
 	return strings.Join([]string{"CinderListVolumeTypesResponse", string(data)}, " ")
 }

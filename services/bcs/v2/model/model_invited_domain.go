@@ -20,6 +20,10 @@ type InvitedDomain struct {
 }
 
 func (o InvitedDomain) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InvitedDomain struct{}"
+	}
+
 	return strings.Join([]string{"InvitedDomain", string(data)}, " ")
 }

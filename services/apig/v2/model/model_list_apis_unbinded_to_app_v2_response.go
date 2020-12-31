@@ -25,6 +25,10 @@ type ListApisUnbindedToAppV2Response struct {
 }
 
 func (o ListApisUnbindedToAppV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListApisUnbindedToAppV2Response struct{}"
+	}
+
 	return strings.Join([]string{"ListApisUnbindedToAppV2Response", string(data)}, " ")
 }

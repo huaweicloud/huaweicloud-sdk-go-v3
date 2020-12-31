@@ -29,7 +29,11 @@ type CreatePrePaidPublicipExtendParamOption struct {
 }
 
 func (o CreatePrePaidPublicipExtendParamOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePrePaidPublicipExtendParamOption struct{}"
+	}
+
 	return strings.Join([]string{"CreatePrePaidPublicipExtendParamOption", string(data)}, " ")
 }
 

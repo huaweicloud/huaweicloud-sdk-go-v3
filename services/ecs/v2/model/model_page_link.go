@@ -22,6 +22,10 @@ type PageLink struct {
 }
 
 func (o PageLink) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PageLink struct{}"
+	}
+
 	return strings.Join([]string{"PageLink", string(data)}, " ")
 }

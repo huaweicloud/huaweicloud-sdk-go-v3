@@ -21,6 +21,10 @@ type CopyInstanceResponse struct {
 }
 
 func (o CopyInstanceResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CopyInstanceResponse struct{}"
+	}
+
 	return strings.Join([]string{"CopyInstanceResponse", string(data)}, " ")
 }

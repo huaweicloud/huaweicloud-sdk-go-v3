@@ -43,6 +43,10 @@ type QueryResRecordsDetailReq struct {
 }
 
 func (o QueryResRecordsDetailReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QueryResRecordsDetailReq struct{}"
+	}
+
 	return strings.Join([]string{"QueryResRecordsDetailReq", string(data)}, " ")
 }

@@ -118,7 +118,11 @@ type GlanceUpdateImageResponse struct {
 }
 
 func (o GlanceUpdateImageResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GlanceUpdateImageResponse struct{}"
+	}
+
 	return strings.Join([]string{"GlanceUpdateImageResponse", string(data)}, " ")
 }
 

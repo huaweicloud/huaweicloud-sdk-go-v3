@@ -21,6 +21,10 @@ type QuotaReclaim struct {
 }
 
 func (o QuotaReclaim) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QuotaReclaim struct{}"
+	}
+
 	return strings.Join([]string{"QuotaReclaim", string(data)}, " ")
 }

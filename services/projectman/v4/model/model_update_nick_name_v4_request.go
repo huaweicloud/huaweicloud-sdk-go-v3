@@ -19,6 +19,10 @@ type UpdateNickNameV4Request struct {
 }
 
 func (o UpdateNickNameV4Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateNickNameV4Request struct{}"
+	}
+
 	return strings.Join([]string{"UpdateNickNameV4Request", string(data)}, " ")
 }

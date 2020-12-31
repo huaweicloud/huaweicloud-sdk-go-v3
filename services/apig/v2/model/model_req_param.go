@@ -52,7 +52,11 @@ type ReqParam struct {
 }
 
 func (o ReqParam) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ReqParam struct{}"
+	}
+
 	return strings.Join([]string{"ReqParam", string(data)}, " ")
 }
 

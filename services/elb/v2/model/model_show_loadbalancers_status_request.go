@@ -19,6 +19,10 @@ type ShowLoadbalancersStatusRequest struct {
 }
 
 func (o ShowLoadbalancersStatusRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowLoadbalancersStatusRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowLoadbalancersStatusRequest", string(data)}, " ")
 }

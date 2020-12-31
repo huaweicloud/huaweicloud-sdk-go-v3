@@ -19,6 +19,10 @@ type BatchInviteMembersToChannelRequest struct {
 }
 
 func (o BatchInviteMembersToChannelRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchInviteMembersToChannelRequest struct{}"
+	}
+
 	return strings.Join([]string{"BatchInviteMembersToChannelRequest", string(data)}, " ")
 }

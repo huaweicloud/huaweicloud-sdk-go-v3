@@ -36,6 +36,10 @@ type CreateCertificateOption struct {
 }
 
 func (o CreateCertificateOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateCertificateOption struct{}"
+	}
+
 	return strings.Join([]string{"CreateCertificateOption", string(data)}, " ")
 }

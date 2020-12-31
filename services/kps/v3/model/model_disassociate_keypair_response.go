@@ -21,6 +21,10 @@ type DisassociateKeypairResponse struct {
 }
 
 func (o DisassociateKeypairResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DisassociateKeypairResponse struct{}"
+	}
+
 	return strings.Join([]string{"DisassociateKeypairResponse", string(data)}, " ")
 }

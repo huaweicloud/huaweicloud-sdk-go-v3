@@ -37,7 +37,11 @@ type NovaServerBlockDeviceMapping struct {
 }
 
 func (o NovaServerBlockDeviceMapping) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaServerBlockDeviceMapping struct{}"
+	}
+
 	return strings.Join([]string{"NovaServerBlockDeviceMapping", string(data)}, " ")
 }
 

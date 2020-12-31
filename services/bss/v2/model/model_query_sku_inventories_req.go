@@ -19,6 +19,10 @@ type QuerySkuInventoriesReq struct {
 }
 
 func (o QuerySkuInventoriesReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QuerySkuInventoriesReq struct{}"
+	}
+
 	return strings.Join([]string{"QuerySkuInventoriesReq", string(data)}, " ")
 }

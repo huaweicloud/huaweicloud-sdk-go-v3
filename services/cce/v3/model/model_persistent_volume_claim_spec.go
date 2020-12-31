@@ -31,7 +31,11 @@ type PersistentVolumeClaimSpec struct {
 }
 
 func (o PersistentVolumeClaimSpec) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PersistentVolumeClaimSpec struct{}"
+	}
+
 	return strings.Join([]string{"PersistentVolumeClaimSpec", string(data)}, " ")
 }
 

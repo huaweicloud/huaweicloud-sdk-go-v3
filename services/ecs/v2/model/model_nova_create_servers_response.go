@@ -20,6 +20,10 @@ type NovaCreateServersResponse struct {
 }
 
 func (o NovaCreateServersResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaCreateServersResponse struct{}"
+	}
+
 	return strings.Join([]string{"NovaCreateServersResponse", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type ShowTrafficRequest struct {
 }
 
 func (o ShowTrafficRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowTrafficRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowTrafficRequest", string(data)}, " ")
 }

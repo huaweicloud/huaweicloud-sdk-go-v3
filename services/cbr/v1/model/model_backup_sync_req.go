@@ -19,6 +19,10 @@ type BackupSyncReq struct {
 }
 
 func (o BackupSyncReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BackupSyncReq struct{}"
+	}
+
 	return strings.Join([]string{"BackupSyncReq", string(data)}, " ")
 }

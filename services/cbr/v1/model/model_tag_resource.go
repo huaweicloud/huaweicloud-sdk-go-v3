@@ -28,6 +28,10 @@ type TagResource struct {
 }
 
 func (o TagResource) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TagResource struct{}"
+	}
+
 	return strings.Join([]string{"TagResource", string(data)}, " ")
 }

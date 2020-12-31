@@ -21,7 +21,11 @@ type ListPoliciesRequest struct {
 }
 
 func (o ListPoliciesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListPoliciesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListPoliciesRequest", string(data)}, " ")
 }
 

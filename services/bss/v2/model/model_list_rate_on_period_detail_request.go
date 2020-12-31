@@ -19,6 +19,10 @@ type ListRateOnPeriodDetailRequest struct {
 }
 
 func (o ListRateOnPeriodDetailRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListRateOnPeriodDetailRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListRateOnPeriodDetailRequest", string(data)}, " ")
 }

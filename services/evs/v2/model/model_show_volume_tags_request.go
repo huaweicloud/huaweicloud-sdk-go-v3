@@ -19,6 +19,10 @@ type ShowVolumeTagsRequest struct {
 }
 
 func (o ShowVolumeTagsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowVolumeTagsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowVolumeTagsRequest", string(data)}, " ")
 }

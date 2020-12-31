@@ -32,6 +32,10 @@ type AgencyTokenResult struct {
 }
 
 func (o AgencyTokenResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AgencyTokenResult struct{}"
+	}
+
 	return strings.Join([]string{"AgencyTokenResult", string(data)}, " ")
 }

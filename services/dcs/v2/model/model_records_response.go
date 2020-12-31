@@ -31,7 +31,11 @@ type RecordsResponse struct {
 }
 
 func (o RecordsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RecordsResponse struct{}"
+	}
+
 	return strings.Join([]string{"RecordsResponse", string(data)}, " ")
 }
 

@@ -23,6 +23,10 @@ type ListOrgInstancesRequest struct {
 }
 
 func (o ListOrgInstancesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListOrgInstancesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListOrgInstancesRequest", string(data)}, " ")
 }

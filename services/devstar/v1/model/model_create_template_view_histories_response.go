@@ -23,6 +23,10 @@ type CreateTemplateViewHistoriesResponse struct {
 }
 
 func (o CreateTemplateViewHistoriesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateTemplateViewHistoriesResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateTemplateViewHistoriesResponse", string(data)}, " ")
 }

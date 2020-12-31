@@ -30,6 +30,10 @@ type GlanceImageMembers struct {
 }
 
 func (o GlanceImageMembers) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GlanceImageMembers struct{}"
+	}
+
 	return strings.Join([]string{"GlanceImageMembers", string(data)}, " ")
 }

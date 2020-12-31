@@ -22,6 +22,10 @@ type UserWithPrivilege struct {
 }
 
 func (o UserWithPrivilege) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UserWithPrivilege struct{}"
+	}
+
 	return strings.Join([]string{"UserWithPrivilege", string(data)}, " ")
 }

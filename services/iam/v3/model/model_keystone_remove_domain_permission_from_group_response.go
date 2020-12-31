@@ -19,6 +19,10 @@ type KeystoneRemoveDomainPermissionFromGroupResponse struct {
 }
 
 func (o KeystoneRemoveDomainPermissionFromGroupResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneRemoveDomainPermissionFromGroupResponse struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneRemoveDomainPermissionFromGroupResponse", string(data)}, " ")
 }

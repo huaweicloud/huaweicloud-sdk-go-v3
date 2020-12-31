@@ -21,6 +21,10 @@ type OpErrorInfo struct {
 }
 
 func (o OpErrorInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OpErrorInfo struct{}"
+	}
+
 	return strings.Join([]string{"OpErrorInfo", string(data)}, " ")
 }

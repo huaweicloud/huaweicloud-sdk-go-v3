@@ -21,6 +21,10 @@ type RestoreTableInfo struct {
 }
 
 func (o RestoreTableInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RestoreTableInfo struct{}"
+	}
+
 	return strings.Join([]string{"RestoreTableInfo", string(data)}, " ")
 }

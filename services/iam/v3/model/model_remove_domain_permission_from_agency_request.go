@@ -21,6 +21,10 @@ type RemoveDomainPermissionFromAgencyRequest struct {
 }
 
 func (o RemoveDomainPermissionFromAgencyRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RemoveDomainPermissionFromAgencyRequest struct{}"
+	}
+
 	return strings.Join([]string{"RemoveDomainPermissionFromAgencyRequest", string(data)}, " ")
 }

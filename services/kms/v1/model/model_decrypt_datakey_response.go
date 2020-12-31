@@ -25,6 +25,10 @@ type DecryptDatakeyResponse struct {
 }
 
 func (o DecryptDatakeyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DecryptDatakeyResponse struct{}"
+	}
+
 	return strings.Join([]string{"DecryptDatakeyResponse", string(data)}, " ")
 }

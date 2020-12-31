@@ -22,7 +22,11 @@ type ChangeOpsWindowRequest struct {
 }
 
 func (o ChangeOpsWindowRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeOpsWindowRequest struct{}"
+	}
+
 	return strings.Join([]string{"ChangeOpsWindowRequest", string(data)}, " ")
 }
 

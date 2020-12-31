@@ -34,6 +34,10 @@ type UpdateSubnetOption struct {
 }
 
 func (o UpdateSubnetOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateSubnetOption struct{}"
+	}
+
 	return strings.Join([]string{"UpdateSubnetOption", string(data)}, " ")
 }

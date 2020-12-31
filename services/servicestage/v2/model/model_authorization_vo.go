@@ -38,6 +38,10 @@ type AuthorizationVo struct {
 }
 
 func (o AuthorizationVo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AuthorizationVo struct{}"
+	}
+
 	return strings.Join([]string{"AuthorizationVo", string(data)}, " ")
 }

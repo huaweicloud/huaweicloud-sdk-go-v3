@@ -46,6 +46,10 @@ type ApiGroupDetailResp struct {
 }
 
 func (o ApiGroupDetailResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApiGroupDetailResp struct{}"
+	}
+
 	return strings.Join([]string{"ApiGroupDetailResp", string(data)}, " ")
 }

@@ -22,7 +22,11 @@ type PwdIdentity struct {
 }
 
 func (o PwdIdentity) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PwdIdentity struct{}"
+	}
+
 	return strings.Join([]string{"PwdIdentity", string(data)}, " ")
 }
 

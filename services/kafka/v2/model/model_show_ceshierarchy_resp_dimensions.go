@@ -27,6 +27,10 @@ type ShowCeshierarchyRespDimensions struct {
 }
 
 func (o ShowCeshierarchyRespDimensions) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowCeshierarchyRespDimensions struct{}"
+	}
+
 	return strings.Join([]string{"ShowCeshierarchyRespDimensions", string(data)}, " ")
 }

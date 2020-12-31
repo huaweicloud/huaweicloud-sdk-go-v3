@@ -31,7 +31,11 @@ type RunningTasks struct {
 }
 
 func (o RunningTasks) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RunningTasks struct{}"
+	}
+
 	return strings.Join([]string{"RunningTasks", string(data)}, " ")
 }
 

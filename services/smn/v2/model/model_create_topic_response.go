@@ -23,6 +23,10 @@ type CreateTopicResponse struct {
 }
 
 func (o CreateTopicResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateTopicResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateTopicResponse", string(data)}, " ")
 }

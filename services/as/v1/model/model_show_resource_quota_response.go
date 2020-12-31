@@ -20,6 +20,10 @@ type ShowResourceQuotaResponse struct {
 }
 
 func (o ShowResourceQuotaResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowResourceQuotaResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowResourceQuotaResponse", string(data)}, " ")
 }

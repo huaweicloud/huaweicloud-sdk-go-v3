@@ -23,6 +23,10 @@ type MultiAudio struct {
 }
 
 func (o MultiAudio) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MultiAudio struct{}"
+	}
+
 	return strings.Join([]string{"MultiAudio", string(data)}, " ")
 }

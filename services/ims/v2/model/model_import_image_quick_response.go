@@ -21,6 +21,10 @@ type ImportImageQuickResponse struct {
 }
 
 func (o ImportImageQuickResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ImportImageQuickResponse struct{}"
+	}
+
 	return strings.Join([]string{"ImportImageQuickResponse", string(data)}, " ")
 }

@@ -23,6 +23,10 @@ type BatchDisassociateThrottlingPolicyV2Response struct {
 }
 
 func (o BatchDisassociateThrottlingPolicyV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchDisassociateThrottlingPolicyV2Response struct{}"
+	}
+
 	return strings.Join([]string{"BatchDisassociateThrottlingPolicyV2Response", string(data)}, " ")
 }

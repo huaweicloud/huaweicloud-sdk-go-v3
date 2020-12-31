@@ -24,6 +24,10 @@ type ListL7PoliciesResponse struct {
 }
 
 func (o ListL7PoliciesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListL7PoliciesResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListL7PoliciesResponse", string(data)}, " ")
 }

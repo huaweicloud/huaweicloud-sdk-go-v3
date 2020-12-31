@@ -33,6 +33,10 @@ type CommonTask struct {
 }
 
 func (o CommonTask) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CommonTask struct{}"
+	}
+
 	return strings.Join([]string{"CommonTask", string(data)}, " ")
 }

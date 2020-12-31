@@ -19,6 +19,10 @@ type ShowVaultRequest struct {
 }
 
 func (o ShowVaultRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowVaultRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowVaultRequest", string(data)}, " ")
 }

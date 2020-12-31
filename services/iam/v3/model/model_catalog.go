@@ -26,6 +26,10 @@ type Catalog struct {
 }
 
 func (o Catalog) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Catalog struct{}"
+	}
+
 	return strings.Join([]string{"Catalog", string(data)}, " ")
 }

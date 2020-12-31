@@ -37,6 +37,10 @@ type CreateCustomerV2Req struct {
 }
 
 func (o CreateCustomerV2Req) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateCustomerV2Req struct{}"
+	}
+
 	return strings.Join([]string{"CreateCustomerV2Req", string(data)}, " ")
 }

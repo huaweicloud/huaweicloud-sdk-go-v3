@@ -38,6 +38,10 @@ type MemberResp struct {
 }
 
 func (o MemberResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MemberResp struct{}"
+	}
+
 	return strings.Join([]string{"MemberResp", string(data)}, " ")
 }

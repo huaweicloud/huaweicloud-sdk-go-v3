@@ -35,7 +35,11 @@ type MigrationTaskList struct {
 }
 
 func (o MigrationTaskList) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MigrationTaskList struct{}"
+	}
+
 	return strings.Join([]string{"MigrationTaskList", string(data)}, " ")
 }
 

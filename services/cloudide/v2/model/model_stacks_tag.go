@@ -21,6 +21,10 @@ type StacksTag struct {
 }
 
 func (o StacksTag) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StacksTag struct{}"
+	}
+
 	return strings.Join([]string{"StacksTag", string(data)}, " ")
 }

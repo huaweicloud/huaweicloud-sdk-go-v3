@@ -23,6 +23,10 @@ type CreateApplicationEndpointResponse struct {
 }
 
 func (o CreateApplicationEndpointResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateApplicationEndpointResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateApplicationEndpointResponse", string(data)}, " ")
 }

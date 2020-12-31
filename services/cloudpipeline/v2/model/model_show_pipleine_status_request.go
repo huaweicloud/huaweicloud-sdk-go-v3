@@ -21,6 +21,10 @@ type ShowPipleineStatusRequest struct {
 }
 
 func (o ShowPipleineStatusRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowPipleineStatusRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowPipleineStatusRequest", string(data)}, " ")
 }

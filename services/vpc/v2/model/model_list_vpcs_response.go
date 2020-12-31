@@ -21,6 +21,10 @@ type ListVpcsResponse struct {
 }
 
 func (o ListVpcsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListVpcsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListVpcsResponse", string(data)}, " ")
 }

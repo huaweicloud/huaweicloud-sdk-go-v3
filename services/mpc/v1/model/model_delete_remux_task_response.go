@@ -19,6 +19,10 @@ type DeleteRemuxTaskResponse struct {
 }
 
 func (o DeleteRemuxTaskResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteRemuxTaskResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteRemuxTaskResponse", string(data)}, " ")
 }

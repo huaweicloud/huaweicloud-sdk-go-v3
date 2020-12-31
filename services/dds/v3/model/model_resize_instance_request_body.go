@@ -18,6 +18,10 @@ type ResizeInstanceRequestBody struct {
 }
 
 func (o ResizeInstanceRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResizeInstanceRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"ResizeInstanceRequestBody", string(data)}, " ")
 }

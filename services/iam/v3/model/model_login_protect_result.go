@@ -24,6 +24,10 @@ type LoginProtectResult struct {
 }
 
 func (o LoginProtectResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LoginProtectResult struct{}"
+	}
+
 	return strings.Join([]string{"LoginProtectResult", string(data)}, " ")
 }

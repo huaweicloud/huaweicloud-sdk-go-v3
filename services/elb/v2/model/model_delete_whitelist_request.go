@@ -19,6 +19,10 @@ type DeleteWhitelistRequest struct {
 }
 
 func (o DeleteWhitelistRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteWhitelistRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteWhitelistRequest", string(data)}, " ")
 }

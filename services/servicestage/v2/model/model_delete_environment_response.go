@@ -19,6 +19,10 @@ type DeleteEnvironmentResponse struct {
 }
 
 func (o DeleteEnvironmentResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteEnvironmentResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteEnvironmentResponse", string(data)}, " ")
 }

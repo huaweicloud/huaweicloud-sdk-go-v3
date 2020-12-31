@@ -85,7 +85,11 @@ type ShowFunctionConfigResponse struct {
 }
 
 func (o ShowFunctionConfigResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowFunctionConfigResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowFunctionConfigResponse", string(data)}, " ")
 }
 

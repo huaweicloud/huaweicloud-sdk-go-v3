@@ -19,6 +19,10 @@ type CreatePostPaidServersRequest struct {
 }
 
 func (o CreatePostPaidServersRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePostPaidServersRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreatePostPaidServersRequest", string(data)}, " ")
 }

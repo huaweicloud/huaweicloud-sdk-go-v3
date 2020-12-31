@@ -60,6 +60,10 @@ type InstanceRequest struct {
 }
 
 func (o InstanceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceRequest struct{}"
+	}
+
 	return strings.Join([]string{"InstanceRequest", string(data)}, " ")
 }

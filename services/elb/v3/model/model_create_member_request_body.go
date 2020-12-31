@@ -19,6 +19,10 @@ type CreateMemberRequestBody struct {
 }
 
 func (o CreateMemberRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateMemberRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateMemberRequestBody", string(data)}, " ")
 }

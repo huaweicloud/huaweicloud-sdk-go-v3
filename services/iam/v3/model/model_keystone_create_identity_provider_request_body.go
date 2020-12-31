@@ -19,6 +19,10 @@ type KeystoneCreateIdentityProviderRequestBody struct {
 }
 
 func (o KeystoneCreateIdentityProviderRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneCreateIdentityProviderRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneCreateIdentityProviderRequestBody", string(data)}, " ")
 }

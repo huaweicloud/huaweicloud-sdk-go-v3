@@ -20,6 +20,10 @@ type ServerGroupMember struct {
 }
 
 func (o ServerGroupMember) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServerGroupMember struct{}"
+	}
+
 	return strings.Join([]string{"ServerGroupMember", string(data)}, " ")
 }

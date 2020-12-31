@@ -20,6 +20,10 @@ type CreateCloudServiceCustomPolicyResponse struct {
 }
 
 func (o CreateCloudServiceCustomPolicyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateCloudServiceCustomPolicyResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateCloudServiceCustomPolicyResponse", string(data)}, " ")
 }

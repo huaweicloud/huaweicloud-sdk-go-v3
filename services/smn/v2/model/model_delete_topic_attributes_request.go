@@ -19,6 +19,10 @@ type DeleteTopicAttributesRequest struct {
 }
 
 func (o DeleteTopicAttributesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteTopicAttributesRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteTopicAttributesRequest", string(data)}, " ")
 }

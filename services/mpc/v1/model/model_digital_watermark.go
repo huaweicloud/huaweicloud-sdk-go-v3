@@ -20,7 +20,11 @@ type DigitalWatermark struct {
 }
 
 func (o DigitalWatermark) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DigitalWatermark struct{}"
+	}
+
 	return strings.Join([]string{"DigitalWatermark", string(data)}, " ")
 }
 

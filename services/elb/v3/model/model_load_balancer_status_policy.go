@@ -28,6 +28,10 @@ type LoadBalancerStatusPolicy struct {
 }
 
 func (o LoadBalancerStatusPolicy) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LoadBalancerStatusPolicy struct{}"
+	}
+
 	return strings.Join([]string{"LoadBalancerStatusPolicy", string(data)}, " ")
 }

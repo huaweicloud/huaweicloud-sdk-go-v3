@@ -30,6 +30,10 @@ type InstanceModify struct {
 }
 
 func (o InstanceModify) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceModify struct{}"
+	}
+
 	return strings.Join([]string{"InstanceModify", string(data)}, " ")
 }

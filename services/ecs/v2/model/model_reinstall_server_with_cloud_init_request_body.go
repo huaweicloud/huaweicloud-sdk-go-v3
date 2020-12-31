@@ -19,6 +19,10 @@ type ReinstallServerWithCloudInitRequestBody struct {
 }
 
 func (o ReinstallServerWithCloudInitRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ReinstallServerWithCloudInitRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"ReinstallServerWithCloudInitRequestBody", string(data)}, " ")
 }

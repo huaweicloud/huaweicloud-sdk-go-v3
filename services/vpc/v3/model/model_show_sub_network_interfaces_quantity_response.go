@@ -23,6 +23,10 @@ type ShowSubNetworkInterfacesQuantityResponse struct {
 }
 
 func (o ShowSubNetworkInterfacesQuantityResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowSubNetworkInterfacesQuantityResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowSubNetworkInterfacesQuantityResponse", string(data)}, " ")
 }

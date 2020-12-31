@@ -26,6 +26,10 @@ type PolicyInstanceResources struct {
 }
 
 func (o PolicyInstanceResources) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PolicyInstanceResources struct{}"
+	}
+
 	return strings.Join([]string{"PolicyInstanceResources", string(data)}, " ")
 }

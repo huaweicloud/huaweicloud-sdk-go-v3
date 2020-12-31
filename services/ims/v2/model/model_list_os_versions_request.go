@@ -19,6 +19,10 @@ type ListOsVersionsRequest struct {
 }
 
 func (o ListOsVersionsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListOsVersionsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListOsVersionsRequest", string(data)}, " ")
 }

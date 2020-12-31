@@ -19,6 +19,10 @@ type ShowMigrationTaskStatsRequest struct {
 }
 
 func (o ShowMigrationTaskStatsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowMigrationTaskStatsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowMigrationTaskStatsRequest", string(data)}, " ")
 }

@@ -53,7 +53,11 @@ type NovaCreateServersOption struct {
 }
 
 func (o NovaCreateServersOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaCreateServersOption struct{}"
+	}
+
 	return strings.Join([]string{"NovaCreateServersOption", string(data)}, " ")
 }
 

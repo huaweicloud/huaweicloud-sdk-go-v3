@@ -22,6 +22,10 @@ type InstanceReplicationDimensionsInfo struct {
 }
 
 func (o InstanceReplicationDimensionsInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceReplicationDimensionsInfo struct{}"
+	}
+
 	return strings.Join([]string{"InstanceReplicationDimensionsInfo", string(data)}, " ")
 }

@@ -26,6 +26,10 @@ type ApiMock struct {
 }
 
 func (o ApiMock) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApiMock struct{}"
+	}
+
 	return strings.Join([]string{"ApiMock", string(data)}, " ")
 }

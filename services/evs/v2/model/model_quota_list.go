@@ -38,6 +38,10 @@ type QuotaList struct {
 }
 
 func (o QuotaList) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QuotaList struct{}"
+	}
+
 	return strings.Join([]string{"QuotaList", string(data)}, " ")
 }

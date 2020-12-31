@@ -21,6 +21,10 @@ type CreateMetadataResponse struct {
 }
 
 func (o CreateMetadataResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateMetadataResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateMetadataResponse", string(data)}, " ")
 }

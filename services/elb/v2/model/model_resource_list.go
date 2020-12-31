@@ -20,6 +20,10 @@ type ResourceList struct {
 }
 
 func (o ResourceList) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResourceList struct{}"
+	}
+
 	return strings.Join([]string{"ResourceList", string(data)}, " ")
 }

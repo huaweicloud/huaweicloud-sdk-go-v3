@@ -27,6 +27,10 @@ type AgencyPolicyRoleOption struct {
 }
 
 func (o AgencyPolicyRoleOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AgencyPolicyRoleOption struct{}"
+	}
+
 	return strings.Join([]string{"AgencyPolicyRoleOption", string(data)}, " ")
 }

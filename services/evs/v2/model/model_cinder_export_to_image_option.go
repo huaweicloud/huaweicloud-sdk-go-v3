@@ -29,7 +29,11 @@ type CinderExportToImageOption struct {
 }
 
 func (o CinderExportToImageOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CinderExportToImageOption struct{}"
+	}
+
 	return strings.Join([]string{"CinderExportToImageOption", string(data)}, " ")
 }
 

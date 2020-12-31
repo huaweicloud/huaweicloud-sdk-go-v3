@@ -39,6 +39,10 @@ type PackageUsageInfo struct {
 }
 
 func (o PackageUsageInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PackageUsageInfo struct{}"
+	}
+
 	return strings.Join([]string{"PackageUsageInfo", string(data)}, " ")
 }

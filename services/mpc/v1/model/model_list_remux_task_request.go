@@ -27,7 +27,11 @@ type ListRemuxTaskRequest struct {
 }
 
 func (o ListRemuxTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListRemuxTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListRemuxTaskRequest", string(data)}, " ")
 }
 

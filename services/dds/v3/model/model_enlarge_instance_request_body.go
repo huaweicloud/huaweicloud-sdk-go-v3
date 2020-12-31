@@ -25,7 +25,11 @@ type EnlargeInstanceRequestBody struct {
 }
 
 func (o EnlargeInstanceRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EnlargeInstanceRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"EnlargeInstanceRequestBody", string(data)}, " ")
 }
 

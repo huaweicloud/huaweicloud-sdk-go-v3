@@ -19,6 +19,10 @@ type ShowScalingConfigRequest struct {
 }
 
 func (o ShowScalingConfigRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowScalingConfigRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowScalingConfigRequest", string(data)}, " ")
 }

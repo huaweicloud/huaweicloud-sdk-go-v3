@@ -23,7 +23,11 @@ type BatchCreateVolumeTagsRequestBody struct {
 }
 
 func (o BatchCreateVolumeTagsRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchCreateVolumeTagsRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"BatchCreateVolumeTagsRequestBody", string(data)}, " ")
 }
 

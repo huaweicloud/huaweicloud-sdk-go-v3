@@ -19,6 +19,10 @@ type RollbackInfo struct {
 }
 
 func (o RollbackInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RollbackInfo struct{}"
+	}
+
 	return strings.Join([]string{"RollbackInfo", string(data)}, " ")
 }

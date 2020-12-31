@@ -22,6 +22,10 @@ type UpdateIpGroupResponse struct {
 }
 
 func (o UpdateIpGroupResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateIpGroupResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateIpGroupResponse", string(data)}, " ")
 }

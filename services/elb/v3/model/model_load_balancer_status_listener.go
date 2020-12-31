@@ -30,6 +30,10 @@ type LoadBalancerStatusListener struct {
 }
 
 func (o LoadBalancerStatusListener) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LoadBalancerStatusListener struct{}"
+	}
+
 	return strings.Join([]string{"LoadBalancerStatusListener", string(data)}, " ")
 }

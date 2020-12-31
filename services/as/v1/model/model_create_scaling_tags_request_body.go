@@ -23,7 +23,11 @@ type CreateScalingTagsRequestBody struct {
 }
 
 func (o CreateScalingTagsRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateScalingTagsRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateScalingTagsRequestBody", string(data)}, " ")
 }
 

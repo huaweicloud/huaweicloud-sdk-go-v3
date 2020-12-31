@@ -21,6 +21,10 @@ type AttachServerVolumeResponse struct {
 }
 
 func (o AttachServerVolumeResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AttachServerVolumeResponse struct{}"
+	}
+
 	return strings.Join([]string{"AttachServerVolumeResponse", string(data)}, " ")
 }

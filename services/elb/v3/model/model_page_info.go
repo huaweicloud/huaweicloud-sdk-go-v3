@@ -24,6 +24,10 @@ type PageInfo struct {
 }
 
 func (o PageInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PageInfo struct{}"
+	}
+
 	return strings.Join([]string{"PageInfo", string(data)}, " ")
 }

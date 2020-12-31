@@ -21,6 +21,10 @@ type CreateAuthorizingAppsV2Response struct {
 }
 
 func (o CreateAuthorizingAppsV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateAuthorizingAppsV2Response struct{}"
+	}
+
 	return strings.Join([]string{"CreateAuthorizingAppsV2Response", string(data)}, " ")
 }

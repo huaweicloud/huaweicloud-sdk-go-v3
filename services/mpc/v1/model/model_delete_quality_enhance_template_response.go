@@ -19,6 +19,10 @@ type DeleteQualityEnhanceTemplateResponse struct {
 }
 
 func (o DeleteQualityEnhanceTemplateResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteQualityEnhanceTemplateResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteQualityEnhanceTemplateResponse", string(data)}, " ")
 }

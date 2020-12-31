@@ -22,6 +22,10 @@ type ServicePolicy struct {
 }
 
 func (o ServicePolicy) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServicePolicy struct{}"
+	}
+
 	return strings.Join([]string{"ServicePolicy", string(data)}, " ")
 }

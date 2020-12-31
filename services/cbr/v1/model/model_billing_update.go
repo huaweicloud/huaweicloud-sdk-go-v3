@@ -22,7 +22,11 @@ type BillingUpdate struct {
 }
 
 func (o BillingUpdate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BillingUpdate struct{}"
+	}
+
 	return strings.Join([]string{"BillingUpdate", string(data)}, " ")
 }
 

@@ -19,6 +19,10 @@ type LoginTokenAssumedBy struct {
 }
 
 func (o LoginTokenAssumedBy) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LoginTokenAssumedBy struct{}"
+	}
+
 	return strings.Join([]string{"LoginTokenAssumedBy", string(data)}, " ")
 }

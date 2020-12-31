@@ -37,6 +37,10 @@ type ShowDependencyResponse struct {
 }
 
 func (o ShowDependencyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowDependencyResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowDependencyResponse", string(data)}, " ")
 }

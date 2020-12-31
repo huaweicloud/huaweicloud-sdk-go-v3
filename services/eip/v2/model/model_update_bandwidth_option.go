@@ -25,7 +25,11 @@ type UpdateBandwidthOption struct {
 }
 
 func (o UpdateBandwidthOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateBandwidthOption struct{}"
+	}
+
 	return strings.Join([]string{"UpdateBandwidthOption", string(data)}, " ")
 }
 

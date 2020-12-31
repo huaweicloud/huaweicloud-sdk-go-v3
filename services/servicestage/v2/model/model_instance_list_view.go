@@ -49,6 +49,10 @@ type InstanceListView struct {
 }
 
 func (o InstanceListView) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceListView struct{}"
+	}
+
 	return strings.Join([]string{"InstanceListView", string(data)}, " ")
 }

@@ -28,6 +28,10 @@ type LoadBalancerStatusMember struct {
 }
 
 func (o LoadBalancerStatusMember) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LoadBalancerStatusMember struct{}"
+	}
+
 	return strings.Join([]string{"LoadBalancerStatusMember", string(data)}, " ")
 }

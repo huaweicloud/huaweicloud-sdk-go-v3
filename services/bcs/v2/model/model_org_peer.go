@@ -21,6 +21,10 @@ type OrgPeer struct {
 }
 
 func (o OrgPeer) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OrgPeer struct{}"
+	}
+
 	return strings.Join([]string{"OrgPeer", string(data)}, " ")
 }

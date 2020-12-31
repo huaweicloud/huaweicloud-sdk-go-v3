@@ -25,7 +25,11 @@ type ShowResourceHistoryRequest struct {
 }
 
 func (o ShowResourceHistoryRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowResourceHistoryRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowResourceHistoryRequest", string(data)}, " ")
 }
 

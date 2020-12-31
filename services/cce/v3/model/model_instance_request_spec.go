@@ -26,6 +26,10 @@ type InstanceRequestSpec struct {
 }
 
 func (o InstanceRequestSpec) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceRequestSpec struct{}"
+	}
+
 	return strings.Join([]string{"InstanceRequestSpec", string(data)}, " ")
 }

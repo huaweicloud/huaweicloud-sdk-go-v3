@@ -23,6 +23,10 @@ type CceJobMetadata struct {
 }
 
 func (o CceJobMetadata) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CceJobMetadata struct{}"
+	}
+
 	return strings.Join([]string{"CceJobMetadata", string(data)}, " ")
 }

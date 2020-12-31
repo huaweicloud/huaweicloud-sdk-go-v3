@@ -21,6 +21,10 @@ type ShowMultiAccountTransferAmountRequest struct {
 }
 
 func (o ShowMultiAccountTransferAmountRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowMultiAccountTransferAmountRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowMultiAccountTransferAmountRequest", string(data)}, " ")
 }

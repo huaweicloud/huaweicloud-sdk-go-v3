@@ -19,6 +19,10 @@ type BackupReplicateReq struct {
 }
 
 func (o BackupReplicateReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BackupReplicateReq struct{}"
+	}
+
 	return strings.Join([]string{"BackupReplicateReq", string(data)}, " ")
 }

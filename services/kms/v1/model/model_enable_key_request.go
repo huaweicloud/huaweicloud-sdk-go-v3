@@ -20,6 +20,10 @@ type EnableKeyRequest struct {
 }
 
 func (o EnableKeyRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EnableKeyRequest struct{}"
+	}
+
 	return strings.Join([]string{"EnableKeyRequest", string(data)}, " ")
 }

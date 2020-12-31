@@ -22,6 +22,10 @@ type NovaSecurityGroupCommonGroup struct {
 }
 
 func (o NovaSecurityGroupCommonGroup) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaSecurityGroupCommonGroup struct{}"
+	}
+
 	return strings.Join([]string{"NovaSecurityGroupCommonGroup", string(data)}, " ")
 }

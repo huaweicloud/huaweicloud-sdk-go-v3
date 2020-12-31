@@ -23,6 +23,10 @@ type TopicAttribute struct {
 }
 
 func (o TopicAttribute) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TopicAttribute struct{}"
+	}
+
 	return strings.Join([]string{"TopicAttribute", string(data)}, " ")
 }

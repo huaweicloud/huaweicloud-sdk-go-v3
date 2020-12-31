@@ -29,6 +29,10 @@ type EffectInfo struct {
 }
 
 func (o EffectInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EffectInfo struct{}"
+	}
+
 	return strings.Join([]string{"EffectInfo", string(data)}, " ")
 }

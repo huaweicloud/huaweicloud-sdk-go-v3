@@ -45,6 +45,10 @@ type ChangeResourceInEnvironmentResponse struct {
 }
 
 func (o ChangeResourceInEnvironmentResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeResourceInEnvironmentResponse struct{}"
+	}
+
 	return strings.Join([]string{"ChangeResourceInEnvironmentResponse", string(data)}, " ")
 }

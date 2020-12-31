@@ -21,6 +21,10 @@ type ApplicationListConfigConfigurationEnv struct {
 }
 
 func (o ApplicationListConfigConfigurationEnv) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApplicationListConfigConfigurationEnv struct{}"
+	}
+
 	return strings.Join([]string{"ApplicationListConfigConfigurationEnv", string(data)}, " ")
 }

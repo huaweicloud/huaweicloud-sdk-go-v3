@@ -34,6 +34,10 @@ type ApplyIndividualRealnameAuthsReq struct {
 }
 
 func (o ApplyIndividualRealnameAuthsReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApplyIndividualRealnameAuthsReq struct{}"
+	}
+
 	return strings.Join([]string{"ApplyIndividualRealnameAuthsReq", string(data)}, " ")
 }

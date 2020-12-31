@@ -27,6 +27,10 @@ type UpdateBigkeyAutoscanConfigResponse struct {
 }
 
 func (o UpdateBigkeyAutoscanConfigResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateBigkeyAutoscanConfigResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateBigkeyAutoscanConfigResponse", string(data)}, " ")
 }

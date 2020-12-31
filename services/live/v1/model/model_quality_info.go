@@ -42,7 +42,11 @@ type QualityInfo struct {
 }
 
 func (o QualityInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QualityInfo struct{}"
+	}
+
 	return strings.Join([]string{"QualityInfo", string(data)}, " ")
 }
 

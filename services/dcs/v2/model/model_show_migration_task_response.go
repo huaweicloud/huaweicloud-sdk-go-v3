@@ -41,7 +41,11 @@ type ShowMigrationTaskResponse struct {
 }
 
 func (o ShowMigrationTaskResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowMigrationTaskResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowMigrationTaskResponse", string(data)}, " ")
 }
 

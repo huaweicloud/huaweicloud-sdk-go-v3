@@ -22,6 +22,10 @@ type ListHistoryStreamsRequest struct {
 }
 
 func (o ListHistoryStreamsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListHistoryStreamsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListHistoryStreamsRequest", string(data)}, " ")
 }

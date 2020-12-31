@@ -20,6 +20,10 @@ type CreateTemporaryAccessKeyByAgencyResponse struct {
 }
 
 func (o CreateTemporaryAccessKeyByAgencyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateTemporaryAccessKeyByAgencyResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateTemporaryAccessKeyByAgencyResponse", string(data)}, " ")
 }

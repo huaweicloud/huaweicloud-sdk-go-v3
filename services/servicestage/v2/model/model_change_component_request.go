@@ -21,6 +21,10 @@ type ChangeComponentRequest struct {
 }
 
 func (o ChangeComponentRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeComponentRequest struct{}"
+	}
+
 	return strings.Join([]string{"ChangeComponentRequest", string(data)}, " ")
 }

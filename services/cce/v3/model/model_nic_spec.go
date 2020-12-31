@@ -24,6 +24,10 @@ type NicSpec struct {
 }
 
 func (o NicSpec) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NicSpec struct{}"
+	}
+
 	return strings.Join([]string{"NicSpec", string(data)}, " ")
 }

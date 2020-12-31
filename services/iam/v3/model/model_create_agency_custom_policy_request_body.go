@@ -19,6 +19,10 @@ type CreateAgencyCustomPolicyRequestBody struct {
 }
 
 func (o CreateAgencyCustomPolicyRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateAgencyCustomPolicyRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateAgencyCustomPolicyRequestBody", string(data)}, " ")
 }

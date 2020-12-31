@@ -20,6 +20,10 @@ type GlanceCreateTagRequest struct {
 }
 
 func (o GlanceCreateTagRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GlanceCreateTagRequest struct{}"
+	}
+
 	return strings.Join([]string{"GlanceCreateTagRequest", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type VpcInfo struct {
 }
 
 func (o VpcInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VpcInfo struct{}"
+	}
+
 	return strings.Join([]string{"VpcInfo", string(data)}, " ")
 }

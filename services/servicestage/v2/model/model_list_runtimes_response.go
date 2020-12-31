@@ -21,6 +21,10 @@ type ListRuntimesResponse struct {
 }
 
 func (o ListRuntimesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListRuntimesResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListRuntimesResponse", string(data)}, " ")
 }

@@ -26,7 +26,11 @@ type CreateFunctionTriggerRequestBody struct {
 }
 
 func (o CreateFunctionTriggerRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateFunctionTriggerRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateFunctionTriggerRequestBody", string(data)}, " ")
 }
 

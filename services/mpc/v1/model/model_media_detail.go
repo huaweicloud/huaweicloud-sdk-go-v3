@@ -24,6 +24,10 @@ type MediaDetail struct {
 }
 
 func (o MediaDetail) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MediaDetail struct{}"
+	}
+
 	return strings.Join([]string{"MediaDetail", string(data)}, " ")
 }

@@ -22,7 +22,11 @@ type ResizeInstanceReq struct {
 }
 
 func (o ResizeInstanceReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResizeInstanceReq struct{}"
+	}
+
 	return strings.Join([]string{"ResizeInstanceReq", string(data)}, " ")
 }
 

@@ -34,6 +34,10 @@ type CreateCertificateRequestBody struct {
 }
 
 func (o CreateCertificateRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateCertificateRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateCertificateRequestBody", string(data)}, " ")
 }

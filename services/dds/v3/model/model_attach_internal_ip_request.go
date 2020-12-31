@@ -20,6 +20,10 @@ type AttachInternalIpRequest struct {
 }
 
 func (o AttachInternalIpRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AttachInternalIpRequest struct{}"
+	}
+
 	return strings.Join([]string{"AttachInternalIpRequest", string(data)}, " ")
 }

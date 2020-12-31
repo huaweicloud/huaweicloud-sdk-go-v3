@@ -21,6 +21,10 @@ type BatchDeleteServerNicsResponse struct {
 }
 
 func (o BatchDeleteServerNicsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchDeleteServerNicsResponse struct{}"
+	}
+
 	return strings.Join([]string{"BatchDeleteServerNicsResponse", string(data)}, " ")
 }

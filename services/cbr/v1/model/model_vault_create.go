@@ -35,6 +35,10 @@ type VaultCreate struct {
 }
 
 func (o VaultCreate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VaultCreate struct{}"
+	}
+
 	return strings.Join([]string{"VaultCreate", string(data)}, " ")
 }

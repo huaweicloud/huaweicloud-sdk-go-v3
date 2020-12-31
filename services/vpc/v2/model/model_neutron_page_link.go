@@ -22,6 +22,10 @@ type NeutronPageLink struct {
 }
 
 func (o NeutronPageLink) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NeutronPageLink struct{}"
+	}
+
 	return strings.Join([]string{"NeutronPageLink", string(data)}, " ")
 }

@@ -61,6 +61,10 @@ type IQueryUserPartnerCouponsResultV2 struct {
 }
 
 func (o IQueryUserPartnerCouponsResultV2) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IQueryUserPartnerCouponsResultV2 struct{}"
+	}
+
 	return strings.Join([]string{"IQueryUserPartnerCouponsResultV2", string(data)}, " ")
 }

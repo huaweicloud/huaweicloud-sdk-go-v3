@@ -32,7 +32,11 @@ type ApiPolicyMockResp struct {
 }
 
 func (o ApiPolicyMockResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApiPolicyMockResp struct{}"
+	}
+
 	return strings.Join([]string{"ApiPolicyMockResp", string(data)}, " ")
 }
 

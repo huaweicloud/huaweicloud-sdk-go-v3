@@ -22,7 +22,11 @@ type SwitchSslRequest struct {
 }
 
 func (o SwitchSslRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SwitchSslRequest struct{}"
+	}
+
 	return strings.Join([]string{"SwitchSslRequest", string(data)}, " ")
 }
 

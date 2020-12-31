@@ -20,6 +20,10 @@ type AddPublicipsIntoSharedBandwidthOption struct {
 }
 
 func (o AddPublicipsIntoSharedBandwidthOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AddPublicipsIntoSharedBandwidthOption struct{}"
+	}
+
 	return strings.Join([]string{"AddPublicipsIntoSharedBandwidthOption", string(data)}, " ")
 }

@@ -31,6 +31,10 @@ type CreateRemuxTaskResponse struct {
 }
 
 func (o CreateRemuxTaskResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateRemuxTaskResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateRemuxTaskResponse", string(data)}, " ")
 }

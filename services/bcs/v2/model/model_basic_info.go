@@ -67,6 +67,10 @@ type BasicInfo struct {
 }
 
 func (o BasicInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BasicInfo struct{}"
+	}
+
 	return strings.Join([]string{"BasicInfo", string(data)}, " ")
 }

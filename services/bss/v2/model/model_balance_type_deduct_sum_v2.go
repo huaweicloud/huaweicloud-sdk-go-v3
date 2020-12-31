@@ -23,6 +23,10 @@ type BalanceTypeDeductSumV2 struct {
 }
 
 func (o BalanceTypeDeductSumV2) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BalanceTypeDeductSumV2 struct{}"
+	}
+
 	return strings.Join([]string{"BalanceTypeDeductSumV2", string(data)}, " ")
 }

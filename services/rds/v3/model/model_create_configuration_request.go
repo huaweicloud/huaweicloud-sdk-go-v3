@@ -21,7 +21,11 @@ type CreateConfigurationRequest struct {
 }
 
 func (o CreateConfigurationRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateConfigurationRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateConfigurationRequest", string(data)}, " ")
 }
 

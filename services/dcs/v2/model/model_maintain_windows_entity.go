@@ -26,6 +26,10 @@ type MaintainWindowsEntity struct {
 }
 
 func (o MaintainWindowsEntity) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MaintainWindowsEntity struct{}"
+	}
+
 	return strings.Join([]string{"MaintainWindowsEntity", string(data)}, " ")
 }

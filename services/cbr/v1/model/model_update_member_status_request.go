@@ -21,6 +21,10 @@ type UpdateMemberStatusRequest struct {
 }
 
 func (o UpdateMemberStatusRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateMemberStatusRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateMemberStatusRequest", string(data)}, " ")
 }

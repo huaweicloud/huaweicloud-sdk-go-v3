@@ -19,6 +19,10 @@ type ReclaimToPartnerAccountRequest struct {
 }
 
 func (o ReclaimToPartnerAccountRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ReclaimToPartnerAccountRequest struct{}"
+	}
+
 	return strings.Join([]string{"ReclaimToPartnerAccountRequest", string(data)}, " ")
 }

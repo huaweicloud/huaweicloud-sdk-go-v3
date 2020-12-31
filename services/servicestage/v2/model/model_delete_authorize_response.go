@@ -19,6 +19,10 @@ type DeleteAuthorizeResponse struct {
 }
 
 func (o DeleteAuthorizeResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteAuthorizeResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteAuthorizeResponse", string(data)}, " ")
 }

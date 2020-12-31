@@ -19,6 +19,10 @@ type UpdateSubEnterpriseAmountRequest struct {
 }
 
 func (o UpdateSubEnterpriseAmountRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateSubEnterpriseAmountRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateSubEnterpriseAmountRequest", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type CreateProjectV4Request struct {
 }
 
 func (o CreateProjectV4Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateProjectV4Request struct{}"
+	}
+
 	return strings.Join([]string{"CreateProjectV4Request", string(data)}, " ")
 }

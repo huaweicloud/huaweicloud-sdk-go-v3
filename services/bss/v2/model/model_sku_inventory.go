@@ -23,6 +23,10 @@ type SkuInventory struct {
 }
 
 func (o SkuInventory) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SkuInventory struct{}"
+	}
+
 	return strings.Join([]string{"SkuInventory", string(data)}, " ")
 }

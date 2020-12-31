@@ -21,6 +21,10 @@ type Encryption struct {
 }
 
 func (o Encryption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Encryption struct{}"
+	}
+
 	return strings.Join([]string{"Encryption", string(data)}, " ")
 }

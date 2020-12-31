@@ -21,6 +21,10 @@ type CreateImageResponse struct {
 }
 
 func (o CreateImageResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateImageResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateImageResponse", string(data)}, " ")
 }

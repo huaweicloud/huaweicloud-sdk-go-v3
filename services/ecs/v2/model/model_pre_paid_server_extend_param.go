@@ -47,7 +47,11 @@ type PrePaidServerExtendParam struct {
 }
 
 func (o PrePaidServerExtendParam) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PrePaidServerExtendParam struct{}"
+	}
+
 	return strings.Join([]string{"PrePaidServerExtendParam", string(data)}, " ")
 }
 

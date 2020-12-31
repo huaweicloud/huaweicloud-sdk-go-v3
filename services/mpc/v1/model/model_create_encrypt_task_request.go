@@ -19,6 +19,10 @@ type CreateEncryptTaskRequest struct {
 }
 
 func (o CreateEncryptTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateEncryptTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateEncryptTaskRequest", string(data)}, " ")
 }

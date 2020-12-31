@@ -19,6 +19,10 @@ type AddShardingNodeVolumeOption struct {
 }
 
 func (o AddShardingNodeVolumeOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AddShardingNodeVolumeOption struct{}"
+	}
+
 	return strings.Join([]string{"AddShardingNodeVolumeOption", string(data)}, " ")
 }

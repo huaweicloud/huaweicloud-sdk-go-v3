@@ -24,6 +24,10 @@ type Files struct {
 }
 
 func (o Files) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Files struct{}"
+	}
+
 	return strings.Join([]string{"Files", string(data)}, " ")
 }

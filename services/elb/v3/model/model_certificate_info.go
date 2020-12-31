@@ -42,6 +42,10 @@ type CertificateInfo struct {
 }
 
 func (o CertificateInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CertificateInfo struct{}"
+	}
+
 	return strings.Join([]string{"CertificateInfo", string(data)}, " ")
 }

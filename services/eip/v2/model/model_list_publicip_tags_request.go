@@ -18,6 +18,10 @@ type ListPublicipTagsRequest struct {
 }
 
 func (o ListPublicipTagsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListPublicipTagsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListPublicipTagsRequest", string(data)}, " ")
 }

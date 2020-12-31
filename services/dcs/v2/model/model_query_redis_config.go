@@ -32,6 +32,10 @@ type QueryRedisConfig struct {
 }
 
 func (o QueryRedisConfig) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QueryRedisConfig struct{}"
+	}
+
 	return strings.Join([]string{"QueryRedisConfig", string(data)}, " ")
 }

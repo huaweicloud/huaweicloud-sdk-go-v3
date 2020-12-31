@@ -22,6 +22,10 @@ type Subtitle struct {
 }
 
 func (o Subtitle) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Subtitle struct{}"
+	}
+
 	return strings.Join([]string{"Subtitle", string(data)}, " ")
 }

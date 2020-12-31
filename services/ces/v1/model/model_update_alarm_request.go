@@ -21,6 +21,10 @@ type UpdateAlarmRequest struct {
 }
 
 func (o UpdateAlarmRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateAlarmRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateAlarmRequest", string(data)}, " ")
 }

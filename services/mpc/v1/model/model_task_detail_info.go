@@ -39,7 +39,11 @@ type TaskDetailInfo struct {
 }
 
 func (o TaskDetailInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TaskDetailInfo struct{}"
+	}
+
 	return strings.Join([]string{"TaskDetailInfo", string(data)}, " ")
 }
 

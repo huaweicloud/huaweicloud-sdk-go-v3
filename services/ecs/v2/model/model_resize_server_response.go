@@ -23,6 +23,10 @@ type ResizeServerResponse struct {
 }
 
 func (o ResizeServerResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResizeServerResponse struct{}"
+	}
+
 	return strings.Join([]string{"ResizeServerResponse", string(data)}, " ")
 }

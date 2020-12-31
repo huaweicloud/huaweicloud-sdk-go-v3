@@ -21,6 +21,10 @@ type UpdateEventRequest struct {
 }
 
 func (o UpdateEventRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateEventRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateEventRequest", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type AuthScopeDomain struct {
 }
 
 func (o AuthScopeDomain) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AuthScopeDomain struct{}"
+	}
+
 	return strings.Join([]string{"AuthScopeDomain", string(data)}, " ")
 }

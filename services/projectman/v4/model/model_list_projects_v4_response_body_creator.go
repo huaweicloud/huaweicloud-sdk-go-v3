@@ -30,6 +30,10 @@ type ListProjectsV4ResponseBodyCreator struct {
 }
 
 func (o ListProjectsV4ResponseBodyCreator) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListProjectsV4ResponseBodyCreator struct{}"
+	}
+
 	return strings.Join([]string{"ListProjectsV4ResponseBodyCreator", string(data)}, " ")
 }

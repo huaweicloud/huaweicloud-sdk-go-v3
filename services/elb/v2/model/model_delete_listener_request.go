@@ -20,6 +20,10 @@ type DeleteListenerRequest struct {
 }
 
 func (o DeleteListenerRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteListenerRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteListenerRequest", string(data)}, " ")
 }

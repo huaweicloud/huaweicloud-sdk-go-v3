@@ -19,6 +19,10 @@ type CreateRecordConfigResponse struct {
 }
 
 func (o CreateRecordConfigResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateRecordConfigResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateRecordConfigResponse", string(data)}, " ")
 }

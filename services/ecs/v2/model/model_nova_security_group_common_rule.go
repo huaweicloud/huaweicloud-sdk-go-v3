@@ -30,6 +30,10 @@ type NovaSecurityGroupCommonRule struct {
 }
 
 func (o NovaSecurityGroupCommonRule) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaSecurityGroupCommonRule struct{}"
+	}
+
 	return strings.Join([]string{"NovaSecurityGroupCommonRule", string(data)}, " ")
 }

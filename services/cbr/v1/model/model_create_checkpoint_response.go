@@ -20,6 +20,10 @@ type CreateCheckpointResponse struct {
 }
 
 func (o CreateCheckpointResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateCheckpointResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateCheckpointResponse", string(data)}, " ")
 }

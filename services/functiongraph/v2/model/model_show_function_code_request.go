@@ -19,6 +19,10 @@ type ShowFunctionCodeRequest struct {
 }
 
 func (o ShowFunctionCodeRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowFunctionCodeRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowFunctionCodeRequest", string(data)}, " ")
 }

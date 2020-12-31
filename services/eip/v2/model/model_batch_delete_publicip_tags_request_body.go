@@ -23,7 +23,11 @@ type BatchDeletePublicipTagsRequestBody struct {
 }
 
 func (o BatchDeletePublicipTagsRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchDeletePublicipTagsRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"BatchDeletePublicipTagsRequestBody", string(data)}, " ")
 }
 

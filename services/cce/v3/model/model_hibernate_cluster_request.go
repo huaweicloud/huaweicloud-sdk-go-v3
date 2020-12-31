@@ -20,6 +20,10 @@ type HibernateClusterRequest struct {
 }
 
 func (o HibernateClusterRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HibernateClusterRequest struct{}"
+	}
+
 	return strings.Join([]string{"HibernateClusterRequest", string(data)}, " ")
 }

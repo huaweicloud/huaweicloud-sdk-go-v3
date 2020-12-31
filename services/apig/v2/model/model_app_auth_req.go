@@ -23,6 +23,10 @@ type AppAuthReq struct {
 }
 
 func (o AppAuthReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AppAuthReq struct{}"
+	}
+
 	return strings.Join([]string{"AppAuthReq", string(data)}, " ")
 }

@@ -36,7 +36,11 @@ type Grants struct {
 }
 
 func (o Grants) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Grants struct{}"
+	}
+
 	return strings.Join([]string{"Grants", string(data)}, " ")
 }
 

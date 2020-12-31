@@ -19,6 +19,10 @@ type DisassociateRequestThrottlingPolicyV2Response struct {
 }
 
 func (o DisassociateRequestThrottlingPolicyV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DisassociateRequestThrottlingPolicyV2Response struct{}"
+	}
+
 	return strings.Join([]string{"DisassociateRequestThrottlingPolicyV2Response", string(data)}, " ")
 }

@@ -24,6 +24,10 @@ type DeleteServersRequestBody struct {
 }
 
 func (o DeleteServersRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteServersRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"DeleteServersRequestBody", string(data)}, " ")
 }

@@ -38,6 +38,10 @@ type AppInfoWithBindNumResp struct {
 }
 
 func (o AppInfoWithBindNumResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AppInfoWithBindNumResp struct{}"
+	}
+
 	return strings.Join([]string{"AppInfoWithBindNumResp", string(data)}, " ")
 }

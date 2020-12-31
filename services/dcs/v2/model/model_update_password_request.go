@@ -20,6 +20,10 @@ type UpdatePasswordRequest struct {
 }
 
 func (o UpdatePasswordRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdatePasswordRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdatePasswordRequest", string(data)}, " ")
 }

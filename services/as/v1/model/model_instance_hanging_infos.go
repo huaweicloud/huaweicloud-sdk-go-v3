@@ -34,7 +34,11 @@ type InstanceHangingInfos struct {
 }
 
 func (o InstanceHangingInfos) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceHangingInfos struct{}"
+	}
+
 	return strings.Join([]string{"InstanceHangingInfos", string(data)}, " ")
 }
 

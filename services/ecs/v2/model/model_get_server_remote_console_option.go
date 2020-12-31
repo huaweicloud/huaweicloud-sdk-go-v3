@@ -22,7 +22,11 @@ type GetServerRemoteConsoleOption struct {
 }
 
 func (o GetServerRemoteConsoleOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GetServerRemoteConsoleOption struct{}"
+	}
+
 	return strings.Join([]string{"GetServerRemoteConsoleOption", string(data)}, " ")
 }
 

@@ -19,6 +19,10 @@ type DeletePrivateipResponse struct {
 }
 
 func (o DeletePrivateipResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeletePrivateipResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeletePrivateipResponse", string(data)}, " ")
 }

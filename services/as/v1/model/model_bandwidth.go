@@ -27,7 +27,11 @@ type Bandwidth struct {
 }
 
 func (o Bandwidth) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Bandwidth struct{}"
+	}
+
 	return strings.Join([]string{"Bandwidth", string(data)}, " ")
 }
 

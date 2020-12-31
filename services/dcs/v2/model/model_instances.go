@@ -21,6 +21,10 @@ type Instances struct {
 }
 
 func (o Instances) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Instances struct{}"
+	}
+
 	return strings.Join([]string{"Instances", string(data)}, " ")
 }

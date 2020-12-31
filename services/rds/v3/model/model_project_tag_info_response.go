@@ -22,6 +22,10 @@ type ProjectTagInfoResponse struct {
 }
 
 func (o ProjectTagInfoResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ProjectTagInfoResponse struct{}"
+	}
+
 	return strings.Join([]string{"ProjectTagInfoResponse", string(data)}, " ")
 }

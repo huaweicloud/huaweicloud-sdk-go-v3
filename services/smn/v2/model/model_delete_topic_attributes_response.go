@@ -21,6 +21,10 @@ type DeleteTopicAttributesResponse struct {
 }
 
 func (o DeleteTopicAttributesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteTopicAttributesResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteTopicAttributesResponse", string(data)}, " ")
 }

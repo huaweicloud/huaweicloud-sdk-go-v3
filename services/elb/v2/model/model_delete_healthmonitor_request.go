@@ -19,6 +19,10 @@ type DeleteHealthmonitorRequest struct {
 }
 
 func (o DeleteHealthmonitorRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteHealthmonitorRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteHealthmonitorRequest", string(data)}, " ")
 }

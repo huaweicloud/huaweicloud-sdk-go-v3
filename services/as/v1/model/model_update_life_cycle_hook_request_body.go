@@ -29,7 +29,11 @@ type UpdateLifeCycleHookRequestBody struct {
 }
 
 func (o UpdateLifeCycleHookRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateLifeCycleHookRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateLifeCycleHookRequestBody", string(data)}, " ")
 }
 

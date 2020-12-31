@@ -21,6 +21,10 @@ type DeleteManualBackupResponse struct {
 }
 
 func (o DeleteManualBackupResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteManualBackupResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteManualBackupResponse", string(data)}, " ")
 }

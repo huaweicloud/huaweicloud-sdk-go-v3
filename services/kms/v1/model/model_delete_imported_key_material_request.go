@@ -20,6 +20,10 @@ type DeleteImportedKeyMaterialRequest struct {
 }
 
 func (o DeleteImportedKeyMaterialRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteImportedKeyMaterialRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteImportedKeyMaterialRequest", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type CreateDbUserResponse struct {
 }
 
 func (o CreateDbUserResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateDbUserResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateDbUserResponse", string(data)}, " ")
 }

@@ -24,6 +24,10 @@ type AddonTemplate struct {
 }
 
 func (o AddonTemplate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AddonTemplate struct{}"
+	}
+
 	return strings.Join([]string{"AddonTemplate", string(data)}, " ")
 }

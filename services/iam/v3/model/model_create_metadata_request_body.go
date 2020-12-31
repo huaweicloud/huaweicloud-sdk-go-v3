@@ -24,6 +24,10 @@ type CreateMetadataRequestBody struct {
 }
 
 func (o CreateMetadataRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateMetadataRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateMetadataRequestBody", string(data)}, " ")
 }

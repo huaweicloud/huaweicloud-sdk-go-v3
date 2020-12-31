@@ -33,7 +33,11 @@ type ConfigurationSummaryForCreate struct {
 }
 
 func (o ConfigurationSummaryForCreate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ConfigurationSummaryForCreate struct{}"
+	}
+
 	return strings.Join([]string{"ConfigurationSummaryForCreate", string(data)}, " ")
 }
 

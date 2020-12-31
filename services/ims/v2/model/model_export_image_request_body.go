@@ -23,7 +23,11 @@ type ExportImageRequestBody struct {
 }
 
 func (o ExportImageRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ExportImageRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"ExportImageRequestBody", string(data)}, " ")
 }
 

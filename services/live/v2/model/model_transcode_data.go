@@ -21,6 +21,10 @@ type TranscodeData struct {
 }
 
 func (o TranscodeData) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TranscodeData struct{}"
+	}
+
 	return strings.Join([]string{"TranscodeData", string(data)}, " ")
 }

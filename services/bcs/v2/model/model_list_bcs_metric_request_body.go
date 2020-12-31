@@ -20,6 +20,10 @@ type ListBcsMetricRequestBody struct {
 }
 
 func (o ListBcsMetricRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListBcsMetricRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"ListBcsMetricRequestBody", string(data)}, " ")
 }

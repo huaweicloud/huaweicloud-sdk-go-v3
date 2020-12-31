@@ -20,6 +20,10 @@ type ResizeServerRequest struct {
 }
 
 func (o ResizeServerRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResizeServerRequest struct{}"
+	}
+
 	return strings.Join([]string{"ResizeServerRequest", string(data)}, " ")
 }

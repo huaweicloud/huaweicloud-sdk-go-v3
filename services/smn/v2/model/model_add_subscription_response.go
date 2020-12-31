@@ -23,6 +23,10 @@ type AddSubscriptionResponse struct {
 }
 
 func (o AddSubscriptionResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AddSubscriptionResponse struct{}"
+	}
+
 	return strings.Join([]string{"AddSubscriptionResponse", string(data)}, " ")
 }

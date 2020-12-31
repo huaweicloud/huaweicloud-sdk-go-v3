@@ -32,6 +32,10 @@ type UpdateVersionAliasResponse struct {
 }
 
 func (o UpdateVersionAliasResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateVersionAliasResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateVersionAliasResponse", string(data)}, " ")
 }

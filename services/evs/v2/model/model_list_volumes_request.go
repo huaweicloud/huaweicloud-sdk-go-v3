@@ -35,6 +35,10 @@ type ListVolumesRequest struct {
 }
 
 func (o ListVolumesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListVolumesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListVolumesRequest", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type BackupSyncRespBody struct {
 }
 
 func (o BackupSyncRespBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BackupSyncRespBody struct{}"
+	}
+
 	return strings.Join([]string{"BackupSyncRespBody", string(data)}, " ")
 }

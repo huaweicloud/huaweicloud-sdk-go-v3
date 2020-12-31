@@ -19,6 +19,10 @@ type CancelingAuthorizationV2Response struct {
 }
 
 func (o CancelingAuthorizationV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CancelingAuthorizationV2Response struct{}"
+	}
+
 	return strings.Join([]string{"CancelingAuthorizationV2Response", string(data)}, " ")
 }

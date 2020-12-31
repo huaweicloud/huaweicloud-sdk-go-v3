@@ -22,6 +22,10 @@ type DatastoreItem struct {
 }
 
 func (o DatastoreItem) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DatastoreItem struct{}"
+	}
+
 	return strings.Join([]string{"DatastoreItem", string(data)}, " ")
 }

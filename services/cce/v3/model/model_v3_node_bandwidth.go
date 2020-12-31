@@ -23,6 +23,10 @@ type V3NodeBandwidth struct {
 }
 
 func (o V3NodeBandwidth) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "V3NodeBandwidth struct{}"
+	}
+
 	return strings.Join([]string{"V3NodeBandwidth", string(data)}, " ")
 }

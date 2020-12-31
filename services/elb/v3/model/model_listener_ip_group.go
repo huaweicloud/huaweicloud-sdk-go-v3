@@ -24,6 +24,10 @@ type ListenerIpGroup struct {
 }
 
 func (o ListenerIpGroup) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListenerIpGroup struct{}"
+	}
+
 	return strings.Join([]string{"ListenerIpGroup", string(data)}, " ")
 }

@@ -31,6 +31,10 @@ type AccountBalanceV3 struct {
 }
 
 func (o AccountBalanceV3) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AccountBalanceV3 struct{}"
+	}
+
 	return strings.Join([]string{"AccountBalanceV3", string(data)}, " ")
 }

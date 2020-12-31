@@ -20,6 +20,10 @@ type AttachEipRequest struct {
 }
 
 func (o AttachEipRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AttachEipRequest struct{}"
+	}
+
 	return strings.Join([]string{"AttachEipRequest", string(data)}, " ")
 }

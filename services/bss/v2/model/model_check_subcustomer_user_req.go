@@ -21,6 +21,10 @@ type CheckSubcustomerUserReq struct {
 }
 
 func (o CheckSubcustomerUserReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CheckSubcustomerUserReq struct{}"
+	}
+
 	return strings.Join([]string{"CheckSubcustomerUserReq", string(data)}, " ")
 }

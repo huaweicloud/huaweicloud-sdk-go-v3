@@ -21,6 +21,10 @@ type ListMaintenanceWindowsResponse struct {
 }
 
 func (o ListMaintenanceWindowsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListMaintenanceWindowsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListMaintenanceWindowsResponse", string(data)}, " ")
 }

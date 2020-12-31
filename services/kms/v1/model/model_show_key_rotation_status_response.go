@@ -27,6 +27,10 @@ type ShowKeyRotationStatusResponse struct {
 }
 
 func (o ShowKeyRotationStatusResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowKeyRotationStatusResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowKeyRotationStatusResponse", string(data)}, " ")
 }

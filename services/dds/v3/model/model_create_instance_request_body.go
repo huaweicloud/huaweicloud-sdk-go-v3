@@ -49,6 +49,10 @@ type CreateInstanceRequestBody struct {
 }
 
 func (o CreateInstanceRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateInstanceRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateInstanceRequestBody", string(data)}, " ")
 }

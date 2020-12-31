@@ -22,6 +22,10 @@ type TokenDomainResult struct {
 }
 
 func (o TokenDomainResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TokenDomainResult struct{}"
+	}
+
 	return strings.Join([]string{"TokenDomainResult", string(data)}, " ")
 }

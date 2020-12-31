@@ -20,6 +20,10 @@ type DownloadBlockchainSdkConfigRequest struct {
 }
 
 func (o DownloadBlockchainSdkConfigRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DownloadBlockchainSdkConfigRequest struct{}"
+	}
+
 	return strings.Join([]string{"DownloadBlockchainSdkConfigRequest", string(data)}, " ")
 }

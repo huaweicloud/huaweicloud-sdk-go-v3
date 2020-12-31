@@ -19,6 +19,10 @@ type DeleteApiGroupV2Response struct {
 }
 
 func (o DeleteApiGroupV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteApiGroupV2Response struct{}"
+	}
+
 	return strings.Join([]string{"DeleteApiGroupV2Response", string(data)}, " ")
 }

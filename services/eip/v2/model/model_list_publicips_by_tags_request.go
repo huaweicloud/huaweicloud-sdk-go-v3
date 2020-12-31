@@ -19,6 +19,10 @@ type ListPublicipsByTagsRequest struct {
 }
 
 func (o ListPublicipsByTagsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListPublicipsByTagsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListPublicipsByTagsRequest", string(data)}, " ")
 }

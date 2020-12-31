@@ -20,6 +20,10 @@ type AddShardingNodeRequest struct {
 }
 
 func (o AddShardingNodeRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AddShardingNodeRequest struct{}"
+	}
+
 	return strings.Join([]string{"AddShardingNodeRequest", string(data)}, " ")
 }

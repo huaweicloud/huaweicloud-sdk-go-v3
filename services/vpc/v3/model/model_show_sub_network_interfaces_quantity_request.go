@@ -18,6 +18,10 @@ type ShowSubNetworkInterfacesQuantityRequest struct {
 }
 
 func (o ShowSubNetworkInterfacesQuantityRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowSubNetworkInterfacesQuantityRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowSubNetworkInterfacesQuantityRequest", string(data)}, " ")
 }

@@ -34,6 +34,10 @@ type CreateOrDeletePublishRecordForApiV2Response struct {
 }
 
 func (o CreateOrDeletePublishRecordForApiV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateOrDeletePublishRecordForApiV2Response struct{}"
+	}
+
 	return strings.Join([]string{"CreateOrDeletePublishRecordForApiV2Response", string(data)}, " ")
 }

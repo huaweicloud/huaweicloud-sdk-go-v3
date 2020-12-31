@@ -69,6 +69,10 @@ type MonthlyBillRes struct {
 }
 
 func (o MonthlyBillRes) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MonthlyBillRes struct{}"
+	}
+
 	return strings.Join([]string{"MonthlyBillRes", string(data)}, " ")
 }

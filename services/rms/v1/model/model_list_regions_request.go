@@ -20,7 +20,11 @@ type ListRegionsRequest struct {
 }
 
 func (o ListRegionsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListRegionsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListRegionsRequest", string(data)}, " ")
 }
 

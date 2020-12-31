@@ -18,6 +18,10 @@ type ListStatisticsOfRunningInstancesRequest struct {
 }
 
 func (o ListStatisticsOfRunningInstancesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListStatisticsOfRunningInstancesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListStatisticsOfRunningInstancesRequest", string(data)}, " ")
 }

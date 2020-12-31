@@ -28,7 +28,11 @@ type Multidrm struct {
 }
 
 func (o Multidrm) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Multidrm struct{}"
+	}
+
 	return strings.Join([]string{"Multidrm", string(data)}, " ")
 }
 

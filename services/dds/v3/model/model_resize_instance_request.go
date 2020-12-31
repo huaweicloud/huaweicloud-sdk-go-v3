@@ -20,6 +20,10 @@ type ResizeInstanceRequest struct {
 }
 
 func (o ResizeInstanceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResizeInstanceRequest struct{}"
+	}
+
 	return strings.Join([]string{"ResizeInstanceRequest", string(data)}, " ")
 }

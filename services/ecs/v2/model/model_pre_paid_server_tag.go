@@ -22,6 +22,10 @@ type PrePaidServerTag struct {
 }
 
 func (o PrePaidServerTag) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PrePaidServerTag struct{}"
+	}
+
 	return strings.Join([]string{"PrePaidServerTag", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type ListBaremetalFlavorDetailExtendsResponse struct {
 }
 
 func (o ListBaremetalFlavorDetailExtendsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListBaremetalFlavorDetailExtendsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListBaremetalFlavorDetailExtendsResponse", string(data)}, " ")
 }

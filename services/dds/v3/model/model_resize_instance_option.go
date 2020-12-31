@@ -24,7 +24,11 @@ type ResizeInstanceOption struct {
 }
 
 func (o ResizeInstanceOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResizeInstanceOption struct{}"
+	}
+
 	return strings.Join([]string{"ResizeInstanceOption", string(data)}, " ")
 }
 

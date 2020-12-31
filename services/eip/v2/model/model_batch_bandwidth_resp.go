@@ -39,7 +39,11 @@ type BatchBandwidthResp struct {
 }
 
 func (o BatchBandwidthResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchBandwidthResp struct{}"
+	}
+
 	return strings.Join([]string{"BatchBandwidthResp", string(data)}, " ")
 }
 

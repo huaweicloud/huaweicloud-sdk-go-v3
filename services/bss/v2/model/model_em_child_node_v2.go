@@ -25,6 +25,10 @@ type EmChildNodeV2 struct {
 }
 
 func (o EmChildNodeV2) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EmChildNodeV2 struct{}"
+	}
+
 	return strings.Join([]string{"EmChildNodeV2", string(data)}, " ")
 }

@@ -27,6 +27,10 @@ type CopyImageCrossRegionRequestBody struct {
 }
 
 func (o CopyImageCrossRegionRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CopyImageCrossRegionRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CopyImageCrossRegionRequestBody", string(data)}, " ")
 }

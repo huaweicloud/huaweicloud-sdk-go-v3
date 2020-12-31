@@ -27,6 +27,10 @@ type ShowGroupsRespGroupGroupMessageOffsets struct {
 }
 
 func (o ShowGroupsRespGroupGroupMessageOffsets) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowGroupsRespGroupGroupMessageOffsets struct{}"
+	}
+
 	return strings.Join([]string{"ShowGroupsRespGroupGroupMessageOffsets", string(data)}, " ")
 }

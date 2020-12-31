@@ -18,6 +18,10 @@ type ShowEnterpriseProjectQuotaRequest struct {
 }
 
 func (o ShowEnterpriseProjectQuotaRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowEnterpriseProjectQuotaRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowEnterpriseProjectQuotaRequest", string(data)}, " ")
 }

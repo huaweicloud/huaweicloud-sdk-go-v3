@@ -20,6 +20,10 @@ type ShowDomainProtectPolicyResponse struct {
 }
 
 func (o ShowDomainProtectPolicyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowDomainProtectPolicyResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowDomainProtectPolicyResponse", string(data)}, " ")
 }

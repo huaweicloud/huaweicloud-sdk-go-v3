@@ -20,6 +20,10 @@ type PublishAppMessageRequest struct {
 }
 
 func (o PublishAppMessageRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PublishAppMessageRequest struct{}"
+	}
+
 	return strings.Join([]string{"PublishAppMessageRequest", string(data)}, " ")
 }

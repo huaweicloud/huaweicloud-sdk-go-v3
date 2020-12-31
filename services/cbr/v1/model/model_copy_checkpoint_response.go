@@ -20,6 +20,10 @@ type CopyCheckpointResponse struct {
 }
 
 func (o CopyCheckpointResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CopyCheckpointResponse struct{}"
+	}
+
 	return strings.Join([]string{"CopyCheckpointResponse", string(data)}, " ")
 }

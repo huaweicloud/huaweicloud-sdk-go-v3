@@ -21,6 +21,10 @@ type KeyStatusInfo struct {
 }
 
 func (o KeyStatusInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeyStatusInfo struct{}"
+	}
+
 	return strings.Join([]string{"KeyStatusInfo", string(data)}, " ")
 }

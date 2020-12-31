@@ -22,6 +22,10 @@ type ResetMessageOffsetRequest struct {
 }
 
 func (o ResetMessageOffsetRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResetMessageOffsetRequest struct{}"
+	}
+
 	return strings.Join([]string{"ResetMessageOffsetRequest", string(data)}, " ")
 }

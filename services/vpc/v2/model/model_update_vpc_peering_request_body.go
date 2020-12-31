@@ -19,6 +19,10 @@ type UpdateVpcPeeringRequestBody struct {
 }
 
 func (o UpdateVpcPeeringRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateVpcPeeringRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateVpcPeeringRequestBody", string(data)}, " ")
 }

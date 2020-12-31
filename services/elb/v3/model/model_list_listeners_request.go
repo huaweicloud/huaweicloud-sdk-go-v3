@@ -42,6 +42,10 @@ type ListListenersRequest struct {
 }
 
 func (o ListListenersRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListListenersRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListListenersRequest", string(data)}, " ")
 }

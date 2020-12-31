@@ -22,6 +22,10 @@ type DatabaseForList struct {
 }
 
 func (o DatabaseForList) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DatabaseForList struct{}"
+	}
+
 	return strings.Join([]string{"DatabaseForList", string(data)}, " ")
 }

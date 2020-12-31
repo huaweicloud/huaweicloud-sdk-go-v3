@@ -24,6 +24,10 @@ type AdditionalInfo struct {
 }
 
 func (o AdditionalInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AdditionalInfo struct{}"
+	}
+
 	return strings.Join([]string{"AdditionalInfo", string(data)}, " ")
 }

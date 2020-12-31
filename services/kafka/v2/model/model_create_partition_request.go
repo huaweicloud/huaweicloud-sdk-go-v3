@@ -22,6 +22,10 @@ type CreatePartitionRequest struct {
 }
 
 func (o CreatePartitionRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePartitionRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreatePartitionRequest", string(data)}, " ")
 }

@@ -26,6 +26,10 @@ type QuotaDetailVolumes struct {
 }
 
 func (o QuotaDetailVolumes) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QuotaDetailVolumes struct{}"
+	}
+
 	return strings.Join([]string{"QuotaDetailVolumes", string(data)}, " ")
 }

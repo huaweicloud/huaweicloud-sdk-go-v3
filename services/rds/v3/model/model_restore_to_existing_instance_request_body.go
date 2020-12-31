@@ -19,6 +19,10 @@ type RestoreToExistingInstanceRequestBody struct {
 }
 
 func (o RestoreToExistingInstanceRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RestoreToExistingInstanceRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"RestoreToExistingInstanceRequestBody", string(data)}, " ")
 }

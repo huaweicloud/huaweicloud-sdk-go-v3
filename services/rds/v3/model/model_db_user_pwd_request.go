@@ -21,6 +21,10 @@ type DbUserPwdRequest struct {
 }
 
 func (o DbUserPwdRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DbUserPwdRequest struct{}"
+	}
+
 	return strings.Join([]string{"DbUserPwdRequest", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type UpdateApplicationEndpointResponse struct {
 }
 
 func (o UpdateApplicationEndpointResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateApplicationEndpointResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateApplicationEndpointResponse", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type RemoveVaultResourceRequest struct {
 }
 
 func (o RemoveVaultResourceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RemoveVaultResourceRequest struct{}"
+	}
+
 	return strings.Join([]string{"RemoveVaultResourceRequest", string(data)}, " ")
 }

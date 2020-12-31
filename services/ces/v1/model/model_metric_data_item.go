@@ -29,6 +29,10 @@ type MetricDataItem struct {
 }
 
 func (o MetricDataItem) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MetricDataItem struct{}"
+	}
+
 	return strings.Join([]string{"MetricDataItem", string(data)}, " ")
 }

@@ -43,7 +43,11 @@ type TrackerResponseBody struct {
 }
 
 func (o TrackerResponseBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TrackerResponseBody struct{}"
+	}
+
 	return strings.Join([]string{"TrackerResponseBody", string(data)}, " ")
 }
 

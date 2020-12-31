@@ -25,7 +25,11 @@ type UpdateNatGatewayOption struct {
 }
 
 func (o UpdateNatGatewayOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateNatGatewayOption struct{}"
+	}
+
 	return strings.Join([]string{"UpdateNatGatewayOption", string(data)}, " ")
 }
 

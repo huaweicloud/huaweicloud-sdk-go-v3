@@ -35,6 +35,10 @@ type SingleBackgroundTask struct {
 }
 
 func (o SingleBackgroundTask) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SingleBackgroundTask struct{}"
+	}
+
 	return strings.Join([]string{"SingleBackgroundTask", string(data)}, " ")
 }

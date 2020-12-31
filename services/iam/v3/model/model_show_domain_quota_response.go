@@ -20,6 +20,10 @@ type ShowDomainQuotaResponse struct {
 }
 
 func (o ShowDomainQuotaResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowDomainQuotaResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowDomainQuotaResponse", string(data)}, " ")
 }

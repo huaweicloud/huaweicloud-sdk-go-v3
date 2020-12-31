@@ -23,6 +23,10 @@ type VideoSaturation struct {
 }
 
 func (o VideoSaturation) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VideoSaturation struct{}"
+	}
+
 	return strings.Join([]string{"VideoSaturation", string(data)}, " ")
 }

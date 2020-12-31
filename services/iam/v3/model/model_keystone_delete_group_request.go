@@ -19,6 +19,10 @@ type KeystoneDeleteGroupRequest struct {
 }
 
 func (o KeystoneDeleteGroupRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneDeleteGroupRequest struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneDeleteGroupRequest", string(data)}, " ")
 }

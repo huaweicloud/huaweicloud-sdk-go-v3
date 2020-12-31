@@ -19,6 +19,10 @@ type DeleteServerGroupMemberResponse struct {
 }
 
 func (o DeleteServerGroupMemberResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteServerGroupMemberResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteServerGroupMemberResponse", string(data)}, " ")
 }

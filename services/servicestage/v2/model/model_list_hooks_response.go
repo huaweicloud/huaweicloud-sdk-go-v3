@@ -21,6 +21,10 @@ type ListHooksResponse struct {
 }
 
 func (o ListHooksResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListHooksResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListHooksResponse", string(data)}, " ")
 }

@@ -45,7 +45,11 @@ type BackupRecordResponse struct {
 }
 
 func (o BackupRecordResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BackupRecordResponse struct{}"
+	}
+
 	return strings.Join([]string{"BackupRecordResponse", string(data)}, " ")
 }
 

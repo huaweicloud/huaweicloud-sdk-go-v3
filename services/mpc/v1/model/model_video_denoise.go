@@ -21,6 +21,10 @@ type VideoDenoise struct {
 }
 
 func (o VideoDenoise) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VideoDenoise struct{}"
+	}
+
 	return strings.Join([]string{"VideoDenoise", string(data)}, " ")
 }

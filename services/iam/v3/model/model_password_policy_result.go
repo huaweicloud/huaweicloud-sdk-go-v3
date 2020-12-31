@@ -36,6 +36,10 @@ type PasswordPolicyResult struct {
 }
 
 func (o PasswordPolicyResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PasswordPolicyResult struct{}"
+	}
+
 	return strings.Join([]string{"PasswordPolicyResult", string(data)}, " ")
 }

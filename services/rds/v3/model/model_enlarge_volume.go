@@ -22,6 +22,10 @@ type EnlargeVolume struct {
 }
 
 func (o EnlargeVolume) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EnlargeVolume struct{}"
+	}
+
 	return strings.Join([]string{"EnlargeVolume", string(data)}, " ")
 }

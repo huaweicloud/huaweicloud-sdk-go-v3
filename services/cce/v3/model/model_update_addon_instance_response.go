@@ -26,6 +26,10 @@ type UpdateAddonInstanceResponse struct {
 }
 
 func (o UpdateAddonInstanceResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateAddonInstanceResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateAddonInstanceResponse", string(data)}, " ")
 }

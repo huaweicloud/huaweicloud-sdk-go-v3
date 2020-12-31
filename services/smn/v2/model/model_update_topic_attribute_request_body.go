@@ -19,6 +19,10 @@ type UpdateTopicAttributeRequestBody struct {
 }
 
 func (o UpdateTopicAttributeRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateTopicAttributeRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateTopicAttributeRequestBody", string(data)}, " ")
 }

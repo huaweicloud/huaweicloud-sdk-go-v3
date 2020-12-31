@@ -19,6 +19,10 @@ type UpdateFunctionReservedInstancesRequestBody struct {
 }
 
 func (o UpdateFunctionReservedInstancesRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateFunctionReservedInstancesRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateFunctionReservedInstancesRequestBody", string(data)}, " ")
 }

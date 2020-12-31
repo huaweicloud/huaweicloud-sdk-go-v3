@@ -21,6 +21,10 @@ type Matches struct {
 }
 
 func (o Matches) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Matches struct{}"
+	}
+
 	return strings.Join([]string{"Matches", string(data)}, " ")
 }

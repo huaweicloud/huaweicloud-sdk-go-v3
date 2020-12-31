@@ -28,6 +28,10 @@ type OrganizationV2 struct {
 }
 
 func (o OrganizationV2) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OrganizationV2 struct{}"
+	}
+
 	return strings.Join([]string{"OrganizationV2", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type ShowLoadBalancerRequest struct {
 }
 
 func (o ShowLoadBalancerRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowLoadBalancerRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowLoadBalancerRequest", string(data)}, " ")
 }

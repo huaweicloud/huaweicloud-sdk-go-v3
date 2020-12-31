@@ -23,7 +23,11 @@ type ShowInstanceExtendProductInfoRequest struct {
 }
 
 func (o ShowInstanceExtendProductInfoRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowInstanceExtendProductInfoRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowInstanceExtendProductInfoRequest", string(data)}, " ")
 }
 

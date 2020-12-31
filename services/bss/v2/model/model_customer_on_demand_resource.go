@@ -43,6 +43,10 @@ type CustomerOnDemandResource struct {
 }
 
 func (o CustomerOnDemandResource) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CustomerOnDemandResource struct{}"
+	}
+
 	return strings.Join([]string{"CustomerOnDemandResource", string(data)}, " ")
 }

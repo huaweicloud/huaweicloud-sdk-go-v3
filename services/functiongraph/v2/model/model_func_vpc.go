@@ -30,6 +30,10 @@ type FuncVpc struct {
 }
 
 func (o FuncVpc) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "FuncVpc struct{}"
+	}
+
 	return strings.Join([]string{"FuncVpc", string(data)}, " ")
 }

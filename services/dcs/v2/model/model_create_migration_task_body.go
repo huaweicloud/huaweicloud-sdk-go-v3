@@ -32,7 +32,11 @@ type CreateMigrationTaskBody struct {
 }
 
 func (o CreateMigrationTaskBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateMigrationTaskBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateMigrationTaskBody", string(data)}, " ")
 }
 

@@ -20,6 +20,10 @@ type CreateIterationV4Request struct {
 }
 
 func (o CreateIterationV4Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateIterationV4Request struct{}"
+	}
+
 	return strings.Join([]string{"CreateIterationV4Request", string(data)}, " ")
 }

@@ -25,7 +25,11 @@ type ScalingPolicyAction struct {
 }
 
 func (o ScalingPolicyAction) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ScalingPolicyAction struct{}"
+	}
+
 	return strings.Join([]string{"ScalingPolicyAction", string(data)}, " ")
 }
 

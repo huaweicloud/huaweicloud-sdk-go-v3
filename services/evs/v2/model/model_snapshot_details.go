@@ -40,6 +40,10 @@ type SnapshotDetails struct {
 }
 
 func (o SnapshotDetails) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SnapshotDetails struct{}"
+	}
+
 	return strings.Join([]string{"SnapshotDetails", string(data)}, " ")
 }

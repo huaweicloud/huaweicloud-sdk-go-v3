@@ -24,6 +24,10 @@ type KeystoneListAllProjectPermissionsForGroupResponse struct {
 }
 
 func (o KeystoneListAllProjectPermissionsForGroupResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneListAllProjectPermissionsForGroupResponse struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneListAllProjectPermissionsForGroupResponse", string(data)}, " ")
 }

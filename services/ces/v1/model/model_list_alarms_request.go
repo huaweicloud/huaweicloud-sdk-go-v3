@@ -22,6 +22,10 @@ type ListAlarmsRequest struct {
 }
 
 func (o ListAlarmsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListAlarmsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListAlarmsRequest", string(data)}, " ")
 }

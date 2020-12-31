@@ -23,6 +23,10 @@ type ListDatabaseUsersRequest struct {
 }
 
 func (o ListDatabaseUsersRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListDatabaseUsersRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListDatabaseUsersRequest", string(data)}, " ")
 }

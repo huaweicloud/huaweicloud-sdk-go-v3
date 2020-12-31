@@ -23,6 +23,10 @@ type Networks struct {
 }
 
 func (o Networks) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Networks struct{}"
+	}
+
 	return strings.Join([]string{"Networks", string(data)}, " ")
 }

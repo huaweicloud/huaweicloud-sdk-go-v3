@@ -21,6 +21,10 @@ type ListScalingTagInfosByTenantIdResponse struct {
 }
 
 func (o ListScalingTagInfosByTenantIdResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListScalingTagInfosByTenantIdResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListScalingTagInfosByTenantIdResponse", string(data)}, " ")
 }

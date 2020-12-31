@@ -19,6 +19,10 @@ type IefInfo struct {
 }
 
 func (o IefInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IefInfo struct{}"
+	}
+
 	return strings.Join([]string{"IefInfo", string(data)}, " ")
 }

@@ -83,6 +83,10 @@ type InstanceListInfo struct {
 }
 
 func (o InstanceListInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceListInfo struct{}"
+	}
+
 	return strings.Join([]string{"InstanceListInfo", string(data)}, " ")
 }

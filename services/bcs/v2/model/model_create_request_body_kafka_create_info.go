@@ -24,6 +24,10 @@ type CreateRequestBodyKafkaCreateInfo struct {
 }
 
 func (o CreateRequestBodyKafkaCreateInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateRequestBodyKafkaCreateInfo struct{}"
+	}
+
 	return strings.Join([]string{"CreateRequestBodyKafkaCreateInfo", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type UpdatePrePaidBandwidthResponse struct {
 }
 
 func (o UpdatePrePaidBandwidthResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdatePrePaidBandwidthResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdatePrePaidBandwidthResponse", string(data)}, " ")
 }

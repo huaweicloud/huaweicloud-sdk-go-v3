@@ -21,6 +21,10 @@ type UserTag struct {
 }
 
 func (o UserTag) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UserTag struct{}"
+	}
+
 	return strings.Join([]string{"UserTag", string(data)}, " ")
 }

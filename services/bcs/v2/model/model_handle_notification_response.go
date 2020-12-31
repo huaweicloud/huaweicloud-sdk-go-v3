@@ -19,6 +19,10 @@ type HandleNotificationResponse struct {
 }
 
 func (o HandleNotificationResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HandleNotificationResponse struct{}"
+	}
+
 	return strings.Join([]string{"HandleNotificationResponse", string(data)}, " ")
 }

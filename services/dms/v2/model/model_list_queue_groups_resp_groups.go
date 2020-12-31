@@ -32,6 +32,10 @@ type ListQueueGroupsRespGroups struct {
 }
 
 func (o ListQueueGroupsRespGroups) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListQueueGroupsRespGroups struct{}"
+	}
+
 	return strings.Join([]string{"ListQueueGroupsRespGroups", string(data)}, " ")
 }

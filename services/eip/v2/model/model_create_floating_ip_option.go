@@ -26,6 +26,10 @@ type CreateFloatingIpOption struct {
 }
 
 func (o CreateFloatingIpOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateFloatingIpOption struct{}"
+	}
+
 	return strings.Join([]string{"CreateFloatingIpOption", string(data)}, " ")
 }

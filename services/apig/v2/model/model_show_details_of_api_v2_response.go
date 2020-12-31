@@ -97,7 +97,11 @@ type ShowDetailsOfApiV2Response struct {
 }
 
 func (o ShowDetailsOfApiV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowDetailsOfApiV2Response struct{}"
+	}
+
 	return strings.Join([]string{"ShowDetailsOfApiV2Response", string(data)}, " ")
 }
 

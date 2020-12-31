@@ -21,6 +21,10 @@ type CreateTranscodingTaskResponse struct {
 }
 
 func (o CreateTranscodingTaskResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateTranscodingTaskResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateTranscodingTaskResponse", string(data)}, " ")
 }

@@ -27,6 +27,10 @@ type ListApisBindedToSignatureKeyV2Request struct {
 }
 
 func (o ListApisBindedToSignatureKeyV2Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListApisBindedToSignatureKeyV2Request struct{}"
+	}
+
 	return strings.Join([]string{"ListApisBindedToSignatureKeyV2Request", string(data)}, " ")
 }

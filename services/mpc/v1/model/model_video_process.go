@@ -25,7 +25,11 @@ type VideoProcess struct {
 }
 
 func (o VideoProcess) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VideoProcess struct{}"
+	}
+
 	return strings.Join([]string{"VideoProcess", string(data)}, " ")
 }
 

@@ -39,6 +39,10 @@ type PropertiesInfo struct {
 }
 
 func (o PropertiesInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PropertiesInfo struct{}"
+	}
+
 	return strings.Join([]string{"PropertiesInfo", string(data)}, " ")
 }

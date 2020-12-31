@@ -19,6 +19,10 @@ type AppSecretReq struct {
 }
 
 func (o AppSecretReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AppSecretReq struct{}"
+	}
+
 	return strings.Join([]string{"AppSecretReq", string(data)}, " ")
 }

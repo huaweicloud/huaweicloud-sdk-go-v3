@@ -23,6 +23,10 @@ type CreateBareMetalServersResponse struct {
 }
 
 func (o CreateBareMetalServersResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateBareMetalServersResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateBareMetalServersResponse", string(data)}, " ")
 }

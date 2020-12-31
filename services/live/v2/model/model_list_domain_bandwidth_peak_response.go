@@ -22,6 +22,10 @@ type ListDomainBandwidthPeakResponse struct {
 }
 
 func (o ListDomainBandwidthPeakResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListDomainBandwidthPeakResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListDomainBandwidthPeakResponse", string(data)}, " ")
 }

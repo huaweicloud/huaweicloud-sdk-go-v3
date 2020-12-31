@@ -28,7 +28,11 @@ type CreateDatakeyRequestBody struct {
 }
 
 func (o CreateDatakeyRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateDatakeyRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateDatakeyRequestBody", string(data)}, " ")
 }
 

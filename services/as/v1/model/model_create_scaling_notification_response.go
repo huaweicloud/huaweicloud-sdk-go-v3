@@ -25,6 +25,10 @@ type CreateScalingNotificationResponse struct {
 }
 
 func (o CreateScalingNotificationResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateScalingNotificationResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateScalingNotificationResponse", string(data)}, " ")
 }

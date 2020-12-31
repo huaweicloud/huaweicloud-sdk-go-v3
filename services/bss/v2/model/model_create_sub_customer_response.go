@@ -23,6 +23,10 @@ type CreateSubCustomerResponse struct {
 }
 
 func (o CreateSubCustomerResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateSubCustomerResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateSubCustomerResponse", string(data)}, " ")
 }

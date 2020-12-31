@@ -19,6 +19,10 @@ type AttachEipResponse struct {
 }
 
 func (o AttachEipResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AttachEipResponse struct{}"
+	}
+
 	return strings.Join([]string{"AttachEipResponse", string(data)}, " ")
 }

@@ -36,7 +36,11 @@ type ImageWatermark struct {
 }
 
 func (o ImageWatermark) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ImageWatermark struct{}"
+	}
+
 	return strings.Join([]string{"ImageWatermark", string(data)}, " ")
 }
 

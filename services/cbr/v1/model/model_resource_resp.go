@@ -33,7 +33,11 @@ type ResourceResp struct {
 }
 
 func (o ResourceResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResourceResp struct{}"
+	}
+
 	return strings.Join([]string{"ResourceResp", string(data)}, " ")
 }
 

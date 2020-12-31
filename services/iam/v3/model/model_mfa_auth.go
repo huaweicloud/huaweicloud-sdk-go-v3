@@ -20,6 +20,10 @@ type MfaAuth struct {
 }
 
 func (o MfaAuth) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MfaAuth struct{}"
+	}
+
 	return strings.Join([]string{"MfaAuth", string(data)}, " ")
 }

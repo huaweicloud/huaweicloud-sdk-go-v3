@@ -27,6 +27,10 @@ type Domains struct {
 }
 
 func (o Domains) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Domains struct{}"
+	}
+
 	return strings.Join([]string{"Domains", string(data)}, " ")
 }

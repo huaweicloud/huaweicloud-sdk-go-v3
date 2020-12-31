@@ -20,6 +20,10 @@ type KeystoneShowServiceResponse struct {
 }
 
 func (o KeystoneShowServiceResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneShowServiceResponse struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneShowServiceResponse", string(data)}, " ")
 }

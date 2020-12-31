@@ -58,7 +58,11 @@ type ListenerResp struct {
 }
 
 func (o ListenerResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListenerResp struct{}"
+	}
+
 	return strings.Join([]string{"ListenerResp", string(data)}, " ")
 }
 

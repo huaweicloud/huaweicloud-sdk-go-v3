@@ -27,6 +27,10 @@ type ServicePolicyRoleOption struct {
 }
 
 func (o ServicePolicyRoleOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServicePolicyRoleOption struct{}"
+	}
+
 	return strings.Join([]string{"ServicePolicyRoleOption", string(data)}, " ")
 }

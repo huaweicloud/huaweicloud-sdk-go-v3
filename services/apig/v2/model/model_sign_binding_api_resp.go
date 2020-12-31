@@ -46,6 +46,10 @@ type SignBindingApiResp struct {
 }
 
 func (o SignBindingApiResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SignBindingApiResp struct{}"
+	}
+
 	return strings.Join([]string{"SignBindingApiResp", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type RelatedInstance struct {
 }
 
 func (o RelatedInstance) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RelatedInstance struct{}"
+	}
+
 	return strings.Join([]string{"RelatedInstance", string(data)}, " ")
 }

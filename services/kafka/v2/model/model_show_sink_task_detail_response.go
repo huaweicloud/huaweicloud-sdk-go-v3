@@ -30,6 +30,10 @@ type ShowSinkTaskDetailResponse struct {
 }
 
 func (o ShowSinkTaskDetailResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowSinkTaskDetailResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowSinkTaskDetailResponse", string(data)}, " ")
 }

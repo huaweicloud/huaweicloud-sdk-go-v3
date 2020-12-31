@@ -20,6 +20,10 @@ type DeleteMfaDeviceRequest struct {
 }
 
 func (o DeleteMfaDeviceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteMfaDeviceRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteMfaDeviceRequest", string(data)}, " ")
 }

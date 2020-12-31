@@ -23,6 +23,10 @@ type PwdPasswordUser struct {
 }
 
 func (o PwdPasswordUser) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PwdPasswordUser struct{}"
+	}
+
 	return strings.Join([]string{"PwdPasswordUser", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type CreateSubEnterpriseAccountRequest struct {
 }
 
 func (o CreateSubEnterpriseAccountRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateSubEnterpriseAccountRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateSubEnterpriseAccountRequest", string(data)}, " ")
 }

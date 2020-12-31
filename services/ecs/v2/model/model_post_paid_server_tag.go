@@ -22,6 +22,10 @@ type PostPaidServerTag struct {
 }
 
 func (o PostPaidServerTag) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PostPaidServerTag struct{}"
+	}
+
 	return strings.Join([]string{"PostPaidServerTag", string(data)}, " ")
 }

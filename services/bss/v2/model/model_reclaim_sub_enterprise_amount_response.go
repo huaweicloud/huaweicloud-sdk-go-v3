@@ -19,6 +19,10 @@ type ReclaimSubEnterpriseAmountResponse struct {
 }
 
 func (o ReclaimSubEnterpriseAmountResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ReclaimSubEnterpriseAmountResponse struct{}"
+	}
+
 	return strings.Join([]string{"ReclaimSubEnterpriseAmountResponse", string(data)}, " ")
 }

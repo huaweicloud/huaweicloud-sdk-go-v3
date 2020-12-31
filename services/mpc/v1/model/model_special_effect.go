@@ -24,7 +24,11 @@ type SpecialEffect struct {
 }
 
 func (o SpecialEffect) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SpecialEffect struct{}"
+	}
+
 	return strings.Join([]string{"SpecialEffect", string(data)}, " ")
 }
 

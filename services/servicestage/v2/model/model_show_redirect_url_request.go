@@ -21,7 +21,11 @@ type ShowRedirectUrlRequest struct {
 }
 
 func (o ShowRedirectUrlRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowRedirectUrlRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowRedirectUrlRequest", string(data)}, " ")
 }
 

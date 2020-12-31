@@ -38,6 +38,10 @@ type PipelineExecuteStates struct {
 }
 
 func (o PipelineExecuteStates) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PipelineExecuteStates struct{}"
+	}
+
 	return strings.Join([]string{"PipelineExecuteStates", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type ChangeApplicationConfigurationRequest struct {
 }
 
 func (o ChangeApplicationConfigurationRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeApplicationConfigurationRequest struct{}"
+	}
+
 	return strings.Join([]string{"ChangeApplicationConfigurationRequest", string(data)}, " ")
 }

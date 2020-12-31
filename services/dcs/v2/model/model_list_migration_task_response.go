@@ -23,6 +23,10 @@ type ListMigrationTaskResponse struct {
 }
 
 func (o ListMigrationTaskResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListMigrationTaskResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListMigrationTaskResponse", string(data)}, " ")
 }

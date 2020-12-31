@@ -26,6 +26,10 @@ type VolumeAttachments struct {
 }
 
 func (o VolumeAttachments) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VolumeAttachments struct{}"
+	}
+
 	return strings.Join([]string{"VolumeAttachments", string(data)}, " ")
 }

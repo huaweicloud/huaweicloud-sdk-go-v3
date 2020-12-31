@@ -22,6 +22,10 @@ type SourceInstanceBody struct {
 }
 
 func (o SourceInstanceBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SourceInstanceBody struct{}"
+	}
+
 	return strings.Join([]string{"SourceInstanceBody", string(data)}, " ")
 }

@@ -23,6 +23,10 @@ type UpdateNodeRequest struct {
 }
 
 func (o UpdateNodeRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateNodeRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateNodeRequest", string(data)}, " ")
 }

@@ -23,7 +23,11 @@ type ReqCreatePredefineTag struct {
 }
 
 func (o ReqCreatePredefineTag) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ReqCreatePredefineTag struct{}"
+	}
+
 	return strings.Join([]string{"ReqCreatePredefineTag", string(data)}, " ")
 }
 

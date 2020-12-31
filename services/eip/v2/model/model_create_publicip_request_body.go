@@ -22,6 +22,10 @@ type CreatePublicipRequestBody struct {
 }
 
 func (o CreatePublicipRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePublicipRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreatePublicipRequestBody", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type DisassociateSignatureKeyV2Request struct {
 }
 
 func (o DisassociateSignatureKeyV2Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DisassociateSignatureKeyV2Request struct{}"
+	}
+
 	return strings.Join([]string{"DisassociateSignatureKeyV2Request", string(data)}, " ")
 }

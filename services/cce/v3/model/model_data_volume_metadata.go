@@ -22,6 +22,10 @@ type DataVolumeMetadata struct {
 }
 
 func (o DataVolumeMetadata) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DataVolumeMetadata struct{}"
+	}
+
 	return strings.Join([]string{"DataVolumeMetadata", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type MetricsDimension struct {
 }
 
 func (o MetricsDimension) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MetricsDimension struct{}"
+	}
+
 	return strings.Join([]string{"MetricsDimension", string(data)}, " ")
 }

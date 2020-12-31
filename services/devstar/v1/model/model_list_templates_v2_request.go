@@ -22,7 +22,11 @@ type ListTemplatesV2Request struct {
 }
 
 func (o ListTemplatesV2Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListTemplatesV2Request struct{}"
+	}
+
 	return strings.Join([]string{"ListTemplatesV2Request", string(data)}, " ")
 }
 

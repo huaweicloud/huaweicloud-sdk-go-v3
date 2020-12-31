@@ -20,6 +20,10 @@ type CreateDatakeyWithoutPlaintextRequest struct {
 }
 
 func (o CreateDatakeyWithoutPlaintextRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateDatakeyWithoutPlaintextRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateDatakeyWithoutPlaintextRequest", string(data)}, " ")
 }

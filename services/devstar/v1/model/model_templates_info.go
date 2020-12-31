@@ -21,6 +21,10 @@ type TemplatesInfo struct {
 }
 
 func (o TemplatesInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TemplatesInfo struct{}"
+	}
+
 	return strings.Join([]string{"TemplatesInfo", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type CreatePostPaidInstanceReqTags struct {
 }
 
 func (o CreatePostPaidInstanceReqTags) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePostPaidInstanceReqTags struct{}"
+	}
+
 	return strings.Join([]string{"CreatePostPaidInstanceReqTags", string(data)}, " ")
 }

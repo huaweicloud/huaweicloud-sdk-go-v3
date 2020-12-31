@@ -42,6 +42,10 @@ type ChangeComponentResponse struct {
 }
 
 func (o ChangeComponentResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeComponentResponse struct{}"
+	}
+
 	return strings.Join([]string{"ChangeComponentResponse", string(data)}, " ")
 }

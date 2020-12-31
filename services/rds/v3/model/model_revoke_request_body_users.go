@@ -19,6 +19,10 @@ type RevokeRequestBodyUsers struct {
 }
 
 func (o RevokeRequestBodyUsers) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RevokeRequestBodyUsers struct{}"
+	}
+
 	return strings.Join([]string{"RevokeRequestBodyUsers", string(data)}, " ")
 }

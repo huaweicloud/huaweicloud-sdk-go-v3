@@ -31,6 +31,10 @@ type ListCustomerOrdersRequest struct {
 }
 
 func (o ListCustomerOrdersRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListCustomerOrdersRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListCustomerOrdersRequest", string(data)}, " ")
 }

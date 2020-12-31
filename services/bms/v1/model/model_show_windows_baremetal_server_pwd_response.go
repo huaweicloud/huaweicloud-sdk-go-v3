@@ -21,6 +21,10 @@ type ShowWindowsBaremetalServerPwdResponse struct {
 }
 
 func (o ShowWindowsBaremetalServerPwdResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowWindowsBaremetalServerPwdResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowWindowsBaremetalServerPwdResponse", string(data)}, " ")
 }

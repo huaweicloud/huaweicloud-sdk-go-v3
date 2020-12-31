@@ -19,6 +19,10 @@ type ListKeypairTaskRequest struct {
 }
 
 func (o ListKeypairTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListKeypairTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListKeypairTaskRequest", string(data)}, " ")
 }

@@ -23,6 +23,10 @@ type StartInstanceResponse struct {
 }
 
 func (o StartInstanceResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StartInstanceResponse struct{}"
+	}
+
 	return strings.Join([]string{"StartInstanceResponse", string(data)}, " ")
 }

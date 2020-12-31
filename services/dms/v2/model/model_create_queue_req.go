@@ -30,7 +30,11 @@ type CreateQueueReq struct {
 }
 
 func (o CreateQueueReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateQueueReq struct{}"
+	}
+
 	return strings.Join([]string{"CreateQueueReq", string(data)}, " ")
 }
 

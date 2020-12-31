@@ -20,6 +20,10 @@ type DeleteVaultTagRequest struct {
 }
 
 func (o DeleteVaultTagRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteVaultTagRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteVaultTagRequest", string(data)}, " ")
 }

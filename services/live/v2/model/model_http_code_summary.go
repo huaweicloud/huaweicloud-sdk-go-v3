@@ -21,6 +21,10 @@ type HttpCodeSummary struct {
 }
 
 func (o HttpCodeSummary) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HttpCodeSummary struct{}"
+	}
+
 	return strings.Join([]string{"HttpCodeSummary", string(data)}, " ")
 }

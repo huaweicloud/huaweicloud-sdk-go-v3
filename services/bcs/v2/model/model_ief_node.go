@@ -23,6 +23,10 @@ type IefNode struct {
 }
 
 func (o IefNode) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IefNode struct{}"
+	}
+
 	return strings.Join([]string{"IefNode", string(data)}, " ")
 }

@@ -24,6 +24,10 @@ type ProtectableResult struct {
 }
 
 func (o ProtectableResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ProtectableResult struct{}"
+	}
+
 	return strings.Join([]string{"ProtectableResult", string(data)}, " ")
 }

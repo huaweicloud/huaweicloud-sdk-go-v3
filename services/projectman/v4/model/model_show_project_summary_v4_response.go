@@ -27,6 +27,10 @@ type ShowProjectSummaryV4Response struct {
 }
 
 func (o ShowProjectSummaryV4Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowProjectSummaryV4Response struct{}"
+	}
+
 	return strings.Join([]string{"ShowProjectSummaryV4Response", string(data)}, " ")
 }

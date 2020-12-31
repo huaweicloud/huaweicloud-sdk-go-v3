@@ -23,6 +23,10 @@ type ReclaimToPartnerAccountBalancesReq struct {
 }
 
 func (o ReclaimToPartnerAccountBalancesReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ReclaimToPartnerAccountBalancesReq struct{}"
+	}
+
 	return strings.Join([]string{"ReclaimToPartnerAccountBalancesReq", string(data)}, " ")
 }

@@ -27,6 +27,10 @@ type UpdatePoolReq struct {
 }
 
 func (o UpdatePoolReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdatePoolReq struct{}"
+	}
+
 	return strings.Join([]string{"UpdatePoolReq", string(data)}, " ")
 }

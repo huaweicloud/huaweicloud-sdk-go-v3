@@ -21,6 +21,10 @@ type ThrottleBindingReq struct {
 }
 
 func (o ThrottleBindingReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ThrottleBindingReq struct{}"
+	}
+
 	return strings.Join([]string{"ThrottleBindingReq", string(data)}, " ")
 }

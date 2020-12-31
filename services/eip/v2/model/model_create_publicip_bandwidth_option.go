@@ -29,7 +29,11 @@ type CreatePublicipBandwidthOption struct {
 }
 
 func (o CreatePublicipBandwidthOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePublicipBandwidthOption struct{}"
+	}
+
 	return strings.Join([]string{"CreatePublicipBandwidthOption", string(data)}, " ")
 }
 

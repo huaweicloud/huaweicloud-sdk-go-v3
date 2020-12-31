@@ -22,6 +22,10 @@ type GetTaskDetailListRspInstance struct {
 }
 
 func (o GetTaskDetailListRspInstance) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GetTaskDetailListRspInstance struct{}"
+	}
+
 	return strings.Join([]string{"GetTaskDetailListRspInstance", string(data)}, " ")
 }

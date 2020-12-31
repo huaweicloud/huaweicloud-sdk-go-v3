@@ -19,6 +19,10 @@ type NovaCreateKeypairRequestBody struct {
 }
 
 func (o NovaCreateKeypairRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaCreateKeypairRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"NovaCreateKeypairRequestBody", string(data)}, " ")
 }

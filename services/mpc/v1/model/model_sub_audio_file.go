@@ -23,6 +23,10 @@ type SubAudioFile struct {
 }
 
 func (o SubAudioFile) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SubAudioFile struct{}"
+	}
+
 	return strings.Join([]string{"SubAudioFile", string(data)}, " ")
 }

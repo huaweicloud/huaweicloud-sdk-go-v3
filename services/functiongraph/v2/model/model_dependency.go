@@ -34,6 +34,10 @@ type Dependency struct {
 }
 
 func (o Dependency) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Dependency struct{}"
+	}
+
 	return strings.Join([]string{"Dependency", string(data)}, " ")
 }

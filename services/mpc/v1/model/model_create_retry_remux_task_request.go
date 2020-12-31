@@ -19,6 +19,10 @@ type CreateRetryRemuxTaskRequest struct {
 }
 
 func (o CreateRetryRemuxTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateRetryRemuxTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateRetryRemuxTaskRequest", string(data)}, " ")
 }

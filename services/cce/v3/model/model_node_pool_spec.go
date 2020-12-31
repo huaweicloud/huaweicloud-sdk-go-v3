@@ -25,7 +25,11 @@ type NodePoolSpec struct {
 }
 
 func (o NodePoolSpec) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NodePoolSpec struct{}"
+	}
+
 	return strings.Join([]string{"NodePoolSpec", string(data)}, " ")
 }
 

@@ -24,6 +24,10 @@ type LbaasListeners struct {
 }
 
 func (o LbaasListeners) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LbaasListeners struct{}"
+	}
+
 	return strings.Join([]string{"LbaasListeners", string(data)}, " ")
 }

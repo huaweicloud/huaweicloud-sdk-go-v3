@@ -23,6 +23,10 @@ type VpcBaseInfo struct {
 }
 
 func (o VpcBaseInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VpcBaseInfo struct{}"
+	}
+
 	return strings.Join([]string{"VpcBaseInfo", string(data)}, " ")
 }

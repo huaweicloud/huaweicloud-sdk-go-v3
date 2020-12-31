@@ -25,6 +25,10 @@ type ListApplicationEndpointsResponse struct {
 }
 
 func (o ListApplicationEndpointsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListApplicationEndpointsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListApplicationEndpointsResponse", string(data)}, " ")
 }

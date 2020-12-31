@@ -20,6 +20,10 @@ type CreateRandomRequest struct {
 }
 
 func (o CreateRandomRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateRandomRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateRandomRequest", string(data)}, " ")
 }

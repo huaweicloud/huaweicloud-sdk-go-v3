@@ -19,6 +19,10 @@ type DeleteVpcResponse struct {
 }
 
 func (o DeleteVpcResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteVpcResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteVpcResponse", string(data)}, " ")
 }

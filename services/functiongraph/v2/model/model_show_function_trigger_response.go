@@ -33,7 +33,11 @@ type ShowFunctionTriggerResponse struct {
 }
 
 func (o ShowFunctionTriggerResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowFunctionTriggerResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowFunctionTriggerResponse", string(data)}, " ")
 }
 

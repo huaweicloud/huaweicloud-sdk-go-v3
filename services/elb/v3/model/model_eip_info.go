@@ -22,6 +22,10 @@ type EipInfo struct {
 }
 
 func (o EipInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EipInfo struct{}"
+	}
+
 	return strings.Join([]string{"EipInfo", string(data)}, " ")
 }

@@ -52,6 +52,10 @@ type IssueResponseV4 struct {
 }
 
 func (o IssueResponseV4) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IssueResponseV4 struct{}"
+	}
+
 	return strings.Join([]string{"IssueResponseV4", string(data)}, " ")
 }

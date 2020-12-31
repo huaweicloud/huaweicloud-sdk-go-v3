@@ -22,6 +22,10 @@ type ListPolicyAssignmentsResponse struct {
 }
 
 func (o ListPolicyAssignmentsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListPolicyAssignmentsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListPolicyAssignmentsResponse", string(data)}, " ")
 }

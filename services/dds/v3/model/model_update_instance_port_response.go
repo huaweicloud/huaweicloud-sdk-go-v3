@@ -23,6 +23,10 @@ type UpdateInstancePortResponse struct {
 }
 
 func (o UpdateInstancePortResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateInstancePortResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateInstancePortResponse", string(data)}, " ")
 }

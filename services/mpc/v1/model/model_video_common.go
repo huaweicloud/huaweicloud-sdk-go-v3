@@ -46,7 +46,11 @@ type VideoCommon struct {
 }
 
 func (o VideoCommon) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VideoCommon struct{}"
+	}
+
 	return strings.Join([]string{"VideoCommon", string(data)}, " ")
 }
 

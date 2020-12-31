@@ -46,7 +46,11 @@ type FloatingIpResp struct {
 }
 
 func (o FloatingIpResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "FloatingIpResp struct{}"
+	}
+
 	return strings.Join([]string{"FloatingIpResp", string(data)}, " ")
 }
 

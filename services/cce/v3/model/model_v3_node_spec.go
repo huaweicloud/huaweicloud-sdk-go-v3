@@ -47,6 +47,10 @@ type V3NodeSpec struct {
 }
 
 func (o V3NodeSpec) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "V3NodeSpec struct{}"
+	}
+
 	return strings.Join([]string{"V3NodeSpec", string(data)}, " ")
 }

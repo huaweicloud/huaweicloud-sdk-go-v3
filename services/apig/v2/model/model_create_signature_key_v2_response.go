@@ -35,7 +35,11 @@ type CreateSignatureKeyV2Response struct {
 }
 
 func (o CreateSignatureKeyV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateSignatureKeyV2Response struct{}"
+	}
+
 	return strings.Join([]string{"CreateSignatureKeyV2Response", string(data)}, " ")
 }
 

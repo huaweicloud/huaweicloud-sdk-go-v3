@@ -19,6 +19,10 @@ type DeleteBindingDeviceRequest struct {
 }
 
 func (o DeleteBindingDeviceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteBindingDeviceRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteBindingDeviceRequest", string(data)}, " ")
 }

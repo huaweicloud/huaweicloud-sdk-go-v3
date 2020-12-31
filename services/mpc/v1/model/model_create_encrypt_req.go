@@ -22,6 +22,10 @@ type CreateEncryptReq struct {
 }
 
 func (o CreateEncryptReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateEncryptReq struct{}"
+	}
+
 	return strings.Join([]string{"CreateEncryptReq", string(data)}, " ")
 }

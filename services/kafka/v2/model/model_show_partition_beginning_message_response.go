@@ -25,6 +25,10 @@ type ShowPartitionBeginningMessageResponse struct {
 }
 
 func (o ShowPartitionBeginningMessageResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowPartitionBeginningMessageResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowPartitionBeginningMessageResponse", string(data)}, " ")
 }

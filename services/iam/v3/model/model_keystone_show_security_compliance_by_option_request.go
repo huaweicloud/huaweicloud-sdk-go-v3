@@ -21,7 +21,11 @@ type KeystoneShowSecurityComplianceByOptionRequest struct {
 }
 
 func (o KeystoneShowSecurityComplianceByOptionRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneShowSecurityComplianceByOptionRequest struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneShowSecurityComplianceByOptionRequest", string(data)}, " ")
 }
 

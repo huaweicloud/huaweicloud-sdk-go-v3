@@ -43,6 +43,10 @@ type UpdateUserResult struct {
 }
 
 func (o UpdateUserResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateUserResult struct{}"
+	}
+
 	return strings.Join([]string{"UpdateUserResult", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type AvParameters struct {
 }
 
 func (o AvParameters) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AvParameters struct{}"
+	}
+
 	return strings.Join([]string{"AvParameters", string(data)}, " ")
 }

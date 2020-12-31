@@ -59,7 +59,11 @@ type ListPublicipsRequest struct {
 }
 
 func (o ListPublicipsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListPublicipsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListPublicipsRequest", string(data)}, " ")
 }
 

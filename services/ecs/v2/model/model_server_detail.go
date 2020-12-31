@@ -102,6 +102,10 @@ type ServerDetail struct {
 }
 
 func (o ServerDetail) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServerDetail struct{}"
+	}
+
 	return strings.Join([]string{"ServerDetail", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type SetAuditlogPolicyRequest struct {
 }
 
 func (o SetAuditlogPolicyRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SetAuditlogPolicyRequest struct{}"
+	}
+
 	return strings.Join([]string{"SetAuditlogPolicyRequest", string(data)}, " ")
 }

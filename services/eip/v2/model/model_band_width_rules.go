@@ -30,6 +30,10 @@ type BandWidthRules struct {
 }
 
 func (o BandWidthRules) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BandWidthRules struct{}"
+	}
+
 	return strings.Join([]string{"BandWidthRules", string(data)}, " ")
 }

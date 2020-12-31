@@ -20,6 +20,10 @@ type AttachServerVolumeRequest struct {
 }
 
 func (o AttachServerVolumeRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AttachServerVolumeRequest struct{}"
+	}
+
 	return strings.Join([]string{"AttachServerVolumeRequest", string(data)}, " ")
 }

@@ -29,6 +29,10 @@ type ShowCesHierarchyResponse struct {
 }
 
 func (o ShowCesHierarchyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowCesHierarchyResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowCesHierarchyResponse", string(data)}, " ")
 }

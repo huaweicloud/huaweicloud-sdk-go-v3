@@ -19,6 +19,10 @@ type KeystoneUpdateMappingRequestBody struct {
 }
 
 func (o KeystoneUpdateMappingRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneUpdateMappingRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneUpdateMappingRequestBody", string(data)}, " ")
 }

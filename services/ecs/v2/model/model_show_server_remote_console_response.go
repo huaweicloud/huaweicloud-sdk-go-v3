@@ -20,6 +20,10 @@ type ShowServerRemoteConsoleResponse struct {
 }
 
 func (o ShowServerRemoteConsoleResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowServerRemoteConsoleResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowServerRemoteConsoleResponse", string(data)}, " ")
 }

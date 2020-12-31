@@ -20,6 +20,10 @@ type GlanceUpdateImageRequest struct {
 }
 
 func (o GlanceUpdateImageRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GlanceUpdateImageRequest struct{}"
+	}
+
 	return strings.Join([]string{"GlanceUpdateImageRequest", string(data)}, " ")
 }

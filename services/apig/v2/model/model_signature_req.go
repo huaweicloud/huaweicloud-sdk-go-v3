@@ -26,7 +26,11 @@ type SignatureReq struct {
 }
 
 func (o SignatureReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SignatureReq struct{}"
+	}
+
 	return strings.Join([]string{"SignatureReq", string(data)}, " ")
 }
 

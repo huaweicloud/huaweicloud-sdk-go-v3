@@ -47,7 +47,11 @@ type KeypairDetail struct {
 }
 
 func (o KeypairDetail) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeypairDetail struct{}"
+	}
+
 	return strings.Join([]string{"KeypairDetail", string(data)}, " ")
 }
 

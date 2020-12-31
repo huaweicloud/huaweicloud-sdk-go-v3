@@ -20,6 +20,10 @@ type ProtocolOption struct {
 }
 
 func (o ProtocolOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ProtocolOption struct{}"
+	}
+
 	return strings.Join([]string{"ProtocolOption", string(data)}, " ")
 }

@@ -24,6 +24,10 @@ type NeutronInsertFirewallRuleRequestBody struct {
 }
 
 func (o NeutronInsertFirewallRuleRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NeutronInsertFirewallRuleRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"NeutronInsertFirewallRuleRequestBody", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type CancelCustomerOrderRequest struct {
 }
 
 func (o CancelCustomerOrderRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CancelCustomerOrderRequest struct{}"
+	}
+
 	return strings.Join([]string{"CancelCustomerOrderRequest", string(data)}, " ")
 }

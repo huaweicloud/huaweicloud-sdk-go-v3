@@ -20,6 +20,10 @@ type UpdateFunctionCodeRequest struct {
 }
 
 func (o UpdateFunctionCodeRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateFunctionCodeRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateFunctionCodeRequest", string(data)}, " ")
 }

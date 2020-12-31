@@ -26,6 +26,10 @@ type ClusterRedisNodeMonitoredObject struct {
 }
 
 func (o ClusterRedisNodeMonitoredObject) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ClusterRedisNodeMonitoredObject struct{}"
+	}
+
 	return strings.Join([]string{"ClusterRedisNodeMonitoredObject", string(data)}, " ")
 }

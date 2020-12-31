@@ -21,6 +21,10 @@ type CreateResourceTagRequest struct {
 }
 
 func (o CreateResourceTagRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateResourceTagRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateResourceTagRequest", string(data)}, " ")
 }

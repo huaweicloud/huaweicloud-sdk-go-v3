@@ -20,6 +20,10 @@ type DisassociateVaultPolicyResponse struct {
 }
 
 func (o DisassociateVaultPolicyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DisassociateVaultPolicyResponse struct{}"
+	}
+
 	return strings.Join([]string{"DisassociateVaultPolicyResponse", string(data)}, " ")
 }

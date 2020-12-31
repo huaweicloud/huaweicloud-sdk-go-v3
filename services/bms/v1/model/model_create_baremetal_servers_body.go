@@ -19,6 +19,10 @@ type CreateBaremetalServersBody struct {
 }
 
 func (o CreateBaremetalServersBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateBaremetalServersBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateBaremetalServersBody", string(data)}, " ")
 }

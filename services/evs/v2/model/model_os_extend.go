@@ -19,6 +19,10 @@ type OsExtend struct {
 }
 
 func (o OsExtend) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OsExtend struct{}"
+	}
+
 	return strings.Join([]string{"OsExtend", string(data)}, " ")
 }

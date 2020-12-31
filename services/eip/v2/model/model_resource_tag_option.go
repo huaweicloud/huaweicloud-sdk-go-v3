@@ -22,6 +22,10 @@ type ResourceTagOption struct {
 }
 
 func (o ResourceTagOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResourceTagOption struct{}"
+	}
+
 	return strings.Join([]string{"ResourceTagOption", string(data)}, " ")
 }

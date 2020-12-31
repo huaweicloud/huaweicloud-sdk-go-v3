@@ -23,7 +23,11 @@ type ListHotKeyScanTasksRequest struct {
 }
 
 func (o ListHotKeyScanTasksRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListHotKeyScanTasksRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListHotKeyScanTasksRequest", string(data)}, " ")
 }
 

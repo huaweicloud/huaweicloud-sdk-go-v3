@@ -22,7 +22,11 @@ type RestartInstanceRequestBody struct {
 }
 
 func (o RestartInstanceRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RestartInstanceRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"RestartInstanceRequestBody", string(data)}, " ")
 }
 

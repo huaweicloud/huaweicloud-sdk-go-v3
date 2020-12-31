@@ -30,7 +30,11 @@ type AnimatedGraphicsOutputParam struct {
 }
 
 func (o AnimatedGraphicsOutputParam) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AnimatedGraphicsOutputParam struct{}"
+	}
+
 	return strings.Join([]string{"AnimatedGraphicsOutputParam", string(data)}, " ")
 }
 

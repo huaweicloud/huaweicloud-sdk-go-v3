@@ -22,6 +22,10 @@ type ListDomainTrafficDetailResponse struct {
 }
 
 func (o ListDomainTrafficDetailResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListDomainTrafficDetailResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListDomainTrafficDetailResponse", string(data)}, " ")
 }

@@ -23,7 +23,11 @@ type CreateNodeRequest struct {
 }
 
 func (o CreateNodeRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateNodeRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateNodeRequest", string(data)}, " ")
 }
 

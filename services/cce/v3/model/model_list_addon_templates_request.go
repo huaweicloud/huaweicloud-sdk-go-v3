@@ -20,6 +20,10 @@ type ListAddonTemplatesRequest struct {
 }
 
 func (o ListAddonTemplatesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListAddonTemplatesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListAddonTemplatesRequest", string(data)}, " ")
 }

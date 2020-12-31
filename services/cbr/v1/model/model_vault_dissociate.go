@@ -19,6 +19,10 @@ type VaultDissociate struct {
 }
 
 func (o VaultDissociate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VaultDissociate struct{}"
+	}
+
 	return strings.Join([]string{"VaultDissociate", string(data)}, " ")
 }

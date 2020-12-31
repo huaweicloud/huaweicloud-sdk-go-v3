@@ -19,6 +19,10 @@ type DeleteApplicationEndpointRequest struct {
 }
 
 func (o DeleteApplicationEndpointRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteApplicationEndpointRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteApplicationEndpointRequest", string(data)}, " ")
 }

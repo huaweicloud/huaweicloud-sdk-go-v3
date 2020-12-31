@@ -21,6 +21,10 @@ type ListDomainPermissionsForAgencyResponse struct {
 }
 
 func (o ListDomainPermissionsForAgencyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListDomainPermissionsForAgencyResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListDomainPermissionsForAgencyResponse", string(data)}, " ")
 }

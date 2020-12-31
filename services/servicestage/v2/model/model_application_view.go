@@ -35,6 +35,10 @@ type ApplicationView struct {
 }
 
 func (o ApplicationView) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApplicationView struct{}"
+	}
+
 	return strings.Join([]string{"ApplicationView", string(data)}, " ")
 }

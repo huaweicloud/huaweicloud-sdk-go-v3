@@ -56,6 +56,10 @@ type PrePaidServer struct {
 }
 
 func (o PrePaidServer) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PrePaidServer struct{}"
+	}
+
 	return strings.Join([]string{"PrePaidServer", string(data)}, " ")
 }

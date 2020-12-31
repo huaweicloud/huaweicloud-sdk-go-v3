@@ -22,6 +22,10 @@ type TagsSingleValue struct {
 }
 
 func (o TagsSingleValue) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TagsSingleValue struct{}"
+	}
+
 	return strings.Join([]string{"TagsSingleValue", string(data)}, " ")
 }

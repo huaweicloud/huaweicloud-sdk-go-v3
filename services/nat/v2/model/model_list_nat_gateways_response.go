@@ -21,6 +21,10 @@ type ListNatGatewaysResponse struct {
 }
 
 func (o ListNatGatewaysResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListNatGatewaysResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListNatGatewaysResponse", string(data)}, " ")
 }

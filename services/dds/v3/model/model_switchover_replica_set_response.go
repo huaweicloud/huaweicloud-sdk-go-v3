@@ -21,6 +21,10 @@ type SwitchoverReplicaSetResponse struct {
 }
 
 func (o SwitchoverReplicaSetResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SwitchoverReplicaSetResponse struct{}"
+	}
+
 	return strings.Join([]string{"SwitchoverReplicaSetResponse", string(data)}, " ")
 }

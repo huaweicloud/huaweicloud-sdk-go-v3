@@ -25,6 +25,10 @@ type CreateVolumeResponse struct {
 }
 
 func (o CreateVolumeResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateVolumeResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateVolumeResponse", string(data)}, " ")
 }

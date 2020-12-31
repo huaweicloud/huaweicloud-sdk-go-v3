@@ -24,6 +24,10 @@ type MemberInvitee struct {
 }
 
 func (o MemberInvitee) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MemberInvitee struct{}"
+	}
+
 	return strings.Join([]string{"MemberInvitee", string(data)}, " ")
 }

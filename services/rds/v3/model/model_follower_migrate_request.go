@@ -21,6 +21,10 @@ type FollowerMigrateRequest struct {
 }
 
 func (o FollowerMigrateRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "FollowerMigrateRequest struct{}"
+	}
+
 	return strings.Join([]string{"FollowerMigrateRequest", string(data)}, " ")
 }

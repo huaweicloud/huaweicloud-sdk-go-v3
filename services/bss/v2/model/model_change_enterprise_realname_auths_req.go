@@ -38,6 +38,10 @@ type ChangeEnterpriseRealnameAuthsReq struct {
 }
 
 func (o ChangeEnterpriseRealnameAuthsReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeEnterpriseRealnameAuthsReq struct{}"
+	}
+
 	return strings.Join([]string{"ChangeEnterpriseRealnameAuthsReq", string(data)}, " ")
 }

@@ -23,6 +23,10 @@ type VideoSharp struct {
 }
 
 func (o VideoSharp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VideoSharp struct{}"
+	}
+
 	return strings.Join([]string{"VideoSharp", string(data)}, " ")
 }

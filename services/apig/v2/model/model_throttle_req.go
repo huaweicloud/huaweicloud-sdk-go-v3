@@ -38,7 +38,11 @@ type ThrottleReq struct {
 }
 
 func (o ThrottleReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ThrottleReq struct{}"
+	}
+
 	return strings.Join([]string{"ThrottleReq", string(data)}, " ")
 }
 

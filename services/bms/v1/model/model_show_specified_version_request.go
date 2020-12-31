@@ -19,6 +19,10 @@ type ShowSpecifiedVersionRequest struct {
 }
 
 func (o ShowSpecifiedVersionRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowSpecifiedVersionRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowSpecifiedVersionRequest", string(data)}, " ")
 }

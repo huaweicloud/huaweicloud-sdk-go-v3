@@ -21,6 +21,10 @@ type CreateScalingConfigResponse struct {
 }
 
 func (o CreateScalingConfigResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateScalingConfigResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateScalingConfigResponse", string(data)}, " ")
 }

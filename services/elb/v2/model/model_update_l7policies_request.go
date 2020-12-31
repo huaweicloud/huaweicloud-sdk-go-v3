@@ -20,6 +20,10 @@ type UpdateL7policiesRequest struct {
 }
 
 func (o UpdateL7policiesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateL7policiesRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateL7policiesRequest", string(data)}, " ")
 }

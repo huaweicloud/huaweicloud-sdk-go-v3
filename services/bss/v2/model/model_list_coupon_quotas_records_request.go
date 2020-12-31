@@ -26,6 +26,10 @@ type ListCouponQuotasRecordsRequest struct {
 }
 
 func (o ListCouponQuotasRecordsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListCouponQuotasRecordsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListCouponQuotasRecordsRequest", string(data)}, " ")
 }

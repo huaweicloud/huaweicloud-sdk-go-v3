@@ -28,6 +28,10 @@ type NovaCreateServersSchedulerHint struct {
 }
 
 func (o NovaCreateServersSchedulerHint) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaCreateServersSchedulerHint struct{}"
+	}
+
 	return strings.Join([]string{"NovaCreateServersSchedulerHint", string(data)}, " ")
 }

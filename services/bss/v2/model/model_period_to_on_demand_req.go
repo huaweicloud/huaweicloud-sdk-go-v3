@@ -21,6 +21,10 @@ type PeriodToOnDemandReq struct {
 }
 
 func (o PeriodToOnDemandReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PeriodToOnDemandReq struct{}"
+	}
+
 	return strings.Join([]string{"PeriodToOnDemandReq", string(data)}, " ")
 }

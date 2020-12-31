@@ -20,6 +20,10 @@ type UpdateImageRequest struct {
 }
 
 func (o UpdateImageRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateImageRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateImageRequest", string(data)}, " ")
 }

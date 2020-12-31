@@ -21,6 +21,10 @@ type AllowDbUserPrivilegeRequest struct {
 }
 
 func (o AllowDbUserPrivilegeRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AllowDbUserPrivilegeRequest struct{}"
+	}
+
 	return strings.Join([]string{"AllowDbUserPrivilegeRequest", string(data)}, " ")
 }

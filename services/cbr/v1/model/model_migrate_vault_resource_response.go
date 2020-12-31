@@ -21,6 +21,10 @@ type MigrateVaultResourceResponse struct {
 }
 
 func (o MigrateVaultResourceResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MigrateVaultResourceResponse struct{}"
+	}
+
 	return strings.Join([]string{"MigrateVaultResourceResponse", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type NamespacesNamespaces struct {
 }
 
 func (o NamespacesNamespaces) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NamespacesNamespaces struct{}"
+	}
+
 	return strings.Join([]string{"NamespacesNamespaces", string(data)}, " ")
 }

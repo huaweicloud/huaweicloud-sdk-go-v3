@@ -21,6 +21,10 @@ type CreateEnvironmentVariableV2Request struct {
 }
 
 func (o CreateEnvironmentVariableV2Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateEnvironmentVariableV2Request struct{}"
+	}
+
 	return strings.Join([]string{"CreateEnvironmentVariableV2Request", string(data)}, " ")
 }

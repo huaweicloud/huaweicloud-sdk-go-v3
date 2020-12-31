@@ -23,7 +23,11 @@ type BatchCreateServerTagsRequestBody struct {
 }
 
 func (o BatchCreateServerTagsRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchCreateServerTagsRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"BatchCreateServerTagsRequestBody", string(data)}, " ")
 }
 

@@ -71,6 +71,10 @@ type MonthlyBillRecord struct {
 }
 
 func (o MonthlyBillRecord) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MonthlyBillRecord struct{}"
+	}
+
 	return strings.Join([]string{"MonthlyBillRecord", string(data)}, " ")
 }

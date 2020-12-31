@@ -25,6 +25,10 @@ type OpExtendInfoRestore struct {
 }
 
 func (o OpExtendInfoRestore) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OpExtendInfoRestore struct{}"
+	}
+
 	return strings.Join([]string{"OpExtendInfoRestore", string(data)}, " ")
 }

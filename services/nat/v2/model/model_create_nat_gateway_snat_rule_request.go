@@ -19,6 +19,10 @@ type CreateNatGatewaySnatRuleRequest struct {
 }
 
 func (o CreateNatGatewaySnatRuleRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateNatGatewaySnatRuleRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateNatGatewaySnatRuleRequest", string(data)}, " ")
 }

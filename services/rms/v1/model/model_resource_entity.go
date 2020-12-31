@@ -48,6 +48,10 @@ type ResourceEntity struct {
 }
 
 func (o ResourceEntity) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResourceEntity struct{}"
+	}
+
 	return strings.Join([]string{"ResourceEntity", string(data)}, " ")
 }

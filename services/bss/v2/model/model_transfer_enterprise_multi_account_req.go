@@ -27,6 +27,10 @@ type TransferEnterpriseMultiAccountReq struct {
 }
 
 func (o TransferEnterpriseMultiAccountReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TransferEnterpriseMultiAccountReq struct{}"
+	}
+
 	return strings.Join([]string{"TransferEnterpriseMultiAccountReq", string(data)}, " ")
 }

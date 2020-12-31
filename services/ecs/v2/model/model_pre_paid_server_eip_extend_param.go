@@ -21,7 +21,11 @@ type PrePaidServerEipExtendParam struct {
 }
 
 func (o PrePaidServerEipExtendParam) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PrePaidServerEipExtendParam struct{}"
+	}
+
 	return strings.Join([]string{"PrePaidServerEipExtendParam", string(data)}, " ")
 }
 

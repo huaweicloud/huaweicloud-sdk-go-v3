@@ -19,6 +19,10 @@ type ShowHotkeyAutoscanConfigRequest struct {
 }
 
 func (o ShowHotkeyAutoscanConfigRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowHotkeyAutoscanConfigRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowHotkeyAutoscanConfigRequest", string(data)}, " ")
 }

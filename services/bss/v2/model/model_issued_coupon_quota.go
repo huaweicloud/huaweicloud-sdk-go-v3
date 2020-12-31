@@ -49,6 +49,10 @@ type IssuedCouponQuota struct {
 }
 
 func (o IssuedCouponQuota) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IssuedCouponQuota struct{}"
+	}
+
 	return strings.Join([]string{"IssuedCouponQuota", string(data)}, " ")
 }

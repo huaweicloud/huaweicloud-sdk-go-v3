@@ -18,6 +18,10 @@ type ServiceResourceInfo struct {
 }
 
 func (o ServiceResourceInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServiceResourceInfo struct{}"
+	}
+
 	return strings.Join([]string{"ServiceResourceInfo", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type PersistentVolumeClaimMetadata struct {
 }
 
 func (o PersistentVolumeClaimMetadata) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PersistentVolumeClaimMetadata struct{}"
+	}
+
 	return strings.Join([]string{"PersistentVolumeClaimMetadata", string(data)}, " ")
 }

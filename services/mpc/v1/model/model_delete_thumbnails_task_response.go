@@ -19,6 +19,10 @@ type DeleteThumbnailsTaskResponse struct {
 }
 
 func (o DeleteThumbnailsTaskResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteThumbnailsTaskResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteThumbnailsTaskResponse", string(data)}, " ")
 }

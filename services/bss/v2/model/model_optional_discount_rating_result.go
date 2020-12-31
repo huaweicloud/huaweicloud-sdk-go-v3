@@ -35,6 +35,10 @@ type OptionalDiscountRatingResult struct {
 }
 
 func (o OptionalDiscountRatingResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OptionalDiscountRatingResult struct{}"
+	}
+
 	return strings.Join([]string{"OptionalDiscountRatingResult", string(data)}, " ")
 }

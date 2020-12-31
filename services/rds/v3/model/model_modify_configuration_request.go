@@ -21,6 +21,10 @@ type ModifyConfigurationRequest struct {
 }
 
 func (o ModifyConfigurationRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ModifyConfigurationRequest struct{}"
+	}
+
 	return strings.Join([]string{"ModifyConfigurationRequest", string(data)}, " ")
 }

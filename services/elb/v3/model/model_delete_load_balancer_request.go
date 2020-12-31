@@ -19,6 +19,10 @@ type DeleteLoadBalancerRequest struct {
 }
 
 func (o DeleteLoadBalancerRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteLoadBalancerRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteLoadBalancerRequest", string(data)}, " ")
 }

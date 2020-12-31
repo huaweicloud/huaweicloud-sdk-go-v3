@@ -21,6 +21,10 @@ type ShowResourceByIdRequest struct {
 }
 
 func (o ShowResourceByIdRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowResourceByIdRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowResourceByIdRequest", string(data)}, " ")
 }

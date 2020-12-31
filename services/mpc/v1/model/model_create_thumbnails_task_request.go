@@ -19,6 +19,10 @@ type CreateThumbnailsTaskRequest struct {
 }
 
 func (o CreateThumbnailsTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateThumbnailsTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateThumbnailsTaskRequest", string(data)}, " ")
 }

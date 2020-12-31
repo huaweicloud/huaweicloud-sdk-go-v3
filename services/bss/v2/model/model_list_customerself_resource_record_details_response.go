@@ -25,6 +25,10 @@ type ListCustomerselfResourceRecordDetailsResponse struct {
 }
 
 func (o ListCustomerselfResourceRecordDetailsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListCustomerselfResourceRecordDetailsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListCustomerselfResourceRecordDetailsResponse", string(data)}, " ")
 }

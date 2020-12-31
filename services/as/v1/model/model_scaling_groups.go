@@ -74,7 +74,11 @@ type ScalingGroups struct {
 }
 
 func (o ScalingGroups) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ScalingGroups struct{}"
+	}
+
 	return strings.Join([]string{"ScalingGroups", string(data)}, " ")
 }
 

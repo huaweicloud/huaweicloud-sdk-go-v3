@@ -19,6 +19,10 @@ type CreateApplicationRequest struct {
 }
 
 func (o CreateApplicationRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateApplicationRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateApplicationRequest", string(data)}, " ")
 }

@@ -30,6 +30,10 @@ type OutputVideoPara struct {
 }
 
 func (o OutputVideoPara) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OutputVideoPara struct{}"
+	}
+
 	return strings.Join([]string{"OutputVideoPara", string(data)}, " ")
 }

@@ -24,6 +24,10 @@ type MetricDataPoints struct {
 }
 
 func (o MetricDataPoints) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MetricDataPoints struct{}"
+	}
+
 	return strings.Join([]string{"MetricDataPoints", string(data)}, " ")
 }

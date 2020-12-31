@@ -22,6 +22,10 @@ type ListMessageTemplatesRequest struct {
 }
 
 func (o ListMessageTemplatesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListMessageTemplatesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListMessageTemplatesRequest", string(data)}, " ")
 }

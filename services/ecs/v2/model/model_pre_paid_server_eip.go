@@ -22,6 +22,10 @@ type PrePaidServerEip struct {
 }
 
 func (o PrePaidServerEip) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PrePaidServerEip struct{}"
+	}
+
 	return strings.Join([]string{"PrePaidServerEip", string(data)}, " ")
 }

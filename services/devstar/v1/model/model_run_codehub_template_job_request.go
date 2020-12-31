@@ -21,7 +21,11 @@ type RunCodehubTemplateJobRequest struct {
 }
 
 func (o RunCodehubTemplateJobRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RunCodehubTemplateJobRequest struct{}"
+	}
+
 	return strings.Join([]string{"RunCodehubTemplateJobRequest", string(data)}, " ")
 }
 

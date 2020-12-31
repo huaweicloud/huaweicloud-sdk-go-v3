@@ -29,6 +29,10 @@ type CheckpointReplicateParam struct {
 }
 
 func (o CheckpointReplicateParam) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CheckpointReplicateParam struct{}"
+	}
+
 	return strings.Join([]string{"CheckpointReplicateParam", string(data)}, " ")
 }

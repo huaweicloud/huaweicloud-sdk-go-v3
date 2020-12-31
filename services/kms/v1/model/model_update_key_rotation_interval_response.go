@@ -19,6 +19,10 @@ type UpdateKeyRotationIntervalResponse struct {
 }
 
 func (o UpdateKeyRotationIntervalResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateKeyRotationIntervalResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateKeyRotationIntervalResponse", string(data)}, " ")
 }

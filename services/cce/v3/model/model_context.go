@@ -21,6 +21,10 @@ type Context struct {
 }
 
 func (o Context) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Context struct{}"
+	}
+
 	return strings.Join([]string{"Context", string(data)}, " ")
 }

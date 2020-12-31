@@ -18,6 +18,10 @@ type ListAuthorizationsRequest struct {
 }
 
 func (o ListAuthorizationsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListAuthorizationsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListAuthorizationsRequest", string(data)}, " ")
 }

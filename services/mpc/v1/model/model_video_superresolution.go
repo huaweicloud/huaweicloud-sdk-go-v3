@@ -23,6 +23,10 @@ type VideoSuperresolution struct {
 }
 
 func (o VideoSuperresolution) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VideoSuperresolution struct{}"
+	}
+
 	return strings.Join([]string{"VideoSuperresolution", string(data)}, " ")
 }

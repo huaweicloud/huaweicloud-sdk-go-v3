@@ -23,6 +23,10 @@ type CreatePostPaidServersResponse struct {
 }
 
 func (o CreatePostPaidServersResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePostPaidServersResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreatePostPaidServersResponse", string(data)}, " ")
 }

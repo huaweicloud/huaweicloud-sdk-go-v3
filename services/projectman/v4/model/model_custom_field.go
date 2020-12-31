@@ -22,6 +22,10 @@ type CustomField struct {
 }
 
 func (o CustomField) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CustomField struct{}"
+	}
+
 	return strings.Join([]string{"CustomField", string(data)}, " ")
 }

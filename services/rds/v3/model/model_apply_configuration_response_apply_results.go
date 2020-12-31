@@ -25,6 +25,10 @@ type ApplyConfigurationResponseApplyResults struct {
 }
 
 func (o ApplyConfigurationResponseApplyResults) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApplyConfigurationResponseApplyResults struct{}"
+	}
+
 	return strings.Join([]string{"ApplyConfigurationResponseApplyResults", string(data)}, " ")
 }

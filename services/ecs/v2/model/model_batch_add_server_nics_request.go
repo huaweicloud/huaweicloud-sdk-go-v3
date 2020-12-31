@@ -20,6 +20,10 @@ type BatchAddServerNicsRequest struct {
 }
 
 func (o BatchAddServerNicsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchAddServerNicsRequest struct{}"
+	}
+
 	return strings.Join([]string{"BatchAddServerNicsRequest", string(data)}, " ")
 }

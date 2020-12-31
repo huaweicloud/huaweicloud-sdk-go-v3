@@ -23,6 +23,10 @@ type HttpCode struct {
 }
 
 func (o HttpCode) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HttpCode struct{}"
+	}
+
 	return strings.Join([]string{"HttpCode", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type RollbackSnapshotRequestBody struct {
 }
 
 func (o RollbackSnapshotRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RollbackSnapshotRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"RollbackSnapshotRequestBody", string(data)}, " ")
 }

@@ -29,6 +29,10 @@ type ShowTemplateFileResponse struct {
 }
 
 func (o ShowTemplateFileResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowTemplateFileResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowTemplateFileResponse", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type SelectorConfigBody struct {
 }
 
 func (o SelectorConfigBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SelectorConfigBody struct{}"
+	}
+
 	return strings.Join([]string{"SelectorConfigBody", string(data)}, " ")
 }

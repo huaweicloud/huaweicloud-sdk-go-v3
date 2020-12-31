@@ -21,6 +21,10 @@ type RateOnPeriodReq struct {
 }
 
 func (o RateOnPeriodReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RateOnPeriodReq struct{}"
+	}
+
 	return strings.Join([]string{"RateOnPeriodReq", string(data)}, " ")
 }

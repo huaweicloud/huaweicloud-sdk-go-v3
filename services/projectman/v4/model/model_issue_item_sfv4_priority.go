@@ -22,6 +22,10 @@ type IssueItemSfv4Priority struct {
 }
 
 func (o IssueItemSfv4Priority) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IssueItemSfv4Priority struct{}"
+	}
+
 	return strings.Join([]string{"IssueItemSfv4Priority", string(data)}, " ")
 }

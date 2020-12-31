@@ -26,6 +26,10 @@ type NovaSimpleKeypair struct {
 }
 
 func (o NovaSimpleKeypair) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaSimpleKeypair struct{}"
+	}
+
 	return strings.Join([]string{"NovaSimpleKeypair", string(data)}, " ")
 }

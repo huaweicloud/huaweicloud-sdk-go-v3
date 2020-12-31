@@ -27,7 +27,11 @@ type PostPaidServerEipBandwidth struct {
 }
 
 func (o PostPaidServerEipBandwidth) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PostPaidServerEipBandwidth struct{}"
+	}
+
 	return strings.Join([]string{"PostPaidServerEipBandwidth", string(data)}, " ")
 }
 

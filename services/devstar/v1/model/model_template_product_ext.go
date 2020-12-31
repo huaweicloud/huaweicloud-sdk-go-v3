@@ -33,6 +33,10 @@ type TemplateProductExt struct {
 }
 
 func (o TemplateProductExt) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TemplateProductExt struct{}"
+	}
+
 	return strings.Join([]string{"TemplateProductExt", string(data)}, " ")
 }

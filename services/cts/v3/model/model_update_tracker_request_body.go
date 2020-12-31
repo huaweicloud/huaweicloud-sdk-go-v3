@@ -34,7 +34,11 @@ type UpdateTrackerRequestBody struct {
 }
 
 func (o UpdateTrackerRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateTrackerRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateTrackerRequestBody", string(data)}, " ")
 }
 

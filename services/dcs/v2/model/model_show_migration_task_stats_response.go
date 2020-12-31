@@ -33,6 +33,10 @@ type ShowMigrationTaskStatsResponse struct {
 }
 
 func (o ShowMigrationTaskStatsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowMigrationTaskStatsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowMigrationTaskStatsResponse", string(data)}, " ")
 }

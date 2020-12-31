@@ -21,7 +21,11 @@ type HaResponse struct {
 }
 
 func (o HaResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HaResponse struct{}"
+	}
+
 	return strings.Join([]string{"HaResponse", string(data)}, " ")
 }
 

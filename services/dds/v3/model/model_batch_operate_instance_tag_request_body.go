@@ -22,7 +22,11 @@ type BatchOperateInstanceTagRequestBody struct {
 }
 
 func (o BatchOperateInstanceTagRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchOperateInstanceTagRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"BatchOperateInstanceTagRequestBody", string(data)}, " ")
 }
 

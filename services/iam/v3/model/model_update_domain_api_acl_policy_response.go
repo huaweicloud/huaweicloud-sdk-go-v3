@@ -20,6 +20,10 @@ type UpdateDomainApiAclPolicyResponse struct {
 }
 
 func (o UpdateDomainApiAclPolicyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateDomainApiAclPolicyResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateDomainApiAclPolicyResponse", string(data)}, " ")
 }

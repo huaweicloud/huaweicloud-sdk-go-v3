@@ -21,6 +21,10 @@ type Plugin struct {
 }
 
 func (o Plugin) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Plugin struct{}"
+	}
+
 	return strings.Join([]string{"Plugin", string(data)}, " ")
 }

@@ -22,6 +22,10 @@ type Entitie struct {
 }
 
 func (o Entitie) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Entitie struct{}"
+	}
+
 	return strings.Join([]string{"Entitie", string(data)}, " ")
 }

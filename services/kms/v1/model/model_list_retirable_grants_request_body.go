@@ -23,6 +23,10 @@ type ListRetirableGrantsRequestBody struct {
 }
 
 func (o ListRetirableGrantsRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListRetirableGrantsRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"ListRetirableGrantsRequestBody", string(data)}, " ")
 }

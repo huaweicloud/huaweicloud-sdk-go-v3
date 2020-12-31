@@ -23,6 +23,10 @@ type ListExtractTaskResponse struct {
 }
 
 func (o ListExtractTaskResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListExtractTaskResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListExtractTaskResponse", string(data)}, " ")
 }

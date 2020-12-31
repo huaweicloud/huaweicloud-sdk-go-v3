@@ -23,6 +23,10 @@ type AddOrUpdateTagsRequestBody struct {
 }
 
 func (o AddOrUpdateTagsRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AddOrUpdateTagsRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"AddOrUpdateTagsRequestBody", string(data)}, " ")
 }

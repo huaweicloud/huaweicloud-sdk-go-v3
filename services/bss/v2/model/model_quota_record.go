@@ -41,6 +41,10 @@ type QuotaRecord struct {
 }
 
 func (o QuotaRecord) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QuotaRecord struct{}"
+	}
+
 	return strings.Join([]string{"QuotaRecord", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type ListVersionAliasesResponse struct {
 }
 
 func (o ListVersionAliasesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListVersionAliasesResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListVersionAliasesResponse", string(data)}, " ")
 }

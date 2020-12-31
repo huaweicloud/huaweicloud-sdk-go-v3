@@ -20,6 +20,10 @@ type AdditionalProperties struct {
 }
 
 func (o AdditionalProperties) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AdditionalProperties struct{}"
+	}
+
 	return strings.Join([]string{"AdditionalProperties", string(data)}, " ")
 }

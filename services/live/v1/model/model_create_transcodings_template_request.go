@@ -19,6 +19,10 @@ type CreateTranscodingsTemplateRequest struct {
 }
 
 func (o CreateTranscodingsTemplateRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateTranscodingsTemplateRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateTranscodingsTemplateRequest", string(data)}, " ")
 }

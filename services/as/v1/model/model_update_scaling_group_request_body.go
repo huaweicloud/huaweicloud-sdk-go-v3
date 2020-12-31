@@ -55,7 +55,11 @@ type UpdateScalingGroupRequestBody struct {
 }
 
 func (o UpdateScalingGroupRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateScalingGroupRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateScalingGroupRequestBody", string(data)}, " ")
 }
 

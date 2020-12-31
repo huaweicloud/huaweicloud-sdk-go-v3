@@ -22,6 +22,10 @@ type TrackerConfigBody struct {
 }
 
 func (o TrackerConfigBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TrackerConfigBody struct{}"
+	}
+
 	return strings.Join([]string{"TrackerConfigBody", string(data)}, " ")
 }

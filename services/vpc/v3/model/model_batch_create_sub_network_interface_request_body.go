@@ -23,6 +23,10 @@ type BatchCreateSubNetworkInterfaceRequestBody struct {
 }
 
 func (o BatchCreateSubNetworkInterfaceRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchCreateSubNetworkInterfaceRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"BatchCreateSubNetworkInterfaceRequestBody", string(data)}, " ")
 }

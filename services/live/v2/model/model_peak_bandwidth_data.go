@@ -21,6 +21,10 @@ type PeakBandwidthData struct {
 }
 
 func (o PeakBandwidthData) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PeakBandwidthData struct{}"
+	}
+
 	return strings.Join([]string{"PeakBandwidthData", string(data)}, " ")
 }

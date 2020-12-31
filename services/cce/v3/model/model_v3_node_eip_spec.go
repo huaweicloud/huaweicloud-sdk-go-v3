@@ -20,6 +20,10 @@ type V3NodeEipSpec struct {
 }
 
 func (o V3NodeEipSpec) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "V3NodeEipSpec struct{}"
+	}
+
 	return strings.Join([]string{"V3NodeEipSpec", string(data)}, " ")
 }

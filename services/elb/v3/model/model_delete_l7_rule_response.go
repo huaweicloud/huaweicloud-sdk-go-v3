@@ -19,6 +19,10 @@ type DeleteL7RuleResponse struct {
 }
 
 func (o DeleteL7RuleResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteL7RuleResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteL7RuleResponse", string(data)}, " ")
 }

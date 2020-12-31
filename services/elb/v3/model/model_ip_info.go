@@ -22,6 +22,10 @@ type IpInfo struct {
 }
 
 func (o IpInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IpInfo struct{}"
+	}
+
 	return strings.Join([]string{"IpInfo", string(data)}, " ")
 }

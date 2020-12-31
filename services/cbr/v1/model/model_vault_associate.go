@@ -21,6 +21,10 @@ type VaultAssociate struct {
 }
 
 func (o VaultAssociate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VaultAssociate struct{}"
+	}
+
 	return strings.Join([]string{"VaultAssociate", string(data)}, " ")
 }

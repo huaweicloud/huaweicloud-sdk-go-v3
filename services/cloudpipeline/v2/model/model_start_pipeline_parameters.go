@@ -19,6 +19,10 @@ type StartPipelineParameters struct {
 }
 
 func (o StartPipelineParameters) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StartPipelineParameters struct{}"
+	}
+
 	return strings.Join([]string{"StartPipelineParameters", string(data)}, " ")
 }

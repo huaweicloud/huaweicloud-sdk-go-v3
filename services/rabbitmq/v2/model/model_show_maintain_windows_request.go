@@ -18,6 +18,10 @@ type ShowMaintainWindowsRequest struct {
 }
 
 func (o ShowMaintainWindowsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowMaintainWindowsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowMaintainWindowsRequest", string(data)}, " ")
 }

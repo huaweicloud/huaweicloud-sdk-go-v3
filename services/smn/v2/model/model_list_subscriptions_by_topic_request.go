@@ -21,6 +21,10 @@ type ListSubscriptionsByTopicRequest struct {
 }
 
 func (o ListSubscriptionsByTopicRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListSubscriptionsByTopicRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListSubscriptionsByTopicRequest", string(data)}, " ")
 }

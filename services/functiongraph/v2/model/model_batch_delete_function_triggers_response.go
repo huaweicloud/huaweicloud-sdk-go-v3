@@ -19,6 +19,10 @@ type BatchDeleteFunctionTriggersResponse struct {
 }
 
 func (o BatchDeleteFunctionTriggersResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchDeleteFunctionTriggersResponse struct{}"
+	}
+
 	return strings.Join([]string{"BatchDeleteFunctionTriggersResponse", string(data)}, " ")
 }

@@ -21,7 +21,11 @@ type ShowTemplateDetailRequest struct {
 }
 
 func (o ShowTemplateDetailRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowTemplateDetailRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowTemplateDetailRequest", string(data)}, " ")
 }
 

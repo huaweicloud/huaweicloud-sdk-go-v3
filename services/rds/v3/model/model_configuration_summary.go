@@ -35,7 +35,11 @@ type ConfigurationSummary struct {
 }
 
 func (o ConfigurationSummary) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ConfigurationSummary struct{}"
+	}
+
 	return strings.Join([]string{"ConfigurationSummary", string(data)}, " ")
 }
 

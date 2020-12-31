@@ -33,7 +33,11 @@ type Vpc struct {
 }
 
 func (o Vpc) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Vpc struct{}"
+	}
+
 	return strings.Join([]string{"Vpc", string(data)}, " ")
 }
 

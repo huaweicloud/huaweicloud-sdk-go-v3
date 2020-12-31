@@ -20,6 +20,10 @@ type ListResourceTypesRequest struct {
 }
 
 func (o ListResourceTypesRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListResourceTypesRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListResourceTypesRequest", string(data)}, " ")
 }

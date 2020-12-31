@@ -19,6 +19,10 @@ type StopMigrationTaskRequest struct {
 }
 
 func (o StopMigrationTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StopMigrationTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"StopMigrationTaskRequest", string(data)}, " ")
 }

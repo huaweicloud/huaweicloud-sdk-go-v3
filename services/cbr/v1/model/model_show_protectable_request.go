@@ -21,7 +21,11 @@ type ShowProtectableRequest struct {
 }
 
 func (o ShowProtectableRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowProtectableRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowProtectableRequest", string(data)}, " ")
 }
 

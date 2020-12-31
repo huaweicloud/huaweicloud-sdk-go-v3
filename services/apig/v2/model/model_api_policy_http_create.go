@@ -41,7 +41,11 @@ type ApiPolicyHttpCreate struct {
 }
 
 func (o ApiPolicyHttpCreate) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApiPolicyHttpCreate struct{}"
+	}
+
 	return strings.Join([]string{"ApiPolicyHttpCreate", string(data)}, " ")
 }
 

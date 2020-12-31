@@ -19,6 +19,10 @@ type DeleteMediaProcessTaskResponse struct {
 }
 
 func (o DeleteMediaProcessTaskResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteMediaProcessTaskResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteMediaProcessTaskResponse", string(data)}, " ")
 }

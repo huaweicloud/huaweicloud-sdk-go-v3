@@ -18,6 +18,10 @@ type CreateResetTracksReq struct {
 }
 
 func (o CreateResetTracksReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateResetTracksReq struct{}"
+	}
+
 	return strings.Join([]string{"CreateResetTracksReq", string(data)}, " ")
 }

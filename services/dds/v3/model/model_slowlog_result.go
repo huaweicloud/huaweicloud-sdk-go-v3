@@ -35,6 +35,10 @@ type SlowlogResult struct {
 }
 
 func (o SlowlogResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SlowlogResult struct{}"
+	}
+
 	return strings.Join([]string{"SlowlogResult", string(data)}, " ")
 }

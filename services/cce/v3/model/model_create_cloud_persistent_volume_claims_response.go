@@ -26,6 +26,10 @@ type CreateCloudPersistentVolumeClaimsResponse struct {
 }
 
 func (o CreateCloudPersistentVolumeClaimsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateCloudPersistentVolumeClaimsResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateCloudPersistentVolumeClaimsResponse", string(data)}, " ")
 }

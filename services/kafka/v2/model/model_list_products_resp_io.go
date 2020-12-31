@@ -27,6 +27,10 @@ type ListProductsRespIo struct {
 }
 
 func (o ListProductsRespIo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListProductsRespIo struct{}"
+	}
+
 	return strings.Join([]string{"ListProductsRespIo", string(data)}, " ")
 }

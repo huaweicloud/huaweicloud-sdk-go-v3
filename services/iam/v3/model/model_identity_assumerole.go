@@ -27,6 +27,10 @@ type IdentityAssumerole struct {
 }
 
 func (o IdentityAssumerole) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IdentityAssumerole struct{}"
+	}
+
 	return strings.Join([]string{"IdentityAssumerole", string(data)}, " ")
 }

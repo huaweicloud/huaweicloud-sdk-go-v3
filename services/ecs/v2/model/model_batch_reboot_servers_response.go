@@ -21,6 +21,10 @@ type BatchRebootServersResponse struct {
 }
 
 func (o BatchRebootServersResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchRebootServersResponse struct{}"
+	}
+
 	return strings.Join([]string{"BatchRebootServersResponse", string(data)}, " ")
 }

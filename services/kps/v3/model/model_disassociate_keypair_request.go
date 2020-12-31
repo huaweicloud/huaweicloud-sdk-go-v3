@@ -19,6 +19,10 @@ type DisassociateKeypairRequest struct {
 }
 
 func (o DisassociateKeypairRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DisassociateKeypairRequest struct{}"
+	}
+
 	return strings.Join([]string{"DisassociateKeypairRequest", string(data)}, " ")
 }

@@ -31,7 +31,11 @@ type BigkeysBody struct {
 }
 
 func (o BigkeysBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BigkeysBody struct{}"
+	}
+
 	return strings.Join([]string{"BigkeysBody", string(data)}, " ")
 }
 

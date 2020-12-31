@@ -27,6 +27,10 @@ type MemberJobCard struct {
 }
 
 func (o MemberJobCard) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MemberJobCard struct{}"
+	}
+
 	return strings.Join([]string{"MemberJobCard", string(data)}, " ")
 }

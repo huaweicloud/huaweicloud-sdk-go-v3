@@ -20,6 +20,10 @@ type CreateL7ruleRequest struct {
 }
 
 func (o CreateL7ruleRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateL7ruleRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateL7ruleRequest", string(data)}, " ")
 }

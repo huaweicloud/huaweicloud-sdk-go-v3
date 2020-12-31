@@ -21,6 +21,10 @@ type BatchSetSubCustomerDiscountResponse struct {
 }
 
 func (o BatchSetSubCustomerDiscountResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchSetSubCustomerDiscountResponse struct{}"
+	}
+
 	return strings.Join([]string{"BatchSetSubCustomerDiscountResponse", string(data)}, " ")
 }

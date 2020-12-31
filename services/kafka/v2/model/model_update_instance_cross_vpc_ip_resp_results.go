@@ -24,6 +24,10 @@ type UpdateInstanceCrossVpcIpRespResults struct {
 }
 
 func (o UpdateInstanceCrossVpcIpRespResults) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateInstanceCrossVpcIpRespResults struct{}"
+	}
+
 	return strings.Join([]string{"UpdateInstanceCrossVpcIpRespResults", string(data)}, " ")
 }

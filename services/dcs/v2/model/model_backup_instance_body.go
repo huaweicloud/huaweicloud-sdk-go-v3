@@ -20,6 +20,10 @@ type BackupInstanceBody struct {
 }
 
 func (o BackupInstanceBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BackupInstanceBody struct{}"
+	}
+
 	return strings.Join([]string{"BackupInstanceBody", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type RestoreDatabasesInfo struct {
 }
 
 func (o RestoreDatabasesInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RestoreDatabasesInfo struct{}"
+	}
+
 	return strings.Join([]string{"RestoreDatabasesInfo", string(data)}, " ")
 }

@@ -24,6 +24,10 @@ type ListSecurityGroupRulesResponse struct {
 }
 
 func (o ListSecurityGroupRulesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListSecurityGroupRulesResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListSecurityGroupRulesResponse", string(data)}, " ")
 }

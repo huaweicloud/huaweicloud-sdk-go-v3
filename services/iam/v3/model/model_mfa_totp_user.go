@@ -22,6 +22,10 @@ type MfaTotpUser struct {
 }
 
 func (o MfaTotpUser) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MfaTotpUser struct{}"
+	}
+
 	return strings.Join([]string{"MfaTotpUser", string(data)}, " ")
 }

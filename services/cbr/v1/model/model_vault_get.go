@@ -47,6 +47,10 @@ type VaultGet struct {
 }
 
 func (o VaultGet) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "VaultGet struct{}"
+	}
+
 	return strings.Join([]string{"VaultGet", string(data)}, " ")
 }

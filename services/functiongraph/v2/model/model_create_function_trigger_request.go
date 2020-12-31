@@ -20,6 +20,10 @@ type CreateFunctionTriggerRequest struct {
 }
 
 func (o CreateFunctionTriggerRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateFunctionTriggerRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateFunctionTriggerRequest", string(data)}, " ")
 }

@@ -28,6 +28,10 @@ type Auditlog struct {
 }
 
 func (o Auditlog) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Auditlog struct{}"
+	}
+
 	return strings.Join([]string{"Auditlog", string(data)}, " ")
 }

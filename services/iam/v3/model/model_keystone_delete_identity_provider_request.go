@@ -19,6 +19,10 @@ type KeystoneDeleteIdentityProviderRequest struct {
 }
 
 func (o KeystoneDeleteIdentityProviderRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneDeleteIdentityProviderRequest struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneDeleteIdentityProviderRequest", string(data)}, " ")
 }

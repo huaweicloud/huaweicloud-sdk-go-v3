@@ -19,6 +19,10 @@ type ShowCheckpointRequest struct {
 }
 
 func (o ShowCheckpointRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowCheckpointRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowCheckpointRequest", string(data)}, " ")
 }

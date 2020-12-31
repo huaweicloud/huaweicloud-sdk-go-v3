@@ -21,7 +21,11 @@ type ExtendParamEip struct {
 }
 
 func (o ExtendParamEip) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ExtendParamEip struct{}"
+	}
+
 	return strings.Join([]string{"ExtendParamEip", string(data)}, " ")
 }
 

@@ -20,6 +20,10 @@ type DeleteSubnetRequest struct {
 }
 
 func (o DeleteSubnetRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteSubnetRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteSubnetRequest", string(data)}, " ")
 }

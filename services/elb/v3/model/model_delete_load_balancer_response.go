@@ -19,6 +19,10 @@ type DeleteLoadBalancerResponse struct {
 }
 
 func (o DeleteLoadBalancerResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteLoadBalancerResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteLoadBalancerResponse", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type DeleteDatabaseRequest struct {
 }
 
 func (o DeleteDatabaseRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteDatabaseRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteDatabaseRequest", string(data)}, " ")
 }

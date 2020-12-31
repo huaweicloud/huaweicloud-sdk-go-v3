@@ -37,6 +37,10 @@ type CreateDependencyResponse struct {
 }
 
 func (o CreateDependencyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateDependencyResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateDependencyResponse", string(data)}, " ")
 }

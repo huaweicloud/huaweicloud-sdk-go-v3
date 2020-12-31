@@ -23,6 +23,10 @@ type DecryptDataRequestBody struct {
 }
 
 func (o DecryptDataRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DecryptDataRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"DecryptDataRequestBody", string(data)}, " ")
 }

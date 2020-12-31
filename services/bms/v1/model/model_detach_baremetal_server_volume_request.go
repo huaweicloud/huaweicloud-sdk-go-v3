@@ -20,6 +20,10 @@ type DetachBaremetalServerVolumeRequest struct {
 }
 
 func (o DetachBaremetalServerVolumeRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DetachBaremetalServerVolumeRequest struct{}"
+	}
+
 	return strings.Join([]string{"DetachBaremetalServerVolumeRequest", string(data)}, " ")
 }

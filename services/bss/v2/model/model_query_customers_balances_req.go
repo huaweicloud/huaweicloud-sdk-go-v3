@@ -21,6 +21,10 @@ type QueryCustomersBalancesReq struct {
 }
 
 func (o QueryCustomersBalancesReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QueryCustomersBalancesReq struct{}"
+	}
+
 	return strings.Join([]string{"QueryCustomersBalancesReq", string(data)}, " ")
 }

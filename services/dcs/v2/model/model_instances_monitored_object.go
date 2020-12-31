@@ -24,6 +24,10 @@ type InstancesMonitoredObject struct {
 }
 
 func (o InstancesMonitoredObject) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstancesMonitoredObject struct{}"
+	}
+
 	return strings.Join([]string{"InstancesMonitoredObject", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type ShowPolicyAndInstanceQuotaRequest struct {
 }
 
 func (o ShowPolicyAndInstanceQuotaRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowPolicyAndInstanceQuotaRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowPolicyAndInstanceQuotaRequest", string(data)}, " ")
 }

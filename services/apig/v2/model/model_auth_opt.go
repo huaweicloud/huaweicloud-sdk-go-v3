@@ -21,7 +21,11 @@ type AuthOpt struct {
 }
 
 func (o AuthOpt) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AuthOpt struct{}"
+	}
+
 	return strings.Join([]string{"AuthOpt", string(data)}, " ")
 }
 

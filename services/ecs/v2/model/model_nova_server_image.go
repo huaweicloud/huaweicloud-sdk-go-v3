@@ -22,6 +22,10 @@ type NovaServerImage struct {
 }
 
 func (o NovaServerImage) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaServerImage struct{}"
+	}
+
 	return strings.Join([]string{"NovaServerImage", string(data)}, " ")
 }

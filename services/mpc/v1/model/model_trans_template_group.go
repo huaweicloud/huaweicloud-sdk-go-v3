@@ -24,6 +24,10 @@ type TransTemplateGroup struct {
 }
 
 func (o TransTemplateGroup) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TransTemplateGroup struct{}"
+	}
+
 	return strings.Join([]string{"TransTemplateGroup", string(data)}, " ")
 }

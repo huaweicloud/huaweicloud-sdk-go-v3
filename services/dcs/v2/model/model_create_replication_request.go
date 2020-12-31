@@ -21,6 +21,10 @@ type CreateReplicationRequest struct {
 }
 
 func (o CreateReplicationRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateReplicationRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateReplicationRequest", string(data)}, " ")
 }

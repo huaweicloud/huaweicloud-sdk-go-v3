@@ -42,7 +42,11 @@ type ShowQueueResponse struct {
 }
 
 func (o ShowQueueResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowQueueResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowQueueResponse", string(data)}, " ")
 }
 

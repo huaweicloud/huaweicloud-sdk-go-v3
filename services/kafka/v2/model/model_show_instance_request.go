@@ -20,6 +20,10 @@ type ShowInstanceRequest struct {
 }
 
 func (o ShowInstanceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowInstanceRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowInstanceRequest", string(data)}, " ")
 }

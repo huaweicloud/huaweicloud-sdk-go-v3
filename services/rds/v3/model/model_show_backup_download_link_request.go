@@ -20,6 +20,10 @@ type ShowBackupDownloadLinkRequest struct {
 }
 
 func (o ShowBackupDownloadLinkRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowBackupDownloadLinkRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowBackupDownloadLinkRequest", string(data)}, " ")
 }

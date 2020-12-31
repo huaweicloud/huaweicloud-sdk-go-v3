@@ -27,6 +27,10 @@ type ListPipleineBuildResultResponse struct {
 }
 
 func (o ListPipleineBuildResultResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListPipleineBuildResultResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListPipleineBuildResultResponse", string(data)}, " ")
 }

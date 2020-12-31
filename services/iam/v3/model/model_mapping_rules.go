@@ -22,6 +22,10 @@ type MappingRules struct {
 }
 
 func (o MappingRules) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MappingRules struct{}"
+	}
+
 	return strings.Join([]string{"MappingRules", string(data)}, " ")
 }

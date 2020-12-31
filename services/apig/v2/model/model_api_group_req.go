@@ -21,6 +21,10 @@ type ApiGroupReq struct {
 }
 
 func (o ApiGroupReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApiGroupReq struct{}"
+	}
+
 	return strings.Join([]string{"ApiGroupReq", string(data)}, " ")
 }

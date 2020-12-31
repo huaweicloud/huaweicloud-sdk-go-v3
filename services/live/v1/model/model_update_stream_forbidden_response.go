@@ -19,6 +19,10 @@ type UpdateStreamForbiddenResponse struct {
 }
 
 func (o UpdateStreamForbiddenResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateStreamForbiddenResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateStreamForbiddenResponse", string(data)}, " ")
 }

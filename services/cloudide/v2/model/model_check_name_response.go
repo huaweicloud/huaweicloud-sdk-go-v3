@@ -23,6 +23,10 @@ type CheckNameResponse struct {
 }
 
 func (o CheckNameResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CheckNameResponse struct{}"
+	}
+
 	return strings.Join([]string{"CheckNameResponse", string(data)}, " ")
 }

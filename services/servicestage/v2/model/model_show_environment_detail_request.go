@@ -19,6 +19,10 @@ type ShowEnvironmentDetailRequest struct {
 }
 
 func (o ShowEnvironmentDetailRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowEnvironmentDetailRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowEnvironmentDetailRequest", string(data)}, " ")
 }

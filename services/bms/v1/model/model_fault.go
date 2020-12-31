@@ -27,6 +27,10 @@ type Fault struct {
 }
 
 func (o Fault) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Fault struct{}"
+	}
+
 	return strings.Join([]string{"Fault", string(data)}, " ")
 }

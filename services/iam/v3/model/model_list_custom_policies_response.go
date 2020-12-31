@@ -24,6 +24,10 @@ type ListCustomPoliciesResponse struct {
 }
 
 func (o ListCustomPoliciesResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListCustomPoliciesResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListCustomPoliciesResponse", string(data)}, " ")
 }

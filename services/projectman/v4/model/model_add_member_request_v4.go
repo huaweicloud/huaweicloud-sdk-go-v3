@@ -23,6 +23,10 @@ type AddMemberRequestV4 struct {
 }
 
 func (o AddMemberRequestV4) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AddMemberRequestV4 struct{}"
+	}
+
 	return strings.Join([]string{"AddMemberRequestV4", string(data)}, " ")
 }

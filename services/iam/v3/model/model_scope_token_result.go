@@ -31,6 +31,10 @@ type ScopeTokenResult struct {
 }
 
 func (o ScopeTokenResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ScopeTokenResult struct{}"
+	}
+
 	return strings.Join([]string{"ScopeTokenResult", string(data)}, " ")
 }

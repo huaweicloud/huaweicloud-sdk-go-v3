@@ -20,6 +20,10 @@ type DeleteServerMetadataRequest struct {
 }
 
 func (o DeleteServerMetadataRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteServerMetadataRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteServerMetadataRequest", string(data)}, " ")
 }

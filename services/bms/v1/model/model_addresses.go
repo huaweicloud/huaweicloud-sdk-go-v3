@@ -20,6 +20,10 @@ type Addresses struct {
 }
 
 func (o Addresses) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Addresses struct{}"
+	}
+
 	return strings.Join([]string{"Addresses", string(data)}, " ")
 }

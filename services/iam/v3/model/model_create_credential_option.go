@@ -22,6 +22,10 @@ type CreateCredentialOption struct {
 }
 
 func (o CreateCredentialOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateCredentialOption struct{}"
+	}
+
 	return strings.Join([]string{"CreateCredentialOption", string(data)}, " ")
 }

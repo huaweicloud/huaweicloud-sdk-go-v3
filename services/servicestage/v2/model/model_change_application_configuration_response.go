@@ -24,6 +24,10 @@ type ChangeApplicationConfigurationResponse struct {
 }
 
 func (o ChangeApplicationConfigurationResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ChangeApplicationConfigurationResponse struct{}"
+	}
+
 	return strings.Join([]string{"ChangeApplicationConfigurationResponse", string(data)}, " ")
 }

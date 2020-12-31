@@ -20,6 +20,10 @@ type ShowMetadataRequest struct {
 }
 
 func (o ShowMetadataRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowMetadataRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowMetadataRequest", string(data)}, " ")
 }

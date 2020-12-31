@@ -23,6 +23,10 @@ type HandleNotificationInvitor struct {
 }
 
 func (o HandleNotificationInvitor) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HandleNotificationInvitor struct{}"
+	}
+
 	return strings.Join([]string{"HandleNotificationInvitor", string(data)}, " ")
 }

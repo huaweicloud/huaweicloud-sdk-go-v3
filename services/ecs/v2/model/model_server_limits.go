@@ -70,6 +70,10 @@ type ServerLimits struct {
 }
 
 func (o ServerLimits) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServerLimits struct{}"
+	}
+
 	return strings.Join([]string{"ServerLimits", string(data)}, " ")
 }

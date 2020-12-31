@@ -23,6 +23,10 @@ type EcsServerInfo struct {
 }
 
 func (o EcsServerInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EcsServerInfo struct{}"
+	}
+
 	return strings.Join([]string{"EcsServerInfo", string(data)}, " ")
 }

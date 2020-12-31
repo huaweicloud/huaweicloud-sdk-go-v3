@@ -20,6 +20,10 @@ type RemovePipelineRequest struct {
 }
 
 func (o RemovePipelineRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RemovePipelineRequest struct{}"
+	}
+
 	return strings.Join([]string{"RemovePipelineRequest", string(data)}, " ")
 }

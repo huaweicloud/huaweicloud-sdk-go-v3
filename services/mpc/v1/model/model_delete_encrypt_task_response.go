@@ -19,6 +19,10 @@ type DeleteEncryptTaskResponse struct {
 }
 
 func (o DeleteEncryptTaskResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteEncryptTaskResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteEncryptTaskResponse", string(data)}, " ")
 }

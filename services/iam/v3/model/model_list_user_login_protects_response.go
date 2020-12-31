@@ -21,6 +21,10 @@ type ListUserLoginProtectsResponse struct {
 }
 
 func (o ListUserLoginProtectsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListUserLoginProtectsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListUserLoginProtectsResponse", string(data)}, " ")
 }

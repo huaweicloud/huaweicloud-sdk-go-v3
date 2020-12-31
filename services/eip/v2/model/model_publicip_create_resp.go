@@ -40,7 +40,11 @@ type PublicipCreateResp struct {
 }
 
 func (o PublicipCreateResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PublicipCreateResp struct{}"
+	}
+
 	return strings.Join([]string{"PublicipCreateResp", string(data)}, " ")
 }
 

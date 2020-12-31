@@ -22,6 +22,10 @@ type UpdateSubNetworkInterfaceOption struct {
 }
 
 func (o UpdateSubNetworkInterfaceOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateSubNetworkInterfaceOption struct{}"
+	}
+
 	return strings.Join([]string{"UpdateSubNetworkInterfaceOption", string(data)}, " ")
 }

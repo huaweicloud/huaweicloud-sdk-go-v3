@@ -25,7 +25,11 @@ type CreatePublicipOption struct {
 }
 
 func (o CreatePublicipOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreatePublicipOption struct{}"
+	}
+
 	return strings.Join([]string{"CreatePublicipOption", string(data)}, " ")
 }
 

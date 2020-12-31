@@ -28,6 +28,10 @@ type CreateSnapshotOption struct {
 }
 
 func (o CreateSnapshotOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateSnapshotOption struct{}"
+	}
+
 	return strings.Join([]string{"CreateSnapshotOption", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type OpExtendInfoDelete struct {
 }
 
 func (o OpExtendInfoDelete) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OpExtendInfoDelete struct{}"
+	}
+
 	return strings.Join([]string{"OpExtendInfoDelete", string(data)}, " ")
 }

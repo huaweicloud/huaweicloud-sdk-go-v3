@@ -26,6 +26,10 @@ type UpdatePortOption struct {
 }
 
 func (o UpdatePortOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdatePortOption struct{}"
+	}
+
 	return strings.Join([]string{"UpdatePortOption", string(data)}, " ")
 }

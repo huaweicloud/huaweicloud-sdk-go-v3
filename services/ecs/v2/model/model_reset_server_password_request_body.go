@@ -19,6 +19,10 @@ type ResetServerPasswordRequestBody struct {
 }
 
 func (o ResetServerPasswordRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResetServerPasswordRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"ResetServerPasswordRequestBody", string(data)}, " ")
 }

@@ -24,6 +24,10 @@ type PersistentVolumeClaim struct {
 }
 
 func (o PersistentVolumeClaim) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PersistentVolumeClaim struct{}"
+	}
+
 	return strings.Join([]string{"PersistentVolumeClaim", string(data)}, " ")
 }

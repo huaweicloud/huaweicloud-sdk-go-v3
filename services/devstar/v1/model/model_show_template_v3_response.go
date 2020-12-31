@@ -73,6 +73,10 @@ type ShowTemplateV3Response struct {
 }
 
 func (o ShowTemplateV3Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowTemplateV3Response struct{}"
+	}
+
 	return strings.Join([]string{"ShowTemplateV3Response", string(data)}, " ")
 }

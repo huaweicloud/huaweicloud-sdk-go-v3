@@ -19,6 +19,10 @@ type UpdateLoginProjectReq struct {
 }
 
 func (o UpdateLoginProjectReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateLoginProjectReq struct{}"
+	}
+
 	return strings.Join([]string{"UpdateLoginProjectReq", string(data)}, " ")
 }

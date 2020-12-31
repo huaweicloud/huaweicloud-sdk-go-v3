@@ -22,6 +22,10 @@ type PostPaidServerDataVolumeMetadata struct {
 }
 
 func (o PostPaidServerDataVolumeMetadata) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PostPaidServerDataVolumeMetadata struct{}"
+	}
+
 	return strings.Join([]string{"PostPaidServerDataVolumeMetadata", string(data)}, " ")
 }

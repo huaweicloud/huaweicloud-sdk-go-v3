@@ -19,6 +19,10 @@ type CancelSelfGrantResponse struct {
 }
 
 func (o CancelSelfGrantResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CancelSelfGrantResponse struct{}"
+	}
+
 	return strings.Join([]string{"CancelSelfGrantResponse", string(data)}, " ")
 }

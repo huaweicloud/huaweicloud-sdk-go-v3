@@ -23,6 +23,10 @@ type SourceStorage struct {
 }
 
 func (o SourceStorage) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SourceStorage struct{}"
+	}
+
 	return strings.Join([]string{"SourceStorage", string(data)}, " ")
 }

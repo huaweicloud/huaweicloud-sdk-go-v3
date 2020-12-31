@@ -26,6 +26,10 @@ type EnvResp struct {
 }
 
 func (o EnvResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EnvResp struct{}"
+	}
+
 	return strings.Join([]string{"EnvResp", string(data)}, " ")
 }

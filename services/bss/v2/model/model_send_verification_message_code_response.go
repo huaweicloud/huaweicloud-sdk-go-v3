@@ -19,6 +19,10 @@ type SendVerificationMessageCodeResponse struct {
 }
 
 func (o SendVerificationMessageCodeResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SendVerificationMessageCodeResponse struct{}"
+	}
+
 	return strings.Join([]string{"SendVerificationMessageCodeResponse", string(data)}, " ")
 }

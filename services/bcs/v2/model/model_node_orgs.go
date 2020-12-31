@@ -24,6 +24,10 @@ type NodeOrgs struct {
 }
 
 func (o NodeOrgs) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NodeOrgs struct{}"
+	}
+
 	return strings.Join([]string{"NodeOrgs", string(data)}, " ")
 }

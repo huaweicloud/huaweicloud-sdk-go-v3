@@ -32,6 +32,10 @@ type ListProjectsV4ResponseBodyProjects struct {
 }
 
 func (o ListProjectsV4ResponseBodyProjects) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListProjectsV4ResponseBodyProjects struct{}"
+	}
+
 	return strings.Join([]string{"ListProjectsV4ResponseBodyProjects", string(data)}, " ")
 }

@@ -34,6 +34,10 @@ type DemandStatisticResponseV4 struct {
 }
 
 func (o DemandStatisticResponseV4) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DemandStatisticResponseV4 struct{}"
+	}
+
 	return strings.Join([]string{"DemandStatisticResponseV4", string(data)}, " ")
 }

@@ -100,7 +100,11 @@ type NovaServer struct {
 }
 
 func (o NovaServer) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaServer struct{}"
+	}
+
 	return strings.Join([]string{"NovaServer", string(data)}, " ")
 }
 

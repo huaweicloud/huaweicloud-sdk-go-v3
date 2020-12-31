@@ -19,6 +19,10 @@ type CreateKeypairRequestBody struct {
 }
 
 func (o CreateKeypairRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateKeypairRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateKeypairRequestBody", string(data)}, " ")
 }

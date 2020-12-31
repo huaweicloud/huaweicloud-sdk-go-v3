@@ -21,6 +21,10 @@ type ResetServerPasswordOption struct {
 }
 
 func (o ResetServerPasswordOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResetServerPasswordOption struct{}"
+	}
+
 	return strings.Join([]string{"ResetServerPasswordOption", string(data)}, " ")
 }

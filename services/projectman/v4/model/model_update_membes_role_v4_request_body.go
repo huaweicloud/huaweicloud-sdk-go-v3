@@ -21,6 +21,10 @@ type UpdateMembesRoleV4RequestBody struct {
 }
 
 func (o UpdateMembesRoleV4RequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateMembesRoleV4RequestBody struct{}"
+	}
+
 	return strings.Join([]string{"UpdateMembesRoleV4RequestBody", string(data)}, " ")
 }

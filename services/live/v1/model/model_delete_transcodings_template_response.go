@@ -19,6 +19,10 @@ type DeleteTranscodingsTemplateResponse struct {
 }
 
 func (o DeleteTranscodingsTemplateResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteTranscodingsTemplateResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteTranscodingsTemplateResponse", string(data)}, " ")
 }

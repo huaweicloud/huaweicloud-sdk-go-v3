@@ -19,6 +19,10 @@ type ShowVpcPeeringRequest struct {
 }
 
 func (o ShowVpcPeeringRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowVpcPeeringRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowVpcPeeringRequest", string(data)}, " ")
 }

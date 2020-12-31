@@ -26,7 +26,11 @@ type ListKeypairTaskResponse struct {
 }
 
 func (o ListKeypairTaskResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListKeypairTaskResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListKeypairTaskResponse", string(data)}, " ")
 }
 

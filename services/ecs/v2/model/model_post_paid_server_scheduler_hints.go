@@ -24,6 +24,10 @@ type PostPaidServerSchedulerHints struct {
 }
 
 func (o PostPaidServerSchedulerHints) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PostPaidServerSchedulerHints struct{}"
+	}
+
 	return strings.Join([]string{"PostPaidServerSchedulerHints", string(data)}, " ")
 }

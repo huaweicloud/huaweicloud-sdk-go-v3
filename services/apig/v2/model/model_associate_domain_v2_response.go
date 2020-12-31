@@ -26,7 +26,11 @@ type AssociateDomainV2Response struct {
 }
 
 func (o AssociateDomainV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AssociateDomainV2Response struct{}"
+	}
+
 	return strings.Join([]string{"AssociateDomainV2Response", string(data)}, " ")
 }
 

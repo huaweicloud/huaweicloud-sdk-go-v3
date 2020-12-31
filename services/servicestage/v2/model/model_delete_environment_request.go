@@ -19,6 +19,10 @@ type DeleteEnvironmentRequest struct {
 }
 
 func (o DeleteEnvironmentRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteEnvironmentRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteEnvironmentRequest", string(data)}, " ")
 }

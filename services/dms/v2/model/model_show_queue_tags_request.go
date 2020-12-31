@@ -20,6 +20,10 @@ type ShowQueueTagsRequest struct {
 }
 
 func (o ShowQueueTagsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowQueueTagsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowQueueTagsRequest", string(data)}, " ")
 }

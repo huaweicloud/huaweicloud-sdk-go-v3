@@ -20,6 +20,10 @@ type NeutronUpdateFirewallGroupRequest struct {
 }
 
 func (o NeutronUpdateFirewallGroupRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NeutronUpdateFirewallGroupRequest struct{}"
+	}
+
 	return strings.Join([]string{"NeutronUpdateFirewallGroupRequest", string(data)}, " ")
 }

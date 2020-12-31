@@ -26,6 +26,10 @@ type HostNetwork struct {
 }
 
 func (o HostNetwork) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HostNetwork struct{}"
+	}
+
 	return strings.Join([]string{"HostNetwork", string(data)}, " ")
 }

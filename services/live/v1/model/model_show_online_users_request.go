@@ -25,6 +25,10 @@ type ShowOnlineUsersRequest struct {
 }
 
 func (o ShowOnlineUsersRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowOnlineUsersRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowOnlineUsersRequest", string(data)}, " ")
 }

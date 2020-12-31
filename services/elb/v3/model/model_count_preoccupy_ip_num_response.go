@@ -22,6 +22,10 @@ type CountPreoccupyIpNumResponse struct {
 }
 
 func (o CountPreoccupyIpNumResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CountPreoccupyIpNumResponse struct{}"
+	}
+
 	return strings.Join([]string{"CountPreoccupyIpNumResponse", string(data)}, " ")
 }

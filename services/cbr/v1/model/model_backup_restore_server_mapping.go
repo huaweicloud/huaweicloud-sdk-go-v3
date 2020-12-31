@@ -21,6 +21,10 @@ type BackupRestoreServerMapping struct {
 }
 
 func (o BackupRestoreServerMapping) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BackupRestoreServerMapping struct{}"
+	}
+
 	return strings.Join([]string{"BackupRestoreServerMapping", string(data)}, " ")
 }

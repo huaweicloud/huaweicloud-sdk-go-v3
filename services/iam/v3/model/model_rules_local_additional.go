@@ -20,6 +20,10 @@ type RulesLocalAdditional struct {
 }
 
 func (o RulesLocalAdditional) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RulesLocalAdditional struct{}"
+	}
+
 	return strings.Join([]string{"RulesLocalAdditional", string(data)}, " ")
 }

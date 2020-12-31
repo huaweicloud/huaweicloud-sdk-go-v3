@@ -21,6 +21,10 @@ type V2BandwidthData struct {
 }
 
 func (o V2BandwidthData) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "V2BandwidthData struct{}"
+	}
+
 	return strings.Join([]string{"V2BandwidthData", string(data)}, " ")
 }

@@ -29,7 +29,11 @@ type PublicipInfoResp struct {
 }
 
 func (o PublicipInfoResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PublicipInfoResp struct{}"
+	}
+
 	return strings.Join([]string{"PublicipInfoResp", string(data)}, " ")
 }
 

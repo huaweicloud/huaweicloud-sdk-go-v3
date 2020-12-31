@@ -22,6 +22,10 @@ type Image struct {
 }
 
 func (o Image) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Image struct{}"
+	}
+
 	return strings.Join([]string{"Image", string(data)}, " ")
 }

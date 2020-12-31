@@ -19,6 +19,10 @@ type DeletePortRequest struct {
 }
 
 func (o DeletePortRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeletePortRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeletePortRequest", string(data)}, " ")
 }

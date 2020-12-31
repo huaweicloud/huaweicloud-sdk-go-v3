@@ -20,6 +20,10 @@ type ResetPwdOneClickRequest struct {
 }
 
 func (o ResetPwdOneClickRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResetPwdOneClickRequest struct{}"
+	}
+
 	return strings.Join([]string{"ResetPwdOneClickRequest", string(data)}, " ")
 }

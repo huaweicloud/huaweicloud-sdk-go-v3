@@ -20,6 +20,10 @@ type UpdateScalingGroupInstanceRequest struct {
 }
 
 func (o UpdateScalingGroupInstanceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateScalingGroupInstanceRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateScalingGroupInstanceRequest", string(data)}, " ")
 }

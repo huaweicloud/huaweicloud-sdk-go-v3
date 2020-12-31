@@ -20,6 +20,10 @@ type ListenerRef struct {
 }
 
 func (o ListenerRef) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListenerRef struct{}"
+	}
+
 	return strings.Join([]string{"ListenerRef", string(data)}, " ")
 }

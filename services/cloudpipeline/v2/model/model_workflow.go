@@ -28,6 +28,10 @@ type Workflow struct {
 }
 
 func (o Workflow) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Workflow struct{}"
+	}
+
 	return strings.Join([]string{"Workflow", string(data)}, " ")
 }

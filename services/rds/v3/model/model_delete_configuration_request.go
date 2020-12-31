@@ -20,6 +20,10 @@ type DeleteConfigurationRequest struct {
 }
 
 func (o DeleteConfigurationRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteConfigurationRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteConfigurationRequest", string(data)}, " ")
 }

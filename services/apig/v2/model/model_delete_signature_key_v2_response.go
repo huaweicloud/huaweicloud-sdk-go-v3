@@ -19,6 +19,10 @@ type DeleteSignatureKeyV2Response struct {
 }
 
 func (o DeleteSignatureKeyV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteSignatureKeyV2Response struct{}"
+	}
+
 	return strings.Join([]string{"DeleteSignatureKeyV2Response", string(data)}, " ")
 }

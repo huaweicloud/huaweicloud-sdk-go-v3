@@ -20,7 +20,11 @@ type OutputPolicy struct {
 }
 
 func (o OutputPolicy) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OutputPolicy struct{}"
+	}
+
 	return strings.Join([]string{"OutputPolicy", string(data)}, " ")
 }
 

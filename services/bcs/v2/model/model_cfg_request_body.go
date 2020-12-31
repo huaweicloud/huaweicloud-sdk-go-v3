@@ -27,6 +27,10 @@ type CfgRequestBody struct {
 }
 
 func (o CfgRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CfgRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CfgRequestBody", string(data)}, " ")
 }

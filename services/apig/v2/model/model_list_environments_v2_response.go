@@ -25,6 +25,10 @@ type ListEnvironmentsV2Response struct {
 }
 
 func (o ListEnvironmentsV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListEnvironmentsV2Response struct{}"
+	}
+
 	return strings.Join([]string{"ListEnvironmentsV2Response", string(data)}, " ")
 }

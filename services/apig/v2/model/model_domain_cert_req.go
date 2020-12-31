@@ -23,6 +23,10 @@ type DomainCertReq struct {
 }
 
 func (o DomainCertReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DomainCertReq struct{}"
+	}
+
 	return strings.Join([]string{"DomainCertReq", string(data)}, " ")
 }

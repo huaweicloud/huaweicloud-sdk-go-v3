@@ -26,6 +26,10 @@ type ModifyTransTemplateGroup struct {
 }
 
 func (o ModifyTransTemplateGroup) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ModifyTransTemplateGroup struct{}"
+	}
+
 	return strings.Join([]string{"ModifyTransTemplateGroup", string(data)}, " ")
 }

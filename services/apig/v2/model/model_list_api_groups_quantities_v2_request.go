@@ -20,6 +20,10 @@ type ListApiGroupsQuantitiesV2Request struct {
 }
 
 func (o ListApiGroupsQuantitiesV2Request) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListApiGroupsQuantitiesV2Request struct{}"
+	}
+
 	return strings.Join([]string{"ListApiGroupsQuantitiesV2Request", string(data)}, " ")
 }

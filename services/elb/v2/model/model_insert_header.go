@@ -22,6 +22,10 @@ type InsertHeader struct {
 }
 
 func (o InsertHeader) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InsertHeader struct{}"
+	}
+
 	return strings.Join([]string{"InsertHeader", string(data)}, " ")
 }

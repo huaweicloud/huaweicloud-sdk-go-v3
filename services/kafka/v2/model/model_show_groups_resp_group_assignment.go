@@ -21,6 +21,10 @@ type ShowGroupsRespGroupAssignment struct {
 }
 
 func (o ShowGroupsRespGroupAssignment) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowGroupsRespGroupAssignment struct{}"
+	}
+
 	return strings.Join([]string{"ShowGroupsRespGroupAssignment", string(data)}, " ")
 }

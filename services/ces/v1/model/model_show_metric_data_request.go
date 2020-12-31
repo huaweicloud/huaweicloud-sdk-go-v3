@@ -30,7 +30,11 @@ type ShowMetricDataRequest struct {
 }
 
 func (o ShowMetricDataRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowMetricDataRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowMetricDataRequest", string(data)}, " ")
 }
 

@@ -20,6 +20,10 @@ type ListQuotasResult struct {
 }
 
 func (o ListQuotasResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListQuotasResult struct{}"
+	}
+
 	return strings.Join([]string{"ListQuotasResult", string(data)}, " ")
 }

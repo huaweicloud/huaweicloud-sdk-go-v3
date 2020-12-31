@@ -29,6 +29,10 @@ type ShowInstanceStatusResponse struct {
 }
 
 func (o ShowInstanceStatusResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowInstanceStatusResponse struct{}"
+	}
+
 	return strings.Join([]string{"ShowInstanceStatusResponse", string(data)}, " ")
 }

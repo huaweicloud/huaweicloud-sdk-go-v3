@@ -23,6 +23,10 @@ type RedisConfig struct {
 }
 
 func (o RedisConfig) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RedisConfig struct{}"
+	}
+
 	return strings.Join([]string{"RedisConfig", string(data)}, " ")
 }

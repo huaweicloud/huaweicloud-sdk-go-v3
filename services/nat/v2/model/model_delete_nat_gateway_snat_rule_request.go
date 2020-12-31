@@ -20,6 +20,10 @@ type DeleteNatGatewaySnatRuleRequest struct {
 }
 
 func (o DeleteNatGatewaySnatRuleRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteNatGatewaySnatRuleRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteNatGatewaySnatRuleRequest", string(data)}, " ")
 }

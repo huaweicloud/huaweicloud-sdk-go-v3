@@ -19,6 +19,10 @@ type LoginTokenAuth struct {
 }
 
 func (o LoginTokenAuth) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LoginTokenAuth struct{}"
+	}
+
 	return strings.Join([]string{"LoginTokenAuth", string(data)}, " ")
 }

@@ -30,7 +30,11 @@ type ApiPolicyRespBase struct {
 }
 
 func (o ApiPolicyRespBase) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ApiPolicyRespBase struct{}"
+	}
+
 	return strings.Join([]string{"ApiPolicyRespBase", string(data)}, " ")
 }
 

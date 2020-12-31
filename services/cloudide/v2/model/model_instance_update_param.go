@@ -23,6 +23,10 @@ type InstanceUpdateParam struct {
 }
 
 func (o InstanceUpdateParam) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceUpdateParam struct{}"
+	}
+
 	return strings.Join([]string{"InstanceUpdateParam", string(data)}, " ")
 }

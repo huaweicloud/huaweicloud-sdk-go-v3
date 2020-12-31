@@ -34,6 +34,10 @@ type ProjectDetailsAndStatusResult struct {
 }
 
 func (o ProjectDetailsAndStatusResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ProjectDetailsAndStatusResult struct{}"
+	}
+
 	return strings.Join([]string{"ProjectDetailsAndStatusResult", string(data)}, " ")
 }

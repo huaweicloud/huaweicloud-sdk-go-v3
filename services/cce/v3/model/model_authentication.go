@@ -20,6 +20,10 @@ type Authentication struct {
 }
 
 func (o Authentication) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Authentication struct{}"
+	}
+
 	return strings.Join([]string{"Authentication", string(data)}, " ")
 }

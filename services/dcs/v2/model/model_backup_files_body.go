@@ -25,7 +25,11 @@ type BackupFilesBody struct {
 }
 
 func (o BackupFilesBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BackupFilesBody struct{}"
+	}
+
 	return strings.Join([]string{"BackupFilesBody", string(data)}, " ")
 }
 

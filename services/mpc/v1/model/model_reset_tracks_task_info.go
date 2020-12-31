@@ -33,6 +33,10 @@ type ResetTracksTaskInfo struct {
 }
 
 func (o ResetTracksTaskInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ResetTracksTaskInfo struct{}"
+	}
+
 	return strings.Join([]string{"ResetTracksTaskInfo", string(data)}, " ")
 }

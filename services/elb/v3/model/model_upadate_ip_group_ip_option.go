@@ -22,6 +22,10 @@ type UpadateIpGroupIpOption struct {
 }
 
 func (o UpadateIpGroupIpOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpadateIpGroupIpOption struct{}"
+	}
+
 	return strings.Join([]string{"UpadateIpGroupIpOption", string(data)}, " ")
 }

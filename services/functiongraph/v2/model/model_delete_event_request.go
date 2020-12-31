@@ -20,6 +20,10 @@ type DeleteEventRequest struct {
 }
 
 func (o DeleteEventRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteEventRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteEventRequest", string(data)}, " ")
 }

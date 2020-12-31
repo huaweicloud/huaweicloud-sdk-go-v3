@@ -33,6 +33,10 @@ type Endpoint struct {
 }
 
 func (o Endpoint) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Endpoint struct{}"
+	}
+
 	return strings.Join([]string{"Endpoint", string(data)}, " ")
 }

@@ -26,6 +26,10 @@ type CreateAddonInstanceResponse struct {
 }
 
 func (o CreateAddonInstanceResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateAddonInstanceResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateAddonInstanceResponse", string(data)}, " ")
 }

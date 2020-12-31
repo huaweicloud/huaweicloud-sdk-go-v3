@@ -19,6 +19,10 @@ type CreateL7policyRequestBody struct {
 }
 
 func (o CreateL7policyRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateL7policyRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateL7policyRequestBody", string(data)}, " ")
 }

@@ -25,6 +25,10 @@ type StacksAttribute struct {
 }
 
 func (o StacksAttribute) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StacksAttribute struct{}"
+	}
+
 	return strings.Join([]string{"StacksAttribute", string(data)}, " ")
 }

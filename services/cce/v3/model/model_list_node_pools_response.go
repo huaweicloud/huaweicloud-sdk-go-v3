@@ -25,6 +25,10 @@ type ListNodePoolsResponse struct {
 }
 
 func (o ListNodePoolsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListNodePoolsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListNodePoolsResponse", string(data)}, " ")
 }

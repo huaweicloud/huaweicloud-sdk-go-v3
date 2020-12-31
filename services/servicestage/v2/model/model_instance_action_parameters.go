@@ -24,6 +24,10 @@ type InstanceActionParameters struct {
 }
 
 func (o InstanceActionParameters) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceActionParameters struct{}"
+	}
+
 	return strings.Join([]string{"InstanceActionParameters", string(data)}, " ")
 }

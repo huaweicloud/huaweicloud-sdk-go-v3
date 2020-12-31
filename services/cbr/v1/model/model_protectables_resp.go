@@ -33,7 +33,11 @@ type ProtectablesResp struct {
 }
 
 func (o ProtectablesResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ProtectablesResp struct{}"
+	}
+
 	return strings.Join([]string{"ProtectablesResp", string(data)}, " ")
 }
 

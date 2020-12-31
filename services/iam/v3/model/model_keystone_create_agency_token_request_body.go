@@ -19,6 +19,10 @@ type KeystoneCreateAgencyTokenRequestBody struct {
 }
 
 func (o KeystoneCreateAgencyTokenRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneCreateAgencyTokenRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneCreateAgencyTokenRequestBody", string(data)}, " ")
 }

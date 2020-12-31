@@ -27,6 +27,10 @@ type ListSinkTasksResponse struct {
 }
 
 func (o ListSinkTasksResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListSinkTasksResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListSinkTasksResponse", string(data)}, " ")
 }

@@ -23,6 +23,10 @@ type ListSingleStreamBitrateRequest struct {
 }
 
 func (o ListSingleStreamBitrateRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListSingleStreamBitrateRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListSingleStreamBitrateRequest", string(data)}, " ")
 }

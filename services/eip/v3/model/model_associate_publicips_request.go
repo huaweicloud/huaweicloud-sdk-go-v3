@@ -20,6 +20,10 @@ type AssociatePublicipsRequest struct {
 }
 
 func (o AssociatePublicipsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AssociatePublicipsRequest struct{}"
+	}
+
 	return strings.Join([]string{"AssociatePublicipsRequest", string(data)}, " ")
 }

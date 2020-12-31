@@ -20,6 +20,10 @@ type CreateQueueRequest struct {
 }
 
 func (o CreateQueueRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateQueueRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateQueueRequest", string(data)}, " ")
 }

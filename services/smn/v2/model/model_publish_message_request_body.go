@@ -23,12 +23,16 @@ type PublishMessageRequestBody struct {
 	// 消息模板名称，可通过[查询消息模板列表](https://support.huaweicloud.com/api-smn/smn_api_53004.html)获取名称。  说明： 三种消息发送方式:  message  message_structure  message_template_name  只需要设置其中一个，如果同时设置，生效的优先级为 message_structure > message_template_name > message。
 	MessageTemplateName *string `json:"message_template_name,omitempty"`
 	// tag以及替换tag的参数组成的字典。消息模板中的标签对应的值。使用消息模板方式的消息发布必须携带该参数。字典中的key为消息模板中的参数名称，不超过21个字符。字典中的value为消息模板中的参数被替换后的值，不超过1KB。
-	Tags *interface{} `json:"tags,omitempty"`
+	Tags map[string]string `json:"tags,omitempty"`
 	// 指消息在SMN系统内部的最长存留时间。超过该存留时间，系统将不再发送该消息。单位是s，变量默认值是3600s，即一小时。值为正整数且小于等于3600*24。
 	TimeToLive string `json:"time_to_live"`
 }
 
 func (o PublishMessageRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PublishMessageRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"PublishMessageRequestBody", string(data)}, " ")
 }

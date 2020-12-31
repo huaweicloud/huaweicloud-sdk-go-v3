@@ -31,7 +31,11 @@ type ListPortsRequest struct {
 }
 
 func (o ListPortsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListPortsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListPortsRequest", string(data)}, " ")
 }
 

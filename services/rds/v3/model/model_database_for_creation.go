@@ -22,6 +22,10 @@ type DatabaseForCreation struct {
 }
 
 func (o DatabaseForCreation) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DatabaseForCreation struct{}"
+	}
+
 	return strings.Join([]string{"DatabaseForCreation", string(data)}, " ")
 }

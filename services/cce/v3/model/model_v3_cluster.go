@@ -24,6 +24,10 @@ type V3Cluster struct {
 }
 
 func (o V3Cluster) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "V3Cluster struct{}"
+	}
+
 	return strings.Join([]string{"V3Cluster", string(data)}, " ")
 }

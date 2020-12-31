@@ -23,7 +23,11 @@ type MfaIdentity struct {
 }
 
 func (o MfaIdentity) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MfaIdentity struct{}"
+	}
+
 	return strings.Join([]string{"MfaIdentity", string(data)}, " ")
 }
 

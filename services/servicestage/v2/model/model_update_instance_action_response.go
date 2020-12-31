@@ -21,6 +21,10 @@ type UpdateInstanceActionResponse struct {
 }
 
 func (o UpdateInstanceActionResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateInstanceActionResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateInstanceActionResponse", string(data)}, " ")
 }

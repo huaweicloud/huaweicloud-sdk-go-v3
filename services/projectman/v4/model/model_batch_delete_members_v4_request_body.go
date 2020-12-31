@@ -19,6 +19,10 @@ type BatchDeleteMembersV4RequestBody struct {
 }
 
 func (o BatchDeleteMembersV4RequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchDeleteMembersV4RequestBody struct{}"
+	}
+
 	return strings.Join([]string{"BatchDeleteMembersV4RequestBody", string(data)}, " ")
 }

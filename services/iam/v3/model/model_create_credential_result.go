@@ -30,6 +30,10 @@ type CreateCredentialResult struct {
 }
 
 func (o CreateCredentialResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateCredentialResult struct{}"
+	}
+
 	return strings.Join([]string{"CreateCredentialResult", string(data)}, " ")
 }

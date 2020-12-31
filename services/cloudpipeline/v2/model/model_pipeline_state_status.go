@@ -41,6 +41,10 @@ type PipelineStateStatus struct {
 }
 
 func (o PipelineStateStatus) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PipelineStateStatus struct{}"
+	}
+
 	return strings.Join([]string{"PipelineStateStatus", string(data)}, " ")
 }

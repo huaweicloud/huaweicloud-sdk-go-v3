@@ -24,6 +24,10 @@ type ServerRemoteConsole struct {
 }
 
 func (o ServerRemoteConsole) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServerRemoteConsole struct{}"
+	}
+
 	return strings.Join([]string{"ServerRemoteConsole", string(data)}, " ")
 }

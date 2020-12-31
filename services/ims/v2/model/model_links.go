@@ -22,6 +22,10 @@ type Links struct {
 }
 
 func (o Links) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Links struct{}"
+	}
+
 	return strings.Join([]string{"Links", string(data)}, " ")
 }

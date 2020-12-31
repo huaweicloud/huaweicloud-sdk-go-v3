@@ -22,7 +22,11 @@ type DeleteFunctionTriggerRequest struct {
 }
 
 func (o DeleteFunctionTriggerRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteFunctionTriggerRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteFunctionTriggerRequest", string(data)}, " ")
 }
 

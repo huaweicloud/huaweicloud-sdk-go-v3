@@ -21,6 +21,10 @@ type AssociateKeypairRequestBody struct {
 }
 
 func (o AssociateKeypairRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AssociateKeypairRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"AssociateKeypairRequestBody", string(data)}, " ")
 }

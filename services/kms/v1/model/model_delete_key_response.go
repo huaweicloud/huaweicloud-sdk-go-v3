@@ -23,6 +23,10 @@ type DeleteKeyResponse struct {
 }
 
 func (o DeleteKeyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteKeyResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteKeyResponse", string(data)}, " ")
 }

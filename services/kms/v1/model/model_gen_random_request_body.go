@@ -21,6 +21,10 @@ type GenRandomRequestBody struct {
 }
 
 func (o GenRandomRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GenRandomRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"GenRandomRequestBody", string(data)}, " ")
 }

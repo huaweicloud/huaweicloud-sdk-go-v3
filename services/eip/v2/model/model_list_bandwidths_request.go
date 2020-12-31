@@ -23,7 +23,11 @@ type ListBandwidthsRequest struct {
 }
 
 func (o ListBandwidthsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListBandwidthsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListBandwidthsRequest", string(data)}, " ")
 }
 

@@ -23,6 +23,10 @@ type ListTemplateResponse struct {
 }
 
 func (o ListTemplateResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListTemplateResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListTemplateResponse", string(data)}, " ")
 }

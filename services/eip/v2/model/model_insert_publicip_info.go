@@ -22,6 +22,10 @@ type InsertPublicipInfo struct {
 }
 
 func (o InsertPublicipInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InsertPublicipInfo struct{}"
+	}
+
 	return strings.Join([]string{"InsertPublicipInfo", string(data)}, " ")
 }

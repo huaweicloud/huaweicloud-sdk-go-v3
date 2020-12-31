@@ -19,6 +19,10 @@ type AddPublicipsIntoSharedBandwidthRequestBody struct {
 }
 
 func (o AddPublicipsIntoSharedBandwidthRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AddPublicipsIntoSharedBandwidthRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"AddPublicipsIntoSharedBandwidthRequestBody", string(data)}, " ")
 }

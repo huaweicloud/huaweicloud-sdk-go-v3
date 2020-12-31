@@ -21,6 +21,10 @@ type TagsMultiValue struct {
 }
 
 func (o TagsMultiValue) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TagsMultiValue struct{}"
+	}
+
 	return strings.Join([]string{"TagsMultiValue", string(data)}, " ")
 }

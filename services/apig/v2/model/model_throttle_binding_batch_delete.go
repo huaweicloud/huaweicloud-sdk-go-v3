@@ -19,6 +19,10 @@ type ThrottleBindingBatchDelete struct {
 }
 
 func (o ThrottleBindingBatchDelete) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ThrottleBindingBatchDelete struct{}"
+	}
+
 	return strings.Join([]string{"ThrottleBindingBatchDelete", string(data)}, " ")
 }

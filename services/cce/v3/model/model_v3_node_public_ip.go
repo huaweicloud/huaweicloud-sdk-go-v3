@@ -22,6 +22,10 @@ type V3NodePublicIp struct {
 }
 
 func (o V3NodePublicIp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "V3NodePublicIp struct{}"
+	}
+
 	return strings.Join([]string{"V3NodePublicIp", string(data)}, " ")
 }

@@ -27,6 +27,10 @@ type ClassroomCard struct {
 }
 
 func (o ClassroomCard) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ClassroomCard struct{}"
+	}
+
 	return strings.Join([]string{"ClassroomCard", string(data)}, " ")
 }

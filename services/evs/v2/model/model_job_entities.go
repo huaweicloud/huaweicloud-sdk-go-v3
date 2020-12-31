@@ -28,6 +28,10 @@ type JobEntities struct {
 }
 
 func (o JobEntities) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "JobEntities struct{}"
+	}
+
 	return strings.Join([]string{"JobEntities", string(data)}, " ")
 }

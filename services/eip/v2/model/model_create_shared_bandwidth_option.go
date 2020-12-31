@@ -27,7 +27,11 @@ type CreateSharedBandwidthOption struct {
 }
 
 func (o CreateSharedBandwidthOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateSharedBandwidthOption struct{}"
+	}
+
 	return strings.Join([]string{"CreateSharedBandwidthOption", string(data)}, " ")
 }
 

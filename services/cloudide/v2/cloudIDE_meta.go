@@ -50,6 +50,21 @@ func GenReqDefForListStacksByTag() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowAccountStatus() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/permission/account/status").
+		WithResponse(new(model.ShowAccountStatusResponse)).
+		WithContentType("application/json")
+
+	// request
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowPrice() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -169,6 +184,14 @@ func GenReqDefForListInstances() *def.HttpRequestDef {
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsTemporary").
+		WithJsonTag("is_temporary").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Label").
+		WithJsonTag("label").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Search").
 		WithJsonTag("search").
 		WithLocationType(def.Query))
@@ -254,6 +277,10 @@ func GenReqDefForStartInstance() *def.HttpRequestDef {
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	// response
 

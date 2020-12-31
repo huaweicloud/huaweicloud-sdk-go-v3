@@ -19,6 +19,10 @@ type DeleteAnimatedGraphicsTaskRequest struct {
 }
 
 func (o DeleteAnimatedGraphicsTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteAnimatedGraphicsTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteAnimatedGraphicsTaskRequest", string(data)}, " ")
 }

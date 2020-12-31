@@ -21,6 +21,10 @@ type KeyAliasInfo struct {
 }
 
 func (o KeyAliasInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeyAliasInfo struct{}"
+	}
+
 	return strings.Join([]string{"KeyAliasInfo", string(data)}, " ")
 }

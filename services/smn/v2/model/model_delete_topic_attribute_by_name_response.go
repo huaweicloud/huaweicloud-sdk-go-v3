@@ -21,6 +21,10 @@ type DeleteTopicAttributeByNameResponse struct {
 }
 
 func (o DeleteTopicAttributeByNameResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteTopicAttributeByNameResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeleteTopicAttributeByNameResponse", string(data)}, " ")
 }

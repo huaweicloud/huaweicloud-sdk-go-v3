@@ -21,6 +21,10 @@ type ShowBackgroundTaskRequest struct {
 }
 
 func (o ShowBackgroundTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowBackgroundTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowBackgroundTaskRequest", string(data)}, " ")
 }

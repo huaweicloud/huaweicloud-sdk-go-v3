@@ -21,6 +21,10 @@ type StreamCountData struct {
 }
 
 func (o StreamCountData) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StreamCountData struct{}"
+	}
+
 	return strings.Join([]string{"StreamCountData", string(data)}, " ")
 }

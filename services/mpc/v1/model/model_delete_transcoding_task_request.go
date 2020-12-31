@@ -19,6 +19,10 @@ type DeleteTranscodingTaskRequest struct {
 }
 
 func (o DeleteTranscodingTaskRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteTranscodingTaskRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteTranscodingTaskRequest", string(data)}, " ")
 }

@@ -23,6 +23,10 @@ type OpExtendInfoCommon struct {
 }
 
 func (o OpExtendInfoCommon) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OpExtendInfoCommon struct{}"
+	}
+
 	return strings.Join([]string{"OpExtendInfoCommon", string(data)}, " ")
 }

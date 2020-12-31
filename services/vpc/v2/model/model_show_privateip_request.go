@@ -19,6 +19,10 @@ type ShowPrivateipRequest struct {
 }
 
 func (o ShowPrivateipRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowPrivateipRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowPrivateipRequest", string(data)}, " ")
 }

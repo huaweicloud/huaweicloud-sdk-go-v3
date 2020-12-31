@@ -19,6 +19,10 @@ type UpdateSlavePriorityResponse struct {
 }
 
 func (o UpdateSlavePriorityResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateSlavePriorityResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateSlavePriorityResponse", string(data)}, " ")
 }

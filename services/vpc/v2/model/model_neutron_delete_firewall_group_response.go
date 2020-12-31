@@ -19,6 +19,10 @@ type NeutronDeleteFirewallGroupResponse struct {
 }
 
 func (o NeutronDeleteFirewallGroupResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NeutronDeleteFirewallGroupResponse struct{}"
+	}
+
 	return strings.Join([]string{"NeutronDeleteFirewallGroupResponse", string(data)}, " ")
 }

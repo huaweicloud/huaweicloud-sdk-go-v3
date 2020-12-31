@@ -20,6 +20,10 @@ type ListAllProjectsPermissionsForAgencyRequest struct {
 }
 
 func (o ListAllProjectsPermissionsForAgencyRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListAllProjectsPermissionsForAgencyRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListAllProjectsPermissionsForAgencyRequest", string(data)}, " ")
 }

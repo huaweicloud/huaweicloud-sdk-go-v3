@@ -28,6 +28,10 @@ type BatchMetricData struct {
 }
 
 func (o BatchMetricData) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchMetricData struct{}"
+	}
+
 	return strings.Join([]string{"BatchMetricData", string(data)}, " ")
 }

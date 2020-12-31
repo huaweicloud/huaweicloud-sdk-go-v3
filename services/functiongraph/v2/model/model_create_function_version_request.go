@@ -20,6 +20,10 @@ type CreateFunctionVersionRequest struct {
 }
 
 func (o CreateFunctionVersionRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateFunctionVersionRequest struct{}"
+	}
+
 	return strings.Join([]string{"CreateFunctionVersionRequest", string(data)}, " ")
 }

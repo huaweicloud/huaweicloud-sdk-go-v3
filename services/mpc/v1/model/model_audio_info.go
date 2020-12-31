@@ -27,6 +27,10 @@ type AudioInfo struct {
 }
 
 func (o AudioInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AudioInfo struct{}"
+	}
+
 	return strings.Join([]string{"AudioInfo", string(data)}, " ")
 }

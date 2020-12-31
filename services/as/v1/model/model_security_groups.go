@@ -20,6 +20,10 @@ type SecurityGroups struct {
 }
 
 func (o SecurityGroups) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SecurityGroups struct{}"
+	}
+
 	return strings.Join([]string{"SecurityGroups", string(data)}, " ")
 }

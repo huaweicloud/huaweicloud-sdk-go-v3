@@ -32,7 +32,11 @@ type CoditionResp struct {
 }
 
 func (o CoditionResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CoditionResp struct{}"
+	}
+
 	return strings.Join([]string{"CoditionResp", string(data)}, " ")
 }
 

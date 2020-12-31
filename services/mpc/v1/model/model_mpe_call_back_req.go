@@ -29,7 +29,11 @@ type MpeCallBackReq struct {
 }
 
 func (o MpeCallBackReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MpeCallBackReq struct{}"
+	}
+
 	return strings.Join([]string{"MpeCallBackReq", string(data)}, " ")
 }
 

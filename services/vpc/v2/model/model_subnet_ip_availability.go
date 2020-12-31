@@ -30,6 +30,10 @@ type SubnetIpAvailability struct {
 }
 
 func (o SubnetIpAvailability) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SubnetIpAvailability struct{}"
+	}
+
 	return strings.Join([]string{"SubnetIpAvailability", string(data)}, " ")
 }

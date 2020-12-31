@@ -19,6 +19,10 @@ type RebootBody struct {
 }
 
 func (o RebootBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RebootBody struct{}"
+	}
+
 	return strings.Join([]string{"RebootBody", string(data)}, " ")
 }

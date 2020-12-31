@@ -49,7 +49,11 @@ type HealthmonitorResp struct {
 }
 
 func (o HealthmonitorResp) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HealthmonitorResp struct{}"
+	}
+
 	return strings.Join([]string{"HealthmonitorResp", string(data)}, " ")
 }
 

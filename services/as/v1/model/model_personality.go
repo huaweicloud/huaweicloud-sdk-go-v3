@@ -22,6 +22,10 @@ type Personality struct {
 }
 
 func (o Personality) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Personality struct{}"
+	}
+
 	return strings.Join([]string{"Personality", string(data)}, " ")
 }

@@ -21,7 +21,11 @@ type DeleteScalingInstanceRequest struct {
 }
 
 func (o DeleteScalingInstanceRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteScalingInstanceRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteScalingInstanceRequest", string(data)}, " ")
 }
 

@@ -35,7 +35,11 @@ type UpdateSignatureKeyV2Response struct {
 }
 
 func (o UpdateSignatureKeyV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateSignatureKeyV2Response struct{}"
+	}
+
 	return strings.Join([]string{"UpdateSignatureKeyV2Response", string(data)}, " ")
 }
 

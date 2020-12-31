@@ -25,6 +25,10 @@ type EnvVariableReq struct {
 }
 
 func (o EnvVariableReq) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "EnvVariableReq struct{}"
+	}
+
 	return strings.Join([]string{"EnvVariableReq", string(data)}, " ")
 }

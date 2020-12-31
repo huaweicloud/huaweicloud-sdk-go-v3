@@ -28,6 +28,10 @@ type OsVersionInfo struct {
 }
 
 func (o OsVersionInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OsVersionInfo struct{}"
+	}
+
 	return strings.Join([]string{"OsVersionInfo", string(data)}, " ")
 }

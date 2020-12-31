@@ -36,7 +36,11 @@ type HistoryStreamInfo struct {
 }
 
 func (o HistoryStreamInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "HistoryStreamInfo struct{}"
+	}
+
 	return strings.Join([]string{"HistoryStreamInfo", string(data)}, " ")
 }
 

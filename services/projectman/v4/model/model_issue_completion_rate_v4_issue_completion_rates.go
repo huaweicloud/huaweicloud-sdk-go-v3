@@ -20,6 +20,10 @@ type IssueCompletionRateV4IssueCompletionRates struct {
 }
 
 func (o IssueCompletionRateV4IssueCompletionRates) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IssueCompletionRateV4IssueCompletionRates struct{}"
+	}
+
 	return strings.Join([]string{"IssueCompletionRateV4IssueCompletionRates", string(data)}, " ")
 }

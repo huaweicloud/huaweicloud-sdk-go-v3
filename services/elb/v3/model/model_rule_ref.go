@@ -20,6 +20,10 @@ type RuleRef struct {
 }
 
 func (o RuleRef) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RuleRef struct{}"
+	}
+
 	return strings.Join([]string{"RuleRef", string(data)}, " ")
 }

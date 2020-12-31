@@ -20,6 +20,10 @@ type UpdateInstanceNameRequest struct {
 }
 
 func (o UpdateInstanceNameRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateInstanceNameRequest struct{}"
+	}
+
 	return strings.Join([]string{"UpdateInstanceNameRequest", string(data)}, " ")
 }

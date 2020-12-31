@@ -20,6 +20,10 @@ type GlanceAddImageMemberRequestBody struct {
 }
 
 func (o GlanceAddImageMemberRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GlanceAddImageMemberRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"GlanceAddImageMemberRequestBody", string(data)}, " ")
 }

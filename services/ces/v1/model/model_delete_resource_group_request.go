@@ -20,6 +20,10 @@ type DeleteResourceGroupRequest struct {
 }
 
 func (o DeleteResourceGroupRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteResourceGroupRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteResourceGroupRequest", string(data)}, " ")
 }

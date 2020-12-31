@@ -19,6 +19,10 @@ type DeleteIpGroupRequest struct {
 }
 
 func (o DeleteIpGroupRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteIpGroupRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteIpGroupRequest", string(data)}, " ")
 }

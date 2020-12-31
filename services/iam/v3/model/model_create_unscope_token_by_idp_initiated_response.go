@@ -21,6 +21,10 @@ type CreateUnscopeTokenByIdpInitiatedResponse struct {
 }
 
 func (o CreateUnscopeTokenByIdpInitiatedResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateUnscopeTokenByIdpInitiatedResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateUnscopeTokenByIdpInitiatedResponse", string(data)}, " ")
 }

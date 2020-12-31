@@ -24,7 +24,11 @@ type ListComponentsRequest struct {
 }
 
 func (o ListComponentsRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListComponentsRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListComponentsRequest", string(data)}, " ")
 }
 

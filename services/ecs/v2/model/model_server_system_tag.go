@@ -22,6 +22,10 @@ type ServerSystemTag struct {
 }
 
 func (o ServerSystemTag) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServerSystemTag struct{}"
+	}
+
 	return strings.Join([]string{"ServerSystemTag", string(data)}, " ")
 }

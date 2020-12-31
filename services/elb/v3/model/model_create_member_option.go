@@ -31,6 +31,10 @@ type CreateMemberOption struct {
 }
 
 func (o CreateMemberOption) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateMemberOption struct{}"
+	}
+
 	return strings.Join([]string{"CreateMemberOption", string(data)}, " ")
 }

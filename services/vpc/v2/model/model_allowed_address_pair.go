@@ -22,6 +22,10 @@ type AllowedAddressPair struct {
 }
 
 func (o AllowedAddressPair) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AllowedAddressPair struct{}"
+	}
+
 	return strings.Join([]string{"AllowedAddressPair", string(data)}, " ")
 }

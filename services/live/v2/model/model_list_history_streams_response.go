@@ -24,6 +24,10 @@ type ListHistoryStreamsResponse struct {
 }
 
 func (o ListHistoryStreamsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListHistoryStreamsResponse struct{}"
+	}
+
 	return strings.Join([]string{"ListHistoryStreamsResponse", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type PrePaidServerPublicip struct {
 }
 
 func (o PrePaidServerPublicip) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PrePaidServerPublicip struct{}"
+	}
+
 	return strings.Join([]string{"PrePaidServerPublicip", string(data)}, " ")
 }

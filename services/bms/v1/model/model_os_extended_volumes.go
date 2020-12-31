@@ -22,6 +22,10 @@ type OsExtendedVolumes struct {
 }
 
 func (o OsExtendedVolumes) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "OsExtendedVolumes struct{}"
+	}
+
 	return strings.Join([]string{"OsExtendedVolumes", string(data)}, " ")
 }

@@ -19,6 +19,10 @@ type DeletePolicyResponse struct {
 }
 
 func (o DeletePolicyResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeletePolicyResponse struct{}"
+	}
+
 	return strings.Join([]string{"DeletePolicyResponse", string(data)}, " ")
 }

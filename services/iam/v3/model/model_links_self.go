@@ -20,6 +20,10 @@ type LinksSelf struct {
 }
 
 func (o LinksSelf) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "LinksSelf struct{}"
+	}
+
 	return strings.Join([]string{"LinksSelf", string(data)}, " ")
 }

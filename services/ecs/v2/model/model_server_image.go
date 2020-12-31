@@ -20,6 +20,10 @@ type ServerImage struct {
 }
 
 func (o ServerImage) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ServerImage struct{}"
+	}
+
 	return strings.Join([]string{"ServerImage", string(data)}, " ")
 }

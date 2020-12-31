@@ -22,6 +22,10 @@ type DeleteHookRequest struct {
 }
 
 func (o DeleteHookRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DeleteHookRequest struct{}"
+	}
+
 	return strings.Join([]string{"DeleteHookRequest", string(data)}, " ")
 }

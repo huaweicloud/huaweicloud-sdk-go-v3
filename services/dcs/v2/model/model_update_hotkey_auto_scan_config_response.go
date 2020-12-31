@@ -27,6 +27,10 @@ type UpdateHotkeyAutoScanConfigResponse struct {
 }
 
 func (o UpdateHotkeyAutoScanConfigResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateHotkeyAutoScanConfigResponse struct{}"
+	}
+
 	return strings.Join([]string{"UpdateHotkeyAutoScanConfigResponse", string(data)}, " ")
 }

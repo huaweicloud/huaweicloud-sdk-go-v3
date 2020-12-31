@@ -21,6 +21,10 @@ type ListBackupFileLinksRequest struct {
 }
 
 func (o ListBackupFileLinksRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListBackupFileLinksRequest struct{}"
+	}
+
 	return strings.Join([]string{"ListBackupFileLinksRequest", string(data)}, " ")
 }

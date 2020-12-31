@@ -37,6 +37,10 @@ type ComponentView struct {
 }
 
 func (o ComponentView) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ComponentView struct{}"
+	}
+
 	return strings.Join([]string{"ComponentView", string(data)}, " ")
 }

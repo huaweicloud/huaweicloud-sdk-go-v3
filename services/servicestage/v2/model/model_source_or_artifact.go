@@ -34,7 +34,11 @@ type SourceOrArtifact struct {
 }
 
 func (o SourceOrArtifact) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "SourceOrArtifact struct{}"
+	}
+
 	return strings.Join([]string{"SourceOrArtifact", string(data)}, " ")
 }
 

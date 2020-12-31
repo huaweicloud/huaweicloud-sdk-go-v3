@@ -26,6 +26,10 @@ type CreateVersionAliasRequestBody struct {
 }
 
 func (o CreateVersionAliasRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateVersionAliasRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateVersionAliasRequestBody", string(data)}, " ")
 }

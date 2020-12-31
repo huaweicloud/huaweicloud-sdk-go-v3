@@ -22,6 +22,10 @@ type IssueItemSfv4Iteration struct {
 }
 
 func (o IssueItemSfv4Iteration) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "IssueItemSfv4Iteration struct{}"
+	}
+
 	return strings.Join([]string{"IssueItemSfv4Iteration", string(data)}, " ")
 }

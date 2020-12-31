@@ -22,6 +22,10 @@ type CreateEventsResponseBody struct {
 }
 
 func (o CreateEventsResponseBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateEventsResponseBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateEventsResponseBody", string(data)}, " ")
 }

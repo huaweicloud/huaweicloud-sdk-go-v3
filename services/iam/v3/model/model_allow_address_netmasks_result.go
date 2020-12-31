@@ -22,6 +22,10 @@ type AllowAddressNetmasksResult struct {
 }
 
 func (o AllowAddressNetmasksResult) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AllowAddressNetmasksResult struct{}"
+	}
+
 	return strings.Join([]string{"AllowAddressNetmasksResult", string(data)}, " ")
 }

@@ -21,6 +21,10 @@ type CreateApplicationEndpointRequestBody struct {
 }
 
 func (o CreateApplicationEndpointRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateApplicationEndpointRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateApplicationEndpointRequestBody", string(data)}, " ")
 }

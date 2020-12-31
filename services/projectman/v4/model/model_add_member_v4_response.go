@@ -19,6 +19,10 @@ type AddMemberV4Response struct {
 }
 
 func (o AddMemberV4Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AddMemberV4Response struct{}"
+	}
+
 	return strings.Join([]string{"AddMemberV4Response", string(data)}, " ")
 }

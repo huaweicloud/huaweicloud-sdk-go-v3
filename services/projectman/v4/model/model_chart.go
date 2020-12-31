@@ -29,6 +29,10 @@ type Chart struct {
 }
 
 func (o Chart) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Chart struct{}"
+	}
+
 	return strings.Join([]string{"Chart", string(data)}, " ")
 }

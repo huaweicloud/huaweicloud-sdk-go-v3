@@ -19,6 +19,10 @@ type CreateMetricDataResponse struct {
 }
 
 func (o CreateMetricDataResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateMetricDataResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateMetricDataResponse", string(data)}, " ")
 }

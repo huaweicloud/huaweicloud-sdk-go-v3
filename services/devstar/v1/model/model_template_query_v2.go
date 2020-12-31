@@ -47,6 +47,10 @@ type TemplateQueryV2 struct {
 }
 
 func (o TemplateQueryV2) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TemplateQueryV2 struct{}"
+	}
+
 	return strings.Join([]string{"TemplateQueryV2", string(data)}, " ")
 }

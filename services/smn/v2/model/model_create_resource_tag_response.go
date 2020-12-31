@@ -19,6 +19,10 @@ type CreateResourceTagResponse struct {
 }
 
 func (o CreateResourceTagResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateResourceTagResponse struct{}"
+	}
+
 	return strings.Join([]string{"CreateResourceTagResponse", string(data)}, " ")
 }

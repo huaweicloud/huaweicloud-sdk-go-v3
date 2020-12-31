@@ -32,6 +32,10 @@ type Templatespec struct {
 }
 
 func (o Templatespec) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Templatespec struct{}"
+	}
+
 	return strings.Join([]string{"Templatespec", string(data)}, " ")
 }

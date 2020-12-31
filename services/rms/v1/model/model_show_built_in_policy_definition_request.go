@@ -20,6 +20,10 @@ type ShowBuiltInPolicyDefinitionRequest struct {
 }
 
 func (o ShowBuiltInPolicyDefinitionRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowBuiltInPolicyDefinitionRequest struct{}"
+	}
+
 	return strings.Join([]string{"ShowBuiltInPolicyDefinitionRequest", string(data)}, " ")
 }

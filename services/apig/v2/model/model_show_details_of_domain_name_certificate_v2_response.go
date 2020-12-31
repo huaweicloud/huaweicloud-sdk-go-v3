@@ -45,6 +45,10 @@ type ShowDetailsOfDomainNameCertificateV2Response struct {
 }
 
 func (o ShowDetailsOfDomainNameCertificateV2Response) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowDetailsOfDomainNameCertificateV2Response struct{}"
+	}
+
 	return strings.Join([]string{"ShowDetailsOfDomainNameCertificateV2Response", string(data)}, " ")
 }

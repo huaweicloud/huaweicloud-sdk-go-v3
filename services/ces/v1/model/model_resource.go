@@ -26,6 +26,10 @@ type Resource struct {
 }
 
 func (o Resource) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Resource struct{}"
+	}
+
 	return strings.Join([]string{"Resource", string(data)}, " ")
 }

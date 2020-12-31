@@ -21,6 +21,10 @@ type CreateServersRequestBody struct {
 }
 
 func (o CreateServersRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateServersRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"CreateServersRequestBody", string(data)}, " ")
 }

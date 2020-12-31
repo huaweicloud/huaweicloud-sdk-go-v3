@@ -22,6 +22,10 @@ type DisassociatePublicipsResponse struct {
 }
 
 func (o DisassociatePublicipsResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "DisassociatePublicipsResponse struct{}"
+	}
+
 	return strings.Join([]string{"DisassociatePublicipsResponse", string(data)}, " ")
 }

@@ -20,6 +20,10 @@ type NovaCreateServersRequestBody struct {
 }
 
 func (o NovaCreateServersRequestBody) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "NovaCreateServersRequestBody struct{}"
+	}
+
 	return strings.Join([]string{"NovaCreateServersRequestBody", string(data)}, " ")
 }

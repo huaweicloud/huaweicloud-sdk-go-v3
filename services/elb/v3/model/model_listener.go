@@ -64,6 +64,10 @@ type Listener struct {
 }
 
 func (o Listener) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Listener struct{}"
+	}
+
 	return strings.Join([]string{"Listener", string(data)}, " ")
 }

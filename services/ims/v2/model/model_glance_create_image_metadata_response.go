@@ -74,7 +74,11 @@ type GlanceCreateImageMetadataResponse struct {
 }
 
 func (o GlanceCreateImageMetadataResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "GlanceCreateImageMetadataResponse struct{}"
+	}
+
 	return strings.Join([]string{"GlanceCreateImageMetadataResponse", string(data)}, " ")
 }
 

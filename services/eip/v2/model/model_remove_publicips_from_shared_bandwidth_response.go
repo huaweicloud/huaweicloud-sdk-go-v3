@@ -19,6 +19,10 @@ type RemovePublicipsFromSharedBandwidthResponse struct {
 }
 
 func (o RemovePublicipsFromSharedBandwidthResponse) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RemovePublicipsFromSharedBandwidthResponse struct{}"
+	}
+
 	return strings.Join([]string{"RemovePublicipsFromSharedBandwidthResponse", string(data)}, " ")
 }

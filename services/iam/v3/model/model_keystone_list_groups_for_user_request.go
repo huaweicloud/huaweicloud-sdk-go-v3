@@ -19,6 +19,10 @@ type KeystoneListGroupsForUserRequest struct {
 }
 
 func (o KeystoneListGroupsForUserRequest) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "KeystoneListGroupsForUserRequest struct{}"
+	}
+
 	return strings.Join([]string{"KeystoneListGroupsForUserRequest", string(data)}, " ")
 }

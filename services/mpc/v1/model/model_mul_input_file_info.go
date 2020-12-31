@@ -20,6 +20,10 @@ type MulInputFileInfo struct {
 }
 
 func (o MulInputFileInfo) String() string {
-	data, _ := json.Marshal(o)
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MulInputFileInfo struct{}"
+	}
+
 	return strings.Join([]string{"MulInputFileInfo", string(data)}, " ")
 }
