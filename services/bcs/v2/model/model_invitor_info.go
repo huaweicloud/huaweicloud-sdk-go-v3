@@ -25,6 +25,8 @@ type InvitorInfo struct {
 	InvitorBcsName *string `json:"invitor_bcs_name,omitempty"`
 	// 邀请方的共识
 	InvitorConsensus *string `json:"invitor_consensus,omitempty"`
+	// 邀请方的projectID
+	InvitorProjectId *string `json:"invitor_project_id,omitempty"`
 	// 邀请方的集群类型
 	InvitorClusterType *string `json:"invitor_cluster_type,omitempty"`
 	// 邀请方数据库类型

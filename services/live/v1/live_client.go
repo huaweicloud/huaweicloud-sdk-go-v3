@@ -84,6 +84,17 @@ func (c *LiveClient) DeleteTranscodingsTemplate(request *model.DeleteTranscoding
 	}
 }
 
+//查询直播中的流信息
+func (c *LiveClient) ListLiveStreamsOnline(request *model.ListLiveStreamsOnlineRequest) (*model.ListLiveStreamsOnlineResponse, error) {
+	requestDef := GenReqDefForListLiveStreamsOnline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLiveStreamsOnlineResponse), nil
+	}
+}
+
 //查询录制配置接口
 func (c *LiveClient) ListRecordConfigs(request *model.ListRecordConfigsRequest) (*model.ListRecordConfigsResponse, error) {
 	requestDef := GenReqDefForListRecordConfigs()

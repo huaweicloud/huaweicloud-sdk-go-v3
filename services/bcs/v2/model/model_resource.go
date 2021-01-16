@@ -14,7 +14,7 @@ import (
 )
 
 type Resource struct {
-	// 资源类型
+	// 资源类型，包含instance（服务实例数）和peers（总peer数）两种
 	Type *string `json:"type,omitempty"`
 	// 单位
 	Unit *string `json:"unit,omitempty"`

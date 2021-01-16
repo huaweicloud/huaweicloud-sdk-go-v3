@@ -25,6 +25,8 @@ type CreateRequestBodyCceCreateInfo struct {
 	InitNodePwd *string `json:"init_node_pwd,omitempty"`
 	// 可用区
 	Az *string `json:"az,omitempty"`
+	// 集群CPU架构类型：X86（VirtualMachine），ARM（ARM64）
+	ClusterPlatformType *string `json:"cluster_platform_type,omitempty"`
 }
 
 func (o CreateRequestBodyCceCreateInfo) String() string {

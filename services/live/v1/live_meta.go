@@ -148,6 +148,42 @@ func GenReqDefForDeleteTranscodingsTemplate() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListLiveStreamsOnline() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/realtime/streams").
+		WithResponse(new(model.ListLiveStreamsOnlineResponse)).
+		WithContentType("application/json")
+
+	// request
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PublishDomain").
+		WithJsonTag("publish_domain").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("App").
+		WithJsonTag("app").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Stream").
+		WithJsonTag("stream").
+		WithLocationType(def.Query))
+
+	// response
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListRecordConfigs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

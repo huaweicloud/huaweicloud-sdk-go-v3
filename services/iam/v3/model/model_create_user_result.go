@@ -30,7 +30,7 @@ type CreateUserResult struct {
 	// IAM用户手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
 	Phone *string `json:"phone,omitempty"`
 	// IAM用户是否为账号管理员。
-	IsDomainOwner *string `json:"is_domain_owner,omitempty"`
+	IsDomainOwner *bool `json:"is_domain_owner,omitempty"`
 	// IAM用户所属账号ID。
 	DomainId string `json:"domain_id"`
 	// 是否启用IAM用户。true为启用，false为停用，默认为true。

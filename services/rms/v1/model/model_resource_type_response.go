@@ -23,7 +23,7 @@ type ResourceTypeResponse struct {
 	Global *bool `json:"global,omitempty"`
 	// 支持的region列表
 	Regions *[]string `json:"regions,omitempty"`
-	// console对应的地址
+	// console终端id
 	ConsoleEndpointId *string `json:"console_endpoint_id,omitempty"`
 	// console列表页地址
 	ConsoleListUrl *string `json:"console_list_url,omitempty"`

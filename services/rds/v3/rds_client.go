@@ -271,6 +271,39 @@ func (c *RdsClient) ListJobInfoDetail(request *model.ListJobInfoDetailRequest) (
 	}
 }
 
+//获取跨区域备份列表。
+func (c *RdsClient) ListOffSiteBackups(request *model.ListOffSiteBackupsRequest) (*model.ListOffSiteBackupsResponse, error) {
+	requestDef := GenReqDefForListOffSiteBackups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOffSiteBackupsResponse), nil
+	}
+}
+
+//查询跨区域备份实例列表。
+func (c *RdsClient) ListOffSiteInstances(request *model.ListOffSiteInstancesRequest) (*model.ListOffSiteInstancesResponse, error) {
+	requestDef := GenReqDefForListOffSiteInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOffSiteInstancesResponse), nil
+	}
+}
+
+//查询跨区域可恢复时间段。 如果您备份策略中的保存天数设置较长，建议您传入查询日期“date”。
+func (c *RdsClient) ListOffSiteRestoreTimes(request *model.ListOffSiteRestoreTimesRequest) (*model.ListOffSiteRestoreTimesResponse, error) {
+	requestDef := GenReqDefForListOffSiteRestoreTimes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOffSiteRestoreTimesResponse), nil
+	}
+}
+
 //查询项目标签。
 func (c *RdsClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
 	requestDef := GenReqDefForListProjectTags()
@@ -414,6 +447,17 @@ func (c *RdsClient) SetBackupPolicy(request *model.SetBackupPolicyRequest) (*mod
 	}
 }
 
+//设置跨区域备份策略。
+func (c *RdsClient) SetOffSiteBackupPolicy(request *model.SetOffSiteBackupPolicyRequest) (*model.SetOffSiteBackupPolicyResponse, error) {
+	requestDef := GenReqDefForSetOffSiteBackupPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetOffSiteBackupPolicyResponse), nil
+	}
+}
+
 //修改安全组
 func (c *RdsClient) SetSecurityGroup(request *model.SetSecurityGroupRequest) (*model.SetSecurityGroupResponse, error) {
 	requestDef := GenReqDefForSetSecurityGroup()
@@ -488,6 +532,17 @@ func (c *RdsClient) ShowInstanceConfiguration(request *model.ShowInstanceConfigu
 		return nil, err
 	} else {
 		return resp.(*model.ShowInstanceConfigurationResponse), nil
+	}
+}
+
+//查询跨区域备份策略。
+func (c *RdsClient) ShowOffSiteBackupPolicy(request *model.ShowOffSiteBackupPolicyRequest) (*model.ShowOffSiteBackupPolicyResponse, error) {
+	requestDef := GenReqDefForShowOffSiteBackupPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowOffSiteBackupPolicyResponse), nil
 	}
 }
 

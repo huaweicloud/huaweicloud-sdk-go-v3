@@ -703,6 +703,14 @@ func GenReqDefForListCustomerselfResourceRecords() *def.HttpRequestDef {
 		WithName("TradeId").
 		WithJsonTag("trade_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BillDateBegin").
+		WithJsonTag("bill_date_begin").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BillDateEnd").
+		WithJsonTag("bill_date_end").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
@@ -1812,11 +1820,11 @@ func GenReqDefForSendVerificationMessageCode() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowCusotmerAccountBalances() *def.HttpRequestDef {
+func GenReqDefForShowCustomerAccountBalances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/accounts/customer-accounts/balances").
-		WithResponse(new(model.ShowCusotmerAccountBalancesResponse)).
+		WithResponse(new(model.ShowCustomerAccountBalancesResponse)).
 		WithContentType("application/json")
 
 	// request

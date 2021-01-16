@@ -1,3 +1,61 @@
+## 0.0.30-rc 2021-01-15
+## HuaweiCloud SDK Core
+- ### Features
+    - Support function `ValueOf` to get region information.
+- ### Bug Fix
+    - None
+- ### Change
+    - None
+
+## HuaweiCloud SDK CloudBuild
+- ### Features
+    - Support more interface: `ShowListHistory`.
+- ### Bug Fix
+    - None
+- ### Change
+    - None
+
+## HuaweiCloud SDK DGC
+- ### Features
+    - Support more interfaces: `Job` related interfaces, `Script` related interfaces, `Resource` related interfaces.
+- ### Bug Fix
+    - None
+- ### Change
+    - None
+
+## HuaweiCloud SDK IAM
+- ### Features
+    - None
+- ### Bug Fix
+    - None
+- ### Change
+    - Modify the data type of response field `is_domain_owner` from string to boolean of interface `ShowUser` and `CreateUser`.
+
+## HuaweiCloud SDK Live
+- ### Features
+    - Support more interface: `ListLiveStreamsOnline`.
+- ### Bug Fix
+    - None
+- ### Change
+    - None
+
+## HuaweiCloud SDK RDS
+- ### Features
+    - Support more interfaces: ShowOffSiteBackupPolicy, SetOffSiteBackupPolicy, ListOffSiteBackups, ListOffSiteRestoreTimes, ListOffSiteRestoreTimes
+- ### Bug Fix
+    - None
+- ### Change
+    - None
+
+## HuaweiCloud SDK SWR
+- ### Features
+    - Support `Software Repository for Container` service.
+- ### Bug Fix
+    - None
+- ### Change
+    - None
+
+
 ## 0.0.29-beta 2020-12-31
 ## HuaweiCloud SDK BMS
  - ### Features

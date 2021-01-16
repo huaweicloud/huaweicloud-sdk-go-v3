@@ -40,9 +40,9 @@ type InstanceListInfo struct {
 	Capacity *int32 `json:"capacity,omitempty"`
 	// 小规格缓存容量（G Byte）。
 	CapacityMinor *string `json:"capacity_minor,omitempty"`
-	// 维护时间窗开始时间，格式为HH:mm:ss。
+	// 维护时间窗开始时间，为UTC时间，格式为HH:mm:ss。
 	MaintainBegin *string `json:"maintain_begin,omitempty"`
-	// 维护时间窗结束时间，格式为HH:mm:ss。
+	// 维护时间窗结束时间，为UTC时间，格式为HH:mm:ss。
 	MaintainEnd *string `json:"maintain_end,omitempty"`
 	// 缓存引擎。
 	Engine *string `json:"engine,omitempty"`

@@ -106,17 +106,6 @@ func (c *DcsClient) CreateMigrationTask(request *model.CreateMigrationTaskReques
 	}
 }
 
-//为Cluster集群实例的分片添加副本。
-func (c *DcsClient) CreateReplication(request *model.CreateReplicationRequest) (*model.CreateReplicationResponse, error) {
-	requestDef := GenReqDefForCreateReplication()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateReplicationResponse), nil
-	}
-}
-
 //删除后台任务
 func (c *DcsClient) DeleteBackgroundTask(request *model.DeleteBackgroundTaskRequest) (*model.DeleteBackgroundTaskResponse, error) {
 	requestDef := GenReqDefForDeleteBackgroundTask()
@@ -180,17 +169,6 @@ func (c *DcsClient) DeleteMigrationTask(request *model.DeleteMigrationTaskReques
 		return nil, err
 	} else {
 		return resp.(*model.DeleteMigrationTaskResponse), nil
-	}
-}
-
-//为Cluster集群删除指定副本
-func (c *DcsClient) DeleteReplication(request *model.DeleteReplicationRequest) (*model.DeleteReplicationResponse, error) {
-	requestDef := GenReqDefForDeleteReplication()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteReplicationResponse), nil
 	}
 }
 

@@ -86,6 +86,8 @@ type SubCustomerResFeeRecordV2 struct {
 	SpecSize float32 `json:"spec_size,omitempty"`
 	// |参数名称：线性大小单位| |参数的约束及描述：线性大小单位|
 	SpecSizeMeasureId *int32 `json:"spec_size_measure_id,omitempty"`
+	// |参数名称：云服务区名称| |参数的约束及描述：云服务区名称|
+	RegionName *string `json:"region_name,omitempty"`
 }
 
 func (o SubCustomerResFeeRecordV2) String() string {

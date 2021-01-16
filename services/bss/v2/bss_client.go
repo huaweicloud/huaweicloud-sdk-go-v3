@@ -18,7 +18,7 @@ func BssClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//功能描述：设置包周期资源自动续费
+//功能描述：客户可以设置包年/包月资源到期后转为按需资源计费
 func (c *BssClient) AutoRenewalResources(request *model.AutoRenewalResourcesRequest) (*model.AutoRenewalResourcesResponse, error) {
 	requestDef := GenReqDefForAutoRenewalResources()
 
@@ -62,7 +62,7 @@ func (c *BssClient) CancelCustomerOrder(request *model.CancelCustomerOrderReques
 	}
 }
 
-//功能描述：客户购买包年包月资源后，支持客户退订包年包月实例。退订资源实例包括资源续费部分和当前正在使用的部分，退订后资源将无法使用
+//功能描述：客户购买包年/包月资源后，支持客户退订包年/包月实例。退订资源实例包括资源续费部分和当前正在使用的部分，退订后资源将无法使用
 func (c *BssClient) CancelResourcesSubscription(request *model.CancelResourcesSubscriptionRequest) (*model.CancelResourcesSubscriptionResponse, error) {
 	requestDef := GenReqDefForCancelResourcesSubscription()
 
@@ -117,7 +117,7 @@ func (c *BssClient) CreateEnterpriseRealnameAuthentication(request *model.Create
 	}
 }
 
-//功能描述：伙伴在伙伴销售平台使用额度为客户发放优惠券。
+//功能描述：合作伙伴可以在拥有的代金券额度范围内为客户下发优惠券。
 func (c *BssClient) CreatePartnerCoupons(request *model.CreatePartnerCouponsRequest) (*model.CreatePartnerCouponsResponse, error) {
 	requestDef := GenReqDefForCreatePartnerCoupons()
 
@@ -194,7 +194,7 @@ func (c *BssClient) ListCities(request *model.ListCitiesRequest) (*model.ListCit
 	}
 }
 
-//功能描述：查询用量单位进制
+//功能描述：伙伴在伙伴销售平台上查询使用量单位的进制转换信息，用于不同度量单位之间的转换。
 func (c *BssClient) ListConversions(request *model.ListConversionsRequest) (*model.ListConversionsResponse, error) {
 	requestDef := GenReqDefForListConversions()
 
@@ -216,7 +216,7 @@ func (c *BssClient) ListCounties(request *model.ListCountiesRequest) (*model.Lis
 	}
 }
 
-//功能描述：查询优惠券额度发放回收记录
+//功能描述：华为云伙伴能力中心（一级经销商）可以在伙伴中心查看给精英服务商（二级经销商）发放或回收代金券额度的操作记录。
 func (c *BssClient) ListCouponQuotasRecords(request *model.ListCouponQuotasRecordsRequest) (*model.ListCouponQuotasRecordsResponse, error) {
 	requestDef := GenReqDefForListCouponQuotasRecords()
 
@@ -337,7 +337,7 @@ func (c *BssClient) ListIndirectPartners(request *model.ListIndirectPartnersRequ
 	}
 }
 
-//功能描述：一级经销商查询发给二级经销商的额度
+//功能描述：华为云伙伴能力中心（一级经销商）可以在伙伴中心查看发放给精英服务商（二级经销商）的代金券额度列表。
 func (c *BssClient) ListIssuedCouponQuotas(request *model.ListIssuedCouponQuotasRequest) (*model.ListIssuedCouponQuotasResponse, error) {
 	requestDef := GenReqDefForListIssuedCouponQuotas()
 
@@ -359,7 +359,7 @@ func (c *BssClient) ListIssuedPartnerCoupons(request *model.ListIssuedPartnerCou
 	}
 }
 
-//功能描述：查询用量单位列表
+//功能描述：伙伴在伙伴销售平台上查询资源使用量的度量单位及名称，度量单位类型等。
 func (c *BssClient) ListMeasureUnits(request *model.ListMeasureUnitsRequest) (*model.ListMeasureUnitsResponse, error) {
 	requestDef := GenReqDefForListMeasureUnits()
 
@@ -392,7 +392,7 @@ func (c *BssClient) ListOrderCouponsByOrderId(request *model.ListOrderCouponsByO
 	}
 }
 
-//功能描述：查询调账回收记录
+//功能描述：伙伴在伙伴销售平台查询向客户及关联的精英服务商（二级经销商）拨款或回收的调账记录
 func (c *BssClient) ListPartnerAdjustRecords(request *model.ListPartnerAdjustRecordsRequest) (*model.ListPartnerAdjustRecordsResponse, error) {
 	requestDef := GenReqDefForListPartnerAdjustRecords()
 
@@ -403,7 +403,7 @@ func (c *BssClient) ListPartnerAdjustRecords(request *model.ListPartnerAdjustRec
 	}
 }
 
-//功能描述：查询伙伴账户余额
+//功能描述：合作伙伴可以查询自己及关联的精英服务商的账户余额。
 func (c *BssClient) ListPartnerBalances(request *model.ListPartnerBalancesRequest) (*model.ListPartnerBalancesResponse, error) {
 	requestDef := GenReqDefForListPartnerBalances()
 
@@ -436,7 +436,7 @@ func (c *BssClient) ListPartnerPayOrders(request *model.ListPartnerPayOrdersRequ
 	}
 }
 
-//功能描述：客户在客户自建平台查询某个或所有的包年包月资源
+//功能描述：客户在客户自建平台查询某个或所有的包年/包月资源
 func (c *BssClient) ListPayPerUseCustomerResources(request *model.ListPayPerUseCustomerResourcesRequest) (*model.ListPayPerUseCustomerResourcesResponse, error) {
 	requestDef := GenReqDefForListPayPerUseCustomerResources()
 
@@ -480,7 +480,7 @@ func (c *BssClient) ListQuotaCoupons(request *model.ListQuotaCouponsRequest) (*m
 	}
 }
 
-//功能描述：包周期资源订购询价
+//功能描述：客户在自建平台按照条件查询包年/包月产品开通时候的价格
 func (c *BssClient) ListRateOnPeriodDetail(request *model.ListRateOnPeriodDetailRequest) (*model.ListRateOnPeriodDetailResponse, error) {
 	requestDef := GenReqDefForListRateOnPeriodDetail()
 
@@ -535,7 +535,7 @@ func (c *BssClient) ListServiceTypes(request *model.ListServiceTypesRequest) (*m
 	}
 }
 
-//功能描述：查询硬件库存
+//功能描述：客户在购买硬件产品时，可以在客户自建平台上查询硬件产品的库存
 func (c *BssClient) ListSkuInventories(request *model.ListSkuInventoriesRequest) (*model.ListSkuInventoriesResponse, error) {
 	requestDef := GenReqDefForListSkuInventories()
 
@@ -612,7 +612,7 @@ func (c *BssClient) ListUsageTypes(request *model.ListUsageTypesRequest) (*model
 	}
 }
 
-//功能描述：客户可以对待支付状态的包年包月产品订单进行支付
+//功能描述：客户可以对待支付状态的包年/包月产品订单进行支付
 func (c *BssClient) PayOrders(request *model.PayOrdersRequest) (*model.PayOrdersResponse, error) {
 	requestDef := GenReqDefForPayOrders()
 
@@ -623,7 +623,7 @@ func (c *BssClient) PayOrders(request *model.PayOrdersRequest) (*model.PayOrders
 	}
 }
 
-//功能描述：一级经销商给二级经销商回收额度
+//功能描述：华为云伙伴能力中心（一级经销商）可以在伙伴中心回收已发放给精英服务商（二级经销商）的代金券额度。
 func (c *BssClient) ReclaimCouponQuotas(request *model.ReclaimCouponQuotasRequest) (*model.ReclaimCouponQuotasResponse, error) {
 	requestDef := GenReqDefForReclaimCouponQuotas()
 
@@ -667,7 +667,7 @@ func (c *BssClient) ReclaimSubEnterpriseAmount(request *model.ReclaimSubEnterpri
 	}
 }
 
-//功能描述：回收子客户余额（支持一级回收二级的子客户余额）
+//功能描述：当客户不再使用华为云产品时，合作伙伴可以回收垫付类客户账户余额。（支持一级回收二级的子客户余额）
 func (c *BssClient) ReclaimToPartnerAccount(request *model.ReclaimToPartnerAccountRequest) (*model.ReclaimToPartnerAccountResponse, error) {
 	requestDef := GenReqDefForReclaimToPartnerAccount()
 
@@ -678,7 +678,7 @@ func (c *BssClient) ReclaimToPartnerAccount(request *model.ReclaimToPartnerAccou
 	}
 }
 
-//功能描述：客户的包年包月资源即将到期时，可进行包年包月资源的续订
+//功能描述：客户的包年包/月资源即将到期时，可进行包年/包月资源的续订
 func (c *BssClient) RenewalResources(request *model.RenewalResourcesRequest) (*model.RenewalResourcesResponse, error) {
 	requestDef := GenReqDefForRenewalResources()
 
@@ -711,14 +711,14 @@ func (c *BssClient) SendVerificationMessageCode(request *model.SendVerificationM
 	}
 }
 
-//功能描述：查询客户账户余额
-func (c *BssClient) ShowCusotmerAccountBalances(request *model.ShowCusotmerAccountBalancesRequest) (*model.ShowCusotmerAccountBalancesResponse, error) {
-	requestDef := GenReqDefForShowCusotmerAccountBalances()
+//功能描述：查询账户余额
+func (c *BssClient) ShowCustomerAccountBalances(request *model.ShowCustomerAccountBalancesRequest) (*model.ShowCustomerAccountBalancesResponse, error) {
+	requestDef := GenReqDefForShowCustomerAccountBalances()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowCusotmerAccountBalancesResponse), nil
+		return resp.(*model.ShowCustomerAccountBalancesResponse), nil
 	}
 }
 
@@ -777,7 +777,7 @@ func (c *BssClient) ShowRefundOrderDetails(request *model.ShowRefundOrderDetails
 	}
 }
 
-//功能描述：向精英服务商发放代金券额度
+//功能描述：华为云伙伴能力中心（一级经销商）可以在伙伴中心向精英服务商（二级经销商）发放代金券额度。
 func (c *BssClient) UpdateCouponQuotas(request *model.UpdateCouponQuotasRequest) (*model.UpdateCouponQuotasResponse, error) {
 	requestDef := GenReqDefForUpdateCouponQuotas()
 
@@ -788,7 +788,7 @@ func (c *BssClient) UpdateCouponQuotas(request *model.UpdateCouponQuotasRequest)
 	}
 }
 
-//功能描述：从伙伴账户调账给子客户
+//功能描述：合作伙伴可以为垫付类客户账户拨款。
 func (c *BssClient) UpdateCustomerAccountAmount(request *model.UpdateCustomerAccountAmountRequest) (*model.UpdateCustomerAccountAmountResponse, error) {
 	requestDef := GenReqDefForUpdateCustomerAccountAmount()
 
@@ -799,7 +799,7 @@ func (c *BssClient) UpdateCustomerAccountAmount(request *model.UpdateCustomerAcc
 	}
 }
 
-//功能描述：从伙伴账户调账给二级渠道
+//功能描述：华为云伙伴能力中心（一级经销商）可以向精英服务商（二级经销商）账户拨款
 func (c *BssClient) UpdateIndirectPartnerAccount(request *model.UpdateIndirectPartnerAccountRequest) (*model.UpdateIndirectPartnerAccountResponse, error) {
 	requestDef := GenReqDefForUpdateIndirectPartnerAccount()
 
@@ -810,7 +810,7 @@ func (c *BssClient) UpdateIndirectPartnerAccount(request *model.UpdateIndirectPa
 	}
 }
 
-//功能描述：客户可以设置包年包月资源到期后转为按需资源计费。包年包月计费模式到期后，按需的计费模式即生效
+//功能描述：客户可以设置包年/包月资源到期后转为按需资源计费。包年/包月计费模式到期后，按需的计费模式即生效
 func (c *BssClient) UpdatePeriodToOnDemand(request *model.UpdatePeriodToOnDemandRequest) (*model.UpdatePeriodToOnDemandResponse, error) {
 	requestDef := GenReqDefForUpdatePeriodToOnDemand()
 

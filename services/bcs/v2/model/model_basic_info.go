@@ -32,7 +32,7 @@ type BasicInfo struct {
 	ChargingMode *int32 `json:"charging_mode,omitempty"`
 	// BCS服务版本类型，分为基础版（1），专业版（2），铂金版（3）
 	VersionType *int32 `json:"version_type,omitempty"`
-	// BCS服务数据库类型，包括文件数据库（goleveldb），关系数据库（MySQL），NoSQL（couchdb）
+	// BCS服务数据库类型，包括文件数据库（goleveldb），NoSQL（couchdb）
 	DatabaseType *string `json:"database_type,omitempty"`
 	// BCS服务所在集群ID
 	ClusterId *string `json:"cluster_id,omitempty"`

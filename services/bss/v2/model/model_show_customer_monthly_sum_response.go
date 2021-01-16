@@ -35,7 +35,7 @@ type ShowCustomerMonthlySumResponse struct {
 	CreditAmount float32 `json:"credit_amount,omitempty"`
 	// |参数名称：欠费核销金额| |参数的约束及描述：欠费核销金额|
 	WriteoffAmount float32 `json:"writeoff_amount,omitempty"`
-	// |参数名称：金额单位。1：元2：角3：分| |参数的约束及描述：金额单位。1：元2：角3：分|
+	// |参数名称：金额单位。1：元| |参数的约束及描述：金额单位。1：元|
 	MeasureId *int32 `json:"measure_id,omitempty"`
 	// |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
 	Currency       *string `json:"currency,omitempty"`

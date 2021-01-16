@@ -111,6 +111,10 @@ func GenReqDefForDeleteBlockchain() *def.HttpRequestDef {
 		WithName("IsDeleteObs").
 		WithJsonTag("is_delete_obs").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsDeleteResource").
+		WithJsonTag("is_delete_resource").
+		WithLocationType(def.Query))
 
 	// response
 

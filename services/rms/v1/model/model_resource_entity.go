@@ -33,13 +33,13 @@ type ResourceEntity struct {
 	EpId *string `json:"ep_id,omitempty"`
 	// 企业项目名称
 	EpName *string `json:"ep_name,omitempty"`
-	// 资源详情摘要
+	// 资源详情校验码
 	Checksum *string `json:"checksum,omitempty"`
 	// 资源创建时间
 	Created *string `json:"created,omitempty"`
 	// 资源更新时间
 	Updated *string `json:"updated,omitempty"`
-	// 资源发放状态
+	// 资源操作状态
 	ProvisioningState *string `json:"provisioning_state,omitempty"`
 	// 资源Tag
 	Tags map[string]string `json:"tags,omitempty"`

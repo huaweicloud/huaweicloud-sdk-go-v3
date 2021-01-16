@@ -32,7 +32,7 @@ type InstancesVo struct {
 	DomainName *string `json:"domain_name,omitempty"`
 	// id
 	Id *string `json:"id,omitempty"`
-	// 是否临时实例。 false页面会显示
+	// 是否页面显示（以标签配置为准）
 	IsTemporary *bool `json:"is_temporary,omitempty"`
 	// 标签
 	Label *string `json:"label,omitempty"`
@@ -52,7 +52,7 @@ type InstancesVo struct {
 	Private *bool `json:"private,omitempty"`
 	// PVC规格 5GB|10GB|20GB
 	PvcQuantity *InstancesVoPvcQuantity `json:"pvc_quantity,omitempty"`
-	// 实例的生命周期 arm架构,生命周期只能设置成30，60。x86架构可取值为30，60，240，1440和-1。除-1外，其它值的单位为“分钟”。实例在到达生命周期后，将会被暂停（已保存的数据不会被删除）。-1表示实例不会自动停止。
+	// 实例的生命周期。 arm架构,生命周期只能设置成30，60。x86架构可取值为30，60，240，1440和-1。除-1外，其它值的单位为“分钟”。实例在到达生命周期后，将会被暂停（已保存的数据不会被删除）。-1表示实例不会自动停止。
 	RefreshInterval *int64 `json:"refresh_interval,omitempty"`
 	// 区域
 	Region *string `json:"region,omitempty"`
@@ -63,7 +63,7 @@ type InstancesVo struct {
 	ServerMap map[string]string `json:"server_map,omitempty"`
 	// 服务链接
 	ServerUrl *string `json:"server_url,omitempty"`
-	// 技术栈ID 目前可取值all，java，go，python，cpp，nodejs，quantum，blockchain，dcn，vue，ruby。
+	// 技术栈ID，通过技术栈管理ListStacksByTag接口获取。
 	StackId *string `json:"stack_id,omitempty"`
 	// 实例状态
 	Status *InstancesVoStatus `json:"status,omitempty"`

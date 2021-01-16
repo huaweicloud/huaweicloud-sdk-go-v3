@@ -13,7 +13,7 @@ import (
 	"strings"
 )
 
-// Tracker 信息发送通道
+// tracker通道配置
 type ChannelConfigBody struct {
 	Smn *TrackerSmnChannelConfigBody `json:"smn,omitempty"`
 	Obs *TrackerObsChannelConfigBody `json:"obs,omitempty"`

@@ -13,7 +13,7 @@ import (
 	"strings"
 )
 
-// tracker 选择器
+// tracker选择器
 type SelectorConfigBody struct {
 	// 是否选择所有支持的资源
 	AllSupported bool `json:"all_supported"`

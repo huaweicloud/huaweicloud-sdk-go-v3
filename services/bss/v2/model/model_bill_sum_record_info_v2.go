@@ -44,7 +44,7 @@ type BillSumRecordInfoV2 struct {
 	CashAmount float32 `json:"cash_amount,omitempty"`
 	// |参数名称：信用账户金额。| |参数的约束及描述：信用账户金额。|
 	CreditAmount float32 `json:"credit_amount,omitempty"`
-	// |参数名称：金额单位。1：元2：角3：分| |参数的约束及描述：金额单位。1：元2：角3：分|
+	// |参数名称：金额单位。1：元| |参数的约束及描述：金额单位。1：元|
 	MeasureId *int32 `json:"measure_id,omitempty"`
 	// |参数名称：消费类型：1：消费2：退款3：调账| |参数的约束及描述：消费类型：1：消费2：退款3：调账|
 	BillType *int32 `json:"bill_type,omitempty"`

@@ -18,7 +18,7 @@ func DevStarClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//下载模板产物
+//通过任务ID下载ZIP格式的代码工程。
 func (c *DevStarClient) DownloadApplicationCode(request *model.DownloadApplicationCodeRequest) (*model.DownloadApplicationCodeResponse, error) {
 	requestDef := GenReqDefForDownloadApplicationCode()
 

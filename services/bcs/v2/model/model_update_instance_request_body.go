@@ -16,7 +16,7 @@ import (
 // 添加节点和添加组织，添加组织是需要提供pvc_name
 type UpdateInstanceRequestBody struct {
 	// 添加节点的组织列表
-	NodeOrgs *[]NodeOrgs `json:"node_orgs,omitempty"`
+	NodeOrgs []NodeOrgs `json:"node_orgs"`
 }
 
 func (o UpdateInstanceRequestBody) String() string {

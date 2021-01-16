@@ -31,15 +31,15 @@ type InstanceEdgeParam struct {
 	InstanceUserId *string `json:"instance_user_id,omitempty"`
 	// 用户名
 	InstanceUserName string `json:"instance_user_name"`
-	// 是否临时实例。false页面会显示
+	// 是否页面显示（以标签配置为准）
 	IsTemporary *bool `json:"is_temporary,omitempty"`
 	// 插件列表
 	Plugins *[]Plugin `json:"plugins,omitempty"`
 	// PVC规格 5GB|10GB|20GB
 	PvcQuantity InstanceEdgeParamPvcQuantity `json:"pvc_quantity"`
-	// 实例的生命周期 arm架构,生命周期只能设置成30，60。x86架构可取值为30，60，240，1440和-1。除-1外，其它值的单位为“分钟”。实例在到达生命周期后，将会被暂停（已保存的数据不会被删除）。-1表示实例不会自动停止。
+	// 实例的生命周期。 arm架构,生命周期只能设置成30，60。x86架构可取值为30，60，240，1440和-1。除-1外，其它值的单位为“分钟”。实例在到达生命周期后，将会被暂停（已保存的数据不会被删除）。-1表示实例不会自动停止。
 	RefreshTime *string `json:"refresh_time,omitempty"`
-	// 技术栈ID 目前可取值all，java，go，python，cpp，nodejs，quantum，blockchain，dcn，vue，ruby。
+	// 技术栈ID，通过技术栈管理ListStacksByTag接口获取。
 	StackId string `json:"stack_id"`
 }
 

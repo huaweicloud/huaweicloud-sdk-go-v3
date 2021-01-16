@@ -29,11 +29,11 @@ type CreateSubnetOption struct {
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 	// 功能说明：子网是否开启dhcp功能 取值范围：true（开启），false（关闭） 约束：不填时默认为true。当设置为false时，会导致新创建的ECS无法获取IP地址，cloudinit无法注入账号密码，请谨慎操作。
 	DhcpEnable *bool `json:"dhcp_enable,omitempty"`
-	// 功能说明：子网dns服务器地址1 约束：ip格式，不支持IPv6地址
+	// 功能说明：子网dns服务器地址1 约束：ip格式，不支持IPv6地址 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
 	PrimaryDns *string `json:"primary_dns,omitempty"`
-	// 功能说明：子网dns服务器地址2 约束：ip格式，不支持IPv6地址
+	// 功能说明：子网dns服务器地址2 约束：ip格式，不支持IPv6地址 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
 	SecondaryDns *string `json:"secondary_dns,omitempty"`
-	// 功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集，不支持IPv6地址。
+	// 功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集，不支持IPv6地址。 默认值：不填时为空，无法使用云内网DNS功能 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
 	DnsList *[]string `json:"dnsList,omitempty"`
 	// 功能说明：子网所在的可用分区标识 约束：系统存在的可用分区标识
 	AvailabilityZone *string `json:"availability_zone,omitempty"`

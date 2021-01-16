@@ -29,6 +29,8 @@ type ListCustomerselfResourceRecordsRequest struct {
 	Method              *string `json:"method,omitempty"`
 	SubCustomerId       *string `json:"sub_customer_id,omitempty"`
 	TradeId             *string `json:"trade_id,omitempty"`
+	BillDateBegin       *string `json:"bill_date_begin,omitempty"`
+	BillDateEnd         *string `json:"bill_date_end,omitempty"`
 }
 
 func (o ListCustomerselfResourceRecordsRequest) String() string {

@@ -106,7 +106,7 @@ func (c *BcsClient) HandleNotification(request *model.HandleNotificationRequest)
 	}
 }
 
-//该接口用于查询BCS服务的监控数据，可以指定相应的指标名称。
+//[该接口用于查询BCS服务的监控数据，可以指定相应的指标名称,目前不支持IEF节点](tag:online)[该接口用于查询BCS服务的监控数据，可以指定相应的指标名称](tag:hcs)
 func (c *BcsClient) ListBcsMetric(request *model.ListBcsMetricRequest) (*model.ListBcsMetricResponse, error) {
 	requestDef := GenReqDefForListBcsMetric()
 

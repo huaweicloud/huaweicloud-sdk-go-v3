@@ -15,11 +15,11 @@ import (
 
 type IefNode struct {
 	// 节点ID
-	Id *string `json:"id,omitempty"`
-	// 节点状态
-	Status *string `json:"status,omitempty"`
+	Id string `json:"id"`
+	// 节点状态:\"ACTIVE\"
+	Status string `json:"status"`
 	// 节点公有IP
-	PublicIpAddress *string `json:"public_ip_address,omitempty"`
+	PublicIpAddress string `json:"public_ip_address"`
 }
 
 func (o IefNode) String() string {

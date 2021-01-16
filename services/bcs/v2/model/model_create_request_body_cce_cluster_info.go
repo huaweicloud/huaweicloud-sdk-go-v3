@@ -19,8 +19,6 @@ type CreateRequestBodyCceClusterInfo struct {
 	ClusterId *string `json:"cluster_id,omitempty"`
 	// 集群名称
 	ClusterName *string `json:"cluster_name,omitempty"`
-	// 集群架构类型：X86（VirtualMachine），ARM（ARM64）
-	ClusterPlatformType *string `json:"cluster_platform_type,omitempty"`
 }
 
 func (o CreateRequestBodyCceClusterInfo) String() string {

@@ -183,7 +183,7 @@ func (c *RmsClient) UpdatePolicyAssignment(request *model.UpdatePolicyAssignment
 	}
 }
 
-//Returns a list of domain-visible regions
+//查询租户可见的区域
 func (c *RmsClient) ListRegions(request *model.ListRegionsRequest) (*model.ListRegionsResponse, error) {
 	requestDef := GenReqDefForListRegions()
 
@@ -227,7 +227,7 @@ func (c *RmsClient) ListProviders(request *model.ListProvidersRequest) (*model.L
 	}
 }
 
-//返回当前租户下特定资源类型的资源，需要当前用户有rms:resources:list权限。比如查询云服务器，对应的RMS资源类型是ecs.cloudservers，其中provider为ecs，type为cloudservers。RMS支持的服务和资源类型参见[支持的服务和区域](https://console.huaweicloud.com/eps/#/resources/supported)。
+//返回当前租户下特定资源类型的资源，需要当前用户有rms:resources:list权限。比如查询云服务器，对应的RMS资源类型是ecs.cloudservers，其中provider为ecs，type为cloudservers。 RMS支持的服务和资源类型参见[支持的服务和区域](https://console.huaweicloud.com/eps/#/resources/supported)。
 func (c *RmsClient) ListResources(request *model.ListResourcesRequest) (*model.ListResourcesResponse, error) {
 	requestDef := GenReqDefForListResources()
 

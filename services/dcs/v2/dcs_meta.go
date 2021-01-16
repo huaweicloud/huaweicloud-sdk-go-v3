@@ -171,33 +171,6 @@ func GenReqDefForCreateMigrationTask() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateReplication() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v2/{project_id}/instance/{instance_id}/groups/{group_id}/replications").
-		WithResponse(new(model.CreateReplicationResponse)).
-		WithContentType("application/json;charset=UTF-8")
-
-	// request
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("GroupId").
-		WithJsonTag("group_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	// response
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForDeleteBackgroundTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
@@ -329,33 +302,6 @@ func GenReqDefForDeleteMigrationTask() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteReplication() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/instances/{instance_id}/groups/{group_id}/replications/{node_id}").
-		WithResponse(new(model.DeleteReplicationResponse)).
-		WithContentType("application/json")
-
-	// request
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("GroupId").
-		WithJsonTag("group_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("NodeId").
-		WithJsonTag("node_id").
-		WithLocationType(def.Path))
 
 	// response
 

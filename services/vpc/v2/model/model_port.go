@@ -58,6 +58,8 @@ type Port struct {
 	InstanceType string `json:"instance_type"`
 	// 功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
 	PortSecurityEnabled bool `json:"port_security_enabled"`
+	// 功能说明：port所属的可用分区
+	ZoneId string `json:"zone_id"`
 }
 
 func (o Port) String() string {

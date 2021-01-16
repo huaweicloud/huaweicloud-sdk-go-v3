@@ -32,7 +32,7 @@ type Stacks struct {
 	Name *string `json:"name,omitempty"`
 	// 范围
 	Scope *string `json:"scope,omitempty"`
-	// 技术栈ID 目前可取值all，java，go，python，cpp，nodejs，quantum，blockchain，dcn，vue，ruby。
+	// 技术栈ID，通过技术栈管理ListStacksByTag接口获取。
 	StackId *string `json:"stack_id,omitempty"`
 	// tags
 	Tags *[]string `json:"tags,omitempty"`

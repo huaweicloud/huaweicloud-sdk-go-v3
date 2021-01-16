@@ -16,7 +16,7 @@ import (
 // 创建通道的配置
 type BatchCreateChannelsRequestBody struct {
 	// 通道列表
-	Channels *[]ChannelCreateInfo `json:"channels,omitempty"`
+	Channels []ChannelCreateInfo `json:"channels"`
 }
 
 func (o BatchCreateChannelsRequestBody) String() string {

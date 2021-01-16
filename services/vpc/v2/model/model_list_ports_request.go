@@ -28,6 +28,7 @@ type ListPortsRequest struct {
 	Marker              *string                      `json:"marker,omitempty"`
 	FixedIps            *string                      `json:"fixed_ips,omitempty"`
 	EnterpriseProjectId *string                      `json:"enterprise_project_id,omitempty"`
+	ZoneId              *string                      `json:"zone_id,omitempty"`
 }
 
 func (o ListPortsRequest) String() string {
