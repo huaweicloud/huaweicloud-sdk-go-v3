@@ -219,9 +219,16 @@ func (hc *HcHttpClient) deserializeResponse(resp *response.DefaultHttpResponse, 
 
 		if item.LocationType == def.Body {
 			hasBody = true
+			dataStr := string(data)
+			
+			var bodyStr string
+			if strings.HasPrefix(dataStr, "{") || strings.HasPrefix(dataStr, "[") || strings.HasPrefix(dataStr, "\"") {
+				bodyStr = "{ \"body\" : " + dataStr + "}"
+			} else {
+				bodyStr = "{ \"body\" : \"" + dataStr + "\"}"
+			}
 
-			dataOfListOrString := "{ \"body\" : " + string(data) + "}"
-			err = jsoniter.Unmarshal([]byte(dataOfListOrString), &reqDef.Response)
+			err = jsoniter.Unmarshal([]byte(bodyStr), &reqDef.Response)
 			if err != nil {
 				return sdkerr.ServiceResponseError{
 					StatusCode:   resp.GetStatusCode(),
