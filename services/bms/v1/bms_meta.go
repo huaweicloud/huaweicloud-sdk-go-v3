@@ -2,6 +2,7 @@ package v1
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/bms/v1/model"
 	"net/http"
 )
@@ -13,7 +14,6 @@ func GenReqDefForAttachBaremetalServerVolume() *def.HttpRequestDef {
 		WithResponse(new(model.AttachBaremetalServerVolumeResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -22,8 +22,6 @@ func GenReqDefForAttachBaremetalServerVolume() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -36,13 +34,9 @@ func GenReqDefForBatchRebootBaremetalServers() *def.HttpRequestDef {
 		WithResponse(new(model.BatchRebootBaremetalServersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -55,13 +49,9 @@ func GenReqDefForBatchStartBaremetalServers() *def.HttpRequestDef {
 		WithResponse(new(model.BatchStartBaremetalServersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -74,13 +64,9 @@ func GenReqDefForBatchStopBaremetalServers() *def.HttpRequestDef {
 		WithResponse(new(model.BatchStopBaremetalServersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -93,7 +79,6 @@ func GenReqDefForChangeBaremetalServerName() *def.HttpRequestDef {
 		WithResponse(new(model.ChangeBaremetalServerNameResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -102,8 +87,6 @@ func GenReqDefForChangeBaremetalServerName() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -116,13 +99,9 @@ func GenReqDefForCreateBareMetalServers() *def.HttpRequestDef {
 		WithResponse(new(model.CreateBareMetalServersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -135,7 +114,6 @@ func GenReqDefForDetachBaremetalServerVolume() *def.HttpRequestDef {
 		WithResponse(new(model.DetachBaremetalServerVolumeResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -144,8 +122,6 @@ func GenReqDefForDetachBaremetalServerVolume() *def.HttpRequestDef {
 		WithName("AttachmentId").
 		WithJsonTag("attachment_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -158,13 +134,10 @@ func GenReqDefForListBareMetalServerDetails() *def.HttpRequestDef {
 		WithResponse(new(model.ListBareMetalServerDetailsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -176,8 +149,6 @@ func GenReqDefForListBareMetalServers() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/baremetalservers/detail").
 		WithResponse(new(model.ListBareMetalServersResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Flavor").
@@ -216,8 +187,6 @@ func GenReqDefForListBareMetalServers() *def.HttpRequestDef {
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -229,14 +198,10 @@ func GenReqDefForListBaremetalFlavorDetailExtends() *def.HttpRequestDef {
 		WithResponse(new(model.ListBaremetalFlavorDetailExtendsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AvailabilityZone").
 		WithJsonTag("availability_zone").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -249,7 +214,6 @@ func GenReqDefForReinstallBaremetalServerOs() *def.HttpRequestDef {
 		WithResponse(new(model.ReinstallBaremetalServerOsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -258,8 +222,6 @@ func GenReqDefForReinstallBaremetalServerOs() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -272,7 +234,6 @@ func GenReqDefForResetPwdOneClick() *def.HttpRequestDef {
 		WithResponse(new(model.ResetPwdOneClickResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -281,8 +242,6 @@ func GenReqDefForResetPwdOneClick() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -295,13 +254,10 @@ func GenReqDefForShowBaremetalServerInterfaceAttachments() *def.HttpRequestDef {
 		WithResponse(new(model.ShowBaremetalServerInterfaceAttachmentsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -314,13 +270,10 @@ func GenReqDefForShowBaremetalServerVolumeInfo() *def.HttpRequestDef {
 		WithResponse(new(model.ShowBaremetalServerVolumeInfoResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -333,13 +286,10 @@ func GenReqDefForShowResetPwd() *def.HttpRequestDef {
 		WithResponse(new(model.ShowResetPwdResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -352,10 +302,6 @@ func GenReqDefForShowTenantQuota() *def.HttpRequestDef {
 		WithResponse(new(model.ShowTenantQuotaResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -367,13 +313,10 @@ func GenReqDefForShowWindowsBaremetalServerPwd() *def.HttpRequestDef {
 		WithResponse(new(model.ShowWindowsBaremetalServerPwdResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -386,7 +329,6 @@ func GenReqDefForUpdateBaremetalServerMetadata() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateBaremetalServerMetadataResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -395,8 +337,6 @@ func GenReqDefForUpdateBaremetalServerMetadata() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -409,13 +349,10 @@ func GenReqDefForWindowsBaremetalServerCleanPwd() *def.HttpRequestDef {
 		WithResponse(new(model.WindowsBaremetalServerCleanPwdResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -428,13 +365,10 @@ func GenReqDefForShowSpecifiedVersion() *def.HttpRequestDef {
 		WithResponse(new(model.ShowSpecifiedVersionResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ApiVersion").
 		WithJsonTag("api_version").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -447,13 +381,10 @@ func GenReqDefForShowJobInfos() *def.HttpRequestDef {
 		WithResponse(new(model.ShowJobInfosResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobId").
 		WithJsonTag("job_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

@@ -2,6 +2,7 @@ package v3
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/kps/v3/model"
 	"net/http"
 )
@@ -13,13 +14,9 @@ func GenReqDefForAssociateKeypair() *def.HttpRequestDef {
 		WithResponse(new(model.AssociateKeypairResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -32,13 +29,9 @@ func GenReqDefForCreateKeypair() *def.HttpRequestDef {
 		WithResponse(new(model.CreateKeypairResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -51,10 +44,6 @@ func GenReqDefForDeleteAllFailedTask() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteAllFailedTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -66,13 +55,10 @@ func GenReqDefForDeleteFailedTask() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteFailedTaskResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -85,13 +71,10 @@ func GenReqDefForDeleteKeypair() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteKeypairResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("KeypairName").
 		WithJsonTag("keypair_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -104,13 +87,9 @@ func GenReqDefForDisassociateKeypair() *def.HttpRequestDef {
 		WithResponse(new(model.DisassociateKeypairResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -123,10 +102,6 @@ func GenReqDefForListFailedTask() *def.HttpRequestDef {
 		WithResponse(new(model.ListFailedTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -138,13 +113,10 @@ func GenReqDefForListKeypairDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ListKeypairDetailResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("KeypairName").
 		WithJsonTag("keypair_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -157,13 +129,10 @@ func GenReqDefForListKeypairTask() *def.HttpRequestDef {
 		WithResponse(new(model.ListKeypairTaskResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -176,10 +145,6 @@ func GenReqDefForListKeypairs() *def.HttpRequestDef {
 		WithResponse(new(model.ListKeypairsResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -190,10 +155,6 @@ func GenReqDefForListRunningTask() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/running-tasks").
 		WithResponse(new(model.ListRunningTaskResponse)).
 		WithContentType("application/json")
-
-	// request
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -206,7 +167,6 @@ func GenReqDefForUpdateKeypairDescription() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateKeypairDescriptionResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("KeypairName").
 		WithJsonTag("keypair_name").
@@ -215,8 +175,6 @@ func GenReqDefForUpdateKeypairDescription() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

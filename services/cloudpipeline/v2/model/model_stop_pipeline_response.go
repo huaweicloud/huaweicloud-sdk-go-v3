@@ -1,10 +1,3 @@
-/*
- * CloudPipeline
- *
- * devcloud pipeline api
- *
- */
-
 package model
 
 import (

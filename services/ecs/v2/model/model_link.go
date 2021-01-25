@@ -1,10 +1,3 @@
-/*
- * ECS
- *
- * ECS Open API
- *
- */
-
 package model
 
 import (

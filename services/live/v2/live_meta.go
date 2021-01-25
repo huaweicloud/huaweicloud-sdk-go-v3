@@ -2,6 +2,7 @@ package v2
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/live/v2/model"
 	"net/http"
 )
@@ -12,8 +13,6 @@ func GenReqDefForListBandwidthDetail() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/stats/bandwidth/detail").
 		WithResponse(new(model.ListBandwidthDetailResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PlayDomains").
@@ -47,8 +46,6 @@ func GenReqDefForListBandwidthDetail() *def.HttpRequestDef {
 		WithName("EndTime").
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
-
-	// response
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
@@ -67,8 +64,6 @@ func GenReqDefForListDomainBandwidthPeak() *def.HttpRequestDef {
 		WithResponse(new(model.ListDomainBandwidthPeakResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PlayDomains").
 		WithJsonTag("play_domains").
@@ -98,8 +93,6 @@ func GenReqDefForListDomainBandwidthPeak() *def.HttpRequestDef {
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 
-	// response
-
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
 		WithJsonTag("X-request-id").
@@ -116,8 +109,6 @@ func GenReqDefForListDomainTrafficDetail() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/stats/traffic/detail").
 		WithResponse(new(model.ListDomainTrafficDetailResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PlayDomains").
@@ -152,8 +143,6 @@ func GenReqDefForListDomainTrafficDetail() *def.HttpRequestDef {
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 
-	// response
-
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
 		WithJsonTag("X-request-id").
@@ -170,8 +159,6 @@ func GenReqDefForListDomainTrafficSummary() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/stats/traffic/summary").
 		WithResponse(new(model.ListDomainTrafficSummaryResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PlayDomains").
@@ -202,8 +189,6 @@ func GenReqDefForListDomainTrafficSummary() *def.HttpRequestDef {
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 
-	// response
-
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
 		WithJsonTag("X-request-id").
@@ -220,8 +205,6 @@ func GenReqDefForListHistoryStreams() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/stats/history/streams").
 		WithResponse(new(model.ListHistoryStreamsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Domain").
@@ -240,8 +223,6 @@ func GenReqDefForListHistoryStreams() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
 		WithJsonTag("X-request-id").
@@ -258,8 +239,6 @@ func GenReqDefForListQueryHttpCode() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/stats/httpcodes").
 		WithResponse(new(model.ListQueryHttpCodeResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PlayDomains").
@@ -286,8 +265,6 @@ func GenReqDefForListQueryHttpCode() *def.HttpRequestDef {
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 
-	// response
-
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
 		WithJsonTag("X-request-id").
@@ -305,8 +282,6 @@ func GenReqDefForListRecordData() *def.HttpRequestDef {
 		WithResponse(new(model.ListRecordDataResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StartTime").
 		WithJsonTag("start_time").
@@ -315,8 +290,6 @@ func GenReqDefForListRecordData() *def.HttpRequestDef {
 		WithName("EndTime").
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
-
-	// response
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
@@ -335,8 +308,6 @@ func GenReqDefForListSnapshotData() *def.HttpRequestDef {
 		WithResponse(new(model.ListSnapshotDataResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublishDomain").
 		WithJsonTag("publish_domain").
@@ -349,8 +320,6 @@ func GenReqDefForListSnapshotData() *def.HttpRequestDef {
 		WithName("EndTime").
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
-
-	// response
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
@@ -369,8 +338,6 @@ func GenReqDefForListTranscodeData() *def.HttpRequestDef {
 		WithResponse(new(model.ListTranscodeDataResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublishDomain").
 		WithJsonTag("publish_domain").
@@ -383,8 +350,6 @@ func GenReqDefForListTranscodeData() *def.HttpRequestDef {
 		WithName("EndTime").
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
-
-	// response
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
@@ -403,8 +368,6 @@ func GenReqDefForListUsersOfStream() *def.HttpRequestDef {
 		WithResponse(new(model.ListUsersOfStreamResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PlayDomain").
 		WithJsonTag("play_domain").
@@ -437,8 +400,6 @@ func GenReqDefForListUsersOfStream() *def.HttpRequestDef {
 		WithName("EndTime").
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
-
-	// response
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
@@ -457,8 +418,6 @@ func GenReqDefForShowStreamCount() *def.HttpRequestDef {
 		WithResponse(new(model.ShowStreamCountResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublishDomains").
 		WithJsonTag("publish_domains").
@@ -471,8 +430,6 @@ func GenReqDefForShowStreamCount() *def.HttpRequestDef {
 		WithName("EndTime").
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
-
-	// response
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
@@ -491,8 +448,6 @@ func GenReqDefForShowStreamPortrait() *def.HttpRequestDef {
 		WithResponse(new(model.ShowStreamPortraitResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PlayDomain").
 		WithJsonTag("play_domain").
@@ -505,8 +460,6 @@ func GenReqDefForShowStreamPortrait() *def.HttpRequestDef {
 		WithName("Time").
 		WithJsonTag("time").
 		WithLocationType(def.Query))
-
-	// response
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
@@ -524,8 +477,6 @@ func GenReqDefForShowUpBandwidth() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/stats/up-bandwidth/detail").
 		WithResponse(new(model.ShowUpBandwidthResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublishDomains").
@@ -560,8 +511,6 @@ func GenReqDefForShowUpBandwidth() *def.HttpRequestDef {
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 
-	// response
-
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
 		WithJsonTag("X-request-id").
@@ -578,8 +527,6 @@ func GenReqDefForListSingleStreamBitrate() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/stats/stream/bitrate").
 		WithResponse(new(model.ListSingleStreamBitrateResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Domain").
@@ -601,8 +548,6 @@ func GenReqDefForListSingleStreamBitrate() *def.HttpRequestDef {
 		WithName("EndTime").
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
-
-	// response
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
@@ -621,8 +566,6 @@ func GenReqDefForListSingleStreamFramerate() *def.HttpRequestDef {
 		WithResponse(new(model.ListSingleStreamFramerateResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Domain").
 		WithJsonTag("domain").
@@ -643,8 +586,6 @@ func GenReqDefForListSingleStreamFramerate() *def.HttpRequestDef {
 		WithName("EndTime").
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
-
-	// response
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").

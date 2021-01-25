@@ -1,10 +1,3 @@
-/*
- * RabbitMQ
- *
- * RabbitMQ Document API
- *
- */
-
 package model
 
 import (

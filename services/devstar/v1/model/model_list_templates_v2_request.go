@@ -1,10 +1,3 @@
-/*
- * DevStar
- *
- * DevStar API
- *
- */
-
 package model
 
 import (

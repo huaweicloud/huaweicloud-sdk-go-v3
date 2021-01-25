@@ -2,6 +2,7 @@ package v1
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/tms/v1/model"
 	"net/http"
 )
@@ -13,13 +14,9 @@ func GenReqDefForCreatePredefineTags() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePredefineTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -32,13 +29,9 @@ func GenReqDefForDeletePredefineTags() *def.HttpRequestDef {
 		WithResponse(new(model.DeletePredefineTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -51,10 +44,6 @@ func GenReqDefForListApiVersions() *def.HttpRequestDef {
 		WithResponse(new(model.ListApiVersionsResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -65,8 +54,6 @@ func GenReqDefForListPredefineTags() *def.HttpRequestDef {
 		WithPath("/v1.0/predefine_tags").
 		WithResponse(new(model.ListPredefineTagsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Key").
@@ -93,8 +80,6 @@ func GenReqDefForListPredefineTags() *def.HttpRequestDef {
 		WithJsonTag("order_method").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -106,13 +91,10 @@ func GenReqDefForShowApiVersion() *def.HttpRequestDef {
 		WithResponse(new(model.ShowApiVersionResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ApiVersion").
 		WithJsonTag("api_version").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -125,13 +107,9 @@ func GenReqDefForUpdatePredefineTags() *def.HttpRequestDef {
 		WithResponse(new(model.UpdatePredefineTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

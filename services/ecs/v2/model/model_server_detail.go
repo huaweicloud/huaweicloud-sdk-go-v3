@@ -1,10 +1,3 @@
-/*
- * ECS
- *
- * ECS Open API
- *
- */
-
 package model
 
 import (
@@ -19,6 +12,8 @@ type ServerDetail struct {
 	Status string `json:"status"`
 	// 弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
 	Updated string `json:"updated"`
+	// 弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+	AutoTerminateTime string `json:"auto_terminate_time"`
 	// 弹性云服务器所在主机的主机ID。
 	HostId string `json:"hostId"`
 	// 弹性云服务器所在主机的主机名称。

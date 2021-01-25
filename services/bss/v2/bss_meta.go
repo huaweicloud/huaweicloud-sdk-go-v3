@@ -2,6 +2,7 @@ package v2
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/bss/v2/model"
 	"net/http"
 )
@@ -13,13 +14,10 @@ func GenReqDefForAutoRenewalResources() *def.HttpRequestDef {
 		WithResponse(new(model.AutoRenewalResourcesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceId").
 		WithJsonTag("resource_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -32,13 +30,9 @@ func GenReqDefForBatchSetSubCustomerDiscount() *def.HttpRequestDef {
 		WithResponse(new(model.BatchSetSubCustomerDiscountResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -51,13 +45,10 @@ func GenReqDefForCancelAutoRenewalResources() *def.HttpRequestDef {
 		WithResponse(new(model.CancelAutoRenewalResourcesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceId").
 		WithJsonTag("resource_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -70,13 +61,9 @@ func GenReqDefForCancelCustomerOrder() *def.HttpRequestDef {
 		WithResponse(new(model.CancelCustomerOrderResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -89,13 +76,9 @@ func GenReqDefForCancelResourcesSubscription() *def.HttpRequestDef {
 		WithResponse(new(model.CancelResourcesSubscriptionResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -108,13 +91,9 @@ func GenReqDefForChangeEnterpriseRealnameAuthentication() *def.HttpRequestDef {
 		WithResponse(new(model.ChangeEnterpriseRealnameAuthenticationResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -127,13 +106,9 @@ func GenReqDefForCheckUserIdentity() *def.HttpRequestDef {
 		WithResponse(new(model.CheckUserIdentityResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -146,10 +121,6 @@ func GenReqDefForCreateEnterpriseProjectAuth() *def.HttpRequestDef {
 		WithResponse(new(model.CreateEnterpriseProjectAuthResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -161,13 +132,9 @@ func GenReqDefForCreateEnterpriseRealnameAuthentication() *def.HttpRequestDef {
 		WithResponse(new(model.CreateEnterpriseRealnameAuthenticationResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -180,13 +147,9 @@ func GenReqDefForCreatePartnerCoupons() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePartnerCouponsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -199,13 +162,9 @@ func GenReqDefForCreatePersonalRealnameAuth() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePersonalRealnameAuthResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -218,8 +177,6 @@ func GenReqDefForCreatePostal() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePostalResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
@@ -228,8 +185,6 @@ func GenReqDefForCreatePostal() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -242,13 +197,9 @@ func GenReqDefForCreateSubCustomer() *def.HttpRequestDef {
 		WithResponse(new(model.CreateSubCustomerResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -261,13 +212,9 @@ func GenReqDefForCreateSubEnterpriseAccount() *def.HttpRequestDef {
 		WithResponse(new(model.CreateSubEnterpriseAccountResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -280,13 +227,10 @@ func GenReqDefForDeletePostal() *def.HttpRequestDef {
 		WithResponse(new(model.DeletePostalResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AddressId").
 		WithJsonTag("address_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -298,8 +242,6 @@ func GenReqDefForListCities() *def.HttpRequestDef {
 		WithPath("/v2/systems/configs/cities").
 		WithResponse(new(model.ListCitiesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProvinceCode").
@@ -319,8 +261,6 @@ func GenReqDefForListCities() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -332,8 +272,6 @@ func GenReqDefForListConversions() *def.HttpRequestDef {
 		WithResponse(new(model.ListConversionsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("MeasureType").
 		WithJsonTag("measure_type").
@@ -343,8 +281,6 @@ func GenReqDefForListConversions() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -356,8 +292,6 @@ func GenReqDefForListCounties() *def.HttpRequestDef {
 		WithPath("/v2/systems/configs/counties").
 		WithResponse(new(model.ListCountiesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CityCode").
@@ -377,8 +311,6 @@ func GenReqDefForListCounties() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -389,8 +321,6 @@ func GenReqDefForListCouponQuotasRecords() *def.HttpRequestDef {
 		WithPath("/v2/partners/coupon-quotas/records").
 		WithResponse(new(model.ListCouponQuotasRecordsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("IndirectPartnerId").
@@ -425,8 +355,6 @@ func GenReqDefForListCouponQuotasRecords() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -437,8 +365,6 @@ func GenReqDefForListCustomerBillsFeeRecords() *def.HttpRequestDef {
 		WithPath("/v2/bills/customer-bills/fee-records").
 		WithResponse(new(model.ListCustomerBillsFeeRecordsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BillCycle").
@@ -506,8 +432,6 @@ func GenReqDefForListCustomerBillsFeeRecords() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -519,8 +443,6 @@ func GenReqDefForListCustomerOnDemandResources() *def.HttpRequestDef {
 		WithResponse(new(model.ListCustomerOnDemandResourcesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
@@ -529,8 +451,6 @@ func GenReqDefForListCustomerOnDemandResources() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -542,8 +462,6 @@ func GenReqDefForListCustomerOrders() *def.HttpRequestDef {
 		WithPath("/v2/orders/customer-orders").
 		WithResponse(new(model.ListCustomerOrdersResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("OrderId").
@@ -598,8 +516,6 @@ func GenReqDefForListCustomerOrders() *def.HttpRequestDef {
 		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -611,13 +527,9 @@ func GenReqDefForListCustomersBalancesDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ListCustomersBalancesDetailResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -630,13 +542,9 @@ func GenReqDefForListCustomerselfResourceRecordDetails() *def.HttpRequestDef {
 		WithResponse(new(model.ListCustomerselfResourceRecordDetailsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -648,8 +556,6 @@ func GenReqDefForListCustomerselfResourceRecords() *def.HttpRequestDef {
 		WithPath("/v2/bills/customer-bills/res-fee-records").
 		WithResponse(new(model.ListCustomerselfResourceRecordsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Cycle").
@@ -717,8 +623,6 @@ func GenReqDefForListCustomerselfResourceRecords() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -729,8 +633,6 @@ func GenReqDefForListEnterpriseMultiAccount() *def.HttpRequestDef {
 		WithPath("/v2/enterprises/multi-accounts/retrieve-amount").
 		WithResponse(new(model.ListEnterpriseMultiAccountResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SubCustomerId").
@@ -749,8 +651,6 @@ func GenReqDefForListEnterpriseMultiAccount() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -762,8 +662,6 @@ func GenReqDefForListEnterpriseOrganizations() *def.HttpRequestDef {
 		WithResponse(new(model.ListEnterpriseOrganizationsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("RecursiveQuery").
 		WithJsonTag("recursive_query").
@@ -772,8 +670,6 @@ func GenReqDefForListEnterpriseOrganizations() *def.HttpRequestDef {
 		WithName("ParentId").
 		WithJsonTag("parent_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -785,8 +681,6 @@ func GenReqDefForListEnterpriseSubCustomers() *def.HttpRequestDef {
 		WithPath("/v2/enterprises/multi-accounts/sub-customers").
 		WithResponse(new(model.ListEnterpriseSubCustomersResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SubCustomerAccountName").
@@ -813,8 +707,6 @@ func GenReqDefForListEnterpriseSubCustomers() *def.HttpRequestDef {
 		WithJsonTag("org_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -826,13 +718,9 @@ func GenReqDefForListIndirectPartners() *def.HttpRequestDef {
 		WithResponse(new(model.ListIndirectPartnersResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -844,8 +732,6 @@ func GenReqDefForListIssuedCouponQuotas() *def.HttpRequestDef {
 		WithPath("/v2/partners/issued-coupon-quotas").
 		WithResponse(new(model.ListIssuedCouponQuotasResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QuotaId").
@@ -868,8 +754,6 @@ func GenReqDefForListIssuedCouponQuotas() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -880,8 +764,6 @@ func GenReqDefForListIssuedPartnerCoupons() *def.HttpRequestDef {
 		WithPath("/v2/promotions/benefits/partner-coupons").
 		WithResponse(new(model.ListIssuedPartnerCouponsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CouponId").
@@ -940,8 +822,6 @@ func GenReqDefForListIssuedPartnerCoupons() *def.HttpRequestDef {
 		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -953,14 +833,10 @@ func GenReqDefForListMeasureUnits() *def.HttpRequestDef {
 		WithResponse(new(model.ListMeasureUnitsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -973,13 +849,9 @@ func GenReqDefForListOnDemandResourceRatings() *def.HttpRequestDef {
 		WithResponse(new(model.ListOnDemandResourceRatingsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -992,14 +864,26 @@ func GenReqDefForListOrderCouponsByOrderId() *def.HttpRequestDef {
 		WithResponse(new(model.ListOrderCouponsByOrderIdResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("OrderId").
 		WithJsonTag("order_id").
 		WithLocationType(def.Query))
 
-	// response
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListOrderDiscounts() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/orders/customer-orders/order-discounts").
+		WithResponse(new(model.ListOrderDiscountsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrderId").
+		WithJsonTag("order_id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1011,8 +895,6 @@ func GenReqDefForListPartnerAdjustRecords() *def.HttpRequestDef {
 		WithPath("/v2/accounts/partner-accounts/adjust-records").
 		WithResponse(new(model.ListPartnerAdjustRecordsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CustomerId").
@@ -1047,8 +929,6 @@ func GenReqDefForListPartnerAdjustRecords() *def.HttpRequestDef {
 		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1060,14 +940,10 @@ func GenReqDefForListPartnerBalances() *def.HttpRequestDef {
 		WithResponse(new(model.ListPartnerBalancesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("IndirectPartnerId").
 		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1079,8 +955,6 @@ func GenReqDefForListPartnerCouponsRecord() *def.HttpRequestDef {
 		WithPath("/v2/promotions/benefits/partner-coupons/records/query").
 		WithResponse(new(model.ListPartnerCouponsRecordResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("OperationTypes").
@@ -1127,8 +1001,6 @@ func GenReqDefForListPartnerCouponsRecord() *def.HttpRequestDef {
 		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1139,8 +1011,6 @@ func GenReqDefForListPartnerPayOrders() *def.HttpRequestDef {
 		WithPath("/v2/orders/customer-orders/partner-pay-orders").
 		WithResponse(new(model.ListPartnerPayOrdersResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("OrderId").
@@ -1167,8 +1037,6 @@ func GenReqDefForListPartnerPayOrders() *def.HttpRequestDef {
 		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1180,13 +1048,9 @@ func GenReqDefForListPayPerUseCustomerResources() *def.HttpRequestDef {
 		WithResponse(new(model.ListPayPerUseCustomerResourcesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1199,8 +1063,6 @@ func GenReqDefForListPostalAddress() *def.HttpRequestDef {
 		WithResponse(new(model.ListPostalAddressResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
@@ -1209,8 +1071,6 @@ func GenReqDefForListPostalAddress() *def.HttpRequestDef {
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1223,8 +1083,6 @@ func GenReqDefForListProvinces() *def.HttpRequestDef {
 		WithResponse(new(model.ListProvincesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
@@ -1238,8 +1096,6 @@ func GenReqDefForListProvinces() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1252,13 +1108,9 @@ func GenReqDefForListQuotaCoupons() *def.HttpRequestDef {
 		WithResponse(new(model.ListQuotaCouponsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1271,13 +1123,9 @@ func GenReqDefForListRateOnPeriodDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ListRateOnPeriodDetailResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1290,8 +1138,6 @@ func GenReqDefForListResourceTypes() *def.HttpRequestDef {
 		WithResponse(new(model.ListResourceTypesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceTypeCode").
 		WithJsonTag("resource_type_code").
@@ -1301,8 +1147,6 @@ func GenReqDefForListResourceTypes() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1315,14 +1159,10 @@ func GenReqDefForListResourceUsages() *def.HttpRequestDef {
 		WithResponse(new(model.ListResourceUsagesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1334,8 +1174,6 @@ func GenReqDefForListServiceResources() *def.HttpRequestDef {
 		WithPath("/v2/products/service-resources").
 		WithResponse(new(model.ListServiceResourcesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServiceTypeCode").
@@ -1355,8 +1193,6 @@ func GenReqDefForListServiceResources() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1368,8 +1204,6 @@ func GenReqDefForListServiceTypes() *def.HttpRequestDef {
 		WithResponse(new(model.ListServiceTypesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServiceTypeCode").
 		WithJsonTag("service_type_code").
@@ -1379,8 +1213,6 @@ func GenReqDefForListServiceTypes() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1393,13 +1225,9 @@ func GenReqDefForListSkuInventories() *def.HttpRequestDef {
 		WithResponse(new(model.ListSkuInventoriesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1411,8 +1239,6 @@ func GenReqDefForListSubCustomerCoupons() *def.HttpRequestDef {
 		WithPath("/v2/promotions/benefits/coupons").
 		WithResponse(new(model.ListSubCustomerCouponsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CouponId").
@@ -1459,8 +1285,6 @@ func GenReqDefForListSubCustomerCoupons() *def.HttpRequestDef {
 		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1472,8 +1296,6 @@ func GenReqDefForListSubCustomerDiscounts() *def.HttpRequestDef {
 		WithResponse(new(model.ListSubCustomerDiscountsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CustomerId").
 		WithJsonTag("customer_id").
@@ -1482,8 +1304,6 @@ func GenReqDefForListSubCustomerDiscounts() *def.HttpRequestDef {
 		WithName("IndirectPartnerId").
 		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1495,8 +1315,6 @@ func GenReqDefForListSubCustomerResFeeRecords() *def.HttpRequestDef {
 		WithPath("/v2/bills/partner-bills/subcustomer-bills/res-fee-records").
 		WithResponse(new(model.ListSubCustomerResFeeRecordsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CustomerId").
@@ -1543,8 +1361,6 @@ func GenReqDefForListSubCustomerResFeeRecords() *def.HttpRequestDef {
 		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1556,13 +1372,9 @@ func GenReqDefForListSubCustomers() *def.HttpRequestDef {
 		WithResponse(new(model.ListSubCustomersResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1574,8 +1386,6 @@ func GenReqDefForListSubcustomerMonthlyBills() *def.HttpRequestDef {
 		WithPath("/v2/bills/partner-bills/subcustomer-bills/monthly-sum").
 		WithResponse(new(model.ListSubcustomerMonthlyBillsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CustomerId").
@@ -1610,8 +1420,6 @@ func GenReqDefForListSubcustomerMonthlyBills() *def.HttpRequestDef {
 		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1622,8 +1430,6 @@ func GenReqDefForListUsageTypes() *def.HttpRequestDef {
 		WithPath("/v2/products/usage-types").
 		WithResponse(new(model.ListUsageTypesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceTypeCode").
@@ -1643,8 +1449,6 @@ func GenReqDefForListUsageTypes() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1656,13 +1460,9 @@ func GenReqDefForPayOrders() *def.HttpRequestDef {
 		WithResponse(new(model.PayOrdersResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1675,13 +1475,9 @@ func GenReqDefForReclaimCouponQuotas() *def.HttpRequestDef {
 		WithResponse(new(model.ReclaimCouponQuotasResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1694,13 +1490,9 @@ func GenReqDefForReclaimIndirectPartnerAccount() *def.HttpRequestDef {
 		WithResponse(new(model.ReclaimIndirectPartnerAccountResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1713,13 +1505,9 @@ func GenReqDefForReclaimPartnerCoupons() *def.HttpRequestDef {
 		WithResponse(new(model.ReclaimPartnerCouponsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1732,13 +1520,9 @@ func GenReqDefForReclaimSubEnterpriseAmount() *def.HttpRequestDef {
 		WithResponse(new(model.ReclaimSubEnterpriseAmountResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1751,13 +1535,9 @@ func GenReqDefForReclaimToPartnerAccount() *def.HttpRequestDef {
 		WithResponse(new(model.ReclaimToPartnerAccountResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1770,13 +1550,9 @@ func GenReqDefForRenewalResources() *def.HttpRequestDef {
 		WithResponse(new(model.RenewalResourcesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1789,13 +1565,9 @@ func GenReqDefForSendSmsVerificationCode() *def.HttpRequestDef {
 		WithResponse(new(model.SendSmsVerificationCodeResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1808,13 +1580,9 @@ func GenReqDefForSendVerificationMessageCode() *def.HttpRequestDef {
 		WithResponse(new(model.SendVerificationMessageCodeResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1827,10 +1595,6 @@ func GenReqDefForShowCustomerAccountBalances() *def.HttpRequestDef {
 		WithResponse(new(model.ShowCustomerAccountBalancesResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1841,8 +1605,6 @@ func GenReqDefForShowCustomerMonthlySum() *def.HttpRequestDef {
 		WithPath("/v2/bills/customer-bills/monthly-sum").
 		WithResponse(new(model.ShowCustomerMonthlySumResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BillCycle").
@@ -1873,8 +1635,6 @@ func GenReqDefForShowCustomerMonthlySum() *def.HttpRequestDef {
 		WithJsonTag("sub_customer_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1886,7 +1646,6 @@ func GenReqDefForShowCustomerOrderDetails() *def.HttpRequestDef {
 		WithResponse(new(model.ShowCustomerOrderDetailsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("OrderId").
 		WithJsonTag("order_id").
@@ -1905,8 +1664,6 @@ func GenReqDefForShowCustomerOrderDetails() *def.HttpRequestDef {
 		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1917,8 +1674,6 @@ func GenReqDefForShowMultiAccountTransferAmount() *def.HttpRequestDef {
 		WithPath("/v2/enterprises/multi-accounts/transfer-amount").
 		WithResponse(new(model.ShowMultiAccountTransferAmountResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BalanceType").
@@ -1933,8 +1688,6 @@ func GenReqDefForShowMultiAccountTransferAmount() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1946,14 +1699,10 @@ func GenReqDefForShowRealnameAuthenticationReviewResult() *def.HttpRequestDef {
 		WithResponse(new(model.ShowRealnameAuthenticationReviewResultResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CustomerId").
 		WithJsonTag("customer_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1966,14 +1715,10 @@ func GenReqDefForShowRefundOrderDetails() *def.HttpRequestDef {
 		WithResponse(new(model.ShowRefundOrderDetailsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("OrderId").
 		WithJsonTag("order_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1986,13 +1731,9 @@ func GenReqDefForUpdateCouponQuotas() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateCouponQuotasResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -2005,13 +1746,9 @@ func GenReqDefForUpdateCustomerAccountAmount() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateCustomerAccountAmountResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -2024,13 +1761,9 @@ func GenReqDefForUpdateIndirectPartnerAccount() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateIndirectPartnerAccountResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -2043,13 +1776,9 @@ func GenReqDefForUpdatePeriodToOnDemand() *def.HttpRequestDef {
 		WithResponse(new(model.UpdatePeriodToOnDemandResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -2062,8 +1791,6 @@ func GenReqDefForUpdatePostal() *def.HttpRequestDef {
 		WithResponse(new(model.UpdatePostalResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
@@ -2072,8 +1799,6 @@ func GenReqDefForUpdatePostal() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -2086,13 +1811,9 @@ func GenReqDefForUpdateSubEnterpriseAmount() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateSubEnterpriseAmountResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

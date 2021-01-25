@@ -2,6 +2,7 @@ package v3
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/eip/v3/model"
 	"net/http"
 )
@@ -13,7 +14,6 @@ func GenReqDefForAssociatePublicips() *def.HttpRequestDef {
 		WithResponse(new(model.AssociatePublicipsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublicipId").
 		WithJsonTag("publicip_id").
@@ -22,8 +22,6 @@ func GenReqDefForAssociatePublicips() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -36,7 +34,6 @@ func GenReqDefForDisassociatePublicips() *def.HttpRequestDef {
 		WithResponse(new(model.DisassociatePublicipsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublicipId").
 		WithJsonTag("publicip_id").
@@ -45,8 +42,6 @@ func GenReqDefForDisassociatePublicips() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -58,8 +53,6 @@ func GenReqDefForListPublicips() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/eip/publicips").
 		WithResponse(new(model.ListPublicipsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Marker").
@@ -222,8 +215,6 @@ func GenReqDefForListPublicips() *def.HttpRequestDef {
 		WithJsonTag("group_name").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -235,7 +226,6 @@ func GenReqDefForShowPublicip() *def.HttpRequestDef {
 		WithResponse(new(model.ShowPublicipResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublicipId").
 		WithJsonTag("publicip_id").
@@ -245,8 +235,6 @@ func GenReqDefForShowPublicip() *def.HttpRequestDef {
 		WithName("Fields").
 		WithJsonTag("fields").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

@@ -1,10 +1,3 @@
-/*
- * BSS
- *
- * Business Support System API
- *
- */
-
 package model
 
 import (
@@ -30,7 +23,7 @@ type BillSumInfoV2 struct {
 	AdjustmentAmount float32 `json:"adjustment_amount,omitempty"`
 	// |参数名称：折扣金额，华为核销或者退订的时候没有该字段。| |参数的约束及描述：折扣金额，华为核销或者退订的时候没有该字段。|
 	DiscountAmount float32 `json:"discount_amount,omitempty"`
-	// |参数名称：金额单位。1：元；2：角；3：分| |参数的约束及描述：金额单位。1：元；2：角；3：分|
+	// |参数名称：金额单位。1：元| |参数的约束及描述：金额单位。1：元|
 	MeasureId *int32 `json:"measure_id,omitempty"`
 	// |参数名称：按不同账户消费类型和付费方式区分的支付总金额。具体请参见表 BalanceTypeDeductSum。| |参数约束以及描述：按不同账户消费类型和付费方式区分的支付总金额。具体请参见表 BalanceTypeDeductSum。|
 	AccountDetails *[]BalanceTypeDeductSumV2 `json:"account_details,omitempty"`

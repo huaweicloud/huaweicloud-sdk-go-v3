@@ -1,10 +1,3 @@
-/*
- * Classroom
- *
- * devcloud classedge api
- *
- */
-
 package model
 
 import (

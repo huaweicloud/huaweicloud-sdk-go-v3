@@ -2,6 +2,7 @@ package v1
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ces/v1/model"
 	"net/http"
 )
@@ -13,8 +14,6 @@ func GenReqDefForBatchListMetricData() *def.HttpRequestDef {
 		WithResponse(new(model.BatchListMetricDataResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
@@ -23,8 +22,6 @@ func GenReqDefForBatchListMetricData() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -37,13 +34,9 @@ func GenReqDefForCreateAlarm() *def.HttpRequestDef {
 		WithResponse(new(model.CreateAlarmResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -56,8 +49,6 @@ func GenReqDefForCreateAlarmTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.CreateAlarmTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
@@ -66,8 +57,6 @@ func GenReqDefForCreateAlarmTemplate() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -80,8 +69,6 @@ func GenReqDefForCreateEvents() *def.HttpRequestDef {
 		WithResponse(new(model.CreateEventsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
@@ -91,7 +78,6 @@ func GenReqDefForCreateEvents() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -107,13 +93,9 @@ func GenReqDefForCreateMetricData() *def.HttpRequestDef {
 		WithResponse(new(model.CreateMetricDataResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -126,8 +108,6 @@ func GenReqDefForCreateResourceGroup() *def.HttpRequestDef {
 		WithResponse(new(model.CreateResourceGroupResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
@@ -136,8 +116,6 @@ func GenReqDefForCreateResourceGroup() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -150,13 +128,10 @@ func GenReqDefForDeleteAlarm() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteAlarmResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AlarmId").
 		WithJsonTag("alarm_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -169,7 +144,6 @@ func GenReqDefForDeleteAlarmTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteAlarmTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TemplateId").
 		WithJsonTag("template_id").
@@ -179,8 +153,6 @@ func GenReqDefForDeleteAlarmTemplate() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -193,7 +165,6 @@ func GenReqDefForDeleteResourceGroup() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteResourceGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("GroupId").
 		WithJsonTag("group_id").
@@ -203,8 +174,6 @@ func GenReqDefForDeleteResourceGroup() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -216,8 +185,6 @@ func GenReqDefForListAlarmHistories() *def.HttpRequestDef {
 		WithPath("/V1.0/{project_id}/alarm-histories").
 		WithResponse(new(model.ListAlarmHistoriesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("GroupId").
@@ -265,8 +232,6 @@ func GenReqDefForListAlarmHistories() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -277,8 +242,6 @@ func GenReqDefForListAlarmTemplates() *def.HttpRequestDef {
 		WithPath("/V1.0/{project_id}/alarm-template").
 		WithResponse(new(model.ListAlarmTemplatesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AlarmTemplateId").
@@ -306,8 +269,6 @@ func GenReqDefForListAlarmTemplates() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -318,8 +279,6 @@ func GenReqDefForListAlarms() *def.HttpRequestDef {
 		WithPath("/V1.0/{project_id}/alarms").
 		WithResponse(new(model.ListAlarmsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -339,8 +298,6 @@ func GenReqDefForListAlarms() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -352,7 +309,6 @@ func GenReqDefForListEventDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ListEventDetailResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EventName").
 		WithJsonTag("event_name").
@@ -400,8 +356,6 @@ func GenReqDefForListEventDetail() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -412,8 +366,6 @@ func GenReqDefForListEvents() *def.HttpRequestDef {
 		WithPath("/V1.0/{project_id}/events").
 		WithResponse(new(model.ListEventsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EventType").
@@ -445,8 +397,6 @@ func GenReqDefForListEvents() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -457,8 +407,6 @@ func GenReqDefForListMetrics() *def.HttpRequestDef {
 		WithPath("/V1.0/{project_id}/metrics").
 		WithResponse(new(model.ListMetricsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Dim0").
@@ -498,8 +446,6 @@ func GenReqDefForListMetrics() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -510,8 +456,6 @@ func GenReqDefForListResourceGroup() *def.HttpRequestDef {
 		WithPath("/V1.0/{project_id}/resource-groups").
 		WithResponse(new(model.ListResourceGroupResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("GroupName").
@@ -539,8 +483,6 @@ func GenReqDefForListResourceGroup() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -552,7 +494,6 @@ func GenReqDefForShowAlarm() *def.HttpRequestDef {
 		WithResponse(new(model.ShowAlarmResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AlarmId").
 		WithJsonTag("alarm_id").
@@ -562,8 +503,6 @@ func GenReqDefForShowAlarm() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -575,8 +514,6 @@ func GenReqDefForShowEventData() *def.HttpRequestDef {
 		WithPath("/V1.0/{project_id}/event-data").
 		WithResponse(new(model.ShowEventDataResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
@@ -616,8 +553,6 @@ func GenReqDefForShowEventData() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -628,8 +563,6 @@ func GenReqDefForShowMetricData() *def.HttpRequestDef {
 		WithPath("/V1.0/{project_id}/metric-data").
 		WithResponse(new(model.ShowMetricDataResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
@@ -677,8 +610,6 @@ func GenReqDefForShowMetricData() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -690,14 +621,10 @@ func GenReqDefForShowQuotas() *def.HttpRequestDef {
 		WithResponse(new(model.ShowQuotasResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -710,7 +637,6 @@ func GenReqDefForShowResourceGroup() *def.HttpRequestDef {
 		WithResponse(new(model.ShowResourceGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("GroupId").
 		WithJsonTag("group_id").
@@ -742,8 +668,6 @@ func GenReqDefForShowResourceGroup() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -755,7 +679,6 @@ func GenReqDefForUpdateAlarm() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateAlarmResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AlarmId").
 		WithJsonTag("alarm_id").
@@ -769,8 +692,6 @@ func GenReqDefForUpdateAlarm() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -783,7 +704,6 @@ func GenReqDefForUpdateAlarmAction() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateAlarmActionResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AlarmId").
 		WithJsonTag("alarm_id").
@@ -798,8 +718,6 @@ func GenReqDefForUpdateAlarmAction() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -811,7 +729,6 @@ func GenReqDefForUpdateAlarmTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateAlarmTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TemplateId").
 		WithJsonTag("template_id").
@@ -826,8 +743,6 @@ func GenReqDefForUpdateAlarmTemplate() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -839,7 +754,6 @@ func GenReqDefForUpdateResourceGroup() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateResourceGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("GroupId").
 		WithJsonTag("group_id").
@@ -853,8 +767,6 @@ func GenReqDefForUpdateResourceGroup() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

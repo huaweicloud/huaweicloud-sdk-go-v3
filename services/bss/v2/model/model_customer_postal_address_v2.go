@@ -1,10 +1,3 @@
-/*
- * BSS
- *
- * Business Support System API
- *
- */
-
 package model
 
 import (

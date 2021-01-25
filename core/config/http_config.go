@@ -25,7 +25,7 @@ import (
 	"time"
 )
 
-const DefaultTimeout = 30 * time.Second
+const DefaultTimeout = 120 * time.Second
 const DefaultRetries = 0
 const DefaultIgnoreSSLVerification = false
 

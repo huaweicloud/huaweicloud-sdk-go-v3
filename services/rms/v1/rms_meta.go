@@ -2,6 +2,7 @@ package v1
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/rms/v1/model"
 	"net/http"
 )
@@ -13,7 +14,6 @@ func GenReqDefForShowResourceHistory() *def.HttpRequestDef {
 		WithResponse(new(model.ShowResourceHistoryResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceId").
 		WithJsonTag("resource_id").
@@ -40,8 +40,6 @@ func GenReqDefForShowResourceHistory() *def.HttpRequestDef {
 		WithJsonTag("chronological_order").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -53,13 +51,9 @@ func GenReqDefForCreatePolicyAssignments() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePolicyAssignmentsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -72,13 +66,10 @@ func GenReqDefForDeletePolicyAssignment() *def.HttpRequestDef {
 		WithResponse(new(model.DeletePolicyAssignmentResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PolicyAssignmentId").
 		WithJsonTag("policy_assignment_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -91,13 +82,10 @@ func GenReqDefForDisablePolicyAssignment() *def.HttpRequestDef {
 		WithResponse(new(model.DisablePolicyAssignmentResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PolicyAssignmentId").
 		WithJsonTag("policy_assignment_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -110,13 +98,10 @@ func GenReqDefForEnablePolicyAssignment() *def.HttpRequestDef {
 		WithResponse(new(model.EnablePolicyAssignmentResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PolicyAssignmentId").
 		WithJsonTag("policy_assignment_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -129,14 +114,10 @@ func GenReqDefForListBuiltInPolicyDefinitions() *def.HttpRequestDef {
 		WithResponse(new(model.ListBuiltInPolicyDefinitionsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -149,10 +130,6 @@ func GenReqDefForListPolicyAssignments() *def.HttpRequestDef {
 		WithResponse(new(model.ListPolicyAssignmentsResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -164,7 +141,6 @@ func GenReqDefForListPolicyStatesByAssignmentId() *def.HttpRequestDef {
 		WithResponse(new(model.ListPolicyStatesByAssignmentIdResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PolicyAssignmentId").
 		WithJsonTag("policy_assignment_id").
@@ -190,8 +166,6 @@ func GenReqDefForListPolicyStatesByAssignmentId() *def.HttpRequestDef {
 		WithName("Marker").
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -204,8 +178,6 @@ func GenReqDefForListPolicyStatesByDomainId() *def.HttpRequestDef {
 		WithResponse(new(model.ListPolicyStatesByDomainIdResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ComplianceState").
 		WithJsonTag("compliance_state").
@@ -227,8 +199,6 @@ func GenReqDefForListPolicyStatesByDomainId() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -240,7 +210,6 @@ func GenReqDefForListPolicyStatesByResourceId() *def.HttpRequestDef {
 		WithResponse(new(model.ListPolicyStatesByResourceIdResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceId").
 		WithJsonTag("resource_id").
@@ -259,8 +228,6 @@ func GenReqDefForListPolicyStatesByResourceId() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -272,13 +239,10 @@ func GenReqDefForRunEvaluationByPolicyAssignmentId() *def.HttpRequestDef {
 		WithResponse(new(model.RunEvaluationByPolicyAssignmentIdResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PolicyAssignmentId").
 		WithJsonTag("policy_assignment_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -291,7 +255,6 @@ func GenReqDefForShowBuiltInPolicyDefinition() *def.HttpRequestDef {
 		WithResponse(new(model.ShowBuiltInPolicyDefinitionResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PolicyDefinitionId").
 		WithJsonTag("policy_definition_id").
@@ -301,8 +264,6 @@ func GenReqDefForShowBuiltInPolicyDefinition() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -315,13 +276,10 @@ func GenReqDefForShowEvaluationStateByAssignmentId() *def.HttpRequestDef {
 		WithResponse(new(model.ShowEvaluationStateByAssignmentIdResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PolicyAssignmentId").
 		WithJsonTag("policy_assignment_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -334,13 +292,10 @@ func GenReqDefForShowPolicyAssignment() *def.HttpRequestDef {
 		WithResponse(new(model.ShowPolicyAssignmentResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PolicyAssignmentId").
 		WithJsonTag("policy_assignment_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -353,7 +308,6 @@ func GenReqDefForUpdatePolicyAssignment() *def.HttpRequestDef {
 		WithResponse(new(model.UpdatePolicyAssignmentResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PolicyAssignmentId").
 		WithJsonTag("policy_assignment_id").
@@ -362,8 +316,6 @@ func GenReqDefForUpdatePolicyAssignment() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -376,14 +328,10 @@ func GenReqDefForListRegions() *def.HttpRequestDef {
 		WithResponse(new(model.ListRegionsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -396,7 +344,6 @@ func GenReqDefForShowResourceRelations() *def.HttpRequestDef {
 		WithResponse(new(model.ShowResourceRelationsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceId").
 		WithJsonTag("resource_id").
@@ -415,8 +362,6 @@ func GenReqDefForShowResourceRelations() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -427,8 +372,6 @@ func GenReqDefForListAllResources() *def.HttpRequestDef {
 		WithPath("/v1/resource-manager/domains/{domain_id}/all-resources").
 		WithResponse(new(model.ListAllResourcesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("RegionId").
@@ -451,8 +394,6 @@ func GenReqDefForListAllResources() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -463,8 +404,6 @@ func GenReqDefForListProviders() *def.HttpRequestDef {
 		WithPath("/v1/resource-manager/domains/{domain_id}/providers").
 		WithResponse(new(model.ListProvidersResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
@@ -480,8 +419,6 @@ func GenReqDefForListProviders() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -493,7 +430,6 @@ func GenReqDefForListResources() *def.HttpRequestDef {
 		WithResponse(new(model.ListResourcesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Provider").
 		WithJsonTag("provider").
@@ -520,8 +456,6 @@ func GenReqDefForListResources() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -533,7 +467,6 @@ func GenReqDefForShowResourceById() *def.HttpRequestDef {
 		WithResponse(new(model.ShowResourceByIdResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Provider").
 		WithJsonTag("provider").
@@ -547,8 +480,6 @@ func GenReqDefForShowResourceById() *def.HttpRequestDef {
 		WithJsonTag("resource_id").
 		WithLocationType(def.Path))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -560,13 +491,9 @@ func GenReqDefForCreateTrackerConfig() *def.HttpRequestDef {
 		WithResponse(new(model.CreateTrackerConfigResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -579,10 +506,6 @@ func GenReqDefForDeleteTrackerConfig() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteTrackerConfigResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -593,10 +516,6 @@ func GenReqDefForShowTrackerConfig() *def.HttpRequestDef {
 		WithPath("/v1/resource-manager/domains/{domain_id}/tracker-config").
 		WithResponse(new(model.ShowTrackerConfigResponse)).
 		WithContentType("application/json")
-
-	// request
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

@@ -2,6 +2,7 @@ package v2
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudpipeline/v2/model"
 	"net/http"
 )
@@ -13,8 +14,6 @@ func GenReqDefForBatchShowPipelinesStatus() *def.HttpRequestDef {
 		WithResponse(new(model.BatchShowPipelinesStatusResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PipelineIds").
 		WithJsonTag("pipeline_ids").
@@ -25,7 +24,6 @@ func GenReqDefForBatchShowPipelinesStatus() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -41,8 +39,6 @@ func GenReqDefForCreatePipelineByTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePipelineByTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
@@ -51,8 +47,6 @@ func GenReqDefForCreatePipelineByTemplate() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -64,8 +58,6 @@ func GenReqDefForListPipleineBuildResult() *def.HttpRequestDef {
 		WithPath("/v3/pipelines/build-result").
 		WithResponse(new(model.ListPipleineBuildResultResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
@@ -93,8 +85,6 @@ func GenReqDefForListPipleineBuildResult() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -105,8 +95,6 @@ func GenReqDefForListTemplates() *def.HttpRequestDef {
 		WithPath("/v3/templates").
 		WithResponse(new(model.ListTemplatesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TemplateType").
@@ -142,8 +130,6 @@ func GenReqDefForListTemplates() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -155,13 +141,9 @@ func GenReqDefForRegisterAgent() *def.HttpRequestDef {
 		WithResponse(new(model.RegisterAgentResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -174,7 +156,6 @@ func GenReqDefForRemovePipeline() *def.HttpRequestDef {
 		WithResponse(new(model.RemovePipelineResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PipelineId").
 		WithJsonTag("pipeline_id").
@@ -184,8 +165,6 @@ func GenReqDefForRemovePipeline() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -198,7 +177,6 @@ func GenReqDefForShowAgentStatus() *def.HttpRequestDef {
 		WithResponse(new(model.ShowAgentStatusResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AgentId").
 		WithJsonTag("agent_id").
@@ -208,8 +186,6 @@ func GenReqDefForShowAgentStatus() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -222,7 +198,6 @@ func GenReqDefForShowInstanceStatus() *def.HttpRequestDef {
 		WithResponse(new(model.ShowInstanceStatusResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
@@ -232,8 +207,6 @@ func GenReqDefForShowInstanceStatus() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -246,7 +219,6 @@ func GenReqDefForShowPipleineStatus() *def.HttpRequestDef {
 		WithResponse(new(model.ShowPipleineStatusResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PipelineId").
 		WithJsonTag("pipeline_id").
@@ -262,8 +234,6 @@ func GenReqDefForShowPipleineStatus() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -275,7 +245,6 @@ func GenReqDefForShowTemplateDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ShowTemplateDetailResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TemplateId").
 		WithJsonTag("template_id").
@@ -295,8 +264,6 @@ func GenReqDefForShowTemplateDetail() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -308,7 +275,6 @@ func GenReqDefForStartNewPipeline() *def.HttpRequestDef {
 		WithResponse(new(model.StartNewPipelineResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PipelineId").
 		WithJsonTag("pipeline_id").
@@ -323,8 +289,6 @@ func GenReqDefForStartNewPipeline() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -335,8 +299,6 @@ func GenReqDefForStartPipeline() *def.HttpRequestDef {
 		WithPath("/v3/pipelines/start").
 		WithResponse(new(model.StartPipelineResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PipelineId").
@@ -352,8 +314,6 @@ func GenReqDefForStartPipeline() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -364,8 +324,6 @@ func GenReqDefForStopPipeline() *def.HttpRequestDef {
 		WithPath("/v3/pipelines/stop").
 		WithResponse(new(model.StopPipelineResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PipelineId").
@@ -380,8 +338,6 @@ func GenReqDefForStopPipeline() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

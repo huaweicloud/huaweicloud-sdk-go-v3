@@ -1,10 +1,3 @@
-/*
- * ProjectMan
- *
- * devcloud projectman api
- *
- */
-
 package model
 
 import (

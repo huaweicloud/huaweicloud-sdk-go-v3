@@ -2,6 +2,7 @@ package v3
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dds/v3/model"
 	"net/http"
 )
@@ -13,7 +14,6 @@ func GenReqDefForAddShardingNode() *def.HttpRequestDef {
 		WithResponse(new(model.AddShardingNodeResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -22,8 +22,6 @@ func GenReqDefForAddShardingNode() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -36,7 +34,6 @@ func GenReqDefForAttachEip() *def.HttpRequestDef {
 		WithResponse(new(model.AttachEipResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NodeId").
 		WithJsonTag("node_id").
@@ -45,8 +42,6 @@ func GenReqDefForAttachEip() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -59,7 +54,6 @@ func GenReqDefForAttachInternalIp() *def.HttpRequestDef {
 		WithResponse(new(model.AttachInternalIpResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -68,8 +62,6 @@ func GenReqDefForAttachInternalIp() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -82,7 +74,6 @@ func GenReqDefForBatchTagAction() *def.HttpRequestDef {
 		WithResponse(new(model.BatchTagActionResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -91,8 +82,6 @@ func GenReqDefForBatchTagAction() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -105,13 +94,10 @@ func GenReqDefForCancelEip() *def.HttpRequestDef {
 		WithResponse(new(model.CancelEipResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NodeId").
 		WithJsonTag("node_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -124,7 +110,6 @@ func GenReqDefForCreateDatabaseRole() *def.HttpRequestDef {
 		WithResponse(new(model.CreateDatabaseRoleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -133,8 +118,6 @@ func GenReqDefForCreateDatabaseRole() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -147,7 +130,6 @@ func GenReqDefForCreateDatabaseUser() *def.HttpRequestDef {
 		WithResponse(new(model.CreateDatabaseUserResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -156,8 +138,6 @@ func GenReqDefForCreateDatabaseUser() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -170,13 +150,9 @@ func GenReqDefForCreateInstance() *def.HttpRequestDef {
 		WithResponse(new(model.CreateInstanceResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -189,13 +165,9 @@ func GenReqDefForCreateManualBackup() *def.HttpRequestDef {
 		WithResponse(new(model.CreateManualBackupResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -208,13 +180,10 @@ func GenReqDefForDeleteInstance() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteInstanceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -227,13 +196,10 @@ func GenReqDefForDeleteManualBackup() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteManualBackupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BackupId").
 		WithJsonTag("backup_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -246,7 +212,6 @@ func GenReqDefForDownloadSlowlog() *def.HttpRequestDef {
 		WithResponse(new(model.DownloadSlowlogResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -255,8 +220,6 @@ func GenReqDefForDownloadSlowlog() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -268,8 +231,6 @@ func GenReqDefForListBackups() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/backups").
 		WithResponse(new(model.ListBackupsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
@@ -304,8 +265,6 @@ func GenReqDefForListBackups() *def.HttpRequestDef {
 		WithJsonTag("mode").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -317,7 +276,6 @@ func GenReqDefForListDatabaseRoles() *def.HttpRequestDef {
 		WithResponse(new(model.ListDatabaseRolesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -340,8 +298,6 @@ func GenReqDefForListDatabaseRoles() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -353,7 +309,6 @@ func GenReqDefForListDatabaseUsers() *def.HttpRequestDef {
 		WithResponse(new(model.ListDatabaseUsersResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -376,8 +331,6 @@ func GenReqDefForListDatabaseUsers() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -389,13 +342,10 @@ func GenReqDefForListDatastoreVersions() *def.HttpRequestDef {
 		WithResponse(new(model.ListDatastoreVersionsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("DatastoreName").
 		WithJsonTag("datastore_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -408,8 +358,6 @@ func GenReqDefForListFlavors() *def.HttpRequestDef {
 		WithResponse(new(model.ListFlavorsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Region").
 		WithJsonTag("region").
@@ -418,8 +366,6 @@ func GenReqDefForListFlavors() *def.HttpRequestDef {
 		WithName("EngineName").
 		WithJsonTag("engine_name").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -432,13 +378,10 @@ func GenReqDefForListInstanceTags() *def.HttpRequestDef {
 		WithResponse(new(model.ListInstanceTagsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -450,8 +393,6 @@ func GenReqDefForListInstances() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/instances").
 		WithResponse(new(model.ListInstancesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Id").
@@ -486,8 +427,6 @@ func GenReqDefForListInstances() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -499,13 +438,9 @@ func GenReqDefForListInstancesByTags() *def.HttpRequestDef {
 		WithResponse(new(model.ListInstancesByTagsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -518,10 +453,6 @@ func GenReqDefForListProjectTags() *def.HttpRequestDef {
 		WithResponse(new(model.ListProjectTagsResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -533,7 +464,6 @@ func GenReqDefForListSlowLogs() *def.HttpRequestDef {
 		WithResponse(new(model.ListSlowLogsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -564,8 +494,6 @@ func GenReqDefForListSlowLogs() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -577,14 +505,10 @@ func GenReqDefForListStorageType() *def.HttpRequestDef {
 		WithResponse(new(model.ListStorageTypeResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EngineName").
 		WithJsonTag("engine_name").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -597,7 +521,6 @@ func GenReqDefForResetPassword() *def.HttpRequestDef {
 		WithResponse(new(model.ResetPasswordResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -606,8 +529,6 @@ func GenReqDefForResetPassword() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -620,7 +541,6 @@ func GenReqDefForResizeInstance() *def.HttpRequestDef {
 		WithResponse(new(model.ResizeInstanceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -629,8 +549,6 @@ func GenReqDefForResizeInstance() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -643,7 +561,6 @@ func GenReqDefForResizeInstanceVolume() *def.HttpRequestDef {
 		WithResponse(new(model.ResizeInstanceVolumeResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -652,8 +569,6 @@ func GenReqDefForResizeInstanceVolume() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -666,7 +581,6 @@ func GenReqDefForRestartInstance() *def.HttpRequestDef {
 		WithResponse(new(model.RestartInstanceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -675,8 +589,6 @@ func GenReqDefForRestartInstance() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -689,7 +601,6 @@ func GenReqDefForSetBackupPolicy() *def.HttpRequestDef {
 		WithResponse(new(model.SetBackupPolicyResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -698,8 +609,6 @@ func GenReqDefForSetBackupPolicy() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -711,8 +620,6 @@ func GenReqDefForShowBackupDownloadLink() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/backups/download-file").
 		WithResponse(new(model.ShowBackupDownloadLinkResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
@@ -728,8 +635,6 @@ func GenReqDefForShowBackupDownloadLink() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -741,13 +646,10 @@ func GenReqDefForShowBackupPolicy() *def.HttpRequestDef {
 		WithResponse(new(model.ShowBackupPolicyResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -760,7 +662,6 @@ func GenReqDefForSwitchSsl() *def.HttpRequestDef {
 		WithResponse(new(model.SwitchSslResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -769,8 +670,6 @@ func GenReqDefForSwitchSsl() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -783,13 +682,10 @@ func GenReqDefForSwitchoverReplicaSet() *def.HttpRequestDef {
 		WithResponse(new(model.SwitchoverReplicaSetResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -802,7 +698,6 @@ func GenReqDefForUpdateInstanceName() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateInstanceNameResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -811,8 +706,6 @@ func GenReqDefForUpdateInstanceName() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -825,7 +718,6 @@ func GenReqDefForUpdateInstancePort() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateInstancePortResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -834,8 +726,6 @@ func GenReqDefForUpdateInstancePort() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -848,7 +738,6 @@ func GenReqDefForUpdateSecurityGroup() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateSecurityGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -857,8 +746,6 @@ func GenReqDefForUpdateSecurityGroup() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

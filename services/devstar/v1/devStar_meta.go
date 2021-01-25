@@ -2,6 +2,7 @@ package v1
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/devstar/v1/model"
 	"net/http"
 )
@@ -13,8 +14,6 @@ func GenReqDefForDownloadApplicationCode() *def.HttpRequestDef {
 		WithResponse(new(model.DownloadApplicationCodeResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobId").
 		WithJsonTag("job_id").
@@ -24,8 +23,6 @@ func GenReqDefForDownloadApplicationCode() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -38,8 +35,6 @@ func GenReqDefForRunCodehubTemplateJob() *def.HttpRequestDef {
 		WithResponse(new(model.RunCodehubTemplateJobResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
@@ -48,8 +43,6 @@ func GenReqDefForRunCodehubTemplateJob() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -62,8 +55,6 @@ func GenReqDefForRunDevstarTemplateJob() *def.HttpRequestDef {
 		WithResponse(new(model.RunDevstarTemplateJobResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
@@ -72,8 +63,6 @@ func GenReqDefForRunDevstarTemplateJob() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -86,7 +75,6 @@ func GenReqDefForShowJobDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ShowJobDetailResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobId").
 		WithJsonTag("job_id").
@@ -96,8 +84,6 @@ func GenReqDefForShowJobDetail() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -110,7 +96,6 @@ func GenReqDefForShowTemplateFile() *def.HttpRequestDef {
 		WithResponse(new(model.ShowTemplateFileResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TemplateId").
 		WithJsonTag("template_id").
@@ -130,8 +115,6 @@ func GenReqDefForShowTemplateFile() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -143,8 +126,6 @@ func GenReqDefForCreateTemplateViewHistories() *def.HttpRequestDef {
 		WithResponse(new(model.CreateTemplateViewHistoriesResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
@@ -153,8 +134,6 @@ func GenReqDefForCreateTemplateViewHistories() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -166,8 +145,6 @@ func GenReqDefForListPublishedTemplates() *def.HttpRequestDef {
 		WithPath("/v1/templates").
 		WithResponse(new(model.ListPublishedTemplatesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Keyword").
@@ -187,8 +164,6 @@ func GenReqDefForListPublishedTemplates() *def.HttpRequestDef {
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -200,8 +175,6 @@ func GenReqDefForListTemplateViewHistories() *def.HttpRequestDef {
 		WithResponse(new(model.ListTemplateViewHistoriesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PlatformSource").
 		WithJsonTag("platform_source").
@@ -211,8 +184,6 @@ func GenReqDefForListTemplateViewHistories() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -224,8 +195,6 @@ func GenReqDefForListTemplatesV2() *def.HttpRequestDef {
 		WithPath("/v2/templates/action").
 		WithResponse(new(model.ListTemplatesV2Response)).
 		WithContentType("application/json;charset=UTF-8")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ActionId").
@@ -241,8 +210,6 @@ func GenReqDefForListTemplatesV2() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -254,7 +221,6 @@ func GenReqDefForShowTemplateV3() *def.HttpRequestDef {
 		WithResponse(new(model.ShowTemplateV3Response)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TemplateId").
 		WithJsonTag("template_id").
@@ -264,8 +230,6 @@ func GenReqDefForShowTemplateV3() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -278,7 +242,6 @@ func GenReqDefForShowTemplateDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ShowTemplateDetailResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TemplateId").
 		WithJsonTag("template_id").
@@ -288,8 +251,6 @@ func GenReqDefForShowTemplateDetail() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

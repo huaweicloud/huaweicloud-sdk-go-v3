@@ -1,10 +1,3 @@
-/*
- * BSS
- *
- * Business Support System API
- *
- */
-
 package model
 
 import (
@@ -26,7 +19,7 @@ type CustomerOrderEntity struct {
 	AmountAfterDiscount *float64 `json:"amount_after_discount,omitempty"`
 	// |参数名称：订单金额（官网价）。退订订单中，该金额等于amount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于amount。|
 	OfficialAmount *float64 `json:"official_amount,omitempty"`
-	// |参数名称：订单金额度量单位：1：元2：角3：分| |参数的约束及描述：订单金额度量单位：1：元2：角3：分|
+	// |参数名称：订单金额度量单位：1：元| |参数的约束及描述：订单金额度量单位：1：元|
 	MeasureId *int32 `json:"measure_id,omitempty"`
 	// |参数名称：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
 	CreateTime *string `json:"create_time,omitempty"`

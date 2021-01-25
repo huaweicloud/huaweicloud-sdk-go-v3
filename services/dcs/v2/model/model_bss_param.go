@@ -1,10 +1,3 @@
-/*
- * DCS
- *
- * DCS V2版本API
- *
- */
-
 package model
 
 import (

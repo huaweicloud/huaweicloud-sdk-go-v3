@@ -1,10 +1,3 @@
-/*
- * BSS
- *
- * Business Support System API
- *
- */
-
 package model
 
 import (
@@ -102,7 +95,7 @@ type ResFeeRecordV2 struct {
 	DebtAmount float32 `json:"debt_amount,omitempty"`
 	// |参数名称：欠费核销金额。| |参数约束及描述： 欠费核销金额。|
 	AdjustmentAmount float32 `json:"adjustment_amount,omitempty"`
-	// |参数名称：金额单位 1：元| |参数的约束及描述：金额单位 1：元|
+	// |参数名称：金额单位：1：元| |参数的约束及描述：金额单位：1：元|
 	MeasureId *int32 `json:"measure_id,omitempty"`
 }
 

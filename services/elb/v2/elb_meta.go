@@ -2,6 +2,7 @@ package v2
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/elb/v2/model"
 	"net/http"
 )
@@ -13,13 +14,9 @@ func GenReqDefForCreateHealthmonitor() *def.HttpRequestDef {
 		WithResponse(new(model.CreateHealthmonitorResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -32,13 +29,9 @@ func GenReqDefForCreateL7policy() *def.HttpRequestDef {
 		WithResponse(new(model.CreateL7policyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -51,7 +44,6 @@ func GenReqDefForCreateL7rule() *def.HttpRequestDef {
 		WithResponse(new(model.CreateL7ruleResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("L7policyId").
 		WithJsonTag("l7policy_id").
@@ -60,8 +52,6 @@ func GenReqDefForCreateL7rule() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -74,13 +64,9 @@ func GenReqDefForCreateListener() *def.HttpRequestDef {
 		WithResponse(new(model.CreateListenerResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -93,13 +79,9 @@ func GenReqDefForCreateLoadbalancer() *def.HttpRequestDef {
 		WithResponse(new(model.CreateLoadbalancerResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -112,7 +94,6 @@ func GenReqDefForCreateMember() *def.HttpRequestDef {
 		WithResponse(new(model.CreateMemberResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PoolId").
 		WithJsonTag("pool_id").
@@ -121,8 +102,6 @@ func GenReqDefForCreateMember() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -135,13 +114,9 @@ func GenReqDefForCreatePool() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePoolResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -154,13 +129,9 @@ func GenReqDefForCreateWhitelist() *def.HttpRequestDef {
 		WithResponse(new(model.CreateWhitelistResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -173,13 +144,10 @@ func GenReqDefForDeleteHealthmonitor() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteHealthmonitorResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("HealthmonitorId").
 		WithJsonTag("healthmonitor_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -192,13 +160,10 @@ func GenReqDefForDeleteL7policy() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteL7policyResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("L7policyId").
 		WithJsonTag("l7policy_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -211,7 +176,6 @@ func GenReqDefForDeleteL7rule() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteL7ruleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("L7policyId").
 		WithJsonTag("l7policy_id").
@@ -220,8 +184,6 @@ func GenReqDefForDeleteL7rule() *def.HttpRequestDef {
 		WithName("L7ruleId").
 		WithJsonTag("l7rule_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -234,7 +196,6 @@ func GenReqDefForDeleteListener() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteListenerResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ListenerId").
 		WithJsonTag("listener_id").
@@ -244,8 +205,6 @@ func GenReqDefForDeleteListener() *def.HttpRequestDef {
 		WithName("Cascade").
 		WithJsonTag("cascade").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -258,7 +217,6 @@ func GenReqDefForDeleteLoadbalancer() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteLoadbalancerResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("LoadbalancerId").
 		WithJsonTag("loadbalancer_id").
@@ -268,8 +226,6 @@ func GenReqDefForDeleteLoadbalancer() *def.HttpRequestDef {
 		WithName("Cascade").
 		WithJsonTag("cascade").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -282,7 +238,6 @@ func GenReqDefForDeleteMember() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteMemberResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PoolId").
 		WithJsonTag("pool_id").
@@ -291,8 +246,6 @@ func GenReqDefForDeleteMember() *def.HttpRequestDef {
 		WithName("MemberId").
 		WithJsonTag("member_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -305,13 +258,10 @@ func GenReqDefForDeletePool() *def.HttpRequestDef {
 		WithResponse(new(model.DeletePoolResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PoolId").
 		WithJsonTag("pool_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -324,13 +274,10 @@ func GenReqDefForDeleteWhitelist() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteWhitelistResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("WhitelistId").
 		WithJsonTag("whitelist_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -342,8 +289,6 @@ func GenReqDefForListHealthmonitors() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/elb/healthmonitors").
 		WithResponse(new(model.ListHealthmonitorsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -406,8 +351,6 @@ func GenReqDefForListHealthmonitors() *def.HttpRequestDef {
 		WithJsonTag("http_method").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -418,8 +361,6 @@ func GenReqDefForListL7policies() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/elb/l7policies").
 		WithResponse(new(model.ListL7policiesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -486,8 +427,6 @@ func GenReqDefForListL7policies() *def.HttpRequestDef {
 		WithJsonTag("display_all_rules").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -499,7 +438,6 @@ func GenReqDefForListL7rules() *def.HttpRequestDef {
 		WithResponse(new(model.ListL7rulesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("L7policyId").
 		WithJsonTag("l7policy_id").
@@ -550,8 +488,6 @@ func GenReqDefForListL7rules() *def.HttpRequestDef {
 		WithJsonTag("provisioning_status").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -562,8 +498,6 @@ func GenReqDefForListListeners() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/elb/listeners").
 		WithResponse(new(model.ListListenersResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -630,8 +564,6 @@ func GenReqDefForListListeners() *def.HttpRequestDef {
 		WithJsonTag("tls_container_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -642,8 +574,6 @@ func GenReqDefForListLoadbalancers() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/elb/loadbalancers").
 		WithResponse(new(model.ListLoadbalancersResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -710,8 +640,6 @@ func GenReqDefForListLoadbalancers() *def.HttpRequestDef {
 		WithJsonTag("member_device_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -723,7 +651,6 @@ func GenReqDefForListMenbers() *def.HttpRequestDef {
 		WithResponse(new(model.ListMenbersResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PoolId").
 		WithJsonTag("pool_id").
@@ -770,8 +697,6 @@ func GenReqDefForListMenbers() *def.HttpRequestDef {
 		WithJsonTag("weight").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -782,8 +707,6 @@ func GenReqDefForListPools() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/elb/pools").
 		WithResponse(new(model.ListPoolsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -838,8 +761,6 @@ func GenReqDefForListPools() *def.HttpRequestDef {
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -850,8 +771,6 @@ func GenReqDefForListWhitelists() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/elb/whitelists").
 		WithResponse(new(model.ListWhitelistsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -882,8 +801,6 @@ func GenReqDefForListWhitelists() *def.HttpRequestDef {
 		WithJsonTag("whitelist").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -895,13 +812,10 @@ func GenReqDefForShowHealthmonitors() *def.HttpRequestDef {
 		WithResponse(new(model.ShowHealthmonitorsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("HealthmonitorId").
 		WithJsonTag("healthmonitor_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -914,13 +828,10 @@ func GenReqDefForShowL7policy() *def.HttpRequestDef {
 		WithResponse(new(model.ShowL7policyResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("L7policyId").
 		WithJsonTag("l7policy_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -933,7 +844,6 @@ func GenReqDefForShowL7rule() *def.HttpRequestDef {
 		WithResponse(new(model.ShowL7ruleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("L7policyId").
 		WithJsonTag("l7policy_id").
@@ -942,8 +852,6 @@ func GenReqDefForShowL7rule() *def.HttpRequestDef {
 		WithName("L7ruleId").
 		WithJsonTag("l7rule_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -956,13 +864,10 @@ func GenReqDefForShowListener() *def.HttpRequestDef {
 		WithResponse(new(model.ShowListenerResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ListenerId").
 		WithJsonTag("listener_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -975,13 +880,10 @@ func GenReqDefForShowLoadbalancer() *def.HttpRequestDef {
 		WithResponse(new(model.ShowLoadbalancerResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("LoadbalancerId").
 		WithJsonTag("loadbalancer_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -994,13 +896,10 @@ func GenReqDefForShowLoadbalancersStatus() *def.HttpRequestDef {
 		WithResponse(new(model.ShowLoadbalancersStatusResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("LoadbalancerId").
 		WithJsonTag("loadbalancer_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1013,7 +912,6 @@ func GenReqDefForShowMember() *def.HttpRequestDef {
 		WithResponse(new(model.ShowMemberResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PoolId").
 		WithJsonTag("pool_id").
@@ -1022,8 +920,6 @@ func GenReqDefForShowMember() *def.HttpRequestDef {
 		WithName("MemberId").
 		WithJsonTag("member_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1036,13 +932,10 @@ func GenReqDefForShowPool() *def.HttpRequestDef {
 		WithResponse(new(model.ShowPoolResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PoolId").
 		WithJsonTag("pool_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1055,13 +948,10 @@ func GenReqDefForShowWhitelist() *def.HttpRequestDef {
 		WithResponse(new(model.ShowWhitelistResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("WhitelistId").
 		WithJsonTag("whitelist_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1074,7 +964,6 @@ func GenReqDefForUpdateHealthmonitor() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateHealthmonitorResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("HealthmonitorId").
 		WithJsonTag("healthmonitor_id").
@@ -1083,8 +972,6 @@ func GenReqDefForUpdateHealthmonitor() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1097,7 +984,6 @@ func GenReqDefForUpdateL7policies() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateL7policiesResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("L7policyId").
 		WithJsonTag("l7policy_id").
@@ -1106,8 +992,6 @@ func GenReqDefForUpdateL7policies() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1120,7 +1004,6 @@ func GenReqDefForUpdateL7rule() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateL7ruleResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("L7policyId").
 		WithJsonTag("l7policy_id").
@@ -1134,8 +1017,6 @@ func GenReqDefForUpdateL7rule() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1147,7 +1028,6 @@ func GenReqDefForUpdateListener() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateListenerResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ListenerId").
 		WithJsonTag("listener_id").
@@ -1156,8 +1036,6 @@ func GenReqDefForUpdateListener() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1170,7 +1048,6 @@ func GenReqDefForUpdateLoadbalancer() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateLoadbalancerResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("LoadbalancerId").
 		WithJsonTag("loadbalancer_id").
@@ -1179,8 +1056,6 @@ func GenReqDefForUpdateLoadbalancer() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1193,7 +1068,6 @@ func GenReqDefForUpdateMember() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateMemberResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("MemberId").
 		WithJsonTag("member_id").
@@ -1207,8 +1081,6 @@ func GenReqDefForUpdateMember() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1220,7 +1092,6 @@ func GenReqDefForUpdatePool() *def.HttpRequestDef {
 		WithResponse(new(model.UpdatePoolResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PoolId").
 		WithJsonTag("pool_id").
@@ -1229,8 +1100,6 @@ func GenReqDefForUpdatePool() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1243,7 +1112,6 @@ func GenReqDefForUpdateWhitelist() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateWhitelistResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("WhitelistId").
 		WithJsonTag("whitelist_id").
@@ -1252,8 +1120,6 @@ func GenReqDefForUpdateWhitelist() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1266,13 +1132,9 @@ func GenReqDefForCreateCertificate() *def.HttpRequestDef {
 		WithResponse(new(model.CreateCertificateResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1285,13 +1147,10 @@ func GenReqDefForDeleteCertificate() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteCertificateResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CertificateId").
 		WithJsonTag("certificate_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1303,8 +1162,6 @@ func GenReqDefForListCertificates() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/elb/certificates").
 		WithResponse(new(model.ListCertificatesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -1347,8 +1204,6 @@ func GenReqDefForListCertificates() *def.HttpRequestDef {
 		WithJsonTag("certificate").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1360,13 +1215,10 @@ func GenReqDefForShowCertificate() *def.HttpRequestDef {
 		WithResponse(new(model.ShowCertificateResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CertificateId").
 		WithJsonTag("certificate_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1379,7 +1231,6 @@ func GenReqDefForUpdateCertificate() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateCertificateResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CertificateId").
 		WithJsonTag("certificate_id").
@@ -1388,8 +1239,6 @@ func GenReqDefForUpdateCertificate() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

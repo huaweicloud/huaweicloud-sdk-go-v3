@@ -2,6 +2,7 @@ package v1
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/as/v1/model"
 	"net/http"
 )
@@ -13,13 +14,9 @@ func GenReqDefForBatchDeleteScalingConfigs() *def.HttpRequestDef {
 		WithResponse(new(model.BatchDeleteScalingConfigsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -32,7 +29,6 @@ func GenReqDefForCompleteLifecycleAction() *def.HttpRequestDef {
 		WithResponse(new(model.CompleteLifecycleActionResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -41,8 +37,6 @@ func GenReqDefForCompleteLifecycleAction() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -55,7 +49,6 @@ func GenReqDefForCreateLifyCycleHook() *def.HttpRequestDef {
 		WithResponse(new(model.CreateLifyCycleHookResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -64,8 +57,6 @@ func GenReqDefForCreateLifyCycleHook() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -78,13 +69,9 @@ func GenReqDefForCreateScalingConfig() *def.HttpRequestDef {
 		WithResponse(new(model.CreateScalingConfigResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -97,13 +84,9 @@ func GenReqDefForCreateScalingGroup() *def.HttpRequestDef {
 		WithResponse(new(model.CreateScalingGroupResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -116,7 +99,6 @@ func GenReqDefForCreateScalingNotification() *def.HttpRequestDef {
 		WithResponse(new(model.CreateScalingNotificationResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -125,8 +107,6 @@ func GenReqDefForCreateScalingNotification() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -139,13 +119,9 @@ func GenReqDefForCreateScalingPolicy() *def.HttpRequestDef {
 		WithResponse(new(model.CreateScalingPolicyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -158,7 +134,6 @@ func GenReqDefForCreateScalingTags() *def.HttpRequestDef {
 		WithResponse(new(model.CreateScalingTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceType").
 		WithJsonTag("resource_type").
@@ -171,8 +146,6 @@ func GenReqDefForCreateScalingTags() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -185,7 +158,6 @@ func GenReqDefForDeleteLifecycleHook() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteLifecycleHookResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -194,8 +166,6 @@ func GenReqDefForDeleteLifecycleHook() *def.HttpRequestDef {
 		WithName("LifecycleHookName").
 		WithJsonTag("lifecycle_hook_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -208,13 +178,10 @@ func GenReqDefForDeleteScalingConfig() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteScalingConfigResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingConfigurationId").
 		WithJsonTag("scaling_configuration_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -227,7 +194,6 @@ func GenReqDefForDeleteScalingGroup() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteScalingGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -237,8 +203,6 @@ func GenReqDefForDeleteScalingGroup() *def.HttpRequestDef {
 		WithName("ForceDelete").
 		WithJsonTag("force_delete").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -251,7 +215,6 @@ func GenReqDefForDeleteScalingInstance() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteScalingInstanceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -261,8 +224,6 @@ func GenReqDefForDeleteScalingInstance() *def.HttpRequestDef {
 		WithName("InstanceDelete").
 		WithJsonTag("instance_delete").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -275,7 +236,6 @@ func GenReqDefForDeleteScalingNotification() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteScalingNotificationResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -284,8 +244,6 @@ func GenReqDefForDeleteScalingNotification() *def.HttpRequestDef {
 		WithName("TopicUrn").
 		WithJsonTag("topic_urn").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -298,13 +256,10 @@ func GenReqDefForDeleteScalingPolicy() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteScalingPolicyResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingPolicyId").
 		WithJsonTag("scaling_policy_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -317,7 +272,6 @@ func GenReqDefForDeleteScalingTags() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteScalingTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceType").
 		WithJsonTag("resource_type").
@@ -331,8 +285,6 @@ func GenReqDefForDeleteScalingTags() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -344,7 +296,6 @@ func GenReqDefForEnableOrDisableScalingGroup() *def.HttpRequestDef {
 		WithResponse(new(model.EnableOrDisableScalingGroupResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -353,8 +304,6 @@ func GenReqDefForEnableOrDisableScalingGroup() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -367,7 +316,6 @@ func GenReqDefForExecuteScalingPolicy() *def.HttpRequestDef {
 		WithResponse(new(model.ExecuteScalingPolicyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingPolicyId").
 		WithJsonTag("scaling_policy_id").
@@ -376,8 +324,6 @@ func GenReqDefForExecuteScalingPolicy() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -390,7 +336,6 @@ func GenReqDefForListHookInstances() *def.HttpRequestDef {
 		WithResponse(new(model.ListHookInstancesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -400,8 +345,6 @@ func GenReqDefForListHookInstances() *def.HttpRequestDef {
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -414,13 +357,10 @@ func GenReqDefForListLifeCycleHooks() *def.HttpRequestDef {
 		WithResponse(new(model.ListLifeCycleHooksResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -433,7 +373,6 @@ func GenReqDefForListResourceInstances() *def.HttpRequestDef {
 		WithResponse(new(model.ListResourceInstancesResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceType").
 		WithJsonTag("resource_type").
@@ -442,8 +381,6 @@ func GenReqDefForListResourceInstances() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -456,7 +393,6 @@ func GenReqDefForListScalingActivityLogs() *def.HttpRequestDef {
 		WithResponse(new(model.ListScalingActivityLogsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -479,8 +415,6 @@ func GenReqDefForListScalingActivityLogs() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -491,8 +425,6 @@ func GenReqDefForListScalingConfigs() *def.HttpRequestDef {
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_configuration").
 		WithResponse(new(model.ListScalingConfigsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingConfigurationName").
@@ -511,8 +443,6 @@ func GenReqDefForListScalingConfigs() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -523,8 +453,6 @@ func GenReqDefForListScalingGroups() *def.HttpRequestDef {
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_group").
 		WithResponse(new(model.ListScalingGroupsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupName").
@@ -547,8 +475,6 @@ func GenReqDefForListScalingGroups() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -560,7 +486,6 @@ func GenReqDefForListScalingInstances() *def.HttpRequestDef {
 		WithResponse(new(model.ListScalingInstancesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -587,8 +512,6 @@ func GenReqDefForListScalingInstances() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -600,13 +523,10 @@ func GenReqDefForListScalingNotifications() *def.HttpRequestDef {
 		WithResponse(new(model.ListScalingNotificationsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -619,7 +539,6 @@ func GenReqDefForListScalingPolicies() *def.HttpRequestDef {
 		WithResponse(new(model.ListScalingPoliciesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -646,8 +565,6 @@ func GenReqDefForListScalingPolicies() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -659,7 +576,6 @@ func GenReqDefForListScalingPolicyExecuteLogs() *def.HttpRequestDef {
 		WithResponse(new(model.ListScalingPolicyExecuteLogsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingPolicyId").
 		WithJsonTag("scaling_policy_id").
@@ -698,8 +614,6 @@ func GenReqDefForListScalingPolicyExecuteLogs() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -711,7 +625,6 @@ func GenReqDefForListScalingTagInfosByResourceId() *def.HttpRequestDef {
 		WithResponse(new(model.ListScalingTagInfosByResourceIdResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceType").
 		WithJsonTag("resource_type").
@@ -720,8 +633,6 @@ func GenReqDefForListScalingTagInfosByResourceId() *def.HttpRequestDef {
 		WithName("ResourceId").
 		WithJsonTag("resource_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -734,13 +645,10 @@ func GenReqDefForListScalingTagInfosByTenantId() *def.HttpRequestDef {
 		WithResponse(new(model.ListScalingTagInfosByTenantIdResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceType").
 		WithJsonTag("resource_type").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -753,7 +661,6 @@ func GenReqDefForShowLifeCycleHook() *def.HttpRequestDef {
 		WithResponse(new(model.ShowLifeCycleHookResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -762,8 +669,6 @@ func GenReqDefForShowLifeCycleHook() *def.HttpRequestDef {
 		WithName("LifecycleHookName").
 		WithJsonTag("lifecycle_hook_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -776,13 +681,10 @@ func GenReqDefForShowPolicyAndInstanceQuota() *def.HttpRequestDef {
 		WithResponse(new(model.ShowPolicyAndInstanceQuotaResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -795,10 +697,6 @@ func GenReqDefForShowResourceQuota() *def.HttpRequestDef {
 		WithResponse(new(model.ShowResourceQuotaResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -810,13 +708,10 @@ func GenReqDefForShowScalingConfig() *def.HttpRequestDef {
 		WithResponse(new(model.ShowScalingConfigResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingConfigurationId").
 		WithJsonTag("scaling_configuration_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -829,13 +724,10 @@ func GenReqDefForShowScalingGroup() *def.HttpRequestDef {
 		WithResponse(new(model.ShowScalingGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -848,13 +740,10 @@ func GenReqDefForShowScalingPolicy() *def.HttpRequestDef {
 		WithResponse(new(model.ShowScalingPolicyResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingPolicyId").
 		WithJsonTag("scaling_policy_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -867,7 +756,6 @@ func GenReqDefForUpdateLifeCycleHook() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateLifeCycleHookResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -881,8 +769,6 @@ func GenReqDefForUpdateLifeCycleHook() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -894,7 +780,6 @@ func GenReqDefForUpdateScalingGroup() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateScalingGroupResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -903,8 +788,6 @@ func GenReqDefForUpdateScalingGroup() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -917,7 +800,6 @@ func GenReqDefForUpdateScalingGroupInstance() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateScalingGroupInstanceResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingGroupId").
 		WithJsonTag("scaling_group_id").
@@ -926,8 +808,6 @@ func GenReqDefForUpdateScalingGroupInstance() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -940,7 +820,6 @@ func GenReqDefForUpdateScalingPolicy() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateScalingPolicyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScalingPolicyId").
 		WithJsonTag("scaling_policy_id").
@@ -949,8 +828,6 @@ func GenReqDefForUpdateScalingPolicy() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

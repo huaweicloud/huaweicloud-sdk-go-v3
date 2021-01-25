@@ -1,10 +1,3 @@
-/*
- * kps
- *
- * kps v3 版本API
- *
- */
-
 package model
 
 import (

@@ -1,10 +1,3 @@
-/*
- * DMS
- *
- * DMS Document API
- *
- */
-
 package model
 
 import (

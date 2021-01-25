@@ -1,10 +1,3 @@
-/*
- * ECS
- *
- * ECS Open API
- *
- */
-
 package model
 
 import (
@@ -15,6 +8,8 @@ import (
 
 // 创建弹性云服务器（包周期）接口Body体。
 type PrePaidServer struct {
+	// 弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+	AutoTerminateTime *string `json:"auto_terminate_time,omitempty"`
 	// 待创建云服务器的系统镜像，需要指定已创建镜像的ID，ID格式为通用唯一识别码（Universally Unique Identifier，简称UUID）。
 	ImageRef string `json:"imageRef"`
 	// 待创建云服务器的系统规格的ID。  已上线的规格请参见《[弹性云服务器产品介绍](https://support.huaweicloud.com/ecs/index.html)》的“实例类型与规格”章节。

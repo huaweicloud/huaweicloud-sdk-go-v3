@@ -1,10 +1,3 @@
-/*
- * RMS
- *
- * Resource Manager Api
- *
- */
-
 package model
 
 import (

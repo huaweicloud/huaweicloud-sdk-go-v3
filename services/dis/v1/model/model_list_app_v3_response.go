@@ -1,10 +1,3 @@
-/*
- * DIS
- *
- * DIS v1 API
- *
- */
-
 package model
 
 import (

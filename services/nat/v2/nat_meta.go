@@ -2,6 +2,7 @@ package v2
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/nat/v2/model"
 	"net/http"
 )
@@ -13,13 +14,9 @@ func GenReqDefForBatchCreateNatGatewayDnatRules() *def.HttpRequestDef {
 		WithResponse(new(model.BatchCreateNatGatewayDnatRulesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -32,13 +29,9 @@ func GenReqDefForCreateNatGatewayDnatRule() *def.HttpRequestDef {
 		WithResponse(new(model.CreateNatGatewayDnatRuleResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -51,7 +44,6 @@ func GenReqDefForDeleteNatGatewayDnatRule() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteNatGatewayDnatRuleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NatGatewayId").
 		WithJsonTag("nat_gateway_id").
@@ -60,8 +52,6 @@ func GenReqDefForDeleteNatGatewayDnatRule() *def.HttpRequestDef {
 		WithName("DnatRuleId").
 		WithJsonTag("dnat_rule_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -73,8 +63,6 @@ func GenReqDefForListNatGatewayDnatRules() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/dnat_rules").
 		WithResponse(new(model.ListNatGatewayDnatRulesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AdminStateUp").
@@ -133,8 +121,6 @@ func GenReqDefForListNatGatewayDnatRules() *def.HttpRequestDef {
 		WithJsonTag("protocol").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -146,13 +132,10 @@ func GenReqDefForShowNatGatewayDnatRule() *def.HttpRequestDef {
 		WithResponse(new(model.ShowNatGatewayDnatRuleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("DnatRuleId").
 		WithJsonTag("dnat_rule_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -165,7 +148,6 @@ func GenReqDefForUpdateNatGatewayDnatRule() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateNatGatewayDnatRuleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("DnatRuleId").
 		WithJsonTag("dnat_rule_id").
@@ -174,8 +156,6 @@ func GenReqDefForUpdateNatGatewayDnatRule() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -188,13 +168,9 @@ func GenReqDefForCreateNatGateway() *def.HttpRequestDef {
 		WithResponse(new(model.CreateNatGatewayResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -207,13 +183,10 @@ func GenReqDefForDeleteNatGateway() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteNatGatewayResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NatGatewayId").
 		WithJsonTag("nat_gateway_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -225,8 +198,6 @@ func GenReqDefForListNatGateways() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/nat_gateways").
 		WithResponse(new(model.ListNatGatewaysResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TenantId").
@@ -277,8 +248,6 @@ func GenReqDefForListNatGateways() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -290,13 +259,10 @@ func GenReqDefForShowNatGateway() *def.HttpRequestDef {
 		WithResponse(new(model.ShowNatGatewayResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NatGatewayId").
 		WithJsonTag("nat_gateway_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -309,7 +275,6 @@ func GenReqDefForUpdateNatGateway() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateNatGatewayResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NatGatewayId").
 		WithJsonTag("nat_gateway_id").
@@ -318,8 +283,6 @@ func GenReqDefForUpdateNatGateway() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -332,13 +295,9 @@ func GenReqDefForCreateNatGatewaySnatRule() *def.HttpRequestDef {
 		WithResponse(new(model.CreateNatGatewaySnatRuleResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -351,7 +310,6 @@ func GenReqDefForDeleteNatGatewaySnatRule() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteNatGatewaySnatRuleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NatGatewayId").
 		WithJsonTag("nat_gateway_id").
@@ -360,8 +318,6 @@ func GenReqDefForDeleteNatGatewaySnatRule() *def.HttpRequestDef {
 		WithName("SnatRuleId").
 		WithJsonTag("snat_rule_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -373,8 +329,6 @@ func GenReqDefForListNatGatewaySnatRules() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/snat_rules").
 		WithResponse(new(model.ListNatGatewaySnatRulesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AdminStateUp").
@@ -425,8 +379,6 @@ func GenReqDefForListNatGatewaySnatRules() *def.HttpRequestDef {
 		WithJsonTag("status").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -438,13 +390,10 @@ func GenReqDefForShowNatGatewaySnatRule() *def.HttpRequestDef {
 		WithResponse(new(model.ShowNatGatewaySnatRuleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SnatRuleId").
 		WithJsonTag("snat_rule_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -457,7 +406,6 @@ func GenReqDefForUpdateNatGatewaySnatRule() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateNatGatewaySnatRuleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SnatRuleId").
 		WithJsonTag("snat_rule_id").
@@ -466,8 +414,6 @@ func GenReqDefForUpdateNatGatewaySnatRule() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

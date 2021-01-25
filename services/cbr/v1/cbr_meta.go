@@ -2,6 +2,7 @@ package v1
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cbr/v1/model"
 	"net/http"
 )
@@ -13,7 +14,6 @@ func GenReqDefForAddMember() *def.HttpRequestDef {
 		WithResponse(new(model.AddMemberResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BackupId").
 		WithJsonTag("backup_id").
@@ -22,8 +22,6 @@ func GenReqDefForAddMember() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -36,7 +34,6 @@ func GenReqDefForAddVaultResource() *def.HttpRequestDef {
 		WithResponse(new(model.AddVaultResourceResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VaultId").
 		WithJsonTag("vault_id").
@@ -45,8 +42,6 @@ func GenReqDefForAddVaultResource() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -59,7 +54,6 @@ func GenReqDefForAssociateVaultPolicy() *def.HttpRequestDef {
 		WithResponse(new(model.AssociateVaultPolicyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VaultId").
 		WithJsonTag("vault_id").
@@ -68,8 +62,6 @@ func GenReqDefForAssociateVaultPolicy() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -82,7 +74,6 @@ func GenReqDefForBatchCreateAndDeleteVaultTags() *def.HttpRequestDef {
 		WithResponse(new(model.BatchCreateAndDeleteVaultTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VaultId").
 		WithJsonTag("vault_id").
@@ -91,8 +82,6 @@ func GenReqDefForBatchCreateAndDeleteVaultTags() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -105,7 +94,6 @@ func GenReqDefForCopyBackup() *def.HttpRequestDef {
 		WithResponse(new(model.CopyBackupResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BackupId").
 		WithJsonTag("backup_id").
@@ -114,8 +102,6 @@ func GenReqDefForCopyBackup() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -128,13 +114,9 @@ func GenReqDefForCopyCheckpoint() *def.HttpRequestDef {
 		WithResponse(new(model.CopyCheckpointResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -147,13 +129,9 @@ func GenReqDefForCreateCheckpoint() *def.HttpRequestDef {
 		WithResponse(new(model.CreateCheckpointResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -166,13 +144,9 @@ func GenReqDefForCreatePolicy() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePolicyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -185,13 +159,9 @@ func GenReqDefForCreateVault() *def.HttpRequestDef {
 		WithResponse(new(model.CreateVaultResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -204,7 +174,6 @@ func GenReqDefForCreateVaultTags() *def.HttpRequestDef {
 		WithResponse(new(model.CreateVaultTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VaultId").
 		WithJsonTag("vault_id").
@@ -213,8 +182,6 @@ func GenReqDefForCreateVaultTags() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -227,13 +194,10 @@ func GenReqDefForDeleteBackup() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteBackupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BackupId").
 		WithJsonTag("backup_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -246,7 +210,6 @@ func GenReqDefForDeleteMember() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteMemberResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BackupId").
 		WithJsonTag("backup_id").
@@ -255,8 +218,6 @@ func GenReqDefForDeleteMember() *def.HttpRequestDef {
 		WithName("MemberId").
 		WithJsonTag("member_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -269,13 +230,10 @@ func GenReqDefForDeletePolicy() *def.HttpRequestDef {
 		WithResponse(new(model.DeletePolicyResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PolicyId").
 		WithJsonTag("policy_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -288,13 +246,10 @@ func GenReqDefForDeleteVault() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteVaultResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VaultId").
 		WithJsonTag("vault_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -307,7 +262,6 @@ func GenReqDefForDeleteVaultTag() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteVaultTagResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Key").
 		WithJsonTag("key").
@@ -316,8 +270,6 @@ func GenReqDefForDeleteVaultTag() *def.HttpRequestDef {
 		WithName("VaultId").
 		WithJsonTag("vault_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -330,7 +282,6 @@ func GenReqDefForDisassociateVaultPolicy() *def.HttpRequestDef {
 		WithResponse(new(model.DisassociateVaultPolicyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VaultId").
 		WithJsonTag("vault_id").
@@ -339,8 +290,6 @@ func GenReqDefForDisassociateVaultPolicy() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -353,13 +302,9 @@ func GenReqDefForImportBackup() *def.HttpRequestDef {
 		WithResponse(new(model.ImportBackupResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -371,8 +316,6 @@ func GenReqDefForListBackups() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/backups").
 		WithResponse(new(model.ListBackupsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CheckpointId").
@@ -459,8 +402,6 @@ func GenReqDefForListBackups() *def.HttpRequestDef {
 		WithJsonTag("used_percent").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -471,8 +412,6 @@ func GenReqDefForListOpLogs() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/operation-logs").
 		WithResponse(new(model.ListOpLogsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EndTime").
@@ -523,8 +462,6 @@ func GenReqDefForListOpLogs() *def.HttpRequestDef {
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -536,8 +473,6 @@ func GenReqDefForListPolicies() *def.HttpRequestDef {
 		WithResponse(new(model.ListPoliciesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("OperationType").
 		WithJsonTag("operation_type").
@@ -546,8 +481,6 @@ func GenReqDefForListPolicies() *def.HttpRequestDef {
 		WithName("VaultId").
 		WithJsonTag("vault_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -560,7 +493,6 @@ func GenReqDefForListProtectable() *def.HttpRequestDef {
 		WithResponse(new(model.ListProtectableResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProtectableType").
 		WithJsonTag("protectable_type").
@@ -595,8 +527,6 @@ func GenReqDefForListProtectable() *def.HttpRequestDef {
 		WithJsonTag("server_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -607,8 +537,6 @@ func GenReqDefForListVault() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/vaults").
 		WithResponse(new(model.ListVaultResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -655,8 +583,6 @@ func GenReqDefForListVault() *def.HttpRequestDef {
 		WithJsonTag("resource_ids").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -668,7 +594,6 @@ func GenReqDefForMigrateVaultResource() *def.HttpRequestDef {
 		WithResponse(new(model.MigrateVaultResourceResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VaultId").
 		WithJsonTag("vault_id").
@@ -677,8 +602,6 @@ func GenReqDefForMigrateVaultResource() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -691,7 +614,6 @@ func GenReqDefForRemoveVaultResource() *def.HttpRequestDef {
 		WithResponse(new(model.RemoveVaultResourceResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VaultId").
 		WithJsonTag("vault_id").
@@ -700,8 +622,6 @@ func GenReqDefForRemoveVaultResource() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -714,7 +634,6 @@ func GenReqDefForRestoreBackup() *def.HttpRequestDef {
 		WithResponse(new(model.RestoreBackupResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BackupId").
 		WithJsonTag("backup_id").
@@ -723,8 +642,6 @@ func GenReqDefForRestoreBackup() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -737,13 +654,10 @@ func GenReqDefForShowBackup() *def.HttpRequestDef {
 		WithResponse(new(model.ShowBackupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BackupId").
 		WithJsonTag("backup_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -756,13 +670,10 @@ func GenReqDefForShowCheckpoint() *def.HttpRequestDef {
 		WithResponse(new(model.ShowCheckpointResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CheckpointId").
 		WithJsonTag("checkpoint_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -775,7 +686,6 @@ func GenReqDefForShowMemberDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ShowMemberDetailResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BackupId").
 		WithJsonTag("backup_id").
@@ -784,8 +694,6 @@ func GenReqDefForShowMemberDetail() *def.HttpRequestDef {
 		WithName("MemberId").
 		WithJsonTag("member_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -798,7 +706,6 @@ func GenReqDefForShowMembersDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ShowMembersDetailResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BackupId").
 		WithJsonTag("backup_id").
@@ -837,8 +744,6 @@ func GenReqDefForShowMembersDetail() *def.HttpRequestDef {
 		WithJsonTag("sort").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -850,13 +755,10 @@ func GenReqDefForShowOpLog() *def.HttpRequestDef {
 		WithResponse(new(model.ShowOpLogResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("OperationLogId").
 		WithJsonTag("operation_log_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -869,13 +771,10 @@ func GenReqDefForShowPolicy() *def.HttpRequestDef {
 		WithResponse(new(model.ShowPolicyResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PolicyId").
 		WithJsonTag("policy_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -888,7 +787,6 @@ func GenReqDefForShowProtectable() *def.HttpRequestDef {
 		WithResponse(new(model.ShowProtectableResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -897,8 +795,6 @@ func GenReqDefForShowProtectable() *def.HttpRequestDef {
 		WithName("ProtectableType").
 		WithJsonTag("protectable_type").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -911,10 +807,6 @@ func GenReqDefForShowReplicationCapabilities() *def.HttpRequestDef {
 		WithResponse(new(model.ShowReplicationCapabilitiesResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -926,13 +818,10 @@ func GenReqDefForShowVault() *def.HttpRequestDef {
 		WithResponse(new(model.ShowVaultResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VaultId").
 		WithJsonTag("vault_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -945,10 +834,6 @@ func GenReqDefForShowVaultProjectTag() *def.HttpRequestDef {
 		WithResponse(new(model.ShowVaultProjectTagResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -960,13 +845,9 @@ func GenReqDefForShowVaultResourceInstances() *def.HttpRequestDef {
 		WithResponse(new(model.ShowVaultResourceInstancesResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -979,13 +860,10 @@ func GenReqDefForShowVaultTag() *def.HttpRequestDef {
 		WithResponse(new(model.ShowVaultTagResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VaultId").
 		WithJsonTag("vault_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -998,7 +876,6 @@ func GenReqDefForUpdateMemberStatus() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateMemberStatusResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("MemberId").
 		WithJsonTag("member_id").
@@ -1012,8 +889,6 @@ func GenReqDefForUpdateMemberStatus() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1025,7 +900,6 @@ func GenReqDefForUpdatePolicy() *def.HttpRequestDef {
 		WithResponse(new(model.UpdatePolicyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PolicyId").
 		WithJsonTag("policy_id").
@@ -1034,8 +908,6 @@ func GenReqDefForUpdatePolicy() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1048,7 +920,6 @@ func GenReqDefForUpdateVault() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateVaultResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VaultId").
 		WithJsonTag("vault_id").
@@ -1057,8 +928,6 @@ func GenReqDefForUpdateVault() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

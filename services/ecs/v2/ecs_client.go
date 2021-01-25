@@ -2,6 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ecs/v2/model"
 )
 
@@ -499,6 +500,17 @@ func (c *EcsClient) ShowServerTags(request *model.ShowServerTagsRequest) (*model
 		return nil, err
 	} else {
 		return resp.(*model.ShowServerTagsResponse), nil
+	}
+}
+
+//修改按需服务器，设置定时销毁时间。如果设置的销毁时间为空，表示取消销毁时间。  该接口支持企业项目细粒度权限的校验，具体细粒度请参见 ecs:cloudServers:put。
+func (c *EcsClient) UpdateAutoTerminateTimeServer(request *model.UpdateAutoTerminateTimeServerRequest) (*model.UpdateAutoTerminateTimeServerResponse, error) {
+	requestDef := GenReqDefForUpdateAutoTerminateTimeServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAutoTerminateTimeServerResponse), nil
 	}
 }
 

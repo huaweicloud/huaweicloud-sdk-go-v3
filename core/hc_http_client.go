@@ -220,7 +220,7 @@ func (hc *HcHttpClient) deserializeResponse(resp *response.DefaultHttpResponse, 
 		if item.LocationType == def.Body {
 			hasBody = true
 			dataStr := string(data)
-			
+
 			var bodyStr string
 			if strings.HasPrefix(dataStr, "{") || strings.HasPrefix(dataStr, "[") || strings.HasPrefix(dataStr, "\"") {
 				bodyStr = "{ \"body\" : " + dataStr + "}"

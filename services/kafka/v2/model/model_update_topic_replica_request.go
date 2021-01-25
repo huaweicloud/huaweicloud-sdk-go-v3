@@ -1,10 +1,3 @@
-/*
- * Kafka
- *
- * Kafka Document API
- *
- */
-
 package model
 
 import (

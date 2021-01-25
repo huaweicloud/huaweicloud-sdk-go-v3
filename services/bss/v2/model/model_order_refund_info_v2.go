@@ -1,10 +1,3 @@
-/*
- * BSS
- *
- * Business Support System API
- *
- */
-
 package model
 
 import (
@@ -18,7 +11,7 @@ type OrderRefundInfoV2 struct {
 	Id string `json:"id"`
 	// |参数名称：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。| |参数的约束及描述：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。|
 	Amount float32 `json:"amount"`
-	// |参数名称：度量单位。1：元2：角3：分| |参数约束及描述：度量单位。1：元2：角3：分|
+	// |参数名称：度量单位。1：元| |参数约束及描述：度量单位。1：元|
 	MeasureId string `json:"measure_id"`
 	// |参数名称：客户ID。| |参数约束及描述：客户ID。|
 	CustomerId string `json:"customer_id"`

@@ -1,3 +1,37 @@
+## 0.0.31-rc 2021-01-25
+## HuaweiCloud SDK Core
+- ### Features
+    - None
+- ### Bug Fix
+    - None
+- ### Change
+    - The default value of `DefaultTimeout` is set to 120 seconds.
+
+## HuaweiCloud SDK BSS
+- ### Features
+    - Support more interface: ListOrderDiscounts.
+- ### Bug Fix
+    - None
+- ### Change
+    - None
+
+## HuaweiCloud SDK DNS
+- ### Features
+    - Support `Domain Name Service`.
+- ### Bug Fix
+    - None
+- ### Change
+    - None
+
+## HuaweiCloud SDK ECS
+- ### Features
+    - Support more interface: `UpdateAutoTerminateTimeServer`.
+- ### Bug Fix
+    - None
+- ### Change
+    - None
+
+
 ## 0.0.30-rc 2021-01-15
 ## HuaweiCloud SDK Core
 - ### Features

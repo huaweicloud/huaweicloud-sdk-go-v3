@@ -2,6 +2,7 @@ package v2
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/eip/v2/model"
 	"net/http"
 )
@@ -13,7 +14,6 @@ func GenReqDefForAddPublicipsIntoSharedBandwidth() *def.HttpRequestDef {
 		WithResponse(new(model.AddPublicipsIntoSharedBandwidthResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BandwidthId").
 		WithJsonTag("bandwidth_id").
@@ -22,8 +22,6 @@ func GenReqDefForAddPublicipsIntoSharedBandwidth() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -36,13 +34,9 @@ func GenReqDefForBatchCreateSharedBandwidths() *def.HttpRequestDef {
 		WithResponse(new(model.BatchCreateSharedBandwidthsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -55,13 +49,9 @@ func GenReqDefForCreateSharedBandwidth() *def.HttpRequestDef {
 		WithResponse(new(model.CreateSharedBandwidthResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -74,13 +64,10 @@ func GenReqDefForDeleteSharedBandwidth() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteSharedBandwidthResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BandwidthId").
 		WithJsonTag("bandwidth_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -92,8 +79,6 @@ func GenReqDefForListBandwidths() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/bandwidths").
 		WithResponse(new(model.ListBandwidthsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Marker").
@@ -112,8 +97,6 @@ func GenReqDefForListBandwidths() *def.HttpRequestDef {
 		WithJsonTag("share_type").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -125,14 +108,10 @@ func GenReqDefForListQuotas() *def.HttpRequestDef {
 		WithResponse(new(model.ListQuotasResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Type").
 		WithJsonTag("type").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -145,7 +124,6 @@ func GenReqDefForRemovePublicipsFromSharedBandwidth() *def.HttpRequestDef {
 		WithResponse(new(model.RemovePublicipsFromSharedBandwidthResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BandwidthId").
 		WithJsonTag("bandwidth_id").
@@ -154,8 +132,6 @@ func GenReqDefForRemovePublicipsFromSharedBandwidth() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -168,13 +144,10 @@ func GenReqDefForShowBandwidth() *def.HttpRequestDef {
 		WithResponse(new(model.ShowBandwidthResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BandwidthId").
 		WithJsonTag("bandwidth_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -187,7 +160,6 @@ func GenReqDefForUpdateBandwidth() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateBandwidthResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BandwidthId").
 		WithJsonTag("bandwidth_id").
@@ -196,8 +168,6 @@ func GenReqDefForUpdateBandwidth() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -210,7 +180,6 @@ func GenReqDefForUpdatePrePaidBandwidth() *def.HttpRequestDef {
 		WithResponse(new(model.UpdatePrePaidBandwidthResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BandwidthId").
 		WithJsonTag("bandwidth_id").
@@ -219,8 +188,6 @@ func GenReqDefForUpdatePrePaidBandwidth() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -233,7 +200,6 @@ func GenReqDefForBatchCreatePublicipTags() *def.HttpRequestDef {
 		WithResponse(new(model.BatchCreatePublicipTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublicipId").
 		WithJsonTag("publicip_id").
@@ -242,8 +208,6 @@ func GenReqDefForBatchCreatePublicipTags() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -256,7 +220,6 @@ func GenReqDefForBatchDeletePublicipTags() *def.HttpRequestDef {
 		WithResponse(new(model.BatchDeletePublicipTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublicipId").
 		WithJsonTag("publicip_id").
@@ -265,8 +228,6 @@ func GenReqDefForBatchDeletePublicipTags() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -279,13 +240,9 @@ func GenReqDefForCreatePrePaidPublicip() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePrePaidPublicipResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -298,13 +255,9 @@ func GenReqDefForCreatePublicip() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePublicipResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -317,7 +270,6 @@ func GenReqDefForCreatePublicipTag() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePublicipTagResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublicipId").
 		WithJsonTag("publicip_id").
@@ -326,8 +278,6 @@ func GenReqDefForCreatePublicipTag() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -340,13 +290,10 @@ func GenReqDefForDeletePublicip() *def.HttpRequestDef {
 		WithResponse(new(model.DeletePublicipResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublicipId").
 		WithJsonTag("publicip_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -359,7 +306,6 @@ func GenReqDefForDeletePublicipTag() *def.HttpRequestDef {
 		WithResponse(new(model.DeletePublicipTagResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublicipId").
 		WithJsonTag("publicip_id").
@@ -368,8 +314,6 @@ func GenReqDefForDeletePublicipTag() *def.HttpRequestDef {
 		WithName("Key").
 		WithJsonTag("key").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -382,10 +326,6 @@ func GenReqDefForListPublicipTags() *def.HttpRequestDef {
 		WithResponse(new(model.ListPublicipTagsResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -396,8 +336,6 @@ func GenReqDefForListPublicips() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/publicips").
 		WithResponse(new(model.ListPublicipsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Marker").
@@ -432,8 +370,6 @@ func GenReqDefForListPublicips() *def.HttpRequestDef {
 		WithJsonTag("id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -445,13 +381,9 @@ func GenReqDefForListPublicipsByTags() *def.HttpRequestDef {
 		WithResponse(new(model.ListPublicipsByTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -464,13 +396,10 @@ func GenReqDefForShowPublicip() *def.HttpRequestDef {
 		WithResponse(new(model.ShowPublicipResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublicipId").
 		WithJsonTag("publicip_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -483,13 +412,10 @@ func GenReqDefForShowPublicipTags() *def.HttpRequestDef {
 		WithResponse(new(model.ShowPublicipTagsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublicipId").
 		WithJsonTag("publicip_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -502,7 +428,6 @@ func GenReqDefForUpdatePublicip() *def.HttpRequestDef {
 		WithResponse(new(model.UpdatePublicipResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublicipId").
 		WithJsonTag("publicip_id").
@@ -511,8 +436,6 @@ func GenReqDefForUpdatePublicip() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -525,13 +448,9 @@ func GenReqDefForNeutronCreateFloatingIp() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronCreateFloatingIpResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -544,13 +463,10 @@ func GenReqDefForNeutronDeleteFloatingIp() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronDeleteFloatingIpResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FloatingipId").
 		WithJsonTag("floatingip_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -562,8 +478,6 @@ func GenReqDefForNeutronListFloatingIps() *def.HttpRequestDef {
 		WithPath("/v2.0/floatingips").
 		WithResponse(new(model.NeutronListFloatingIpsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -606,8 +520,6 @@ func GenReqDefForNeutronListFloatingIps() *def.HttpRequestDef {
 		WithJsonTag("floating_network_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -619,13 +531,10 @@ func GenReqDefForNeutronShowFloatingIp() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronShowFloatingIpResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FloatingipId").
 		WithJsonTag("floatingip_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -638,7 +547,6 @@ func GenReqDefForNeutronUpdateFloatingIp() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronUpdateFloatingIpResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FloatingipId").
 		WithJsonTag("floatingip_id").
@@ -647,8 +555,6 @@ func GenReqDefForNeutronUpdateFloatingIp() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

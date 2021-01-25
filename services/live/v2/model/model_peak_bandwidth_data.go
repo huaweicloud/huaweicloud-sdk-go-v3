@@ -1,10 +1,3 @@
-/*
- * Live
- *
- * 数据分析服务接口
- *
- */
-
 package model
 
 import (

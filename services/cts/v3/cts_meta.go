@@ -2,6 +2,7 @@ package v3
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cts/v3/model"
 	"net/http"
 )
@@ -13,13 +14,9 @@ func GenReqDefForCreateTracker() *def.HttpRequestDef {
 		WithResponse(new(model.CreateTrackerResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -32,8 +29,6 @@ func GenReqDefForDeleteTracker() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteTrackerResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TrackerName").
 		WithJsonTag("tracker_name").
@@ -42,8 +37,6 @@ func GenReqDefForDeleteTracker() *def.HttpRequestDef {
 		WithName("TrackerType").
 		WithJsonTag("tracker_type").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -56,10 +49,6 @@ func GenReqDefForListQuotas() *def.HttpRequestDef {
 		WithResponse(new(model.ListQuotasResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -70,8 +59,6 @@ func GenReqDefForListTraces() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/traces").
 		WithResponse(new(model.ListTracesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TraceType").
@@ -130,8 +117,6 @@ func GenReqDefForListTraces() *def.HttpRequestDef {
 		WithJsonTag("trace_rating").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -143,8 +128,6 @@ func GenReqDefForListTrackers() *def.HttpRequestDef {
 		WithResponse(new(model.ListTrackersResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TrackerName").
 		WithJsonTag("tracker_name").
@@ -153,8 +136,6 @@ func GenReqDefForListTrackers() *def.HttpRequestDef {
 		WithName("TrackerType").
 		WithJsonTag("tracker_type").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -167,13 +148,9 @@ func GenReqDefForUpdateTracker() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateTrackerResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

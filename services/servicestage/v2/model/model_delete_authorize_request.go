@@ -1,10 +1,3 @@
-/*
- * ServiceStage
- *
- * ServiceStage的API,包括应用管理和仓库授权管理
- *
- */
-
 package model
 
 import (

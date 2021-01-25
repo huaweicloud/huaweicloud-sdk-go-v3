@@ -1,10 +1,3 @@
-/*
- * kms
- *
- * KMS v1.0 API, open API
- *
- */
-
 package model
 
 import (

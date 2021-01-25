@@ -2,6 +2,7 @@ package v1
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/mpc/v1/model"
 	"net/http"
 )
@@ -13,13 +14,9 @@ func GenReqDefForCreateAnimatedGraphicsTask() *def.HttpRequestDef {
 		WithResponse(new(model.CreateAnimatedGraphicsTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -32,14 +29,10 @@ func GenReqDefForDeleteAnimatedGraphicsTask() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteAnimatedGraphicsTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -52,8 +45,6 @@ func GenReqDefForListAnimatedGraphicsTask() *def.HttpRequestDef {
 		WithResponse(new(model.ListAnimatedGraphicsTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
@@ -83,8 +74,6 @@ func GenReqDefForListAnimatedGraphicsTask() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("x-language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -97,13 +86,9 @@ func GenReqDefForCreateEncryptTask() *def.HttpRequestDef {
 		WithResponse(new(model.CreateEncryptTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -116,14 +101,10 @@ func GenReqDefForDeleteEncryptTask() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteEncryptTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -135,8 +116,6 @@ func GenReqDefForListEncryptTask() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/encryptions").
 		WithResponse(new(model.ListEncryptTaskResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
@@ -163,8 +142,6 @@ func GenReqDefForListEncryptTask() *def.HttpRequestDef {
 		WithJsonTag("size").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -176,13 +153,9 @@ func GenReqDefForCreateExtractTask() *def.HttpRequestDef {
 		WithResponse(new(model.CreateExtractTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -195,14 +168,10 @@ func GenReqDefForDeleteExtractTask() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteExtractTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -214,8 +183,6 @@ func GenReqDefForListExtractTask() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/extract-metadata").
 		WithResponse(new(model.ListExtractTaskResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
@@ -247,8 +214,6 @@ func GenReqDefForListExtractTask() *def.HttpRequestDef {
 		WithJsonTag("x-language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -260,13 +225,9 @@ func GenReqDefForCreateMbTasksReport() *def.HttpRequestDef {
 		WithResponse(new(model.CreateMbTasksReportResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -279,13 +240,9 @@ func GenReqDefForCreateMergeChannelsTask() *def.HttpRequestDef {
 		WithResponse(new(model.CreateMergeChannelsTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -298,13 +255,9 @@ func GenReqDefForCreateResetTracksTask() *def.HttpRequestDef {
 		WithResponse(new(model.CreateResetTracksTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -317,14 +270,10 @@ func GenReqDefForDeleteMergeChannelsTask() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteMergeChannelsTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -337,14 +286,10 @@ func GenReqDefForDeleteResetTracksTask() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteResetTracksTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -357,8 +302,6 @@ func GenReqDefForListMergeChannelsTask() *def.HttpRequestDef {
 		WithResponse(new(model.ListMergeChannelsTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
@@ -383,8 +326,6 @@ func GenReqDefForListMergeChannelsTask() *def.HttpRequestDef {
 		WithName("Size").
 		WithJsonTag("size").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -397,8 +338,6 @@ func GenReqDefForListResetTracksTask() *def.HttpRequestDef {
 		WithResponse(new(model.ListResetTracksTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
@@ -423,8 +362,6 @@ func GenReqDefForListResetTracksTask() *def.HttpRequestDef {
 		WithName("Size").
 		WithJsonTag("size").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -437,13 +374,9 @@ func GenReqDefForCreateMediaProcessTask() *def.HttpRequestDef {
 		WithResponse(new(model.CreateMediaProcessTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -456,14 +389,10 @@ func GenReqDefForDeleteMediaProcessTask() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteMediaProcessTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -475,8 +404,6 @@ func GenReqDefForListMediaProcessTask() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/enhancements").
 		WithResponse(new(model.ListMediaProcessTaskResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
@@ -503,8 +430,6 @@ func GenReqDefForListMediaProcessTask() *def.HttpRequestDef {
 		WithJsonTag("size").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -516,13 +441,9 @@ func GenReqDefForCreateMpeCallBack() *def.HttpRequestDef {
 		WithResponse(new(model.CreateMpeCallBackResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -535,13 +456,9 @@ func GenReqDefForCreateQualityEnhanceTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.CreateQualityEnhanceTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -554,14 +471,10 @@ func GenReqDefForDeleteQualityEnhanceTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteQualityEnhanceTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TemplateId").
 		WithJsonTag("template_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -574,10 +487,6 @@ func GenReqDefForListQualityEnhanceDefaultTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.ListQualityEnhanceDefaultTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -589,13 +498,9 @@ func GenReqDefForUpdateQualityEnhanceTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateQualityEnhanceTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -608,14 +513,10 @@ func GenReqDefForListTranscodeDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ListTranscodeDetailResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -628,14 +529,10 @@ func GenReqDefForCancelRemuxTask() *def.HttpRequestDef {
 		WithResponse(new(model.CancelRemuxTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -648,13 +545,9 @@ func GenReqDefForCreateRemuxTask() *def.HttpRequestDef {
 		WithResponse(new(model.CreateRemuxTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -667,13 +560,9 @@ func GenReqDefForCreateRetryRemuxTask() *def.HttpRequestDef {
 		WithResponse(new(model.CreateRetryRemuxTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -686,14 +575,10 @@ func GenReqDefForDeleteRemuxTask() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteRemuxTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -705,8 +590,6 @@ func GenReqDefForListRemuxTask() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/remux").
 		WithResponse(new(model.ListRemuxTaskResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
@@ -741,8 +624,6 @@ func GenReqDefForListRemuxTask() *def.HttpRequestDef {
 		WithJsonTag("size").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -754,13 +635,9 @@ func GenReqDefForCreateTemplateGroup() *def.HttpRequestDef {
 		WithResponse(new(model.CreateTemplateGroupResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -773,14 +650,10 @@ func GenReqDefForDeleteTemplateGroup() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteTemplateGroupResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("GroupId").
 		WithJsonTag("group_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -792,8 +665,6 @@ func GenReqDefForListTemplateGroup() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/template_group/transcodings").
 		WithResponse(new(model.ListTemplateGroupResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("GroupId").
@@ -812,8 +683,6 @@ func GenReqDefForListTemplateGroup() *def.HttpRequestDef {
 		WithJsonTag("size").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -825,13 +694,9 @@ func GenReqDefForUpdateTemplateGroup() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateTemplateGroupResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -844,13 +709,9 @@ func GenReqDefForCreateThumbnailsTask() *def.HttpRequestDef {
 		WithResponse(new(model.CreateThumbnailsTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -863,14 +724,10 @@ func GenReqDefForDeleteThumbnailsTask() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteThumbnailsTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -883,8 +740,6 @@ func GenReqDefForListThumbnailsTask() *def.HttpRequestDef {
 		WithResponse(new(model.ListThumbnailsTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
@@ -914,8 +769,6 @@ func GenReqDefForListThumbnailsTask() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("x-language").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -928,13 +781,9 @@ func GenReqDefForCreateTranscodingTask() *def.HttpRequestDef {
 		WithResponse(new(model.CreateTranscodingTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -947,14 +796,10 @@ func GenReqDefForDeleteTranscodingTask() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteTranscodingTaskResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -966,8 +811,6 @@ func GenReqDefForListTranscodingTask() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/transcodings").
 		WithResponse(new(model.ListTranscodingTaskResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
@@ -999,8 +842,6 @@ func GenReqDefForListTranscodingTask() *def.HttpRequestDef {
 		WithJsonTag("x-language").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1012,13 +853,9 @@ func GenReqDefForCreateTransTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.CreateTransTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1031,14 +868,10 @@ func GenReqDefForDeleteTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TemplateId").
 		WithJsonTag("template_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1051,8 +884,6 @@ func GenReqDefForListTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.ListTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TemplateId").
 		WithJsonTag("template_id").
@@ -1065,8 +896,6 @@ func GenReqDefForListTemplate() *def.HttpRequestDef {
 		WithName("Size").
 		WithJsonTag("size").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1079,13 +908,9 @@ func GenReqDefForUpdateTransTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateTransTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1098,13 +923,9 @@ func GenReqDefForCreateWatermarkTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.CreateWatermarkTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1117,14 +938,10 @@ func GenReqDefForDeleteWatermarkTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteWatermarkTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TemplateId").
 		WithJsonTag("template_id").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1136,8 +953,6 @@ func GenReqDefForListWatermarkTemplate() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/template/watermark").
 		WithResponse(new(model.ListWatermarkTemplateResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TemplateId").
@@ -1152,8 +967,6 @@ func GenReqDefForListWatermarkTemplate() *def.HttpRequestDef {
 		WithJsonTag("size").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1165,13 +978,9 @@ func GenReqDefForUpdateWatermarkTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateWatermarkTemplateResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

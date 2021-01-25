@@ -2,6 +2,7 @@ package v2
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ims/v2/model"
 	"net/http"
 )
@@ -13,13 +14,9 @@ func GenReqDefForBatchAddMembers() *def.HttpRequestDef {
 		WithResponse(new(model.BatchAddMembersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -32,13 +29,9 @@ func GenReqDefForBatchDeleteMembers() *def.HttpRequestDef {
 		WithResponse(new(model.BatchDeleteMembersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -51,13 +44,9 @@ func GenReqDefForBatchUpdateMembers() *def.HttpRequestDef {
 		WithResponse(new(model.BatchUpdateMembersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -70,7 +59,6 @@ func GenReqDefForCopyImageCrossRegion() *def.HttpRequestDef {
 		WithResponse(new(model.CopyImageCrossRegionResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
@@ -79,8 +67,6 @@ func GenReqDefForCopyImageCrossRegion() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -93,7 +79,6 @@ func GenReqDefForCopyImageInRegion() *def.HttpRequestDef {
 		WithResponse(new(model.CopyImageInRegionResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
@@ -102,8 +87,6 @@ func GenReqDefForCopyImageInRegion() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -116,13 +99,9 @@ func GenReqDefForCreateDataImage() *def.HttpRequestDef {
 		WithResponse(new(model.CreateDataImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -135,13 +114,9 @@ func GenReqDefForCreateImage() *def.HttpRequestDef {
 		WithResponse(new(model.CreateImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -154,13 +129,9 @@ func GenReqDefForCreateOrUpdateTags() *def.HttpRequestDef {
 		WithResponse(new(model.CreateOrUpdateTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -173,13 +144,9 @@ func GenReqDefForCreateWholeImage() *def.HttpRequestDef {
 		WithResponse(new(model.CreateWholeImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -192,7 +159,6 @@ func GenReqDefForExportImage() *def.HttpRequestDef {
 		WithResponse(new(model.ExportImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
@@ -201,8 +167,6 @@ func GenReqDefForExportImage() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -215,13 +179,9 @@ func GenReqDefForImportImageQuick() *def.HttpRequestDef {
 		WithResponse(new(model.ImportImageQuickResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -233,8 +193,6 @@ func GenReqDefForListImages() *def.HttpRequestDef {
 		WithPath("/v2/cloudimages").
 		WithResponse(new(model.ListImagesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Imagetype").
@@ -386,8 +344,6 @@ func GenReqDefForListImages() *def.HttpRequestDef {
 		WithJsonTag("X-Sdk-Date").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -399,14 +355,11 @@ func GenReqDefForListOsVersions() *def.HttpRequestDef {
 		WithResponse(new(model.ListOsVersionsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Tag").
 		WithJsonTag("tag").
 		WithLocationType(def.Query))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -421,8 +374,6 @@ func GenReqDefForListTags() *def.HttpRequestDef {
 		WithPath("/v1/cloudimages/tags").
 		WithResponse(new(model.ListTagsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -485,8 +436,6 @@ func GenReqDefForListTags() *def.HttpRequestDef {
 		WithJsonTag("updated_at").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -498,7 +447,6 @@ func GenReqDefForRegisterImage() *def.HttpRequestDef {
 		WithResponse(new(model.RegisterImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
@@ -507,8 +455,6 @@ func GenReqDefForRegisterImage() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -521,10 +467,6 @@ func GenReqDefForShowImageQuota() *def.HttpRequestDef {
 		WithResponse(new(model.ShowImageQuotaResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -536,7 +478,6 @@ func GenReqDefForUpdateImage() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
@@ -545,8 +486,6 @@ func GenReqDefForUpdateImage() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -559,13 +498,10 @@ func GenReqDefForShowJob() *def.HttpRequestDef {
 		WithResponse(new(model.ShowJobResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobId").
 		WithJsonTag("job_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -578,7 +514,6 @@ func GenReqDefForGlanceAddImageMember() *def.HttpRequestDef {
 		WithResponse(new(model.GlanceAddImageMemberResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
@@ -587,8 +522,6 @@ func GenReqDefForGlanceAddImageMember() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -601,13 +534,9 @@ func GenReqDefForGlanceCreateImageMetadata() *def.HttpRequestDef {
 		WithResponse(new(model.GlanceCreateImageMetadataResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -620,7 +549,6 @@ func GenReqDefForGlanceCreateTag() *def.HttpRequestDef {
 		WithResponse(new(model.GlanceCreateTagResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
@@ -629,8 +557,6 @@ func GenReqDefForGlanceCreateTag() *def.HttpRequestDef {
 		WithName("Tag").
 		WithJsonTag("tag").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -643,7 +569,6 @@ func GenReqDefForGlanceDeleteImage() *def.HttpRequestDef {
 		WithResponse(new(model.GlanceDeleteImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
@@ -652,8 +577,6 @@ func GenReqDefForGlanceDeleteImage() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -666,7 +589,6 @@ func GenReqDefForGlanceDeleteImageMember() *def.HttpRequestDef {
 		WithResponse(new(model.GlanceDeleteImageMemberResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
@@ -675,8 +597,6 @@ func GenReqDefForGlanceDeleteImageMember() *def.HttpRequestDef {
 		WithName("MemberId").
 		WithJsonTag("member_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -689,7 +609,6 @@ func GenReqDefForGlanceDeleteTag() *def.HttpRequestDef {
 		WithResponse(new(model.GlanceDeleteTagResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
@@ -698,8 +617,6 @@ func GenReqDefForGlanceDeleteTag() *def.HttpRequestDef {
 		WithName("Tag").
 		WithJsonTag("tag").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -712,10 +629,6 @@ func GenReqDefForGlanceListImageMemberSchemas() *def.HttpRequestDef {
 		WithResponse(new(model.GlanceListImageMemberSchemasResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -727,13 +640,10 @@ func GenReqDefForGlanceListImageMembers() *def.HttpRequestDef {
 		WithResponse(new(model.GlanceListImageMembersResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -746,10 +656,6 @@ func GenReqDefForGlanceListImageSchemas() *def.HttpRequestDef {
 		WithResponse(new(model.GlanceListImageSchemasResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -760,8 +666,6 @@ func GenReqDefForGlanceListImages() *def.HttpRequestDef {
 		WithPath("/v2/images").
 		WithResponse(new(model.GlanceListImagesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Imagetype").
@@ -892,8 +796,6 @@ func GenReqDefForGlanceListImages() *def.HttpRequestDef {
 		WithJsonTag("updated_at").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -905,13 +807,10 @@ func GenReqDefForGlanceShowImage() *def.HttpRequestDef {
 		WithResponse(new(model.GlanceShowImageResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -924,7 +823,6 @@ func GenReqDefForGlanceShowImageMember() *def.HttpRequestDef {
 		WithResponse(new(model.GlanceShowImageMemberResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
@@ -933,8 +831,6 @@ func GenReqDefForGlanceShowImageMember() *def.HttpRequestDef {
 		WithName("MemberId").
 		WithJsonTag("member_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -947,10 +843,6 @@ func GenReqDefForGlanceShowImageMemberSchemas() *def.HttpRequestDef {
 		WithResponse(new(model.GlanceShowImageMemberSchemasResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -961,10 +853,6 @@ func GenReqDefForGlanceShowImageSchemas() *def.HttpRequestDef {
 		WithPath("/v2/schemas/image").
 		WithResponse(new(model.GlanceShowImageSchemasResponse)).
 		WithContentType("application/json")
-
-	// request
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -977,7 +865,6 @@ func GenReqDefForGlanceUpdateImage() *def.HttpRequestDef {
 		WithResponse(new(model.GlanceUpdateImageResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
@@ -986,8 +873,6 @@ func GenReqDefForGlanceUpdateImage() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1000,7 +885,6 @@ func GenReqDefForGlanceUpdateImageMember() *def.HttpRequestDef {
 		WithResponse(new(model.GlanceUpdateImageMemberResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").
 		WithJsonTag("image_id").
@@ -1013,8 +897,6 @@ func GenReqDefForGlanceUpdateImageMember() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

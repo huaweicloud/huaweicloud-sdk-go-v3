@@ -1,10 +1,3 @@
-/*
- * BSS
- *
- * Business Support System API
- *
- */
-
 package model
 
 import (
@@ -38,6 +31,12 @@ type CustomerInformation struct {
 	IsFrozen *int32 `json:"is_frozen,omitempty"`
 	// |参数名称：客户经理名称列表，目前只支持1个| |参数约束以及描述：客户经理名称列表，目前只支持1个|
 	AccountManagers *[]AccountManager `json:"account_managers,omitempty"`
+	// |参数名称：伙伴销售平台的用户唯一标识| |参数的约束及描述：该标识的具体值由伙伴分配|
+	XaccountId *string `json:"xaccount_id,omitempty"`
+	// |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该标识的具体值由华为分配|
+	XaccountType *string `json:"xaccount_type,omitempty"`
+	// |参数名称：客户等级| |参数的约束及描述：V0、V1、V2、V3、V4、V5|
+	CustomerLevel *string `json:"customer_level,omitempty"`
 }
 
 func (o CustomerInformation) String() string {

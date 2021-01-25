@@ -1,10 +1,3 @@
-/*
- * NAT
- *
- * Open Api of Public Nat.
- *
- */
-
 package model
 
 import (

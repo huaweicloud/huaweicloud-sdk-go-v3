@@ -1,10 +1,3 @@
-/*
- * AS
- *
- * 弹性伸缩API
- *
- */
-
 package model
 
 import (

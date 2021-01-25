@@ -1,10 +1,3 @@
-/*
- * DDS
- *
- * API v3
- *
- */
-
 package model
 
 import (

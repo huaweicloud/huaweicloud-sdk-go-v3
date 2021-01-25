@@ -2,6 +2,7 @@ package v3
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v3/model"
 	"net/http"
 )
@@ -13,13 +14,9 @@ func GenReqDefForBatchCreateSubNetworkInterface() *def.HttpRequestDef {
 		WithResponse(new(model.BatchCreateSubNetworkInterfaceResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -32,13 +29,9 @@ func GenReqDefForCreateSecurityGroup() *def.HttpRequestDef {
 		WithResponse(new(model.CreateSecurityGroupResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -51,13 +44,9 @@ func GenReqDefForCreateSecurityGroupRule() *def.HttpRequestDef {
 		WithResponse(new(model.CreateSecurityGroupRuleResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -70,13 +59,9 @@ func GenReqDefForCreateSubNetworkInterface() *def.HttpRequestDef {
 		WithResponse(new(model.CreateSubNetworkInterfaceResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -89,13 +74,10 @@ func GenReqDefForDeleteSecurityGroup() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteSecurityGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SecurityGroupId").
 		WithJsonTag("security_group_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -108,13 +90,10 @@ func GenReqDefForDeleteSecurityGroupRule() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteSecurityGroupRuleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SecurityGroupRuleId").
 		WithJsonTag("security_group_rule_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -127,13 +106,10 @@ func GenReqDefForDeleteSubNetworkInterface() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteSubNetworkInterfaceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SubNetworkInterfaceId").
 		WithJsonTag("sub_network_interface_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -145,8 +121,6 @@ func GenReqDefForListSecurityGroupRules() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/vpc/security-group-rules").
 		WithResponse(new(model.ListSecurityGroupRulesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -185,8 +159,6 @@ func GenReqDefForListSecurityGroupRules() *def.HttpRequestDef {
 		WithJsonTag("action").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -197,8 +169,6 @@ func GenReqDefForListSecurityGroups() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/vpc/security-groups").
 		WithResponse(new(model.ListSecurityGroupsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -225,8 +195,6 @@ func GenReqDefForListSecurityGroups() *def.HttpRequestDef {
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -237,8 +205,6 @@ func GenReqDefForListSubNetworkInterfaces() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/vpc/sub-network-interfaces").
 		WithResponse(new(model.ListSubNetworkInterfacesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -277,8 +243,6 @@ func GenReqDefForListSubNetworkInterfaces() *def.HttpRequestDef {
 		WithJsonTag("parent_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -290,13 +254,10 @@ func GenReqDefForShowSecurityGroup() *def.HttpRequestDef {
 		WithResponse(new(model.ShowSecurityGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SecurityGroupId").
 		WithJsonTag("security_group_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -309,13 +270,10 @@ func GenReqDefForShowSecurityGroupRule() *def.HttpRequestDef {
 		WithResponse(new(model.ShowSecurityGroupRuleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SecurityGroupRuleId").
 		WithJsonTag("security_group_rule_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -328,13 +286,10 @@ func GenReqDefForShowSubNetworkInterface() *def.HttpRequestDef {
 		WithResponse(new(model.ShowSubNetworkInterfaceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SubNetworkInterfaceId").
 		WithJsonTag("sub_network_interface_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -347,10 +302,6 @@ func GenReqDefForShowSubNetworkInterfacesQuantity() *def.HttpRequestDef {
 		WithResponse(new(model.ShowSubNetworkInterfacesQuantityResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -362,7 +313,6 @@ func GenReqDefForUpdateSecurityGroup() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateSecurityGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SecurityGroupId").
 		WithJsonTag("security_group_id").
@@ -371,8 +321,6 @@ func GenReqDefForUpdateSecurityGroup() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -385,7 +333,6 @@ func GenReqDefForUpdateSubNetworkInterface() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateSubNetworkInterfaceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SubNetworkInterfaceId").
 		WithJsonTag("sub_network_interface_id").
@@ -394,8 +341,6 @@ func GenReqDefForUpdateSubNetworkInterface() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

@@ -2,6 +2,7 @@ package v2
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dms/v2/model"
 	"net/http"
 )
@@ -13,7 +14,6 @@ func GenReqDefForBatchCreateOrDeleteQueueTag() *def.HttpRequestDef {
 		WithResponse(new(model.BatchCreateOrDeleteQueueTagResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
@@ -26,8 +26,6 @@ func GenReqDefForBatchCreateOrDeleteQueueTag() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -40,7 +38,6 @@ func GenReqDefForConfirmConsumptionMessages() *def.HttpRequestDef {
 		WithResponse(new(model.ConfirmConsumptionMessagesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
@@ -57,8 +54,6 @@ func GenReqDefForConfirmConsumptionMessages() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -71,7 +66,6 @@ func GenReqDefForConfirmDeadLettersMessages() *def.HttpRequestDef {
 		WithResponse(new(model.ConfirmDeadLettersMessagesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
@@ -89,8 +83,6 @@ func GenReqDefForConfirmDeadLettersMessages() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -102,7 +94,6 @@ func GenReqDefForConsumeDeadlettersMessage() *def.HttpRequestDef {
 		WithResponse(new(model.ConsumeDeadlettersMessageResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
@@ -129,7 +120,6 @@ func GenReqDefForConsumeDeadlettersMessage() *def.HttpRequestDef {
 		WithJsonTag("ack_wait").
 		WithLocationType(def.Query))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -145,7 +135,6 @@ func GenReqDefForConsumeMessages() *def.HttpRequestDef {
 		WithResponse(new(model.ConsumeMessagesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
@@ -180,7 +169,6 @@ func GenReqDefForConsumeMessages() *def.HttpRequestDef {
 		WithJsonTag("tag_type").
 		WithLocationType(def.Query))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -196,7 +184,6 @@ func GenReqDefForCreateConsumerGroup() *def.HttpRequestDef {
 		WithResponse(new(model.CreateConsumerGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
@@ -209,8 +196,6 @@ func GenReqDefForCreateConsumerGroup() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -223,7 +208,6 @@ func GenReqDefForCreateQueue() *def.HttpRequestDef {
 		WithResponse(new(model.CreateQueueResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
@@ -232,8 +216,6 @@ func GenReqDefForCreateQueue() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -246,7 +228,6 @@ func GenReqDefForDeleteQueue() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteQueueResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
@@ -255,8 +236,6 @@ func GenReqDefForDeleteQueue() *def.HttpRequestDef {
 		WithName("QueueId").
 		WithJsonTag("queue_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -269,7 +248,6 @@ func GenReqDefForDeleteSpecifiedConsumerGroup() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteSpecifiedConsumerGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
@@ -283,8 +261,6 @@ func GenReqDefForDeleteSpecifiedConsumerGroup() *def.HttpRequestDef {
 		WithJsonTag("group_id").
 		WithLocationType(def.Path))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -296,7 +272,6 @@ func GenReqDefForListConsumerGroups() *def.HttpRequestDef {
 		WithResponse(new(model.ListConsumerGroupsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
@@ -323,8 +298,6 @@ func GenReqDefForListConsumerGroups() *def.HttpRequestDef {
 		WithJsonTag("current_page").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -336,7 +309,6 @@ func GenReqDefForListQueues() *def.HttpRequestDef {
 		WithResponse(new(model.ListQueuesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
@@ -346,8 +318,6 @@ func GenReqDefForListQueues() *def.HttpRequestDef {
 		WithName("IncludeDeadletter").
 		WithJsonTag("include_deadletter").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -360,7 +330,6 @@ func GenReqDefForSendMessages() *def.HttpRequestDef {
 		WithResponse(new(model.SendMessagesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
@@ -374,8 +343,6 @@ func GenReqDefForSendMessages() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -387,13 +354,10 @@ func GenReqDefForShowProjectTags() *def.HttpRequestDef {
 		WithResponse(new(model.ShowProjectTagsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -406,7 +370,6 @@ func GenReqDefForShowQueue() *def.HttpRequestDef {
 		WithResponse(new(model.ShowQueueResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
@@ -421,8 +384,6 @@ func GenReqDefForShowQueue() *def.HttpRequestDef {
 		WithJsonTag("include_deadletter").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -434,7 +395,6 @@ func GenReqDefForShowQueueTags() *def.HttpRequestDef {
 		WithResponse(new(model.ShowQueueTagsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
@@ -443,8 +403,6 @@ func GenReqDefForShowQueueTags() *def.HttpRequestDef {
 		WithName("QueueId").
 		WithJsonTag("queue_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -457,13 +415,10 @@ func GenReqDefForShowQuotas() *def.HttpRequestDef {
 		WithResponse(new(model.ShowQuotasResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

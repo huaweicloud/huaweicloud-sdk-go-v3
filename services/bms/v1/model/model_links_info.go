@@ -1,10 +1,3 @@
-/*
- * BMS
- *
- * BMS Open API
- *
- */
-
 package model
 
 import (

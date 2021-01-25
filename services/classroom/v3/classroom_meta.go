@@ -2,6 +2,7 @@ package v3
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/classroom/v3/model"
 	"net/http"
 )
@@ -13,7 +14,6 @@ func GenReqDefForListClassroomMembers() *def.HttpRequestDef {
 		WithResponse(new(model.ListClassroomMembersResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClassroomId").
 		WithJsonTag("classroom_id").
@@ -32,8 +32,6 @@ func GenReqDefForListClassroomMembers() *def.HttpRequestDef {
 		WithJsonTag("filter").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -44,8 +42,6 @@ func GenReqDefForListClassrooms() *def.HttpRequestDef {
 		WithPath("/v3/classrooms").
 		WithResponse(new(model.ListClassroomsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
@@ -60,8 +56,6 @@ func GenReqDefForListClassrooms() *def.HttpRequestDef {
 		WithJsonTag("query_type").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -73,13 +67,10 @@ func GenReqDefForShowClassroomDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ShowClassroomDetailResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClassroomId").
 		WithJsonTag("classroom_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -92,7 +83,6 @@ func GenReqDefForListClassroomMemberJobs() *def.HttpRequestDef {
 		WithResponse(new(model.ListClassroomMemberJobsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClassroomId").
 		WithJsonTag("classroom_id").
@@ -111,8 +101,6 @@ func GenReqDefForListClassroomMemberJobs() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -123,8 +111,6 @@ func GenReqDefForListJobs() *def.HttpRequestDef {
 		WithPath("/v3/jobs").
 		WithResponse(new(model.ListJobsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SourceFrom").
@@ -143,8 +129,6 @@ func GenReqDefForListJobs() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -156,7 +140,6 @@ func GenReqDefForListMemberJobRecords() *def.HttpRequestDef {
 		WithResponse(new(model.ListMemberJobRecordsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobId").
 		WithJsonTag("job_id").
@@ -179,8 +162,6 @@ func GenReqDefForListMemberJobRecords() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -192,13 +173,10 @@ func GenReqDefForShowJobDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ShowJobDetailResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobId").
 		WithJsonTag("job_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -211,7 +189,6 @@ func GenReqDefForShowJobExercises() *def.HttpRequestDef {
 		WithResponse(new(model.ShowJobExercisesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobId").
 		WithJsonTag("job_id").
@@ -233,8 +210,6 @@ func GenReqDefForShowJobExercises() *def.HttpRequestDef {
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

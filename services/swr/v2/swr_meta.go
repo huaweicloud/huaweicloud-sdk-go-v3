@@ -2,6 +2,7 @@ package v2
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/swr/v2/model"
 	"net/http"
 )
@@ -13,7 +14,6 @@ func GenReqDefForCreateImageSyncRepo() *def.HttpRequestDef {
 		WithResponse(new(model.CreateImageSyncRepoResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -31,8 +31,6 @@ func GenReqDefForCreateImageSyncRepo() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -45,8 +43,6 @@ func GenReqDefForCreateNamespace() *def.HttpRequestDef {
 		WithResponse(new(model.CreateNamespaceResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
@@ -55,8 +51,6 @@ func GenReqDefForCreateNamespace() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -69,7 +63,6 @@ func GenReqDefForCreateNamespaceAuth() *def.HttpRequestDef {
 		WithResponse(new(model.CreateNamespaceAuthResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -83,8 +76,6 @@ func GenReqDefForCreateNamespaceAuth() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -97,7 +88,6 @@ func GenReqDefForCreateRepoDomains() *def.HttpRequestDef {
 		WithResponse(new(model.CreateRepoDomainsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -115,8 +105,6 @@ func GenReqDefForCreateRepoDomains() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -129,7 +117,6 @@ func GenReqDefForCreateRetention() *def.HttpRequestDef {
 		WithResponse(new(model.CreateRetentionResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -147,8 +134,6 @@ func GenReqDefForCreateRetention() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -161,8 +146,6 @@ func GenReqDefForCreateSecret() *def.HttpRequestDef {
 		WithResponse(new(model.CreateSecretResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Projectname").
 		WithJsonTag("projectname").
@@ -172,8 +155,6 @@ func GenReqDefForCreateSecret() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -186,7 +167,6 @@ func GenReqDefForCreateTrigger() *def.HttpRequestDef {
 		WithResponse(new(model.CreateTriggerResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -204,8 +184,6 @@ func GenReqDefForCreateTrigger() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -218,7 +196,6 @@ func GenReqDefForCreateUserRepositoryAuth() *def.HttpRequestDef {
 		WithResponse(new(model.CreateUserRepositoryAuthResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -236,8 +213,6 @@ func GenReqDefForCreateUserRepositoryAuth() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -250,7 +225,6 @@ func GenReqDefForDeleteImageSyncRepo() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteImageSyncRepoResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -268,8 +242,6 @@ func GenReqDefForDeleteImageSyncRepo() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -282,7 +254,6 @@ func GenReqDefForDeleteNamespaceAuth() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteNamespaceAuthResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -297,8 +268,6 @@ func GenReqDefForDeleteNamespaceAuth() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -310,7 +279,6 @@ func GenReqDefForDeleteNamespaces() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteNamespacesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -320,8 +288,6 @@ func GenReqDefForDeleteNamespaces() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -334,7 +300,6 @@ func GenReqDefForDeleteRepo() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteRepoResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -349,8 +314,6 @@ func GenReqDefForDeleteRepo() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -362,7 +325,6 @@ func GenReqDefForDeleteRepoDomains() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteRepoDomainsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -381,8 +343,6 @@ func GenReqDefForDeleteRepoDomains() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -394,7 +354,6 @@ func GenReqDefForDeleteRepoTag() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteRepoTagResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -413,8 +372,6 @@ func GenReqDefForDeleteRepoTag() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -426,7 +383,6 @@ func GenReqDefForDeleteRetention() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteRetentionResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -445,8 +401,6 @@ func GenReqDefForDeleteRetention() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -458,7 +412,6 @@ func GenReqDefForDeleteTrigger() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteTriggerResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -477,8 +430,6 @@ func GenReqDefForDeleteTrigger() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -490,7 +441,6 @@ func GenReqDefForDeleteUserRepositoryAuth() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteUserRepositoryAuthResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -509,8 +459,6 @@ func GenReqDefForDeleteUserRepositoryAuth() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -522,7 +470,6 @@ func GenReqDefForListImageAutoSyncReposDetails() *def.HttpRequestDef {
 		WithResponse(new(model.ListImageAutoSyncReposDetailsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -537,7 +484,6 @@ func GenReqDefForListImageAutoSyncReposDetails() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -553,8 +499,6 @@ func GenReqDefForListNamespaces() *def.HttpRequestDef {
 		WithResponse(new(model.ListNamespacesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -564,8 +508,6 @@ func GenReqDefForListNamespaces() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -578,7 +520,6 @@ func GenReqDefForListRepoDomains() *def.HttpRequestDef {
 		WithResponse(new(model.ListRepoDomainsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -593,7 +534,6 @@ func GenReqDefForListRepoDomains() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -609,7 +549,6 @@ func GenReqDefForListRepositoryTags() *def.HttpRequestDef {
 		WithResponse(new(model.ListRepositoryTagsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -645,7 +584,6 @@ func GenReqDefForListRepositoryTags() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -661,7 +599,6 @@ func GenReqDefForListRetentionHistories() *def.HttpRequestDef {
 		WithResponse(new(model.ListRetentionHistoriesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -685,8 +622,6 @@ func GenReqDefForListRetentionHistories() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("ContentRange").
 		WithJsonTag("Content-Range").
@@ -704,7 +639,6 @@ func GenReqDefForListRetentions() *def.HttpRequestDef {
 		WithResponse(new(model.ListRetentionsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -719,7 +653,6 @@ func GenReqDefForListRetentions() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -735,7 +668,6 @@ func GenReqDefForListTriggersDetails() *def.HttpRequestDef {
 		WithResponse(new(model.ListTriggersDetailsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -750,7 +682,6 @@ func GenReqDefForListTriggersDetails() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -766,7 +697,6 @@ func GenReqDefForShowAccessDomain() *def.HttpRequestDef {
 		WithResponse(new(model.ShowAccessDomainResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -784,8 +714,6 @@ func GenReqDefForShowAccessDomain() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -798,7 +726,6 @@ func GenReqDefForShowNamespace() *def.HttpRequestDef {
 		WithResponse(new(model.ShowNamespaceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -808,8 +735,6 @@ func GenReqDefForShowNamespace() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -822,7 +747,6 @@ func GenReqDefForShowNamespaceAuth() *def.HttpRequestDef {
 		WithResponse(new(model.ShowNamespaceAuthResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -832,8 +756,6 @@ func GenReqDefForShowNamespaceAuth() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -846,7 +768,6 @@ func GenReqDefForShowRepository() *def.HttpRequestDef {
 		WithResponse(new(model.ShowRepositoryResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -861,8 +782,6 @@ func GenReqDefForShowRepository() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -874,7 +793,6 @@ func GenReqDefForShowRetention() *def.HttpRequestDef {
 		WithResponse(new(model.ShowRetentionResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -893,8 +811,6 @@ func GenReqDefForShowRetention() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -906,7 +822,6 @@ func GenReqDefForShowTrigger() *def.HttpRequestDef {
 		WithResponse(new(model.ShowTriggerResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -925,8 +840,6 @@ func GenReqDefForShowTrigger() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -938,7 +851,6 @@ func GenReqDefForShowUserRepositoryAuth() *def.HttpRequestDef {
 		WithResponse(new(model.ShowUserRepositoryAuthResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -953,8 +865,6 @@ func GenReqDefForShowUserRepositoryAuth() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -966,7 +876,6 @@ func GenReqDefForUpdateRepoDomains() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateRepoDomainsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -989,8 +898,6 @@ func GenReqDefForUpdateRepoDomains() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1002,7 +909,6 @@ func GenReqDefForUpdateRetention() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateRetentionResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -1025,8 +931,6 @@ func GenReqDefForUpdateRetention() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1038,7 +942,6 @@ func GenReqDefForUpdateTrigger() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateTriggerResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -1061,8 +964,6 @@ func GenReqDefForUpdateTrigger() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1074,7 +975,6 @@ func GenReqDefForUpdateUserRepositoryAuth() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateUserRepositoryAuthResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -1093,8 +993,6 @@ func GenReqDefForUpdateUserRepositoryAuth() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1106,7 +1004,6 @@ func GenReqDefForShowApiVersion() *def.HttpRequestDef {
 		WithResponse(new(model.ShowApiVersionResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ApiVersion").
 		WithJsonTag("api_version").
@@ -1116,8 +1013,6 @@ func GenReqDefForShowApiVersion() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

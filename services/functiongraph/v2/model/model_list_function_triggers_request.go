@@ -1,10 +1,3 @@
-/*
- * FunctionGraph
- *
- * API v2
- *
- */
-
 package model
 
 import (

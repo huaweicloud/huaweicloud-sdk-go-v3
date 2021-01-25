@@ -1,10 +1,3 @@
-/*
- * VPC
- *
- * VPC Open API
- *
- */
-
 package model
 
 import (

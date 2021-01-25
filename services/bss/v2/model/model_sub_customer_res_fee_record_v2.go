@@ -1,10 +1,3 @@
-/*
- * BSS
- *
- * Business Support System API
- *
- */
-
 package model
 
 import (
@@ -26,7 +19,7 @@ type SubCustomerResFeeRecordV2 struct {
 	OrderId *string `json:"order_id,omitempty"`
 	// |参数名称：消费金额，包括现金券和代金券金额，精确到小数点后2位。| |参数约束及描述： 消费金额，包括现金券和代金券金额，精确到小数点后2位。|
 	Amount float32 `json:"amount,omitempty"`
-	// |参数名称：金额单位：1：元；2：角；3：分。| |参数的约束及描述：金额单位：1：元；2：角；3：分。|
+	// |参数名称：金额单位：1：元| |参数的约束及描述：金额单位：1：元|
 	MeasureId *int32 `json:"measure_id,omitempty"`
 	// |参数名称：使用量类型| |参数约束及描述：使用量类型|
 	UsageType *string `json:"usage_type,omitempty"`

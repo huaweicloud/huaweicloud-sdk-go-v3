@@ -2,6 +2,7 @@ package v2
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ecs/v2/model"
 	"net/http"
 )
@@ -13,7 +14,6 @@ func GenReqDefForAddServerGroupMember() *def.HttpRequestDef {
 		WithResponse(new(model.AddServerGroupMemberResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerGroupId").
 		WithJsonTag("server_group_id").
@@ -22,8 +22,6 @@ func GenReqDefForAddServerGroupMember() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -36,7 +34,6 @@ func GenReqDefForAttachServerVolume() *def.HttpRequestDef {
 		WithResponse(new(model.AttachServerVolumeResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -45,8 +42,6 @@ func GenReqDefForAttachServerVolume() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -59,7 +54,6 @@ func GenReqDefForBatchAddServerNics() *def.HttpRequestDef {
 		WithResponse(new(model.BatchAddServerNicsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -68,8 +62,6 @@ func GenReqDefForBatchAddServerNics() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -82,7 +74,6 @@ func GenReqDefForBatchCreateServerTags() *def.HttpRequestDef {
 		WithResponse(new(model.BatchCreateServerTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -91,8 +82,6 @@ func GenReqDefForBatchCreateServerTags() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -105,7 +94,6 @@ func GenReqDefForBatchDeleteServerNics() *def.HttpRequestDef {
 		WithResponse(new(model.BatchDeleteServerNicsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -114,8 +102,6 @@ func GenReqDefForBatchDeleteServerNics() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -128,7 +114,6 @@ func GenReqDefForBatchDeleteServerTags() *def.HttpRequestDef {
 		WithResponse(new(model.BatchDeleteServerTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -137,8 +122,6 @@ func GenReqDefForBatchDeleteServerTags() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -151,13 +134,9 @@ func GenReqDefForBatchRebootServers() *def.HttpRequestDef {
 		WithResponse(new(model.BatchRebootServersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -170,13 +149,9 @@ func GenReqDefForBatchStartServers() *def.HttpRequestDef {
 		WithResponse(new(model.BatchStartServersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -189,13 +164,9 @@ func GenReqDefForBatchStopServers() *def.HttpRequestDef {
 		WithResponse(new(model.BatchStopServersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -208,7 +179,6 @@ func GenReqDefForChangeServerOsWithCloudInit() *def.HttpRequestDef {
 		WithResponse(new(model.ChangeServerOsWithCloudInitResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -217,8 +187,6 @@ func GenReqDefForChangeServerOsWithCloudInit() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -231,13 +199,9 @@ func GenReqDefForCreatePostPaidServers() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePostPaidServersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -250,13 +214,9 @@ func GenReqDefForCreateServerGroup() *def.HttpRequestDef {
 		WithResponse(new(model.CreateServerGroupResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -269,13 +229,9 @@ func GenReqDefForCreateServers() *def.HttpRequestDef {
 		WithResponse(new(model.CreateServersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -288,13 +244,10 @@ func GenReqDefForDeleteServerGroup() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteServerGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerGroupId").
 		WithJsonTag("server_group_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -307,7 +260,6 @@ func GenReqDefForDeleteServerGroupMember() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteServerGroupMemberResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerGroupId").
 		WithJsonTag("server_group_id").
@@ -316,8 +268,6 @@ func GenReqDefForDeleteServerGroupMember() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -330,7 +280,6 @@ func GenReqDefForDeleteServerMetadata() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteServerMetadataResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Key").
 		WithJsonTag("key").
@@ -339,8 +288,6 @@ func GenReqDefForDeleteServerMetadata() *def.HttpRequestDef {
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -353,13 +300,9 @@ func GenReqDefForDeleteServers() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteServersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -372,7 +315,6 @@ func GenReqDefForDetachServerVolume() *def.HttpRequestDef {
 		WithResponse(new(model.DetachServerVolumeResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -387,8 +329,6 @@ func GenReqDefForDetachServerVolume() *def.HttpRequestDef {
 		WithJsonTag("delete_flag").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -400,14 +340,10 @@ func GenReqDefForListFlavors() *def.HttpRequestDef {
 		WithResponse(new(model.ListFlavorsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AvailabilityZone").
 		WithJsonTag("availability_zone").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -419,8 +355,6 @@ func GenReqDefForListResizeFlavors() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/cloudservers/resize_flavors").
 		WithResponse(new(model.ListResizeFlavorsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceUuid").
@@ -451,8 +385,6 @@ func GenReqDefForListResizeFlavors() *def.HttpRequestDef {
 		WithJsonTag("source_flavor_name").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -464,13 +396,10 @@ func GenReqDefForListServerBlockDevices() *def.HttpRequestDef {
 		WithResponse(new(model.ListServerBlockDevicesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -483,13 +412,10 @@ func GenReqDefForListServerInterfaces() *def.HttpRequestDef {
 		WithResponse(new(model.ListServerInterfacesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -501,8 +427,6 @@ func GenReqDefForListServersDetails() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/cloudservers/detail").
 		WithResponse(new(model.ListServersDetailsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
@@ -545,8 +469,6 @@ func GenReqDefForListServersDetails() *def.HttpRequestDef {
 		WithJsonTag("tags").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -558,7 +480,6 @@ func GenReqDefForNovaAssociateSecurityGroup() *def.HttpRequestDef {
 		WithResponse(new(model.NovaAssociateSecurityGroupResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -567,8 +488,6 @@ func GenReqDefForNovaAssociateSecurityGroup() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -581,8 +500,6 @@ func GenReqDefForNovaCreateKeypair() *def.HttpRequestDef {
 		WithResponse(new(model.NovaCreateKeypairResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("OpenStackAPIVersion").
 		WithJsonTag("OpenStack-API-Version").
@@ -591,8 +508,6 @@ func GenReqDefForNovaCreateKeypair() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -605,8 +520,6 @@ func GenReqDefForNovaCreateServers() *def.HttpRequestDef {
 		WithResponse(new(model.NovaCreateServersResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("OpenStackAPIVersion").
 		WithJsonTag("OpenStack-API-Version").
@@ -615,8 +528,6 @@ func GenReqDefForNovaCreateServers() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -629,13 +540,10 @@ func GenReqDefForNovaDeleteKeypair() *def.HttpRequestDef {
 		WithResponse(new(model.NovaDeleteKeypairResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("KeypairName").
 		WithJsonTag("keypair_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -648,13 +556,10 @@ func GenReqDefForNovaDeleteServer() *def.HttpRequestDef {
 		WithResponse(new(model.NovaDeleteServerResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -667,7 +572,6 @@ func GenReqDefForNovaDisassociateSecurityGroup() *def.HttpRequestDef {
 		WithResponse(new(model.NovaDisassociateSecurityGroupResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -676,8 +580,6 @@ func GenReqDefForNovaDisassociateSecurityGroup() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -690,10 +592,6 @@ func GenReqDefForNovaListAvailabilityZones() *def.HttpRequestDef {
 		WithResponse(new(model.NovaListAvailabilityZonesResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -704,8 +602,6 @@ func GenReqDefForNovaListKeypairs() *def.HttpRequestDef {
 		WithPath("/v2.1/{project_id}/os-keypairs").
 		WithResponse(new(model.NovaListKeypairsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -721,8 +617,6 @@ func GenReqDefForNovaListKeypairs() *def.HttpRequestDef {
 		WithJsonTag("OpenStack-API-Version").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -734,13 +628,10 @@ func GenReqDefForNovaListServerSecurityGroups() *def.HttpRequestDef {
 		WithResponse(new(model.NovaListServerSecurityGroupsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -752,8 +643,6 @@ func GenReqDefForNovaListServersDetails() *def.HttpRequestDef {
 		WithPath("/v2.1/{project_id}/servers/detail").
 		WithResponse(new(model.NovaListServersDetailsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ChangesSince").
@@ -809,8 +698,6 @@ func GenReqDefForNovaListServersDetails() *def.HttpRequestDef {
 		WithJsonTag("OpenStack-API-Version").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -822,7 +709,6 @@ func GenReqDefForNovaShowKeypair() *def.HttpRequestDef {
 		WithResponse(new(model.NovaShowKeypairResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("KeypairName").
 		WithJsonTag("keypair_name").
@@ -832,8 +718,6 @@ func GenReqDefForNovaShowKeypair() *def.HttpRequestDef {
 		WithName("OpenStackAPIVersion").
 		WithJsonTag("OpenStack-API-Version").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -846,7 +730,6 @@ func GenReqDefForNovaShowServer() *def.HttpRequestDef {
 		WithResponse(new(model.NovaShowServerResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -856,8 +739,6 @@ func GenReqDefForNovaShowServer() *def.HttpRequestDef {
 		WithName("OpenStackAPIVersion").
 		WithJsonTag("OpenStack-API-Version").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -870,7 +751,6 @@ func GenReqDefForReinstallServerWithCloudInit() *def.HttpRequestDef {
 		WithResponse(new(model.ReinstallServerWithCloudInitResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -879,8 +759,6 @@ func GenReqDefForReinstallServerWithCloudInit() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -893,7 +771,6 @@ func GenReqDefForResetServerPassword() *def.HttpRequestDef {
 		WithResponse(new(model.ResetServerPasswordResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -902,8 +779,6 @@ func GenReqDefForResetServerPassword() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -916,7 +791,6 @@ func GenReqDefForResizePostPaidServer() *def.HttpRequestDef {
 		WithResponse(new(model.ResizePostPaidServerResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -925,8 +799,6 @@ func GenReqDefForResizePostPaidServer() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -939,7 +811,6 @@ func GenReqDefForResizeServer() *def.HttpRequestDef {
 		WithResponse(new(model.ResizeServerResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -948,8 +819,6 @@ func GenReqDefForResizeServer() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -962,13 +831,10 @@ func GenReqDefForShowResetPasswordFlag() *def.HttpRequestDef {
 		WithResponse(new(model.ShowResetPasswordFlagResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -981,13 +847,10 @@ func GenReqDefForShowServer() *def.HttpRequestDef {
 		WithResponse(new(model.ShowServerResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1000,10 +863,6 @@ func GenReqDefForShowServerLimits() *def.HttpRequestDef {
 		WithResponse(new(model.ShowServerLimitsResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1015,7 +874,6 @@ func GenReqDefForShowServerRemoteConsole() *def.HttpRequestDef {
 		WithResponse(new(model.ShowServerRemoteConsoleResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -1024,8 +882,6 @@ func GenReqDefForShowServerRemoteConsole() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1038,13 +894,30 @@ func GenReqDefForShowServerTags() *def.HttpRequestDef {
 		WithResponse(new(model.ShowServerTagsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Path))
 
-	// response
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateAutoTerminateTimeServer() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/cloudservers/{server_id}/actions/update-auto-terminate-time").
+		WithResponse(new(model.UpdateAutoTerminateTimeServerResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServerId").
+		WithJsonTag("server_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1057,7 +930,6 @@ func GenReqDefForUpdateServer() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateServerResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -1066,8 +938,6 @@ func GenReqDefForUpdateServer() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1080,7 +950,6 @@ func GenReqDefForUpdateServerMetadata() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateServerMetadataResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServerId").
 		WithJsonTag("server_id").
@@ -1089,8 +958,6 @@ func GenReqDefForUpdateServerMetadata() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1103,13 +970,10 @@ func GenReqDefForShowJob() *def.HttpRequestDef {
 		WithResponse(new(model.ShowJobResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobId").
 		WithJsonTag("job_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

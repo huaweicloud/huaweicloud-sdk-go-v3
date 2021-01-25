@@ -1,10 +1,3 @@
-/*
- * SWR
- *
- * SWR API
- *
- */
-
 package model
 
 import (

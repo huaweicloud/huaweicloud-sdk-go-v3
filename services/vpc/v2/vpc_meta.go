@@ -2,6 +2,7 @@ package v2
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
 	"net/http"
 )
@@ -13,13 +14,10 @@ func GenReqDefForAcceptVpcPeering() *def.HttpRequestDef {
 		WithResponse(new(model.AcceptVpcPeeringResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PeeringId").
 		WithJsonTag("peering_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -32,13 +30,9 @@ func GenReqDefForCreatePort() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePortResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -51,13 +45,9 @@ func GenReqDefForCreateSecurityGroup() *def.HttpRequestDef {
 		WithResponse(new(model.CreateSecurityGroupResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -70,13 +60,9 @@ func GenReqDefForCreateSecurityGroupRule() *def.HttpRequestDef {
 		WithResponse(new(model.CreateSecurityGroupRuleResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -89,13 +75,9 @@ func GenReqDefForCreateSubnet() *def.HttpRequestDef {
 		WithResponse(new(model.CreateSubnetResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -108,13 +90,9 @@ func GenReqDefForCreateVpcPeering() *def.HttpRequestDef {
 		WithResponse(new(model.CreateVpcPeeringResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -127,13 +105,10 @@ func GenReqDefForDeletePort() *def.HttpRequestDef {
 		WithResponse(new(model.DeletePortResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PortId").
 		WithJsonTag("port_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -146,13 +121,10 @@ func GenReqDefForDeleteSecurityGroup() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteSecurityGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SecurityGroupId").
 		WithJsonTag("security_group_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -165,13 +137,10 @@ func GenReqDefForDeleteSecurityGroupRule() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteSecurityGroupRuleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SecurityGroupRuleId").
 		WithJsonTag("security_group_rule_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -184,7 +153,6 @@ func GenReqDefForDeleteSubnet() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteSubnetResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VpcId").
 		WithJsonTag("vpc_id").
@@ -193,8 +161,6 @@ func GenReqDefForDeleteSubnet() *def.HttpRequestDef {
 		WithName("SubnetId").
 		WithJsonTag("subnet_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -207,13 +173,10 @@ func GenReqDefForDeleteVpcPeering() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteVpcPeeringResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PeeringId").
 		WithJsonTag("peering_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -225,8 +188,6 @@ func GenReqDefForListPorts() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/ports").
 		WithResponse(new(model.ListPortsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Name").
@@ -281,8 +242,6 @@ func GenReqDefForListPorts() *def.HttpRequestDef {
 		WithJsonTag("zone_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -293,8 +252,6 @@ func GenReqDefForListSecurityGroupRules() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/security-group-rules").
 		WithResponse(new(model.ListSecurityGroupRulesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Marker").
@@ -309,8 +266,6 @@ func GenReqDefForListSecurityGroupRules() *def.HttpRequestDef {
 		WithJsonTag("security_group_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -321,8 +276,6 @@ func GenReqDefForListSecurityGroups() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/security-groups").
 		WithResponse(new(model.ListSecurityGroupsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -341,8 +294,6 @@ func GenReqDefForListSecurityGroups() *def.HttpRequestDef {
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -353,8 +304,6 @@ func GenReqDefForListSubnets() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/subnets").
 		WithResponse(new(model.ListSubnetsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -373,8 +322,6 @@ func GenReqDefForListSubnets() *def.HttpRequestDef {
 		WithJsonTag("scope").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -385,8 +332,6 @@ func GenReqDefForListVpcPeerings() *def.HttpRequestDef {
 		WithPath("/v2.0/vpc/peerings").
 		WithResponse(new(model.ListVpcPeeringsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -417,8 +362,6 @@ func GenReqDefForListVpcPeerings() *def.HttpRequestDef {
 		WithJsonTag("vpc_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -430,13 +373,10 @@ func GenReqDefForRejectVpcPeering() *def.HttpRequestDef {
 		WithResponse(new(model.RejectVpcPeeringResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PeeringId").
 		WithJsonTag("peering_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -449,13 +389,10 @@ func GenReqDefForShowPort() *def.HttpRequestDef {
 		WithResponse(new(model.ShowPortResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PortId").
 		WithJsonTag("port_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -468,14 +405,10 @@ func GenReqDefForShowQuota() *def.HttpRequestDef {
 		WithResponse(new(model.ShowQuotaResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Type").
 		WithJsonTag("type").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -488,13 +421,10 @@ func GenReqDefForShowSecurityGroup() *def.HttpRequestDef {
 		WithResponse(new(model.ShowSecurityGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SecurityGroupId").
 		WithJsonTag("security_group_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -507,13 +437,10 @@ func GenReqDefForShowSecurityGroupRule() *def.HttpRequestDef {
 		WithResponse(new(model.ShowSecurityGroupRuleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SecurityGroupRuleId").
 		WithJsonTag("security_group_rule_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -526,13 +453,10 @@ func GenReqDefForShowSubnet() *def.HttpRequestDef {
 		WithResponse(new(model.ShowSubnetResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SubnetId").
 		WithJsonTag("subnet_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -545,13 +469,10 @@ func GenReqDefForShowVpcPeering() *def.HttpRequestDef {
 		WithResponse(new(model.ShowVpcPeeringResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PeeringId").
 		WithJsonTag("peering_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -564,7 +485,6 @@ func GenReqDefForUpdatePort() *def.HttpRequestDef {
 		WithResponse(new(model.UpdatePortResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PortId").
 		WithJsonTag("port_id").
@@ -573,8 +493,6 @@ func GenReqDefForUpdatePort() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -587,7 +505,6 @@ func GenReqDefForUpdateSubnet() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateSubnetResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VpcId").
 		WithJsonTag("vpc_id").
@@ -601,8 +518,6 @@ func GenReqDefForUpdateSubnet() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -614,7 +529,6 @@ func GenReqDefForUpdateVpcPeering() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateVpcPeeringResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PeeringId").
 		WithJsonTag("peering_id").
@@ -623,8 +537,6 @@ func GenReqDefForUpdateVpcPeering() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -637,13 +549,9 @@ func GenReqDefForCreatePrivateip() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePrivateipResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -656,13 +564,10 @@ func GenReqDefForDeletePrivateip() *def.HttpRequestDef {
 		WithResponse(new(model.DeletePrivateipResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PrivateipId").
 		WithJsonTag("privateip_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -675,7 +580,6 @@ func GenReqDefForListPrivateips() *def.HttpRequestDef {
 		WithResponse(new(model.ListPrivateipsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SubnetId").
 		WithJsonTag("subnet_id").
@@ -690,8 +594,6 @@ func GenReqDefForListPrivateips() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -703,13 +605,10 @@ func GenReqDefForShowNetworkIpAvailabilities() *def.HttpRequestDef {
 		WithResponse(new(model.ShowNetworkIpAvailabilitiesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NetworkId").
 		WithJsonTag("network_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -722,13 +621,10 @@ func GenReqDefForShowPrivateip() *def.HttpRequestDef {
 		WithResponse(new(model.ShowPrivateipResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PrivateipId").
 		WithJsonTag("privateip_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -741,7 +637,6 @@ func GenReqDefForNeutronAddFirewallRule() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronAddFirewallRuleResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FirewallPolicyId").
 		WithJsonTag("firewall_policy_id").
@@ -750,8 +645,6 @@ func GenReqDefForNeutronAddFirewallRule() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -764,13 +657,9 @@ func GenReqDefForNeutronCreateFirewallGroup() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronCreateFirewallGroupResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -783,13 +672,9 @@ func GenReqDefForNeutronCreateFirewallPolicy() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronCreateFirewallPolicyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -802,13 +687,9 @@ func GenReqDefForNeutronCreateFirewallRule() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronCreateFirewallRuleResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -821,13 +702,10 @@ func GenReqDefForNeutronDeleteFirewallGroup() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronDeleteFirewallGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FirewallGroupId").
 		WithJsonTag("firewall_group_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -840,13 +718,10 @@ func GenReqDefForNeutronDeleteFirewallPolicy() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronDeleteFirewallPolicyResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FirewallPolicyId").
 		WithJsonTag("firewall_policy_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -859,13 +734,10 @@ func GenReqDefForNeutronDeleteFirewallRule() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronDeleteFirewallRuleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FirewallRuleId").
 		WithJsonTag("firewall_rule_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -877,8 +749,6 @@ func GenReqDefForNeutronListFirewallGroups() *def.HttpRequestDef {
 		WithPath("/v2.0/fwaas/firewall_groups").
 		WithResponse(new(model.NeutronListFirewallGroupsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Marker").
@@ -909,8 +779,6 @@ func GenReqDefForNeutronListFirewallGroups() *def.HttpRequestDef {
 		WithJsonTag("egress_firewall_policy_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -921,8 +789,6 @@ func GenReqDefForNeutronListFirewallPolicies() *def.HttpRequestDef {
 		WithPath("/v2.0/fwaas/firewall_policies").
 		WithResponse(new(model.NeutronListFirewallPoliciesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -949,8 +815,6 @@ func GenReqDefForNeutronListFirewallPolicies() *def.HttpRequestDef {
 		WithJsonTag("tenant_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -961,8 +825,6 @@ func GenReqDefForNeutronListFirewallRules() *def.HttpRequestDef {
 		WithPath("/v2.0/fwaas/firewall_rules").
 		WithResponse(new(model.NeutronListFirewallRulesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Marker").
@@ -993,8 +855,6 @@ func GenReqDefForNeutronListFirewallRules() *def.HttpRequestDef {
 		WithJsonTag("tenant_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1006,7 +866,6 @@ func GenReqDefForNeutronRemoveFirewallRule() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronRemoveFirewallRuleResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FirewallPolicyId").
 		WithJsonTag("firewall_policy_id").
@@ -1015,8 +874,6 @@ func GenReqDefForNeutronRemoveFirewallRule() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1029,13 +886,10 @@ func GenReqDefForNeutronShowFirewallGroup() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronShowFirewallGroupResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FirewallGroupId").
 		WithJsonTag("firewall_group_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1048,13 +902,10 @@ func GenReqDefForNeutronShowFirewallPolicy() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronShowFirewallPolicyResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FirewallPolicyId").
 		WithJsonTag("firewall_policy_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1067,13 +918,10 @@ func GenReqDefForNeutronShowFirewallRule() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronShowFirewallRuleResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FirewallRuleId").
 		WithJsonTag("firewall_rule_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1086,7 +934,6 @@ func GenReqDefForNeutronUpdateFirewallGroup() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronUpdateFirewallGroupResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FirewallGroupId").
 		WithJsonTag("firewall_group_id").
@@ -1095,8 +942,6 @@ func GenReqDefForNeutronUpdateFirewallGroup() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1109,7 +954,6 @@ func GenReqDefForNeutronUpdateFirewallPolicy() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronUpdateFirewallPolicyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FirewallPolicyId").
 		WithJsonTag("firewall_policy_id").
@@ -1118,8 +962,6 @@ func GenReqDefForNeutronUpdateFirewallPolicy() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1132,7 +974,6 @@ func GenReqDefForNeutronUpdateFirewallRule() *def.HttpRequestDef {
 		WithResponse(new(model.NeutronUpdateFirewallRuleResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FirewallRuleId").
 		WithJsonTag("firewall_rule_id").
@@ -1141,8 +982,6 @@ func GenReqDefForNeutronUpdateFirewallRule() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1155,13 +994,9 @@ func GenReqDefForCreateVpc() *def.HttpRequestDef {
 		WithResponse(new(model.CreateVpcResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1174,13 +1009,9 @@ func GenReqDefForCreateVpcRoute() *def.HttpRequestDef {
 		WithResponse(new(model.CreateVpcRouteResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1193,13 +1024,10 @@ func GenReqDefForDeleteVpc() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteVpcResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VpcId").
 		WithJsonTag("vpc_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1212,13 +1040,10 @@ func GenReqDefForDeleteVpcRoute() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteVpcRouteResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("RouteId").
 		WithJsonTag("route_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1230,8 +1055,6 @@ func GenReqDefForListVpcRoutes() *def.HttpRequestDef {
 		WithPath("/v2.0/vpc/routes").
 		WithResponse(new(model.ListVpcRoutesResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -1262,8 +1085,6 @@ func GenReqDefForListVpcRoutes() *def.HttpRequestDef {
 		WithJsonTag("tenant_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1274,8 +1095,6 @@ func GenReqDefForListVpcs() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/vpcs").
 		WithResponse(new(model.ListVpcsResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -1294,8 +1113,6 @@ func GenReqDefForListVpcs() *def.HttpRequestDef {
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1307,13 +1124,10 @@ func GenReqDefForShowVpc() *def.HttpRequestDef {
 		WithResponse(new(model.ShowVpcResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VpcId").
 		WithJsonTag("vpc_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1326,13 +1140,10 @@ func GenReqDefForShowVpcRoute() *def.HttpRequestDef {
 		WithResponse(new(model.ShowVpcRouteResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("RouteId").
 		WithJsonTag("route_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1345,7 +1156,6 @@ func GenReqDefForUpdateVpc() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateVpcResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VpcId").
 		WithJsonTag("vpc_id").
@@ -1354,8 +1164,6 @@ func GenReqDefForUpdateVpc() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

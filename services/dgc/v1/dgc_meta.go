@@ -2,6 +2,7 @@ package v1
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dgc/v1/model"
 	"net/http"
 )
@@ -13,7 +14,6 @@ func GenReqDefForCancelScript() *def.HttpRequestDef {
 		WithResponse(new(model.CancelScriptResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScriptName").
 		WithJsonTag("script_name").
@@ -22,8 +22,6 @@ func GenReqDefForCancelScript() *def.HttpRequestDef {
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -36,13 +34,9 @@ func GenReqDefForCreateConnection() *def.HttpRequestDef {
 		WithResponse(new(model.CreateConnectionResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -55,13 +49,9 @@ func GenReqDefForCreateJob() *def.HttpRequestDef {
 		WithResponse(new(model.CreateJobResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -74,13 +64,10 @@ func GenReqDefForCreateResource() *def.HttpRequestDef {
 		WithResponse(new(model.CreateResourceResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -96,13 +83,9 @@ func GenReqDefForCreateScript() *def.HttpRequestDef {
 		WithResponse(new(model.CreateScriptResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -115,13 +98,10 @@ func GenReqDefForDeleteConnction() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteConnctionResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ConnectionName").
 		WithJsonTag("connection_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -134,13 +114,10 @@ func GenReqDefForDeleteJob() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteJobResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobName").
 		WithJsonTag("job_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -153,13 +130,10 @@ func GenReqDefForDeleteResource() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteResourceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceId").
 		WithJsonTag("resource_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -172,13 +146,10 @@ func GenReqDefForDeleteScript() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteScriptResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScriptName").
 		WithJsonTag("script_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -191,7 +162,6 @@ func GenReqDefForExecuteScript() *def.HttpRequestDef {
 		WithResponse(new(model.ExecuteScriptResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScriptName").
 		WithJsonTag("script_name").
@@ -200,8 +170,6 @@ func GenReqDefForExecuteScript() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -214,10 +182,6 @@ func GenReqDefForExportConnections() *def.HttpRequestDef {
 		WithResponse(new(model.ExportConnectionsResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -229,13 +193,10 @@ func GenReqDefForExportJob() *def.HttpRequestDef {
 		WithResponse(new(model.ExportJobResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobName").
 		WithJsonTag("job_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -248,13 +209,9 @@ func GenReqDefForExportJobList() *def.HttpRequestDef {
 		WithResponse(new(model.ExportJobListResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -267,13 +224,9 @@ func GenReqDefForImportConnections() *def.HttpRequestDef {
 		WithResponse(new(model.ImportConnectionsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -286,13 +239,9 @@ func GenReqDefForImportJob() *def.HttpRequestDef {
 		WithResponse(new(model.ImportJobResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -305,10 +254,6 @@ func GenReqDefForListConnections() *def.HttpRequestDef {
 		WithResponse(new(model.ListConnectionsResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -319,10 +264,6 @@ func GenReqDefForListJobInstances() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/jobs/instances/detail").
 		WithResponse(new(model.ListJobInstancesResponse)).
 		WithContentType("application/json")
-
-	// request
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -335,10 +276,6 @@ func GenReqDefForListJobs() *def.HttpRequestDef {
 		WithResponse(new(model.ListJobsResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -349,10 +286,6 @@ func GenReqDefForListResources() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/resources").
 		WithResponse(new(model.ListResourcesResponse)).
 		WithContentType("application/json")
-
-	// request
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -365,7 +298,6 @@ func GenReqDefForListScriptResults() *def.HttpRequestDef {
 		WithResponse(new(model.ListScriptResultsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScriptName").
 		WithJsonTag("script_name").
@@ -374,8 +306,6 @@ func GenReqDefForListScriptResults() *def.HttpRequestDef {
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -388,10 +318,6 @@ func GenReqDefForListScripts() *def.HttpRequestDef {
 		WithResponse(new(model.ListScriptsResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -403,13 +329,10 @@ func GenReqDefForListSystemTasks() *def.HttpRequestDef {
 		WithResponse(new(model.ListSystemTasksResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -422,7 +345,6 @@ func GenReqDefForModifyJob() *def.HttpRequestDef {
 		WithResponse(new(model.ModifyJobResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobName").
 		WithJsonTag("job_name").
@@ -431,8 +353,6 @@ func GenReqDefForModifyJob() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -445,7 +365,6 @@ func GenReqDefForModifyResource() *def.HttpRequestDef {
 		WithResponse(new(model.ModifyResourceResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceId").
 		WithJsonTag("resource_id").
@@ -454,8 +373,6 @@ func GenReqDefForModifyResource() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -468,7 +385,6 @@ func GenReqDefForModifyScript() *def.HttpRequestDef {
 		WithResponse(new(model.ModifyScriptResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScriptName").
 		WithJsonTag("script_name").
@@ -477,8 +393,6 @@ func GenReqDefForModifyScript() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -491,7 +405,6 @@ func GenReqDefForRestoreJobInstance() *def.HttpRequestDef {
 		WithResponse(new(model.RestoreJobInstanceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobName").
 		WithJsonTag("job_name").
@@ -500,8 +413,6 @@ func GenReqDefForRestoreJobInstance() *def.HttpRequestDef {
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -514,7 +425,6 @@ func GenReqDefForRunOnce() *def.HttpRequestDef {
 		WithResponse(new(model.RunOnceResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobName").
 		WithJsonTag("job_name").
@@ -523,8 +433,6 @@ func GenReqDefForRunOnce() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -537,13 +445,10 @@ func GenReqDefForShowConnection() *def.HttpRequestDef {
 		WithResponse(new(model.ShowConnectionResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ConnectionName").
 		WithJsonTag("connection_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -556,13 +461,9 @@ func GenReqDefForShowFileInfo() *def.HttpRequestDef {
 		WithResponse(new(model.ShowFileInfoResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -575,13 +476,10 @@ func GenReqDefForShowJob() *def.HttpRequestDef {
 		WithResponse(new(model.ShowJobResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobName").
 		WithJsonTag("job_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -594,7 +492,6 @@ func GenReqDefForShowJobInstance() *def.HttpRequestDef {
 		WithResponse(new(model.ShowJobInstanceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobName").
 		WithJsonTag("job_name").
@@ -603,8 +500,6 @@ func GenReqDefForShowJobInstance() *def.HttpRequestDef {
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -617,13 +512,10 @@ func GenReqDefForShowJobStatus() *def.HttpRequestDef {
 		WithResponse(new(model.ShowJobStatusResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobName").
 		WithJsonTag("job_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -636,13 +528,10 @@ func GenReqDefForShowResource() *def.HttpRequestDef {
 		WithResponse(new(model.ShowResourceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceId").
 		WithJsonTag("resource_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -655,13 +544,10 @@ func GenReqDefForShowScript() *def.HttpRequestDef {
 		WithResponse(new(model.ShowScriptResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScriptName").
 		WithJsonTag("script_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -674,7 +560,6 @@ func GenReqDefForStartJob() *def.HttpRequestDef {
 		WithResponse(new(model.StartJobResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobName").
 		WithJsonTag("job_name").
@@ -683,8 +568,6 @@ func GenReqDefForStartJob() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -697,13 +580,10 @@ func GenReqDefForStopJob() *def.HttpRequestDef {
 		WithResponse(new(model.StopJobResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobName").
 		WithJsonTag("job_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -716,7 +596,6 @@ func GenReqDefForStopJobInstance() *def.HttpRequestDef {
 		WithResponse(new(model.StopJobInstanceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobName").
 		WithJsonTag("job_name").
@@ -725,8 +604,6 @@ func GenReqDefForStopJobInstance() *def.HttpRequestDef {
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -739,7 +616,6 @@ func GenReqDefForUpdateConnection() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateConnectionResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ConnectionName").
 		WithJsonTag("connection_name").
@@ -748,8 +624,6 @@ func GenReqDefForUpdateConnection() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

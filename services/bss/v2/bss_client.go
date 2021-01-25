@@ -2,6 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/bss/v2/model"
 )
 
@@ -271,7 +272,7 @@ func (c *BssClient) ListCustomersBalancesDetail(request *model.ListCustomersBala
 	}
 }
 
-//功能描述：客户在客户自建平台查询自己的资源详单，用于反映各类资源的消耗情况。资源详单数据有延迟，最大延迟24小时。
+//功能描述：客户在客户自建平台查询自己的资源详单，用于反映各类资源的消耗情况。
 func (c *BssClient) ListCustomerselfResourceRecordDetails(request *model.ListCustomerselfResourceRecordDetailsRequest) (*model.ListCustomerselfResourceRecordDetailsResponse, error) {
 	requestDef := GenReqDefForListCustomerselfResourceRecordDetails()
 
@@ -389,6 +390,17 @@ func (c *BssClient) ListOrderCouponsByOrderId(request *model.ListOrderCouponsByO
 		return nil, err
 	} else {
 		return resp.(*model.ListOrderCouponsByOrderIdResponse), nil
+	}
+}
+
+//功能描述：功能介绍客户在伙伴销售平台支付待支付订单时，查询可使用的折扣。只返回商务合同折扣和伙伴授权折扣客户在客户自建平台查看订单可用的优惠券列表。
+func (c *BssClient) ListOrderDiscounts(request *model.ListOrderDiscountsRequest) (*model.ListOrderDiscountsResponse, error) {
+	requestDef := GenReqDefForListOrderDiscounts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOrderDiscountsResponse), nil
 	}
 }
 
@@ -722,7 +734,7 @@ func (c *BssClient) ShowCustomerAccountBalances(request *model.ShowCustomerAccou
 	}
 }
 
-//功能描述：客户在客户自建平台查询自身的消费汇总账单，此账单按月汇总消费数据。消费汇总账单数据仅包含前一天24点前的数据
+//功能描述：客户在客户自建平台查询自身的消费汇总账单，此账单按月汇总消费数据。
 func (c *BssClient) ShowCustomerMonthlySum(request *model.ShowCustomerMonthlySumRequest) (*model.ShowCustomerMonthlySumResponse, error) {
 	requestDef := GenReqDefForShowCustomerMonthlySum()
 

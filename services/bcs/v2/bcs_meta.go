@@ -2,6 +2,7 @@ package v2
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/bcs/v2/model"
 	"net/http"
 )
@@ -13,7 +14,6 @@ func GenReqDefForBatchAddPeersToChannel() *def.HttpRequestDef {
 		WithResponse(new(model.BatchAddPeersToChannelResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BlockchainId").
 		WithJsonTag("blockchain_id").
@@ -22,8 +22,6 @@ func GenReqDefForBatchAddPeersToChannel() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -36,7 +34,6 @@ func GenReqDefForBatchCreateChannels() *def.HttpRequestDef {
 		WithResponse(new(model.BatchCreateChannelsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BlockchainId").
 		WithJsonTag("blockchain_id").
@@ -45,8 +42,6 @@ func GenReqDefForBatchCreateChannels() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -59,13 +54,9 @@ func GenReqDefForBatchInviteMembersToChannel() *def.HttpRequestDef {
 		WithResponse(new(model.BatchInviteMembersToChannelResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -78,13 +69,9 @@ func GenReqDefForCreateNewBlockchain() *def.HttpRequestDef {
 		WithResponse(new(model.CreateNewBlockchainResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -97,7 +84,6 @@ func GenReqDefForDeleteBlockchain() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteBlockchainResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BlockchainId").
 		WithJsonTag("blockchain_id").
@@ -116,8 +102,6 @@ func GenReqDefForDeleteBlockchain() *def.HttpRequestDef {
 		WithJsonTag("is_delete_resource").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -129,7 +113,6 @@ func GenReqDefForDownloadBlockchainCert() *def.HttpRequestDef {
 		WithResponse(new(model.DownloadBlockchainCertResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BlockchainId").
 		WithJsonTag("blockchain_id").
@@ -144,8 +127,6 @@ func GenReqDefForDownloadBlockchainCert() *def.HttpRequestDef {
 		WithJsonTag("cert_type").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -157,7 +138,6 @@ func GenReqDefForDownloadBlockchainSdkConfig() *def.HttpRequestDef {
 		WithResponse(new(model.DownloadBlockchainSdkConfigResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BlockchainId").
 		WithJsonTag("blockchain_id").
@@ -166,8 +146,6 @@ func GenReqDefForDownloadBlockchainSdkConfig() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -180,13 +158,9 @@ func GenReqDefForHandleNotification() *def.HttpRequestDef {
 		WithResponse(new(model.HandleNotificationResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -199,7 +173,6 @@ func GenReqDefForListBcsMetric() *def.HttpRequestDef {
 		WithResponse(new(model.ListBcsMetricResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BlockchainId").
 		WithJsonTag("blockchain_id").
@@ -208,8 +181,6 @@ func GenReqDefForListBcsMetric() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -222,13 +193,10 @@ func GenReqDefForListBlockchainChannels() *def.HttpRequestDef {
 		WithResponse(new(model.ListBlockchainChannelsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BlockchainId").
 		WithJsonTag("blockchain_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -241,10 +209,6 @@ func GenReqDefForListBlockchains() *def.HttpRequestDef {
 		WithResponse(new(model.ListBlockchainsResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -256,7 +220,6 @@ func GenReqDefForListEntityMetric() *def.HttpRequestDef {
 		WithResponse(new(model.ListEntityMetricResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BlockchainId").
 		WithJsonTag("blockchain_id").
@@ -265,8 +228,6 @@ func GenReqDefForListEntityMetric() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -279,7 +240,6 @@ func GenReqDefForListInstanceMetric() *def.HttpRequestDef {
 		WithResponse(new(model.ListInstanceMetricResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BlockchainId").
 		WithJsonTag("blockchain_id").
@@ -288,8 +248,6 @@ func GenReqDefForListInstanceMetric() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -302,10 +260,6 @@ func GenReqDefForListMembers() *def.HttpRequestDef {
 		WithResponse(new(model.ListMembersResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -316,10 +270,6 @@ func GenReqDefForListNotifications() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/notifications").
 		WithResponse(new(model.ListNotificationsResponse)).
 		WithContentType("application/json")
-
-	// request
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -332,10 +282,6 @@ func GenReqDefForListQuotas() *def.HttpRequestDef {
 		WithResponse(new(model.ListQuotasResponse)).
 		WithContentType("application/json")
 
-	// request
-
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -347,13 +293,10 @@ func GenReqDefForShowBlockchainDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ShowBlockchainDetailResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BlockchainId").
 		WithJsonTag("blockchain_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -366,13 +309,10 @@ func GenReqDefForShowBlockchainNodes() *def.HttpRequestDef {
 		WithResponse(new(model.ShowBlockchainNodesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BlockchainId").
 		WithJsonTag("blockchain_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -385,13 +325,10 @@ func GenReqDefForShowBlockchainStatus() *def.HttpRequestDef {
 		WithResponse(new(model.ShowBlockchainStatusResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BlockchainId").
 		WithJsonTag("blockchain_id").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -404,7 +341,6 @@ func GenReqDefForUpdateInstance() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateInstanceResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BlockchainId").
 		WithJsonTag("blockchain_id").
@@ -413,8 +349,6 @@ func GenReqDefForUpdateInstance() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

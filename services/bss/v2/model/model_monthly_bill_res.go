@@ -1,10 +1,3 @@
-/*
- * BSS
- *
- * Business Support System API
- *
- */
-
 package model
 
 import (
@@ -64,7 +57,7 @@ type MonthlyBillRes struct {
 	OfficialAmount float32 `json:"official_amount,omitempty"`
 	// |参数名称：对应官网价折扣金额| |参数的约束及描述：该参数非必填。|
 	DiscountAmount float32 `json:"discount_amount,omitempty"`
-	// |参数名称：金额单位。1:元| |参数的约束及描述：该参数非必填|
+	// |参数名称：金额单位。1: 元| |参数的约束及描述：该参数非必填|
 	MeasureId *int32 `json:"measure_id,omitempty"`
 }
 

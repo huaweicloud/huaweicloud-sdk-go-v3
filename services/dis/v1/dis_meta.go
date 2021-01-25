@@ -2,6 +2,7 @@ package v1
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dis/v1/model"
 	"net/http"
 )
@@ -13,7 +14,6 @@ func GenReqDefForCreatePoliciesV3() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePoliciesV3Response)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
 		WithJsonTag("stream_name").
@@ -23,7 +23,6 @@ func GenReqDefForCreatePoliciesV3() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -39,13 +38,10 @@ func GenReqDefForCreateStream() *def.HttpRequestDef {
 		WithResponse(new(model.CreateStreamResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -61,7 +57,6 @@ func GenReqDefForCreateTransferTask() *def.HttpRequestDef {
 		WithResponse(new(model.CreateTransferTaskResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
 		WithJsonTag("stream_name").
@@ -71,7 +66,6 @@ func GenReqDefForCreateTransferTask() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -87,7 +81,6 @@ func GenReqDefForCreateTransferTaskV3() *def.HttpRequestDef {
 		WithResponse(new(model.CreateTransferTaskV3Response)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
 		WithJsonTag("stream_name").
@@ -97,7 +90,6 @@ func GenReqDefForCreateTransferTaskV3() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -113,13 +105,11 @@ func GenReqDefForDeleteStream() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteStreamResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
 		WithJsonTag("stream_name").
 		WithLocationType(def.Path))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -135,13 +125,11 @@ func GenReqDefForDeleteStreamV3() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteStreamV3Response)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
 		WithJsonTag("stream_name").
 		WithLocationType(def.Path))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -157,7 +145,6 @@ func GenReqDefForDeleteTransferTask() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteTransferTaskResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
 		WithJsonTag("stream_name").
@@ -167,7 +154,6 @@ func GenReqDefForDeleteTransferTask() *def.HttpRequestDef {
 		WithJsonTag("task_name").
 		WithLocationType(def.Path))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -183,7 +169,6 @@ func GenReqDefForDeleteTransferTaskV3() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteTransferTaskV3Response)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
 		WithJsonTag("stream_name").
@@ -193,7 +178,6 @@ func GenReqDefForDeleteTransferTaskV3() *def.HttpRequestDef {
 		WithJsonTag("task_name").
 		WithLocationType(def.Path))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -209,7 +193,6 @@ func GenReqDefForDescribeStream() *def.HttpRequestDef {
 		WithResponse(new(model.DescribeStreamResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
 		WithJsonTag("stream_name").
@@ -224,8 +207,6 @@ func GenReqDefForDescribeStream() *def.HttpRequestDef {
 		WithJsonTag("limit_partitions").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -236,8 +217,6 @@ func GenReqDefForGetCursor() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/cursors").
 		WithResponse(new(model.GetCursorResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
@@ -260,8 +239,6 @@ func GenReqDefForGetCursor() *def.HttpRequestDef {
 		WithJsonTag("timestamp").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -273,8 +250,6 @@ func GenReqDefForGetRecords() *def.HttpRequestDef {
 		WithResponse(new(model.GetRecordsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PartitionCursor").
 		WithJsonTag("partition-cursor").
@@ -283,8 +258,6 @@ func GenReqDefForGetRecords() *def.HttpRequestDef {
 		WithName("MaxFetchBytes").
 		WithJsonTag("max_fetch_bytes").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -297,13 +270,10 @@ func GenReqDefForListPoliciesV3() *def.HttpRequestDef {
 		WithResponse(new(model.ListPoliciesV3Response)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
 		WithJsonTag("stream_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -316,8 +286,6 @@ func GenReqDefForListStreams() *def.HttpRequestDef {
 		WithResponse(new(model.ListStreamsResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
@@ -326,8 +294,6 @@ func GenReqDefForListStreams() *def.HttpRequestDef {
 		WithName("StartStreamName").
 		WithJsonTag("start_stream_name").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -340,13 +306,10 @@ func GenReqDefForListTransferTasksV3() *def.HttpRequestDef {
 		WithResponse(new(model.ListTransferTasksV3Response)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
 		WithJsonTag("stream_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -359,13 +322,9 @@ func GenReqDefForPutRecords() *def.HttpRequestDef {
 		WithResponse(new(model.PutRecordsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -378,7 +337,6 @@ func GenReqDefForUpdatePartitionCount() *def.HttpRequestDef {
 		WithResponse(new(model.UpdatePartitionCountResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
 		WithJsonTag("stream_name").
@@ -388,7 +346,6 @@ func GenReqDefForUpdatePartitionCount() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -404,7 +361,6 @@ func GenReqDefForUpdateStreamV3() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateStreamV3Response)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
 		WithJsonTag("stream_name").
@@ -414,7 +370,6 @@ func GenReqDefForUpdateStreamV3() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -430,13 +385,10 @@ func GenReqDefForCreateApp() *def.HttpRequestDef {
 		WithResponse(new(model.CreateAppResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -452,13 +404,10 @@ func GenReqDefForCreateAppV3() *def.HttpRequestDef {
 		WithResponse(new(model.CreateAppV3Response)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -474,13 +423,11 @@ func GenReqDefForDeleteApp() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteAppResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppName").
 		WithJsonTag("app_name").
 		WithLocationType(def.Path))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -496,13 +443,10 @@ func GenReqDefForDescribeApp() *def.HttpRequestDef {
 		WithResponse(new(model.DescribeAppResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppName").
 		WithJsonTag("app_name").
 		WithLocationType(def.Path))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -515,8 +459,6 @@ func GenReqDefForListApp() *def.HttpRequestDef {
 		WithResponse(new(model.ListAppResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
@@ -529,8 +471,6 @@ func GenReqDefForListApp() *def.HttpRequestDef {
 		WithName("StreamName").
 		WithJsonTag("stream_name").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -543,8 +483,6 @@ func GenReqDefForListAppV3() *def.HttpRequestDef {
 		WithResponse(new(model.ListAppV3Response)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
@@ -558,8 +496,6 @@ func GenReqDefForListAppV3() *def.HttpRequestDef {
 		WithJsonTag("stream_name").
 		WithLocationType(def.Query))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -571,13 +507,10 @@ func GenReqDefForCommitCheckpoint() *def.HttpRequestDef {
 		WithResponse(new(model.CommitCheckpointResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -593,8 +526,6 @@ func GenReqDefForDeleteCheckpoint() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteCheckpointResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
 		WithJsonTag("stream_name").
@@ -612,7 +543,6 @@ func GenReqDefForDeleteCheckpoint() *def.HttpRequestDef {
 		WithJsonTag("partition_id").
 		WithLocationType(def.Query))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -628,8 +558,6 @@ func GenReqDefForGetCheckpoint() *def.HttpRequestDef {
 		WithResponse(new(model.GetCheckpointResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StreamName").
 		WithJsonTag("stream_name").
@@ -646,8 +574,6 @@ func GenReqDefForGetCheckpoint() *def.HttpRequestDef {
 		WithName("CheckpointType").
 		WithJsonTag("checkpoint_type").
 		WithLocationType(def.Query))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

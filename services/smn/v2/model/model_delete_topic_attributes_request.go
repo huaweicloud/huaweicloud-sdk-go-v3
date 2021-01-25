@@ -1,10 +1,3 @@
-/*
- * SMN
- *
- * SMN Open API
- *
- */
-
 package model
 
 import (

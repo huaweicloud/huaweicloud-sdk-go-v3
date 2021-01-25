@@ -1,10 +1,3 @@
-/*
- * CCE
- *
- * CCE开放API
- *
- */
-
 package model
 
 import (

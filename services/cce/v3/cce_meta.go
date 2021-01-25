@@ -2,6 +2,7 @@ package v3
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cce/v3/model"
 	"net/http"
 )
@@ -13,7 +14,6 @@ func GenReqDefForAwakeCluster() *def.HttpRequestDef {
 		WithResponse(new(model.AwakeClusterResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -23,8 +23,6 @@ func GenReqDefForAwakeCluster() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -37,8 +35,6 @@ func GenReqDefForCreateAddonInstance() *def.HttpRequestDef {
 		WithResponse(new(model.CreateAddonInstanceResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
@@ -47,8 +43,6 @@ func GenReqDefForCreateAddonInstance() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -61,7 +55,6 @@ func GenReqDefForCreateCloudPersistentVolumeClaims() *def.HttpRequestDef {
 		WithResponse(new(model.CreateCloudPersistentVolumeClaimsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Namespace").
 		WithJsonTag("namespace").
@@ -80,8 +73,6 @@ func GenReqDefForCreateCloudPersistentVolumeClaims() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -93,8 +84,6 @@ func GenReqDefForCreateCluster() *def.HttpRequestDef {
 		WithResponse(new(model.CreateClusterResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
@@ -103,8 +92,6 @@ func GenReqDefForCreateCluster() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -117,7 +104,6 @@ func GenReqDefForCreateKubernetesClusterCert() *def.HttpRequestDef {
 		WithResponse(new(model.CreateKubernetesClusterCertResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -132,8 +118,6 @@ func GenReqDefForCreateKubernetesClusterCert() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -145,7 +129,6 @@ func GenReqDefForCreateNode() *def.HttpRequestDef {
 		WithResponse(new(model.CreateNodeResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -165,8 +148,6 @@ func GenReqDefForCreateNode() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -178,7 +159,6 @@ func GenReqDefForCreateNodePool() *def.HttpRequestDef {
 		WithResponse(new(model.CreateNodePoolResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -193,8 +173,6 @@ func GenReqDefForCreateNodePool() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -206,7 +184,6 @@ func GenReqDefForDeleteAddonInstance() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteAddonInstanceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Id").
 		WithJsonTag("id").
@@ -222,7 +199,6 @@ func GenReqDefForDeleteAddonInstance() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
@@ -238,7 +214,6 @@ func GenReqDefForDeleteCloudPersistentVolumeClaims() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteCloudPersistentVolumeClaimsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Name").
 		WithJsonTag("name").
@@ -257,8 +232,6 @@ func GenReqDefForDeleteCloudPersistentVolumeClaims() *def.HttpRequestDef {
 		WithJsonTag("X-Cluster-ID").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -270,7 +243,6 @@ func GenReqDefForDeleteCluster() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteClusterResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -310,8 +282,6 @@ func GenReqDefForDeleteCluster() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -323,7 +293,6 @@ func GenReqDefForDeleteNode() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteNodeResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -347,8 +316,6 @@ func GenReqDefForDeleteNode() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -360,7 +327,6 @@ func GenReqDefForDeleteNodePool() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteNodePoolResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -380,8 +346,6 @@ func GenReqDefForDeleteNodePool() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -393,7 +357,6 @@ func GenReqDefForHibernateCluster() *def.HttpRequestDef {
 		WithResponse(new(model.HibernateClusterResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -403,8 +366,6 @@ func GenReqDefForHibernateCluster() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -417,8 +378,6 @@ func GenReqDefForListAddonInstances() *def.HttpRequestDef {
 		WithResponse(new(model.ListAddonInstancesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -428,8 +387,6 @@ func GenReqDefForListAddonInstances() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -442,8 +399,6 @@ func GenReqDefForListAddonTemplates() *def.HttpRequestDef {
 		WithResponse(new(model.ListAddonTemplatesResponse)).
 		WithContentType("application/json")
 
-	// request
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AddonTemplateName").
 		WithJsonTag("addon_template_name").
@@ -453,8 +408,6 @@ func GenReqDefForListAddonTemplates() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -466,8 +419,6 @@ func GenReqDefForListClusters() *def.HttpRequestDef {
 		WithPath("/api/v3/projects/{project_id}/clusters").
 		WithResponse(new(model.ListClustersResponse)).
 		WithContentType("application/json")
-
-	// request
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ErrorStatus").
@@ -495,8 +446,6 @@ func GenReqDefForListClusters() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -508,7 +457,6 @@ func GenReqDefForListNodePools() *def.HttpRequestDef {
 		WithResponse(new(model.ListNodePoolsResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -528,8 +476,6 @@ func GenReqDefForListNodePools() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -541,7 +487,6 @@ func GenReqDefForListNodes() *def.HttpRequestDef {
 		WithResponse(new(model.ListNodesResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -557,8 +502,6 @@ func GenReqDefForListNodes() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -570,7 +513,6 @@ func GenReqDefForShowAddonInstance() *def.HttpRequestDef {
 		WithResponse(new(model.ShowAddonInstanceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Id").
 		WithJsonTag("id").
@@ -586,8 +528,6 @@ func GenReqDefForShowAddonInstance() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -599,7 +539,6 @@ func GenReqDefForShowCluster() *def.HttpRequestDef {
 		WithResponse(new(model.ShowClusterResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -619,8 +558,6 @@ func GenReqDefForShowCluster() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -632,7 +569,6 @@ func GenReqDefForShowJob() *def.HttpRequestDef {
 		WithResponse(new(model.ShowJobResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobId").
 		WithJsonTag("job_id").
@@ -642,8 +578,6 @@ func GenReqDefForShowJob() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -656,7 +590,6 @@ func GenReqDefForShowNode() *def.HttpRequestDef {
 		WithResponse(new(model.ShowNodeResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -676,8 +609,6 @@ func GenReqDefForShowNode() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -689,7 +620,6 @@ func GenReqDefForShowNodePool() *def.HttpRequestDef {
 		WithResponse(new(model.ShowNodePoolResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -709,8 +639,6 @@ func GenReqDefForShowNodePool() *def.HttpRequestDef {
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -722,7 +650,6 @@ func GenReqDefForUpdateAddonInstance() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateAddonInstanceResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Id").
 		WithJsonTag("id").
@@ -737,8 +664,6 @@ func GenReqDefForUpdateAddonInstance() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -750,7 +675,6 @@ func GenReqDefForUpdateCluster() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateClusterResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -770,8 +694,6 @@ func GenReqDefForUpdateCluster() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -783,7 +705,6 @@ func GenReqDefForUpdateNode() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateNodeResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -807,8 +728,6 @@ func GenReqDefForUpdateNode() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	// response
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -820,7 +739,6 @@ func GenReqDefForUpdateNodePool() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateNodePoolResponse)).
 		WithContentType("application/json")
 
-	// request
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
@@ -843,8 +761,6 @@ func GenReqDefForUpdateNodePool() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	// response
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
