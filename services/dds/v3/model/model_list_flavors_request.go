@@ -28,12 +28,16 @@ type ListFlavorsRequestEngineName struct {
 
 type ListFlavorsRequestEngineNameEnum struct {
 	DDS_COMMUNITY ListFlavorsRequestEngineName
+	DDS_ENHANCED  ListFlavorsRequestEngineName
 }
 
 func GetListFlavorsRequestEngineNameEnum() ListFlavorsRequestEngineNameEnum {
 	return ListFlavorsRequestEngineNameEnum{
 		DDS_COMMUNITY: ListFlavorsRequestEngineName{
 			value: "DDS-Community",
+		},
+		DDS_ENHANCED: ListFlavorsRequestEngineName{
+			value: "DDS-Enhanced",
 		},
 	}
 }

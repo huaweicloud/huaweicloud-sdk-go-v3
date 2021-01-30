@@ -13,9 +13,9 @@ type MonthlyBillRecord struct {
 	CustomerId *string `json:"customer_id,omitempty"`
 	// |参数名称：云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
-	// |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
 	// |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型|
+	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
+	// |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
 	RegionCode *string `json:"region_code,omitempty"`
 	// |参数名称：企业项目标识| |参数约束及描述：企业项目标识|
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

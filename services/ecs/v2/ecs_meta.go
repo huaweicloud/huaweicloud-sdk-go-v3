@@ -903,11 +903,11 @@ func GenReqDefForShowServerTags() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateAutoTerminateTimeServer() *def.HttpRequestDef {
+func GenReqDefForUpdateServer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/cloudservers/{server_id}/actions/update-auto-terminate-time").
-		WithResponse(new(model.UpdateAutoTerminateTimeServerResponse)).
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/cloudservers/{server_id}").
+		WithResponse(new(model.UpdateServerResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -923,11 +923,11 @@ func GenReqDefForUpdateAutoTerminateTimeServer() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateServer() *def.HttpRequestDef {
+func GenReqDefForUpdateServerAutoTerminateTime() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v1/{project_id}/cloudservers/{server_id}").
-		WithResponse(new(model.UpdateServerResponse)).
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/cloudservers/{server_id}/actions/update-auto-terminate-time").
+		WithResponse(new(model.UpdateServerAutoTerminateTimeResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

@@ -74,6 +74,17 @@ func (c *DdsClient) CancelEip(request *model.CancelEipRequest) (*model.CancelEip
 	}
 }
 
+//检查数据库用户密码。
+func (c *DdsClient) CheckPassword(request *model.CheckPasswordRequest) (*model.CheckPasswordResponse, error) {
+	requestDef := GenReqDefForCheckPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckPasswordResponse), nil
+	}
+}
+
 //创建数据库角色。
 func (c *DdsClient) CreateDatabaseRole(request *model.CreateDatabaseRoleRequest) (*model.CreateDatabaseRoleResponse, error) {
 	requestDef := GenReqDefForCreateDatabaseRole()
@@ -104,6 +115,17 @@ func (c *DdsClient) CreateInstance(request *model.CreateInstanceRequest) (*model
 		return nil, err
 	} else {
 		return resp.(*model.CreateInstanceResponse), nil
+	}
+}
+
+//打开集群的Shard/Config IP开关
+func (c *DdsClient) CreateIp(request *model.CreateIpRequest) (*model.CreateIpResponse, error) {
+	requestDef := GenReqDefForCreateIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateIpResponse), nil
 	}
 }
 
@@ -140,14 +162,25 @@ func (c *DdsClient) DeleteManualBackup(request *model.DeleteManualBackupRequest)
 	}
 }
 
-//获取慢日志下载链接。
-func (c *DdsClient) DownloadSlowlog(request *model.DownloadSlowlogRequest) (*model.DownloadSlowlogResponse, error) {
-	requestDef := GenReqDefForDownloadSlowlog()
+//生成审计日志下载链接。
+func (c *DdsClient) ListAuditlogLinks(request *model.ListAuditlogLinksRequest) (*model.ListAuditlogLinksResponse, error) {
+	requestDef := GenReqDefForListAuditlogLinks()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DownloadSlowlogResponse), nil
+		return resp.(*model.ListAuditlogLinksResponse), nil
+	}
+}
+
+//获取审计日志列表。
+func (c *DdsClient) ListAuditlogs(request *model.ListAuditlogsRequest) (*model.ListAuditlogsResponse, error) {
+	requestDef := GenReqDefForListAuditlogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAuditlogsResponse), nil
 	}
 }
 
@@ -192,6 +225,17 @@ func (c *DdsClient) ListDatastoreVersions(request *model.ListDatastoreVersionsRe
 		return nil, err
 	} else {
 		return resp.(*model.ListDatastoreVersionsResponse), nil
+	}
+}
+
+//查询数据库错误信息。
+func (c *DdsClient) ListErrorLogs(request *model.ListErrorLogsRequest) (*model.ListErrorLogsResponse, error) {
+	requestDef := GenReqDefForListErrorLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListErrorLogsResponse), nil
 	}
 }
 
@@ -247,6 +291,39 @@ func (c *DdsClient) ListProjectTags(request *model.ListProjectTagsRequest) (*mod
 		return nil, err
 	} else {
 		return resp.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+//获取可恢复的数据库集合列表。
+func (c *DdsClient) ListRestoreCollections(request *model.ListRestoreCollectionsRequest) (*model.ListRestoreCollectionsResponse, error) {
+	requestDef := GenReqDefForListRestoreCollections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRestoreCollectionsResponse), nil
+	}
+}
+
+//获取可恢复的数据库列表。
+func (c *DdsClient) ListRestoreDatabases(request *model.ListRestoreDatabasesRequest) (*model.ListRestoreDatabasesResponse, error) {
+	requestDef := GenReqDefForListRestoreDatabases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRestoreDatabasesResponse), nil
+	}
+}
+
+//查询实例的可恢复时间段。
+func (c *DdsClient) ListRestoreTimes(request *model.ListRestoreTimesRequest) (*model.ListRestoreTimesResponse, error) {
+	requestDef := GenReqDefForListRestoreTimes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRestoreTimesResponse), nil
 	}
 }
 
@@ -316,6 +393,39 @@ func (c *DdsClient) RestartInstance(request *model.RestartInstanceRequest) (*mod
 	}
 }
 
+//恢复到当前实例。
+func (c *DdsClient) RestoreInstance(request *model.RestoreInstanceRequest) (*model.RestoreInstanceResponse, error) {
+	requestDef := GenReqDefForRestoreInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreInstanceResponse), nil
+	}
+}
+
+//库表级时间点恢复。
+func (c *DdsClient) RestoreInstanceFromCollection(request *model.RestoreInstanceFromCollectionRequest) (*model.RestoreInstanceFromCollectionResponse, error) {
+	requestDef := GenReqDefForRestoreInstanceFromCollection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreInstanceFromCollectionResponse), nil
+	}
+}
+
+//设置审计日志策略。
+func (c *DdsClient) SetAuditlogPolicy(request *model.SetAuditlogPolicyRequest) (*model.SetAuditlogPolicyResponse, error) {
+	requestDef := GenReqDefForSetAuditlogPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetAuditlogPolicyResponse), nil
+	}
+}
+
 //设置自动备份策略。
 func (c *DdsClient) SetBackupPolicy(request *model.SetBackupPolicyRequest) (*model.SetBackupPolicyResponse, error) {
 	requestDef := GenReqDefForSetBackupPolicy()
@@ -324,6 +434,17 @@ func (c *DdsClient) SetBackupPolicy(request *model.SetBackupPolicyRequest) (*mod
 		return nil, err
 	} else {
 		return resp.(*model.SetBackupPolicyResponse), nil
+	}
+}
+
+//查询审计日志策略。
+func (c *DdsClient) ShowAuditlogPolicy(request *model.ShowAuditlogPolicyRequest) (*model.ShowAuditlogPolicyResponse, error) {
+	requestDef := GenReqDefForShowAuditlogPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAuditlogPolicyResponse), nil
 	}
 }
 
@@ -401,5 +522,27 @@ func (c *DdsClient) UpdateSecurityGroup(request *model.UpdateSecurityGroupReques
 		return nil, err
 	} else {
 		return resp.(*model.UpdateSecurityGroupResponse), nil
+	}
+}
+
+//查询当前支持的API版本信息列表。
+func (c *DdsClient) ListApiVersion(request *model.ListApiVersionRequest) (*model.ListApiVersionResponse, error) {
+	requestDef := GenReqDefForListApiVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiVersionResponse), nil
+	}
+}
+
+//查询指定API版本信息。
+func (c *DdsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model.ShowApiVersionResponse, error) {
+	requestDef := GenReqDefForShowApiVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowApiVersionResponse), nil
 	}
 }

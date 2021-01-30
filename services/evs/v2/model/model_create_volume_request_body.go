@@ -11,7 +11,8 @@ type CreateVolumeRequestBody struct {
 	BssParam *BssParamForCreateVolume `json:"bssParam,omitempty"`
 	Volume   *CreateVolumeOption      `json:"volume"`
 	// 创建云硬盘并挂载到目标虚拟机。
-	ServerId *string `json:"server_id,omitempty"`
+	ServerId               *string                     `json:"server_id,omitempty"`
+	OSSCHHNTschedulerHints *CreateVolumeSchedulerHints `json:"OS-SCH-HNT:scheduler_hints,omitempty"`
 }
 
 func (o CreateVolumeRequestBody) String() string {

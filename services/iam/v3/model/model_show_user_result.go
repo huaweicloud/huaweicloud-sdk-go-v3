@@ -39,6 +39,8 @@ type ShowUserResult struct {
 	PwdStength *string `json:"pwd_stength,omitempty"`
 	// IAM用户是否为根用户。
 	IsDomainOwner bool `json:"is_domain_owner"`
+	// IAM用户访问模式。
+	AccessMode string `json:"access_mode"`
 	// IAM用户描述信息
 	Description string `json:"description"`
 }

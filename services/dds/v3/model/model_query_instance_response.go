@@ -15,7 +15,7 @@ type QueryInstanceResponse struct {
 	// 实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
 	Status string `json:"status"`
 	// 数据库端口号。文档数据库实例支持的端口号范围为2100～9500。
-	Port int32 `json:"port"`
+	Port string `json:"port"`
 	// 实例类型。与请求参数相同。
 	Mode string `json:"mode"`
 	// 实例所在区域。

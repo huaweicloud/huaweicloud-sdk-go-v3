@@ -76,12 +76,16 @@ type ListInstancesRequestDatastoreType struct {
 
 type ListInstancesRequestDatastoreTypeEnum struct {
 	DDS_COMMUNITY ListInstancesRequestDatastoreType
+	DDS_ENHANCED  ListInstancesRequestDatastoreType
 }
 
 func GetListInstancesRequestDatastoreTypeEnum() ListInstancesRequestDatastoreTypeEnum {
 	return ListInstancesRequestDatastoreTypeEnum{
 		DDS_COMMUNITY: ListInstancesRequestDatastoreType{
 			value: "DDS-Community",
+		},
+		DDS_ENHANCED: ListInstancesRequestDatastoreType{
+			value: "DDS-Enhanced",
 		},
 	}
 }

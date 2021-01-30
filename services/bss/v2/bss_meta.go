@@ -873,22 +873,6 @@ func GenReqDefForListOrderCouponsByOrderId() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListOrderDiscounts() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/orders/customer-orders/order-discounts").
-		WithResponse(new(model.ListOrderDiscountsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("OrderId").
-		WithJsonTag("order_id").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForListPartnerAdjustRecords() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

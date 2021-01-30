@@ -27,12 +27,16 @@ type ListStorageTypeRequestEngineName struct {
 
 type ListStorageTypeRequestEngineNameEnum struct {
 	DDS_COMMUNITY ListStorageTypeRequestEngineName
+	DDS_ENHANCED  ListStorageTypeRequestEngineName
 }
 
 func GetListStorageTypeRequestEngineNameEnum() ListStorageTypeRequestEngineNameEnum {
 	return ListStorageTypeRequestEngineNameEnum{
 		DDS_COMMUNITY: ListStorageTypeRequestEngineName{
 			value: "DDS-Community",
+		},
+		DDS_ENHANCED: ListStorageTypeRequestEngineName{
+			value: "DDS-Enhanced",
 		},
 	}
 }

@@ -503,17 +503,6 @@ func (c *EcsClient) ShowServerTags(request *model.ShowServerTagsRequest) (*model
 	}
 }
 
-//修改按需服务器，设置定时销毁时间。如果设置的销毁时间为空，表示取消销毁时间。  该接口支持企业项目细粒度权限的校验，具体细粒度请参见 ecs:cloudServers:put。
-func (c *EcsClient) UpdateAutoTerminateTimeServer(request *model.UpdateAutoTerminateTimeServerRequest) (*model.UpdateAutoTerminateTimeServerResponse, error) {
-	requestDef := GenReqDefForUpdateAutoTerminateTimeServer()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateAutoTerminateTimeServerResponse), nil
-	}
-}
-
 //修改云服务器信息，目前支持修改云服务器名称及描述和hostname。
 func (c *EcsClient) UpdateServer(request *model.UpdateServerRequest) (*model.UpdateServerResponse, error) {
 	requestDef := GenReqDefForUpdateServer()
@@ -522,6 +511,17 @@ func (c *EcsClient) UpdateServer(request *model.UpdateServerRequest) (*model.Upd
 		return nil, err
 	} else {
 		return resp.(*model.UpdateServerResponse), nil
+	}
+}
+
+//修改按需服务器，设置定时销毁时间。如果设置的销毁时间为空，表示取消销毁时间。  该接口支持企业项目细粒度权限的校验，具体细粒度请参见 ecs:cloudServers:put。
+func (c *EcsClient) UpdateServerAutoTerminateTime(request *model.UpdateServerAutoTerminateTimeRequest) (*model.UpdateServerAutoTerminateTimeResponse, error) {
+	requestDef := GenReqDefForUpdateServerAutoTerminateTime()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateServerAutoTerminateTimeResponse), nil
 	}
 }
 

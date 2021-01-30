@@ -15,7 +15,7 @@ type QuotaDetailGigabytesSata struct {
 	// 预留属性。
 	Reserved int32 `json:"reserved"`
 	// 预留属性。
-	Allocated string `json:"allocated"`
+	Allocated int32 `json:"allocated"`
 }
 
 func (o QuotaDetailGigabytesSata) String() string {

@@ -1,3 +1,38 @@
+## 0.0.32-rc 2021-01-30
+## HuaweiCloud SDK DDS
+- ### 新增特性
+    - 新增支持接口：查询当前支持的API版本信息列表、查询指定API版本信息、设置审计日志策略、查询审计日志策略、获取审计日志列表
+- ### 解决问题
+    - 无
+- ### 特性变更
+    - 无
+
+## HuaweiCloud SDK ECS
+- ### 新增特性
+    - 无
+- ### 解决问题
+    - 无
+- ### 特性变更
+    - 接口名称调整: UpdateAutoTerminateTimeServer → UpdateServerAutoTerminateTime
+
+## HuaweiCloud SDK EVS
+- ### 新增特性
+    - 无
+- ### 解决问题
+    - 无
+- ### 特性变更
+    - 创建云硬盘接口支持指定专属存储池ID
+    - 查询配额相关接口属性 `allocated` 类型调整: string → int
+
+## HuaweiCloud SDK IAM
+- ### 新增特性
+    - 无
+- ### 解决问题
+    - 无
+- ### 特性变更
+    - 查询IAM用户详情接口响应体增加属性`access_mode`
+
+
 ## 0.0.31-rc 2021-01-25
 ## HuaweiCloud SDK Core
 - ### 新增特性

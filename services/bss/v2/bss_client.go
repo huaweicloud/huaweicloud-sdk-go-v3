@@ -393,17 +393,6 @@ func (c *BssClient) ListOrderCouponsByOrderId(request *model.ListOrderCouponsByO
 	}
 }
 
-//功能描述：功能介绍客户在伙伴销售平台支付待支付订单时，查询可使用的折扣。只返回商务合同折扣和伙伴授权折扣客户在客户自建平台查看订单可用的优惠券列表。
-func (c *BssClient) ListOrderDiscounts(request *model.ListOrderDiscountsRequest) (*model.ListOrderDiscountsResponse, error) {
-	requestDef := GenReqDefForListOrderDiscounts()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListOrderDiscountsResponse), nil
-	}
-}
-
 //功能描述：伙伴在伙伴销售平台查询向客户及关联的精英服务商（二级经销商）拨款或回收的调账记录
 func (c *BssClient) ListPartnerAdjustRecords(request *model.ListPartnerAdjustRecordsRequest) (*model.ListPartnerAdjustRecordsResponse, error) {
 	requestDef := GenReqDefForListPartnerAdjustRecords()

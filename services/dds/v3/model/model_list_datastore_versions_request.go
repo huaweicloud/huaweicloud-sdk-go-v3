@@ -27,12 +27,16 @@ type ListDatastoreVersionsRequestDatastoreName struct {
 
 type ListDatastoreVersionsRequestDatastoreNameEnum struct {
 	DDS_COMMUNITY ListDatastoreVersionsRequestDatastoreName
+	DDS_ENHANCED  ListDatastoreVersionsRequestDatastoreName
 }
 
 func GetListDatastoreVersionsRequestDatastoreNameEnum() ListDatastoreVersionsRequestDatastoreNameEnum {
 	return ListDatastoreVersionsRequestDatastoreNameEnum{
 		DDS_COMMUNITY: ListDatastoreVersionsRequestDatastoreName{
 			value: "DDS-Community",
+		},
+		DDS_ENHANCED: ListDatastoreVersionsRequestDatastoreName{
+			value: "DDS-Enhanced",
 		},
 	}
 }

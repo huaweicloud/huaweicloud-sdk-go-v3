@@ -13,7 +13,7 @@ type EnlargeInstanceRequestBody struct {
 	// 资源规格编码。
 	SpecCode string `json:"spec_code"`
 	// 一个集群实例下，最多支持16个mongos节点和16个shard组。
-	Num    int32                        `json:"num"`
+	Num    string                       `json:"num"`
 	Volume *AddShardingNodeVolumeOption `json:"volume,omitempty"`
 }
 
