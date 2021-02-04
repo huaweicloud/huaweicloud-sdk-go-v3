@@ -86,9 +86,18 @@ func (httpRequest *DefaultHttpRequest) GetBodyToBytes() (*bytes.Buffer, error) {
 	buf := &bytes.Buffer{}
 
 	if httpRequest.body != nil {
-		err := json.NewEncoder(buf).Encode(httpRequest.body)
-		if err != nil {
-			return nil, err
+		v := reflect.ValueOf(httpRequest.body)
+		if v.Kind() == reflect.Ptr {
+			v = v.Elem()
+		}
+
+		if v.Kind() == reflect.String {
+			buf.WriteString(v.Interface().(string))
+		} else {
+			err := json.NewEncoder(buf).Encode(httpRequest.body)
+			if err != nil {
+				return nil, err
+			}
 		}
 	}
 
