@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type VersionsDetail struct {
+type VersionDetail struct {
 	// 版本ID（版本号)。
 	Id    string `json:"id"`
 	Links *Link  `json:"links"`
@@ -20,11 +20,11 @@ type VersionsDetail struct {
 	MinVersion string `json:"min_version"`
 }
 
-func (o VersionsDetail) String() string {
+func (o VersionDetail) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "VersionsDetail struct{}"
+		return "VersionDetail struct{}"
 	}
 
-	return strings.Join([]string{"VersionsDetail", string(data)}, " ")
+	return strings.Join([]string{"VersionDetail", string(data)}, " ")
 }

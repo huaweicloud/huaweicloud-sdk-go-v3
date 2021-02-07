@@ -30,6 +30,17 @@ func (c *SwrClient) CreateImageSyncRepo(request *model.CreateImageSyncRepoReques
 	}
 }
 
+//手动同步镜像
+func (c *SwrClient) CreateManualImageSyncRepo(request *model.CreateManualImageSyncRepoRequest) (*model.CreateManualImageSyncRepoResponse, error) {
+	requestDef := GenReqDefForCreateManualImageSyncRepo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateManualImageSyncRepoResponse), nil
+	}
+}
+
 //创建组织
 func (c *SwrClient) CreateNamespace(request *model.CreateNamespaceRequest) (*model.CreateNamespaceResponse, error) {
 	requestDef := GenReqDefForCreateNamespace()
@@ -49,6 +60,17 @@ func (c *SwrClient) CreateNamespaceAuth(request *model.CreateNamespaceAuthReques
 		return nil, err
 	} else {
 		return resp.(*model.CreateNamespaceAuthResponse), nil
+	}
+}
+
+//在组织下创建镜像仓库。
+func (c *SwrClient) CreateRepo(request *model.CreateRepoRequest) (*model.CreateRepoResponse, error) {
+	requestDef := GenReqDefForCreateRepo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRepoResponse), nil
 	}
 }
 
@@ -239,6 +261,17 @@ func (c *SwrClient) ListRepoDomains(request *model.ListRepoDomainsRequest) (*mod
 	}
 }
 
+//查询镜像列表
+func (c *SwrClient) ListReposDetails(request *model.ListReposDetailsRequest) (*model.ListReposDetailsResponse, error) {
+	requestDef := GenReqDefForListReposDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListReposDetailsResponse), nil
+	}
+}
+
 //查询镜像tag列表
 func (c *SwrClient) ListRepositoryTags(request *model.ListRepositoryTagsRequest) (*model.ListRepositoryTagsResponse, error) {
 	requestDef := GenReqDefForListRepositoryTags()
@@ -269,6 +302,17 @@ func (c *SwrClient) ListRetentions(request *model.ListRetentionsRequest) (*model
 		return nil, err
 	} else {
 		return resp.(*model.ListRetentionsResponse), nil
+	}
+}
+
+//查询共享镜像列表
+func (c *SwrClient) ListSharedReposDetails(request *model.ListSharedReposDetailsRequest) (*model.ListSharedReposDetailsResponse, error) {
+	requestDef := GenReqDefForListSharedReposDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSharedReposDetailsResponse), nil
 	}
 }
 
@@ -338,6 +382,17 @@ func (c *SwrClient) ShowRetention(request *model.ShowRetentionRequest) (*model.S
 	}
 }
 
+//获取镜像同步任务信息
+func (c *SwrClient) ShowSyncJob(request *model.ShowSyncJobRequest) (*model.ShowSyncJobResponse, error) {
+	requestDef := GenReqDefForShowSyncJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSyncJobResponse), nil
+	}
+}
+
 //获取触发器详情
 func (c *SwrClient) ShowTrigger(request *model.ShowTriggerRequest) (*model.ShowTriggerResponse, error) {
 	requestDef := GenReqDefForShowTrigger()
@@ -357,6 +412,28 @@ func (c *SwrClient) ShowUserRepositoryAuth(request *model.ShowUserRepositoryAuth
 		return nil, err
 	} else {
 		return resp.(*model.ShowUserRepositoryAuthResponse), nil
+	}
+}
+
+//更新组织权限
+func (c *SwrClient) UpdateNamespaceAuth(request *model.UpdateNamespaceAuthRequest) (*model.UpdateNamespaceAuthResponse, error) {
+	requestDef := GenReqDefForUpdateNamespaceAuth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateNamespaceAuthResponse), nil
+	}
+}
+
+//更新租户命名空间下的镜像概要信息，包括镜像类型、是否公有、描述信息
+func (c *SwrClient) UpdateRepo(request *model.UpdateRepoRequest) (*model.UpdateRepoResponse, error) {
+	requestDef := GenReqDefForUpdateRepo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRepoResponse), nil
 	}
 }
 
@@ -401,6 +478,17 @@ func (c *SwrClient) UpdateUserRepositoryAuth(request *model.UpdateUserRepository
 		return nil, err
 	} else {
 		return resp.(*model.UpdateUserRepositoryAuthResponse), nil
+	}
+}
+
+//查询所有API版本信息
+func (c *SwrClient) ListApiVersions(request *model.ListApiVersionsRequest) (*model.ListApiVersionsResponse, error) {
+	requestDef := GenReqDefForListApiVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiVersionsResponse), nil
 	}
 }
 

@@ -32,7 +32,7 @@ type Trigger struct {
 	// 触发器名
 	Name string `json:"name"`
 	// 触发器历史
-	TriggerHistory []TriggerHistorys `json:"trigger_history"`
+	TriggerHistory []TriggerHistories `json:"trigger_history"`
 	// 触发器类型，cce、cci
 	TriggerMode string `json:"trigger_mode"`
 	// 触发条件，all、tag、regular

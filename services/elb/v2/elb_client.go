@@ -251,13 +251,13 @@ func (c *ElbClient) ListLoadbalancers(request *model.ListLoadbalancersRequest) (
 }
 
 //添加属于某个后端云服务器组的后端云服务器。
-func (c *ElbClient) ListMenbers(request *model.ListMenbersRequest) (*model.ListMenbersResponse, error) {
-	requestDef := GenReqDefForListMenbers()
+func (c *ElbClient) ListMembers(request *model.ListMembersRequest) (*model.ListMembersResponse, error) {
+	requestDef := GenReqDefForListMembers()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListMenbersResponse), nil
+		return resp.(*model.ListMembersResponse), nil
 	}
 }
 

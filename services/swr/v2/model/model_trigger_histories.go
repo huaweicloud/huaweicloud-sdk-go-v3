@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type TriggerHistorys struct {
+type TriggerHistories struct {
 	// 触发动作，update
 	Action string `json:"action"`
 	// 应用类型，deployments、statefulsets
@@ -35,11 +35,11 @@ type TriggerHistorys struct {
 	Tag string `json:"tag"`
 }
 
-func (o TriggerHistorys) String() string {
+func (o TriggerHistories) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "TriggerHistorys struct{}"
+		return "TriggerHistories struct{}"
 	}
 
-	return strings.Join([]string{"TriggerHistorys", string(data)}, " ")
+	return strings.Join([]string{"TriggerHistories", string(data)}, " ")
 }

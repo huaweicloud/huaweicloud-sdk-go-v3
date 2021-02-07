@@ -33,7 +33,7 @@ type ShowTriggerResponse struct {
 	// 触发器名
 	Name *string `json:"name,omitempty"`
 	// 触发器历史
-	TriggerHistory *[]TriggerHistorys `json:"trigger_history,omitempty"`
+	TriggerHistory *[]TriggerHistories `json:"trigger_history,omitempty"`
 	// 触发器类型，cce、cci
 	TriggerMode *string `json:"trigger_mode,omitempty"`
 	// 触发条件，all、tag、regular

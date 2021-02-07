@@ -644,11 +644,11 @@ func GenReqDefForListLoadbalancers() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListMenbers() *def.HttpRequestDef {
+func GenReqDefForListMembers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/elb/pools/{pool_id}/members").
-		WithResponse(new(model.ListMenbersResponse)).
+		WithResponse(new(model.ListMembersResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

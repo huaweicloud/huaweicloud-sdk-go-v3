@@ -7,7 +7,7 @@ import (
 )
 
 // Request Object
-type ListMenbersRequest struct {
+type ListMembersRequest struct {
 	PoolId       string  `json:"pool_id"`
 	Limit        *int32  `json:"limit,omitempty"`
 	Marker       *string `json:"marker,omitempty"`
@@ -21,11 +21,11 @@ type ListMenbersRequest struct {
 	Weight       *int32  `json:"weight,omitempty"`
 }
 
-func (o ListMenbersRequest) String() string {
+func (o ListMembersRequest) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "ListMenbersRequest struct{}"
+		return "ListMembersRequest struct{}"
 	}
 
-	return strings.Join([]string{"ListMenbersRequest", string(data)}, " ")
+	return strings.Join([]string{"ListMembersRequest", string(data)}, " ")
 }

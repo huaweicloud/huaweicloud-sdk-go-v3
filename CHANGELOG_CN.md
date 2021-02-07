@@ -1,3 +1,37 @@
+## 0.0.33-rc 2021-02-07
+## HuaweiCloud SDK Core
+- ### 新增特性
+    - 无
+- ### 解决问题
+    - 修复请求体类型为string时请求失败的问题
+- ### 特性变更
+    - 无
+
+## HuaweiCloud SDK IMS
+- ### 新增特性
+    - 无
+- ### 解决问题
+    - 无
+- ### 特性变更
+    - 查询镜像支持的OS列表(ListOsVersions)接口返回体属性 `os_bit` 数据类型调整：string → int32
+
+## HuaweiCloud SDK Live
+- ### 新增特性
+    - 新增支持接口：获取直播播放日志(ListLiveSampleLogs)、创建直播域名(CreateDomain)、删除直播域名(DeleteDomain)、修改直播域名(UpdateDomain)、查询直播域名(ShowDomain)、创建直播域名映射关系(CreateDomainMapping)、删除直播域名映射关系(DeleteDomainMapping)
+- ### 解决问题
+    - 无
+- ### 特性变更
+    - 无
+
+## HuaweiCloud SDK MRS
+- ### 新增特性
+    - 支持MapReduce服务
+- ### 解决问题
+    - 无
+- ### 特性变更
+    - 无
+
+
 ## 0.0.32-rc 2021-01-30
 ## HuaweiCloud SDK DDS
 - ### 新增特性

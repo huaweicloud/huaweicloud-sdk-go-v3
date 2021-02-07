@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowApiVersionResponse struct {
-	Version        *VersionsDetail `json:"version,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	Version        *VersionDetail `json:"version,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowApiVersionResponse) String() string {

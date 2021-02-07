@@ -15,6 +15,9 @@ var CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2", "https://dds.cn-southwes
 var AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2", "https://dds.ap-southeast-2.myhuaweicloud.com")
 var AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1", "https://dds.ap-southeast-1.myhuaweicloud.com")
 var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://dds.ap-southeast-3.myhuaweicloud.com")
+var RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2", "https://dds.ru-northwest-2.myhuaweicloud.com")
+var CN_SOUTH_2 = region.NewRegion("cn-south-2", "https://dds.cn-south-2.myhuaweicloud.com")
+var CN_NORTH_2 = region.NewRegion("cn-north-2", "https://dds.cn-north-2.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"af-south-1":     AF_SOUTH_1,
@@ -27,6 +30,9 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-2": AP_SOUTHEAST_2,
 	"ap-southeast-1": AP_SOUTHEAST_1,
 	"ap-southeast-3": AP_SOUTHEAST_3,
+	"ru-northwest-2": RU_NORTHWEST_2,
+	"cn-south-2":     CN_SOUTH_2,
+	"cn-north-2":     CN_NORTH_2,
 }
 
 func ValueOf(regionId string) *region.Region {

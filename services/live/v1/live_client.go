@@ -19,6 +19,28 @@ func LiveClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//可单独创建直播播放域名或推流域名，每个租户最多可配置64条域名记录。
+func (c *LiveClient) CreateDomain(request *model.CreateDomainRequest) (*model.CreateDomainResponse, error) {
+	requestDef := GenReqDefForCreateDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDomainResponse), nil
+	}
+}
+
+//将用户已创建的播放域名和推流域名建立域名映射关系
+func (c *LiveClient) CreateDomainMapping(request *model.CreateDomainMappingRequest) (*model.CreateDomainMappingResponse, error) {
+	requestDef := GenReqDefForCreateDomainMapping()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDomainMappingResponse), nil
+	}
+}
+
 //创建录制配置接口
 func (c *LiveClient) CreateRecordConfig(request *model.CreateRecordConfigRequest) (*model.CreateRecordConfigResponse, error) {
 	requestDef := GenReqDefForCreateRecordConfig()
@@ -52,6 +74,28 @@ func (c *LiveClient) CreateTranscodingsTemplate(request *model.CreateTranscoding
 	}
 }
 
+//删除域名。只有在域名停用（off）状态时才能删除。
+func (c *LiveClient) DeleteDomain(request *model.DeleteDomainRequest) (*model.DeleteDomainResponse, error) {
+	requestDef := GenReqDefForDeleteDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDomainResponse), nil
+	}
+}
+
+//将播放域名和推流域名的域名映射关系删除
+func (c *LiveClient) DeleteDomainMapping(request *model.DeleteDomainMappingRequest) (*model.DeleteDomainMappingResponse, error) {
+	requestDef := GenReqDefForDeleteDomainMapping()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDomainMappingResponse), nil
+	}
+}
+
 //删除录制配置接口
 func (c *LiveClient) DeleteRecordConfig(request *model.DeleteRecordConfigRequest) (*model.DeleteRecordConfigResponse, error) {
 	requestDef := GenReqDefForDeleteRecordConfig()
@@ -82,6 +126,17 @@ func (c *LiveClient) DeleteTranscodingsTemplate(request *model.DeleteTranscoding
 		return nil, err
 	} else {
 		return resp.(*model.DeleteTranscodingsTemplateResponse), nil
+	}
+}
+
+//获取直播播放日志，基于域名以5分钟粒度进行打包，日志内容以 \"|\" 进行分隔。
+func (c *LiveClient) ListLiveSampleLogs(request *model.ListLiveSampleLogsRequest) (*model.ListLiveSampleLogsResponse, error) {
+	requestDef := GenReqDefForListLiveSampleLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLiveSampleLogsResponse), nil
 	}
 }
 
@@ -129,6 +184,17 @@ func (c *LiveClient) ShowBandwidth(request *model.ShowBandwidthRequest) (*model.
 	}
 }
 
+//查询直播域名
+func (c *LiveClient) ShowDomain(request *model.ShowDomainRequest) (*model.ShowDomainResponse, error) {
+	requestDef := GenReqDefForShowDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainResponse), nil
+	}
+}
+
 //查询加速的直播播放在线人数
 func (c *LiveClient) ShowOnlineUsers(request *model.ShowOnlineUsersRequest) (*model.ShowOnlineUsersResponse, error) {
 	requestDef := GenReqDefForShowOnlineUsers()
@@ -159,6 +225,17 @@ func (c *LiveClient) ShowTranscodingsTemplate(request *model.ShowTranscodingsTem
 		return nil, err
 	} else {
 		return resp.(*model.ShowTranscodingsTemplateResponse), nil
+	}
+}
+
+//修改直播播放、RTMP推流加速域名相关信息
+func (c *LiveClient) UpdateDomain(request *model.UpdateDomainRequest) (*model.UpdateDomainResponse, error) {
+	requestDef := GenReqDefForUpdateDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDomainResponse), nil
 	}
 }
 

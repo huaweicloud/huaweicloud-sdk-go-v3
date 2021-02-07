@@ -1,3 +1,37 @@
+## 0.0.33-rc 2021-02-07
+## HuaweiCloud SDK Core
+- ### Features
+    - None
+- ### Bug Fix
+    - Fix the problem that request sends fail when the data type of request body is `string`.
+- ### Change
+    - None
+
+## HuaweiCloud SDK IMS
+- ### Features
+    - None
+- ### Bug Fix
+    - None
+- ### Change
+    - Interface `ListOsVersions` adjustment: change the data type of `os_bit` which is the property of response of the interface from string to integer.
+
+## HuaweiCloud SDK Live
+- ### Features
+    - Support more interfaces: ListLiveSampleLogs, CreateDomain, DeleteDomain, UpdateDomain, ShowDomain, CreateDomainMapping, DeleteDomainMapping
+- ### Bug Fix
+    - None
+- ### Change
+    - None
+
+## HuaweiCloud SDK MRS
+- ### Features
+    - Support `MapReduce Service`.
+- ### Bug Fix
+    - None
+- ### Change
+    - None
+
+
 ## 0.0.32-rc 2021-01-30
 ## HuaweiCloud SDK DDS
 - ### Features

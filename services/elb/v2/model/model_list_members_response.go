@@ -7,17 +7,17 @@ import (
 )
 
 // Response Object
-type ListMenbersResponse struct {
+type ListMembersResponse struct {
 	// 后端云服务器对象的列表
 	Members        *[]MemberResp `json:"members,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 
-func (o ListMenbersResponse) String() string {
+func (o ListMembersResponse) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "ListMenbersResponse struct{}"
+		return "ListMembersResponse struct{}"
 	}
 
-	return strings.Join([]string{"ListMenbersResponse", string(data)}, " ")
+	return strings.Join([]string{"ListMembersResponse", string(data)}, " ")
 }

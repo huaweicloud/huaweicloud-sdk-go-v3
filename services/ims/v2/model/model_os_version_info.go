@@ -15,7 +15,7 @@ type OsVersionInfo struct {
 	// 操作系统的版本
 	OsVersion string `json:"os_version"`
 	// 操作系统的位数
-	OsBit string `json:"os_bit"`
+	OsBit int32 `json:"os_bit"`
 	// 操作系统的类型，Linux或Windows
 	OsType string `json:"os_type"`
 }
