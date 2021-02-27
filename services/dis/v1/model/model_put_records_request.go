@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type PutRecordsRequest struct {
-	Body *PutRecordsRequest `json:"body,omitempty"`
+	Body *PutRecordsRequestBody `json:"body,omitempty"`
 }
 
 func (o PutRecordsRequest) String() string {

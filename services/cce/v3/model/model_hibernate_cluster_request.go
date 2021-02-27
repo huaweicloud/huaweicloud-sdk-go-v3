@@ -8,8 +8,7 @@ import (
 
 // Request Object
 type HibernateClusterRequest struct {
-	ClusterId   string `json:"cluster_id"`
-	ContentType string `json:"Content-Type"`
+	ClusterId string `json:"cluster_id"`
 }
 
 func (o HibernateClusterRequest) String() string {

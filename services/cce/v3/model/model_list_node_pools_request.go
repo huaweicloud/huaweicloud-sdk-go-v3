@@ -9,7 +9,6 @@ import (
 // Request Object
 type ListNodePoolsRequest struct {
 	ClusterId           string  `json:"cluster_id"`
-	ContentType         string  `json:"Content-Type"`
 	ErrorStatus         *string `json:"errorStatus,omitempty"`
 	ShowDefaultNodePool *string `json:"showDefaultNodePool,omitempty"`
 }

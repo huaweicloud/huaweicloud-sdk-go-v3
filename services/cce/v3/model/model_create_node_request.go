@@ -10,7 +10,6 @@ import (
 // Request Object
 type CreateNodeRequest struct {
 	ClusterId       string                            `json:"cluster_id"`
-	ContentType     string                            `json:"Content-Type"`
 	NodepoolScaleUp *CreateNodeRequestNodepoolScaleUp `json:"nodepoolScaleUp,omitempty"`
 	Body            *V3NodeCreateRequest              `json:"body,omitempty"`
 }

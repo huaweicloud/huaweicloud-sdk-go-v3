@@ -7,95 +7,95 @@ import (
 )
 
 type ResFeeRecordV2 struct {
-	// |参数名称：消费记录日期：格式：YYYY-MM-DD。按照东八区截取| |参数约束及描述：消费记录日期：格式：YYYY-MM-DD。按照东八区截取|
+	// 资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区截取。
 	BillDate *string `json:"bill_date,omitempty"`
-	// |参数名称：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费16：调账-扣费| |参数的约束及描述：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费 15消费-税金16：调账-扣费17：消费-保底差额 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
+	// 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费
 	BillType *int32 `json:"bill_type,omitempty"`
-	// |参数名称：消费的客户账号ID。| |参数约束及描述：如果是查询自己，这个地方是自身的ID; 如果是查询某个企业子客户，这个地方是企业子客户ID如果是查询以及下面的所有子客户，这个地方是消费的实际客户ID; 如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。|
+	// 消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
 	CustomerId *string `json:"customer_id,omitempty"`
-	// |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
+	// 云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
 	Region *string `json:"region,omitempty"`
-	// |参数名称：云服务区名称| |参数约束及描述：云服务区名称|
+	// 云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
 	RegionName *string `json:"region_name,omitempty"`
-	// |参数名称：云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+	// 云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。您可以调用查询云服务类型列表接口获取。
 	CloudServiceType *string `json:"cloud_service_type,omitempty"`
-	// |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
 	ResourceType *string `json:"resource_type,omitempty"`
-	// |参数名称：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。|
+	// 费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
 	EffectiveTime *string `json:"effective_time,omitempty"`
-	// |参数名称：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。|
+	// 费用对应的资源使用的结束时间，按需有效，包年/包月该字段保留。
 	ExpireTime *string `json:"expire_time,omitempty"`
-	// |参数名称：资源ID。| |参数约束及描述：资源ID。|
+	// 资源ID。
 	ResourceId *string `json:"resource_id,omitempty"`
-	// |参数名称：资源名称。| |参数约束及描述：资源名称。|
+	// 资源名称。
 	ResourceName *string `json:"resource_name,omitempty"`
-	// |参数名称：资源标签。| |参数约束及描述：资源标签。|
+	// 资源标签。
 	ResourceTag *string `json:"resource_tag,omitempty"`
-	// |参数名称：产品ID。| |参数约束及描述：产品ID。|
+	// 产品ID。
 	ProductId *string `json:"product_id,omitempty"`
-	// |参数名称：产品名称。| |参数约束及描述：产品名称。|
+	// 产品名称。
 	ProductName *string `json:"product_name,omitempty"`
-	// |参数名称：产品规格描述。| |参数约束及描述：产品规格描述，举例为：普通IO|100.0GB。|
+	// 产品的规格描述。
 	ProductSpecDesc *string `json:"product_spec_desc,omitempty"`
-	// |参数名称：sku编码| |参数约束及描述：sku编码|
+	// SKU编码，在账单中唯一标识一个资源的规格。
 	SkuCode *string `json:"sku_code,omitempty"`
-	// |参数名称：线性大小| |参数约束及描述： 线性大小|
-	SpecSize float32 `json:"spec_size,omitempty"`
-	// |参数名称：线性大小单位| |参数的约束及描述：线性大小单位|
+	// 产品的实例大小，仅线性产品有效。 线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
+	SpecSize *float64 `json:"spec_size,omitempty"`
+	// 产品实例大小的单位，仅线性产品有该字段。 您可以调用查询使用量单位列表接口获取。
 	SpecSizeMeasureId *int32 `json:"spec_size_measure_id,omitempty"`
-	// |参数名称：订单ID 或 交易ID，扣费维度的唯一标识| |参数约束及描述：订单ID 或 交易ID，扣费维度的唯一标识|
+	// 订单ID或交易ID，扣费维度的唯一标识。
 	TradeId *string `json:"trade_id,omitempty"`
-	// |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
+	// 企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-	// |参数名称：企业项目名称。| |参数约束及描述：企业项目名称。|
+	// 企业项目的名称。
 	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
-	// |参数名称：1 : 包周期；3: 按需。10: 预留实例。| |参数约束及描述：1 : 包周期；3: 按需。10: 预留实例。|
+	// 计费模式。 1：包年/包月3：按需10：预留实例
 	ChargeMode *string `json:"charge_mode,omitempty"`
-	// |参数名称：订单ID，包周期资源使用记录才有该字段，按需资源为空。| |参数约束及描述：订单ID，包周期资源使用记录才有该字段，按需资源为空。|
+	// 订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
 	OrderId *string `json:"order_id,omitempty"`
-	// |参数名称：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。| |参数约束及描述：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。|
+	// 周期类型： 19：年20：月24：天25：小时5：一次性
 	PeriodType *string `json:"period_type,omitempty"`
-	// |参数名称：使用量类型| |参数约束及描述：使用量类型|
+	// 资源使用量的类型，您可以调用查询使用量类型列表接口获取。
 	UsageType *string `json:"usage_type,omitempty"`
-	// |参数名称：使用量。| |参数约束及描述： 使用量。|
-	Usage float32 `json:"usage,omitempty"`
-	// |参数名称：使用量度量单位| |参数的约束及描述：使用量度量单位|
+	// 资源的使用量。
+	Usage *float64 `json:"usage,omitempty"`
+	// 资源使用量的度量单位，您可以调用查询使用量单位列表接口获取。
 	UsageMeasureId *int32 `json:"usage_measure_id,omitempty"`
-	// |参数名称：套餐内使用量。| |参数约束及描述： 套餐内使用量。|
-	FreeResourceUsage float32 `json:"free_resource_usage,omitempty"`
-	// |参数名称：套餐内使用量单位，具体枚举参考：usageMeasureId| |参数的约束及描述：套餐内使用量单位，具体枚举参考：usageMeasureId|
+	// 套餐内使用量。
+	FreeResourceUsage *float64 `json:"free_resource_usage,omitempty"`
+	// 套餐内使用量的度量单位，您可以调用查询使用量单位列表接口获取。
 	FreeResourceMeasureId *int32 `json:"free_resource_measure_id,omitempty"`
-	// |参数名称：预留实例使用量。| |参数约束及描述： 预留实例使用量。|
-	RiUsage float32 `json:"ri_usage,omitempty"`
-	// |参数名称：预留实例使用量单位。| |参数的约束及描述：预留实例使用量单位。|
+	// 预留实例使用量。
+	RiUsage *float64 `json:"ri_usage,omitempty"`
+	// 预留实例使用量单位。
 	RiUsageMeasureId *int32 `json:"ri_usage_measure_id,omitempty"`
-	// |参数名称：单价| |参数约束及描述：单价|
-	UnitPrice float32 `json:"unit_price,omitempty"`
-	// |参数名称：单价单位| |参数约束及描述：单价单位|
+	// 资源的单价。
+	UnitPrice *float64 `json:"unit_price,omitempty"`
+	// 资源的单价单位。
 	Unit *string `json:"unit,omitempty"`
-	// |参数名称：官网价。| |参数约束及描述： 官网价。|
-	OfficialAmount float32 `json:"official_amount,omitempty"`
-	// |参数名称：折扣金额| |参数约束及描述： 折扣金额|
-	DiscountAmount float32 `json:"discount_amount,omitempty"`
-	// |参数名称：消费金额，包括现金券和代金券金额，精确到小数点后2位。| |参数约束及描述： 消费金额，包括现金券和代金券金额，精确到小数点后2位。|
-	Amount float32 `json:"amount,omitempty"`
-	// |参数名称：现金支付金额| |参数约束及描述： 现金支付金额|
-	CashAmount float32 `json:"cash_amount,omitempty"`
-	// |参数名称：信用额度支付金额。| |参数约束及描述： 信用额度支付金额。|
-	CreditAmount float32 `json:"credit_amount,omitempty"`
-	// |参数名称：代金券支付金额。| |参数约束及描述： 代金券支付金额。|
-	CouponAmount float32 `json:"coupon_amount,omitempty"`
-	// |参数名称：现金券支付金额。| |参数约束及描述： 现金券支付金额。|
-	FlexipurchaseCouponAmount float32 `json:"flexipurchase_coupon_amount,omitempty"`
-	// |参数名称：储值卡支付金额。| |参数约束及描述： 储值卡支付金额。|
-	StoredCardAmount float32 `json:"stored_card_amount,omitempty"`
-	// |参数名称：奖励金支付金额（用于现网未清干净的奖励金）。| |参数约束及描述： 奖励金支付金额（用于现网未清干净的奖励金）。|
-	BonusAmount float32 `json:"bonus_amount,omitempty"`
-	// |参数名称：欠费金额。| |参数约束及描述： 欠费金额。|
-	DebtAmount float32 `json:"debt_amount,omitempty"`
-	// |参数名称：欠费核销金额。| |参数约束及描述： 欠费核销金额。|
-	AdjustmentAmount float32 `json:"adjustment_amount,omitempty"`
-	// |参数名称：金额单位：1：元| |参数的约束及描述：金额单位：1：元|
+	// 官网价。
+	OfficialAmount *float64 `json:"official_amount,omitempty"`
+	// 折扣金额。
+	DiscountAmount *float64 `json:"discount_amount,omitempty"`
+	// 消费金额，包括现金券和储值卡和代金券金额，精确到小数点后2位。
+	Amount *float64 `json:"amount,omitempty"`
+	// 现金支付金额。
+	CashAmount *float64 `json:"cash_amount,omitempty"`
+	// 信用额度支付金额。
+	CreditAmount *float64 `json:"credit_amount,omitempty"`
+	// 代金券支付金额。
+	CouponAmount *float64 `json:"coupon_amount,omitempty"`
+	// 现金券支付金额。
+	FlexipurchaseCouponAmount *float64 `json:"flexipurchase_coupon_amount,omitempty"`
+	// 储值卡支付金额。
+	StoredCardAmount *float64 `json:"stored_card_amount,omitempty"`
+	// 奖励金支付金额（用于现网客户未使用完的奖励金）。
+	BonusAmount *float64 `json:"bonus_amount,omitempty"`
+	// 欠费金额。
+	DebtAmount *float64 `json:"debt_amount,omitempty"`
+	// 欠费核销金额。
+	AdjustmentAmount *float64 `json:"adjustment_amount,omitempty"`
+	// 金额单位。 1：元
 	MeasureId *int32 `json:"measure_id,omitempty"`
 }
 

@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type UpdateCouponQuotasResponse struct {
-	// |参数名称：错误的客户列表和错误信息| |参数约束以及描述：错误的客户列表和错误信息|
+	// 发放失败的精英服务商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
 	ErrorDetails *[]ErrorDetail `json:"error_details,omitempty"`
-	// |参数名称：成功的客户ID和对应的券ID列表| |参数约束以及描述：成功的客户ID和对应的券ID列表|
+	// 发放成功的精英服务商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
 	SimpleQuotaInfos *[]QuotaSimpleInfo `json:"simple_quota_infos,omitempty"`
 	HttpStatusCode   int                `json:"-"`
 }

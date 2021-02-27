@@ -96,6 +96,17 @@ func (c *RdsClient) CreateInstance(request *model.CreateInstanceRequest) (*model
 	}
 }
 
+//创建手动备份。
+func (c *RdsClient) CreateManualBackup(request *model.CreateManualBackupRequest) (*model.CreateManualBackupResponse, error) {
+	requestDef := GenReqDefForCreateManualBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateManualBackupResponse), nil
+	}
+}
+
 //删除参数模板。
 func (c *RdsClient) DeleteConfiguration(request *model.DeleteConfigurationRequest) (*model.DeleteConfigurationResponse, error) {
 	requestDef := GenReqDefForDeleteConfiguration()
@@ -126,17 +137,6 @@ func (c *RdsClient) DeleteManualBackup(request *model.DeleteManualBackupRequest)
 		return nil, err
 	} else {
 		return resp.(*model.DeleteManualBackupResponse), nil
-	}
-}
-
-//创建手动备份。
-func (c *RdsClient) DoManualBackup(request *model.DoManualBackupRequest) (*model.DoManualBackupResponse, error) {
-	requestDef := GenReqDefForDoManualBackup()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DoManualBackupResponse), nil
 	}
 }
 
@@ -371,28 +371,6 @@ func (c *RdsClient) MigrateFollower(request *model.MigrateFollowerRequest) (*mod
 	}
 }
 
-//修改参数模板参数。
-func (c *RdsClient) ModifyConfiguration(request *model.ModifyConfigurationRequest) (*model.ModifyConfigurationResponse, error) {
-	requestDef := GenReqDefForModifyConfiguration()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ModifyConfigurationResponse), nil
-	}
-}
-
-//修改指定实例的参数。
-func (c *RdsClient) ModifyInstanceConfiguration(request *model.ModifyInstanceConfigurationRequest) (*model.ModifyInstanceConfigurationResponse, error) {
-	requestDef := GenReqDefForModifyInstanceConfiguration()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ModifyInstanceConfigurationResponse), nil
-	}
-}
-
 //重置数据库密码.
 func (c *RdsClient) ResetPwd(request *model.ResetPwdRequest) (*model.ResetPwdResponse, error) {
 	requestDef := GenReqDefForResetPwd()
@@ -580,6 +558,17 @@ func (c *RdsClient) SwitchSsl(request *model.SwitchSslRequest) (*model.SwitchSsl
 	}
 }
 
+//修改参数模板参数。
+func (c *RdsClient) UpdateConfiguration(request *model.UpdateConfigurationRequest) (*model.UpdateConfigurationResponse, error) {
+	requestDef := GenReqDefForUpdateConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateConfigurationResponse), nil
+	}
+}
+
 //修改内网地址
 func (c *RdsClient) UpdateDataIp(request *model.UpdateDataIpRequest) (*model.UpdateDataIpResponse, error) {
 	requestDef := GenReqDefForUpdateDataIp()
@@ -588,6 +577,17 @@ func (c *RdsClient) UpdateDataIp(request *model.UpdateDataIpRequest) (*model.Upd
 		return nil, err
 	} else {
 		return resp.(*model.UpdateDataIpResponse), nil
+	}
+}
+
+//修改指定实例的参数。
+func (c *RdsClient) UpdateInstanceConfiguration(request *model.UpdateInstanceConfigurationRequest) (*model.UpdateInstanceConfigurationResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceConfigurationResponse), nil
 	}
 }
 

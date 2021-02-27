@@ -133,26 +133,6 @@ func GenReqDefForMigrateResource() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForModifyEnterpriseProject() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v1.0/enterprise-projects/{enterprise_project_id}").
-		WithResponse(new(model.ModifyEnterpriseProjectResponse)).
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EnterpriseProjectId").
-		WithJsonTag("enterprise_project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForShowApiVersion() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -201,6 +181,26 @@ func GenReqDefForShowResourceBindEnterpriseProject() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1.0/enterprise-projects/{enterprise_project_id}/resources/filter").
 		WithResponse(new(model.ShowResourceBindEnterpriseProjectResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateEnterpriseProject() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1.0/enterprise-projects/{enterprise_project_id}").
+		WithResponse(new(model.UpdateEnterpriseProjectResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

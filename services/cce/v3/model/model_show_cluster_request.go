@@ -9,7 +9,6 @@ import (
 // Request Object
 type ShowClusterRequest struct {
 	ClusterId   string  `json:"cluster_id"`
-	ContentType string  `json:"Content-Type"`
 	ErrorStatus *string `json:"errorStatus,omitempty"`
 	Detail      *string `json:"detail,omitempty"`
 }

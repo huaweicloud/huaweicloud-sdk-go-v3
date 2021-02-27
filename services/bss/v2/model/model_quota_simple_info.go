@@ -7,9 +7,9 @@ import (
 )
 
 type QuotaSimpleInfo struct {
-	// |参数名称：批量发放成功客户ID。| |参数约束及描述：批量发放成功客户ID。|
+	// 精英服务商ID。
 	Id string `json:"id"`
-	// |参数名称：发放成功的券ID| |参数约束及描述：发放成功的券ID|
+	// 分配给精英服务商的代金券额度ID。
 	QuotaId string `json:"quota_id"`
 }
 

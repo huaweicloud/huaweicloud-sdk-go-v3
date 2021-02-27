@@ -9,9 +9,9 @@ import (
 // Response Object
 type ListRateOnPeriodDetailResponse struct {
 	OfficialWebsiteRatingResult *OfficialWebsiteRatingResult `json:"official_website_rating_result,omitempty"`
-	// |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数的约束及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
+	// 存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
 	OptionalDiscountRatingResults *[]OptionalDiscountRatingResult `json:"optional_discount_rating_results,omitempty"`
-	// |参数名称：币种| |参数约束及描述：比如CNY|
+	// 币种。 CNY：人民币。 值为空代表人民币。
 	Currency       *string `json:"currency,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

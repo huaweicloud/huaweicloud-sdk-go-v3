@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListCustomerselfResourceRecordDetailsResponse struct {
-	// |参数名称：资源费用记录数据| |参数的约束及描述：该参数非必填|
+	// 资源详单数据记录。 具体请参见表1。
 	MonthlyRecords *[]MonthlyBillRes `json:"monthly_records,omitempty"`
-	// |参数名称：结果集数量| |参数的约束及描述：该参数非必填，且只允许数字，只有成功才返回这个参数。|
+	// 结果集数量，只有成功才返回这个参数。
 	TotalCount *int32 `json:"total_count,omitempty"`
-	// |参数名称：货币单位代码| |参数的约束及描述：该参数非必填，最大长度3，CNY：人民币；USD：美元|
+	// 货币单位代码： CNY：人民币
 	Currency       *string `json:"currency,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

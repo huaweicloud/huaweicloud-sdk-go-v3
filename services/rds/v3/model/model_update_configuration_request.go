@@ -7,17 +7,17 @@ import (
 )
 
 // Request Object
-type ModifyConfigurationRequest struct {
+type UpdateConfigurationRequest struct {
 	XLanguage *string                 `json:"X-Language,omitempty"`
 	ConfigId  string                  `json:"config_id"`
 	Body      *ConfigurationForUpdate `json:"body,omitempty"`
 }
 
-func (o ModifyConfigurationRequest) String() string {
+func (o UpdateConfigurationRequest) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "ModifyConfigurationRequest struct{}"
+		return "UpdateConfigurationRequest struct{}"
 	}
 
-	return strings.Join([]string{"ModifyConfigurationRequest", string(data)}, " ")
+	return strings.Join([]string{"UpdateConfigurationRequest", string(data)}, " ")
 }

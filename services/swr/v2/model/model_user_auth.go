@@ -2,7 +2,8 @@ package model
 
 import (
 	"encoding/json"
-
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"strings"
 )
 
@@ -12,7 +13,7 @@ type UserAuth struct {
 	// 用户名，需要从IAM服务获取
 	UserName string `json:"user_name"`
 	// 用户权限，7表示管理权限，3表示编辑权限，1表示读取权限
-	Auth int32 `json:"auth"`
+	Auth UserAuthAuth `json:"auth"`
 }
 
 func (o UserAuth) String() string {
@@ -22,4 +23,44 @@ func (o UserAuth) String() string {
 	}
 
 	return strings.Join([]string{"UserAuth", string(data)}, " ")
+}
+
+type UserAuthAuth struct {
+	value int64
+}
+
+type UserAuthAuthEnum struct {
+	E_7 UserAuthAuth
+	E_3 UserAuthAuth
+	E_1 UserAuthAuth
+}
+
+func GetUserAuthAuthEnum() UserAuthAuthEnum {
+	return UserAuthAuthEnum{
+		E_7: UserAuthAuth{
+			value: 7,
+		}, E_3: UserAuthAuth{
+			value: 3,
+		}, E_1: UserAuthAuth{
+			value: 1,
+		},
+	}
+}
+
+func (c UserAuthAuth) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *UserAuthAuth) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int64")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int64)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int64 error")
+	}
 }

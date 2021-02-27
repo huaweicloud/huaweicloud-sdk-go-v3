@@ -8,8 +8,7 @@ import (
 
 // Request Object
 type ShowJobRequest struct {
-	JobId       string `json:"job_id"`
-	ContentType string `json:"Content-Type"`
+	JobId string `json:"job_id"`
 }
 
 func (o ShowJobRequest) String() string {

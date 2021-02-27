@@ -8,8 +8,7 @@ import (
 
 // Request Object
 type CreateClusterRequest struct {
-	ContentType string     `json:"Content-Type"`
-	Body        *V3Cluster `json:"body,omitempty"`
+	Body *V3Cluster `json:"body,omitempty"`
 }
 
 func (o CreateClusterRequest) String() string {

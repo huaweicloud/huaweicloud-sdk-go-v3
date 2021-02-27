@@ -7,16 +7,16 @@ import (
 )
 
 // Request Object
-type ModifyScriptRequest struct {
+type UpdateScriptRequest struct {
 	ScriptName string      `json:"script_name"`
 	Body       *ScriptInfo `json:"body,omitempty"`
 }
 
-func (o ModifyScriptRequest) String() string {
+func (o UpdateScriptRequest) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "ModifyScriptRequest struct{}"
+		return "UpdateScriptRequest struct{}"
 	}
 
-	return strings.Join([]string{"ModifyScriptRequest", string(data)}, " ")
+	return strings.Join([]string{"UpdateScriptRequest", string(data)}, " ")
 }

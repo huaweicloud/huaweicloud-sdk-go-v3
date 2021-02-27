@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type ListPostalAddressResponse struct {
-	// |参数名称：查询个数，成功的时候返回| |参数的约束及描述：查询个数，成功的时候返回|
+	// 邮寄地址的个数，只有成功的时候才返回。
 	TotalCount *int32 `json:"total_count,omitempty"`
-	// |参数名称：邮寄地址| |参数约束以及描述：邮寄地址|
+	// 邮寄地址，具体参见表2。
 	PostalAddress  *[]CustomerPostalAddressV2 `json:"postal_address,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }

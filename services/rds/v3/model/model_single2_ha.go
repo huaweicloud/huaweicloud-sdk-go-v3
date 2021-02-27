@@ -14,6 +14,8 @@ type Single2Ha struct {
 	Password *string `json:"password,omitempty"`
 	// 创建新节点所在专属存储池ID，仅专属云创建实例时有效。
 	DsspoolId *string `json:"dsspool_id,omitempty"`
+	// 包周期实例单转主备时可指定，表示是否自动从客户的账户中支付。
+	IsAutoPay *bool `json:"is_auto_pay,omitempty"`
 }
 
 func (o Single2Ha) String() string {

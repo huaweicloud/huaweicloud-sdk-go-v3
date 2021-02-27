@@ -7,16 +7,16 @@ import (
 )
 
 // Response Object
-type DoManualBackupResponse struct {
+type CreateManualBackupResponse struct {
 	Backup         *BackupInfo `json:"backup,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 
-func (o DoManualBackupResponse) String() string {
+func (o CreateManualBackupResponse) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "DoManualBackupResponse struct{}"
+		return "CreateManualBackupResponse struct{}"
 	}
 
-	return strings.Join([]string{"DoManualBackupResponse", string(data)}, " ")
+	return strings.Join([]string{"CreateManualBackupResponse", string(data)}, " ")
 }

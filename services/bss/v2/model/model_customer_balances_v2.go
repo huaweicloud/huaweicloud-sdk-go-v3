@@ -7,15 +7,15 @@ import (
 )
 
 type CustomerBalancesV2 struct {
-	// |参数名称：客户的客户ID。| |参数约束及描述：客户的客户ID。|
+	// 客户账号ID。
 	CustomerId string `json:"customer_id"`
-	// |参数名称：客户欠款总额度。| |参数约束及描述： 客户欠款总额度。|
-	DebtAmount float32 `json:"debt_amount,omitempty"`
-	// |参数名称：客户可用总额度。| |参数约束及描述： 客户可用总额度。|
-	Amount float32 `json:"amount,omitempty"`
-	// |参数名称：币种。| |参数约束及描述：币种。|
+	// 客户欠款总额度。
+	DebtAmount *float64 `json:"debt_amount,omitempty"`
+	// 客户可用总额度。
+	Amount *float64 `json:"amount,omitempty"`
+	// 币种。 CNY：人民币。
 	Currency *string `json:"currency,omitempty"`
-	// |参数名称：度量单位：1：元；2：角；3：分。| |参数的约束及描述：度量单位：1：元；2：角；3：分。|
+	// 度量单位： 1：元
 	MeasureId *int32 `json:"measure_id,omitempty"`
 }
 

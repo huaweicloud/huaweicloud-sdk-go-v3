@@ -7,13 +7,13 @@ import (
 )
 
 type SetSubCustomerDiscountV2 struct {
-	// |参数名称：客户ID| |参数约束及描述：客户ID|
+	// 客户账号ID。您可以调用查询客户列表接口获取customer_id。
 	CustomerId string `json:"customer_id"`
-	// |参数名称：折扣率，最高精确到4位小数。折扣范围：0.8~1。如果折扣率是85%，则折扣率写成0.85。注意：折扣为1表示不打折，相当于删除伙伴折扣。| |参数的约束及描述：折扣率，最高精确到4位小数。折扣范围：0.8~1。如果折扣率是85%，则折扣率写成0.85。注意：折扣为1表示不打折，相当于删除伙伴折扣。|
-	Discount float32 `json:"discount"`
-	// |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+	// 折扣率，最高精确到2位小数。 折扣范围：0.8~1。 如果折扣率是85%，则折扣率写成0.85。 说明： 折扣为1表示不打折，相当于删除伙伴折扣。
+	Discount float64 `json:"discount"`
+	// 生效时间。discount=1时无需填写。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
 	EffectiveTime *string `json:"effective_time,omitempty"`
-	// |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+	// 失效时间。discount=1时无需填写。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
 	ExpireTime *string `json:"expire_time,omitempty"`
 }
 

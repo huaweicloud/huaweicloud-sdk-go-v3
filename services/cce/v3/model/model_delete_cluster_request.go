@@ -10,7 +10,6 @@ import (
 // Request Object
 type DeleteClusterRequest struct {
 	ClusterId   string                         `json:"cluster_id"`
-	ContentType string                         `json:"Content-Type"`
 	ErrorStatus *string                        `json:"errorStatus,omitempty"`
 	DeleteEfs   *DeleteClusterRequestDeleteEfs `json:"delete_efs,omitempty"`
 	DeleteEni   *DeleteClusterRequestDeleteEni `json:"delete_eni,omitempty"`

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListSkuInventoriesResponse struct {
-	// |参数名称：总记录数| |参数约束以及描述：总记录数|
+	// 库存的查询结果详情，具体参见表2。
 	SkuInventories *[]SkuInventory `json:"sku_inventories,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListPartnerBalancesResponse struct {
-	// |参数名称：总额，即最终优惠后的金额，| |参数约束以及描述：总额，即最终优惠后的金额，|
+	// 账户余额列表。 具体请参见表2
 	AccountBalances *[]AccountBalanceV2 `json:"account_balances,omitempty"`
 	HttpStatusCode  int                 `json:"-"`
 }

@@ -8,9 +8,8 @@ import (
 
 // Request Object
 type DeleteAddonInstanceRequest struct {
-	ContentType string `json:"Content-Type"`
-	Id          string `json:"id"`
-	ClusterId   string `json:"cluster_id"`
+	Id        string `json:"id"`
+	ClusterId string `json:"cluster_id"`
 }
 
 func (o DeleteAddonInstanceRequest) String() string {

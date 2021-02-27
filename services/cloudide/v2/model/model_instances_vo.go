@@ -33,7 +33,7 @@ type InstancesVo struct {
 	Link *string `json:"link,omitempty"`
 	// 名称
 	Name *string `json:"name,omitempty"`
-	// 组织id（对应华为云账号的domainId）
+	// 组织id（对应华为云帐号的domainId）
 	OrganizationId *string `json:"organization_id,omitempty"`
 	// 用户id
 	OwnerId *string `json:"owner_id,omitempty"`

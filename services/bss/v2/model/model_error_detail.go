@@ -7,11 +7,11 @@ import (
 )
 
 type ErrorDetail struct {
-	// |参数名称：返回码| |参数的约束及描述：该参数非必填，最大长度16|
+	// 状态码。
 	ErrorCode *string `json:"error_code,omitempty"`
-	// |参数名称：返回码描述| |参数的约束及描述：该参数非必填，最大长度1024|
+	// 错误描述信息。
 	ErrorMsg *string `json:"error_msg,omitempty"`
-	// |参数名称：标示ID| |参数的约束及描述：该参数非必填，最大长度256|
+	// 出现错误的客户ID或批量处理消息的ID。
 	Id *string `json:"id,omitempty"`
 }
 

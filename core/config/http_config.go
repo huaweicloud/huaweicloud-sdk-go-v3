@@ -111,6 +111,8 @@ func (p *Proxy) GetProxyUrl() string {
 	var proxyUrl string
 	if p.Username != "" {
 		proxyUrl = fmt.Sprintf("%s://%s:%s@%s", p.Schema, p.Username, p.Password, p.Host)
+	} else {
+		proxyUrl = fmt.Sprintf("%s://%s", p.Schema, p.Host)
 	}
 	if p.Port != 0 {
 		proxyUrl = fmt.Sprintf("%s:%d", proxyUrl, p.Port)

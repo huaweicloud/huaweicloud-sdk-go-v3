@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ListAddonTemplatesRequest struct {
-	ContentType       string  `json:"Content-Type"`
 	AddonTemplateName *string `json:"addon_template_name,omitempty"`
 }
 

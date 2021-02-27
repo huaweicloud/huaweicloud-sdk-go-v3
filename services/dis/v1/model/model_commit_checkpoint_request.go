@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CommitCheckpointRequest struct {
-	Body *CommitCheckpointRequest `json:"body,omitempty"`
+	Body *CommitCheckpointRequestBody `json:"body,omitempty"`
 }
 
 func (o CommitCheckpointRequest) String() string {

@@ -8,9 +8,8 @@ import (
 
 // Request Object
 type UpdateAddonInstanceRequest struct {
-	Id          string           `json:"id"`
-	ContentType string           `json:"Content-Type"`
-	Body        *InstanceRequest `json:"body,omitempty"`
+	Id   string           `json:"id"`
+	Body *InstanceRequest `json:"body,omitempty"`
 }
 
 func (o UpdateAddonInstanceRequest) String() string {

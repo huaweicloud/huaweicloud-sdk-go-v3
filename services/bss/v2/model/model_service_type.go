@@ -7,11 +7,11 @@ import (
 )
 
 type ServiceType struct {
-	// |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
+	// 云服务类型的名称。
 	ServiceTypeName *string `json:"service_type_name,omitempty"`
-	// |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
+	// 云服务类型的编码。
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
-	// |参数名称：云服务缩写| |参数约束及描述：云服务缩写|
+	// 云服务类型的缩写。
 	Abbreviation *string `json:"abbreviation,omitempty"`
 }
 

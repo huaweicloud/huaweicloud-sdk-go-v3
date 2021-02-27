@@ -162,6 +162,28 @@ func (c *DdsClient) DeleteManualBackup(request *model.DeleteManualBackupRequest)
 	}
 }
 
+//获取错误日志下载链接。
+func (c *DdsClient) DownloadErrorlog(request *model.DownloadErrorlogRequest) (*model.DownloadErrorlogResponse, error) {
+	requestDef := GenReqDefForDownloadErrorlog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadErrorlogResponse), nil
+	}
+}
+
+//获取慢日志下载链接。
+func (c *DdsClient) DownloadSlowlog(request *model.DownloadSlowlogRequest) (*model.DownloadSlowlogResponse, error) {
+	requestDef := GenReqDefForDownloadSlowlog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadSlowlogResponse), nil
+	}
+}
+
 //生成审计日志下载链接。
 func (c *DdsClient) ListAuditlogLinks(request *model.ListAuditlogLinksRequest) (*model.ListAuditlogLinksResponse, error) {
 	requestDef := GenReqDefForListAuditlogLinks()

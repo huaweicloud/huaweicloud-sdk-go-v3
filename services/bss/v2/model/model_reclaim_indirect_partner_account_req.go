@@ -7,10 +7,10 @@ import (
 )
 
 type ReclaimIndirectPartnerAccountReq struct {
-	// |参数名称：精英服务商伙伴的ID。| |参数约束及描述：精英服务商伙伴的ID。|
+	// 精英服务商ID。
 	IndirectPartnerId string `json:"indirect_partner_id"`
-	// |参数名称：拨款金额。单位为元。不能为负数，精确到小数点后两位。| |参数的约束及描述：拨款金额。单位为元。不能为负数，浮点数精度为:小数点后两位。|
-	Amount float32 `json:"amount"`
+	// 回收金额。 华为云伙伴能力中心回收的精英服务商的账户金额。 说明： 回收金额不能大于精英服务商的账户余额。 单位：元。取值大于0且精确到小数点后2位。
+	Amount float64 `json:"amount"`
 }
 
 func (o ReclaimIndirectPartnerAccountReq) String() string {

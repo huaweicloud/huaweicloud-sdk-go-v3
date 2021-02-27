@@ -7,11 +7,11 @@ import (
 )
 
 type ResourceType struct {
-	// |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+	// 资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
 	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
-	// |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
+	// 资源类型的名称。
 	ResourceTypeName *string `json:"resource_type_name,omitempty"`
-	// |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+	// 资源类型的描述。
 	ResourceTypeDesc *string `json:"resource_type_desc,omitempty"`
 }
 

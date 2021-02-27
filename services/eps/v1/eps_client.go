@@ -85,17 +85,6 @@ func (c *EpsClient) MigrateResource(request *model.MigrateResourceRequest) (*mod
 	}
 }
 
-//修改企业项目。当前仅支持修改名称和描述。
-func (c *EpsClient) ModifyEnterpriseProject(request *model.ModifyEnterpriseProjectRequest) (*model.ModifyEnterpriseProjectResponse, error) {
-	requestDef := GenReqDefForModifyEnterpriseProject()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ModifyEnterpriseProjectResponse), nil
-	}
-}
-
 //查询指定的企业项目API版本号详情
 func (c *EpsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model.ShowApiVersionResponse, error) {
 	requestDef := GenReqDefForShowApiVersion()
@@ -137,5 +126,16 @@ func (c *EpsClient) ShowResourceBindEnterpriseProject(request *model.ShowResourc
 		return nil, err
 	} else {
 		return resp.(*model.ShowResourceBindEnterpriseProjectResponse), nil
+	}
+}
+
+//修改企业项目。当前仅支持修改名称和描述。
+func (c *EpsClient) UpdateEnterpriseProject(request *model.UpdateEnterpriseProjectRequest) (*model.UpdateEnterpriseProjectResponse, error) {
+	requestDef := GenReqDefForUpdateEnterpriseProject()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEnterpriseProjectResponse), nil
 	}
 }

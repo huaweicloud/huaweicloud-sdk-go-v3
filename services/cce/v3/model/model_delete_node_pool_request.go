@@ -10,7 +10,6 @@ import (
 type DeleteNodePoolRequest struct {
 	ClusterId   string  `json:"cluster_id"`
 	NodepoolId  string  `json:"nodepool_id"`
-	ContentType string  `json:"Content-Type"`
 	ErrorStatus *string `json:"errorStatus,omitempty"`
 }
 

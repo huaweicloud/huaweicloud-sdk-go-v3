@@ -15,7 +15,7 @@ func NewTmsClient(hcClient *http_client.HcHttpClient) *TmsClient {
 }
 
 func TmsClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
 	return builder
 }
 

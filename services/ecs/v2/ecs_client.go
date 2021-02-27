@@ -250,6 +250,17 @@ func (c *EcsClient) ListServerBlockDevices(request *model.ListServerBlockDevices
 	}
 }
 
+//查询弹性云服务器组。  与原生的创建云服务器组接口不同之处在于该接口支持企业项目细粒度权限的校验。
+func (c *EcsClient) ListServerGroups(request *model.ListServerGroupsRequest) (*model.ListServerGroupsResponse, error) {
+	requestDef := GenReqDefForListServerGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListServerGroupsResponse), nil
+	}
+}
+
 //查询云服务器网卡信息。
 func (c *EcsClient) ListServerInterfaces(request *model.ListServerInterfacesRequest) (*model.ListServerInterfacesResponse, error) {
 	requestDef := GenReqDefForListServerInterfaces()
@@ -467,6 +478,17 @@ func (c *EcsClient) ShowServer(request *model.ShowServerRequest) (*model.ShowSer
 		return nil, err
 	} else {
 		return resp.(*model.ShowServerResponse), nil
+	}
+}
+
+//查询弹性云服务器组详情。  与原生的创建云服务器组接口不同之处在于该接口支持企业项目细粒度权限的校验。
+func (c *EcsClient) ShowServerGroup(request *model.ShowServerGroupRequest) (*model.ShowServerGroupResponse, error) {
+	requestDef := GenReqDefForShowServerGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowServerGroupResponse), nil
 	}
 }
 

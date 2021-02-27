@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type ListUsageTypesResponse struct {
-	// |参数名称：总条数，必须大于等于0。| |参数的约束及描述：总条数，必须大于等于0。|
+	// 总数。
 	TotalCount *int32 `json:"total_count,omitempty"`
-	// |参数名称：用量类型列表| |参数约束以及描述：用量类型列表|
+	// 使用量类型列表，具体请参见表3。
 	UsageTypes     *[]UsageType `json:"usage_types,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

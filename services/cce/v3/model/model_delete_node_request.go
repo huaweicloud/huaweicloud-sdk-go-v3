@@ -11,7 +11,6 @@ import (
 type DeleteNodeRequest struct {
 	ClusterId         string                              `json:"cluster_id"`
 	NodeId            string                              `json:"node_id"`
-	ContentType       string                              `json:"Content-Type"`
 	ErrorStatus       *string                             `json:"errorStatus,omitempty"`
 	NodepoolScaleDown *DeleteNodeRequestNodepoolScaleDown `json:"nodepoolScaleDown,omitempty"`
 }

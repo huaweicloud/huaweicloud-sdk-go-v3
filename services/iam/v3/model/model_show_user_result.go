@@ -36,7 +36,7 @@ type ShowUserResult struct {
 	// IAM用户最后登录时间。
 	LastLoginTime *string `json:"last_login_time,omitempty"`
 	// IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
-	PwdStength *string `json:"pwd_stength,omitempty"`
+	PwdStrength *string `json:"pwd_strength,omitempty"`
 	// IAM用户是否为根用户。
 	IsDomainOwner bool `json:"is_domain_owner"`
 	// IAM用户访问模式。

@@ -8,8 +8,7 @@ import (
 
 // Request Object
 type CreateAddonInstanceRequest struct {
-	ContentType string           `json:"Content-Type"`
-	Body        *InstanceRequest `json:"body,omitempty"`
+	Body *InstanceRequest `json:"body,omitempty"`
 }
 
 func (o CreateAddonInstanceRequest) String() string {

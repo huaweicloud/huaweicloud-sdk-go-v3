@@ -7,17 +7,17 @@ import (
 )
 
 // Response Object
-type ModifyInstanceConfigurationResponse struct {
+type UpdateInstanceConfigurationResponse struct {
 	// 实例是否需要重启。  - “true”需要重启。 - “false”不需要重启。
 	RestartRequired *bool `json:"restart_required,omitempty"`
 	HttpStatusCode  int   `json:"-"`
 }
 
-func (o ModifyInstanceConfigurationResponse) String() string {
+func (o UpdateInstanceConfigurationResponse) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "ModifyInstanceConfigurationResponse struct{}"
+		return "UpdateInstanceConfigurationResponse struct{}"
 	}
 
-	return strings.Join([]string{"ModifyInstanceConfigurationResponse", string(data)}, " ")
+	return strings.Join([]string{"UpdateInstanceConfigurationResponse", string(data)}, " ")
 }

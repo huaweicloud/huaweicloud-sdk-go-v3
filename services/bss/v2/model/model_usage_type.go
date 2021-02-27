@@ -7,13 +7,13 @@ import (
 )
 
 type UsageType struct {
-	// |参数名称：用量类型编码如：duration| |参数约束及描述：用量类型编码如：duration|
+	// 使用量类型编码。如：reqNumber。
 	Code *string `json:"code,omitempty"`
-	// |参数名称：用量类型名称| |参数约束及描述：用量类型名称|
+	// 使用量类型名称。如：调用次数。
 	Name *string `json:"name,omitempty"`
-	// |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+	// 资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
 	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
-	// |参数名称：服务类型编码| |参数约束及描述：服务类型编码|
+	// 云服务类型编码。例如ECS的云服务类型编码为“hws.service.type.ec2”。
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
 }
 

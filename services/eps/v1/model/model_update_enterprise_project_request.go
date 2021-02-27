@@ -7,16 +7,16 @@ import (
 )
 
 // Request Object
-type ModifyEnterpriseProjectRequest struct {
+type UpdateEnterpriseProjectRequest struct {
 	EnterpriseProjectId string             `json:"enterprise_project_id"`
 	Body                *EnterpriseProject `json:"body,omitempty"`
 }
 
-func (o ModifyEnterpriseProjectRequest) String() string {
+func (o UpdateEnterpriseProjectRequest) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "ModifyEnterpriseProjectRequest struct{}"
+		return "UpdateEnterpriseProjectRequest struct{}"
 	}
 
-	return strings.Join([]string{"ModifyEnterpriseProjectRequest", string(data)}, " ")
+	return strings.Join([]string{"UpdateEnterpriseProjectRequest", string(data)}, " ")
 }

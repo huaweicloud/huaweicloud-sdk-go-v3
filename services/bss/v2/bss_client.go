@@ -426,17 +426,6 @@ func (c *BssClient) ListPartnerCouponsRecord(request *model.ListPartnerCouponsRe
 	}
 }
 
-//功能描述：伙伴在伙伴销售平台查询客户的代支付订单列表。
-func (c *BssClient) ListPartnerPayOrders(request *model.ListPartnerPayOrdersRequest) (*model.ListPartnerPayOrdersResponse, error) {
-	requestDef := GenReqDefForListPartnerPayOrders()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListPartnerPayOrdersResponse), nil
-	}
-}
-
 //功能描述：客户在客户自建平台查询某个或所有的包年/包月资源
 func (c *BssClient) ListPayPerUseCustomerResources(request *model.ListPayPerUseCustomerResourcesRequest) (*model.ListPayPerUseCustomerResourcesResponse, error) {
 	requestDef := GenReqDefForListPayPerUseCustomerResources()

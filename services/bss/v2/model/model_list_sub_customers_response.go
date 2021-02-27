@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type ListSubCustomersResponse struct {
-	// |参数名称：客户信息列表。具体请参见表 CustomerInfo| |参数约束以及描述：客户信息列表。具体请参见表 CustomerInfo|
+	// 客户信息列表。 具体请参见表1。
 	CustomerInfos *[]CustomerInformation `json:"customer_infos,omitempty"`
-	// |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+	// 总记录数。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

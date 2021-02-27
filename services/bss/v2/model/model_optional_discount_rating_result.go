@@ -7,23 +7,23 @@ import (
 )
 
 type OptionalDiscountRatingResult struct {
-	// |参数名称：折扣优惠Id| |参数约束及描述：折扣优惠Id|
+	// 折扣优惠ID。
 	DiscountId *string `json:"discount_id,omitempty"`
-	// |参数名称：总额，即最终优惠后的金额，amount= official_website_amount - discountAmount|
-	Amount float32 `json:"amount,omitempty"`
-	// |参数名称：官网价| |参数约束及描述：官网价|
-	OfficialWebsiteAmount float32 `json:"official_website_amount,omitempty"`
-	// |参数名称：优惠额| |参数约束及描述：（官网价和总价的差）|
-	DiscountAmount float32 `json:"discount_amount,omitempty"`
-	// |参数名称：度量单位标识| |参数约束及描述：1：元|
+	// 总额，即最终优惠后的金额。 amount= official_website_amount - discountAmount。
+	Amount *float64 `json:"amount,omitempty"`
+	// 包年/包月产品的官网价。
+	OfficialWebsiteAmount *float64 `json:"official_website_amount,omitempty"`
+	// 可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
+	DiscountAmount *float64 `json:"discount_amount,omitempty"`
+	// 价格度量单位标识。 1：元
 	MeasureId *int32 `json:"measure_id,omitempty"`
-	// |参数名称：折扣优惠类型：合同商务折扣：605(华为云BE场景下的合同商务折扣)、606(分销商BE场景下的合同商务折扣)伙伴授予折扣：607|
+	// 折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
 	DiscountType *int32 `json:"discount_type,omitempty"`
-	// |参数名称：折扣名称| |参数约束及描述：折扣名称|
+	// 折扣名称。
 	DiscountName *string `json:"discount_name,omitempty"`
-	// |参数名称：是否为最优折扣| |参数约束及描述：0：不是最优折扣；为缺省值。1：是最优折扣；最优折扣：在商务折扣、伙伴折扣中选择（优惠金额最大的折扣为最优，优惠金额相等则按此顺序排优先级），促销折扣，折扣券不参与最优折扣的计算|
+	// 是否为最优折扣。 0：不是最优折扣，为缺省值。1：是最优折扣最优折扣：在商务折扣、伙伴折扣中选择（优惠金额最大的折扣为最优，优惠金额相等则按此顺序排优先级），促销折扣，折扣券不参与最优折扣的计算。
 	BestOffer *int32 `json:"best_offer,omitempty"`
-	// |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+	// 产品询价结果，具体参见表5。
 	ProductRatingResults *[]PeriodProductRatingResult `json:"product_rating_results,omitempty"`
 }
 

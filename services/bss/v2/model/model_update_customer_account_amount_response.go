@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateCustomerAccountAmountResponse struct {
-	// |参数名称：总额，即最终优惠后的金额，| |参数约束及描述：总额，即最终优惠后的金额，|
+	// 事务流水ID，只有成功响应才会返回。
 	TransferId     *string `json:"transfer_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -7,10 +7,10 @@ import (
 )
 
 type AdjustToIndirectPartnerReq struct {
-	// |参数名称：合作伙伴关联的二级经销商伙伴ID。| |参数约束及描述：必填，最大长度64，合作伙伴关联的二级经销商伙伴ID。|
+	// 精英服务商ID。您可以调用查询精英服务商列表接口获取。
 	IndirectPartnerId string `json:"indirect_partner_id"`
-	// |参数名称：授信金额。单位为元不能为负数，精确到小数点后两位。| |参数的约束及描述：授信金额。单位为元不能为负数，精确到小数点后两位。|
-	Amount float32 `json:"amount"`
+	// 华为云伙伴能力中心向精英服务商拨款的金额。 单位：元。取值大于0且精确到小数点后2位。
+	Amount float64 `json:"amount"`
 }
 
 func (o AdjustToIndirectPartnerReq) String() string {

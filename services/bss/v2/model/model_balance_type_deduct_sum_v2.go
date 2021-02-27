@@ -7,11 +7,11 @@ import (
 )
 
 type BalanceTypeDeductSumV2 struct {
-	// |参数名称：账户类型。BALANCE_TYPE_DEBIT：余额BALANCE_TYPE_CREDIT：信用BALANCE_TYPE_BONUS：奖励BALANCE_TYPE_COUPON：代金券BALANCE_TYPE_RCASH_COUPON 现金券。BALANCE_TYPE_STORED_VALUE_CARD：储值卡消费| |参数约束及描述：账户类型。BALANCE_TYPE_DEBIT：余额BALANCE_TYPE_CREDIT：信用BALANCE_TYPE_BONUS：奖励BALANCE_TYPE_COUPON：代金券BALANCE_TYPE_RCASH_COUPON 现金券。BALANCE_TYPE_STORED_VALUE_CARD：储值卡消费|
+	// 账户类型。 BALANCE_TYPE_DEBIT：现金BALANCE_TYPE_CREDIT：信用BALANCE_TYPE_BONUS：奖励BALANCE_TYPE_COUPON：代金券BALANCE_TYPE_RCASH_COUPON 现金券。BALANCE_TYPE_STORED_VALUE_CARD：储值卡消费
 	BalanceType *string `json:"balance_type,omitempty"`
-	// |参数名称：金额。对于billType=1或者2的账单，该金额为负值。| |参数的约束及描述：金额。对于billType=1或者2的账单，该金额为负值。|
-	Amount float32 `json:"amount,omitempty"`
-	// |参数名称：费用类型。0：正常；1：退订；2：华为核销。| |参数约束及描述：费用类型。0：正常；1：退订；2：华为核销。|
+	// 金额。 对于billType=1或者2的账单，该金额为负值。
+	Amount *float64 `json:"amount,omitempty"`
+	// 账单类型。 0：正常1：退订2：华为核销
 	BillType *string `json:"bill_type,omitempty"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListResourceUsagesResponse struct {
-	// |参数名称：套餐包使用量信息| |参数的约束及描述：套餐包使用量信息|
+	// 套餐包使用量信息，具体请参见表2。
 	PackageUsageInfos *[]PackageUsageInfo `json:"package_usage_infos,omitempty"`
 	HttpStatusCode    int                 `json:"-"`
 }

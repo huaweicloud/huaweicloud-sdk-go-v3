@@ -7,9 +7,9 @@ import (
 )
 
 type CouponSimpleInfo struct {
-	// |参数名称：批量发放成功客户ID。| |参数约束及描述：批量发放成功客户ID。|
+	// 批量发放优惠券成功的客户ID。
 	Id string `json:"id"`
-	// |参数名称：发放成功的券ID| |参数约束及描述：发放成功的券ID|
+	// 发放成功的券ID。
 	CouponId string `json:"coupon_id"`
 }
 

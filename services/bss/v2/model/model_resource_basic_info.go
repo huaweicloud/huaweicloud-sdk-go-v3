@@ -7,13 +7,13 @@ import (
 )
 
 type ResourceBasicInfo struct {
-	// |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+	// 资源类型编码。例如：hws.resource.type.general。
 	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
-	// |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
+	// 资源类型归属的服务类型编码。例如：hws.service.type.offline。
 	ProductOwnerService *string `json:"product_owner_service,omitempty"`
-	// |参数名称：资源名称，按照请求的X-Language返回对应语言的名称| |参数约束及描述：资源名称，按照请求的X-Language返回对应语言的名称|
+	// 资源类型名称。例如：通用规格。
 	Name *string `json:"name,omitempty"`
-	// |参数名称：资源描述，按照请求的X-Language返回对应语言的描述| |参数约束及描述：资源描述，按照请求的X-Language返回对应语言的描述|
+	// 资源类型描述。
 	Description *string `json:"description,omitempty"`
 }
 

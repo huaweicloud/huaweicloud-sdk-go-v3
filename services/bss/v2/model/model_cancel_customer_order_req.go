@@ -7,7 +7,7 @@ import (
 )
 
 type CancelCustomerOrderReq struct {
-	// |参数名称：订单ID。| |参数约束及描述：订单ID。|
+	// 订单ID。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值。
 	OrderId string `json:"order_id"`
 }
 

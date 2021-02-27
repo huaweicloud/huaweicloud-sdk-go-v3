@@ -85,6 +85,17 @@ func (c *BmsClient) CreateBareMetalServers(request *model.CreateBareMetalServers
 	}
 }
 
+//清除Windows裸金属服务器初始安装时系统生成的密码记录。清除密码后，不影响裸金属服务器密码登录功能，但不能再使用获取密码功能来查询该裸金属服务器密码。如果裸金属服务器是通过私有镜像创建的，请确保已安装Cloudbase-init。公共镜像默认已安装该软件
+func (c *BmsClient) DeleteWindowsBareMetalServerPassword(request *model.DeleteWindowsBareMetalServerPasswordRequest) (*model.DeleteWindowsBareMetalServerPasswordResponse, error) {
+	requestDef := GenReqDefForDeleteWindowsBareMetalServerPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteWindowsBareMetalServerPasswordResponse), nil
+	}
+}
+
 //将挂载至裸金属服务器中的磁盘卸载；对于挂载在系统盘盘位（也就是“/dev/sda”挂载点）上的磁盘，不允许执行卸载操作；对于挂载在数据盘盘位（非“/dev/sda”挂载点）上的磁盘，支持离线卸载和在线卸载（裸金属服务器处于“运行中”状态）磁盘
 func (c *BmsClient) DetachBaremetalServerVolume(request *model.DetachBaremetalServerVolumeRequest) (*model.DetachBaremetalServerVolumeResponse, error) {
 	requestDef := GenReqDefForDetachBaremetalServerVolume()
@@ -214,17 +225,6 @@ func (c *BmsClient) UpdateBaremetalServerMetadata(request *model.UpdateBaremetal
 		return nil, err
 	} else {
 		return resp.(*model.UpdateBaremetalServerMetadataResponse), nil
-	}
-}
-
-//清除Windows裸金属服务器初始安装时系统生成的密码记录。清除密码后，不影响裸金属服务器密码登录功能，但不能再使用获取密码功能来查询该裸金属服务器密码。如果裸金属服务器是通过私有镜像创建的，请确保已安装Cloudbase-init。公共镜像默认已安装该软件
-func (c *BmsClient) WindowsBaremetalServerCleanPwd(request *model.WindowsBaremetalServerCleanPwdRequest) (*model.WindowsBaremetalServerCleanPwdResponse, error) {
-	requestDef := GenReqDefForWindowsBaremetalServerCleanPwd()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.WindowsBaremetalServerCleanPwdResponse), nil
 	}
 }
 

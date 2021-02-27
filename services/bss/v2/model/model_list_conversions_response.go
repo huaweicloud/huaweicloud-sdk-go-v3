@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListConversionsResponse struct {
-	// |参数名称：度量信息| |参数约束以及描述：度量信息|
+	// 度量单位的换算信息，具体参见表2。
 	Conversions    *[]Conversion `json:"conversions,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

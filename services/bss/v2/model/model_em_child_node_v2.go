@@ -7,13 +7,13 @@ import (
 )
 
 type EmChildNodeV2 struct {
-	// |参数名称：实体关系ID| |参数约束及描述：实体关系ID|
+	// 实体关系ID。
 	RelationId *string `json:"relation_id,omitempty"`
-	// |参数名称：节点ID| |参数约束及描述：节点ID|
+	// 节点ID。
 	Id *string `json:"id,omitempty"`
-	// |参数名称：节点名称| |参数约束及描述：节点名称|
+	// 节点名称。
 	Name *string `json:"name,omitempty"`
-	// |参数名称：子节点列表| |参数约束以及描述：子节点列表|
+	// 子节点列表。
 	ChildNodes *[]EmChildNodeV2 `json:"child_nodes,omitempty"`
 }
 

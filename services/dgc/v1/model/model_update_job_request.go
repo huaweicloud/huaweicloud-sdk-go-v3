@@ -7,16 +7,16 @@ import (
 )
 
 // Request Object
-type ModifyJobRequest struct {
+type UpdateJobRequest struct {
 	JobName string   `json:"job_name"`
 	Body    *JobInfo `json:"body,omitempty"`
 }
 
-func (o ModifyJobRequest) String() string {
+func (o UpdateJobRequest) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "ModifyJobRequest struct{}"
+		return "UpdateJobRequest struct{}"
 	}
 
-	return strings.Join([]string{"ModifyJobRequest", string(data)}, " ")
+	return strings.Join([]string{"UpdateJobRequest", string(data)}, " ")
 }

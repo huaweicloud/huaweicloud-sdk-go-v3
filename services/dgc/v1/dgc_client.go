@@ -262,39 +262,6 @@ func (c *DgcClient) ListSystemTasks(request *model.ListSystemTasksRequest) (*mod
 }
 
 //
-func (c *DgcClient) ModifyJob(request *model.ModifyJobRequest) (*model.ModifyJobResponse, error) {
-	requestDef := GenReqDefForModifyJob()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ModifyJobResponse), nil
-	}
-}
-
-//
-func (c *DgcClient) ModifyResource(request *model.ModifyResourceRequest) (*model.ModifyResourceResponse, error) {
-	requestDef := GenReqDefForModifyResource()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ModifyResourceResponse), nil
-	}
-}
-
-//
-func (c *DgcClient) ModifyScript(request *model.ModifyScriptRequest) (*model.ModifyScriptResponse, error) {
-	requestDef := GenReqDefForModifyScript()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ModifyScriptResponse), nil
-	}
-}
-
-//
 func (c *DgcClient) RestoreJobInstance(request *model.RestoreJobInstanceRequest) (*model.RestoreJobInstanceResponse, error) {
 	requestDef := GenReqDefForRestoreJobInstance()
 
@@ -434,5 +401,38 @@ func (c *DgcClient) UpdateConnection(request *model.UpdateConnectionRequest) (*m
 		return nil, err
 	} else {
 		return resp.(*model.UpdateConnectionResponse), nil
+	}
+}
+
+//
+func (c *DgcClient) UpdateJob(request *model.UpdateJobRequest) (*model.UpdateJobResponse, error) {
+	requestDef := GenReqDefForUpdateJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateJobResponse), nil
+	}
+}
+
+//
+func (c *DgcClient) UpdateResource(request *model.UpdateResourceRequest) (*model.UpdateResourceResponse, error) {
+	requestDef := GenReqDefForUpdateResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateResourceResponse), nil
+	}
+}
+
+//
+func (c *DgcClient) UpdateScript(request *model.UpdateScriptRequest) (*model.UpdateScriptResponse, error) {
+	requestDef := GenReqDefForUpdateScript()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateScriptResponse), nil
 	}
 }

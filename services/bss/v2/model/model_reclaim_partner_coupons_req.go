@@ -7,9 +7,9 @@ import (
 )
 
 type ReclaimPartnerCouponsReq struct {
-	// |参数名称：优惠券额度ID优惠券的类型跟随额度中的类型。| |参数约束及描述：优惠券额度ID优惠券的类型跟随额度中的类型。|
+	// 待回收的代金券ID。 请从“发放优惠券”或“查询已发放的优惠券”接口的响应参数中获取。
 	CouponId string `json:"coupon_id"`
-	// |参数名称：客户ID列表| |参数约束及描述：客户ID列表|
+	// 精英服务商ID。 精英服务商回收给子客户发放的优惠券时，需要携带该字段。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

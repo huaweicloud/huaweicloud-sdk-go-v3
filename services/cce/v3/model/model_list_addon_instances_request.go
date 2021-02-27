@@ -8,8 +8,7 @@ import (
 
 // Request Object
 type ListAddonInstancesRequest struct {
-	ContentType string `json:"Content-Type"`
-	ClusterId   string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 }
 
 func (o ListAddonInstancesRequest) String() string {

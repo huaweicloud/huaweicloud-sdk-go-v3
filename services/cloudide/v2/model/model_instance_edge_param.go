@@ -16,7 +16,7 @@ type InstanceEdgeParam struct {
 	Description *string `json:"description,omitempty"`
 	// 实例名。 可以输入中文、数字、字母、下划线、点、破折号。长度介于3-100之间
 	InstanceName string `json:"instance_name"`
-	// 组织id（对应华为云账号的domainId）
+	// 组织id（对应华为云帐号的domainId）
 	InstanceUserDomainId *string `json:"instance_user_domain_id,omitempty"`
 	// 用户组织名
 	InstanceUserDomainName string `json:"instance_user_domain_name"`

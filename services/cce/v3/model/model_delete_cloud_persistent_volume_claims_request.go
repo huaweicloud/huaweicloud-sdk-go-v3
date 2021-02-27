@@ -8,10 +8,9 @@ import (
 
 // Request Object
 type DeleteCloudPersistentVolumeClaimsRequest struct {
-	Name        string  `json:"name"`
-	Namespace   string  `json:"namespace"`
-	ContentType string  `json:"Content-Type"`
-	XClusterID  *string `json:"X-Cluster-ID,omitempty"`
+	Name       string  `json:"name"`
+	Namespace  string  `json:"namespace"`
+	XClusterID *string `json:"X-Cluster-ID,omitempty"`
 }
 
 func (o DeleteCloudPersistentVolumeClaimsRequest) String() string {

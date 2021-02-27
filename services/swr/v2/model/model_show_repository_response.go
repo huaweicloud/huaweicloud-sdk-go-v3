@@ -29,7 +29,7 @@ type ShowRepositoryResponse struct {
 	// 仓库中镜像个数，0 ~ 9223372036854775807
 	NumImages *int64 `json:"num_images,omitempty"`
 	// 仓库下载次数
-	NumDownload *int32 `json:"num_download,omitempty"`
+	NumDownload *int64 `json:"num_download,omitempty"`
 	// 仓库logo图片的URL，URL格式。（暂时未用）
 	Url *string `json:"url,omitempty"`
 	// 镜像pull路径，格式为 swr.cn-north-1.myhuaweicloud.com/namespace/repository

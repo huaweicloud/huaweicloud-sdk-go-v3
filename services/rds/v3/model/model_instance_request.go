@@ -49,7 +49,7 @@ type InstanceRequest struct {
 	// 仅限Microsoft SQL Server实例使用。取值范围：根据查询SQL Server可用字符集的字符集查询列表查询可设置的字符集。
 	Collation *string `json:"collation,omitempty"`
 	// 标签列表。单个实例总标签数上限10个。
-	Tags *[]InstanceRequestTags `json:"tags,omitempty"`
+	Tags *[]TagWithKeyValue `json:"tags,omitempty"`
 }
 
 func (o InstanceRequest) String() string {

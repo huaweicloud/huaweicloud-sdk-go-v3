@@ -7,11 +7,11 @@ import (
 )
 
 type AdjustAccountReq struct {
-	// |参数名称：合作伙伴关联的客户的客户ID。| |参数约束及描述：合作伙伴关联的客户的客户ID。|
+	// 客户账号ID。您可以调用查询客户列表接口获取customer_id。
 	CustomerId string `json:"customer_id"`
-	// |参数名称：授信金额。单位为元不能为负数，精确到小数点后两位。| |参数的约束及描述：授信金额。单位为元不能为负数，精确到小数点后两位。|
-	Amount float32 `json:"amount"`
-	// |参数名称：二级经销商ID。| |参数约束及描述：二级经销商ID，如果一级经销商要给二级经销商的子客户设置折扣，需要携带这个字段。|
+	// 拨款金额。 单位：元。取值大于0且精确到小数点后2位。 注意该值不能大于“查询伙伴账户余额”接口响应消息表2中参数amount - designated_amount的值。
+	Amount float64 `json:"amount"`
+	// 精英服务商ID。 精英服务商（二级经销商）给子客户拨款时，需携带该参数。 说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足，如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

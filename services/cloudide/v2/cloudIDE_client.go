@@ -41,7 +41,7 @@ func (c *CloudIDEClient) ListStacksByTag(request *model.ListStacksByTagRequest) 
 	}
 }
 
-//查询当前账号访问权限
+//查询当前帐号访问权限
 func (c *CloudIDEClient) ShowAccountStatus(request *model.ShowAccountStatusRequest) (*model.ShowAccountStatusResponse, error) {
 	requestDef := GenReqDefForShowAccountStatus()
 

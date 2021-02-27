@@ -7,12 +7,12 @@ import (
 )
 
 type AdjustCouponQuotasReq struct {
-	// |参数名称：优惠券额度ID。| |参数约束及描述：优惠券额度ID。|
+	// 华为云伙伴能力中心发放的代金券额度的ID。
 	QuotaId string `json:"quota_id"`
-	// |参数名称：二级分销商伙伴id列表。最大100条| |参数约束以及描述：二级分销商伙伴id列表。最大100条|
+	// 精英服务商ID列表。
 	IndirectPartnerIds []string `json:"indirect_partner_ids"`
-	// |参数名称：额度值。保留小数点后2位| |参数的约束及描述：额度值。保留小数点后2位|
-	QuotaAmount float32 `json:"quota_amount"`
+	// 华为云伙伴能力中心向精英服务商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
+	QuotaAmount float64 `json:"quota_amount"`
 }
 
 func (o AdjustCouponQuotasReq) String() string {

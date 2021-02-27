@@ -7,11 +7,11 @@ import (
 )
 
 type ReclaimToPartnerAccountBalancesReq struct {
-	// |参数名称：合作伙伴关联的客户的客户ID。| |参数约束及描述：合作伙伴关联的客户的客户ID。|
+	// 客户账号ID。您可以调用查询客户列表接口获取customer_id。
 	CustomerId string `json:"customer_id"`
-	// |参数名称：回收金额。| |参数的约束及描述：单位为元不能为负数，精确到小数点后两位。|
-	Amount float32 `json:"amount"`
-	// |参数名称：二级经销商ID。| |参数约束及描述：一级经销商回收二级经销商子客户余额时，需携带该字段。|
+	// 回收的金额。 单位：元。取值大于0且精确到小数点后2位。
+	Amount float64 `json:"amount"`
+	// 精英服务商ID。 华为云伙伴能力中心（一级经销商）回收精英服务商（二级经销商）的子客户账户余额时，需携带此参数；否则只能回收自己的子客户账户余额。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

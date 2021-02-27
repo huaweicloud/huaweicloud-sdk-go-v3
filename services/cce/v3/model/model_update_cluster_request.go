@@ -9,7 +9,6 @@ import (
 // Request Object
 type UpdateClusterRequest struct {
 	ClusterId   string              `json:"cluster_id"`
-	ContentType string              `json:"Content-Type"`
 	ErrorStatus *string             `json:"errorStatus,omitempty"`
 	Body        *ClusterInformation `json:"body,omitempty"`
 }
