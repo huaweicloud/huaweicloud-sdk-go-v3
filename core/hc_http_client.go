@@ -21,6 +21,7 @@ package core
 
 import (
 	"bytes"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
@@ -207,33 +208,25 @@ func (hc *HcHttpClient) deserializeResponse(resp *response.DefaultHttpResponse, 
 	hasBody := false
 	for _, item := range reqDef.ResponseFields {
 		if item.LocationType == def.Header {
-			err := hc.deserializeResponseHeaders(resp, reqDef, item)
-			if err != nil {
+			headerErr := hc.deserializeResponseHeaders(resp, reqDef, item)
+			if headerErr != nil {
 				return sdkerr.ServiceResponseError{
 					StatusCode:   resp.GetStatusCode(),
 					RequestId:    resp.GetHeader("X-Request-Id"),
-					ErrorMessage: err.Error(),
+					ErrorMessage: headerErr.Error(),
 				}
 			}
 		}
 
 		if item.LocationType == def.Body {
 			hasBody = true
-			dataStr := string(data)
 
-			var bodyStr string
-			if strings.HasPrefix(dataStr, "{") || strings.HasPrefix(dataStr, "[") || strings.HasPrefix(dataStr, "\"") {
-				bodyStr = "{ \"body\" : " + dataStr + "}"
-			} else {
-				bodyStr = "{ \"body\" : \"" + dataStr + "\"}"
-			}
-
-			err = jsoniter.Unmarshal([]byte(bodyStr), &reqDef.Response)
-			if err != nil {
+			bodyErr := hc.deserializeResponseBody(reqDef, data)
+			if bodyErr != nil {
 				return sdkerr.ServiceResponseError{
 					StatusCode:   resp.GetStatusCode(),
 					RequestId:    resp.GetHeader("X-Request-Id"),
-					ErrorMessage: err.Error(),
+					ErrorMessage: bodyErr.Error(),
 				}
 			}
 		}
@@ -258,6 +251,43 @@ func (hc *HcHttpClient) deserializeResponse(resp *response.DefaultHttpResponse, 
 
 	field := v.FieldByName("HttpStatusCode")
 	field.Set(reflect.ValueOf(resp.GetStatusCode()))
+
+	return nil
+}
+
+func (hc *HcHttpClient) deserializeResponseBody(reqDef *def.HttpRequestDef, data []byte) error {
+	dataStr := string(data)
+
+	v := reflect.ValueOf(reqDef.Response)
+	if v.Kind() == reflect.Ptr {
+		v = v.Elem()
+	}
+
+	t := reflect.TypeOf(reqDef.Response)
+	if t.Kind() == reflect.Ptr {
+		t = t.Elem()
+	}
+
+	if body, ok := t.FieldByName("Body"); ok {
+		if body.Type.Kind() == reflect.Ptr && body.Type.Elem().Kind() == reflect.String {
+			v.FieldByName("Body").Set(reflect.ValueOf(&dataStr))
+		} else if body.Type.Kind() == reflect.String {
+			v.FieldByName("Body").Set(reflect.ValueOf(dataStr))
+		} else {
+			var bodyIns interface{}
+			if body.Type.Kind() == reflect.Ptr {
+				bodyIns = reflect.New(body.Type.Elem()).Interface()
+			} else {
+				bodyIns = reflect.New(body.Type).Interface()
+			}
+
+			err := json.Unmarshal(data, bodyIns)
+			if err != nil {
+				return err
+			}
+			v.FieldByName("Body").Set(reflect.ValueOf(bodyIns))
+		}
+	}
 
 	return nil
 }
