@@ -24,7 +24,7 @@ type TextWatermark struct {
 	FontSize *int32 `json:"font_size,omitempty"`
 	// 字体颜色。 目前颜色支持 black，blue，white，green，red，yellow，brown，gold，pink，orange，purple。
 	FontColor *string `json:"font_color,omitempty"`
-	// 水印叠加母体 取值如下： - input：水印叠加在输入片源上，转码输出后实际大小按图像等比例缩放 - output：水印叠加在转码输出文件上。
+	// 水印叠加母体 取值如下： - input：水印叠加在输入片源上，转码输出后实际大小按图像等比例缩放 - output：水印叠加在转码输出文件上。 默认值：input
 	Base *TextWatermarkBase `json:"base,omitempty"`
 }
 

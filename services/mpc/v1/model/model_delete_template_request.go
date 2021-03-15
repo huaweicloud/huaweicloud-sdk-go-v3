@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DeleteTemplateRequest struct {
-	TemplateId int32 `json:"template_id"`
+	TemplateId int64 `json:"template_id"`
 }
 
 func (o DeleteTemplateRequest) String() string {

@@ -87,10 +87,16 @@ func (hc *HcHttpClient) buildRequest(req interface{}, reqDef *def.HttpRequestDef
 		return nil, err
 	}
 
-	httpRequest, err := hc.credential.ProcessAuthRequest(hc.httpClient, builder.Build())
-	if err != nil {
-		return nil, err
+	var httpRequest *request.DefaultHttpRequest = builder.Build()
+
+	currentHeaderParams := httpRequest.GetHeaderParams()
+	if _, ok := currentHeaderParams["Authorization"]; !ok {
+		httpRequest, err = hc.credential.ProcessAuthRequest(hc.httpClient, httpRequest)
+		if err != nil {
+			return nil, err
+		}
 	}
+
 	return httpRequest, err
 }
 

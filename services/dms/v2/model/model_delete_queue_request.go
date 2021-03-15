@@ -8,8 +8,7 @@ import (
 
 // Request Object
 type DeleteQueueRequest struct {
-	ProjectId string `json:"project_id"`
-	QueueId   string `json:"queue_id"`
+	QueueId string `json:"queue_id"`
 }
 
 func (o DeleteQueueRequest) String() string {

@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type DeleteSinkTaskRequest struct {
-	ProjectId   string `json:"project_id"`
 	ConnectorId string `json:"connector_id"`
 	TaskId      string `json:"task_id"`
 }

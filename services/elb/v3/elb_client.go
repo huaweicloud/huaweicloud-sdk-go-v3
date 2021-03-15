@@ -195,6 +195,17 @@ func (c *ElbClient) DeletePool(request *model.DeletePoolRequest) (*model.DeleteP
 	}
 }
 
+//查询当前租户下的后端服务器列表。
+func (c *ElbClient) ListAllMembers(request *model.ListAllMembersRequest) (*model.ListAllMembersResponse, error) {
+	requestDef := GenReqDefForListAllMembers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAllMembersResponse), nil
+	}
+}
+
 //返回租户创建LB时可使用的可用区列表情况。  返回的数据类型是可用区集合的列表，比如列表 [ [az1,az2],  [az2, az3] ] ，有两个可用区集合。在创建负载均衡器时，可以选择创建在多个可用区，但所选的多个可用区必须同属于其中一个可用区集合，如可以选择 az2和az3，但不能选择 az1和az3。
 func (c *ElbClient) ListAvailabilityZones(request *model.ListAvailabilityZonesRequest) (*model.ListAvailabilityZonesResponse, error) {
 	requestDef := GenReqDefForListAvailabilityZones()

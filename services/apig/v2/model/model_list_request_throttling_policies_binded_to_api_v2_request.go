@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ListRequestThrottlingPoliciesBindedToApiV2Request struct {
-	ProjectId    string  `json:"project_id"`
 	InstanceId   string  `json:"instance_id"`
 	ApiId        string  `json:"api_id"`
 	ThrottleId   *string `json:"throttle_id,omitempty"`

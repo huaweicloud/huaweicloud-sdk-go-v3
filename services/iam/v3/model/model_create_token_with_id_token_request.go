@@ -1,0 +1,22 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// Request Object
+type CreateTokenWithIdTokenRequest struct {
+	XIdpId string                 `json:"X-Idp-Id"`
+	Body   *GetIdTokenRequestBody `json:"body,omitempty"`
+}
+
+func (o CreateTokenWithIdTokenRequest) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CreateTokenWithIdTokenRequest struct{}"
+	}
+
+	return strings.Join([]string{"CreateTokenWithIdTokenRequest", string(data)}, " ")
+}

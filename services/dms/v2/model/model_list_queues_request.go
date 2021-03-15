@@ -8,8 +8,7 @@ import (
 
 // Request Object
 type ListQueuesRequest struct {
-	ProjectId         string `json:"project_id"`
-	IncludeDeadletter *bool  `json:"include_deadletter,omitempty"`
+	IncludeDeadletter *bool `json:"include_deadletter,omitempty"`
 }
 
 func (o ListQueuesRequest) String() string {

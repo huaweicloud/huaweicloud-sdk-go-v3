@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ShowQuotasRequest struct {
-	ProjectId string `json:"project_id"`
 }
 
 func (o ShowQuotasRequest) String() string {

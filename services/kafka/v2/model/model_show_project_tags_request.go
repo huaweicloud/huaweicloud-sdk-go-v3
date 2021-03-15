@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ShowProjectTagsRequest struct {
-	ProjectId string `json:"project_id"`
 }
 
 func (o ShowProjectTagsRequest) String() string {

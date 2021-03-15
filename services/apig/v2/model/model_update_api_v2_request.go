@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type UpdateApiV2Request struct {
-	ProjectId  string     `json:"project_id"`
 	InstanceId string     `json:"instance_id"`
 	ApiId      string     `json:"api_id"`
 	Body       *ApiCreate `json:"body,omitempty"`

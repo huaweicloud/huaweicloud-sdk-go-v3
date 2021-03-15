@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListAuditlogsResponse struct {
-	Auditlogs *[]Auditlog `json:"auditlogs,omitempty"`
+	Auditlogs *Auditlog `json:"auditlogs,omitempty"`
 	// 总记录数。
 	TotalRecord    *int32 `json:"total_record,omitempty"`
 	HttpStatusCode int    `json:"-"`

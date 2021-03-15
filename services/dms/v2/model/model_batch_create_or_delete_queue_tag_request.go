@@ -8,9 +8,8 @@ import (
 
 // Request Object
 type BatchCreateOrDeleteQueueTagRequest struct {
-	ProjectId string                     `json:"project_id"`
-	QueueId   string                     `json:"queue_id"`
-	Body      *BatchCreateOrDeleteTagReq `json:"body,omitempty"`
+	QueueId string                     `json:"queue_id"`
+	Body    *BatchCreateOrDeleteTagReq `json:"body,omitempty"`
 }
 
 func (o BatchCreateOrDeleteQueueTagRequest) String() string {

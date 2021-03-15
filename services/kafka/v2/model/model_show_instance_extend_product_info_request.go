@@ -9,7 +9,6 @@ import (
 
 // Request Object
 type ShowInstanceExtendProductInfoRequest struct {
-	ProjectId  string                                     `json:"project_id"`
 	InstanceId string                                     `json:"instance_id"`
 	Type       ShowInstanceExtendProductInfoRequestType   `json:"type"`
 	Engine     ShowInstanceExtendProductInfoRequestEngine `json:"engine"`

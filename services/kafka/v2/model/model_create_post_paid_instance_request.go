@@ -8,8 +8,7 @@ import (
 
 // Request Object
 type CreatePostPaidInstanceRequest struct {
-	ProjectId string                     `json:"project_id"`
-	Body      *CreatePostPaidInstanceReq `json:"body,omitempty"`
+	Body *CreatePostPaidInstanceReq `json:"body,omitempty"`
 }
 
 func (o CreatePostPaidInstanceRequest) String() string {

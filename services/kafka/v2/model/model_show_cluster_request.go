@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ShowClusterRequest struct {
-	ProjectId  string `json:"project_id"`
 	InstanceId string `json:"instance_id"`
 }
 

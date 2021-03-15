@@ -11,9 +11,9 @@ type CreateInstanceRequestBody struct {
 	// 实例名称。用于表示实例的名称，用于表示实例的名称，同一租户下，同类型的实例名唯一。 取值范围：长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。
 	Name      string     `json:"name"`
 	Datastore *Datastore `json:"datastore"`
-	// 区域ID，恢复到新实例时不可选。
+	// - 区域ID - 取值：非空。
 	Region string `json:"region"`
-	// 可用区ID。
+	// 可用区ID。非专属云用户可以选择多个AZ，创建跨AZ的集群。专属云用户暂不支持创建跨AZ的集群。取值：非空。
 	AvailabilityZone string `json:"availability_zone"`
 	// 虚拟私有云ID。获取方法请参见《虚拟私有云API参考》中“VPC”的内容。 取值：非空，字符长度校验，严格UUID正则校验。
 	VpcId string `json:"vpc_id"`
@@ -34,11 +34,10 @@ type CreateInstanceRequestBody struct {
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// SSL开关选项。 取值： - 取“0”，表示DDS实例默认不启用SSL连接。 - 取“1”，表示DDS实例默认启用SSL连接。 - 不传该参数时，默认启用SSL连接。
 	SslOption *string `json:"ssl_option,omitempty"`
-	// 创建新实例所在专属存储池ID，仅专属云创建实例时有效。
+	// Dec用户专属存储ID，默认为空。仅Dec用户支持该参数。
 	DssPoolId *string `json:"dss_pool_id,omitempty"`
 	// 创建新实例设置云服务器组关联的策略名称列表，仅专属云创建实例时有效。 取值    - 取“anti-affinity”，表示DDS实例开启反亲和部署，反亲和部署是出于高可用性考虑，将您的Primary、Secondary和Hidden节点分别创建在不同的物理机上。当前仅支持该值，不传该值默认不开启反亲和部署。
-	ServerGroupPolicies *[]string     `json:"server_group_policies,omitempty"`
-	RestorePoint        *RestorePoint `json:"restore_point,omitempty"`
+	ServerGroupPolicies *[]string `json:"server_group_policies,omitempty"`
 }
 
 func (o CreateInstanceRequestBody) String() string {

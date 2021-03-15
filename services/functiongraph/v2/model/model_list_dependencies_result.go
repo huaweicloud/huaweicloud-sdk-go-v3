@@ -19,7 +19,7 @@ type ListDependenciesResult struct {
 	// 依赖包唯一标志。
 	Etag string `json:"etag"`
 	// 依赖包大小。
-	Size string `json:"size"`
+	Size int64 `json:"size"`
 	// 依赖包名。
 	Name string `json:"name"`
 	// 依赖包描述。

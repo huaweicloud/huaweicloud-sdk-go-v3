@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type AssociateRequestThrottlingPolicyV2Request struct {
-	ProjectId  string              `json:"project_id"`
 	InstanceId string              `json:"instance_id"`
 	Body       *ThrottleBindingReq `json:"body,omitempty"`
 }

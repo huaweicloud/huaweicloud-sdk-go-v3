@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ShowInstanceTopicDetailRequest struct {
-	ProjectId  string `json:"project_id"`
 	InstanceId string `json:"instance_id"`
 	Topic      string `json:"topic"`
 }

@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ResizeInstanceRequest struct {
-	ProjectId  string             `json:"project_id"`
 	InstanceId string             `json:"instance_id"`
 	Body       *ResizeInstanceReq `json:"body,omitempty"`
 }

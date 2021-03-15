@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ListApisNotBoundWithSignatureKeyV2Request struct {
-	ProjectId  string  `json:"project_id"`
 	InstanceId string  `json:"instance_id"`
 	SignId     string  `json:"sign_id"`
 	EnvId      *string `json:"env_id,omitempty"`

@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ListBackgroundTasksRequest struct {
-	ProjectId  string  `json:"project_id"`
 	InstanceId string  `json:"instance_id"`
 	Start      *int32  `json:"start,omitempty"`
 	Limit      *int32  `json:"limit,omitempty"`

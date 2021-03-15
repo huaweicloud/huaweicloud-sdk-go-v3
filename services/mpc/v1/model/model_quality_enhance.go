@@ -14,6 +14,8 @@ type QualityEnhance struct {
 	Revive *QualityEnhanceRevive `json:"revive,omitempty"`
 	// 超动态范围，提升视频动态范围，明显提升片源动态范围。单纯该处理操作前后，分辨率、帧率等参数不发生变化，动态范围、色域范围、码率发生变化。 可和normal_ enhance组合使用。 取值范围： - SDRtoHDR10 ：转换模式1，为标准模式 - SDRtoHDRFLAT”：转换模式2，清新模式，基本不改变源片的饱和度，适用于饱和度高的SDR源片转换为HDR
 	SdrToHdr *QualityEnhanceSdrToHdr `json:"sdr_to_hdr,omitempty"`
+	// 视频增强模式。取值范围： - REGENERATION - CONVERSION_SDR - CONVERSION_HDR
+	VideoEnhance *QualityEnhanceVideoEnhance `json:"video_enhance,omitempty"`
 }
 
 func (o QualityEnhance) String() string {
@@ -118,6 +120,48 @@ func (c QualityEnhanceSdrToHdr) MarshalJSON() ([]byte, error) {
 }
 
 func (c *QualityEnhanceSdrToHdr) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type QualityEnhanceVideoEnhance struct {
+	value string
+}
+
+type QualityEnhanceVideoEnhanceEnum struct {
+	REGENERATION   QualityEnhanceVideoEnhance
+	CONVERSION_SDR QualityEnhanceVideoEnhance
+	CONVERSION_HDR QualityEnhanceVideoEnhance
+}
+
+func GetQualityEnhanceVideoEnhanceEnum() QualityEnhanceVideoEnhanceEnum {
+	return QualityEnhanceVideoEnhanceEnum{
+		REGENERATION: QualityEnhanceVideoEnhance{
+			value: "REGENERATION",
+		},
+		CONVERSION_SDR: QualityEnhanceVideoEnhance{
+			value: "CONVERSION_SDR",
+		},
+		CONVERSION_HDR: QualityEnhanceVideoEnhance{
+			value: "CONVERSION_HDR",
+		},
+	}
+}
+
+func (c QualityEnhanceVideoEnhance) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *QualityEnhanceVideoEnhance) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

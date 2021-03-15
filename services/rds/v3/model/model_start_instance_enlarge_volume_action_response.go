@@ -1,0 +1,23 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// Response Object
+type StartInstanceEnlargeVolumeActionResponse struct {
+	// 任务ID。
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
+}
+
+func (o StartInstanceEnlargeVolumeActionResponse) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "StartInstanceEnlargeVolumeActionResponse struct{}"
+	}
+
+	return strings.Join([]string{"StartInstanceEnlargeVolumeActionResponse", string(data)}, " ")
+}

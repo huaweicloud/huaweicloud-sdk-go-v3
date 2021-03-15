@@ -241,17 +241,41 @@ func GenReqDefForCreateMetadata() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateUnscopeTokenByIdpInitiated() *def.HttpRequestDef {
+func GenReqDefForCreateOpenIdConnectConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v3.0/OS-FEDERATION/tokens").
-		WithResponse(new(model.CreateUnscopeTokenByIdpInitiatedResponse)).
-		WithContentType("application/x-www-form-urlencoded")
+		WithPath("/v3.0/OS-FEDERATION/identity-providers/{idp_id}/openid-connect-config").
+		WithResponse(new(model.CreateOpenIdConnectConfigResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IdpId").
+		WithJsonTag("idp_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateTokenWithIdToken() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3.0/OS-AUTH/id-token/tokens").
+		WithResponse(new(model.CreateTokenWithIdTokenResponse)).
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XIdpId").
 		WithJsonTag("X-Idp-Id").
 		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XSubjectToken").
@@ -1667,6 +1691,22 @@ func GenReqDefForShowMetadata() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowOpenIdConnectConfig() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3.0/OS-FEDERATION/identity-providers/{idp_id}/openid-connect-config").
+		WithResponse(new(model.ShowOpenIdConnectConfigResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IdpId").
+		WithJsonTag("idp_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowProjectDetailsAndStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1873,6 +1913,26 @@ func GenReqDefForUpdateDomainProtectPolicy() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("DomainId").
 		WithJsonTag("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateOpenIdConnectConfig() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3.0/OS-FEDERATION/identity-providers/{idp_id}/openid-connect-config").
+		WithResponse(new(model.UpdateOpenIdConnectConfigResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IdpId").
+		WithJsonTag("idp_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

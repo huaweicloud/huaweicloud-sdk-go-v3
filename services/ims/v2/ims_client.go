@@ -19,6 +19,17 @@ func ImsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//该接口用于为指定镜像添加或更新指定的单个标签
+func (c *ImsClient) AddImageTag(request *model.AddImageTagRequest) (*model.AddImageTagResponse, error) {
+	requestDef := GenReqDefForAddImageTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddImageTagResponse), nil
+	}
+}
+
 //该接口为扩展接口，主要用于镜像共享时用户将多个镜像共享给多个用户。 该接口为异步接口，返回job_id说明任务下发成功，查询异步任务状态，如果是success说明任务执行成功，如果是failed说明任务执行失败。如何查询异步任务，请参见异步任务查询。
 func (c *ImsClient) BatchAddMembers(request *model.BatchAddMembersRequest) (*model.BatchAddMembersResponse, error) {
 	requestDef := GenReqDefForBatchAddMembers()
@@ -27,6 +38,17 @@ func (c *ImsClient) BatchAddMembers(request *model.BatchAddMembersRequest) (*mod
 		return nil, err
 	} else {
 		return resp.(*model.BatchAddMembersResponse), nil
+	}
+}
+
+//该接口用于为指定镜像批量添加/更新、删除标签。
+func (c *ImsClient) BatchAddOrDeleteTags(request *model.BatchAddOrDeleteTagsRequest) (*model.BatchAddOrDeleteTagsResponse, error) {
+	requestDef := GenReqDefForBatchAddOrDeleteTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchAddOrDeleteTagsResponse), nil
 	}
 }
 
@@ -118,6 +140,17 @@ func (c *ImsClient) CreateWholeImage(request *model.CreateWholeImageRequest) (*m
 	}
 }
 
+//该接口用于为镜像删除指定的标签
+func (c *ImsClient) DeleteImageTag(request *model.DeleteImageTagRequest) (*model.DeleteImageTagResponse, error) {
+	requestDef := GenReqDefForDeleteImageTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteImageTagResponse), nil
+	}
+}
+
 //该接口为扩展接口，用于用户将自己的私有镜像导出到指定的OBS桶中。
 func (c *ImsClient) ExportImage(request *model.ExportImageRequest) (*model.ExportImageResponse, error) {
 	requestDef := GenReqDefForExportImage()
@@ -140,6 +173,28 @@ func (c *ImsClient) ImportImageQuick(request *model.ImportImageQuickRequest) (*m
 	}
 }
 
+//该接口用于按标签或其他条件对镜像进行过滤或者计数使用。
+func (c *ImsClient) ListImageByTags(request *model.ListImageByTagsRequest) (*model.ListImageByTagsResponse, error) {
+	requestDef := GenReqDefForListImageByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListImageByTagsResponse), nil
+	}
+}
+
+//该接口用于为查询指定镜像上的所有标签
+func (c *ImsClient) ListImageTags(request *model.ListImageTagsRequest) (*model.ListImageTagsResponse, error) {
+	requestDef := GenReqDefForListImageTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListImageTagsResponse), nil
+	}
+}
+
 //根据不同条件查询镜像列表信息。 可以在URI后面用‘?’和‘&’添加不同的查询条件组合，请参考请求样例。
 func (c *ImsClient) ListImages(request *model.ListImagesRequest) (*model.ListImagesResponse, error) {
 	requestDef := GenReqDefForListImages()
@@ -148,6 +203,17 @@ func (c *ImsClient) ListImages(request *model.ListImagesRequest) (*model.ListIma
 		return nil, err
 	} else {
 		return resp.(*model.ListImagesResponse), nil
+	}
+}
+
+//该接口用于为查询租户的所有镜像上的标签。
+func (c *ImsClient) ListImagesTags(request *model.ListImagesTagsRequest) (*model.ListImagesTagsResponse, error) {
+	requestDef := GenReqDefForListImagesTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListImagesTagsResponse), nil
 	}
 }
 

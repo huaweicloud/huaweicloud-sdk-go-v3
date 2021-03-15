@@ -17,9 +17,9 @@ type CreateIssueV4Response struct {
 	BeginTime *string    `json:"begin_time,omitempty"`
 	Creator   *IssueUser `json:"creator,omitempty"`
 	// 自定义属性值
-	CustomFields *[]CustomField       `json:"custom_fields,omitempty"`
-	Developer    *IssueUser           `json:"developer,omitempty"`
-	Domain       *IssueItemSfv4Domain `json:"domain,omitempty"`
+	CustomFields *[]CustomField               `json:"custom_fields,omitempty"`
+	Developer    *IssueUser                   `json:"developer,omitempty"`
+	Domain       *CreateIssueResponseV4Domain `json:"domain,omitempty"`
 	// 工作项进度值
 	DoneRatio *int32 `json:"done_ratio,omitempty"`
 	// 结束时间，年-月-日
@@ -27,17 +27,15 @@ type CreateIssueV4Response struct {
 	// 预计工时
 	ExpectedWorkHours *float64 `json:"expected_work_hours,omitempty"`
 	// 工作项项id
-	Id *int32 `json:"id,omitempty"`
-	// 标题
-	Name           *string                           `json:"name,omitempty"`
+	Id             *int32                            `json:"id,omitempty"`
 	Project        *IssueProjectResponseV4           `json:"project,omitempty"`
-	Iteration      *IssueItemSfv4Iteration           `json:"iteration,omitempty"`
-	Module         *IssueItemSfv4Module              `json:"module,omitempty"`
+	Iteration      *IssueItemSfV4Iteration           `json:"iteration,omitempty"`
+	Module         *IssueItemSfV4Module              `json:"module,omitempty"`
 	ParentIssue    *CreateIssueResponseV4ParentIssue `json:"parent_issue,omitempty"`
-	Priority       *IssueItemSfv4Priority            `json:"priority,omitempty"`
-	Severity       *IssueItemSfv4Severity            `json:"severity,omitempty"`
-	Status         *IssueItemSfv4Status              `json:"status,omitempty"`
-	Tracker        *IssueItemSfv4Tracker             `json:"tracker,omitempty"`
+	Priority       *IssueItemSfV4Priority            `json:"priority,omitempty"`
+	Severity       *IssueItemSfV4Severity            `json:"severity,omitempty"`
+	Status         *IssueItemSfV4Status              `json:"status,omitempty"`
+	Tracker        *IssueItemSfV4Tracker             `json:"tracker,omitempty"`
 	HttpStatusCode int                               `json:"-"`
 }
 

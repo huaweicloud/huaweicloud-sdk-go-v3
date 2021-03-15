@@ -8,8 +8,7 @@ import (
 
 // Request Object
 type CreateQueueRequest struct {
-	ProjectId string          `json:"project_id"`
-	Body      *CreateQueueReq `json:"body,omitempty"`
+	Body *CreateQueueReq `json:"body,omitempty"`
 }
 
 func (o CreateQueueRequest) String() string {

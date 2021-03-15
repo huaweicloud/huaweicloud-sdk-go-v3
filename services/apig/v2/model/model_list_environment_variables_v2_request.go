@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ListEnvironmentVariablesV2Request struct {
-	ProjectId     string  `json:"project_id"`
 	InstanceId    string  `json:"instance_id"`
 	GroupId       string  `json:"group_id"`
 	EnvId         *string `json:"env_id,omitempty"`

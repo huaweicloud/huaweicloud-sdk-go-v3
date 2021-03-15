@@ -8,8 +8,7 @@ import (
 
 // Request Object
 type BatchRestartOrDeleteInstancesRequest struct {
-	ProjectId string                           `json:"project_id"`
-	Body      *BatchRestartOrDeleteInstanceReq `json:"body,omitempty"`
+	Body *BatchRestartOrDeleteInstanceReq `json:"body,omitempty"`
 }
 
 func (o BatchRestartOrDeleteInstancesRequest) String() string {

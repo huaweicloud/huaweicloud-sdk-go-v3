@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ListApiGroupsV2Request struct {
-	ProjectId     string  `json:"project_id"`
 	InstanceId    string  `json:"instance_id"`
 	Id            *string `json:"id,omitempty"`
 	Name          *string `json:"name,omitempty"`

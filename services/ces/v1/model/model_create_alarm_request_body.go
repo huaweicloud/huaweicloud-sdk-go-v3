@@ -12,9 +12,9 @@ type CreateAlarmRequestBody struct {
 	// 告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
 	AlarmName string `json:"alarm_name"`
 	// 告警描述，长度0-256。
-	AlarmDescription *string             `json:"alarm_description,omitempty"`
-	Metric           *MetricInfoForAlarm `json:"metric"`
-	Condition        *Condition          `json:"condition"`
+	AlarmDescription *string         `json:"alarm_description,omitempty"`
+	Metric           *MetricForAlarm `json:"metric"`
+	Condition        *Condition      `json:"condition"`
 	// 是否启用该条告警，默认为true。
 	AlarmEnabled *bool `json:"alarm_enabled,omitempty"`
 	// 是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。

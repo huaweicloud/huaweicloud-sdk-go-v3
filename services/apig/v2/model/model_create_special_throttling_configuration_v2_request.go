@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type CreateSpecialThrottlingConfigurationV2Request struct {
-	ProjectId  string              `json:"project_id"`
 	InstanceId string              `json:"instance_id"`
 	ThrottleId string              `json:"throttle_id"`
 	Body       *ThrottleSpecialReq `json:"body,omitempty"`

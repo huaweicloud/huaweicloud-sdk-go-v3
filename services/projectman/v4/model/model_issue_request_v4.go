@@ -9,7 +9,7 @@ import (
 // 工作项属性
 type IssueRequestV4 struct {
 	// 实际工时
-	ActualWorkHours *int32 `json:"actual_work_hours,omitempty"`
+	ActualWorkHours *float64 `json:"actual_work_hours,omitempty"`
 	// 处理人id,对应用户信息的数字id
 	AssignedId *int32 `json:"assigned_id,omitempty"`
 	// 开始时间，年-月-日
@@ -34,11 +34,11 @@ type IssueRequestV4 struct {
 	Name *string `json:"name,omitempty"`
 	// 父工作项的id
 	ParentIssueId *int32 `json:"parent_issue_id,omitempty"`
-	// 优先级   1 低   2 中   3 高
+	// 优先级,   1 低,   2 中,   3 高,
 	PriorityId *int32 `json:"priority_id,omitempty"`
-	// 重要程度   10 关键   11 重要   12 一般   13 提示
+	// 重要程度,   10 关键,   11 重要,   12 一般,   13 提示,
 	SeverityId *int32 `json:"severity_id,omitempty"`
-	// 状态   id 开始   1 进行中 2 已解决 3 测试中 4 已关闭 5 已解决 6
+	// 状态   id, 开始   1, 进行中 2, 已解决 3, 测试中 4, 已关闭 5, 已解决 6,
 	StatusId *int32 `json:"status_id,omitempty"`
 	// 工作项类型,2任务/task,3缺陷/bug,5epic,6feature,7story
 	TrackerId *int32 `json:"tracker_id,omitempty"`

@@ -99,6 +99,10 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 		builder.credentials = builder.credentials.ProcessAuthParams(defaultHttpClient, builder.region.Id)
 	}
 
+	if !strings.HasPrefix(builder.endpoint, "http") {
+		builder.endpoint = "https://" + builder.endpoint
+	}
+
 	hcHttpClient := NewHcHttpClient(defaultHttpClient).WithEndpoint(builder.endpoint).WithCredential(builder.credentials)
 	return hcHttpClient
 }

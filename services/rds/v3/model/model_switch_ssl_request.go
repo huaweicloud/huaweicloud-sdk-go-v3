@@ -11,7 +11,7 @@ import (
 type SwitchSslRequest struct {
 	XLanguage  *SwitchSslRequestXLanguage `json:"X-Language,omitempty"`
 	InstanceId string                     `json:"instance_id"`
-	Body       *SslOptionRequestBody      `json:"body,omitempty"`
+	Body       *SslOptionRequest          `json:"body,omitempty"`
 }
 
 func (o SwitchSslRequest) String() string {

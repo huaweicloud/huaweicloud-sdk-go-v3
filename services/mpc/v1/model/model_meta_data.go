@@ -15,8 +15,8 @@ type MetaData struct {
 	Duration *int64 `json:"duration,omitempty"`
 	// 文件封装格式。
 	Format *string `json:"format,omitempty"`
-	// 总码率。
-	Bitrate *int32 `json:"bitrate,omitempty"`
+	// 总码率。单位：bit/秒
+	Bitrate *int64 `json:"bitrate,omitempty"`
 	// 视频流元数据。
 	Video *[]VideoInfo `json:"video,omitempty"`
 	// 音频流元数据。

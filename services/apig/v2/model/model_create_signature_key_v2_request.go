@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type CreateSignatureKeyV2Request struct {
-	ProjectId  string        `json:"project_id"`
 	InstanceId string        `json:"instance_id"`
 	Body       *SignatureReq `json:"body,omitempty"`
 }

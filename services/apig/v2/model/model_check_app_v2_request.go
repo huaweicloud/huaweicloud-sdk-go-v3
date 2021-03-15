@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type CheckAppV2Request struct {
-	ProjectId  string `json:"project_id"`
 	InstanceId string `json:"instance_id"`
 	AppId      string `json:"app_id"`
 }

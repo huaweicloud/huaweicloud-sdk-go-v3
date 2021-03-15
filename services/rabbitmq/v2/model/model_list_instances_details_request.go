@@ -9,7 +9,6 @@ import (
 
 // Request Object
 type ListInstancesDetailsRequest struct {
-	ProjectId           string                                     `json:"project_id"`
 	Engine              ListInstancesDetailsRequestEngine          `json:"engine"`
 	Name                *string                                    `json:"name,omitempty"`
 	InstanceId          *string                                    `json:"instance_id,omitempty"`

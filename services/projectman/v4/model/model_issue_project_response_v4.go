@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// 项目信息
 type IssueProjectResponseV4 struct {
 	// 项目id
 	ProjectId *string `json:"project_id,omitempty"`

@@ -43,8 +43,12 @@ type InstanceResponse struct {
 	// 用于磁盘加密的密钥ID。
 	DiskEncryptionId string `json:"disk_encryption_id"`
 	// 规格码。
-	FlavorRef string  `json:"flavor_ref"`
-	Volume    *Volume `json:"volume"`
+	FlavorRef string `json:"flavor_ref"`
+	// CPU大小。例如，1表示1U。
+	Cpu *string `json:"cpu,omitempty"`
+	// 内存大小（单位：GB）。
+	Mem    *string `json:"mem,omitempty"`
+	Volume *Volume `json:"volume"`
 	// 区域ID。
 	Region string `json:"region"`
 	// 虚拟私有云ID。

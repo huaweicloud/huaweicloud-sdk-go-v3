@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ListAppQuantitiesV2Request struct {
-	ProjectId  string `json:"project_id"`
 	InstanceId string `json:"instance_id"`
 }
 

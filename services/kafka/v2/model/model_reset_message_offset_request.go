@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ResetMessageOffsetRequest struct {
-	ProjectId  string                 `json:"project_id"`
 	InstanceId string                 `json:"instance_id"`
 	Group      string                 `json:"group"`
 	Body       *ResetMessageOffsetReq `json:"body,omitempty"`

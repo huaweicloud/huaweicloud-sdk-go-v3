@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type CreateSinkTaskRequest struct {
-	ProjectId   string             `json:"project_id"`
 	ConnectorId string             `json:"connector_id"`
 	Body        *CreateSinkTaskReq `json:"body,omitempty"`
 }

@@ -15,10 +15,6 @@ func GenReqDefForBatchCreateOrDeleteInstanceTag() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -38,10 +34,6 @@ func GenReqDefForBatchDeleteInstanceTopic() *def.HttpRequestDef {
 		WithResponse(new(model.BatchDeleteInstanceTopicResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -63,11 +55,6 @@ func GenReqDefForBatchRestartOrDeleteInstances() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -82,10 +69,6 @@ func GenReqDefForCreateConnector() *def.HttpRequestDef {
 		WithResponse(new(model.CreateConnectorResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -107,10 +90,6 @@ func GenReqDefForCreateInstanceTopic() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -130,10 +109,6 @@ func GenReqDefForCreatePartition() *def.HttpRequestDef {
 		WithResponse(new(model.CreatePartitionResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -159,11 +134,6 @@ func GenReqDefForCreatePostPaidInstance() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -178,10 +148,6 @@ func GenReqDefForCreateSinkTask() *def.HttpRequestDef {
 		WithResponse(new(model.CreateSinkTaskResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ConnectorId").
 		WithJsonTag("connector_id").
@@ -203,10 +169,6 @@ func GenReqDefForDeleteBackgroundTask() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -227,10 +189,6 @@ func GenReqDefForDeleteInstance() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -246,10 +204,6 @@ func GenReqDefForDeleteSinkTask() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteSinkTaskResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ConnectorId").
 		WithJsonTag("connector_id").
@@ -281,10 +235,6 @@ func GenReqDefForListBackgroundTasks() *def.HttpRequestDef {
 		WithResponse(new(model.ListBackgroundTasksResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -319,10 +269,6 @@ func GenReqDefForListInstanceTopics() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -337,11 +283,6 @@ func GenReqDefForListInstances() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/instances").
 		WithResponse(new(model.ListInstancesResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Engine").
@@ -400,10 +341,6 @@ func GenReqDefForListSinkTasks() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ConnectorId").
 		WithJsonTag("connector_id").
 		WithLocationType(def.Path))
@@ -419,10 +356,6 @@ func GenReqDefForResetManagerPassword() *def.HttpRequestDef {
 		WithResponse(new(model.ResetManagerPasswordResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -443,10 +376,6 @@ func GenReqDefForResetMessageOffset() *def.HttpRequestDef {
 		WithResponse(new(model.ResetMessageOffsetResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -472,10 +401,6 @@ func GenReqDefForResetPassword() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -495,10 +420,6 @@ func GenReqDefForResizeInstance() *def.HttpRequestDef {
 		WithResponse(new(model.ResizeInstanceResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -520,10 +441,6 @@ func GenReqDefForRestartManager() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -539,10 +456,6 @@ func GenReqDefForShowBackgroundTask() *def.HttpRequestDef {
 		WithResponse(new(model.ShowBackgroundTaskResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -564,10 +477,6 @@ func GenReqDefForShowCesHierarchy() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -583,10 +492,6 @@ func GenReqDefForShowCluster() *def.HttpRequestDef {
 		WithResponse(new(model.ShowClusterResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -604,10 +509,6 @@ func GenReqDefForShowCoordinators() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -623,10 +524,6 @@ func GenReqDefForShowGroups() *def.HttpRequestDef {
 		WithResponse(new(model.ShowGroupsResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -648,10 +545,6 @@ func GenReqDefForShowInstance() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -667,10 +560,6 @@ func GenReqDefForShowInstanceExtendProductInfo() *def.HttpRequestDef {
 		WithResponse(new(model.ShowInstanceExtendProductInfoResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -697,10 +586,6 @@ func GenReqDefForShowInstanceTags() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -716,10 +601,6 @@ func GenReqDefForShowInstanceTopicDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ShowInstanceTopicDetailResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -751,10 +632,6 @@ func GenReqDefForShowMessages() *def.HttpRequestDef {
 		WithResponse(new(model.ShowMessagesResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -797,10 +674,6 @@ func GenReqDefForShowPartitionBeginningMessage() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -825,10 +698,6 @@ func GenReqDefForShowPartitionEndMessage() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -852,10 +721,6 @@ func GenReqDefForShowPartitionMessage() *def.HttpRequestDef {
 		WithResponse(new(model.ShowPartitionMessageResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -885,11 +750,6 @@ func GenReqDefForShowProjectTags() *def.HttpRequestDef {
 		WithResponse(new(model.ShowProjectTagsResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -901,10 +761,6 @@ func GenReqDefForShowSinkTaskDetail() *def.HttpRequestDef {
 		WithResponse(new(model.ShowSinkTaskDetailResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ConnectorId").
 		WithJsonTag("connector_id").
@@ -926,10 +782,6 @@ func GenReqDefForUpdateInstance() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -949,10 +801,6 @@ func GenReqDefForUpdateInstanceAutoCreateTopic() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateInstanceAutoCreateTopicResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -974,10 +822,6 @@ func GenReqDefForUpdateInstanceCrossVpcIp() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
@@ -997,10 +841,6 @@ func GenReqDefForUpdateInstanceTopic() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateInstanceTopicResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -1022,10 +862,6 @@ func GenReqDefForUpdateSinkTaskQuota() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ConnectorId").
 		WithJsonTag("connector_id").
 		WithLocationType(def.Path))
@@ -1045,10 +881,6 @@ func GenReqDefForUpdateTopicReplica() *def.HttpRequestDef {
 		WithResponse(new(model.UpdateTopicReplicaResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").

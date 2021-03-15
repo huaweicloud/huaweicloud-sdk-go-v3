@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ListSinkTasksRequest struct {
-	ProjectId   string `json:"project_id"`
 	ConnectorId string `json:"connector_id"`
 }
 

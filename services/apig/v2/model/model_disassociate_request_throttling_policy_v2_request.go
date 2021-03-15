@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type DisassociateRequestThrottlingPolicyV2Request struct {
-	ProjectId         string `json:"project_id"`
 	InstanceId        string `json:"instance_id"`
 	ThrottleBindingId string `json:"throttle_binding_id"`
 }

@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ConsumeMessagesRequest struct {
-	ProjectId       string  `json:"project_id"`
 	QueueId         string  `json:"queue_id"`
 	ConsumerGroupId string  `json:"consumer_group_id"`
 	MaxMsgs         *int32  `json:"max_msgs,omitempty"`

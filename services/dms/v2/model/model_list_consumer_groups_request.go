@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ListConsumerGroupsRequest struct {
-	ProjectId          string `json:"project_id"`
 	QueueId            string `json:"queue_id"`
 	IncludeDeadletter  *bool  `json:"include_deadletter,omitempty"`
 	IncludeMessagesNum *bool  `json:"include_messages_num,omitempty"`

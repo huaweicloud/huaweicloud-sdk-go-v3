@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ListEnvironmentsV2Request struct {
-	ProjectId  string  `json:"project_id"`
 	InstanceId string  `json:"instance_id"`
 	Name       *string `json:"name,omitempty"`
 	Offset     *int64  `json:"offset,omitempty"`

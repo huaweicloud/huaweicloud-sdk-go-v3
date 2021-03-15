@@ -16,9 +16,9 @@ type ListProjectsV4ResponseBodyProjects struct {
 	// 项目描述
 	Description *string `json:"description,omitempty"`
 	// 项目创建时间
-	CreatedTime *string `json:"created_time,omitempty"`
+	CreatedTime *int64 `json:"created_time,omitempty"`
 	// 项目更新时间
-	UpdatedTime *string `json:"updated_time,omitempty"`
+	UpdatedTime *int64 `json:"updated_time,omitempty"`
 	// 项目类型
 	ProjectType *string                            `json:"project_type,omitempty"`
 	Creator     *ListProjectsV4ResponseBodyCreator `json:"creator,omitempty"`

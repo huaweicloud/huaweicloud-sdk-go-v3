@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DisassociateDomainV2Request struct {
-	ProjectId  string `json:"project_id"`
 	InstanceId string `json:"instance_id"`
+	DomainId   string `json:"domain_id"`
 	GroupId    string `json:"group_id"`
 }
 

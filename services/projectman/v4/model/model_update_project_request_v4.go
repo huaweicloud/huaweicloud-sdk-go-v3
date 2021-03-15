@@ -11,7 +11,7 @@ type UpdateProjectRequestV4 struct {
 	// 项目描述
 	Description *string `json:"description,omitempty"`
 	// 项目名
-	ProjectName *string `json:"project_name,omitempty"`
+	ProjectName string `json:"project_name"`
 }
 
 func (o UpdateProjectRequestV4) String() string {

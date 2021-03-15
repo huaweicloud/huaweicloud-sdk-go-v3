@@ -42,7 +42,7 @@ type UpdateDependencyRequestBodyRuntimeEnum struct {
 	NODE_JS_10_16   UpdateDependencyRequestBodyRuntime
 	NODE_JS_12_13   UpdateDependencyRequestBodyRuntime
 	PYTHON_2_7      UpdateDependencyRequestBodyRuntime
-	_PYTHON_3_6     UpdateDependencyRequestBodyRuntime
+	PYTHON_3_6      UpdateDependencyRequestBodyRuntime
 	GO_1_8          UpdateDependencyRequestBodyRuntime
 	C__NET_CORE_2_0 UpdateDependencyRequestBodyRuntime
 	C__NET_CORE_2_1 UpdateDependencyRequestBodyRuntime
@@ -70,8 +70,8 @@ func GetUpdateDependencyRequestBodyRuntimeEnum() UpdateDependencyRequestBodyRunt
 		PYTHON_2_7: UpdateDependencyRequestBodyRuntime{
 			value: "Python 2.7",
 		},
-		_PYTHON_3_6: UpdateDependencyRequestBodyRuntime{
-			value: "  Python 3.6",
+		PYTHON_3_6: UpdateDependencyRequestBodyRuntime{
+			value: "Python 3.6",
 		},
 		GO_1_8: UpdateDependencyRequestBodyRuntime{
 			value: "Go 1.8",

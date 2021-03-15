@@ -8,9 +8,8 @@ import (
 
 // Request Object
 type SendMessagesRequest struct {
-	ProjectId string           `json:"project_id"`
-	QueueId   string           `json:"queue_id"`
-	Body      *SendMessagesReq `json:"body,omitempty"`
+	QueueId string           `json:"queue_id"`
+	Body    *SendMessagesReq `json:"body,omitempty"`
 }
 
 func (o SendMessagesRequest) String() string {

@@ -15,10 +15,6 @@ func GenReqDefForBatchCreateOrDeleteQueueTag() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QueueId").
 		WithJsonTag("queue_id").
 		WithLocationType(def.Path))
@@ -38,10 +34,6 @@ func GenReqDefForConfirmConsumptionMessages() *def.HttpRequestDef {
 		WithResponse(new(model.ConfirmConsumptionMessagesResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QueueId").
 		WithJsonTag("queue_id").
@@ -67,10 +59,6 @@ func GenReqDefForConfirmDeadLettersMessages() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QueueId").
 		WithJsonTag("queue_id").
 		WithLocationType(def.Path))
@@ -94,10 +82,6 @@ func GenReqDefForConsumeDeadlettersMessage() *def.HttpRequestDef {
 		WithResponse(new(model.ConsumeDeadlettersMessageResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QueueId").
 		WithJsonTag("queue_id").
@@ -135,10 +119,6 @@ func GenReqDefForConsumeMessages() *def.HttpRequestDef {
 		WithResponse(new(model.ConsumeMessagesResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QueueId").
 		WithJsonTag("queue_id").
@@ -185,10 +165,6 @@ func GenReqDefForCreateConsumerGroup() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QueueId").
 		WithJsonTag("queue_id").
 		WithLocationType(def.Path))
@@ -209,11 +185,6 @@ func GenReqDefForCreateQueue() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -228,10 +199,6 @@ func GenReqDefForDeleteQueue() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteQueueResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QueueId").
 		WithJsonTag("queue_id").
@@ -248,10 +215,6 @@ func GenReqDefForDeleteSpecifiedConsumerGroup() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteSpecifiedConsumerGroupResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QueueId").
 		WithJsonTag("queue_id").
@@ -272,10 +235,6 @@ func GenReqDefForListConsumerGroups() *def.HttpRequestDef {
 		WithResponse(new(model.ListConsumerGroupsResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QueueId").
 		WithJsonTag("queue_id").
@@ -310,11 +269,6 @@ func GenReqDefForListQueues() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("IncludeDeadletter").
 		WithJsonTag("include_deadletter").
 		WithLocationType(def.Query))
@@ -330,10 +284,6 @@ func GenReqDefForSendMessages() *def.HttpRequestDef {
 		WithResponse(new(model.SendMessagesResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QueueId").
 		WithJsonTag("queue_id").
@@ -354,11 +304,6 @@ func GenReqDefForShowProjectTags() *def.HttpRequestDef {
 		WithResponse(new(model.ShowProjectTagsResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -370,10 +315,6 @@ func GenReqDefForShowQueue() *def.HttpRequestDef {
 		WithResponse(new(model.ShowQueueResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QueueId").
 		WithJsonTag("queue_id").
@@ -396,10 +337,6 @@ func GenReqDefForShowQueueTags() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QueueId").
 		WithJsonTag("queue_id").
 		WithLocationType(def.Path))
@@ -414,11 +351,6 @@ func GenReqDefForShowQuotas() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/quotas").
 		WithResponse(new(model.ShowQuotasResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

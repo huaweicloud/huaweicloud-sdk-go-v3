@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type DeleteSignatureKeyV2Request struct {
-	ProjectId  string `json:"project_id"`
 	InstanceId string `json:"instance_id"`
 	SignId     string `json:"sign_id"`
 }

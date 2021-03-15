@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type ShowDetailsOfEnvironmentVariableV2Request struct {
-	ProjectId     string `json:"project_id"`
 	InstanceId    string `json:"instance_id"`
 	EnvVariableId string `json:"env_variable_id"`
 }

@@ -14,15 +14,15 @@ type ShowProjectWorkHoursResponseBodyWorkHours struct {
 	// 用户名
 	UserName *string `json:"user_name,omitempty"`
 	// 工时日期
-	WorkDate *string `json:"work_date,omitempty"`
+	WorkTime *string `json:"work_time,omitempty"`
 	// 工时花费
 	WorkHoursNum *string `json:"work_hours_num,omitempty"`
 	// 工时内容
 	Summary *string `json:"summary,omitempty"`
 	// 工时类型
 	WorkHoursTypeName *string `json:"work_hours_type_name,omitempty"`
-	// 工作项编码
-	IssueId *string `json:"issue_id,omitempty"`
+	// 工作项id
+	IssueId *int32 `json:"issue_id,omitempty"`
 	// 工作项类型
 	IssueType *string `json:"issue_type,omitempty"`
 	// 工作项标题

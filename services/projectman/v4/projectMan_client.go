@@ -52,17 +52,6 @@ func (c *ProjectManClient) BatchAddMembersV4(request *model.BatchAddMembersV4Req
 	}
 }
 
-//批量删除项目的迭代
-func (c *ProjectManClient) BatchDeleteIterationsV4(request *model.BatchDeleteIterationsV4Request) (*model.BatchDeleteIterationsV4Response, error) {
-	requestDef := GenReqDefForBatchDeleteIterationsV4()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchDeleteIterationsV4Response), nil
-	}
-}
-
 //批量删除项目成员
 func (c *ProjectManClient) BatchDeleteMembersV4(request *model.BatchDeleteMembersV4Request) (*model.BatchDeleteMembersV4Response, error) {
 	requestDef := GenReqDefForBatchDeleteMembersV4()
@@ -85,17 +74,6 @@ func (c *ProjectManClient) CheckProjectNameV4(request *model.CheckProjectNameV4R
 	}
 }
 
-//创建Scrum项目迭代
-func (c *ProjectManClient) CreateIterationV4(request *model.CreateIterationV4Request) (*model.CreateIterationV4Response, error) {
-	requestDef := GenReqDefForCreateIterationV4()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateIterationV4Response), nil
-	}
-}
-
 //创建项目
 func (c *ProjectManClient) CreateProjectV4(request *model.CreateProjectV4Request) (*model.CreateProjectV4Response, error) {
 	requestDef := GenReqDefForCreateProjectV4()
@@ -104,17 +82,6 @@ func (c *ProjectManClient) CreateProjectV4(request *model.CreateProjectV4Request
 		return nil, err
 	} else {
 		return resp.(*model.CreateProjectV4Response), nil
-	}
-}
-
-//删除项目迭代
-func (c *ProjectManClient) DeleteIterationV4(request *model.DeleteIterationV4Request) (*model.DeleteIterationV4Response, error) {
-	requestDef := GenReqDefForDeleteIterationV4()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteIterationV4Response), nil
 	}
 }
 
@@ -162,17 +129,6 @@ func (c *ProjectManClient) ListProjectDemandStaticV4(request *model.ListProjectD
 	}
 }
 
-//获取项目迭代
-func (c *ProjectManClient) ListProjectIterationsV4(request *model.ListProjectIterationsV4Request) (*model.ListProjectIterationsV4Response, error) {
-	requestDef := GenReqDefForListProjectIterationsV4()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListProjectIterationsV4Response), nil
-	}
-}
-
 //获取项目成员列表
 func (c *ProjectManClient) ListProjectMembersV4(request *model.ListProjectMembersV4Request) (*model.ListProjectMembersV4Response, error) {
 	requestDef := GenReqDefForListProjectMembersV4()
@@ -206,6 +162,39 @@ func (c *ProjectManClient) RemoveProject(request *model.RemoveProjectRequest) (*
 	}
 }
 
+//查询缺陷密度
+func (c *ProjectManClient) ShowBugDensityV2(request *model.ShowBugDensityV2Request) (*model.ShowBugDensityV2Response, error) {
+	requestDef := GenReqDefForShowBugDensityV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBugDensityV2Response), nil
+	}
+}
+
+//查询人均bug
+func (c *ProjectManClient) ShowBugsPerDeveloper(request *model.ShowBugsPerDeveloperRequest) (*model.ShowBugsPerDeveloperResponse, error) {
+	requestDef := GenReqDefForShowBugsPerDeveloper()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBugsPerDeveloperResponse), nil
+	}
+}
+
+//查询需求按时完成率
+func (c *ProjectManClient) ShowCompletionRate(request *model.ShowCompletionRateRequest) (*model.ShowCompletionRateResponse, error) {
+	requestDef := GenReqDefForShowCompletionRate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCompletionRateResponse), nil
+	}
+}
+
 //获取当前用户信息
 func (c *ProjectManClient) ShowCurUserInfo(request *model.ShowCurUserInfoRequest) (*model.ShowCurUserInfoResponse, error) {
 	requestDef := GenReqDefForShowCurUserInfo()
@@ -228,14 +217,14 @@ func (c *ProjectManClient) ShowCurUserRole(request *model.ShowCurUserRoleRequest
 	}
 }
 
-//查看迭代详情
-func (c *ProjectManClient) ShowIterationV4(request *model.ShowIterationV4Request) (*model.ShowIterationV4Response, error) {
-	requestDef := GenReqDefForShowIterationV4()
+//获取项目详情
+func (c *ProjectManClient) ShowProjectInfoV4(request *model.ShowProjectInfoV4Request) (*model.ShowProjectInfoV4Response, error) {
+	requestDef := GenReqDefForShowProjectInfoV4()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowIterationV4Response), nil
+		return resp.(*model.ShowProjectInfoV4Response), nil
 	}
 }
 
@@ -247,17 +236,6 @@ func (c *ProjectManClient) ShowProjectSummaryV4(request *model.ShowProjectSummar
 		return nil, err
 	} else {
 		return resp.(*model.ShowProjectSummaryV4Response), nil
-	}
-}
-
-//更新Scrum项目迭代
-func (c *ProjectManClient) UpdateIterationV4(request *model.UpdateIterationV4Request) (*model.UpdateIterationV4Response, error) {
-	requestDef := GenReqDefForUpdateIterationV4()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateIterationV4Response), nil
 	}
 }
 
@@ -305,6 +283,28 @@ func (c *ProjectManClient) BatchDeleteIssuesV4(request *model.BatchDeleteIssuesV
 	}
 }
 
+//批量删除项目的迭代
+func (c *ProjectManClient) BatchDeleteIterationsV4(request *model.BatchDeleteIterationsV4Request) (*model.BatchDeleteIterationsV4Response, error) {
+	requestDef := GenReqDefForBatchDeleteIterationsV4()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteIterationsV4Response), nil
+	}
+}
+
+//创建工作项类型自定义字段
+func (c *ProjectManClient) CreateCustomfields(request *model.CreateCustomfieldsRequest) (*model.CreateCustomfieldsResponse, error) {
+	requestDef := GenReqDefForCreateCustomfields()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCustomfieldsResponse), nil
+	}
+}
+
 //创建工作项
 func (c *ProjectManClient) CreateIssueV4(request *model.CreateIssueV4Request) (*model.CreateIssueV4Response, error) {
 	requestDef := GenReqDefForCreateIssueV4()
@@ -316,6 +316,17 @@ func (c *ProjectManClient) CreateIssueV4(request *model.CreateIssueV4Request) (*
 	}
 }
 
+//创建Scrum项目迭代
+func (c *ProjectManClient) CreateIterationV4(request *model.CreateIterationV4Request) (*model.CreateIterationV4Response, error) {
+	requestDef := GenReqDefForCreateIterationV4()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateIterationV4Response), nil
+	}
+}
+
 //删除工作项
 func (c *ProjectManClient) DeleteIssueV4(request *model.DeleteIssueV4Request) (*model.DeleteIssueV4Response, error) {
 	requestDef := GenReqDefForDeleteIssueV4()
@@ -324,6 +335,17 @@ func (c *ProjectManClient) DeleteIssueV4(request *model.DeleteIssueV4Request) (*
 		return nil, err
 	} else {
 		return resp.(*model.DeleteIssueV4Response), nil
+	}
+}
+
+//删除项目迭代
+func (c *ProjectManClient) DeleteIterationV4(request *model.DeleteIterationV4Request) (*model.DeleteIterationV4Response, error) {
+	requestDef := GenReqDefForDeleteIterationV4()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteIterationV4Response), nil
 	}
 }
 
@@ -349,7 +371,7 @@ func (c *ProjectManClient) ListIssueCommentsV4(request *model.ListIssueCommentsV
 	}
 }
 
-//获取项目成员列表
+//获取工作项历史记录
 func (c *ProjectManClient) ListIssueRecordsV4(request *model.ListIssueRecordsV4Request) (*model.ListIssueRecordsV4Response, error) {
 	requestDef := GenReqDefForListIssueRecordsV4()
 
@@ -360,7 +382,7 @@ func (c *ProjectManClient) ListIssueRecordsV4(request *model.ListIssueRecordsV4R
 	}
 }
 
-//高级查询工作项,根据筛选条件查询工作中
+//根据筛选条件查询工作项
 func (c *ProjectManClient) ListIssuesV4(request *model.ListIssuesV4Request) (*model.ListIssuesV4Response, error) {
 	requestDef := GenReqDefForListIssuesV4()
 
@@ -368,6 +390,17 @@ func (c *ProjectManClient) ListIssuesV4(request *model.ListIssuesV4Request) (*mo
 		return nil, err
 	} else {
 		return resp.(*model.ListIssuesV4Response), nil
+	}
+}
+
+//获取项目迭代
+func (c *ProjectManClient) ListProjectIterationsV4(request *model.ListProjectIterationsV4Request) (*model.ListProjectIterationsV4Response, error) {
+	requestDef := GenReqDefForListProjectIterationsV4()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectIterationsV4Response), nil
 	}
 }
 
@@ -382,6 +415,17 @@ func (c *ProjectManClient) ListProjectWorkHours(request *model.ListProjectWorkHo
 	}
 }
 
+//获取工作项的完成率
+func (c *ProjectManClient) ShowIssueCompletionRate(request *model.ShowIssueCompletionRateRequest) (*model.ShowIssueCompletionRateResponse, error) {
+	requestDef := GenReqDefForShowIssueCompletionRate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIssueCompletionRateResponse), nil
+	}
+}
+
 //查询工作项详情
 func (c *ProjectManClient) ShowIssueV4(request *model.ShowIssueV4Request) (*model.ShowIssueV4Response, error) {
 	requestDef := GenReqDefForShowIssueV4()
@@ -390,6 +434,17 @@ func (c *ProjectManClient) ShowIssueV4(request *model.ShowIssueV4Request) (*mode
 		return nil, err
 	} else {
 		return resp.(*model.ShowIssueV4Response), nil
+	}
+}
+
+//查看迭代详情
+func (c *ProjectManClient) ShowIterationV4(request *model.ShowIterationV4Request) (*model.ShowIterationV4Response, error) {
+	requestDef := GenReqDefForShowIterationV4()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIterationV4Response), nil
 	}
 }
 
@@ -404,17 +459,6 @@ func (c *ProjectManClient) ShowProjectWorkHours(request *model.ShowProjectWorkHo
 	}
 }
 
-//获取工作项的完成率
-func (c *ProjectManClient) ShowtIssueCompletionRate(request *model.ShowtIssueCompletionRateRequest) (*model.ShowtIssueCompletionRateResponse, error) {
-	requestDef := GenReqDefForShowtIssueCompletionRate()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowtIssueCompletionRateResponse), nil
-	}
-}
-
 //更新工作项
 func (c *ProjectManClient) UpdateIssueV4(request *model.UpdateIssueV4Request) (*model.UpdateIssueV4Response, error) {
 	requestDef := GenReqDefForUpdateIssueV4()
@@ -423,5 +467,16 @@ func (c *ProjectManClient) UpdateIssueV4(request *model.UpdateIssueV4Request) (*
 		return nil, err
 	} else {
 		return resp.(*model.UpdateIssueV4Response), nil
+	}
+}
+
+//更新Scrum项目迭代
+func (c *ProjectManClient) UpdateIterationV4(request *model.UpdateIterationV4Request) (*model.UpdateIterationV4Response, error) {
+	requestDef := GenReqDefForUpdateIterationV4()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateIterationV4Response), nil
 	}
 }

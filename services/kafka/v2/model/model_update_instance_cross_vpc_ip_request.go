@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type UpdateInstanceCrossVpcIpRequest struct {
-	ProjectId  string                       `json:"project_id"`
 	InstanceId string                       `json:"instance_id"`
 	Body       *UpdateInstanceCrossVpcIpReq `json:"body,omitempty"`
 }

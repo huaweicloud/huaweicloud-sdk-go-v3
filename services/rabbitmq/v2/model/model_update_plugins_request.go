@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type UpdatePluginsRequest struct {
-	ProjectId  string            `json:"project_id"`
 	InstanceId string            `json:"instance_id"`
 	Body       *UpdatePluginsReq `json:"body,omitempty"`
 }

@@ -140,14 +140,25 @@ func (c *IamClient) CreateMetadata(request *model.CreateMetadataRequest) (*model
 	}
 }
 
-//该接口可以用于通过IdP initiated的联邦认证方式获取unscoped token。    Unscoped token不能用来鉴权，若联邦用户需要使用token进行鉴权，请参考[获取联邦认证scoped token](https://support.huaweicloud.com/api-iam/iam_13_0604.html)获取scoped token。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。     > - 该接口支持在命令行侧调用，需要客户端使用IdP initiated的联邦认证方式获取SAMLResponse，并采用浏览器提交表单数据的方式，获取unscoped token。
-func (c *IamClient) CreateUnscopeTokenByIdpInitiated(request *model.CreateUnscopeTokenByIdpInitiatedRequest) (*model.CreateUnscopeTokenByIdpInitiatedResponse, error) {
-	requestDef := GenReqDefForCreateUnscopeTokenByIdpInitiated()
+//创建OpenId Connect身份提供商配置
+func (c *IamClient) CreateOpenIdConnectConfig(request *model.CreateOpenIdConnectConfigRequest) (*model.CreateOpenIdConnectConfigResponse, error) {
+	requestDef := GenReqDefForCreateOpenIdConnectConfig()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateUnscopeTokenByIdpInitiatedResponse), nil
+		return resp.(*model.CreateOpenIdConnectConfigResponse), nil
+	}
+}
+
+//获取联邦认证token(OpenId Connect Id token方式)
+func (c *IamClient) CreateTokenWithIdToken(request *model.CreateTokenWithIdTokenRequest) (*model.CreateTokenWithIdTokenResponse, error) {
+	requestDef := GenReqDefForCreateTokenWithIdToken()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTokenWithIdTokenResponse), nil
 	}
 }
 
@@ -976,6 +987,17 @@ func (c *IamClient) ShowMetadata(request *model.ShowMetadataRequest) (*model.Sho
 	}
 }
 
+//查询OpenId Connect身份提供商配置
+func (c *IamClient) ShowOpenIdConnectConfig(request *model.ShowOpenIdConnectConfigRequest) (*model.ShowOpenIdConnectConfigResponse, error) {
+	requestDef := GenReqDefForShowOpenIdConnectConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowOpenIdConnectConfigResponse), nil
+	}
+}
+
 //该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询项目详情与状态。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
 func (c *IamClient) ShowProjectDetailsAndStatus(request *model.ShowProjectDetailsAndStatusRequest) (*model.ShowProjectDetailsAndStatusResponse, error) {
 	requestDef := GenReqDefForShowProjectDetailsAndStatus()
@@ -1094,6 +1116,17 @@ func (c *IamClient) UpdateDomainProtectPolicy(request *model.UpdateDomainProtect
 		return nil, err
 	} else {
 		return resp.(*model.UpdateDomainProtectPolicyResponse), nil
+	}
+}
+
+//修改OpenId Connect身份提供商配置
+func (c *IamClient) UpdateOpenIdConnectConfig(request *model.UpdateOpenIdConnectConfigRequest) (*model.UpdateOpenIdConnectConfigResponse, error) {
+	requestDef := GenReqDefForUpdateOpenIdConnectConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateOpenIdConnectConfigResponse), nil
 	}
 }
 

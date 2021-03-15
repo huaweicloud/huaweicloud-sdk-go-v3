@@ -78,7 +78,7 @@ type ListDependenciesRequestRuntimeEnum struct {
 	NODE_JS_10_16   ListDependenciesRequestRuntime
 	NODE_JS_12_13   ListDependenciesRequestRuntime
 	PYTHON_2_7      ListDependenciesRequestRuntime
-	_PYTHON_3_6     ListDependenciesRequestRuntime
+	PYTHON_3_6      ListDependenciesRequestRuntime
 	GO_1_8          ListDependenciesRequestRuntime
 	C__NET_CORE_2_0 ListDependenciesRequestRuntime
 	C__NET_CORE_2_1 ListDependenciesRequestRuntime
@@ -106,8 +106,8 @@ func GetListDependenciesRequestRuntimeEnum() ListDependenciesRequestRuntimeEnum 
 		PYTHON_2_7: ListDependenciesRequestRuntime{
 			value: "Python 2.7",
 		},
-		_PYTHON_3_6: ListDependenciesRequestRuntime{
-			value: "  Python 3.6",
+		PYTHON_3_6: ListDependenciesRequestRuntime{
+			value: "Python 3.6",
 		},
 		GO_1_8: ListDependenciesRequestRuntime{
 			value: "Go 1.8",

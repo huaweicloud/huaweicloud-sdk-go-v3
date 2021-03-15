@@ -30,18 +30,29 @@ func (c *RdsClient) AttachEip(request *model.AttachEipRequest) (*model.AttachEip
 	}
 }
 
-//批量添加删除标签。
-func (c *RdsClient) BatchTagAction(request *model.BatchTagActionRequest) (*model.BatchTagActionResponse, error) {
-	requestDef := GenReqDefForBatchTagAction()
+//批量添加标签。
+func (c *RdsClient) BatchTagAddAction(request *model.BatchTagAddActionRequest) (*model.BatchTagAddActionResponse, error) {
+	requestDef := GenReqDefForBatchTagAddAction()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.BatchTagActionResponse), nil
+		return resp.(*model.BatchTagAddActionResponse), nil
 	}
 }
 
-//更改主备实例的同步模式.
+//批量删除标签。
+func (c *RdsClient) BatchTagDelAction(request *model.BatchTagDelActionRequest) (*model.BatchTagDelActionResponse, error) {
+	requestDef := GenReqDefForBatchTagDelAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchTagDelActionResponse), nil
+	}
+}
+
+//更改主备实例的数据同步方式。
 func (c *RdsClient) ChangeFailoverMode(request *model.ChangeFailoverModeRequest) (*model.ChangeFailoverModeResponse, error) {
 	requestDef := GenReqDefForChangeFailoverMode()
 
@@ -85,7 +96,18 @@ func (c *RdsClient) CreateConfiguration(request *model.CreateConfigurationReques
 	}
 }
 
-//创建数据库实例/恢复到新实例。
+//申请域名
+func (c *RdsClient) CreateDnsName(request *model.CreateDnsNameRequest) (*model.CreateDnsNameResponse, error) {
+	requestDef := GenReqDefForCreateDnsName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDnsNameResponse), nil
+	}
+}
+
+//创建数据库实例。
 func (c *RdsClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
 	requestDef := GenReqDefForCreateInstance()
 
@@ -107,6 +129,17 @@ func (c *RdsClient) CreateManualBackup(request *model.CreateManualBackupRequest)
 	}
 }
 
+//恢复到新实例。
+func (c *RdsClient) CreateRestoreInstance(request *model.CreateRestoreInstanceRequest) (*model.CreateRestoreInstanceResponse, error) {
+	requestDef := GenReqDefForCreateRestoreInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRestoreInstanceResponse), nil
+	}
+}
+
 //删除参数模板。
 func (c *RdsClient) DeleteConfiguration(request *model.DeleteConfigurationRequest) (*model.DeleteConfigurationResponse, error) {
 	requestDef := GenReqDefForDeleteConfiguration()
@@ -118,7 +151,7 @@ func (c *RdsClient) DeleteConfiguration(request *model.DeleteConfigurationReques
 	}
 }
 
-//删除实例。
+//删除数据库实例。
 func (c *RdsClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteInstance()
 
@@ -140,7 +173,7 @@ func (c *RdsClient) DeleteManualBackup(request *model.DeleteManualBackupRequest)
 	}
 }
 
-//获取日志信息
+//获取慢日志下载链接。
 func (c *RdsClient) DownloadSlowlog(request *model.DownloadSlowlogRequest) (*model.DownloadSlowlogResponse, error) {
 	requestDef := GenReqDefForDownloadSlowlog()
 
@@ -250,7 +283,7 @@ func (c *RdsClient) ListInstances(request *model.ListInstancesRequest) (*model.L
 	}
 }
 
-//获取任务信息。
+//获取指定ID的任务信息。
 func (c *RdsClient) ListJobInfo(request *model.ListJobInfoRequest) (*model.ListJobInfoResponse, error) {
 	requestDef := GenReqDefForListJobInfo()
 
@@ -261,7 +294,7 @@ func (c *RdsClient) ListJobInfo(request *model.ListJobInfoRequest) (*model.ListJ
 	}
 }
 
-//获取所有任务详细信息。
+//获取指定实例和时间范围的任务信息（SQL Server）。
 func (c *RdsClient) ListJobInfoDetail(request *model.ListJobInfoDetailRequest) (*model.ListJobInfoDetailResponse, error) {
 	requestDef := GenReqDefForListJobInfoDetail()
 
@@ -503,6 +536,17 @@ func (c *RdsClient) ShowConfiguration(request *model.ShowConfigurationRequest) (
 	}
 }
 
+//查询跨云容灾复制状态。
+func (c *RdsClient) ShowDrReplicaStatus(request *model.ShowDrReplicaStatusRequest) (*model.ShowDrReplicaStatusResponse, error) {
+	requestDef := GenReqDefForShowDrReplicaStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDrReplicaStatusResponse), nil
+	}
+}
+
 //获取指定实例的参数模板。
 func (c *RdsClient) ShowInstanceConfiguration(request *model.ShowInstanceConfigurationRequest) (*model.ShowInstanceConfigurationResponse, error) {
 	requestDef := GenReqDefForShowInstanceConfiguration()
@@ -536,18 +580,95 @@ func (c *RdsClient) StartFailover(request *model.StartFailoverRequest) (*model.S
 	}
 }
 
-//变更实例规格/扩容实例磁盘/重启实例/单机转主备。
-func (c *RdsClient) StartInstanceAction(request *model.StartInstanceActionRequest) (*model.StartInstanceActionResponse, error) {
-	requestDef := GenReqDefForStartInstanceAction()
+//灾备实例升主。
+func (c *RdsClient) StartInstanceDrToMasterAction(request *model.StartInstanceDrToMasterActionRequest) (*model.StartInstanceDrToMasterActionResponse, error) {
+	requestDef := GenReqDefForStartInstanceDrToMasterAction()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.StartInstanceActionResponse), nil
+		return resp.(*model.StartInstanceDrToMasterActionResponse), nil
 	}
 }
 
-//SSL开关
+//扩容数据库实例的磁盘空间。
+func (c *RdsClient) StartInstanceEnlargeVolumeAction(request *model.StartInstanceEnlargeVolumeActionRequest) (*model.StartInstanceEnlargeVolumeActionResponse, error) {
+	requestDef := GenReqDefForStartInstanceEnlargeVolumeAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartInstanceEnlargeVolumeActionResponse), nil
+	}
+}
+
+//配置主实例容灾能力。
+func (c *RdsClient) StartInstanceMasterDrAction(request *model.StartInstanceMasterDrActionRequest) (*model.StartInstanceMasterDrActionResponse, error) {
+	requestDef := GenReqDefForStartInstanceMasterDrAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartInstanceMasterDrActionResponse), nil
+	}
+}
+
+//重启数据库实例。
+func (c *RdsClient) StartInstanceRestartAction(request *model.StartInstanceRestartActionRequest) (*model.StartInstanceRestartActionResponse, error) {
+	requestDef := GenReqDefForStartInstanceRestartAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartInstanceRestartActionResponse), nil
+	}
+}
+
+//单机转主备实例。
+func (c *RdsClient) StartInstanceSingleToHaAction(request *model.StartInstanceSingleToHaActionRequest) (*model.StartInstanceSingleToHaActionResponse, error) {
+	requestDef := GenReqDefForStartInstanceSingleToHaAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartInstanceSingleToHaActionResponse), nil
+	}
+}
+
+//配置灾备实例容灾能力。
+func (c *RdsClient) StartInstanceSlaveDrAction(request *model.StartInstanceSlaveDrActionRequest) (*model.StartInstanceSlaveDrActionResponse, error) {
+	requestDef := GenReqDefForStartInstanceSlaveDrAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartInstanceSlaveDrActionResponse), nil
+	}
+}
+
+//设置回收站策略。
+func (c *RdsClient) StartRecyclePolicy(request *model.StartRecyclePolicyRequest) (*model.StartRecyclePolicyResponse, error) {
+	requestDef := GenReqDefForStartRecyclePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartRecyclePolicyResponse), nil
+	}
+}
+
+//变更数据库实例的规格。
+func (c *RdsClient) StartResizeFlavorAction(request *model.StartResizeFlavorActionRequest) (*model.StartResizeFlavorActionResponse, error) {
+	requestDef := GenReqDefForStartResizeFlavorAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartResizeFlavorActionResponse), nil
+	}
+}
+
+//设置SSL数据加密。
 func (c *RdsClient) SwitchSsl(request *model.SwitchSslRequest) (*model.SwitchSslResponse, error) {
 	requestDef := GenReqDefForSwitchSsl()
 
@@ -580,6 +701,17 @@ func (c *RdsClient) UpdateDataIp(request *model.UpdateDataIpRequest) (*model.Upd
 	}
 }
 
+//修改域名
+func (c *RdsClient) UpdateDnsName(request *model.UpdateDnsNameRequest) (*model.UpdateDnsNameResponse, error) {
+	requestDef := GenReqDefForUpdateDnsName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDnsNameResponse), nil
+	}
+}
+
 //修改指定实例的参数。
 func (c *RdsClient) UpdateInstanceConfiguration(request *model.UpdateInstanceConfigurationRequest) (*model.UpdateInstanceConfigurationResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceConfiguration()
@@ -588,6 +720,17 @@ func (c *RdsClient) UpdateInstanceConfiguration(request *model.UpdateInstanceCon
 		return nil, err
 	} else {
 		return resp.(*model.UpdateInstanceConfigurationResponse), nil
+	}
+}
+
+//修改实例名称。
+func (c *RdsClient) UpdateInstanceName(request *model.UpdateInstanceNameRequest) (*model.UpdateInstanceNameResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceNameResponse), nil
 	}
 }
 
@@ -720,5 +863,159 @@ func (c *RdsClient) SetDbUserPwd(request *model.SetDbUserPwdRequest) (*model.Set
 		return nil, err
 	} else {
 		return resp.(*model.SetDbUserPwdResponse), nil
+	}
+}
+
+//授权数据库帐号。
+func (c *RdsClient) AllowDbPrivilege(request *model.AllowDbPrivilegeRequest) (*model.AllowDbPrivilegeResponse, error) {
+	requestDef := GenReqDefForAllowDbPrivilege()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AllowDbPrivilegeResponse), nil
+	}
+}
+
+//修改读写分离阈值
+func (c *RdsClient) ChangeTheDelayThreshold(request *model.ChangeTheDelayThresholdRequest) (*model.ChangeTheDelayThresholdResponse, error) {
+	requestDef := GenReqDefForChangeTheDelayThreshold()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeTheDelayThresholdResponse), nil
+	}
+}
+
+//创建数据库。
+func (c *RdsClient) CreatePostgresqlDatabase(request *model.CreatePostgresqlDatabaseRequest) (*model.CreatePostgresqlDatabaseResponse, error) {
+	requestDef := GenReqDefForCreatePostgresqlDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePostgresqlDatabaseResponse), nil
+	}
+}
+
+//创建数据库SCHEMA。
+func (c *RdsClient) CreatePostgresqlDatabaseSchema(request *model.CreatePostgresqlDatabaseSchemaRequest) (*model.CreatePostgresqlDatabaseSchemaResponse, error) {
+	requestDef := GenReqDefForCreatePostgresqlDatabaseSchema()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePostgresqlDatabaseSchemaResponse), nil
+	}
+}
+
+//创建数据库用户。
+func (c *RdsClient) CreatePostgresqlDbUser(request *model.CreatePostgresqlDbUserRequest) (*model.CreatePostgresqlDbUserResponse, error) {
+	requestDef := GenReqDefForCreatePostgresqlDbUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePostgresqlDbUserResponse), nil
+	}
+}
+
+//查询数据库SCHEMA列表。
+func (c *RdsClient) ListPostgresqlDatabaseSchemas(request *model.ListPostgresqlDatabaseSchemasRequest) (*model.ListPostgresqlDatabaseSchemasResponse, error) {
+	requestDef := GenReqDefForListPostgresqlDatabaseSchemas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPostgresqlDatabaseSchemasResponse), nil
+	}
+}
+
+//查询数据库列表。
+func (c *RdsClient) ListPostgresqlDatabases(request *model.ListPostgresqlDatabasesRequest) (*model.ListPostgresqlDatabasesResponse, error) {
+	requestDef := GenReqDefForListPostgresqlDatabases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPostgresqlDatabasesResponse), nil
+	}
+}
+
+//查询数据库用户列表。
+func (c *RdsClient) ListPostgresqlDbUserPaginated(request *model.ListPostgresqlDbUserPaginatedRequest) (*model.ListPostgresqlDbUserPaginatedResponse, error) {
+	requestDef := GenReqDefForListPostgresqlDbUserPaginated()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPostgresqlDbUserPaginatedResponse), nil
+	}
+}
+
+//重置数据库帐号密码。
+func (c *RdsClient) SetPostgresqlDbUserPwd(request *model.SetPostgresqlDbUserPwdRequest) (*model.SetPostgresqlDbUserPwdResponse, error) {
+	requestDef := GenReqDefForSetPostgresqlDbUserPwd()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetPostgresqlDbUserPwdResponse), nil
+	}
+}
+
+//查询数据库代理信息
+func (c *RdsClient) ShowInformationAboutDatabaseProxy(request *model.ShowInformationAboutDatabaseProxyRequest) (*model.ShowInformationAboutDatabaseProxyResponse, error) {
+	requestDef := GenReqDefForShowInformationAboutDatabaseProxy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInformationAboutDatabaseProxyResponse), nil
+	}
+}
+
+//开启数据库代理
+func (c *RdsClient) StartDatabaseProxy(request *model.StartDatabaseProxyRequest) (*model.StartDatabaseProxyResponse, error) {
+	requestDef := GenReqDefForStartDatabaseProxy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartDatabaseProxyResponse), nil
+	}
+}
+
+//关闭数据库代理
+func (c *RdsClient) StopDatabaseProxy(request *model.StopDatabaseProxyRequest) (*model.StopDatabaseProxyResponse, error) {
+	requestDef := GenReqDefForStopDatabaseProxy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopDatabaseProxyResponse), nil
+	}
+}
+
+//修改实例备注信息。
+func (c *RdsClient) UpdatePostgresqlInstanceAlias(request *model.UpdatePostgresqlInstanceAliasRequest) (*model.UpdatePostgresqlInstanceAliasResponse, error) {
+	requestDef := GenReqDefForUpdatePostgresqlInstanceAlias()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePostgresqlInstanceAliasResponse), nil
+	}
+}
+
+//修改读写分离权重
+func (c *RdsClient) UpdateReadWeight(request *model.UpdateReadWeightRequest) (*model.UpdateReadWeightResponse, error) {
+	requestDef := GenReqDefForUpdateReadWeight()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateReadWeightResponse), nil
 	}
 }

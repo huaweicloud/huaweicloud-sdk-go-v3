@@ -13,7 +13,7 @@ type ListIssueRequestV4 struct {
 	CreatorIds *[]int32 `json:"creator_ids,omitempty"`
 	// 开发人id,对应用户信息的数字id
 	DeveloperIds *[]int32 `json:"developer_ids,omitempty"`
-	// id, 领域 14, '性能', 15, '功能', 16, '可靠性' 17, '网络安全' 18, '可维护性' 19, '其他DFX' 20, '可用性'
+	// id, 领域, 14 '性能', 15 '功能', 16 '可靠性', 17 '网络安全', 18 '可维护性', 19 '其他DFX', 20 '可用性',
 	DomainIds *[]int32 `json:"domain_ids,omitempty"`
 	// 完成度
 	DoneRatios *[]int32 `json:"done_ratios,omitempty"`
@@ -21,17 +21,17 @@ type ListIssueRequestV4 struct {
 	IterationIds *[]int32 `json:"iteration_ids,omitempty"`
 	// 每页显示数量
 	Limit *int32 `json:"limit,omitempty"`
+	// 分页索引，偏移量，offset是limit的整数倍数，limit=10,offset=0,10,20...
+	Offset *int32 `json:"offset,omitempty"`
 	// 模块id
 	ModuleIds *[]int32 `json:"module_ids,omitempty"`
-	// 分页索引，偏移量
-	Offset *int32 `json:"offset,omitempty"`
 	// 优先级
 	PriorityIds *[]int32 `json:"priority_ids,omitempty"`
 	// 查询类型 backlog feature epic
 	QueryType *string `json:"query_type,omitempty"`
 	// 查询类型
 	SeverityIds *[]int32 `json:"severity_ids,omitempty"`
-	// 状态   id 开始   1 进行中 2 已解决 3 测试中 4 已关闭 5 已解决 6
+	// 状态   id, 开始   1, 进行中 2, 已解决 3, 测试中 4, 已关闭 5, 已解决 6,
 	StatusIds *[]int32 `json:"status_ids,omitempty"`
 	// 故事点id
 	StoryPointIds *[]int32 `json:"story_point_ids,omitempty"`

@@ -8,9 +8,8 @@ import (
 
 // Request Object
 type CreateConsumerGroupRequest struct {
-	ProjectId string                  `json:"project_id"`
-	QueueId   string                  `json:"queue_id"`
-	Body      *CreateConsumerGroupReq `json:"body,omitempty"`
+	QueueId string                  `json:"queue_id"`
+	Body    *CreateConsumerGroupReq `json:"body,omitempty"`
 }
 
 func (o CreateConsumerGroupRequest) String() string {

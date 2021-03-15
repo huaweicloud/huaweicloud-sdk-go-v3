@@ -42,7 +42,7 @@ type CreateDependencyRequestBodyRuntimeEnum struct {
 	NODE_JS_10_16   CreateDependencyRequestBodyRuntime
 	NODE_JS_12_13   CreateDependencyRequestBodyRuntime
 	PYTHON_2_7      CreateDependencyRequestBodyRuntime
-	_PYTHON_3_6     CreateDependencyRequestBodyRuntime
+	PYTHON_3_6      CreateDependencyRequestBodyRuntime
 	GO_1_8          CreateDependencyRequestBodyRuntime
 	C__NET_CORE_2_0 CreateDependencyRequestBodyRuntime
 	C__NET_CORE_2_1 CreateDependencyRequestBodyRuntime
@@ -70,8 +70,8 @@ func GetCreateDependencyRequestBodyRuntimeEnum() CreateDependencyRequestBodyRunt
 		PYTHON_2_7: CreateDependencyRequestBodyRuntime{
 			value: "Python 2.7",
 		},
-		_PYTHON_3_6: CreateDependencyRequestBodyRuntime{
-			value: "  Python 3.6",
+		PYTHON_3_6: CreateDependencyRequestBodyRuntime{
+			value: "Python 3.6",
 		},
 		GO_1_8: CreateDependencyRequestBodyRuntime{
 			value: "Go 1.8",

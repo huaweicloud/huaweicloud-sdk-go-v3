@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type CancelingAuthorizationV2Request struct {
-	ProjectId  string `json:"project_id"`
 	InstanceId string `json:"instance_id"`
 	AppAuthId  string `json:"app_auth_id"`
 }

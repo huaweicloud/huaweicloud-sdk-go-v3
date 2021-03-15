@@ -30,7 +30,7 @@ func (c *DdsClient) AddShardingNode(request *model.AddShardingNodeRequest) (*mod
 	}
 }
 
-//绑定节点的公网IP
+//为实例下的节点绑定弹性公网IP。
 func (c *DdsClient) AttachEip(request *model.AttachEipRequest) (*model.AttachEipResponse, error) {
 	requestDef := GenReqDefForAttachEip()
 
@@ -41,7 +41,7 @@ func (c *DdsClient) AttachEip(request *model.AttachEipRequest) (*model.AttachEip
 	}
 }
 
-//修改实例内网IP
+//修改实例的内网地址
 func (c *DdsClient) AttachInternalIp(request *model.AttachInternalIpRequest) (*model.AttachInternalIpResponse, error) {
 	requestDef := GenReqDefForAttachInternalIp()
 
@@ -63,7 +63,7 @@ func (c *DdsClient) BatchTagAction(request *model.BatchTagActionRequest) (*model
 	}
 }
 
-//节点解绑公网IP
+//解绑实例下节点已经绑定的弹性公网IP。
 func (c *DdsClient) CancelEip(request *model.CancelEipRequest) (*model.CancelEipResponse, error) {
 	requestDef := GenReqDefForCancelEip()
 
@@ -74,7 +74,7 @@ func (c *DdsClient) CancelEip(request *model.CancelEipRequest) (*model.CancelEip
 	}
 }
 
-//检查数据库用户密码。
+//检查数据库密码。
 func (c *DdsClient) CheckPassword(request *model.CheckPasswordRequest) (*model.CheckPasswordResponse, error) {
 	requestDef := GenReqDefForCheckPassword()
 
@@ -107,7 +107,7 @@ func (c *DdsClient) CreateDatabaseUser(request *model.CreateDatabaseUserRequest)
 	}
 }
 
-//创建文档数据库实例/恢复到新实例，包括集群实例、副本集实例、以及单节点实例。
+//创建文档数据库实例，包括集群实例、副本集实例、以及单节点实例。
 func (c *DdsClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
 	requestDef := GenReqDefForCreateInstance()
 
@@ -162,6 +162,17 @@ func (c *DdsClient) DeleteManualBackup(request *model.DeleteManualBackupRequest)
 	}
 }
 
+//终结实例节点会话。
+func (c *DdsClient) DeleteSession(request *model.DeleteSessionRequest) (*model.DeleteSessionResponse, error) {
+	requestDef := GenReqDefForDeleteSession()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSessionResponse), nil
+	}
+}
+
 //获取错误日志下载链接。
 func (c *DdsClient) DownloadErrorlog(request *model.DownloadErrorlogRequest) (*model.DownloadErrorlogResponse, error) {
 	requestDef := GenReqDefForDownloadErrorlog()
@@ -184,7 +195,7 @@ func (c *DdsClient) DownloadSlowlog(request *model.DownloadSlowlogRequest) (*mod
 	}
 }
 
-//生成审计日志下载链接。
+//获取审计日志下载链接。
 func (c *DdsClient) ListAuditlogLinks(request *model.ListAuditlogLinksRequest) (*model.ListAuditlogLinksResponse, error) {
 	requestDef := GenReqDefForListAuditlogLinks()
 
@@ -349,6 +360,17 @@ func (c *DdsClient) ListRestoreTimes(request *model.ListRestoreTimesRequest) (*m
 	}
 }
 
+//查询实例节点会话。
+func (c *DdsClient) ListSessions(request *model.ListSessionsRequest) (*model.ListSessionsResponse, error) {
+	requestDef := GenReqDefForListSessions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSessionsResponse), nil
+	}
+}
+
 //查询数据库慢日志信息。
 func (c *DdsClient) ListSlowLogs(request *model.ListSlowLogsRequest) (*model.ListSlowLogsResponse, error) {
 	requestDef := GenReqDefForListSlowLogs()
@@ -437,6 +459,17 @@ func (c *DdsClient) RestoreInstanceFromCollection(request *model.RestoreInstance
 	}
 }
 
+//根据备份恢复新实例。
+func (c *DdsClient) RestoreNewInstance(request *model.RestoreNewInstanceRequest) (*model.RestoreNewInstanceResponse, error) {
+	requestDef := GenReqDefForRestoreNewInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreNewInstanceResponse), nil
+	}
+}
+
 //设置审计日志策略。
 func (c *DdsClient) SetAuditlogPolicy(request *model.SetAuditlogPolicyRequest) (*model.SetAuditlogPolicyResponse, error) {
 	requestDef := GenReqDefForSetAuditlogPolicy()
@@ -492,7 +525,7 @@ func (c *DdsClient) ShowBackupPolicy(request *model.ShowBackupPolicyRequest) (*m
 	}
 }
 
-//切换mongodb实例的SSL开关
+//切换实例的SSL开关
 func (c *DdsClient) SwitchSsl(request *model.SwitchSslRequest) (*model.SwitchSslResponse, error) {
 	requestDef := GenReqDefForSwitchSsl()
 
@@ -503,7 +536,7 @@ func (c *DdsClient) SwitchSsl(request *model.SwitchSslRequest) (*model.SwitchSsl
 	}
 }
 
-//副本集主备倒换
+//切换副本集实例下的主备节点
 func (c *DdsClient) SwitchoverReplicaSet(request *model.SwitchoverReplicaSetRequest) (*model.SwitchoverReplicaSetResponse, error) {
 	requestDef := GenReqDefForSwitchoverReplicaSet()
 
@@ -525,7 +558,7 @@ func (c *DdsClient) UpdateInstanceName(request *model.UpdateInstanceNameRequest)
 	}
 }
 
-//修改实例端口
+//修改数据库实例的端口。
 func (c *DdsClient) UpdateInstancePort(request *model.UpdateInstancePortRequest) (*model.UpdateInstancePortResponse, error) {
 	requestDef := GenReqDefForUpdateInstancePort()
 
@@ -536,7 +569,7 @@ func (c *DdsClient) UpdateInstancePort(request *model.UpdateInstancePortRequest)
 	}
 }
 
-//修改实例的安全组
+//变更实例关联的安全组
 func (c *DdsClient) UpdateSecurityGroup(request *model.UpdateSecurityGroupRequest) (*model.UpdateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForUpdateSecurityGroup()
 

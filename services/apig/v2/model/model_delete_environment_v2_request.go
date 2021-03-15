@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type DeleteEnvironmentV2Request struct {
-	ProjectId  string `json:"project_id"`
 	InstanceId string `json:"instance_id"`
 	EnvId      string `json:"env_id"`
 }

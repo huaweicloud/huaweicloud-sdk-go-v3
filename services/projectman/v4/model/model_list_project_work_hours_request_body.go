@@ -19,7 +19,7 @@ type ListProjectWorkHoursRequestBody struct {
 	BeginTime *string `json:"begin_time,omitempty"`
 	// 工时结束日期，年-月-日
 	EndTime *string `json:"end_time,omitempty"`
-	// 偏移量
+	// 偏移量,offset是limit的整数倍，limit=10,offset=0,10,20...
 	Offset int32 `json:"offset"`
 	// 每页显示数量，每页最多显示100条
 	Limit int32 `json:"limit"`

@@ -1,0 +1,23 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// Response Object
+type AllowDbPrivilegeResponse struct {
+	// 操作结果。
+	Resp           *string `json:"resp,omitempty"`
+	HttpStatusCode int     `json:"-"`
+}
+
+func (o AllowDbPrivilegeResponse) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "AllowDbPrivilegeResponse struct{}"
+	}
+
+	return strings.Join([]string{"AllowDbPrivilegeResponse", string(data)}, " ")
+}

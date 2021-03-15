@@ -15,7 +15,7 @@ type ListSlowlogStatisticsRequest struct {
 	PerPage    int32                                  `json:"per_page"`
 	StartDate  string                                 `json:"start_date"`
 	EndDate    string                                 `json:"end_date"`
-	Type       ListSlowlogStatisticsRequestType       `json:"type"`
+	Type       *ListSlowlogStatisticsRequestType      `json:"type,omitempty"`
 }
 
 func (o ListSlowlogStatisticsRequest) String() string {

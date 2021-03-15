@@ -8,7 +8,6 @@ import (
 
 // Request Object
 type DeleteApiV2Request struct {
-	ProjectId  string `json:"project_id"`
 	InstanceId string `json:"instance_id"`
 	ApiId      string `json:"api_id"`
 }
