@@ -155,8 +155,8 @@ There are two types of Huawei Cloud services, `regional` services and `global` s
 
 Global services contain BSS, DevStar, EPS, IAM, RMS.
 
-For `Regional` services' authentication, projectId is required. For `global` services' authentication, domainId is
-required.
+For `regional` services' authentication, projectId is required to initialize basic.NewCredentialsBuilder(). For `global`
+services' authentication, domainId is required to initialize global.NewCredentialsBuilder().
 
 `Parameter description`:
 
@@ -187,10 +187,13 @@ globalCredentials := global.NewCredentialsBuilder().
     Build()
 ```
 
-**Notice**: projectId/domainId supports **automatic acquisition** in version `0.0.26-beta` or later, if you want to use
-this feature, it's required to build your client instance with method `WithRegion()`, detailed example could refer
-to [3.2  Initialize client with specified Region](#32-initialize-the-serviceclient-with-specified-region-recommended-top)
-.
+**Notice**:
+
+- projectId/domainId supports **automatic acquisition** in version `0.0.26-beta` or later, if you want to use this
+  feature, you need to provide the ak and sk of your account and the id of the region, and then build your client
+  instance with method `WithRegion()`, detailed example could refer
+  to [3.2  Initialize client with specified Region](#32-initialize-the-serviceclient-with-specified-region-recommended-top)
+  .
 
 #### 2.2 Use Temporary AK&SK [:top:](#user-manual-top)
 
@@ -230,7 +233,17 @@ There are two ways to initialize the {Service}Client, you could choose one you p
 #### 3.1 Initialize the {Service}Client with specified Endpoint [:top:](#user-manual-top)
 
 ``` go
-// Initialize specified New{Service}Client, take NewVpcClient for example
+// Specify the endpoint, take the endpoint of VPC service in region of cn-north-4 for example
+endpoint := "https://vpc.cn-north-4.myhuaweicloud.com"
+
+// Initialize the credentials, you should provide projectId or domainId in this way, take initializing BasicCredentials for example
+basicAuth := basic.NewCredentialsBuilder().
+    WithAk(ak).
+    WithSk(sk).
+    WithProjectId(projectId).
+    Build()
+
+// Initialize specified New{Service}Client, take initializing the regional service VPC's VpcClient for example
 client := vpc.NewVpcClient(
     vpc.VpcClientBuilder().
         WithEndpoint(endpoint).
@@ -244,6 +257,8 @@ client := vpc.NewVpcClient(
 - `endpoint` varies with services and regions,
   see [Regions and Endpoints](https://developer.huaweicloud.com/intl/en-us/endpoint) to obtain correct endpoint.
 
+- When you meet some trouble in getting projectId using the specified region way, you could use this way instead.
+
 #### 3.2 Initialize the {Service}Client with specified Region **(Recommended)** [:top:](#user-manual-top)
 
 ``` go
@@ -252,13 +267,14 @@ import (
     "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iam/v3/region"
 )
 
+// Initialize the credentials, projectId or domainId could be unassigned in this situation, take initializing GlobalCredentials for example
 globalCredentials := global.NewCredentialsBuilder().
     WithAk(ak).
     WithSk(sk).
     // domainId could be unassigned in this situation
     Build()
 
-// Initialize specified New{Service}Client, take NewIamClient for example
+// Initialize specified New{Service}Client, take initializing the global service IAM's NewIamClient for example
 client := iam.NewIamClient(
     iam.IamClientBuilder().
         WithRegion(region.CN_NORTH_4).
@@ -271,7 +287,19 @@ client := iam.NewIamClient(
 
 - If you use `region` to initialize {Service}Client, projectId/domainId supports automatic acquisition, you don't need
   to configure it when initializing Credentials.
-- Multiple ProjectId situation is not supported.
+
+- Multiple ProjectId situation is **not supported**.
+
+- Supported region list: af-south-1, ap-southeast-1, ap-southeast-2, ap-southeast-3, cn-east-2, cn-east-3, cn-north-1,
+  cn-north-4, cn-south-1, cn-southwest-2, ru-northwest-2. You may get exception such as `Unsupported regionId` if your
+  region don't in the list above.
+
+**Comparison of the two ways:**
+
+| Initialization | Advantages | Disadvantage |
+| :---- | :---- | :---- |
+| Specified Endpoint | The API can be invoked successfully once it has been published in the environment. | You need to prepare projectId and endpoint yourself.
+| Specified Region | No need for projectId and endpoint, it supports automatic acquisition if you configure it in the right way. | The supported services and regions are limited.
 
 ### 4. Send Requests and Handle Responses [:top:](#user-manual-top)
 
