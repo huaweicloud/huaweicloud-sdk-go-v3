@@ -8,11 +8,15 @@ import (
 
 // Request Object
 type ListLiveStreamsOnlineRequest struct {
-	PublishDomain string  `json:"publish_domain"`
-	App           *string `json:"app,omitempty"`
-	Offset        *int32  `json:"offset,omitempty"`
-	Limit         *int32  `json:"limit,omitempty"`
-	Stream        *string `json:"stream,omitempty"`
+	PublishDomain string `json:"publish_domain"`
+
+	App *string `json:"app,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Stream *string `json:"stream,omitempty"`
 }
 
 func (o ListLiveStreamsOnlineRequest) String() string {

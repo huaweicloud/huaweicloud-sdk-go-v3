@@ -2,28 +2,44 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListTagsRequest struct {
-	Limit               *int32                         `json:"limit,omitempty"`
-	Page                *int32                         `json:"page,omitempty"`
-	Imagetype           *ListTagsRequestImagetype      `json:"__imagetype,omitempty"`
-	Id                  *string                        `json:"id,omitempty"`
-	Status              *ListTagsRequestStatus         `json:"status,omitempty"`
-	Name                *string                        `json:"name,omitempty"`
-	MinDisk             *int32                         `json:"min_disk,omitempty"`
-	Platform            *string                        `json:"__platform,omitempty"`
-	OsType              *ListTagsRequestOsType         `json:"__os_type,omitempty"`
-	MemberStatus        *ListTagsRequestMemberStatus   `json:"member_status,omitempty"`
-	VirtualEnvType      *ListTagsRequestVirtualEnvType `json:"virtual_env_type,omitempty"`
-	EnterpriseProjectId *string                        `json:"enterprise_project_id,omitempty"`
-	Architecture        *ListTagsRequestArchitecture   `json:"architecture,omitempty"`
-	CreatedAt           *string                        `json:"created_at,omitempty"`
-	UpdatedAt           *string                        `json:"updated_at,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
+
+	Page *int32 `json:"page,omitempty"`
+
+	Imagetype *ListTagsRequestImagetype `json:"__imagetype,omitempty"`
+
+	Id *string `json:"id,omitempty"`
+
+	Status *ListTagsRequestStatus `json:"status,omitempty"`
+
+	Name *string `json:"name,omitempty"`
+
+	MinDisk *int32 `json:"min_disk,omitempty"`
+
+	Platform *string `json:"__platform,omitempty"`
+
+	OsType *ListTagsRequestOsType `json:"__os_type,omitempty"`
+
+	MemberStatus *ListTagsRequestMemberStatus `json:"member_status,omitempty"`
+
+	VirtualEnvType *ListTagsRequestVirtualEnvType `json:"virtual_env_type,omitempty"`
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	Architecture *ListTagsRequestArchitecture `json:"architecture,omitempty"`
+
+	CreatedAt *string `json:"created_at,omitempty"`
+
+	UpdatedAt *string `json:"updated_at,omitempty"`
 }
 
 func (o ListTagsRequest) String() string {

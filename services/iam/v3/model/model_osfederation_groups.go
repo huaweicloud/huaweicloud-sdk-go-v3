@@ -9,8 +9,10 @@ import (
 //
 type OsfederationGroups struct {
 	// 用户组ID。
+
 	Id string `json:"id"`
 	// 用户组名称。
+
 	Name string `json:"name"`
 }
 

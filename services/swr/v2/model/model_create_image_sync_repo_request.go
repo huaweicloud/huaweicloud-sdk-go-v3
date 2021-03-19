@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type CreateImageSyncRepoRequest struct {
 	ContentType CreateImageSyncRepoRequestContentType `json:"Content-Type"`
-	Namespace   string                                `json:"namespace"`
-	Repository  string                                `json:"repository"`
-	Body        *CreateImageSyncRepoRequestBody       `json:"body,omitempty"`
+
+	Namespace string `json:"namespace"`
+
+	Repository string `json:"repository"`
+
+	Body *CreateImageSyncRepoRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateImageSyncRepoRequest) String() string {

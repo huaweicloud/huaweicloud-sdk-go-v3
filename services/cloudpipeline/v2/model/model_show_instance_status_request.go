@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowInstanceStatusRequest struct {
 	XLanguage *string `json:"X-Language,omitempty"`
-	TaskId    string  `json:"task_id"`
+
+	TaskId string `json:"task_id"`
 }
 
 func (o ShowInstanceStatusRequest) String() string {

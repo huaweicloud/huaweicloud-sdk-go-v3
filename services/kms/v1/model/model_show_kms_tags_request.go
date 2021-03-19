@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowKmsTagsRequest struct {
 	VersionId string `json:"version_id"`
-	KeyId     string `json:"key_id"`
+
+	KeyId string `json:"key_id"`
 }
 
 func (o ShowKmsTagsRequest) String() string {

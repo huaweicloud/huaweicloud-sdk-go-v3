@@ -9,8 +9,10 @@ import (
 // Response Object
 type CreateAccessCodeResponse struct {
 	// 接入名，随机生成8位字符串
+
 	AccessKey *string `json:"access_key,omitempty"`
 	// 接入凭证。
+
 	AccessCode     *string `json:"access_code,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

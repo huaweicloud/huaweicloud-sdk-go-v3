@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateIpWhitelistRequest struct {
-	InstanceId string                 `json:"instance_id"`
-	Body       *ModifyIpWhitelistBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *ModifyIpWhitelistBody `json:"body,omitempty"`
 }
 
 func (o UpdateIpWhitelistRequest) String() string {

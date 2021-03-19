@@ -7,12 +7,18 @@ import (
 )
 
 type JobInstance struct {
-	JobName     *string `json:"jobName,omitempty"`
-	Status      *string `json:"status,omitempty"`
-	PlanTime    *int32  `json:"planTime,omitempty"`
-	StartTime   *int32  `json:"startTime,omitempty"`
-	EndTime     *int32  `json:"endTime,omitempty"`
-	ExecuteTime *int32  `json:"executeTime,omitempty"`
+	JobName *string `json:"jobName,omitempty"`
+
+	Status *string `json:"status,omitempty"`
+
+	PlanTime *int32 `json:"planTime,omitempty"`
+
+	StartTime *int32 `json:"startTime,omitempty"`
+
+	EndTime *int32 `json:"endTime,omitempty"`
+
+	ExecuteTime *int32 `json:"executeTime,omitempty"`
+
 	InstancesId *string `json:"instancesId,omitempty"`
 }
 

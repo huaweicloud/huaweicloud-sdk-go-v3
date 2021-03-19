@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ShowPublicipRequest struct {
-	PublicipId string    `json:"publicip_id"`
-	Fields     *[]string `json:"fields,omitempty"`
+	PublicipId string `json:"publicip_id"`
+
+	Fields *[]string `json:"fields,omitempty"`
 }
 
 func (o ShowPublicipRequest) String() string {

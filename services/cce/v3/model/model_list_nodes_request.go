@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type ListNodesRequest struct {
-	ClusterId   string  `json:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
+
 	ErrorStatus *string `json:"errorStatus,omitempty"`
 }
 

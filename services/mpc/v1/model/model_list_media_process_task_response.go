@@ -9,10 +9,13 @@ import (
 // Response Object
 type ListMediaProcessTaskResponse struct {
 	// 任务列表
+
 	TaskArray *[]MediaProcessTaskInfo `json:"task_array,omitempty"`
 	// 是否截断
+
 	IsTruncated *int32 `json:"is_truncated,omitempty"`
 	// 任务总数
+
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -9,10 +9,13 @@ import (
 // Response Object
 type ListRuleActionsResponse struct {
 	// 规则动作信息列表。
+
 	Actions *[]RoutingRuleAction `json:"actions,omitempty"`
 	// 满足查询条件的记录总数。
+
 	Count *int32 `json:"count,omitempty"`
 	// 本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
+
 	Marker         *string `json:"marker,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

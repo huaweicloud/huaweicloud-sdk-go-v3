@@ -8,13 +8,19 @@ import (
 
 // Request Object
 type ListProjectsV4Request struct {
-	Offset      int32   `json:"offset"`
-	Limit       int32   `json:"limit"`
-	Search      *string `json:"search,omitempty"`
+	Offset int32 `json:"offset"`
+
+	Limit int32 `json:"limit"`
+
+	Search *string `json:"search,omitempty"`
+
 	ProjectType *string `json:"project_type,omitempty"`
-	Sort        *string `json:"sort,omitempty"`
-	Archive     *string `json:"archive,omitempty"`
-	QueryType   *string `json:"query_type,omitempty"`
+
+	Sort *string `json:"sort,omitempty"`
+
+	Archive *string `json:"archive,omitempty"`
+
+	QueryType *string `json:"query_type,omitempty"`
 }
 
 func (o ListProjectsV4Request) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type BatchShowPipelinesStatusRequest struct {
-	XLanguage   *string `json:"X-Language,omitempty"`
-	PipelineIds string  `json:"pipeline_ids"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	PipelineIds string `json:"pipeline_ids"`
 }
 
 func (o BatchShowPipelinesStatusRequest) String() string {

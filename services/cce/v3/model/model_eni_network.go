@@ -9,8 +9,10 @@ import (
 // ENI网络配置，创建集群指定使用Yangtse网络模式时必填。
 type EniNetwork struct {
 	// ENI子网CIDR
+
 	EniSubnetCIDR string `json:"eniSubnetCIDR"`
 	// eni子网ID
+
 	EniSubnetId string `json:"eniSubnetId"`
 }
 

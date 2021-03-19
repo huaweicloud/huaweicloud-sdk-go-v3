@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateListenerRequest struct {
-	ListenerId string                     `json:"listener_id"`
-	Body       *UpdateListenerRequestBody `json:"body,omitempty"`
+	ListenerId string `json:"listener_id"`
+
+	Body *UpdateListenerRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateListenerRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateConnectorRequest struct {
-	InstanceId string              `json:"instance_id"`
-	Body       *CreateConnectorReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *CreateConnectorReq `json:"body,omitempty"`
 }
 
 func (o CreateConnectorRequest) String() string {

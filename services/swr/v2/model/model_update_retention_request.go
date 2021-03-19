@@ -2,18 +2,24 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type UpdateRetentionRequest struct {
 	ContentType UpdateRetentionRequestContentType `json:"Content-Type"`
-	Namespace   string                            `json:"namespace"`
-	Repository  string                            `json:"repository"`
-	RetentionId int32                             `json:"retention_id"`
-	Body        *UpdateRetentionRequestBody       `json:"body,omitempty"`
+
+	Namespace string `json:"namespace"`
+
+	Repository string `json:"repository"`
+
+	RetentionId int32 `json:"retention_id"`
+
+	Body *UpdateRetentionRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateRetentionRequest) String() string {

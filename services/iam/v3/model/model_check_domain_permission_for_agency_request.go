@@ -9,8 +9,10 @@ import (
 // Request Object
 type CheckDomainPermissionForAgencyRequest struct {
 	DomainId string `json:"domain_id"`
+
 	AgencyId string `json:"agency_id"`
-	RoleId   string `json:"role_id"`
+
+	RoleId string `json:"role_id"`
 }
 
 func (o CheckDomainPermissionForAgencyRequest) String() string {

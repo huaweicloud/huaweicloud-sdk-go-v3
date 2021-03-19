@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type PublishAppMessageRequest struct {
-	EndpointUrn string                        `json:"endpoint_urn"`
-	Body        *PublishAppMessageRequestBody `json:"body,omitempty"`
+	EndpointUrn string `json:"endpoint_urn"`
+
+	Body *PublishAppMessageRequestBody `json:"body,omitempty"`
 }
 
 func (o PublishAppMessageRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateInstanceBy3rdRequest struct {
-	InstanceLabel *string            `json:"instance_label,omitempty"`
-	Body          *InstanceEdgeParam `json:"body,omitempty"`
+	InstanceLabel *string `json:"instance_label,omitempty"`
+
+	Body *InstanceEdgeParam `json:"body,omitempty"`
 }
 
 func (o CreateInstanceBy3rdRequest) String() string {

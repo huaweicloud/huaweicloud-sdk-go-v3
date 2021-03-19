@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListEnterpriseProjectResponse struct {
 	// 企业项目列表
+
 	EnterpriseProjects *[]EpDetail `json:"enterprise_projects,omitempty"`
 	// 企业项目总数
+
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

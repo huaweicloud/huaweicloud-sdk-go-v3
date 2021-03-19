@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteLoadbalancerRequest struct {
 	LoadbalancerId string `json:"loadbalancer_id"`
-	Cascade        *bool  `json:"cascade,omitempty"`
+
+	Cascade *bool `json:"cascade,omitempty"`
 }
 
 func (o DeleteLoadbalancerRequest) String() string {

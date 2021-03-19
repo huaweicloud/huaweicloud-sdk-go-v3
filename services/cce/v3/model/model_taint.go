@@ -2,18 +2,23 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 如下字段不可使用：  - node.kubernetes.io/memory-pressure - node.kubernetes.io/disk-pressure - node.kubernetes.io/out-of-disk - node.kubernetes.io/unschedulable - node.kubernetes.io/network-unavailable
 type Taint struct {
 	// 作用效果
+
 	Effect *TaintEffect `json:"effect,omitempty"`
 	// 键
+
 	Key *string `json:"key,omitempty"`
 	// 值
+
 	Value *string `json:"value,omitempty"`
 }
 

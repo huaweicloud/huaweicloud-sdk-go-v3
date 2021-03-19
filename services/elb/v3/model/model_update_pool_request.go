@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdatePoolRequest struct {
-	PoolId string                 `json:"pool_id"`
-	Body   *UpdatePoolRequestBody `json:"body,omitempty"`
+	PoolId string `json:"pool_id"`
+
+	Body *UpdatePoolRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdatePoolRequest) String() string {

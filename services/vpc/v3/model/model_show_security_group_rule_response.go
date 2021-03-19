@@ -9,7 +9,9 @@ import (
 // Response Object
 type ShowSecurityGroupRuleResponse struct {
 	// 请求ID
-	RequestId         *string            `json:"request_id,omitempty"`
+
+	RequestId *string `json:"request_id,omitempty"`
+
 	SecurityGroupRule *SecurityGroupRule `json:"security_group_rule,omitempty"`
 	HttpStatusCode    int                `json:"-"`
 }

@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type ShowLifeCycleHookRequest struct {
-	ScalingGroupId    string `json:"scaling_group_id"`
+	ScalingGroupId string `json:"scaling_group_id"`
+
 	LifecycleHookName string `json:"lifecycle_hook_name"`
 }
 

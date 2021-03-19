@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateComponentRequest struct {
-	ApplicationId string           `json:"application_id"`
-	Body          *ComponentCreate `json:"body,omitempty"`
+	ApplicationId string `json:"application_id"`
+
+	Body *ComponentCreate `json:"body,omitempty"`
 }
 
 func (o CreateComponentRequest) String() string {

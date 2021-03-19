@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteBatchTaskFileRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	FileId     string  `json:"file_id"`
+
+	FileId string `json:"file_id"`
 }
 
 func (o DeleteBatchTaskFileRequest) String() string {

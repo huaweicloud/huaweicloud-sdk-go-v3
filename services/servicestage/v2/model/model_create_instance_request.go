@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type CreateInstanceRequest struct {
-	ApplicationId string          `json:"application_id"`
-	ComponentId   string          `json:"component_id"`
-	Body          *InstanceCreate `json:"body,omitempty"`
+	ApplicationId string `json:"application_id"`
+
+	ComponentId string `json:"component_id"`
+
+	Body *InstanceCreate `json:"body,omitempty"`
 }
 
 func (o CreateInstanceRequest) String() string {

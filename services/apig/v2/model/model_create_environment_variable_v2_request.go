@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateEnvironmentVariableV2Request struct {
-	InstanceId string          `json:"instance_id"`
-	Body       *EnvVariableReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *EnvVariableReq `json:"body,omitempty"`
 }
 
 func (o CreateEnvironmentVariableV2Request) String() string {

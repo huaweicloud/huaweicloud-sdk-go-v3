@@ -9,7 +9,9 @@ import (
 // 构建工程。
 type BuildInfo struct {
 	// 构建ID，查看构建列表获取。
-	Id         *string              `json:"id,omitempty"`
+
+	Id *string `json:"id,omitempty"`
+
 	Parameters *BuildInfoParameters `json:"parameters,omitempty"`
 }
 

@@ -9,6 +9,7 @@ import (
 // tracker通道配置
 type ChannelConfigBody struct {
 	Smn *TrackerSmnChannelConfigBody `json:"smn,omitempty"`
+
 	Obs *TrackerObsChannelConfigBody `json:"obs,omitempty"`
 }
 

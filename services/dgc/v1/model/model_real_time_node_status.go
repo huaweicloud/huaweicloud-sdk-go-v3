@@ -2,15 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type RealTimeNodeStatus struct {
-	Name     *string                     `json:"name,omitempty"`
-	Status   *RealTimeNodeStatusStatus   `json:"status,omitempty"`
-	LogPath  *string                     `json:"logPath,omitempty"`
+	Name *string `json:"name,omitempty"`
+
+	Status *RealTimeNodeStatusStatus `json:"status,omitempty"`
+
+	LogPath *string `json:"logPath,omitempty"`
+
 	NodeType *RealTimeNodeStatusNodeType `json:"nodeType,omitempty"`
 }
 

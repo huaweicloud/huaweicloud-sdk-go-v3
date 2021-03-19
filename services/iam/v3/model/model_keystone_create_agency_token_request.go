@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type KeystoneCreateAgencyTokenRequest struct {
-	Nocatalog *string                               `json:"nocatalog,omitempty"`
-	Body      *KeystoneCreateAgencyTokenRequestBody `json:"body,omitempty"`
+	Nocatalog *string `json:"nocatalog,omitempty"`
+
+	Body *KeystoneCreateAgencyTokenRequestBody `json:"body,omitempty"`
 }
 
 func (o KeystoneCreateAgencyTokenRequest) String() string {

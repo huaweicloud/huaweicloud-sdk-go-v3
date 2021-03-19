@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type CreateDnsNameRequest struct {
-	XLanguage  *CreateDnsNameRequestXLanguage `json:"X-Language,omitempty"`
-	InstanceId string                         `json:"instance_id"`
-	Body       *CreateDnsNameRequestBody      `json:"body,omitempty"`
+	XLanguage *CreateDnsNameRequestXLanguage `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *CreateDnsNameRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateDnsNameRequest) String() string {

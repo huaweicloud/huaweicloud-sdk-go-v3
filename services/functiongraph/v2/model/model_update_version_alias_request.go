@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateVersionAliasRequest struct {
-	FunctionUrn string                         `json:"function_urn"`
-	Name        string                         `json:"name"`
-	Body        *UpdateVersionAliasRequestBody `json:"body,omitempty"`
+	FunctionUrn string `json:"function_urn"`
+
+	Name string `json:"name"`
+
+	Body *UpdateVersionAliasRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateVersionAliasRequest) String() string {

@@ -2,18 +2,25 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListPredefineTagsRequest struct {
-	Key         *string                              `json:"key,omitempty"`
-	Value       *string                              `json:"value,omitempty"`
-	Limit       *int32                               `json:"limit,omitempty"`
-	Marker      *string                              `json:"marker,omitempty"`
-	OrderField  *string                              `json:"order_field,omitempty"`
+	Key *string `json:"key,omitempty"`
+
+	Value *string `json:"value,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
+
+	OrderField *string `json:"order_field,omitempty"`
+
 	OrderMethod *ListPredefineTagsRequestOrderMethod `json:"order_method,omitempty"`
 }
 

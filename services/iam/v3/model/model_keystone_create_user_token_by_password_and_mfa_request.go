@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type KeystoneCreateUserTokenByPasswordAndMfaRequest struct {
-	Nocatalog *string                                             `json:"nocatalog,omitempty"`
-	Body      *KeystoneCreateUserTokenByPasswordAndMfaRequestBody `json:"body,omitempty"`
+	Nocatalog *string `json:"nocatalog,omitempty"`
+
+	Body *KeystoneCreateUserTokenByPasswordAndMfaRequestBody `json:"body,omitempty"`
 }
 
 func (o KeystoneCreateUserTokenByPasswordAndMfaRequest) String() string {

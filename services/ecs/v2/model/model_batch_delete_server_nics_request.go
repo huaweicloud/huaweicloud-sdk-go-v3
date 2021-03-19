@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type BatchDeleteServerNicsRequest struct {
-	ServerId string                            `json:"server_id"`
-	Body     *BatchDeleteServerNicsRequestBody `json:"body,omitempty"`
+	ServerId string `json:"server_id"`
+
+	Body *BatchDeleteServerNicsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchDeleteServerNicsRequest) String() string {

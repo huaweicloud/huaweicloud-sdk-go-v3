@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteEnvironmentV2Request struct {
 	InstanceId string `json:"instance_id"`
-	EnvId      string `json:"env_id"`
+
+	EnvId string `json:"env_id"`
 }
 
 func (o DeleteEnvironmentV2Request) String() string {

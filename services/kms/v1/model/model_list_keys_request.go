@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ListKeysRequest struct {
-	VersionId string               `json:"version_id"`
-	Body      *ListKeysRequestBody `json:"body,omitempty"`
+	VersionId string `json:"version_id"`
+
+	Body *ListKeysRequestBody `json:"body,omitempty"`
 }
 
 func (o ListKeysRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateApplicationEndpointRequest struct {
-	ApplicationUrn string                                `json:"application_urn"`
-	Body           *CreateApplicationEndpointRequestBody `json:"body,omitempty"`
+	ApplicationUrn string `json:"application_urn"`
+
+	Body *CreateApplicationEndpointRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateApplicationEndpointRequest) String() string {

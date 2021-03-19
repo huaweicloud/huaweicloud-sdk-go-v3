@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type SetAuditlogPolicyRequest struct {
-	XLanguage  *string                       `json:"X-Language,omitempty"`
-	InstanceId string                        `json:"instance_id"`
-	Body       *SetAuditlogPolicyRequestBody `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *SetAuditlogPolicyRequestBody `json:"body,omitempty"`
 }
 
 func (o SetAuditlogPolicyRequest) String() string {

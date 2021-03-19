@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListTranscodeDetailResponse struct {
 	// 转码详情任务组
+
 	TaskArray      *[]TaskDetailInfo `json:"task_array,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

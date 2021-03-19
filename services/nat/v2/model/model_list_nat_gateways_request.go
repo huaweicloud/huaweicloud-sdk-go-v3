@@ -10,18 +10,29 @@ import (
 
 // Request Object
 type ListNatGatewaysRequest struct {
-	TenantId            *string                         `json:"tenant_id,omitempty"`
-	Id                  *string                         `json:"id,omitempty"`
-	EnterpriseProjectId *string                         `json:"enterprise_project_id,omitempty"`
-	Description         *string                         `json:"description,omitempty"`
-	CreatedAt           *sdktime.SdkTime                `json:"created_at,omitempty"`
-	Name                *string                         `json:"name,omitempty"`
-	Status              *[]ListNatGatewaysRequestStatus `json:"status,omitempty"`
-	Spec                *[]ListNatGatewaysRequestSpec   `json:"spec,omitempty"`
-	AdminStateUp        *bool                           `json:"admin_state_up,omitempty"`
-	InternalNetworkId   *string                         `json:"internal_network_id,omitempty"`
-	RouterId            *string                         `json:"router_id,omitempty"`
-	Limit               *int32                          `json:"limit,omitempty"`
+	TenantId *string `json:"tenant_id,omitempty"`
+
+	Id *string `json:"id,omitempty"`
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	Description *string `json:"description,omitempty"`
+
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+
+	Name *string `json:"name,omitempty"`
+
+	Status *[]ListNatGatewaysRequestStatus `json:"status,omitempty"`
+
+	Spec *[]ListNatGatewaysRequestSpec `json:"spec,omitempty"`
+
+	AdminStateUp *bool `json:"admin_state_up,omitempty"`
+
+	InternalNetworkId *string `json:"internal_network_id,omitempty"`
+
+	RouterId *string `json:"router_id,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListNatGatewaysRequest) String() string {

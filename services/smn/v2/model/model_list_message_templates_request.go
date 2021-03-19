@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type ListMessageTemplatesRequest struct {
-	Offset              *int32  `json:"offset,omitempty"`
-	Limit               *int32  `json:"limit,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
 	MessageTemplateName *string `json:"message_template_name,omitempty"`
-	Protocol            string  `json:"protocol"`
+
+	Protocol string `json:"protocol"`
 }
 
 func (o ListMessageTemplatesRequest) String() string {

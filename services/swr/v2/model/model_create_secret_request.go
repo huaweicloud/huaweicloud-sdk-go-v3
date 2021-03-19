@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type CreateSecretRequest struct {
 	ContentType CreateSecretRequestContentType `json:"Content-Type"`
-	Projectname *string                        `json:"projectname,omitempty"`
+
+	Projectname *string `json:"projectname,omitempty"`
 }
 
 func (o CreateSecretRequest) String() string {

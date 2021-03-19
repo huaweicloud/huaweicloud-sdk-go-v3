@@ -8,13 +8,19 @@ import (
 
 // Request Object
 type ListAppsBindedToApiV2Request struct {
-	InstanceId string  `json:"instance_id"`
-	ApiId      *string `json:"api_id,omitempty"`
-	AppName    *string `json:"app_name,omitempty"`
-	AppId      *string `json:"app_id,omitempty"`
-	EnvId      *string `json:"env_id,omitempty"`
-	Offset     *int64  `json:"offset,omitempty"`
-	Limit      *int32  `json:"limit,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	ApiId *string `json:"api_id,omitempty"`
+
+	AppName *string `json:"app_name,omitempty"`
+
+	AppId *string `json:"app_id,omitempty"`
+
+	EnvId *string `json:"env_id,omitempty"`
+
+	Offset *int64 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListAppsBindedToApiV2Request) String() string {

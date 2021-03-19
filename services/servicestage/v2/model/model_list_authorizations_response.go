@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListAuthorizationsResponse struct {
 	// 授权列表。
+
 	Authorizations *[]AuthorizationVo `json:"authorizations,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

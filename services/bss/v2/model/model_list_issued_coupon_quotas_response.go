@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListIssuedCouponQuotasResponse struct {
 	// 查询的记录总数。
+
 	TotalCount *int32 `json:"total_count,omitempty"`
 	// 额度记录列表。 具体请参见表2。
+
 	Quotas         *[]IssuedCouponQuota `json:"quotas,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

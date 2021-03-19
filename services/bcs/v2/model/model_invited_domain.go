@@ -9,6 +9,7 @@ import (
 // 被邀请列表
 type InvitedDomain struct {
 	// 被邀请方租户，hcs模式下是邀请方的租户ID
+
 	InvitedUser string `json:"invited_user"`
 }
 

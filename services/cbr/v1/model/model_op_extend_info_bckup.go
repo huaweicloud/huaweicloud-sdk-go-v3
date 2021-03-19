@@ -2,23 +2,31 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type OpExtendInfoBckup struct {
 	// 应用一致性备份失败错误码。请参见[错误码](ErrorCode.xml)。
+
 	AppConsistencyErrorCode *string `json:"app_consistency_error_code,omitempty"`
 	// 应用一致性备份错误信息
+
 	AppConsistencyErrorMessage *string `json:"app_consistency_error_message,omitempty"`
 	// 应用一致性备份状态；0:非应用一致性，1：应用一致性备份
+
 	AppConsistencyStatus *OpExtendInfoBckupAppConsistencyStatus `json:"app_consistency_status,omitempty"`
 	// 备份副本ID
+
 	BackupId string `json:"backup_id"`
 	// 备份名称
+
 	BackupName *string `json:"backup_name,omitempty"`
 	// 是否增备
+
 	Incremental *OpExtendInfoBckupIncremental `json:"incremental,omitempty"`
 }
 

@@ -2,19 +2,26 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListScalingInstancesRequest struct {
-	ScalingGroupId         string                                             `json:"scaling_group_id"`
-	LifeCycleState         *ListScalingInstancesRequestLifeCycleState         `json:"life_cycle_state,omitempty"`
-	HealthStatus           *ListScalingInstancesRequestHealthStatus           `json:"health_status,omitempty"`
+	ScalingGroupId string `json:"scaling_group_id"`
+
+	LifeCycleState *ListScalingInstancesRequestLifeCycleState `json:"life_cycle_state,omitempty"`
+
+	HealthStatus *ListScalingInstancesRequestHealthStatus `json:"health_status,omitempty"`
+
 	ProtectFromScalingDown *ListScalingInstancesRequestProtectFromScalingDown `json:"protect_from_scaling_down,omitempty"`
-	StartNumber            *int32                                             `json:"start_number,omitempty"`
-	Limit                  *int32                                             `json:"limit,omitempty"`
+
+	StartNumber *int32 `json:"start_number,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListScalingInstancesRequest) String() string {

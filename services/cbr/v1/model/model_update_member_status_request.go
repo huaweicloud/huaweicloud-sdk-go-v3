@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateMemberStatusRequest struct {
-	MemberId string        `json:"member_id"`
-	BackupId string        `json:"backup_id"`
-	Body     *UpdateMember `json:"body,omitempty"`
+	MemberId string `json:"member_id"`
+
+	BackupId string `json:"backup_id"`
+
+	Body *UpdateMember `json:"body,omitempty"`
 }
 
 func (o UpdateMemberStatusRequest) String() string {

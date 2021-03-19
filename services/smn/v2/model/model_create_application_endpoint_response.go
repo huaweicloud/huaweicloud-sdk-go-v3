@@ -9,8 +9,10 @@ import (
 // Response Object
 type CreateApplicationEndpointResponse struct {
 	// 请求的唯一标识ID。
+
 	RequestId *string `json:"request_id,omitempty"`
 	// Endpoint的唯一资源标识。
+
 	EndpointUrn    *string `json:"endpoint_urn,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

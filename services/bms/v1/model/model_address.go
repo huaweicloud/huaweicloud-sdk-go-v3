@@ -2,22 +2,29 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 虚拟私有云ID字段数据结构说明
 type Address struct {
 	// IP地址版本。4：代表IPv4。6：代表IPv6。
+
 	Version *AddressVersion `json:"version,omitempty"`
 	// IP地址
+
 	Addr *string `json:"addr,omitempty"`
 	// IP地址类型。fixed：代表私有IP地址。floating：代表浮动IP地址。
+
 	OSEXTIPStype *AddressOSEXTIPStype `json:"OS-EXT-IPS:type,omitempty"`
 	// MAC地址
+
 	OSEXTIPSMACmacAddr *string `json:"OS-EXT-IPS-MAC:mac_addr,omitempty"`
 	// IP地址对应的端口ID
+
 	OSEXTIPSportId *string `json:"OS-EXT-IPS:port_id,omitempty"`
 }
 

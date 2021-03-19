@@ -9,6 +9,7 @@ import (
 // Response Object
 type ShowReplicationCapabilitiesResponse struct {
 	// 支持复制的区域列表
+
 	Regions        *[]ProtectableReplicationCapabilitiesRespRegion `json:"regions,omitempty"`
 	HttpStatusCode int                                             `json:"-"`
 }

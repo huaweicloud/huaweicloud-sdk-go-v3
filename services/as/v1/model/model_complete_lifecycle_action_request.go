@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CompleteLifecycleActionRequest struct {
-	ScalingGroupId string                              `json:"scaling_group_id"`
-	Body           *CompleteLifecycleActionRequestBody `json:"body,omitempty"`
+	ScalingGroupId string `json:"scaling_group_id"`
+
+	Body *CompleteLifecycleActionRequestBody `json:"body,omitempty"`
 }
 
 func (o CompleteLifecycleActionRequest) String() string {

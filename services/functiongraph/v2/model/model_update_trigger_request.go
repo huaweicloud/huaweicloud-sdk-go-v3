@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type UpdateTriggerRequest struct {
-	FunctionUrn     string                              `json:"function_urn"`
+	FunctionUrn string `json:"function_urn"`
+
 	TriggerTypeCode UpdateTriggerRequestTriggerTypeCode `json:"trigger_type_code"`
-	TriggerId       string                              `json:"triggerId"`
-	Body            *UpdateTriggerRequestBody           `json:"body,omitempty"`
+
+	TriggerId string `json:"triggerId"`
+
+	Body *UpdateTriggerRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateTriggerRequest) String() string {

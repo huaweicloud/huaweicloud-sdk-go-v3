@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowHotkeyTaskDetailsRequest struct {
 	InstanceId string `json:"instance_id"`
-	HotkeyId   string `json:"hotkey_id"`
+
+	HotkeyId string `json:"hotkey_id"`
 }
 
 func (o ShowHotkeyTaskDetailsRequest) String() string {

@@ -9,6 +9,7 @@ import (
 // 修改设备影子预期数据结构体。
 type UpdateDesireds struct {
 	// 设备影子期望值构体。
+
 	Shadow *[]UpdateDesired `json:"shadow,omitempty"`
 }
 

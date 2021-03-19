@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 //
 type TokenAuthIdentity struct {
 	// 认证方法，该字段内容为[\"token\"]。
+
 	Methods []TokenAuthIdentityMethods `json:"methods"`
-	Token   *IdentityToken             `json:"token,omitempty"`
-	Policy  *ServicePolicy             `json:"policy,omitempty"`
+
+	Token *IdentityToken `json:"token,omitempty"`
+
+	Policy *ServicePolicy `json:"policy,omitempty"`
 }
 
 func (o TokenAuthIdentity) String() string {

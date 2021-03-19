@@ -8,11 +8,15 @@ import (
 
 // Request Object
 type ListSingleStreamBitrateRequest struct {
-	Domain    string  `json:"domain"`
-	App       string  `json:"app"`
-	Stream    string  `json:"stream"`
+	Domain string `json:"domain"`
+
+	App string `json:"app"`
+
+	Stream string `json:"stream"`
+
 	StartTime *string `json:"start_time,omitempty"`
-	EndTime   *string `json:"end_time,omitempty"`
+
+	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o ListSingleStreamBitrateRequest) String() string {

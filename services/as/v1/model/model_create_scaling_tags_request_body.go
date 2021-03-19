@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 标签列表
 type CreateScalingTagsRequestBody struct {
 	// 标签列表。
+
 	Tags *[]TagsSingleValue `json:"tags,omitempty"`
 	// 操作标识（区分大小写）：create：创建。若已经存在相同的key值则会覆盖对应的value值。
+
 	Action *CreateScalingTagsRequestBodyAction `json:"action,omitempty"`
 }
 

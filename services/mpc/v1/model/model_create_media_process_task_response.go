@@ -9,6 +9,7 @@ import (
 // Response Object
 type CreateMediaProcessTaskResponse struct {
 	// 任务Id
+
 	TaskId         *string `json:"task_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,8 +8,10 @@ import (
 
 type StartPipelineBuildParams struct {
 	// 构建参数名
+
 	Name string `json:"name"`
 	// 构建参数值，最大长度为8192
+
 	Value string `json:"value"`
 }
 

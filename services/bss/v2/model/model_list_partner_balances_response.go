@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListPartnerBalancesResponse struct {
 	// 账户余额列表。 具体请参见表2
+
 	AccountBalances *[]AccountBalanceV2 `json:"account_balances,omitempty"`
 	HttpStatusCode  int                 `json:"-"`
 }

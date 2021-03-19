@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type CreateRuleActionRequest struct {
-	InstanceId *string       `json:"Instance-Id,omitempty"`
-	XLBService *string       `json:"x-LB-Service,omitempty"`
-	Body       *AddActionReq `json:"body,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	XLBService *string `json:"x-LB-Service,omitempty"`
+
+	Body *AddActionReq `json:"body,omitempty"`
 }
 
 func (o CreateRuleActionRequest) String() string {

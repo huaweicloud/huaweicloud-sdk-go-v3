@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type CreateHookRequest struct {
-	XRepoAuth string      `json:"X-Repo-Auth"`
-	Namespace string      `json:"namespace"`
-	Project   string      `json:"project"`
-	Body      *HookCreate `json:"body,omitempty"`
+	XRepoAuth string `json:"X-Repo-Auth"`
+
+	Namespace string `json:"namespace"`
+
+	Project string `json:"project"`
+
+	Body *HookCreate `json:"body,omitempty"`
 }
 
 func (o CreateHookRequest) String() string {

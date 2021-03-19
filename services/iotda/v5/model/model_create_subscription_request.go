@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateSubscriptionRequest struct {
-	InstanceId *string       `json:"Instance-Id,omitempty"`
-	Body       *CreateSubReq `json:"body,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	Body *CreateSubReq `json:"body,omitempty"`
 }
 
 func (o CreateSubscriptionRequest) String() string {

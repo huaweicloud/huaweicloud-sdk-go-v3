@@ -8,9 +8,11 @@ import (
 
 // TrackerConfig对象
 type TrackerConfigBody struct {
-	Channel  *ChannelConfigBody  `json:"channel"`
+	Channel *ChannelConfigBody `json:"channel"`
+
 	Selector *SelectorConfigBody `json:"selector"`
 	// IAM委托名称
+
 	AgencyName string `json:"agency_name"`
 }
 

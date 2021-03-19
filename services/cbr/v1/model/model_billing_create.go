@@ -2,36 +2,50 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 创建参数
 type BillingCreate struct {
 	// [云平台，云平台，公有云或者混合云](tag:hws,hws_hk,fcs_vm,ctc) [云平台，云平台，公有云](tag:dt,ocb,tlf,sbc)
+
 	CloudType *BillingCreateCloudType `json:"cloud_type,omitempty"`
 	// [规格，崩溃一致性（crash_consistent）或应用一致性（app_consistent）](tag:hws,hws_hk,fcs_vm,ctc) [规格，默认为崩溃一致性（crash_consistent）](tag:dt,ocb,tlf,sbc)
+
 	ConsistentLevel string `json:"consistent_level"`
 	// 对象类型：云服务器（server），云硬盘（disk），文件系统（turbo）。
+
 	ObjectType BillingCreateObjectType `json:"object_type"`
 	// 保护类型：备份（backup）、复制(replication)
+
 	ProtectType BillingCreateProtectType `json:"protect_type"`
 	// 容量，单位GB
+
 	Size int32 `json:"size"`
 	// 创建模式，按需：post_paid，包周期：pre_paid，默认为post_paid
+
 	ChargingMode *BillingCreateChargingMode `json:"charging_mode,omitempty"`
 	// 创建类型，按年(year)或者按月(month)
+
 	PeriodType *BillingCreatePeriodType `json:"period_type,omitempty"`
 	// 创建类型的数量
+
 	PeriodNum *int32 `json:"period_num,omitempty"`
 	// 到期后是否自动续期，默认不续期
+
 	IsAutoRenew *bool `json:"is_auto_renew,omitempty"`
 	// 是否自动付费，默认为不自动付费
+
 	IsAutoPay *bool `json:"is_auto_pay,omitempty"`
 	// 跳转URL
-	ConsoleUrl *string                  `json:"console_url,omitempty"`
-	ExtraInfo  *BillbingCreateExtraInfo `json:"extra_info,omitempty"`
+
+	ConsoleUrl *string `json:"console_url,omitempty"`
+
+	ExtraInfo *BillbingCreateExtraInfo `json:"extra_info,omitempty"`
 }
 
 func (o BillingCreate) String() string {

@@ -9,8 +9,10 @@ import (
 // Request Object
 type ListHooksRequest struct {
 	XRepoAuth string `json:"X-Repo-Auth"`
+
 	Namespace string `json:"namespace"`
-	Project   string `json:"project"`
+
+	Project string `json:"project"`
 }
 
 func (o ListHooksRequest) String() string {

@@ -8,8 +8,10 @@ import (
 
 type SignBindingReq struct {
 	// 签名密钥编号
+
 	SignId string `json:"sign_id"`
 	// API的发布记录编号
+
 	PublishIds []string `json:"publish_ids"`
 }
 

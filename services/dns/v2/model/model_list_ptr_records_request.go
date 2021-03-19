@@ -8,12 +8,17 @@ import (
 
 // Request Object
 type ListPtrRecordsRequest struct {
-	Marker              *string `json:"marker,omitempty"`
-	Limit               *int32  `json:"limit,omitempty"`
-	Offset              *int32  `json:"offset,omitempty"`
+	Marker *string `json:"marker,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-	Tags                *string `json:"tags,omitempty"`
-	Status              *string `json:"status,omitempty"`
+
+	Tags *string `json:"tags,omitempty"`
+
+	Status *string `json:"status,omitempty"`
 }
 
 func (o ListPtrRecordsRequest) String() string {

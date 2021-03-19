@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UntagDeviceRequest struct {
-	InstanceId *string        `json:"Instance-Id,omitempty"`
-	Body       *UnbindTagsDto `json:"body,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	Body *UnbindTagsDto `json:"body,omitempty"`
 }
 
 func (o UntagDeviceRequest) String() string {

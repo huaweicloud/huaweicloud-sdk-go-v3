@@ -9,6 +9,7 @@ import (
 //
 type LinksSelf struct {
 	// 资源链接地址。
+
 	Self string `json:"self"`
 }
 

@@ -9,6 +9,7 @@ import (
 // Request Object
 type DeleteMemberRequest struct {
 	BackupId string `json:"backup_id"`
+
 	MemberId string `json:"member_id"`
 }
 

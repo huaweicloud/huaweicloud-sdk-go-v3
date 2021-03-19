@@ -2,14 +2,17 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListTemplateViewHistoriesRequest struct {
-	XLanguage      *ListTemplateViewHistoriesRequestXLanguage     `json:"X-Language,omitempty"`
+	XLanguage *ListTemplateViewHistoriesRequestXLanguage `json:"X-Language,omitempty"`
+
 	PlatformSource ListTemplateViewHistoriesRequestPlatformSource `json:"platform_source"`
 }
 

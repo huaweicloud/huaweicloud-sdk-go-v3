@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListInstanceSnapshotsResponse struct {
 	// 快照总数。
+
 	Count *int32 `json:"count,omitempty"`
 	// 快照列表。
+
 	Snapshots      *[]InstanceSnapshotView `json:"snapshots,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

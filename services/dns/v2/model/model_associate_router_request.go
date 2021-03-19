@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type AssociateRouterRequest struct {
-	ZoneId string              `json:"zone_id"`
-	Body   *AssociateRouterReq `json:"body,omitempty"`
+	ZoneId string `json:"zone_id"`
+
+	Body *AssociateRouterReq `json:"body,omitempty"`
 }
 
 func (o AssociateRouterRequest) String() string {

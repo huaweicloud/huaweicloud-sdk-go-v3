@@ -2,14 +2,17 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 认证方式参数
 type AuthOpt struct {
 	// AppCode简易认证类型，仅在auth_type为APP时生效，默认为DISABLE： - DISABLE：不开启简易认证 - HEADER：开启简易认证且AppCode位置在HEADER
+
 	AppCodeAuthType *AuthOptAppCodeAuthType `json:"app_code_auth_type,omitempty"`
 }
 

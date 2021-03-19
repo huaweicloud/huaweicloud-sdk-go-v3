@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateL7RuleRequest struct {
-	L7policyId string                   `json:"l7policy_id"`
-	Body       *CreateL7RuleRequestBody `json:"body,omitempty"`
+	L7policyId string `json:"l7policy_id"`
+
+	Body *CreateL7RuleRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateL7RuleRequest) String() string {

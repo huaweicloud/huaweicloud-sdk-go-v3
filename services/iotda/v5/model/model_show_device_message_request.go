@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ShowDeviceMessageRequest struct {
-	DeviceId   string  `json:"device_id"`
+	DeviceId string `json:"device_id"`
+
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	MessageId  string  `json:"message_id"`
+
+	MessageId string `json:"message_id"`
 }
 
 func (o ShowDeviceMessageRequest) String() string {

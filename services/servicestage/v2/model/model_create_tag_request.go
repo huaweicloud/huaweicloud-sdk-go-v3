@@ -8,11 +8,15 @@ import (
 
 // Request Object
 type CreateTagRequest struct {
-	XRepoAuth string     `json:"X-Repo-Auth"`
-	Namespace string     `json:"namespace"`
-	Project   string     `json:"project"`
-	Ref       string     `json:"ref"`
-	Body      *TagCreate `json:"body,omitempty"`
+	XRepoAuth string `json:"X-Repo-Auth"`
+
+	Namespace string `json:"namespace"`
+
+	Project string `json:"project"`
+
+	Ref string `json:"ref"`
+
+	Body *TagCreate `json:"body,omitempty"`
 }
 
 func (o CreateTagRequest) String() string {

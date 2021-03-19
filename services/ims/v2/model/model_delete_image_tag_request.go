@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteImageTagRequest struct {
 	ImageId string `json:"image_id"`
-	Key     string `json:"key"`
+
+	Key string `json:"key"`
 }
 
 func (o DeleteImageTagRequest) String() string {

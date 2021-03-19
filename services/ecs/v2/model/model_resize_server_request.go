@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ResizeServerRequest struct {
-	ServerId string                   `json:"server_id"`
-	Body     *ResizeServerRequestBody `json:"body,omitempty"`
+	ServerId string `json:"server_id"`
+
+	Body *ResizeServerRequestBody `json:"body,omitempty"`
 }
 
 func (o ResizeServerRequest) String() string {

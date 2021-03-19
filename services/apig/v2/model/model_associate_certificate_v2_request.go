@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type AssociateCertificateV2Request struct {
-	InstanceId string         `json:"instance_id"`
-	DomainId   string         `json:"domain_id"`
-	GroupId    string         `json:"group_id"`
-	Body       *DomainCertReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	DomainId string `json:"domain_id"`
+
+	GroupId string `json:"group_id"`
+
+	Body *DomainCertReq `json:"body,omitempty"`
 }
 
 func (o AssociateCertificateV2Request) String() string {

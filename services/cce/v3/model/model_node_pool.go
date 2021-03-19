@@ -8,12 +8,17 @@ import (
 
 type NodePool struct {
 	// API版本，固定值“v3”。
+
 	ApiVersion string `json:"apiVersion"`
 	// API类型，固定值“NodePool”。
-	Kind     string            `json:"kind"`
+
+	Kind string `json:"kind"`
+
 	Metadata *NodePoolMetadata `json:"metadata"`
-	Spec     *NodePoolSpec     `json:"spec"`
-	Status   *NodePoolStatus   `json:"status,omitempty"`
+
+	Spec *NodePoolSpec `json:"spec"`
+
+	Status *NodePoolStatus `json:"status,omitempty"`
 }
 
 func (o NodePool) String() string {

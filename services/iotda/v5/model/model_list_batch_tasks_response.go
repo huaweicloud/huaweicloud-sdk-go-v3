@@ -9,9 +9,11 @@ import (
 // Response Object
 type ListBatchTasksResponse struct {
 	// 批量任务列表。
-	Batchtasks     *[]Task `json:"batchtasks,omitempty"`
-	Page           *Page   `json:"page,omitempty"`
-	HttpStatusCode int     `json:"-"`
+
+	Batchtasks *[]Task `json:"batchtasks,omitempty"`
+
+	Page           *Page `json:"page,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o ListBatchTasksResponse) String() string {

@@ -10,6 +10,7 @@ import (
 type IssueCompletionRateResponseV4 struct {
 	IssueStatus *IssueStatusResponseV4 `json:"issue_status,omitempty"`
 	// 工作项类型,2任务/task,3缺陷/bug,5epic,6feature,7story
+
 	TrackerId *int32 `json:"tracker_id,omitempty"`
 }
 

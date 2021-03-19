@@ -10,6 +10,7 @@ import (
 type GetRecordsResponse struct {
 	Records *[]Record `json:"records,omitempty"`
 	// 下一个迭代器。  说明：  数据游标有效期为5分钟。
+
 	NextPartitionCursor *string `json:"next_partition_cursor,omitempty"`
 	HttpStatusCode      int     `json:"-"`
 }

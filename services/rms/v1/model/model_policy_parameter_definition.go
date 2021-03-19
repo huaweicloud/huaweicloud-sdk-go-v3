@@ -2,22 +2,29 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 策略参数定义
 type PolicyParameterDefinition struct {
 	// 策略参数名字
+
 	Name *string `json:"name,omitempty"`
 	// 策略参数描述
+
 	Description *string `json:"description,omitempty"`
 	// 策略参数允许值列表
+
 	AllowedValues *[]interface{} `json:"allowed_values,omitempty"`
 	// 策略参数默认值
+
 	DefaultValue *string `json:"default_value,omitempty"`
 	// 策略参数类型
+
 	Type *PolicyParameterDefinitionType `json:"type,omitempty"`
 }
 

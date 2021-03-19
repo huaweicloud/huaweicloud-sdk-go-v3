@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type DeleteImportedKeyMaterialRequest struct {
-	VersionId string                 `json:"version_id"`
-	Body      *OperateKeyRequestBody `json:"body,omitempty"`
+	VersionId string `json:"version_id"`
+
+	Body *OperateKeyRequestBody `json:"body,omitempty"`
 }
 
 func (o DeleteImportedKeyMaterialRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ShowKeyRotationStatusRequest struct {
-	VersionId string                 `json:"version_id"`
-	Body      *OperateKeyRequestBody `json:"body,omitempty"`
+	VersionId string `json:"version_id"`
+
+	Body *OperateKeyRequestBody `json:"body,omitempty"`
 }
 
 func (o ShowKeyRotationStatusRequest) String() string {

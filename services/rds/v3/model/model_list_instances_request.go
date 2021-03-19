@@ -2,24 +2,36 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListInstancesRequest struct {
-	ContentType   *string                            `json:"Content-Type,omitempty"`
-	XLanguage     *ListInstancesRequestXLanguage     `json:"X-Language,omitempty"`
-	Id            *string                            `json:"id,omitempty"`
-	Name          *string                            `json:"name,omitempty"`
-	Type          *ListInstancesRequestType          `json:"type,omitempty"`
+	ContentType *string `json:"Content-Type,omitempty"`
+
+	XLanguage *ListInstancesRequestXLanguage `json:"X-Language,omitempty"`
+
+	Id *string `json:"id,omitempty"`
+
+	Name *string `json:"name,omitempty"`
+
+	Type *ListInstancesRequestType `json:"type,omitempty"`
+
 	DatastoreType *ListInstancesRequestDatastoreType `json:"datastore_type,omitempty"`
-	VpcId         *string                            `json:"vpc_id,omitempty"`
-	SubnetId      *string                            `json:"subnet_id,omitempty"`
-	Offset        *int32                             `json:"offset,omitempty"`
-	Limit         *int32                             `json:"limit,omitempty"`
-	Tags          *string                            `json:"tags,omitempty"`
+
+	VpcId *string `json:"vpc_id,omitempty"`
+
+	SubnetId *string `json:"subnet_id,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Tags *string `json:"tags,omitempty"`
 }
 
 func (o ListInstancesRequest) String() string {

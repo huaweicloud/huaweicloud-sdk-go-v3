@@ -9,6 +9,7 @@ import (
 // Response Object
 type ShowVaultProjectTagResponse struct {
 	// 标签列表
+
 	Tags           *[]TagsResp `json:"tags,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

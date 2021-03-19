@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowGroupsRequest struct {
 	InstanceId string `json:"instance_id"`
-	Group      string `json:"group"`
+
+	Group string `json:"group"`
 }
 
 func (o ShowGroupsRequest) String() string {

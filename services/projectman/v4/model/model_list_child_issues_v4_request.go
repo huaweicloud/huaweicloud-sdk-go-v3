@@ -9,7 +9,8 @@ import (
 // Request Object
 type ListChildIssuesV4Request struct {
 	ProjectId string `json:"project_id"`
-	IssueId   int32  `json:"issue_id"`
+
+	IssueId int32 `json:"issue_id"`
 }
 
 func (o ListChildIssuesV4Request) String() string {

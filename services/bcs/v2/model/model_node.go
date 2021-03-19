@@ -8,8 +8,10 @@ import (
 
 type Node struct {
 	// 节点EIP信息
+
 	IpPort *string `json:"ip_port,omitempty"`
 	// 节点所在通道数组
+
 	Channels *[]string `json:"channels,omitempty"`
 }
 

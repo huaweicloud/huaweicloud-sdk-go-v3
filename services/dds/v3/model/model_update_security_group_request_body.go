@@ -8,6 +8,7 @@ import (
 
 type UpdateSecurityGroupRequestBody struct {
 	// 新的安全组ID。
+
 	SecurityGroupId string `json:"security_group_id"`
 }
 

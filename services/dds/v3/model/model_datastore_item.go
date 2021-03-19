@@ -9,8 +9,10 @@ import (
 // 数据库信息。
 type DatastoreItem struct {
 	// 数据库引擎。
+
 	Type string `json:"type"`
 	// 数据库版本号。
+
 	Version string `json:"version"`
 }
 

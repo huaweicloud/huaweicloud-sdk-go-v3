@@ -8,6 +8,7 @@ import (
 
 type RecyclePolicyRequestBody struct {
 	// 每个元素都是与回收站相关信息。
+
 	RecyclePolicy *interface{} `json:"recycle_policy"`
 }
 

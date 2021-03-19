@@ -2,20 +2,26 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Response Object
 type ShowNamespaceResponse struct {
 	// id
+
 	Id *int32 `json:"id,omitempty"`
 	// 组织名称
+
 	Name *string `json:"name,omitempty"`
 	// IAM用户名
+
 	CreatorName *string `json:"creator_name,omitempty"`
 	// 用户权限。7表示管理权限，3表示编辑权限，1表示读取权限。
+
 	Auth           *ShowNamespaceResponseAuth `json:"auth,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }

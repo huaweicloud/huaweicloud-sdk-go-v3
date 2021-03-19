@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type StartRecyclePolicyRequest struct {
-	XLanguage *string                   `json:"X-Language,omitempty"`
-	Body      *RecyclePolicyRequestBody `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	Body *RecyclePolicyRequestBody `json:"body,omitempty"`
 }
 
 func (o StartRecyclePolicyRequest) String() string {

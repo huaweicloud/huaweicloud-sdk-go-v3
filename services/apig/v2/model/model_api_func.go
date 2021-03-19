@@ -11,24 +11,34 @@ import (
 // 函数工作流后端详情
 type ApiFunc struct {
 	// 函数URN
+
 	FunctionUrn string `json:"function_urn"`
 	// 描述信息。长度不超过255个字符 > 中文字符必须为UTF-8或者unicode编码。
+
 	Remark *string `json:"remark,omitempty"`
 	// 调用类型 - async： 异步 - sync：同步
+
 	InvocationType ApiFuncInvocationType `json:"invocation_type"`
 	// 版本。
+
 	Version *string `json:"version,omitempty"`
 	// API网关请求函数服务的超时时间。  单位：毫秒。请求参数值不在合法范围内时将使用缺省值
+
 	Timeout int32 `json:"timeout"`
 	// 后端自定义认证ID
+
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
 	// 编号
+
 	Id *string `json:"id,omitempty"`
 	// 注册时间
+
 	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
 	// 状态
+
 	Status *int32 `json:"status,omitempty"`
 	// 修改时间
+
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 }
 

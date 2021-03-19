@@ -9,8 +9,10 @@ import (
 //
 type VaultMigrateResourceReq struct {
 	// 目标存储库
+
 	DestinationVaultId string `json:"destination_vault_id"`
 	// 待迁移的资源ID
+
 	ResourceIds []string `json:"resource_ids"`
 }
 

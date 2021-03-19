@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ShowServerRemoteConsoleRequest struct {
-	ServerId string                              `json:"server_id"`
-	Body     *ShowServerRemoteConsoleRequestBody `json:"body,omitempty"`
+	ServerId string `json:"server_id"`
+
+	Body *ShowServerRemoteConsoleRequestBody `json:"body,omitempty"`
 }
 
 func (o ShowServerRemoteConsoleRequest) String() string {

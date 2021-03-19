@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowAgentStatusRequest struct {
 	XLanguage *string `json:"X-Language,omitempty"`
-	AgentId   string  `json:"agent_id"`
+
+	AgentId string `json:"agent_id"`
 }
 
 func (o ShowAgentStatusRequest) String() string {

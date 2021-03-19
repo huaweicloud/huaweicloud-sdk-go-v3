@@ -9,9 +9,11 @@ import (
 // Response Object
 type ShowStreamPortraitResponse struct {
 	// 播放画像信息列表。
+
 	StreamPortraits *[]StreamPortrait `json:"stream_portraits,omitempty"`
-	XRequestId      *string           `json:"X-request-id,omitempty"`
-	HttpStatusCode  int               `json:"-"`
+
+	XRequestId     *string `json:"X-request-id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowStreamPortraitResponse) String() string {

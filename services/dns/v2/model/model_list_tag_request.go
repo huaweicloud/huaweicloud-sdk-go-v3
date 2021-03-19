@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ListTagRequest struct {
-	ResourceType string      `json:"resource_type"`
-	Body         *ListTagReq `json:"body,omitempty"`
+	ResourceType string `json:"resource_type"`
+
+	Body *ListTagReq `json:"body,omitempty"`
 }
 
 func (o ListTagRequest) String() string {

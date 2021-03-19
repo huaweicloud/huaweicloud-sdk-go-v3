@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type NodePoolStatus struct {
 	// 当前节点池中节点数量
+
 	CurrentNode *int32 `json:"currentNode,omitempty"`
 	// 节点池删除时的 JobID
+
 	JobId *string `json:"jobId,omitempty"`
 	// 节点池状态，可为空。
+
 	Phase *NodePoolStatusPhase `json:"phase,omitempty"`
 }
 

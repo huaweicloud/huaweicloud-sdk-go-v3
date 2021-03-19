@@ -10,15 +10,23 @@ import (
 
 // Request Object
 type ListScalingPolicyExecuteLogsRequest struct {
-	ScalingPolicyId     string                                                  `json:"scaling_policy_id"`
-	LogId               *string                                                 `json:"log_id,omitempty"`
+	ScalingPolicyId string `json:"scaling_policy_id"`
+
+	LogId *string `json:"log_id,omitempty"`
+
 	ScalingResourceType *ListScalingPolicyExecuteLogsRequestScalingResourceType `json:"scaling_resource_type,omitempty"`
-	ScalingResourceId   *string                                                 `json:"scaling_resource_id,omitempty"`
-	ExecuteType         *ListScalingPolicyExecuteLogsRequestExecuteType         `json:"execute_type,omitempty"`
-	StartTime           *sdktime.SdkTime                                        `json:"start_time,omitempty"`
-	EndTime             *sdktime.SdkTime                                        `json:"end_time,omitempty"`
-	StartNumber         *int32                                                  `json:"start_number,omitempty"`
-	Limit               *int32                                                  `json:"limit,omitempty"`
+
+	ScalingResourceId *string `json:"scaling_resource_id,omitempty"`
+
+	ExecuteType *ListScalingPolicyExecuteLogsRequestExecuteType `json:"execute_type,omitempty"`
+
+	StartTime *sdktime.SdkTime `json:"start_time,omitempty"`
+
+	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
+
+	StartNumber *int32 `json:"start_number,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListScalingPolicyExecuteLogsRequest) String() string {

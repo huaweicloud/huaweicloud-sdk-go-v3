@@ -2,8 +2,10 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -11,18 +13,25 @@ import (
 type ShowScriptResponse struct {
 	Name *string `json:"name,omitempty"`
 	// 脚本类型
+
 	Type *ShowScriptResponseType `json:"type,omitempty"`
 	// 脚本关联的目录
+
 	Directory *string `json:"directory,omitempty"`
 	// 脚本内容
+
 	Content *string `json:"content,omitempty"`
 	// 脚本关联的连接名称
+
 	ConnectionName *string `json:"connectionName,omitempty"`
 	// 脚本执行所在的数据库
+
 	Database *string `json:"database,omitempty"`
 	// 脚本关联的DLI队列名称
+
 	QueueName *string `json:"queueName,omitempty"`
 	// 脚本的配置项参数
+
 	Configuration  *string `json:"configuration,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

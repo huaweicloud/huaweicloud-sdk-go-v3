@@ -7,9 +7,11 @@ import (
 )
 
 type AvParameters struct {
-	Video  *VideoParameters `json:"video,omitempty"`
-	Audio  *Audio           `json:"audio,omitempty"`
-	Common *Common          `json:"common"`
+	Video *VideoParameters `json:"video,omitempty"`
+
+	Audio *Audio `json:"audio,omitempty"`
+
+	Common *Common `json:"common"`
 }
 
 func (o AvParameters) String() string {

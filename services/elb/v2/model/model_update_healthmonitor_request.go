@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateHealthmonitorRequest struct {
-	HealthmonitorId string                          `json:"healthmonitor_id"`
-	Body            *UpdateHealthmonitorRequestBody `json:"body,omitempty"`
+	HealthmonitorId string `json:"healthmonitor_id"`
+
+	Body *UpdateHealthmonitorRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateHealthmonitorRequest) String() string {

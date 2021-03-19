@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateSubnetRequest struct {
-	VpcId    string                   `json:"vpc_id"`
-	SubnetId string                   `json:"subnet_id"`
-	Body     *UpdateSubnetRequestBody `json:"body,omitempty"`
+	VpcId string `json:"vpc_id"`
+
+	SubnetId string `json:"subnet_id"`
+
+	Body *UpdateSubnetRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateSubnetRequest) String() string {

@@ -9,8 +9,10 @@ import (
 //
 type TokenDomainResult struct {
 	// 用户所属账号名。
+
 	Name string `json:"name"`
 	// 用户所属账号ID。
+
 	Id string `json:"id"`
 }
 

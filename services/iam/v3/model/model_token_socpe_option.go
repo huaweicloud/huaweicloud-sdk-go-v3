@@ -8,7 +8,8 @@ import (
 
 //
 type TokenSocpeOption struct {
-	Domain  *ScopeDomainOption  `json:"domain,omitempty"`
+	Domain *ScopeDomainOption `json:"domain,omitempty"`
+
 	Project *ScopeProjectOption `json:"project,omitempty"`
 }
 

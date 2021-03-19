@@ -9,8 +9,10 @@ import (
 // 数据库信息。
 type DatabaseForListSchema struct {
 	// schema名称。
+
 	SchemaName string `json:"schema_name"`
 	// schema所属用户。
+
 	Owner string `json:"owner"`
 }
 

@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListFunctionsResponse struct {
 	// 函数列表。
+
 	Functions *[]ListFunctionResult `json:"functions,omitempty"`
 	// 函数下次记录读取位置。
+
 	NextMarker     *int32 `json:"next_marker,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

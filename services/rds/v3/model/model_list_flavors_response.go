@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListFlavorsResponse struct {
 	// 实例规格信息。
+
 	Flavors        *[]Flavor `json:"flavors,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

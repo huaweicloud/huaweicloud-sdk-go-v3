@@ -9,7 +9,8 @@ import (
 //
 type ScopedTokenAuth struct {
 	Identity *ScopedTokenIdentity `json:"identity"`
-	Scope    *TokenSocpeOption    `json:"scope"`
+
+	Scope *TokenSocpeOption `json:"scope"`
 }
 
 func (o ScopedTokenAuth) String() string {

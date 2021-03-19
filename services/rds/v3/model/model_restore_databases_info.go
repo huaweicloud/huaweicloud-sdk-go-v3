@@ -8,8 +8,10 @@ import (
 
 type RestoreDatabasesInfo struct {
 	// 库名
+
 	Database string `json:"database"`
 	// 表信息
+
 	Tables []RestoreTableInfo `json:"tables"`
 }
 

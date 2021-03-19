@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateRecordSetRequest struct {
-	ZoneId string              `json:"zone_id"`
-	Body   *CreateRecordSetReq `json:"body,omitempty"`
+	ZoneId string `json:"zone_id"`
+
+	Body *CreateRecordSetReq `json:"body,omitempty"`
 }
 
 func (o CreateRecordSetRequest) String() string {

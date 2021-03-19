@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListProjectsResponse struct {
 	// 项目列表。
+
 	Projects       *[]Project `json:"projects,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

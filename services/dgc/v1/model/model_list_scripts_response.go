@@ -8,7 +8,8 @@ import (
 
 // Response Object
 type ListScriptsResponse struct {
-	Total          *int32        `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty"`
+
 	Scripts        *[]ScriptInfo `json:"scripts,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

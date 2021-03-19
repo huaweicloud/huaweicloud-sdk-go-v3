@@ -9,6 +9,7 @@ import (
 // 带宽信息id引用对象
 type BandwidthRef struct {
 	// 共享带宽的id
+
 	Id string `json:"id"`
 }
 

@@ -8,8 +8,10 @@ import (
 
 // Request Object
 type ListClassroomsRequest struct {
-	Offset    *int32  `json:"offset,omitempty"`
-	Limit     *int32  `json:"limit,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
 	QueryType *string `json:"query_type,omitempty"`
 }
 

@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteScalingNotificationRequest struct {
 	ScalingGroupId string `json:"scaling_group_id"`
-	TopicUrn       string `json:"topic_urn"`
+
+	TopicUrn string `json:"topic_urn"`
 }
 
 func (o DeleteScalingNotificationRequest) String() string {

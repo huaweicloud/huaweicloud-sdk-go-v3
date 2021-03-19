@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateFunctionTriggerRequest struct {
-	FunctionUrn string                            `json:"function_urn"`
-	Body        *CreateFunctionTriggerRequestBody `json:"body,omitempty"`
+	FunctionUrn string `json:"function_urn"`
+
+	Body *CreateFunctionTriggerRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateFunctionTriggerRequest) String() string {

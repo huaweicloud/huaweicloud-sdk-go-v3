@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateSnapshotRequest struct {
-	SnapshotId string                     `json:"snapshot_id"`
-	Body       *UpdateSnapshotRequestBody `json:"body,omitempty"`
+	SnapshotId string `json:"snapshot_id"`
+
+	Body *UpdateSnapshotRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateSnapshotRequest) String() string {

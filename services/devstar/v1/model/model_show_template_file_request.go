@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ShowTemplateFileRequest struct {
-	XLanguage  *ShowTemplateFileRequestXLanguage `json:"X-Language,omitempty"`
-	TemplateId string                            `json:"template_id"`
-	FilePath   string                            `json:"file_path"`
-	Type       *ShowTemplateFileRequestType      `json:"type,omitempty"`
+	XLanguage *ShowTemplateFileRequestXLanguage `json:"X-Language,omitempty"`
+
+	TemplateId string `json:"template_id"`
+
+	FilePath string `json:"file_path"`
+
+	Type *ShowTemplateFileRequestType `json:"type,omitempty"`
 }
 
 func (o ShowTemplateFileRequest) String() string {

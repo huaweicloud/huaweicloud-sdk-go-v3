@@ -101,7 +101,12 @@ func (hc *HcHttpClient) buildRequest(req interface{}, reqDef *def.HttpRequestDef
 }
 
 func (hc *HcHttpClient) fillParamsFromReq(req interface{}, reqDef *def.HttpRequestDef, builder *request.HttpRequestBuilder) (*request.HttpRequestBuilder, error) {
-	attrMaps := hc.GetFieldJsonTags(req)
+	t := reflect.TypeOf(req)
+	if t.Kind() == reflect.Ptr {
+		t = t.Elem()
+	}
+
+	attrMaps := hc.GetFieldJsonTags(t)
 
 	for _, fieldDef := range reqDef.RequestFields {
 		value, err := hc.GetFieldValueByName(fieldDef.Name, attrMaps, req)
@@ -126,18 +131,21 @@ func (hc *HcHttpClient) fillParamsFromReq(req interface{}, reqDef *def.HttpReque
 		case def.Query:
 			builder.AddQueryParam(fieldDef.JsonTag, v)
 		case def.Body:
-			builder.WithBody(value.Interface())
+			if body, ok := t.FieldByName("Body"); ok {
+				builder.WithBody(body.Tag.Get("type"), value.Interface())
+			} else {
+				builder.WithBody("", value.Interface())
+			}
+		case def.Form:
+			builder.AddFormParam(fieldDef.JsonTag, value.Interface().(def.FormData))
 		}
 	}
+
 	return builder, nil
 }
 
-func (hc *HcHttpClient) GetFieldJsonTags(structName interface{}) map[string]string {
+func (hc *HcHttpClient) GetFieldJsonTags(t reflect.Type) map[string]string {
 	attrMaps := make(map[string]string)
-	t := reflect.TypeOf(structName)
-	if t.Kind() == reflect.Ptr {
-		t = t.Elem()
-	}
 
 	fieldNum := t.NumField()
 	for i := 0; i < fieldNum; i++ {
@@ -198,6 +206,21 @@ func (hc *HcHttpClient) extractResponse(resp *response.DefaultHttpResponse, reqD
 }
 
 func (hc *HcHttpClient) deserializeResponse(resp *response.DefaultHttpResponse, reqDef *def.HttpRequestDef) error {
+	t := reflect.TypeOf(reqDef.Response)
+	if t.Kind() == reflect.Ptr {
+		t = t.Elem()
+	}
+
+	v := reflect.ValueOf(reqDef.Response)
+	if v.Kind() == reflect.Ptr {
+		v = v.Elem()
+	}
+
+	if body, ok := t.FieldByName("Body"); ok && body.Type.Name() == "ReadCloser" {
+		v.FieldByName("Body").Set(reflect.ValueOf(resp.Response.Body))
+		return nil
+	}
+
 	data, err := ioutil.ReadAll(resp.Response.Body)
 	if err != nil {
 		if closeErr := resp.Response.Body.Close(); closeErr != nil {
@@ -250,11 +273,6 @@ func (hc *HcHttpClient) deserializeResponse(resp *response.DefaultHttpResponse, 
 	}
 
 	// add HttpStatusCode
-	v := reflect.ValueOf(reqDef.Response)
-	if v.Kind() == reflect.Ptr {
-		v = v.Elem()
-	}
-
 	field := v.FieldByName("HttpStatusCode")
 	field.Set(reflect.ValueOf(resp.GetStatusCode()))
 

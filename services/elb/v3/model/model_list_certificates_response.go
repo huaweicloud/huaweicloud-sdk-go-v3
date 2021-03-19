@@ -9,9 +9,12 @@ import (
 // Response Object
 type ListCertificatesResponse struct {
 	// 请求ID。  注：自动生成 。
-	RequestId *string   `json:"request_id,omitempty"`
-	PageInfo  *PageInfo `json:"page_info,omitempty"`
+
+	RequestId *string `json:"request_id,omitempty"`
+
+	PageInfo *PageInfo `json:"page_info,omitempty"`
 	// 证书对象列表。
+
 	Certificates   *[]CertificateInfo `json:"certificates,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateDatakeyRequest struct {
-	VersionId string                    `json:"version_id"`
-	Body      *CreateDatakeyRequestBody `json:"body,omitempty"`
+	VersionId string `json:"version_id"`
+
+	Body *CreateDatakeyRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateDatakeyRequest) String() string {

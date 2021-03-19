@@ -8,8 +8,10 @@ import (
 
 // Response Object
 type ListPublicZonesResponse struct {
-	Links          *PageLink `json:"links,omitempty"`
-	Zones          *string   `json:"zones,omitempty"`
+	Links *PageLink `json:"links,omitempty"`
+
+	Zones *string `json:"zones,omitempty"`
+
 	Metadata       *Metedata `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

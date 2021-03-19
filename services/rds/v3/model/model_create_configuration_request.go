@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type CreateConfigurationRequest struct {
 	XLanguage *CreateConfigurationRequestXLanguage `json:"X-Language,omitempty"`
-	Body      *ConfigurationForCreation            `json:"body,omitempty"`
+
+	Body *ConfigurationForCreation `json:"body,omitempty"`
 }
 
 func (o CreateConfigurationRequest) String() string {

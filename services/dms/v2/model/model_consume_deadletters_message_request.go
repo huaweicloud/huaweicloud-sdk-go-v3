@@ -8,11 +8,15 @@ import (
 
 // Request Object
 type ConsumeDeadlettersMessageRequest struct {
-	QueueId         string `json:"queue_id"`
+	QueueId string `json:"queue_id"`
+
 	ConsumerGroupId string `json:"consumer_group_id"`
-	MaxMsgs         *int32 `json:"max_msgs,omitempty"`
-	TimeWait        *int32 `json:"time_wait,omitempty"`
-	AckWait         *int32 `json:"ack_wait,omitempty"`
+
+	MaxMsgs *int32 `json:"max_msgs,omitempty"`
+
+	TimeWait *int32 `json:"time_wait,omitempty"`
+
+	AckWait *int32 `json:"ack_wait,omitempty"`
 }
 
 func (o ConsumeDeadlettersMessageRequest) String() string {

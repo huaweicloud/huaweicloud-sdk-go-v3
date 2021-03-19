@@ -8,13 +8,19 @@ import (
 
 // Request Object
 type ListSessionsRequest struct {
-	NodeId      string  `json:"node_id"`
-	Offset      *int32  `json:"offset,omitempty"`
-	Limit       *int32  `json:"limit,omitempty"`
+	NodeId string `json:"node_id"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
 	PlanSummary *string `json:"plan_summary,omitempty"`
-	Type        *string `json:"type,omitempty"`
-	Namespace   *string `json:"namespace,omitempty"`
-	CostTime    *int32  `json:"cost_time,omitempty"`
+
+	Type *string `json:"type,omitempty"`
+
+	Namespace *string `json:"namespace,omitempty"`
+
+	CostTime *int32 `json:"cost_time,omitempty"`
 }
 
 func (o ListSessionsRequest) String() string {

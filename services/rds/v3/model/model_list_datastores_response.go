@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListDatastoresResponse struct {
 	// 数据库引擎信息。
+
 	DataStores     *[]LDatastore `json:"dataStores,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

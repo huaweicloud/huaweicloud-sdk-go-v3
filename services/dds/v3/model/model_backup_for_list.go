@@ -2,33 +2,46 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 备份信息。
 type BackupForList struct {
 	// 备份ID。
+
 	Id string `json:"id"`
 	// 备份名称。
+
 	Name string `json:"name"`
 	// 备份所属的实例ID。
+
 	InstanceId string `json:"instance_id"`
 	// 备份所属的实例名称。
-	InstanceName string          `json:"instance_name"`
-	Datastore    *BackupDatabase `json:"datastore"`
+
+	InstanceName string `json:"instance_name"`
+
+	Datastore *BackupDatabase `json:"datastore"`
 	// 备份类型。 - 取值为“Auto”，表示自动全量备份。 - 取值为“Manual”，表示手动全量备份。 - 取值为“Incremental”，表示自动增量备份。
+
 	Type BackupForListType `json:"type"`
 	// 备份开始时间，格式为“yyyy-mm-dd hh:mm:ss”。该时间为UTC时间。
+
 	BeginTime string `json:"begin_time"`
 	// 备份结束时间，格式为“yyyy-mm-dd hh:mm:ss”。该时间为UTC时间。
+
 	EndTime string `json:"end_time"`
 	// 备份状态。 取值： - BUILDING：备份中。 - COMPLETED：备份完成。 - FAILED：备份失败。 - DISABLED：备份删除中。
+
 	Status BackupForListStatus `json:"status"`
 	// 备份大小，单位：KB。
+
 	Size int64 `json:"size"`
 	// 备份描述。
+
 	Description string `json:"description"`
 }
 

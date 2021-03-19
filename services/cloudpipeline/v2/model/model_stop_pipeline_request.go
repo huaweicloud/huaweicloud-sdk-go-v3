@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type StopPipelineRequest struct {
-	XLanguage  *string `json:"X-Language,omitempty"`
-	PipelineId string  `json:"pipeline_id"`
-	BuildId    *string `json:"build_id,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	PipelineId string `json:"pipeline_id"`
+
+	BuildId *string `json:"build_id,omitempty"`
 }
 
 func (o StopPipelineRequest) String() string {

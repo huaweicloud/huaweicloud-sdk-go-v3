@@ -2,14 +2,17 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 执行或启用或停止伸缩策略
 type ExecuteScalingPolicyRequestBody struct {
 	// 执行或启用或停止伸缩策略操作的标识。执行：execute。启用：resume。停止：pause。
+
 	Action *ExecuteScalingPolicyRequestBodyAction `json:"action,omitempty"`
 }
 

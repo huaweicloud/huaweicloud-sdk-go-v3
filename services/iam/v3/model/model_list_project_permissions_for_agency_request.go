@@ -9,7 +9,8 @@ import (
 // Request Object
 type ListProjectPermissionsForAgencyRequest struct {
 	ProjectId string `json:"project_id"`
-	AgencyId  string `json:"agency_id"`
+
+	AgencyId string `json:"agency_id"`
 }
 
 func (o ListProjectPermissionsForAgencyRequest) String() string {

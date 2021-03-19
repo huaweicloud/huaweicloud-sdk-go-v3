@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type KeystoneCreateProtocolRequest struct {
-	IdpId      string                             `json:"idp_id"`
-	ProtocolId string                             `json:"protocol_id"`
-	Body       *KeystoneCreateProtocolRequestBody `json:"body,omitempty"`
+	IdpId string `json:"idp_id"`
+
+	ProtocolId string `json:"protocol_id"`
+
+	Body *KeystoneCreateProtocolRequestBody `json:"body,omitempty"`
 }
 
 func (o KeystoneCreateProtocolRequest) String() string {

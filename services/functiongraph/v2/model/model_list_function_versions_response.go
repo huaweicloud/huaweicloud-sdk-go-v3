@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListFunctionVersionsResponse struct {
 	// 版本列表
+
 	Versions *[]ListFunctionVersionResult `json:"versions,omitempty"`
 	// 下一次记录位置
+
 	NextMarker     *int64 `json:"next_marker,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

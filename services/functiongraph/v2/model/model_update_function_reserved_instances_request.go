@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateFunctionReservedInstancesRequest struct {
-	FunctionUrn string                                      `json:"function_urn"`
-	Body        *UpdateFunctionReservedInstancesRequestBody `json:"body,omitempty"`
+	FunctionUrn string `json:"function_urn"`
+
+	Body *UpdateFunctionReservedInstancesRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateFunctionReservedInstancesRequest) String() string {

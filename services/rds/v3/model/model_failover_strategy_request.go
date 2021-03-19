@@ -8,6 +8,7 @@ import (
 
 type FailoverStrategyRequest struct {
 	// 可用性策略
+
 	RepairStrategy string `json:"repairStrategy"`
 }
 

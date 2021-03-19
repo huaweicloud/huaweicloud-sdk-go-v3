@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 批量操作资源标签的请求体
 type BatchCreatePublicipTagsRequestBody struct {
 	// 标签列表
+
 	Tags []ResourceTagOption `json:"tags"`
 	// 操作标识  create：创建  action为create时，tag的value必选
+
 	Action BatchCreatePublicipTagsRequestBodyAction `json:"action"`
 }
 

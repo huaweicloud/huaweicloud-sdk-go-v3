@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListNamespacesRequest struct {
 	ContentType ListNamespacesRequestContentType `json:"Content-Type"`
-	Namespace   *string                          `json:"namespace,omitempty"`
+
+	Namespace *string `json:"namespace,omitempty"`
 }
 
 func (o ListNamespacesRequest) String() string {

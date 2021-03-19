@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateNatGatewaySnatRuleRequest struct {
-	SnatRuleId string                                 `json:"snat_rule_id"`
-	Body       *UpdateNatGatewaySnatRuleRequestOption `json:"body,omitempty"`
+	SnatRuleId string `json:"snat_rule_id"`
+
+	Body *UpdateNatGatewaySnatRuleRequestOption `json:"body,omitempty"`
 }
 
 func (o UpdateNatGatewaySnatRuleRequest) String() string {

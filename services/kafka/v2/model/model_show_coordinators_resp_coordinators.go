@@ -9,12 +9,16 @@ import (
 // 协调器信息。
 type ShowCoordinatorsRespCoordinators struct {
 	// 消费组ID。
+
 	GroupId *string `json:"group_id,omitempty"`
 	// 对应协调器的broker id。
+
 	Id *int32 `json:"id,omitempty"`
 	// 对应协调器的地址。
+
 	Host *string `json:"host,omitempty"`
 	// 端口号。
+
 	Port *int32 `json:"port,omitempty"`
 }
 

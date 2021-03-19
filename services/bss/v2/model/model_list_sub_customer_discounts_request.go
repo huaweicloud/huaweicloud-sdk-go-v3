@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type ListSubCustomerDiscountsRequest struct {
-	CustomerId        string  `json:"customer_id"`
+	CustomerId string `json:"customer_id"`
+
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

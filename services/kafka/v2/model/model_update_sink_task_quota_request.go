@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateSinkTaskQuotaRequest struct {
-	ConnectorId string                  `json:"connector_id"`
-	Body        *UpdateSinkTaskQuotaReq `json:"body,omitempty"`
+	ConnectorId string `json:"connector_id"`
+
+	Body *UpdateSinkTaskQuotaReq `json:"body,omitempty"`
 }
 
 func (o UpdateSinkTaskQuotaRequest) String() string {

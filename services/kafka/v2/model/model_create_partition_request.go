@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type CreatePartitionRequest struct {
-	InstanceId string              `json:"instance_id"`
-	Topic      string              `json:"topic"`
-	Body       *CreatePartitionReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Topic string `json:"topic"`
+
+	Body *CreatePartitionReq `json:"body,omitempty"`
 }
 
 func (o CreatePartitionRequest) String() string {

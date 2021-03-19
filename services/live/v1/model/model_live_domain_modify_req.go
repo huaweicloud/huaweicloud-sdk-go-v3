@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type LiveDomainModifyReq struct {
 	// 直播域名，不允许修改
+
 	Domain string `json:"domain"`
 	// 直播域名状态，通过修改此字段，实现域名的启用和停用。注意：域名处于“配置中”状态时，不允对该域名执行启停操作。
-	Status       *LiveDomainModifyReqStatus `json:"status,omitempty"`
-	DomainSource *DomainSourceInfo          `json:"domain_source,omitempty"`
+
+	Status *LiveDomainModifyReqStatus `json:"status,omitempty"`
+
+	DomainSource *DomainSourceInfo `json:"domain_source,omitempty"`
 }
 
 func (o LiveDomainModifyReq) String() string {

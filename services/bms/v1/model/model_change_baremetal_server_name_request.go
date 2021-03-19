@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ChangeBaremetalServerNameRequest struct {
-	ServerId string                   `json:"server_id"`
-	Body     *ChangeBaremetalNameBody `json:"body,omitempty"`
+	ServerId string `json:"server_id"`
+
+	Body *ChangeBaremetalNameBody `json:"body,omitempty"`
 }
 
 func (o ChangeBaremetalServerNameRequest) String() string {

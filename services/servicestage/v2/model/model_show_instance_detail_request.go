@@ -9,8 +9,10 @@ import (
 // Request Object
 type ShowInstanceDetailRequest struct {
 	ApplicationId string `json:"application_id"`
-	ComponentId   string `json:"component_id"`
-	InstanceId    string `json:"instance_id"`
+
+	ComponentId string `json:"component_id"`
+
+	InstanceId string `json:"instance_id"`
 }
 
 func (o ShowInstanceDetailRequest) String() string {

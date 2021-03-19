@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateIpRequest struct {
-	InstanceId string               `json:"instance_id"`
-	Body       *CreateIpRequestBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *CreateIpRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateIpRequest) String() string {

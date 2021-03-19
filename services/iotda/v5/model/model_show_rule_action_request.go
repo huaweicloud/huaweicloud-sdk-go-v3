@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowRuleActionRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	ActionId   string  `json:"action_id"`
+
+	ActionId string `json:"action_id"`
 }
 
 func (o ShowRuleActionRequest) String() string {

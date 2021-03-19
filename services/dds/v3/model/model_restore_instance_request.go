@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type RestoreInstanceRequest struct {
-	XLanguage *string                     `json:"X-Language,omitempty"`
-	Body      *RestoreInstanceRequestBody `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	Body *RestoreInstanceRequestBody `json:"body,omitempty"`
 }
 
 func (o RestoreInstanceRequest) String() string {

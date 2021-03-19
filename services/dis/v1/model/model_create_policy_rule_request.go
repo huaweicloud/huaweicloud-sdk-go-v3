@@ -2,19 +2,25 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type CreatePolicyRuleRequest struct {
 	// 通道唯一标识符。
+
 	StreamId string `json:"stream_id"`
 	// 授权用户。  支持通配符\"*\"，表示授权所有账号，支持多账号添加，用\",\"隔开；
+
 	PrincipalName string `json:"principal_name"`
 	// 授权操作类型。  - putRecords：上传数据。 - getRecords：下载数据。
+
 	ActionType CreatePolicyRuleRequestActionType `json:"action_type"`
 	// 授权影响类型。  - accept：允许该授权操作。
+
 	Effect CreatePolicyRuleRequestEffect `json:"effect"`
 }
 

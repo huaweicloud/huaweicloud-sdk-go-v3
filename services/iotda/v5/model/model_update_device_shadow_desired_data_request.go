@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateDeviceShadowDesiredDataRequest struct {
-	InstanceId *string         `json:"Instance-Id,omitempty"`
-	DeviceId   string          `json:"device_id"`
-	Body       *UpdateDesireds `json:"body,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	DeviceId string `json:"device_id"`
+
+	Body *UpdateDesireds `json:"body,omitempty"`
 }
 
 func (o UpdateDeviceShadowDesiredDataRequest) String() string {

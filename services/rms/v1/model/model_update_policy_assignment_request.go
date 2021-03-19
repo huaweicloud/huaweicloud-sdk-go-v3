@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdatePolicyAssignmentRequest struct {
-	PolicyAssignmentId string                       `json:"policy_assignment_id"`
-	Body               *PolicyAssignmentRequestBody `json:"body,omitempty"`
+	PolicyAssignmentId string `json:"policy_assignment_id"`
+
+	Body *PolicyAssignmentRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdatePolicyAssignmentRequest) String() string {

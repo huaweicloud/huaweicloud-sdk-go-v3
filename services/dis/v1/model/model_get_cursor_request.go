@@ -2,18 +2,24 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type GetCursorRequest struct {
-	StreamName             string                      `json:"stream-name"`
-	PartitionId            string                      `json:"partition-id"`
-	CursorType             *GetCursorRequestCursorType `json:"cursor-type,omitempty"`
-	StartingSequenceNumber *string                     `json:"starting-sequence-number,omitempty"`
-	Timestamp              *int64                      `json:"timestamp,omitempty"`
+	StreamName string `json:"stream-name"`
+
+	PartitionId string `json:"partition-id"`
+
+	CursorType *GetCursorRequestCursorType `json:"cursor-type,omitempty"`
+
+	StartingSequenceNumber *string `json:"starting-sequence-number,omitempty"`
+
+	Timestamp *int64 `json:"timestamp,omitempty"`
 }
 
 func (o GetCursorRequest) String() string {

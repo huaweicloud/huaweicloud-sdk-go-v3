@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteConfigurationRequest struct {
 	XLanguage *string `json:"X-Language,omitempty"`
-	ConfigId  string  `json:"config_id"`
+
+	ConfigId string `json:"config_id"`
 }
 
 func (o DeleteConfigurationRequest) String() string {

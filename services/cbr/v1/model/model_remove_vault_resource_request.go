@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type RemoveVaultResourceRequest struct {
-	VaultId string                  `json:"vault_id"`
-	Body    *VaultRemoveResourceReq `json:"body,omitempty"`
+	VaultId string `json:"vault_id"`
+
+	Body *VaultRemoveResourceReq `json:"body,omitempty"`
 }
 
 func (o RemoveVaultResourceRequest) String() string {

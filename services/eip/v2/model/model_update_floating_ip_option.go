@@ -9,6 +9,7 @@ import (
 // 更新floatingip对象
 type UpdateFloatingIpOption struct {
 	// 端口id。
+
 	PortId *string `json:"port_id,omitempty"`
 }
 

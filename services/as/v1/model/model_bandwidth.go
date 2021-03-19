@@ -2,20 +2,26 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 带宽信息
 type Bandwidth struct {
 	// 带宽（Mbit/s），取值范围为[1,300]。
+
 	Size int32 `json:"size"`
 	// 带宽的共享类型。共享类型枚举：PER：独享型。WHOLE：共享型。
+
 	ShareType *BandwidthShareType `json:"share_type,omitempty"`
 	// 带宽的计费类型。字段值为“bandwidth”，表示按带宽计费。字段值为“traffic”，表示按流量计费。字段为其它值，会导致创建云服务器失败。如果share_type是PER，该参数为必选项。如果share_type是WHOLE，会忽略该参数。
+
 	ChargingMode BandwidthChargingMode `json:"charging_mode"`
 	// 带宽ID，使用共享型带宽时，可以选择之前创建的共享带宽来创建弹性IP。如果share_type是PER，会忽略该参数。如果share_type是WHOLE，该参数为必选项。
+
 	Id *string `json:"id,omitempty"`
 }
 

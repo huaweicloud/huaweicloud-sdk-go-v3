@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type KeystoneUpdateMappingRequest struct {
-	Id   string                            `json:"id"`
+	Id string `json:"id"`
+
 	Body *KeystoneUpdateMappingRequestBody `json:"body,omitempty"`
 }
 

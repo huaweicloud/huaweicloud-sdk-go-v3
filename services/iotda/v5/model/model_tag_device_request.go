@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type TagDeviceRequest struct {
-	InstanceId *string      `json:"Instance-Id,omitempty"`
-	Body       *BindTagsDto `json:"body,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	Body *BindTagsDto `json:"body,omitempty"`
 }
 
 func (o TagDeviceRequest) String() string {

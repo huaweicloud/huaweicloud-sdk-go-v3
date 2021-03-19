@@ -2,18 +2,23 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Response Object
 type AssociateDomainV2Response struct {
 	// 自定义域名
+
 	UrlDomain *string `json:"url_domain,omitempty"`
 	// 域名的编号
+
 	Id *string `json:"id,omitempty"`
 	// CNAME解析状态 - 1: 未解析 - 2: 解析中 - 3: 解析成功 - 4: 解析失败
+
 	Status         *AssociateDomainV2ResponseStatus `json:"status,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }

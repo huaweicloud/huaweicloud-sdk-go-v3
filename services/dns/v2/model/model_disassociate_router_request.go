@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type DisassociateRouterRequest struct {
-	ZoneId string                 `json:"zone_id"`
-	Body   *DisassociaterouterReq `json:"body,omitempty"`
+	ZoneId string `json:"zone_id"`
+
+	Body *DisassociaterouterReq `json:"body,omitempty"`
 }
 
 func (o DisassociateRouterRequest) String() string {

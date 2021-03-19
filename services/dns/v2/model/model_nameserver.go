@@ -8,8 +8,10 @@ import (
 
 type Nameserver struct {
 	// 主机名。
+
 	Hostname *string `json:"hostname,omitempty"`
 	// 优先级。
+
 	Priority *int32 `json:"priority,omitempty"`
 }
 

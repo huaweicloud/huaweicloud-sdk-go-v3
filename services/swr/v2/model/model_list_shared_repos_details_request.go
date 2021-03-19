@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListSharedReposDetailsRequest struct {
 	ContentType ListSharedReposDetailsRequestContentType `json:"Content-Type"`
-	Filter      *string                                  `json:"filter,omitempty"`
+
+	Filter *string `json:"filter,omitempty"`
 }
 
 func (o ListSharedReposDetailsRequest) String() string {

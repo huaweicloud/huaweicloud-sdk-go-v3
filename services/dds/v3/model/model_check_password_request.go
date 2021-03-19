@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CheckPasswordRequest struct {
-	InstanceId string                    `json:"instance_id"`
-	Body       *CheckPasswordRequestBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *CheckPasswordRequestBody `json:"body,omitempty"`
 }
 
 func (o CheckPasswordRequest) String() string {

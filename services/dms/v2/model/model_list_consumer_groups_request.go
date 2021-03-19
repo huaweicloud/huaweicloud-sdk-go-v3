@@ -8,11 +8,15 @@ import (
 
 // Request Object
 type ListConsumerGroupsRequest struct {
-	QueueId            string `json:"queue_id"`
-	IncludeDeadletter  *bool  `json:"include_deadletter,omitempty"`
-	IncludeMessagesNum *bool  `json:"include_messages_num,omitempty"`
-	PageSize           *int32 `json:"page_size,omitempty"`
-	CurrentPage        *int32 `json:"current_page,omitempty"`
+	QueueId string `json:"queue_id"`
+
+	IncludeDeadletter *bool `json:"include_deadletter,omitempty"`
+
+	IncludeMessagesNum *bool `json:"include_messages_num,omitempty"`
+
+	PageSize *int32 `json:"page_size,omitempty"`
+
+	CurrentPage *int32 `json:"current_page,omitempty"`
 }
 
 func (o ListConsumerGroupsRequest) String() string {

@@ -9,8 +9,10 @@ import (
 // Request Object
 type UpdateRuleRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	RuleId     string  `json:"rule_id"`
-	Body       *Rule   `json:"body,omitempty"`
+
+	RuleId string `json:"rule_id"`
+
+	Body *Rule `json:"body,omitempty"`
 }
 
 func (o UpdateRuleRequest) String() string {

@@ -9,9 +9,12 @@ import (
 // Request Object
 type DeleteTagRequest struct {
 	XRepoAuth string `json:"X-Repo-Auth"`
+
 	Namespace string `json:"namespace"`
-	Project   string `json:"project"`
-	TagName   string `json:"tag_name"`
+
+	Project string `json:"project"`
+
+	TagName string `json:"tag_name"`
 }
 
 func (o DeleteTagRequest) String() string {

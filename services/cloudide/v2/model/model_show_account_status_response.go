@@ -10,6 +10,7 @@ import (
 type ShowAccountStatusResponse struct {
 	Result *AccountStatus `json:"result,omitempty"`
 	// 状态
+
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

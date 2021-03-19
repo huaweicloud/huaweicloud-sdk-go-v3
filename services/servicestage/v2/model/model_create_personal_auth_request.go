@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type CreatePersonalAuthRequest struct {
 	RepoType CreatePersonalAuthRequestRepoType `json:"repo_type"`
-	Body     *AccessToken                      `json:"body,omitempty"`
+
+	Body *AccessToken `json:"body,omitempty"`
 }
 
 func (o CreatePersonalAuthRequest) String() string {

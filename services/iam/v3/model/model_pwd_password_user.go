@@ -10,8 +10,10 @@ import (
 type PwdPasswordUser struct {
 	Domain *PwdPasswordUserDomain `json:"domain"`
 	// IAM用户名。
+
 	Name string `json:"name"`
 	// IAM用户的登录密码。
+
 	Password string `json:"password"`
 }
 

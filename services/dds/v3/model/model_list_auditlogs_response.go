@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListAuditlogsResponse struct {
 	// 总记录数。
+
 	TotalCount *int32 `json:"total_count,omitempty"`
 	// 审计日志具体信息。
+
 	AuditLogs      *[]ListAuditlogsResult `json:"audit_logs,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

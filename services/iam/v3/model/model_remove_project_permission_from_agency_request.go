@@ -9,8 +9,10 @@ import (
 // Request Object
 type RemoveProjectPermissionFromAgencyRequest struct {
 	ProjectId string `json:"project_id"`
-	AgencyId  string `json:"agency_id"`
-	RoleId    string `json:"role_id"`
+
+	AgencyId string `json:"agency_id"`
+
+	RoleId string `json:"role_id"`
 }
 
 func (o RemoveProjectPermissionFromAgencyRequest) String() string {

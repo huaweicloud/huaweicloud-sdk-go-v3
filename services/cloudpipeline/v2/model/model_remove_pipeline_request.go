@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type RemovePipelineRequest struct {
-	XLanguage  *string `json:"X-Language,omitempty"`
-	PipelineId string  `json:"pipeline_id"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	PipelineId string `json:"pipeline_id"`
 }
 
 func (o RemovePipelineRequest) String() string {

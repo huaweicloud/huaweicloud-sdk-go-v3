@@ -2,20 +2,28 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListInstancesDetailsRequest struct {
-	Engine              ListInstancesDetailsRequestEngine          `json:"engine"`
-	Name                *string                                    `json:"name,omitempty"`
-	InstanceId          *string                                    `json:"instance_id,omitempty"`
-	Status              *ListInstancesDetailsRequestStatus         `json:"status,omitempty"`
-	IncludeFailure      *ListInstancesDetailsRequestIncludeFailure `json:"include_failure,omitempty"`
-	ExactMatchName      *ListInstancesDetailsRequestExactMatchName `json:"exact_match_name,omitempty"`
-	EnterpriseProjectId *string                                    `json:"enterprise_project_id,omitempty"`
+	Engine ListInstancesDetailsRequestEngine `json:"engine"`
+
+	Name *string `json:"name,omitempty"`
+
+	InstanceId *string `json:"instance_id,omitempty"`
+
+	Status *ListInstancesDetailsRequestStatus `json:"status,omitempty"`
+
+	IncludeFailure *ListInstancesDetailsRequestIncludeFailure `json:"include_failure,omitempty"`
+
+	ExactMatchName *ListInstancesDetailsRequestExactMatchName `json:"exact_match_name,omitempty"`
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ListInstancesDetailsRequest) String() string {

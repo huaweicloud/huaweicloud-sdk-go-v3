@@ -2,18 +2,24 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListClustersRequest struct {
-	ErrorStatus *string                    `json:"errorStatus,omitempty"`
-	Detail      *string                    `json:"detail,omitempty"`
-	Status      *ListClustersRequestStatus `json:"status,omitempty"`
-	Type        *ListClustersRequestType   `json:"type,omitempty"`
-	Version     *string                    `json:"version,omitempty"`
+	ErrorStatus *string `json:"errorStatus,omitempty"`
+
+	Detail *string `json:"detail,omitempty"`
+
+	Status *ListClustersRequestStatus `json:"status,omitempty"`
+
+	Type *ListClustersRequestType `json:"type,omitempty"`
+
+	Version *string `json:"version,omitempty"`
 }
 
 func (o ListClustersRequest) String() string {

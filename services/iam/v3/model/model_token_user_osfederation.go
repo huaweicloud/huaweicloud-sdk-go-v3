@@ -9,9 +9,12 @@ import (
 //
 type TokenUserOsfederation struct {
 	// 用户组信息列表。
-	Groups           []OsfederationGroups          `json:"groups"`
+
+	Groups []OsfederationGroups `json:"groups"`
+
 	IdentityProvider *OsfederationIdentityprovider `json:"identity_provider"`
-	Protocol         *OsfederationProtocol         `json:"protocol"`
+
+	Protocol *OsfederationProtocol `json:"protocol"`
 }
 
 func (o TokenUserOsfederation) String() string {

@@ -9,7 +9,8 @@ import (
 // Request Object
 type ListDomainNotAddedProjectsV4Request struct {
 	Offset *int32 `json:"offset,omitempty"`
-	Limit  *int32 `json:"limit,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListDomainNotAddedProjectsV4Request) String() string {

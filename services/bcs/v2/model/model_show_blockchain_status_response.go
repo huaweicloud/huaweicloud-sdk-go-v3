@@ -8,11 +8,16 @@ import (
 
 // Response Object
 type ShowBlockchainStatusResponse struct {
-	Bcs            *Detail `json:"bcs,omitempty"`
-	Eip            *Detail `json:"eip,omitempty"`
-	Sfs            *Detail `json:"sfs,omitempty"`
-	Obs            *Detail `json:"obs,omitempty"`
-	Kafka          *Detail `json:"kafka,omitempty"`
+	Bcs *Detail `json:"bcs,omitempty"`
+
+	Eip *Detail `json:"eip,omitempty"`
+
+	Sfs *Detail `json:"sfs,omitempty"`
+
+	Obs *Detail `json:"obs,omitempty"`
+
+	Kafka *Detail `json:"kafka,omitempty"`
+
 	Cce            *ComCce `json:"cce,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

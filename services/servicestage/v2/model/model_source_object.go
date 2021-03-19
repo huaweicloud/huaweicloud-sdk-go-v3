@@ -8,7 +8,8 @@ import (
 
 // 组件来源。
 type SourceObject struct {
-	Kind *SourceKind       `json:"kind,omitempty"`
+	Kind *SourceKind `json:"kind,omitempty"`
+
 	Spec *SourceOrArtifact `json:"spec,omitempty"`
 }
 

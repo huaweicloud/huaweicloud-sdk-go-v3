@@ -2,20 +2,28 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListExtractTaskRequest struct {
-	XLanguage *string                       `json:"x-language,omitempty"`
-	TaskId    *[]string                     `json:"task_id,omitempty"`
-	Status    *ListExtractTaskRequestStatus `json:"status,omitempty"`
-	StartTime *string                       `json:"start_time,omitempty"`
-	EndTime   *string                       `json:"end_time,omitempty"`
-	Page      *int32                        `json:"page,omitempty"`
-	Size      *int32                        `json:"size,omitempty"`
+	XLanguage *string `json:"x-language,omitempty"`
+
+	TaskId *[]string `json:"task_id,omitempty"`
+
+	Status *ListExtractTaskRequestStatus `json:"status,omitempty"`
+
+	StartTime *string `json:"start_time,omitempty"`
+
+	EndTime *string `json:"end_time,omitempty"`
+
+	Page *int32 `json:"page,omitempty"`
+
+	Size *int32 `json:"size,omitempty"`
 }
 
 func (o ListExtractTaskRequest) String() string {

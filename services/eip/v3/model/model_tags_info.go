@@ -9,8 +9,10 @@ import (
 // 标签信息
 type TagsInfo struct {
 	// 功能说明：键。同一资源的key值不能重复。
+
 	Key *string `json:"key,omitempty"`
 	// 功能说明：值列表。
+
 	Value *string `json:"value,omitempty"`
 }
 

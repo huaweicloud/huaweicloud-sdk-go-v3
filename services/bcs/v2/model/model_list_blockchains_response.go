@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListBlockchainsResponse struct {
 	// 服务实例简要信息
+
 	Blockchains    *[]BlockchainInfo `json:"blockchains,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

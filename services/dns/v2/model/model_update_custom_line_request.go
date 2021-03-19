@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateCustomLineRequest struct {
-	LineId string                `json:"line_id"`
-	Body   *UpdateCustomsLineReq `json:"body,omitempty"`
+	LineId string `json:"line_id"`
+
+	Body *UpdateCustomsLineReq `json:"body,omitempty"`
 }
 
 func (o UpdateCustomLineRequest) String() string {

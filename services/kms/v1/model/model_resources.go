@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type Resources struct {
 	// 配额类型。枚举值说明:  - CMK，用户主密钥  - grant_per_CMK，单个用户主密钥可创建授权数
+
 	Type *ResourcesType `json:"type,omitempty"`
 	// 已使用配额数。
+
 	Used *int32 `json:"used,omitempty"`
 	// 配额总数。
+
 	Quota *int32 `json:"quota,omitempty"`
 }
 

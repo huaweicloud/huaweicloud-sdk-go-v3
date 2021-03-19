@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type BatchAddServerNicsRequest struct {
-	ServerId string                         `json:"server_id"`
-	Body     *BatchAddServerNicsRequestBody `json:"body,omitempty"`
+	ServerId string `json:"server_id"`
+
+	Body *BatchAddServerNicsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchAddServerNicsRequest) String() string {

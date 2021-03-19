@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateNodePoolRequest struct {
-	ClusterId string    `json:"cluster_id"`
-	Body      *NodePool `json:"body,omitempty"`
+	ClusterId string `json:"cluster_id"`
+
+	Body *NodePool `json:"body,omitempty"`
 }
 
 func (o CreateNodePoolRequest) String() string {

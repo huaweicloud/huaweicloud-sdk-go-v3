@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type UpdateRepoRequestBody struct {
 	// 是否为公共仓库，可选值为true或false。
+
 	IsPublic bool `json:"is_public"`
 	// 仓库类型，可设置为app_server, linux, framework_app, database, lang, other, windows, arm。
+
 	Category *UpdateRepoRequestBodyCategory `json:"category,omitempty"`
 	// 镜像仓库的描述信息。
+
 	Description *string `json:"description,omitempty"`
 }
 

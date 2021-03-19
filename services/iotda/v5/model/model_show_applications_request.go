@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowApplicationsRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	DefaultApp *bool   `json:"default_app,omitempty"`
+
+	DefaultApp *bool `json:"default_app,omitempty"`
 }
 
 func (o ShowApplicationsRequest) String() string {

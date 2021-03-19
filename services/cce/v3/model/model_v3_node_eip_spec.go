@@ -9,6 +9,7 @@ import (
 type V3NodeEipSpec struct {
 	Bandwidth *V3NodeBandwidth `json:"bandwidth,omitempty"`
 	// 弹性IP类型，取值请参见“[创建云服务器](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0167957246.html) > eip字段数据结构说明”表中“iptype”参数的描述。
+
 	Iptype *string `json:"iptype,omitempty"`
 }
 

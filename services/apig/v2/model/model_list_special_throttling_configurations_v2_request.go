@@ -8,12 +8,17 @@ import (
 
 // Request Object
 type ListSpecialThrottlingConfigurationsV2Request struct {
-	InstanceId string  `json:"instance_id"`
-	ThrottleId string  `json:"throttle_id"`
+	InstanceId string `json:"instance_id"`
+
+	ThrottleId string `json:"throttle_id"`
+
 	ObjectType *string `json:"object_type,omitempty"`
-	AppName    *string `json:"app_name,omitempty"`
-	Offset     *int64  `json:"offset,omitempty"`
-	Limit      *int32  `json:"limit,omitempty"`
+
+	AppName *string `json:"app_name,omitempty"`
+
+	Offset *int64 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListSpecialThrottlingConfigurationsV2Request) String() string {

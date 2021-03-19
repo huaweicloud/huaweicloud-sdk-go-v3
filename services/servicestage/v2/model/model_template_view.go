@@ -10,12 +10,16 @@ import (
 type TemplateView struct {
 	TemplateName *Template `json:"template_name,omitempty"`
 	// 模板描述。
+
 	TemplateDesc *string `json:"template_desc,omitempty"`
 	// 模板类别。
+
 	SourceType *string `json:"source_type,omitempty"`
 	// 源码仓库URL
-	SourceRepoUrl *string      `json:"source_repo_url,omitempty"`
-	Runtime       *RuntimeType `json:"runtime,omitempty"`
+
+	SourceRepoUrl *string `json:"source_repo_url,omitempty"`
+
+	Runtime *RuntimeType `json:"runtime,omitempty"`
 }
 
 func (o TemplateView) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateRandomRequest struct {
-	VersionId string                `json:"version_id"`
-	Body      *GenRandomRequestBody `json:"body,omitempty"`
+	VersionId string `json:"version_id"`
+
+	Body *GenRandomRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateRandomRequest) String() string {

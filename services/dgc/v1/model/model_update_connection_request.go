@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateConnectionRequest struct {
-	ConnectionName string          `json:"connection_name"`
-	Body           *ConnectionInfo `json:"body,omitempty"`
+	ConnectionName string `json:"connection_name"`
+
+	Body *ConnectionInfo `json:"body,omitempty"`
 }
 
 func (o UpdateConnectionRequest) String() string {

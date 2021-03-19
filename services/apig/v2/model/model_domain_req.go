@@ -8,6 +8,7 @@ import (
 
 type DomainReq struct {
 	// 自定义域名。长度为0-255位的字符串，需要符合域名规范。
+
 	UrlDomain string `json:"url_domain"`
 }
 

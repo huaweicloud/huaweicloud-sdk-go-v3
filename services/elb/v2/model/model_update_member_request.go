@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateMemberRequest struct {
-	MemberId string                   `json:"member_id"`
-	PoolId   string                   `json:"pool_id"`
-	Body     *UpdateMemberRequestBody `json:"body,omitempty"`
+	MemberId string `json:"member_id"`
+
+	PoolId string `json:"pool_id"`
+
+	Body *UpdateMemberRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateMemberRequest) String() string {

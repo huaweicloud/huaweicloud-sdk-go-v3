@@ -9,6 +9,7 @@ import (
 // 可用分区的状态。
 type ZoneState struct {
 	// 可用分区是否可用。
+
 	Available *bool `json:"available,omitempty"`
 }
 

@@ -9,10 +9,13 @@ import (
 // Response Object
 type ListAppsV2Response struct {
 	// 符合条件的APP总数
+
 	Total *int32 `json:"total,omitempty"`
 	// 本次查询返回的列表长度
+
 	Size *int32 `json:"size,omitempty"`
 	// APP列表
+
 	Apps           *[]AppInfoWithBindNumResp `json:"apps,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

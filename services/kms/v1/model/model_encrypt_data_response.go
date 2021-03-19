@@ -9,8 +9,10 @@ import (
 // Response Object
 type EncryptDataResponse struct {
 	// 密钥ID。
+
 	KeyId *string `json:"key_id,omitempty"`
 	// DEK密文16进制，两位表示1byte。
+
 	CipherText     *string `json:"cipher_text,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

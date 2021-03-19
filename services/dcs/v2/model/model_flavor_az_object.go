@@ -8,8 +8,10 @@ import (
 
 type FlavorAzObject struct {
 	// 缓存容量。
+
 	Capacity *string `json:"capacity,omitempty"`
 	// 有资源的可用区编码。
+
 	AzCodes *[]string `json:"az_codes,omitempty"`
 }
 

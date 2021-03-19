@@ -8,6 +8,7 @@ import (
 
 type DataIpRequest struct {
 	// 内网ip
+
 	NewIp string `json:"new_ip"`
 }
 

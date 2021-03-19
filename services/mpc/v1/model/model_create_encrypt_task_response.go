@@ -9,6 +9,7 @@ import (
 // Response Object
 type CreateEncryptTaskResponse struct {
 	// 加密任务Id
+
 	TaskId         *string `json:"task_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

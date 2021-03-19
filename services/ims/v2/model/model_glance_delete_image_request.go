@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type GlanceDeleteImageRequest struct {
-	ImageId string                        `json:"image_id"`
-	Body    *GlanceDeleteImageRequestBody `json:"body,omitempty"`
+	ImageId string `json:"image_id"`
+
+	Body *GlanceDeleteImageRequestBody `json:"body,omitempty"`
 }
 
 func (o GlanceDeleteImageRequest) String() string {

@@ -9,6 +9,7 @@ import (
 // Response Object
 type CreateQualityEnhanceTemplateResponse struct {
 	// 模板ID。
+
 	TemplateId     *int32 `json:"template_id,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -9,6 +9,7 @@ import (
 //
 type OsfederationIdentityprovider struct {
 	// 身份提供商ID。
+
 	Id string `json:"id"`
 }
 

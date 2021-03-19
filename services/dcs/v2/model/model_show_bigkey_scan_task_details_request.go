@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowBigkeyScanTaskDetailsRequest struct {
 	InstanceId string `json:"instance_id"`
-	BigkeyId   string `json:"bigkey_id"`
+
+	BigkeyId string `json:"bigkey_id"`
 }
 
 func (o ShowBigkeyScanTaskDetailsRequest) String() string {

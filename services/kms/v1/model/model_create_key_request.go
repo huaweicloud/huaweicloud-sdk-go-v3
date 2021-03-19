@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateKeyRequest struct {
-	VersionId string                `json:"version_id"`
-	Body      *CreateKeyRequestBody `json:"body,omitempty"`
+	VersionId string `json:"version_id"`
+
+	Body *CreateKeyRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateKeyRequest) String() string {

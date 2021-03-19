@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ExecuteScriptRequest struct {
-	ScriptName string            `json:"script_name"`
-	Body       *ExecuteScriptReq `json:"body,omitempty"`
+	ScriptName string `json:"script_name"`
+
+	Body *ExecuteScriptReq `json:"body,omitempty"`
 }
 
 func (o ExecuteScriptRequest) String() string {

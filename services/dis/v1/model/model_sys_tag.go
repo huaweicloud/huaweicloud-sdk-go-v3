@@ -2,15 +2,19 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type SysTag struct {
 	// 键。  - 不能为空。  - 值必须为_sys_enterprise_project_id。
+
 	Key *SysTagKey `json:"key,omitempty"`
 	// 值，对应的是企业项目ID，需要在企业管理页面获取。  - 36位UUID。
+
 	Value *string `json:"value,omitempty"`
 }
 

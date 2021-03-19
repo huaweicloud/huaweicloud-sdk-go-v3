@@ -2,22 +2,32 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListMetricsRequest struct {
-	ContentType string                   `json:"Content-Type"`
-	Dim0        *string                  `json:"dim.0,omitempty"`
-	Dim1        *string                  `json:"dim.1,omitempty"`
-	Dim2        *string                  `json:"dim.2,omitempty"`
-	Limit       *int32                   `json:"limit,omitempty"`
-	MetricName  *string                  `json:"metric_name,omitempty"`
-	Namespace   *string                  `json:"namespace,omitempty"`
-	Order       *ListMetricsRequestOrder `json:"order,omitempty"`
-	Start       *string                  `json:"start,omitempty"`
+	ContentType string `json:"Content-Type"`
+
+	Dim0 *string `json:"dim.0,omitempty"`
+
+	Dim1 *string `json:"dim.1,omitempty"`
+
+	Dim2 *string `json:"dim.2,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	MetricName *string `json:"metric_name,omitempty"`
+
+	Namespace *string `json:"namespace,omitempty"`
+
+	Order *ListMetricsRequestOrder `json:"order,omitempty"`
+
+	Start *string `json:"start,omitempty"`
 }
 
 func (o ListMetricsRequest) String() string {

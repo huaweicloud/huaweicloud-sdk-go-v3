@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type CreateKmsTagRequest struct {
-	VersionId string                   `json:"version_id"`
-	KeyId     string                   `json:"key_id"`
-	Body      *CreateKmsTagRequestBody `json:"body,omitempty"`
+	VersionId string `json:"version_id"`
+
+	KeyId string `json:"key_id"`
+
+	Body *CreateKmsTagRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateKmsTagRequest) String() string {

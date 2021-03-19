@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type KeystoneUpdateProjectRequest struct {
-	ProjectId string                            `json:"project_id"`
-	Body      *KeystoneUpdateProjectRequestBody `json:"body,omitempty"`
+	ProjectId string `json:"project_id"`
+
+	Body *KeystoneUpdateProjectRequestBody `json:"body,omitempty"`
 }
 
 func (o KeystoneUpdateProjectRequest) String() string {

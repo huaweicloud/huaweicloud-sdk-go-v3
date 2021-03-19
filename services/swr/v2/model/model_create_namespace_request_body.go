@@ -8,6 +8,7 @@ import (
 
 type CreateNamespaceRequestBody struct {
 	// 组织名称
+
 	Namespace string `json:"namespace"`
 }
 

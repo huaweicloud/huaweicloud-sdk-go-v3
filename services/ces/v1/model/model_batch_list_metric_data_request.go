@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type BatchListMetricDataRequest struct {
-	ContentType string                          `json:"Content-Type"`
-	Body        *BatchListMetricDataRequestBody `json:"body,omitempty"`
+	ContentType string `json:"Content-Type"`
+
+	Body *BatchListMetricDataRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchListMetricDataRequest) String() string {

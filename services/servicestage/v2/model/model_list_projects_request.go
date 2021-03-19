@@ -9,6 +9,7 @@ import (
 // Request Object
 type ListProjectsRequest struct {
 	XRepoAuth string `json:"X-Repo-Auth"`
+
 	Namespace string `json:"namespace"`
 }
 

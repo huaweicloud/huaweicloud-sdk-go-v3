@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateLoginProtectRequest struct {
-	UserId string                 `json:"user_id"`
-	Body   *UpdateLoginProjectReq `json:"body,omitempty"`
+	UserId string `json:"user_id"`
+
+	Body *UpdateLoginProjectReq `json:"body,omitempty"`
 }
 
 func (o UpdateLoginProtectRequest) String() string {

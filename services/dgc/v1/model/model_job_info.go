@@ -2,19 +2,27 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type JobInfo struct {
-	Name        *string         `json:"name,omitempty"`
-	Nodes       *[]Node         `json:"nodes,omitempty"`
-	Schedule    *Schedule       `json:"schedule,omitempty"`
-	Params      *[]JobParam     `json:"params,omitempty"`
-	Directory   *string         `json:"directory,omitempty"`
-	JobType     *JobInfoJobType `json:"jobType,omitempty"`
-	BasicConfig *BasicInfo      `json:"basicConfig,omitempty"`
+	Name *string `json:"name,omitempty"`
+
+	Nodes *[]Node `json:"nodes,omitempty"`
+
+	Schedule *Schedule `json:"schedule,omitempty"`
+
+	Params *[]JobParam `json:"params,omitempty"`
+
+	Directory *string `json:"directory,omitempty"`
+
+	JobType *JobInfoJobType `json:"jobType,omitempty"`
+
+	BasicConfig *BasicInfo `json:"basicConfig,omitempty"`
 }
 
 func (o JobInfo) String() string {

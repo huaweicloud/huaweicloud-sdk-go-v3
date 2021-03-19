@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type CinderListQuotasRequest struct {
-	TargetProjectId string                       `json:"target_project_id"`
-	Usage           CinderListQuotasRequestUsage `json:"usage"`
+	TargetProjectId string `json:"target_project_id"`
+
+	Usage CinderListQuotasRequestUsage `json:"usage"`
 }
 
 func (o CinderListQuotasRequest) String() string {

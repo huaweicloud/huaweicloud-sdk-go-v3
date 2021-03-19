@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type NeutronUpdateFloatingIpRequest struct {
-	FloatingipId string                              `json:"floatingip_id"`
-	Body         *NeutronUpdateFloatingIpRequestBody `json:"body,omitempty"`
+	FloatingipId string `json:"floatingip_id"`
+
+	Body *NeutronUpdateFloatingIpRequestBody `json:"body,omitempty"`
 }
 
 func (o NeutronUpdateFloatingIpRequest) String() string {

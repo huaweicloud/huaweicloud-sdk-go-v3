@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type DeleteTriggerRequest struct {
 	ContentType DeleteTriggerRequestContentType `json:"Content-Type"`
-	Namespace   string                          `json:"namespace"`
-	Repository  string                          `json:"repository"`
-	Trigger     string                          `json:"trigger"`
+
+	Namespace string `json:"namespace"`
+
+	Repository string `json:"repository"`
+
+	Trigger string `json:"trigger"`
 }
 
 func (o DeleteTriggerRequest) String() string {

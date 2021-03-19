@@ -2,14 +2,17 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 停用启用企业项目操作
 type EnableAction struct {
 	// 启用操作
+
 	Action EnableActionAction `json:"action"`
 }
 

@@ -9,6 +9,7 @@ import (
 //
 type MemberRef struct {
 	// 后端服务器ID。
+
 	Id string `json:"id"`
 }
 

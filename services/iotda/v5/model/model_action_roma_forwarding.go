@@ -9,10 +9,13 @@ import (
 // 转发ROMA Connect服务消息结构
 type ActionRomaForwarding struct {
 	// ROMA Connect服务对应的region区域
+
 	RegionName string `json:"region_name"`
 	// ROMA Connect服务对应的projectId信息
+
 	ProjectId string `json:"project_id"`
 	// ROMA Connect服务对应参数类型
+
 	RomaPushType *string `json:"roma_push_type,omitempty"`
 }
 

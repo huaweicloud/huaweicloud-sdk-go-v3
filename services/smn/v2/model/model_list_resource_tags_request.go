@@ -9,7 +9,8 @@ import (
 // Request Object
 type ListResourceTagsRequest struct {
 	ResourceType string `json:"resource_type"`
-	ResourceId   string `json:"resource_id"`
+
+	ResourceId string `json:"resource_id"`
 }
 
 func (o ListResourceTagsRequest) String() string {

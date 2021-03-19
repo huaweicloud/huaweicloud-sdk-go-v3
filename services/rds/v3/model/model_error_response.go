@@ -8,8 +8,10 @@ import (
 
 type ErrorResponse struct {
 	// 错误码。
+
 	ErrorCode string `json:"error_code"`
 	// 错误消息。
+
 	ErrorMsg string `json:"error_msg"`
 }
 

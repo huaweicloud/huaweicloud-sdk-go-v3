@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type BatchCreateVolumeTagsRequest struct {
-	VolumeId string                            `json:"volume_id"`
-	Body     *BatchCreateVolumeTagsRequestBody `json:"body,omitempty"`
+	VolumeId string `json:"volume_id"`
+
+	Body *BatchCreateVolumeTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchCreateVolumeTagsRequest) String() string {

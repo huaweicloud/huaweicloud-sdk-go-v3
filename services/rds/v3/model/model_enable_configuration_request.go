@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type EnableConfigurationRequest struct {
-	XLanguage *string                    `json:"X-Language,omitempty"`
-	ConfigId  string                     `json:"config_id"`
-	Body      *ApplyConfigurationRequest `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	ConfigId string `json:"config_id"`
+
+	Body *ApplyConfigurationRequest `json:"body,omitempty"`
 }
 
 func (o EnableConfigurationRequest) String() string {

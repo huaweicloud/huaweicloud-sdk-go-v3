@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListScalingTagInfosByResourceIdRequest struct {
 	ResourceType ListScalingTagInfosByResourceIdRequestResourceType `json:"resource_type"`
-	ResourceId   string                                             `json:"resource_id"`
+
+	ResourceId string `json:"resource_id"`
 }
 
 func (o ListScalingTagInfosByResourceIdRequest) String() string {

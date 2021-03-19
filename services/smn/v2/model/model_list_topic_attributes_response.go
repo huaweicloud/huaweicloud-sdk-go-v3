@@ -9,7 +9,9 @@ import (
 // Response Object
 type ListTopicAttributesResponse struct {
 	// 请求的唯一标识ID。
-	RequestId      *string         `json:"request_id,omitempty"`
+
+	RequestId *string `json:"request_id,omitempty"`
+
 	Attributes     *TopicAttribute `json:"attributes,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

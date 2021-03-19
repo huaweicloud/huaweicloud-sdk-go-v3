@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateScalingGroupRequest struct {
-	ScalingGroupId string                         `json:"scaling_group_id"`
-	Body           *UpdateScalingGroupRequestBody `json:"body,omitempty"`
+	ScalingGroupId string `json:"scaling_group_id"`
+
+	Body *UpdateScalingGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateScalingGroupRequest) String() string {

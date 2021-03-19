@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type SwitchSslRequest struct {
-	InstanceId string                `json:"instance_id"`
-	Body       *SwitchSslRequestBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *SwitchSslRequestBody `json:"body,omitempty"`
 }
 
 func (o SwitchSslRequest) String() string {

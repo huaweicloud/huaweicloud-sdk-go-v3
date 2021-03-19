@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type PushCertificateRequest struct {
-	CertificateId string                      `json:"certificate_id"`
-	Body          *PushCertificateRequestBody `json:"body,omitempty"`
+	CertificateId string `json:"certificate_id"`
+
+	Body *PushCertificateRequestBody `json:"body,omitempty"`
 }
 
 func (o PushCertificateRequest) String() string {

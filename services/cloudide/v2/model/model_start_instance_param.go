@@ -8,8 +8,10 @@ import (
 
 type StartInstanceParam struct {
 	// 插件列表
+
 	PluginEnableList *[]string `json:"plugin_enable_list,omitempty"`
 	// 插件参数
+
 	PluginVars map[string]string `json:"plugin_vars,omitempty"`
 }
 

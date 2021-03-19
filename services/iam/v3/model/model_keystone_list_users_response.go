@@ -10,6 +10,7 @@ import (
 type KeystoneListUsersResponse struct {
 	Links *Links `json:"links,omitempty"`
 	// IAM用户信息列表。
+
 	Users          *[]KeystoneListUsersResult `json:"users,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }

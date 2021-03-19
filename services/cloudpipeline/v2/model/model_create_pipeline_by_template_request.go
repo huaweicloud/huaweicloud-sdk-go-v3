@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreatePipelineByTemplateRequest struct {
-	XLanguage *string       `json:"X-Language,omitempty"`
-	Body      *TemplateCddl `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	Body *TemplateCddl `json:"body,omitempty"`
 }
 
 func (o CreatePipelineByTemplateRequest) String() string {

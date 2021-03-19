@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type UpdateInstanceActionRequest struct {
-	ApplicationId string          `json:"application_id"`
-	ComponentId   string          `json:"component_id"`
-	InstanceId    string          `json:"instance_id"`
-	Body          *InstanceAction `json:"body,omitempty"`
+	ApplicationId string `json:"application_id"`
+
+	ComponentId string `json:"component_id"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *InstanceAction `json:"body,omitempty"`
 }
 
 func (o UpdateInstanceActionRequest) String() string {

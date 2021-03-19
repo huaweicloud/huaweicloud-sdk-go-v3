@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateApiV2Request struct {
-	InstanceId string     `json:"instance_id"`
-	Body       *ApiCreate `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *ApiCreate `json:"body,omitempty"`
 }
 
 func (o CreateApiV2Request) String() string {

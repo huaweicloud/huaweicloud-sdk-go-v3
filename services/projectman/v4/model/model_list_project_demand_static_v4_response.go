@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListProjectDemandStaticV4Response struct {
 	// 需求统计
+
 	DemandStatistics *[]DemandStatisticResponseV4 `json:"demand_statistics,omitempty"`
 	HttpStatusCode   int                          `json:"-"`
 }

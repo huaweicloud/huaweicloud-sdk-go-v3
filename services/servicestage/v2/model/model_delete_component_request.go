@@ -9,8 +9,10 @@ import (
 // Request Object
 type DeleteComponentRequest struct {
 	ApplicationId string `json:"application_id"`
-	ComponentId   string `json:"component_id"`
-	Force         *bool  `json:"force,omitempty"`
+
+	ComponentId string `json:"component_id"`
+
+	Force *bool `json:"force,omitempty"`
 }
 
 func (o DeleteComponentRequest) String() string {

@@ -2,20 +2,26 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 组件创建信息
 type Detail struct {
 	// 开始时间
+
 	StartTime *string `json:"start_time,omitempty"`
 	// 结束时间
+
 	EndTime *string `json:"end_time,omitempty"`
 	// 状态
+
 	Status *DetailStatus `json:"status,omitempty"`
 	// 细节描述
+
 	Detail *string `json:"detail,omitempty"`
 }
 

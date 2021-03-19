@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type AddDeviceRequest struct {
-	InstanceId *string    `json:"Instance-Id,omitempty"`
-	Body       *AddDevice `json:"body,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	Body *AddDevice `json:"body,omitempty"`
 }
 
 func (o AddDeviceRequest) String() string {

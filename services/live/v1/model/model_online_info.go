@@ -2,25 +2,34 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type OnlineInfo struct {
 	// 域名
+
 	PublishDomain string `json:"publish_domain"`
 	// 应用名
+
 	App string `json:"app"`
 	// 流名
+
 	Stream string `json:"stream"`
 	// 视频编码方式 - H264 - H265
+
 	VideoCodec OnlineInfoVideoCodec `json:"video_codec"`
 	// 音频编码方式 - AAC
+
 	AudioCodec OnlineInfoAudioCodec `json:"audio_codec"`
 	// 推流设备的ip
+
 	ClientIp string `json:"client_ip"`
 	// 开始推流时刻 UTC格式 2006-01-02T15:04:05Z
+
 	StartTime string `json:"start_time"`
 }
 

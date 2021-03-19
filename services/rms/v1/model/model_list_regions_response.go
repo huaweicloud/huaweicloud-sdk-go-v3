@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListRegionsResponse struct {
 	// 区域信息项列表
+
 	Value          *[]Region `json:"value,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

@@ -9,8 +9,10 @@ import (
 // Request Object
 type DeleteTagRequest struct {
 	ResourceType string `json:"resource_type"`
-	ResourceId   string `json:"resource_id"`
-	Key          string `json:"key"`
+
+	ResourceId string `json:"resource_id"`
+
+	Key string `json:"key"`
 }
 
 func (o DeleteTagRequest) String() string {

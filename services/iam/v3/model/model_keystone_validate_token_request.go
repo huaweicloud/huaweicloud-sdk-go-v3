@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type KeystoneValidateTokenRequest struct {
-	XSubjectToken string  `json:"X-Subject-Token"`
-	Nocatalog     *string `json:"nocatalog,omitempty"`
+	XSubjectToken string `json:"X-Subject-Token"`
+
+	Nocatalog *string `json:"nocatalog,omitempty"`
 }
 
 func (o KeystoneValidateTokenRequest) String() string {

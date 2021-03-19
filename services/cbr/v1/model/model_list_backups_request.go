@@ -2,34 +2,56 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListBackupsRequest struct {
-	CheckpointId        *string                         `json:"checkpoint_id,omitempty"`
-	Dec                 *bool                           `json:"dec,omitempty"`
-	EndTime             *string                         `json:"end_time,omitempty"`
-	ImageType           *ListBackupsRequestImageType    `json:"image_type,omitempty"`
-	Limit               *int32                          `json:"limit,omitempty"`
-	Marker              *string                         `json:"marker,omitempty"`
-	Name                *string                         `json:"name,omitempty"`
-	Offset              *int32                          `json:"offset,omitempty"`
-	ResourceAz          *string                         `json:"resource_az,omitempty"`
-	ResourceId          *string                         `json:"resource_id,omitempty"`
-	ResourceName        *string                         `json:"resource_name,omitempty"`
-	ResourceType        *ListBackupsRequestResourceType `json:"resource_type,omitempty"`
-	Sort                *string                         `json:"sort,omitempty"`
-	StartTime           *string                         `json:"start_time,omitempty"`
-	Status              *ListBackupsRequestStatus       `json:"status,omitempty"`
-	VaultId             *string                         `json:"vault_id,omitempty"`
-	EnterpriseProjectId *string                         `json:"enterprise_project_id,omitempty"`
-	OwnType             *ListBackupsRequestOwnType      `json:"own_type,omitempty"`
-	MemberStatus        *ListBackupsRequestMemberStatus `json:"member_status,omitempty"`
-	ParentId            *string                         `json:"parent_id,omitempty"`
-	UsedPercent         *string                         `json:"used_percent,omitempty"`
+	CheckpointId *string `json:"checkpoint_id,omitempty"`
+
+	Dec *bool `json:"dec,omitempty"`
+
+	EndTime *string `json:"end_time,omitempty"`
+
+	ImageType *ListBackupsRequestImageType `json:"image_type,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
+
+	Name *string `json:"name,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	ResourceAz *string `json:"resource_az,omitempty"`
+
+	ResourceId *string `json:"resource_id,omitempty"`
+
+	ResourceName *string `json:"resource_name,omitempty"`
+
+	ResourceType *ListBackupsRequestResourceType `json:"resource_type,omitempty"`
+
+	Sort *string `json:"sort,omitempty"`
+
+	StartTime *string `json:"start_time,omitempty"`
+
+	Status *ListBackupsRequestStatus `json:"status,omitempty"`
+
+	VaultId *string `json:"vault_id,omitempty"`
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	OwnType *ListBackupsRequestOwnType `json:"own_type,omitempty"`
+
+	MemberStatus *ListBackupsRequestMemberStatus `json:"member_status,omitempty"`
+
+	ParentId *string `json:"parent_id,omitempty"`
+
+	UsedPercent *string `json:"used_percent,omitempty"`
 }
 
 func (o ListBackupsRequest) String() string {

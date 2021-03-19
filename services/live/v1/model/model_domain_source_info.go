@@ -2,19 +2,25 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type DomainSourceInfo struct {
 	// 回源、转推协议。
+
 	Protocol *DomainSourceInfoProtocol `json:"protocol,omitempty"`
 	// 源站地址类型
+
 	SourceType DomainSourceInfoSourceType `json:"source_type"`
 	// 回源、转推地址列表，格式为：{domain/IP}[:{port}]，port默认值为1935；最少1个，最多10个。
+
 	Sources *[]string `json:"sources,omitempty"`
 	// 多个回源、转推地址的优先级。
+
 	SourcesPriority *DomainSourceInfoSourcesPriority `json:"sources_priority,omitempty"`
 }
 

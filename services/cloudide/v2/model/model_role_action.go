@@ -2,19 +2,25 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type RoleAction struct {
 	// 动作名
+
 	ActionCname *string `json:"action_cname,omitempty"`
 	// 执行动作
+
 	Actions *RoleActionActions `json:"actions,omitempty"`
 	// id
+
 	Id *string `json:"id,omitempty"`
 	// 角色id
+
 	RoleId *string `json:"role_id,omitempty"`
 }
 

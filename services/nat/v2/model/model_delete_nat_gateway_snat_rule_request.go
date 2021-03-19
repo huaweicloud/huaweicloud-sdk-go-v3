@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteNatGatewaySnatRuleRequest struct {
 	NatGatewayId string `json:"nat_gateway_id"`
-	SnatRuleId   string `json:"snat_rule_id"`
+
+	SnatRuleId string `json:"snat_rule_id"`
 }
 
 func (o DeleteNatGatewaySnatRuleRequest) String() string {

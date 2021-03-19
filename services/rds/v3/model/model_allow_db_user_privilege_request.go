@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type AllowDbUserPrivilegeRequest struct {
-	XLanguage  *string       `json:"X-Language,omitempty"`
-	InstanceId string        `json:"instance_id"`
-	Body       *GrantRequest `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *GrantRequest `json:"body,omitempty"`
 }
 
 func (o AllowDbUserPrivilegeRequest) String() string {

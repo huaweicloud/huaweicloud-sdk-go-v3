@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListOffSiteBackupsResponse struct {
 	// 跨区域备份信息。
+
 	OffsiteBackups *[]OffSiteBackupForList `json:"offsite_backups,omitempty"`
 	// 总记录数。
+
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

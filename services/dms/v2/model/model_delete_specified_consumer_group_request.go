@@ -9,6 +9,7 @@ import (
 // Request Object
 type DeleteSpecifiedConsumerGroupRequest struct {
 	QueueId string `json:"queue_id"`
+
 	GroupId string `json:"group_id"`
 }
 

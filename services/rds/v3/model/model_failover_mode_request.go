@@ -8,6 +8,7 @@ import (
 
 type FailoverModeRequest struct {
 	// 数据库主备同步模式
+
 	Mode string `json:"mode"`
 }
 

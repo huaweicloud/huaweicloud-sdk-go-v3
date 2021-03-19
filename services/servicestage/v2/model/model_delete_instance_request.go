@@ -9,9 +9,12 @@ import (
 // Request Object
 type DeleteInstanceRequest struct {
 	ApplicationId string `json:"application_id"`
-	ComponentId   string `json:"component_id"`
-	InstanceId    string `json:"instance_id"`
-	Force         *bool  `json:"force,omitempty"`
+
+	ComponentId string `json:"component_id"`
+
+	InstanceId string `json:"instance_id"`
+
+	Force *bool `json:"force,omitempty"`
 }
 
 func (o DeleteInstanceRequest) String() string {

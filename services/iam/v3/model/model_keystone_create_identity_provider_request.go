@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type KeystoneCreateIdentityProviderRequest struct {
-	Id   string                                     `json:"id"`
+	Id string `json:"id"`
+
 	Body *KeystoneCreateIdentityProviderRequestBody `json:"body,omitempty"`
 }
 

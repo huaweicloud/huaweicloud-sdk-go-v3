@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ShowProjectWorkHoursRequest struct {
-	ProjectId string                           `json:"project_id"`
-	Body      *ShowProjectWorkHoursRequestBody `json:"body,omitempty"`
+	ProjectId string `json:"project_id"`
+
+	Body *ShowProjectWorkHoursRequestBody `json:"body,omitempty"`
 }
 
 func (o ShowProjectWorkHoursRequest) String() string {

@@ -8,12 +8,18 @@ import (
 
 // Request Object
 type ListEnvironmentVariablesV2Request struct {
-	InstanceId    string  `json:"instance_id"`
-	GroupId       string  `json:"group_id"`
-	EnvId         *string `json:"env_id,omitempty"`
-	VariableName  *string `json:"variable_name,omitempty"`
-	Offset        *int64  `json:"offset,omitempty"`
-	Limit         *int32  `json:"limit,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	GroupId string `json:"group_id"`
+
+	EnvId *string `json:"env_id,omitempty"`
+
+	VariableName *string `json:"variable_name,omitempty"`
+
+	Offset *int64 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
 	PreciseSearch *string `json:"precise_search,omitempty"`
 }
 

@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListNatGatewaySnatRulesResponse struct {
 	// 查询SNAT规则列表的响应体。
+
 	SnatRules      *[]NatGatewaySnatRuleResponseBody `json:"snat_rules,omitempty"`
 	HttpStatusCode int                               `json:"-"`
 }

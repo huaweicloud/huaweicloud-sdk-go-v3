@@ -9,6 +9,7 @@ import (
 // 应用配置信息。
 type ApplicationConfigModifyConfiguration struct {
 	// 应用环境变量。
+
 	Env []ApplicationConfigModifyConfigurationEnv `json:"env"`
 }
 

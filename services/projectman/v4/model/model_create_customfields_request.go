@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateCustomfieldsRequest struct {
-	ProjectId string                  `json:"project_id"`
-	Body      *CreateCustomfieldV1Req `json:"body,omitempty"`
+	ProjectId string `json:"project_id"`
+
+	Body *CreateCustomfieldV1Req `json:"body,omitempty"`
 }
 
 func (o CreateCustomfieldsRequest) String() string {

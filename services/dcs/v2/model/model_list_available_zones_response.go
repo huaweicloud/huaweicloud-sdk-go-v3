@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListAvailableZonesResponse struct {
 	// 区域ID。
+
 	RegionId *string `json:"region_id,omitempty"`
 	// 可用分区数组。
+
 	AvailableZones *[]AvailableZones `json:"available_zones,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

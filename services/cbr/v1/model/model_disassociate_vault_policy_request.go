@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type DisassociateVaultPolicyRequest struct {
-	VaultId string           `json:"vault_id"`
-	Body    *VaultDissociate `json:"body,omitempty"`
+	VaultId string `json:"vault_id"`
+
+	Body *VaultDissociate `json:"body,omitempty"`
 }
 
 func (o DisassociateVaultPolicyRequest) String() string {

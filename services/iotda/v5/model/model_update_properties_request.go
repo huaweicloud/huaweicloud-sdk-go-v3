@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type UpdatePropertiesRequest struct {
-	DeviceId       string                   `json:"device_id"`
-	StageAuthToken *string                  `json:"Stage-Auth-Token,omitempty"`
-	InstanceId     *string                  `json:"Instance-Id,omitempty"`
-	Body           *DevicePropertiesRequest `json:"body,omitempty"`
+	DeviceId string `json:"device_id"`
+
+	StageAuthToken *string `json:"Stage-Auth-Token,omitempty"`
+
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	Body *DevicePropertiesRequest `json:"body,omitempty"`
 }
 
 func (o UpdatePropertiesRequest) String() string {

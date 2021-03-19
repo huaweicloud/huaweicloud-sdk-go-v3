@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListPostgresqlDbUserPaginatedResponse struct {
 	// 用户信息。
+
 	Users *[]PgUserForList `json:"users,omitempty"`
 	// 总条数。
+
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

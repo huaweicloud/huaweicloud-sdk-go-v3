@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteSignatureKeyV2Request struct {
 	InstanceId string `json:"instance_id"`
-	SignId     string `json:"sign_id"`
+
+	SignId string `json:"sign_id"`
 }
 
 func (o DeleteSignatureKeyV2Request) String() string {

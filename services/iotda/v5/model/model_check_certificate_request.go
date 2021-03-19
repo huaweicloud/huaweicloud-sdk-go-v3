@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type CheckCertificateRequest struct {
-	InstanceId    *string               `json:"Instance-Id,omitempty"`
-	CertificateId string                `json:"certificate_id"`
-	ActionId      string                `json:"action_id"`
-	Body          *VerifyCertificateDto `json:"body,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	CertificateId string `json:"certificate_id"`
+
+	ActionId string `json:"action_id"`
+
+	Body *VerifyCertificateDto `json:"body,omitempty"`
 }
 
 func (o CheckCertificateRequest) String() string {

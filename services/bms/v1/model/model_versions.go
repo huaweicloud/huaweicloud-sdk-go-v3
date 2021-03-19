@@ -11,16 +11,22 @@ import (
 // 描述裸金属服务器API版本信息列表
 type Versions struct {
 	// API版本ID
+
 	Id *VersionsId `json:"id,omitempty"`
 	// API的url地址
+
 	Links *[]VersionLinks `json:"links,omitempty"`
 	// API支持的最小微版本号
+
 	MinVersion *string `json:"min_version,omitempty"`
 	// 这个是API版本的状态。可以是：CURRENT这是使用的API的首选版本；SUPPORTED：这是一个较老的，但仍然支持的API版本；DEPRECATED：一个被废弃的API版本，该版本将被删除
+
 	Status *VersionsStatus `json:"status,omitempty"`
 	// API支持的最大微版本号
+
 	Version *string `json:"version,omitempty"`
 	// API版本发布时间
+
 	Updated *sdktime.SdkTime `json:"updated,omitempty"`
 }
 

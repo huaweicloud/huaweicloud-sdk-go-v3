@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type KeystoneShowSecurityComplianceByOptionRequest struct {
-	DomainId string                                              `json:"domain_id"`
-	Option   KeystoneShowSecurityComplianceByOptionRequestOption `json:"option"`
+	DomainId string `json:"domain_id"`
+
+	Option KeystoneShowSecurityComplianceByOptionRequestOption `json:"option"`
 }
 
 func (o KeystoneShowSecurityComplianceByOptionRequest) String() string {

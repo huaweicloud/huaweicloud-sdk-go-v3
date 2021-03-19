@@ -2,20 +2,28 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListSlowlogRequest struct {
-	InstanceId string                     `json:"instance_id"`
-	Offset     *int32                     `json:"offset,omitempty"`
-	Limit      *int32                     `json:"limit,omitempty"`
-	SortKey    *ListSlowlogRequestSortKey `json:"sort_key,omitempty"`
-	SortDir    *ListSlowlogRequestSortDir `json:"sort_dir,omitempty"`
-	StartTime  string                     `json:"start_time"`
-	EndTime    string                     `json:"end_time"`
+	InstanceId string `json:"instance_id"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	SortKey *ListSlowlogRequestSortKey `json:"sort_key,omitempty"`
+
+	SortDir *ListSlowlogRequestSortDir `json:"sort_dir,omitempty"`
+
+	StartTime string `json:"start_time"`
+
+	EndTime string `json:"end_time"`
 }
 
 func (o ListSlowlogRequest) String() string {

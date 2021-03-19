@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type AssociatePublicipsRequest struct {
-	PublicipId string                         `json:"publicip_id"`
-	Body       *AssociatePublicipsRequestBody `json:"body,omitempty"`
+	PublicipId string `json:"publicip_id"`
+
+	Body *AssociatePublicipsRequestBody `json:"body,omitempty"`
 }
 
 func (o AssociatePublicipsRequest) String() string {

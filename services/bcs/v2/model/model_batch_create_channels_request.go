@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type BatchCreateChannelsRequest struct {
-	BlockchainId string                          `json:"blockchain_id"`
-	Body         *BatchCreateChannelsRequestBody `json:"body,omitempty"`
+	BlockchainId string `json:"blockchain_id"`
+
+	Body *BatchCreateChannelsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchCreateChannelsRequest) String() string {

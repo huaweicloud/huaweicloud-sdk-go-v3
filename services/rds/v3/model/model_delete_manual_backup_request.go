@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteManualBackupRequest struct {
 	XLanguage *string `json:"X-Language,omitempty"`
-	BackupId  string  `json:"backup_id"`
+
+	BackupId string `json:"backup_id"`
 }
 
 func (o DeleteManualBackupRequest) String() string {

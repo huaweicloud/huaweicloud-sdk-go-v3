@@ -8,12 +8,17 @@ import (
 
 // Request Object
 type ListResourcesRequest struct {
-	Provider string  `json:"provider"`
-	Type     string  `json:"type"`
+	Provider string `json:"provider"`
+
+	Type string `json:"type"`
+
 	RegionId *string `json:"region_id,omitempty"`
-	EpId     *string `json:"ep_id,omitempty"`
-	Limit    *int32  `json:"limit,omitempty"`
-	Marker   *string `json:"marker,omitempty"`
+
+	EpId *string `json:"ep_id,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
 }
 
 func (o ListResourcesRequest) String() string {

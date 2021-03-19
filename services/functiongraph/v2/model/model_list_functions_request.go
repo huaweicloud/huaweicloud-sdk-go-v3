@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type ListFunctionsRequest struct {
-	Marker   *string `json:"marker,omitempty"`
+	Marker *string `json:"marker,omitempty"`
+
 	Maxitems *string `json:"maxitems,omitempty"`
 }
 

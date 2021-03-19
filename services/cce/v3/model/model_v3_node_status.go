@@ -2,22 +2,29 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type V3NodeStatus struct {
 	DeleteStatus *DeleteStatus `json:"deleteStatus,omitempty"`
 	// 创建或删除时的任务ID。
+
 	JobID *string `json:"jobID,omitempty"`
 	// 节点状态。
+
 	Phase *V3NodeStatusPhase `json:"phase,omitempty"`
 	// 节点主网卡私有网段IP地址。
+
 	PrivateIP *string `json:"privateIP,omitempty"`
 	// 节点弹性公网IP地址。
+
 	PublicIP *string `json:"publicIP,omitempty"`
 	// 底层云服务器或裸金属节点ID。
+
 	ServerId *string `json:"serverId,omitempty"`
 }
 

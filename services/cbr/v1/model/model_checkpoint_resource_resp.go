@@ -2,27 +2,37 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type CheckpointResourceResp struct {
 	// 资源附加信息
+
 	ExtraInfo *string `json:"extra_info,omitempty"`
 	// 待备份资源id
+
 	Id string `json:"id"`
 	// 待备份资源名称
+
 	Name string `json:"name"`
 	// 保护状态
+
 	ProtectStatus *CheckpointResourceRespProtectStatus `json:"protect_status,omitempty"`
 	// 资源已分配容量,单位为GB
+
 	ResourceSize *string `json:"resource_size,omitempty"`
 	//
+
 	Type string `json:"type"`
 	// 副本大小
+
 	BackupSize *string `json:"backup_size,omitempty"`
 	// 副本数量
+
 	BackupCount *string `json:"backup_count,omitempty"`
 }
 

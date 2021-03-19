@@ -8,8 +8,10 @@ import (
 
 type ModifyInstancePasswordBody struct {
 	// 旧密码
+
 	OldPassword *string `json:"old_password,omitempty"`
 	// 新密码
+
 	NewPassword *string `json:"new_password,omitempty"`
 }
 

@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateSignatureKeyV2Request struct {
-	InstanceId string        `json:"instance_id"`
-	SignId     string        `json:"sign_id"`
-	Body       *SignatureReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	SignId string `json:"sign_id"`
+
+	Body *SignatureReq `json:"body,omitempty"`
 }
 
 func (o UpdateSignatureKeyV2Request) String() string {

@@ -8,6 +8,7 @@ import (
 
 type CheckProjectNameRequestV4 struct {
 	// 项目名
+
 	ProjectName string `json:"project_name"`
 }
 

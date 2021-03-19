@@ -2,14 +2,17 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 启停伸缩组请求
 type EnableOrDisableScalingGroupRequestBody struct {
 	// 启用或停止伸缩组操作的标识。启用：resume 停止：pause
+
 	Action *EnableOrDisableScalingGroupRequestBodyAction `json:"action,omitempty"`
 }
 

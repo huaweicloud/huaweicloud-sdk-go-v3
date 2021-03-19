@@ -8,14 +8,22 @@ import (
 
 // Request Object
 type ListBareMetalServersRequest struct {
-	Flavor              *string `json:"flavor,omitempty"`
-	Name                *string `json:"name,omitempty"`
-	Status              *string `json:"status,omitempty"`
-	Limit               *int32  `json:"limit,omitempty"`
-	Offset              *int32  `json:"offset,omitempty"`
-	Tags                *string `json:"tags,omitempty"`
-	ReservationId       *string `json:"reservation_id,omitempty"`
-	Detail              *string `json:"detail,omitempty"`
+	Flavor *string `json:"flavor,omitempty"`
+
+	Name *string `json:"name,omitempty"`
+
+	Status *string `json:"status,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Tags *string `json:"tags,omitempty"`
+
+	ReservationId *string `json:"reservation_id,omitempty"`
+
+	Detail *string `json:"detail,omitempty"`
+
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CopyInstanceRequest struct {
-	InstanceId string              `json:"instance_id"`
-	Body       *BackupInstanceBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *BackupInstanceBody `json:"body,omitempty"`
 }
 
 func (o CopyInstanceRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ShowResourceBindEnterpriseProjectRequest struct {
-	EnterpriseProjectId string         `json:"enterprise_project_id"`
-	Body                *ResqEpResouce `json:"body,omitempty"`
+	EnterpriseProjectId string `json:"enterprise_project_id"`
+
+	Body *ResqEpResouce `json:"body,omitempty"`
 }
 
 func (o ShowResourceBindEnterpriseProjectRequest) String() string {

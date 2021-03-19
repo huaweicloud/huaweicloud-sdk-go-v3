@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ShowSyncJobRequest struct {
 	ContentType ShowSyncJobRequestContentType `json:"Content-Type"`
-	Namespace   string                        `json:"namespace"`
-	Repository  string                        `json:"repository"`
-	Filter      string                        `json:"filter"`
+
+	Namespace string `json:"namespace"`
+
+	Repository string `json:"repository"`
+
+	Filter string `json:"filter"`
 }
 
 func (o ShowSyncJobRequest) String() string {

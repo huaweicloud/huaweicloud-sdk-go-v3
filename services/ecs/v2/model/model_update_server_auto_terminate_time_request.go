@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateServerAutoTerminateTimeRequest struct {
-	ServerId string                                    `json:"server_id"`
-	Body     *UpdateServerAutoTerminateTimeRequestBody `json:"body,omitempty"`
+	ServerId string `json:"server_id"`
+
+	Body *UpdateServerAutoTerminateTimeRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateServerAutoTerminateTimeRequest) String() string {

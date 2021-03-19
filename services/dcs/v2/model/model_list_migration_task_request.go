@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ListMigrationTaskRequest struct {
-	Offset *int32  `json:"offset,omitempty"`
-	Limit  *int32  `json:"limit,omitempty"`
-	Name   *string `json:"name,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Name *string `json:"name,omitempty"`
 }
 
 func (o ListMigrationTaskRequest) String() string {

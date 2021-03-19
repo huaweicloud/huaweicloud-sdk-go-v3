@@ -9,8 +9,10 @@ import (
 // 错误码消息
 type ErrorInfo struct {
 	// 错误码
+
 	ErrorCode *string `json:"error_code,omitempty"`
 	// 错误描述
+
 	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 

@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListPoliciesResponse struct {
 	//
+
 	Policies *[]Policy `json:"policies,omitempty"`
 	//
+
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

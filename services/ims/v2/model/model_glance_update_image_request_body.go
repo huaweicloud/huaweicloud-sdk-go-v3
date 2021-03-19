@@ -2,18 +2,23 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 原生更新接口请求体
 type GlanceUpdateImageRequestBody struct {
 	// 所需进行的更新操作的类型：替换、添加、删除。取值范围：replace、add、remove
+
 	Op GlanceUpdateImageRequestBodyOp `json:"op"`
 	// 所要操作的属性名称。 replace和remove操作取值只能是镜像当前已有的属性、add操作取值只能是镜像当前不存在的属性，需要在属性名称前加”/”
+
 	Path string `json:"path"`
 	// 所需更新/添加属性的值
+
 	Value *string `json:"value,omitempty"`
 }
 

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateOpenIdConnectConfigRequest struct {
-	IdpId string                                `json:"idp_id"`
-	Body  *UpdateOpenIdConnectConfigRequestBody `json:"body,omitempty"`
+	IdpId string `json:"idp_id"`
+
+	Body *UpdateOpenIdConnectConfigRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateOpenIdConnectConfigRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CinderExportToImageRequest struct {
-	VolumeId string                          `json:"volume_id"`
-	Body     *CinderExportToImageRequestBody `json:"body,omitempty"`
+	VolumeId string `json:"volume_id"`
+
+	Body *CinderExportToImageRequestBody `json:"body,omitempty"`
 }
 
 func (o CinderExportToImageRequest) String() string {

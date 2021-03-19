@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type SwitchSslRequest struct {
-	XLanguage  *SwitchSslRequestXLanguage `json:"X-Language,omitempty"`
-	InstanceId string                     `json:"instance_id"`
-	Body       *SslOptionRequest          `json:"body,omitempty"`
+	XLanguage *SwitchSslRequestXLanguage `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *SslOptionRequest `json:"body,omitempty"`
 }
 
 func (o SwitchSslRequest) String() string {

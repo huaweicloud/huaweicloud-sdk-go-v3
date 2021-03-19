@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowDeviceRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	DeviceId   string  `json:"device_id"`
+
+	DeviceId string `json:"device_id"`
 }
 
 func (o ShowDeviceRequest) String() string {

@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ChangeOpsWindowRequest struct {
-	XLanguage  *ChangeOpsWindowRequestXLanguage `json:"X-Language,omitempty"`
-	InstanceId string                           `json:"instance_id"`
-	Body       *OpsWindowRequest                `json:"body,omitempty"`
+	XLanguage *ChangeOpsWindowRequestXLanguage `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *OpsWindowRequest `json:"body,omitempty"`
 }
 
 func (o ChangeOpsWindowRequest) String() string {

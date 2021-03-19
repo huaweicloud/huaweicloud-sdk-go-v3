@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateAppV2Request struct {
-	InstanceId string  `json:"instance_id"`
-	AppId      string  `json:"app_id"`
-	Body       *AppReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	AppId string `json:"app_id"`
+
+	Body *AppReq `json:"body,omitempty"`
 }
 
 func (o UpdateAppV2Request) String() string {

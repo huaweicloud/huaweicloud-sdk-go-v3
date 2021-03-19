@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type CreateDbUserRequest struct {
-	XLanguage  *string          `json:"X-Language,omitempty"`
-	InstanceId string           `json:"instance_id"`
-	Body       *UserForCreation `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *UserForCreation `json:"body,omitempty"`
 }
 
 func (o CreateDbUserRequest) String() string {

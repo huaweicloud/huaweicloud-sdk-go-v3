@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type DeleteSubscriptionRequest struct {
-	InstanceId     *string `json:"Instance-Id,omitempty"`
-	SubscriptionId string  `json:"subscription_id"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	SubscriptionId string `json:"subscription_id"`
 }
 
 func (o DeleteSubscriptionRequest) String() string {

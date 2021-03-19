@@ -2,19 +2,26 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Response Object
 type ShowJobStatusResponse struct {
-	Name      *string                      `json:"name,omitempty"`
-	Status    *ShowJobStatusResponseStatus `json:"status,omitempty"`
-	Starttime *string                      `json:"starttime,omitempty"`
-	EndTime   *string                      `json:"endTime,omitempty"`
+	Name *string `json:"name,omitempty"`
+
+	Status *ShowJobStatusResponseStatus `json:"status,omitempty"`
+
+	Starttime *string `json:"starttime,omitempty"`
+
+	EndTime *string `json:"endTime,omitempty"`
 	// 状态最后更新时间
-	LastUpdateTime *string               `json:"lastUpdateTime,omitempty"`
+
+	LastUpdateTime *string `json:"lastUpdateTime,omitempty"`
+
 	Nodes          *[]RealTimeNodeStatus `json:"nodes,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

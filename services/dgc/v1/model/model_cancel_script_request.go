@@ -9,6 +9,7 @@ import (
 // Request Object
 type CancelScriptRequest struct {
 	ScriptName string `json:"script_name"`
+
 	InstanceId string `json:"instance_id"`
 }
 

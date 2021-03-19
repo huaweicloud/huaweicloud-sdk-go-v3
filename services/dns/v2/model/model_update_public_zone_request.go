@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdatePublicZoneRequest struct {
-	ZoneId string                `json:"zone_id"`
-	Body   *UpdatePublicZoneInfo `json:"body,omitempty"`
+	ZoneId string `json:"zone_id"`
+
+	Body *UpdatePublicZoneInfo `json:"body,omitempty"`
 }
 
 func (o UpdatePublicZoneRequest) String() string {

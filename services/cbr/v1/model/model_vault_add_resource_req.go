@@ -8,6 +8,7 @@ import (
 
 type VaultAddResourceReq struct {
 	// 资源列表
+
 	Resources []ResourceCreate `json:"resources"`
 }
 

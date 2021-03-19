@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListFlavorsRequest struct {
-	XLanguage    *string                        `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
 	DatabaseName ListFlavorsRequestDatabaseName `json:"database_name"`
-	VersionName  *string                        `json:"version_name,omitempty"`
-	SpecCode     *string                        `json:"spec_code,omitempty"`
+
+	VersionName *string `json:"version_name,omitempty"`
+
+	SpecCode *string `json:"spec_code,omitempty"`
 }
 
 func (o ListFlavorsRequest) String() string {

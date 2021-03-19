@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type Rule struct {
 	// template是date_rule时，设置params[\"days\"] template是tag_rule时，设置params[\"num\"]
+
 	Params *interface{} `json:"params"`
 	// 例外镜像
+
 	TagSelectors []TagSelector `json:"tag_selectors"`
 	// 回收类型，date_rule、tag_rule
+
 	Template RuleTemplate `json:"template"`
 }
 

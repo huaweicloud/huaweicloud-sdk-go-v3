@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreatePoliciesV3Request struct {
-	StreamName string                   `json:"stream_name"`
-	Body       *CreatePolicyRuleRequest `json:"body,omitempty"`
+	StreamName string `json:"stream_name"`
+
+	Body *CreatePolicyRuleRequest `json:"body,omitempty"`
 }
 
 func (o CreatePoliciesV3Request) String() string {

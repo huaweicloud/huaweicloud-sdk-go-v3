@@ -2,30 +2,41 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 构建工程参数。
 type JobInfo struct {
 	// 创建者。
+
 	CreatedBy *string `json:"CREATED_BY,omitempty"`
 	// 执行状态。
+
 	ExecutionStatus *JobInfoExecutionStatus `json:"EXECUTION_STATUS,omitempty"`
 	// 工作描述。
+
 	JobDesc *string `json:"JOB_DESC,omitempty"`
 	// 工作ID。
+
 	JobId *string `json:"JOB_ID,omitempty"`
 	// 工作名称。
+
 	JobName *string `json:"JOB_NAME,omitempty"`
 	// 类别。
+
 	JobType *string `json:"JOB_TYPE,omitempty"`
 	// 排序ID。
+
 	OrderId *string `json:"ORDER_ID,omitempty"`
 	// 创建租户的项目ID。
+
 	ProjectId *string `json:"PROJECT_ID,omitempty"`
 	// 实例ID。
+
 	ServiceInstanceId *string `json:"SERVICE_INSTANCE_ID,omitempty"`
 }
 

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type RestartInstanceRequest struct {
-	InstanceId string                      `json:"instance_id"`
-	Body       *RestartInstanceRequestBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *RestartInstanceRequestBody `json:"body,omitempty"`
 }
 
 func (o RestartInstanceRequest) String() string {

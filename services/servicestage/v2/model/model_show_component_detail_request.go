@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowComponentDetailRequest struct {
 	ApplicationId string `json:"application_id"`
-	ComponentId   string `json:"component_id"`
+
+	ComponentId string `json:"component_id"`
 }
 
 func (o ShowComponentDetailRequest) String() string {

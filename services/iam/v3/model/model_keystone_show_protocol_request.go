@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type KeystoneShowProtocolRequest struct {
-	IdpId      string `json:"idp_id"`
+	IdpId string `json:"idp_id"`
+
 	ProtocolId string `json:"protocol_id"`
 }
 

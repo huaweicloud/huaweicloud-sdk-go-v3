@@ -9,10 +9,14 @@ import (
 // Request Object
 type ListCertificatesRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	AppId      *string `json:"app_id,omitempty"`
-	Limit      *int32  `json:"limit,omitempty"`
-	Marker     *string `json:"marker,omitempty"`
-	Offset     *int32  `json:"offset,omitempty"`
+
+	AppId *string `json:"app_id,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListCertificatesRequest) String() string {

@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListTagsResponse struct {
 	// 项目tag标签列表。
+
 	Tags           *[]string `json:"tags,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

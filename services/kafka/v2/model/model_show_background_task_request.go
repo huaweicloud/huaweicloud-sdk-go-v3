@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowBackgroundTaskRequest struct {
 	InstanceId string `json:"instance_id"`
-	TaskId     string `json:"task_id"`
+
+	TaskId string `json:"task_id"`
 }
 
 func (o ShowBackgroundTaskRequest) String() string {

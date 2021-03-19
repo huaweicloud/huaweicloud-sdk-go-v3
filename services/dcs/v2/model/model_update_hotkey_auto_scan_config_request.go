@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateHotkeyAutoScanConfigRequest struct {
-	InstanceId string                 `json:"instance_id"`
-	Body       *AutoscanConfigRequest `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *AutoscanConfigRequest `json:"body,omitempty"`
 }
 
 func (o UpdateHotkeyAutoScanConfigRequest) String() string {

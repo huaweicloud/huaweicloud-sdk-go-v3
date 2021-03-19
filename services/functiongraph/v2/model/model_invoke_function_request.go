@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type InvokeFunctionRequest struct {
-	FunctionUrn        string  `json:"function_urn"`
-	XCffLogType        *string `json:"X-Cff-Log-Type,omitempty"`
+	FunctionUrn string `json:"function_urn"`
+
+	XCffLogType *string `json:"X-Cff-Log-Type,omitempty"`
+
 	XCFFRequestVersion *string `json:"X-CFF-Request-Version,omitempty"`
 	// 执行函数请求体，为json格式。
+
 	Body map[string]interface{} `json:"body,omitempty"`
 }
 

@@ -8,11 +8,15 @@ import (
 
 // Request Object
 type ListOrgInstancesRequest struct {
-	IsTemporary *bool   `json:"is_temporary,omitempty"`
-	Limit       *int64  `json:"limit,omitempty"`
-	Offset      *int64  `json:"offset,omitempty"`
-	OrgId       string  `json:"org_id"`
-	Search      *string `json:"search,omitempty"`
+	IsTemporary *bool `json:"is_temporary,omitempty"`
+
+	Limit *int64 `json:"limit,omitempty"`
+
+	Offset *int64 `json:"offset,omitempty"`
+
+	OrgId string `json:"org_id"`
+
+	Search *string `json:"search,omitempty"`
 }
 
 func (o ListOrgInstancesRequest) String() string {

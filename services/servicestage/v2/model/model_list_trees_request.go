@@ -9,9 +9,12 @@ import (
 // Request Object
 type ListTreesRequest struct {
 	XRepoAuth string `json:"X-Repo-Auth"`
+
 	Namespace string `json:"namespace"`
-	Project   string `json:"project"`
-	Ref       string `json:"ref"`
+
+	Project string `json:"project"`
+
+	Ref string `json:"ref"`
 }
 
 func (o ListTreesRequest) String() string {

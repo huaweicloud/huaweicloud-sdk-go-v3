@@ -9,8 +9,10 @@ import (
 // Response Object
 type ShowAgentStatusResponse struct {
 	// Agent状态
+
 	Status *string `json:"status,omitempty"`
 	// AgentID
+
 	AgentId        *string `json:"agent_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

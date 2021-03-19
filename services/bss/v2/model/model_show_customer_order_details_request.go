@@ -8,9 +8,12 @@ import (
 
 // Request Object
 type ShowCustomerOrderDetailsRequest struct {
-	OrderId           string  `json:"order_id"`
-	Limit             *int32  `json:"limit,omitempty"`
-	Offset            *int32  `json:"offset,omitempty"`
+	OrderId string `json:"order_id"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

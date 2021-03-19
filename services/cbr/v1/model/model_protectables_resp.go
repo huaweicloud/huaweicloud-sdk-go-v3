@@ -2,26 +2,36 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type ProtectablesResp struct {
 	// 子资源
+
 	Children []interface{} `json:"children"`
 	// 资源详情
+
 	Detail *interface{} `json:"detail,omitempty"`
 	// id
+
 	Id string `json:"id"`
 	// 名称
-	Name        string             `json:"name"`
+
+	Name string `json:"name"`
+
 	Protectable *ProtectableResult `json:"protectable"`
 	// 大小，单位GB
+
 	Size *string `json:"size,omitempty"`
 	// 资源状态
+
 	Status *ProtectablesRespStatus `json:"status,omitempty"`
 	// [待备份资源的类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo](tag:hws,hws_hk,fcs_vm,ctc) [待备份资源的类型: OS::Nova::Server,  OS::Cinder::Volume](tag:dt,ocb,tlf,sbc)
+
 	Type string `json:"type"`
 }
 

@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListHotKeyScanTasksRequest struct {
-	InstanceId string                            `json:"instance_id"`
-	Offset     *int32                            `json:"offset,omitempty"`
-	Limit      *int32                            `json:"limit,omitempty"`
-	Status     *ListHotKeyScanTasksRequestStatus `json:"status,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Status *ListHotKeyScanTasksRequestStatus `json:"status,omitempty"`
 }
 
 func (o ListHotKeyScanTasksRequest) String() string {

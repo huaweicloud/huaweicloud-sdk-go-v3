@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 标签列表
 type DeleteScalingTagsRequestBody struct {
 	// 标签列表。action为delete时，tags结构体不能缺失，key不能为空，或者空字符串。
+
 	Tags *[]TagsSingleValue `json:"tags,omitempty"`
 	// 操作标识（区分大小写）：delete：删除。
+
 	Action *DeleteScalingTagsRequestBodyAction `json:"action,omitempty"`
 }
 

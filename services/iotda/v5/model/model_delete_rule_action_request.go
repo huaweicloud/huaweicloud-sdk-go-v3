@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteRuleActionRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	ActionId   string  `json:"action_id"`
+
+	ActionId string `json:"action_id"`
 }
 
 func (o DeleteRuleActionRequest) String() string {

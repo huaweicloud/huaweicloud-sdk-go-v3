@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CancelGrantRequest struct {
-	VersionId string                  `json:"version_id"`
-	Body      *RevokeGrantRequestBody `json:"body,omitempty"`
+	VersionId string `json:"version_id"`
+
+	Body *RevokeGrantRequestBody `json:"body,omitempty"`
 }
 
 func (o CancelGrantRequest) String() string {

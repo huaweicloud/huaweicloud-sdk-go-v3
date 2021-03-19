@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateScalingNotificationRequest struct {
-	ScalingGroupId string                         `json:"scaling_group_id"`
-	Body           *CreateNotificationRequestBody `json:"body,omitempty"`
+	ScalingGroupId string `json:"scaling_group_id"`
+
+	Body *CreateNotificationRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateScalingNotificationRequest) String() string {

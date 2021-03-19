@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateIterationV4Request struct {
-	ProjectId string                    `json:"project_id"`
-	Body      *CreateIterationRequestV4 `json:"body,omitempty"`
+	ProjectId string `json:"project_id"`
+
+	Body *CreateIterationRequestV4 `json:"body,omitempty"`
 }
 
 func (o CreateIterationV4Request) String() string {

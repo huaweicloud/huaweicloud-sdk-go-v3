@@ -9,7 +9,8 @@ import (
 // Request Object
 type KeystoneCheckUserInGroupRequest struct {
 	GroupId string `json:"group_id"`
-	UserId  string `json:"user_id"`
+
+	UserId string `json:"user_id"`
 }
 
 func (o KeystoneCheckUserInGroupRequest) String() string {

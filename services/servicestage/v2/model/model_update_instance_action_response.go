@@ -9,6 +9,7 @@ import (
 // Response Object
 type UpdateInstanceActionResponse struct {
 	// Job ID。
+
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

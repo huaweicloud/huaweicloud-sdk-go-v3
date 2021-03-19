@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateConfigurationsRequest struct {
-	InstanceId string                 `json:"instance_id"`
-	Body       *ModifyRedisConfigBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *ModifyRedisConfigBody `json:"body,omitempty"`
 }
 
 func (o UpdateConfigurationsRequest) String() string {

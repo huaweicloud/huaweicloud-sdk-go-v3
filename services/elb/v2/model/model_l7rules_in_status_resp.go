@@ -2,18 +2,23 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 转发规则对象，用于状态树中
 type L7rulesInStatusResp struct {
 	// 转发规则的匹配内容。PATH：匹配请求中的路径；HOST_NAME：匹配请求中的域名
+
 	Type L7rulesInStatusRespType `json:"type"`
 	// 转发规则ID
+
 	Id string `json:"id"`
 	// 转发规则的配置状态；该字段为预留字段，暂未启用。默认为ACTIVE。
+
 	ProvisioningStatus string `json:"provisioning_status"`
 }
 

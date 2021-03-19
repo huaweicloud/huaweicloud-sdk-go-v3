@@ -9,8 +9,10 @@ import (
 // links字段数据结构说明
 type Links struct {
 	// 快捷链接标记名称
+
 	Rel *string `json:"rel,omitempty"`
 	// 对应快捷链接
+
 	Href *string `json:"href,omitempty"`
 }
 

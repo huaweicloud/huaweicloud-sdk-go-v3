@@ -9,10 +9,14 @@ import (
 // Request Object
 type ShowDevicesInGroupRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	GroupId    string  `json:"group_id"`
-	Limit      *int32  `json:"limit,omitempty"`
-	Marker     *string `json:"marker,omitempty"`
-	Offset     *int32  `json:"offset,omitempty"`
+
+	GroupId string `json:"group_id"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ShowDevicesInGroupRequest) String() string {

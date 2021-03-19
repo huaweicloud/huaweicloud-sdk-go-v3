@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type UpdatePortRequest struct {
-	XLanguage  *UpdatePortRequestXLanguage `json:"X-Language,omitempty"`
-	InstanceId string                      `json:"instance_id"`
-	Body       *UpdateDbPortRequest        `json:"body,omitempty"`
+	XLanguage *UpdatePortRequestXLanguage `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *UpdateDbPortRequest `json:"body,omitempty"`
 }
 
 func (o UpdatePortRequest) String() string {

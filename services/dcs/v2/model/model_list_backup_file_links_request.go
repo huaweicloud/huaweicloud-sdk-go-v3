@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ListBackupFileLinksRequest struct {
-	InstanceId string                  `json:"instance_id"`
-	BackupId   string                  `json:"backup_id"`
-	Body       *DownloadBackupFilesReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	BackupId string `json:"backup_id"`
+
+	Body *DownloadBackupFilesReq `json:"body,omitempty"`
 }
 
 func (o ListBackupFileLinksRequest) String() string {

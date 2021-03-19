@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteApplicationRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	AppId      string  `json:"app_id"`
+
+	AppId string `json:"app_id"`
 }
 
 func (o DeleteApplicationRequest) String() string {

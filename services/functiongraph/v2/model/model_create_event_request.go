@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateEventRequest struct {
-	FunctionUrn string                  `json:"function_urn"`
-	Body        *CreateEventRequestBody `json:"body,omitempty"`
+	FunctionUrn string `json:"function_urn"`
+
+	Body *CreateEventRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateEventRequest) String() string {

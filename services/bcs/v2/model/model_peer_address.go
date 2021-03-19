@@ -8,8 +8,10 @@ import (
 
 type PeerAddress struct {
 	// 域名地址
+
 	DomainPort *string `json:"domain_port,omitempty"`
 	// IP地址
+
 	IpPort *string `json:"ip_port,omitempty"`
 }
 

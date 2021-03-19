@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteIssueV4Request struct {
 	ProjectId string `json:"project_id"`
-	IssueId   int32  `json:"issue_id"`
+
+	IssueId int32 `json:"issue_id"`
 }
 
 func (o DeleteIssueV4Request) String() string {

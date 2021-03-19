@@ -8,8 +8,10 @@ import (
 
 type ApplicationListConfigConfigurationEnv struct {
 	// 环境变量名称。
+
 	Name *string `json:"name,omitempty"`
 	// 环境变量取值。
+
 	Value *string `json:"value,omitempty"`
 }
 

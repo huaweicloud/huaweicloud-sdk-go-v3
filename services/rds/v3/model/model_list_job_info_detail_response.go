@@ -10,11 +10,15 @@ import (
 type ListJobInfoDetailResponse struct {
 	Jobs *GetTaskDetailListRspJobs `json:"jobs,omitempty"`
 	// 任务执行的具体的参数信息，为空则不返回该字段。
-	TaskDetail *string                       `json:"taskDetail,omitempty"`
-	Instance   *GetTaskDetailListRspInstance `json:"instance,omitempty"`
+
+	TaskDetail *string `json:"taskDetail,omitempty"`
+
+	Instance *GetTaskDetailListRspInstance `json:"instance,omitempty"`
 	// 根据不同的任务，显示不同的内容。
+
 	Entities *interface{} `json:"entities,omitempty"`
 	// 任务执行失败时的错误信息。
+
 	FailReason     *string `json:"fail_reason,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

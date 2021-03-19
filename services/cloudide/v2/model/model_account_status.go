@@ -8,12 +8,16 @@ import (
 
 type AccountStatus struct {
 	// 是否有创建实例权限
+
 	CurOrgCreateRole *bool `json:"cur_org_create_role,omitempty"`
 	// 帐号所属租户是否开通服务
+
 	CurOrgOpen *bool `json:"cur_org_open,omitempty"`
 	// 免费试用
+
 	HasFreeTrial *bool `json:"has_free_trial,omitempty"`
 	// 是否有管理入口的权限
+
 	ShowManage *bool `json:"show_manage,omitempty"`
 }
 

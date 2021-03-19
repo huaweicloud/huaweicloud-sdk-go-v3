@@ -8,11 +8,15 @@ import (
 
 // Request Object
 type ListAuthorizedDbUsersRequest struct {
-	XLanguage  *string `json:"X-Language,omitempty"`
-	InstanceId string  `json:"instance_id"`
-	DbName     string  `json:"db-name"`
-	Page       int32   `json:"page"`
-	Limit      int32   `json:"limit"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	DbName string `json:"db-name"`
+
+	Page int32 `json:"page"`
+
+	Limit int32 `json:"limit"`
 }
 
 func (o ListAuthorizedDbUsersRequest) String() string {

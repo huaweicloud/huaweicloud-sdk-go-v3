@@ -2,21 +2,30 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListBandwidthDetailRequest struct {
-	PlayDomains []string                            `json:"play_domains"`
-	App         *string                             `json:"app,omitempty"`
-	Stream      *string                             `json:"stream,omitempty"`
-	Region      *[]string                           `json:"region,omitempty"`
-	Isp         *[]string                           `json:"isp,omitempty"`
-	Interval    *ListBandwidthDetailRequestInterval `json:"interval,omitempty"`
-	StartTime   *string                             `json:"start_time,omitempty"`
-	EndTime     *string                             `json:"end_time,omitempty"`
+	PlayDomains []string `json:"play_domains"`
+
+	App *string `json:"app,omitempty"`
+
+	Stream *string `json:"stream,omitempty"`
+
+	Region *[]string `json:"region,omitempty"`
+
+	Isp *[]string `json:"isp,omitempty"`
+
+	Interval *ListBandwidthDetailRequestInterval `json:"interval,omitempty"`
+
+	StartTime *string `json:"start_time,omitempty"`
+
+	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o ListBandwidthDetailRequest) String() string {

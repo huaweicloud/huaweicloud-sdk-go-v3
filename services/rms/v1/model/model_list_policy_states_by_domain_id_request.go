@@ -9,10 +9,14 @@ import (
 // Request Object
 type ListPolicyStatesByDomainIdRequest struct {
 	ComplianceState *string `json:"compliance_state,omitempty"`
-	ResourceId      *string `json:"resource_id,omitempty"`
-	ResourceName    *string `json:"resource_name,omitempty"`
-	Limit           *int32  `json:"limit,omitempty"`
-	Marker          *string `json:"marker,omitempty"`
+
+	ResourceId *string `json:"resource_id,omitempty"`
+
+	ResourceName *string `json:"resource_name,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
 }
 
 func (o ListPolicyStatesByDomainIdRequest) String() string {

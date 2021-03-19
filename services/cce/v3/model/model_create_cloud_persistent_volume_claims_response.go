@@ -9,13 +9,18 @@ import (
 // Response Object
 type CreateCloudPersistentVolumeClaimsResponse struct {
 	// API版本，固定值**v1**
+
 	ApiVersion *string `json:"apiVersion,omitempty"`
 	// API类型，固定值**PersistentVolumeClaim**
-	Kind           *string                        `json:"kind,omitempty"`
-	Metadata       *PersistentVolumeClaimMetadata `json:"metadata,omitempty"`
-	Spec           *PersistentVolumeClaimSpec     `json:"spec,omitempty"`
-	Status         *PersistentVolumeClaimStatus   `json:"status,omitempty"`
-	HttpStatusCode int                            `json:"-"`
+
+	Kind *string `json:"kind,omitempty"`
+
+	Metadata *PersistentVolumeClaimMetadata `json:"metadata,omitempty"`
+
+	Spec *PersistentVolumeClaimSpec `json:"spec,omitempty"`
+
+	Status         *PersistentVolumeClaimStatus `json:"status,omitempty"`
+	HttpStatusCode int                          `json:"-"`
 }
 
 func (o CreateCloudPersistentVolumeClaimsResponse) String() string {

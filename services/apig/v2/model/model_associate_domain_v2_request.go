@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type AssociateDomainV2Request struct {
-	InstanceId string     `json:"instance_id"`
-	GroupId    string     `json:"group_id"`
-	Body       *DomainReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	GroupId string `json:"group_id"`
+
+	Body *DomainReq `json:"body,omitempty"`
 }
 
 func (o AssociateDomainV2Request) String() string {

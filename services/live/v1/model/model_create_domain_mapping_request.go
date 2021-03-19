@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateDomainMappingRequest struct {
-	SpecifyProject *string        `json:"specify_project,omitempty"`
-	Body           *DomainMapping `json:"body,omitempty"`
+	SpecifyProject *string `json:"specify_project,omitempty"`
+
+	Body *DomainMapping `json:"body,omitempty"`
 }
 
 func (o CreateDomainMappingRequest) String() string {

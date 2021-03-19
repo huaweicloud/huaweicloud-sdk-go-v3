@@ -8,6 +8,7 @@ import (
 
 type BatchDeleteMembersV4RequestBody struct {
 	// 用户id
+
 	UserIds []string `json:"user_ids"`
 }
 

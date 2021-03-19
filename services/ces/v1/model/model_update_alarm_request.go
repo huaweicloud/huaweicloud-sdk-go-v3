@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateAlarmRequest struct {
-	ContentType string                  `json:"Content-Type"`
-	AlarmId     string                  `json:"alarm_id"`
-	Body        *UpdateAlarmRequestBody `json:"body,omitempty"`
+	ContentType string `json:"Content-Type"`
+
+	AlarmId string `json:"alarm_id"`
+
+	Body *UpdateAlarmRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateAlarmRequest) String() string {

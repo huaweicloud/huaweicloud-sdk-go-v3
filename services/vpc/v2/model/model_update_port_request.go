@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdatePortRequest struct {
-	PortId string                 `json:"port_id"`
-	Body   *UpdatePortRequestBody `json:"body,omitempty"`
+	PortId string `json:"port_id"`
+
+	Body *UpdatePortRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdatePortRequest) String() string {

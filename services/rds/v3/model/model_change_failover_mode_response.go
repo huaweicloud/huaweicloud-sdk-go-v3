@@ -9,10 +9,13 @@ import (
 // Response Object
 type ChangeFailoverModeResponse struct {
 	// 实例Id
+
 	InstanceId *string `json:"instanceId,omitempty"`
 	// 同步模式
+
 	ReplicationMode *string `json:"replicationMode,omitempty"`
 	// 任务id
+
 	WorkflowId     *string `json:"workflowId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -9,10 +9,14 @@ import (
 // Request Object
 type ShowContentRequest struct {
 	XRepoAuth string `json:"X-Repo-Auth"`
+
 	Namespace string `json:"namespace"`
-	Project   string `json:"project"`
-	Path      string `json:"path"`
-	Ref       string `json:"ref"`
+
+	Project string `json:"project"`
+
+	Path string `json:"path"`
+
+	Ref string `json:"ref"`
 }
 
 func (o ShowContentRequest) String() string {

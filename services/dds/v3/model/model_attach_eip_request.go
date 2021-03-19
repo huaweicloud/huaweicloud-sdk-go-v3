@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type AttachEipRequest struct {
-	NodeId string                `json:"node_id"`
-	Body   *AttachEipRequestBody `json:"body,omitempty"`
+	NodeId string `json:"node_id"`
+
+	Body *AttachEipRequestBody `json:"body,omitempty"`
 }
 
 func (o AttachEipRequest) String() string {

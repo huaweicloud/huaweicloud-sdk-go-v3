@@ -2,25 +2,34 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type BackendParam struct {
 	// 参数类别：REQUEST、CONSTANT、SYSTEM
+
 	Origin BackendParamOrigin `json:"origin"`
 	// 参数名称。 字符串由英文字母、数字、中划线、下划线、英文句号组成，且只能以英文开头。
+
 	Name string `json:"name"`
 	// 描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
+
 	Remark *string `json:"remark,omitempty"`
 	// 参数位置：PATH、QUERY、HEADER
+
 	Location BackendParamLocation `json:"location"`
 	// 参数值。字符长度不超过255，类别为REQUEST时，值为req_params中的参数名称；类别为CONSTANT时，值为参数真正的值；类别为SYSTEM时，值为网关参数名称
+
 	Value string `json:"value"`
 	// 参数编号
+
 	Id *string `json:"id,omitempty"`
 	// 对应的请求参数编号
+
 	ReqParamId *string `json:"req_param_id,omitempty"`
 }
 

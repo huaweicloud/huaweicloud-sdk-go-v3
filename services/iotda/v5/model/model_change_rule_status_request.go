@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ChangeRuleStatusRequest struct {
-	InstanceId *string     `json:"Instance-Id,omitempty"`
-	RuleId     string      `json:"rule_id"`
-	Body       *RuleStatus `json:"body,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	RuleId string `json:"rule_id"`
+
+	Body *RuleStatus `json:"body,omitempty"`
 }
 
 func (o ChangeRuleStatusRequest) String() string {

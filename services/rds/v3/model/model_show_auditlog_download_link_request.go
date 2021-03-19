@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ShowAuditlogDownloadLinkRequest struct {
-	XLanguage  *string                              `json:"X-Language,omitempty"`
-	InstanceId string                               `json:"instance_id"`
-	Body       *GenerateAuditlogDownloadLinkRequest `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *GenerateAuditlogDownloadLinkRequest `json:"body,omitempty"`
 }
 
 func (o ShowAuditlogDownloadLinkRequest) String() string {

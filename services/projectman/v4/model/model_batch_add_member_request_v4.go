@@ -8,8 +8,10 @@ import (
 
 type BatchAddMemberRequestV4 struct {
 	// 用户在项目中的角色ID -1, 3, 4, 5, 6, 7 , 8
+
 	RoleId *int32 `json:"role_id,omitempty"`
 	// 用户32位uuid
+
 	UserId string `json:"user_id"`
 }
 

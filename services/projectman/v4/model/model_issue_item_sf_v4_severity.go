@@ -9,8 +9,10 @@ import (
 // 工作项重要程度
 type IssueItemSfV4Severity struct {
 	// 重要程度id
+
 	Id *int32 `json:"id,omitempty"`
 	// 重要程度
+
 	Name *string `json:"name,omitempty"`
 }
 

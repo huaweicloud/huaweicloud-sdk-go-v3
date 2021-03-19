@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteApiV2Request struct {
 	InstanceId string `json:"instance_id"`
-	ApiId      string `json:"api_id"`
+
+	ApiId string `json:"api_id"`
 }
 
 func (o DeleteApiV2Request) String() string {

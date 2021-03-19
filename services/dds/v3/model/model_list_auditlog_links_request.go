@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ListAuditlogLinksRequest struct {
-	InstanceId string                           `json:"instance_id"`
-	Body       *ProduceAuditlogLinksRequestBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *ProduceAuditlogLinksRequestBody `json:"body,omitempty"`
 }
 
 func (o ListAuditlogLinksRequest) String() string {

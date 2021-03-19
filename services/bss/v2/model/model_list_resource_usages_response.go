@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListResourceUsagesResponse struct {
 	// 套餐包使用量信息，具体请参见表2。
+
 	PackageUsageInfos *[]PackageUsageInfo `json:"package_usage_infos,omitempty"`
 	HttpStatusCode    int                 `json:"-"`
 }

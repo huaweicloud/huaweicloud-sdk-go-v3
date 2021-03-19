@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type DeleteServerMetadataRequest struct {
-	Key      string `json:"key"`
+	Key string `json:"key"`
+
 	ServerId string `json:"server_id"`
 }
 

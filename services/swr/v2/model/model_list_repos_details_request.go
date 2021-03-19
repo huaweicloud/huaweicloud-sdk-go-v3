@@ -2,18 +2,24 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListReposDetailsRequest struct {
 	ContentType ListReposDetailsRequestContentType `json:"Content-Type"`
-	Namespace   *string                            `json:"namespace,omitempty"`
-	Name        *string                            `json:"name,omitempty"`
-	Category    *string                            `json:"category,omitempty"`
-	Filter      *string                            `json:"filter,omitempty"`
+
+	Namespace *string `json:"namespace,omitempty"`
+
+	Name *string `json:"name,omitempty"`
+
+	Category *string `json:"category,omitempty"`
+
+	Filter *string `json:"filter,omitempty"`
 }
 
 func (o ListReposDetailsRequest) String() string {

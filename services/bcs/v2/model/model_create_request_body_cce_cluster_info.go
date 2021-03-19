@@ -9,8 +9,10 @@ import (
 // 使用已有CCE集群信息
 type CreateRequestBodyCceClusterInfo struct {
 	// 集群ID
+
 	ClusterId *string `json:"cluster_id,omitempty"`
 	// 集群名称
+
 	ClusterName *string `json:"cluster_name,omitempty"`
 }
 

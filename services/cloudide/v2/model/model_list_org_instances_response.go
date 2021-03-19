@@ -10,6 +10,7 @@ import (
 type ListOrgInstancesResponse struct {
 	Instances *PageInstancesVo `json:"instances,omitempty"`
 	// 状态
+
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

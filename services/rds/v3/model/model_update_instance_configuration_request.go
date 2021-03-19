@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateInstanceConfigurationRequest struct {
-	XLanguage  *string                                 `json:"X-Language,omitempty"`
-	InstanceId string                                  `json:"instance_id"`
-	Body       *UpdateInstanceConfigurationRequestBody `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *UpdateInstanceConfigurationRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateInstanceConfigurationRequest) String() string {

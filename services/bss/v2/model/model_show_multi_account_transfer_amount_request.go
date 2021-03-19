@@ -9,8 +9,10 @@ import (
 // Request Object
 type ShowMultiAccountTransferAmountRequest struct {
 	BalanceType string `json:"balance_type"`
-	Offset      *int32 `json:"offset,omitempty"`
-	Limit       *int32 `json:"limit,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ShowMultiAccountTransferAmountRequest) String() string {

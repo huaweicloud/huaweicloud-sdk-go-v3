@@ -9,12 +9,16 @@ import (
 // 手动同步镜像需要的参数
 type CreateManualImageSyncRepoRequestBody struct {
 	// 版本列表
+
 	ImageTag []string `json:"imageTag"`
 	// 是否覆盖，默认为false
+
 	Override *bool `json:"override,omitempty"`
 	// 目标组织
+
 	RemoteNamespace string `json:"remoteNamespace"`
 	// 目标region ID。
+
 	RemoteRegionId string `json:"remoteRegionId"`
 }
 

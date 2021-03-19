@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type DeleteRepoDomainsRequest struct {
-	ContentType  DeleteRepoDomainsRequestContentType `json:"Content-Type"`
-	Namespace    string                              `json:"namespace"`
-	Repository   string                              `json:"repository"`
-	AccessDomain string                              `json:"access_domain"`
+	ContentType DeleteRepoDomainsRequestContentType `json:"Content-Type"`
+
+	Namespace string `json:"namespace"`
+
+	Repository string `json:"repository"`
+
+	AccessDomain string `json:"access_domain"`
 }
 
 func (o DeleteRepoDomainsRequest) String() string {

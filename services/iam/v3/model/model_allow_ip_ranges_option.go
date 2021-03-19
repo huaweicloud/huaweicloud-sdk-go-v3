@@ -9,8 +9,10 @@ import (
 //
 type AllowIpRangesOption struct {
 	// 描述信息。
+
 	Description *string `json:"description,omitempty"`
 	// IP地址区间,例如:0.0.0.0-255.255.255.255。
+
 	IpRange string `json:"ip_range"`
 }
 

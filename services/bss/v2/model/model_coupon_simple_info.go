@@ -8,8 +8,10 @@ import (
 
 type CouponSimpleInfo struct {
 	// 批量发放优惠券成功的客户ID。
+
 	Id string `json:"id"`
 	// 发放成功的券ID。
+
 	CouponId string `json:"coupon_id"`
 }
 

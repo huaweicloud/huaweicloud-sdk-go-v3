@@ -2,15 +2,19 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 配置云服务器的弹性IP信息
 type Eip struct {
 	// 弹性IP地址类型。类型枚举值：5_bgp：全动态BGP;5_sbgp：静态BGP;5_telcom：中国电信;5_union：中国联通;详情请参见《虚拟私有云接口参考》“申请弹性公网IP”章节的“publicip”字段说明。
-	IpType    EipIpType  `json:"ip_type"`
+
+	IpType EipIpType `json:"ip_type"`
+
 	Bandwidth *Bandwidth `json:"bandwidth"`
 }
 

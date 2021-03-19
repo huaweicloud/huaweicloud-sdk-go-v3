@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type CreateProjectRequest struct {
-	XRepoAuth string         `json:"X-Repo-Auth"`
-	Namespace string         `json:"namespace"`
-	Body      *ProjectCreate `json:"body,omitempty"`
+	XRepoAuth string `json:"X-Repo-Auth"`
+
+	Namespace string `json:"namespace"`
+
+	Body *ProjectCreate `json:"body,omitempty"`
 }
 
 func (o CreateProjectRequest) String() string {

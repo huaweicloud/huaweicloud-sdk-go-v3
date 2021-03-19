@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type ListResourceTypesRequest struct {
-	XLanguage        *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
 	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
 }
 

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ListConversionsRequest struct {
-	XLanguage   *string `json:"X-Language,omitempty"`
-	MeasureType *int32  `json:"measure_type,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	MeasureType *int32 `json:"measure_type,omitempty"`
 }
 
 func (o ListConversionsRequest) String() string {

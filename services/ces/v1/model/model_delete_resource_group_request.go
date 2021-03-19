@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteResourceGroupRequest struct {
 	ContentType string `json:"Content-Type"`
-	GroupId     string `json:"group_id"`
+
+	GroupId string `json:"group_id"`
 }
 
 func (o DeleteResourceGroupRequest) String() string {

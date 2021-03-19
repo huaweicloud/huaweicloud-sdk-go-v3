@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowProjectDetailRequest struct {
 	XRepoAuth string `json:"X-Repo-Auth"`
-	CloneUrl  string `json:"clone_url"`
+
+	CloneUrl string `json:"clone_url"`
 }
 
 func (o ShowProjectDetailRequest) String() string {

@@ -2,19 +2,25 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type ApiPolicyFunctionBase struct {
 	// 函数URN
+
 	FunctionUrn string `json:"function_urn"`
 	// 调用类型 - async： 异步 - sync：同步
+
 	InvocationType ApiPolicyFunctionBaseInvocationType `json:"invocation_type"`
 	// 版本。字符长度不超过64
+
 	Version *string `json:"version,omitempty"`
 	// API网关请求后端服务的超时时间。  单位：毫秒。请求参数值不在合法范围内时将使用默认值
+
 	Timeout *int32 `json:"timeout,omitempty"`
 }
 

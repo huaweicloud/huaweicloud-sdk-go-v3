@@ -2,14 +2,17 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListDatastoresRequest struct {
-	XLanguage    *string                           `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
 	DatabaseName ListDatastoresRequestDatabaseName `json:"database_name"`
 }
 

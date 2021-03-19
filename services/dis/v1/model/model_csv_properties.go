@@ -8,6 +8,7 @@ import (
 
 type CsvProperties struct {
 	// 数据分隔符。
+
 	Delimiter *string `json:"delimiter,omitempty"`
 }
 

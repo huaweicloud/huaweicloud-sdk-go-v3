@@ -9,6 +9,7 @@ import (
 //
 type QuotaResult struct {
 	// 资源信息
+
 	Resources *[]Resources `json:"resources,omitempty"`
 }
 

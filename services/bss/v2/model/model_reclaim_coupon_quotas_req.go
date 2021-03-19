@@ -8,8 +8,10 @@ import (
 
 type ReclaimCouponQuotasReq struct {
 	// 被回收的精英服务商的代金券额度ID。
+
 	QuotaIds []string `json:"quota_ids"`
 	// 回收时的备注。
+
 	Remark *string `json:"remark,omitempty"`
 }
 

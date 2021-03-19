@@ -10,21 +10,30 @@ import (
 
 type DecoupledLiveDomainInfo struct {
 	// 直播域名
+
 	Domain string `json:"domain"`
 	// 域名类型
+
 	DomainType DecoupledLiveDomainInfoDomainType `json:"domain_type"`
 	// CDN厂商
+
 	Vendor DecoupledLiveDomainInfoVendor `json:"vendor"`
 	// 直播所属直播中心
+
 	Region string `json:"region"`
 	// 直播域名的CName
+
 	DomainCname string `json:"domain_cname"`
 	// 直播域名的状态
+
 	Status DecoupledLiveDomainInfoStatus `json:"status"`
 	// 播放域名关联的推流域名（只有domain_type为pull的时候有效）
+
 	RelatedDomain string `json:"related_domain"`
 	// 域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
-	CreateTime   *sdktime.SdkTime  `json:"create_time"`
+
+	CreateTime *sdktime.SdkTime `json:"create_time"`
+
 	DomainSource *DomainSourceInfo `json:"domain_source"`
 }
 

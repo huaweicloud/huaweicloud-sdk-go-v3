@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 可选字段，鉴权认证类型。替换时需要该参数，重置时不需要该参数。
 type Auth struct {
 	// 取值为枚举类型。
+
 	Type *AuthType `json:"type,omitempty"`
 	// - type为枚举值password时，key表示密码； - type为枚举值keypair时，key表示私钥；
+
 	Key *string `json:"key,omitempty"`
 }
 

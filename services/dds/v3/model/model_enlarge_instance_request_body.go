@@ -2,18 +2,24 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type EnlargeInstanceRequestBody struct {
 	// 待扩容的对象类型。 - 扩容mongos节点时，取值为“mongos”。 - 扩容shard组时，取值为“shard”。
+
 	Type EnlargeInstanceRequestBodyType `json:"type"`
 	// 资源规格编码。
+
 	SpecCode string `json:"spec_code"`
 	// 一个集群实例下，最多支持16个mongos节点和16个shard组。
-	Num    string                       `json:"num"`
+
+	Num string `json:"num"`
+
 	Volume *AddShardingNodeVolumeOption `json:"volume,omitempty"`
 }
 

@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type ListUsageTypesRequest struct {
-	XLanguage        *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
 	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
-	Offset           *int32  `json:"offset,omitempty"`
-	Limit            *int32  `json:"limit,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListUsageTypesRequest) String() string {

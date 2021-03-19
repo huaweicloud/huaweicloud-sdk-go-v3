@@ -8,12 +8,16 @@ import (
 
 type UpdatePtrReq struct {
 	// PTR记录对应的域名。
+
 	Ptrdname string `json:"ptrdname"`
 	// 对PTR记录的描述。
+
 	Description *string `json:"description,omitempty"`
 	// PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+
 	Ttl *int32 `json:"ttl,omitempty"`
 	// 资源标签。
+
 	Tags *[]Tag `json:"tags,omitempty"`
 }
 

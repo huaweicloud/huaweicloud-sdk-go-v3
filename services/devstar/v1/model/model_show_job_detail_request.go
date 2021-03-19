@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ShowJobDetailRequest struct {
 	XLanguage *ShowJobDetailRequestXLanguage `json:"X-Language,omitempty"`
-	JobId     string                         `json:"job_id"`
+
+	JobId string `json:"job_id"`
 }
 
 func (o ShowJobDetailRequest) String() string {

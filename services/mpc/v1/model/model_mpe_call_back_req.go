@@ -2,23 +2,31 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type MpeCallBackReq struct {
 	// 任务类型
+
 	TaskType *MpeCallBackReqTaskType `json:"task_type,omitempty"`
 	// 任务ID。
+
 	TaskId *string `json:"task_id,omitempty"`
 	// 任务状态。
+
 	Status *string `json:"status,omitempty"`
 	// 任务完成进度百分比值。
+
 	CompleteRatio *int32 `json:"complete_ratio,omitempty"`
 	// 任务执行描述。
-	Description *string      `json:"description,omitempty"`
-	MetaData    *MpeMetaData `json:"meta_data,omitempty"`
+
+	Description *string `json:"description,omitempty"`
+
+	MetaData *MpeMetaData `json:"meta_data,omitempty"`
 }
 
 func (o MpeCallBackReq) String() string {

@@ -9,8 +9,10 @@ import (
 // Request Object
 type DeleteDomainGroupInheritedRoleRequest struct {
 	DomainId string `json:"domain_id"`
-	GroupId  string `json:"group_id"`
-	RoleId   string `json:"role_id"`
+
+	GroupId string `json:"group_id"`
+
+	RoleId string `json:"role_id"`
 }
 
 func (o DeleteDomainGroupInheritedRoleRequest) String() string {

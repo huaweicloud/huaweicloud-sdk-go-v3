@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdatePartitionCountRequest struct {
-	StreamName string                           `json:"stream_name"`
-	Body       *UpdatePartitionCountRequestBody `json:"body,omitempty"`
+	StreamName string `json:"stream_name"`
+
+	Body *UpdatePartitionCountRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdatePartitionCountRequest) String() string {

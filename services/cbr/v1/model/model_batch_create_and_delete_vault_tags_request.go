@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type BatchCreateAndDeleteVaultTagsRequest struct {
-	VaultId string                           `json:"vault_id"`
-	Body    *BulkCreateAndDeleteVaultTagsReq `json:"body,omitempty"`
+	VaultId string `json:"vault_id"`
+
+	Body *BulkCreateAndDeleteVaultTagsReq `json:"body,omitempty"`
 }
 
 func (o BatchCreateAndDeleteVaultTagsRequest) String() string {

@@ -2,33 +2,47 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Response Object
 type ShowMigrationTaskResponse struct {
 	// 迁移任务ID。
+
 	TaskId *string `json:"task_id,omitempty"`
 	// 迁移任务名称。
+
 	TaskName *string `json:"task_name,omitempty"`
 	// 迁移任务描述。
+
 	Description *string `json:"description,omitempty"`
 	// 迁移任务状态，这个字段的值包括：SUCCESS, FAILED, MIGRATING，TERMINATED。
+
 	Status *ShowMigrationTaskResponseStatus `json:"status,omitempty"`
 	// 迁移任务类型,包括备份文件导入和在线迁移两种类型。
+
 	MigrationType *ShowMigrationTaskResponseMigrationType `json:"migration_type,omitempty"`
 	// 迁移方式，包括全量迁移和增量迁移两种类型。
+
 	MigrationMethod *ShowMigrationTaskResponseMigrationMethod `json:"migration_method,omitempty"`
-	BackupFiles     *BackupFilesBody                          `json:"backup_files,omitempty"`
+
+	BackupFiles *BackupFilesBody `json:"backup_files,omitempty"`
 	// 网络类型，包括vpc和vpn两种类型。
-	NetworkType    *ShowMigrationTaskResponseNetworkType `json:"network_type,omitempty"`
-	SourceInstance *SourceInstanceBody                   `json:"source_instance,omitempty"`
-	TargetInstance *TargetInstanceBody                   `json:"target_instance,omitempty"`
+
+	NetworkType *ShowMigrationTaskResponseNetworkType `json:"network_type,omitempty"`
+
+	SourceInstance *SourceInstanceBody `json:"source_instance,omitempty"`
+
+	TargetInstance *TargetInstanceBody `json:"target_instance,omitempty"`
 	// 迁移任务创建时间。
+
 	CreatedAt *string `json:"created_at,omitempty"`
 	// 迁移任务完成时间。
+
 	UpdatedAt      *string `json:"updated_at,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

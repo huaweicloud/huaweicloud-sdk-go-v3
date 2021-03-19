@@ -8,8 +8,10 @@ import (
 
 type MonthUsed struct {
 	// 日期
+
 	Date *string `json:"date,omitempty"`
 	// 使用量
+
 	Value *int32 `json:"value,omitempty"`
 }
 

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type BatchCreateServerTagsRequest struct {
-	ServerId string                            `json:"server_id"`
-	Body     *BatchCreateServerTagsRequestBody `json:"body,omitempty"`
+	ServerId string `json:"server_id"`
+
+	Body *BatchCreateServerTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchCreateServerTagsRequest) String() string {

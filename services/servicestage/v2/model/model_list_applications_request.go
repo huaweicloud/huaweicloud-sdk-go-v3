@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListApplicationsRequest struct {
-	Limit   *int32                        `json:"limit,omitempty"`
-	Offset  *int32                        `json:"offset,omitempty"`
-	OrderBy *string                       `json:"order_by,omitempty"`
-	Order   *ListApplicationsRequestOrder `json:"order,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	OrderBy *string `json:"order_by,omitempty"`
+
+	Order *ListApplicationsRequestOrder `json:"order,omitempty"`
 }
 
 func (o ListApplicationsRequest) String() string {

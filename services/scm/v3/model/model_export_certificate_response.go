@@ -9,10 +9,13 @@ import (
 // Response Object
 type ExportCertificateResponse struct {
 	// 证书内容。
+
 	Certificate *string `json:"certificate,omitempty"`
 	// 证书链。
+
 	CertificateChain *string `json:"certificate_chain,omitempty"`
 	// 证书私钥。
+
 	PrivateKey     *string `json:"private_key,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -9,6 +9,7 @@ import (
 // Response Object
 type RestartOrFlushInstancesResponse struct {
 	// 删除/重启/清空实例的结果。
+
 	Results        *[]BatchOpsResult `json:"results,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

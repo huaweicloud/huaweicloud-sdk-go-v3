@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type RollbackSnapshotRequest struct {
-	SnapshotId string                       `json:"snapshot_id"`
-	Body       *RollbackSnapshotRequestBody `json:"body,omitempty"`
+	SnapshotId string `json:"snapshot_id"`
+
+	Body *RollbackSnapshotRequestBody `json:"body,omitempty"`
 }
 
 func (o RollbackSnapshotRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CopyImageCrossRegionRequest struct {
-	ImageId string                           `json:"image_id"`
-	Body    *CopyImageCrossRegionRequestBody `json:"body,omitempty"`
+	ImageId string `json:"image_id"`
+
+	Body *CopyImageCrossRegionRequestBody `json:"body,omitempty"`
 }
 
 func (o CopyImageCrossRegionRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ExportImageRequest struct {
-	ImageId string                  `json:"image_id"`
-	Body    *ExportImageRequestBody `json:"body,omitempty"`
+	ImageId string `json:"image_id"`
+
+	Body *ExportImageRequestBody `json:"body,omitempty"`
 }
 
 func (o ExportImageRequest) String() string {

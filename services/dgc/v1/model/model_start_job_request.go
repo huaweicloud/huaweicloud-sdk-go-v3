@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type StartJobRequest struct {
-	JobName string       `json:"job_name"`
-	Body    *StartJobReq `json:"body,omitempty"`
+	JobName string `json:"job_name"`
+
+	Body *StartJobReq `json:"body,omitempty"`
 }
 
 func (o StartJobRequest) String() string {

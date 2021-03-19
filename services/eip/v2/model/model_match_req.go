@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 搜索字段
 type MatchReq struct {
 	// 键。当前仅限定为resource_name
+
 	Key MatchReqKey `json:"key"`
 	// 值。每个值最大长度255个unicode字符。
+
 	Value string `json:"value"`
 }
 

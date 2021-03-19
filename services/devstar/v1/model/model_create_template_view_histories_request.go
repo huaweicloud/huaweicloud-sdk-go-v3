@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type CreateTemplateViewHistoriesRequest struct {
 	XLanguage *CreateTemplateViewHistoriesRequestXLanguage `json:"X-Language,omitempty"`
-	Body      *TemplatesInfo                               `json:"body,omitempty"`
+
+	Body *TemplatesInfo `json:"body,omitempty"`
 }
 
 func (o CreateTemplateViewHistoriesRequest) String() string {

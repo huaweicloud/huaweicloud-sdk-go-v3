@@ -8,6 +8,7 @@ import (
 
 type SkuItem struct {
 	// 库存产品的ID。
+
 	ProductId string `json:"product_id"`
 }
 

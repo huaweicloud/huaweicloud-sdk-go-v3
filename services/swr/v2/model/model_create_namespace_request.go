@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type CreateNamespaceRequest struct {
 	ContentType CreateNamespaceRequestContentType `json:"Content-Type"`
-	Body        *CreateNamespaceRequestBody       `json:"body,omitempty"`
+
+	Body *CreateNamespaceRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateNamespaceRequest) String() string {

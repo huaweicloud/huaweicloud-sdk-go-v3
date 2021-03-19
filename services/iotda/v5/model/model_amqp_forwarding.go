@@ -9,6 +9,7 @@ import (
 // amqp queue配置信息
 type AmqpForwarding struct {
 	// 用于接收满足规则条件数据的amqp queue。
+
 	QueueName string `json:"queue_name"`
 }
 

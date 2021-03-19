@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type ShowApplicationConfigurationRequest struct {
-	ApplicationId string  `json:"application_id"`
+	ApplicationId string `json:"application_id"`
+
 	EnvironmentId *string `json:"environment_id,omitempty"`
 }
 

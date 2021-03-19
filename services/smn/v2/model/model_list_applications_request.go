@@ -8,9 +8,12 @@ import (
 
 // Request Object
 type ListApplicationsRequest struct {
-	Offset   *int32  `json:"offset,omitempty"`
-	Limit    *int32  `json:"limit,omitempty"`
-	Name     *string `json:"name,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Name *string `json:"name,omitempty"`
+
 	Platform *string `json:"platform,omitempty"`
 }
 

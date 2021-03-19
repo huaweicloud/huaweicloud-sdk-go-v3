@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type StartResizeFlavorActionRequest struct {
-	XLanguage  *StartResizeFlavorActionRequestXLanguage `json:"X-Language,omitempty"`
-	InstanceId string                                   `json:"instance_id"`
-	Body       *ResizeFlavorRequest                     `json:"body,omitempty"`
+	XLanguage *StartResizeFlavorActionRequestXLanguage `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *ResizeFlavorRequest `json:"body,omitempty"`
 }
 
 func (o StartResizeFlavorActionRequest) String() string {

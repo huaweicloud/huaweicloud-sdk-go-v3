@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type DeleteScalingGroupRequest struct {
-	ScalingGroupId string                                `json:"scaling_group_id"`
-	ForceDelete    *DeleteScalingGroupRequestForceDelete `json:"force_delete,omitempty"`
+	ScalingGroupId string `json:"scaling_group_id"`
+
+	ForceDelete *DeleteScalingGroupRequestForceDelete `json:"force_delete,omitempty"`
 }
 
 func (o DeleteScalingGroupRequest) String() string {

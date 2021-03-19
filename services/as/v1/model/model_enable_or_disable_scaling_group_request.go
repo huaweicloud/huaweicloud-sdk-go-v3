@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type EnableOrDisableScalingGroupRequest struct {
-	ScalingGroupId string                                  `json:"scaling_group_id"`
-	Body           *EnableOrDisableScalingGroupRequestBody `json:"body,omitempty"`
+	ScalingGroupId string `json:"scaling_group_id"`
+
+	Body *EnableOrDisableScalingGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o EnableOrDisableScalingGroupRequest) String() string {

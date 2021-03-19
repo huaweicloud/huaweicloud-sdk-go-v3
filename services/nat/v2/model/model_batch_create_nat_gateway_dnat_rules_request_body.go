@@ -9,6 +9,7 @@ import (
 // This is a auto create Body Object
 type BatchCreateNatGatewayDnatRulesRequestBody struct {
 	// DNAT规则批量创建对象的请求体。
+
 	DnatRules []CreateNatGatewayDnatOption `json:"dnat_rules"`
 }
 

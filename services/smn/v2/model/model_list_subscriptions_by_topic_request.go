@@ -9,8 +9,10 @@ import (
 // Request Object
 type ListSubscriptionsByTopicRequest struct {
 	TopicUrn string `json:"topic_urn"`
-	Offset   *int32 `json:"offset,omitempty"`
-	Limit    *int32 `json:"limit,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListSubscriptionsByTopicRequest) String() string {

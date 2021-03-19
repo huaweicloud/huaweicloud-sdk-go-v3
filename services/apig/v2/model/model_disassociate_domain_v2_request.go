@@ -9,8 +9,10 @@ import (
 // Request Object
 type DisassociateDomainV2Request struct {
 	InstanceId string `json:"instance_id"`
-	DomainId   string `json:"domain_id"`
-	GroupId    string `json:"group_id"`
+
+	DomainId string `json:"domain_id"`
+
+	GroupId string `json:"group_id"`
 }
 
 func (o DisassociateDomainV2Request) String() string {

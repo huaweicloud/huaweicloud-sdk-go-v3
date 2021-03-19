@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListHookInstancesResponse struct {
 	// 伸缩实例生命周期挂钩列表。
+
 	InstanceHangingInfo *[]InstanceHangingInfos `json:"instance_hanging_info,omitempty"`
 	HttpStatusCode      int                     `json:"-"`
 }

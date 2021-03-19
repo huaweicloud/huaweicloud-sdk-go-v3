@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type RestoreBackupRequest struct {
-	BackupId string            `json:"backup_id"`
-	Body     *BackupRestoreReq `json:"body,omitempty"`
+	BackupId string `json:"backup_id"`
+
+	Body *BackupRestoreReq `json:"body,omitempty"`
 }
 
 func (o RestoreBackupRequest) String() string {

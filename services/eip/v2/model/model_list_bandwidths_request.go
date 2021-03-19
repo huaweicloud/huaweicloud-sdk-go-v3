@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListBandwidthsRequest struct {
-	Marker              *string                         `json:"marker,omitempty"`
-	Limit               *int32                          `json:"limit,omitempty"`
-	EnterpriseProjectId *string                         `json:"enterprise_project_id,omitempty"`
-	ShareType           *ListBandwidthsRequestShareType `json:"share_type,omitempty"`
+	Marker *string `json:"marker,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	ShareType *ListBandwidthsRequestShareType `json:"share_type,omitempty"`
 }
 
 func (o ListBandwidthsRequest) String() string {

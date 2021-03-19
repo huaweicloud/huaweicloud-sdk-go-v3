@@ -8,6 +8,7 @@ import (
 
 type RollbackInfo struct {
 	// 回滚的目标云硬盘UUID。
+
 	VolumeId string `json:"volume_id"`
 }
 

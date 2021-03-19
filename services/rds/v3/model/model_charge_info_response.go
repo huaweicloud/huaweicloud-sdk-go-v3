@@ -2,14 +2,17 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 计费类型信息，支持包年包月和按需，默认为按需。
 type ChargeInfoResponse struct {
 	// 计费模式。  取值范围：  - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。
+
 	ChargeMode ChargeInfoResponseChargeMode `json:"charge_mode"`
 }
 

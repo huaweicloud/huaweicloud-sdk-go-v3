@@ -2,22 +2,29 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 授权结果
 type AuthResultResp struct {
 	// API名称
+
 	ApiName *string `json:"api_name,omitempty"`
 	// APP名称
+
 	AppName *string `json:"app_name,omitempty"`
 	// 授权结果 - SUCCESS：授权成功 - SKIPPED：跳过 - FILAED：授权失败
+
 	Status *AuthResultRespStatus `json:"status,omitempty"`
 	// 授权失败错误信息
+
 	ErrorMsg *string `json:"error_msg,omitempty"`
 	// 授权失败错误码
+
 	ErrorCode *string `json:"error_code,omitempty"`
 }
 

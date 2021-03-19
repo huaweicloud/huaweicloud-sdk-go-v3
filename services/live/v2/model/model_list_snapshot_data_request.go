@@ -9,8 +9,10 @@ import (
 // Request Object
 type ListSnapshotDataRequest struct {
 	PublishDomain *string `json:"publish_domain,omitempty"`
-	StartTime     *string `json:"start_time,omitempty"`
-	EndTime       *string `json:"end_time,omitempty"`
+
+	StartTime *string `json:"start_time,omitempty"`
+
+	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o ListSnapshotDataRequest) String() string {

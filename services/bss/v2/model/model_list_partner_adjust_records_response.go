@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListPartnerAdjustRecordsResponse struct {
 	// 返回总条数。
+
 	TotalCount *int32 `json:"total_count,omitempty"`
 	// 调账记录列表。 具体请参见表2。
+
 	Records        *[]AdjustRecordV2 `json:"records,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

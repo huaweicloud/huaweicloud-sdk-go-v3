@@ -9,8 +9,10 @@ import (
 // 指标维度。
 type Dimension struct {
 	// 维度名称。
+
 	Name *string `json:"name,omitempty"`
 	// 维度取值。
+
 	Value *string `json:"value,omitempty"`
 }
 

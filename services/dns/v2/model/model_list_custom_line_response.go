@@ -8,7 +8,8 @@ import (
 
 // Response Object
 type ListCustomLineResponse struct {
-	Lines          *[]Line   `json:"lines,omitempty"`
+	Lines *[]Line `json:"lines,omitempty"`
+
 	Metadata       *Metedata `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

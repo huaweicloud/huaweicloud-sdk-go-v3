@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type ListPropertiesRequest struct {
-	DeviceId       string  `json:"device_id"`
+	DeviceId string `json:"device_id"`
+
 	StageAuthToken *string `json:"Stage-Auth-Token,omitempty"`
-	InstanceId     *string `json:"Instance-Id,omitempty"`
-	ServiceId      string  `json:"service_id"`
+
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	ServiceId string `json:"service_id"`
 }
 
 func (o ListPropertiesRequest) String() string {

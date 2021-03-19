@@ -9,7 +9,8 @@ import (
 // Request Object
 type ListRecordDataRequest struct {
 	StartTime *string `json:"start_time,omitempty"`
-	EndTime   *string `json:"end_time,omitempty"`
+
+	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o ListRecordDataRequest) String() string {

@@ -9,6 +9,7 @@ import (
 //
 type JobEntities struct {
 	// 镜像ID
+
 	ImageId *string `json:"image_id,omitempty"`
 }
 

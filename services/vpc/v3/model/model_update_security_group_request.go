@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateSecurityGroupRequest struct {
-	SecurityGroupId string                          `json:"security_group_id"`
-	Body            *UpdateSecurityGroupRequestBody `json:"body,omitempty"`
+	SecurityGroupId string `json:"security_group_id"`
+
+	Body *UpdateSecurityGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateSecurityGroupRequest) String() string {

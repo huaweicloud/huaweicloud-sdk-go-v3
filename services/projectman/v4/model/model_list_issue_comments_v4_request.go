@@ -9,9 +9,12 @@ import (
 // Request Object
 type ListIssueCommentsV4Request struct {
 	ProjectId string `json:"project_id"`
-	IssueId   int32  `json:"issue_id"`
-	Offset    *int32 `json:"offset,omitempty"`
-	Limit     *int32 `json:"limit,omitempty"`
+
+	IssueId int32 `json:"issue_id"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListIssueCommentsV4Request) String() string {

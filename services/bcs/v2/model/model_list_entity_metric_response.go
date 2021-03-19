@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListEntityMetricResponse struct {
 	// 指标对象列表。
+
 	Metrics        *[]EntityMetricList `json:"metrics,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

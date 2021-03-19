@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListTemplatesResponse struct {
 	// 模板列表。
+
 	Templates      *[]TemplateView `json:"templates,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

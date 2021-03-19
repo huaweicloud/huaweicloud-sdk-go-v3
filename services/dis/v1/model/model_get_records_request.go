@@ -9,7 +9,8 @@ import (
 // Request Object
 type GetRecordsRequest struct {
 	PartitionCursor string `json:"partition-cursor"`
-	MaxFetchBytes   *int32 `json:"max_fetch_bytes,omitempty"`
+
+	MaxFetchBytes *int32 `json:"max_fetch_bytes,omitempty"`
 }
 
 func (o GetRecordsRequest) String() string {

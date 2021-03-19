@@ -8,10 +8,13 @@ import (
 
 type Hook struct {
 	// hook ID。
+
 	Id string `json:"id"`
 	// hook类型。
+
 	Type string `json:"type"`
 	// 回滚URL。
+
 	CallbackUrl string `json:"callback_url"`
 }
 

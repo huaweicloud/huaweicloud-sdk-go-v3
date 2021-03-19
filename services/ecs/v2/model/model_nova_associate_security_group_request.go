@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type NovaAssociateSecurityGroupRequest struct {
-	ServerId string                                 `json:"server_id"`
-	Body     *NovaAssociateSecurityGroupRequestBody `json:"body,omitempty"`
+	ServerId string `json:"server_id"`
+
+	Body *NovaAssociateSecurityGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o NovaAssociateSecurityGroupRequest) String() string {

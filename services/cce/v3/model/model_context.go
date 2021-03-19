@@ -8,8 +8,10 @@ import (
 
 type Context struct {
 	// 上下文cluster信息。
+
 	Cluster *string `json:"cluster,omitempty"`
 	// 上下文user信息。
+
 	User *string `json:"user,omitempty"`
 }
 

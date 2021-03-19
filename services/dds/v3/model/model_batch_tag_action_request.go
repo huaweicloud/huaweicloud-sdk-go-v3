@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type BatchTagActionRequest struct {
-	InstanceId string                              `json:"instance_id"`
-	Body       *BatchOperateInstanceTagRequestBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *BatchOperateInstanceTagRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchTagActionRequest) String() string {

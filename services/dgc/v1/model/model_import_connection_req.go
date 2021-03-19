@@ -2,15 +2,19 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type ImportConnectionReq struct {
 	Path *string `json:"path,omitempty"`
 	// 连接参数
-	Params         *[]ConnectionParam                 `json:"params,omitempty"`
+
+	Params *[]ConnectionParam `json:"params,omitempty"`
+
 	SameNamePolicy *ImportConnectionReqSameNamePolicy `json:"sameNamePolicy,omitempty"`
 }
 

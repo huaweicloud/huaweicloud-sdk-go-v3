@@ -9,6 +9,7 @@ import (
 //
 type BatchDeleteServerNicOption struct {
 	// 网卡Port ID。
+
 	Id string `json:"id"`
 }
 

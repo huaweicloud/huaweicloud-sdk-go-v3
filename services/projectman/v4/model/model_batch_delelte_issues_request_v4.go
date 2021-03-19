@@ -8,6 +8,7 @@ import (
 
 type BatchDelelteIssuesRequestV4 struct {
 	// 工作项的id
+
 	IssueIds []int32 `json:"issue_ids"`
 }
 

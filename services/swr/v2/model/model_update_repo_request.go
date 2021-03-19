@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type UpdateRepoRequest struct {
 	ContentType UpdateRepoRequestContentType `json:"Content-Type"`
-	Namespace   string                       `json:"namespace"`
-	Repository  string                       `json:"repository"`
-	Body        *UpdateRepoRequestBody       `json:"body,omitempty"`
+
+	Namespace string `json:"namespace"`
+
+	Repository string `json:"repository"`
+
+	Body *UpdateRepoRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateRepoRequest) String() string {

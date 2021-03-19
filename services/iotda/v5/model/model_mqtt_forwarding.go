@@ -9,6 +9,7 @@ import (
 // topic配置信息
 type MqttForwarding struct {
 	// 用于接收满足规则条件数据的topic。
+
 	Topic string `json:"topic"`
 }
 

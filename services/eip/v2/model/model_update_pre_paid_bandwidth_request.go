@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdatePrePaidBandwidthRequest struct {
-	BandwidthId string                             `json:"bandwidth_id"`
-	Body        *UpdatePrePaidBandwidthRequestBody `json:"body,omitempty"`
+	BandwidthId string `json:"bandwidth_id"`
+
+	Body *UpdatePrePaidBandwidthRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdatePrePaidBandwidthRequest) String() string {

@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type RestoreInstanceFromCollectionRequest struct {
-	XLanguage  *string                                   `json:"X-Language,omitempty"`
-	InstanceId string                                    `json:"instance_id"`
-	Body       *RestoreInstanceFromCollectionRequestBody `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *RestoreInstanceFromCollectionRequestBody `json:"body,omitempty"`
 }
 
 func (o RestoreInstanceFromCollectionRequest) String() string {

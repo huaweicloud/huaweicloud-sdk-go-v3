@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type BatchCreateTagRequest struct {
-	ResourceType string         `json:"resource_type"`
-	ResourceId   string         `json:"resource_id"`
-	Body         *BatchHandTags `json:"body,omitempty"`
+	ResourceType string `json:"resource_type"`
+
+	ResourceId string `json:"resource_id"`
+
+	Body *BatchHandTags `json:"body,omitempty"`
 }
 
 func (o BatchCreateTagRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateTransferTaskV3Request struct {
-	StreamName string                     `json:"stream_name"`
-	Body       *CreateTransferTaskRequest `json:"body,omitempty"`
+	StreamName string `json:"stream_name"`
+
+	Body *CreateTransferTaskRequest `json:"body,omitempty"`
 }
 
 func (o CreateTransferTaskV3Request) String() string {

@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListTemplatesV2Response struct {
 	// 返回模板的数量
+
 	Count *int32 `json:"count,omitempty"`
 	// 返回模板的列表
+
 	Templates      *[]TemplateInfo `json:"templates,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
