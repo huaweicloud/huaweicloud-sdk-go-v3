@@ -9,6 +9,7 @@ import (
 //
 type MappingOption struct {
 	// 将联邦用户映射为本地用户的规则列表。
+
 	Rules []MappingRules `json:"rules"`
 }
 

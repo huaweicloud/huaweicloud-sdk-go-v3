@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type MigrateResourceRequest struct {
-	EnterpriseProjectId string           `json:"enterprise_project_id"`
-	Body                *MigrateResource `json:"body,omitempty"`
+	EnterpriseProjectId string `json:"enterprise_project_id"`
+
+	Body *MigrateResource `json:"body,omitempty"`
 }
 
 func (o MigrateResourceRequest) String() string {

@@ -2,18 +2,23 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 //
 type AgencyPolicyStatement struct {
 	// 授权项，指对资源的具体操作权限。   > - 当自定义策略为委托自定义策略时，该字段值为：``` \"Action\": [\"iam:agencies:assume\"]```。
+
 	Action []AgencyPolicyStatementAction `json:"Action"`
 	// 作用。包含两种：允许（Allow）和拒绝（Deny），既有Allow又有Deny的授权语句时，遵循Deny优先的原则。
-	Effect   AgencyPolicyStatementEffect `json:"Effect"`
-	Resource *AgencyPolicyResource       `json:"Resource"`
+
+	Effect AgencyPolicyStatementEffect `json:"Effect"`
+
+	Resource *AgencyPolicyResource `json:"Resource"`
 }
 
 func (o AgencyPolicyStatement) String() string {

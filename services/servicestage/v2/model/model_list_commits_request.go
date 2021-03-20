@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type ListCommitsRequest struct {
-	XRepoAuth string  `json:"X-Repo-Auth"`
-	Namespace string  `json:"namespace"`
-	Project   string  `json:"project"`
-	Ref       *string `json:"ref,omitempty"`
+	XRepoAuth string `json:"X-Repo-Auth"`
+
+	Namespace string `json:"namespace"`
+
+	Project string `json:"project"`
+
+	Ref *string `json:"ref,omitempty"`
 }
 
 func (o ListCommitsRequest) String() string {

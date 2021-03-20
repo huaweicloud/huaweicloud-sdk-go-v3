@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type DeleteCertificateRequest struct {
-	InstanceId    *string `json:"Instance-Id,omitempty"`
-	CertificateId string  `json:"certificate_id"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	CertificateId string `json:"certificate_id"`
 }
 
 func (o DeleteCertificateRequest) String() string {

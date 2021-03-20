@@ -2,28 +2,38 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 失败的任务详细信息。
 type FailedTasks struct {
 	// 虚拟机ID
+
 	TaskId *string `json:"task_id,omitempty"`
 	// 任务的操作类型。 - FAILED_RESET 重置 - FAILED_REPLACE 替换 - FAILED_UNBIND 解绑
+
 	OperateType *FailedTasksOperateType `json:"operate_type,omitempty"`
 	// 任务时间
+
 	TaskTime *int64 `json:"task_time,omitempty"`
 	// 任务失败错误码
+
 	TaskErrorCode *string `json:"task_error_code,omitempty"`
 	// 任务失败错误码
+
 	TaskErrorMsg *string `json:"task_error_msg,omitempty"`
 	// 虚拟机名称
+
 	ServerName *string `json:"server_name,omitempty"`
 	// 虚拟机ID
+
 	ServerId *string `json:"server_id,omitempty"`
 	// 密钥对名称
+
 	KeypairName *string `json:"keypair_name,omitempty"`
 }
 

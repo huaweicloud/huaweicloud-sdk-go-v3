@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListProjectBugStaticsV4Response struct {
 	// bug统计
+
 	BugStatistics  *[]BugStatisticResponseV4 `json:"bug_statistics,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

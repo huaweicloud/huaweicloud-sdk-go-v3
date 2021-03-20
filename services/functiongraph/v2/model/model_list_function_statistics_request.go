@@ -9,7 +9,8 @@ import (
 // Request Object
 type ListFunctionStatisticsRequest struct {
 	FuncUrn string `json:"func_urn"`
-	Period  string `json:"period"`
+
+	Period string `json:"period"`
 }
 
 func (o ListFunctionStatisticsRequest) String() string {

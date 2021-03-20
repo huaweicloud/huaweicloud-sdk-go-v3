@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type BatchCreateOrDeleteResourceTagsRequest struct {
-	ResourceType string                                      `json:"resource_type"`
-	ResourceId   string                                      `json:"resource_id"`
-	Body         *BatchCreateOrDeleteResourceTagsRequestBody `json:"body,omitempty"`
+	ResourceType string `json:"resource_type"`
+
+	ResourceId string `json:"resource_id"`
+
+	Body *BatchCreateOrDeleteResourceTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchCreateOrDeleteResourceTagsRequest) String() string {

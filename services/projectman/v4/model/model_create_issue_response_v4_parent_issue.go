@@ -9,8 +9,10 @@ import (
 // 父工作项
 type CreateIssueResponseV4ParentIssue struct {
 	// 父工作项id
+
 	Id *int32 `json:"id,omitempty"`
 	// 父工作项
+
 	Name *string `json:"name,omitempty"`
 }
 

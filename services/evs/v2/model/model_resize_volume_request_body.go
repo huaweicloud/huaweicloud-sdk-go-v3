@@ -9,7 +9,8 @@ import (
 // This is a auto create Body Object
 type ResizeVolumeRequestBody struct {
 	BssParam *BssParamForResizeVolume `json:"bssParam,omitempty"`
-	OsExtend *OsExtend                `json:"os-extend"`
+
+	OsExtend *OsExtend `json:"os-extend"`
 }
 
 func (o ResizeVolumeRequestBody) String() string {

@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type ListPolicyStatesByResourceIdRequest struct {
-	ResourceId      string  `json:"resource_id"`
+	ResourceId string `json:"resource_id"`
+
 	ComplianceState *string `json:"compliance_state,omitempty"`
-	Limit           *int32  `json:"limit,omitempty"`
-	Marker          *string `json:"marker,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
 }
 
 func (o ListPolicyStatesByResourceIdRequest) String() string {

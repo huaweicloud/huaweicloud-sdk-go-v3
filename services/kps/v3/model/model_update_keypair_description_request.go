@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateKeypairDescriptionRequest struct {
-	KeypairName string                               `json:"keypair_name"`
-	Body        *UpdateKeypairDescriptionRequestBody `json:"body,omitempty"`
+	KeypairName string `json:"keypair_name"`
+
+	Body *UpdateKeypairDescriptionRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateKeypairDescriptionRequest) String() string {

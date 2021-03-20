@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type DeleteEventRequest struct {
-	EventId     string `json:"event_id"`
+	EventId string `json:"event_id"`
+
 	FunctionUrn string `json:"function_urn"`
 }
 

@@ -9,7 +9,8 @@ import (
 // auth信息
 type GetIdTokenAuthParams struct {
 	IdToken *GetIdTokenIdTokenBody `json:"id_token"`
-	Scope   *GetIdTokenIdScopeBody `json:"scope,omitempty"`
+
+	Scope *GetIdTokenIdScopeBody `json:"scope,omitempty"`
 }
 
 func (o GetIdTokenAuthParams) String() string {

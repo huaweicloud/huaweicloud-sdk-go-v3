@@ -9,6 +9,7 @@ import (
 // 配额信息
 type ListQuotasResult struct {
 	// 配额列表
+
 	Resources []Resources `json:"resources"`
 }
 

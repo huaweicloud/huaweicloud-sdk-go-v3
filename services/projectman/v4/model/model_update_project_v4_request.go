@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateProjectV4Request struct {
-	ProjectId string                  `json:"project_id"`
-	Body      *UpdateProjectRequestV4 `json:"body,omitempty"`
+	ProjectId string `json:"project_id"`
+
+	Body *UpdateProjectRequestV4 `json:"body,omitempty"`
 }
 
 func (o UpdateProjectV4Request) String() string {

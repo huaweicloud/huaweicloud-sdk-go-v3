@@ -9,8 +9,10 @@ import (
 // API的URL地址。
 type Link struct {
 	// API的URL地址。
+
 	Href string `json:"href"`
 	// self。
+
 	Rel string `json:"rel"`
 }
 

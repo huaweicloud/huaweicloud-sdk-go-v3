@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type KeystoneUpdateUserPasswordRequest struct {
-	UserId string                                 `json:"user_id"`
-	Body   *KeystoneUpdateUserPasswordRequestBody `json:"body,omitempty"`
+	UserId string `json:"user_id"`
+
+	Body *KeystoneUpdateUserPasswordRequestBody `json:"body,omitempty"`
 }
 
 func (o KeystoneUpdateUserPasswordRequest) String() string {

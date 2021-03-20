@@ -8,13 +8,18 @@ import (
 
 type MetricRequest3 struct {
 	// 统计周期
+
 	DateRange *string `json:"date_range,omitempty"`
 	// 指标类型
+
 	MetricType *string `json:"metric_type,omitempty"`
 	// 迭代ID
-	SprintId *string                 `json:"sprint_id,omitempty"`
+
+	SprintId *string `json:"sprint_id,omitempty"`
+
 	Dividend *MetricRequest3Dividend `json:"dividend,omitempty"`
 	// 指标分母过滤条件
+
 	Divisor *interface{} `json:"divisor,omitempty"`
 }
 

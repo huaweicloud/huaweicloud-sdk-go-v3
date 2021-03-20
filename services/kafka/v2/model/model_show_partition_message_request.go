@@ -8,9 +8,12 @@ import (
 
 // Request Object
 type ShowPartitionMessageRequest struct {
-	InstanceId    string `json:"instance_id"`
-	Topic         string `json:"topic"`
-	Partition     int32  `json:"partition"`
+	InstanceId string `json:"instance_id"`
+
+	Topic string `json:"topic"`
+
+	Partition int32 `json:"partition"`
+
 	MessageOffset string `json:"message_offset"`
 }
 

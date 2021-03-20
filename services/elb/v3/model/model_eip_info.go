@@ -9,8 +9,10 @@ import (
 // 弹性ip，同publicips
 type EipInfo struct {
 	// eip_id
+
 	EipId *string `json:"eip_id,omitempty"`
 	// eip_address
+
 	EipAddress *string `json:"eip_address,omitempty"`
 }
 

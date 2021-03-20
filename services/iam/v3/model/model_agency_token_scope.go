@@ -8,7 +8,8 @@ import (
 
 //
 type AgencyTokenScope struct {
-	Domain  *AgencyTokenScopeDomain  `json:"domain,omitempty"`
+	Domain *AgencyTokenScopeDomain `json:"domain,omitempty"`
+
 	Project *AgencyTokenScopeProject `json:"project,omitempty"`
 }
 

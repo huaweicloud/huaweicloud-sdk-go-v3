@@ -9,8 +9,10 @@ import (
 // 镜像标签
 type TagKeyValue struct {
 	// 标签的键
+
 	Key string `json:"key"`
 	// 标签的值
+
 	Value string `json:"value"`
 }
 

@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ShowApiVersionRequest struct {
 	ContentType ShowApiVersionRequestContentType `json:"Content-Type"`
-	ApiVersion  string                           `json:"api_version"`
+
+	ApiVersion string `json:"api_version"`
 }
 
 func (o ShowApiVersionRequest) String() string {

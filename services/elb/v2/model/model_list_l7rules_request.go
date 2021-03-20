@@ -8,17 +8,28 @@ import (
 
 // Request Object
 type ListL7rulesRequest struct {
-	Limit              *int32  `json:"limit,omitempty"`
-	Marker             *string `json:"marker,omitempty"`
-	PageReverse        *bool   `json:"page_reverse,omitempty"`
-	L7policyId         string  `json:"l7policy_id"`
-	Id                 *string `json:"id,omitempty"`
-	AdminStateUp       *bool   `json:"admin_state_up,omitempty"`
-	Type               *string `json:"type,omitempty"`
-	CompareType        *string `json:"compare_type,omitempty"`
-	Invert             *bool   `json:"invert,omitempty"`
-	Key                *string `json:"key,omitempty"`
-	Value              *string `json:"value,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
+
+	PageReverse *bool `json:"page_reverse,omitempty"`
+
+	L7policyId string `json:"l7policy_id"`
+
+	Id *string `json:"id,omitempty"`
+
+	AdminStateUp *bool `json:"admin_state_up,omitempty"`
+
+	Type *string `json:"type,omitempty"`
+
+	CompareType *string `json:"compare_type,omitempty"`
+
+	Invert *bool `json:"invert,omitempty"`
+
+	Key *string `json:"key,omitempty"`
+
+	Value *string `json:"value,omitempty"`
+
 	ProvisioningStatus *string `json:"provisioning_status,omitempty"`
 }
 

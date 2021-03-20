@@ -9,6 +9,7 @@ import (
 // 函数策略配置。
 type StrategyConfig struct {
 	// 0：函数被禁用;-1：函数被启用。
+
 	Concurrency int32 `json:"concurrency"`
 }
 

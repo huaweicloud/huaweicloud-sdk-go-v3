@@ -9,6 +9,7 @@ import (
 // Response Object
 type ImportCertificateResponse struct {
 	// 证书id。
+
 	CertificateId  *string `json:"certificate_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

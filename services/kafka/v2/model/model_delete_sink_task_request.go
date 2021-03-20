@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteSinkTaskRequest struct {
 	ConnectorId string `json:"connector_id"`
-	TaskId      string `json:"task_id"`
+
+	TaskId string `json:"task_id"`
 }
 
 func (o DeleteSinkTaskRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateIpGroupRequest struct {
-	IpgroupId string                    `json:"ipgroup_id"`
-	Body      *UpdateIpGroupRequestBody `json:"body,omitempty"`
+	IpgroupId string `json:"ipgroup_id"`
+
+	Body *UpdateIpGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateIpGroupRequest) String() string {

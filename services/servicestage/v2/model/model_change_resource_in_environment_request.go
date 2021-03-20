@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ChangeResourceInEnvironmentRequest struct {
-	EnvironmentId string                     `json:"environment_id"`
-	Body          *EnvironmentResourceModify `json:"body,omitempty"`
+	EnvironmentId string `json:"environment_id"`
+
+	Body *EnvironmentResourceModify `json:"body,omitempty"`
 }
 
 func (o ChangeResourceInEnvironmentRequest) String() string {

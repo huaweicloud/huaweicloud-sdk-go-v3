@@ -9,6 +9,7 @@ import (
 //
 type PwdPasswordUserDomain struct {
 	// IAM用户所属账号名。
+
 	Name string `json:"name"`
 }
 

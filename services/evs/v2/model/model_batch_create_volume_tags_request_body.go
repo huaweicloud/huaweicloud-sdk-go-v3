@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // This is a auto create Body Object
 type BatchCreateVolumeTagsRequestBody struct {
 	// 操作标识，当前支持的取值如下：  添加标签：create
+
 	Action BatchCreateVolumeTagsRequestBodyAction `json:"action"`
 	// 标签列表。
+
 	Tags []Tag `json:"tags"`
 }
 

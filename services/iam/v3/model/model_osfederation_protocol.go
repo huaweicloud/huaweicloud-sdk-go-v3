@@ -9,6 +9,7 @@ import (
 //
 type OsfederationProtocol struct {
 	// 协议ID。
+
 	Id string `json:"id"`
 }
 

@@ -9,10 +9,13 @@ import (
 // 命令服务对象。
 type ServiceCommand struct {
 	// 设备命令名称。
+
 	CommandName string `json:"command_name"`
 	// 设备命令的参数列表。
+
 	Paras *[]ServiceCommandPara `json:"paras,omitempty"`
 	// 设备命令的响应列表。
+
 	Responses *[]ServiceCommandResponse `json:"responses,omitempty"`
 }
 

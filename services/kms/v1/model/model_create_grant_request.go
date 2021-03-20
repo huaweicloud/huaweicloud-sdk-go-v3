@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateGrantRequest struct {
-	VersionId string                  `json:"version_id"`
-	Body      *CreateGrantRequestBody `json:"body,omitempty"`
+	VersionId string `json:"version_id"`
+
+	Body *CreateGrantRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateGrantRequest) String() string {

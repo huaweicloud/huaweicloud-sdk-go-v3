@@ -9,6 +9,7 @@ import (
 // Response Object
 type ShowAccessDomainResponse struct {
 	// true：存在；false：不存在
+
 	Exist          *bool `json:"exist,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }

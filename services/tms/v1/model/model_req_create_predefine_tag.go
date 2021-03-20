@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 创建预定义标签请求
 type ReqCreatePredefineTag struct {
 	// 操作标识（区分大小写）：create（创建）
+
 	Action ReqCreatePredefineTagAction `json:"action"`
 	// 标签列表
+
 	Tags []PredefineTagRequest `json:"tags"`
 }
 

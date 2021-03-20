@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type DeleteDatabaseRequest struct {
-	XLanguage  *string `json:"X-Language,omitempty"`
-	InstanceId string  `json:"instance_id"`
-	DbName     string  `json:"db_name"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	DbName string `json:"db_name"`
 }
 
 func (o DeleteDatabaseRequest) String() string {

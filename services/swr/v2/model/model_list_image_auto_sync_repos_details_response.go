@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListImageAutoSyncReposDetailsResponse struct {
 	// 镜像自动同步规则
+
 	Body           *[]SyncRepo `json:"body,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type RevokeRequest struct {
-	XLanguage  *string            `json:"X-Language,omitempty"`
-	InstanceId string             `json:"instance_id"`
-	Body       *RevokeRequestBody `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *RevokeRequestBody `json:"body,omitempty"`
 }
 
 func (o RevokeRequest) String() string {

@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type UpdateInstanceNameRequest struct {
-	XLanguage  *UpdateInstanceNameRequestXLanguage `json:"X-Language,omitempty"`
-	InstanceId string                              `json:"instance_id"`
-	Body       *ModifiyInstanceNameRequest         `json:"body,omitempty"`
+	XLanguage *UpdateInstanceNameRequestXLanguage `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *ModifiyInstanceNameRequest `json:"body,omitempty"`
 }
 
 func (o UpdateInstanceNameRequest) String() string {

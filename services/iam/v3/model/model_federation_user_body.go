@@ -9,10 +9,13 @@ import (
 // 联邦用户信息
 type FederationUserBody struct {
 	OsFederation *OsFederationInfo `json:"OS-FEDERATION"`
-	Domain       *DomainInfo       `json:"domain"`
+
+	Domain *DomainInfo `json:"domain"`
 	// user id
+
 	Id *string `json:"id,omitempty"`
 	// user name
+
 	Name *string `json:"name,omitempty"`
 }
 

@@ -8,6 +8,7 @@ import (
 
 type BatchDeleteIterationsV4RequestBody struct {
 	// 迭代的id
+
 	IterationIds []int32 `json:"iteration_ids"`
 }
 

@@ -2,21 +2,30 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListRemuxTaskRequest struct {
-	TaskId      *[]string                   `json:"task_id,omitempty"`
-	Status      *ListRemuxTaskRequestStatus `json:"status,omitempty"`
-	StartTime   *string                     `json:"start_time,omitempty"`
-	EndTime     *string                     `json:"end_time,omitempty"`
-	InputBucket *string                     `json:"input_bucket,omitempty"`
-	InputObject *string                     `json:"input_object,omitempty"`
-	Page        *int32                      `json:"page,omitempty"`
-	Size        *int32                      `json:"size,omitempty"`
+	TaskId *[]string `json:"task_id,omitempty"`
+
+	Status *ListRemuxTaskRequestStatus `json:"status,omitempty"`
+
+	StartTime *string `json:"start_time,omitempty"`
+
+	EndTime *string `json:"end_time,omitempty"`
+
+	InputBucket *string `json:"input_bucket,omitempty"`
+
+	InputObject *string `json:"input_object,omitempty"`
+
+	Page *int32 `json:"page,omitempty"`
+
+	Size *int32 `json:"size,omitempty"`
 }
 
 func (o ListRemuxTaskRequest) String() string {

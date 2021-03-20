@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type ListHistoryStreamsRequest struct {
-	Domain string  `json:"domain"`
-	App    *string `json:"app,omitempty"`
-	Offset *int32  `json:"offset,omitempty"`
-	Limit  *int32  `json:"limit,omitempty"`
+	Domain string `json:"domain"`
+
+	App *string `json:"app,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListHistoryStreamsRequest) String() string {

@@ -8,8 +8,10 @@ import (
 
 // Request Object
 type AddApplyJoinProjectForAgcRequest struct {
-	DomainId  string `json:"Domain-Id"`
-	UserId    string `json:"User-Id"`
+	DomainId string `json:"Domain-Id"`
+
+	UserId string `json:"User-Id"`
+
 	ProjectId string `json:"project_id"`
 }
 

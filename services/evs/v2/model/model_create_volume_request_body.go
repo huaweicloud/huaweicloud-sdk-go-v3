@@ -9,9 +9,12 @@ import (
 // This is a auto create Body Object
 type CreateVolumeRequestBody struct {
 	BssParam *BssParamForCreateVolume `json:"bssParam,omitempty"`
-	Volume   *CreateVolumeOption      `json:"volume"`
+
+	Volume *CreateVolumeOption `json:"volume"`
 	// 创建云硬盘并挂载到目标虚拟机。
-	ServerId               *string                     `json:"server_id,omitempty"`
+
+	ServerId *string `json:"server_id,omitempty"`
+
 	OSSCHHNTschedulerHints *CreateVolumeSchedulerHints `json:"OS-SCH-HNT:scheduler_hints,omitempty"`
 }
 

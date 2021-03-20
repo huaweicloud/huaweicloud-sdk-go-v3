@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateFunctionConfigRequest struct {
-	FunctionUrn string                           `json:"function_urn"`
-	Body        *UpdateFunctionConfigRequestBody `json:"body,omitempty"`
+	FunctionUrn string `json:"function_urn"`
+
+	Body *UpdateFunctionConfigRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateFunctionConfigRequest) String() string {

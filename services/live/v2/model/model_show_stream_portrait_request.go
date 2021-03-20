@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ShowStreamPortraitRequest struct {
-	PlayDomain string  `json:"play_domain"`
-	Stream     *string `json:"stream,omitempty"`
-	Time       string  `json:"time"`
+	PlayDomain string `json:"play_domain"`
+
+	Stream *string `json:"stream,omitempty"`
+
+	Time string `json:"time"`
 }
 
 func (o ShowStreamPortraitRequest) String() string {

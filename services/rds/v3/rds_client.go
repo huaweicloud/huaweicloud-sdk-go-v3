@@ -536,17 +536,6 @@ func (c *RdsClient) ShowConfiguration(request *model.ShowConfigurationRequest) (
 	}
 }
 
-//查询跨云容灾复制状态。
-func (c *RdsClient) ShowDrReplicaStatus(request *model.ShowDrReplicaStatusRequest) (*model.ShowDrReplicaStatusResponse, error) {
-	requestDef := GenReqDefForShowDrReplicaStatus()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowDrReplicaStatusResponse), nil
-	}
-}
-
 //获取指定实例的参数模板。
 func (c *RdsClient) ShowInstanceConfiguration(request *model.ShowInstanceConfigurationRequest) (*model.ShowInstanceConfigurationResponse, error) {
 	requestDef := GenReqDefForShowInstanceConfiguration()
@@ -580,17 +569,6 @@ func (c *RdsClient) StartFailover(request *model.StartFailoverRequest) (*model.S
 	}
 }
 
-//灾备实例升主。
-func (c *RdsClient) StartInstanceDrToMasterAction(request *model.StartInstanceDrToMasterActionRequest) (*model.StartInstanceDrToMasterActionResponse, error) {
-	requestDef := GenReqDefForStartInstanceDrToMasterAction()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StartInstanceDrToMasterActionResponse), nil
-	}
-}
-
 //扩容数据库实例的磁盘空间。
 func (c *RdsClient) StartInstanceEnlargeVolumeAction(request *model.StartInstanceEnlargeVolumeActionRequest) (*model.StartInstanceEnlargeVolumeActionResponse, error) {
 	requestDef := GenReqDefForStartInstanceEnlargeVolumeAction()
@@ -599,17 +577,6 @@ func (c *RdsClient) StartInstanceEnlargeVolumeAction(request *model.StartInstanc
 		return nil, err
 	} else {
 		return resp.(*model.StartInstanceEnlargeVolumeActionResponse), nil
-	}
-}
-
-//配置主实例容灾能力。
-func (c *RdsClient) StartInstanceMasterDrAction(request *model.StartInstanceMasterDrActionRequest) (*model.StartInstanceMasterDrActionResponse, error) {
-	requestDef := GenReqDefForStartInstanceMasterDrAction()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StartInstanceMasterDrActionResponse), nil
 	}
 }
 
@@ -632,17 +599,6 @@ func (c *RdsClient) StartInstanceSingleToHaAction(request *model.StartInstanceSi
 		return nil, err
 	} else {
 		return resp.(*model.StartInstanceSingleToHaActionResponse), nil
-	}
-}
-
-//配置灾备实例容灾能力。
-func (c *RdsClient) StartInstanceSlaveDrAction(request *model.StartInstanceSlaveDrActionRequest) (*model.StartInstanceSlaveDrActionResponse, error) {
-	requestDef := GenReqDefForStartInstanceSlaveDrAction()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StartInstanceSlaveDrActionResponse), nil
 	}
 }
 
@@ -877,17 +833,6 @@ func (c *RdsClient) AllowDbPrivilege(request *model.AllowDbPrivilegeRequest) (*m
 	}
 }
 
-//修改读写分离阈值
-func (c *RdsClient) ChangeTheDelayThreshold(request *model.ChangeTheDelayThresholdRequest) (*model.ChangeTheDelayThresholdResponse, error) {
-	requestDef := GenReqDefForChangeTheDelayThreshold()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ChangeTheDelayThresholdResponse), nil
-	}
-}
-
 //创建数据库。
 func (c *RdsClient) CreatePostgresqlDatabase(request *model.CreatePostgresqlDatabaseRequest) (*model.CreatePostgresqlDatabaseResponse, error) {
 	requestDef := GenReqDefForCreatePostgresqlDatabase()
@@ -965,39 +910,6 @@ func (c *RdsClient) SetPostgresqlDbUserPwd(request *model.SetPostgresqlDbUserPwd
 	}
 }
 
-//查询数据库代理信息
-func (c *RdsClient) ShowInformationAboutDatabaseProxy(request *model.ShowInformationAboutDatabaseProxyRequest) (*model.ShowInformationAboutDatabaseProxyResponse, error) {
-	requestDef := GenReqDefForShowInformationAboutDatabaseProxy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowInformationAboutDatabaseProxyResponse), nil
-	}
-}
-
-//开启数据库代理
-func (c *RdsClient) StartDatabaseProxy(request *model.StartDatabaseProxyRequest) (*model.StartDatabaseProxyResponse, error) {
-	requestDef := GenReqDefForStartDatabaseProxy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StartDatabaseProxyResponse), nil
-	}
-}
-
-//关闭数据库代理
-func (c *RdsClient) StopDatabaseProxy(request *model.StopDatabaseProxyRequest) (*model.StopDatabaseProxyResponse, error) {
-	requestDef := GenReqDefForStopDatabaseProxy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StopDatabaseProxyResponse), nil
-	}
-}
-
 //修改实例备注信息。
 func (c *RdsClient) UpdatePostgresqlInstanceAlias(request *model.UpdatePostgresqlInstanceAliasRequest) (*model.UpdatePostgresqlInstanceAliasResponse, error) {
 	requestDef := GenReqDefForUpdatePostgresqlInstanceAlias()
@@ -1006,16 +918,5 @@ func (c *RdsClient) UpdatePostgresqlInstanceAlias(request *model.UpdatePostgresq
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePostgresqlInstanceAliasResponse), nil
-	}
-}
-
-//修改读写分离权重
-func (c *RdsClient) UpdateReadWeight(request *model.UpdateReadWeightRequest) (*model.UpdateReadWeightResponse, error) {
-	requestDef := GenReqDefForUpdateReadWeight()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateReadWeightResponse), nil
 	}
 }

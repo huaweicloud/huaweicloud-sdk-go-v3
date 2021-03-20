@@ -10,6 +10,7 @@ import (
 type IssueRecordV4 struct {
 	User *IssueRecordV4User `json:"user,omitempty"`
 	// 操作的记录
+
 	Details *[]IssueRecordV4Details `json:"details,omitempty"`
 }
 

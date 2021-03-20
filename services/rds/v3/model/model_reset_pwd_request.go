@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ResetPwdRequest struct {
-	XLanguage  *ResetPwdRequestXLanguage `json:"X-Language,omitempty"`
-	InstanceId string                    `json:"instance_id"`
-	Body       *PwdResetRequest          `json:"body,omitempty"`
+	XLanguage *ResetPwdRequestXLanguage `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *PwdResetRequest `json:"body,omitempty"`
 }
 
 func (o ResetPwdRequest) String() string {

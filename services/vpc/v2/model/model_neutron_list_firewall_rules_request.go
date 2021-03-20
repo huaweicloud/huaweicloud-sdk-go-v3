@@ -8,13 +8,19 @@ import (
 
 // Request Object
 type NeutronListFirewallRulesRequest struct {
-	Marker      *string   `json:"marker,omitempty"`
-	Limit       *int32    `json:"limit,omitempty"`
-	Id          *[]string `json:"id,omitempty"`
-	Name        *[]string `json:"name,omitempty"`
+	Marker *string `json:"marker,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Id *[]string `json:"id,omitempty"`
+
+	Name *[]string `json:"name,omitempty"`
+
 	Description *[]string `json:"description,omitempty"`
-	Action      *string   `json:"action,omitempty"`
-	TenantId    *string   `json:"tenant_id,omitempty"`
+
+	Action *string `json:"action,omitempty"`
+
+	TenantId *string `json:"tenant_id,omitempty"`
 }
 
 func (o NeutronListFirewallRulesRequest) String() string {

@@ -9,8 +9,10 @@ import (
 // Request Object
 type KeystoneAssociateGroupWithProjectPermissionRequest struct {
 	ProjectId string `json:"project_id"`
-	GroupId   string `json:"group_id"`
-	RoleId    string `json:"role_id"`
+
+	GroupId string `json:"group_id"`
+
+	RoleId string `json:"role_id"`
 }
 
 func (o KeystoneAssociateGroupWithProjectPermissionRequest) String() string {

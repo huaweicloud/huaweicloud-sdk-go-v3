@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ChangeComponentRequest struct {
-	ApplicationId string           `json:"application_id"`
-	ComponentId   string           `json:"component_id"`
-	Body          *ComponentModify `json:"body,omitempty"`
+	ApplicationId string `json:"application_id"`
+
+	ComponentId string `json:"component_id"`
+
+	Body *ComponentModify `json:"body,omitempty"`
 }
 
 func (o ChangeComponentRequest) String() string {

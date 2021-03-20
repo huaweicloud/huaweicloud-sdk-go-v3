@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type CreateCommandRequest struct {
-	DeviceId   string                `json:"device_id"`
-	InstanceId *string               `json:"Instance-Id,omitempty"`
-	Body       *DeviceCommandRequest `json:"body,omitempty"`
+	DeviceId string `json:"device_id"`
+
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	Body *DeviceCommandRequest `json:"body,omitempty"`
 }
 
 func (o CreateCommandRequest) String() string {

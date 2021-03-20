@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type DeleteInstanceRequest struct {
-	XLanguage  *DeleteInstanceRequestXLanguage `json:"X-Language,omitempty"`
-	InstanceId string                          `json:"instance_id"`
+	XLanguage *DeleteInstanceRequestXLanguage `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
 }
 
 func (o DeleteInstanceRequest) String() string {

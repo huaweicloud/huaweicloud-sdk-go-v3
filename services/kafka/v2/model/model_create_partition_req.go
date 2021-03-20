@@ -8,6 +8,7 @@ import (
 
 type CreatePartitionReq struct {
 	// 期望调整分区后的数量，必须大于当前分区数量，小于等于20。
+
 	Partition *int32 `json:"partition,omitempty"`
 }
 

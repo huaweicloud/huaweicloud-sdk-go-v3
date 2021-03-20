@@ -2,18 +2,25 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListRecordConfigsRequest struct {
-	Domain     string                              `json:"domain"`
-	AppName    *string                             `json:"app_name,omitempty"`
-	StreamName *string                             `json:"stream_name,omitempty"`
-	Page       *int32                              `json:"page,omitempty"`
-	Size       *int32                              `json:"size,omitempty"`
+	Domain string `json:"domain"`
+
+	AppName *string `json:"app_name,omitempty"`
+
+	StreamName *string `json:"stream_name,omitempty"`
+
+	Page *int32 `json:"page,omitempty"`
+
+	Size *int32 `json:"size,omitempty"`
+
 	RecordType *ListRecordConfigsRequestRecordType `json:"record_type,omitempty"`
 }
 

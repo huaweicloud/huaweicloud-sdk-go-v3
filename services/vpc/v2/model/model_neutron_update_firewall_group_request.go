@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type NeutronUpdateFirewallGroupRequest struct {
-	FirewallGroupId string                                 `json:"firewall_group_id"`
-	Body            *NeutronUpdateFirewallGroupRequestBody `json:"body,omitempty"`
+	FirewallGroupId string `json:"firewall_group_id"`
+
+	Body *NeutronUpdateFirewallGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o NeutronUpdateFirewallGroupRequest) String() string {

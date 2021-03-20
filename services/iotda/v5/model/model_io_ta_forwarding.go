@@ -9,8 +9,10 @@ import (
 // 转发IoTA服务消息结构
 type IoTaForwarding struct {
 	// IoTA服务对应的数据源Id
+
 	DataSourceId string `json:"data_source_id"`
 	// IoTA服务对应的projectId信息
+
 	ProjectId string `json:"project_id"`
 }
 

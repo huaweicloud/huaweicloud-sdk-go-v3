@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateAgencyRequest struct {
-	AgencyId string                   `json:"agency_id"`
-	Body     *UpdateAgencyRequestBody `json:"body,omitempty"`
+	AgencyId string `json:"agency_id"`
+
+	Body *UpdateAgencyRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateAgencyRequest) String() string {

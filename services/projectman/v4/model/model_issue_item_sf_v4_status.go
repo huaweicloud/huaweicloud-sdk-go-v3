@@ -9,8 +9,10 @@ import (
 // 工作项状态
 type IssueItemSfV4Status struct {
 	// 状态id
+
 	Id *int32 `json:"id,omitempty"`
 	// 状态名称
+
 	Name *string `json:"name,omitempty"`
 }
 

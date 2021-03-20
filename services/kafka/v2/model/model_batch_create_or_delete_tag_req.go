@@ -2,15 +2,19 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type BatchCreateOrDeleteTagReq struct {
 	// 操作标识（仅支持小写）: - create（创建） - delete（删除）
+
 	Action *BatchCreateOrDeleteTagReqAction `json:"action,omitempty"`
 	// 标签列表。
+
 	Tags *[]CreatePostPaidInstanceReqTags `json:"tags,omitempty"`
 }
 

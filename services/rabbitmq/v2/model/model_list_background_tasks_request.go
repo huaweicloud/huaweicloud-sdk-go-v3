@@ -8,11 +8,15 @@ import (
 
 // Request Object
 type ListBackgroundTasksRequest struct {
-	InstanceId string  `json:"instance_id"`
-	Start      *int32  `json:"start,omitempty"`
-	Limit      *int32  `json:"limit,omitempty"`
-	BeginTime  *string `json:"begin_time,omitempty"`
-	EndTime    *string `json:"end_time,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Start *int32 `json:"start,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	BeginTime *string `json:"begin_time,omitempty"`
+
+	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o ListBackgroundTasksRequest) String() string {

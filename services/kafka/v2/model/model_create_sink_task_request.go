@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateSinkTaskRequest struct {
-	ConnectorId string             `json:"connector_id"`
-	Body        *CreateSinkTaskReq `json:"body,omitempty"`
+	ConnectorId string `json:"connector_id"`
+
+	Body *CreateSinkTaskReq `json:"body,omitempty"`
 }
 
 func (o CreateSinkTaskRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ShowBugDensityV2Request struct {
-	ProjectId string           `json:"project_id"`
-	Body      *MetricRequestV2 `json:"body,omitempty"`
+	ProjectId string `json:"project_id"`
+
+	Body *MetricRequestV2 `json:"body,omitempty"`
 }
 
 func (o ShowBugDensityV2Request) String() string {

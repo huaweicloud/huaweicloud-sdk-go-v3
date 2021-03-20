@@ -10,6 +10,7 @@ import (
 type KeystoneListProtocolsResponse struct {
 	Links *Links `json:"links,omitempty"`
 	// 协议信息列表。
+
 	Protocols      *[]ProtocolResult `json:"protocols,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

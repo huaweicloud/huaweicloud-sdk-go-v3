@@ -9,9 +9,11 @@ import (
 
 // Request Object
 type ListLiveSampleLogsRequest struct {
-	PlayDomain string           `json:"play_domain"`
-	StartTime  *sdktime.SdkTime `json:"start_time"`
-	EndTime    *sdktime.SdkTime `json:"end_time"`
+	PlayDomain string `json:"play_domain"`
+
+	StartTime *sdktime.SdkTime `json:"start_time"`
+
+	EndTime *sdktime.SdkTime `json:"end_time"`
 }
 
 func (o ListLiveSampleLogsRequest) String() string {

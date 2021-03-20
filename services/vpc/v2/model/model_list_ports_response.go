@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListPortsResponse struct {
 	// port列表对象
+
 	Ports          *[]Port `json:"ports,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateMemberRequest struct {
-	PoolId string                   `json:"pool_id"`
-	Body   *CreateMemberRequestBody `json:"body,omitempty"`
+	PoolId string `json:"pool_id"`
+
+	Body *CreateMemberRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateMemberRequest) String() string {

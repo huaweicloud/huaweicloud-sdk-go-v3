@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type BatchAddOrDeleteTagsRequest struct {
-	ImageId string                           `json:"image_id"`
-	Body    *BatchAddOrDeleteTagsRequestBody `json:"body,omitempty"`
+	ImageId string `json:"image_id"`
+
+	Body *BatchAddOrDeleteTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchAddOrDeleteTagsRequest) String() string {

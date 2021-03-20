@@ -9,9 +9,12 @@ import (
 // Request Object
 type DeleteStreamForbiddenRequest struct {
 	SpecifyProject *string `json:"specify_project,omitempty"`
-	Domain         string  `json:"domain"`
-	AppName        string  `json:"app_name"`
-	StreamName     string  `json:"stream_name"`
+
+	Domain string `json:"domain"`
+
+	AppName string `json:"app_name"`
+
+	StreamName string `json:"stream_name"`
 }
 
 func (o DeleteStreamForbiddenRequest) String() string {

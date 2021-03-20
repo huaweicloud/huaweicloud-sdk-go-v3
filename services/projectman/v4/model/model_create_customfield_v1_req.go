@@ -8,14 +8,19 @@ import (
 
 type CreateCustomfieldV1Req struct {
 	// 字段名称
+
 	Name string `json:"name"`
 	// 自定义字段类型 可选类型  textArea|select|radio|text|checkbox|date|time_date|number
+
 	Type string `json:"type"`
 	// 字段选项
+
 	Options string `json:"options"`
 	// 描述
+
 	Memo string `json:"memo"`
 	// 工作项类型
+
 	ScrumType string `json:"scrum_type"`
 }
 

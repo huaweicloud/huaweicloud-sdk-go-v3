@@ -2,14 +2,17 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // HA配置参数，创建HA实例时使用。
 type HaResponse struct {
 	// 备机同步参数。实例主备模式为Ha时有效。 取值： - MySQL为“async”或“semisync”。 - PostgreSQL为“async”或“sync”。 - Microsoft SQL Server为“sync”。
+
 	ReplicationMode HaResponseReplicationMode `json:"replication_mode"`
 }
 

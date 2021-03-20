@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type PublishMessageRequest struct {
-	TopicUrn string                     `json:"topic_urn"`
-	Body     *PublishMessageRequestBody `json:"body,omitempty"`
+	TopicUrn string `json:"topic_urn"`
+
+	Body *PublishMessageRequestBody `json:"body,omitempty"`
 }
 
 func (o PublishMessageRequest) String() string {

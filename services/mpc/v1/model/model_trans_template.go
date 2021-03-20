@@ -8,10 +8,14 @@ import (
 
 type TransTemplate struct {
 	// 转码模板名称。
-	TemplateName string  `json:"template_name"`
-	Video        *Video  `json:"video,omitempty"`
-	Audio        *Audio  `json:"audio,omitempty"`
-	Common       *Common `json:"common"`
+
+	TemplateName string `json:"template_name"`
+
+	Video *Video `json:"video,omitempty"`
+
+	Audio *Audio `json:"audio,omitempty"`
+
+	Common *Common `json:"common"`
 }
 
 func (o TransTemplate) String() string {

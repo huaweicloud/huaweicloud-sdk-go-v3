@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ShowResourceRelationsRequest struct {
-	ResourceId string                                `json:"resource_id"`
-	Direction  ShowResourceRelationsRequestDirection `json:"direction"`
-	Limit      *int32                                `json:"limit,omitempty"`
-	Marker     *string                               `json:"marker,omitempty"`
+	ResourceId string `json:"resource_id"`
+
+	Direction ShowResourceRelationsRequestDirection `json:"direction"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
 }
 
 func (o ShowResourceRelationsRequest) String() string {

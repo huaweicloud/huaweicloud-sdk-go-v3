@@ -8,10 +8,13 @@ import (
 
 type ApplicationCreate struct {
 	// 应用名称。
+
 	Name string `json:"name"`
 	// 应用描述。
+
 	Description *string `json:"description,omitempty"`
 	// 企业项目ID。默认值为0。
+
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

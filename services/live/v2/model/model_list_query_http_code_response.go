@@ -9,9 +9,11 @@ import (
 // Response Object
 type ListQueryHttpCodeResponse struct {
 	// 基于时间轴的状态码
-	DataSeries     *[]HttpCodeSummary `json:"data_series,omitempty"`
-	XRequestId     *string            `json:"X-request-id,omitempty"`
-	HttpStatusCode int                `json:"-"`
+
+	DataSeries *[]HttpCodeSummary `json:"data_series,omitempty"`
+
+	XRequestId     *string `json:"X-request-id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListQueryHttpCodeResponse) String() string {

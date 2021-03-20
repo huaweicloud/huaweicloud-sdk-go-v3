@@ -8,6 +8,7 @@ import (
 
 type SslOptionRequest struct {
 	// - true, 打开ssl开关。 - false, 关闭ssl开关。
+
 	SslOption bool `json:"ssl_option"`
 }
 

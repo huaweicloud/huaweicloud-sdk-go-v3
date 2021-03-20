@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ResetMessageOffsetRequest struct {
-	InstanceId string                 `json:"instance_id"`
-	Group      string                 `json:"group"`
-	Body       *ResetMessageOffsetReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Group string `json:"group"`
+
+	Body *ResetMessageOffsetReq `json:"body,omitempty"`
 }
 
 func (o ResetMessageOffsetRequest) String() string {

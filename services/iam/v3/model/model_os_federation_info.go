@@ -8,9 +8,11 @@ import (
 
 // user详细信息
 type OsFederationInfo struct {
-	IdentityProvider *IdpIdInfo      `json:"identity_provider"`
-	Protocol         *ProtocolIdInfo `json:"protocol"`
+	IdentityProvider *IdpIdInfo `json:"identity_provider"`
+
+	Protocol *ProtocolIdInfo `json:"protocol"`
 	// 用户组信息
+
 	Groups []interface{} `json:"groups"`
 }
 

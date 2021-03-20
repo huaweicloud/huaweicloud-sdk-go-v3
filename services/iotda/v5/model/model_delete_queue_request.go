@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteQueueRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	QueueId    string  `json:"queue_id"`
+
+	QueueId string `json:"queue_id"`
 }
 
 func (o DeleteQueueRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateProductRequest struct {
-	InstanceId *string     `json:"Instance-Id,omitempty"`
-	Body       *AddProduct `json:"body,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	Body *AddProduct `json:"body,omitempty"`
 }
 
 func (o CreateProductRequest) String() string {

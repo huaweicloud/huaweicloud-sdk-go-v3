@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListProductsResponse struct {
 	// 表示按需付费的产品列表。
+
 	Hourly *[]ListProductsRespHourly `json:"Hourly,omitempty"`
 	// 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
+
 	Monthly        *[]ListProductsRespHourly `json:"Monthly,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

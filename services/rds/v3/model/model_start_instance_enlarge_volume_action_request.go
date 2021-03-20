@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type StartInstanceEnlargeVolumeActionRequest struct {
-	XLanguage  *StartInstanceEnlargeVolumeActionRequestXLanguage `json:"X-Language,omitempty"`
-	InstanceId string                                            `json:"instance_id"`
-	Body       *EnlargeVolume                                    `json:"body,omitempty"`
+	XLanguage *StartInstanceEnlargeVolumeActionRequestXLanguage `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *EnlargeVolume `json:"body,omitempty"`
 }
 
 func (o StartInstanceEnlargeVolumeActionRequest) String() string {

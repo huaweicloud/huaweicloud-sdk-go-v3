@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateTopicReplicaRequest struct {
-	InstanceId string           `json:"instance_id"`
-	Topic      string           `json:"topic"`
-	Body       *ResetReplicaReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Topic string `json:"topic"`
+
+	Body *ResetReplicaReq `json:"body,omitempty"`
 }
 
 func (o UpdateTopicReplicaRequest) String() string {

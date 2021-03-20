@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 删除预定义标签请求
 type ReqDeletePredefineTag struct {
 	// 操作标识（区分大小写）：delete（删除）
+
 	Action ReqDeletePredefineTagAction `json:"action"`
 	// 标签列表
+
 	Tags []PredefineTagRequest `json:"tags"`
 }
 

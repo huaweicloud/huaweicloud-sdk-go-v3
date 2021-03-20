@@ -8,8 +8,10 @@ import (
 
 type TrafficSummaryData struct {
 	// 流量，单位为byte。
+
 	Value *int64 `json:"value,omitempty"`
 	// 域名。
+
 	Domain *string `json:"domain,omitempty"`
 }
 

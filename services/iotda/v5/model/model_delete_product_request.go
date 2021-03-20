@@ -9,8 +9,10 @@ import (
 // Request Object
 type DeleteProductRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	ProductId  string  `json:"product_id"`
-	AppId      *string `json:"app_id,omitempty"`
+
+	ProductId string `json:"product_id"`
+
+	AppId *string `json:"app_id,omitempty"`
 }
 
 func (o DeleteProductRequest) String() string {

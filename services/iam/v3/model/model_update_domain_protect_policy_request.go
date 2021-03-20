@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateDomainProtectPolicyRequest struct {
-	DomainId string                                `json:"domain_id"`
-	Body     *UpdateDomainProtectPolicyRequestBody `json:"body,omitempty"`
+	DomainId string `json:"domain_id"`
+
+	Body *UpdateDomainProtectPolicyRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateDomainProtectPolicyRequest) String() string {

@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListOffSiteInstancesRequest struct {
-	ContentType *string                               `json:"Content-Type,omitempty"`
-	XLanguage   *ListOffSiteInstancesRequestXLanguage `json:"X-Language,omitempty"`
+	ContentType *string `json:"Content-Type,omitempty"`
+
+	XLanguage *ListOffSiteInstancesRequestXLanguage `json:"X-Language,omitempty"`
 }
 
 func (o ListOffSiteInstancesRequest) String() string {

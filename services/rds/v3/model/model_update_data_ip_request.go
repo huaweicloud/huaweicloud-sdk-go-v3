@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type UpdateDataIpRequest struct {
-	XLanguage  *UpdateDataIpRequestXLanguage `json:"X-Language,omitempty"`
-	InstanceId string                        `json:"instance_id"`
-	Body       *DataIpRequest                `json:"body,omitempty"`
+	XLanguage *UpdateDataIpRequestXLanguage `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *DataIpRequest `json:"body,omitempty"`
 }
 
 func (o UpdateDataIpRequest) String() string {

@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ChangeFailoverStrategyRequest struct {
-	XLanguage  *ChangeFailoverStrategyRequestXLanguage `json:"X-Language,omitempty"`
-	InstanceId string                                  `json:"instance_id"`
-	Body       *FailoverStrategyRequest                `json:"body,omitempty"`
+	XLanguage *ChangeFailoverStrategyRequestXLanguage `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *FailoverStrategyRequest `json:"body,omitempty"`
 }
 
 func (o ChangeFailoverStrategyRequest) String() string {

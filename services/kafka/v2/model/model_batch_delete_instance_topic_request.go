@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type BatchDeleteInstanceTopicRequest struct {
-	InstanceId string                       `json:"instance_id"`
-	Body       *BatchDeleteInstanceTopicReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *BatchDeleteInstanceTopicReq `json:"body,omitempty"`
 }
 
 func (o BatchDeleteInstanceTopicRequest) String() string {

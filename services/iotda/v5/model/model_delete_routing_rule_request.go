@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteRoutingRuleRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	RuleId     string  `json:"rule_id"`
+
+	RuleId string `json:"rule_id"`
 }
 
 func (o DeleteRoutingRuleRequest) String() string {

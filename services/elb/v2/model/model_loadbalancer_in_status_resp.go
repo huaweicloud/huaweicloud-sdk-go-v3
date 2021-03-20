@@ -2,24 +2,32 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 负载均衡器对象，用于负载均衡器状态树中
 type LoadbalancerInStatusResp struct {
 	// 负载均衡器名称
+
 	Name string `json:"name"`
 	// 负载均衡器ID
+
 	Id string `json:"id"`
 	// 负载均衡器关联的监听器列表
+
 	Listeners []ListenersInStatusResp `json:"listeners"`
 	// 负载均衡器关联的后端云服务器组列表
+
 	Pools []PoolsInStatusResp `json:"pools"`
 	// 负载均衡器的操作状态；该字段为预留字段，暂未启用。默认为ONLINE。
+
 	OperatingStatus LoadbalancerInStatusRespOperatingStatus `json:"operating_status"`
 	// 负载均衡器的配置状态；该字段为预留字段，暂未启用。默认为ACTIVE。
+
 	ProvisioningStatus LoadbalancerInStatusRespProvisioningStatus `json:"provisioning_status"`
 }
 

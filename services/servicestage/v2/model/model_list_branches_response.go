@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListBranchesResponse struct {
 	// 项目分支列表。
+
 	Branches       *[]string `json:"branches,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

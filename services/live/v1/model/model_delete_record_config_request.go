@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type DeleteRecordConfigRequest struct {
-	Domain  string `json:"domain"`
+	Domain string `json:"domain"`
+
 	AppName string `json:"app_name"`
 }
 

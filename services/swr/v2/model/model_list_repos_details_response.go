@@ -8,9 +8,10 @@ import (
 
 // Response Object
 type ListReposDetailsResponse struct {
-	Body           *[]ShowReposResp `json:"body,omitempty"`
-	ContentRange   *string          `json:"Content-Range,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	Body *[]ShowReposResp `json:"body,omitempty"`
+
+	ContentRange   *string `json:"Content-Range,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListReposDetailsResponse) String() string {

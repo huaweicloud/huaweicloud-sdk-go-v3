@@ -8,11 +8,15 @@ import (
 
 // Request Object
 type ListResourcesByTagsRequest struct {
-	InstanceId *string                 `json:"Instance-Id,omitempty"`
-	Limit      *int32                  `json:"limit,omitempty"`
-	Marker     *string                 `json:"marker,omitempty"`
-	Offset     *int32                  `json:"offset,omitempty"`
-	Body       *QueryResourceByTagsDto `json:"body,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Body *QueryResourceByTagsDto `json:"body,omitempty"`
 }
 
 func (o ListResourcesByTagsRequest) String() string {

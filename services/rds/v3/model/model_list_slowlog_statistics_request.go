@@ -2,20 +2,28 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListSlowlogStatisticsRequest struct {
-	XLanguage  *ListSlowlogStatisticsRequestXLanguage `json:"X-Language,omitempty"`
-	InstanceId string                                 `json:"instance_id"`
-	CurPage    int32                                  `json:"cur_page"`
-	PerPage    int32                                  `json:"per_page"`
-	StartDate  string                                 `json:"start_date"`
-	EndDate    string                                 `json:"end_date"`
-	Type       *ListSlowlogStatisticsRequestType      `json:"type,omitempty"`
+	XLanguage *ListSlowlogStatisticsRequestXLanguage `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	CurPage int32 `json:"cur_page"`
+
+	PerPage int32 `json:"per_page"`
+
+	StartDate string `json:"start_date"`
+
+	EndDate string `json:"end_date"`
+
+	Type *ListSlowlogStatisticsRequestType `json:"type,omitempty"`
 }
 
 func (o ListSlowlogStatisticsRequest) String() string {

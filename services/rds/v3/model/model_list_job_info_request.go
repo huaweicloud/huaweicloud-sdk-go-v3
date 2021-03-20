@@ -9,7 +9,8 @@ import (
 // Request Object
 type ListJobInfoRequest struct {
 	XLanguage *string `json:"X-Language,omitempty"`
-	Id        string  `json:"id"`
+
+	Id string `json:"id"`
 }
 
 func (o ListJobInfoRequest) String() string {

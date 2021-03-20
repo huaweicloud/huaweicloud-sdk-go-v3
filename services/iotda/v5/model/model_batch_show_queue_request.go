@@ -9,10 +9,14 @@ import (
 // Request Object
 type BatchShowQueueRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	QueueName  *string `json:"queue_name,omitempty"`
-	Limit      *int32  `json:"limit,omitempty"`
-	Marker     *string `json:"marker,omitempty"`
-	Offset     *int32  `json:"offset,omitempty"`
+
+	QueueName *string `json:"queue_name,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o BatchShowQueueRequest) String() string {

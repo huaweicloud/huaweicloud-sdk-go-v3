@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 //
 type AgencyTokenIdentity struct {
 	// token的获取方式，该字段内容为[\"assume_role\"]。
-	Methods    []AgencyTokenIdentityMethods `json:"methods"`
-	AssumeRole *AgencyTokenAssumerole       `json:"assume_role"`
+
+	Methods []AgencyTokenIdentityMethods `json:"methods"`
+
+	AssumeRole *AgencyTokenAssumerole `json:"assume_role"`
 }
 
 func (o AgencyTokenIdentity) String() string {

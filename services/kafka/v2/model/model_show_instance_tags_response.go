@@ -9,6 +9,7 @@ import (
 // Response Object
 type ShowInstanceTagsResponse struct {
 	// 标签列表
+
 	Tags           *[]CreatePostPaidInstanceReqTags `json:"tags,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }

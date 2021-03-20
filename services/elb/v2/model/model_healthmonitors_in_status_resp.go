@@ -2,20 +2,26 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 健康检查对象，用于状态树中
 type HealthmonitorsInStatusResp struct {
 	// 健康检查ID
+
 	Id string `json:"id"`
 	// 健康检查名称
+
 	Name string `json:"name"`
 	// 健康检查类型
+
 	Type HealthmonitorsInStatusRespType `json:"type"`
 	// 健康检查的配置状态；该字段为预留字段，暂未启用。默认为ACTIVE。
+
 	ProvisioningStatus string `json:"provisioning_status"`
 }
 

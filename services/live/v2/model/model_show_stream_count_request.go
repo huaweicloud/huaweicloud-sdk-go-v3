@@ -9,8 +9,10 @@ import (
 // Request Object
 type ShowStreamCountRequest struct {
 	PublishDomains []string `json:"publish_domains"`
-	StartTime      *string  `json:"start_time,omitempty"`
-	EndTime        *string  `json:"end_time,omitempty"`
+
+	StartTime *string `json:"start_time,omitempty"`
+
+	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o ShowStreamCountRequest) String() string {

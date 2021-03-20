@@ -9,10 +9,13 @@ import (
 //
 type UnbindMfaDevice struct {
 	// 待解绑MFA设备的IAM用户ID。
+
 	UserId string `json:"user_id"`
 	// 验证码。
+
 	AuthenticationCode *string `json:"authentication_code,omitempty"`
 	// MFA设备序列号。
+
 	SerialNumber string `json:"serial_number"`
 }
 

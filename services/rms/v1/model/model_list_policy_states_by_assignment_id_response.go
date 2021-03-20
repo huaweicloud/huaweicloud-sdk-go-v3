@@ -9,9 +9,11 @@ import (
 // Response Object
 type ListPolicyStatesByAssignmentIdResponse struct {
 	// 合规结果查询返回值
-	Value          *[]PolicyState `json:"value,omitempty"`
-	PageInfo       *PageInfo      `json:"page_info,omitempty"`
-	HttpStatusCode int            `json:"-"`
+
+	Value *[]PolicyState `json:"value,omitempty"`
+
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListPolicyStatesByAssignmentIdResponse) String() string {

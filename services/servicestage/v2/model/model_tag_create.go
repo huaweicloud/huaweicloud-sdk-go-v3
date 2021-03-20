@@ -8,8 +8,10 @@ import (
 
 type TagCreate struct {
 	// tag标签名称。
+
 	Name string `json:"name"`
 	// tag标签描述信息。
+
 	Description string `json:"description"`
 }
 

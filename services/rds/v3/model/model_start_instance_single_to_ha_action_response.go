@@ -9,6 +9,7 @@ import (
 // Response Object
 type StartInstanceSingleToHaActionResponse struct {
 	// 任务ID。
+
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

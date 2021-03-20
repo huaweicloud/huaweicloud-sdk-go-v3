@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListRepositoryTagsResponse struct {
 	// 镜像tag列表
+
 	Body           *[]ShowReposTagResp `json:"body,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

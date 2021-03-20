@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ListOffSiteRestoreTimesRequest struct {
-	XLanguage  *string `json:"X-Language,omitempty"`
-	InstanceId string  `json:"instance_id"`
-	Date       *string `json:"date,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Date *string `json:"date,omitempty"`
 }
 
 func (o ListOffSiteRestoreTimesRequest) String() string {

@@ -9,8 +9,10 @@ import (
 // Request Object
 type ShowPartitionEndMessageRequest struct {
 	InstanceId string `json:"instance_id"`
-	Topic      string `json:"topic"`
-	Partition  int32  `json:"partition"`
+
+	Topic string `json:"topic"`
+
+	Partition int32 `json:"partition"`
 }
 
 func (o ShowPartitionEndMessageRequest) String() string {

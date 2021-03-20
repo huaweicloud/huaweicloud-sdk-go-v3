@@ -8,8 +8,10 @@ import (
 
 type UnscopedTokenInfoRoles struct {
 	// role id
+
 	Id *string `json:"id,omitempty"`
 	// name id
+
 	Name *string `json:"name,omitempty"`
 }
 

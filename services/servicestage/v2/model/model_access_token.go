@@ -8,10 +8,13 @@ import (
 
 type AccessToken struct {
 	// 授权名称。
+
 	Name string `json:"name"`
 	// git仓库设置中创建的私有token。
+
 	Token string `json:"token"`
 	// git仓库的主机地址，如https://192.168.1.1:8080/gitlab，默认为官方主机。
+
 	Host *string `json:"host,omitempty"`
 }
 

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateNatGatewayRequest struct {
-	NatGatewayId string                       `json:"nat_gateway_id"`
-	Body         *UpdateNatGatewayRequestBody `json:"body,omitempty"`
+	NatGatewayId string `json:"nat_gateway_id"`
+
+	Body *UpdateNatGatewayRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateNatGatewayRequest) String() string {

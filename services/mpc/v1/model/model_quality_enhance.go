@@ -2,19 +2,25 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type QualityEnhance struct {
 	// 针对一般质量、无明显问题的普通片源，通过增强、锐化等技术明显提升主观效果。单纯该处理操作前后，分辨率、帧率等参数不发生变化。 可和old_repair、super_resolution、super_framerate、SDRToHDR组合使用。
+
 	NormalEnhance *QualityEnhanceNormalEnhance `json:"normal_enhance,omitempty"`
 	// 针对旧片、老片，画质主观质量比较低的片源，通过降噪、去压缩失真等视频增强技术，提升画质主观效果。
+
 	Revive *QualityEnhanceRevive `json:"revive,omitempty"`
 	// 超动态范围，提升视频动态范围，明显提升片源动态范围。单纯该处理操作前后，分辨率、帧率等参数不发生变化，动态范围、色域范围、码率发生变化。 可和normal_ enhance组合使用。 取值范围： - SDRtoHDR10 ：转换模式1，为标准模式 - SDRtoHDRFLAT”：转换模式2，清新模式，基本不改变源片的饱和度，适用于饱和度高的SDR源片转换为HDR
+
 	SdrToHdr *QualityEnhanceSdrToHdr `json:"sdr_to_hdr,omitempty"`
 	// 视频增强模式。取值范围： - REGENERATION - CONVERSION_SDR - CONVERSION_HDR
+
 	VideoEnhance *QualityEnhanceVideoEnhance `json:"video_enhance,omitempty"`
 }
 

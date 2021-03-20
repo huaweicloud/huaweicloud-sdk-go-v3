@@ -2,15 +2,19 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type ResizeInstanceReq struct {
 	// 规格变更后的规格ID。 请参考[查询可扩容规格列表](https://support.huaweicloud.com/api-rabbitmq/ResizeInstance.html)接口返回的数据。
+
 	NewSpecCode ResizeInstanceReqNewSpecCode `json:"new_spec_code"`
 	// 规格变更后的消息存储空间，单位：GB。 请参考[查询可扩容规格列表](https://support.huaweicloud.com/api-rabbitmq/ResizeInstance.html)接口返回的数据。
+
 	NewStorageSpace ResizeInstanceReqNewStorageSpace `json:"new_storage_space"`
 }
 

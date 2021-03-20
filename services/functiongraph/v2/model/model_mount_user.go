@@ -9,8 +9,10 @@ import (
 // 挂载用户信息。
 type MountUser struct {
 	// 用户ID(-1~65534的非0整数)
+
 	UserId string `json:"user_id"`
 	// 用户组ID(-1~65534的非0整数)
+
 	UserGroupId string `json:"user_group_id"`
 }
 

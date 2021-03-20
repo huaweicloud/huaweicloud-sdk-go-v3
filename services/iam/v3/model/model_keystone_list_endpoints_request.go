@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type KeystoneListEndpointsRequest struct {
 	Interface *KeystoneListEndpointsRequestInterface `json:"interface,omitempty"`
-	ServiceId *string                                `json:"service_id,omitempty"`
+
+	ServiceId *string `json:"service_id,omitempty"`
 }
 
 func (o KeystoneListEndpointsRequest) String() string {

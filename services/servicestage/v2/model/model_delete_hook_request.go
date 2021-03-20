@@ -9,9 +9,12 @@ import (
 // Request Object
 type DeleteHookRequest struct {
 	XRepoAuth string `json:"X-Repo-Auth"`
+
 	Namespace string `json:"namespace"`
-	Project   string `json:"project"`
-	HookId    string `json:"hook_id"`
+
+	Project string `json:"project"`
+
+	HookId string `json:"hook_id"`
 }
 
 func (o DeleteHookRequest) String() string {

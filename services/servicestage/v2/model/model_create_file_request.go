@@ -8,12 +8,17 @@ import (
 
 // Request Object
 type CreateFileRequest struct {
-	XRepoAuth string      `json:"X-Repo-Auth"`
-	Namespace string      `json:"namespace"`
-	Project   string      `json:"project"`
-	Path      string      `json:"path"`
-	Ref       string      `json:"ref"`
-	Body      *FileCreate `json:"body,omitempty"`
+	XRepoAuth string `json:"X-Repo-Auth"`
+
+	Namespace string `json:"namespace"`
+
+	Project string `json:"project"`
+
+	Path string `json:"path"`
+
+	Ref string `json:"ref"`
+
+	Body *FileCreate `json:"body,omitempty"`
 }
 
 func (o CreateFileRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ShowOffSiteBackupPolicyRequest struct {
-	XLanguage  *string `json:"X-Language,omitempty"`
-	InstanceId string  `json:"instance_id"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
 }
 
 func (o ShowOffSiteBackupPolicyRequest) String() string {

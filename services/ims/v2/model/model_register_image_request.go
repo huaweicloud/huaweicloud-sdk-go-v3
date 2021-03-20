@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type RegisterImageRequest struct {
-	ImageId string                    `json:"image_id"`
-	Body    *RegisterImageRequestBody `json:"body,omitempty"`
+	ImageId string `json:"image_id"`
+
+	Body *RegisterImageRequestBody `json:"body,omitempty"`
 }
 
 func (o RegisterImageRequest) String() string {

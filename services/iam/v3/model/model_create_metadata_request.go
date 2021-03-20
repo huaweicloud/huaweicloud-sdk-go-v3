@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type CreateMetadataRequest struct {
-	IdpId      string                     `json:"idp_id"`
-	ProtocolId string                     `json:"protocol_id"`
-	Body       *CreateMetadataRequestBody `json:"body,omitempty"`
+	IdpId string `json:"idp_id"`
+
+	ProtocolId string `json:"protocol_id"`
+
+	Body *CreateMetadataRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateMetadataRequest) String() string {

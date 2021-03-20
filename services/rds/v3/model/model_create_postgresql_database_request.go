@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type CreatePostgresqlDatabaseRequest struct {
-	XLanguage  *string                        `json:"X-Language,omitempty"`
-	InstanceId string                         `json:"instance_id"`
-	Body       *PostgresqlDatabaseForCreation `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *PostgresqlDatabaseForCreation `json:"body,omitempty"`
 }
 
 func (o CreatePostgresqlDatabaseRequest) String() string {

@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type CreateAsyncCommandRequest struct {
-	DeviceId   string                     `json:"device_id"`
-	InstanceId *string                    `json:"Instance-Id,omitempty"`
-	Body       *AsyncDeviceCommandRequest `json:"body,omitempty"`
+	DeviceId string `json:"device_id"`
+
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	Body *AsyncDeviceCommandRequest `json:"body,omitempty"`
 }
 
 func (o CreateAsyncCommandRequest) String() string {

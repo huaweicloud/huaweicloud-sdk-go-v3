@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateLoadbalancerRequest struct {
-	LoadbalancerId string                         `json:"loadbalancer_id"`
-	Body           *UpdateLoadbalancerRequestBody `json:"body,omitempty"`
+	LoadbalancerId string `json:"loadbalancer_id"`
+
+	Body *UpdateLoadbalancerRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateLoadbalancerRequest) String() string {

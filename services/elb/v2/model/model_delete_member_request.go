@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type DeleteMemberRequest struct {
-	PoolId   string `json:"pool_id"`
+	PoolId string `json:"pool_id"`
+
 	MemberId string `json:"member_id"`
 }
 

@@ -9,9 +9,12 @@ import (
 //
 type MappingResult struct {
 	// 映射ID。
-	Id    string     `json:"id"`
+
+	Id string `json:"id"`
+
 	Links *LinksSelf `json:"links"`
 	// 将联邦用户映射为本地用户的规则列表。
+
 	Rules []MappingRules `json:"rules"`
 }
 

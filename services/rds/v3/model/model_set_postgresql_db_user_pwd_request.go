@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type SetPostgresqlDbUserPwdRequest struct {
-	XLanguage  *SetPostgresqlDbUserPwdRequestXLanguage `json:"X-Language,omitempty"`
-	InstanceId string                                  `json:"instance_id"`
-	Body       *DbUserPwdRequest                       `json:"body,omitempty"`
+	XLanguage *SetPostgresqlDbUserPwdRequestXLanguage `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *DbUserPwdRequest `json:"body,omitempty"`
 }
 
 func (o SetPostgresqlDbUserPwdRequest) String() string {

@@ -10,20 +10,33 @@ import (
 
 // Request Object
 type ListNatGatewayDnatRulesRequest struct {
-	AdminStateUp        *bool                                   `json:"admin_state_up,omitempty"`
-	ExternalServicePort *int32                                  `json:"external_service_port,omitempty"`
-	FloatingIpAddress   *string                                 `json:"floating_ip_address,omitempty"`
-	Status              *[]ListNatGatewayDnatRulesRequestStatus `json:"status,omitempty"`
-	FloatingIpId        *string                                 `json:"floating_ip_id,omitempty"`
-	InternalServicePort *int32                                  `json:"internal_service_port,omitempty"`
-	Limit               *int32                                  `json:"limit,omitempty"`
-	Id                  *string                                 `json:"id,omitempty"`
-	Description         *string                                 `json:"description,omitempty"`
-	CreatedAt           *sdktime.SdkTime                        `json:"created_at,omitempty"`
-	NatGatewayId        *[]string                               `json:"nat_gateway_id,omitempty"`
-	PortId              *string                                 `json:"port_id,omitempty"`
-	PrivateIp           *string                                 `json:"private_ip,omitempty"`
-	Protocol            *[]string                               `json:"protocol,omitempty"`
+	AdminStateUp *bool `json:"admin_state_up,omitempty"`
+
+	ExternalServicePort *int32 `json:"external_service_port,omitempty"`
+
+	FloatingIpAddress *string `json:"floating_ip_address,omitempty"`
+
+	Status *[]ListNatGatewayDnatRulesRequestStatus `json:"status,omitempty"`
+
+	FloatingIpId *string `json:"floating_ip_id,omitempty"`
+
+	InternalServicePort *int32 `json:"internal_service_port,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Id *string `json:"id,omitempty"`
+
+	Description *string `json:"description,omitempty"`
+
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+
+	NatGatewayId *[]string `json:"nat_gateway_id,omitempty"`
+
+	PortId *string `json:"port_id,omitempty"`
+
+	PrivateIp *string `json:"private_ip,omitempty"`
+
+	Protocol *[]string `json:"protocol,omitempty"`
 }
 
 func (o ListNatGatewayDnatRulesRequest) String() string {

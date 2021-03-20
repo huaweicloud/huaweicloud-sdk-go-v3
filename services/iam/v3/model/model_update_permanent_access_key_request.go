@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdatePermanentAccessKeyRequest struct {
-	AccessKey string                               `json:"access_key"`
-	Body      *UpdatePermanentAccessKeyRequestBody `json:"body,omitempty"`
+	AccessKey string `json:"access_key"`
+
+	Body *UpdatePermanentAccessKeyRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdatePermanentAccessKeyRequest) String() string {

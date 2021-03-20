@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdatePluginsRequest struct {
-	InstanceId string            `json:"instance_id"`
-	Body       *UpdatePluginsReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *UpdatePluginsReq `json:"body,omitempty"`
 }
 
 func (o UpdatePluginsRequest) String() string {

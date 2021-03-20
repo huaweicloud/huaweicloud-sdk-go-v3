@@ -8,10 +8,13 @@ import (
 
 type Project struct {
 	// 项目ID。
+
 	Id string `json:"id"`
 	// 项目名称。
+
 	Name string `json:"name"`
 	// 项目的clone url路径。
+
 	CloneUrl string `json:"clone_url"`
 }
 

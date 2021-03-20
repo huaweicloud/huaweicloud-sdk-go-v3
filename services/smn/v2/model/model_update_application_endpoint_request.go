@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateApplicationEndpointRequest struct {
-	EndpointUrn string                                `json:"endpoint_urn"`
-	Body        *UpdateApplicationEndpointRequestBody `json:"body,omitempty"`
+	EndpointUrn string `json:"endpoint_urn"`
+
+	Body *UpdateApplicationEndpointRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateApplicationEndpointRequest) String() string {

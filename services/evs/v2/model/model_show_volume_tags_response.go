@@ -9,6 +9,7 @@ import (
 // Response Object
 type ShowVolumeTagsResponse struct {
 	// 标签列表。
+
 	Tags           *[]Tag `json:"tags,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

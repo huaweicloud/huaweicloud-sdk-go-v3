@@ -9,8 +9,10 @@ import (
 // Response Object
 type GlanceListImageMembersResponse struct {
 	// 成员信息
+
 	Members *[]GlanceImageMembers `json:"members,omitempty"`
 	// 视图信息
+
 	Schema         *string `json:"schema,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateIterationV4Request struct {
-	ProjectId   string                    `json:"project_id"`
-	IterationId int32                     `json:"iteration_id"`
-	Body        *CreateIterationRequestV4 `json:"body,omitempty"`
+	ProjectId string `json:"project_id"`
+
+	IterationId int32 `json:"iteration_id"`
+
+	Body *CreateIterationRequestV4 `json:"body,omitempty"`
 }
 
 func (o UpdateIterationV4Request) String() string {

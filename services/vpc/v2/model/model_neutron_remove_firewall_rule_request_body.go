@@ -9,6 +9,7 @@ import (
 //
 type NeutronRemoveFirewallRuleRequestBody struct {
 	// 功能说明：待移除的ACL规则ID
+
 	FirewallRuleId string `json:"firewall_rule_id"`
 }
 

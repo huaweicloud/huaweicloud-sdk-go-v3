@@ -9,6 +9,7 @@ import (
 // 生成接入凭证的结构体。
 type CreateAccessCodeRequestBody struct {
 	// 接入凭证类型，默认为AMQP的接入凭证类型。
+
 	Type *string `json:"type,omitempty"`
 }
 

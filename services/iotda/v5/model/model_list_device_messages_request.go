@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type ListDeviceMessagesRequest struct {
-	DeviceId   string  `json:"device_id"`
+	DeviceId string `json:"device_id"`
+
 	InstanceId *string `json:"Instance-Id,omitempty"`
 }
 

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type KeystoneUpdateGroupRequest struct {
-	GroupId string                          `json:"group_id"`
-	Body    *KeystoneUpdateGroupRequestBody `json:"body,omitempty"`
+	GroupId string `json:"group_id"`
+
+	Body *KeystoneUpdateGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o KeystoneUpdateGroupRequest) String() string {

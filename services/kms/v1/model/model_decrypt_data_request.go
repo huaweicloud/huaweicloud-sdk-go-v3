@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type DecryptDataRequest struct {
-	VersionId string                  `json:"version_id"`
-	Body      *DecryptDataRequestBody `json:"body,omitempty"`
+	VersionId string `json:"version_id"`
+
+	Body *DecryptDataRequestBody `json:"body,omitempty"`
 }
 
 func (o DecryptDataRequest) String() string {

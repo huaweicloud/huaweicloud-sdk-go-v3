@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type EnableKeyRequest struct {
-	VersionId string                 `json:"version_id"`
-	Body      *OperateKeyRequestBody `json:"body,omitempty"`
+	VersionId string `json:"version_id"`
+
+	Body *OperateKeyRequestBody `json:"body,omitempty"`
 }
 
 func (o EnableKeyRequest) String() string {

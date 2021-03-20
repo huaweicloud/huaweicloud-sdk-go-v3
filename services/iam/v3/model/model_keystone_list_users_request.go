@@ -8,9 +8,12 @@ import (
 
 // Request Object
 type KeystoneListUsersRequest struct {
-	DomainId          *string `json:"domain_id,omitempty"`
-	Enabled           *bool   `json:"enabled,omitempty"`
-	Name              *string `json:"name,omitempty"`
+	DomainId *string `json:"domain_id,omitempty"`
+
+	Enabled *bool `json:"enabled,omitempty"`
+
+	Name *string `json:"name,omitempty"`
+
 	PasswordExpiresAt *string `json:"password_expires_at,omitempty"`
 }
 

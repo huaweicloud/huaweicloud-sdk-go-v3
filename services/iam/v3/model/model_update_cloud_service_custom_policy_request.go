@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateCloudServiceCustomPolicyRequest struct {
-	RoleId string                                     `json:"role_id"`
-	Body   *UpdateCloudServiceCustomPolicyRequestBody `json:"body,omitempty"`
+	RoleId string `json:"role_id"`
+
+	Body *UpdateCloudServiceCustomPolicyRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateCloudServiceCustomPolicyRequest) String() string {

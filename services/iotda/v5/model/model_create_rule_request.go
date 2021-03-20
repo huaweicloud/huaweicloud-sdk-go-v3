@@ -9,7 +9,8 @@ import (
 // Request Object
 type CreateRuleRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	Body       *Rule   `json:"body,omitempty"`
+
+	Body *Rule `json:"body,omitempty"`
 }
 
 func (o CreateRuleRequest) String() string {

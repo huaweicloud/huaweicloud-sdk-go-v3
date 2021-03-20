@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ResizeVolumeRequest struct {
-	VolumeId string                   `json:"volume_id"`
-	Body     *ResizeVolumeRequestBody `json:"body,omitempty"`
+	VolumeId string `json:"volume_id"`
+
+	Body *ResizeVolumeRequestBody `json:"body,omitempty"`
 }
 
 func (o ResizeVolumeRequest) String() string {

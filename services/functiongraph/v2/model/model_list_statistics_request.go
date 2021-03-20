@@ -2,15 +2,19 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListStatisticsRequest struct {
-	Filter    ListStatisticsRequestFilter    `json:"filter"`
-	Period    *string                        `json:"period,omitempty"`
+	Filter ListStatisticsRequestFilter `json:"filter"`
+
+	Period *string `json:"period,omitempty"`
+
 	MonthCode ListStatisticsRequestMonthCode `json:"month_code"`
 }
 

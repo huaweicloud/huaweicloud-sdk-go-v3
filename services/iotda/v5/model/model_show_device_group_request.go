@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowDeviceGroupRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	GroupId    string  `json:"group_id"`
+
+	GroupId string `json:"group_id"`
 }
 
 func (o ShowDeviceGroupRequest) String() string {

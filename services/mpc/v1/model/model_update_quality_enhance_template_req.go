@@ -8,8 +8,10 @@ import (
 
 type UpdateQualityEnhanceTemplateReq struct {
 	// 模板ID。
-	TemplateId *int32                  `json:"template_id,omitempty"`
-	Template   *QualityEnhanceTemplate `json:"template,omitempty"`
+
+	TemplateId *int32 `json:"template_id,omitempty"`
+
+	Template *QualityEnhanceTemplate `json:"template,omitempty"`
 }
 
 func (o UpdateQualityEnhanceTemplateReq) String() string {

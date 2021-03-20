@@ -8,8 +8,10 @@ import (
 
 // Request Object
 type DeleteTagRequest struct {
-	KeyId     string `json:"key_id"`
-	Key       string `json:"key"`
+	KeyId string `json:"key_id"`
+
+	Key string `json:"key"`
+
 	VersionId string `json:"version_id"`
 }
 

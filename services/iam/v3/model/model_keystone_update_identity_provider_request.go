@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type KeystoneUpdateIdentityProviderRequest struct {
-	Id   string                                     `json:"id"`
+	Id string `json:"id"`
+
 	Body *KeystoneUpdateIdentityProviderRequestBody `json:"body,omitempty"`
 }
 

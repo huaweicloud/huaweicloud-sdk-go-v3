@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type AddQueueRequest struct {
-	InstanceId *string    `json:"Instance-Id,omitempty"`
-	Body       *QueueInfo `json:"body,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	Body *QueueInfo `json:"body,omitempty"`
 }
 
 func (o AddQueueRequest) String() string {

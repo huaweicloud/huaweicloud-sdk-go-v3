@@ -2,33 +2,48 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type TaskDetailInfo struct {
 	// 任务ID。
+
 	TaskId *string `json:"task_id,omitempty"`
 	// 任务执行状态，取值如下。
+
 	Status *TaskDetailInfoStatus `json:"status,omitempty"`
 	// 转码任务启动时间
+
 	CreateTime *string `json:"create_time,omitempty"`
 	// 下发xcode任务成功时间
+
 	StartTime *string `json:"start_time,omitempty"`
 	// 转码任务结束时间
-	EndTime *string     `json:"end_time,omitempty"`
-	Input   *ObsObjInfo `json:"input,omitempty"`
-	Output  *ObsObjInfo `json:"output,omitempty"`
+
+	EndTime *string `json:"end_time,omitempty"`
+
+	Input *ObsObjInfo `json:"input,omitempty"`
+
+	Output *ObsObjInfo `json:"output,omitempty"`
 	// 用户数据。
-	UserData    *string      `json:"user_data,omitempty"`
+
+	UserData *string `json:"user_data,omitempty"`
+
 	AuditReport *AuditReport `json:"audit_report,omitempty"`
 	// 转码任务错误码。
+
 	ErrorCode *string `json:"error_code,omitempty"`
 	// 转码任务描述，当转码出现异常时，此字段为异常的原因。
-	Description *string        `json:"description,omitempty"`
-	MediaDetail *MediaDetail   `json:"media_detail,omitempty"`
-	XcodeError  *ErrorResponse `json:"xcode_error,omitempty"`
+
+	Description *string `json:"description,omitempty"`
+
+	MediaDetail *MediaDetail `json:"media_detail,omitempty"`
+
+	XcodeError *ErrorResponse `json:"xcode_error,omitempty"`
 }
 
 func (o TaskDetailInfo) String() string {

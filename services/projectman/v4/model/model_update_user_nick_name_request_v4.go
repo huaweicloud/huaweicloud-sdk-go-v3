@@ -9,6 +9,7 @@ import (
 // 用户昵称
 type UpdateUserNickNameRequestV4 struct {
 	// 用户昵称
+
 	NickName string `json:"nick_name"`
 }
 

@@ -8,8 +8,10 @@ import (
 
 // Request Object
 type ShowResourceByIdRequest struct {
-	Provider   string `json:"provider"`
-	Type       string `json:"type"`
+	Provider string `json:"provider"`
+
+	Type string `json:"type"`
+
 	ResourceId string `json:"resource_id"`
 }
 

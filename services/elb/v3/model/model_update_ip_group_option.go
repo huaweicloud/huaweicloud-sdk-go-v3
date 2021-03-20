@@ -9,10 +9,13 @@ import (
 //
 type UpdateIpGroupOption struct {
 	// IP地址组的描述信息
+
 	Description *string `json:"description,omitempty"`
 	// IP地址组的名称
+
 	Name *string `json:"name,omitempty"`
 	// IP地址组中包含的ip列表。
+
 	IpList *[]UpadateIpGroupIpOption `json:"ip_list,omitempty"`
 }
 

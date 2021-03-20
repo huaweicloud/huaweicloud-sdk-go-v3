@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ListResourceInstancesRequest struct {
-	ResourceType string                   `json:"resource_type"`
-	Body         *ListInstanceRequestBody `json:"body,omitempty"`
+	ResourceType string `json:"resource_type"`
+
+	Body *ListInstanceRequestBody `json:"body,omitempty"`
 }
 
 func (o ListResourceInstancesRequest) String() string {

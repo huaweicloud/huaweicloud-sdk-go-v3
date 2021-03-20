@@ -9,9 +9,11 @@ import (
 // Response Object
 type ListUsersOfStreamResponse struct {
 	// 域名对应的流量汇总列表。
-	DataList       *[]V2UserData `json:"data_list,omitempty"`
-	XRequestId     *string       `json:"X-request-id,omitempty"`
-	HttpStatusCode int           `json:"-"`
+
+	DataList *[]V2UserData `json:"data_list,omitempty"`
+
+	XRequestId     *string `json:"X-request-id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListUsersOfStreamResponse) String() string {

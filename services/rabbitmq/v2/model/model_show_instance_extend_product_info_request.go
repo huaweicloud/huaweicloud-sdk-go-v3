@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ShowInstanceExtendProductInfoRequest struct {
-	InstanceId string                                     `json:"instance_id"`
-	Type       ShowInstanceExtendProductInfoRequestType   `json:"type"`
-	Engine     ShowInstanceExtendProductInfoRequestEngine `json:"engine"`
+	InstanceId string `json:"instance_id"`
+
+	Type ShowInstanceExtendProductInfoRequestType `json:"type"`
+
+	Engine ShowInstanceExtendProductInfoRequestEngine `json:"engine"`
 }
 
 func (o ShowInstanceExtendProductInfoRequest) String() string {

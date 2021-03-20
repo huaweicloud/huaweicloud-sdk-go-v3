@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateParametersForImportRequest struct {
-	VersionId string                             `json:"version_id"`
-	Body      *GetParametersForImportRequestBody `json:"body,omitempty"`
+	VersionId string `json:"version_id"`
+
+	Body *GetParametersForImportRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateParametersForImportRequest) String() string {

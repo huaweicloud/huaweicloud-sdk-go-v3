@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type GlanceDeleteImageMemberRequest struct {
-	ImageId  string `json:"image_id"`
+	ImageId string `json:"image_id"`
+
 	MemberId string `json:"member_id"`
 }
 

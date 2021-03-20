@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ShowRedirectUrlRequest struct {
 	RepoType ShowRedirectUrlRequestRepoType `json:"repo_type"`
-	Tag      *string                        `json:"tag,omitempty"`
+
+	Tag *string `json:"tag,omitempty"`
 }
 
 func (o ShowRedirectUrlRequest) String() string {

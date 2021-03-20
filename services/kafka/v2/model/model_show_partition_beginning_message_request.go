@@ -9,8 +9,10 @@ import (
 // Request Object
 type ShowPartitionBeginningMessageRequest struct {
 	InstanceId string `json:"instance_id"`
-	Topic      string `json:"topic"`
-	Partition  int32  `json:"partition"`
+
+	Topic string `json:"topic"`
+
+	Partition int32 `json:"partition"`
 }
 
 func (o ShowPartitionBeginningMessageRequest) String() string {

@@ -9,6 +9,7 @@ import (
 // id token信息
 type GetIdTokenIdTokenBody struct {
 	// id_token的值
+
 	Id string `json:"id"`
 }
 

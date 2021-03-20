@@ -10,18 +10,29 @@ import (
 
 // Request Object
 type ListNatGatewaySnatRulesRequest struct {
-	AdminStateUp      *bool                                 `json:"admin_state_up,omitempty"`
-	Cidr              *string                               `json:"cidr,omitempty"`
-	Limit             *int32                                `json:"limit,omitempty"`
-	FloatingIpAddress *string                               `json:"floating_ip_address,omitempty"`
-	FloatingIpId      *string                               `json:"floating_ip_id,omitempty"`
-	Id                *string                               `json:"id,omitempty"`
-	Description       *string                               `json:"description,omitempty"`
-	CreatedAt         *sdktime.SdkTime                      `json:"created_at,omitempty"`
-	NatGatewayId      *[]string                             `json:"nat_gateway_id,omitempty"`
-	NetworkId         *string                               `json:"network_id,omitempty"`
-	SourceType        *int32                                `json:"source_type,omitempty"`
-	Status            *ListNatGatewaySnatRulesRequestStatus `json:"status,omitempty"`
+	AdminStateUp *bool `json:"admin_state_up,omitempty"`
+
+	Cidr *string `json:"cidr,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	FloatingIpAddress *string `json:"floating_ip_address,omitempty"`
+
+	FloatingIpId *string `json:"floating_ip_id,omitempty"`
+
+	Id *string `json:"id,omitempty"`
+
+	Description *string `json:"description,omitempty"`
+
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+
+	NatGatewayId *[]string `json:"nat_gateway_id,omitempty"`
+
+	NetworkId *string `json:"network_id,omitempty"`
+
+	SourceType *int32 `json:"source_type,omitempty"`
+
+	Status *ListNatGatewaySnatRulesRequestStatus `json:"status,omitempty"`
 }
 
 func (o ListNatGatewaySnatRulesRequest) String() string {

@@ -7,7 +7,8 @@ import (
 )
 
 type InstanceAction struct {
-	Action     *InstanceActionType       `json:"action"`
+	Action *InstanceActionType `json:"action"`
+
 	Parameters *InstanceActionParameters `json:"parameters,omitempty"`
 }
 

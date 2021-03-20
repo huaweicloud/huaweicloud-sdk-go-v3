@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 //
 type PwdIdentity struct {
 	// 认证方法，该字段内容为[\"password\"]。
-	Methods  []PwdIdentityMethods `json:"methods"`
-	Password *PwdPassword         `json:"password"`
+
+	Methods []PwdIdentityMethods `json:"methods"`
+
+	Password *PwdPassword `json:"password"`
 }
 
 func (o PwdIdentity) String() string {

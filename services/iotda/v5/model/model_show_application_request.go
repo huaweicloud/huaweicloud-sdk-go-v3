@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowApplicationRequest struct {
 	InstanceId *string `json:"Instance-Id,omitempty"`
-	AppId      string  `json:"app_id"`
+
+	AppId string `json:"app_id"`
 }
 
 func (o ShowApplicationRequest) String() string {

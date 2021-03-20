@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type DeleteNamespacesRequest struct {
 	ContentType DeleteNamespacesRequestContentType `json:"Content-Type"`
-	Namespace   string                             `json:"namespace"`
+
+	Namespace string `json:"namespace"`
 }
 
 func (o DeleteNamespacesRequest) String() string {

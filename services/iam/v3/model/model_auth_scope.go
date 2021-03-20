@@ -8,7 +8,8 @@ import (
 
 //
 type AuthScope struct {
-	Domain  *AuthScopeDomain  `json:"domain,omitempty"`
+	Domain *AuthScopeDomain `json:"domain,omitempty"`
+
 	Project *AuthScopeProject `json:"project,omitempty"`
 }
 

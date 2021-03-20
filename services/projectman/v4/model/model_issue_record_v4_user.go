@@ -9,12 +9,16 @@ import (
 // 工作项操作的用户
 type IssueRecordV4User struct {
 	// 用户数字id
+
 	UserNumId *int32 `json:"user_num_id,omitempty"`
 	// 登录名
+
 	UserName *string `json:"user_name,omitempty"`
 	// 昵称
+
 	NickName *string `json:"nick_name,omitempty"`
 	// 用户32位的uuid
+
 	UserId *string `json:"user_id,omitempty"`
 }
 

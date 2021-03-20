@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type DeleteListenerRequest struct {
-	Cascade    *bool  `json:"cascade,omitempty"`
+	Cascade *bool `json:"cascade,omitempty"`
+
 	ListenerId string `json:"listener_id"`
 }
 

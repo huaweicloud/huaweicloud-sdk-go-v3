@@ -2,21 +2,30 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListRepositoryTagsRequest struct {
 	ContentType ListRepositoryTagsRequestContentType `json:"Content-Type"`
-	Namespace   string                               `json:"namespace"`
-	Repository  string                               `json:"repository"`
-	Offset      *string                              `json:"offset,omitempty"`
-	Limit       *string                              `json:"limit,omitempty"`
-	OrderColumn *string                              `json:"order_column,omitempty"`
-	OrderType   *ListRepositoryTagsRequestOrderType  `json:"order_type,omitempty"`
-	Tag         *string                              `json:"tag,omitempty"`
+
+	Namespace string `json:"namespace"`
+
+	Repository string `json:"repository"`
+
+	Offset *string `json:"offset,omitempty"`
+
+	Limit *string `json:"limit,omitempty"`
+
+	OrderColumn *string `json:"order_column,omitempty"`
+
+	OrderType *ListRepositoryTagsRequestOrderType `json:"order_type,omitempty"`
+
+	Tag *string `json:"tag,omitempty"`
 }
 
 func (o ListRepositoryTagsRequest) String() string {

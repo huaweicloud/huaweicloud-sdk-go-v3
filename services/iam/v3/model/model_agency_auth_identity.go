@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 //
 type AgencyAuthIdentity struct {
 	// 认证方法，该字段内容为[\"assume_role\"]。
-	Methods    []AgencyAuthIdentityMethods `json:"methods"`
-	AssumeRole *IdentityAssumerole         `json:"assume_role"`
-	Policy     *ServicePolicy              `json:"policy,omitempty"`
+
+	Methods []AgencyAuthIdentityMethods `json:"methods"`
+
+	AssumeRole *IdentityAssumerole `json:"assume_role"`
+
+	Policy *ServicePolicy `json:"policy,omitempty"`
 }
 
 func (o AgencyAuthIdentity) String() string {

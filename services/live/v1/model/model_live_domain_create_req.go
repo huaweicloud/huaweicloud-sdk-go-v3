@@ -2,18 +2,24 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type LiveDomainCreateReq struct {
 	// 直播域名
+
 	Domain string `json:"domain"`
 	// 域名类型 - pull表示播放域名 - push表示推流域名
+
 	DomainType LiveDomainCreateReqDomainType `json:"domain_type"`
 	// 直播所属的直播中心
-	Region       string            `json:"region"`
+
+	Region string `json:"region"`
+
 	DomainSource *DomainSourceInfo `json:"domain_source,omitempty"`
 }
 

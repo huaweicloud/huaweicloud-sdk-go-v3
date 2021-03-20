@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateMessageTemplateRequest struct {
-	MessageTemplateId string                            `json:"message_template_id"`
-	Body              *UpdateMessageTemplateRequestBody `json:"body,omitempty"`
+	MessageTemplateId string `json:"message_template_id"`
+
+	Body *UpdateMessageTemplateRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateMessageTemplateRequest) String() string {

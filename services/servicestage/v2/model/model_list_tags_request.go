@@ -9,8 +9,10 @@ import (
 // Request Object
 type ListTagsRequest struct {
 	XRepoAuth string `json:"X-Repo-Auth"`
+
 	Namespace string `json:"namespace"`
-	Project   string `json:"project"`
+
+	Project string `json:"project"`
 }
 
 func (o ListTagsRequest) String() string {

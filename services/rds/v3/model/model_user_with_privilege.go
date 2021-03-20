@@ -9,8 +9,10 @@ import (
 // 用户及其权限。
 type UserWithPrivilege struct {
 	// 用户名。
+
 	Name string `json:"name"`
 	// 是否为只读权限。
+
 	Readonly bool `json:"readonly"`
 }
 

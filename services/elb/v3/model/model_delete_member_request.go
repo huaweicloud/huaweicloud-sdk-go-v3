@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteMemberRequest struct {
 	MemberId string `json:"member_id"`
-	PoolId   string `json:"pool_id"`
+
+	PoolId string `json:"pool_id"`
 }
 
 func (o DeleteMemberRequest) String() string {

@@ -9,6 +9,7 @@ import (
 // 添加时队列结构体。
 type QueueInfo struct {
 	// 队列名称，同一租户不允许重复。
+
 	QueueName string `json:"queue_name"`
 }
 

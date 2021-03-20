@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ShowDomainQuotaRequest struct {
-	DomainId string                      `json:"domain_id"`
-	Type     *ShowDomainQuotaRequestType `json:"type,omitempty"`
+	DomainId string `json:"domain_id"`
+
+	Type *ShowDomainQuotaRequestType `json:"type,omitempty"`
 }
 
 func (o ShowDomainQuotaRequest) String() string {

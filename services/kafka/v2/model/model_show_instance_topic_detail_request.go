@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowInstanceTopicDetailRequest struct {
 	InstanceId string `json:"instance_id"`
-	Topic      string `json:"topic"`
+
+	Topic string `json:"topic"`
 }
 
 func (o ShowInstanceTopicDetailRequest) String() string {

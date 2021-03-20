@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListStorageTypesRequest struct {
-	XLanguage    *string                             `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
 	DatabaseName ListStorageTypesRequestDatabaseName `json:"database_name"`
-	VersionName  string                              `json:"version_name"`
-	HaMode       *ListStorageTypesRequestHaMode      `json:"ha_mode,omitempty"`
+
+	VersionName string `json:"version_name"`
+
+	HaMode *ListStorageTypesRequestHaMode `json:"ha_mode,omitempty"`
 }
 
 func (o ListStorageTypesRequest) String() string {

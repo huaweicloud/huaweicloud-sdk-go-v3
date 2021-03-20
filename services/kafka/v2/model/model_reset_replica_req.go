@@ -9,6 +9,7 @@ import (
 // 期望调整的分区副本分配情况。
 type ResetReplicaReq struct {
 	// 期望调整的分区副本分配情况。
+
 	Partitions *[]ResetReplicaReqPartitions `json:"partitions,omitempty"`
 }
 

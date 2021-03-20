@@ -9,6 +9,7 @@ import (
 // Request Object
 type ListAllProjectsPermissionsForAgencyRequest struct {
 	AgencyId string `json:"agency_id"`
+
 	DomainId string `json:"domain_id"`
 }
 

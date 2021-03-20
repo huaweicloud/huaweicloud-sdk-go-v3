@@ -9,8 +9,10 @@ import (
 //
 type ScopedTokenIdentity struct {
 	// 认证方法，该字段内容为“token”。
-	Methods []string     `json:"methods"`
-	Token   *ScopedToken `json:"token"`
+
+	Methods []string `json:"methods"`
+
+	Token *ScopedToken `json:"token"`
 }
 
 func (o ScopedTokenIdentity) String() string {

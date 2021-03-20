@@ -9,8 +9,10 @@ import (
 // 转发MRS Kafka消息结构
 type MrsKafkaForwarding struct {
 	// 转发kafka消息对应的地址列表
+
 	Addresses []NetAddress `json:"addresses"`
 	// 转发kafka消息关联的topic信息。
+
 	Topic string `json:"topic"`
 }
 

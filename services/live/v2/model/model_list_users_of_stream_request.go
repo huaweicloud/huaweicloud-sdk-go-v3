@@ -2,21 +2,30 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListUsersOfStreamRequest struct {
-	PlayDomain string                            `json:"play_domain"`
-	App        *string                           `json:"app,omitempty"`
-	Stream     *string                           `json:"stream,omitempty"`
-	Isp        *[]string                         `json:"isp,omitempty"`
-	Region     *[]string                         `json:"region,omitempty"`
-	Interval   *ListUsersOfStreamRequestInterval `json:"interval,omitempty"`
-	StartTime  *string                           `json:"start_time,omitempty"`
-	EndTime    *string                           `json:"end_time,omitempty"`
+	PlayDomain string `json:"play_domain"`
+
+	App *string `json:"app,omitempty"`
+
+	Stream *string `json:"stream,omitempty"`
+
+	Isp *[]string `json:"isp,omitempty"`
+
+	Region *[]string `json:"region,omitempty"`
+
+	Interval *ListUsersOfStreamRequestInterval `json:"interval,omitempty"`
+
+	StartTime *string `json:"start_time,omitempty"`
+
+	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o ListUsersOfStreamRequest) String() string {

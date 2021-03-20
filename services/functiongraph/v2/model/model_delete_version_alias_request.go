@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteVersionAliasRequest struct {
 	FunctionUrn string `json:"function_urn"`
-	Name        string `json:"name"`
+
+	Name string `json:"name"`
 }
 
 func (o DeleteVersionAliasRequest) String() string {

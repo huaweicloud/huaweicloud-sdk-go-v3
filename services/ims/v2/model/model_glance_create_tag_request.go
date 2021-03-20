@@ -9,7 +9,8 @@ import (
 // Request Object
 type GlanceCreateTagRequest struct {
 	ImageId string `json:"image_id"`
-	Tag     string `json:"tag"`
+
+	Tag string `json:"tag"`
 }
 
 func (o GlanceCreateTagRequest) String() string {

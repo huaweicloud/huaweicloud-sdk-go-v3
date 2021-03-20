@@ -2,20 +2,28 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListInstanceSnapshotsRequest struct {
-	ApplicationId   string                             `json:"application_id"`
-	ComponentId     string                             `json:"component_id"`
-	InstanceId      string                             `json:"instance_id"`
-	Limit           *int32                             `json:"limit,omitempty"`
-	Offset          *int32                             `json:"offset,omitempty"`
-	SnapshotOrderBy *string                            `json:"snapshot_order_by,omitempty"`
-	Order           *ListInstanceSnapshotsRequestOrder `json:"order,omitempty"`
+	ApplicationId string `json:"application_id"`
+
+	ComponentId string `json:"component_id"`
+
+	InstanceId string `json:"instance_id"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	SnapshotOrderBy *string `json:"snapshot_order_by,omitempty"`
+
+	Order *ListInstanceSnapshotsRequestOrder `json:"order,omitempty"`
 }
 
 func (o ListInstanceSnapshotsRequest) String() string {

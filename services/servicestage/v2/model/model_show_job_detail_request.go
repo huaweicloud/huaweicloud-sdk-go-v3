@@ -8,11 +8,15 @@ import (
 
 // Request Object
 type ShowJobDetailRequest struct {
-	JobId      string  `json:"job_id"`
+	JobId string `json:"job_id"`
+
 	InstanceId *string `json:"instance_id,omitempty"`
-	Limit      *int32  `json:"limit,omitempty"`
-	Offset     *int32  `json:"offset,omitempty"`
-	Desc       *string `json:"desc,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Desc *string `json:"desc,omitempty"`
 }
 
 func (o ShowJobDetailRequest) String() string {

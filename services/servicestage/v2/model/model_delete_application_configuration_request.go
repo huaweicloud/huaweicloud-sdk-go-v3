@@ -9,6 +9,7 @@ import (
 // Request Object
 type DeleteApplicationConfigurationRequest struct {
 	ApplicationId string `json:"application_id"`
+
 	EnvironmentId string `json:"environment_id"`
 }
 

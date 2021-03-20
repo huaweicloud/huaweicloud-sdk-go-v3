@@ -8,8 +8,10 @@ import (
 
 type NamespacesNamespaces struct {
 	// 命名空间ID。
+
 	Id string `json:"id"`
 	// 命名空间名称。
+
 	Name string `json:"name"`
 }
 

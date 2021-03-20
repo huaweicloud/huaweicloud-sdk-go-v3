@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type EnableEnterpriseProjectRequest struct {
-	EnterpriseProjectId string        `json:"enterprise_project_id"`
-	Body                *EnableAction `json:"body,omitempty"`
+	EnterpriseProjectId string `json:"enterprise_project_id"`
+
+	Body *EnableAction `json:"body,omitempty"`
 }
 
 func (o EnableEnterpriseProjectRequest) String() string {

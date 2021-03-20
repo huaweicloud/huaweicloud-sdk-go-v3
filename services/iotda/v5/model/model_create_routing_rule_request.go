@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateRoutingRuleRequest struct {
-	InstanceId *string     `json:"Instance-Id,omitempty"`
-	Body       *AddRuleReq `json:"body,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	Body *AddRuleReq `json:"body,omitempty"`
 }
 
 func (o CreateRoutingRuleRequest) String() string {

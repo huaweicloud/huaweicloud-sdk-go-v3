@@ -9,6 +9,7 @@ import (
 // 修改预定义标签
 type ModifyPrefineTag struct {
 	NewTag *PredefineTagRequest `json:"new_tag"`
+
 	OldTag *PredefineTagRequest `json:"old_tag"`
 }
 

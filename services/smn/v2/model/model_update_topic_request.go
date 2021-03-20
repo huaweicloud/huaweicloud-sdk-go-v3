@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateTopicRequest struct {
-	TopicUrn string                  `json:"topic_urn"`
-	Body     *UpdateTopicRequestBody `json:"body,omitempty"`
+	TopicUrn string `json:"topic_urn"`
+
+	Body *UpdateTopicRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateTopicRequest) String() string {

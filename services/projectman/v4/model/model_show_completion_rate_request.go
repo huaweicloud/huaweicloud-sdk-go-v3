@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ShowCompletionRateRequest struct {
-	ProjectId string          `json:"project_id"`
-	Body      *MetricRequest3 `json:"body,omitempty"`
+	ProjectId string `json:"project_id"`
+
+	Body *MetricRequest3 `json:"body,omitempty"`
 }
 
 func (o ShowCompletionRateRequest) String() string {

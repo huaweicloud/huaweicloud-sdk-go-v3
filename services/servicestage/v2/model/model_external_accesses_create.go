@@ -2,18 +2,23 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 外网访问。
 type ExternalAccessesCreate struct {
 	// 协议，支持http、https。
+
 	Protocol ExternalAccessesCreateProtocol `json:"protocol"`
 	// 访问地址。
+
 	Address string `json:"address"`
 	// 端口号。
+
 	ForwardPort int32 `json:"forward_port"`
 }
 

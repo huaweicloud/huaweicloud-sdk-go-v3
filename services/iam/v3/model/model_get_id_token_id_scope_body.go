@@ -8,7 +8,8 @@ import (
 
 // scope信息
 type GetIdTokenIdScopeBody struct {
-	Domain  *GetIdTokenScopeDomainOrProjectBody `json:"domain,omitempty"`
+	Domain *GetIdTokenScopeDomainOrProjectBody `json:"domain,omitempty"`
+
 	Project *GetIdTokenScopeDomainOrProjectBody `json:"project,omitempty"`
 }
 

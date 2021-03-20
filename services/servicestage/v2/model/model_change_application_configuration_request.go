@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ChangeApplicationConfigurationRequest struct {
-	ApplicationId string                   `json:"application_id"`
-	Body          *ApplicationConfigModify `json:"body,omitempty"`
+	ApplicationId string `json:"application_id"`
+
+	Body *ApplicationConfigModify `json:"body,omitempty"`
 }
 
 func (o ChangeApplicationConfigurationRequest) String() string {

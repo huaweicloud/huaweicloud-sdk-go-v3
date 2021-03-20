@@ -9,6 +9,7 @@ import (
 // Response Object
 type CreateSinkTaskResponse struct {
 	// 任务ID。
+
 	TaskId         *string `json:"task_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

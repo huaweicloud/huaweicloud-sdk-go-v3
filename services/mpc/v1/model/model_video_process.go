@@ -2,18 +2,24 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type VideoProcess struct {
 	// 视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
-	Rotate       *int32        `json:"rotate,omitempty"`
+
+	Rotate *int32 `json:"rotate,omitempty"`
+
 	BlackEnhance *BlackEnhance `json:"black_enhance,omitempty"`
 	// 长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
+
 	Adaptation *VideoProcessAdaptation `json:"adaptation,omitempty"`
 	// 是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
+
 	Upsample *int32 `json:"upsample,omitempty"`
 }
 

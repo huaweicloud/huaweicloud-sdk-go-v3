@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type DeleteIterationV4Request struct {
-	ProjectId   string `json:"project_id"`
-	IterationId int32  `json:"iteration_id"`
+	ProjectId string `json:"project_id"`
+
+	IterationId int32 `json:"iteration_id"`
 }
 
 func (o DeleteIterationV4Request) String() string {

@@ -8,12 +8,17 @@ import (
 
 // Request Object
 type UpdateFileRequest struct {
-	XRepoAuth string      `json:"X-Repo-Auth"`
-	Namespace string      `json:"namespace"`
-	Project   string      `json:"project"`
-	Path      string      `json:"path"`
-	Ref       string      `json:"ref"`
-	Body      *FileUpdate `json:"body,omitempty"`
+	XRepoAuth string `json:"X-Repo-Auth"`
+
+	Namespace string `json:"namespace"`
+
+	Project string `json:"project"`
+
+	Path string `json:"path"`
+
+	Ref string `json:"ref"`
+
+	Body *FileUpdate `json:"body,omitempty"`
 }
 
 func (o UpdateFileRequest) String() string {

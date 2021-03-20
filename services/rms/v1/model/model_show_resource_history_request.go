@@ -2,18 +2,25 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ShowResourceHistoryRequest struct {
-	ResourceId         string                                        `json:"resource_id"`
-	Marker             *string                                       `json:"marker,omitempty"`
-	Limit              *int32                                        `json:"limit,omitempty"`
-	EarlierTime        *int64                                        `json:"earlier_time,omitempty"`
-	LaterTime          *int64                                        `json:"later_time,omitempty"`
+	ResourceId string `json:"resource_id"`
+
+	Marker *string `json:"marker,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	EarlierTime *int64 `json:"earlier_time,omitempty"`
+
+	LaterTime *int64 `json:"later_time,omitempty"`
+
 	ChronologicalOrder *ShowResourceHistoryRequestChronologicalOrder `json:"chronological_order,omitempty"`
 }
 

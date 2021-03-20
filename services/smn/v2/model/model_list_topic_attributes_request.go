@@ -9,7 +9,8 @@ import (
 // Request Object
 type ListTopicAttributesRequest struct {
 	TopicUrn string `json:"topic_urn"`
-	Name     string `json:"name"`
+
+	Name string `json:"name"`
 }
 
 func (o ListTopicAttributesRequest) String() string {

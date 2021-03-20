@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ImportKeyMaterialRequest struct {
-	VersionId string                        `json:"version_id"`
-	Body      *ImportKeyMaterialRequestBody `json:"body,omitempty"`
+	VersionId string `json:"version_id"`
+
+	Body *ImportKeyMaterialRequestBody `json:"body,omitempty"`
 }
 
 func (o ImportKeyMaterialRequest) String() string {

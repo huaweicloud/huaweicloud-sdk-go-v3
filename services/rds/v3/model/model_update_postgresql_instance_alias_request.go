@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdatePostgresqlInstanceAliasRequest struct {
-	XLanguage  *string                        `json:"X-Language,omitempty"`
-	InstanceId string                         `json:"instance_id"`
-	Body       *UpdateRdsInstanceAliasRequest `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *UpdateRdsInstanceAliasRequest `json:"body,omitempty"`
 }
 
 func (o UpdatePostgresqlInstanceAliasRequest) String() string {

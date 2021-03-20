@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type BatchDeleteIterationsV4Request struct {
-	ProjectId string                              `json:"project_id"`
-	Body      *BatchDeleteIterationsV4RequestBody `json:"body,omitempty"`
+	ProjectId string `json:"project_id"`
+
+	Body *BatchDeleteIterationsV4RequestBody `json:"body,omitempty"`
 }
 
 func (o BatchDeleteIterationsV4Request) String() string {

@@ -8,12 +8,17 @@ import (
 
 // Request Object
 type ListAuditlogsRequest struct {
-	XLanguage  *string `json:"X-Language,omitempty"`
-	InstanceId string  `json:"instance_id"`
-	StartTime  string  `json:"start_time"`
-	EndTime    string  `json:"end_time"`
-	Offset     int32   `json:"offset"`
-	Limit      int32   `json:"limit"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	StartTime string `json:"start_time"`
+
+	EndTime string `json:"end_time"`
+
+	Offset int32 `json:"offset"`
+
+	Limit int32 `json:"limit"`
 }
 
 func (o ListAuditlogsRequest) String() string {

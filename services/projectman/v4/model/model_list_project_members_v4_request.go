@@ -9,8 +9,10 @@ import (
 // Request Object
 type ListProjectMembersV4Request struct {
 	ProjectId string `json:"project_id"`
-	Offset    *int32 `json:"offset,omitempty"`
-	Limit     *int32 `json:"limit,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListProjectMembersV4Request) String() string {

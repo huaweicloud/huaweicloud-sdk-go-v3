@@ -9,8 +9,10 @@ import (
 // 跨区域备份实例信息。
 type OffsiteBackupInstance struct {
 	// 偏移量。
+
 	Offset string `json:"offset"`
 	// 查询记录数。
+
 	Limit string `json:"limit"`
 }
 

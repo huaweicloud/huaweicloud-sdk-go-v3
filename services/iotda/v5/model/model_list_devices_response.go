@@ -9,9 +9,11 @@ import (
 // Response Object
 type ListDevicesResponse struct {
 	// 设备信息列表。
-	Devices        *[]QueryDeviceSimplify `json:"devices,omitempty"`
-	Page           *Page                  `json:"page,omitempty"`
-	HttpStatusCode int                    `json:"-"`
+
+	Devices *[]QueryDeviceSimplify `json:"devices,omitempty"`
+
+	Page           *Page `json:"page,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o ListDevicesResponse) String() string {

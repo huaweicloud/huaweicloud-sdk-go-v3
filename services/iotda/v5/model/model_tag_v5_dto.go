@@ -9,8 +9,10 @@ import (
 // 标签结构体。
 type TagV5Dto struct {
 	// 标签键，在同一资源下标签键唯一。
+
 	TagKey string `json:"tag_key"`
 	// 标签值。
+
 	TagValue *string `json:"tag_value,omitempty"`
 }
 

@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type DeleteMfaDeviceRequest struct {
-	UserId       string `json:"user_id"`
+	UserId string `json:"user_id"`
+
 	SerialNumber string `json:"serial_number"`
 }
 

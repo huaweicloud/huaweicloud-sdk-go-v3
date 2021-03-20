@@ -8,6 +8,7 @@ import (
 
 type AuthInfo struct {
 	// Base64加密的认证信息
+
 	Auth string `json:"auth"`
 }
 

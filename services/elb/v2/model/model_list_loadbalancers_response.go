@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListLoadbalancersResponse struct {
 	// 负载均衡器对象列表
+
 	Loadbalancers  *[]LoadbalancerResp `json:"loadbalancers,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

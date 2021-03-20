@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type DeleteTranscodingsTemplateRequest struct {
-	Domain  string `json:"domain"`
+	Domain string `json:"domain"`
+
 	AppName string `json:"app_name"`
 }
 

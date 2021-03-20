@@ -9,6 +9,7 @@ import (
 //
 type ProtocolOption struct {
 	// 映射ID。
+
 	MappingId string `json:"mapping_id"`
 }
 

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateFunctionVersionRequest struct {
-	FunctionUrn string                            `json:"function_urn"`
-	Body        *CreateFunctionVersionRequestBody `json:"body,omitempty"`
+	FunctionUrn string `json:"function_urn"`
+
+	Body *CreateFunctionVersionRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateFunctionVersionRequest) String() string {

@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type BatchTagAddActionRequest struct {
-	XLanguage  *string                       `json:"X-Language,omitempty"`
-	InstanceId string                        `json:"instance_id"`
-	Body       *BatchTagActionAddRequestBody `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	Body *BatchTagActionAddRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchTagAddActionRequest) String() string {

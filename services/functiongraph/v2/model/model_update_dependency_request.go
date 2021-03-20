@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateDependencyRequest struct {
-	DependId string                       `json:"depend_id"`
-	Body     *UpdateDependencyRequestBody `json:"body,omitempty"`
+	DependId string `json:"depend_id"`
+
+	Body *UpdateDependencyRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateDependencyRequest) String() string {

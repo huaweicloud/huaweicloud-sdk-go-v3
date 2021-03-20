@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateTokenWithIdTokenRequest struct {
-	XIdpId string                 `json:"X-Idp-Id"`
-	Body   *GetIdTokenRequestBody `json:"body,omitempty"`
+	XIdpId string `json:"X-Idp-Id"`
+
+	Body *GetIdTokenRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateTokenWithIdTokenRequest) String() string {

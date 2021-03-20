@@ -2,19 +2,25 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type Resources struct {
 	// 函数配额限制。
+
 	Quota *int32 `json:"quota,omitempty"`
 	// 已使用的配额。
+
 	Used *int32 `json:"used,omitempty"`
 	// “资源类型”
+
 	Type *ResourcesType `json:"type,omitempty"`
 	// 资源的计数单位。fgs_func_code_size,单位为MB,其他场景无单位
+
 	Unit *string `json:"unit,omitempty"`
 }
 

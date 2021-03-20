@@ -2,18 +2,24 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListDependenciesRequest struct {
 	DependencyType *ListDependenciesRequestDependencyType `json:"dependency_type,omitempty"`
-	Runtime        *ListDependenciesRequestRuntime        `json:"runtime,omitempty"`
-	Name           *string                                `json:"name,omitempty"`
-	Marker         *string                                `json:"marker,omitempty"`
-	Limit          *string                                `json:"limit,omitempty"`
+
+	Runtime *ListDependenciesRequestRuntime `json:"runtime,omitempty"`
+
+	Name *string `json:"name,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
+
+	Limit *string `json:"limit,omitempty"`
 }
 
 func (o ListDependenciesRequest) String() string {

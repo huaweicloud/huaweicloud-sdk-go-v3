@@ -9,9 +9,12 @@ import (
 // Response Object
 type ChangeApplicationConfigurationResponse struct {
 	// 应用ID。
+
 	ApplicationId *string `json:"application_id,omitempty"`
 	// 环境ID。
-	EnvironmentId  *string                             `json:"environment_id,omitempty"`
+
+	EnvironmentId *string `json:"environment_id,omitempty"`
+
 	Configuration  *ApplicationListConfigConfiguration `json:"configuration,omitempty"`
 	HttpStatusCode int                                 `json:"-"`
 }

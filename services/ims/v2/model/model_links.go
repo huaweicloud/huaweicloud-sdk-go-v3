@@ -9,8 +9,10 @@ import (
 // 视图链接。
 type Links struct {
 	// 域名
+
 	Href string `json:"href"`
 	// 域名描述
+
 	Rel string `json:"rel"`
 }
 

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateVpcRequest struct {
-	VpcId string                `json:"vpc_id"`
-	Body  *UpdateVpcRequestBody `json:"body,omitempty"`
+	VpcId string `json:"vpc_id"`
+
+	Body *UpdateVpcRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateVpcRequest) String() string {

@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type ResetDeviceSecretRequest struct {
-	InstanceId *string            `json:"Instance-Id,omitempty"`
-	DeviceId   string             `json:"device_id"`
-	ActionId   string             `json:"action_id"`
-	Body       *ResetDeviceSecret `json:"body,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	DeviceId string `json:"device_id"`
+
+	ActionId string `json:"action_id"`
+
+	Body *ResetDeviceSecret `json:"body,omitempty"`
 }
 
 func (o ResetDeviceSecretRequest) String() string {

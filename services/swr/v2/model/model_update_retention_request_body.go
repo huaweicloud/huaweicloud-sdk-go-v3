@@ -8,8 +8,10 @@ import (
 
 type UpdateRetentionRequestBody struct {
 	// 算法
+
 	Algorithm string `json:"algorithm"`
 	// 镜像老化规则
+
 	Rules []Rule `json:"rules"`
 }
 

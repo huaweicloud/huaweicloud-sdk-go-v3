@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateBatchTaskRequest struct {
-	InstanceId *string          `json:"Instance-Id,omitempty"`
-	Body       *CreateBatchTask `json:"body,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty"`
+
+	Body *CreateBatchTask `json:"body,omitempty"`
 }
 
 func (o CreateBatchTaskRequest) String() string {

@@ -9,8 +9,10 @@ import (
 // 函数工作流转发配置信息
 type FunctionGraphForwarding struct {
 	// 函数的URN（Uniform Resource Name），唯一标识函数。
+
 	FuncUrn string `json:"func_urn"`
 	// 函数名称。
+
 	FuncName string `json:"func_name"`
 }
 

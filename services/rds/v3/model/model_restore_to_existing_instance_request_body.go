@@ -8,6 +8,7 @@ import (
 
 type RestoreToExistingInstanceRequestBody struct {
 	Source *RestoreToExistingInstanceRequestBodySource `json:"source"`
+
 	Target *RestoreToExistingInstanceRequestBodyTarget `json:"target"`
 }
 
