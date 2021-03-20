@@ -81,12 +81,7 @@ func (s Credentials) ProcessAuthRequest(client *impl.DefaultHttpClient, req *req
 		}
 	}
 
-	r, err := reqBuilder.Build().ConvertRequest()
-	if err != nil {
-		return nil, err
-	}
-
-	headerParams, err := signer.Sign(r, s.AK, s.SK)
+	headerParams, err := signer.Sign(reqBuilder.Build(), s.AK, s.SK)
 	if err != nil {
 		return nil, err
 	}

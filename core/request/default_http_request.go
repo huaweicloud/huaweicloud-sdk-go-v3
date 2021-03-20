@@ -20,23 +20,33 @@
 package request
 
 import (
+	"bufio"
 	"bytes"
 	"encoding/json"
+	"errors"
 	"fmt"
+	"io"
+	"mime/multipart"
 	"net/http"
+	"os"
 	"reflect"
 	"strings"
+
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 )
 
 type DefaultHttpRequest struct {
-	endpoint             string
-	path                 string
-	method               string
-	queryParams          map[string]interface{}
-	pathParams           map[string]string
+	endpoint string
+	path     string
+	method   string
+
+	queryParams  map[string]interface{}
+	pathParams   map[string]string
+	headerParams map[string]string
+	formParams   map[string]def.FormData
+	body         interface{}
+
 	autoFilledPathParams map[string]string
-	headerParams         map[string]string
-	body                 interface{}
 }
 
 func (httpRequest *DefaultHttpRequest) fillParamsInPath() *DefaultHttpRequest {
@@ -78,6 +88,10 @@ func (httpRequest *DefaultHttpRequest) GetPathPrams() map[string]string {
 	return httpRequest.pathParams
 }
 
+func (httpRequest *DefaultHttpRequest) GetFormPrams() map[string]def.FormData {
+	return httpRequest.formParams
+}
+
 func (httpRequest *DefaultHttpRequest) GetBody() interface{} {
 	return httpRequest.body
 }
@@ -116,20 +130,92 @@ func (httpRequest *DefaultHttpRequest) AddHeaderParam(key string, value string) 
 	httpRequest.headerParams[key] = value
 }
 
+func (httpRequest *DefaultHttpRequest) AddFormParam(key string, value def.FormData) {
+	httpRequest.formParams[key] = value
+}
+
 func (httpRequest *DefaultHttpRequest) ConvertRequest() (*http.Request, error) {
-	buf, err := httpRequest.GetBodyToBytes()
-	if err != nil {
-		return nil, err
+	t := reflect.TypeOf(httpRequest.body)
+	if t != nil && t.Kind() == reflect.Ptr {
+		t = t.Elem()
 	}
 
-	req, err := http.NewRequest(httpRequest.GetMethod(), httpRequest.GetEndpoint(), buf)
-	if err != nil {
-		return nil, err
+	var req *http.Request
+	var err error
+	if httpRequest.body != nil && t != nil && t.Name() == "File" {
+		req, err = httpRequest.convertStreamBody(err, req)
+		if err != nil {
+			return nil, err
+		}
+	} else if len(httpRequest.GetFormPrams()) != 0 {
+		req, err = httpRequest.covertFormBody()
+		if err != nil {
+			return nil, err
+		}
+	} else {
+		var buf *bytes.Buffer
+
+		buf, err = httpRequest.GetBodyToBytes()
+		if err != nil {
+			return nil, err
+		}
+
+		req, err = http.NewRequest(httpRequest.GetMethod(), httpRequest.GetEndpoint(), buf)
+		if err != nil {
+			return nil, err
+		}
 	}
 
 	httpRequest.fillPath(req)
 	httpRequest.fillQueryParams(req)
 	httpRequest.fillHeaderParams(req)
+
+	return req, nil
+}
+
+func (httpRequest *DefaultHttpRequest) covertFormBody() (*http.Request, error) {
+	bodyBuffer := &bytes.Buffer{}
+	bodyWriter := multipart.NewWriter(bodyBuffer)
+
+	for k, v := range httpRequest.GetFormPrams() {
+		if err := v.Write(bodyWriter, k); err != nil {
+			return nil, err
+		}
+	}
+
+	contentType := bodyWriter.FormDataContentType()
+	if err := bodyWriter.Close(); err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(httpRequest.GetMethod(), httpRequest.GetEndpoint(), bodyBuffer)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Set("Content-type", contentType)
+	return req, nil
+}
+
+func (httpRequest *DefaultHttpRequest) convertStreamBody(err error, req *http.Request) (*http.Request, error) {
+	bodyBuffer := &bytes.Buffer{}
+
+	if f, ok := httpRequest.body.(os.File); !ok {
+		return nil, errors.New("failed to get stream request body")
+	} else {
+		buf := bufio.NewReader(&f)
+		writer := bufio.NewWriter(bodyBuffer)
+
+		_, err = io.Copy(writer, buf)
+		if err != nil {
+			return nil, err
+		}
+
+		req, err = http.NewRequest(httpRequest.GetMethod(), httpRequest.GetEndpoint(), bodyBuffer)
+		if err != nil {
+			return nil, err
+		}
+	}
 
 	return req, nil
 }
@@ -140,6 +226,9 @@ func (httpRequest *DefaultHttpRequest) fillHeaderParams(req *http.Request) {
 	}
 
 	for key, value := range httpRequest.GetHeaderParams() {
+		if strings.EqualFold(key, "Content-type") && req.Header.Get("Content-type") != "" {
+			continue
+		}
 		req.Header.Add(key, value)
 	}
 }
@@ -179,6 +268,7 @@ func (httpRequest *DefaultHttpRequest) CanonicalStringQueryParams(value reflect.
 
 func (httpRequest *DefaultHttpRequest) CanonicalSliceQueryParamsToMulti(value reflect.Value) []string {
 	params := make([]string, 0)
+
 	for i := 0; i < value.Len(); i++ {
 		if value.Index(i).Kind() == reflect.Struct {
 			v, e := json.Marshal(value.Interface())
@@ -193,6 +283,7 @@ func (httpRequest *DefaultHttpRequest) CanonicalSliceQueryParamsToMulti(value re
 			params = append(params, httpRequest.CanonicalStringQueryParams(value.Index(i)))
 		}
 	}
+
 	return params
 }
 
@@ -254,6 +345,7 @@ func NewHttpRequestBuilder() *HttpRequestBuilder {
 		headerParams:         make(map[string]string),
 		pathParams:           make(map[string]string),
 		autoFilledPathParams: make(map[string]string),
+		formParams:           make(map[string]def.FormData),
 	}
 	httpRequestBuilder := &HttpRequestBuilder{
 		httpRequest: httpRequest,
@@ -296,8 +388,36 @@ func (builder *HttpRequestBuilder) AddHeaderParam(key string, value string) *Htt
 	return builder
 }
 
-func (builder *HttpRequestBuilder) WithBody(body interface{}) *HttpRequestBuilder {
-	builder.httpRequest.body = body
+func (builder *HttpRequestBuilder) AddFormParam(key string, value def.FormData) *HttpRequestBuilder {
+	builder.httpRequest.formParams[key] = value
+	return builder
+}
+
+func (builder *HttpRequestBuilder) WithBody(kind string, body interface{}) *HttpRequestBuilder {
+	if kind == "multipart" {
+		v := reflect.ValueOf(body)
+		if v.Kind() == reflect.Ptr {
+			v = v.Elem()
+		}
+
+		t := reflect.TypeOf(body)
+		if t.Kind() == reflect.Ptr {
+			t = t.Elem()
+		}
+
+		fieldNum := t.NumField()
+		for i := 0; i < fieldNum; i++ {
+			jsonTag := t.Field(i).Tag.Get("json")
+			if jsonTag != "" {
+				builder.AddFormParam(strings.Split(jsonTag, ",")[0], v.FieldByName(t.Field(i).Name).Interface().(def.FormData))
+			} else {
+				builder.AddFormParam(t.Field(i).Name, v.FieldByName(t.Field(i).Name).Interface().(def.FormData))
+			}
+		}
+	} else {
+		builder.httpRequest.body = body
+	}
+
 	return builder
 }
 
