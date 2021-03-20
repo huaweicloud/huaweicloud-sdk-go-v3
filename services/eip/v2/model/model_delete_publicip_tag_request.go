@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeletePublicipTagRequest struct {
 	PublicipId string `json:"publicip_id"`
-	Key        string `json:"key"`
+
+	Key string `json:"key"`
 }
 
 func (o DeletePublicipTagRequest) String() string {

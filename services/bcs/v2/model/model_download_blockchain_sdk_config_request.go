@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type DownloadBlockchainSdkConfigRequest struct {
-	BlockchainId string          `json:"blockchain_id"`
-	Body         *CfgRequestBody `json:"body,omitempty"`
+	BlockchainId string `json:"blockchain_id"`
+
+	Body *CfgRequestBody `json:"body,omitempty"`
 }
 
 func (o DownloadBlockchainSdkConfigRequest) String() string {

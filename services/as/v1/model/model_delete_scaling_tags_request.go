@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type DeleteScalingTagsRequest struct {
 	ResourceType DeleteScalingTagsRequestResourceType `json:"resource_type"`
-	ResourceId   string                               `json:"resource_id"`
-	Body         *DeleteScalingTagsRequestBody        `json:"body,omitempty"`
+
+	ResourceId string `json:"resource_id"`
+
+	Body *DeleteScalingTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o DeleteScalingTagsRequest) String() string {

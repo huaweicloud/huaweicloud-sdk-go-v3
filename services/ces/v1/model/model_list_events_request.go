@@ -2,20 +2,28 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListEventsRequest struct {
-	ContentType string                      `json:"Content-Type"`
-	EventType   *ListEventsRequestEventType `json:"event_type,omitempty"`
-	EventName   *string                     `json:"event_name,omitempty"`
-	From        *int64                      `json:"from,omitempty"`
-	To          *int64                      `json:"to,omitempty"`
-	Start       *int32                      `json:"start,omitempty"`
-	Limit       *int32                      `json:"limit,omitempty"`
+	ContentType string `json:"Content-Type"`
+
+	EventType *ListEventsRequestEventType `json:"event_type,omitempty"`
+
+	EventName *string `json:"event_name,omitempty"`
+
+	From *int64 `json:"from,omitempty"`
+
+	To *int64 `json:"to,omitempty"`
+
+	Start *int32 `json:"start,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListEventsRequest) String() string {

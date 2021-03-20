@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowAlarmRequest struct {
 	ContentType string `json:"Content-Type"`
-	AlarmId     string `json:"alarm_id"`
+
+	AlarmId string `json:"alarm_id"`
 }
 
 func (o ShowAlarmRequest) String() string {

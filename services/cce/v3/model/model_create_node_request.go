@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type CreateNodeRequest struct {
-	ClusterId       string                            `json:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
+
 	NodepoolScaleUp *CreateNodeRequestNodepoolScaleUp `json:"nodepoolScaleUp,omitempty"`
-	Body            *V3NodeCreateRequest              `json:"body,omitempty"`
+
+	Body *V3NodeCreateRequest `json:"body,omitempty"`
 }
 
 func (o CreateNodeRequest) String() string {

@@ -2,28 +2,38 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 查询迁移任务列表
 type MigrationTaskList struct {
 	// 迁移任务ID。
+
 	TaskId *string `json:"task_id,omitempty"`
 	// 迁移任务名称。
+
 	TaskName *string `json:"task_name,omitempty"`
 	// 迁移任务状态，这个字段的值包括：SUCCESS, FAILED, MIGRATING，TERMINATED
+
 	Status *MigrationTaskListStatus `json:"status,omitempty"`
 	// 迁移任务类型,包括备份文件导入和在线迁移两种类型。
+
 	MigrationType *MigrationTaskListMigrationType `json:"migration_type,omitempty"`
 	// 迁移方式，包括全量迁移和增量迁移两种类型。
+
 	MigrationMethod *MigrationTaskListMigrationMethod `json:"migration_method,omitempty"`
 	// 目标实例名称。
+
 	TargetInstanceName *string `json:"target_instance_name,omitempty"`
 	// 数据源，格式为ip:port或者桶名。
+
 	DataSource *string `json:"data_source,omitempty"`
 	// 迁移任务创建时间
+
 	CreatedAt *string `json:"created_at,omitempty"`
 }
 

@@ -8,9 +8,10 @@ import (
 
 // Response Object
 type ListTagResponse struct {
-	Resources      *[]ResourceItem `json:"resources,omitempty"`
-	TotalCount     *int32          `json:"total_count,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	Resources *[]ResourceItem `json:"resources,omitempty"`
+
+	TotalCount     *int32 `json:"total_count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListTagResponse) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateAnAppV2Request struct {
-	InstanceId string  `json:"instance_id"`
-	Body       *AppReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *AppReq `json:"body,omitempty"`
 }
 
 func (o CreateAnAppV2Request) String() string {

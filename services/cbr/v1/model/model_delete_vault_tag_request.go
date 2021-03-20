@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type DeleteVaultTagRequest struct {
-	Key     string `json:"key"`
+	Key string `json:"key"`
+
 	VaultId string `json:"vault_id"`
 }
 

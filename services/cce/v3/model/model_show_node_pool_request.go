@@ -8,8 +8,10 @@ import (
 
 // Request Object
 type ShowNodePoolRequest struct {
-	ClusterId   string  `json:"cluster_id"`
-	NodepoolId  string  `json:"nodepool_id"`
+	ClusterId string `json:"cluster_id"`
+
+	NodepoolId string `json:"nodepool_id"`
+
 	ErrorStatus *string `json:"errorStatus,omitempty"`
 }
 

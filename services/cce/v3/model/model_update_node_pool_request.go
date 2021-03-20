@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type UpdateNodePoolRequest struct {
-	ClusterId   string    `json:"cluster_id"`
-	NodepoolId  string    `json:"nodepool_id"`
-	ErrorStatus *string   `json:"errorStatus,omitempty"`
-	Body        *NodePool `json:"body,omitempty"`
+	ClusterId string `json:"cluster_id"`
+
+	NodepoolId string `json:"nodepool_id"`
+
+	ErrorStatus *string `json:"errorStatus,omitempty"`
+
+	Body *NodePool `json:"body,omitempty"`
 }
 
 func (o UpdateNodePoolRequest) String() string {

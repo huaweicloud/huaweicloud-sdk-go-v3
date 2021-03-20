@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type AssociateSignatureKeyV2Request struct {
-	InstanceId string          `json:"instance_id"`
-	Body       *SignBindingReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *SignBindingReq `json:"body,omitempty"`
 }
 
 func (o AssociateSignatureKeyV2Request) String() string {

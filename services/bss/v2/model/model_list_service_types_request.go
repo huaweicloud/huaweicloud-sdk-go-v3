@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type ListServiceTypesRequest struct {
-	XLanguage       *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
 }
 

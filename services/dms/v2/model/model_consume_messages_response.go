@@ -9,6 +9,7 @@ import (
 // Response Object
 type ConsumeMessagesResponse struct {
 	// 消息数组。
+
 	Body           *[]ConsumeMessage `json:"body,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

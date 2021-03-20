@@ -2,16 +2,21 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type GetCheckpointRequest struct {
-	StreamName     string                             `json:"stream_name"`
-	PartitionId    string                             `json:"partition_id"`
-	AppName        string                             `json:"app_name"`
+	StreamName string `json:"stream_name"`
+
+	PartitionId string `json:"partition_id"`
+
+	AppName string `json:"app_name"`
+
 	CheckpointType GetCheckpointRequestCheckpointType `json:"checkpoint_type"`
 }
 

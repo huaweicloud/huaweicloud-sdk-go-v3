@@ -9,11 +9,15 @@ import (
 
 // Request Object
 type ListScalingActivityLogsRequest struct {
-	ScalingGroupId string           `json:"scaling_group_id"`
-	StartTime      *sdktime.SdkTime `json:"start_time,omitempty"`
-	EndTime        *sdktime.SdkTime `json:"end_time,omitempty"`
-	StartNumber    *int32           `json:"start_number,omitempty"`
-	Limit          *int32           `json:"limit,omitempty"`
+	ScalingGroupId string `json:"scaling_group_id"`
+
+	StartTime *sdktime.SdkTime `json:"start_time,omitempty"`
+
+	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
+
+	StartNumber *int32 `json:"start_number,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListScalingActivityLogsRequest) String() string {

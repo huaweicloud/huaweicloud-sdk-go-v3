@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type RemovePublicipsFromSharedBandwidthRequest struct {
-	BandwidthId string                                         `json:"bandwidth_id"`
-	Body        *RemovePublicipsFromSharedBandwidthRequestBody `json:"body,omitempty"`
+	BandwidthId string `json:"bandwidth_id"`
+
+	Body *RemovePublicipsFromSharedBandwidthRequestBody `json:"body,omitempty"`
 }
 
 func (o RemovePublicipsFromSharedBandwidthRequest) String() string {

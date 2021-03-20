@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type RunOnceRequest struct {
-	JobName string       `json:"job_name"`
-	Body    *StartJobReq `json:"body,omitempty"`
+	JobName string `json:"job_name"`
+
+	Body *StartJobReq `json:"body,omitempty"`
 }
 
 func (o RunOnceRequest) String() string {

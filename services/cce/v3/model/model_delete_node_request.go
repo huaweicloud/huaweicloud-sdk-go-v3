@@ -2,16 +2,21 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type DeleteNodeRequest struct {
-	ClusterId         string                              `json:"cluster_id"`
-	NodeId            string                              `json:"node_id"`
-	ErrorStatus       *string                             `json:"errorStatus,omitempty"`
+	ClusterId string `json:"cluster_id"`
+
+	NodeId string `json:"node_id"`
+
+	ErrorStatus *string `json:"errorStatus,omitempty"`
+
 	NodepoolScaleDown *DeleteNodeRequestNodepoolScaleDown `json:"nodepoolScaleDown,omitempty"`
 }
 

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ListCustomerOnDemandResourcesRequest struct {
-	XLanguage *string                            `json:"X-Language,omitempty"`
-	Body      *QueryCustomerOnDemandResourcesReq `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	Body *QueryCustomerOnDemandResourcesReq `json:"body,omitempty"`
 }
 
 func (o ListCustomerOnDemandResourcesRequest) String() string {

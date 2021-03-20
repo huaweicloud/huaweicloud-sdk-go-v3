@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // This is a auto create Body Object
 type BatchDeleteServerTagsRequestBody struct {
 	// 操作标识（仅支持小写）：delete（删除）。
+
 	Action BatchDeleteServerTagsRequestBodyAction `json:"action"`
 	// 标签列表。
+
 	Tags []ServerTag `json:"tags"`
 }
 

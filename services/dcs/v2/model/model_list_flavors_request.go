@@ -2,19 +2,26 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListFlavorsRequest struct {
-	SpecCode      *string                    `json:"spec_code,omitempty"`
-	CacheMode     *string                    `json:"cache_mode,omitempty"`
-	Engine        *string                    `json:"engine,omitempty"`
-	EngineVersion *string                    `json:"engine_version,omitempty"`
-	CpuType       *ListFlavorsRequestCpuType `json:"cpu_type,omitempty"`
-	Capacity      *string                    `json:"capacity,omitempty"`
+	SpecCode *string `json:"spec_code,omitempty"`
+
+	CacheMode *string `json:"cache_mode,omitempty"`
+
+	Engine *string `json:"engine,omitempty"`
+
+	EngineVersion *string `json:"engine_version,omitempty"`
+
+	CpuType *ListFlavorsRequestCpuType `json:"cpu_type,omitempty"`
+
+	Capacity *string `json:"capacity,omitempty"`
 }
 
 func (o ListFlavorsRequest) String() string {

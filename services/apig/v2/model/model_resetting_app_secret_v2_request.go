@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ResettingAppSecretV2Request struct {
-	InstanceId string        `json:"instance_id"`
-	AppId      string        `json:"app_id"`
-	Body       *AppSecretReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	AppId string `json:"app_id"`
+
+	Body *AppSecretReq `json:"body,omitempty"`
 }
 
 func (o ResettingAppSecretV2Request) String() string {

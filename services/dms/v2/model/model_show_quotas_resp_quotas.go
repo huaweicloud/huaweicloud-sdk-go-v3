@@ -9,6 +9,7 @@ import (
 // 配额信息。
 type ShowQuotasRespQuotas struct {
 	// 配额列表。
+
 	Resources *[]ShowQuotasRespQuotasResources `json:"resources,omitempty"`
 }
 

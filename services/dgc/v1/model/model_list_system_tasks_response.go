@@ -2,22 +2,31 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Response Object
 type ListSystemTasksResponse struct {
-	Id             *string                        `json:"id,omitempty"`
-	Name           *string                        `json:"name,omitempty"`
-	StartTime      *string                        `json:"startTime,omitempty"`
-	EndTime        *string                        `json:"endTime,omitempty"`
-	LastUpdate     *string                        `json:"lastUpdate,omitempty"`
-	Status         *ListSystemTasksResponseStatus `json:"status,omitempty"`
-	Message        *string                        `json:"message,omitempty"`
-	SubTasks       *[]SubTaskStatus               `json:"subTasks,omitempty"`
-	HttpStatusCode int                            `json:"-"`
+	Id *string `json:"id,omitempty"`
+
+	Name *string `json:"name,omitempty"`
+
+	StartTime *string `json:"startTime,omitempty"`
+
+	EndTime *string `json:"endTime,omitempty"`
+
+	LastUpdate *string `json:"lastUpdate,omitempty"`
+
+	Status *ListSystemTasksResponseStatus `json:"status,omitempty"`
+
+	Message *string `json:"message,omitempty"`
+
+	SubTasks       *[]SubTaskStatus `json:"subTasks,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ListSystemTasksResponse) String() string {

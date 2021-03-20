@@ -9,7 +9,8 @@ import (
 // Request Object
 type CancelingAuthorizationV2Request struct {
 	InstanceId string `json:"instance_id"`
-	AppAuthId  string `json:"app_auth_id"`
+
+	AppAuthId string `json:"app_auth_id"`
 }
 
 func (o CancelingAuthorizationV2Request) String() string {

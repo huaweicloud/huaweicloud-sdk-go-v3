@@ -9,6 +9,7 @@ import (
 // Response Object
 type RunCodehubTemplateJobResponse struct {
 	// 任务id
+
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

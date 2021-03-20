@@ -8,14 +8,19 @@ import (
 
 type CustomerBalancesV2 struct {
 	// 客户账号ID。
+
 	CustomerId string `json:"customer_id"`
 	// 客户欠款总额度。
+
 	DebtAmount *float64 `json:"debt_amount,omitempty"`
 	// 客户可用总额度。
+
 	Amount *float64 `json:"amount,omitempty"`
 	// 币种。 CNY：人民币。
+
 	Currency *string `json:"currency,omitempty"`
 	// 度量单位： 1：元
+
 	MeasureId *int32 `json:"measure_id,omitempty"`
 }
 

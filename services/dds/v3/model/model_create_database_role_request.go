@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateDatabaseRoleRequest struct {
-	InstanceId string                         `json:"instance_id"`
-	Body       *CreateDatabaseRoleRequestBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *CreateDatabaseRoleRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateDatabaseRoleRequest) String() string {

@@ -8,6 +8,7 @@ import (
 
 type CouchDbInfo struct {
 	// couchDB用户名称
+
 	User *string `json:"user,omitempty"`
 }
 

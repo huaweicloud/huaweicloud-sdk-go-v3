@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type StartInstanceRequest struct {
-	InstanceId string              `json:"instance_id"`
-	Body       *StartInstanceParam `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *StartInstanceParam `json:"body,omitempty"`
 }
 
 func (o StartInstanceRequest) String() string {

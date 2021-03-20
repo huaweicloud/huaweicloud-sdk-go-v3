@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateVaultTagsRequest struct {
-	VaultId string              `json:"vault_id"`
-	Body    *VaultTagsCreateReq `json:"body,omitempty"`
+	VaultId string `json:"vault_id"`
+
+	Body *VaultTagsCreateReq `json:"body,omitempty"`
 }
 
 func (o CreateVaultTagsRequest) String() string {

@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateRequestThrottlingPolicyV2Request struct {
-	InstanceId string       `json:"instance_id"`
-	ThrottleId string       `json:"throttle_id"`
-	Body       *ThrottleReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	ThrottleId string `json:"throttle_id"`
+
+	Body *ThrottleReq `json:"body,omitempty"`
 }
 
 func (o UpdateRequestThrottlingPolicyV2Request) String() string {

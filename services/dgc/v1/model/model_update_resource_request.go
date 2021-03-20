@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateResourceRequest struct {
-	ResourceId string        `json:"resource_id"`
-	Body       *ResourceInfo `json:"body,omitempty"`
+	ResourceId string `json:"resource_id"`
+
+	Body *ResourceInfo `json:"body,omitempty"`
 }
 
 func (o UpdateResourceRequest) String() string {

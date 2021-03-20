@@ -2,21 +2,30 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type DeleteClusterRequest struct {
-	ClusterId   string                         `json:"cluster_id"`
-	ErrorStatus *string                        `json:"errorStatus,omitempty"`
-	DeleteEfs   *DeleteClusterRequestDeleteEfs `json:"delete_efs,omitempty"`
-	DeleteEni   *DeleteClusterRequestDeleteEni `json:"delete_eni,omitempty"`
-	DeleteEvs   *DeleteClusterRequestDeleteEvs `json:"delete_evs,omitempty"`
-	DeleteNet   *DeleteClusterRequestDeleteNet `json:"delete_net,omitempty"`
-	DeleteObs   *DeleteClusterRequestDeleteObs `json:"delete_obs,omitempty"`
-	DeleteSfs   *DeleteClusterRequestDeleteSfs `json:"delete_sfs,omitempty"`
+	ClusterId string `json:"cluster_id"`
+
+	ErrorStatus *string `json:"errorStatus,omitempty"`
+
+	DeleteEfs *DeleteClusterRequestDeleteEfs `json:"delete_efs,omitempty"`
+
+	DeleteEni *DeleteClusterRequestDeleteEni `json:"delete_eni,omitempty"`
+
+	DeleteEvs *DeleteClusterRequestDeleteEvs `json:"delete_evs,omitempty"`
+
+	DeleteNet *DeleteClusterRequestDeleteNet `json:"delete_net,omitempty"`
+
+	DeleteObs *DeleteClusterRequestDeleteObs `json:"delete_obs,omitempty"`
+
+	DeleteSfs *DeleteClusterRequestDeleteSfs `json:"delete_sfs,omitempty"`
 }
 
 func (o DeleteClusterRequest) String() string {

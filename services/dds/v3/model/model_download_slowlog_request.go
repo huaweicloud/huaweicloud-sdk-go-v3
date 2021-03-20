@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type DownloadSlowlogRequest struct {
-	InstanceId string                      `json:"instance_id"`
-	Body       *DownloadSlowlogRequestBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *DownloadSlowlogRequestBody `json:"body,omitempty"`
 }
 
 func (o DownloadSlowlogRequest) String() string {

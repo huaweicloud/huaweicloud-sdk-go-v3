@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ListEnterpriseOrganizationsRequest struct {
-	RecursiveQuery *int32  `json:"recursive_query,omitempty"`
-	ParentId       *string `json:"parent_id,omitempty"`
+	RecursiveQuery *int32 `json:"recursive_query,omitempty"`
+
+	ParentId *string `json:"parent_id,omitempty"`
 }
 
 func (o ListEnterpriseOrganizationsRequest) String() string {

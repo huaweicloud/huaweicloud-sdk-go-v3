@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ResetPwdOneClickRequest struct {
-	ServerId string             `json:"server_id"`
-	Body     *ResetPasswordBody `json:"body,omitempty"`
+	ServerId string `json:"server_id"`
+
+	Body *ResetPasswordBody `json:"body,omitempty"`
 }
 
 func (o ResetPwdOneClickRequest) String() string {

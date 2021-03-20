@@ -10,6 +10,7 @@ import (
 type ShowInstanceResponse struct {
 	Instance *InstancesVo `json:"instance,omitempty"`
 	// 状态
+
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,6 +8,7 @@ import (
 
 type AddShardingNodeVolumeOption struct {
 	// 指定新增的所有shard组的磁盘容量。取值范围：10GB~2000GB。
+
 	Size string `json:"size"`
 }
 

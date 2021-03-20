@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type AttachInternalIpRequest struct {
-	InstanceId string                       `json:"instance_id"`
-	Body       *AttachInternalIpRequestBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *AttachInternalIpRequestBody `json:"body,omitempty"`
 }
 
 func (o AttachInternalIpRequest) String() string {

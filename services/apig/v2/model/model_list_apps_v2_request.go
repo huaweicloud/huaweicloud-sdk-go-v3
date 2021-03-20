@@ -8,14 +8,22 @@ import (
 
 // Request Object
 type ListAppsV2Request struct {
-	InstanceId    string  `json:"instance_id"`
-	Id            *string `json:"id,omitempty"`
-	Name          *string `json:"name,omitempty"`
-	Status        *int32  `json:"status,omitempty"`
-	AppKey        *string `json:"app_key,omitempty"`
-	Creator       *string `json:"creator,omitempty"`
-	Offset        *int64  `json:"offset,omitempty"`
-	Limit         *int32  `json:"limit,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Id *string `json:"id,omitempty"`
+
+	Name *string `json:"name,omitempty"`
+
+	Status *int32 `json:"status,omitempty"`
+
+	AppKey *string `json:"app_key,omitempty"`
+
+	Creator *string `json:"creator,omitempty"`
+
+	Offset *int64 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
 	PreciseSearch *string `json:"precise_search,omitempty"`
 }
 

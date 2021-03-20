@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ChangeServerOsWithCloudInitRequest struct {
-	ServerId string                                  `json:"server_id"`
-	Body     *ChangeServerOsWithCloudInitRequestBody `json:"body,omitempty"`
+	ServerId string `json:"server_id"`
+
+	Body *ChangeServerOsWithCloudInitRequestBody `json:"body,omitempty"`
 }
 
 func (o ChangeServerOsWithCloudInitRequest) String() string {

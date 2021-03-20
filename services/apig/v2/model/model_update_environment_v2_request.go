@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateEnvironmentV2Request struct {
-	InstanceId string  `json:"instance_id"`
-	EnvId      string  `json:"env_id"`
-	Body       *EnvReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	EnvId string `json:"env_id"`
+
+	Body *EnvReq `json:"body,omitempty"`
 }
 
 func (o UpdateEnvironmentV2Request) String() string {

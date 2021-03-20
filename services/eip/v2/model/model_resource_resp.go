@@ -8,6 +8,7 @@ import (
 
 type ResourceResp struct {
 	// 资源配额对象
+
 	Resources []QuotaShowResp `json:"resources"`
 }
 

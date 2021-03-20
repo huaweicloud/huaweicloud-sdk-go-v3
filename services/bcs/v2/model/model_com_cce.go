@@ -8,8 +8,10 @@ import (
 
 // CCE组件
 type ComCce struct {
-	Cluster       *Detail `json:"cluster,omitempty"`
-	Network       *Detail `json:"network,omitempty"`
+	Cluster *Detail `json:"cluster,omitempty"`
+
+	Network *Detail `json:"network,omitempty"`
+
 	SecurityGroup *Detail `json:"security_group,omitempty"`
 }
 

@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type BatchDisassociateThrottlingPolicyV2Request struct {
-	InstanceId string                      `json:"instance_id"`
-	Action     string                      `json:"action"`
-	Body       *ThrottleBindingBatchDelete `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Action string `json:"action"`
+
+	Body *ThrottleBindingBatchDelete `json:"body,omitempty"`
 }
 
 func (o BatchDisassociateThrottlingPolicyV2Request) String() string {

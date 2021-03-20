@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateResourceGroupRequest struct {
-	ContentType string                          `json:"Content-Type"`
-	GroupId     string                          `json:"group_id"`
-	Body        *UpdateResourceGroupRequestBody `json:"body,omitempty"`
+	ContentType string `json:"Content-Type"`
+
+	GroupId string `json:"group_id"`
+
+	Body *UpdateResourceGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateResourceGroupRequest) String() string {

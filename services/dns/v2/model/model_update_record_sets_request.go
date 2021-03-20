@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateRecordSetsRequest struct {
-	ZoneId      string               `json:"zone_id"`
-	RecordsetId string               `json:"recordset_id"`
-	Body        *UpdateRecordSetsReq `json:"body,omitempty"`
+	ZoneId string `json:"zone_id"`
+
+	RecordsetId string `json:"recordset_id"`
+
+	Body *UpdateRecordSetsReq `json:"body,omitempty"`
 }
 
 func (o UpdateRecordSetsRequest) String() string {

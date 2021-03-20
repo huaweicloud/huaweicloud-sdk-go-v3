@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteApiGroupV2Request struct {
 	InstanceId string `json:"instance_id"`
-	GroupId    string `json:"group_id"`
+
+	GroupId string `json:"group_id"`
 }
 
 func (o DeleteApiGroupV2Request) String() string {

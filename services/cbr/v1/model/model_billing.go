@@ -2,39 +2,55 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type Billing struct {
 	// 已分配容量，单位MB
+
 	Allocated int32 `json:"allocated"`
 	// 创建模式
+
 	ChargingMode BillingChargingMode `json:"charging_mode"`
 	// 云平台
+
 	CloudType *BillingCloudType `json:"cloud_type,omitempty"`
 	// [规格，崩溃一致性（crash_consistent）或应用一致性（app_consistent）](tag:hws,hws_hk,fcs_vm,ctc) [规格，默认为崩溃一致性（crash_consistent）](tag:dt,ocb,tlf,sbc)
+
 	ConsistentLevel string `json:"consistent_level"`
 	// 对象类型
+
 	ObjectType *BillingObjectType `json:"object_type,omitempty"`
 	// 订单ID
+
 	OrderId *string `json:"order_id,omitempty"`
 	// 产品ID
+
 	ProductId *string `json:"product_id,omitempty"`
 	// 保护类型
+
 	ProtectType BillingProtectType `json:"protect_type"`
 	// 容量，单位GB
+
 	Size int32 `json:"size"`
 	// 规格编码
+
 	SpecCode BillingSpecCode `json:"spec_code"`
 	// 保管库状态
+
 	Status BillingStatus `json:"status"`
 	// 存储库桶名
+
 	StorageUnit *string `json:"storage_unit,omitempty"`
 	// 已使用容量，单位MB
+
 	Used int32 `json:"used"`
 	// 冻结场景
+
 	FrozenScene *string `json:"frozen_scene,omitempty"`
 }
 

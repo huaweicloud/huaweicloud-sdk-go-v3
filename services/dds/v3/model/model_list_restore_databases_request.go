@@ -8,11 +8,15 @@ import (
 
 // Request Object
 type ListRestoreDatabasesRequest struct {
-	XLanguage   *string `json:"X-Language,omitempty"`
-	InstanceId  string  `json:"instance_id"`
-	RestoreTime string  `json:"restore_time"`
-	Offset      *int32  `json:"offset,omitempty"`
-	Limit       *int32  `json:"limit,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	RestoreTime string `json:"restore_time"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListRestoreDatabasesRequest) String() string {

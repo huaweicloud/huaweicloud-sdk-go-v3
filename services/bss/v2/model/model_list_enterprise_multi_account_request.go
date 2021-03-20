@@ -9,9 +9,12 @@ import (
 // Request Object
 type ListEnterpriseMultiAccountRequest struct {
 	SubCustomerId string `json:"sub_customer_id"`
-	BalanceType   string `json:"balance_type"`
-	Offset        *int32 `json:"offset,omitempty"`
-	Limit         *int32 `json:"limit,omitempty"`
+
+	BalanceType string `json:"balance_type"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListEnterpriseMultiAccountRequest) String() string {

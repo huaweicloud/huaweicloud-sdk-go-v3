@@ -10,6 +10,7 @@ import (
 type CreateEventsRequest struct {
 	ContentType string `json:"Content-Type"`
 	// 上报自定义事件。请求参数。
+
 	Body *[]EventItem `json:"body,omitempty"`
 }
 

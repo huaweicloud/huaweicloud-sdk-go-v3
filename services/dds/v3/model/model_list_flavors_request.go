@@ -2,14 +2,17 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListFlavorsRequest struct {
-	Region     string                        `json:"region"`
+	Region string `json:"region"`
+
 	EngineName *ListFlavorsRequestEngineName `json:"engine_name,omitempty"`
 }
 

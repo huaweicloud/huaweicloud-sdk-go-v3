@@ -8,12 +8,17 @@ import (
 
 // Request Object
 type ListAlarmTemplatesRequest struct {
-	ContentType     string  `json:"Content-Type"`
+	ContentType string `json:"Content-Type"`
+
 	AlarmTemplateId *string `json:"alarmTemplateId,omitempty"`
-	Namespace       *string `json:"namespace,omitempty"`
-	Dname           *string `json:"dname,omitempty"`
-	Start           *string `json:"start,omitempty"`
-	Limit           *string `json:"limit,omitempty"`
+
+	Namespace *string `json:"namespace,omitempty"`
+
+	Dname *string `json:"dname,omitempty"`
+
+	Start *string `json:"start,omitempty"`
+
+	Limit *string `json:"limit,omitempty"`
 }
 
 func (o ListAlarmTemplatesRequest) String() string {

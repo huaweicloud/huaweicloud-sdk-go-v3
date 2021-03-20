@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListBackupsResponse struct {
 	// 备份列表
+
 	Backups *[]BackupResp `json:"backups,omitempty"`
 	// 备份个数
+
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

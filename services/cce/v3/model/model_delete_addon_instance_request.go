@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type DeleteAddonInstanceRequest struct {
-	Id        string `json:"id"`
+	Id string `json:"id"`
+
 	ClusterId string `json:"cluster_id"`
 }
 

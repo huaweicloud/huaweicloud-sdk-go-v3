@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type RestoreInstanceRequest struct {
-	InstanceId string               `json:"instance_id"`
-	Body       *RestoreInstanceBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *RestoreInstanceBody `json:"body,omitempty"`
 }
 
 func (o RestoreInstanceRequest) String() string {

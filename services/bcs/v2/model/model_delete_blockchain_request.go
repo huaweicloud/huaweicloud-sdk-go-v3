@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type DeleteBlockchainRequest struct {
-	BlockchainId     string `json:"blockchain_id"`
-	IsDeleteStorage  *bool  `json:"is_delete_storage,omitempty"`
-	IsDeleteObs      *bool  `json:"is_delete_obs,omitempty"`
-	IsDeleteResource *bool  `json:"is_delete_resource,omitempty"`
+	BlockchainId string `json:"blockchain_id"`
+
+	IsDeleteStorage *bool `json:"is_delete_storage,omitempty"`
+
+	IsDeleteObs *bool `json:"is_delete_obs,omitempty"`
+
+	IsDeleteResource *bool `json:"is_delete_resource,omitempty"`
 }
 
 func (o DeleteBlockchainRequest) String() string {

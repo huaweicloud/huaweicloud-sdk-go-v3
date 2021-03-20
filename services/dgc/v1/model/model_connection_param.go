@@ -2,15 +2,19 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type ConnectionParam struct {
-	Name           *string                        `json:"name,omitempty"`
+	Name *string `json:"name,omitempty"`
+
 	ConnectionType *ConnectionParamConnectionType `json:"connectionType,omitempty"`
-	Params         *interface{}                   `json:"params,omitempty"`
+
+	Params *interface{} `json:"params,omitempty"`
 }
 
 func (o ConnectionParam) String() string {

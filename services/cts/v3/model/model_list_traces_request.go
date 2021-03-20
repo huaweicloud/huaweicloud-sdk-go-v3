@@ -2,27 +2,42 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListTracesRequest struct {
-	TraceType    ListTracesRequestTraceType    `json:"trace_type"`
-	Limit        *int32                        `json:"limit,omitempty"`
-	From         *int64                        `json:"from,omitempty"`
-	Next         *string                       `json:"next,omitempty"`
-	To           *int64                        `json:"to,omitempty"`
-	TrackerName  *string                       `json:"tracker_name,omitempty"`
-	ServiceType  *string                       `json:"service_type,omitempty"`
-	User         *string                       `json:"user,omitempty"`
-	ResourceId   *string                       `json:"resource_id,omitempty"`
-	ResourceName *string                       `json:"resource_name,omitempty"`
-	ResourceType *string                       `json:"resource_type,omitempty"`
-	TraceId      *string                       `json:"trace_id,omitempty"`
-	TraceName    *string                       `json:"trace_name,omitempty"`
-	TraceRating  *ListTracesRequestTraceRating `json:"trace_rating,omitempty"`
+	TraceType ListTracesRequestTraceType `json:"trace_type"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	From *int64 `json:"from,omitempty"`
+
+	Next *string `json:"next,omitempty"`
+
+	To *int64 `json:"to,omitempty"`
+
+	TrackerName *string `json:"tracker_name,omitempty"`
+
+	ServiceType *string `json:"service_type,omitempty"`
+
+	User *string `json:"user,omitempty"`
+
+	ResourceId *string `json:"resource_id,omitempty"`
+
+	ResourceName *string `json:"resource_name,omitempty"`
+
+	ResourceType *string `json:"resource_type,omitempty"`
+
+	TraceId *string `json:"trace_id,omitempty"`
+
+	TraceName *string `json:"trace_name,omitempty"`
+
+	TraceRating *ListTracesRequestTraceRating `json:"trace_rating,omitempty"`
 }
 
 func (o ListTracesRequest) String() string {

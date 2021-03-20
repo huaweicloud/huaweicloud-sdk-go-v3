@@ -2,15 +2,19 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type Schedule struct {
 	ScheType *ScheduleScheType `json:"scheType,omitempty"`
-	Cron     *Cron             `json:"cron,omitempty"`
-	Event    *Event            `json:"event,omitempty"`
+
+	Cron *Cron `json:"cron,omitempty"`
+
+	Event *Event `json:"event,omitempty"`
 }
 
 func (o Schedule) String() string {

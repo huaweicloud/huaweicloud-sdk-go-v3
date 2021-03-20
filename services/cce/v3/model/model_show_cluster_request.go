@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ShowClusterRequest struct {
-	ClusterId   string  `json:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
+
 	ErrorStatus *string `json:"errorStatus,omitempty"`
-	Detail      *string `json:"detail,omitempty"`
+
+	Detail *string `json:"detail,omitempty"`
 }
 
 func (o ShowClusterRequest) String() string {

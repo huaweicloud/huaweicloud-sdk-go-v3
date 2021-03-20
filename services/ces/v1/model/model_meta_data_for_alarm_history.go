@@ -9,6 +9,7 @@ import (
 // 查询告警历史返回的总条数。
 type MetaDataForAlarmHistory struct {
 	// 查询告警历史返回的总条数。
+
 	Total int32 `json:"total"`
 }
 

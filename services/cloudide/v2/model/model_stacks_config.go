@@ -8,7 +8,8 @@ import (
 
 type StacksConfig struct {
 	Attributes *StacksAttribute `json:"attributes,omitempty"`
-	Recipe     *Recipe          `json:"recipe,omitempty"`
+
+	Recipe *Recipe `json:"recipe,omitempty"`
 }
 
 func (o StacksConfig) String() string {

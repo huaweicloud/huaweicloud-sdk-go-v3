@@ -2,22 +2,29 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Response Object
 type ListConfigurationsResponse struct {
 	// 实例操作时间。格式为：2017-03-31T12:24:46.297Z
+
 	ConfigTime *string `json:"config_time,omitempty"`
 	// 实例ID。
+
 	InstanceId *string `json:"instance_id,omitempty"`
 	// 实例配置项数组。
+
 	RedisConfig *[]QueryRedisConfig `json:"redis_config,omitempty"`
 	// 实例修改状态 - UPDATING - FAILURE - SUCCESS
+
 	ConfigStatus *ListConfigurationsResponseConfigStatus `json:"config_status,omitempty"`
 	// 实例运行状态。
+
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

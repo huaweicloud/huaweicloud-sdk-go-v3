@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type ListServerGroupsRequest struct {
-	Limit  *int32  `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
+
 	Marker *string `json:"marker,omitempty"`
 }
 

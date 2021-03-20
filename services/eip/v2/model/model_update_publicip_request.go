@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdatePublicipRequest struct {
-	PublicipId string                      `json:"publicip_id"`
-	Body       *UpdatePublicipsRequestBody `json:"body,omitempty"`
+	PublicipId string `json:"publicip_id"`
+
+	Body *UpdatePublicipsRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdatePublicipRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type BatchAddPeersToChannelRequest struct {
-	BlockchainId string                             `json:"blockchain_id"`
-	Body         *BatchAddPeersToChannelRequestBody `json:"body,omitempty"`
+	BlockchainId string `json:"blockchain_id"`
+
+	Body *BatchAddPeersToChannelRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchAddPeersToChannelRequest) String() string {

@@ -7,10 +7,13 @@ import (
 )
 
 type Result struct {
-	Message  *string `json:"message,omitempty"`
-	RowCount *int32  `json:"rowCount,omitempty"`
-	Rows     *string `json:"rows,omitempty"`
-	Schema   *string `json:"schema,omitempty"`
+	Message *string `json:"message,omitempty"`
+
+	RowCount *int32 `json:"rowCount,omitempty"`
+
+	Rows *string `json:"rows,omitempty"`
+
+	Schema *string `json:"schema,omitempty"`
 }
 
 func (o Result) String() string {

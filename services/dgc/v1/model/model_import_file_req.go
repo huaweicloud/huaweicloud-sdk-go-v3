@@ -2,19 +2,25 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type ImportFileReq struct {
 	Path *string `json:"path,omitempty"`
 	// 公共作业参数
-	Params         *interface{}                 `json:"params,omitempty"`
+
+	Params *interface{} `json:"params,omitempty"`
+
 	SameNamePolicy *ImportFileReqSameNamePolicy `json:"sameNamePolicy,omitempty"`
 	// 指定作业参数
-	JobsParam   *interface{} `json:"jobsParam,omitempty"`
-	ExecuteUser *string      `json:"executeUser,omitempty"`
+
+	JobsParam *interface{} `json:"jobsParam,omitempty"`
+
+	ExecuteUser *string `json:"executeUser,omitempty"`
 }
 
 func (o ImportFileReq) String() string {

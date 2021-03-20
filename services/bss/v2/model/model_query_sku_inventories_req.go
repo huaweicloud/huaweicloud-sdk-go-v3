@@ -8,6 +8,7 @@ import (
 
 type QuerySkuInventoriesReq struct {
 	// 待查询库存项，参见表1。
+
 	SkuItems []SkuItem `json:"sku_items"`
 }
 

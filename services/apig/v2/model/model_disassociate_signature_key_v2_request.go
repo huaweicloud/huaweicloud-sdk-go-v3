@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type DisassociateSignatureKeyV2Request struct {
-	InstanceId     string `json:"instance_id"`
+	InstanceId string `json:"instance_id"`
+
 	SignBindingsId string `json:"sign_bindings_id"`
 }
 

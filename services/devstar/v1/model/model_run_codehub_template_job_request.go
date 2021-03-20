@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type RunCodehubTemplateJobRequest struct {
 	XLanguage *RunCodehubTemplateJobRequestXLanguage `json:"X-Language,omitempty"`
-	Body      *CodehubJobInfo                        `json:"body,omitempty"`
+
+	Body *CodehubJobInfo `json:"body,omitempty"`
 }
 
 func (o RunCodehubTemplateJobRequest) String() string {

@@ -8,13 +8,19 @@ import (
 
 // Request Object
 type ConsumeMessagesRequest struct {
-	QueueId         string  `json:"queue_id"`
-	ConsumerGroupId string  `json:"consumer_group_id"`
-	MaxMsgs         *int32  `json:"max_msgs,omitempty"`
-	TimeWait        *int32  `json:"time_wait,omitempty"`
-	AckWait         *int32  `json:"ack_wait,omitempty"`
-	Tag             *string `json:"tag,omitempty"`
-	TagType         *string `json:"tag_type,omitempty"`
+	QueueId string `json:"queue_id"`
+
+	ConsumerGroupId string `json:"consumer_group_id"`
+
+	MaxMsgs *int32 `json:"max_msgs,omitempty"`
+
+	TimeWait *int32 `json:"time_wait,omitempty"`
+
+	AckWait *int32 `json:"ack_wait,omitempty"`
+
+	Tag *string `json:"tag,omitempty"`
+
+	TagType *string `json:"tag_type,omitempty"`
 }
 
 func (o ConsumeMessagesRequest) String() string {

@@ -8,8 +8,10 @@ import (
 
 type ProtectableReplicationCapabilitiesRespRegion struct {
 	// 云服务所在的区域
+
 	Name string `json:"name"`
 	// 支持复制的目标区域列表
+
 	ReplicationDestinations []string `json:"replication_destinations"`
 }
 

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type AddPublicipsIntoSharedBandwidthRequest struct {
-	BandwidthId string                                      `json:"bandwidth_id"`
-	Body        *AddPublicipsIntoSharedBandwidthRequestBody `json:"body,omitempty"`
+	BandwidthId string `json:"bandwidth_id"`
+
+	Body *AddPublicipsIntoSharedBandwidthRequestBody `json:"body,omitempty"`
 }
 
 func (o AddPublicipsIntoSharedBandwidthRequest) String() string {

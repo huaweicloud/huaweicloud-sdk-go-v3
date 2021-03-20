@@ -8,6 +8,7 @@ import (
 
 type RestoreInstanceFromCollectionRequestBody struct {
 	// 数据库信息。
+
 	RestoreCollections []RestoreInstanceFromCollectionRequestBodyRestoreCollections `json:"restore_collections"`
 }
 

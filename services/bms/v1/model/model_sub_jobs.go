@@ -11,23 +11,33 @@ import (
 // sub_jobs字段数据结构说明
 type SubJobs struct {
 	// Job的状态。SUCCESS：成功RUNNING：运行中FAIL：失败INIT：正在初始化
-	Status   *SubJobsStatus `json:"status,omitempty"`
-	Entities *Entitie       `json:"entities,omitempty"`
+
+	Status *SubJobsStatus `json:"status,omitempty"`
+
+	Entities *Entitie `json:"entities,omitempty"`
 	// Job ID
+
 	JobId *string `json:"job_id,omitempty"`
 	// Job的类型，包含以下类型：baremetalSingleCreate：创建单个裸金属服务器；baremetalSingleOperate：修改单个裸金属服务器电源状态；baremetalAttachSingleVolume：挂载单个共享磁盘
+
 	JobType *string `json:"job_type,omitempty"`
 	// 开始时间。时间戳格式为ISO 8601，例如：2019-04-25T20:04:47.591Z
+
 	BeginTime *sdktime.SdkTime `json:"begin_time,omitempty"`
 	// 结束时间。时间戳格式为ISO 8601，例如：2019-04-26T20:04:47.591Z
+
 	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
 	// Job执行失败时的错误码
+
 	ErrorCode *string `json:"error_code,omitempty"`
 	// Job执行失败时的错误原因
+
 	FailReason *string `json:"fail_reason,omitempty"`
 	// 出现错误时，返回的错误消息
+
 	Message *string `json:"message,omitempty"`
 	// 出现错误时，返回的错误码
+
 	Code *string `json:"code,omitempty"`
 }
 

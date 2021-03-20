@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type ListAlarmsRequest struct {
-	ContentType string  `json:"Content-Type"`
-	Limit       *int32  `json:"limit,omitempty"`
-	Order       *string `json:"order,omitempty"`
-	Start       *string `json:"start,omitempty"`
+	ContentType string `json:"Content-Type"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Order *string `json:"order,omitempty"`
+
+	Start *string `json:"start,omitempty"`
 }
 
 func (o ListAlarmsRequest) String() string {

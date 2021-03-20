@@ -9,6 +9,7 @@ import (
 // Request Object
 type ShowDetailsOfRequestThrottlingPolicyV2Request struct {
 	InstanceId string `json:"instance_id"`
+
 	ThrottleId string `json:"throttle_id"`
 }
 

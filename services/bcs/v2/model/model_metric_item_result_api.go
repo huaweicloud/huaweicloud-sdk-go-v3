@@ -10,6 +10,7 @@ import (
 type MetricItemResultApi struct {
 	Metric *MetricDemision `json:"metric,omitempty"`
 	// 监控数据信息
+
 	DataPoints *[]MetricDataPoints `json:"dataPoints,omitempty"`
 }
 

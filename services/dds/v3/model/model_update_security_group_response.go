@@ -9,8 +9,10 @@ import (
 // Response Object
 type UpdateSecurityGroupResponse struct {
 	// 任务ID。
+
 	JobId *string `json:"job_id,omitempty"`
 	// 实例当前安全组。
+
 	SecurityGroupId *string `json:"security_group_id,omitempty"`
 	HttpStatusCode  int     `json:"-"`
 }

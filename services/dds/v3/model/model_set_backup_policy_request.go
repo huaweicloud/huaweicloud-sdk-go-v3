@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type SetBackupPolicyRequest struct {
-	InstanceId string                      `json:"instance_id"`
-	Body       *SetBackupPolicyRequestBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *SetBackupPolicyRequestBody `json:"body,omitempty"`
 }
 
 func (o SetBackupPolicyRequest) String() string {

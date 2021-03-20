@@ -8,10 +8,13 @@ import (
 
 type DmsKafkaInfo struct {
 	// Kafka连接地址
+
 	Addr *[]string `json:"addr,omitempty"`
 	// Kafka模式下，是否开启共识节点老化
+
 	OrderFadeEnable *bool `json:"order_fade_enable,omitempty"`
 	// Kafka模式下，开启共识节点后的老化阈值
+
 	OrderFadeCache *int32 `json:"order_fade_cache,omitempty"`
 }
 

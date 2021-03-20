@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type CreateCloudPersistentVolumeClaimsRequest struct {
-	Namespace  string                 `json:"namespace"`
-	XClusterID *string                `json:"X-Cluster-ID,omitempty"`
-	Body       *PersistentVolumeClaim `json:"body,omitempty"`
+	Namespace string `json:"namespace"`
+
+	XClusterID *string `json:"X-Cluster-ID,omitempty"`
+
+	Body *PersistentVolumeClaim `json:"body,omitempty"`
 }
 
 func (o CreateCloudPersistentVolumeClaimsRequest) String() string {

@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type ListStreamsRequest struct {
-	Limit           *int32  `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
+
 	StartStreamName *string `json:"start_stream_name,omitempty"`
 }
 

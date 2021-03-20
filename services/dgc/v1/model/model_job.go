@@ -7,8 +7,10 @@ import (
 )
 
 type Job struct {
-	Name   *string      `json:"name,omitempty"`
-	Path   *string      `json:"path,omitempty"`
+	Name *string `json:"name,omitempty"`
+
+	Path *string `json:"path,omitempty"`
+
 	Params *interface{} `json:"params,omitempty"`
 }
 

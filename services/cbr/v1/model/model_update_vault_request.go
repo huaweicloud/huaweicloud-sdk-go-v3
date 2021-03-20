@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateVaultRequest struct {
-	VaultId string          `json:"vault_id"`
-	Body    *VaultUpdateReq `json:"body,omitempty"`
+	VaultId string `json:"vault_id"`
+
+	Body *VaultUpdateReq `json:"body,omitempty"`
 }
 
 func (o UpdateVaultRequest) String() string {

@@ -11,18 +11,25 @@ import (
 // Response Object
 type CreateSignatureKeyV2Response struct {
 	// 签名密钥的密钥
+
 	SignSecret *string `json:"sign_secret,omitempty"`
 	// 更新时间
+
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 	// 创建时间
+
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 	// 签名密钥的名称
+
 	Name *string `json:"name,omitempty"`
 	// 签名密钥的编号
+
 	Id *string `json:"id,omitempty"`
 	// 签名密钥的key
+
 	SignKey *string `json:"sign_key,omitempty"`
 	// 签名密钥类型。
+
 	SignType       *CreateSignatureKeyV2ResponseSignType `json:"sign_type,omitempty"`
 	HttpStatusCode int                                   `json:"-"`
 }

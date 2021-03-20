@@ -2,14 +2,17 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type DeleteScalingInstanceRequest struct {
-	InstanceId     string                                      `json:"instance_id"`
+	InstanceId string `json:"instance_id"`
+
 	InstanceDelete *DeleteScalingInstanceRequestInstanceDelete `json:"instance_delete,omitempty"`
 }
 

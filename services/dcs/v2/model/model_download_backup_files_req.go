@@ -8,6 +8,7 @@ import (
 
 type DownloadBackupFilesReq struct {
 	// 设置URL的有效期，必须在5分钟和24小时之内，单位为秒。
+
 	Expiration int32 `json:"expiration"`
 }
 

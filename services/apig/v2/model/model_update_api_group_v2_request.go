@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateApiGroupV2Request struct {
-	InstanceId string       `json:"instance_id"`
-	GroupId    string       `json:"group_id"`
-	Body       *ApiGroupReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	GroupId string `json:"group_id"`
+
+	Body *ApiGroupReq `json:"body,omitempty"`
 }
 
 func (o UpdateApiGroupV2Request) String() string {

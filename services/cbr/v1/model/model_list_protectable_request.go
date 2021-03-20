@@ -2,21 +2,30 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListProtectableRequest struct {
-	Limit           *int32                                `json:"limit,omitempty"`
-	Marker          *string                               `json:"marker,omitempty"`
-	Name            *string                               `json:"name,omitempty"`
-	Offset          *int32                                `json:"offset,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
+
+	Name *string `json:"name,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
 	ProtectableType ListProtectableRequestProtectableType `json:"protectable_type"`
-	Status          *string                               `json:"status,omitempty"`
-	Id              *string                               `json:"id,omitempty"`
-	ServerId        *string                               `json:"server_id,omitempty"`
+
+	Status *string `json:"status,omitempty"`
+
+	Id *string `json:"id,omitempty"`
+
+	ServerId *string `json:"server_id,omitempty"`
 }
 
 func (o ListProtectableRequest) String() string {

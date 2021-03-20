@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ResetPasswordRequest struct {
-	InstanceId string                    `json:"instance_id"`
-	Body       *ResetPasswordRequestBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *ResetPasswordRequestBody `json:"body,omitempty"`
 }
 
 func (o ResetPasswordRequest) String() string {

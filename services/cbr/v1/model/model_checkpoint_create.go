@@ -2,21 +2,29 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type CheckpointCreate struct {
 	// 创建时间，例如:\"2020-02-05T10:38:34.209782\"
+
 	CreatedAt string `json:"created_at"`
 	// 还原点ID
+
 	Id string `json:"id"`
 	// 项目ID
+
 	ProjectId string `json:"project_id"`
 	// 状态
-	Status    CheckpointCreateStatus   `json:"status"`
-	Vault     *CheckpointPlanCreate    `json:"vault,omitempty"`
+
+	Status CheckpointCreateStatus `json:"status"`
+
+	Vault *CheckpointPlanCreate `json:"vault,omitempty"`
+
 	ExtraInfo *CheckpointExtraInfoResp `json:"extra_info,omitempty"`
 }
 

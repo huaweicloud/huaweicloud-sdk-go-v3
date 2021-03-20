@@ -8,6 +8,7 @@ import (
 
 type DeleteSessionRequestBody struct {
 	// 需要终结的会话ID列表。
+
 	Sessions []string `json:"sessions"`
 }
 

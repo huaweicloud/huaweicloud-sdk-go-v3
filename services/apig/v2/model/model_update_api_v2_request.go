@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateApiV2Request struct {
-	InstanceId string     `json:"instance_id"`
-	ApiId      string     `json:"api_id"`
-	Body       *ApiCreate `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	ApiId string `json:"api_id"`
+
+	Body *ApiCreate `json:"body,omitempty"`
 }
 
 func (o UpdateApiV2Request) String() string {

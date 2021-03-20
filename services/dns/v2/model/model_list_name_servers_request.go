@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type ListNameServersRequest struct {
-	Type   *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty"`
+
 	Region *string `json:"region,omitempty"`
 }
 

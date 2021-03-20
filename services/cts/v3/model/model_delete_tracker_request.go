@@ -2,14 +2,17 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type DeleteTrackerRequest struct {
-	TrackerName *string                          `json:"tracker_name,omitempty"`
+	TrackerName *string `json:"tracker_name,omitempty"`
+
 	TrackerType *DeleteTrackerRequestTrackerType `json:"tracker_type,omitempty"`
 }
 

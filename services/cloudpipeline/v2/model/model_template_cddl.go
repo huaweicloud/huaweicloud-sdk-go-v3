@@ -10,8 +10,10 @@ import (
 type TemplateCddl struct {
 	Flow *FlowItem `json:"flow"`
 	// 子任务states，map类型数据
-	States   map[string]TemplateState `json:"states"`
-	Workflow *Workflow                `json:"workflow"`
+
+	States map[string]TemplateState `json:"states"`
+
+	Workflow *Workflow `json:"workflow"`
 }
 
 func (o TemplateCddl) String() string {

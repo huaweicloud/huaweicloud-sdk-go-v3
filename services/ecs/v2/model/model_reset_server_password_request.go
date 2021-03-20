@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ResetServerPasswordRequest struct {
-	ServerId string                          `json:"server_id"`
-	Body     *ResetServerPasswordRequestBody `json:"body,omitempty"`
+	ServerId string `json:"server_id"`
+
+	Body *ResetServerPasswordRequestBody `json:"body,omitempty"`
 }
 
 func (o ResetServerPasswordRequest) String() string {

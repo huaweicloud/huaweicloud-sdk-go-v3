@@ -9,6 +9,7 @@ import (
 // Response Object
 type RemoveVaultResourceResponse struct {
 	// 移除的资源ID
+
 	RemoveResourceIds *[]string `json:"remove_resource_ids,omitempty"`
 	HttpStatusCode    int       `json:"-"`
 }

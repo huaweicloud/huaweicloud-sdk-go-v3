@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type DetachBaremetalServerVolumeRequest struct {
-	ServerId     string `json:"server_id"`
+	ServerId string `json:"server_id"`
+
 	AttachmentId string `json:"attachment_id"`
 }
 

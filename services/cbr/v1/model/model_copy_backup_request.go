@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CopyBackupRequest struct {
-	BackupId string              `json:"backup_id"`
-	Body     *BackupReplicateReq `json:"body,omitempty"`
+	BackupId string `json:"backup_id"`
+
+	Body *BackupReplicateReq `json:"body,omitempty"`
 }
 
 func (o CopyBackupRequest) String() string {

@@ -8,6 +8,7 @@ import (
 
 type RestorePtrReq struct {
 	// PTR记录对应的域名。  此处值为null。
+
 	Ptrdname string `json:"ptrdname"`
 }
 

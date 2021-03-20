@@ -9,6 +9,7 @@ import (
 // Response Object
 type ReclaimToPartnerAccountResponse struct {
 	// 事务流水ID，只有成功响应才会返回。
+
 	TransId        *string `json:"trans_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

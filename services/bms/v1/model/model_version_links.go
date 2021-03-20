@@ -9,8 +9,10 @@ import (
 // API的url地址
 type VersionLinks struct {
 	// API的url地址
+
 	Href *string `json:"href,omitempty"`
 	// API的url地址依赖
+
 	Rel *string `json:"rel,omitempty"`
 }
 

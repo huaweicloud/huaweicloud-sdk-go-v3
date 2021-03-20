@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ReinstallBaremetalServerOsRequest struct {
-	ServerId string           `json:"server_id"`
-	Body     *OsReinstallBody `json:"body,omitempty"`
+	ServerId string `json:"server_id"`
+
+	Body *OsReinstallBody `json:"body,omitempty"`
 }
 
 func (o ReinstallBaremetalServerOsRequest) String() string {

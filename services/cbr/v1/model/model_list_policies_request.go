@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListPoliciesRequest struct {
 	OperationType *ListPoliciesRequestOperationType `json:"operation_type,omitempty"`
-	VaultId       *string                           `json:"vault_id,omitempty"`
+
+	VaultId *string `json:"vault_id,omitempty"`
 }
 
 func (o ListPoliciesRequest) String() string {

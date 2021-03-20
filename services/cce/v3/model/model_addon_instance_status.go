@@ -2,8 +2,10 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -11,12 +13,16 @@ import (
 type AddonInstanceStatus struct {
 	CurrentVersion *Versions `json:"currentVersion"`
 	// 安装错误详情
+
 	Message string `json:"message"`
 	// 插件安装失败原因
+
 	Reason string `json:"reason"`
 	// 插件实例状态
+
 	Status AddonInstanceStatusStatus `json:"status"`
 	// 此插件版本，支持升级的集群版本
+
 	TargetVersions *[]string `json:"targetVersions,omitempty"`
 }
 

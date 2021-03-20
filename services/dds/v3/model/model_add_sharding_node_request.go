@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type AddShardingNodeRequest struct {
-	InstanceId string                      `json:"instance_id"`
-	Body       *EnlargeInstanceRequestBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *EnlargeInstanceRequestBody `json:"body,omitempty"`
 }
 
 func (o AddShardingNodeRequest) String() string {

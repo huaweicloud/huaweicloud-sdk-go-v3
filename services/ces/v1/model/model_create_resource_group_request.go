@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateResourceGroupRequest struct {
-	ContentType string                          `json:"Content-Type"`
-	Body        *CreateResourceGroupRequestBody `json:"body,omitempty"`
+	ContentType string `json:"Content-Type"`
+
+	Body *CreateResourceGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateResourceGroupRequest) String() string {

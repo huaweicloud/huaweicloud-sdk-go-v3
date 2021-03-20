@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type BatchDeletePublicipTagsRequest struct {
-	PublicipId string                              `json:"publicip_id"`
-	Body       *BatchDeletePublicipTagsRequestBody `json:"body,omitempty"`
+	PublicipId string `json:"publicip_id"`
+
+	Body *BatchDeletePublicipTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchDeletePublicipTagsRequest) String() string {

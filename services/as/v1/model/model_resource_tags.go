@@ -8,8 +8,10 @@ import (
 
 type ResourceTags struct {
 	// 资源标签值。最大长度36个unicode字符。
+
 	Key *string `json:"key,omitempty"`
 	// 资源标签值。
+
 	Value *string `json:"value,omitempty"`
 }
 

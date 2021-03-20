@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreatePostalRequest struct {
-	XLanguage *string       `json:"X-Language,omitempty"`
-	Body      *AddPostalReq `json:"body,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	Body *AddPostalReq `json:"body,omitempty"`
 }
 
 func (o CreatePostalRequest) String() string {

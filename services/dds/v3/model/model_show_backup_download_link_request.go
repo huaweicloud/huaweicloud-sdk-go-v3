@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ShowBackupDownloadLinkRequest struct {
-	XLanguage  *string `json:"X-Language,omitempty"`
-	InstanceId string  `json:"instance_id"`
-	BackupId   string  `json:"backup_id"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	InstanceId string `json:"instance_id"`
+
+	BackupId string `json:"backup_id"`
 }
 
 func (o ShowBackupDownloadLinkRequest) String() string {

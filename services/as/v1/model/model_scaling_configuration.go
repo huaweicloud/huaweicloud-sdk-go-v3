@@ -10,13 +10,18 @@ import (
 // 伸缩配置详情
 type ScalingConfiguration struct {
 	// 伸缩配置ID，全局唯一。
+
 	ScalingConfigurationId *string `json:"scaling_configuration_id,omitempty"`
 	// 租户ID。
+
 	Tenant *string `json:"tenant,omitempty"`
 	// 伸缩配置名称。
-	ScalingConfigurationName *string               `json:"scaling_configuration_name,omitempty"`
-	InstanceConfig           *InstanceConfigResult `json:"instance_config,omitempty"`
+
+	ScalingConfigurationName *string `json:"scaling_configuration_name,omitempty"`
+
+	InstanceConfig *InstanceConfigResult `json:"instance_config,omitempty"`
 	// 创建伸缩配置的时间，遵循UTC时间。
+
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 }
 

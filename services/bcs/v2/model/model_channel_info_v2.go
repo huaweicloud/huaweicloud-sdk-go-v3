@@ -8,10 +8,13 @@ import (
 
 type ChannelInfoV2 struct {
 	// 通道名
+
 	Name *string `json:"name,omitempty"`
 	// 通道中组织名
+
 	OrgNames *[]string `json:"org_names,omitempty"`
 	// 通道描述
+
 	Description *string `json:"description,omitempty"`
 }
 

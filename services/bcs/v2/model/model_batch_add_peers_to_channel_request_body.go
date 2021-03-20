@@ -9,6 +9,7 @@ import (
 // 节点加入通道
 type BatchAddPeersToChannelRequestBody struct {
 	// 加入某个通道的节点信息
+
 	ChannelPeers []BatchAddPeersToChannelRequestBodyChannelPeers `json:"channel_peers"`
 }
 

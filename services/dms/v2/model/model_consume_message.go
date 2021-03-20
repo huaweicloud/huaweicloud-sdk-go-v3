@@ -9,6 +9,7 @@ import (
 type ConsumeMessage struct {
 	Message *ConsumeMessageMessage `json:"message,omitempty"`
 	// 消息handler。
+
 	Handler *string `json:"handler,omitempty"`
 }
 

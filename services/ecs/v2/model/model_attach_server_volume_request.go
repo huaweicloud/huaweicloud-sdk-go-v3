@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type AttachServerVolumeRequest struct {
-	ServerId string                         `json:"server_id"`
-	Body     *AttachServerVolumeRequestBody `json:"body,omitempty"`
+	ServerId string `json:"server_id"`
+
+	Body *AttachServerVolumeRequestBody `json:"body,omitempty"`
 }
 
 func (o AttachServerVolumeRequest) String() string {

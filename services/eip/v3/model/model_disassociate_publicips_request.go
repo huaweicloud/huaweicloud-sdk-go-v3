@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type DisassociatePublicipsRequest struct {
-	PublicipId string                            `json:"publicip_id"`
-	Body       *DisassociatePublicipsRequestBody `json:"body,omitempty"`
+	PublicipId string `json:"publicip_id"`
+
+	Body *DisassociatePublicipsRequestBody `json:"body,omitempty"`
 }
 
 func (o DisassociatePublicipsRequest) String() string {

@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type StopJobInstanceRequest struct {
-	JobName    string `json:"job_name"`
+	JobName string `json:"job_name"`
+
 	InstanceId string `json:"instance_id"`
 }
 

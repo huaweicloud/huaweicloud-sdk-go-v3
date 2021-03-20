@@ -2,21 +2,30 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListBackupsRequest struct {
-	InstanceId *string                       `json:"instance_id,omitempty"`
-	BackupId   *string                       `json:"backup_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty"`
+
+	BackupId *string `json:"backup_id,omitempty"`
+
 	BackupType *ListBackupsRequestBackupType `json:"backup_type,omitempty"`
-	Offset     *int32                        `json:"offset,omitempty"`
-	Limit      *int32                        `json:"limit,omitempty"`
-	BeginTime  *string                       `json:"begin_time,omitempty"`
-	EndTime    *string                       `json:"end_time,omitempty"`
-	Mode       *ListBackupsRequestMode       `json:"mode,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	BeginTime *string `json:"begin_time,omitempty"`
+
+	EndTime *string `json:"end_time,omitempty"`
+
+	Mode *ListBackupsRequestMode `json:"mode,omitempty"`
 }
 
 func (o ListBackupsRequest) String() string {

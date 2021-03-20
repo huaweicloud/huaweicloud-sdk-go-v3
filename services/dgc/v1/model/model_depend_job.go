@@ -2,14 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type DependJob struct {
-	Jobs             *string                    `json:"jobs,omitempty"`
-	DependPeriod     *string                    `json:"dependPeriod,omitempty"`
+	Jobs *string `json:"jobs,omitempty"`
+
+	DependPeriod *string `json:"dependPeriod,omitempty"`
+
 	DependFailPolicy *DependJobDependFailPolicy `json:"dependFailPolicy,omitempty"`
 }
 

@@ -9,6 +9,7 @@ import (
 // Response Object
 type AssociateSignatureKeyV2Response struct {
 	// API与签名密钥的绑定关系列表
+
 	Bindings       *[]SignBindingApiResp `json:"bindings,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

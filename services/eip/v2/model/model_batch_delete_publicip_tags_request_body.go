@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 批量操作资源标签的请求体
 type BatchDeletePublicipTagsRequestBody struct {
 	// 标签列表
+
 	Tags []ResourceTagOption `json:"tags"`
 	// 操作标识  delete：删除  action为delete时，value可选
+
 	Action BatchDeletePublicipTagsRequestBodyAction `json:"action"`
 }
 

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type SetAuditlogPolicyRequest struct {
-	InstanceId string                        `json:"instance_id"`
-	Body       *SetAuditlogPolicyRequestBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *SetAuditlogPolicyRequestBody `json:"body,omitempty"`
 }
 
 func (o SetAuditlogPolicyRequest) String() string {

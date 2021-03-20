@@ -2,19 +2,26 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListScalingPoliciesRequest struct {
-	ScalingGroupId    string                                       `json:"scaling_group_id"`
-	ScalingPolicyName *string                                      `json:"scaling_policy_name,omitempty"`
+	ScalingGroupId string `json:"scaling_group_id"`
+
+	ScalingPolicyName *string `json:"scaling_policy_name,omitempty"`
+
 	ScalingPolicyType *ListScalingPoliciesRequestScalingPolicyType `json:"scaling_policy_type,omitempty"`
-	ScalingPolicyId   *string                                      `json:"scaling_policy_id,omitempty"`
-	StartNumber       *int32                                       `json:"start_number,omitempty"`
-	Limit             *int32                                       `json:"limit,omitempty"`
+
+	ScalingPolicyId *string `json:"scaling_policy_id,omitempty"`
+
+	StartNumber *int32 `json:"start_number,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListScalingPoliciesRequest) String() string {

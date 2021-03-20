@@ -9,6 +9,7 @@ import (
 // Request Object
 type DeleteRequestThrottlingPolicyV2Request struct {
 	InstanceId string `json:"instance_id"`
+
 	ThrottleId string `json:"throttle_id"`
 }
 

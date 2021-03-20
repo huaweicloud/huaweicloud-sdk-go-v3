@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ListHookInstancesRequest struct {
-	ScalingGroupId string  `json:"scaling_group_id"`
-	InstanceId     *string `json:"instance_id,omitempty"`
+	ScalingGroupId string `json:"scaling_group_id"`
+
+	InstanceId *string `json:"instance_id,omitempty"`
 }
 
 func (o ListHookInstancesRequest) String() string {

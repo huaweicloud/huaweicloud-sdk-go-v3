@@ -2,17 +2,22 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type ThrottleSpecialReq struct {
 	// 流控时间内特殊对象能够访问API的最大次数限制
+
 	CallLimits int32 `json:"call_limits"`
 	// 特殊APP的编号或特殊租户的账号ID
+
 	ObjectId string `json:"object_id"`
 	// 特殊对象类型
+
 	ObjectType ThrottleSpecialReqObjectType `json:"object_type"`
 }
 

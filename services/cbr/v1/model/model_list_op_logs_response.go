@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListOpLogsResponse struct {
 	// 任务列表
+
 	OperationLogs *[]OperationLog `json:"operation_logs,omitempty"`
 	// 任务个数
+
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -9,8 +9,10 @@ import (
 // Response Object
 type StopInstanceResponse struct {
 	// 返回值
+
 	Result *bool `json:"result,omitempty"`
 	// 状态
+
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

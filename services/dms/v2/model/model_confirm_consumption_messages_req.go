@@ -8,6 +8,7 @@ import (
 
 type ConfirmConsumptionMessagesReq struct {
 	// 确认消息数组。
+
 	Message *[]ConfirmDeadLettersMessagesReqMessage `json:"message,omitempty"`
 }
 

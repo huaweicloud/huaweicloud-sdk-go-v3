@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateApiGroupV2Request struct {
-	InstanceId string       `json:"instance_id"`
-	Body       *ApiGroupReq `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *ApiGroupReq `json:"body,omitempty"`
 }
 
 func (o CreateApiGroupV2Request) String() string {

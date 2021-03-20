@@ -2,21 +2,28 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type TransferTask struct {
 	// 转储任务名称。
+
 	TaskName *string `json:"task_name,omitempty"`
 	// 转储任务状态。  - ERROR：错误。 - STARTING：启动中。 - PAUSED：已停止。 - RUNNING：运行中。 - DELETE：已删除。 - ABNORMAL：异常。
+
 	State *TransferTaskState `json:"state,omitempty"`
 	// 转储任务类型。  - OBS：转储到OBS。 - MRS：转储到MRS。 - DLI：转储到DLI。 - CLOUDTABLE：转储到CloudTable。 - DWS：转储到DWS。
+
 	DestinationType *TransferTaskDestinationType `json:"destination_type,omitempty"`
 	// 转储任务创建时间。
+
 	CreateTime *int64 `json:"create_time,omitempty"`
 	// 转储任务最近一次转储时间。
+
 	LastTransferTimestamp *int64 `json:"last_transfer_timestamp,omitempty"`
 }
 

@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type ListCitiesRequest struct {
-	XLanguage    *string `json:"X-Language,omitempty"`
-	ProvinceCode string  `json:"province_code"`
-	Offset       *int32  `json:"offset,omitempty"`
-	Limit        *int32  `json:"limit,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	ProvinceCode string `json:"province_code"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListCitiesRequest) String() string {

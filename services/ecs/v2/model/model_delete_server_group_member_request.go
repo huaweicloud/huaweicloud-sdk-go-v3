@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type DeleteServerGroupMemberRequest struct {
-	ServerGroupId string                              `json:"server_group_id"`
-	Body          *DeleteServerGroupMemberRequestBody `json:"body,omitempty"`
+	ServerGroupId string `json:"server_group_id"`
+
+	Body *DeleteServerGroupMemberRequestBody `json:"body,omitempty"`
 }
 
 func (o DeleteServerGroupMemberRequest) String() string {

@@ -2,15 +2,19 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type BatchOperateInstanceTagRequestBody struct {
 	// 操作标识。取值： - create，表示添加标签。 - delete，表示删除标签。
+
 	Action BatchOperateInstanceTagRequestBodyAction `json:"action"`
 	// 标签列表。
+
 	Tags []TagItem `json:"tags"`
 }
 

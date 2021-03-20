@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ShowQueueRequest struct {
-	QueueId           string `json:"queue_id"`
-	IncludeDeadletter *bool  `json:"include_deadletter,omitempty"`
+	QueueId string `json:"queue_id"`
+
+	IncludeDeadletter *bool `json:"include_deadletter,omitempty"`
 }
 
 func (o ShowQueueRequest) String() string {

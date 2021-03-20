@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateStreamV3Request struct {
-	StreamName string               `json:"stream_name"`
-	Body       *UpdateStreamRequest `json:"body,omitempty"`
+	StreamName string `json:"stream_name"`
+
+	Body *UpdateStreamRequest `json:"body,omitempty"`
 }
 
 func (o UpdateStreamV3Request) String() string {

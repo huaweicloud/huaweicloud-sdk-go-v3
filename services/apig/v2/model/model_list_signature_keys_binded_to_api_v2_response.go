@@ -9,10 +9,13 @@ import (
 // Response Object
 type ListSignatureKeysBindedToApiV2Response struct {
 	// 本次查询满足条件的总数
+
 	Total *int32 `json:"total,omitempty"`
 	// 本次查询返回的列表长度
+
 	Size *int32 `json:"size,omitempty"`
 	// 本次查询返回的列表
+
 	Bindings       *[]SignBindingApiResp `json:"bindings,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateServerMetadataRequest struct {
-	ServerId string                           `json:"server_id"`
-	Body     *UpdateServerMetadataRequestBody `json:"body,omitempty"`
+	ServerId string `json:"server_id"`
+
+	Body *UpdateServerMetadataRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateServerMetadataRequest) String() string {

@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreatePublicipTagRequest struct {
-	PublicipId string                        `json:"publicip_id"`
-	Body       *CreatePublicipTagRequestBody `json:"body,omitempty"`
+	PublicipId string `json:"publicip_id"`
+
+	Body *CreatePublicipTagRequestBody `json:"body,omitempty"`
 }
 
 func (o CreatePublicipTagRequest) String() string {

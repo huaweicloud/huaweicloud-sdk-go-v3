@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type DeleteSessionRequest struct {
-	NodeId string                    `json:"node_id"`
-	Body   *DeleteSessionRequestBody `json:"body,omitempty"`
+	NodeId string `json:"node_id"`
+
+	Body *DeleteSessionRequestBody `json:"body,omitempty"`
 }
 
 func (o DeleteSessionRequest) String() string {

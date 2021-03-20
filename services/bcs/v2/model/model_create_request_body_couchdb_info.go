@@ -9,8 +9,10 @@ import (
 // couchDB信息
 type CreateRequestBodyCouchdbInfo struct {
 	// couchDB用户名
+
 	UserName *string `json:"user_name,omitempty"`
 	// couchDB密码
+
 	Password *string `json:"password,omitempty"`
 }
 

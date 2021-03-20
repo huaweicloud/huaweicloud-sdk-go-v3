@@ -9,9 +9,11 @@ import (
 // Response Object
 type ListAlarmsResponse struct {
 	// 告警对象列表。
-	MetricAlarms   *[]MetricAlarms `json:"metric_alarms,omitempty"`
-	MetaData       *MetaData       `json:"meta_data,omitempty"`
-	HttpStatusCode int             `json:"-"`
+
+	MetricAlarms *[]MetricAlarms `json:"metric_alarms,omitempty"`
+
+	MetaData       *MetaData `json:"meta_data,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListAlarmsResponse) String() string {

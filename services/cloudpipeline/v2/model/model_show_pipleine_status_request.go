@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ShowPipleineStatusRequest struct {
-	XLanguage  *string `json:"X-Language,omitempty"`
-	PipelineId string  `json:"pipeline_id"`
-	BuildId    *string `json:"build_id,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty"`
+
+	PipelineId string `json:"pipeline_id"`
+
+	BuildId *string `json:"build_id,omitempty"`
 }
 
 func (o ShowPipleineStatusRequest) String() string {

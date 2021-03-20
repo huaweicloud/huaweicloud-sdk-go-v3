@@ -2,19 +2,25 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type PrincipalRule struct {
 	// 通道唯一标识符。
+
 	Principal *string `json:"principal,omitempty"`
 	// 授权用户。
+
 	PrincipalName *string `json:"principal_name,omitempty"`
 	// 授权操作类型。  - putRecords：上传数据。
+
 	ActionType *PrincipalRuleActionType `json:"action_type,omitempty"`
 	// 授权影响类型。  - accept：允许该授权操作。
+
 	Effect *PrincipalRuleEffect `json:"effect,omitempty"`
 }
 

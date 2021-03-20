@@ -2,15 +2,19 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type BillingUpdate struct {
 	// 存储库规格
+
 	ConsistentLevel *BillingUpdateConsistentLevel `json:"consistent_level,omitempty"`
 	// 存储库大小，单位为GB
+
 	Size *int32 `json:"size,omitempty"`
 }
 

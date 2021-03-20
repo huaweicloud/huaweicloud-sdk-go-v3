@@ -10,6 +10,7 @@ import (
 type CreateInstanceBy3rdResponse struct {
 	Result *InstancesResponseInstancesVoResult `json:"result,omitempty"`
 	// 状态
+
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

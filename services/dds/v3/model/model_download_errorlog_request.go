@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type DownloadErrorlogRequest struct {
-	InstanceId string                       `json:"instance_id"`
-	Body       *DownloadErrorlogRequestBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Body *DownloadErrorlogRequestBody `json:"body,omitempty"`
 }
 
 func (o DownloadErrorlogRequest) String() string {

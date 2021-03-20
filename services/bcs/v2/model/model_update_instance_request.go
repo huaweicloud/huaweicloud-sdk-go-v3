@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type UpdateInstanceRequest struct {
-	BlockchainId string                     `json:"blockchain_id"`
-	Body         *UpdateInstanceRequestBody `json:"body,omitempty"`
+	BlockchainId string `json:"blockchain_id"`
+
+	Body *UpdateInstanceRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateInstanceRequest) String() string {

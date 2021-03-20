@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type CreateEipRecordSetRequest struct {
-	Region       string        `json:"region"`
-	FloatingipId string        `json:"floatingip_id"`
-	Body         *CreatePtrReq `json:"body,omitempty"`
+	Region string `json:"region"`
+
+	FloatingipId string `json:"floatingip_id"`
+
+	Body *CreatePtrReq `json:"body,omitempty"`
 }
 
 func (o CreateEipRecordSetRequest) String() string {

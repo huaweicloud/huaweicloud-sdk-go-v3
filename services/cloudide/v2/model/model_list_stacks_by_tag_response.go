@@ -10,6 +10,7 @@ import (
 type ListStacksByTagResponse struct {
 	Stack *StacksTag `json:"stack,omitempty"`
 	// 状态
+
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

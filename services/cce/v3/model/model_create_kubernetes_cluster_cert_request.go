@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type CreateKubernetesClusterCertRequest struct {
-	ClusterId string        `json:"cluster_id"`
-	Body      *CertDuration `json:"body,omitempty"`
+	ClusterId string `json:"cluster_id"`
+
+	Body *CertDuration `json:"body,omitempty"`
 }
 
 func (o CreateKubernetesClusterCertRequest) String() string {

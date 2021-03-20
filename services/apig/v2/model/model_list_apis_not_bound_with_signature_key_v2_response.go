@@ -9,10 +9,13 @@ import (
 // Response Object
 type ListApisNotBoundWithSignatureKeyV2Response struct {
 	// 满足查询条件的API的总个数
+
 	Total *int32 `json:"total,omitempty"`
 	// 本次查询返回的API列表长度
+
 	Size *int32 `json:"size,omitempty"`
 	// 本次查询返回的API列表
+
 	Apis           *[]SignUnbindingApiResp `json:"apis,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

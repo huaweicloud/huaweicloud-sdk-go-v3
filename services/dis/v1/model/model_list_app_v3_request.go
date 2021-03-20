@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ListAppV3Request struct {
-	Limit        *int32  `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
+
 	StartAppName *string `json:"start_app_name,omitempty"`
-	StreamName   *string `json:"stream_name,omitempty"`
+
+	StreamName *string `json:"stream_name,omitempty"`
 }
 
 func (o ListAppV3Request) String() string {

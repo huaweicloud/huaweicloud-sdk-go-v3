@@ -9,8 +9,10 @@ import (
 // 批量删除实例接口返回结构体
 type BatchOpsResult struct {
 	// 操作结果，取值有success或failed。
+
 	Result *string `json:"result,omitempty"`
 	// 缓存实例ID。
+
 	Instance *string `json:"instance,omitempty"`
 }
 

@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type DeleteRecordSetsRequest struct {
-	ZoneId      string `json:"zone_id"`
+	ZoneId string `json:"zone_id"`
+
 	RecordsetId string `json:"recordset_id"`
 }
 

@@ -9,7 +9,8 @@ import (
 // Request Object
 type ShowDetailsOfApiV2Request struct {
 	InstanceId string `json:"instance_id"`
-	ApiId      string `json:"api_id"`
+
+	ApiId string `json:"api_id"`
 }
 
 func (o ShowDetailsOfApiV2Request) String() string {

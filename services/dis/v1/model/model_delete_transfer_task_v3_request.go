@@ -9,7 +9,8 @@ import (
 // Request Object
 type DeleteTransferTaskV3Request struct {
 	StreamName string `json:"stream_name"`
-	TaskName   string `json:"task_name"`
+
+	TaskName string `json:"task_name"`
 }
 
 func (o DeleteTransferTaskV3Request) String() string {

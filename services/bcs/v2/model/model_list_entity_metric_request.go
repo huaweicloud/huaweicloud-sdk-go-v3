@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type ListEntityMetricRequest struct {
-	BlockchainId string                       `json:"blockchain_id"`
-	Body         *ListEntityMetricRequestBody `json:"body,omitempty"`
+	BlockchainId string `json:"blockchain_id"`
+
+	Body *ListEntityMetricRequestBody `json:"body,omitempty"`
 }
 
 func (o ListEntityMetricRequest) String() string {

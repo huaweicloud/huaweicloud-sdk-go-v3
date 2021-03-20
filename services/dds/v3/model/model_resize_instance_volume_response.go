@@ -9,6 +9,7 @@ import (
 // Response Object
 type ResizeInstanceVolumeResponse struct {
 	// 工作流ID。
+
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,10 +8,13 @@ import (
 
 // Request Object
 type UpdateSlavePriorityRequest struct {
-	InstanceId string        `json:"instance_id"`
-	GroupId    string        `json:"group_id"`
-	NodeId     string        `json:"node_id"`
-	Body       *PriorityBody `json:"body,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	GroupId string `json:"group_id"`
+
+	NodeId string `json:"node_id"`
+
+	Body *PriorityBody `json:"body,omitempty"`
 }
 
 func (o UpdateSlavePriorityRequest) String() string {

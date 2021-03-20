@@ -9,9 +9,11 @@ import (
 // Response Object
 type PutRecordsResponse struct {
 	// 上传失败的数据数量。
-	FailedRecordCount *int32                   `json:"failed_record_count,omitempty"`
-	Records           *[]PutRecordsResultEntry `json:"records,omitempty"`
-	HttpStatusCode    int                      `json:"-"`
+
+	FailedRecordCount *int32 `json:"failed_record_count,omitempty"`
+
+	Records        *[]PutRecordsResultEntry `json:"records,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o PutRecordsResponse) String() string {

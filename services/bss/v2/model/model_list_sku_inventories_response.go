@@ -9,6 +9,7 @@ import (
 // Response Object
 type ListSkuInventoriesResponse struct {
 	// 库存的查询结果详情，具体参见表2。
+
 	SkuInventories *[]SkuInventory `json:"sku_inventories,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

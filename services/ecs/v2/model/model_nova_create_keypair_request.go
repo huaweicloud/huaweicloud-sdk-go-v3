@@ -8,8 +8,9 @@ import (
 
 // Request Object
 type NovaCreateKeypairRequest struct {
-	OpenStackAPIVersion *string                       `json:"OpenStack-API-Version,omitempty"`
-	Body                *NovaCreateKeypairRequestBody `json:"body,omitempty"`
+	OpenStackAPIVersion *string `json:"OpenStack-API-Version,omitempty"`
+
+	Body *NovaCreateKeypairRequestBody `json:"body,omitempty"`
 }
 
 func (o NovaCreateKeypairRequest) String() string {

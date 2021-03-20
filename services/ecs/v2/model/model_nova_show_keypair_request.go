@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type NovaShowKeypairRequest struct {
-	KeypairName         string  `json:"keypair_name"`
+	KeypairName string `json:"keypair_name"`
+
 	OpenStackAPIVersion *string `json:"OpenStack-API-Version,omitempty"`
 }
 

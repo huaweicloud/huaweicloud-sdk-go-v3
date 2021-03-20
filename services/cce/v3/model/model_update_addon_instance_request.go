@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type UpdateAddonInstanceRequest struct {
-	Id   string           `json:"id"`
+	Id string `json:"id"`
+
 	Body *InstanceRequest `json:"body,omitempty"`
 }
 

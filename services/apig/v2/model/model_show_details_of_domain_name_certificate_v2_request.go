@@ -8,9 +8,12 @@ import (
 
 // Request Object
 type ShowDetailsOfDomainNameCertificateV2Request struct {
-	InstanceId    string `json:"instance_id"`
-	DomainId      string `json:"domain_id"`
-	GroupId       string `json:"group_id"`
+	InstanceId string `json:"instance_id"`
+
+	DomainId string `json:"domain_id"`
+
+	GroupId string `json:"group_id"`
+
 	CertificateId string `json:"certificate_id"`
 }
 

@@ -9,8 +9,10 @@ import (
 // Response Object
 type ListTransferTasksV3Response struct {
 	// 转储任务总数。
+
 	TotalNumber *int32 `json:"total_number,omitempty"`
 	// 转储任务列表。
+
 	Tasks          *[]TransferTask `json:"tasks,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

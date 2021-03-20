@@ -2,15 +2,19 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type ConfirmDeadLettersMessagesReqMessage struct {
 	// 消费时返回的ID。
+
 	Handler *string `json:"handler,omitempty"`
 	// 客户端处理数据的状态。 取值为“success”或者“fail”。
+
 	Status *ConfirmDeadLettersMessagesReqMessageStatus `json:"status,omitempty"`
 }
 

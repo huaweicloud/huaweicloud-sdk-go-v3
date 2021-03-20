@@ -8,11 +8,16 @@ import (
 
 // Request Object
 type ListApiGroupsV2Request struct {
-	InstanceId    string  `json:"instance_id"`
-	Id            *string `json:"id,omitempty"`
-	Name          *string `json:"name,omitempty"`
-	Offset        *int64  `json:"offset,omitempty"`
-	Limit         *int32  `json:"limit,omitempty"`
+	InstanceId string `json:"instance_id"`
+
+	Id *string `json:"id,omitempty"`
+
+	Name *string `json:"name,omitempty"`
+
+	Offset *int64 `json:"offset,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
 	PreciseSearch *string `json:"precise_search,omitempty"`
 }
 

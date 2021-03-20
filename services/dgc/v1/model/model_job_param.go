@@ -2,14 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type JobParam struct {
-	Name      *string            `json:"name,omitempty"`
-	Value     *string            `json:"value,omitempty"`
+	Name *string `json:"name,omitempty"`
+
+	Value *string `json:"value,omitempty"`
+
 	ParamType *JobParamParamType `json:"paramType,omitempty"`
 }
 

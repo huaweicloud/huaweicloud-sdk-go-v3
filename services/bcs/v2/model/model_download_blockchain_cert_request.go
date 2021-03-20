@@ -2,16 +2,20 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type DownloadBlockchainCertRequest struct {
-	BlockchainId string                                `json:"blockchain_id"`
-	OrgName      string                                `json:"org_name"`
-	CertType     DownloadBlockchainCertRequestCertType `json:"cert_type"`
+	BlockchainId string `json:"blockchain_id"`
+
+	OrgName string `json:"org_name"`
+
+	CertType DownloadBlockchainCertRequestCertType `json:"cert_type"`
 }
 
 func (o DownloadBlockchainCertRequest) String() string {

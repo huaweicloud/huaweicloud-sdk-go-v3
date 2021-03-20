@@ -8,8 +8,10 @@ import (
 
 type Users struct {
 	// 当前为固定值“user“。
+
 	Name *string `json:"name,omitempty"`
-	User *User   `json:"user,omitempty"`
+
+	User *User `json:"user,omitempty"`
 }
 
 func (o Users) String() string {

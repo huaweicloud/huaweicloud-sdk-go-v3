@@ -8,6 +8,7 @@ import (
 
 type FilePath struct {
 	// 文件在OBS上的路径
+
 	Path *string `json:"path,omitempty"`
 }
 

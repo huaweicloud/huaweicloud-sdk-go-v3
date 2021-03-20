@@ -9,6 +9,7 @@ import (
 // 版本对象。
 type ValuesItem struct {
 	// 所有版本列表。
+
 	Values *[]ListApiVersionsItem `json:"values,omitempty"`
 }
 

@@ -8,28 +8,40 @@ import (
 
 type QueryCouponQuotasReqExt struct {
 	// 优惠券额度ID列表。
+
 	QuotaIds *[]string `json:"quota_ids,omitempty"`
 	// 优惠券额度状态列表。 0：正常3：失效（过期失效和人工设置失效）4：额度调整中（伙伴可以查看该额度，但不能使用该额度发放优惠券）5：冻结
+
 	QuotaStatusList *[]int32 `json:"quota_status_list,omitempty"`
 	// 优惠券额度的类型： 0：代金券额度1：现金券额度
+
 	QuotaType *int32 `json:"quota_type,omitempty"`
 	// 创建时间（开始）。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 输入这个条件，会查询出创建时间大于这个时间的记录。
+
 	CreateTimeBegin *string `json:"create_time_begin,omitempty"`
 	// 创建时间（结束）。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 输入这个条件，会查询出创建时间小于这个时间的记录。
+
 	CreateTimeEnd *string `json:"create_time_end,omitempty"`
 	// 生效时间（开始）。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 输入这个条件，会查询出生效时间大于这个时间的记录。
+
 	EffectiveTimeBegin *string `json:"effective_time_begin,omitempty"`
 	// 生效时间（结束）。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 输入这个条件，会查询出生效时间小于这个时间的记录。
+
 	EffectiveTimeEnd *string `json:"effective_time_end,omitempty"`
 	// 失效时间（开始）。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 输入这个条件，会查询出失效时间大于这个时间的记录。
+
 	ExpireTimeBegin *string `json:"expire_time_begin,omitempty"`
 	// 失效时间（结束）。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 输入这个条件，会查询出失效时间小于这个时间的记录。
+
 	ExpireTimeEnd *string `json:"expire_time_end,omitempty"`
 	// 偏移量，从0开始。默认值为0。
+
 	Offset *int32 `json:"offset,omitempty"`
 	// 每次查询记录数。默认值为10。
+
 	Limit *int32 `json:"limit,omitempty"`
 	// 精英服务商（二级经销商）ID。 华为云伙伴能力中心（一级经销商）查询精英服务商的优惠券额度时，需要携带该参数；否则只能查询自己的优惠券额度。
+
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

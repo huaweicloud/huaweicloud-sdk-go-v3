@@ -2,24 +2,36 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListVaultRequest struct {
-	Limit               *int32                       `json:"limit,omitempty"`
-	Name                *string                      `json:"name,omitempty"`
-	Offset              *int32                       `json:"offset,omitempty"`
-	CloudType           *ListVaultRequestCloudType   `json:"cloud_type,omitempty"`
-	ProtectType         *ListVaultRequestProtectType `json:"protect_type,omitempty"`
-	ObjectType          *string                      `json:"object_type,omitempty"`
-	EnterpriseProjectId *string                      `json:"enterprise_project_id,omitempty"`
-	Id                  *string                      `json:"id,omitempty"`
-	PolicyId            *string                      `json:"policy_id,omitempty"`
-	Status              *string                      `json:"status,omitempty"`
-	ResourceIds         *string                      `json:"resource_ids,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
+
+	Name *string `json:"name,omitempty"`
+
+	Offset *int32 `json:"offset,omitempty"`
+
+	CloudType *ListVaultRequestCloudType `json:"cloud_type,omitempty"`
+
+	ProtectType *ListVaultRequestProtectType `json:"protect_type,omitempty"`
+
+	ObjectType *string `json:"object_type,omitempty"`
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	Id *string `json:"id,omitempty"`
+
+	PolicyId *string `json:"policy_id,omitempty"`
+
+	Status *string `json:"status,omitempty"`
+
+	ResourceIds *string `json:"resource_ids,omitempty"`
 }
 
 func (o ListVaultRequest) String() string {

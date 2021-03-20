@@ -2,19 +2,25 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 type ApiConditionBase struct {
 	// 关联的请求参数对象名称。策略类型为param时必选
+
 	ReqParamName *string `json:"req_param_name,omitempty"`
 	// 策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param时必选
+
 	ConditionType *ApiConditionBaseConditionType `json:"condition_type,omitempty"`
 	// 策略类型 - param：参数 - source：源IP
+
 	ConditionOrigin ApiConditionBaseConditionOrigin `json:"condition_origin"`
 	// 策略值
+
 	ConditionValue string `json:"condition_value"`
 }
 

@@ -2,15 +2,18 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ListResourceInstancesRequest struct {
 	ResourceType ListResourceInstancesRequestResourceType `json:"resource_type"`
-	Body         *ShowTagsRequestBody                     `json:"body,omitempty"`
+
+	Body *ShowTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o ListResourceInstancesRequest) String() string {

@@ -9,6 +9,7 @@ import (
 //
 type ServerNicSecurityGroup struct {
 	// 安全组ID。
+
 	Id string `json:"id"`
 }
 

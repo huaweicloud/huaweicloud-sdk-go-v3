@@ -2,15 +2,19 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type DetachServerVolumeRequest struct {
-	ServerId   string                               `json:"server_id"`
-	VolumeId   string                               `json:"volume_id"`
+	ServerId string `json:"server_id"`
+
+	VolumeId string `json:"volume_id"`
+
 	DeleteFlag *DetachServerVolumeRequestDeleteFlag `json:"delete_flag,omitempty"`
 }
 

@@ -2,20 +2,26 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 公网IP绑定的带宽信息
 type BandwidthInfoResp struct {
 	// 带宽名称
+
 	BandwidthName *string `json:"bandwidth_name,omitempty"`
 	// 带宽大小
+
 	BandwidthNumber *int32 `json:"bandwidth_number,omitempty"`
 	// 带宽类型
+
 	BandwidthType *BandwidthInfoRespBandwidthType `json:"bandwidth_type,omitempty"`
 	// 带宽id
+
 	BandwidthId *string `json:"bandwidth_id,omitempty"`
 }
 

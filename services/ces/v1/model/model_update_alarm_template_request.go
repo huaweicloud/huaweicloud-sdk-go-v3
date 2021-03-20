@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type UpdateAlarmTemplateRequest struct {
-	ContentType string                          `json:"Content-Type"`
-	TemplateId  string                          `json:"template_id"`
-	Body        *UpdateAlarmTemplateRequestBody `json:"body,omitempty"`
+	ContentType string `json:"Content-Type"`
+
+	TemplateId string `json:"template_id"`
+
+	Body *UpdateAlarmTemplateRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateAlarmTemplateRequest) String() string {

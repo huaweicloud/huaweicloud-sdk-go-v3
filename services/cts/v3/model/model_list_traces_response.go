@@ -9,7 +9,9 @@ import (
 // Response Object
 type ListTracesResponse struct {
 	// 本次查询事件列表返回事件数组。
-	Traces         *[]Traces `json:"traces,omitempty"`
+
+	Traces *[]Traces `json:"traces,omitempty"`
+
 	MetaData       *MetaData `json:"meta_data,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

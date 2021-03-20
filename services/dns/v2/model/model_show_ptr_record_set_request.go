@@ -8,7 +8,8 @@ import (
 
 // Request Object
 type ShowPtrRecordSetRequest struct {
-	Region       string `json:"region"`
+	Region string `json:"region"`
+
 	FloatingipId string `json:"floatingip_id"`
 }
 

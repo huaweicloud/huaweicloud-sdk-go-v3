@@ -9,7 +9,8 @@ import (
 // Request Object
 type ListMonitoredObjectsOfInstanceRequest struct {
 	InstanceId string `json:"instance_id"`
-	DimName    string `json:"dim_name"`
+
+	DimName string `json:"dim_name"`
 }
 
 func (o ListMonitoredObjectsOfInstanceRequest) String() string {
