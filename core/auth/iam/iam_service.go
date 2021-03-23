@@ -3,7 +3,6 @@ package iam
 import (
 	"bytes"
 	"errors"
-	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/response"
@@ -75,7 +74,8 @@ type Domains struct {
 
 func GetKeystoneListAuthDomainsRequest(iamEndpoint string) *request.DefaultHttpRequest {
 	return request.NewHttpRequestBuilder().
-		WithEndpoint(fmt.Sprintf("%s%s", iamEndpoint, KeystoneListAuthDomainsUri)).
+		WithEndpoint(iamEndpoint).
+		WithPath(KeystoneListAuthDomainsUri).
 		WithMethod("GET").
 		Build()
 }
