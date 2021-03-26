@@ -1,0 +1,32 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// 伸缩实例。
+type ScalingInstance struct {
+	// 云服务器名称。
+
+	InstanceName *string `json:"instance_name,omitempty"`
+	// 云服务器id。
+
+	InstanceId *string `json:"instance_id,omitempty"`
+	// 实例伸缩失败原因。
+
+	FailedReason *string `json:"failed_reason,omitempty"`
+	// 实例伸缩失败详情。
+
+	FailedDetails *string `json:"failed_details,omitempty"`
+}
+
+func (o ScalingInstance) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ScalingInstance struct{}"
+	}
+
+	return strings.Join([]string{"ScalingInstance", string(data)}, " ")
+}

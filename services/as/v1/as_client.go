@@ -195,6 +195,17 @@ func (c *AsClient) EnableOrDisableScalingGroup(request *model.EnableOrDisableSca
 	}
 }
 
+//批量启用、停用或者删除弹性伸缩策略。单次最多批量操作伸缩策略个数为20。
+func (c *AsClient) ExecuteScalingPolicies(request *model.ExecuteScalingPoliciesRequest) (*model.ExecuteScalingPoliciesResponse, error) {
+	requestDef := GenReqDefForExecuteScalingPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteScalingPoliciesResponse), nil
+	}
+}
+
 //立即执行或启用或停止一个指定弹性伸缩策略。当伸缩组、伸缩策略状态处于INSERVICE时，伸缩策略才能被正确执行，否则会执行失败。
 func (c *AsClient) ExecuteScalingPolicy(request *model.ExecuteScalingPolicyRequest) (*model.ExecuteScalingPolicyResponse, error) {
 	requestDef := GenReqDefForExecuteScalingPolicy()
@@ -247,6 +258,17 @@ func (c *AsClient) ListScalingActivityLogs(request *model.ListScalingActivityLog
 		return nil, err
 	} else {
 		return resp.(*model.ListScalingActivityLogsResponse), nil
+	}
+}
+
+//根据输入条件过滤查询伸缩活动日志，支持查询实例伸缩、ELB迁移、实例备用等类型活动。查询结果分页显示。查询伸缩活动日志V2版本与V1版本区别在于，V2版本展示了更详细的实例伸缩日志，如ELB迁移日志，实例备用日志信息。可根据起始时间，截止时间，起始行号，记录数，伸缩活动类型等作为条件过滤查询。若不加过滤条件默认查询最多20条伸缩活动日志信息。
+func (c *AsClient) ListScalingActivityV2Logs(request *model.ListScalingActivityV2LogsRequest) (*model.ListScalingActivityV2LogsResponse, error) {
+	requestDef := GenReqDefForListScalingActivityV2Logs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScalingActivityV2LogsResponse), nil
 	}
 }
 
@@ -445,5 +467,60 @@ func (c *AsClient) UpdateScalingPolicy(request *model.UpdateScalingPolicyRequest
 		return nil, err
 	} else {
 		return resp.(*model.UpdateScalingPolicyResponse), nil
+	}
+}
+
+//可针对不同类型资源如伸缩组或带宽，创建弹性伸缩策略。创建弹性伸缩策略V2版本与V1版本的区别在于，V2版本支持创建对带宽资源进行调整的策略，通过伸缩资源类型区分伸缩资源。
+func (c *AsClient) CreateScalingV2Policy(request *model.CreateScalingV2PolicyRequest) (*model.CreateScalingV2PolicyResponse, error) {
+	requestDef := GenReqDefForCreateScalingV2Policy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateScalingV2PolicyResponse), nil
+	}
+}
+
+//根据输入条件过滤查询弹性伸缩策略，支持查询当前租户下全量伸缩策略。查询结果分页显示。可根据伸缩资源ID，伸缩资源类型，伸缩策略名称，伸缩策略ID，告警ID，企业项目ID，起始行号，记录数，排序方式等条件进行过滤查询。若不加过滤添加默认查询该租户下最多20条伸缩策略信息。
+func (c *AsClient) ListAllScalingV2Policies(request *model.ListAllScalingV2PoliciesRequest) (*model.ListAllScalingV2PoliciesResponse, error) {
+	requestDef := GenReqDefForListAllScalingV2Policies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAllScalingV2PoliciesResponse), nil
+	}
+}
+
+//根据输入条件过滤查询弹性伸缩策略。查询结果分页显示。查询弹性伸缩策略V2版本与V1版本的区别在于，V2版本响应含伸缩资源类型。可根据伸缩策略名称，策略类型，伸缩策略ID，起始行号，记录数进行条件过滤查询。若不加过滤条件默认查询该租户下指定资源下最多20条伸缩策略信息。
+func (c *AsClient) ListScalingV2Policies(request *model.ListScalingV2PoliciesRequest) (*model.ListScalingV2PoliciesResponse, error) {
+	requestDef := GenReqDefForListScalingV2Policies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScalingV2PoliciesResponse), nil
+	}
+}
+
+//查询指定弹性伸缩策略信息。
+func (c *AsClient) ShowScalingV2Policy(request *model.ShowScalingV2PolicyRequest) (*model.ShowScalingV2PolicyResponse, error) {
+	requestDef := GenReqDefForShowScalingV2Policy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowScalingV2PolicyResponse), nil
+	}
+}
+
+//修改指定弹性伸缩策略。修改弹性伸缩策略V2版本与V1版本的区别在于，V2版本支持修改伸缩资源类型。
+func (c *AsClient) UpdateScalingV2Policy(request *model.UpdateScalingV2PolicyRequest) (*model.UpdateScalingV2PolicyResponse, error) {
+	requestDef := GenReqDefForUpdateScalingV2Policy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateScalingV2PolicyResponse), nil
 	}
 }

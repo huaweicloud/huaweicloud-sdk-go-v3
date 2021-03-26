@@ -14,7 +14,7 @@ type ListMessageTemplatesRequest struct {
 
 	MessageTemplateName *string `json:"message_template_name,omitempty"`
 
-	Protocol string `json:"protocol"`
+	Protocol *string `json:"protocol,omitempty"`
 }
 
 func (o ListMessageTemplatesRequest) String() string {

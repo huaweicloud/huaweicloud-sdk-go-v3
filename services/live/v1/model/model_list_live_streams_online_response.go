@@ -23,9 +23,10 @@ type ListLiveStreamsOnlineResponse struct {
 	// 请求唯一标识
 
 	RequestId *string `json:"request_id,omitempty"`
+	// 推流统计
 
-	Streams        *OnlineInfo `json:"streams,omitempty"`
-	HttpStatusCode int         `json:"-"`
+	Streams        *[]OnlineInfo `json:"streams,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ListLiveStreamsOnlineResponse) String() string {

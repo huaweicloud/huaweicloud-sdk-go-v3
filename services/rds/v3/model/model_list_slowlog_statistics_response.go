@@ -16,7 +16,7 @@ type ListSlowlogStatisticsResponse struct {
 	PageRecord *int32 `json:"pageRecord,omitempty"`
 	// 慢日志列表
 
-	SlowLogList *[]SlowLog `json:"slowLogList,omitempty"`
+	SlowLogList *[]SlowLogStatistics `json:"slowLogList,omitempty"`
 	// 总条数
 
 	TotalRecord *int32 `json:"totalRecord,omitempty"`
