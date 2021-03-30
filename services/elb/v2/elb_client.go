@@ -19,6 +19,50 @@ func ElbClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//批量添加监听器标签。
+func (c *ElbClient) BatchCreateListenerTags(request *model.BatchCreateListenerTagsRequest) (*model.BatchCreateListenerTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateListenerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateListenerTagsResponse), nil
+	}
+}
+
+//批量添加负载均衡器标签。
+func (c *ElbClient) BatchCreateLoadbalancerTags(request *model.BatchCreateLoadbalancerTagsRequest) (*model.BatchCreateLoadbalancerTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateLoadbalancerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateLoadbalancerTagsResponse), nil
+	}
+}
+
+//批量删除监听器标签。
+func (c *ElbClient) BatchDeleteListenerTags(request *model.BatchDeleteListenerTagsRequest) (*model.BatchDeleteListenerTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteListenerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteListenerTagsResponse), nil
+	}
+}
+
+//批量删除负载均衡器标签。
+func (c *ElbClient) BatchDeleteLoadbalancerTags(request *model.BatchDeleteLoadbalancerTagsRequest) (*model.BatchDeleteLoadbalancerTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteLoadbalancerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteLoadbalancerTagsResponse), nil
+	}
+}
+
 //给后端云服务器组添加健康检查
 func (c *ElbClient) CreateHealthmonitor(request *model.CreateHealthmonitorRequest) (*model.CreateHealthmonitorResponse, error) {
 	requestDef := GenReqDefForCreateHealthmonitor()
@@ -63,6 +107,17 @@ func (c *ElbClient) CreateListener(request *model.CreateListenerRequest) (*model
 	}
 }
 
+//给指定负载均衡器添加标签。
+func (c *ElbClient) CreateListenerTags(request *model.CreateListenerTagsRequest) (*model.CreateListenerTagsResponse, error) {
+	requestDef := GenReqDefForCreateListenerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateListenerTagsResponse), nil
+	}
+}
+
 //创建私网类型的增强型负载均衡器。创建成功后，该接口会返回创建的增强型负载均衡器的ID、所属子网ID、负载均衡器IP等详细信息。若要创建公网类型的增强型负载均衡器，还需调用创建浮动IP的接口，将浮动IP与私网负载均衡器的vip_port_id绑定。
 func (c *ElbClient) CreateLoadbalancer(request *model.CreateLoadbalancerRequest) (*model.CreateLoadbalancerResponse, error) {
 	requestDef := GenReqDefForCreateLoadbalancer()
@@ -71,6 +126,17 @@ func (c *ElbClient) CreateLoadbalancer(request *model.CreateLoadbalancerRequest)
 		return nil, err
 	} else {
 		return resp.(*model.CreateLoadbalancerResponse), nil
+	}
+}
+
+//给指定负载均衡器添加标签。
+func (c *ElbClient) CreateLoadbalancerTags(request *model.CreateLoadbalancerTagsRequest) (*model.CreateLoadbalancerTagsResponse, error) {
+	requestDef := GenReqDefForCreateLoadbalancerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateLoadbalancerTagsResponse), nil
 	}
 }
 
@@ -151,6 +217,17 @@ func (c *ElbClient) DeleteListener(request *model.DeleteListenerRequest) (*model
 	}
 }
 
+//删除监听器的某个key对应的标签。
+func (c *ElbClient) DeleteListenerTags(request *model.DeleteListenerTagsRequest) (*model.DeleteListenerTagsResponse, error) {
+	requestDef := GenReqDefForDeleteListenerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteListenerTagsResponse), nil
+	}
+}
+
 //根据指定ID删除负载均衡器。提供级联删除选项，当选择级联删除时，删除和负载均衡器关联的监听器、后端云服务器组、后端云服务器、健康检查、转发策略、转发规则、白名单、标签等
 func (c *ElbClient) DeleteLoadbalancer(request *model.DeleteLoadbalancerRequest) (*model.DeleteLoadbalancerResponse, error) {
 	requestDef := GenReqDefForDeleteLoadbalancer()
@@ -159,6 +236,17 @@ func (c *ElbClient) DeleteLoadbalancer(request *model.DeleteLoadbalancerRequest)
 		return nil, err
 	} else {
 		return resp.(*model.DeleteLoadbalancerResponse), nil
+	}
+}
+
+//删除负载均衡器的某个key对应的标签。
+func (c *ElbClient) DeleteLoadbalancerTags(request *model.DeleteLoadbalancerTagsRequest) (*model.DeleteLoadbalancerTagsResponse, error) {
+	requestDef := GenReqDefForDeleteLoadbalancerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLoadbalancerTagsResponse), nil
 	}
 }
 
@@ -228,6 +316,17 @@ func (c *ElbClient) ListL7rules(request *model.ListL7rulesRequest) (*model.ListL
 	}
 }
 
+//查询指定项目下所有监听器的标签列表
+func (c *ElbClient) ListListenerTags(request *model.ListListenerTagsRequest) (*model.ListListenerTagsResponse, error) {
+	requestDef := GenReqDefForListListenerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListListenerTagsResponse), nil
+	}
+}
+
 //查询监听器列表。支持过滤查询和分页查询。可以通过监听器ID、协议类型、监听端口号、关联的后端云服务器的IP等查询监听器。
 func (c *ElbClient) ListListeners(request *model.ListListenersRequest) (*model.ListListenersResponse, error) {
 	requestDef := GenReqDefForListListeners()
@@ -239,6 +338,28 @@ func (c *ElbClient) ListListeners(request *model.ListListenersRequest) (*model.L
 	}
 }
 
+//根据标签过滤查询监听器实例。
+func (c *ElbClient) ListListenersByTags(request *model.ListListenersByTagsRequest) (*model.ListListenersByTagsResponse, error) {
+	requestDef := GenReqDefForListListenersByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListListenersByTagsResponse), nil
+	}
+}
+
+//查询指定项目下所有负载均衡器的标签列表
+func (c *ElbClient) ListLoadbalancerTags(request *model.ListLoadbalancerTagsRequest) (*model.ListLoadbalancerTagsResponse, error) {
+	requestDef := GenReqDefForListLoadbalancerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLoadbalancerTagsResponse), nil
+	}
+}
+
 //查询负载均衡器列表。
 func (c *ElbClient) ListLoadbalancers(request *model.ListLoadbalancersRequest) (*model.ListLoadbalancersResponse, error) {
 	requestDef := GenReqDefForListLoadbalancers()
@@ -247,6 +368,17 @@ func (c *ElbClient) ListLoadbalancers(request *model.ListLoadbalancersRequest) (
 		return nil, err
 	} else {
 		return resp.(*model.ListLoadbalancersResponse), nil
+	}
+}
+
+//根据标签过滤查询负载均衡实例。
+func (c *ElbClient) ListLoadbalancersByTags(request *model.ListLoadbalancersByTagsRequest) (*model.ListLoadbalancersByTagsResponse, error) {
+	requestDef := GenReqDefForListLoadbalancersByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLoadbalancersByTagsResponse), nil
 	}
 }
 
@@ -327,6 +459,17 @@ func (c *ElbClient) ShowListener(request *model.ShowListenerRequest) (*model.Sho
 	}
 }
 
+//查询指定监听器的所有标签信息。
+func (c *ElbClient) ShowListenerTags(request *model.ShowListenerTagsRequest) (*model.ShowListenerTagsResponse, error) {
+	requestDef := GenReqDefForShowListenerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowListenerTagsResponse), nil
+	}
+}
+
 //根据指定负载均衡器ID查询负载均衡器详情
 func (c *ElbClient) ShowLoadbalancer(request *model.ShowLoadbalancerRequest) (*model.ShowLoadbalancerResponse, error) {
 	requestDef := GenReqDefForShowLoadbalancer()
@@ -335,6 +478,17 @@ func (c *ElbClient) ShowLoadbalancer(request *model.ShowLoadbalancerRequest) (*m
 		return nil, err
 	} else {
 		return resp.(*model.ShowLoadbalancerResponse), nil
+	}
+}
+
+//查询指定负载均衡器的所有标签信息
+func (c *ElbClient) ShowLoadbalancerTags(request *model.ShowLoadbalancerTagsRequest) (*model.ShowLoadbalancerTagsResponse, error) {
+	requestDef := GenReqDefForShowLoadbalancerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLoadbalancerTagsResponse), nil
 	}
 }
 

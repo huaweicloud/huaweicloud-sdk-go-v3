@@ -140,6 +140,28 @@ func (c *KmsClient) CreateRandom(request *model.CreateRandomRequest) (*model.Cre
 	}
 }
 
+//创建新的凭据，并将凭据值存入凭据的初始版本。   凭据管理服务将凭据值加密后，存储在凭据对象下的版本中。每个版本可与多个凭据版本状态相关联，凭据版本状态用于标识凭据版本处于的阶段，没有版本状态标记的版本视为已弃用，可用凭据管理服务自动删除。  初始版本的状态被标记为SYSCURRENT。
+func (c *KmsClient) CreateSecret(request *model.CreateSecretRequest) (*model.CreateSecretResponse, error) {
+	requestDef := GenReqDefForCreateSecret()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSecretResponse), nil
+	}
+}
+
+//在指定的凭据中，创建一个新的凭据版本，用于加密保管新的凭据值。默认情况下，新创建的凭据版本被标记为SYSCURRENT状态，而SYSCURRENT标记的前一个凭据版本被标记为SYSPREVIOUS状态。您可以通过指定VersionStage参数来覆盖默认行为。
+func (c *KmsClient) CreateSecretVersion(request *model.CreateSecretVersionRequest) (*model.CreateSecretVersionResponse, error) {
+	requestDef := GenReqDefForCreateSecretVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSecretVersionResponse), nil
+	}
+}
+
 //- 功能介绍：解密数据。
 func (c *KmsClient) DecryptData(request *model.DecryptDataRequest) (*model.DecryptDataResponse, error) {
 	requestDef := GenReqDefForDecryptData()
@@ -181,6 +203,39 @@ func (c *KmsClient) DeleteKey(request *model.DeleteKeyRequest) (*model.DeleteKey
 		return nil, err
 	} else {
 		return resp.(*model.DeleteKeyResponse), nil
+	}
+}
+
+//立即删除指定的凭据，且无法恢复。
+func (c *KmsClient) DeleteSecret(request *model.DeleteSecretRequest) (*model.DeleteSecretResponse, error) {
+	requestDef := GenReqDefForDeleteSecret()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSecretResponse), nil
+	}
+}
+
+//指定延迟删除时间，创建删除凭据的定时任务，可设置7~30天的的延迟删除时间。
+func (c *KmsClient) DeleteSecretForSchedule(request *model.DeleteSecretForScheduleRequest) (*model.DeleteSecretForScheduleResponse, error) {
+	requestDef := GenReqDefForDeleteSecretForSchedule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSecretForScheduleResponse), nil
+	}
+}
+
+//删除指定的凭据版本状态。
+func (c *KmsClient) DeleteSecretStage(request *model.DeleteSecretStageRequest) (*model.DeleteSecretStageResponse, error) {
+	requestDef := GenReqDefForDeleteSecretStage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSecretStageResponse), nil
 	}
 }
 
@@ -338,6 +393,50 @@ func (c *KmsClient) ListRetirableGrants(request *model.ListRetirableGrantsReques
 	}
 }
 
+//查询指定凭据版本状态标记的版本信息。
+func (c *KmsClient) ListSecretStage(request *model.ListSecretStageRequest) (*model.ListSecretStageResponse, error) {
+	requestDef := GenReqDefForListSecretStage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecretStageResponse), nil
+	}
+}
+
+//查询指定凭据下的版本列表信息。
+func (c *KmsClient) ListSecretVersions(request *model.ListSecretVersionsRequest) (*model.ListSecretVersionsResponse, error) {
+	requestDef := GenReqDefForListSecretVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecretVersionsResponse), nil
+	}
+}
+
+//查询当前用户在本项目下创建的所有凭据。
+func (c *KmsClient) ListSecrets(request *model.ListSecretsRequest) (*model.ListSecretsResponse, error) {
+	requestDef := GenReqDefForListSecrets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecretsResponse), nil
+	}
+}
+
+//取消凭据的定时删除任务，凭据对象恢复可使用状态。
+func (c *KmsClient) RestoreSecret(request *model.RestoreSecretRequest) (*model.RestoreSecretResponse, error) {
+	requestDef := GenReqDefForRestoreSecret()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreSecretResponse), nil
+	}
+}
+
 //- 功能介绍：查询用户主密钥轮换状态。
 func (c *KmsClient) ShowKeyRotationStatus(request *model.ShowKeyRotationStatusRequest) (*model.ShowKeyRotationStatusResponse, error) {
 	requestDef := GenReqDefForShowKeyRotationStatus()
@@ -357,6 +456,28 @@ func (c *KmsClient) ShowKmsTags(request *model.ShowKmsTagsRequest) (*model.ShowK
 		return nil, err
 	} else {
 		return resp.(*model.ShowKmsTagsResponse), nil
+	}
+}
+
+//查询指定凭据的信息。
+func (c *KmsClient) ShowSecret(request *model.ShowSecretRequest) (*model.ShowSecretResponse, error) {
+	requestDef := GenReqDefForShowSecret()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecretResponse), nil
+	}
+}
+
+//查询指定凭据版本的信息和版本中的明文凭据值，只能查询ENABLED状态的凭据。 通过/v1/{project_id}/secrets/{secret_id}/versions/latest可访问凭据最新版本的凭据值。
+func (c *KmsClient) ShowSecretVersion(request *model.ShowSecretVersionRequest) (*model.ShowSecretVersionResponse, error) {
+	requestDef := GenReqDefForShowSecretVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecretVersionResponse), nil
 	}
 }
 
@@ -412,6 +533,28 @@ func (c *KmsClient) UpdateKeyRotationInterval(request *model.UpdateKeyRotationIn
 		return nil, err
 	} else {
 		return resp.(*model.UpdateKeyRotationIntervalResponse), nil
+	}
+}
+
+//更新指定凭据的元数据信息。
+func (c *KmsClient) UpdateSecret(request *model.UpdateSecretRequest) (*model.UpdateSecretResponse, error) {
+	requestDef := GenReqDefForUpdateSecret()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecretResponse), nil
+	}
+}
+
+//更新凭据的版本状态。
+func (c *KmsClient) UpdateSecretStage(request *model.UpdateSecretStageRequest) (*model.UpdateSecretStageResponse, error) {
+	requestDef := GenReqDefForUpdateSecretStage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecretStageResponse), nil
 	}
 }
 

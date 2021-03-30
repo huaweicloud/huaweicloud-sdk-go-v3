@@ -49,6 +49,9 @@ type ShowIssueV4Response struct {
 	Iteration *IssueItemSfV4Iteration `json:"iteration,omitempty"`
 
 	Module *IssueItemSfV4Module `json:"module,omitempty"`
+	// 标题
+
+	Name *string `json:"name,omitempty"`
 
 	ParentIssue *CreateIssueResponseV4ParentIssue `json:"parent_issue,omitempty"`
 

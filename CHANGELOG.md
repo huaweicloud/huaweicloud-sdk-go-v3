@@ -1,3 +1,34 @@
+# 0.0.39-rc 2021-03-30
+
+### HuaweiCloud SDK Kafka
+
+- _Features_
+  - None
+- _Bug Fix_
+  - Fix the issue that the interface for querying messages does not contain the timestamp field.
+- _Change_
+  - None
+
+### HuaweiCloud SDK ProjectMan
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the attribute `name` to the response body `IssueResponseV4` of the interfaces `ShowIssueV4` and `UpdateIssueV4`.
+  - Change the attribute `work_time` to `work_date` in `ShowProjectWorkHoursResponseBody` in the response body of the interfaces `ShowProjectWorkHours` and `ListProjectWorkHours`.
+
+### HuaweiCloud SDK SMN
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Change the request parameter `protocol`  of the interface `PublishMessage`  from mandatory to optional.
+  - Change the attribute `subject`  of the class `PublishMessageRequestBody` in the request body of the interface `PublishMessage`  from mandatory to optional.
+
 # 0.0.38-rc 2021-03-26
 
 ### HuaweiCloud SDK Core

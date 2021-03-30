@@ -29,7 +29,7 @@ type CreateCertificateRequestBody struct {
 	// SSL证书的类型。默认值：server； 取值范围： server：服务端证书； client：客户端证书；
 
 	Type *string `json:"type,omitempty"`
-	// 企业项目ID。创建负载均衡器时，给负载均衡器绑定企业项目ID。取值范围：带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。默认值：\"0\"
+	// 企业项目ID。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }

@@ -20,7 +20,7 @@ type Vault struct {
 	// 项目ID
 
 	ProjectId string `json:"project_id"`
-	// 保管库类型
+	// 保管库资源类型id
 
 	ProviderId string `json:"provider_id"`
 	// 存储库资源

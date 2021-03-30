@@ -10,8 +10,8 @@ import (
 type ShowUserInstancesResponse struct {
 	// 非默认用户主密钥个数。
 
-	InstanceNum    *string `json:"instance_num,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	InstanceNum    *int32 `json:"instance_num,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowUserInstancesResponse) String() string {

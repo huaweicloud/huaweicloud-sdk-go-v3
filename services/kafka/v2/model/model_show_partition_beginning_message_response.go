@@ -16,7 +16,10 @@ type ShowPartitionBeginningMessageResponse struct {
 	Partition *int32 `json:"partition,omitempty"`
 	// 最新消息位置。
 
-	MessageOffset  *int32 `json:"message_offset,omitempty"`
+	MessageOffset *int32 `json:"message_offset,omitempty"`
+	// 最新消息时间戳。
+
+	Timestamp      *int64 `json:"timestamp,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

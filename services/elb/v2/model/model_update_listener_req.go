@@ -17,7 +17,7 @@ type UpdateListenerReq struct {
 	// 监听器的最大连接数。该字段为预留字段，暂未启用。默认为-1。
 
 	ConnectionLimit *int32 `json:"connection_limit,omitempty"`
-	// HTTP2功能的开启状态。该字段只有当监听器的协议是TERMINATED_HTTPS时生效。
+	// HTTP2功能的开启状态。该字段只有当监听器的协议是TERMINATED_HTTPS时才有意义。
 
 	Http2Enable *bool `json:"http2_enable,omitempty"`
 	// 监听器的默认后端云服务器组ID。当请求没有匹配的转发策略时，转发到默认后端云服务器上处理。当该字段为null时，表示监听器无默认的后端云服务器组。

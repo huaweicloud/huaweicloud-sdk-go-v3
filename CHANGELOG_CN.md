@@ -1,3 +1,34 @@
+# 0.0.39-rc 2021-03-30
+
+### HuaweiCloud SDK Kafka
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 修复查询消息接口没有时间戳字段的问题
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK ProjectMan
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ShowIssueV4`、`UpdateIssueV4`的响应体 `IssueResponseV4`增加`name`属性
+  - 将接口`ShowProjectWorkHours`、`ListProjectWorkHours`的响应体`ShowProjectWorkHoursResponseBody`下的属性`work_time`修改为`work_date`
+
+### HuaweiCloud SDK SMN
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 将接口`PublishMessage`的请求参数`protocol`从必填改为非必填
+  - 将接口 `PublishMessage` 请求体的 `PublishMessageRequestBody` 类属性 `subject` 由必填改为非必填
+
 # 0.0.38-rc 2021-03-26
 
 ### HuaweiCloud SDK Core

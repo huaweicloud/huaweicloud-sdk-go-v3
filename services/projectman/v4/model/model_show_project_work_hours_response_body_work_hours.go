@@ -18,7 +18,7 @@ type ShowProjectWorkHoursResponseBodyWorkHours struct {
 	UserName *string `json:"user_name,omitempty"`
 	// 工时日期
 
-	WorkTime *string `json:"work_time,omitempty"`
+	WorkDate *string `json:"work_date,omitempty"`
 	// 工时花费
 
 	WorkHoursNum *string `json:"work_hours_num,omitempty"`
