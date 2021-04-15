@@ -7,6 +7,9 @@ import (
 )
 
 type TransTemplate struct {
+	// 租户Id
+
+	TenantId *string `json:"tenant_id,omitempty"`
 	// 转码模板名称。
 
 	TemplateName string `json:"template_name"`

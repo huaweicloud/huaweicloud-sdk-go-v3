@@ -1,0 +1,21 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// Request Object
+type RunTextModerationRequest struct {
+	Body *TextDetectionReq `json:"body,omitempty"`
+}
+
+func (o RunTextModerationRequest) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RunTextModerationRequest struct{}"
+	}
+
+	return strings.Join([]string{"RunTextModerationRequest", string(data)}, " ")
+}

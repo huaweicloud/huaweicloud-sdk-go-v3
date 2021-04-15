@@ -30,6 +30,28 @@ func (c *VpcClient) AcceptVpcPeering(request *model.AcceptVpcPeeringRequest) (*m
 	}
 }
 
+//为指定的子网资源实例批量添加标签。 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
+func (c *VpcClient) BatchCreateSubnetTags(request *model.BatchCreateSubnetTagsRequest) (*model.BatchCreateSubnetTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateSubnetTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateSubnetTagsResponse), nil
+	}
+}
+
+//为指定的子网资源实例批量删除标签 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+func (c *VpcClient) BatchDeleteSubnetTags(request *model.BatchDeleteSubnetTagsRequest) (*model.BatchDeleteSubnetTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteSubnetTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteSubnetTagsResponse), nil
+	}
+}
+
 //创建端口。
 func (c *VpcClient) CreatePort(request *model.CreatePortRequest) (*model.CreatePortResponse, error) {
 	requestDef := GenReqDefForCreatePort()
@@ -71,6 +93,17 @@ func (c *VpcClient) CreateSubnet(request *model.CreateSubnetRequest) (*model.Cre
 		return nil, err
 	} else {
 		return resp.(*model.CreateSubnetResponse), nil
+	}
+}
+
+//给指定子网资源实例增加标签信息。 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
+func (c *VpcClient) CreateSubnetTag(request *model.CreateSubnetTagRequest) (*model.CreateSubnetTagResponse, error) {
+	requestDef := GenReqDefForCreateSubnetTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSubnetTagResponse), nil
 	}
 }
 
@@ -129,6 +162,17 @@ func (c *VpcClient) DeleteSubnet(request *model.DeleteSubnetRequest) (*model.Del
 	}
 }
 
+//删除指定子网资源实例的标签信息。 该接口为幂等接口：删除的key不存在报404，Key不能为空或者空字符串
+func (c *VpcClient) DeleteSubnetTag(request *model.DeleteSubnetTagRequest) (*model.DeleteSubnetTagResponse, error) {
+	requestDef := GenReqDefForDeleteSubnetTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSubnetTagResponse), nil
+	}
+}
+
 //删除对等连接。 可以在在本端或对端任何一端删除对等连接。
 func (c *VpcClient) DeleteVpcPeering(request *model.DeleteVpcPeeringRequest) (*model.DeleteVpcPeeringResponse, error) {
 	requestDef := GenReqDefForDeleteVpcPeering()
@@ -173,6 +217,17 @@ func (c *VpcClient) ListSecurityGroups(request *model.ListSecurityGroupsRequest)
 	}
 }
 
+//查询租户在指定区域和实例类型的所有标签集合
+func (c *VpcClient) ListSubnetTags(request *model.ListSubnetTagsRequest) (*model.ListSubnetTagsResponse, error) {
+	requestDef := GenReqDefForListSubnetTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubnetTagsResponse), nil
+	}
+}
+
 //查询子网列表
 func (c *VpcClient) ListSubnets(request *model.ListSubnetsRequest) (*model.ListSubnetsResponse, error) {
 	requestDef := GenReqDefForListSubnets()
@@ -181,6 +236,17 @@ func (c *VpcClient) ListSubnets(request *model.ListSubnetsRequest) (*model.ListS
 		return nil, err
 	} else {
 		return resp.(*model.ListSubnetsResponse), nil
+	}
+}
+
+//使用标签过滤实例
+func (c *VpcClient) ListSubnetsByTags(request *model.ListSubnetsByTagsRequest) (*model.ListSubnetsByTagsResponse, error) {
+	requestDef := GenReqDefForListSubnetsByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubnetsByTagsResponse), nil
 	}
 }
 
@@ -258,6 +324,17 @@ func (c *VpcClient) ShowSubnet(request *model.ShowSubnetRequest) (*model.ShowSub
 		return nil, err
 	} else {
 		return resp.(*model.ShowSubnetResponse), nil
+	}
+}
+
+//查询指定子网实例的标签信息。
+func (c *VpcClient) ShowSubnetTags(request *model.ShowSubnetTagsRequest) (*model.ShowSubnetTagsResponse, error) {
+	requestDef := GenReqDefForShowSubnetTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSubnetTagsResponse), nil
 	}
 }
 
@@ -357,6 +434,105 @@ func (c *VpcClient) ShowPrivateip(request *model.ShowPrivateipRequest) (*model.S
 		return nil, err
 	} else {
 		return resp.(*model.ShowPrivateipResponse), nil
+	}
+}
+
+//创建安全组
+func (c *VpcClient) NeutronCreateSecurityGroup(request *model.NeutronCreateSecurityGroupRequest) (*model.NeutronCreateSecurityGroupResponse, error) {
+	requestDef := GenReqDefForNeutronCreateSecurityGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronCreateSecurityGroupResponse), nil
+	}
+}
+
+//创建安全组规则
+func (c *VpcClient) NeutronCreateSecurityGroupRule(request *model.NeutronCreateSecurityGroupRuleRequest) (*model.NeutronCreateSecurityGroupRuleResponse, error) {
+	requestDef := GenReqDefForNeutronCreateSecurityGroupRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronCreateSecurityGroupRuleResponse), nil
+	}
+}
+
+//删除安全组
+func (c *VpcClient) NeutronDeleteSecurityGroup(request *model.NeutronDeleteSecurityGroupRequest) (*model.NeutronDeleteSecurityGroupResponse, error) {
+	requestDef := GenReqDefForNeutronDeleteSecurityGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronDeleteSecurityGroupResponse), nil
+	}
+}
+
+//删除安全组规则
+func (c *VpcClient) NeutronDeleteSecurityGroupRule(request *model.NeutronDeleteSecurityGroupRuleRequest) (*model.NeutronDeleteSecurityGroupRuleResponse, error) {
+	requestDef := GenReqDefForNeutronDeleteSecurityGroupRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronDeleteSecurityGroupRuleResponse), nil
+	}
+}
+
+//查询提交请求的租户有权限查看的所有安全组规则。单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询
+func (c *VpcClient) NeutronListSecurityGroupRules(request *model.NeutronListSecurityGroupRulesRequest) (*model.NeutronListSecurityGroupRulesResponse, error) {
+	requestDef := GenReqDefForNeutronListSecurityGroupRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronListSecurityGroupRulesResponse), nil
+	}
+}
+
+//查询提交请求租户的所有安全组，单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询 。
+func (c *VpcClient) NeutronListSecurityGroups(request *model.NeutronListSecurityGroupsRequest) (*model.NeutronListSecurityGroupsResponse, error) {
+	requestDef := GenReqDefForNeutronListSecurityGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronListSecurityGroupsResponse), nil
+	}
+}
+
+//查询安全组详情
+func (c *VpcClient) NeutronShowSecurityGroup(request *model.NeutronShowSecurityGroupRequest) (*model.NeutronShowSecurityGroupResponse, error) {
+	requestDef := GenReqDefForNeutronShowSecurityGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronShowSecurityGroupResponse), nil
+	}
+}
+
+//查询安全组规则详情。
+func (c *VpcClient) NeutronShowSecurityGroupRule(request *model.NeutronShowSecurityGroupRuleRequest) (*model.NeutronShowSecurityGroupRuleResponse, error) {
+	requestDef := GenReqDefForNeutronShowSecurityGroupRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronShowSecurityGroupRuleResponse), nil
+	}
+}
+
+//更新安全组
+func (c *VpcClient) NeutronUpdateSecurityGroup(request *model.NeutronUpdateSecurityGroupRequest) (*model.NeutronUpdateSecurityGroupResponse, error) {
+	requestDef := GenReqDefForNeutronUpdateSecurityGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronUpdateSecurityGroupResponse), nil
 	}
 }
 
@@ -547,6 +723,28 @@ func (c *VpcClient) NeutronUpdateFirewallRule(request *model.NeutronUpdateFirewa
 	}
 }
 
+//为指定的VPC资源实例批量添加标签。 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
+func (c *VpcClient) BatchCreateVpcTags(request *model.BatchCreateVpcTagsRequest) (*model.BatchCreateVpcTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateVpcTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateVpcTagsResponse), nil
+	}
+}
+
+//为指定的VPC资源实例批量删除标签。 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+func (c *VpcClient) BatchDeleteVpcTags(request *model.BatchDeleteVpcTagsRequest) (*model.BatchDeleteVpcTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteVpcTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteVpcTagsResponse), nil
+	}
+}
+
 //创建虚拟私有云。
 func (c *VpcClient) CreateVpc(request *model.CreateVpcRequest) (*model.CreateVpcResponse, error) {
 	requestDef := GenReqDefForCreateVpc()
@@ -555,6 +753,17 @@ func (c *VpcClient) CreateVpc(request *model.CreateVpcRequest) (*model.CreateVpc
 		return nil, err
 	} else {
 		return resp.(*model.CreateVpcResponse), nil
+	}
+}
+
+//给指定VPC资源实例增加标签信息 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
+func (c *VpcClient) CreateVpcResourceTag(request *model.CreateVpcResourceTagRequest) (*model.CreateVpcResourceTagResponse, error) {
+	requestDef := GenReqDefForCreateVpcResourceTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVpcResourceTagResponse), nil
 	}
 }
 
@@ -591,6 +800,17 @@ func (c *VpcClient) DeleteVpcRoute(request *model.DeleteVpcRouteRequest) (*model
 	}
 }
 
+//删除指定VPC资源实例的标签信息 该接口为幂等接口：删除的key不存在报404，Key不能为空或者空字符串
+func (c *VpcClient) DeleteVpcTag(request *model.DeleteVpcTagRequest) (*model.DeleteVpcTagResponse, error) {
+	requestDef := GenReqDefForDeleteVpcTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVpcTagResponse), nil
+	}
+}
+
 //查询提交请求的租户的所有路由列表，并根据过滤条件进行过滤。
 func (c *VpcClient) ListVpcRoutes(request *model.ListVpcRoutesRequest) (*model.ListVpcRoutesResponse, error) {
 	requestDef := GenReqDefForListVpcRoutes()
@@ -602,6 +822,17 @@ func (c *VpcClient) ListVpcRoutes(request *model.ListVpcRoutesRequest) (*model.L
 	}
 }
 
+//查询租户在指定区域和实例类型的所有标签集合
+func (c *VpcClient) ListVpcTags(request *model.ListVpcTagsRequest) (*model.ListVpcTagsResponse, error) {
+	requestDef := GenReqDefForListVpcTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVpcTagsResponse), nil
+	}
+}
+
 //查询虚拟私有云列表。
 func (c *VpcClient) ListVpcs(request *model.ListVpcsRequest) (*model.ListVpcsResponse, error) {
 	requestDef := GenReqDefForListVpcs()
@@ -610,6 +841,17 @@ func (c *VpcClient) ListVpcs(request *model.ListVpcsRequest) (*model.ListVpcsRes
 		return nil, err
 	} else {
 		return resp.(*model.ListVpcsResponse), nil
+	}
+}
+
+//使用标签过滤实例。
+func (c *VpcClient) ListVpcsByTags(request *model.ListVpcsByTagsRequest) (*model.ListVpcsByTagsResponse, error) {
+	requestDef := GenReqDefForListVpcsByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVpcsByTagsResponse), nil
 	}
 }
 
@@ -632,6 +874,17 @@ func (c *VpcClient) ShowVpcRoute(request *model.ShowVpcRouteRequest) (*model.Sho
 		return nil, err
 	} else {
 		return resp.(*model.ShowVpcRouteResponse), nil
+	}
+}
+
+//查询指定VPC实例的标签信息
+func (c *VpcClient) ShowVpcTags(request *model.ShowVpcTagsRequest) (*model.ShowVpcTagsResponse, error) {
+	requestDef := GenReqDefForShowVpcTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVpcTagsResponse), nil
 	}
 }
 

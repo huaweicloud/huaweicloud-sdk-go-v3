@@ -1,3 +1,69 @@
+# 0.0.40-rc 2021-04-15
+
+### HuaweiCloud SDK Moderation
+
+- _新增特性_
+  - 支持Moderation内容审核服务
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK Image
+
+- _新增特性_
+  - 支持Image图像识别服务
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK RDS
+
+- _新增特性_
+  - 新增支持管理数据库的接口
+    - `CreateSqlserverDatabase`
+    - `DeleteSqlserverDatabase`
+    - `ListSqlserverDatabases`
+  - 新增支持管理用户的接口
+    - `CreateSqlserverDbUser`
+    - `ListSqlserverDbUsers`
+    - `ListAuthorizedSqlserverDbUsers`
+    - `DeleteSqlserverDbUser`
+    - `AllowSqlserverDbUserPrivilege`
+    - `RevokeSqlserverDbUserPrivilege`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+  
+### HuaweiCloud SDK DDS
+
+- _新增特性_
+  - 新增支持接口`DeleteDatabaseUser`、`DeleteDatabaseRole`、`ShowConnectionStatistics`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK ProjectMan
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListIssuesV4`, `ListChildIssuesV4`响应体新增字段`closed_time` 、`id` 、`created_time`
+
+### HuaweiCloud SDK VPC
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 修复问题，开放vpc和子网的标签
+- _特性变更_
+  - 无
+
 # 0.0.39-rc 2021-03-30
 
 ### HuaweiCloud SDK Kafka

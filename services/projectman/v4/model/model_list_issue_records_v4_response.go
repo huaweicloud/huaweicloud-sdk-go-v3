@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ListIssueRecordsV4Response struct {
-	// 操作记录id
+	// 操作记录id (已废弃)
 
 	Id *int32 `json:"id,omitempty"`
-	// 创建时间
+	// 创建时间 (已废弃)
 
 	CreatedTime *int64 `json:"created_time,omitempty"`
 

@@ -65,6 +65,9 @@ type IssueResponseV4 struct {
 	// 更新时间 年-月-日 时:分:秒
 
 	UpdatedTime *string `json:"updated_time,omitempty"`
+	// 关闭时间 年-月-日 时:分:秒
+
+	ClosedTime *string `json:"closed_time,omitempty"`
 }
 
 func (o IssueResponseV4) String() string {

@@ -1,0 +1,24 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// Response Object
+type RunImageBatchModerationResponse struct {
+	// 调用成功时表示调用结果。 调用失败时无此字段。
+
+	Result         *[]ImageBatchModerationResultBody `json:"result,omitempty"`
+	HttpStatusCode int                               `json:"-"`
+}
+
+func (o RunImageBatchModerationResponse) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "RunImageBatchModerationResponse struct{}"
+	}
+
+	return strings.Join([]string{"RunImageBatchModerationResponse", string(data)}, " ")
+}

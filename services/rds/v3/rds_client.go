@@ -920,3 +920,102 @@ func (c *RdsClient) UpdatePostgresqlInstanceAlias(request *model.UpdatePostgresq
 		return resp.(*model.UpdatePostgresqlInstanceAliasResponse), nil
 	}
 }
+
+//授权数据库帐号。
+func (c *RdsClient) AllowSqlserverDbUserPrivilege(request *model.AllowSqlserverDbUserPrivilegeRequest) (*model.AllowSqlserverDbUserPrivilegeResponse, error) {
+	requestDef := GenReqDefForAllowSqlserverDbUserPrivilege()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AllowSqlserverDbUserPrivilegeResponse), nil
+	}
+}
+
+//创建数据库。
+func (c *RdsClient) CreateSqlserverDatabase(request *model.CreateSqlserverDatabaseRequest) (*model.CreateSqlserverDatabaseResponse, error) {
+	requestDef := GenReqDefForCreateSqlserverDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSqlserverDatabaseResponse), nil
+	}
+}
+
+//创建数据库用户。
+func (c *RdsClient) CreateSqlserverDbUser(request *model.CreateSqlserverDbUserRequest) (*model.CreateSqlserverDbUserResponse, error) {
+	requestDef := GenReqDefForCreateSqlserverDbUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSqlserverDbUserResponse), nil
+	}
+}
+
+//删除数据库。
+func (c *RdsClient) DeleteSqlserverDatabase(request *model.DeleteSqlserverDatabaseRequest) (*model.DeleteSqlserverDatabaseResponse, error) {
+	requestDef := GenReqDefForDeleteSqlserverDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSqlserverDatabaseResponse), nil
+	}
+}
+
+//删除数据库用户。
+func (c *RdsClient) DeleteSqlserverDbUser(request *model.DeleteSqlserverDbUserRequest) (*model.DeleteSqlserverDbUserResponse, error) {
+	requestDef := GenReqDefForDeleteSqlserverDbUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSqlserverDbUserResponse), nil
+	}
+}
+
+//查询指定数据库的已授权用户。
+func (c *RdsClient) ListAuthorizedSqlserverDbUsers(request *model.ListAuthorizedSqlserverDbUsersRequest) (*model.ListAuthorizedSqlserverDbUsersResponse, error) {
+	requestDef := GenReqDefForListAuthorizedSqlserverDbUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAuthorizedSqlserverDbUsersResponse), nil
+	}
+}
+
+//查询数据库列表。
+func (c *RdsClient) ListSqlserverDatabases(request *model.ListSqlserverDatabasesRequest) (*model.ListSqlserverDatabasesResponse, error) {
+	requestDef := GenReqDefForListSqlserverDatabases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSqlserverDatabasesResponse), nil
+	}
+}
+
+//查询数据库用户列表。
+func (c *RdsClient) ListSqlserverDbUsers(request *model.ListSqlserverDbUsersRequest) (*model.ListSqlserverDbUsersResponse, error) {
+	requestDef := GenReqDefForListSqlserverDbUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSqlserverDbUsersResponse), nil
+	}
+}
+
+//解除数据库帐号权限。
+func (c *RdsClient) RevokeSqlserverDbUserPrivilege(request *model.RevokeSqlserverDbUserPrivilegeRequest) (*model.RevokeSqlserverDbUserPrivilegeResponse, error) {
+	requestDef := GenReqDefForRevokeSqlserverDbUserPrivilege()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RevokeSqlserverDbUserPrivilegeResponse), nil
+	}
+}

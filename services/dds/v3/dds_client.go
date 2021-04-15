@@ -140,6 +140,28 @@ func (c *DdsClient) CreateManualBackup(request *model.CreateManualBackupRequest)
 	}
 }
 
+//删除数据库角色。
+func (c *DdsClient) DeleteDatabaseRole(request *model.DeleteDatabaseRoleRequest) (*model.DeleteDatabaseRoleResponse, error) {
+	requestDef := GenReqDefForDeleteDatabaseRole()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDatabaseRoleResponse), nil
+	}
+}
+
+//删除数据库用户。
+func (c *DdsClient) DeleteDatabaseUser(request *model.DeleteDatabaseUserRequest) (*model.DeleteDatabaseUserResponse, error) {
+	requestDef := GenReqDefForDeleteDatabaseUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDatabaseUserResponse), nil
+	}
+}
+
 //删除数据库实例。
 func (c *DdsClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteInstance()
@@ -522,6 +544,17 @@ func (c *DdsClient) ShowBackupPolicy(request *model.ShowBackupPolicyRequest) (*m
 		return nil, err
 	} else {
 		return resp.(*model.ShowBackupPolicyResponse), nil
+	}
+}
+
+//查询客户端IP访问至DDS数据库实例的连接数统计信息。
+func (c *DdsClient) ShowConnectionStatistics(request *model.ShowConnectionStatisticsRequest) (*model.ShowConnectionStatisticsResponse, error) {
+	requestDef := GenReqDefForShowConnectionStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConnectionStatisticsResponse), nil
 	}
 }
 

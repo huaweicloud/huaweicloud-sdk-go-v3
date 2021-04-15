@@ -64,7 +64,10 @@ type ShowIssueV4Response struct {
 	Tracker *IssueItemSfV4Tracker `json:"tracker,omitempty"`
 	// 更新时间 年-月-日 时:分:秒
 
-	UpdatedTime    *string `json:"updated_time,omitempty"`
+	UpdatedTime *string `json:"updated_time,omitempty"`
+	// 关闭时间 年-月-日 时:分:秒
+
+	ClosedTime     *string `json:"closed_time,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

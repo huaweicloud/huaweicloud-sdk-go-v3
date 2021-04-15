@@ -22,6 +22,8 @@ type QualityEnhance struct {
 	// 视频增强模式。取值范围： - REGENERATION - CONVERSION_SDR - CONVERSION_HDR
 
 	VideoEnhance *QualityEnhanceVideoEnhance `json:"video_enhance,omitempty"`
+
+	VideoSettings *VideoSettings `json:"video_settings,omitempty"`
 }
 
 func (o QualityEnhance) String() string {

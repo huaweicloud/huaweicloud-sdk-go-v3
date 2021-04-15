@@ -7,7 +7,9 @@ import (
 )
 
 type TemplateExtend struct {
-	Audio *OutputPolicy `json:"audio,omitempty"`
+	Audio *AudioExtendSettings `json:"audio,omitempty"`
+
+	Video *VideoExtendSettings `json:"video,omitempty"`
 }
 
 func (o TemplateExtend) String() string {
