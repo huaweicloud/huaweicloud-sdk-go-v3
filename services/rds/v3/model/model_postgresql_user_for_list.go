@@ -7,23 +7,23 @@ import (
 )
 
 // 数据库用户信息。
-type PgUserForList struct {
-	// 数据库用户名称。
+type PostgresqlUserForList struct {
+	// 帐号名。
 
 	Name string `json:"name"`
 	// 用户的权限属性。
 
 	Attributes *interface{} `json:"attributes,omitempty"`
-	// 用户的权限属性。
+	// 用户的默认权限。
 
 	Memberof *[]string `json:"memberof,omitempty"`
 }
 
-func (o PgUserForList) String() string {
+func (o PostgresqlUserForList) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "PgUserForList struct{}"
+		return "PostgresqlUserForList struct{}"
 	}
 
-	return strings.Join([]string{"PgUserForList", string(data)}, " ")
+	return strings.Join([]string{"PostgresqlUserForList", string(data)}, " ")
 }

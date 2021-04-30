@@ -8,7 +8,10 @@ import (
 
 // Response Object
 type BatchAddPeersToChannelResponse struct {
-	HttpStatusCode int `json:"-"`
+	// 操作记录id
+
+	OperationId    *string `json:"operation_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o BatchAddPeersToChannelResponse) String() string {

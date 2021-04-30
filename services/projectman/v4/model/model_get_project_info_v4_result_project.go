@@ -32,6 +32,9 @@ type GetProjectInfoV4ResultProject struct {
 	// 企业项目id
 
 	EnterpriseId *string `json:"enterprise_id,omitempty"`
+	// 项目代号
+
+	ProjectCode *string `json:"project_code,omitempty"`
 
 	Creator *GetProjectInfoV4ResultProjectCreator `json:"creator,omitempty"`
 }

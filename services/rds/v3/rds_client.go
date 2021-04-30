@@ -404,17 +404,6 @@ func (c *RdsClient) MigrateFollower(request *model.MigrateFollowerRequest) (*mod
 	}
 }
 
-//重置数据库密码.
-func (c *RdsClient) ResetPwd(request *model.ResetPwdRequest) (*model.ResetPwdResponse, error) {
-	requestDef := GenReqDefForResetPwd()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ResetPwdResponse), nil
-	}
-}
-
 //表级时间点恢复。
 func (c *RdsClient) RestoreTables(request *model.RestoreTablesRequest) (*model.RestoreTablesResponse, error) {
 	requestDef := GenReqDefForRestoreTables()
@@ -701,6 +690,17 @@ func (c *RdsClient) UpdatePort(request *model.UpdatePortRequest) (*model.UpdateP
 	}
 }
 
+//修改指定数据库实例的备注信息。
+func (c *RdsClient) UpdatePostgresqlInstanceAlias(request *model.UpdatePostgresqlInstanceAliasRequest) (*model.UpdatePostgresqlInstanceAliasResponse, error) {
+	requestDef := GenReqDefForUpdatePostgresqlInstanceAlias()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePostgresqlInstanceAliasResponse), nil
+	}
+}
+
 //授权数据库帐号。
 func (c *RdsClient) AllowDbUserPrivilege(request *model.AllowDbUserPrivilegeRequest) (*model.AllowDbUserPrivilegeResponse, error) {
 	requestDef := GenReqDefForAllowDbUserPrivilege()
@@ -800,6 +800,17 @@ func (c *RdsClient) ListDbUsers(request *model.ListDbUsersRequest) (*model.ListD
 	}
 }
 
+//重置数据库密码.
+func (c *RdsClient) ResetPwd(request *model.ResetPwdRequest) (*model.ResetPwdResponse, error) {
+	requestDef := GenReqDefForResetPwd()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetPwdResponse), nil
+	}
+}
+
 //解除数据库帐号权限。
 func (c *RdsClient) Revoke(request *model.RevokeRequest) (*model.RevokeResponse, error) {
 	requestDef := GenReqDefForRevoke()
@@ -822,7 +833,7 @@ func (c *RdsClient) SetDbUserPwd(request *model.SetDbUserPwdRequest) (*model.Set
 	}
 }
 
-//授权数据库帐号。
+//在指定实例的数据库中, 设置帐号的权限。
 func (c *RdsClient) AllowDbPrivilege(request *model.AllowDbPrivilegeRequest) (*model.AllowDbPrivilegeResponse, error) {
 	requestDef := GenReqDefForAllowDbPrivilege()
 
@@ -833,7 +844,7 @@ func (c *RdsClient) AllowDbPrivilege(request *model.AllowDbPrivilegeRequest) (*m
 	}
 }
 
-//创建数据库。
+//在指定实例中创建数据库。
 func (c *RdsClient) CreatePostgresqlDatabase(request *model.CreatePostgresqlDatabaseRequest) (*model.CreatePostgresqlDatabaseResponse, error) {
 	requestDef := GenReqDefForCreatePostgresqlDatabase()
 
@@ -844,7 +855,7 @@ func (c *RdsClient) CreatePostgresqlDatabase(request *model.CreatePostgresqlData
 	}
 }
 
-//创建数据库SCHEMA。
+//在指定实例的数据库中, 创建数据库schema。
 func (c *RdsClient) CreatePostgresqlDatabaseSchema(request *model.CreatePostgresqlDatabaseSchemaRequest) (*model.CreatePostgresqlDatabaseSchemaResponse, error) {
 	requestDef := GenReqDefForCreatePostgresqlDatabaseSchema()
 
@@ -855,7 +866,7 @@ func (c *RdsClient) CreatePostgresqlDatabaseSchema(request *model.CreatePostgres
 	}
 }
 
-//创建数据库用户。
+//在指定实例中创建数据库用户。
 func (c *RdsClient) CreatePostgresqlDbUser(request *model.CreatePostgresqlDbUserRequest) (*model.CreatePostgresqlDbUserResponse, error) {
 	requestDef := GenReqDefForCreatePostgresqlDbUser()
 
@@ -866,7 +877,7 @@ func (c *RdsClient) CreatePostgresqlDbUser(request *model.CreatePostgresqlDbUser
 	}
 }
 
-//查询数据库SCHEMA列表。
+//查询指定实例的数据库SCHEMA列表。
 func (c *RdsClient) ListPostgresqlDatabaseSchemas(request *model.ListPostgresqlDatabaseSchemasRequest) (*model.ListPostgresqlDatabaseSchemasResponse, error) {
 	requestDef := GenReqDefForListPostgresqlDatabaseSchemas()
 
@@ -877,7 +888,7 @@ func (c *RdsClient) ListPostgresqlDatabaseSchemas(request *model.ListPostgresqlD
 	}
 }
 
-//查询数据库列表。
+//查询指定实例中的数据库列表。
 func (c *RdsClient) ListPostgresqlDatabases(request *model.ListPostgresqlDatabasesRequest) (*model.ListPostgresqlDatabasesResponse, error) {
 	requestDef := GenReqDefForListPostgresqlDatabases()
 
@@ -888,7 +899,7 @@ func (c *RdsClient) ListPostgresqlDatabases(request *model.ListPostgresqlDatabas
 	}
 }
 
-//查询数据库用户列表。
+//在指定实例中查询数据库用户列表。
 func (c *RdsClient) ListPostgresqlDbUserPaginated(request *model.ListPostgresqlDbUserPaginatedRequest) (*model.ListPostgresqlDbUserPaginatedResponse, error) {
 	requestDef := GenReqDefForListPostgresqlDbUserPaginated()
 
@@ -899,7 +910,7 @@ func (c *RdsClient) ListPostgresqlDbUserPaginated(request *model.ListPostgresqlD
 	}
 }
 
-//重置数据库帐号密码。
+//重置指定数据库帐号的密码。
 func (c *RdsClient) SetPostgresqlDbUserPwd(request *model.SetPostgresqlDbUserPwdRequest) (*model.SetPostgresqlDbUserPwdResponse, error) {
 	requestDef := GenReqDefForSetPostgresqlDbUserPwd()
 
@@ -907,17 +918,6 @@ func (c *RdsClient) SetPostgresqlDbUserPwd(request *model.SetPostgresqlDbUserPwd
 		return nil, err
 	} else {
 		return resp.(*model.SetPostgresqlDbUserPwdResponse), nil
-	}
-}
-
-//修改实例备注信息。
-func (c *RdsClient) UpdatePostgresqlInstanceAlias(request *model.UpdatePostgresqlInstanceAliasRequest) (*model.UpdatePostgresqlInstanceAliasResponse, error) {
-	requestDef := GenReqDefForUpdatePostgresqlInstanceAlias()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdatePostgresqlInstanceAliasResponse), nil
 	}
 }
 

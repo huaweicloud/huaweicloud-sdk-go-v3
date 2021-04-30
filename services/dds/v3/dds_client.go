@@ -514,6 +514,28 @@ func (c *DdsClient) SetBackupPolicy(request *model.SetBackupPolicyRequest) (*mod
 	}
 }
 
+//设置集群均衡开关。
+func (c *DdsClient) SetBalancerSwitch(request *model.SetBalancerSwitchRequest) (*model.SetBalancerSwitchResponse, error) {
+	requestDef := GenReqDefForSetBalancerSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetBalancerSwitchResponse), nil
+	}
+}
+
+//设置集群均衡活动时间窗。
+func (c *DdsClient) SetBalancerWindow(request *model.SetBalancerWindowRequest) (*model.SetBalancerWindowResponse, error) {
+	requestDef := GenReqDefForSetBalancerWindow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetBalancerWindowResponse), nil
+	}
+}
+
 //查询审计日志策略。
 func (c *DdsClient) ShowAuditlogPolicy(request *model.ShowAuditlogPolicyRequest) (*model.ShowAuditlogPolicyResponse, error) {
 	requestDef := GenReqDefForShowAuditlogPolicy()
@@ -555,6 +577,17 @@ func (c *DdsClient) ShowConnectionStatistics(request *model.ShowConnectionStatis
 		return nil, err
 	} else {
 		return resp.(*model.ShowConnectionStatisticsResponse), nil
+	}
+}
+
+//查询集群均衡设置。
+func (c *DdsClient) ShowShardingBalancer(request *model.ShowShardingBalancerRequest) (*model.ShowShardingBalancerResponse, error) {
+	requestDef := GenReqDefForShowShardingBalancer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowShardingBalancerResponse), nil
 	}
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowOffSiteBackupPolicyResponse struct {
-	PolicyPara     *OffSiteBackupPolicy `json:"policy_para,omitempty"`
-	HttpStatusCode int                  `json:"-"`
+	PolicyPara     *GetOffSiteBackupPolicy `json:"policy_para,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o ShowOffSiteBackupPolicyResponse) String() string {

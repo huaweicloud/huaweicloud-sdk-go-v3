@@ -10,7 +10,7 @@ import (
 type ListOffSiteBackupsResponse struct {
 	// 跨区域备份信息。
 
-	OffsiteBackups *[]OffSiteBackupForList `json:"offsite_backups,omitempty"`
+	Backups *[]OffSiteBackupForList `json:"backups,omitempty"`
 	// 总记录数。
 
 	TotalCount     *int32 `json:"total_count,omitempty"`

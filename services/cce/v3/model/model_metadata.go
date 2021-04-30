@@ -13,7 +13,7 @@ type Metadata struct {
 	Annotations map[string]string `json:"annotations,omitempty"`
 	// 创建时间
 
-	CreationTimestamp string `json:"creationTimestamp,omitempty"`
+	CreationTimestamp *string `json:"creationTimestamp,omitempty"`
 	// 插件标签，key/value对格式
 
 	Labels map[string]string `json:"labels,omitempty"`
@@ -25,7 +25,7 @@ type Metadata struct {
 	Uid *string `json:"uid,omitempty"`
 	// 更新时间
 
-	UpdateTimestamp string `json:"updateTimestamp,omitempty"`
+	UpdateTimestamp *string `json:"updateTimestamp,omitempty"`
 }
 
 func (o Metadata) String() string {

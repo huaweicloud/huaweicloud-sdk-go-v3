@@ -10,7 +10,7 @@ import (
 type Versions struct {
 	// 创建时间
 
-	CreationTimestamp string `json:"creationTimestamp,omitempty"`
+	CreationTimestamp *string `json:"creationTimestamp,omitempty"`
 	// 插件安装参数
 
 	Input *interface{} `json:"input"`

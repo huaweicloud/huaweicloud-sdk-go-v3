@@ -30,11 +30,15 @@ type ShowDomainQuotaRequestType struct {
 }
 
 type ShowDomainQuotaRequestTypeEnum struct {
-	USER   ShowDomainQuotaRequestType
-	GROUP  ShowDomainQuotaRequestType
-	IDP    ShowDomainQuotaRequestType
-	AGENCY ShowDomainQuotaRequestType
-	POLICY ShowDomainQuotaRequestType
+	USER                ShowDomainQuotaRequestType
+	GROUP               ShowDomainQuotaRequestType
+	IDP                 ShowDomainQuotaRequestType
+	AGENCY              ShowDomainQuotaRequestType
+	POLICY              ShowDomainQuotaRequestType
+	ASSIGMENT_GROUP_MP  ShowDomainQuotaRequestType
+	ASSIGMENT_AGENCY_MP ShowDomainQuotaRequestType
+	ASSIGMENT_GROUP_EP  ShowDomainQuotaRequestType
+	ASSIGMENT_USER_EP   ShowDomainQuotaRequestType
 }
 
 func GetShowDomainQuotaRequestTypeEnum() ShowDomainQuotaRequestTypeEnum {
@@ -53,6 +57,18 @@ func GetShowDomainQuotaRequestTypeEnum() ShowDomainQuotaRequestTypeEnum {
 		},
 		POLICY: ShowDomainQuotaRequestType{
 			value: "policy",
+		},
+		ASSIGMENT_GROUP_MP: ShowDomainQuotaRequestType{
+			value: "assigment_group_mp",
+		},
+		ASSIGMENT_AGENCY_MP: ShowDomainQuotaRequestType{
+			value: "assigment_agency_mp",
+		},
+		ASSIGMENT_GROUP_EP: ShowDomainQuotaRequestType{
+			value: "assigment_group_ep",
+		},
+		ASSIGMENT_USER_EP: ShowDomainQuotaRequestType{
+			value: "assigment_user_ep",
 		},
 	}
 }

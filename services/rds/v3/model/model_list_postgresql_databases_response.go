@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ListPostgresqlDatabasesResponse struct {
-	// 数据库信息。
+	// 列表中每个元素表示一个数据库。
 
-	Databases *[]PgListDatabase `json:"databases,omitempty"`
-	// 总数。
+	Databases *[]PostgresqlListDatabase `json:"databases,omitempty"`
+	// 数据库总数。
 
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`

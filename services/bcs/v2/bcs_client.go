@@ -184,6 +184,17 @@ func (c *BcsClient) ListNotifications(request *model.ListNotificationsRequest) (
 	}
 }
 
+//查询异步操作结果
+func (c *BcsClient) ListOpRecord(request *model.ListOpRecordRequest) (*model.ListOpRecordResponse, error) {
+	requestDef := GenReqDefForListOpRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOpRecordResponse), nil
+	}
+}
+
 //查询当前项目下BCS服务所有资源的配额信息
 func (c *BcsClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuotasResponse, error) {
 	requestDef := GenReqDefForListQuotas()

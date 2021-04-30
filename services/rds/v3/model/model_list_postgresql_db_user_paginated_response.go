@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ListPostgresqlDbUserPaginatedResponse struct {
-	// 用户信息。
+	// 列表中每个元素表示一个数据库用户。
 
-	Users *[]PgUserForList `json:"users,omitempty"`
-	// 总条数。
+	Users *[]PostgresqlUserForList `json:"users,omitempty"`
+	// 数据库用户总数。
 
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`

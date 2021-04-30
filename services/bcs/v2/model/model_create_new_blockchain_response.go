@@ -14,6 +14,9 @@ type CreateNewBlockchainResponse struct {
 	// 服务实例名
 
 	BlockchainName *string `json:"blockchain_name,omitempty"`
+	// 操作ID
+
+	OperationId    *string `json:"operation_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

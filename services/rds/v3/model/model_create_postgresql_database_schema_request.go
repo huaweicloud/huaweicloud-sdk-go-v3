@@ -12,7 +12,7 @@ type CreatePostgresqlDatabaseSchemaRequest struct {
 
 	InstanceId string `json:"instance_id"`
 
-	Body *DbSchemaReq `json:"body,omitempty"`
+	Body *PostgresqlDatabaseSchemaReq `json:"body,omitempty"`
 }
 
 func (o CreatePostgresqlDatabaseSchemaRequest) String() string {

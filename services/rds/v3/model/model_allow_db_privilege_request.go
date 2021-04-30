@@ -12,7 +12,7 @@ type AllowDbPrivilegeRequest struct {
 
 	InstanceId string `json:"instance_id"`
 
-	Body *PgGrantRequest `json:"body,omitempty"`
+	Body *PostgresqlGrantRequest `json:"body,omitempty"`
 }
 
 func (o AllowDbPrivilegeRequest) String() string {

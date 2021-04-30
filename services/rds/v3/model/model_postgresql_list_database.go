@@ -7,7 +7,7 @@ import (
 )
 
 // 数据库信息。
-type PgListDatabase struct {
+type PostgresqlListDatabase struct {
 	// 数据库名称。
 
 	Name *string `json:"name,omitempty"`
@@ -25,11 +25,11 @@ type PgListDatabase struct {
 	Size *int32 `json:"size,omitempty"`
 }
 
-func (o PgListDatabase) String() string {
+func (o PostgresqlListDatabase) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "PgListDatabase struct{}"
+		return "PostgresqlListDatabase struct{}"
 	}
 
-	return strings.Join([]string{"PgListDatabase", string(data)}, " ")
+	return strings.Join([]string{"PostgresqlListDatabase", string(data)}, " ")
 }

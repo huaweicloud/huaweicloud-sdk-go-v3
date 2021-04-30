@@ -745,61 +745,6 @@ func (c *IoTDAClient) UpdateRule(request *model.UpdateRuleRequest) (*model.Updat
 	}
 }
 
-//应用服务器可调用此接口订阅物联网平台资源的变化事件，当资源发生变化时（如设备激活，设备数据更新等），平台会向应用服务器发送通知消息。
-func (c *IoTDAClient) CreateSubscription(request *model.CreateSubscriptionRequest) (*model.CreateSubscriptionResponse, error) {
-	requestDef := GenReqDefForCreateSubscription()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateSubscriptionResponse), nil
-	}
-}
-
-//应用服务器可调用此接口删除物联网平台中的指定订阅配置。
-func (c *IoTDAClient) DeleteSubscription(request *model.DeleteSubscriptionRequest) (*model.DeleteSubscriptionResponse, error) {
-	requestDef := GenReqDefForDeleteSubscription()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteSubscriptionResponse), nil
-	}
-}
-
-//应用服务器可调用此接口查询物联网平台中的订阅配置信息列表。
-func (c *IoTDAClient) ListSubscriptions(request *model.ListSubscriptionsRequest) (*model.ListSubscriptionsResponse, error) {
-	requestDef := GenReqDefForListSubscriptions()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListSubscriptionsResponse), nil
-	}
-}
-
-//应用服务器可调用此接口查询物联网平台中指定订阅的配置信息。
-func (c *IoTDAClient) ShowSubscription(request *model.ShowSubscriptionRequest) (*model.ShowSubscriptionResponse, error) {
-	requestDef := GenReqDefForShowSubscription()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowSubscriptionResponse), nil
-	}
-}
-
-//应用服务器可调用此接口修改物联网平台中的指定订阅配置，当前仅支持修改订阅回调地址（callbackurl）。
-func (c *IoTDAClient) UpdateSubscription(request *model.UpdateSubscriptionRequest) (*model.UpdateSubscriptionResponse, error) {
-	requestDef := GenReqDefForUpdateSubscription()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateSubscriptionResponse), nil
-	}
-}
-
 //应用服务器可调用此接口查询绑定了指定标签的资源。当前支持标签的资源有Device(设备)。
 func (c *IoTDAClient) ListResourcesByTags(request *model.ListResourcesByTagsRequest) (*model.ListResourcesByTagsResponse, error) {
 	requestDef := GenReqDefForListResourcesByTags()

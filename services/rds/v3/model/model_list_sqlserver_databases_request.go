@@ -15,6 +15,8 @@ type ListSqlserverDatabasesRequest struct {
 	Page int32 `json:"page"`
 
 	Limit int32 `json:"limit"`
+
+	DbName *string `json:"db-name,omitempty"`
 }
 
 func (o ListSqlserverDatabasesRequest) String() string {
