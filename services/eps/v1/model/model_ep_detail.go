@@ -47,13 +47,17 @@ type EpDetailType struct {
 }
 
 type EpDetailTypeEnum struct {
-	PROD_PROC EpDetailType
+	PROD EpDetailType
+	POC  EpDetailType
 }
 
 func GetEpDetailTypeEnum() EpDetailTypeEnum {
 	return EpDetailTypeEnum{
-		PROD_PROC: EpDetailType{
-			value: "prod; proc",
+		PROD: EpDetailType{
+			value: "prod",
+		},
+		POC: EpDetailType{
+			value: "poc",
 		},
 	}
 }
