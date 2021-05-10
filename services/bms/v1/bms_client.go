@@ -30,6 +30,28 @@ func (c *BmsClient) AttachBaremetalServerVolume(request *model.AttachBaremetalSe
 	}
 }
 
+//- 为指定裸金属服务器批量添加标签。
+func (c *BmsClient) BatchCreateBaremetalServerTags(request *model.BatchCreateBaremetalServerTagsRequest) (*model.BatchCreateBaremetalServerTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateBaremetalServerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateBaremetalServerTagsResponse), nil
+	}
+}
+
+//- 为指定云服务器批量删除标签。
+func (c *BmsClient) BatchDeleteBaremetalServerTags(request *model.BatchDeleteBaremetalServerTagsRequest) (*model.BatchDeleteBaremetalServerTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteBaremetalServerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteBaremetalServerTagsResponse), nil
+	}
+}
+
 //根据给定的裸金属服务器ID列表，批量重启裸金属服务器
 func (c *BmsClient) BatchRebootBaremetalServers(request *model.BatchRebootBaremetalServersRequest) (*model.BatchRebootBaremetalServersResponse, error) {
 	requestDef := GenReqDefForBatchRebootBaremetalServers()
@@ -170,6 +192,17 @@ func (c *BmsClient) ShowBaremetalServerInterfaceAttachments(request *model.ShowB
 		return nil, err
 	} else {
 		return resp.(*model.ShowBaremetalServerInterfaceAttachmentsResponse), nil
+	}
+}
+
+//- 查询指定云服务器的标签信息。
+func (c *BmsClient) ShowBaremetalServerTags(request *model.ShowBaremetalServerTagsRequest) (*model.ShowBaremetalServerTagsResponse, error) {
+	requestDef := GenReqDefForShowBaremetalServerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBaremetalServerTagsResponse), nil
 	}
 }
 

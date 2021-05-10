@@ -8,30 +8,30 @@ import (
 
 // spec是集合类的元素类型，内容为插件实例具体信息
 type InstanceSpec struct {
-	// 插件模板所属类型
+	// 集群id
 
-	AddonTemplateLabels *[]string `json:"addonTemplateLabels,omitempty"`
-	// 插件logo
+	ClusterID string `json:"clusterID"`
+	// 插件模板版本号，如1.0.0
 
-	AddonTemplateLogo *string `json:"addonTemplateLogo,omitempty"`
+	Version string `json:"version"`
 	// 插件模板名称，如coredns
 
 	AddonTemplateName string `json:"addonTemplateName"`
 	// 插件模板类型
 
 	AddonTemplateType string `json:"addonTemplateType"`
-	// 集群id
+	// 插件模板logo图片的地址
 
-	ClusterID string `json:"clusterID"`
+	AddonTemplateLogo *string `json:"addonTemplateLogo,omitempty"`
+	// 插件模板所属类型
+
+	AddonTemplateLabels *[]string `json:"addonTemplateLabels,omitempty"`
 	// 插件模板描述
 
 	Description string `json:"description"`
-	// 插件模板安装参数（各插件不同）
+	// 插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。
 
 	Values map[string]interface{} `json:"values"`
-	// 插件模板版本号，如1.0.0
-
-	Version string `json:"version"`
 }
 
 func (o InstanceSpec) String() string {

@@ -1,0 +1,23 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// Request Object
+type MigrateAzRequest struct {
+	InstanceId string `json:"instance_id"`
+
+	Body *MigrateAzRequestBody `json:"body,omitempty"`
+}
+
+func (o MigrateAzRequest) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "MigrateAzRequest struct{}"
+	}
+
+	return strings.Join([]string{"MigrateAzRequest", string(data)}, " ")
+}

@@ -185,6 +185,15 @@ func GenReqDefForDeleteCloudPersistentVolumeClaims() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DeleteVolume").
+		WithJsonTag("deleteVolume").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StorageType").
+		WithJsonTag("storageType").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XClusterID").
 		WithJsonTag("X-Cluster-ID").
 		WithLocationType(def.Header))
@@ -316,6 +325,10 @@ func GenReqDefForListAddonInstances() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AddonTemplateName").
+		WithJsonTag("addon_template_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Query))
@@ -334,6 +347,22 @@ func GenReqDefForListAddonTemplates() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AddonTemplateName").
 		WithJsonTag("addon_template_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BaseUpdateAddonVersion").
+		WithJsonTag("base_update_addon_version").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Newest").
+		WithJsonTag("newest").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Version").
+		WithJsonTag("version").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

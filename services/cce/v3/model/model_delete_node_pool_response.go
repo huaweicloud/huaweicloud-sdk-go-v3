@@ -8,12 +8,12 @@ import (
 
 // Response Object
 type DeleteNodePoolResponse struct {
-	// API版本，固定值“v3”。
-
-	ApiVersion *string `json:"apiVersion,omitempty"`
 	// API类型，固定值“NodePool”。
 
 	Kind *string `json:"kind,omitempty"`
+	// API版本，固定值“v3”。
+
+	ApiVersion *string `json:"apiVersion,omitempty"`
 
 	Metadata *NodePoolMetadata `json:"metadata,omitempty"`
 

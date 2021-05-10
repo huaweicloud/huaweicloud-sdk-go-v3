@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+//
 type CceClusterNodeInformation struct {
 	Metadata *CceClusterNodeInformationMetadata `json:"metadata"`
 }

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ListAddonInstancesRequest struct {
+	AddonTemplateName *string `json:"addon_template_name,omitempty"`
+
 	ClusterId string `json:"cluster_id"`
 }
 

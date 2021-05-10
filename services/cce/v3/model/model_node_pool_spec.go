@@ -9,18 +9,20 @@ import (
 	"strings"
 )
 
+//
 type NodePoolSpec struct {
-	Autoscaling *NodePoolNodeAutoscaling `json:"autoscaling,omitempty"`
+	// 节点池类型。不填写时默认为vm。  - vm：弹性云服务器 - ElasticBMS：C6型弹性裸金属通用计算增强型云服务器，规格示例：c6.22xlarge.2.physical
+
+	Type *NodePoolSpecType `json:"type,omitempty"`
+
+	NodeTemplate *V3NodeSpec `json:"nodeTemplate"`
 	// 节点池初始化节点个数。
 
 	InitialNodeCount *int32 `json:"initialNodeCount,omitempty"`
 
+	Autoscaling *NodePoolNodeAutoscaling `json:"autoscaling,omitempty"`
+
 	NodeManagement *NodeManagement `json:"nodeManagement,omitempty"`
-
-	NodeTemplate *V3NodeSpec `json:"nodeTemplate"`
-	// 节点池类型。不填写时默认为vm。  - vm：弹性云服务器 - ElasticBMS：C6型弹性裸金属通用计算增强型云服务器，规格示例：c6.22xlarge.2.physical
-
-	Type *NodePoolSpecType `json:"type,omitempty"`
 }
 
 func (o NodePoolSpec) String() string {

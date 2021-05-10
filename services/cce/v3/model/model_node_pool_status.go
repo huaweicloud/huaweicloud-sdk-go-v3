@@ -9,16 +9,17 @@ import (
 	"strings"
 )
 
+//
 type NodePoolStatus struct {
 	// 当前节点池中节点数量
 
 	CurrentNode *int32 `json:"currentNode,omitempty"`
+	// 节点池状态，为空时节点池处于可用状态。 - Synchronizing：伸缩中 - Synchronized：节点池更新失败时会被置于此状态 - SoldOut：节点资源售罄 - Deleting：删除中 - Error：错误
+
+	Phase *NodePoolStatusPhase `json:"phase,omitempty"`
 	// 节点池删除时的 JobID
 
 	JobId *string `json:"jobId,omitempty"`
-	// 节点池状态，可为空。
-
-	Phase *NodePoolStatusPhase `json:"phase,omitempty"`
 }
 
 func (o NodePoolStatus) String() string {

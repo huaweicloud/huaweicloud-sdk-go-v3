@@ -12,6 +12,10 @@ type DeleteCloudPersistentVolumeClaimsRequest struct {
 
 	Namespace string `json:"namespace"`
 
+	DeleteVolume *string `json:"deleteVolume,omitempty"`
+
+	StorageType *string `json:"storageType,omitempty"`
+
 	XClusterID *string `json:"X-Cluster-ID,omitempty"`
 }
 

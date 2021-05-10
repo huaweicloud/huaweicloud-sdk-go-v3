@@ -239,6 +239,17 @@ func (c *DdsClient) ListAuditlogs(request *model.ListAuditlogsRequest) (*model.L
 	}
 }
 
+//查询实例可迁移到的可用区。
+func (c *DdsClient) ListAz2Migrate(request *model.ListAz2MigrateRequest) (*model.ListAz2MigrateResponse, error) {
+	requestDef := GenReqDefForListAz2Migrate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAz2MigrateResponse), nil
+	}
+}
+
 //根据指定条件查询备份列表。
 func (c *DdsClient) ListBackups(request *model.ListBackupsRequest) (*model.ListBackupsResponse, error) {
 	requestDef := GenReqDefForListBackups()
@@ -412,6 +423,17 @@ func (c *DdsClient) ListStorageType(request *model.ListStorageTypeRequest) (*mod
 		return nil, err
 	} else {
 		return resp.(*model.ListStorageTypeResponse), nil
+	}
+}
+
+//实例可用区迁移。
+func (c *DdsClient) MigrateAz(request *model.MigrateAzRequest) (*model.MigrateAzResponse, error) {
+	requestDef := GenReqDefForMigrateAz()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MigrateAzResponse), nil
 	}
 }
 

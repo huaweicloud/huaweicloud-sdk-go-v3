@@ -28,7 +28,7 @@ type EpDetail struct {
 	// 修改时间，格式为UTC格式。如：2018-05-28T02:21:36Z。
 
 	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
-	// 项目类型。prod-商用项目；poc-测试项目
+	// 项目类型： - prod：商用项目 - poc：测试项目
 
 	Type EpDetailType `json:"type"`
 }
@@ -47,13 +47,17 @@ type EpDetailType struct {
 }
 
 type EpDetailTypeEnum struct {
-	PROD_PROC EpDetailType
+	PROD EpDetailType
+	POC  EpDetailType
 }
 
 func GetEpDetailTypeEnum() EpDetailTypeEnum {
 	return EpDetailTypeEnum{
-		PROD_PROC: EpDetailType{
-			value: "prod; proc",
+		PROD: EpDetailType{
+			value: "prod",
+		},
+		POC: EpDetailType{
+			value: "poc",
 		},
 	}
 }

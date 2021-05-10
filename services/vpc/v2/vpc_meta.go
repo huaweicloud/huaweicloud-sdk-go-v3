@@ -317,10 +317,6 @@ func GenReqDefForListPorts() *def.HttpRequestDef {
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ZoneId").
-		WithJsonTag("zone_id").
-		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -407,10 +403,6 @@ func GenReqDefForListSubnets() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VpcId").
 		WithJsonTag("vpc_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Scope").
-		WithJsonTag("scope").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

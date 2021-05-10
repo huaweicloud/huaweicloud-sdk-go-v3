@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+//
 type PersistentVolumeClaim struct {
 	// API版本，固定值**v1**
 

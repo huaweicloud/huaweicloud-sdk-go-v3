@@ -68,9 +68,6 @@ type Subnet struct {
 	// 子网配置的NTP地址
 
 	ExtraDhcpOpts []ExtraDhcpOption `json:"extra_dhcp_opts"`
-	// 功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
-
-	Scope *string `json:"scope,omitempty"`
 }
 
 func (o Subnet) String() string {

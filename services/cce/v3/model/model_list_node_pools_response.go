@@ -8,16 +8,16 @@ import (
 
 // Response Object
 type ListNodePoolsResponse struct {
+	// API type. The value is fixed to List.
+
+	Kind *string `json:"kind,omitempty"`
 	// API version. The value is fixed to v3.
 
 	ApiVersion *string `json:"apiVersion,omitempty"`
 	// /
 
-	Items *[]NodePool `json:"items,omitempty"`
-	// API type. The value is fixed to List.
-
-	Kind           *string `json:"kind,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Items          *[]NodePool `json:"items,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o ListNodePoolsResponse) String() string {

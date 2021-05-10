@@ -103,7 +103,6 @@ type ListClustersRequestType struct {
 
 type ListClustersRequestTypeEnum struct {
 	VIRTUAL_MACHINE ListClustersRequestType
-	BARE_METAL      ListClustersRequestType
 	ARM64           ListClustersRequestType
 }
 
@@ -111,9 +110,6 @@ func GetListClustersRequestTypeEnum() ListClustersRequestTypeEnum {
 	return ListClustersRequestTypeEnum{
 		VIRTUAL_MACHINE: ListClustersRequestType{
 			value: "VirtualMachine",
-		},
-		BARE_METAL: ListClustersRequestType{
-			value: "BareMetal",
 		},
 		ARM64: ListClustersRequestType{
 			value: "ARM64",

@@ -305,7 +305,7 @@ func (c *RdsClient) ListJobInfoDetail(request *model.ListJobInfoDetailRequest) (
 	}
 }
 
-//获取跨区域备份列表。
+//查询跨区域备份列表。
 func (c *RdsClient) ListOffSiteBackups(request *model.ListOffSiteBackupsRequest) (*model.ListOffSiteBackupsResponse, error) {
 	requestDef := GenReqDefForListOffSiteBackups()
 
@@ -327,7 +327,7 @@ func (c *RdsClient) ListOffSiteInstances(request *model.ListOffSiteInstancesRequ
 	}
 }
 
-//查询跨区域可恢复时间段。 如果您备份策略中的保存天数设置较长，建议您传入查询日期“date”。
+//查询跨区域备份可恢复时间段。 如果您备份策略中的保存天数设置较长，建议您传入查询日期“date”。
 func (c *RdsClient) ListOffSiteRestoreTimes(request *model.ListOffSiteRestoreTimesRequest) (*model.ListOffSiteRestoreTimesResponse, error) {
 	requestDef := GenReqDefForListOffSiteRestoreTimes()
 
@@ -404,7 +404,7 @@ func (c *RdsClient) MigrateFollower(request *model.MigrateFollowerRequest) (*mod
 	}
 }
 
-//表级时间点恢复。
+//表级时间点恢复(MySQL)。
 func (c *RdsClient) RestoreTables(request *model.RestoreTablesRequest) (*model.RestoreTablesResponse, error) {
 	requestDef := GenReqDefForRestoreTables()
 

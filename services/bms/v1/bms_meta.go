@@ -27,6 +27,46 @@ func GenReqDefForAttachBaremetalServerVolume() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchCreateBaremetalServerTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/baremetalservers/{server_id}/tags/action").
+		WithResponse(new(model.BatchCreateBaremetalServerTagsResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServerId").
+		WithJsonTag("server_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchDeleteBaremetalServerTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/baremetalservers/{server_id}/tags/action").
+		WithResponse(new(model.BatchDeleteBaremetalServerTagsResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServerId").
+		WithJsonTag("server_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchRebootBaremetalServers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -268,6 +308,22 @@ func GenReqDefForShowBaremetalServerInterfaceAttachments() *def.HttpRequestDef {
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/baremetalservers/{server_id}/os-interface").
 		WithResponse(new(model.ShowBaremetalServerInterfaceAttachmentsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServerId").
+		WithJsonTag("server_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowBaremetalServerTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/baremetalservers/{server_id}/tags").
+		WithResponse(new(model.ShowBaremetalServerTagsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
