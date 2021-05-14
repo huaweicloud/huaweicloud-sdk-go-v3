@@ -96,7 +96,7 @@ func (c *CbrClient) CreateCheckpoint(request *model.CreateCheckpointRequest) (*m
 	}
 }
 
-//[创建策略，策略分为备份策略和复制策略。](tag:hws,hws_hk) [创建备份策略。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc)
+//创建策略，策略分为备份策略和复制策略。
 func (c *CbrClient) CreatePolicy(request *model.CreatePolicyRequest) (*model.CreatePolicyResponse, error) {
 	requestDef := GenReqDefForCreatePolicy()
 

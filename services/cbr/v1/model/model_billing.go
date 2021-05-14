@@ -19,9 +19,9 @@ type Billing struct {
 	// 云平台
 
 	CloudType *BillingCloudType `json:"cloud_type,omitempty"`
-	// [规格，崩溃一致性（crash_consistent）或应用一致性（app_consistent）](tag:hws,hws_hk,fcs_vm,ctc) [规格，默认为崩溃一致性（crash_consistent）](tag:dt,ocb,tlf,sbc)
+	// 崩溃一致性（crash_consistent）或应用一致性（app_consistent）
 
-	ConsistentLevel string `json:"consistent_level"`
+	ConsistentLevel BillingConsistentLevel `json:"consistent_level"`
 	// 对象类型
 
 	ObjectType *BillingObjectType `json:"object_type,omitempty"`
@@ -37,7 +37,7 @@ type Billing struct {
 	// 容量，单位GB
 
 	Size int32 `json:"size"`
-	// 规格编码
+	// 规格编码: 云服务备份存储库:vault.backup.server.normal;云硬盘备份存储库:vault.backup.volume.normal;文件备份存储库:vault.backup.turbo.normal;数据库备份存储库:vault.backup.database.normal;混合云备份存储库:vault.hybrid.server.normal;复制备份存储库:vault.replication.server.normal
 
 	SpecCode BillingSpecCode `json:"spec_code"`
 	// 保管库状态
@@ -126,6 +126,44 @@ func (c BillingCloudType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *BillingCloudType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type BillingConsistentLevel struct {
+	value string
+}
+
+type BillingConsistentLevelEnum struct {
+	APP_CONSISTENT   BillingConsistentLevel
+	CRASH_CONSISTENT BillingConsistentLevel
+}
+
+func GetBillingConsistentLevelEnum() BillingConsistentLevelEnum {
+	return BillingConsistentLevelEnum{
+		APP_CONSISTENT: BillingConsistentLevel{
+			value: "app_consistent",
+		},
+		CRASH_CONSISTENT: BillingConsistentLevel{
+			value: "crash_consistent",
+		},
+	}
+}
+
+func (c BillingConsistentLevel) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *BillingConsistentLevel) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

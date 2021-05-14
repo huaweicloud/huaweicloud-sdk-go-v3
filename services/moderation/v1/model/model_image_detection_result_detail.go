@@ -13,13 +13,13 @@ type ImageDetectionResultDetail struct {
 	Politics *[]ImageDetectionResultDetailPolitics `json:"politics,omitempty"`
 	// 涉黄检测结果。
 
-	Porn *[]ImageDetectionResultDetailPorn `json:"porn,omitempty"`
+	Porn *[]ImageDetectionResultSimpleDetail `json:"porn,omitempty"`
 	// 涉政、暴恐检测结果。
 
-	Terrorism *[]ImageDetectionResultDetailPorn `json:"terrorism,omitempty"`
+	Terrorism *[]ImageDetectionResultSimpleDetail `json:"terrorism,omitempty"`
 	// 广告检测结果。
 
-	Ad *[]ImageDetectionResultDetailPorn `json:"ad,omitempty"`
+	Ad *[]ImageDetectionResultSimpleDetail `json:"ad,omitempty"`
 }
 
 func (o ImageDetectionResultDetail) String() string {

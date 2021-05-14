@@ -11,12 +11,12 @@ import (
 
 // 创建参数
 type BillingCreate struct {
-	// [云平台，云平台，公有云或者混合云](tag:hws,hws_hk,fcs_vm,ctc) [云平台，云平台，公有云](tag:dt,ocb,tlf,sbc)
+	// 云平台，公有云或者混合云
 
 	CloudType *BillingCreateCloudType `json:"cloud_type,omitempty"`
-	// [规格，崩溃一致性（crash_consistent）或应用一致性（app_consistent）](tag:hws,hws_hk,fcs_vm,ctc) [规格，默认为崩溃一致性（crash_consistent）](tag:dt,ocb,tlf,sbc)
+	// 规格，崩溃一致性（crash_consistent）或应用一致性（app_consistent）
 
-	ConsistentLevel string `json:"consistent_level"`
+	ConsistentLevel BillingCreateConsistentLevel `json:"consistent_level"`
 	// 对象类型：云服务器（server），云硬盘（disk），文件系统（turbo）。
 
 	ObjectType BillingCreateObjectType `json:"object_type"`
@@ -82,6 +82,44 @@ func (c BillingCreateCloudType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *BillingCreateCloudType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type BillingCreateConsistentLevel struct {
+	value string
+}
+
+type BillingCreateConsistentLevelEnum struct {
+	APP_CONSISTENT   BillingCreateConsistentLevel
+	CRASH_CONSISTENT BillingCreateConsistentLevel
+}
+
+func GetBillingCreateConsistentLevelEnum() BillingCreateConsistentLevelEnum {
+	return BillingCreateConsistentLevelEnum{
+		APP_CONSISTENT: BillingCreateConsistentLevel{
+			value: "app_consistent",
+		},
+		CRASH_CONSISTENT: BillingCreateConsistentLevel{
+			value: "crash_consistent",
+		},
+	}
+}
+
+func (c BillingCreateConsistentLevel) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *BillingCreateConsistentLevel) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

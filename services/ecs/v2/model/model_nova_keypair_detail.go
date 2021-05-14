@@ -29,7 +29,7 @@ type NovaKeypairDetail struct {
 	DeletedAt *sdktime.SdkTime `json:"deleted_at"`
 	// 密钥ID。
 
-	Id string `json:"id"`
+	Id int32 `json:"id"`
 	// 密钥更新时间。
 
 	UpdatedAt *sdktime.SdkTime `json:"updated_at"`

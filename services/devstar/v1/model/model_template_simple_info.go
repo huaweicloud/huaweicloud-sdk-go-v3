@@ -7,13 +7,13 @@ import (
 )
 
 type TemplateSimpleInfo struct {
-	// 模板id
+	// 模板id。
 
 	Id *string `json:"id,omitempty"`
-	// 模板名
+	// 模板名。
 
 	Title *string `json:"title,omitempty"`
-	// 模板描述
+	// 模板描述。
 
 	Description *string `json:"description,omitempty"`
 }

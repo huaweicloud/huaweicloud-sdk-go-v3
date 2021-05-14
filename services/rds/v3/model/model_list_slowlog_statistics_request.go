@@ -23,7 +23,7 @@ type ListSlowlogStatisticsRequest struct {
 
 	EndDate string `json:"end_date"`
 
-	Type *ListSlowlogStatisticsRequestType `json:"type,omitempty"`
+	Type ListSlowlogStatisticsRequestType `json:"type"`
 }
 
 func (o ListSlowlogStatisticsRequest) String() string {
@@ -83,6 +83,7 @@ type ListSlowlogStatisticsRequestTypeEnum struct {
 	SELECT ListSlowlogStatisticsRequestType
 	DELETE ListSlowlogStatisticsRequestType
 	CREATE ListSlowlogStatisticsRequestType
+	ALL    ListSlowlogStatisticsRequestType
 }
 
 func GetListSlowlogStatisticsRequestTypeEnum() ListSlowlogStatisticsRequestTypeEnum {
@@ -101,6 +102,9 @@ func GetListSlowlogStatisticsRequestTypeEnum() ListSlowlogStatisticsRequestTypeE
 		},
 		CREATE: ListSlowlogStatisticsRequestType{
 			value: "CREATE",
+		},
+		ALL: ListSlowlogStatisticsRequestType{
+			value: "ALL",
 		},
 	}
 }
