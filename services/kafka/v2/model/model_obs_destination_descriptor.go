@@ -43,7 +43,7 @@ type ObsDestinationDescriptor struct {
 	RecordDelimiter *string `json:"record_delimiter,omitempty"`
 	// 根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。 取值范围：30～900 单位：秒。 > 使用OBS通道转储流式数据时该参数为必选配置。
 
-	DeliverTimeInterval string `json:"deliver_time_interval"`
+	DeliverTimeInterval int32 `json:"deliver_time_interval"`
 }
 
 func (o ObsDestinationDescriptor) String() string {

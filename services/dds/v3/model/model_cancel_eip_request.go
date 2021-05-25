@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CancelEipRequest struct {
+	// 节点ID。
+
 	NodeId string `json:"node_id"`
 }
 

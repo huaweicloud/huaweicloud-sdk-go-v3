@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type UpdatePluginsRequest struct {
+	// 实例ID。
+
 	InstanceId string `json:"instance_id"`
 
 	Body *UpdatePluginsReq `json:"body,omitempty"`

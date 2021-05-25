@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type BatchDeleteListenerTagsRequest struct {
+	// 监听器ID。
+
 	ListenerId string `json:"listener_id"`
 
 	Body *BatchDeleteListenerTagsRequestBody `json:"body,omitempty"`

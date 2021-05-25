@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type NeutronDeleteFirewallPolicyRequest struct {
+	// 网络ACL防火墙策略ID
+
 	FirewallPolicyId string `json:"firewall_policy_id"`
 }
 

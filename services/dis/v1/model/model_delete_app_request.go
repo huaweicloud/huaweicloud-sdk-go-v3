@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeleteAppRequest struct {
+	// 需要删除的App名称。
+
 	AppName string `json:"app_name"`
 }
 

@@ -297,17 +297,6 @@ func GenReqDefForSendMessages() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowProjectTags() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/queue/tags").
-		WithResponse(new(model.ShowProjectTagsResponse)).
-		WithContentType("application/json")
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForShowQueue() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -324,6 +313,17 @@ func GenReqDefForShowQueue() *def.HttpRequestDef {
 		WithName("IncludeDeadletter").
 		WithJsonTag("include_deadletter").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowQueueProjectTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/queue/tags").
+		WithResponse(new(model.ShowQueueProjectTagsResponse)).
+		WithContentType("application/json")
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

@@ -28,7 +28,7 @@ type JobRecords struct {
 	Response *string `json:"response,omitempty"`
 	// 返回码，仅当record_type为API时有效
 
-	Code *int32 `json:"code,omitempty"`
+	Code *string `json:"code,omitempty"`
 	// 消息，仅当record_type为MEG时有效
 
 	Message *string `json:"message,omitempty"`

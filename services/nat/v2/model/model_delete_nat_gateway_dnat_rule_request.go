@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type DeleteNatGatewayDnatRuleRequest struct {
+	// 公网NAT网关实例的ID。
+
 	NatGatewayId string `json:"nat_gateway_id"`
+	// DNAT规则的ID。
 
 	DnatRuleId string `json:"dnat_rule_id"`
 }

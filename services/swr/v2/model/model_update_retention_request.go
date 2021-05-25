@@ -11,11 +11,16 @@ import (
 
 // Request Object
 type UpdateRetentionRequest struct {
+	// 消息体的类型（格式），下方类型可任选其一使用： application/json;charset=utf-8 application/json
+
 	ContentType UpdateRetentionRequestContentType `json:"Content-Type"`
+	// 组织名称
 
 	Namespace string `json:"namespace"`
+	// 镜像仓库名称
 
 	Repository string `json:"repository"`
+	// 镜像老化规则id
 
 	RetentionId int32 `json:"retention_id"`
 

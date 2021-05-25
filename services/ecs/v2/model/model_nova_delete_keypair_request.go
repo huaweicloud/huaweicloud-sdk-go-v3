@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type NovaDeleteKeypairRequest struct {
+	// 密钥名称。
+
 	KeypairName string `json:"keypair_name"`
 }
 

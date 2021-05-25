@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeletePublicZoneRequest struct {
+	// 待删除zone的ID
+
 	ZoneId string `json:"zone_id"`
 }
 

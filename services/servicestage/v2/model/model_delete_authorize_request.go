@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeleteAuthorizeRequest struct {
+	// 授权名称。
+
 	Name string `json:"name"`
 }
 

@@ -2,9 +2,10 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+
 	"strings"
 )
 
@@ -27,7 +28,7 @@ type InstanceHangingInfos struct {
 	LifecycleHookStatus *InstanceHangingInfosLifecycleHookStatus `json:"lifecycle_hook_status,omitempty"`
 	// 超时时间，遵循UTC时间，格式为：YYYY-MM-DDThh:mm:ssZZ。
 
-	Timeout *sdktime.SdkTime `json:"timeout,omitempty"`
+	Timeout *string `json:"timeout,omitempty"`
 	// 生命周期挂钩默认回调操作。
 
 	DefaultResult *string `json:"default_result,omitempty"`

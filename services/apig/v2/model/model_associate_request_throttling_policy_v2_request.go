@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type AssociateRequestThrottlingPolicyV2Request struct {
+	// 实例编号
+
 	InstanceId string `json:"instance_id"`
 
 	Body *ThrottleBindingReq `json:"body,omitempty"`

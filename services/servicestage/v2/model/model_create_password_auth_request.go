@@ -11,6 +11,8 @@ import (
 
 // Request Object
 type CreatePasswordAuthRequest struct {
+	// 仓库类型。 支持口令授权的仓库类型有：github、devcloud、bitbucket。
+
 	RepoType CreatePasswordAuthRequestRepoType `json:"repo_type"`
 
 	Body *AccessPassword `json:"body,omitempty"`

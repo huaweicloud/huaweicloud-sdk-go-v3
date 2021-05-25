@@ -11,7 +11,10 @@ import (
 
 // Request Object
 type SetPostgresqlDbUserPwdRequest struct {
+	// 语言
+
 	XLanguage *SetPostgresqlDbUserPwdRequestXLanguage `json:"X-Language,omitempty"`
+	// 实例ID。
 
 	InstanceId string `json:"instance_id"`
 

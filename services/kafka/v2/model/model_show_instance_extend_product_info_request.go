@@ -11,11 +11,15 @@ import (
 
 // Request Object
 type ShowInstanceExtendProductInfoRequest struct {
+	// 实例ID。
+
 	InstanceId string `json:"instance_id"`
+	// 产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版
 
 	Type ShowInstanceExtendProductInfoRequestType `json:"type"`
+	// 消息引擎的类型。当前支持的类型为kafka。
 
-	Engine ShowInstanceExtendProductInfoRequestEngine `json:"engine"`
+	Engine *string `json:"engine,omitempty"`
 }
 
 func (o ShowInstanceExtendProductInfoRequest) String() string {
@@ -60,40 +64,6 @@ func (c ShowInstanceExtendProductInfoRequestType) MarshalJSON() ([]byte, error) 
 }
 
 func (c *ShowInstanceExtendProductInfoRequestType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type ShowInstanceExtendProductInfoRequestEngine struct {
-	value string
-}
-
-type ShowInstanceExtendProductInfoRequestEngineEnum struct {
-	KAFKA ShowInstanceExtendProductInfoRequestEngine
-}
-
-func GetShowInstanceExtendProductInfoRequestEngineEnum() ShowInstanceExtendProductInfoRequestEngineEnum {
-	return ShowInstanceExtendProductInfoRequestEngineEnum{
-		KAFKA: ShowInstanceExtendProductInfoRequestEngine{
-			value: "kafka",
-		},
-	}
-}
-
-func (c ShowInstanceExtendProductInfoRequestEngine) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ShowInstanceExtendProductInfoRequestEngine) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

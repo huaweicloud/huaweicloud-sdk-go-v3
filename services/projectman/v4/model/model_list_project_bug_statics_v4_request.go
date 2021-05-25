@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ListProjectBugStaticsV4Request struct {
+	// 项目id
+
 	ProjectId string `json:"project_id"`
 }
 

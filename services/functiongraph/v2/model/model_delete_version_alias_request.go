@@ -8,9 +8,12 @@ import (
 
 // Request Object
 type DeleteVersionAliasRequest struct {
-	FunctionUrn string `json:"function_urn"`
+	// 函数的URN，详细解释见FunctionGraph函数模型的描述。
 
-	Name string `json:"name"`
+	FunctionUrn string `json:"function_urn"`
+	// 要删除的别名名称。
+
+	AliasName string `json:"alias_name"`
 }
 
 func (o DeleteVersionAliasRequest) String() string {

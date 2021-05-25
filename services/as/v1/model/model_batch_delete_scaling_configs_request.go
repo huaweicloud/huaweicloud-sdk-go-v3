@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchDeleteScalingConfigsRequest struct {
-	Body *BatchDeleteScalingConfigsRequestBody `json:"body,omitempty"`
+	Body *BatchDeleteScalingConfigOption `json:"body,omitempty"`
 }
 
 func (o BatchDeleteScalingConfigsRequest) String() string {

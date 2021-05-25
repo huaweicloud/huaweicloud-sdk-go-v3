@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowUserInstancesRequest struct {
+	// API版本号
+
 	VersionId string `json:"version_id"`
 }
 

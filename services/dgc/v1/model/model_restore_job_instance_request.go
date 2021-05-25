@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type RestoreJobInstanceRequest struct {
+	// 作业名称.
+
 	JobName string `json:"job_name"`
+	// 作业实例id.
 
 	InstanceId string `json:"instance_id"`
 }

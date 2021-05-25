@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type CreateKmsTagRequest struct {
+	// API版本号
+
 	VersionId string `json:"version_id"`
+	// 密钥ID
 
 	KeyId string `json:"key_id"`
 

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowCesHierarchyRequest struct {
+	// 实例ID。
+
 	InstanceId string `json:"instance_id"`
 }
 

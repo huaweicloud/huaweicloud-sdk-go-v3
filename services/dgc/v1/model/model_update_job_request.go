@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type UpdateJobRequest struct {
+	// 作业名称.
+
 	JobName string `json:"job_name"`
 
 	Body *JobInfo `json:"body,omitempty"`

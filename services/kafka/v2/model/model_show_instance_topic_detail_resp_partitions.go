@@ -24,7 +24,7 @@ type ShowInstanceTopicDetailRespPartitions struct {
 	Lso *int32 `json:"lso,omitempty"`
 	// 分区上次写入消息的时间。
 
-	LastUpdateTimestamp *int32 `json:"last_update_timestamp,omitempty"`
+	LastUpdateTimestamp *int64 `json:"last_update_timestamp,omitempty"`
 	// 副本列表。
 
 	Replicas *[]ShowInstanceTopicDetailRespReplicas `json:"replicas,omitempty"`

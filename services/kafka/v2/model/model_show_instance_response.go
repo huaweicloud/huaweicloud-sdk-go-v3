@@ -26,9 +26,9 @@ type ShowInstanceResponse struct {
 	// 消息存储空间，单位：GB。
 
 	StorageSpace *int32 `json:"storage_space,omitempty"`
-	// Kafka实例的最大topic数。
+	// Kafka实例的分区数量。
 
-	PartitionNum *int32 `json:"partition_num,omitempty"`
+	PartitionNum *string `json:"partition_num,omitempty"`
 	// 已使用的消息存储空间，单位：GB。
 
 	UsedStorageSpace *int32 `json:"used_storage_space,omitempty"`
@@ -190,8 +190,11 @@ type ShowInstanceResponse struct {
 	KafkaPrivateConnectAddress *string `json:"kafka_private_connect_address,omitempty"`
 	// 云监控版本。
 
-	CesVersion     *string `json:"ces_version,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	CesVersion *string `json:"ces_version,omitempty"`
+	// 标签列表。
+
+	Tags           *[]ListInstancesRespTags `json:"tags,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o ShowInstanceResponse) String() string {

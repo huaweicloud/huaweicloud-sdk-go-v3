@@ -11,7 +11,10 @@ import (
 
 // Request Object
 type DeleteInstanceRequest struct {
+	// 语言
+
 	XLanguage *DeleteInstanceRequestXLanguage `json:"X-Language,omitempty"`
+	// 实例ID。
 
 	InstanceId string `json:"instance_id"`
 }

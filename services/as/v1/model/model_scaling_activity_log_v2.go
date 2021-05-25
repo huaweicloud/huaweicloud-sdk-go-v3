@@ -61,6 +61,9 @@ type ScalingActivityLogV2 struct {
 	// 解绑失败的负载均衡器列表。
 
 	LbUnbindFailedList *[]ModifyLb `json:"lb_unbind_failed_list,omitempty"`
+	// 伸缩组活动类型
+
+	Type *string `json:"type,omitempty"`
 }
 
 func (o ScalingActivityLogV2) String() string {

@@ -436,6 +436,75 @@ func GenReqDefForListCustomerBillsFeeRecords() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListCustomerBillsMonthlyBreakDown() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/costs/cost-analysed-bills/monthly-breakdown").
+		WithResponse(new(model.ListCustomerBillsMonthlyBreakDownResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SharedMonth").
+		WithJsonTag("shared_month").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ChargingMode").
+		WithJsonTag("charging_mode").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServiceTypeCode").
+		WithJsonTag("service_type_code").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceTypeCode").
+		WithJsonTag("resource_type_code").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RegionCode").
+		WithJsonTag("region_code").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BillType").
+		WithJsonTag("bill_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceId").
+		WithJsonTag("resource_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceName").
+		WithJsonTag("resource_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Method").
+		WithJsonTag("method").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubCustomerId").
+		WithJsonTag("sub_customer_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListCustomerOnDemandResources() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -862,6 +931,22 @@ func GenReqDefForListOrderCouponsByOrderId() *def.HttpRequestDef {
 		WithMethod(http.MethodGet).
 		WithPath("/v2/orders/customer-orders/order-coupons").
 		WithResponse(new(model.ListOrderCouponsByOrderIdResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrderId").
+		WithJsonTag("order_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListOrderDiscounts() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/orders/customer-orders/order-discounts").
+		WithResponse(new(model.ListOrderDiscountsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1307,6 +1392,14 @@ func GenReqDefForListSubCustomerResFeeRecords() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("IndirectPartnerId").
 		WithJsonTag("indirect_partner_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BillDateBegin").
+		WithJsonTag("bill_date_begin").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BillDateEnd").
+		WithJsonTag("bill_date_end").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

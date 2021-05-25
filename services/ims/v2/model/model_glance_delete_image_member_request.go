@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type GlanceDeleteImageMemberRequest struct {
+	// 镜像id
+
 	ImageId string `json:"image_id"`
+	// 成员id
 
 	MemberId string `json:"member_id"`
 }

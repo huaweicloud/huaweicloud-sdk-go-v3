@@ -7,7 +7,7 @@ import (
 )
 
 type RestorePoint struct {
-	// 实例ID。当type为“backup”，为非必选。当type为“timestamp”，为必选。
+	// 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。当type为“backup”，为非必选。当type为“timestamp”，为必选。
 
 	InstanceId *string `json:"instance_id,omitempty"`
 	// 恢复方式，枚举值： - “backup”，表示使用备份文件恢复，按照此方式恢复时，当“type”字段为非必选时，“backup_id”必选。 - “timestamp”，表示按时间点恢复，按照此方式恢复时，当“type”字段必选时，“restore_time”必选。

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type RunCheckResultRequest struct {
+	// 任务标识。
+
 	JobId string `json:"job_id"`
 }
 

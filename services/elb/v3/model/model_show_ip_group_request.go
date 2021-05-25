@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowIpGroupRequest struct {
+	// IP地址组id
+
 	IpgroupId string `json:"ipgroup_id"`
 }
 

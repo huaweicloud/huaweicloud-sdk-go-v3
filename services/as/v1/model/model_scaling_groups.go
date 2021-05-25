@@ -51,7 +51,7 @@ type ScalingGroups struct {
 	AvailableZones *[]string `json:"available_zones,omitempty"`
 	// 网络信息
 
-	Networks *[]Networks `json:"networks,omitempty"`
+	Networks *[]NetworksResult `json:"networks,omitempty"`
 	// 安全组信息
 
 	SecurityGroups *[]SecurityGroupsResult `json:"security_groups,omitempty"`
@@ -72,7 +72,7 @@ type ScalingGroups struct {
 	HealthPeriodicAuditMethod *ScalingGroupsHealthPeriodicAuditMethod `json:"health_periodic_audit_method,omitempty"`
 	// 健康检查的间隔时间。
 
-	HealthPeriodicAuditTime *ScalingGroupsHealthPeriodicAuditTime `json:"health_periodic_audit_time,omitempty"`
+	HealthPeriodicAuditTime *int32 `json:"health_periodic_audit_time,omitempty"`
 	// 健康状况检查宽限期。
 
 	HealthPeriodicAuditGracePeriod *int32 `json:"health_periodic_audit_grace_period,omitempty"`
@@ -85,12 +85,21 @@ type ScalingGroups struct {
 	// 删除云服务器是否删除云服务器绑定的弹性IP。
 
 	DeletePublicip *bool `json:"delete_publicip,omitempty"`
+	// 删除云服务器是否删除云服务器绑定的数据盘
+
+	DeleteVolume *bool `json:"delete_volume,omitempty"`
 	// 该参数为预留字段
 
 	CloudLocationId *string `json:"cloud_location_id,omitempty"`
 	// 企业项目ID
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	// 伸缩组活动类型
+
+	ActivityType *string `json:"activity_type,omitempty"`
+	// 伸缩组扩缩容时目标AZ选择的优先级策略
+
+	MultiAzPriorityPolicy *string `json:"multi_az_priority_policy,omitempty"`
 }
 
 func (o ScalingGroups) String() string {
@@ -187,55 +196,6 @@ func (c *ScalingGroupsHealthPeriodicAuditMethod) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
-	}
-}
-
-type ScalingGroupsHealthPeriodicAuditTime struct {
-	value int32
-}
-
-type ScalingGroupsHealthPeriodicAuditTimeEnum struct {
-	E_0   ScalingGroupsHealthPeriodicAuditTime
-	E_1   ScalingGroupsHealthPeriodicAuditTime
-	E_5   ScalingGroupsHealthPeriodicAuditTime
-	E_15  ScalingGroupsHealthPeriodicAuditTime
-	E_60  ScalingGroupsHealthPeriodicAuditTime
-	E_180 ScalingGroupsHealthPeriodicAuditTime
-}
-
-func GetScalingGroupsHealthPeriodicAuditTimeEnum() ScalingGroupsHealthPeriodicAuditTimeEnum {
-	return ScalingGroupsHealthPeriodicAuditTimeEnum{
-		E_0: ScalingGroupsHealthPeriodicAuditTime{
-			value: 0,
-		}, E_1: ScalingGroupsHealthPeriodicAuditTime{
-			value: 1,
-		}, E_5: ScalingGroupsHealthPeriodicAuditTime{
-			value: 5,
-		}, E_15: ScalingGroupsHealthPeriodicAuditTime{
-			value: 15,
-		}, E_60: ScalingGroupsHealthPeriodicAuditTime{
-			value: 60,
-		}, E_180: ScalingGroupsHealthPeriodicAuditTime{
-			value: 180,
-		},
-	}
-}
-
-func (c ScalingGroupsHealthPeriodicAuditTime) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ScalingGroupsHealthPeriodicAuditTime) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
 	}
 }
 

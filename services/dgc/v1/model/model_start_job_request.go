@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type StartJobRequest struct {
+	// 作业名称.
+
 	JobName string `json:"job_name"`
 
 	Body *StartJobReq `json:"body,omitempty"`

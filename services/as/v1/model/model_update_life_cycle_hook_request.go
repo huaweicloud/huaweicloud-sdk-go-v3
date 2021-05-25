@@ -8,11 +8,14 @@ import (
 
 // Request Object
 type UpdateLifeCycleHookRequest struct {
+	// 伸缩组标识。
+
 	ScalingGroupId string `json:"scaling_group_id"`
+	// 生命周期挂钩标识。
 
 	LifecycleHookName string `json:"lifecycle_hook_name"`
 
-	Body *UpdateLifeCycleHookRequestBody `json:"body,omitempty"`
+	Body *UpdateLifeCycleHookOption `json:"body,omitempty"`
 }
 
 func (o UpdateLifeCycleHookRequest) String() string {

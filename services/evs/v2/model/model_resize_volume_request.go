@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ResizeVolumeRequest struct {
+	// 云硬盘ID。
+
 	VolumeId string `json:"volume_id"`
 
 	Body *ResizeVolumeRequestBody `json:"body,omitempty"`

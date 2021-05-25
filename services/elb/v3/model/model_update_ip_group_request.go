@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type UpdateIpGroupRequest struct {
+	// 待更新的IP地址组的id
+
 	IpgroupId string `json:"ipgroup_id"`
 
 	Body *UpdateIpGroupRequestBody `json:"body,omitempty"`

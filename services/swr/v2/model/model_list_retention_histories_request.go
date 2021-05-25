@@ -11,13 +11,19 @@ import (
 
 // Request Object
 type ListRetentionHistoriesRequest struct {
+	// 消息体的类型（格式），下方类型可任选其一使用： application/json;charset=utf-8 application/json
+
 	ContentType ListRetentionHistoriesRequestContentType `json:"Content-Type"`
+	// 组织名称
 
 	Namespace string `json:"namespace"`
+	// 镜像仓库名称
 
 	Repository string `json:"repository"`
+	// 起始索引。**注意：offset和limit参数需要配套使用**
 
 	Offset *string `json:"offset,omitempty"`
+	// 返回条数。**注意：offset和limit参数需要配套使用**
 
 	Limit *string `json:"limit,omitempty"`
 }

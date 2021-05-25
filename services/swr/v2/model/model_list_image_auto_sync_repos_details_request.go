@@ -11,9 +11,13 @@ import (
 
 // Request Object
 type ListImageAutoSyncReposDetailsRequest struct {
+	// 消息体的类型（格式），下方类型可任选其一使用： application/json;charset=utf-8 application/json
+
 	ContentType ListImageAutoSyncReposDetailsRequestContentType `json:"Content-Type"`
+	// 组织名称
 
 	Namespace string `json:"namespace"`
+	// 镜像仓库名称
 
 	Repository string `json:"repository"`
 }

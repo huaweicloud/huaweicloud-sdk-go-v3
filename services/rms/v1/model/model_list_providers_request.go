@@ -11,9 +11,13 @@ import (
 
 // Request Object
 type ListProvidersRequest struct {
+	// 分页偏移
+
 	Offset *int32 `json:"offset,omitempty"`
+	// 最大的返回数量
 
 	Limit *int32 `json:"limit,omitempty"`
+	// 选择接口返回的信息的语言，默认为\"zh-cn\"中文
 
 	XLanguage *ListProvidersRequestXLanguage `json:"X-Language,omitempty"`
 }

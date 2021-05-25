@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type DeleteIterationV4Request struct {
+	// 项目id
+
 	ProjectId string `json:"project_id"`
+	// 迭代id
 
 	IterationId int32 `json:"iteration_id"`
 }

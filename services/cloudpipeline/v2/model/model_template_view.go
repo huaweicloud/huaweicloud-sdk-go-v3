@@ -17,9 +17,6 @@ type TemplateView struct {
 	// 模板类型
 
 	TemplateType string `json:"template_type"`
-	// 模板编辑URL
-
-	TemplateUrl string `json:"template_url"`
 	// 用户ID
 
 	UserId string `json:"user_id"`

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type UpdateVaultRequest struct {
+	// 存储库ID
+
 	VaultId string `json:"vault_id"`
 
 	Body *VaultUpdateReq `json:"body,omitempty"`

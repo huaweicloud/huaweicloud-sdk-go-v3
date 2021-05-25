@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowSubnetRequest struct {
+	// 子网ID
+
 	SubnetId string `json:"subnet_id"`
 }
 

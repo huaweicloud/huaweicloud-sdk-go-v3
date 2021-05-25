@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type AddMemberRequest struct {
+	// 备份副本id
+
 	BackupId string `json:"backup_id"`
 
 	Body *AddMembersReq `json:"body,omitempty"`

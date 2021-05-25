@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CreateMemberRequest struct {
+	// 后端云服务器组id
+
 	PoolId string `json:"pool_id"`
 
 	Body *CreateMemberRequestBody `json:"body,omitempty"`

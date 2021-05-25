@@ -11,7 +11,10 @@ import (
 
 // Request Object
 type StartInstanceEnlargeVolumeActionRequest struct {
+	// 语言
+
 	XLanguage *StartInstanceEnlargeVolumeActionRequestXLanguage `json:"X-Language,omitempty"`
+	// 实例ID。
 
 	InstanceId string `json:"instance_id"`
 

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CreateRecordSetRequest struct {
+	// 所属zone的ID。
+
 	ZoneId string `json:"zone_id"`
 
 	Body *CreateRecordSetReq `json:"body,omitempty"`

@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type ExecuteScalingPolicyRequest struct {
+	// 伸缩策略ID。
+
 	ScalingPolicyId string `json:"scaling_policy_id"`
 
-	Body *ExecuteScalingPolicyRequestBody `json:"body,omitempty"`
+	Body *ExecuteScalingPolicyOption `json:"body,omitempty"`
 }
 
 func (o ExecuteScalingPolicyRequest) String() string {

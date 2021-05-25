@@ -25,7 +25,7 @@ type ListInstancesRespInstances struct {
 	// 消息存储空间，单位：GB。
 
 	StorageSpace *int32 `json:"storage_space,omitempty"`
-	// Kafka实例的最大topic数。
+	// Kafka实例的分区数量。
 
 	PartitionNum *string `json:"partition_num,omitempty"`
 	// 已使用的消息存储空间，单位：GB。
@@ -190,6 +190,9 @@ type ListInstancesRespInstances struct {
 	// 云监控版本。
 
 	CesVersion *string `json:"ces_version,omitempty"`
+	// 标签列表。
+
+	Tags *[]ListInstancesRespTags `json:"tags,omitempty"`
 }
 
 func (o ListInstancesRespInstances) String() string {

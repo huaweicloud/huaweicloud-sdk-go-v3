@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type NovaCreateServersRequest struct {
+	// 微版本头
+
 	OpenStackAPIVersion *string `json:"OpenStack-API-Version,omitempty"`
 
 	Body *NovaCreateServersRequestBody `json:"body,omitempty"`

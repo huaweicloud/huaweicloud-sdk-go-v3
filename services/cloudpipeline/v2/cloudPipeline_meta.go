@@ -293,42 +293,18 @@ func GenReqDefForStartNewPipeline() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForStartPipeline() *def.HttpRequestDef {
+func GenReqDefForStopPipelineNew() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v3/pipelines/start").
-		WithResponse(new(model.StartPipelineResponse)).
+		WithPath("/v3/pipelines/{pipeline_id}/stop").
+		WithResponse(new(model.StopPipelineNewResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PipelineId").
 		WithJsonTag("pipeline_id").
-		WithLocationType(def.Query))
+		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XLanguage").
-		WithJsonTag("X-Language").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForStopPipeline() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v3/pipelines/stop").
-		WithResponse(new(model.StopPipelineResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PipelineId").
-		WithJsonTag("pipeline_id").
-		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BuildId").
 		WithJsonTag("build_id").

@@ -41,6 +41,8 @@ type ScalingPoliciesV2 struct {
 	// 创建伸缩策略时间，遵循UTC时间
 
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+
+	MetaData *ScalingPolicyV2MetaData `json:"meta_data,omitempty"`
 }
 
 func (o ScalingPoliciesV2) String() string {

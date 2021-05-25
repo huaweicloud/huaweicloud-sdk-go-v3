@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowRefundOrderDetailsRequest struct {
+	// 退订订单或者降配订单的ID。
+
 	OrderId string `json:"order_id"`
 }
 

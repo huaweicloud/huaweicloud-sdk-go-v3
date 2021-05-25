@@ -22,20 +22,20 @@ type InstanceConfig struct {
 	ImageRef *string `json:"imageRef,omitempty"`
 	// 磁盘组信息，系统盘必选，数据盘可选。
 
-	Disk *[]Disk `json:"disk,omitempty"`
+	Disk *[]DiskInfo `json:"disk,omitempty"`
 	// 登录云服务器的SSH密钥名称，与adminPass互斥，且必选一个。Windoes弹性云服务器不支持使用密钥登陆方式。
 
 	KeyName *string `json:"key_name,omitempty"`
 	// 注入文件信息。仅支持注入文本文件，最大支持注入5个文件，每个文件最大1KB。
 
-	Personality *[]Personality `json:"personality,omitempty"`
+	Personality *[]PersonalityInfo `json:"personality,omitempty"`
 
 	PublicIp *PublicIp `json:"public_ip,omitempty"`
 	// cloud-init用户数据。支持注入文本、文本文件或gzip文件。文件内容需要进行base64格式编码，注入内容（编码之前的内容）最大为32KB。说明：当key_name没有指定时，user_data注入的数据默认为云服务器root账号的登录密码。创建密码方式鉴权的Linux弹性云服务器时为必填项，为root用户注入自定义初始化密码。
 
 	UserData *string `json:"user_data,omitempty"`
 
-	Metadata *MetaData `json:"metadata,omitempty"`
+	Metadata *VmMetaData `json:"metadata,omitempty"`
 	// 安全组信息。使用vpc_id通过查询VPC服务安全组列表接口获取，详见《虚拟私有云API参考》的“查询安全组列表”。当伸缩配置和伸缩组同时指定安全组时，将以伸缩配置中的安全组为准；当伸缩配置和伸缩组都没有指定安全组时，将使用默认安全组。为了使用灵活性更高，推荐在伸缩配置中指定安全组。
 
 	SecurityGroups *[]SecurityGroups `json:"security_groups,omitempty"`

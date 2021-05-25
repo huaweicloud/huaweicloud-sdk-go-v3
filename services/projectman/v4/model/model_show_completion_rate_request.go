@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowCompletionRateRequest struct {
+	// 项目ID
+
 	ProjectId string `json:"project_id"`
 
 	Body *MetricRequest3 `json:"body,omitempty"`

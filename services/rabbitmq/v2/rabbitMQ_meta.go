@@ -7,11 +7,11 @@ import (
 	"net/http"
 )
 
-func GenReqDefForBatchCreateOrDeleteInstanceTag() *def.HttpRequestDef {
+func GenReqDefForBatchCreateOrDeleteRabbitMqTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/rabbitmq/{instance_id}/tags/action").
-		WithResponse(new(model.BatchCreateOrDeleteInstanceTagResponse)).
+		WithResponse(new(model.BatchCreateOrDeleteRabbitMqTagResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -310,22 +310,6 @@ func GenReqDefForShowInstanceExtendProductInfo() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowInstanceTags() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/rabbitmq/{instance_id}/tags").
-		WithResponse(new(model.ShowInstanceTagsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForShowMaintainWindows() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -337,12 +321,28 @@ func GenReqDefForShowMaintainWindows() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowProjectTags() *def.HttpRequestDef {
+func GenReqDefForShowRabbitMqProjectTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/rabbitmq/tags").
-		WithResponse(new(model.ShowProjectTagsResponse)).
+		WithResponse(new(model.ShowRabbitMqProjectTagsResponse)).
 		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowRabbitMqTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/rabbitmq/{instance_id}/tags").
+		WithResponse(new(model.ShowRabbitMqTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

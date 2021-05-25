@@ -11,19 +11,28 @@ import (
 
 // Request Object
 type ListUsersOfStreamRequest struct {
+	// 播放域名。
+
 	PlayDomain string `json:"play_domain"`
+	// app名。
 
 	App *string `json:"app,omitempty"`
+	// 流名。
 
 	Stream *string `json:"stream,omitempty"`
+	// 运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
 
 	Isp *[]string `json:"isp,omitempty"`
+	// 区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
 
 	Region *[]string `json:"region,omitempty"`
+	// 查询数据的时间粒度，支持60（默认值）, 300秒。不传值时，使用默认值60秒。
 
 	Interval *ListUsersOfStreamRequestInterval `json:"interval,omitempty"`
+	// 起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
 
 	StartTime *string `json:"start_time,omitempty"`
+	// 结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
 
 	EndTime *string `json:"end_time,omitempty"`
 }

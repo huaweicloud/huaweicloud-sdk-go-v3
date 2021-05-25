@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CinderExportToImageRequest struct {
+	// 云硬盘ID。
+
 	VolumeId string `json:"volume_id"`
 
 	Body *CinderExportToImageRequestBody `json:"body,omitempty"`

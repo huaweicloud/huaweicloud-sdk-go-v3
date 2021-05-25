@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type AssociateVaultPolicyRequest struct {
+	// 存储库ID
+
 	VaultId string `json:"vault_id"`
 
 	Body *VaultAssociate `json:"body,omitempty"`

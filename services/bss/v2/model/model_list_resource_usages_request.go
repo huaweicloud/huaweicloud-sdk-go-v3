@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ListResourceUsagesRequest struct {
+	// 语言。中文：zh_CN英文：en_US缺省为zh_CN。
+
 	XLanguage *string `json:"X-Language,omitempty"`
 }
 

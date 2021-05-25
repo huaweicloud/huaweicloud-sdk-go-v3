@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateScalingV2PolicyRequest struct {
-	Body *CreateScalingPolicyV2RequestBody `json:"body,omitempty"`
+	Body *CreateScalingPolicyV2Option `json:"body,omitempty"`
 }
 
 func (o CreateScalingV2PolicyRequest) String() string {

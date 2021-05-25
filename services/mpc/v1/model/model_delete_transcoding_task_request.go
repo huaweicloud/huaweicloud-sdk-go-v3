@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeleteTranscodingTaskRequest struct {
+	// 创建转码任务成功时返回的任务ID
+
 	TaskId int32 `json:"task_id"`
 }
 

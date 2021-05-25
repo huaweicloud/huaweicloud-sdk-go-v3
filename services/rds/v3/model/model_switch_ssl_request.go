@@ -11,7 +11,10 @@ import (
 
 // Request Object
 type SwitchSslRequest struct {
+	// 语言
+
 	XLanguage *SwitchSslRequestXLanguage `json:"X-Language,omitempty"`
+	// 实例ID。
 
 	InstanceId string `json:"instance_id"`
 

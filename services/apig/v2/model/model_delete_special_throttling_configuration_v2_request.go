@@ -8,9 +8,13 @@ import (
 
 // Request Object
 type DeleteSpecialThrottlingConfigurationV2Request struct {
+	// 实例编号
+
 	InstanceId string `json:"instance_id"`
+	// 流控策略的ID
 
 	ThrottleId string `json:"throttle_id"`
+	// 特殊配置的编号
 
 	StrategyId string `json:"strategy_id"`
 }

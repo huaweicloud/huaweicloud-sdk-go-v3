@@ -11,9 +11,13 @@ import (
 
 // Request Object
 type ListStatisticsRequest struct {
+	// 参数过滤器。
+
 	Filter ListStatisticsRequestFilter `json:"filter"`
+	// 时间段单位为分钟，与filter参数metric配合使用。
 
 	Period *string `json:"period,omitempty"`
+	// 月度统计的维度，与filter参数monthly_statistics配合使用。 \"0\":本月月度统计。 \"1\":上月月度统计。 \"2\":最近三个月月度统计。 \"3\":最近六个月月度计。 取值超出范围时默认取\"0”
 
 	MonthCode ListStatisticsRequestMonthCode `json:"month_code"`
 }

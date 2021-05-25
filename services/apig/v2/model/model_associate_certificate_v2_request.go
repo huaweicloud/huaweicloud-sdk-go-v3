@@ -8,9 +8,13 @@ import (
 
 // Request Object
 type AssociateCertificateV2Request struct {
+	// 实例编号
+
 	InstanceId string `json:"instance_id"`
+	// 域名的编号
 
 	DomainId string `json:"domain_id"`
+	// 分组的编号
 
 	GroupId string `json:"group_id"`
 

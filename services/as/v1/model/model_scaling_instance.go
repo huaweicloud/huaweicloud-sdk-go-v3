@@ -20,6 +20,9 @@ type ScalingInstance struct {
 	// 实例伸缩失败详情。
 
 	FailedDetails *string `json:"failed_details,omitempty"`
+	// 实例配置信息。
+
+	InstanceConfig *string `json:"instance_config,omitempty"`
 }
 
 func (o ScalingInstance) String() string {

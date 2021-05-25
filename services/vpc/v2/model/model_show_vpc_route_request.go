@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowVpcRouteRequest struct {
+	// 路由ID
+
 	RouteId string `json:"route_id"`
 }
 

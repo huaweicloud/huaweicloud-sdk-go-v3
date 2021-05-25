@@ -18,7 +18,7 @@ type ListSinkTasksRespTasks struct {
 	DestinationType *string `json:"destination_type,omitempty"`
 	// 转储任务创建时间戳。
 
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 	// 转储任务状态。
 
 	Status *string `json:"status,omitempty"`

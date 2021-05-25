@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DownloadBlockchainSdkConfigRequest struct {
+	// blockchainID
+
 	BlockchainId string `json:"blockchain_id"`
 
 	Body *CfgRequestBody `json:"body,omitempty"`

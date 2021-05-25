@@ -11,7 +11,10 @@ import (
 
 // Request Object
 type DeleteScalingInstanceRequest struct {
+	// 实例ID。
+
 	InstanceId string `json:"instance_id"`
+	// 实例移出伸缩组，是否删除云服务器实例。默认为no；可选值为yes或no。
 
 	InstanceDelete *DeleteScalingInstanceRequestInstanceDelete `json:"instance_delete,omitempty"`
 }

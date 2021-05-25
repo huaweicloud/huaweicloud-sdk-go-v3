@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type BatchDeleteServerTagsRequest struct {
+	// 云服务器ID。
+
 	ServerId string `json:"server_id"`
 
 	Body *BatchDeleteServerTagsRequestBody `json:"body,omitempty"`

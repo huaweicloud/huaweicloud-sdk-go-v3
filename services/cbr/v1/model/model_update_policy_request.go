@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type UpdatePolicyRequest struct {
+	// 策略ID
+
 	PolicyId string `json:"policy_id"`
 
 	Body *PolicyUpdateReq `json:"body,omitempty"`

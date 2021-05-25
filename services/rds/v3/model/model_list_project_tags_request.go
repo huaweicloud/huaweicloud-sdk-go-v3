@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ListProjectTagsRequest struct {
+	// 语言
+
 	XLanguage *string `json:"X-Language,omitempty"`
 }
 

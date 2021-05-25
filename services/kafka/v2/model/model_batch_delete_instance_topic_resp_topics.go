@@ -10,7 +10,7 @@ type BatchDeleteInstanceTopicRespTopics struct {
 	// Topic名称。
 
 	Id *string `json:"id,omitempty"`
-	// topic名称。
+	// 是否删除成功。
 
 	Success *bool `json:"success,omitempty"`
 }

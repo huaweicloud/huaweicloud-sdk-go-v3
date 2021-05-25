@@ -11,19 +11,28 @@ import (
 
 // Request Object
 type DeleteClusterRequest struct {
+	// 集群 ID，获取方式请参见[[如何获取接口URI中参数](https://support.huaweicloud.com/api-cce/cce_02_0271.html)](tag:hws)[[如何获取接口URI中参数](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0271.html)](tag:hws_hk)
+
 	ClusterId string `json:"cluster_id"`
+	// 集群状态兼容Error参数，用于API平滑切换。 兼容场景下，errorStatus为空则屏蔽Error状态为Deleting状态。
 
 	ErrorStatus *string `json:"errorStatus,omitempty"`
+	// 是否删除SFS Turbo（极速文件存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
 
 	DeleteEfs *DeleteClusterRequestDeleteEfs `json:"delete_efs,omitempty"`
+	// 是否删除eni ports（原生弹性网卡）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
 
 	DeleteEni *DeleteClusterRequestDeleteEni `json:"delete_eni,omitempty"`
+	// 是否删除evs（云硬盘）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
 
 	DeleteEvs *DeleteClusterRequestDeleteEvs `json:"delete_evs,omitempty"`
+	// 是否删除elb（弹性负载均衡）等集群Service/Ingress相关资源。 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
 
 	DeleteNet *DeleteClusterRequestDeleteNet `json:"delete_net,omitempty"`
+	// 是否删除obs（对象存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
 
 	DeleteObs *DeleteClusterRequestDeleteObs `json:"delete_obs,omitempty"`
+	// 是否删除sfs（文件存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
 
 	DeleteSfs *DeleteClusterRequestDeleteSfs `json:"delete_sfs,omitempty"`
 }

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowScalingGroupRequest struct {
+	// 伸缩组ID。
+
 	ScalingGroupId string `json:"scaling_group_id"`
 }
 

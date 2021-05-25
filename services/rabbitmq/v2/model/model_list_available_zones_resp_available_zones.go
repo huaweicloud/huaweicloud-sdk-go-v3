@@ -28,6 +28,9 @@ type ListAvailableZonesRespAvailableZones struct {
 	// 是否为默认可用区。
 
 	DefaultAz *bool `json:"default_az,omitempty"`
+	// 剩余时间。
+
+	RemainTime *int64 `json:"remain_time,omitempty"`
 	// 是否支持IPv6。
 
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`

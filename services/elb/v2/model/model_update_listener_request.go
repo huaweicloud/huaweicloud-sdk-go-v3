@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type UpdateListenerRequest struct {
+	// 监听器id
+
 	ListenerId string `json:"listener_id"`
 
 	Body *UpdateListenerRequestBody `json:"body,omitempty"`

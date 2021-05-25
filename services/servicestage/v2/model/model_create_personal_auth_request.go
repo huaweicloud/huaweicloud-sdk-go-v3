@@ -11,6 +11,8 @@ import (
 
 // Request Object
 type CreatePersonalAuthRequest struct {
+	// 仓库类型。 支持私人令牌授权的仓库类型有：github、gitlab、gitee。
+
 	RepoType CreatePersonalAuthRequestRepoType `json:"repo_type"`
 
 	Body *AccessToken `json:"body,omitempty"`

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type EncryptDatakeyRequest struct {
+	// API版本号
+
 	VersionId string `json:"version_id"`
 
 	Body *EncryptDatakeyRequestBody `json:"body,omitempty"`

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type UpdateMembesRoleV4Request struct {
+	// 项目id
+
 	ProjectId string `json:"project_id"`
 
 	Body *UpdateMembesRoleV4RequestBody `json:"body,omitempty"`

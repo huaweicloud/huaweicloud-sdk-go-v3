@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type DeleteRecordConfigRequest struct {
+	// 直播播放域名
+
 	Domain string `json:"domain"`
+	// 流应用名称
 
 	AppName string `json:"app_name"`
 }

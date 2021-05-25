@@ -8,6 +8,9 @@ import (
 
 //
 type CreateUserResult struct {
+	// IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+
+	AccessMode *string `json:"access_mode,omitempty"`
 	// IAM用户状态信息。
 
 	Status *int32 `json:"status,omitempty"`

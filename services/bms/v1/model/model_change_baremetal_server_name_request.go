@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ChangeBaremetalServerNameRequest struct {
+	// 裸金属服务器ID
+
 	ServerId string `json:"server_id"`
 
 	Body *ChangeBaremetalNameBody `json:"body,omitempty"`

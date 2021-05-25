@@ -11,6 +11,8 @@ import (
 
 // Request Object
 type RunCheckTaskJobsRequest struct {
+	// 图像内容审核任务处理状态如下：  - created 已创建  - running 正在处理  - finish 已完成  - failed 处理失败
+
 	Status *RunCheckTaskJobsRequestStatus `json:"status,omitempty"`
 }
 

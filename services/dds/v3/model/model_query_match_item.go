@@ -13,7 +13,7 @@ type QueryMatchItem struct {
 	// 取值为“instance_name”或“instance_id”，分别表示按实例名称或按实例ID匹配查询。
 
 	Key QueryMatchItemKey `json:"key"`
-	// 待匹配的实例名称或实例ID。
+	// 待匹配的实例名称或实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
 
 	Value string `json:"value"`
 }

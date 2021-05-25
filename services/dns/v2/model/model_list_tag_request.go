@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ListTagRequest struct {
+	// 资源的类型：DNS-public_zone，DNS-private_zone，DNS-public_recordset，DNS-private_recordset，DNS-ptr_record。
+
 	ResourceType string `json:"resource_type"`
 
 	Body *ListTagReq `json:"body,omitempty"`

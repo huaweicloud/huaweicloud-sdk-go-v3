@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CreateAuthorizingAppsV2Request struct {
+	// 实例编号
+
 	InstanceId string `json:"instance_id"`
 
 	Body *AppAuthReq `json:"body,omitempty"`

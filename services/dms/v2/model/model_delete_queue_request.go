@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeleteQueueRequest struct {
+	// 待删除的队列ID
+
 	QueueId string `json:"queue_id"`
 }
 

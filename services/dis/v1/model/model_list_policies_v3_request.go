@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ListPoliciesV3Request struct {
+	// 需要查询授权策略的通道名称。
+
 	StreamName string `json:"stream_name"`
 }
 

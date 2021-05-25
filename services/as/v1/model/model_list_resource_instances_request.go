@@ -11,9 +11,11 @@ import (
 
 // Request Object
 type ListResourceInstancesRequest struct {
+	// 资源类型，枚举类：SCALING_GROUP_TAG。
+
 	ResourceType ListResourceInstancesRequestResourceType `json:"resource_type"`
 
-	Body *ShowTagsRequestBody `json:"body,omitempty"`
+	Body *QueryTagsOption `json:"body,omitempty"`
 }
 
 func (o ListResourceInstancesRequest) String() string {

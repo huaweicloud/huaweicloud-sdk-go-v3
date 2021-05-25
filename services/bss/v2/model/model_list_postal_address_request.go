@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type ListPostalAddressRequest struct {
+	// 偏移量。默认值为0。
+
 	Offset *int32 `json:"offset,omitempty"`
+	// 每次查询的个数。默认值为10。
 
 	Limit *int32 `json:"limit,omitempty"`
 }

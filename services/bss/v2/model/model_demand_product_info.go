@@ -25,10 +25,10 @@ type DemandProductInfo struct {
 	// 可用区标识。
 
 	AvailableZone *string `json:"available_zone,omitempty"`
-	// 资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。
+	// 资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
 
 	ResourceSize *int32 `json:"resource_size,omitempty"`
-	// 资源容量度量标识，枚举值如下： 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个（次） 线性产品时该参数不能为空。
+	// 资源容量度量标识，枚举值如下： 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个（次） 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
 
 	SizeMeasureId *int32 `json:"size_measure_id,omitempty"`
 	// 使用量因子编码，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。

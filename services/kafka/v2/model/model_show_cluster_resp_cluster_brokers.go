@@ -25,7 +25,7 @@ type ShowClusterRespClusterBrokers struct {
 	Version *string `json:"version,omitempty"`
 	// broker注册时间，为unix时间戳格式。
 
-	RegisterTime *string `json:"register_time,omitempty"`
+	RegisterTime *int64 `json:"register_time,omitempty"`
 	// Kafka实例节点的连通性是否正常。
 
 	IsHealth *bool `json:"is_health,omitempty"`

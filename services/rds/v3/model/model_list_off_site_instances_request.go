@@ -12,6 +12,7 @@ import (
 // Request Object
 type ListOffSiteInstancesRequest struct {
 	ContentType *string `json:"Content-Type,omitempty"`
+	// 语言
 
 	XLanguage *ListOffSiteInstancesRequestXLanguage `json:"X-Language,omitempty"`
 }

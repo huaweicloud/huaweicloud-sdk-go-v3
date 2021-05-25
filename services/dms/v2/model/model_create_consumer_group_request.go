@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CreateConsumerGroupRequest struct {
+	// 指定的队列ID
+
 	QueueId string `json:"queue_id"`
 
 	Body *CreateConsumerGroupReq `json:"body,omitempty"`

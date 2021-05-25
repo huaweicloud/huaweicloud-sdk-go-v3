@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowPrivateZoneNameServerRequest struct {
+	// 待查询内网zone的ID。
+
 	ZoneId string `json:"zone_id"`
 }
 

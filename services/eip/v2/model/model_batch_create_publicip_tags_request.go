@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type BatchCreatePublicipTagsRequest struct {
+	// 资源ID
+
 	PublicipId string `json:"publicip_id"`
 
 	Body *BatchCreatePublicipTagsRequestBody `json:"body,omitempty"`

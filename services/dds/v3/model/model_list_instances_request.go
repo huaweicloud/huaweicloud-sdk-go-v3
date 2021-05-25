@@ -11,19 +11,28 @@ import (
 
 // Request Object
 type ListInstancesRequest struct {
+	// 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
+
 	Id *string `json:"id,omitempty"`
+	// 实例名称。 如果name以“*”起始，表示按照“*”后面的值模糊匹配，否则，按照实际填写的name精确匹配查询。 - “*”为系统保留字符，不能只传入该字符。
 
 	Name *string `json:"name,omitempty"`
+	// 实例类型。 - 取值为“Sharding”，表示集群实例。 - 取值为“ReplicaSet”，表示副本集实例。 - 取值为“Single”，表示单节点实例。
 
 	Mode *ListInstancesRequestMode `json:"mode,omitempty"`
+	// 数据库版本类型。取值为“DDS-Community”。
 
 	DatastoreType *ListInstancesRequestDatastoreType `json:"datastore_type,omitempty"`
+	// 虚拟私有云ID。可登录虚拟私有云控制台界面，获取DDS实例所在虚拟私有云的ID。
 
 	VpcId *string `json:"vpc_id,omitempty"`
+	// 子网的网络ID。可登录虚拟私有云控制台界面，获取DDS实例所在虚拟私有云下子网的网络ID。
 
 	SubnetId *string `json:"subnet_id,omitempty"`
+	// 索引位置偏移量，表示从指定project ID下最新的实例创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的实例信息。 取值大于或等于0。不传该参数时，查询偏移量默认为0，表示从最新的实例创建时间对应的实例开始查询。
 
 	Offset *int32 `json:"offset,omitempty"`
+	// 查询实例个数上限值。 取值范围：1~100。不传该参数时，默认查询前100条实例信息。
 
 	Limit *int32 `json:"limit,omitempty"`
 }

@@ -151,17 +151,6 @@ func (c *DmsClient) SendMessages(request *model.SendMessagesRequest) (*model.Sen
 	}
 }
 
-//查询项目标签。
-func (c *DmsClient) ShowProjectTags(request *model.ShowProjectTagsRequest) (*model.ShowProjectTagsResponse, error) {
-	requestDef := GenReqDefForShowProjectTags()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowProjectTagsResponse), nil
-	}
-}
-
 //查看指定的队列。
 func (c *DmsClient) ShowQueue(request *model.ShowQueueRequest) (*model.ShowQueueResponse, error) {
 	requestDef := GenReqDefForShowQueue()
@@ -170,6 +159,17 @@ func (c *DmsClient) ShowQueue(request *model.ShowQueueRequest) (*model.ShowQueue
 		return nil, err
 	} else {
 		return resp.(*model.ShowQueueResponse), nil
+	}
+}
+
+//查询项目标签。
+func (c *DmsClient) ShowQueueProjectTags(request *model.ShowQueueProjectTagsRequest) (*model.ShowQueueProjectTagsResponse, error) {
+	requestDef := GenReqDefForShowQueueProjectTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQueueProjectTagsResponse), nil
 	}
 }
 

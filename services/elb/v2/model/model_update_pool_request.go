@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type UpdatePoolRequest struct {
+	// 后端云服务器组id
+
 	PoolId string `json:"pool_id"`
 
 	Body *UpdatePoolRequestBody `json:"body,omitempty"`

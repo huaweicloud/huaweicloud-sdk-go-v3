@@ -11,6 +11,8 @@ import (
 
 // Request Object
 type CreateConfigurationRequest struct {
+	// 语言
+
 	XLanguage *CreateConfigurationRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *ConfigurationForCreation `json:"body,omitempty"`

@@ -8,7 +8,7 @@ import (
 
 // 配置云服务器的弹性IP信息
 type PublicIp struct {
-	Eip *Eip `json:"eip"`
+	Eip *EipInfo `json:"eip"`
 }
 
 func (o PublicIp) String() string {

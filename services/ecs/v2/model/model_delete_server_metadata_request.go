@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type DeleteServerMetadataRequest struct {
+	// 待删除的云服务器metadata键值
+
 	Key string `json:"key"`
+	// 云服务器ID。
 
 	ServerId string `json:"server_id"`
 }

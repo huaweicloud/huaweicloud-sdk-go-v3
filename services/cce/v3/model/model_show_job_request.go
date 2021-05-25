@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowJobRequest struct {
+	// 作业ID，获取方式请参见[[如何获取接口URI中参数](https://support.huaweicloud.com/api-cce/cce_02_0271.html)](tag:hws)[[如何获取接口URI中参数](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0271.html)](tag:hws_hk)
+
 	JobId string `json:"job_id"`
 }
 

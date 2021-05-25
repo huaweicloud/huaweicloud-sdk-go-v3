@@ -42,7 +42,7 @@ type ScalingV2PolicyDetail struct {
 
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	MetaData *MeteData `json:"meta_data,omitempty"`
+	MetaData *ScalingPolicyV2MetaData `json:"meta_data,omitempty"`
 }
 
 func (o ScalingV2PolicyDetail) String() string {

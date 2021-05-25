@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CreateEnvironmentV2Request struct {
+	// 实例编号
+
 	InstanceId string `json:"instance_id"`
 
 	Body *EnvReq `json:"body,omitempty"`

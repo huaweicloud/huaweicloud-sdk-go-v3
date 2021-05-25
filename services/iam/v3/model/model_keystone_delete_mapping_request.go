@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type KeystoneDeleteMappingRequest struct {
+	// 待删除的映射ID。
+
 	Id string `json:"id"`
 }
 

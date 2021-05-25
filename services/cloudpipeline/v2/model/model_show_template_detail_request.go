@@ -8,11 +8,16 @@ import (
 
 // Request Object
 type ShowTemplateDetailRequest struct {
+	// 语言类型 中文:zh-cn 英文:en-us，默认en-us
+
 	XLanguage *string `json:"X-Language,omitempty"`
+	// 模板ID
 
 	TemplateId string `json:"template_id"`
+	// 模板类型
 
 	TemplateType string `json:"template_type"`
+	// 接口调用方
 
 	Source *string `json:"source,omitempty"`
 }

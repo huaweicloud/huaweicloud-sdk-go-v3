@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type DeleteBigkeyScanTaskRequest struct {
+	// 实例ID。
+
 	InstanceId string `json:"instance_id"`
+	// 大key分析任务ID。
 
 	BigkeyId string `json:"bigkey_id"`
 }

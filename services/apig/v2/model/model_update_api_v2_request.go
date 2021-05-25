@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type UpdateApiV2Request struct {
+	// 实例编号
+
 	InstanceId string `json:"instance_id"`
+	// API的编号，可通过查询API信息获取该编号。
 
 	ApiId string `json:"api_id"`
 

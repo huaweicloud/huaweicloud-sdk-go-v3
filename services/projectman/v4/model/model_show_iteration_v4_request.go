@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowIterationV4Request struct {
+	// 迭代id
+
 	IterationId int32 `json:"iteration_id"`
 }
 

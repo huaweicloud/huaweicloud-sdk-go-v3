@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeletePoolRequest struct {
+	// 后端服务器组ID。
+
 	PoolId string `json:"pool_id"`
 }
 

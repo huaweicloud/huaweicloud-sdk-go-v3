@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type UpdateSubnetRequest struct {
+	// 子网对应的vpc_id
+
 	VpcId string `json:"vpc_id"`
+	// 子网ID
 
 	SubnetId string `json:"subnet_id"`
 

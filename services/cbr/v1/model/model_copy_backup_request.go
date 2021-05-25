@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CopyBackupRequest struct {
+	// 复制的备份ID
+
 	BackupId string `json:"backup_id"`
 
 	Body *BackupReplicateReq `json:"body,omitempty"`

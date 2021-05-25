@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowProjectWorkHoursRequest struct {
+	// 项目id
+
 	ProjectId string `json:"project_id"`
 
 	Body *ShowProjectWorkHoursRequestBody `json:"body,omitempty"`

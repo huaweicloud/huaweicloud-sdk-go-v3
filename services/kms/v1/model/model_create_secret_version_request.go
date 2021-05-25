@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CreateSecretVersionRequest struct {
+	// 凭据的资源标识符。
+
 	SecretId string `json:"secret_id"`
 
 	Body *CreateSecretVersionRequestBody `json:"body,omitempty"`

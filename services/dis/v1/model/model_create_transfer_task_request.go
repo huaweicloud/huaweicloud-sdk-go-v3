@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CreateTransferTaskRequest struct {
+	// 已创建的通道名称。
+
 	StreamName string `json:"stream_name"`
 
 	Body *CreateTransferTaskRequest `json:"body,omitempty"`

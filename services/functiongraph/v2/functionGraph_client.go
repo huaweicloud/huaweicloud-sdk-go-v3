@@ -118,6 +118,17 @@ func (c *FunctionGraphClient) DeleteFunction(request *model.DeleteFunctionReques
 	}
 }
 
+//删除函数异步配置信息。
+func (c *FunctionGraphClient) DeleteFunctionAsyncInvokeConfig(request *model.DeleteFunctionAsyncInvokeConfigRequest) (*model.DeleteFunctionAsyncInvokeConfigResponse, error) {
+	requestDef := GenReqDefForDeleteFunctionAsyncInvokeConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFunctionAsyncInvokeConfigResponse), nil
+	}
+}
+
 //删除函数版本别名。
 func (c *FunctionGraphClient) DeleteVersionAlias(request *model.DeleteVersionAliasRequest) (*model.DeleteVersionAliasResponse, error) {
 	requestDef := GenReqDefForDeleteVersionAlias()
@@ -159,6 +170,17 @@ func (c *FunctionGraphClient) ListEvents(request *model.ListEventsRequest) (*mod
 		return nil, err
 	} else {
 		return resp.(*model.ListEventsResponse), nil
+	}
+}
+
+//获取函数异步配置列表。
+func (c *FunctionGraphClient) ListFunctionAsyncInvokeConfig(request *model.ListFunctionAsyncInvokeConfigRequest) (*model.ListFunctionAsyncInvokeConfigResponse, error) {
+	requestDef := GenReqDefForListFunctionAsyncInvokeConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFunctionAsyncInvokeConfigResponse), nil
 	}
 }
 
@@ -250,6 +272,17 @@ func (c *FunctionGraphClient) ShowEvent(request *model.ShowEventRequest) (*model
 	}
 }
 
+//获取函数异步配置信息。
+func (c *FunctionGraphClient) ShowFunctionAsyncInvokeConfig(request *model.ShowFunctionAsyncInvokeConfigRequest) (*model.ShowFunctionAsyncInvokeConfigResponse, error) {
+	requestDef := GenReqDefForShowFunctionAsyncInvokeConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFunctionAsyncInvokeConfigResponse), nil
+	}
+}
+
 //获取指定函数的代码。
 func (c *FunctionGraphClient) ShowFunctionCode(request *model.ShowFunctionCodeRequest) (*model.ShowFunctionCodeResponse, error) {
 	requestDef := GenReqDefForShowFunctionCode()
@@ -302,6 +335,17 @@ func (c *FunctionGraphClient) UpdateEvent(request *model.UpdateEventRequest) (*m
 		return nil, err
 	} else {
 		return resp.(*model.UpdateEventResponse), nil
+	}
+}
+
+//设置函数异步配置信息。
+func (c *FunctionGraphClient) UpdateFunctionAsyncInvokeConfig(request *model.UpdateFunctionAsyncInvokeConfigRequest) (*model.UpdateFunctionAsyncInvokeConfigResponse, error) {
+	requestDef := GenReqDefForUpdateFunctionAsyncInvokeConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFunctionAsyncInvokeConfigResponse), nil
 	}
 }
 

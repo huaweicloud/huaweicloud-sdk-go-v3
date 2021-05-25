@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ListOrderCouponsByOrderIdRequest struct {
+	// 订单ID。
+
 	OrderId string `json:"order_id"`
 }
 

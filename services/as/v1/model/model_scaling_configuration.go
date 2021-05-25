@@ -23,6 +23,9 @@ type ScalingConfiguration struct {
 	// 创建伸缩配置的时间，遵循UTC时间。
 
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	// 绑定该伸缩配置的伸缩组ID
+
+	ScalingGroupId *string `json:"scaling_group_id,omitempty"`
 }
 
 func (o ScalingConfiguration) String() string {

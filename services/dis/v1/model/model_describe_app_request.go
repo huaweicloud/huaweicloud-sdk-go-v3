@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DescribeAppRequest struct {
+	// 需要查询的App名称。
+
 	AppName string `json:"app_name"`
 }
 

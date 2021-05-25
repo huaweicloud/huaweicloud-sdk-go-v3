@@ -131,7 +131,10 @@ type ShowInstanceResponse struct {
 	// IPv6的连接地址。
 
 	Ipv6ConnectAddresses *[]string `json:"ipv6_connect_addresses,omitempty"`
-	HttpStatusCode       int       `json:"-"`
+	// 标签列表。
+
+	Tags           *[]ListInstancesRespTags `json:"tags,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o ShowInstanceResponse) String() string {

@@ -13,7 +13,7 @@ type UpdateInstanceCrossVpcIpRespResults struct {
 	AdvertisedIp *string `json:"advertised_ip,omitempty"`
 	// 修改broker跨VPC访问的状态。
 
-	Success *string `json:"success,omitempty"`
+	Success *bool `json:"success,omitempty"`
 	// listeners IP。
 
 	Ip *string `json:"ip,omitempty"`

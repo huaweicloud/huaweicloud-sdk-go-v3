@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type AddMemberV4Request struct {
+	// 项目id
+
 	ProjectId string `json:"project_id"`
 
 	Body *AddMemberRequestV4 `json:"body,omitempty"`

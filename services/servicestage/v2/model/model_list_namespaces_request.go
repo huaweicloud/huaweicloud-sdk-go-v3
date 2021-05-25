@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ListNamespacesRequest struct {
+	// 授权名称。
+
 	XRepoAuth string `json:"X-Repo-Auth"`
 }
 

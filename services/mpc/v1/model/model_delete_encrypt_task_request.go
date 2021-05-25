@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeleteEncryptTaskRequest struct {
+	// 任务ID
+
 	TaskId string `json:"task_id"`
 }
 

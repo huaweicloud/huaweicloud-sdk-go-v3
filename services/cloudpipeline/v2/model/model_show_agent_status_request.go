@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type ShowAgentStatusRequest struct {
+	// 语言类型 中文:zh-cn 英文:en-us
+
 	XLanguage *string `json:"X-Language,omitempty"`
+	// AgentID
 
 	AgentId string `json:"agent_id"`
 }

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ListAz2MigrateRequest struct {
+	// 实例ID。
+
 	InstanceId string `json:"instance_id"`
 }
 

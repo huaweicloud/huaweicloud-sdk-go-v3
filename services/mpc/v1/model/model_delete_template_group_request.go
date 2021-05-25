@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeleteTemplateGroupRequest struct {
+	// 模板组id
+
 	GroupId string `json:"group_id"`
 }
 

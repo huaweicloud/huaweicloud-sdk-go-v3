@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeleteServerGroupMemberRequest struct {
+	// 云服务器组ID。
+
 	ServerGroupId string `json:"server_group_id"`
 
 	Body *DeleteServerGroupMemberRequestBody `json:"body,omitempty"`

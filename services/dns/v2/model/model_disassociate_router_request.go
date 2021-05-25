@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DisassociateRouterRequest struct {
+	// 待解关联zone的ID。
+
 	ZoneId string `json:"zone_id"`
 
 	Body *DisassociaterouterReq `json:"body,omitempty"`

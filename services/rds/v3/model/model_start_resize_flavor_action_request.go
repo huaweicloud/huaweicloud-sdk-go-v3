@@ -11,7 +11,10 @@ import (
 
 // Request Object
 type StartResizeFlavorActionRequest struct {
+	// 语言
+
 	XLanguage *StartResizeFlavorActionRequestXLanguage `json:"X-Language,omitempty"`
+	// 实例ID。
 
 	InstanceId string `json:"instance_id"`
 

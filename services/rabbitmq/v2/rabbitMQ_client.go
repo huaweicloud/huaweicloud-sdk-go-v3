@@ -20,13 +20,13 @@ func RabbitMQClientBuilder() *http_client.HcHttpClientBuilder {
 }
 
 //批量添加或删除实例标签。
-func (c *RabbitMQClient) BatchCreateOrDeleteInstanceTag(request *model.BatchCreateOrDeleteInstanceTagRequest) (*model.BatchCreateOrDeleteInstanceTagResponse, error) {
-	requestDef := GenReqDefForBatchCreateOrDeleteInstanceTag()
+func (c *RabbitMQClient) BatchCreateOrDeleteRabbitMqTag(request *model.BatchCreateOrDeleteRabbitMqTagRequest) (*model.BatchCreateOrDeleteRabbitMqTagResponse, error) {
+	requestDef := GenReqDefForBatchCreateOrDeleteRabbitMqTag()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.BatchCreateOrDeleteInstanceTagResponse), nil
+		return resp.(*model.BatchCreateOrDeleteRabbitMqTagResponse), nil
 	}
 }
 
@@ -184,17 +184,6 @@ func (c *RabbitMQClient) ShowInstanceExtendProductInfo(request *model.ShowInstan
 	}
 }
 
-//查询实例标签。
-func (c *RabbitMQClient) ShowInstanceTags(request *model.ShowInstanceTagsRequest) (*model.ShowInstanceTagsResponse, error) {
-	requestDef := GenReqDefForShowInstanceTags()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowInstanceTagsResponse), nil
-	}
-}
-
 //查询维护时间窗开始时间和结束时间。
 func (c *RabbitMQClient) ShowMaintainWindows(request *model.ShowMaintainWindowsRequest) (*model.ShowMaintainWindowsResponse, error) {
 	requestDef := GenReqDefForShowMaintainWindows()
@@ -207,13 +196,24 @@ func (c *RabbitMQClient) ShowMaintainWindows(request *model.ShowMaintainWindowsR
 }
 
 //查询项目标签。
-func (c *RabbitMQClient) ShowProjectTags(request *model.ShowProjectTagsRequest) (*model.ShowProjectTagsResponse, error) {
-	requestDef := GenReqDefForShowProjectTags()
+func (c *RabbitMQClient) ShowRabbitMqProjectTags(request *model.ShowRabbitMqProjectTagsRequest) (*model.ShowRabbitMqProjectTagsResponse, error) {
+	requestDef := GenReqDefForShowRabbitMqProjectTags()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowProjectTagsResponse), nil
+		return resp.(*model.ShowRabbitMqProjectTagsResponse), nil
+	}
+}
+
+//查询实例标签。
+func (c *RabbitMQClient) ShowRabbitMqTags(request *model.ShowRabbitMqTagsRequest) (*model.ShowRabbitMqTagsResponse, error) {
+	requestDef := GenReqDefForShowRabbitMqTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRabbitMqTagsResponse), nil
 	}
 }
 

@@ -89,7 +89,7 @@ type CreatePostPaidInstanceReq struct {
 	// 存储IO规格。如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。 取值范围：   - 参数specification为100MB时，取值dms.physical.storage.high或者dms.physical.storage.ultra   - 参数specification为300MB时，取值dms.physical.storage.high或者dms.physical.storage.ultra   - 参数specification为600MB时，取值dms.physical.storage.ultra   - 参数specification为1200MB时，取值dms.physical.storage.ultra存储IO规格。如何选择磁盘类型请参考磁盘类型及性能介绍。
 
 	StorageSpecCode CreatePostPaidInstanceReqStorageSpecCode `json:"storage_spec_code"`
-	// 企业项目ID。若为企业项目账号，该参数必填。
+	// 企业项目ID。若为企业项目帐号，该参数必填。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 标签列表。

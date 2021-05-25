@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CopyInstanceRequest struct {
+	// 实例ID。
+
 	InstanceId string `json:"instance_id"`
 
 	Body *BackupInstanceBody `json:"body,omitempty"`

@@ -11,15 +11,24 @@ import (
 
 // Request Object
 type ListScalingGroupsRequest struct {
+	// 伸缩组名称
+
 	ScalingGroupName *string `json:"scaling_group_name,omitempty"`
+	// 伸缩配置ID，通过查询弹性伸缩配置列表接口获取，详见查询弹性伸缩配置列表。
 
 	ScalingConfigurationId *string `json:"scaling_configuration_id,omitempty"`
+	// 伸缩组状态，包括INSERVICE，PAUSED，ERROR，DELETING。
 
 	ScalingGroupStatus *ListScalingGroupsRequestScalingGroupStatus `json:"scaling_group_status,omitempty"`
+	// 查询的起始行号，默认为0。
 
 	StartNumber *int32 `json:"start_number,omitempty"`
+	// 查询的记录条数，默认为20。
 
 	Limit *int32 `json:"limit,omitempty"`
+	// 企业项目ID，当传入all_granted_eps时表示查询该用户所有授权的企业项目下的伸缩组列表
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ListScalingGroupsRequest) String() string {

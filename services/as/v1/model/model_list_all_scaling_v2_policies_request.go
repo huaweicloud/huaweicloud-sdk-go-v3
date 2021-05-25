@@ -11,23 +11,34 @@ import (
 
 // Request Object
 type ListAllScalingV2PoliciesRequest struct {
+	// 伸缩组ID。
+
 	ScalingResourceId *string `json:"scaling_resource_id,omitempty"`
+	// 伸缩资源类型：伸缩组：SCALING_GROUP；带宽：BANDWIDTH
 
 	ScalingResourceType *ListAllScalingV2PoliciesRequestScalingResourceType `json:"scaling_resource_type,omitempty"`
+	// 伸缩策略名称。
 
 	ScalingPolicyName *string `json:"scaling_policy_name,omitempty"`
+	// 策略类型。  告警策略：ALARM ,定时策略：SCHEDULED, 周期策略：RECURRENCE
 
 	ScalingPolicyType *ListAllScalingV2PoliciesRequestScalingPolicyType `json:"scaling_policy_type,omitempty"`
+	// 伸缩策略ID。
 
 	ScalingPolicyId *string `json:"scaling_policy_id,omitempty"`
+	// 查询的起始行号，默认为0。
 
 	StartNumber *int32 `json:"start_number,omitempty"`
+	// 查询记录数，默认20，最大100。
 
 	Limit *int32 `json:"limit,omitempty"`
+	// 排序方法POLICY_NAME：根据策略名称排序;TRIGGER_CONDITION：根据触发条件排序，如升序下，告警策略最先，其余根据最近一次触发时间升序排列;CREATE_TIME：根据策略的创建时间排序。
 
 	SortBy *ListAllScalingV2PoliciesRequestSortBy `json:"sort_by,omitempty"`
+	// 排序顺序ASC：升序；DESC：降序
 
 	Order *ListAllScalingV2PoliciesRequestOrder `json:"order,omitempty"`
+	// 企业项目ID，当传入all_granted_eps时表示查询该用户所有授权的企业项目下的伸缩组列表。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }

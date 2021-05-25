@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type UpdateTopicReplicaRequest struct {
+	// 实例ID。
+
 	InstanceId string `json:"instance_id"`
+	// Topic名称。
 
 	Topic string `json:"topic"`
 

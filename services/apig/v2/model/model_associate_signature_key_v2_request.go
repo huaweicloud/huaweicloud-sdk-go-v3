@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type AssociateSignatureKeyV2Request struct {
+	// 实例编号
+
 	InstanceId string `json:"instance_id"`
 
 	Body *SignBindingReq `json:"body,omitempty"`

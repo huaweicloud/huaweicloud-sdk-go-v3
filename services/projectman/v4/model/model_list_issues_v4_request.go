@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ListIssuesV4Request struct {
+	// 项目id
+
 	ProjectId string `json:"project_id"`
 
 	Body *ListIssueRequestV4 `json:"body,omitempty"`

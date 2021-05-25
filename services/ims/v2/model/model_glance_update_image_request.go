@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type GlanceUpdateImageRequest struct {
+	// 镜像ID
+
 	ImageId string `json:"image_id"`
 
 	Body *[]GlanceUpdateImageRequestBody `json:"body,omitempty"`

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CreateClusterTagRequest struct {
+	// 集群ID。
+
 	ClusterId string `json:"cluster_id"`
 
 	Body *CreateTagReq `json:"body,omitempty"`

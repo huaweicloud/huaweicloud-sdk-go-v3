@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type RunEvaluationByPolicyAssignmentIdRequest struct {
+	// 规则ID
+
 	PolicyAssignmentId string `json:"policy_assignment_id"`
 }
 

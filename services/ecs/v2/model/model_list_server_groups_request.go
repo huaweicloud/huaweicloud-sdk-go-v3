@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type ListServerGroupsRequest struct {
+	// 查询返回server group数量限制。
+
 	Limit *int32 `json:"limit,omitempty"`
+	// 从marker指定的server group的下一条数据开始查询。
 
 	Marker *string `json:"marker,omitempty"`
 }

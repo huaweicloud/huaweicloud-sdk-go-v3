@@ -7,7 +7,7 @@ import (
 )
 
 type OrderLineItemEntityV2 struct {
-	// 订单项Id。
+	// 订单项ID。
 
 	OrderLineItemId *string `json:"order_line_item_id,omitempty"`
 	// 云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。您可以调用查询云服务类型列表接口获取。

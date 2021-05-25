@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowOpLogRequest struct {
+	// 任务ID
+
 	OperationLogId string `json:"operation_log_id"`
 }
 

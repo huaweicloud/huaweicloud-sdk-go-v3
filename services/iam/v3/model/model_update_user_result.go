@@ -8,6 +8,9 @@ import (
 
 //
 type UpdateUserResult struct {
+	// IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+
+	AccessMode *string `json:"access_mode,omitempty"`
 	// IAM用户密码状态。true：需要修改密码，false：正常。
 
 	PwdStatus *bool `json:"pwd_status,omitempty"`

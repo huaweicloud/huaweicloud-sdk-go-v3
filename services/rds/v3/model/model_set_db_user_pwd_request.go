@@ -11,7 +11,10 @@ import (
 
 // Request Object
 type SetDbUserPwdRequest struct {
+	// 语言
+
 	XLanguage *SetDbUserPwdRequestXLanguage `json:"X-Language,omitempty"`
+	// 实例ID。
 
 	InstanceId string `json:"instance_id"`
 

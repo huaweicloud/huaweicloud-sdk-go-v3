@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type UpdatePortRequest struct {
+	// 端口ID
+
 	PortId string `json:"port_id"`
 
 	Body *UpdatePortRequestBody `json:"body,omitempty"`

@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type UpdateSignatureKeyV2Request struct {
+	// 实例编号
+
 	InstanceId string `json:"instance_id"`
+	// 签名密钥编号
 
 	SignId string `json:"sign_id"`
 

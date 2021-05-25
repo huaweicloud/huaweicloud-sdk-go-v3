@@ -22,7 +22,7 @@ type ShowPartitionMessageRespMessage struct {
 	Partition *int32 `json:"partition,omitempty"`
 	// 消息位置。
 
-	MessageOffset *int32 `json:"message_offset,omitempty"`
+	MessageOffset *int64 `json:"message_offset,omitempty"`
 	// 消息大小，单位字节。
 
 	Size *int32 `json:"size,omitempty"`

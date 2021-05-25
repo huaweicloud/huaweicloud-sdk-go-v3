@@ -2,9 +2,10 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+
 	"strings"
 )
 
@@ -21,13 +22,13 @@ type ScalingPolicyExecuteLogList struct {
 	ExecuteType *ScalingPolicyExecuteLogListExecuteType `json:"execute_type,omitempty"`
 	// 策略执行时间，遵循UTC时间。
 
-	ExecuteTime *sdktime.SdkTime `json:"execute_time,omitempty"`
+	ExecuteTime *string `json:"execute_time,omitempty"`
 	// 策略执行日志ID。
 
 	Id *string `json:"id,omitempty"`
 	// 租户id。
 
-	ProjectId *string `json:"project_id,omitempty"`
+	TenantId *string `json:"tenant_id,omitempty"`
 	// 伸缩策略ID。
 
 	ScalingPolicyId *string `json:"scaling_policy_id,omitempty"`
@@ -45,7 +46,7 @@ type ScalingPolicyExecuteLogList struct {
 	DesireValue *string `json:"desire_value,omitempty"`
 	// 操作限制。当scaling_resource_type为BANDWIDTH时，且operation不为SET时，limit_value生效，单位为Mbit/s。此时，当operation为ADD时，limit_value表示最高带宽限制；当operation为REDUCE时，limit_value表示最低带宽限制。
 
-	LimitValue *int32 `json:"limit_value,omitempty"`
+	LimitValue *string `json:"limit_value,omitempty"`
 	// 策略执行任务类型。ADD：添加。REMOVE：减少。SET：设置为
 
 	Type *ScalingPolicyExecuteLogListType `json:"type,omitempty"`
@@ -53,7 +54,7 @@ type ScalingPolicyExecuteLogList struct {
 
 	JobRecords *[]JobRecords `json:"job_records,omitempty"`
 
-	MetaData *MetaData `json:"meta_data,omitempty"`
+	MetaData *EipMetaData `json:"meta_data,omitempty"`
 }
 
 func (o ScalingPolicyExecuteLogList) String() string {

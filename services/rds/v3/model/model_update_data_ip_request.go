@@ -11,7 +11,10 @@ import (
 
 // Request Object
 type UpdateDataIpRequest struct {
+	// 语言
+
 	XLanguage *UpdateDataIpRequestXLanguage `json:"X-Language,omitempty"`
+	// 实例ID。
 
 	InstanceId string `json:"instance_id"`
 

@@ -10,11 +10,17 @@ import (
 type ListInstanceTopicsResponse struct {
 	// topic总数。
 
-	Count *int32 `json:"count,omitempty"`
+	Total *int32 `json:"total,omitempty"`
 	// 分页查询的大小。
 
 	Size *int32 `json:"size,omitempty"`
-	// Topic列表。
+	// 剩余分区数。
+
+	RemainPartitions *int32 `json:"remain_partitions,omitempty"`
+	// 分区总数。
+
+	MaxPartitions *int32 `json:"max_partitions,omitempty"`
+	// topic列表。
 
 	Topics         *[]ListInstanceTopicsRespTopics `json:"topics,omitempty"`
 	HttpStatusCode int                             `json:"-"`

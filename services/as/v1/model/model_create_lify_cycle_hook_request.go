@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type CreateLifyCycleHookRequest struct {
+	// 伸缩组标识。
+
 	ScalingGroupId string `json:"scaling_group_id"`
 
-	Body *CreateLifeCycleHookRequestBody `json:"body,omitempty"`
+	Body *CreateLifeCycleHookOption `json:"body,omitempty"`
 }
 
 func (o CreateLifyCycleHookRequest) String() string {

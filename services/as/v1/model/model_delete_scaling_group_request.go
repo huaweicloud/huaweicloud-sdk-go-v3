@@ -11,7 +11,10 @@ import (
 
 // Request Object
 type DeleteScalingGroupRequest struct {
+	// 伸缩组ID。
+
 	ScalingGroupId string `json:"scaling_group_id"`
+	// 是否强制删除伸缩组。默认为no；可选值为yes或no。
 
 	ForceDelete *DeleteScalingGroupRequestForceDelete `json:"force_delete,omitempty"`
 }
@@ -30,17 +33,17 @@ type DeleteScalingGroupRequestForceDelete struct {
 }
 
 type DeleteScalingGroupRequestForceDeleteEnum struct {
-	TRUE  DeleteScalingGroupRequestForceDelete
-	FALSE DeleteScalingGroupRequestForceDelete
+	YES DeleteScalingGroupRequestForceDelete
+	NO  DeleteScalingGroupRequestForceDelete
 }
 
 func GetDeleteScalingGroupRequestForceDeleteEnum() DeleteScalingGroupRequestForceDeleteEnum {
 	return DeleteScalingGroupRequestForceDeleteEnum{
-		TRUE: DeleteScalingGroupRequestForceDelete{
-			value: "true",
+		YES: DeleteScalingGroupRequestForceDelete{
+			value: "yes",
 		},
-		FALSE: DeleteScalingGroupRequestForceDelete{
-			value: "false",
+		NO: DeleteScalingGroupRequestForceDelete{
+			value: "no",
 		},
 	}
 }

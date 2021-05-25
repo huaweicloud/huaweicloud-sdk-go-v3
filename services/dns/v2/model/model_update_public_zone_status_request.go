@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type UpdatePublicZoneStatusRequest struct {
+	// 待设置状态Zone的ID
+
 	ZoneId string `json:"zone_id"`
 
 	Body *UpdatePublicZoneStatus `json:"body,omitempty"`

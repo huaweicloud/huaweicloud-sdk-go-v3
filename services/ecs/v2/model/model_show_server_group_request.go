@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowServerGroupRequest struct {
+	// 弹性云服务器组UUID。
+
 	ServerGroupId string `json:"server_group_id"`
 }
 

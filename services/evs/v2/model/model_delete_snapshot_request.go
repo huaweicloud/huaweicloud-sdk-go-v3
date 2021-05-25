@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeleteSnapshotRequest struct {
+	// 快照ID。
+
 	SnapshotId string `json:"snapshot_id"`
 }
 

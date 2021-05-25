@@ -20,13 +20,13 @@ func KafkaClientBuilder() *http_client.HcHttpClientBuilder {
 }
 
 //批量添加或删除实例标签。
-func (c *KafkaClient) BatchCreateOrDeleteInstanceTag(request *model.BatchCreateOrDeleteInstanceTagRequest) (*model.BatchCreateOrDeleteInstanceTagResponse, error) {
-	requestDef := GenReqDefForBatchCreateOrDeleteInstanceTag()
+func (c *KafkaClient) BatchCreateOrDeleteKafkaTag(request *model.BatchCreateOrDeleteKafkaTagRequest) (*model.BatchCreateOrDeleteKafkaTagResponse, error) {
+	requestDef := GenReqDefForBatchCreateOrDeleteKafkaTag()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.BatchCreateOrDeleteInstanceTagResponse), nil
+		return resp.(*model.BatchCreateOrDeleteKafkaTagResponse), nil
 	}
 }
 
@@ -38,6 +38,17 @@ func (c *KafkaClient) BatchDeleteInstanceTopic(request *model.BatchDeleteInstanc
 		return nil, err
 	} else {
 		return resp.(*model.BatchDeleteInstanceTopicResponse), nil
+	}
+}
+
+//批量删除Kafka实例的用户
+func (c *KafkaClient) BatchDeleteInstanceUsers(request *model.BatchDeleteInstanceUsersRequest) (*model.BatchDeleteInstanceUsersResponse, error) {
+	requestDef := GenReqDefForBatchDeleteInstanceUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteInstanceUsersResponse), nil
 	}
 }
 
@@ -71,6 +82,17 @@ func (c *KafkaClient) CreateInstanceTopic(request *model.CreateInstanceTopicRequ
 		return nil, err
 	} else {
 		return resp.(*model.CreateInstanceTopicResponse), nil
+	}
+}
+
+//创建Kafka实例的用户，用户可连接开启SASL的Kafka实例。
+func (c *KafkaClient) CreateInstanceUser(request *model.CreateInstanceUserRequest) (*model.CreateInstanceUserResponse, error) {
+	requestDef := GenReqDefForCreateInstanceUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateInstanceUserResponse), nil
 	}
 }
 
@@ -239,6 +261,17 @@ func (c *KafkaClient) ResetPassword(request *model.ResetPasswordRequest) (*model
 	}
 }
 
+//重置用户密码
+func (c *KafkaClient) ResetUserPasswrod(request *model.ResetUserPasswrodRequest) (*model.ResetUserPasswrodResponse, error) {
+	requestDef := GenReqDefForResetUserPasswrod()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetUserPasswrodResponse), nil
+	}
+}
+
 //实例规格变更。
 func (c *KafkaClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
 	requestDef := GenReqDefForResizeInstance()
@@ -338,14 +371,14 @@ func (c *KafkaClient) ShowInstanceExtendProductInfo(request *model.ShowInstanceE
 	}
 }
 
-//查询实例标签。
-func (c *KafkaClient) ShowInstanceTags(request *model.ShowInstanceTagsRequest) (*model.ShowInstanceTagsResponse, error) {
-	requestDef := GenReqDefForShowInstanceTags()
+//查询消息的偏移量和消息内容。 先根据时间戳查询消息的偏移量，再根据偏移量查询消息内容。
+func (c *KafkaClient) ShowInstanceMessages(request *model.ShowInstanceMessagesRequest) (*model.ShowInstanceMessagesResponse, error) {
+	requestDef := GenReqDefForShowInstanceMessages()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowInstanceTagsResponse), nil
+		return resp.(*model.ShowInstanceMessagesResponse), nil
 	}
 }
 
@@ -357,6 +390,50 @@ func (c *KafkaClient) ShowInstanceTopicDetail(request *model.ShowInstanceTopicDe
 		return nil, err
 	} else {
 		return resp.(*model.ShowInstanceTopicDetailResponse), nil
+	}
+}
+
+//查询用户列表。 Kafka实例开启SASL功能时，才支持多用户管理的功能。
+func (c *KafkaClient) ShowInstanceUsers(request *model.ShowInstanceUsersRequest) (*model.ShowInstanceUsersResponse, error) {
+	requestDef := GenReqDefForShowInstanceUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceUsersResponse), nil
+	}
+}
+
+//查询项目标签。
+func (c *KafkaClient) ShowKafkaProjectTags(request *model.ShowKafkaProjectTagsRequest) (*model.ShowKafkaProjectTagsResponse, error) {
+	requestDef := GenReqDefForShowKafkaProjectTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKafkaProjectTagsResponse), nil
+	}
+}
+
+//查询实例标签。
+func (c *KafkaClient) ShowKafkaTags(request *model.ShowKafkaTagsRequest) (*model.ShowKafkaTagsResponse, error) {
+	requestDef := GenReqDefForShowKafkaTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKafkaTagsResponse), nil
+	}
+}
+
+//查询topic在Broker上磁盘占用情况。
+func (c *KafkaClient) ShowKafkaTopicPartitionDiskusage(request *model.ShowKafkaTopicPartitionDiskusageRequest) (*model.ShowKafkaTopicPartitionDiskusageResponse, error) {
+	requestDef := GenReqDefForShowKafkaTopicPartitionDiskusage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKafkaTopicPartitionDiskusageResponse), nil
 	}
 }
 
@@ -382,7 +459,7 @@ func (c *KafkaClient) ShowMessages(request *model.ShowMessagesRequest) (*model.S
 	}
 }
 
-//查询分区最新消息的位置。
+//查询分区最早消息的位置。
 func (c *KafkaClient) ShowPartitionBeginningMessage(request *model.ShowPartitionBeginningMessageRequest) (*model.ShowPartitionBeginningMessageResponse, error) {
 	requestDef := GenReqDefForShowPartitionBeginningMessage()
 
@@ -393,7 +470,7 @@ func (c *KafkaClient) ShowPartitionBeginningMessage(request *model.ShowPartition
 	}
 }
 
-//查询分区最早消息的位置。
+//查询分区最新消息的位置。
 func (c *KafkaClient) ShowPartitionEndMessage(request *model.ShowPartitionEndMessageRequest) (*model.ShowPartitionEndMessageResponse, error) {
 	requestDef := GenReqDefForShowPartitionEndMessage()
 
@@ -415,17 +492,6 @@ func (c *KafkaClient) ShowPartitionMessage(request *model.ShowPartitionMessageRe
 	}
 }
 
-//查询项目标签。
-func (c *KafkaClient) ShowProjectTags(request *model.ShowProjectTagsRequest) (*model.ShowProjectTagsResponse, error) {
-	requestDef := GenReqDefForShowProjectTags()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowProjectTagsResponse), nil
-	}
-}
-
 //查询单个转储任务。
 func (c *KafkaClient) ShowSinkTaskDetail(request *model.ShowSinkTaskDetailRequest) (*model.ShowSinkTaskDetailResponse, error) {
 	requestDef := GenReqDefForShowSinkTaskDetail()
@@ -434,6 +500,17 @@ func (c *KafkaClient) ShowSinkTaskDetail(request *model.ShowSinkTaskDetailReques
 		return nil, err
 	} else {
 		return resp.(*model.ShowSinkTaskDetailResponse), nil
+	}
+}
+
+//查询用户权限。 Kafka实例开启SASL功能时，才支持多用户管理的功能。
+func (c *KafkaClient) ShowTopicAccessPolicy(request *model.ShowTopicAccessPolicyRequest) (*model.ShowTopicAccessPolicyResponse, error) {
+	requestDef := GenReqDefForShowTopicAccessPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTopicAccessPolicyResponse), nil
 	}
 }
 
@@ -489,6 +566,17 @@ func (c *KafkaClient) UpdateSinkTaskQuota(request *model.UpdateSinkTaskQuotaRequ
 		return nil, err
 	} else {
 		return resp.(*model.UpdateSinkTaskQuotaResponse), nil
+	}
+}
+
+//设置用户权限。 Kafka实例开启SASL功能时，才支持多用户管理的功能。
+func (c *KafkaClient) UpdateTopicAccessPolicy(request *model.UpdateTopicAccessPolicyRequest) (*model.UpdateTopicAccessPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateTopicAccessPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTopicAccessPolicyResponse), nil
 	}
 }
 

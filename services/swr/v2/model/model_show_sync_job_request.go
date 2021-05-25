@@ -11,11 +11,16 @@ import (
 
 // Request Object
 type ShowSyncJobRequest struct {
+	// 消息体的类型（格式），下方类型可任选其一使用： application/json;charset=utf-8 application/json
+
 	ContentType ShowSyncJobRequestContentType `json:"Content-Type"`
+	// 组织名称
 
 	Namespace string `json:"namespace"`
+	// 镜像仓库名称
 
 	Repository string `json:"repository"`
+	// 应填写 limit::{limit}|offset::{offset}|order::{order} ,其中{limit}为返回条数,{offset}为起始索引,{order}为排序类型，可设置为desc（降序）、asc（升序）
 
 	Filter string `json:"filter"`
 }

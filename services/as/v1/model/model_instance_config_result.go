@@ -16,10 +16,13 @@ type InstanceConfigResult struct {
 	ImageRef *string `json:"imageRef,omitempty"`
 	// 磁盘组信息。
 
-	Disk *[]Disk `json:"disk,omitempty"`
+	Disk *[]DiskResult `json:"disk,omitempty"`
 	// 登录云服务器的SSH密钥名称。
 
 	KeyName *string `json:"key_name,omitempty"`
+	// 登录云服务器的SSH密钥指纹。
+
+	KeyFingerprint *string `json:"key_fingerprint,omitempty"`
 	// 该参数为预留字段。
 
 	InstanceName *string `json:"instance_name,omitempty"`
@@ -30,14 +33,14 @@ type InstanceConfigResult struct {
 
 	AdminPass *string `json:"adminPass,omitempty"`
 
-	Personality *Personality `json:"personality,omitempty"`
+	Personality *PersonalityResult `json:"personality,omitempty"`
 
-	PublicIp *PublicIp `json:"public_ip,omitempty"`
+	PublicIp *PublicipResult `json:"public_ip,omitempty"`
 	// cloud-init用户数据，base64格式编码。
 
 	UserData *string `json:"user_data,omitempty"`
 
-	Metadata *MetaData `json:"metadata,omitempty"`
+	Metadata *VmMetaData `json:"metadata,omitempty"`
 	// 安全组信息。
 
 	SecurityGroups *[]SecurityGroups `json:"security_groups,omitempty"`
@@ -50,6 +53,12 @@ type InstanceConfigResult struct {
 	// 专属主机的ID。
 
 	DedicatedHostId *string `json:"dedicated_host_id,omitempty"`
+	// 云服务器的计费模式，可以选择竞价计费或按需计费。
+
+	MarketType *string `json:"market_type,omitempty"`
+	// 使用伸缩配置创建云主机的时候，多规格使用的优先级策略。
+
+	MultiFlavorPriorityPolicy *string `json:"multi_flavor_priority_policy,omitempty"`
 }
 
 func (o InstanceConfigResult) String() string {

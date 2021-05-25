@@ -11,7 +11,10 @@ import (
 
 // Request Object
 type ListTemplatesV2Request struct {
+	// 语言类型，缺省值为“zh-cn”。  枚举值： - zh-cn：中文 - en-us：英文
+
 	XLanguage *ListTemplatesV2RequestXLanguage `json:"X-Language,omitempty"`
+	// 请填写固定值“query”。
 
 	ActionId string `json:"action_id"`
 

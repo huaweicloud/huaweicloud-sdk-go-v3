@@ -11,7 +11,10 @@ import (
 
 // Request Object
 type ListTemplateViewHistoriesRequest struct {
+	// 语言类型，缺省值为“zh-cn”。  枚举值： - zh-cn：中文 - en-us：英文
+
 	XLanguage *ListTemplateViewHistoriesRequestXLanguage `json:"X-Language,omitempty"`
+	// 平台来源： - 0：查询CodeLabs中用户浏览过的模板。 - 1：查询DevStar中用户浏览过的模板。
 
 	PlatformSource ListTemplateViewHistoriesRequestPlatformSource `json:"platform_source"`
 }

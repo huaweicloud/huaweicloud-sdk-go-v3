@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type NeutronUpdateSecurityGroupRequest struct {
+	// 安全组ID
+
 	SecurityGroupId string `json:"security_group_id"`
 
 	Body *NeutronUpdateSecurityGroupRequestBody `json:"body,omitempty"`

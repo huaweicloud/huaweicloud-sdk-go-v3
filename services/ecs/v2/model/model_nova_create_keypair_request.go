@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type NovaCreateKeypairRequest struct {
+	// 微版本头
+
 	OpenStackAPIVersion *string `json:"OpenStack-API-Version,omitempty"`
 
 	Body *NovaCreateKeypairRequestBody `json:"body,omitempty"`

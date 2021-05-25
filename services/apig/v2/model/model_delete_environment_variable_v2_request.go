@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type DeleteEnvironmentVariableV2Request struct {
+	// 实例编号
+
 	InstanceId string `json:"instance_id"`
+	// 环境变量的ID
 
 	EnvVariableId string `json:"env_variable_id"`
 }

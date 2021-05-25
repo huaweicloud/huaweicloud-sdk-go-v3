@@ -2,9 +2,10 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+
 	"strings"
 )
 
@@ -33,8 +34,8 @@ type ShowLifeCycleHookResponse struct {
 	NotificationMetadata *string `json:"notification_metadata,omitempty"`
 	// 生命周期挂钩创建时间，遵循UTC时间。
 
-	CreateTime     *sdktime.SdkTime `json:"create_time,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	CreateTime     *string `json:"create_time,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowLifeCycleHookResponse) String() string {

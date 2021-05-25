@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type BatchCreateVolumeTagsRequest struct {
+	// 云硬盘ID。
+
 	VolumeId string `json:"volume_id"`
 
 	Body *BatchCreateVolumeTagsRequestBody `json:"body,omitempty"`

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type NeutronDeleteFloatingIpRequest struct {
+	// floatingip的ID
+
 	FloatingipId string `json:"floatingip_id"`
 }
 

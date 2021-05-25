@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CreatePublicipTagRequest struct {
+	// 资源ID
+
 	PublicipId string `json:"publicip_id"`
 
 	Body *CreatePublicipTagRequestBody `json:"body,omitempty"`

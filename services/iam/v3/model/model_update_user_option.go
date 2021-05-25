@@ -8,6 +8,9 @@ import (
 
 //
 type UpdateUserOption struct {
+	// IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+
+	AccessMode *string `json:"access_mode,omitempty"`
 	// 新IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
 
 	Name *string `json:"name,omitempty"`

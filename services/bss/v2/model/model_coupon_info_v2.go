@@ -55,7 +55,7 @@ type CouponInfoV2 struct {
 	// 余额。
 
 	Balance *float64 `json:"balance,omitempty"`
-	// 使用优惠券的订单ID，表示正在有另外一张订单正在使用这个优惠券。正在锁定的时候，只有锁定优惠券的订单才能使用这个优惠券，其他订单不能使用该优惠券。
+	// 使用优惠券的订单ID。表示有订单正在使用这个优惠券，优惠券已被锁定，只有锁定优惠券的订单才能使用这个优惠券，其他订单不能使用该优惠券。
 
 	UsedByOrderId *string `json:"used_by_order_id,omitempty"`
 	// 优惠券用途。

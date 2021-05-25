@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowProjectInfoV4Request struct {
+	// 项目ID
+
 	ProjectId string `json:"project_id"`
 }
 

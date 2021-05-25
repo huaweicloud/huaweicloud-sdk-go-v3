@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type NeutronAddFirewallRuleRequest struct {
+	// 网络ACL防火墙策略ID
+
 	FirewallPolicyId string `json:"firewall_policy_id"`
 
 	Body *NeutronInsertFirewallRuleRequestBody `json:"body,omitempty"`

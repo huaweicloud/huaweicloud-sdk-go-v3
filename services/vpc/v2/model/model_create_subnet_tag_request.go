@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CreateSubnetTagRequest struct {
+	// 子网ID
+
 	SubnetId string `json:"subnet_id"`
 
 	Body *CreateSubnetTagRequestBody `json:"body,omitempty"`

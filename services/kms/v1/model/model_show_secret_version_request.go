@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type ShowSecretVersionRequest struct {
+	// 凭据的资源标识符。
+
 	SecretId string `json:"secret_id"`
+	// 凭据的版本标识符。
 
 	VersionId string `json:"version_id"`
 }

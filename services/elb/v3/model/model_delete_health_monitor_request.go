@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeleteHealthMonitorRequest struct {
+	// 健康检查ID。
+
 	HealthmonitorId string `json:"healthmonitor_id"`
 }
 

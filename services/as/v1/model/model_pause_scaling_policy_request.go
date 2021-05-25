@@ -1,0 +1,25 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// Request Object
+type PauseScalingPolicyRequest struct {
+	// 伸缩策略ID。
+
+	ScalingPolicyId string `json:"scaling_policy_id"`
+
+	Body *PauseScalingPolicyOption `json:"body,omitempty"`
+}
+
+func (o PauseScalingPolicyRequest) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "PauseScalingPolicyRequest struct{}"
+	}
+
+	return strings.Join([]string{"PauseScalingPolicyRequest", string(data)}, " ")
+}

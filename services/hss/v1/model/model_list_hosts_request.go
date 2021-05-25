@@ -11,27 +11,40 @@ import (
 
 // Request Object
 type ListHostsRequest struct {
+	// 主机开通的版本
+
 	Version *ListHostsRequestVersion `json:"version,omitempty"`
+	// Agent状态，未注册：uninstall；在线：online；离线：offline；
 
 	AgentStatus *ListHostsRequestAgentStatus `json:"agent_status,omitempty"`
+	// 云主机状态：正在运行：active；关机：shutoff；创建中：building；故障：error
 
 	HostStatus *ListHostsRequestHostStatus `json:"host_status,omitempty"`
+	// 防护状态：closed关闭；opened开启
 
 	ProtectStatus *ListHostsRequestProtectStatus `json:"protect_status,omitempty"`
+	// 检测结果，undetect：未检测，clean：无风险，risk：有风险
 
 	DetectResult *ListHostsRequestDetectResult `json:"detect_result,omitempty"`
+	// 云主机名称
 
 	HostName *string `json:"host_name,omitempty"`
+	// 云主机私有IP
 
 	HostIp *string `json:"host_ip,omitempty"`
+	// 云主机公网IP
 
 	PublicIp *string `json:"public_ip,omitempty"`
+	// 操作系统类型
 
 	OsType *string `json:"os_type,omitempty"`
+	// 收费模式
 
 	ChargingMode *ListHostsRequestChargingMode `json:"charging_mode,omitempty"`
+	// 默认10
 
 	Limit *int32 `json:"limit,omitempty"`
+	// 默认0
 
 	Offset *int32 `json:"offset,omitempty"`
 }

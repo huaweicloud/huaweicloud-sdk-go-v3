@@ -10,10 +10,10 @@ import (
 type UpdateInstanceTopicReqTopics struct {
 	// topic名称
 
-	Id *string `json:"id,omitempty"`
+	Id string `json:"id"`
 	// 老化时间，单位小时。
 
-	RetentionTime *string `json:"retention_time,omitempty"`
+	RetentionTime *int32 `json:"retention_time,omitempty"`
 	// 是否同步复制。
 
 	SyncReplication *bool `json:"sync_replication,omitempty"`

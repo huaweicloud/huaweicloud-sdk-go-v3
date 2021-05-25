@@ -140,24 +140,13 @@ func (c *CloudPipelineClient) StartNewPipeline(request *model.StartNewPipelineRe
 	}
 }
 
-//执行流水线
-func (c *CloudPipelineClient) StartPipeline(request *model.StartPipelineRequest) (*model.StartPipelineResponse, error) {
-	requestDef := GenReqDefForStartPipeline()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StartPipelineResponse), nil
-	}
-}
-
 //停止流水线
-func (c *CloudPipelineClient) StopPipeline(request *model.StopPipelineRequest) (*model.StopPipelineResponse, error) {
-	requestDef := GenReqDefForStopPipeline()
+func (c *CloudPipelineClient) StopPipelineNew(request *model.StopPipelineNewRequest) (*model.StopPipelineNewResponse, error) {
+	requestDef := GenReqDefForStopPipelineNew()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.StopPipelineResponse), nil
+		return resp.(*model.StopPipelineNewResponse), nil
 	}
 }

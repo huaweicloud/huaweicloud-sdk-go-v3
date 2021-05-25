@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type BatchAddMembersV4Request struct {
+	// 项目id
+
 	ProjectId string `json:"project_id"`
 
 	Body *BatchAddMembersV4RequestBody `json:"body,omitempty"`

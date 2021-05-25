@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ListInstanceMetricRequest struct {
+	// 区块链服务id。
+
 	BlockchainId string `json:"blockchain_id"`
 
 	Body *ListInstanceMetricRequestBody `json:"body,omitempty"`

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CreateEventRequest struct {
+	// 函数的URN（Uniform Resource Name），唯一标识函数。
+
 	FunctionUrn string `json:"function_urn"`
 
 	Body *CreateEventRequestBody `json:"body,omitempty"`

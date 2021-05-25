@@ -8,9 +8,13 @@ import (
 
 // Request Object
 type AddApplyJoinProjectForAgcRequest struct {
+	// 租户id
+
 	DomainId string `json:"Domain-Id"`
+	// 用户id
 
 	UserId string `json:"User-Id"`
+	// 项目id
 
 	ProjectId string `json:"project_id"`
 }

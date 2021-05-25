@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type StopInstanceRequest struct {
+	// 实例id
+
 	InstanceId string `json:"instance_id"`
 }
 

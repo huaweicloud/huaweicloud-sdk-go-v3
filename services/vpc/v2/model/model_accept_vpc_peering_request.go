@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type AcceptVpcPeeringRequest struct {
+	// 对等连接ID
+
 	PeeringId string `json:"peering_id"`
 }
 

@@ -17,9 +17,6 @@ type ShowTemplateDetailResponse struct {
 	// 模板类型
 
 	TemplateType *string `json:"template_type,omitempty"`
-	// 模板编辑URL
-
-	TemplateUrl *string `json:"template_url,omitempty"`
 	// 用户ID
 
 	UserId *string `json:"user_id,omitempty"`

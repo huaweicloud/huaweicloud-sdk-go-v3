@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ChangeApplicationRequest struct {
+	// 应用ID。
+
 	ApplicationId string `json:"application_id"`
 
 	Body *ApplicationModify `json:"body,omitempty"`

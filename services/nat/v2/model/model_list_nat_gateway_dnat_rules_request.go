@@ -10,31 +10,46 @@ import (
 
 // Request Object
 type ListNatGatewayDnatRulesRequest struct {
+	// 解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
+	// Floatingip对外提供服务的端口号。 取值范围：0~65535。
 
 	ExternalServicePort *int32 `json:"external_service_port,omitempty"`
+	// 弹性公网的IP地址。
 
 	FloatingIpAddress *string `json:"floating_ip_address,omitempty"`
+	// Dnat规则的状态。
 
 	Status *[]ListNatGatewayDnatRulesRequestStatus `json:"status,omitempty"`
+	// 弹性公网IP的id。
 
 	FloatingIpId *string `json:"floating_ip_id,omitempty"`
+	// 虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
 
 	InternalServicePort *int32 `json:"internal_service_port,omitempty"`
+	// 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
 
 	Limit *int32 `json:"limit,omitempty"`
+	// DNAT规则的ID。
 
 	Id *string `json:"id,omitempty"`
+	// DNAT规则的描述，长度限制为255。
 
 	Description *string `json:"description,omitempty"`
+	// DNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
 
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+	// 公网NAT网关实例的ID。
 
 	NatGatewayId *[]string `json:"nat_gateway_id,omitempty"`
+	// 虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
 
 	PortId *string `json:"port_id,omitempty"`
+	// 用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
 
 	PrivateIp *string `json:"private_ip,omitempty"`
+	// 协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
 
 	Protocol *[]string `json:"protocol,omitempty"`
 }

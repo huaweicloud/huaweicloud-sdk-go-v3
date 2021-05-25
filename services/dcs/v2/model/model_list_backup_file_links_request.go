@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type ListBackupFileLinksRequest struct {
+	// 实例ID。
+
 	InstanceId string `json:"instance_id"`
+	// 备份记录ID。
 
 	BackupId string `json:"backup_id"`
 

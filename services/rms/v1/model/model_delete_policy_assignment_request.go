@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeletePolicyAssignmentRequest struct {
+	// 规则ID
+
 	PolicyAssignmentId string `json:"policy_assignment_id"`
 }
 

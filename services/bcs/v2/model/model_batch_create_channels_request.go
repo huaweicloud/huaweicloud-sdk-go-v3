@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type BatchCreateChannelsRequest struct {
+	// bcs 服务id
+
 	BlockchainId string `json:"blockchain_id"`
 
 	Body *BatchCreateChannelsRequestBody `json:"body,omitempty"`

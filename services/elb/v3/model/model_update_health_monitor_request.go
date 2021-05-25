@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type UpdateHealthMonitorRequest struct {
+	// 健康检查ID
+
 	HealthmonitorId string `json:"healthmonitor_id"`
 
 	Body *UpdateHealthMonitorRequestBody `json:"body,omitempty"`

@@ -13,6 +13,9 @@ type ListQueuesRespQueues struct {
 	// 队列的名称。
 
 	Name *string `json:"name,omitempty"`
+	// 创建队列的时间。
+
+	Created *int64 `json:"created,omitempty"`
 	// 队列的描述信息。
 
 	Description *string `json:"description,omitempty"`
@@ -37,6 +40,9 @@ type ListQueuesRespQueues struct {
 	// 该队列下的消费组数量。
 
 	GroupCount *int32 `json:"group_count,omitempty"`
+	// 创建队列的时间。
+
+	EffDate *int64 `json:"eff_date,omitempty"`
 }
 
 func (o ListQueuesRespQueues) String() string {

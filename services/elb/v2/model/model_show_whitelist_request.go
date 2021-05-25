@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowWhitelistRequest struct {
+	// 白名单的id
+
 	WhitelistId string `json:"whitelist_id"`
 }
 

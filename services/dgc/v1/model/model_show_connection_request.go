@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowConnectionRequest struct {
+	// 连接名称.
+
 	ConnectionName string `json:"connection_name"`
 }
 

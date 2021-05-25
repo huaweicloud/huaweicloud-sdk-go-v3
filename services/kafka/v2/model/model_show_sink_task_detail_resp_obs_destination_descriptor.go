@@ -28,10 +28,10 @@ type ShowSinkTaskDetailRespObsDestinationDescriptor struct {
 	RecordDelimiter *string `json:"record_delimiter,omitempty"`
 	// 根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。 取值范围：30～900 缺省值：300 单位：秒。 > 使用OBS通道转储流式数据时该参数为必选配置。
 
-	DeliverTimeInterval *string `json:"deliver_time_interval,omitempty"`
+	DeliverTimeInterval *int32 `json:"deliver_time_interval,omitempty"`
 	// 每个传输文件多大后就开始上传，单位为byte。 默认值5242880。
 
-	ObsPartSize *string `json:"obs_part_size,omitempty"`
+	ObsPartSize *int64 `json:"obs_part_size,omitempty"`
 }
 
 func (o ShowSinkTaskDetailRespObsDestinationDescriptor) String() string {

@@ -13,7 +13,7 @@ type ListProductsRespDetail struct {
 	// 消息存储空间。
 
 	Storage *string `json:"storage,omitempty"`
-	// Kafka实例的最大Topic数。
+	// Kafka实例的分区数量。
 
 	PartitionNum *string `json:"partition_num,omitempty"`
 	// 产品ID。

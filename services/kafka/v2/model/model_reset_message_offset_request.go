@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type ResetMessageOffsetRequest struct {
+	// 实例ID。
+
 	InstanceId string `json:"instance_id"`
+	// 消费组名称。
 
 	Group string `json:"group"`
 

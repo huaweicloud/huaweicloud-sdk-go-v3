@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type DeleteBackupFileRequest struct {
+	// 备份记录ID。
+
 	BackupId string `json:"backup_id"`
+	// 实例ID。
 
 	InstanceId string `json:"instance_id"`
 }

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowQueueTagsRequest struct {
+	// 队列ID。
+
 	QueueId string `json:"queue_id"`
 }
 

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ListRetirableGrantsRequest struct {
+	// API版本号
+
 	VersionId string `json:"version_id"`
 
 	Body *ListRetirableGrantsRequestBody `json:"body,omitempty"`

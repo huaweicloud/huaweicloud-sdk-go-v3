@@ -10,7 +10,7 @@ import (
 type LbaasListenersResult struct {
 	// 监听器ID
 
-	ListenersId *string `json:"listeners_id,omitempty"`
+	ListenerId *string `json:"listener_id,omitempty"`
 	// 后端云服务器组ID
 
 	PoolId *string `json:"pool_id,omitempty"`

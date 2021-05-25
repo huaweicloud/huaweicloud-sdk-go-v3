@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type ShowBackgroundTaskRequest struct {
+	// 实例ID。
+
 	InstanceId string `json:"instance_id"`
+	// 任务ID。
 
 	TaskId string `json:"task_id"`
 }

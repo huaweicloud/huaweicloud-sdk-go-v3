@@ -13,7 +13,7 @@ import (
 type ScheduledPolicy struct {
 	// 触发时间，遵循UTC时间。如果scaling_policy_type为SCHEDULED，则格式为：YYYY-MM-DDThh:mmZ。如果scaling_policy_type为RECURRENCE，则格式为：hh:mm。
 
-	LaunchTime *string `json:"launch_time,omitempty"`
+	LaunchTime string `json:"launch_time"`
 	// 周期触发类型，scaling_policy_type为RECURRENCE时该项必选。Daily：每天执行一次。Weekly：每周指定天执行一次。Monthly：每月指定天执行一次。
 
 	RecurrenceType *ScheduledPolicyRecurrenceType `json:"recurrence_type,omitempty"`

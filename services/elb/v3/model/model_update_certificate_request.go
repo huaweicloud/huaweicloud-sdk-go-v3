@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type UpdateCertificateRequest struct {
+	// 证书ID。
+
 	CertificateId string `json:"certificate_id"`
 
 	Body *UpdateCertificateRequestBody `json:"body,omitempty"`

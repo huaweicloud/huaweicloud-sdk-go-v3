@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ChangeEnvironmentRequest struct {
+	// 环境ID。
+
 	EnvironmentId string `json:"environment_id"`
 
 	Body *EnvironmentModify `json:"body,omitempty"`

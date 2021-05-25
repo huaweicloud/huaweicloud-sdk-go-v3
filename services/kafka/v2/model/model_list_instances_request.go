@@ -11,17 +11,25 @@ import (
 
 // Request Object
 type ListInstancesRequest struct {
-	Engine ListInstancesRequestEngine `json:"engine"`
+	// 消息引擎：kafka。
+
+	Engine *string `json:"engine,omitempty"`
+	// 实例名称。
 
 	Name *string `json:"name,omitempty"`
+	// 实例ID。
 
 	InstanceId *string `json:"instance_id,omitempty"`
+	// 实例状态。详细状态说明见[实例状态说明](https://support.huaweicloud.com/api-kafka/kafka-api-180514012.html)。
 
 	Status *ListInstancesRequestStatus `json:"status,omitempty"`
+	// 是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
 
 	IncludeFailure *ListInstancesRequestIncludeFailure `json:"include_failure,omitempty"`
+	// 是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
 
 	ExactMatchName *ListInstancesRequestExactMatchName `json:"exact_match_name,omitempty"`
+	// 企业项目ID。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
@@ -33,40 +41,6 @@ func (o ListInstancesRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListInstancesRequest", string(data)}, " ")
-}
-
-type ListInstancesRequestEngine struct {
-	value string
-}
-
-type ListInstancesRequestEngineEnum struct {
-	KAFKA ListInstancesRequestEngine
-}
-
-func GetListInstancesRequestEngineEnum() ListInstancesRequestEngineEnum {
-	return ListInstancesRequestEngineEnum{
-		KAFKA: ListInstancesRequestEngine{
-			value: "kafka",
-		},
-	}
-}
-
-func (c ListInstancesRequestEngine) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ListInstancesRequestEngine) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }
 
 type ListInstancesRequestStatus struct {

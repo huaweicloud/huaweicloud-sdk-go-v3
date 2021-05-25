@@ -11,15 +11,22 @@ import (
 
 // Request Object
 type ListScalingPoliciesRequest struct {
+	// 伸缩组ID。
+
 	ScalingGroupId string `json:"scaling_group_id"`
+	// 伸缩策略名称。
 
 	ScalingPolicyName *string `json:"scaling_policy_name,omitempty"`
+	// 策略类型。
 
 	ScalingPolicyType *ListScalingPoliciesRequestScalingPolicyType `json:"scaling_policy_type,omitempty"`
+	// 伸缩策略ID。
 
 	ScalingPolicyId *string `json:"scaling_policy_id,omitempty"`
+	// 查询的起始行号，默认为0。
 
 	StartNumber *int32 `json:"start_number,omitempty"`
+	// 查询记录数，默认20，最大100。
 
 	Limit *int32 `json:"limit,omitempty"`
 }

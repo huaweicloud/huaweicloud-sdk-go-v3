@@ -17,6 +17,9 @@ type ShowQueueResponse struct {
 	// 队列的名称。
 
 	Name *string `json:"name,omitempty"`
+	// 创建队列的时间。
+
+	Created *int64 `json:"created,omitempty"`
 	// 队列的描述信息。
 
 	Description *string `json:"description,omitempty"`
@@ -43,8 +46,11 @@ type ShowQueueResponse struct {
 	GroupCount *int32 `json:"group_count,omitempty"`
 	// 仅Kafka队列才有该参数。
 
-	KafkaTopic     *string `json:"kafka_topic,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	KafkaTopic *string `json:"kafka_topic,omitempty"`
+	// 创建队列的时间。
+
+	EffDate        *int64 `json:"eff_date,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowQueueResponse) String() string {

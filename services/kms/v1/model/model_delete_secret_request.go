@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeleteSecretRequest struct {
+	// 凭据的资源标识符。
+
 	SecretId string `json:"secret_id"`
 }
 

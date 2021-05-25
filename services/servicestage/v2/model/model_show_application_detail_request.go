@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowApplicationDetailRequest struct {
+	// 应用ID。
+
 	ApplicationId string `json:"application_id"`
 }
 

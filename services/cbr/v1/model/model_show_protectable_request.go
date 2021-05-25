@@ -11,7 +11,10 @@ import (
 
 // Request Object
 type ShowProtectableRequest struct {
+	// 资源ID
+
 	InstanceId string `json:"instance_id"`
+	// 可保护性类型
 
 	ProtectableType ShowProtectableRequestProtectableType `json:"protectable_type"`
 }

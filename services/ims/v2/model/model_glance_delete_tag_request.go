@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type GlanceDeleteTagRequest struct {
+	// 镜像id
+
 	ImageId string `json:"image_id"`
+	// 新增的tag。字符串中不能包含“=”和“.”。
 
 	Tag string `json:"tag"`
 }

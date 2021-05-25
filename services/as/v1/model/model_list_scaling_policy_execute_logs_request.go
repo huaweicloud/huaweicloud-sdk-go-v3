@@ -2,29 +2,40 @@ package model
 
 import (
 	"encoding/json"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+
 	"strings"
 )
 
 // Request Object
 type ListScalingPolicyExecuteLogsRequest struct {
+	// 伸缩策略ID。
+
 	ScalingPolicyId string `json:"scaling_policy_id"`
+	// 日志ID。
 
 	LogId *string `json:"log_id,omitempty"`
+	// 伸缩资源类型：伸缩组：SCALING_GROUP。带宽：BANDWIDTH
 
 	ScalingResourceType *ListScalingPolicyExecuteLogsRequestScalingResourceType `json:"scaling_resource_type,omitempty"`
+	// 伸缩资源ID。
 
 	ScalingResourceId *string `json:"scaling_resource_id,omitempty"`
+	// 策略执行类型：SCHEDULED：自动触发（定时）。RECURRENCE：自动触发（周期）。ALARM：自动触发（告警）。MANUAL：手动触发。
 
 	ExecuteType *ListScalingPolicyExecuteLogsRequestExecuteType `json:"execute_type,omitempty"`
+	// 查询的起始时间，格式是“yyyy-MM-ddThh:mm:ssZ”。
 
-	StartTime *sdktime.SdkTime `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty"`
+	// 查询的截止时间，格式是“yyyy-MM-ddThh:mm:ssZ”。
 
-	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty"`
+	// 查询的起始行号，默认为0。
 
 	StartNumber *int32 `json:"start_number,omitempty"`
+	// 查询记录数，默认20，最大100。
 
 	Limit *int32 `json:"limit,omitempty"`
 }

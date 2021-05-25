@@ -12,24 +12,34 @@ import (
 // Request Object
 type ListInstancesRequest struct {
 	ContentType *string `json:"Content-Type,omitempty"`
+	// 语言
 
 	XLanguage *ListInstancesRequestXLanguage `json:"X-Language,omitempty"`
+	// 实例ID。  “\\*”为系统保留字符，如果id是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照id精确匹配查询。不能只传入“\\*”。
 
 	Id *string `json:"id,omitempty"`
+	// 实例名称。  “\\*”为系统保留字符，如果name是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照name精确匹配查询。不能只传入“\\*”。
 
 	Name *string `json:"name,omitempty"`
+	// 按照实例类型查询。取值Single、Ha、Replica，分别对应于单实例、主备实例和只读实例。
 
 	Type *ListInstancesRequestType `json:"type,omitempty"`
+	// 数据库类型，区分大小写。  - MySQL - PostgreSQL - SQLServer
 
 	DatastoreType *ListInstancesRequestDatastoreType `json:"datastore_type,omitempty"`
+	// 虚拟私有云ID。
 
 	VpcId *string `json:"vpc_id,omitempty"`
+	// 子网ID。
 
 	SubnetId *string `json:"subnet_id,omitempty"`
+	// 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
 
 	Offset *int32 `json:"offset,omitempty"`
+	// 查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
 
 	Limit *int32 `json:"limit,omitempty"`
+	// 根据实例标签键值对进行查询。{key}表示标签键，{value}表示标签值，最多包含10组。key不可以为空或重复，value可以为空。如果同时使用多个标签键值对进行查询，中间使用逗号分隔开，表示查询同时包含指定标签键值对的实例。
 
 	Tags *string `json:"tags,omitempty"`
 }

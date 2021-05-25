@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowFunctionCodeRequest struct {
+	// 函数的URN，详细解释见FunctionGraph函数模型的描述。
+
 	FunctionUrn string `json:"function_urn"`
 }
 

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type UpdateInstanceRequest struct {
+	// 实例id
+
 	InstanceId string `json:"instance_id"`
 
 	Body *InstanceUpdateParam `json:"body,omitempty"`

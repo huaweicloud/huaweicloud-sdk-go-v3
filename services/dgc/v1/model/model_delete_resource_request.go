@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeleteResourceRequest struct {
+	// 资源id.
+
 	ResourceId string `json:"resource_id"`
 }
 

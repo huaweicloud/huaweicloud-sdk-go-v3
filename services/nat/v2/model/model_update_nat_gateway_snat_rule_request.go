@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type UpdateNatGatewaySnatRuleRequest struct {
+	// SNAT规则的ID。
+
 	SnatRuleId string `json:"snat_rule_id"`
 
 	Body *UpdateNatGatewaySnatRuleRequestOption `json:"body,omitempty"`

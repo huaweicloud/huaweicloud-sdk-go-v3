@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowBugDensityV2Request struct {
+	// 项目ID
+
 	ProjectId string `json:"project_id"`
 
 	Body *MetricRequestV2 `json:"body,omitempty"`

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowCheckpointRequest struct {
+	// 还原点ID
+
 	CheckpointId string `json:"checkpoint_id"`
 }
 

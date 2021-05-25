@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ListTransferTasksV3Request struct {
+	// 需要查询的通道名称。
+
 	StreamName string `json:"stream_name"`
 }
 

@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type ShowProjectDetailRequest struct {
+	// 授权名称。
+
 	XRepoAuth string `json:"X-Repo-Auth"`
+	// 仓库克隆URL。
 
 	CloneUrl string `json:"clone_url"`
 }

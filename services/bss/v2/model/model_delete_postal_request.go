@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeletePostalRequest struct {
+	// 收件人邮寄地址ID。
+
 	AddressId string `json:"address_id"`
 }
 

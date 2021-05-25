@@ -7,6 +7,9 @@ import (
 )
 
 type ListInstanceTopicsRespTopics struct {
+	// 是否为默认策略。
+
+	PoliciesOnly *bool `json:"policiesOnly,omitempty"`
 	// topic名称。
 
 	Name *string `json:"name,omitempty"`
@@ -25,6 +28,12 @@ type ListInstanceTopicsRespTopics struct {
 	// 是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
 
 	SyncMessageFlush *bool `json:"sync_message_flush,omitempty"`
+	// 扩展配置。
+
+	ExternalConfigs *interface{} `json:"external_configs,omitempty"`
+	// topic类型。
+
+	TopicType *int32 `json:"topic_type,omitempty"`
 }
 
 func (o ListInstanceTopicsRespTopics) String() string {

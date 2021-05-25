@@ -8,7 +8,10 @@ import (
 
 // Request Object
 type UpdateEnvironmentV2Request struct {
+	// 实例编号
+
 	InstanceId string `json:"instance_id"`
+	// 环境的ID，可通过查询环境信息获取该ID
 
 	EnvId string `json:"env_id"`
 

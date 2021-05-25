@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ListFlavorsRequest struct {
+	// 可用区，需要指定可用区（AZ）的名称或者ID或者code。
+
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 }
 

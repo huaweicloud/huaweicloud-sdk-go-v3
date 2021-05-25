@@ -11,13 +11,19 @@ import (
 
 // Request Object
 type ListOpRecordRequest struct {
+	// 区块链ID
+
 	BlockchainId *string `json:"blockchain_id,omitempty"`
+	// 操作状态
 
 	OperationStatus *ListOpRecordRequestOperationStatus `json:"operation_status,omitempty"`
+	// 资源类型
 
 	ResourceType *ListOpRecordRequestResourceType `json:"resource_type,omitempty"`
+	// 操作类型,  可选数值如下（括号中为该数值对应的操作类型含义）：99（OpCreate）,00（OpDelete）,01（OpUpgrade）,91（OpUpgradeRb）,02（OpAddOrg）,03（OpScaleOrg）,04（OpJoinChannel）,05（OpJoinUnion）
 
 	OperationType *ListOpRecordRequestOperationType `json:"operation_type,omitempty"`
+	// 操作记录ID
 
 	OperationId *string `json:"operation_id,omitempty"`
 }

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CreateVersionAliasRequest struct {
+	// 函数的URN。
+
 	FunctionUrn string `json:"function_urn"`
 
 	Body *CreateVersionAliasRequestBody `json:"body,omitempty"`

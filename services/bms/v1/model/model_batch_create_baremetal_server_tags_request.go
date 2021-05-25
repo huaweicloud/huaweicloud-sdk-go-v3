@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type BatchCreateBaremetalServerTagsRequest struct {
+	// 裸金属服务器ID。
+
 	ServerId string `json:"server_id"`
 
 	Body *BatchCreateBaremetalServerTagsRequestBody `json:"body,omitempty"`

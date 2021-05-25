@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CreatePoliciesV3Request struct {
+	// 需要添加授权策略的通道名称。
+
 	StreamName string `json:"stream_name"`
 
 	Body *CreatePolicyRuleRequest `json:"body,omitempty"`

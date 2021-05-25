@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeleteBackupRequest struct {
+	// 指定删除的备份ID
+
 	BackupId string `json:"backup_id"`
 }
 

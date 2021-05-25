@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DeleteStreamRequest struct {
+	// 需要删除的通道名称。
+
 	StreamName string `json:"stream_name"`
 }
 
