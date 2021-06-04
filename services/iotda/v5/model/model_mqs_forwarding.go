@@ -8,19 +8,19 @@ import (
 
 // 服务配置信息
 type MqsForwarding struct {
-	// MQS服务的URL
+	// **参数说明**：MQS服务的URL
 
 	Url string `json:"url"`
-	// 用于登录MQS的用户名
+	// **参数说明**：用于登录MQS的用户名
 
 	UserName string `json:"user_name"`
-	// 用于登录MQS的密码
+	// **参数说明**：用于登录MQS的密码
 
 	Password string `json:"password"`
-	// 订阅的MQS主题
+	// **参数说明**：订阅的MQS主题
 
 	Topic string `json:"topic"`
-	// 是否加密传输
+	// **参数说明**：是否加密传输
 
 	EncryptTransport *bool `json:"encrypt_transport,omitempty"`
 }

@@ -367,6 +367,10 @@ func GenReqDefForListFunctions() *def.HttpRequestDef {
 		WithName("Maxitems").
 		WithJsonTag("maxitems").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PackageName").
+		WithJsonTag("package_name").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

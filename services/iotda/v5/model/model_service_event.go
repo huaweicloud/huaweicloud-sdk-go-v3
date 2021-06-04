@@ -8,10 +8,10 @@ import (
 
 // 事件服务对象。
 type ServiceEvent struct {
-	// 设备事件类型。
+	// **参数说明**：设备事件类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
 
 	EventType string `json:"event_type"`
-	// 设备事件的参数列表。
+	// **参数说明**：设备事件的参数列表。
 
 	Paras *[]ServiceCommandPara `json:"paras,omitempty"`
 }

@@ -40,8 +40,11 @@ type AddApplicationResponse struct {
 	ServiceName *string `json:"service_name,omitempty"`
 	// 是否冻结
 
-	Freezed        *bool `json:"freezed,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	Freezed *bool `json:"freezed,omitempty"`
+	// 调用接口所属instanceId
+
+	RequestInstanceId *string `json:"request_instance_id,omitempty"`
+	HttpStatusCode    int     `json:"-"`
 }
 
 func (o AddApplicationResponse) String() string {

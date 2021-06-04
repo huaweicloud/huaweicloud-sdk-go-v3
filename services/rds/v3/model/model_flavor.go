@@ -29,6 +29,9 @@ type Flavor struct {
 	// 数组形式版本号
 
 	VersionName []string `json:"version_name"`
+	// 性能规格，包含以下状态： - normal：通用增强型。 - normal2：通用增强Ⅱ型。 - armFlavors：鲲鹏通用增强型。 - dedicicatenormal ：x86独享型。 - armlocalssd：鲲鹏通用型。 - normallocalssd：x86通用型。 - general：通用型。 - dedicated：独享型，仅云盘SSD支持。 - rapid：独享型，仅极速型SSD支持。
+
+	GroupType string `json:"group_type"`
 }
 
 func (o Flavor) String() string {

@@ -8,10 +8,10 @@ import (
 
 // 按标签查询资源请求结构体。
 type QueryResourceByTagsDto struct {
-	// 要查询的资源类型，当前支持设备（device）。
+	// **参数说明**：要查询的资源类型，当前支持设备（device）。
 
 	ResourceType string `json:"resource_type"`
-	// 标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
+	// **参数说明**：标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
 
 	Tags []TagV5Dto `json:"tags"`
 }

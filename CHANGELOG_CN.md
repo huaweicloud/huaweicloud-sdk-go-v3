@@ -1,3 +1,50 @@
+# 0.0.46 2021-06-04
+
+### HuaweiCloud SDK CCE
+
+- _新增特性_
+    - 无
+- _解决问题_
+    - [Issue 20](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/20): 修复`extendParam`类型定义错误的问题
+- _特性变更_
+    - 接口`DeleteCluster`新增请求参数`tobedeleted`
+
+### HuaweiCloud SDK DDS
+
+- _新增特性_
+    - 新增支持接口`ShowQuotas`
+- _解决问题_
+    - 无
+- _特性变更_
+    - 无
+
+### HuaweiCloud SDK IoTDA
+
+- _新增特性_
+    - 新增支持接口`ListComplexQueryDevice`
+- _解决问题_
+    - 无
+- _特性变更_
+    - 无
+
+### HuaweiCloud SDK GaussDBforNoSQL
+
+- _新增特性_
+    - 支持`GaussDBforNoSQL`服务
+- _解决问题_
+    - 无
+- _特性变更_
+    - 无
+
+### HuaweiCloud SDK RDS
+
+- _新增特性_
+    - 新增支持接口`ShowQuotas`
+- _解决问题_
+    - 无
+- _特性变更_
+    - 接口`StartInstanceRestartAction`的请求参数`restart`类型调整：string -> object
+
 # 0.0.45 2021-05-25
 
 ### HuaweiCloud SDK AS

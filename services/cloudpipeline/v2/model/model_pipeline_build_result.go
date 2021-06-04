@@ -22,6 +22,15 @@ type PipelineBuildResult struct {
 	// 流水线id
 
 	PipelineId string `json:"pipeline_id"`
+	// 流水线名称
+
+	PipelineName string `json:"pipeline_name"`
+	// 执行开始时间
+
+	StartTime string `json:"start_time"`
+	// 运行状态
+
+	Status string `json:"status"`
 }
 
 func (o PipelineBuildResult) String() string {

@@ -41,6 +41,9 @@ type ApplicationDto struct {
 	// 是否冻结
 
 	Freezed *bool `json:"freezed,omitempty"`
+	// 调用接口所属instanceId
+
+	RequestInstanceId *string `json:"request_instance_id,omitempty"`
 }
 
 func (o ApplicationDto) String() string {

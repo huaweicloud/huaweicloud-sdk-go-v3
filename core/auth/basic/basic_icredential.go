@@ -22,6 +22,7 @@ package basic
 import (
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/cache"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/iam"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/signer"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
@@ -48,6 +49,13 @@ func (s Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region st
 		return s
 	}
 
+	authCache := cache.GetCache()
+	akWithName := s.AK + region
+	if projectId, ok := authCache.GetAuth(akWithName); ok {
+		s.ProjectId = projectId
+		return s
+	}
+
 	req, err := s.ProcessAuthRequest(client, iam.GetKeystoneListProjectsRequest(s.IamEndpoint, region))
 	if err != nil {
 		panic(fmt.Sprintf("failed to get project id, %s", err.Error()))
@@ -59,6 +67,7 @@ func (s Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region st
 	}
 
 	s.ProjectId = id
+	authCache.PutAuth(akWithName, id)
 	return s
 }
 

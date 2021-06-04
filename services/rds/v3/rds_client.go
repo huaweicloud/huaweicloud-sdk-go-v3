@@ -547,6 +547,17 @@ func (c *RdsClient) ShowOffSiteBackupPolicy(request *model.ShowOffSiteBackupPoli
 	}
 }
 
+//查询当前项目下资源配额情况。
+func (c *RdsClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
+	requestDef := GenReqDefForShowQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQuotasResponse), nil
+	}
+}
+
 //手动倒换主备.
 func (c *RdsClient) StartFailover(request *model.StartFailoverRequest) (*model.StartFailoverResponse, error) {
 	requestDef := GenReqDefForStartFailover()

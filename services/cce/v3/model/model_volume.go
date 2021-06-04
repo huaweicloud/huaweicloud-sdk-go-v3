@@ -7,7 +7,7 @@ import (
 )
 
 //
-type V3Volume struct {
+type Volume struct {
 	// 磁盘大小，单位为GB  - 系统盘取值范围：40~1024 - 数据盘取值范围：100~32768
 
 	Size int32 `json:"size"`
@@ -30,11 +30,11 @@ type V3Volume struct {
 	Metadata *VolumeMetadata `json:"metadata,omitempty"`
 }
 
-func (o V3Volume) String() string {
+func (o Volume) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "V3Volume struct{}"
+		return "Volume struct{}"
 	}
 
-	return strings.Join([]string{"V3Volume", string(data)}, " ")
+	return strings.Join([]string{"Volume", string(data)}, " ")
 }

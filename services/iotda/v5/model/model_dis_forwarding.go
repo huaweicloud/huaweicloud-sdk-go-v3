@@ -8,16 +8,16 @@ import (
 
 // DIS服务配置信息
 type DisForwarding struct {
-	// DIS服务对应的region区域
+	// **参数说明**：DIS服务对应的region区域
 
 	RegionName string `json:"region_name"`
-	// DIS服务对应的projectId信息
+	// **参数说明**：DIS服务对应的projectId信息
 
 	ProjectId string `json:"project_id"`
-	// DIS服务对应的通道名称，stream_id和stream_name两个参数必须携带一个，优先使用stream_id
+	// **参数说明**：DIS服务对应的通道名称，stream_id和stream_name两个参数必须携带一个，优先使用stream_id
 
 	StreamName *string `json:"stream_name,omitempty"`
-	// DIS服务对应的通道ID，stream_id和stream_name两个参数必须携带一个，优先使用stream_id
+	// **参数说明**：DIS服务对应的通道ID，stream_id和stream_name两个参数必须携带一个，优先使用stream_id
 
 	StreamId *string `json:"stream_id,omitempty"`
 }

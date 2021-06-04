@@ -3,9 +3,6 @@ package model
 import (
 	"encoding/json"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -24,7 +21,7 @@ type HistoryStreamInfo struct {
 	Type *int32 `json:"type,omitempty"`
 	// 视频编码格式。
 
-	VideoCodec *HistoryStreamInfoVideoCodec `json:"video_codec,omitempty"`
+	VideoCodec *string `json:"video_codec,omitempty"`
 	// 音频编码格式。
 
 	AudioCodec *string `json:"audio_codec,omitempty"`
@@ -46,42 +43,4 @@ func (o HistoryStreamInfo) String() string {
 	}
 
 	return strings.Join([]string{"HistoryStreamInfo", string(data)}, " ")
-}
-
-type HistoryStreamInfoVideoCodec struct {
-	value string
-}
-
-type HistoryStreamInfoVideoCodecEnum struct {
-	H264 HistoryStreamInfoVideoCodec
-	H265 HistoryStreamInfoVideoCodec
-}
-
-func GetHistoryStreamInfoVideoCodecEnum() HistoryStreamInfoVideoCodecEnum {
-	return HistoryStreamInfoVideoCodecEnum{
-		H264: HistoryStreamInfoVideoCodec{
-			value: "H264",
-		},
-		H265: HistoryStreamInfoVideoCodec{
-			value: "H265",
-		},
-	}
-}
-
-func (c HistoryStreamInfoVideoCodec) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *HistoryStreamInfoVideoCodec) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

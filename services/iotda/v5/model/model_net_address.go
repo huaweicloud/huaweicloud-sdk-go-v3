@@ -8,13 +8,13 @@ import (
 
 // 网络地址信息。
 type NetAddress struct {
-	// 服务的对应IP
+	// **参数说明**：服务的对应IP
 
 	Ip *string `json:"ip,omitempty"`
-	// 服务对应端口
+	// **参数说明**：服务对应端口
 
 	Port *int32 `json:"port,omitempty"`
-	// 服务对应的域名
+	// **参数说明**：服务对应的域名
 
 	Domain *string `json:"domain,omitempty"`
 }

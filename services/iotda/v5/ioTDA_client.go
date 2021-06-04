@@ -129,28 +129,6 @@ func (c *IoTDAClient) CreateAsyncCommand(request *model.CreateAsyncCommandReques
 	}
 }
 
-//查询设备下队列中的命（处理中的命令），包含PENDING,SENT,DELIVERED三种状态，注意：DELIVERED状态的命令经过系统设定的一段时间（具体以系统配置为准）仍然没有更新，就会从队列中移除，变为历史命令。
-func (c *IoTDAClient) ListAsyncCommands(request *model.ListAsyncCommandsRequest) (*model.ListAsyncCommandsResponse, error) {
-	requestDef := GenReqDefForListAsyncCommands()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAsyncCommandsResponse), nil
-	}
-}
-
-//查询设备下发的历史异步命令。
-func (c *IoTDAClient) ListAsyncHistoryCommands(request *model.ListAsyncHistoryCommandsRequest) (*model.ListAsyncHistoryCommandsResponse, error) {
-	requestDef := GenReqDefForListAsyncHistoryCommands()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAsyncHistoryCommandsResponse), nil
-	}
-}
-
 //物联网平台可查询指定id的命令。
 func (c *IoTDAClient) ShowAsyncDeviceCommand(request *model.ShowAsyncDeviceCommandRequest) (*model.ShowAsyncDeviceCommandResponse, error) {
 	requestDef := GenReqDefForShowAsyncDeviceCommand()
@@ -261,7 +239,7 @@ func (c *IoTDAClient) ListCertificates(request *model.ListCertificatesRequest) (
 	}
 }
 
-//设备的产品模型中定义了物联网平台可向设备下发的命令，应用服务器可调用此接口向指定设备下发命令，以实现对设备的同步控制。平台负责将命令以同步方式发送给设备，并将设备执行命令结果同步返回, 如果设备没有响应，平台会返回给应用服务器超时，平台超时间是25秒。注意：此接口适用于MQTT设备同步命令下发，暂不支持NB-IoT设备命令下发。
+//设备的产品模型中定义了物联网平台可向设备下发的命令，应用服务器可调用此接口向指定设备下发命令，以实现对设备的同步控制。平台负责将命令以同步方式发送给设备，并将设备执行命令结果同步返回, 如果设备没有响应，平台会返回给应用服务器超时，平台超时间是20秒。注意：此接口适用于MQTT设备同步命令下发，暂不支持NB-IoT设备命令下发。
 func (c *IoTDAClient) CreateCommand(request *model.CreateCommandRequest) (*model.CreateCommandResponse, error) {
 	requestDef := GenReqDefForCreateCommand()
 

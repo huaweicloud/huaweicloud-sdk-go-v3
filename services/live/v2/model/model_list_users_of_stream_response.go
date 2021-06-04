@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListUsersOfStreamResponse struct {
-	// 域名对应的流量汇总列表。
+	// 观众趋势列表。
 
 	DataList *[]V2UserData `json:"data_list,omitempty"`
 

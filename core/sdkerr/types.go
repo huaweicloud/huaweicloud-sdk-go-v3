@@ -94,11 +94,12 @@ func NewServiceResponseError(resp *http.Response) *ServiceResponseError {
 			dataBuf := make(map[string]map[string]string)
 			err := jsoniter.Unmarshal(data, &dataBuf)
 			for _, value := range dataBuf {
-				if err == nil && value["code"] != "" {
+				if err == nil && value["code"] != "" && value["message"] != "" {
 					sr.ErrorCode = value["code"]
-				}
-				if err == nil && value["message"] != "" {
 					sr.ErrorMessage = value["message"]
+				} else if err == nil && value["error_code"] != "" && value["error_msg"] != "" {
+					sr.ErrorCode = value["error_code"]
+					sr.ErrorMessage = value["error_msg"]
 				}
 			}
 		} else {

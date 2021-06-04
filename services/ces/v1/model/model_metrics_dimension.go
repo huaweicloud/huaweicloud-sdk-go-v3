@@ -13,7 +13,7 @@ type MetricsDimension struct {
 	Name string `json:"name"`
 	// 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。
 
-	Value *string `json:"value,omitempty"`
+	Value string `json:"value"`
 }
 
 func (o MetricsDimension) String() string {

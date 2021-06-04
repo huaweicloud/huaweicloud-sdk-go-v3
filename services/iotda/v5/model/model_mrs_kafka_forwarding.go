@@ -8,12 +8,15 @@ import (
 
 // 转发MRS Kafka消息结构
 type MrsKafkaForwarding struct {
-	// 转发kafka消息对应的地址列表
+	// **参数说明**：转发kafka消息对应的地址列表
 
 	Addresses []NetAddress `json:"addresses"`
-	// 转发kafka消息关联的topic信息。
+	// **参数说明**：转发kafka消息关联的topic信息。
 
 	Topic string `json:"topic"`
+	// 是否Kerberos认证，默认为false。
+
+	KerberosAuthentication *bool `json:"kerberos_authentication,omitempty"`
 }
 
 func (o MrsKafkaForwarding) String() string {

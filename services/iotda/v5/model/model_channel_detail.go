@@ -35,6 +35,8 @@ type ChannelDetail struct {
 	FunctiongraphForwarding *FunctionGraphForwarding `json:"functiongraph_forwarding,omitempty"`
 
 	MrsKafkaForwarding *MrsKafkaForwarding `json:"mrs_kafka_forwarding,omitempty"`
+
+	PulsarForwarding *PulsarForwarding `json:"pulsar_forwarding,omitempty"`
 }
 
 func (o ChannelDetail) String() string {

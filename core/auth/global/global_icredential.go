@@ -22,6 +22,7 @@ package global
 import (
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/cache"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/iam"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/signer"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
@@ -48,6 +49,12 @@ func (s Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region st
 		return s
 	}
 
+	authCache := cache.GetCache()
+	if domainId, ok := authCache.GetAuth(s.AK); ok {
+		s.DomainId = domainId
+		return s
+	}
+
 	req, err := s.ProcessAuthRequest(client, iam.GetKeystoneListAuthDomainsRequest(s.IamEndpoint))
 	if err != nil {
 		panic(fmt.Sprintf("failed to get domain id, %s", err.Error()))
@@ -59,6 +66,7 @@ func (s Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region st
 	}
 
 	s.DomainId = id
+	authCache.PutAuth(s.AK, id)
 	return s
 }
 

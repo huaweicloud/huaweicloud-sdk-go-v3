@@ -8,7 +8,7 @@ import (
 
 // 条件中设备状态类型的信息，自定义结构。
 type DeviceStatusCondition struct {
-	// 状态列表，设备状态条件携带该参数。
+	// **参数说明**：状态列表，设备状态条件携带该参数。
 
 	StatusList *[]string `json:"status_list,omitempty"`
 }

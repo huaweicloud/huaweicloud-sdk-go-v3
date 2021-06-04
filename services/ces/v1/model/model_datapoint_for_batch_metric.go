@@ -8,19 +8,19 @@ import (
 
 //
 type DatapointForBatchMetric struct {
-	// 指标值，该字段名称与请求参数中filter使用的查询值相同；字段名称可为：max/min/average/sum/variance。
+	// 聚合周期内指标数据的最大值。
 
 	Max *float64 `json:"max,omitempty"`
-	// 指标值，该字段名称与请求参数中filter使用的查询值相同；字段名称可为：max/min/average/sum/variance。
+	// 聚合周期内指标数据的最小值。
 
 	Min *float64 `json:"min,omitempty"`
-	// 指标值，该字段名称与请求参数中filter使用的查询值相同；字段名称可为：max/min/average/sum/variance。
+	// 聚合周期内指标数据的平均值。
 
 	Average *float64 `json:"average,omitempty"`
-	// 指标值，该字段名称与请求参数中filter使用的查询值相同；字段名称可为：max/min/average/sum/variance。
+	// 聚合周期内指标数据的求和值。
 
 	Sum *float64 `json:"sum,omitempty"`
-	// 指标值，该字段名称与请求参数中filter使用的查询值相同；字段名称可为：max/min/average/sum/variance。
+	// 聚合周期内指标数据的方差。
 
 	Variance *string `json:"variance,omitempty"`
 	// 指标采集时间，UNIX时间戳，单位毫秒。

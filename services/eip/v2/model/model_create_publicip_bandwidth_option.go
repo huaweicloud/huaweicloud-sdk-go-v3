@@ -11,7 +11,7 @@ import (
 
 // 创建弹性公网IP时，携带的待绑定带宽信息
 type CreatePublicipBandwidthOption struct {
-	// 功能说明：按流量计费还是按带宽计费。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
+	// 功能说明：按流量计费还是按带宽计费。 取值范围：bandwidth，traffic。  不填或为空时默认是bandwidth。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
 
 	ChargeMode *CreatePublicipBandwidthOptionChargeMode `json:"charge_mode,omitempty"`
 	// 功能说明：带宽ID  创建WHOLE类型带宽的弹性公网IP时可以指定之前的共享带宽创建  取值范围：WHOLE类型的带宽ID
