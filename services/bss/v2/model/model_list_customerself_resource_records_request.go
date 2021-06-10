@@ -26,7 +26,7 @@ type ListCustomerselfResourceRecordsRequest struct {
 	// 账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费
 
 	BillType *int32 `json:"bill_type,omitempty"`
-	// 偏移量，从0开始。默认值为0。
+	// 偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
 
 	Offset *int32 `json:"offset,omitempty"`
 	// 每次查询的数量限制。默认值为10。

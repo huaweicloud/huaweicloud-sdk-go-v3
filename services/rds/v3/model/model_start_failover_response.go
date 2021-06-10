@@ -10,7 +10,7 @@ import (
 type StartFailoverResponse struct {
 	// 实例Id
 
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instanceId,omitempty"`
 	// 节点Id
 
 	NodeId *string `json:"nodeId,omitempty"`

@@ -39,7 +39,10 @@ type BackupForList struct {
 
 	Size int64 `json:"size"`
 
-	Datastore *Datastore `json:"datastore"`
+	Datastore *BackupDatastore `json:"datastore"`
+	// 是否已被DDM实例关联。
+
+	AssociatedWithDdm *bool `json:"associated_with_ddm,omitempty"`
 }
 
 func (o BackupForList) String() string {

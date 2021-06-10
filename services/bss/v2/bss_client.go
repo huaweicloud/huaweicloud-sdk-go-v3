@@ -338,6 +338,28 @@ func (c *BssClient) ListEnterpriseSubCustomers(request *model.ListEnterpriseSubC
 	}
 }
 
+//功能描述：客户在自建平台查询客户自己的资源包列表
+func (c *BssClient) ListFreeResourceUsages(request *model.ListFreeResourceUsagesRequest) (*model.ListFreeResourceUsagesResponse, error) {
+	requestDef := GenReqDefForListFreeResourceUsages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFreeResourceUsagesResponse), nil
+	}
+}
+
+//功能描述：查询资源包列表
+func (c *BssClient) ListFreeResources(request *model.ListFreeResourcesRequest) (*model.ListFreeResourcesResponse, error) {
+	requestDef := GenReqDefForListFreeResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFreeResourcesResponse), nil
+	}
+}
+
 //功能描述：华为云伙伴能力中心（一级经销商）可以查询精英服务商（二级经销商）列表。
 func (c *BssClient) ListIndirectPartners(request *model.ListIndirectPartnersRequest) (*model.ListIndirectPartnersResponse, error) {
 	requestDef := GenReqDefForListIndirectPartners()

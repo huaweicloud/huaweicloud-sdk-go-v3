@@ -35,9 +35,6 @@ type SlowLogStatistics struct {
 	// 语句类型。
 
 	Type string `json:"type"`
-	// 发生时间，UTC时间。
-
-	StartTime string `json:"startTime"`
 	// IP地址。
 
 	ClientIP string `json:"clientIP"`

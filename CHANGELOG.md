@@ -1,3 +1,63 @@
+# 0.0.47 2021-06-10
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+    - Support interfaces `ListFreeResources`,`ListFreeResourceUsages`.
+- _Bug Fix_
+    - None
+- _Change_
+    - None
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+    - Support `Content Delivery Network` service.
+- _Bug Fix_
+    - None
+- _Change_
+    - None
+
+### HuaweiCloud SDK DRS
+
+- _Features_
+    - Support `Data Replication Service`.
+- _Bug Fix_
+    - None
+- _Change_
+    - None
+
+### HuaweiCloud SDK FunctionGraph
+
+- _Features_
+    - Support interfaces
+        - `ImportFunction`
+        - `ExportFunction`
+        - `AsyncInvokeReservedFunction`
+        - `DeleteReservedInstanceById`
+- _Bug Fix_
+    - None
+- _Change_
+    - None
+
+### HuaweiCloud SDK OSM
+
+- _Features_
+    - Support `Online Service Management`.
+- _Bug Fix_
+    - None
+- _Change_
+    - None
+
+### HuaweiCloud SDK RDS
+
+- _Features_
+    - Support interfaces `SetBinlogClearPolicy`,`ShowBinlogClearPolicy`.
+- _Bug Fix_
+    - None
+- _Change_
+    - Add request parameters `offset`,`limit` to interface `ListOffSiteInstances`.
+
 # 0.0.46 2021-06-04
 
 ### HuaweiCloud SDK CCE

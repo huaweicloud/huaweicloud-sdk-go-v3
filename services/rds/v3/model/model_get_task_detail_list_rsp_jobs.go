@@ -29,6 +29,17 @@ type GetTaskDetailListRspJobs struct {
 	// 任务执行进度。执行中状态才返回执行进度，例如60%，否则返回“”。
 
 	Process *string `json:"process,omitempty"`
+	// 任务执行的具体的参数信息，为空则不返回该字段。
+
+	TaskDetail *string `json:"taskDetail,omitempty"`
+
+	Instance *GetTaskDetailListRspJobsInstance `json:"instance"`
+	// 根据不同的任务，显示不同的内容。
+
+	Entities *interface{} `json:"entities,omitempty"`
+	// 任务执行失败时的错误信息。
+
+	FailReason *string `json:"fail_reason,omitempty"`
 }
 
 func (o GetTaskDetailListRspJobs) String() string {

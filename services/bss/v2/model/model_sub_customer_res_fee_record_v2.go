@@ -34,13 +34,13 @@ type SubCustomerResFeeRecordV2 struct {
 	// 资源的使用量。
 
 	Usage *float64 `json:"usage,omitempty"`
-	// 资源的使用量单位，您可以调用查询使用量单位列表接口获取。
+	// 资源的使用量单位，您可以调用查询度量单位列表接口获取。
 
 	UsageMeasureId *int32 `json:"usage_measure_id,omitempty"`
 	// 套餐内使用量。
 
 	FreeResourceUsage *float64 `json:"free_resource_usage,omitempty"`
-	// 套餐内使用量单位，您可以调用查询使用量单位列表接口获取。
+	// 套餐内使用量单位，您可以调用查询度量单位列表接口获取。
 
 	FreeResourceMeasureId *int32 `json:"free_resource_measure_id,omitempty"`
 	// 云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。您可以调用查询云服务类型列表接口获取。
@@ -112,7 +112,7 @@ type SubCustomerResFeeRecordV2 struct {
 	// 产品的实例大小，仅线性产品有效。 线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
 
 	SpecSize *float64 `json:"spec_size,omitempty"`
-	// 产品实例大小的单位，仅线性产品有该字段。您可以调用查询使用量单位列表接口获取。
+	// 产品实例大小的单位，仅线性产品有该字段。您可以调用查询度量单位列表接口获取。
 
 	SpecSizeMeasureId *int32 `json:"spec_size_measure_id,omitempty"`
 	// 云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。

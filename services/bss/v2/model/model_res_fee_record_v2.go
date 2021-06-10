@@ -58,7 +58,7 @@ type ResFeeRecordV2 struct {
 	// 产品的实例大小，仅线性产品有效。 线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
 
 	SpecSize *float64 `json:"spec_size,omitempty"`
-	// 产品实例大小的单位，仅线性产品有该字段。 您可以调用查询使用量单位列表接口获取。
+	// 产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
 
 	SpecSizeMeasureId *int32 `json:"spec_size_measure_id,omitempty"`
 	// 订单ID或交易ID，扣费维度的唯一标识。
@@ -85,13 +85,13 @@ type ResFeeRecordV2 struct {
 	// 资源的使用量。
 
 	Usage *float64 `json:"usage,omitempty"`
-	// 资源使用量的度量单位，您可以调用查询使用量单位列表接口获取。
+	// 资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
 
 	UsageMeasureId *int32 `json:"usage_measure_id,omitempty"`
 	// 套餐内使用量。
 
 	FreeResourceUsage *float64 `json:"free_resource_usage,omitempty"`
-	// 套餐内使用量的度量单位，您可以调用查询使用量单位列表接口获取。
+	// 套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
 
 	FreeResourceMeasureId *int32 `json:"free_resource_measure_id,omitempty"`
 	// 预留实例使用量。

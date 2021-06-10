@@ -8,12 +8,29 @@ import (
 
 // 跨区域备份实例信息。
 type OffsiteBackupInstance struct {
-	// 偏移量。
+	// 实例ID。
 
-	Offset string `json:"offset"`
-	// 查询记录数。
+	Id string `json:"id"`
+	// 创建的实例名称。
 
-	Limit string `json:"limit"`
+	Name *string `json:"name,omitempty"`
+	// 源区域。
+
+	SourceRegion *string `json:"source_region,omitempty"`
+	// 租户在源区域下的project ID。
+
+	SourceProjectId *string `json:"source_project_id,omitempty"`
+
+	Datastore *ParaGroupDatastore `json:"datastore,omitempty"`
+	// 跨区域备份所在区域。
+
+	DestinationRegion *string `json:"destination_region,omitempty"`
+	// 租户在目标区域下的project ID。
+
+	DestinationProjectId *string `json:"destination_project_id,omitempty"`
+	// 跨区域备份保留天数。
+
+	KeepDays *int64 `json:"keep_days,omitempty"`
 }
 
 func (o OffsiteBackupInstance) String() string {

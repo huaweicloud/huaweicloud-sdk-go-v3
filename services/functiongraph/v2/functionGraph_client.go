@@ -30,6 +30,17 @@ func (c *FunctionGraphClient) AsyncInvokeFunction(request *model.AsyncInvokeFunc
 	}
 }
 
+//函数异步执行并返回预留实例ID用于场景指客户端请求执行比较费时任务，不需要同步等待执行完成返回结果，该方法提前返回任务执行对应的预留实例ID, 如果预留实例有异常， 可以通过该实例ID把对应实例删除（该接口主要针对白名单用户）。
+func (c *FunctionGraphClient) AsyncInvokeReservedFunction(request *model.AsyncInvokeReservedFunctionRequest) (*model.AsyncInvokeReservedFunctionResponse, error) {
+	requestDef := GenReqDefForAsyncInvokeReservedFunction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AsyncInvokeReservedFunctionResponse), nil
+	}
+}
+
 //创建依赖包。
 func (c *FunctionGraphClient) CreateDependency(request *model.CreateDependencyRequest) (*model.CreateDependencyResponse, error) {
 	requestDef := GenReqDefForCreateDependency()
@@ -129,6 +140,17 @@ func (c *FunctionGraphClient) DeleteFunctionAsyncInvokeConfig(request *model.Del
 	}
 }
 
+//预留实例异常时，可以根据预留实例ID删除该预留实例，注意：删除成功之后重新会重新拉起一个新的预留实例，业务高峰期可以更好的工作（该接口主要针对白名单用户）
+func (c *FunctionGraphClient) DeleteReservedInstanceById(request *model.DeleteReservedInstanceByIdRequest) (*model.DeleteReservedInstanceByIdResponse, error) {
+	requestDef := GenReqDefForDeleteReservedInstanceById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteReservedInstanceByIdResponse), nil
+	}
+}
+
 //删除函数版本别名。
 func (c *FunctionGraphClient) DeleteVersionAlias(request *model.DeleteVersionAliasRequest) (*model.DeleteVersionAliasResponse, error) {
 	requestDef := GenReqDefForDeleteVersionAlias()
@@ -137,6 +159,28 @@ func (c *FunctionGraphClient) DeleteVersionAlias(request *model.DeleteVersionAli
 		return nil, err
 	} else {
 		return resp.(*model.DeleteVersionAliasResponse), nil
+	}
+}
+
+//导出函数。
+func (c *FunctionGraphClient) ExportFunction(request *model.ExportFunctionRequest) (*model.ExportFunctionResponse, error) {
+	requestDef := GenReqDefForExportFunction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportFunctionResponse), nil
+	}
+}
+
+//导入函数。
+func (c *FunctionGraphClient) ImportFunction(request *model.ImportFunctionRequest) (*model.ImportFunctionResponse, error) {
+	requestDef := GenReqDefForImportFunction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportFunctionResponse), nil
 	}
 }
 

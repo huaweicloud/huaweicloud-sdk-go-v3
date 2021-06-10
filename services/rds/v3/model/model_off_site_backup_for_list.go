@@ -39,7 +39,10 @@ type OffSiteBackupForList struct {
 
 	Size int64 `json:"size"`
 
-	Datastore *Datastore `json:"datastore"`
+	Datastore *ParaGroupDatastore `json:"datastore"`
+	// 是否已被DDM实例关联。
+
+	AssociatedWithDdm *bool `json:"associated_with_ddm,omitempty"`
 }
 
 func (o OffSiteBackupForList) String() string {

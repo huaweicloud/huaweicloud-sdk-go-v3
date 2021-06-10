@@ -35,6 +35,18 @@ func (t *SdkTime) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
+	now, err = time.ParseInLocation(time.RFC3339, tmp, time.UTC)
+	if err == nil {
+		*t = SdkTime(now)
+		return err
+	}
+
+	now, err = time.ParseInLocation(time.RFC3339Nano, tmp, time.UTC)
+	if err == nil {
+		*t = SdkTime(now)
+		return err
+	}
+
 	return err
 }
 

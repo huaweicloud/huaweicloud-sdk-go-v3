@@ -17,6 +17,8 @@ type DeleteSqlserverDatabaseRequest struct {
 	// 需要删除的数据库名。
 
 	DbName string `json:"db_name"`
+
+	Body *DropDatabaseV3Req `json:"body,omitempty"`
 }
 
 func (o DeleteSqlserverDatabaseRequest) String() string {

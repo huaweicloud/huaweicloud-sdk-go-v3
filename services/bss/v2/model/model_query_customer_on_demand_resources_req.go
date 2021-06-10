@@ -25,7 +25,7 @@ type QueryCustomerOnDemandResourcesReq struct {
 	// 生效时间的结束时间 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
 
 	EffectiveTimeEnd *string `json:"effective_time_end,omitempty"`
-	// 偏移量，从0开始。默认值为0。
+	// 偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
 
 	Offset *int32 `json:"offset,omitempty"`
 	// 一次查询的条数，默认值为10。

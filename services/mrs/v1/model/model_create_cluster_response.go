@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateClusterResponse struct {
-	//   操作结果。  true：操作成功 false：操作失败
+	//   操作结果。  true：操作成功  false：操作失败
 
 	Result *bool `json:"result,omitempty"`
 	// 系统提示信息，可为空。

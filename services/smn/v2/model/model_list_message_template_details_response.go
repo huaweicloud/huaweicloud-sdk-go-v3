@@ -14,7 +14,7 @@ type ListMessageTemplateDetailsResponse struct {
 	// 模板名称。
 
 	MessageTemplateName *string `json:"message_template_name,omitempty"`
-	// 模板支持的协议类型。  目前支持的协议包括：  “email”：邮件传输协议。  “default”：  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “functiongraph”：FunctionGraph（工作流）传输协议。  “dms”：DMS传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
+	// 模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “dms”：DMS传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
 
 	Protocol *string `json:"protocol,omitempty"`
 	// 模板tag列表。  是消息模板“{}”内的字段，在具体使用消息模板时，可根据实际情况替为该字段赋值。

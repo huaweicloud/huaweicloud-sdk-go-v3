@@ -1,0 +1,25 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+type ForceRedirect struct {
+	// 强制跳转开关。1打开。0关闭。
+
+	Switch int32 `json:"switch"`
+	// 强制跳转类型。http：强制跳转HTTP。https：强制跳转HTTPS。
+
+	RedirectType *string `json:"redirect_type,omitempty"`
+}
+
+func (o ForceRedirect) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ForceRedirect struct{}"
+	}
+
+	return strings.Join([]string{"ForceRedirect", string(data)}, " ")
+}

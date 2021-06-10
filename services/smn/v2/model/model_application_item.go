@@ -13,7 +13,7 @@ type ApplicationItem struct {
 	// 应用平台。
 
 	Platform string `json:"platform"`
-	// 创建application的时间时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+	// 创建application的时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
 
 	CreateTime string `json:"create_time"`
 	// Application的唯一资源标识。

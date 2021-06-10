@@ -28,7 +28,7 @@ type CreateCustomerV2Req struct {
 	// 是否关闭营销消息的发送： true：关闭false：不关闭（默认）
 
 	IsCloseMarketMs *string `json:"is_close_market_ms,omitempty"`
-	// 合作类型。 1：推荐。 仅仅支持1，如果不传递，默认会创建成垫付模式的客户。
+	// 合作类型。 1：推荐。 仅支持1，如果不传递，默认会创建成垫付模式的客户。
 
 	CooperationType *string `json:"cooperation_type,omitempty"`
 	// 精英服务商ID。

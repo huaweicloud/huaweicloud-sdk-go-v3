@@ -30,7 +30,7 @@ type GetJobInfoResponseBodyJob struct {
 
 	Process *string `json:"process,omitempty"`
 
-	Instance *GetTaskDetailListRspInstance `json:"instance"`
+	Instance *GetTaskDetailListRspJobsInstance `json:"instance"`
 	// 根据不同的任务，显示不同的内容。
 
 	Entities *interface{} `json:"entities,omitempty"`

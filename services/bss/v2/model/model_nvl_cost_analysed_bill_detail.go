@@ -58,7 +58,7 @@ type NvlCostAnalysedBillDetail struct {
 	// 计费模式。 1：包年/包月3：按需10：预留实例
 
 	ChargingMode *int32 `json:"charging_mode,omitempty"`
-	// 订单ID。 说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
+	// 订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
 
 	OrderId *string `json:"order_id,omitempty"`
 	// 周期类型： 19：年20：月24：天25：小时5：一次性
@@ -70,13 +70,13 @@ type NvlCostAnalysedBillDetail struct {
 	// 资源的使用量。
 
 	Usage *float64 `json:"usage,omitempty"`
-	// 资源使用量的度量单位，您可以调用查询使用量单位列表接口获取。
+	// 资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
 
 	UsageMeasureId *int32 `json:"usage_measure_id,omitempty"`
 	// 套餐内使用量。
 
 	FreeResourceUsage *float64 `json:"free_resource_usage,omitempty"`
-	// 套餐内使用量的度量单位，您可以调用查询使用量单位列表接口获取。
+	// 套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
 
 	FreeResourceMeasureId *int32 `json:"free_resource_measure_id,omitempty"`
 	// 预留实例使用量。
@@ -88,13 +88,13 @@ type NvlCostAnalysedBillDetail struct {
 	// 消费金额（应付金额）。 消费金额=期初已分摊金额+当月分摊金额+期末未分摊金额
 
 	ConsumeAmount *float64 `json:"consume_amount,omitempty"`
-	// 期初已分摊金额。 说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
+	// 期初已分摊金额。  说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
 
 	PastMonthsAmortizedAmount *float64 `json:"past_months_amortized_amount,omitempty"`
 	// 当月分摊金额。 当月分摊金额=现金分摊金额+信用额度分摊金额+代金券分摊金额+现金券分摊金额+储值卡分摊金额+奖励金分摊金额
 
 	CurrentMonthAmortizedAmount *float64 `json:"current_month_amortized_amount,omitempty"`
-	// 期末未分摊金额。月度成本分摊时，当月以后还未分摊的金额。 说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
+	// 期末未分摊金额。月度成本分摊时，当月以后还未分摊的金额。  说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
 
 	FutureMonthsAmortizedAmount *float64 `json:"future_months_amortized_amount,omitempty"`
 	// 月度成本分摊时，当月已分摊金额中包含的现金金额。

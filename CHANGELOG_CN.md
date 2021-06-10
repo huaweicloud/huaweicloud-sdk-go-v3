@@ -1,3 +1,63 @@
+# 0.0.47 2021-06-10
+
+### HuaweiCloud SDK BSS
+
+- _新增特性_
+    - 新增支持接口`ListFreeResources`、`ListFreeResourceUsages`
+- _解决问题_
+    - 无
+- _特性变更_
+    - 无
+
+### HuaweiCloud SDK CDN
+
+- _新增特性_
+    - 支持内容分发网络服务
+- _解决问题_
+    - 无
+- _特性变更_
+    - 无
+
+### HuaweiCloud SDK DRS
+
+- _新增特性_
+    - 支持数据复制服务
+- _解决问题_
+    - 无
+- _特性变更_
+    - 无
+
+### HuaweiCloud SDK FunctionGraph
+
+- _新增特性_
+    - 新增支持接口
+        - `ImportFunction`
+        - `ExportFunction`
+        - `AsyncInvokeReservedFunction`
+        - `DeleteReservedInstanceById`
+- _解决问题_
+    - 无
+- _特性变更_
+    - 无
+
+### HuaweiCloud SDK OSM
+
+- _新增特性_
+    - 支持工单管理服务
+- _解决问题_
+    - 无
+- _特性变更_
+    - 无
+
+### HuaweiCloud SDK RDS
+
+- _新增特性_
+    - 新增支持接口`SetBinlogClearPolicy`、`ShowBinlogClearPolicy`
+- _解决问题_
+    - 无
+- _特性变更_
+    - 接口`ListOffSiteInstances`新增请求参数`offset`、`limit`
+
 # 0.0.46 2021-06-04
 
 ### HuaweiCloud SDK CCE

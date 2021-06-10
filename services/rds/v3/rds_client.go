@@ -448,6 +448,17 @@ func (c *RdsClient) SetBackupPolicy(request *model.SetBackupPolicyRequest) (*mod
 	}
 }
 
+//修改指定实例的binlog本地保留时长。
+func (c *RdsClient) SetBinlogClearPolicy(request *model.SetBinlogClearPolicyRequest) (*model.SetBinlogClearPolicyResponse, error) {
+	requestDef := GenReqDefForSetBinlogClearPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetBinlogClearPolicyResponse), nil
+	}
+}
+
 //设置跨区域备份策略。
 func (c *RdsClient) SetOffSiteBackupPolicy(request *model.SetOffSiteBackupPolicyRequest) (*model.SetOffSiteBackupPolicyResponse, error) {
 	requestDef := GenReqDefForSetOffSiteBackupPolicy()
@@ -511,6 +522,17 @@ func (c *RdsClient) ShowBackupPolicy(request *model.ShowBackupPolicyRequest) (*m
 		return nil, err
 	} else {
 		return resp.(*model.ShowBackupPolicyResponse), nil
+	}
+}
+
+//查寻指定实例的binlog本地保留时长。
+func (c *RdsClient) ShowBinlogClearPolicy(request *model.ShowBinlogClearPolicyRequest) (*model.ShowBinlogClearPolicyResponse, error) {
+	requestDef := GenReqDefForShowBinlogClearPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBinlogClearPolicyResponse), nil
 	}
 }
 

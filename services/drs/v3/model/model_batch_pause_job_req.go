@@ -1,0 +1,23 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// 批量暂停任务请求体
+type BatchPauseJobReq struct {
+	// 不能包含空对象。 集合中的job_id取值严格匹配UUID规则。
+
+	Jobs []PauseInfo `json:"jobs"`
+}
+
+func (o BatchPauseJobReq) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchPauseJobReq struct{}"
+	}
+
+	return strings.Join([]string{"BatchPauseJobReq", string(data)}, " ")
+}

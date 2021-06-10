@@ -7,7 +7,7 @@ import (
 )
 
 type AmountInfomationV2 struct {
-	// 费用项。 具体请参见表6。
+	// 费用项。 具体请参见表7。
 
 	Discounts *[]DiscountItemV2 `json:"discounts,omitempty"`
 	// 现金券金额。

@@ -25,10 +25,10 @@ type PeriodProductInfo struct {
 	// 可用区标识。
 
 	AvailableZone *string `json:"available_zone,omitempty"`
-	// 资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。
+	// 资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
 
 	ResourceSize *int32 `json:"resource_size,omitempty"`
-	// 资源容量度量标识。 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个 线性产品时该参数不能为空。
+	// 资源容量度量标识。 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
 
 	SizeMeasureId *int32 `json:"size_measure_id,omitempty"`
 	// 订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
