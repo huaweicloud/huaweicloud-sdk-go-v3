@@ -12,7 +12,7 @@ type ShowGroupsRespGroupAssignment struct {
 	Topic *string `json:"topic,omitempty"`
 	// 分区列表。
 
-	Partitions *[]string `json:"partitions,omitempty"`
+	Partitions *[]int32 `json:"partitions,omitempty"`
 }
 
 func (o ShowGroupsRespGroupAssignment) String() string {

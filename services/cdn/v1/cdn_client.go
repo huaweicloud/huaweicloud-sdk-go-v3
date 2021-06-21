@@ -229,13 +229,13 @@ func (c *CdnClient) ShowOriginHost(request *model.ShowOriginHostRequest) (*model
 }
 
 //查询Referer过滤规则。
-func (c *CdnClient) ShowRefer(request *model.ShowReferRequest) (*model.ShowReferResponse, error) {
-	requestDef := GenReqDefForShowRefer()
+func (c *CdnClient) ShowReferer(request *model.ShowRefererRequest) (*model.ShowRefererResponse, error) {
+	requestDef := GenReqDefForShowReferer()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowReferResponse), nil
+		return resp.(*model.ShowRefererResponse), nil
 	}
 }
 

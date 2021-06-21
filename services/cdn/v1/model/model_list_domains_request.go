@@ -29,9 +29,6 @@ type ListDomainsRequest struct {
 	// 查询的页码。取值范围1-65535，不设值时默认值为1。
 
 	PageNumber *int32 `json:"page_number,omitempty"`
-	// 域名所属用户的domain_id。
-
-	UserDomainId *string `json:"user_domain_id,omitempty"`
 	// 企业项目ID。该参数仅对开启了企业项目功能的用户生效，不传表示查询default项目。\"ALL\"表示查询所有该用户已授权项目的资源。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

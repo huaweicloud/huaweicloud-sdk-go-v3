@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowHistoryTasksResponse struct {
-	// 总数。
+	// 总共的任务个数。
 
 	Total *int32 `json:"total,omitempty"`
 	// 日志列表数据

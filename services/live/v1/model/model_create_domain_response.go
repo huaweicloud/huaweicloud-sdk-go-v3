@@ -16,7 +16,7 @@ type CreateDomainResponse struct {
 	// 域名类型 - pull表示播放域名 - push表示推流域名
 
 	DomainType *CreateDomainResponseDomainType `json:"domain_type,omitempty"`
-	// 直播域名的CName
+	// 直播域名的CNAME
 
 	DomainCname *string `json:"domain_cname,omitempty"`
 	// 直播所属直播中心
@@ -28,9 +28,13 @@ type CreateDomainResponse struct {
 	// 域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
 
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	// 状态描述
 
-	DomainSource   *DomainSourceInfo `json:"domain_source,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	StatusDescribe *string `json:"status_describe,omitempty"`
+	// 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+
+	ServiceArea    *CreateDomainResponseServiceArea `json:"service_area,omitempty"`
+	HttpStatusCode int                              `json:"-"`
 }
 
 func (o CreateDomainResponse) String() string {
@@ -88,6 +92,7 @@ type CreateDomainResponseStatusEnum struct {
 	ON          CreateDomainResponseStatus
 	OFF         CreateDomainResponseStatus
 	CONFIGURING CreateDomainResponseStatus
+	DISABLE     CreateDomainResponseStatus
 }
 
 func GetCreateDomainResponseStatusEnum() CreateDomainResponseStatusEnum {
@@ -101,6 +106,9 @@ func GetCreateDomainResponseStatusEnum() CreateDomainResponseStatusEnum {
 		CONFIGURING: CreateDomainResponseStatus{
 			value: "configuring",
 		},
+		DISABLE: CreateDomainResponseStatus{
+			value: "disable",
+		},
 	}
 }
 
@@ -109,6 +117,48 @@ func (c CreateDomainResponseStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateDomainResponseStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateDomainResponseServiceArea struct {
+	value string
+}
+
+type CreateDomainResponseServiceAreaEnum struct {
+	MAINLAND_CHINA         CreateDomainResponseServiceArea
+	OUTSIDE_MAINLAND_CHINA CreateDomainResponseServiceArea
+	GLOBAL                 CreateDomainResponseServiceArea
+}
+
+func GetCreateDomainResponseServiceAreaEnum() CreateDomainResponseServiceAreaEnum {
+	return CreateDomainResponseServiceAreaEnum{
+		MAINLAND_CHINA: CreateDomainResponseServiceArea{
+			value: "mainland_china",
+		},
+		OUTSIDE_MAINLAND_CHINA: CreateDomainResponseServiceArea{
+			value: "outside_mainland_china",
+		},
+		GLOBAL: CreateDomainResponseServiceArea{
+			value: "global",
+		},
+	}
+}
+
+func (c CreateDomainResponseServiceArea) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *CreateDomainResponseServiceArea) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

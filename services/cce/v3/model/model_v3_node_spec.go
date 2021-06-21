@@ -7,10 +7,10 @@ import (
 )
 
 type V3NodeSpec struct {
-	// 节点的规格
+	// 节点的规格，CCE支持的节点规格请参考[[节点规格说明](https://support.huaweicloud.com/api-cce/cce_02_0368.html)](tag:hws)[[节点规格说明](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0368.html)](tag:hws_hk)获取。
 
 	Flavor string `json:"flavor"`
-	//   节点所在的可用区名. 底层实际存在，位于该用户物理可用区组之内的可用区
+	// 待创建节点所在的可用区，需要指定可用区（AZ）的名称。CCE支持的可用区请参考[[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)[[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)获取。
 
 	Az string `json:"az"`
 	// 节点的操作系统类型。  - 对于虚拟机节点，可以配置为“EulerOS”、“CentOS”、“Debian”、“Ubuntu”。默认为\"EulerOS\"。  > 系统会根据集群版本自动选择支持的系统版本。当前集群版本不支持该系统类型，则会报错。  - 对于自动付费包周期的裸金属节点，只支持EulerOS 2.3、EulerOS 2.5、EulerOS 2.8。  - 若在创建节点时指定了extendParam中的alpha.cce/NodeImageID参数，可以不填写此参数。

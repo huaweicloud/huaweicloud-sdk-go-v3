@@ -28,7 +28,7 @@ type TasksObject struct {
 	// 处理失败的url个数。
 
 	Failed *int32 `json:"failed,omitempty"`
-	// 总共的任务个数。
+	// url总数。
 
 	Total *int32 `json:"total,omitempty"`
 	// 任务的创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。

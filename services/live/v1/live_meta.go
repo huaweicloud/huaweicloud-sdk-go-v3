@@ -42,11 +42,26 @@ func GenReqDefForCreateDomainMapping() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateRecordConfig() *def.HttpRequestDef {
+func GenReqDefForCreateRecordCallbackConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/record/config").
-		WithResponse(new(model.CreateRecordConfigResponse)).
+		WithPath("/v1/{project_id}/record/callbacks").
+		WithResponse(new(model.CreateRecordCallbackConfigResponse)).
+		WithContentType("application/json; charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateRecordRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/record/rules").
+		WithResponse(new(model.CreateRecordRuleResponse)).
 		WithContentType("application/json; charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -132,21 +147,33 @@ func GenReqDefForDeleteDomainMapping() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDeleteRecordConfig() *def.HttpRequestDef {
+func GenReqDefForDeleteRecordCallbackConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/record/config").
-		WithResponse(new(model.DeleteRecordConfigResponse)).
+		WithPath("/v1/{project_id}/record/callbacks/{id}").
+		WithResponse(new(model.DeleteRecordCallbackConfigResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Domain").
-		WithJsonTag("domain").
-		WithLocationType(def.Query))
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteRecordRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/record/rules/{id}").
+		WithResponse(new(model.DeleteRecordRuleResponse)).
+		WithContentType("application/json")
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppName").
-		WithJsonTag("app_name").
-		WithLocationType(def.Query))
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -256,36 +283,64 @@ func GenReqDefForListLiveStreamsOnline() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListRecordConfigs() *def.HttpRequestDef {
+func GenReqDefForListRecordCallbackConfigs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/record/config").
-		WithResponse(new(model.ListRecordConfigsResponse)).
+		WithPath("/v1/{project_id}/record/callbacks").
+		WithResponse(new(model.ListRecordCallbackConfigsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Domain").
-		WithJsonTag("domain").
+		WithName("PublishDomain").
+		WithJsonTag("publish_domain").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppName").
-		WithJsonTag("app_name").
+		WithName("App").
+		WithJsonTag("app").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("StreamName").
-		WithJsonTag("stream_name").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Page").
-		WithJsonTag("page").
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListRecordRules() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/record/rules").
+		WithResponse(new(model.ListRecordRulesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PublishDomain").
+		WithJsonTag("publish_domain").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Size").
-		WithJsonTag("size").
+		WithName("App").
+		WithJsonTag("app").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Stream").
+		WithJsonTag("stream").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("RecordType").
 		WithJsonTag("record_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -328,34 +383,6 @@ func GenReqDefForListStreamForbidden() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowBandwidth() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/stream/bandwidth").
-		WithResponse(new(model.ShowBandwidthResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Domain").
-		WithJsonTag("domain").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("StartTime").
-		WithJsonTag("start_time").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EndTime").
-		WithJsonTag("end_time").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Step").
-		WithJsonTag("step").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForShowDomain() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -372,65 +399,33 @@ func GenReqDefForShowDomain() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowOnlineUsers() *def.HttpRequestDef {
+func GenReqDefForShowRecordCallbackConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/stream/users").
-		WithResponse(new(model.ShowOnlineUsersResponse)).
+		WithPath("/v1/{project_id}/record/callbacks/{id}").
+		WithResponse(new(model.ShowRecordCallbackConfigResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Domain").
-		WithJsonTag("domain").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppName").
-		WithJsonTag("app_name").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("StreamName").
-		WithJsonTag("stream_name").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("StartTime").
-		WithJsonTag("start_time").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EndTime").
-		WithJsonTag("end_time").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Step").
-		WithJsonTag("step").
-		WithLocationType(def.Query))
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenReqDefForShowTraffic() *def.HttpRequestDef {
+func GenReqDefForShowRecordRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/stream/traffic").
-		WithResponse(new(model.ShowTrafficResponse)).
+		WithPath("/v1/{project_id}/record/rules/{id}").
+		WithResponse(new(model.ShowRecordRuleResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Domain").
-		WithJsonTag("domain").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("StartTime").
-		WithJsonTag("start_time").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EndTime").
-		WithJsonTag("end_time").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Step").
-		WithJsonTag("step").
-		WithLocationType(def.Query))
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -470,6 +465,46 @@ func GenReqDefForUpdateDomain() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/domain").
 		WithResponse(new(model.UpdateDomainResponse)).
 		WithContentType("application/json; charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateRecordCallbackConfig() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/record/callbacks/{id}").
+		WithResponse(new(model.UpdateRecordCallbackConfigResponse)).
+		WithContentType("application/json; charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateRecordRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/record/rules/{id}").
+		WithResponse(new(model.UpdateRecordRuleResponse)).
+		WithContentType("application/json; charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

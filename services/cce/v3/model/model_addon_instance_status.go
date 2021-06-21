@@ -41,25 +41,53 @@ type AddonInstanceStatusStatus struct {
 }
 
 type AddonInstanceStatusStatusEnum struct {
-	INSTALLING AddonInstanceStatusStatus
-	UPGRADING  AddonInstanceStatusStatus
-	FAILED     AddonInstanceStatusStatus
-	RUNNING    AddonInstanceStatusStatus
+	RUNNING        AddonInstanceStatusStatus
+	ABNORMAL       AddonInstanceStatusStatus
+	INSTALLING     AddonInstanceStatusStatus
+	INSTALL_FAILED AddonInstanceStatusStatus
+	UPGRADING      AddonInstanceStatusStatus
+	UPGRADE_FAILED AddonInstanceStatusStatus
+	DELETING       AddonInstanceStatusStatus
+	DELETE_SUCCESS AddonInstanceStatusStatus
+	DELETE_FAILED  AddonInstanceStatusStatus
+	AVAILABLE      AddonInstanceStatusStatus
+	ROLLBACKING    AddonInstanceStatusStatus
 }
 
 func GetAddonInstanceStatusStatusEnum() AddonInstanceStatusStatusEnum {
 	return AddonInstanceStatusStatusEnum{
+		RUNNING: AddonInstanceStatusStatus{
+			value: "running",
+		},
+		ABNORMAL: AddonInstanceStatusStatus{
+			value: "abnormal",
+		},
 		INSTALLING: AddonInstanceStatusStatus{
 			value: "installing",
+		},
+		INSTALL_FAILED: AddonInstanceStatusStatus{
+			value: "installFailed",
 		},
 		UPGRADING: AddonInstanceStatusStatus{
 			value: "upgrading",
 		},
-		FAILED: AddonInstanceStatusStatus{
-			value: "failed",
+		UPGRADE_FAILED: AddonInstanceStatusStatus{
+			value: "upgradeFailed",
 		},
-		RUNNING: AddonInstanceStatusStatus{
-			value: "running",
+		DELETING: AddonInstanceStatusStatus{
+			value: "deleting",
+		},
+		DELETE_SUCCESS: AddonInstanceStatusStatus{
+			value: "deleteSuccess",
+		},
+		DELETE_FAILED: AddonInstanceStatusStatus{
+			value: "deleteFailed",
+		},
+		AVAILABLE: AddonInstanceStatusStatus{
+			value: "available",
+		},
+		ROLLBACKING: AddonInstanceStatusStatus{
+			value: "rollbacking",
 		},
 	}
 }

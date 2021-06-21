@@ -12,7 +12,7 @@ type CdnIps struct {
 	Ip *string `json:"ip,omitempty"`
 	// 是否是华为云CDN节点。
 
-	Belongs *string `json:"belongs,omitempty"`
+	Belongs *bool `json:"belongs,omitempty"`
 	// IP归属地。
 
 	Region *string `json:"region,omitempty"`

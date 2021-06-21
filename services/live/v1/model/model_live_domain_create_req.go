@@ -19,6 +19,9 @@ type LiveDomainCreateReq struct {
 	// 直播所属的直播中心
 
 	Region string `json:"region"`
+	// 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+
+	ServiceArea *LiveDomainCreateReqServiceArea `json:"service_area,omitempty"`
 
 	DomainSource *DomainSourceInfo `json:"domain_source,omitempty"`
 }
@@ -57,6 +60,48 @@ func (c LiveDomainCreateReqDomainType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *LiveDomainCreateReqDomainType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type LiveDomainCreateReqServiceArea struct {
+	value string
+}
+
+type LiveDomainCreateReqServiceAreaEnum struct {
+	MAINLAND_CHINA         LiveDomainCreateReqServiceArea
+	OUTSIDE_MAINLAND_CHINA LiveDomainCreateReqServiceArea
+	GLOBAL                 LiveDomainCreateReqServiceArea
+}
+
+func GetLiveDomainCreateReqServiceAreaEnum() LiveDomainCreateReqServiceAreaEnum {
+	return LiveDomainCreateReqServiceAreaEnum{
+		MAINLAND_CHINA: LiveDomainCreateReqServiceArea{
+			value: "mainland_china",
+		},
+		OUTSIDE_MAINLAND_CHINA: LiveDomainCreateReqServiceArea{
+			value: "outside_mainland_china",
+		},
+		GLOBAL: LiveDomainCreateReqServiceArea{
+			value: "global",
+		},
+	}
+}
+
+func (c LiveDomainCreateReqServiceArea) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *LiveDomainCreateReqServiceArea) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

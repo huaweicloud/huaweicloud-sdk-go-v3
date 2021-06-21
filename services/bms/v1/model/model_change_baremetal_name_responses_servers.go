@@ -131,6 +131,14 @@ type ChangeBaremetalNameResponsesServers struct {
 	// 裸金属服务器标签
 
 	Tags *[]string `json:"tags,omitempty"`
+	// 裸金属服务器的系统标签
+
+	ServerTags *[]SystemTags `json:"server_tags,omitempty"`
+	// enterprise_project_id。
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	OsschedulerHints *ServerOsSchedulerHints `json:"os:scheduler_hints,omitempty"`
 }
 
 func (o ChangeBaremetalNameResponsesServers) String() string {

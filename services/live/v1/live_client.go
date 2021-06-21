@@ -41,14 +41,25 @@ func (c *LiveClient) CreateDomainMapping(request *model.CreateDomainMappingReque
 	}
 }
 
-//创建录制配置接口
-func (c *LiveClient) CreateRecordConfig(request *model.CreateRecordConfigRequest) (*model.CreateRecordConfigResponse, error) {
-	requestDef := GenReqDefForCreateRecordConfig()
+//创建录制回调配置接口
+func (c *LiveClient) CreateRecordCallbackConfig(request *model.CreateRecordCallbackConfigRequest) (*model.CreateRecordCallbackConfigResponse, error) {
+	requestDef := GenReqDefForCreateRecordCallbackConfig()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateRecordConfigResponse), nil
+		return resp.(*model.CreateRecordCallbackConfigResponse), nil
+	}
+}
+
+//创建录制规则接口，录制规则对新推送的流生效，对已经推送中的流不生效
+func (c *LiveClient) CreateRecordRule(request *model.CreateRecordRuleRequest) (*model.CreateRecordRuleResponse, error) {
+	requestDef := GenReqDefForCreateRecordRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRecordRuleResponse), nil
 	}
 }
 
@@ -96,14 +107,25 @@ func (c *LiveClient) DeleteDomainMapping(request *model.DeleteDomainMappingReque
 	}
 }
 
-//删除录制配置接口
-func (c *LiveClient) DeleteRecordConfig(request *model.DeleteRecordConfigRequest) (*model.DeleteRecordConfigResponse, error) {
-	requestDef := GenReqDefForDeleteRecordConfig()
+//删除录制回调配置接口
+func (c *LiveClient) DeleteRecordCallbackConfig(request *model.DeleteRecordCallbackConfigRequest) (*model.DeleteRecordCallbackConfigResponse, error) {
+	requestDef := GenReqDefForDeleteRecordCallbackConfig()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeleteRecordConfigResponse), nil
+		return resp.(*model.DeleteRecordCallbackConfigResponse), nil
+	}
+}
+
+//删除录制规则接口
+func (c *LiveClient) DeleteRecordRule(request *model.DeleteRecordRuleRequest) (*model.DeleteRecordRuleResponse, error) {
+	requestDef := GenReqDefForDeleteRecordRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRecordRuleResponse), nil
 	}
 }
 
@@ -151,14 +173,25 @@ func (c *LiveClient) ListLiveStreamsOnline(request *model.ListLiveStreamsOnlineR
 	}
 }
 
-//查询录制配置接口
-func (c *LiveClient) ListRecordConfigs(request *model.ListRecordConfigsRequest) (*model.ListRecordConfigsResponse, error) {
-	requestDef := GenReqDefForListRecordConfigs()
+//查询录制回调配置列表接口。通过指定条件，查询满足条件的配置列表。
+func (c *LiveClient) ListRecordCallbackConfigs(request *model.ListRecordCallbackConfigsRequest) (*model.ListRecordCallbackConfigsResponse, error) {
+	requestDef := GenReqDefForListRecordCallbackConfigs()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListRecordConfigsResponse), nil
+		return resp.(*model.ListRecordCallbackConfigsResponse), nil
+	}
+}
+
+//查询录制规则列表接口，通过指定条件，查询满足条件的录制规则列表。
+func (c *LiveClient) ListRecordRules(request *model.ListRecordRulesRequest) (*model.ListRecordRulesResponse, error) {
+	requestDef := GenReqDefForListRecordRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRecordRulesResponse), nil
 	}
 }
 
@@ -173,17 +206,6 @@ func (c *LiveClient) ListStreamForbidden(request *model.ListStreamForbiddenReque
 	}
 }
 
-//查询直播加速的播流域名网络带宽监控数据
-func (c *LiveClient) ShowBandwidth(request *model.ShowBandwidthRequest) (*model.ShowBandwidthResponse, error) {
-	requestDef := GenReqDefForShowBandwidth()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowBandwidthResponse), nil
-	}
-}
-
 //查询直播域名
 func (c *LiveClient) ShowDomain(request *model.ShowDomainRequest) (*model.ShowDomainResponse, error) {
 	requestDef := GenReqDefForShowDomain()
@@ -195,25 +217,25 @@ func (c *LiveClient) ShowDomain(request *model.ShowDomainRequest) (*model.ShowDo
 	}
 }
 
-//查询加速的直播播放在线人数
-func (c *LiveClient) ShowOnlineUsers(request *model.ShowOnlineUsersRequest) (*model.ShowOnlineUsersResponse, error) {
-	requestDef := GenReqDefForShowOnlineUsers()
+//查询录制回调配置接口
+func (c *LiveClient) ShowRecordCallbackConfig(request *model.ShowRecordCallbackConfigRequest) (*model.ShowRecordCallbackConfigResponse, error) {
+	requestDef := GenReqDefForShowRecordCallbackConfig()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowOnlineUsersResponse), nil
+		return resp.(*model.ShowRecordCallbackConfigResponse), nil
 	}
 }
 
-//查询直播加速的播流域名网络流量监控数据
-func (c *LiveClient) ShowTraffic(request *model.ShowTrafficRequest) (*model.ShowTrafficResponse, error) {
-	requestDef := GenReqDefForShowTraffic()
+//查询录制规则接口
+func (c *LiveClient) ShowRecordRule(request *model.ShowRecordRuleRequest) (*model.ShowRecordRuleResponse, error) {
+	requestDef := GenReqDefForShowRecordRule()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowTrafficResponse), nil
+		return resp.(*model.ShowRecordRuleResponse), nil
 	}
 }
 
@@ -236,6 +258,28 @@ func (c *LiveClient) UpdateDomain(request *model.UpdateDomainRequest) (*model.Up
 		return nil, err
 	} else {
 		return resp.(*model.UpdateDomainResponse), nil
+	}
+}
+
+//修改录制回调配置接口
+func (c *LiveClient) UpdateRecordCallbackConfig(request *model.UpdateRecordCallbackConfigRequest) (*model.UpdateRecordCallbackConfigResponse, error) {
+	requestDef := GenReqDefForUpdateRecordCallbackConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRecordCallbackConfigResponse), nil
+	}
+}
+
+//修改录制规则接口，如果规则修改后，修改后的规则对正在录制的流无效，对新的流有效。
+func (c *LiveClient) UpdateRecordRule(request *model.UpdateRecordRuleRequest) (*model.UpdateRecordRuleResponse, error) {
+	requestDef := GenReqDefForUpdateRecordRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRecordRuleResponse), nil
 	}
 }
 

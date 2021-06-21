@@ -25,7 +25,7 @@ func GenReqDefForCreateDomain() *def.HttpRequestDef {
 func GenReqDefForCreatePreheatingTasks() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1.0/cdn/preheatingtasks").
+		WithPath("/v1.0/cdn/content/preheating-tasks").
 		WithResponse(new(model.CreatePreheatingTasksResponse)).
 		WithContentType("application/json")
 
@@ -45,7 +45,7 @@ func GenReqDefForCreatePreheatingTasks() *def.HttpRequestDef {
 func GenReqDefForCreateRefreshTasks() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1.0/cdn/refreshtasks").
+		WithPath("/v1.0/cdn/content/refresh-tasks").
 		WithResponse(new(model.CreateRefreshTasksResponse)).
 		WithContentType("application/json")
 
@@ -155,10 +155,6 @@ func GenReqDefForListDomains() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PageNumber").
 		WithJsonTag("page_number").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("UserDomainId").
-		WithJsonTag("user_domain_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
@@ -518,11 +514,11 @@ func GenReqDefForShowOriginHost() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowRefer() *def.HttpRequestDef {
+func GenReqDefForShowReferer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1.0/cdn/domains/{domain_id}/referer").
-		WithResponse(new(model.ShowReferResponse)).
+		WithResponse(new(model.ShowRefererResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

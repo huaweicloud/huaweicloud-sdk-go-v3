@@ -17,7 +17,7 @@ type DomainBody struct {
 	// 域名业务类型，若为web，则表示类型为静态加速；若为download，则表示业务类型为下载加速；若为video，则表示业务类型为流媒体加速；若为wholeSite，则表示业务类型为全站加速。
 
 	BusinessType DomainBodyBusinessType `json:"business_type"`
-	// 源站域名或源站IP，IP仅支持IPv4，多个源站IP之间以英文逗号间隔，最多支持10个源站IP。
+	// 源站域名或源站IP，IP仅支持IPv4，多个源站IP以多个对象传入，最多支持10个源站IP对象。
 
 	Sources []Sources `json:"sources"`
 	// 域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。

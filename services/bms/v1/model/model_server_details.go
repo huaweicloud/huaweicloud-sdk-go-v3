@@ -31,9 +31,8 @@ type ServerDetails struct {
 	// 裸金属服务器对应的主机ID
 
 	HostId *string `json:"hostId,omitempty"`
-	// 裸金属服务器的网络属性。详情请参见表3 addresses数据结构说明。
 
-	Addresses map[string][]AddressInfo `json:"addresses,omitempty"`
+	Addresses *Addresses `json:"addresses,omitempty"`
 	// 裸金属服务器使用的密钥对名称
 
 	KeyName *string `json:"key_name,omitempty"`

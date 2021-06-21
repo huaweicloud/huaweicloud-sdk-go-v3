@@ -7,7 +7,7 @@ import (
 )
 
 type PreheatingTaskRequest struct {
-	PreheatingTask *PreheatingTaskBody `json:"preheatingTask,omitempty"`
+	PreheatingTask *PreheatingTaskRequestPreheatingTask `json:"preheating_task"`
 }
 
 func (o PreheatingTaskRequest) String() string {

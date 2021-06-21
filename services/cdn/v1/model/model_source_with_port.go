@@ -20,7 +20,7 @@ type SourceWithPort struct {
 	// 主备状态（1代表主站；0代表备站）；主源站必须存在，备源站可选。
 
 	ActiveStandby int32 `json:"active_standby"`
-	// 是否开启Obs静态网站托管(0表示关闭,1表示则为开启)
+	// 是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
 
 	EnableObsWebHosting *int32 `json:"enable_obs_web_hosting,omitempty"`
 	// HTTP端口，默认80

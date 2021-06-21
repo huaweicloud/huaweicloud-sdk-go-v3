@@ -41,6 +41,12 @@ type ShowTemplateDetailResponse struct {
 	// 项目名字
 
 	ProjectName *string `json:"project_name,omitempty"`
+	// 创建时间
+
+	CreateTime *string `json:"create_time,omitempty"`
+	// 修改时间
+
+	LastModifyTime *string `json:"last_modify_time,omitempty"`
 	// 是否关注
 
 	IsWatch *bool `json:"is_watch,omitempty"`
@@ -50,13 +56,13 @@ type ShowTemplateDetailResponse struct {
 	// 模板参数
 
 	Parameter *[]TemplateParam `json:"parameter,omitempty"`
-	// 编排flow，map类型数据
+	// 编排flow详情，描述流水线内各阶段任务的串并行关系。map类型数据，key为阶段名字，默认第一阶段initial，最后阶段为final，其余名字以'state_数字'标识。value为该阶段内任务(以'Task_数字'标识)以及后续阶段的标识。本字段为描述流水线基础编排数据之一，建议可通过流水线真实界面基于模板创建接口中获取
 
-	Flow *interface{} `json:"flow,omitempty"`
-	// 子任务states，map类型数据
+	Flow map[string]map[string]string `json:"flow,omitempty"`
+	// 编排State详情，map类型数据。本字段为描述流水线基础编排数据之一，建议可通过流水线真实界面基于模板创建接口中获取
 
-	States         *interface{} `json:"states,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	States         map[string]interface{} `json:"states,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o ShowTemplateDetailResponse) String() string {
