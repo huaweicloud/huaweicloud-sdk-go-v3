@@ -16,9 +16,6 @@ type AddActionReq struct {
 	Channel string `json:"channel"`
 
 	ChannelDetail *ChannelDetail `json:"channel_detail"`
-	// **参数说明**：是否支持批量接收推送消息。
-
-	Batch *bool `json:"batch,omitempty"`
 }
 
 func (o AddActionReq) String() string {

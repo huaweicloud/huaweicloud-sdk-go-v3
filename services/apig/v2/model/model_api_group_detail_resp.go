@@ -44,7 +44,7 @@ type ApiGroupDetailResp struct {
 	// 创建时间
 
 	RegisterTime *sdktime.SdkTime `json:"register_time"`
-	// 状态
+	// 状态   - 1： 有效
 
 	Status int32 `json:"status"`
 	// 是否为默认分组

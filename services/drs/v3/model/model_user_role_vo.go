@@ -16,7 +16,7 @@ type UserRoleVo struct {
 	Comment *string `json:"comment,omitempty"`
 	// 是否支持迁移。
 
-	IsTransfer string `json:"is_transfer"`
+	IsTransfer bool `json:"is_transfer"`
 	// 权限
 
 	Privileges string `json:"privileges"`
@@ -25,7 +25,7 @@ type UserRoleVo struct {
 	InheritsRoles *[]string `json:"inherits_roles,omitempty"`
 	// 是否选择。
 
-	Selected *string `json:"selected,omitempty"`
+	Selected *bool `json:"selected,omitempty"`
 }
 
 func (o UserRoleVo) String() string {

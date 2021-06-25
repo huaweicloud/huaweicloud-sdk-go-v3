@@ -1,0 +1,115 @@
+package model
+
+import (
+	"encoding/json"
+
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
+	"strings"
+)
+
+// 此参数在请求实体中，采用json字符串格式
+type QueryLtsLogParams struct {
+	// 搜索起始时间（UTC时间，毫秒级）。
+
+	StartTime string `json:"start_time"`
+	// 搜索结束时间（UTC时间，毫秒级）。
+
+	EndTime string `json:"end_time"`
+	// 日志过滤条件集合，不同日志来源所需字段不同。
+
+	Labels *interface{} `json:"labels,omitempty"`
+	// 支持关键词精确搜索。关键词指相邻两个分词符之间的单词。
+
+	Keywords *QueryLtsLogParamsKeywords `json:"keywords,omitempty"`
+	// 日志单行序列号，第一次查询时不需要此参数，后续分页查询时需要使用，可从上次查询的返回信息中获取。line_num应在start_time 和 end_time 之间。
+
+	LineNum *string `json:"line_num,omitempty"`
+	// 顺序或者倒序查询, 默认为false(顺序查询)
+
+	IsDesc *bool `json:"is_desc,omitempty"`
+	// 首次查询为 “init”, 分页查询时为 “forwards”或者“backwards”, 默认为首次查询“init”, 与 is_desc 参数配合进行分页查询。
+
+	SearchType *QueryLtsLogParamsSearchType `json:"search_type,omitempty"`
+	// 表示每次查询的日志条数，不填时默认为5000，建议您设置为100。
+
+	Limit *int32 `json:"limit,omitempty"`
+}
+
+func (o QueryLtsLogParams) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "QueryLtsLogParams struct{}"
+	}
+
+	return strings.Join([]string{"QueryLtsLogParams", string(data)}, " ")
+}
+
+type QueryLtsLogParamsKeywords struct {
+	value string
+}
+
+type QueryLtsLogParamsKeywordsEnum struct {
+	ERROR QueryLtsLogParamsKeywords
+}
+
+func GetQueryLtsLogParamsKeywordsEnum() QueryLtsLogParamsKeywordsEnum {
+	return QueryLtsLogParamsKeywordsEnum{
+		ERROR: QueryLtsLogParamsKeywords{
+			value: "error",
+		},
+	}
+}
+
+func (c QueryLtsLogParamsKeywords) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *QueryLtsLogParamsKeywords) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type QueryLtsLogParamsSearchType struct {
+	value string
+}
+
+type QueryLtsLogParamsSearchTypeEnum struct {
+	FORWARDS QueryLtsLogParamsSearchType
+}
+
+func GetQueryLtsLogParamsSearchTypeEnum() QueryLtsLogParamsSearchTypeEnum {
+	return QueryLtsLogParamsSearchTypeEnum{
+		FORWARDS: QueryLtsLogParamsSearchType{
+			value: "forwards",
+		},
+	}
+}
+
+func (c QueryLtsLogParamsSearchType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *QueryLtsLogParamsSearchType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}

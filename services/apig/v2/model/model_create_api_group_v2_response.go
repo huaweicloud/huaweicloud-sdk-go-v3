@@ -45,7 +45,7 @@ type CreateApiGroupV2Response struct {
 	// 创建时间
 
 	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
-	// 状态
+	// 状态   - 1： 有效
 
 	Status *int32 `json:"status,omitempty"`
 	// 是否为默认分组

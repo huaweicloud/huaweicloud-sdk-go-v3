@@ -514,11 +514,22 @@ func GenReqDefForShowOriginHost() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowReferer() *def.HttpRequestDef {
+func GenReqDefForShowQuota() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1.0/cdn/quota").
+		WithResponse(new(model.ShowQuotaResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowRefer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1.0/cdn/domains/{domain_id}/referer").
-		WithResponse(new(model.ShowRefererResponse)).
+		WithResponse(new(model.ShowReferResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

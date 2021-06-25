@@ -8,8 +8,10 @@ import (
 
 // Response Object
 type CreatePreheatingTasksResponse struct {
-	PreheatingTask *PreheatingTask `json:"preheating_task,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	// 任务ID
+
+	PreheatingTask *string `json:"preheating_task,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreatePreheatingTasksResponse) String() string {

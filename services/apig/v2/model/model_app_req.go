@@ -13,10 +13,10 @@ type AppReq struct {
 	// APP描述。字符长度不能大于255。 > 中文字符必须为UTF-8或者unicode编码。
 
 	Remark *string `json:"remark,omitempty"`
-	// APP的key。支持英文，数字，“_”,“-”,且只能以英文或数字开头，8 ~ 64个字符。 > 只支持部分region。
+	// APP的key。支持英文，数字，“_”,“-”,且只能以英文或数字开头，8 ~ 64个字符。
 
 	AppKey *string `json:"app_key,omitempty"`
-	// 密钥。支持英文，数字，“_”,“-”,“_”,“!”,“@”,“#”,“$”,“%”且只能以英文或数字开头，8 ~ 64个字符。 > 只支持部分region。
+	// 密钥。支持英文，数字，“_”,“-”,“_”,“!”,“@”,“#”,“$”,“%”且只能以英文或数字开头，8 ~ 64个字符。
 
 	AppSecret *string `json:"app_secret,omitempty"`
 }

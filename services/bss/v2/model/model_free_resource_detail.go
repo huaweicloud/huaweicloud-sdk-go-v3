@@ -13,7 +13,7 @@ type FreeResourceDetail struct {
 	// 资源项类型名称。
 
 	FreeResourceTypeName *string `json:"free_resource_type_name,omitempty"`
-	// 重置周期，只有quota_reuse_mode为可重置，该字段才有意义。 1：小时2：天3：周4：月5：年|
+	// 重置周期，只有quota_reuse_mode为可重置，该字段才有意义。 1：小时2：天3：周4：月5：年
 
 	QuotaReuseCycle *int32 `json:"quota_reuse_cycle,omitempty"`
 	// 重置周期类别，只有quota_reuse_mode为可重置，该字段才有意义。 1：按自然周期重置是指重置周期是按照自然月/年来重置，例如如果周期是月，按自然周期重置，表示每个月的1号重置。 2：按订购周期重置。是指重置周期是按照订购时间来重置，例如如果周期是月，按订购周期重置，15号订购了该套餐，表示每个月的15号重置。

@@ -833,6 +833,22 @@ func GenReqDefForKeystoneListPermissions() *def.HttpRequestDef {
 		WithName("PerPage").
 		WithJsonTag("per_page").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PermissionType").
+		WithJsonTag("permission_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DisplayName").
+		WithJsonTag("display_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Type").
+		WithJsonTag("type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Catalog").
+		WithJsonTag("catalog").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

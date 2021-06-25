@@ -21,11 +21,8 @@ type ShowRuleActionResponse struct {
 
 	Channel *string `json:"channel,omitempty"`
 
-	ChannelDetail *ChannelDetail `json:"channel_detail,omitempty"`
-	// 是否支持批量接收推送消息。
-
-	Batch          *bool `json:"batch,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	ChannelDetail  *ChannelDetail `json:"channel_detail,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowRuleActionResponse) String() string {

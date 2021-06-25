@@ -9,7 +9,7 @@ import (
 type ListFreeResourceUsagesReq struct {
 	// 资源项ID列表，每个最大64字节。
 
-	FreeResourceIds *[]string `json:"free_resource_ids,omitempty"`
+	FreeResourceIds []string `json:"free_resource_ids"`
 }
 
 func (o ListFreeResourceUsagesReq) String() string {

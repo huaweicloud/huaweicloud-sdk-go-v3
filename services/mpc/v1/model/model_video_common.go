@@ -37,9 +37,6 @@ type VideoCommon struct {
 	// 帧率  取值范围：0或[5,60]之间的整数，0表示自适应  单位：帧每秒
 
 	FrameRate *int32 `json:"frame_rate,omitempty"`
-	// 降帧率时是否同步调整时间戳 在配置降帧率场景下有效。 取值如下： - false：不调整时间戳； - true：根据 frame_rate 配置的帧率，重新计算时间戳。
-
-	SyncTimestamp *bool `json:"sync_timestamp,omitempty"`
 	// 纵横比，图像缩放方式
 
 	AspectRatio *int32 `json:"aspect_ratio,omitempty"`

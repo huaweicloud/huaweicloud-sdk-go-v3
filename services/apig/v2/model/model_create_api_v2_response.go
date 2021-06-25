@@ -10,7 +10,7 @@ import (
 
 // Response Object
 type CreateApiV2Response struct {
-	// API名称长度。  为3 ~ 64位的字符串，字符串由中文、英文字母、数字、下划线组成，且只能以英文或中文开头。 > 中文字符必须为UTF-8或者unicode编码。
+	// API名称。  长度为3 ~ 64位的字符串，字符串由中文、英文字母、数字、下划线组成，且只能以英文或中文开头。 > 中文字符必须为UTF-8或者unicode编码。
 
 	Name string `json:"name"`
 	// API类型 - 1：公有API - 2：私有API
@@ -25,7 +25,7 @@ type CreateApiV2Response struct {
 	// API的请求方式
 
 	ReqMethod CreateApiV2ResponseReqMethod `json:"req_method"`
-	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。 > 需要服从URI规范。
+	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。 > 需要服从URI规范。
 
 	ReqUri string `json:"req_uri"`
 	// API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
@@ -78,7 +78,7 @@ type CreateApiV2Response struct {
 	// API编号
 
 	Id *string `json:"id,omitempty"`
-	// API的状态
+	// API状态   - 1： 有效
 
 	Status *int32 `json:"status,omitempty"`
 	// 是否需要编排
@@ -96,13 +96,13 @@ type CreateApiV2Response struct {
 	// API所属分组的版本  默认V1，其他版本暂不支持
 
 	GroupVersion *string `json:"group_version,omitempty"`
-	// 发布的环境id
+	// 发布的环境编号  存在多个发布记录时，环境编号之间用|隔开
 
 	RunEnvId *string `json:"run_env_id,omitempty"`
-	// 发布的环境名称
+	// 发布的环境名称  存在多个发布记录时，环境名称之间用|隔开
 
 	RunEnvName *string `json:"run_env_name,omitempty"`
-	// 发布记录编号  存在多个发布记录时，编号之间用|隔开
+	// 发布记录编号  存在多个发布记录时，发布记录编号之间用|隔开
 
 	PublishId *string `json:"publish_id,omitempty"`
 

@@ -1297,10 +1297,6 @@ func GenReqDefForCreateRuleAction() *def.HttpRequestDef {
 		WithName("InstanceId").
 		WithJsonTag("Instance-Id").
 		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XLBService").
-		WithJsonTag("x-LB-Service").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

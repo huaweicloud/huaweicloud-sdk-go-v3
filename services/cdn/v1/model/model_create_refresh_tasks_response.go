@@ -8,8 +8,10 @@ import (
 
 // Response Object
 type CreateRefreshTasksResponse struct {
-	RefreshTask    *RefreshTask `json:"refresh_task,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	// 任务ID
+
+	RefreshTask    *string `json:"refresh_task,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateRefreshTasksResponse) String() string {

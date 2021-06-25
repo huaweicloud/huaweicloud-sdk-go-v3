@@ -40,9 +40,6 @@ type Video struct {
 	// 帧率。  取值范围：0或[5,60]之间的整数。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
 
 	FrameRate *int32 `json:"frame_rate,omitempty"`
-	// 降帧率时是否同步调整时间戳 在配置降帧率场景下有效 取值范围： false：不调整时间戳； true：根据 frame_rate 配置的帧率，重新计算时间戳;
-
-	SyncTimestamp *bool `json:"sync_timestamp,omitempty"`
 	// 视频宽度。  取值范围： - H.264：0或[32,4096]间2的倍数。 - H.265：0或[160,4096]间4的倍数。  单位：像素。  说明：若视频宽度设置为0，则视频宽度值自适应。
 
 	Width *int32 `json:"width,omitempty"`
@@ -55,12 +52,6 @@ type Video struct {
 	// 黑边剪裁类型。  取值如下： - 0：不开启黑边剪裁。 - 1：开启黑边剪裁，低复杂度算法，针对长视频（>5分钟）。 - 2：开启黑边剪裁，高复杂度算法，针对短视频（<=5分钟）。
 
 	BlackCut *int32 `json:"black_cut,omitempty"`
-	// GOP类型（暂不开放） 0: Closed (Default) 1:Open
-
-	GOPStructure *bool `json:"GOP_structure,omitempty"`
-	// 超分倍数 \"2\"：两倍超分
-
-	SrFactor *string `json:"sr_factor,omitempty"`
 }
 
 func (o Video) String() string {

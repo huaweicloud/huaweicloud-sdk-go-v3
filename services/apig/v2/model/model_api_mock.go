@@ -2,6 +2,7 @@ package model
 
 import (
 	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 
 	"strings"
 )
@@ -20,6 +21,18 @@ type ApiMock struct {
 	// 后端自定义认证ID
 
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
+	// 编号
+
+	Id *string `json:"id,omitempty"`
+	// 注册时间
+
+	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
+	// 后端状态   - 1： 有效
+
+	Status *int32 `json:"status,omitempty"`
+	// 修改时间
+
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 }
 
 func (o ApiMock) String() string {

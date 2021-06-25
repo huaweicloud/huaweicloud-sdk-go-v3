@@ -30,7 +30,7 @@ func (c *ApigClient) AssociateCertificateV2(request *model.AssociateCertificateV
 	}
 }
 
-//用户自定义的域名，需要CNAME到API分组的子域名上才能生效，具体方法请参见[增加CNAME类型记录集](https://support.huaweicloud.com/usermanual-dns/dns_usermanual_0010.html)。 每个API分组下最多可绑定5个域名。绑定域名后，用户可通过自定义域名调用API。
+//用户自定义的域名，需要CNAME到API分组的子域名上才能生效，具体方法请参见《云解析服务用户指南》的“添加CANME类型记录集”章节。 每个API分组下最多可绑定5个域名。绑定域名后，用户可通过自定义域名调用API。
 func (c *ApigClient) AssociateDomainV2(request *model.AssociateDomainV2Request) (*model.AssociateDomainV2Response, error) {
 	requestDef := GenReqDefForAssociateDomainV2()
 
@@ -107,7 +107,7 @@ func (c *ApigClient) CreateSpecialThrottlingConfigurationV2(request *model.Creat
 	}
 }
 
-//删除指定的环境。 该操作将导致此API在指定的环境无法被访问，可能会影响相当一部分应用和用户。请确保已经告知用户，或者确认需要强制下线。
+//删除指定的环境。  该操作将导致此API在指定的环境无法被访问，可能会影响相当一部分应用和用户。请确保已经告知用户，或者确认需要强制下线。  环境上存在已发布的API时，该环境不能被删除。
 func (c *ApigClient) DeleteEnvironmentV2(request *model.DeleteEnvironmentV2Request) (*model.DeleteEnvironmentV2Response, error) {
 	requestDef := GenReqDefForDeleteEnvironmentV2()
 
@@ -346,6 +346,17 @@ func (c *ApigClient) ShowDetailsOfRequestThrottlingPolicyV2(request *model.ShowD
 		return nil, err
 	} else {
 		return resp.(*model.ShowDetailsOfRequestThrottlingPolicyV2Response), nil
+	}
+}
+
+//修改绑定的域名所对应的配置信息。
+func (c *ApigClient) UpdateDomainV2(request *model.UpdateDomainV2Request) (*model.UpdateDomainV2Response, error) {
+	requestDef := GenReqDefForUpdateDomainV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDomainV2Response), nil
 	}
 }
 

@@ -22,7 +22,7 @@ type ApiFunc struct {
 	// 版本。
 
 	Version *string `json:"version,omitempty"`
-	// API网关请求函数服务的超时时间。  单位：毫秒。请求参数值不在合法范围内时将使用缺省值
+	// API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
 
 	Timeout int32 `json:"timeout"`
 	// 后端自定义认证ID
@@ -34,7 +34,7 @@ type ApiFunc struct {
 	// 注册时间
 
 	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
-	// 状态
+	// 后端状态   - 1： 有效
 
 	Status *int32 `json:"status,omitempty"`
 	// 修改时间

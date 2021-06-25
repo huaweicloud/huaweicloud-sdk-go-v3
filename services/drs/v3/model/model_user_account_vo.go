@@ -19,7 +19,7 @@ type UserAccountVo struct {
 	Comment *string `json:"comment,omitempty"`
 	// 是否支持迁移
 
-	IsTransfer string `json:"is_transfer"`
+	IsTransfer bool `json:"is_transfer"`
 	// 权限列表
 
 	Privileges *[]string `json:"privileges,omitempty"`

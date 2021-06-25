@@ -228,14 +228,25 @@ func (c *CdnClient) ShowOriginHost(request *model.ShowOriginHostRequest) (*model
 	}
 }
 
-//查询Referer过滤规则。
-func (c *CdnClient) ShowReferer(request *model.ShowRefererRequest) (*model.ShowRefererResponse, error) {
-	requestDef := GenReqDefForShowReferer()
+//查询当前用户域名、刷新文件、刷新目录和预热的配额
+func (c *CdnClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuotaResponse, error) {
+	requestDef := GenReqDefForShowQuota()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowRefererResponse), nil
+		return resp.(*model.ShowQuotaResponse), nil
+	}
+}
+
+//查询Referer过滤规则。
+func (c *CdnClient) ShowRefer(request *model.ShowReferRequest) (*model.ShowReferResponse, error) {
+	requestDef := GenReqDefForShowRefer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReferResponse), nil
 	}
 }
 

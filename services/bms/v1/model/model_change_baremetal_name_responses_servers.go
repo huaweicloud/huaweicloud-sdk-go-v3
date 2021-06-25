@@ -133,7 +133,7 @@ type ChangeBaremetalNameResponsesServers struct {
 	Tags *[]string `json:"tags,omitempty"`
 	// 裸金属服务器的系统标签
 
-	ServerTags *[]SystemTags `json:"server_tags,omitempty"`
+	SysTags *[]SystemTags `json:"sys_tags,omitempty"`
 	// enterprise_project_id。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

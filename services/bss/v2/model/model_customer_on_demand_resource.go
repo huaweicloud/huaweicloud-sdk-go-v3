@@ -37,7 +37,7 @@ type CustomerOnDemandResource struct {
 	// 资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
 
 	Status *int32 `json:"status,omitempty"`
-	// 云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。具体请参见对应云服务的相关介绍。
+	// 云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
 
 	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 	// 按需资源的容量大小。 格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"

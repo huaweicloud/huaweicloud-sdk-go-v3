@@ -19,32 +19,8 @@ type AddApplicationResponse struct {
 	CreateTime *string `json:"create_time,omitempty"`
 	// 是否为默认资源空间
 
-	DefaultApp *bool `json:"default_app,omitempty"`
-	// app的类型，标准版：Junior | 高级版：Normal
-
-	AppType *string `json:"app_type,omitempty"`
-	// 用户名。
-
-	Username *string `json:"username,omitempty"`
-	// app与用户的授权关系时，响应为：all | bind | edit | query ，其中bind权限类似于ALL权限，属于子用户权限。
-
-	Permission *string `json:"permission,omitempty"`
-	// 迁移前实例ID。
-
-	LastInstanceId *string `json:"last_instance_id,omitempty"`
-	// 当前实例ID。
-
-	CurrentInstanceId *string `json:"current_instance_id,omitempty"`
-	// 对接的服务名
-
-	ServiceName *string `json:"service_name,omitempty"`
-	// 是否冻结
-
-	Freezed *bool `json:"freezed,omitempty"`
-	// 调用接口所属instanceId
-
-	RequestInstanceId *string `json:"request_instance_id,omitempty"`
-	HttpStatusCode    int     `json:"-"`
+	DefaultApp     *bool `json:"default_app,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o AddApplicationResponse) String() string {

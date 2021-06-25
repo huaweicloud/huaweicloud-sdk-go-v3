@@ -31,7 +31,7 @@ type FreeResourcePackage struct {
 	// 失效时间，资源包到期时间，格式UTC。
 
 	ExpireTime *string `json:"expire_time,omitempty"`
-	// 状态： 0：未生效1：生效中2：已用完3：已失效
+	// 状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
 
 	Status *int32 `json:"status,omitempty"`
 	// 云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。您可以调用查询云服务类型列表接口获取。
@@ -49,7 +49,7 @@ type FreeResourcePackage struct {
 	// 使用模式。 1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。 2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。
 
 	QuotaReuseMode *int32 `json:"quota_reuse_mode,omitempty"`
-	// 资源套餐内的资源项信息（资源项ID级的详情）。
+	// 资源套餐内的资源项信息（资源项ID级的详情），具体参见表3。
 
 	FreeResources *[]FreeResource `json:"free_resources,omitempty"`
 }

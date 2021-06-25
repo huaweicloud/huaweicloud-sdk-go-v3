@@ -15,9 +15,6 @@ type CreateRemuxTaskReq struct {
 	UserData *string `json:"user_data,omitempty"`
 
 	OutputParam *RemuxOutputParam `json:"output_param,omitempty"`
-	// 提供给mpe通知回调用的的url
-
-	NotifyUrl *string `json:"notify_url,omitempty"`
 }
 
 func (o CreateRemuxTaskReq) String() string {

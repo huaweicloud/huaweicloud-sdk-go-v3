@@ -25,7 +25,7 @@ type OrderInstanceV2 struct {
 	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
 
 	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
-	// 云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。具体请参见对应云服务的相关介绍。
+	// 云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
 
 	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 	// 资源项目ID。

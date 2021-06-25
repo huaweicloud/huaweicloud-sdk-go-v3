@@ -14,7 +14,7 @@ type RefreshTaskRequestRefreshTask struct {
 	// 刷新的类型，其值可以为file 或directory，默认为file
 
 	Type *RefreshTaskRequestRefreshTaskType `json:"type,omitempty"`
-	// 刷新urls
+	// 输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为10240字符，单次最多输入1000个url。
 
 	Urls []string `json:"urls"`
 }

@@ -49,6 +49,9 @@ type ListResizeFlavorsResult struct {
 	Links []FlavorLink `json:"links"`
 
 	ExtraSpecs *FlavorExtraSpec `json:"extra_specs"`
+	// 预留属性。
+
+	InstanceQuota *interface{} `json:"instance_quota"`
 }
 
 func (o ListResizeFlavorsResult) String() string {

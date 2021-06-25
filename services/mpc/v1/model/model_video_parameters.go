@@ -40,9 +40,6 @@ type VideoParameters struct {
 	// 帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
 
 	FrameRate *int32 `json:"frame_rate,omitempty"`
-	// 降帧率时是否同步调整时间戳 在配置降帧率场景下有效。  取值范围：  - false：不调整时间戳 - true：根据 frame_rate 配置的帧率，重新计算时间戳
-
-	SyncTimestamp *bool `json:"sync_timestamp,omitempty"`
 	// 视频宽度（单位：像素）  - H264：范围[32,4096]，必须为2的倍数 - H265：范围[320,4096]，必须是4的倍数
 
 	Width *int32 `json:"width,omitempty"`

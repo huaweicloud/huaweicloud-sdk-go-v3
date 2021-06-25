@@ -24,7 +24,7 @@ type HttpsDetail struct {
 	PrivateKey *string `json:"private_key,omitempty"`
 	// 0：自有证书  1：云托管证书
 
-	CertificateType *string `json:"certificate_type,omitempty"`
+	CertificateType *int32 `json:"certificate_type,omitempty"`
 	// 证书过期时间
 
 	ExpirationTime *int64 `json:"expiration_time,omitempty"`

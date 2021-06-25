@@ -96,6 +96,17 @@ func (c *BmsClient) ChangeBaremetalServerName(request *model.ChangeBaremetalServ
 	}
 }
 
+//切换裸金属服务器的操作系统。切换操作系统支持密码或者密钥注入，该接口支持企业项目细粒度权限的校验，具体细粒度请参见 bms:servers:changeOS
+func (c *BmsClient) ChangeBaremetalServerOs(request *model.ChangeBaremetalServerOsRequest) (*model.ChangeBaremetalServerOsResponse, error) {
+	requestDef := GenReqDefForChangeBaremetalServerOs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeBaremetalServerOsResponse), nil
+	}
+}
+
 //创建一台或多台裸金属服务器,裸金属服务器的登录鉴权方式包括两种：密钥对、密码。为安全起见，推荐使用密钥对方式
 func (c *BmsClient) CreateBareMetalServers(request *model.CreateBareMetalServersRequest) (*model.CreateBareMetalServersResponse, error) {
 	requestDef := GenReqDefForCreateBareMetalServers()

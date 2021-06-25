@@ -25,7 +25,7 @@ type ShowHistoryTaskDetailsRequest struct {
 	Status *int32 `json:"status,omitempty"`
 	// url的地址，支持同一任务id的多个url,多个url用分号隔开。
 
-	Url *int32 `json:"url,omitempty"`
+	Url *string `json:"url,omitempty"`
 }
 
 func (o ShowHistoryTaskDetailsRequest) String() string {

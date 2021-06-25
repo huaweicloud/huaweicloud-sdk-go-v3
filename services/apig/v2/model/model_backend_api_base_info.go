@@ -31,9 +31,12 @@ type BackendApiBaseInfo struct {
 	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。 > 需要服从URI规范。
 
 	ReqUri string `json:"req_uri"`
-	// API网关请求后端服务的超时时间。  单位：毫秒。请求参数值不在合法范围内时将使用默认值
+	// API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
 
 	Timeout int32 `json:"timeout"`
+	// 是否开启双向认证
+
+	EnableClientSsl *bool `json:"enable_client_ssl,omitempty"`
 }
 
 func (o BackendApiBaseInfo) String() string {

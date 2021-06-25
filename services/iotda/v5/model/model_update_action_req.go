@@ -13,9 +13,6 @@ type UpdateActionReq struct {
 	Channel *string `json:"channel,omitempty"`
 
 	ChannelDetail *ChannelDetail `json:"channel_detail,omitempty"`
-	// **参数说明**：是否支持批量接收推送消息。
-
-	Batch *bool `json:"batch,omitempty"`
 }
 
 func (o UpdateActionReq) String() string {

@@ -28,9 +28,6 @@ type AddRuleReq struct {
 	// **参数说明**：用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
 
 	Where *string `json:"where,omitempty"`
-	// **参数说明**：规则推送消息的消息格式版本，租户无需设置，仅供内部兼容历史推送消息使用，iocsa的历史推送消息版本为V5.0.1
-
-	DataVersion *string `json:"data_version,omitempty"`
 }
 
 func (o AddRuleReq) String() string {

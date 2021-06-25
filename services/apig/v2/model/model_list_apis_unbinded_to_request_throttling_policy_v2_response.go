@@ -8,12 +8,12 @@ import (
 
 // Response Object
 type ListApisUnbindedToRequestThrottlingPolicyV2Response struct {
-	// 满足条件的API总数
+	// 本次返回的列表长度
 
-	Total *int32 `json:"total,omitempty"`
-	// 本次返回的API列表长度
+	Size int32 `json:"size"`
+	// 满足条件的记录数
 
-	Size *int32 `json:"size,omitempty"`
+	Total int64 `json:"total"`
 	// 本次查询返回的API列表
 
 	Apis           *[]ThrottleBindingApiResp `json:"apis,omitempty"`

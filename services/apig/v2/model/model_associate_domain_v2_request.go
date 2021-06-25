@@ -15,7 +15,7 @@ type AssociateDomainV2Request struct {
 
 	GroupId string `json:"group_id"`
 
-	Body *DomainReq `json:"body,omitempty"`
+	Body *UrlDomainCreate `json:"body,omitempty"`
 }
 
 func (o AssociateDomainV2Request) String() string {

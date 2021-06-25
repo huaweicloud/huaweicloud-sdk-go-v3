@@ -13,7 +13,7 @@ type Referer struct {
 	// referer防盗链信息（ip或者域名，以;分隔）。当设置防盗链时，此项必填。
 
 	RefererList *string `json:"referer_list,omitempty"`
-	// 是否包含空Referer。如果是黑名单并开启该选项，则表示无referer不允许访问。如果是白名单并开启该选项，则表示无referer允许访问。默认不包含。
+	// 是否包含空Referer。如果是黑名单并开启该选项，则表示无referer不允许访问。如果是白名单并开启该选项，则表示无referer允许访问。默认值false。
 
 	IncludeEmpty *bool `json:"include_empty,omitempty"`
 }

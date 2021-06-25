@@ -13,6 +13,7 @@ var CN_SOUTH_1 = region.NewRegion("cn-south-1", "https://apig.cn-south-1.myhuawe
 var AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2", "https://apig.ap-southeast-2.myhuaweicloud.com")
 var AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1", "https://apig.ap-southeast-1.myhuaweicloud.com")
 var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://apig.ap-southeast-3.myhuaweicloud.com")
+var RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2", "https://apig.ru-northwest-2.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"cn-north-4":     CN_NORTH_4,
@@ -23,6 +24,7 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-2": AP_SOUTHEAST_2,
 	"ap-southeast-1": AP_SOUTHEAST_1,
 	"ap-southeast-3": AP_SOUTHEAST_3,
+	"ru-northwest-2": RU_NORTHWEST_2,
 }
 
 func ValueOf(regionId string) *region.Region {
