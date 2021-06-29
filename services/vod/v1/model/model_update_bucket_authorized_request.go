@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateBucketAuthorizedRequest struct {
-	Body *BucketAuthorizedReq `json:"body,omitempty"`
+	Body *UpdateBucketAuthorizedReq `json:"body,omitempty"`
 }
 
 func (o UpdateBucketAuthorizedRequest) String() string {

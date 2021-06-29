@@ -25,21 +25,15 @@ type BootstrapScript struct {
 	// 引导操作脚本是否只运行在主Master节点上。 缺省值为false，表示引导操作脚本可运行在所有Master节点上。
 
 	ActiveMaster *bool `json:"active_master,omitempty"`
-	// 引导操作脚本执行失败后，是否继续执行后续脚本和创建集群。  缺省值为errorout,表示终止操作。   说明： 建议您在调试阶段设置为“继续”，无论此引导操作是否执行成功，则集群都能继续安装和启动。
+	// 引导操作脚本执行失败后，是否继续执行后续脚本和创建集群。  缺省值为errorout,表示终止操作。   说明： 建议您在调试阶段设置为“继续”，无论此引导操作是否执行成功，则集群都能继续安装和启动。  枚举值： - continue：继续执行后续脚本。 - errorout：终止操作。
 
 	FailAction BootstrapScriptFailAction `json:"fail_action"`
 	// 引导操作脚本执行的时间。目前支持“组件启动前”和“组件启动后”两种类型。 缺省值为false，表示引导操作脚本在组件启动后执行。
 
 	BeforeComponentStart *bool `json:"before_component_start,omitempty"`
-	// 单个引导操作脚本的执行时间。
-
-	StartTime *string `json:"start_time,omitempty"`
-	// 单个引导操作脚本的运行状态。 - PENDING - IN_PROGRESS - SUCCESS - FAILURE
-
-	State *string `json:"state,omitempty"`
 	// 选择引导操作脚本执行的时间。 - BEFORE_COMPONENT_FIRST_START: 组件首次启动后 - AFTER_COMPONENT_FIRST_START: 组件首次启动前 - BEFORE_SCALE_IN: 缩容前 - AFTER_SCALE_IN: 缩容后 - BEFORE_SCALE_OUT: 扩容前 - AFTER_SCALE_OUT: 扩容后
 
-	ActionStages *[]string `json:"action_stages,omitempty"`
+	ActionStages *[]BootstrapScriptActionStages `json:"action_stages,omitempty"`
 }
 
 func (o BootstrapScript) String() string {
@@ -63,10 +57,10 @@ type BootstrapScriptFailActionEnum struct {
 func GetBootstrapScriptFailActionEnum() BootstrapScriptFailActionEnum {
 	return BootstrapScriptFailActionEnum{
 		CONTINUE: BootstrapScriptFailAction{
-			value: "continue：继续执行后续脚本。",
+			value: "continue",
 		},
 		ERROROUT: BootstrapScriptFailAction{
-			value: "errorout：终止操作。",
+			value: "errorout",
 		},
 	}
 }
@@ -76,6 +70,60 @@ func (c BootstrapScriptFailAction) MarshalJSON() ([]byte, error) {
 }
 
 func (c *BootstrapScriptFailAction) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type BootstrapScriptActionStages struct {
+	value string
+}
+
+type BootstrapScriptActionStagesEnum struct {
+	BEFORE_COMPONENT_FIRST_START BootstrapScriptActionStages
+	AFTER_COMPONENT_FIRST_START  BootstrapScriptActionStages
+	BEFORE_SCALE_IN              BootstrapScriptActionStages
+	AFTER_SCALE_IN               BootstrapScriptActionStages
+	BEFORE_SCALE_OUT             BootstrapScriptActionStages
+	AFTER_SCALE_OUT              BootstrapScriptActionStages
+}
+
+func GetBootstrapScriptActionStagesEnum() BootstrapScriptActionStagesEnum {
+	return BootstrapScriptActionStagesEnum{
+		BEFORE_COMPONENT_FIRST_START: BootstrapScriptActionStages{
+			value: "BEFORE_COMPONENT_FIRST_START",
+		},
+		AFTER_COMPONENT_FIRST_START: BootstrapScriptActionStages{
+			value: "AFTER_COMPONENT_FIRST_START",
+		},
+		BEFORE_SCALE_IN: BootstrapScriptActionStages{
+			value: "BEFORE_SCALE_IN",
+		},
+		AFTER_SCALE_IN: BootstrapScriptActionStages{
+			value: "AFTER_SCALE_IN",
+		},
+		BEFORE_SCALE_OUT: BootstrapScriptActionStages{
+			value: "BEFORE_SCALE_OUT",
+		},
+		AFTER_SCALE_OUT: BootstrapScriptActionStages{
+			value: "AFTER_SCALE_OUT",
+		},
+	}
+}
+
+func (c BootstrapScriptActionStages) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *BootstrapScriptActionStages) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

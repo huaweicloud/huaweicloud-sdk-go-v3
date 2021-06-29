@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type ShowAssetCipherResponse struct {
-	// 媒资id<br/>
+	// 媒资ID。
 
 	AssetId *string `json:"asset_id,omitempty"`
-	// 密钥密文。未加密、正在加密或加密失败的媒资不会包含此字段。<br/>
+	// 密钥密文。
 
 	Edk *string `json:"edk,omitempty"`
-	// 密钥明文。未加密、正在加密或加密失败的媒资不会包含此字段。<br/>
+	// 密钥明文。
 
 	Dk             *string `json:"dk,omitempty"`
 	HttpStatusCode int     `json:"-"`

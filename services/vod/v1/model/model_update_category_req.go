@@ -7,10 +7,10 @@ import (
 )
 
 type UpdateCategoryReq struct {
-	// 视频分类名称
+	// 媒资分类名称。
 
 	Name string `json:"name"`
-	// 视频分类ID
+	// 媒资分类ID。
 
 	Id int32 `json:"id"`
 }

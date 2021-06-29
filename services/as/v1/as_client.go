@@ -130,13 +130,13 @@ func (c *AsClient) BatchUnprotectScalingInstances(request *model.BatchUnprotectS
 }
 
 //批量移出伸缩组中的实例或批量添加伸缩组外的实例。批量对伸缩组中的实例设置或取消其实例保护属性。批量将伸缩组中的实例转入或移出备用状态。
-func (c *AsClient) BatchUnsetScalingInstancesStandby(request *model.BatchUnsetScalingInstancesStandbyRequest) (*model.BatchUnsetScalingInstancesStandbyResponse, error) {
-	requestDef := GenReqDefForBatchUnsetScalingInstancesStandby()
+func (c *AsClient) BatchUnsetScalingInstancesStantby(request *model.BatchUnsetScalingInstancesStantbyRequest) (*model.BatchUnsetScalingInstancesStantbyResponse, error) {
+	requestDef := GenReqDefForBatchUnsetScalingInstancesStantby()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.BatchUnsetScalingInstancesStandbyResponse), nil
+		return resp.(*model.BatchUnsetScalingInstancesStantbyResponse), nil
 	}
 }
 

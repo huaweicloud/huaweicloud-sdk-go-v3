@@ -7,9 +7,9 @@ import (
 )
 
 type SlowlogResult struct {
-	// 节点名称。
+	// 执行时间。
 
-	NodeName *string `json:"node_name,omitempty"`
+	Time string `json:"time"`
 	// 所属数据库。
 
 	Database string `json:"database"`

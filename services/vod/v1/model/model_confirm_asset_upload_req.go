@@ -10,10 +10,10 @@ import (
 )
 
 type ConfirmAssetUploadReq struct {
-	// 媒体ID<br/>
+	// 媒资ID。
 
 	AssetId string `json:"asset_id"`
-	// 上传状态<br/>
+	// 上传状态。 取值如下： - CREATED：创建成功。 - FAILED：创建失败。 - CANCELLED：创建取消。
 
 	Status ConfirmAssetUploadReqStatus `json:"status"`
 }

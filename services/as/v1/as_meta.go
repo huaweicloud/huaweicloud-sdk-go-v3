@@ -187,11 +187,11 @@ func GenReqDefForBatchUnprotectScalingInstances() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForBatchUnsetScalingInstancesStandby() *def.HttpRequestDef {
+func GenReqDefForBatchUnsetScalingInstancesStantby() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/autoscaling-api/v1/{project_id}/scaling_group_instance/{scaling_group_id}/action").
-		WithResponse(new(model.BatchUnsetScalingInstancesStandbyResponse)).
+		WithResponse(new(model.BatchUnsetScalingInstancesStantbyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

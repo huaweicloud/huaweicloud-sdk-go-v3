@@ -34,7 +34,7 @@ type UserAccountVo struct {
 	Roles []string `json:"roles"`
 	// 是否选择。
 
-	Selected string `json:"selected"`
+	Selected bool `json:"selected"`
 }
 
 func (o UserAccountVo) String() string {

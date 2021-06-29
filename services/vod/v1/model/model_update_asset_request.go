@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateAssetRequest struct {
-	Body *UpdateAssetReq `json:"body,omitempty"`
+	Body *UploadAssetReq `json:"body,omitempty"`
 }
 
 func (o UpdateAssetRequest) String() string {

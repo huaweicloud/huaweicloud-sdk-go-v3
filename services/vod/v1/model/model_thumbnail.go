@@ -11,28 +11,25 @@ import (
 
 // 截图参数
 type Thumbnail struct {
-	// 采样类型。支持三种采样方式（当前只支持“time”）： “percent”：根据视频时长的百分比间隔采样 “time”：根据时间间隔采样 “dots” : 指定时间点截图
+	// 截图类型。 取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。
 
 	Type ThumbnailType `json:"type"`
-	// 根据视频时长百分比间隔采样时的百分比值
-
-	Percent *int32 `json:"percent,omitempty"`
-	// 根据时间间隔采样时的时间间隔值
+	// 根据时间间隔采样时的时间间隔值。 取值范围：[1,12]之间的整数。 单位：秒。
 
 	Time *int32 `json:"time,omitempty"`
-	// 指定时间截图时的时间点数组
+	// 指定时间截图时的时间点数组。
 
 	Dots *[]int32 `json:"dots,omitempty"`
-	// 该值表示指定第几张截图作为封面(从1开始)
+	// 该值表示指定第几张截图作为封面(默认值：1)。
 
 	CoverPosition *int32 `json:"cover_position,omitempty"`
-	// 截图文件格式，枚举值（jpg，png，webP）。当前只支持jpg。1 : jpg。
+	// 截图文件格式。 取值如下： - 1：jpg。 默认值：1 。
 
 	Format *ThumbnailFormat `json:"format,omitempty"`
-	// 纵横比（保留,图像缩放方式）。0：自适应（保持原有宽高比）。1：16:9
+	// 纵横比，图像缩放方式。 取值如下： - 0：自适应（保持原有宽高比）。 - 1：16:9。 默认值：0。
 
 	AspectRatio *ThumbnailAspectRatio `json:"aspect_ratio,omitempty"`
-	// 截图最长边的尺寸（单位：像素）（宽边尺寸按照该尺寸与原始视频像素等比缩放计算）
+	// 截图最长边的尺寸。 单位：像素。 宽边尺寸按照该尺寸与原始视频像素等比缩放计算。
 
 	MaxLength *int32 `json:"max_length,omitempty"`
 }

@@ -19,7 +19,7 @@ type ListInstancesResult struct {
 	Status string `json:"status"`
 	// 数据库端口。
 
-	Port string `json:"port"`
+	Port int32 `json:"port"`
 	// 实例类型。与请求参数相同。
 
 	Mode string `json:"mode"`

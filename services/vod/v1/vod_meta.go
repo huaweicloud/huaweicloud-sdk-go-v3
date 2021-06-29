@@ -507,10 +507,6 @@ func GenReqDefForShowAssetMeta() *def.HttpRequestDef {
 		WithName("Size").
 		WithJsonTag("size").
 		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Order").
-		WithJsonTag("order").
-		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -528,20 +524,20 @@ func GenReqDefForShowAssetTempAuthority() *def.HttpRequestDef {
 		WithJsonTag("http_verb").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContentMd5").
-		WithJsonTag("content_md5").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("content_type").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Bucket").
 		WithJsonTag("bucket").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ObjectKey").
 		WithJsonTag("object_key").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("content_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentMd5").
+		WithJsonTag("content_md5").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("UploadId").

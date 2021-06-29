@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListAssetCategoryRequest struct {
-	// 视频分类ID
+	// 视频分类ID。 若设置为0，则查询所有一级分类。
 
 	Id int32 `json:"id"`
 }

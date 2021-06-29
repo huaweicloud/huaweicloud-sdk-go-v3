@@ -7,10 +7,10 @@ import (
 )
 
 type CreatePreheatingAssetReq struct {
-	// 根据媒资ID预热时，必选。
+	// 已发布媒资的ID。
 
 	AssetId *string `json:"asset_id,omitempty"`
-	// 根据url预热时，必选。<br/>
+	// 已发布媒资的播放URL列表，一次最多只能预热10个URL。
 
 	Urls *[]string `json:"urls,omitempty"`
 }

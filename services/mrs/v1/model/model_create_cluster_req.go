@@ -100,21 +100,21 @@ type CreateClusterReq struct {
 	// MRS集群运行模式。 - 0：普通集群，表示Kerberos认证关闭，用户可使用集群提供的所有功能。 - 1：安全集群，表示Kerberos认证开启，普通用户无权限使用MRS集群的“文件管理”和“作业管理”功能，并且无法查看Hadoop、Spark的作业记录以及集群资源使用情况。如果需要使用集群更多功能，需要找MRS Manager的管理员分配权限。   说明： 针对MRS 1.8.0以前的版本，仅当“safe_mode”配置为“1”时，请求消息体中包含cluster_admin_secret字段。 针对MRS 1.8.0及以后版本，请求消息体中包含cluster_admin_secret字段，不受参数“safe_mode”配置的影响。
 
 	SafeMode CreateClusterReqSafeMode `json:"safe_mode"`
-	// 集群类型。  默认值为0：分析集群。  说明：暂不支持通过接口方式创建混合集群。
+	// 集群类型。  默认值为0：分析集群。  说明：暂不支持通过接口方式创建混合集群。  枚举值： - 0：分析集群 - 1：流式集群
 
-	ClusterType *int32 `json:"cluster_type,omitempty"`
-	// 集群创建失败时，是否收集失败日志。  默认设置为1，将创建OBS桶仅用于MRS集群创建失败时的日志收集。
+	ClusterType *CreateClusterReqClusterType `json:"cluster_type,omitempty"`
+	// 集群创建失败时，是否收集失败日志。  默认设置为1，将创建OBS桶仅用于MRS集群创建失败时的日志收集。  枚举值： - 0：不收集 - 1：收集
 
-	LogCollection *int32 `json:"log_collection,omitempty"`
+	LogCollection *CreateClusterReqLogCollection `json:"log_collection,omitempty"`
 	// 企业项目ID。  创建集群时，给集群绑定企业项目ID。  默认设置为0，表示为default企业项目。  获取方式请参见《企业管理API参考》的“查询企业项目列表”响应消息表“enterprise_project字段数据结构说明”的“id”。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 集群的标签信息。  同一个集群最多能使用10个tag，tag的名称（key）不能重复 标签的键/值不能包含“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。
 
 	Tags *[]Tag `json:"tags,omitempty"`
-	// 集群登录方式。默认设置为1。  - 当“login_mode”配置为“0”时，请求消息体中包含cluster_master_secret字段。 - 当“login_mode”配置为“1”时，请求消息体中包含node_public_cert_name字段。  说明： 该参数仅适用于MRS 1.6.2及以后版本的集群，MRS 1.6.2前的版本不支持。
+	// 集群登录方式。默认设置为1。  - 当“login_mode”配置为“0”时，请求消息体中包含cluster_master_secret字段。 - 当“login_mode”配置为“1”时，请求消息体中包含node_public_cert_name字段。  说明： 该参数仅适用于MRS 1.6.2及以后版本的集群，MRS 1.6.2前的版本不支持。  枚举值： - 0：密码方式 - 1：密钥对方式
 
-	LoginMode *int32 `json:"login_mode,omitempty"`
+	LoginMode *CreateClusterReqLoginMode `json:"login_mode,omitempty"`
 	// 节点列表信息。  说明：如下参数和该参数任选一组进行配置即可。  master_node_num、master_node_size、core_node_num、core_node_size、master_data_volume_type、master_data_volume_size、master_data_volume_count、core_data_volume_type、core_data_volume_size、core_data_volume_count、volume_type、volume_size、task_node_groups。
 
 	NodeGroups *[]NodeGroupV11 `json:"node_groups,omitempty"`
@@ -359,6 +359,117 @@ func (c CreateClusterReqSafeMode) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateClusterReqSafeMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type CreateClusterReqClusterType struct {
+	value int32
+}
+
+type CreateClusterReqClusterTypeEnum struct {
+	E_0 CreateClusterReqClusterType
+	E_1 CreateClusterReqClusterType
+}
+
+func GetCreateClusterReqClusterTypeEnum() CreateClusterReqClusterTypeEnum {
+	return CreateClusterReqClusterTypeEnum{
+		E_0: CreateClusterReqClusterType{
+			value: 0,
+		}, E_1: CreateClusterReqClusterType{
+			value: 1,
+		},
+	}
+}
+
+func (c CreateClusterReqClusterType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *CreateClusterReqClusterType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type CreateClusterReqLogCollection struct {
+	value int32
+}
+
+type CreateClusterReqLogCollectionEnum struct {
+	E_0 CreateClusterReqLogCollection
+	E_1 CreateClusterReqLogCollection
+}
+
+func GetCreateClusterReqLogCollectionEnum() CreateClusterReqLogCollectionEnum {
+	return CreateClusterReqLogCollectionEnum{
+		E_0: CreateClusterReqLogCollection{
+			value: 0,
+		}, E_1: CreateClusterReqLogCollection{
+			value: 1,
+		},
+	}
+}
+
+func (c CreateClusterReqLogCollection) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *CreateClusterReqLogCollection) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type CreateClusterReqLoginMode struct {
+	value int32
+}
+
+type CreateClusterReqLoginModeEnum struct {
+	E_0 CreateClusterReqLoginMode
+	E_1 CreateClusterReqLoginMode
+}
+
+func GetCreateClusterReqLoginModeEnum() CreateClusterReqLoginModeEnum {
+	return CreateClusterReqLoginModeEnum{
+		E_0: CreateClusterReqLoginMode{
+			value: 0,
+		}, E_1: CreateClusterReqLoginMode{
+			value: 1,
+		},
+	}
+}
+
+func (c CreateClusterReqLoginMode) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *CreateClusterReqLoginMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

@@ -32,8 +32,9 @@ type InstanceConfigResult struct {
 	// 登录云服务器的密码，非明文回显。
 
 	AdminPass *string `json:"adminPass,omitempty"`
+	// 个人信息
 
-	Personality *PersonalityResult `json:"personality,omitempty"`
+	Personality *[]PersonalityResult `json:"personality,omitempty"`
 
 	PublicIp *PublicipResult `json:"public_ip,omitempty"`
 	// cloud-init用户数据，base64格式编码。

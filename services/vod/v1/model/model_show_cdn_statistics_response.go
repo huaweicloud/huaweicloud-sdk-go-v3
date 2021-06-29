@@ -8,12 +8,13 @@ import (
 
 // Response Object
 type ShowCdnStatisticsResponse struct {
-	// 统计起始时间
+	// 统计起始时间。
 
 	StartTime *string `json:"start_time,omitempty"`
-	// 采样时间间隔
+	// 统计间隔。
 
 	Interval *int32 `json:"interval,omitempty"`
+	// 采样数据数组。 从start_time开始，每个间隔对应一个采样数据。
 
 	Values         *[]int64 `json:"values,omitempty"`
 	HttpStatusCode int      `json:"-"`

@@ -8,6 +8,8 @@ import (
 
 // Response Object
 type PublishAssetsResponse struct {
+	// 发布的媒资信息。
+
 	AssetInfoArray *[]AssetInfo `json:"asset_info_array,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

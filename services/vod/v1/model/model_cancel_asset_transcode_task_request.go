@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CancelAssetTranscodeTaskRequest struct {
-	// 媒姿ID
+	// 媒资ID。
 
 	AssetId string `json:"asset_id"`
 }

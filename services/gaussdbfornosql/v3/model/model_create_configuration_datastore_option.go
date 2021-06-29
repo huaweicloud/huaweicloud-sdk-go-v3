@@ -16,7 +16,7 @@ type CreateConfigurationDatastoreOption struct {
 	Version string `json:"version"`
 	// 数据库部署模式，GaussDB(for Mongo)该参数必选。 - GaussDB(for Mongo) 集群实例取值为\"Sharding\"。 - GaussDB(for Mongo) 副本集实例取值为\"ReplicaSet\"。
 
-	StorageEngine *string `json:"storage_engine,omitempty"`
+	Mode *string `json:"mode,omitempty"`
 }
 
 func (o CreateConfigurationDatastoreOption) String() string {

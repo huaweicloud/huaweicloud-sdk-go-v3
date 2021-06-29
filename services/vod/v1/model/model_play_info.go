@@ -7,13 +7,13 @@ import (
 )
 
 type PlayInfo struct {
-	// 播放协议类型<br/>
+	// 播放协议类型。 取值如下： - hls - dash - mp4
 
 	PlayType *string `json:"play_type,omitempty"`
-	// 播放url<br/>
+	// 播放URL。
 
 	Url *string `json:"url,omitempty"`
-	// 标记流是否已被加密，取值[0,1] 0表示未加密，1表示已被加密。<br/>
+	// 标记流是否已被加密。 取值如下： - 0：表示未加密。 - 1：表示已被加密。 默认值：0。
 
 	Encrypted *int32 `json:"encrypted,omitempty"`
 

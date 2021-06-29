@@ -8,6 +8,8 @@ import (
 
 // Response Object
 type CreateAssetProcessTaskResponse struct {
+	// 媒资ID。
+
 	AssetId        *string `json:"asset_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

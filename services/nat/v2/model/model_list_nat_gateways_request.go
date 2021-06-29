@@ -10,9 +10,6 @@ import (
 
 // Request Object
 type ListNatGatewaysRequest struct {
-	// 项目的ID。
-
-	TenantId *string `json:"tenant_id,omitempty"`
 	// 公网NAT网关实例的ID。
 
 	Id *string `json:"id,omitempty"`

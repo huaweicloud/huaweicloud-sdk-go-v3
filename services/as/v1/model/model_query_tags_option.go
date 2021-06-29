@@ -37,7 +37,7 @@ type QueryTagsOption struct {
 	Offset *string `json:"offset,omitempty"`
 	// 模糊搜索字段。
 
-	Matchs *[]Matches `json:"matchs,omitempty"`
+	Matches *[]Matches `json:"matches,omitempty"`
 }
 
 func (o QueryTagsOption) String() string {

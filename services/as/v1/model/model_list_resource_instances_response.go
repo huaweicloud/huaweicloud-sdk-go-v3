@@ -16,8 +16,8 @@ type ListResourceInstancesResponse struct {
 	TotalCount *int32 `json:"total_count,omitempty"`
 	// 分页位置标识。
 
-	Marker         *int32 `json:"marker,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	Marker         *string `json:"marker,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListResourceInstancesResponse) String() string {

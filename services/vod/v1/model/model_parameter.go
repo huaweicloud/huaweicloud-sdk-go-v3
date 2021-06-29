@@ -6,8 +6,9 @@ import (
 	"strings"
 )
 
+// 需要提取音频的参数信息。
 type Parameter struct {
-	// 封装格式，可选值：“MP3”。<br/>
+	// 封装格式。  取值如下： - MP3 - AAC
 
 	Format *string `json:"format,omitempty"`
 }

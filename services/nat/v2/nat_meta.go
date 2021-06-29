@@ -200,10 +200,6 @@ func GenReqDefForListNatGateways() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TenantId").
-		WithJsonTag("tenant_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Id").
 		WithJsonTag("id").
 		WithLocationType(def.Query))

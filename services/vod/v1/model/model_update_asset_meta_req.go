@@ -7,30 +7,21 @@ import (
 )
 
 type UpdateAssetMetaReq struct {
-	// 媒体ID<br/>
+	// 媒资ID。
 
 	AssetId string `json:"asset_id"`
-	// 媒体标题<br/>
+	// 媒资标题，长度不超过128个字节，UTF-8编码。
 
 	Title *string `json:"title,omitempty"`
-	// 视频描述<br/>
+	// 媒资描述，长度不超过1024个字节。
 
 	Description *string `json:"description,omitempty"`
-	// 媒资分类id<br/>
+	// 媒资分类id。
 
 	CategoryId *int32 `json:"category_id,omitempty"`
-	// 视频标签<br/>
+	// 媒资标签。 单个标签不超过16个字节，最多不超过16个标签。 多个用逗号分隔，UTF-8编码。
 
 	Tags *string `json:"tags,omitempty"`
-	// 媒资所在文件夹id
-
-	FolderName *string `json:"folder_name,omitempty"`
-	// 自定义元数据<br/>
-
-	CustomMetadata map[string]interface{} `json:"custom_metadata,omitempty"`
-	// 权限<br/>
-
-	Privilege *string `json:"privilege,omitempty"`
 }
 
 func (o UpdateAssetMetaReq) String() string {

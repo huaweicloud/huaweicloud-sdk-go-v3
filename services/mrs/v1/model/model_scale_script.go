@@ -25,10 +25,10 @@ type ScaleScript struct {
 	// 自定义自动化脚本是否只运行在主Master节点上。  缺省值为false，表示自定义自动化脚本可运行在所有Master节点上。
 
 	ActiveMaster *bool `json:"active_master,omitempty"`
-	// 自自定义自动化脚本执行失败后，是否继续执行后续脚本和创建集群。  说明：  - 建议您在调试阶段设置为“continue”，无论此自定义自动化脚本是否执行成功，则集群都能继续安装和启动。  - 由于缩容成功无法回滚，因此缩容后执行的脚本“fail_action”必须设置为“continue”。
+	// 自自定义自动化脚本执行失败后，是否继续执行后续脚本和创建集群。  说明：  - 建议您在调试阶段设置为“continue”，无论此自定义自动化脚本是否执行成功，则集群都能继续安装和启动。  - 由于缩容成功无法回滚，因此缩容后执行的脚本“fail_action”必须设置为“continue”。  枚举值： - continue：继续执行后续脚本。 - errorout：终止操作。
 
 	FailAction ScaleScriptFailAction `json:"fail_action"`
-	// 脚本执行时机。
+	// 脚本执行时机。  枚举值： - before_scale_out：扩容前 - before_scale_in：缩容前 - after_scale_out：扩容后 - after_scale_in：缩容后
 
 	ActionStage ScaleScriptActionStage `json:"action_stage"`
 }
@@ -54,10 +54,10 @@ type ScaleScriptFailActionEnum struct {
 func GetScaleScriptFailActionEnum() ScaleScriptFailActionEnum {
 	return ScaleScriptFailActionEnum{
 		CONTINUE: ScaleScriptFailAction{
-			value: "continue：继续执行后续脚本。",
+			value: "continue",
 		},
 		ERROROUT: ScaleScriptFailAction{
-			value: "errorout：终止操作。",
+			value: "errorout",
 		},
 	}
 }
@@ -94,16 +94,16 @@ type ScaleScriptActionStageEnum struct {
 func GetScaleScriptActionStageEnum() ScaleScriptActionStageEnum {
 	return ScaleScriptActionStageEnum{
 		BEFORE_SCALE_OUT: ScaleScriptActionStage{
-			value: "before_scale_out：扩容前",
+			value: "before_scale_out",
 		},
 		BEFORE_SCALE_IN: ScaleScriptActionStage{
-			value: "before_scale_in：缩容前",
+			value: "before_scale_in",
 		},
 		AFTER_SCALE_OUT: ScaleScriptActionStage{
-			value: "after_scale_out：扩容后",
+			value: "after_scale_out",
 		},
 		AFTER_SCALE_IN: ScaleScriptActionStage{
-			value: "after_scale_in：缩容后",
+			value: "after_scale_in",
 		},
 	}
 }

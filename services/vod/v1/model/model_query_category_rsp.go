@@ -7,13 +7,13 @@ import (
 )
 
 type QueryCategoryRsp struct {
-	// 视频分类ID<br/>
+	// 分类ID。
 
 	Id *string `json:"id,omitempty"`
-	// 视频分类名称<br/>
+	// 分类名称。
 
 	Name *string `json:"name,omitempty"`
-	// 子分类信息<br/>
+	// 子分类列表。
 
 	Children *[]QueryCategoryRsp `json:"children,omitempty"`
 }

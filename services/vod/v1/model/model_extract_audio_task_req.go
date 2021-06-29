@@ -7,7 +7,7 @@ import (
 )
 
 type ExtractAudioTaskReq struct {
-	// 媒资id<br/>
+	// 媒资ID。
 
 	AssetId string `json:"asset_id"`
 

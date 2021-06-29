@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowAssetDetailResponse struct {
-	// 媒资ID
+	// 媒资ID。
 
 	AssetId *string `json:"asset_id,omitempty"`
 

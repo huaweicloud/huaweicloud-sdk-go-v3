@@ -16,7 +16,7 @@ type Rules struct {
 	// 弹性伸缩规则的说明。  最大长度为1024字符。
 
 	Description *string `json:"description,omitempty"`
-	// 弹性伸缩规则的调整类型，只允许以下类型：
+	// 弹性伸缩规则的调整类型，只允许以下类型：  枚举值： - scale_out：扩容 - scale_in：缩容
 
 	AdjustmentType RulesAdjustmentType `json:"adjustment_type"`
 	// 触发弹性伸缩规则后，该集群处于冷却状态（不再执行弹性伸缩操作）的时长，单位为分钟。  取值范围[0～10080]，10080为一周的分钟数。
@@ -50,10 +50,10 @@ type RulesAdjustmentTypeEnum struct {
 func GetRulesAdjustmentTypeEnum() RulesAdjustmentTypeEnum {
 	return RulesAdjustmentTypeEnum{
 		SCALE_OUT: RulesAdjustmentType{
-			value: "scale_out：扩容",
+			value: "scale_out",
 		},
 		SCALE_IN: RulesAdjustmentType{
-			value: "scale_in：缩容",
+			value: "scale_in",
 		},
 	}
 }
