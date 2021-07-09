@@ -88,26 +88,26 @@ func CanonicalQueryString(r *request.DefaultHttpRequest) string {
 		if valueWithType.Kind() == reflect.Slice {
 			params := r.CanonicalSliceQueryParamsToMulti(valueWithType)
 			for _, param := range params {
-				if _, ok := query[strings.ToLower(key)]; !ok {
-					query[strings.ToLower(key)] = make([]string, 0)
+				if _, ok := query[key]; !ok {
+					query[key] = make([]string, 0)
 				}
-				query[strings.ToLower(key)] = append(query[strings.ToLower(key)], param)
+				query[key] = append(query[key], param)
 			}
 		} else if valueWithType.Kind() == reflect.Map {
 			params := r.CanonicalMapQueryParams(key, valueWithType)
 			for _, param := range params {
 				for k, v := range param {
-					if _, ok := query[strings.ToLower(k)]; !ok {
-						query[strings.ToLower(k)] = make([]string, 0)
+					if _, ok := query[k]; !ok {
+						query[k] = make([]string, 0)
 					}
-					query[strings.ToLower(k)] = append(query[strings.ToLower(k)], v)
+					query[k] = append(query[k], v)
 				}
 			}
 		} else {
-			if _, ok := query[strings.ToLower(key)]; !ok {
-				query[strings.ToLower(key)] = make([]string, 0)
+			if _, ok := query[key]; !ok {
+				query[key] = make([]string, 0)
 			}
-			query[strings.ToLower(key)] = append(query[strings.ToLower(key)], r.CanonicalStringQueryParams(valueWithType))
+			query[key] = append(query[key], r.CanonicalStringQueryParams(valueWithType))
 		}
 	}
 

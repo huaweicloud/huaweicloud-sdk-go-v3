@@ -9,20 +9,21 @@ import (
 	"strings"
 )
 
+// 模板视频信息
 type VideoTemplateInfo struct {
-	// 画质<br/>
+	// 画质。
 
 	Quality VideoTemplateInfoQuality `json:"quality"`
-	// 视频宽度<br/>
+	// 视频宽度。
 
 	Width *int32 `json:"width,omitempty"`
-	// 视频高度<br/>
+	// 视频高度。
 
 	Height *int32 `json:"height,omitempty"`
-	// 码率<br/>
+	// 码率。
 
 	Bitrate *int32 `json:"bitrate,omitempty"`
-	// 帧率（默认为1，1代表自适应，单位是帧每秒）<br/>
+	// 帧率（默认为1，1代表自适应，单位是帧每秒）。
 
 	FrameRate *int32 `json:"frame_rate,omitempty"`
 }

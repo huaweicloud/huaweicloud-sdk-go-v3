@@ -20,13 +20,13 @@ type DeleteClusterRequest struct {
 	// 是否删除SFS Turbo（极速文件存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
 
 	DeleteEfs *DeleteClusterRequestDeleteEfs `json:"delete_efs,omitempty"`
-	// 是否删除eni ports（原生弹性网卡）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+	// 是否删除eni ports（原生弹性网卡）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程，默认选项) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程)
 
 	DeleteEni *DeleteClusterRequestDeleteEni `json:"delete_eni,omitempty"`
 	// 是否删除evs（云硬盘）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
 
 	DeleteEvs *DeleteClusterRequestDeleteEvs `json:"delete_evs,omitempty"`
-	// 是否删除elb（弹性负载均衡）等集群Service/Ingress相关资源。 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+	// 是否删除elb（弹性负载均衡）等集群Service/Ingress相关资源。 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程，默认选项) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程)
 
 	DeleteNet *DeleteClusterRequestDeleteNet `json:"delete_net,omitempty"`
 	// 是否删除obs（对象存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
@@ -35,6 +35,9 @@ type DeleteClusterRequest struct {
 	// 是否删除sfs（文件存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
 
 	DeleteSfs *DeleteClusterRequestDeleteSfs `json:"delete_sfs,omitempty"`
+	// 是否使用包周期集群删除参数预置模式（仅对包周期集群生效）。 需要和其他删除选项参数一起使用，未指定的参数，则使用默认值。 使用该参数，集群不执行真正的删除，仅将本次请求的全部query参数都预置到集群数据库中，用于包周期集群退订时识别用户要删除的资源。 允许重复执行，覆盖预置的删除参数。 枚举取值： - true  (预置模式，仅预置query参数，不执行删除)
+
+	Tobedeleted *DeleteClusterRequestTobedeleted `json:"tobedeleted,omitempty"`
 }
 
 func (o DeleteClusterRequest) String() string {
@@ -333,6 +336,40 @@ func (c DeleteClusterRequestDeleteSfs) MarshalJSON() ([]byte, error) {
 }
 
 func (c *DeleteClusterRequestDeleteSfs) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type DeleteClusterRequestTobedeleted struct {
+	value string
+}
+
+type DeleteClusterRequestTobedeletedEnum struct {
+	TRUE DeleteClusterRequestTobedeleted
+}
+
+func GetDeleteClusterRequestTobedeletedEnum() DeleteClusterRequestTobedeletedEnum {
+	return DeleteClusterRequestTobedeletedEnum{
+		TRUE: DeleteClusterRequestTobedeleted{
+			value: "true",
+		},
+	}
+}
+
+func (c DeleteClusterRequestTobedeleted) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *DeleteClusterRequestTobedeleted) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

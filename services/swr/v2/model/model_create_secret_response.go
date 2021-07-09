@@ -8,8 +8,10 @@ import (
 
 // Response Object
 type CreateSecretResponse struct {
-	Auths          *Certification `json:"auths,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	// 认证信息
+
+	Auths          map[string]AuthInfo `json:"auths,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o CreateSecretResponse) String() string {

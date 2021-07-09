@@ -14,9 +14,8 @@ type QueryLtsStructLogParamsNew struct {
 	// 查询结果格式。当前仅支持：\"k-v\"。
 
 	Format string `json:"format"`
-	// 时间范围信息。
 
-	TimeRange *interface{} `json:"time_range"`
+	TimeRange *TimeRange `json:"time_range"`
 }
 
 func (o QueryLtsStructLogParamsNew) String() string {

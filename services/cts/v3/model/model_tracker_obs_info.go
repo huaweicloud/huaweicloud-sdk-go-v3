@@ -3,9 +3,6 @@ package model
 import (
 	"encoding/json"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -22,7 +19,7 @@ type TrackerObsInfo struct {
 	IsObsCreated *bool `json:"is_obs_created,omitempty"`
 	// 标识配置桶内对象存储周期。 当\"tracker_type\"参数值为\"data\"时该参数值有效。
 
-	BucketLifecycle *TrackerObsInfoBucketLifecycle `json:"bucket_lifecycle,omitempty"`
+	BucketLifecycle *int32 `json:"bucket_lifecycle,omitempty"`
 }
 
 func (o TrackerObsInfo) String() string {
@@ -32,50 +29,4 @@ func (o TrackerObsInfo) String() string {
 	}
 
 	return strings.Join([]string{"TrackerObsInfo", string(data)}, " ")
-}
-
-type TrackerObsInfoBucketLifecycle struct {
-	value int32
-}
-
-type TrackerObsInfoBucketLifecycleEnum struct {
-	E_30   TrackerObsInfoBucketLifecycle
-	E_60   TrackerObsInfoBucketLifecycle
-	E_90   TrackerObsInfoBucketLifecycle
-	E_180  TrackerObsInfoBucketLifecycle
-	E_1095 TrackerObsInfoBucketLifecycle
-}
-
-func GetTrackerObsInfoBucketLifecycleEnum() TrackerObsInfoBucketLifecycleEnum {
-	return TrackerObsInfoBucketLifecycleEnum{
-		E_30: TrackerObsInfoBucketLifecycle{
-			value: 30,
-		}, E_60: TrackerObsInfoBucketLifecycle{
-			value: 60,
-		}, E_90: TrackerObsInfoBucketLifecycle{
-			value: 90,
-		}, E_180: TrackerObsInfoBucketLifecycle{
-			value: 180,
-		}, E_1095: TrackerObsInfoBucketLifecycle{
-			value: 1095,
-		},
-	}
-}
-
-func (c TrackerObsInfoBucketLifecycle) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *TrackerObsInfoBucketLifecycle) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
-	}
 }

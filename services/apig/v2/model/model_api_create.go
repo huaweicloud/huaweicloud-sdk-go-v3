@@ -15,7 +15,7 @@ type ApiCreate struct {
 	Name string `json:"name"`
 	// API类型 - 1：公有API - 2：私有API
 
-	Type ApiCreateType `json:"type"`
+	Type int32 `json:"type"`
 	// API的版本
 
 	Version *string `json:"version,omitempty"`
@@ -105,43 +105,6 @@ func (o ApiCreate) String() string {
 	}
 
 	return strings.Join([]string{"ApiCreate", string(data)}, " ")
-}
-
-type ApiCreateType struct {
-	value int32
-}
-
-type ApiCreateTypeEnum struct {
-	E_1 ApiCreateType
-	E_2 ApiCreateType
-}
-
-func GetApiCreateTypeEnum() ApiCreateTypeEnum {
-	return ApiCreateTypeEnum{
-		E_1: ApiCreateType{
-			value: 1,
-		}, E_2: ApiCreateType{
-			value: 2,
-		},
-	}
-}
-
-func (c ApiCreateType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ApiCreateType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
-	}
 }
 
 type ApiCreateReqProtocol struct {

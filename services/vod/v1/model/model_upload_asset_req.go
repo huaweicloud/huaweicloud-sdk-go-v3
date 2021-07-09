@@ -13,19 +13,19 @@ type UploadAssetReq struct {
 	// 媒资ID。
 
 	AssetId string `json:"asset_id"`
-	// 视频文件MD5值。 建议参考[媒资上传和更新](https://support.huaweicloud.com/api-vod/vod_04_0212.html)生成对应的MD5值。
+	// 视频文件MD5值。  建议参考[媒资上传和更新](https://support.huaweicloud.com/api-vod/vod_04_0212.html)生成对应的MD5值。
 
 	VideoMd5 *string `json:"video_md5,omitempty"`
-	// 视频文件名。 文件名后缀为可选。
+	// 视频文件名。  文件名后缀为可选。
 
 	VideoName *string `json:"video_name,omitempty"`
 	// 视频文件类型。 取值为MP4、TS、MOV、MXF、MPG、FLV、WMV、AVI、M4V、F4V、MPEG、3GP、ASF、MKV
 
 	VideoType *UploadAssetReqVideoType `json:"video_type,omitempty"`
-	// 封面ID。 取值范围：[0,7]。 当前只支持一张封面，只能设置为0。
+	// 封面ID。  取值范围：[0,7]。  当前只支持一张封面，只能设置为0。
 
 	CoverId *int32 `json:"cover_id,omitempty"`
-	// 封面图片格式类型。 取值如下： - JPG - PNG
+	// 封面图片格式类型。  取值如下： - JPG - PNG
 
 	CoverType *UploadAssetReqCoverType `json:"cover_type,omitempty"`
 	// 封面文件的MD5值。

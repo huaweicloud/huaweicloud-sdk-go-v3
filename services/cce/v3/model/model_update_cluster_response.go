@@ -17,7 +17,7 @@ type UpdateClusterResponse struct {
 
 	Metadata *ClusterMetadata `json:"metadata,omitempty"`
 
-	Spec *V3ClusterSpec `json:"spec,omitempty"`
+	Spec *ClusterSpec `json:"spec,omitempty"`
 
 	Status         *ClusterStatus `json:"status,omitempty"`
 	HttpStatusCode int            `json:"-"`

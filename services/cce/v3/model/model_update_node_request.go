@@ -18,7 +18,7 @@ type UpdateNodeRequest struct {
 
 	ErrorStatus *string `json:"errorStatus,omitempty"`
 
-	Body *CceClusterNodeInformation `json:"body,omitempty"`
+	Body *ClusterNodeInformation `json:"body,omitempty"`
 }
 
 func (o UpdateNodeRequest) String() string {

@@ -49,7 +49,7 @@ type ShowPublicZoneResponse struct {
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 主从模式中，从DNS服务器用以获取DNS信息
 
-	Masters *string `json:"masters,omitempty"`
+	Masters *[]string `json:"masters,omitempty"`
 
 	Links *PageLink `json:"links,omitempty"`
 	// zone所属的项目ID。

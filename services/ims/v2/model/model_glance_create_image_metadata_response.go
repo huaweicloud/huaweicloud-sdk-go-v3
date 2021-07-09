@@ -91,8 +91,17 @@ type GlanceCreateImageMetadataResponse struct {
 	VirtualSize *int32 `json:"virtual_size,omitempty"`
 	// 镜像属性的集合，不表示具体的镜像属性
 
-	Properties     *interface{} `json:"properties,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Properties *interface{} `json:"properties,omitempty"`
+	// 表示当前镜像来源是从外部导入。取值：file
+
+	RootOrigin *string `json:"__root_origin,omitempty"`
+	// 镜像文件md5值。
+
+	Checksum *string `json:"checksum,omitempty"`
+	// 目前暂时不使用。
+
+	Size           *int64 `json:"size,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o GlanceCreateImageMetadataResponse) String() string {

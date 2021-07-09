@@ -14,7 +14,7 @@ type ThrottleResp struct {
 	BindNum *int32 `json:"bind_num,omitempty"`
 	// 是否包含特殊流控配置 - 1：包含 - 2：不包含
 
-	IsIncludeSpecialThrottle *ThrottleRespIsIncludeSpecialThrottle `json:"is_include_special_throttle,omitempty"`
+	IsIncludeSpecialThrottle *int32 `json:"is_include_special_throttle,omitempty"`
 	// 创建时间
 
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
@@ -23,7 +23,7 @@ type ThrottleResp struct {
 	Remark *string `json:"remark,omitempty"`
 	// 流控策略的类型 - 1：独享，表示绑定到流控策略的单个API流控时间内能够被调用多少次。 - 2：共享，表示绑定到流控策略的所有API流控时间内能够被调用多少次
 
-	Type *ThrottleRespType `json:"type,omitempty"`
+	Type *int32 `json:"type,omitempty"`
 	// 流控的时长
 
 	TimeInterval *int32 `json:"time_interval,omitempty"`
@@ -60,80 +60,6 @@ func (o ThrottleResp) String() string {
 	}
 
 	return strings.Join([]string{"ThrottleResp", string(data)}, " ")
-}
-
-type ThrottleRespIsIncludeSpecialThrottle struct {
-	value int32
-}
-
-type ThrottleRespIsIncludeSpecialThrottleEnum struct {
-	E_1 ThrottleRespIsIncludeSpecialThrottle
-	E_2 ThrottleRespIsIncludeSpecialThrottle
-}
-
-func GetThrottleRespIsIncludeSpecialThrottleEnum() ThrottleRespIsIncludeSpecialThrottleEnum {
-	return ThrottleRespIsIncludeSpecialThrottleEnum{
-		E_1: ThrottleRespIsIncludeSpecialThrottle{
-			value: 1,
-		}, E_2: ThrottleRespIsIncludeSpecialThrottle{
-			value: 2,
-		},
-	}
-}
-
-func (c ThrottleRespIsIncludeSpecialThrottle) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ThrottleRespIsIncludeSpecialThrottle) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
-	}
-}
-
-type ThrottleRespType struct {
-	value int32
-}
-
-type ThrottleRespTypeEnum struct {
-	E_1 ThrottleRespType
-	E_2 ThrottleRespType
-}
-
-func GetThrottleRespTypeEnum() ThrottleRespTypeEnum {
-	return ThrottleRespTypeEnum{
-		E_1: ThrottleRespType{
-			value: 1,
-		}, E_2: ThrottleRespType{
-			value: 2,
-		},
-	}
-}
-
-func (c ThrottleRespType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ThrottleRespType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
-	}
 }
 
 type ThrottleRespTimeUnit struct {

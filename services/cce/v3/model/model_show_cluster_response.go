@@ -15,9 +15,9 @@ type ShowClusterResponse struct {
 
 	ApiVersion *string `json:"apiVersion,omitempty"`
 
-	Metadata *ShowClusterMetadata `json:"metadata,omitempty"`
+	Metadata *ClusterMetadata `json:"metadata,omitempty"`
 
-	Spec *V3ClusterSpec `json:"spec,omitempty"`
+	Spec *ClusterSpec `json:"spec,omitempty"`
 
 	Status         *ClusterStatus `json:"status,omitempty"`
 	HttpStatusCode int            `json:"-"`

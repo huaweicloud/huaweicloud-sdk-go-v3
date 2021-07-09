@@ -57,8 +57,6 @@ type QueryTranscodingsTaskResponse struct {
 	// 截图文件信息。
 
 	PicInfo *[]PicInfo `json:"pic_info,omitempty"`
-
-	AuditReport *AuditReport `json:"audit_report,omitempty"`
 }
 
 func (o QueryTranscodingsTaskResponse) String() string {

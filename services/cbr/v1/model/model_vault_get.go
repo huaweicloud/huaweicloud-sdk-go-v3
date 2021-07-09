@@ -40,6 +40,12 @@ type VaultGet struct {
 	// 是否开启存储库自动扩容能力（只支持按需存储库）。
 
 	AutoExpand *bool `json:"auto_expand,omitempty"`
+	// 存储库smn消息通知开关
+
+	SmnNotify *bool `json:"smn_notify,omitempty"`
+	// 存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
+
+	Threshold *int32 `json:"threshold,omitempty"`
 	// 用户id
 
 	UserId *string `json:"user_id,omitempty"`

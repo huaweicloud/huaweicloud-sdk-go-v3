@@ -8,7 +8,10 @@ import (
 
 // Response Object
 type ListTakeOverTaskResponse struct {
+	// 托管任务信息
+
 	Tasks *[]TakeOverTask `json:"tasks,omitempty"`
+	// 任务数量。
 
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`

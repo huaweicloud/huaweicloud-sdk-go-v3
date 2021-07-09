@@ -12,7 +12,7 @@ type ShowCustomerOrderDetailsResponse struct {
 
 	TotalCount *int32 `json:"total_count,omitempty"`
 
-	OrderInfo *CustomerOrderV2 `json:"order_info,omitempty"`
+	OrderInfo *CustomerOrderV3 `json:"order_info,omitempty"`
 	// 订单对应的订单项。 具体请参见表5。
 
 	OrderLineItems *[]OrderLineItemEntityV2 `json:"order_line_items,omitempty"`

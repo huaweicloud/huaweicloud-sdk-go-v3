@@ -10,7 +10,7 @@ import (
 type UpdateLogGroupResponse struct {
 	// 创建该日志组的时间， 毫秒级。
 
-	CreationTime *float64 `json:"creation_time,omitempty"`
+	CreationTime *int64 `json:"creation_time,omitempty"`
 	// 日志组的名称。
 
 	LogGroupName *string `json:"log_group_name,omitempty"`

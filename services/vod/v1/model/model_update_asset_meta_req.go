@@ -19,7 +19,7 @@ type UpdateAssetMetaReq struct {
 	// 媒资分类id。
 
 	CategoryId *int32 `json:"category_id,omitempty"`
-	// 媒资标签。 单个标签不超过16个字节，最多不超过16个标签。 多个用逗号分隔，UTF-8编码。
+	// 媒资标签。  单个标签不超过16个字节，最多不超过16个标签。  多个用逗号分隔，UTF-8编码。
 
 	Tags *string `json:"tags,omitempty"`
 }

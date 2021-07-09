@@ -23,7 +23,10 @@ type ShowDomainItemDetailsRequest struct {
 	// 域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com，all表示查询名下全部域名
 
 	DomainName string `json:"domain_name"`
-	// 网络资源消耗： - bw（带宽） - flux（流量） - bs_bw(回源带宽) - bs_flux（回源流量）  访问情况： - req_num（请求总数） - hit_num（请求命中次数） - bs_num(回源总数) - bs_fail_num(回源失败数) - hit_flux（命中流量）
+	// mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
+
+	ServiceArea *string `json:"service_area,omitempty"`
+	// 网络资源消耗： - bw（带宽） - flux（流量） - bs_bw(回源带宽) - bs_flux（回源流量）  访问情况： - req_num（请求总数） - hit_num（请求命中次数） - bs_num(回源总数) - bs_fail_num(回源失败数) - hit_flux（命中流量）  HTTP状态码（组合指标）： - http_code_2xx(状态码汇总2xx) - http_code_3xx(状态码汇总3xx) - http_code_4xx(状态码汇总4xx) - http_code_5xx(状态码汇总5xx)
 
 	StatType ShowDomainItemDetailsRequestStatType `json:"stat_type"`
 }
@@ -42,15 +45,19 @@ type ShowDomainItemDetailsRequestStatType struct {
 }
 
 type ShowDomainItemDetailsRequestStatTypeEnum struct {
-	BW          ShowDomainItemDetailsRequestStatType
-	FLUX        ShowDomainItemDetailsRequestStatType
-	BS_BW       ShowDomainItemDetailsRequestStatType
-	BS_FLUX     ShowDomainItemDetailsRequestStatType
-	REQ_NUM     ShowDomainItemDetailsRequestStatType
-	HIT_NUM     ShowDomainItemDetailsRequestStatType
-	BS_NUM      ShowDomainItemDetailsRequestStatType
-	BS_FAIL_NUM ShowDomainItemDetailsRequestStatType
-	HIT_FLUX    ShowDomainItemDetailsRequestStatType
+	BW            ShowDomainItemDetailsRequestStatType
+	FLUX          ShowDomainItemDetailsRequestStatType
+	BS_BW         ShowDomainItemDetailsRequestStatType
+	BS_FLUX       ShowDomainItemDetailsRequestStatType
+	REQ_NUM       ShowDomainItemDetailsRequestStatType
+	HIT_NUM       ShowDomainItemDetailsRequestStatType
+	BS_NUM        ShowDomainItemDetailsRequestStatType
+	BS_FAIL_NUM   ShowDomainItemDetailsRequestStatType
+	HIT_FLUX      ShowDomainItemDetailsRequestStatType
+	HTTP_CODE_2XX ShowDomainItemDetailsRequestStatType
+	HTTP_CODE_3XX ShowDomainItemDetailsRequestStatType
+	HTTP_CODE_4XX ShowDomainItemDetailsRequestStatType
+	HTTP_CODE_5XX ShowDomainItemDetailsRequestStatType
 }
 
 func GetShowDomainItemDetailsRequestStatTypeEnum() ShowDomainItemDetailsRequestStatTypeEnum {
@@ -81,6 +88,18 @@ func GetShowDomainItemDetailsRequestStatTypeEnum() ShowDomainItemDetailsRequestS
 		},
 		HIT_FLUX: ShowDomainItemDetailsRequestStatType{
 			value: "hit_flux",
+		},
+		HTTP_CODE_2XX: ShowDomainItemDetailsRequestStatType{
+			value: "http_code_2xx",
+		},
+		HTTP_CODE_3XX: ShowDomainItemDetailsRequestStatType{
+			value: "http_code_3xx",
+		},
+		HTTP_CODE_4XX: ShowDomainItemDetailsRequestStatType{
+			value: "http_code_4xx",
+		},
+		HTTP_CODE_5XX: ShowDomainItemDetailsRequestStatType{
+			value: "http_code_5xx",
 		},
 	}
 }

@@ -16,10 +16,10 @@ type ShowTopUrlRequest struct {
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 查询起始时间戳（单位：毫秒）。该时间戳的取值在转化为日期格式后须满足以下格式：XXXX-XX-XX 00:00:00
 
-	StartTime *int64 `json:"start_time,omitempty"`
+	StartTime int64 `json:"start_time"`
 	// 查询结束时间戳（单位：毫秒）。该时间戳的取值在转化为日期格式后须满足以下格式：XXXX-XX-XX 00:00:00
 
-	EndTime *int64 `json:"end_time,omitempty"`
+	EndTime int64 `json:"end_time"`
 	// 域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com ，ALL表示查询名下全部域名。
 
 	DomainName string `json:"domain_name"`
@@ -28,7 +28,7 @@ type ShowTopUrlRequest struct {
 	ServiceArea *ShowTopUrlRequestServiceArea `json:"service_area,omitempty"`
 	// 参数类型支持：flux(流量),req_num(请求总数)。
 
-	StatType string `json:"stat_type"`
+	StatType ShowTopUrlRequestStatType `json:"stat_type"`
 }
 
 func (o ShowTopUrlRequest) String() string {
@@ -45,13 +45,17 @@ type ShowTopUrlRequestServiceArea struct {
 }
 
 type ShowTopUrlRequestServiceAreaEnum struct {
-	MAINLAND_CHINA ShowTopUrlRequestServiceArea
+	MAINLAND_CHINA         ShowTopUrlRequestServiceArea
+	OUTSIDE_MAINLAND_CHINA ShowTopUrlRequestServiceArea
 }
 
 func GetShowTopUrlRequestServiceAreaEnum() ShowTopUrlRequestServiceAreaEnum {
 	return ShowTopUrlRequestServiceAreaEnum{
 		MAINLAND_CHINA: ShowTopUrlRequestServiceArea{
 			value: "mainland_china",
+		},
+		OUTSIDE_MAINLAND_CHINA: ShowTopUrlRequestServiceArea{
+			value: "outside_mainland_china",
 		},
 	}
 }
@@ -61,6 +65,44 @@ func (c ShowTopUrlRequestServiceArea) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowTopUrlRequestServiceArea) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowTopUrlRequestStatType struct {
+	value string
+}
+
+type ShowTopUrlRequestStatTypeEnum struct {
+	FLUX    ShowTopUrlRequestStatType
+	REQ_NUM ShowTopUrlRequestStatType
+}
+
+func GetShowTopUrlRequestStatTypeEnum() ShowTopUrlRequestStatTypeEnum {
+	return ShowTopUrlRequestStatTypeEnum{
+		FLUX: ShowTopUrlRequestStatType{
+			value: "flux",
+		},
+		REQ_NUM: ShowTopUrlRequestStatType{
+			value: "req_num",
+		},
+	}
+}
+
+func (c ShowTopUrlRequestStatType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *ShowTopUrlRequestStatType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

@@ -18,7 +18,7 @@ type CreateNodeRequest struct {
 
 	NodepoolScaleUp *CreateNodeRequestNodepoolScaleUp `json:"nodepoolScaleUp,omitempty"`
 
-	Body *V3NodeCreateRequest `json:"body,omitempty"`
+	Body *NodeCreateRequest `json:"body,omitempty"`
 }
 
 func (o CreateNodeRequest) String() string {

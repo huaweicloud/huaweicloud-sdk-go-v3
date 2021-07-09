@@ -32,8 +32,6 @@ type TaskDetailInfo struct {
 	// 用户数据。
 
 	UserData *string `json:"user_data,omitempty"`
-
-	AuditReport *AuditReport `json:"audit_report,omitempty"`
 	// 转码任务错误码。
 
 	ErrorCode *string `json:"error_code,omitempty"`

@@ -107,6 +107,17 @@ func (c *MrsClient) ListClusterTags(request *model.ListClusterTagsRequest) (*mod
 	}
 }
 
+//查看用户创建的集群列表信息。该接口不兼容Sahara。
+func (c *MrsClient) ListClusters(request *model.ListClustersRequest) (*model.ListClustersResponse, error) {
+	requestDef := GenReqDefForListClusters()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListClustersResponse), nil
+	}
+}
+
 //使用标签过滤集群。  集群默认按照创建时间倒序，集群tag也按照创建时间倒序。
 func (c *MrsClient) ListClustersByTags(request *model.ListClustersByTagsRequest) (*model.ListClustersByTagsResponse, error) {
 	requestDef := GenReqDefForListClustersByTags()

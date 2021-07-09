@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowPreheatingAssetResponse struct {
-	// 预热任务数组<br/>
+	// 预热任务数组
 
 	PreheatingResults *[]PreheatingResult `json:"preheating_results,omitempty"`
 	HttpStatusCode    int                 `json:"-"`

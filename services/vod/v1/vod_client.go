@@ -63,7 +63,7 @@ func (c *VodClient) ConfirmAssetUpload(request *model.ConfirmAssetUploadRequest)
 	}
 }
 
-//## 典型场景 ##   确认水印图片上传调用此接口<br/>  ## 接口功能 ##   确认水印图片是否已经上传至对象存储<br/>  ## 接口约束 ##   无。<br/>
+//确认水印图片上传
 func (c *VodClient) ConfirmImageUpload(request *model.ConfirmImageUploadRequest) (*model.ConfirmImageUploadResponse, error) {
 	requestDef := GenReqDefForConfirmImageUpload()
 
@@ -85,7 +85,7 @@ func (c *VodClient) CreateAssetByFileUpload(request *model.CreateAssetByFileUplo
 	}
 }
 
-//## 功能介绍 ##   创建媒资分类。<br/>  ## 接口约束 ##   最大支持三级分类，每个分类最多支持创建128个子分类。<br/>
+//创建媒资分类。
 func (c *VodClient) CreateAssetCategory(request *model.CreateAssetCategoryRequest) (*model.CreateAssetCategoryResponse, error) {
 	requestDef := GenReqDefForCreateAssetCategory()
 
@@ -107,7 +107,7 @@ func (c *VodClient) CreateAssetProcessTask(request *model.CreateAssetProcessTask
 	}
 }
 
-//## 功能介绍 ## 对上传的媒资进行审核。审核后，可以调用[查询媒资详细信息](https://support.huaweicloud.com/api-vod/vod_04_0202.html)接口查看审核结果。  ## 接口约束 ## 目前“华东-上海二”区域的点播服务暂不支持此功能。
+//对上传的媒资进行审核。审核后，可以调用[查询媒资详细信息](https://support.huaweicloud.com/api-vod/vod_04_0202.html)接口查看审核结果。
 func (c *VodClient) CreateAssetReviewTask(request *model.CreateAssetReviewTaskRequest) (*model.CreateAssetReviewTaskResponse, error) {
 	requestDef := GenReqDefForCreateAssetReviewTask()
 
@@ -129,7 +129,29 @@ func (c *VodClient) CreateExtractAudioTask(request *model.CreateExtractAudioTask
 	}
 }
 
-//## 典型场景 ##   创建自定义模板组时调用此接口。<br/>  ## 接口功能 ##   创建模板组。<br/>  ## 接口约束 ##   无。<br/>
+//媒资发布后，可通过指定媒资ID或URL向CDN预热。用户初次请求时，将由CDN节点提供请求媒资，加快用户下载缓存时间，提高用户体验。
+func (c *VodClient) CreatePreheatingAsset(request *model.CreatePreheatingAssetRequest) (*model.CreatePreheatingAssetResponse, error) {
+	requestDef := GenReqDefForCreatePreheatingAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePreheatingAssetResponse), nil
+	}
+}
+
+//通过存量托管的方式，将已存储在OBS桶中的音视频文件同步到点播服务。  OBS托管方式分为增量托管和存量托管，增量托管暂只支持通过视频点播控制台配置，配置后，若OBS有新增音视频文件，则会自动同步到点播服务中，具体请参见[增量托管](https://support.huaweicloud.com/usermanual-vod/vod010032.html)。两个托管方式都需要先将对应的OBS桶授权给点播服务，具体请参见[桶授权](https://support.huaweicloud.com/usermanual-vod/vod010031.html)。
+func (c *VodClient) CreateTakeOverTask(request *model.CreateTakeOverTaskRequest) (*model.CreateTakeOverTaskResponse, error) {
+	requestDef := GenReqDefForCreateTakeOverTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTakeOverTaskResponse), nil
+	}
+}
+
+//创建自定义模板组。
 func (c *VodClient) CreateTemplateGroup(request *model.CreateTemplateGroupRequest) (*model.CreateTemplateGroupResponse, error) {
 	requestDef := GenReqDefForCreateTemplateGroup()
 
@@ -140,7 +162,7 @@ func (c *VodClient) CreateTemplateGroup(request *model.CreateTemplateGroupReques
 	}
 }
 
-//## 典型场景 ##   创建水印模板调用此接口<br/>  ## 接口功能 ##   创建水印模板<br/>  ## 接口约束 ##   无。<br/>
+//创建水印模板
 func (c *VodClient) CreateWatermarkTemplate(request *model.CreateWatermarkTemplateRequest) (*model.CreateWatermarkTemplateResponse, error) {
 	requestDef := GenReqDefForCreateWatermarkTemplate()
 
@@ -162,7 +184,7 @@ func (c *VodClient) DeleteAssetCategory(request *model.DeleteAssetCategoryReques
 	}
 }
 
-//## 功能介绍 ## 删除媒资。  ## 接口约束 ## 正在处理中的媒资不支持删除，包括转码中、审核中、截图中等。
+//删除媒资。
 func (c *VodClient) DeleteAssets(request *model.DeleteAssetsRequest) (*model.DeleteAssetsResponse, error) {
 	requestDef := GenReqDefForDeleteAssets()
 
@@ -173,7 +195,7 @@ func (c *VodClient) DeleteAssets(request *model.DeleteAssetsRequest) (*model.Del
 	}
 }
 
-//## 典型场景 ##   删除自定义模板组接口。<br/>  ## 接口功能 ##   删除自定义模板组。<br/>  ## 接口约束 ##   无。<br/>
+//删除自定义模板组。
 func (c *VodClient) DeleteTemplateGroup(request *model.DeleteTemplateGroupRequest) (*model.DeleteTemplateGroupResponse, error) {
 	requestDef := GenReqDefForDeleteTemplateGroup()
 
@@ -184,7 +206,7 @@ func (c *VodClient) DeleteTemplateGroup(request *model.DeleteTemplateGroupReques
 	}
 }
 
-//## 典型场景 ##   删除水印模板<br/>  ## 接口功能 ##   删除水印模板<br/>  ## 接口约束 ##   无<br/>
+//删除水印模板
 func (c *VodClient) DeleteWatermarkTemplate(request *model.DeleteWatermarkTemplateRequest) (*model.DeleteWatermarkTemplateResponse, error) {
 	requestDef := GenReqDefForDeleteWatermarkTemplate()
 
@@ -217,7 +239,7 @@ func (c *VodClient) ListAssetList(request *model.ListAssetListRequest) (*model.L
 	}
 }
 
-//## 典型场景 ##   查询模板组列表调用此接口。<br/>  ## 接口功能 ##   查询模板组列表。<br/>  ## 接口约束 ##   无。<br/>
+//查询模板组列表。
 func (c *VodClient) ListTemplateGroup(request *model.ListTemplateGroupRequest) (*model.ListTemplateGroupResponse, error) {
 	requestDef := GenReqDefForListTemplateGroup()
 
@@ -239,7 +261,7 @@ func (c *VodClient) ListTopStatistics(request *model.ListTopStatisticsRequest) (
 	}
 }
 
-//## 典型场景 ##   查询水印模板<br/>  ## 接口功能 ##   查询水印模板<br/>  ## 接口约束 ##   查询所有水印<br/>
+//查询水印模板
 func (c *VodClient) ListWatermarkTemplate(request *model.ListWatermarkTemplateRequest) (*model.ListWatermarkTemplateResponse, error) {
 	requestDef := GenReqDefForListWatermarkTemplate()
 
@@ -250,7 +272,7 @@ func (c *VodClient) ListWatermarkTemplate(request *model.ListWatermarkTemplateRe
 	}
 }
 
-//## 功能介绍 ##   若您在使用点播服务前，已经在OBS桶中存储了音视频文件，您可以使用该接口将存储在OBS桶中的音视频文件转存到点播服务中，使用点播服务的音视频管理功能。调用该接口前，您需要调用[桶授权](https://support.huaweicloud.com/api-vod/vod_04_0199.html)接口，将存储音视频文件的OBS桶授权给点播服务。<br/>  ## 接口约束 ##   由于不同区域的云服务不能互连，所以待转存的OBS桶和点播服务必须在同一区域，如“华北-北京四”OBS桶中的音视频只能转存到“华北-北京四”点播服务中。<br/>
+//若您在使用点播服务前，已经在OBS桶中存储了音视频文件，您可以使用该接口将存储在OBS桶中的音视频文件转存到点播服务中，使用点播服务的音视频管理功能。调用该接口前，您需要调用[桶授权](https://support.huaweicloud.com/api-vod/vod_04_0199.html)接口，将存储音视频文件的OBS桶授权给点播服务。
 func (c *VodClient) PublishAssetFromObs(request *model.PublishAssetFromObsRequest) (*model.PublishAssetFromObsResponse, error) {
 	requestDef := GenReqDefForPublishAssetFromObs()
 
@@ -269,6 +291,17 @@ func (c *VodClient) PublishAssets(request *model.PublishAssetsRequest) (*model.P
 		return nil, err
 	} else {
 		return resp.(*model.PublishAssetsResponse), nil
+	}
+}
+
+//终端播放HLS加密视频时，向租户管理系统请求密钥，租户管理系统先查询其本地有没有已缓存的密钥，没有时则调用此接口向VOD查询。该接口的具体使用场景请参见[通过HLS加密防止视频泄露](https://support.huaweicloud.com/bestpractice-vod/vod_10_0004.html)。
+func (c *VodClient) ShowAssetCipher(request *model.ShowAssetCipherRequest) (*model.ShowAssetCipherResponse, error) {
+	requestDef := GenReqDefForShowAssetCipher()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAssetCipherResponse), nil
 	}
 }
 
@@ -316,6 +349,17 @@ func (c *VodClient) ShowCdnStatistics(request *model.ShowCdnStatisticsRequest) (
 	}
 }
 
+//查询预热结果。
+func (c *VodClient) ShowPreheatingAsset(request *model.ShowPreheatingAssetRequest) (*model.ShowPreheatingAssetResponse, error) {
+	requestDef := GenReqDefForShowPreheatingAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPreheatingAssetResponse), nil
+	}
+}
+
 //查询点播源站的统计数据，包括流量、存储空间、转码时长。
 func (c *VodClient) ShowVodStatistics(request *model.ShowVodStatisticsRequest) (*model.ShowVodStatisticsResponse, error) {
 	requestDef := GenReqDefForShowVodStatistics()
@@ -338,7 +382,7 @@ func (c *VodClient) UnpublishAssets(request *model.UnpublishAssetsRequest) (*mod
 	}
 }
 
-//媒资创建后，单独上传封面、更新视频文件或更新已有封面。 如果是更新视频文件，更新完后要通过[确认媒资上传](https://support.huaweicloud.com/api-vod/vod_04_0198.html)接口通知点播服务。 如果是更新封面或单独上传封面，则不需通知。 更新视频可以使用分段上传，具体方式可以参考[示例2：媒资分段上传（20M以上）](https://support.huaweicloud.com/api-vod/vod_04_0216.html)。
+//媒资创建后，单独上传封面、更新视频文件或更新已有封面。  如果是更新视频文件，更新完后要通过[确认媒资上传](https://support.huaweicloud.com/api-vod/vod_04_0198.html)接口通知点播服务。  如果是更新封面或单独上传封面，则不需通知。  更新视频可以使用分段上传，具体方式可以参考[示例2：媒资分段上传（20M以上）](https://support.huaweicloud.com/api-vod/vod_04_0216.html)。
 func (c *VodClient) UpdateAsset(request *model.UpdateAssetRequest) (*model.UpdateAssetResponse, error) {
 	requestDef := GenReqDefForUpdateAsset()
 
@@ -393,7 +437,7 @@ func (c *VodClient) UpdateCoverByThumbnail(request *model.UpdateCoverByThumbnail
 	}
 }
 
-//## 典型场景 ##  修改模板组接口。<br/>  ## 接口功能 ##   修改模板组。<br/>  ## 接口约束 ##   无。<br/>
+//修改自定义模板组。
 func (c *VodClient) UpdateTemplateGroup(request *model.UpdateTemplateGroupRequest) (*model.UpdateTemplateGroupResponse, error) {
 	requestDef := GenReqDefForUpdateTemplateGroup()
 
@@ -404,7 +448,7 @@ func (c *VodClient) UpdateTemplateGroup(request *model.UpdateTemplateGroupReques
 	}
 }
 
-//## 典型场景 ##   修改水印模板<br/>  ## 接口功能 ##   修改水印模板<br/>  ## 接口约束 ##   无<br/>
+//修改水印模板
 func (c *VodClient) UpdateWatermarkTemplate(request *model.UpdateWatermarkTemplateRequest) (*model.UpdateWatermarkTemplateResponse, error) {
 	requestDef := GenReqDefForUpdateWatermarkTemplate()
 
@@ -426,51 +470,7 @@ func (c *VodClient) UploadMetaDataByUrl(request *model.UploadMetaDataByUrlReques
 	}
 }
 
-//媒资发布后，可通过指定媒资ID或URL向CDN预热。用户初次请求时，将由CDN节点提供请求媒资，加快用户下载缓存时间，提高用户体验。
-func (c *VodClient) CreatePreheatingAsset(request *model.CreatePreheatingAssetRequest) (*model.CreatePreheatingAssetResponse, error) {
-	requestDef := GenReqDefForCreatePreheatingAsset()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreatePreheatingAssetResponse), nil
-	}
-}
-
-//查询预热结果。
-func (c *VodClient) ShowPreheatingAsset(request *model.ShowPreheatingAssetRequest) (*model.ShowPreheatingAssetResponse, error) {
-	requestDef := GenReqDefForShowPreheatingAsset()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowPreheatingAssetResponse), nil
-	}
-}
-
-//终端播放HLS加密视频时，向租户管理系统请求密钥，租户管理系统先查询其本地有没有已缓存的密钥，没有时则调用此接口向VOD查询。该接口的具体使用场景请参见[通过HLS加密防止视频泄露](https://support.huaweicloud.com/bestpractice-vod/vod_10_0004.html)。
-func (c *VodClient) ShowAssetCipher(request *model.ShowAssetCipherRequest) (*model.ShowAssetCipherResponse, error) {
-	requestDef := GenReqDefForShowAssetCipher()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowAssetCipherResponse), nil
-	}
-}
-
-//通过存量托管的方式，将已存储在OBS桶中的音视频文件同步到点播服务。  OBS托管方式分为增量托管和存量托管，增量托管暂只支持通过视频点播控制台配置，配置后，若OBS有新增音视频文件，则会自动同步到点播服务中，具体请参见[增量托管](https://support.huaweicloud.com/usermanual-vod/vod010032.html)。两个托管方式都需要先将对应的OBS桶授权给点播服务，具体请参见[桶授权](https://support.huaweicloud.com/usermanual-vod/vod010031.html)。
-func (c *VodClient) CreateTakeOverTask(request *model.CreateTakeOverTaskRequest) (*model.CreateTakeOverTaskResponse, error) {
-	requestDef := GenReqDefForCreateTakeOverTask()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateTakeOverTaskResponse), nil
-	}
-}
-
-//## 典型场景 ##   查询托管任务<br/>  ## 接口功能 ##   查询托管任务<br/>  ## 接口约束 ##<br/>
+//查询托管任务
 func (c *VodClient) ListTakeOverTask(request *model.ListTakeOverTaskRequest) (*model.ListTakeOverTaskResponse, error) {
 	requestDef := GenReqDefForListTakeOverTask()
 
@@ -481,7 +481,7 @@ func (c *VodClient) ListTakeOverTask(request *model.ListTakeOverTaskRequest) (*m
 	}
 }
 
-//## 典型场景 ##   查询托管媒资详情<br/>  ## 接口功能 ##   查询托管媒资详情<br/>  ## 接口约束 ##<br/>
+//查询托管媒资详情
 func (c *VodClient) ShowTakeOverAssetDetails(request *model.ShowTakeOverAssetDetailsRequest) (*model.ShowTakeOverAssetDetailsResponse, error) {
 	requestDef := GenReqDefForShowTakeOverAssetDetails()
 
@@ -492,7 +492,7 @@ func (c *VodClient) ShowTakeOverAssetDetails(request *model.ShowTakeOverAssetDet
 	}
 }
 
-//## 典型场景 ##   查询托管任务详情<br/>  ## 接口功能 ##   查询托管任务详情<br/>  ## 接口约束 ##<br/>
+//查询托管任务详情
 func (c *VodClient) ShowTakeOverTaskDetails(request *model.ShowTakeOverTaskDetailsRequest) (*model.ShowTakeOverTaskDetailsResponse, error) {
 	requestDef := GenReqDefForShowTakeOverTaskDetails()
 

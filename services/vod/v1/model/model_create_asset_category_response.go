@@ -17,7 +17,7 @@ type CreateAssetCategoryResponse struct {
 	// 媒资分类ID。
 
 	Id *int32 `json:"id,omitempty"`
-	// 媒资分类层级。 取值如下： - 1：一级分类层级。 - 2：二级分类层级。 - 3：三级分类层级。
+	// 媒资分类层级。  取值如下： - 1：一级分类层级。 - 2：二级分类层级。 - 3：三级分类层级。
 
 	Level *int32 `json:"level,omitempty"`
 	// 项目ID。

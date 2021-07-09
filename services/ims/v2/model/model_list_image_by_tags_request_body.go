@@ -35,6 +35,9 @@ type ListImageByTagsRequestBody struct {
 	// 搜索字段，key为要匹配的字段，如resource_name、resource_id等。value为匹配的值。多个matches的key不允许重复。不允许为空列表，但可以不传递参数。
 
 	Matches *[]TagKeyValue `json:"matches,omitempty"`
+	// 不包含任意一个标签，该字段为true时查询所有不带标签的资源，此时忽略tag、not_tags、tags_any、not_tags_any字段。
+
+	WithoutAnyTag *bool `json:"without_any_tag,omitempty"`
 }
 
 func (o ListImageByTagsRequestBody) String() string {

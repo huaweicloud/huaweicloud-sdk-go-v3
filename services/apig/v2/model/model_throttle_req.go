@@ -27,7 +27,7 @@ type ThrottleReq struct {
 	ApiCallLimits int32 `json:"api_call_limits"`
 	// 流控策略的类型 - 1：独享，表示绑定到流控策略的单个API流控时间内能够被调用多少次。 - 2：共享，表示绑定到流控策略的所有API流控时间内能够被调用多少次。
 
-	Type *ThrottleReqType `json:"type,omitempty"`
+	Type *int32 `json:"type,omitempty"`
 	// 是否开启动态流控： - TRUE - FALSE  暂不支持
 
 	EnableAdaptiveControl *string `json:"enable_adaptive_control,omitempty"`
@@ -94,42 +94,5 @@ func (c *ThrottleReqTimeUnit) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
-	}
-}
-
-type ThrottleReqType struct {
-	value int32
-}
-
-type ThrottleReqTypeEnum struct {
-	E_1 ThrottleReqType
-	E_2 ThrottleReqType
-}
-
-func GetThrottleReqTypeEnum() ThrottleReqTypeEnum {
-	return ThrottleReqTypeEnum{
-		E_1: ThrottleReqType{
-			value: 1,
-		}, E_2: ThrottleReqType{
-			value: 2,
-		},
-	}
-}
-
-func (c ThrottleReqType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ThrottleReqType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
 	}
 }

@@ -20,9 +20,6 @@ type ImageInfo struct {
 	// 镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
 
 	Description string `json:"__description"`
-	// 镜像的存储位置
-
-	ImageLocation string `json:"__image_location"`
 	// 镜像文件的大小，单位为字节
 
 	ImageSize string `json:"__image_size"`
@@ -32,9 +29,6 @@ type ImageInfo struct {
 	// 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
 
 	Imagetype ImageInfoImagetype `json:"__imagetype"`
-	// 是否完成了初始化配置。取值为true或false。如果用户确定完成了初始化配置，则可以设置为true，否则设置为false。默认为false。
-
-	IsConfigInit ImageInfoIsConfigInit `json:"__is_config_init"`
 	// 是否是注册过的镜像，取值为“true”或者“false”
 
 	Isregistered ImageInfoIsregistered `json:"__isregistered"`
@@ -149,9 +143,6 @@ type ImageInfo struct {
 	// 是否被其他租户可见，取值为private或public
 
 	Visibility ImageInfoVisibility `json:"visibility"`
-	// 镜像架构类型。取值包括： x86 arm
-
-	Architecture ImageInfoArchitecture `json:"architecture"`
 	// 表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
 
 	SupportFcInject *ImageInfoSupportFcInject `json:"__support_fc_inject,omitempty"`
@@ -176,6 +167,24 @@ type ImageInfo struct {
 	// 镜像是否支持网卡多队列。取值为“true”或者“false”。
 
 	HwVifMultiqueueEnabled *string `json:"hw_vif_multiqueue_enabled,omitempty"`
+	// 表示当前市场镜像是否下架。true：已下架 false：未下架
+
+	IsOffshelved string `json:"__is_offshelved"`
+	// 镜像是否支持延迟加载。取值为“True”或“False”。
+
+	Lazyloading bool `json:"__lazyloading"`
+	// 表示当前镜像来源是从外部导入。取值：file。
+
+	RootOrigin string `json:"__root_origin"`
+	// 表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
+
+	SequenceNum string `json:"__sequence_num"`
+	// 镜像状态变为正常的时间。
+
+	ActiveAt string `json:"active_at"`
+	// 镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+
+	SupportAgentList string `json:"__support_agent_list"`
 }
 
 func (o ImageInfo) String() string {
@@ -254,44 +263,6 @@ func (c ImageInfoImagetype) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ImageInfoImagetype) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type ImageInfoIsConfigInit struct {
-	value string
-}
-
-type ImageInfoIsConfigInitEnum struct {
-	TRUE  ImageInfoIsConfigInit
-	FALSE ImageInfoIsConfigInit
-}
-
-func GetImageInfoIsConfigInitEnum() ImageInfoIsConfigInitEnum {
-	return ImageInfoIsConfigInitEnum{
-		TRUE: ImageInfoIsConfigInit{
-			value: "true",
-		},
-		FALSE: ImageInfoIsConfigInit{
-			value: "false",
-		},
-	}
-}
-
-func (c ImageInfoIsConfigInit) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ImageInfoIsConfigInit) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
@@ -618,44 +589,6 @@ func (c ImageInfoVisibility) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ImageInfoVisibility) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type ImageInfoArchitecture struct {
-	value string
-}
-
-type ImageInfoArchitectureEnum struct {
-	X86 ImageInfoArchitecture
-	ARM ImageInfoArchitecture
-}
-
-func GetImageInfoArchitectureEnum() ImageInfoArchitectureEnum {
-	return ImageInfoArchitectureEnum{
-		X86: ImageInfoArchitecture{
-			value: "x86",
-		},
-		ARM: ImageInfoArchitecture{
-			value: "arm",
-		},
-	}
-}
-
-func (c ImageInfoArchitecture) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ImageInfoArchitecture) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

@@ -10,7 +10,7 @@ import (
 type LogGroup struct {
 	// 创建时间
 
-	CreationTime float64 `json:"creation_time"`
+	CreationTime int64 `json:"creation_time"`
 	// 日志组名称
 
 	LogGroupName string `json:"log_group_name"`

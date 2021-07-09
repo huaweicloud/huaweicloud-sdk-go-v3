@@ -11,7 +11,7 @@ type ListQuotaCouponsResponse struct {
 	// 查询总数。
 
 	TotalCount *int32 `json:"total_count,omitempty"`
-	// 额度记录列表。 具体请参见表2。
+	// 额度记录列表。 具体请参见表1。
 
 	Quotas         *[]CouponQuotaV2 `json:"quotas,omitempty"`
 	HttpStatusCode int              `json:"-"`

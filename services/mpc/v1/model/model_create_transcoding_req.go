@@ -33,8 +33,6 @@ type CreateTranscodingReq struct {
 
 	Priority *int32 `json:"priority,omitempty"`
 
-	Audit *Audit `json:"audit,omitempty"`
-
 	Subtitle *Subtitle `json:"subtitle,omitempty"`
 
 	SpecialEffect *SpecialEffect `json:"special_effect,omitempty"`

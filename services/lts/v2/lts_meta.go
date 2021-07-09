@@ -155,11 +155,11 @@ func GenReqDefForListLogStream() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateLogContents() *def.HttpRequestDef {
+func GenReqDefForListLogs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/groups/{log_group_id}/streams/{log_stream_id}/content/query").
-		WithResponse(new(model.UpdateLogContentsResponse)).
+		WithResponse(new(model.ListLogsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -179,11 +179,11 @@ func GenReqDefForUpdateLogContents() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateLogContents2() *def.HttpRequestDef {
+func GenReqDefForListQueryStructuredLogs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/groups/{log_group_id}/streams/{log_stream_id}/struct-content/query").
-		WithResponse(new(model.UpdateLogContents2Response)).
+		WithResponse(new(model.ListQueryStructuredLogsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -203,11 +203,11 @@ func GenReqDefForUpdateLogContents2() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateLogContents3() *def.HttpRequestDef {
+func GenReqDefForListStructuredLogsWithTimeRange() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/streams/{log_stream_id}/struct-content/query").
-		WithResponse(new(model.UpdateLogContents3Response)).
+		WithResponse(new(model.ListStructuredLogsWithTimeRangeResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

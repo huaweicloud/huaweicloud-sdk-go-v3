@@ -1,0 +1,23 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// Request Object
+type UpdateDatabaseInfoRequest struct {
+	// DDM实例ID
+
+	InstanceId string `json:"instance_id"`
+}
+
+func (o UpdateDatabaseInfoRequest) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateDatabaseInfoRequest struct{}"
+	}
+
+	return strings.Join([]string{"UpdateDatabaseInfoRequest", string(data)}, " ")
+}

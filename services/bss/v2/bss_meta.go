@@ -1745,6 +1745,11 @@ func GenReqDefForShowCustomerOrderDetails() *def.HttpRequestDef {
 		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

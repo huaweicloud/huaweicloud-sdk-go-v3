@@ -20,9 +20,6 @@ type UpdateImageResponse struct {
 	// 镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
 
 	Description *string `json:"__description,omitempty"`
-	// 镜像的存储位置
-
-	ImageLocation *string `json:"__image_location,omitempty"`
 	// 镜像文件的大小，单位为字节
 
 	ImageSize *string `json:"__image_size,omitempty"`
@@ -32,9 +29,6 @@ type UpdateImageResponse struct {
 	// 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
 
 	Imagetype *UpdateImageResponseImagetype `json:"__imagetype,omitempty"`
-	// 是否完成了初始化配置。取值为true或false。如果用户确定完成了初始化配置，则可以设置为true，否则设置为false。默认为false。
-
-	IsConfigInit *UpdateImageResponseIsConfigInit `json:"__is_config_init,omitempty"`
 	// 是否是注册过的镜像，取值为“true”或者“false”
 
 	Isregistered *UpdateImageResponseIsregistered `json:"__isregistered,omitempty"`
@@ -149,9 +143,6 @@ type UpdateImageResponse struct {
 	// 是否被其他租户可见，取值为private或public
 
 	Visibility *UpdateImageResponseVisibility `json:"visibility,omitempty"`
-	// 镜像架构类型。取值包括： x86 arm
-
-	Architecture *UpdateImageResponseArchitecture `json:"architecture,omitempty"`
 	// 表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
 
 	SupportFcInject *UpdateImageResponseSupportFcInject `json:"__support_fc_inject,omitempty"`
@@ -176,7 +167,25 @@ type UpdateImageResponse struct {
 	// 镜像是否支持网卡多队列。取值为“true”或者“false”。
 
 	HwVifMultiqueueEnabled *string `json:"hw_vif_multiqueue_enabled,omitempty"`
-	HttpStatusCode         int     `json:"-"`
+	// 表示当前市场镜像是否下架。true：已下架 false：未下架
+
+	IsOffshelved *string `json:"__is_offshelved,omitempty"`
+	// 镜像是否支持延迟加载。取值为“True”或“False”。
+
+	Lazyloading *bool `json:"__lazyloading,omitempty"`
+	// 表示当前镜像来源是从外部导入。取值：file。
+
+	RootOrigin *string `json:"__root_origin,omitempty"`
+	// 表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
+
+	SequenceNum *string `json:"__sequence_num,omitempty"`
+	// 镜像状态变为正常的时间。
+
+	ActiveAt *string `json:"active_at,omitempty"`
+	// 镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+
+	SupportAgentList *string `json:"__support_agent_list,omitempty"`
+	HttpStatusCode   int     `json:"-"`
 }
 
 func (o UpdateImageResponse) String() string {
@@ -255,44 +264,6 @@ func (c UpdateImageResponseImagetype) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateImageResponseImagetype) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type UpdateImageResponseIsConfigInit struct {
-	value string
-}
-
-type UpdateImageResponseIsConfigInitEnum struct {
-	TRUE  UpdateImageResponseIsConfigInit
-	FALSE UpdateImageResponseIsConfigInit
-}
-
-func GetUpdateImageResponseIsConfigInitEnum() UpdateImageResponseIsConfigInitEnum {
-	return UpdateImageResponseIsConfigInitEnum{
-		TRUE: UpdateImageResponseIsConfigInit{
-			value: "true",
-		},
-		FALSE: UpdateImageResponseIsConfigInit{
-			value: "false",
-		},
-	}
-}
-
-func (c UpdateImageResponseIsConfigInit) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *UpdateImageResponseIsConfigInit) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
@@ -619,44 +590,6 @@ func (c UpdateImageResponseVisibility) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateImageResponseVisibility) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type UpdateImageResponseArchitecture struct {
-	value string
-}
-
-type UpdateImageResponseArchitectureEnum struct {
-	X86 UpdateImageResponseArchitecture
-	ARM UpdateImageResponseArchitecture
-}
-
-func GetUpdateImageResponseArchitectureEnum() UpdateImageResponseArchitectureEnum {
-	return UpdateImageResponseArchitectureEnum{
-		X86: UpdateImageResponseArchitecture{
-			value: "x86",
-		},
-		ARM: UpdateImageResponseArchitecture{
-			value: "arm",
-		},
-	}
-}
-
-func (c UpdateImageResponseArchitecture) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *UpdateImageResponseArchitecture) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

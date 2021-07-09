@@ -9,10 +9,11 @@ import (
 	"strings"
 )
 
+//
 type UpdateWatermarkTemplateReq struct {
 	// 水印模板配置id<br/>
 
-	Id *string `json:"id,omitempty"`
+	Id string `json:"id"`
 	// 水印模板名称<br/>
 
 	Name *string `json:"name,omitempty"`

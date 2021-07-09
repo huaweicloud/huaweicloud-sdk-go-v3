@@ -9,28 +9,29 @@ import (
 	"strings"
 )
 
+//
 type TransTemplateGroup struct {
-	// 模板组名称<br/>
+	// 模板组名称。
 
-	Name *string `json:"name,omitempty"`
-	// 是否设置默认<br/>
+	Name string `json:"name"`
+	// 是否设置默认。
 
 	Status *TransTemplateGroupStatus `json:"status,omitempty"`
-	// 模板组类型<br/>
+	// 模板组类型。
 
-	Type *TransTemplateGroupType `json:"type,omitempty"`
-	// 是否自动加密
+	Type TransTemplateGroupType `json:"type"`
+	// 是否自动加密。  取值如下： - 0：表示不加密。 - 1：表示需要加密。  默认值：0。  加密与转码必须要一起进行，当需要加密时，转码参数不能为空，且转码输出必须要为HLS。
 
-	AutoEncrypt *TransTemplateGroupAutoEncrypt `json:"auto_encrypt,omitempty"`
-	// 画质配置信息列表<br/>
+	AutoEncrypt *int32 `json:"auto_encrypt,omitempty"`
+	// 画质配置信息列表。
 
 	QualityInfoList *[]QualityInfo `json:"quality_info_list,omitempty"`
 
 	Common *Common `json:"common,omitempty"`
-	// 绑定的水印模板组ID数组<br/>
+	// 绑定的水印模板组ID数组。
 
 	WatermarkTemplateIds *[]string `json:"watermark_template_ids,omitempty"`
-	// 模板介绍<br/>
+	// 模板介绍。
 
 	Description *string `json:"description,omitempty"`
 }
@@ -113,42 +114,5 @@ func (c *TransTemplateGroupType) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
-	}
-}
-
-type TransTemplateGroupAutoEncrypt struct {
-	value int32
-}
-
-type TransTemplateGroupAutoEncryptEnum struct {
-	E_0 TransTemplateGroupAutoEncrypt
-	E_1 TransTemplateGroupAutoEncrypt
-}
-
-func GetTransTemplateGroupAutoEncryptEnum() TransTemplateGroupAutoEncryptEnum {
-	return TransTemplateGroupAutoEncryptEnum{
-		E_0: TransTemplateGroupAutoEncrypt{
-			value: 0,
-		}, E_1: TransTemplateGroupAutoEncrypt{
-			value: 1,
-		},
-	}
-}
-
-func (c TransTemplateGroupAutoEncrypt) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *TransTemplateGroupAutoEncrypt) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
 	}
 }

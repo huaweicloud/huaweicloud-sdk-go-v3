@@ -19,6 +19,12 @@ type VaultUpdate struct {
 	// 是否自动扩容。按需存储库支持自动扩容，包周期存储库不支持扩容。
 
 	AutoExpand *bool `json:"auto_expand,omitempty"`
+	// 发送smn通知开关
+
+	SmnNotify *bool `json:"smn_notify,omitempty"`
+	// 存储库容量阈值，存储库已用容量和总容量的百分比超过该值，若smn_notify为开，将发送相关通知。
+
+	Threshold *int32 `json:"threshold,omitempty"`
 }
 
 func (o VaultUpdate) String() string {

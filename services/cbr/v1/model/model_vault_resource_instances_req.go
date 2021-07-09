@@ -11,6 +11,9 @@ import (
 
 //
 type VaultResourceInstancesReq struct {
+	// 不包含任意一个标签，该字段为true时查询所有不带标签的资源，此时忽略 “tags”、“tags_any”、“not_tags”、“not_tags_any”字段。
+
+	WithoutAnyTag *bool `json:"without_any_tag,omitempty"`
 	// 包含标签。  tags不允许为空列表。  tags中最多包含10个key。  tags中key不允许重复。  tags中多个key之间是“与”的关系。  结果返回包含所有标签的资源列表，key之间是与的关系，key-value结构中value是或的关系。  无过滤条件时返回全量数据。
 
 	Tags *[]TagsReq `json:"tags,omitempty"`

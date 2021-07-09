@@ -16,8 +16,8 @@ type ListNodesResponse struct {
 	ApiVersion *string `json:"apiVersion,omitempty"`
 	// 节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。
 
-	Items          *[]V3Node `json:"items,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Items          *[]Node `json:"items,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListNodesResponse) String() string {

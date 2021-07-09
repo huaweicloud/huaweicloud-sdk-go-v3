@@ -12,7 +12,7 @@ type ShowImageByTagsResource struct {
 
 	ResourceId string `json:"resource_id"`
 
-	ResouceDetail *QueryImageByTagsResourceDetail `json:"resouce_detail"`
+	ResourceDetail *QueryImageByTagsResourceDetail `json:"resource_detail"`
 	// 镜像的标签列表
 
 	Tags []TagKeyValue `json:"tags"`

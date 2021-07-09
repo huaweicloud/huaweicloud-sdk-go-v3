@@ -55,8 +55,14 @@ type ShowRepositoryResponse struct {
 	Created *string `json:"created,omitempty"`
 	// 仓库更新时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
 
-	Updated        *string `json:"updated,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Updated *string `json:"updated,omitempty"`
+	// 账号ID
+
+	DomainId *string `json:"domain_id,omitempty"`
+	// 镜像排序优先级
+
+	Priority       *int32 `json:"priority,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowRepositoryResponse) String() string {

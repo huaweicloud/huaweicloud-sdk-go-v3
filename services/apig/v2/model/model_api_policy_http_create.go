@@ -44,7 +44,7 @@ type ApiPolicyHttpCreate struct {
 	VpcChannelInfo *ApiBackendVpcReq `json:"vpc_channel_info,omitempty"`
 	// 是否使用VPC通道 - 1 : 使用VPC通道 - 2 : 不使用VPC通道
 
-	VpcChannelStatus *ApiPolicyHttpCreateVpcChannelStatus `json:"vpc_channel_status,omitempty"`
+	VpcChannelStatus *int32 `json:"vpc_channel_status,omitempty"`
 }
 
 func (o ApiPolicyHttpCreate) String() string {
@@ -191,42 +191,5 @@ func (c *ApiPolicyHttpCreateEffectMode) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
-	}
-}
-
-type ApiPolicyHttpCreateVpcChannelStatus struct {
-	value int32
-}
-
-type ApiPolicyHttpCreateVpcChannelStatusEnum struct {
-	E_1 ApiPolicyHttpCreateVpcChannelStatus
-	E_2 ApiPolicyHttpCreateVpcChannelStatus
-}
-
-func GetApiPolicyHttpCreateVpcChannelStatusEnum() ApiPolicyHttpCreateVpcChannelStatusEnum {
-	return ApiPolicyHttpCreateVpcChannelStatusEnum{
-		E_1: ApiPolicyHttpCreateVpcChannelStatus{
-			value: 1,
-		}, E_2: ApiPolicyHttpCreateVpcChannelStatus{
-			value: 2,
-		},
-	}
-}
-
-func (c ApiPolicyHttpCreateVpcChannelStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ApiPolicyHttpCreateVpcChannelStatus) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
 	}
 }

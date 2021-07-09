@@ -16,7 +16,7 @@ type LogContents struct {
 	LineNum *string `json:"line_num,omitempty"`
 	// 该条日志包含的 labels。
 
-	Labels *interface{} `json:"labels,omitempty"`
+	Labels map[string]string `json:"labels,omitempty"`
 }
 
 func (o LogContents) String() string {

@@ -17,6 +17,9 @@ type ExportImageRequestBody struct {
 	// 文件格式，支持qcow2、vhd、zvhd和vmdk。
 
 	FileFormat ExportImageRequestBodyFileFormat `json:"file_format"`
+	// 是否使用快速导出，取值为true或者false。 说明：若使用快速导出，则无法指定file_format参数。
+
+	IsQuickExport *bool `json:"is_quick_export,omitempty"`
 }
 
 func (o ExportImageRequestBody) String() string {

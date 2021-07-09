@@ -86,12 +86,6 @@ type GlanceUpdateImageResponse struct {
 	// 创建时间。格式为UTC时间。
 
 	CreatedAt *string `json:"created_at,omitempty"`
-	// 是否是删除的镜像，取值为true或者false。
-
-	Deleted *bool `json:"deleted,omitempty"`
-	// 删除时间。格式为UTC时间
-
-	DeletedAt *string `json:"deleted_at,omitempty"`
 	// 镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
 
 	DiskFormat *GlanceUpdateImageResponseDiskFormat `json:"disk_format,omitempty"`
@@ -157,8 +151,44 @@ type GlanceUpdateImageResponse struct {
 	SupportArm *GlanceUpdateImageResponseSupportArm `json:"__support_arm,omitempty"`
 	// 表示当前市场镜像是否下架。 true：已下架 false：未下架
 
-	IsOffshelved   *GlanceUpdateImageResponseIsOffshelved `json:"__is_offshelved,omitempty"`
-	HttpStatusCode int                                    `json:"-"`
+	IsOffshelved *GlanceUpdateImageResponseIsOffshelved `json:"__is_offshelved,omitempty"`
+	// 镜像是否支持延迟加载。取值为“True”或“False”。
+
+	Lazyloading *bool `json:"__lazyloading,omitempty"`
+	// 镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
+
+	OsFeatureList *string `json:"__os_feature_list,omitempty"`
+	// 表示当前镜像来源是从外部导入。取值：file。
+
+	RootOrigin *string `json:"__root_origin,omitempty"`
+	// 目前暂时不用
+
+	SequenceNum *string `json:"__sequence_num,omitempty"`
+	// 镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+
+	SupportAgentList *string `json:"__support_agent_list,omitempty"`
+	// 加密镜像所使用的密钥ID。
+
+	SystemCmkid *string `json:"__system__cmkid,omitempty"`
+	// 镜像状态变为正常的时间。
+
+	ActiveAt *string `json:"active_at,omitempty"`
+	// 镜像是否支持网卡多队列。取值为true或者false。
+
+	HwVifMultiqueueEnabled *string `json:"hw_vif_multiqueue_enabled,omitempty"`
+	// 镜像支持的最大内存，单位为MB。取值可以参考云服务器规格限制，一般不设置。
+
+	MaxRam *string `json:"max_ram,omitempty"`
+	// 镜像的存储位置。
+
+	ImageLocation *string `json:"__image_location,omitempty"`
+	// 是否完成了初始化配置。取值为true或false
+
+	IsConfigInit *string `json:"__is_config_init,omitempty"`
+	// 收费镜像标识。
+
+	AccountCode    *string `json:"__account_code,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o GlanceUpdateImageResponse) String() string {

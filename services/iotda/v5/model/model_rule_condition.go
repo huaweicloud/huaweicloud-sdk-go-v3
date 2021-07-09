@@ -17,10 +17,6 @@ type RuleCondition struct {
 	SimpleTimerCondition *SimpleTimerType `json:"simple_timer_condition,omitempty"`
 
 	DailyTimerCondition *DailyTimerType `json:"daily_timer_condition,omitempty"`
-
-	DeviceMessageCondition *DeviceMessageCondition `json:"device_message_condition,omitempty"`
-
-	DeviceStatusCondition *DeviceStatusCondition `json:"device_status_condition,omitempty"`
 }
 
 func (o RuleCondition) String() string {

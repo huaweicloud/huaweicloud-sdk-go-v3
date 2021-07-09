@@ -57,6 +57,9 @@ type PublicipShowResp struct {
 	// IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
 
 	IpVersion *PublicipShowRespIpVersion `json:"ip_version,omitempty"`
+	// 功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
+
+	PublicipBorderGroup *string `json:"publicip_border_group,omitempty"`
 }
 
 func (o PublicipShowResp) String() string {

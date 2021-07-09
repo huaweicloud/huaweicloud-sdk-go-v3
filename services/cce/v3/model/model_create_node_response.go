@@ -17,10 +17,10 @@ type CreateNodeResponse struct {
 
 	Metadata *NodeMetadata `json:"metadata,omitempty"`
 
-	Spec *V3NodeSpec `json:"spec,omitempty"`
+	Spec *NodeSpec `json:"spec,omitempty"`
 
-	Status         *V3NodeStatus `json:"status,omitempty"`
-	HttpStatusCode int           `json:"-"`
+	Status         *NodeStatus `json:"status,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o CreateNodeResponse) String() string {

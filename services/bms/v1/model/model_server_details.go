@@ -75,7 +75,7 @@ type ServerDetails struct {
 	OSEXTSRVATTRinstanceName *string `json:"OS-EXT-SRV-ATTR:instance_name,omitempty"`
 	// 扩展属性，裸金属服务器电源状态。例如：0表示“NO STATE”1表示“RUNNING”4表示“SHUTDOWN”
 
-	OSEXTSTSpowerState *ServerDetailsOSEXTSTSpowerState `json:"OS-EXT-STS:power_state,omitempty"`
+	OSEXTSTSpowerState *int32 `json:"OS-EXT-STS:power_state,omitempty"`
 	// 扩展属性，裸金属服务器所在虚拟化主机名。
 
 	OSEXTSRVATTRhypervisorHostname *string `json:"OS-EXT-SRV-ATTR:hypervisor_hostname,omitempty"`
@@ -303,46 +303,6 @@ func (c *ServerDetailsOSEXTSTSvmState) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
-	}
-}
-
-type ServerDetailsOSEXTSTSpowerState struct {
-	value int32
-}
-
-type ServerDetailsOSEXTSTSpowerStateEnum struct {
-	E_0 ServerDetailsOSEXTSTSpowerState
-	E_1 ServerDetailsOSEXTSTSpowerState
-	E_4 ServerDetailsOSEXTSTSpowerState
-}
-
-func GetServerDetailsOSEXTSTSpowerStateEnum() ServerDetailsOSEXTSTSpowerStateEnum {
-	return ServerDetailsOSEXTSTSpowerStateEnum{
-		E_0: ServerDetailsOSEXTSTSpowerState{
-			value: 0,
-		}, E_1: ServerDetailsOSEXTSTSpowerState{
-			value: 1,
-		}, E_4: ServerDetailsOSEXTSTSpowerState{
-			value: 4,
-		},
-	}
-}
-
-func (c ServerDetailsOSEXTSTSpowerState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ServerDetailsOSEXTSTSpowerState) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
 	}
 }
 

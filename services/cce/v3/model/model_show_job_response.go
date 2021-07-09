@@ -15,12 +15,12 @@ type ShowJobResponse struct {
 
 	ApiVersion *string `json:"apiVersion,omitempty"`
 
-	Metadata *CceJobMetadata `json:"metadata,omitempty"`
+	Metadata *JobMetadata `json:"metadata,omitempty"`
 
-	Spec *CceJobSpec `json:"spec,omitempty"`
+	Spec *JobSpec `json:"spec,omitempty"`
 
-	Status         *CceJobStatus `json:"status,omitempty"`
-	HttpStatusCode int           `json:"-"`
+	Status         *JobStatus `json:"status,omitempty"`
+	HttpStatusCode int        `json:"-"`
 }
 
 func (o ShowJobResponse) String() string {

@@ -14,34 +14,34 @@ type ShowAssetMetaRequest struct {
 	// 媒资id，最多同时查询10个媒资。
 
 	AssetId *[]string `json:"asset_id,omitempty"`
-	// 媒资状态。 取值如下： - UNCREATED：未创建（媒资ID不存在 ） - DELETED：已删除 - CANCELLED：上传取消 - SERVER_ERROR：上传失败（点播服务端故障） - UPLOAD_FAILED：上传失败（向OBS上传失败） - CREATING：创建中 - PUBLISHED：已发布 - TRANSCODING：待发布（转码中） - TRANSCODE_FAILED：待发布（转码失败） - TRANSCODE_SUCCEED：待发布（转码成功） - CREATED：待发布（未转码）
+	// 媒资状态。  取值如下： - UNCREATED：未创建（媒资ID不存在 ） - DELETED：已删除 - CANCELLED：上传取消 - SERVER_ERROR：上传失败（点播服务端故障） - UPLOAD_FAILED：上传失败（向OBS上传失败） - CREATING：创建中 - PUBLISHED：已发布 - TRANSCODING：待发布（转码中） - TRANSCODE_FAILED：待发布（转码失败） - TRANSCODE_SUCCEED：待发布（转码成功） - CREATED：待发布（未转码）
 
 	Status *[]ShowAssetMetaRequestStatus `json:"status,omitempty"`
-	// 转码状态 取值如下： - TRANSCODING：转码中 - TRANSCODE_FAILED：转码失败 - TRANSCODE_SUCCEED：转码成功 - UN_TRANSCODE：未转码 - WAITING_TRANSCODE：等待转码
+	// 转码状态  取值如下： - TRANSCODING：转码中 - TRANSCODE_FAILED：转码失败 - TRANSCODE_SUCCEED：转码成功 - UN_TRANSCODE：未转码 - WAITING_TRANSCODE：等待转码
 
 	TranscodeStatus *[]ShowAssetMetaRequestTranscodeStatus `json:"transcodeStatus,omitempty"`
-	// 媒资状态。 取值如下： - PUBLISHED：已发布 - CREATED：未发布
+	// 媒资状态。  取值如下： - PUBLISHED：已发布 - CREATED：未发布
 
 	AssetStatus *[]ShowAssetMetaRequestAssetStatus `json:"assetStatus,omitempty"`
-	// 起始时间，查询指定“**asset_id**”时，该参数无效。 格式为yyyymmddhhmmss。必须是与时区无关的UTC时间。
+	// 起始时间，查询指定“**asset_id**”时，该参数无效。  格式为yyyymmddhhmmss。必须是与时区无关的UTC时间。
 
 	StartTime *string `json:"start_time,omitempty"`
-	// 结束时间，查询指定“**asset_id**”时，该参数无效。 格式为yyyymmddhhmmss。必须是与时区无关的UTC时间。
+	// 结束时间，查询指定“**asset_id**”时，该参数无效。  格式为yyyymmddhhmmss。必须是与时区无关的UTC时间。
 
 	EndTime *string `json:"end_time,omitempty"`
 	// 分类ID。
 
 	CategoryId *int32 `json:"category_id,omitempty"`
-	// 媒资标签。 单个标签不超过16个字节，最多不超过16个标签。 多个用逗号分隔，UTF8编码。
+	// 媒资标签。  单个标签不超过16个字节，最多不超过16个标签。  多个用逗号分隔，UTF8编码。
 
 	Tags *string `json:"tags,omitempty"`
 	// 在媒资标题、描述中模糊查询的字符串。
 
 	QueryString *string `json:"query_string,omitempty"`
-	// 分页编号，查询指定“asset_id”时，该参数无效。 默认值：0。
+	// 分页编号，查询指定“asset_id”时，该参数无效。  默认值：0。
 
 	Page *int32 `json:"page,omitempty"`
-	// 每页记录数，查询指定“**asset_id**”时，该参数无效。 取值范围：[1,100]。 默认值：10。
+	// 每页记录数，查询指定“**asset_id**”时，该参数无效。  取值范围：[1,100]。  默认值：10。
 
 	Size *int32 `json:"size,omitempty"`
 }

@@ -279,6 +279,10 @@ func GenReqDefForShowDomainItemDetails() *def.HttpRequestDef {
 		WithJsonTag("domain_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServiceArea").
+		WithJsonTag("service_area").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StatType").
 		WithJsonTag("stat_type").
 		WithLocationType(def.Query))

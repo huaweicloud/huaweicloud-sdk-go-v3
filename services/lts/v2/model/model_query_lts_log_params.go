@@ -19,7 +19,7 @@ type QueryLtsLogParams struct {
 	EndTime string `json:"end_time"`
 	// 日志过滤条件集合，不同日志来源所需字段不同。
 
-	Labels *interface{} `json:"labels,omitempty"`
+	Labels map[string]string `json:"labels,omitempty"`
 	// 支持关键词精确搜索。关键词指相邻两个分词符之间的单词。
 
 	Keywords *QueryLtsLogParamsKeywords `json:"keywords,omitempty"`

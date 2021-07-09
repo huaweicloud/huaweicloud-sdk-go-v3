@@ -9,14 +9,15 @@ import (
 	"strings"
 )
 
+//
 type CreateWatermarkTemplateReq struct {
 	// 水印模板名称<br/>
 
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 	// 水印类型，当前只支持Image（图片水印）<br/>
 
 	WatermarkType *CreateWatermarkTemplateReqWatermarkType `json:"watermark_type,omitempty"`
-	// type设置为Image时有效，目前包括Original（只做简单缩放，不做其他处理），Transparent（图片底色透明），Grayed（彩色图片变灰）<br/>
+	// type设置为Image时有效。 目前包括 - Original：只做简单缩放，不做其他处理 - Transparent：图片底色透明 - Grayed：彩色图片变灰
 
 	ImageProcess *CreateWatermarkTemplateReqImageProcess `json:"image_process,omitempty"`
 	// 水印图片相对输出视频的水平偏移量，默认值是0<br/>
@@ -42,7 +43,7 @@ type CreateWatermarkTemplateReq struct {
 	TimelineDuration *string `json:"timeline_duration,omitempty"`
 	// 水印图片格式类型<br/>
 
-	Type *string `json:"type,omitempty"`
+	Type string `json:"type"`
 	// 水印图片MD5值<br/>
 
 	Md5 *string `json:"md5,omitempty"`

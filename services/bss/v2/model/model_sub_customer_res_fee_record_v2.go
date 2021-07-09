@@ -22,7 +22,7 @@ type SubCustomerResFeeRecordV2 struct {
 	// 订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源为空。
 
 	OrderId *string `json:"order_id,omitempty"`
-	// 消费金额，包括现金券和代金券金额，精确到小数点后2位。
+	// 消费金额，包括现金券和代金券金额，精确到小数点后2位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
 
 	Amount *float64 `json:"amount,omitempty"`
 	// 金额单位： 1：元

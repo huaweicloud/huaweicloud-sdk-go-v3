@@ -11,16 +11,16 @@ import (
 
 // 转码输出数组。 - HLS或DASH格式：此数组的成员个数为n+1，n为转码输出路数。 - MP4格式：此数组的成员个数为n，n为转码输出路数。
 type Output struct {
-	// 协议类型。 取值如下： - hls - dash - mp4
+	// 协议类型。  取值如下： - hls - dash - mp4
 
 	PlayType OutputPlayType `json:"play_type"`
 	// 播放URL。
 
 	Url string `json:"url"`
-	// 标记流是否已被加密。 取值如下： - 0：表示未加密。 - 1：表示已被加密。
+	// 标记流是否已被加密。  取值如下： - 0：表示未加密。 - 1：表示已被加密。
 
-	Encrypted *OutputEncrypted `json:"encrypted,omitempty"`
-	// 清晰度。 取值如下： - FLUENT：流畅 - SD：标清 - HD：高清 - FULL_HD：超清
+	Encrypted *int32 `json:"encrypted,omitempty"`
+	// 清晰度。  取值如下： - FLUENT：流畅 - SD：标清 - HD：高清 - FULL_HD：超清
 
 	Quality *OutputQuality `json:"quality,omitempty"`
 
@@ -83,43 +83,6 @@ func (c *OutputPlayType) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
-	}
-}
-
-type OutputEncrypted struct {
-	value int32
-}
-
-type OutputEncryptedEnum struct {
-	E_0 OutputEncrypted
-	E_1 OutputEncrypted
-}
-
-func GetOutputEncryptedEnum() OutputEncryptedEnum {
-	return OutputEncryptedEnum{
-		E_0: OutputEncrypted{
-			value: 0,
-		}, E_1: OutputEncrypted{
-			value: 1,
-		},
-	}
-}
-
-func (c OutputEncrypted) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *OutputEncrypted) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
 	}
 }
 

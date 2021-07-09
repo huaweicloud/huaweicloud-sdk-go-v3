@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+//
 type WatermarkTemplate struct {
 	// 水印模板名称<br/>
 
@@ -13,13 +14,13 @@ type WatermarkTemplate struct {
 	// 水印模板配置id<br/>
 
 	Id *string `json:"id,omitempty"`
-	// 启用状态，取值为：0，停用；1,启用<br/>
+	// 启用状态。  取值为： - 0：停用 - 1：启用
 
 	Status *int64 `json:"status,omitempty"`
-	// 水印图片相对输出视频的水平偏移量，默认值是0<br/>
+	// 水印图片相对输出视频的水平偏移量。  默认值是0。
 
 	Dx *string `json:"dx,omitempty"`
-	// 水印图片相对输出视频的垂直偏移量，默认值是0<br/>
+	// 水印图片相对输出视频的垂直偏移量。  默认值是0。
 
 	Dy *string `json:"dy,omitempty"`
 	// 水印的位置<br/>
@@ -43,7 +44,7 @@ type WatermarkTemplate struct {
 	// 水印类型，当前只支持Image（图片水印）<br/>
 
 	WatermarkType *string `json:"watermark_type,omitempty"`
-	// type设置为Image时有效，目前包括Original（只做简单缩放，不做其他处理），Transparent（图片底色透明），Grayed（彩色图片变灰）<br/>
+	// type设置为Image时有效。 目前包括： - Original：只做简单缩放，不做其他处理 - Transparent：图片底色透明 - Grayed：彩色图片变灰
 
 	ImageProcess *string `json:"image_process,omitempty"`
 	// 水印开始时间<br/>

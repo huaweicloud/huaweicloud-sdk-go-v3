@@ -11,13 +11,13 @@ import (
 
 // 创建域名Body
 type DomainBody struct {
-	// 加速域名。（ 国际英文域名：域名用字母（A-Z，a-z，大小写等价）、数字（0-9）和连接符（-）组成，各级域名之间用实点（.）连接，国际域名50个字符。注意连接符（-）不能作为域名的开头或结尾字符。）
+	// 加速域名。（ 国际英文域名：域名用字母（A-Z，a-z，大小写等价）、数字（0-9）和连接符（-）组成，各级域名之间用实点（.）连接，国际域名75个字符。注意连接符（-）不能作为域名的开头或结尾字符。）
 
 	DomainName string `json:"domain_name"`
 	// 域名业务类型，若为web，则表示类型为静态加速；若为download，则表示业务类型为下载加速；若为video，则表示业务类型为流媒体加速；若为wholeSite，则表示业务类型为全站加速。
 
 	BusinessType DomainBodyBusinessType `json:"business_type"`
-	// 源站域名或源站IP，IP仅支持IPv4，多个源站IP以多个对象传入，多个对象的origin_type都必须为ipaddr，最多支持10个源站IP对象。
+	// 源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
 
 	Sources []Sources `json:"sources"`
 	// 域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。

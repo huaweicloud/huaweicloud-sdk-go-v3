@@ -9,11 +9,12 @@ import (
 	"strings"
 )
 
+//
 type QualityInfo struct {
 	Video *VideoTemplateInfo `json:"video,omitempty"`
 
 	Audio *AudioTemplateInfo `json:"audio,omitempty"`
-	// 格式<br/>
+	// 格式。
 
 	Format QualityInfoFormat `json:"format"`
 }

@@ -15,7 +15,7 @@ type NodePoolSpec struct {
 
 	Type *NodePoolSpecType `json:"type,omitempty"`
 
-	NodeTemplate *V3NodeSpec `json:"nodeTemplate"`
+	NodeTemplate *NodeSpec `json:"nodeTemplate"`
 	// 节点池初始化节点个数。
 
 	InitialNodeCount *int32 `json:"initialNodeCount,omitempty"`

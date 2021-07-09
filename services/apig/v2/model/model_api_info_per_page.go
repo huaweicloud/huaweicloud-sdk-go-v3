@@ -14,7 +14,7 @@ type ApiInfoPerPage struct {
 	Name string `json:"name"`
 	// API类型 - 1：公有API - 2：私有API
 
-	Type ApiInfoPerPageType `json:"type"`
+	Type int32 `json:"type"`
 	// API的版本
 
 	Version *string `json:"version,omitempty"`
@@ -116,43 +116,6 @@ func (o ApiInfoPerPage) String() string {
 	}
 
 	return strings.Join([]string{"ApiInfoPerPage", string(data)}, " ")
-}
-
-type ApiInfoPerPageType struct {
-	value int32
-}
-
-type ApiInfoPerPageTypeEnum struct {
-	E_1 ApiInfoPerPageType
-	E_2 ApiInfoPerPageType
-}
-
-func GetApiInfoPerPageTypeEnum() ApiInfoPerPageTypeEnum {
-	return ApiInfoPerPageTypeEnum{
-		E_1: ApiInfoPerPageType{
-			value: 1,
-		}, E_2: ApiInfoPerPageType{
-			value: 2,
-		},
-	}
-}
-
-func (c ApiInfoPerPageType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ApiInfoPerPageType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
-	}
 }
 
 type ApiInfoPerPageReqProtocol struct {

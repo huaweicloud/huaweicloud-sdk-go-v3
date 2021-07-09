@@ -68,7 +68,7 @@ type ChangeBaremetalNameResponsesServers struct {
 	OSEXTSRVATTRinstanceName *string `json:"OS-EXT-SRV-ATTR:instance_name,omitempty"`
 	// 扩展属性，裸金属服务器电源状态。例如：0表示“NO STATE”1表示“RUNNING”4表示“SHUTDOWN”
 
-	OSEXTSTSpowerState *ChangeBaremetalNameResponsesServersOSEXTSTSpowerState `json:"OS-EXT-STS:power_state,omitempty"`
+	OSEXTSTSpowerState *int32 `json:"OS-EXT-STS:power_state,omitempty"`
 	// 扩展属性，裸金属服务器任务状态。例如：rebooting表示重启中reboot_started表示普通重启reboot_started_hard表示强制重启powering-off表示关机中powering-on表示开机中rebuilding表示重建中scheduling表示调度中deleting表示删除中
 
 	OSEXTSTStaskState *ChangeBaremetalNameResponsesServersOSEXTSTStaskState `json:"OS-EXT-STS:task_state,omitempty"`
@@ -247,46 +247,6 @@ func (c *ChangeBaremetalNameResponsesServersOSDCFdiskConfig) UnmarshalJSON(b []b
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
-	}
-}
-
-type ChangeBaremetalNameResponsesServersOSEXTSTSpowerState struct {
-	value int32
-}
-
-type ChangeBaremetalNameResponsesServersOSEXTSTSpowerStateEnum struct {
-	E_0 ChangeBaremetalNameResponsesServersOSEXTSTSpowerState
-	E_1 ChangeBaremetalNameResponsesServersOSEXTSTSpowerState
-	E_4 ChangeBaremetalNameResponsesServersOSEXTSTSpowerState
-}
-
-func GetChangeBaremetalNameResponsesServersOSEXTSTSpowerStateEnum() ChangeBaremetalNameResponsesServersOSEXTSTSpowerStateEnum {
-	return ChangeBaremetalNameResponsesServersOSEXTSTSpowerStateEnum{
-		E_0: ChangeBaremetalNameResponsesServersOSEXTSTSpowerState{
-			value: 0,
-		}, E_1: ChangeBaremetalNameResponsesServersOSEXTSTSpowerState{
-			value: 1,
-		}, E_4: ChangeBaremetalNameResponsesServersOSEXTSTSpowerState{
-			value: 4,
-		},
-	}
-}
-
-func (c ChangeBaremetalNameResponsesServersOSEXTSTSpowerState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ChangeBaremetalNameResponsesServersOSEXTSTSpowerState) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
 	}
 }
 

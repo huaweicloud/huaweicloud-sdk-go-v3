@@ -11,10 +11,10 @@ import (
 
 // 图片审核结果
 type PictureReviewRet struct {
-	// 检测结果是否通过。 取值如下： - block：包含敏感信息，不通过。 - pass：不包含敏感信息，通过。 - review：需要人工复检。
+	// 检测结果是否通过。  取值如下： - block：包含敏感信息，不通过。 - pass：不包含敏感信息，通过。 - review：需要人工复检。
 
 	Suggestion *PictureReviewRetSuggestion `json:"suggestion,omitempty"`
-	// 截图在视频中的时间偏移值。封面不涉及此字段 单位：秒。
+	// 截图在视频中的时间偏移值。封面不涉及此字段  单位：秒。
 
 	Offset *int32 `json:"offset,omitempty"`
 	// 对应截图/封面的访问URL。

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CheckMd5DuplicationResponse struct {
-	// 是否重复。 取值如下： - 0：表示不重复。 - 1：表示重复。
+	// 是否重复。  取值如下： - 0：表示不重复。 - 1：表示重复。
 
 	IsDuplicated *int32 `json:"is_duplicated,omitempty"`
 	// 重复的媒资ID

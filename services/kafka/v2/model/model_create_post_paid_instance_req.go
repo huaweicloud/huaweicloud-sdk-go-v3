@@ -31,7 +31,7 @@ type CreatePostPaidInstanceReq struct {
 	StorageSpace int32 `json:"storage_space"`
 	// Kafka实例的最大分区数量。   - 参数specification为100MB时，取值300   - 参数specification为300MB时，取值900   - 参数specification为600MB时，取值1800   - 参数specification为1200MB时，取值1800
 
-	PartitionNum CreatePostPaidInstanceReqPartitionNum `json:"partition_num"`
+	PartitionNum int32 `json:"partition_num"`
 	// 当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
 
 	AccessUser *string `json:"access_user,omitempty"`
@@ -221,46 +221,6 @@ func (c *CreatePostPaidInstanceReqSpecification) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
-	}
-}
-
-type CreatePostPaidInstanceReqPartitionNum struct {
-	value int32
-}
-
-type CreatePostPaidInstanceReqPartitionNumEnum struct {
-	E_300  CreatePostPaidInstanceReqPartitionNum
-	E_900  CreatePostPaidInstanceReqPartitionNum
-	E_1800 CreatePostPaidInstanceReqPartitionNum
-}
-
-func GetCreatePostPaidInstanceReqPartitionNumEnum() CreatePostPaidInstanceReqPartitionNumEnum {
-	return CreatePostPaidInstanceReqPartitionNumEnum{
-		E_300: CreatePostPaidInstanceReqPartitionNum{
-			value: 300,
-		}, E_900: CreatePostPaidInstanceReqPartitionNum{
-			value: 900,
-		}, E_1800: CreatePostPaidInstanceReqPartitionNum{
-			value: 1800,
-		},
-	}
-}
-
-func (c CreatePostPaidInstanceReqPartitionNum) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *CreatePostPaidInstanceReqPartitionNum) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
 	}
 }
 

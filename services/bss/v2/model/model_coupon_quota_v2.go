@@ -40,7 +40,7 @@ type CouponQuotaV2 struct {
 	// 失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
 
 	ExpireTime *string `json:"expire_time,omitempty"`
-	// 优惠券额度上的限制属性，具体参见表3。
+	// 优惠券额度上的限制属性，具体参见表2。
 
 	LimitInfos *[]QuotaLimitInfo `json:"limit_infos,omitempty"`
 }

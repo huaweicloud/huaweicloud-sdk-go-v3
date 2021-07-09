@@ -30,7 +30,7 @@ func (c *CceClient) AwakeCluster(request *model.AwakeClusterRequest) (*model.Awa
 	}
 }
 
-//根据提供的插件模板，安装插件实例。 >插件管理的URL格式为：https://{clusterid}.Endpoint/uri。其中{clusterid}为集群ID，uri为资源路径，也即API访问的路径。
+//根据提供的插件模板，安装插件实例。
 func (c *CceClient) CreateAddonInstance(request *model.CreateAddonInstanceRequest) (*model.CreateAddonInstanceResponse, error) {
 	requestDef := GenReqDefForCreateAddonInstance()
 
@@ -52,7 +52,7 @@ func (c *CceClient) CreateCloudPersistentVolumeClaims(request *model.CreateCloud
 	}
 }
 
-//该API用于创建一个空集群（即只有控制节点Master，没有工作节点Node）。请在调用本接口完成集群创建之后，通过[[创建节点](https://support.huaweicloud.com/api-cce/cce_02_0242.html)](tag:hws)[[创建节点](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0242.html)](tag:hws_hk)添加节点。 >   - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。 >   - 调用该接口创建集群时，默认不安装ICAgent。ICAgent是应用性能管理APM的采集代理，运行在应用所在的服务器上，用于实时采集探针所获取的数据，安装ICAgent是使用应用性能管理APM的前提。若需安装ICAgent，请参照[[安装ICAgent](https://support.huaweicloud.com/usermanual-apm/apm_02_0013.html)](tag:hws)[[安装ICAgent](https://support.huaweicloud.com/intl/zh-cn/usermanual-apm/apm_02_0013.html)](tag:hws_hk)。 >   - 默认情况下，一个帐户只能创建 5 个集群（每个Region下），如果您需要创建更多的集群，请[[提交工单](https://console.huaweicloud.com/console/#/quota)](tag:hws)[[提交工单](https://console-intl.huaweicloud.com/console/?locale=zh-cn#/quota)](tag:hws_hk)申请增加配额。
+//该API用于创建一个空集群（即只有控制节点Master，没有工作节点Node）。请在调用本接口完成集群创建之后，通过[[创建节点](https://support.huaweicloud.com/api-cce/cce_02_0242.html)](tag:hws)[[创建节点](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0242.html)](tag:hws_hk)添加节点。  >   - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。 >   - 调用该接口创建集群时，默认不安装ICAgent。ICAgent是应用性能管理APM的采集代理，运行在应用所在的服务器上，用于实时采集探针所获取的数据，安装ICAgent是使用应用性能管理APM的前提。若需安装ICAgent，请参照[[安装ICAgent](https://support.huaweicloud.com/usermanual-apm/apm_02_0013.html)](tag:hws)[[安装ICAgent](https://support.huaweicloud.com/intl/zh-cn/usermanual-apm/apm_02_0013.html)](tag:hws_hk)。 >   - 默认情况下，一个帐户只能创建5个集群（每个Region下），如果您需要创建更多的集群，请[[提交工单](https://console.huaweicloud.com/console/#/quota)](tag:hws)[[提交工单](https://console-intl.huaweicloud.com/console/?locale=zh-cn#/quota)](tag:hws_hk)申请增加配额。
 func (c *CceClient) CreateCluster(request *model.CreateClusterRequest) (*model.CreateClusterResponse, error) {
 	requestDef := GenReqDefForCreateCluster()
 
@@ -74,7 +74,7 @@ func (c *CceClient) CreateKubernetesClusterCert(request *model.CreateKubernetesC
 	}
 }
 
-//该API用于在指定集群下创建节点。 > 若无集群，请先[[创建集群](https://support.huaweicloud.com/api-cce/cce_02_0236.html)](tag:hws)[[创建集群](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0236.html)](tag:hws_hk)。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//该API用于在指定集群下创建节点。  > 若无集群，请先[[创建集群](https://support.huaweicloud.com/api-cce/cce_02_0236.html)](tag:hws)[[创建集群](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0236.html)](tag:hws_hk)。  > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
 func (c *CceClient) CreateNode(request *model.CreateNodeRequest) (*model.CreateNodeResponse, error) {
 	requestDef := GenReqDefForCreateNode()
 
@@ -85,7 +85,7 @@ func (c *CceClient) CreateNode(request *model.CreateNodeRequest) (*model.CreateN
 	}
 }
 
-//该API用于在指定集群下创建节点池。仅支持集群在处于可用、扩容、缩容状态时调用。 > 若无集群，请先[[创建集群](https://support.huaweicloud.com/api-cce/cce_02_0236.html)](tag:hws)[[创建集群](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0236.html)](tag:hws_hk)。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+//该API用于在指定集群下创建节点池。仅支持集群在处于可用、扩容、缩容状态时调用。  > 若无集群，请先[[创建集群](https://support.huaweicloud.com/api-cce/cce_02_0236.html)](tag:hws)[[创建集群](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0236.html)](tag:hws_hk)。  > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
 func (c *CceClient) CreateNodePool(request *model.CreateNodePoolRequest) (*model.CreateNodePoolResponse, error) {
 	requestDef := GenReqDefForCreateNodePool()
 
@@ -96,7 +96,7 @@ func (c *CceClient) CreateNodePool(request *model.CreateNodePoolRequest) (*model
 	}
 }
 
-//删除插件实例的功能。 >插件管理的URL格式为：https://{clusterid}.Endpoint/uri。其中{clusterid}为集群ID，uri为资源路径，也即API访问的路径。
+//删除插件实例的功能。
 func (c *CceClient) DeleteAddonInstance(request *model.DeleteAddonInstanceRequest) (*model.DeleteAddonInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteAddonInstance()
 
@@ -107,7 +107,7 @@ func (c *CceClient) DeleteAddonInstance(request *model.DeleteAddonInstanceReques
 	}
 }
 
-//该API用于删除指定Namespace下的PVC（PersistentVolumeClaim）对象，并可以选择保留后端的云存储。 >存储管理的URL格式为：https://{clusterid}.Endpoint/uri。其中{clusterid}为集群ID，uri为资源路径，也即API访问的路径。如果使用https://Endpoint/uri，则必须指定请求header中的X-Cluster-ID参数。
+//该API用于删除指定Namespace下的PVC（PersistentVolumeClaim）对象，并可以选择保留后端的云存储。  >存储管理的URL格式为：https://{clusterid}.Endpoint/uri。其中{clusterid}为集群ID，uri为资源路径，也即API访问的路径。如果使用https://Endpoint/uri，则必须指定请求header中的X-Cluster-ID参数。
 func (c *CceClient) DeleteCloudPersistentVolumeClaims(request *model.DeleteCloudPersistentVolumeClaimsRequest) (*model.DeleteCloudPersistentVolumeClaimsResponse, error) {
 	requestDef := GenReqDefForDeleteCloudPersistentVolumeClaims()
 
@@ -162,7 +162,7 @@ func (c *CceClient) HibernateCluster(request *model.HibernateClusterRequest) (*m
 	}
 }
 
-//获取集群所有已安装插件实例 >插件管理的URL格式为：https://{clusterid}.Endpoint/uri。其中{clusterid}为集群ID，uri为资源路径，也即API访问的路径。
+//获取集群所有已安装插件实例
 func (c *CceClient) ListAddonInstances(request *model.ListAddonInstancesRequest) (*model.ListAddonInstancesResponse, error) {
 	requestDef := GenReqDefForListAddonInstances()
 
@@ -173,7 +173,7 @@ func (c *CceClient) ListAddonInstances(request *model.ListAddonInstancesRequest)
 	}
 }
 
-//插件模板查询接口，查询插件信息。 >插件管理的URL格式为：https://{clusterid}.Endpoint/uri。其中{clusterid}为集群ID，uri为资源路径，也即API访问的路径。
+//插件模板查询接口，查询插件信息。
 func (c *CceClient) ListAddonTemplates(request *model.ListAddonTemplatesRequest) (*model.ListAddonTemplatesResponse, error) {
 	requestDef := GenReqDefForListAddonTemplates()
 
@@ -217,7 +217,29 @@ func (c *CceClient) ListNodes(request *model.ListNodesRequest) (*model.ListNodes
 	}
 }
 
-//获取插件实例详情。 >插件管理的URL格式为：https://{clusterid}.Endpoint/uri。其中{clusterid}为集群ID，uri为资源路径，也即API访问的路径。
+//该API用于在指定集群下迁移节点到另一集群。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+func (c *CceClient) MigrateNode(request *model.MigrateNodeRequest) (*model.MigrateNodeResponse, error) {
+	requestDef := GenReqDefForMigrateNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MigrateNodeResponse), nil
+	}
+}
+
+//该API用于在指定集群下移除节点。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+func (c *CceClient) RemoveNode(request *model.RemoveNodeRequest) (*model.RemoveNodeResponse, error) {
+	requestDef := GenReqDefForRemoveNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveNodeResponse), nil
+	}
+}
+
+//获取插件实例详情。
 func (c *CceClient) ShowAddonInstance(request *model.ShowAddonInstanceRequest) (*model.ShowAddonInstanceResponse, error) {
 	requestDef := GenReqDefForShowAddonInstance()
 
@@ -272,7 +294,7 @@ func (c *CceClient) ShowNodePool(request *model.ShowNodePoolRequest) (*model.Sho
 	}
 }
 
-//更新插件实例的功能。 >插件管理的URL格式为：https://{clusterid}.Endpoint/uri。其中{clusterid}为集群ID，uri为资源路径，也即API访问的路径。
+//更新插件实例的功能。
 func (c *CceClient) UpdateAddonInstance(request *model.UpdateAddonInstanceRequest) (*model.UpdateAddonInstanceResponse, error) {
 	requestDef := GenReqDefForUpdateAddonInstance()
 
@@ -305,7 +327,7 @@ func (c *CceClient) UpdateNode(request *model.UpdateNodeRequest) (*model.UpdateN
 	}
 }
 
-//该API用于更新指定的节点池。仅支持集群在处于可用、扩容、缩容状态时调用。 > - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径 > - 当前仅支持更新节点池名称，spec下的initialNodeCount，k8sTags， taints，login，userTags与节点池的扩缩容配置相关字段。
+//该API用于更新指定的节点池。仅支持集群在处于可用、扩容、缩容状态时调用。  > - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径  > - 当前仅支持更新节点池名称，spec下的initialNodeCount，k8sTags， taints，login，userTags与节点池的扩缩容配置相关字段。
 func (c *CceClient) UpdateNodePool(request *model.UpdateNodePoolRequest) (*model.UpdateNodePoolResponse, error) {
 	requestDef := GenReqDefForUpdateNodePool()
 

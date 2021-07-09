@@ -15,7 +15,7 @@ type ShowDetailsOfApiV2Response struct {
 	Name string `json:"name"`
 	// API类型 - 1：公有API - 2：私有API
 
-	Type ShowDetailsOfApiV2ResponseType `json:"type"`
+	Type int32 `json:"type"`
 	// API的版本
 
 	Version *string `json:"version,omitempty"`
@@ -136,43 +136,6 @@ func (o ShowDetailsOfApiV2Response) String() string {
 	}
 
 	return strings.Join([]string{"ShowDetailsOfApiV2Response", string(data)}, " ")
-}
-
-type ShowDetailsOfApiV2ResponseType struct {
-	value int32
-}
-
-type ShowDetailsOfApiV2ResponseTypeEnum struct {
-	E_1 ShowDetailsOfApiV2ResponseType
-	E_2 ShowDetailsOfApiV2ResponseType
-}
-
-func GetShowDetailsOfApiV2ResponseTypeEnum() ShowDetailsOfApiV2ResponseTypeEnum {
-	return ShowDetailsOfApiV2ResponseTypeEnum{
-		E_1: ShowDetailsOfApiV2ResponseType{
-			value: 1,
-		}, E_2: ShowDetailsOfApiV2ResponseType{
-			value: 2,
-		},
-	}
-}
-
-func (c ShowDetailsOfApiV2ResponseType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ShowDetailsOfApiV2ResponseType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
-	}
 }
 
 type ShowDetailsOfApiV2ResponseReqProtocol struct {

@@ -42,7 +42,7 @@ type BackendApiCreate struct {
 	VpcChannelInfo *ApiBackendVpcReq `json:"vpc_channel_info,omitempty"`
 	// 是否使用VPC通道 - 1：使用VPC通道 - 2：不使用VPC通道
 
-	VpcChannelStatus *BackendApiCreateVpcChannelStatus `json:"vpc_channel_status,omitempty"`
+	VpcChannelStatus *int32 `json:"vpc_channel_status,omitempty"`
 }
 
 func (o BackendApiCreate) String() string {
@@ -151,42 +151,5 @@ func (c *BackendApiCreateReqMethod) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
-	}
-}
-
-type BackendApiCreateVpcChannelStatus struct {
-	value int32
-}
-
-type BackendApiCreateVpcChannelStatusEnum struct {
-	E_1 BackendApiCreateVpcChannelStatus
-	E_2 BackendApiCreateVpcChannelStatus
-}
-
-func GetBackendApiCreateVpcChannelStatusEnum() BackendApiCreateVpcChannelStatusEnum {
-	return BackendApiCreateVpcChannelStatusEnum{
-		E_1: BackendApiCreateVpcChannelStatus{
-			value: 1,
-		}, E_2: BackendApiCreateVpcChannelStatus{
-			value: 2,
-		},
-	}
-}
-
-func (c BackendApiCreateVpcChannelStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *BackendApiCreateVpcChannelStatus) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
 	}
 }

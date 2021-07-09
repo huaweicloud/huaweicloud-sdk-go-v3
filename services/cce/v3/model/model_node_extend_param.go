@@ -8,7 +8,7 @@ import (
 
 // 创建节点时的扩展参数。
 type NodeExtendParam struct {
-	// 云服务器规格的分类。裸金属节点无该字段。
+	// 云服务器规格的分类。响应中会返回此字段。
 
 	Ecsperformancetype *string `json:"ecs:performancetype,omitempty"`
 	// 订单ID，节点付费类型为自动付费包周期类型时，响应中会返回此字段。

@@ -119,35 +119,35 @@ func (c *LtsClient) ListLogStream(request *model.ListLogStreamRequest) (*model.L
 }
 
 //该接口用于查询指定日志流下的日志内容。
-func (c *LtsClient) UpdateLogContents(request *model.UpdateLogContentsRequest) (*model.UpdateLogContentsResponse, error) {
-	requestDef := GenReqDefForUpdateLogContents()
+func (c *LtsClient) ListLogs(request *model.ListLogsRequest) (*model.ListLogsResponse, error) {
+	requestDef := GenReqDefForListLogs()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateLogContentsResponse), nil
+		return resp.(*model.ListLogsResponse), nil
 	}
 }
 
 //该接口用于查询指定日志流下的结构化日志内容。
-func (c *LtsClient) UpdateLogContents2(request *model.UpdateLogContents2Request) (*model.UpdateLogContents2Response, error) {
-	requestDef := GenReqDefForUpdateLogContents2()
+func (c *LtsClient) ListQueryStructuredLogs(request *model.ListQueryStructuredLogsRequest) (*model.ListQueryStructuredLogsResponse, error) {
+	requestDef := GenReqDefForListQueryStructuredLogs()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateLogContents2Response), nil
+		return resp.(*model.ListQueryStructuredLogsResponse), nil
 	}
 }
 
 //该接口用于查询指定日志流下的结构化日志内容（新版）。
-func (c *LtsClient) UpdateLogContents3(request *model.UpdateLogContents3Request) (*model.UpdateLogContents3Response, error) {
-	requestDef := GenReqDefForUpdateLogContents3()
+func (c *LtsClient) ListStructuredLogsWithTimeRange(request *model.ListStructuredLogsWithTimeRangeRequest) (*model.ListStructuredLogsWithTimeRangeResponse, error) {
+	requestDef := GenReqDefForListStructuredLogsWithTimeRange()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateLogContents3Response), nil
+		return resp.(*model.ListStructuredLogsWithTimeRangeResponse), nil
 	}
 }
 

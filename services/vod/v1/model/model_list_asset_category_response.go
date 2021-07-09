@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListAssetCategoryResponse struct {
-	// 分类返回值<br/>
+	// 分类返回值
 
 	Body           *[]QueryCategoryRsp `json:"body,omitempty"`
 	HttpStatusCode int                 `json:"-"`

@@ -10,7 +10,7 @@ type QuotaLimitInfo struct {
 	// 属性key值。
 
 	LimitKey *string `json:"limit_key,omitempty"`
-	// 属性值，具体参见表4。
+	// 属性值，具体参见表3。
 
 	LimitValues *[]LimitValue `json:"limit_values,omitempty"`
 }

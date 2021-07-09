@@ -3,9 +3,6 @@ package model
 import (
 	"encoding/json"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -22,9 +19,9 @@ type TemplateGroup struct {
 	// 模板组类型<br/>
 
 	Type *string `json:"type,omitempty"`
-	// 是否自动加密
+	// 是否自动加密。  取值如下： - 0：表示不加密。 - 1：表示需要加密。  默认值：0。  加密与转码必须要一起进行，当需要加密时，转码参数不能为空，且转码输出必须要为HLS。
 
-	AutoEncrypt *TemplateGroupAutoEncrypt `json:"auto_encrypt,omitempty"`
+	AutoEncrypt *int32 `json:"auto_encrypt,omitempty"`
 	// 画质配置信息列表<br/>
 
 	QualityInfoList *[]QualityInfo `json:"quality_info_list,omitempty"`
@@ -45,41 +42,4 @@ func (o TemplateGroup) String() string {
 	}
 
 	return strings.Join([]string{"TemplateGroup", string(data)}, " ")
-}
-
-type TemplateGroupAutoEncrypt struct {
-	value int32
-}
-
-type TemplateGroupAutoEncryptEnum struct {
-	E_0 TemplateGroupAutoEncrypt
-	E_1 TemplateGroupAutoEncrypt
-}
-
-func GetTemplateGroupAutoEncryptEnum() TemplateGroupAutoEncryptEnum {
-	return TemplateGroupAutoEncryptEnum{
-		E_0: TemplateGroupAutoEncrypt{
-			value: 0,
-		}, E_1: TemplateGroupAutoEncrypt{
-			value: 1,
-		},
-	}
-}
-
-func (c TemplateGroupAutoEncrypt) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *TemplateGroupAutoEncrypt) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
-	}
 }
