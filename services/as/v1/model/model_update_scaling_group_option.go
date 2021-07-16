@@ -62,7 +62,7 @@ type UpdateScalingGroupOption struct {
 	// 配置删除云服务器时是否删除云服务器绑定的弹性IP。取值为true或false，默认为false。true：删除云服务器时，会同时删除绑定在云服务器上的弹性IP。当弹性IP的计费方式为包年包月时，不会被删除。false：删除云服务器时，仅解绑定在云服务器上的弹性IP，不删除弹性IP。
 
 	DeletePublicip *bool `json:"delete_publicip,omitempty"`
-	//  配置删除云服务器时是否删除云服务器绑定的数据盘。取值为true或false，默认为false。  true：删除云服务器时，会同时删除绑定在云服务器上的数据盘。当数据盘的计费方式为包年包月时，不会被删除。 false：删除务器时，仅云服解绑定在云服务器上的数据盘，不删除数据盘。
+	// 配置删除云服务器时是否删除云服务器绑定的数据盘。取值为true或false，默认为false。  true：删除云服务器时，会同时删除绑定在云服务器上的数据盘。当数据盘的计费方式为包年包月时，不会被删除。 false：删除务器时，仅云服解绑定在云服务器上的数据盘，不删除数据盘。
 
 	DeleteVolume *bool `json:"delete_volume,omitempty"`
 	// 企业项目ID，用于指定伸缩组归属的企业项目。当伸缩组配置企业项目时，由该伸缩组创建的弹性云服务器将归属于该企业项目。当没有指定企业项目时，将使用企业项目ID为0的默认项目。
@@ -71,6 +71,9 @@ type UpdateScalingGroupOption struct {
 	// 伸缩组扩缩容时目标AZ选择的优先级策略：  EQUILIBRIUM_DISTRIBUTE（默认）：均衡分布，虚拟机扩缩容时优先保证available_zones列表中各AZ下虚拟机数量均衡，当无法在目标AZ下完成虚拟机扩容时，按照PICK_FIRST原则选择其他可用AZ。 PICK_FIRST：选择优先，虚拟机扩缩容时目标AZ的选择按照available_zones列表的顺序进行优先级排序。
 
 	MultiAzPriorityPolicy *string `json:"multi_az_priority_policy,omitempty"`
+	// 伸缩组描述信息(0-256个字符)
+
+	Description *string `json:"description,omitempty"`
 }
 
 func (o UpdateScalingGroupOption) String() string {

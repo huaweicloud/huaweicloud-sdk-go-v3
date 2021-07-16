@@ -152,9 +152,9 @@ type GlanceShowImageResponse struct {
 	// 表示当前市场镜像是否下架。 true：已下架 false：未下架
 
 	IsOffshelved *GlanceShowImageResponseIsOffshelved `json:"__is_offshelved,omitempty"`
-	// 镜像是否支持延迟加载。取值为“True”或“False”。
+	// 镜像是否支持延迟加载。取值为True或False。
 
-	Lazyloading *bool `json:"__lazyloading,omitempty"`
+	Lazyloading *string `json:"__lazyloading,omitempty"`
 	// 镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
 
 	OsFeatureList *string `json:"__os_feature_list,omitempty"`

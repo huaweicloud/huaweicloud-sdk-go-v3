@@ -12,7 +12,7 @@ type TopUrlSummary struct {
 	Url *string `json:"url,omitempty"`
 	// 对应查询类型的值。（流量单位：Byte）
 
-	Value *int32 `json:"value,omitempty"`
+	Value *int64 `json:"value,omitempty"`
 	// 查询起始时间戳。
 
 	StartTime *int64 `json:"start_time,omitempty"`

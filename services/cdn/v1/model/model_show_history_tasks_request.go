@@ -25,10 +25,10 @@ type ShowHistoryTasksRequest struct {
 	Status *ShowHistoryTasksRequestStatus `json:"status,omitempty"`
 	// 查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
 
-	StartDate *int32 `json:"start_date,omitempty"`
+	StartDate *int64 `json:"start_date,omitempty"`
 	// 查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
 
-	EndDate *int32 `json:"end_date,omitempty"`
+	EndDate *int64 `json:"end_date,omitempty"`
 	// 用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值。
 
 	OrderField *string `json:"order_field,omitempty"`

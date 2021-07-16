@@ -12,7 +12,7 @@ type DomainObject struct {
 	DomainName *string `json:"domain_name,omitempty"`
 	// 数据结束时间戳，可能与请求时间不一致，可能不返回
 
-	Flux *[]int32 `json:"flux,omitempty"`
+	Flux *[]int64 `json:"flux,omitempty"`
 }
 
 func (o DomainObject) String() string {

@@ -33,6 +33,9 @@ type CreateScalingPolicyV2Option struct {
 	// 冷却时间，取值范围0-86400，默认为300，单位是秒。
 
 	CoolDownTime *int32 `json:"cool_down_time,omitempty"`
+	// 伸缩策略描述（1-256个字符）
+
+	Description *string `json:"description,omitempty"`
 }
 
 func (o CreateScalingPolicyV2Option) String() string {

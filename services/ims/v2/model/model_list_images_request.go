@@ -309,7 +309,7 @@ type ListImagesRequestPlatformEnum struct {
 	FEDORA       ListImagesRequestPlatform
 	OTHER        ListImagesRequestPlatform
 	CORE_OS      ListImagesRequestPlatform
-	EULE_OS      ListImagesRequestPlatform
+	EULER_OS     ListImagesRequestPlatform
 }
 
 func GetListImagesRequestPlatformEnum() ListImagesRequestPlatformEnum {
@@ -347,8 +347,8 @@ func GetListImagesRequestPlatformEnum() ListImagesRequestPlatformEnum {
 		CORE_OS: ListImagesRequestPlatform{
 			value: "CoreOS",
 		},
-		EULE_OS: ListImagesRequestPlatform{
-			value: "EuleOS",
+		EULER_OS: ListImagesRequestPlatform{
+			value: "EulerOS",
 		},
 	}
 }

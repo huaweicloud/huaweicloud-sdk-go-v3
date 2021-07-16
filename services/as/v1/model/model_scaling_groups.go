@@ -100,6 +100,9 @@ type ScalingGroups struct {
 	// 伸缩组扩缩容时目标AZ选择的优先级策略
 
 	MultiAzPriorityPolicy *string `json:"multi_az_priority_policy,omitempty"`
+	// 伸缩组描述信息
+
+	Description *string `json:"description,omitempty"`
 }
 
 func (o ScalingGroups) String() string {

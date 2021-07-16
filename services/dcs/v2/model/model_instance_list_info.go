@@ -106,6 +106,15 @@ type InstanceListInfo struct {
 	// 企业项目ID。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	// 实例描述备注
+
+	Description *string `json:"description,omitempty"`
+	// 实例CPU类型，通常为x86_64或aarch64
+
+	CpuType *string `json:"cpu_type,omitempty"`
+	// 有资源的可用区编码。
+
+	AzCodes *[]string `json:"az_codes,omitempty"`
 }
 
 func (o InstanceListInfo) String() string {

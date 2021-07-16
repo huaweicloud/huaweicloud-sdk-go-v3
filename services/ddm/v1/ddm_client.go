@@ -162,28 +162,6 @@ func (c *DdmClient) ListNodes(request *model.ListNodesRequest) (*model.ListNodes
 	}
 }
 
-//查询指定时间段内在DDM实例的读写次数。
-func (c *DdmClient) ListReadWriteRatio(request *model.ListReadWriteRatioRequest) (*model.ListReadWriteRatioResponse, error) {
-	requestDef := GenReqDefForListReadWriteRatio()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListReadWriteRatioResponse), nil
-	}
-}
-
-//查询指定时间段内在DDM实例上执行过的慢sql相关信息。
-func (c *DdmClient) ListSlowLog(request *model.ListSlowLogRequest) (*model.ListSlowLogResponse, error) {
-	requestDef := GenReqDefForListSlowLog()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListSlowLogResponse), nil
-	}
-}
-
 //查询DDM帐号列表。
 func (c *DdmClient) ListUsers(request *model.ListUsersRequest) (*model.ListUsersResponse, error) {
 	requestDef := GenReqDefForListUsers()

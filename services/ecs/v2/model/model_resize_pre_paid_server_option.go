@@ -8,7 +8,7 @@ import (
 
 //
 type ResizePrePaidServerOption struct {
-	// 变更后的云服务器规格ID。
+	// 变更后的云服务器规格ID。  可通过[查询云服务器规格变更支持列表](https://support.huaweicloud.com/api-ecs/ecs_02_0402.html)接口查询允许变更的规格列表。
 
 	FlavorRef string `json:"flavorRef"`
 	// 新专属主机ID（仅适用于专属主机上的弹性云服务器）。

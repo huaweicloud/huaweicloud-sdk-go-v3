@@ -35,7 +35,7 @@ type NovaServerBlockDeviceMapping struct {
 	// 卷大小，整数，在source_type是image或blank，destination_type是volume的时候必选。  单位为GB。
 
 	VolumeSize *int32 `json:"volume_size,omitempty"`
-	// 卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 磁盘类型介绍。
+	// 卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 [磁盘类型介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
 
 	VolumeType *string `json:"volume_type,omitempty"`
 }

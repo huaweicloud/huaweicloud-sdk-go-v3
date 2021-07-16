@@ -41,7 +41,7 @@ type NovaListServersDetailsRequest struct {
 	// 查询结果按弹性云服务器属性排序，默认排序顺序为created_at逆序。
 
 	SortKey *NovaListServersDetailsRequestSortKey `json:"sort_key,omitempty"`
-	// 云服务器状态。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  直到2.37微版本，非上面范围的status字段将返回空列表，2.38之后的微版本，将返回400错误。
+	// 云服务器状态。  取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  直到2.37微版本，非上面范围的status字段将返回空列表，2.38之后的微版本，将返回400错误。  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
 
 	Status *NovaListServersDetailsRequestStatus `json:"status,omitempty"`
 	// 查询tag字段中包含该值的云服务器。

@@ -21,7 +21,7 @@ type LogObject struct {
 	Name *string `json:"name,omitempty"`
 	// 文件大小(Byte)。
 
-	Size *int32 `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty"`
 	// 下载链接。
 
 	Link *string `json:"link,omitempty"`

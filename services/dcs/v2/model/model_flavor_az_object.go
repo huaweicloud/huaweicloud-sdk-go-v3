@@ -7,7 +7,7 @@ import (
 )
 
 type FlavorAzObject struct {
-	// 缓存容量。
+	// 缓存容量（G Byte）。
 
 	Capacity *string `json:"capacity,omitempty"`
 	// 有资源的可用区编码。

@@ -172,7 +172,7 @@ type UpdateImageResponse struct {
 	IsOffshelved *string `json:"__is_offshelved,omitempty"`
 	// 镜像是否支持延迟加载。取值为“True”或“False”。
 
-	Lazyloading *bool `json:"__lazyloading,omitempty"`
+	Lazyloading *string `json:"__lazyloading,omitempty"`
 	// 表示当前镜像来源是从外部导入。取值：file。
 
 	RootOrigin *string `json:"__root_origin,omitempty"`

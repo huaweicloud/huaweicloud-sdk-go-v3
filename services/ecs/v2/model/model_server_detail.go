@@ -8,7 +8,7 @@ import (
 
 // 云服务器详情。
 type ServerDetail struct {
-	// 弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
+	// 弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
 
 	Status string `json:"status"`
 	// 弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
@@ -31,10 +31,10 @@ type ServerDetail struct {
 	KeyName string `json:"key_name"`
 
 	Image *ServerImage `json:"image"`
-	// 扩展属性，弹性云服务器当前任务的状态。
+	// 扩展属性，弹性云服务器当前任务的状态。  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
 
 	OSEXTSTStaskState string `json:"OS-EXT-STS:task_state"`
-	// 扩展属性，弹性云服务器当前状态。
+	// 扩展属性，弹性云服务器当前状态。  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
 
 	OSEXTSTSvmState string `json:"OS-EXT-STS:vm_state"`
 	// 扩展属性，弹性云服务器别名。

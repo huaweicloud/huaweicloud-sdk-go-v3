@@ -38,7 +38,7 @@ type CreateScalingGroupOption struct {
 	// 可用分区信息。弹性伸缩活动中自动添加的云服务器会被创建在指定的可用区中。如果没有指定可用分区，会由系统自动指定可用分区。详情请参考地区和终端节点。
 
 	AvailableZones *[]string `json:"available_zones,omitempty"`
-	// 网络信息，最多支持选择5个子网，传入的第一个子网默认作为云服务器的主网卡。使用vpc_id通过查询VPC服务子网列表接口获取， 查询子网列表”。
+	// 网络信息，最多支持选择5个子网，传入的第一个子网默认作为云服务器的主网卡。获取子网信息请参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
 
 	Networks []Networks `json:"networks"`
 	// 安全组信息，最多支持选择1个安全组。使用vpc_id通过查询VPC服务安全组列表接口获取，详见《虚拟私有云API参考》的“查询安全组列表”。当伸缩配置和伸缩组同时指定安全组时，将以伸缩配置中的安全组为准；当伸缩配置和伸缩组都没有指定安全组时，将使用默认安全组。为了使用灵活性更高，推荐在伸缩配置中指定安全组。
@@ -74,6 +74,9 @@ type CreateScalingGroupOption struct {
 	// 伸缩组扩缩容时目标AZ选择的优先级策略：EQUILIBRIUM_DISTRIBUTE（默认）：均衡分布，云服务器扩缩容时优先保证available_zones列表中各AZ下虚拟机数量均衡，当无法在目标AZ下完成虚拟机扩容时，按照PICK_FIRST原则选择其他可用AZ。PICK_FIRST：选择优先，虚拟机扩缩容时目标AZ的选择按照available_zones列表的顺序进行优先级排序。
 
 	MultiAzPriorityPolicy *CreateScalingGroupOptionMultiAzPriorityPolicy `json:"multi_az_priority_policy,omitempty"`
+	// 伸缩组描述信息(0-256个字符)
+
+	Description *string `json:"description,omitempty"`
 }
 
 func (o CreateScalingGroupOption) String() string {

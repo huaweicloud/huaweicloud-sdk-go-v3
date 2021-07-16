@@ -14,6 +14,9 @@ type ListInstancesRequest struct {
 	// 是否返回创建失败的实例数。 当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
 
 	IncludeFailure *string `json:"include_failure,omitempty"`
+	// 是否返回已删除的实例数。 当参数值为“true”时，返回已删除的实例数。参数值为“false”或者其他值，不返回已删除的实例数。
+
+	IncludeDelete *string `json:"include_delete,omitempty"`
 	// 实例名称。
 
 	Name *string `json:"name,omitempty"`

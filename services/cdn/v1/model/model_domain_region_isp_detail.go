@@ -15,7 +15,7 @@ type DomainRegionIspDetail struct {
 	Isp *string `json:"isp,omitempty"`
 	// 流量
 
-	Flux *[]int32 `json:"flux,omitempty"`
+	Flux *[]int64 `json:"flux,omitempty"`
 }
 
 func (o DomainRegionIspDetail) String() string {

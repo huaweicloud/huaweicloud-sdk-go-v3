@@ -74,6 +74,17 @@ func (c *DcsClient) CreateBigkeyScanTask(request *model.CreateBigkeyScanTaskRequ
 	}
 }
 
+//诊断指定的缓存实例。
+func (c *DcsClient) CreateDiagnosisTask(request *model.CreateDiagnosisTaskRequest) (*model.CreateDiagnosisTaskResponse, error) {
+	requestDef := GenReqDefForCreateDiagnosisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDiagnosisTaskResponse), nil
+	}
+}
+
 //创建热key分析任务，Redis 3.0 不支持热key分析。  热key分析需要将缓存实例配置参数maxmemory-policy设置为allkeys-lfu或volatile-lfu。
 func (c *DcsClient) CreateHotkeyScanTask(request *model.CreateHotkeyScanTaskRequest) (*model.CreateHotkeyScanTaskResponse, error) {
 	requestDef := GenReqDefForCreateHotkeyScanTask()
@@ -104,6 +115,28 @@ func (c *DcsClient) CreateMigrationTask(request *model.CreateMigrationTaskReques
 		return nil, err
 	} else {
 		return resp.(*model.CreateMigrationTaskResponse), nil
+	}
+}
+
+//采集Redis运行日志。
+func (c *DcsClient) CreateRedislog(request *model.CreateRedislogRequest) (*model.CreateRedislogResponse, error) {
+	requestDef := GenReqDefForCreateRedislog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRedislogResponse), nil
+	}
+}
+
+//获取日志下载链接。
+func (c *DcsClient) CreateRedislogDownloadLink(request *model.CreateRedislogDownloadLinkRequest) (*model.CreateRedislogDownloadLinkResponse, error) {
+	requestDef := GenReqDefForCreateRedislogDownloadLink()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRedislogDownloadLinkResponse), nil
 	}
 }
 
@@ -250,6 +283,17 @@ func (c *DcsClient) ListConfigurations(request *model.ListConfigurationsRequest)
 	}
 }
 
+//查询指定缓存实例诊断任务列表。
+func (c *DcsClient) ListDiagnosisTasks(request *model.ListDiagnosisTasksRequest) (*model.ListDiagnosisTasksResponse, error) {
+	requestDef := GenReqDefForListDiagnosisTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDiagnosisTasksResponse), nil
+	}
+}
+
 //在创建缓存实例时，需要配置订购的产品规格编码（spec_code），可通过该接口查询产品规格，查询条件不选时默认查询全部。
 func (c *DcsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
@@ -349,6 +393,17 @@ func (c *DcsClient) ListNumberOfInstancesInDifferentStatus(request *model.ListNu
 	}
 }
 
+//查询Redis运行日志列表。
+func (c *DcsClient) ListRedislog(request *model.ListRedislogRequest) (*model.ListRedislogResponse, error) {
+	requestDef := GenReqDefForListRedislog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRedislogResponse), nil
+	}
+}
+
 //查询指定缓存实例的恢复记录列表。
 func (c *DcsClient) ListRestoreRecords(request *model.ListRestoreRecordsRequest) (*model.ListRestoreRecordsResponse, error) {
 	requestDef := GenReqDefForListRestoreRecords()
@@ -393,6 +448,17 @@ func (c *DcsClient) ListTagsOfTenant(request *model.ListTagsOfTenantRequest) (*m
 	}
 }
 
+//用户可以为状态为“运行中”的DCS缓存实例进行规格变更，当前仅能支持按需实例的同副本或分片数量的实例规格变更。
+func (c *DcsClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
+	requestDef := GenReqDefForResizeInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResizeInstanceResponse), nil
+	}
+}
+
 //重启运行中的DCS缓存实例。  清空Redis4.0/Redis5.0的实例数据，数据清空后，无法撤销，且无法恢复，请谨慎操作。
 func (c *DcsClient) RestartOrFlushInstances(request *model.RestartOrFlushInstancesRequest) (*model.RestartOrFlushInstancesResponse, error) {
 	requestDef := GenReqDefForRestartOrFlushInstances()
@@ -434,6 +500,17 @@ func (c *DcsClient) ShowBigkeyScanTaskDetails(request *model.ShowBigkeyScanTaskD
 		return nil, err
 	} else {
 		return resp.(*model.ShowBigkeyScanTaskDetailsResponse), nil
+	}
+}
+
+//通过报告ID查询诊断报告的详细信息。
+func (c *DcsClient) ShowDiagnosisTaskDetails(request *model.ShowDiagnosisTaskDetailsRequest) (*model.ShowDiagnosisTaskDetailsResponse, error) {
+	requestDef := GenReqDefForShowDiagnosisTaskDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDiagnosisTaskDetailsResponse), nil
 	}
 }
 

@@ -8,7 +8,7 @@ import (
 
 //
 type PostPaidServerSchedulerHints struct {
-	// 云服务器组ID，UUID格式。
+	// 云服务器组ID，UUID格式。  云服务器组的ID可以从控制台或者参考[查询云服务器组列表](https://support.huaweicloud.com/api-ecs/ecs_03_1402.html)获取。
 
 	Group *string `json:"group,omitempty"`
 	// 专属主机的ID。专属主机的ID仅在tenancy为dedicated时生效。

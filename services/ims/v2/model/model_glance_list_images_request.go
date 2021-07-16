@@ -23,7 +23,7 @@ type GlanceListImagesRequest struct {
 	// 镜像系统类型，取值为Linux，Windows，Other
 
 	OsType *GlanceListImagesRequestOsType `json:"__os_type,omitempty"`
-	// 镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
+	// 镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS
 
 	Platform *GlanceListImagesRequestPlatform `json:"__platform,omitempty"`
 	// 表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性
@@ -256,7 +256,7 @@ type GlanceListImagesRequestPlatformEnum struct {
 	FEDORA       GlanceListImagesRequestPlatform
 	OTHER        GlanceListImagesRequestPlatform
 	CORE_OS      GlanceListImagesRequestPlatform
-	EULE_OS      GlanceListImagesRequestPlatform
+	EULER_OS     GlanceListImagesRequestPlatform
 }
 
 func GetGlanceListImagesRequestPlatformEnum() GlanceListImagesRequestPlatformEnum {
@@ -294,8 +294,8 @@ func GetGlanceListImagesRequestPlatformEnum() GlanceListImagesRequestPlatformEnu
 		CORE_OS: GlanceListImagesRequestPlatform{
 			value: "CoreOS",
 		},
-		EULE_OS: GlanceListImagesRequestPlatform{
-			value: "EuleOS",
+		EULER_OS: GlanceListImagesRequestPlatform{
+			value: "EulerOS",
 		},
 	}
 }
