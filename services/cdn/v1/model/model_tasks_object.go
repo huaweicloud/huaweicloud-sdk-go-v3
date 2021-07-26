@@ -34,15 +34,9 @@ type TasksObject struct {
 	// 任务的创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
 
 	CreateTime *int64 `json:"create_time,omitempty"`
-	// 刷新预热的url。
-
-	Urls *[]string `json:"urls,omitempty"`
 	// 默认是文件file。file：文件,directory：目录。
 
 	FileType *TasksObjectFileType `json:"file_type,omitempty"`
-	// 任务id。
-
-	TaskId *string `json:"task_id,omitempty"`
 }
 
 func (o TasksObject) String() string {

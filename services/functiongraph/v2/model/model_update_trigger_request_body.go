@@ -12,7 +12,7 @@ import (
 type UpdateTriggerRequestBody struct {
 	// 触发器状态
 
-	TriggerStatus *UpdateTriggerRequestBodyTriggerStatus `json:"trigger_status,omitempty"`
+	TriggerStatus UpdateTriggerRequestBodyTriggerStatus `json:"trigger_status"`
 }
 
 func (o UpdateTriggerRequestBody) String() string {

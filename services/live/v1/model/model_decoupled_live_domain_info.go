@@ -33,8 +33,6 @@ type DecoupledLiveDomainInfo struct {
 	// 域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
 
 	CreateTime *sdktime.SdkTime `json:"create_time"`
-
-	DomainSource *DomainSourceInfo `json:"domain_source"`
 }
 
 func (o DecoupledLiveDomainInfo) String() string {

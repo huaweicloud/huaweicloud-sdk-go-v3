@@ -31,7 +31,7 @@ type CreatePartnerCouponsReq struct {
 	// 发券时的备注信息。
 
 	Memo *string `json:"memo,omitempty"`
-	// 精英服务商ID。 精英服务商给子客户发放优惠券时，需要携带该参数。
+	// 精英服务商ID。获取方法请参见查询精英服务商列表。 精英服务商给子客户发放优惠券时，需要携带该参数。
 
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }

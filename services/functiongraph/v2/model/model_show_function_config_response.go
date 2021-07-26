@@ -58,6 +58,9 @@ type ShowFunctionConfigResponse struct {
 	// 用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
 
 	UserData *string `json:"user_data,omitempty"`
+	// 用户自定义的name/value信息，用于需要加密的配置。
+
+	EncryptedUserData *string `json:"encrypted_user_data,omitempty"`
 	// 函数代码SHA512 hash值，用于判断函数是否变化。
 
 	Digest *string `json:"digest,omitempty"`
@@ -76,9 +79,6 @@ type ShowFunctionConfigResponse struct {
 	// 函数描述。
 
 	Description *string `json:"description,omitempty"`
-	// 函数版本描述。
-
-	VersionDescription *string `json:"version_description,omitempty"`
 	// 函数最后一次更新时间。
 
 	LastModified *sdktime.SdkTime `json:"last_modified,omitempty"`
@@ -86,8 +86,6 @@ type ShowFunctionConfigResponse struct {
 	FuncVpc *FuncVpc `json:"func_vpc,omitempty"`
 
 	MountConfig *MountConfig `json:"mount_config,omitempty"`
-
-	Concurrency *int32 `json:"concurrency,omitempty"`
 	// 依赖id列表
 
 	DependList *[]string `json:"depend_list,omitempty"`
@@ -108,7 +106,19 @@ type ShowFunctionConfigResponse struct {
 	// 企业项目ID，在企业用户创建函数时必填。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-	HttpStatusCode      int     `json:"-"`
+	// 是否允许进行长时间超时设置。
+
+	LongTime *bool `json:"long_time,omitempty"`
+	// 自定义日志查询组id
+
+	LogGroupId *string `json:"log_group_id,omitempty"`
+	// 自定义日志查询流id
+
+	LogStreamId *string `json:"log_stream_id,omitempty"`
+	// v2表示为公测版本,v1为原来版本。
+
+	Type           *ShowFunctionConfigResponseType `json:"type,omitempty"`
+	HttpStatusCode int                             `json:"-"`
 }
 
 func (o ShowFunctionConfigResponse) String() string {
@@ -227,6 +237,44 @@ func (c ShowFunctionConfigResponseCodeType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowFunctionConfigResponseCodeType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowFunctionConfigResponseType struct {
+	value string
+}
+
+type ShowFunctionConfigResponseTypeEnum struct {
+	V1 ShowFunctionConfigResponseType
+	V2 ShowFunctionConfigResponseType
+}
+
+func GetShowFunctionConfigResponseTypeEnum() ShowFunctionConfigResponseTypeEnum {
+	return ShowFunctionConfigResponseTypeEnum{
+		V1: ShowFunctionConfigResponseType{
+			value: "v1",
+		},
+		V2: ShowFunctionConfigResponseType{
+			value: "v2",
+		},
+	}
+}
+
+func (c ShowFunctionConfigResponseType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *ShowFunctionConfigResponseType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

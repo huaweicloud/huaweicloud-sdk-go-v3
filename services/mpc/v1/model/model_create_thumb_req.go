@@ -24,18 +24,6 @@ type CreateThumbReq struct {
 	// 是否使用原始输出目录。  取值如下： - 0：不使用原始输出目录，下发的输出目录后面追加随机目录，防止截图文件outputUri相同被覆盖。 - 1：使用原始输出目录。 默认值：0
 
 	OriginalDir *int32 `json:"original_dir,omitempty"`
-	// 租户Id
-
-	ProjectId *string `json:"project_id,omitempty"`
-	// vod租户Id
-
-	TenantProjectId *string `json:"tenant_project_id,omitempty"`
-	// domain名称
-
-	DomainName *string `json:"domain_name,omitempty"`
-	// 用户domainId
-
-	CanonicalGrantId *string `json:"canonical_grant_id,omitempty"`
 }
 
 func (o CreateThumbReq) String() string {

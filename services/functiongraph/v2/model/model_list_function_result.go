@@ -58,6 +58,9 @@ type ListFunctionResult struct {
 	// 用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
 
 	UserData *string `json:"user_data,omitempty"`
+	// 用户自定义的name/value信息，用于需要加密的配置。
+
+	EncryptedUserData *string `json:"encrypted_user_data,omitempty"`
 	// 函数代码SHA512 hash值，用于判断函数是否变化。
 
 	Digest string `json:"digest"`
@@ -76,34 +79,17 @@ type ListFunctionResult struct {
 	// 函数描述。
 
 	Description *string `json:"description,omitempty"`
-	// 函数版本描述。
-
-	VersionDescription *string `json:"version_description,omitempty"`
 	// 函数最后一次更新时间。
 
 	LastModified *sdktime.SdkTime `json:"last_modified"`
-	// 函数最后一次更新utc时间。
+	// 对应tbl_func_vpc表的id字段。
 
-	LastModifiedUtc *int64 `json:"last_modified_utc,omitempty"`
-
-	FuncCode *FuncCode `json:"func_code,omitempty"`
-
-	FuncVpc *FuncVpc `json:"func_vpc,omitempty"`
-
-	MountConfig *MountConfig `json:"mount_config,omitempty"`
-
-	Concurrency *int32 `json:"concurrency,omitempty"`
-	// 依赖id列表
-
-	DependList *[]string `json:"depend_list,omitempty"`
+	FuncVpcId *string `json:"func_vpc_id,omitempty"`
 
 	StrategyConfig *StrategyConfig `json:"strategy_config,omitempty"`
 	// 函数扩展配置。
 
 	ExtendConfig *string `json:"extend_config,omitempty"`
-	// 函数依赖代码包列表。
-
-	Dependencies *[]Dependency `json:"dependencies,omitempty"`
 	// 函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
 
 	InitializerHandler *string `json:"initializer_handler,omitempty"`
@@ -113,6 +99,18 @@ type ListFunctionResult struct {
 	// 企业项目ID，在企业用户创建函数时必填。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	// 是否允许进行长时间超时设置。
+
+	LongTime *bool `json:"long_time,omitempty"`
+	// 自定义日志查询组id
+
+	LogGroupId *string `json:"log_group_id,omitempty"`
+	// 自定义日志查询流id
+
+	LogStreamId *string `json:"log_stream_id,omitempty"`
+	// v2表示为公测版本,v1为原来版本。
+
+	Type *ListFunctionResultType `json:"type,omitempty"`
 }
 
 func (o ListFunctionResult) String() string {
@@ -231,6 +229,44 @@ func (c ListFunctionResultCodeType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListFunctionResultCodeType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListFunctionResultType struct {
+	value string
+}
+
+type ListFunctionResultTypeEnum struct {
+	V1 ListFunctionResultType
+	V2 ListFunctionResultType
+}
+
+func GetListFunctionResultTypeEnum() ListFunctionResultTypeEnum {
+	return ListFunctionResultTypeEnum{
+		V1: ListFunctionResultType{
+			value: "v1",
+		},
+		V2: ListFunctionResultType{
+			value: "v2",
+		},
+	}
+}
+
+func (c ListFunctionResultType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *ListFunctionResultType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

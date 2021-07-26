@@ -32,6 +32,9 @@ type NeutronFirewallRule struct {
 	// 功能说明：是否使能网络ACL规则。 取值范围：true/false
 
 	Enabled bool `json:"enabled"`
+	// 功能说明：是否支持跨租户共享 取值范围：true/false
+
+	Public bool `json:"public"`
 	// 功能说明：目的地址或者CIDR。
 
 	DestinationIpAddress string `json:"destination_ip_address"`

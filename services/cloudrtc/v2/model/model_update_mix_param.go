@@ -20,10 +20,10 @@ type UpdateMixParam struct {
 	// 共享屏幕的背景图地址，图片先上传obs，格式s3://bucket/object。  在一大多小的布局场景下，无论大窗是显示非指定用户（屏幕共享人的桌面）还是指定用户的共享桌面，都通过该字段指定背景图。
 
 	ScreenBackgroundImage *string `json:"screen_background_image,omitempty"`
-	// 最长空闲频道时间。默认值为30秒，该值需大于等于5，且小于等于43200（12小时）。  如果频道内无连麦方的状态持续超过该时间，录制程序会自动退出。退出后，再次调用start请求，会产生新的录制任务。  连麦方指：joiner或者publisher的用户  （当前该字段必须与创建合流任务时携带的值相同）
+	// 最长空闲频道时间。  取值范围：[5，43200]，默认值为30。  单位：秒。  如果频道内无连麦方的状态持续超过该时间，录制程序会自动退出。退出后，再次调用start请求，会产生新的录制任务。  连麦方指：joiner或者publisher的用户。
 
 	MaxIdleTime *int32 `json:"max_idle_time,omitempty"`
-	// 需要混流的视频列表。不混视频的时候，不需要带。
+	// 需要混流的视频列表。若不需要视频混流，则可不传递该参数。
 
 	LayoutPanes *[]MixLayoutPane `json:"layout_panes,omitempty"`
 	// 指定用户背景图，优先级大于default_user_background_image

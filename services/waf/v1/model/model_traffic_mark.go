@@ -1,0 +1,29 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// 流量标识（用于攻击惩罚）
+type TrafficMark struct {
+	// 惩罚ip
+
+	Sip *[]string `json:"sip,omitempty"`
+	// cookie
+
+	Cookie *string `json:"cookie,omitempty"`
+	// 参数
+
+	Params *string `json:"params,omitempty"`
+}
+
+func (o TrafficMark) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "TrafficMark struct{}"
+	}
+
+	return strings.Join([]string{"TrafficMark", string(data)}, " ")
+}

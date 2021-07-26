@@ -10,7 +10,7 @@ type EmChildNodeV2 struct {
 	// 实体关系ID。
 
 	RelationId *string `json:"relation_id,omitempty"`
-	// 节点ID。
+	// 节点ID（即组织单元的Party ID）。
 
 	Id *string `json:"id,omitempty"`
 	// 节点名称。

@@ -162,6 +162,17 @@ func (c *FunctionGraphClient) DeleteVersionAlias(request *model.DeleteVersionAli
 	}
 }
 
+//开通lts日志上报功能。
+func (c *FunctionGraphClient) EnableLtsLogs(request *model.EnableLtsLogsRequest) (*model.EnableLtsLogsResponse, error) {
+	requestDef := GenReqDefForEnableLtsLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableLtsLogsResponse), nil
+	}
+}
+
 //导出函数。
 func (c *FunctionGraphClient) ExportFunction(request *model.ExportFunctionRequest) (*model.ExportFunctionResponse, error) {
 	requestDef := GenReqDefForExportFunction()
@@ -346,6 +357,17 @@ func (c *FunctionGraphClient) ShowFunctionConfig(request *model.ShowFunctionConf
 		return nil, err
 	} else {
 		return resp.(*model.ShowFunctionConfigResponse), nil
+	}
+}
+
+//获取指定函数的lts日志组日志流配置。
+func (c *FunctionGraphClient) ShowLtsLogDetails(request *model.ShowLtsLogDetailsRequest) (*model.ShowLtsLogDetailsResponse, error) {
+	requestDef := GenReqDefForShowLtsLogDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLtsLogDetailsResponse), nil
 	}
 }
 

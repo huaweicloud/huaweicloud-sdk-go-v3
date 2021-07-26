@@ -27,15 +27,11 @@ type CreateTranscodingReq struct {
 	Watermarks *[]WatermarkRequest `json:"watermarks,omitempty"`
 
 	Thumbnail *Thumbnail `json:"thumbnail,omitempty"`
-
-	DigitalWatermark *DigitalWatermark `json:"digital_watermark,omitempty"`
 	// 任务优先级，取值如下： - 9代表高优先级。 - 6代表中优先级，默认为6。  暂时只支持6和9。
 
 	Priority *int32 `json:"priority,omitempty"`
 
 	Subtitle *Subtitle `json:"subtitle,omitempty"`
-
-	SpecialEffect *SpecialEffect `json:"special_effect,omitempty"`
 
 	Encryption *Encryption `json:"encryption,omitempty"`
 
@@ -48,12 +44,6 @@ type CreateTranscodingReq struct {
 	VideoProcess *VideoProcess `json:"video_process,omitempty"`
 
 	AudioProcess *AudioProcess `json:"audio_process,omitempty"`
-
-	QualityEnhance *QualityEnhance `json:"quality_enhance,omitempty"`
-
-	SystemProcess *SystemProcess `json:"system_process,omitempty"`
-
-	TemplateExtend *TemplateExtend `json:"template_extend,omitempty"`
 }
 
 func (o CreateTranscodingReq) String() string {

@@ -14,9 +14,6 @@ type UpdateUserDetailReq struct {
 	// DDM实例帐号的基础权限，默认值为原DDM帐号权限。  取值为：CREATE、DROP、ALTER、INDEX、INSERT、DELETE、UPDATE、SELECT
 
 	BaseAuthority *[]UpdateUserDetailReqBaseAuthority `json:"base_authority,omitempty"`
-	// DDM实例帐号的扩展权限，默认值为空。  取值范围为：fulltableDelete、fulltableSelect、fulltableUpdate。  说明： 权限配置应该遵循如下原则：  请至少选择一个基础权限，且扩展权限对应的基础权限必须选择，对应关系如下：   - “fulltableSelect”对应“SELECT”   - “fulltableDelete”对应“DELETE”   - “fulltableUpdate”对应“UPDATE”
-
-	ExtendAuthority *[]UpdateUserDetailReqExtendAuthority `json:"extend_authority,omitempty"`
 	// DDM实例帐号的描述信息，长度不能超过256个字符。  默认值为空。
 
 	Description *string `json:"description,omitempty"`
@@ -83,48 +80,6 @@ func (c UpdateUserDetailReqBaseAuthority) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateUserDetailReqBaseAuthority) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type UpdateUserDetailReqExtendAuthority struct {
-	value string
-}
-
-type UpdateUserDetailReqExtendAuthorityEnum struct {
-	FULLTABLE_SELECT UpdateUserDetailReqExtendAuthority
-	FULLTABLE_DELETE UpdateUserDetailReqExtendAuthority
-	FULLTABLE_UPDATE UpdateUserDetailReqExtendAuthority
-}
-
-func GetUpdateUserDetailReqExtendAuthorityEnum() UpdateUserDetailReqExtendAuthorityEnum {
-	return UpdateUserDetailReqExtendAuthorityEnum{
-		FULLTABLE_SELECT: UpdateUserDetailReqExtendAuthority{
-			value: "fulltableSelect",
-		},
-		FULLTABLE_DELETE: UpdateUserDetailReqExtendAuthority{
-			value: "fulltableDelete",
-		},
-		FULLTABLE_UPDATE: UpdateUserDetailReqExtendAuthority{
-			value: "fulltableUpdate",
-		},
-	}
-}
-
-func (c UpdateUserDetailReqExtendAuthority) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *UpdateUserDetailReqExtendAuthority) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

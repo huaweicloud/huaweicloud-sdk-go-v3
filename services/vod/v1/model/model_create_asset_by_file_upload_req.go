@@ -9,7 +9,6 @@ import (
 	"strings"
 )
 
-//
 type CreateAssetByFileUploadReq struct {
 	// 媒资标题，长度不超过128个字节，UTF-8编码。
 
@@ -43,7 +42,7 @@ type CreateAssetByFileUploadReq struct {
 	Tags *string `json:"tags,omitempty"`
 	// 是否自动发布。  取值如下： - 0：表示不自动发布。 - 1：表示自动发布。  默认值：0。
 
-	AutoPublish *string `json:"auto_publish,omitempty"`
+	AutoPublish *CreateAssetByFileUploadReqAutoPublish `json:"auto_publish,omitempty"`
 	// 转码模板组名称。  若不为空，则使用指定的转码模板对上传的音视频进行转码，您可以在视频点播控制台配置转码模板，具体请参见[转码设置](https://support.huaweicloud.com/usermanual-vod/vod_01_0072.html)。  > 若同时设置了“**template_group_name**”和“**workflow_name**”字段，则“**template_group_name**”字段生效。
 
 	TemplateGroupName *string `json:"template_group_name,omitempty"`
@@ -106,5 +105,42 @@ func (c *CreateAssetByFileUploadReqCoverType) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateAssetByFileUploadReqAutoPublish struct {
+	value int32
+}
+
+type CreateAssetByFileUploadReqAutoPublishEnum struct {
+	E_0 CreateAssetByFileUploadReqAutoPublish
+	E_1 CreateAssetByFileUploadReqAutoPublish
+}
+
+func GetCreateAssetByFileUploadReqAutoPublishEnum() CreateAssetByFileUploadReqAutoPublishEnum {
+	return CreateAssetByFileUploadReqAutoPublishEnum{
+		E_0: CreateAssetByFileUploadReqAutoPublish{
+			value: 0,
+		}, E_1: CreateAssetByFileUploadReqAutoPublish{
+			value: 1,
+		},
+	}
+}
+
+func (c CreateAssetByFileUploadReqAutoPublish) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *CreateAssetByFileUploadReqAutoPublish) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

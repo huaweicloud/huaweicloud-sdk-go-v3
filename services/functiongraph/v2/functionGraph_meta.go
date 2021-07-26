@@ -245,6 +245,17 @@ func GenReqDefForDeleteVersionAlias() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForEnableLtsLogs() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/fgs/functions/enable-lts-logs").
+		WithResponse(new(model.EnableLtsLogsResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForExportFunction() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -579,6 +590,22 @@ func GenReqDefForShowFunctionConfig() *def.HttpRequestDef {
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/fgs/functions/{function_urn}/config").
 		WithResponse(new(model.ShowFunctionConfigResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FunctionUrn").
+		WithJsonTag("function_urn").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowLtsLogDetails() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/fgs/functions/{function_urn}/lts-log-detail").
+		WithResponse(new(model.ShowLtsLogDetailsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

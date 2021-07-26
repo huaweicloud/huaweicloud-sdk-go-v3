@@ -7,9 +7,6 @@ import (
 )
 
 type AudioInfo struct {
-	// 声轨语言。
-
-	Language *string `json:"language,omitempty"`
 	// 音频编码格式
 
 	Codec *string `json:"codec,omitempty"`
@@ -19,9 +16,6 @@ type AudioInfo struct {
 	// 音频信道
 
 	Channels *int32 `json:"channels,omitempty"`
-	// 是否开启了天空音。
-
-	SkySwitch *int32 `json:"sky_switch,omitempty"`
 	// 音频码率，单位: kbit/s
 
 	Bitrate *int32 `json:"bitrate,omitempty"`

@@ -20,9 +20,6 @@ type CreateUsersInfo struct {
 	// DDM实例帐号的基础权限。  取值为：CREATE、DROP、ALTER、INDEX、INSERT、DELETE、UPDATE、SELECT
 
 	BaseAuthority []CreateUsersInfoBaseAuthority `json:"base_authority"`
-	// DDM实例帐号的扩展权限，默认值为空。  取值范围为：fulltableDelete、fulltableSelect、fulltableUpdate。  说明： 权限配置应该遵循如下原则：  请至少选择一个基础权限，且扩展权限对应的基础权限必须选择，对应关系如下：   - “fulltableSelect”对应“SELECT”   - “fulltableDelete”对应“DELETE”   - “fulltableUpdate”对应“UPDATE”
-
-	ExtendAuthority *[]CreateUsersInfoExtendAuthority `json:"extend_authority,omitempty"`
 	// DDM实例帐号的描述，最大长度不能超过256。默认值为空。
 
 	Description *string `json:"description,omitempty"`
@@ -89,48 +86,6 @@ func (c CreateUsersInfoBaseAuthority) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateUsersInfoBaseAuthority) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type CreateUsersInfoExtendAuthority struct {
-	value string
-}
-
-type CreateUsersInfoExtendAuthorityEnum struct {
-	FULLTABLE_SELECT CreateUsersInfoExtendAuthority
-	FULLTABLE_DELETE CreateUsersInfoExtendAuthority
-	FULLTABLE_UPDATE CreateUsersInfoExtendAuthority
-}
-
-func GetCreateUsersInfoExtendAuthorityEnum() CreateUsersInfoExtendAuthorityEnum {
-	return CreateUsersInfoExtendAuthorityEnum{
-		FULLTABLE_SELECT: CreateUsersInfoExtendAuthority{
-			value: "fulltableSelect",
-		},
-		FULLTABLE_DELETE: CreateUsersInfoExtendAuthority{
-			value: "fulltableDelete",
-		},
-		FULLTABLE_UPDATE: CreateUsersInfoExtendAuthority{
-			value: "fulltableUpdate",
-		},
-	}
-}
-
-func (c CreateUsersInfoExtendAuthority) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *CreateUsersInfoExtendAuthority) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

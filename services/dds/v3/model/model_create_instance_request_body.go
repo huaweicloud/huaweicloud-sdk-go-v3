@@ -28,6 +28,9 @@ type CreateInstanceRequestBody struct {
 	// 指定实例所属的安全组ID。 获取方法请参见《虚拟私有云API参考》中“安全组”的内容。
 
 	SecurityGroupId string `json:"security_group_id"`
+	// 数据库访问端口。 取值范围：2100~9500，以及27017、27018、27019。 不传该参数时，创建实例的访问端口默认为8635。
+
+	Port *string `json:"port,omitempty"`
 	// 数据库密码。 取值范围：长度为8~32位，必须是大写字母（A~Z）、小写字母（a~z）、数字（0~9）、特殊字符~!@#%^*-_=+?的组合。 建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
 
 	Password *string `json:"password,omitempty"`

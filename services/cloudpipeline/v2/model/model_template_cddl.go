@@ -13,7 +13,7 @@ type TemplateCddl struct {
 	Flow map[string]map[string]string `json:"flow"`
 	// 编排State详情，map类型数据。本字段为描述流水线基础编排数据之一，建议可通过流水线真实界面基于模板创建接口中获取
 
-	States map[string]interface{} `json:"states"`
+	States map[string]TemplateState `json:"states"`
 
 	Workflow *Workflow `json:"workflow"`
 }

@@ -37,10 +37,7 @@ type ShowHistoryTaskDetailsResponse struct {
 	Total *int32 `json:"total,omitempty"`
 	// 默认是文件file,file：文件,directory：目录。
 
-	FileType *string `json:"file_type,omitempty"`
-	// 任务id
-
-	TaskId         *string `json:"task_id,omitempty"`
+	FileType       *string `json:"file_type,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

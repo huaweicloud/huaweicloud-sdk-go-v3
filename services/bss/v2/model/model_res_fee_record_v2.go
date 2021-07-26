@@ -64,6 +64,9 @@ type ResFeeRecordV2 struct {
 	// 订单ID或交易ID，扣费维度的唯一标识。
 
 	TradeId *string `json:"trade_id,omitempty"`
+	// |参数名称：交易时间| |参数名称：交易时间，某条消费记录对应的扣费时间。|
+
+	TradeTime *string `json:"trade_time,omitempty"`
 	// 企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

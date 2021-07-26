@@ -13,10 +13,8 @@ type ListWatermarkTemplateResponse struct {
 	Total *int32 `json:"total,omitempty"`
 	// 水印模板
 
-	Templates *[]WatermarkTemplate `json:"templates,omitempty"`
-
-	Error          *XCodeError `json:"error,omitempty"`
-	HttpStatusCode int         `json:"-"`
+	Templates      *[]WatermarkTemplate `json:"templates,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o ListWatermarkTemplateResponse) String() string {

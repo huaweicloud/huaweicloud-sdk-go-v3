@@ -44,9 +44,6 @@ type QueryTranscodingsTaskResponse struct {
 	// 转码成功，但音频采样率过低时的提示。
 
 	Tips *string `json:"tips,omitempty"`
-	// 质检文件输出路径
-
-	OutputUrl *string `json:"output_url,omitempty"`
 
 	TranscodeDetail *TranscodeDetail `json:"transcode_detail,omitempty"`
 

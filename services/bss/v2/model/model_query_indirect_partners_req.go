@@ -22,7 +22,7 @@ type QueryIndirectPartnersReq struct {
 	// 每次查询的数量限制。默认值为10。
 
 	Limit *int32 `json:"limit,omitempty"`
-	// 精英服务商ID。
+	// 精英服务商ID。获取方法请参见查询精英服务商列表。
 
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }

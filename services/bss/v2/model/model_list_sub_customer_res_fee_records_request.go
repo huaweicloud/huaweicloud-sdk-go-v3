@@ -38,7 +38,7 @@ type ListSubCustomerResFeeRecordsRequest struct {
 	// 返回是否包含应付金额为0的记录。true：包含false：不包含
 
 	IncludeZeroRecord *bool `json:"include_zero_record,omitempty"`
-	// 精英服务商ID。如果华为云伙伴能力中心需要查询客户在精英服务商关联期间的消费，需要携带该字段；否则只能查询该客户在与自己关联期间的消费。
+	// 精英服务商ID。获取方法请参见查询精英服务商列表。如果华为云伙伴能力中心需要查询客户在精英服务商关联期间的消费，需要携带该字段；否则只能查询该客户在与自己关联期间的消费。
 
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 	// 查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。

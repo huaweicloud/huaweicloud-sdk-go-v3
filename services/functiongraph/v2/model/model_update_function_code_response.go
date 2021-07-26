@@ -42,8 +42,6 @@ type UpdateFunctionCodeResponse struct {
 	LastModified *sdktime.SdkTime `json:"last_modified,omitempty"`
 
 	FuncCode *FuncCode `json:"func_code,omitempty"`
-
-	Concurrency *int32 `json:"concurrency,omitempty"`
 	// 依赖id列表
 
 	DependList *[]string `json:"depend_list,omitempty"`

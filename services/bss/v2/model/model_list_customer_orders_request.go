@@ -44,7 +44,7 @@ type ListCustomerOrdersRequest struct {
 	// 订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
 
 	PaymentTimeEnd *string `json:"payment_time_end,omitempty"`
-	// 精英服务商ID。华为云伙伴能力中心（一级经销商）查询精英服务商的客户订单列表时，需要携带该参数；否则只能查询自己客户的订单列表。
+	// 精英服务商ID。获取方法请参见查询精英服务商列表。华为云伙伴能力中心（一级经销商）查询精英服务商的客户订单列表时，需要携带该参数；否则只能查询自己客户的订单列表。
 
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }

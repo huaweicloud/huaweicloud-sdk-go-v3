@@ -23,6 +23,9 @@ type ListMonitoredObjectsOfInstanceResponse struct {
 	// Proxy集群时才存在，表示集群Proxy节点维度的监控对象列表。字段名称与children的子维度对象名称相同。
 
 	DcsClusterProxyNode *[]ProxyNodeMonitoredObject `json:"dcs_cluster_proxy_node,omitempty"`
+	// Redis 4.0和5.0的Proxy集群时才存在，表示集群Proxy节点维度的监控对象列表。字段名称与children的子维度对象名称相同。
+
+	DcsClusterProxy2Node *[]Proxy2NodeMonitoredObject `json:"dcs_cluster_proxy2_node,omitempty"`
 	// 主维度监控对象的总数。
 
 	Total          *int32 `json:"total,omitempty"`

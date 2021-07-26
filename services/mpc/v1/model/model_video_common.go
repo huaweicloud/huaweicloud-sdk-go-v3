@@ -43,12 +43,6 @@ type VideoCommon struct {
 	// 黑边剪裁类型  取值如下： - 0：不开启黑边剪裁 - 1：开启黑边剪裁，低复杂度算法，针对长视频（>5分钟） - 2：开启黑边剪裁，高复杂度算法，针对短视频（<=5分钟）
 
 	BlackCut *int32 `json:"black_cut,omitempty"`
-	// GOP类型（暂不开放） 0: Closed (Default) 1:Open
-
-	GOPStructure *bool `json:"GOP_structure,omitempty"`
-	// 超分倍数  取值如下： - 2：两倍超分
-
-	SrFactor *string `json:"sr_factor,omitempty"`
 }
 
 func (o VideoCommon) String() string {

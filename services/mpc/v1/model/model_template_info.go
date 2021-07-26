@@ -12,8 +12,6 @@ type TemplateInfo struct {
 	TemplateId *int32 `json:"template_id,omitempty"`
 
 	Template *QueryTransTemplate `json:"template,omitempty"`
-
-	Error *XCodeError `json:"error,omitempty"`
 }
 
 func (o TemplateInfo) String() string {

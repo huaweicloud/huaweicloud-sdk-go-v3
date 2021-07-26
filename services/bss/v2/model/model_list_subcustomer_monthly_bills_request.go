@@ -29,7 +29,7 @@ type ListSubcustomerMonthlyBillsRequest struct {
 	// 账单类型。0：消费1：退订2：华为核销
 
 	BillType *string `json:"bill_type,omitempty"`
-	// 精英服务商ID。
+	// 精英服务商ID。获取方法请参见查询精英服务商列表。
 
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }

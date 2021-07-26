@@ -16,7 +16,7 @@ type BankCardInfoV2 struct {
 	// 手机号码。
 
 	Mobile string `json:"mobile"`
-	// 验证码。 请调用“发送验证码”接口获取。 如果手机号不存在，则不需要输入验证码。
+	// 验证码。 请调用“发送验证码”接口获取。
 
 	VerificationCode string `json:"verification_code"`
 }

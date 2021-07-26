@@ -17,16 +17,16 @@ type IndividualStreamJobReq struct {
 	// 选看的用户id，单个录制任务内保证唯一
 
 	UserId string `json:"user_id"`
-	// 是否录制音频，true：录制音频，false：不录制音频
+	//  是否录制音频。  - true：录制音频 - false：不录制音频  缺省为true。
 
 	IsRecordAudio *bool `json:"is_record_audio,omitempty"`
-	// 视频流的类型，可选摄像头流和屏幕分享流。默认为摄像头视频，未填写表示不录制视频
+	// 标识视频流的类型，可选摄像头流或者屏幕分享流，未填写表示不录制视频。  - CAMERASTREAM：摄像头视频流 - SCREENSTREAM：屏幕分享视频流  默认为CAMERASTREAM。
 
 	VideoType *IndividualStreamJobReqVideoType `json:"video_type,omitempty"`
-	// 指定窗口拉取的分辨率档位 [ LD, SD, HD, FHD ] 默认FHD
+	// 指定窗口拉取的分辨率档位。  - LD - SD - HD - FHD  缺省为FHD。
 
 	SelectStreamType *IndividualStreamJobReqSelectStreamType `json:"select_stream_type,omitempty"`
-	// 最长空闲频道时间。默认值为30秒，该值需大于等于5，且小于等于43200（12小时）。  如果频道内无连麦方的状态持续超过该时间，录制程序会自动退出。退出后，再次调用start请求，会产生新的录制任务。  连麦方指：joiner或者publisher的用户
+	// 最长空闲频道时间。  取值范围：[5，43200]，默认值为30。  单位：秒。  如果频道内无连麦方的状态持续超过该时间，录制程序会自动退出。退出后，再次调用start请求，会产生新的录制任务。  连麦方指：joiner或者publisher的用户。
 
 	MaxIdleTime *int32 `json:"max_idle_time,omitempty"`
 

@@ -19,6 +19,17 @@ func HssClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//查入侵事件列表
+func (c *HssClient) ListEvents(request *model.ListEventsRequest) (*model.ListEventsResponse, error) {
+	requestDef := GenReqDefForListEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEventsResponse), nil
+	}
+}
+
 //查询弹性云服务器状态列表
 func (c *HssClient) ListHosts(request *model.ListHostsRequest) (*model.ListHostsResponse, error) {
 	requestDef := GenReqDefForListHosts()

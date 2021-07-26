@@ -13,7 +13,7 @@ type RemuxOutputParam struct {
 	// 分片时长，仅当“format”为“HLS”时有效。  取值范围：[2，10]。  默认值： 5。  单位：秒。
 
 	SegmentDuration *int32 `json:"segment_duration,omitempty"`
-	// 输出媒体是否去除片源的中metadata信息。
+	// 输出媒体是否去除片源的中metadata自定义信息。默认值：false
 
 	RemoveMeta *bool `json:"remove_meta,omitempty"`
 }

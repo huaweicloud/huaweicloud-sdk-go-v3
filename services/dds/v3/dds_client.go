@@ -646,6 +646,17 @@ func (c *DdsClient) SwitchoverReplicaSet(request *model.SwitchoverReplicaSetRequ
 	}
 }
 
+//副本集跨网段访问配置。
+func (c *DdsClient) UpdateClientNetwork(request *model.UpdateClientNetworkRequest) (*model.UpdateClientNetworkResponse, error) {
+	requestDef := GenReqDefForUpdateClientNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateClientNetworkResponse), nil
+	}
+}
+
 //修改实例名称
 func (c *DdsClient) UpdateInstanceName(request *model.UpdateInstanceNameRequest) (*model.UpdateInstanceNameResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceName()

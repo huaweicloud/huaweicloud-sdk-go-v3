@@ -37,6 +37,9 @@ type CreateInstanceResponse struct {
 	// 实例所属的安全组ID，与请求参数相同。
 
 	SecurityGroupId *string `json:"security_group_id,omitempty"`
+	// 数据库访问端口。
+
+	Port *int64 `json:"port,omitempty"`
 	// 磁盘加密的密钥ID，与请求参数相同。
 
 	DiskEncryptionId *string `json:"disk_encryption_id,omitempty"`

@@ -14,7 +14,7 @@ type DssPoolInfo struct {
 	// 专属存储池免费空间大小，单位GB
 
 	FreeCapacityGb string `json:"free_capacity_gb"`
-	// 专属存储池磁盘类型名称，可能取值如下：  - ULTRAHIGH，表示SSD。  - ULTRAHIGHPRO，表示SSD尊享版，仅支持超高性能型尊享版实例。  - NVMESSD，表示直通SSD，仅支持i3规格实例。
+	// 专属存储池磁盘类型名称，可能取值如下：  - ULTRAHIGH，表示SSD。  - LOCALSSD：表示本地SSD。  - CLOUDSSD：表示SSD云盘，仅支持通用型和独享型规格实例。  - ESSD：表示极速型SSD，仅支持独享型规格实例。
 
 	DsspoolVolumeType string `json:"dsspool_volume_type"`
 	// 专属存储池ID

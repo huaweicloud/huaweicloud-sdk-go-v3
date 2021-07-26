@@ -58,6 +58,9 @@ type CreateFunctionVersionResponse struct {
 	// 用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
 
 	UserData *string `json:"user_data,omitempty"`
+	// 用户自定义的name/value信息，用于需要加密的配置。
+
+	EncryptedUserData *string `json:"encrypted_user_data,omitempty"`
 	// 函数代码SHA512 hash值，用于判断函数是否变化。
 
 	Digest *string `json:"digest,omitempty"`
@@ -86,8 +89,6 @@ type CreateFunctionVersionResponse struct {
 	FuncVpc *FuncVpc `json:"func_vpc,omitempty"`
 
 	MountConfig *MountConfig `json:"mount_config,omitempty"`
-
-	Concurrency *int32 `json:"concurrency,omitempty"`
 	// 依赖id列表
 
 	DependList *[]string `json:"depend_list,omitempty"`
@@ -108,7 +109,19 @@ type CreateFunctionVersionResponse struct {
 	// 企业项目ID，在企业用户创建函数时必填。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-	HttpStatusCode      int     `json:"-"`
+	// 是否允许进行长时间超时设置。
+
+	LongTime *bool `json:"long_time,omitempty"`
+	// 自定义日志查询组id
+
+	LogGroupId *string `json:"log_group_id,omitempty"`
+	// 自定义日志查询流id
+
+	LogStreamId *string `json:"log_stream_id,omitempty"`
+	// v2表示为公测版本,v1为原来版本。
+
+	Type           *CreateFunctionVersionResponseType `json:"type,omitempty"`
+	HttpStatusCode int                                `json:"-"`
 }
 
 func (o CreateFunctionVersionResponse) String() string {
@@ -227,6 +240,44 @@ func (c CreateFunctionVersionResponseCodeType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateFunctionVersionResponseCodeType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateFunctionVersionResponseType struct {
+	value string
+}
+
+type CreateFunctionVersionResponseTypeEnum struct {
+	V1 CreateFunctionVersionResponseType
+	V2 CreateFunctionVersionResponseType
+}
+
+func GetCreateFunctionVersionResponseTypeEnum() CreateFunctionVersionResponseTypeEnum {
+	return CreateFunctionVersionResponseTypeEnum{
+		V1: CreateFunctionVersionResponseType{
+			value: "v1",
+		},
+		V2: CreateFunctionVersionResponseType{
+			value: "v2",
+		},
+	}
+}
+
+func (c CreateFunctionVersionResponseType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *CreateFunctionVersionResponseType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

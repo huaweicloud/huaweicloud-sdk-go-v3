@@ -14,10 +14,10 @@ type ShowHistoryTasksRequest struct {
 	// 当用户开启企业项目功能时，该参数生效，表示资源所属企业项目，不传表示默认项目。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-	// 单页最大数量，取值范围为1-10000。
+	// 单页最大数量，取值范围为1-10000。page_size和page_number必须同时传值。默认值30。
 
 	PageSize *int32 `json:"page_size,omitempty"`
-	// 当前查询第几页，取值范围为1-65535。
+	// 当前查询第几页，取值范围为1-65535。默认值1。
 
 	PageNumber *int32 `json:"page_number,omitempty"`
 	// 任务状态。 task_inprocess 表示任务处理中，task_done表示任务完成。
@@ -29,21 +29,15 @@ type ShowHistoryTasksRequest struct {
 	// 查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
 
 	EndDate *int64 `json:"end_date,omitempty"`
-	// 用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值。
+	// 用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"。
 
 	OrderField *string `json:"order_field,omitempty"`
-	// desc 或者asc。
+	// desc 或者asc。默认值desc。
 
 	OrderType *string `json:"order_type,omitempty"`
-	// 指定用户的域id。
-
-	UserDomainId *string `json:"user_domain_id,omitempty"`
 	// 默认是文件file。file：文件,directory：目录。
 
 	FileType *ShowHistoryTasksRequestFileType `json:"file_type,omitempty"`
-	// 任务id。
-
-	TaskId *string `json:"task_id,omitempty"`
 }
 
 func (o ShowHistoryTasksRequest) String() string {

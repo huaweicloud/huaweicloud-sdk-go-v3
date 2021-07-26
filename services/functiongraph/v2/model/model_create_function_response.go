@@ -58,6 +58,9 @@ type CreateFunctionResponse struct {
 	// 用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
 
 	UserData *string `json:"user_data,omitempty"`
+	// 用户自定义的name/value信息，用于需要加密的配置。
+
+	EncryptedUserData *string `json:"encrypted_user_data,omitempty"`
 	// 函数代码SHA512 hash值，用于判断函数是否变化。
 
 	Digest *string `json:"digest,omitempty"`
@@ -76,9 +79,6 @@ type CreateFunctionResponse struct {
 	// 函数描述。
 
 	Description *string `json:"description,omitempty"`
-	// 函数版本描述。
-
-	VersionDescription *string `json:"version_description,omitempty"`
 	// 函数最后一次更新时间。
 
 	LastModified *sdktime.SdkTime `json:"last_modified,omitempty"`
@@ -86,8 +86,6 @@ type CreateFunctionResponse struct {
 	FuncVpc *FuncVpc `json:"func_vpc,omitempty"`
 
 	MountConfig *MountConfig `json:"mount_config,omitempty"`
-
-	Concurrency *int32 `json:"concurrency,omitempty"`
 	// 依赖id列表
 
 	DependList *[]string `json:"depend_list,omitempty"`
@@ -96,9 +94,6 @@ type CreateFunctionResponse struct {
 	// 函数扩展配置。
 
 	ExtendConfig *string `json:"extend_config,omitempty"`
-	// 函数依赖代码包列表。
-
-	Dependencies *[]Dependency `json:"dependencies,omitempty"`
 	// 函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
 
 	InitializerHandler *string `json:"initializer_handler,omitempty"`

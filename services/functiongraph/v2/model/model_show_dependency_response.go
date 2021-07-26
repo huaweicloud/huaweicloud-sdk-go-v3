@@ -25,7 +25,7 @@ type ShowDependencyResponse struct {
 	Etag *string `json:"etag,omitempty"`
 	// 依赖包大小。
 
-	Size *string `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty"`
 	// 依赖包名。
 
 	Name *string `json:"name,omitempty"`

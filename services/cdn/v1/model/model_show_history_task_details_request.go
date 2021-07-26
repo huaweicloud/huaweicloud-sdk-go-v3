@@ -14,16 +14,16 @@ type ShowHistoryTaskDetailsRequest struct {
 	// 刷新任务ID。
 
 	HistoryTasksId string `json:"history_tasks_id"`
-	// 刷新预热的urls所显示单页最大数量，取值范围为1-10000。
+	// 刷新预热的urls所显示单页最大数量，取值范围为1-10000。page_size和page_number必须同时传值。默认值30。
 
 	PageSize *int32 `json:"page_size,omitempty"`
-	// 刷新预热的urls当前查询为第几页，取值范围为1-65535。
+	// 刷新预热的urls当前查询为第几页，取值范围为1-65535。默认值1。
 
 	PageNumber *int32 `json:"page_number,omitempty"`
-	// url的状态 processing， succeed， failed，分别表示处理中，完成，失败。
+	// url的状态 processing 处理中，succeed 完成，failed 失败，waiting 等待，refreshing 刷新中，preheating 预热中。
 
-	Status *int32 `json:"status,omitempty"`
-	// url的地址，支持同一任务id的多个url,多个url用分号隔开。
+	Status *string `json:"status,omitempty"`
+	// url的地址。
 
 	Url *string `json:"url,omitempty"`
 }

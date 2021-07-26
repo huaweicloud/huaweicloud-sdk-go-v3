@@ -41,6 +41,17 @@ func (c *CloudPipelineClient) CreatePipelineByTemplate(request *model.CreatePipe
 	}
 }
 
+//获取流水线列表接口
+func (c *CloudPipelineClient) ListPipelineSimpleInfo(request *model.ListPipelineSimpleInfoRequest) (*model.ListPipelineSimpleInfoResponse, error) {
+	requestDef := GenReqDefForListPipelineSimpleInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPipelineSimpleInfoResponse), nil
+	}
+}
+
 //获取项目下流水线执行状况
 func (c *CloudPipelineClient) ListPipleineBuildResult(request *model.ListPipleineBuildResultRequest) (*model.ListPipleineBuildResultResponse, error) {
 	requestDef := GenReqDefForListPipleineBuildResult()

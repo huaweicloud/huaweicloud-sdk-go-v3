@@ -81,11 +81,6 @@ type ListFunctionVersionResult struct {
 	// 函数最后一次更新时间。
 
 	LastModified *sdktime.SdkTime `json:"last_modified"`
-	// 函数最后一次更新utc时间。
-
-	LastModifiedUtc *int64 `json:"last_modified_utc,omitempty"`
-
-	FuncCode *FuncCode `json:"func_code,omitempty"`
 
 	FuncVpc *FuncVpc `json:"func_vpc,omitempty"`
 

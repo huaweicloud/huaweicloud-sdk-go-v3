@@ -22,8 +22,6 @@ type LiveDomainCreateReq struct {
 	// 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
 
 	ServiceArea *LiveDomainCreateReqServiceArea `json:"service_area,omitempty"`
-
-	DomainSource *DomainSourceInfo `json:"domain_source,omitempty"`
 }
 
 func (o LiveDomainCreateReq) String() string {
