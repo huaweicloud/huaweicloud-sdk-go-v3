@@ -1,3 +1,14 @@
+# 0.0.54 2021-07-27
+
+### HuaweiCloud SDK Classroom
+
+- _Features_
+    - Support the interfaces `ApplyJudgement`,`ShowJudgementDetail`,`ShowJudgementFile`.
+- _Bug Fix_
+    - None
+- _Change_
+    - None
+
 # 0.0.53 2021-07-26
 
 ### HuaweiCloud SDK CDN

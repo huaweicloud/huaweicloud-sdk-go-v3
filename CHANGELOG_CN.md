@@ -1,3 +1,14 @@
+# 0.0.54 2021-07-27
+
+### HuaweiCloud SDK Classroom
+
+- _新增特性_
+    - 支持接口`ApplyJudgement`、`ShowJudgementDetail`、`ShowJudgementFile`
+- _解决问题_
+    - 无
+- _特性变更_
+    - 无
+
 # 0.0.53 2021-07-26
 
 ### HuaweiCloud SDK CDN

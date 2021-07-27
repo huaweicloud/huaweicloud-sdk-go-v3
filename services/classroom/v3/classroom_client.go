@@ -19,6 +19,39 @@ func ClassroomClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//下发判题任务，根据回调地址、代码来源、源代码文本、语言类型、超时时长、输出类型，触发后台代码编译运行和判题
+func (c *ClassroomClient) ApplyJudgement(request *model.ApplyJudgementRequest) (*model.ApplyJudgementResponse, error) {
+	requestDef := GenReqDefForApplyJudgement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ApplyJudgementResponse), nil
+	}
+}
+
+//根据判题任务ID获取判题结果详情
+func (c *ClassroomClient) ShowJudgementDetail(request *model.ShowJudgementDetailRequest) (*model.ShowJudgementDetailResponse, error) {
+	requestDef := GenReqDefForShowJudgementDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJudgementDetailResponse), nil
+	}
+}
+
+//根据文件id或图片id下载输出结果文件
+func (c *ClassroomClient) ShowJudgementFile(request *model.ShowJudgementFileRequest) (*model.ShowJudgementFileResponse, error) {
+	requestDef := GenReqDefForShowJudgementFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJudgementFileResponse), nil
+	}
+}
+
 //根据课堂ID获取指定课堂的课堂成员列表，支持分页，搜索字段默认同时匹配姓名，学号，用户名，班级。
 func (c *ClassroomClient) ListClassroomMembers(request *model.ListClassroomMembersRequest) (*model.ListClassroomMembersResponse, error) {
 	requestDef := GenReqDefForListClassroomMembers()
