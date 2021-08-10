@@ -35,7 +35,7 @@ type UpdateWatermarkTemplateReq struct {
 	// 水印类型，当前只支持Image（图片水印）<br/>
 
 	WatermarkType *UpdateWatermarkTemplateReqWatermarkType `json:"watermark_type,omitempty"`
-	// type设置为Image时有效，目前包括Original（只做简单缩放，不做其他处理），Transparent（图片底色透明），Grayed（彩色图片变灰）<br/>
+	// type设置为Image时有效。  目前包括： - Original：只做简单缩放，不做其他处理 - Transparent：图片底色透明 - Grayed：彩色图片变灰
 
 	ImageProcess *UpdateWatermarkTemplateReqImageProcess `json:"image_process,omitempty"`
 	// 水印开始时间<br/>

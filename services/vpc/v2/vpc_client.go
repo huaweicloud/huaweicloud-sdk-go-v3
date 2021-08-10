@@ -30,6 +30,17 @@ func (c *VpcClient) AcceptVpcPeering(request *model.AcceptVpcPeeringRequest) (*m
 	}
 }
 
+//路由表关联子网。子网关联路由表A后，再关联B，不需要先跟路由表A解关联再关联路由表B
+func (c *VpcClient) AssociateRouteTable(request *model.AssociateRouteTableRequest) (*model.AssociateRouteTableResponse, error) {
+	requestDef := GenReqDefForAssociateRouteTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateRouteTableResponse), nil
+	}
+}
+
 //为指定的子网资源实例批量添加标签。 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
 func (c *VpcClient) BatchCreateSubnetTags(request *model.BatchCreateSubnetTagsRequest) (*model.BatchCreateSubnetTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateSubnetTags()
@@ -60,6 +71,17 @@ func (c *VpcClient) CreatePort(request *model.CreatePortRequest) (*model.CreateP
 		return nil, err
 	} else {
 		return resp.(*model.CreatePortResponse), nil
+	}
+}
+
+//创建路由表
+func (c *VpcClient) CreateRouteTable(request *model.CreateRouteTableRequest) (*model.CreateRouteTableResponse, error) {
+	requestDef := GenReqDefForCreateRouteTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRouteTableResponse), nil
 	}
 }
 
@@ -129,6 +151,17 @@ func (c *VpcClient) DeletePort(request *model.DeletePortRequest) (*model.DeleteP
 	}
 }
 
+//删除路由表
+func (c *VpcClient) DeleteRouteTable(request *model.DeleteRouteTableRequest) (*model.DeleteRouteTableResponse, error) {
+	requestDef := GenReqDefForDeleteRouteTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRouteTableResponse), nil
+	}
+}
+
 //删除安全组。
 func (c *VpcClient) DeleteSecurityGroup(request *model.DeleteSecurityGroupRequest) (*model.DeleteSecurityGroupResponse, error) {
 	requestDef := GenReqDefForDeleteSecurityGroup()
@@ -184,6 +217,17 @@ func (c *VpcClient) DeleteVpcPeering(request *model.DeleteVpcPeeringRequest) (*m
 	}
 }
 
+//子网解关联路由表
+func (c *VpcClient) DisassociateRouteTable(request *model.DisassociateRouteTableRequest) (*model.DisassociateRouteTableResponse, error) {
+	requestDef := GenReqDefForDisassociateRouteTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisassociateRouteTableResponse), nil
+	}
+}
+
 //查询提交请求的租户的所有端口，单次查询最多返回2000条数据。
 func (c *VpcClient) ListPorts(request *model.ListPortsRequest) (*model.ListPortsResponse, error) {
 	requestDef := GenReqDefForListPorts()
@@ -192,6 +236,17 @@ func (c *VpcClient) ListPorts(request *model.ListPortsRequest) (*model.ListPorts
 		return nil, err
 	} else {
 		return resp.(*model.ListPortsResponse), nil
+	}
+}
+
+//查询提交请求的帐户的所有路由表列表，并根据过滤条件进行过滤
+func (c *VpcClient) ListRouteTables(request *model.ListRouteTablesRequest) (*model.ListRouteTablesResponse, error) {
+	requestDef := GenReqDefForListRouteTables()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRouteTablesResponse), nil
 	}
 }
 
@@ -294,6 +349,17 @@ func (c *VpcClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuota
 	}
 }
 
+//查询路由表详情
+func (c *VpcClient) ShowRouteTable(request *model.ShowRouteTableRequest) (*model.ShowRouteTableResponse, error) {
+	requestDef := GenReqDefForShowRouteTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRouteTableResponse), nil
+	}
+}
+
 //查询单个安全组详情。
 func (c *VpcClient) ShowSecurityGroup(request *model.ShowSecurityGroupRequest) (*model.ShowSecurityGroupResponse, error) {
 	requestDef := GenReqDefForShowSecurityGroup()
@@ -357,6 +423,17 @@ func (c *VpcClient) UpdatePort(request *model.UpdatePortRequest) (*model.UpdateP
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePortResponse), nil
+	}
+}
+
+//更新路由表，包括可以更新路由表的名称，描述，以及新增、更新、删除路由条目
+func (c *VpcClient) UpdateRouteTable(request *model.UpdateRouteTableRequest) (*model.UpdateRouteTableResponse, error) {
+	requestDef := GenReqDefForUpdateRouteTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRouteTableResponse), nil
 	}
 }
 

@@ -1,0 +1,34 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+type FaceQuality struct {
+	// 人脸质量总分，取值范围[0-1]，分值越大质量越高。
+
+	TotalScore float64 `json:"total_score"`
+	// 模糊度，取值范围[0-1]，分值越大模糊问题越严重。
+
+	Blur float64 `json:"blur"`
+	// 姿态，取值范围[0-1]，分值越大姿态问题越严重。
+
+	Pose float64 `json:"pose"`
+	// 遮挡，取值范围[0-1]，分值越大遮挡问题越严重。
+
+	Occlusion float64 `json:"occlusion"`
+	// 光照，取值范围[0-1]，分值越大光照问题越严重。
+
+	Illumination float64 `json:"illumination"`
+}
+
+func (o FaceQuality) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "FaceQuality struct{}"
+	}
+
+	return strings.Join([]string{"FaceQuality", string(data)}, " ")
+}

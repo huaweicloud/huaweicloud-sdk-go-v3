@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListCustomerBillsFeeRecordsRequest struct {
-	// |忽略大小写，默认 zh_cn：中文 en_us：英文|
+	// |zh_CN：中文 en_US：英文。默认为zh_CN：中文。|
 
 	XLanguage *string `json:"X-Language,omitempty"`
 	// 查询的流水账单所在账期，格式为YYYY-MM。

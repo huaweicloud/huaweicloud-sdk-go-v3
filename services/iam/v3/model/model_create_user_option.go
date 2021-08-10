@@ -35,7 +35,7 @@ type CreateUserOption struct {
 	// IAM用户首次登录是否重置密码，默认需要重置。
 
 	PwdStatus *bool `json:"pwd_status,omitempty"`
-	// IAM用户在外部系统中的类型。长度小于等于64字符。xuser_type如果存在，则需要与同一租户中的xaccount_type、xdomain_type校验，须与xuser_id同时存在。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+	// IAM用户在外部系统中的类型。长度小于等于64字符。xuser_type如果存在且不等于TenantIdp时，则需要与同一租户中的xaccount_type、xdomain_type校验，须与xuser_id同时存在。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
 
 	XuserType *string `json:"xuser_type,omitempty"`
 	// IAM用户在外部系统中的ID。长度小于等于128字符，须与xuser_type同时存在。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。

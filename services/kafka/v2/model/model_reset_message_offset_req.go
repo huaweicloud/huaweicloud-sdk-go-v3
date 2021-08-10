@@ -16,7 +16,7 @@ type ResetMessageOffsetReq struct {
 	// 重置的消费进度到指定偏移量。 如果传入offset小于当前最小的offset，则重置到最小的offset。 如果大于最大的offset，则重置到最大的offset。 message_offset、timestamp二者必选其一。
 
 	MessageOffset *int32 `json:"message_offset,omitempty"`
-	// 重置的消费进度到指定时间，格式为unix时间戳。 如果传入timestamp早于当前最早的timestamp，则重置到最早的timestamp。 如果晚于最晚的timestamp，则重置到最晚的timestamp。 message_offset、timestamp二者必选其一。
+	// 重置的消费进度到指定时间，格式为unix时间戳，单位为毫秒。 如果传入timestamp早于当前最早的timestamp，则重置到最早的timestamp。 如果晚于最晚的timestamp，则重置到最晚的timestamp。 message_offset、timestamp二者必选其一。
 
 	Timestamp *int32 `json:"timestamp,omitempty"`
 }

@@ -35,6 +35,9 @@ type QueryLtsLogParams struct {
 	// 表示每次查询的日志条数，不填时默认为5000，建议您设置为100。
 
 	Limit *int32 `json:"limit,omitempty"`
+	// 日志关键词高亮显示，默认为true（高亮显示），false为取消高亮显示。
+
+	Highlight *bool `json:"highlight,omitempty"`
 }
 
 func (o QueryLtsLogParams) String() string {
@@ -85,13 +88,17 @@ type QueryLtsLogParamsSearchType struct {
 }
 
 type QueryLtsLogParamsSearchTypeEnum struct {
-	FORWARDS QueryLtsLogParamsSearchType
+	FORWARDS  QueryLtsLogParamsSearchType
+	BACKWARDS QueryLtsLogParamsSearchType
 }
 
 func GetQueryLtsLogParamsSearchTypeEnum() QueryLtsLogParamsSearchTypeEnum {
 	return QueryLtsLogParamsSearchTypeEnum{
 		FORWARDS: QueryLtsLogParamsSearchType{
 			value: "forwards",
+		},
+		BACKWARDS: QueryLtsLogParamsSearchType{
+			value: "backwards",
 		},
 	}
 }

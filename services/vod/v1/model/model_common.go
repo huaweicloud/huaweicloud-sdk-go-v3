@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 模板信息
+// 模板信息。
 type Common struct {
 	// pvc开关。
 

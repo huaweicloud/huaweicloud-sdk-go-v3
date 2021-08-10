@@ -13,8 +13,6 @@ type VideoProcess struct {
 	// 视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
 
 	Rotate *int32 `json:"rotate,omitempty"`
-
-	BlackEnhance *BlackEnhance `json:"black_enhance,omitempty"`
 	// 长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
 
 	Adaptation *VideoProcessAdaptation `json:"adaptation,omitempty"`

@@ -49,7 +49,7 @@ type MonthlyBillRes struct {
 	// 计费模式。 1 : 包年/包月3：按需10：预留实例
 
 	ChargeMode *int32 `json:"charge_mode,omitempty"`
-	// 客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后2位。
+	// 客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后2位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
 
 	ConsumeAmount *float64 `json:"consume_amount,omitempty"`
 	// 现金支付金额。

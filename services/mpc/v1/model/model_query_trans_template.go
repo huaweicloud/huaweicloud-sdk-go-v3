@@ -10,9 +10,6 @@ type QueryTransTemplate struct {
 	// 转码模板名称。
 
 	TemplateName string `json:"template_name"`
-	// 租户ID。
-
-	TenantId *string `json:"tenant_id,omitempty"`
 
 	Video *Video `json:"video"`
 

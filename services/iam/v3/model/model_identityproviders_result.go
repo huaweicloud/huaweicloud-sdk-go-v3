@@ -8,6 +8,9 @@ import (
 
 //
 type IdentityprovidersResult struct {
+	// 身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种。当返回为空字符串或者null时，默认为缺省类型virtual_user_sso类型。
+
+	SsoType string `json:"sso_type"`
 	// 身份提供商ID。
 
 	Id string `json:"id"`

@@ -20,7 +20,7 @@ type ModifyTransTemplateGroup struct {
 	// 是否设置默认。
 
 	Status *ModifyTransTemplateGroupStatus `json:"status,omitempty"`
-	// 是否自动加密。  取值如下： - 0：表示不加密。 - 1：表示需要加密。  默认值：0。  加密与转码必须要一起进行，当需要加密时，转码参数不能为空，且转码输出必须要为HLS。
+	// 是否自动加密。  取值如下： - 0：表示不加密。 - 1：表示需要加密。  默认值：0。  加密与转码必须要一起进行，当需要加密时，转码参数不能为空，且转码输出格式必须要为HLS。
 
 	AutoEncrypt *int32 `json:"auto_encrypt,omitempty"`
 	// 画质配置信息列表。

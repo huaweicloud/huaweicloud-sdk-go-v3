@@ -3,9 +3,6 @@ package model
 import (
 	"encoding/json"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -28,9 +25,6 @@ type VideoInfo struct {
 	// 视频编码格式
 
 	Codec *string `json:"codec,omitempty"`
-	// 片源动态范围类型。  取值如下： - SDR - HDR10 - CUVA_HDR
-
-	DynamicRange *VideoInfoDynamicRange `json:"dynamic_range,omitempty"`
 }
 
 func (o VideoInfo) String() string {
@@ -40,46 +34,4 @@ func (o VideoInfo) String() string {
 	}
 
 	return strings.Join([]string{"VideoInfo", string(data)}, " ")
-}
-
-type VideoInfoDynamicRange struct {
-	value string
-}
-
-type VideoInfoDynamicRangeEnum struct {
-	SDR      VideoInfoDynamicRange
-	HDR10    VideoInfoDynamicRange
-	CUVA_HDR VideoInfoDynamicRange
-}
-
-func GetVideoInfoDynamicRangeEnum() VideoInfoDynamicRangeEnum {
-	return VideoInfoDynamicRangeEnum{
-		SDR: VideoInfoDynamicRange{
-			value: "SDR",
-		},
-		HDR10: VideoInfoDynamicRange{
-			value: "HDR10",
-		},
-		CUVA_HDR: VideoInfoDynamicRange{
-			value: "CUVA_HDR",
-		},
-	}
-}
-
-func (c VideoInfoDynamicRange) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *VideoInfoDynamicRange) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

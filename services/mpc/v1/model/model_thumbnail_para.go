@@ -13,9 +13,6 @@ type ThumbnailPara struct {
 	// 采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。 默认值：\"TIME\"
 
 	Type *ThumbnailParaType `json:"type,omitempty"`
-	// 根据视频时长百分比间隔采样时的百分比值。
-
-	Percent *int32 `json:"percent,omitempty"`
 	// 采样截图的时间间隔值。  默认值：12。  单位：秒
 
 	Time *int32 `json:"time,omitempty"`
@@ -46,9 +43,6 @@ type ThumbnailPara struct {
 	// 截图最长边的尺寸。宽边尺寸按照该尺寸与原始视频像素等比缩放计算。  取值范围：[240,3840]  默认值：480  单位：像素 > 该参数和width/height选择使用，以width/height优先，若width/height都不等于0，则图片尺寸按width/height得出；反之，则图片尺寸按 max_length 得出。 > 若该参数和width/height都未选择，则取max_length默认为480
 
 	MaxLength *int32 `json:"max_length,omitempty"`
-	// 截图的帧类型
-
-	FrameType *ThumbnailParaFrameType `json:"frame_type,omitempty"`
 }
 
 func (o ThumbnailPara) String() string {
@@ -89,44 +83,6 @@ func (c ThumbnailParaType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ThumbnailParaType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type ThumbnailParaFrameType struct {
-	value string
-}
-
-type ThumbnailParaFrameTypeEnum struct {
-	INTRA  ThumbnailParaFrameType
-	NORMAL ThumbnailParaFrameType
-}
-
-func GetThumbnailParaFrameTypeEnum() ThumbnailParaFrameTypeEnum {
-	return ThumbnailParaFrameTypeEnum{
-		INTRA: ThumbnailParaFrameType{
-			value: "INTRA",
-		},
-		NORMAL: ThumbnailParaFrameType{
-			value: "NORMAL",
-		},
-	}
-}
-
-func (c ThumbnailParaFrameType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ThumbnailParaFrameType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

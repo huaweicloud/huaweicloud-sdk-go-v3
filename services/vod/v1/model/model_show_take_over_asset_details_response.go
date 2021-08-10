@@ -11,13 +11,13 @@ import (
 
 // Response Object
 type ShowTakeOverAssetDetailsResponse struct {
-	// 媒资ID
+	// 媒资ID。
 
 	AssetId *string `json:"asset_id,omitempty"`
 	// 媒资状态。 - \"CREATING\"：上传中 - \"FAILED\"：上传失败 - \"CREATED\"：上传成功 - \"PUBLISHED\"：已发布 - \"DELETED\"：已删除
 
 	AssetStatus *ShowTakeOverAssetDetailsResponseAssetStatus `json:"asset_status,omitempty"`
-	// 转码状态 - \"UN_TRANSCODE\"：未转码 - \"WAITING_TRANSCODE\"：等待转码，排队中 - \"TRANSCODING\"：转码中 - \"TRANSCODE_SUCCEED\"：转码成功 - \"TRANSCODE_FAILED\"：转码失败
+	// 转码状态。 - \"UN_TRANSCODE\"：未转码 - \"WAITING_TRANSCODE\"：等待转码，排队中 - \"TRANSCODING\"：转码中 - \"TRANSCODE_SUCCEED\"：转码成功 - \"TRANSCODE_FAILED\"：转码失败
 
 	TranscodeStatus *ShowTakeOverAssetDetailsResponseTranscodeStatus `json:"transcode_status,omitempty"`
 

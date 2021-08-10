@@ -19,7 +19,7 @@ type UpdateImageRequestBody struct {
 	Path string `json:"path"`
 	// 需要更新属性的值。
 
-	Value *string `json:"value,omitempty"`
+	Value string `json:"value"`
 }
 
 func (o UpdateImageRequestBody) String() string {

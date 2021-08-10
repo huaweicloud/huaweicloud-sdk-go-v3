@@ -8,10 +8,10 @@ import (
 
 // Request Object
 type ShowTakeOverAssetDetailsRequest struct {
-	// 媒资原始输入存放的桶<br/>
+	// 媒资原始输入存放的桶。
 
 	SourceBucket string `json:"source_bucket"`
-	// 媒资原始输入的objectKey。<br/>
+	// 媒资原始输入的objectKey。
 
 	SourceObject string `json:"source_object"`
 }

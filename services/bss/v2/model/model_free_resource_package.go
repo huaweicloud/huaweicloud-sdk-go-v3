@@ -7,7 +7,7 @@ import (
 )
 
 type FreeResourcePackage struct {
-	// 订购实例的ID。
+	// 订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。
 
 	OrderInstanceId *string `json:"order_instance_id,omitempty"`
 	// 订单ID，如果source_type为“1：软开云赠送”，该字段为空。

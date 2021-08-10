@@ -63,7 +63,7 @@ func (c *VodClient) ConfirmAssetUpload(request *model.ConfirmAssetUploadRequest)
 	}
 }
 
-//确认水印图片上传
+//确认水印图片上传状态。
 func (c *VodClient) ConfirmImageUpload(request *model.ConfirmImageUploadRequest) (*model.ConfirmImageUploadResponse, error) {
 	requestDef := GenReqDefForConfirmImageUpload()
 
@@ -151,7 +151,7 @@ func (c *VodClient) CreateTakeOverTask(request *model.CreateTakeOverTaskRequest)
 	}
 }
 
-//创建自定义模板组。
+//创建自定义转码模板组。
 func (c *VodClient) CreateTemplateGroup(request *model.CreateTemplateGroupRequest) (*model.CreateTemplateGroupResponse, error) {
 	requestDef := GenReqDefForCreateTemplateGroup()
 
@@ -162,7 +162,7 @@ func (c *VodClient) CreateTemplateGroup(request *model.CreateTemplateGroupReques
 	}
 }
 
-//创建水印模板
+//创建水印模板。
 func (c *VodClient) CreateWatermarkTemplate(request *model.CreateWatermarkTemplateRequest) (*model.CreateWatermarkTemplateResponse, error) {
 	requestDef := GenReqDefForCreateWatermarkTemplate()
 
@@ -195,7 +195,7 @@ func (c *VodClient) DeleteAssets(request *model.DeleteAssetsRequest) (*model.Del
 	}
 }
 
-//删除自定义模板组。
+//删除自定义转码模板组。
 func (c *VodClient) DeleteTemplateGroup(request *model.DeleteTemplateGroupRequest) (*model.DeleteTemplateGroupResponse, error) {
 	requestDef := GenReqDefForDeleteTemplateGroup()
 
@@ -239,7 +239,7 @@ func (c *VodClient) ListAssetList(request *model.ListAssetListRequest) (*model.L
 	}
 }
 
-//查询模板组列表。
+//查询转码模板组列表。
 func (c *VodClient) ListTemplateGroup(request *model.ListTemplateGroupRequest) (*model.ListTemplateGroupResponse, error) {
 	requestDef := GenReqDefForListTemplateGroup()
 
@@ -437,7 +437,7 @@ func (c *VodClient) UpdateCoverByThumbnail(request *model.UpdateCoverByThumbnail
 	}
 }
 
-//修改自定义模板组。
+//修改自定义转码模板组。
 func (c *VodClient) UpdateTemplateGroup(request *model.UpdateTemplateGroupRequest) (*model.UpdateTemplateGroupResponse, error) {
 	requestDef := GenReqDefForUpdateTemplateGroup()
 
@@ -470,7 +470,7 @@ func (c *VodClient) UploadMetaDataByUrl(request *model.UploadMetaDataByUrlReques
 	}
 }
 
-//查询托管任务
+//查询OBS存量托管任务列表。
 func (c *VodClient) ListTakeOverTask(request *model.ListTakeOverTaskRequest) (*model.ListTakeOverTaskResponse, error) {
 	requestDef := GenReqDefForListTakeOverTask()
 
@@ -481,7 +481,7 @@ func (c *VodClient) ListTakeOverTask(request *model.ListTakeOverTaskRequest) (*m
 	}
 }
 
-//查询托管媒资详情
+//查询OBS托管媒资的详细信息。
 func (c *VodClient) ShowTakeOverAssetDetails(request *model.ShowTakeOverAssetDetailsRequest) (*model.ShowTakeOverAssetDetailsResponse, error) {
 	requestDef := GenReqDefForShowTakeOverAssetDetails()
 
@@ -492,7 +492,7 @@ func (c *VodClient) ShowTakeOverAssetDetails(request *model.ShowTakeOverAssetDet
 	}
 }
 
-//查询托管任务详情
+//查询OBS存量托管任务详情。
 func (c *VodClient) ShowTakeOverTaskDetails(request *model.ShowTakeOverTaskDetailsRequest) (*model.ShowTakeOverTaskDetailsResponse, error) {
 	requestDef := GenReqDefForShowTakeOverTaskDetails()
 

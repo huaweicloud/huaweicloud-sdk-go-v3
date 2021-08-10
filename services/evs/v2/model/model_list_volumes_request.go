@@ -59,6 +59,9 @@ type ListVolumesRequest struct {
 	// 指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	// 云服务器id
+
+	ServerId *string `json:"server_id,omitempty"`
 }
 
 func (o ListVolumesRequest) String() string {

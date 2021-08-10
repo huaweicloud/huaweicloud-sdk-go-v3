@@ -8,6 +8,9 @@ import (
 
 //
 type IdentityproviderOption struct {
+	// 身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种，缺省配置默认为virtual_user_sso类型。
+
+	SsoType *string `json:"sso_type,omitempty"`
 	// 身份提供商描述信息。
 
 	Description *string `json:"description,omitempty"`

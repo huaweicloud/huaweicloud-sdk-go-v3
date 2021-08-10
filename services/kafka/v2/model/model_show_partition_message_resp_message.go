@@ -26,7 +26,7 @@ type ShowPartitionMessageRespMessage struct {
 	// 消息大小，单位字节。
 
 	Size *int32 `json:"size,omitempty"`
-	// 消息时间戳。
+	// 生产消息的时间。 格式为Unix时间戳。单位为毫秒。
 
 	Timestamp *int64 `json:"timestamp,omitempty"`
 }

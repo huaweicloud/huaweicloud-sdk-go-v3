@@ -7,7 +7,7 @@ import (
 )
 
 type PackageUsageInfo struct {
-	// 订购实例ID。
+	// 订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。
 
 	OrderInstanceId *string `json:"order_instance_id,omitempty"`
 	// 资源类型名称。

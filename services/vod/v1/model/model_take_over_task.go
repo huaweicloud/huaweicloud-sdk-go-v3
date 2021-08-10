@@ -9,7 +9,6 @@ import (
 	"strings"
 )
 
-//
 type TakeOverTask struct {
 	// 桶名。
 
@@ -17,7 +16,7 @@ type TakeOverTask struct {
 	// 目录/文件名。
 
 	Object *string `json:"object,omitempty"`
-	// 托管类型： - 0：表示存储到点播桶 - 1：表示存储在租户桶 - 2：表示存储到租户桶，并且源文件名跟随
+	// 托管类型。  取值如下： - 0：表示存储到点播桶 - 1：表示存储在租户桶 - 2：表示存储到租户OBS桶中，且输出目录与源文件的存储目录相同。
 
 	HostType *int32 `json:"host_type,omitempty"`
 	// 输出桶 。

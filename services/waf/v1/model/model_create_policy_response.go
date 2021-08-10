@@ -26,7 +26,7 @@ type CreatePolicyResponse struct {
 	FullDetection *bool `json:"full_detection,omitempty"`
 	// 防护的网站id
 
-	Hosts *[]interface{} `json:"hosts,omitempty"`
+	Hosts *[]string `json:"hosts,omitempty"`
 	// 防护的网站信息
 
 	BindHost *[]BindHost `json:"bind_host,omitempty"`

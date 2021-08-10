@@ -59,9 +59,8 @@ type Port struct {
 	// 功能说明：主网卡默认内网DNS名称 约束：不支持设置和更新，由系统自动维护
 
 	DnsName string `json:"dns_name"`
-	// 功能说明：vif的详细信息，  \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 约束：管理员权限，普通租户不可指定
 
-	BindingvifDetails *interface{} `json:"binding:vif_details"`
+	BindingvifDetails *BindingVifDetails `json:"binding:vif_details"`
 	// 功能说明：提供用户设置自定义信息(扩展属性)
 
 	Bindingprofile *interface{} `json:"binding:profile"`

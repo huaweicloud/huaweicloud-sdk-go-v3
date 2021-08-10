@@ -9,9 +9,8 @@ import (
 	"strings"
 )
 
-//
 type VideoTypeRef struct {
-	// 上传音视频文件的格式。  取值如下： - 视频文件：MP4、TS、MOV、MXF、MPG、FLV、WMV、AVI、M4V、F4V、MPEG、3GP、ASF、MKV、HLS - 音频文件：MP3、OGG、WAV、WMA、APE、FLAC、AAC、AC3、MMF、AMR、M4A、M4R、WV、MP2  若上传格式为音频文件，则不支持转码、添加水印和字幕。
+	// 转存的音视频文件类型。  取值如下： - 视频文件：MP4、TS、MOV、MXF、MPG、FLV、WMV、AVI、M4V、F4V、MPEG、3GP、ASF、MKV、HLS - 音频文件：MP3、OGG、WAV、WMA、APE、FLAC、AAC、AC3、MMF、AMR、M4A、M4R、WV、MP2  若上传格式为音频文件，则不支持转码、添加水印和字幕。  > 当**video_type**选择HLS时，**storage_mode**（存储模式）需选择存储在租户桶，且输出路径设置为和输入路径在同一个目录。
 
 	VideoType VideoTypeRefVideoType `json:"video_type"`
 	// 媒资标题，长度不超过128个字节，UTF-8编码。
@@ -68,9 +67,17 @@ type VideoTypeRefVideoTypeEnum struct {
 	MPG    VideoTypeRefVideoType
 	FLV    VideoTypeRefVideoType
 	WMV    VideoTypeRefVideoType
+	AVI    VideoTypeRefVideoType
+	M4_V   VideoTypeRefVideoType
+	F4_V   VideoTypeRefVideoType
+	MPEG   VideoTypeRefVideoType
+	E_3_GP VideoTypeRefVideoType
+	ASF    VideoTypeRefVideoType
+	MKV    VideoTypeRefVideoType
 	HLS    VideoTypeRefVideoType
-	DASH   VideoTypeRefVideoType
 	MP3    VideoTypeRefVideoType
+	OGG    VideoTypeRefVideoType
+	WAV    VideoTypeRefVideoType
 	WMA    VideoTypeRefVideoType
 	APE    VideoTypeRefVideoType
 	FLAC   VideoTypeRefVideoType
@@ -80,19 +87,8 @@ type VideoTypeRefVideoTypeEnum struct {
 	AMR    VideoTypeRefVideoType
 	M4_A   VideoTypeRefVideoType
 	M4_R   VideoTypeRefVideoType
-	OGG    VideoTypeRefVideoType
-	WAV    VideoTypeRefVideoType
 	WV     VideoTypeRefVideoType
 	MP2    VideoTypeRefVideoType
-	AVI    VideoTypeRefVideoType
-	F4_V   VideoTypeRefVideoType
-	M4_V   VideoTypeRefVideoType
-	MPEG   VideoTypeRefVideoType
-	M3_U8  VideoTypeRefVideoType
-	E_3_GP VideoTypeRefVideoType
-	ASF    VideoTypeRefVideoType
-	MKV    VideoTypeRefVideoType
-	UNKNOW VideoTypeRefVideoType
 }
 
 func GetVideoTypeRefVideoTypeEnum() VideoTypeRefVideoTypeEnum {
@@ -118,14 +114,38 @@ func GetVideoTypeRefVideoTypeEnum() VideoTypeRefVideoTypeEnum {
 		WMV: VideoTypeRefVideoType{
 			value: "WMV",
 		},
+		AVI: VideoTypeRefVideoType{
+			value: "AVI",
+		},
+		M4_V: VideoTypeRefVideoType{
+			value: "M4V",
+		},
+		F4_V: VideoTypeRefVideoType{
+			value: "F4V",
+		},
+		MPEG: VideoTypeRefVideoType{
+			value: "MPEG",
+		},
+		E_3_GP: VideoTypeRefVideoType{
+			value: "3GP",
+		},
+		ASF: VideoTypeRefVideoType{
+			value: "ASF",
+		},
+		MKV: VideoTypeRefVideoType{
+			value: "MKV",
+		},
 		HLS: VideoTypeRefVideoType{
 			value: "HLS",
 		},
-		DASH: VideoTypeRefVideoType{
-			value: "DASH",
-		},
 		MP3: VideoTypeRefVideoType{
 			value: "MP3",
+		},
+		OGG: VideoTypeRefVideoType{
+			value: "OGG",
+		},
+		WAV: VideoTypeRefVideoType{
+			value: "WAV",
 		},
 		WMA: VideoTypeRefVideoType{
 			value: "WMA",
@@ -154,44 +174,11 @@ func GetVideoTypeRefVideoTypeEnum() VideoTypeRefVideoTypeEnum {
 		M4_R: VideoTypeRefVideoType{
 			value: "M4R",
 		},
-		OGG: VideoTypeRefVideoType{
-			value: "OGG",
-		},
-		WAV: VideoTypeRefVideoType{
-			value: "WAV",
-		},
 		WV: VideoTypeRefVideoType{
 			value: "WV",
 		},
 		MP2: VideoTypeRefVideoType{
 			value: "MP2",
-		},
-		AVI: VideoTypeRefVideoType{
-			value: "AVI",
-		},
-		F4_V: VideoTypeRefVideoType{
-			value: "F4V",
-		},
-		M4_V: VideoTypeRefVideoType{
-			value: "M4V",
-		},
-		MPEG: VideoTypeRefVideoType{
-			value: "MPEG",
-		},
-		M3_U8: VideoTypeRefVideoType{
-			value: "M3U8",
-		},
-		E_3_GP: VideoTypeRefVideoType{
-			value: "3GP",
-		},
-		ASF: VideoTypeRefVideoType{
-			value: "ASF",
-		},
-		MKV: VideoTypeRefVideoType{
-			value: "MKV",
-		},
-		UNKNOW: VideoTypeRefVideoType{
-			value: "UNKNOW",
 		},
 	}
 }

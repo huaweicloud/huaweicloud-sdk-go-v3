@@ -11,7 +11,7 @@ import (
 
 //
 type PublishAssetFromObsReq struct {
-	// 上传音视频文件的格式。  取值如下： - 视频文件：MP4、TS、MOV、MXF、MPG、FLV、WMV、AVI、M4V、F4V、MPEG、3GP、ASF、MKV、HLS - 音频文件：MP3、OGG、WAV、WMA、APE、FLAC、AAC、AC3、MMF、AMR、M4A、M4R、WV、MP2  若上传格式为音频文件，则不支持转码、添加水印和字幕。
+	// 转存的音视频文件类型。  取值如下： - 视频文件：MP4、TS、MOV、MXF、MPG、FLV、WMV、AVI、M4V、F4V、MPEG、3GP、ASF、MKV、HLS - 音频文件：MP3、OGG、WAV、WMA、APE、FLAC、AAC、AC3、MMF、AMR、M4A、M4R、WV、MP2  若上传格式为音频文件，则不支持转码、添加水印和字幕。  > 当**video_type**选择HLS时，**storage_mode**（存储模式）需选择存储在租户桶，且输出路径设置为和输入路径在同一个目录。
 
 	VideoType PublishAssetFromObsReqVideoType `json:"video_type"`
 	// 媒资标题，长度不超过128个字节，UTF-8编码。
@@ -79,9 +79,17 @@ type PublishAssetFromObsReqVideoTypeEnum struct {
 	MPG    PublishAssetFromObsReqVideoType
 	FLV    PublishAssetFromObsReqVideoType
 	WMV    PublishAssetFromObsReqVideoType
+	AVI    PublishAssetFromObsReqVideoType
+	M4_V   PublishAssetFromObsReqVideoType
+	F4_V   PublishAssetFromObsReqVideoType
+	MPEG   PublishAssetFromObsReqVideoType
+	E_3_GP PublishAssetFromObsReqVideoType
+	ASF    PublishAssetFromObsReqVideoType
+	MKV    PublishAssetFromObsReqVideoType
 	HLS    PublishAssetFromObsReqVideoType
-	DASH   PublishAssetFromObsReqVideoType
 	MP3    PublishAssetFromObsReqVideoType
+	OGG    PublishAssetFromObsReqVideoType
+	WAV    PublishAssetFromObsReqVideoType
 	WMA    PublishAssetFromObsReqVideoType
 	APE    PublishAssetFromObsReqVideoType
 	FLAC   PublishAssetFromObsReqVideoType
@@ -91,19 +99,8 @@ type PublishAssetFromObsReqVideoTypeEnum struct {
 	AMR    PublishAssetFromObsReqVideoType
 	M4_A   PublishAssetFromObsReqVideoType
 	M4_R   PublishAssetFromObsReqVideoType
-	OGG    PublishAssetFromObsReqVideoType
-	WAV    PublishAssetFromObsReqVideoType
 	WV     PublishAssetFromObsReqVideoType
 	MP2    PublishAssetFromObsReqVideoType
-	AVI    PublishAssetFromObsReqVideoType
-	F4_V   PublishAssetFromObsReqVideoType
-	M4_V   PublishAssetFromObsReqVideoType
-	MPEG   PublishAssetFromObsReqVideoType
-	M3_U8  PublishAssetFromObsReqVideoType
-	E_3_GP PublishAssetFromObsReqVideoType
-	ASF    PublishAssetFromObsReqVideoType
-	MKV    PublishAssetFromObsReqVideoType
-	UNKNOW PublishAssetFromObsReqVideoType
 }
 
 func GetPublishAssetFromObsReqVideoTypeEnum() PublishAssetFromObsReqVideoTypeEnum {
@@ -129,14 +126,38 @@ func GetPublishAssetFromObsReqVideoTypeEnum() PublishAssetFromObsReqVideoTypeEnu
 		WMV: PublishAssetFromObsReqVideoType{
 			value: "WMV",
 		},
+		AVI: PublishAssetFromObsReqVideoType{
+			value: "AVI",
+		},
+		M4_V: PublishAssetFromObsReqVideoType{
+			value: "M4V",
+		},
+		F4_V: PublishAssetFromObsReqVideoType{
+			value: "F4V",
+		},
+		MPEG: PublishAssetFromObsReqVideoType{
+			value: "MPEG",
+		},
+		E_3_GP: PublishAssetFromObsReqVideoType{
+			value: "3GP",
+		},
+		ASF: PublishAssetFromObsReqVideoType{
+			value: "ASF",
+		},
+		MKV: PublishAssetFromObsReqVideoType{
+			value: "MKV",
+		},
 		HLS: PublishAssetFromObsReqVideoType{
 			value: "HLS",
 		},
-		DASH: PublishAssetFromObsReqVideoType{
-			value: "DASH",
-		},
 		MP3: PublishAssetFromObsReqVideoType{
 			value: "MP3",
+		},
+		OGG: PublishAssetFromObsReqVideoType{
+			value: "OGG",
+		},
+		WAV: PublishAssetFromObsReqVideoType{
+			value: "WAV",
 		},
 		WMA: PublishAssetFromObsReqVideoType{
 			value: "WMA",
@@ -165,44 +186,11 @@ func GetPublishAssetFromObsReqVideoTypeEnum() PublishAssetFromObsReqVideoTypeEnu
 		M4_R: PublishAssetFromObsReqVideoType{
 			value: "M4R",
 		},
-		OGG: PublishAssetFromObsReqVideoType{
-			value: "OGG",
-		},
-		WAV: PublishAssetFromObsReqVideoType{
-			value: "WAV",
-		},
 		WV: PublishAssetFromObsReqVideoType{
 			value: "WV",
 		},
 		MP2: PublishAssetFromObsReqVideoType{
 			value: "MP2",
-		},
-		AVI: PublishAssetFromObsReqVideoType{
-			value: "AVI",
-		},
-		F4_V: PublishAssetFromObsReqVideoType{
-			value: "F4V",
-		},
-		M4_V: PublishAssetFromObsReqVideoType{
-			value: "M4V",
-		},
-		MPEG: PublishAssetFromObsReqVideoType{
-			value: "MPEG",
-		},
-		M3_U8: PublishAssetFromObsReqVideoType{
-			value: "M3U8",
-		},
-		E_3_GP: PublishAssetFromObsReqVideoType{
-			value: "3GP",
-		},
-		ASF: PublishAssetFromObsReqVideoType{
-			value: "ASF",
-		},
-		MKV: PublishAssetFromObsReqVideoType{
-			value: "MKV",
-		},
-		UNKNOW: PublishAssetFromObsReqVideoType{
-			value: "UNKNOW",
 		},
 	}
 }

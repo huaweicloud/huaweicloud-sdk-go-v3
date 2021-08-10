@@ -19,7 +19,7 @@ func CesClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//批量查询指定时间范围内指定指标的指定粒度的监控数据，目前最多支持10指标的批量查询。
+//批量查询指定时间范围内指定指标的指定粒度的监控数据，目前最多支持500指标的批量查询。 对于不同的period取值和查询的指标数量，默认的最大查询区间(to-from)不同。 规则为\"指标数量*(to-from)/监控周期<=3000\"，若超出阈值，会自动调整from以满足规则。
 func (c *CesClient) BatchListMetricData(request *model.BatchListMetricDataRequest) (*model.BatchListMetricDataResponse, error) {
 	requestDef := GenReqDefForBatchListMetricData()
 

@@ -57,10 +57,10 @@ func KeystoneListProjects(client *impl.DefaultHttpClient, req *request.DefaultHt
 		return (*keystoneListProjectResponse.Projects)[0].Id, nil
 	} else if len(*keystoneListProjectResponse.Projects) > 1 {
 		return "", errors.New("multiple project ids have been returned, " +
-			"please specify one when initializing credentials")
+			"please specify one when initializing the credentials")
 	}
 
-	return "", errors.New("no project found")
+	return "", errors.New("No project id found, please specify project_id manually when initializing the credentials")
 }
 
 type KeystoneListAuthDomainsResponse struct {
@@ -102,7 +102,10 @@ func KeystoneListAuthDomains(client *impl.DefaultHttpClient, req *request.Defaul
 		return (*keystoneListAuthDomainsResponse.Domains)[0].Id, nil
 	}
 
-	return "", errors.New("no domain found")
+	return "", errors.New("No domain id found, please select one of the following solutions:\n\t" +
+		"1. Manually specify domain_id when initializing the credentials.\n\t" +
+		"2. Use the domain account to grant the current account permissions of the IAM service.\n\t" +
+		"3. Use AK/SK of the domain account.")
 }
 
 func GetResponseBody(resp *response.DefaultHttpResponse) ([]byte, error) {

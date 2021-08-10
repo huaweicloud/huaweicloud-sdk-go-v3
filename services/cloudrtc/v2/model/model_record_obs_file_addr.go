@@ -21,7 +21,7 @@ type RecordObsFileAddr struct {
 	Bucket string `json:"bucket"`
 	// OBS对象路径，遵守OBS Object定义。如果为空则保存到根目录
 
-	Object string `json:"object"`
+	Object *string `json:"object,omitempty"`
 }
 
 func (o RecordObsFileAddr) String() string {

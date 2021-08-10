@@ -20,6 +20,9 @@ type UpdateInstanceTopicReqTopics struct {
 	// 是否同步落盘。
 
 	SyncMessageFlush *bool `json:"sync_message_flush,omitempty"`
+	// 分区数。
+
+	NewPartitionNumbers *int32 `json:"new_partition_numbers,omitempty"`
 }
 
 func (o UpdateInstanceTopicReqTopics) String() string {

@@ -371,7 +371,7 @@ func (c *KafkaClient) ShowInstanceExtendProductInfo(request *model.ShowInstanceE
 	}
 }
 
-//查询消息的偏移量和消息内容。 先根据时间戳查询消息的偏移量，再根据偏移量查询消息内容。
+//查询消息的偏移量和消息内容。 先根据时间戳查询消息的偏移量，再根据偏移量查询消息内容。 **注意：调用接口时message_offset和partition查询参数二选一。**
 func (c *KafkaClient) ShowInstanceMessages(request *model.ShowInstanceMessagesRequest) (*model.ShowInstanceMessagesResponse, error) {
 	requestDef := GenReqDefForShowInstanceMessages()
 
