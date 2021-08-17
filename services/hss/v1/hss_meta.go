@@ -10,7 +10,7 @@ import (
 func GenReqDefForListEvents() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/hss/v1/{project_id}/api/event-management/events").
+		WithPath("/v1/{project_id}/api/event-management/events").
 		WithResponse(new(model.ListEventsResponse)).
 		WithContentType("application/json")
 
@@ -50,7 +50,7 @@ func GenReqDefForListEvents() *def.HttpRequestDef {
 func GenReqDefForListHosts() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/hss/v1/{project_id}/api/host-management/hosts").
+		WithPath("/v1/{project_id}/api/host-management/hosts").
 		WithResponse(new(model.ListHostsResponse)).
 		WithContentType("application/json")
 

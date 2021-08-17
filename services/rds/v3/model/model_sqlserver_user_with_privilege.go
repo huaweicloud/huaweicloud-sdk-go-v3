@@ -11,6 +11,9 @@ type SqlserverUserWithPrivilege struct {
 	// 数据库帐号名称。
 
 	Name string `json:"name"`
+	// 是否为只读权限。
+
+	Readonly *bool `json:"readonly,omitempty"`
 }
 
 func (o SqlserverUserWithPrivilege) String() string {

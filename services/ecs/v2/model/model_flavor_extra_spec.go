@@ -104,6 +104,9 @@ type FlavorExtraSpec struct {
 	//
 
 	Quotagpu *string `json:"quota:gpu,omitempty"`
+	// 该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
+
+	EcsinstanceArchitecture *string `json:"ecs:instance_architecture,omitempty"`
 }
 
 func (o FlavorExtraSpec) String() string {

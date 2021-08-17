@@ -29,9 +29,9 @@ type NodeSpec struct {
 	PublicIP *NodePublicIp `json:"publicIP,omitempty"`
 
 	NodeNicSpec *NodeNicSpec `json:"nodeNicSpec,omitempty"`
-	// 批量创建时节点的个数，必须为大于等于1，小于等于最大限额的正整数。作用于节点池时该项允许为0
+	// 批量创建时节点的个数，必须为大于等于1，小于等于最大限额的正整数。作用于节点池时该项可以不填写。
 
-	Count int32 `json:"count"`
+	Count *int32 `json:"count,omitempty"`
 	// 节点的计费模式：取值为 0（按需付费）、1（包周期）、2（自动付费包周期）
 
 	BillingMode *int32 `json:"billingMode,omitempty"`

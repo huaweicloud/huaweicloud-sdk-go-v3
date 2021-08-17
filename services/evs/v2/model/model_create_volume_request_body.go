@@ -11,7 +11,7 @@ type CreateVolumeRequestBody struct {
 	BssParam *BssParamForCreateVolume `json:"bssParam,omitempty"`
 
 	Volume *CreateVolumeOption `json:"volume"`
-	// 创建云硬盘并挂载到目标虚拟机。
+	// 创建云硬盘并挂载到目标虚拟机。 目前只支持ECS服务的虚拟机，暂不支持BMS的裸金属服务器。
 
 	ServerId *string `json:"server_id,omitempty"`
 

@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+//
 type UpdateVolumeOption struct {
 	// 新的云硬盘的描述，name和description不能同时为null。最大支持255个字节。
 

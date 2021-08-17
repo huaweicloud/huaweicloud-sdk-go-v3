@@ -34,6 +34,9 @@ type ClusterExtendParam struct {
 	// 集群CPU管理策略。取值为none或static，默认为none。 - none：关闭工作负载实例独占CPU核的功能，优点是CPU共享池的可分配核数较多 - static：支持给节点上的工作负载实例配置CPU独占，适用于对CPU缓存和调度延迟敏感的工作负载，Turbo集群下仅对普通容器节点有效，安全容器节点无效。
 
 	KubernetesIoCpuManagerPolicy *string `json:"kubernetes.io/cpuManagerPolicy,omitempty"`
+	// 订单ID，集群付费类型为自动付费包周期类型时，响应中会返回此字段。
+
+	OrderID *string `json:"orderID,omitempty"`
 	// - month：月 - year：年 > billingMode为1（包周期）时生效，且为必选。
 
 	PeriodType *string `json:"periodType,omitempty"`
@@ -46,6 +49,9 @@ type ClusterExtendParam struct {
 	// 是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > billingMode为1时生效，不填写此参数时默认不会自动扣款。
 
 	IsAutoPay *string `json:"isAutoPay,omitempty"`
+	// 记录集群通过何种升级方式升级到当前版本。
+
+	Upgradefrom *string `json:"upgradefrom,omitempty"`
 }
 
 func (o ClusterExtendParam) String() string {

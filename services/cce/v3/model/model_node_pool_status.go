@@ -11,15 +11,24 @@ import (
 
 //
 type NodePoolStatus struct {
-	// 当前节点池中节点数量
+	// 当前节点池中所有节点数量（不含删除中的节点）。
 
 	CurrentNode *int32 `json:"currentNode,omitempty"`
+	// 当前节点池中处于创建流程中的节点数量。
+
+	CreatingNode *int32 `json:"creatingNode,omitempty"`
+	// 当前节点池中删除中或者删除失败的节点数量。
+
+	DeletingNode *int32 `json:"deletingNode,omitempty"`
 	// 节点池状态，为空时节点池处于可用状态。 - Synchronizing：伸缩中 - Synchronized：节点池更新失败时会被置于此状态 - SoldOut：节点资源售罄 - Deleting：删除中 - Error：错误
 
 	Phase *NodePoolStatusPhase `json:"phase,omitempty"`
-	// 节点池删除时的 JobID
+	// 对节点池执行操作时的 JobID。
 
 	JobId *string `json:"jobId,omitempty"`
+	// 节点池每次扩容的动作结果记录，用于确定节点池是否还能继续扩容。
+
+	Conditions *[]NodePoolCondition `json:"conditions,omitempty"`
 }
 
 func (o NodePoolStatus) String() string {

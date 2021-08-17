@@ -26,7 +26,7 @@ type ListSnapshotsRequest struct {
 	// 快照所属云硬盘的可用区。
 
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
-	// 指定快照id进行过滤。
+	// 指定快照id进行过滤。可以传入多个id过滤查询，格式：id=id1&id=id2&id=id3
 
 	Id *string `json:"id,omitempty"`
 	// 专属存储的名称。

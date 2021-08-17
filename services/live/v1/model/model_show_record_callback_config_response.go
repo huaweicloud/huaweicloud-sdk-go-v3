@@ -29,6 +29,9 @@ type ShowRecordCallbackConfigResponse struct {
 	// 按需录制回调url地址
 
 	OnDemandCallbackUrl *string `json:"on_demand_callback_url,omitempty"`
+	// 加密类型
+
+	SignType *ShowRecordCallbackConfigResponseSignType `json:"sign_type,omitempty"`
 	// 创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
 
 	CreateTime *string `json:"create_time,omitempty"`
@@ -80,6 +83,44 @@ func (c ShowRecordCallbackConfigResponseNotifyEventSubscription) MarshalJSON() (
 }
 
 func (c *ShowRecordCallbackConfigResponseNotifyEventSubscription) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowRecordCallbackConfigResponseSignType struct {
+	value string
+}
+
+type ShowRecordCallbackConfigResponseSignTypeEnum struct {
+	MD5        ShowRecordCallbackConfigResponseSignType
+	HMACSHA256 ShowRecordCallbackConfigResponseSignType
+}
+
+func GetShowRecordCallbackConfigResponseSignTypeEnum() ShowRecordCallbackConfigResponseSignTypeEnum {
+	return ShowRecordCallbackConfigResponseSignTypeEnum{
+		MD5: ShowRecordCallbackConfigResponseSignType{
+			value: "MD5",
+		},
+		HMACSHA256: ShowRecordCallbackConfigResponseSignType{
+			value: "HMACSHA256",
+		},
+	}
+}
+
+func (c ShowRecordCallbackConfigResponseSignType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *ShowRecordCallbackConfigResponseSignType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

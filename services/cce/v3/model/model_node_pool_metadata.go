@@ -14,6 +14,15 @@ type NodePoolMetadata struct {
 	// 节点池的uid。创建成功后自动生成，填写无效
 
 	Uid *string `json:"uid,omitempty"`
+	// 节点池的注解，以key value对表示。
+
+	Annotations map[string]string `json:"annotations,omitempty"`
+	// 更新时间
+
+	UpdateTimestamp *string `json:"updateTimestamp,omitempty"`
+	// 创建时间
+
+	CreationTimestamp *string `json:"creationTimestamp,omitempty"`
 }
 
 func (o NodePoolMetadata) String() string {

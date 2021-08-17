@@ -47,7 +47,7 @@ type VolumeDetail struct {
 	// 云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
 
 	VolumeImageMetadata map[string]interface{} `json:"volume_image_metadata"`
-	// 云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
+	// 云硬盘类型。 目前支持“SSD”，“SAS”和“SATA”三种。 “SSD”为超高IO云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
 
 	VolumeType string `json:"volume_type"`
 	// 云硬盘大小，单位为GB。
@@ -106,6 +106,9 @@ type VolumeDetail struct {
 	// 云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	// 云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
+
+	SerialNumber *string `json:"serial_number,omitempty"`
 }
 
 func (o VolumeDetail) String() string {

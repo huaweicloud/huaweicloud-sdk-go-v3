@@ -109,7 +109,7 @@ type LoadBalancer struct {
 	IpTargetEnable *bool `json:"ip_target_enable,omitempty"`
 	// 是否开启删除保护
 
-	DeletionProtectionEnable *string `json:"deletion_protection_enable,omitempty"`
+	DeletionProtectionEnable *bool `json:"deletion_protection_enable,omitempty"`
 	// 负载均衡器的冻结场景。若负载均衡器有多个冻结场景，用逗号分隔 POLICE：公安冻结场景。 ILLEGAL：违规冻结场景。 VERIFY：客户未实名认证冻结场景。 PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 ARREAR：欠费冻结场景。
 
 	FrozenScene string `json:"frozen_scene"`

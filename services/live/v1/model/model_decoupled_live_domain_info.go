@@ -33,6 +33,12 @@ type DecoupledLiveDomainInfo struct {
 	// 域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
 
 	CreateTime *sdktime.SdkTime `json:"create_time"`
+	// 状态描述
+
+	StatusDescribe *string `json:"status_describe,omitempty"`
+	// 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+
+	ServiceArea *DecoupledLiveDomainInfoServiceArea `json:"service_area,omitempty"`
 }
 
 func (o DecoupledLiveDomainInfo) String() string {
@@ -177,6 +183,48 @@ func (c DecoupledLiveDomainInfoStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *DecoupledLiveDomainInfoStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type DecoupledLiveDomainInfoServiceArea struct {
+	value string
+}
+
+type DecoupledLiveDomainInfoServiceAreaEnum struct {
+	MAINLAND_CHINA         DecoupledLiveDomainInfoServiceArea
+	OUTSIDE_MAINLAND_CHINA DecoupledLiveDomainInfoServiceArea
+	GLOBAL                 DecoupledLiveDomainInfoServiceArea
+}
+
+func GetDecoupledLiveDomainInfoServiceAreaEnum() DecoupledLiveDomainInfoServiceAreaEnum {
+	return DecoupledLiveDomainInfoServiceAreaEnum{
+		MAINLAND_CHINA: DecoupledLiveDomainInfoServiceArea{
+			value: "mainland_china",
+		},
+		OUTSIDE_MAINLAND_CHINA: DecoupledLiveDomainInfoServiceArea{
+			value: "outside_mainland_china",
+		},
+		GLOBAL: DecoupledLiveDomainInfoServiceArea{
+			value: "global",
+		},
+	}
+}
+
+func (c DecoupledLiveDomainInfoServiceArea) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *DecoupledLiveDomainInfoServiceArea) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

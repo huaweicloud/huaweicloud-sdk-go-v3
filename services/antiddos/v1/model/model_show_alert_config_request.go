@@ -1,0 +1,20 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// Request Object
+type ShowAlertConfigRequest struct {
+}
+
+func (o ShowAlertConfigRequest) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ShowAlertConfigRequest struct{}"
+	}
+
+	return strings.Join([]string{"ShowAlertConfigRequest", string(data)}, " ")
+}
