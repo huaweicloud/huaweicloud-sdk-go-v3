@@ -139,6 +139,10 @@ type ServerDetail struct {
 	// 弹性云服务器系统标签。
 
 	SysTags *[]ServerSystemTag `json:"sys_tags,omitempty"`
+
+	CpuOptions *CpuOptions `json:"cpu_options,omitempty"`
+
+	Hypervisor *Hypervisor `json:"hypervisor,omitempty"`
 }
 
 func (o ServerDetail) String() string {

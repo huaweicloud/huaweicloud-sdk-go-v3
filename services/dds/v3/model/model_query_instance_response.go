@@ -14,6 +14,9 @@ type QueryInstanceResponse struct {
 	// 实例名称。
 
 	Name string `json:"name"`
+	// 实例备注。
+
+	Remark string `json:"remark"`
 	// 实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
 
 	Status string `json:"status"`

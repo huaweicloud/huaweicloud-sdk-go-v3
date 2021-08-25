@@ -305,6 +305,17 @@ func (c *DdsClient) ListErrorLogs(request *model.ListErrorLogsRequest) (*model.L
 	}
 }
 
+//查询指定条件下的实例规格信息。
+func (c *DdsClient) ListFlavorInfos(request *model.ListFlavorInfosRequest) (*model.ListFlavorInfosResponse, error) {
+	requestDef := GenReqDefForListFlavorInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFlavorInfosResponse), nil
+	}
+}
+
 //查询指定条件下的所有实例规格信息。
 func (c *DdsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
@@ -602,6 +613,17 @@ func (c *DdsClient) ShowConnectionStatistics(request *model.ShowConnectionStatis
 	}
 }
 
+//获取DDS任务中心指定ID的任务信息。
+func (c *DdsClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*model.ShowJobDetailResponse, error) {
+	requestDef := GenReqDefForShowJobDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJobDetailResponse), nil
+	}
+}
+
 //查询单租户在DDS服务下的资源配额，包括单节点实例配额、副本集实例配额、集群实例配额等。
 func (c *DdsClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
 	requestDef := GenReqDefForShowQuotas()
@@ -621,6 +643,17 @@ func (c *DdsClient) ShowShardingBalancer(request *model.ShowShardingBalancerRequ
 		return nil, err
 	} else {
 		return resp.(*model.ShowShardingBalancerResponse), nil
+	}
+}
+
+//设置实例的慢日志明文开关。
+func (c *DdsClient) SwitchSlowlogDesensitization(request *model.SwitchSlowlogDesensitizationRequest) (*model.SwitchSlowlogDesensitizationResponse, error) {
+	requestDef := GenReqDefForSwitchSlowlogDesensitization()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchSlowlogDesensitizationResponse), nil
 	}
 }
 
@@ -676,6 +709,17 @@ func (c *DdsClient) UpdateInstancePort(request *model.UpdateInstancePortRequest)
 		return nil, err
 	} else {
 		return resp.(*model.UpdateInstancePortResponse), nil
+	}
+}
+
+//修改实例备注。
+func (c *DdsClient) UpdateInstanceRemark(request *model.UpdateInstanceRemarkRequest) (*model.UpdateInstanceRemarkResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceRemark()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceRemarkResponse), nil
 	}
 }
 

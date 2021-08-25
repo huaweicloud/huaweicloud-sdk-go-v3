@@ -30,7 +30,7 @@ func (c *ModerationClient) RunCheckResult(request *model.RunCheckResultRequest) 
 	}
 }
 
-//查询批量图像内容检测任务列表，可通过指定任务状态查询来对任务列表进行过滤。
+//查询批量图像内容审核任务列表，可通过指定任务状态查询来对任务列表进行过滤。
 func (c *ModerationClient) RunCheckTaskJobs(request *model.RunCheckTaskJobsRequest) (*model.RunCheckTaskJobsResponse, error) {
 	requestDef := GenReqDefForRunCheckTaskJobs()
 
@@ -63,7 +63,7 @@ func (c *ModerationClient) RunImageModeration(request *model.RunImageModerationR
 	}
 }
 
-//提交批量图像内容检测任务，返回任务标识，任务标识可用于查询任务结果。此接口为异步接口，相对于批量接口，支持更大图片列表批次。
+//提交批量图像内容审核任务，返回任务标识，任务标识可用于查询任务结果。此接口为异步接口，相对于批量接口，支持更大图片列表批次。
 func (c *ModerationClient) RunTaskSumbit(request *model.RunTaskSumbitRequest) (*model.RunTaskSumbitResponse, error) {
 	requestDef := GenReqDefForRunTaskSumbit()
 

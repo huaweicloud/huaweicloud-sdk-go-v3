@@ -61,6 +61,9 @@ type CreateFunctionRequestBody struct {
 	// 企业项目ID，在企业用户创建函数时必填。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	// 函数版本。
+
+	Type *CreateFunctionRequestBodyType `json:"type,omitempty"`
 }
 
 func (o CreateFunctionRequestBody) String() string {
@@ -179,6 +182,44 @@ func (c CreateFunctionRequestBodyCodeType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateFunctionRequestBodyCodeType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateFunctionRequestBodyType struct {
+	value string
+}
+
+type CreateFunctionRequestBodyTypeEnum struct {
+	V1 CreateFunctionRequestBodyType
+	V2 CreateFunctionRequestBodyType
+}
+
+func GetCreateFunctionRequestBodyTypeEnum() CreateFunctionRequestBodyTypeEnum {
+	return CreateFunctionRequestBodyTypeEnum{
+		V1: CreateFunctionRequestBodyType{
+			value: "v1",
+		},
+		V2: CreateFunctionRequestBodyType{
+			value: "v2",
+		},
+	}
+}
+
+func (c CreateFunctionRequestBodyType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *CreateFunctionRequestBodyType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

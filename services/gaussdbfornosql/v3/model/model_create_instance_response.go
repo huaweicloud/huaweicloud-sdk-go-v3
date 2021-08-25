@@ -48,6 +48,9 @@ type CreateInstanceResponse struct {
 	// 企业项目ID。取值为“0”，表示为default企业项目。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	// 专属资源ID，只有创建在专属资源上的实例才会返回该字段。
+
+	DedicatedResourceId *string `json:"dedicated_resource_id,omitempty"`
 	// SSL开关选项，与请求参数相同。
 
 	SslOption *string `json:"ssl_option,omitempty"`

@@ -46,18 +46,9 @@ type VideoParameters struct {
 	// 视频高度（单位：像素）  - H264：范围[32,2880]，必须为2的倍数 - H265：范围[240,2880] ，必须是4的倍数
 
 	Height *int32 `json:"height,omitempty"`
-	// 纵横比（保留，图像缩放方式）  - 0：自适应（保持原有宽高比） - 1：补黑边（16:9） - 2：裁黑边（18:9）
-
-	AspectRatio *int32 `json:"aspect_ratio,omitempty"`
 	// 黑边剪裁类型  - 0：不开启黑边剪裁 - 1：开启黑边剪裁，低复杂度算法，针对长视频（>5分钟） - 2：开启黑边剪裁，高复杂度算法，针对短视频（<=5分钟）
 
 	BlackCut *int32 `json:"black_cut,omitempty"`
-	// GOP类型（暂不开放） - 0: Closed (Default) - 1:Open
-
-	GOPStructure *bool `json:"GOP_structure,omitempty"`
-	// 超分倍数  取值如下： - 2：两倍超分
-
-	SrFactor *string `json:"sr_factor,omitempty"`
 }
 
 func (o VideoParameters) String() string {

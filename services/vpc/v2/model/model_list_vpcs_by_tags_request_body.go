@@ -16,10 +16,10 @@ type ListVpcsByTagsRequestBody struct {
 	Action ListVpcsByTagsRequestBodyAction `json:"action"`
 	// 功能说明：查询记录数 取值范围：1-1000 约束：action为count时此参数不生效；action为filter时默认为1000
 
-	Limit *string `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
 	// 功能说明：索引位置， 从offset指定的下一条数据开始查询。 查询第一页数据时，不需要传入此参数，查询后续页码数据时，将查询前一页数据时响应体中的值带入此参数 约束：action为count时无此参数；action为filter时默认为0；必须为数字，不能为负数
 
-	Offset *string `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
 	// 功能说明：搜索字段，key为要匹配的字段，value为匹配的值 约束：当前仅支持resource_name
 
 	Matches *[]Match `json:"matches,omitempty"`

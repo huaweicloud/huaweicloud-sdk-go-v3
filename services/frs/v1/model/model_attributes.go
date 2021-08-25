@@ -7,9 +7,7 @@ import (
 )
 
 type Attributes struct {
-	// 包含glass和hat两个属性结果。
-
-	Dress []string `json:"dress"`
+	Dress *Dress `json:"dress"`
 	// 是否带眼镜： • yes：带眼镜 • dark：带墨镜 • none：未戴眼镜 • unknown：未知
 
 	Glass string `json:"glass"`

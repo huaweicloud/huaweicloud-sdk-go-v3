@@ -7,7 +7,7 @@ import (
 )
 
 // Response Object
-type AuthorizeFaceRecognitionServiceResponse struct {
+type ShowSubscribesResponse struct {
 	// 调用成功时表示最大的人脸库数量。 调用失败时无此字段。
 
 	MaxFaceSetNumber *int32 `json:"max_face_set_number,omitempty"`
@@ -22,11 +22,11 @@ type AuthorizeFaceRecognitionServiceResponse struct {
 	HttpStatusCode int          `json:"-"`
 }
 
-func (o AuthorizeFaceRecognitionServiceResponse) String() string {
+func (o ShowSubscribesResponse) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "AuthorizeFaceRecognitionServiceResponse struct{}"
+		return "ShowSubscribesResponse struct{}"
 	}
 
-	return strings.Join([]string{"AuthorizeFaceRecognitionServiceResponse", string(data)}, " ")
+	return strings.Join([]string{"ShowSubscribesResponse", string(data)}, " ")
 }

@@ -10,9 +10,6 @@ import (
 )
 
 type UpdateFunctionCodeRequestBody struct {
-	// 函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
-
-	Handler string `json:"handler"`
 	// 函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
 
 	CodeType UpdateFunctionCodeRequestBodyCodeType `json:"code_type"`
@@ -27,9 +24,6 @@ type UpdateFunctionCodeRequestBody struct {
 	// 依赖id列表
 
 	DependList *[]string `json:"depend_list,omitempty"`
-	// 函数依赖代码包列表。
-
-	Dependencies *[]Dependency `json:"dependencies,omitempty"`
 }
 
 func (o UpdateFunctionCodeRequestBody) String() string {

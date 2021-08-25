@@ -11,7 +11,7 @@ type ImageTaggingItemBody struct {
 	// 置信度，将Float型置信度转为String类型返回,取值范围：0-100。
 
 	Confidence *string `json:"confidence,omitempty"`
-	// 标签的类别。有以下三种类别：  object：实体标签  scene：场景标签  concept：概念标签
+	// 标签的类别。返回的标签类型，包含二十多种大类，具体可以参考[图像标签](http://support.huaweicloud.com/image_faq/image_01_0037.html)。
 
 	Type *string `json:"type,omitempty"`
 	// 标签名称。

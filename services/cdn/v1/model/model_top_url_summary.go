@@ -19,7 +19,7 @@ type TopUrlSummary struct {
 	// 查询结束时间戳
 
 	EndTime *int64 `json:"end_time,omitempty"`
-	// 参数类型支持：flux(流量)，bw(带宽),req_num(请求总数)。
+	// 参数类型支持：flux(流量)，req_num(请求总数)。
 
 	StatType *string `json:"stat_type,omitempty"`
 }

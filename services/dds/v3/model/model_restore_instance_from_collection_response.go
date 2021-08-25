@@ -8,7 +8,10 @@ import (
 
 // Response Object
 type RestoreInstanceFromCollectionResponse struct {
-	HttpStatusCode int `json:"-"`
+	// 库表级恢复的异步任务ID。
+
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RestoreInstanceFromCollectionResponse) String() string {

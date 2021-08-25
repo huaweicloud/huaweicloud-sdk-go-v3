@@ -23,6 +23,9 @@ type Flavor struct {
 	// 资源规格编码。例如：dds.c3.xlarge.2.shard。  - “dds”表示文档数据库服务产品。 - “c3.xlarge.2”表示节点性能规格，为高内存类型。 - “shard”表示节点类型。
 
 	SpecCode string `json:"spec_code"`
+	// 支持该规格的可用区ID。
+
+	AvailabilityZone []string `json:"availability_zone"`
 	// '支持该规格的可用区ID。' 示例：[\"cn-east-2a\",\"cn-east-2b\",\"cn-east-2c\"]。
 
 	AzStatus *interface{} `json:"az_status"`

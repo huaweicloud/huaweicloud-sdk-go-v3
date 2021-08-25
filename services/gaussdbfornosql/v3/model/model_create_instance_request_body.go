@@ -45,6 +45,9 @@ type CreateInstanceRequestBody struct {
 	// 企业项目ID。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	// 专属资源ID，只有开通专属资源池后才可以下发此参数。
+
+	DedicatedResourceId *string `json:"dedicated_resource_id,omitempty"`
 	// SSL开关选项。 取值： - 取“0”，表示DDS实例默认不启用SSL连接。 - 取“1”，表示DDS实例默认启用SSL连接。 - 不传该参数时，默认不启用SSL连接。
 
 	SslOption *string `json:"ssl_option,omitempty"`

@@ -19,7 +19,7 @@ type RouteTableResp struct {
 	Default bool `json:"default"`
 	// 功能说明：路由对象，参见route字段说明。  约束：每个路由表最大关联200条路由
 
-	Routes []Route `json:"routes"`
+	Routes []RouteTableRoute `json:"routes"`
 	// 功能说明：路由表所关联的子网  约束：只能关联路由表所属VPC下的子网
 
 	Subnets []SubnetList `json:"subnets"`

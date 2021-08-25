@@ -258,10 +258,15 @@ func GenReqDefForEnableLtsLogs() *def.HttpRequestDef {
 
 func GenReqDefForExportFunction() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v2/{project_id}/fgs/functions/export").
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/fgs/functions/{function_urn}/export").
 		WithResponse(new(model.ExportFunctionResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FunctionUrn").
+		WithJsonTag("function_urn").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Config").
@@ -270,6 +275,10 @@ func GenReqDefForExportFunction() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Code").
 		WithJsonTag("code").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Type").
+		WithJsonTag("type").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -487,10 +496,6 @@ func GenReqDefForListStatistics() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Period").
 		WithJsonTag("period").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("MonthCode").
-		WithJsonTag("month_code").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

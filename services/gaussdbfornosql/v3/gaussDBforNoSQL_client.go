@@ -97,6 +97,17 @@ func (c *GaussDBforNoSQLClient) ExpandInstanceNode(request *model.ExpandInstance
 }
 
 //获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
+func (c *GaussDBforNoSQLClient) ListConfigurationTemplates(request *model.ListConfigurationTemplatesRequest) (*model.ListConfigurationTemplatesResponse, error) {
+	requestDef := GenReqDefForListConfigurationTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConfigurationTemplatesResponse), nil
+	}
+}
+
+//获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
 func (c *GaussDBforNoSQLClient) ListConfigurations(request *model.ListConfigurationsRequest) (*model.ListConfigurationsResponse, error) {
 	requestDef := GenReqDefForListConfigurations()
 
@@ -115,6 +126,28 @@ func (c *GaussDBforNoSQLClient) ListDatastores(request *model.ListDatastoresRequ
 		return nil, err
 	} else {
 		return resp.(*model.ListDatastoresResponse), nil
+	}
+}
+
+//查询专属资源列表。
+func (c *GaussDBforNoSQLClient) ListDedicatedResources(request *model.ListDedicatedResourcesRequest) (*model.ListDedicatedResourcesResponse, error) {
+	requestDef := GenReqDefForListDedicatedResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDedicatedResourcesResponse), nil
+	}
+}
+
+//查询指定条件下的实例规格信息。
+func (c *GaussDBforNoSQLClient) ListFlavorInfos(request *model.ListFlavorInfosRequest) (*model.ListFlavorInfosResponse, error) {
+	requestDef := GenReqDefForListFlavorInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFlavorInfosResponse), nil
 	}
 }
 
@@ -148,6 +181,17 @@ func (c *GaussDBforNoSQLClient) ListInstances(request *model.ListInstancesReques
 		return nil, err
 	} else {
 		return resp.(*model.ListInstancesResponse), nil
+	}
+}
+
+//根据标签查询指定的数据库实例。
+func (c *GaussDBforNoSQLClient) ListInstancesByResourceTags(request *model.ListInstancesByResourceTagsRequest) (*model.ListInstancesByResourceTagsResponse, error) {
+	requestDef := GenReqDefForListInstancesByResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesByResourceTagsResponse), nil
 	}
 }
 

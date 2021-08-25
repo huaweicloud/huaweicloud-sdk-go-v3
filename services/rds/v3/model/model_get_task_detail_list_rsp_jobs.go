@@ -31,7 +31,7 @@ type GetTaskDetailListRspJobs struct {
 	Process *string `json:"process,omitempty"`
 	// 任务执行的具体的参数信息，为空则不返回该字段。
 
-	TaskDetail *string `json:"taskDetail,omitempty"`
+	TaskDetail *string `json:"task_detail,omitempty"`
 
 	Instance *GetTaskDetailListRspJobsInstance `json:"instance"`
 	// 根据不同的任务，显示不同的内容。

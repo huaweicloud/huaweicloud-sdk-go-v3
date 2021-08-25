@@ -10,25 +10,25 @@ import (
 type FlavorExtraSpec struct {
 	// 云服务器规格的分类：  - normal：通用型 - cpuv1：计算I型 - cpuv2：计算II型 - highmem：内存优化型 - gpu：GPU加速型 - entry：通用入门型 - saphana：大内存型 - ultracpu：超高性能计算型 - diskintensive：磁盘增强型 - highio：超高I/O型 - fpga：FPGA加速型  > 说明：  - 早期注册的规格该字段为hws:performancetype。
 
-	Ecsperformancetype string `json:"ecs:performancetype"`
+	Ecsperformancetype *string `json:"ecs:performancetype,omitempty"`
 	// 主机的物理cpu数量。
 
-	HwnumaNodes string `json:"hw:numa_nodes"`
+	HwnumaNodes *string `json:"hw:numa_nodes,omitempty"`
 	// 资源类型。resource_type是为了区分云服务器的物理主机类型。
 
-	ResourceType string `json:"resource_type"`
+	ResourceType *string `json:"resource_type,omitempty"`
 	// 弹性运服务器高精度时钟是否开启，开启为true，否则为false。（该字段是否返回根据云服务器规格而定）
 
-	HpetSupport string `json:"hpet_support"`
+	HpetSupport *string `json:"hpet_support,omitempty"`
 	// 网卡类型，值固定为“enhanced”，表示使用增强型网络的资源创建云服务器。
 
-	InstanceVnictype string `json:"instance_vnic:type"`
+	InstanceVnictype *string `json:"instance_vnic:type,omitempty"`
 	// 最大带宽，单位Mbps，最大值为10000。
 
-	InstanceVnicinstanceBandwidth string `json:"instance_vnic:instance_bandwidth"`
+	InstanceVnicinstanceBandwidth *string `json:"instance_vnic:instance_bandwidth,omitempty"`
 	// 最大网卡个数，最大为4。
 
-	InstanceVnicmaxCount string `json:"instance_vnic:max_count"`
+	InstanceVnicmaxCount *string `json:"instance_vnic:max_count,omitempty"`
 	// 值格式为{type}:{count}:{size}:{safeFormat}，其中：  - type指磁盘类型，当前只支持hdd。 - count指本地磁盘数量，目前支持d1类型：3/6/12/24，d2类型：2/4/8/12/16/24，d3类型：2/4/8/12/16/24/28。 - size指单个磁盘容量，单位GB，目前只支持1675（实际磁盘大小为1800，格式化后可用大小为1675）。 - safeFormat指云服务器本地磁盘是否安全格式化，目前仅支持d1类型：FALSE，d2/d3类型：True。  > 说明：  - 磁盘增强型特有字段。
 
 	QuotalocalDisk *string `json:"quota:local_disk,omitempty"`
@@ -46,13 +46,13 @@ type FlavorExtraSpec struct {
 	EcsvirtualizationEnvTypes *string `json:"ecs:virtualization_env_types,omitempty"`
 	// 显卡是否直通。  值为“true”，表示GPU直通。
 
-	PciPassthroughenableGpu string `json:"pci_passthrough:enable_gpu"`
+	PciPassthroughenableGpu *string `json:"pci_passthrough:enable_gpu,omitempty"`
 	// G1型和G2型云服务器应用的技术，包括GPU虚拟化和GPU直通。  - 如果该规格的云服务器使用GPU虚拟化技术，且GPU卡的型号为M60-1Q，参数值可设置为“m60_1q:virt:1”。 - 如果该规格的云服务器使用GPU直通技术，且GPU卡的型号为M60，参数值可设置为“m60:direct_graphics:1”。
 
-	PciPassthroughgpuSpecs string `json:"pci_passthrough:gpu_specs"`
+	PciPassthroughgpuSpecs *string `json:"pci_passthrough:gpu_specs,omitempty"`
 	// P1型v本地直通GPU的型号和数量，参数值可设置为“nvidia-p100:1”，表示使用该规格创建的弹性云服务器将占用1张NVIDIA P100显卡。
 
-	PciPassthroughalias string `json:"pci_passthrough:alias"`
+	PciPassthroughalias *string `json:"pci_passthrough:alias,omitempty"`
 	// 此参数是Region级配置，某个AZ没有在cond:operation:az参数中配置时默认使用此参数的取值。不配置或无此参数时等同于“normal”。取值范围：  - normal：正常商用 - abandon：下线（即不显示） - sellout：售罄 - obt：公测 - promotion：推荐(等同normal，也是商用)
 
 	Condoperationstatus *string `json:"cond:operation:status,omitempty"`

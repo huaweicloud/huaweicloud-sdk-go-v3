@@ -63,6 +63,9 @@ type ListInstancesResult struct {
 	// 企业项目ID。取值为“0”，表示为default企业项目。
 
 	EnterpriseProjectId string `json:"enterprise_project_id"`
+	// 专属资源ID，只有数据库实例属于专属资源池才会返回该参数。
+
+	DedicatedResourceId *string `json:"dedicated_resource_id,omitempty"`
 	// 时区。
 
 	TimeZone string `json:"time_zone"`

@@ -52,17 +52,6 @@ func (c *FrsClient) AddFacesByUrl(request *model.AddFacesByUrlRequest) (*model.A
 	}
 }
 
-//用于查询服务的开通状态。
-func (c *FrsClient) AuthorizeFaceRecognitionService(request *model.AuthorizeFaceRecognitionServiceRequest) (*model.AuthorizeFaceRecognitionServiceResponse, error) {
-	requestDef := GenReqDefForAuthorizeFaceRecognitionService()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.AuthorizeFaceRecognitionServiceResponse), nil
-	}
-}
-
 //自定义筛选条件，批量删除人脸库中的符合指定条件的多张人脸。
 func (c *FrsClient) BatchDeleteFaces(request *model.BatchDeleteFacesRequest) (*model.BatchDeleteFacesResponse, error) {
 	requestDef := GenReqDefForBatchDeleteFaces()
@@ -335,6 +324,17 @@ func (c *FrsClient) ShowFacesByLimit(request *model.ShowFacesByLimitRequest) (*m
 		return nil, err
 	} else {
 		return resp.(*model.ShowFacesByLimitResponse), nil
+	}
+}
+
+//用于查询服务的开通状态。
+func (c *FrsClient) ShowSubscribes(request *model.ShowSubscribesRequest) (*model.ShowSubscribesResponse, error) {
+	requestDef := GenReqDefForShowSubscribes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSubscribesResponse), nil
 	}
 }
 
