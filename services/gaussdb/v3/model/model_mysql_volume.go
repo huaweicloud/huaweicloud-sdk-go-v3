@@ -7,7 +7,7 @@ import (
 )
 
 type MysqlVolume struct {
-	// 磁盘大小。默认值为40G。 取值范围：40GB~128000GB，必须为10的整数倍。
+	// 磁盘大小。默认值为40，单位GB。 取值范围：40~128000，必须为10的整数倍。
 
 	Size string `json:"size"`
 }

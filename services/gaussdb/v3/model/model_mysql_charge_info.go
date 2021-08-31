@@ -23,7 +23,7 @@ type MysqlChargeInfo struct {
 	// 创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。  - true，为自动续订。 - false，为不自动续订，默认该方式。
 
 	IsAutoRenew *string `json:"is_auto_renew,omitempty"`
-	// 创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付。 - false，为手动支付，默认该方式。
+	// 创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付，默认该方式。 - false，为手动支付。
 
 	IsAutoPay *string `json:"is_auto_pay,omitempty"`
 }

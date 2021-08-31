@@ -11,9 +11,10 @@ type ShowMysqlBackupListResponse struct {
 	// 备份信息。
 
 	Backups *[]Backups `json:"backups,omitempty"`
+	// 备份文件的总数。
 
-	TotalCount     float32 `json:"total_count,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	TotalCount     *int64 `json:"total_count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowMysqlBackupListResponse) String() string {

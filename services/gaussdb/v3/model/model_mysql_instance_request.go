@@ -54,14 +54,14 @@ type MysqlInstanceRequest struct {
 	SlaveCount int32 `json:"slave_count"`
 
 	Volume *MysqlVolume `json:"volume,omitempty"`
-	// 数据库实例端口，默认3306。
-
-	Port *string `json:"port,omitempty"`
 
 	Tags *[]MysqlTags `json:"tags,omitempty"`
-	// 企业项目ID。
+	// 企业项目ID。如果账户开通企业项目服务则该参数必选，未开启该参数不可选。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	// 专属资源池ID，只有开通专属资源池后才可以下发此参数。
+
+	DedicatedResourceId *string `json:"dedicated_resource_id,omitempty"`
 }
 
 func (o MysqlInstanceRequest) String() string {

@@ -10,8 +10,11 @@ import (
 type ShowMysqlQuotasResponse struct {
 	// 资源列表对象。
 
-	QuotaList      *[]Quota `json:"quota_list,omitempty"`
-	HttpStatusCode int      `json:"-"`
+	QuotaList *[]Quota `json:"quota_list,omitempty"`
+	// 配额记录的条数。
+
+	TotalCount     *int32 `json:"total_count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowMysqlQuotasResponse) String() string {

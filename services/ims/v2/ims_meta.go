@@ -965,7 +965,7 @@ func GenReqDefForGlanceUpdateImage() *def.HttpRequestDef {
 		WithMethod(http.MethodPatch).
 		WithPath("/v2/images/{image_id}").
 		WithResponse(new(model.GlanceUpdateImageResponse)).
-		WithContentType("application/json;charset=UTF-8")
+		WithContentType("application/openstack-images-v2.1-json-patch")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageId").

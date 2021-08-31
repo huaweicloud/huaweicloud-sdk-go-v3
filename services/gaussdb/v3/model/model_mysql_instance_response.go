@@ -10,7 +10,7 @@ type MysqlInstanceResponse struct {
 	// 实例ID。
 
 	Id string `json:"id"`
-	// 实例名称，与请求参数相同。
+	// 实例名称。用于表示实例的名称，同一租户下，同类型的实例名称可相同。 取值范围：4~64个字符之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线, 不能包含其它的特殊字符。
 
 	Name string `json:"name"`
 	// 实例状态。
@@ -18,13 +18,13 @@ type MysqlInstanceResponse struct {
 	Status *string `json:"status,omitempty"`
 
 	Datastore *MysqlDatastore `json:"datastore,omitempty"`
-	// 实例类型，与请求参数相同。
+	// 实例类型，仅支持Cluster。
 
 	Mode *string `json:"mode,omitempty"`
 	// 参数组ID。
 
 	ConfigurationId *string `json:"configuration_id,omitempty"`
-	// 数据库端口信息，与请求参数相同。
+	// 数据库端口信息。
 
 	Port *string `json:"port,omitempty"`
 

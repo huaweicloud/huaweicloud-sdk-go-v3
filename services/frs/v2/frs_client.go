@@ -173,6 +173,72 @@ func (c *FrsClient) DetectFaceByUrl(request *model.DetectFaceByUrlRequest) (*mod
 	}
 }
 
+//动作活体检测是通过判断视频中的人物动作与传入动作列表是否一致来识别视频中人物是否为活体。如果有多张人脸出现，则选取最大的人脸进行判定。
+func (c *FrsClient) DetectLiveByBase64(request *model.DetectLiveByBase64Request) (*model.DetectLiveByBase64Response, error) {
+	requestDef := GenReqDefForDetectLiveByBase64()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetectLiveByBase64Response), nil
+	}
+}
+
+//动作活体检测是通过判断视频中的人物动作与传入动作列表是否一致来识别视频中人物是否为活体。如果有多张人脸出现，则选取最大的人脸进行判定。
+func (c *FrsClient) DetectLiveByFile(request *model.DetectLiveByFileRequest) (*model.DetectLiveByFileResponse, error) {
+	requestDef := GenReqDefForDetectLiveByFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetectLiveByFileResponse), nil
+	}
+}
+
+//动作活体检测是通过判断视频中的人物动作与传入动作列表是否一致来识别视频中人物是否为活体。如果有多张人脸出现，则选取最大的人脸进行判定。
+func (c *FrsClient) DetectLiveByUrl(request *model.DetectLiveByUrlRequest) (*model.DetectLiveByUrlResponse, error) {
+	requestDef := GenReqDefForDetectLiveByUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetectLiveByUrlResponse), nil
+	}
+}
+
+//静默活体检测是基于人脸图片中可能存在的畸变、摩尔纹、反光、倒影、边框等信息，判断图片中的人脸是否来自于真人活体，有效抵御纸质翻拍照、电子翻拍照以及视频翻拍等各种攻击方式。静默活体检测支持单张图片，不支持多人脸图片。
+func (c *FrsClient) DetectLiveFaceByBase64(request *model.DetectLiveFaceByBase64Request) (*model.DetectLiveFaceByBase64Response, error) {
+	requestDef := GenReqDefForDetectLiveFaceByBase64()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetectLiveFaceByBase64Response), nil
+	}
+}
+
+//静默活体检测是基于人脸图片中可能存在的畸变、摩尔纹、反光、倒影、边框等信息，判断图片中的人脸是否来自于真人活体，有效抵御纸质翻拍照、电子翻拍照以及视频翻拍等各种攻击方式。静默活体检测支持单张图片，不支持多人脸图片。
+func (c *FrsClient) DetectLiveFaceByFile(request *model.DetectLiveFaceByFileRequest) (*model.DetectLiveFaceByFileResponse, error) {
+	requestDef := GenReqDefForDetectLiveFaceByFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetectLiveFaceByFileResponse), nil
+	}
+}
+
+//静默活体检测是基于人脸图片中可能存在的畸变、摩尔纹、反光、倒影、边框等信息，判断图片中的人脸是否来自于真人活体，有效抵御纸质翻拍照、电子翻拍照以及视频翻拍等各种攻击方式。静默活体检测支持单张图片，不支持多人脸图片。
+func (c *FrsClient) DetectLiveFaceByUrl(request *model.DetectLiveFaceByUrlRequest) (*model.DetectLiveFaceByUrlResponse, error) {
+	requestDef := GenReqDefForDetectLiveFaceByUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetectLiveFaceByUrlResponse), nil
+	}
+}
+
 //人脸搜索是指在已有的人脸库中，查询与目标人脸相似的一张或者多张人脸，并返回相应的置信度。 支持传入图片或者faceID进行人脸搜索，如果传入的是多张人脸图片，选取图片中检测到的最大尺寸人脸作为检索的输入。
 func (c *FrsClient) SearchFaceByBase64(request *model.SearchFaceByBase64Request) (*model.SearchFaceByBase64Response, error) {
 	requestDef := GenReqDefForSearchFaceByBase64()

@@ -25,6 +25,21 @@ type OnlineInfo struct {
 	// 音频编码方式 - AAC
 
 	AudioCodec OnlineInfoAudioCodec `json:"audio_codec"`
+	// 视频帧率
+
+	VideoFrameRate *int64 `json:"video_frame_rate,omitempty"`
+	// 音频帧率
+
+	AudioFrameRate *int64 `json:"audio_frame_rate,omitempty"`
+	// 视频码率
+
+	VideoBitrate *int64 `json:"video_bitrate,omitempty"`
+	// 音频码率
+
+	AudioBitrate *int64 `json:"audio_bitrate,omitempty"`
+	// 视频分辨率
+
+	Resolution *string `json:"resolution,omitempty"`
 	// 推流设备的ip
 
 	ClientIp string `json:"client_ip"`

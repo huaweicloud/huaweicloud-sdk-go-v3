@@ -27,7 +27,7 @@ type CreateScoresRequestModel struct {
 	WorksKind *string `json:"works_kind,omitempty"`
 	// 作品分数，作品状态为failed时传-1，计算长度时包括小数点，小数点后面最多保留四位
 
-	Score string `json:"score"`
+	Score float64 `json:"score"`
 	// 作品状态success|failed。判题时，需要对上传作品进行检查，当作品不符合要求时，应该返回failed，并将提示信息通过 message显示出来
 
 	Status CreateScoresRequestModelStatus `json:"status"`

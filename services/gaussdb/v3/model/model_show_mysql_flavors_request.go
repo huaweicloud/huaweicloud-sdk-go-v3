@@ -20,7 +20,7 @@ type ShowMysqlFlavorsRequest struct {
 	// 数据库版本号，目前仅支持兼容MySQL 8.0。
 
 	VersionName *string `json:"version_name,omitempty"`
-	// 规格的可用区模式，不区分大小写。
+	// 规格的可用区模式，现在仅支持\"single\"、\"multi\"，不区分大小写。
 
 	AvailabilityZoneMode ShowMysqlFlavorsRequestAvailabilityZoneMode `json:"availability_zone_mode"`
 	// 规格编码。

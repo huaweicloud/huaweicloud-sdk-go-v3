@@ -68,6 +68,9 @@ type MysqlInstanceListInfo struct {
 	TimeZone *string `json:"time_zone,omitempty"`
 
 	ChargeInfo *MysqlChargeInfo `json:"charge_info,omitempty"`
+	// 专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
+
+	DedicatedResourceId *string `json:"dedicated_resource_id,omitempty"`
 }
 
 func (o MysqlInstanceListInfo) String() string {

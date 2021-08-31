@@ -19,7 +19,7 @@ func GaussDBClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//变更实例规格
+//变更数据库实例的规格。
 func (c *GaussDBClient) ChangeMysqlInstanceSpecification(request *model.ChangeMysqlInstanceSpecificationRequest) (*model.ChangeMysqlInstanceSpecificationResponse, error) {
 	requestDef := GenReqDefForChangeMysqlInstanceSpecification()
 
@@ -41,7 +41,7 @@ func (c *GaussDBClient) CreateMysqlBackup(request *model.CreateMysqlBackupReques
 	}
 }
 
-//
+//创建云数据库 GaussDB(for MySQL)实例。
 func (c *GaussDBClient) CreateMysqlInstance(request *model.CreateMysqlInstanceRequest) (*model.CreateMysqlInstanceResponse, error) {
 	requestDef := GenReqDefForCreateMysqlInstance()
 
@@ -52,7 +52,7 @@ func (c *GaussDBClient) CreateMysqlInstance(request *model.CreateMysqlInstanceRe
 	}
 }
 
-//
+//开启数据库代理，只支持ELB模式。
 func (c *GaussDBClient) CreateMysqlProxy(request *model.CreateMysqlProxyRequest) (*model.CreateMysqlProxyResponse, error) {
 	requestDef := GenReqDefForCreateMysqlProxy()
 
@@ -74,7 +74,7 @@ func (c *GaussDBClient) CreateMysqlReadonlyNode(request *model.CreateMysqlReadon
 	}
 }
 
-//
+//删除数据库实例，不支持删除包周期实例。
 func (c *GaussDBClient) DeleteMysqlInstance(request *model.DeleteMysqlInstanceRequest) (*model.DeleteMysqlInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteMysqlInstance()
 
@@ -85,7 +85,7 @@ func (c *GaussDBClient) DeleteMysqlInstance(request *model.DeleteMysqlInstanceRe
 	}
 }
 
-//
+//关闭数据库代理。
 func (c *GaussDBClient) DeleteMysqlProxy(request *model.DeleteMysqlProxyRequest) (*model.DeleteMysqlProxyResponse, error) {
 	requestDef := GenReqDefForDeleteMysqlProxy()
 
@@ -96,7 +96,7 @@ func (c *GaussDBClient) DeleteMysqlProxy(request *model.DeleteMysqlProxyRequest)
 	}
 }
 
-//
+//删除实例的只读节点。多可用区模式删除只读节点时，要保证删除后，剩余的只读节点和主节点在不同的可用区中，否则无法删除该只读节点。
 func (c *GaussDBClient) DeleteMysqlReadonlyNode(request *model.DeleteMysqlReadonlyNodeRequest) (*model.DeleteMysqlReadonlyNodeResponse, error) {
 	requestDef := GenReqDefForDeleteMysqlReadonlyNode()
 
@@ -118,7 +118,7 @@ func (c *GaussDBClient) ExpandMysqlInstanceVolume(request *model.ExpandMysqlInst
 	}
 }
 
-//
+//扩容数据库代理节点的数量。 DeC专属云账号暂不支持数据库代理。
 func (c *GaussDBClient) ExpandMysqlProxy(request *model.ExpandMysqlProxyRequest) (*model.ExpandMysqlProxyResponse, error) {
 	requestDef := GenReqDefForExpandMysqlProxy()
 
@@ -126,6 +126,17 @@ func (c *GaussDBClient) ExpandMysqlProxy(request *model.ExpandMysqlProxyRequest)
 		return nil, err
 	} else {
 		return resp.(*model.ExpandMysqlProxyResponse), nil
+	}
+}
+
+//获取专属资源池列表，包括用户开通的所有专属资源池信息。
+func (c *GaussDBClient) ListDedicatedResources(request *model.ListDedicatedResourcesRequest) (*model.ListDedicatedResourcesResponse, error) {
+	requestDef := GenReqDefForListDedicatedResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDedicatedResourcesResponse), nil
 	}
 }
 
@@ -140,7 +151,7 @@ func (c *GaussDBClient) ListMysqlConfigurations(request *model.ListMysqlConfigur
 	}
 }
 
-//
+//查询数据库错误日志。
 func (c *GaussDBClient) ListMysqlErrorLog(request *model.ListMysqlErrorLogRequest) (*model.ListMysqlErrorLogResponse, error) {
 	requestDef := GenReqDefForListMysqlErrorLog()
 
@@ -173,7 +184,7 @@ func (c *GaussDBClient) ResetMysqlPassword(request *model.ResetMysqlPasswordRequ
 	}
 }
 
-//
+//设置指定企业项目的资源配额。
 func (c *GaussDBClient) SetMysqlQuotas(request *model.SetMysqlQuotasRequest) (*model.SetMysqlQuotasResponse, error) {
 	requestDef := GenReqDefForSetMysqlQuotas()
 
@@ -195,7 +206,7 @@ func (c *GaussDBClient) ShowMysqlBackupList(request *model.ShowMysqlBackupListRe
 	}
 }
 
-//
+//查询自动备份策略。
 func (c *GaussDBClient) ShowMysqlBackupPolicy(request *model.ShowMysqlBackupPolicyRequest) (*model.ShowMysqlBackupPolicyResponse, error) {
 	requestDef := GenReqDefForShowMysqlBackupPolicy()
 
@@ -206,7 +217,7 @@ func (c *GaussDBClient) ShowMysqlBackupPolicy(request *model.ShowMysqlBackupPoli
 	}
 }
 
-//
+//获取指定数据库引擎对应的数据库版本信息。
 func (c *GaussDBClient) ShowMysqlEngineVersion(request *model.ShowMysqlEngineVersionRequest) (*model.ShowMysqlEngineVersionResponse, error) {
 	requestDef := GenReqDefForShowMysqlEngineVersion()
 
@@ -217,7 +228,7 @@ func (c *GaussDBClient) ShowMysqlEngineVersion(request *model.ShowMysqlEngineVer
 	}
 }
 
-//
+//获取指定数据库引擎版本对应的规格信息。
 func (c *GaussDBClient) ShowMysqlFlavors(request *model.ShowMysqlFlavorsRequest) (*model.ShowMysqlFlavorsResponse, error) {
 	requestDef := GenReqDefForShowMysqlFlavors()
 
@@ -239,7 +250,7 @@ func (c *GaussDBClient) ShowMysqlInstanceInfo(request *model.ShowMysqlInstanceIn
 	}
 }
 
-//
+//根据指定条件查询实例列表。
 func (c *GaussDBClient) ShowMysqlInstanceList(request *model.ShowMysqlInstanceListRequest) (*model.ShowMysqlInstanceListResponse, error) {
 	requestDef := GenReqDefForShowMysqlInstanceList()
 
@@ -261,7 +272,7 @@ func (c *GaussDBClient) ShowMysqlJobInfo(request *model.ShowMysqlJobInfoRequest)
 	}
 }
 
-//
+//获取指定租户的资源配额。
 func (c *GaussDBClient) ShowMysqlProjectQuotas(request *model.ShowMysqlProjectQuotasRequest) (*model.ShowMysqlProjectQuotasResponse, error) {
 	requestDef := GenReqDefForShowMysqlProjectQuotas()
 
@@ -272,7 +283,7 @@ func (c *GaussDBClient) ShowMysqlProjectQuotas(request *model.ShowMysqlProjectQu
 	}
 }
 
-//
+//查询数据库代理信息。
 func (c *GaussDBClient) ShowMysqlProxy(request *model.ShowMysqlProxyRequest) (*model.ShowMysqlProxyResponse, error) {
 	requestDef := GenReqDefForShowMysqlProxy()
 
@@ -283,7 +294,7 @@ func (c *GaussDBClient) ShowMysqlProxy(request *model.ShowMysqlProxyRequest) (*m
 	}
 }
 
-//
+//查询数据库代理规格信息。
 func (c *GaussDBClient) ShowMysqlProxyFlavors(request *model.ShowMysqlProxyFlavorsRequest) (*model.ShowMysqlProxyFlavorsResponse, error) {
 	requestDef := GenReqDefForShowMysqlProxyFlavors()
 
@@ -294,7 +305,7 @@ func (c *GaussDBClient) ShowMysqlProxyFlavors(request *model.ShowMysqlProxyFlavo
 	}
 }
 
-//
+//获取指定企业项目的资源配额。
 func (c *GaussDBClient) ShowMysqlQuotas(request *model.ShowMysqlQuotasRequest) (*model.ShowMysqlQuotasResponse, error) {
 	requestDef := GenReqDefForShowMysqlQuotas()
 
@@ -327,7 +338,7 @@ func (c *GaussDBClient) UpdateMysqlInstanceName(request *model.UpdateMysqlInstan
 	}
 }
 
-//
+//修改指定企业项目的资源配额。
 func (c *GaussDBClient) UpdateMysqlQuotas(request *model.UpdateMysqlQuotasRequest) (*model.UpdateMysqlQuotasResponse, error) {
 	requestDef := GenReqDefForUpdateMysqlQuotas()
 
