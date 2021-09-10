@@ -74,6 +74,17 @@ func (c *CbsClient) CreateSession(request *model.CreateSessionRequest) (*model.C
 	}
 }
 
+//发起话务机器人会话。
+func (c *CbsClient) CreateTbSession(request *model.CreateTbSessionRequest) (*model.CreateTbSessionResponse, error) {
+	requestDef := GenReqDefForCreateTbSession()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTbSessionResponse), nil
+	}
+}
+
 //问答会话API由开启会话、处理会话、关闭会话三个接口组成。用户可通过调用该接口关闭会话。该接口即将下线，请优先使用问答机器人API接口进行调用。
 func (c *CbsClient) DeleteSession(request *model.DeleteSessionRequest) (*model.DeleteSessionResponse, error) {
 	requestDef := GenReqDefForDeleteSession()
@@ -82,6 +93,17 @@ func (c *CbsClient) DeleteSession(request *model.DeleteSessionRequest) (*model.D
 		return nil, err
 	} else {
 		return resp.(*model.DeleteSessionResponse), nil
+	}
+}
+
+//结束话务机器人会话。如果会话持续10分钟无会话请求则被清理。
+func (c *CbsClient) DeleteTbSession(request *model.DeleteTbSessionRequest) (*model.DeleteTbSessionResponse, error) {
+	requestDef := GenReqDefForDeleteTbSession()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTbSessionResponse), nil
 	}
 }
 
@@ -104,6 +126,17 @@ func (c *CbsClient) ExecuteSession(request *model.ExecuteSessionRequest) (*model
 		return nil, err
 	} else {
 		return resp.(*model.ExecuteSessionResponse), nil
+	}
+}
+
+//进行话务机器人会话。
+func (c *CbsClient) ExecuteTbSession(request *model.ExecuteTbSessionRequest) (*model.ExecuteTbSessionResponse, error) {
+	requestDef := GenReqDefForExecuteTbSession()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteTbSessionResponse), nil
 	}
 }
 

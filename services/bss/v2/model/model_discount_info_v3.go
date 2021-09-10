@@ -13,7 +13,7 @@ type DiscountInfoV3 struct {
 	// 折扣率或者满减值，如果折扣模式是一口价，这个值为空。
 
 	DiscountValue string `json:"discount_value"`
-	// 折扣类型，取值为 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
+	// 折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
 
 	DiscountType int32 `json:"discount_type"`
 	// 可使用折扣的订单列表。 具体请参见表3。

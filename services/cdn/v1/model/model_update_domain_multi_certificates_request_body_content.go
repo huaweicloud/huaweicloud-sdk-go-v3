@@ -13,12 +13,14 @@ type UpdateDomainMultiCertificatesRequestBodyContent struct {
 	// https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
 
 	HttpsSwitch int32 `json:"https_switch"`
-	// 回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：\"https\"  为空值时默认设置为http
+	// 回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
 
 	AccessOriginWay *int32 `json:"access_origin_way,omitempty"`
-	// 强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭
+	// 强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
 
 	ForceRedirectHttps *int32 `json:"force_redirect_https,omitempty"`
+
+	ForceRedirectConfig *ForceRedirect `json:"force_redirect_config,omitempty"`
 	// http2.0（0：关闭；1：开启） 为空值时默认设置为关闭
 
 	Http2 *int32 `json:"http2,omitempty"`

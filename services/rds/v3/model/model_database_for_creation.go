@@ -14,6 +14,9 @@ type DatabaseForCreation struct {
 	// 数据库使用的字符集，例如utf8、gbk、ascii等MySQL支持的字符集。
 
 	CharacterSet string `json:"character_set"`
+	// 数据库备注，最大长度512
+
+	Comment *string `json:"comment,omitempty"`
 }
 
 func (o DatabaseForCreation) String() string {

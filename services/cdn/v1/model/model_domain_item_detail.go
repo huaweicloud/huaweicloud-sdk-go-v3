@@ -18,7 +18,7 @@ type DomainItemDetail struct {
 	StatType *string `json:"stat_type,omitempty"`
 	// 数据结束时间戳，可能与请求时间不一致，可能不返回
 
-	Domains *[]DomainObject `json:"domains,omitempty"`
+	Domains *[]map[string]interface{} `json:"domains,omitempty"`
 }
 
 func (o DomainItemDetail) String() string {

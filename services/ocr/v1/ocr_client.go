@@ -129,6 +129,17 @@ func (c *OcrClient) RecognizeIdCard(request *model.RecognizeIdCardRequest) (*mod
 	}
 }
 
+//发票验真服务支持9种增值税发票的信息核验，包括增值税专用发票、增值税普通发票、增值税普通发票（卷式）、增值税电子专用发票、增值税电子普通发票、增值税电子普通发票（通行费）、二手车销售统一发票、机动车销售统一发票、区块链电子发票，支持返回票面的全部信息。该接口的使用限制请参见[约束与限制](https://support.huaweicloud.com/productdesc-ocr/ocr_01_0006.html)，详细使用指导请参见[OCR服务使用简介](https://support.huaweicloud.com/qs-ocr/ocr_05_0001.html)章节。
+func (c *OcrClient) RecognizeInvoiceVerification(request *model.RecognizeInvoiceVerificationRequest) (*model.RecognizeInvoiceVerificationResponse, error) {
+	requestDef := GenReqDefForRecognizeInvoiceVerification()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeInvoiceVerificationResponse), nil
+	}
+}
+
 //识别输入图片中的车牌信息，并返回其坐标和内容。
 func (c *OcrClient) RecognizeLicensePlate(request *model.RecognizeLicensePlateRequest) (*model.RecognizeLicensePlateResponse, error) {
 	requestDef := GenReqDefForRecognizeLicensePlate()

@@ -104,6 +104,9 @@ type InstanceResponse struct {
 	// 是否已被DDM实例关联。
 
 	AssociatedWithDdm *bool `json:"associated_with_ddm,omitempty"`
+	// 实例的备注信息。
+
+	Alias *string `json:"alias,omitempty"`
 }
 
 func (o InstanceResponse) String() string {

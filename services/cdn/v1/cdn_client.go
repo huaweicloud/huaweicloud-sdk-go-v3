@@ -316,7 +316,7 @@ func (c *CdnClient) UpdateDomainOrigin(request *model.UpdateDomainOriginRequest)
 	}
 }
 
-//开启此项配置后，当CDN节点回源请求源站返回302状态码时，CDN节点会先跳转到302对应地址获取资源并缓存后再返回给用户。
+//开启此项配置后，当CDN节点回源请求源站返回301/302状态码时，CDN节点会先跳转到301/302对应地址获取资源并缓存后再返回给用户。
 func (c *CdnClient) UpdateFollow302Switch(request *model.UpdateFollow302SwitchRequest) (*model.UpdateFollow302SwitchResponse, error) {
 	requestDef := GenReqDefForUpdateFollow302Switch()
 

@@ -17,13 +17,13 @@ type Domains struct {
 	// 加速域名。
 
 	DomainName *string `json:"domain_name,omitempty"`
-	// 域名业务类型，若为web，则表示类型为静态加速；若为download，则表示业务类型为下载加速；若为video，则表示业务类型为流媒体加速；若为wholeSite，则表示类型为全站加速。
+	// 域名业务类型，若为web，则表示类型为网站加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示类型为全站加速。
 
 	BusinessType *string `json:"business_type,omitempty"`
 	// 域名所属用户的domain_id。
 
 	UserDomainId *string `json:"user_domain_id,omitempty"`
-	// 加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核失败” - deleting表示“删除中”
+	// 加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”
 
 	DomainStatus *string `json:"domain_status,omitempty"`
 	// 加速域名对应的CNAME。
@@ -31,7 +31,7 @@ type Domains struct {
 	Cname *string `json:"cname,omitempty"`
 	// 源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
 
-	Sources *[]SourceWithPort `json:"sources,omitempty"`
+	Sources *[]Sources `json:"sources,omitempty"`
 
 	DomainOriginHost *DomainOriginHost `json:"domain_origin_host,omitempty"`
 	// 是否开启HTTPS加速。
@@ -61,7 +61,7 @@ type Domains struct {
 	// 回源跟随状态。
 
 	FollowStatus *string `json:"follow_status,omitempty"`
-	// 是否暂停源站回源
+	// 是否暂停源站回源。
 
 	OriginStatus *string `json:"origin_status,omitempty"`
 	// 域名禁用原因

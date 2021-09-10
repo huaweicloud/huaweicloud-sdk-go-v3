@@ -16,13 +16,13 @@ type HttpInfoResponseBody struct {
 	// 证书内容。
 
 	Certificate *string `json:"certificate,omitempty"`
-	// 功能说明： HTTPS协议使用的私钥，不启用证书则无需输入。  取值范围：PEM编码格式。
+	// 功能说明： HTTPS协议使用的私钥，不启用证书则无需输入。（为了客户信息安全，接口返回私钥为空）
 
 	PrivateKey *string `json:"private_key,omitempty"`
 	// 证书类型。1：代表华为云托管证书；0：表示自有证书。
 
 	CertificateType *int32 `json:"certificate_type,omitempty"`
-	// 客户端请求是否强制重定向。1是，0否。
+	// 客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
 
 	ForceRedirectHttps *int32 `json:"force_redirect_https,omitempty"`
 

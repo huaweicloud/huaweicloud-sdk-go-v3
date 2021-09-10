@@ -35,6 +35,8 @@ type IdCardResult struct {
 	// 有效结束日期。   > 说明：  - 身份证识别只支持中国大陆汉族身份证识别。
 
 	ValidTo *string `json:"valid_to,omitempty"`
+
+	VerificationResult *IdcardVerificationResult `json:"verification_result,omitempty"`
 }
 
 func (o IdCardResult) String() string {

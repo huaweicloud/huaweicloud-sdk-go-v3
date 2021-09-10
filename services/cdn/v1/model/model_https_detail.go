@@ -28,10 +28,10 @@ type HttpsDetail struct {
 	// 证书过期时间
 
 	ExpirationTime *int64 `json:"expiration_time,omitempty"`
-	// HTTPS证书是否启用，取值0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用并HTTPS加速并HTTP回源，开启时需要传递证书及私钥。
+	// HTTPS证书是否启用，取值0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源，开启时需要传递证书及私钥。
 
 	HttpsStatus *int32 `json:"https_status,omitempty"`
-	// 客户端请求是否强制重定向。1是，0否。
+	// 客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
 
 	ForceRedirectHttps *int32 `json:"force_redirect_https,omitempty"`
 

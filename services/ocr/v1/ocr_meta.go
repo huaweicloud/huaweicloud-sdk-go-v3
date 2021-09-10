@@ -157,6 +157,21 @@ func GenReqDefForRecognizeIdCard() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRecognizeInvoiceVerification() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/ocr/invoice-verification").
+		WithResponse(new(model.RecognizeInvoiceVerificationResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRecognizeLicensePlate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

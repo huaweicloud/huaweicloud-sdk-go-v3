@@ -536,14 +536,25 @@ func (c *BssClient) ListResourceTypes(request *model.ListResourceTypesRequest) (
 	}
 }
 
-//功能描述：客户在客户自建平台查询套餐内的使用量
-func (c *BssClient) ListResourceUsages(request *model.ListResourceUsagesRequest) (*model.ListResourceUsagesResponse, error) {
-	requestDef := GenReqDefForListResourceUsages()
+//功能描述：客户对于部分云服务，可以查询自己的使用量详情。主要应对95计费的场景
+func (c *BssClient) ListResourceUsage(request *model.ListResourceUsageRequest) (*model.ListResourceUsageResponse, error) {
+	requestDef := GenReqDefForListResourceUsage()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListResourceUsagesResponse), nil
+		return resp.(*model.ListResourceUsageResponse), nil
+	}
+}
+
+//功能描述：客户对于部分云服务，可以查询自己的使用量汇总详情。主要应对95计费的场景
+func (c *BssClient) ListResourceUsageSummary(request *model.ListResourceUsageSummaryRequest) (*model.ListResourceUsageSummaryResponse, error) {
+	requestDef := GenReqDefForListResourceUsageSummary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceUsageSummaryResponse), nil
 	}
 }
 
@@ -577,6 +588,17 @@ func (c *BssClient) ListSkuInventories(request *model.ListSkuInventoriesRequest)
 		return nil, err
 	} else {
 		return resp.(*model.ListSkuInventoriesResponse), nil
+	}
+}
+
+//功能描述：查询客户消费记录
+func (c *BssClient) ListSubCustomerBillDetail(request *model.ListSubCustomerBillDetailRequest) (*model.ListSubCustomerBillDetailResponse, error) {
+	requestDef := GenReqDefForListSubCustomerBillDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubCustomerBillDetailResponse), nil
 	}
 }
 

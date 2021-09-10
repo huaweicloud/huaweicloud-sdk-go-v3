@@ -17,6 +17,9 @@ type IdCardRequestBody struct {
 	//  - front：身份证正面。  - back：身份证背面。  > 说明： 如果参数值为空或无该参数，系统自动识别，建议填写，准确率更高。
 
 	Side *string `json:"side,omitempty"`
+	// 返回校验身份证号等信息的开关，默认false，可选值如下所示：  - true：返回校验信息  - false：不反回校验信息
+
+	ReturnVerification *bool `json:"return_verification,omitempty"`
 }
 
 func (o IdCardRequestBody) String() string {

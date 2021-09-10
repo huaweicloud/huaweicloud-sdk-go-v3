@@ -3,9 +3,6 @@ package model
 import (
 	"encoding/json"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -23,9 +20,9 @@ type ShowDomainItemLocationDetailsRequest struct {
 	// 域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com，all表示查询名下全部域名
 
 	DomainName string `json:"domain_name"`
-	// 指标类型列表 网络资源消耗：bw（带宽），flux（流量） 访问情况：req_num（请求总数）
+	// 指标类型列表 网络资源消耗：bw（带宽），flux（流量），ipv6_bw(ipv6带宽)，ipv6_flux(ipv6流量), https_bw(https带宽)，https_flux(https流量) 访问情况：req_num（请求总数），hit_num（请求命中次数），req_time(请求时长) HTTP状态码（组合指标）：status_code_2xx(状态码2xx)，status_code_3xx(状态码3xx)，status_code_4xx(状态码4xx)，status_code_5xx(状态码5xx)
 
-	StatType ShowDomainItemLocationDetailsRequestStatType `json:"stat_type"`
+	StatType string `json:"stat_type"`
 	// 区域列表，以逗号分隔，all表示查询全部区域
 
 	Region string `json:"region"`
@@ -41,46 +38,4 @@ func (o ShowDomainItemLocationDetailsRequest) String() string {
 	}
 
 	return strings.Join([]string{"ShowDomainItemLocationDetailsRequest", string(data)}, " ")
-}
-
-type ShowDomainItemLocationDetailsRequestStatType struct {
-	value string
-}
-
-type ShowDomainItemLocationDetailsRequestStatTypeEnum struct {
-	BW      ShowDomainItemLocationDetailsRequestStatType
-	FLUX    ShowDomainItemLocationDetailsRequestStatType
-	REQ_NUM ShowDomainItemLocationDetailsRequestStatType
-}
-
-func GetShowDomainItemLocationDetailsRequestStatTypeEnum() ShowDomainItemLocationDetailsRequestStatTypeEnum {
-	return ShowDomainItemLocationDetailsRequestStatTypeEnum{
-		BW: ShowDomainItemLocationDetailsRequestStatType{
-			value: "bw",
-		},
-		FLUX: ShowDomainItemLocationDetailsRequestStatType{
-			value: "flux",
-		},
-		REQ_NUM: ShowDomainItemLocationDetailsRequestStatType{
-			value: "req_num",
-		},
-	}
-}
-
-func (c ShowDomainItemLocationDetailsRequestStatType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ShowDomainItemLocationDetailsRequestStatType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

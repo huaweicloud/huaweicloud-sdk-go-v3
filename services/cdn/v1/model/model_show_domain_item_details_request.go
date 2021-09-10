@@ -3,9 +3,6 @@ package model
 import (
 	"encoding/json"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -26,9 +23,9 @@ type ShowDomainItemDetailsRequest struct {
 	// mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
 
 	ServiceArea *string `json:"service_area,omitempty"`
-	// 网络资源消耗： - bw（带宽） - flux（流量） - bs_bw(回源带宽) - bs_flux（回源流量）  访问情况： - req_num（请求总数） - hit_num（请求命中次数） - bs_num(回源总数) - bs_fail_num(回源失败数) - hit_flux（命中流量）  HTTP状态码（组合指标）： - http_code_2xx(状态码汇总2xx) - http_code_3xx(状态码汇总3xx) - http_code_4xx(状态码汇总4xx) - http_code_5xx(状态码汇总5xx)
+	// 网络资源消耗： - bw（带宽） - flux（流量） - bs_bw(回源带宽) - bs_flux（回源流量）  访问情况： - req_num（请求总数） - hit_num（请求命中次数） - bs_num(回源总数) - bs_fail_num(回源失败数) - hit_flux（命中流量）  HTTP状态码（组合指标）： - http_code_2xx(状态码汇总2xx) - http_code_3xx(状态码汇总3xx) - http_code_4xx(状态码汇总4xx) - http_code_5xx(状态码汇总5xx) - bs_http_code_2xx（回源状态码汇总2xx） - bs_http_code_3xx（回源状态码汇总3xx） - bs_http_code_4xx（回源状态码汇总4xx） - bs_http_code_5xx（回源状态码汇总5xx） - status_code_2xx（状态码详情2xx） - status_code_3xx（状态码详情3xx） - status_code_4xx（状态码详情4xx） - status_code_5xx（状态码详情5xx） - bs_status_code_2xx（回源状态码详情2xx） - bs_status_code_3xx（回源状态码详情3xx） - bs_status_code_4xx（回源状态码详情4xx） - bs_status_code_5xx（回源状态码详情5xx） - status_code和bs_status_code不能一起查询，否则数据会不准确，status_code不支持指定服务区域
 
-	StatType ShowDomainItemDetailsRequestStatType `json:"stat_type"`
+	StatType string `json:"stat_type"`
 }
 
 func (o ShowDomainItemDetailsRequest) String() string {
@@ -38,86 +35,4 @@ func (o ShowDomainItemDetailsRequest) String() string {
 	}
 
 	return strings.Join([]string{"ShowDomainItemDetailsRequest", string(data)}, " ")
-}
-
-type ShowDomainItemDetailsRequestStatType struct {
-	value string
-}
-
-type ShowDomainItemDetailsRequestStatTypeEnum struct {
-	BW            ShowDomainItemDetailsRequestStatType
-	FLUX          ShowDomainItemDetailsRequestStatType
-	BS_BW         ShowDomainItemDetailsRequestStatType
-	BS_FLUX       ShowDomainItemDetailsRequestStatType
-	REQ_NUM       ShowDomainItemDetailsRequestStatType
-	HIT_NUM       ShowDomainItemDetailsRequestStatType
-	BS_NUM        ShowDomainItemDetailsRequestStatType
-	BS_FAIL_NUM   ShowDomainItemDetailsRequestStatType
-	HIT_FLUX      ShowDomainItemDetailsRequestStatType
-	HTTP_CODE_2XX ShowDomainItemDetailsRequestStatType
-	HTTP_CODE_3XX ShowDomainItemDetailsRequestStatType
-	HTTP_CODE_4XX ShowDomainItemDetailsRequestStatType
-	HTTP_CODE_5XX ShowDomainItemDetailsRequestStatType
-}
-
-func GetShowDomainItemDetailsRequestStatTypeEnum() ShowDomainItemDetailsRequestStatTypeEnum {
-	return ShowDomainItemDetailsRequestStatTypeEnum{
-		BW: ShowDomainItemDetailsRequestStatType{
-			value: "bw",
-		},
-		FLUX: ShowDomainItemDetailsRequestStatType{
-			value: "flux",
-		},
-		BS_BW: ShowDomainItemDetailsRequestStatType{
-			value: "bs_bw",
-		},
-		BS_FLUX: ShowDomainItemDetailsRequestStatType{
-			value: "bs_flux",
-		},
-		REQ_NUM: ShowDomainItemDetailsRequestStatType{
-			value: "req_num",
-		},
-		HIT_NUM: ShowDomainItemDetailsRequestStatType{
-			value: "hit_num",
-		},
-		BS_NUM: ShowDomainItemDetailsRequestStatType{
-			value: "bs_num",
-		},
-		BS_FAIL_NUM: ShowDomainItemDetailsRequestStatType{
-			value: "bs_fail_num",
-		},
-		HIT_FLUX: ShowDomainItemDetailsRequestStatType{
-			value: "hit_flux",
-		},
-		HTTP_CODE_2XX: ShowDomainItemDetailsRequestStatType{
-			value: "http_code_2xx",
-		},
-		HTTP_CODE_3XX: ShowDomainItemDetailsRequestStatType{
-			value: "http_code_3xx",
-		},
-		HTTP_CODE_4XX: ShowDomainItemDetailsRequestStatType{
-			value: "http_code_4xx",
-		},
-		HTTP_CODE_5XX: ShowDomainItemDetailsRequestStatType{
-			value: "http_code_5xx",
-		},
-	}
-}
-
-func (c ShowDomainItemDetailsRequestStatType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ShowDomainItemDetailsRequestStatType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

@@ -12,7 +12,7 @@ type DomainRegion struct {
 	DomainName *string `json:"domain_name,omitempty"`
 	// 指标统计数据列表  如果该时间段内无值，则为空数组[]
 
-	RegionIspDetails *[]DomainRegionIspDetail `json:"region_isp_details,omitempty"`
+	RegionIspDetails *[]map[string]interface{} `json:"region_isp_details,omitempty"`
 }
 
 func (o DomainRegion) String() string {

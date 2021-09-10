@@ -11,7 +11,7 @@ import (
 
 // 源站信息
 type SourceWithPort struct {
-	// 源站IP或者域名。
+	// 源站IP（非内网IP）或者域名。
 
 	IpOrDomain string `json:"ip_or_domain"`
 	// 源站类型（\"ipaddr\"： \"IP源站\"；\"domain\"： \"域名源站\"；\"obs_bucket\"： \"OBS Bucket源站\"）

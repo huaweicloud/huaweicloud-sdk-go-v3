@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type EnableDomainResponse struct {
-	Domain         *Domains `json:"domain,omitempty"`
-	HttpStatusCode int      `json:"-"`
+	Domain         *DomainsWithPort `json:"domain,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o EnableDomainResponse) String() string {

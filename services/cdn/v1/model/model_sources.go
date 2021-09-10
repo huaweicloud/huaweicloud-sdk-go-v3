@@ -11,7 +11,7 @@ import (
 
 // 源站信息
 type Sources struct {
-	// 源站IP或者域名。
+	// 源站IP（非内网IP）或者域名。
 
 	IpOrDomain string `json:"ip_or_domain"`
 	// 源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。

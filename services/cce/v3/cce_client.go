@@ -19,6 +19,17 @@ func CceClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//该API用于在指定集群下纳管节点。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+func (c *CceClient) AddNode(request *model.AddNodeRequest) (*model.AddNodeResponse, error) {
+	requestDef := GenReqDefForAddNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddNodeResponse), nil
+	}
+}
+
 //集群唤醒用于唤醒已休眠的集群，唤醒后，将继续收取控制节点资源费用。
 func (c *CceClient) AwakeCluster(request *model.AwakeClusterRequest) (*model.AwakeClusterResponse, error) {
 	requestDef := GenReqDefForAwakeCluster()
@@ -236,6 +247,17 @@ func (c *CceClient) RemoveNode(request *model.RemoveNodeRequest) (*model.RemoveN
 		return nil, err
 	} else {
 		return resp.(*model.RemoveNodeResponse), nil
+	}
+}
+
+//该API用于在指定集群下重置节点。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+func (c *CceClient) ResetNode(request *model.ResetNodeRequest) (*model.ResetNodeResponse, error) {
+	requestDef := GenReqDefForResetNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetNodeResponse), nil
 	}
 }
 

@@ -866,6 +866,17 @@ func (c *RdsClient) SetDbUserPwd(request *model.SetDbUserPwdRequest) (*model.Set
 	}
 }
 
+//修改指定实例中的数据库备注。
+func (c *RdsClient) UpdateDatabase(request *model.UpdateDatabaseRequest) (*model.UpdateDatabaseResponse, error) {
+	requestDef := GenReqDefForUpdateDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDatabaseResponse), nil
+	}
+}
+
 //在指定实例的数据库中, 设置帐号的权限。
 func (c *RdsClient) AllowDbPrivilege(request *model.AllowDbPrivilegeRequest) (*model.AllowDbPrivilegeResponse, error) {
 	requestDef := GenReqDefForAllowDbPrivilege()
