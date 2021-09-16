@@ -14,7 +14,7 @@ type AddFacesByFileRequestBody struct {
 	// 用户指定的图片外部ID，与当前图像绑定。用户没提供，系统会生成一个。 该ID长度范围为1～36位，可以包含字母、数字、中划线或者下划线，不包含其他的特殊字符。
 	ExternalImageId *def.MultiPart `json:"external_image_id,omitempty"`
 
-	// 根据用户自定义数据类型，填入相应的数值。 创建faceset时定义该字段，Json字符串不校验重复性，参考[自定义字段](zh-cn_topic_0130807044.xml)。
+	// 根据用户自定义数据类型，填入相应的数值。 创建faceset时定义该字段，Json字符串不校验重复性，参考[自定义字段](https://support.huaweicloud.com/api-face/face_02_0012.html)。
 	ExternalFields *def.MultiPart `json:"external_fields,omitempty"`
 }
 

@@ -96,7 +96,7 @@ func (c *KmsClient) CreateGrant(request *model.CreateGrantRequest) (*model.Creat
 	}
 }
 
-//- 功能介绍：创建用户主密钥，可用来加密数据密钥。  - 说明： 别名“/default”为服务默认主密钥的后缀名，由服务自动创建。因此用户创建的主密钥别名不能与服务默认主密钥的别名相同，即后缀名不能为“/default”。对于开通企业项目的用户，服务默认主密钥属于且只能属于默认企业项目下，且不支持企业资源的迁入迁出。服务默认主密钥为用户提供基础的云上加密功能，满足合规要求。因此，在企业多项目下，其他非默认企业项目下的用户均可使用该密钥。若客户有企业管理资源诉求，请自行创建和使用密钥。
+//创建用户主密钥，用户主密钥可以为对称密钥或非对称密钥。 - 对称密钥为长度为256位AES密钥，可用于小量数据的加密或者用于加密数据密钥。 - 非对称密钥可以为RSA密钥对或者ECC密钥对，可用于数字签名及验签。
 func (c *KmsClient) CreateKey(request *model.CreateKeyRequest) (*model.CreateKeyResponse, error) {
 	requestDef := GenReqDefForCreateKey()
 
@@ -129,7 +129,7 @@ func (c *KmsClient) CreateParametersForImport(request *model.CreateParametersFor
 	}
 }
 
-//- 功能介绍：   生成8~8192bit范围内的随机数。   生成512bit的随机数。
+//- 功能介绍：   生成8~8192bit范围内的随机数。
 func (c *KmsClient) CreateRandom(request *model.CreateRandomRequest) (*model.CreateRandomResponse, error) {
 	requestDef := GenReqDefForCreateRandom()
 
@@ -459,6 +459,17 @@ func (c *KmsClient) ShowKmsTags(request *model.ShowKmsTagsRequest) (*model.ShowK
 	}
 }
 
+//- 查询用户指定非对称密钥的公钥信息。
+func (c *KmsClient) ShowPublicKey(request *model.ShowPublicKeyRequest) (*model.ShowPublicKeyResponse, error) {
+	requestDef := GenReqDefForShowPublicKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPublicKeyResponse), nil
+	}
+}
+
 //查询指定凭据的信息。
 func (c *KmsClient) ShowSecret(request *model.ShowSecretRequest) (*model.ShowSecretResponse, error) {
 	requestDef := GenReqDefForShowSecret()
@@ -500,6 +511,17 @@ func (c *KmsClient) ShowUserQuotas(request *model.ShowUserQuotasRequest) (*model
 		return nil, err
 	} else {
 		return resp.(*model.ShowUserQuotasResponse), nil
+	}
+}
+
+//- 功能介绍：使用非对称密钥的私钥对消息或消息摘要进行数字签名。
+func (c *KmsClient) Sign(request *model.SignRequest) (*model.SignResponse, error) {
+	requestDef := GenReqDefForSign()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SignResponse), nil
 	}
 }
 
@@ -555,6 +577,17 @@ func (c *KmsClient) UpdateSecretStage(request *model.UpdateSecretStageRequest) (
 		return nil, err
 	} else {
 		return resp.(*model.UpdateSecretStageResponse), nil
+	}
+}
+
+//- 功能介绍：使用非对称密钥的私钥对消息或消息摘要进行数字签名。
+func (c *KmsClient) ValidateSignature(request *model.ValidateSignatureRequest) (*model.ValidateSignatureResponse, error) {
+	requestDef := GenReqDefForValidateSignature()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ValidateSignatureResponse), nil
 	}
 }
 

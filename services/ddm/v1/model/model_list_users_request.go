@@ -13,10 +13,10 @@ type ListUsersRequest struct {
 	InstanceId string `json:"instance_id"`
 	// 分页参数：起始值 [大于等于0] 。
 
-	Offset int32 `json:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 	// 分页参数：每页多少条 [大于0且小于等于128]。
 
-	Limit int32 `json:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListUsersRequest) String() string {

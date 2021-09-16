@@ -187,7 +187,10 @@ type GlanceShowImageResponse struct {
 	IsConfigInit *string `json:"__is_config_init,omitempty"`
 	// 收费镜像标识。
 
-	AccountCode    *string `json:"__account_code,omitempty"`
+	AccountCode *string `json:"__account_code,omitempty"`
+	// 是否是AMD架构类型的镜像。取值为“true”或者“false”。
+
+	SupportAmd     *string `json:"__support_amd,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

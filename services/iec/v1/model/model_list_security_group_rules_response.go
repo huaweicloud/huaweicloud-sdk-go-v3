@@ -1,0 +1,27 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// Response Object
+type ListSecurityGroupRulesResponse struct {
+	// 安全组规则列表对象。
+
+	SecurityGroupRules *[]SecurityGroupRule `json:"security_group_rules,omitempty"`
+	// 安全组规则数目。
+
+	Count          *int32 `json:"count,omitempty"`
+	HttpStatusCode int    `json:"-"`
+}
+
+func (o ListSecurityGroupRulesResponse) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListSecurityGroupRulesResponse struct{}"
+	}
+
+	return strings.Join([]string{"ListSecurityGroupRulesResponse", string(data)}, " ")
+}

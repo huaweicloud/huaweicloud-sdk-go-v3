@@ -15,7 +15,7 @@ type UpdateIterationV4Request struct {
 
 	IterationId int32 `json:"iteration_id"`
 
-	Body *CreateIterationRequestV4 `json:"body,omitempty"`
+	Body *UpdateIterationRequestV4 `json:"body,omitempty"`
 }
 
 func (o UpdateIterationV4Request) String() string {

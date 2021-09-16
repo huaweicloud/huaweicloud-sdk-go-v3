@@ -43,7 +43,7 @@ type ListIssueRequestV4 struct {
 	// 查询类型
 
 	SeverityIds *[]int32 `json:"severity_ids,omitempty"`
-	// 状态   id, 开始   1, 进行中 2, 已解决 3, 测试中 4, 已关闭 5, 已解决 6,
+	// 状态   id, 开始   1, 进行中 2, 已解决 3, 测试中 4, 已关闭 5, 已拒绝 6,
 
 	StatusIds *[]int32 `json:"status_ids,omitempty"`
 	// 故事点id

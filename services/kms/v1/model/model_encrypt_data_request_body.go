@@ -3,6 +3,9 @@ package model
 import (
 	"encoding/json"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -16,6 +19,9 @@ type EncryptDataRequestBody struct {
 	// 明文数据，1~4096字节，满足正则匹配“^.{1,4096}$”，且转化为byte数组后长度取值范围为1~4096字节。
 
 	PlainText *string `json:"plain_text,omitempty"`
+	// 数据加密算法，仅使用非对称密钥需要指定该参数，默认值为“SYMMETRIC_DEFAULT”，合法枚举值如下：  - SYMMETRIC_DEFAULT  - RSAES_OAEP_SHA_256  - RSAES_OAEP_SHA_1  - SM2_ENCRYPT
+
+	EncryptionAlgorithm *EncryptDataRequestBodyEncryptionAlgorithm `json:"encryption_algorithm,omitempty"`
 	// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
 
 	Sequence *string `json:"sequence,omitempty"`
@@ -28,4 +34,50 @@ func (o EncryptDataRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"EncryptDataRequestBody", string(data)}, " ")
+}
+
+type EncryptDataRequestBodyEncryptionAlgorithm struct {
+	value string
+}
+
+type EncryptDataRequestBodyEncryptionAlgorithmEnum struct {
+	SYMMETRIC_DEFAULT  EncryptDataRequestBodyEncryptionAlgorithm
+	RSAES_OAEP_SHA_256 EncryptDataRequestBodyEncryptionAlgorithm
+	RSAES_OAEP_SHA_1   EncryptDataRequestBodyEncryptionAlgorithm
+	SM2_ENCRYPT        EncryptDataRequestBodyEncryptionAlgorithm
+}
+
+func GetEncryptDataRequestBodyEncryptionAlgorithmEnum() EncryptDataRequestBodyEncryptionAlgorithmEnum {
+	return EncryptDataRequestBodyEncryptionAlgorithmEnum{
+		SYMMETRIC_DEFAULT: EncryptDataRequestBodyEncryptionAlgorithm{
+			value: "SYMMETRIC_DEFAULT",
+		},
+		RSAES_OAEP_SHA_256: EncryptDataRequestBodyEncryptionAlgorithm{
+			value: "RSAES_OAEP_SHA_256",
+		},
+		RSAES_OAEP_SHA_1: EncryptDataRequestBodyEncryptionAlgorithm{
+			value: "RSAES_OAEP_SHA_1",
+		},
+		SM2_ENCRYPT: EncryptDataRequestBodyEncryptionAlgorithm{
+			value: "SM2_ENCRYPT",
+		},
+	}
+}
+
+func (c EncryptDataRequestBodyEncryptionAlgorithm) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *EncryptDataRequestBodyEncryptionAlgorithm) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

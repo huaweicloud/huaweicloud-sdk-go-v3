@@ -14,7 +14,7 @@ type ShowFacesByLimitResponse struct {
 	// 人脸库名称。 调用失败时无此字段。
 
 	FaceSetName *string `json:"face_set_name,omitempty"`
-	// 人脸库当中的人脸结构，详见[FaceSetFace](zh-cn_topic_0106912070.xml)。 调用失败时无此字段。
+	// 人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。
 
 	Faces          *[]FaceSetFace `json:"faces,omitempty"`
 	HttpStatusCode int            `json:"-"`

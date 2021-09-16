@@ -22,6 +22,12 @@ type KeyDetails struct {
 	// 密钥区域。
 
 	Realm *string `json:"realm,omitempty"`
+	// 密钥生成算法。  - AES_256  - SM4  - RSA_2048  - RSA_3072  - RSA_4096  - EC_P256  - EC_P384  - SM2
+
+	KeySpec *KeyDetailsKeySpec `json:"key_spec,omitempty"`
+	// 密钥用途。 - ENCRYPT_DECRYPT - SIGN_VERIFY
+
+	KeyUsage *KeyDetailsKeyUsage `json:"key_usage,omitempty"`
 	// 密钥描述。
 
 	KeyDescription *string `json:"key_description,omitempty"`
@@ -61,6 +67,106 @@ func (o KeyDetails) String() string {
 	}
 
 	return strings.Join([]string{"KeyDetails", string(data)}, " ")
+}
+
+type KeyDetailsKeySpec struct {
+	value string
+}
+
+type KeyDetailsKeySpecEnum struct {
+	AES_256  KeyDetailsKeySpec
+	SM4      KeyDetailsKeySpec
+	RSA_2048 KeyDetailsKeySpec
+	RSA_3072 KeyDetailsKeySpec
+	RSA_4096 KeyDetailsKeySpec
+	EC_P256  KeyDetailsKeySpec
+	EC_P384  KeyDetailsKeySpec
+	SM2      KeyDetailsKeySpec
+}
+
+func GetKeyDetailsKeySpecEnum() KeyDetailsKeySpecEnum {
+	return KeyDetailsKeySpecEnum{
+		AES_256: KeyDetailsKeySpec{
+			value: "AES_256",
+		},
+		SM4: KeyDetailsKeySpec{
+			value: "SM4",
+		},
+		RSA_2048: KeyDetailsKeySpec{
+			value: "RSA_2048",
+		},
+		RSA_3072: KeyDetailsKeySpec{
+			value: "RSA_3072",
+		},
+		RSA_4096: KeyDetailsKeySpec{
+			value: "RSA_4096",
+		},
+		EC_P256: KeyDetailsKeySpec{
+			value: "EC_P256",
+		},
+		EC_P384: KeyDetailsKeySpec{
+			value: "EC_P384",
+		},
+		SM2: KeyDetailsKeySpec{
+			value: "SM2",
+		},
+	}
+}
+
+func (c KeyDetailsKeySpec) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *KeyDetailsKeySpec) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type KeyDetailsKeyUsage struct {
+	value string
+}
+
+type KeyDetailsKeyUsageEnum struct {
+	ENCRYPT_DECRYPT KeyDetailsKeyUsage
+	SIGN_VERIFY     KeyDetailsKeyUsage
+}
+
+func GetKeyDetailsKeyUsageEnum() KeyDetailsKeyUsageEnum {
+	return KeyDetailsKeyUsageEnum{
+		ENCRYPT_DECRYPT: KeyDetailsKeyUsage{
+			value: "ENCRYPT_DECRYPT",
+		},
+		SIGN_VERIFY: KeyDetailsKeyUsage{
+			value: "SIGN_VERIFY",
+		},
+	}
+}
+
+func (c KeyDetailsKeyUsage) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *KeyDetailsKeyUsage) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type KeyDetailsOrigin struct {

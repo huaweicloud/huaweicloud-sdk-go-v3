@@ -162,6 +162,17 @@ func (c *CdnClient) ShowDomainItemLocationDetails(request *model.ShowDomainItemL
 	}
 }
 
+//- 支持查询90天内的数据。 - 支持多个指标同时查询，不超过5个。 - 最多同时指定100个域名。 - 起始时间和结束时间，左闭右开，需要同时指定。 - 开始时间、结束时间必须传毫秒级时间戳，且必须为5分钟整时刻点，如：0分、5分、10分、15分等，如果传的不是5分钟时刻点，返回数据可能与预期不一致。 - 统一用开始时间表示一个时间段，如：2019-01-24 20:15:00 表示取 [20:15:00, 20:20:00)的统计数据，且左闭右开。
+func (c *CdnClient) ShowDomainStats(request *model.ShowDomainStatsRequest) (*model.ShowDomainStatsResponse, error) {
+	requestDef := GenReqDefForShowDomainStats()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainStatsResponse), nil
+	}
+}
+
 //查询刷新预热任务详情。
 func (c *CdnClient) ShowHistoryTaskDetails(request *model.ShowHistoryTaskDetailsRequest) (*model.ShowHistoryTaskDetailsResponse, error) {
 	requestDef := GenReqDefForShowHistoryTaskDetails()

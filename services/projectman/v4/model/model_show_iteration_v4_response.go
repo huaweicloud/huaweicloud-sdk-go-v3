@@ -43,7 +43,10 @@ type ShowIterationV4Response struct {
 	Total *int32 `json:"total,omitempty"`
 	// 迭代更新时间
 
-	UpdatedTime    *string `json:"updated_time,omitempty"`
+	UpdatedTime *string `json:"updated_time,omitempty"`
+	// 迭代的状态,0 未开始，1 进行中，2 结束
+
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -8,10 +8,8 @@ import (
 
 // Response Object
 type ShowDomainItemLocationDetailsResponse struct {
-	// 域名详情数据列表
-
-	Domains        *[]DomainItemLocationDetails `json:"domains,omitempty"`
-	HttpStatusCode int                          `json:"-"`
+	DomainItemLocationDetails *DomainItemLocationDetails `json:"domain_item_location_details,omitempty"`
+	HttpStatusCode            int                        `json:"-"`
 }
 
 func (o ShowDomainItemLocationDetailsResponse) String() string {

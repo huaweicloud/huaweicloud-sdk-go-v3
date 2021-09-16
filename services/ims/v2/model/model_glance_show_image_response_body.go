@@ -188,6 +188,9 @@ type GlanceShowImageResponseBody struct {
 	// 收费镜像标识。
 
 	AccountCode string `json:"__account_code"`
+	// 是否是AMD架构类型的镜像。取值为“true”或者“false”。
+
+	SupportAmd *string `json:"__support_amd,omitempty"`
 }
 
 func (o GlanceShowImageResponseBody) String() string {

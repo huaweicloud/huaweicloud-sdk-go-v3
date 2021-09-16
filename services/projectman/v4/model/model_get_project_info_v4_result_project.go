@@ -28,7 +28,7 @@ type GetProjectInfoV4ResultProject struct {
 	ProjectType *string `json:"project_type,omitempty"`
 	// 是否归档
 
-	Archive *bool `json:"archive,omitempty"`
+	Archive *int32 `json:"archive,omitempty"`
 	// 企业项目id
 
 	EnterpriseId *string `json:"enterprise_id,omitempty"`

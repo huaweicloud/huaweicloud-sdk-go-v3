@@ -7,7 +7,7 @@ import (
 )
 
 type BatchAddMemberRequestV4 struct {
-	// 用户在项目中的角色ID -1, 3, 4, 5, 6, 7 , 8
+	// 成员角色, -1 项目创建者, 3 项目经理, 4 开发人员, 5 测试经理, 6 测试人员, 7 参与者, 8 浏览者, 9 运维经理
 
 	RoleId *int32 `json:"role_id,omitempty"`
 	// 用户32位uuid

@@ -13,6 +13,12 @@ type CreateKeyRequestBody struct {
 	// 非默认主密钥别名，取值范围为1到255个字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”，且不与系统服务创建的默认主密钥别名重名。
 
 	KeyAlias *string `json:"key_alias,omitempty"`
+	// 密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SM2
+
+	KeySpec *CreateKeyRequestBodyKeySpec `json:"key_spec,omitempty"`
+	// 密钥用途，对称密钥默认为“ENCRYPT_DECRYPT”，非对称密钥默认为“SIGN_VERIFY”，枚举如下： - ENCRYPT_DECRYPT - SIGN_VERIFY
+
+	KeyUsage *CreateKeyRequestBodyKeyUsage `json:"key_usage,omitempty"`
 	// 密钥描述，取值0到255字符。
 
 	KeyDescription *string `json:"key_description,omitempty"`
@@ -34,6 +40,106 @@ func (o CreateKeyRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"CreateKeyRequestBody", string(data)}, " ")
+}
+
+type CreateKeyRequestBodyKeySpec struct {
+	value string
+}
+
+type CreateKeyRequestBodyKeySpecEnum struct {
+	AES_256  CreateKeyRequestBodyKeySpec
+	SM4      CreateKeyRequestBodyKeySpec
+	RSA_2048 CreateKeyRequestBodyKeySpec
+	RSA_3072 CreateKeyRequestBodyKeySpec
+	RSA_4096 CreateKeyRequestBodyKeySpec
+	EC_P256  CreateKeyRequestBodyKeySpec
+	EC_P384  CreateKeyRequestBodyKeySpec
+	SM2      CreateKeyRequestBodyKeySpec
+}
+
+func GetCreateKeyRequestBodyKeySpecEnum() CreateKeyRequestBodyKeySpecEnum {
+	return CreateKeyRequestBodyKeySpecEnum{
+		AES_256: CreateKeyRequestBodyKeySpec{
+			value: "AES_256",
+		},
+		SM4: CreateKeyRequestBodyKeySpec{
+			value: "SM4",
+		},
+		RSA_2048: CreateKeyRequestBodyKeySpec{
+			value: "RSA_2048",
+		},
+		RSA_3072: CreateKeyRequestBodyKeySpec{
+			value: "RSA_3072",
+		},
+		RSA_4096: CreateKeyRequestBodyKeySpec{
+			value: "RSA_4096",
+		},
+		EC_P256: CreateKeyRequestBodyKeySpec{
+			value: "EC_P256",
+		},
+		EC_P384: CreateKeyRequestBodyKeySpec{
+			value: "EC_P384",
+		},
+		SM2: CreateKeyRequestBodyKeySpec{
+			value: "SM2",
+		},
+	}
+}
+
+func (c CreateKeyRequestBodyKeySpec) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *CreateKeyRequestBodyKeySpec) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateKeyRequestBodyKeyUsage struct {
+	value string
+}
+
+type CreateKeyRequestBodyKeyUsageEnum struct {
+	ENCRYPT_DECRYPT CreateKeyRequestBodyKeyUsage
+	SIGN_VERIFY     CreateKeyRequestBodyKeyUsage
+}
+
+func GetCreateKeyRequestBodyKeyUsageEnum() CreateKeyRequestBodyKeyUsageEnum {
+	return CreateKeyRequestBodyKeyUsageEnum{
+		ENCRYPT_DECRYPT: CreateKeyRequestBodyKeyUsage{
+			value: "ENCRYPT_DECRYPT",
+		},
+		SIGN_VERIFY: CreateKeyRequestBodyKeyUsage{
+			value: "SIGN_VERIFY",
+		},
+	}
+}
+
+func (c CreateKeyRequestBodyKeyUsage) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *CreateKeyRequestBodyKeyUsage) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type CreateKeyRequestBodyOrigin struct {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowAllFaceSetsResponse struct {
-	// 人脸库信息集合，详见[FaceSetInfo](zh-cn_topic_0106912072.xml)。 调用失败时无此字段。
+	// 人脸库信息集合，详见[FaceSetInfo](https://support.huaweicloud.com/api-face/face_02_0020.html)。 调用失败时无此字段。
 
 	FaceSetsInfo   *[]FaceSetInfo `json:"face_sets_info,omitempty"`
 	HttpStatusCode int            `json:"-"`

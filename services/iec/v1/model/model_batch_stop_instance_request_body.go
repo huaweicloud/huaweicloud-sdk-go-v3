@@ -1,0 +1,21 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// 批量关闭边缘实例请求体。
+type BatchStopInstanceRequestBody struct {
+	OsStop *BatchStop `json:"os-stop,omitempty"`
+}
+
+func (o BatchStopInstanceRequestBody) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "BatchStopInstanceRequestBody struct{}"
+	}
+
+	return strings.Join([]string{"BatchStopInstanceRequestBody", string(data)}, " ")
+}

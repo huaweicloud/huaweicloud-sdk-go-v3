@@ -185,7 +185,10 @@ type UpdateImageResponse struct {
 	// 镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
 
 	SupportAgentList *string `json:"__support_agent_list,omitempty"`
-	HttpStatusCode   int     `json:"-"`
+	// 是否是AMD架构类型的镜像。取值为“true”或者“false”。
+
+	SupportAmd     *string `json:"__support_amd,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateImageResponse) String() string {
