@@ -13,7 +13,7 @@ type ConfigurationForUpdate struct {
 	// 参数模板描述。最长256个字符，不支持>!<\"&'=特殊字符。默认为空。
 
 	Description *string `json:"description,omitempty"`
-	// 参数值对象，用户基于默认参数模板自定义的参数值。为空时不修改参数值。
+	// 参数值对象，用户基于默认参数模板自定义的参数值。为空时不修改参数值。  - key：参数名称，\"max_connections\":\"10\"。为空时不修改参数值，key不为空时value也不可为空。 - value：参数值，\"max_connections\":\"10\"。
 
 	Values map[string]string `json:"values,omitempty"`
 }

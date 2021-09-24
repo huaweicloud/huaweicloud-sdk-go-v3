@@ -17,6 +17,15 @@ type JudgementResult struct {
 	// 图片形式输出的图片id，可根据图片id下载详情
 
 	ImageId string `json:"image_id"`
+	// 用例形式输出的用例总个数
+
+	CaseCount int32 `json:"case_count"`
+	// 用例形式输出的已执行用例的个数
+
+	ExecutedCount int32 `json:"executed_count"`
+	// 用例形式输出的已执行用例的结果
+
+	Testcases []JudgementCaseResult `json:"testcases"`
 }
 
 func (o JudgementResult) String() string {

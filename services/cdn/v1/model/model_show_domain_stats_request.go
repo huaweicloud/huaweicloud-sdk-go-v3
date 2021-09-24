@@ -8,16 +8,16 @@ import (
 
 // Request Object
 type ShowDomainStatsRequest struct {
-	// 查询类型，可选location_summary,location_detail
+	// 查询类型，可选location_summary,location_detail  location_summary：查询汇总数据 location_detail：查询数据详情
 
 	Action string `json:"action"`
-	// 查询起始时间戳，必须设为5分钟整时刻点
+	// 查询起始时间戳， 时间戳应设置需为整5分钟或整小时时刻点，设置方式如下  interval为300时，start_time设置为整5分钟时刻点，如：1631240100000(对应2021-09-10 10:15:00) interval大于等于3600时，start_time设置为整小时时刻点，如：1631239200000(对应2021-09-10 10:00:00)
 
 	StartTime int64 `json:"start_time"`
-	// 查询结束时间戳，必须设为5分钟整时刻点，与开始时间戳时间差不可以超过一天
+	// 查询结束时间戳， 时间戳应设置需为整5分钟或整小时时刻点，设置方式如下  interval为300时，end_time设置为整5分钟时刻点，如：1631243700000(对应2021-09-11 10:15:00) interval大于等于3600时，end_time设置为整小时时刻点，如：1631325600000(对应2021-09-11 10:00:00)
 
 	EndTime int64 `json:"end_time"`
-	// 查询间隔，对详情类查询有效，如location_detail
+	// 查询时间间隔，单位为秒，可设置值300(5分钟),3600(1小时),14400(4小时)等
 
 	Interval *int64 `json:"interval,omitempty"`
 	// 域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com，all表示查询名下全部域名

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type ShowQuotaResponseBodyQuotas struct {
+type Quotas struct {
 	// 配额上限
 
 	QuotaLimit *int32 `json:"quota_limit,omitempty"`
@@ -21,11 +21,11 @@ type ShowQuotaResponseBodyQuotas struct {
 	UserDomainId *string `json:"user_domain_id,omitempty"`
 }
 
-func (o ShowQuotaResponseBodyQuotas) String() string {
+func (o Quotas) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "ShowQuotaResponseBodyQuotas struct{}"
+		return "Quotas struct{}"
 	}
 
-	return strings.Join([]string{"ShowQuotaResponseBodyQuotas", string(data)}, " ")
+	return strings.Join([]string{"Quotas", string(data)}, " ")
 }

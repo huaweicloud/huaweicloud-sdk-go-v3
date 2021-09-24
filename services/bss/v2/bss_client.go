@@ -338,6 +338,17 @@ func (c *BssClient) ListEnterpriseSubCustomers(request *model.ListEnterpriseSubC
 	}
 }
 
+//功能描述：客户在自建平台查询资源包列表。
+func (c *BssClient) ListFreeResourceInfos(request *model.ListFreeResourceInfosRequest) (*model.ListFreeResourceInfosResponse, error) {
+	requestDef := GenReqDefForListFreeResourceInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFreeResourceInfosResponse), nil
+	}
+}
+
 //功能描述：客户在自建平台查询客户自己的资源包列表
 func (c *BssClient) ListFreeResourceUsages(request *model.ListFreeResourceUsagesRequest) (*model.ListFreeResourceUsagesResponse, error) {
 	requestDef := GenReqDefForListFreeResourceUsages()
@@ -434,6 +445,17 @@ func (c *BssClient) ListOrderDiscounts(request *model.ListOrderDiscountsRequest)
 		return nil, err
 	} else {
 		return resp.(*model.ListOrderDiscountsResponse), nil
+	}
+}
+
+//功能描述：伙伴在伙伴销售平台查询向客户及关联的精英服务商（二级经销商）拨款或回收的调账记录
+func (c *BssClient) ListParnterAdjustRecords(request *model.ListParnterAdjustRecordsRequest) (*model.ListParnterAdjustRecordsResponse, error) {
+	requestDef := GenReqDefForListParnterAdjustRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListParnterAdjustRecordsResponse), nil
 	}
 }
 
@@ -588,17 +610,6 @@ func (c *BssClient) ListSkuInventories(request *model.ListSkuInventoriesRequest)
 		return nil, err
 	} else {
 		return resp.(*model.ListSkuInventoriesResponse), nil
-	}
-}
-
-//功能描述：查询客户消费记录
-func (c *BssClient) ListSubCustomerBillDetail(request *model.ListSubCustomerBillDetailRequest) (*model.ListSubCustomerBillDetailResponse, error) {
-	requestDef := GenReqDefForListSubCustomerBillDetail()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListSubCustomerBillDetailResponse), nil
 	}
 }
 

@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ShowDomainStatsResponse struct {
-	// 数据起始时间戳，可能与请求时间不一致，可能不返回
+	// 数据起始时间戳，可能不返回
 
 	StartTime *int64 `json:"start_time,omitempty"`
-	// 数据结束时间戳，可能与请求时间不一致，可能不返回
+	// 数据结束时间戳，可能不返回
 
 	EndTime *int64 `json:"end_time,omitempty"`
 	// 查询间隔，可能不返回

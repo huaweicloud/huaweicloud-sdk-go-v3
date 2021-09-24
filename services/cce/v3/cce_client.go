@@ -19,7 +19,7 @@ func CceClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//该API用于在指定集群下纳管节点。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//该API用于在指定集群下纳管节点。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
 func (c *CceClient) AddNode(request *model.AddNodeRequest) (*model.AddNodeResponse, error) {
 	requestDef := GenReqDefForAddNode()
 
@@ -85,7 +85,7 @@ func (c *CceClient) CreateKubernetesClusterCert(request *model.CreateKubernetesC
 	}
 }
 
-//该API用于在指定集群下创建节点。  > 若无集群，请先[[创建集群](https://support.huaweicloud.com/api-cce/cce_02_0236.html)](tag:hws)[[创建集群](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0236.html)](tag:hws_hk)。  > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//该API用于在指定集群下创建节点。 > - 若无集群，请先[[创建集群](https://support.huaweicloud.com/api-cce/cce_02_0236.html)](tag:hws)[[创建集群](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0236.html)](tag:hws_hk)。 > - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
 func (c *CceClient) CreateNode(request *model.CreateNodeRequest) (*model.CreateNodeResponse, error) {
 	requestDef := GenReqDefForCreateNode()
 
@@ -129,7 +129,7 @@ func (c *CceClient) DeleteCloudPersistentVolumeClaims(request *model.DeleteCloud
 	}
 }
 
-//该API用于删除一个指定的集群。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//该API用于删除一个指定的集群。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
 func (c *CceClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.DeleteClusterResponse, error) {
 	requestDef := GenReqDefForDeleteCluster()
 
@@ -140,7 +140,7 @@ func (c *CceClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.D
 	}
 }
 
-//该API用于删除指定的节点。 > - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+//该API用于删除指定的节点。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
 func (c *CceClient) DeleteNode(request *model.DeleteNodeRequest) (*model.DeleteNodeResponse, error) {
 	requestDef := GenReqDefForDeleteNode()
 
@@ -217,7 +217,7 @@ func (c *CceClient) ListNodePools(request *model.ListNodePoolsRequest) (*model.L
 	}
 }
 
-//该API用于通过集群ID获取指定集群下所有节点的详细信息。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//该API用于通过集群ID获取指定集群下所有节点的详细信息。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
 func (c *CceClient) ListNodes(request *model.ListNodesRequest) (*model.ListNodesResponse, error) {
 	requestDef := GenReqDefForListNodes()
 
@@ -228,7 +228,7 @@ func (c *CceClient) ListNodes(request *model.ListNodesRequest) (*model.ListNodes
 	}
 }
 
-//该API用于在指定集群下迁移节点到另一集群。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//该API用于在指定集群下迁移节点到另一集群。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
 func (c *CceClient) MigrateNode(request *model.MigrateNodeRequest) (*model.MigrateNodeResponse, error) {
 	requestDef := GenReqDefForMigrateNode()
 
@@ -239,7 +239,7 @@ func (c *CceClient) MigrateNode(request *model.MigrateNodeRequest) (*model.Migra
 	}
 }
 
-//该API用于在指定集群下移除节点。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//该API用于在指定集群下移除节点。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
 func (c *CceClient) RemoveNode(request *model.RemoveNodeRequest) (*model.RemoveNodeResponse, error) {
 	requestDef := GenReqDefForRemoveNode()
 
@@ -250,7 +250,7 @@ func (c *CceClient) RemoveNode(request *model.RemoveNodeRequest) (*model.RemoveN
 	}
 }
 
-//该API用于在指定集群下重置节点。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//该API用于在指定集群下重置节点。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
 func (c *CceClient) ResetNode(request *model.ResetNodeRequest) (*model.ResetNodeResponse, error) {
 	requestDef := GenReqDefForResetNode()
 
@@ -272,7 +272,7 @@ func (c *CceClient) ShowAddonInstance(request *model.ShowAddonInstanceRequest) (
 	}
 }
 
-//该API用于获取指定集群的详细信息。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//该API用于获取指定集群的详细信息。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
 func (c *CceClient) ShowCluster(request *model.ShowClusterRequest) (*model.ShowClusterResponse, error) {
 	requestDef := GenReqDefForShowCluster()
 
@@ -294,7 +294,7 @@ func (c *CceClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobRespon
 	}
 }
 
-//该API用于通过节点ID获取指定节点的详细信息。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//该API用于通过节点ID获取指定节点的详细信息。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
 func (c *CceClient) ShowNode(request *model.ShowNodeRequest) (*model.ShowNodeResponse, error) {
 	requestDef := GenReqDefForShowNode()
 
@@ -327,7 +327,7 @@ func (c *CceClient) UpdateAddonInstance(request *model.UpdateAddonInstanceReques
 	}
 }
 
-//该API用于更新指定的集群。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//该API用于更新指定的集群。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
 func (c *CceClient) UpdateCluster(request *model.UpdateClusterRequest) (*model.UpdateClusterResponse, error) {
 	requestDef := GenReqDefForUpdateCluster()
 

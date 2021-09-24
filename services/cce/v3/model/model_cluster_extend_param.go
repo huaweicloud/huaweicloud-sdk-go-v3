@@ -22,7 +22,7 @@ type ClusterExtendParam struct {
 	// master 弹性公网IP
 
 	ClusterExternalIP *string `json:"clusterExternalIP,omitempty"`
-	// 容器网络固定IP池掩码位数，仅vpc-router网络支持。 整数字符传取值范围: 24 ~ 28
+	// 容器网络固定IP池掩码位数，仅vpc-router网络支持。  该参数决定节点可分配容器IP数量，与创建节点时设置的maxPods参数共同决定节点最多可以创建多少个Pod， [具体请参见[节点最多可以创建多少Pod](https://support.huaweicloud.com/usermanual-cce/cce_01_0348.html)](tag:hws) [具体请参见[节点最多可以创建多少Pod](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_01_0348.html)](tag:hws_hk)。   整数字符传取值范围: 24 ~ 28
 
 	AlphaCceFixPoolMask *string `json:"alpha.cce/fixPoolMask,omitempty"`
 	// 专属CCE集群指定可控制节点的规格。

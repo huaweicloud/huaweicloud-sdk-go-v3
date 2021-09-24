@@ -17,7 +17,7 @@ type NodeExtendParam struct {
 	// 产品ID，节点付费类型为自动付费包周期类型时，响应中会返回此字段。
 
 	ProductID *string `json:"productID,omitempty"`
-	// 节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，取值范围为16~256。 该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。
+	// 节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，取值范围为16~256。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，[具体请参见[节点最多可以创建多少Pod](https://support.huaweicloud.com/usermanual-cce/cce_01_0348.html)](tag:hws) [具体请参见[节点最多可以创建多少Pod](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_01_0348.html)](tag:hws_hk)
 
 	MaxPods *int32 `json:"maxPods,omitempty"`
 	// 订购周期类型，取值范围： - month：月 - year：年 > billingMode为2（自动付费包周期）时生效，且为必选。

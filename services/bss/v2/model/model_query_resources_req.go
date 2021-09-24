@@ -25,6 +25,12 @@ type QueryResourcesReq struct {
 	// 每次查询的条数。默认值为10。
 
 	Limit *int32 `json:"limit,omitempty"`
+	// 资源失效的开始时间，UTC时间。
+
+	ExpireTimeBegin *string `json:"expire_time_begin,omitempty"`
+	// 资源失效的结束时间，UTC时间。
+
+	ExpireTimeEnd *string `json:"expire_time_end,omitempty"`
 }
 
 func (o QueryResourcesReq) String() string {

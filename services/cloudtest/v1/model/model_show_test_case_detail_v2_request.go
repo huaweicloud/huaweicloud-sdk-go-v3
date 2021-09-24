@@ -10,10 +10,7 @@ import (
 type ShowTestCaseDetailV2Request struct {
 	// 用例编号，长度为[3-128]位字符
 
-	TestcaseNumber *string `json:"testcase_number,omitempty"`
-	// 测试用例唯一标识，固定长度32位字符
-
-	TestcaseId *string `json:"testcase_id,omitempty"`
+	TestcaseNumber string `json:"testcase_number"`
 }
 
 func (o ShowTestCaseDetailV2Request) String() string {

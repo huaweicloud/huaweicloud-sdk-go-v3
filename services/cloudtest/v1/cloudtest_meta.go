@@ -243,10 +243,6 @@ func GenReqDefForShowTestCaseDetailV2() *def.HttpRequestDef {
 		WithName("TestcaseNumber").
 		WithJsonTag("testcase_number").
 		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TestcaseId").
-		WithJsonTag("testcase_id").
-		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
