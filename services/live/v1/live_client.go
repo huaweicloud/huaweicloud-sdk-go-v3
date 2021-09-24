@@ -184,6 +184,17 @@ func (c *LiveClient) ListRecordCallbackConfigs(request *model.ListRecordCallback
 	}
 }
 
+//录制完成的内容查询
+func (c *LiveClient) ListRecordContents(request *model.ListRecordContentsRequest) (*model.ListRecordContentsResponse, error) {
+	requestDef := GenReqDefForListRecordContents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRecordContentsResponse), nil
+	}
+}
+
 //查询录制规则列表接口，通过指定条件，查询满足条件的录制规则列表。
 func (c *LiveClient) ListRecordRules(request *model.ListRecordRulesRequest) (*model.ListRecordRulesResponse, error) {
 	requestDef := GenReqDefForListRecordRules()
