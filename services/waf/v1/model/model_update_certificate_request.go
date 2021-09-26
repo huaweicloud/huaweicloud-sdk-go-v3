@@ -8,6 +8,9 @@ import (
 
 // Request Object
 type UpdateCertificateRequest struct {
+	// 企业项目id
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 证书ID
 
 	CertificateId string `json:"certificate_id"`

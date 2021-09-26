@@ -7,7 +7,7 @@ import (
 )
 
 // 请求头
-type ListEventResponseBodyHeaders struct {
+type ListEventItemsHeaders struct {
 	// 请求长度
 
 	ContentLength *string `json:"content-length,omitempty"`
@@ -25,11 +25,11 @@ type ListEventResponseBodyHeaders struct {
 	Accept *string `json:"accept,omitempty"`
 }
 
-func (o ListEventResponseBodyHeaders) String() string {
+func (o ListEventItemsHeaders) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "ListEventResponseBodyHeaders struct{}"
+		return "ListEventItemsHeaders struct{}"
 	}
 
-	return strings.Join([]string{"ListEventResponseBodyHeaders", string(data)}, " ")
+	return strings.Join([]string{"ListEventItemsHeaders", string(data)}, " ")
 }

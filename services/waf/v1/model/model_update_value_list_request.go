@@ -8,6 +8,9 @@ import (
 
 // Request Object
 type UpdateValueListRequest struct {
+	// 企业项目id
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 引用表id
 
 	Valuelistid string `json:"valuelistid"`

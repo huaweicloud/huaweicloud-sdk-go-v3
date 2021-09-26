@@ -8,6 +8,9 @@ import (
 
 // Request Object
 type UpdateHostProtectStatusRequest struct {
+	// 企业项目id
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 域名Id（通过查询云模式防护域名列表获取域名id)
 
 	InstanceId string `json:"instance_id"`

@@ -184,6 +184,17 @@ func (c *DrsClient) BatchSetObjects(request *model.BatchSetObjectsRequest) (*mod
 	}
 }
 
+//批量设置MySQL同步策略，包括冲突策略、过滤DROP Datase、对象同步范围。
+func (c *DrsClient) BatchSetPolicy(request *model.BatchSetPolicyRequest) (*model.BatchSetPolicyResponse, error) {
+	requestDef := GenReqDefForBatchSetPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchSetPolicyResponse), nil
+	}
+}
+
 //批量设置任务限速，任务创建成功后默认不限速。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。 - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
 func (c *DrsClient) BatchSetSpeed(request *model.BatchSetSpeedRequest) (*model.BatchSetSpeedResponse, error) {
 	requestDef := GenReqDefForBatchSetSpeed()

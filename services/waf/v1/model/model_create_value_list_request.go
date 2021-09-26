@@ -8,6 +8,10 @@ import (
 
 // Request Object
 type CreateValueListRequest struct {
+	// 企业项目id
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	Body *CreateValueListRequestBody `json:"body,omitempty"`
 }
 

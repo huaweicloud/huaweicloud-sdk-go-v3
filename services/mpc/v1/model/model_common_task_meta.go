@@ -1,0 +1,40 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+type CommonTaskMeta struct {
+	// 任务ID
+
+	TaskId *string `json:"task_id,omitempty"`
+	// 任务状态。  取值如下： - INIT：初始状态。 - WAITING：等待启动。 - PROCESSING：处理中。 - SUCCEED：处理成功。 - FAILED：处理失败。 - CANCELED：已取消。
+
+	Status *string `json:"status,omitempty"`
+	// 任务创建时间
+
+	CreateTime *string `json:"create_time,omitempty"`
+	// 任务启动时间
+
+	StartTime *string `json:"start_time,omitempty"`
+	// 任务结束时间
+
+	EndTime *string `json:"end_time,omitempty"`
+	// 错误描述
+
+	Description *string `json:"description,omitempty"`
+	// 用户数据。
+
+	UserData *string `json:"user_data,omitempty"`
+}
+
+func (o CommonTaskMeta) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "CommonTaskMeta struct{}"
+	}
+
+	return strings.Join([]string{"CommonTaskMeta", string(data)}, " ")
+}

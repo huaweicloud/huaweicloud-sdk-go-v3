@@ -46,7 +46,7 @@ type TaskTargetServer struct {
 	ImageDiskId *string `json:"image_disk_id,omitempty"`
 	// 目的端回滚快照id
 
-	RollbackSnapshotIds *string `json:"rollback_snapshot_ids,omitempty"`
+	CutoveredSnapshotIds *string `json:"cutovered_snapshot_ids,omitempty"`
 }
 
 func (o TaskTargetServer) String() string {

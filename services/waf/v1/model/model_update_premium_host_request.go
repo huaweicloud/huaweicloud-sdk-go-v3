@@ -8,6 +8,9 @@ import (
 
 // Request Object
 type UpdatePremiumHostRequest struct {
+	// 企业项目id
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 独享模式域名ID
 
 	HostId string `json:"host_id"`

@@ -52,6 +52,39 @@ func (c *MpcClient) ListAnimatedGraphicsTask(request *model.ListAnimatedGraphics
 	}
 }
 
+//创建剪辑任务，用于将多个视频文件进行裁剪成多个视频分段，并且可以把这些视频分段合并成一个视频，剪切和拼接功能可以单独使用。 待剪辑的视频文件需要存储在与媒体处理服务同区域的OBS桶中，且该OBS桶已授权。
+func (c *MpcClient) CreateEditingJob(request *model.CreateEditingJobRequest) (*model.CreateEditingJobResponse, error) {
+	requestDef := GenReqDefForCreateEditingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEditingJobResponse), nil
+	}
+}
+
+//取消已下发的生成剪辑任务，仅支持取消正在排队中的任务。
+func (c *MpcClient) DeleteEditingJob(request *model.DeleteEditingJobRequest) (*model.DeleteEditingJobResponse, error) {
+	requestDef := GenReqDefForDeleteEditingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEditingJobResponse), nil
+	}
+}
+
+//查询剪辑任务的状态。
+func (c *MpcClient) ListEditingJob(request *model.ListEditingJobRequest) (*model.ListEditingJobResponse, error) {
+	requestDef := GenReqDefForListEditingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEditingJobResponse), nil
+	}
+}
+
 //支持独立加密，包括创建、查询、删除独立加密任务。  约束：   - 只支持转码后的文件进行加密。   - 加密的文件必须是m3u8或者mpd结尾的文件。
 func (c *MpcClient) CreateEncryptTask(request *model.CreateEncryptTaskRequest) (*model.CreateEncryptTaskResponse, error) {
 	requestDef := GenReqDefForCreateEncryptTask()

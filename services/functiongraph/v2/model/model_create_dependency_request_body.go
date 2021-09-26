@@ -44,45 +44,45 @@ type CreateDependencyRequestBodyRuntime struct {
 }
 
 type CreateDependencyRequestBodyRuntimeEnum struct {
-	JAVA_8          CreateDependencyRequestBodyRuntime
-	NODE_JS_6_10    CreateDependencyRequestBodyRuntime
-	NODE_JS_8_10    CreateDependencyRequestBodyRuntime
-	NODE_JS_10_16   CreateDependencyRequestBodyRuntime
-	NODE_JS_12_13   CreateDependencyRequestBodyRuntime
-	PYTHON_2_7      CreateDependencyRequestBodyRuntime
-	PYTHON_3_6      CreateDependencyRequestBodyRuntime
-	GO_1_8          CreateDependencyRequestBodyRuntime
+	JAVA8           CreateDependencyRequestBodyRuntime
+	NODE_JS6_10     CreateDependencyRequestBodyRuntime
+	NODE_JS8_10     CreateDependencyRequestBodyRuntime
+	NODE_JS10_16    CreateDependencyRequestBodyRuntime
+	NODE_JS12_13    CreateDependencyRequestBodyRuntime
+	PYTHON2_7       CreateDependencyRequestBodyRuntime
+	PYTHON3_6       CreateDependencyRequestBodyRuntime
+	GO1_8           CreateDependencyRequestBodyRuntime
 	C__NET_CORE_2_0 CreateDependencyRequestBodyRuntime
 	C__NET_CORE_2_1 CreateDependencyRequestBodyRuntime
 	C__NET_CORE_3_1 CreateDependencyRequestBodyRuntime
-	PHP_7_3         CreateDependencyRequestBodyRuntime
+	PHP7_3          CreateDependencyRequestBodyRuntime
 }
 
 func GetCreateDependencyRequestBodyRuntimeEnum() CreateDependencyRequestBodyRuntimeEnum {
 	return CreateDependencyRequestBodyRuntimeEnum{
-		JAVA_8: CreateDependencyRequestBodyRuntime{
-			value: "Java 8",
+		JAVA8: CreateDependencyRequestBodyRuntime{
+			value: "Java8",
 		},
-		NODE_JS_6_10: CreateDependencyRequestBodyRuntime{
-			value: "Node.js 6.10",
+		NODE_JS6_10: CreateDependencyRequestBodyRuntime{
+			value: "Node.js6.10",
 		},
-		NODE_JS_8_10: CreateDependencyRequestBodyRuntime{
-			value: "Node.js 8.10",
+		NODE_JS8_10: CreateDependencyRequestBodyRuntime{
+			value: "Node.js8.10",
 		},
-		NODE_JS_10_16: CreateDependencyRequestBodyRuntime{
-			value: "Node.js 10.16",
+		NODE_JS10_16: CreateDependencyRequestBodyRuntime{
+			value: "Node.js10.16",
 		},
-		NODE_JS_12_13: CreateDependencyRequestBodyRuntime{
-			value: "Node.js 12.13",
+		NODE_JS12_13: CreateDependencyRequestBodyRuntime{
+			value: "Node.js12.13",
 		},
-		PYTHON_2_7: CreateDependencyRequestBodyRuntime{
-			value: "Python 2.7",
+		PYTHON2_7: CreateDependencyRequestBodyRuntime{
+			value: "Python2.7",
 		},
-		PYTHON_3_6: CreateDependencyRequestBodyRuntime{
-			value: "Python 3.6",
+		PYTHON3_6: CreateDependencyRequestBodyRuntime{
+			value: "Python3.6",
 		},
-		GO_1_8: CreateDependencyRequestBodyRuntime{
-			value: "Go 1.8",
+		GO1_8: CreateDependencyRequestBodyRuntime{
+			value: "Go1.8",
 		},
 		C__NET_CORE_2_0: CreateDependencyRequestBodyRuntime{
 			value: "C#(.NET Core 2.0)",
@@ -93,8 +93,8 @@ func GetCreateDependencyRequestBodyRuntimeEnum() CreateDependencyRequestBodyRunt
 		C__NET_CORE_3_1: CreateDependencyRequestBodyRuntime{
 			value: "C#(.NET Core 3.1)",
 		},
-		PHP_7_3: CreateDependencyRequestBodyRuntime{
-			value: "PHP 7.3",
+		PHP7_3: CreateDependencyRequestBodyRuntime{
+			value: "PHP7.3",
 		},
 	}
 }

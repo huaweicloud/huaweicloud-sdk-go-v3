@@ -91,7 +91,7 @@ type TargetServer struct {
 	SnapshotIds *string `json:"snapshot_ids,omitempty"`
 	// 目的端回滚快照id
 
-	RollbackSnapshotIds *string `json:"rollback_snapshot_ids,omitempty"`
+	CutoveredSnapshotIds *string `json:"cutovered_snapshot_ids,omitempty"`
 }
 
 func (o TargetServer) String() string {

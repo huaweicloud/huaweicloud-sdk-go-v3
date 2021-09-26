@@ -8,6 +8,10 @@ import (
 
 // Request Object
 type CreatePolicyRequest struct {
+	// 企业项目id
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	Body *CreatePolicyRequestBody `json:"body,omitempty"`
 }
 

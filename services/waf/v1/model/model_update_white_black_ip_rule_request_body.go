@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建黑白名单规则body
+// 更新黑白名单规则body
 type UpdateWhiteBlackIpRuleRequestBody struct {
 	// 黑白名单地址
 

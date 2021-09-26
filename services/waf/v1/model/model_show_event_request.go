@@ -8,6 +8,9 @@ import (
 
 // Request Object
 type ShowEventRequest struct {
+	// 企业项目id
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 事件ID
 
 	Eventid string `json:"eventid"`

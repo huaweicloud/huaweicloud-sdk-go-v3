@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// 域名配置
 type HostFlag struct {
 	// true/false
 

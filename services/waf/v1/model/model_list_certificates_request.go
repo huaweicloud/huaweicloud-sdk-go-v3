@@ -11,6 +11,9 @@ import (
 
 // Request Object
 type ListCertificatesRequest struct {
+	// 企业项目id
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 页码
 
 	Page *int32 `json:"page,omitempty"`

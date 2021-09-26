@@ -13,8 +13,8 @@ type ShowEventResponse struct {
 	Total *int32 `json:"total,omitempty"`
 	// 攻击事件详情
 
-	Items          *[]ShowEventResponseBodyItems `json:"items,omitempty"`
-	HttpStatusCode int                           `json:"-"`
+	Items          *[]ShowEventItems `json:"items,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ShowEventResponse) String() string {

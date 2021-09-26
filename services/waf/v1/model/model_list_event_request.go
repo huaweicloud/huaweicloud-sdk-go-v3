@@ -11,6 +11,9 @@ import (
 
 // Request Object
 type ListEventRequest struct {
+	// 企业项目id
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 查询日志的时间范围
 
 	Recent ListEventRequestRecent `json:"recent"`

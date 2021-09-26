@@ -8,6 +8,9 @@ import (
 
 // Request Object
 type ListCompositeHostsRequest struct {
+	// 企业项目id
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// page
 
 	Page *int32 `json:"page,omitempty"`

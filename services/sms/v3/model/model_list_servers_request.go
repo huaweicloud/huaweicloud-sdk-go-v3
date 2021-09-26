@@ -34,7 +34,7 @@ type ListServersRequest struct {
 	Offset *int32 `json:"offset,omitempty"`
 	// 根据迁移周期查询
 
-	MigrationCycle *string `json:"migration_cycle,omitempty"`
+	MigrationCycle *ListServersRequestMigrationCycle `json:"migration_cycle,omitempty"`
 	// 查询失去连接的源端
 
 	Connected *bool `json:"connected,omitempty"`
@@ -117,6 +117,60 @@ func (c ListServersRequestState) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListServersRequestState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListServersRequestMigrationCycle struct {
+	value string
+}
+
+type ListServersRequestMigrationCycleEnum struct {
+	CHECKING    ListServersRequestMigrationCycle
+	SETTING     ListServersRequestMigrationCycle
+	REPLICATING ListServersRequestMigrationCycle
+	SYNCING     ListServersRequestMigrationCycle
+	CUTOVERING  ListServersRequestMigrationCycle
+	CUTOVERED   ListServersRequestMigrationCycle
+}
+
+func GetListServersRequestMigrationCycleEnum() ListServersRequestMigrationCycleEnum {
+	return ListServersRequestMigrationCycleEnum{
+		CHECKING: ListServersRequestMigrationCycle{
+			value: "checking",
+		},
+		SETTING: ListServersRequestMigrationCycle{
+			value: "setting",
+		},
+		REPLICATING: ListServersRequestMigrationCycle{
+			value: "replicating",
+		},
+		SYNCING: ListServersRequestMigrationCycle{
+			value: "syncing",
+		},
+		CUTOVERING: ListServersRequestMigrationCycle{
+			value: "cutovering",
+		},
+		CUTOVERED: ListServersRequestMigrationCycle{
+			value: "cutovered",
+		},
+	}
+}
+
+func (c ListServersRequestMigrationCycle) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *ListServersRequestMigrationCycle) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

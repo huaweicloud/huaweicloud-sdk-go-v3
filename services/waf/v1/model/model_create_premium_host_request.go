@@ -8,6 +8,10 @@ import (
 
 // Request Object
 type CreatePremiumHostRequest struct {
+	// 企业项目id
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	Body *CreatePremiumHostRequestBody `json:"body,omitempty"`
 }
 

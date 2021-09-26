@@ -8,6 +8,10 @@ import (
 
 // Request Object
 type CreateCertificateRequest struct {
+	// 企业项目id
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	Body *CreateCertificateRequestBody `json:"body,omitempty"`
 }
 

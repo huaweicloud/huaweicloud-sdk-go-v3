@@ -29,9 +29,6 @@ type ServerDisk struct {
 	// 磁盘上的物理分区信息
 
 	PhysicalVolumes []PhysicalVolume `json:"physical_volumes"`
-	// 创建任务时，如果选择已有虚拟机，此参数必选
-
-	DiskId *string `json:"disk_id,omitempty"`
 	// 是否为系统盘
 
 	OsDisk *bool `json:"os_disk,omitempty"`

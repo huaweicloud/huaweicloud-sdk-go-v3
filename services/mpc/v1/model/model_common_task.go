@@ -25,13 +25,13 @@ type CommonTask struct {
 	// 错误描述
 
 	Description *string `json:"description,omitempty"`
+	// 用户数据。
+
+	UserData *string `json:"user_data,omitempty"`
 
 	Input *ObsObjInfo `json:"input,omitempty"`
 
 	Output *ObsObjInfo `json:"output,omitempty"`
-	// 用户数据。
-
-	UserData *string `json:"user_data,omitempty"`
 }
 
 func (o CommonTask) String() string {

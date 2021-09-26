@@ -10,7 +10,7 @@ import (
 type PutDiskInfoReq struct {
 	// 更新的磁盘信息
 
-	Disks *[]Disk `json:"disks,omitempty"`
+	Disks *[]ServerDisk `json:"disks,omitempty"`
 	// 更新的卷信息
 
 	Volumegroups *[]VolumeGroups `json:"volumegroups,omitempty"`

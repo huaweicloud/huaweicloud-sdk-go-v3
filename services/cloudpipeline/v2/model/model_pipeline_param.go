@@ -19,7 +19,7 @@ type PipelineParam struct {
 	Description string `json:"description"`
 	// 流水线参数类型
 
-	Paramtype string `json:"paramtype"`
+	ParamType string `json:"param_type"`
 	// 是否静态参数
 
 	IsStatic bool `json:"is_static"`

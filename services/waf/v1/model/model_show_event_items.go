@@ -7,7 +7,7 @@ import (
 )
 
 // 攻击类型
-type ShowEventResponseBodyItems struct {
+type ShowEventItems struct {
 	// 次数
 
 	Time *int64 `json:"time,omitempty"`
@@ -40,11 +40,11 @@ type ShowEventResponseBodyItems struct {
 	Timestamp *int64 `json:"timestamp,omitempty"`
 }
 
-func (o ShowEventResponseBodyItems) String() string {
+func (o ShowEventItems) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "ShowEventResponseBodyItems struct{}"
+		return "ShowEventItems struct{}"
 	}
 
-	return strings.Join([]string{"ShowEventResponseBodyItems", string(data)}, " ")
+	return strings.Join([]string{"ShowEventItems", string(data)}, " ")
 }

@@ -7,7 +7,7 @@ import (
 )
 
 // 攻击类型
-type ListEventResponseBodyItems struct {
+type ListEventItems struct {
 	// 事件id
 
 	Id *string `json:"id,omitempty"`
@@ -26,7 +26,7 @@ type ListEventResponseBodyItems struct {
 	// 攻击的url链接
 
 	Url *string `json:"url,omitempty"`
-	// 攻击类型
+	// 攻击类型（XSS攻击：xss，sqli，命令注入：cmdi，恶意爬虫：robot，本地文件包含：lfi，远程文件包含：rfi，网站木马：webshell，cc攻击：cc，精准防护：custom_custom，IP黑白名单：custom_whiteblackip，地理位置访问控制：custom_geoip，防篡改：antitamper，反爬虫：anticrawler，网站信息防泄漏：leakage，非法请求：illegal，其它类型攻击：vuln）
 
 	Attack *string `json:"attack,omitempty"`
 	// 命中的规则id
@@ -42,7 +42,7 @@ type ListEventResponseBodyItems struct {
 
 	RequestLine *string `json:"request_line,omitempty"`
 
-	Headers *ListEventResponseBodyHeaders `json:"headers,omitempty"`
+	Headers *ListEventItemsHeaders `json:"headers,omitempty"`
 	// 请求cookie
 
 	Cookie *string `json:"cookie,omitempty"`
@@ -66,11 +66,11 @@ type ListEventResponseBodyItems struct {
 	ResponseBody *string `json:"response_body,omitempty"`
 }
 
-func (o ListEventResponseBodyItems) String() string {
+func (o ListEventItems) String() string {
 	data, err := json.Marshal(o)
 	if err != nil {
-		return "ListEventResponseBodyItems struct{}"
+		return "ListEventItems struct{}"
 	}
 
-	return strings.Join([]string{"ListEventResponseBodyItems", string(data)}, " ")
+	return strings.Join([]string{"ListEventItems", string(data)}, " ")
 }

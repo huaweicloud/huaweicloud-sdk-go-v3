@@ -239,6 +239,17 @@ func (c *WafClient) ListAntitamperRule(request *model.ListAntitamperRuleRequest)
 	}
 }
 
+//查询安全统计带宽数据
+func (c *WafClient) ListBandwidthTimeline(request *model.ListBandwidthTimelineRequest) (*model.ListBandwidthTimelineResponse, error) {
+	requestDef := GenReqDefForListBandwidthTimeline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBandwidthTimelineResponse), nil
+	}
+}
+
 //查询证书列表
 func (c *WafClient) ListCertificates(request *model.ListCertificatesRequest) (*model.ListCertificatesResponse, error) {
 	requestDef := GenReqDefForListCertificates()
@@ -305,6 +316,17 @@ func (c *WafClient) ListHostRoute(request *model.ListHostRouteRequest) (*model.L
 	}
 }
 
+//查询误报屏蔽规则列表
+func (c *WafClient) ListIgnoreRule(request *model.ListIgnoreRuleRequest) (*model.ListIgnoreRuleResponse, error) {
+	requestDef := GenReqDefForListIgnoreRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIgnoreRuleResponse), nil
+	}
+}
+
 //查询防护策略列表
 func (c *WafClient) ListPolicy(request *model.ListPolicyRequest) (*model.ListPolicyResponse, error) {
 	requestDef := GenReqDefForListPolicy()
@@ -335,6 +357,50 @@ func (c *WafClient) ListPrivacyRule(request *model.ListPrivacyRuleRequest) (*mod
 		return nil, err
 	} else {
 		return resp.(*model.ListPrivacyRuleResponse), nil
+	}
+}
+
+//查询安全统计qps次数
+func (c *WafClient) ListQpsTimeline(request *model.ListQpsTimelineRequest) (*model.ListQpsTimelineResponse, error) {
+	requestDef := GenReqDefForListQpsTimeline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQpsTimelineResponse), nil
+	}
+}
+
+//查询安全统计响应码数据
+func (c *WafClient) ListResponseCodeTimeline(request *model.ListResponseCodeTimelineRequest) (*model.ListResponseCodeTimelineResponse, error) {
+	requestDef := GenReqDefForListResponseCodeTimeline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResponseCodeTimelineResponse), nil
+	}
+}
+
+//查询安全总览请求数据
+func (c *WafClient) ListStatistics(request *model.ListStatisticsRequest) (*model.ListStatisticsResponse, error) {
+	requestDef := GenReqDefForListStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListStatisticsResponse), nil
+	}
+}
+
+//查询业务异常数量
+func (c *WafClient) ListTopAbnormal(request *model.ListTopAbnormalRequest) (*model.ListTopAbnormalResponse, error) {
+	requestDef := GenReqDefForListTopAbnormal()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTopAbnormalResponse), nil
 	}
 }
 
@@ -379,6 +445,17 @@ func (c *WafClient) ShowCompositeHost(request *model.ShowCompositeHostRequest) (
 		return nil, err
 	} else {
 		return resp.(*model.ShowCompositeHostResponse), nil
+	}
+}
+
+//局点支持特性查询
+func (c *WafClient) ShowConsoleConfig(request *model.ShowConsoleConfigRequest) (*model.ShowConsoleConfigResponse, error) {
+	requestDef := GenReqDefForShowConsoleConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConsoleConfigResponse), nil
 	}
 }
 

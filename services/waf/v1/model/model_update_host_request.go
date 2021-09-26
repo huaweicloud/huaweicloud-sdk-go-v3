@@ -8,6 +8,9 @@ import (
 
 // Request Object
 type UpdateHostRequest struct {
+	// 企业项目id
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 域名Id
 
 	InstanceId string `json:"instance_id"`
