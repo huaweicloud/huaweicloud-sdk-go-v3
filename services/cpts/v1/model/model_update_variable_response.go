@@ -12,7 +12,7 @@ type UpdateVariableResponse struct {
 
 	Code *string `json:"code,omitempty"`
 
-	Json *CreateVariableResqJson `json:"json,omitempty"`
+	Json *CreateVariableResultJson `json:"json,omitempty"`
 	// message
 
 	Message        *string `json:"message,omitempty"`

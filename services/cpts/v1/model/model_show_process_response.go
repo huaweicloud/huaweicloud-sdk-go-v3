@@ -15,7 +15,7 @@ type ShowProcessResponse struct {
 
 	Message *string `json:"message,omitempty"`
 
-	Json *ShowProcessResqJson `json:"json,omitempty"`
+	Json *Json `json:"json,omitempty"`
 	// extend
 
 	Extend         *string `json:"extend,omitempty"`

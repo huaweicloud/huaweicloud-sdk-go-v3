@@ -12,7 +12,7 @@ type CreateCaseResponse struct {
 
 	Code *string `json:"code,omitempty"`
 
-	Json *CreateCaseResqJson `json:"json,omitempty"`
+	Json *CreateCaseResultJson `json:"json,omitempty"`
 	// message
 
 	Message        *string `json:"message,omitempty"`

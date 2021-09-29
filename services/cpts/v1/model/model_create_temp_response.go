@@ -8,7 +8,16 @@ import (
 
 // Response Object
 type CreateTempResponse struct {
-	HttpStatusCode int `json:"-"`
+	// code
+
+	Code *string `json:"code,omitempty"`
+	// tempId
+
+	TempId *int32 `json:"tempId,omitempty"`
+	// message
+
+	Message        *string `json:"message,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateTempResponse) String() string {

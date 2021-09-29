@@ -15,7 +15,7 @@ type UpdatePublicZoneInfo struct {
 	Email *string `json:"email,omitempty"`
 	// 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
 
-	Ttl *string `json:"ttl,omitempty"`
+	Ttl *int32 `json:"ttl,omitempty"`
 }
 
 func (o UpdatePublicZoneInfo) String() string {

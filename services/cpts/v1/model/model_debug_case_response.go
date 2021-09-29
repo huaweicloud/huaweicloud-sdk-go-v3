@@ -19,8 +19,8 @@ type DebugCaseResponse struct {
 	Extend *string `json:"extend,omitempty"`
 	// result
 
-	Result         *[]DebugCaseResqResult `json:"result,omitempty"`
-	HttpStatusCode int                    `json:"-"`
+	Result         *[]DebugCaseResult `json:"result,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o DebugCaseResponse) String() string {

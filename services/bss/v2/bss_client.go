@@ -360,17 +360,6 @@ func (c *BssClient) ListFreeResourceUsages(request *model.ListFreeResourceUsages
 	}
 }
 
-//功能描述：查询资源包列表
-func (c *BssClient) ListFreeResources(request *model.ListFreeResourcesRequest) (*model.ListFreeResourcesResponse, error) {
-	requestDef := GenReqDefForListFreeResources()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListFreeResourcesResponse), nil
-	}
-}
-
 //功能描述：华为云伙伴能力中心（一级经销商）可以查询精英服务商（二级经销商）列表。
 func (c *BssClient) ListIndirectPartners(request *model.ListIndirectPartnersRequest) (*model.ListIndirectPartnersResponse, error) {
 	requestDef := GenReqDefForListIndirectPartners()
@@ -445,17 +434,6 @@ func (c *BssClient) ListOrderDiscounts(request *model.ListOrderDiscountsRequest)
 		return nil, err
 	} else {
 		return resp.(*model.ListOrderDiscountsResponse), nil
-	}
-}
-
-//功能描述：伙伴在伙伴销售平台查询向客户及关联的精英服务商（二级经销商）拨款或回收的调账记录
-func (c *BssClient) ListParnterAdjustRecords(request *model.ListParnterAdjustRecordsRequest) (*model.ListParnterAdjustRecordsResponse, error) {
-	requestDef := GenReqDefForListParnterAdjustRecords()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListParnterAdjustRecordsResponse), nil
 	}
 }
 
@@ -613,6 +591,17 @@ func (c *BssClient) ListSkuInventories(request *model.ListSkuInventoriesRequest)
 	}
 }
 
+//功能描述：查询客户消费记录
+func (c *BssClient) ListSubCustomerBillDetail(request *model.ListSubCustomerBillDetailRequest) (*model.ListSubCustomerBillDetailResponse, error) {
+	requestDef := GenReqDefForListSubCustomerBillDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubCustomerBillDetailResponse), nil
+	}
+}
+
 //功能描述：伙伴可以查询自身的优惠券信息。
 func (c *BssClient) ListSubCustomerCoupons(request *model.ListSubCustomerCouponsRequest) (*model.ListSubCustomerCouponsResponse, error) {
 	requestDef := GenReqDefForListSubCustomerCoupons()
@@ -632,17 +621,6 @@ func (c *BssClient) ListSubCustomerDiscounts(request *model.ListSubCustomerDisco
 		return nil, err
 	} else {
 		return resp.(*model.ListSubCustomerDiscountsResponse), nil
-	}
-}
-
-//功能描述：合作伙伴可以查看客户的消费记录
-func (c *BssClient) ListSubCustomerResFeeRecords(request *model.ListSubCustomerResFeeRecordsRequest) (*model.ListSubCustomerResFeeRecordsResponse, error) {
-	requestDef := GenReqDefForListSubCustomerResFeeRecords()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListSubCustomerResFeeRecordsResponse), nil
 	}
 }
 

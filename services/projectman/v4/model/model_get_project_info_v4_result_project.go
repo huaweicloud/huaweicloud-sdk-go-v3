@@ -19,10 +19,10 @@ type GetProjectInfoV4ResultProject struct {
 	Name *string `json:"name,omitempty"`
 	// 项目创建时间
 
-	CreatedOn float32 `json:"created_on,omitempty"`
+	CreatedOn *int64 `json:"created_on,omitempty"`
 	// 项目更新时间
 
-	UpdatedOn float32 `json:"updated_on,omitempty"`
+	UpdatedOn *int64 `json:"updated_on,omitempty"`
 	// 项目类型
 
 	ProjectType *string `json:"project_type,omitempty"`

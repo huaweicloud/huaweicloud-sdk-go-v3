@@ -48,6 +48,9 @@ type PublicZoneResp struct {
 	UpdatedAt *string `json:"updated_at,omitempty"`
 
 	Links *PageLink `json:"links,omitempty"`
+	// 资源标签。
+
+	Tags *[]Tag `json:"tags,omitempty"`
 	// 主从模式中，从DNS服务器用以获取DNS信息。
 
 	Masters *[]string `json:"masters,omitempty"`

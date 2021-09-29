@@ -19,6 +19,12 @@ type IssueRecordV4Details struct {
 	// 操作
 
 	Operation *string `json:"operation,omitempty"`
+	// 操作记录的id
+
+	Id *int32 `json:"id,omitempty"`
+	// 操作的字段
+
+	Name *string `json:"name,omitempty"`
 }
 
 func (o IssueRecordV4Details) String() string {

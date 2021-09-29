@@ -12,13 +12,13 @@ type ListTagReq struct {
 	Tags *[]TagValues `json:"tags,omitempty"`
 	// 最多包含10个key，每个key下面的value最多10个，结构体不能缺失，key不能为空或者空字符串。Key不能重复，同一个key中values不能重复。
 
-	TagsAny *[]interface{} `json:"tags_any,omitempty"`
+	TagsAny *[]TagValues `json:"tags_any,omitempty"`
 	// 最多包含10个key，每个key下面的value最多10个，结构体不能缺失，key不能为空或者空字符串。Key不能重复，同一个key中values不能重复。
 
-	NotTags *[]interface{} `json:"not_tags,omitempty"`
+	NotTags *[]TagValues `json:"not_tags,omitempty"`
 	// 最多包含10个key，每个key下面的value最多10个，结构体不能缺失，key不能为空或者空字符串。Key不能重复，同一个key中values不能重复。
 
-	NotTagsAny *[]interface{} `json:"not_tags_any,omitempty"`
+	NotTagsAny *[]TagValues `json:"not_tags_any,omitempty"`
 	// 每页返回的资源个数。  取值范围：1~1000  参数取值说明：  如果action为filter时，默认为1000。 如果action为count时，无此参数。
 
 	Limit *int32 `json:"limit,omitempty"`

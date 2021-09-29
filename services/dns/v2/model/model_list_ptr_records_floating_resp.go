@@ -30,6 +30,9 @@ type ListPtrRecordsFloatingResp struct {
 	Action *string `json:"action,omitempty"`
 
 	Links *PageLink `json:"links,omitempty"`
+	// 资源标签。
+
+	Tags *[]Tag `json:"tags,omitempty"`
 	// 反向解析关联的企业项目ID，长度不超过36个字符。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

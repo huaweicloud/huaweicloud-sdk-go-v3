@@ -7,11 +7,11 @@ import (
 	"net/http"
 )
 
-func GenReqDefForChangeMysqlInstanceSpecification() *def.HttpRequestDef {
+func GenReqDefForChangeGaussMySqlInstanceSpecification() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/action").
-		WithResponse(new(model.ChangeMysqlInstanceSpecificationResponse)).
+		WithPath("/v3/{project_id}/instances/{instance_id}/action").
+		WithResponse(new(model.ChangeGaussMySqlInstanceSpecificationResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -32,11 +32,11 @@ func GenReqDefForChangeMysqlInstanceSpecification() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateMysqlBackup() *def.HttpRequestDef {
+func GenReqDefForCreateGaussMySqlBackup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/mysql/v3/{project_id}/backups/create").
-		WithResponse(new(model.CreateMysqlBackupResponse)).
+		WithPath("/v3/{project_id}/backups/create").
+		WithResponse(new(model.CreateGaussMySqlBackupResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -52,11 +52,11 @@ func GenReqDefForCreateMysqlBackup() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateMysqlInstance() *def.HttpRequestDef {
+func GenReqDefForCreateGaussMySqlInstance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/mysql/v3/{project_id}/instances").
-		WithResponse(new(model.CreateMysqlInstanceResponse)).
+		WithPath("/v3/{project_id}/instances").
+		WithResponse(new(model.CreateGaussMySqlInstanceResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -72,36 +72,11 @@ func GenReqDefForCreateMysqlInstance() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateMysqlProxy() *def.HttpRequestDef {
+func GenReqDefForCreateGaussMySqlProxy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/proxy").
-		WithResponse(new(model.CreateMysqlProxyResponse)).
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XLanguage").
-		WithJsonTag("X-Language").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForCreateMysqlReadonlyNode() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/nodes/enlarge").
-		WithResponse(new(model.CreateMysqlReadonlyNodeResponse)).
+		WithPath("/v3/{project_id}/instances/{instance_id}/proxy").
+		WithResponse(new(model.CreateGaussMySqlProxyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -122,11 +97,36 @@ func GenReqDefForCreateMysqlReadonlyNode() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDeleteMysqlInstance() *def.HttpRequestDef {
+func GenReqDefForCreateGaussMySqlReadonlyNode() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/{instance_id}/nodes/enlarge").
+		WithResponse(new(model.CreateGaussMySqlReadonlyNodeResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteGaussMySqlInstance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}").
-		WithResponse(new(model.DeleteMysqlInstanceResponse)).
+		WithPath("/v3/{project_id}/instances/{instance_id}").
+		WithResponse(new(model.DeleteGaussMySqlInstanceResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -143,11 +143,11 @@ func GenReqDefForDeleteMysqlInstance() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDeleteMysqlProxy() *def.HttpRequestDef {
+func GenReqDefForDeleteGaussMySqlProxy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/proxy").
-		WithResponse(new(model.DeleteMysqlProxyResponse)).
+		WithPath("/v3/{project_id}/instances/{instance_id}/proxy").
+		WithResponse(new(model.DeleteGaussMySqlProxyResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -164,11 +164,11 @@ func GenReqDefForDeleteMysqlProxy() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDeleteMysqlReadonlyNode() *def.HttpRequestDef {
+func GenReqDefForDeleteGaussMySqlReadonlyNode() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/nodes/{node_id}").
-		WithResponse(new(model.DeleteMysqlReadonlyNodeResponse)).
+		WithPath("/v3/{project_id}/instances/{instance_id}/nodes/{node_id}").
+		WithResponse(new(model.DeleteGaussMySqlReadonlyNodeResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -189,11 +189,11 @@ func GenReqDefForDeleteMysqlReadonlyNode() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForExpandMysqlInstanceVolume() *def.HttpRequestDef {
+func GenReqDefForExpandGaussMySqlInstanceVolume() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/volume/extend").
-		WithResponse(new(model.ExpandMysqlInstanceVolumeResponse)).
+		WithPath("/v3/{project_id}/instances/{instance_id}/volume/extend").
+		WithResponse(new(model.ExpandGaussMySqlInstanceVolumeResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -214,11 +214,11 @@ func GenReqDefForExpandMysqlInstanceVolume() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForExpandMysqlProxy() *def.HttpRequestDef {
+func GenReqDefForExpandGaussMySqlProxy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/proxy/enlarge").
-		WithResponse(new(model.ExpandMysqlProxyResponse)).
+		WithPath("/v3/{project_id}/instances/{instance_id}/proxy/enlarge").
+		WithResponse(new(model.ExpandGaussMySqlProxyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -239,11 +239,27 @@ func GenReqDefForExpandMysqlProxy() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListDedicatedResources() *def.HttpRequestDef {
+func GenReqDefForListGaussMySqlConfigurations() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/dedicated-resources").
-		WithResponse(new(model.ListDedicatedResourcesResponse)).
+		WithPath("/v3/{project_id}/configurations").
+		WithResponse(new(model.ListGaussMySqlConfigurationsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListGaussMySqlDedicatedResources() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/dedicated-resources").
+		WithResponse(new(model.ListGaussMySqlDedicatedResourcesResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -264,27 +280,11 @@ func GenReqDefForListDedicatedResources() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListMysqlConfigurations() *def.HttpRequestDef {
+func GenReqDefForListGaussMySqlErrorLog() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/configurations").
-		WithResponse(new(model.ListMysqlConfigurationsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XLanguage").
-		WithJsonTag("X-Language").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListMysqlErrorLog() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/errorlog").
-		WithResponse(new(model.ListMysqlErrorLogResponse)).
+		WithPath("/v3/{project_id}/instances/{instance_id}/errorlog").
+		WithResponse(new(model.ListGaussMySqlErrorLogResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -326,244 +326,11 @@ func GenReqDefForListMysqlErrorLog() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListMysqlSlowLog() *def.HttpRequestDef {
+func GenReqDefForListGaussMySqlInstances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/slowlog").
-		WithResponse(new(model.ListMysqlSlowLogResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("StartDate").
-		WithJsonTag("start_date").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EndDate").
-		WithJsonTag("end_date").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Type").
-		WithJsonTag("type").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("NodeId").
-		WithJsonTag("node_id").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XLanguage").
-		WithJsonTag("X-Language").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForResetMysqlPassword() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/password").
-		WithResponse(new(model.ResetMysqlPasswordResponse)).
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XLanguage").
-		WithJsonTag("X-Language").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForSetMysqlQuotas() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/mysql/v3/{project_id}/quotas").
-		WithResponse(new(model.SetMysqlQuotasResponse)).
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XLanguage").
-		WithJsonTag("X-Language").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowMysqlBackupList() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/backups").
-		WithResponse(new(model.ShowMysqlBackupListResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("BackupId").
-		WithJsonTag("backup_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("BackupType").
-		WithJsonTag("backup_type").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("BeginTime").
-		WithJsonTag("begin_time").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EndTime").
-		WithJsonTag("end_time").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XLanguage").
-		WithJsonTag("X-Language").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowMysqlBackupPolicy() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/backups/policy").
-		WithResponse(new(model.ShowMysqlBackupPolicyResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XLanguage").
-		WithJsonTag("X-Language").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowMysqlEngineVersion() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/datastores/{database_name}").
-		WithResponse(new(model.ShowMysqlEngineVersionResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("DatabaseName").
-		WithJsonTag("database_name").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XLanguage").
-		WithJsonTag("X-Language").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowMysqlFlavors() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/flavors/{database_name}").
-		WithResponse(new(model.ShowMysqlFlavorsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("DatabaseName").
-		WithJsonTag("database_name").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("VersionName").
-		WithJsonTag("version_name").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AvailabilityZoneMode").
-		WithJsonTag("availability_zone_mode").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SpecCode").
-		WithJsonTag("spec_code").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XLanguage").
-		WithJsonTag("X-Language").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowMysqlInstanceInfo() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}").
-		WithResponse(new(model.ShowMysqlInstanceInfoResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XLanguage").
-		WithJsonTag("X-Language").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowMysqlInstanceList() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/instances").
-		WithResponse(new(model.ShowMysqlInstanceListResponse)).
+		WithPath("/v3/{project_id}/instances").
+		WithResponse(new(model.ListGaussMySqlInstancesResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -608,11 +375,244 @@ func GenReqDefForShowMysqlInstanceList() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowMysqlJobInfo() *def.HttpRequestDef {
+func GenReqDefForListGaussMySqlSlowLog() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/jobs").
-		WithResponse(new(model.ShowMysqlJobInfoResponse)).
+		WithPath("/v3/{project_id}/instances/{instance_id}/slowlog").
+		WithResponse(new(model.ListGaussMySqlSlowLogResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StartDate").
+		WithJsonTag("start_date").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EndDate").
+		WithJsonTag("end_date").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Type").
+		WithJsonTag("type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NodeId").
+		WithJsonTag("node_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForResetGaussMySqlPassword() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/{instance_id}/password").
+		WithResponse(new(model.ResetGaussMySqlPasswordResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForSetGaussMySqlQuotas() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/quotas").
+		WithResponse(new(model.SetGaussMySqlQuotasResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowGaussMySqlBackupList() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/backups").
+		WithResponse(new(model.ShowGaussMySqlBackupListResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BackupId").
+		WithJsonTag("backup_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BackupType").
+		WithJsonTag("backup_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BeginTime").
+		WithJsonTag("begin_time").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EndTime").
+		WithJsonTag("end_time").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowGaussMySqlBackupPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/instances/{instance_id}/backups/policy").
+		WithResponse(new(model.ShowGaussMySqlBackupPolicyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowGaussMySqlEngineVersion() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/datastores/{database_name}").
+		WithResponse(new(model.ShowGaussMySqlEngineVersionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DatabaseName").
+		WithJsonTag("database_name").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowGaussMySqlFlavors() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/flavors/{database_name}").
+		WithResponse(new(model.ShowGaussMySqlFlavorsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DatabaseName").
+		WithJsonTag("database_name").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("VersionName").
+		WithJsonTag("version_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AvailabilityZoneMode").
+		WithJsonTag("availability_zone_mode").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SpecCode").
+		WithJsonTag("spec_code").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowGaussMySqlInstanceInfo() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/instances/{instance_id}").
+		WithResponse(new(model.ShowGaussMySqlInstanceInfoResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowGaussMySqlJobInfo() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/jobs").
+		WithResponse(new(model.ShowGaussMySqlJobInfoResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -629,11 +629,11 @@ func GenReqDefForShowMysqlJobInfo() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowMysqlProjectQuotas() *def.HttpRequestDef {
+func GenReqDefForShowGaussMySqlProjectQuotas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/project-quotas").
-		WithResponse(new(model.ShowMysqlProjectQuotasResponse)).
+		WithPath("/v3/{project_id}/project-quotas").
+		WithResponse(new(model.ShowGaussMySqlProjectQuotasResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -650,11 +650,11 @@ func GenReqDefForShowMysqlProjectQuotas() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowMysqlProxy() *def.HttpRequestDef {
+func GenReqDefForShowGaussMySqlProxy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/proxy").
-		WithResponse(new(model.ShowMysqlProxyResponse)).
+		WithPath("/v3/{project_id}/instances/{instance_id}/proxy").
+		WithResponse(new(model.ShowGaussMySqlProxyResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -671,11 +671,11 @@ func GenReqDefForShowMysqlProxy() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowMysqlProxyFlavors() *def.HttpRequestDef {
+func GenReqDefForShowGaussMySqlProxyFlavors() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/proxy/flavors").
-		WithResponse(new(model.ShowMysqlProxyFlavorsResponse)).
+		WithPath("/v3/{project_id}/instances/{instance_id}/proxy/flavors").
+		WithResponse(new(model.ShowGaussMySqlProxyFlavorsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -692,11 +692,11 @@ func GenReqDefForShowMysqlProxyFlavors() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowMysqlQuotas() *def.HttpRequestDef {
+func GenReqDefForShowGaussMySqlQuotas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/mysql/v3/{project_id}/quotas").
-		WithResponse(new(model.ShowMysqlQuotasResponse)).
+		WithPath("/v3/{project_id}/quotas").
+		WithResponse(new(model.ShowGaussMySqlQuotasResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -721,11 +721,11 @@ func GenReqDefForShowMysqlQuotas() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateMysqlBackupPolicy() *def.HttpRequestDef {
+func GenReqDefForUpdateGaussMySqlBackupPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/backups/policy/update").
-		WithResponse(new(model.UpdateMysqlBackupPolicyResponse)).
+		WithPath("/v3/{project_id}/instances/{instance_id}/backups/policy/update").
+		WithResponse(new(model.UpdateGaussMySqlBackupPolicyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -746,11 +746,11 @@ func GenReqDefForUpdateMysqlBackupPolicy() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateMysqlInstanceName() *def.HttpRequestDef {
+func GenReqDefForUpdateGaussMySqlInstanceName() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/mysql/v3/{project_id}/instances/{instance_id}/name").
-		WithResponse(new(model.UpdateMysqlInstanceNameResponse)).
+		WithPath("/v3/{project_id}/instances/{instance_id}/name").
+		WithResponse(new(model.UpdateGaussMySqlInstanceNameResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -771,11 +771,11 @@ func GenReqDefForUpdateMysqlInstanceName() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateMysqlQuotas() *def.HttpRequestDef {
+func GenReqDefForUpdateGaussMySqlQuotas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/mysql/v3/{project_id}/quotas").
-		WithResponse(new(model.UpdateMysqlQuotasResponse)).
+		WithPath("/v3/{project_id}/quotas").
+		WithResponse(new(model.UpdateGaussMySqlQuotasResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

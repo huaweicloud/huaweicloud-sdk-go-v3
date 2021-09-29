@@ -10,7 +10,7 @@ import (
 func GenReqDefForCreateInstance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/opengauss/v3/{project_id}/instances").
+		WithPath("/v3/{project_id}/instances").
 		WithResponse(new(model.CreateInstanceResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
@@ -30,7 +30,7 @@ func GenReqDefForCreateInstance() *def.HttpRequestDef {
 func GenReqDefForDeleteInstance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/opengauss/v3/{project_id}/instances/{instance_id}").
+		WithPath("/v3/{project_id}/instances/{instance_id}").
 		WithResponse(new(model.DeleteInstanceResponse)).
 		WithContentType("application/json")
 
@@ -51,7 +51,7 @@ func GenReqDefForDeleteInstance() *def.HttpRequestDef {
 func GenReqDefForListInstances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/opengauss/v3/{project_id}/instances").
+		WithPath("/v3/{project_id}/instances").
 		WithResponse(new(model.ListInstancesResponse)).
 		WithContentType("application/json")
 
@@ -104,7 +104,7 @@ func GenReqDefForListInstances() *def.HttpRequestDef {
 func GenReqDefForResetPwd() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/opengauss/v3/{project_id}/instances/{instance_id}/password").
+		WithPath("/v3/{project_id}/instances/{instance_id}/password").
 		WithResponse(new(model.ResetPwdResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
@@ -129,7 +129,7 @@ func GenReqDefForResetPwd() *def.HttpRequestDef {
 func GenReqDefForRunInstanceAction() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/opengauss/v3/{project_id}/instances/{instance_id}/action").
+		WithPath("/v3/{project_id}/instances/{instance_id}/action").
 		WithResponse(new(model.RunInstanceActionResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
@@ -154,7 +154,7 @@ func GenReqDefForRunInstanceAction() *def.HttpRequestDef {
 func GenReqDefForSetBackupPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/opengauss/v3/{project_id}/instances/{instance_id}/backups/policy").
+		WithPath("/v3/{project_id}/instances/{instance_id}/backups/policy").
 		WithResponse(new(model.SetBackupPolicyResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
@@ -179,7 +179,7 @@ func GenReqDefForSetBackupPolicy() *def.HttpRequestDef {
 func GenReqDefForUpdateInstanceConfiguration() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/opengauss/v3/{project_id}/instances/{instance_id}/configurations").
+		WithPath("/v3/{project_id}/instances/{instance_id}/configurations").
 		WithResponse(new(model.UpdateInstanceConfigurationResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
@@ -204,7 +204,7 @@ func GenReqDefForUpdateInstanceConfiguration() *def.HttpRequestDef {
 func GenReqDefForUpdateInstanceName() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/opengauss/v3/{project_id}/instances/{instance_id}/name").
+		WithPath("/v3/{project_id}/instances/{instance_id}/name").
 		WithResponse(new(model.UpdateInstanceNameResponse)).
 		WithContentType("application/json;charset=UTF-8")
 

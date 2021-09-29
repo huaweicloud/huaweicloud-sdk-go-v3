@@ -49,11 +49,10 @@ type DeletePublicZoneResponse struct {
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	// 主从模式中，从DNS服务器用以获取DNS信息
 
-	Masters *string `json:"masters,omitempty"`
-	// 指向当前资源或者其他资源的链接。当查询需要分页时，需要包含一个next链接指向下一页
+	Masters *[]string `json:"masters,omitempty"`
 
-	Links          *[]PageLink `json:"links,omitempty"`
-	HttpStatusCode int         `json:"-"`
+	Links          *PageLink `json:"links,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o DeletePublicZoneResponse) String() string {

@@ -14,10 +14,9 @@ type ShowTempResponse struct {
 	// message
 
 	Message *string `json:"message,omitempty"`
-	// temp_info
 
-	TempInfo       *interface{} `json:"temp_info,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	TempInfo       *TempInfo `json:"temp_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ShowTempResponse) String() string {

@@ -22,6 +22,9 @@ type ListProjectVersionsV4ResponseBodyIterations struct {
 	// 迭代开始时间
 
 	BeginTime *string `json:"begin_time,omitempty"`
+	// 迭代状态
+
+	Status *string `json:"status,omitempty"`
 }
 
 func (o ListProjectVersionsV4ResponseBodyIterations) String() string {

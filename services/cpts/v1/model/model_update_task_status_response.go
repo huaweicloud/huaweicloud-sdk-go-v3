@@ -18,8 +18,8 @@ type UpdateTaskStatusResponse struct {
 
 	Extend *string `json:"extend,omitempty"`
 
-	Result         *UpdateTaskStatusResqResult `json:"result,omitempty"`
-	HttpStatusCode int                         `json:"-"`
+	Result         *UpdateTaskStatusResult `json:"result,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o UpdateTaskStatusResponse) String() string {

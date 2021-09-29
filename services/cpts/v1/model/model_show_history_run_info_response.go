@@ -16,8 +16,8 @@ type ShowHistoryRunInfoResponse struct {
 	Message *string `json:"message,omitempty"`
 	// log_list
 
-	LogList        *[]interface{} `json:"log_list,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	LogList        *[]HistoryRunInfo `json:"log_list,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ShowHistoryRunInfoResponse) String() string {

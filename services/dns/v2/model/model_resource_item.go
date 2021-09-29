@@ -12,7 +12,7 @@ type ResourceItem struct {
 	ResourceId *string `json:"resource_id,omitempty"`
 	// 资源详情。资源对象，用于扩展，默认为空。
 
-	ResourceDetail *string `json:"resource_detail,omitempty"`
+	ResourceDetail *interface{} `json:"resource_detail,omitempty"`
 	// 标签列表，没有标签默认为空数组。
 
 	Tags *[]Tag `json:"tags,omitempty"`

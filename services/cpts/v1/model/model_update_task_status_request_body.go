@@ -18,7 +18,7 @@ type UpdateTaskStatusRequestBody struct {
 
 	WithoutPackage int32 `json:"without_package"`
 
-	NetworkInfo *UpdateTaskStatusRequestBodyNetworkInfo `json:"network_info"`
+	NetworkInfo *NetworkInfo `json:"network_info"`
 	// status
 
 	Status int32 `json:"status"`

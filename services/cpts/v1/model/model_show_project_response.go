@@ -15,8 +15,8 @@ type ShowProjectResponse struct {
 
 	Message *string `json:"message,omitempty"`
 
-	Project        *ShowProjectResqProject `json:"project,omitempty"`
-	HttpStatusCode int                     `json:"-"`
+	Project        *Project `json:"project,omitempty"`
+	HttpStatusCode int      `json:"-"`
 }
 
 func (o ShowProjectResponse) String() string {

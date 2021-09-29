@@ -27,10 +27,10 @@ type UpdateTaskRequestBody struct {
 
 	RunType *int32 `json:"run_type,omitempty"`
 
-	TaskRunInfo *ShowTaskSetResqTaskRunInfo `json:"task_run_info,omitempty"`
+	TaskRunInfo *TaskRunInfo `json:"task_run_info,omitempty"`
 	// case_list
 
-	CaseList *[]ShowTaskResqTaskinfoCaseList `json:"case_list,omitempty"`
+	CaseList *[]CaseInfo `json:"case_list,omitempty"`
 	// operate_mode
 
 	OperateMode *int32 `json:"operate_mode,omitempty"`
@@ -39,7 +39,7 @@ type UpdateTaskRequestBody struct {
 	BenchConcurrent *int32 `json:"bench_concurrent,omitempty"`
 	// related_temp_running_data
 
-	RelatedTempRunningData *[]UpdateTaskRequestBodyRelatedTempRunningData `json:"related_temp_running_data,omitempty"`
+	RelatedTempRunningData *[]RelatedTempRunningData `json:"related_temp_running_data,omitempty"`
 }
 
 func (o UpdateTaskRequestBody) String() string {

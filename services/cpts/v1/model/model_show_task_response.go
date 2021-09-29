@@ -15,8 +15,8 @@ type ShowTaskResponse struct {
 
 	Message *string `json:"message,omitempty"`
 
-	Taskinfo       *ShowTaskResqTaskinfo `json:"taskinfo,omitempty"`
-	HttpStatusCode int                   `json:"-"`
+	Taskinfo       *TaskInfo `json:"taskinfo,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ShowTaskResponse) String() string {

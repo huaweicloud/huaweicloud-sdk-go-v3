@@ -17,10 +17,10 @@ type ShowTaskSetResponse struct {
 	// message
 
 	Message *string `json:"message,omitempty"`
-	// tasks
+	// 工程集详细信息
 
-	Tasks          *[]ShowTaskSetResqTasks `json:"tasks,omitempty"`
-	HttpStatusCode int                     `json:"-"`
+	Tasks          *[]Task `json:"tasks,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowTaskSetResponse) String() string {

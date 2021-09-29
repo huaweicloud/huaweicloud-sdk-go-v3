@@ -30,6 +30,17 @@ func (c *EcsClient) AddServerGroupMember(request *model.AddServerGroupMemberRequ
 	}
 }
 
+//虚拟IP地址用于为网卡提供第二个IP地址，同时支持与多个弹性云服务器的网卡绑定，从而实现多个弹性云服务器之间的高可用性。  该接口用于给云服务器网卡配置虚拟IP地址：  - 当指定的IP地址是一个不存在的虚拟IP地址时，系统会创建该虚拟IP，并绑定至对应网卡。  - 当指定的IP地址是一个已经创建好的私有IP时，系统会将指定的网卡和虚拟IP绑定。如果该IP的device_owner为空，则仅支持VPC内二三层通信；如果该IP的device_owner为neutron:VIP_PORT，则支持VPC内二三层通信、VPC之间对等连接访问，以及弹性公网IP、VPN、云专线等Internet接入。
+func (c *EcsClient) AssociateServerVirtualIp(request *model.AssociateServerVirtualIpRequest) (*model.AssociateServerVirtualIpResponse, error) {
+	requestDef := GenReqDefForAssociateServerVirtualIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateServerVirtualIpResponse), nil
+	}
+}
+
 //把磁盘挂载到弹性云服务器上。
 func (c *EcsClient) AttachServerVolume(request *model.AttachServerVolumeRequest) (*model.AttachServerVolumeResponse, error) {
 	requestDef := GenReqDefForAttachServerVolume()
@@ -49,6 +60,17 @@ func (c *EcsClient) BatchAddServerNics(request *model.BatchAddServerNicsRequest)
 		return nil, err
 	} else {
 		return resp.(*model.BatchAddServerNicsResponse), nil
+	}
+}
+
+//将指定的共享磁盘一次性挂载到多个弹性云服务器，实现批量挂载。
+func (c *EcsClient) BatchAttachSharableVolumes(request *model.BatchAttachSharableVolumesRequest) (*model.BatchAttachSharableVolumesResponse, error) {
+	requestDef := GenReqDefForBatchAttachSharableVolumes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchAttachSharableVolumesResponse), nil
 	}
 }
 
@@ -96,6 +118,17 @@ func (c *EcsClient) BatchRebootServers(request *model.BatchRebootServersRequest)
 	}
 }
 
+//批量重置弹性云服务器管理帐号（root用户或Administrator用户）的密码。
+func (c *EcsClient) BatchResetServersPassword(request *model.BatchResetServersPasswordRequest) (*model.BatchResetServersPasswordResponse, error) {
+	requestDef := GenReqDefForBatchResetServersPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchResetServersPasswordResponse), nil
+	}
+}
+
 //根据给定的云服务器ID列表，批量启动云服务器，一次最多可以启动1000台。
 func (c *EcsClient) BatchStartServers(request *model.BatchStartServersRequest) (*model.BatchStartServersResponse, error) {
 	requestDef := GenReqDefForBatchStartServers()
@@ -118,6 +151,17 @@ func (c *EcsClient) BatchStopServers(request *model.BatchStopServersRequest) (*m
 	}
 }
 
+//批量修改弹性云服务器信息。 当前仅支持批量修改云服务器名称，一次最多可以修改1000台。
+func (c *EcsClient) BatchUpdateServersName(request *model.BatchUpdateServersNameRequest) (*model.BatchUpdateServersNameResponse, error) {
+	requestDef := GenReqDefForBatchUpdateServersName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateServersNameResponse), nil
+	}
+}
+
 //切换弹性云服务器操作系统。支持弹性云服务器数据盘不变的情况下，使用新镜像重装系统盘。  调用该接口后，系统将卸载系统盘，然后使用新镜像重新创建系统盘，并挂载至弹性云服务器，实现切换操作系统功能。
 func (c *EcsClient) ChangeServerOsWithCloudInit(request *model.ChangeServerOsWithCloudInitRequest) (*model.ChangeServerOsWithCloudInitResponse, error) {
 	requestDef := GenReqDefForChangeServerOsWithCloudInit()
@@ -126,6 +170,17 @@ func (c *EcsClient) ChangeServerOsWithCloudInit(request *model.ChangeServerOsWit
 		return nil, err
 	} else {
 		return resp.(*model.ChangeServerOsWithCloudInitResponse), nil
+	}
+}
+
+//切换弹性云服务器操作系统。  该接口支持未安装Cloud-init或Cloudbase-init的镜像使用。
+func (c *EcsClient) ChangeServerOsWithoutCloudInit(request *model.ChangeServerOsWithoutCloudInitRequest) (*model.ChangeServerOsWithoutCloudInitResponse, error) {
+	requestDef := GenReqDefForChangeServerOsWithoutCloudInit()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeServerOsWithoutCloudInitResponse), nil
 	}
 }
 
@@ -195,6 +250,17 @@ func (c *EcsClient) DeleteServerMetadata(request *model.DeleteServerMetadataRequ
 	}
 }
 
+//清除Windows云服务器初始安装时系统生成的密码记录。清除密码后，不影响云服务器密码登录功能，但不能再使用获取密码功能来查询该云服务器密码。
+func (c *EcsClient) DeleteServerPassword(request *model.DeleteServerPasswordRequest) (*model.DeleteServerPasswordResponse, error) {
+	requestDef := GenReqDefForDeleteServerPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteServerPasswordResponse), nil
+	}
+}
+
 //根据指定的云服务器ID列表，删除云服务器。  系统支持删除单台云服务器和批量删除多台云服务器操作，批量删除云服务器时，一次最多可以删除1000台。
 func (c *EcsClient) DeleteServers(request *model.DeleteServersRequest) (*model.DeleteServersResponse, error) {
 	requestDef := GenReqDefForDeleteServers()
@@ -214,6 +280,17 @@ func (c *EcsClient) DetachServerVolume(request *model.DetachServerVolumeRequest)
 		return nil, err
 	} else {
 		return resp.(*model.DetachServerVolumeResponse), nil
+	}
+}
+
+//虚拟IP地址用于为网卡提供第二个IP地址，同时支持与多个弹性云服务器的网卡绑定，从而实现多个弹性云服务器之间的高可用性。  该接口用于解绑定弹性云服务器网卡的虚拟IP地址。解绑后，网卡不会被删除。
+func (c *EcsClient) DisassociateServerVirtualIp(request *model.DisassociateServerVirtualIpRequest) (*model.DisassociateServerVirtualIpResponse, error) {
+	requestDef := GenReqDefForDisassociateServerVirtualIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisassociateServerVirtualIpResponse), nil
 	}
 }
 
@@ -272,6 +349,17 @@ func (c *EcsClient) ListServerInterfaces(request *model.ListServerInterfacesRequ
 	}
 }
 
+//项目（Project）用于将OpenStack的资源（计算资源、存储资源和网络资源）进行分组和隔离。项目可以是一个部门或者一个项目组。一个帐户中可以创建多个项目。  该接口用于查询用户在指定项目所使用的全部标签。
+func (c *EcsClient) ListServerTags(request *model.ListServerTagsRequest) (*model.ListServerTagsResponse, error) {
+	requestDef := GenReqDefForListServerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListServerTagsResponse), nil
+	}
+}
+
 //根据用户请求条件从数据库筛选、查询所有的弹性云服务器，并关联相关表获取到弹性云服务器的详细信息。  该接口支持查询弹性云服务器计费方式，以及是否被冻结。
 func (c *EcsClient) ListServersDetails(request *model.ListServersDetailsRequest) (*model.ListServersDetailsResponse, error) {
 	requestDef := GenReqDefForListServersDetails()
@@ -280,6 +368,17 @@ func (c *EcsClient) ListServersDetails(request *model.ListServersDetailsRequest)
 		return nil, err
 	} else {
 		return resp.(*model.ListServersDetailsResponse), nil
+	}
+}
+
+//- 将部署在专属主机上的弹性云服务器迁移至其他专属主机。 - 将部署在专属主机上的弹性云服务器迁移至公共资源池，即不再部署在专属主机上。 - 将公共资源池的弹性云服务器迁移至专属主机上，成为专属主机上部署的弹性云服务器。
+func (c *EcsClient) MigrateServer(request *model.MigrateServerRequest) (*model.MigrateServerResponse, error) {
+	requestDef := GenReqDefForMigrateServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MigrateServerResponse), nil
 	}
 }
 
@@ -415,6 +514,17 @@ func (c *EcsClient) NovaShowServer(request *model.NovaShowServerRequest) (*model
 	}
 }
 
+//配置、删除云服务器自动恢复动作。
+func (c *EcsClient) RegisterServerAutoRecovery(request *model.RegisterServerAutoRecoveryRequest) (*model.RegisterServerAutoRecoveryResponse, error) {
+	requestDef := GenReqDefForRegisterServerAutoRecovery()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RegisterServerAutoRecoveryResponse), nil
+	}
+}
+
 //重装弹性云服务器的操作系统。支持弹性云服务器数据盘不变的情况下，使用原镜像重装系统盘。  调用该接口后，系统将卸载系统盘，然后使用原镜像重新创建系统盘，并挂载至弹性云服务器，实现重装操作系统功能。
 func (c *EcsClient) ReinstallServerWithCloudInit(request *model.ReinstallServerWithCloudInitRequest) (*model.ReinstallServerWithCloudInitResponse, error) {
 	requestDef := GenReqDefForReinstallServerWithCloudInit()
@@ -423,6 +533,17 @@ func (c *EcsClient) ReinstallServerWithCloudInit(request *model.ReinstallServerW
 		return nil, err
 	} else {
 		return resp.(*model.ReinstallServerWithCloudInitResponse), nil
+	}
+}
+
+//重装弹性云服务器的操作系统。  该接口支持未安装Cloud-init或Cloudbase-init的镜像。
+func (c *EcsClient) ReinstallServerWithoutCloudInit(request *model.ReinstallServerWithoutCloudInitRequest) (*model.ReinstallServerWithoutCloudInitResponse, error) {
+	requestDef := GenReqDefForReinstallServerWithoutCloudInit()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ReinstallServerWithoutCloudInitResponse), nil
 	}
 }
 
@@ -481,6 +602,28 @@ func (c *EcsClient) ShowServer(request *model.ShowServerRequest) (*model.ShowSer
 	}
 }
 
+//查询云服务器是否配置了自动恢复动作。
+func (c *EcsClient) ShowServerAutoRecovery(request *model.ShowServerAutoRecoveryRequest) (*model.ShowServerAutoRecoveryResponse, error) {
+	requestDef := GenReqDefForShowServerAutoRecovery()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowServerAutoRecoveryResponse), nil
+	}
+}
+
+//查询弹性云服务器挂载的单个磁盘信息。
+func (c *EcsClient) ShowServerBlockDevice(request *model.ShowServerBlockDeviceRequest) (*model.ShowServerBlockDeviceResponse, error) {
+	requestDef := GenReqDefForShowServerBlockDevice()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowServerBlockDeviceResponse), nil
+	}
+}
+
 //查询弹性云服务器组详情。  与原生的创建云服务器组接口不同之处在于该接口支持企业项目细粒度权限的校验。
 func (c *EcsClient) ShowServerGroup(request *model.ShowServerGroupRequest) (*model.ShowServerGroupResponse, error) {
 	requestDef := GenReqDefForShowServerGroup()
@@ -500,6 +643,17 @@ func (c *EcsClient) ShowServerLimits(request *model.ShowServerLimitsRequest) (*m
 		return nil, err
 	} else {
 		return resp.(*model.ShowServerLimitsResponse), nil
+	}
+}
+
+//当通过支持Cloudbase-init功能的镜像创建Windows云服务器时，获取云服务器初始安装时系统生成的管理员帐户（Administrator帐户或Cloudbase-init设置的帐户）随机密码。
+func (c *EcsClient) ShowServerPassword(request *model.ShowServerPasswordRequest) (*model.ShowServerPasswordResponse, error) {
+	requestDef := GenReqDefForShowServerPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowServerPasswordResponse), nil
 	}
 }
 

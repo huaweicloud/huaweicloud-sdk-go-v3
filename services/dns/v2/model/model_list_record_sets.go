@@ -48,6 +48,9 @@ type ListRecordSets struct {
 	ProjectId *string `json:"project_id,omitempty"`
 
 	Links *PageLink `json:"links,omitempty"`
+	// 资源标签。
+
+	Tags *[]Tag `json:"tags,omitempty"`
 }
 
 func (o ListRecordSets) String() string {

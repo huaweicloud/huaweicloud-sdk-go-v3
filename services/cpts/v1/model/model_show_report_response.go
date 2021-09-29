@@ -17,10 +17,9 @@ type ShowReportResponse struct {
 	// extend
 
 	Extend *string `json:"extend,omitempty"`
-	// result
 
-	Result         *interface{} `json:"result,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Result         *ReportInfo `json:"result,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o ShowReportResponse) String() string {

@@ -70,6 +70,10 @@ func (client *DefaultHttpClient) SyncInvokeHttp(request *request.DefaultHttpRequ
 		return nil, err
 	}
 
+	if client.httpHandler != nil && client.httpHandler.RequestHandlers != nil && req != nil {
+		client.httpHandler.RequestHandlers(*req)
+	}
+
 	var resp *http.Response
 	tried := 0
 	for {
@@ -81,13 +85,8 @@ func (client *DefaultHttpClient) SyncInvokeHttp(request *request.DefaultHttpRequ
 		}
 	}
 
-	if client.httpHandler != nil {
-		if client.httpHandler.RequestHandlers != nil && req != nil {
-			client.httpHandler.RequestHandlers(*req)
-		}
-		if client.httpHandler.ResponseHandlers != nil && resp != nil {
-			client.httpHandler.ResponseHandlers(*resp)
-		}
+	if client.httpHandler != nil && client.httpHandler.ResponseHandlers != nil && resp != nil {
+		client.httpHandler.ResponseHandlers(*resp)
 	}
 
 	if err != nil {

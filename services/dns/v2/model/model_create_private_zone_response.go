@@ -51,7 +51,7 @@ type CreatePrivateZoneResponse struct {
 	Links *PageLink `json:"links,omitempty"`
 	// 主从模式中，从DNS服务器用以获取DNS信息。
 
-	Masters *string `json:"masters,omitempty"`
+	Masters *[]string `json:"masters,omitempty"`
 
 	Router         *RouterWithStatus `json:"router,omitempty"`
 	HttpStatusCode int               `json:"-"`
