@@ -11,7 +11,7 @@ import (
 
 // This is a auto create Body Object
 type CreateUsersInfo struct {
-	// DDM实例帐号名称，命名要求如下。  - 长度为6-32个字符。 - 必须以字母开头。 - 可以包含字母，数字、下划线，不能包含其它特殊字符。
+	// DDM实例帐号名称，命名要求如下。  - 长度为1-32个字符。 - 必须以字母开头。 - 可以包含字母，数字、下划线，不能包含其它特殊字符。
 
 	Name string `json:"name"`
 	// DDM实例帐号密码。

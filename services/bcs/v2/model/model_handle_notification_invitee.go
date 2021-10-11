@@ -10,7 +10,7 @@ type HandleNotificationInvitee struct {
 	// 被邀请方服务实例id
 
 	InviteeBcsId string `json:"invitee_bcs_id"`
-	// 被邀请方服务实例名称，同意联盟邀请时比填
+	// 被邀请方服务实例名称，同意联盟邀请时必填
 
 	InviteeBcsName string `json:"invitee_bcs_name"`
 	// 被邀请方project id

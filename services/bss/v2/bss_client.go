@@ -580,17 +580,6 @@ func (c *BssClient) ListServiceTypes(request *model.ListServiceTypesRequest) (*m
 	}
 }
 
-//功能描述：客户在购买硬件产品时，可以在客户自建平台上查询硬件产品的库存
-func (c *BssClient) ListSkuInventories(request *model.ListSkuInventoriesRequest) (*model.ListSkuInventoriesResponse, error) {
-	requestDef := GenReqDefForListSkuInventories()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListSkuInventoriesResponse), nil
-	}
-}
-
 //功能描述：查询客户消费记录
 func (c *BssClient) ListSubCustomerBillDetail(request *model.ListSubCustomerBillDetailRequest) (*model.ListSubCustomerBillDetailResponse, error) {
 	requestDef := GenReqDefForListSubCustomerBillDetail()

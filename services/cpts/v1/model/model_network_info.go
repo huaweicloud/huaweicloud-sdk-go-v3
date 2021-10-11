@@ -9,7 +9,7 @@ import (
 type NetworkInfo struct {
 	// network_type
 
-	NetworkType *string `json:"network_type,omitempty"`
+	NetworkType string `json:"network_type"`
 }
 
 func (o NetworkInfo) String() string {

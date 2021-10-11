@@ -33,7 +33,7 @@ type BootstrapScriptResp struct {
 	BeforeComponentStart *bool `json:"before_component_start,omitempty"`
 	// 单个引导操作脚本的执行时间。
 
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *int64 `json:"start_time,omitempty"`
 	// 单个引导操作脚本的运行状态。 - PENDING - IN_PROGRESS - SUCCESS - FAILURE
 
 	State *string `json:"state,omitempty"`

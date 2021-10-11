@@ -16,7 +16,7 @@ type ShowDetailsOfDomainNameCertificateV2Response struct {
 	San *[]string `json:"san,omitempty"`
 	// 证书版本
 
-	Version *string `json:"version,omitempty"`
+	Version *int32 `json:"version,omitempty"`
 	// 公司、组织
 
 	Organization *[]string `json:"organization,omitempty"`

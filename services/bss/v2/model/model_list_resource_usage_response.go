@@ -26,7 +26,7 @@ type ListResourceUsageResponse struct {
 	// 总条数。
 
 	TotalCount *int32 `json:"total_count,omitempty"`
-	// 使用量明细（5分钟统计值）。
+	// 使用量明细（5分钟统计值）。具体请参见表3。
 
 	UsageInfoList  *[]StatUsageInfo `json:"usage_info_list,omitempty"`
 	HttpStatusCode int              `json:"-"`

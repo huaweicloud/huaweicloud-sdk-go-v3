@@ -1,0 +1,23 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// 修改设备设备配置结构体。
+type UpdateDesireds struct {
+	// 设备配置，内容由产品的$config服务定义。
+
+	Config *interface{} `json:"config,omitempty"`
+}
+
+func (o UpdateDesireds) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateDesireds struct{}"
+	}
+
+	return strings.Join([]string{"UpdateDesireds", string(data)}, " ")
+}

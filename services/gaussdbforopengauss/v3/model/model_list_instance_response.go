@@ -81,6 +81,9 @@ type ListInstanceResponse struct {
 	// 企业项目标签ID。非企业项目账号的实例，企业项目默认0。
 
 	EnterpriseProjectId string `json:"enterprise_project_id"`
+	// basic为基础版 ，enterprise为企业版。
+
+	InstanceMode string `json:"instance_mode"`
 	// 磁盘加密密钥ID。
 
 	DiskEncryptionId string `json:"disk_encryption_id"`

@@ -57,7 +57,7 @@ type ReqParam struct {
 	JsonSchema *string `json:"json_schema,omitempty"`
 	// 是否透传 - 1：是 - 2：否
 
-	PassThrough *ReqParamPassThrough `json:"pass_through,omitempty"`
+	PassThrough *int32 `json:"pass_through,omitempty"`
 	// 参数编号
 
 	Id *string `json:"id,omitempty"`
@@ -139,44 +139,6 @@ func (c ReqParamLocation) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ReqParamLocation) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type ReqParamPassThrough struct {
-	value string
-}
-
-type ReqParamPassThroughEnum struct {
-	E_1 ReqParamPassThrough
-	E_2 ReqParamPassThrough
-}
-
-func GetReqParamPassThroughEnum() ReqParamPassThroughEnum {
-	return ReqParamPassThroughEnum{
-		E_1: ReqParamPassThrough{
-			value: "1",
-		},
-		E_2: ReqParamPassThrough{
-			value: "2",
-		},
-	}
-}
-
-func (c ReqParamPassThrough) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
-}
-
-func (c *ReqParamPassThrough) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

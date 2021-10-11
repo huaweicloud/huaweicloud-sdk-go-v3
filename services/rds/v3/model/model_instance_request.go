@@ -74,6 +74,14 @@ type InstanceRequest struct {
 	// 标签列表。单个实例总标签数上限10个。
 
 	Tags *[]TagWithKeyValue `json:"tags,omitempty"`
+
+	UnchangeableParam *UnchangeableParam `json:"unchangeable_param,omitempty"`
+	// 是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
+
+	DryRun *bool `json:"dry_run,omitempty"`
+	// 批量创建实例的数量，取值范围为1~50。
+
+	Count *int32 `json:"count,omitempty"`
 }
 
 func (o InstanceRequest) String() string {

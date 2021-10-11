@@ -52,7 +52,18 @@ func (c *BcsClient) BatchInviteMembersToChannel(request *model.BatchInviteMember
 	}
 }
 
-//创建BCS服务实例
+//该接口用于BCS组织退出某通道。
+func (c *BcsClient) BatchRemoveOrgsFromChannel(request *model.BatchRemoveOrgsFromChannelRequest) (*model.BatchRemoveOrgsFromChannelResponse, error) {
+	requestDef := GenReqDefForBatchRemoveOrgsFromChannel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchRemoveOrgsFromChannelResponse), nil
+	}
+}
+
+//创建BCS服务实例,只支持按需创建
 func (c *BcsClient) CreateNewBlockchain(request *model.CreateNewBlockchainRequest) (*model.CreateNewBlockchainResponse, error) {
 	requestDef := GenReqDefForCreateNewBlockchain()
 
@@ -63,7 +74,7 @@ func (c *BcsClient) CreateNewBlockchain(request *model.CreateNewBlockchainReques
 	}
 }
 
-//删除bcs实例
+//删除bcs实例。包周期实例不支持
 func (c *BcsClient) DeleteBlockchain(request *model.DeleteBlockchainRequest) (*model.DeleteBlockchainResponse, error) {
 	requestDef := GenReqDefForDeleteBlockchain()
 
@@ -107,7 +118,7 @@ func (c *BcsClient) HandleNotification(request *model.HandleNotificationRequest)
 	}
 }
 
-//[该接口用于查询BCS服务的监控数据，可以指定相应的指标名称,目前不支持IEF节点](tag:online)[该接口用于查询BCS服务的监控数据，可以指定相应的指标名称](tag:hcs)
+//该接口用于查询BCS服务的监控数据，可以指定相应的指标名称。[目前不支持IEF节点](tag:hasief)
 func (c *BcsClient) ListBcsMetric(request *model.ListBcsMetricRequest) (*model.ListBcsMetricResponse, error) {
 	requestDef := GenReqDefForListBcsMetric()
 
@@ -239,7 +250,7 @@ func (c *BcsClient) ShowBlockchainStatus(request *model.ShowBlockchainStatusRequ
 	}
 }
 
-//修改实例的节点、组织，目前仅支持添加节点，添加组织
+//修改实例的节点、组织，目前仅支持添加、删除节点（IEF模式不支持添加、删除节点），添加、删除组织，共4种类型，每次操作只可以操作一种类型。此接口不支持包周期模式; 注意注册IEF节点时，IEF节点名称长度应该为4-24位的字符
 func (c *BcsClient) UpdateInstance(request *model.UpdateInstanceRequest) (*model.UpdateInstanceResponse, error) {
 	requestDef := GenReqDefForUpdateInstance()
 

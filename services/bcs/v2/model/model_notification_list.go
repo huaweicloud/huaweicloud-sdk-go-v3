@@ -25,13 +25,13 @@ type NotificationList struct {
 	InviteeInfo *InviteeInfo `json:"invitee_info,omitempty"`
 	// 是否删除
 
-	Hide *int32 `json:"hide,omitempty"`
+	Hide *int64 `json:"hide,omitempty"`
 	// 被邀请的组织信息
 
 	InviteeOrgs *[]OrganizationV2 `json:"invitee_orgs,omitempty"`
 	// 阅读状态值
 
-	ReadStatus *int32 `json:"read_status,omitempty"`
+	ReadStatus *int64 `json:"read_status,omitempty"`
 	// 跨版本进行升级
 
 	CrossVersionUpgrade *string `json:"cross_version_upgrade,omitempty"`

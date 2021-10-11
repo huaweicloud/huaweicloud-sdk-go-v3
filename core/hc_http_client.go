@@ -216,8 +216,14 @@ func (hc *HcHttpClient) deserializeResponse(resp *response.DefaultHttpResponse, 
 		v = v.Elem()
 	}
 
+	addStatusCode := func() {
+		field := v.FieldByName("HttpStatusCode")
+		field.Set(reflect.ValueOf(resp.GetStatusCode()))
+	}
+
 	if body, ok := t.FieldByName("Body"); ok && body.Type.Name() == "ReadCloser" {
 		v.FieldByName("Body").Set(reflect.ValueOf(resp.Response.Body))
+		addStatusCode()
 		return nil
 	}
 
@@ -272,10 +278,7 @@ func (hc *HcHttpClient) deserializeResponse(resp *response.DefaultHttpResponse, 
 		}
 	}
 
-	// add HttpStatusCode
-	field := v.FieldByName("HttpStatusCode")
-	field.Set(reflect.ValueOf(resp.GetStatusCode()))
-
+	addStatusCode()
 	return nil
 }
 

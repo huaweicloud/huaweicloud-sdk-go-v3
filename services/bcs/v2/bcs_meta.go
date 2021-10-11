@@ -62,6 +62,30 @@ func GenReqDefForBatchInviteMembersToChannel() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchRemoveOrgsFromChannel() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/blockchains/{blockchain_id}/{channel_id}/orgs/quit").
+		WithResponse(new(model.BatchRemoveOrgsFromChannelResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BlockchainId").
+		WithJsonTag("blockchain_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ChannelId").
+		WithJsonTag("channel_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateNewBlockchain() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

@@ -10,7 +10,7 @@ import (
 type UpdateCaseRequestBody struct {
 	// contents
 
-	Contents *[]UpdateCaseRequestBodyContents `json:"contents,omitempty"`
+	Contents *[]CaseInfo `json:"contents,omitempty"`
 	// for_loop_params
 
 	ForLoopParams *[]interface{} `json:"for_loop_params,omitempty"`

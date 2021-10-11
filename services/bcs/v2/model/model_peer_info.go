@@ -12,7 +12,7 @@ type PeerInfo struct {
 	Name *string `json:"name,omitempty"`
 	// 节点数量
 
-	NodeCnt *int32 `json:"node_cnt,omitempty"`
+	NodeCnt *int64 `json:"node_cnt,omitempty"`
 	// 节点状态，分为创建中（IsCreating），升级中（IsUpgrading），扩缩容中（Adding/IsScaling），删除中（Isdeleting），正常（Normal），异常（AbNormal），未知（其余值）
 
 	Status *string `json:"status,omitempty"`

@@ -9,10 +9,10 @@ import (
 type Org struct {
 	// 组织MSP标识
 
-	MspId *string `json:"msp_id,omitempty"`
+	OrgMspId *string `json:"org_msp_id,omitempty"`
 	// 组织域名
 
-	Domain *string `json:"domain,omitempty"`
+	OrgDomain *string `json:"org_domain,omitempty"`
 	// key:节点名称，value：节点详细信息
 
 	Peers map[string]Node `json:"peers,omitempty"`

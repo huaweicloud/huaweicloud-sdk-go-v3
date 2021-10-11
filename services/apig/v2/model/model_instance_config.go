@@ -1,0 +1,70 @@
+package model
+
+import (
+	"encoding/json"
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"strings"
+)
+
+type InstanceConfig struct {
+	// 配额编号
+
+	ConfigId *string `json:"config_id,omitempty"`
+	// 配额名称
+
+	ConfigName *InstanceConfigConfigName `json:"config_name,omitempty"`
+	// 配额值  当前实例所在租户该配额对应的数量
+
+	ConfigValue *string `json:"config_value,omitempty"`
+	// 配额创建时间
+
+	ConfigTime *sdktime.SdkTime `json:"config_time,omitempty"`
+	// 配额描述 - INSTANCE_NUM_LIMIT：租户可以创建的实例个数限制
+
+	Remark *string `json:"remark,omitempty"`
+}
+
+func (o InstanceConfig) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "InstanceConfig struct{}"
+	}
+
+	return strings.Join([]string{"InstanceConfig", string(data)}, " ")
+}
+
+type InstanceConfigConfigName struct {
+	value string
+}
+
+type InstanceConfigConfigNameEnum struct {
+	INSTANCE_NUM_LIMIT InstanceConfigConfigName
+}
+
+func GetInstanceConfigConfigNameEnum() InstanceConfigConfigNameEnum {
+	return InstanceConfigConfigNameEnum{
+		INSTANCE_NUM_LIMIT: InstanceConfigConfigName{
+			value: "INSTANCE_NUM_LIMIT",
+		},
+	}
+}
+
+func (c InstanceConfigConfigName) MarshalJSON() ([]byte, error) {
+	return json.Marshal(c.value)
+}
+
+func (c *InstanceConfigConfigName) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}

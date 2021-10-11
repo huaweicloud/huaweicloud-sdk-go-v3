@@ -40,6 +40,9 @@ type Cluster struct {
 	// VPC名称。
 
 	Vpc *string `json:"vpc,omitempty"`
+	// VPC ID。
+
+	VpcId *string `json:"vpcId,omitempty"`
 	// 集群购买时长。
 
 	Duration *string `json:"duration,omitempty"`

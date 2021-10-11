@@ -1,0 +1,29 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// 添加节点和添加组织，添加组织是需要提供pvc_name
+type UpdateInstanceRequestBody struct {
+	// 添加节点的组织列表
+
+	NodeOrgs []NodeOrgs `json:"node_orgs"`
+	// ief添加组织时，ief节点信息。绑定模式的IEF服务，新增组织时，该字段必填
+
+	Publicips *[]IefNode `json:"publicips,omitempty"`
+	// 是否是删除组织
+
+	IsDeleteOrg *bool `json:"is_delete_org,omitempty"`
+}
+
+func (o UpdateInstanceRequestBody) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "UpdateInstanceRequestBody struct{}"
+	}
+
+	return strings.Join([]string{"UpdateInstanceRequestBody", string(data)}, " ")
+}

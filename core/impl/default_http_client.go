@@ -27,6 +27,7 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/response"
 	"net/http"
 	"net/url"
+	"time"
 )
 
 type DefaultHttpClient struct {
@@ -74,6 +75,8 @@ func (client *DefaultHttpClient) SyncInvokeHttp(request *request.DefaultHttpRequ
 		client.httpHandler.RequestHandlers(*req)
 	}
 
+	startTime := time.Now()
+
 	var resp *http.Response
 	tried := 0
 	for {
@@ -85,12 +88,34 @@ func (client *DefaultHttpClient) SyncInvokeHttp(request *request.DefaultHttpRequ
 		}
 	}
 
+	endTime := time.Now()
+
 	if client.httpHandler != nil && client.httpHandler.ResponseHandlers != nil && resp != nil {
 		client.httpHandler.ResponseHandlers(*resp)
+	}
+
+	if client.httpHandler != nil && client.httpHandler.MonitorHandlers != nil {
+		metric := &httphandler.MonitorMetric{
+			Host:      req.URL.Host,
+			Method:    req.Method,
+			Path:      req.URL.Path,
+			Raw:       req.URL.RawQuery,
+			UserAgent: req.UserAgent(),
+			Latency:   endTime.Sub(startTime),
+		}
+
+		if resp != nil {
+			metric.RequestId = resp.Header.Get("X-Request-Id")
+			metric.StatusCode = resp.StatusCode
+			metric.ContentLength = resp.ContentLength
+		}
+
+		client.httpHandler.MonitorHandlers(metric)
 	}
 
 	if err != nil {
 		return nil, err
 	}
+
 	return response.NewDefaultHttpResponse(resp), nil
 }

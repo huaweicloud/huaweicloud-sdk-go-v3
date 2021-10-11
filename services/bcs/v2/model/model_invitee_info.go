@@ -13,7 +13,7 @@ type InviteeInfo struct {
 	InviteeId *string `json:"invitee_id,omitempty"`
 	// 被邀请租户名称
 
-	InviteeName *int32 `json:"invitee_name,omitempty"`
+	InviteeName *int64 `json:"invitee_name,omitempty"`
 	// 被邀请的服务名称
 
 	InviteeBcsName *string `json:"invitee_bcs_name,omitempty"`

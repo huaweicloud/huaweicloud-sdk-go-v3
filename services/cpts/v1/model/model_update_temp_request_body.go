@@ -31,7 +31,7 @@ type UpdateTempRequestBody struct {
 	EnablePre *bool `json:"enable_pre,omitempty"`
 	// contents
 
-	Contents *[]UpdateTempRequestBodyContents `json:"contents,omitempty"`
+	Contents *[]TempContentInfo `json:"contents,omitempty"`
 }
 
 func (o UpdateTempRequestBody) String() string {

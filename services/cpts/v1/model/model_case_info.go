@@ -18,7 +18,7 @@ type CaseInfo struct {
 	CaseType *int32 `json:"case_type,omitempty"`
 	// contents
 
-	Contents *[]Contents `json:"contents,omitempty"`
+	Content *[]Contents `json:"content,omitempty"`
 	// for_loop_params
 
 	ForLoopParams *[]interface{} `json:"for_loop_params,omitempty"`

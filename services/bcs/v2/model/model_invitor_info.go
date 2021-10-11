@@ -43,7 +43,7 @@ type InvitorInfo struct {
 	OrderFadeEnabled *bool `json:"order_fade_enabled,omitempty"`
 	// order老化阈值
 
-	OrderFadeCache *int32 `json:"order_fade_cache,omitempty"`
+	OrderFadeCache *int64 `json:"order_fade_cache,omitempty"`
 }
 
 func (o InvitorInfo) String() string {

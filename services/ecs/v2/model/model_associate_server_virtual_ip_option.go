@@ -16,7 +16,7 @@ type AssociateServerVirtualIpOption struct {
 	IpAddress string `json:"ip_address"`
 	// 私有IP的allowed_address_pairs属性是否添加网卡的IP/Mac对。
 
-	ReverseBinding bool `json:"reverse_binding"`
+	ReverseBinding *bool `json:"reverse_binding,omitempty"`
 }
 
 func (o AssociateServerVirtualIpOption) String() string {

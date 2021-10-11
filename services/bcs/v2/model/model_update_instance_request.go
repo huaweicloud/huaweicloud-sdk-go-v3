@@ -12,7 +12,7 @@ type UpdateInstanceRequest struct {
 
 	BlockchainId string `json:"blockchain_id"`
 
-	Body *OpIdRes `json:"body,omitempty"`
+	Body *UpdateInstanceRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateInstanceRequest) String() string {

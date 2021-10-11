@@ -19,6 +19,28 @@ func ApigClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//实例更新或绑定EIP
+func (c *ApigClient) AddEipV2(request *model.AddEipV2Request) (*model.AddEipV2Response, error) {
+	requestDef := GenReqDefForAddEipV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddEipV2Response), nil
+	}
+}
+
+//实例开启公网出口
+func (c *ApigClient) AddEngressEipV2(request *model.AddEngressEipV2Request) (*model.AddEngressEipV2Response, error) {
+	requestDef := GenReqDefForAddEngressEipV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddEngressEipV2Response), nil
+	}
+}
+
 //如果创建API时，“定义API请求”使用HTTPS请求协议，那么在独立域名中需要添加SSL证书。 本章节主要介绍为特定域名绑定证书。
 func (c *ApigClient) AssociateCertificateV2(request *model.AssociateCertificateV2Request) (*model.AssociateCertificateV2Response, error) {
 	requestDef := GenReqDefForAssociateCertificateV2()
@@ -52,6 +74,17 @@ func (c *ApigClient) AssociateSignatureKeyV2(request *model.AssociateSignatureKe
 	}
 }
 
+//创建自定义认证
+func (c *ApigClient) CreateCustomAuthorizerV2(request *model.CreateCustomAuthorizerV2Request) (*model.CreateCustomAuthorizerV2Response, error) {
+	requestDef := GenReqDefForCreateCustomAuthorizerV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCustomAuthorizerV2Response), nil
+	}
+}
+
 //在实际的生产中，API提供者可能有多个环境，如开发环境、测试环境、生产环境等，用户可以自由将API发布到某个环境，供调用者调用。  对于不同的环境，API的版本、请求地址甚至于包括请求消息等均有可能不同。如：某个API，v1.0的版本为稳定版本，发布到了生产环境供生产使用，同时，该API正处于迭代中，v1.1的版本是开发人员交付测试人员进行测试的版本，发布在测试环境上，而v1.2的版本目前开发团队正处于开发过程中，可以发布到开发环境进行自测等。  为此，API网关提供多环境管理功能，使租户能够最大化的模拟实际场景，低成本的接入API网关。
 func (c *ApigClient) CreateEnvironmentV2(request *model.CreateEnvironmentV2Request) (*model.CreateEnvironmentV2Response, error) {
 	requestDef := GenReqDefForCreateEnvironmentV2()
@@ -71,6 +104,39 @@ func (c *ApigClient) CreateEnvironmentVariableV2(request *model.CreateEnvironmen
 		return nil, err
 	} else {
 		return resp.(*model.CreateEnvironmentVariableV2Response), nil
+	}
+}
+
+//为实例配置需要的特性。  支持配置的特性列表及特性配置示例如下：  | 特性名称 | 特性描述 | 特性配置示例 | 特性配置参数 |  |  |  | --------| :------- | :-------| :-------| :-------| :-------| :------- |  |  |  | 参数名称 | 参数描述 | 参数默认值 | 参数范围 | | lts | 是否支持shubao访问日志上报功能。|{\"name\":\"lts\",\"enable\":true,\"config\": \"{\\\\\"group_id\\\\\": \\\"\\,\\\\\"topic_id\\\\\":\\\\\"\\\\\",\\\\\"log_group\\\\\":\\\\\"\\\\\",\\\\\"log_stream\\\\\":\\\\\"\\\\\"}\"} | group_id | 日志组ID | | | |  |  |  | topic_id | 日志流ID | | | |  |  |  | log_group | 日志组名称 | | | |  |  |  | log_stream | 日志流名称 | | | | ratelimit | 是否支持自定义流控值。|{\"name\":\"ratelimit\",\"enable\":true,\"config\": \"{\\\\\"api_limits\\\\\": 500}\"} | api_limits | API全局默认流控值。注意：如果配置过小会导致业务持续被流控，请根据业务谨慎修改。 | 200 次/秒 | 1-1000000 次/秒 | | request_body_size | 是否支持指定最大请求Body大小。|{\"name\":\"request_body_size\",\"enable\":true,\"config\": \"104857600\"} | request_body_size | 请求中允许携带的Body大小上限。 | 12 M | 1-9536 M | | backend_timeout | 是否支持配置后端API最大超时时间。|{\"name\":\"backend_timeout\",\"enable\":true,\"config\": \"{\\\"max_timeout\\\": 500}\"} | max_timeout | API网关到后端服务的超时时间上限。 | 60000 ms | 1-600000 ms | | app_token | 是否开启app_token认证方式。|{\"name\":\"app_token\",\"enable\":true,\"config\": \"{\\\\\"enable\\\\\": \\\\\"on\\\\\", \\\\\"app_token_expire_time\\\\\": 3600, \\\\\"app_token_uri\\\\\": \\\\\"/v1/apigw/oauth2/token\\\\\", \\\\\"refresh_token_expire_time\\\\\": 7200}\"} | enable | 是否开启 | off | on/off | |  |  |  | app_token_expire_time | access token的有效时间 | 3600 s | 1-72000 s | |  |  |  | refresh_token_expire_time | refresh token的有效时间 | 7200 s | 1-72000 s | |  |  |  | app_token_uri | 获取token的uri | /v1/apigw/oauth2/token |  | |  |  |  | app_token_key | token的加密key |  |  | | app_api_key | 是否开启app_api_key认证方式。|{\"name\":\"app_api_key\",\"enable\":true,\"config\": \"on\"} |  |  | off | on/off | | app_basic | 是否开启app_basic认证方式。|{\"name\":\"app_basic\",\"enable\":true,\"config\": \"on\"} |  |  | off | on/off | | app_secret | 是否支持app_secret认证方式。|{\"name\":\"app_secret\",\"enable\":true,\"config\": \"on\"} |  |  | off | on/off | | app_jwt | 是否支持app_jwt认证方式。|{\"name\":\"app_jwt\",\"enable\":true,\"config\": \"{\\\\\"enable\\\\\": \\\\\"on\\\\\", \\\\\"auth_header\\\\\": \\\\\"Authorization\\\\\"}\"}| enable | 是否开启app_jwt认证方式。 | off | on/off | |  |  |  | auth_header | app_jwt认证头 | Authorization |  | | public_key | 是否支持public_key类型的后端签名。|{\"name\":\"public_key\",\"enable\":true,\"config\": \"{\\\\\"enable\\\\\": \\\\\"on\\\\\", \\\\\"public_key_uri_prefix\\\\\": \\\\\"/apigw/authadv/v2/public-key/\\\\\"}\"}| enable | 是否开启app_jwt认证方式。 | off | on/off | |  |  |  | public_key_uri_prefix | 获取public key的uri前缀 | /apigw/authadv/v2/public-key/ |  | | backend_token_allow | 是否支持普通租户透传token到后端。|{\"name\":\"backend_token_allow\",\"enable\":true,\"config\": \"{\\\\\"backend_token_allow_users\\\\\": [\\\\\"paas_apig_wwx548366_01\\\\\"]}\"} | backend_token_allow_users | 透传token到后端普通租户白名单，匹配普通租户domain name正则表达式 |  |  | | backend_client_certificate | 是否开启后端双向认证。|{\"name\":\"backend_client_certificate\",\"enable\":true,\"config\": \"{\\\\\"enable\\\\\": \\\\\"on\\\\\",\\\\\"ca\\\\\": \\\\\"\\\\\",\\\\\"content\\\\\": \\\\\"\\\\\",\\\\\"key\\\\\": \\\\\"\\\\\"}\"} | enable | 是否开启 | off | on/off | |  |  |  | ca | 双向认证信任证书 |  |  | |  |  |  | content | 双向认证证书 |  |  | |  |  |  | key | 双向认证信任私钥 |  |  | | ssl_ciphers | 是否支持https加密套件。|{\"name\":\"ssl_ciphers\",\"enable\":true,\"config\": \"config\": \"{\\\\\"ssl_ciphers\\\\\": [\\\\\"ECDHE-ECDSA-AES256-GCM-SHA384\\\\\"]}\"} | ssl_ciphers | 支持的加解密套件。ssl_ciphers数组中只允许出现默认值中的字符串，且数组不能为空。 |  | ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-RSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-GCM-SHA256,ECDHE-RSA-AES128-GCM-SHA256,ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES256-SHA384,ECDHE-ECDSA-AES128-SHA256,ECDHE-RSA-AES128-SHA256 | | real_ip_from_xff | 是否开启使用xff头作为访问控制、流控策略的源ip生效依据。|{\"name\":\"real_ip_from_xff\",\"enable\": true,\"config\": \"{\\\\\"enable\\\\\": \\\\\"on\\\\\",\\\\\"xff_index\\\\\": 1}\"} | enable | 是否开启 | off | on/off | |  |  |  | xff_index | 源ip所在xff头的索引位置（支持负数，-1为最后一位，以此类推） | -1 | int32有效值 |
+func (c *ApigClient) CreateFeatureV2(request *model.CreateFeatureV2Request) (*model.CreateFeatureV2Response, error) {
+	requestDef := GenReqDefForCreateFeatureV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFeatureV2Response), nil
+	}
+}
+
+//新增分组下自定义响应
+func (c *ApigClient) CreateGatewayResponseV2(request *model.CreateGatewayResponseV2Request) (*model.CreateGatewayResponseV2Response, error) {
+	requestDef := GenReqDefForCreateGatewayResponseV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGatewayResponseV2Response), nil
+	}
+}
+
+//创建专享版实例
+func (c *ApigClient) CreateInstanceV2(request *model.CreateInstanceV2Request) (*model.CreateInstanceV2Response, error) {
+	requestDef := GenReqDefForCreateInstanceV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateInstanceV2Response), nil
 	}
 }
 
@@ -107,6 +173,17 @@ func (c *ApigClient) CreateSpecialThrottlingConfigurationV2(request *model.Creat
 	}
 }
 
+//删除自定义认证
+func (c *ApigClient) DeleteCustomAuthorizerV2(request *model.DeleteCustomAuthorizerV2Request) (*model.DeleteCustomAuthorizerV2Response, error) {
+	requestDef := GenReqDefForDeleteCustomAuthorizerV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCustomAuthorizerV2Response), nil
+	}
+}
+
 //删除指定的环境。  该操作将导致此API在指定的环境无法被访问，可能会影响相当一部分应用和用户。请确保已经告知用户，或者确认需要强制下线。  环境上存在已发布的API时，该环境不能被删除。
 func (c *ApigClient) DeleteEnvironmentV2(request *model.DeleteEnvironmentV2Request) (*model.DeleteEnvironmentV2Response, error) {
 	requestDef := GenReqDefForDeleteEnvironmentV2()
@@ -126,6 +203,39 @@ func (c *ApigClient) DeleteEnvironmentVariableV2(request *model.DeleteEnvironmen
 		return nil, err
 	} else {
 		return resp.(*model.DeleteEnvironmentVariableV2Response), nil
+	}
+}
+
+//删除分组指定错误类型的自定义响应配置，还原为使用默认值的配置。
+func (c *ApigClient) DeleteGatewayResponseTypeV2(request *model.DeleteGatewayResponseTypeV2Request) (*model.DeleteGatewayResponseTypeV2Response, error) {
+	requestDef := GenReqDefForDeleteGatewayResponseTypeV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGatewayResponseTypeV2Response), nil
+	}
+}
+
+//删除分组自定义响应
+func (c *ApigClient) DeleteGatewayResponseV2(request *model.DeleteGatewayResponseV2Request) (*model.DeleteGatewayResponseV2Response, error) {
+	requestDef := GenReqDefForDeleteGatewayResponseV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGatewayResponseV2Response), nil
+	}
+}
+
+//删除专享版实例
+func (c *ApigClient) DeleteInstancesV2(request *model.DeleteInstancesV2Request) (*model.DeleteInstancesV2Response, error) {
+	requestDef := GenReqDefForDeleteInstancesV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteInstancesV2Response), nil
 	}
 }
 
@@ -250,6 +360,28 @@ func (c *ApigClient) ListAppQuantitiesV2(request *model.ListAppQuantitiesV2Reque
 	}
 }
 
+//查看可用区信息
+func (c *ApigClient) ListAvailableZonesV2(request *model.ListAvailableZonesV2Request) (*model.ListAvailableZonesV2Response, error) {
+	requestDef := GenReqDefForListAvailableZonesV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAvailableZonesV2Response), nil
+	}
+}
+
+//查询自定义认证列表
+func (c *ApigClient) ListCustomAuthorizersV2(request *model.ListCustomAuthorizersV2Request) (*model.ListCustomAuthorizersV2Response, error) {
+	requestDef := GenReqDefForListCustomAuthorizersV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCustomAuthorizersV2Response), nil
+	}
+}
+
 //查询分组下的所有环境变量的列表。
 func (c *ApigClient) ListEnvironmentVariablesV2(request *model.ListEnvironmentVariablesV2Request) (*model.ListEnvironmentVariablesV2Response, error) {
 	requestDef := GenReqDefForListEnvironmentVariablesV2()
@@ -269,6 +401,83 @@ func (c *ApigClient) ListEnvironmentsV2(request *model.ListEnvironmentsV2Request
 		return nil, err
 	} else {
 		return resp.(*model.ListEnvironmentsV2Response), nil
+	}
+}
+
+//查看实例特性列表。注意：实例不支持以下特性的需要联系技术支持升级实例版本。  当前支持的特性列表如下：  特性名称 | 特性描述 | 特性是否可配置| --------| :------- | :-------| lts | 是否支持shubao访问日志上报功能。| 是 | gateway_responses | 是否支持网关自定义响应。| 否 | ratelimit | 是否支持自定义流控值。| 是 | request_body_size | 是否支持指定最大请求Body大小。| 是 | backend_timeout | 是否支持配置后端API最大超时时间。| 是 | app_token | 是否开启app_token认证方式。| 是 | app_api_key | 是否开启app_api_key认证方式。| 是 | app_basic | 是否开启app_basic认证方式。| 是 | app_secret | 是否支持app_secret认证方式。| 是 | app_jwt | 是否支持app_jwt认证方式。| 是 | public_key | 是否支持public_key类型的后端签名。| 是 | backend_token_allow | 是否支持普通租户透传token到后端。| 是 | sign_basic | 签名秘钥是否支持basic类型。| 否 | multi_auth | API是否支持双重认证方式。| 否 | backend_client_certificate | 是否开启后端双向认证。| 是 | ssl_ciphers | 是否支持https加密套件。 | 是 | route | 是否支持自定义路由。| 否 | cors | 是否支持API使用插件功能。| 否 | real_ip_from_xff | 是否开启使用xff头作为访问控制、流控策略的源ip生效依据。 | 是 |
+func (c *ApigClient) ListFeaturesV2(request *model.ListFeaturesV2Request) (*model.ListFeaturesV2Response, error) {
+	requestDef := GenReqDefForListFeaturesV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFeaturesV2Response), nil
+	}
+}
+
+//查询分组自定义响应列表
+func (c *ApigClient) ListGatewayResponsesV2(request *model.ListGatewayResponsesV2Request) (*model.ListGatewayResponsesV2Response, error) {
+	requestDef := GenReqDefForListGatewayResponsesV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGatewayResponsesV2Response), nil
+	}
+}
+
+//查询租户实例配置列表
+func (c *ApigClient) ListInstanceCofigsV2(request *model.ListInstanceCofigsV2Request) (*model.ListInstanceCofigsV2Response, error) {
+	requestDef := GenReqDefForListInstanceCofigsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceCofigsV2Response), nil
+	}
+}
+
+//查询专享版实例列表
+func (c *ApigClient) ListInstancesV2(request *model.ListInstancesV2Request) (*model.ListInstancesV2Response, error) {
+	requestDef := GenReqDefForListInstancesV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesV2Response), nil
+	}
+}
+
+//根据API的id和最近的一段时间查询API被调用的次数，统计周期为1分钟。查询范围一小时以内，一分钟一个样本，其样本值为一分钟内的累计值。 > 为了安全起见，在服务器上使用curl命令调用接口查询信息后，需要清理历史操作记录，包括但不限于“~/.bash_history”、“/var/log/messages”（如有）。
+func (c *ApigClient) ListLatelyApiStatisticsV2(request *model.ListLatelyApiStatisticsV2Request) (*model.ListLatelyApiStatisticsV2Response, error) {
+	requestDef := GenReqDefForListLatelyApiStatisticsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLatelyApiStatisticsV2Response), nil
+	}
+}
+
+//根据API分组的编号查询该分组下所有API被调用的总次数，统计周期为1分钟。查询范围一小时以内，一分钟一个样本，其样本值为一分钟内的累计值。 > 为了安全起见，在服务器上使用curl命令调用接口查询信息后，需要清理历史操作记录，包括但不限于“~/.bash_history”、“/var/log/messages”（如有）。
+func (c *ApigClient) ListLatelyGroupStatisticsV2(request *model.ListLatelyGroupStatisticsV2Request) (*model.ListLatelyGroupStatisticsV2Response, error) {
+	requestDef := GenReqDefForListLatelyGroupStatisticsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLatelyGroupStatisticsV2Response), nil
+	}
+}
+
+//查询某个实例的租户配置列表，用户可以通过此接口查看各类型资源配置及使用情况。
+func (c *ApigClient) ListProjectCofigsV2(request *model.ListProjectCofigsV2Request) (*model.ListProjectCofigsV2Response, error) {
+	requestDef := GenReqDefForListProjectCofigsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectCofigsV2Response), nil
 	}
 }
 
@@ -316,6 +525,50 @@ func (c *ApigClient) ListSpecialThrottlingConfigurationsV2(request *model.ListSp
 	}
 }
 
+//查询标签列表
+func (c *ApigClient) ListTagsV2(request *model.ListTagsV2Request) (*model.ListTagsV2Response, error) {
+	requestDef := GenReqDefForListTagsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTagsV2Response), nil
+	}
+}
+
+//实例解绑EIP
+func (c *ApigClient) RemoveEipV2(request *model.RemoveEipV2Request) (*model.RemoveEipV2Response, error) {
+	requestDef := GenReqDefForRemoveEipV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveEipV2Response), nil
+	}
+}
+
+//关闭实例公网出口
+func (c *ApigClient) RemoveEngressEipV2(request *model.RemoveEngressEipV2Request) (*model.RemoveEngressEipV2Response, error) {
+	requestDef := GenReqDefForRemoveEngressEipV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveEngressEipV2Response), nil
+	}
+}
+
+//查看自定义认证详情
+func (c *ApigClient) ShowDetailsOfCustomAuthorizersV2(request *model.ShowDetailsOfCustomAuthorizersV2Request) (*model.ShowDetailsOfCustomAuthorizersV2Response, error) {
+	requestDef := GenReqDefForShowDetailsOfCustomAuthorizersV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfCustomAuthorizersV2Response), nil
+	}
+}
+
 //查看域名下绑定的证书详情。
 func (c *ApigClient) ShowDetailsOfDomainNameCertificateV2(request *model.ShowDetailsOfDomainNameCertificateV2Request) (*model.ShowDetailsOfDomainNameCertificateV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfDomainNameCertificateV2()
@@ -338,6 +591,50 @@ func (c *ApigClient) ShowDetailsOfEnvironmentVariableV2(request *model.ShowDetai
 	}
 }
 
+//查看分组下指定错误类型的自定义响应
+func (c *ApigClient) ShowDetailsOfGatewayResponseTypeV2(request *model.ShowDetailsOfGatewayResponseTypeV2Request) (*model.ShowDetailsOfGatewayResponseTypeV2Response, error) {
+	requestDef := GenReqDefForShowDetailsOfGatewayResponseTypeV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfGatewayResponseTypeV2Response), nil
+	}
+}
+
+//查询分组自定义响应详情
+func (c *ApigClient) ShowDetailsOfGatewayResponseV2(request *model.ShowDetailsOfGatewayResponseV2Request) (*model.ShowDetailsOfGatewayResponseV2Response, error) {
+	requestDef := GenReqDefForShowDetailsOfGatewayResponseV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfGatewayResponseV2Response), nil
+	}
+}
+
+//查看专享版实例创建进度
+func (c *ApigClient) ShowDetailsOfInstanceProgressV2(request *model.ShowDetailsOfInstanceProgressV2Request) (*model.ShowDetailsOfInstanceProgressV2Response, error) {
+	requestDef := GenReqDefForShowDetailsOfInstanceProgressV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfInstanceProgressV2Response), nil
+	}
+}
+
+//查看专享版实例详情
+func (c *ApigClient) ShowDetailsOfInstanceV2(request *model.ShowDetailsOfInstanceV2Request) (*model.ShowDetailsOfInstanceV2Response, error) {
+	requestDef := GenReqDefForShowDetailsOfInstanceV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfInstanceV2Response), nil
+	}
+}
+
 //查看指定流控策略的详细信息。
 func (c *ApigClient) ShowDetailsOfRequestThrottlingPolicyV2(request *model.ShowDetailsOfRequestThrottlingPolicyV2Request) (*model.ShowDetailsOfRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfRequestThrottlingPolicyV2()
@@ -346,6 +643,17 @@ func (c *ApigClient) ShowDetailsOfRequestThrottlingPolicyV2(request *model.ShowD
 		return nil, err
 	} else {
 		return resp.(*model.ShowDetailsOfRequestThrottlingPolicyV2Response), nil
+	}
+}
+
+//修改自定义认证
+func (c *ApigClient) UpdateCustomAuthorizerV2(request *model.UpdateCustomAuthorizerV2Request) (*model.UpdateCustomAuthorizerV2Response, error) {
+	requestDef := GenReqDefForUpdateCustomAuthorizerV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCustomAuthorizerV2Response), nil
 	}
 }
 
@@ -360,6 +668,17 @@ func (c *ApigClient) UpdateDomainV2(request *model.UpdateDomainV2Request) (*mode
 	}
 }
 
+//更新实例出公网带宽
+func (c *ApigClient) UpdateEngressEipV2(request *model.UpdateEngressEipV2Request) (*model.UpdateEngressEipV2Response, error) {
+	requestDef := GenReqDefForUpdateEngressEipV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEngressEipV2Response), nil
+	}
+}
+
 //修改指定环境的信息。其中可修改的属性为：name、remark，其它属性不可修改。
 func (c *ApigClient) UpdateEnvironmentV2(request *model.UpdateEnvironmentV2Request) (*model.UpdateEnvironmentV2Response, error) {
 	requestDef := GenReqDefForUpdateEnvironmentV2()
@@ -368,6 +687,39 @@ func (c *ApigClient) UpdateEnvironmentV2(request *model.UpdateEnvironmentV2Reque
 		return nil, err
 	} else {
 		return resp.(*model.UpdateEnvironmentV2Response), nil
+	}
+}
+
+//修改分组下指定错误类型的自定义响应。
+func (c *ApigClient) UpdateGatewayResponseTypeV2(request *model.UpdateGatewayResponseTypeV2Request) (*model.UpdateGatewayResponseTypeV2Response, error) {
+	requestDef := GenReqDefForUpdateGatewayResponseTypeV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGatewayResponseTypeV2Response), nil
+	}
+}
+
+//修改分组自定义响应
+func (c *ApigClient) UpdateGatewayResponseV2(request *model.UpdateGatewayResponseV2Request) (*model.UpdateGatewayResponseV2Response, error) {
+	requestDef := GenReqDefForUpdateGatewayResponseV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGatewayResponseV2Response), nil
+	}
+}
+
+//更新专享版实例
+func (c *ApigClient) UpdateInstanceV2(request *model.UpdateInstanceV2Request) (*model.UpdateInstanceV2Response, error) {
+	requestDef := GenReqDefForUpdateInstanceV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceV2Response), nil
 	}
 }
 
@@ -404,6 +756,72 @@ func (c *ApigClient) UpdateSpecialThrottlingConfigurationV2(request *model.Updat
 	}
 }
 
+//批量删除指定的多个ACL策略。  删除ACL策略时，如果存在ACL策略与API绑定关系，则无法删除。
+func (c *ApigClient) BatchDeleteAclV2(request *model.BatchDeleteAclV2Request) (*model.BatchDeleteAclV2Response, error) {
+	requestDef := GenReqDefForBatchDeleteAclV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteAclV2Response), nil
+	}
+}
+
+//增加一个ACL策略，策略类型通过字段acl_type来确定（permit或者deny），限制的对象的类型可以为IP或者DOMAIN，这里的DOMAIN对应的acl_value的值为租户名称，而非“www.exampleDomain.com\"之类的网络域名。
+func (c *ApigClient) CreateAclStrategyV2(request *model.CreateAclStrategyV2Request) (*model.CreateAclStrategyV2Response, error) {
+	requestDef := GenReqDefForCreateAclStrategyV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAclStrategyV2Response), nil
+	}
+}
+
+//删除指定的ACL策略， 如果存在api与该ACL策略的绑定关系，则无法删除
+func (c *ApigClient) DeleteAclV2(request *model.DeleteAclV2Request) (*model.DeleteAclV2Response, error) {
+	requestDef := GenReqDefForDeleteAclV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAclV2Response), nil
+	}
+}
+
+//查询所有的ACL策略列表。
+func (c *ApigClient) ListAclStrategiesV2(request *model.ListAclStrategiesV2Request) (*model.ListAclStrategiesV2Response, error) {
+	requestDef := GenReqDefForListAclStrategiesV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAclStrategiesV2Response), nil
+	}
+}
+
+//查询指定ACL策略的详情。
+func (c *ApigClient) ShowDetailsOfAclPolicyV2(request *model.ShowDetailsOfAclPolicyV2Request) (*model.ShowDetailsOfAclPolicyV2Response, error) {
+	requestDef := GenReqDefForShowDetailsOfAclPolicyV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfAclPolicyV2Response), nil
+	}
+}
+
+//修改指定的ACL策略，其中可修改的属性为：acl_name、acl_type、acl_value，其它属性不可修改。
+func (c *ApigClient) UpdateAclStrategyV2(request *model.UpdateAclStrategyV2Request) (*model.UpdateAclStrategyV2Response, error) {
+	requestDef := GenReqDefForUpdateAclStrategyV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAclStrategyV2Response), nil
+	}
+}
+
 //将流控策略应用于API，则所有对该API的访问将会受到该流控策略的限制。  当一定时间内的访问次数超过流控策略设置的API最大访问次数限制后，后续的访问将会被拒绝，从而能够较好的保护后端API免受异常流量的冲击，保障服务的稳定运行。  为指定的API绑定流控策略，绑定时，需要指定在哪个环境上生效。同一个API发布到不同的环境可以绑定不同的流控策略；一个API在发布到特定环境后只能绑定一个默认的流控策略。
 func (c *ApigClient) AssociateRequestThrottlingPolicyV2(request *model.AssociateRequestThrottlingPolicyV2Request) (*model.AssociateRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForAssociateRequestThrottlingPolicyV2()
@@ -423,6 +841,39 @@ func (c *ApigClient) BatchDisassociateThrottlingPolicyV2(request *model.BatchDis
 		return nil, err
 	} else {
 		return resp.(*model.BatchDisassociateThrottlingPolicyV2Response), nil
+	}
+}
+
+//将多个API发布到一个指定的环境，或将多个API从指定的环境下线。
+func (c *ApigClient) BatchPublishOrOfflineApiV2(request *model.BatchPublishOrOfflineApiV2Request) (*model.BatchPublishOrOfflineApiV2Response, error) {
+	requestDef := GenReqDefForBatchPublishOrOfflineApiV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchPublishOrOfflineApiV2Response), nil
+	}
+}
+
+//API每次发布时，会基于当前的API定义生成一个版本。版本记录了API发布时的各种定义及状态。  多个版本之间可以进行随意切换。但一个API在一个环境上，只能有一个版本生效。
+func (c *ApigClient) ChangeApiVersionV2(request *model.ChangeApiVersionV2Request) (*model.ChangeApiVersionV2Response, error) {
+	requestDef := GenReqDefForChangeApiVersionV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeApiVersionV2Response), nil
+	}
+}
+
+//后端连通性检测接口
+func (c *ApigClient) CheckBackendConnectivity(request *model.CheckBackendConnectivityRequest) (*model.CheckBackendConnectivityResponse, error) {
+	requestDef := GenReqDefForCheckBackendConnectivity()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckBackendConnectivityResponse), nil
 	}
 }
 
@@ -456,6 +907,28 @@ func (c *ApigClient) CreateOrDeletePublishRecordForApiV2(request *model.CreateOr
 		return nil, err
 	} else {
 		return resp.(*model.CreateOrDeletePublishRecordForApiV2Response), nil
+	}
+}
+
+//调试一个API在指定运行环境下的定义，接口调用者需要具有操作该API的权限。
+func (c *ApigClient) DebugApiV2(request *model.DebugApiV2Request) (*model.DebugApiV2Response, error) {
+	requestDef := GenReqDefForDebugApiV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DebugApiV2Response), nil
+	}
+}
+
+//对某个生效中的API版本进行下线操作，下线后，API在该版本生效的环境中将不再能够被调用。
+func (c *ApigClient) DeleteApiByVersionIdV2(request *model.DeleteApiByVersionIdV2Request) (*model.DeleteApiByVersionIdV2Response, error) {
+	requestDef := GenReqDefForDeleteApiByVersionIdV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteApiByVersionIdV2Response), nil
 	}
 }
 
@@ -500,6 +973,39 @@ func (c *ApigClient) ListApiGroupsV2(request *model.ListApiGroupsV2Request) (*mo
 		return nil, err
 	} else {
 		return resp.(*model.ListApiGroupsV2Response), nil
+	}
+}
+
+//查看指定的API在指定的环境上的运行时定义，默认查询RELEASE环境上的运行时定义。  API的定义分为临时定义和运行时定义，分别代表如下含义： - 临时定义：API在编辑中的定义，表示用户最后一次编辑后的API的状态 - 运行时定义：API在发布到某个环境时，对发布时的API的临时定义进行快照，固化出来的API的状态。  访问某个环境上的API，其实访问的就是其运行时的定义
+func (c *ApigClient) ListApiRuntimeDefinitionV2(request *model.ListApiRuntimeDefinitionV2Request) (*model.ListApiRuntimeDefinitionV2Response, error) {
+	requestDef := GenReqDefForListApiRuntimeDefinitionV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiRuntimeDefinitionV2Response), nil
+	}
+}
+
+//查询某个指定的版本详情。
+func (c *ApigClient) ListApiVersionDetailV2(request *model.ListApiVersionDetailV2Request) (*model.ListApiVersionDetailV2Response, error) {
+	requestDef := GenReqDefForListApiVersionDetailV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiVersionDetailV2Response), nil
+	}
+}
+
+//查询某个API的历史版本。每个API在一个环境上最多存在10个历史版本。
+func (c *ApigClient) ListApiVersionsV2(request *model.ListApiVersionsV2Request) (*model.ListApiVersionsV2Response, error) {
+	requestDef := GenReqDefForListApiVersionsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiVersionsV2Response), nil
 	}
 }
 
@@ -591,6 +1097,72 @@ func (c *ApigClient) UpdateApiV2(request *model.UpdateApiV2Request) (*model.Upda
 	}
 }
 
+//批量解除API与ACL策略的绑定
+func (c *ApigClient) BatchDeleteApiAclBindingV2(request *model.BatchDeleteApiAclBindingV2Request) (*model.BatchDeleteApiAclBindingV2Response, error) {
+	requestDef := GenReqDefForBatchDeleteApiAclBindingV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteApiAclBindingV2Response), nil
+	}
+}
+
+//将API与ACL策略进行绑定。  同一个API发布到不同的环境可以绑定不同的ACL策略；一个API在发布到特定环境后只能绑定一个同一种类型的ACL策略。
+func (c *ApigClient) CreateApiAclBindingV2(request *model.CreateApiAclBindingV2Request) (*model.CreateApiAclBindingV2Response, error) {
+	requestDef := GenReqDefForCreateApiAclBindingV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateApiAclBindingV2Response), nil
+	}
+}
+
+//解除某条API与ACL策略的绑定关系
+func (c *ApigClient) DeleteApiAclBindingV2(request *model.DeleteApiAclBindingV2Request) (*model.DeleteApiAclBindingV2Response, error) {
+	requestDef := GenReqDefForDeleteApiAclBindingV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteApiAclBindingV2Response), nil
+	}
+}
+
+//查看API绑定的ACL策略列表
+func (c *ApigClient) ListAclPolicyBindedToApiV2(request *model.ListAclPolicyBindedToApiV2Request) (*model.ListAclPolicyBindedToApiV2Response, error) {
+	requestDef := GenReqDefForListAclPolicyBindedToApiV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAclPolicyBindedToApiV2Response), nil
+	}
+}
+
+//查看ACL策略绑定的API列表
+func (c *ApigClient) ListApisBindedToAclPolicyV2(request *model.ListApisBindedToAclPolicyV2Request) (*model.ListApisBindedToAclPolicyV2Response, error) {
+	requestDef := GenReqDefForListApisBindedToAclPolicyV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApisBindedToAclPolicyV2Response), nil
+	}
+}
+
+//查看ACL策略未绑定的API列表，需要API已发布
+func (c *ApigClient) ListApisUnbindedToAclPolicyV2(request *model.ListApisUnbindedToAclPolicyV2Request) (*model.ListApisUnbindedToAclPolicyV2Response, error) {
+	requestDef := GenReqDefForListApisUnbindedToAclPolicyV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApisUnbindedToAclPolicyV2Response), nil
+	}
+}
+
 //解除API对APP的授权关系。解除授权后，APP将不再能够调用该API。
 func (c *ApigClient) CancelingAuthorizationV2(request *model.CancelingAuthorizationV2Request) (*model.CancelingAuthorizationV2Response, error) {
 	requestDef := GenReqDefForCancelingAuthorizationV2()
@@ -624,6 +1196,28 @@ func (c *ApigClient) CreateAnAppV2(request *model.CreateAnAppV2Request) (*model.
 	}
 }
 
+//创建App Code时，可以不指定具体值，由后台自动生成随机字符串填充。
+func (c *ApigClient) CreateAppCodeAutoV2(request *model.CreateAppCodeAutoV2Request) (*model.CreateAppCodeAutoV2Response, error) {
+	requestDef := GenReqDefForCreateAppCodeAutoV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAppCodeAutoV2Response), nil
+	}
+}
+
+//App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
+func (c *ApigClient) CreateAppCodeV2(request *model.CreateAppCodeV2Request) (*model.CreateAppCodeV2Response, error) {
+	requestDef := GenReqDefForCreateAppCodeV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAppCodeV2Response), nil
+	}
+}
+
 //APP创建成功后，还不能访问API，如果想要访问某个环境上的API，需要将该API在该环境上授权给APP。授权成功后，APP即可访问该环境上的这个API。
 func (c *ApigClient) CreateAuthorizingAppsV2(request *model.CreateAuthorizingAppsV2Request) (*model.CreateAuthorizingAppsV2Response, error) {
 	requestDef := GenReqDefForCreateAuthorizingAppsV2()
@@ -632,6 +1226,17 @@ func (c *ApigClient) CreateAuthorizingAppsV2(request *model.CreateAuthorizingApp
 		return nil, err
 	} else {
 		return resp.(*model.CreateAuthorizingAppsV2Response), nil
+	}
+}
+
+//删除App Code，App Code删除后，将无法再通过简易认证访问对应的API。
+func (c *ApigClient) DeleteAppCodeV2(request *model.DeleteAppCodeV2Request) (*model.DeleteAppCodeV2Response, error) {
+	requestDef := GenReqDefForDeleteAppCodeV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAppCodeV2Response), nil
 	}
 }
 
@@ -668,6 +1273,17 @@ func (c *ApigClient) ListApisUnbindedToAppV2(request *model.ListApisUnbindedToAp
 	}
 }
 
+//查询App Code列表。
+func (c *ApigClient) ListAppCodesV2(request *model.ListAppCodesV2Request) (*model.ListAppCodesV2Response, error) {
+	requestDef := GenReqDefForListAppCodesV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAppCodesV2Response), nil
+	}
+}
+
 //查询API绑定的APP列表。
 func (c *ApigClient) ListAppsBindedToApiV2(request *model.ListAppsBindedToApiV2Request) (*model.ListAppsBindedToApiV2Response, error) {
 	requestDef := GenReqDefForListAppsBindedToApiV2()
@@ -701,6 +1317,17 @@ func (c *ApigClient) ResettingAppSecretV2(request *model.ResettingAppSecretV2Req
 	}
 }
 
+//App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
+func (c *ApigClient) ShowDetailsOfAppCodeV2(request *model.ShowDetailsOfAppCodeV2Request) (*model.ShowDetailsOfAppCodeV2Response, error) {
+	requestDef := GenReqDefForShowDetailsOfAppCodeV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfAppCodeV2Response), nil
+	}
+}
+
 //查看指定APP的详细信息。
 func (c *ApigClient) ShowDetailsOfAppV2(request *model.ShowDetailsOfAppV2Request) (*model.ShowDetailsOfAppV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfAppV2()
@@ -720,5 +1347,115 @@ func (c *ApigClient) UpdateAppV2(request *model.UpdateAppV2Request) (*model.Upda
 		return nil, err
 	} else {
 		return resp.(*model.UpdateAppV2Response), nil
+	}
+}
+
+//导出分组下API的定义信息。导出文件内容符合swagger标准规范，API网关自定义扩展字段请参考《API网关开发指南》的“导入导出API：扩展定义”章节。
+func (c *ApigClient) ExportApiDefinitionsV2(request *model.ExportApiDefinitionsV2Request) (*model.ExportApiDefinitionsV2Response, error) {
+	requestDef := GenReqDefForExportApiDefinitionsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportApiDefinitionsV2Response), nil
+	}
+}
+
+//导入API。导入文件内容需要符合swagger标准规范，API网关自定义扩展字段请参考《API网关开发指南》的“导入导出API：扩展定义”章节。
+func (c *ApigClient) ImportApiDefinitionsV2(request *model.ImportApiDefinitionsV2Request) (*model.ImportApiDefinitionsV2Response, error) {
+	requestDef := GenReqDefForImportApiDefinitionsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportApiDefinitionsV2Response), nil
+	}
+}
+
+//为指定的VPC通道添加弹性云服务器
+func (c *ApigClient) AddingBackendInstancesV2(request *model.AddingBackendInstancesV2Request) (*model.AddingBackendInstancesV2Response, error) {
+	requestDef := GenReqDefForAddingBackendInstancesV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddingBackendInstancesV2Response), nil
+	}
+}
+
+//在API网关中创建连接私有VPC资源的通道，并在创建API时将后端节点配置为使用这些VPC通道，以便API网关直接访问私有VPC资源。 > 每个用户最多创建30个VPC通道。
+func (c *ApigClient) CreateVpcChannelV2(request *model.CreateVpcChannelV2Request) (*model.CreateVpcChannelV2Response, error) {
+	requestDef := GenReqDefForCreateVpcChannelV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVpcChannelV2Response), nil
+	}
+}
+
+//删除指定VPC通道中的弹性云服务器
+func (c *ApigClient) DeleteBackendInstanceV2(request *model.DeleteBackendInstanceV2Request) (*model.DeleteBackendInstanceV2Response, error) {
+	requestDef := GenReqDefForDeleteBackendInstanceV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBackendInstanceV2Response), nil
+	}
+}
+
+//删除指定的VPC通道
+func (c *ApigClient) DeleteVpcChannelV2(request *model.DeleteVpcChannelV2Request) (*model.DeleteVpcChannelV2Response, error) {
+	requestDef := GenReqDefForDeleteVpcChannelV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVpcChannelV2Response), nil
+	}
+}
+
+//查看指定VPC通道的弹性云服务器列表。
+func (c *ApigClient) ListBackendInstancesV2(request *model.ListBackendInstancesV2Request) (*model.ListBackendInstancesV2Response, error) {
+	requestDef := GenReqDefForListBackendInstancesV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBackendInstancesV2Response), nil
+	}
+}
+
+//查看VPC通道列表
+func (c *ApigClient) ListVpcChannelsV2(request *model.ListVpcChannelsV2Request) (*model.ListVpcChannelsV2Response, error) {
+	requestDef := GenReqDefForListVpcChannelsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVpcChannelsV2Response), nil
+	}
+}
+
+//查看指定的VPC通道详情
+func (c *ApigClient) ShowDetailsOfVpcChannelV2(request *model.ShowDetailsOfVpcChannelV2Request) (*model.ShowDetailsOfVpcChannelV2Response, error) {
+	requestDef := GenReqDefForShowDetailsOfVpcChannelV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfVpcChannelV2Response), nil
+	}
+}
+
+//更新指定VPC通道的参数
+func (c *ApigClient) UpdateVpcChannelV2(request *model.UpdateVpcChannelV2Request) (*model.UpdateVpcChannelV2Response, error) {
+	requestDef := GenReqDefForUpdateVpcChannelV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateVpcChannelV2Response), nil
 	}
 }

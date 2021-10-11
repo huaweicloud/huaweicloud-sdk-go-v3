@@ -25,7 +25,7 @@ type VpcInfo struct {
 	VpcChannelId *string `json:"vpc_channel_id,omitempty"`
 	// VPC通道端口
 
-	VpcChannelPort *string `json:"vpc_channel_port,omitempty"`
+	VpcChannelPort *int32 `json:"vpc_channel_port,omitempty"`
 }
 
 func (o VpcInfo) String() string {

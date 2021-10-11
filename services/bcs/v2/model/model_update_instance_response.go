@@ -8,7 +8,10 @@ import (
 
 // Response Object
 type UpdateInstanceResponse struct {
-	HttpStatusCode int `json:"-"`
+	// 操作记录id
+
+	OperationId    *string `json:"operation_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateInstanceResponse) String() string {

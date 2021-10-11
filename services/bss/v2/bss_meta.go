@@ -1361,21 +1361,6 @@ func GenReqDefForListServiceTypes() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListSkuInventories() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v2/orders/inventories/sku-inventories/query").
-		WithResponse(new(model.ListSkuInventoriesResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForListSubCustomerBillDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

@@ -15,7 +15,7 @@ type DmsKafkaInfo struct {
 	OrderFadeEnable *bool `json:"order_fade_enable,omitempty"`
 	// Kafka模式下，开启共识节点后的老化阈值
 
-	OrderFadeCache *int32 `json:"order_fade_cache,omitempty"`
+	OrderFadeCache *int64 `json:"order_fade_cache,omitempty"`
 }
 
 func (o DmsKafkaInfo) String() string {

@@ -16,8 +16,8 @@ type ListVariablesResponse struct {
 	Message *string `json:"message,omitempty"`
 	// variable_list
 
-	VariableList   *[]ListVariablesResqVariableList `json:"variable_list,omitempty"`
-	HttpStatusCode int                              `json:"-"`
+	VariableList   *[]VariableDetail `json:"variable_list,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ListVariablesResponse) String() string {

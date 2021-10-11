@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListEntityMetricRequest struct {
-	// 区块链服务id，目前不支持IEF实例
+	// 区块链服务id [目前不支持IEF实例](tag:hasief)
 
 	BlockchainId string `json:"blockchain_id"`
 

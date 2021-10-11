@@ -9,7 +9,7 @@ import (
 type ReportdetailsInfo struct {
 	// data
 
-	Data *[]ReportdetailsInfoData `json:"data,omitempty"`
+	Data *[]ReportdetailItemInfo `json:"data,omitempty"`
 	// pageIndex
 
 	PageIndex *int32 `json:"pageIndex,omitempty"`

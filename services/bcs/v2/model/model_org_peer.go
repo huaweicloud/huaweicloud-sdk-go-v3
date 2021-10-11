@@ -9,10 +9,10 @@ import (
 type OrgPeer struct {
 	// 组织名称
 
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 	// 组织节点数
 
-	NodeCount *int32 `json:"node_count,omitempty"`
+	NodeCount int64 `json:"node_count"`
 }
 
 func (o OrgPeer) String() string {

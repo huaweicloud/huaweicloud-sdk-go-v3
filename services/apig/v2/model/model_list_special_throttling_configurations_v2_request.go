@@ -20,6 +20,9 @@ type ListSpecialThrottlingConfigurationsV2Request struct {
 	// 筛选的特殊应用名称
 
 	AppName *string `json:"app_name,omitempty"`
+	// 筛选的特殊用户名称
+
+	User *string `json:"user,omitempty"`
 	// 偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
 
 	Offset *int64 `json:"offset,omitempty"`
