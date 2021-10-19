@@ -20,10 +20,10 @@ type ListPublicipsRequest struct {
 	// 每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
 
 	Limit *int32 `json:"limit,omitempty"`
-	// 显示，形式为\"fields=id&fields=owner&...\"  支持字段：id/project_id/ip_version/type/public_ip_address/public_ipv6_address/network_type/status/description/created_at/updated_at/vnic/bandwidth/associate_instance_type/associate_instance_id/lock_status/billing_info/tags/enterprise_project_id 多出口特性支持group_name
+	// 显示，形式为\"fields=id&fields=owner&...\"  支持字段：id/project_id/ip_version/type/public_ip_address/public_ipv6_address/network_type/status/description/created_at/updated_at/vnic/bandwidth/associate_instance_type/associate_instance_id/lock_status/billing_info/tags/enterprise_project_id/allow_share_bandwidth_types/public_border_group/alias/publicip_pool_name/publicip_pool_id
 
 	Fields *[]string `json:"fields,omitempty"`
-	// 排序，形式为\"sort_key=id\"  支持字段：id/public_ip_address/public_ipv6_address/ip_version/created_at/updated_at
+	// 排序，形式为\"sort_key=id\"  支持字段：id/public_ip_address/public_ipv6_address/ip_version/created_at/updated_at/public_border_group
 
 	SortKey *ListPublicipsRequestSortKey `json:"sort_key,omitempty"`
 	// 排序方向  取值范围：asc、desc
@@ -128,9 +128,12 @@ type ListPublicipsRequest struct {
 	// 根据enterprise_project_id过滤
 
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
-	// 根据group_name过滤,多出口特性支持
+	// 根据public_border_group过滤
 
-	GroupName *[]string `json:"group_name,omitempty"`
+	PublicBorderGroup *[]string `json:"public_border_group,omitempty"`
+	// 共享带宽类型，根据任一共享带宽类型过滤EIP列表。 可以指定多个带宽类型，不同的带宽类型间用逗号分隔。
+
+	AllowShareBandwidthTypeAny *[]string `json:"allow_share_bandwidth_type_any,omitempty"`
 }
 
 func (o ListPublicipsRequest) String() string {
@@ -153,6 +156,7 @@ type ListPublicipsRequestSortKeyEnum struct {
 	IP_VERSION          ListPublicipsRequestSortKey
 	CREATED_AT          ListPublicipsRequestSortKey
 	UPDATED_AT          ListPublicipsRequestSortKey
+	PUBLIC_BORDER_GROUP ListPublicipsRequestSortKey
 }
 
 func GetListPublicipsRequestSortKeyEnum() ListPublicipsRequestSortKeyEnum {
@@ -174,6 +178,9 @@ func GetListPublicipsRequestSortKeyEnum() ListPublicipsRequestSortKeyEnum {
 		},
 		UPDATED_AT: ListPublicipsRequestSortKey{
 			value: "updated_at",
+		},
+		PUBLIC_BORDER_GROUP: ListPublicipsRequestSortKey{
+			value: "public_border_group",
 		},
 	}
 }

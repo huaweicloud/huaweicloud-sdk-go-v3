@@ -20,6 +20,9 @@ type BackupFilesBody struct {
 	// 导入的备份文件文件列表。
 
 	Files []Files `json:"files"`
+	// 备份记录ID，数据来源为备份记录时必须填写
+
+	BackupId *string `json:"backup_id,omitempty"`
 }
 
 func (o BackupFilesBody) String() string {

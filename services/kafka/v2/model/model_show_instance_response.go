@@ -193,8 +193,8 @@ type ShowInstanceResponse struct {
 	CesVersion *string `json:"ces_version,omitempty"`
 	// 标签列表。
 
-	Tags           *[]ListInstancesRespTags `json:"tags,omitempty"`
-	HttpStatusCode int                      `json:"-"`
+	Tags           *[]TagEntity `json:"tags,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ShowInstanceResponse) String() string {

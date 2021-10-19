@@ -15,7 +15,7 @@ type BatchCreateOrDeleteTagReq struct {
 	Action *BatchCreateOrDeleteTagReqAction `json:"action,omitempty"`
 	// 标签列表。
 
-	Tags *[]CreateInstanceReqTags `json:"tags,omitempty"`
+	Tags *[]TagEntity `json:"tags,omitempty"`
 }
 
 func (o BatchCreateOrDeleteTagReq) String() string {

@@ -22,8 +22,8 @@ type ListInstanceTopicsResponse struct {
 	MaxPartitions *int32 `json:"max_partitions,omitempty"`
 	// topic列表。
 
-	Topics         *[]ListInstanceTopicsRespTopics `json:"topics,omitempty"`
-	HttpStatusCode int                             `json:"-"`
+	Topics         *[]TopicEntity `json:"topics,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ListInstanceTopicsResponse) String() string {

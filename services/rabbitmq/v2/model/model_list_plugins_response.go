@@ -10,8 +10,8 @@ import (
 type ListPluginsResponse struct {
 	// 插件信息列表。
 
-	Plugins        *[]ListPluginsRespPlugins `json:"plugins,omitempty"`
-	HttpStatusCode int                       `json:"-"`
+	Plugins        *[]PluginEntity `json:"plugins,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o ListPluginsResponse) String() string {

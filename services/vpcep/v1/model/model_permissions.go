@@ -1,0 +1,30 @@
+package model
+
+import (
+	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+
+	"strings"
+)
+
+// permission列表。
+type Permissions struct {
+	// permission的ID，唯一标识。
+
+	Id *string `json:"id,omitempty"`
+	// permission列表。 权限格式为“iam:domain:: 6e9dfd51d1124e8d8498dce894923a0d”或 “*”，“*”表示所有用户的终端节点可连接。 其中6e9dfd51d1124e8d8498dce894923a0d为 可连接的用户domian_id。
+
+	Permission *string `json:"permission,omitempty"`
+	// 白名单的添加时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH: MM:SSZ
+
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+}
+
+func (o Permissions) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "Permissions struct{}"
+	}
+
+	return strings.Join([]string{"Permissions", string(data)}, " ")
+}

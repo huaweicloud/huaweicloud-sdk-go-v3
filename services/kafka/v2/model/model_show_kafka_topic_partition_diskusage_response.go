@@ -10,8 +10,8 @@ import (
 type ShowKafkaTopicPartitionDiskusageResponse struct {
 	// Broker列表。
 
-	BrokerList     *[]ShowKafkaTopicPartitionDiskusageRespBrokerList `json:"broker_list,omitempty"`
-	HttpStatusCode int                                               `json:"-"`
+	BrokerList     *[]DiskusageEntity `json:"broker_list,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ShowKafkaTopicPartitionDiskusageResponse) String() string {

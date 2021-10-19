@@ -8,7 +8,7 @@ import (
 
 // 修改的topic。
 type UpdateInstanceTopicReqTopics struct {
-	// topic名称
+	// topic名称，不支持修改。
 
 	Id string `json:"id"`
 	// 老化时间，单位小时。

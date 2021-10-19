@@ -10,7 +10,7 @@ import (
 type NeutronListFloatingIpsRequest struct {
 	// 每页显示的条目数量。
 
-	Limit *string `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
 	// 取值为上一页数据的最后一条记录的id，当marker参数为无效id时，response将响应错误码400
 
 	Marker *string `json:"marker,omitempty"`

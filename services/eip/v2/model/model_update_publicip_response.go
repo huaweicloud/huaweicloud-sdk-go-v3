@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdatePublicipResponse struct {
-	Publicip       *PublicipShowResp `json:"publicip,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	Publicip       *PublicipUpdateResp `json:"publicip,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o UpdatePublicipResponse) String() string {

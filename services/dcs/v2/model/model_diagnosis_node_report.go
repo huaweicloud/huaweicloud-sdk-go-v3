@@ -32,9 +32,8 @@ type DiagnosisNodeReport struct {
 	// 诊断维度列表
 
 	DiagnosisDimensionList []DiagnosisDimension `json:"diagnosis_dimension_list"`
-	// 命令耗时统计列表
 
-	CommandTimeTakenList *interface{} `json:"command_time_taken_list"`
+	CommandTimeTakenList *CommandTimeTakenList `json:"command_time_taken_list"`
 }
 
 func (o DiagnosisNodeReport) String() string {

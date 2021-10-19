@@ -26,12 +26,24 @@ type MigrationTaskList struct {
 	// 迁移方式，包括全量迁移和增量迁移两种类型。
 
 	MigrationMethod *MigrationTaskListMigrationMethod `json:"migration_method,omitempty"`
-	// 目标实例名称。
-
-	TargetInstanceName *string `json:"target_instance_name,omitempty"`
 	// 数据源，格式为ip:port或者桶名。
 
 	DataSource *string `json:"data_source,omitempty"`
+	// 源实例名称，若自建redis则为空。
+
+	SourceInstanceName *string `json:"source_instance_name,omitempty"`
+	// 源实例ID，若自建redis则为空。
+
+	SourceInstanceId *string `json:"source_instance_id,omitempty"`
+	// 目标redis地址，格式为ip:port。
+
+	TargetInstanceAddrs *string `json:"target_instance_addrs,omitempty"`
+	// 目标实例名称。
+
+	TargetInstanceName *string `json:"target_instance_name,omitempty"`
+	// 目标实例ID。
+
+	TargetInstanceId *string `json:"target_instance_id,omitempty"`
 	// 迁移任务创建时间
 
 	CreatedAt *string `json:"created_at,omitempty"`

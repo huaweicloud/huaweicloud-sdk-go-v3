@@ -10,8 +10,8 @@ import (
 type ShowInstanceUsersResponse struct {
 	// 用户列表。
 
-	Users          *[]ShowInstanceUsersRespUsers `json:"users,omitempty"`
-	HttpStatusCode int                           `json:"-"`
+	Users          *[]ShowInstanceUsersEntity `json:"users,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o ShowInstanceUsersResponse) String() string {

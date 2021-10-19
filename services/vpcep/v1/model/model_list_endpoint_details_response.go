@@ -1,0 +1,27 @@
+package model
+
+import (
+	"encoding/json"
+
+	"strings"
+)
+
+// Response Object
+type ListEndpointDetailsResponse struct {
+	// 终端节点列表。
+
+	Endpoints *[]EndpointResp `json:"endpoints,omitempty"`
+	// 满足查询条件的终端节点总条数，不受分页（即limit、offset参数）影响。
+
+	TotalCount     *int32 `json:"total_count,omitempty"`
+	HttpStatusCode int    `json:"-"`
+}
+
+func (o ListEndpointDetailsResponse) String() string {
+	data, err := json.Marshal(o)
+	if err != nil {
+		return "ListEndpointDetailsResponse struct{}"
+	}
+
+	return strings.Join([]string{"ListEndpointDetailsResponse", string(data)}, " ")
+}

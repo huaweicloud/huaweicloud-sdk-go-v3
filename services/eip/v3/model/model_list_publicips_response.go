@@ -13,12 +13,12 @@ type ListPublicipsResponse struct {
 	RequestId *string `json:"request_id,omitempty"`
 	// 功能说明：弹性公网IP对象
 
-	Publicips *[]PublicipShowResp `json:"publicips,omitempty"`
+	Publicips *[]PublicipSingleShowResp `json:"publicips,omitempty"`
 
 	PageInfo *PageInfoOption `json:"page_info,omitempty"`
 	// 公网IP总条目数
 
-	Total          *int32 `json:"total,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

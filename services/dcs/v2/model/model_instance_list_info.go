@@ -46,6 +46,9 @@ type InstanceListInfo struct {
 	// 小规格缓存容量（G Byte）。
 
 	CapacityMinor *string `json:"capacity_minor,omitempty"`
+	// 订单ID，仅在创建包周期实例时返回。按需实例时此值为null
+
+	OrderId *string `json:"order_id,omitempty"`
 	// 维护时间窗开始时间，为UTC时间，格式为HH:mm:ss。
 
 	MaintainBegin *string `json:"maintain_begin,omitempty"`

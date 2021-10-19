@@ -10,7 +10,7 @@ import (
 type ShowInstanceMessagesResponse struct {
 	// 消息列表。
 
-	Messages *[]ShowInstanceMessagesRespMessages `json:"messages,omitempty"`
+	Messages *[]MessagesEntity `json:"messages,omitempty"`
 	// 消息总条数。
 
 	Total *int64 `json:"total,omitempty"`

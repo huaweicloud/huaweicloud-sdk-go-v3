@@ -369,6 +369,10 @@ func GenReqDefForListPublicips() *def.HttpRequestDef {
 		WithName("Id").
 		WithJsonTag("id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AllowShareBandwidthTypeAny").
+		WithJsonTag("allow_share_bandwidth_type_any").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

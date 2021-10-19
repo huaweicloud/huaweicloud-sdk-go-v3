@@ -12,8 +12,8 @@ type ShowPublicipResponse struct {
 
 	RequestId *string `json:"request_id,omitempty"`
 
-	Publicip       *PublicipShowResp `json:"publicip,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	Publicip       *PublicipSingleShowResp `json:"publicip,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o ShowPublicipResponse) String() string {

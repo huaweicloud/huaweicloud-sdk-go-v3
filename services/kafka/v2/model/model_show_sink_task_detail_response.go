@@ -25,7 +25,10 @@ type ShowSinkTaskDetailResponse struct {
 	Topics *string `json:"topics,omitempty"`
 
 	ObsDestinationDescriptor *ShowSinkTaskDetailRespObsDestinationDescriptor `json:"obs_destination_descriptor,omitempty"`
-	HttpStatusCode           int                                             `json:"-"`
+	// topic信息。
+
+	TopicsInfo     *[]ShowSinkTaskDetailRespTopicsInfo `json:"topics_info,omitempty"`
+	HttpStatusCode int                                 `json:"-"`
 }
 
 func (o ShowSinkTaskDetailResponse) String() string {

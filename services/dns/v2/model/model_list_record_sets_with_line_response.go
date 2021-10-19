@@ -10,7 +10,7 @@ import (
 type ListRecordSetsWithLineResponse struct {
 	Links *PageLink `json:"links,omitempty"`
 
-	Recordsets *[]QueryRecordSetWithLineResp `json:"recordsets,omitempty"`
+	Recordsets *[]QueryRecordSetWithLineAndTagsResp `json:"recordsets,omitempty"`
 
 	Metadata       *Metedata `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`

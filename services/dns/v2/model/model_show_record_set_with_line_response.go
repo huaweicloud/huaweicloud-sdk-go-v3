@@ -49,9 +49,6 @@ type ShowRecordSetWithLineResponse struct {
 	ProjectId *string `json:"project_id,omitempty"`
 
 	Links *PageLink `json:"links,omitempty"`
-	// 资源标签。
-
-	Tags *[]Tag `json:"tags,omitempty"`
 	// 解析线路ID。
 
 	Line *string `json:"line,omitempty"`

@@ -48,11 +48,8 @@ type DeleteRecordSetResponse struct {
 
 	ProjectId *string `json:"project_id,omitempty"`
 
-	Links *PageLink `json:"links,omitempty"`
-	// 资源标签。
-
-	Tags           *[]Tag `json:"tags,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	Links          *PageLink `json:"links,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o DeleteRecordSetResponse) String() string {

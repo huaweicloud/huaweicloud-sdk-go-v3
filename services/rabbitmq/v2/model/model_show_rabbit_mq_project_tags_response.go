@@ -10,8 +10,8 @@ import (
 type ShowRabbitMqProjectTagsResponse struct {
 	// 标签列表
 
-	Tags           *[]ShowProjectTagsRespTags `json:"tags,omitempty"`
-	HttpStatusCode int                        `json:"-"`
+	Tags           *[]TagMultyValueEntity `json:"tags,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o ShowRabbitMqProjectTagsResponse) String() string {

@@ -393,7 +393,7 @@ func (c *KafkaClient) ShowInstanceTopicDetail(request *model.ShowInstanceTopicDe
 	}
 }
 
-//查询用户列表。 Kafka实例开启SASL功能时，才支持多用户管理的功能。
+//查询用户列表。  Kafka实例开启SASL功能时，才支持多用户管理的功能。
 func (c *KafkaClient) ShowInstanceUsers(request *model.ShowInstanceUsersRequest) (*model.ShowInstanceUsersResponse, error) {
 	requestDef := GenReqDefForShowInstanceUsers()
 
@@ -503,7 +503,7 @@ func (c *KafkaClient) ShowSinkTaskDetail(request *model.ShowSinkTaskDetailReques
 	}
 }
 
-//查询用户权限。 Kafka实例开启SASL功能时，才支持多用户管理的功能。
+//查询用户权限。  Kafka实例开启SASL功能时，才支持多用户管理的功能。
 func (c *KafkaClient) ShowTopicAccessPolicy(request *model.ShowTopicAccessPolicyRequest) (*model.ShowTopicAccessPolicyResponse, error) {
 	requestDef := GenReqDefForShowTopicAccessPolicy()
 
@@ -569,7 +569,7 @@ func (c *KafkaClient) UpdateSinkTaskQuota(request *model.UpdateSinkTaskQuotaRequ
 	}
 }
 
-//设置用户权限。 Kafka实例开启SASL功能时，才支持多用户管理的功能。
+//设置用户权限。  Kafka实例开启SASL功能时，才支持多用户管理的功能。
 func (c *KafkaClient) UpdateTopicAccessPolicy(request *model.UpdateTopicAccessPolicyRequest) (*model.UpdateTopicAccessPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateTopicAccessPolicy()
 

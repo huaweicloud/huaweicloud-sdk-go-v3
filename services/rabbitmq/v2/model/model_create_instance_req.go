@@ -70,7 +70,7 @@ type CreateInstanceReq struct {
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 标签列表。
 
-	Tags *[]CreateInstanceReqTags `json:"tags,omitempty"`
+	Tags *[]TagEntity `json:"tags,omitempty"`
 }
 
 func (o CreateInstanceReq) String() string {

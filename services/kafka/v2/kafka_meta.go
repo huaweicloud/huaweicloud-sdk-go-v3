@@ -932,6 +932,11 @@ func GenReqDefForShowSinkTaskDetail() *def.HttpRequestDef {
 		WithJsonTag("task_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TopicInfo").
+		WithJsonTag("topic-info").
+		WithLocationType(def.Query))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

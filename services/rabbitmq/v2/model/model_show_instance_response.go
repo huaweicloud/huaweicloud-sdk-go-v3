@@ -133,8 +133,8 @@ type ShowInstanceResponse struct {
 	Ipv6ConnectAddresses *[]string `json:"ipv6_connect_addresses,omitempty"`
 	// 标签列表。
 
-	Tags           *[]ListInstancesRespTags `json:"tags,omitempty"`
-	HttpStatusCode int                      `json:"-"`
+	Tags           *[]TagEntity `json:"tags,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ShowInstanceResponse) String() string {

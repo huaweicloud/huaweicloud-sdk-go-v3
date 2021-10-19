@@ -16,7 +16,7 @@ type CreateInstanceTopicReq struct {
 	// 是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
 
 	SyncMessageFlush *bool `json:"sync_message_flush,omitempty"`
-	// topic分区数，设置消费的并发数。 取值范围：1-50。
+	// topic分区数，设置消费的并发数。 取值范围：1-100。
 
 	Partition *int32 `json:"partition,omitempty"`
 	// 是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。

@@ -8,7 +8,7 @@ import (
 
 // This is a auto request Object
 type ReduceRequest struct {
-	// 需要扩容的节点个数
+	// 需要缩容的节点数量，最大值为实例节点数减1。
 
 	NodeNumber int32 `json:"node_number"`
 }

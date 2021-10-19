@@ -71,7 +71,7 @@ type CreatePostPaidInstanceReq struct {
 	// 表示公网带宽，单位是Mbit/s。 取值范围： - Kafka实例规格为100MB时，公网带宽取值范围3到900，且必须为实例节点个数的倍数。 - Kafka实例规格为300MB时，公网带宽取值范围3到900，且必须为实例节点个数的倍数。 - Kafka实例规格为600MB时，公网带宽取值范围4到1200，且必须为实例节点个数的倍数。 - Kafka实例规格为1200MB时，公网带宽取值范围8到2400，且必须为实例节点个数的倍数。
 
 	PublicBandwidth *int32 `json:"public_bandwidth,omitempty"`
-	// 实例绑定的弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
+	// 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
 
 	PublicipId *string `json:"publicip_id,omitempty"`
 	// 是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
@@ -94,7 +94,7 @@ type CreatePostPaidInstanceReq struct {
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 标签列表。
 
-	Tags *[]CreatePostPaidInstanceReqTags `json:"tags,omitempty"`
+	Tags *[]TagEntity `json:"tags,omitempty"`
 }
 
 func (o CreatePostPaidInstanceReq) String() string {

@@ -23,7 +23,7 @@ type CreateSharedBandwidthOption struct {
 	// 功能说明：按带宽计费还是按增强型95计费。  取值范围：bandwidth，95peak_plus(按增强型95计费)不返回或者为空时表示是bandwidth。  约束：只有共享带宽支持95peak_plus（按增强型95计费），按增强型95计费时需要指定保底百分比，默认是20%。
 
 	ChargeMode *CreateSharedBandwidthOptionChargeMode `json:"charge_mode,omitempty"`
-	// 功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域需传此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
+	// 功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
 
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 }

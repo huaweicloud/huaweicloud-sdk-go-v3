@@ -16,8 +16,8 @@ type ShowTopicAccessPolicyResponse struct {
 	TopicType *int32 `json:"topic_type,omitempty"`
 	// 权限列表。
 
-	Policies       *[]ShowTopicAccessPolicyRespPolicies `json:"policies,omitempty"`
-	HttpStatusCode int                                  `json:"-"`
+	Policies       *[]PolicyEntity `json:"policies,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o ShowTopicAccessPolicyResponse) String() string {

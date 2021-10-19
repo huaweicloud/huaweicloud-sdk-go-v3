@@ -19,6 +19,39 @@ func EipClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//查询公共池列表
+func (c *EipClient) ListCommonPools(request *model.ListCommonPoolsRequest) (*model.ListCommonPoolsResponse, error) {
+	requestDef := GenReqDefForListCommonPools()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCommonPoolsResponse), nil
+	}
+}
+
+//查询公共池分组列表，包含名称和位置信息
+func (c *EipClient) ListPublicBorderGroups(request *model.ListPublicBorderGroupsRequest) (*model.ListPublicBorderGroupsResponse, error) {
+	requestDef := GenReqDefForListPublicBorderGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPublicBorderGroupsResponse), nil
+	}
+}
+
+//查询指定租户下的共享带宽类型列表
+func (c *EipClient) ListShareBandwidthTypes(request *model.ListShareBandwidthTypesRequest) (*model.ListShareBandwidthTypesResponse, error) {
+	requestDef := GenReqDefForListShareBandwidthTypes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListShareBandwidthTypesResponse), nil
+	}
+}
+
 //绑定弹性公网IP
 func (c *EipClient) AssociatePublicips(request *model.AssociatePublicipsRequest) (*model.AssociatePublicipsResponse, error) {
 	requestDef := GenReqDefForAssociatePublicips()
@@ -41,6 +74,17 @@ func (c *EipClient) DisassociatePublicips(request *model.DisassociatePublicipsRe
 	}
 }
 
+//全量查询公网IP池列表
+func (c *EipClient) ListPublicipPool(request *model.ListPublicipPoolRequest) (*model.ListPublicipPoolResponse, error) {
+	requestDef := GenReqDefForListPublicipPool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPublicipPoolResponse), nil
+	}
+}
+
 //查询弹性公网IP列表信息
 func (c *EipClient) ListPublicips(request *model.ListPublicipsRequest) (*model.ListPublicipsResponse, error) {
 	requestDef := GenReqDefForListPublicips()
@@ -60,5 +104,16 @@ func (c *EipClient) ShowPublicip(request *model.ShowPublicipRequest) (*model.Sho
 		return nil, err
 	} else {
 		return resp.(*model.ShowPublicipResponse), nil
+	}
+}
+
+//查询公网IP池详情
+func (c *EipClient) ShowPublicipPool(request *model.ShowPublicipPoolRequest) (*model.ShowPublicipPoolResponse, error) {
+	requestDef := GenReqDefForShowPublicipPool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPublicipPoolResponse), nil
 	}
 }

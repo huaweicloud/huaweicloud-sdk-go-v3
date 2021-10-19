@@ -35,6 +35,9 @@ type ListPublicipsRequest struct {
 	// 弹性公网IP唯一标识
 
 	Id *[]string `json:"id,omitempty"`
+	// 共享带宽类型，根据任一共享带宽类型过滤EIP列表。 可以指定多个带宽类型，不同的带宽类型间用逗号分隔。
+
+	AllowShareBandwidthTypeAny *[]string `json:"allow_share_bandwidth_type_any,omitempty"`
 }
 
 func (o ListPublicipsRequest) String() string {

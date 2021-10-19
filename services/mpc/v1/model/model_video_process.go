@@ -19,6 +19,12 @@ type VideoProcess struct {
 	// 是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
 
 	Upsample *int32 `json:"upsample,omitempty"`
+	// 需要单独设置时长的HLS起始分片数量。与hls_init_interval配合使用，设置前面hls_init_count个HLS分片时长。 为0表示不单独配置时长。
+
+	HlsInitCount *int32 `json:"hls_init_count,omitempty"`
+	// 表示前面hls_init_count个HLS分片的时长。hls_init_count不为0时，该字段才起作用。
+
+	HlsInitInterval *int32 `json:"hls_init_interval,omitempty"`
 }
 
 func (o VideoProcess) String() string {
