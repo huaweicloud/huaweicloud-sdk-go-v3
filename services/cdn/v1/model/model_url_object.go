@@ -22,6 +22,9 @@ type UrlObject struct {
 	// 任务id。
 
 	TaskId *string `json:"task_id,omitempty"`
+	// 任务的类型， 其值可以为REFRESH、PREHEATING、REFRESH_AFTER_PREHEATING
+
+	TaskType *string `json:"task_type,omitempty"`
 }
 
 func (o UrlObject) String() string {

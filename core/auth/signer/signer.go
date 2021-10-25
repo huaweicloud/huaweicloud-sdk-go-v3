@@ -165,6 +165,9 @@ func CanonicalHeaders(r *request.DefaultHttpRequest, signerHeaders []string) str
 func SignedHeaders(headers map[string]string) []string {
 	var signedHeaders []string
 	for key := range headers {
+		if strings.HasPrefix(strings.ToLower(key), "content-type") {
+			continue
+		}
 		signedHeaders = append(signedHeaders, strings.ToLower(key))
 	}
 	sort.Strings(signedHeaders)

@@ -19,7 +19,7 @@ type ListSimPoolsRequest struct {
 	Offset *int64 `json:"offset,omitempty"`
 	// 账期，例如：2021-04
 
-	BillingCycle string `json:"billing_cycle"`
+	BillingCycle *string `json:"billing_cycle,omitempty"`
 }
 
 func (o ListSimPoolsRequest) String() string {

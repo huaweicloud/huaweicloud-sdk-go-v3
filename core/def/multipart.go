@@ -21,6 +21,7 @@ package def
 
 import (
 	"fmt"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"io"
 	"mime/multipart"
 	"net/textproto"
@@ -81,27 +82,17 @@ func (f FilePart) Write(w *multipart.Writer, name string) error {
 }
 
 type MultiPart struct {
-	Header  textproto.MIMEHeader
-	Content io.Reader
+	Content interface{}
 }
 
-func NewMultiPart(header textproto.MIMEHeader, content io.Reader) *MultiPart {
+func NewMultiPart(content interface{}) *MultiPart {
 	return &MultiPart{
-		Header:  header,
 		Content: content,
 	}
 }
 
 func (m MultiPart) Write(w *multipart.Writer, name string) error {
-	m.Header.Set("Content-Disposition",
-		fmt.Sprintf(`form-data; name="%s"`, escapeQuotes(name)))
-
-	writer, err := w.CreatePart(m.Header)
-	if err != nil {
-		return err
-	}
-
-	_, err = io.Copy(writer, m.Content)
+	err := w.WriteField(name, converter.ConvertInterfaceToString(m.Content))
 	return err
 }
 

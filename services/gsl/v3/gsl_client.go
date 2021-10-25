@@ -184,7 +184,7 @@ func (c *GslClient) ListFlowBySimCards(request *model.ListFlowBySimCardsRequest)
 	}
 }
 
-//sim卡套餐列表查询
+//SIM卡套餐列表查询，实体卡只会有一个套餐，eSIM/vSIM可能会有多个套餐
 func (c *GslClient) ListSimPricePlans(request *model.ListSimPricePlansRequest) (*model.ListSimPricePlansResponse, error) {
 	requestDef := GenReqDefForListSimPricePlans()
 

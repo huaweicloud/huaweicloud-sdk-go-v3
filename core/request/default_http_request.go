@@ -409,6 +409,9 @@ func (builder *HttpRequestBuilder) WithBody(kind string, body interface{}) *Http
 		for i := 0; i < fieldNum; i++ {
 			jsonTag := t.Field(i).Tag.Get("json")
 			if jsonTag != "" {
+				if v.FieldByName(t.Field(i).Name).IsNil() && strings.Contains(jsonTag, "omitempty") {
+					continue
+				}
 				builder.AddFormParam(strings.Split(jsonTag, ",")[0], v.FieldByName(t.Field(i).Name).Interface().(def.FormData))
 			} else {
 				builder.AddFormParam(t.Field(i).Name, v.FieldByName(t.Field(i).Name).Interface().(def.FormData))

@@ -7,6 +7,10 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"os"
+	"reflect"
+
 	"strings"
 )
 
@@ -40,6 +44,37 @@ func (o ImportApiDefinitionsV2RequestBody) String() string {
 	}
 
 	return strings.Join([]string{"ImportApiDefinitionsV2RequestBody", string(data)}, " ")
+}
+
+func (o *ImportApiDefinitionsV2RequestBody) UnmarshalJSON(b []byte) error {
+	m := make(map[string]interface{})
+	err := json.Unmarshal(b, &m)
+	if err != nil {
+		return err
+	}
+	t := reflect.TypeOf(o).Elem()
+	v := reflect.ValueOf(o).Elem()
+	count := v.NumField()
+	for i := 0; i < count; i++ {
+		jsonTag := t.Field(i).Tag.Get("json")
+		jsonName := strings.Split(jsonTag, ",")[0]
+		if m[jsonName] == nil && strings.Contains(jsonTag, "omitempty") {
+			continue
+		}
+		field := v.FieldByName(utils.UnderscoreToCamel(jsonName))
+		switch v.Field(i).Interface().(type) {
+		case *def.FilePart:
+			filePath := m[jsonName].(string)
+			file, err := os.Open(filePath)
+			if err != nil {
+				return err
+			}
+			field.Set(reflect.ValueOf(def.NewFilePart(file)))
+		case *def.MultiPart:
+			field.Set(reflect.ValueOf(def.NewMultiPart(m[jsonName])))
+		}
+	}
+	return nil
 }
 
 type ImportApiDefinitionsV2RequestBodyExtendMode struct {

@@ -52,7 +52,7 @@ func (c *GaussDBforNoSQLClient) CreateConfiguration(request *model.CreateConfigu
 	}
 }
 
-//创建文档数据库实例，包括集群实例、副本集实例、以及单节点实例。
+//创建数据库实例。
 func (c *GaussDBforNoSQLClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
 	requestDef := GenReqDefForCreateInstance()
 

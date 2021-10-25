@@ -13,13 +13,13 @@ import (
 type ImageInfo struct {
 	// 备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空
 
-	BackupId string `json:"__backup_id"`
+	BackupId *string `json:"__backup_id,omitempty"`
 	// 镜像来源。公共镜像为空
 
-	DataOrigin string `json:"__data_origin"`
+	DataOrigin *string `json:"__data_origin,omitempty"`
 	// 镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
 
-	Description string `json:"__description"`
+	Description *string `json:"__description,omitempty"`
 	// 镜像文件的大小，单位为字节
 
 	ImageSize string `json:"__image_size"`
@@ -34,19 +34,19 @@ type ImageInfo struct {
 	Isregistered ImageInfoIsregistered `json:"__isregistered"`
 	// 父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
 
-	Originalimagename string `json:"__originalimagename"`
+	Originalimagename *string `json:"__originalimagename,omitempty"`
 	// 操作系统位数，一般取值为“32”或者“64”
 
-	OsBit ImageInfoOsBit `json:"__os_bit"`
+	OsBit *ImageInfoOsBit `json:"__os_bit,omitempty"`
 	// 操作系统类型，目前取值Linux， Windows，Other
 
 	OsType ImageInfoOsType `json:"__os_type"`
 	// 操作系统具体版本
 
-	OsVersion string `json:"__os_version"`
+	OsVersion *string `json:"__os_version,omitempty"`
 	// 镜像平台分类
 
-	Platform ImageInfoPlatform `json:"__platform"`
+	Platform *ImageInfoPlatform `json:"__platform,omitempty"`
 	// 市场镜像的产品ID
 
 	Productcode *string `json:"__productcode,omitempty"`
@@ -94,7 +94,7 @@ type ImageInfo struct {
 	DiskFormat *string `json:"disk_format,omitempty"`
 	// 表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目，取值为UUID，表示属于该UUID对应的企业项目。
 
-	EnterpriseProjectId string `json:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 镜像文件下载和上传链接
 
 	File *string `json:"file,omitempty"`
@@ -139,7 +139,7 @@ type ImageInfo struct {
 	VirtualEnvType ImageInfoVirtualEnvType `json:"virtual_env_type"`
 	// 目前暂时不使用
 
-	VirtualSize int32 `json:"virtual_size"`
+	VirtualSize *int32 `json:"virtual_size,omitempty"`
 	// 是否被其他租户可见，取值为private或public
 
 	Visibility ImageInfoVisibility `json:"visibility"`
@@ -169,22 +169,22 @@ type ImageInfo struct {
 	HwVifMultiqueueEnabled *string `json:"hw_vif_multiqueue_enabled,omitempty"`
 	// 表示当前市场镜像是否下架。true：已下架 false：未下架
 
-	IsOffshelved string `json:"__is_offshelved"`
+	IsOffshelved *string `json:"__is_offshelved,omitempty"`
 	// 镜像是否支持延迟加载。取值为“True”或“False”。
 
-	Lazyloading string `json:"__lazyloading"`
+	Lazyloading *string `json:"__lazyloading,omitempty"`
 	// 表示当前镜像来源是从外部导入。取值：file。
 
-	RootOrigin string `json:"__root_origin"`
+	RootOrigin *string `json:"__root_origin,omitempty"`
 	// 表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
 
-	SequenceNum string `json:"__sequence_num"`
+	SequenceNum *string `json:"__sequence_num,omitempty"`
 	// 镜像状态变为正常的时间。
 
 	ActiveAt string `json:"active_at"`
 	// 镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
 
-	SupportAgentList string `json:"__support_agent_list"`
+	SupportAgentList *string `json:"__support_agent_list,omitempty"`
 	// 是否是AMD架构类型的镜像。取值为“true”或者“false”。
 
 	SupportAmd *string `json:"__support_amd,omitempty"`

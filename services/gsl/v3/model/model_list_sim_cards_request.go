@@ -23,19 +23,22 @@ type ListSimCardsRequest struct {
 	// 分页查询时的页码数，默认值为1，取值范围为1-1000000的整数
 
 	Offset *int64 `json:"offset,omitempty"`
-	// sim卡状态：  11.未激活  13.可激活  14.已停用  20.在用
+	// sim卡状态：  10.可测试  11.未激活  13.可激活  14.已停用  20.在用  30.已拆机
 
 	SimStatus *int32 `json:"sim_status,omitempty"`
 	// 设备状态: 1.注册 2.重启 3.在线 4.离线
 
 	DeviceStatus *int32 `json:"device_status,omitempty"`
+	// 标签ID，最多支持传50个
+
+	TagId *[]int64 `json:"tag_id,omitempty"`
 	// sim卡类型：  1.vSIM  2.eSIM  3.实体卡
 
 	SimType *int32 `json:"sim_type,omitempty"`
 	// 排序的顺序，asc表示顺序排序，desc表示倒序排序，不传则默认asc
 
 	Order *ListSimCardsRequestOrder `json:"order,omitempty"`
-	// 排序的属性，目前支持:cid（容器ID）
+	// 排序的属性，目前支持:cid（容器ID）、flow_used（已用流量）、flow_left（剩余流量）
 
 	Sort *ListSimCardsRequestSort `json:"sort,omitempty"`
 	// MSISDN

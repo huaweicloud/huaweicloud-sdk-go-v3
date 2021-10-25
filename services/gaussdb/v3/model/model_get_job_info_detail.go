@@ -31,9 +31,8 @@ type GetJobInfoDetail struct {
 	Process *string `json:"process,omitempty"`
 
 	Instance *GetJobInstanceInfoDetail `json:"instance"`
-	// 根据不同的任务，显示不同的内容。
 
-	Entities map[string]GetJobEntitiesObjectDetail `json:"entities,omitempty"`
+	Entities *GetJobEntitiesInfoDetail `json:"entities,omitempty"`
 	// 任务执行失败时的错误信息。
 
 	FailReason *string `json:"fail_reason,omitempty"`

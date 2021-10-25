@@ -52,6 +52,9 @@ type ProPricePlanVo struct {
 	// 运营商 101/1 中国移动/中国移动（实体卡） 102/2中国电信/中国电信（实体卡） 3中国联通（实体卡） 201.欧洲 501.中国香港 502.中国澳门 503.泰国 504.日本 505.柬埔寨 506.印度尼西亚 507.马来西亚 508.新加坡 509.斯里兰卡 510.中国台湾 511.孟加拉
 
 	CarrierType *int32 `json:"carrier_type,omitempty"`
+	// 价格(元)
+
+	Price *int32 `json:"price,omitempty"`
 }
 
 func (o ProPricePlanVo) String() string {

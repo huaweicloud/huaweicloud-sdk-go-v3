@@ -20,10 +20,13 @@ type ShowSimCardResponse struct {
 	// 流量池ID
 
 	SimPoolId *int64 `json:"sim_pool_id,omitempty"`
+	// sn
+
+	Sn *string `json:"sn,omitempty"`
 	// 设备IMEI
 
 	Imei *string `json:"imei,omitempty"`
-	// sim卡状态
+	// sim卡状态：  10.可测试  11.未激活  13.可激活  14.已停用  20.在用  30.已拆机
 
 	SimStatus *int32 `json:"sim_status,omitempty"`
 	// 设备状态
@@ -38,24 +41,33 @@ type ShowSimCardResponse struct {
 	// 设备状态变更时间 例如2020-01-31T16:00:00.000Z
 
 	DeviceStatusDate *string `json:"device_status_date,omitempty"`
+	// 供应商代码
+
+	SupplyCode *string `json:"supply_code,omitempty"`
 	// 设备标识
 
 	NodeId *string `json:"node_id,omitempty"`
 	// 码号iccid
 
 	Iccid *string `json:"iccid,omitempty"`
+	// 码号对应的bundle
+
+	BundleId *string `json:"bundle_id,omitempty"`
 	// 网络类型
 
 	NetworkType *string `json:"network_type,omitempty"`
 	// 信号强度
 
 	Dbm *string `json:"dbm,omitempty"`
-	// 信号等级: 1.差  2.良  3.良 4.优
+	// 信号等级:1.差  2.良  3.良 4.优（该参数只有eSIM,vSIM返回，实体卡不返回）
 
 	SignalLevel *string `json:"signal_level,omitempty"`
 	// sim卡类型 1.vSIM  2.eSIM  3.实体卡
 
 	SimType *int32 `json:"sim_type,omitempty"`
+	// 是否测试卡
+
+	TestType *bool `json:"test_type,omitempty"`
 	// 标签名
 
 	TagNames *string `json:"tag_names,omitempty"`
@@ -77,7 +89,7 @@ type ShowSimCardResponse struct {
 	// 已用流量(单位M)，数据默认截止到昨日24点。
 
 	FlowUsed *float64 `json:"flow_used,omitempty"`
-	// 运营商状态 1.停机（超流量停机） 2.停机（超流量阈值停机） 3.停机（流量池停机） 4.停机（套餐到期停机） 5.停机（主动停机） 6.停机（违规停机）
+	// 运营商状态 -1.正常（非停机状态） 1.停机（超流量停机） 2.停机（超流量阈值停机） 3.停机（流量池停机） 4.停机（套餐到期停机） 5.停机（主动停机） 6.停机（违规停机）
 
 	OperatorStatus *int32 `json:"operator_status,omitempty"`
 	// MSISDN

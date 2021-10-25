@@ -358,6 +358,17 @@ func GenReqDefForShowBlockchainDetail() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowBlockchainFlavors() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/blockchains/flavors").
+		WithResponse(new(model.ShowBlockchainFlavorsResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowBlockchainNodes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

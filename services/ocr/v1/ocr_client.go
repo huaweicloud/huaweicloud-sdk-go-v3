@@ -74,6 +74,17 @@ func (c *OcrClient) RecognizeDriverLicense(request *model.RecognizeDriverLicense
 	}
 }
 
+//识别用户上传的表格图片中的文字内容，并将识别的结果返回给用户。
+func (c *OcrClient) RecognizeFinancialStatement(request *model.RecognizeFinancialStatementRequest) (*model.RecognizeFinancialStatementResponse, error) {
+	requestDef := GenReqDefForRecognizeFinancialStatement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeFinancialStatementResponse), nil
+	}
+}
+
 //识别飞机行程单中的文字信息，并返回识别的结构化结果。  说明：  如果图片中包含多张卡证票据，请调用智能分类识别服务。
 func (c *OcrClient) RecognizeFlightItinerary(request *model.RecognizeFlightItineraryRequest) (*model.RecognizeFlightItineraryResponse, error) {
 	requestDef := GenReqDefForRecognizeFlightItinerary()
@@ -129,6 +140,17 @@ func (c *OcrClient) RecognizeIdCard(request *model.RecognizeIdCardRequest) (*mod
 	}
 }
 
+//识别保险单图片上的文字信息，并将识别的结构化结果返回给用户。支持对多板式保险单的扫描图片及手机照片进行结构化信息提取。
+func (c *OcrClient) RecognizeInsurancePolicy(request *model.RecognizeInsurancePolicyRequest) (*model.RecognizeInsurancePolicyResponse, error) {
+	requestDef := GenReqDefForRecognizeInsurancePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeInsurancePolicyResponse), nil
+	}
+}
+
 //发票验真服务支持9种增值税发票的信息核验，包括增值税专用发票、增值税普通发票、增值税普通发票（卷式）、增值税电子专用发票、增值税电子普通发票、增值税电子普通发票（通行费）、二手车销售统一发票、机动车销售统一发票、区块链电子发票，支持返回票面的全部信息。该接口的使用限制请参见[约束与限制](https://support.huaweicloud.com/productdesc-ocr/ocr_01_0006.html)，详细使用指导请参见[OCR服务使用简介](https://support.huaweicloud.com/qs-ocr/ocr_05_0001.html)章节。
 func (c *OcrClient) RecognizeInvoiceVerification(request *model.RecognizeInvoiceVerificationRequest) (*model.RecognizeInvoiceVerificationResponse, error) {
 	requestDef := GenReqDefForRecognizeInvoiceVerification()
@@ -170,6 +192,17 @@ func (c *OcrClient) RecognizePassport(request *model.RecognizePassportRequest) (
 		return nil, err
 	} else {
 		return resp.(*model.RecognizePassportResponse), nil
+	}
+}
+
+//识别道路运输从业资格证上的关键文字信息，并返回识别的结构化结果。  说明：  如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=OCR&api=AutoClassification)服务。
+func (c *OcrClient) RecognizeQualificationCertificate(request *model.RecognizeQualificationCertificateRequest) (*model.RecognizeQualificationCertificateResponse, error) {
+	requestDef := GenReqDefForRecognizeQualificationCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeQualificationCertificateResponse), nil
 	}
 }
 

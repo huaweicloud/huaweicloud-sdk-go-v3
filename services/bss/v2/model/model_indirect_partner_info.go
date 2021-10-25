@@ -22,9 +22,15 @@ type IndirectPartnerInfo struct {
 	// 精英服务商的名称。
 
 	Name *string `json:"name,omitempty"`
-	// 精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），比如2016-03-28T00:00:00Z
+	// 精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
 
 	AssociatedOn *string `json:"associated_on,omitempty"`
+	// 客户经理ID。
+
+	AccountManagerId *string `json:"account_manager_id,omitempty"`
+	// 客户经理的名称。
+
+	AccountManagerName *string `json:"account_manager_name,omitempty"`
 }
 
 func (o IndirectPartnerInfo) String() string {

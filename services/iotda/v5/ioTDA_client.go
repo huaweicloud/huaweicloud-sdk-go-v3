@@ -140,7 +140,7 @@ func (c *IoTDAClient) ShowAsyncDeviceCommand(request *model.ShowAsyncDeviceComma
 	}
 }
 
-//应用服务器可调用此接口为创建批量处理任务，对多个设备进行批量操作。当前支持批量软固件升级、批量创建设备、批量删除设备、批量冻结设备、批量解冻设备、批量创建命令任务。
+//应用服务器可调用此接口为创建批量处理任务，对多个设备进行批量操作。当前支持批量软固件升级、批量创建设备、批量删除设备、批量冻结设备、批量解冻设备、批量创建命令、批量创建消息任务。
 func (c *IoTDAClient) CreateBatchTask(request *model.CreateBatchTaskRequest) (*model.CreateBatchTaskResponse, error) {
 	requestDef := GenReqDefForCreateBatchTask()
 
@@ -448,7 +448,7 @@ func (c *IoTDAClient) CreateMessage(request *model.CreateMessageRequest) (*model
 	}
 }
 
-//物联网平台可查询指定设备下的消息，平台为每个设备默认最多保存20条消息，超过20条后， 后续的消息会替换下发最早的消息。
+//物联网平台可查询指定设备下发的消息，平台为每个设备默认最多保存20条消息，超过20条后， 后续的消息会替换下发最早的消息。
 func (c *IoTDAClient) ListDeviceMessages(request *model.ListDeviceMessagesRequest) (*model.ListDeviceMessagesResponse, error) {
 	requestDef := GenReqDefForListDeviceMessages()
 
@@ -459,7 +459,7 @@ func (c *IoTDAClient) ListDeviceMessages(request *model.ListDeviceMessagesReques
 	}
 }
 
-//物联网平台可查询指定消息id的消息。
+//物联网平台可查询设备下发的指定消息id的消息。
 func (c *IoTDAClient) ShowDeviceMessage(request *model.ShowDeviceMessageRequest) (*model.ShowDeviceMessageResponse, error) {
 	requestDef := GenReqDefForShowDeviceMessage()
 
@@ -525,7 +525,7 @@ func (c *IoTDAClient) UpdateProduct(request *model.UpdateProductRequest) (*model
 	}
 }
 
-//设备的产品模型中定义了物联网平台可向设备下发的属性，应用服务器可调用此接口查询指定设备下属性。注意：此接口适用于MQTT设备，暂不支持NB-IoT设备。
+//设备的产品模型中定义了物联网平台可向设备下发的属性，应用服务器可调用此接口向设备发送指令用以查询设备的实时属性, 并由设备将属性查询的结果同步返回给应用服务器。注意：此接口适用于MQTT设备，暂不支持NB-IoT设备。
 func (c *IoTDAClient) ListProperties(request *model.ListPropertiesRequest) (*model.ListPropertiesResponse, error) {
 	requestDef := GenReqDefForListProperties()
 

@@ -110,6 +110,12 @@ type InstanceResponse struct {
 	// 实例的备注信息。
 
 	Alias *string `json:"alias,omitempty"`
+	// 实例磁盘的最大IOPS值。  当前该字段仅对于SQL Server引擎实例返回。
+
+	MaxIops *int64 `json:"max_iops,omitempty"`
+	// 实例的到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  仅包周期场景返回。
+
+	ExpirationTime *string `json:"expiration_time,omitempty"`
 }
 
 func (o InstanceResponse) String() string {

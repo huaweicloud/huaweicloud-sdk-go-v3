@@ -16,6 +16,9 @@ type AddFacesUrlReq struct {
 	// 用户指定的图片外部ID，与当前图像绑定。用户没提供，系统会生成一个。 该ID长度范围为1～36位，可以包含字母、数字、中划线或者下划线，不包含其他的特殊字符。
 
 	ExternalImageId *string `json:"external_image_id,omitempty"`
+	// 是否将图片中的最大人脸添加至人脸库。可选值包括: • true: 传入的单张图片中如果包含多张人脸，则只将最大人脸添加到人脸库中。 • false: 默认为false。传入的单张图片中如果包含多张人脸，则将所有人脸添加至人脸库中。
+
+	Single *bool `json:"single,omitempty"`
 }
 
 func (o AddFacesUrlReq) String() string {

@@ -85,6 +85,17 @@ func (c *DnsClient) ShowApiInfo(request *model.ShowApiInfoRequest) (*model.ShowA
 	}
 }
 
+//查询单租户在DNS服务下的资源配额，包括公网zone配额、内网zone配额、Record Set配额、PTR Record配额、入站终端节点配额、出站终端节点配额、自定义线路配额、线路分组配额等。
+func (c *DnsClient) ShowDomainQuota(request *model.ShowDomainQuotaRequest) (*model.ShowDomainQuotaResponse, error) {
+	requestDef := GenReqDefForShowDomainQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainQuotaResponse), nil
+	}
+}
+
 //更新单个自定义线路
 func (c *DnsClient) UpdateCustomLine(request *model.UpdateCustomLineRequest) (*model.UpdateCustomLineResponse, error) {
 	requestDef := GenReqDefForUpdateCustomLine()

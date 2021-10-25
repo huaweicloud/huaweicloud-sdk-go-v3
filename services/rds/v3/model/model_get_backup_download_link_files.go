@@ -19,6 +19,9 @@ type GetBackupDownloadLinkFiles struct {
 	// 下载链接过期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，例如北京时间偏移显示为+0800。
 
 	LinkExpiredTime string `json:"link_expired_time"`
+	// 数据库名。若文件不是数据库备份，则返回空
+
+	DatabaseName string `json:"database_name"`
 }
 
 func (o GetBackupDownloadLinkFiles) String() string {

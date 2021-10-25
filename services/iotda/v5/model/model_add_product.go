@@ -23,7 +23,7 @@ type AddProduct struct {
 	// **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式 默认值json。
 
 	DataFormat string `json:"data_format"`
-	// **参数说明**：设备的服务能力列表。
+	// **参数说明**：设备的服务能力列表。 **取值范围**：数组长度大小不超过500，内容大小不超过500k。
 
 	ServiceCapabilities []ServiceCapability `json:"service_capabilities"`
 	// **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。

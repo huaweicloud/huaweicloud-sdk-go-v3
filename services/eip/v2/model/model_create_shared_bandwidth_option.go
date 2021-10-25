@@ -26,6 +26,9 @@ type CreateSharedBandwidthOption struct {
 	// 功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
 
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
+	// 功能说明：指定带宽类型创建，默认中心站点为share，边缘站点为edgeshare 取值范围： 查询当前租户可见的带宽类型列表获取
+
+	BandwidthType *string `json:"bandwidth_type,omitempty"`
 }
 
 func (o CreateSharedBandwidthOption) String() string {

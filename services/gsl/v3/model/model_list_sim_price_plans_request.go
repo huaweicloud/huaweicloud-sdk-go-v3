@@ -11,6 +11,9 @@ type ListSimPricePlansRequest struct {
 	// SIM卡标识，可通过[查询SIM卡列表接口](https://support.huaweicloud.com/api-ocgsl/gsl_07_0008.html)获取
 
 	SimCardId int64 `json:"sim_card_id"`
+	// 套餐实例ID
+
+	SimPricePlanId *int64 `json:"sim_price_plan_id,omitempty"`
 	// 是否查实时流量
 
 	RealTime *bool `json:"real_time,omitempty"`

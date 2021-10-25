@@ -19,7 +19,7 @@ func FrsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//添加人脸到人脸库中，检测到传入的单张图片中存在多少张人脸，则增加多少张人脸到人脸库当中。
+//添加人脸到人脸库中。将单张图片中的人脸添加至人脸库中，支持添加最大人脸或所有人脸。
 func (c *FrsClient) AddFacesByBase64(request *model.AddFacesByBase64Request) (*model.AddFacesByBase64Response, error) {
 	requestDef := GenReqDefForAddFacesByBase64()
 
@@ -30,7 +30,7 @@ func (c *FrsClient) AddFacesByBase64(request *model.AddFacesByBase64Request) (*m
 	}
 }
 
-//添加人脸到人脸库中，检测到传入的单张图片中存在多少张人脸，则增加多少张人脸到人脸库当中。
+//添加人脸到人脸库中。将单张图片中的人脸添加至人脸库中，支持添加最大人脸或所有人脸。
 func (c *FrsClient) AddFacesByFile(request *model.AddFacesByFileRequest) (*model.AddFacesByFileResponse, error) {
 	requestDef := GenReqDefForAddFacesByFile()
 
@@ -41,7 +41,7 @@ func (c *FrsClient) AddFacesByFile(request *model.AddFacesByFileRequest) (*model
 	}
 }
 
-//添加人脸到人脸库中，检测到传入的单张图片中存在多少张人脸，则增加多少张人脸到人脸库当中。
+//添加人脸到人脸库中。将单张图片中的人脸添加至人脸库中，支持添加最大人脸或所有人脸。
 func (c *FrsClient) AddFacesByUrl(request *model.AddFacesByUrlRequest) (*model.AddFacesByUrlResponse, error) {
 	requestDef := GenReqDefForAddFacesByUrl()
 

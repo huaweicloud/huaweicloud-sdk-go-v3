@@ -228,6 +228,17 @@ func (c *BcsClient) ShowBlockchainDetail(request *model.ShowBlockchainDetailRequ
 	}
 }
 
+//查询服务联盟链规格信息
+func (c *BcsClient) ShowBlockchainFlavors(request *model.ShowBlockchainFlavorsRequest) (*model.ShowBlockchainFlavorsResponse, error) {
+	requestDef := GenReqDefForShowBlockchainFlavors()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBlockchainFlavorsResponse), nil
+	}
+}
+
 //查询指定服务实例节点信息
 func (c *BcsClient) ShowBlockchainNodes(request *model.ShowBlockchainNodesRequest) (*model.ShowBlockchainNodesResponse, error) {
 	requestDef := GenReqDefForShowBlockchainNodes()

@@ -195,17 +195,6 @@ func (c *SmsClient) RegisterServer(request *model.RegisterServerRequest) (*model
 	}
 }
 
-//当源端服务器为Windows操作系统时，安装在源端服务器上的迁移Agent通过SSLSocket同目的端服务器通信，该接口用于下载目的端服务器所需要的证书和私钥(PEM格式)。
-func (c *SmsClient) ShowCertKey(request *model.ShowCertKeyRequest) (*model.ShowCertKeyResponse, error) {
-	requestDef := GenReqDefForShowCertKey()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowCertKeyResponse), nil
-	}
-}
-
 //迁移Agent调用该接口从SMS服务端获取下发给指定源端迁移Agent的命令。
 func (c *SmsClient) ShowCommand(request *model.ShowCommandRequest) (*model.ShowCommandResponse, error) {
 	requestDef := GenReqDefForShowCommand()
@@ -371,7 +360,7 @@ func (c *SmsClient) UpdateTask(request *model.UpdateTaskRequest) (*model.UpdateT
 	}
 }
 
-//此接口由安装在源端服务器上的迁移Agent在数据迁移阶段调用，用来将迁移的具体进度上报给SMS服务端。  迁移Agent自动调用此接口用于上报数据迁移进度，您无需调用此接口。
+//此接口由安装在源端服务器上的迁移Agent在数据迁移阶段调用，用来将迁移的具体进度上报给SMS服务端。   迁移Agent自动调用此接口用于上报数据迁移进度，您无需调用此接口。
 func (c *SmsClient) UpdateTaskSpeed(request *model.UpdateTaskSpeedRequest) (*model.UpdateTaskSpeedResponse, error) {
 	requestDef := GenReqDefForUpdateTaskSpeed()
 

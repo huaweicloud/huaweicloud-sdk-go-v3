@@ -6,9 +6,11 @@ import (
 )
 
 var CN_NORTH_1 = region.NewRegion("cn-north-1", "https://cdn.myhuaweicloud.com")
+var AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1", "https://cdn.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
-	"cn-north-1": CN_NORTH_1,
+	"cn-north-1":     CN_NORTH_1,
+	"ap-southeast-1": AP_SOUTHEAST_1,
 }
 
 func ValueOf(regionId string) *region.Region {

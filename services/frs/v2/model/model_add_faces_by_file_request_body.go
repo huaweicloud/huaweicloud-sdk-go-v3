@@ -4,6 +4,10 @@ import (
 	"encoding/json"
 
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"os"
+	"reflect"
+
 	"strings"
 )
 
@@ -16,6 +20,9 @@ type AddFacesByFileRequestBody struct {
 
 	// 根据用户自定义数据类型，填入相应的数值。 创建faceset时定义该字段，Json字符串不校验重复性，参考[自定义字段](https://support.huaweicloud.com/api-face/face_02_0012.html)。
 	ExternalFields *def.MultiPart `json:"external_fields,omitempty"`
+
+	// 是否将图片中的最大人脸添加至人脸库。可选值包括: • true: 传入的单张图片中如果包含多张人脸，则只将最大人脸添加到人脸库中。 • false: 默认为false。传入的单张图片中如果包含多张人脸，则将所有人脸添加至人脸库中。
+	Single *def.MultiPart `json:"single,omitempty"`
 }
 
 func (o AddFacesByFileRequestBody) String() string {
@@ -25,4 +32,35 @@ func (o AddFacesByFileRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"AddFacesByFileRequestBody", string(data)}, " ")
+}
+
+func (o *AddFacesByFileRequestBody) UnmarshalJSON(b []byte) error {
+	m := make(map[string]interface{})
+	err := json.Unmarshal(b, &m)
+	if err != nil {
+		return err
+	}
+	t := reflect.TypeOf(o).Elem()
+	v := reflect.ValueOf(o).Elem()
+	count := v.NumField()
+	for i := 0; i < count; i++ {
+		jsonTag := t.Field(i).Tag.Get("json")
+		jsonName := strings.Split(jsonTag, ",")[0]
+		if m[jsonName] == nil && strings.Contains(jsonTag, "omitempty") {
+			continue
+		}
+		field := v.FieldByName(utils.UnderscoreToCamel(jsonName))
+		switch v.Field(i).Interface().(type) {
+		case *def.FilePart:
+			filePath := m[jsonName].(string)
+			file, err := os.Open(filePath)
+			if err != nil {
+				return err
+			}
+			field.Set(reflect.ValueOf(def.NewFilePart(file)))
+		case *def.MultiPart:
+			field.Set(reflect.ValueOf(def.NewMultiPart(m[jsonName])))
+		}
+	}
+	return nil
 }

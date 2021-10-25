@@ -20,6 +20,9 @@ type ListProPricePlansRequest struct {
 	// 流量总量(MB)
 
 	FlowTotal *int64 `json:"flow_total,omitempty"`
+	// 网络制式
+
+	NetworkType *int64 `json:"network_type,omitempty"`
 	// 覆盖区域:1.  中国 2.  欧洲 3.  大洋洲 4.  非洲 5.  亚太
 
 	LocationType *int64 `json:"location_type,omitempty"`
@@ -29,6 +32,18 @@ type ListProPricePlansRequest struct {
 	// 国家/地区 1中国香港，2中国澳门，3泰国，4日本，5，柬埔寨，6印尼，7马来西亚，8新加坡，9斯里兰卡，10中国台湾，11孟加拉
 
 	CountryType *int64 `json:"country_type,omitempty"`
+	// sim card id sim卡标识
+
+	SimCardId *int64 `json:"sim_card_id,omitempty"`
+	// 伙伴
+
+	Partner *int32 `json:"partner,omitempty"`
+	// 套餐类型
+
+	PackageType *int32 `json:"package_type,omitempty"`
+	// 适用SIM卡类型
+
+	SimType *int32 `json:"sim_type,omitempty"`
 }
 
 func (o ListProPricePlansRequest) String() string {
