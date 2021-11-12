@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -43,7 +43,7 @@ type ProfileInfo struct {
 }
 
 func (o ProfileInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ProfileInfo struct{}"
 	}
@@ -84,7 +84,7 @@ func GetProfileInfoNotifyStatusEnum() ProfileInfoNotifyStatusEnum {
 }
 
 func (c ProfileInfoNotifyStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ProfileInfoNotifyStatus) UnmarshalJSON(b []byte) error {
@@ -118,7 +118,7 @@ func GetProfileInfoCreateSourceEnum() ProfileInfoCreateSourceEnum {
 }
 
 func (c ProfileInfoCreateSource) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ProfileInfoCreateSource) UnmarshalJSON(b []byte) error {
@@ -156,7 +156,7 @@ func GetProfileInfoFreezedStatusEnum() ProfileInfoFreezedStatusEnum {
 }
 
 func (c ProfileInfoFreezedStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ProfileInfoFreezedStatus) UnmarshalJSON(b []byte) error {

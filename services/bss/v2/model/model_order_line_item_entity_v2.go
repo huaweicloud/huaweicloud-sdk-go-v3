@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -57,7 +57,7 @@ type OrderLineItemEntityV2 struct {
 }
 
 func (o OrderLineItemEntityV2) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "OrderLineItemEntityV2 struct{}"
 	}

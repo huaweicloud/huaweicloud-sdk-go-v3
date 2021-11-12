@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -20,10 +20,13 @@ type JobEntities struct {
 	// 任务执行进度
 
 	ProcessPercent *float64 `json:"process_percent,omitempty"`
+	// 批量任务执行结果
+
+	Results *[]JobEntitiesResult `json:"results,omitempty"`
 }
 
 func (o JobEntities) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "JobEntities struct{}"
 	}

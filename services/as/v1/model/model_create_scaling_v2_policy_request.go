@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -12,7 +12,7 @@ type CreateScalingV2PolicyRequest struct {
 }
 
 func (o CreateScalingV2PolicyRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateScalingV2PolicyRequest struct{}"
 	}

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -26,7 +26,7 @@ type DeleteJobResp struct {
 }
 
 func (o DeleteJobResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DeleteJobResp struct{}"
 	}
@@ -55,7 +55,7 @@ func GetDeleteJobRespStatusEnum() DeleteJobRespStatusEnum {
 }
 
 func (c DeleteJobRespStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DeleteJobRespStatus) UnmarshalJSON(b []byte) error {

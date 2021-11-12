@@ -27,12 +27,20 @@ func GenReqDefForListBandwidthDetail() *def.HttpRequestDef {
 		WithJsonTag("stream").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Country").
+		WithJsonTag("country").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Region").
 		WithJsonTag("region").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Isp").
 		WithJsonTag("isp").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Protocol").
+		WithJsonTag("protocol").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Interval").
@@ -85,6 +93,10 @@ func GenReqDefForListDomainBandwidthPeak() *def.HttpRequestDef {
 		WithJsonTag("isp").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Protocol").
+		WithJsonTag("protocol").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StartTime").
 		WithJsonTag("start_time").
 		WithLocationType(def.Query))
@@ -129,6 +141,10 @@ func GenReqDefForListDomainTrafficDetail() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Isp").
 		WithJsonTag("isp").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Protocol").
+		WithJsonTag("protocol").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Interval").
@@ -181,6 +197,10 @@ func GenReqDefForListDomainTrafficSummary() *def.HttpRequestDef {
 		WithJsonTag("isp").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Protocol").
+		WithJsonTag("protocol").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StartTime").
 		WithJsonTag("start_time").
 		WithLocationType(def.Query))
@@ -213,6 +233,18 @@ func GenReqDefForListHistoryStreams() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("App").
 		WithJsonTag("app").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Stream").
+		WithJsonTag("stream").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StartTime").
+		WithJsonTag("start_time").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EndTime").
+		WithJsonTag("end_time").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
@@ -343,6 +375,10 @@ func GenReqDefForListTranscodeData() *def.HttpRequestDef {
 		WithJsonTag("publish_domain").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Stream").
+		WithJsonTag("stream").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StartTime").
 		WithJsonTag("start_time").
 		WithLocationType(def.Query))
@@ -385,8 +421,16 @@ func GenReqDefForListUsersOfStream() *def.HttpRequestDef {
 		WithJsonTag("isp").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Country").
+		WithJsonTag("country").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Region").
 		WithJsonTag("region").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Protocol").
+		WithJsonTag("protocol").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Interval").

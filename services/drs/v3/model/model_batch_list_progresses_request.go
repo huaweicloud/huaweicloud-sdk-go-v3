@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -19,7 +19,7 @@ type BatchListProgressesRequest struct {
 }
 
 func (o BatchListProgressesRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BatchListProgressesRequest struct{}"
 	}
@@ -48,7 +48,7 @@ func GetBatchListProgressesRequestXLanguageEnum() BatchListProgressesRequestXLan
 }
 
 func (c BatchListProgressesRequestXLanguage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchListProgressesRequestXLanguage) UnmarshalJSON(b []byte) error {

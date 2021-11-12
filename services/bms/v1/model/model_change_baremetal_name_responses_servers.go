@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -142,7 +142,7 @@ type ChangeBaremetalNameResponsesServers struct {
 }
 
 func (o ChangeBaremetalNameResponsesServers) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ChangeBaremetalNameResponsesServers struct{}"
 	}
@@ -195,7 +195,7 @@ func GetChangeBaremetalNameResponsesServersStatusEnum() ChangeBaremetalNameRespo
 }
 
 func (c ChangeBaremetalNameResponsesServersStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ChangeBaremetalNameResponsesServersStatus) UnmarshalJSON(b []byte) error {
@@ -233,7 +233,7 @@ func GetChangeBaremetalNameResponsesServersOSDCFdiskConfigEnum() ChangeBaremetal
 }
 
 func (c ChangeBaremetalNameResponsesServersOSDCFdiskConfig) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ChangeBaremetalNameResponsesServersOSDCFdiskConfig) UnmarshalJSON(b []byte) error {
@@ -295,7 +295,7 @@ func GetChangeBaremetalNameResponsesServersOSEXTSTStaskStateEnum() ChangeBaremet
 }
 
 func (c ChangeBaremetalNameResponsesServersOSEXTSTStaskState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ChangeBaremetalNameResponsesServersOSEXTSTStaskState) UnmarshalJSON(b []byte) error {
@@ -341,7 +341,7 @@ func GetChangeBaremetalNameResponsesServersOSEXTSTSvmStateEnum() ChangeBaremetal
 }
 
 func (c ChangeBaremetalNameResponsesServersOSEXTSTSvmState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ChangeBaremetalNameResponsesServersOSEXTSTSvmState) UnmarshalJSON(b []byte) error {
@@ -387,7 +387,7 @@ func GetChangeBaremetalNameResponsesServersHostStatusEnum() ChangeBaremetalNameR
 }
 
 func (c ChangeBaremetalNameResponsesServersHostStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ChangeBaremetalNameResponsesServersHostStatus) UnmarshalJSON(b []byte) error {

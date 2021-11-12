@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -19,7 +19,7 @@ type GetServerRemoteConsoleOption struct {
 }
 
 func (o GetServerRemoteConsoleOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "GetServerRemoteConsoleOption struct{}"
 	}
@@ -44,7 +44,7 @@ func GetGetServerRemoteConsoleOptionProtocolEnum() GetServerRemoteConsoleOptionP
 }
 
 func (c GetServerRemoteConsoleOptionProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GetServerRemoteConsoleOptionProtocol) UnmarshalJSON(b []byte) error {
@@ -78,7 +78,7 @@ func GetGetServerRemoteConsoleOptionTypeEnum() GetServerRemoteConsoleOptionTypeE
 }
 
 func (c GetServerRemoteConsoleOptionType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GetServerRemoteConsoleOptionType) UnmarshalJSON(b []byte) error {

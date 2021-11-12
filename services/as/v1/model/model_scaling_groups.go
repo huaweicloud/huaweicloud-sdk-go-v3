@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -106,7 +106,7 @@ type ScalingGroups struct {
 }
 
 func (o ScalingGroups) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ScalingGroups struct{}"
 	}
@@ -147,7 +147,7 @@ func GetScalingGroupsScalingGroupStatusEnum() ScalingGroupsScalingGroupStatusEnu
 }
 
 func (c ScalingGroupsScalingGroupStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScalingGroupsScalingGroupStatus) UnmarshalJSON(b []byte) error {
@@ -185,7 +185,7 @@ func GetScalingGroupsHealthPeriodicAuditMethodEnum() ScalingGroupsHealthPeriodic
 }
 
 func (c ScalingGroupsHealthPeriodicAuditMethod) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScalingGroupsHealthPeriodicAuditMethod) UnmarshalJSON(b []byte) error {
@@ -231,7 +231,7 @@ func GetScalingGroupsInstanceTerminatePolicyEnum() ScalingGroupsInstanceTerminat
 }
 
 func (c ScalingGroupsInstanceTerminatePolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScalingGroupsInstanceTerminatePolicy) UnmarshalJSON(b []byte) error {

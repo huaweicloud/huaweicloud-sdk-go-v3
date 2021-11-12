@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -14,7 +14,7 @@ type UpdateUserOption struct {
 	// 新IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
 
 	Name *string `json:"name,omitempty"`
-	// IAM用户新密码。   - 系统默认密码最小长度为6字符，在6-32字符之间支持用户自定义密码长度。   - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。   - 必须满足账户设置中[密码策略](https://support.huaweicloud.com/usermanual-iam/iam_01_0607.html)的要求。   - 新密码不能与当前密码相同。
+	// IAM用户新密码。 - 系统默认密码最小长度为6字符，在6-32字符之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 必须满足账户设置中[密码策略](https://support.huaweicloud.com/usermanual-iam/iam_01_0607.html)的要求。 - 新密码不能与当前密码相同。
 
 	Password *string `json:"password,omitempty"`
 	// IAM用户新邮箱，需符合邮箱格式，长度小于等于255字符。
@@ -44,7 +44,7 @@ type UpdateUserOption struct {
 }
 
 func (o UpdateUserOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateUserOption struct{}"
 	}

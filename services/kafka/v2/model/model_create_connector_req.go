@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -22,7 +22,7 @@ type CreateConnectorReq struct {
 }
 
 func (o CreateConnectorReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateConnectorReq struct{}"
 	}
@@ -59,7 +59,7 @@ func GetCreateConnectorReqSpecificationEnum() CreateConnectorReqSpecificationEnu
 }
 
 func (c CreateConnectorReqSpecification) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateConnectorReqSpecification) UnmarshalJSON(b []byte) error {

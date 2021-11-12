@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -28,7 +28,7 @@ type DecryptDataRequestBody struct {
 }
 
 func (o DecryptDataRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DecryptDataRequestBody struct{}"
 	}
@@ -65,7 +65,7 @@ func GetDecryptDataRequestBodyEncryptionAlgorithmEnum() DecryptDataRequestBodyEn
 }
 
 func (c DecryptDataRequestBodyEncryptionAlgorithm) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DecryptDataRequestBodyEncryptionAlgorithm) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -22,7 +22,7 @@ type StartInstanceSingleToHaActionRequest struct {
 }
 
 func (o StartInstanceSingleToHaActionRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "StartInstanceSingleToHaActionRequest struct{}"
 	}
@@ -51,7 +51,7 @@ func GetStartInstanceSingleToHaActionRequestXLanguageEnum() StartInstanceSingleT
 }
 
 func (c StartInstanceSingleToHaActionRequestXLanguage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *StartInstanceSingleToHaActionRequestXLanguage) UnmarshalJSON(b []byte) error {

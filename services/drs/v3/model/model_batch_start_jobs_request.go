@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -19,7 +19,7 @@ type BatchStartJobsRequest struct {
 }
 
 func (o BatchStartJobsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BatchStartJobsRequest struct{}"
 	}
@@ -48,7 +48,7 @@ func GetBatchStartJobsRequestXLanguageEnum() BatchStartJobsRequestXLanguageEnum 
 }
 
 func (c BatchStartJobsRequestXLanguage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchStartJobsRequestXLanguage) UnmarshalJSON(b []byte) error {

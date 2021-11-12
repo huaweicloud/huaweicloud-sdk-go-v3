@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -74,7 +74,7 @@ type CreateInstanceReq struct {
 }
 
 func (o CreateInstanceReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateInstanceReq struct{}"
 	}
@@ -99,7 +99,7 @@ func GetCreateInstanceReqEngineEnum() CreateInstanceReqEngineEnum {
 }
 
 func (c CreateInstanceReqEngine) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateInstanceReqEngine) UnmarshalJSON(b []byte) error {
@@ -133,7 +133,7 @@ func GetCreateInstanceReqEngineVersionEnum() CreateInstanceReqEngineVersionEnum 
 }
 
 func (c CreateInstanceReqEngineVersion) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateInstanceReqEngineVersion) UnmarshalJSON(b []byte) error {
@@ -175,7 +175,7 @@ func GetCreateInstanceReqStorageSpecCodeEnum() CreateInstanceReqStorageSpecCodeE
 }
 
 func (c CreateInstanceReqStorageSpecCode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateInstanceReqStorageSpecCode) UnmarshalJSON(b []byte) error {

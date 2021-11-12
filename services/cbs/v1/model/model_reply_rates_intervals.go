@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -53,7 +53,7 @@ type ReplyRatesIntervals struct {
 }
 
 func (o ReplyRatesIntervals) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ReplyRatesIntervals struct{}"
 	}

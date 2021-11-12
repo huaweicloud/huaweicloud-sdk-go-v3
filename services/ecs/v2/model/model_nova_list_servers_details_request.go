@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -53,7 +53,7 @@ type NovaListServersDetailsRequest struct {
 }
 
 func (o NovaListServersDetailsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "NovaListServersDetailsRequest struct{}"
 	}
@@ -118,7 +118,7 @@ func GetNovaListServersDetailsRequestSortKeyEnum() NovaListServersDetailsRequest
 }
 
 func (c NovaListServersDetailsRequestSortKey) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NovaListServersDetailsRequestSortKey) UnmarshalJSON(b []byte) error {
@@ -204,7 +204,7 @@ func GetNovaListServersDetailsRequestStatusEnum() NovaListServersDetailsRequestS
 }
 
 func (c NovaListServersDetailsRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NovaListServersDetailsRequestStatus) UnmarshalJSON(b []byte) error {

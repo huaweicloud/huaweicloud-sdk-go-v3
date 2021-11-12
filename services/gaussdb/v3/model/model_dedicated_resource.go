@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -34,7 +34,7 @@ type DedicatedResource struct {
 }
 
 func (o DedicatedResource) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DedicatedResource struct{}"
 	}
@@ -71,7 +71,7 @@ func GetDedicatedResourceStatusEnum() DedicatedResourceStatusEnum {
 }
 
 func (c DedicatedResourceStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DedicatedResourceStatus) UnmarshalJSON(b []byte) error {

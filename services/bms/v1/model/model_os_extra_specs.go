@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -53,7 +53,7 @@ type OsExtraSpecs struct {
 }
 
 func (o OsExtraSpecs) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "OsExtraSpecs struct{}"
 	}
@@ -78,7 +78,7 @@ func GetOsExtraSpecsResourceTypeEnum() OsExtraSpecsResourceTypeEnum {
 }
 
 func (c OsExtraSpecsResourceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OsExtraSpecsResourceType) UnmarshalJSON(b []byte) error {
@@ -116,7 +116,7 @@ func GetOsExtraSpecsCapabilitiescpuArchEnum() OsExtraSpecsCapabilitiescpuArchEnu
 }
 
 func (c OsExtraSpecsCapabilitiescpuArch) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OsExtraSpecsCapabilitiescpuArch) UnmarshalJSON(b []byte) error {
@@ -154,7 +154,7 @@ func GetOsExtraSpecsBaremetalextBootTypeEnum() OsExtraSpecsBaremetalextBootTypeE
 }
 
 func (c OsExtraSpecsBaremetalextBootType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OsExtraSpecsBaremetalextBootType) UnmarshalJSON(b []byte) error {
@@ -204,7 +204,7 @@ func GetOsExtraSpecsCondoperationstatusEnum() OsExtraSpecsCondoperationstatusEnu
 }
 
 func (c OsExtraSpecsCondoperationstatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OsExtraSpecsCondoperationstatus) UnmarshalJSON(b []byte) error {

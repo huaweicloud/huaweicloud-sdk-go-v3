@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -44,7 +44,7 @@ type CreateEndpointServiceRequestBody struct {
 }
 
 func (o CreateEndpointServiceRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateEndpointServiceRequestBody struct{}"
 	}
@@ -77,7 +77,7 @@ func GetCreateEndpointServiceRequestBodyServerTypeEnum() CreateEndpointServiceRe
 }
 
 func (c CreateEndpointServiceRequestBodyServerType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateEndpointServiceRequestBodyServerType) UnmarshalJSON(b []byte) error {
@@ -123,7 +123,7 @@ func GetCreateEndpointServiceRequestBodyTcpProxyEnum() CreateEndpointServiceRequ
 }
 
 func (c CreateEndpointServiceRequestBodyTcpProxy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateEndpointServiceRequestBodyTcpProxy) UnmarshalJSON(b []byte) error {

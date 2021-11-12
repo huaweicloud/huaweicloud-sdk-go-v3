@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -49,7 +49,7 @@ type TakeOverTask struct {
 }
 
 func (o TakeOverTask) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "TakeOverTask struct{}"
 	}
@@ -82,7 +82,7 @@ func GetTakeOverTaskStatusEnum() TakeOverTaskStatusEnum {
 }
 
 func (c TakeOverTaskStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *TakeOverTaskStatus) UnmarshalJSON(b []byte) error {

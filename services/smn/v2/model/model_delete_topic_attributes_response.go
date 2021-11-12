@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -15,7 +15,7 @@ type DeleteTopicAttributesResponse struct {
 }
 
 func (o DeleteTopicAttributesResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DeleteTopicAttributesResponse struct{}"
 	}

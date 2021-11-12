@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -22,7 +22,7 @@ type GetParametersForImportRequestBody struct {
 }
 
 func (o GetParametersForImportRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "GetParametersForImportRequestBody struct{}"
 	}
@@ -55,7 +55,7 @@ func GetGetParametersForImportRequestBodyWrappingAlgorithmEnum() GetParametersFo
 }
 
 func (c GetParametersForImportRequestBodyWrappingAlgorithm) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GetParametersForImportRequestBodyWrappingAlgorithm) UnmarshalJSON(b []byte) error {

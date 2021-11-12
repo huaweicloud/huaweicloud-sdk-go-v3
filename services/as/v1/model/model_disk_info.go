@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -34,7 +34,7 @@ type DiskInfo struct {
 }
 
 func (o DiskInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DiskInfo struct{}"
 	}
@@ -75,7 +75,7 @@ func GetDiskInfoVolumeTypeEnum() DiskInfoVolumeTypeEnum {
 }
 
 func (c DiskInfoVolumeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DiskInfoVolumeType) UnmarshalJSON(b []byte) error {
@@ -113,7 +113,7 @@ func GetDiskInfoDiskTypeEnum() DiskInfoDiskTypeEnum {
 }
 
 func (c DiskInfoDiskType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DiskInfoDiskType) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -57,7 +57,7 @@ type InstanceConfig struct {
 }
 
 func (o InstanceConfig) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "InstanceConfig struct{}"
 	}
@@ -82,7 +82,7 @@ func GetInstanceConfigTenancyEnum() InstanceConfigTenancyEnum {
 }
 
 func (c InstanceConfigTenancy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstanceConfigTenancy) UnmarshalJSON(b []byte) error {
@@ -120,7 +120,7 @@ func GetInstanceConfigMultiFlavorPriorityPolicyEnum() InstanceConfigMultiFlavorP
 }
 
 func (c InstanceConfigMultiFlavorPriorityPolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstanceConfigMultiFlavorPriorityPolicy) UnmarshalJSON(b []byte) error {
@@ -154,7 +154,7 @@ func GetInstanceConfigMarketTypeEnum() InstanceConfigMarketTypeEnum {
 }
 
 func (c InstanceConfigMarketType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstanceConfigMarketType) UnmarshalJSON(b []byte) error {

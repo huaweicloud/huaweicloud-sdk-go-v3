@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -137,7 +137,7 @@ type ListPublicipsRequest struct {
 }
 
 func (o ListPublicipsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListPublicipsRequest struct{}"
 	}
@@ -186,7 +186,7 @@ func GetListPublicipsRequestSortKeyEnum() ListPublicipsRequestSortKeyEnum {
 }
 
 func (c ListPublicipsRequestSortKey) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListPublicipsRequestSortKey) UnmarshalJSON(b []byte) error {
@@ -224,7 +224,7 @@ func GetListPublicipsRequestSortDirEnum() ListPublicipsRequestSortDirEnum {
 }
 
 func (c ListPublicipsRequestSortDir) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListPublicipsRequestSortDir) UnmarshalJSON(b []byte) error {
@@ -261,7 +261,7 @@ func GetListPublicipsRequestIpVersionEnum() ListPublicipsRequestIpVersionEnum {
 }
 
 func (c ListPublicipsRequestIpVersion) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListPublicipsRequestIpVersion) UnmarshalJSON(b []byte) error {
@@ -303,7 +303,7 @@ func GetListPublicipsRequestTypeEnum() ListPublicipsRequestTypeEnum {
 }
 
 func (c ListPublicipsRequestType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListPublicipsRequestType) UnmarshalJSON(b []byte) error {
@@ -357,7 +357,7 @@ func GetListPublicipsRequestNetworkTypeEnum() ListPublicipsRequestNetworkTypeEnu
 }
 
 func (c ListPublicipsRequestNetworkType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListPublicipsRequestNetworkType) UnmarshalJSON(b []byte) error {
@@ -403,7 +403,7 @@ func GetListPublicipsRequestStatusEnum() ListPublicipsRequestStatusEnum {
 }
 
 func (c ListPublicipsRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListPublicipsRequestStatus) UnmarshalJSON(b []byte) error {
@@ -441,7 +441,7 @@ func GetListPublicipsRequestBandwidthShareTypeEnum() ListPublicipsRequestBandwid
 }
 
 func (c ListPublicipsRequestBandwidthShareType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListPublicipsRequestBandwidthShareType) UnmarshalJSON(b []byte) error {
@@ -483,7 +483,7 @@ func GetListPublicipsRequestBandwidthChargeModeEnum() ListPublicipsRequestBandwi
 }
 
 func (c ListPublicipsRequestBandwidthChargeMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListPublicipsRequestBandwidthChargeMode) UnmarshalJSON(b []byte) error {
@@ -521,7 +521,7 @@ func GetListPublicipsRequestBillingModeEnum() ListPublicipsRequestBillingModeEnu
 }
 
 func (c ListPublicipsRequestBillingMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListPublicipsRequestBillingMode) UnmarshalJSON(b []byte) error {
@@ -571,7 +571,7 @@ func GetListPublicipsRequestAssociateInstanceTypeEnum() ListPublicipsRequestAsso
 }
 
 func (c ListPublicipsRequestAssociateInstanceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListPublicipsRequestAssociateInstanceType) UnmarshalJSON(b []byte) error {

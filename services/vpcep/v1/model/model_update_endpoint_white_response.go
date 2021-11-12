@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -73,7 +73,7 @@ type UpdateEndpointWhiteResponse struct {
 }
 
 func (o UpdateEndpointWhiteResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateEndpointWhiteResponse struct{}"
 	}
@@ -102,7 +102,7 @@ func GetUpdateEndpointWhiteResponseServiceTypeEnum() UpdateEndpointWhiteResponse
 }
 
 func (c UpdateEndpointWhiteResponseServiceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateEndpointWhiteResponseServiceType) UnmarshalJSON(b []byte) error {
@@ -156,7 +156,7 @@ func GetUpdateEndpointWhiteResponseStatusEnum() UpdateEndpointWhiteResponseStatu
 }
 
 func (c UpdateEndpointWhiteResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateEndpointWhiteResponseStatus) UnmarshalJSON(b []byte) error {

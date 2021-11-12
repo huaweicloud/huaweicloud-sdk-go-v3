@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -29,7 +29,7 @@ type MysqlChargeInfo struct {
 }
 
 func (o MysqlChargeInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "MysqlChargeInfo struct{}"
 	}
@@ -58,7 +58,7 @@ func GetMysqlChargeInfoChargeModeEnum() MysqlChargeInfoChargeModeEnum {
 }
 
 func (c MysqlChargeInfoChargeMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *MysqlChargeInfoChargeMode) UnmarshalJSON(b []byte) error {
@@ -96,7 +96,7 @@ func GetMysqlChargeInfoPeriodTypeEnum() MysqlChargeInfoPeriodTypeEnum {
 }
 
 func (c MysqlChargeInfoPeriodType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *MysqlChargeInfoPeriodType) UnmarshalJSON(b []byte) error {

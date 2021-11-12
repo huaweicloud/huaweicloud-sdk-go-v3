@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -31,7 +31,7 @@ type OpExtendInfoBckup struct {
 }
 
 func (o OpExtendInfoBckup) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "OpExtendInfoBckup struct{}"
 	}
@@ -60,7 +60,7 @@ func GetOpExtendInfoBckupAppConsistencyStatusEnum() OpExtendInfoBckupAppConsiste
 }
 
 func (c OpExtendInfoBckupAppConsistencyStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OpExtendInfoBckupAppConsistencyStatus) UnmarshalJSON(b []byte) error {
@@ -98,7 +98,7 @@ func GetOpExtendInfoBckupIncrementalEnum() OpExtendInfoBckupIncrementalEnum {
 }
 
 func (c OpExtendInfoBckupIncremental) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OpExtendInfoBckupIncremental) UnmarshalJSON(b []byte) error {

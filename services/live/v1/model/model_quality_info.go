@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -49,7 +49,7 @@ type QualityInfo struct {
 }
 
 func (o QualityInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "QualityInfo struct{}"
 	}
@@ -78,7 +78,7 @@ func GetQualityInfoPvcEnum() QualityInfoPvcEnum {
 }
 
 func (c QualityInfoPvc) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QualityInfoPvc) UnmarshalJSON(b []byte) error {
@@ -116,7 +116,7 @@ func GetQualityInfoHdlbEnum() QualityInfoHdlbEnum {
 }
 
 func (c QualityInfoHdlb) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QualityInfoHdlb) UnmarshalJSON(b []byte) error {
@@ -154,7 +154,7 @@ func GetQualityInfoCodecEnum() QualityInfoCodecEnum {
 }
 
 func (c QualityInfoCodec) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QualityInfoCodec) UnmarshalJSON(b []byte) error {
@@ -196,7 +196,7 @@ func GetQualityInfoProtocolEnum() QualityInfoProtocolEnum {
 }
 
 func (c QualityInfoProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QualityInfoProtocol) UnmarshalJSON(b []byte) error {

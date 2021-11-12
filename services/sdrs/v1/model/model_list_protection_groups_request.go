@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -32,7 +32,7 @@ type ListProtectionGroupsRequest struct {
 }
 
 func (o ListProtectionGroupsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListProtectionGroupsRequest struct{}"
 	}
@@ -69,7 +69,7 @@ func GetListProtectionGroupsRequestQueryTypeEnum() ListProtectionGroupsRequestQu
 }
 
 func (c ListProtectionGroupsRequestQueryType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListProtectionGroupsRequestQueryType) UnmarshalJSON(b []byte) error {

@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -57,6 +57,9 @@ type ListFunctionVersionResult struct {
 	// 用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
 
 	UserData *string `json:"user_data,omitempty"`
+	// 用户自定义的name/value信息，用于需要加密的配置。
+
+	EncryptedUserData *string `json:"encrypted_user_data,omitempty"`
 	// 函数代码SHA512 hash值，用于判断函数是否变化。
 
 	Digest string `json:"digest"`
@@ -72,45 +75,51 @@ type ListFunctionVersionResult struct {
 	// 函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
 
 	AppXrole *string `json:"app_xrole,omitempty"`
-	// 函数描述。
-
-	Description *string `json:"description,omitempty"`
-	// 函数版本描述。
-
-	VersionDescription *string `json:"version_description,omitempty"`
 	// 函数最后一次更新时间。
 
 	LastModified *sdktime.SdkTime `json:"last_modified"`
+	// 用户的vpcid
 
-	FuncVpc *FuncVpc `json:"func_vpc,omitempty"`
-
-	MountConfig *MountConfig `json:"mount_config,omitempty"`
+	FuncVpcId *string `json:"func_vpc_id,omitempty"`
 
 	Concurrency *int32 `json:"concurrency,omitempty"`
-	// 依赖id列表
 
-	DependList *[]string `json:"depend_list,omitempty"`
+	ConcurrentNum *int32 `json:"concurrent_num,omitempty"`
 
 	StrategyConfig *StrategyConfig `json:"strategy_config,omitempty"`
-	// 函数扩展配置。
-
-	ExtendConfig *string `json:"extend_config,omitempty"`
-	// 函数依赖代码包列表。
-
-	Dependencies *[]Dependency `json:"dependencies,omitempty"`
 	// 函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
 
 	InitializerHandler *string `json:"initializer_handler,omitempty"`
 	// 初始化超时时间，超时函数将被强行停止，范围1～300秒。
 
 	InitializerTimeout *int32 `json:"initializer_timeout,omitempty"`
+	// 是否是支持长时间运行
+
+	LongTime *bool `json:"long_time,omitempty"`
+	// 自定义日志查询组id
+
+	LogGroupId *string `json:"log_group_id,omitempty"`
+	// 自定义日志查询流id
+
+	LogStreamId *string `json:"log_stream_id,omitempty"`
+
+	FunctionAsyncConfig *FunctionAsyncConfig `json:"function_async_config,omitempty"`
+	// 函数版本
+
+	Type *string `json:"type,omitempty"`
+	// 是否启用cloud debug功能
+
+	EnableCloudDebug *string `json:"enable_cloud_debug,omitempty"`
+	// 是否启用动态内存功能
+
+	EnableDynamicMemory *bool `json:"enable_dynamic_memory,omitempty"`
 	// 企业项目ID，在企业用户创建函数时必填。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ListFunctionVersionResult) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListFunctionVersionResult struct{}"
 	}
@@ -175,7 +184,7 @@ func GetListFunctionVersionResultRuntimeEnum() ListFunctionVersionResultRuntimeE
 }
 
 func (c ListFunctionVersionResultRuntime) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListFunctionVersionResultRuntime) UnmarshalJSON(b []byte) error {
@@ -221,7 +230,7 @@ func GetListFunctionVersionResultCodeTypeEnum() ListFunctionVersionResultCodeTyp
 }
 
 func (c ListFunctionVersionResultCodeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListFunctionVersionResultCodeType) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -29,9 +29,6 @@ type ListSimCardsRequest struct {
 	// 设备状态: 1.注册 2.重启 3.在线 4.离线
 
 	DeviceStatus *int32 `json:"device_status,omitempty"`
-	// 标签ID，最多支持传50个
-
-	TagId *[]int64 `json:"tag_id,omitempty"`
 	// sim卡类型：  1.vSIM  2.eSIM  3.实体卡
 
 	SimType *int32 `json:"sim_type,omitempty"`
@@ -68,7 +65,7 @@ type ListSimCardsRequest struct {
 }
 
 func (o ListSimCardsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListSimCardsRequest struct{}"
 	}
@@ -97,7 +94,7 @@ func GetListSimCardsRequestOrderEnum() ListSimCardsRequestOrderEnum {
 }
 
 func (c ListSimCardsRequestOrder) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListSimCardsRequestOrder) UnmarshalJSON(b []byte) error {
@@ -139,7 +136,7 @@ func GetListSimCardsRequestSortEnum() ListSimCardsRequestSortEnum {
 }
 
 func (c ListSimCardsRequestSort) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListSimCardsRequestSort) UnmarshalJSON(b []byte) error {

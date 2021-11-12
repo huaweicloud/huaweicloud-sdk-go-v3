@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -83,7 +83,7 @@ type PostSourceServerBody struct {
 }
 
 func (o PostSourceServerBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "PostSourceServerBody struct{}"
 	}
@@ -112,7 +112,7 @@ func GetPostSourceServerBodyOsTypeEnum() PostSourceServerBodyOsTypeEnum {
 }
 
 func (c PostSourceServerBodyOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PostSourceServerBodyOsType) UnmarshalJSON(b []byte) error {
@@ -150,7 +150,7 @@ func GetPostSourceServerBodyFirmwareEnum() PostSourceServerBodyFirmwareEnum {
 }
 
 func (c PostSourceServerBodyFirmware) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PostSourceServerBodyFirmware) UnmarshalJSON(b []byte) error {
@@ -188,7 +188,7 @@ func GetPostSourceServerBodyBootLoaderEnum() PostSourceServerBodyBootLoaderEnum 
 }
 
 func (c PostSourceServerBodyBootLoader) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PostSourceServerBodyBootLoader) UnmarshalJSON(b []byte) error {

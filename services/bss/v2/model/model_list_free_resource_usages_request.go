@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -16,7 +16,7 @@ type ListFreeResourceUsagesRequest struct {
 }
 
 func (o ListFreeResourceUsagesRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListFreeResourceUsagesRequest struct{}"
 	}

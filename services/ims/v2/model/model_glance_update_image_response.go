@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -195,7 +195,7 @@ type GlanceUpdateImageResponse struct {
 }
 
 func (o GlanceUpdateImageResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "GlanceUpdateImageResponse struct{}"
 	}
@@ -224,7 +224,7 @@ func GetGlanceUpdateImageResponseImageSourceTypeEnum() GlanceUpdateImageResponse
 }
 
 func (c GlanceUpdateImageResponseImageSourceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageResponseImageSourceType) UnmarshalJSON(b []byte) error {
@@ -266,7 +266,7 @@ func GetGlanceUpdateImageResponseImagetypeEnum() GlanceUpdateImageResponseImaget
 }
 
 func (c GlanceUpdateImageResponseImagetype) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageResponseImagetype) UnmarshalJSON(b []byte) error {
@@ -304,7 +304,7 @@ func GetGlanceUpdateImageResponseIsregisteredEnum() GlanceUpdateImageResponseIsr
 }
 
 func (c GlanceUpdateImageResponseIsregistered) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageResponseIsregistered) UnmarshalJSON(b []byte) error {
@@ -342,7 +342,7 @@ func GetGlanceUpdateImageResponseOsBitEnum() GlanceUpdateImageResponseOsBitEnum 
 }
 
 func (c GlanceUpdateImageResponseOsBit) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageResponseOsBit) UnmarshalJSON(b []byte) error {
@@ -384,7 +384,7 @@ func GetGlanceUpdateImageResponseOsTypeEnum() GlanceUpdateImageResponseOsTypeEnu
 }
 
 func (c GlanceUpdateImageResponseOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageResponseOsType) UnmarshalJSON(b []byte) error {
@@ -462,7 +462,7 @@ func GetGlanceUpdateImageResponsePlatformEnum() GlanceUpdateImageResponsePlatfor
 }
 
 func (c GlanceUpdateImageResponsePlatform) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageResponsePlatform) UnmarshalJSON(b []byte) error {
@@ -512,7 +512,7 @@ func GetGlanceUpdateImageResponseDiskFormatEnum() GlanceUpdateImageResponseDiskF
 }
 
 func (c GlanceUpdateImageResponseDiskFormat) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageResponseDiskFormat) UnmarshalJSON(b []byte) error {
@@ -562,7 +562,7 @@ func GetGlanceUpdateImageResponseStatusEnum() GlanceUpdateImageResponseStatusEnu
 }
 
 func (c GlanceUpdateImageResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageResponseStatus) UnmarshalJSON(b []byte) error {
@@ -604,7 +604,7 @@ func GetGlanceUpdateImageResponseVirtualEnvTypeEnum() GlanceUpdateImageResponseV
 }
 
 func (c GlanceUpdateImageResponseVirtualEnvType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageResponseVirtualEnvType) UnmarshalJSON(b []byte) error {
@@ -646,7 +646,7 @@ func GetGlanceUpdateImageResponseVisibilityEnum() GlanceUpdateImageResponseVisib
 }
 
 func (c GlanceUpdateImageResponseVisibility) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageResponseVisibility) UnmarshalJSON(b []byte) error {
@@ -684,7 +684,7 @@ func GetGlanceUpdateImageResponseSupportFcInjectEnum() GlanceUpdateImageResponse
 }
 
 func (c GlanceUpdateImageResponseSupportFcInject) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageResponseSupportFcInject) UnmarshalJSON(b []byte) error {
@@ -722,7 +722,7 @@ func GetGlanceUpdateImageResponseHwFirmwareTypeEnum() GlanceUpdateImageResponseH
 }
 
 func (c GlanceUpdateImageResponseHwFirmwareType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageResponseHwFirmwareType) UnmarshalJSON(b []byte) error {
@@ -760,7 +760,7 @@ func GetGlanceUpdateImageResponseSupportArmEnum() GlanceUpdateImageResponseSuppo
 }
 
 func (c GlanceUpdateImageResponseSupportArm) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageResponseSupportArm) UnmarshalJSON(b []byte) error {
@@ -798,7 +798,7 @@ func GetGlanceUpdateImageResponseIsOffshelvedEnum() GlanceUpdateImageResponseIsO
 }
 
 func (c GlanceUpdateImageResponseIsOffshelved) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageResponseIsOffshelved) UnmarshalJSON(b []byte) error {

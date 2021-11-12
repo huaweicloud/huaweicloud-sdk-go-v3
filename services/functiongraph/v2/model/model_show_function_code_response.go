@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -54,7 +54,7 @@ type ShowFunctionCodeResponse struct {
 }
 
 func (o ShowFunctionCodeResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowFunctionCodeResponse struct{}"
 	}
@@ -119,7 +119,7 @@ func GetShowFunctionCodeResponseRuntimeEnum() ShowFunctionCodeResponseRuntimeEnu
 }
 
 func (c ShowFunctionCodeResponseRuntime) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowFunctionCodeResponseRuntime) UnmarshalJSON(b []byte) error {
@@ -165,7 +165,7 @@ func GetShowFunctionCodeResponseCodeTypeEnum() ShowFunctionCodeResponseCodeTypeE
 }
 
 func (c ShowFunctionCodeResponseCodeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowFunctionCodeResponseCodeType) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -12,7 +12,7 @@ type DetectLiveFaceByUrlRequest struct {
 }
 
 func (o DetectLiveFaceByUrlRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DetectLiveFaceByUrlRequest struct{}"
 	}

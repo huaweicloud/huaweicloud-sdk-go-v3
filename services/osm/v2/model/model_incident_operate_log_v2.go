@@ -1,8 +1,8 @@
 package model
 
 import (
-	"encoding/json"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -38,7 +38,7 @@ type IncidentOperateLogV2 struct {
 }
 
 func (o IncidentOperateLogV2) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "IncidentOperateLogV2 struct{}"
 	}

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -23,7 +23,7 @@ type UpdateUserDetailReq struct {
 }
 
 func (o UpdateUserDetailReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateUserDetailReq struct{}"
 	}
@@ -76,7 +76,7 @@ func GetUpdateUserDetailReqBaseAuthorityEnum() UpdateUserDetailReqBaseAuthorityE
 }
 
 func (c UpdateUserDetailReqBaseAuthority) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateUserDetailReqBaseAuthority) UnmarshalJSON(b []byte) error {

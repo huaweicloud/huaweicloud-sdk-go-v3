@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -60,7 +60,7 @@ type PublicipUpdateResp struct {
 }
 
 func (o PublicipUpdateResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "PublicipUpdateResp struct{}"
 	}
@@ -89,7 +89,7 @@ func GetPublicipUpdateRespBandwidthShareTypeEnum() PublicipUpdateRespBandwidthSh
 }
 
 func (c PublicipUpdateRespBandwidthShareType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PublicipUpdateRespBandwidthShareType) UnmarshalJSON(b []byte) error {
@@ -171,7 +171,7 @@ func GetPublicipUpdateRespStatusEnum() PublicipUpdateRespStatusEnum {
 }
 
 func (c PublicipUpdateRespStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PublicipUpdateRespStatus) UnmarshalJSON(b []byte) error {
@@ -208,7 +208,7 @@ func GetPublicipUpdateRespIpVersionEnum() PublicipUpdateRespIpVersionEnum {
 }
 
 func (c PublicipUpdateRespIpVersion) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PublicipUpdateRespIpVersion) UnmarshalJSON(b []byte) error {

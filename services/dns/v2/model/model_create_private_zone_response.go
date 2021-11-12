@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -58,7 +58,7 @@ type CreatePrivateZoneResponse struct {
 }
 
 func (o CreatePrivateZoneResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreatePrivateZoneResponse struct{}"
 	}

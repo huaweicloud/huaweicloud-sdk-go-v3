@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -12,7 +12,7 @@ type DeleteApiAclBindingV2Response struct {
 }
 
 func (o DeleteApiAclBindingV2Response) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DeleteApiAclBindingV2Response struct{}"
 	}

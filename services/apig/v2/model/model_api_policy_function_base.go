@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -25,7 +25,7 @@ type ApiPolicyFunctionBase struct {
 }
 
 func (o ApiPolicyFunctionBase) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ApiPolicyFunctionBase struct{}"
 	}
@@ -54,7 +54,7 @@ func GetApiPolicyFunctionBaseInvocationTypeEnum() ApiPolicyFunctionBaseInvocatio
 }
 
 func (c ApiPolicyFunctionBaseInvocationType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiPolicyFunctionBaseInvocationType) UnmarshalJSON(b []byte) error {

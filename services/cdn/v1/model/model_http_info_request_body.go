@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -25,12 +25,15 @@ type HttpInfoRequestBody struct {
 	// 证书类型。1：代表华为云托管证书；0：表示自有证书。 默认值0。
 
 	CertificateType *int32 `json:"certificate_type,omitempty"`
+	// 强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+
+	ForceRedirectHttps *int32 `json:"force_redirect_https,omitempty"`
 
 	ForceRedirectConfig *ForceRedirect `json:"force_redirect_config,omitempty"`
 }
 
 func (o HttpInfoRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "HttpInfoRequestBody struct{}"
 	}

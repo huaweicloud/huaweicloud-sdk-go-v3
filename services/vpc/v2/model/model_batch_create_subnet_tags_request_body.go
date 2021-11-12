@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -20,7 +20,7 @@ type BatchCreateSubnetTagsRequestBody struct {
 }
 
 func (o BatchCreateSubnetTagsRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BatchCreateSubnetTagsRequestBody struct{}"
 	}
@@ -45,7 +45,7 @@ func GetBatchCreateSubnetTagsRequestBodyActionEnum() BatchCreateSubnetTagsReques
 }
 
 func (c BatchCreateSubnetTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchCreateSubnetTagsRequestBodyAction) UnmarshalJSON(b []byte) error {

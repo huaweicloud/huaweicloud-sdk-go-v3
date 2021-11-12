@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -35,7 +35,7 @@ type BatchListEdgeAppVersionsRequest struct {
 }
 
 func (o BatchListEdgeAppVersionsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BatchListEdgeAppVersionsRequest struct{}"
 	}
@@ -68,7 +68,7 @@ func GetBatchListEdgeAppVersionsRequestAiCardTypeEnum() BatchListEdgeAppVersions
 }
 
 func (c BatchListEdgeAppVersionsRequestAiCardType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchListEdgeAppVersionsRequestAiCardType) UnmarshalJSON(b []byte) error {
@@ -110,7 +110,7 @@ func GetBatchListEdgeAppVersionsRequestArchEnum() BatchListEdgeAppVersionsReques
 }
 
 func (c BatchListEdgeAppVersionsRequestArch) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchListEdgeAppVersionsRequestArch) UnmarshalJSON(b []byte) error {
@@ -152,7 +152,7 @@ func GetBatchListEdgeAppVersionsRequestStateEnum() BatchListEdgeAppVersionsReque
 }
 
 func (c BatchListEdgeAppVersionsRequestState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchListEdgeAppVersionsRequestState) UnmarshalJSON(b []byte) error {

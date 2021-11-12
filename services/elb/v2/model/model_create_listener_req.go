@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -58,7 +58,7 @@ type CreateListenerReq struct {
 }
 
 func (o CreateListenerReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateListenerReq struct{}"
 	}
@@ -95,7 +95,7 @@ func GetCreateListenerReqProtocolEnum() CreateListenerReqProtocolEnum {
 }
 
 func (c CreateListenerReqProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateListenerReqProtocol) UnmarshalJSON(b []byte) error {
@@ -141,7 +141,7 @@ func GetCreateListenerReqTlsCiphersPolicyEnum() CreateListenerReqTlsCiphersPolic
 }
 
 func (c CreateListenerReqTlsCiphersPolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateListenerReqTlsCiphersPolicy) UnmarshalJSON(b []byte) error {

@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -110,7 +110,7 @@ type ApiInfoPerPage struct {
 }
 
 func (o ApiInfoPerPage) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ApiInfoPerPage struct{}"
 	}
@@ -143,7 +143,7 @@ func GetApiInfoPerPageReqProtocolEnum() ApiInfoPerPageReqProtocolEnum {
 }
 
 func (c ApiInfoPerPageReqProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiInfoPerPageReqProtocol) UnmarshalJSON(b []byte) error {
@@ -205,7 +205,7 @@ func GetApiInfoPerPageReqMethodEnum() ApiInfoPerPageReqMethodEnum {
 }
 
 func (c ApiInfoPerPageReqMethod) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiInfoPerPageReqMethod) UnmarshalJSON(b []byte) error {
@@ -251,7 +251,7 @@ func GetApiInfoPerPageAuthTypeEnum() ApiInfoPerPageAuthTypeEnum {
 }
 
 func (c ApiInfoPerPageAuthType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiInfoPerPageAuthType) UnmarshalJSON(b []byte) error {
@@ -289,7 +289,7 @@ func GetApiInfoPerPageMatchModeEnum() ApiInfoPerPageMatchModeEnum {
 }
 
 func (c ApiInfoPerPageMatchMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiInfoPerPageMatchMode) UnmarshalJSON(b []byte) error {
@@ -331,7 +331,7 @@ func GetApiInfoPerPageBackendTypeEnum() ApiInfoPerPageBackendTypeEnum {
 }
 
 func (c ApiInfoPerPageBackendType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiInfoPerPageBackendType) UnmarshalJSON(b []byte) error {

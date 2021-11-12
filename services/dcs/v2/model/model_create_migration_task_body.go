@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -35,7 +35,7 @@ type CreateMigrationTaskBody struct {
 }
 
 func (o CreateMigrationTaskBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateMigrationTaskBody struct{}"
 	}
@@ -64,7 +64,7 @@ func GetCreateMigrationTaskBodyMigrationTypeEnum() CreateMigrationTaskBodyMigrat
 }
 
 func (c CreateMigrationTaskBodyMigrationType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateMigrationTaskBodyMigrationType) UnmarshalJSON(b []byte) error {
@@ -102,7 +102,7 @@ func GetCreateMigrationTaskBodyMigrationMethodEnum() CreateMigrationTaskBodyMigr
 }
 
 func (c CreateMigrationTaskBodyMigrationMethod) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateMigrationTaskBodyMigrationMethod) UnmarshalJSON(b []byte) error {
@@ -140,7 +140,7 @@ func GetCreateMigrationTaskBodyNetworkTypeEnum() CreateMigrationTaskBodyNetworkT
 }
 
 func (c CreateMigrationTaskBodyNetworkType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateMigrationTaskBodyNetworkType) UnmarshalJSON(b []byte) error {

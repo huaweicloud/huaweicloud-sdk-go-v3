@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -89,7 +89,7 @@ type MetricRequest3Dividend struct {
 }
 
 func (o MetricRequest3Dividend) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "MetricRequest3Dividend struct{}"
 	}

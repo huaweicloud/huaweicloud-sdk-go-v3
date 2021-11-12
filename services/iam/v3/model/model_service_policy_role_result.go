@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -27,7 +27,7 @@ type ServicePolicyRoleResult struct {
 	// 自定义策略所属账号ID。
 
 	DomainId string `json:"domain_id"`
-	// 自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+	// 自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
 
 	Type string `json:"type"`
 	// 自定义策略ID。
@@ -48,7 +48,7 @@ type ServicePolicyRoleResult struct {
 }
 
 func (o ServicePolicyRoleResult) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ServicePolicyRoleResult struct{}"
 	}

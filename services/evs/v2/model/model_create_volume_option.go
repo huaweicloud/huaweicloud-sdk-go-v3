@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -53,7 +53,7 @@ type CreateVolumeOption struct {
 }
 
 func (o CreateVolumeOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateVolumeOption struct{}"
 	}
@@ -90,7 +90,7 @@ func GetCreateVolumeOptionVolumeTypeEnum() CreateVolumeOptionVolumeTypeEnum {
 }
 
 func (c CreateVolumeOptionVolumeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateVolumeOptionVolumeType) UnmarshalJSON(b []byte) error {

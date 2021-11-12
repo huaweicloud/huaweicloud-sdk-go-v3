@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -25,7 +25,7 @@ type AgreeTenantAuthorizationV2Req struct {
 }
 
 func (o AgreeTenantAuthorizationV2Req) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "AgreeTenantAuthorizationV2Req struct{}"
 	}

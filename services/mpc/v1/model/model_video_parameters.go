@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -52,7 +52,7 @@ type VideoParameters struct {
 }
 
 func (o VideoParameters) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "VideoParameters struct{}"
 	}
@@ -85,7 +85,7 @@ func GetVideoParametersOutputPolicyEnum() VideoParametersOutputPolicyEnum {
 }
 
 func (c VideoParametersOutputPolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *VideoParametersOutputPolicy) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -10,7 +10,7 @@ import (
 )
 
 type EditVideoInfo struct {
-	// 剪辑输出视频参数的参照物。取值如下： - MAX，以输入片源中最大分辨率的视频参数作为输出参照。 - MIN，以输入片源中最小分辨率的视频参数作为输出参照。 - CUSTOM，自定义视频输出参数，使用该参数时，所有视频参数必填
+	// 剪辑输出视频参数的参照物。取值如下： - MAX，以输入片源中最大分辨率的视频参数作为输出参照。 - MIN，以输入片源中最小分辨率的视频参数作为输出参照。 - CUSTOM，自定义视频输出参数，使用该参数时，所有视频参数必填。- SHORT_HEIGHT_SHORT_WIDTH，当edit_type为MIX时，只能使用该值。
 
 	Reference *EditVideoInfoReference `json:"reference,omitempty"`
 	// 视频宽度。
@@ -31,7 +31,7 @@ type EditVideoInfo struct {
 }
 
 func (o EditVideoInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "EditVideoInfo struct{}"
 	}
@@ -44,9 +44,10 @@ type EditVideoInfoReference struct {
 }
 
 type EditVideoInfoReferenceEnum struct {
-	MAX    EditVideoInfoReference
-	MIN    EditVideoInfoReference
-	CUSTOM EditVideoInfoReference
+	MAX                      EditVideoInfoReference
+	MIN                      EditVideoInfoReference
+	CUSTOM                   EditVideoInfoReference
+	SHORT_HEIGHT_SHORT_WIDTH EditVideoInfoReference
 }
 
 func GetEditVideoInfoReferenceEnum() EditVideoInfoReferenceEnum {
@@ -60,11 +61,14 @@ func GetEditVideoInfoReferenceEnum() EditVideoInfoReferenceEnum {
 		CUSTOM: EditVideoInfoReference{
 			value: "CUSTOM",
 		},
+		SHORT_HEIGHT_SHORT_WIDTH: EditVideoInfoReference{
+			value: "SHORT_HEIGHT_SHORT_WIDTH",
+		},
 	}
 }
 
 func (c EditVideoInfoReference) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *EditVideoInfoReference) UnmarshalJSON(b []byte) error {
@@ -102,7 +106,7 @@ func GetEditVideoInfoCodecEnum() EditVideoInfoCodecEnum {
 }
 
 func (c EditVideoInfoCodec) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *EditVideoInfoCodec) UnmarshalJSON(b []byte) error {

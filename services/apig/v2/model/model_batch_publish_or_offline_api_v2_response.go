@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -18,7 +18,7 @@ type BatchPublishOrOfflineApiV2Response struct {
 }
 
 func (o BatchPublishOrOfflineApiV2Response) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BatchPublishOrOfflineApiV2Response struct{}"
 	}

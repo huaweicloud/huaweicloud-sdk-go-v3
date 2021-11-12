@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -25,7 +25,7 @@ type CreatePolicyRuleRequest struct {
 }
 
 func (o CreatePolicyRuleRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreatePolicyRuleRequest struct{}"
 	}
@@ -54,7 +54,7 @@ func GetCreatePolicyRuleRequestActionTypeEnum() CreatePolicyRuleRequestActionTyp
 }
 
 func (c CreatePolicyRuleRequestActionType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreatePolicyRuleRequestActionType) UnmarshalJSON(b []byte) error {
@@ -88,7 +88,7 @@ func GetCreatePolicyRuleRequestEffectEnum() CreatePolicyRuleRequestEffectEnum {
 }
 
 func (c CreatePolicyRuleRequestEffect) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreatePolicyRuleRequestEffect) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -52,7 +52,7 @@ type InstanceEdgeParam struct {
 }
 
 func (o InstanceEdgeParam) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "InstanceEdgeParam struct{}"
 	}
@@ -81,7 +81,7 @@ func GetInstanceEdgeParamArchEnum() InstanceEdgeParamArchEnum {
 }
 
 func (c InstanceEdgeParamArch) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstanceEdgeParamArch) UnmarshalJSON(b []byte) error {
@@ -127,7 +127,7 @@ func GetInstanceEdgeParamCpuMemoryEnum() InstanceEdgeParamCpuMemoryEnum {
 }
 
 func (c InstanceEdgeParamCpuMemory) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstanceEdgeParamCpuMemory) UnmarshalJSON(b []byte) error {
@@ -169,7 +169,7 @@ func GetInstanceEdgeParamPvcQuantityEnum() InstanceEdgeParamPvcQuantityEnum {
 }
 
 func (c InstanceEdgeParamPvcQuantity) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstanceEdgeParamPvcQuantity) UnmarshalJSON(b []byte) error {

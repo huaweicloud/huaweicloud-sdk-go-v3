@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -29,7 +29,7 @@ type ListNewInstantMessagesRequest struct {
 }
 
 func (o ListNewInstantMessagesRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListNewInstantMessagesRequest struct{}"
 	}

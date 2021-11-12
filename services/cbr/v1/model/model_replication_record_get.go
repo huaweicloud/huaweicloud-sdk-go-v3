@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -56,7 +56,7 @@ type ReplicationRecordGet struct {
 }
 
 func (o ReplicationRecordGet) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ReplicationRecordGet struct{}"
 	}
@@ -97,7 +97,7 @@ func GetReplicationRecordGetStatusEnum() ReplicationRecordGetStatusEnum {
 }
 
 func (c ReplicationRecordGetStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ReplicationRecordGetStatus) UnmarshalJSON(b []byte) error {

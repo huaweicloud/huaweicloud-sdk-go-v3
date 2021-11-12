@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -22,7 +22,7 @@ type UserAuth struct {
 }
 
 func (o UserAuth) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UserAuth struct{}"
 	}
@@ -53,7 +53,7 @@ func GetUserAuthAuthEnum() UserAuthAuthEnum {
 }
 
 func (c UserAuthAuth) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UserAuthAuth) UnmarshalJSON(b []byte) error {

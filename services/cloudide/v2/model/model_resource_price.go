@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -25,7 +25,7 @@ type ResourcePrice struct {
 }
 
 func (o ResourcePrice) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ResourcePrice struct{}"
 	}
@@ -54,7 +54,7 @@ func GetResourcePriceArchEnum() ResourcePriceArchEnum {
 }
 
 func (c ResourcePriceArch) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ResourcePriceArch) UnmarshalJSON(b []byte) error {

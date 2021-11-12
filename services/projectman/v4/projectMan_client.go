@@ -63,7 +63,7 @@ func (c *ProjectManClient) BatchDeleteMembersV4(request *model.BatchDeleteMember
 	}
 }
 
-//更新项目
+//检查项目名称是否存在
 func (c *ProjectManClient) CheckProjectNameV4(request *model.CheckProjectNameV4Request) (*model.CheckProjectNameV4Response, error) {
 	requestDef := GenReqDefForCheckProjectNameV4()
 
@@ -327,6 +327,17 @@ func (c *ProjectManClient) CreateIterationV4(request *model.CreateIterationV4Req
 	}
 }
 
+//拥有IAM细粒度权限（projectmanConfig:systemSettingField:set）且在devcloud项目中有创建工作项的权限的用户可以设置工作项的创建者
+func (c *ProjectManClient) CreateSystemIssueV4(request *model.CreateSystemIssueV4Request) (*model.CreateSystemIssueV4Response, error) {
+	requestDef := GenReqDefForCreateSystemIssueV4()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSystemIssueV4Response), nil
+	}
+}
+
 //删除工作项
 func (c *ProjectManClient) DeleteIssueV4(request *model.DeleteIssueV4Request) (*model.DeleteIssueV4Response, error) {
 	requestDef := GenReqDefForDeleteIssueV4()
@@ -478,5 +489,16 @@ func (c *ProjectManClient) UpdateIterationV4(request *model.UpdateIterationV4Req
 		return nil, err
 	} else {
 		return resp.(*model.UpdateIterationV4Response), nil
+	}
+}
+
+//上传图片
+func (c *ProjectManClient) UploadIssueImg(request *model.UploadIssueImgRequest) (*model.UploadIssueImgResponse, error) {
+	requestDef := GenReqDefForUploadIssueImg()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadIssueImgResponse), nil
 	}
 }

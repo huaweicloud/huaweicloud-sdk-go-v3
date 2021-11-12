@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -25,7 +25,7 @@ type CreateUserRepositoryAuthRequest struct {
 }
 
 func (o CreateUserRepositoryAuthRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateUserRepositoryAuthRequest struct{}"
 	}
@@ -54,7 +54,7 @@ func GetCreateUserRepositoryAuthRequestContentTypeEnum() CreateUserRepositoryAut
 }
 
 func (c CreateUserRepositoryAuthRequestContentType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateUserRepositoryAuthRequestContentType) UnmarshalJSON(b []byte) error {

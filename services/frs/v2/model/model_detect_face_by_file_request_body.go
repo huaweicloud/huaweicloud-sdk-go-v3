@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
-
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 	"os"
 	"reflect"
 
@@ -20,7 +20,7 @@ type DetectFaceByFileRequestBody struct {
 }
 
 func (o DetectFaceByFileRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DetectFaceByFileRequestBody struct{}"
 	}

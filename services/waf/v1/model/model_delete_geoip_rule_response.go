@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -30,7 +30,7 @@ type DeleteGeoipRuleResponse struct {
 }
 
 func (o DeleteGeoipRuleResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DeleteGeoipRuleResponse struct{}"
 	}

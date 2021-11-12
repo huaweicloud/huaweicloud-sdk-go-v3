@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -39,7 +39,7 @@ type UpdateDomainMultiCertificatesResponseBodyContent struct {
 }
 
 func (o UpdateDomainMultiCertificatesResponseBodyContent) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateDomainMultiCertificatesResponseBodyContent struct{}"
 	}

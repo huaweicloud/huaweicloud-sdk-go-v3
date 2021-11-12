@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -89,14 +89,8 @@ type CreateFunctionVersionResponse struct {
 	FuncVpc *FuncVpc `json:"func_vpc,omitempty"`
 
 	MountConfig *MountConfig `json:"mount_config,omitempty"`
-	// 依赖id列表
-
-	DependList *[]string `json:"depend_list,omitempty"`
 
 	StrategyConfig *StrategyConfig `json:"strategy_config,omitempty"`
-	// 函数扩展配置。
-
-	ExtendConfig *string `json:"extend_config,omitempty"`
 	// 函数依赖代码包列表。
 
 	Dependencies *[]Dependency `json:"dependencies,omitempty"`
@@ -120,12 +114,17 @@ type CreateFunctionVersionResponse struct {
 	LogStreamId *string `json:"log_stream_id,omitempty"`
 	// v2表示为公测版本,v1为原来版本。
 
-	Type           *CreateFunctionVersionResponseType `json:"type,omitempty"`
-	HttpStatusCode int                                `json:"-"`
+	Type *CreateFunctionVersionResponseType `json:"type,omitempty"`
+	// 是否允许动态内存配置
+
+	EnableDynamicMemory *bool `json:"enable_dynamic_memory,omitempty"`
+
+	FunctionAsyncConfig *FunctionAsyncConfig `json:"function_async_config,omitempty"`
+	HttpStatusCode      int                  `json:"-"`
 }
 
 func (o CreateFunctionVersionResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateFunctionVersionResponse struct{}"
 	}
@@ -190,7 +189,7 @@ func GetCreateFunctionVersionResponseRuntimeEnum() CreateFunctionVersionResponse
 }
 
 func (c CreateFunctionVersionResponseRuntime) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateFunctionVersionResponseRuntime) UnmarshalJSON(b []byte) error {
@@ -236,7 +235,7 @@ func GetCreateFunctionVersionResponseCodeTypeEnum() CreateFunctionVersionRespons
 }
 
 func (c CreateFunctionVersionResponseCodeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateFunctionVersionResponseCodeType) UnmarshalJSON(b []byte) error {
@@ -274,7 +273,7 @@ func GetCreateFunctionVersionResponseTypeEnum() CreateFunctionVersionResponseTyp
 }
 
 func (c CreateFunctionVersionResponseType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateFunctionVersionResponseType) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -17,7 +17,7 @@ type OpenGaussChargeInfoListResponse struct {
 }
 
 func (o OpenGaussChargeInfoListResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "OpenGaussChargeInfoListResponse struct{}"
 	}
@@ -42,7 +42,7 @@ func GetOpenGaussChargeInfoListResponseChargeModeEnum() OpenGaussChargeInfoListR
 }
 
 func (c OpenGaussChargeInfoListResponseChargeMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OpenGaussChargeInfoListResponseChargeMode) UnmarshalJSON(b []byte) error {

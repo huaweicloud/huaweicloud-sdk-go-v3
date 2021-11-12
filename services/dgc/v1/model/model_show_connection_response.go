@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -20,7 +20,7 @@ type ShowConnectionResponse struct {
 }
 
 func (o ShowConnectionResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowConnectionResponse struct{}"
 	}
@@ -65,7 +65,7 @@ func GetShowConnectionResponseConnectionTypeEnum() ShowConnectionResponseConnect
 }
 
 func (c ShowConnectionResponseConnectionType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowConnectionResponseConnectionType) UnmarshalJSON(b []byte) error {

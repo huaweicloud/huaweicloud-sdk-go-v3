@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -14,7 +14,7 @@ type DeleteInstancesV2Request struct {
 }
 
 func (o DeleteInstancesV2Request) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DeleteInstancesV2Request struct{}"
 	}

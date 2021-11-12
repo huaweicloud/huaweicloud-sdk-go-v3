@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -14,7 +14,7 @@ type DeleteFaceSetRequest struct {
 }
 
 func (o DeleteFaceSetRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DeleteFaceSetRequest struct{}"
 	}

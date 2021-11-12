@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -14,11 +14,11 @@ type OutputFileInfo struct {
 
 	ExecDescription *string `json:"exec_description,omitempty"`
 
-	MetaData *MetaData `json:"meta_data,omitempty"`
+	MetaData *SourceInfo `json:"meta_data,omitempty"`
 }
 
 func (o OutputFileInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "OutputFileInfo struct{}"
 	}

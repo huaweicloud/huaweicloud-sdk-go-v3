@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -20,7 +20,7 @@ type BatchDeleteVolumeTagsRequestBody struct {
 }
 
 func (o BatchDeleteVolumeTagsRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BatchDeleteVolumeTagsRequestBody struct{}"
 	}
@@ -45,7 +45,7 @@ func GetBatchDeleteVolumeTagsRequestBodyActionEnum() BatchDeleteVolumeTagsReques
 }
 
 func (c BatchDeleteVolumeTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchDeleteVolumeTagsRequestBodyAction) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -38,7 +38,7 @@ type CreateOpenIdConnectConfig struct {
 }
 
 func (o CreateOpenIdConnectConfig) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateOpenIdConnectConfig struct{}"
 	}
@@ -63,7 +63,7 @@ func GetCreateOpenIdConnectConfigResponseTypeEnum() CreateOpenIdConnectConfigRes
 }
 
 func (c CreateOpenIdConnectConfigResponseType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateOpenIdConnectConfigResponseType) UnmarshalJSON(b []byte) error {
@@ -101,7 +101,7 @@ func GetCreateOpenIdConnectConfigResponseModeEnum() CreateOpenIdConnectConfigRes
 }
 
 func (c CreateOpenIdConnectConfigResponseMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateOpenIdConnectConfigResponseMode) UnmarshalJSON(b []byte) error {

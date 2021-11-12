@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -48,7 +48,7 @@ type ApiPolicyHttpCreate struct {
 }
 
 func (o ApiPolicyHttpCreate) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ApiPolicyHttpCreate struct{}"
 	}
@@ -77,7 +77,7 @@ func GetApiPolicyHttpCreateReqProtocolEnum() ApiPolicyHttpCreateReqProtocolEnum 
 }
 
 func (c ApiPolicyHttpCreateReqProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiPolicyHttpCreateReqProtocol) UnmarshalJSON(b []byte) error {
@@ -139,7 +139,7 @@ func GetApiPolicyHttpCreateReqMethodEnum() ApiPolicyHttpCreateReqMethodEnum {
 }
 
 func (c ApiPolicyHttpCreateReqMethod) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiPolicyHttpCreateReqMethod) UnmarshalJSON(b []byte) error {
@@ -177,7 +177,7 @@ func GetApiPolicyHttpCreateEffectModeEnum() ApiPolicyHttpCreateEffectModeEnum {
 }
 
 func (c ApiPolicyHttpCreateEffectMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiPolicyHttpCreateEffectMode) UnmarshalJSON(b []byte) error {

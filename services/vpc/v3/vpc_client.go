@@ -129,6 +129,17 @@ func (c *VpcClient) ListSubNetworkInterfaces(request *model.ListSubNetworkInterf
 	}
 }
 
+//批量迁移辅助弹性网卡
+func (c *VpcClient) MigrateSubNetworkInterface(request *model.MigrateSubNetworkInterfaceRequest) (*model.MigrateSubNetworkInterfaceResponse, error) {
+	requestDef := GenReqDefForMigrateSubNetworkInterface()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MigrateSubNetworkInterfaceResponse), nil
+	}
+}
+
 //查询单个安全组详情
 func (c *VpcClient) ShowSecurityGroup(request *model.ShowSecurityGroupRequest) (*model.ShowSecurityGroupResponse, error) {
 	requestDef := GenReqDefForShowSecurityGroup()
@@ -192,5 +203,148 @@ func (c *VpcClient) UpdateSubNetworkInterface(request *model.UpdateSubNetworkInt
 		return nil, err
 	} else {
 		return resp.(*model.UpdateSubNetworkInterfaceResponse), nil
+	}
+}
+
+//创建地址组
+func (c *VpcClient) CreateAddressGroup(request *model.CreateAddressGroupRequest) (*model.CreateAddressGroupResponse, error) {
+	requestDef := GenReqDefForCreateAddressGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAddressGroupResponse), nil
+	}
+}
+
+//删除地址组，非强制删除，删除前请确保未被其他资源引用
+func (c *VpcClient) DeleteAddressGroup(request *model.DeleteAddressGroupRequest) (*model.DeleteAddressGroupResponse, error) {
+	requestDef := GenReqDefForDeleteAddressGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAddressGroupResponse), nil
+	}
+}
+
+//强制删除地址组，删除的地址组与安全组规则关联时，会删除地址组与关联的安全组规则。
+func (c *VpcClient) DeleteIpAddressGroupForce(request *model.DeleteIpAddressGroupForceRequest) (*model.DeleteIpAddressGroupForceResponse, error) {
+	requestDef := GenReqDefForDeleteIpAddressGroupForce()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteIpAddressGroupForceResponse), nil
+	}
+}
+
+//查询地址组列表，根据过滤条件进行过滤。
+func (c *VpcClient) ListAddressGroup(request *model.ListAddressGroupRequest) (*model.ListAddressGroupResponse, error) {
+	requestDef := GenReqDefForListAddressGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAddressGroupResponse), nil
+	}
+}
+
+//查询地址组详情。
+func (c *VpcClient) ShowAddressGroup(request *model.ShowAddressGroupRequest) (*model.ShowAddressGroupResponse, error) {
+	requestDef := GenReqDefForShowAddressGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAddressGroupResponse), nil
+	}
+}
+
+//更新地址组。
+func (c *VpcClient) UpdateAddressGroup(request *model.UpdateAddressGroupRequest) (*model.UpdateAddressGroupResponse, error) {
+	requestDef := GenReqDefForUpdateAddressGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAddressGroupResponse), nil
+	}
+}
+
+//添加VPC的扩展网段
+func (c *VpcClient) AddVpcExtendCidr(request *model.AddVpcExtendCidrRequest) (*model.AddVpcExtendCidrResponse, error) {
+	requestDef := GenReqDefForAddVpcExtendCidr()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddVpcExtendCidrResponse), nil
+	}
+}
+
+//创建虚拟私有云
+func (c *VpcClient) CreateVpc(request *model.CreateVpcRequest) (*model.CreateVpcResponse, error) {
+	requestDef := GenReqDefForCreateVpc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVpcResponse), nil
+	}
+}
+
+//删除VPC
+func (c *VpcClient) DeleteVpc(request *model.DeleteVpcRequest) (*model.DeleteVpcResponse, error) {
+	requestDef := GenReqDefForDeleteVpc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVpcResponse), nil
+	}
+}
+
+//查询vpc列表
+func (c *VpcClient) ListVpcs(request *model.ListVpcsRequest) (*model.ListVpcsResponse, error) {
+	requestDef := GenReqDefForListVpcs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVpcsResponse), nil
+	}
+}
+
+//移除VPC扩展网段
+func (c *VpcClient) RemoveVpcExtendCidr(request *model.RemoveVpcExtendCidrRequest) (*model.RemoveVpcExtendCidrResponse, error) {
+	requestDef := GenReqDefForRemoveVpcExtendCidr()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveVpcExtendCidrResponse), nil
+	}
+}
+
+//查询vpc详情
+func (c *VpcClient) ShowVpc(request *model.ShowVpcRequest) (*model.ShowVpcResponse, error) {
+	requestDef := GenReqDefForShowVpc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVpcResponse), nil
+	}
+}
+
+//更新vpc
+func (c *VpcClient) UpdateVpc(request *model.UpdateVpcRequest) (*model.UpdateVpcResponse, error) {
+	requestDef := GenReqDefForUpdateVpc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateVpcResponse), nil
 	}
 }

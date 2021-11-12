@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -57,7 +57,7 @@ type BackendApi struct {
 }
 
 func (o BackendApi) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BackendApi struct{}"
 	}
@@ -86,7 +86,7 @@ func GetBackendApiReqProtocolEnum() BackendApiReqProtocolEnum {
 }
 
 func (c BackendApiReqProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BackendApiReqProtocol) UnmarshalJSON(b []byte) error {
@@ -148,7 +148,7 @@ func GetBackendApiReqMethodEnum() BackendApiReqMethodEnum {
 }
 
 func (c BackendApiReqMethod) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BackendApiReqMethod) UnmarshalJSON(b []byte) error {

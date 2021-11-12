@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -26,7 +26,7 @@ type BatchExitStandByInstancesOption struct {
 }
 
 func (o BatchExitStandByInstancesOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BatchExitStandByInstancesOption struct{}"
 	}
@@ -55,7 +55,7 @@ func GetBatchExitStandByInstancesOptionInstanceDeleteEnum() BatchExitStandByInst
 }
 
 func (c BatchExitStandByInstancesOptionInstanceDelete) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchExitStandByInstancesOptionInstanceDelete) UnmarshalJSON(b []byte) error {
@@ -89,7 +89,7 @@ func GetBatchExitStandByInstancesOptionActionEnum() BatchExitStandByInstancesOpt
 }
 
 func (c BatchExitStandByInstancesOptionAction) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchExitStandByInstancesOptionAction) UnmarshalJSON(b []byte) error {
@@ -127,7 +127,7 @@ func GetBatchExitStandByInstancesOptionInstanceAppendEnum() BatchExitStandByInst
 }
 
 func (c BatchExitStandByInstancesOptionInstanceAppend) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchExitStandByInstancesOptionInstanceAppend) UnmarshalJSON(b []byte) error {

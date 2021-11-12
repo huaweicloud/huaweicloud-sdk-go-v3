@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -26,7 +26,7 @@ type BatchProtectInstancesOption struct {
 }
 
 func (o BatchProtectInstancesOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BatchProtectInstancesOption struct{}"
 	}
@@ -55,7 +55,7 @@ func GetBatchProtectInstancesOptionInstanceDeleteEnum() BatchProtectInstancesOpt
 }
 
 func (c BatchProtectInstancesOptionInstanceDelete) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchProtectInstancesOptionInstanceDelete) UnmarshalJSON(b []byte) error {
@@ -89,7 +89,7 @@ func GetBatchProtectInstancesOptionActionEnum() BatchProtectInstancesOptionActio
 }
 
 func (c BatchProtectInstancesOptionAction) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchProtectInstancesOptionAction) UnmarshalJSON(b []byte) error {
@@ -127,7 +127,7 @@ func GetBatchProtectInstancesOptionInstanceAppendEnum() BatchProtectInstancesOpt
 }
 
 func (c BatchProtectInstancesOptionInstanceAppend) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchProtectInstancesOptionInstanceAppend) UnmarshalJSON(b []byte) error {

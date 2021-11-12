@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -80,7 +80,7 @@ type Server struct {
 }
 
 func (o Server) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "Server struct{}"
 	}
@@ -109,7 +109,7 @@ func GetServerOsTypeEnum() ServerOsTypeEnum {
 }
 
 func (c ServerOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ServerOsType) UnmarshalJSON(b []byte) error {
@@ -147,7 +147,7 @@ func GetServerFirmwareEnum() ServerFirmwareEnum {
 }
 
 func (c ServerFirmware) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ServerFirmware) UnmarshalJSON(b []byte) error {
@@ -185,7 +185,7 @@ func GetServerBootLoaderEnum() ServerBootLoaderEnum {
 }
 
 func (c ServerBootLoader) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ServerBootLoader) UnmarshalJSON(b []byte) error {

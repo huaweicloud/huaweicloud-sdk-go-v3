@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -54,7 +54,7 @@ type ThrottleResp struct {
 }
 
 func (o ThrottleResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ThrottleResp struct{}"
 	}
@@ -91,7 +91,7 @@ func GetThrottleRespTimeUnitEnum() ThrottleRespTimeUnitEnum {
 }
 
 func (c ThrottleRespTimeUnit) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ThrottleRespTimeUnit) UnmarshalJSON(b []byte) error {

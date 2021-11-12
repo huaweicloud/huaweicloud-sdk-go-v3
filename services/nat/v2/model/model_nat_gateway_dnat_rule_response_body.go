@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -61,7 +61,7 @@ type NatGatewayDnatRuleResponseBody struct {
 }
 
 func (o NatGatewayDnatRuleResponseBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "NatGatewayDnatRuleResponseBody struct{}"
 	}
@@ -106,7 +106,7 @@ func GetNatGatewayDnatRuleResponseBodyStatusEnum() NatGatewayDnatRuleResponseBod
 }
 
 func (c NatGatewayDnatRuleResponseBodyStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NatGatewayDnatRuleResponseBodyStatus) UnmarshalJSON(b []byte) error {
@@ -148,7 +148,7 @@ func GetNatGatewayDnatRuleResponseBodyProtocolEnum() NatGatewayDnatRuleResponseB
 }
 
 func (c NatGatewayDnatRuleResponseBodyProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NatGatewayDnatRuleResponseBodyProtocol) UnmarshalJSON(b []byte) error {

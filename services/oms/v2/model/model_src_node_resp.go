@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -31,7 +31,7 @@ type SrcNodeResp struct {
 }
 
 func (o SrcNodeResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "SrcNodeResp struct{}"
 	}
@@ -96,7 +96,7 @@ func GetSrcNodeRespCloudTypeEnum() SrcNodeRespCloudTypeEnum {
 }
 
 func (c SrcNodeRespCloudType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *SrcNodeRespCloudType) UnmarshalJSON(b []byte) error {

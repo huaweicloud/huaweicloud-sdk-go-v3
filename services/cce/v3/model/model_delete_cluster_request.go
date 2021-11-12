@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -41,7 +41,7 @@ type DeleteClusterRequest struct {
 }
 
 func (o DeleteClusterRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DeleteClusterRequest struct{}"
 	}
@@ -82,7 +82,7 @@ func GetDeleteClusterRequestDeleteEfsEnum() DeleteClusterRequestDeleteEfsEnum {
 }
 
 func (c DeleteClusterRequestDeleteEfs) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DeleteClusterRequestDeleteEfs) UnmarshalJSON(b []byte) error {
@@ -132,7 +132,7 @@ func GetDeleteClusterRequestDeleteEniEnum() DeleteClusterRequestDeleteEniEnum {
 }
 
 func (c DeleteClusterRequestDeleteEni) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DeleteClusterRequestDeleteEni) UnmarshalJSON(b []byte) error {
@@ -182,7 +182,7 @@ func GetDeleteClusterRequestDeleteEvsEnum() DeleteClusterRequestDeleteEvsEnum {
 }
 
 func (c DeleteClusterRequestDeleteEvs) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DeleteClusterRequestDeleteEvs) UnmarshalJSON(b []byte) error {
@@ -232,7 +232,7 @@ func GetDeleteClusterRequestDeleteNetEnum() DeleteClusterRequestDeleteNetEnum {
 }
 
 func (c DeleteClusterRequestDeleteNet) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DeleteClusterRequestDeleteNet) UnmarshalJSON(b []byte) error {
@@ -282,7 +282,7 @@ func GetDeleteClusterRequestDeleteObsEnum() DeleteClusterRequestDeleteObsEnum {
 }
 
 func (c DeleteClusterRequestDeleteObs) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DeleteClusterRequestDeleteObs) UnmarshalJSON(b []byte) error {
@@ -332,7 +332,7 @@ func GetDeleteClusterRequestDeleteSfsEnum() DeleteClusterRequestDeleteSfsEnum {
 }
 
 func (c DeleteClusterRequestDeleteSfs) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DeleteClusterRequestDeleteSfs) UnmarshalJSON(b []byte) error {
@@ -366,7 +366,7 @@ func GetDeleteClusterRequestTobedeletedEnum() DeleteClusterRequestTobedeletedEnu
 }
 
 func (c DeleteClusterRequestTobedeleted) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DeleteClusterRequestTobedeleted) UnmarshalJSON(b []byte) error {

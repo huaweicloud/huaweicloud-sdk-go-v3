@@ -1,14 +1,14 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
 
 //
 type LoginPolicyOption struct {
-	// 登录提示信息，取值范围[0,240]。
+	// 账号在该值设置的有效期内未使用，则被停用。
 
 	AccountValidityPeriod int32 `json:"account_validity_period"`
 	// 登录提示信息。
@@ -32,7 +32,7 @@ type LoginPolicyOption struct {
 }
 
 func (o LoginPolicyOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "LoginPolicyOption struct{}"
 	}

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -72,7 +72,7 @@ type OpenGaussInstanceRequest struct {
 }
 
 func (o OpenGaussInstanceRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "OpenGaussInstanceRequest struct{}"
 	}
@@ -100,7 +100,7 @@ func GetOpenGaussInstanceRequestReplicaNumEnum() OpenGaussInstanceRequestReplica
 }
 
 func (c OpenGaussInstanceRequestReplicaNum) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OpenGaussInstanceRequestReplicaNum) UnmarshalJSON(b []byte) error {

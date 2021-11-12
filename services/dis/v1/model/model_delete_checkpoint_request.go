@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -26,7 +26,7 @@ type DeleteCheckpointRequest struct {
 }
 
 func (o DeleteCheckpointRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DeleteCheckpointRequest struct{}"
 	}
@@ -51,7 +51,7 @@ func GetDeleteCheckpointRequestCheckpointTypeEnum() DeleteCheckpointRequestCheck
 }
 
 func (c DeleteCheckpointRequestCheckpointType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DeleteCheckpointRequestCheckpointType) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -42,7 +42,7 @@ type PostPaidServerDataVolume struct {
 }
 
 func (o PostPaidServerDataVolume) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "PostPaidServerDataVolume struct{}"
 	}
@@ -87,7 +87,7 @@ func GetPostPaidServerDataVolumeVolumetypeEnum() PostPaidServerDataVolumeVolumet
 }
 
 func (c PostPaidServerDataVolumeVolumetype) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PostPaidServerDataVolumeVolumetype) UnmarshalJSON(b []byte) error {
@@ -121,7 +121,7 @@ func GetPostPaidServerDataVolumeClusterTypeEnum() PostPaidServerDataVolumeCluste
 }
 
 func (c PostPaidServerDataVolumeClusterType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PostPaidServerDataVolumeClusterType) UnmarshalJSON(b []byte) error {

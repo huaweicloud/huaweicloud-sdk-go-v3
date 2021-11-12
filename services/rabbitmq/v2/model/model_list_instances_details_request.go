@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -35,7 +35,7 @@ type ListInstancesDetailsRequest struct {
 }
 
 func (o ListInstancesDetailsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListInstancesDetailsRequest struct{}"
 	}
@@ -88,7 +88,7 @@ func GetListInstancesDetailsRequestStatusEnum() ListInstancesDetailsRequestStatu
 }
 
 func (c ListInstancesDetailsRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListInstancesDetailsRequestStatus) UnmarshalJSON(b []byte) error {
@@ -126,7 +126,7 @@ func GetListInstancesDetailsRequestIncludeFailureEnum() ListInstancesDetailsRequ
 }
 
 func (c ListInstancesDetailsRequestIncludeFailure) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListInstancesDetailsRequestIncludeFailure) UnmarshalJSON(b []byte) error {
@@ -164,7 +164,7 @@ func GetListInstancesDetailsRequestExactMatchNameEnum() ListInstancesDetailsRequ
 }
 
 func (c ListInstancesDetailsRequestExactMatchName) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListInstancesDetailsRequestExactMatchName) UnmarshalJSON(b []byte) error {

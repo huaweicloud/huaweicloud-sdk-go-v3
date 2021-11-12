@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -15,7 +15,7 @@ type ListTriggersDetailsResponse struct {
 }
 
 func (o ListTriggersDetailsResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListTriggersDetailsResponse struct{}"
 	}

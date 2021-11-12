@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -23,7 +23,7 @@ type CreateOrDeleteDeviceInGroupRequest struct {
 }
 
 func (o CreateOrDeleteDeviceInGroupRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateOrDeleteDeviceInGroupRequest struct{}"
 	}

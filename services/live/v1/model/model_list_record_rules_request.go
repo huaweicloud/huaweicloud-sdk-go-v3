@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -32,7 +32,7 @@ type ListRecordRulesRequest struct {
 }
 
 func (o ListRecordRulesRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListRecordRulesRequest struct{}"
 	}
@@ -69,7 +69,7 @@ func GetListRecordRulesRequestRecordTypeEnum() ListRecordRulesRequestRecordTypeE
 }
 
 func (c ListRecordRulesRequestRecordType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListRecordRulesRequestRecordType) UnmarshalJSON(b []byte) error {

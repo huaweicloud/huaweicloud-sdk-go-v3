@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -14,7 +14,7 @@ type PostPaidServerIpv6Bandwidth struct {
 }
 
 func (o PostPaidServerIpv6Bandwidth) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "PostPaidServerIpv6Bandwidth struct{}"
 	}

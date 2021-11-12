@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -31,7 +31,7 @@ type CreateQueueReq struct {
 }
 
 func (o CreateQueueReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateQueueReq struct{}"
 	}
@@ -68,7 +68,7 @@ func GetCreateQueueReqQueueModeEnum() CreateQueueReqQueueModeEnum {
 }
 
 func (c CreateQueueReqQueueMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateQueueReqQueueMode) UnmarshalJSON(b []byte) error {
@@ -106,7 +106,7 @@ func GetCreateQueueReqRedrivePolicyEnum() CreateQueueReqRedrivePolicyEnum {
 }
 
 func (c CreateQueueReqRedrivePolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateQueueReqRedrivePolicy) UnmarshalJSON(b []byte) error {

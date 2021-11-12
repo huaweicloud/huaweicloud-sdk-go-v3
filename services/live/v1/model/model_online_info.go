@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -49,7 +49,7 @@ type OnlineInfo struct {
 }
 
 func (o OnlineInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "OnlineInfo struct{}"
 	}
@@ -78,7 +78,7 @@ func GetOnlineInfoVideoCodecEnum() OnlineInfoVideoCodecEnum {
 }
 
 func (c OnlineInfoVideoCodec) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OnlineInfoVideoCodec) UnmarshalJSON(b []byte) error {
@@ -112,7 +112,7 @@ func GetOnlineInfoAudioCodecEnum() OnlineInfoAudioCodecEnum {
 }
 
 func (c OnlineInfoAudioCodec) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OnlineInfoAudioCodec) UnmarshalJSON(b []byte) error {

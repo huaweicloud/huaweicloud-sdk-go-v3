@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -35,7 +35,7 @@ type ListSlowlogStatisticsRequest struct {
 }
 
 func (o ListSlowlogStatisticsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListSlowlogStatisticsRequest struct{}"
 	}
@@ -64,7 +64,7 @@ func GetListSlowlogStatisticsRequestXLanguageEnum() ListSlowlogStatisticsRequest
 }
 
 func (c ListSlowlogStatisticsRequestXLanguage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListSlowlogStatisticsRequestXLanguage) UnmarshalJSON(b []byte) error {
@@ -118,7 +118,7 @@ func GetListSlowlogStatisticsRequestTypeEnum() ListSlowlogStatisticsRequestTypeE
 }
 
 func (c ListSlowlogStatisticsRequestType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListSlowlogStatisticsRequestType) UnmarshalJSON(b []byte) error {

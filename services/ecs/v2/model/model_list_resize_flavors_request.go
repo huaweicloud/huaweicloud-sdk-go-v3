@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -35,7 +35,7 @@ type ListResizeFlavorsRequest struct {
 }
 
 func (o ListResizeFlavorsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListResizeFlavorsRequest struct{}"
 	}
@@ -64,7 +64,7 @@ func GetListResizeFlavorsRequestSortDirEnum() ListResizeFlavorsRequestSortDirEnu
 }
 
 func (c ListResizeFlavorsRequestSortDir) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListResizeFlavorsRequestSortDir) UnmarshalJSON(b []byte) error {
@@ -118,7 +118,7 @@ func GetListResizeFlavorsRequestSortKeyEnum() ListResizeFlavorsRequestSortKeyEnu
 }
 
 func (c ListResizeFlavorsRequestSortKey) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListResizeFlavorsRequestSortKey) UnmarshalJSON(b []byte) error {

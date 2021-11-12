@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -19,7 +19,7 @@ type CreatePersonalAuthRequest struct {
 }
 
 func (o CreatePersonalAuthRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreatePersonalAuthRequest struct{}"
 	}
@@ -52,7 +52,7 @@ func GetCreatePersonalAuthRequestRepoTypeEnum() CreatePersonalAuthRequestRepoTyp
 }
 
 func (c CreatePersonalAuthRequestRepoType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreatePersonalAuthRequestRepoType) UnmarshalJSON(b []byte) error {

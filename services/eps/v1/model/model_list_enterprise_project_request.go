@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -35,7 +35,7 @@ type ListEnterpriseProjectRequest struct {
 }
 
 func (o ListEnterpriseProjectRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListEnterpriseProjectRequest struct{}"
 	}
@@ -64,7 +64,7 @@ func GetListEnterpriseProjectRequestSortDirEnum() ListEnterpriseProjectRequestSo
 }
 
 func (c ListEnterpriseProjectRequestSortDir) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListEnterpriseProjectRequestSortDir) UnmarshalJSON(b []byte) error {
@@ -102,7 +102,7 @@ func GetListEnterpriseProjectRequestSortKeyEnum() ListEnterpriseProjectRequestSo
 }
 
 func (c ListEnterpriseProjectRequestSortKey) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListEnterpriseProjectRequestSortKey) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -47,7 +47,7 @@ type ListRecordSetsRequest struct {
 }
 
 func (o ListRecordSetsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListRecordSetsRequest struct{}"
 	}

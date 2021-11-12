@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -114,7 +114,7 @@ type ListFunctionResult struct {
 }
 
 func (o ListFunctionResult) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListFunctionResult struct{}"
 	}
@@ -179,7 +179,7 @@ func GetListFunctionResultRuntimeEnum() ListFunctionResultRuntimeEnum {
 }
 
 func (c ListFunctionResultRuntime) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListFunctionResultRuntime) UnmarshalJSON(b []byte) error {
@@ -225,7 +225,7 @@ func GetListFunctionResultCodeTypeEnum() ListFunctionResultCodeTypeEnum {
 }
 
 func (c ListFunctionResultCodeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListFunctionResultCodeType) UnmarshalJSON(b []byte) error {
@@ -263,7 +263,7 @@ func GetListFunctionResultTypeEnum() ListFunctionResultTypeEnum {
 }
 
 func (c ListFunctionResultType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListFunctionResultType) UnmarshalJSON(b []byte) error {

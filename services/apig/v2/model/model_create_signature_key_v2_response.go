@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -35,7 +35,7 @@ type CreateSignatureKeyV2Response struct {
 }
 
 func (o CreateSignatureKeyV2Response) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateSignatureKeyV2Response struct{}"
 	}
@@ -64,7 +64,7 @@ func GetCreateSignatureKeyV2ResponseSignTypeEnum() CreateSignatureKeyV2ResponseS
 }
 
 func (c CreateSignatureKeyV2ResponseSignType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateSignatureKeyV2ResponseSignType) UnmarshalJSON(b []byte) error {

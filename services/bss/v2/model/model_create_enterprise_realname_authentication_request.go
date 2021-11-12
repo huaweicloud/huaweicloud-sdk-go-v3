@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -12,7 +12,7 @@ type CreateEnterpriseRealnameAuthenticationRequest struct {
 }
 
 func (o CreateEnterpriseRealnameAuthenticationRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateEnterpriseRealnameAuthenticationRequest struct{}"
 	}

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -37,7 +37,7 @@ type ShowScriptResponse struct {
 }
 
 func (o ShowScriptResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowScriptResponse struct{}"
 	}
@@ -82,7 +82,7 @@ func GetShowScriptResponseTypeEnum() ShowScriptResponseTypeEnum {
 }
 
 func (c ShowScriptResponseType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowScriptResponseType) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -20,7 +20,7 @@ type ScalingPolicyV2MetaData struct {
 }
 
 func (o ScalingPolicyV2MetaData) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ScalingPolicyV2MetaData struct{}"
 	}

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -20,7 +20,7 @@ type RealTimeNodeStatus struct {
 }
 
 func (o RealTimeNodeStatus) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "RealTimeNodeStatus struct{}"
 	}
@@ -61,7 +61,7 @@ func GetRealTimeNodeStatusStatusEnum() RealTimeNodeStatusStatusEnum {
 }
 
 func (c RealTimeNodeStatusStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *RealTimeNodeStatusStatus) UnmarshalJSON(b []byte) error {
@@ -155,7 +155,7 @@ func GetRealTimeNodeStatusNodeTypeEnum() RealTimeNodeStatusNodeTypeEnum {
 }
 
 func (c RealTimeNodeStatusNodeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *RealTimeNodeStatusNodeType) UnmarshalJSON(b []byte) error {

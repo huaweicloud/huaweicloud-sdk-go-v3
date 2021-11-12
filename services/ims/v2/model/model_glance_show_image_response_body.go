@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -194,7 +194,7 @@ type GlanceShowImageResponseBody struct {
 }
 
 func (o GlanceShowImageResponseBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "GlanceShowImageResponseBody struct{}"
 	}
@@ -223,7 +223,7 @@ func GetGlanceShowImageResponseBodyImageSourceTypeEnum() GlanceShowImageResponse
 }
 
 func (c GlanceShowImageResponseBodyImageSourceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceShowImageResponseBodyImageSourceType) UnmarshalJSON(b []byte) error {
@@ -265,7 +265,7 @@ func GetGlanceShowImageResponseBodyImagetypeEnum() GlanceShowImageResponseBodyIm
 }
 
 func (c GlanceShowImageResponseBodyImagetype) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceShowImageResponseBodyImagetype) UnmarshalJSON(b []byte) error {
@@ -303,7 +303,7 @@ func GetGlanceShowImageResponseBodyIsregisteredEnum() GlanceShowImageResponseBod
 }
 
 func (c GlanceShowImageResponseBodyIsregistered) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceShowImageResponseBodyIsregistered) UnmarshalJSON(b []byte) error {
@@ -341,7 +341,7 @@ func GetGlanceShowImageResponseBodyOsBitEnum() GlanceShowImageResponseBodyOsBitE
 }
 
 func (c GlanceShowImageResponseBodyOsBit) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceShowImageResponseBodyOsBit) UnmarshalJSON(b []byte) error {
@@ -383,7 +383,7 @@ func GetGlanceShowImageResponseBodyOsTypeEnum() GlanceShowImageResponseBodyOsTyp
 }
 
 func (c GlanceShowImageResponseBodyOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceShowImageResponseBodyOsType) UnmarshalJSON(b []byte) error {
@@ -461,7 +461,7 @@ func GetGlanceShowImageResponseBodyPlatformEnum() GlanceShowImageResponseBodyPla
 }
 
 func (c GlanceShowImageResponseBodyPlatform) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceShowImageResponseBodyPlatform) UnmarshalJSON(b []byte) error {
@@ -511,7 +511,7 @@ func GetGlanceShowImageResponseBodyDiskFormatEnum() GlanceShowImageResponseBodyD
 }
 
 func (c GlanceShowImageResponseBodyDiskFormat) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceShowImageResponseBodyDiskFormat) UnmarshalJSON(b []byte) error {
@@ -561,7 +561,7 @@ func GetGlanceShowImageResponseBodyStatusEnum() GlanceShowImageResponseBodyStatu
 }
 
 func (c GlanceShowImageResponseBodyStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceShowImageResponseBodyStatus) UnmarshalJSON(b []byte) error {
@@ -603,7 +603,7 @@ func GetGlanceShowImageResponseBodyVirtualEnvTypeEnum() GlanceShowImageResponseB
 }
 
 func (c GlanceShowImageResponseBodyVirtualEnvType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceShowImageResponseBodyVirtualEnvType) UnmarshalJSON(b []byte) error {
@@ -645,7 +645,7 @@ func GetGlanceShowImageResponseBodyVisibilityEnum() GlanceShowImageResponseBodyV
 }
 
 func (c GlanceShowImageResponseBodyVisibility) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceShowImageResponseBodyVisibility) UnmarshalJSON(b []byte) error {
@@ -683,7 +683,7 @@ func GetGlanceShowImageResponseBodySupportFcInjectEnum() GlanceShowImageResponse
 }
 
 func (c GlanceShowImageResponseBodySupportFcInject) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceShowImageResponseBodySupportFcInject) UnmarshalJSON(b []byte) error {
@@ -721,7 +721,7 @@ func GetGlanceShowImageResponseBodyHwFirmwareTypeEnum() GlanceShowImageResponseB
 }
 
 func (c GlanceShowImageResponseBodyHwFirmwareType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceShowImageResponseBodyHwFirmwareType) UnmarshalJSON(b []byte) error {
@@ -759,7 +759,7 @@ func GetGlanceShowImageResponseBodySupportArmEnum() GlanceShowImageResponseBodyS
 }
 
 func (c GlanceShowImageResponseBodySupportArm) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceShowImageResponseBodySupportArm) UnmarshalJSON(b []byte) error {
@@ -797,7 +797,7 @@ func GetGlanceShowImageResponseBodyIsOffshelvedEnum() GlanceShowImageResponseBod
 }
 
 func (c GlanceShowImageResponseBodyIsOffshelved) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceShowImageResponseBodyIsOffshelved) UnmarshalJSON(b []byte) error {

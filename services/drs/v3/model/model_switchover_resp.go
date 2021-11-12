@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -36,7 +36,7 @@ type SwitchoverResp struct {
 }
 
 func (o SwitchoverResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "SwitchoverResp struct{}"
 	}
@@ -69,7 +69,7 @@ func GetSwitchoverRespJobDirectionEnum() SwitchoverRespJobDirectionEnum {
 }
 
 func (c SwitchoverRespJobDirection) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *SwitchoverRespJobDirection) UnmarshalJSON(b []byte) error {

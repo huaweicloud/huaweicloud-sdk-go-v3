@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -23,7 +23,7 @@ type DisassociateCertificateV2Request struct {
 }
 
 func (o DisassociateCertificateV2Request) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DisassociateCertificateV2Request struct{}"
 	}

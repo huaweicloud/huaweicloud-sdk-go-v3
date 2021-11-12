@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -9,7 +9,7 @@ import (
 //
 type PwdPasswordUser struct {
 	Domain *PwdPasswordUserDomain `json:"domain"`
-	// IAM用户名。
+	// IAM用户名，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
 
 	Name string `json:"name"`
 	// IAM用户的登录密码。
@@ -18,7 +18,7 @@ type PwdPasswordUser struct {
 }
 
 func (o PwdPasswordUser) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "PwdPasswordUser struct{}"
 	}

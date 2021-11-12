@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -59,7 +59,7 @@ type ListTagsRequest struct {
 }
 
 func (o ListTagsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListTagsRequest struct{}"
 	}
@@ -92,7 +92,7 @@ func GetListTagsRequestImagetypeEnum() ListTagsRequestImagetypeEnum {
 }
 
 func (c ListTagsRequestImagetype) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListTagsRequestImagetype) UnmarshalJSON(b []byte) error {
@@ -142,7 +142,7 @@ func GetListTagsRequestStatusEnum() ListTagsRequestStatusEnum {
 }
 
 func (c ListTagsRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListTagsRequestStatus) UnmarshalJSON(b []byte) error {
@@ -184,7 +184,7 @@ func GetListTagsRequestOsTypeEnum() ListTagsRequestOsTypeEnum {
 }
 
 func (c ListTagsRequestOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListTagsRequestOsType) UnmarshalJSON(b []byte) error {
@@ -226,7 +226,7 @@ func GetListTagsRequestMemberStatusEnum() ListTagsRequestMemberStatusEnum {
 }
 
 func (c ListTagsRequestMemberStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListTagsRequestMemberStatus) UnmarshalJSON(b []byte) error {
@@ -268,7 +268,7 @@ func GetListTagsRequestVirtualEnvTypeEnum() ListTagsRequestVirtualEnvTypeEnum {
 }
 
 func (c ListTagsRequestVirtualEnvType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListTagsRequestVirtualEnvType) UnmarshalJSON(b []byte) error {
@@ -306,7 +306,7 @@ func GetListTagsRequestArchitectureEnum() ListTagsRequestArchitectureEnum {
 }
 
 func (c ListTagsRequestArchitecture) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListTagsRequestArchitecture) UnmarshalJSON(b []byte) error {

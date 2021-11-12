@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -23,7 +23,7 @@ type ShowRepositoryRequest struct {
 }
 
 func (o ShowRepositoryRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowRepositoryRequest struct{}"
 	}
@@ -52,7 +52,7 @@ func GetShowRepositoryRequestContentTypeEnum() ShowRepositoryRequestContentTypeE
 }
 
 func (c ShowRepositoryRequestContentType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowRepositoryRequestContentType) UnmarshalJSON(b []byte) error {

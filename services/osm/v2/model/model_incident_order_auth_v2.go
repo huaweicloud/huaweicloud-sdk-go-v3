@@ -1,8 +1,8 @@
 package model
 
 import (
-	"encoding/json"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -50,7 +50,7 @@ type IncidentOrderAuthV2 struct {
 }
 
 func (o IncidentOrderAuthV2) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "IncidentOrderAuthV2 struct{}"
 	}

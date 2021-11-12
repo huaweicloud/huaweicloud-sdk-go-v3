@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -39,7 +39,7 @@ func GetSourceRepoTypeEnum() SourceRepoTypeEnum {
 }
 
 func (c SourceRepoType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *SourceRepoType) UnmarshalJSON(b []byte) error {

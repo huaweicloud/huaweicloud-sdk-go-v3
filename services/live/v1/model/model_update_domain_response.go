@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -38,7 +38,7 @@ type UpdateDomainResponse struct {
 }
 
 func (o UpdateDomainResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateDomainResponse struct{}"
 	}
@@ -67,7 +67,7 @@ func GetUpdateDomainResponseDomainTypeEnum() UpdateDomainResponseDomainTypeEnum 
 }
 
 func (c UpdateDomainResponseDomainType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateDomainResponseDomainType) UnmarshalJSON(b []byte) error {
@@ -113,7 +113,7 @@ func GetUpdateDomainResponseStatusEnum() UpdateDomainResponseStatusEnum {
 }
 
 func (c UpdateDomainResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateDomainResponseStatus) UnmarshalJSON(b []byte) error {
@@ -155,7 +155,7 @@ func GetUpdateDomainResponseServiceAreaEnum() UpdateDomainResponseServiceAreaEnu
 }
 
 func (c UpdateDomainResponseServiceArea) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateDomainResponseServiceArea) UnmarshalJSON(b []byte) error {

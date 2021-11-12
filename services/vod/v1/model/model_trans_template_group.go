@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -36,7 +36,7 @@ type TransTemplateGroup struct {
 }
 
 func (o TransTemplateGroup) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "TransTemplateGroup struct{}"
 	}
@@ -65,7 +65,7 @@ func GetTransTemplateGroupStatusEnum() TransTemplateGroupStatusEnum {
 }
 
 func (c TransTemplateGroupStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *TransTemplateGroupStatus) UnmarshalJSON(b []byte) error {
@@ -99,7 +99,7 @@ func GetTransTemplateGroupTypeEnum() TransTemplateGroupTypeEnum {
 }
 
 func (c TransTemplateGroupType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *TransTemplateGroupType) UnmarshalJSON(b []byte) error {

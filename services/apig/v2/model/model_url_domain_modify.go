@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -16,7 +16,7 @@ type UrlDomainModify struct {
 }
 
 func (o UrlDomainModify) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UrlDomainModify struct{}"
 	}
@@ -45,7 +45,7 @@ func GetUrlDomainModifyMinSslVersionEnum() UrlDomainModifyMinSslVersionEnum {
 }
 
 func (c UrlDomainModifyMinSslVersion) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UrlDomainModifyMinSslVersion) UnmarshalJSON(b []byte) error {

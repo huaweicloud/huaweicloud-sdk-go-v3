@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -20,7 +20,7 @@ type CreateNotificationOption struct {
 }
 
 func (o CreateNotificationOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateNotificationOption struct{}"
 	}
@@ -61,7 +61,7 @@ func GetCreateNotificationOptionTopicSceneEnum() CreateNotificationOptionTopicSc
 }
 
 func (c CreateNotificationOptionTopicScene) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateNotificationOptionTopicScene) UnmarshalJSON(b []byte) error {

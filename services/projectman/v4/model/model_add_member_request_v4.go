@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -22,7 +22,7 @@ type AddMemberRequestV4 struct {
 }
 
 func (o AddMemberRequestV4) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "AddMemberRequestV4 struct{}"
 	}

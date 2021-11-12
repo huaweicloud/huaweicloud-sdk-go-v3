@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -77,7 +77,7 @@ type ListBackupsRequest struct {
 }
 
 func (o ListBackupsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListBackupsRequest struct{}"
 	}
@@ -106,7 +106,7 @@ func GetListBackupsRequestImageTypeEnum() ListBackupsRequestImageTypeEnum {
 }
 
 func (c ListBackupsRequestImageType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListBackupsRequestImageType) UnmarshalJSON(b []byte) error {
@@ -144,7 +144,7 @@ func GetListBackupsRequestResourceTypeEnum() ListBackupsRequestResourceTypeEnum 
 }
 
 func (c ListBackupsRequestResourceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListBackupsRequestResourceType) UnmarshalJSON(b []byte) error {
@@ -206,7 +206,7 @@ func GetListBackupsRequestStatusEnum() ListBackupsRequestStatusEnum {
 }
 
 func (c ListBackupsRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListBackupsRequestStatus) UnmarshalJSON(b []byte) error {
@@ -248,7 +248,7 @@ func GetListBackupsRequestOwnTypeEnum() ListBackupsRequestOwnTypeEnum {
 }
 
 func (c ListBackupsRequestOwnType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListBackupsRequestOwnType) UnmarshalJSON(b []byte) error {
@@ -290,7 +290,7 @@ func GetListBackupsRequestMemberStatusEnum() ListBackupsRequestMemberStatusEnum 
 }
 
 func (c ListBackupsRequestMemberStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListBackupsRequestMemberStatus) UnmarshalJSON(b []byte) error {

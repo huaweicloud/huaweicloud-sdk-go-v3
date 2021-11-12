@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -34,7 +34,7 @@ type CreateGrantRequestBody struct {
 }
 
 func (o CreateGrantRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateGrantRequestBody struct{}"
 	}
@@ -63,7 +63,7 @@ func GetCreateGrantRequestBodyGranteePrincipalTypeEnum() CreateGrantRequestBodyG
 }
 
 func (c CreateGrantRequestBodyGranteePrincipalType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateGrantRequestBodyGranteePrincipalType) UnmarshalJSON(b []byte) error {

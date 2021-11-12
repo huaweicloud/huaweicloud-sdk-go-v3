@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -19,7 +19,7 @@ type UpdateSignatureKeyV2Request struct {
 }
 
 func (o UpdateSignatureKeyV2Request) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateSignatureKeyV2Request struct{}"
 	}

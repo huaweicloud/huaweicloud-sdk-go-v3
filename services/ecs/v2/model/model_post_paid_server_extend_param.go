@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -47,7 +47,7 @@ type PostPaidServerExtendParam struct {
 }
 
 func (o PostPaidServerExtendParam) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "PostPaidServerExtendParam struct{}"
 	}
@@ -72,7 +72,7 @@ func GetPostPaidServerExtendParamInterruptionPolicyEnum() PostPaidServerExtendPa
 }
 
 func (c PostPaidServerExtendParamInterruptionPolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PostPaidServerExtendParamInterruptionPolicy) UnmarshalJSON(b []byte) error {

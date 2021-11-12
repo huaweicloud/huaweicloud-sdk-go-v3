@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -46,7 +46,7 @@ type StreamInfo struct {
 }
 
 func (o StreamInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "StreamInfo struct{}"
 	}
@@ -83,7 +83,7 @@ func GetStreamInfoStatusEnum() StreamInfoStatusEnum {
 }
 
 func (c StreamInfoStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *StreamInfoStatus) UnmarshalJSON(b []byte) error {
@@ -121,7 +121,7 @@ func GetStreamInfoStreamTypeEnum() StreamInfoStreamTypeEnum {
 }
 
 func (c StreamInfoStreamType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *StreamInfoStreamType) UnmarshalJSON(b []byte) error {
@@ -163,7 +163,7 @@ func GetStreamInfoDataTypeEnum() StreamInfoDataTypeEnum {
 }
 
 func (c StreamInfoDataType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *StreamInfoDataType) UnmarshalJSON(b []byte) error {

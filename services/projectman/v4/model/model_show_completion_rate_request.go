@@ -1,14 +1,14 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
 
 // Request Object
 type ShowCompletionRateRequest struct {
-	// 项目ID
+	// devcloud的项目ID
 
 	ProjectId string `json:"project_id"`
 
@@ -16,7 +16,7 @@ type ShowCompletionRateRequest struct {
 }
 
 func (o ShowCompletionRateRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowCompletionRateRequest struct{}"
 	}

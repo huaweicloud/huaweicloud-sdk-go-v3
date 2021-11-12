@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -110,7 +110,7 @@ type GlanceListImagesRequest struct {
 }
 
 func (o GlanceListImagesRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "GlanceListImagesRequest struct{}"
 	}
@@ -143,7 +143,7 @@ func GetGlanceListImagesRequestImagetypeEnum() GlanceListImagesRequestImagetypeE
 }
 
 func (c GlanceListImagesRequestImagetype) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceListImagesRequestImagetype) UnmarshalJSON(b []byte) error {
@@ -181,7 +181,7 @@ func GetGlanceListImagesRequestOsBitEnum() GlanceListImagesRequestOsBitEnum {
 }
 
 func (c GlanceListImagesRequestOsBit) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceListImagesRequestOsBit) UnmarshalJSON(b []byte) error {
@@ -223,7 +223,7 @@ func GetGlanceListImagesRequestOsTypeEnum() GlanceListImagesRequestOsTypeEnum {
 }
 
 func (c GlanceListImagesRequestOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceListImagesRequestOsType) UnmarshalJSON(b []byte) error {
@@ -301,7 +301,7 @@ func GetGlanceListImagesRequestPlatformEnum() GlanceListImagesRequestPlatformEnu
 }
 
 func (c GlanceListImagesRequestPlatform) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceListImagesRequestPlatform) UnmarshalJSON(b []byte) error {
@@ -347,7 +347,7 @@ func GetGlanceListImagesRequestDiskFormatEnum() GlanceListImagesRequestDiskForma
 }
 
 func (c GlanceListImagesRequestDiskFormat) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceListImagesRequestDiskFormat) UnmarshalJSON(b []byte) error {
@@ -397,7 +397,7 @@ func GetGlanceListImagesRequestStatusEnum() GlanceListImagesRequestStatusEnum {
 }
 
 func (c GlanceListImagesRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceListImagesRequestStatus) UnmarshalJSON(b []byte) error {
@@ -439,7 +439,7 @@ func GetGlanceListImagesRequestVisibilityEnum() GlanceListImagesRequestVisibilit
 }
 
 func (c GlanceListImagesRequestVisibility) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceListImagesRequestVisibility) UnmarshalJSON(b []byte) error {

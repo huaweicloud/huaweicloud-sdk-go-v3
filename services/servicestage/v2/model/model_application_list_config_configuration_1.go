@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -18,7 +18,7 @@ type ApplicationListConfigConfiguration1 struct {
 }
 
 func (o ApplicationListConfigConfiguration1) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ApplicationListConfigConfiguration1 struct{}"
 	}

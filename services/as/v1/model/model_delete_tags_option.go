@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -20,7 +20,7 @@ type DeleteTagsOption struct {
 }
 
 func (o DeleteTagsOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DeleteTagsOption struct{}"
 	}
@@ -45,7 +45,7 @@ func GetDeleteTagsOptionActionEnum() DeleteTagsOptionActionEnum {
 }
 
 func (c DeleteTagsOptionAction) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DeleteTagsOptionAction) UnmarshalJSON(b []byte) error {

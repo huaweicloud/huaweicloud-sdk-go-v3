@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -43,7 +43,7 @@ type ScalingGroupInstance struct {
 }
 
 func (o ScalingGroupInstance) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ScalingGroupInstance struct{}"
 	}
@@ -84,7 +84,7 @@ func GetScalingGroupInstanceLifeCycleStateEnum() ScalingGroupInstanceLifeCycleSt
 }
 
 func (c ScalingGroupInstanceLifeCycleState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScalingGroupInstanceLifeCycleState) UnmarshalJSON(b []byte) error {
@@ -126,7 +126,7 @@ func GetScalingGroupInstanceHealthStatusEnum() ScalingGroupInstanceHealthStatusE
 }
 
 func (c ScalingGroupInstanceHealthStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScalingGroupInstanceHealthStatus) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -11,7 +11,7 @@ import (
 
 //
 type AgencyPolicyStatement struct {
-	// 授权项，指对资源的具体操作权限。   > - 当自定义策略为委托自定义策略时，该字段值为：``` \"Action\": [\"iam:agencies:assume\"]```。
+	// 授权项，指对资源的具体操作权限。 > - 当自定义策略为委托自定义策略时，该字段值为：``` \"Action\": [\"iam:agencies:assume\"]```。
 
 	Action []AgencyPolicyStatementAction `json:"Action"`
 	// 作用。包含两种：允许（Allow）和拒绝（Deny），既有Allow又有Deny的授权语句时，遵循Deny优先的原则。
@@ -22,7 +22,7 @@ type AgencyPolicyStatement struct {
 }
 
 func (o AgencyPolicyStatement) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "AgencyPolicyStatement struct{}"
 	}
@@ -47,7 +47,7 @@ func GetAgencyPolicyStatementActionEnum() AgencyPolicyStatementActionEnum {
 }
 
 func (c AgencyPolicyStatementAction) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *AgencyPolicyStatementAction) UnmarshalJSON(b []byte) error {
@@ -85,7 +85,7 @@ func GetAgencyPolicyStatementEffectEnum() AgencyPolicyStatementEffectEnum {
 }
 
 func (c AgencyPolicyStatementEffect) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *AgencyPolicyStatementEffect) UnmarshalJSON(b []byte) error {

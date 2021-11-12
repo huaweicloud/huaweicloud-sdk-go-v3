@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -36,7 +36,7 @@ type ShowEdgeAppResponse struct {
 }
 
 func (o ShowEdgeAppResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowEdgeAppResponse struct{}"
 	}

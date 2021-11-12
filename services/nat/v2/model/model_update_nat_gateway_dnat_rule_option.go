@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -44,7 +44,7 @@ type UpdateNatGatewayDnatRuleOption struct {
 }
 
 func (o UpdateNatGatewayDnatRuleOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateNatGatewayDnatRuleOption struct{}"
 	}
@@ -77,7 +77,7 @@ func GetUpdateNatGatewayDnatRuleOptionProtocolEnum() UpdateNatGatewayDnatRuleOpt
 }
 
 func (c UpdateNatGatewayDnatRuleOptionProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateNatGatewayDnatRuleOptionProtocol) UnmarshalJSON(b []byte) error {

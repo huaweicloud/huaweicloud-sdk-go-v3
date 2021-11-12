@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -37,7 +37,7 @@ type BootstrapScript struct {
 }
 
 func (o BootstrapScript) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BootstrapScript struct{}"
 	}
@@ -66,7 +66,7 @@ func GetBootstrapScriptFailActionEnum() BootstrapScriptFailActionEnum {
 }
 
 func (c BootstrapScriptFailAction) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BootstrapScriptFailAction) UnmarshalJSON(b []byte) error {
@@ -120,7 +120,7 @@ func GetBootstrapScriptActionStagesEnum() BootstrapScriptActionStagesEnum {
 }
 
 func (c BootstrapScriptActionStages) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BootstrapScriptActionStages) UnmarshalJSON(b []byte) error {

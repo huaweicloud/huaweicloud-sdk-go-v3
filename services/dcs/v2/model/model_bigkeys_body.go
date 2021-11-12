@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -32,7 +32,7 @@ type BigkeysBody struct {
 }
 
 func (o BigkeysBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BigkeysBody struct{}"
 	}
@@ -73,7 +73,7 @@ func GetBigkeysBodyTypeEnum() BigkeysBodyTypeEnum {
 }
 
 func (c BigkeysBodyType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BigkeysBodyType) UnmarshalJSON(b []byte) error {

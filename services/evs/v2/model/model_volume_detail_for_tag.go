@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -109,7 +109,7 @@ type VolumeDetailForTag struct {
 }
 
 func (o VolumeDetailForTag) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "VolumeDetailForTag struct{}"
 	}

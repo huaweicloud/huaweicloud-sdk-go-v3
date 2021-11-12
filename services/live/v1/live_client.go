@@ -217,6 +217,17 @@ func (c *LiveClient) ListStreamForbidden(request *model.ListStreamForbiddenReque
 	}
 }
 
+//对单条流的实时录制控制接口。
+func (c *LiveClient) RunRecord(request *model.RunRecordRequest) (*model.RunRecordResponse, error) {
+	requestDef := GenReqDefForRunRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunRecordResponse), nil
+	}
+}
+
 //查询直播域名
 func (c *LiveClient) ShowDomain(request *model.ShowDomainRequest) (*model.ShowDomainResponse, error) {
 	requestDef := GenReqDefForShowDomain()

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -41,7 +41,7 @@ type NeutronCreateSecurityGroupRuleOption struct {
 }
 
 func (o NeutronCreateSecurityGroupRuleOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "NeutronCreateSecurityGroupRuleOption struct{}"
 	}
@@ -70,7 +70,7 @@ func GetNeutronCreateSecurityGroupRuleOptionDirectionEnum() NeutronCreateSecurit
 }
 
 func (c NeutronCreateSecurityGroupRuleOptionDirection) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NeutronCreateSecurityGroupRuleOptionDirection) UnmarshalJSON(b []byte) error {
@@ -108,7 +108,7 @@ func GetNeutronCreateSecurityGroupRuleOptionEthertypeEnum() NeutronCreateSecurit
 }
 
 func (c NeutronCreateSecurityGroupRuleOptionEthertype) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NeutronCreateSecurityGroupRuleOptionEthertype) UnmarshalJSON(b []byte) error {

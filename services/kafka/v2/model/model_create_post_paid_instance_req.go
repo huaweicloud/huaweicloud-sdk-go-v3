@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -98,7 +98,7 @@ type CreatePostPaidInstanceReq struct {
 }
 
 func (o CreatePostPaidInstanceReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreatePostPaidInstanceReq struct{}"
 	}
@@ -123,7 +123,7 @@ func GetCreatePostPaidInstanceReqEngineEnum() CreatePostPaidInstanceReqEngineEnu
 }
 
 func (c CreatePostPaidInstanceReqEngine) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreatePostPaidInstanceReqEngine) UnmarshalJSON(b []byte) error {
@@ -161,7 +161,7 @@ func GetCreatePostPaidInstanceReqEngineVersionEnum() CreatePostPaidInstanceReqEn
 }
 
 func (c CreatePostPaidInstanceReqEngineVersion) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreatePostPaidInstanceReqEngineVersion) UnmarshalJSON(b []byte) error {
@@ -207,7 +207,7 @@ func GetCreatePostPaidInstanceReqSpecificationEnum() CreatePostPaidInstanceReqSp
 }
 
 func (c CreatePostPaidInstanceReqSpecification) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreatePostPaidInstanceReqSpecification) UnmarshalJSON(b []byte) error {
@@ -245,7 +245,7 @@ func GetCreatePostPaidInstanceReqRetentionPolicyEnum() CreatePostPaidInstanceReq
 }
 
 func (c CreatePostPaidInstanceReqRetentionPolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreatePostPaidInstanceReqRetentionPolicy) UnmarshalJSON(b []byte) error {
@@ -287,7 +287,7 @@ func GetCreatePostPaidInstanceReqStorageSpecCodeEnum() CreatePostPaidInstanceReq
 }
 
 func (c CreatePostPaidInstanceReqStorageSpecCode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreatePostPaidInstanceReqStorageSpecCode) UnmarshalJSON(b []byte) error {

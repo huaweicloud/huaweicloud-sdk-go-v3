@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -44,7 +44,7 @@ type EdgeModuleRespDto struct {
 }
 
 func (o EdgeModuleRespDto) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "EdgeModuleRespDto struct{}"
 	}
@@ -93,7 +93,7 @@ func GetEdgeModuleRespDtoStateEnum() EdgeModuleRespDtoStateEnum {
 }
 
 func (c EdgeModuleRespDtoState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *EdgeModuleRespDtoState) UnmarshalJSON(b []byte) error {
@@ -135,7 +135,7 @@ func GetEdgeModuleRespDtoAppTypeEnum() EdgeModuleRespDtoAppTypeEnum {
 }
 
 func (c EdgeModuleRespDtoAppType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *EdgeModuleRespDtoAppType) UnmarshalJSON(b []byte) error {
@@ -177,7 +177,7 @@ func GetEdgeModuleRespDtoFunctionTypeEnum() EdgeModuleRespDtoFunctionTypeEnum {
 }
 
 func (c EdgeModuleRespDtoFunctionType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *EdgeModuleRespDtoFunctionType) UnmarshalJSON(b []byte) error {

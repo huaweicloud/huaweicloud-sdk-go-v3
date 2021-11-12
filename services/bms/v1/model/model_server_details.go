@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -140,7 +140,7 @@ type ServerDetails struct {
 }
 
 func (o ServerDetails) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ServerDetails struct{}"
 	}
@@ -181,7 +181,7 @@ func GetServerDetailsStatusEnum() ServerDetailsStatusEnum {
 }
 
 func (c ServerDetailsStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ServerDetailsStatus) UnmarshalJSON(b []byte) error {
@@ -243,7 +243,7 @@ func GetServerDetailsOSEXTSTStaskStateEnum() ServerDetailsOSEXTSTStaskStateEnum 
 }
 
 func (c ServerDetailsOSEXTSTStaskState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ServerDetailsOSEXTSTStaskState) UnmarshalJSON(b []byte) error {
@@ -289,7 +289,7 @@ func GetServerDetailsOSEXTSTSvmStateEnum() ServerDetailsOSEXTSTSvmStateEnum {
 }
 
 func (c ServerDetailsOSEXTSTSvmState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ServerDetailsOSEXTSTSvmState) UnmarshalJSON(b []byte) error {
@@ -327,7 +327,7 @@ func GetServerDetailsOSDCFdiskConfigEnum() ServerDetailsOSDCFdiskConfigEnum {
 }
 
 func (c ServerDetailsOSDCFdiskConfig) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ServerDetailsOSDCFdiskConfig) UnmarshalJSON(b []byte) error {
@@ -373,7 +373,7 @@ func GetServerDetailsHostStatusEnum() ServerDetailsHostStatusEnum {
 }
 
 func (c ServerDetailsHostStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ServerDetailsHostStatus) UnmarshalJSON(b []byte) error {

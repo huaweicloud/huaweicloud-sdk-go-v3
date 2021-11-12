@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -17,7 +17,7 @@ type ListRegionsRequest struct {
 }
 
 func (o ListRegionsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListRegionsRequest struct{}"
 	}
@@ -46,7 +46,7 @@ func GetListRegionsRequestXLanguageEnum() ListRegionsRequestXLanguageEnum {
 }
 
 func (c ListRegionsRequestXLanguage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListRegionsRequestXLanguage) UnmarshalJSON(b []byte) error {

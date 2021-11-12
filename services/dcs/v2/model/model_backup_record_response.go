@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -53,7 +53,7 @@ type BackupRecordResponse struct {
 }
 
 func (o BackupRecordResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BackupRecordResponse struct{}"
 	}
@@ -82,7 +82,7 @@ func GetBackupRecordResponseBackupTypeEnum() BackupRecordResponseBackupTypeEnum 
 }
 
 func (c BackupRecordResponseBackupType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BackupRecordResponseBackupType) UnmarshalJSON(b []byte) error {
@@ -136,7 +136,7 @@ func GetBackupRecordResponseStatusEnum() BackupRecordResponseStatusEnum {
 }
 
 func (c BackupRecordResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BackupRecordResponseStatus) UnmarshalJSON(b []byte) error {

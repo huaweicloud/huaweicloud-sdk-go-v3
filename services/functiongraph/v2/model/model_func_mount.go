@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -16,14 +16,14 @@ type FuncMount struct {
 	MountResource string `json:"mount_resource"`
 	// 远端挂载路径（例如192.168.0.12:/data），如果mount_type为ecs，必选。
 
-	MountSharePath *string `json:"mount_share_path,omitempty"`
+	MountSharePath string `json:"mount_share_path"`
 	// 函数访问路径，func_mounts非空时必选。
 
 	LocalMountPath string `json:"local_mount_path"`
 }
 
 func (o FuncMount) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "FuncMount struct{}"
 	}

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -47,7 +47,7 @@ type QuickImportImageByFileRequestBody struct {
 }
 
 func (o QuickImportImageByFileRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "QuickImportImageByFileRequestBody struct{}"
 	}
@@ -80,7 +80,7 @@ func GetQuickImportImageByFileRequestBodyTypeEnum() QuickImportImageByFileReques
 }
 
 func (c QuickImportImageByFileRequestBodyType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QuickImportImageByFileRequestBodyType) UnmarshalJSON(b []byte) error {
@@ -118,7 +118,7 @@ func GetQuickImportImageByFileRequestBodyArchitectureEnum() QuickImportImageByFi
 }
 
 func (c QuickImportImageByFileRequestBodyArchitecture) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QuickImportImageByFileRequestBodyArchitecture) UnmarshalJSON(b []byte) error {
@@ -156,7 +156,7 @@ func GetQuickImportImageByFileRequestBodyOsTypeEnum() QuickImportImageByFileRequ
 }
 
 func (c QuickImportImageByFileRequestBodyOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QuickImportImageByFileRequestBodyOsType) UnmarshalJSON(b []byte) error {

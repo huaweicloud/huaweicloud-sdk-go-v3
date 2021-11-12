@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -23,7 +23,7 @@ type OpenGaussHaResponse struct {
 }
 
 func (o OpenGaussHaResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "OpenGaussHaResponse struct{}"
 	}
@@ -48,7 +48,7 @@ func GetOpenGaussHaResponseModeEnum() OpenGaussHaResponseModeEnum {
 }
 
 func (c OpenGaussHaResponseMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OpenGaussHaResponseMode) UnmarshalJSON(b []byte) error {
@@ -82,7 +82,7 @@ func GetOpenGaussHaResponseReplicationModeEnum() OpenGaussHaResponseReplicationM
 }
 
 func (c OpenGaussHaResponseReplicationMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OpenGaussHaResponseReplicationMode) UnmarshalJSON(b []byte) error {
@@ -120,7 +120,7 @@ func GetOpenGaussHaResponseConsistencyEnum() OpenGaussHaResponseConsistencyEnum 
 }
 
 func (c OpenGaussHaResponseConsistency) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OpenGaussHaResponseConsistency) UnmarshalJSON(b []byte) error {

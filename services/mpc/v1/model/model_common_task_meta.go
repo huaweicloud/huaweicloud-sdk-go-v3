@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -31,7 +31,7 @@ type CommonTaskMeta struct {
 }
 
 func (o CommonTaskMeta) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CommonTaskMeta struct{}"
 	}

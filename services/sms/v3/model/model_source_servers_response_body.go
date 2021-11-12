@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -75,7 +75,7 @@ type SourceServersResponseBody struct {
 }
 
 func (o SourceServersResponseBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "SourceServersResponseBody struct{}"
 	}
@@ -104,7 +104,7 @@ func GetSourceServersResponseBodyOsTypeEnum() SourceServersResponseBodyOsTypeEnu
 }
 
 func (c SourceServersResponseBodyOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *SourceServersResponseBodyOsType) UnmarshalJSON(b []byte) error {
@@ -182,7 +182,7 @@ func GetSourceServersResponseBodyStateEnum() SourceServersResponseBodyStateEnum 
 }
 
 func (c SourceServersResponseBodyState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *SourceServersResponseBodyState) UnmarshalJSON(b []byte) error {
@@ -236,7 +236,7 @@ func GetSourceServersResponseBodyMigrationCycleEnum() SourceServersResponseBodyM
 }
 
 func (c SourceServersResponseBodyMigrationCycle) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *SourceServersResponseBodyMigrationCycle) UnmarshalJSON(b []byte) error {

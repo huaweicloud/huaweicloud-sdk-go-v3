@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -54,7 +54,7 @@ type UpdateMixJobResponse struct {
 }
 
 func (o UpdateMixJobResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateMixJobResponse struct{}"
 	}
@@ -87,7 +87,7 @@ func GetUpdateMixJobResponseStateEnum() UpdateMixJobResponseStateEnum {
 }
 
 func (c UpdateMixJobResponseState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateMixJobResponseState) UnmarshalJSON(b []byte) error {
@@ -129,7 +129,7 @@ func GetUpdateMixJobResponseStopReasonEnum() UpdateMixJobResponseStopReasonEnum 
 }
 
 func (c UpdateMixJobResponseStopReason) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateMixJobResponseStopReason) UnmarshalJSON(b []byte) error {

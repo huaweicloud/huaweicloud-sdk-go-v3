@@ -1,14 +1,14 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
 
 // Request Object
 type UpdateProjectV4Request struct {
-	// 项目id
+	// devcloud的项目id
 
 	ProjectId string `json:"project_id"`
 
@@ -16,7 +16,7 @@ type UpdateProjectV4Request struct {
 }
 
 func (o UpdateProjectV4Request) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateProjectV4Request struct{}"
 	}

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -192,7 +192,7 @@ type UpdateImageResponse struct {
 }
 
 func (o UpdateImageResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateImageResponse struct{}"
 	}
@@ -221,7 +221,7 @@ func GetUpdateImageResponseImageSourceTypeEnum() UpdateImageResponseImageSourceT
 }
 
 func (c UpdateImageResponseImageSourceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateImageResponseImageSourceType) UnmarshalJSON(b []byte) error {
@@ -263,7 +263,7 @@ func GetUpdateImageResponseImagetypeEnum() UpdateImageResponseImagetypeEnum {
 }
 
 func (c UpdateImageResponseImagetype) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateImageResponseImagetype) UnmarshalJSON(b []byte) error {
@@ -301,7 +301,7 @@ func GetUpdateImageResponseIsregisteredEnum() UpdateImageResponseIsregisteredEnu
 }
 
 func (c UpdateImageResponseIsregistered) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateImageResponseIsregistered) UnmarshalJSON(b []byte) error {
@@ -339,7 +339,7 @@ func GetUpdateImageResponseOsBitEnum() UpdateImageResponseOsBitEnum {
 }
 
 func (c UpdateImageResponseOsBit) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateImageResponseOsBit) UnmarshalJSON(b []byte) error {
@@ -381,7 +381,7 @@ func GetUpdateImageResponseOsTypeEnum() UpdateImageResponseOsTypeEnum {
 }
 
 func (c UpdateImageResponseOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateImageResponseOsType) UnmarshalJSON(b []byte) error {
@@ -459,7 +459,7 @@ func GetUpdateImageResponsePlatformEnum() UpdateImageResponsePlatformEnum {
 }
 
 func (c UpdateImageResponsePlatform) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateImageResponsePlatform) UnmarshalJSON(b []byte) error {
@@ -509,7 +509,7 @@ func GetUpdateImageResponseStatusEnum() UpdateImageResponseStatusEnum {
 }
 
 func (c UpdateImageResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateImageResponseStatus) UnmarshalJSON(b []byte) error {
@@ -551,7 +551,7 @@ func GetUpdateImageResponseVirtualEnvTypeEnum() UpdateImageResponseVirtualEnvTyp
 }
 
 func (c UpdateImageResponseVirtualEnvType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateImageResponseVirtualEnvType) UnmarshalJSON(b []byte) error {
@@ -589,7 +589,7 @@ func GetUpdateImageResponseVisibilityEnum() UpdateImageResponseVisibilityEnum {
 }
 
 func (c UpdateImageResponseVisibility) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateImageResponseVisibility) UnmarshalJSON(b []byte) error {
@@ -627,7 +627,7 @@ func GetUpdateImageResponseSupportFcInjectEnum() UpdateImageResponseSupportFcInj
 }
 
 func (c UpdateImageResponseSupportFcInject) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateImageResponseSupportFcInject) UnmarshalJSON(b []byte) error {
@@ -665,7 +665,7 @@ func GetUpdateImageResponseHwFirmwareTypeEnum() UpdateImageResponseHwFirmwareTyp
 }
 
 func (c UpdateImageResponseHwFirmwareType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateImageResponseHwFirmwareType) UnmarshalJSON(b []byte) error {
@@ -703,7 +703,7 @@ func GetUpdateImageResponseSupportArmEnum() UpdateImageResponseSupportArmEnum {
 }
 
 func (c UpdateImageResponseSupportArm) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateImageResponseSupportArm) UnmarshalJSON(b []byte) error {

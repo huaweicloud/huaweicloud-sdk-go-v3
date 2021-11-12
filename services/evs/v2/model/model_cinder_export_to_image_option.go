@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -29,7 +29,7 @@ type CinderExportToImageOption struct {
 }
 
 func (o CinderExportToImageOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CinderExportToImageOption struct{}"
 	}
@@ -70,7 +70,7 @@ func GetCinderExportToImageOptionContainerFormatEnum() CinderExportToImageOption
 }
 
 func (c CinderExportToImageOptionContainerFormat) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CinderExportToImageOptionContainerFormat) UnmarshalJSON(b []byte) error {
@@ -120,7 +120,7 @@ func GetCinderExportToImageOptionDiskFormatEnum() CinderExportToImageOptionDiskF
 }
 
 func (c CinderExportToImageOptionDiskFormat) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CinderExportToImageOptionDiskFormat) UnmarshalJSON(b []byte) error {
@@ -158,7 +158,7 @@ func GetCinderExportToImageOptionOsTypeEnum() CinderExportToImageOptionOsTypeEnu
 }
 
 func (c CinderExportToImageOptionOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CinderExportToImageOptionOsType) UnmarshalJSON(b []byte) error {

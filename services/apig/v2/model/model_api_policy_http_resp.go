@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -51,7 +51,7 @@ type ApiPolicyHttpResp struct {
 }
 
 func (o ApiPolicyHttpResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ApiPolicyHttpResp struct{}"
 	}
@@ -80,7 +80,7 @@ func GetApiPolicyHttpRespEffectModeEnum() ApiPolicyHttpRespEffectModeEnum {
 }
 
 func (c ApiPolicyHttpRespEffectMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiPolicyHttpRespEffectMode) UnmarshalJSON(b []byte) error {
@@ -118,7 +118,7 @@ func GetApiPolicyHttpRespReqProtocolEnum() ApiPolicyHttpRespReqProtocolEnum {
 }
 
 func (c ApiPolicyHttpRespReqProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiPolicyHttpRespReqProtocol) UnmarshalJSON(b []byte) error {
@@ -180,7 +180,7 @@ func GetApiPolicyHttpRespReqMethodEnum() ApiPolicyHttpRespReqMethodEnum {
 }
 
 func (c ApiPolicyHttpRespReqMethod) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiPolicyHttpRespReqMethod) UnmarshalJSON(b []byte) error {

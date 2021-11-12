@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -38,7 +38,7 @@ type CreateDomainResponse struct {
 }
 
 func (o CreateDomainResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateDomainResponse struct{}"
 	}
@@ -67,7 +67,7 @@ func GetCreateDomainResponseDomainTypeEnum() CreateDomainResponseDomainTypeEnum 
 }
 
 func (c CreateDomainResponseDomainType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateDomainResponseDomainType) UnmarshalJSON(b []byte) error {
@@ -113,7 +113,7 @@ func GetCreateDomainResponseStatusEnum() CreateDomainResponseStatusEnum {
 }
 
 func (c CreateDomainResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateDomainResponseStatus) UnmarshalJSON(b []byte) error {
@@ -155,7 +155,7 @@ func GetCreateDomainResponseServiceAreaEnum() CreateDomainResponseServiceAreaEnu
 }
 
 func (c CreateDomainResponseServiceArea) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateDomainResponseServiceArea) UnmarshalJSON(b []byte) error {

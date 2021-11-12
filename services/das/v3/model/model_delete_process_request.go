@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -22,7 +22,7 @@ type DeleteProcessRequest struct {
 }
 
 func (o DeleteProcessRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DeleteProcessRequest struct{}"
 	}
@@ -51,7 +51,7 @@ func GetDeleteProcessRequestXLanguageEnum() DeleteProcessRequestXLanguageEnum {
 }
 
 func (c DeleteProcessRequestXLanguage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DeleteProcessRequestXLanguage) UnmarshalJSON(b []byte) error {

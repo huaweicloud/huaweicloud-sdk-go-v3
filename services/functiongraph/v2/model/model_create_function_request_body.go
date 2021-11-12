@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -67,7 +67,7 @@ type CreateFunctionRequestBody struct {
 }
 
 func (o CreateFunctionRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateFunctionRequestBody struct{}"
 	}
@@ -132,7 +132,7 @@ func GetCreateFunctionRequestBodyRuntimeEnum() CreateFunctionRequestBodyRuntimeE
 }
 
 func (c CreateFunctionRequestBodyRuntime) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateFunctionRequestBodyRuntime) UnmarshalJSON(b []byte) error {
@@ -178,7 +178,7 @@ func GetCreateFunctionRequestBodyCodeTypeEnum() CreateFunctionRequestBodyCodeTyp
 }
 
 func (c CreateFunctionRequestBodyCodeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateFunctionRequestBodyCodeType) UnmarshalJSON(b []byte) error {
@@ -216,7 +216,7 @@ func GetCreateFunctionRequestBodyTypeEnum() CreateFunctionRequestBodyTypeEnum {
 }
 
 func (c CreateFunctionRequestBodyType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateFunctionRequestBodyType) UnmarshalJSON(b []byte) error {

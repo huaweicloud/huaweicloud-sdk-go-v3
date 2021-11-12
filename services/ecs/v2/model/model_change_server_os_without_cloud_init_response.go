@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -15,7 +15,7 @@ type ChangeServerOsWithoutCloudInitResponse struct {
 }
 
 func (o ChangeServerOsWithoutCloudInitResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ChangeServerOsWithoutCloudInitResponse struct{}"
 	}

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -49,7 +49,7 @@ type CreateWatermarkTemplateReq struct {
 }
 
 func (o CreateWatermarkTemplateReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateWatermarkTemplateReq struct{}"
 	}
@@ -78,7 +78,7 @@ func GetCreateWatermarkTemplateReqWatermarkTypeEnum() CreateWatermarkTemplateReq
 }
 
 func (c CreateWatermarkTemplateReqWatermarkType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateWatermarkTemplateReqWatermarkType) UnmarshalJSON(b []byte) error {
@@ -120,7 +120,7 @@ func GetCreateWatermarkTemplateReqImageProcessEnum() CreateWatermarkTemplateReqI
 }
 
 func (c CreateWatermarkTemplateReqImageProcess) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateWatermarkTemplateReqImageProcess) UnmarshalJSON(b []byte) error {
@@ -166,7 +166,7 @@ func GetCreateWatermarkTemplateReqPositionEnum() CreateWatermarkTemplateReqPosit
 }
 
 func (c CreateWatermarkTemplateReqPosition) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateWatermarkTemplateReqPosition) UnmarshalJSON(b []byte) error {

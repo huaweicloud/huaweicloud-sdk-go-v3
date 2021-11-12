@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -47,7 +47,7 @@ type RecordContentInfoV2 struct {
 }
 
 func (o RecordContentInfoV2) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "RecordContentInfoV2 struct{}"
 	}
@@ -80,7 +80,7 @@ func GetRecordContentInfoV2RecordFormatEnum() RecordContentInfoV2RecordFormatEnu
 }
 
 func (c RecordContentInfoV2RecordFormat) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *RecordContentInfoV2RecordFormat) UnmarshalJSON(b []byte) error {
@@ -126,7 +126,7 @@ func GetRecordContentInfoV2RecordTypeEnum() RecordContentInfoV2RecordTypeEnum {
 }
 
 func (c RecordContentInfoV2RecordType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *RecordContentInfoV2RecordType) UnmarshalJSON(b []byte) error {

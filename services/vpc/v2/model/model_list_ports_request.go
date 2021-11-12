@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -50,7 +50,7 @@ type ListPortsRequest struct {
 }
 
 func (o ListPortsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListPortsRequest struct{}"
 	}
@@ -87,7 +87,7 @@ func GetListPortsRequestDeviceOwnerEnum() ListPortsRequestDeviceOwnerEnum {
 }
 
 func (c ListPortsRequestDeviceOwner) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListPortsRequestDeviceOwner) UnmarshalJSON(b []byte) error {
@@ -129,7 +129,7 @@ func GetListPortsRequestStatusEnum() ListPortsRequestStatusEnum {
 }
 
 func (c ListPortsRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListPortsRequestStatus) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -47,7 +47,7 @@ type Node struct {
 }
 
 func (o Node) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "Node struct{}"
 	}
@@ -132,7 +132,7 @@ func GetNodeNodeTypeEnum() NodeNodeTypeEnum {
 }
 
 func (c NodeNodeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NodeNodeType) UnmarshalJSON(b []byte) error {
@@ -174,7 +174,7 @@ func GetNodeFailPolicyEnum() NodeFailPolicyEnum {
 }
 
 func (c NodeFailPolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NodeFailPolicy) UnmarshalJSON(b []byte) error {

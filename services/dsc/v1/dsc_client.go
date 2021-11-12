@@ -95,3 +95,25 @@ func (c *DscClient) ShowImageWatermark(request *model.ShowImageWatermarkRequest)
 		return resp.(*model.ShowImageWatermarkResponse), nil
 	}
 }
+
+//查询指定任务扫描结果
+func (c *DscClient) ShowScanJobResults(request *model.ShowScanJobResultsRequest) (*model.ShowScanJobResultsResponse, error) {
+	requestDef := GenReqDefForShowScanJobResults()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowScanJobResultsResponse), nil
+	}
+}
+
+//查询扫描任务列表
+func (c *DscClient) ShowScanJobs(request *model.ShowScanJobsRequest) (*model.ShowScanJobsResponse, error) {
+	requestDef := GenReqDefForShowScanJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowScanJobsResponse), nil
+	}
+}

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -38,7 +38,7 @@ type JudgementTaskRequestBody struct {
 }
 
 func (o JudgementTaskRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "JudgementTaskRequestBody struct{}"
 	}
@@ -63,7 +63,7 @@ func GetJudgementTaskRequestBodyCodeTypeEnum() JudgementTaskRequestBodyCodeTypeE
 }
 
 func (c JudgementTaskRequestBodyCodeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *JudgementTaskRequestBodyCodeType) UnmarshalJSON(b []byte) error {
@@ -109,7 +109,7 @@ func GetJudgementTaskRequestBodyRuntimeTypeEnum() JudgementTaskRequestBodyRuntim
 }
 
 func (c JudgementTaskRequestBodyRuntimeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *JudgementTaskRequestBodyRuntimeType) UnmarshalJSON(b []byte) error {
@@ -159,7 +159,7 @@ func GetJudgementTaskRequestBodyOutputTypeEnum() JudgementTaskRequestBodyOutputT
 }
 
 func (c JudgementTaskRequestBodyOutputType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *JudgementTaskRequestBodyOutputType) UnmarshalJSON(b []byte) error {

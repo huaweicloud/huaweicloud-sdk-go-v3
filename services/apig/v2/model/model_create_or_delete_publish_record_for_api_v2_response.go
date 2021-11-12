@@ -1,8 +1,8 @@
 package model
 
 import (
-	"encoding/json"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -34,7 +34,7 @@ type CreateOrDeletePublishRecordForApiV2Response struct {
 }
 
 func (o CreateOrDeletePublishRecordForApiV2Response) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateOrDeletePublishRecordForApiV2Response struct{}"
 	}

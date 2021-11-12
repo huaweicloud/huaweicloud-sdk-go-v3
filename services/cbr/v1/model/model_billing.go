@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -55,7 +55,7 @@ type Billing struct {
 }
 
 func (o Billing) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "Billing struct{}"
 	}
@@ -84,7 +84,7 @@ func GetBillingChargingModeEnum() BillingChargingModeEnum {
 }
 
 func (c BillingChargingMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BillingChargingMode) UnmarshalJSON(b []byte) error {
@@ -122,7 +122,7 @@ func GetBillingCloudTypeEnum() BillingCloudTypeEnum {
 }
 
 func (c BillingCloudType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BillingCloudType) UnmarshalJSON(b []byte) error {
@@ -160,7 +160,7 @@ func GetBillingConsistentLevelEnum() BillingConsistentLevelEnum {
 }
 
 func (c BillingConsistentLevel) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BillingConsistentLevel) UnmarshalJSON(b []byte) error {
@@ -198,7 +198,7 @@ func GetBillingObjectTypeEnum() BillingObjectTypeEnum {
 }
 
 func (c BillingObjectType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BillingObjectType) UnmarshalJSON(b []byte) error {
@@ -240,7 +240,7 @@ func GetBillingProtectTypeEnum() BillingProtectTypeEnum {
 }
 
 func (c BillingProtectType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BillingProtectType) UnmarshalJSON(b []byte) error {
@@ -278,7 +278,7 @@ func GetBillingSpecCodeEnum() BillingSpecCodeEnum {
 }
 
 func (c BillingSpecCode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BillingSpecCode) UnmarshalJSON(b []byte) error {
@@ -328,7 +328,7 @@ func GetBillingStatusEnum() BillingStatusEnum {
 }
 
 func (c BillingStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BillingStatus) UnmarshalJSON(b []byte) error {

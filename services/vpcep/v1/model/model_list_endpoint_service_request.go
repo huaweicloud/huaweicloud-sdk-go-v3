@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -38,7 +38,7 @@ type ListEndpointServiceRequest struct {
 }
 
 func (o ListEndpointServiceRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListEndpointServiceRequest struct{}"
 	}
@@ -75,7 +75,7 @@ func GetListEndpointServiceRequestStatusEnum() ListEndpointServiceRequestStatusE
 }
 
 func (c ListEndpointServiceRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListEndpointServiceRequestStatus) UnmarshalJSON(b []byte) error {
@@ -113,7 +113,7 @@ func GetListEndpointServiceRequestSortKeyEnum() ListEndpointServiceRequestSortKe
 }
 
 func (c ListEndpointServiceRequestSortKey) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListEndpointServiceRequestSortKey) UnmarshalJSON(b []byte) error {
@@ -151,7 +151,7 @@ func GetListEndpointServiceRequestSortDirEnum() ListEndpointServiceRequestSortDi
 }
 
 func (c ListEndpointServiceRequestSortDir) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListEndpointServiceRequestSortDir) UnmarshalJSON(b []byte) error {

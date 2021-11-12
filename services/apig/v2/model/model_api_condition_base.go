@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -25,7 +25,7 @@ type ApiConditionBase struct {
 }
 
 func (o ApiConditionBase) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ApiConditionBase struct{}"
 	}
@@ -58,7 +58,7 @@ func GetApiConditionBaseConditionTypeEnum() ApiConditionBaseConditionTypeEnum {
 }
 
 func (c ApiConditionBaseConditionType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiConditionBaseConditionType) UnmarshalJSON(b []byte) error {
@@ -96,7 +96,7 @@ func GetApiConditionBaseConditionOriginEnum() ApiConditionBaseConditionOriginEnu
 }
 
 func (c ApiConditionBaseConditionOrigin) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiConditionBaseConditionOrigin) UnmarshalJSON(b []byte) error {

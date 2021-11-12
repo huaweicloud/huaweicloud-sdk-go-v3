@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -10,6 +10,12 @@ import (
 )
 
 type VideoProcess struct {
+	// 需要单独设置时长的HLS起始分片数量。与hls_init_interval配合使用，设置前面hls_init_count个HLS分片时长。 为0表示不单独配置时长。
+
+	HlsInitCount *int32 `json:"hls_init_count,omitempty"`
+	// 表示前面hls_init_count个HLS分片的时长,hls_init_count不为0时，该字段才起作用。
+
+	HlsInitInterval *int32 `json:"hls_init_interval,omitempty"`
 	// 视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
 
 	Rotate *int32 `json:"rotate,omitempty"`
@@ -19,16 +25,10 @@ type VideoProcess struct {
 	// 是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
 
 	Upsample *int32 `json:"upsample,omitempty"`
-	// 需要单独设置时长的HLS起始分片数量。与hls_init_interval配合使用，设置前面hls_init_count个HLS分片时长。 为0表示不单独配置时长。
-
-	HlsInitCount *int32 `json:"hls_init_count,omitempty"`
-	// 表示前面hls_init_count个HLS分片的时长。hls_init_count不为0时，该字段才起作用。
-
-	HlsInitInterval *int32 `json:"hls_init_interval,omitempty"`
 }
 
 func (o VideoProcess) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "VideoProcess struct{}"
 	}
@@ -61,7 +61,7 @@ func GetVideoProcessAdaptationEnum() VideoProcessAdaptationEnum {
 }
 
 func (c VideoProcessAdaptation) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *VideoProcessAdaptation) UnmarshalJSON(b []byte) error {

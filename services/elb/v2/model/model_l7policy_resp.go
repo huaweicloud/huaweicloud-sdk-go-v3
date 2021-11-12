@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -56,7 +56,7 @@ type L7policyResp struct {
 }
 
 func (o L7policyResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "L7policyResp struct{}"
 	}
@@ -85,7 +85,7 @@ func GetL7policyRespActionEnum() L7policyRespActionEnum {
 }
 
 func (c L7policyRespAction) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *L7policyRespAction) UnmarshalJSON(b []byte) error {

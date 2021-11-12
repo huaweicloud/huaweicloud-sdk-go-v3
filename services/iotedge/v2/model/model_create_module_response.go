@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -45,7 +45,7 @@ type CreateModuleResponse struct {
 }
 
 func (o CreateModuleResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateModuleResponse struct{}"
 	}
@@ -94,7 +94,7 @@ func GetCreateModuleResponseStateEnum() CreateModuleResponseStateEnum {
 }
 
 func (c CreateModuleResponseState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateModuleResponseState) UnmarshalJSON(b []byte) error {
@@ -136,7 +136,7 @@ func GetCreateModuleResponseAppTypeEnum() CreateModuleResponseAppTypeEnum {
 }
 
 func (c CreateModuleResponseAppType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateModuleResponseAppType) UnmarshalJSON(b []byte) error {
@@ -178,7 +178,7 @@ func GetCreateModuleResponseFunctionTypeEnum() CreateModuleResponseFunctionTypeE
 }
 
 func (c CreateModuleResponseFunctionType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateModuleResponseFunctionType) UnmarshalJSON(b []byte) error {

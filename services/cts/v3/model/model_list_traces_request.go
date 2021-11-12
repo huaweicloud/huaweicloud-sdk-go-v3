@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -56,7 +56,7 @@ type ListTracesRequest struct {
 }
 
 func (o ListTracesRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListTracesRequest struct{}"
 	}
@@ -85,7 +85,7 @@ func GetListTracesRequestTraceTypeEnum() ListTracesRequestTraceTypeEnum {
 }
 
 func (c ListTracesRequestTraceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListTracesRequestTraceType) UnmarshalJSON(b []byte) error {
@@ -127,7 +127,7 @@ func GetListTracesRequestTraceRatingEnum() ListTracesRequestTraceRatingEnum {
 }
 
 func (c ListTracesRequestTraceRating) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListTracesRequestTraceRating) UnmarshalJSON(b []byte) error {

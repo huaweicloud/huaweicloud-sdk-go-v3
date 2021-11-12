@@ -6,6 +6,7 @@ import (
 )
 
 var CN_NORTH_1 = region.NewRegion("cn-north-1", "https://cce.cn-north-1.myhuaweicloud.com")
+var CN_NORTH_2 = region.NewRegion("cn-north-2", "https://cce.cn-north-2.myhuaweicloud.com")
 var CN_NORTH_4 = region.NewRegion("cn-north-4", "https://cce.cn-north-4.myhuaweicloud.com")
 var CN_SOUTH_1 = region.NewRegion("cn-south-1", "https://cce.cn-south-1.myhuaweicloud.com")
 var CN_EAST_2 = region.NewRegion("cn-east-2", "https://cce.cn-east-2.myhuaweicloud.com")
@@ -18,6 +19,7 @@ var AF_SOUTH_1 = region.NewRegion("af-south-1", "https://cce.af-south-1.myhuawei
 
 var staticFields = map[string]*region.Region{
 	"cn-north-1":     CN_NORTH_1,
+	"cn-north-2":     CN_NORTH_2,
 	"cn-north-4":     CN_NORTH_4,
 	"cn-south-1":     CN_SOUTH_1,
 	"cn-east-2":      CN_EAST_2,

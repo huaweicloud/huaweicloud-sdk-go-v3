@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -35,7 +35,7 @@ type ListDomainsRequest struct {
 }
 
 func (o ListDomainsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListDomainsRequest struct{}"
 	}
@@ -72,7 +72,7 @@ func GetListDomainsRequestBusinessTypeEnum() ListDomainsRequestBusinessTypeEnum 
 }
 
 func (c ListDomainsRequestBusinessType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListDomainsRequestBusinessType) UnmarshalJSON(b []byte) error {
@@ -130,7 +130,7 @@ func GetListDomainsRequestDomainStatusEnum() ListDomainsRequestDomainStatusEnum 
 }
 
 func (c ListDomainsRequestDomainStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListDomainsRequestDomainStatus) UnmarshalJSON(b []byte) error {
@@ -172,7 +172,7 @@ func GetListDomainsRequestServiceAreaEnum() ListDomainsRequestServiceAreaEnum {
 }
 
 func (c ListDomainsRequestServiceArea) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListDomainsRequestServiceArea) UnmarshalJSON(b []byte) error {

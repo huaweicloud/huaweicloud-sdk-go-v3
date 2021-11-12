@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -12,7 +12,7 @@ type NeutronCreateSecurityGroupRequestBody struct {
 }
 
 func (o NeutronCreateSecurityGroupRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "NeutronCreateSecurityGroupRequestBody struct{}"
 	}

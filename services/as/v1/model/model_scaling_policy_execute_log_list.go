@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -58,7 +58,7 @@ type ScalingPolicyExecuteLogList struct {
 }
 
 func (o ScalingPolicyExecuteLogList) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ScalingPolicyExecuteLogList struct{}"
 	}
@@ -91,7 +91,7 @@ func GetScalingPolicyExecuteLogListStatusEnum() ScalingPolicyExecuteLogListStatu
 }
 
 func (c ScalingPolicyExecuteLogListStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScalingPolicyExecuteLogListStatus) UnmarshalJSON(b []byte) error {
@@ -137,7 +137,7 @@ func GetScalingPolicyExecuteLogListExecuteTypeEnum() ScalingPolicyExecuteLogList
 }
 
 func (c ScalingPolicyExecuteLogListExecuteType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScalingPolicyExecuteLogListExecuteType) UnmarshalJSON(b []byte) error {
@@ -175,7 +175,7 @@ func GetScalingPolicyExecuteLogListScalingResourceTypeEnum() ScalingPolicyExecut
 }
 
 func (c ScalingPolicyExecuteLogListScalingResourceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScalingPolicyExecuteLogListScalingResourceType) UnmarshalJSON(b []byte) error {
@@ -217,7 +217,7 @@ func GetScalingPolicyExecuteLogListTypeEnum() ScalingPolicyExecuteLogListTypeEnu
 }
 
 func (c ScalingPolicyExecuteLogListType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScalingPolicyExecuteLogListType) UnmarshalJSON(b []byte) error {

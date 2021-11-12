@@ -1,14 +1,14 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
 
 // Request Object
 type ListChildIssuesV4Request struct {
-	// 项目id
+	// devcloud的项目id
 
 	ProjectId string `json:"project_id"`
 	// 工作项id
@@ -17,7 +17,7 @@ type ListChildIssuesV4Request struct {
 }
 
 func (o ListChildIssuesV4Request) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListChildIssuesV4Request struct{}"
 	}

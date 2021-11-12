@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -137,7 +137,7 @@ type NovaServer struct {
 }
 
 func (o NovaServer) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "NovaServer struct{}"
 	}
@@ -214,7 +214,7 @@ func GetNovaServerStatusEnum() NovaServerStatusEnum {
 }
 
 func (c NovaServerStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NovaServerStatus) UnmarshalJSON(b []byte) error {
@@ -252,7 +252,7 @@ func GetNovaServerOSDCFdiskConfigEnum() NovaServerOSDCFdiskConfigEnum {
 }
 
 func (c NovaServerOSDCFdiskConfig) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NovaServerOSDCFdiskConfig) UnmarshalJSON(b []byte) error {
@@ -338,7 +338,7 @@ func GetNovaServerOSEXTSTStaskStateEnum() NovaServerOSEXTSTStaskStateEnum {
 }
 
 func (c NovaServerOSEXTSTStaskState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NovaServerOSEXTSTStaskState) UnmarshalJSON(b []byte) error {
@@ -416,7 +416,7 @@ func GetNovaServerOSEXTSTSvmStateEnum() NovaServerOSEXTSTSvmStateEnum {
 }
 
 func (c NovaServerOSEXTSTSvmState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NovaServerOSEXTSTSvmState) UnmarshalJSON(b []byte) error {
@@ -462,7 +462,7 @@ func GetNovaServerHostStatusEnum() NovaServerHostStatusEnum {
 }
 
 func (c NovaServerHostStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NovaServerHostStatus) UnmarshalJSON(b []byte) error {

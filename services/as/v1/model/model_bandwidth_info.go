@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -26,7 +26,7 @@ type BandwidthInfo struct {
 }
 
 func (o BandwidthInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BandwidthInfo struct{}"
 	}
@@ -55,7 +55,7 @@ func GetBandwidthInfoShareTypeEnum() BandwidthInfoShareTypeEnum {
 }
 
 func (c BandwidthInfoShareType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BandwidthInfoShareType) UnmarshalJSON(b []byte) error {
@@ -93,7 +93,7 @@ func GetBandwidthInfoChargingModeEnum() BandwidthInfoChargingModeEnum {
 }
 
 func (c BandwidthInfoChargingMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BandwidthInfoChargingMode) UnmarshalJSON(b []byte) error {

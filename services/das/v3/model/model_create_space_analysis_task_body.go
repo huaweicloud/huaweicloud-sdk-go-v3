@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -19,7 +19,7 @@ type CreateSpaceAnalysisTaskBody struct {
 }
 
 func (o CreateSpaceAnalysisTaskBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateSpaceAnalysisTaskBody struct{}"
 	}
@@ -44,7 +44,7 @@ func GetCreateSpaceAnalysisTaskBodyOperateEnum() CreateSpaceAnalysisTaskBodyOper
 }
 
 func (c CreateSpaceAnalysisTaskBodyOperate) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateSpaceAnalysisTaskBodyOperate) UnmarshalJSON(b []byte) error {
@@ -82,7 +82,7 @@ func GetCreateSpaceAnalysisTaskBodyDatastoreTypeEnum() CreateSpaceAnalysisTaskBo
 }
 
 func (c CreateSpaceAnalysisTaskBodyDatastoreType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateSpaceAnalysisTaskBodyDatastoreType) UnmarshalJSON(b []byte) error {

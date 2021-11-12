@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -22,15 +22,9 @@ type SimPricePlanVo struct {
 	// 套餐id
 
 	PricePlanId *string `json:"price_plan_id,omitempty"`
-	// 伙伴
-
-	Partner *int32 `json:"partner,omitempty"`
 	// 容器ID:不同类型卡含义如下 iccid(实体卡)，eid（eSIM）cid（vSIM)
 
 	Cid *string `json:"cid,omitempty"`
-	// 伙伴套餐pid
-
-	PartnerPid *string `json:"partner_pid,omitempty"`
 	// 订单id
 
 	OrderId *string `json:"order_id,omitempty"`
@@ -82,7 +76,7 @@ type SimPricePlanVo struct {
 }
 
 func (o SimPricePlanVo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "SimPricePlanVo struct{}"
 	}

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -26,7 +26,7 @@ type NodePoolSpec struct {
 }
 
 func (o NodePoolSpec) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "NodePoolSpec struct{}"
 	}
@@ -55,7 +55,7 @@ func GetNodePoolSpecTypeEnum() NodePoolSpecTypeEnum {
 }
 
 func (c NodePoolSpecType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NodePoolSpecType) UnmarshalJSON(b []byte) error {

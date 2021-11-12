@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -105,7 +105,7 @@ type GlanceCreateImageMetadataResponse struct {
 }
 
 func (o GlanceCreateImageMetadataResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "GlanceCreateImageMetadataResponse struct{}"
 	}
@@ -142,7 +142,7 @@ func GetGlanceCreateImageMetadataResponseDiskFormatEnum() GlanceCreateImageMetad
 }
 
 func (c GlanceCreateImageMetadataResponseDiskFormat) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceCreateImageMetadataResponseDiskFormat) UnmarshalJSON(b []byte) error {
@@ -192,7 +192,7 @@ func GetGlanceCreateImageMetadataResponseStatusEnum() GlanceCreateImageMetadataR
 }
 
 func (c GlanceCreateImageMetadataResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceCreateImageMetadataResponseStatus) UnmarshalJSON(b []byte) error {
@@ -234,7 +234,7 @@ func GetGlanceCreateImageMetadataResponseOsTypeEnum() GlanceCreateImageMetadataR
 }
 
 func (c GlanceCreateImageMetadataResponseOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceCreateImageMetadataResponseOsType) UnmarshalJSON(b []byte) error {
@@ -272,7 +272,7 @@ func GetGlanceCreateImageMetadataResponseOsBitEnum() GlanceCreateImageMetadataRe
 }
 
 func (c GlanceCreateImageMetadataResponseOsBit) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceCreateImageMetadataResponseOsBit) UnmarshalJSON(b []byte) error {
@@ -314,7 +314,7 @@ func GetGlanceCreateImageMetadataResponseVirtualEnvTypeEnum() GlanceCreateImageM
 }
 
 func (c GlanceCreateImageMetadataResponseVirtualEnvType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceCreateImageMetadataResponseVirtualEnvType) UnmarshalJSON(b []byte) error {

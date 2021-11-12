@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -20,7 +20,7 @@ type ExtraDhcpOption struct {
 }
 
 func (o ExtraDhcpOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ExtraDhcpOption struct{}"
 	}
@@ -45,7 +45,7 @@ func GetExtraDhcpOptionOptNameEnum() ExtraDhcpOptionOptNameEnum {
 }
 
 func (c ExtraDhcpOptionOptName) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ExtraDhcpOptionOptName) UnmarshalJSON(b []byte) error {

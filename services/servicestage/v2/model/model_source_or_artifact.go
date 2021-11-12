@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -37,7 +37,7 @@ type SourceOrArtifact struct {
 }
 
 func (o SourceOrArtifact) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "SourceOrArtifact struct{}"
 	}
@@ -66,7 +66,7 @@ func GetSourceOrArtifactStorageEnum() SourceOrArtifactStorageEnum {
 }
 
 func (c SourceOrArtifactStorage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *SourceOrArtifactStorage) UnmarshalJSON(b []byte) error {
@@ -100,7 +100,7 @@ func GetSourceOrArtifactTypeEnum() SourceOrArtifactTypeEnum {
 }
 
 func (c SourceOrArtifactType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *SourceOrArtifactType) UnmarshalJSON(b []byte) error {

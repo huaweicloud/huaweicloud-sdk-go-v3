@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -71,7 +71,7 @@ type TestEndPoint struct {
 }
 
 func (o TestEndPoint) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "TestEndPoint struct{}"
 	}
@@ -104,7 +104,7 @@ func GetTestEndPointNetTypeEnum() TestEndPointNetTypeEnum {
 }
 
 func (c TestEndPointNetType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *TestEndPointNetType) UnmarshalJSON(b []byte) error {
@@ -142,7 +142,7 @@ func GetTestEndPointDbTypeEnum() TestEndPointDbTypeEnum {
 }
 
 func (c TestEndPointDbType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *TestEndPointDbType) UnmarshalJSON(b []byte) error {
@@ -180,7 +180,7 @@ func GetTestEndPointEndPointTypeEnum() TestEndPointEndPointTypeEnum {
 }
 
 func (c TestEndPointEndPointType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *TestEndPointEndPointType) UnmarshalJSON(b []byte) error {

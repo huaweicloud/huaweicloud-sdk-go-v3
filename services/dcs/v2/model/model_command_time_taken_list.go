@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -26,7 +26,7 @@ type CommandTimeTakenList struct {
 }
 
 func (o CommandTimeTakenList) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CommandTimeTakenList struct{}"
 	}
@@ -55,7 +55,7 @@ func GetCommandTimeTakenListResultEnum() CommandTimeTakenListResultEnum {
 }
 
 func (c CommandTimeTakenListResult) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CommandTimeTakenListResult) UnmarshalJSON(b []byte) error {

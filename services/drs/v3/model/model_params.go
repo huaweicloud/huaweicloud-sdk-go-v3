@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -44,7 +44,7 @@ type Params struct {
 }
 
 func (o Params) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "Params struct{}"
 	}
@@ -73,7 +73,7 @@ func GetParamsCompareResultEnum() ParamsCompareResultEnum {
 }
 
 func (c ParamsCompareResult) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ParamsCompareResult) UnmarshalJSON(b []byte) error {
@@ -111,7 +111,7 @@ func GetParamsGroupEnum() ParamsGroupEnum {
 }
 
 func (c ParamsGroup) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ParamsGroup) UnmarshalJSON(b []byte) error {
@@ -149,7 +149,7 @@ func GetParamsNeedRestartEnum() ParamsNeedRestartEnum {
 }
 
 func (c ParamsNeedRestart) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ParamsNeedRestart) UnmarshalJSON(b []byte) error {

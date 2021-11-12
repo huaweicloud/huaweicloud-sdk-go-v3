@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -41,7 +41,7 @@ type CreateSecurityGroupRuleOption struct {
 }
 
 func (o CreateSecurityGroupRuleOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateSecurityGroupRuleOption struct{}"
 	}
@@ -70,7 +70,7 @@ func GetCreateSecurityGroupRuleOptionDirectionEnum() CreateSecurityGroupRuleOpti
 }
 
 func (c CreateSecurityGroupRuleOptionDirection) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateSecurityGroupRuleOptionDirection) UnmarshalJSON(b []byte) error {
@@ -104,7 +104,7 @@ func GetCreateSecurityGroupRuleOptionEthertypeEnum() CreateSecurityGroupRuleOpti
 }
 
 func (c CreateSecurityGroupRuleOptionEthertype) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateSecurityGroupRuleOptionEthertype) UnmarshalJSON(b []byte) error {

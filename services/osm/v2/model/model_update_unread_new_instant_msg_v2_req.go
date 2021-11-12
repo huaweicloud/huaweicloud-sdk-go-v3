@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -13,7 +13,7 @@ type UpdateUnreadNewInstantMsgV2Req struct {
 }
 
 func (o UpdateUnreadNewInstantMsgV2Req) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateUnreadNewInstantMsgV2Req struct{}"
 	}

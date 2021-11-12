@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -31,7 +31,7 @@ type SwaggerReq struct {
 }
 
 func (o SwaggerReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "SwaggerReq struct{}"
 	}
@@ -68,7 +68,7 @@ func GetSwaggerReqDefineEnum() SwaggerReqDefineEnum {
 }
 
 func (c SwaggerReqDefine) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *SwaggerReqDefine) UnmarshalJSON(b []byte) error {
@@ -110,7 +110,7 @@ func GetSwaggerReqTypeEnum() SwaggerReqTypeEnum {
 }
 
 func (c SwaggerReqType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *SwaggerReqType) UnmarshalJSON(b []byte) error {

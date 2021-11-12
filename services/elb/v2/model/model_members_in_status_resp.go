@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -29,7 +29,7 @@ type MembersInStatusResp struct {
 }
 
 func (o MembersInStatusResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "MembersInStatusResp struct{}"
 	}
@@ -66,7 +66,7 @@ func GetMembersInStatusRespOperatingStatusEnum() MembersInStatusRespOperatingSta
 }
 
 func (c MembersInStatusRespOperatingStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *MembersInStatusRespOperatingStatus) UnmarshalJSON(b []byte) error {

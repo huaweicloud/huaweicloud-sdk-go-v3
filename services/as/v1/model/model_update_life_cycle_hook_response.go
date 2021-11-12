@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -39,7 +39,7 @@ type UpdateLifeCycleHookResponse struct {
 }
 
 func (o UpdateLifeCycleHookResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateLifeCycleHookResponse struct{}"
 	}
@@ -68,7 +68,7 @@ func GetUpdateLifeCycleHookResponseLifecycleHookTypeEnum() UpdateLifeCycleHookRe
 }
 
 func (c UpdateLifeCycleHookResponseLifecycleHookType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateLifeCycleHookResponseLifecycleHookType) UnmarshalJSON(b []byte) error {
@@ -106,7 +106,7 @@ func GetUpdateLifeCycleHookResponseDefaultResultEnum() UpdateLifeCycleHookRespon
 }
 
 func (c UpdateLifeCycleHookResponseDefaultResult) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateLifeCycleHookResponseDefaultResult) UnmarshalJSON(b []byte) error {

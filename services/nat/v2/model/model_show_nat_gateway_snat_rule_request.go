@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -14,7 +14,7 @@ type ShowNatGatewaySnatRuleRequest struct {
 }
 
 func (o ShowNatGatewaySnatRuleRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowNatGatewaySnatRuleRequest struct{}"
 	}

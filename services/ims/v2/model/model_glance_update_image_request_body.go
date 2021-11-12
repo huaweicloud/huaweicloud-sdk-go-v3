@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -23,7 +23,7 @@ type GlanceUpdateImageRequestBody struct {
 }
 
 func (o GlanceUpdateImageRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "GlanceUpdateImageRequestBody struct{}"
 	}
@@ -56,7 +56,7 @@ func GetGlanceUpdateImageRequestBodyOpEnum() GlanceUpdateImageRequestBodyOpEnum 
 }
 
 func (c GlanceUpdateImageRequestBodyOp) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *GlanceUpdateImageRequestBodyOp) UnmarshalJSON(b []byte) error {

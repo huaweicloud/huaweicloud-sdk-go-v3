@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -32,7 +32,7 @@ type CreateKeypairResp struct {
 }
 
 func (o CreateKeypairResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateKeypairResp struct{}"
 	}
@@ -61,7 +61,7 @@ func GetCreateKeypairRespTypeEnum() CreateKeypairRespTypeEnum {
 }
 
 func (c CreateKeypairRespType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateKeypairRespType) UnmarshalJSON(b []byte) error {

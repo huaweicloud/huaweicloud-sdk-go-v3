@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -35,7 +35,7 @@ type InstanceHangingInfos struct {
 }
 
 func (o InstanceHangingInfos) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "InstanceHangingInfos struct{}"
 	}
@@ -68,7 +68,7 @@ func GetInstanceHangingInfosLifecycleHookStatusEnum() InstanceHangingInfosLifecy
 }
 
 func (c InstanceHangingInfosLifecycleHookStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstanceHangingInfosLifecycleHookStatus) UnmarshalJSON(b []byte) error {

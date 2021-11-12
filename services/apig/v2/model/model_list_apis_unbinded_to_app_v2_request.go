@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -35,7 +35,7 @@ type ListApisUnbindedToAppV2Request struct {
 }
 
 func (o ListApisUnbindedToAppV2Request) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListApisUnbindedToAppV2Request struct{}"
 	}

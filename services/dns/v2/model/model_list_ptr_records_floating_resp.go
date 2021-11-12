@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -39,7 +39,7 @@ type ListPtrRecordsFloatingResp struct {
 }
 
 func (o ListPtrRecordsFloatingResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListPtrRecordsFloatingResp struct{}"
 	}

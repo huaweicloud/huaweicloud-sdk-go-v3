@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -32,7 +32,7 @@ type ShowTopUrlRequest struct {
 }
 
 func (o ShowTopUrlRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowTopUrlRequest struct{}"
 	}
@@ -61,7 +61,7 @@ func GetShowTopUrlRequestServiceAreaEnum() ShowTopUrlRequestServiceAreaEnum {
 }
 
 func (c ShowTopUrlRequestServiceArea) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowTopUrlRequestServiceArea) UnmarshalJSON(b []byte) error {
@@ -99,7 +99,7 @@ func GetShowTopUrlRequestStatTypeEnum() ShowTopUrlRequestStatTypeEnum {
 }
 
 func (c ShowTopUrlRequestStatType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowTopUrlRequestStatType) UnmarshalJSON(b []byte) error {

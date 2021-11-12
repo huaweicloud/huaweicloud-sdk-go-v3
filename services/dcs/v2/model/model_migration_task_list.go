@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -50,7 +50,7 @@ type MigrationTaskList struct {
 }
 
 func (o MigrationTaskList) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "MigrationTaskList struct{}"
 	}
@@ -87,7 +87,7 @@ func GetMigrationTaskListStatusEnum() MigrationTaskListStatusEnum {
 }
 
 func (c MigrationTaskListStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *MigrationTaskListStatus) UnmarshalJSON(b []byte) error {
@@ -125,7 +125,7 @@ func GetMigrationTaskListMigrationTypeEnum() MigrationTaskListMigrationTypeEnum 
 }
 
 func (c MigrationTaskListMigrationType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *MigrationTaskListMigrationType) UnmarshalJSON(b []byte) error {
@@ -163,7 +163,7 @@ func GetMigrationTaskListMigrationMethodEnum() MigrationTaskListMigrationMethodE
 }
 
 func (c MigrationTaskListMigrationMethod) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *MigrationTaskListMigrationMethod) UnmarshalJSON(b []byte) error {

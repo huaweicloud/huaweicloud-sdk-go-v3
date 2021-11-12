@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -20,7 +20,7 @@ type ContainerNetwork struct {
 }
 
 func (o ContainerNetwork) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ContainerNetwork struct{}"
 	}
@@ -53,7 +53,7 @@ func GetContainerNetworkModeEnum() ContainerNetworkModeEnum {
 }
 
 func (c ContainerNetworkMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ContainerNetworkMode) UnmarshalJSON(b []byte) error {

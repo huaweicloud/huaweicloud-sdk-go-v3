@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -61,7 +61,7 @@ type ReqParamBase struct {
 }
 
 func (o ReqParamBase) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ReqParamBase struct{}"
 	}
@@ -90,7 +90,7 @@ func GetReqParamBaseTypeEnum() ReqParamBaseTypeEnum {
 }
 
 func (c ReqParamBaseType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ReqParamBaseType) UnmarshalJSON(b []byte) error {
@@ -132,7 +132,7 @@ func GetReqParamBaseLocationEnum() ReqParamBaseLocationEnum {
 }
 
 func (c ReqParamBaseLocation) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ReqParamBaseLocation) UnmarshalJSON(b []byte) error {

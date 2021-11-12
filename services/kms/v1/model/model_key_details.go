@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -61,7 +61,7 @@ type KeyDetails struct {
 }
 
 func (o KeyDetails) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "KeyDetails struct{}"
 	}
@@ -114,7 +114,7 @@ func GetKeyDetailsKeySpecEnum() KeyDetailsKeySpecEnum {
 }
 
 func (c KeyDetailsKeySpec) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *KeyDetailsKeySpec) UnmarshalJSON(b []byte) error {
@@ -152,7 +152,7 @@ func GetKeyDetailsKeyUsageEnum() KeyDetailsKeyUsageEnum {
 }
 
 func (c KeyDetailsKeyUsage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *KeyDetailsKeyUsage) UnmarshalJSON(b []byte) error {
@@ -190,7 +190,7 @@ func GetKeyDetailsOriginEnum() KeyDetailsOriginEnum {
 }
 
 func (c KeyDetailsOrigin) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *KeyDetailsOrigin) UnmarshalJSON(b []byte) error {

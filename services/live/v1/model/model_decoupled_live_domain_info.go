@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -42,7 +42,7 @@ type DecoupledLiveDomainInfo struct {
 }
 
 func (o DecoupledLiveDomainInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DecoupledLiveDomainInfo struct{}"
 	}
@@ -71,7 +71,7 @@ func GetDecoupledLiveDomainInfoDomainTypeEnum() DecoupledLiveDomainInfoDomainTyp
 }
 
 func (c DecoupledLiveDomainInfoDomainType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DecoupledLiveDomainInfoDomainType) UnmarshalJSON(b []byte) error {
@@ -137,7 +137,7 @@ func GetDecoupledLiveDomainInfoVendorEnum() DecoupledLiveDomainInfoVendorEnum {
 }
 
 func (c DecoupledLiveDomainInfoVendor) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DecoupledLiveDomainInfoVendor) UnmarshalJSON(b []byte) error {
@@ -179,7 +179,7 @@ func GetDecoupledLiveDomainInfoStatusEnum() DecoupledLiveDomainInfoStatusEnum {
 }
 
 func (c DecoupledLiveDomainInfoStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DecoupledLiveDomainInfoStatus) UnmarshalJSON(b []byte) error {
@@ -221,7 +221,7 @@ func GetDecoupledLiveDomainInfoServiceAreaEnum() DecoupledLiveDomainInfoServiceA
 }
 
 func (c DecoupledLiveDomainInfoServiceArea) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DecoupledLiveDomainInfoServiceArea) UnmarshalJSON(b []byte) error {

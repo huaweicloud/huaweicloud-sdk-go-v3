@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -74,7 +74,7 @@ type DescribeStreamResponse struct {
 }
 
 func (o DescribeStreamResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DescribeStreamResponse struct{}"
 	}
@@ -111,7 +111,7 @@ func GetDescribeStreamResponseStatusEnum() DescribeStreamResponseStatusEnum {
 }
 
 func (c DescribeStreamResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DescribeStreamResponseStatus) UnmarshalJSON(b []byte) error {
@@ -149,7 +149,7 @@ func GetDescribeStreamResponseStreamTypeEnum() DescribeStreamResponseStreamTypeE
 }
 
 func (c DescribeStreamResponseStreamType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DescribeStreamResponseStreamType) UnmarshalJSON(b []byte) error {
@@ -191,7 +191,7 @@ func GetDescribeStreamResponseDataTypeEnum() DescribeStreamResponseDataTypeEnum 
 }
 
 func (c DescribeStreamResponseDataType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DescribeStreamResponseDataType) UnmarshalJSON(b []byte) error {
@@ -233,7 +233,7 @@ func GetDescribeStreamResponseCompressionFormatEnum() DescribeStreamResponseComp
 }
 
 func (c DescribeStreamResponseCompressionFormat) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DescribeStreamResponseCompressionFormat) UnmarshalJSON(b []byte) error {

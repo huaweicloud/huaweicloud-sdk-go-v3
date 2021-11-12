@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -76,7 +76,7 @@ type Domains struct {
 }
 
 func (o Domains) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "Domains struct{}"
 	}
@@ -109,7 +109,7 @@ func GetDomainsServiceAreaEnum() DomainsServiceAreaEnum {
 }
 
 func (c DomainsServiceArea) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DomainsServiceArea) UnmarshalJSON(b []byte) error {

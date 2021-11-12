@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -22,7 +22,7 @@ type SetDbUserPwdRequest struct {
 }
 
 func (o SetDbUserPwdRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "SetDbUserPwdRequest struct{}"
 	}
@@ -51,7 +51,7 @@ func GetSetDbUserPwdRequestXLanguageEnum() SetDbUserPwdRequestXLanguageEnum {
 }
 
 func (c SetDbUserPwdRequestXLanguage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *SetDbUserPwdRequestXLanguage) UnmarshalJSON(b []byte) error {

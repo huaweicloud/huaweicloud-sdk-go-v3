@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -26,7 +26,7 @@ type ListStorageTypesRequest struct {
 }
 
 func (o ListStorageTypesRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListStorageTypesRequest struct{}"
 	}
@@ -59,7 +59,7 @@ func GetListStorageTypesRequestDatabaseNameEnum() ListStorageTypesRequestDatabas
 }
 
 func (c ListStorageTypesRequestDatabaseName) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListStorageTypesRequestDatabaseName) UnmarshalJSON(b []byte) error {
@@ -101,7 +101,7 @@ func GetListStorageTypesRequestHaModeEnum() ListStorageTypesRequestHaModeEnum {
 }
 
 func (c ListStorageTypesRequestHaMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListStorageTypesRequestHaMode) UnmarshalJSON(b []byte) error {

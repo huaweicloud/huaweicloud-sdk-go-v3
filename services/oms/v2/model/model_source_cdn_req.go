@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -26,7 +26,7 @@ type SourceCdnReq struct {
 }
 
 func (o SourceCdnReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "SourceCdnReq struct{}"
 	}
@@ -71,7 +71,7 @@ func GetSourceCdnReqAuthenticationTypeEnum() SourceCdnReqAuthenticationTypeEnum 
 }
 
 func (c SourceCdnReqAuthenticationType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *SourceCdnReqAuthenticationType) UnmarshalJSON(b []byte) error {
@@ -109,7 +109,7 @@ func GetSourceCdnReqProtocolEnum() SourceCdnReqProtocolEnum {
 }
 
 func (c SourceCdnReqProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *SourceCdnReqProtocol) UnmarshalJSON(b []byte) error {

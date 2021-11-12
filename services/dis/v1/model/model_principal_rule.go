@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -25,7 +25,7 @@ type PrincipalRule struct {
 }
 
 func (o PrincipalRule) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "PrincipalRule struct{}"
 	}
@@ -50,7 +50,7 @@ func GetPrincipalRuleActionTypeEnum() PrincipalRuleActionTypeEnum {
 }
 
 func (c PrincipalRuleActionType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PrincipalRuleActionType) UnmarshalJSON(b []byte) error {
@@ -84,7 +84,7 @@ func GetPrincipalRuleEffectEnum() PrincipalRuleEffectEnum {
 }
 
 func (c PrincipalRuleEffect) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PrincipalRuleEffect) UnmarshalJSON(b []byte) error {

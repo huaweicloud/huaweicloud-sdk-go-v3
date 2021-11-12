@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -46,7 +46,7 @@ type SignUnbindingApiResp struct {
 }
 
 func (o SignUnbindingApiResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "SignUnbindingApiResp struct{}"
 	}

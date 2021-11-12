@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -19,7 +19,7 @@ type BatchRestoreTaskRequest struct {
 }
 
 func (o BatchRestoreTaskRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BatchRestoreTaskRequest struct{}"
 	}
@@ -48,7 +48,7 @@ func GetBatchRestoreTaskRequestXLanguageEnum() BatchRestoreTaskRequestXLanguageE
 }
 
 func (c BatchRestoreTaskRequestXLanguage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchRestoreTaskRequestXLanguage) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -55,7 +55,7 @@ type Bandwidth struct {
 }
 
 func (o Bandwidth) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "Bandwidth struct{}"
 	}
@@ -80,7 +80,7 @@ func GetBandwidthBandwidthTypeEnum() BandwidthBandwidthTypeEnum {
 }
 
 func (c BandwidthBandwidthType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BandwidthBandwidthType) UnmarshalJSON(b []byte) error {
@@ -114,7 +114,7 @@ func GetBandwidthChargeModeEnum() BandwidthChargeModeEnum {
 }
 
 func (c BandwidthChargeMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BandwidthChargeMode) UnmarshalJSON(b []byte) error {
@@ -148,7 +148,7 @@ func GetBandwidthShareTypeEnum() BandwidthShareTypeEnum {
 }
 
 func (c BandwidthShareType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BandwidthShareType) UnmarshalJSON(b []byte) error {
@@ -186,7 +186,7 @@ func GetBandwidthStatusEnum() BandwidthStatusEnum {
 }
 
 func (c BandwidthStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BandwidthStatus) UnmarshalJSON(b []byte) error {

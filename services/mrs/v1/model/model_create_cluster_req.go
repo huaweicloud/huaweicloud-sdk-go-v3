@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -121,7 +121,7 @@ type CreateClusterReq struct {
 }
 
 func (o CreateClusterReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateClusterReq struct{}"
 	}
@@ -146,7 +146,7 @@ func GetCreateClusterReqBillingTypeEnum() CreateClusterReqBillingTypeEnum {
 }
 
 func (c CreateClusterReqBillingType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateClusterReqBillingType) UnmarshalJSON(b []byte) error {
@@ -192,7 +192,7 @@ func GetCreateClusterReqVolumeTypeEnum() CreateClusterReqVolumeTypeEnum {
 }
 
 func (c CreateClusterReqVolumeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateClusterReqVolumeType) UnmarshalJSON(b []byte) error {
@@ -238,7 +238,7 @@ func GetCreateClusterReqMasterDataVolumeTypeEnum() CreateClusterReqMasterDataVol
 }
 
 func (c CreateClusterReqMasterDataVolumeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateClusterReqMasterDataVolumeType) UnmarshalJSON(b []byte) error {
@@ -272,7 +272,7 @@ func GetCreateClusterReqMasterDataVolumeCountEnum() CreateClusterReqMasterDataVo
 }
 
 func (c CreateClusterReqMasterDataVolumeCount) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateClusterReqMasterDataVolumeCount) UnmarshalJSON(b []byte) error {
@@ -318,7 +318,7 @@ func GetCreateClusterReqCoreDataVolumeTypeEnum() CreateClusterReqCoreDataVolumeT
 }
 
 func (c CreateClusterReqCoreDataVolumeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateClusterReqCoreDataVolumeType) UnmarshalJSON(b []byte) error {
@@ -355,7 +355,7 @@ func GetCreateClusterReqSafeModeEnum() CreateClusterReqSafeModeEnum {
 }
 
 func (c CreateClusterReqSafeMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateClusterReqSafeMode) UnmarshalJSON(b []byte) error {
@@ -392,7 +392,7 @@ func GetCreateClusterReqClusterTypeEnum() CreateClusterReqClusterTypeEnum {
 }
 
 func (c CreateClusterReqClusterType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateClusterReqClusterType) UnmarshalJSON(b []byte) error {
@@ -429,7 +429,7 @@ func GetCreateClusterReqLogCollectionEnum() CreateClusterReqLogCollectionEnum {
 }
 
 func (c CreateClusterReqLogCollection) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateClusterReqLogCollection) UnmarshalJSON(b []byte) error {
@@ -466,7 +466,7 @@ func GetCreateClusterReqLoginModeEnum() CreateClusterReqLoginModeEnum {
 }
 
 func (c CreateClusterReqLoginMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateClusterReqLoginMode) UnmarshalJSON(b []byte) error {

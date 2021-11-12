@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -30,7 +30,7 @@ type MpeCallBackReq struct {
 }
 
 func (o MpeCallBackReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "MpeCallBackReq struct{}"
 	}
@@ -83,7 +83,7 @@ func GetMpeCallBackReqTaskTypeEnum() MpeCallBackReqTaskTypeEnum {
 }
 
 func (c MpeCallBackReqTaskType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *MpeCallBackReqTaskType) UnmarshalJSON(b []byte) error {

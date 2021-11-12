@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -35,7 +35,7 @@ type InstInfo struct {
 }
 
 func (o InstInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "InstInfo struct{}"
 	}
@@ -68,7 +68,7 @@ func GetInstInfoEngineTypeEnum() InstInfoEngineTypeEnum {
 }
 
 func (c InstInfoEngineType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstInfoEngineType) UnmarshalJSON(b []byte) error {
@@ -102,7 +102,7 @@ func GetInstInfoInstTypeEnum() InstInfoInstTypeEnum {
 }
 
 func (c InstInfoInstType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstInfoInstType) UnmarshalJSON(b []byte) error {
@@ -140,7 +140,7 @@ func GetInstInfoStatusEnum() InstInfoStatusEnum {
 }
 
 func (c InstInfoStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstInfoStatus) UnmarshalJSON(b []byte) error {

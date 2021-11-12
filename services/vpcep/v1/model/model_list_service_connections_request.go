@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -41,7 +41,7 @@ type ListServiceConnectionsRequest struct {
 }
 
 func (o ListServiceConnectionsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListServiceConnectionsRequest struct{}"
 	}
@@ -70,7 +70,7 @@ func GetListServiceConnectionsRequestSortKeyEnum() ListServiceConnectionsRequest
 }
 
 func (c ListServiceConnectionsRequestSortKey) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListServiceConnectionsRequestSortKey) UnmarshalJSON(b []byte) error {
@@ -108,7 +108,7 @@ func GetListServiceConnectionsRequestSortDirEnum() ListServiceConnectionsRequest
 }
 
 func (c ListServiceConnectionsRequestSortDir) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListServiceConnectionsRequestSortDir) UnmarshalJSON(b []byte) error {

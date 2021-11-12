@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -68,7 +68,7 @@ type CreateImageRequestBody struct {
 }
 
 func (o CreateImageRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateImageRequestBody struct{}"
 	}
@@ -105,7 +105,7 @@ func GetCreateImageRequestBodyTypeEnum() CreateImageRequestBodyTypeEnum {
 }
 
 func (c CreateImageRequestBodyType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateImageRequestBodyType) UnmarshalJSON(b []byte) error {
@@ -143,7 +143,7 @@ func GetCreateImageRequestBodyArchitectureEnum() CreateImageRequestBodyArchitect
 }
 
 func (c CreateImageRequestBodyArchitecture) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateImageRequestBodyArchitecture) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -38,7 +38,7 @@ type ListRemuxTaskRequest struct {
 }
 
 func (o ListRemuxTaskRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListRemuxTaskRequest struct{}"
 	}
@@ -83,7 +83,7 @@ func GetListRemuxTaskRequestStatusEnum() ListRemuxTaskRequestStatusEnum {
 }
 
 func (c ListRemuxTaskRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListRemuxTaskRequestStatus) UnmarshalJSON(b []byte) error {

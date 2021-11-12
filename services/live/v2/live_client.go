@@ -19,7 +19,7 @@ func LiveClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//查询播放域名带宽数据。  最大查询跨度31天，最大查询周期90天。
+//查询播放域名带宽数据。  最大查询跨度31天，最大查询周期一年。
 func (c *LiveClient) ListBandwidthDetail(request *model.ListBandwidthDetailRequest) (*model.ListBandwidthDetailResponse, error) {
 	requestDef := GenReqDefForListBandwidthDetail()
 
@@ -30,7 +30,7 @@ func (c *LiveClient) ListBandwidthDetail(request *model.ListBandwidthDetailReque
 	}
 }
 
-//查询指定时间范围内播放带宽峰值。  最大查询跨度31天，最大查询周期90天。
+//查询指定时间范围内播放带宽峰值。  最大查询跨度31天，最大查询周期一年。
 func (c *LiveClient) ListDomainBandwidthPeak(request *model.ListDomainBandwidthPeakRequest) (*model.ListDomainBandwidthPeakResponse, error) {
 	requestDef := GenReqDefForListDomainBandwidthPeak()
 
@@ -41,7 +41,7 @@ func (c *LiveClient) ListDomainBandwidthPeak(request *model.ListDomainBandwidthP
 	}
 }
 
-//查询播放域名流量数据。  最大查询跨度31天，最大查询周期90天。
+//查询播放域名流量数据。  最大查询跨度31天，最大查询周期一年。
 func (c *LiveClient) ListDomainTrafficDetail(request *model.ListDomainTrafficDetailRequest) (*model.ListDomainTrafficDetailResponse, error) {
 	requestDef := GenReqDefForListDomainTrafficDetail()
 
@@ -52,7 +52,7 @@ func (c *LiveClient) ListDomainTrafficDetail(request *model.ListDomainTrafficDet
 	}
 }
 
-//查询指定时间范围内流量汇总量。  最大查询跨度31天，最大查询周期90天。
+//查询指定时间范围内流量汇总量。  最大查询跨度31天，最大查询周期一年。
 func (c *LiveClient) ListDomainTrafficSummary(request *model.ListDomainTrafficSummaryRequest) (*model.ListDomainTrafficSummaryResponse, error) {
 	requestDef := GenReqDefForListDomainTrafficSummary()
 
@@ -63,7 +63,7 @@ func (c *LiveClient) ListDomainTrafficSummary(request *model.ListDomainTrafficSu
 	}
 }
 
-//查询历史推流列表。  最大查询跨度1天，最大查询周期7天。
+//查询历史推流列表。  不能查询现推流。  最大查询跨度1天，最大查询周期1个月。
 func (c *LiveClient) ListHistoryStreams(request *model.ListHistoryStreamsRequest) (*model.ListHistoryStreamsResponse, error) {
 	requestDef := GenReqDefForListHistoryStreams()
 
@@ -118,7 +118,7 @@ func (c *LiveClient) ListTranscodeData(request *model.ListTranscodeDataRequest) 
 	}
 }
 
-//查询观众趋势。  最大查询跨度7天，最大查询周期90天。
+//查询观众趋势。  最大查询跨度31天，最大查询周期一年。
 func (c *LiveClient) ListUsersOfStream(request *model.ListUsersOfStreamRequest) (*model.ListUsersOfStreamResponse, error) {
 	requestDef := GenReqDefForListUsersOfStream()
 
@@ -129,7 +129,7 @@ func (c *LiveClient) ListUsersOfStream(request *model.ListUsersOfStreamRequest) 
 	}
 }
 
-//查询域名维度推流路数接口。  最大查询跨度31天，最大查询周期90天。
+//查询域名维度推流路数接口。  最大查询跨度31天，最大查询周期1年。
 func (c *LiveClient) ShowStreamCount(request *model.ShowStreamCountRequest) (*model.ShowStreamCountResponse, error) {
 	requestDef := GenReqDefForShowStreamCount()
 
@@ -140,7 +140,7 @@ func (c *LiveClient) ShowStreamCount(request *model.ShowStreamCountRequest) (*mo
 	}
 }
 
-//查询播放画像信息。  最大查询跨度1天，最大查询周期31天。
+//查询播放画像信息。  最大查询跨度1天，最大查询周期31天。 不统计协议为HLS的播放时长（play_duration）信息。
 func (c *LiveClient) ShowStreamPortrait(request *model.ShowStreamPortraitRequest) (*model.ShowStreamPortraitResponse, error) {
 	requestDef := GenReqDefForShowStreamPortrait()
 
@@ -151,7 +151,7 @@ func (c *LiveClient) ShowStreamPortrait(request *model.ShowStreamPortraitRequest
 	}
 }
 
-//查询上行带宽数据。  最大查询跨度31天，最大查询周期90天。
+//查询上行带宽数据。  最大查询跨度31天，最大查询周期1年。
 func (c *LiveClient) ShowUpBandwidth(request *model.ShowUpBandwidthRequest) (*model.ShowUpBandwidthResponse, error) {
 	requestDef := GenReqDefForShowUpBandwidth()
 
@@ -162,7 +162,7 @@ func (c *LiveClient) ShowUpBandwidth(request *model.ShowUpBandwidthRequest) (*mo
 	}
 }
 
-//查询推流监控码率数据接口。  最大查询跨度6小时，最大查询周期7天。
+//查询推流监控码率数据接口。  最大查询跨度1天，最大查询周期1个月。
 func (c *LiveClient) ListSingleStreamBitrate(request *model.ListSingleStreamBitrateRequest) (*model.ListSingleStreamBitrateResponse, error) {
 	requestDef := GenReqDefForListSingleStreamBitrate()
 
@@ -173,7 +173,7 @@ func (c *LiveClient) ListSingleStreamBitrate(request *model.ListSingleStreamBitr
 	}
 }
 
-//查询推流帧率数据接口。  最大查询跨度6小时，最大查询周期7天。
+//查询推流帧率数据接口。  最大查询跨度1天，最大查询周期1个月。
 func (c *LiveClient) ListSingleStreamFramerate(request *model.ListSingleStreamFramerateRequest) (*model.ListSingleStreamFramerateResponse, error) {
 	requestDef := GenReqDefForListSingleStreamFramerate()
 

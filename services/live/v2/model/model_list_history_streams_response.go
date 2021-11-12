@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -11,7 +11,7 @@ type ListHistoryStreamsResponse struct {
 	// 历史流信息列表。
 
 	HistoryStreamList *[]HistoryStreamInfo `json:"history_stream_list,omitempty"`
-	// 总记录数
+	// 总记录数。
 
 	Total *int32 `json:"total,omitempty"`
 
@@ -20,7 +20,7 @@ type ListHistoryStreamsResponse struct {
 }
 
 func (o ListHistoryStreamsResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListHistoryStreamsResponse struct{}"
 	}

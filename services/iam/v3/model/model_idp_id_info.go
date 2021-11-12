@@ -1,20 +1,20 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
 
-// 身份提供商信息
+// 身份提供商信息。
 type IdpIdInfo struct {
-	// 身份提供商id
+	// 身份提供商id。
 
 	Id string `json:"id"`
 }
 
 func (o IdpIdInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "IdpIdInfo struct{}"
 	}

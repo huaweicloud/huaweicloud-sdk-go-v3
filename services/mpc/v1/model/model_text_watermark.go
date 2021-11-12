@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -25,7 +25,7 @@ type TextWatermark struct {
 	// 水印持续时间，与“timeline_start”配合使用。  取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值：ToEND。
 
 	TimelineDuration *string `json:"timeline_duration,omitempty"`
-	// 字体，当前支持fzyouh、msyh
+	// 字体，当前支持fzyouh
 
 	FontName *string `json:"font_name,omitempty"`
 	// 字体大小。  取值范围：[4, 120]
@@ -40,7 +40,7 @@ type TextWatermark struct {
 }
 
 func (o TextWatermark) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "TextWatermark struct{}"
 	}
@@ -69,7 +69,7 @@ func GetTextWatermarkBaseEnum() TextWatermarkBaseEnum {
 }
 
 func (c TextWatermarkBase) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *TextWatermarkBase) UnmarshalJSON(b []byte) error {

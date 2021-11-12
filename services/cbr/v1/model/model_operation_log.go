@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -56,7 +56,7 @@ type OperationLog struct {
 }
 
 func (o OperationLog) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "OperationLog struct{}"
 	}
@@ -109,7 +109,7 @@ func GetOperationLogOperationTypeEnum() OperationLogOperationTypeEnum {
 }
 
 func (c OperationLogOperationType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OperationLogOperationType) UnmarshalJSON(b []byte) error {
@@ -163,7 +163,7 @@ func GetOperationLogStatusEnum() OperationLogStatusEnum {
 }
 
 func (c OperationLogStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OperationLogStatus) UnmarshalJSON(b []byte) error {

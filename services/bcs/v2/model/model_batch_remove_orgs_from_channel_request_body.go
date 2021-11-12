@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -13,7 +13,7 @@ type BatchRemoveOrgsFromChannelRequestBody struct {
 }
 
 func (o BatchRemoveOrgsFromChannelRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BatchRemoveOrgsFromChannelRequestBody struct{}"
 	}

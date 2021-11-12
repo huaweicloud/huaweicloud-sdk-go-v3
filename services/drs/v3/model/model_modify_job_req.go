@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -65,7 +65,7 @@ type ModifyJobReq struct {
 }
 
 func (o ModifyJobReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ModifyJobReq struct{}"
 	}
@@ -98,7 +98,7 @@ func GetModifyJobReqTaskTypeEnum() ModifyJobReqTaskTypeEnum {
 }
 
 func (c ModifyJobReqTaskType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ModifyJobReqTaskType) UnmarshalJSON(b []byte) error {
@@ -132,7 +132,7 @@ func GetModifyJobReqNodeTypeEnum() ModifyJobReqNodeTypeEnum {
 }
 
 func (c ModifyJobReqNodeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ModifyJobReqNodeType) UnmarshalJSON(b []byte) error {
@@ -174,7 +174,7 @@ func GetModifyJobReqEngineTypeEnum() ModifyJobReqEngineTypeEnum {
 }
 
 func (c ModifyJobReqEngineType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ModifyJobReqEngineType) UnmarshalJSON(b []byte) error {
@@ -216,7 +216,7 @@ func GetModifyJobReqNetTypeEnum() ModifyJobReqNetTypeEnum {
 }
 
 func (c ModifyJobReqNetType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ModifyJobReqNetType) UnmarshalJSON(b []byte) error {
@@ -258,7 +258,7 @@ func GetModifyJobReqJobDirectionEnum() ModifyJobReqJobDirectionEnum {
 }
 
 func (c ModifyJobReqJobDirection) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ModifyJobReqJobDirection) UnmarshalJSON(b []byte) error {
@@ -300,7 +300,7 @@ func GetModifyJobReqDbUseTypeEnum() ModifyJobReqDbUseTypeEnum {
 }
 
 func (c ModifyJobReqDbUseType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ModifyJobReqDbUseType) UnmarshalJSON(b []byte) error {

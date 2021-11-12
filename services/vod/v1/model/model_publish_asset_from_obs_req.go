@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -59,7 +59,7 @@ type PublishAssetFromObsReq struct {
 }
 
 func (o PublishAssetFromObsReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "PublishAssetFromObsReq struct{}"
 	}
@@ -196,7 +196,7 @@ func GetPublishAssetFromObsReqVideoTypeEnum() PublishAssetFromObsReqVideoTypeEnu
 }
 
 func (c PublishAssetFromObsReqVideoType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PublishAssetFromObsReqVideoType) UnmarshalJSON(b []byte) error {

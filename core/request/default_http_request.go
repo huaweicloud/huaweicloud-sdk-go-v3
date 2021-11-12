@@ -108,7 +108,9 @@ func (httpRequest *DefaultHttpRequest) GetBodyToBytes() (*bytes.Buffer, error) {
 		if v.Kind() == reflect.String {
 			buf.WriteString(v.Interface().(string))
 		} else {
-			err := json.NewEncoder(buf).Encode(httpRequest.body)
+			encoder := json.NewEncoder(buf)
+			encoder.SetEscapeHTML(false)
+			err := encoder.Encode(httpRequest.body)
 			if err != nil {
 				return nil, err
 			}
@@ -259,7 +261,7 @@ func (httpRequest *DefaultHttpRequest) fillQueryParams(req *http.Request) {
 		}
 	}
 
-	req.URL.RawQuery = strings.ReplaceAll(strings.Trim(q.Encode(), "="), "=&", "&")
+	req.URL.RawQuery = strings.ReplaceAll(strings.ReplaceAll(strings.Trim(q.Encode(), "="), "=&", "&"), "+", "%20")
 }
 
 func (httpRequest *DefaultHttpRequest) CanonicalStringQueryParams(value reflect.Value) string {

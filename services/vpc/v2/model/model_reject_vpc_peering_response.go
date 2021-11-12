@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -36,7 +36,7 @@ type RejectVpcPeeringResponse struct {
 }
 
 func (o RejectVpcPeeringResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "RejectVpcPeeringResponse struct{}"
 	}
@@ -77,7 +77,7 @@ func GetRejectVpcPeeringResponseStatusEnum() RejectVpcPeeringResponseStatusEnum 
 }
 
 func (c RejectVpcPeeringResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *RejectVpcPeeringResponseStatus) UnmarshalJSON(b []byte) error {

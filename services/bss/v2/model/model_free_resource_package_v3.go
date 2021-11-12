@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -55,7 +55,7 @@ type FreeResourcePackageV3 struct {
 }
 
 func (o FreeResourcePackageV3) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "FreeResourcePackageV3 struct{}"
 	}

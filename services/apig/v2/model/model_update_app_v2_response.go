@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -44,7 +44,7 @@ type UpdateAppV2Response struct {
 }
 
 func (o UpdateAppV2Response) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateAppV2Response struct{}"
 	}
@@ -73,7 +73,7 @@ func GetUpdateAppV2ResponseCreatorEnum() UpdateAppV2ResponseCreatorEnum {
 }
 
 func (c UpdateAppV2ResponseCreator) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateAppV2ResponseCreator) UnmarshalJSON(b []byte) error {
@@ -111,7 +111,7 @@ func GetUpdateAppV2ResponseAppTypeEnum() UpdateAppV2ResponseAppTypeEnum {
 }
 
 func (c UpdateAppV2ResponseAppType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateAppV2ResponseAppType) UnmarshalJSON(b []byte) error {

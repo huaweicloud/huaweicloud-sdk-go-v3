@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -49,7 +49,7 @@ type ScalingAllPolicyDetail struct {
 }
 
 func (o ScalingAllPolicyDetail) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ScalingAllPolicyDetail struct{}"
 	}
@@ -78,7 +78,7 @@ func GetScalingAllPolicyDetailScalingResourceTypeEnum() ScalingAllPolicyDetailSc
 }
 
 func (c ScalingAllPolicyDetailScalingResourceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScalingAllPolicyDetailScalingResourceType) UnmarshalJSON(b []byte) error {
@@ -120,7 +120,7 @@ func GetScalingAllPolicyDetailPolicyStatusEnum() ScalingAllPolicyDetailPolicySta
 }
 
 func (c ScalingAllPolicyDetailPolicyStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScalingAllPolicyDetailPolicyStatus) UnmarshalJSON(b []byte) error {
@@ -162,7 +162,7 @@ func GetScalingAllPolicyDetailScalingPolicyTypeEnum() ScalingAllPolicyDetailScal
 }
 
 func (c ScalingAllPolicyDetailScalingPolicyType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScalingAllPolicyDetailScalingPolicyType) UnmarshalJSON(b []byte) error {

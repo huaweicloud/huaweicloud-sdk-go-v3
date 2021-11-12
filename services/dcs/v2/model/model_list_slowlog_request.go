@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -35,7 +35,7 @@ type ListSlowlogRequest struct {
 }
 
 func (o ListSlowlogRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListSlowlogRequest struct{}"
 	}
@@ -64,7 +64,7 @@ func GetListSlowlogRequestSortKeyEnum() ListSlowlogRequestSortKeyEnum {
 }
 
 func (c ListSlowlogRequestSortKey) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListSlowlogRequestSortKey) UnmarshalJSON(b []byte) error {
@@ -102,7 +102,7 @@ func GetListSlowlogRequestSortDirEnum() ListSlowlogRequestSortDirEnum {
 }
 
 func (c ListSlowlogRequestSortDir) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListSlowlogRequestSortDir) UnmarshalJSON(b []byte) error {

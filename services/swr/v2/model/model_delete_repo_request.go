@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -23,7 +23,7 @@ type DeleteRepoRequest struct {
 }
 
 func (o DeleteRepoRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DeleteRepoRequest struct{}"
 	}
@@ -52,7 +52,7 @@ func GetDeleteRepoRequestContentTypeEnum() DeleteRepoRequestContentTypeEnum {
 }
 
 func (c DeleteRepoRequestContentType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DeleteRepoRequestContentType) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -62,7 +62,7 @@ type IssueRequestV4 struct {
 }
 
 func (o IssueRequestV4) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "IssueRequestV4 struct{}"
 	}

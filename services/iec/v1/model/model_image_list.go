@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -101,7 +101,7 @@ type ImageList struct {
 }
 
 func (o ImageList) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ImageList struct{}"
 	}
@@ -142,7 +142,7 @@ func GetImageListStatusEnum() ImageListStatusEnum {
 }
 
 func (c ImageListStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageListStatus) UnmarshalJSON(b []byte) error {
@@ -192,7 +192,7 @@ func GetImageListDiskFormatEnum() ImageListDiskFormatEnum {
 }
 
 func (c ImageListDiskFormat) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageListDiskFormat) UnmarshalJSON(b []byte) error {
@@ -230,7 +230,7 @@ func GetImageListImagetypeEnum() ImageListImagetypeEnum {
 }
 
 func (c ImageListImagetype) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageListImagetype) UnmarshalJSON(b []byte) error {
@@ -272,7 +272,7 @@ func GetImageListOsTypeEnum() ImageListOsTypeEnum {
 }
 
 func (c ImageListOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageListOsType) UnmarshalJSON(b []byte) error {

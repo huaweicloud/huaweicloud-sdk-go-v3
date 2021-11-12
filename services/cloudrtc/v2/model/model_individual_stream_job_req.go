@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -36,7 +36,7 @@ type IndividualStreamJobReq struct {
 }
 
 func (o IndividualStreamJobReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "IndividualStreamJobReq struct{}"
 	}
@@ -65,7 +65,7 @@ func GetIndividualStreamJobReqVideoTypeEnum() IndividualStreamJobReqVideoTypeEnu
 }
 
 func (c IndividualStreamJobReqVideoType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *IndividualStreamJobReqVideoType) UnmarshalJSON(b []byte) error {
@@ -111,7 +111,7 @@ func GetIndividualStreamJobReqSelectStreamTypeEnum() IndividualStreamJobReqSelec
 }
 
 func (c IndividualStreamJobReqSelectStreamType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *IndividualStreamJobReqSelectStreamType) UnmarshalJSON(b []byte) error {

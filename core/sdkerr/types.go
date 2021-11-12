@@ -21,11 +21,12 @@ package sdkerr
 
 import (
 	"bytes"
-	"encoding/json"
 	"fmt"
 	jsoniter "github.com/json-iterator/go"
 	"io/ioutil"
 	"net/http"
+
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 )
 
 type CredentialsTypeError struct {
@@ -127,7 +128,7 @@ func NewServiceResponseError(resp *http.Response) *ServiceResponseError {
 }
 
 func (sr ServiceResponseError) Error() string {
-	data, err := json.Marshal(sr)
+	data, err := utils.Marshal(sr)
 	if err != nil {
 		return fmt.Sprintf("{\"ErrorMessage\": \"%s\",\"ErrorCode\": \"%s\"}", sr.ErrorMessage, sr.ErrorCode)
 	}

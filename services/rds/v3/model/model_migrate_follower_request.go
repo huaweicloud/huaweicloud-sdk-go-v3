@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -22,7 +22,7 @@ type MigrateFollowerRequest struct {
 }
 
 func (o MigrateFollowerRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "MigrateFollowerRequest struct{}"
 	}
@@ -51,7 +51,7 @@ func GetMigrateFollowerRequestXLanguageEnum() MigrateFollowerRequestXLanguageEnu
 }
 
 func (c MigrateFollowerRequestXLanguage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *MigrateFollowerRequestXLanguage) UnmarshalJSON(b []byte) error {

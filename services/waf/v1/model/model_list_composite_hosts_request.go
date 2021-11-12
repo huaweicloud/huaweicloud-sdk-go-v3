@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -35,7 +35,7 @@ type ListCompositeHostsRequest struct {
 }
 
 func (o ListCompositeHostsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListCompositeHostsRequest struct{}"
 	}

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -98,7 +98,7 @@ type InstancesVo struct {
 }
 
 func (o InstancesVo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "InstancesVo struct{}"
 	}
@@ -127,7 +127,7 @@ func GetInstancesVoArchEnum() InstancesVoArchEnum {
 }
 
 func (c InstancesVoArch) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstancesVoArch) UnmarshalJSON(b []byte) error {
@@ -173,7 +173,7 @@ func GetInstancesVoCpuMemoryEnum() InstancesVoCpuMemoryEnum {
 }
 
 func (c InstancesVoCpuMemory) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstancesVoCpuMemory) UnmarshalJSON(b []byte) error {
@@ -215,7 +215,7 @@ func GetInstancesVoPvcQuantityEnum() InstancesVoPvcQuantityEnum {
 }
 
 func (c InstancesVoPvcQuantity) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstancesVoPvcQuantity) UnmarshalJSON(b []byte) error {
@@ -277,7 +277,7 @@ func GetInstancesVoStatusEnum() InstancesVoStatusEnum {
 }
 
 func (c InstancesVoStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstancesVoStatus) UnmarshalJSON(b []byte) error {

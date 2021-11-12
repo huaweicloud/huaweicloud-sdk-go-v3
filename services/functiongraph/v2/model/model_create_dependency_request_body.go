@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -31,7 +31,7 @@ type CreateDependencyRequestBody struct {
 }
 
 func (o CreateDependencyRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateDependencyRequestBody struct{}"
 	}
@@ -100,7 +100,7 @@ func GetCreateDependencyRequestBodyRuntimeEnum() CreateDependencyRequestBodyRunt
 }
 
 func (c CreateDependencyRequestBodyRuntime) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateDependencyRequestBodyRuntime) UnmarshalJSON(b []byte) error {

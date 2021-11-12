@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -34,7 +34,7 @@ type ScaleScript struct {
 }
 
 func (o ScaleScript) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ScaleScript struct{}"
 	}
@@ -63,7 +63,7 @@ func GetScaleScriptFailActionEnum() ScaleScriptFailActionEnum {
 }
 
 func (c ScaleScriptFailAction) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScaleScriptFailAction) UnmarshalJSON(b []byte) error {
@@ -109,7 +109,7 @@ func GetScaleScriptActionStageEnum() ScaleScriptActionStageEnum {
 }
 
 func (c ScaleScriptActionStage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScaleScriptActionStage) UnmarshalJSON(b []byte) error {

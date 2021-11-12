@@ -312,7 +312,12 @@ func (hc *HcHttpClient) deserializeResponseBody(reqDef *def.HttpRequestDef, data
 			if err != nil {
 				return err
 			}
-			v.FieldByName("Body").Set(reflect.ValueOf(bodyIns))
+
+			if body.Type.Kind() == reflect.Ptr {
+				v.FieldByName("Body").Set(reflect.ValueOf(bodyIns))
+			} else {
+				v.FieldByName("Body").Set(reflect.ValueOf(bodyIns).Elem())
+			}
 		}
 	}
 

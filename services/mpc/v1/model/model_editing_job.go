@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -31,9 +31,11 @@ type EditingJob struct {
 	// 任务ID
 
 	JobId *string `json:"job_id,omitempty"`
-	// 剪辑任务类型。取值如下：\"CLIP\",\"CONCAT\"。
+	// 剪辑任务类型。取值如下：\"CLIP\",\"CONCAT\",\"CONCATS\",\"MIX\"。
 
 	EditType *[]string `json:"edit_type,omitempty"`
+
+	Output *ObsObjInfo `json:"output,omitempty"`
 
 	EditTaskReq *CreateEditingJobReq `json:"edit_task_req,omitempty"`
 	// 剪辑输出meta信息
@@ -42,7 +44,7 @@ type EditingJob struct {
 }
 
 func (o EditingJob) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "EditingJob struct{}"
 	}

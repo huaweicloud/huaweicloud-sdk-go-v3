@@ -1,22 +1,22 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
 
 type UnscopedTokenInfoRoles struct {
-	// role id
+	// role id。
 
 	Id *string `json:"id,omitempty"`
-	// name id
+	// name id。
 
 	Name *string `json:"name,omitempty"`
 }
 
 func (o UnscopedTokenInfoRoles) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UnscopedTokenInfoRoles struct{}"
 	}

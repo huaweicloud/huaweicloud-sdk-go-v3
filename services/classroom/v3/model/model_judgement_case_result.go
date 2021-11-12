@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -20,7 +20,7 @@ type JudgementCaseResult struct {
 }
 
 func (o JudgementCaseResult) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "JudgementCaseResult struct{}"
 	}
@@ -61,7 +61,7 @@ func GetJudgementCaseResultCaseStatusEnum() JudgementCaseResultCaseStatusEnum {
 }
 
 func (c JudgementCaseResultCaseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *JudgementCaseResultCaseStatus) UnmarshalJSON(b []byte) error {

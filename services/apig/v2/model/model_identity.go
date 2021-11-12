@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -22,7 +22,7 @@ type Identity struct {
 }
 
 func (o Identity) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "Identity struct{}"
 	}
@@ -51,7 +51,7 @@ func GetIdentityLocationEnum() IdentityLocationEnum {
 }
 
 func (c IdentityLocation) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *IdentityLocation) UnmarshalJSON(b []byte) error {

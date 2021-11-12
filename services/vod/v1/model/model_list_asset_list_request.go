@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -47,7 +47,7 @@ type ListAssetListRequest struct {
 }
 
 func (o ListAssetListRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListAssetListRequest struct{}"
 	}
@@ -136,7 +136,7 @@ func GetListAssetListRequestStatusEnum() ListAssetListRequestStatusEnum {
 }
 
 func (c ListAssetListRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListAssetListRequestStatus) UnmarshalJSON(b []byte) error {
@@ -174,7 +174,7 @@ func GetListAssetListRequestOrderEnum() ListAssetListRequestOrderEnum {
 }
 
 func (c ListAssetListRequestOrder) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListAssetListRequestOrder) UnmarshalJSON(b []byte) error {

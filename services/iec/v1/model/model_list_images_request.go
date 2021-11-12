@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -71,7 +71,7 @@ type ListImagesRequest struct {
 }
 
 func (o ListImagesRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListImagesRequest struct{}"
 	}
@@ -100,7 +100,7 @@ func GetListImagesRequestProtectedEnum() ListImagesRequestProtectedEnum {
 }
 
 func (c ListImagesRequestProtected) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestProtected) UnmarshalJSON(b []byte) error {
@@ -134,7 +134,7 @@ func GetListImagesRequestVirtualEnvTypeEnum() ListImagesRequestVirtualEnvTypeEnu
 }
 
 func (c ListImagesRequestVirtualEnvType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestVirtualEnvType) UnmarshalJSON(b []byte) error {
@@ -172,7 +172,7 @@ func GetListImagesRequestIsregisteredEnum() ListImagesRequestIsregisteredEnum {
 }
 
 func (c ListImagesRequestIsregistered) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestIsregistered) UnmarshalJSON(b []byte) error {
@@ -218,7 +218,7 @@ func GetListImagesRequestSortKeyEnum() ListImagesRequestSortKeyEnum {
 }
 
 func (c ListImagesRequestSortKey) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestSortKey) UnmarshalJSON(b []byte) error {
@@ -256,7 +256,7 @@ func GetListImagesRequestSortDirEnum() ListImagesRequestSortDirEnum {
 }
 
 func (c ListImagesRequestSortDir) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestSortDir) UnmarshalJSON(b []byte) error {

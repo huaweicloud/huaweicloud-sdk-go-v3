@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -28,7 +28,7 @@ type BssParam struct {
 }
 
 func (o BssParam) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BssParam struct{}"
 	}
@@ -57,7 +57,7 @@ func GetBssParamIsAutoRenewEnum() BssParamIsAutoRenewEnum {
 }
 
 func (c BssParamIsAutoRenew) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BssParamIsAutoRenew) UnmarshalJSON(b []byte) error {
@@ -95,7 +95,7 @@ func GetBssParamChargingModeEnum() BssParamChargingModeEnum {
 }
 
 func (c BssParamChargingMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BssParamChargingMode) UnmarshalJSON(b []byte) error {
@@ -133,7 +133,7 @@ func GetBssParamIsAutoPayEnum() BssParamIsAutoPayEnum {
 }
 
 func (c BssParamIsAutoPay) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BssParamIsAutoPay) UnmarshalJSON(b []byte) error {
@@ -171,7 +171,7 @@ func GetBssParamPeriodTypeEnum() BssParamPeriodTypeEnum {
 }
 
 func (c BssParamPeriodType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BssParamPeriodType) UnmarshalJSON(b []byte) error {

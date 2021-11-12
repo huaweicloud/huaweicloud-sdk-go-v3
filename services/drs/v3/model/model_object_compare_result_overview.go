@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -29,7 +29,7 @@ type ObjectCompareResultOverview struct {
 }
 
 func (o ObjectCompareResultOverview) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ObjectCompareResultOverview struct{}"
 	}
@@ -126,7 +126,7 @@ func GetObjectCompareResultOverviewObjectTypeEnum() ObjectCompareResultOverviewO
 }
 
 func (c ObjectCompareResultOverviewObjectType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ObjectCompareResultOverviewObjectType) UnmarshalJSON(b []byte) error {
@@ -184,7 +184,7 @@ func GetObjectCompareResultOverviewObjectCompareResultEnum() ObjectCompareResult
 }
 
 func (c ObjectCompareResultOverviewObjectCompareResult) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ObjectCompareResultOverviewObjectCompareResult) UnmarshalJSON(b []byte) error {

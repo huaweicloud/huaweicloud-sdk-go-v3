@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -34,7 +34,7 @@ type ConfigurationParameter struct {
 }
 
 func (o ConfigurationParameter) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ConfigurationParameter struct{}"
 	}
@@ -75,7 +75,7 @@ func GetConfigurationParameterTypeEnum() ConfigurationParameterTypeEnum {
 }
 
 func (c ConfigurationParameterType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ConfigurationParameterType) UnmarshalJSON(b []byte) error {

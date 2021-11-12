@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -73,7 +73,7 @@ type ListEndpointInfoDetailsResponse struct {
 }
 
 func (o ListEndpointInfoDetailsResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListEndpointInfoDetailsResponse struct{}"
 	}
@@ -102,7 +102,7 @@ func GetListEndpointInfoDetailsResponseServiceTypeEnum() ListEndpointInfoDetails
 }
 
 func (c ListEndpointInfoDetailsResponseServiceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListEndpointInfoDetailsResponseServiceType) UnmarshalJSON(b []byte) error {
@@ -156,7 +156,7 @@ func GetListEndpointInfoDetailsResponseStatusEnum() ListEndpointInfoDetailsRespo
 }
 
 func (c ListEndpointInfoDetailsResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListEndpointInfoDetailsResponseStatus) UnmarshalJSON(b []byte) error {

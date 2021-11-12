@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -40,7 +40,7 @@ type MysqlInstanceRequest struct {
 	Password string `json:"password"`
 
 	BackupStrategy *MysqlBackupStrategy `json:"backup_strategy,omitempty"`
-	// 时区。
+	// 时区。默认时区为UTC。
 
 	TimeZone *string `json:"time_zone,omitempty"`
 	// 可用区类型,单可用区Single或多可用区multi。
@@ -65,7 +65,7 @@ type MysqlInstanceRequest struct {
 }
 
 func (o MysqlInstanceRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "MysqlInstanceRequest struct{}"
 	}

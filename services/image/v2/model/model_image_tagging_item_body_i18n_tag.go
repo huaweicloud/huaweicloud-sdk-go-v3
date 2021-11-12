@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -17,7 +17,7 @@ type ImageTaggingItemBodyI18nTag struct {
 }
 
 func (o ImageTaggingItemBodyI18nTag) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ImageTaggingItemBodyI18nTag struct{}"
 	}

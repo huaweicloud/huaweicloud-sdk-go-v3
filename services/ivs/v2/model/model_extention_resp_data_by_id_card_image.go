@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -21,7 +21,7 @@ type ExtentionRespDataByIdCardImage struct {
 }
 
 func (o ExtentionRespDataByIdCardImage) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ExtentionRespDataByIdCardImage struct{}"
 	}

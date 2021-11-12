@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -46,7 +46,7 @@ type OffSiteBackupForList struct {
 }
 
 func (o OffSiteBackupForList) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "OffSiteBackupForList struct{}"
 	}
@@ -83,7 +83,7 @@ func GetOffSiteBackupForListStatusEnum() OffSiteBackupForListStatusEnum {
 }
 
 func (c OffSiteBackupForListStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OffSiteBackupForListStatus) UnmarshalJSON(b []byte) error {
@@ -121,7 +121,7 @@ func GetOffSiteBackupForListTypeEnum() OffSiteBackupForListTypeEnum {
 }
 
 func (c OffSiteBackupForListType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OffSiteBackupForListType) UnmarshalJSON(b []byte) error {

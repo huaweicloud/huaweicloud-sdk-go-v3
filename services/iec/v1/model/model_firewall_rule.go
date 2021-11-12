@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -50,7 +50,7 @@ type FirewallRule struct {
 }
 
 func (o FirewallRule) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "FirewallRule struct{}"
 	}
@@ -83,7 +83,7 @@ func GetFirewallRuleActionEnum() FirewallRuleActionEnum {
 }
 
 func (c FirewallRuleAction) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *FirewallRuleAction) UnmarshalJSON(b []byte) error {
@@ -125,7 +125,7 @@ func GetFirewallRuleOperateTypeEnum() FirewallRuleOperateTypeEnum {
 }
 
 func (c FirewallRuleOperateType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *FirewallRuleOperateType) UnmarshalJSON(b []byte) error {
@@ -171,7 +171,7 @@ func GetFirewallRuleProtocolEnum() FirewallRuleProtocolEnum {
 }
 
 func (c FirewallRuleProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *FirewallRuleProtocol) UnmarshalJSON(b []byte) error {

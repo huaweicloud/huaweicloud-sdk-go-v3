@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -20,7 +20,7 @@ type OpenGaussDatastore struct {
 }
 
 func (o OpenGaussDatastore) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "OpenGaussDatastore struct{}"
 	}
@@ -45,7 +45,7 @@ func GetOpenGaussDatastoreTypeEnum() OpenGaussDatastoreTypeEnum {
 }
 
 func (c OpenGaussDatastoreType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OpenGaussDatastoreType) UnmarshalJSON(b []byte) error {

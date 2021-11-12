@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -17,13 +17,13 @@ type KeystoneListUsersRequest struct {
 	// IAM用户名。
 
 	Name *string `json:"name,omitempty"`
-	// 密码过期时间，格式为：password_expires_at={operator}:{timestamp}。timestamp格式为：YYYY-MM-DDTHH:mm:ssZ。示例：    ``` password_expires_at=lt:2016-12-08T22:02:00Z ```   > - operator取值范围：lt，lte，gt，gte，eq，neq。   > - lt：过期时间小于timestamp。   > - lte：过期时间小于等于timestamp。   > - gt：过期时间大于timestamp。   > - gte：过期时间大于等于timestamp。   > - eq：过期时间等于timestamp。   > - neq：过期时间不等于timestamp。
+	// 密码过期时间，格式为：password_expires_at={operator}:{timestamp}。timestamp格式为：YYYY-MM-DDTHH:mm:ssZ。示例：  ``` password_expires_at=lt:2016-12-08T22:02:00Z ``` > - operator取值范围：lt，lte，gt，gte，eq，neq。 > - lt：过期时间小于timestamp。 > - lte：过期时间小于等于timestamp。 > - gt：过期时间大于timestamp。 > - gte：过期时间大于等于timestamp。 > - eq：过期时间等于timestamp。 > - neq：过期时间不等于timestamp。
 
 	PasswordExpiresAt *string `json:"password_expires_at,omitempty"`
 }
 
 func (o KeystoneListUsersRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "KeystoneListUsersRequest struct{}"
 	}

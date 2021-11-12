@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -11,7 +11,7 @@ type BatchRemoveOrgsFromChannelRequest struct {
 	// 区块链服务id。
 
 	BlockchainId string `json:"blockchain_id"`
-	// 区块链通道id。
+	// 区块链通道名称。
 
 	ChannelId string `json:"channel_id"`
 
@@ -19,7 +19,7 @@ type BatchRemoveOrgsFromChannelRequest struct {
 }
 
 func (o BatchRemoveOrgsFromChannelRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BatchRemoveOrgsFromChannelRequest struct{}"
 	}

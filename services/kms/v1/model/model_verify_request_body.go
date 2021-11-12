@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -31,7 +31,7 @@ type VerifyRequestBody struct {
 }
 
 func (o VerifyRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "VerifyRequestBody struct{}"
 	}
@@ -92,7 +92,7 @@ func GetVerifyRequestBodySigningAlgorithmEnum() VerifyRequestBodySigningAlgorith
 }
 
 func (c VerifyRequestBodySigningAlgorithm) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *VerifyRequestBodySigningAlgorithm) UnmarshalJSON(b []byte) error {
@@ -130,7 +130,7 @@ func GetVerifyRequestBodyMessageTypeEnum() VerifyRequestBodyMessageTypeEnum {
 }
 
 func (c VerifyRequestBodyMessageType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *VerifyRequestBodyMessageType) UnmarshalJSON(b []byte) error {

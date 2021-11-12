@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -54,7 +54,7 @@ type CreateTrackerResponse struct {
 }
 
 func (o CreateTrackerResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateTrackerResponse struct{}"
 	}
@@ -83,7 +83,7 @@ func GetCreateTrackerResponseTrackerTypeEnum() CreateTrackerResponseTrackerTypeE
 }
 
 func (c CreateTrackerResponseTrackerType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateTrackerResponseTrackerType) UnmarshalJSON(b []byte) error {
@@ -121,7 +121,7 @@ func GetCreateTrackerResponseStatusEnum() CreateTrackerResponseStatusEnum {
 }
 
 func (c CreateTrackerResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateTrackerResponseStatus) UnmarshalJSON(b []byte) error {

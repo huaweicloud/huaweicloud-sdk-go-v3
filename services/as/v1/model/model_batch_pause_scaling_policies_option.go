@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -26,7 +26,7 @@ type BatchPauseScalingPoliciesOption struct {
 }
 
 func (o BatchPauseScalingPoliciesOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BatchPauseScalingPoliciesOption struct{}"
 	}
@@ -55,7 +55,7 @@ func GetBatchPauseScalingPoliciesOptionForceDeleteEnum() BatchPauseScalingPolici
 }
 
 func (c BatchPauseScalingPoliciesOptionForceDelete) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchPauseScalingPoliciesOptionForceDelete) UnmarshalJSON(b []byte) error {
@@ -89,7 +89,7 @@ func GetBatchPauseScalingPoliciesOptionActionEnum() BatchPauseScalingPoliciesOpt
 }
 
 func (c BatchPauseScalingPoliciesOptionAction) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BatchPauseScalingPoliciesOptionAction) UnmarshalJSON(b []byte) error {

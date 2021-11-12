@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -32,7 +32,7 @@ type ListScalingInstancesRequest struct {
 }
 
 func (o ListScalingInstancesRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListScalingInstancesRequest struct{}"
 	}
@@ -81,7 +81,7 @@ func GetListScalingInstancesRequestLifeCycleStateEnum() ListScalingInstancesRequ
 }
 
 func (c ListScalingInstancesRequestLifeCycleState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListScalingInstancesRequestLifeCycleState) UnmarshalJSON(b []byte) error {
@@ -123,7 +123,7 @@ func GetListScalingInstancesRequestHealthStatusEnum() ListScalingInstancesReques
 }
 
 func (c ListScalingInstancesRequestHealthStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListScalingInstancesRequestHealthStatus) UnmarshalJSON(b []byte) error {
@@ -161,7 +161,7 @@ func GetListScalingInstancesRequestProtectFromScalingDownEnum() ListScalingInsta
 }
 
 func (c ListScalingInstancesRequestProtectFromScalingDown) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListScalingInstancesRequestProtectFromScalingDown) UnmarshalJSON(b []byte) error {

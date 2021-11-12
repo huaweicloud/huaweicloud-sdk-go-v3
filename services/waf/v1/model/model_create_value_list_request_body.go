@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -26,7 +26,7 @@ type CreateValueListRequestBody struct {
 }
 
 func (o CreateValueListRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateValueListRequestBody struct{}"
 	}
@@ -87,7 +87,7 @@ func GetCreateValueListRequestBodyTypeEnum() CreateValueListRequestBodyTypeEnum 
 }
 
 func (c CreateValueListRequestBodyType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateValueListRequestBodyType) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -34,7 +34,7 @@ type CreateKeyRequestBody struct {
 }
 
 func (o CreateKeyRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateKeyRequestBody struct{}"
 	}
@@ -87,7 +87,7 @@ func GetCreateKeyRequestBodyKeySpecEnum() CreateKeyRequestBodyKeySpecEnum {
 }
 
 func (c CreateKeyRequestBodyKeySpec) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateKeyRequestBodyKeySpec) UnmarshalJSON(b []byte) error {
@@ -125,7 +125,7 @@ func GetCreateKeyRequestBodyKeyUsageEnum() CreateKeyRequestBodyKeyUsageEnum {
 }
 
 func (c CreateKeyRequestBodyKeyUsage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateKeyRequestBodyKeyUsage) UnmarshalJSON(b []byte) error {
@@ -163,7 +163,7 @@ func GetCreateKeyRequestBodyOriginEnum() CreateKeyRequestBodyOriginEnum {
 }
 
 func (c CreateKeyRequestBodyOrigin) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateKeyRequestBodyOrigin) UnmarshalJSON(b []byte) error {

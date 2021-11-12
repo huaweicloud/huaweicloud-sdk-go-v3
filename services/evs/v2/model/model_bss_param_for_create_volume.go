@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -29,7 +29,7 @@ type BssParamForCreateVolume struct {
 }
 
 func (o BssParamForCreateVolume) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BssParamForCreateVolume struct{}"
 	}
@@ -58,7 +58,7 @@ func GetBssParamForCreateVolumeChargingModeEnum() BssParamForCreateVolumeChargin
 }
 
 func (c BssParamForCreateVolumeChargingMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BssParamForCreateVolumeChargingMode) UnmarshalJSON(b []byte) error {
@@ -96,7 +96,7 @@ func GetBssParamForCreateVolumeIsAutoPayEnum() BssParamForCreateVolumeIsAutoPayE
 }
 
 func (c BssParamForCreateVolumeIsAutoPay) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BssParamForCreateVolumeIsAutoPay) UnmarshalJSON(b []byte) error {
@@ -134,7 +134,7 @@ func GetBssParamForCreateVolumeIsAutoRenewEnum() BssParamForCreateVolumeIsAutoRe
 }
 
 func (c BssParamForCreateVolumeIsAutoRenew) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BssParamForCreateVolumeIsAutoRenew) UnmarshalJSON(b []byte) error {
@@ -172,7 +172,7 @@ func GetBssParamForCreateVolumePeriodTypeEnum() BssParamForCreateVolumePeriodTyp
 }
 
 func (c BssParamForCreateVolumePeriodType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BssParamForCreateVolumePeriodType) UnmarshalJSON(b []byte) error {

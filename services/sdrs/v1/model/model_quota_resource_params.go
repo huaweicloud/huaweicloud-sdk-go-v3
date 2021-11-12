@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -26,7 +26,7 @@ type QuotaResourceParams struct {
 }
 
 func (o QuotaResourceParams) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "QuotaResourceParams struct{}"
 	}

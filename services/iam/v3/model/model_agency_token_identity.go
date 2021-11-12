@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -19,7 +19,7 @@ type AgencyTokenIdentity struct {
 }
 
 func (o AgencyTokenIdentity) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "AgencyTokenIdentity struct{}"
 	}
@@ -44,7 +44,7 @@ func GetAgencyTokenIdentityMethodsEnum() AgencyTokenIdentityMethodsEnum {
 }
 
 func (c AgencyTokenIdentityMethods) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *AgencyTokenIdentityMethods) UnmarshalJSON(b []byte) error {

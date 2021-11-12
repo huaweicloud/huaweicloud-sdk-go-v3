@@ -140,17 +140,6 @@ func (c *FunctionGraphClient) DeleteFunctionAsyncInvokeConfig(request *model.Del
 	}
 }
 
-//预留实例异常时，可以根据预留实例ID删除该预留实例，注意：删除成功之后重新会重新拉起一个新的预留实例，业务高峰期可以更好的工作（该接口主要针对白名单用户）
-func (c *FunctionGraphClient) DeleteReservedInstanceById(request *model.DeleteReservedInstanceByIdRequest) (*model.DeleteReservedInstanceByIdResponse, error) {
-	requestDef := GenReqDefForDeleteReservedInstanceById()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteReservedInstanceByIdResponse), nil
-	}
-}
-
 //删除函数版本别名。
 func (c *FunctionGraphClient) DeleteVersionAlias(request *model.DeleteVersionAliasRequest) (*model.DeleteVersionAliasResponse, error) {
 	requestDef := GenReqDefForDeleteVersionAlias()
@@ -371,6 +360,17 @@ func (c *FunctionGraphClient) ShowLtsLogDetails(request *model.ShowLtsLogDetails
 	}
 }
 
+//获取函数调用链配置
+func (c *FunctionGraphClient) ShowTracing(request *model.ShowTracingRequest) (*model.ShowTracingResponse, error) {
+	requestDef := GenReqDefForShowTracing()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTracingResponse), nil
+	}
+}
+
 //获取函数指定的版本别名信息。
 func (c *FunctionGraphClient) ShowVersionAlias(request *model.ShowVersionAliasRequest) (*model.ShowVersionAliasResponse, error) {
 	requestDef := GenReqDefForShowVersionAlias()
@@ -445,6 +445,17 @@ func (c *FunctionGraphClient) UpdateFunctionReservedInstances(request *model.Upd
 		return nil, err
 	} else {
 		return resp.(*model.UpdateFunctionReservedInstancesResponse), nil
+	}
+}
+
+//修改函数调用链配置,开通/修改传入aksk，关闭aksk传空
+func (c *FunctionGraphClient) UpdateTracing(request *model.UpdateTracingRequest) (*model.UpdateTracingResponse, error) {
+	requestDef := GenReqDefForUpdateTracing()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTracingResponse), nil
 	}
 }
 

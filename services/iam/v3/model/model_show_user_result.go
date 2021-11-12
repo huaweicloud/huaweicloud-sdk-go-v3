@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -49,7 +49,7 @@ type ShowUserResult struct {
 	// IAM用户最后登录时间。
 
 	LastLoginTime *string `json:"last_login_time,omitempty"`
-	// IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+	// IAM用户密码强度。结果为Low/Middle/High/None，分别表示密码强度低/中/高/无。
 
 	PwdStrength *string `json:"pwd_strength,omitempty"`
 	// IAM用户是否为根用户。
@@ -64,7 +64,7 @@ type ShowUserResult struct {
 }
 
 func (o ShowUserResult) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowUserResult struct{}"
 	}

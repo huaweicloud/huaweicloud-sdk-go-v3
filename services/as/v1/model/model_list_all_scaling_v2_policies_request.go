@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -44,7 +44,7 @@ type ListAllScalingV2PoliciesRequest struct {
 }
 
 func (o ListAllScalingV2PoliciesRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListAllScalingV2PoliciesRequest struct{}"
 	}
@@ -73,7 +73,7 @@ func GetListAllScalingV2PoliciesRequestScalingResourceTypeEnum() ListAllScalingV
 }
 
 func (c ListAllScalingV2PoliciesRequestScalingResourceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListAllScalingV2PoliciesRequestScalingResourceType) UnmarshalJSON(b []byte) error {
@@ -115,7 +115,7 @@ func GetListAllScalingV2PoliciesRequestScalingPolicyTypeEnum() ListAllScalingV2P
 }
 
 func (c ListAllScalingV2PoliciesRequestScalingPolicyType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListAllScalingV2PoliciesRequestScalingPolicyType) UnmarshalJSON(b []byte) error {
@@ -157,7 +157,7 @@ func GetListAllScalingV2PoliciesRequestSortByEnum() ListAllScalingV2PoliciesRequ
 }
 
 func (c ListAllScalingV2PoliciesRequestSortBy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListAllScalingV2PoliciesRequestSortBy) UnmarshalJSON(b []byte) error {
@@ -195,7 +195,7 @@ func GetListAllScalingV2PoliciesRequestOrderEnum() ListAllScalingV2PoliciesReque
 }
 
 func (c ListAllScalingV2PoliciesRequestOrder) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListAllScalingV2PoliciesRequestOrder) UnmarshalJSON(b []byte) error {

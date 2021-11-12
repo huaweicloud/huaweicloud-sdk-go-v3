@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -48,7 +48,7 @@ type ShowMigrationTaskResponse struct {
 }
 
 func (o ShowMigrationTaskResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowMigrationTaskResponse struct{}"
 	}
@@ -85,7 +85,7 @@ func GetShowMigrationTaskResponseStatusEnum() ShowMigrationTaskResponseStatusEnu
 }
 
 func (c ShowMigrationTaskResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowMigrationTaskResponseStatus) UnmarshalJSON(b []byte) error {
@@ -123,7 +123,7 @@ func GetShowMigrationTaskResponseMigrationTypeEnum() ShowMigrationTaskResponseMi
 }
 
 func (c ShowMigrationTaskResponseMigrationType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowMigrationTaskResponseMigrationType) UnmarshalJSON(b []byte) error {
@@ -161,7 +161,7 @@ func GetShowMigrationTaskResponseMigrationMethodEnum() ShowMigrationTaskResponse
 }
 
 func (c ShowMigrationTaskResponseMigrationMethod) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowMigrationTaskResponseMigrationMethod) UnmarshalJSON(b []byte) error {
@@ -199,7 +199,7 @@ func GetShowMigrationTaskResponseNetworkTypeEnum() ShowMigrationTaskResponseNetw
 }
 
 func (c ShowMigrationTaskResponseNetworkType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowMigrationTaskResponseNetworkType) UnmarshalJSON(b []byte) error {

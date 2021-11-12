@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -49,7 +49,7 @@ type BillingCreate struct {
 }
 
 func (o BillingCreate) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BillingCreate struct{}"
 	}
@@ -78,7 +78,7 @@ func GetBillingCreateCloudTypeEnum() BillingCreateCloudTypeEnum {
 }
 
 func (c BillingCreateCloudType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BillingCreateCloudType) UnmarshalJSON(b []byte) error {
@@ -116,7 +116,7 @@ func GetBillingCreateConsistentLevelEnum() BillingCreateConsistentLevelEnum {
 }
 
 func (c BillingCreateConsistentLevel) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BillingCreateConsistentLevel) UnmarshalJSON(b []byte) error {
@@ -158,7 +158,7 @@ func GetBillingCreateObjectTypeEnum() BillingCreateObjectTypeEnum {
 }
 
 func (c BillingCreateObjectType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BillingCreateObjectType) UnmarshalJSON(b []byte) error {
@@ -196,7 +196,7 @@ func GetBillingCreateProtectTypeEnum() BillingCreateProtectTypeEnum {
 }
 
 func (c BillingCreateProtectType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BillingCreateProtectType) UnmarshalJSON(b []byte) error {
@@ -234,7 +234,7 @@ func GetBillingCreateChargingModeEnum() BillingCreateChargingModeEnum {
 }
 
 func (c BillingCreateChargingMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BillingCreateChargingMode) UnmarshalJSON(b []byte) error {
@@ -272,7 +272,7 @@ func GetBillingCreatePeriodTypeEnum() BillingCreatePeriodTypeEnum {
 }
 
 func (c BillingCreatePeriodType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BillingCreatePeriodType) UnmarshalJSON(b []byte) error {

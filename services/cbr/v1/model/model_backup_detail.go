@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -77,7 +77,7 @@ type BackupDetail struct {
 }
 
 func (o BackupDetail) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BackupDetail struct{}"
 	}
@@ -106,7 +106,7 @@ func GetBackupDetailImageTypeEnum() BackupDetailImageTypeEnum {
 }
 
 func (c BackupDetailImageType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BackupDetailImageType) UnmarshalJSON(b []byte) error {
@@ -144,7 +144,7 @@ func GetBackupDetailResourceTypeEnum() BackupDetailResourceTypeEnum {
 }
 
 func (c BackupDetailResourceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BackupDetailResourceType) UnmarshalJSON(b []byte) error {
@@ -206,7 +206,7 @@ func GetBackupDetailStatusEnum() BackupDetailStatusEnum {
 }
 
 func (c BackupDetailStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BackupDetailStatus) UnmarshalJSON(b []byte) error {

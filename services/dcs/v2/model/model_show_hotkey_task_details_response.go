@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -42,7 +42,7 @@ type ShowHotkeyTaskDetailsResponse struct {
 }
 
 func (o ShowHotkeyTaskDetailsResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowHotkeyTaskDetailsResponse struct{}"
 	}
@@ -79,7 +79,7 @@ func GetShowHotkeyTaskDetailsResponseStatusEnum() ShowHotkeyTaskDetailsResponseS
 }
 
 func (c ShowHotkeyTaskDetailsResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowHotkeyTaskDetailsResponseStatus) UnmarshalJSON(b []byte) error {
@@ -117,7 +117,7 @@ func GetShowHotkeyTaskDetailsResponseScanTypeEnum() ShowHotkeyTaskDetailsRespons
 }
 
 func (c ShowHotkeyTaskDetailsResponseScanType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowHotkeyTaskDetailsResponseScanType) UnmarshalJSON(b []byte) error {

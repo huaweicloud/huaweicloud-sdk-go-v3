@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -89,7 +89,7 @@ type ShowProtectionGroupParams struct {
 }
 
 func (o ShowProtectionGroupParams) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowProtectionGroupParams struct{}"
 	}
@@ -118,7 +118,7 @@ func GetShowProtectionGroupParamsProtectedStatusEnum() ShowProtectionGroupParams
 }
 
 func (c ShowProtectionGroupParamsProtectedStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowProtectionGroupParamsProtectedStatus) UnmarshalJSON(b []byte) error {
@@ -164,7 +164,7 @@ func GetShowProtectionGroupParamsReplicationStatusEnum() ShowProtectionGroupPara
 }
 
 func (c ShowProtectionGroupParamsReplicationStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowProtectionGroupParamsReplicationStatus) UnmarshalJSON(b []byte) error {
@@ -206,7 +206,7 @@ func GetShowProtectionGroupParamsHealthStatusEnum() ShowProtectionGroupParamsHea
 }
 
 func (c ShowProtectionGroupParamsHealthStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowProtectionGroupParamsHealthStatus) UnmarshalJSON(b []byte) error {
@@ -244,7 +244,7 @@ func GetShowProtectionGroupParamsProtectionTypeEnum() ShowProtectionGroupParamsP
 }
 
 func (c ShowProtectionGroupParamsProtectionType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowProtectionGroupParamsProtectionType) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -47,7 +47,7 @@ type CreateProtectedInstanceRequestParams struct {
 }
 
 func (o CreateProtectedInstanceRequestParams) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateProtectedInstanceRequestParams struct{}"
 	}
@@ -76,7 +76,7 @@ func GetCreateProtectedInstanceRequestParamsTenancyEnum() CreateProtectedInstanc
 }
 
 func (c CreateProtectedInstanceRequestParamsTenancy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateProtectedInstanceRequestParamsTenancy) UnmarshalJSON(b []byte) error {

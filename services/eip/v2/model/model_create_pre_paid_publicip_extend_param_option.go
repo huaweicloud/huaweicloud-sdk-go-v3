@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -29,7 +29,7 @@ type CreatePrePaidPublicipExtendParamOption struct {
 }
 
 func (o CreatePrePaidPublicipExtendParamOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreatePrePaidPublicipExtendParamOption struct{}"
 	}
@@ -58,7 +58,7 @@ func GetCreatePrePaidPublicipExtendParamOptionChargeModeEnum() CreatePrePaidPubl
 }
 
 func (c CreatePrePaidPublicipExtendParamOptionChargeMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreatePrePaidPublicipExtendParamOptionChargeMode) UnmarshalJSON(b []byte) error {
@@ -96,7 +96,7 @@ func GetCreatePrePaidPublicipExtendParamOptionPeriodTypeEnum() CreatePrePaidPubl
 }
 
 func (c CreatePrePaidPublicipExtendParamOptionPeriodType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreatePrePaidPublicipExtendParamOptionPeriodType) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"io"
 
@@ -22,7 +22,7 @@ func (o CreateImageWatermarkResponse) Consume(writer io.Writer) (int64, error) {
 }
 
 func (o CreateImageWatermarkResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateImageWatermarkResponse struct{}"
 	}

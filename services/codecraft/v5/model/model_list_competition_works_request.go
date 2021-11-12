@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -38,7 +38,7 @@ type ListCompetitionWorksRequest struct {
 }
 
 func (o ListCompetitionWorksRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListCompetitionWorksRequest struct{}"
 	}
@@ -67,7 +67,7 @@ func GetListCompetitionWorksRequestTimeUnitEnum() ListCompetitionWorksRequestTim
 }
 
 func (c ListCompetitionWorksRequestTimeUnit) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListCompetitionWorksRequestTimeUnit) UnmarshalJSON(b []byte) error {
@@ -105,7 +105,7 @@ func GetListCompetitionWorksRequestSortDirEnum() ListCompetitionWorksRequestSort
 }
 
 func (c ListCompetitionWorksRequestSortDir) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListCompetitionWorksRequestSortDir) UnmarshalJSON(b []byte) error {

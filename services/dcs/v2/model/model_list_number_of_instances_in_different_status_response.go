@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -54,7 +54,7 @@ type ListNumberOfInstancesInDifferentStatusResponse struct {
 }
 
 func (o ListNumberOfInstancesInDifferentStatusResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListNumberOfInstancesInDifferentStatusResponse struct{}"
 	}

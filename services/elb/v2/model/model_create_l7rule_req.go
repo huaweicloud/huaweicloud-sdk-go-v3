@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -35,7 +35,7 @@ type CreateL7ruleReq struct {
 }
 
 func (o CreateL7ruleReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateL7ruleReq struct{}"
 	}
@@ -64,7 +64,7 @@ func GetCreateL7ruleReqTypeEnum() CreateL7ruleReqTypeEnum {
 }
 
 func (c CreateL7ruleReqType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateL7ruleReqType) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -49,7 +49,7 @@ type RespInstanceBase struct {
 }
 
 func (o RespInstanceBase) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "RespInstanceBase struct{}"
 	}
@@ -206,7 +206,7 @@ func GetRespInstanceBaseStatusEnum() RespInstanceBaseStatusEnum {
 }
 
 func (c RespInstanceBaseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *RespInstanceBaseStatus) UnmarshalJSON(b []byte) error {
@@ -339,7 +339,7 @@ func GetRespInstanceBaseInstanceStatusEnum() RespInstanceBaseInstanceStatusEnum 
 }
 
 func (c RespInstanceBaseInstanceStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *RespInstanceBaseInstanceStatus) UnmarshalJSON(b []byte) error {
@@ -401,7 +401,7 @@ func GetRespInstanceBaseSpecEnum() RespInstanceBaseSpecEnum {
 }
 
 func (c RespInstanceBaseSpec) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *RespInstanceBaseSpec) UnmarshalJSON(b []byte) error {
@@ -438,7 +438,7 @@ func GetRespInstanceBaseChargingModeEnum() RespInstanceBaseChargingModeEnum {
 }
 
 func (c RespInstanceBaseChargingMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *RespInstanceBaseChargingMode) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -10,7 +10,7 @@ import (
 type ListAuditlogsResponse struct {
 	// 总记录数。
 
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalRecord *int32 `json:"total_record,omitempty"`
 	// 审计日志具体信息。
 
 	AuditLogs      *[]ListAuditlogsResult `json:"audit_logs,omitempty"`
@@ -18,7 +18,7 @@ type ListAuditlogsResponse struct {
 }
 
 func (o ListAuditlogsResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListAuditlogsResponse struct{}"
 	}

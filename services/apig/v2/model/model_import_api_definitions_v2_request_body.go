@@ -1,13 +1,13 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 
+	"encoding/json"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"os"
 	"reflect"
 
@@ -38,7 +38,7 @@ type ImportApiDefinitionsV2RequestBody struct {
 }
 
 func (o ImportApiDefinitionsV2RequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ImportApiDefinitionsV2RequestBody struct{}"
 	}
@@ -98,7 +98,7 @@ func GetImportApiDefinitionsV2RequestBodyExtendModeEnum() ImportApiDefinitionsV2
 }
 
 func (c ImportApiDefinitionsV2RequestBodyExtendMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImportApiDefinitionsV2RequestBodyExtendMode) UnmarshalJSON(b []byte) error {
@@ -136,7 +136,7 @@ func GetImportApiDefinitionsV2RequestBodyApiModeEnum() ImportApiDefinitionsV2Req
 }
 
 func (c ImportApiDefinitionsV2RequestBodyApiMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImportApiDefinitionsV2RequestBodyApiMode) UnmarshalJSON(b []byte) error {

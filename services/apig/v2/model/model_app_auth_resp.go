@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -38,7 +38,7 @@ type AppAuthResp struct {
 }
 
 func (o AppAuthResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "AppAuthResp struct{}"
 	}
@@ -67,7 +67,7 @@ func GetAppAuthRespAuthRoleEnum() AppAuthRespAuthRoleEnum {
 }
 
 func (c AppAuthRespAuthRole) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *AppAuthRespAuthRole) UnmarshalJSON(b []byte) error {
@@ -105,7 +105,7 @@ func GetAppAuthRespAuthTunnelEnum() AppAuthRespAuthTunnelEnum {
 }
 
 func (c AppAuthRespAuthTunnel) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *AppAuthRespAuthTunnel) UnmarshalJSON(b []byte) error {

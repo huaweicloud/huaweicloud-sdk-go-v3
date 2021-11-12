@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -56,7 +56,7 @@ type ShowDetailsOfRequestThrottlingPolicyV2Response struct {
 }
 
 func (o ShowDetailsOfRequestThrottlingPolicyV2Response) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowDetailsOfRequestThrottlingPolicyV2Response struct{}"
 	}
@@ -93,7 +93,7 @@ func GetShowDetailsOfRequestThrottlingPolicyV2ResponseTimeUnitEnum() ShowDetails
 }
 
 func (c ShowDetailsOfRequestThrottlingPolicyV2ResponseTimeUnit) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowDetailsOfRequestThrottlingPolicyV2ResponseTimeUnit) UnmarshalJSON(b []byte) error {

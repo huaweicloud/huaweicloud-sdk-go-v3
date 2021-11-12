@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -74,7 +74,7 @@ type PublicipInstanceResp struct {
 }
 
 func (o PublicipInstanceResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "PublicipInstanceResp struct{}"
 	}
@@ -102,7 +102,7 @@ func GetPublicipInstanceRespIpVersionEnum() PublicipInstanceRespIpVersionEnum {
 }
 
 func (c PublicipInstanceRespIpVersion) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PublicipInstanceRespIpVersion) UnmarshalJSON(b []byte) error {
@@ -184,7 +184,7 @@ func GetPublicipInstanceRespStatusEnum() PublicipInstanceRespStatusEnum {
 }
 
 func (c PublicipInstanceRespStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PublicipInstanceRespStatus) UnmarshalJSON(b []byte) error {
@@ -226,7 +226,7 @@ func GetPublicipInstanceRespTypeEnum() PublicipInstanceRespTypeEnum {
 }
 
 func (c PublicipInstanceRespType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PublicipInstanceRespType) UnmarshalJSON(b []byte) error {
@@ -280,7 +280,7 @@ func GetPublicipInstanceRespAssociateInstanceTypeEnum() PublicipInstanceRespAsso
 }
 
 func (c PublicipInstanceRespAssociateInstanceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PublicipInstanceRespAssociateInstanceType) UnmarshalJSON(b []byte) error {

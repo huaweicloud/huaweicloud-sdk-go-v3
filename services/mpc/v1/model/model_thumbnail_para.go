@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -10,7 +10,7 @@ import (
 )
 
 type ThumbnailPara struct {
-	// 采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。 默认值：\"TIME\"
+	// 采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。  默认值：\"TIME\"
 
 	Type *ThumbnailParaType `json:"type,omitempty"`
 	// 采样截图的时间间隔值。  默认值：12。  单位：秒
@@ -40,13 +40,13 @@ type ThumbnailPara struct {
 	// 图片高度  取值范围：(96,2160]  单位：px
 
 	Height *int32 `json:"height,omitempty"`
-	// 截图最长边的尺寸。宽边尺寸按照该尺寸与原始视频像素等比缩放计算。  取值范围：[240,3840]  默认值：480  单位：像素 > 该参数和width/height选择使用，以width/height优先，若width/height都不等于0，则图片尺寸按width/height得出；反之，则图片尺寸按 max_length 得出。 > 若该参数和width/height都未选择，则取max_length默认为480
+	// 截图最长边的尺寸。宽边尺寸按照该尺寸与原始视频像素等比缩放计算。   取值范围：[240,3840]  默认值：480  单位：像素  > 该参数和width/height选择使用，以width/height优先，若width/height都不等于0，则图片尺寸按width/height得出；反之，则图片尺寸按 max_length 得出。  > 若该参数和width/height都未选择，则按源片源宽高输出截图
 
 	MaxLength *int32 `json:"max_length,omitempty"`
 }
 
 func (o ThumbnailPara) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ThumbnailPara struct{}"
 	}
@@ -79,7 +79,7 @@ func GetThumbnailParaTypeEnum() ThumbnailParaTypeEnum {
 }
 
 func (c ThumbnailParaType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ThumbnailParaType) UnmarshalJSON(b []byte) error {

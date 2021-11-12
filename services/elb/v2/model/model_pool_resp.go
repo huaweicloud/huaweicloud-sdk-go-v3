@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -52,7 +52,7 @@ type PoolResp struct {
 }
 
 func (o PoolResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "PoolResp struct{}"
 	}
@@ -85,7 +85,7 @@ func GetPoolRespProtocolEnum() PoolRespProtocolEnum {
 }
 
 func (c PoolRespProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PoolRespProtocol) UnmarshalJSON(b []byte) error {
@@ -127,7 +127,7 @@ func GetPoolRespLbAlgorithmEnum() PoolRespLbAlgorithmEnum {
 }
 
 func (c PoolRespLbAlgorithm) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PoolRespLbAlgorithm) UnmarshalJSON(b []byte) error {

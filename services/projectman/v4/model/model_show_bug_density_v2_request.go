@@ -1,14 +1,14 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
 
 // Request Object
 type ShowBugDensityV2Request struct {
-	// 项目ID
+	// devcloud的项目ID
 
 	ProjectId string `json:"project_id"`
 
@@ -16,7 +16,7 @@ type ShowBugDensityV2Request struct {
 }
 
 func (o ShowBugDensityV2Request) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowBugDensityV2Request struct{}"
 	}

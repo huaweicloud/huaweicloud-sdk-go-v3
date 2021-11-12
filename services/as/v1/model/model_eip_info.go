@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -19,7 +19,7 @@ type EipInfo struct {
 }
 
 func (o EipInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "EipInfo struct{}"
 	}
@@ -56,7 +56,7 @@ func GetEipInfoIpTypeEnum() EipInfoIpTypeEnum {
 }
 
 func (c EipInfoIpType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *EipInfoIpType) UnmarshalJSON(b []byte) error {

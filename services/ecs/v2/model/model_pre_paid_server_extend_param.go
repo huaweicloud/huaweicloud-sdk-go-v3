@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -56,7 +56,7 @@ type PrePaidServerExtendParam struct {
 }
 
 func (o PrePaidServerExtendParam) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "PrePaidServerExtendParam struct{}"
 	}
@@ -85,7 +85,7 @@ func GetPrePaidServerExtendParamChargingModeEnum() PrePaidServerExtendParamCharg
 }
 
 func (c PrePaidServerExtendParamChargingMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PrePaidServerExtendParamChargingMode) UnmarshalJSON(b []byte) error {
@@ -123,7 +123,7 @@ func GetPrePaidServerExtendParamPeriodTypeEnum() PrePaidServerExtendParamPeriodT
 }
 
 func (c PrePaidServerExtendParamPeriodType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PrePaidServerExtendParamPeriodType) UnmarshalJSON(b []byte) error {
@@ -161,7 +161,7 @@ func GetPrePaidServerExtendParamIsAutoRenewEnum() PrePaidServerExtendParamIsAuto
 }
 
 func (c PrePaidServerExtendParamIsAutoRenew) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PrePaidServerExtendParamIsAutoRenew) UnmarshalJSON(b []byte) error {
@@ -199,7 +199,7 @@ func GetPrePaidServerExtendParamIsAutoPayEnum() PrePaidServerExtendParamIsAutoPa
 }
 
 func (c PrePaidServerExtendParamIsAutoPay) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PrePaidServerExtendParamIsAutoPay) UnmarshalJSON(b []byte) error {
@@ -233,7 +233,7 @@ func GetPrePaidServerExtendParamInterruptionPolicyEnum() PrePaidServerExtendPara
 }
 
 func (c PrePaidServerExtendParamInterruptionPolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PrePaidServerExtendParamInterruptionPolicy) UnmarshalJSON(b []byte) error {

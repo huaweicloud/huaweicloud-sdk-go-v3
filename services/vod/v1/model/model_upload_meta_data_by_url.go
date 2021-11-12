@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -50,7 +50,7 @@ type UploadMetaDataByUrl struct {
 }
 
 func (o UploadMetaDataByUrl) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UploadMetaDataByUrl struct{}"
 	}
@@ -183,7 +183,7 @@ func GetUploadMetaDataByUrlVideoTypeEnum() UploadMetaDataByUrlVideoTypeEnum {
 }
 
 func (c UploadMetaDataByUrlVideoType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UploadMetaDataByUrlVideoType) UnmarshalJSON(b []byte) error {

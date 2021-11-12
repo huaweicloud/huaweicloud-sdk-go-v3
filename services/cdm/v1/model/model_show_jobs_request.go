@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -32,7 +32,7 @@ type ShowJobsRequest struct {
 }
 
 func (o ShowJobsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowJobsRequest struct{}"
 	}
@@ -65,7 +65,7 @@ func GetShowJobsRequestJobTypeEnum() ShowJobsRequestJobTypeEnum {
 }
 
 func (c ShowJobsRequestJobType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowJobsRequestJobType) UnmarshalJSON(b []byte) error {

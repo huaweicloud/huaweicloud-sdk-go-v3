@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -40,7 +40,7 @@ type GetProjectInfoV4ResultProject struct {
 }
 
 func (o GetProjectInfoV4ResultProject) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "GetProjectInfoV4ResultProject struct{}"
 	}

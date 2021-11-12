@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -20,7 +20,7 @@ type ListTemplateViewHistoriesRequest struct {
 }
 
 func (o ListTemplateViewHistoriesRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListTemplateViewHistoriesRequest struct{}"
 	}
@@ -49,7 +49,7 @@ func GetListTemplateViewHistoriesRequestXLanguageEnum() ListTemplateViewHistorie
 }
 
 func (c ListTemplateViewHistoriesRequestXLanguage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListTemplateViewHistoriesRequestXLanguage) UnmarshalJSON(b []byte) error {
@@ -86,7 +86,7 @@ func GetListTemplateViewHistoriesRequestPlatformSourceEnum() ListTemplateViewHis
 }
 
 func (c ListTemplateViewHistoriesRequestPlatformSource) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListTemplateViewHistoriesRequestPlatformSource) UnmarshalJSON(b []byte) error {

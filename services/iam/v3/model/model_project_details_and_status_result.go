@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -14,7 +14,7 @@ type ProjectDetailsAndStatusResult struct {
 	// false.
 
 	IsDomain bool `json:"is_domain"`
-	// 如果查询自己创建的项目，则此处返回所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
+	// 如果查询自己创建的项目，则此处返回所属区域的项目ID。  如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
 
 	ParentId string `json:"parent_id"`
 	// 项目名称。
@@ -35,7 +35,7 @@ type ProjectDetailsAndStatusResult struct {
 }
 
 func (o ProjectDetailsAndStatusResult) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ProjectDetailsAndStatusResult struct{}"
 	}

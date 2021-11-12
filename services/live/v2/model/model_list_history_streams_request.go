@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -14,6 +14,15 @@ type ListHistoryStreamsRequest struct {
 	// 应用名称。
 
 	App *string `json:"app,omitempty"`
+	// 流名称。
+
+	Stream *string `json:"stream,omitempty"`
+	// 起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+
+	StartTime *string `json:"start_time,omitempty"`
+	// 结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度1天，最大查询周期1个月。结束时间需大于起始时间。
+
+	EndTime *string `json:"end_time,omitempty"`
 	// 分页编号，默认为0
 
 	Offset *int32 `json:"offset,omitempty"`
@@ -23,7 +32,7 @@ type ListHistoryStreamsRequest struct {
 }
 
 func (o ListHistoryStreamsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListHistoryStreamsRequest struct{}"
 	}

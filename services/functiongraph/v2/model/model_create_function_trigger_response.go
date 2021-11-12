@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -32,7 +32,7 @@ type CreateFunctionTriggerResponse struct {
 }
 
 func (o CreateFunctionTriggerResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateFunctionTriggerResponse struct{}"
 	}
@@ -93,7 +93,7 @@ func GetCreateFunctionTriggerResponseTriggerTypeCodeEnum() CreateFunctionTrigger
 }
 
 func (c CreateFunctionTriggerResponseTriggerTypeCode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateFunctionTriggerResponseTriggerTypeCode) UnmarshalJSON(b []byte) error {
@@ -131,7 +131,7 @@ func GetCreateFunctionTriggerResponseTriggerStatusEnum() CreateFunctionTriggerRe
 }
 
 func (c CreateFunctionTriggerResponseTriggerStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateFunctionTriggerResponseTriggerStatus) UnmarshalJSON(b []byte) error {

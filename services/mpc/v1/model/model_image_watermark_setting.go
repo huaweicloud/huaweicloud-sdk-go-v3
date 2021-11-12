@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -25,9 +25,9 @@ type ImageWatermarkSetting struct {
 	// 水印持续时间，与“timeline_start”配合使用。  取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值：ToEND。
 
 	TimelineDuration *string `json:"timeline_duration,omitempty"`
-	// 对应拼接列表中第几个片段打水印，从1开始，0表示所有拼接后所有片源打水印。
+	// 对应拼接列表中第几个片段打水印，从0开始，\"0表示第1个，“1”表示第二个，不带或填\"ALL\"表示所有拼接片源打水印。
 
-	Index *int32 `json:"index,omitempty"`
+	OverlayInput *string `json:"overlay_input,omitempty"`
 
 	Input *ObsObjInfo `json:"input,omitempty"`
 	// 水印叠加母体  取值如下： - input ：水印叠加在输入片源上，转码输出后实际大小按图像等比例缩放 - output ：水印叠加在转码输出文件上。
@@ -36,7 +36,7 @@ type ImageWatermarkSetting struct {
 }
 
 func (o ImageWatermarkSetting) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ImageWatermarkSetting struct{}"
 	}
@@ -65,7 +65,7 @@ func GetImageWatermarkSettingBaseEnum() ImageWatermarkSettingBaseEnum {
 }
 
 func (c ImageWatermarkSettingBase) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageWatermarkSettingBase) UnmarshalJSON(b []byte) error {

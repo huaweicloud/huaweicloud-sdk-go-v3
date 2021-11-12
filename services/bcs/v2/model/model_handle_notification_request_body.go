@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -27,7 +27,7 @@ type HandleNotificationRequestBody struct {
 }
 
 func (o HandleNotificationRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "HandleNotificationRequestBody struct{}"
 	}
@@ -56,7 +56,7 @@ func GetHandleNotificationRequestBodyStatusEnum() HandleNotificationRequestBodyS
 }
 
 func (c HandleNotificationRequestBodyStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *HandleNotificationRequestBodyStatus) UnmarshalJSON(b []byte) error {

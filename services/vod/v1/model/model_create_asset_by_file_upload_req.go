@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -62,7 +62,7 @@ type CreateAssetByFileUploadReq struct {
 }
 
 func (o CreateAssetByFileUploadReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateAssetByFileUploadReq struct{}"
 	}
@@ -91,7 +91,7 @@ func GetCreateAssetByFileUploadReqCoverTypeEnum() CreateAssetByFileUploadReqCove
 }
 
 func (c CreateAssetByFileUploadReqCoverType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateAssetByFileUploadReqCoverType) UnmarshalJSON(b []byte) error {
@@ -128,7 +128,7 @@ func GetCreateAssetByFileUploadReqAutoPublishEnum() CreateAssetByFileUploadReqAu
 }
 
 func (c CreateAssetByFileUploadReqAutoPublish) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateAssetByFileUploadReqAutoPublish) UnmarshalJSON(b []byte) error {

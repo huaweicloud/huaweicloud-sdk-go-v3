@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -26,7 +26,7 @@ type UpdateValueListRequestBody struct {
 }
 
 func (o UpdateValueListRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateValueListRequestBody struct{}"
 	}
@@ -87,7 +87,7 @@ func GetUpdateValueListRequestBodyTypeEnum() UpdateValueListRequestBodyTypeEnum 
 }
 
 func (c UpdateValueListRequestBodyType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateValueListRequestBodyType) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -32,7 +32,7 @@ type LoadbalancerInStatusResp struct {
 }
 
 func (o LoadbalancerInStatusResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "LoadbalancerInStatusResp struct{}"
 	}
@@ -73,7 +73,7 @@ func GetLoadbalancerInStatusRespOperatingStatusEnum() LoadbalancerInStatusRespOp
 }
 
 func (c LoadbalancerInStatusRespOperatingStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *LoadbalancerInStatusRespOperatingStatus) UnmarshalJSON(b []byte) error {
@@ -115,7 +115,7 @@ func GetLoadbalancerInStatusRespProvisioningStatusEnum() LoadbalancerInStatusRes
 }
 
 func (c LoadbalancerInStatusRespProvisioningStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *LoadbalancerInStatusRespProvisioningStatus) UnmarshalJSON(b []byte) error {

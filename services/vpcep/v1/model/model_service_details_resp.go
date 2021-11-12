@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -63,7 +63,7 @@ type ServiceDetailsResp struct {
 }
 
 func (o ServiceDetailsResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ServiceDetailsResp struct{}"
 	}
@@ -96,7 +96,7 @@ func GetServiceDetailsRespStatusEnum() ServiceDetailsRespStatusEnum {
 }
 
 func (c ServiceDetailsRespStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ServiceDetailsRespStatus) UnmarshalJSON(b []byte) error {
@@ -138,7 +138,7 @@ func GetServiceDetailsRespServerTypeEnum() ServiceDetailsRespServerTypeEnum {
 }
 
 func (c ServiceDetailsRespServerType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ServiceDetailsRespServerType) UnmarshalJSON(b []byte) error {
@@ -176,7 +176,7 @@ func GetServiceDetailsRespCidrTypeEnum() ServiceDetailsRespCidrTypeEnum {
 }
 
 func (c ServiceDetailsRespCidrType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ServiceDetailsRespCidrType) UnmarshalJSON(b []byte) error {
@@ -222,7 +222,7 @@ func GetServiceDetailsRespTcpProxyEnum() ServiceDetailsRespTcpProxyEnum {
 }
 
 func (c ServiceDetailsRespTcpProxy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ServiceDetailsRespTcpProxy) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -20,7 +20,7 @@ type DeleteTrackerRequest struct {
 }
 
 func (o DeleteTrackerRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DeleteTrackerRequest struct{}"
 	}
@@ -45,7 +45,7 @@ func GetDeleteTrackerRequestTrackerTypeEnum() DeleteTrackerRequestTrackerTypeEnu
 }
 
 func (c DeleteTrackerRequestTrackerType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DeleteTrackerRequestTrackerType) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -14,13 +14,13 @@ type AddApplyJoinProjectForAgcRequest struct {
 	// 用户id
 
 	UserId string `json:"User-Id"`
-	// 项目id
+	// devcloud的项目id
 
 	ProjectId string `json:"project_id"`
 }
 
 func (o AddApplyJoinProjectForAgcRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "AddApplyJoinProjectForAgcRequest struct{}"
 	}

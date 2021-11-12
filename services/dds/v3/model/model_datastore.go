@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -23,7 +23,7 @@ type Datastore struct {
 }
 
 func (o Datastore) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "Datastore struct{}"
 	}
@@ -48,7 +48,7 @@ func GetDatastoreTypeEnum() DatastoreTypeEnum {
 }
 
 func (c DatastoreType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DatastoreType) UnmarshalJSON(b []byte) error {
@@ -86,7 +86,7 @@ func GetDatastoreStorageEngineEnum() DatastoreStorageEngineEnum {
 }
 
 func (c DatastoreStorageEngine) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DatastoreStorageEngine) UnmarshalJSON(b []byte) error {

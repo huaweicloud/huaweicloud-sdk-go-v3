@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -41,7 +41,7 @@ type QueryLtsLogParams struct {
 }
 
 func (o QueryLtsLogParams) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "QueryLtsLogParams struct{}"
 	}
@@ -66,7 +66,7 @@ func GetQueryLtsLogParamsKeywordsEnum() QueryLtsLogParamsKeywordsEnum {
 }
 
 func (c QueryLtsLogParamsKeywords) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QueryLtsLogParamsKeywords) UnmarshalJSON(b []byte) error {
@@ -104,7 +104,7 @@ func GetQueryLtsLogParamsSearchTypeEnum() QueryLtsLogParamsSearchTypeEnum {
 }
 
 func (c QueryLtsLogParamsSearchType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QueryLtsLogParamsSearchType) UnmarshalJSON(b []byte) error {

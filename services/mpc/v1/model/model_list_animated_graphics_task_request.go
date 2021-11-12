@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -35,7 +35,7 @@ type ListAnimatedGraphicsTaskRequest struct {
 }
 
 func (o ListAnimatedGraphicsTaskRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListAnimatedGraphicsTaskRequest struct{}"
 	}
@@ -80,7 +80,7 @@ func GetListAnimatedGraphicsTaskRequestStatusEnum() ListAnimatedGraphicsTaskRequ
 }
 
 func (c ListAnimatedGraphicsTaskRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListAnimatedGraphicsTaskRequestStatus) UnmarshalJSON(b []byte) error {

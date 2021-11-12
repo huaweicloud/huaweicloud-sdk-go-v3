@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -17,7 +17,7 @@ type ListStorageTypeRequest struct {
 }
 
 func (o ListStorageTypeRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListStorageTypeRequest struct{}"
 	}
@@ -46,7 +46,7 @@ func GetListStorageTypeRequestEngineNameEnum() ListStorageTypeRequestEngineNameE
 }
 
 func (c ListStorageTypeRequestEngineName) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListStorageTypeRequestEngineName) UnmarshalJSON(b []byte) error {

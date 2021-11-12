@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -107,7 +107,7 @@ type ShowImageResponse struct {
 }
 
 func (o ShowImageResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowImageResponse struct{}"
 	}
@@ -148,7 +148,7 @@ func GetShowImageResponseStatusEnum() ShowImageResponseStatusEnum {
 }
 
 func (c ShowImageResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowImageResponseStatus) UnmarshalJSON(b []byte) error {
@@ -198,7 +198,7 @@ func GetShowImageResponseDiskFormatEnum() ShowImageResponseDiskFormatEnum {
 }
 
 func (c ShowImageResponseDiskFormat) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowImageResponseDiskFormat) UnmarshalJSON(b []byte) error {
@@ -236,7 +236,7 @@ func GetShowImageResponseImagetypeEnum() ShowImageResponseImagetypeEnum {
 }
 
 func (c ShowImageResponseImagetype) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowImageResponseImagetype) UnmarshalJSON(b []byte) error {
@@ -278,7 +278,7 @@ func GetShowImageResponseOsTypeEnum() ShowImageResponseOsTypeEnum {
 }
 
 func (c ShowImageResponseOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowImageResponseOsType) UnmarshalJSON(b []byte) error {

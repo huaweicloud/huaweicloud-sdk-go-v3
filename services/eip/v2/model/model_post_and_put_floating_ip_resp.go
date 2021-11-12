@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -44,7 +44,7 @@ type PostAndPutFloatingIpResp struct {
 }
 
 func (o PostAndPutFloatingIpResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "PostAndPutFloatingIpResp struct{}"
 	}
@@ -77,7 +77,7 @@ func GetPostAndPutFloatingIpRespStatusEnum() PostAndPutFloatingIpRespStatusEnum 
 }
 
 func (c PostAndPutFloatingIpRespStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PostAndPutFloatingIpRespStatus) UnmarshalJSON(b []byte) error {

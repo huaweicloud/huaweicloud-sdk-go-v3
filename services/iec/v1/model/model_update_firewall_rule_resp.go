@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -24,7 +24,7 @@ type UpdateFirewallRuleResp struct {
 }
 
 func (o UpdateFirewallRuleResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateFirewallRuleResp struct{}"
 	}
@@ -49,7 +49,7 @@ func GetUpdateFirewallRuleRespStatusEnum() UpdateFirewallRuleRespStatusEnum {
 }
 
 func (c UpdateFirewallRuleRespStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateFirewallRuleRespStatus) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -22,7 +22,7 @@ type ThrottleSpecialReq struct {
 }
 
 func (o ThrottleSpecialReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ThrottleSpecialReq struct{}"
 	}
@@ -51,7 +51,7 @@ func GetThrottleSpecialReqObjectTypeEnum() ThrottleSpecialReqObjectTypeEnum {
 }
 
 func (c ThrottleSpecialReqObjectType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ThrottleSpecialReqObjectType) UnmarshalJSON(b []byte) error {

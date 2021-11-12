@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -34,7 +34,7 @@ type RoleResult struct {
 	// 权限展示名。
 
 	DisplayName *string `json:"display_name,omitempty"`
-	// 权限的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - AA表示在domain和project层均显示。   > - XX表示在domain和project层均不显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+	// 权限的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - AA表示在domain和project层均显示。 > - XX表示在domain和project层均不显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
 
 	Type string `json:"type"`
 
@@ -48,7 +48,7 @@ type RoleResult struct {
 }
 
 func (o RoleResult) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "RoleResult struct{}"
 	}

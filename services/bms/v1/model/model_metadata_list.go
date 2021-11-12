@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -56,7 +56,7 @@ type MetadataList struct {
 }
 
 func (o MetadataList) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "MetadataList struct{}"
 	}
@@ -81,7 +81,7 @@ func GetMetadataListChargingModeEnum() MetadataListChargingModeEnum {
 }
 
 func (c MetadataListChargingMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *MetadataListChargingMode) UnmarshalJSON(b []byte) error {
@@ -123,7 +123,7 @@ func GetMetadataListMeteringImagetypeEnum() MetadataListMeteringImagetypeEnum {
 }
 
 func (c MetadataListMeteringImagetype) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *MetadataListMeteringImagetype) UnmarshalJSON(b []byte) error {
@@ -161,7 +161,7 @@ func GetMetadataListOsTypeEnum() MetadataListOsTypeEnum {
 }
 
 func (c MetadataListOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *MetadataListOsType) UnmarshalJSON(b []byte) error {
@@ -199,7 +199,7 @@ func GetMetadataListOsBitEnum() MetadataListOsBitEnum {
 }
 
 func (c MetadataListOsBit) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *MetadataListOsBit) UnmarshalJSON(b []byte) error {

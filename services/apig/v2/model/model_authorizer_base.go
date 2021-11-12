@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -40,7 +40,7 @@ type AuthorizerBase struct {
 }
 
 func (o AuthorizerBase) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "AuthorizerBase struct{}"
 	}
@@ -69,7 +69,7 @@ func GetAuthorizerBaseTypeEnum() AuthorizerBaseTypeEnum {
 }
 
 func (c AuthorizerBaseType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *AuthorizerBaseType) UnmarshalJSON(b []byte) error {
@@ -103,7 +103,7 @@ func GetAuthorizerBaseAuthorizerTypeEnum() AuthorizerBaseAuthorizerTypeEnum {
 }
 
 func (c AuthorizerBaseAuthorizerType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *AuthorizerBaseAuthorizerType) UnmarshalJSON(b []byte) error {

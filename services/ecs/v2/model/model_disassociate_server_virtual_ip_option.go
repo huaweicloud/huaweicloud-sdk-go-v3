@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -23,7 +23,7 @@ type DisassociateServerVirtualIpOption struct {
 }
 
 func (o DisassociateServerVirtualIpOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DisassociateServerVirtualIpOption struct{}"
 	}
@@ -48,7 +48,7 @@ func GetDisassociateServerVirtualIpOptionSubnetIdEnum() DisassociateServerVirtua
 }
 
 func (c DisassociateServerVirtualIpOptionSubnetId) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DisassociateServerVirtualIpOptionSubnetId) UnmarshalJSON(b []byte) error {
@@ -82,7 +82,7 @@ func GetDisassociateServerVirtualIpOptionIpAddressEnum() DisassociateServerVirtu
 }
 
 func (c DisassociateServerVirtualIpOptionIpAddress) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DisassociateServerVirtualIpOptionIpAddress) UnmarshalJSON(b []byte) error {

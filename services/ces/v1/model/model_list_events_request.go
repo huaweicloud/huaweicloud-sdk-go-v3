@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -35,7 +35,7 @@ type ListEventsRequest struct {
 }
 
 func (o ListEventsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListEventsRequest struct{}"
 	}
@@ -64,7 +64,7 @@ func GetListEventsRequestEventTypeEnum() ListEventsRequestEventTypeEnum {
 }
 
 func (c ListEventsRequestEventType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListEventsRequestEventType) UnmarshalJSON(b []byte) error {

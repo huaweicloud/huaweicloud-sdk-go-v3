@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -29,7 +29,7 @@ type BandWidth struct {
 }
 
 func (o BandWidth) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BandWidth struct{}"
 	}
@@ -58,7 +58,7 @@ func GetBandWidthSharetypeEnum() BandWidthSharetypeEnum {
 }
 
 func (c BandWidthSharetype) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BandWidthSharetype) UnmarshalJSON(b []byte) error {
@@ -96,7 +96,7 @@ func GetBandWidthChargemodeEnum() BandWidthChargemodeEnum {
 }
 
 func (c BandWidthChargemode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BandWidthChargemode) UnmarshalJSON(b []byte) error {

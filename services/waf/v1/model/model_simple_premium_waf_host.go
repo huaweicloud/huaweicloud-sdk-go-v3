@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -35,7 +35,7 @@ type SimplePremiumWafHost struct {
 }
 
 func (o SimplePremiumWafHost) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "SimplePremiumWafHost struct{}"
 	}

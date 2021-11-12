@@ -1,37 +1,34 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
 
 type MysqlProxyComputeFlavor struct {
-	// Proxy规格id。
-
-	Id *string `json:"id,omitempty"`
-	// Proxy规格码。
-
-	SpecCode *string `json:"spec_code,omitempty"`
 	// CPU大小。例如：1表示1U。
 
-	Vcpus *string `json:"vcpus,omitempty"`
+	Vcpus string `json:"vcpus"`
 	// 内存大小，单位为GB。
 
-	Ram *string `json:"ram,omitempty"`
+	Ram string `json:"ram"`
 	// 数据库类型。
 
-	DbType *string `json:"db_type,omitempty"`
+	DbType string `json:"db_type"`
+	// Proxy规格id。
+
+	Id string `json:"id"`
+	// Proxy规格码。
+
+	SpecCode string `json:"spec_code"`
 	// 其中key是可用区编号，value是规格所在az的状态。
 
-	AzStatus *interface{} `json:"az_status,omitempty"`
-	// Region状态。
-
-	RegionStatus *string `json:"region_status,omitempty"`
+	AzStatus *interface{} `json:"az_status"`
 }
 
 func (o MysqlProxyComputeFlavor) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "MysqlProxyComputeFlavor struct{}"
 	}

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -31,7 +31,7 @@ type ConfigurationParameterResult struct {
 }
 
 func (o ConfigurationParameterResult) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ConfigurationParameterResult struct{}"
 	}

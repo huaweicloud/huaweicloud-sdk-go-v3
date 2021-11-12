@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -105,7 +105,7 @@ type UpdateInstanceV2Response struct {
 }
 
 func (o UpdateInstanceV2Response) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateInstanceV2Response struct{}"
 	}
@@ -262,7 +262,7 @@ func GetUpdateInstanceV2ResponseStatusEnum() UpdateInstanceV2ResponseStatusEnum 
 }
 
 func (c UpdateInstanceV2ResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateInstanceV2ResponseStatus) UnmarshalJSON(b []byte) error {
@@ -395,7 +395,7 @@ func GetUpdateInstanceV2ResponseInstanceStatusEnum() UpdateInstanceV2ResponseIns
 }
 
 func (c UpdateInstanceV2ResponseInstanceStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateInstanceV2ResponseInstanceStatus) UnmarshalJSON(b []byte) error {
@@ -457,7 +457,7 @@ func GetUpdateInstanceV2ResponseSpecEnum() UpdateInstanceV2ResponseSpecEnum {
 }
 
 func (c UpdateInstanceV2ResponseSpec) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateInstanceV2ResponseSpec) UnmarshalJSON(b []byte) error {
@@ -494,7 +494,7 @@ func GetUpdateInstanceV2ResponseChargingModeEnum() UpdateInstanceV2ResponseCharg
 }
 
 func (c UpdateInstanceV2ResponseChargingMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateInstanceV2ResponseChargingMode) UnmarshalJSON(b []byte) error {

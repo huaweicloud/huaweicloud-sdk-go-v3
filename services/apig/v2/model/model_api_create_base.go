@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -94,7 +94,7 @@ type ApiCreateBase struct {
 }
 
 func (o ApiCreateBase) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ApiCreateBase struct{}"
 	}
@@ -127,7 +127,7 @@ func GetApiCreateBaseReqProtocolEnum() ApiCreateBaseReqProtocolEnum {
 }
 
 func (c ApiCreateBaseReqProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiCreateBaseReqProtocol) UnmarshalJSON(b []byte) error {
@@ -189,7 +189,7 @@ func GetApiCreateBaseReqMethodEnum() ApiCreateBaseReqMethodEnum {
 }
 
 func (c ApiCreateBaseReqMethod) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiCreateBaseReqMethod) UnmarshalJSON(b []byte) error {
@@ -235,7 +235,7 @@ func GetApiCreateBaseAuthTypeEnum() ApiCreateBaseAuthTypeEnum {
 }
 
 func (c ApiCreateBaseAuthType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiCreateBaseAuthType) UnmarshalJSON(b []byte) error {
@@ -273,7 +273,7 @@ func GetApiCreateBaseMatchModeEnum() ApiCreateBaseMatchModeEnum {
 }
 
 func (c ApiCreateBaseMatchMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiCreateBaseMatchMode) UnmarshalJSON(b []byte) error {
@@ -315,7 +315,7 @@ func GetApiCreateBaseBackendTypeEnum() ApiCreateBaseBackendTypeEnum {
 }
 
 func (c ApiCreateBaseBackendType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiCreateBaseBackendType) UnmarshalJSON(b []byte) error {

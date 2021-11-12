@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -19,9 +19,6 @@ type SimDeviceVo struct {
 	// 流量池ID
 
 	SimPoolId *int64 `json:"sim_pool_id,omitempty"`
-	// sn
-
-	Sn *string `json:"sn,omitempty"`
 	// 设备IMEI
 
 	Imei *string `json:"imei,omitempty"`
@@ -40,18 +37,12 @@ type SimDeviceVo struct {
 	// 设备状态变更时间 例如2020-01-31T16:00:00.000Z
 
 	DeviceStatusDate *string `json:"device_status_date,omitempty"`
-	// 供应商代码
-
-	SupplyCode *string `json:"supply_code,omitempty"`
 	// 设备标识
 
 	NodeId *string `json:"node_id,omitempty"`
 	// 码号iccid
 
 	Iccid *string `json:"iccid,omitempty"`
-	// 码号对应的bundle
-
-	BundleId *string `json:"bundle_id,omitempty"`
 	// 网络类型
 
 	NetworkType *string `json:"network_type,omitempty"`
@@ -64,9 +55,6 @@ type SimDeviceVo struct {
 	// sim卡类型 1.vSIM  2.eSIM  3.实体卡
 
 	SimType *int32 `json:"sim_type,omitempty"`
-	// 是否测试卡
-
-	TestType *bool `json:"test_type,omitempty"`
 	// 标签名
 
 	TagNames *string `json:"tag_names,omitempty"`
@@ -136,7 +124,7 @@ type SimDeviceVo struct {
 }
 
 func (o SimDeviceVo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "SimDeviceVo struct{}"
 	}

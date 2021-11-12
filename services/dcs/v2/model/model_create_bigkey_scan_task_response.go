@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -42,7 +42,7 @@ type CreateBigkeyScanTaskResponse struct {
 }
 
 func (o CreateBigkeyScanTaskResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateBigkeyScanTaskResponse struct{}"
 	}
@@ -79,7 +79,7 @@ func GetCreateBigkeyScanTaskResponseStatusEnum() CreateBigkeyScanTaskResponseSta
 }
 
 func (c CreateBigkeyScanTaskResponseStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateBigkeyScanTaskResponseStatus) UnmarshalJSON(b []byte) error {
@@ -117,7 +117,7 @@ func GetCreateBigkeyScanTaskResponseScanTypeEnum() CreateBigkeyScanTaskResponseS
 }
 
 func (c CreateBigkeyScanTaskResponseScanType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateBigkeyScanTaskResponseScanType) UnmarshalJSON(b []byte) error {

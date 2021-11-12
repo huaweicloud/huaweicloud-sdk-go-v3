@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -150,7 +150,7 @@ type QueryJobResp struct {
 }
 
 func (o QueryJobResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "QueryJobResp struct{}"
 	}
@@ -259,7 +259,7 @@ func GetQueryJobRespStatusEnum() QueryJobRespStatusEnum {
 }
 
 func (c QueryJobRespStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QueryJobRespStatus) UnmarshalJSON(b []byte) error {
@@ -301,7 +301,7 @@ func GetQueryJobRespTaskTypeEnum() QueryJobRespTaskTypeEnum {
 }
 
 func (c QueryJobRespTaskType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QueryJobRespTaskType) UnmarshalJSON(b []byte) error {
@@ -343,7 +343,7 @@ func GetQueryJobRespNetTypeEnum() QueryJobRespNetTypeEnum {
 }
 
 func (c QueryJobRespNetType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QueryJobRespNetType) UnmarshalJSON(b []byte) error {
@@ -385,7 +385,7 @@ func GetQueryJobRespJobDirectionEnum() QueryJobRespJobDirectionEnum {
 }
 
 func (c QueryJobRespJobDirection) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QueryJobRespJobDirection) UnmarshalJSON(b []byte) error {
@@ -427,7 +427,7 @@ func GetQueryJobRespDbUseTypeEnum() QueryJobRespDbUseTypeEnum {
 }
 
 func (c QueryJobRespDbUseType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QueryJobRespDbUseType) UnmarshalJSON(b []byte) error {
@@ -469,7 +469,7 @@ func GetQueryJobRespConflictPolicyEnum() QueryJobRespConflictPolicyEnum {
 }
 
 func (c QueryJobRespConflictPolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QueryJobRespConflictPolicy) UnmarshalJSON(b []byte) error {
@@ -511,7 +511,7 @@ func GetQueryJobRespSchemaTypeEnum() QueryJobRespSchemaTypeEnum {
 }
 
 func (c QueryJobRespSchemaType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QueryJobRespSchemaType) UnmarshalJSON(b []byte) error {

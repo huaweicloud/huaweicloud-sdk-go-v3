@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -32,7 +32,7 @@ type CreateAgencyOption struct {
 }
 
 func (o CreateAgencyOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateAgencyOption struct{}"
 	}
@@ -61,7 +61,7 @@ func GetCreateAgencyOptionDurationEnum() CreateAgencyOptionDurationEnum {
 }
 
 func (c CreateAgencyOptionDuration) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateAgencyOptionDuration) UnmarshalJSON(b []byte) error {

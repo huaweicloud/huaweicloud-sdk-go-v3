@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -20,7 +20,7 @@ type ShowTemplateV3Request struct {
 }
 
 func (o ShowTemplateV3Request) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowTemplateV3Request struct{}"
 	}
@@ -49,7 +49,7 @@ func GetShowTemplateV3RequestXLanguageEnum() ShowTemplateV3RequestXLanguageEnum 
 }
 
 func (c ShowTemplateV3RequestXLanguage) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowTemplateV3RequestXLanguage) UnmarshalJSON(b []byte) error {

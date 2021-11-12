@@ -1,20 +1,20 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
 
 // Request Object
 type ShowDomainQuotaRequest struct {
-	// 账号ID。
+	// 租户ID。
 
 	DomainId string `json:"domain_id"`
 }
 
 func (o ShowDomainQuotaRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowDomainQuotaRequest struct{}"
 	}

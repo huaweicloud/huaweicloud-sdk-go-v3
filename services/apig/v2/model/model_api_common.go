@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -123,7 +123,7 @@ type ApiCommon struct {
 }
 
 func (o ApiCommon) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ApiCommon struct{}"
 	}
@@ -156,7 +156,7 @@ func GetApiCommonReqProtocolEnum() ApiCommonReqProtocolEnum {
 }
 
 func (c ApiCommonReqProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiCommonReqProtocol) UnmarshalJSON(b []byte) error {
@@ -218,7 +218,7 @@ func GetApiCommonReqMethodEnum() ApiCommonReqMethodEnum {
 }
 
 func (c ApiCommonReqMethod) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiCommonReqMethod) UnmarshalJSON(b []byte) error {
@@ -264,7 +264,7 @@ func GetApiCommonAuthTypeEnum() ApiCommonAuthTypeEnum {
 }
 
 func (c ApiCommonAuthType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiCommonAuthType) UnmarshalJSON(b []byte) error {
@@ -302,7 +302,7 @@ func GetApiCommonMatchModeEnum() ApiCommonMatchModeEnum {
 }
 
 func (c ApiCommonMatchMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiCommonMatchMode) UnmarshalJSON(b []byte) error {
@@ -344,7 +344,7 @@ func GetApiCommonBackendTypeEnum() ApiCommonBackendTypeEnum {
 }
 
 func (c ApiCommonBackendType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiCommonBackendType) UnmarshalJSON(b []byte) error {

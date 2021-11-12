@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -24,7 +24,7 @@ type CreateSinkTaskReq struct {
 }
 
 func (o CreateSinkTaskReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateSinkTaskReq struct{}"
 	}
@@ -49,7 +49,7 @@ func GetCreateSinkTaskReqSourceTypeEnum() CreateSinkTaskReqSourceTypeEnum {
 }
 
 func (c CreateSinkTaskReqSourceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateSinkTaskReqSourceType) UnmarshalJSON(b []byte) error {
@@ -83,7 +83,7 @@ func GetCreateSinkTaskReqDestinationTypeEnum() CreateSinkTaskReqDestinationTypeE
 }
 
 func (c CreateSinkTaskReqDestinationType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateSinkTaskReqDestinationType) UnmarshalJSON(b []byte) error {

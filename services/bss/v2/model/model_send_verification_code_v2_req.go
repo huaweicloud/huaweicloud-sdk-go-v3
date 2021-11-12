@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -28,7 +28,7 @@ type SendVerificationCodeV2Req struct {
 }
 
 func (o SendVerificationCodeV2Req) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "SendVerificationCodeV2Req struct{}"
 	}

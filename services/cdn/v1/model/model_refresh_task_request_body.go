@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -13,13 +13,13 @@ type RefreshTaskRequestBody struct {
 	// 刷新的类型，其值可以为file 或directory，默认为file
 
 	Type *RefreshTaskRequestBodyType `json:"type,omitempty"`
-	// 输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为10240字符，单次最多输入1000个url。
+	// 输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
 
 	Urls []string `json:"urls"`
 }
 
 func (o RefreshTaskRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "RefreshTaskRequestBody struct{}"
 	}
@@ -48,7 +48,7 @@ func GetRefreshTaskRequestBodyTypeEnum() RefreshTaskRequestBodyTypeEnum {
 }
 
 func (c RefreshTaskRequestBodyType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *RefreshTaskRequestBodyType) UnmarshalJSON(b []byte) error {

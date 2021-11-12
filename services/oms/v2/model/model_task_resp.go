@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -98,7 +98,7 @@ type TaskResp struct {
 }
 
 func (o TaskResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "TaskResp struct{}"
 	}
@@ -135,7 +135,7 @@ func GetTaskRespTaskTypeEnum() TaskRespTaskTypeEnum {
 }
 
 func (c TaskRespTaskType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *TaskRespTaskType) UnmarshalJSON(b []byte) error {

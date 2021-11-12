@@ -1,14 +1,14 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
 
 // Request Object
 type ListProjectMembersV4Request struct {
-	// 项目id
+	// devcloud的项目id
 
 	ProjectId string `json:"project_id"`
 	// 分页索引，偏移量,offset是limit的整数倍，limit=10,offset=0,10,20...
@@ -20,7 +20,7 @@ type ListProjectMembersV4Request struct {
 }
 
 func (o ListProjectMembersV4Request) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListProjectMembersV4Request struct{}"
 	}

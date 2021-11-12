@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -25,7 +25,7 @@ type DeleteImageSyncRepoRequest struct {
 }
 
 func (o DeleteImageSyncRepoRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "DeleteImageSyncRepoRequest struct{}"
 	}
@@ -54,7 +54,7 @@ func GetDeleteImageSyncRepoRequestContentTypeEnum() DeleteImageSyncRepoRequestCo
 }
 
 func (c DeleteImageSyncRepoRequestContentType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *DeleteImageSyncRepoRequestContentType) UnmarshalJSON(b []byte) error {

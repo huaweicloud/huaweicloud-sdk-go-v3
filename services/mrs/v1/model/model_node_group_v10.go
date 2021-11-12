@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -67,7 +67,7 @@ type NodeGroupV10 struct {
 }
 
 func (o NodeGroupV10) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "NodeGroupV10 struct{}"
 	}
@@ -104,7 +104,7 @@ func GetNodeGroupV10DataVolumeTypeEnum() NodeGroupV10DataVolumeTypeEnum {
 }
 
 func (c NodeGroupV10DataVolumeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *NodeGroupV10DataVolumeType) UnmarshalJSON(b []byte) error {

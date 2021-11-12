@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -17,7 +17,7 @@ type HaResponse struct {
 }
 
 func (o HaResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "HaResponse struct{}"
 	}
@@ -50,7 +50,7 @@ func GetHaResponseReplicationModeEnum() HaResponseReplicationModeEnum {
 }
 
 func (c HaResponseReplicationMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *HaResponseReplicationMode) UnmarshalJSON(b []byte) error {

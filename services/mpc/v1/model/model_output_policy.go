@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -16,7 +16,7 @@ type OutputPolicy struct {
 }
 
 func (o OutputPolicy) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "OutputPolicy struct{}"
 	}
@@ -49,7 +49,7 @@ func GetOutputPolicyOutputPolicyEnum() OutputPolicyOutputPolicyEnum {
 }
 
 func (c OutputPolicyOutputPolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *OutputPolicyOutputPolicy) UnmarshalJSON(b []byte) error {

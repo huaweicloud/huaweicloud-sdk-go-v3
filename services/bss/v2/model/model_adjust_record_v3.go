@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -37,7 +37,7 @@ type AdjustRecordV3 struct {
 }
 
 func (o AdjustRecordV3) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "AdjustRecordV3 struct{}"
 	}

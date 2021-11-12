@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -29,7 +29,7 @@ type PrivacyResponseBody struct {
 }
 
 func (o PrivacyResponseBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "PrivacyResponseBody struct{}"
 	}
@@ -66,7 +66,7 @@ func GetPrivacyResponseBodyCategoryEnum() PrivacyResponseBodyCategoryEnum {
 }
 
 func (c PrivacyResponseBodyCategory) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *PrivacyResponseBodyCategory) UnmarshalJSON(b []byte) error {

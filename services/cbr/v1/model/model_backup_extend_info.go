@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -43,7 +43,7 @@ type BackupExtendInfo struct {
 }
 
 func (o BackupExtendInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "BackupExtendInfo struct{}"
 	}
@@ -76,7 +76,7 @@ func GetBackupExtendInfoSupportedRestoreModeEnum() BackupExtendInfoSupportedRest
 }
 
 func (c BackupExtendInfoSupportedRestoreMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *BackupExtendInfoSupportedRestoreMode) UnmarshalJSON(b []byte) error {

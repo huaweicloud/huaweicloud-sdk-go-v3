@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -23,13 +23,13 @@ type V2FramerateInfo struct {
 	// 采样结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
 
 	EndTime *string `json:"end_time,omitempty"`
-	// 帧率信息列表。
+	// 帧率信息列表，单位为fps。
 
 	DataList *[]int64 `json:"data_list,omitempty"`
 }
 
 func (o V2FramerateInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "V2FramerateInfo struct{}"
 	}

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -38,7 +38,7 @@ type InstanceReplicationListInfo struct {
 }
 
 func (o InstanceReplicationListInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "InstanceReplicationListInfo struct{}"
 	}
@@ -67,7 +67,7 @@ func GetInstanceReplicationListInfoStatusEnum() InstanceReplicationListInfoStatu
 }
 
 func (c InstanceReplicationListInfoStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *InstanceReplicationListInfoStatus) UnmarshalJSON(b []byte) error {

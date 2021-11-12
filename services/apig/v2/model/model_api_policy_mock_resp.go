@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -34,7 +34,7 @@ type ApiPolicyMockResp struct {
 }
 
 func (o ApiPolicyMockResp) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ApiPolicyMockResp struct{}"
 	}
@@ -63,7 +63,7 @@ func GetApiPolicyMockRespEffectModeEnum() ApiPolicyMockRespEffectModeEnum {
 }
 
 func (c ApiPolicyMockRespEffectMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ApiPolicyMockRespEffectMode) UnmarshalJSON(b []byte) error {

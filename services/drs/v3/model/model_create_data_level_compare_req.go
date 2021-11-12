@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -32,7 +32,7 @@ type CreateDataLevelCompareReq struct {
 }
 
 func (o CreateDataLevelCompareReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateDataLevelCompareReq struct{}"
 	}
@@ -61,7 +61,7 @@ func GetCreateDataLevelCompareReqConflictPolicyEnum() CreateDataLevelCompareReqC
 }
 
 func (c CreateDataLevelCompareReqConflictPolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateDataLevelCompareReqConflictPolicy) UnmarshalJSON(b []byte) error {
@@ -99,7 +99,7 @@ func GetCreateDataLevelCompareReqCompareTypeEnum() CreateDataLevelCompareReqComp
 }
 
 func (c CreateDataLevelCompareReqCompareType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateDataLevelCompareReqCompareType) UnmarshalJSON(b []byte) error {
@@ -133,7 +133,7 @@ func GetCreateDataLevelCompareReqCompareModeEnum() CreateDataLevelCompareReqComp
 }
 
 func (c CreateDataLevelCompareReqCompareMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateDataLevelCompareReqCompareMode) UnmarshalJSON(b []byte) error {

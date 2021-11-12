@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -91,9 +91,6 @@ type ShowFunctionConfigResponse struct {
 	DependList *[]string `json:"depend_list,omitempty"`
 
 	StrategyConfig *StrategyConfig `json:"strategy_config,omitempty"`
-	// 函数扩展配置。
-
-	ExtendConfig *string `json:"extend_config,omitempty"`
 	// 函数依赖代码包列表。
 
 	Dependencies *[]Dependency `json:"dependencies,omitempty"`
@@ -117,12 +114,15 @@ type ShowFunctionConfigResponse struct {
 	LogStreamId *string `json:"log_stream_id,omitempty"`
 	// v2表示为公测版本,v1为原来版本。
 
-	Type           *ShowFunctionConfigResponseType `json:"type,omitempty"`
-	HttpStatusCode int                             `json:"-"`
+	Type *ShowFunctionConfigResponseType `json:"type,omitempty"`
+	// 是否允许动态内存配置
+
+	EnableDynamicMemory *bool `json:"enable_dynamic_memory,omitempty"`
+	HttpStatusCode      int   `json:"-"`
 }
 
 func (o ShowFunctionConfigResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowFunctionConfigResponse struct{}"
 	}
@@ -187,7 +187,7 @@ func GetShowFunctionConfigResponseRuntimeEnum() ShowFunctionConfigResponseRuntim
 }
 
 func (c ShowFunctionConfigResponseRuntime) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowFunctionConfigResponseRuntime) UnmarshalJSON(b []byte) error {
@@ -233,7 +233,7 @@ func GetShowFunctionConfigResponseCodeTypeEnum() ShowFunctionConfigResponseCodeT
 }
 
 func (c ShowFunctionConfigResponseCodeType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowFunctionConfigResponseCodeType) UnmarshalJSON(b []byte) error {
@@ -271,7 +271,7 @@ func GetShowFunctionConfigResponseTypeEnum() ShowFunctionConfigResponseTypeEnum 
 }
 
 func (c ShowFunctionConfigResponseType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowFunctionConfigResponseType) UnmarshalJSON(b []byte) error {

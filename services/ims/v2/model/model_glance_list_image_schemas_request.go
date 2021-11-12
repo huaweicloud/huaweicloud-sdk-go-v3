@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -11,7 +11,7 @@ type GlanceListImageSchemasRequest struct {
 }
 
 func (o GlanceListImageSchemasRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "GlanceListImageSchemasRequest struct{}"
 	}

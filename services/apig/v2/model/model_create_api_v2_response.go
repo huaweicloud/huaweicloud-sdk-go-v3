@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -130,7 +130,7 @@ type CreateApiV2Response struct {
 }
 
 func (o CreateApiV2Response) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateApiV2Response struct{}"
 	}
@@ -163,7 +163,7 @@ func GetCreateApiV2ResponseReqProtocolEnum() CreateApiV2ResponseReqProtocolEnum 
 }
 
 func (c CreateApiV2ResponseReqProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateApiV2ResponseReqProtocol) UnmarshalJSON(b []byte) error {
@@ -225,7 +225,7 @@ func GetCreateApiV2ResponseReqMethodEnum() CreateApiV2ResponseReqMethodEnum {
 }
 
 func (c CreateApiV2ResponseReqMethod) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateApiV2ResponseReqMethod) UnmarshalJSON(b []byte) error {
@@ -271,7 +271,7 @@ func GetCreateApiV2ResponseAuthTypeEnum() CreateApiV2ResponseAuthTypeEnum {
 }
 
 func (c CreateApiV2ResponseAuthType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateApiV2ResponseAuthType) UnmarshalJSON(b []byte) error {
@@ -309,7 +309,7 @@ func GetCreateApiV2ResponseMatchModeEnum() CreateApiV2ResponseMatchModeEnum {
 }
 
 func (c CreateApiV2ResponseMatchMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateApiV2ResponseMatchMode) UnmarshalJSON(b []byte) error {
@@ -351,7 +351,7 @@ func GetCreateApiV2ResponseBackendTypeEnum() CreateApiV2ResponseBackendTypeEnum 
 }
 
 func (c CreateApiV2ResponseBackendType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateApiV2ResponseBackendType) UnmarshalJSON(b []byte) error {

@@ -261,6 +261,17 @@ func (c *RdsClient) ListErrorLogs(request *model.ListErrorLogsRequest) (*model.L
 	}
 }
 
+//查询数据库错误日志。(与原v3接口相比修改offset,符合华为云服务开放 API遵从性规范3.0)
+func (c *RdsClient) ListErrorLogsNew(request *model.ListErrorLogsNewRequest) (*model.ListErrorLogsNewResponse, error) {
+	requestDef := GenReqDefForListErrorLogsNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListErrorLogsNewResponse), nil
+	}
+}
+
 //查询数据库规格。
 func (c *RdsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
@@ -368,6 +379,17 @@ func (c *RdsClient) ListSlowLogs(request *model.ListSlowLogsRequest) (*model.Lis
 		return nil, err
 	} else {
 		return resp.(*model.ListSlowLogsResponse), nil
+	}
+}
+
+//查询数据库慢日志。(与原v3接口相比修改offset,符合华为云服务开放 API遵从性规范3.0)
+func (c *RdsClient) ListSlowLogsNew(request *model.ListSlowLogsNewRequest) (*model.ListSlowLogsNewResponse, error) {
+	requestDef := GenReqDefForListSlowLogsNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSlowLogsNewResponse), nil
 	}
 }
 
@@ -731,6 +753,17 @@ func (c *RdsClient) UpdatePostgresqlInstanceAlias(request *model.UpdatePostgresq
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePostgresqlInstanceAliasResponse), nil
+	}
+}
+
+//对实例进行小版本升级。
+func (c *RdsClient) UpgradeDbVersion(request *model.UpgradeDbVersionRequest) (*model.UpgradeDbVersionResponse, error) {
+	requestDef := GenReqDefForUpgradeDbVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeDbVersionResponse), nil
 	}
 }
 

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -28,7 +28,7 @@ type TransferTask struct {
 }
 
 func (o TransferTask) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "TransferTask struct{}"
 	}
@@ -73,7 +73,7 @@ func GetTransferTaskStateEnum() TransferTaskStateEnum {
 }
 
 func (c TransferTaskState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *TransferTaskState) UnmarshalJSON(b []byte) error {
@@ -123,7 +123,7 @@ func GetTransferTaskDestinationTypeEnum() TransferTaskDestinationTypeEnum {
 }
 
 func (c TransferTaskDestinationType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *TransferTaskDestinationType) UnmarshalJSON(b []byte) error {

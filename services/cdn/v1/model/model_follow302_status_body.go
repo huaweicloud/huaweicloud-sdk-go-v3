@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -19,7 +19,7 @@ type Follow302StatusBody struct {
 }
 
 func (o Follow302StatusBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "Follow302StatusBody struct{}"
 	}
@@ -48,7 +48,7 @@ func GetFollow302StatusBodyFollowStatusEnum() Follow302StatusBodyFollowStatusEnu
 }
 
 func (c Follow302StatusBodyFollowStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *Follow302StatusBodyFollowStatus) UnmarshalJSON(b []byte) error {

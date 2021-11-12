@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -30,7 +30,7 @@ type UpdateScalingPolicyOption struct {
 }
 
 func (o UpdateScalingPolicyOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "UpdateScalingPolicyOption struct{}"
 	}
@@ -63,7 +63,7 @@ func GetUpdateScalingPolicyOptionScalingPolicyTypeEnum() UpdateScalingPolicyOpti
 }
 
 func (c UpdateScalingPolicyOptionScalingPolicyType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *UpdateScalingPolicyOptionScalingPolicyType) UnmarshalJSON(b []byte) error {

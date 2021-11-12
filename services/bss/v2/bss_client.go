@@ -360,6 +360,17 @@ func (c *BssClient) ListFreeResourceUsages(request *model.ListFreeResourceUsages
 	}
 }
 
+//功能描述：合作伙伴可以查看产品的折扣和激励策略。
+func (c *BssClient) ListIncentiveDiscountPolicies(request *model.ListIncentiveDiscountPoliciesRequest) (*model.ListIncentiveDiscountPoliciesResponse, error) {
+	requestDef := GenReqDefForListIncentiveDiscountPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIncentiveDiscountPoliciesResponse), nil
+	}
+}
+
 //功能描述：华为云伙伴能力中心（一级经销商）可以查询精英服务商（二级经销商）列表。
 func (c *BssClient) ListIndirectPartners(request *model.ListIndirectPartnersRequest) (*model.ListIndirectPartnersResponse, error) {
 	requestDef := GenReqDefForListIndirectPartners()
@@ -434,6 +445,17 @@ func (c *BssClient) ListOrderDiscounts(request *model.ListOrderDiscountsRequest)
 		return nil, err
 	} else {
 		return resp.(*model.ListOrderDiscountsResponse), nil
+	}
+}
+
+//功能描述：伙伴在伙伴管理台可以查看自身的收支明细情况
+func (c *BssClient) ListPartnerAccountChangeRecords(request *model.ListPartnerAccountChangeRecordsRequest) (*model.ListPartnerAccountChangeRecordsResponse, error) {
+	requestDef := GenReqDefForListPartnerAccountChangeRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPartnerAccountChangeRecordsResponse), nil
 	}
 }
 

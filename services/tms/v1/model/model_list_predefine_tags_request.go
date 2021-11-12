@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -32,7 +32,7 @@ type ListPredefineTagsRequest struct {
 }
 
 func (o ListPredefineTagsRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListPredefineTagsRequest struct{}"
 	}
@@ -61,7 +61,7 @@ func GetListPredefineTagsRequestOrderMethodEnum() ListPredefineTagsRequestOrderM
 }
 
 func (c ListPredefineTagsRequestOrderMethod) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListPredefineTagsRequestOrderMethod) UnmarshalJSON(b []byte) error {

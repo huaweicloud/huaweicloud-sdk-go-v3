@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -67,7 +67,7 @@ type ShowIndividualStreamJobResponse struct {
 }
 
 func (o ShowIndividualStreamJobResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowIndividualStreamJobResponse struct{}"
 	}
@@ -100,7 +100,7 @@ func GetShowIndividualStreamJobResponseVideoTypeEnum() ShowIndividualStreamJobRe
 }
 
 func (c ShowIndividualStreamJobResponseVideoType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowIndividualStreamJobResponseVideoType) UnmarshalJSON(b []byte) error {
@@ -146,7 +146,7 @@ func GetShowIndividualStreamJobResponseSelectStreamTypeEnum() ShowIndividualStre
 }
 
 func (c ShowIndividualStreamJobResponseSelectStreamType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowIndividualStreamJobResponseSelectStreamType) UnmarshalJSON(b []byte) error {
@@ -188,7 +188,7 @@ func GetShowIndividualStreamJobResponseStateEnum() ShowIndividualStreamJobRespon
 }
 
 func (c ShowIndividualStreamJobResponseState) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowIndividualStreamJobResponseState) UnmarshalJSON(b []byte) error {
@@ -230,7 +230,7 @@ func GetShowIndividualStreamJobResponseStopReasonEnum() ShowIndividualStreamJobR
 }
 
 func (c ShowIndividualStreamJobResponseStopReason) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowIndividualStreamJobResponseStopReason) UnmarshalJSON(b []byte) error {

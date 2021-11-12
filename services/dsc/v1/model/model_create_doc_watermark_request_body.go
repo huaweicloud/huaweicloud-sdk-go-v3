@@ -1,13 +1,13 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 
+	"encoding/json"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"os"
 	"reflect"
 
@@ -20,6 +20,9 @@ type CreateDocWatermarkRequestBody struct {
 
 	// 解密文件的密码， 最大支持长度256。添加水印后的文件不带密码。如果Office文档有读密码或域控的权限密码，请输入读密码，或者有读权限的域控密码。
 	FilePassword *def.MultiPart `json:"file_password,omitempty"`
+
+	// 添加水印后给文件设置密码， 最大支持长度256。
+	MarkedFilePassword *def.MultiPart `json:"marked_file_password,omitempty"`
 
 	// 明水印内容，与“blind_watermark”字段至少有一个不为空
 	VisibleWatermark *def.MultiPart `json:"visible_watermark,omitempty"`
@@ -47,7 +50,7 @@ type CreateDocWatermarkRequestBody struct {
 }
 
 func (o CreateDocWatermarkRequestBody) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateDocWatermarkRequestBody struct{}"
 	}
@@ -115,7 +118,7 @@ func GetCreateDocWatermarkRequestBodyDocTypeEnum() CreateDocWatermarkRequestBody
 }
 
 func (c CreateDocWatermarkRequestBodyDocType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateDocWatermarkRequestBodyDocType) UnmarshalJSON(b []byte) error {
@@ -153,7 +156,7 @@ func GetCreateDocWatermarkRequestBodyVisibleTypeEnum() CreateDocWatermarkRequest
 }
 
 func (c CreateDocWatermarkRequestBodyVisibleType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateDocWatermarkRequestBodyVisibleType) UnmarshalJSON(b []byte) error {

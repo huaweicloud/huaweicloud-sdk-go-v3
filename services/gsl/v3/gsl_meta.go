@@ -46,22 +46,6 @@ func GenReqDefForListProPricePlans() *def.HttpRequestDef {
 		WithName("CountryType").
 		WithJsonTag("country_type").
 		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SimCardId").
-		WithJsonTag("sim_card_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Partner").
-		WithJsonTag("partner").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PackageType").
-		WithJsonTag("package_type").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SimType").
-		WithJsonTag("sim_type").
-		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -129,10 +113,6 @@ func GenReqDefForListSimCards() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("DeviceStatus").
 		WithJsonTag("device_status").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TagId").
-		WithJsonTag("tag_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SimType").
@@ -425,10 +405,6 @@ func GenReqDefForListSimPricePlans() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SimCardId").
 		WithJsonTag("sim_card_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SimPricePlanId").
-		WithJsonTag("sim_price_plan_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("RealTime").

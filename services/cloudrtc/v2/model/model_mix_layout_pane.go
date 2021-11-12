@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -41,7 +41,7 @@ type MixLayoutPane struct {
 }
 
 func (o MixLayoutPane) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "MixLayoutPane struct{}"
 	}
@@ -70,7 +70,7 @@ func GetMixLayoutPaneVideoTypeEnum() MixLayoutPaneVideoTypeEnum {
 }
 
 func (c MixLayoutPaneVideoType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *MixLayoutPaneVideoType) UnmarshalJSON(b []byte) error {
@@ -108,7 +108,7 @@ func GetMixLayoutPaneCropModeEnum() MixLayoutPaneCropModeEnum {
 }
 
 func (c MixLayoutPaneCropMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *MixLayoutPaneCropMode) UnmarshalJSON(b []byte) error {

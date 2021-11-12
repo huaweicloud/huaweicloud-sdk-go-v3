@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -53,7 +53,7 @@ type JobInfo struct {
 }
 
 func (o JobInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "JobInfo struct{}"
 	}
@@ -162,7 +162,7 @@ func GetJobInfoStatusEnum() JobInfoStatusEnum {
 }
 
 func (c JobInfoStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *JobInfoStatus) UnmarshalJSON(b []byte) error {
@@ -212,7 +212,7 @@ func GetJobInfoEngineTypeEnum() JobInfoEngineTypeEnum {
 }
 
 func (c JobInfoEngineType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *JobInfoEngineType) UnmarshalJSON(b []byte) error {
@@ -254,7 +254,7 @@ func GetJobInfoNetTypeEnum() JobInfoNetTypeEnum {
 }
 
 func (c JobInfoNetType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *JobInfoNetType) UnmarshalJSON(b []byte) error {
@@ -292,7 +292,7 @@ func GetJobInfoJobDirectionEnum() JobInfoJobDirectionEnum {
 }
 
 func (c JobInfoJobDirection) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *JobInfoJobDirection) UnmarshalJSON(b []byte) error {
@@ -334,7 +334,7 @@ func GetJobInfoDbUseTypeEnum() JobInfoDbUseTypeEnum {
 }
 
 func (c JobInfoDbUseType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *JobInfoDbUseType) UnmarshalJSON(b []byte) error {
@@ -376,7 +376,7 @@ func GetJobInfoTaskTypeEnum() JobInfoTaskTypeEnum {
 }
 
 func (c JobInfoTaskType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *JobInfoTaskType) UnmarshalJSON(b []byte) error {

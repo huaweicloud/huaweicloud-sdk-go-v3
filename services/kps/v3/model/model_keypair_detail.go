@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -56,7 +56,7 @@ type KeypairDetail struct {
 }
 
 func (o KeypairDetail) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "KeypairDetail struct{}"
 	}
@@ -85,7 +85,7 @@ func GetKeypairDetailTypeEnum() KeypairDetailTypeEnum {
 }
 
 func (c KeypairDetailType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *KeypairDetailType) UnmarshalJSON(b []byte) error {
@@ -123,7 +123,7 @@ func GetKeypairDetailScopeEnum() KeypairDetailScopeEnum {
 }
 
 func (c KeypairDetailScope) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *KeypairDetailScope) UnmarshalJSON(b []byte) error {

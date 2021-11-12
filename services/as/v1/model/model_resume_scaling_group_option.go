@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -17,7 +17,7 @@ type ResumeScalingGroupOption struct {
 }
 
 func (o ResumeScalingGroupOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ResumeScalingGroupOption struct{}"
 	}
@@ -42,7 +42,7 @@ func GetResumeScalingGroupOptionActionEnum() ResumeScalingGroupOptionActionEnum 
 }
 
 func (c ResumeScalingGroupOptionAction) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ResumeScalingGroupOptionAction) UnmarshalJSON(b []byte) error {

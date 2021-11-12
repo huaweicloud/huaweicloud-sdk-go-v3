@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -47,7 +47,7 @@ type ShowAssetMetaRequest struct {
 }
 
 func (o ShowAssetMetaRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ShowAssetMetaRequest struct{}"
 	}
@@ -116,7 +116,7 @@ func GetShowAssetMetaRequestStatusEnum() ShowAssetMetaRequestStatusEnum {
 }
 
 func (c ShowAssetMetaRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowAssetMetaRequestStatus) UnmarshalJSON(b []byte) error {
@@ -166,7 +166,7 @@ func GetShowAssetMetaRequestTranscodeStatusEnum() ShowAssetMetaRequestTranscodeS
 }
 
 func (c ShowAssetMetaRequestTranscodeStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowAssetMetaRequestTranscodeStatus) UnmarshalJSON(b []byte) error {
@@ -204,7 +204,7 @@ func GetShowAssetMetaRequestAssetStatusEnum() ShowAssetMetaRequestAssetStatusEnu
 }
 
 func (c ShowAssetMetaRequestAssetStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ShowAssetMetaRequestAssetStatus) UnmarshalJSON(b []byte) error {

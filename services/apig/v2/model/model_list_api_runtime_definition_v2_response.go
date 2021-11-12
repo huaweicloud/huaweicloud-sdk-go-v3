@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -104,7 +104,7 @@ type ListApiRuntimeDefinitionV2Response struct {
 }
 
 func (o ListApiRuntimeDefinitionV2Response) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListApiRuntimeDefinitionV2Response struct{}"
 	}
@@ -137,7 +137,7 @@ func GetListApiRuntimeDefinitionV2ResponseReqProtocolEnum() ListApiRuntimeDefini
 }
 
 func (c ListApiRuntimeDefinitionV2ResponseReqProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListApiRuntimeDefinitionV2ResponseReqProtocol) UnmarshalJSON(b []byte) error {
@@ -199,7 +199,7 @@ func GetListApiRuntimeDefinitionV2ResponseReqMethodEnum() ListApiRuntimeDefiniti
 }
 
 func (c ListApiRuntimeDefinitionV2ResponseReqMethod) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListApiRuntimeDefinitionV2ResponseReqMethod) UnmarshalJSON(b []byte) error {
@@ -245,7 +245,7 @@ func GetListApiRuntimeDefinitionV2ResponseAuthTypeEnum() ListApiRuntimeDefinitio
 }
 
 func (c ListApiRuntimeDefinitionV2ResponseAuthType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListApiRuntimeDefinitionV2ResponseAuthType) UnmarshalJSON(b []byte) error {
@@ -283,7 +283,7 @@ func GetListApiRuntimeDefinitionV2ResponseMatchModeEnum() ListApiRuntimeDefiniti
 }
 
 func (c ListApiRuntimeDefinitionV2ResponseMatchMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListApiRuntimeDefinitionV2ResponseMatchMode) UnmarshalJSON(b []byte) error {
@@ -325,7 +325,7 @@ func GetListApiRuntimeDefinitionV2ResponseBackendTypeEnum() ListApiRuntimeDefini
 }
 
 func (c ListApiRuntimeDefinitionV2ResponseBackendType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListApiRuntimeDefinitionV2ResponseBackendType) UnmarshalJSON(b []byte) error {

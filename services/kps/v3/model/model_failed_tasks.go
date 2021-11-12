@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -38,7 +38,7 @@ type FailedTasks struct {
 }
 
 func (o FailedTasks) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "FailedTasks struct{}"
 	}
@@ -71,7 +71,7 @@ func GetFailedTasksOperateTypeEnum() FailedTasksOperateTypeEnum {
 }
 
 func (c FailedTasksOperateType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *FailedTasksOperateType) UnmarshalJSON(b []byte) error {

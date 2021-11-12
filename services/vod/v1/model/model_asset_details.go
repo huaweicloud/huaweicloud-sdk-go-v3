@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -26,7 +26,7 @@ type AssetDetails struct {
 }
 
 func (o AssetDetails) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "AssetDetails struct{}"
 	}
@@ -67,7 +67,7 @@ func GetAssetDetailsAssetStatusEnum() AssetDetailsAssetStatusEnum {
 }
 
 func (c AssetDetailsAssetStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *AssetDetailsAssetStatus) UnmarshalJSON(b []byte) error {
@@ -117,7 +117,7 @@ func GetAssetDetailsTranscodeStatusEnum() AssetDetailsTranscodeStatusEnum {
 }
 
 func (c AssetDetailsTranscodeStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *AssetDetailsTranscodeStatus) UnmarshalJSON(b []byte) error {

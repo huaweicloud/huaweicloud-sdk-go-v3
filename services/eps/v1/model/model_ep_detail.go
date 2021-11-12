@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -34,7 +34,7 @@ type EpDetail struct {
 }
 
 func (o EpDetail) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "EpDetail struct{}"
 	}
@@ -63,7 +63,7 @@ func GetEpDetailTypeEnum() EpDetailTypeEnum {
 }
 
 func (c EpDetailType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *EpDetailType) UnmarshalJSON(b []byte) error {

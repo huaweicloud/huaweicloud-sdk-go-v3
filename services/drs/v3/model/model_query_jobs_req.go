@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -44,7 +44,7 @@ type QueryJobsReq struct {
 }
 
 func (o QueryJobsReq) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "QueryJobsReq struct{}"
 	}
@@ -77,7 +77,7 @@ func GetQueryJobsReqDbUseTypeEnum() QueryJobsReqDbUseTypeEnum {
 }
 
 func (c QueryJobsReqDbUseType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QueryJobsReqDbUseType) UnmarshalJSON(b []byte) error {
@@ -119,7 +119,7 @@ func GetQueryJobsReqEngineTypeEnum() QueryJobsReqEngineTypeEnum {
 }
 
 func (c QueryJobsReqEngineType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QueryJobsReqEngineType) UnmarshalJSON(b []byte) error {
@@ -161,7 +161,7 @@ func GetQueryJobsReqNetTypeEnum() QueryJobsReqNetTypeEnum {
 }
 
 func (c QueryJobsReqNetType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QueryJobsReqNetType) UnmarshalJSON(b []byte) error {
@@ -279,7 +279,7 @@ func GetQueryJobsReqStatusEnum() QueryJobsReqStatusEnum {
 }
 
 func (c QueryJobsReqStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *QueryJobsReqStatus) UnmarshalJSON(b []byte) error {

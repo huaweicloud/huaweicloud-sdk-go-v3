@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -191,7 +191,7 @@ type ImageInfo struct {
 }
 
 func (o ImageInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ImageInfo struct{}"
 	}
@@ -220,7 +220,7 @@ func GetImageInfoImageSourceTypeEnum() ImageInfoImageSourceTypeEnum {
 }
 
 func (c ImageInfoImageSourceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageInfoImageSourceType) UnmarshalJSON(b []byte) error {
@@ -262,7 +262,7 @@ func GetImageInfoImagetypeEnum() ImageInfoImagetypeEnum {
 }
 
 func (c ImageInfoImagetype) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageInfoImagetype) UnmarshalJSON(b []byte) error {
@@ -300,7 +300,7 @@ func GetImageInfoIsregisteredEnum() ImageInfoIsregisteredEnum {
 }
 
 func (c ImageInfoIsregistered) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageInfoIsregistered) UnmarshalJSON(b []byte) error {
@@ -338,7 +338,7 @@ func GetImageInfoOsBitEnum() ImageInfoOsBitEnum {
 }
 
 func (c ImageInfoOsBit) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageInfoOsBit) UnmarshalJSON(b []byte) error {
@@ -380,7 +380,7 @@ func GetImageInfoOsTypeEnum() ImageInfoOsTypeEnum {
 }
 
 func (c ImageInfoOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageInfoOsType) UnmarshalJSON(b []byte) error {
@@ -458,7 +458,7 @@ func GetImageInfoPlatformEnum() ImageInfoPlatformEnum {
 }
 
 func (c ImageInfoPlatform) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageInfoPlatform) UnmarshalJSON(b []byte) error {
@@ -508,7 +508,7 @@ func GetImageInfoStatusEnum() ImageInfoStatusEnum {
 }
 
 func (c ImageInfoStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageInfoStatus) UnmarshalJSON(b []byte) error {
@@ -550,7 +550,7 @@ func GetImageInfoVirtualEnvTypeEnum() ImageInfoVirtualEnvTypeEnum {
 }
 
 func (c ImageInfoVirtualEnvType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageInfoVirtualEnvType) UnmarshalJSON(b []byte) error {
@@ -588,7 +588,7 @@ func GetImageInfoVisibilityEnum() ImageInfoVisibilityEnum {
 }
 
 func (c ImageInfoVisibility) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageInfoVisibility) UnmarshalJSON(b []byte) error {
@@ -626,7 +626,7 @@ func GetImageInfoSupportFcInjectEnum() ImageInfoSupportFcInjectEnum {
 }
 
 func (c ImageInfoSupportFcInject) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageInfoSupportFcInject) UnmarshalJSON(b []byte) error {
@@ -664,7 +664,7 @@ func GetImageInfoHwFirmwareTypeEnum() ImageInfoHwFirmwareTypeEnum {
 }
 
 func (c ImageInfoHwFirmwareType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageInfoHwFirmwareType) UnmarshalJSON(b []byte) error {
@@ -702,7 +702,7 @@ func GetImageInfoSupportArmEnum() ImageInfoSupportArmEnum {
 }
 
 func (c ImageInfoSupportArm) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ImageInfoSupportArm) UnmarshalJSON(b []byte) error {

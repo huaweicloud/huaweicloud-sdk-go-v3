@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
@@ -11,7 +11,7 @@ type ListSnapshotDataResponse struct {
 	// 采样数据列表。
 
 	SnapshotList *[]SnapshotData `json:"snapshot_list,omitempty"`
-	// 指定时间区间内截图数量总和
+	// 指定时间区间内截图数量总和。
 
 	Total *int64 `json:"total,omitempty"`
 
@@ -20,7 +20,7 @@ type ListSnapshotDataResponse struct {
 }
 
 func (o ListSnapshotDataResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListSnapshotDataResponse struct{}"
 	}

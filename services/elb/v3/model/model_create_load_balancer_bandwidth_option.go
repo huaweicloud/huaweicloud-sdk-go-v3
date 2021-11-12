@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -29,7 +29,7 @@ type CreateLoadBalancerBandwidthOption struct {
 }
 
 func (o CreateLoadBalancerBandwidthOption) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "CreateLoadBalancerBandwidthOption struct{}"
 	}
@@ -58,7 +58,7 @@ func GetCreateLoadBalancerBandwidthOptionChargeModeEnum() CreateLoadBalancerBand
 }
 
 func (c CreateLoadBalancerBandwidthOptionChargeMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateLoadBalancerBandwidthOptionChargeMode) UnmarshalJSON(b []byte) error {
@@ -96,7 +96,7 @@ func GetCreateLoadBalancerBandwidthOptionShareTypeEnum() CreateLoadBalancerBandw
 }
 
 func (c CreateLoadBalancerBandwidthOptionShareType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CreateLoadBalancerBandwidthOptionShareType) UnmarshalJSON(b []byte) error {

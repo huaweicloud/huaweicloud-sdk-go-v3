@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -47,7 +47,7 @@ type ObsDestinationDescriptor struct {
 }
 
 func (o ObsDestinationDescriptor) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ObsDestinationDescriptor struct{}"
 	}
@@ -76,7 +76,7 @@ func GetObsDestinationDescriptorConsumerStrategyEnum() ObsDestinationDescriptorC
 }
 
 func (c ObsDestinationDescriptorConsumerStrategy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ObsDestinationDescriptorConsumerStrategy) UnmarshalJSON(b []byte) error {
@@ -110,7 +110,7 @@ func GetObsDestinationDescriptorDestinationFileTypeEnum() ObsDestinationDescript
 }
 
 func (c ObsDestinationDescriptorDestinationFileType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ObsDestinationDescriptorDestinationFileType) UnmarshalJSON(b []byte) error {

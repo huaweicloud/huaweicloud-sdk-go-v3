@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -32,7 +32,7 @@ type SourceWithPort struct {
 }
 
 func (o SourceWithPort) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "SourceWithPort struct{}"
 	}
@@ -65,7 +65,7 @@ func GetSourceWithPortOriginTypeEnum() SourceWithPortOriginTypeEnum {
 }
 
 func (c SourceWithPortOriginType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *SourceWithPortOriginType) UnmarshalJSON(b []byte) error {

@@ -1,10 +1,11 @@
 package converter
 
 import (
-	"encoding/json"
 	"reflect"
 	"strconv"
 	"strings"
+
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 )
 
 type Converter interface {
@@ -65,7 +66,7 @@ func ConvertInterfaceToString(value interface{}) string {
 	case []byte:
 		return string(value.([]byte))
 	default:
-		b, err := json.Marshal(value)
+		b, err := utils.Marshal(value)
 		if err != nil {
 			return ""
 		}

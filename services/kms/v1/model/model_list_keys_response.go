@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -30,7 +30,7 @@ type ListKeysResponse struct {
 }
 
 func (o ListKeysResponse) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListKeysResponse struct{}"
 	}
@@ -59,7 +59,7 @@ func GetListKeysResponseTruncatedEnum() ListKeysResponseTruncatedEnum {
 }
 
 func (c ListKeysResponseTruncated) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListKeysResponseTruncated) UnmarshalJSON(b []byte) error {

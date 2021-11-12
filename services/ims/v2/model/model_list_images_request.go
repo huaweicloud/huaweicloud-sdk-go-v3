@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -125,7 +125,7 @@ type ListImagesRequest struct {
 }
 
 func (o ListImagesRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListImagesRequest struct{}"
 	}
@@ -158,7 +158,7 @@ func GetListImagesRequestImagetypeEnum() ListImagesRequestImagetypeEnum {
 }
 
 func (c ListImagesRequestImagetype) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestImagetype) UnmarshalJSON(b []byte) error {
@@ -196,7 +196,7 @@ func GetListImagesRequestIsregisteredEnum() ListImagesRequestIsregisteredEnum {
 }
 
 func (c ListImagesRequestIsregistered) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestIsregistered) UnmarshalJSON(b []byte) error {
@@ -234,7 +234,7 @@ func GetListImagesRequestOsBitEnum() ListImagesRequestOsBitEnum {
 }
 
 func (c ListImagesRequestOsBit) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestOsBit) UnmarshalJSON(b []byte) error {
@@ -276,7 +276,7 @@ func GetListImagesRequestOsTypeEnum() ListImagesRequestOsTypeEnum {
 }
 
 func (c ListImagesRequestOsType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestOsType) UnmarshalJSON(b []byte) error {
@@ -354,7 +354,7 @@ func GetListImagesRequestPlatformEnum() ListImagesRequestPlatformEnum {
 }
 
 func (c ListImagesRequestPlatform) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestPlatform) UnmarshalJSON(b []byte) error {
@@ -404,7 +404,7 @@ func GetListImagesRequestDiskFormatEnum() ListImagesRequestDiskFormatEnum {
 }
 
 func (c ListImagesRequestDiskFormat) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestDiskFormat) UnmarshalJSON(b []byte) error {
@@ -446,7 +446,7 @@ func GetListImagesRequestMemberStatusEnum() ListImagesRequestMemberStatusEnum {
 }
 
 func (c ListImagesRequestMemberStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestMemberStatus) UnmarshalJSON(b []byte) error {
@@ -484,7 +484,7 @@ func GetListImagesRequestSortDirEnum() ListImagesRequestSortDirEnum {
 }
 
 func (c ListImagesRequestSortDir) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestSortDir) UnmarshalJSON(b []byte) error {
@@ -542,7 +542,7 @@ func GetListImagesRequestSortKeyEnum() ListImagesRequestSortKeyEnum {
 }
 
 func (c ListImagesRequestSortKey) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestSortKey) UnmarshalJSON(b []byte) error {
@@ -592,7 +592,7 @@ func GetListImagesRequestStatusEnum() ListImagesRequestStatusEnum {
 }
 
 func (c ListImagesRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestStatus) UnmarshalJSON(b []byte) error {
@@ -634,7 +634,7 @@ func GetListImagesRequestVirtualEnvTypeEnum() ListImagesRequestVirtualEnvTypeEnu
 }
 
 func (c ListImagesRequestVirtualEnvType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestVirtualEnvType) UnmarshalJSON(b []byte) error {
@@ -672,7 +672,7 @@ func GetListImagesRequestVisibilityEnum() ListImagesRequestVisibilityEnum {
 }
 
 func (c ListImagesRequestVisibility) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestVisibility) UnmarshalJSON(b []byte) error {
@@ -710,7 +710,7 @@ func GetListImagesRequestArchitectureEnum() ListImagesRequestArchitectureEnum {
 }
 
 func (c ListImagesRequestArchitecture) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListImagesRequestArchitecture) UnmarshalJSON(b []byte) error {

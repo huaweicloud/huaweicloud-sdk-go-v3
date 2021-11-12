@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -29,7 +29,7 @@ type Common struct {
 }
 
 func (o Common) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "Common struct{}"
 	}
@@ -66,7 +66,7 @@ func GetCommonPvcEnum() CommonPvcEnum {
 }
 
 func (c CommonPvc) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CommonPvc) UnmarshalJSON(b []byte) error {
@@ -108,7 +108,7 @@ func GetCommonVideoCodecEnum() CommonVideoCodecEnum {
 }
 
 func (c CommonVideoCodec) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CommonVideoCodec) UnmarshalJSON(b []byte) error {
@@ -154,7 +154,7 @@ func GetCommonAudioCodecEnum() CommonAudioCodecEnum {
 }
 
 func (c CommonAudioCodec) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *CommonAudioCodec) UnmarshalJSON(b []byte) error {

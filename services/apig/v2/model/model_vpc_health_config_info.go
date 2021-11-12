@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -52,7 +52,7 @@ type VpcHealthConfigInfo struct {
 }
 
 func (o VpcHealthConfigInfo) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "VpcHealthConfigInfo struct{}"
 	}
@@ -85,7 +85,7 @@ func GetVpcHealthConfigInfoProtocolEnum() VpcHealthConfigInfoProtocolEnum {
 }
 
 func (c VpcHealthConfigInfoProtocol) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *VpcHealthConfigInfoProtocol) UnmarshalJSON(b []byte) error {
@@ -123,7 +123,7 @@ func GetVpcHealthConfigInfoMethodEnum() VpcHealthConfigInfoMethodEnum {
 }
 
 func (c VpcHealthConfigInfoMethod) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *VpcHealthConfigInfoMethod) UnmarshalJSON(b []byte) error {

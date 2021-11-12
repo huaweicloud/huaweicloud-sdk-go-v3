@@ -205,26 +205,6 @@ func GenReqDefForDeleteFunctionAsyncInvokeConfig() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDeleteReservedInstanceById() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/fgs/functions/{function_urn}/reservedinstances/{instance_id}").
-		WithResponse(new(model.DeleteReservedInstanceByIdResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("FunctionUrn").
-		WithJsonTag("function_urn").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForDeleteVersionAlias() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
@@ -622,6 +602,22 @@ func GenReqDefForShowLtsLogDetails() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowTracing() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/fgs/functions/{function_urn}/tracing").
+		WithResponse(new(model.ShowTracingResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FunctionUrn").
+		WithJsonTag("function_urn").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowVersionAlias() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -751,6 +747,26 @@ func GenReqDefForUpdateFunctionReservedInstances() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/fgs/functions/{function_urn}/reservedinstances").
 		WithResponse(new(model.UpdateFunctionReservedInstancesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FunctionUrn").
+		WithJsonTag("function_urn").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateTracing() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/fgs/functions/{function_urn}/tracing").
+		WithResponse(new(model.UpdateTracingResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

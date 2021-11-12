@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -18,7 +18,7 @@ type Schedule struct {
 }
 
 func (o Schedule) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "Schedule struct{}"
 	}
@@ -51,7 +51,7 @@ func GetScheduleScheTypeEnum() ScheduleScheTypeEnum {
 }
 
 func (c ScheduleScheType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScheduleScheType) UnmarshalJSON(b []byte) error {

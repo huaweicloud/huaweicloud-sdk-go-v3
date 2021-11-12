@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -66,7 +66,7 @@ type ClusterSpec struct {
 }
 
 func (o ClusterSpec) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ClusterSpec struct{}"
 	}
@@ -95,7 +95,7 @@ func GetClusterSpecCategoryEnum() ClusterSpecCategoryEnum {
 }
 
 func (c ClusterSpecCategory) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ClusterSpecCategory) UnmarshalJSON(b []byte) error {
@@ -133,7 +133,7 @@ func GetClusterSpecTypeEnum() ClusterSpecTypeEnum {
 }
 
 func (c ClusterSpecType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ClusterSpecType) UnmarshalJSON(b []byte) error {
@@ -171,7 +171,7 @@ func GetClusterSpecKubeProxyModeEnum() ClusterSpecKubeProxyModeEnum {
 }
 
 func (c ClusterSpecKubeProxyMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ClusterSpecKubeProxyMode) UnmarshalJSON(b []byte) error {

@@ -1,10 +1,10 @@
 package model
 
 import (
-	"encoding/json"
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -67,7 +67,7 @@ type ScalingActivityLogV2 struct {
 }
 
 func (o ScalingActivityLogV2) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ScalingActivityLogV2 struct{}"
 	}
@@ -100,7 +100,7 @@ func GetScalingActivityLogV2StatusEnum() ScalingActivityLogV2StatusEnum {
 }
 
 func (c ScalingActivityLogV2Status) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ScalingActivityLogV2Status) UnmarshalJSON(b []byte) error {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -25,7 +25,7 @@ type Resource struct {
 }
 
 func (o Resource) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "Resource struct{}"
 	}
@@ -50,7 +50,7 @@ func GetResourceModeEnum() ResourceModeEnum {
 }
 
 func (c ResourceMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ResourceMode) UnmarshalJSON(b []byte) error {
@@ -84,7 +84,7 @@ func GetResourceTypeEnum() ResourceTypeEnum {
 }
 
 func (c ResourceType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ResourceType) UnmarshalJSON(b []byte) error {

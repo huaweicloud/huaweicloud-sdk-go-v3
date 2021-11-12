@@ -1,7 +1,7 @@
 package model
 
 import (
-	"encoding/json"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
@@ -32,7 +32,7 @@ type ListMergeChannelsTaskRequest struct {
 }
 
 func (o ListMergeChannelsTaskRequest) String() string {
-	data, err := json.Marshal(o)
+	data, err := utils.Marshal(o)
 	if err != nil {
 		return "ListMergeChannelsTaskRequest struct{}"
 	}
@@ -73,7 +73,7 @@ func GetListMergeChannelsTaskRequestStatusEnum() ListMergeChannelsTaskRequestSta
 }
 
 func (c ListMergeChannelsTaskRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(c.value)
+	return utils.Marshal(c.value)
 }
 
 func (c *ListMergeChannelsTaskRequestStatus) UnmarshalJSON(b []byte) error {
