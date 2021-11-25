@@ -14,7 +14,7 @@ type ApiCommon struct {
 	Name string `json:"name"`
 	// API类型 - 1：公有API - 2：私有API
 
-	Type int32 `json:"type"`
+	Type ApiCommonType `json:"type"`
 	// API的版本
 
 	Version *string `json:"version,omitempty"`
@@ -129,6 +129,43 @@ func (o ApiCommon) String() string {
 	}
 
 	return strings.Join([]string{"ApiCommon", string(data)}, " ")
+}
+
+type ApiCommonType struct {
+	value int32
+}
+
+type ApiCommonTypeEnum struct {
+	E_1 ApiCommonType
+	E_2 ApiCommonType
+}
+
+func GetApiCommonTypeEnum() ApiCommonTypeEnum {
+	return ApiCommonTypeEnum{
+		E_1: ApiCommonType{
+			value: 1,
+		}, E_2: ApiCommonType{
+			value: 2,
+		},
+	}
+}
+
+func (c ApiCommonType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiCommonType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }
 
 type ApiCommonReqProtocol struct {

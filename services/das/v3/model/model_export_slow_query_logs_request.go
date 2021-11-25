@@ -48,13 +48,17 @@ type ExportSlowQueryLogsRequestXLanguage struct {
 }
 
 type ExportSlowQueryLogsRequestXLanguageEnum struct {
-	EN_USZH_CN ExportSlowQueryLogsRequestXLanguage
+	EN_US ExportSlowQueryLogsRequestXLanguage
+	ZH_CN ExportSlowQueryLogsRequestXLanguage
 }
 
 func GetExportSlowQueryLogsRequestXLanguageEnum() ExportSlowQueryLogsRequestXLanguageEnum {
 	return ExportSlowQueryLogsRequestXLanguageEnum{
-		EN_USZH_CN: ExportSlowQueryLogsRequestXLanguage{
-			value: "en-us、zh-cn",
+		EN_US: ExportSlowQueryLogsRequestXLanguage{
+			value: "en-us",
+		},
+		ZH_CN: ExportSlowQueryLogsRequestXLanguage{
+			value: "zh-cn",
 		},
 	}
 }

@@ -8,15 +8,15 @@ import (
 
 // Request Object
 type ListStatisticsRequest struct {
-	// 企业项目id
+	// 您可以通过调用企业项目管理服务（EPS)的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-	// 起始时间
+	// 起始时间(13位时间戳)，需要和to同时使用
 
-	From int64 `json:"from"`
-	// 结束时间
+	From *int64 `json:"from,omitempty"`
+	// 结束时间(13位时间戳),需要和from同时使用
 
-	To int64 `json:"to"`
+	To *int64 `json:"to,omitempty"`
 	// 要查询域名列表
 
 	Hosts *string `json:"hosts,omitempty"`

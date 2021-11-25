@@ -13,8 +13,8 @@ type BatchDisassociateThrottlingPolicyV2Response struct {
 	SuccessCount *int32 `json:"success_count,omitempty"`
 	// 解除绑定失败的API和流控绑定关系及错误信息
 
-	Failure        *[]ThrottleBindingBatchResultFailureResp `json:"failure,omitempty"`
-	HttpStatusCode int                                      `json:"-"`
+	Failure        *[]ThrottleBindingBatchFailure `json:"failure,omitempty"`
+	HttpStatusCode int                            `json:"-"`
 }
 
 func (o BatchDisassociateThrottlingPolicyV2Response) String() string {

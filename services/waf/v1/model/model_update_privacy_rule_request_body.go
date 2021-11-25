@@ -10,18 +10,18 @@ import (
 )
 
 type UpdatePrivacyRuleRequestBody struct {
-	// 规则id
+	// 隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
 
-	Id *string `json:"id,omitempty"`
-	// 隐私屏蔽规则应用的url
-
-	Url *string `json:"url,omitempty"`
+	Url string `json:"url"`
 	// 屏蔽字段
 
-	Category *UpdatePrivacyRuleRequestBodyCategory `json:"category,omitempty"`
+	Category UpdatePrivacyRuleRequestBodyCategory `json:"category"`
 	// 屏蔽字段名
 
-	Index *string `json:"index,omitempty"`
+	Index string `json:"index"`
+	// 规则描述
+
+	Description *string `json:"description,omitempty"`
 }
 
 func (o UpdatePrivacyRuleRequestBody) String() string {

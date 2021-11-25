@@ -57,6 +57,9 @@ type PublicipUpdateResp struct {
 	// IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
 
 	IpVersion *PublicipUpdateRespIpVersion `json:"ip_version,omitempty"`
+	// 功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+
+	Alias *string `json:"alias,omitempty"`
 }
 
 func (o PublicipUpdateResp) String() string {

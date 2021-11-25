@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type DebugApiV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
 	// API的编号
 
 	ApiId string `json:"api_id"`
 
-	Body *DebugApiReq `json:"body,omitempty"`
+	Body *ApiDebugInfo `json:"body,omitempty"`
 }
 
 func (o DebugApiV2Request) String() string {

@@ -17,7 +17,7 @@ type CreatePrivacyRuleResponse struct {
 	// 策略id
 
 	Policyid *string `json:"policyid,omitempty"`
-	// 隐私屏蔽规则应用的url
+	// 隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
 
 	Url *string `json:"url,omitempty"`
 	// 屏蔽字段

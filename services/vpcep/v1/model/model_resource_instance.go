@@ -8,13 +8,13 @@ import (
 
 // 资源实例详情
 type ResourceInstance struct {
-	// 资源ID，Endpoint Service ID或 Endpoint ID。
+	// 资源ID，Endpoint Service ID或Endpoint ID。
 
 	ResourceId *string `json:"resource_id,omitempty"`
 	// 标签列表。
 
 	Tags *[]TagList `json:"tags,omitempty"`
-	// 资源名称，资源没有名称时，返回 ID。
+	// 资源名称，资源没有名称时，返回ID。
 
 	ResourceName *string `json:"resource_name,omitempty"`
 }

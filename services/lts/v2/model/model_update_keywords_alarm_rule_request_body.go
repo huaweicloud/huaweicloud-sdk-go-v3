@@ -33,7 +33,7 @@ type UpdateKeywordsAlarmRuleRequestBody struct {
 	KeywordsAlarmSend bool `json:"keywords_alarm_send"`
 	// 发送主题 0:不变 1:新增 2:修改 3:删除
 
-	KeywordsAlarmSendCode int32 `json:"keywords_alarm_send_code"`
+	KeywordsAlarmSendCode UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode `json:"keywords_alarm_send_code"`
 	// domainId
 
 	DomainId string `json:"domain_id"`
@@ -97,5 +97,48 @@ func (c *UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmLevel) UnmarshalJSON(b [
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode struct {
+	value int32
+}
+
+type UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCodeEnum struct {
+	E_0 UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode
+	E_1 UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode
+	E_2 UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode
+	E_3 UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode
+}
+
+func GetUpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCodeEnum() UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCodeEnum {
+	return UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCodeEnum{
+		E_0: UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode{
+			value: 0,
+		}, E_1: UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode{
+			value: 1,
+		}, E_2: UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode{
+			value: 2,
+		}, E_3: UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode{
+			value: 3,
+		},
+	}
+}
+
+func (c UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

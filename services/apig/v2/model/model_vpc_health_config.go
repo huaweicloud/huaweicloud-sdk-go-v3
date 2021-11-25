@@ -37,6 +37,9 @@ type VpcHealthConfig struct {
 	// 是否开启双向认证。若开启，则使用实例配置中的backend_client_certificate配置项的证书
 
 	EnableClientSsl *bool `json:"enable_client_ssl,omitempty"`
+	// 健康检查状态   - 1：可用   - 2：不可用
+
+	Status *VpcHealthConfigStatus `json:"status,omitempty"`
 	// 超时时间：检查期间，无响应的时间，单位为秒。必须小于time_interval字段取值。
 
 	Timeout *int32 `json:"timeout,omitempty"`
@@ -128,5 +131,42 @@ func (c *VpcHealthConfigMethod) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type VpcHealthConfigStatus struct {
+	value int32
+}
+
+type VpcHealthConfigStatusEnum struct {
+	E_1 VpcHealthConfigStatus
+	E_2 VpcHealthConfigStatus
+}
+
+func GetVpcHealthConfigStatusEnum() VpcHealthConfigStatusEnum {
+	return VpcHealthConfigStatusEnum{
+		E_1: VpcHealthConfigStatus{
+			value: 1,
+		}, E_2: VpcHealthConfigStatus{
+			value: 2,
+		},
+	}
+}
+
+func (c VpcHealthConfigStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *VpcHealthConfigStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

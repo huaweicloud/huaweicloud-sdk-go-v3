@@ -39,13 +39,17 @@ type ShowSqlSwitchStatusRequestXLanguage struct {
 }
 
 type ShowSqlSwitchStatusRequestXLanguageEnum struct {
-	EN_USZH_CN ShowSqlSwitchStatusRequestXLanguage
+	EN_US ShowSqlSwitchStatusRequestXLanguage
+	ZH_CN ShowSqlSwitchStatusRequestXLanguage
 }
 
 func GetShowSqlSwitchStatusRequestXLanguageEnum() ShowSqlSwitchStatusRequestXLanguageEnum {
 	return ShowSqlSwitchStatusRequestXLanguageEnum{
-		EN_USZH_CN: ShowSqlSwitchStatusRequestXLanguage{
-			value: "en-us、zh-cn",
+		EN_US: ShowSqlSwitchStatusRequestXLanguage{
+			value: "en-us",
+		},
+		ZH_CN: ShowSqlSwitchStatusRequestXLanguage{
+			value: "zh-cn",
 		},
 	}
 }

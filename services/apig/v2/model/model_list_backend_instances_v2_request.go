@@ -8,21 +8,21 @@ import (
 
 // Request Object
 type ListBackendInstancesV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
 	// VPC通道的编号
 
 	VpcChannelId string `json:"vpc_channel_id"`
+	// 偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
+
+	Offset *int64 `json:"offset,omitempty"`
+	// 每页显示的条目数量
+
+	Limit *int32 `json:"limit,omitempty"`
 	// 云服务器的名称
 
 	Name *string `json:"name,omitempty"`
-	// 每页显示的条数
-
-	Limit *int32 `json:"limit,omitempty"`
-	// 页码
-
-	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListBackendInstancesV2Request) String() string {

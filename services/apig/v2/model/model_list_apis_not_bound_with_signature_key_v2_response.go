@@ -16,8 +16,8 @@ type ListApisNotBoundWithSignatureKeyV2Response struct {
 	Total int64 `json:"total"`
 	// 本次查询返回的API列表
 
-	Apis           *[]SignUnbindingApiResp `json:"apis,omitempty"`
-	HttpStatusCode int                     `json:"-"`
+	Apis           *[]ApiForSign `json:"apis,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ListApisNotBoundWithSignatureKeyV2Response) String() string {

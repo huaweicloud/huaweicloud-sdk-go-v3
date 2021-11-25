@@ -14,22 +14,22 @@ type ListServicePublicDetailsRequest struct {
 	// 发送的实体的MIME类型。推荐用户默认使用application/json，如果API是对象、镜像上传等接口，媒体类型可按照流类型的不同进行确定。
 
 	ContentType string `json:"Content-Type"`
-	// 查询返回公共的终端节点服务数 量限制，即每页返回的个数。 取值范围：0~1000，取值一般为 10，20或者50，默认为10。
+	// 查询返回公共的终端节点服务数量限制，即每页返回的个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
 
 	Limit *int32 `json:"limit,omitempty"`
-	// 偏移量。 偏移量为一个大于0小于终端节点 服务总个数的整数，表示从偏移 量后面的终端节点服务开始查 询。
+	// 偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数，表示从偏移量后面的终端节点服务开始查询。
 
 	Offset *int32 `json:"offset,omitempty"`
-	// 公共终端节点服务的名称，支持 大小写以及模糊匹配。
+	// 公共终端节点服务的名称，支持大小写以及模糊匹配。
 
 	EndpointServiceName *string `json:"endpoint_service_name,omitempty"`
-	// 公共终端节点服务的ID，唯一标 识。
+	// 公共终端节点服务的ID，唯一标识。
 
 	Id *string `json:"id,omitempty"`
-	// 查询结果中终端节点服务列表的 排序字段，取值为： ● create_at：终端节点服务的创 建时间 ● update_at：终端节点服务的 更新时间 默认值为create_at。
+	// 查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
 
 	SortKey *ListServicePublicDetailsRequestSortKey `json:"sort_key,omitempty"`
-	// 查询结果中终端节点服务列表的 排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+	// 查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
 
 	SortDir *ListServicePublicDetailsRequestSortDir `json:"sort_dir,omitempty"`
 }

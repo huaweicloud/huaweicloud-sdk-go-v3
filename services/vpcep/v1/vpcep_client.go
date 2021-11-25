@@ -52,7 +52,7 @@ func (c *VpcepClient) CreateEndpoint(request *model.CreateEndpointRequest) (*mod
 	}
 }
 
-//功能介绍 创建终端节点服务，允许其他用户创建终端节点连接您创建的终端节点服务，使用您 所提供的服务。 说明 该接口为异步接口，调用成功会返回200状态码，说明请求已正常下发。通常创建终端节点服务 需要1~2分钟，可以通过查询终端节点服务详情查看创建结果。
+//功能介绍 创建终端节点服务，允许其他用户创建终端节点连接您创建的终端节点服务，使用您所提供的服务。 说明 该接口为异步接口，调用成功会返回200状态码，说明请求已正常下发。通常创建终端节点服务需要1~2分钟，可以通过查询终端节点服务详情查看创建结果。
 func (c *VpcepClient) CreateEndpointService(request *model.CreateEndpointServiceRequest) (*model.CreateEndpointServiceResponse, error) {
 	requestDef := GenReqDefForCreateEndpointService()
 
@@ -85,17 +85,6 @@ func (c *VpcepClient) DeleteEndpointService(request *model.DeleteEndpointService
 	}
 }
 
-//功能介绍 查询当前用户下的终端节点的列表。
-func (c *VpcepClient) ListEndpointDetails(request *model.ListEndpointDetailsRequest) (*model.ListEndpointDetailsResponse, error) {
-	requestDef := GenReqDefForListEndpointDetails()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListEndpointDetailsResponse), nil
-	}
-}
-
 //功能介绍 查询终端节点的详细信息。
 func (c *VpcepClient) ListEndpointInfoDetails(request *model.ListEndpointInfoDetailsRequest) (*model.ListEndpointInfoDetailsResponse, error) {
 	requestDef := GenReqDefForListEndpointInfoDetails()
@@ -118,6 +107,17 @@ func (c *VpcepClient) ListEndpointService(request *model.ListEndpointServiceRequ
 	}
 }
 
+//功能介绍 查询当前用户下的终端节点的列表。
+func (c *VpcepClient) ListEndpoints(request *model.ListEndpointsRequest) (*model.ListEndpointsResponse, error) {
+	requestDef := GenReqDefForListEndpoints()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEndpointsResponse), nil
+	}
+}
+
 //功能介绍 查询用户的资源配额，包括终端节点服务和终端节点。
 func (c *VpcepClient) ListQuotaDetails(request *model.ListQuotaDetailsRequest) (*model.ListQuotaDetailsResponse, error) {
 	requestDef := GenReqDefForListQuotaDetails()
@@ -129,7 +129,7 @@ func (c *VpcepClient) ListQuotaDetails(request *model.ListQuotaDetailsRequest) (
 	}
 }
 
-//功能介绍 查询连接当前用户下的某一个终端节点服务的连接列表。marker_id是连接的唯一标 识。
+//功能介绍 查询连接当前用户下的某一个终端节点服务的连接列表。marker_id是连接的唯一标识。
 func (c *VpcepClient) ListServiceConnections(request *model.ListServiceConnectionsRequest) (*model.ListServiceConnectionsResponse, error) {
 	requestDef := GenReqDefForListServiceConnections()
 
@@ -140,7 +140,7 @@ func (c *VpcepClient) ListServiceConnections(request *model.ListServiceConnectio
 	}
 }
 
-//功能介绍 查询终端节点服务的概要信息，此接口是供创建终端节点的用户来查询需要连接的终 端节点服务信息。此接口既可以方便其他用户查询到您的终端节点服务概要信息又可 以避免您的终端节点服务的细节信息暴露给其他用户。
+//功能介绍 查询终端节点服务的概要信息，此接口是供创建终端节点的用户来查询需要连接的终端节点服务信息。此接口既可以方便其他用户查询到您的终端节点服务概要信息又可以避免您的终端节点服务的细节信息暴露给其他用户。
 func (c *VpcepClient) ListServiceDescribeDetails(request *model.ListServiceDescribeDetailsRequest) (*model.ListServiceDescribeDetailsResponse, error) {
 	requestDef := GenReqDefForListServiceDescribeDetails()
 
@@ -173,7 +173,7 @@ func (c *VpcepClient) ListServicePermissionsDetails(request *model.ListServicePe
 	}
 }
 
-//功能介绍 查询公共终端节点服务的列表，公共终端节点服务是所有用户可见且可连接的终端节 点服务，由运维人员创建，用户可直接使用，但无权创建。
+//功能介绍 查询公共终端节点服务的列表，公共终端节点服务是所有用户可见且可连接的终端节点服务，由运维人员创建，用户可直接使用，但无权创建。
 func (c *VpcepClient) ListServicePublicDetails(request *model.ListServicePublicDetailsRequest) (*model.ListServicePublicDetailsResponse, error) {
 	requestDef := GenReqDefForListServicePublicDetails()
 

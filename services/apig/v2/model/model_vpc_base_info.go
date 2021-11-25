@@ -12,7 +12,7 @@ type VpcBaseInfo struct {
 	EcsId *string `json:"ecs_id,omitempty"`
 	// 云服务器名称
 
-	EcsName *int32 `json:"ecs_name,omitempty"`
+	EcsName *string `json:"ecs_name,omitempty"`
 	// 是否使用级联方式  暂不支持
 
 	CascadeFlag *bool `json:"cascade_flag,omitempty"`

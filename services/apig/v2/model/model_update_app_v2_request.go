@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type UpdateAppV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
-	// APP的编号
+	// 应用编号
 
 	AppId string `json:"app_id"`
 
-	Body *AppReq `json:"body,omitempty"`
+	Body *AppCreate `json:"body,omitempty"`
 }
 
 func (o UpdateAppV2Request) String() string {

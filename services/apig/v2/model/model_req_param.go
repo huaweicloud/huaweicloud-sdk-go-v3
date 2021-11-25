@@ -27,10 +27,10 @@ type ReqParam struct {
 	SampleValue *string `json:"sample_value,omitempty"`
 	// 是否必须 - 1：是 - 2：否  location为PATH时，required默认为1，其他场景required默认为2
 
-	Required *int32 `json:"required,omitempty"`
+	Required *ReqParamRequired `json:"required,omitempty"`
 	// 是否开启校验 - 1：开启校验 - 2：不开启校验
 
-	ValidEnable *int32 `json:"valid_enable,omitempty"`
+	ValidEnable *ReqParamValidEnable `json:"valid_enable,omitempty"`
 	// 描述信息。长度不超过255个字符 > 中文字符必须为UTF-8或者unicode编码。
 
 	Remark *string `json:"remark,omitempty"`
@@ -57,7 +57,7 @@ type ReqParam struct {
 	JsonSchema *string `json:"json_schema,omitempty"`
 	// 是否透传 - 1：是 - 2：否
 
-	PassThrough *int32 `json:"pass_through,omitempty"`
+	PassThrough *ReqParamPassThrough `json:"pass_through,omitempty"`
 	// 参数编号
 
 	Id *string `json:"id,omitempty"`
@@ -149,5 +149,116 @@ func (c *ReqParamLocation) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type ReqParamRequired struct {
+	value int32
+}
+
+type ReqParamRequiredEnum struct {
+	E_1 ReqParamRequired
+	E_2 ReqParamRequired
+}
+
+func GetReqParamRequiredEnum() ReqParamRequiredEnum {
+	return ReqParamRequiredEnum{
+		E_1: ReqParamRequired{
+			value: 1,
+		}, E_2: ReqParamRequired{
+			value: 2,
+		},
+	}
+}
+
+func (c ReqParamRequired) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ReqParamRequired) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type ReqParamValidEnable struct {
+	value int32
+}
+
+type ReqParamValidEnableEnum struct {
+	E_1 ReqParamValidEnable
+	E_2 ReqParamValidEnable
+}
+
+func GetReqParamValidEnableEnum() ReqParamValidEnableEnum {
+	return ReqParamValidEnableEnum{
+		E_1: ReqParamValidEnable{
+			value: 1,
+		}, E_2: ReqParamValidEnable{
+			value: 2,
+		},
+	}
+}
+
+func (c ReqParamValidEnable) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ReqParamValidEnable) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type ReqParamPassThrough struct {
+	value int32
+}
+
+type ReqParamPassThroughEnum struct {
+	E_1 ReqParamPassThrough
+	E_2 ReqParamPassThrough
+}
+
+func GetReqParamPassThroughEnum() ReqParamPassThroughEnum {
+	return ReqParamPassThroughEnum{
+		E_1: ReqParamPassThrough{
+			value: 1,
+		}, E_2: ReqParamPassThrough{
+			value: 2,
+		},
+	}
+}
+
+func (c ReqParamPassThrough) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ReqParamPassThrough) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

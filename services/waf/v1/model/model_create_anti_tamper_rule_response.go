@@ -17,7 +17,7 @@ type CreateAntiTamperRuleResponse struct {
 	// 防篡改的域名
 
 	Hostname *string `json:"hostname,omitempty"`
-	// 防篡改的url
+	// 防篡改的url，
 
 	Url *string `json:"url,omitempty"`
 	// 创建规则的时间戳

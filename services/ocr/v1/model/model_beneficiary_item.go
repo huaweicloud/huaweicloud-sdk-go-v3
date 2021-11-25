@@ -10,9 +10,8 @@ type BeneficiaryItem struct {
 	BeneficiaryName *InsurancePolicyDetail `json:"beneficiary_name,omitempty"`
 
 	BeneficiaryType *InsurancePolicyDetail `json:"beneficiary_type,omitempty"`
-	// 受益顺序。
 
-	BeneficiaryOrder *interface{} `json:"beneficiary_order,omitempty"`
+	BeneficiaryOrder *InsurancePolicyDetail `json:"beneficiary_order,omitempty"`
 
 	BeneficiaryShare *InsurancePolicyDetail `json:"beneficiary_share,omitempty"`
 }

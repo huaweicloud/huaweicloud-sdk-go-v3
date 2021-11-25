@@ -48,13 +48,17 @@ type ExportSqlStatementsRequestXLanguage struct {
 }
 
 type ExportSqlStatementsRequestXLanguageEnum struct {
-	EN_USZH_CN ExportSqlStatementsRequestXLanguage
+	EN_US ExportSqlStatementsRequestXLanguage
+	ZH_CN ExportSqlStatementsRequestXLanguage
 }
 
 func GetExportSqlStatementsRequestXLanguageEnum() ExportSqlStatementsRequestXLanguageEnum {
 	return ExportSqlStatementsRequestXLanguageEnum{
-		EN_USZH_CN: ExportSqlStatementsRequestXLanguage{
-			value: "en-us、zh-cn",
+		EN_US: ExportSqlStatementsRequestXLanguage{
+			value: "en-us",
+		},
+		ZH_CN: ExportSqlStatementsRequestXLanguage{
+			value: "zh-cn",
 		},
 	}
 }

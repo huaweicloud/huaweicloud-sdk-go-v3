@@ -7,7 +7,7 @@ import (
 )
 
 type VatInvoiceResult struct {
-	// 增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票
+	// 增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - roll：增值税普通发票（卷票）
 
 	Type *string `json:"type,omitempty"`
 	// 发票联次。 当“advanced_mode”设置为“true”时才返回。

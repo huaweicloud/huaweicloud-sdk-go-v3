@@ -40,6 +40,9 @@ type PublicipCreateResp struct {
 	// 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	// 功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+
+	Alias *string `json:"alias,omitempty"`
 }
 
 func (o PublicipCreateResp) String() string {

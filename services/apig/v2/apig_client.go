@@ -866,17 +866,6 @@ func (c *ApigClient) ChangeApiVersionV2(request *model.ChangeApiVersionV2Request
 	}
 }
 
-//后端连通性检测接口
-func (c *ApigClient) CheckBackendConnectivity(request *model.CheckBackendConnectivityRequest) (*model.CheckBackendConnectivityResponse, error) {
-	requestDef := GenReqDefForCheckBackendConnectivity()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CheckBackendConnectivityResponse), nil
-	}
-}
-
 //API分组是API的管理单元，一个API分组等同于一个服务入口，创建API分组时，返回一个子域名作为访问入口。建议一个API分组下的API具有一定的相关性。
 func (c *ApigClient) CreateApiGroupV2(request *model.CreateApiGroupV2Request) (*model.CreateApiGroupV2Response, error) {
 	requestDef := GenReqDefForCreateApiGroupV2()

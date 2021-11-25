@@ -21,7 +21,7 @@ type UpdateFunctionConfigRequestBody struct {
 	Timeout int32 `json:"timeout"`
 	// 函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
 
-	Handler *string `json:"handler,omitempty"`
+	Handler string `json:"handler"`
 	// 函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
 
 	MemorySize int32 `json:"memory_size"`

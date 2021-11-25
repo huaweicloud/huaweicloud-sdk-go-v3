@@ -8,7 +8,7 @@ import (
 
 // 攻击类型
 type ShowEventItems struct {
-	// 次数
+	// 攻击发生时的时间戳（毫秒）
 
 	Time *int64 `json:"time,omitempty"`
 	// 策略id
@@ -29,15 +29,42 @@ type ShowEventItems struct {
 	// 命中的规则id
 
 	Rule *string `json:"rule,omitempty"`
-	// 命中的载荷
-
-	Payload *string `json:"payload,omitempty"`
 	// 防护动作
 
 	Action *string `json:"action,omitempty"`
-	// 时间戳
+	// 攻击请求的cookie
 
-	Timestamp *int64 `json:"timestamp,omitempty"`
+	Cookie *interface{} `json:"cookie,omitempty"`
+	// 攻击请求的headers
+
+	Headers *string `json:"headers,omitempty"`
+	// 被攻击的域名id
+
+	HostId *interface{} `json:"host_id,omitempty"`
+	// 攻击请求的id
+
+	Id *string `json:"id,omitempty"`
+	// 恶意负载
+
+	Payload *string `json:"payload,omitempty"`
+	// 恶意负载位置
+
+	PayloadLocation *string `json:"payload_location,omitempty"`
+	// 源ip地理位置
+
+	Region *string `json:"region,omitempty"`
+	// 攻击请求的请求行
+
+	RequestLine *string `json:"request_line,omitempty"`
+	// 返回大小（字节）
+
+	ResponseSize *string `json:"response_size,omitempty"`
+	// 响应时间（毫秒）
+
+	ResponseTime *string `json:"response_time,omitempty"`
+	// 响应码
+
+	Status *string `json:"status,omitempty"`
 }
 
 func (o ShowEventItems) String() string {

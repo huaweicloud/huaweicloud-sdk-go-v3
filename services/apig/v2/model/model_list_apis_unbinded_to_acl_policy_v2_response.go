@@ -16,8 +16,8 @@ type ListApisUnbindedToAclPolicyV2Response struct {
 	Total int64 `json:"total"`
 	// 本次查询返回的API列表
 
-	Apis           *[]UnbindApiForAclPageApisResp `json:"apis,omitempty"`
-	HttpStatusCode int                            `json:"-"`
+	Apis           *[]UnbindApiForAcl `json:"apis,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ListApisUnbindedToAclPolicyV2Response) String() string {

@@ -63,6 +63,17 @@ func (c *BcsClient) BatchRemoveOrgsFromChannel(request *model.BatchRemoveOrgsFro
 	}
 }
 
+//通过用户名生成指定服务实例组织用户证书
+func (c *BcsClient) CreateBlockchainCertByUserName(request *model.CreateBlockchainCertByUserNameRequest) (*model.CreateBlockchainCertByUserNameResponse, error) {
+	requestDef := GenReqDefForCreateBlockchainCertByUserName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateBlockchainCertByUserNameResponse), nil
+	}
+}
+
 //创建BCS服务实例,只支持按需创建
 func (c *BcsClient) CreateNewBlockchain(request *model.CreateNewBlockchainRequest) (*model.CreateNewBlockchainResponse, error) {
 	requestDef := GenReqDefForCreateNewBlockchain()
@@ -85,6 +96,17 @@ func (c *BcsClient) DeleteBlockchain(request *model.DeleteBlockchainRequest) (*m
 	}
 }
 
+//可通过此接口批量取消邀请或删除对已退出或拒绝加入或解散的成员邀请信息
+func (c *BcsClient) DeleteMemberInvite(request *model.DeleteMemberInviteRequest) (*model.DeleteMemberInviteResponse, error) {
+	requestDef := GenReqDefForDeleteMemberInvite()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteMemberInviteResponse), nil
+	}
+}
+
 //下载指定服务实例相关证书
 func (c *BcsClient) DownloadBlockchainCert(request *model.DownloadBlockchainCertRequest) (*model.DownloadBlockchainCertResponse, error) {
 	requestDef := GenReqDefForDownloadBlockchainCert()
@@ -104,6 +126,17 @@ func (c *BcsClient) DownloadBlockchainSdkConfig(request *model.DownloadBlockchai
 		return nil, err
 	} else {
 		return resp.(*model.DownloadBlockchainSdkConfigResponse), nil
+	}
+}
+
+//冻结指定服务实例组织用户证书，冻结后需等待半分钟到一分钟左右生效
+func (c *BcsClient) FreezeCert(request *model.FreezeCertRequest) (*model.FreezeCertResponse, error) {
+	requestDef := GenReqDefForFreezeCert()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.FreezeCertResponse), nil
 	}
 }
 
@@ -258,6 +291,17 @@ func (c *BcsClient) ShowBlockchainStatus(request *model.ShowBlockchainStatusRequ
 		return nil, err
 	} else {
 		return resp.(*model.ShowBlockchainStatusResponse), nil
+	}
+}
+
+//解冻指定服务实例组织用户证书，解冻后需等待半分钟到一分钟左右生效
+func (c *BcsClient) UnfreezeCert(request *model.UnfreezeCertRequest) (*model.UnfreezeCertResponse, error) {
+	requestDef := GenReqDefForUnfreezeCert()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnfreezeCertResponse), nil
 	}
 }
 

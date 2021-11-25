@@ -38,6 +38,9 @@ type VpcHealthConfigBase struct {
 	// 是否开启双向认证。若开启，则使用实例配置中的backend_client_certificate配置项的证书
 
 	EnableClientSsl *bool `json:"enable_client_ssl,omitempty"`
+	// 健康检查状态   - 1：可用   - 2：不可用
+
+	Status *VpcHealthConfigBaseStatus `json:"status,omitempty"`
 }
 
 func (o VpcHealthConfigBase) String() string {
@@ -126,5 +129,42 @@ func (c *VpcHealthConfigBaseMethod) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type VpcHealthConfigBaseStatus struct {
+	value int32
+}
+
+type VpcHealthConfigBaseStatusEnum struct {
+	E_1 VpcHealthConfigBaseStatus
+	E_2 VpcHealthConfigBaseStatus
+}
+
+func GetVpcHealthConfigBaseStatusEnum() VpcHealthConfigBaseStatusEnum {
+	return VpcHealthConfigBaseStatusEnum{
+		E_1: VpcHealthConfigBaseStatus{
+			value: 1,
+		}, E_2: VpcHealthConfigBaseStatus{
+			value: 2,
+		},
+	}
+}
+
+func (c VpcHealthConfigBaseStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *VpcHealthConfigBaseStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

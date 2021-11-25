@@ -29,7 +29,7 @@ type JudgementTaskRequestBody struct {
 	// 代码运行超时时间，单位为秒
 
 	Timeout *int32 `json:"timeout,omitempty"`
-	// 结果返回类型：sysout（标准输出）、fileout（以文件形式输出）、imgout（以图片形式输出）、caseout（用例运行返回）、judgeout（输出评判返回）
+	// 结果返回类型：sysout（标准输出）、fileout（以文件形式输出）、imgout（以图片形式输出）、caseout（用例运行返回）、judgeout（用例对比返回）
 
 	OutputType JudgementTaskRequestBodyOutputType `json:"output_type"`
 	// 当判题结果类型是caseout和judgeout类型才需要传的字段，表示用例数据

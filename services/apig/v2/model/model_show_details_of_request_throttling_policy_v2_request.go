@@ -8,10 +8,10 @@ import (
 
 // Request Object
 type ShowDetailsOfRequestThrottlingPolicyV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
-	// 流控策略的ID
+	// 流控策略的编号
 
 	ThrottleId string `json:"throttle_id"`
 }

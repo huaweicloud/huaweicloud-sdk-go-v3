@@ -16,7 +16,7 @@ type ListEnvironmentsV2Response struct {
 	Total int64 `json:"total"`
 	// 本次返回的环境列表
 
-	Envs           *[]EnvResp `json:"envs,omitempty"`
+	Envs           *[]EnvInfo `json:"envs,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }
 

@@ -32,6 +32,9 @@ type ListSlowlogStatisticsRequest struct {
 	// 语句类型，ALL表示查询所有语句类型，也可指定日志类型 - INSERT - UPDATE - SELECT - DELETE - CREATE - ALL
 
 	Type ListSlowlogStatisticsRequestType `json:"type"`
+	// 取值范围：\"executeTime\",表示按执行时间降序排序，不传或者传其他表示按执行次数降序排序
+
+	Sort *string `json:"sort,omitempty"`
 }
 
 func (o ListSlowlogStatisticsRequest) String() string {

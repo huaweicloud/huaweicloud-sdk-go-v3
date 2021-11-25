@@ -14,9 +14,9 @@ type ListSignatureKeysBindedToApiV2Response struct {
 	// 满足条件的记录数
 
 	Total int64 `json:"total"`
-	// 本次查询返回的列表
+	// API与签名密钥的绑定关系列表
 
-	Bindings       *[]SignBindingApiResp `json:"bindings,omitempty"`
+	Bindings       *[]SignApiBindingInfo `json:"bindings,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }
 

@@ -46,6 +46,9 @@ type QueryResRecordsDetailReq struct {
 	// 企业子账号ID。  说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
 
 	SubCustomerId *string `json:"sub_customer_id,omitempty"`
+	// 统计类型。默认值为1。 1：按账期2：按天
+
+	StatisticType *int32 `json:"statistic_type,omitempty"`
 }
 
 func (o QueryResRecordsDetailReq) String() string {

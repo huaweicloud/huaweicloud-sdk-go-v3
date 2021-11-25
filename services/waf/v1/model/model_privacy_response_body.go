@@ -17,6 +17,12 @@ type PrivacyResponseBody struct {
 	// 策略id
 
 	Policyid *string `json:"policyid,omitempty"`
+	// 创建规则的时间，格式为13位毫秒时间戳
+
+	Timestamp *int64 `json:"timestamp,omitempty"`
+	// 规则状态，0：关闭，1：开启
+
+	Status *int32 `json:"status,omitempty"`
 	// 隐私屏蔽规则应用的url
 
 	Url *string `json:"url,omitempty"`

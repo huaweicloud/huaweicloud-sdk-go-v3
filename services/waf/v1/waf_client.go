@@ -272,7 +272,7 @@ func (c *WafClient) ListCompositeHosts(request *model.ListCompositeHostsRequest)
 	}
 }
 
-//查询攻击事件列表
+//查询攻击事件列表，该API暂时不支持查询全部防护事件，pagesize参数不可设为-1
 func (c *WafClient) ListEvent(request *model.ListEventRequest) (*model.ListEventResponse, error) {
 	requestDef := GenReqDefForListEvent()
 
@@ -368,17 +368,6 @@ func (c *WafClient) ListQpsTimeline(request *model.ListQpsTimelineRequest) (*mod
 		return nil, err
 	} else {
 		return resp.(*model.ListQpsTimelineResponse), nil
-	}
-}
-
-//查询安全统计响应码数据
-func (c *WafClient) ListResponseCodeTimeline(request *model.ListResponseCodeTimelineRequest) (*model.ListResponseCodeTimelineResponse, error) {
-	requestDef := GenReqDefForListResponseCodeTimeline()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListResponseCodeTimelineResponse), nil
 	}
 }
 
@@ -525,7 +514,7 @@ func (c *WafClient) UpdateGeoipRule(request *model.UpdateGeoipRuleRequest) (*mod
 	}
 }
 
-//更新云模式防护域名
+//更新云模式防护域名配置，在没有填入源站信息server的原始数据的情况下，则新的源站信息server会覆盖源站信息，而不是新增源站
 func (c *WafClient) UpdateHost(request *model.UpdateHostRequest) (*model.UpdateHostResponse, error) {
 	requestDef := GenReqDefForUpdateHost()
 
@@ -569,7 +558,7 @@ func (c *WafClient) UpdatePolicyProtectHost(request *model.UpdatePolicyProtectHo
 	}
 }
 
-//查询敏感信息选项的详细信息。
+//修改单条规则的状态
 func (c *WafClient) UpdatePolicyRuleStatus(request *model.UpdatePolicyRuleStatusRequest) (*model.UpdatePolicyRuleStatusResponse, error) {
 	requestDef := GenReqDefForUpdatePolicyRuleStatus()
 

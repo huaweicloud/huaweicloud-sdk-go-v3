@@ -1,10 +1,11 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"strings"
 )
 
@@ -21,7 +22,7 @@ type ListServiceDescribeDetailsResponse struct {
 	ServiceType *ListServiceDescribeDetailsResponseServiceType `json:"service_type,omitempty"`
 	// 终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH: MM:SSZ
 
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty"`
 	// 连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
 
 	IsCharge       *bool `json:"is_charge,omitempty"`

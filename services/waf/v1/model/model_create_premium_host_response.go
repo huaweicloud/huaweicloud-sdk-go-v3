@@ -14,7 +14,7 @@ type CreatePremiumHostResponse struct {
 	// 策略id
 
 	Policyid *string `json:"policyid,omitempty"`
-	// 策略id
+	// 域名id
 
 	Hostname *string `json:"hostname,omitempty"`
 	// 租户id

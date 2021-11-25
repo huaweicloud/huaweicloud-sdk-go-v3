@@ -13,7 +13,7 @@ type StatisticsGroup struct {
 	MaxLatency *int32 `json:"max_latency,omitempty"`
 	// 平均延时  单位：ms
 
-	AvgLatency float32 `json:"avg_latency,omitempty"`
+	AvgLatency *float32 `json:"avg_latency,omitempty"`
 	// 请求总次数
 
 	ReqCount *int32 `json:"req_count,omitempty"`

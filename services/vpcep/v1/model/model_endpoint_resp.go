@@ -1,10 +1,11 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"strings"
 )
 
@@ -37,24 +38,30 @@ type EndpointResp struct {
 	// 访问所连接的终端节点服务的域 名。 当“enable_dns”为true时，该 参数可见。
 
 	DnsNames *[]string `json:"dns_names,omitempty"`
-	// vpc_id对应VPC下已创建的网络 （network）的ID，UUID格式。
+	// 访问所连接的终端节点服务的IP。 仅当同时满足如下条件时，返回该参数：  当查询连接interface类型终端节点服务的终端节点时。 终端节点服务启用“连接审批”功能，且已经“接受”连接审批。 “status”可以是“accepted”或者“rejected（仅支持“接受”连接审批后再“拒绝”的情况）”。
 
-	SubnetId *string `json:"subnet_id,omitempty"`
+	Ip *string `json:"ip,omitempty"`
 	// 终端节点所在的VPC的ID。
 
 	VpcId *string `json:"vpc_id,omitempty"`
+	// vpc_id对应VPC下已创建的网络 （network）的ID，UUID格式。
+
+	SubnetId *string `json:"subnet_id,omitempty"`
 	// 终端节点的创建时间。 采用UTC时间格式，格式为： YYYY-MM-DDTHH:MM:SSZ
 
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty"`
 	// 终端节点的更新时间。 采用UTC时间格式，格式为： YYYY-MM-DDTHH:MM:SSZ
 
-	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 	// 项目ID，获取方法请参见获取项 目ID。
 
 	ProjectId *string `json:"project_id,omitempty"`
 	// 标签列表，没有标签默认为空数组。
 
 	Tags *[]TagList `json:"tags,omitempty"`
+	// 错误信息。  当终端节点状态异常，即“status”的值为“failed”时，会返回该字段。
+
+	Error *[]QueryError `json:"error,omitempty"`
 	// 控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点 服务的终端节点时，显示此参 数。
 
 	Whitelist *[]string `json:"whitelist,omitempty"`

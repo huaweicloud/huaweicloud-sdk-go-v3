@@ -15,7 +15,7 @@ type CreateApiV2Response struct {
 	Name string `json:"name"`
 	// API类型 - 1：公有API - 2：私有API
 
-	Type int32 `json:"type"`
+	Type CreateApiV2ResponseType `json:"type"`
 	// API的版本
 
 	Version *string `json:"version,omitempty"`
@@ -136,6 +136,43 @@ func (o CreateApiV2Response) String() string {
 	}
 
 	return strings.Join([]string{"CreateApiV2Response", string(data)}, " ")
+}
+
+type CreateApiV2ResponseType struct {
+	value int32
+}
+
+type CreateApiV2ResponseTypeEnum struct {
+	E_1 CreateApiV2ResponseType
+	E_2 CreateApiV2ResponseType
+}
+
+func GetCreateApiV2ResponseTypeEnum() CreateApiV2ResponseTypeEnum {
+	return CreateApiV2ResponseTypeEnum{
+		E_1: CreateApiV2ResponseType{
+			value: 1,
+		}, E_2: CreateApiV2ResponseType{
+			value: 2,
+		},
+	}
+}
+
+func (c CreateApiV2ResponseType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateApiV2ResponseType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }
 
 type CreateApiV2ResponseReqProtocol struct {

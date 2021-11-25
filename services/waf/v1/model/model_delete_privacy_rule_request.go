@@ -8,13 +8,13 @@ import (
 
 // Request Object
 type DeletePrivacyRuleRequest struct {
-	// 企业项目id
+	// 您可以通过调用企业项目管理服务（EPS)的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-	// 策略id（策略id从查询防护策略列表接口获取）
+	// 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id
 
 	PolicyId string `json:"policy_id"`
-	// privacyRuleId
+	// 隐私屏蔽规则id，从查询隐私屏蔽防护规则接口https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=WAF&api=ListPrivacyRule获取
 
 	RuleId string `json:"rule_id"`
 }

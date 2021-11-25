@@ -10,8 +10,8 @@ import (
 type ListVersionDetailsResponse struct {
 	// VPC终端节点版本信息列表。
 
-	Versions       *[]Versions `json:"versions,omitempty"`
-	HttpStatusCode int         `json:"-"`
+	Versions       *[]Version `json:"versions,omitempty"`
+	HttpStatusCode int        `json:"-"`
 }
 
 func (o ListVersionDetailsResponse) String() string {

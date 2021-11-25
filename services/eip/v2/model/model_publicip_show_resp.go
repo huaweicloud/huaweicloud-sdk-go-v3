@@ -63,6 +63,9 @@ type PublicipShowResp struct {
 	// 功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
 
 	AllowShareBandwidthTypes *[]string `json:"allow_share_bandwidth_types,omitempty"`
+	// 功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+
+	Alias *string `json:"alias,omitempty"`
 }
 
 func (o PublicipShowResp) String() string {

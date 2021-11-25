@@ -16,8 +16,8 @@ type ListRequestThrottlingPolicyV2Response struct {
 	Total int64 `json:"total"`
 	// 本次查询到的流控策略列表
 
-	Throttles      *[]ThrottleResp `json:"throttles,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	Throttles      *[]ThrottlesInfo `json:"throttles,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ListRequestThrottlingPolicyV2Response) String() string {

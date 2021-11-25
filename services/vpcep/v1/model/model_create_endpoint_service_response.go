@@ -1,10 +1,11 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"strings"
 )
 
@@ -13,36 +14,36 @@ type CreateEndpointServiceResponse struct {
 	// 终端节点服务的ID，唯一标识。
 
 	Id *string `json:"id,omitempty"`
-	// 标识终端节点服务后端资源的ID，格式为通用 唯一识别码（Universally Unique Identifier， 下文简称UUID）。取值为： ● LB类型：增强型负载均衡器内网IP对应的端 口ID。 ● VM类型：弹性云服务器IP地址对应的网卡 ID。 ● VIP类型：虚拟资源所在物理服务器对应的网 卡ID。
+	// 标识终端节点服务后端资源的ID，格式为通用唯一识别码 （Universally Unique Identifier，下文简称UUID）。取值为： ● LB类型：增强型负载均衡器内网IP对应的端口ID。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 ● VIP类型：虚拟资源所在物理服务器对应的网卡ID。
 
 	PortId *string `json:"port_id,omitempty"`
-	// 虚拟IP的网卡ID。 仅当“port_id”为“VIP类型”时，返回该参 数。
+	// 虚拟IP的网卡ID。 仅当“port_id”为“VIP类型”时，返回该参数。
 
 	VipPortId *string `json:"vip_port_id,omitempty"`
 	// 终端节点服务的名称。
 
 	ServiceName *string `json:"service_name,omitempty"`
-	// 终端节点服务类型。 终端节点服务类型包括“网关（gataway）型” 和“接口（interface）型”： ● gataway：由运维人员配置。用户无需创 建，可直接使用。 ● interface：包括运维人员配置的云服务和用 户自己创建的私有服务。其中，运维人员配 置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和 Interface类型终端节点服务的终端节点。
-
-	ServiceType *string `json:"service_type,omitempty"`
 	// 资源类型。 ● VM：云服务器。 ● VIP：虚拟IP。 ● LB：增强负载均衡型。
 
 	ServerType *CreateEndpointServiceResponseServerType `json:"server_type,omitempty"`
 	// 终端节点服务对应后端资源所在的VPC的ID。
 
 	VpcId *string `json:"vpc_id,omitempty"`
-	// 是否需要审批。 ● false：不需要审批，创建的终端节点连接直 接为accepted状态。 ● true：需要审批，创建的终端节点连接为 pendingAcceptance状态，需要终端节点服 务所属用户审核后方可使用。
+	// 是否需要审批。 ● false：不需要审批，创建的终端节点连接直接为accepted状态。 ● true：需要审批，创建的终端节点连接为pendingAcceptance状态，需要终端节点服务所属用户审核后方可使用。
 
 	ApprovalEnabled *bool `json:"approval_enabled,omitempty"`
 	// 终端节点服务的状态。 ● creating：创建中 ● available：可连接 ● failed：失败
 
 	Status *CreateEndpointServiceResponseStatus `json:"status,omitempty"`
-	// 终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH: MM:SSZ
+	// 终端节点服务类型。 终端节点服务类型包括“网关（gataway）型”和“接口（interface）型”： ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。其中，运维人员配 置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
 
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
-	// 终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH: MM:SSZ
+	ServiceType *string `json:"service_type,omitempty"`
+	// 终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
 
-	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty"`
+	// 终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+
+	UpdatedAt *string `json:"updated_at,omitempty"`
 	// 项目ID
 
 	ProjectId *string `json:"project_id,omitempty"`

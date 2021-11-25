@@ -17,16 +17,10 @@ type DeleteValueListResponse struct {
 	// 引用表类型
 
 	Type *string `json:"type,omitempty"`
-	// 引用表描述
+	// 删除引用表的时间，时间为13位毫秒时间戳
 
-	Description *string `json:"description,omitempty"`
-	// 引用表时间戳
-
-	Timestamp *int64 `json:"timestamp,omitempty"`
-	// 引用表的值
-
-	Values         *[]string `json:"values,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Timestamp      *int64 `json:"timestamp,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o DeleteValueListResponse) String() string {

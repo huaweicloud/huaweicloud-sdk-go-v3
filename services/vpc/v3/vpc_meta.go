@@ -364,7 +364,7 @@ func GenReqDefForUpdateSubNetworkInterface() *def.HttpRequestDef {
 func GenReqDefForCreateAddressGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v3/{project_id}/vpc/address_groups").
+		WithPath("/v3/{project_id}/vpc/address-groups").
 		WithResponse(new(model.CreateAddressGroupResponse)).
 		WithContentType("application/json")
 
@@ -379,7 +379,7 @@ func GenReqDefForCreateAddressGroup() *def.HttpRequestDef {
 func GenReqDefForDeleteAddressGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v3/{project_id}/vpc/address_groups/{address_group_id}").
+		WithPath("/v3/{project_id}/vpc/address-groups/{address_group_id}").
 		WithResponse(new(model.DeleteAddressGroupResponse)).
 		WithContentType("application/json")
 
@@ -395,7 +395,7 @@ func GenReqDefForDeleteAddressGroup() *def.HttpRequestDef {
 func GenReqDefForDeleteIpAddressGroupForce() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v3/{project_id}/vpc/address_groups/{address_group_id}/force").
+		WithPath("/v3/{project_id}/vpc/address-groups/{address_group_id}/force").
 		WithResponse(new(model.DeleteIpAddressGroupForceResponse)).
 		WithContentType("application/json")
 
@@ -411,7 +411,7 @@ func GenReqDefForDeleteIpAddressGroupForce() *def.HttpRequestDef {
 func GenReqDefForListAddressGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v3/{project_id}/vpc/address_groups").
+		WithPath("/v3/{project_id}/vpc/address-groups").
 		WithResponse(new(model.ListAddressGroupResponse)).
 		WithContentType("application/json")
 
@@ -447,7 +447,7 @@ func GenReqDefForListAddressGroup() *def.HttpRequestDef {
 func GenReqDefForShowAddressGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v3/{project_id}/vpc/address_groups/{address_group_id}").
+		WithPath("/v3/{project_id}/vpc/address-groups/{address_group_id}").
 		WithResponse(new(model.ShowAddressGroupResponse)).
 		WithContentType("application/json")
 
@@ -463,7 +463,7 @@ func GenReqDefForShowAddressGroup() *def.HttpRequestDef {
 func GenReqDefForUpdateAddressGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/v3/{project_id}/vpc/address_groups/{address_group_id}").
+		WithPath("/v3/{project_id}/vpc/address-groups/{address_group_id}").
 		WithResponse(new(model.UpdateAddressGroupResponse)).
 		WithContentType("application/json")
 

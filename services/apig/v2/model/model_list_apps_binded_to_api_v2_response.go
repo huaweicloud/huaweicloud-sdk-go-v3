@@ -16,8 +16,8 @@ type ListAppsBindedToApiV2Response struct {
 	Total int64 `json:"total"`
 	// 本次返回的API列表
 
-	Auths          *[]AppAuthBindedApiResp `json:"auths,omitempty"`
-	HttpStatusCode int                     `json:"-"`
+	Auths          *[]ApiAuthInfo `json:"auths,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ListAppsBindedToApiV2Response) String() string {

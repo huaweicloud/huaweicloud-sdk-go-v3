@@ -8,9 +8,12 @@ import (
 
 // 当修改终端节点子网路由表失败 时，返回错误提示信息
 type RoutetableInfoError struct {
-	BindFailed *RoutetableInfoErrorDetial `json:"bind_failed,omitempty"`
+	// 绑定终端节点子网路由表失败信息。
 
-	UnbindFailed *RoutetableInfoErrorDetial `json:"unbind_failed,omitempty"`
+	BindFailed *[]RoutetableInfoErrorDetial `json:"bind_failed,omitempty"`
+	// 解绑终端节点子网路由表失败信息。
+
+	UnbindFailed *[]RoutetableInfoErrorDetial `json:"unbind_failed,omitempty"`
 }
 
 func (o RoutetableInfoError) String() string {

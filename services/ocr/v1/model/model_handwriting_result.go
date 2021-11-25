@@ -14,8 +14,6 @@ type HandwritingResult struct {
 	// 识别文字块列表，输出顺序从左到右，从上到下。
 
 	WordsBlockList []HandwritingWordsBlockList `json:"words_block_list"`
-
-	ExtractedData *ExtractedData `json:"extracted_data,omitempty"`
 }
 
 func (o HandwritingResult) String() string {

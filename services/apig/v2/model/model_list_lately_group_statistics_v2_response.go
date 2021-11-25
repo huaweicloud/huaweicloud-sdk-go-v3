@@ -16,10 +16,10 @@ type ListLatelyGroupStatisticsV2Response struct {
 	Msg *string `json:"msg,omitempty"`
 	// 开始时间的UTC的时间戳
 
-	StartTime *int32 `json:"start_time,omitempty"`
+	StartTime *int64 `json:"start_time,omitempty"`
 	// 截止时间的UTC的时间戳
 
-	EndTime *int32 `json:"end_time,omitempty"`
+	EndTime *int64 `json:"end_time,omitempty"`
 	// 统计指标的数据结构结构体
 
 	List           *[]StatisticsGroup `json:"list,omitempty"`

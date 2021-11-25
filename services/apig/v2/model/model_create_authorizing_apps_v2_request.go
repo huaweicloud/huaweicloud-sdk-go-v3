@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type CreateAuthorizingAppsV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
 
-	Body *AppAuthReq `json:"body,omitempty"`
+	Body *ApiAuthCreate `json:"body,omitempty"`
 }
 
 func (o CreateAuthorizingAppsV2Request) String() string {

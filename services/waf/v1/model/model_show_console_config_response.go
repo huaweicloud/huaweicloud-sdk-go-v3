@@ -11,7 +11,7 @@ type ShowConsoleConfigResponse struct {
 	// 支持EPS
 
 	Eps *bool `json:"eps,omitempty"`
-	// 支持TLS
+	// 支持最低的TLS版本（TLS v1.0/TLS v1.1/TLS v1.2）,默认为TLS v1.0版本
 
 	Tls *bool `json:"tls,omitempty"`
 	// 支持IPV6

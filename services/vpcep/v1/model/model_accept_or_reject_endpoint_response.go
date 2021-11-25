@@ -10,8 +10,8 @@ import (
 type AcceptOrRejectEndpointResponse struct {
 	// 连接列表
 
-	Connections    *[]Endpoints `json:"connections,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Connections    *[]ConnectionEndpoints `json:"connections,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o AcceptOrRejectEndpointResponse) String() string {

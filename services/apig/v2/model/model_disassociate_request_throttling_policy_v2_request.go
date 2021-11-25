@@ -8,10 +8,10 @@ import (
 
 // Request Object
 type DisassociateRequestThrottlingPolicyV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
-	// API和流控策略绑定关系的ID。
+	// API和流控策略绑定关系的编号
 
 	ThrottleBindingId string `json:"throttle_binding_id"`
 }

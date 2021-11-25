@@ -16,7 +16,7 @@ type ListEnvironmentVariablesV2Response struct {
 	Total int64 `json:"total"`
 	// 本次返回的环境变量列表
 
-	Variables      *[]EnvVariableResp `json:"variables,omitempty"`
+	Variables      *[]EnvVariableInfo `json:"variables,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

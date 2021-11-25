@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type UpdateSignatureKeyV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
 	// 签名密钥编号
 
 	SignId string `json:"sign_id"`
 
-	Body *SignatureReq `json:"body,omitempty"`
+	Body *BaseSignature `json:"body,omitempty"`
 }
 
 func (o UpdateSignatureKeyV2Request) String() string {

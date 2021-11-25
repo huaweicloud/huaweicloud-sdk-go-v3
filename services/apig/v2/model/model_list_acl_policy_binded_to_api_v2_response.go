@@ -16,8 +16,8 @@ type ListAclPolicyBindedToApiV2Response struct {
 	Total int64 `json:"total"`
 	// 本次查询返回的ACL列表
 
-	Acls           *[]ApiBindAclPageAclsResp `json:"acls,omitempty"`
-	HttpStatusCode int                       `json:"-"`
+	Acls           *[]ApiBindAclInfo `json:"acls,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ListAclPolicyBindedToApiV2Response) String() string {

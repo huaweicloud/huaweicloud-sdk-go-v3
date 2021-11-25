@@ -15,7 +15,7 @@ type ApiBaseInfo struct {
 	Name string `json:"name"`
 	// API类型 - 1：公有API - 2：私有API
 
-	Type int32 `json:"type"`
+	Type ApiBaseInfoType `json:"type"`
 	// API的版本
 
 	Version *string `json:"version,omitempty"`
@@ -84,6 +84,43 @@ func (o ApiBaseInfo) String() string {
 	}
 
 	return strings.Join([]string{"ApiBaseInfo", string(data)}, " ")
+}
+
+type ApiBaseInfoType struct {
+	value int32
+}
+
+type ApiBaseInfoTypeEnum struct {
+	E_1 ApiBaseInfoType
+	E_2 ApiBaseInfoType
+}
+
+func GetApiBaseInfoTypeEnum() ApiBaseInfoTypeEnum {
+	return ApiBaseInfoTypeEnum{
+		E_1: ApiBaseInfoType{
+			value: 1,
+		}, E_2: ApiBaseInfoType{
+			value: 2,
+		},
+	}
+}
+
+func (c ApiBaseInfoType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiBaseInfoType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }
 
 type ApiBaseInfoReqProtocol struct {

@@ -10,7 +10,16 @@ import (
 
 // Response Object
 type CreateAnAppV2Response struct {
-	// APP的创建者 - USER：用户自行创建 - MARKET：云市场分配
+	// 编号
+
+	Id *string `json:"id,omitempty"`
+	// 名称
+
+	Name *string `json:"name,omitempty"`
+	// 描述
+
+	Remark *string `json:"remark,omitempty"`
+	// APP的创建者 - USER：用户自行创建 - MARKET：云市场分配  暂不支持MARKET
 
 	Creator *CreateAnAppV2ResponseCreator `json:"creator,omitempty"`
 	// 更新时间
@@ -19,28 +28,22 @@ type CreateAnAppV2Response struct {
 	// APP的key
 
 	AppKey *string `json:"app_key,omitempty"`
-	// 名称
-
-	Name *string `json:"name,omitempty"`
-	// 描述
-
-	Remark *string `json:"remark,omitempty"`
-	// 编号
-
-	Id *string `json:"id,omitempty"`
 	// 密钥
 
 	AppSecret *string `json:"app_secret,omitempty"`
 	// 注册时间
 
 	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
-	// 状态
+	// 状态   - 1： 有效
 
-	Status *int32 `json:"status,omitempty"`
-	// APP的类型  默认为apig，暂不支持其他类型
+	Status *CreateAnAppV2ResponseStatus `json:"status,omitempty"`
+	// APP的类型： - apig：存量apig应用，不推荐使用 - roma：roma集成应用  默认apig，暂不支持其他类型
 
-	AppType        *CreateAnAppV2ResponseAppType `json:"app_type,omitempty"`
-	HttpStatusCode int                           `json:"-"`
+	AppType *CreateAnAppV2ResponseAppType `json:"app_type,omitempty"`
+	// ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
+
+	RomaAppType    *interface{} `json:"roma_app_type,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o CreateAnAppV2Response) String() string {
@@ -87,6 +90,40 @@ func (c *CreateAnAppV2ResponseCreator) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateAnAppV2ResponseStatus struct {
+	value int32
+}
+
+type CreateAnAppV2ResponseStatusEnum struct {
+	E_1 CreateAnAppV2ResponseStatus
+}
+
+func GetCreateAnAppV2ResponseStatusEnum() CreateAnAppV2ResponseStatusEnum {
+	return CreateAnAppV2ResponseStatusEnum{
+		E_1: CreateAnAppV2ResponseStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c CreateAnAppV2ResponseStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateAnAppV2ResponseStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }
 

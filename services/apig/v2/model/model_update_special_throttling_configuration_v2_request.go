@@ -8,17 +8,17 @@ import (
 
 // Request Object
 type UpdateSpecialThrottlingConfigurationV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
-	// 流控策略的ID
+	// 流控策略的编号
 
 	ThrottleId string `json:"throttle_id"`
 	// 特殊配置的编号
 
 	StrategyId string `json:"strategy_id"`
 
-	Body *ThrottleSpecialUpdateReq `json:"body,omitempty"`
+	Body *ThrottleSpecialUpdate `json:"body,omitempty"`
 }
 
 func (o UpdateSpecialThrottlingConfigurationV2Request) String() string {

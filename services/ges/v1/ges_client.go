@@ -129,6 +129,17 @@ func (c *GesClient) DetachEip(request *model.DetachEipRequest) (*model.DetachEip
 	}
 }
 
+//扩副本能力允许动态扩容多个从节点，扩容的从节点可以处理读请求，从而提高读请求性能。 >一万边和百亿边规格的图暂不支持扩副本。
+func (c *GesClient) ExpandGraph(request *model.ExpandGraphRequest) (*model.ExpandGraphResponse, error) {
+	requestDef := GenReqDefForExpandGraph()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExpandGraphResponse), nil
+	}
+}
+
 //导出图。
 func (c *GesClient) ExportGraph(request *model.ExportGraphRequest) (*model.ExportGraphResponse, error) {
 	requestDef := GenReqDefForExportGraph()
@@ -228,6 +239,17 @@ func (c *GesClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuo
 	}
 }
 
+//扩容图规格。
+func (c *GesClient) ResizeGraph(request *model.ResizeGraphRequest) (*model.ResizeGraphResponse, error) {
+	requestDef := GenReqDefForResizeGraph()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResizeGraphResponse), nil
+	}
+}
+
 //强制启动一个图。针对导入、导出 、运行中 、清空中的图。强制重启图，会将该图执行中的异步任务变为失败，然后停止图、启动图到运行状态。
 func (c *GesClient) RestartGraph(request *model.RestartGraphRequest) (*model.RestartGraphResponse, error) {
 	requestDef := GenReqDefForRestartGraph()
@@ -291,5 +313,16 @@ func (c *GesClient) UpgradeGraph(request *model.UpgradeGraphRequest) (*model.Upg
 		return nil, err
 	} else {
 		return resp.(*model.UpgradeGraphResponse), nil
+	}
+}
+
+//从OBS导入元数据。
+func (c *GesClient) UploadFromObs(request *model.UploadFromObsRequest) (*model.UploadFromObsResponse, error) {
+	requestDef := GenReqDefForUploadFromObs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadFromObsResponse), nil
 	}
 }

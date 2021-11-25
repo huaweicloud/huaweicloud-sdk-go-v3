@@ -1,0 +1,29 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// 改变告警规则状态
+type ChangeAlarmRuleStatus struct {
+	// 告警规则ID
+
+	AlarmRuleId *string `json:"alarm_rule_id,omitempty"`
+	// 状态（RUNNING/STOPPING）
+
+	Status *string `json:"status,omitempty"`
+	// 类型
+
+	Type *string `json:"type,omitempty"`
+}
+
+func (o ChangeAlarmRuleStatus) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ChangeAlarmRuleStatus struct{}"
+	}
+
+	return strings.Join([]string{"ChangeAlarmRuleStatus", string(data)}, " ")
+}

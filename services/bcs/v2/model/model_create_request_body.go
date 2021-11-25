@@ -75,7 +75,7 @@ type CreateRequestBody struct {
 
 	Channels *[]ChannelInfoV2 `json:"channels,omitempty"`
 
-	CouchdbInfo *CouchDbInfo `json:"couchdb_info,omitempty"`
+	CouchdbInfo *Couchdb `json:"couchdb_info,omitempty"`
 
 	TurboInfo *TurboInfo `json:"turbo_info,omitempty"`
 

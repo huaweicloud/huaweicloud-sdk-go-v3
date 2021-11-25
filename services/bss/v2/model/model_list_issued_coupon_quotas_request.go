@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListIssuedCouponQuotasRequest struct {
-	// 精英服务商的代金券额度ID。
+	// 精英服务商的代金券额度ID。获取方法请参见查询优惠券额度。
 
 	QuotaId *string `json:"quota_id,omitempty"`
 	// 精英服务商ID。获取方法请参见查询精英服务商列表。

@@ -8,10 +8,10 @@ import (
 
 // Request Object
 type AssociateDomainV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
-	// API分组编号
+	// 分组的编号
 
 	GroupId string `json:"group_id"`
 

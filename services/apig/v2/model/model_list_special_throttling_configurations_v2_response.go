@@ -16,7 +16,7 @@ type ListSpecialThrottlingConfigurationsV2Response struct {
 	Total int64 `json:"total"`
 	// 本次查询返回的特殊配置列表
 
-	ThrottleSpecials *[]ThrottleSpecialResp `json:"throttle_specials,omitempty"`
+	ThrottleSpecials *[]ThrottleSpecialInfo `json:"throttle_specials,omitempty"`
 	HttpStatusCode   int                    `json:"-"`
 }
 

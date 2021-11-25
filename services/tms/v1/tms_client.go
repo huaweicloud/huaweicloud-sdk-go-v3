@@ -74,6 +74,17 @@ func (c *TmsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model
 	}
 }
 
+//查询标签的配额信息。
+func (c *TmsClient) ShowTagQuota(request *model.ShowTagQuotaRequest) (*model.ShowTagQuotaResponse, error) {
+	requestDef := GenReqDefForShowTagQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTagQuotaResponse), nil
+	}
+}
+
 //修改预定义标签。
 func (c *TmsClient) UpdatePredefineTags(request *model.UpdatePredefineTagsRequest) (*model.UpdatePredefineTagsResponse, error) {
 	requestDef := GenReqDefForUpdatePredefineTags()

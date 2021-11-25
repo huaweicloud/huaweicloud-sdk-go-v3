@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchPublishOrOfflineApiV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
 	// - online：发布 - offline：下线

@@ -16,8 +16,8 @@ type ListApisUnbindedToRequestThrottlingPolicyV2Response struct {
 	Total int64 `json:"total"`
 	// 本次查询返回的API列表
 
-	Apis           *[]ThrottleBindingApiResp `json:"apis,omitempty"`
-	HttpStatusCode int                       `json:"-"`
+	Apis           *[]ApiForThrottle `json:"apis,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ListApisUnbindedToRequestThrottlingPolicyV2Response) String() string {

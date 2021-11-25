@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ExportApiDefinitionsV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
 
-	Body *SwaggerReq `json:"body,omitempty"`
+	Body *ExportOpenApiReq `json:"body,omitempty"`
 }
 
 func (o ExportApiDefinitionsV2Request) String() string {

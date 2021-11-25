@@ -35,6 +35,9 @@ type ListInstancesRequest struct {
 	// 查询实例个数上限值。 取值范围：1~100。不传该参数时，默认查询前100条实例信息。
 
 	Limit *int32 `json:"limit,omitempty"`
+	// 根据实例标签键值对进行查询。{key}表示标签键，{value}表示标签值，最多包含20组。key不可以为空或重复，value可以为空。如果同时使用多个标签键值对进行查询，中间使用逗号分隔开，表示查询同时包含指定标签键值对的实例。
+
+	Tags *string `json:"tags,omitempty"`
 }
 
 func (o ListInstancesRequest) String() string {

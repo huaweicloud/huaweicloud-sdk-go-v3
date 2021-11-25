@@ -16,8 +16,8 @@ type ListSignatureKeysV2Response struct {
 	Total int64 `json:"total"`
 	// 本次查询到的签名密钥列表
 
-	Signs          *[]SignatureCreateResp `json:"signs,omitempty"`
-	HttpStatusCode int                    `json:"-"`
+	Signs          *[]SignatureWithBindNum `json:"signs,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o ListSignatureKeysV2Response) String() string {

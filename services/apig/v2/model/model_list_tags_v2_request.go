@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListTagsV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
 	// 偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0

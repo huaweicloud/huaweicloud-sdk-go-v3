@@ -25,7 +25,7 @@ type BootstrapScriptResp struct {
 	// 引导操作脚本是否只运行在主Master节点上。 缺省值为false，表示引导操作脚本可运行在所有Master节点上。
 
 	ActiveMaster *bool `json:"active_master,omitempty"`
-	// 引导操作脚本执行失败后，是否继续执行后续脚本和创建集群。  缺省值为errorout,表示终止操作。   说明： 建议您在调试阶段设置为“继续”，无论此引导操作是否执行成功，则集群都能继续安装和启动。  枚举值： - continue：继续执行后续脚本。 - errorout：终止操作。
+	// 引导操作脚本执行失败后，是否继续执行后续脚本和创建集群。  缺省值为errorout，表示终止操作。   说明： 建议您在调试阶段设置为“继续”，无论此引导操作是否执行成功，则集群都能继续安装和启动。  枚举值： - continue：继续执行后续脚本。 - errorout：终止操作。
 
 	FailAction BootstrapScriptRespFailAction `json:"fail_action"`
 	// 引导操作脚本执行的时间。目前支持“组件启动前”和“组件启动后”两种类型。 缺省值为false，表示引导操作脚本在组件启动后执行。

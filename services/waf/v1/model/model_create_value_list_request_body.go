@@ -11,7 +11,7 @@ import (
 
 // 创建或更新引用表
 type CreateValueListRequestBody struct {
-	// 引用表名称，2-32位字符串组成
+	// 引用表名称，只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64
 
 	Name string `json:"name"`
 	// 引用表类型，参见枚举列表
@@ -19,7 +19,7 @@ type CreateValueListRequestBody struct {
 	Type CreateValueListRequestBodyType `json:"type"`
 	// 引用表的值
 
-	Values *[]string `json:"values,omitempty"`
+	Values []string `json:"values"`
 	// 引用表描述，最长128字符
 
 	Description *string `json:"description,omitempty"`
@@ -48,7 +48,7 @@ type CreateValueListRequestBodyTypeEnum struct {
 	HEADER          CreateValueListRequestBodyType
 	RESPONSE_CODE   CreateValueListRequestBodyType
 	RESPONSE_HEADER CreateValueListRequestBodyType
-	RESOPNSE_BODY   CreateValueListRequestBodyType
+	RESPONSE_BODY   CreateValueListRequestBodyType
 }
 
 func GetCreateValueListRequestBodyTypeEnum() CreateValueListRequestBodyTypeEnum {
@@ -80,8 +80,8 @@ func GetCreateValueListRequestBodyTypeEnum() CreateValueListRequestBodyTypeEnum 
 		RESPONSE_HEADER: CreateValueListRequestBodyType{
 			value: "response_header",
 		},
-		RESOPNSE_BODY: CreateValueListRequestBodyType{
-			value: "resopnse_body",
+		RESPONSE_BODY: CreateValueListRequestBodyType{
+			value: "response_body",
 		},
 	}
 }

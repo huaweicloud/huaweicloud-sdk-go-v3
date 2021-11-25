@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type CreateOrDeletePublishRecordForApiV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
 
-	Body *ApiPublishReq `json:"body,omitempty"`
+	Body *ApiActionInfo `json:"body,omitempty"`
 }
 
 func (o CreateOrDeletePublishRecordForApiV2Request) String() string {

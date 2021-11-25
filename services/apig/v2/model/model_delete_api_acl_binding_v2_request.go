@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DeleteApiAclBindingV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
 	// 绑定关系编号

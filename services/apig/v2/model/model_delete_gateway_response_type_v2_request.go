@@ -11,7 +11,7 @@ import (
 
 // Request Object
 type DeleteGatewayResponseTypeV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
 	// 分组的编号

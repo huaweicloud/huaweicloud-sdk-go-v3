@@ -26,13 +26,13 @@ type ListServiceConnectionsRequest struct {
 	// 终端节点的连接状态。 ● pendingAcceptance：待接受 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败
 
 	Status *string `json:"status,omitempty"`
-	// 查询结果中终端节点列表的排序字 段，取值为： ● create_at：终端节点的创建时 间 ● update_at：终端节点的更新时 间 默认值为create_at。
+	// 查询结果中终端节点列表的排序字段，取值为： ● create_at：终端节点的创建时间 ● update_at：终端节点的更新时间 默认值为create_at。
 
 	SortKey *ListServiceConnectionsRequestSortKey `json:"sort_key,omitempty"`
 	// 查询结果中终端节点列表的排序方 式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
 
 	SortDir *ListServiceConnectionsRequestSortDir `json:"sort_dir,omitempty"`
-	// 查询返回终端节点服务的连接列表 限制每页个数，即每页返回的个 数。 取值范围：0~1000，取值一般为 10，20或者50，默认为10。
+	// 查询返回终端节点服务的连接列表限制每页个数，即每页返回的个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
 
 	Limit *int32 `json:"limit,omitempty"`
 	// 偏移量。 偏移量为一个大于0小于终端节点 服务总个数的整数，表示从偏移量 后面的终端节点服务开始查询。

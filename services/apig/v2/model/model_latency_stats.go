@@ -12,7 +12,7 @@ type LatencyStats struct {
 	MaxLatency *int32 `json:"max_latency,omitempty"`
 	// 平均延时  单位：ms
 
-	AvgLatency float32 `json:"avg_latency,omitempty"`
+	AvgLatency *float32 `json:"avg_latency,omitempty"`
 }
 
 func (o LatencyStats) String() string {

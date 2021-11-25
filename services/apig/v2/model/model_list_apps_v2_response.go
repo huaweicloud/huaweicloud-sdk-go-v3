@@ -16,8 +16,8 @@ type ListAppsV2Response struct {
 	Total int64 `json:"total"`
 	// APP列表
 
-	Apps           *[]AppInfoWithBindNumResp `json:"apps,omitempty"`
-	HttpStatusCode int                       `json:"-"`
+	Apps           *[]AppInfoWithBindNum `json:"apps,omitempty"`
+	HttpStatusCode int                   `json:"-"`
 }
 
 func (o ListAppsV2Response) String() string {

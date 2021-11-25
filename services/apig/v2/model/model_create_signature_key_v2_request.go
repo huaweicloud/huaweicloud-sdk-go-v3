@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type CreateSignatureKeyV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
 
-	Body *SignatureReq `json:"body,omitempty"`
+	Body *BaseSignature `json:"body,omitempty"`
 }
 
 func (o CreateSignatureKeyV2Request) String() string {

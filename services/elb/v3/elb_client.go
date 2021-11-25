@@ -426,7 +426,7 @@ func (c *ElbClient) ShowPool(request *model.ShowPoolRequest) (*model.ShowPoolRes
 	}
 }
 
-//【不开放】查询特定项目的配额数。
+//查询特定项目的配额数。
 func (c *ElbClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuotaResponse, error) {
 	requestDef := GenReqDefForShowQuota()
 
@@ -437,7 +437,7 @@ func (c *ElbClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuota
 	}
 }
 
-//【不开放】查询默认配额数。
+//查询默认配额数。
 func (c *ElbClient) ShowQuotaDefaults(request *model.ShowQuotaDefaultsRequest) (*model.ShowQuotaDefaultsResponse, error) {
 	requestDef := GenReqDefForShowQuotaDefaults()
 

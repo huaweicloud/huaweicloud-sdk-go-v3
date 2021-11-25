@@ -36,7 +36,7 @@ type UpdateSqlAlarmRuleRequestBody struct {
 	SqlAlarmSend bool `json:"sql_alarm_send"`
 	// 发送主题 0:不变 1:新增 2:修改 3:删除
 
-	SqlAlarmSendCode int32 `json:"sql_alarm_send_code"`
+	SqlAlarmSendCode UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode `json:"sql_alarm_send_code"`
 	// domainId
 
 	DomainId string `json:"domain_id"`
@@ -100,5 +100,48 @@ func (c *UpdateSqlAlarmRuleRequestBodySqlAlarmLevel) UnmarshalJSON(b []byte) err
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode struct {
+	value int32
+}
+
+type UpdateSqlAlarmRuleRequestBodySqlAlarmSendCodeEnum struct {
+	E_0 UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode
+	E_1 UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode
+	E_2 UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode
+	E_3 UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode
+}
+
+func GetUpdateSqlAlarmRuleRequestBodySqlAlarmSendCodeEnum() UpdateSqlAlarmRuleRequestBodySqlAlarmSendCodeEnum {
+	return UpdateSqlAlarmRuleRequestBodySqlAlarmSendCodeEnum{
+		E_0: UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode{
+			value: 0,
+		}, E_1: UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode{
+			value: 1,
+		}, E_2: UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode{
+			value: 2,
+		}, E_3: UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode{
+			value: 3,
+		},
+	}
+}
+
+func (c UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

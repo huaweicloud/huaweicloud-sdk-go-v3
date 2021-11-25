@@ -8,18 +8,21 @@ import (
 
 // Response Object
 type ImportApiDefinitionsV2Response struct {
+	// 导入成功信息
+
+	Success *[]Success `json:"success,omitempty"`
+	// 导入失败信息
+
+	Failure *[]Failure `json:"failure,omitempty"`
+
+	Swagger *Swagger `json:"swagger,omitempty"`
 	// API分组编号
 
 	GroupId *string `json:"group_id,omitempty"`
-	// 导入失败信息
+	// 被忽略导入的API信息
 
-	Failure *[]SwaggerFailureResp `json:"failure,omitempty"`
-	// 导入成功信息
-
-	Success *[]SwaggerSuccessResp `json:"success,omitempty"`
-
-	Swagger        *SwaggerInfoResp `json:"swagger,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	Ignore         *[]Ignore `json:"ignore,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ImportApiDefinitionsV2Response) String() string {

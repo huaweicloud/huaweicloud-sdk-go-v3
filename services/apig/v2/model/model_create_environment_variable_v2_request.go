@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type CreateEnvironmentVariableV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
 
-	Body *EnvVariableReq `json:"body,omitempty"`
+	Body *EnvVariableCreate `json:"body,omitempty"`
 }
 
 func (o CreateEnvironmentVariableV2Request) String() string {

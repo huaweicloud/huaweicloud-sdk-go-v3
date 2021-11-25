@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ChangeApiVersionV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
 	// API的编号
 
 	ApiId string `json:"api_id"`
 
-	Body *ApiVersionInfo `json:"body,omitempty"`
+	Body *ApiVersion `json:"body,omitempty"`
 }
 
 func (o ChangeApiVersionV2Request) String() string {

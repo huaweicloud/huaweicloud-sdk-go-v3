@@ -81,6 +81,12 @@ type QueryInstanceResponse struct {
 	// 实例正在执行的动作。
 
 	Actions []string `json:"actions"`
+	// 订单ID，仅包周期场景返回。
+
+	OrderId *string `json:"order_id,omitempty"`
+	// 标签列表。
+
+	Tags []TagResponse `json:"tags"`
 }
 
 func (o QueryInstanceResponse) String() string {

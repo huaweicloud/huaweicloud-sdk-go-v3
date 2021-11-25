@@ -46,7 +46,7 @@ type NodeGroupV10 struct {
 	// 节点系统盘产品类型。
 
 	RootVolumeResourceType *string `json:"rootVolumeResourceType,omitempty"`
-	// 节点数据磁盘存储类别，目前支持SATA、SAS和SSD。  SATA：普通IO SAS：高IO SSD：超高IO
+	// 节点数据磁盘存储类别，目前支持SATA、SAS和SSD。  - SATA：普通IO - SAS：高IO - SSD：超高IO
 
 	DataVolumeType *NodeGroupV10DataVolumeType `json:"dataVolumeType,omitempty"`
 	// 节点数据磁盘存储数目。

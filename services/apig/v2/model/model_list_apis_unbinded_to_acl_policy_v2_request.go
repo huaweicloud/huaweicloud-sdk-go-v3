@@ -8,9 +8,15 @@ import (
 
 // Request Object
 type ListApisUnbindedToAclPolicyV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
+	// 偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
+
+	Offset *int64 `json:"offset,omitempty"`
+	// 每页显示的条目数量
+
+	Limit *int32 `json:"limit,omitempty"`
 	// ACL策略编号
 
 	AclId string `json:"acl_id"`
@@ -26,12 +32,6 @@ type ListApisUnbindedToAclPolicyV2Request struct {
 	// API分组编号
 
 	GroupId *string `json:"group_id,omitempty"`
-	// 偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
-
-	Offset *int64 `json:"offset,omitempty"`
-	// 每页显示的条目数量
-
-	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListApisUnbindedToAclPolicyV2Request) String() string {

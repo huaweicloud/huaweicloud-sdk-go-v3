@@ -41,6 +41,9 @@ type PolicyOption struct {
 	// 黑白名单防护是否开启
 
 	Whiteblackip *bool `json:"whiteblackip,omitempty"`
+	// 地理位置访问控制规则是否开启
+
+	Geoip *bool `json:"geoip,omitempty"`
 	// 误报屏蔽是否开启
 
 	Ignore *bool `json:"ignore,omitempty"`
@@ -50,6 +53,15 @@ type PolicyOption struct {
 	// 网页防篡改规则是否开启
 
 	Antitamper *bool `json:"antitamper,omitempty"`
+	// 防敏感信息泄露规则是否开启
+
+	Antileakage *bool `json:"antileakage,omitempty"`
+	// 防网络机器人攻击是否开启
+
+	BotEnable *bool `json:"bot_enable,omitempty"`
+	// modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
+
+	ModulexEnabled *bool `json:"modulex_enabled,omitempty"`
 }
 
 func (o PolicyOption) String() string {

@@ -1,10 +1,11 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"strings"
 )
 
@@ -48,10 +49,10 @@ type ListEndpointInfoDetailsResponse struct {
 	SubnetId *string `json:"subnet_id,omitempty"`
 	// 终端节点的创建时间。 采用UTC时间格式，格式为： YYYY-MM-DDTHH:MM:SSZ
 
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty"`
 	// 终端节点的更新时间。 采用UTC时间格式，格式为： YYYY-MM-DDTHH:MM:SSZ
 
-	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 	// 项目ID，获取方法请参见获取项 目ID。
 
 	ProjectId *string `json:"project_id,omitempty"`

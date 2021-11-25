@@ -62,8 +62,11 @@ type CreateInstanceResponse struct {
 	DssPoolId *string `json:"dss_pool_id,omitempty"`
 	// 创建实例的工作流ID。
 
-	JobId          *string `json:"job_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	JobId *string `json:"job_id,omitempty"`
+	// 标签列表，与请求参数相同。
+
+	Tags           *[]TagWithKeyValue `json:"tags,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o CreateInstanceResponse) String() string {

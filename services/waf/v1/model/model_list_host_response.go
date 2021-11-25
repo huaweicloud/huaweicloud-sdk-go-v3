@@ -13,8 +13,8 @@ type ListHostResponse struct {
 	Total *int32 `json:"total,omitempty"`
 	// 详细的防护域名信息
 
-	Items          *[]CloudWafHostResponseBody `json:"items,omitempty"`
-	HttpStatusCode int                         `json:"-"`
+	Items          *[]CloudWafHostItem `json:"items,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o ListHostResponse) String() string {

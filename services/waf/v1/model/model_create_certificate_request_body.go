@@ -7,15 +7,15 @@ import (
 )
 
 type CreateCertificateRequestBody struct {
-	// 证书名
+	// 证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64位字符
 
-	Name *string `json:"name,omitempty"`
-	// 证书文件，PEM编码
+	Name string `json:"name"`
+	// 证书文件，仅支持PEM格式的证书和私钥文件，且文件中的换行符应以\\n替换
 
-	Content *string `json:"content,omitempty"`
-	// 证书私钥，PEM编码
+	Content string `json:"content"`
+	// 证书私钥，仅支持PEM格式的证书和私钥文件，且文件中的换行符应以\\n替换
 
-	Key *string `json:"key,omitempty"`
+	Key string `json:"key"`
 }
 
 func (o CreateCertificateRequestBody) String() string {

@@ -63,6 +63,17 @@ func (c *LtsClient) CreateLogStream(request *model.CreateLogStreamRequest) (*mod
 	}
 }
 
+//该接口用于创建通知模板，目前每个帐户最多可以创建共100个通知模板，创建后名称不可修改。
+func (c *LtsClient) CreateNotificationTemplate(request *model.CreateNotificationTemplateRequest) (*model.CreateNotificationTemplateResponse, error) {
+	requestDef := GenReqDefForCreateNotificationTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateNotificationTemplateResponse), nil
+	}
+}
+
 //该接口用于创建指定日志流下的结构化配置。
 func (c *LtsClient) CreateStructTemplate(request *model.CreateStructTemplateRequest) (*model.CreateStructTemplateResponse, error) {
 	requestDef := GenReqDefForCreateStructTemplate()
@@ -71,6 +82,17 @@ func (c *LtsClient) CreateStructTemplate(request *model.CreateStructTemplateRequ
 		return nil, err
 	} else {
 		return resp.(*model.CreateStructTemplateResponse), nil
+	}
+}
+
+//该接口用于创建OBS转储，DIS转储，DMS转储。
+func (c *LtsClient) CreateTransfer(request *model.CreateTransferRequest) (*model.CreateTransferResponse, error) {
+	requestDef := GenReqDefForCreateTransfer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTransferResponse), nil
 	}
 }
 
@@ -118,6 +140,17 @@ func (c *LtsClient) DeleteLogStream(request *model.DeleteLogStreamRequest) (*mod
 	}
 }
 
+//该接口用于删除通知模板。
+func (c *LtsClient) DeleteNotificationTemplate(request *model.DeleteNotificationTemplateRequest) (*model.DeleteNotificationTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteNotificationTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteNotificationTemplateResponse), nil
+	}
+}
+
 //该接口用于删除指定日志流下的结构化配置。
 func (c *LtsClient) DeleteStructTemplate(request *model.DeleteStructTemplateRequest) (*model.DeleteStructTemplateResponse, error) {
 	requestDef := GenReqDefForDeleteStructTemplate()
@@ -126,6 +159,17 @@ func (c *LtsClient) DeleteStructTemplate(request *model.DeleteStructTemplateRequ
 		return nil, err
 	} else {
 		return resp.(*model.DeleteStructTemplateResponse), nil
+	}
+}
+
+//该接口用于删除OBS转储，DIS转储，DMS转储。
+func (c *LtsClient) DeleteTransfer(request *model.DeleteTransferRequest) (*model.DeleteTransferResponse, error) {
+	requestDef := GenReqDefForDeleteTransfer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTransferResponse), nil
 	}
 }
 
@@ -206,6 +250,17 @@ func (c *LtsClient) ListLogStream(request *model.ListLogStreamRequest) (*model.L
 	}
 }
 
+//该接口用于查询LTS日志流信息。
+func (c *LtsClient) ListLogStreams(request *model.ListLogStreamsRequest) (*model.ListLogStreamsResponse, error) {
+	requestDef := GenReqDefForListLogStreams()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLogStreamsResponse), nil
+	}
+}
+
 //该接口用于查询指定日志流下的日志内容。
 func (c *LtsClient) ListLogs(request *model.ListLogsRequest) (*model.ListLogsResponse, error) {
 	requestDef := GenReqDefForListLogs()
@@ -214,6 +269,28 @@ func (c *LtsClient) ListLogs(request *model.ListLogsRequest) (*model.ListLogsRes
 		return nil, err
 	} else {
 		return resp.(*model.ListLogsResponse), nil
+	}
+}
+
+//该接口用于预览通知模板邮件格式
+func (c *LtsClient) ListNotificationTemplate(request *model.ListNotificationTemplateRequest) (*model.ListNotificationTemplateResponse, error) {
+	requestDef := GenReqDefForListNotificationTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNotificationTemplateResponse), nil
+	}
+}
+
+//该接口用于查询通知模板。
+func (c *LtsClient) ListNotificationTemplates(request *model.ListNotificationTemplatesRequest) (*model.ListNotificationTemplatesResponse, error) {
+	requestDef := GenReqDefForListNotificationTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNotificationTemplatesResponse), nil
 	}
 }
 
@@ -250,6 +327,39 @@ func (c *LtsClient) ListStructuredLogsWithTimeRange(request *model.ListStructure
 	}
 }
 
+//该接口用于查询OBS转储，DIS转储，DMS转储配置。
+func (c *LtsClient) ListTransfers(request *model.ListTransfersRequest) (*model.ListTransfersResponse, error) {
+	requestDef := GenReqDefForListTransfers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTransfersResponse), nil
+	}
+}
+
+//该接口用于注册DMS kafka实例。
+func (c *LtsClient) RegisterDmsKafkaInstance(request *model.RegisterDmsKafkaInstanceRequest) (*model.RegisterDmsKafkaInstanceResponse, error) {
+	requestDef := GenReqDefForRegisterDmsKafkaInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RegisterDmsKafkaInstanceResponse), nil
+	}
+}
+
+//该接口用于查询单个通知模板
+func (c *LtsClient) ShowNotificationTemplate(request *model.ShowNotificationTemplateRequest) (*model.ShowNotificationTemplateResponse, error) {
+	requestDef := GenReqDefForShowNotificationTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowNotificationTemplateResponse), nil
+	}
+}
+
 //该接口用于查询指定日志流下的结构化配置内容。
 func (c *LtsClient) ShowStructTemplate(request *model.ShowStructTemplateRequest) (*model.ShowStructTemplateResponse, error) {
 	requestDef := GenReqDefForShowStructTemplate()
@@ -283,6 +393,17 @@ func (c *LtsClient) UpdateLogGroup(request *model.UpdateLogGroupRequest) (*model
 	}
 }
 
+//该接口用于修改通知模板,根据名称进行修改。
+func (c *LtsClient) UpdateNotificationTemplate(request *model.UpdateNotificationTemplateRequest) (*model.UpdateNotificationTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateNotificationTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateNotificationTemplateResponse), nil
+	}
+}
+
 //该接口用于修改指定日志流下的结构化配置。
 func (c *LtsClient) UpdateStructTemplate(request *model.UpdateStructTemplateRequest) (*model.UpdateStructTemplateResponse, error) {
 	requestDef := GenReqDefForUpdateStructTemplate()
@@ -291,6 +412,17 @@ func (c *LtsClient) UpdateStructTemplate(request *model.UpdateStructTemplateRequ
 		return nil, err
 	} else {
 		return resp.(*model.UpdateStructTemplateResponse), nil
+	}
+}
+
+//该接口用于更新OBS转储，DIS转储，DMS转储。
+func (c *LtsClient) UpdateTransfer(request *model.UpdateTransferRequest) (*model.UpdateTransferResponse, error) {
+	requestDef := GenReqDefForUpdateTransfer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTransferResponse), nil
 	}
 }
 
@@ -346,6 +478,17 @@ func (c *LtsClient) UpdateAomMappingRules(request *model.UpdateAomMappingRulesRe
 		return nil, err
 	} else {
 		return resp.(*model.UpdateAomMappingRulesResponse), nil
+	}
+}
+
+//改变告警规则状态
+func (c *LtsClient) UpdateAlarmRuleStatus(request *model.UpdateAlarmRuleStatusRequest) (*model.UpdateAlarmRuleStatusResponse, error) {
+	requestDef := GenReqDefForUpdateAlarmRuleStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAlarmRuleStatusResponse), nil
 	}
 }
 

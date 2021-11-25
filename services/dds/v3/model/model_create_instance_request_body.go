@@ -57,6 +57,9 @@ type CreateInstanceRequestBody struct {
 	// 创建新实例设置云服务器组关联的策略名称列表，仅专属云创建实例时有效。 取值    - 取“anti-affinity”，表示DDS实例开启反亲和部署，反亲和部署是出于高可用性考虑，将您的Primary、Secondary和Hidden节点分别创建在不同的物理机上。当前仅支持该值，不传该值默认不开启反亲和部署。
 
 	ServerGroupPolicies *[]string `json:"server_group_policies,omitempty"`
+	// 标签列表。单个实例总标签数上限20个。
+
+	Tags *[]TagWithKeyValue `json:"tags,omitempty"`
 }
 
 func (o CreateInstanceRequestBody) String() string {

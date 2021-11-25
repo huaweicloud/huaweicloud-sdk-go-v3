@@ -20,6 +20,9 @@ type CreatePublicipOption struct {
 	// 功能说明：弹性IP弹性公网IP的版本  取值范围：4、6，分别表示创建ipv4和ipv6  约束：必须是系统具体支持的类型  不填或空字符串时，默认创建ipv4
 
 	IpVersion *CreatePublicipOptionIpVersion `json:"ip_version,omitempty"`
+	// 功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+
+	Alias *string `json:"alias,omitempty"`
 }
 
 func (o CreatePublicipOption) String() string {

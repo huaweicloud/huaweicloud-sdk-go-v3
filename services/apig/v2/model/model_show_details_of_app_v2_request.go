@@ -8,10 +8,10 @@ import (
 
 // Request Object
 type ShowDetailsOfAppV2Request struct {
-	// 实例编号
+	// 实例ID
 
 	InstanceId string `json:"instance_id"`
-	// APP的编号
+	// 应用编号
 
 	AppId string `json:"app_id"`
 }

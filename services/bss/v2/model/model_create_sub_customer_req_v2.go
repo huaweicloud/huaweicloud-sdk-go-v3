@@ -16,7 +16,7 @@ type CreateSubCustomerReqV2 struct {
 	// 子账号关联类型：1：同一法人。 关联类型目前只能是同一法人。
 
 	SubCustomerAssociationType *int32 `json:"sub_customer_association_type,omitempty"`
-	// 申请的权限列表。 支持的权限项参见表2。
+	// 申请的权限列表。 支持的权限项：READ_FINANCE_INFO；READ_CONSUME_BILL；SUBSTITUTE-OPEN-INVOICE；TAKE-OVER-OPEN-INVOICE；SHARE-CREDIT-TO-SUB；SHARE-BIZ-DISCOUNT-TO-SUB。
 
 	PermissionIds *[]string `json:"permission_ids,omitempty"`
 
