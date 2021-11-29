@@ -134,6 +134,8 @@ type NovaServer struct {
 	// 预留属性
 
 	Progress int32 `json:"progress"`
+
+	OsschedulerHints *NovaServerSchedulerHints `json:"os:scheduler_hints,omitempty"`
 }
 
 func (o NovaServer) String() string {

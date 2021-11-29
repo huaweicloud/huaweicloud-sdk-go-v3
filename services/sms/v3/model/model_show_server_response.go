@@ -127,40 +127,40 @@ type ShowServerResponseStateEnum struct {
 func GetShowServerResponseStateEnum() ShowServerResponseStateEnum {
 	return ShowServerResponseStateEnum{
 		UNAVAILABLE: ShowServerResponseState{
-			value: "unavailable:环境校验不通过",
+			value: "unavailable",
 		},
 		WAITING: ShowServerResponseState{
-			value: "waiting:等待",
+			value: "waiting",
 		},
 		INITIALIZE: ShowServerResponseState{
-			value: "initialize:初始化",
+			value: "initialize",
 		},
 		REPLICATE: ShowServerResponseState{
-			value: "replicate:复制",
+			value: "replicate",
 		},
 		SYNCING: ShowServerResponseState{
-			value: "syncing:持续同步",
+			value: "syncing",
 		},
 		STOPPING: ShowServerResponseState{
-			value: "stopping:暂停中",
+			value: "stopping",
 		},
 		STOPPED: ShowServerResponseState{
-			value: "stopped:已暂停",
+			value: "stopped",
 		},
 		DELETING: ShowServerResponseState{
-			value: "deleting:删除中",
+			value: "deleting",
 		},
 		ERROR: ShowServerResponseState{
-			value: "error:错误",
+			value: "error",
 		},
 		CLONING: ShowServerResponseState{
-			value: "cloning:等待克隆完成",
+			value: "cloning",
 		},
 		TESTING: ShowServerResponseState{
-			value: "testing:启动目的端中",
+			value: "testing",
 		},
 		FINISHED: ShowServerResponseState{
-			value: " finished:启动目的端完成",
+			value: "finished",
 		},
 	}
 }
@@ -237,22 +237,22 @@ type ShowServerResponseMigrationCycleEnum struct {
 func GetShowServerResponseMigrationCycleEnum() ShowServerResponseMigrationCycleEnum {
 	return ShowServerResponseMigrationCycleEnum{
 		CUTOVERING: ShowServerResponseMigrationCycle{
-			value: "cutovering:启动目的端中",
+			value: "cutovering",
 		},
 		CUTOVERED: ShowServerResponseMigrationCycle{
-			value: "cutovered:迁移完成",
+			value: "cutovered",
 		},
 		CHECKING: ShowServerResponseMigrationCycle{
-			value: "checking:源端校验",
+			value: "checking",
 		},
 		SETTING: ShowServerResponseMigrationCycle{
-			value: "setting:设置目的端",
+			value: "setting",
 		},
 		REPLICATING: ShowServerResponseMigrationCycle{
-			value: "replicating:数据复制中",
+			value: "replicating",
 		},
 		SYNCING: ShowServerResponseMigrationCycle{
-			value: "syncing:同步中",
+			value: "syncing",
 		},
 	}
 }

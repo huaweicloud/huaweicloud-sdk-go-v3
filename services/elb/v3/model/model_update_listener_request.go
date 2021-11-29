@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateListenerRequest struct {
-	// 监听器ID
+	// 监听器ID。
 
 	ListenerId string `json:"listener_id"`
 

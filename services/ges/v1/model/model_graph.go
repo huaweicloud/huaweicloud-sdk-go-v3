@@ -13,7 +13,7 @@ type Graph struct {
 	Name string `json:"name"`
 	// 图规模类型索引。 - 0：一万边 - 1：百万边 - 2：千万边 - 3：一亿边 - 4：十亿边 - 5：百亿边 - 401：十亿增强边
 
-	GraphSizeTypeIndex int32 `json:"graphSizeTypeIndex"`
+	GraphSizeTypeIndex string `json:"graphSizeTypeIndex"`
 	// 图实例CPU架构类型，取值为x86_64和aarch64。默认取x86_64。 - x86_64：X64 64位架构。 - aarch64：ARM 64位架构。
 
 	Arch *string `json:"arch,omitempty"`

@@ -74,40 +74,40 @@ type ListServersRequestStateEnum struct {
 func GetListServersRequestStateEnum() ListServersRequestStateEnum {
 	return ListServersRequestStateEnum{
 		UNAVAILABLE: ListServersRequestState{
-			value: "unavailable:环境校验不通过",
+			value: "unavailable",
 		},
 		WAITING: ListServersRequestState{
-			value: " waiting:等待",
+			value: "waiting",
 		},
 		INITIALIZE: ListServersRequestState{
-			value: " initialize:初始化",
+			value: "initialize",
 		},
 		REPLICATE: ListServersRequestState{
-			value: " replicate:复制",
+			value: "replicate",
 		},
 		SYNCING: ListServersRequestState{
-			value: " syncing:持续同步",
+			value: "syncing",
 		},
 		STOPPING: ListServersRequestState{
-			value: " stopping:暂停中",
+			value: "stopping",
 		},
 		STOPPED: ListServersRequestState{
-			value: " stopped:已暂停",
+			value: "stopped",
 		},
 		DELETING: ListServersRequestState{
-			value: " deleting:删除中",
+			value: "deleting",
 		},
 		ERROR: ListServersRequestState{
-			value: " error:错误",
+			value: "error",
 		},
 		CLONING: ListServersRequestState{
-			value: " cloning:等待克隆完成",
+			value: "cloning",
 		},
 		CUTOVERING: ListServersRequestState{
-			value: " cutovering:启动目的端中",
+			value: "cutovering",
 		},
 		FINISHED: ListServersRequestState{
-			value: " finished:启动目的端完成",
+			value: "finished",
 		},
 	}
 }

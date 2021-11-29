@@ -14,6 +14,9 @@ type ModifyInstanceBody struct {
 	// 实例的描述信息 长度不超过1024的字符串。 > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
 
 	Description *string `json:"description,omitempty"`
+	// 修改Redis实例的访问端口。端口范围为1~65535的任意数字。 修改后，Redis实例的所有连接将会中断，业务需要重新连接Redis的新端口。 只有Redis4.0和Redis5.0支持修改端口号，Redis3.0[和Memcached](tag:hc,hk,ocb,sbc,tm,ctc,cmc)实例不支持。
+
+	Port *int32 `json:"port,omitempty"`
 	// '维护时间窗开始时间，为UTC时间，格式为HH:mm:ss。' - 维护时间窗开始和结束时间必须为指定的时间段，可参考[查询维护时间窗时间段](https://support.huaweicloud.com/api-dcs/ListMaintenanceWindows.html)获取。 - 开始时间必须为22:00:00、02:00:00、06:00:00、10:00:00、14:00:00和18:00:00。 - 该参数不能单独为空，若该值为空，则结束时间也为空。
 
 	MaintainBegin *string `json:"maintain_begin,omitempty"`

@@ -41,17 +41,6 @@ func (c *EvsClient) BatchDeleteVolumeTags(request *model.BatchDeleteVolumeTagsRe
 	}
 }
 
-//将系统盘或数据盘的数据导出为IMS镜像，导出的镜像在IMS的私有镜像列表中可以查 看并使用。
-func (c *EvsClient) CinderExportToImage(request *model.CinderExportToImageRequest) (*model.CinderExportToImageResponse, error) {
-	requestDef := GenReqDefForCinderExportToImage()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CinderExportToImageResponse), nil
-	}
-}
-
 //查询所有的可用分区信息。
 func (c *EvsClient) CinderListAvailabilityZones(request *model.CinderListAvailabilityZonesRequest) (*model.CinderListAvailabilityZonesResponse, error) {
 	requestDef := GenReqDefForCinderListAvailabilityZones()

@@ -43,6 +43,9 @@ type ScanJob struct {
 	// 是否使用了NLP进行扫描
 
 	UseNlp *bool `json:"use_nlp,omitempty"`
+	// 任务启动时间
+
+	StartTime *int64 `json:"start_time,omitempty"`
 }
 
 func (o ScanJob) String() string {

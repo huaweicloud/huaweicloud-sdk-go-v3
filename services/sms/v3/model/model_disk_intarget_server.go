@@ -44,13 +44,13 @@ type DiskIntargetServerDeviceUseEnum struct {
 func GetDiskIntargetServerDeviceUseEnum() DiskIntargetServerDeviceUseEnum {
 	return DiskIntargetServerDeviceUseEnum{
 		BOOT: DiskIntargetServerDeviceUse{
-			value: "BOOT：启动盘",
+			value: "BOOT",
 		},
 		OS: DiskIntargetServerDeviceUse{
-			value: "OS：系统盘",
+			value: "OS",
 		},
 		NORMAL: DiskIntargetServerDeviceUse{
-			value: "NORMAL：普通数据盘",
+			value: "NORMAL",
 		},
 	}
 }

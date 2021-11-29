@@ -40,7 +40,7 @@ type ShowEventItems struct {
 	Headers *string `json:"headers,omitempty"`
 	// 被攻击的域名id
 
-	HostId *interface{} `json:"host_id,omitempty"`
+	HostId *string `json:"host_id,omitempty"`
 	// 攻击请求的id
 
 	Id *string `json:"id,omitempty"`

@@ -6,32 +6,35 @@ import (
 	"strings"
 )
 
-// 查询配额限制去请求返回对象
+// 负载均衡相关各类资源的配额信息。仅返回资源的总配额，不包括剩余可用配额。
 type Quota struct {
-	// 证书配额。 -1表示无配额限制。
-
-	Certificate int32 `json:"certificate"`
-	// 健康检查配额。 -1表示无配额限制。
-
-	Healthmonitor int32 `json:"healthmonitor"`
-	// 转发策略配额。 -1表示无配额限制。
-
-	L7policy int32 `json:"l7policy"`
-	// 监听器配额。 -1表示无配额限制。
-
-	Listener int32 `json:"listener"`
-	// 负载均衡器配额。 -1表示无配额限制。
-
-	Loadbalancer int32 `json:"loadbalancer"`
-	// 后端云服务器配额。 -1表示无配额限制。
-
-	Member int32 `json:"member"`
-	// 后端云服务器组配额。 -1表示无配额限制。
-
-	Pool int32 `json:"pool"`
 	// 项目ID。
 
 	ProjectId string `json:"project_id"`
+	// 负载均衡器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+
+	Loadbalancer int32 `json:"loadbalancer"`
+	// 证书配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+
+	Certificate int32 `json:"certificate"`
+	// 监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+
+	Listener int32 `json:"listener"`
+	// 转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+
+	L7policy int32 `json:"l7policy"`
+	// 后端云服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+
+	Pool int32 `json:"pool"`
+	// 健康检查配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+
+	Healthmonitor int32 `json:"healthmonitor"`
+	// 后端云服务器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+
+	Member int32 `json:"member"`
+	// 单个pool下的member的配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+
+	MembersPerPool int32 `json:"members_per_pool"`
 }
 
 func (o Quota) String() string {

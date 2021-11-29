@@ -19,7 +19,29 @@ func ElbClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//创建证书。
+//批量更新转发策略的优先级。
+func (c *ElbClient) BatchUpdatePoliciesPriority(request *model.BatchUpdatePoliciesPriorityRequest) (*model.BatchUpdatePoliciesPriorityResponse, error) {
+	requestDef := GenReqDefForBatchUpdatePoliciesPriority()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdatePoliciesPriorityResponse), nil
+	}
+}
+
+//负载均衡器计费模式变更，当前只支持按需计费转包周期计费。
+func (c *ElbClient) ChangeLoadbalancerChargeMode(request *model.ChangeLoadbalancerChargeModeRequest) (*model.ChangeLoadbalancerChargeModeResponse, error) {
+	requestDef := GenReqDefForChangeLoadbalancerChargeMode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeLoadbalancerChargeModeResponse), nil
+	}
+}
+
+//创建证书。用于HTTPS协议监听器。
 func (c *ElbClient) CreateCertificate(request *model.CreateCertificateRequest) (*model.CreateCertificateResponse, error) {
 	requestDef := GenReqDefForCreateCertificate()
 
@@ -41,7 +63,7 @@ func (c *ElbClient) CreateHealthMonitor(request *model.CreateHealthMonitorReques
 	}
 }
 
-//创建转发策略.
+//创建七层转发策略。
 func (c *ElbClient) CreateL7Policy(request *model.CreateL7PolicyRequest) (*model.CreateL7PolicyResponse, error) {
 	requestDef := GenReqDefForCreateL7Policy()
 
@@ -52,7 +74,7 @@ func (c *ElbClient) CreateL7Policy(request *model.CreateL7PolicyRequest) (*model
 	}
 }
 
-//创建转发规则。
+//创建七层转发规则。
 func (c *ElbClient) CreateL7Rule(request *model.CreateL7RuleRequest) (*model.CreateL7RuleResponse, error) {
 	requestDef := GenReqDefForCreateL7Rule()
 
@@ -63,7 +85,7 @@ func (c *ElbClient) CreateL7Rule(request *model.CreateL7RuleRequest) (*model.Cre
 	}
 }
 
-//ElbV3 创建监听器。
+//创建监听器。
 func (c *ElbClient) CreateListener(request *model.CreateListenerRequest) (*model.CreateListenerResponse, error) {
 	requestDef := GenReqDefForCreateListener()
 
@@ -74,7 +96,7 @@ func (c *ElbClient) CreateListener(request *model.CreateListenerRequest) (*model
 	}
 }
 
-//创建负载均衡器。 1.创建公网负载均衡器的场合，需要传入vpc_id。 2.创建内网负载均衡器的场合，需要传入vip_subnet_cidr_id。 3.创建内网双栈负载均衡器的场合，需要传入ipv6_vip_virsubnet_id。  关联有已有公网ip地址，需要传入publicip_ids 新建公网ip地址，需要传入publicip 包括IPV4私网类型，IPV4公网类型，IPV6私网，IPV6公网
+//创建负载均衡器。  1.若要创建内网IPv4负载均衡器，则需要设置vip_subnet_cidr_id和vip_address。  2.若要创建公网IPv4负载均衡器，则需要设置publicip，以及设置vpc_id和vip_subnet_cidr_id这两个参数中的一个。  3.若要绑定有已有公网IPv4地址，需要设置publicip_ids，以及设置vpc_id和vip_subnet_cidr_id这两个参数中的一个。  4.若要创建内网双栈负载均衡器，则需要设置ipv6_vip_virsubnet_id。  5.若要创建公网双栈负载均衡器，则需要设置ipv6_vip_virsubnet_id和ipv6_bandwidth。  6.不支持绑定已有未使用的内网IPv4、内网IPv6或公网IPv6地址。  [>不支持创建IPv6地址负载均衡器](tag:otc,otc_test,dt,dt_test)
 func (c *ElbClient) CreateLoadBalancer(request *model.CreateLoadBalancerRequest) (*model.CreateLoadBalancerResponse, error) {
 	requestDef := GenReqDefForCreateLoadBalancer()
 
@@ -107,7 +129,18 @@ func (c *ElbClient) CreatePool(request *model.CreatePoolRequest) (*model.CreateP
 	}
 }
 
-//删除SSL证书。
+//创建自定义安全策略。用于在创建HTTPS监听器时，请求参数中指定security_policy_id来设置监听器的自定义安全策略。
+func (c *ElbClient) CreateSecurityPolicy(request *model.CreateSecurityPolicyRequest) (*model.CreateSecurityPolicyResponse, error) {
+	requestDef := GenReqDefForCreateSecurityPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSecurityPolicyResponse), nil
+	}
+}
+
+//删除证书。
 func (c *ElbClient) DeleteCertificate(request *model.DeleteCertificateRequest) (*model.DeleteCertificateResponse, error) {
 	requestDef := GenReqDefForDeleteCertificate()
 
@@ -129,7 +162,7 @@ func (c *ElbClient) DeleteHealthMonitor(request *model.DeleteHealthMonitorReques
 	}
 }
 
-//删除转发策略。
+//删除七层转发策略。
 func (c *ElbClient) DeleteL7Policy(request *model.DeleteL7PolicyRequest) (*model.DeleteL7PolicyResponse, error) {
 	requestDef := GenReqDefForDeleteL7Policy()
 
@@ -140,7 +173,7 @@ func (c *ElbClient) DeleteL7Policy(request *model.DeleteL7PolicyRequest) (*model
 	}
 }
 
-//删除转发规则。
+//删除七层转发规则。
 func (c *ElbClient) DeleteL7Rule(request *model.DeleteL7RuleRequest) (*model.DeleteL7RuleResponse, error) {
 	requestDef := GenReqDefForDeleteL7Rule()
 
@@ -195,6 +228,17 @@ func (c *ElbClient) DeletePool(request *model.DeletePoolRequest) (*model.DeleteP
 	}
 }
 
+//删除自定义安全策略。
+func (c *ElbClient) DeleteSecurityPolicy(request *model.DeleteSecurityPolicyRequest) (*model.DeleteSecurityPolicyResponse, error) {
+	requestDef := GenReqDefForDeleteSecurityPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSecurityPolicyResponse), nil
+	}
+}
+
 //查询当前租户下的后端服务器列表。
 func (c *ElbClient) ListAllMembers(request *model.ListAllMembersRequest) (*model.ListAllMembersResponse, error) {
 	requestDef := GenReqDefForListAllMembers()
@@ -206,7 +250,7 @@ func (c *ElbClient) ListAllMembers(request *model.ListAllMembersRequest) (*model
 	}
 }
 
-//返回租户创建LB时可使用的可用区列表情况。  返回的数据类型是可用区集合的列表，比如列表 [ [az1,az2],  [az2, az3] ] ，有两个可用区集合。在创建负载均衡器时，可以选择创建在多个可用区，但所选的多个可用区必须同属于其中一个可用区集合，如可以选择 az2和az3，但不能选择 az1和az3。
+//返回租户创建LB时可使用的可用区集合列表情况。  默认情况下，会返回一个可用区集合。在（如创建LB）设置可用区时，填写的可用区必须包含在可用区集合中、为这个可用区集合的子集。  [特殊场景下，部分客户要求负载均衡只能创建在指定可用区集合中，此时会返回客户定制的可用区集合。返回可用区集合可能为一个也可能为多个，比如列表有两个可用区集合[az1,az2], [az2,az3]。在创建负载均衡器时，可以选择创建在多个可用区，但所选的多个可用区必须同属于其中一个可用区集合，如可以选az2和az3，但不能选择az1和az3。你可以选择多个可用区，只要这些可用区在一个子集中](tag:hc,hws,hk,ocb,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk-g42)
 func (c *ElbClient) ListAvailabilityZones(request *model.ListAvailabilityZonesRequest) (*model.ListAvailabilityZonesResponse, error) {
 	requestDef := GenReqDefForListAvailabilityZones()
 
@@ -217,7 +261,7 @@ func (c *ElbClient) ListAvailabilityZones(request *model.ListAvailabilityZonesRe
 	}
 }
 
-//查询SSL证书列表。
+//查询证书列表。
 func (c *ElbClient) ListCertificates(request *model.ListCertificatesRequest) (*model.ListCertificatesResponse, error) {
 	requestDef := GenReqDefForListCertificates()
 
@@ -228,7 +272,7 @@ func (c *ElbClient) ListCertificates(request *model.ListCertificatesRequest) (*m
 	}
 }
 
-//查询所有的规格。
+//查询租户在当前region下可用的负载均衡规格列表。
 func (c *ElbClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
 
@@ -250,7 +294,7 @@ func (c *ElbClient) ListHealthMonitors(request *model.ListHealthMonitorsRequest)
 	}
 }
 
-//查询转发策略列表。
+//查询七层转发策略列表。
 func (c *ElbClient) ListL7Policies(request *model.ListL7PoliciesRequest) (*model.ListL7PoliciesResponse, error) {
 	requestDef := GenReqDefForListL7Policies()
 
@@ -283,7 +327,7 @@ func (c *ElbClient) ListListeners(request *model.ListListenersRequest) (*model.L
 	}
 }
 
-//查询负载均衡器列表，支持过滤查询和分页查询
+//查询负载均衡器列表。
 func (c *ElbClient) ListLoadBalancers(request *model.ListLoadBalancersRequest) (*model.ListLoadBalancersResponse, error) {
 	requestDef := GenReqDefForListLoadBalancers()
 
@@ -316,7 +360,40 @@ func (c *ElbClient) ListPools(request *model.ListPoolsRequest) (*model.ListPools
 	}
 }
 
-//查询SSL证书详情。
+//查询指定项目中负载均衡相关的各类资源的当前配额和已使用配额信息。
+func (c *ElbClient) ListQuotaDetails(request *model.ListQuotaDetailsRequest) (*model.ListQuotaDetailsResponse, error) {
+	requestDef := GenReqDefForListQuotaDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQuotaDetailsResponse), nil
+	}
+}
+
+//查询自定义安全策略列表。
+func (c *ElbClient) ListSecurityPolicies(request *model.ListSecurityPoliciesRequest) (*model.ListSecurityPoliciesResponse, error) {
+	requestDef := GenReqDefForListSecurityPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityPoliciesResponse), nil
+	}
+}
+
+//查询系统安全策略列表。  系统安全策略为预置的所有租户通用的安全策略，租户不可新增或修改。
+func (c *ElbClient) ListSystemSecurityPolicies(request *model.ListSystemSecurityPoliciesRequest) (*model.ListSystemSecurityPoliciesResponse, error) {
+	requestDef := GenReqDefForListSystemSecurityPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSystemSecurityPoliciesResponse), nil
+	}
+}
+
+//查询证书详情。
 func (c *ElbClient) ShowCertificate(request *model.ShowCertificateRequest) (*model.ShowCertificateResponse, error) {
 	requestDef := GenReqDefForShowCertificate()
 
@@ -349,7 +426,7 @@ func (c *ElbClient) ShowHealthMonitor(request *model.ShowHealthMonitorRequest) (
 	}
 }
 
-//查询转发策略详情。
+//查询七层转发策略详情。
 func (c *ElbClient) ShowL7Policy(request *model.ShowL7PolicyRequest) (*model.ShowL7PolicyResponse, error) {
 	requestDef := GenReqDefForShowL7Policy()
 
@@ -360,7 +437,7 @@ func (c *ElbClient) ShowL7Policy(request *model.ShowL7PolicyRequest) (*model.Sho
 	}
 }
 
-//查询转发规则详情
+//查询七层转发规则详情。
 func (c *ElbClient) ShowL7Rule(request *model.ShowL7RuleRequest) (*model.ShowL7RuleResponse, error) {
 	requestDef := GenReqDefForShowL7Rule()
 
@@ -382,7 +459,7 @@ func (c *ElbClient) ShowListener(request *model.ShowListenerRequest) (*model.Sho
 	}
 }
 
-//查询负载均衡器详情
+//查询负载均衡器详情。
 func (c *ElbClient) ShowLoadBalancer(request *model.ShowLoadBalancerRequest) (*model.ShowLoadBalancerResponse, error) {
 	requestDef := GenReqDefForShowLoadBalancer()
 
@@ -393,7 +470,7 @@ func (c *ElbClient) ShowLoadBalancer(request *model.ShowLoadBalancerRequest) (*m
 	}
 }
 
-//查询负载均衡器状态树，列出负载均衡器关联的子资源的信息
+//查询负载均衡器状态树，包括负载均衡器及其关联的子资源的状态信息。 注意：该接口中的operating_status不一定与对应资源的operating_status相同。如：当Member的admin_state_up=false且operating_status=OFFLINE时，该接口返回member的operating_status=DISABLE。
 func (c *ElbClient) ShowLoadBalancerStatus(request *model.ShowLoadBalancerStatusRequest) (*model.ShowLoadBalancerStatusResponse, error) {
 	requestDef := GenReqDefForShowLoadBalancerStatus()
 
@@ -404,7 +481,7 @@ func (c *ElbClient) ShowLoadBalancerStatus(request *model.ShowLoadBalancerStatus
 	}
 }
 
-//后端服务器详情
+//后端服务器详情。
 func (c *ElbClient) ShowMember(request *model.ShowMemberRequest) (*model.ShowMemberResponse, error) {
 	requestDef := GenReqDefForShowMember()
 
@@ -426,7 +503,7 @@ func (c *ElbClient) ShowPool(request *model.ShowPoolRequest) (*model.ShowPoolRes
 	}
 }
 
-//查询特定项目的配额数。
+//查询指定项目中负载均衡相关的各类资源的当前配额。
 func (c *ElbClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuotaResponse, error) {
 	requestDef := GenReqDefForShowQuota()
 
@@ -437,18 +514,18 @@ func (c *ElbClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuota
 	}
 }
 
-//查询默认配额数。
-func (c *ElbClient) ShowQuotaDefaults(request *model.ShowQuotaDefaultsRequest) (*model.ShowQuotaDefaultsResponse, error) {
-	requestDef := GenReqDefForShowQuotaDefaults()
+//查询自定义安全策略详情。
+func (c *ElbClient) ShowSecurityPolicy(request *model.ShowSecurityPolicyRequest) (*model.ShowSecurityPolicyResponse, error) {
+	requestDef := GenReqDefForShowSecurityPolicy()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowQuotaDefaultsResponse), nil
+		return resp.(*model.ShowSecurityPolicyResponse), nil
 	}
 }
 
-//更新SSL证书。
+//更新证书。
 func (c *ElbClient) UpdateCertificate(request *model.UpdateCertificateRequest) (*model.UpdateCertificateResponse, error) {
 	requestDef := GenReqDefForUpdateCertificate()
 
@@ -470,7 +547,7 @@ func (c *ElbClient) UpdateHealthMonitor(request *model.UpdateHealthMonitorReques
 	}
 }
 
-//更新转发策略。
+//更新七层转发策略。
 func (c *ElbClient) UpdateL7Policy(request *model.UpdateL7PolicyRequest) (*model.UpdateL7PolicyResponse, error) {
 	requestDef := GenReqDefForUpdateL7Policy()
 
@@ -481,7 +558,7 @@ func (c *ElbClient) UpdateL7Policy(request *model.UpdateL7PolicyRequest) (*model
 	}
 }
 
-//更新转发规则。
+//更新七层转发规则。
 func (c *ElbClient) UpdateL7Rule(request *model.UpdateL7RuleRequest) (*model.UpdateL7RuleResponse, error) {
 	requestDef := GenReqDefForUpdateL7Rule()
 
@@ -514,7 +591,7 @@ func (c *ElbClient) UpdateLoadBalancer(request *model.UpdateLoadBalancerRequest)
 	}
 }
 
-//如果member绑定的负载均衡器的provisioning status不是ACTIVE，则不能更新该member。
+//更新后端服务器。
 func (c *ElbClient) UpdateMember(request *model.UpdateMemberRequest) (*model.UpdateMemberResponse, error) {
 	requestDef := GenReqDefForUpdateMember()
 
@@ -536,7 +613,40 @@ func (c *ElbClient) UpdatePool(request *model.UpdatePoolRequest) (*model.UpdateP
 	}
 }
 
-//计算创建一个负载均衡实例和第一个七层监听器需预占用的IP数
+//更新自定义安全策略。
+func (c *ElbClient) UpdateSecurityPolicy(request *model.UpdateSecurityPolicyRequest) (*model.UpdateSecurityPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateSecurityPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecurityPolicyResponse), nil
+	}
+}
+
+//返回ELB当前所有可用的API版本。
+func (c *ElbClient) ListApiVersions(request *model.ListApiVersionsRequest) (*model.ListApiVersionsResponse, error) {
+	requestDef := GenReqDefForListApiVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiVersionsResponse), nil
+	}
+}
+
+//批量删除IP地址组的IP列表项。
+func (c *ElbClient) BatchDeleteIpList(request *model.BatchDeleteIpListRequest) (*model.BatchDeleteIpListResponse, error) {
+	requestDef := GenReqDefForBatchDeleteIpList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteIpListResponse), nil
+	}
+}
+
+//计算以下几种场景的预占用IP数量： - 计算创建LB的第一个七层监听器后总占用IP数量：传入loadbalancer_id、l7_flavor_id为空、ip_target_enable不传或为false。 - 计算LB规格变更或开启跨VPC后总占用IP数量：传入参数loadbalancer_id，及l7_flavor_id不为空或ip_target_enable为true。 - 计算创建LB所需IP数量：传入参数availability_zone_id，及可选参数l7_flavor_id、ip_target_enable、ip_version，不能传loadbalancer_id。 > 查询出的预占IP数大于等于最终实际占用的IP数。
 func (c *ElbClient) CountPreoccupyIpNum(request *model.CountPreoccupyIpNumRequest) (*model.CountPreoccupyIpNumResponse, error) {
 	requestDef := GenReqDefForCountPreoccupyIpNum()
 
@@ -547,7 +657,7 @@ func (c *ElbClient) CountPreoccupyIpNum(request *model.CountPreoccupyIpNumReques
 	}
 }
 
-//创建ip地址组
+//创建IP地址组。输入的ip可为ip地址或者CIDR子网，支持IPV4和IPV6。需要注意，0.0.0.0与0.0.0.0/32视为重复，0&#58;0&#58;0&#58;0&#58;0&#58;0&#58;0&#58;1与&#58;&#58;1与&#58;&#58;1/128视为重复，会只保留其中一个写入。
 func (c *ElbClient) CreateIpGroup(request *model.CreateIpGroupRequest) (*model.CreateIpGroupResponse, error) {
 	requestDef := GenReqDefForCreateIpGroup()
 
@@ -569,7 +679,7 @@ func (c *ElbClient) DeleteIpGroup(request *model.DeleteIpGroupRequest) (*model.D
 	}
 }
 
-//查询IP地址组列表
+//查询IP地址组列表。
 func (c *ElbClient) ListIpGroups(request *model.ListIpGroupsRequest) (*model.ListIpGroupsResponse, error) {
 	requestDef := GenReqDefForListIpGroups()
 
@@ -580,7 +690,7 @@ func (c *ElbClient) ListIpGroups(request *model.ListIpGroupsRequest) (*model.Lis
 	}
 }
 
-//获取ip地址组详情
+//获取IP地址组详情。
 func (c *ElbClient) ShowIpGroup(request *model.ShowIpGroupRequest) (*model.ShowIpGroupResponse, error) {
 	requestDef := GenReqDefForShowIpGroup()
 
@@ -591,7 +701,7 @@ func (c *ElbClient) ShowIpGroup(request *model.ShowIpGroupRequest) (*model.ShowI
 	}
 }
 
-//更新ip地址组，只支持全量更新ip。
+//更新IP地址组，只支持全量更新IP。即IP地址组中的ip_list将被全量覆盖，不在请求参数中的IP地址将被移除。输入的ip可为ip地址或者CIDR子网，支持IPV4和IPV6。需要注意，0.0.0.0与0.0.0.0/32视为重复，0&#58;0&#58;0&#58;0&#58;0&#58;0&#58;0&#58;1与&#58;&#58;1与&#58;&#58;1/128视为重复，会只保留其中一个写入。
 func (c *ElbClient) UpdateIpGroup(request *model.UpdateIpGroupRequest) (*model.UpdateIpGroupResponse, error) {
 	requestDef := GenReqDefForUpdateIpGroup()
 
@@ -599,5 +709,16 @@ func (c *ElbClient) UpdateIpGroup(request *model.UpdateIpGroupRequest) (*model.U
 		return nil, err
 	} else {
 		return resp.(*model.UpdateIpGroupResponse), nil
+	}
+}
+
+//更新IP地址组的IP列表信息。
+func (c *ElbClient) UpdateIpList(request *model.UpdateIpListRequest) (*model.UpdateIpListResponse, error) {
+	requestDef := GenReqDefForUpdateIpList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateIpListResponse), nil
 	}
 }

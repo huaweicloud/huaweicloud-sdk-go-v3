@@ -67,10 +67,10 @@ type MigProjectTypeEnum struct {
 func GetMigProjectTypeEnum() MigProjectTypeEnum {
 	return MigProjectTypeEnum{
 		MIGRATE_BLOCK: MigProjectType{
-			value: "MIGRATE_BLOCK：块迁移",
+			value: "MIGRATE_BLOCK",
 		},
 		MIGRATE_FILE: MigProjectType{
-			value: "MIGRATE_FILE：文件级迁移",
+			value: "MIGRATE_FILE",
 		},
 	}
 }

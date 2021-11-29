@@ -103,40 +103,40 @@ type SourceServerAssociatedWithTaskStateEnum struct {
 func GetSourceServerAssociatedWithTaskStateEnum() SourceServerAssociatedWithTaskStateEnum {
 	return SourceServerAssociatedWithTaskStateEnum{
 		UNAVAILABLE: SourceServerAssociatedWithTaskState{
-			value: "unavailable:环境校验不通过",
+			value: "unavailable",
 		},
 		WAITING: SourceServerAssociatedWithTaskState{
-			value: "waiting:等待",
+			value: "waiting",
 		},
 		INITIALIZE: SourceServerAssociatedWithTaskState{
-			value: "initialize:初始化",
+			value: "initialize",
 		},
 		REPLICATE: SourceServerAssociatedWithTaskState{
-			value: "replicate:复制",
+			value: "replicate",
 		},
 		SYNCING: SourceServerAssociatedWithTaskState{
-			value: "syncing:持续同步",
+			value: "syncing",
 		},
 		STOPPING: SourceServerAssociatedWithTaskState{
-			value: "stopping:暂停中",
+			value: "stopping",
 		},
 		STOPPED: SourceServerAssociatedWithTaskState{
-			value: "stopped:已暂停",
+			value: "stopped",
 		},
 		DELETING: SourceServerAssociatedWithTaskState{
-			value: "deleting:删除中",
+			value: "deleting",
 		},
 		ERROR: SourceServerAssociatedWithTaskState{
-			value: "error:错误",
+			value: "error",
 		},
 		CLONING: SourceServerAssociatedWithTaskState{
-			value: "cloning:等待克隆完成",
+			value: "cloning",
 		},
 		TESTING: SourceServerAssociatedWithTaskState{
-			value: "testing:启动目的端中",
+			value: "testing",
 		},
 		FINISHED: SourceServerAssociatedWithTaskState{
-			value: " finished:启动目的端完成",
+			value: "finished",
 		},
 	}
 }

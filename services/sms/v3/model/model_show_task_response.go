@@ -25,7 +25,7 @@ type ShowTaskResponse struct {
 	Id *string `json:"id,omitempty"`
 	// 进程优先级  0：低  1：标准（默认）  2：高
 
-	Priority *int32 `json:"priority,omitempty"`
+	Priority *ShowTaskResponsePriority `json:"priority,omitempty"`
 	// 目的端服务器的区域ID
 
 	RegionId *string `json:"region_id,omitempty"`
@@ -122,10 +122,10 @@ type ShowTaskResponseTypeEnum struct {
 func GetShowTaskResponseTypeEnum() ShowTaskResponseTypeEnum {
 	return ShowTaskResponseTypeEnum{
 		MIGRATE_FILE: ShowTaskResponseType{
-			value: "MIGRATE_FILE：文件级",
+			value: "MIGRATE_FILE",
 		},
 		MIGRATE_BLOCK: ShowTaskResponseType{
-			value: "MIGRATE_BLOCK：块级",
+			value: "MIGRATE_BLOCK",
 		},
 	}
 }
@@ -183,5 +183,45 @@ func (c *ShowTaskResponseOsType) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowTaskResponsePriority struct {
+	value int32
+}
+
+type ShowTaskResponsePriorityEnum struct {
+	E_0 ShowTaskResponsePriority
+	E_1 ShowTaskResponsePriority
+	E_2 ShowTaskResponsePriority
+}
+
+func GetShowTaskResponsePriorityEnum() ShowTaskResponsePriorityEnum {
+	return ShowTaskResponsePriorityEnum{
+		E_0: ShowTaskResponsePriority{
+			value: 0,
+		}, E_1: ShowTaskResponsePriority{
+			value: 1,
+		}, E_2: ShowTaskResponsePriority{
+			value: 2,
+		},
+	}
+}
+
+func (c ShowTaskResponsePriority) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowTaskResponsePriority) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

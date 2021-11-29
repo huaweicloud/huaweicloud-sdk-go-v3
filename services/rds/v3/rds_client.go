@@ -569,6 +569,17 @@ func (c *RdsClient) ShowConfiguration(request *model.ShowConfigurationRequest) (
 	}
 }
 
+//建立跨云容灾关系后，查询主实例和灾备实例间的复制状态及延迟。
+func (c *RdsClient) ShowDrReplicaStatus(request *model.ShowDrReplicaStatusRequest) (*model.ShowDrReplicaStatusResponse, error) {
+	requestDef := GenReqDefForShowDrReplicaStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDrReplicaStatusResponse), nil
+	}
+}
+
 //获取指定实例的参数模板。
 func (c *RdsClient) ShowInstanceConfiguration(request *model.ShowInstanceConfigurationRequest) (*model.ShowInstanceConfigurationResponse, error) {
 	requestDef := GenReqDefForShowInstanceConfiguration()
@@ -921,6 +932,28 @@ func (c *RdsClient) AllowDbPrivilege(request *model.AllowDbPrivilegeRequest) (*m
 	}
 }
 
+//数据库代理实例进行规格变更。  - 调用接口前，您需要了解API 认证鉴权。
+func (c *RdsClient) ChangeProxyScale(request *model.ChangeProxyScaleRequest) (*model.ChangeProxyScaleResponse, error) {
+	requestDef := GenReqDefForChangeProxyScale()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeProxyScaleResponse), nil
+	}
+}
+
+//修改指定实例的读写分离延时阈值。
+func (c *RdsClient) ChangeTheDelayThreshold(request *model.ChangeTheDelayThresholdRequest) (*model.ChangeTheDelayThresholdResponse, error) {
+	requestDef := GenReqDefForChangeTheDelayThreshold()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeTheDelayThresholdResponse), nil
+	}
+}
+
 //在指定实例中创建数据库。
 func (c *RdsClient) CreatePostgresqlDatabase(request *model.CreatePostgresqlDatabaseRequest) (*model.CreatePostgresqlDatabaseResponse, error) {
 	requestDef := GenReqDefForCreatePostgresqlDatabase()
@@ -987,6 +1020,17 @@ func (c *RdsClient) ListPostgresqlDbUserPaginated(request *model.ListPostgresqlD
 	}
 }
 
+//查询数据库代理可变更的规格信息。  - 调用接口前，您需要了解API 认证鉴权。
+func (c *RdsClient) SearchQueryScaleFlavors(request *model.SearchQueryScaleFlavorsRequest) (*model.SearchQueryScaleFlavorsResponse, error) {
+	requestDef := GenReqDefForSearchQueryScaleFlavors()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SearchQueryScaleFlavorsResponse), nil
+	}
+}
+
 //重置指定数据库帐号的密码。
 func (c *RdsClient) SetPostgresqlDbUserPwd(request *model.SetPostgresqlDbUserPwdRequest) (*model.SetPostgresqlDbUserPwdResponse, error) {
 	requestDef := GenReqDefForSetPostgresqlDbUserPwd()
@@ -995,6 +1039,50 @@ func (c *RdsClient) SetPostgresqlDbUserPwd(request *model.SetPostgresqlDbUserPwd
 		return nil, err
 	} else {
 		return resp.(*model.SetPostgresqlDbUserPwdResponse), nil
+	}
+}
+
+//查询指定实例的数据库代理详细信息。
+func (c *RdsClient) ShowInformationAboutDatabaseProxy(request *model.ShowInformationAboutDatabaseProxyRequest) (*model.ShowInformationAboutDatabaseProxyResponse, error) {
+	requestDef := GenReqDefForShowInformationAboutDatabaseProxy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInformationAboutDatabaseProxyResponse), nil
+	}
+}
+
+//为指定实例开启数据库代理。
+func (c *RdsClient) StartDatabaseProxy(request *model.StartDatabaseProxyRequest) (*model.StartDatabaseProxyResponse, error) {
+	requestDef := GenReqDefForStartDatabaseProxy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartDatabaseProxyResponse), nil
+	}
+}
+
+//为指定实例关闭数据库代理。
+func (c *RdsClient) StopDatabaseProxy(request *model.StopDatabaseProxyRequest) (*model.StopDatabaseProxyResponse, error) {
+	requestDef := GenReqDefForStopDatabaseProxy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopDatabaseProxyResponse), nil
+	}
+}
+
+//修改指定实例的读写分离权重。
+func (c *RdsClient) UpdateReadWeight(request *model.UpdateReadWeightRequest) (*model.UpdateReadWeightResponse, error) {
+	requestDef := GenReqDefForUpdateReadWeight()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateReadWeightResponse), nil
 	}
 }
 

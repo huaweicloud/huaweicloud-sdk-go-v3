@@ -47,26 +47,6 @@ func GenReqDefForBatchDeleteVolumeTags() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCinderExportToImage() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v2/{project_id}/volumes/{volume_id}/action").
-		WithResponse(new(model.CinderExportToImageResponse)).
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("VolumeId").
-		WithJsonTag("volume_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForCinderListAvailabilityZones() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

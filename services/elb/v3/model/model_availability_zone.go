@@ -6,12 +6,12 @@ import (
 	"strings"
 )
 
-// 可用区
+// 可用区。
 type AvailabilityZone struct {
-	// 可用区code。
+	// 可用区唯一编码。
 
 	Code string `json:"code"`
-	// az状态。  取值：ACTIVE
+	// 可用区状态。  取值：ACTIVE。
 
 	State string `json:"state"`
 }

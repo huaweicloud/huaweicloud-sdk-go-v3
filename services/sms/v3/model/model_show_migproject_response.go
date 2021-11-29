@@ -68,10 +68,10 @@ type ShowMigprojectResponseTypeEnum struct {
 func GetShowMigprojectResponseTypeEnum() ShowMigprojectResponseTypeEnum {
 	return ShowMigprojectResponseTypeEnum{
 		MIGRATE_BLOCK: ShowMigprojectResponseType{
-			value: "MIGRATE_BLOCK：块迁移",
+			value: "MIGRATE_BLOCK",
 		},
 		MIGRATE_FILE: ShowMigprojectResponseType{
-			value: "MIGRATE_FILE：文件级迁移",
+			value: "MIGRATE_FILE",
 		},
 	}
 }

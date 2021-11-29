@@ -9,7 +9,7 @@ import (
 type ListGrantsRequestBody struct {
 	// 密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
 
-	KeyId *string `json:"key_id,omitempty"`
+	KeyId string `json:"key_id"`
 	// 指定查询授权列表返回记录条数，如果查询记录条数小于存在的条数，响应参数“truncated”将返回“true”，表示存在分页。 取值在授权最大个数范围以内。例如：100
 
 	Limit *string `json:"limit,omitempty"`

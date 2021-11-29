@@ -41,7 +41,7 @@ type AppInfo struct {
 	AppType *AppInfoAppType `json:"app_type,omitempty"`
 	// ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
 
-	RomaAppType *interface{} `json:"roma_app_type,omitempty"`
+	RomaAppType *string `json:"roma_app_type,omitempty"`
 }
 
 func (o AppInfo) String() string {

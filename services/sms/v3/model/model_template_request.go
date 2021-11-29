@@ -70,21 +70,21 @@ type TemplateRequestVolumetype struct {
 }
 
 type TemplateRequestVolumetypeEnum struct {
-	SASI_O  TemplateRequestVolumetype
-	SSDI_O  TemplateRequestVolumetype
-	SATAI_O TemplateRequestVolumetype
+	SAS  TemplateRequestVolumetype
+	SSD  TemplateRequestVolumetype
+	SATA TemplateRequestVolumetype
 }
 
 func GetTemplateRequestVolumetypeEnum() TemplateRequestVolumetypeEnum {
 	return TemplateRequestVolumetypeEnum{
-		SASI_O: TemplateRequestVolumetype{
-			value: "SAS：高I/O",
+		SAS: TemplateRequestVolumetype{
+			value: "SAS",
 		},
-		SSDI_O: TemplateRequestVolumetype{
-			value: "SSD：超高I/O",
+		SSD: TemplateRequestVolumetype{
+			value: "SSD",
 		},
-		SATAI_O: TemplateRequestVolumetype{
-			value: "SATA：普通I/O",
+		SATA: TemplateRequestVolumetype{
+			value: "SATA",
 		},
 	}
 }
@@ -112,21 +112,21 @@ type TemplateRequestDataVolumeType struct {
 }
 
 type TemplateRequestDataVolumeTypeEnum struct {
-	SASI_O  TemplateRequestDataVolumeType
-	SSDI_O  TemplateRequestDataVolumeType
-	SATAI_O TemplateRequestDataVolumeType
+	SAS  TemplateRequestDataVolumeType
+	SSD  TemplateRequestDataVolumeType
+	SATA TemplateRequestDataVolumeType
 }
 
 func GetTemplateRequestDataVolumeTypeEnum() TemplateRequestDataVolumeTypeEnum {
 	return TemplateRequestDataVolumeTypeEnum{
-		SASI_O: TemplateRequestDataVolumeType{
-			value: "SAS：高I/O",
+		SAS: TemplateRequestDataVolumeType{
+			value: "SAS",
 		},
-		SSDI_O: TemplateRequestDataVolumeType{
-			value: "SSD：超高I/O",
+		SSD: TemplateRequestDataVolumeType{
+			value: "SSD",
 		},
-		SATAI_O: TemplateRequestDataVolumeType{
-			value: "SATA：普通I/O",
+		SATA: TemplateRequestDataVolumeType{
+			value: "SATA",
 		},
 	}
 }

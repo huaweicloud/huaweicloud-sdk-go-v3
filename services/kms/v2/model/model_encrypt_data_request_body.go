@@ -12,10 +12,10 @@ import (
 type EncryptDataRequestBody struct {
 	// 密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
 
-	KeyId *string `json:"key_id,omitempty"`
+	KeyId string `json:"key_id"`
 	// 明文数据，1~4096字节，满足正则匹配“^.{1,4096}$”，且转化为byte数组后长度取值范围为1~4096字节。
 
-	PlainText *string `json:"plain_text,omitempty"`
+	PlainText string `json:"plain_text"`
 	// 数据加密算法，仅使用非对称密钥需要指定该参数，默认值为“SYMMETRIC_DEFAULT”，合法枚举值如下：  - SYMMETRIC_DEFAULT  - RSAES_OAEP_SHA_256  - SM2_ENCRYPT
 
 	EncryptionAlgorithm *EncryptDataRequestBodyEncryptionAlgorithm `json:"encryption_algorithm,omitempty"`

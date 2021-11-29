@@ -8,10 +8,10 @@ import (
 
 // 创建独享模式域名的请求
 type CreatePremiumHostRequestBody struct {
-	// 证书id，通过查询证书列表接口（ListCertificates）接口获取证书id   - 对外协议为HTTP时不需要填写   -对外协议HTTPS时为必填参数
+	// 证书id，通过查询证书列表接口（ListCertificates）接口获取证书id   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
 
 	Certificateid *string `json:"certificateid,omitempty"`
-	// 证书名   - 对外协议为HTTP时不需要填写   -对外协议HTTPS时为必填参数
+	// 证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
 
 	Certificatename *string `json:"certificatename,omitempty"`
 	// 防护域名或IP（可带端口）

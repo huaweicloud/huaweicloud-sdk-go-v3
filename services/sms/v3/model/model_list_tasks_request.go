@@ -63,34 +63,34 @@ type ListTasksRequestStateEnum struct {
 func GetListTasksRequestStateEnum() ListTasksRequestStateEnum {
 	return ListTasksRequestStateEnum{
 		READY: ListTasksRequestState{
-			value: "READY：准备就绪",
+			value: "READY",
 		},
 		RUNNING: ListTasksRequestState{
-			value: "RUNNING：迁移中",
+			value: "RUNNING",
 		},
 		SYNCING: ListTasksRequestState{
-			value: "SYNCING：同步中",
+			value: "SYNCING",
 		},
 		MIGRATE_SUCCESS: ListTasksRequestState{
-			value: "MIGRATE_SUCCESS：迁移成功",
+			value: "MIGRATE_SUCCESS",
 		},
 		MIGRATE_FAIL: ListTasksRequestState{
-			value: "MIGRATE_FAIL：迁移失败",
+			value: "MIGRATE_FAIL",
 		},
 		ABORTING: ListTasksRequestState{
-			value: "ABORTING：任务中止中",
+			value: "ABORTING",
 		},
 		ABORT: ListTasksRequestState{
-			value: "ABORT：任务中止",
+			value: "ABORT",
 		},
 		DELETING: ListTasksRequestState{
-			value: "DELETING：删除中",
+			value: "DELETING",
 		},
 		SYNC_F_ROLLBACKING: ListTasksRequestState{
-			value: "SYNC_F_ROLLBACKING：同步失败回滚中",
+			value: "SYNC_F_ROLLBACKING",
 		},
 		SYNC_F_ROLLBACK_SUCCESS: ListTasksRequestState{
-			value: "SYNC_F_ROLLBACK_SUCCESS：同步失败回滚成功",
+			value: "SYNC_F_ROLLBACK_SUCCESS",
 		},
 	}
 }

@@ -15,7 +15,7 @@ type InstanceSpc struct {
 	OrdererMaxNum *int64 `json:"orderer_max_num,omitempty"`
 	// 单个联盟链支持的最大租户数量
 
-	MemberMaxNum *int64 `json:"member_max_num,omitempty"`
+	MemberMaxNum *int32 `json:"member_max_num,omitempty"`
 }
 
 func (o InstanceSpc) String() string {

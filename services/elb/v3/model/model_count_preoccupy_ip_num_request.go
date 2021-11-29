@@ -8,21 +8,21 @@ import (
 
 // Request Object
 type CountPreoccupyIpNumRequest struct {
-	// 功能描述：LB需要部署的AZ列表 约束：若查询创建一个LB所需预占IP数时，该参数为必选
-
-	AvailabilityZoneId *[]string `json:"availability_zone_id,omitempty"`
-	// 是否启用跨VPC后端转发
-
-	IpTargetEnable *bool `json:"ip_target_enable,omitempty"`
-	// 负载均衡器网络类型，枚举值4，6
-
-	IpVersion *int32 `json:"ip_version,omitempty"`
-	// 七层Flavor的ID。如果欲创建7层规格的弹性负载均衡实例，则该参数为必选
+	// 负载均衡器七层规格的ID。传入该字段表示计算创建该规格的LB，或变更LB的原七层规格到该规格所需要的预占IP。  适用场景：创建负LB，变更LB规格。
 
 	L7FlavorId *string `json:"l7_flavor_id,omitempty"`
-	// 负载均衡器ID。当查询创建第一个七层监听器所需预占的ip数时，该参数为必选。
+	// 是否开启跨VPC转发。  取值true表示计算创建或变更为开启跨VPC转发的LB的预占IP。  取值false表示计算创建或变更为不开启跨VPC转发的LB的预占IP。不传等价false。  适用场景：创建LB，变更LB规格。
+
+	IpTargetEnable *bool `json:"ip_target_enable,omitempty"`
+	// 负载均衡器IP地址类型，取值4，6 。  取值4表示计算创建支持IPv4地址的LB的预占IP。  取值6表示计算创建支持IPv6地址的LB的预占IP。  适用场景：创建LB。   [不支持IPv6，请勿设置为6。](tag:otc,otc_test,dt,dt_test)
+
+	IpVersion *int32 `json:"ip_version,omitempty"`
+	// 负载均衡器ID。计算LB规格变更或创建LB中的第一个七层监听器的预占IP。  适用场景：变更LB规格，创建LB中的第一个七层监听器。
 
 	LoadbalancerId *string `json:"loadbalancer_id,omitempty"`
+	// 计算创建AZ列表为availability_zone_id的负载局衡器实例的预占IP。  适用场景：创建LB。  使用说明： - 传入loadbalancer_id时，该参数无效。
+
+	AvailabilityZoneId *[]string `json:"availability_zone_id,omitempty"`
 }
 
 func (o CountPreoccupyIpNumRequest) String() string {

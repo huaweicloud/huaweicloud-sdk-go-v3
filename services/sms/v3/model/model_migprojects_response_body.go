@@ -70,10 +70,10 @@ type MigprojectsResponseBodyTypeEnum struct {
 func GetMigprojectsResponseBodyTypeEnum() MigprojectsResponseBodyTypeEnum {
 	return MigprojectsResponseBodyTypeEnum{
 		MIGRATE_BLOCK: MigprojectsResponseBodyType{
-			value: "MIGRATE_BLOCK：块迁移",
+			value: "MIGRATE_BLOCK",
 		},
 		MIGRATE_FILE: MigprojectsResponseBodyType{
-			value: "MIGRATE_FILE：文件级迁移",
+			value: "MIGRATE_FILE",
 		},
 	}
 }

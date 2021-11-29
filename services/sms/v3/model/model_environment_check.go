@@ -53,13 +53,13 @@ type EnvironmentCheckResultEnum struct {
 func GetEnvironmentCheckResultEnum() EnvironmentCheckResultEnum {
 	return EnvironmentCheckResultEnum{
 		OK: EnvironmentCheckResult{
-			value: "OK：检查通过",
+			value: "OK",
 		},
 		WARN: EnvironmentCheckResult{
-			value: "WARN：告警",
+			value: "WARN",
 		},
 		ERROR: EnvironmentCheckResult{
-			value: "ERROR：检查不通过",
+			value: "ERROR",
 		},
 	}
 }

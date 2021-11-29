@@ -42,8 +42,8 @@ type CreateAnAppV2Response struct {
 	AppType *CreateAnAppV2ResponseAppType `json:"app_type,omitempty"`
 	// ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
 
-	RomaAppType    *interface{} `json:"roma_app_type,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	RomaAppType    *string `json:"roma_app_type,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateAnAppV2Response) String() string {

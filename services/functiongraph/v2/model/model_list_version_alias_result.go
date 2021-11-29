@@ -24,6 +24,9 @@ type ListVersionAliasResult struct {
 	// 版本别名唯一标识。
 
 	AliasUrn string `json:"alias_urn"`
+	// 灰度版本信息
+
+	AdditionalVersionWeights map[string]int64 `json:"additional_version_weights,omitempty"`
 }
 
 func (o ListVersionAliasResult) String() string {

@@ -40,7 +40,7 @@ type PremiumWafHost struct {
 	Certificateid *string `json:"certificateid,omitempty"`
 	// 证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
 
-	Certificatename *interface{} `json:"certificatename,omitempty"`
+	Certificatename *string `json:"certificatename,omitempty"`
 	// 支持最低的TLS版本（TLS v1.0/TLS v1.1/TLS v1.2）,默认为TLS v1.0版本
 
 	Tls *PremiumWafHostTls `json:"tls,omitempty"`

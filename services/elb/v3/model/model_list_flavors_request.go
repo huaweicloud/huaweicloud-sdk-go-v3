@@ -8,27 +8,27 @@ import (
 
 // Request Object
 type ListFlavorsRequest struct {
-	// 规格ID。
+	// 上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
 
-	Id *[]string `json:"id,omitempty"`
+	Marker *string `json:"marker,omitempty"`
 	// 每页返回的个数。
 
 	Limit *int32 `json:"limit,omitempty"`
-	// 上一页最后一条记录的ID。  使用说明：  - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-
-	Marker *string `json:"marker,omitempty"`
-	// 规格名称。
-
-	Name *[]string `json:"name,omitempty"`
-	// 分页的顺序，true表示从后往前分页，false表示从前往后分页，默认为false。 使用说明：必须与limit一起使用。
+	// 分页的顺序，true表示从后往前分页，false表示从前往后分页，默认为false。  使用说明： - 必须与limit一起使用。
 
 	PageReverse *bool `json:"page_reverse,omitempty"`
-	// 是否共享。
+	// 规格ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
 
-	Shared *bool `json:"shared,omitempty"`
-	// L4和L7 分别表示四层和七层flavor，查询支持按type过滤。
+	Id *[]string `json:"id,omitempty"`
+	// 规格名称。   支持多值查询，查询条件格式：*name=xxx&name=xxx*。
+
+	Name *[]string `json:"name,omitempty"`
+	// L4和L7 分别表示四层和七层flavor，查询支持按type过滤。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
 
 	Type *[]string `json:"type,omitempty"`
+	// 是否查询公共规格。true表示公共规格，所有租户可见。false表示私有规格，为当前租户所有。
+
+	Shared *bool `json:"shared,omitempty"`
 }
 
 func (o ListFlavorsRequest) String() string {

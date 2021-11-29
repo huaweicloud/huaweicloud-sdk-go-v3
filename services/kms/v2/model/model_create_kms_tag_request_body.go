@@ -8,6 +8,9 @@ import (
 
 type CreateKmsTagRequestBody struct {
 	Tag *TagItem `json:"tag,omitempty"`
+	// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
+
+	Sequence *string `json:"sequence,omitempty"`
 }
 
 func (o CreateKmsTagRequestBody) String() string {

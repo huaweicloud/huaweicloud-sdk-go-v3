@@ -39,7 +39,7 @@ type CinderListQuotasRequestUsageEnum struct {
 func GetCinderListQuotasRequestUsageEnum() CinderListQuotasRequestUsageEnum {
 	return CinderListQuotasRequestUsageEnum{
 		TRUE: CinderListQuotasRequestUsage{
-			value: "true",
+			value: "True",
 		},
 	}
 }

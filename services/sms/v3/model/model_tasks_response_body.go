@@ -34,7 +34,7 @@ type TasksResponseBody struct {
 	CreateDate *int64 `json:"create_date,omitempty"`
 	// 进程优先级 0：低 1：标准 2：高
 
-	Priority *int32 `json:"priority,omitempty"`
+	Priority *TasksResponseBodyPriority `json:"priority,omitempty"`
 	// 迁移限速
 
 	SpeedLimit *int32 `json:"speed_limit,omitempty"`
@@ -97,10 +97,10 @@ type TasksResponseBodyTypeEnum struct {
 func GetTasksResponseBodyTypeEnum() TasksResponseBodyTypeEnum {
 	return TasksResponseBodyTypeEnum{
 		MIGRATE_FILE: TasksResponseBodyType{
-			value: "MIGRATE_FILE：文件级迁移",
+			value: "MIGRATE_FILE",
 		},
 		MIGRATE_BLOCK: TasksResponseBodyType{
-			value: "MIGRATE_BLOCK：块级迁移",
+			value: "MIGRATE_BLOCK",
 		},
 	}
 }
@@ -161,54 +161,94 @@ func (c *TasksResponseBodyOsType) UnmarshalJSON(b []byte) error {
 	}
 }
 
+type TasksResponseBodyPriority struct {
+	value int32
+}
+
+type TasksResponseBodyPriorityEnum struct {
+	E_0 TasksResponseBodyPriority
+	E_1 TasksResponseBodyPriority
+	E_2 TasksResponseBodyPriority
+}
+
+func GetTasksResponseBodyPriorityEnum() TasksResponseBodyPriorityEnum {
+	return TasksResponseBodyPriorityEnum{
+		E_0: TasksResponseBodyPriority{
+			value: 0,
+		}, E_1: TasksResponseBodyPriority{
+			value: 1,
+		}, E_2: TasksResponseBodyPriority{
+			value: 2,
+		},
+	}
+}
+
+func (c TasksResponseBodyPriority) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *TasksResponseBodyPriority) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
 type TasksResponseBodyLogCollectStatus struct {
 	value string
 }
 
 type TasksResponseBodyLogCollectStatusEnum struct {
-	INIT                          TasksResponseBodyLogCollectStatus
-	TELL_AGENT_TO_COLLECTAGENT    TasksResponseBodyLogCollectStatus
-	WAIT_AGENT_COLLECT_ACKAGENT   TasksResponseBodyLogCollectStatus
-	AGENT_COLLECT_FAILAGENT       TasksResponseBodyLogCollectStatus
-	AGENT_COLLECT_SUCCESSAGENT    TasksResponseBodyLogCollectStatus
-	WAIT_SERVER_COLLECTSERVER     TasksResponseBodyLogCollectStatus
-	SERVER_COLLECT_FAILSERVER     TasksResponseBodyLogCollectStatus
-	SERVER_COLLECT_SUCCESSSERVER  TasksResponseBodyLogCollectStatus
-	TELL_AGENT_RESET_ACLAGENT     TasksResponseBodyLogCollectStatus
-	WAIT_AGENT_RESET_ACL_ACKAGENT TasksResponseBodyLogCollectStatus
+	INIT                     TasksResponseBodyLogCollectStatus
+	TELL_AGENT_TO_COLLECT    TasksResponseBodyLogCollectStatus
+	WAIT_AGENT_COLLECT_ACK   TasksResponseBodyLogCollectStatus
+	AGENT_COLLECT_FAIL       TasksResponseBodyLogCollectStatus
+	AGENT_COLLECT_SUCCESS    TasksResponseBodyLogCollectStatus
+	WAIT_SERVER_COLLECT      TasksResponseBodyLogCollectStatus
+	SERVER_COLLECT_FAIL      TasksResponseBodyLogCollectStatus
+	SERVER_COLLECT_SUCCESS   TasksResponseBodyLogCollectStatus
+	TELL_AGENT_RESET_ACL     TasksResponseBodyLogCollectStatus
+	WAIT_AGENT_RESET_ACL_ACK TasksResponseBodyLogCollectStatus
 }
 
 func GetTasksResponseBodyLogCollectStatusEnum() TasksResponseBodyLogCollectStatusEnum {
 	return TasksResponseBodyLogCollectStatusEnum{
 		INIT: TasksResponseBodyLogCollectStatus{
-			value: "INIT:等待搜集状态",
+			value: "INIT",
 		},
-		TELL_AGENT_TO_COLLECTAGENT: TasksResponseBodyLogCollectStatus{
-			value: "TELL_AGENT_TO_COLLECT:通知agent搜集日志",
+		TELL_AGENT_TO_COLLECT: TasksResponseBodyLogCollectStatus{
+			value: "TELL_AGENT_TO_COLLECT",
 		},
-		WAIT_AGENT_COLLECT_ACKAGENT: TasksResponseBodyLogCollectStatus{
-			value: "WAIT_AGENT_COLLECT_ACK:等待Agent确认搜集确认",
+		WAIT_AGENT_COLLECT_ACK: TasksResponseBodyLogCollectStatus{
+			value: "WAIT_AGENT_COLLECT_ACK",
 		},
-		AGENT_COLLECT_FAILAGENT: TasksResponseBodyLogCollectStatus{
-			value: "AGENT_COLLECT_FAIL:Agent搜集失败",
+		AGENT_COLLECT_FAIL: TasksResponseBodyLogCollectStatus{
+			value: "AGENT_COLLECT_FAIL",
 		},
-		AGENT_COLLECT_SUCCESSAGENT: TasksResponseBodyLogCollectStatus{
-			value: "AGENT_COLLECT_SUCCESS：Agent搜集成功",
+		AGENT_COLLECT_SUCCESS: TasksResponseBodyLogCollectStatus{
+			value: "AGENT_COLLECT_SUCCESS",
 		},
-		WAIT_SERVER_COLLECTSERVER: TasksResponseBodyLogCollectStatus{
-			value: "WAIT_SERVER_COLLECT：等待Server端日志搜集",
+		WAIT_SERVER_COLLECT: TasksResponseBodyLogCollectStatus{
+			value: "WAIT_SERVER_COLLECT",
 		},
-		SERVER_COLLECT_FAILSERVER: TasksResponseBodyLogCollectStatus{
-			value: "SERVER_COLLECT_FAIL：Server搜集失败",
+		SERVER_COLLECT_FAIL: TasksResponseBodyLogCollectStatus{
+			value: "SERVER_COLLECT_FAIL",
 		},
-		SERVER_COLLECT_SUCCESSSERVER: TasksResponseBodyLogCollectStatus{
-			value: "SERVER_COLLECT_SUCCESS：Server搜集成功",
+		SERVER_COLLECT_SUCCESS: TasksResponseBodyLogCollectStatus{
+			value: "SERVER_COLLECT_SUCCESS",
 		},
-		TELL_AGENT_RESET_ACLAGENT: TasksResponseBodyLogCollectStatus{
-			value: "TELL_AGENT_RESET_ACL：通知Agent取消日志授权",
+		TELL_AGENT_RESET_ACL: TasksResponseBodyLogCollectStatus{
+			value: "TELL_AGENT_RESET_ACL",
 		},
-		WAIT_AGENT_RESET_ACL_ACKAGENT: TasksResponseBodyLogCollectStatus{
-			value: "WAIT_AGENT_RESET_ACL_ACK：等待Agent确认",
+		WAIT_AGENT_RESET_ACL_ACK: TasksResponseBodyLogCollectStatus{
+			value: "WAIT_AGENT_RESET_ACL_ACK",
 		},
 	}
 }

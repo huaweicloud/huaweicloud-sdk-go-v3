@@ -1360,6 +1360,27 @@ func GenReqDefForShowConfiguration() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowDrReplicaStatus() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/instances/{instance_id}/disaster-recovery").
+		WithResponse(new(model.ShowDrReplicaStatusResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowInstanceConfiguration() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -2162,6 +2183,56 @@ func GenReqDefForAllowDbPrivilege() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForChangeProxyScale() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/{instance_id}/proxy/scale").
+		WithResponse(new(model.ChangeProxyScaleResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForChangeTheDelayThreshold() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/instances/{instance_id}/proxy/delay-threshold").
+		WithResponse(new(model.ChangeTheDelayThresholdResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreatePostgresqlDatabase() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -2331,11 +2402,124 @@ func GenReqDefForListPostgresqlDbUserPaginated() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForSearchQueryScaleFlavors() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/instances/{instance_id}/proxy/scale/flavors").
+		WithResponse(new(model.SearchQueryScaleFlavorsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForSetPostgresqlDbUserPwd() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v3/{project_id}/instances/{instance_id}/db_user/resetpwd").
 		WithResponse(new(model.SetPostgresqlDbUserPwdResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowInformationAboutDatabaseProxy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/instances/{instance_id}/proxy").
+		WithResponse(new(model.ShowInformationAboutDatabaseProxyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForStartDatabaseProxy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/{instance_id}/proxy").
+		WithResponse(new(model.StartDatabaseProxyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForStopDatabaseProxy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v3/{project_id}/instances/{instance_id}/proxy").
+		WithResponse(new(model.StopDatabaseProxyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateReadWeight() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/instances/{instance_id}/proxy/weight").
+		WithResponse(new(model.UpdateReadWeightResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

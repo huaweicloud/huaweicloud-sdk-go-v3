@@ -33,8 +33,35 @@ type CreateApiGroupV2Response struct {
 	OnSellStatus int32 `json:"on_sell_status"`
 	// 分组上绑定的独立域名列表
 
-	UrlDomains     *[]UrlDomain `json:"url_domains,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	UrlDomains *[]UrlDomain `json:"url_domains,omitempty"`
+	// 系统默认分配的子域名列表
+
+	SlDomains *[]string `json:"sl_domains,omitempty"`
+	// 描述
+
+	Remark *string `json:"remark,omitempty"`
+	// 流控时长内分组下的API的总访问次数限制，默认不限，请根据服务的负载能力自行设置  暂不支持
+
+	CallLimits *int32 `json:"call_limits,omitempty"`
+	// 流控时长  暂不支持
+
+	TimeInterval *int32 `json:"time_interval,omitempty"`
+	// 流控的时间单位  暂不支持
+
+	TimeUnit *string `json:"time_unit,omitempty"`
+	// 是否为默认分组
+
+	IsDefault *int32 `json:"is_default,omitempty"`
+	// 分组版本  - V1：全局分组 - V2：应用级分组
+
+	Version *string `json:"version,omitempty"`
+	// 分组归属的集成应用编号。  分组版本V2时必填。
+
+	RomaAppId *string `json:"roma_app_id,omitempty"`
+	// 分组归属的集成应用名称
+
+	RomaAppName    *string `json:"roma_app_name,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateApiGroupV2Response) String() string {

@@ -25,7 +25,7 @@ type VaultGet struct {
 	ProviderId string `json:"provider_id"`
 	// 资源
 
-	Resources []VaultResourceIntancesResp `json:"resources"`
+	Resources []CheckpointResourceResp `json:"resources"`
 	// 标签
 
 	Tags *[]TagsResp `json:"tags,omitempty"`

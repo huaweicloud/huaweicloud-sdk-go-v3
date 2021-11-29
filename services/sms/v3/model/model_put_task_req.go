@@ -25,7 +25,7 @@ type PutTaskReq struct {
 	Id *string `json:"id,omitempty"`
 	// 进程优先级  0：低  1：标准（默认）  2：高
 
-	Priority *int32 `json:"priority,omitempty"`
+	Priority *PutTaskReqPriority `json:"priority,omitempty"`
 	// 目的端服务器的区域ID
 
 	RegionId *string `json:"region_id,omitempty"`
@@ -118,10 +118,10 @@ type PutTaskReqTypeEnum struct {
 func GetPutTaskReqTypeEnum() PutTaskReqTypeEnum {
 	return PutTaskReqTypeEnum{
 		MIGRATE_FILE: PutTaskReqType{
-			value: "MIGRATE_FILE：文件级",
+			value: "MIGRATE_FILE",
 		},
 		MIGRATE_BLOCK: PutTaskReqType{
-			value: "MIGRATE_BLOCK：块级",
+			value: "MIGRATE_BLOCK",
 		},
 	}
 }
@@ -179,5 +179,45 @@ func (c *PutTaskReqOsType) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type PutTaskReqPriority struct {
+	value int32
+}
+
+type PutTaskReqPriorityEnum struct {
+	E_0 PutTaskReqPriority
+	E_1 PutTaskReqPriority
+	E_2 PutTaskReqPriority
+}
+
+func GetPutTaskReqPriorityEnum() PutTaskReqPriorityEnum {
+	return PutTaskReqPriorityEnum{
+		E_0: PutTaskReqPriority{
+			value: 0,
+		}, E_1: PutTaskReqPriority{
+			value: 1,
+		}, E_2: PutTaskReqPriority{
+			value: 2,
+		},
+	}
+}
+
+func (c PutTaskReqPriority) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *PutTaskReqPriority) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

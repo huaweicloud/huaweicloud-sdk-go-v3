@@ -24,7 +24,7 @@ type UpdateDependencyRequestBody struct {
 	Runtime UpdateDependencyRequestBodyRuntime `json:"runtime"`
 	// 依赖包名称。必须以大、小写字母开头，以字母或数字结尾，只能由字母、数字、下划线、点和中划线组成，长度不超过96个字符。
 
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 	// 依赖包描述，不超过512个字符。
 
 	Description *string `json:"description,omitempty"`

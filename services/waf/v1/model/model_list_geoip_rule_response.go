@@ -13,8 +13,8 @@ type ListGeoipRuleResponse struct {
 	Total *int32 `json:"total,omitempty"`
 	// 地理位置封禁列表
 
-	Items          *[]ListGeoIpResponseBodyItems `json:"items,omitempty"`
-	HttpStatusCode int                           `json:"-"`
+	Items          *[]GeOIpItem `json:"items,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ListGeoipRuleResponse) String() string {

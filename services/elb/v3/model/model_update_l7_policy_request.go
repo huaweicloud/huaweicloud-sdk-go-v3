@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateL7PolicyRequest struct {
-	// 转发策略ID
+	// 转发策略ID。
 
 	L7policyId string `json:"l7policy_id"`
 

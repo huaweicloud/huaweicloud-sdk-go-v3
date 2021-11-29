@@ -12,7 +12,7 @@ import (
 type CreateDatakeyRequestBody struct {
 	// 密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
 
-	KeyId *string `json:"key_id,omitempty"`
+	KeyId string `json:"key_id"`
 	// 指定生成的密钥bit位长度。有效值：AES_256、AES_128。  - AES_256：表示256比特的对称密钥。  - AES_128：表示128比特的对称密钥。 说明：  datakey_length和key_spec二选一。   - 若datakey_length和key_spec都为空，默认生成256bit的密钥。   - 若datakey_length和key_spec都指定了值，仅datakey_length生效。
 
 	KeySpec *CreateDatakeyRequestBodyKeySpec `json:"key_spec,omitempty"`

@@ -10,7 +10,7 @@ import (
 type SwitchAgentResponse struct {
 	// 响应状态
 
-	Status         *string `json:"status,omitempty"`
+	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

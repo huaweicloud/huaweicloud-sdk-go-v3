@@ -67,10 +67,10 @@ type PostMigProjectBodyTypeEnum struct {
 func GetPostMigProjectBodyTypeEnum() PostMigProjectBodyTypeEnum {
 	return PostMigProjectBodyTypeEnum{
 		MIGRATE_BLOCK: PostMigProjectBodyType{
-			value: "MIGRATE_BLOCK：块迁移",
+			value: "MIGRATE_BLOCK",
 		},
 		MIGRATE_FILE: PostMigProjectBodyType{
-			value: "MIGRATE_FILE：文件级迁移",
+			value: "MIGRATE_FILE",
 		},
 	}
 }

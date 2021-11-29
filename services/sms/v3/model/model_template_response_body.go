@@ -73,21 +73,21 @@ type TemplateResponseBodyVolumetype struct {
 }
 
 type TemplateResponseBodyVolumetypeEnum struct {
-	SASI_O  TemplateResponseBodyVolumetype
-	SSDI_O  TemplateResponseBodyVolumetype
-	SATAI_O TemplateResponseBodyVolumetype
+	SAS  TemplateResponseBodyVolumetype
+	SSD  TemplateResponseBodyVolumetype
+	SATA TemplateResponseBodyVolumetype
 }
 
 func GetTemplateResponseBodyVolumetypeEnum() TemplateResponseBodyVolumetypeEnum {
 	return TemplateResponseBodyVolumetypeEnum{
-		SASI_O: TemplateResponseBodyVolumetype{
-			value: "SAS：高I/O",
+		SAS: TemplateResponseBodyVolumetype{
+			value: "SAS",
 		},
-		SSDI_O: TemplateResponseBodyVolumetype{
-			value: "SSD：超高I/O",
+		SSD: TemplateResponseBodyVolumetype{
+			value: "SSD",
 		},
-		SATAI_O: TemplateResponseBodyVolumetype{
-			value: "SATA：普通I/O",
+		SATA: TemplateResponseBodyVolumetype{
+			value: "SATA",
 		},
 	}
 }
@@ -115,21 +115,21 @@ type TemplateResponseBodyDataVolumeType struct {
 }
 
 type TemplateResponseBodyDataVolumeTypeEnum struct {
-	SASI_O  TemplateResponseBodyDataVolumeType
-	SSDI_O  TemplateResponseBodyDataVolumeType
-	SATAI_O TemplateResponseBodyDataVolumeType
+	SAS  TemplateResponseBodyDataVolumeType
+	SSD  TemplateResponseBodyDataVolumeType
+	SATA TemplateResponseBodyDataVolumeType
 }
 
 func GetTemplateResponseBodyDataVolumeTypeEnum() TemplateResponseBodyDataVolumeTypeEnum {
 	return TemplateResponseBodyDataVolumeTypeEnum{
-		SASI_O: TemplateResponseBodyDataVolumeType{
-			value: "SAS：高I/O",
+		SAS: TemplateResponseBodyDataVolumeType{
+			value: "SAS",
 		},
-		SSDI_O: TemplateResponseBodyDataVolumeType{
-			value: "SSD：超高I/O",
+		SSD: TemplateResponseBodyDataVolumeType{
+			value: "SSD",
 		},
-		SATAI_O: TemplateResponseBodyDataVolumeType{
-			value: "SATA：普通I/O",
+		SATA: TemplateResponseBodyDataVolumeType{
+			value: "SATA",
 		},
 	}
 }

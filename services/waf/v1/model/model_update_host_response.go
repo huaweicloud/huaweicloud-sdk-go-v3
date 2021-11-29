@@ -37,7 +37,7 @@ type UpdateHostResponse struct {
 	Certificateid *string `json:"certificateid,omitempty"`
 	// 证书名，通过查询证书列表接口（ListCertificates）接口获取证书id
 
-	Certificatename *interface{} `json:"certificatename,omitempty"`
+	Certificatename *string `json:"certificatename,omitempty"`
 	// 是否开启了代理
 
 	Proxy *bool `json:"proxy,omitempty"`

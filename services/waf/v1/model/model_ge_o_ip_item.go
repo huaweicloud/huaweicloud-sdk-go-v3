@@ -6,7 +6,8 @@ import (
 	"strings"
 )
 
-type ListGeoIpResponseBodyItems struct {
+// 地理位置封禁规则
+type GeOIpItem struct {
 	// 规则id
 
 	Id *string `json:"id,omitempty"`
@@ -21,11 +22,11 @@ type ListGeoIpResponseBodyItems struct {
 	Timestamp *int64 `json:"timestamp,omitempty"`
 }
 
-func (o ListGeoIpResponseBodyItems) String() string {
+func (o GeOIpItem) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ListGeoIpResponseBodyItems struct{}"
+		return "GeOIpItem struct{}"
 	}
 
-	return strings.Join([]string{"ListGeoIpResponseBodyItems", string(data)}, " ")
+	return strings.Join([]string{"GeOIpItem", string(data)}, " ")
 }

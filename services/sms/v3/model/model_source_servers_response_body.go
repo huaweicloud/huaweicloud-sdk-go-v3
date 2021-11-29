@@ -136,47 +136,47 @@ type SourceServersResponseBodyStateEnum struct {
 	DELETING    SourceServersResponseBodyState
 	ERROR       SourceServersResponseBodyState
 	CLONING     SourceServersResponseBodyState
-	TESTING     SourceServersResponseBodyState
+	CUTOVERING  SourceServersResponseBodyState
 	FINISHED    SourceServersResponseBodyState
 }
 
 func GetSourceServersResponseBodyStateEnum() SourceServersResponseBodyStateEnum {
 	return SourceServersResponseBodyStateEnum{
 		UNAVAILABLE: SourceServersResponseBodyState{
-			value: "unavailable:环境校验不通过",
+			value: "unavailable",
 		},
 		WAITING: SourceServersResponseBodyState{
-			value: "waiting:等待",
+			value: "waiting",
 		},
 		INITIALIZE: SourceServersResponseBodyState{
-			value: "initialize:初始化",
+			value: "initialize",
 		},
 		REPLICATE: SourceServersResponseBodyState{
-			value: "replicate:复制",
+			value: "replicate",
 		},
 		SYNCING: SourceServersResponseBodyState{
-			value: "syncing:持续同步",
+			value: "syncing",
 		},
 		STOPPING: SourceServersResponseBodyState{
-			value: "stopping:暂停中",
+			value: "stopping",
 		},
 		STOPPED: SourceServersResponseBodyState{
-			value: "stopped:已暂停",
+			value: "stopped",
 		},
 		DELETING: SourceServersResponseBodyState{
-			value: "deleting:删除中",
+			value: "deleting",
 		},
 		ERROR: SourceServersResponseBodyState{
-			value: "error:错误",
+			value: "error",
 		},
 		CLONING: SourceServersResponseBodyState{
-			value: "cloning:等待克隆完成",
+			value: "cloning",
 		},
-		TESTING: SourceServersResponseBodyState{
-			value: "testing:启动目的端中",
+		CUTOVERING: SourceServersResponseBodyState{
+			value: "cutovering",
 		},
 		FINISHED: SourceServersResponseBodyState{
-			value: " finished:启动目的端完成",
+			value: "finished",
 		},
 	}
 }
@@ -215,22 +215,22 @@ type SourceServersResponseBodyMigrationCycleEnum struct {
 func GetSourceServersResponseBodyMigrationCycleEnum() SourceServersResponseBodyMigrationCycleEnum {
 	return SourceServersResponseBodyMigrationCycleEnum{
 		CUTOVERING: SourceServersResponseBodyMigrationCycle{
-			value: "cutovering:启动目的端中",
+			value: "cutovering",
 		},
 		CUTOVERED: SourceServersResponseBodyMigrationCycle{
-			value: "cutovered:迁移完成",
+			value: "cutovered",
 		},
 		CHECKING: SourceServersResponseBodyMigrationCycle{
-			value: "checking:源端校验",
+			value: "checking",
 		},
 		SETTING: SourceServersResponseBodyMigrationCycle{
-			value: "setting:设置目的端",
+			value: "setting",
 		},
 		REPLICATING: SourceServersResponseBodyMigrationCycle{
-			value: "replicating:数据复制中",
+			value: "replicating",
 		},
 		SYNCING: SourceServersResponseBodyMigrationCycle{
-			value: "syncing:同步中",
+			value: "syncing",
 		},
 	}
 }

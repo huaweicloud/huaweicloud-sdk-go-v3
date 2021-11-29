@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ShowLoadBalancerStatusRequest struct {
-	// 所属负载均衡器id
+	// 负载均衡器ID。
 
 	LoadbalancerId string `json:"loadbalancer_id"`
 }

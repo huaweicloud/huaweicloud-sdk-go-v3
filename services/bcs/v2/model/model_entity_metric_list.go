@@ -13,7 +13,7 @@ type EntityMetricList struct {
 	Dimensions *[]Dimension `json:"dimensions,omitempty"`
 	// 监控数据列表项目。
 
-	Values *interface{} `json:"values,omitempty"`
+	Values *[]EntityMetricListItem `json:"values,omitempty"`
 }
 
 func (o EntityMetricList) String() string {
