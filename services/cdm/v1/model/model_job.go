@@ -61,7 +61,7 @@ func (o Job) String() string {
 }
 
 type JobJobType struct {
-	value string
+	Value string
 }
 
 type JobJobTypeEnum struct {
@@ -73,19 +73,19 @@ type JobJobTypeEnum struct {
 func GetJobJobTypeEnum() JobJobTypeEnum {
 	return JobJobTypeEnum{
 		NORMAL_JOB: JobJobType{
-			value: "NORMAL_JOB",
+			Value: "NORMAL_JOB",
 		},
 		BATCH_JOB: JobJobType{
-			value: "BATCH_JOB",
+			Value: "BATCH_JOB",
 		},
 		SCENARIO_JOB: JobJobType{
-			value: "SCENARIO_JOB",
+			Value: "SCENARIO_JOB",
 		},
 	}
 }
 
 func (c JobJobType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
+	return utils.Marshal(c.Value)
 }
 
 func (c *JobJobType) UnmarshalJSON(b []byte) error {
@@ -93,7 +93,7 @@ func (c *JobJobType) UnmarshalJSON(b []byte) error {
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
 		if err == nil {
-			c.value = val.(string)
+			c.Value = val.(string)
 			return nil
 		}
 		return err
