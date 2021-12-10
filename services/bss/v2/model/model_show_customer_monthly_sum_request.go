@@ -11,7 +11,7 @@ type ShowCustomerMonthlySumRequest struct {
 	// 查询消费汇总数据所在的账期，格式为YYYY-MM。
 
 	BillCycle string `json:"bill_cycle"`
-	// 云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。您可以调用查询云服务类型列表接口获取。
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
 
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
 	// 企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。

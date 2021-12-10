@@ -25,10 +25,10 @@ type QueryResourcesReq struct {
 	// 每次查询的条数。默认值为10。
 
 	Limit *int32 `json:"limit,omitempty"`
-	// 资源失效的开始时间，UTC时间。
+	// 查询指定时间段内失效的资源列表，时间段的起始时间，UTC时间。
 
 	ExpireTimeBegin *string `json:"expire_time_begin,omitempty"`
-	// 资源失效的结束时间，UTC时间。
+	// 查询指定时间段内失效的资源列表，时间段的结束时间，UTC时间。
 
 	ExpireTimeEnd *string `json:"expire_time_end,omitempty"`
 }

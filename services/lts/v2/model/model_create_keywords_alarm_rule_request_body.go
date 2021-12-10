@@ -19,7 +19,6 @@ type CreateKeywordsAlarmRuleRequestBody struct {
 	// 关键词详细信息
 
 	KeywordsRequests []KeywordsRequest `json:"keywords_requests"`
-	// 告警统计周期
 
 	Frequency *Frequency `json:"frequency"`
 	// 告警级别
@@ -34,9 +33,9 @@ type CreateKeywordsAlarmRuleRequestBody struct {
 	// 通知主题
 
 	NotificationSaveRule *NotificationSaveRule `json:"notification_save_rule,omitempty"`
-	// 是否英语
+	// 邮件附加信息是否英文
 
-	WhetherEnglish bool `json:"whether_english"`
+	Language CreateKeywordsAlarmRuleRequestBodyLanguage `json:"language"`
 }
 
 func (o CreateKeywordsAlarmRuleRequestBody) String() string {
@@ -81,6 +80,44 @@ func (c CreateKeywordsAlarmRuleRequestBodyKeywordsAlarmLevel) MarshalJSON() ([]b
 }
 
 func (c *CreateKeywordsAlarmRuleRequestBodyKeywordsAlarmLevel) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateKeywordsAlarmRuleRequestBodyLanguage struct {
+	value string
+}
+
+type CreateKeywordsAlarmRuleRequestBodyLanguageEnum struct {
+	ZH_CN CreateKeywordsAlarmRuleRequestBodyLanguage
+	EN_US CreateKeywordsAlarmRuleRequestBodyLanguage
+}
+
+func GetCreateKeywordsAlarmRuleRequestBodyLanguageEnum() CreateKeywordsAlarmRuleRequestBodyLanguageEnum {
+	return CreateKeywordsAlarmRuleRequestBodyLanguageEnum{
+		ZH_CN: CreateKeywordsAlarmRuleRequestBodyLanguage{
+			value: "zh-cn",
+		},
+		EN_US: CreateKeywordsAlarmRuleRequestBodyLanguage{
+			value: "en-us",
+		},
+	}
+}
+
+func (c CreateKeywordsAlarmRuleRequestBodyLanguage) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateKeywordsAlarmRuleRequestBodyLanguage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

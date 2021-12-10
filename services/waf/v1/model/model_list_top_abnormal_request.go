@@ -13,10 +13,10 @@ type ListTopAbnormalRequest struct {
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 起始时间（13位毫秒时间戳），需要和to同时使用
 
-	From *int64 `json:"from,omitempty"`
+	From int64 `json:"from"`
 	// 结束时间（13位毫秒时间戳），需要和from同时使用
 
-	To *int64 `json:"to,omitempty"`
+	To int64 `json:"to"`
 	// 要查询的前几的结果
 
 	Top *int32 `json:"top,omitempty"`

@@ -10,7 +10,6 @@ type AomMappingfilesInfo struct {
 	// 路径名
 
 	FileName string `json:"file_name"`
-	// 接入规则详情
 
 	LogStreamInfo *AomMappingLogStreamInfo `json:"log_stream_info"`
 }

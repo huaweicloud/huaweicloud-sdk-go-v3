@@ -10,7 +10,7 @@ type OrderLineItemEntityV2 struct {
 	// 订单项ID。
 
 	OrderLineItemId *string `json:"order_line_item_id,omitempty"`
-	// 云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。您可以调用查询云服务类型列表接口获取。
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
 
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
 	// 产品ID。
@@ -48,7 +48,7 @@ type OrderLineItemEntityV2 struct {
 	// 产品目录编码。
 
 	CategoryCode *string `json:"category_code,omitempty"`
-	// 产品归属的云服务类型编码。 云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。您可以调用查询云服务类型列表接口获取。
+	// 产品归属的云服务类型编码。 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
 
 	ProductOwnerService *string `json:"product_owner_service,omitempty"`
 	// 商务归属的资源类型编码。 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。

@@ -94,6 +94,9 @@ type InstanceListInfo struct {
 	// 实例的域名。
 
 	DomainName *string `json:"domain_name,omitempty"`
+	// 实例的只读域名，只有主备实例有该字段。
+
+	ReadonlyDomainName *string `json:"readonly_domain_name,omitempty"`
 	// 实例名称。
 
 	Name *string `json:"name,omitempty"`

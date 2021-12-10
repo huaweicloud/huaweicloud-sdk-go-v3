@@ -42,13 +42,13 @@ type SqlAlarmRuleRespList struct {
 	DomainId string `json:"domain_id"`
 	// 创建时间(毫秒时间戳)
 
-	CreateTime *interface{} `json:"create_time"`
+	CreateTime int64 `json:"create_time"`
 	// 更新时间(毫秒时间戳)
 
-	UpdateTime *interface{} `json:"update_time"`
+	UpdateTime int64 `json:"update_time"`
 	// 邮件附加信息是否英文
 
-	WhetherEnglish bool `json:"whether_english"`
+	Language SqlAlarmRuleRespListLanguage `json:"language"`
 }
 
 func (o SqlAlarmRuleRespList) String() string {
@@ -93,6 +93,44 @@ func (c SqlAlarmRuleRespListSqlAlarmLevel) MarshalJSON() ([]byte, error) {
 }
 
 func (c *SqlAlarmRuleRespListSqlAlarmLevel) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type SqlAlarmRuleRespListLanguage struct {
+	value string
+}
+
+type SqlAlarmRuleRespListLanguageEnum struct {
+	ZH_CN SqlAlarmRuleRespListLanguage
+	EN_US SqlAlarmRuleRespListLanguage
+}
+
+func GetSqlAlarmRuleRespListLanguageEnum() SqlAlarmRuleRespListLanguageEnum {
+	return SqlAlarmRuleRespListLanguageEnum{
+		ZH_CN: SqlAlarmRuleRespListLanguage{
+			value: "zh-cn",
+		},
+		EN_US: SqlAlarmRuleRespListLanguage{
+			value: "en-us",
+		},
+	}
+}
+
+func (c SqlAlarmRuleRespListLanguage) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SqlAlarmRuleRespListLanguage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

@@ -23,7 +23,6 @@ type UpdateKeywordsAlarmRuleResponse struct {
 	// 关键词详细信息
 
 	KeywordsRequests *[]KeywordsRequest `json:"keywords_requests,omitempty"`
-	// 告警统计周期
 
 	Frequency *Frequency `json:"frequency,omitempty"`
 	// 告警级别
@@ -37,16 +36,10 @@ type UpdateKeywordsAlarmRuleResponse struct {
 	DomainId *string `json:"domain_id,omitempty"`
 	// 创建时间(毫秒时间戳)
 
-	CreateTime *interface{} `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 	// 更新时间(毫秒时间戳)
 
-	UpdateTime *interface{} `json:"update_time,omitempty"`
-	// 通知主题
-
-	NotificationSaveRule *NotificationSaveRule `json:"notification_save_rule,omitempty"`
-	// 邮件附加信息是否英文
-
-	WhetherEnglish *bool `json:"whether_english,omitempty"`
+	UpdateTime *int64 `json:"update_time,omitempty"`
 	// 语言
 
 	Language *string `json:"language,omitempty"`
@@ -61,13 +54,7 @@ type UpdateKeywordsAlarmRuleResponse struct {
 	ConditionExpression *string `json:"condition_expression,omitempty"`
 	// 暂无
 
-	Id *string `json:"id,omitempty"`
-	// 暂无
-
-	IndexId *string `json:"indexId,omitempty"`
-	// 暂无
-
-	Key            *string `json:"key,omitempty"`
+	IndexId        *string `json:"indexId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -117,3 +117,14 @@ func (c *DscClient) ShowScanJobs(request *model.ShowScanJobsRequest) (*model.Sho
 		return resp.(*model.ShowScanJobsResponse), nil
 	}
 }
+
+//查询OpenApi调用记录
+func (c *DscClient) ShowOpenApiCalledRecords(request *model.ShowOpenApiCalledRecordsRequest) (*model.ShowOpenApiCalledRecordsResponse, error) {
+	requestDef := GenReqDefForShowOpenApiCalledRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowOpenApiCalledRecordsResponse), nil
+	}
+}

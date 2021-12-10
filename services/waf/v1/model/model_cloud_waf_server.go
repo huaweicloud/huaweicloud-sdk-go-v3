@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 独享模式回源服务器配置
+// 服务器配置
 type CloudWafServer struct {
 	// 对外协议
 

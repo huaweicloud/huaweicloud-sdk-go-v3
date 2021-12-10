@@ -103,6 +103,9 @@ type ShowInstanceResponse struct {
 	// 实例的域名。
 
 	DomainName *string `json:"domain_name,omitempty"`
+	// 实例的只读域名，只有主备实例有该字段。
+
+	ReadonlyDomainName *string `json:"readonly_domain_name,omitempty"`
 	// Redis缓存实例是否开启公网访问功能。 - true：开启 - false：不开启
 
 	EnablePublicip *bool `json:"enable_publicip,omitempty"`

@@ -16,6 +16,9 @@ type Networks struct {
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 
 	Ipv6Bandwidth *Ipv6Bandwidth `json:"ipv6_bandwidth,omitempty"`
+	// 是否开启源/目的检查开关。
+
+	AllowedAddressPairs *[]AllowedAddressPair `json:"allowed_address_pairs,omitempty"`
 }
 
 func (o Networks) String() string {

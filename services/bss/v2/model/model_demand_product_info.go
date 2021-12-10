@@ -10,7 +10,7 @@ type DemandProductInfo struct {
 	// ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
 
 	Id string `json:"id"`
-	// 云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。您可以调用查询云服务类型列表接口获取。
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
 
 	CloudServiceType string `json:"cloud_service_type"`
 	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。

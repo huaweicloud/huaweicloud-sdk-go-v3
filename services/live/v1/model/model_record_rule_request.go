@@ -25,7 +25,7 @@ type RecordRuleRequest struct {
 
 	PlanRecordTime *PlanRecordTime `json:"plan_record_time,omitempty"`
 
-	DefaultRecordConfig *DefaultRecordConfig `json:"default_record_config,omitempty"`
+	DefaultRecordConfig *DefaultRecordConfig `json:"default_record_config"`
 }
 
 func (o RecordRuleRequest) String() string {

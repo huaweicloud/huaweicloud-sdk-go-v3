@@ -17,7 +17,6 @@ type UpdateTransferRequestBodyLogTransferInfo struct {
 	// 日志转储状态，ENABLE是指日志转储开启状态，DISABLE是指日志转储关闭状态，EXCEPTION是指日志转储异常状态
 
 	LogTransferStatus UpdateTransferRequestBodyLogTransferInfoLogTransferStatus `json:"log_transfer_status"`
-	// 日志转储详细信息
 
 	LogTransferDetail *TransferDetail `json:"log_transfer_detail"`
 }

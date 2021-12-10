@@ -8,7 +8,7 @@ import (
 
 // 更新测试用例状态请求体
 type UpdateTestCaseResultRequestBody struct {
-	// 注册结果返回的服务id
+	// 注册测试类型服务接口返回的服务id
 
 	ServiceId int32 `json:"service_id"`
 	// 测试用例状态信息，数组长度小于等于50

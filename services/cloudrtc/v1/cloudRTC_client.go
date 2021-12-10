@@ -19,7 +19,7 @@ func CloudRTCClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//查询用户通话质量指标数据。可查询5天内的数据，mid 不为null，查询实时数据时，查询起止时间不超过1个小时，每次查询单个用户时，支持跨天查询。
+//查询用户通话质量指标数据。  可查询5天内的数据，mid 不为null，查询实时数据时，查询起止时间不超过24个小时，每次查询单个用户时，支持跨天查询。
 func (c *CloudRTCClient) ListRtcClientQosDetails(request *model.ListRtcClientQosDetailsRequest) (*model.ListRtcClientQosDetailsResponse, error) {
 	requestDef := GenReqDefForListRtcClientQosDetails()
 

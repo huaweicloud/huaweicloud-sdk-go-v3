@@ -14,7 +14,7 @@ type ListCustomerselfResourceRecordsRequest struct {
 	// 查询的资源消费记录所在账期，格式：YYYY-MM。
 
 	Cycle string `json:"cycle"`
-	// 云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。您可以调用查询云服务类型列表接口获取。
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
 
 	CloudServiceType *string `json:"cloud_service_type,omitempty"`
 	// 云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。

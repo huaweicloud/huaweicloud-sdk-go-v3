@@ -20,7 +20,7 @@ type ListCustomerOrdersRequest struct {
 	// 订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
 
 	CreateTimeEnd *string `json:"create_time_end,omitempty"`
-	// 云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。您可以调用查询云服务类型列表接口获取。
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
 
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
 	// 订单状态。1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认

@@ -10,8 +10,6 @@ type DetectFace struct {
 	BoundingBox *BoundingBox `json:"bounding_box"`
 
 	Attributes *Attributes `json:"attributes,omitempty"`
-
-	Landmark *Landmark `json:"landmark,omitempty"`
 }
 
 func (o DetectFace) String() string {

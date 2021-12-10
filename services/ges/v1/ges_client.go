@@ -30,17 +30,6 @@ func (c *GesClient) AttachEip(request *model.AttachEipRequest) (*model.AttachEip
 	}
 }
 
-//校验用户选择的数据集和元数据文件。
-func (c *GesClient) CheckMetadata(request *model.CheckMetadataRequest) (*model.CheckMetadataResponse, error) {
-	requestDef := GenReqDefForCheckMetadata()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CheckMetadataResponse), nil
-	}
-}
-
 //清空图中所有数据。
 func (c *GesClient) ClearGraph(request *model.ClearGraphRequest) (*model.ClearGraphResponse, error) {
 	requestDef := GenReqDefForClearGraph()

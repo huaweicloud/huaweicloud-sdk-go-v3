@@ -34,7 +34,7 @@ type ShowEventItems struct {
 	Action *string `json:"action,omitempty"`
 	// 攻击请求的cookie
 
-	Cookie *interface{} `json:"cookie,omitempty"`
+	Cookie *string `json:"cookie,omitempty"`
 	// 攻击请求的headers
 
 	Headers *string `json:"headers,omitempty"`

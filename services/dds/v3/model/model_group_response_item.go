@@ -14,7 +14,7 @@ type GroupResponseItem struct {
 	// 组ID。节点类型为shard和config时，该参数有效。
 
 	Id string `json:"id"`
-	// 组名组名称。节点类型为shard和config时，该参数有效。
+	// 组名称。节点类型为shard和config时，该参数有效。
 
 	Name string `json:"name"`
 	// 组状态。节点类型为shard和config时，该参数有效。

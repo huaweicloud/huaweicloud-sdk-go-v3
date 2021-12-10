@@ -7,27 +7,24 @@ import (
 )
 
 type Events struct {
-	// 告警详情
-
 	Annotations *Annotations `json:"annotations"`
-	// 告警信息
 
 	Metadata *Metadata `json:"metadata"`
 	// 到达时间(时间戳)
 
-	ArrivesAt *interface{} `json:"arrives_at"`
+	ArrivesAt int64 `json:"arrives_at"`
 	// 告警清除时间(时间戳)
 
-	EndsAt *interface{} `json:"ends_at"`
+	EndsAt int64 `json:"ends_at"`
 	// 告警id
 
 	Id string `json:"id"`
 	// 告警产生时间(时间戳)
 
-	StartsAt *interface{} `json:"starts_at"`
+	StartsAt int64 `json:"starts_at"`
 	// 告警自动清除时间(时间戳)
 
-	Timeout *interface{} `json:"timeout"`
+	Timeout int64 `json:"timeout"`
 	// 告警规则类型(SQL/关键词)
 
 	Type string `json:"type"`

@@ -7,7 +7,7 @@ import (
 )
 
 type CreateIpRequestBody struct {
-	// 待扩容的对象类型。 - 扩容shard组时，取值为“shard”。 - 扩容config组时，取值为“config”。
+	// 待打开IP开关的对象类型。 - 扩容shard组时，取值为“shard”。 - 扩容config组时，取值为“config”。
 
 	Type string `json:"type"`
 	// 待打开IP开关的组ID。   - 对于shard组，取值为shard组ID。   - 对于config组，取值为config组ID。   - 如果为空，则打开该实例下同group类型的所有开关。 注意：   1. 第一次打开实例开关， 该参数需要传空。   2. 针对已开启开关的组， 开关不允许重复下发。

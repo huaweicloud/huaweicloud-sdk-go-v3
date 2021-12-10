@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// 标签。
 type TagItem struct {
 	// 键。 最大长度36个unicode字符。 key不能为空。不能包含非打印字符“ASCII(0-31)”、“*”、“<”、“>”、“\\”、“=”。
 

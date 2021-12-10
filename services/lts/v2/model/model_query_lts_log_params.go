@@ -20,9 +20,12 @@ type QueryLtsLogParams struct {
 	// 日志过滤条件集合，不同日志来源所需字段不同。
 
 	Labels map[string]string `json:"labels,omitempty"`
-	// 支持关键词精确搜索。关键词指相邻两个分词符之间的单词。
+	// 日志条数统计。默认为false(不统计)，true为统计日志条数。
 
-	Keywords *QueryLtsLogParamsKeywords `json:"keywords,omitempty"`
+	IsCount *bool `json:"is_count,omitempty"`
+	// 支持关键词精确搜索。关键词指相邻两个分词符之间的单词,例：error
+
+	Keywords *string `json:"keywords,omitempty"`
 	// 日志单行序列号，第一次查询时不需要此参数，后续分页查询时需要使用，可从上次查询的返回信息中获取。line_num应在start_time 和 end_time 之间。
 
 	LineNum *string `json:"line_num,omitempty"`
@@ -47,40 +50,6 @@ func (o QueryLtsLogParams) String() string {
 	}
 
 	return strings.Join([]string{"QueryLtsLogParams", string(data)}, " ")
-}
-
-type QueryLtsLogParamsKeywords struct {
-	value string
-}
-
-type QueryLtsLogParamsKeywordsEnum struct {
-	ERROR QueryLtsLogParamsKeywords
-}
-
-func GetQueryLtsLogParamsKeywordsEnum() QueryLtsLogParamsKeywordsEnum {
-	return QueryLtsLogParamsKeywordsEnum{
-		ERROR: QueryLtsLogParamsKeywords{
-			value: "error",
-		},
-	}
-}
-
-func (c QueryLtsLogParamsKeywords) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *QueryLtsLogParamsKeywords) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }
 
 type QueryLtsLogParamsSearchType struct {

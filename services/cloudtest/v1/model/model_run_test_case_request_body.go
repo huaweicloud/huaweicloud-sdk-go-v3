@@ -8,7 +8,7 @@ import (
 
 // 执行测试用例请求体
 type RunTestCaseRequestBody struct {
-	// 注册结果返回的服务id
+	// 注册测试类型服务接口返回的服务id
 
 	ServiceId int32 `json:"service_id"`
 	// 测试计划id

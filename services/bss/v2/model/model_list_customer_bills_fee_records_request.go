@@ -17,7 +17,7 @@ type ListCustomerBillsFeeRecordsRequest struct {
 	// 服务商。1：华为云2：云市场为空时查询包含华为云和云市场在内的全部服务商。
 
 	ProviderType *int32 `json:"provider_type,omitempty"`
-	// 云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。您可以调用查询云服务类型列表接口获取。
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
 
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
 	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。

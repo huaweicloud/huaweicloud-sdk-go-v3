@@ -426,6 +426,17 @@ func (c *RdsClient) MigrateFollower(request *model.MigrateFollowerRequest) (*mod
 	}
 }
 
+//恢复到已有实例。
+func (c *RdsClient) RestoreExistInstance(request *model.RestoreExistInstanceRequest) (*model.RestoreExistInstanceResponse, error) {
+	requestDef := GenReqDefForRestoreExistInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreExistInstanceResponse), nil
+	}
+}
+
 //表级时间点恢复(MySQL)。
 func (c *RdsClient) RestoreTables(request *model.RestoreTablesRequest) (*model.RestoreTablesResponse, error) {
 	requestDef := GenReqDefForRestoreTables()

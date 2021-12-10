@@ -20,8 +20,10 @@
 package config
 
 import (
+	"context"
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
+	"net"
 	"time"
 )
 
@@ -29,7 +31,10 @@ const DefaultTimeout = 120 * time.Second
 const DefaultRetries = 0
 const DefaultIgnoreSSLVerification = false
 
+type DialContext func(ctx context.Context, network string, addr string) (net.Conn, error)
+
 type HttpConfig struct {
+	DialContext           DialContext
 	Timeout               time.Duration
 	Retries               int
 	HttpProxy             *Proxy
@@ -43,6 +48,11 @@ func DefaultHttpConfig() *HttpConfig {
 		Retries:               DefaultRetries,
 		IgnoreSSLVerification: DefaultIgnoreSSLVerification,
 	}
+}
+
+func (config *HttpConfig) WithDialContext(dial DialContext) *HttpConfig {
+	config.DialContext = dial
+	return config
 }
 
 func (config *HttpConfig) WithTimeout(timeout time.Duration) *HttpConfig {

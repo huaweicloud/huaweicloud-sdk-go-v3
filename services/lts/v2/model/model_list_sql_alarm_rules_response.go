@@ -10,7 +10,7 @@ import (
 type ListSqlAlarmRulesResponse struct {
 	// SQL告警
 
-	SqlAlarmRule   *[]SqlAlarmRuleRespList `json:"sql_alarm_rule,omitempty"`
+	SqlAlarmRules  *[]SqlAlarmRuleRespList `json:"sql_alarm_rules,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }
 

@@ -29,6 +29,7 @@ type ShowTaskDetailResponse struct {
 	// 代码总行数
 
 	CodeLineTotal *int32 `json:"code_line_total,omitempty"`
+	// 代码有效行数
 
 	CodeLine *int32 `json:"code_line,omitempty"`
 	// 代码质量
@@ -82,7 +83,13 @@ type ShowTaskDetailResponse struct {
 	// 提示问题数
 
 	SuggestionCount *string `json:"suggestion_count,omitempty"`
-	HttpStatusCode  int     `json:"-"`
+	// 门禁质量是否通过
+
+	IsAccess *string `json:"is_access,omitempty"`
+	// 任务触发方式
+
+	TriggerType    *string `json:"trigger_type,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowTaskDetailResponse) String() string {

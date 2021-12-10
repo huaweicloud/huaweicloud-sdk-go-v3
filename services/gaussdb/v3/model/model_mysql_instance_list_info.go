@@ -71,6 +71,9 @@ type MysqlInstanceListInfo struct {
 	// 专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
 
 	DedicatedResourceId *string `json:"dedicated_resource_id,omitempty"`
+	// 标签列表。
+
+	Tags *[]InstanceTagItem `json:"tags,omitempty"`
 }
 
 func (o MysqlInstanceListInfo) String() string {

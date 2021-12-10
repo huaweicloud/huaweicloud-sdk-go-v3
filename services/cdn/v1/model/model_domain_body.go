@@ -23,7 +23,7 @@ type DomainBody struct {
 	// 域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
 
 	ServiceArea DomainBodyServiceArea `json:"service_area"`
-	// 企业项目ID，创建域名归属的项目。
+	// 企业项目ID，创建域名归属的项目。注意：当使用子账号调用接口时，该参数必传。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }

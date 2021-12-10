@@ -16,7 +16,7 @@ type UsageType struct {
 	// 资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
 
 	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
-	// 云服务类型编码。例如ECS的云服务类型编码为“hws.service.type.ec2”。
+	// 云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
 
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
 }

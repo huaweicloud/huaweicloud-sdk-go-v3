@@ -9,10 +9,10 @@ import (
 type AomMappingLogStreamInfo struct {
 	// 日志组id
 
-	TargetLogGroupId string `json:"target_log_group_id"`
+	TargetLogGroupId *string `json:"target_log_group_id,omitempty"`
 	// 目标日志组名称。
 
-	TargetLogGroupName string `json:"target_log_group_name"`
+	TargetLogGroupName *string `json:"target_log_group_name,omitempty"`
 	// 日志流id
 
 	TargetLogStreamId *string `json:"target_log_stream_id,omitempty"`

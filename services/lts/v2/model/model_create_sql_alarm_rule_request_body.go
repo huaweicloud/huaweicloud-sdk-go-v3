@@ -39,7 +39,7 @@ type CreateSqlAlarmRuleRequestBody struct {
 	NotificationSaveRule *NotificationSaveRule `json:"notification_save_rule,omitempty"`
 	// 邮件附加信息是否英文
 
-	WhetherEnglish bool `json:"whether_english"`
+	Language CreateSqlAlarmRuleRequestBodyLanguage `json:"language"`
 }
 
 func (o CreateSqlAlarmRuleRequestBody) String() string {
@@ -84,6 +84,44 @@ func (c CreateSqlAlarmRuleRequestBodySqlAlarmLevel) MarshalJSON() ([]byte, error
 }
 
 func (c *CreateSqlAlarmRuleRequestBodySqlAlarmLevel) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateSqlAlarmRuleRequestBodyLanguage struct {
+	value string
+}
+
+type CreateSqlAlarmRuleRequestBodyLanguageEnum struct {
+	ZH_CN CreateSqlAlarmRuleRequestBodyLanguage
+	EN_US CreateSqlAlarmRuleRequestBodyLanguage
+}
+
+func GetCreateSqlAlarmRuleRequestBodyLanguageEnum() CreateSqlAlarmRuleRequestBodyLanguageEnum {
+	return CreateSqlAlarmRuleRequestBodyLanguageEnum{
+		ZH_CN: CreateSqlAlarmRuleRequestBodyLanguage{
+			value: "zh-cn",
+		},
+		EN_US: CreateSqlAlarmRuleRequestBodyLanguage{
+			value: "en-us",
+		},
+	}
+}
+
+func (c CreateSqlAlarmRuleRequestBodyLanguage) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateSqlAlarmRuleRequestBodyLanguage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

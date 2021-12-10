@@ -13,6 +13,9 @@ type LtsStructTemplateInfo struct {
 	// 结构化字段
 
 	DemoFields []StructFieldInfo `json:"demo_fields"`
+	// tag字段列表（使用tag字段解析时需要，其中系统模板不支持使用tag字段）。
+
+	TagFields []TagField `json:"tag_fields"`
 	// 示例日志
 
 	Content string `json:"content"`

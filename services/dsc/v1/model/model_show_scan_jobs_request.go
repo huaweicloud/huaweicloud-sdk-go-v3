@@ -10,7 +10,7 @@ import (
 type ShowScanJobsRequest struct {
 	// 页码
 
-	Page *int32 `json:"page,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
 	// 分页大小
 
 	Limit *int32 `json:"limit,omitempty"`

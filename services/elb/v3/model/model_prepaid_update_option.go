@@ -17,9 +17,6 @@ type PrepaidUpdateOption struct {
 	// 规格变更类型： immediate：即时变更，规格变更立即生效。（默认） delay：续费变更，当前周期结束后变更为目标规格。
 
 	ChangeMode *PrepaidUpdateOptionChangeMode `json:"change_mode,omitempty"`
-	// 云服务引导URL。 订购订单支付完成后，支付成功的页面嵌入该url的内容。 console传，用户侧api文档不可见该字段。
-
-	CloudServiceConsoleUrl *string `json:"cloud_service_console_url,omitempty"`
 	// 订购周期数（默认1），取值会随运营策略变化。（仅在change_mode为delay时生效） period_type为month时，为[1,9]， period_type为year时，为[1,3]
 
 	PeriodNum *int32 `json:"period_num,omitempty"`

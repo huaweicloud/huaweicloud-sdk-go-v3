@@ -1,13 +1,12 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )
 
-// 参数项。
+// 业务数据结构
 type BusinessNodeModel struct {
 	// 默认业务
 
@@ -20,10 +19,10 @@ type BusinessNodeModel struct {
 	EpsId *string `json:"eps_id,omitempty"`
 	// 创建时间
 
-	GmtCreate *sdktime.SdkTime `json:"gmt_create,omitempty"`
+	GmtCreate *string `json:"gmt_create,omitempty"`
 	// 修改时间
 
-	GmtModify *sdktime.SdkTime `json:"gmt_modify,omitempty"`
+	GmtModify *string `json:"gmt_modify,omitempty"`
 	// 业务id
 
 	Id *int64 `json:"id,omitempty"`

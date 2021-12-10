@@ -19,6 +19,17 @@ func CloudIDEClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//设置ide实例对插件的授权。同意、不同意、未知（下次重新询问）
+func (c *CloudIDEClient) CreateExtensionAuthorization(request *model.CreateExtensionAuthorizationRequest) (*model.CreateExtensionAuthorizationResponse, error) {
+	requestDef := GenReqDefForCreateExtensionAuthorization()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateExtensionAuthorizationResponse), nil
+	}
+}
+
 //查询技术栈模板工程
 func (c *CloudIDEClient) ListProjectTemplates(request *model.ListProjectTemplatesRequest) (*model.ListProjectTemplatesResponse, error) {
 	requestDef := GenReqDefForListProjectTemplates()
@@ -52,6 +63,17 @@ func (c *CloudIDEClient) ShowAccountStatus(request *model.ShowAccountStatusReque
 	}
 }
 
+//查询ide实例对插件的授权情况，同意授权的插件能在ide实例内携带登陆用户的token调用第三方服务
+func (c *CloudIDEClient) ShowExtensionAuthorization(request *model.ShowExtensionAuthorizationRequest) (*model.ShowExtensionAuthorizationResponse, error) {
+	requestDef := GenReqDefForShowExtensionAuthorization()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowExtensionAuthorizationResponse), nil
+	}
+}
+
 //获取技术栈计费信息
 func (c *CloudIDEClient) ShowPrice(request *model.ShowPriceRequest) (*model.ShowPriceResponse, error) {
 	requestDef := GenReqDefForShowPrice()
@@ -60,6 +82,17 @@ func (c *CloudIDEClient) ShowPrice(request *model.ShowPriceRequest) (*model.Show
 		return nil, err
 	} else {
 		return resp.(*model.ShowPriceResponse), nil
+	}
+}
+
+//查询用户是否有权限访问某个IDE实例
+func (c *CloudIDEClient) CheckInstanceAccess(request *model.CheckInstanceAccessRequest) (*model.CheckInstanceAccessResponse, error) {
+	requestDef := GenReqDefForCheckInstanceAccess()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckInstanceAccessResponse), nil
 	}
 }
 
@@ -170,5 +203,16 @@ func (c *CloudIDEClient) UpdateInstance(request *model.UpdateInstanceRequest) (*
 		return nil, err
 	} else {
 		return resp.(*model.UpdateInstanceResponse), nil
+	}
+}
+
+//刷新IDE实例活跃状态，超过该实例设置的过期时间后实例自动关闭。
+func (c *CloudIDEClient) UpdateInstanceActivity(request *model.UpdateInstanceActivityRequest) (*model.UpdateInstanceActivityResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceActivity()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceActivityResponse), nil
 	}
 }

@@ -12,7 +12,7 @@ import (
 type KeywordsAlarmRuleRespList struct {
 	// 项目id
 
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"projectId"`
 	// 关键词告警id
 
 	KeywordsAlarmRuleId string `json:"keywords_alarm_rule_id"`
@@ -42,16 +42,16 @@ type KeywordsAlarmRuleRespList struct {
 	DomainId string `json:"domain_id"`
 	// 创建时间(毫秒时间戳)
 
-	CreateTime *interface{} `json:"create_time"`
+	CreateTime int64 `json:"create_time"`
 	// 更新时间(毫秒时间戳)
 
-	UpdateTime *interface{} `json:"update_time"`
+	UpdateTime int64 `json:"update_time"`
 	// 主题
 
 	Topics []Topics `json:"topics"`
 	// 邮件附加信息是否英文
 
-	WhetherEnglish bool `json:"whether_english"`
+	Language KeywordsAlarmRuleRespListLanguage `json:"language"`
 }
 
 func (o KeywordsAlarmRuleRespList) String() string {
@@ -96,6 +96,44 @@ func (c KeywordsAlarmRuleRespListKeywordsAlarmLevel) MarshalJSON() ([]byte, erro
 }
 
 func (c *KeywordsAlarmRuleRespListKeywordsAlarmLevel) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type KeywordsAlarmRuleRespListLanguage struct {
+	value string
+}
+
+type KeywordsAlarmRuleRespListLanguageEnum struct {
+	ZH_CN KeywordsAlarmRuleRespListLanguage
+	EN_US KeywordsAlarmRuleRespListLanguage
+}
+
+func GetKeywordsAlarmRuleRespListLanguageEnum() KeywordsAlarmRuleRespListLanguageEnum {
+	return KeywordsAlarmRuleRespListLanguageEnum{
+		ZH_CN: KeywordsAlarmRuleRespListLanguage{
+			value: "zh-cn",
+		},
+		EN_US: KeywordsAlarmRuleRespListLanguage{
+			value: "en-us",
+		},
+	}
+}
+
+func (c KeywordsAlarmRuleRespListLanguage) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *KeywordsAlarmRuleRespListLanguage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

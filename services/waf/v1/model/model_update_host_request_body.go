@@ -20,7 +20,7 @@ type UpdateHostRequestBody struct {
 	// 证书名称,在对外协议为https的场景下可以使用，可以在页面上获取的证书名称，或通过查询证书列表（ListCertificates）接口获取证书名称
 
 	Certificatename *string `json:"certificatename,omitempty"`
-	// 独享模式回源服务器配置
+	// 服务器配置
 
 	Server *[]UpdateCloudWafServer `json:"server,omitempty"`
 	// 支持最低的TLS版本（TLS v1.0/TLS v1.1/TLS v1.2）,默认为TLS v1.0版本

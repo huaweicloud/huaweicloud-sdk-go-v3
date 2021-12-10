@@ -17,7 +17,7 @@ type ListSubCustomerBillDetailRequest struct {
 	// 客户账号ID。您可以调用查询客户列表接口获取customer_id。
 
 	CustomerId string `json:"customer_id"`
-	// 云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。您可以调用查询云服务类型列表接口获取。
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
 
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
 	// 云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。

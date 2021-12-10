@@ -106,6 +106,7 @@ func main() {
     * [1.2 网络代理](#12-网络代理-top)
     * [1.3 超时配置](#13-超时配置-top)
     * [1.4 SSL配置](#14-ssl-配置-top)
+    * [1.5 自定义网络连接创建](#15-自定义网络连接创建-top)
 * [2. 客户端认证信息](#2-客户端认证信息-top)
     * [2.1 使用永久 AK 和 SK](#21-使用永久-ak-和-sk-top)
     * [2.2 使用临时 AK 和 SK](#22-使用临时-ak-和-sk-top)
@@ -116,6 +117,7 @@ func main() {
     * [4.1 异常处理](#41-异常处理-top)
 * [5. 故障处理](#5-故障处理-top)
     * [5.1 HTTP 监听器](#51-http监听器-top)
+* [6. 文件上传与下载](#5-文件上传与下载-top)
 
 ### 1. 客户端连接参数 [:top:](#用户手册-top)
 
@@ -150,6 +152,16 @@ httpConfig.WithTimeout(120);
 ``` go
 // 根据需要配置是否跳过SSL证书校验
 httpConfig.WithIgnoreSSLVerification(true);
+```
+
+#### 1.5 自定义网络连接创建 [:top:](#用户手册-top)
+
+``` go
+// 根据需要配置如何创建网络连接
+func DialContext(ctx context.Context, network string, addr string) (net.Conn, error) {
+	return net.Dial(network, addr)
+}
+httpConfig.WithDialContext(DialContext)
 ```
 
 ### 2. 客户端认证信息 [:top:](#用户手册-top)
@@ -360,4 +372,76 @@ client := vpc.NewVpcClient(
                     AddRequestHandler(RequestHandler).
                     AddResponseHandler(ResponseHandler))).
         Build())
+```
+
+### 6. 文件上传与下载 [:top:](#用户手册-top)
+
+以数据安全中心服务的嵌入图片水印接口为例，该接口需要上传一个图片文件，并返回加过水印的图片文件流：
+
+```go
+package main
+
+import (
+	"fmt"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+	dsc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dsc/v1"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dsc/v1/model"
+	"os"
+)
+
+func createImageWatermark(client *dsc.DscClient) {
+	
+	// 打开文件
+	file, err := os.Open("demo.jpg")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	defer file.Close()
+
+	body := &model.CreateImageWatermarkRequestBody{
+		File:           def.NewFilePart(file),
+		BlindWatermark: def.NewMultiPart("test_watermark"),
+	}
+
+	request := &model.CreateImageWatermarkRequest{Body: body}
+	response, err := client.CreateImageWatermark(request)
+	if err == nil {
+		fmt.Printf("%+v\n", response)
+	} else {
+		fmt.Println(err)
+		return
+	}
+
+	// 下载文件
+	result, err := os.Create("result.jpg")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	response.Consume(result)
+
+}
+
+func main() {
+	ak := "{your ak string}"
+	sk := "{your sk string}"
+	endpoint := "{your endpoint string}"
+	projectId := "{your project id}"
+
+	credentials := basic.NewCredentialsBuilder().
+		WithAk(ak).
+		WithSk(sk).
+		WithProjectId(projectId).
+		Build()
+
+	client := dsc.NewDscClient(
+		dsc.DscClientBuilder().
+			WithEndpoint(endpoint).
+			WithCredential(credentials).
+			Build())
+
+	createImageWatermark(client)
+}
 ```

@@ -16,9 +16,12 @@ type StructFieldInfo struct {
 	// 字段名称
 
 	FieldName *string `json:"fieldName,omitempty"`
-	// 字段数据类型
+	// 字段数据类型,例：string，long，float
 
 	Type string `json:"type"`
+	// 自定义别名(json方式中按需添加)
+
+	UserDefinedName *string `json:"userDefinedName,omitempty"`
 	// 序号
 
 	Index *int32 `json:"index,omitempty"`

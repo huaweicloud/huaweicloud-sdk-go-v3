@@ -26,10 +26,8 @@ type ShowStructTemplateResponse struct {
 	// 日志组ID
 
 	LogGroupId *string `json:"logGroupId,omitempty"`
-	// 结构化方式
 
 	Rule *ShowStructTemplateRule `json:"rule,omitempty"`
-	// kafka信息
 
 	ClusterInfo *ShowStructTemplateclusterInfo `json:"cluster_info,omitempty"`
 	// 日志流ID

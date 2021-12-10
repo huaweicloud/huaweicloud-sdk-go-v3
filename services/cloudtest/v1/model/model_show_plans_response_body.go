@@ -13,13 +13,13 @@ type ShowPlansResponseBody struct {
 	// 测试计划名称
 
 	Name *string `json:"name,omitempty"`
-	// 测试计划开始日期
+	// 测试计划开始时间
 
 	StartDate *string `json:"start_date,omitempty"`
-	// 测试计划截止日期
+	// 测试计划截止时间
 
 	EndDate *string `json:"end_date,omitempty"`
-	// 测试计划实际完成日期（测试计划实际完成指测试计划下所有测试用例处于完成状态）
+	// 测试计划实际完成时间（测试计划实际完成指测试计划下所有测试用例处于完成状态）
 
 	FinishDate *string `json:"finish_date,omitempty"`
 	// 项目id
@@ -39,6 +39,8 @@ type ShowPlansResponseBody struct {
 	ExecuteStage *ShowPlansResponseExecuteStage `json:"execute_stage,omitempty"`
 
 	ReportStage *ShowPlansResponseReportStage `json:"report_stage,omitempty"`
+
+	Iteration *NameAndId `json:"iteration,omitempty"`
 }
 
 func (o ShowPlansResponseBody) String() string {

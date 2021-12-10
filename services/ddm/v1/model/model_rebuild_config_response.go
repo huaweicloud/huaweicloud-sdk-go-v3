@@ -8,7 +8,8 @@ import (
 
 // Response Object
 type RebuildConfigResponse struct {
-	HttpStatusCode int `json:"-"`
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RebuildConfigResponse) String() string {

@@ -24,6 +24,9 @@ type CreateDocWatermarkRequestBody struct {
 	// 添加水印后给文件设置密码， 最大支持长度256。
 	MarkedFilePassword *def.MultiPart `json:"marked_file_password,omitempty"`
 
+	// 添加水印后给文件设置只读密码， 最大支持长度256。
+	ReadonlyPassword *def.MultiPart `json:"readonly_password,omitempty"`
+
 	// 明水印内容，与“blind_watermark”字段至少有一个不为空
 	VisibleWatermark *def.MultiPart `json:"visible_watermark,omitempty"`
 

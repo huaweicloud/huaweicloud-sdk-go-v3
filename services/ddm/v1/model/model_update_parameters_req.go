@@ -7,9 +7,7 @@ import (
 )
 
 type UpdateParametersReq struct {
-	// 需要修改的DDM实例参数的集合。
-
-	Values *interface{} `json:"values"`
+	Values *UpdateParametersReqValues `json:"values"`
 }
 
 func (o UpdateParametersReq) String() string {

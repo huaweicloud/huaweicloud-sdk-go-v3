@@ -42,6 +42,10 @@ func NewDefaultHttpClient(httpConfig *config.HttpConfig) *DefaultHttpClient {
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: httpConfig.IgnoreSSLVerification},
 	}
 
+	if httpConfig.DialContext != nil {
+		transport.DialContext = httpConfig.DialContext
+	}
+
 	if httpConfig.HttpProxy != nil {
 		proxyUrl := httpConfig.HttpProxy.GetProxyUrl()
 		if proxyUrl != "" {
@@ -65,7 +69,8 @@ func NewDefaultHttpClient(httpConfig *config.HttpConfig) *DefaultHttpClient {
 	return client
 }
 
-func (client *DefaultHttpClient) SyncInvokeHttp(request *request.DefaultHttpRequest) (*response.DefaultHttpResponse, error) {
+func (client *DefaultHttpClient) SyncInvokeHttp(request *request.DefaultHttpRequest) (*response.DefaultHttpResponse,
+	error) {
 	req, err := request.ConvertRequest()
 	if err != nil {
 		return nil, err

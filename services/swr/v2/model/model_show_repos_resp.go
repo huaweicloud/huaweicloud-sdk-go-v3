@@ -58,7 +58,7 @@ type ShowReposResp struct {
 	// 查询他人共享镜像：共享是否过期 查询我共享的镜像：默认为false,无意义
 
 	Status bool `json:"status"`
-	//
+	// 总记录条数
 
 	TotalRange int64 `json:"total_range"`
 }

@@ -25,7 +25,7 @@ type NvlCostAnalysedBillDetail struct {
 	// |参数名称：云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。| |参数约束及描述：|
 
 	RegionName *string `json:"region_name,omitempty"`
-	// |参数名称：云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。您可以调用查询云服务类型列表接口获取。| |参数约束及描述：|
+	// |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。| |参数约束及描述：|
 
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
 	// |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。| |参数约束及描述：|

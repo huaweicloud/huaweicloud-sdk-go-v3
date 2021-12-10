@@ -17,7 +17,7 @@ type ListCustomerBillsMonthlyBreakDownRequest struct {
 	// |参数名称：计费模式| |参数的约束及描述：枚举型，1、包周期；3、按需；10、预留实例,不传查询全部|
 
 	ChargingMode *int32 `json:"charging_mode,omitempty"`
-	// |参数名称：云服务类型编码| |参数的约束及描述：例如ECS的云服务类型编码为“hws.service.type.ec2”。您可以调用查询云服务类型列表接口获取。|
+	// |参数名称：云服务类型编码| |参数的约束及描述：例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。|
 
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
 	// |参数名称：资源类型编码| |参数的约束及描述：|

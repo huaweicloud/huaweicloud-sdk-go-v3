@@ -103,6 +103,7 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
     * [1.2  Network Proxy](#12-network-proxy-top)
     * [1.3  Connection](#13-connection-top)
     * [1.4  SSL Certification](#14-ssl-certification-top)
+    * [1.5  Custom Network Connection](#15-custom-network-connection-top)
 * [2. Credentials Configuration](#2-credentials-configuration-top)
     * [2.1  Use Permanent AK&SK](#21-use-permanent-aksk-top)
     * [2.2  Use Temporary AK&SK](#22-use-temporary-aksk-top)
@@ -113,6 +114,7 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
     * [4.1  Exceptions](#41-exceptions-top)
 * [5. Troubleshooting](#5-troubleshooting-top)
     * [5.1  Original HTTP Listener](#51-original-http-listener-top)
+* [6. Upload and download files](#6-upload-and-download-files-top)
 
 ### 1. Client Configuration [:top:](#user-manual-top)
 
@@ -147,6 +149,16 @@ httpConfig.WithTimeout(120);
 ``` go
 // Skip ssl certification checking while using https protocol if needed
 httpConfig.WithIgnoreSSLVerification(true);
+```
+
+#### 1.5 Custom Network Connection [:top:](#user-manual-top)
+
+``` go
+// Config network connection dial function if needed
+func DialContext(ctx context.Context, network string, addr string) (net.Conn, error) {
+	return net.Dial(network, addr)
+}
+httpConfig.WithDialContext(DialContext)
 ```
 
 ### 2. Credentials Configuration [:top:](#user-manual-top)
@@ -368,4 +380,76 @@ client := vpc.NewVpcClient(
                     AddRequestHandler(RequestHandler).
                     AddResponseHandler(ResponseHandler))).
         Build())
+```
+
+### 6. Upload and download files [:top:](#user-manual-top)
+
+Take the interface `CreateImageWatermark` of the service `Data Security Center` as an example, this interface needs to upload an image file and return the watermarked image file stream:
+
+```go
+package main
+
+import (
+	"fmt"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+	dsc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dsc/v1"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dsc/v1/model"
+	"os"
+)
+
+func createImageWatermark(client *dsc.DscClient) {
+	
+	// Open the file.
+	file, err := os.Open("demo.jpg")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	defer file.Close()
+
+	body := &model.CreateImageWatermarkRequestBody{
+		File:           def.NewFilePart(file),
+		BlindWatermark: def.NewMultiPart("test_watermark"),
+	}
+
+	request := &model.CreateImageWatermarkRequest{Body: body}
+	response, err := client.CreateImageWatermark(request)
+	if err == nil {
+		fmt.Printf("%+v\n", response)
+	} else {
+		fmt.Println(err)
+		return
+	}
+
+	// Download the file.
+	result, err := os.Create("result.jpg")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	response.Consume(result)
+
+}
+
+func main() {
+	ak := "{your ak string}"
+	sk := "{your sk string}"
+	endpoint := "{your endpoint string}"
+	projectId := "{your project id}"
+
+	credentials := basic.NewCredentialsBuilder().
+		WithAk(ak).
+		WithSk(sk).
+		WithProjectId(projectId).
+		Build()
+
+	client := dsc.NewDscClient(
+		dsc.DscClientBuilder().
+			WithEndpoint(endpoint).
+			WithCredential(credentials).
+			Build())
+
+	createImageWatermark(client)
+}
 ```

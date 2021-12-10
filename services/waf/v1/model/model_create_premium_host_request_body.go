@@ -23,7 +23,7 @@ type CreatePremiumHostRequestBody struct {
 	// 防护域名初始绑定的策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
 
 	Policyid *string `json:"policyid,omitempty"`
-	// 独享模式回源服务器配置
+	// 服务器配置
 
 	Server []PremiumWafServer `json:"server"`
 }

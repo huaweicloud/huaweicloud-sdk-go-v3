@@ -74,6 +74,28 @@ func (c *CodeCheckClient) ListRulesets(request *model.ListRulesetsRequest) (*mod
 	}
 }
 
+//查询任务的已选规则集列表。
+func (c *CodeCheckClient) ListTaskRuleset(request *model.ListTaskRulesetRequest) (*model.ListTaskRulesetResponse, error) {
+	requestDef := GenReqDefForListTaskRuleset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTaskRulesetResponse), nil
+	}
+}
+
+//根据项目ID、规则集ID等条件查询规则列表。
+func (c *CodeCheckClient) ListTemplateRules(request *model.ListTemplateRulesRequest) (*model.ListTemplateRulesResponse, error) {
+	requestDef := GenReqDefForListTemplateRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTemplateRulesResponse), nil
+	}
+}
+
 //执行检查任务。
 func (c *CodeCheckClient) RunTask(request *model.RunTaskRequest) (*model.RunTaskResponse, error) {
 	requestDef := GenReqDefForRunTask()
@@ -93,6 +115,17 @@ func (c *CodeCheckClient) ShowProgressDetail(request *model.ShowProgressDetailRe
 		return nil, err
 	} else {
 		return resp.(*model.ShowProgressDetailResponse), nil
+	}
+}
+
+//根据检查任务ID查询cmertrics缺陷概要。
+func (c *CodeCheckClient) ShowTaskCmetrics(request *model.ShowTaskCmetricsRequest) (*model.ShowTaskCmetricsResponse, error) {
+	requestDef := GenReqDefForShowTaskCmetrics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaskCmetricsResponse), nil
 	}
 }
 

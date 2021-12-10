@@ -19,6 +19,17 @@ func GaussDBClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//批量添加或删除指定实例的标签。
+func (c *GaussDBClient) BatchTagAction(request *model.BatchTagActionRequest) (*model.BatchTagActionResponse, error) {
+	requestDef := GenReqDefForBatchTagAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchTagActionResponse), nil
+	}
+}
+
 //变更数据库实例的规格。
 func (c *GaussDBClient) ChangeGaussMySqlInstanceSpecification(request *model.ChangeGaussMySqlInstanceSpecificationRequest) (*model.ChangeGaussMySqlInstanceSpecificationResponse, error) {
 	requestDef := GenReqDefForChangeGaussMySqlInstanceSpecification()
@@ -184,6 +195,28 @@ func (c *GaussDBClient) ListGaussMySqlSlowLog(request *model.ListGaussMySqlSlowL
 	}
 }
 
+//查询指定实例的标签信息。
+func (c *GaussDBClient) ListInstanceTags(request *model.ListInstanceTagsRequest) (*model.ListInstanceTagsResponse, error) {
+	requestDef := GenReqDefForListInstanceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceTagsResponse), nil
+	}
+}
+
+//查询指定project ID下实例的所有标签集合。
+func (c *GaussDBClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
+	requestDef := GenReqDefForListProjectTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectTagsResponse), nil
+	}
+}
+
 //重置数据库密码
 func (c *GaussDBClient) ResetGaussMySqlPassword(request *model.ResetGaussMySqlPasswordRequest) (*model.ResetGaussMySqlPasswordResponse, error) {
 	requestDef := GenReqDefForResetGaussMySqlPassword()
@@ -316,6 +349,17 @@ func (c *GaussDBClient) ShowGaussMySqlQuotas(request *model.ShowGaussMySqlQuotas
 	}
 }
 
+//查询实例秒级监控频率。
+func (c *GaussDBClient) ShowInstanceMonitorExtend(request *model.ShowInstanceMonitorExtendRequest) (*model.ShowInstanceMonitorExtendResponse, error) {
+	requestDef := GenReqDefForShowInstanceMonitorExtend()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceMonitorExtendResponse), nil
+	}
+}
+
 //修改备份策略
 func (c *GaussDBClient) UpdateGaussMySqlBackupPolicy(request *model.UpdateGaussMySqlBackupPolicyRequest) (*model.UpdateGaussMySqlBackupPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateGaussMySqlBackupPolicy()
@@ -346,5 +390,16 @@ func (c *GaussDBClient) UpdateGaussMySqlQuotas(request *model.UpdateGaussMySqlQu
 		return nil, err
 	} else {
 		return resp.(*model.UpdateGaussMySqlQuotasResponse), nil
+	}
+}
+
+//打开/关闭/修改实例秒级监控。
+func (c *GaussDBClient) UpdateInstanceMonitor(request *model.UpdateInstanceMonitorRequest) (*model.UpdateInstanceMonitorResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceMonitor()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceMonitorResponse), nil
 	}
 }

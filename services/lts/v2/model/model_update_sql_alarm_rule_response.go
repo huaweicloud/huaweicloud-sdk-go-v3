@@ -19,9 +19,6 @@ type UpdateSqlAlarmRuleResponse struct {
 	IndexId *string `json:"indexId,omitempty"`
 	// 测试
 
-	Key *string `json:"key,omitempty"`
-	// 测试
-
 	Language *string `json:"language,omitempty"`
 	// 测试
 
@@ -55,10 +52,10 @@ type UpdateSqlAlarmRuleResponse struct {
 	DomainId *string `json:"domain_id,omitempty"`
 	// 创建时间(毫秒时间戳)
 
-	CreateTime *interface{} `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 	// 更新时间(毫秒时间戳)
 
-	UpdateTime *interface{} `json:"update_time,omitempty"`
+	UpdateTime *int64 `json:"update_time,omitempty"`
 	// 主题
 
 	Topics         *[]Topics `json:"topics,omitempty"`

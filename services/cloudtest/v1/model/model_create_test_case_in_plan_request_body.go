@@ -8,7 +8,7 @@ import (
 
 // 计划中批量添加测试用例请求体
 type CreateTestCaseInPlanRequestBody struct {
-	// 注册结果返回的服务id
+	// 注册测试类型服务接口返回的服务id
 
 	ServiceId int32 `json:"service_id"`
 	// 计划下包含的用例个数，数组长度小于50个，只能包含一种测试类型

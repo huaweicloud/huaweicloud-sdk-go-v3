@@ -14,7 +14,7 @@ type CreateTestCaseResponse struct {
 	// 软开云项目唯一标识
 
 	ProjectId *string `json:"project_id,omitempty"`
-	// 注册结果返回的服务id
+	// 注册测试类型服务接口返回的服务id
 
 	ServiceId *int32 `json:"service_id,omitempty"`
 	// 测试用例名称

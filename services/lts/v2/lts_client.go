@@ -19,6 +19,28 @@ func LtsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//创建日志接入
+func (c *LtsClient) CreateAccessConfig(request *model.CreateAccessConfigRequest) (*model.CreateAccessConfigResponse, error) {
+	requestDef := GenReqDefForCreateAccessConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAccessConfigResponse), nil
+	}
+}
+
+//创建主机组
+func (c *LtsClient) CreateHostGroup(request *model.CreateHostGroupRequest) (*model.CreateHostGroupResponse, error) {
+	requestDef := GenReqDefForCreateHostGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateHostGroupResponse), nil
+	}
+}
+
 //该接口用于创建关键词告警，目前每个帐户最多可以创建共200个关键词告警与SQL告警。
 func (c *LtsClient) CreateKeywordsAlarmRule(request *model.CreateKeywordsAlarmRuleRequest) (*model.CreateKeywordsAlarmRuleResponse, error) {
 	requestDef := GenReqDefForCreateKeywordsAlarmRule()
@@ -96,6 +118,17 @@ func (c *LtsClient) CreateTransfer(request *model.CreateTransferRequest) (*model
 	}
 }
 
+//删除日志接入
+func (c *LtsClient) DeleteAccessConfig(request *model.DeleteAccessConfigRequest) (*model.DeleteAccessConfigResponse, error) {
+	requestDef := GenReqDefForDeleteAccessConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAccessConfigResponse), nil
+	}
+}
+
 //该接口用于删除活动告警
 func (c *LtsClient) DeleteActiveAlarms(request *model.DeleteActiveAlarmsRequest) (*model.DeleteActiveAlarmsResponse, error) {
 	requestDef := GenReqDefForDeleteActiveAlarms()
@@ -104,6 +137,17 @@ func (c *LtsClient) DeleteActiveAlarms(request *model.DeleteActiveAlarmsRequest)
 		return nil, err
 	} else {
 		return resp.(*model.DeleteActiveAlarmsResponse), nil
+	}
+}
+
+//删除主机组
+func (c *LtsClient) DeleteHostGroup(request *model.DeleteHostGroupRequest) (*model.DeleteHostGroupResponse, error) {
+	requestDef := GenReqDefForDeleteHostGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHostGroupResponse), nil
 	}
 }
 
@@ -195,6 +239,17 @@ func (c *LtsClient) EnableLogCollection(request *model.EnableLogCollectionReques
 	}
 }
 
+//查询日志接入列表
+func (c *LtsClient) ListAccessConfig(request *model.ListAccessConfigRequest) (*model.ListAccessConfigResponse, error) {
+	requestDef := GenReqDefForListAccessConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAccessConfigResponse), nil
+	}
+}
+
 //该接口用于查询告警列表
 func (c *LtsClient) ListActiveOrHistoryAlarms(request *model.ListActiveOrHistoryAlarmsRequest) (*model.ListActiveOrHistoryAlarmsResponse, error) {
 	requestDef := GenReqDefForListActiveOrHistoryAlarms()
@@ -217,6 +272,28 @@ func (c *LtsClient) ListCharts(request *model.ListChartsRequest) (*model.ListCha
 	}
 }
 
+//查询主机列表
+func (c *LtsClient) ListHost(request *model.ListHostRequest) (*model.ListHostResponse, error) {
+	requestDef := GenReqDefForListHost()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHostResponse), nil
+	}
+}
+
+//查询主机组列表
+func (c *LtsClient) ListHostGroup(request *model.ListHostGroupRequest) (*model.ListHostGroupResponse, error) {
+	requestDef := GenReqDefForListHostGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHostGroupResponse), nil
+	}
+}
+
 //该接口用于查询关键词告警。
 func (c *LtsClient) ListKeywordsAlarmRules(request *model.ListKeywordsAlarmRulesRequest) (*model.ListKeywordsAlarmRulesResponse, error) {
 	requestDef := GenReqDefForListKeywordsAlarmRules()
@@ -236,6 +313,17 @@ func (c *LtsClient) ListLogGroups(request *model.ListLogGroupsRequest) (*model.L
 		return nil, err
 	} else {
 		return resp.(*model.ListLogGroupsResponse), nil
+	}
+}
+
+//查询关键词搜索条数
+func (c *LtsClient) ListLogHistogram(request *model.ListLogHistogramRequest) (*model.ListLogHistogramResponse, error) {
+	requestDef := GenReqDefForListLogHistogram()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLogHistogramResponse), nil
 	}
 }
 
@@ -368,6 +456,28 @@ func (c *LtsClient) ShowStructTemplate(request *model.ShowStructTemplateRequest)
 		return nil, err
 	} else {
 		return resp.(*model.ShowStructTemplateResponse), nil
+	}
+}
+
+//修改日志接入
+func (c *LtsClient) UpdateAccessConfig(request *model.UpdateAccessConfigRequest) (*model.UpdateAccessConfigResponse, error) {
+	requestDef := GenReqDefForUpdateAccessConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAccessConfigResponse), nil
+	}
+}
+
+//更新主机组
+func (c *LtsClient) UpdateHostGroup(request *model.UpdateHostGroupRequest) (*model.UpdateHostGroupResponse, error) {
+	requestDef := GenReqDefForUpdateHostGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHostGroupResponse), nil
 	}
 }
 

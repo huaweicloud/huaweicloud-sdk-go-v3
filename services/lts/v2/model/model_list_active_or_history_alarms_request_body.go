@@ -15,20 +15,19 @@ type ListActiveOrHistoryAlarmsRequestBody struct {
 	WhetherCustomField bool `json:"whether_custom_field"`
 	// 自定义时间段开始时间(时间戳)
 
-	StartTime *interface{} `json:"start_time,omitempty"`
+	StartTime *int64 `json:"start_time,omitempty"`
 	// 自定义时间段结束时间(时间戳)
 
-	EndTime *interface{} `json:"end_time,omitempty"`
+	EndTime *int64 `json:"end_time,omitempty"`
 	// 非自定义时间段时间范围(单位为分钟)
 
-	TimeRange *int32 `json:"time_range,omitempty"`
+	TimeRange *string `json:"time_range,omitempty"`
 	// 关键字检索条件
 
 	Search *string `json:"search,omitempty"`
 	// 告警级别(\"Critical\",\"Major\",\"Minor\",\"Info\")
 
-	AlarmLevelIds *[]string `json:"alarmLevelIds,omitempty"`
-	// 排序检索条件
+	AlarmLevelIds *[]string `json:"alarm_level_ids,omitempty"`
 
 	Sort *Sort `json:"sort,omitempty"`
 }

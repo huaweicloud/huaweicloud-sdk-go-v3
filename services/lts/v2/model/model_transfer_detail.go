@@ -50,6 +50,12 @@ type TransferDetail struct {
 	// DMS转储kafka topic
 
 	KafkaTopic *string `json:"kafka_topic,omitempty"`
+	// OBS转储时区。如果选择该参数，则必须选择obs_time_zone_id。
+
+	ObsTimeZone *string `json:"obs_time_zone,omitempty"`
+	// OBS转储时区ID。参数选择参考OBS转储时区表。如果选择该参数，则必须选择obs_time_zone。
+
+	ObsTimeZoneId *string `json:"obs_time_zone_id,omitempty"`
 }
 
 func (o TransferDetail) String() string {

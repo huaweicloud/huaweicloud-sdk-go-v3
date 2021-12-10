@@ -13,9 +13,12 @@ type ImportKeyMaterialRequestBody struct {
 	// 密钥导入令牌，base64格式，满足正则匹配“^[0-9a-zA-Z+/=]{200,6144}$”。
 
 	ImportToken string `json:"import_token"`
-	// 加密后的密钥材料，base64格式，满足正则匹配“^[0-9a-zA-Z+/=]{344,360}$”。
+	// 加密后的对称密钥材料，base64格式，满足正则匹配“^[0-9a-zA-Z+/=]{344,360}$”。若导入非对称密钥，则该参数为用于加密私钥的临时中间密钥。
 
 	EncryptedKeyMaterial string `json:"encrypted_key_material"`
+	// 使用临时中间密钥加密后的私钥，导入非对称密钥需要该参数，base64格式，满足正则匹配“^[0-9a-zA-Z+/=]{200,6144}$”。
+
+	EncryptedPrivatekey *string `json:"encrypted_privatekey,omitempty"`
 	// 密钥材料到期时间，时间戳，即从1970年1月1日至该时间的总秒数，KMS会在该时间的24小时内删除密钥材料。 例如：1550291833
 
 	ExpirationTime *int64 `json:"expiration_time,omitempty"`

@@ -7,12 +7,10 @@ import (
 )
 
 type Event struct {
-	// 告警信息
-
 	Metadata *Metadata `json:"metadata"`
 	// 告警产生时间(时间戳)
 
-	StartsAt *interface{} `json:"starts_at"`
+	StartsAt int64 `json:"starts_at"`
 }
 
 func (o Event) String() string {

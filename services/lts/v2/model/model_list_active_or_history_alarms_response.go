@@ -11,7 +11,6 @@ type ListActiveOrHistoryAlarmsResponse struct {
 	// 告警信息
 
 	Events *[]Events `json:"events,omitempty"`
-	// 分页详情
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`
 	HttpStatusCode int       `json:"-"`

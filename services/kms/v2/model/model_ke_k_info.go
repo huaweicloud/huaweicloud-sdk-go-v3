@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// 密钥详细信息。
 type KeKInfo struct {
 	// 密钥ID。
 

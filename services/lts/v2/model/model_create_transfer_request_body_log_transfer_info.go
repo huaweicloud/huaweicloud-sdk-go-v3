@@ -25,7 +25,6 @@ type CreateTransferRequestBodyLogTransferInfo struct {
 	LogTransferStatus CreateTransferRequestBodyLogTransferInfoLogTransferStatus `json:"log_transfer_status"`
 
 	LogAgencyTransfer *CreateTransferRequestBodyLogTransferInfoLogAgencyTransfer `json:"log_agency_transfer,omitempty"`
-	// 日志转储详细信息
 
 	LogTransferDetail *TransferDetail `json:"log_transfer_detail"`
 }

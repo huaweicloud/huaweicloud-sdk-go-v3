@@ -74,7 +74,7 @@ func (c *SwrClient) CreateRepo(request *model.CreateRepoRequest) (*model.CreateR
 	}
 }
 
-//创建共享账号。镜像上传后，您可以共享私有镜像给其他帐号，并授予下载该镜像的权限。
+//创建共享帐号。镜像上传后，您可以共享私有镜像给其他帐号，并授予下载该镜像的权限。
 func (c *SwrClient) CreateRepoDomains(request *model.CreateRepoDomainsRequest) (*model.CreateRepoDomainsResponse, error) {
 	requestDef := GenReqDefForCreateRepoDomains()
 
@@ -173,7 +173,7 @@ func (c *SwrClient) DeleteRepo(request *model.DeleteRepoRequest) (*model.DeleteR
 	}
 }
 
-//删除共享账号
+//删除共享帐号
 func (c *SwrClient) DeleteRepoDomains(request *model.DeleteRepoDomainsRequest) (*model.DeleteRepoDomainsResponse, error) {
 	requestDef := GenReqDefForDeleteRepoDomains()
 
@@ -250,7 +250,18 @@ func (c *SwrClient) ListNamespaces(request *model.ListNamespacesRequest) (*model
 	}
 }
 
-//获取共享账号列表
+//获取配额信息
+func (c *SwrClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuotasResponse, error) {
+	requestDef := GenReqDefForListQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQuotasResponse), nil
+	}
+}
+
+//获取共享帐号列表
 func (c *SwrClient) ListRepoDomains(request *model.ListRepoDomainsRequest) (*model.ListRepoDomainsResponse, error) {
 	requestDef := GenReqDefForListRepoDomains()
 
@@ -261,7 +272,7 @@ func (c *SwrClient) ListRepoDomains(request *model.ListRepoDomainsRequest) (*mod
 	}
 }
 
-//查询镜像列表
+//查询镜像仓库列表
 func (c *SwrClient) ListReposDetails(request *model.ListReposDetailsRequest) (*model.ListReposDetailsResponse, error) {
 	requestDef := GenReqDefForListReposDetails()
 
@@ -360,7 +371,7 @@ func (c *SwrClient) ShowNamespaceAuth(request *model.ShowNamespaceAuthRequest) (
 	}
 }
 
-//查询镜像概要信息
+//查询镜像仓库概要信息
 func (c *SwrClient) ShowRepository(request *model.ShowRepositoryRequest) (*model.ShowRepositoryResponse, error) {
 	requestDef := GenReqDefForShowRepository()
 
@@ -437,7 +448,7 @@ func (c *SwrClient) UpdateRepo(request *model.UpdateRepoRequest) (*model.UpdateR
 	}
 }
 
-//更新共享账号
+//更新共享帐号
 func (c *SwrClient) UpdateRepoDomains(request *model.UpdateRepoDomainsRequest) (*model.UpdateRepoDomainsResponse, error) {
 	requestDef := GenReqDefForUpdateRepoDomains()
 

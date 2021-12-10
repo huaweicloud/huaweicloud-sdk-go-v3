@@ -16,7 +16,6 @@ type AomMappingRuleResp struct {
 	// 接入规则id
 
 	RuleId string `json:"rule_id"`
-	// 接入规则详情
 
 	RuleInfo *AomMappingRuleInfo `json:"rule_info"`
 }

@@ -36,17 +36,21 @@ type RelationModelRelation struct {
 }
 
 type RelationModelRelationEnum struct {
-	MUST    RelationModelRelation
-	MUSTNOT RelationModelRelation
+	AND RelationModelRelation
+	OR  RelationModelRelation
+	NOT RelationModelRelation
 }
 
 func GetRelationModelRelationEnum() RelationModelRelationEnum {
 	return RelationModelRelationEnum{
-		MUST: RelationModelRelation{
-			value: "MUST",
+		AND: RelationModelRelation{
+			value: "AND",
 		},
-		MUSTNOT: RelationModelRelation{
-			value: "MUSTNOT",
+		OR: RelationModelRelation{
+			value: "OR",
+		},
+		NOT: RelationModelRelation{
+			value: "NOT",
 		},
 	}
 }
