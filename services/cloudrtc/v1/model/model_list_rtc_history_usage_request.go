@@ -23,10 +23,10 @@ type ListRtcHistoryUsageRequest struct {
 	// 查询的数据类型 - CommunicationDuration: 音视频通话时长; - TranscodeDuration：转码时长; - RecordDuration：录制时长;
 
 	Metric string `json:"metric"`
-	// 查询起始时间。UTC时间，格式：YYYY-MM-DD，如2020-04-23，不写默认读取过去1天数据数据。
+	// 查询起始时间。UTC时间，格式：YYYY-MM-DD，如2020-04-23。
 
 	StartDate string `json:"start_date"`
-	// 查询结束时间。UTC时间，格式：YYYY-MM-DD，如2020-04-23
+	// 查询结束时间。UTC时间，格式：YYYY-MM-DD，如2020-04-23。
 
 	EndDate string `json:"end_date"`
 }

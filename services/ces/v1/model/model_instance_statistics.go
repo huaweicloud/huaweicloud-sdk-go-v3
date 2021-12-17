@@ -16,7 +16,7 @@ type InstanceStatistics struct {
 	Total *int32 `json:"total,omitempty"`
 	// 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。
 
-	TypeStatistics *string `json:"type_statistics,omitempty"`
+	TypeStatistics *int32 `json:"type_statistics,omitempty"`
 }
 
 func (o InstanceStatistics) String() string {

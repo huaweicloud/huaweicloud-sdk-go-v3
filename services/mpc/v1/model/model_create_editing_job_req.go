@@ -22,10 +22,15 @@ type CreateEditingJobReq struct {
 
 	Mix *MixInfo `json:"mix,omitempty"`
 
+	Input *ObsObjInfo `json:"input,omitempty"`
+
 	OutputSetting *OutputSetting `json:"output_setting,omitempty"`
 	// 水印信息。
 
 	ImageWatermarkSettings *[]ImageWatermarkSetting `json:"image_watermark_settings,omitempty"`
+	// 媒体处理配置，当edit_type为空时该参数生效。会根据该参数配置，对input参数指定的源文件进行处理
+
+	EditSettings *[]EditSetting `json:"edit_settings,omitempty"`
 	// 用户自定义数据。
 
 	UserData *string `json:"user_data,omitempty"`

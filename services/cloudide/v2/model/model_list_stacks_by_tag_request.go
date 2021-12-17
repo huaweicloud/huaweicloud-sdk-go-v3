@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListStacksByTagRequest struct {
-	// 技术栈标签。默认为空值，查询全部。 目前可取值 Java,Maven,CPP,Vue,ServiceComb,Blockchain,GO, Node.js,DCN,Quantum,JavaScript,Ruby,Python;可查询多个标签
+	// 技术栈标签。默认为空值，查询全部。 例如：Java,CPP,GO,Python;可查询多个标签
 
 	Tags *[]string `json:"tags,omitempty"`
 }

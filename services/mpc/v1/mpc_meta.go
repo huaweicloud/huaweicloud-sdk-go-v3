@@ -147,10 +147,6 @@ func GenReqDefForListEditingJob() *def.HttpRequestDef {
 		WithJsonTag("x-language").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

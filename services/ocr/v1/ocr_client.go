@@ -63,6 +63,17 @@ func (c *OcrClient) RecognizeBusinessLicense(request *model.RecognizeBusinessLic
 	}
 }
 
+//识别智利身份证图片中的文字内容，并返回识别的结构化结果。
+func (c *OcrClient) RecognizeChileIdCard(request *model.RecognizeChileIdCardRequest) (*model.RecognizeChileIdCardResponse, error) {
+	requestDef := GenReqDefForRecognizeChileIdCard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeChileIdCardResponse), nil
+	}
+}
+
 //识别用户上传的驾驶证图片（或者用户提供的华为云上OBS的驾驶证图片文件的URL）中主页与副页的文字内容，并将识别的结果返回给用户。  说明：   如果图片中包含多张卡证票据，请调用智能分类识别服务。
 func (c *OcrClient) RecognizeDriverLicense(request *model.RecognizeDriverLicenseRequest) (*model.RecognizeDriverLicenseResponse, error) {
 	requestDef := GenReqDefForRecognizeDriverLicense()
@@ -184,6 +195,28 @@ func (c *OcrClient) RecognizeMvsInvoice(request *model.RecognizeMvsInvoiceReques
 	}
 }
 
+//识别缅甸驾驶证中的文字信息，并返回识别的结构化结果。
+func (c *OcrClient) RecognizeMyanmarDriverLicense(request *model.RecognizeMyanmarDriverLicenseRequest) (*model.RecognizeMyanmarDriverLicenseResponse, error) {
+	requestDef := GenReqDefForRecognizeMyanmarDriverLicense()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeMyanmarDriverLicenseResponse), nil
+	}
+}
+
+//识别缅文身份证中的文字信息，并返回识别的结构化结果。
+func (c *OcrClient) RecognizeMyanmarIdcard(request *model.RecognizeMyanmarIdcardRequest) (*model.RecognizeMyanmarIdcardResponse, error) {
+	requestDef := GenReqDefForRecognizeMyanmarIdcard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeMyanmarIdcardResponse), nil
+	}
+}
+
 //识别用户上传的护照首页图片中的文字信息，并返回识别的结构化结果。当前版本支持中国护照的全字段识别。外国护照支持护照下方两行国际标准化的机读码识别，并可从中提取6-7个关键字段信息。  说明：  如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=OCR&api=AutoClassification)服务。
 func (c *OcrClient) RecognizePassport(request *model.RecognizePassportRequest) (*model.RecognizePassportResponse, error) {
 	requestDef := GenReqDefForRecognizePassport()
@@ -225,6 +258,28 @@ func (c *OcrClient) RecognizeTaxiInvoice(request *model.RecognizeTaxiInvoiceRequ
 		return nil, err
 	} else {
 		return resp.(*model.RecognizeTaxiInvoiceResponse), nil
+	}
+}
+
+//识别泰国身份证中的文字信息，并返回识别的结构化结果。
+func (c *OcrClient) RecognizeThailandIdcard(request *model.RecognizeThailandIdcardRequest) (*model.RecognizeThailandIdcardResponse, error) {
+	requestDef := GenReqDefForRecognizeThailandIdcard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeThailandIdcardResponse), nil
+	}
+}
+
+//识别泰国车牌图片中的车牌信息，并返回识别的结构化结果。
+func (c *OcrClient) RecognizeThailandLicensePlate(request *model.RecognizeThailandLicensePlateRequest) (*model.RecognizeThailandLicensePlateResponse, error) {
+	requestDef := GenReqDefForRecognizeThailandLicensePlate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeThailandLicensePlateResponse), nil
 	}
 }
 

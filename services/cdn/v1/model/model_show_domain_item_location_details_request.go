@@ -14,7 +14,7 @@ type ShowDomainItemLocationDetailsRequest struct {
 	// 查询开始时间戳，必须设为5分钟整时刻点
 
 	StartTime int64 `json:"start_time"`
-	// 查询结束时间戳，必须设为5分钟整时刻点，与开始时间戳时间差不可以超过一天
+	// 查询结束时间戳，必须设为5分钟整时刻点
 
 	EndTime int64 `json:"end_time"`
 	// 域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com，all表示查询名下全部域名

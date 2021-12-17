@@ -10,9 +10,6 @@ import (
 )
 
 type InstancesVo struct {
-	// 角色权限列表
-
-	ActionList *[]RoleAction `json:"action_list,omitempty"`
 	// cpu架构 x86|arm
 
 	Arch *InstancesVoArch `json:"arch,omitempty"`
@@ -72,11 +69,6 @@ type InstancesVo struct {
 	// 区域
 
 	Region *string `json:"region,omitempty"`
-
-	Role *Role `json:"role,omitempty"`
-	// 角色id
-
-	RoleId *string `json:"role_id,omitempty"`
 	// server
 
 	ServerMap map[string]string `json:"server_map,omitempty"`
@@ -89,12 +81,18 @@ type InstancesVo struct {
 	// 实例状态 。 - INIT 初始化 - STARTING 启动中 - RUNNING 运行中 - STOPPING 停止中 - STOPPED 已停止 - DELETING 删除中 - DELETED 已删除 - DELETE_FAILED 删除失败
 
 	Status *InstancesVoStatus `json:"status,omitempty"`
-	// 子组织
-
-	SubOrg *string `json:"sub_org,omitempty"`
 	// 更新时间
 
 	UpdatedTime *string `json:"updated_time,omitempty"`
+	// 访问者id
+
+	VisitorId *string `json:"visitor_id,omitempty"`
+	// 访问者名称
+
+	VisitorName *string `json:"visitor_name,omitempty"`
+	// 访问者租户名称
+
+	VisitorDomainName *string `json:"visitor_domain_name,omitempty"`
 }
 
 func (o InstancesVo) String() string {

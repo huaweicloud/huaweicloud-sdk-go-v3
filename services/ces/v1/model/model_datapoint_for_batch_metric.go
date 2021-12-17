@@ -22,7 +22,7 @@ type DatapointForBatchMetric struct {
 	Sum *float64 `json:"sum,omitempty"`
 	// 聚合周期内指标数据的方差。
 
-	Variance *string `json:"variance,omitempty"`
+	Variance *float64 `json:"variance,omitempty"`
 	// 指标采集时间，UNIX时间戳，单位毫秒。
 
 	Timestamp int64 `json:"timestamp"`

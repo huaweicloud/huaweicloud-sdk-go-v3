@@ -8,8 +8,13 @@ import (
 
 // Response Object
 type ListEditingJobResponse struct {
-	Body           *[]QueryEditingJobRsp `json:"body,omitempty"`
-	HttpStatusCode int                   `json:"-"`
+	// 任务总数
+
+	Total *int32 `json:"total,omitempty"`
+	// 任务列表
+
+	Jobs           *[]EditingJob `json:"jobs,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ListEditingJobResponse) String() string {

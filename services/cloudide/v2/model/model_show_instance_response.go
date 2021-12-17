@@ -11,7 +11,10 @@ type ShowInstanceResponse struct {
 	Instance *InstancesVo `json:"instance,omitempty"`
 	// 状态
 
-	Status         *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty"`
+	// 静态资源链接
+
+	BundleUrl      *string `json:"bundle_url,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 
