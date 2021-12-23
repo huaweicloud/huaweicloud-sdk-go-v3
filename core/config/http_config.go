@@ -21,7 +21,7 @@ package config
 
 import (
 	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
+	"github.com/RandolphCYG/huaweicloud-sdk-go-v3/core/httphandler"
 	"time"
 )
 

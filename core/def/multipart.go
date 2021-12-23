@@ -21,7 +21,7 @@ package def
 
 import (
 	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+	"github.com/RandolphCYG/huaweicloud-sdk-go-v3/core/converter"
 	"io"
 	"mime/multipart"
 	"net/textproto"

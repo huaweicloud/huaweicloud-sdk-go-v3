@@ -1,9 +1,9 @@
 package v2
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+	"github.com/RandolphCYG/huaweicloud-sdk-go-v3/core/def"
 
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/frs/v2/model"
+	"github.com/RandolphCYG/huaweicloud-sdk-go-v3/services/frs/v2/model"
 	"net/http"
 )
 

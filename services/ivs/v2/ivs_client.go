@@ -1,9 +1,9 @@
 package v2
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	http_client "github.com/RandolphCYG/huaweicloud-sdk-go-v3/core"
 
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ivs/v2/model"
+	"github.com/RandolphCYG/huaweicloud-sdk-go-v3/services/ivs/v2/model"
 )
 
 type IvsClient struct {

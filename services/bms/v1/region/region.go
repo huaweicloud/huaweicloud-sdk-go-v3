@@ -2,7 +2,7 @@ package region
 
 import (
 	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
+	"github.com/RandolphCYG/huaweicloud-sdk-go-v3/core/region"
 )
 
 var CN_NORTH_2 = region.NewRegion("cn-north-2", "https://bms.cn-north-2.myhuaweicloud.com")

@@ -1,9 +1,9 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	http_client "github.com/RandolphCYG/huaweicloud-sdk-go-v3/core"
 
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/mrs/v1/model"
+	"github.com/RandolphCYG/huaweicloud-sdk-go-v3/services/mrs/v1/model"
 )
 
 type MrsClient struct {

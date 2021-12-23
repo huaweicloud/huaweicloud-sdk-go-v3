@@ -1,9 +1,9 @@
 package v3
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	http_client "github.com/RandolphCYG/huaweicloud-sdk-go-v3/core"
 
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudbuild/v3/model"
+	"github.com/RandolphCYG/huaweicloud-sdk-go-v3/services/cloudbuild/v3/model"
 )
 
 type CloudBuildClient struct {

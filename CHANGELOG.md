@@ -2347,7 +2347,7 @@
 - _Features_
     - None
 - _Bug Fix_
-    - [Issue 22](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/22): Modify the optional value of response parameter `status` of interface `ListAddonInstances`.
+    - [Issue 22](https://github.com/RandolphCYG/huaweicloud-sdk-go-v3/issues/22): Modify the optional value of response parameter `status` of interface `ListAddonInstances`.
 - _Change_
     - None
 
@@ -2484,7 +2484,7 @@
 - _Features_
     - None
 - _Bug Fix_
-    - [Issue 20](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/20): Fix the issue that the type of `extendParam`
+    - [Issue 20](https://github.com/RandolphCYG/huaweicloud-sdk-go-v3/issues/20): Fix the issue that the type of `extendParam`
       is defined incorrectly.
 - _Change_
     - Add the request parameter `tobedeleted` to the interface `DeleteCluster`.
@@ -2721,7 +2721,7 @@
 - _Features_
     - None
 - _Bug Fix_
-    - [Issue 17](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/17): Fix the issue that `EpDetailType` enum
+    - [Issue 17](https://github.com/RandolphCYG/huaweicloud-sdk-go-v3/issues/17): Fix the issue that `EpDetailType` enum
       is defined incorrectly.
 - _Change_
     - None
@@ -2731,7 +2731,7 @@
 - _Features_
     - None
 - _Bug Fix_
-    - [Issue 19](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/19): Fix the issue of type of response body
+    - [Issue 19](https://github.com/RandolphCYG/huaweicloud-sdk-go-v3/issues/19): Fix the issue of type of response body
       in `ListKeypairs`.
 - _Change_
     - None
@@ -3833,7 +3833,7 @@
 - _Features_
     - None
 - _Bug Fix_
-    - [Issue 8](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/8) Fix the problem that creating scaling
+    - [Issue 8](https://github.com/RandolphCYG/huaweicloud-sdk-go-v3/issues/8) Fix the problem that creating scaling
       policy failed.
 - _Change_
     - None
@@ -3883,7 +3883,7 @@
 - _Features_
     - None
 - _Bug Fix_
-    - Update core code from [Pull requests #11](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/pull/11).
+    - Update core code from [Pull requests #11](https://github.com/RandolphCYG/huaweicloud-sdk-go-v3/pull/11).
 - _Change_
     - None
 
@@ -3955,7 +3955,7 @@
     - None
 - _Bug Fix_
     - Fix: fix the problem that when query parameter contains enumerated variables the request will fail.
-    - [Issue 7](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/7) resolve the problem of using
+    - [Issue 7](https://github.com/RandolphCYG/huaweicloud-sdk-go-v3/issues/7) resolve the problem of using
       json.Marshal()
       returns object{}.
 - _Change_

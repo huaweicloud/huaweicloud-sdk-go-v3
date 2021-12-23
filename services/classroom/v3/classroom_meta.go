@@ -1,9 +1,9 @@
 package v3
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+	"github.com/RandolphCYG/huaweicloud-sdk-go-v3/core/def"
 
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/classroom/v3/model"
+	"github.com/RandolphCYG/huaweicloud-sdk-go-v3/services/classroom/v3/model"
 	"net/http"
 )
 

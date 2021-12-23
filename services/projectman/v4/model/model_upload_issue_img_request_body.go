@@ -1,10 +1,10 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/RandolphCYG/huaweicloud-sdk-go-v3/core/utils"
 
 	"encoding/json"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+	"github.com/RandolphCYG/huaweicloud-sdk-go-v3/core/def"
 	"os"
 	"reflect"
 

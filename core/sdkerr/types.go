@@ -26,7 +26,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/RandolphCYG/huaweicloud-sdk-go-v3/core/utils"
 )
 
 type CredentialsTypeError struct {
