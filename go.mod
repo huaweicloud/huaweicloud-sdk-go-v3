@@ -1,6 +1,6 @@
-module github.com/huaweicloud/huaweicloud-sdk-go-v3
+module github.com/RandolphCYG/huaweicloud-sdk-go-v3
 
-go 1.14
+go 1.17
 
 require (
 	github.com/json-iterator/go v1.1.10
