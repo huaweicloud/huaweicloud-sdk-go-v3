@@ -26,7 +26,7 @@ type CreateL7PolicyRuleOption struct {
 	// 匹配项的值，比如转发规则匹配类型是域名匹配，则value表示域名的值。仅当conditions空时该字段生效。 当type为HOST_NAME时，字符串只能包含英文字母、数字、“-”、“.”或“*”，必须以字母、数字或“*”开头。若域名中包含“*”，则“*”只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!&#58;|/()[]{}，且必须以\"/\"开头。 当type为METHOD、SOURCE_IP、HEADER,QUERY_STRING时，该字段无意义，使用conditions来指定key/value。
 
 	Value string `json:"value"`
-	// 转发规则的匹配条件。当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效。  配置了conditions后，字段key、字段value的值无意义。  若指定了conditons，该rule的条件数为conditons列表长度。 列表中key必须相同，value不允许重复。  [不支持该字段，请勿使用。](tag:otc,otc_test,dt,dt_test)
+	// 转发规则的匹配条件。当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效。  配置了conditions后，字段key、字段value的值无意义。  若指定了conditons，该rule的条件数为conditons列表长度。 列表中key必须相同，value不允许重复。  [不支持该字段，请勿使用。](tag:dt,dt_test)
 
 	Conditions *[]CreateRuleCondition `json:"conditions,omitempty"`
 }

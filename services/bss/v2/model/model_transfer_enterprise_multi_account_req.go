@@ -7,7 +7,7 @@ import (
 )
 
 type TransferEnterpriseMultiAccountReq struct {
-	// 企业子账号的客户ID。
+	// 企业子账号的客户ID。您可以调用查询企业子账号列表接口，获取响应参数“id”的返回值。
 
 	CustomerId string `json:"customer_id"`
 	// 现金账户总划拨金额。 单位：元。取值大于0且精确到小数点后2位。

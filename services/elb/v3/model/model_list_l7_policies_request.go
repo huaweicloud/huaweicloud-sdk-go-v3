@@ -17,7 +17,7 @@ type ListL7PoliciesRequest struct {
 	// 分页的顺序，true表示从后往前分页，false表示从前往后分页，默认为false。  使用说明： - 必须与limit一起使用。
 
 	PageReverse *bool `json:"page_reverse,omitempty"`
-	// 企业项目ID。不传时查询default企业项目\"0\"下的资源，鉴权按照default企业项目鉴权；如果传值，则传已存在的企业项目ID或all_granted_eps（表示查询所有企业项目）进行查询。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:otc,otc_test,dt,dt_test)
+	// 企业项目ID。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test)
 
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 	// 转发策略ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
@@ -56,7 +56,7 @@ type ListL7PoliciesRequest struct {
 	// 是否显示转发策略下的rule详细信息。取值： - true：显示policy下面的rule的详细信息。 - false：只显示policy下面的rule的id信息
 
 	DisplayAllRules *bool `json:"display_all_rules,omitempty"`
-	// 转发策略的优先级。数值越小，优先级越高。  支持多值查询，查询条件格式：*priority=xxx&priority=xxx*。   [不支持该字段，请勿使用。](tag:otc,otc_test,dt,dt_test)
+	// 转发策略的优先级。数值越小，优先级越高。  支持多值查询，查询条件格式：*priority=xxx&priority=xxx*。   [不支持该字段，请勿使用。](tag:dt,dt_test)
 
 	Priority *[]int32 `json:"priority,omitempty"`
 }

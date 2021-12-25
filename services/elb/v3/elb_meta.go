@@ -1054,6 +1054,10 @@ func GenReqDefForListMembers() *def.HttpRequestDef {
 		WithName("MemberType").
 		WithJsonTag("member_type").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

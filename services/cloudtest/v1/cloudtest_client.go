@@ -19,25 +19,14 @@ func CloudtestClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//通过导入仓库中的文件生成接口测试套
-func (c *CloudtestClient) CreateApiTestSuiteByRepoFile(request *model.CreateApiTestSuiteByRepoFileRequest) (*model.CreateApiTestSuiteByRepoFileResponse, error) {
-	requestDef := GenReqDefForCreateApiTestSuiteByRepoFile()
+//批量删除测试用例
+func (c *CloudtestClient) BatchDeleteTestCase(request *model.BatchDeleteTestCaseRequest) (*model.BatchDeleteTestCaseResponse, error) {
+	requestDef := GenReqDefForBatchDeleteTestCase()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateApiTestSuiteByRepoFileResponse), nil
-	}
-}
-
-//获取云测的环境参数分组列表
-func (c *CloudtestClient) ListEnvironments(request *model.ListEnvironmentsRequest) (*model.ListEnvironmentsResponse, error) {
-	requestDef := GenReqDefForListEnvironments()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListEnvironmentsResponse), nil
+		return resp.(*model.BatchDeleteTestCaseResponse), nil
 	}
 }
 
@@ -52,28 +41,6 @@ func (c *CloudtestClient) CreatePlan(request *model.CreatePlanRequest) (*model.C
 	}
 }
 
-//计划中批量添加测试用例
-func (c *CloudtestClient) CreateTestCaseInPlan(request *model.CreateTestCaseInPlanRequest) (*model.CreateTestCaseInPlanResponse, error) {
-	requestDef := GenReqDefForCreateTestCaseInPlan()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateTestCaseInPlanResponse), nil
-	}
-}
-
-//项目下查询测试计划列表
-func (c *CloudtestClient) ShowPlans(request *model.ShowPlansRequest) (*model.ShowPlansResponse, error) {
-	requestDef := GenReqDefForShowPlans()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowPlansResponse), nil
-	}
-}
-
 //新测试类型服务注册到云测
 func (c *CloudtestClient) CreateService(request *model.CreateServiceRequest) (*model.CreateServiceResponse, error) {
 	requestDef := GenReqDefForCreateService()
@@ -82,50 +49,6 @@ func (c *CloudtestClient) CreateService(request *model.CreateServiceRequest) (*m
 		return nil, err
 	} else {
 		return resp.(*model.CreateServiceResponse), nil
-	}
-}
-
-//删除已注册服务
-func (c *CloudtestClient) DeleteService(request *model.DeleteServiceRequest) (*model.DeleteServiceResponse, error) {
-	requestDef := GenReqDefForDeleteService()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteServiceResponse), nil
-	}
-}
-
-//用户获取自己当前已经注册的服务
-func (c *CloudtestClient) ShowRegisterService(request *model.ShowRegisterServiceRequest) (*model.ShowRegisterServiceResponse, error) {
-	requestDef := GenReqDefForShowRegisterService()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowRegisterServiceResponse), nil
-	}
-}
-
-//更新已注册服务
-func (c *CloudtestClient) UpdateService(request *model.UpdateServiceRequest) (*model.UpdateServiceResponse, error) {
-	requestDef := GenReqDefForUpdateService()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateServiceResponse), nil
-	}
-}
-
-//批量删除测试用例
-func (c *CloudtestClient) BatchDeleteTestCase(request *model.BatchDeleteTestCaseRequest) (*model.BatchDeleteTestCaseResponse, error) {
-	requestDef := GenReqDefForBatchDeleteTestCase()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchDeleteTestCaseResponse), nil
 	}
 }
 
@@ -140,6 +63,28 @@ func (c *CloudtestClient) CreateTestCase(request *model.CreateTestCaseRequest) (
 	}
 }
 
+//计划中批量添加测试用例
+func (c *CloudtestClient) CreateTestCaseInPlan(request *model.CreateTestCaseInPlanRequest) (*model.CreateTestCaseInPlanResponse, error) {
+	requestDef := GenReqDefForCreateTestCaseInPlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTestCaseInPlanResponse), nil
+	}
+}
+
+//删除已注册服务
+func (c *CloudtestClient) DeleteService(request *model.DeleteServiceRequest) (*model.DeleteServiceResponse, error) {
+	requestDef := GenReqDefForDeleteService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteServiceResponse), nil
+	}
+}
+
 //批量执行测试用例
 func (c *CloudtestClient) RunTestCase(request *model.RunTestCaseRequest) (*model.RunTestCaseResponse, error) {
 	requestDef := GenReqDefForRunTestCase()
@@ -148,6 +93,50 @@ func (c *CloudtestClient) RunTestCase(request *model.RunTestCaseRequest) (*model
 		return nil, err
 	} else {
 		return resp.(*model.RunTestCaseResponse), nil
+	}
+}
+
+//查询某个测试计划下的需求列表
+func (c *CloudtestClient) ShowIssuesByPlanId(request *model.ShowIssuesByPlanIdRequest) (*model.ShowIssuesByPlanIdResponse, error) {
+	requestDef := GenReqDefForShowIssuesByPlanId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIssuesByPlanIdResponse), nil
+	}
+}
+
+//查询某测试计划下的操作历史
+func (c *CloudtestClient) ShowPlanJournals(request *model.ShowPlanJournalsRequest) (*model.ShowPlanJournalsResponse, error) {
+	requestDef := GenReqDefForShowPlanJournals()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPlanJournalsResponse), nil
+	}
+}
+
+//项目下查询测试计划列表
+func (c *CloudtestClient) ShowPlans(request *model.ShowPlansRequest) (*model.ShowPlansResponse, error) {
+	requestDef := GenReqDefForShowPlans()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPlansResponse), nil
+	}
+}
+
+//用户获取自己当前已经注册的服务
+func (c *CloudtestClient) ShowRegisterService(request *model.ShowRegisterServiceRequest) (*model.ShowRegisterServiceResponse, error) {
+	requestDef := GenReqDefForShowRegisterService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRegisterServiceResponse), nil
 	}
 }
 
@@ -173,6 +162,17 @@ func (c *CloudtestClient) ShowTestCaseDetailV2(request *model.ShowTestCaseDetail
 	}
 }
 
+//更新已注册服务
+func (c *CloudtestClient) UpdateService(request *model.UpdateServiceRequest) (*model.UpdateServiceResponse, error) {
+	requestDef := GenReqDefForUpdateService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateServiceResponse), nil
+	}
+}
+
 //更新测试用例接口
 func (c *CloudtestClient) UpdateTestCase(request *model.UpdateTestCaseRequest) (*model.UpdateTestCaseResponse, error) {
 	requestDef := GenReqDefForUpdateTestCase()
@@ -192,5 +192,27 @@ func (c *CloudtestClient) UpdateTestCaseResult(request *model.UpdateTestCaseResu
 		return nil, err
 	} else {
 		return resp.(*model.UpdateTestCaseResultResponse), nil
+	}
+}
+
+//通过导入仓库中的文件生成接口测试套
+func (c *CloudtestClient) CreateApiTestSuiteByRepoFile(request *model.CreateApiTestSuiteByRepoFileRequest) (*model.CreateApiTestSuiteByRepoFileResponse, error) {
+	requestDef := GenReqDefForCreateApiTestSuiteByRepoFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateApiTestSuiteByRepoFileResponse), nil
+	}
+}
+
+//获取云测的环境参数分组列表
+func (c *CloudtestClient) ListEnvironments(request *model.ListEnvironmentsRequest) (*model.ListEnvironmentsResponse, error) {
+	requestDef := GenReqDefForListEnvironments()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEnvironmentsResponse), nil
 	}
 }

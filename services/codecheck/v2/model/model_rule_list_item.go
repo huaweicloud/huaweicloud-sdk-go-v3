@@ -31,6 +31,9 @@ type RuleListItem struct {
 	// 修改建议
 
 	ReviseOpinion *string `json:"revise_opinion,omitempty"`
+	// 规则描述
+
+	RuleDesc *string `json:"rule_desc,omitempty"`
 }
 
 func (o RuleListItem) String() string {

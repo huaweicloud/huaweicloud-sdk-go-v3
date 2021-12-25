@@ -32,8 +32,9 @@ type AudioProcessVolume struct {
 }
 
 type AudioProcessVolumeEnum struct {
-	AUTO    AudioProcessVolume
-	DYNAMIC AudioProcessVolume
+	AUTO     AudioProcessVolume
+	DYNAMIC  AudioProcessVolume
+	ORIGINAL AudioProcessVolume
 }
 
 func GetAudioProcessVolumeEnum() AudioProcessVolumeEnum {
@@ -43,6 +44,9 @@ func GetAudioProcessVolumeEnum() AudioProcessVolumeEnum {
 		},
 		DYNAMIC: AudioProcessVolume{
 			value: "dynamic",
+		},
+		ORIGINAL: AudioProcessVolume{
+			value: "original",
 		},
 	}
 }

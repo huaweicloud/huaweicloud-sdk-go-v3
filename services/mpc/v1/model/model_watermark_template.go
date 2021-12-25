@@ -37,6 +37,9 @@ type WatermarkTemplate struct {
 	// 水印叠加母体  取值如下： - input ：水印叠加在输入片源上，转码输出后实际大小按图像等比例缩放 - output ：水印叠加在转码输出文件上。
 
 	Base *WatermarkTemplateBase `json:"base,omitempty"`
+	// 水印模板ID
+
+	TemplateId *int32 `json:"template_id,omitempty"`
 	// 水印模板名称。
 
 	TemplateName *string `json:"template_name,omitempty"`

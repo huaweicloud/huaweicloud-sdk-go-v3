@@ -8,7 +8,13 @@ import (
 
 // Response Object
 type RestartManagerResponse struct {
-	HttpStatusCode int `json:"-"`
+	// 执行结果。
+
+	Result *string `json:"result,omitempty"`
+	// 实例ID。
+
+	InstanceId     *string `json:"instance_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RestartManagerResponse) String() string {

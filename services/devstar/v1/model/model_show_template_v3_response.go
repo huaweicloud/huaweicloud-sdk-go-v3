@@ -88,8 +88,11 @@ type ShowTemplateV3Response struct {
 	Topic *[]TopicCategory `json:"topic,omitempty"`
 	// 自定义标签。
 
-	Tags           *[]TagInfo `json:"tags,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	Tags *[]TagInfo `json:"tags,omitempty"`
+	// 模板部署支持方式信息
+
+	Dependents     *[]Dependent `json:"dependents,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ShowTemplateV3Response) String() string {

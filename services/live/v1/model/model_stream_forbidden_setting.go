@@ -8,7 +8,7 @@ import (
 )
 
 type StreamForbiddenSetting struct {
-	// 直播播放域名或推流域名
+	// 推流域名
 
 	Domain string `json:"domain"`
 	// 流应用名称

@@ -20,7 +20,7 @@ type ListInstancesRequest struct {
 	// 实例ID。
 
 	InstanceId *string `json:"instance_id,omitempty"`
-	// 实例状态。详细状态说明见[实例状态说明](https://support.huaweicloud.com/api-kafka/kafka-api-180514012.html)。
+	// 实例状态。
 
 	Status *ListInstancesRequestStatus `json:"status,omitempty"`
 	// 是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。

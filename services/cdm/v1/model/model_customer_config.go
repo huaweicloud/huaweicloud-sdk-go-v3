@@ -23,6 +23,21 @@ type CustomerConfig struct {
 	// 是否使用ssl。
 
 	Ssl *string `json:"ssl,omitempty"`
+	// 创建来源
+
+	CreateFrom *string `json:"createFrom,omitempty"`
+	// 资源ID
+
+	ResourceId *string `json:"resourceId,omitempty"`
+	// 规格类型
+
+	FlavorType *string `json:"flavorType,omitempty"`
+	// 工作空间ID
+
+	WorkSpaceId *string `json:"workSpaceId,omitempty"`
+	// 适用
+
+	Trial *string `json:"trial,omitempty"`
 }
 
 func (o CustomerConfig) String() string {

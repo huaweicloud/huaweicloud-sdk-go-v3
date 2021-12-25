@@ -20,12 +20,15 @@
 package impl
 
 import (
+	"bytes"
 	"crypto/tls"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/response"
+	"io/ioutil"
 	"net/http"
+	"net/http/httputil"
 	"net/url"
 	"time"
 )
@@ -69,15 +72,21 @@ func NewDefaultHttpClient(httpConfig *config.HttpConfig) *DefaultHttpClient {
 	return client
 }
 
-func (client *DefaultHttpClient) SyncInvokeHttp(request *request.DefaultHttpRequest) (*response.DefaultHttpResponse,
-	error) {
+func (client *DefaultHttpClient) SyncInvokeHttp(request *request.DefaultHttpRequest) (*response.DefaultHttpResponse, error) {
 	req, err := request.ConvertRequest()
 	if err != nil {
 		return nil, err
 	}
 
 	if client.httpHandler != nil && client.httpHandler.RequestHandlers != nil && req != nil {
-		client.httpHandler.RequestHandlers(*req)
+		bodyBytes, err := httputil.DumpRequest(req, true)
+		if err != nil {
+			return nil, err
+		}
+		reqClone := req.Clone(req.Context())
+		reqClone.Body = ioutil.NopCloser(bytes.NewBuffer(bodyBytes))
+		defer reqClone.Body.Close()
+		client.httpHandler.RequestHandlers(*reqClone)
 	}
 
 	startTime := time.Now()
@@ -96,7 +105,26 @@ func (client *DefaultHttpClient) SyncInvokeHttp(request *request.DefaultHttpRequ
 	endTime := time.Now()
 
 	if client.httpHandler != nil && client.httpHandler.ResponseHandlers != nil && resp != nil {
-		client.httpHandler.ResponseHandlers(*resp)
+		bodyBytes, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		respClone := http.Response{
+			Body:             ioutil.NopCloser(bytes.NewBuffer(bodyBytes)),
+			Status:           resp.Status,
+			StatusCode:       resp.StatusCode,
+			Proto:            resp.Proto,
+			ProtoMajor:       resp.ProtoMajor,
+			ProtoMinor:       resp.ProtoMinor,
+			Header:           resp.Header,
+			ContentLength:    resp.ContentLength,
+			TransferEncoding: resp.TransferEncoding,
+			Close:            resp.Close,
+			Uncompressed:     resp.Uncompressed,
+			Trailer:          resp.Trailer,
+		}
+		defer respClone.Body.Close()
+		client.httpHandler.ResponseHandlers(respClone)
 	}
 
 	if client.httpHandler != nil && client.httpHandler.MonitorHandlers != nil {

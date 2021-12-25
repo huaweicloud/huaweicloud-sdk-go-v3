@@ -16,7 +16,7 @@ type ShowInstanceTopicDetailRespReplicas struct {
 	// 该副本是否在ISR副本中。
 
 	InSync *bool `json:"in_sync,omitempty"`
-	// 该副本当前日志大小。
+	// 该副本当前日志大小。单位：Byte。
 
 	Size *int32 `json:"size,omitempty"`
 	// 该副本当前落后hw的消息数。

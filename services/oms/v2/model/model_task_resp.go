@@ -82,6 +82,9 @@ type TaskResp struct {
 	// 任务类型，为空默认设置为object。 list：对象列表迁移 object：文件/文件夹迁移 prefix：对象前缀迁移 url_list: url对象列表
 
 	TaskType *TaskRespTaskType `json:"task_type,omitempty"`
+	// 分组类型 NORMAL_TASK：一般迁移任务 SYNC_TASK：同步任务所属迁移任务 GROUP_TASK：任务组所属迁移任务
+
+	GroupType *TaskRespGroupType `json:"group_type,omitempty"`
 	// 迁移任务对象总数量。
 
 	TotalNum *int64 `json:"total_num,omitempty"`
@@ -95,6 +98,12 @@ type TaskResp struct {
 	SmnInfo *SmnInfo `json:"smn_info,omitempty"`
 
 	SourceCdn *SourceCdnResp `json:"source_cdn,omitempty"`
+	// 迁移成功对象列表记录失败错误码，记录成功时为空
+
+	SuccessRecordErrorReason *string `json:"success_record_error_reason,omitempty"`
+	// 迁移忽略对象列表记录失败错误码,记录记录成功时为空。
+
+	SkipRecordErrorReason *string `json:"skip_record_error_reason,omitempty"`
 }
 
 func (o TaskResp) String() string {
@@ -139,6 +148,48 @@ func (c TaskRespTaskType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *TaskRespTaskType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type TaskRespGroupType struct {
+	value string
+}
+
+type TaskRespGroupTypeEnum struct {
+	NORMAL_TASK TaskRespGroupType
+	SYNC_TASK   TaskRespGroupType
+	GROUP_TASK  TaskRespGroupType
+}
+
+func GetTaskRespGroupTypeEnum() TaskRespGroupTypeEnum {
+	return TaskRespGroupTypeEnum{
+		NORMAL_TASK: TaskRespGroupType{
+			value: "NORMAL_TASK",
+		},
+		SYNC_TASK: TaskRespGroupType{
+			value: "SYNC_TASK",
+		},
+		GROUP_TASK: TaskRespGroupType{
+			value: "GROUP_TASK",
+		},
+	}
+}
+
+func (c TaskRespGroupType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *TaskRespGroupType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

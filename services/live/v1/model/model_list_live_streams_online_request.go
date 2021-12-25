@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListLiveStreamsOnlineRequest struct {
-	// 域名
+	// 推流域名
 
 	PublishDomain string `json:"publish_domain"`
 	// 应用名

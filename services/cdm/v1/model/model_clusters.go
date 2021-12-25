@@ -47,6 +47,12 @@ type Clusters struct {
 	// 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
 
 	Created string `json:"created"`
+	// 开始时间
+
+	BakExpectedStartTime *string `json:"bakExpectedStartTime,omitempty"`
+	// 保留时间
+
+	BakKeepDay *int32 `json:"bakKeepDay,omitempty"`
 	// 集群名称
 
 	Name string `json:"name"`
@@ -65,9 +71,6 @@ type Clusters struct {
 	// 集群更新时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
 
 	Updated string `json:"updated"`
-	// 集群版本
-
-	Version string `json:"version"`
 	// 集群状态： - 100：创建中 - 200：正常 - 300：失败 - 303：创建失败 - 800：冻结 - 900：已关机 - 910：正在关机 - 920：正在开机
 
 	Status string `json:"status"`

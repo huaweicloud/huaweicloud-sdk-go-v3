@@ -22,7 +22,7 @@ type ShowInstanceTopicDetailRespPartitions struct {
 	// 分区leader副本的LSO（Log Start Offset）。
 
 	Lso *int32 `json:"lso,omitempty"`
-	// 分区上次写入消息的时间。
+	// 分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。
 
 	LastUpdateTimestamp *int64 `json:"last_update_timestamp,omitempty"`
 	// 副本列表。

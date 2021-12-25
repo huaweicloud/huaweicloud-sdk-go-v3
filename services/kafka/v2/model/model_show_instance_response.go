@@ -38,7 +38,7 @@ type ShowInstanceResponse struct {
 	// 实例连接端口。
 
 	Port *int32 `json:"port,omitempty"`
-	// 实例的状态。详细状态说明见[实例状态说明](https://support.huaweicloud.com/api-kafka/kafka-api-180514012.html)。
+	// 实例的状态。
 
 	Status *string `json:"status,omitempty"`
 	// 实例ID。

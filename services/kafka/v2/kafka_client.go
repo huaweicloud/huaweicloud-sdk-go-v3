@@ -63,7 +63,7 @@ func (c *KafkaClient) BatchRestartOrDeleteInstances(request *model.BatchRestartO
 	}
 }
 
-//创建实例的转储节点。
+//创建实例的转储节点。  [**当前通过调用API，只支持按需实例创建转储节点。**](tag:hws,ctc)
 func (c *KafkaClient) CreateConnector(request *model.CreateConnectorRequest) (*model.CreateConnectorResponse, error) {
 	requestDef := GenReqDefForCreateConnector()
 
@@ -272,7 +272,7 @@ func (c *KafkaClient) ResetUserPasswrod(request *model.ResetUserPasswrodRequest)
 	}
 }
 
-//实例规格变更。
+//实例规格变更。  [**当前通过调用API，只支持按需实例进行实例规格变更。**](tag:hws,ctc)
 func (c *KafkaClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
 	requestDef := GenReqDefForResizeInstance()
 

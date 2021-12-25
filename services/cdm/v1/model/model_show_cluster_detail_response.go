@@ -50,14 +50,22 @@ type ShowClusterDetailResponse struct {
 	// az名称
 
 	AzName *string `json:"azName,omitempty"`
+	// 对端域名
+
+	EndpointDomainName *string `json:"endpointDomainName,omitempty"`
 
 	PublicEndpointStatus *CdmQueryClusterDetailsRepsonsePublicEndpointStatus `json:"publicEndpointStatus,omitempty"`
+	// 选择是否启用定时开关机功能。定时开关机功能和自动关机功能不可同时开启
+
+	IsScheduleBootOff *bool `json:"isScheduleBootOff,omitempty"`
 	// 命名空间
 
 	Namespace *string `json:"namespace,omitempty"`
 	// 弹性ip id
 
 	EipId *string `json:"eipId,omitempty"`
+
+	FailedReasons *FailedReasons `json:"failedReasons,omitempty"`
 	// 数据库用户
 
 	Dbuser *string `json:"dbuser,omitempty"`

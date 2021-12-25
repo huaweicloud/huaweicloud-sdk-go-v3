@@ -140,7 +140,7 @@ func (c *RabbitMQClient) ResetPassword(request *model.ResetPasswordRequest) (*mo
 	}
 }
 
-//实例规格变更。
+//实例规格变更。  [**当前通过调用API，只支持按需实例进行实例规格变更。**](tag:hws,ctc)
 func (c *RabbitMQClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
 	requestDef := GenReqDefForResizeInstance()
 

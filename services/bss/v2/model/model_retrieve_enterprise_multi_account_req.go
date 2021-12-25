@@ -7,7 +7,7 @@ import (
 )
 
 type RetrieveEnterpriseMultiAccountReq struct {
-	// 企业子账号的客户ID。
+	// 企业子账号的客户ID。您可以调用查询企业子账号列表接口，获取响应参数“id”的返回值。
 
 	CustomerId string `json:"customer_id"`
 	// 总回收金额。 金额单位为货币标准单位，如人民币则单位为元。取值大于0且精确到小数点后2位。

@@ -31,6 +31,9 @@ type StartJobSubmission struct {
 	// 创建时间，单位：毫秒。
 
 	CreationDate int64 `json:"creation-date"`
+	// 执行时间
+
+	ExecuteDate *int64 `json:"execute-date,omitempty"`
 	// 作业进度，失败时为“-1”，其它情况为0～100
 
 	Progress int32 `json:"progress"`

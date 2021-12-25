@@ -82,6 +82,9 @@ type ShowTaskResponse struct {
 	// 任务类型，为空默认设置为object。 list：对象列表迁移 object：文件/文件夹迁移 prefix：对象前缀迁移 url_list: url对象列表
 
 	TaskType *ShowTaskResponseTaskType `json:"task_type,omitempty"`
+	// 分组类型 NORMAL_TASK：一般迁移任务 SYNC_TASK：同步任务所属迁移任务 GROUP_TASK：任务组所属迁移任务
+
+	GroupType *ShowTaskResponseGroupType `json:"group_type,omitempty"`
 	// 迁移任务对象总数量。
 
 	TotalNum *int64 `json:"total_num,omitempty"`
@@ -94,8 +97,14 @@ type ShowTaskResponse struct {
 
 	SmnInfo *SmnInfo `json:"smn_info,omitempty"`
 
-	SourceCdn      *SourceCdnResp `json:"source_cdn,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	SourceCdn *SourceCdnResp `json:"source_cdn,omitempty"`
+	// 迁移成功对象列表记录失败错误码，记录成功时为空
+
+	SuccessRecordErrorReason *string `json:"success_record_error_reason,omitempty"`
+	// 迁移忽略对象列表记录失败错误码,记录记录成功时为空。
+
+	SkipRecordErrorReason *string `json:"skip_record_error_reason,omitempty"`
+	HttpStatusCode        int     `json:"-"`
 }
 
 func (o ShowTaskResponse) String() string {
@@ -140,6 +149,48 @@ func (c ShowTaskResponseTaskType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowTaskResponseTaskType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowTaskResponseGroupType struct {
+	value string
+}
+
+type ShowTaskResponseGroupTypeEnum struct {
+	NORMAL_TASK ShowTaskResponseGroupType
+	SYNC_TASK   ShowTaskResponseGroupType
+	GROUP_TASK  ShowTaskResponseGroupType
+}
+
+func GetShowTaskResponseGroupTypeEnum() ShowTaskResponseGroupTypeEnum {
+	return ShowTaskResponseGroupTypeEnum{
+		NORMAL_TASK: ShowTaskResponseGroupType{
+			value: "NORMAL_TASK",
+		},
+		SYNC_TASK: ShowTaskResponseGroupType{
+			value: "SYNC_TASK",
+		},
+		GROUP_TASK: ShowTaskResponseGroupType{
+			value: "GROUP_TASK",
+		},
+	}
+}
+
+func (c ShowTaskResponseGroupType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowTaskResponseGroupType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

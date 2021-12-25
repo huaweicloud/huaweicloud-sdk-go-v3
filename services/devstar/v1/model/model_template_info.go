@@ -114,6 +114,12 @@ type TemplateInfo struct {
 	// 是否有消息
 
 	HasNotices *bool `json:"has_notices,omitempty"`
+	// 模板部署方式依赖信息
+
+	Dependents *[]Dependent `json:"dependents,omitempty"`
+	// 模板关联云服务。
+
+	DependentServices *string `json:"dependent_services,omitempty"`
 }
 
 func (o TemplateInfo) String() string {

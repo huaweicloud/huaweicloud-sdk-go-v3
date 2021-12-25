@@ -19,7 +19,7 @@ type RunningTasks struct {
 	OperateType *RunningTasksOperateType `json:"operate_type,omitempty"`
 	// 任务时间
 
-	TaskTime *int64 `json:"task_time,omitempty"`
+	TaskTime *string `json:"task_time,omitempty"`
 	// 虚拟机名称
 
 	ServerName *string `json:"server_name,omitempty"`

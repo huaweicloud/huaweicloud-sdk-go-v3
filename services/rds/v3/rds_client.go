@@ -789,6 +789,28 @@ func (c *RdsClient) UpgradeDbVersion(request *model.UpgradeDbVersionRequest) (*m
 	}
 }
 
+//查询API版本列表。
+func (c *RdsClient) ListApiVersion(request *model.ListApiVersionRequest) (*model.ListApiVersionResponse, error) {
+	requestDef := GenReqDefForListApiVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiVersionResponse), nil
+	}
+}
+
+//查询指定的API版本信息。
+func (c *RdsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model.ShowApiVersionResponse, error) {
+	requestDef := GenReqDefForShowApiVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowApiVersionResponse), nil
+	}
+}
+
 //授权数据库帐号。
 func (c *RdsClient) AllowDbUserPrivilege(request *model.AllowDbUserPrivilegeRequest) (*model.AllowDbUserPrivilegeResponse, error) {
 	requestDef := GenReqDefForAllowDbUserPrivilege()
@@ -1028,6 +1050,17 @@ func (c *RdsClient) ListPostgresqlDbUserPaginated(request *model.ListPostgresqlD
 		return nil, err
 	} else {
 		return resp.(*model.ListPostgresqlDbUserPaginatedResponse), nil
+	}
+}
+
+//查询数据库代理可变更的规格信息。  - 调用接口前，您需要了解API 认证鉴权。
+func (c *RdsClient) SearchQueryScaleComputeFlavors(request *model.SearchQueryScaleComputeFlavorsRequest) (*model.SearchQueryScaleComputeFlavorsResponse, error) {
+	requestDef := GenReqDefForSearchQueryScaleComputeFlavors()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SearchQueryScaleComputeFlavorsResponse), nil
 	}
 }
 

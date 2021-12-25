@@ -19,7 +19,10 @@ type ShowJobDetailResponse struct {
 	JobStatus *interface{} `json:"job_status,omitempty"`
 	// 任务结果信息。
 
-	JobResult      *string `json:"job_result,omitempty"`
+	JobResult *string `json:"job_result,omitempty"`
+	// 任务显示类型，页面显示使用字段
+
+	ShowType       *string `json:"show_type,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

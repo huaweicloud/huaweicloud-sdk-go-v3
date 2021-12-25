@@ -26,7 +26,7 @@ type ListFlavorsRequest struct {
 	// L4和L7 分别表示四层和七层flavor，查询支持按type过滤。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
 
 	Type *[]string `json:"type,omitempty"`
-	// 是否查询公共规格。true表示公共规格，所有租户可见。false表示私有规格，为当前租户所有。
+	// 是否查询公共规格。取值： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
 
 	Shared *bool `json:"shared,omitempty"`
 }

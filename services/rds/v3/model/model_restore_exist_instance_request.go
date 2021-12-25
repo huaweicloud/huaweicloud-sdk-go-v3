@@ -12,7 +12,7 @@ type RestoreExistInstanceRequest struct {
 
 	XLanguage *string `json:"X-Language,omitempty"`
 
-	Body *RestoreToExistingInstanceRequestBody `json:"body,omitempty"`
+	Body *RestoreExistingInstanceRequestBody `json:"body,omitempty"`
 }
 
 func (o RestoreExistInstanceRequest) String() string {

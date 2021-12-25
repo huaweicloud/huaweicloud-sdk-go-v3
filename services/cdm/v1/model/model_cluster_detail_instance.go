@@ -28,6 +28,9 @@ type ClusterDetailInstance struct {
 	// 节点是否冻结：0：否。1：是。
 
 	IsFrozen string `json:"isFrozen"`
+	// 组件
+
+	Components *string `json:"components,omitempty"`
 	// 节点配置状态： - In-Sync：配置已同步。 - Applying：配置中。 - Sync-Failure：配置失败。
 
 	ConfigStatus *string `json:"config_status,omitempty"`

@@ -29,7 +29,7 @@ type ListAllMembersRequest struct {
 	// 后端云服务器所在的子网ID。该子网和后端云服务器关联的负载均衡器的子网必须在同一VPC下。只支持指定IPv4的子网ID。  支持多值查询，查询条件格式：***subnet_cidr_id=xxx&subnet_cidr_id=xxx*。
 
 	SubnetCidrId *[]string `json:"subnet_cidr_id,omitempty"`
-	// 后端云服务器的对应的IP地址，这个IP必须在subnet_cidr_id字段的子网网段中。例如：192.168.3.11。只能指定为主网卡的IP。 支持多值查询，查询条件格式：*address=xxx&address=xxx*。
+	// 后端云服务器的对应的IP地址。 支持多值查询，查询条件格式：*address=xxx&address=xxx*。
 
 	Address *[]string `json:"address,omitempty"`
 	// 后端服务器端口号。  支持多值查询，查询条件格式：*protocol_port=xxx&protocol_port=xxx*。
@@ -41,7 +41,7 @@ type ListAllMembersRequest struct {
 	// 后端云服务器的健康状态，取值： ONLINE，后端服务器正常运行。 NO_MONITOR，后端服务器无健康检查。 OFFLINE，已下线。  支持多值查询，查询条件格式：*operating_status=xxx&operating_status=*。
 
 	OperatingStatus *[]string `json:"operating_status,omitempty"`
-	// 企业项目ID。不传时查询default企业项目\"0\"下的资源，鉴权按照default企业项目鉴权；如果传值，则传已存在的企业项目ID或all_granted_eps（表示查询所有企业项目）进行查询。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:otc,otc_test,dt,dt_test)
+	// 企业项目ID。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test)
 
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 	// IP版本，取值v4、v6。  支持多值查询，查询条件格式：*ip_version=xxx&ip_version=xxx*。

@@ -41,16 +41,16 @@ type CreateInstanceReq struct {
 	// 子网ID。
 
 	SubnetId string `json:"subnet_id"`
-	// 创建节点到指定且有资源的可用区ID。该参数不能为空数组或者数组的值为空，详情请参考[查询可用区信息](https://support.huaweicloud.com/api-rabbitmq/ListAvailableZones.html)查询得到。
+	// 创建节点到指定且有资源的可用区ID。该参数不能为空数组或者数组的值为空。
 
 	AvailableZones []string `json:"available_zones"`
-	// 产品标识。  获取方法，请参考[查询产品规格列表](https://support.huaweicloud.com/api-rabbitmq/ListProducts.html)。
+	// 产品标识。
 
 	ProductId string `json:"product_id"`
-	// 维护时间窗开始时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段，可参考[查询维护时间窗时间段](https://support.huaweicloud.com/api-rabbitmq/ShowMaintainWindows.html)获取。 - 开始时间必须为22:00、02:00、06:00、10:00、14:00和18:00。 - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00。
+	// 维护时间窗开始时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段。 - 开始时间必须为22:00、02:00、06:00、10:00、14:00和18:00。 - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00。
 
 	MaintainBegin *string `json:"maintain_begin,omitempty"`
-	// 维护时间窗结束时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段，可参考[查询维护时间窗时间段](https://support.huaweicloud.com/api-rabbitmq/ShowMaintainWindows.html)获取。 - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00时，结束时间为02:00。 - 该参数不能单独为空，若该值为空，则开始时间也为空，系统分配一个默认结束时间06:00。
+	// 维护时间窗结束时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段。 - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00时，结束时间为02:00。 - 该参数不能单独为空，若该值为空，则开始时间也为空，系统分配一个默认结束时间06:00。
 
 	MaintainEnd *string `json:"maintain_end,omitempty"`
 	// RabbitMQ实例是否开启公网访问功能。 - true：开启 - false：不开启
@@ -62,7 +62,7 @@ type CreateInstanceReq struct {
 	// 是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
 
 	SslEnable *bool `json:"ssl_enable,omitempty"`
-	// 存储IO规格。如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。 取值范围：   - dms.physical.storage.normal：   - dms.physical.storage.high   - dms.physical.storage.ultra
+	// 存储IO规格。  取值范围：   - dms.physical.storage.normal：   - dms.physical.storage.high   - dms.physical.storage.ultra
 
 	StorageSpecCode CreateInstanceReqStorageSpecCode `json:"storage_spec_code"`
 	// 企业项目ID。若为企业项目帐号，该参数必填。

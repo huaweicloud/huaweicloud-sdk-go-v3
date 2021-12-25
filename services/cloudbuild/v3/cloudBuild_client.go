@@ -41,6 +41,17 @@ func (c *CloudBuildClient) RunJob(request *model.RunJobRequest) (*model.RunJobRe
 	}
 }
 
+//获取构建历史详情信息接口
+func (c *CloudBuildClient) ShowHistoryDetails(request *model.ShowHistoryDetailsRequest) (*model.ShowHistoryDetailsResponse, error) {
+	requestDef := GenReqDefForShowHistoryDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHistoryDetailsResponse), nil
+	}
+}
+
 //查看项目下用户的构建任务列表
 func (c *CloudBuildClient) ShowJobListByProjectId(request *model.ShowJobListByProjectIdRequest) (*model.ShowJobListByProjectIdResponse, error) {
 	requestDef := GenReqDefForShowJobListByProjectId()

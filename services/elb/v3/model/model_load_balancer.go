@@ -68,31 +68,31 @@ type LoadBalancer struct {
 	// 负载均衡器绑定的EIP。只支持绑定一个EIP。  注：该字段与publicips一致。
 
 	Eips []EipInfo `json:"eips"`
-	// 双栈类型负载均衡器的IPv6地址。  [不支持IPv6，请勿使用。](tag:otc,otc_test,dt,dt_test)
+	// 双栈类型负载均衡器的IPv6地址。  [不支持IPv6，请勿使用。](tag:dt,dt_test)
 
 	Ipv6VipAddress string `json:"ipv6_vip_address"`
-	// 双栈类型负载均衡器所在子网的IPv6网络ID。  [不支持IPv6，请勿使用。](tag:otc,otc_test,dt,dt_test)
+	// 双栈类型负载均衡器所在子网的IPv6网络ID。  [不支持IPv6，请勿使用。](tag:dt,dt_test)
 
 	Ipv6VipVirsubnetId string `json:"ipv6_vip_virsubnet_id"`
-	// 双栈类型负载均衡器的IPv6对应的port ID。  [不支持IPv6，请勿使用。](tag:otc,otc_test,dt,dt_test)
+	// 双栈类型负载均衡器的IPv6对应的port ID。  [不支持IPv6，请勿使用。](tag:dt,dt_test)
 
 	Ipv6VipPortId string `json:"ipv6_vip_port_id"`
 	// 负载均衡器所在的可用区列表。
 
 	AvailabilityZoneList []string `json:"availability_zone_list"`
-	// 企业项目ID。创建时不传则返回\"0\"，表示资源属于default企业项目。  注：\"0\"并不是真实存在的企业项目ID，在创建、更新和查询时不能作为请求参数传入。  [不支持该字段，请勿使用](tag:otcc,otc_test)
+	// 企业项目ID。  [不支持该字段，请勿使用](tag:dt,dt_test)
 
 	EnterpriseProjectId string `json:"enterprise_project_id"`
-	// 资源账单信息，取值： - 空：按需计费。 - 非空：包周期计费， 包周期计费billing_info字段的格式为：order_id&#58;product_id&#58;region_id&#58;project_id，如： CS2107161019CDJZZ&#58;OFFI569702121789763584&#58;eu-de&#58;057ef081eb00d2732fd1c01a9be75e6f 使用说明： - admin权限才能更新此字段。 [不支持该字段，请勿使用](tag:otc,otc_test,dt,dt_test)
+	// 资源账单信息，取值： - 空：按需计费。 - 非空：包周期计费， 包周期计费billing_info字段的格式为：order_id&#58;product_id&#58;region_id&#58;project_id，如： CS2107161019CDJZZ&#58;OFFI569702121789763584&#58;eu-de&#58;057ef081eb00d2732fd1c01a9be75e6f 使用说明： - admin权限才能更新此字段。 [不支持该字段，请勿使用](tag:dt,dt_test)
 
 	BillingInfo string `json:"billing_info"`
-	// 四层Flavor ID。  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hc,hws,hcso)
+	// 四层Flavor ID。  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hws,hcso)
 
 	L4FlavorId string `json:"l4_flavor_id"`
 	// 四层弹性Flavor ID。  不支持该字段，请勿使用。
 
 	L4ScaleFlavorId string `json:"l4_scale_flavor_id"`
-	// 七层Flavor ID。  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hc,hws,hcso)
+	// 七层Flavor ID。  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hws,hcso)
 
 	L7FlavorId string `json:"l7_flavor_id"`
 	// 七层弹性Flavor ID。  不支持该字段，请勿使用。
@@ -101,16 +101,16 @@ type LoadBalancer struct {
 	// 负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
 
 	Publicips []PublicIpInfo `json:"publicips"`
-	// 下联面子网网络ID列表。可以通过GET https&#58;//{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的id得到。 [若不指定该字段，则会在当前负载均衡器所在的VPC中任意选一个子网，优选双栈网络。](tag:hc,hws,hk,ocb,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk-g42) 若指定多个下联面子网，则按顺序优先使用第一个子网来为负载均衡器下联面端口分配ip地址。 下联面子网必须属于该LB所在的VPC。
+	// 下联面子网的网络ID列表。可以通过GET https&#58;//{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的id得到。 使用说明： - 若不指定该字段，则会在当前负载均衡器所在子网作为下联面子网。 - 若指定多个下联面子网，则按顺序优先使用第一个子网来为负载均衡器下联面端口分配ip地址。 - 下联面子网必须属于该LB所在的VPC。 - 不支持边缘云子网。
 
 	ElbVirsubnetIds []string `json:"elb_virsubnet_ids"`
 	// 下联面子网类型 - ipv4：ipv4 - dualstack：双栈
 
 	ElbVirsubnetType LoadBalancerElbVirsubnetType `json:"elb_virsubnet_type"`
-	// 是否启用跨VPC后端转发。取值： - true：开启、 - false：不开启。  仅独享型负载均衡器支持该特性。  开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。  [不支持该字段，请勿使用。](tag:otc,otc_test,dt,dt_test)
+	// 是否启用跨VPC后端转发。取值： - true：开启。 - false：不开启。  仅独享型负载均衡器支持该特性。  开启跨VPC后端转发后，后端服务器组支持添加其他VPC、其他公有云、云下数据中心的服务器。  [不支持该字段，请勿使用。](tag:dt,dt_test)
 
 	IpTargetEnable bool `json:"ip_target_enable"`
-	// 负载均衡器的冻结场景。若负载均衡器有多个冻结场景，用逗号分隔。取值： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - RTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - REAR：欠费冻结场景。  [不支持该字段，请勿使用。](tag:otc,otc_test,dt,dt_test)
+	// 负载均衡器的冻结场景。若负载均衡器有多个冻结场景，用逗号分隔。取值： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - RTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - REAR：欠费冻结场景。  [不支持该字段，请勿使用。](tag:dt,dt_test)
 
 	FrozenScene string `json:"frozen_scene"`
 

@@ -43,9 +43,66 @@ type Job struct {
 	// 作业最后更新的时间，单位：毫秒。
 
 	UpdateDate *int64 `json:"update-date,omitempty"`
+	// 是否增量
+
+	IsIncreJob *bool `json:"is_incre_job,omitempty"`
+	// 标记
+
+	Flag *int32 `json:"flag,omitempty"`
+	// 已读文件数
+
+	FilesRead *int32 `json:"files_read,omitempty"`
 	// 作业最后更新的用户。
 
 	UpdateUser *string `json:"update-user,omitempty"`
+	// 外部ID。
+
+	ExternalId *string `json:"external_id,omitempty"`
+	// 作业类型
+
+	Type *string `json:"type,omitempty"`
+	// 执行_开始_日期。
+
+	ExecuteStartDate *int64 `json:"execute_start_date,omitempty"`
+	// 删除行数
+
+	DeleteRows *int32 `json:"delete_rows,omitempty"`
+	// 是否激活连接
+
+	Enabled *bool `json:"enabled,omitempty"`
+	// 写入字节
+
+	BytesWritten *int64 `json:"bytes_written,omitempty"`
+	// 作业ID
+
+	Id *int32 `json:"id,omitempty"`
+	// 用户是否使用sql
+
+	IsUseSql *bool `json:"is_use_sql,omitempty"`
+	// 更新行数
+
+	UpdateRows *int32 `json:"update_rows,omitempty"`
+	// 组_名称
+
+	GroupName *string `json:"group_name,omitempty"`
+	// 读取字节
+
+	BytesRead *int64 `json:"bytes_read,omitempty"`
+	// 执行_更新_日期。
+
+	ExecuteUpdateDate *int64 `json:"execute_update_date,omitempty"`
+	// 写入行数
+
+	WriteRows *int32 `json:"write_rows,omitempty"`
+	// 写入文件数
+
+	FilesWritte *int32 `json:"files_writte,omitempty"`
+	// 是否增量
+
+	IsIncrementing *bool `json:"is_incrementing,omitempty"`
+	// 执行_创建_日期
+
+	ExecuteCreateDate *int64 `json:"execute_create_date,omitempty"`
 	// 作业最后的执行状态： - BOOTING：启动中。 - RUNNING：运行中。 - SUCCEEDED：成功。 - FAILED：失败。 - NEW：未被执行。
 
 	Status *string `json:"status,omitempty"`

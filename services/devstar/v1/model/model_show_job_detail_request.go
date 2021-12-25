@@ -14,7 +14,7 @@ type ShowJobDetailRequest struct {
 	// 语言类型，缺省值为“zh-cn”。  枚举值： - zh-cn：中文 - en-us：英文
 
 	XLanguage *ShowJobDetailRequestXLanguage `json:"X-Language,omitempty"`
-	// 任务id。
+	// 任务 ID: 可以通过调用 RunDevstarTemplateJob 返回结果获取
 
 	JobId string `json:"job_id"`
 }

@@ -26,9 +26,6 @@ type RestoreToExistingInstanceRequestBodySource struct {
 	// 仅适用于SQL Server引擎，当有此参数时表示支持局部恢复和重命名恢复，恢复数据以局部恢复为主。不填写该字段时，默认恢复全部数据库。 - 新数据库名称不可与源实例或目标实例数据库名称重名，新数据库名称为空，默认按照原数据库名进行恢复。 - 新数据库名不能包含rdsadmin、master、msdb、tempdb、model或resource字段（不区分大小写）。 - 数据库名称长度在1~64个字符之间，包含字母、数字、下划线或中划线，不能包含其他特殊字符。
 
 	DatabaseName map[string]string `json:"database_name,omitempty"`
-	// 该字段仅适用于SQL Server引擎。是否恢复所有数据库，不填写该字段默认为false，不会恢复所有数据库到目标实例。 - 须知： 如果您想恢复所有数据库到已有实例，必须设置restore_all_database为true。
-
-	RestoreAllDatabase *bool `json:"restore_all_database,omitempty"`
 }
 
 func (o RestoreToExistingInstanceRequestBodySource) String() string {

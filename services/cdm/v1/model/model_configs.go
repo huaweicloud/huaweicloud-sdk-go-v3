@@ -13,6 +13,12 @@ type Configs struct {
 	// 配置名称：源端作业的配置名称为“fromJobConfig”。目的端作业的配置名称为“toJobConfig”,连接的配置名称固定为“linkConfig”。
 
 	Name string `json:"name"`
+	// 配置ID
+
+	Id int32 `json:"id"`
+	// 配置类型
+
+	Type string `json:"type"`
 }
 
 func (o Configs) String() string {

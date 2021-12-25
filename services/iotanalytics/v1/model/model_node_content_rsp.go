@@ -10,7 +10,7 @@ import (
 type NodeContentRsp struct {
 	// 节点实例ID
 
-	InstanceId *string `json:"instance_id,omitempty"`
+	SiteId *string `json:"site_id,omitempty"`
 	// SQL列表，将指定边缘平台节点的数字孪生模型实例数据转发到中心平台节点。
 
 	Sqllist *[]string `json:"sqllist,omitempty"`

@@ -470,7 +470,7 @@ func (c *LtsClient) UpdateAccessConfig(request *model.UpdateAccessConfigRequest)
 	}
 }
 
-//更新主机组
+//修改主机组
 func (c *LtsClient) UpdateHostGroup(request *model.UpdateHostGroupRequest) (*model.UpdateHostGroupResponse, error) {
 	requestDef := GenReqDefForUpdateHostGroup()
 
@@ -591,17 +591,6 @@ func (c *LtsClient) UpdateAomMappingRules(request *model.UpdateAomMappingRulesRe
 	}
 }
 
-//改变告警规则状态
-func (c *LtsClient) UpdateAlarmRuleStatus(request *model.UpdateAlarmRuleStatusRequest) (*model.UpdateAlarmRuleStatusResponse, error) {
-	requestDef := GenReqDefForUpdateAlarmRuleStatus()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateAlarmRuleStatusResponse), nil
-	}
-}
-
 //该接口用于创建SQL告警，目前每个帐户最多可以创建共200个关键词告警与SQL告警
 func (c *LtsClient) CreateSqlAlarmRule(request *model.CreateSqlAlarmRuleRequest) (*model.CreateSqlAlarmRuleResponse, error) {
 	requestDef := GenReqDefForCreateSqlAlarmRule()
@@ -632,6 +621,17 @@ func (c *LtsClient) ListSqlAlarmRules(request *model.ListSqlAlarmRulesRequest) (
 		return nil, err
 	} else {
 		return resp.(*model.ListSqlAlarmRulesResponse), nil
+	}
+}
+
+//改变告警规则状态
+func (c *LtsClient) UpdateAlarmRuleStatus(request *model.UpdateAlarmRuleStatusRequest) (*model.UpdateAlarmRuleStatusResponse, error) {
+	requestDef := GenReqDefForUpdateAlarmRuleStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAlarmRuleStatusResponse), nil
 	}
 }
 

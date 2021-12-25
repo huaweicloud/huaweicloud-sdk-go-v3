@@ -19,7 +19,7 @@ type FailedTasks struct {
 	OperateType *FailedTasksOperateType `json:"operate_type,omitempty"`
 	// 任务时间
 
-	TaskTime *int64 `json:"task_time,omitempty"`
+	TaskTime *string `json:"task_time,omitempty"`
 	// 任务失败错误码
 
 	TaskErrorCode *string `json:"task_error_code,omitempty"`

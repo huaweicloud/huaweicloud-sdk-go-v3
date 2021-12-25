@@ -8,7 +8,7 @@ import (
 
 // 更新后端服务器组请求参数。
 type UpdatePoolOption struct {
-	// 后端云服务器组的管理状态，只支持更新为true。  [不支持该字段，请勿使用。](tag:otc,otc_test,dt,dt_test)
+	// 后端云服务器组的管理状态，只支持更新为true。  [不支持该字段，请勿使用。](tag:dt,dt_test)
 
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 	// 后端云服务器组的描述信息。

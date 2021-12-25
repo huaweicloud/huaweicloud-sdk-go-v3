@@ -23,7 +23,7 @@ type ShowMessagesRequest struct {
 	// 单页返回消息数，默认值为10。
 
 	Limit *int32 `json:"limit,omitempty"`
-	// 查询的页码，默认值为1。
+	// 偏移量，表示从此偏移量开始查询， offset大于等于0。
 
 	Offset *int32 `json:"offset,omitempty"`
 	// 分区编号，默认值为-1，若传入值为-1，则查询所有分区。

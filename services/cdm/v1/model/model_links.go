@@ -14,6 +14,9 @@ type Links struct {
 	// 连接名称
 
 	Name string `json:"name"`
+	// 连接ID
+
+	Id *int32 `json:"id,omitempty"`
 	// 创建连接的时间
 
 	CreationDate *int64 `json:"creation-date,omitempty"`

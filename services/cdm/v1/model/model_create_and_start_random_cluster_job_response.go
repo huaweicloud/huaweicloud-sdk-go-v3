@@ -8,13 +8,10 @@ import (
 
 // Response Object
 type CreateAndStartRandomClusterJobResponse struct {
-	// 作业名称。
+	// 作业运行信息，请参见submission参数说明
 
-	Name *string `json:"name,omitempty"`
-	// 校验结果： - 如果修改失败，返回失败原因。 - 如果修改成功，返回空列表。
-
-	ValidationResult *[]JobValidationResult `json:"validation-result,omitempty"`
-	HttpStatusCode   int                    `json:"-"`
+	Submissions    *[]StartJobSubmission `json:"submissions,omitempty"`
+	HttpStatusCode int                   `json:"-"`
 }
 
 func (o CreateAndStartRandomClusterJobResponse) String() string {

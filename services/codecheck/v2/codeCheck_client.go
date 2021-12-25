@@ -19,6 +19,17 @@ func CodeCheckClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//查询任务规则集的检查参数
+func (c *CodeCheckClient) CheckParameters(request *model.CheckParametersRequest) (*model.CheckParametersResponse, error) {
+	requestDef := GenReqDefForCheckParameters()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckParametersResponse), nil
+	}
+}
+
 //可根据需求灵活的组合规则。
 func (c *CodeCheckClient) CreateRuleset(request *model.CreateRulesetRequest) (*model.CreateRulesetResponse, error) {
 	requestDef := GenReqDefForCreateRuleset()
@@ -71,6 +82,17 @@ func (c *CodeCheckClient) ListRulesets(request *model.ListRulesetsRequest) (*mod
 		return nil, err
 	} else {
 		return resp.(*model.ListRulesetsResponse), nil
+	}
+}
+
+//任务配置检查参数
+func (c *CodeCheckClient) ListTaskParameter(request *model.ListTaskParameterRequest) (*model.ListTaskParameterResponse, error) {
+	requestDef := GenReqDefForListTaskParameter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTaskParameterResponse), nil
 	}
 }
 

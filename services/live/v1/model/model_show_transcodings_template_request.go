@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ShowTranscodingsTemplateRequest struct {
-	// 播放域名
+	// 推流域名
 
 	Domain string `json:"domain"`
 	// 应用名称
