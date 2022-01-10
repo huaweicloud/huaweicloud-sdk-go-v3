@@ -13,6 +13,9 @@ type PrePaidServerPublicip struct {
 	Id *string `json:"id,omitempty"`
 
 	Eip *PrePaidServerEip `json:"eip,omitempty"`
+	// 弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
+
+	DeleteOnTermination *bool `json:"delete_on_termination,omitempty"`
 }
 
 func (o PrePaidServerPublicip) String() string {

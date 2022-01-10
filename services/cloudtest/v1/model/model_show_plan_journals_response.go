@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ShowPlanJournalsResponse struct {
-	// 项目下查询测试计划列表返回结构
+	// 项目下查询测试计划操作历史返回结构
 
-	Body           *[]ShowPlanJournalsResponseBody `json:"body,omitempty"`
-	HttpStatusCode int                             `json:"-"`
+	Body           *[]TestPlanJournalList `json:"body,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o ShowPlanJournalsResponse) String() string {

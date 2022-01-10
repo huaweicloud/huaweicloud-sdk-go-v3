@@ -338,7 +338,7 @@ func (c *DdsClient) ListInstanceTags(request *model.ListInstanceTagsRequest) (*m
 	}
 }
 
-//根据指定条件查询实例列表。
+//根据指定条件查询实例列表和详情。
 func (c *DdsClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
 	requestDef := GenReqDefForListInstances()
 

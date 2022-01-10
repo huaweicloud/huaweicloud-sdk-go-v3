@@ -14,10 +14,10 @@ type ListInstanceResponse struct {
 	// 创建的实例名称。
 
 	Name string `json:"name"`
-	// 实例状态。  取值：  值为“BUILD”，表示实例正在创建。  值为“ACTIVE”，表示实例正常。  值为“FAILED”，表示实例异常。  值为“FROZEN”，表示实例冻结。  值为“EXPANDING”，表示实例正在扩容CN或DN。  值为“REBOOTING”，表示实例正在重启。  值为“UPGRADING”，表示实例正在升级。  值为“BACKING UP”，表示实例正在进行备份。  值为“STORAGE FULL”，表示实例磁盘空间满。
+	// 实例状态。  取值：  值为“BUILD”，表示实例正在创建。  值为“ACTIVE”，表示实例正常。  值为“FAILED”，表示实例异常。  值为“FROZEN”，表示实例冻结。  值为“EXPANDING”，表示实例正在扩容CN或DN。  值为“REBOOTING”，表示实例正在重启。  值为“UPGRADING”，表示实例正在升级。  值为“BACKING UP”，表示实例正在进行备份。  值为“REDUCING REPLICATION”，表示实例正在降副本。  值为“STORAGE FULL”，表示实例磁盘空间满。
 
 	Status string `json:"status"`
-	// 实例内网IP地址列表。CN在的弹性云服务器创建成功后该值存在，其他情况下为空字符串。
+	// 实例内网IP地址列表。绑定弹性公网IP后，该值不为空。
 
 	PrivateIps []string `json:"private_ips"`
 	// 实例外网IP地址列表。绑定弹性公网IP后，该值不为空。
@@ -26,12 +26,12 @@ type ListInstanceResponse struct {
 	// 数据库端口号。GaussDB(for openGauss)数据库端口设置范围为1024~39998（其中2378,2379,2380,4999,5000,5999,6000,6001,8097,8098,20049,20050,21731,21732被系统占用不可设置）。  当不传该参数时，默认端口如下：8000。
 
 	Port int32 `json:"port"`
-	// 实例类型，取值为 \"Enterprise\"，对应于分布式实例（企业版）。
+	// 实例类型，取值为 \"enterprise\"，对应于分布式实例（企业版）。取值为\"Ha\"，对应于主备版实例。
 
 	Type string `json:"type"`
 
 	Ha *ListHa `json:"ha"`
-	// 实例副本数。说明：需添加白名单，才会开放显示。
+	// 实例副本数。
 
 	ReplicaNum *int32 `json:"replica_num,omitempty"`
 	// 实例所在区域。
@@ -64,7 +64,7 @@ type ListInstanceResponse struct {
 	FlavorInfo *ListFlavorInfo `json:"flavor_info"`
 
 	Volume *ListVolume `json:"volume"`
-	// 数据库切换策略。取值为“reliability”或“availability”，分别对应于可靠性优先和可用性优先。
+	// 数据库切换策略。取值为“reliability”或“availability”，分别对应于可靠性优先和可用性优先。 若创建时没有选择切换策略，则不予显示。
 
 	SwitchStrategy string `json:"switch_strategy"`
 
@@ -72,9 +72,6 @@ type ListInstanceResponse struct {
 	// 可维护时间窗，为UTC时间。
 
 	MaintenanceWindow string `json:"maintenance_window"`
-	// 所关联的数据库实例列表。GaussDB(for openGauss)不涉及该参数。
-
-	RelatedInstance []interface{} `json:"related_instance"`
 	// 实例节点信息。
 
 	Nodes []interface{} `json:"nodes"`
@@ -84,7 +81,7 @@ type ListInstanceResponse struct {
 	// basic为基础版 ，enterprise为企业版。
 
 	InstanceMode string `json:"instance_mode"`
-	// 磁盘加密密钥ID。
+	// 磁盘加密密钥ID。只有创建磁盘加密实例才会显示该参数。
 
 	DiskEncryptionId string `json:"disk_encryption_id"`
 
@@ -92,7 +89,7 @@ type ListInstanceResponse struct {
 	// 时区。
 
 	TimeZone string `json:"time_zone"`
-	// 标签列表，没有标签默认为空数组。
+	// 标签列表，没有标签不返回该参数。
 
 	Tags []interface{} `json:"tags"`
 }

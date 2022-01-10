@@ -118,6 +118,17 @@ func (c *CloudtestClient) ShowPlanJournals(request *model.ShowPlanJournalsReques
 	}
 }
 
+//项目下查询测试计划列表v2
+func (c *CloudtestClient) ShowPlanList(request *model.ShowPlanListRequest) (*model.ShowPlanListResponse, error) {
+	requestDef := GenReqDefForShowPlanList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPlanListResponse), nil
+	}
+}
+
 //项目下查询测试计划列表
 func (c *CloudtestClient) ShowPlans(request *model.ShowPlansRequest) (*model.ShowPlansResponse, error) {
 	requestDef := GenReqDefForShowPlans()

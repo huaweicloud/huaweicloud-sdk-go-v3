@@ -16,7 +16,7 @@ type InstanceParam struct {
 	// cpu架构 x86|arm
 
 	Arch *InstanceParamArch `json:"arch,omitempty"`
-	// cpu规格.arm架构支持4U8G，x86架构支持1U1G,2U4G,2U8G 与技术栈配置的规格对应，可通过技术栈管理ListStacksByTag接口获取。如果标签不为空，以标签配置的技术栈规格为准。 quantum技术栈，x86架构cpu规格为2U8G;其他技术栈，x86架构cpu规格为1U1G,2U4G
+	// cpu规格.arm架构支持4U8G，x86架构支持1U1G,2U4G,2U8G 与技术栈配置的规格对应，可通过技术栈管理ListStacks接口获取。如果标签不为空，以标签配置的技术栈规格为准。 quantum技术栈，x86架构cpu规格为2U8G;其他技术栈，x86架构cpu规格为1U1G,2U4G
 
 	CpuMemory InstanceParamCpuMemory `json:"cpu_memory"`
 	// 描述
@@ -52,7 +52,7 @@ type InstanceParam struct {
 	// 解放号的仓库id，解放号场景下使用
 
 	RepositoryId *int64 `json:"repository_id,omitempty"`
-	// 技术栈ID，通过技术栈管理ListStacksByTag接口获取。
+	// 技术栈ID，通过技术栈管理ListStacks接口获取。
 
 	StackId string `json:"stack_id"`
 	// 任务类型，教程活动场景下使用

@@ -224,9 +224,6 @@ type ShowMqsInstanceResponse struct {
 	// 公网访问带宽。
 
 	PublicBoundwidth *int32 `json:"public_boundwidth,omitempty"`
-	// 实例连接地址。
-
-	ConnectDn *string `json:"connect_dn,omitempty"`
 	// 是否开启代理。
 
 	AgentEnable    *bool `json:"agent_enable,omitempty"`

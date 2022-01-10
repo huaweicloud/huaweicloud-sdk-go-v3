@@ -16,13 +16,16 @@ type NodePoolSpec struct {
 	Type *NodePoolSpecType `json:"type,omitempty"`
 
 	NodeTemplate *NodeSpec `json:"nodeTemplate"`
-	// 节点池初始化节点个数。
+	// 节点池初始化节点个数。查询时为节点池目标节点数量。
 
 	InitialNodeCount *int32 `json:"initialNodeCount,omitempty"`
 
 	Autoscaling *NodePoolNodeAutoscaling `json:"autoscaling,omitempty"`
 
 	NodeManagement *NodeManagement `json:"nodeManagement,omitempty"`
+	// 1.21版本集群节点池支持绑定安全组，最多五个。
+
+	PodSecurityGroups *[]interface{} `json:"podSecurityGroups,omitempty"`
 }
 
 func (o NodePoolSpec) String() string {

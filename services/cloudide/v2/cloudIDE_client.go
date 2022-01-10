@@ -41,14 +41,14 @@ func (c *CloudIDEClient) ListProjectTemplates(request *model.ListProjectTemplate
 	}
 }
 
-//获取标签所有技术栈
-func (c *CloudIDEClient) ListStacksByTag(request *model.ListStacksByTagRequest) (*model.ListStacksByTagResponse, error) {
-	requestDef := GenReqDefForListStacksByTag()
+//按region获取标签所有技术栈
+func (c *CloudIDEClient) ListStacks(request *model.ListStacksRequest) (*model.ListStacksResponse, error) {
+	requestDef := GenReqDefForListStacks()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListStacksByTagResponse), nil
+		return resp.(*model.ListStacksResponse), nil
 	}
 }
 

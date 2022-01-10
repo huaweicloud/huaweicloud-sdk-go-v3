@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ShowIssuesByPlanIdResponse struct {
-	// 查询某个测试计划关联的需求列表
+	// 项目下某个测试计划关联的需求列表的返回结构
 
-	Body           *[]ShowIssuesByPlanIdResponseBody `json:"body,omitempty"`
-	HttpStatusCode int                               `json:"-"`
+	Body           *[]TestPlanIssueDetail `json:"body,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o ShowIssuesByPlanIdResponse) String() string {

@@ -172,7 +172,7 @@ type GlanceShowImageResponseBody struct {
 	SystemCmkid *string `json:"__system__cmkid,omitempty"`
 	// 镜像状态变为正常的时间。
 
-	ActiveAt string `json:"active_at"`
+	ActiveAt *string `json:"active_at,omitempty"`
 	// 镜像是否支持网卡多队列。取值为true或者false。
 
 	HwVifMultiqueueEnabled *string `json:"hw_vif_multiqueue_enabled,omitempty"`

@@ -11,7 +11,7 @@ import (
 
 // Request Object
 type ListDomainsRequest struct {
-	// 域名的认证状态:   * unauth - 未认证   * auth - 已认证   * invalid - 认证文件无效   * manual - 人工认证
+	// 域名的认证状态:   * unauth - 未认证   * auth - 已认证   * invalid - 认证文件无效   * manual - 人工认证   * skip - 免认证
 
 	AuthStatus *ListDomainsRequestAuthStatus `json:"auth_status,omitempty"`
 	// 分页查询，偏移量，表示从此偏移量开始查询
@@ -40,6 +40,7 @@ type ListDomainsRequestAuthStatusEnum struct {
 	AUTH    ListDomainsRequestAuthStatus
 	INVALID ListDomainsRequestAuthStatus
 	MANUAL  ListDomainsRequestAuthStatus
+	SKIP    ListDomainsRequestAuthStatus
 }
 
 func GetListDomainsRequestAuthStatusEnum() ListDomainsRequestAuthStatusEnum {
@@ -55,6 +56,9 @@ func GetListDomainsRequestAuthStatusEnum() ListDomainsRequestAuthStatusEnum {
 		},
 		MANUAL: ListDomainsRequestAuthStatus{
 			value: "manual",
+		},
+		SKIP: ListDomainsRequestAuthStatus{
+			value: "skip",
 		},
 	}
 }

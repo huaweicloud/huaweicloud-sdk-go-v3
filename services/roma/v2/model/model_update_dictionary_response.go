@@ -20,9 +20,6 @@ type UpdateDictionaryResponse struct {
 	// 字典编码 - 字符集：英文字母、数字、下划线和空格 - 约束：实例下唯一
 
 	Code *string `json:"code,omitempty"`
-	// 字典排序，值越小顺序越靠前
-
-	Order *int32 `json:"order,omitempty"`
 	// 字典扩展字段1 - 字符集：中文、英文字母、数字、下划线和空格
 
 	ExtendOne *string `json:"extend_one,omitempty"`

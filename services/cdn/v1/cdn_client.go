@@ -305,6 +305,17 @@ func (c *CdnClient) UpdateCacheRules(request *model.UpdateCacheRulesRequest) (*m
 	}
 }
 
+//修改域名全量配置接口，支持配置回源请求头、http header配置、url鉴权
+func (c *CdnClient) UpdateDomainFullConfig(request *model.UpdateDomainFullConfigRequest) (*model.UpdateDomainFullConfigResponse, error) {
+	requestDef := GenReqDefForUpdateDomainFullConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDomainFullConfigResponse), nil
+	}
+}
+
 //一个证书配置多个域名，设置域名强制https回源参数。
 func (c *CdnClient) UpdateDomainMultiCertificates(request *model.UpdateDomainMultiCertificatesRequest) (*model.UpdateDomainMultiCertificatesResponse, error) {
 	requestDef := GenReqDefForUpdateDomainMultiCertificates()

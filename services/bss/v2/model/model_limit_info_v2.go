@@ -10,7 +10,7 @@ type LimitInfoV2 struct {
 	// 使用限制ID，主键。
 
 	UseLimitiInfoId *string `json:"use_limiti_info_id,omitempty"`
-	// 折扣限制，key的取值请参考表4。
+	// 折扣限制，key的取值请参考表5。
 
 	LimitKey *string `json:"limit_key,omitempty"`
 	// value1。

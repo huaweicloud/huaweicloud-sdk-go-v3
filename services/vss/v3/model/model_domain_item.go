@@ -37,7 +37,7 @@ type DomainItem struct {
 	// 创建域名资产的时间
 
 	CreateTime *string `json:"create_time,omitempty"`
-	// 域名的认证状态:   * unauth - 未认证   * auth - 已认证   * invalid - 认证文件无效   * manual - 人工认证
+	// 域名的认证状态:   * unauth - 未认证   * auth - 已认证   * invalid - 认证文件无效   * manual - 人工认证   * skip - 免认证
 
 	AuthStatus *DomainItemAuthStatus `json:"auth_status,omitempty"`
 	// 协议类型:   * http:// - HTTP   * https:// - HTTPS
@@ -63,6 +63,7 @@ type DomainItemAuthStatusEnum struct {
 	AUTH    DomainItemAuthStatus
 	INVALID DomainItemAuthStatus
 	MANUAL  DomainItemAuthStatus
+	SKIP    DomainItemAuthStatus
 }
 
 func GetDomainItemAuthStatusEnum() DomainItemAuthStatusEnum {
@@ -78,6 +79,9 @@ func GetDomainItemAuthStatusEnum() DomainItemAuthStatusEnum {
 		},
 		MANUAL: DomainItemAuthStatus{
 			value: "manual",
+		},
+		SKIP: DomainItemAuthStatus{
+			value: "skip",
 		},
 	}
 }

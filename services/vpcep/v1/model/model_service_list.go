@@ -46,6 +46,9 @@ type ServiceList struct {
 	// 项目ID，获取方法请参见获取项目ID。
 
 	ProjectId *string `json:"project_id,omitempty"`
+	// Domain ID
+
+	DomainId *string `json:"domain_id,omitempty"`
 	// 服务开放的端口映射列表，详细内容请参见表 4-17 同一个终端节点服务下，不允许重复的端口映 射。若多个终端节点服务共用一个port_id，则 终端节点服务之间的所有端口映射的 server_port和protocol的组合不能重复。
 
 	Ports *[]PortList `json:"ports,omitempty"`

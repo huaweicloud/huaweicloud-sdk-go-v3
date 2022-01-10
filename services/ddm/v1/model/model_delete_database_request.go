@@ -17,7 +17,7 @@ type DeleteDatabaseRequest struct {
 	// 需要查询的逻辑库名称，不区分大小写。
 
 	DdmDbname string `json:"ddm_dbname"`
-	// 是否同时删除关联RDS上存储的数据。 - 取值为“true”：删除。 - 取值为空或“false”：不删除。 默认值为空。
+	// 是否同时删除关联后端数据库实例上存储的数据。 - 取值为“true”：删除。 - 取值为空或“false”：不删除。 默认值为空。
 
 	DeleteRdsData *DeleteDatabaseRequestDeleteRdsData `json:"delete_rds_data,omitempty"`
 }

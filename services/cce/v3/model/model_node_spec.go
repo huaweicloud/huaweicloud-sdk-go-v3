@@ -32,7 +32,7 @@ type NodeSpec struct {
 	// 批量创建时节点的个数，必须为大于等于1，小于等于最大限额的正整数。作用于节点池时该项可以不填写。
 
 	Count *int32 `json:"count,omitempty"`
-	// 节点的计费模式：取值为 0（按需付费）、1（包周期）、2（自动付费包周期）
+	// 节点的计费模式：取值为 0（按需付费）、1（包周期）、2（已废弃：自动付费包周期）
 
 	BillingMode *int32 `json:"billingMode,omitempty"`
 	// 支持给创建出来的节点加Taints来设置反亲和性，taints配置不超过20条。每条Taints包含以下3个参数：  - Key：必须以字母或数字开头，可以包含字母、数字、连字符、下划线和点，最长63个字符；另外可以使用DNS子域作为前缀。 - Value：必须以字符或数字开头，可以包含字母、数字、连字符、下划线和点，最长63个字符。 - Effect：只可选NoSchedule，PreferNoSchedule或NoExecute。  示例：  ``` \"taints\": [{  \"key\": \"status\",  \"value\": \"unavailable\",  \"effect\": \"NoSchedule\" }, {  \"key\": \"looks\",  \"value\": \"bad\",  \"effect\": \"NoSchedule\" }] ```
@@ -53,7 +53,7 @@ type NodeSpec struct {
 	// 是否CCE Turbo集群节点 >创建节点池添加节点时不支持该参数。
 
 	OffloadNode *bool `json:"offloadNode,omitempty"`
-	// 云服务器标签，键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限最少为5个。
+	// 云服务器标签，键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为5个。
 
 	UserTags *[]UserTag `json:"userTags,omitempty"`
 

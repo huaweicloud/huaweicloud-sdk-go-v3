@@ -20,16 +20,16 @@ type NodeExtendParam struct {
 	// 节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，取值范围为16~256。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，[具体请参见[节点最多可以创建多少Pod](https://support.huaweicloud.com/usermanual-cce/cce_01_0348.html)](tag:hws) [具体请参见[节点最多可以创建多少Pod](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_01_0348.html)](tag:hws_hk)
 
 	MaxPods *int32 `json:"maxPods,omitempty"`
-	// 订购周期类型，取值范围： - month：月 - year：年 > billingMode为2（自动付费包周期）时生效，且为必选。
+	// - month：月 - year：年 > billingMode为1（包周期）或2（已废弃：自动付费包周期）时生效，且为必选。
 
 	PeriodType *string `json:"periodType,omitempty"`
-	// 订购周期数，取值范围： - periodType=month（周期类型为月）时，取值为[1-9]。 - periodType=year（周期类型为年）时，取值为1。 > billingMode为2时生效，且为必选。
+	// 订购周期数，取值范围： - periodType=month（周期类型为月）时，取值为[1-9]。 - periodType=year（周期类型为年）时，取值为1。 > billingMode为1或2（已废弃）时生效，且为必选。
 
 	PeriodNum *int32 `json:"periodNum,omitempty"`
-	// 是否自动续订 - “true”：自动续订 - “false”：不自动续订 > billingMode为2时生效，且为必选。
+	// 是否自动续订 - “true”：自动续订 - “false”：不自动续订 > billingMode为1或2（已废弃）时生效，不填写此参数时默认不会自动续费。
 
 	IsAutoRenew *string `json:"isAutoRenew,omitempty"`
-	// 是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > billingMode为2时生效，不填写此参数时默认会自动扣款。
+	// 是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > billingMode为1或2（已废弃）时生效，billingMode为1时不填写此参数时默认不会自动扣款。（已废弃：billingMode为2时不填写此参数时默认会自动扣款）
 
 	IsAutoPay *string `json:"isAutoPay,omitempty"`
 	// Docker数据盘配置项。默认配置示例如下： ``` \"DockerLVMConfigOverride\":\"dockerThinpool=vgpaas/90%VG;kubernetesLV=vgpaas/10%VG;diskType=evs;lvType=linear\" ``` 包含如下字段：   - userLV：用户空间的大小，示例格式：vgpaas/20%VG   - userPath：用户空间挂载路径，示例格式：/home/wqt-test   - diskType：磁盘类型，目前只有evs、hdd和ssd三种格式   - lvType：逻辑卷的类型，目前支持linear和striped两种，示例格式：striped   - dockerThinpool：Docker盘的空间大小，示例格式：vgpaas/60%VG   - kubernetesLV：Kubelet空间大小，示例格式：vgpaas/20%VG

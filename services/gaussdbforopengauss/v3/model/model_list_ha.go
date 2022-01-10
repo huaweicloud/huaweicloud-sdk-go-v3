@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 获取分布式实例时返回。
+// 获取分布式/主备版实例时返回。
 type ListHa struct {
 	// 数据库一致性类型。取值为“strong”、“eventual”，分别表示强一致性、最终一致性。
 

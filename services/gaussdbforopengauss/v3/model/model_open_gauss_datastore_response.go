@@ -11,7 +11,7 @@ import (
 
 // 数据库信息。
 type OpenGaussDatastoreResponse struct {
-	// 数据库引擎，返回值如下：  GaussDB(openGauss)
+	// 数据库引擎，返回值如下：  GaussDB(for openGauss)
 
 	Type OpenGaussDatastoreResponseType `json:"type"`
 	// 数据库版本。
@@ -33,13 +33,13 @@ type OpenGaussDatastoreResponseType struct {
 }
 
 type OpenGaussDatastoreResponseTypeEnum struct {
-	GAUSS_DB_OPEN_GAUSS OpenGaussDatastoreResponseType
+	GAUSS_DB_FOR_OPEN_GAUSS OpenGaussDatastoreResponseType
 }
 
 func GetOpenGaussDatastoreResponseTypeEnum() OpenGaussDatastoreResponseTypeEnum {
 	return OpenGaussDatastoreResponseTypeEnum{
-		GAUSS_DB_OPEN_GAUSS: OpenGaussDatastoreResponseType{
-			value: "GaussDB(openGauss)",
+		GAUSS_DB_FOR_OPEN_GAUSS: OpenGaussDatastoreResponseType{
+			value: "GaussDB(for openGauss)",
 		},
 	}
 }

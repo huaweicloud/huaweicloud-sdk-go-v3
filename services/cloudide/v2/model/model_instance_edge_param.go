@@ -13,7 +13,7 @@ type InstanceEdgeParam struct {
 	// cpu架构 x86|arm
 
 	Arch *InstanceEdgeParamArch `json:"arch,omitempty"`
-	// cpu规格.arm架构支持4U8G，x86架构支持1U1G,2U4G,2U8G 与技术栈配置的规格对应，可通过技术栈管理ListStacksByTag接口获取。如果标签不为空，以标签配置的技术栈规格为准。 quantum技术栈，x86架构cpu规格为2U8G;其他技术栈，x86架构cpu规格为1U1G,2U4G
+	// cpu规格.arm架构支持4U8G，x86架构支持1U1G,2U4G,2U8G 与技术栈配置的规格对应，可通过技术栈管理ListStacks接口获取。如果标签不为空，以标签配置的技术栈规格为准。 quantum技术栈，x86架构cpu规格为2U8G;其他技术栈，x86架构cpu规格为1U1G,2U4G
 
 	CpuMemory InstanceEdgeParamCpuMemory `json:"cpu_memory"`
 	// 描述。长度不操过100个字符
@@ -46,7 +46,7 @@ type InstanceEdgeParam struct {
 	// 实例的生命周期。 arm架构,生命周期只能设置成30，60。x86架构可取值为30，60，240，1440和-1。除-1外，其它值的单位为“分钟”。实例在到达生命周期后，将会被暂停（已保存的数据不会被删除）。-1表示实例不会自动停止。
 
 	RefreshTime *string `json:"refresh_time,omitempty"`
-	// 技术栈ID，通过技术栈管理ListStacksByTag接口获取。
+	// 技术栈ID，通过技术栈管理ListStacks接口获取。
 
 	StackId string `json:"stack_id"`
 }

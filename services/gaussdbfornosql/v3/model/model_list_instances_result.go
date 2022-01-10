@@ -72,6 +72,9 @@ type ListInstancesResult struct {
 	// 实例正在执行的动作。
 
 	Actions []string `json:"actions"`
+	// 负载均衡ip，只有存在负载均衡ip才会返回该参数。
+
+	LbIpAddress *string `json:"lb_ip_address,omitempty"`
 }
 
 func (o ListInstancesResult) String() string {

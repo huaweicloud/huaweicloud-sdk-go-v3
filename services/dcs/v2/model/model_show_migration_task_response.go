@@ -29,6 +29,9 @@ type ShowMigrationTaskResponse struct {
 	// 迁移方式，包括全量迁移和增量迁移两种类型。
 
 	MigrationMethod *ShowMigrationTaskResponseMigrationMethod `json:"migration_method,omitempty"`
+	// 迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单
+
+	EcsTenantPrivateIp *string `json:"ecs_tenant_private_ip,omitempty"`
 
 	BackupFiles *BackupFilesBody `json:"backup_files,omitempty"`
 	// 网络类型，包括vpc和vpn两种类型。

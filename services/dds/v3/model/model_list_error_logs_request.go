@@ -11,7 +11,7 @@ import (
 
 // Request Object
 type ListErrorLogsRequest struct {
-	// 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
+	// 实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
 
 	InstanceId string `json:"instance_id"`
 	// 开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
@@ -20,7 +20,7 @@ type ListErrorLogsRequest struct {
 	// 结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。只能查询当前时间前一个月内的慢日志。注：结束时间不能晚于当前时间。
 
 	EndDate string `json:"end_date"`
-	// 节点ID，取空值，表示查询实例下所有允许查询的节点。 使用请参考《DDS API参考》的“查询实例列表”响应消息表“nodes 数据结构说明”的“id”。允许查询的节点如下： - 集群实例下面的 mongos、shard、config节点 - 副本集、单节点实例下面的所有节点
+	// 节点ID，取空值，表示查询实例下所有允许查询的节点。 使用请参考《DDS API参考》的“查询实例列表和详情”响应消息表“nodes 数据结构说明”的“id”。允许查询的节点如下： - 集群实例下面的 mongos、shard、config节点 - 副本集、单节点实例下面的所有节点
 
 	NodeId *string `json:"node_id,omitempty"`
 	// 语句类型，取空值，表示查询所有语句类型，也可指定如下日志类型： - WARNING - ERROR

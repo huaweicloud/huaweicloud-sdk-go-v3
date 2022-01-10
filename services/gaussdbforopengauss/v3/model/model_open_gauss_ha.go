@@ -9,17 +9,17 @@ import (
 	"strings"
 )
 
-// 创建分布式实例时使用。
+// 实例部署形态。
 type OpenGaussHa struct {
 	// GaussDB(for openGauss)为分布式模式，取值：enterprise(企业版) ，不区分大小写。
 
 	Mode OpenGaussHaMode `json:"mode"`
-	// 备机同步参数。  取值：  GaussDB(for openGauss)为“sync\"  说明： - “sync”为同步模式。
-
-	ReplicationMode OpenGaussHaReplicationMode `json:"replication_mode"`
 	// 指定实例一致性类型，取值范围：strong（强一致性） | eventual(最终一致性)，不分区大小写。
 
 	Consistency OpenGaussHaConsistency `json:"consistency"`
+	// 备机同步参数。  取值：  GaussDB(for openGauss)为“sync\"  说明： - “sync”为同步模式。
+
+	ReplicationMode OpenGaussHaReplicationMode `json:"replication_mode"`
 }
 
 func (o OpenGaussHa) String() string {
@@ -65,40 +65,6 @@ func (c *OpenGaussHaMode) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type OpenGaussHaReplicationMode struct {
-	value string
-}
-
-type OpenGaussHaReplicationModeEnum struct {
-	SYNC OpenGaussHaReplicationMode
-}
-
-func GetOpenGaussHaReplicationModeEnum() OpenGaussHaReplicationModeEnum {
-	return OpenGaussHaReplicationModeEnum{
-		SYNC: OpenGaussHaReplicationMode{
-			value: "sync",
-		},
-	}
-}
-
-func (c OpenGaussHaReplicationMode) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *OpenGaussHaReplicationMode) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
 type OpenGaussHaConsistency struct {
 	value string
 }
@@ -124,6 +90,40 @@ func (c OpenGaussHaConsistency) MarshalJSON() ([]byte, error) {
 }
 
 func (c *OpenGaussHaConsistency) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type OpenGaussHaReplicationMode struct {
+	value string
+}
+
+type OpenGaussHaReplicationModeEnum struct {
+	SYNC OpenGaussHaReplicationMode
+}
+
+func GetOpenGaussHaReplicationModeEnum() OpenGaussHaReplicationModeEnum {
+	return OpenGaussHaReplicationModeEnum{
+		SYNC: OpenGaussHaReplicationMode{
+			value: "sync",
+		},
+	}
+}
+
+func (c OpenGaussHaReplicationMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *OpenGaussHaReplicationMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

@@ -7,7 +7,7 @@ import (
 )
 
 type HttpInfoResponseBody struct {
-	// HTTPS证书是否启用。0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源，开启时需要传递证书及私钥
+	// HTTPS证书是否启用。0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源；3：启用HTTPS加速并HTTPS回源，开启时需要传递证书及私钥
 
 	HttpsStatus *int32 `json:"https_status,omitempty"`
 	// 证书名称。（长度限制为3-32字符）。

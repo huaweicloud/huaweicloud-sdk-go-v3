@@ -15,7 +15,7 @@ type InstancesVo struct {
 	Arch *InstancesVoArch `json:"arch,omitempty"`
 
 	Attributes *Attributes `json:"attributes,omitempty"`
-	// cpu规格.arm架构支持4U8G，x86架构支持1U1G,2U4G,2U8G 与技术栈配置的规格对应，可通过技术栈管理ListStacksByTag接口获取。如果标签不为空，以标签配置的技术栈规格为准。 quantum技术栈，x86架构cpu规格为2U8G;其他技术栈，x86架构cpu规格为1U1G,2U4G
+	// cpu规格.arm架构支持4U8G，x86架构支持1U1G,2U4G,2U8G 与技术栈配置的规格对应，可通过技术栈管理ListStacks接口获取。如果标签不为空，以标签配置的技术栈规格为准。 quantum技术栈，x86架构cpu规格为2U8G;其他技术栈，x86架构cpu规格为1U1G,2U4G
 
 	CpuMemory *InstancesVoCpuMemory `json:"cpu_memory,omitempty"`
 	// 创建时间
@@ -75,7 +75,7 @@ type InstancesVo struct {
 	// 服务链接
 
 	ServerUrl *string `json:"server_url,omitempty"`
-	// 技术栈ID，通过技术栈管理ListStacksByTag接口获取。
+	// 技术栈ID，通过技术栈管理ListStacks接口获取。
 
 	StackId *string `json:"stack_id,omitempty"`
 	// 实例状态 。 - INIT 初始化 - STARTING 启动中 - RUNNING 运行中 - STOPPING 停止中 - STOPPED 已停止 - DELETING 删除中 - DELETED 已删除 - DELETE_FAILED 删除失败

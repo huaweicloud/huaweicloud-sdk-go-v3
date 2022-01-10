@@ -41,7 +41,7 @@ type AppInfoWithBindNum struct {
 	AppType *AppInfoWithBindNumAppType `json:"app_type,omitempty"`
 	// ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用
 
-	RomaAppType *interface{} `json:"roma_app_type,omitempty"`
+	RomaAppType *string `json:"roma_app_type,omitempty"`
 	// 绑定的API数量
 
 	BindNum *int32 `json:"bind_num,omitempty"`

@@ -11,7 +11,7 @@ type ListAuditlogsRequest struct {
 	// 语言。
 
 	XLanguage *string `json:"X-Language,omitempty"`
-	// 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
+	// 实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
 
 	InstanceId string `json:"instance_id"`
 	// 查询审计日志的节点ID。不传值，默认查询所有的节点,集群实例审计日志分布在mongos节点上。

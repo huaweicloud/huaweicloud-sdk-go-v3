@@ -712,7 +712,7 @@ func (c *RomaClient) DeleteLiveDataApiV2(request *model.DeleteLiveDataApiV2Reque
 	}
 }
 
-//批量删除Topic。
+//删除Topic。
 func (c *RomaClient) DeleteMqsInstanceTopic(request *model.DeleteMqsInstanceTopicRequest) (*model.DeleteMqsInstanceTopicResponse, error) {
 	requestDef := GenReqDefForDeleteMqsInstanceTopic()
 

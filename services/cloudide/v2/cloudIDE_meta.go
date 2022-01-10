@@ -47,11 +47,11 @@ func GenReqDefForListProjectTemplates() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListStacksByTag() *def.HttpRequestDef {
+func GenReqDefForListStacks() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/stacks").
-		WithResponse(new(model.ListStacksByTagResponse)).
+		WithPath("/v2/stacks/tag").
+		WithResponse(new(model.ListStacksResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

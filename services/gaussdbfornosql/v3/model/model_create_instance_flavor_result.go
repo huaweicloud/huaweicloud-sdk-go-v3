@@ -8,7 +8,7 @@ import (
 
 // 实例规格详情，与请求参数相同。
 type CreateInstanceFlavorResult struct {
-	// 节点数量。   - GaussDB(for Cassandra)实例的节点数量可取3~12。   - GaussDB(for Mongo)3.4版本集群实例的节点数量可取3~16。   - GaussDB(for Mongo)4.0版本副本集实例的节点数量可取3。   - GaussDB(for Influx)实例的节点数量可取3~16。
+	// 节点数量。   - GaussDB(for Cassandra)实例的节点数量可取3~12。   - GaussDB(for Mongo)4.0版本副本集实例的节点数量可取3。   - GaussDB(for Influx)实例的节点数量可取3~16。
 
 	Num *string `json:"num,omitempty"`
 	// 磁盘类型。 取值为“ULTRAHIGH”，表示SSD盘。

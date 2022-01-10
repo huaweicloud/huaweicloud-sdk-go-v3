@@ -20,9 +20,6 @@ type ListMqsInstanceTopicsResponse struct {
 	// Topic列表。
 
 	Topics *[]ListInstanceTopicsRespTopics `json:"topics,omitempty"`
-	// 权限列表。
-
-	Policies *[]ListInstanceTopicsRespPolicies `json:"policies,omitempty"`
 	// 剩余分区数。
 
 	RemainPartitions *int32 `json:"remain_partitions,omitempty"`

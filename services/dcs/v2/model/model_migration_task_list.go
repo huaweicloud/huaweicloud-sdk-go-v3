@@ -26,6 +26,9 @@ type MigrationTaskList struct {
 	// 迁移方式，包括全量迁移和增量迁移两种类型。
 
 	MigrationMethod *MigrationTaskListMigrationMethod `json:"migration_method,omitempty"`
+	// 迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单
+
+	EcsTenantPrivateIp *string `json:"ecs_tenant_private_ip,omitempty"`
 	// 数据源，格式为ip:port或者桶名。
 
 	DataSource *string `json:"data_source,omitempty"`

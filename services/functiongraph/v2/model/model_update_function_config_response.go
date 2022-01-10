@@ -115,7 +115,10 @@ type UpdateFunctionConfigResponse struct {
 	// 是否启动动态内存配置
 
 	EnableDynamicMemory *bool `json:"enable_dynamic_memory,omitempty"`
-	HttpStatusCode      int   `json:"-"`
+	// 是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+
+	IsStatefulFunction *bool `json:"is_stateful_function,omitempty"`
+	HttpStatusCode     int   `json:"-"`
 }
 
 func (o UpdateFunctionConfigResponse) String() string {

@@ -14,7 +14,7 @@ type StatisticsApi struct {
 	MaxLatency *int32 `json:"max_latency,omitempty"`
 	// 平均延时
 
-	AvgLatency float32 `json:"avg_latency,omitempty"`
+	AvgLatency *float32 `json:"avg_latency,omitempty"`
 	// 请求总次数
 
 	ReqCount *int32 `json:"req_count,omitempty"`
@@ -35,13 +35,13 @@ type StatisticsApi struct {
 	MaxInnerLatency *int32 `json:"max_inner_latency,omitempty"`
 	// 平均网关内部延时
 
-	AvgInnerLatency float32 `json:"avg_inner_latency,omitempty"`
+	AvgInnerLatency *float32 `json:"avg_inner_latency,omitempty"`
 	// 最大后端延时
 
 	MaxBackendLatency *int32 `json:"max_backend_latency,omitempty"`
 	// 平均后端延时
 
-	AvgBackendLatency float32 `json:"avg_backend_latency,omitempty"`
+	AvgBackendLatency *float32 `json:"avg_backend_latency,omitempty"`
 	// 下行吞吐量（byte）
 
 	OutputThroughput *int64 `json:"output_throughput,omitempty"`

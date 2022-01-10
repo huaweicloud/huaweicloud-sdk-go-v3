@@ -23,6 +23,12 @@ type ListEndpointInfoDetailsResponse struct {
 	// 帐号状态。 ● frozen：冻结 ● active：解冻
 
 	ActiveStatus *[]string `json:"active_status,omitempty"`
+	// 终端节点是否可用。 ● enable：启用 ● disable：不启用
+
+	EnableStatus *ListEndpointInfoDetailsResponseEnableStatus `json:"enable_status,omitempty"`
+	// 终端节点服务规格的名称。
+
+	SpecificationName *string `json:"specification_name,omitempty"`
 	// 终端节点服务的名称。
 
 	EndpointServiceName *string `json:"endpoint_service_name,omitempty"`
@@ -161,6 +167,44 @@ func (c ListEndpointInfoDetailsResponseStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListEndpointInfoDetailsResponseStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListEndpointInfoDetailsResponseEnableStatus struct {
+	value string
+}
+
+type ListEndpointInfoDetailsResponseEnableStatusEnum struct {
+	ENABLE  ListEndpointInfoDetailsResponseEnableStatus
+	DISABLE ListEndpointInfoDetailsResponseEnableStatus
+}
+
+func GetListEndpointInfoDetailsResponseEnableStatusEnum() ListEndpointInfoDetailsResponseEnableStatusEnum {
+	return ListEndpointInfoDetailsResponseEnableStatusEnum{
+		ENABLE: ListEndpointInfoDetailsResponseEnableStatus{
+			value: "enable",
+		},
+		DISABLE: ListEndpointInfoDetailsResponseEnableStatus{
+			value: "disable",
+		},
+	}
+}
+
+func (c ListEndpointInfoDetailsResponseEnableStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListEndpointInfoDetailsResponseEnableStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

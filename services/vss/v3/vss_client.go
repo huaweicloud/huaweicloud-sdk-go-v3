@@ -19,6 +19,17 @@ func VssClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//认证租户的域名资产
+func (c *VssClient) AuthorizeDomains(request *model.AuthorizeDomainsRequest) (*model.AuthorizeDomainsResponse, error) {
+	requestDef := GenReqDefForAuthorizeDomains()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AuthorizeDomainsResponse), nil
+	}
+}
+
 //创建租户的域名资产
 func (c *VssClient) CreateDomains(request *model.CreateDomainsRequest) (*model.CreateDomainsResponse, error) {
 	requestDef := GenReqDefForCreateDomains()
@@ -49,5 +60,38 @@ func (c *VssClient) ListDomains(request *model.ListDomainsRequest) (*model.ListD
 		return nil, err
 	} else {
 		return resp.(*model.ListDomainsResponse), nil
+	}
+}
+
+//获取域名漏洞扫描结果
+func (c *VssClient) ShowResults(request *model.ShowResultsRequest) (*model.ShowResultsResponse, error) {
+	requestDef := GenReqDefForShowResults()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResultsResponse), nil
+	}
+}
+
+//创建域名漏洞扫描任务并启动
+func (c *VssClient) CreateTasks(request *model.CreateTasksRequest) (*model.CreateTasksResponse, error) {
+	requestDef := GenReqDefForCreateTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTasksResponse), nil
+	}
+}
+
+//获取域名漏洞扫描任务详情
+func (c *VssClient) ShowTasks(request *model.ShowTasksRequest) (*model.ShowTasksResponse, error) {
+	requestDef := GenReqDefForShowTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTasksResponse), nil
 	}
 }

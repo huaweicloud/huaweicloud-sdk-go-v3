@@ -29,6 +29,9 @@ type UpdateEndpointServiceResponse struct {
 	// 终端节点服务对应后端资源所在的VPC的ID。
 
 	VpcId *string `json:"vpc_id,omitempty"`
+	// 终端节点服务对应的集群id
+
+	PoolId *string `json:"pool_id,omitempty"`
 	// 是否需要审批。 ● false：不需要审批，创建的终端节点连接直接为accepted状态。 ● true：需要审批，创建的终端节点连接为pendingAcceptance状态，需要终端节点服务所属用户审核后方可使用。
 
 	ApprovalEnabled *bool `json:"approval_enabled,omitempty"`

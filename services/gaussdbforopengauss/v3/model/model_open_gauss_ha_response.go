@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建分布式实例时可见。
+// 实例部署形态。
 type OpenGaussHaResponse struct {
 	// GaussDB(for openGauss)仅支持分布式模式，返回值为：Enterprise（企业版）。
 

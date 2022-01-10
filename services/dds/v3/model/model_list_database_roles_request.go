@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListDatabaseRolesRequest struct {
-	// 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
+	// 实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
 
 	InstanceId string `json:"instance_id"`
 	// 角色名称。 - 长度为1~64位，可以包含大写字母（A~Z）、小写字母（a~z）、数字（0~9）、中划线、下划线和点。

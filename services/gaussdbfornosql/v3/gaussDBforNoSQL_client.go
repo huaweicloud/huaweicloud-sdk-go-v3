@@ -173,7 +173,7 @@ func (c *GaussDBforNoSQLClient) ListInstanceTags(request *model.ListInstanceTags
 	}
 }
 
-//根据指定条件查询数据库实例列表。
+//根据指定条件查询数据库实例列表和详情。
 func (c *GaussDBforNoSQLClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
 	requestDef := GenReqDefForListInstances()
 
