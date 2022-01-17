@@ -223,6 +223,9 @@ type ShowInstanceResp struct {
 	// 公网访问带宽。
 
 	PublicBoundwidth *int32 `json:"public_boundwidth,omitempty"`
+	// 认证用户名。
+
+	AccessUser *string `json:"access_user,omitempty"`
 	// 是否开启代理。
 
 	AgentEnable *bool `json:"agent_enable,omitempty"`

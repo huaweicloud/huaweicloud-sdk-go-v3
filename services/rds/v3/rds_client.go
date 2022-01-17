@@ -800,6 +800,17 @@ func (c *RdsClient) ListApiVersion(request *model.ListApiVersionRequest) (*model
 	}
 }
 
+//查询API版本列表。
+func (c *RdsClient) ListApiVersionNew(request *model.ListApiVersionNewRequest) (*model.ListApiVersionNewResponse, error) {
+	requestDef := GenReqDefForListApiVersionNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiVersionNewResponse), nil
+	}
+}
+
 //查询指定的API版本信息。
 func (c *RdsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model.ShowApiVersionResponse, error) {
 	requestDef := GenReqDefForShowApiVersion()

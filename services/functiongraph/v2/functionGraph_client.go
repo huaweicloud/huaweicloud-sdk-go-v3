@@ -217,6 +217,17 @@ func (c *FunctionGraphClient) ListEvents(request *model.ListEventsRequest) (*mod
 	}
 }
 
+//获取函数异步调用请求列表
+func (c *FunctionGraphClient) ListFunctionAsyncInvocations(request *model.ListFunctionAsyncInvocationsRequest) (*model.ListFunctionAsyncInvocationsResponse, error) {
+	requestDef := GenReqDefForListFunctionAsyncInvocations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFunctionAsyncInvocationsResponse), nil
+	}
+}
+
 //获取函数异步配置列表。
 func (c *FunctionGraphClient) ListFunctionAsyncInvokeConfig(request *model.ListFunctionAsyncInvokeConfigRequest) (*model.ListFunctionAsyncInvokeConfigResponse, error) {
 	requestDef := GenReqDefForListFunctionAsyncInvokeConfig()

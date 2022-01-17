@@ -8,10 +8,13 @@ import (
 
 // Response Object
 type ShowInstanceMonitorExtendResponse struct {
-	// 采集周期。  取值： 0表示实例秒级监控关闭； 1表示实例秒级监控开启，采集周期为1s； 5表示实例秒级监控开启，采集周期为5s。
+	// 实例秒级监控开关。为true时表示开启，为false时表示关闭。
 
-	Period         *string `json:"period,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	MonitorSwitch *bool `json:"monitor_switch,omitempty"`
+	// 采集周期，仅在monitor_switch为true时返回。1：采集周期为1s； 5：采集周期为5s。
+
+	Period         *int32 `json:"period,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowInstanceMonitorExtendResponse) String() string {

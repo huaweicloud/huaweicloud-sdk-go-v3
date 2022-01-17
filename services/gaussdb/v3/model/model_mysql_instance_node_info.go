@@ -27,7 +27,7 @@ type MysqlInstanceNodeInfo struct {
 
 	PrivateReadIps *[]string `json:"private_read_ips,omitempty"`
 
-	Volume *MysqlVolumeInfo `json:"volume,omitempty"`
+	Volume *MysqlInstanceNodeVolumeInfo `json:"volume,omitempty"`
 	// 可用区。
 
 	AzCode *string `json:"az_code,omitempty"`

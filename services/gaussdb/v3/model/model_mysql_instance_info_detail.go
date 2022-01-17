@@ -61,8 +61,6 @@ type MysqlInstanceInfoDetail struct {
 
 	ConfigurationId *string `json:"configuration_id,omitempty"`
 
-	Volume *MysqlVolumeInfo `json:"volume,omitempty"`
-
 	BackupStrategy *MysqlBackupStrategy `json:"backup_strategy,omitempty"`
 
 	Nodes *[]MysqlInstanceNodeInfo `json:"nodes,omitempty"`

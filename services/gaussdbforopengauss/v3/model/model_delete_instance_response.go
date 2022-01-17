@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type DeleteInstanceResponse struct {
-	// 实例删除的任务id。
+	// 任务id。
 
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`

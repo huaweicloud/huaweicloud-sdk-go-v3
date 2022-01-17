@@ -7,12 +7,6 @@ import (
 )
 
 type AppAsset struct {
-	// 应用列表
-
-	Apps *[]string `json:"apps,omitempty"`
-	// 任务列表
-
-	Tasks *[]AppAssetTasks `json:"tasks,omitempty"`
 }
 
 func (o AppAsset) String() string {

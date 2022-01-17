@@ -12,7 +12,7 @@ type ImportAssetRequest struct {
 
 	InstanceId string `json:"instance_id"`
 
-	Body *AppAsset `json:"body,omitempty"`
+	Body string `json:"body,omitempty"`
 }
 
 func (o ImportAssetRequest) String() string {

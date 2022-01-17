@@ -25,7 +25,7 @@ type NodePoolSpec struct {
 	NodeManagement *NodeManagement `json:"nodeManagement,omitempty"`
 	// 1.21版本集群节点池支持绑定安全组，最多五个。
 
-	PodSecurityGroups *[]interface{} `json:"podSecurityGroups,omitempty"`
+	PodSecurityGroups *[]SecurityId `json:"podSecurityGroups,omitempty"`
 }
 
 func (o NodePoolSpec) String() string {

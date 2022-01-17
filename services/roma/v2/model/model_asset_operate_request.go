@@ -12,7 +12,7 @@ type AssetOperateRequest struct {
 	Apps []string `json:"apps"`
 	// 任务列表
 
-	Tasks *[]AppAssetTasks `json:"tasks,omitempty"`
+	Tasks []AssetOperateRequestTasks `json:"tasks"`
 }
 
 func (o AssetOperateRequest) String() string {

@@ -1836,6 +1836,17 @@ func GenReqDefForListApiVersion() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListApiVersionNew() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/").
+		WithResponse(new(model.ListApiVersionNewResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowApiVersion() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

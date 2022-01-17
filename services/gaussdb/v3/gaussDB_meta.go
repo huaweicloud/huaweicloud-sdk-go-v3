@@ -821,7 +821,7 @@ func GenReqDefForShowGaussMySqlQuotas() *def.HttpRequestDef {
 func GenReqDefForShowInstanceMonitorExtend() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v3/{project_id}/instances/{instance_id}/monitorPolicy").
+		WithPath("/v3/{project_id}/instances/{instance_id}/monitor-policy").
 		WithResponse(new(model.ShowInstanceMonitorExtendResponse)).
 		WithContentType("application/json")
 
@@ -912,7 +912,7 @@ func GenReqDefForUpdateGaussMySqlQuotas() *def.HttpRequestDef {
 func GenReqDefForUpdateInstanceMonitor() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/v3/{project_id}/instances/{instance_id}/monitorPolicy").
+		WithPath("/v3/{project_id}/instances/{instance_id}/monitor-policy").
 		WithResponse(new(model.UpdateInstanceMonitorResponse)).
 		WithContentType("application/json;charset=UTF-8")
 

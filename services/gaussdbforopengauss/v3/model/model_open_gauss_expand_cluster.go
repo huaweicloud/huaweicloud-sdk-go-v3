@@ -8,6 +8,8 @@ import (
 
 // CN横向扩容/DN分片扩容时必填
 type OpenGaussExpandCluster struct {
+	// CN横向扩容时必填
+
 	Coordinators *[]OpenGaussCoordinators `json:"coordinators,omitempty"`
 
 	Shard *OpenGaussShard `json:"shard,omitempty"`

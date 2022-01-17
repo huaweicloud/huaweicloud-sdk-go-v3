@@ -3,18 +3,22 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"io"
+
 	"strings"
 )
 
 // Response Object
 type DownloadAssetArchiveResponse struct {
-	// 应用列表
+	HttpStatusCode int           `json:"-"`
+	Body           io.ReadCloser `json:"-" type:"stream"`
+}
 
-	Apps *[]string `json:"apps,omitempty"`
-	// 任务列表
+func (o DownloadAssetArchiveResponse) Consume(writer io.Writer) (int64, error) {
+	written, err := io.Copy(writer, o.Body)
+	defer o.Body.Close()
 
-	Tasks          *[]AppAssetTasks `json:"tasks,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	return written, err
 }
 
 func (o DownloadAssetArchiveResponse) String() string {

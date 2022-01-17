@@ -10,9 +10,6 @@ import (
 )
 
 type Resource struct {
-	// 资源类型。 - cluster: 表示主备版实例的配额
-
-	Mode ResourceMode `json:"mode"`
 	// 指定类型的配额。 - instance: 表示实例的配额
 
 	Type ResourceType `json:"type"`
@@ -31,40 +28,6 @@ func (o Resource) String() string {
 	}
 
 	return strings.Join([]string{"Resource", string(data)}, " ")
-}
-
-type ResourceMode struct {
-	value string
-}
-
-type ResourceModeEnum struct {
-	CLUSTER ResourceMode
-}
-
-func GetResourceModeEnum() ResourceModeEnum {
-	return ResourceModeEnum{
-		CLUSTER: ResourceMode{
-			value: "cluster",
-		},
-	}
-}
-
-func (c ResourceMode) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ResourceMode) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }
 
 type ResourceType struct {
