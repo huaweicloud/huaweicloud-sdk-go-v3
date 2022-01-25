@@ -13,7 +13,7 @@ import (
 type TransferDetail struct {
 	// OBS转储时间
 
-	ObsPeriod *TransferDetailObsPeriod `json:"obs_period,omitempty"`
+	ObsPeriod TransferDetailObsPeriod `json:"obs_period"`
 	// OBS转储KMS秘钥ID。若OBS转储未加密则不返回此字段
 
 	ObsEncryptedId *string `json:"obs_encrypted_id,omitempty"`
@@ -22,7 +22,7 @@ type TransferDetail struct {
 	ObsPrefixName *string `json:"obs_prefix_name,omitempty"`
 	// OBS转储单位
 
-	ObsPeriodUnit *string `json:"obs_period_unit,omitempty"`
+	ObsPeriodUnit string `json:"obs_period_unit"`
 	// OBS转储路径，指OBS日志桶中的路径
 
 	ObsTransferPath *string `json:"obs_transfer_path,omitempty"`
@@ -31,7 +31,7 @@ type TransferDetail struct {
 	ObsEpsId *string `json:"obs_eps_id,omitempty"`
 	// OBS日志桶名称
 
-	ObsBucketName *string `json:"obs_bucket_name,omitempty"`
+	ObsBucketName string `json:"obs_bucket_name"`
 	// OBS是否开启加密。
 
 	ObsEncryptedEnable *bool `json:"obs_encrypted_enable,omitempty"`

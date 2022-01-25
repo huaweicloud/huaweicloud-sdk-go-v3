@@ -63,7 +63,7 @@ type InstancesVo struct {
 	// PVC规格 5GB|10GB|20GB
 
 	PvcQuantity *InstancesVoPvcQuantity `json:"pvc_quantity,omitempty"`
-	// 实例的生命周期。 arm架构,生命周期只能设置成30，60。x86架构可取值为30，60，240，1440和-1。除-1外，其它值的单位为“分钟”。实例在到达生命周期后，将会被暂停（已保存的数据不会被删除）。-1表示实例不会自动停止。
+	// 自动休眠时长。 arm架构,自动休眠时长只能设置成30，60。x86架构可取值为30，60，240，1440和-1。除-1外，其它值的单位为“分钟”。实例无操作超过自动休眠时长后，将会被暂停（已保存的数据不会被删除）。-1表示实例不会自动停止
 
 	RefreshInterval *int64 `json:"refresh_interval,omitempty"`
 	// 区域

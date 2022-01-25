@@ -27,7 +27,7 @@ type ApiGroupCommonInfo struct {
 	// 最近修改时间
 
 	UpdateTime *sdktime.SdkTime `json:"update_time"`
-	// 是否已上架云市场： - 1：已上架 - 2：未上架 - 3：审核中  ROMAConnect暂未对接云市场，此字段默认返回2
+	// 是否已上架云市场： - 1：已上架 - 2：未上架 - 3：审核中
 
 	OnSellStatus int32 `json:"on_sell_status"`
 	// 分组上绑定的独立域名列表

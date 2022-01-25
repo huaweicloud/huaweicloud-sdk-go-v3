@@ -17,7 +17,7 @@ type RelationModel struct {
 	// 查询条件中指定key的值。
 
 	Value *[]string `json:"value,omitempty"`
-	// 该条件与其他条件的组合方式。 AND：必须满足所有条件； OR：可以满足其中一个条件； NOT：必须不满足所有条件。  枚举值：  AND OR NOT
+	// 该条件与其他条件的组合方式。 AND：必须满足所有条件； OR：可以满足其中一个条件； NOT：必须不满足所有条件。
 
 	Relation *RelationModelRelation `json:"relation,omitempty"`
 }

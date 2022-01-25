@@ -31,6 +31,9 @@ type CreateTaskRequestV2 struct {
 	// 仓库有权限的用户token
 
 	AccessToken *string `json:"access_token,omitempty"`
+	// 仓库有权限的用户endpointId
+
+	EndpointId *string `json:"endpoint_id,omitempty"`
 
 	IncConfig *IncConfigV2 `json:"inc_config,omitempty"`
 	// 是否打开fossbot检查,默认不开

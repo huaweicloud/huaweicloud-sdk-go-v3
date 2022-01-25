@@ -193,8 +193,11 @@ type ShowInstanceResponse struct {
 	CesVersion *string `json:"ces_version,omitempty"`
 	// 标签列表。
 
-	Tags           *[]TagEntity `json:"tags,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Tags *[]TagEntity `json:"tags,omitempty"`
+	// 是否为容灾实例。
+
+	DrEnable       *bool `json:"dr_enable,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o ShowInstanceResponse) String() string {

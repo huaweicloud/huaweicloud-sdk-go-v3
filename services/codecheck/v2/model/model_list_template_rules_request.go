@@ -17,6 +17,9 @@ type ListTemplateRulesRequest struct {
 	// 规则语言
 
 	Languages *string `json:"languages,omitempty"`
+	// 规则所属标签
+
+	Tags *string `json:"tags,omitempty"`
 	// 分页索引，偏移量
 
 	Offset *int32 `json:"offset,omitempty"`

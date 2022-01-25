@@ -6,9 +6,9 @@ import (
 	"strings"
 )
 
-// 变换数据查询参数。
+// 该参数用来指定需要查询的数据维度，数据周期等。
 type QueryMetricDataParam struct {
-	// 取值范围 JSON数组大小不超过20 指标对象列表。
+	// 指标对象列表。 取值范围 JSON数组大小不超过20
 
 	Metrics []MetricQueryMeritcParam `json:"metrics"`
 	// 监控数据粒度。 取值范围 枚举值，取值范围： 60，1分钟粒度 300，5分钟粒度 900，15分钟粒度 3600，1小时粒度

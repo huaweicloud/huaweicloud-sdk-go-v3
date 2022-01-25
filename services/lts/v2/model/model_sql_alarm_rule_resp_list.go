@@ -46,9 +46,10 @@ type SqlAlarmRuleRespList struct {
 	// 更新时间(毫秒时间戳)
 
 	UpdateTime int64 `json:"update_time"`
-	// 邮件附加信息是否英文
 
-	Language SqlAlarmRuleRespListLanguage `json:"language"`
+	TemplateName *string `json:"template_name,omitempty"`
+
+	Status *SqlAlarmRuleRespListStatus `json:"status,omitempty"`
 }
 
 func (o SqlAlarmRuleRespList) String() string {
@@ -106,31 +107,31 @@ func (c *SqlAlarmRuleRespListSqlAlarmLevel) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type SqlAlarmRuleRespListLanguage struct {
+type SqlAlarmRuleRespListStatus struct {
 	value string
 }
 
-type SqlAlarmRuleRespListLanguageEnum struct {
-	ZH_CN SqlAlarmRuleRespListLanguage
-	EN_US SqlAlarmRuleRespListLanguage
+type SqlAlarmRuleRespListStatusEnum struct {
+	RUNNING  SqlAlarmRuleRespListStatus
+	STOPPING SqlAlarmRuleRespListStatus
 }
 
-func GetSqlAlarmRuleRespListLanguageEnum() SqlAlarmRuleRespListLanguageEnum {
-	return SqlAlarmRuleRespListLanguageEnum{
-		ZH_CN: SqlAlarmRuleRespListLanguage{
-			value: "zh-cn",
+func GetSqlAlarmRuleRespListStatusEnum() SqlAlarmRuleRespListStatusEnum {
+	return SqlAlarmRuleRespListStatusEnum{
+		RUNNING: SqlAlarmRuleRespListStatus{
+			value: "RUNNING",
 		},
-		EN_US: SqlAlarmRuleRespListLanguage{
-			value: "en-us",
+		STOPPING: SqlAlarmRuleRespListStatus{
+			value: "STOPPING",
 		},
 	}
 }
 
-func (c SqlAlarmRuleRespListLanguage) MarshalJSON() ([]byte, error) {
+func (c SqlAlarmRuleRespListStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *SqlAlarmRuleRespListLanguage) UnmarshalJSON(b []byte) error {
+func (c *SqlAlarmRuleRespListStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

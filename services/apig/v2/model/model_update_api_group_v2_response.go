@@ -28,7 +28,7 @@ type UpdateApiGroupV2Response struct {
 	// 最近修改时间
 
 	UpdateTime *sdktime.SdkTime `json:"update_time"`
-	// 是否已上架云市场： - 1：已上架 - 2：未上架 - 3：审核中  ROMAConnect暂未对接云市场，此字段默认返回2
+	// 是否已上架云市场： - 1：已上架 - 2：未上架 - 3：审核中
 
 	OnSellStatus int32 `json:"on_sell_status"`
 	// 分组上绑定的独立域名列表
@@ -52,13 +52,13 @@ type UpdateApiGroupV2Response struct {
 	// 是否为默认分组
 
 	IsDefault *int32 `json:"is_default,omitempty"`
-	// 分组版本  - V1：全局分组 - V2：应用级分组
+	// 分组版本  - V1：全局分组 - V2：应用级分组  暂不支持，默认为V1
 
 	Version *string `json:"version,omitempty"`
-	// 分组归属的集成应用编号。  分组版本V2时必填。
+	// 分组归属的集成应用编号。  分组版本V2时必填。  暂不支持
 
 	RomaAppId *string `json:"roma_app_id,omitempty"`
-	// 分组归属的集成应用名称
+	// 分组归属的集成应用名称  暂不支持
 
 	RomaAppName    *string `json:"roma_app_name,omitempty"`
 	HttpStatusCode int     `json:"-"`

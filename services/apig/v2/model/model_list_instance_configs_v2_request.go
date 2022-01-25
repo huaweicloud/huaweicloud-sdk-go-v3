@@ -7,7 +7,7 @@ import (
 )
 
 // Request Object
-type ListInstanceCofigsV2Request struct {
+type ListInstanceConfigsV2Request struct {
 	// 偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
 
 	Offset *int64 `json:"offset,omitempty"`
@@ -16,11 +16,11 @@ type ListInstanceCofigsV2Request struct {
 	Limit *int32 `json:"limit,omitempty"`
 }
 
-func (o ListInstanceCofigsV2Request) String() string {
+func (o ListInstanceConfigsV2Request) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ListInstanceCofigsV2Request struct{}"
+		return "ListInstanceConfigsV2Request struct{}"
 	}
 
-	return strings.Join([]string{"ListInstanceCofigsV2Request", string(data)}, " ")
+	return strings.Join([]string{"ListInstanceConfigsV2Request", string(data)}, " ")
 }

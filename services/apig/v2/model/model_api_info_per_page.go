@@ -74,6 +74,9 @@ type ApiInfoPerPage struct {
 	// 标签  待废弃，优先使用tags字段
 
 	Tag *string `json:"tag,omitempty"`
+	// 请求内容格式类型：  application/json application/xml multipart/form-date text/plain  暂不支持
+
+	ContentType *ApiInfoPerPageContentType `json:"content_type,omitempty"`
 	// API编号
 
 	Id *string `json:"id,omitempty"`
@@ -104,6 +107,19 @@ type ApiInfoPerPage struct {
 	// 发布记录编号  存在多个发布记录时，发布记录编号之间用|隔开
 
 	PublishId *string `json:"publish_id,omitempty"`
+	// 发布时间  存在多个发布记录时，发布时间之间用|隔开
+
+	PublishTime *string `json:"publish_time,omitempty"`
+	// API归属的集成应用名称  暂不支持
+
+	RomaAppName *string `json:"roma_app_name,omitempty"`
+	// 当API的后端为自定义后端时，对应的自定义后端API编号  暂不支持
+
+	LdApiId *string `json:"ld_api_id,omitempty"`
+
+	BackendApi *BackendApi `json:"backend_api,omitempty"`
+
+	ApiGroupInfo *ApiGroupCommonInfo `json:"api_group_info,omitempty"`
 	// API的请求参数列表
 
 	ReqParams *[]ReqParam `json:"req_params,omitempty"`
@@ -372,6 +388,52 @@ func (c ApiInfoPerPageBackendType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiInfoPerPageBackendType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ApiInfoPerPageContentType struct {
+	value string
+}
+
+type ApiInfoPerPageContentTypeEnum struct {
+	APPLICATION_JSON    ApiInfoPerPageContentType
+	APPLICATION_XML     ApiInfoPerPageContentType
+	MULTIPART_FORM_DATE ApiInfoPerPageContentType
+	TEXT_PLAIN          ApiInfoPerPageContentType
+}
+
+func GetApiInfoPerPageContentTypeEnum() ApiInfoPerPageContentTypeEnum {
+	return ApiInfoPerPageContentTypeEnum{
+		APPLICATION_JSON: ApiInfoPerPageContentType{
+			value: "application/json",
+		},
+		APPLICATION_XML: ApiInfoPerPageContentType{
+			value: "application/xml",
+		},
+		MULTIPART_FORM_DATE: ApiInfoPerPageContentType{
+			value: "multipart/form-date",
+		},
+		TEXT_PLAIN: ApiInfoPerPageContentType{
+			value: "text/plain",
+		},
+	}
+}
+
+func (c ApiInfoPerPageContentType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiInfoPerPageContentType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

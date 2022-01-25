@@ -63,7 +63,7 @@ func (c *KafkaClient) BatchRestartOrDeleteInstances(request *model.BatchRestartO
 	}
 }
 
-//创建实例的转储节点。  [**当前通过调用API，只支持按需实例创建转储节点。**](tag:hws,ctc)
+//创建实例的转储节点。  **当前通过调用API，只支持按需实例创建转储节点。**
 func (c *KafkaClient) CreateConnector(request *model.CreateConnectorRequest) (*model.CreateConnectorResponse, error) {
 	requestDef := GenReqDefForCreateConnector()
 
@@ -184,6 +184,17 @@ func (c *KafkaClient) ListBackgroundTasks(request *model.ListBackgroundTasksRequ
 	}
 }
 
+//查询产品规格列表。
+func (c *KafkaClient) ListEngineProducts(request *model.ListEngineProductsRequest) (*model.ListEngineProductsResponse, error) {
+	requestDef := GenReqDefForListEngineProducts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEngineProductsResponse), nil
+	}
+}
+
 //该接口用于查询指定Kafka实例的Topic详情。
 func (c *KafkaClient) ListInstanceTopics(request *model.ListInstanceTopicsRequest) (*model.ListInstanceTopicsResponse, error) {
 	requestDef := GenReqDefForListInstanceTopics()
@@ -272,7 +283,7 @@ func (c *KafkaClient) ResetUserPasswrod(request *model.ResetUserPasswrodRequest)
 	}
 }
 
-//实例规格变更。  [**当前通过调用API，只支持按需实例进行实例规格变更。**](tag:hws,ctc)
+//实例规格变更。  **当前通过调用API，只支持按需实例进行实例规格变更。**
 func (c *KafkaClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
 	requestDef := GenReqDefForResizeInstance()
 
@@ -371,7 +382,7 @@ func (c *KafkaClient) ShowInstanceExtendProductInfo(request *model.ShowInstanceE
 	}
 }
 
-//查询消息的偏移量和消息内容。 先根据时间戳查询消息的偏移量，再根据偏移量查询消息内容。 **注意：调用接口时message_offset和partition查询参数二选一。**
+//查询消息的偏移量和消息内容。 先根据时间戳查询消息的偏移量，再根据偏移量查询消息内容。
 func (c *KafkaClient) ShowInstanceMessages(request *model.ShowInstanceMessagesRequest) (*model.ShowInstanceMessagesResponse, error) {
 	requestDef := GenReqDefForShowInstanceMessages()
 

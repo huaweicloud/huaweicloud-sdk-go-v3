@@ -49,9 +49,10 @@ type KeywordsAlarmRuleRespList struct {
 	// 主题
 
 	Topics []Topics `json:"topics"`
-	// 邮件附加信息是否英文
 
-	Language KeywordsAlarmRuleRespListLanguage `json:"language"`
+	TemplateName *string `json:"template_name,omitempty"`
+
+	Status *KeywordsAlarmRuleRespListStatus `json:"status,omitempty"`
 }
 
 func (o KeywordsAlarmRuleRespList) String() string {
@@ -109,31 +110,31 @@ func (c *KeywordsAlarmRuleRespListKeywordsAlarmLevel) UnmarshalJSON(b []byte) er
 	}
 }
 
-type KeywordsAlarmRuleRespListLanguage struct {
+type KeywordsAlarmRuleRespListStatus struct {
 	value string
 }
 
-type KeywordsAlarmRuleRespListLanguageEnum struct {
-	ZH_CN KeywordsAlarmRuleRespListLanguage
-	EN_US KeywordsAlarmRuleRespListLanguage
+type KeywordsAlarmRuleRespListStatusEnum struct {
+	RUNNING  KeywordsAlarmRuleRespListStatus
+	STOPPING KeywordsAlarmRuleRespListStatus
 }
 
-func GetKeywordsAlarmRuleRespListLanguageEnum() KeywordsAlarmRuleRespListLanguageEnum {
-	return KeywordsAlarmRuleRespListLanguageEnum{
-		ZH_CN: KeywordsAlarmRuleRespListLanguage{
-			value: "zh-cn",
+func GetKeywordsAlarmRuleRespListStatusEnum() KeywordsAlarmRuleRespListStatusEnum {
+	return KeywordsAlarmRuleRespListStatusEnum{
+		RUNNING: KeywordsAlarmRuleRespListStatus{
+			value: "RUNNING",
 		},
-		EN_US: KeywordsAlarmRuleRespListLanguage{
-			value: "en-us",
+		STOPPING: KeywordsAlarmRuleRespListStatus{
+			value: "STOPPING",
 		},
 	}
 }
 
-func (c KeywordsAlarmRuleRespListLanguage) MarshalJSON() ([]byte, error) {
+func (c KeywordsAlarmRuleRespListStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *KeywordsAlarmRuleRespListLanguage) UnmarshalJSON(b []byte) error {
+func (c *KeywordsAlarmRuleRespListStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

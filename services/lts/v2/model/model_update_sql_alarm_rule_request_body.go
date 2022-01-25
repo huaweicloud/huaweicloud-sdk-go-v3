@@ -43,9 +43,6 @@ type UpdateSqlAlarmRuleRequestBody struct {
 	// 通知主题
 
 	NotificationSaveRule *NotificationSaveRule `json:"notification_save_rule,omitempty"`
-	// 邮件附加信息是否英文
-
-	Language UpdateSqlAlarmRuleRequestBodyLanguage `json:"language"`
 }
 
 func (o UpdateSqlAlarmRuleRequestBody) String() string {
@@ -143,43 +140,5 @@ func (c *UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode) UnmarshalJSON(b []byte) 
 		return err
 	} else {
 		return errors.New("convert enum data to int32 error")
-	}
-}
-
-type UpdateSqlAlarmRuleRequestBodyLanguage struct {
-	value string
-}
-
-type UpdateSqlAlarmRuleRequestBodyLanguageEnum struct {
-	ZH_CN UpdateSqlAlarmRuleRequestBodyLanguage
-	EN_US UpdateSqlAlarmRuleRequestBodyLanguage
-}
-
-func GetUpdateSqlAlarmRuleRequestBodyLanguageEnum() UpdateSqlAlarmRuleRequestBodyLanguageEnum {
-	return UpdateSqlAlarmRuleRequestBodyLanguageEnum{
-		ZH_CN: UpdateSqlAlarmRuleRequestBodyLanguage{
-			value: "zh-cn",
-		},
-		EN_US: UpdateSqlAlarmRuleRequestBodyLanguage{
-			value: "en-us",
-		},
-	}
-}
-
-func (c UpdateSqlAlarmRuleRequestBodyLanguage) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *UpdateSqlAlarmRuleRequestBodyLanguage) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
 	}
 }

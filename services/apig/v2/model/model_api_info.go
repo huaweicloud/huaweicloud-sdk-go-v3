@@ -74,6 +74,9 @@ type ApiInfo struct {
 	// 标签  待废弃，优先使用tags字段
 
 	Tag *string `json:"tag,omitempty"`
+	// 请求内容格式类型：  application/json application/xml multipart/form-date text/plain  暂不支持
+
+	ContentType *ApiInfoContentType `json:"content_type,omitempty"`
 	// API编号
 
 	Id *string `json:"id,omitempty"`
@@ -104,6 +107,19 @@ type ApiInfo struct {
 	// 发布记录编号  存在多个发布记录时，发布记录编号之间用|隔开
 
 	PublishId *string `json:"publish_id,omitempty"`
+	// 发布时间  存在多个发布记录时，发布时间之间用|隔开
+
+	PublishTime *string `json:"publish_time,omitempty"`
+	// API归属的集成应用名称  暂不支持
+
+	RomaAppName *string `json:"roma_app_name,omitempty"`
+	// 当API的后端为自定义后端时，对应的自定义后端API编号  暂不支持
+
+	LdApiId *string `json:"ld_api_id,omitempty"`
+
+	BackendApi *BackendApi `json:"backend_api,omitempty"`
+
+	ApiGroupInfo *ApiGroupCommonInfo `json:"api_group_info,omitempty"`
 
 	FuncInfo *ApiFunc `json:"func_info,omitempty"`
 
@@ -120,8 +136,6 @@ type ApiInfo struct {
 	// mock策略后端列表
 
 	PolicyMocks *[]ApiPolicyMockResp `json:"policy_mocks,omitempty"`
-
-	BackendApi *BackendApi `json:"backend_api,omitempty"`
 	// web策略后端列表
 
 	PolicyHttps *[]ApiPolicyHttpResp `json:"policy_https,omitempty"`
@@ -390,6 +404,52 @@ func (c ApiInfoBackendType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiInfoBackendType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ApiInfoContentType struct {
+	value string
+}
+
+type ApiInfoContentTypeEnum struct {
+	APPLICATION_JSON    ApiInfoContentType
+	APPLICATION_XML     ApiInfoContentType
+	MULTIPART_FORM_DATE ApiInfoContentType
+	TEXT_PLAIN          ApiInfoContentType
+}
+
+func GetApiInfoContentTypeEnum() ApiInfoContentTypeEnum {
+	return ApiInfoContentTypeEnum{
+		APPLICATION_JSON: ApiInfoContentType{
+			value: "application/json",
+		},
+		APPLICATION_XML: ApiInfoContentType{
+			value: "application/xml",
+		},
+		MULTIPART_FORM_DATE: ApiInfoContentType{
+			value: "multipart/form-date",
+		},
+		TEXT_PLAIN: ApiInfoContentType{
+			value: "text/plain",
+		},
+	}
+}
+
+func (c ApiInfoContentType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiInfoContentType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

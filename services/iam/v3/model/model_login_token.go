@@ -26,6 +26,9 @@ type LoginToken struct {
 	// 会话ID。
 
 	SessionId string `json:"session_id"`
+	// 自定义代理用户ID。
+
+	SessionUserId *string `json:"session_user_id,omitempty"`
 	// 自定义代理用户名。 > - [通过委托获取临时访问密钥和securitytoken](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=CreateTemporaryAccessKeyByAgency)且请求体中填写session_user.name参数时，会返回该字段。该字段的值即为session_user.name所填写的值。
 
 	SessionName *string `json:"session_name,omitempty"`

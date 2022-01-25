@@ -193,6 +193,9 @@ type ShowInstanceResp struct {
 	// 标签列表。
 
 	Tags *[]TagEntity `json:"tags,omitempty"`
+	// 是否为容灾实例。
+
+	DrEnable *bool `json:"dr_enable,omitempty"`
 }
 
 func (o ShowInstanceResp) String() string {

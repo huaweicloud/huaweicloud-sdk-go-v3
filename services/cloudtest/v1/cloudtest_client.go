@@ -19,7 +19,7 @@ func CloudtestClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//批量删除测试用例
+//批量删除自定义测试服务类型用例
 func (c *CloudtestClient) BatchDeleteTestCase(request *model.BatchDeleteTestCaseRequest) (*model.BatchDeleteTestCaseResponse, error) {
 	requestDef := GenReqDefForBatchDeleteTestCase()
 
@@ -41,7 +41,7 @@ func (c *CloudtestClient) CreatePlan(request *model.CreatePlanRequest) (*model.C
 	}
 }
 
-//新测试类型服务注册到云测
+//通过接口CreateService注册成为云测的自定义服务。 注册完成后云测界面将会出现此自定义测试类型。
 func (c *CloudtestClient) CreateService(request *model.CreateServiceRequest) (*model.CreateServiceResponse, error) {
 	requestDef := GenReqDefForCreateService()
 
@@ -52,7 +52,7 @@ func (c *CloudtestClient) CreateService(request *model.CreateServiceRequest) (*m
 	}
 }
 
-//创建测试用例
+//创建自定义测试服务类型用例
 func (c *CloudtestClient) CreateTestCase(request *model.CreateTestCaseRequest) (*model.CreateTestCaseResponse, error) {
 	requestDef := GenReqDefForCreateTestCase()
 
@@ -162,7 +162,7 @@ func (c *CloudtestClient) ShowTestCaseDetail(request *model.ShowTestCaseDetailRe
 	}
 }
 
-//通过用例编号或用例ID获取测试用例详情
+//通过用例编号获取测试用例详情
 func (c *CloudtestClient) ShowTestCaseDetailV2(request *model.ShowTestCaseDetailV2Request) (*model.ShowTestCaseDetailV2Response, error) {
 	requestDef := GenReqDefForShowTestCaseDetailV2()
 
@@ -184,7 +184,7 @@ func (c *CloudtestClient) UpdateService(request *model.UpdateServiceRequest) (*m
 	}
 }
 
-//更新测试用例接口
+//更新自定义测试服务类型用例
 func (c *CloudtestClient) UpdateTestCase(request *model.UpdateTestCaseRequest) (*model.UpdateTestCaseResponse, error) {
 	requestDef := GenReqDefForUpdateTestCase()
 

@@ -107,7 +107,7 @@ func (c *AomClient) ListAlarmRule(request *model.ListAlarmRuleRequest) (*model.L
 	}
 }
 
-//该接口用于查询对应用户的事件、告警
+//该接口用于查询对应用户的事件、告警。
 func (c *AomClient) ListEvents(request *model.ListEventsRequest) (*model.ListEventsResponse, error) {
 	requestDef := GenReqDefForListEvents()
 
@@ -217,7 +217,7 @@ func (c *AomClient) UpdateAlarmRule(request *model.UpdateAlarmRuleRequest) (*mod
 	}
 }
 
-//该接口用于查询PromQL(Prometheus Query Language) 在特定时间点下的计算结果。（注：接口目前开放的region为：北京四、上海一和广州）
+//该接口用于查询PromQL(Prometheus Query Language)。 在特定时间点下的计算结果。（注：接口目前开放的region为：北京四、上海一和广州）。
 func (c *AomClient) ListInstantQueryAomPromGet(request *model.ListInstantQueryAomPromGetRequest) (*model.ListInstantQueryAomPromGetResponse, error) {
 	requestDef := GenReqDefForListInstantQueryAomPromGet()
 
@@ -239,7 +239,7 @@ func (c *AomClient) ListInstantQueryAomPromPost(request *model.ListInstantQueryA
 	}
 }
 
-//该接口用于查询带有指定标签的时间序列列表。（注：接口目前开放的region为：北京四、上海一和广州）
+//该接口用于查询带有指定标签的时间序列列表。（注：接口目前开放的region为：北京四、上海一和广州）。
 func (c *AomClient) ListLabelValuesAomPromGet(request *model.ListLabelValuesAomPromGetRequest) (*model.ListLabelValuesAomPromGetResponse, error) {
 	requestDef := GenReqDefForListLabelValuesAomPromGet()
 
@@ -250,7 +250,7 @@ func (c *AomClient) ListLabelValuesAomPromGet(request *model.ListLabelValuesAomP
 	}
 }
 
-//该接口用于获取标签名列表。（注：接口目前开放的region为：北京四、上海一和广州）
+//该接口用于获取标签名列表。（注：接口目前开放的region为：北京四、上海一和广州）。
 func (c *AomClient) ListLabelsAomPromGet(request *model.ListLabelsAomPromGetRequest) (*model.ListLabelsAomPromGetResponse, error) {
 	requestDef := GenReqDefForListLabelsAomPromGet()
 
@@ -261,7 +261,7 @@ func (c *AomClient) ListLabelsAomPromGet(request *model.ListLabelsAomPromGetRequ
 	}
 }
 
-//该接口用于获取标签名列表。（注：接口目前开放的region为：北京四、上海一和广州）
+//该接口用于获取标签名列表。（注：接口目前开放的region为：北京四、上海一和广州）。
 func (c *AomClient) ListLabelsAomPromPost(request *model.ListLabelsAomPromPostRequest) (*model.ListLabelsAomPromPostResponse, error) {
 	requestDef := GenReqDefForListLabelsAomPromPost()
 
@@ -272,7 +272,7 @@ func (c *AomClient) ListLabelsAomPromPost(request *model.ListLabelsAomPromPostRe
 	}
 }
 
-//该接口用于查询序列及序列标签的元数据。（注：接口目前开放的region为：北京四、上海一和广州）
+//该接口用于查询序列及序列标签的元数据。（注：接口目前开放的region为：北京四、上海一和广州）。
 func (c *AomClient) ListMetadataAomPromGet(request *model.ListMetadataAomPromGetRequest) (*model.ListMetadataAomPromGetResponse, error) {
 	requestDef := GenReqDefForListMetadataAomPromGet()
 
@@ -283,7 +283,7 @@ func (c *AomClient) ListMetadataAomPromGet(request *model.ListMetadataAomPromGet
 	}
 }
 
-//该接口用于查询PromQL(Prometheus Query Language)在一段时间返回内的计算结果。（注：接口目前开放的region为：北京四、上海一和广州）
+//该接口用于查询PromQL(Prometheus Query Language)在一段时间返回内的计算结果。（注：接口目前开放的region为：北京四、上海一和广州）。
 func (c *AomClient) ListRangeQueryAomPromGet(request *model.ListRangeQueryAomPromGetRequest) (*model.ListRangeQueryAomPromGetResponse, error) {
 	requestDef := GenReqDefForListRangeQueryAomPromGet()
 
@@ -294,7 +294,7 @@ func (c *AomClient) ListRangeQueryAomPromGet(request *model.ListRangeQueryAomPro
 	}
 }
 
-//该接口用于查询PromQL(Prometheus Query Language)在一段时间返回内的计算结果。（注：接口目前开放的region为：北京四、上海一和广州）
+//该接口用于查询PromQL(Prometheus Query Language)在一段时间返回内的计算结果。（注：接口目前开放的region为：北京四、上海一和广州）。
 func (c *AomClient) ListRangeQueryAomPromPost(request *model.ListRangeQueryAomPromPostRequest) (*model.ListRangeQueryAomPromPostResponse, error) {
 	requestDef := GenReqDefForListRangeQueryAomPromPost()
 

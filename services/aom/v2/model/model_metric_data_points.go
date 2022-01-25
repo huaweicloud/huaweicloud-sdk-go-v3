@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询结果要点。
+// 查询重点指标。
 type MetricDataPoints struct {
 	// 统计方式。
 

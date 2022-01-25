@@ -8,7 +8,10 @@ import (
 
 // Response Object
 type ListLabelsAomPromGetResponse struct {
+	// 响应状态。
+
 	Status *string `json:"status,omitempty"`
+	// 标签值信息。
 
 	Data           *[]string `json:"data,omitempty"`
 	HttpStatusCode int       `json:"-"`

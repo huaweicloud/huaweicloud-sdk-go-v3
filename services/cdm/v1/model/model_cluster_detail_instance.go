@@ -40,7 +40,7 @@ type ClusterDetailInstance struct {
 	// 分组
 
 	Group *string `json:"group,omitempty"`
-	// 链接信息
+	// 链接信息（查询集群列表时返回值为null）
 
 	Links *[]ClusterLinks `json:"links,omitempty"`
 	// 组件分组id

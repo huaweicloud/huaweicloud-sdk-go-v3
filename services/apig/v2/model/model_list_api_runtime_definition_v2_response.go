@@ -76,6 +76,9 @@ type ListApiRuntimeDefinitionV2Response struct {
 	// 标签  待废弃，优先使用tags字段
 
 	Tag *string `json:"tag,omitempty"`
+	// 请求内容格式类型：  application/json application/xml multipart/form-date text/plain  暂不支持
+
+	ContentType *ListApiRuntimeDefinitionV2ResponseContentType `json:"content_type,omitempty"`
 	// API编号
 
 	Id *string `json:"id,omitempty"`
@@ -366,6 +369,52 @@ func (c ListApiRuntimeDefinitionV2ResponseBackendType) MarshalJSON() ([]byte, er
 }
 
 func (c *ListApiRuntimeDefinitionV2ResponseBackendType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListApiRuntimeDefinitionV2ResponseContentType struct {
+	value string
+}
+
+type ListApiRuntimeDefinitionV2ResponseContentTypeEnum struct {
+	APPLICATION_JSON    ListApiRuntimeDefinitionV2ResponseContentType
+	APPLICATION_XML     ListApiRuntimeDefinitionV2ResponseContentType
+	MULTIPART_FORM_DATE ListApiRuntimeDefinitionV2ResponseContentType
+	TEXT_PLAIN          ListApiRuntimeDefinitionV2ResponseContentType
+}
+
+func GetListApiRuntimeDefinitionV2ResponseContentTypeEnum() ListApiRuntimeDefinitionV2ResponseContentTypeEnum {
+	return ListApiRuntimeDefinitionV2ResponseContentTypeEnum{
+		APPLICATION_JSON: ListApiRuntimeDefinitionV2ResponseContentType{
+			value: "application/json",
+		},
+		APPLICATION_XML: ListApiRuntimeDefinitionV2ResponseContentType{
+			value: "application/xml",
+		},
+		MULTIPART_FORM_DATE: ListApiRuntimeDefinitionV2ResponseContentType{
+			value: "multipart/form-date",
+		},
+		TEXT_PLAIN: ListApiRuntimeDefinitionV2ResponseContentType{
+			value: "text/plain",
+		},
+	}
+}
+
+func (c ListApiRuntimeDefinitionV2ResponseContentType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListApiRuntimeDefinitionV2ResponseContentType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

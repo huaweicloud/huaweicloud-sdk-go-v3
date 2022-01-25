@@ -11,16 +11,16 @@ import (
 
 // 指标具体数值。
 type ValueData struct {
-	// 指标名称。
+	// 指标名称。长度1~255。
 
 	MetricName string `json:"metric_name"`
-	// 取值范围 只能是\"int\"或\"float\"。 数据的类型。
+	// 数据的类型。 取值范围 只能是\"int\"或\"float\"。
 
 	Type *ValueDataType `json:"type,omitempty"`
-	// 数据的单位。
+	// 数据的单位。长度不超过32个字符。
 
 	Unit *string `json:"unit,omitempty"`
-	// 取值范围 有效的数值类型 指标数据的值。
+	// 指标数据的值。 取值范围 有效的数值类型。
 
 	Value float64 `json:"value"`
 }

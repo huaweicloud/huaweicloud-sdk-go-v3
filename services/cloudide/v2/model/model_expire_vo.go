@@ -13,7 +13,7 @@ type ExpireVo struct {
 	// CloudIDE实例id
 
 	InstanceId *string `json:"instance_id,omitempty"`
-	// CloudIDE实例生命周期，单位‘分钟’
+	// CloudIDE实例自动休眠时长，单位‘分钟’
 
 	Interval *int64 `json:"interval,omitempty"`
 }

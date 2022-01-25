@@ -20,7 +20,7 @@ type ShowTaskDetailResponse struct {
 	// 代码仓地址
 
 	GitUrl *string `json:"git_url,omitempty"`
-	// 代码仓分支
+	// 代码仓分支,如果是MR模式，为源分支
 
 	GitBranch *string `json:"git_branch,omitempty"`
 	// 上一次检查时间

@@ -96,6 +96,17 @@ func (c *RabbitMQClient) ListBackgroundTasks(request *model.ListBackgroundTasksR
 	}
 }
 
+//查询产品规格列表。
+func (c *RabbitMQClient) ListEngineProducts(request *model.ListEngineProductsRequest) (*model.ListEngineProductsResponse, error) {
+	requestDef := GenReqDefForListEngineProducts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEngineProductsResponse), nil
+	}
+}
+
 //查询租户的实例列表，支持按照条件查询。
 func (c *RabbitMQClient) ListInstancesDetails(request *model.ListInstancesDetailsRequest) (*model.ListInstancesDetailsResponse, error) {
 	requestDef := GenReqDefForListInstancesDetails()

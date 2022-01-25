@@ -20,6 +20,8 @@ type GetAccessConfigListRequestBody struct {
 	// 日志流名称列表
 
 	LogStreamNameList *[]string `json:"log_stream_name_list,omitempty"`
+
+	AccessConfigTagList *[]AccessConfigTag `json:"access_config_tag_list,omitempty"`
 }
 
 func (o GetAccessConfigListRequestBody) String() string {

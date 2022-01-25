@@ -16,7 +16,7 @@ type CouponInfoV2 struct {
 	// 优惠券状态： 1：未激活2：待使用
 
 	Status *int32 `json:"status,omitempty"`
-	// 优惠券类型： 300：折扣券301：代金券302：现金券303：储值卡
+	// 优惠券类型。 1：代金券2：折扣券3：产品券4：现金券
 
 	CouponType *int32 `json:"coupon_type,omitempty"`
 	// 面额单位： 1：元。

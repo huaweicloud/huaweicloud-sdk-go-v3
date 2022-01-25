@@ -29,6 +29,8 @@ type AccessConfigInfo struct {
 	LogInfo *AccessConfigQueryLogInfo `json:"log_info,omitempty"`
 
 	HostGroupInfo *AccessConfigHostGroupIdList `json:"host_group_info,omitempty"`
+
+	AccessConfigTag *[]AccessConfigTag `json:"access_config_tag,omitempty"`
 }
 
 func (o AccessConfigInfo) String() string {

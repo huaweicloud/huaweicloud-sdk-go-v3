@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点的虚拟机规格，请参见flavor参数说明。
+// 节点的虚拟机规格，请参见flavor参数说明（查询集群列表时返回值为null）。
 type ClusterDetailInstanceFlavor struct {
 	// 节点虚拟机的规格ID。
 

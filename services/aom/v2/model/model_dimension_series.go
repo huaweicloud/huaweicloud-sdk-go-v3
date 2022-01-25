@@ -6,12 +6,12 @@ import (
 	"strings"
 )
 
-// 维度。
+// 时间序列维度列表。
 type DimensionSeries struct {
-	// 名称。
+	// 维度名称。
 
 	Name *string `json:"name,omitempty"`
-	// 具体数值。
+	// 维度取值。
 
 	Value *string `json:"value,omitempty"`
 }

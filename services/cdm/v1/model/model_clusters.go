@@ -65,13 +65,10 @@ type Clusters struct {
 	// 集群是否冻结：0：否 1：是
 
 	IsFrozen string `json:"isFrozen"`
-	// 集群配置状态：In-Sync：配置已同步。Applying：配置中。Sync-Failure：配置失败
-
-	ConfigStatus *string `json:"config_status,omitempty"`
 	// 集群更新时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
 
 	Updated string `json:"updated"`
-	// 集群状态： - 100：创建中 - 200：正常 - 300：失败 - 303：创建失败 - 800：冻结 - 900：已关机 - 910：正在关机 - 920：正在开机
+	// 集群状态： - 100：创建中 - 200：正常 - 300：失败 - 303：创建失败 - 500：重启中 - 800：冻结 - 900：已关机 - 910：正在关机 - 920：正在开机
 
 	Status string `json:"status"`
 

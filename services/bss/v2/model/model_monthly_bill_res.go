@@ -85,7 +85,7 @@ type MonthlyBillRes struct {
 	// 对应官网价折扣金额。
 
 	DiscountAmount *float64 `json:"discount_amount,omitempty"`
-	// 金额单位： 1：元
+	// 金额单位。 1：元
 
 	MeasureId *int32 `json:"measure_id,omitempty"`
 }

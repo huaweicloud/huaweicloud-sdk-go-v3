@@ -217,6 +217,17 @@ func (c *DevStarClient) CheckRepositoryDuplicateName(request *model.CheckReposit
 	}
 }
 
+//使用 CloudIDE 实例打开应用代码。CloudIDE会保存用户项目数据，相同用户使用同一个CloudIDE 使用要求：1.用户需为登录状态； 2.拥有仓库权限
+func (c *DevStarClient) ShowRepositoryByCloudIde(request *model.ShowRepositoryByCloudIdeRequest) (*model.ShowRepositoryByCloudIdeResponse, error) {
+	requestDef := GenReqDefForShowRepositoryByCloudIde()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRepositoryByCloudIdeResponse), nil
+	}
+}
+
 //查询代码仓库的统计信息,包括代码仓的名称,代码行数等信息
 func (c *DevStarClient) ShowRepositoryStatisticalDataV2(request *model.ShowRepositoryStatisticalDataV2Request) (*model.ShowRepositoryStatisticalDataV2Response, error) {
 	requestDef := GenReqDefForShowRepositoryStatisticalDataV2()
@@ -269,6 +280,17 @@ func (c *DevStarClient) ListTemplateViewHistories(request *model.ListTemplateVie
 		return nil, err
 	} else {
 		return resp.(*model.ListTemplateViewHistoriesResponse), nil
+	}
+}
+
+//查询模板列表。
+func (c *DevStarClient) ListTemplates(request *model.ListTemplatesRequest) (*model.ListTemplatesResponse, error) {
+	requestDef := GenReqDefForListTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTemplatesResponse), nil
 	}
 }
 

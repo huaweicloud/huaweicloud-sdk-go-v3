@@ -52,6 +52,17 @@ func (c *CodeCheckClient) CreateTask(request *model.CreateTaskRequest) (*model.C
 	}
 }
 
+//删除自定义规则集，正在使用中的或默认规则集不能删除
+func (c *CodeCheckClient) DeleteRuleset(request *model.DeleteRulesetRequest) (*model.DeleteRulesetResponse, error) {
+	requestDef := GenReqDefForDeleteRuleset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRulesetResponse), nil
+	}
+}
+
 //删除检查任务，执行中的任务删除无法再查看
 func (c *CodeCheckClient) DeleteTask(request *model.DeleteTaskRequest) (*model.DeleteTaskResponse, error) {
 	requestDef := GenReqDefForDeleteTask()
@@ -129,6 +140,17 @@ func (c *CodeCheckClient) RunTask(request *model.RunTaskRequest) (*model.RunTask
 	}
 }
 
+//设置每个项目对应语言的默认规则集配置。
+func (c *CodeCheckClient) SetDefaulTemplate(request *model.SetDefaulTemplateRequest) (*model.SetDefaulTemplateResponse, error) {
+	requestDef := GenReqDefForSetDefaulTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetDefaulTemplateResponse), nil
+	}
+}
+
 //根据任务ID查询任务执行状态。任务状态：0表示检查中，1表示检查失败，2表示检查成功，3表示任务中止。只有正在检查中才有进度的详细信息。
 func (c *CodeCheckClient) ShowProgressDetail(request *model.ShowProgressDetailRequest) (*model.ShowProgressDetailResponse, error) {
 	requestDef := GenReqDefForShowProgressDetail()
@@ -192,6 +214,17 @@ func (c *CodeCheckClient) ShowTaskListByProjectId(request *model.ShowTaskListByP
 		return nil, err
 	} else {
 		return resp.(*model.ShowTaskListByProjectIdResponse), nil
+	}
+}
+
+//查询任务检查失败日志，不传execute_id则查询最近一次的检查日志
+func (c *CodeCheckClient) ShowTasklog(request *model.ShowTasklogRequest) (*model.ShowTasklogResponse, error) {
+	requestDef := GenReqDefForShowTasklog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTasklogResponse), nil
 	}
 }
 

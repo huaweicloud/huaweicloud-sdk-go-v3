@@ -75,6 +75,9 @@ type ListApiVersionDetailV2Response struct {
 	// 标签  待废弃，优先使用tags字段
 
 	Tag *string `json:"tag,omitempty"`
+	// 请求内容格式类型：  application/json application/xml multipart/form-date text/plain  暂不支持
+
+	ContentType *ListApiVersionDetailV2ResponseContentType `json:"content_type,omitempty"`
 	// API编号
 
 	Id *string `json:"id,omitempty"`
@@ -105,6 +108,19 @@ type ListApiVersionDetailV2Response struct {
 	// 发布记录编号  存在多个发布记录时，发布记录编号之间用|隔开
 
 	PublishId *string `json:"publish_id,omitempty"`
+	// 版本发布时间
+
+	PublishTime *sdktime.SdkTime `json:"publish_time,omitempty"`
+	// API归属的集成应用名称  暂不支持
+
+	RomaAppName *string `json:"roma_app_name,omitempty"`
+	// 当API的后端为自定义后端时，对应的自定义后端API编号  暂不支持
+
+	LdApiId *string `json:"ld_api_id,omitempty"`
+
+	BackendApi *BackendApi `json:"backend_api,omitempty"`
+
+	ApiGroupInfo *ApiGroupCommonInfo `json:"api_group_info,omitempty"`
 
 	FuncInfo *ApiFunc `json:"func_info,omitempty"`
 
@@ -121,8 +137,6 @@ type ListApiVersionDetailV2Response struct {
 	// mock策略后端列表
 
 	PolicyMocks *[]ApiPolicyMockResp `json:"policy_mocks,omitempty"`
-
-	BackendApi *BackendApi `json:"backend_api,omitempty"`
 	// web策略后端列表
 
 	PolicyHttps *[]ApiPolicyHttpResp `json:"policy_https,omitempty"`
@@ -134,11 +148,8 @@ type ListApiVersionDetailV2Response struct {
 	SlDomains *[]string `json:"sl_domains,omitempty"`
 	// 版本编号
 
-	VersionId *string `json:"version_id,omitempty"`
-	// 版本发布时间
-
-	PublishTime    *sdktime.SdkTime `json:"publish_time,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	VersionId      *string `json:"version_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListApiVersionDetailV2Response) String() string {
@@ -404,6 +415,52 @@ func (c ListApiVersionDetailV2ResponseBackendType) MarshalJSON() ([]byte, error)
 }
 
 func (c *ListApiVersionDetailV2ResponseBackendType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListApiVersionDetailV2ResponseContentType struct {
+	value string
+}
+
+type ListApiVersionDetailV2ResponseContentTypeEnum struct {
+	APPLICATION_JSON    ListApiVersionDetailV2ResponseContentType
+	APPLICATION_XML     ListApiVersionDetailV2ResponseContentType
+	MULTIPART_FORM_DATE ListApiVersionDetailV2ResponseContentType
+	TEXT_PLAIN          ListApiVersionDetailV2ResponseContentType
+}
+
+func GetListApiVersionDetailV2ResponseContentTypeEnum() ListApiVersionDetailV2ResponseContentTypeEnum {
+	return ListApiVersionDetailV2ResponseContentTypeEnum{
+		APPLICATION_JSON: ListApiVersionDetailV2ResponseContentType{
+			value: "application/json",
+		},
+		APPLICATION_XML: ListApiVersionDetailV2ResponseContentType{
+			value: "application/xml",
+		},
+		MULTIPART_FORM_DATE: ListApiVersionDetailV2ResponseContentType{
+			value: "multipart/form-date",
+		},
+		TEXT_PLAIN: ListApiVersionDetailV2ResponseContentType{
+			value: "text/plain",
+		},
+	}
+}
+
+func (c ListApiVersionDetailV2ResponseContentType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListApiVersionDetailV2ResponseContentType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

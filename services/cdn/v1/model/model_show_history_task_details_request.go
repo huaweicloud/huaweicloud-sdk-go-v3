@@ -26,7 +26,7 @@ type ShowHistoryTaskDetailsRequest struct {
 	// url的地址。
 
 	Url *string `json:"url,omitempty"`
-	// 刷新预热任务的创建时间。不传参默认为查询3天内的任务。最长可查询15天内数据。
+	// 刷新预热任务的创建时间。不传参默认为查询7天内的任务。最长可查询15天内数据。
 
 	CreateTime *int64 `json:"create_time,omitempty"`
 }

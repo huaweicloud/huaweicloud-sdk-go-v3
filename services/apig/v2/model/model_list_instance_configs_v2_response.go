@@ -7,7 +7,7 @@ import (
 )
 
 // Response Object
-type ListInstanceCofigsV2Response struct {
+type ListInstanceConfigsV2Response struct {
 	// 本次返回的列表长度
 
 	Size int32 `json:"size"`
@@ -20,11 +20,11 @@ type ListInstanceCofigsV2Response struct {
 	HttpStatusCode int               `json:"-"`
 }
 
-func (o ListInstanceCofigsV2Response) String() string {
+func (o ListInstanceConfigsV2Response) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ListInstanceCofigsV2Response struct{}"
+		return "ListInstanceConfigsV2Response struct{}"
 	}
 
-	return strings.Join([]string{"ListInstanceCofigsV2Response", string(data)}, " ")
+	return strings.Join([]string{"ListInstanceConfigsV2Response", string(data)}, " ")
 }

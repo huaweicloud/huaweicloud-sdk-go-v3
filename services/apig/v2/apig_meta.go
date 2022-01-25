@@ -872,11 +872,11 @@ func GenReqDefForListGatewayResponsesV2() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListInstanceCofigsV2() *def.HttpRequestDef {
+func GenReqDefForListInstanceConfigsV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/apigw/instance/configs").
-		WithResponse(new(model.ListInstanceCofigsV2Response)).
+		WithResponse(new(model.ListInstanceConfigsV2Response)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1718,6 +1718,14 @@ func GenReqDefForListAclStrategiesV2() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Id").
 		WithJsonTag("id").
 		WithLocationType(def.Query))
@@ -1732,14 +1740,6 @@ func GenReqDefForListAclStrategiesV2() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EntityType").
 		WithJsonTag("entity_type").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PreciseSearch").

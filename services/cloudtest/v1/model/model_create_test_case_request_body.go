@@ -11,7 +11,7 @@ type CreateTestCaseRequestBody struct {
 	// 云测页面上显示的用例名称，长度为[3-128]位字符
 
 	Name string `json:"name"`
-	// 该值由注册接口返回
+	// 该值由注册接口返回,取值范围为10-9999
 
 	ServiceId int32 `json:"service_id"`
 	// 测试用例等级，可选值为[0,1,2,3,4]，不填时云测默认为2

@@ -23,6 +23,8 @@ type CreateAccessConfigRequestBody struct {
 	LogInfo *AccessConfigBaseLogInfoCreate `json:"log_info"`
 
 	HostGroupInfo *AccessConfigHostGroupIdListCreate `json:"host_group_info,omitempty"`
+
+	AccessConfigTag *[]AccessConfigTag `json:"access_config_tag,omitempty"`
 }
 
 func (o CreateAccessConfigRequestBody) String() string {

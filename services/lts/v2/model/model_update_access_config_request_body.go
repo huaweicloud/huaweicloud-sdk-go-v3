@@ -15,6 +15,8 @@ type UpdateAccessConfigRequestBody struct {
 	AccessConfigDetail *AccessConfigDeatil `json:"access_config_detail,omitempty"`
 
 	HostGroupInfo *AccessConfigHostGroupIdList `json:"host_group_info,omitempty"`
+
+	AccessConfigTag *[]AccessConfigTag `json:"access_config_tag,omitempty"`
 }
 
 func (o UpdateAccessConfigRequestBody) String() string {

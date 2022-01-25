@@ -16,7 +16,7 @@ type CreateWholeImageRequestBody struct {
 	// 新规范的镜像标签列表。默认为空。tags和image_tags只能使用一个。
 
 	ImageTags *[]TagKeyValue `json:"image_tags,omitempty"`
-	// 弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
+	// 弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数且必填。 如果使用备份创建整机镜像，该参数应换成backup_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
 
 	InstanceId *string `json:"instance_id,omitempty"`
 	// 镜像名称。 名称的首尾字母不能为空格。 名称的长度至为1～128位。 名称包含以下4种字符： 大写字母 小写字母 数字 特殊字符包含-、.、_、空格和中文。
@@ -25,7 +25,7 @@ type CreateWholeImageRequestBody struct {
 	// 镜像标签列表。tags和image_tags只能使用一个。
 
 	Tags *[]string `json:"tags,omitempty"`
-	// 使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
+	// 使用云服务器备份创建整机镜像使用此参数且必填。 如果使用ECS创建整机镜像，则该参数应传为instance_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
 
 	BackupId *string `json:"backup_id,omitempty"`
 	// 使用备份创建整机镜像时，该字段区分是CBR服务的备份还是CSBS服务的备份，取值为：CBR/CSBS。 使用ECS创建整机镜像时，该字段不填

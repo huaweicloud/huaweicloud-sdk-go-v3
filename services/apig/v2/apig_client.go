@@ -427,13 +427,13 @@ func (c *ApigClient) ListGatewayResponsesV2(request *model.ListGatewayResponsesV
 }
 
 //查询租户实例配置列表
-func (c *ApigClient) ListInstanceCofigsV2(request *model.ListInstanceCofigsV2Request) (*model.ListInstanceCofigsV2Response, error) {
-	requestDef := GenReqDefForListInstanceCofigsV2()
+func (c *ApigClient) ListInstanceConfigsV2(request *model.ListInstanceConfigsV2Request) (*model.ListInstanceConfigsV2Response, error) {
+	requestDef := GenReqDefForListInstanceConfigsV2()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListInstanceCofigsV2Response), nil
+		return resp.(*model.ListInstanceConfigsV2Response), nil
 	}
 }
 

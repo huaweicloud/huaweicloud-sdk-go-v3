@@ -11,7 +11,7 @@ import (
 
 // 授权结果
 type AuthResult struct {
-	// 授权结果 - SUCCESS：授权成功 - SKIPPED：跳过 - FILAED：授权失败
+	// 授权结果 - SUCCESS：授权成功 - SKIPPED：跳过 - FAILED：授权失败
 
 	Status *AuthResultStatus `json:"status,omitempty"`
 	// 授权失败错误信息

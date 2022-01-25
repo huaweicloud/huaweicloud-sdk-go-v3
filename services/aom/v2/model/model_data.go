@@ -6,8 +6,12 @@ import (
 	"strings"
 )
 
+// 数据信息详情
 type Data struct {
+	// 返回值类型。
+
 	ResultType *string `json:"resultType,omitempty"`
+	// 数据信息。
 
 	Result *[]string `json:"result,omitempty"`
 }

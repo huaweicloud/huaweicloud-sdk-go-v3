@@ -29,6 +29,9 @@ type Ruleset struct {
 	// 规则集ID
 
 	TemplateId *string `json:"template_id,omitempty"`
+	// 自定义规则参数项，支持修改规则阈值
+
+	CustomAttributes *[]CustomAttributes `json:"custom_attributes,omitempty"`
 }
 
 func (o Ruleset) String() string {

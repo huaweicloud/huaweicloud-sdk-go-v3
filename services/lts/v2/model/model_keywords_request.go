@@ -10,12 +10,6 @@ import (
 )
 
 type KeywordsRequest struct {
-	// 企业项目id
-
-	EpsId *string `json:"eps_id,omitempty"`
-	// 企业项目名称
-
-	EpsName *string `json:"eps_name,omitempty"`
 	// 日志流id
 
 	LogStreamId string `json:"log_stream_id"`
@@ -43,9 +37,6 @@ type KeywordsRequest struct {
 	// 查询时间单位
 
 	SearchTimeRangeUnit KeywordsRequestSearchTimeRangeUnit `json:"search_time_range_unit"`
-	// 是否发送
-
-	IsTimeRangeRelative *bool `json:"is_time_range_relative,omitempty"`
 }
 
 func (o KeywordsRequest) String() string {

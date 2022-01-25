@@ -75,6 +75,9 @@ type ApiCreate struct {
 	// 标签  待废弃，优先使用tags字段
 
 	Tag *string `json:"tag,omitempty"`
+	// 请求内容格式类型：  application/json application/xml multipart/form-date text/plain  暂不支持
+
+	ContentType *ApiCreateContentType `json:"content_type,omitempty"`
 
 	MockInfo *ApiMockCreate `json:"mock_info,omitempty"`
 
@@ -361,6 +364,52 @@ func (c ApiCreateBackendType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiCreateBackendType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ApiCreateContentType struct {
+	value string
+}
+
+type ApiCreateContentTypeEnum struct {
+	APPLICATION_JSON    ApiCreateContentType
+	APPLICATION_XML     ApiCreateContentType
+	MULTIPART_FORM_DATE ApiCreateContentType
+	TEXT_PLAIN          ApiCreateContentType
+}
+
+func GetApiCreateContentTypeEnum() ApiCreateContentTypeEnum {
+	return ApiCreateContentTypeEnum{
+		APPLICATION_JSON: ApiCreateContentType{
+			value: "application/json",
+		},
+		APPLICATION_XML: ApiCreateContentType{
+			value: "application/xml",
+		},
+		MULTIPART_FORM_DATE: ApiCreateContentType{
+			value: "multipart/form-date",
+		},
+		TEXT_PLAIN: ApiCreateContentType{
+			value: "text/plain",
+		},
+	}
+}
+
+func (c ApiCreateContentType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiCreateContentType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

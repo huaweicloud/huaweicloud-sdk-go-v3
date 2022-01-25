@@ -28,8 +28,10 @@ type UpdateAccessConfigResponse struct {
 
 	LogInfo *AccessConfigQueryLogInfo `json:"log_info,omitempty"`
 
-	HostGroupInfo  *AccessConfigHostGroupIdList `json:"host_group_info,omitempty"`
-	HttpStatusCode int                          `json:"-"`
+	HostGroupInfo *AccessConfigHostGroupIdList `json:"host_group_info,omitempty"`
+
+	AccessConfigTag *[]AccessConfigTag `json:"access_config_tag,omitempty"`
+	HttpStatusCode  int                `json:"-"`
 }
 
 func (o UpdateAccessConfigResponse) String() string {

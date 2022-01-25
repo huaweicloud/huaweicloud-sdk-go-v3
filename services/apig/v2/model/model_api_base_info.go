@@ -75,6 +75,9 @@ type ApiBaseInfo struct {
 	// 标签  待废弃，优先使用tags字段
 
 	Tag *string `json:"tag,omitempty"`
+	// 请求内容格式类型：  application/json application/xml multipart/form-date text/plain  暂不支持
+
+	ContentType *ApiBaseInfoContentType `json:"content_type,omitempty"`
 }
 
 func (o ApiBaseInfo) String() string {
@@ -340,6 +343,52 @@ func (c ApiBaseInfoBackendType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiBaseInfoBackendType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ApiBaseInfoContentType struct {
+	value string
+}
+
+type ApiBaseInfoContentTypeEnum struct {
+	APPLICATION_JSON    ApiBaseInfoContentType
+	APPLICATION_XML     ApiBaseInfoContentType
+	MULTIPART_FORM_DATE ApiBaseInfoContentType
+	TEXT_PLAIN          ApiBaseInfoContentType
+}
+
+func GetApiBaseInfoContentTypeEnum() ApiBaseInfoContentTypeEnum {
+	return ApiBaseInfoContentTypeEnum{
+		APPLICATION_JSON: ApiBaseInfoContentType{
+			value: "application/json",
+		},
+		APPLICATION_XML: ApiBaseInfoContentType{
+			value: "application/xml",
+		},
+		MULTIPART_FORM_DATE: ApiBaseInfoContentType{
+			value: "multipart/form-date",
+		},
+		TEXT_PLAIN: ApiBaseInfoContentType{
+			value: "text/plain",
+		},
+	}
+}
+
+func (c ApiBaseInfoContentType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiBaseInfoContentType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
