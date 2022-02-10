@@ -22,9 +22,6 @@ type RecordCallbackConfigRequest struct {
 	// 订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
 
 	NotifyEventSubscription *[]RecordCallbackConfigRequestNotifyEventSubscription `json:"notify_event_subscription,omitempty"`
-	// 按需录制回调url地址
-
-	OnDemandCallbackUrl *string `json:"on_demand_callback_url,omitempty"`
 	// 加密类型
 
 	SignType *RecordCallbackConfigRequestSignType `json:"sign_type,omitempty"`

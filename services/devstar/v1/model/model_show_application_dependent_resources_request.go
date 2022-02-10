@@ -17,6 +17,12 @@ type ShowApplicationDependentResourcesRequest struct {
 	// 应用id
 
 	ApplicationId string `json:"application_id"`
+	// 每页显示的条目数量
+
+	Limit *int32 `json:"limit,omitempty"`
+	// 偏移量，表示从此偏移量开始查询
+
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ShowApplicationDependentResourcesRequest) String() string {

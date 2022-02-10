@@ -20,7 +20,7 @@ type VaultCreate struct {
 	Name string `json:"name"`
 	// 绑定的备份资源，未在创建时绑定资源填[]
 
-	Resources []ResourceCreate `json:"resources"`
+	Resources []ResourceResp `json:"resources"`
 	// 标签列表 tags不允许为空列表。 tags中最多包含10个key。 tags中key不允许重复。
 
 	Tags *[]Tag `json:"tags,omitempty"`

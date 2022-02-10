@@ -16,7 +16,7 @@ type PeriodProductInfo struct {
 	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
 
 	ResourceType string `json:"resource_type"`
-	// 云服务类型的资源规格，部分云服务类型和资源规格举例如下： 弹性云服务器：根据操作系统类型在云服务器规格的ID后添加“.win”或“.linux”，例如“s2.small.1.linux”。云服务器规格的ID字段，您可以调用查询规格详情和规格扩展信息列表接口获取。 带宽：12_bgp：动态BGP按流量计费带宽12_sbgp：静态BGP按流量计费带宽19_bgp：动态BGP按带宽计费带宽19_sbgp：静态BGP按带宽计费带宽19_share：按带宽计费共享带宽 IP：5_bgp：动态BGP公网IP5_sbgp：静态BGP公网IP
+	// 云服务类型的资源规格，部分云服务类型和资源规格举例如下： 弹性云服务器：根据操作系统类型在云服务器规格的ID后添加“.win”或“.linux”，例如“s2.small.1.linux”。云服务器规格的ID字段，您可以调用查询规格详情和规格扩展信息列表接口获取。 带宽：12_bgp：动态BGP按流量计费带宽12_sbgp：静态BGP按流量计费带宽19_bgp：动态BGP按带宽计费带宽19_sbgp：静态BGP按带宽计费带宽19_share：按带宽计费共享带宽 IP：5_bgp：动态BGP公网IP5_sbgp：静态BGP公网IP 云数据库：云数据库的资源规格信息，您可以调用查询数据库规格接口获取。 分布式缓存服务：分布式缓存服务的资源规格信息，您可以调用查询产品规格接口获取。
 
 	ResourceSpec string `json:"resource_spec"`
 	// 云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
@@ -40,6 +40,9 @@ type PeriodProductInfo struct {
 	// 订购包年/包月产品的数量。
 
 	SubscriptionNum int32 `json:"subscription_num"`
+	// 费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不传则默认为空，效果等同于“NA：不支持费用分期模式”。暂只支持IES产品。
+
+	FeeInstallmentMode *string `json:"fee_installment_mode,omitempty"`
 }
 
 func (o PeriodProductInfo) String() string {

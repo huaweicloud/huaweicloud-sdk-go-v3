@@ -29,10 +29,10 @@ type ListAlarmHistoriesRequest struct {
 	// 告警资源ID，多维度情况使用逗号分隔
 
 	ResourceId *string `json:"resource_id,omitempty"`
-	// 通过时间筛选traces的起始时间(不包括传入时间)，UTC时间
+	// 通过时间筛选traces的起始时间(不包括传入时间) 例如：2022-02-10T10:05:46+08:00
 
 	From *string `json:"from,omitempty"`
-	// 通过时间筛选traces的终止时间(不包括传入时间)，UTC时间
+	// 通过时间筛选traces的终止时间(不包括传入时间) 例如：2022-02-10T10:05:47+08:00
 
 	To *string `json:"to,omitempty"`
 	// 偏移量

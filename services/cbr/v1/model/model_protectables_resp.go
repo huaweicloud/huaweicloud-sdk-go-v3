@@ -26,7 +26,7 @@ type ProtectablesResp struct {
 	Protectable *ProtectableResult `json:"protectable"`
 	// 大小，单位GB
 
-	Size *string `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty"`
 	// 资源状态
 
 	Status *ProtectablesRespStatus `json:"status,omitempty"`

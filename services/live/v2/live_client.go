@@ -19,6 +19,17 @@ func LiveClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//查询直播全球区域维度的详细数据接口。  最大查询跨度1天，最大查询周期90天。  支持查询当天，当前数据延时少于1分钟。
+func (c *LiveClient) ListAreaDetail(request *model.ListAreaDetailRequest) (*model.ListAreaDetailResponse, error) {
+	requestDef := GenReqDefForListAreaDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAreaDetailResponse), nil
+	}
+}
+
 //查询播放域名带宽数据。  最大查询跨度31天，最大查询周期一年。
 func (c *LiveClient) ListBandwidthDetail(request *model.ListBandwidthDetailRequest) (*model.ListBandwidthDetailResponse, error) {
 	requestDef := GenReqDefForListBandwidthDetail()
@@ -63,7 +74,7 @@ func (c *LiveClient) ListDomainTrafficSummary(request *model.ListDomainTrafficSu
 	}
 }
 
-//查询历史推流列表。  不能查询现推流。  最大查询跨度1天，最大查询周期1个月。
+//查询历史推流列表。  不能查询现推流。  最大查询跨度1天。
 func (c *LiveClient) ListHistoryStreams(request *model.ListHistoryStreamsRequest) (*model.ListHistoryStreamsResponse, error) {
 	requestDef := GenReqDefForListHistoryStreams()
 
@@ -118,6 +129,17 @@ func (c *LiveClient) ListTranscodeData(request *model.ListTranscodeDataRequest) 
 	}
 }
 
+//查询5分钟粒度的各档位转码任务数。  仅支持查询视频转码任务数。  最大查询跨度7天，最大查询周期90天。
+func (c *LiveClient) ListTranscodeTaskCount(request *model.ListTranscodeTaskCountRequest) (*model.ListTranscodeTaskCountResponse, error) {
+	requestDef := GenReqDefForListTranscodeTaskCount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTranscodeTaskCountResponse), nil
+	}
+}
+
 //查询观众趋势。  最大查询跨度31天，最大查询周期一年。
 func (c *LiveClient) ListUsersOfStream(request *model.ListUsersOfStreamRequest) (*model.ListUsersOfStreamResponse, error) {
 	requestDef := GenReqDefForListUsersOfStream()
@@ -162,7 +184,7 @@ func (c *LiveClient) ShowUpBandwidth(request *model.ShowUpBandwidthRequest) (*mo
 	}
 }
 
-//查询推流监控码率数据接口。  最大查询跨度1天，最大查询周期1个月。
+//查询推流监控码率数据接口。  最大查询跨度1天，最大查询周期1个月。  返回的码率数据列表粒度为1秒钟。
 func (c *LiveClient) ListSingleStreamBitrate(request *model.ListSingleStreamBitrateRequest) (*model.ListSingleStreamBitrateResponse, error) {
 	requestDef := GenReqDefForListSingleStreamBitrate()
 
@@ -173,7 +195,7 @@ func (c *LiveClient) ListSingleStreamBitrate(request *model.ListSingleStreamBitr
 	}
 }
 
-//查询推流帧率数据接口。  最大查询跨度1天，最大查询周期1个月。
+//查询推流帧率数据接口。  最大查询跨度1天，最大查询周期1个月。  返回的帧率数据列表粒度为1秒钟。
 func (c *LiveClient) ListSingleStreamFramerate(request *model.ListSingleStreamFramerateRequest) (*model.ListSingleStreamFramerateResponse, error) {
 	requestDef := GenReqDefForListSingleStreamFramerate()
 

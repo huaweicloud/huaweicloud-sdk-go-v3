@@ -52,6 +52,7 @@ type UpdateDependencyRequestBodyRuntimeEnum struct {
 	PYTHON_2_7      UpdateDependencyRequestBodyRuntime
 	PYTHON_3_6      UpdateDependencyRequestBodyRuntime
 	GO_1_8          UpdateDependencyRequestBodyRuntime
+	GO1_X           UpdateDependencyRequestBodyRuntime
 	C__NET_CORE_2_0 UpdateDependencyRequestBodyRuntime
 	C__NET_CORE_2_1 UpdateDependencyRequestBodyRuntime
 	C__NET_CORE_3_1 UpdateDependencyRequestBodyRuntime
@@ -83,6 +84,9 @@ func GetUpdateDependencyRequestBodyRuntimeEnum() UpdateDependencyRequestBodyRunt
 		},
 		GO_1_8: UpdateDependencyRequestBodyRuntime{
 			value: "Go 1.8",
+		},
+		GO1_X: UpdateDependencyRequestBodyRuntime{
+			value: "Go1.x",
 		},
 		C__NET_CORE_2_0: UpdateDependencyRequestBodyRuntime{
 			value: "C#(.NET Core 2.0)",

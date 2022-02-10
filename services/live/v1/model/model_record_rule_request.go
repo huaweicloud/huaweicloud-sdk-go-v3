@@ -23,8 +23,6 @@ type RecordRuleRequest struct {
 
 	RecordType *RecordRuleRequestRecordType `json:"record_type,omitempty"`
 
-	PlanRecordTime *PlanRecordTime `json:"plan_record_time,omitempty"`
-
 	DefaultRecordConfig *DefaultRecordConfig `json:"default_record_config"`
 }
 

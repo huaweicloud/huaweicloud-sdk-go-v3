@@ -11,7 +11,10 @@ type ShowApplicationDependentResourcesResponse struct {
 	// 依赖云资源信息
 
 	DependentServices *[]ResouceInfo `json:"dependent_services,omitempty"`
-	HttpStatusCode    int            `json:"-"`
+	// 资源总个数
+
+	Count          *int32 `json:"count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowApplicationDependentResourcesResponse) String() string {

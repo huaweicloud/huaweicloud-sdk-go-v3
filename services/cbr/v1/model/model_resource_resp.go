@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// Response body of resource
 type ResourceResp struct {
 	ExtraInfo *ResourceExtraInfo `json:"extra_info,omitempty"`
 	// 待备份资源id

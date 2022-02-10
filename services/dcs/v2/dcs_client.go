@@ -41,6 +41,17 @@ func (c *DcsClient) BatchDeleteInstances(request *model.BatchDeleteInstancesRequ
 	}
 }
 
+//批量停止数据迁移任务，接口响应成功，仅表示下发任务成功。查询到迁移任务状态为TERMINATED时，即停止成功。
+func (c *DcsClient) BatchStopMigrationTasks(request *model.BatchStopMigrationTasksRequest) (*model.BatchStopMigrationTasksResponse, error) {
+	requestDef := GenReqDefForBatchStopMigrationTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchStopMigrationTasksResponse), nil
+	}
+}
+
 //切换实例主备节点，只有主备实例支持该操作。
 func (c *DcsClient) ChangeMasterStandby(request *model.ChangeMasterStandbyRequest) (*model.ChangeMasterStandbyResponse, error) {
 	requestDef := GenReqDefForChangeMasterStandby()
@@ -115,6 +126,17 @@ func (c *DcsClient) CreateMigrationTask(request *model.CreateMigrationTaskReques
 		return nil, err
 	} else {
 		return resp.(*model.CreateMigrationTaskResponse), nil
+	}
+}
+
+//创建在线数据迁移任务。
+func (c *DcsClient) CreateOnlineMigrationTask(request *model.CreateOnlineMigrationTaskRequest) (*model.CreateOnlineMigrationTaskResponse, error) {
+	requestDef := GenReqDefForCreateOnlineMigrationTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOnlineMigrationTaskResponse), nil
 	}
 }
 
@@ -481,6 +503,17 @@ func (c *DcsClient) RestoreInstance(request *model.RestoreInstanceRequest) (*mod
 	}
 }
 
+//配置在线数据迁移任务。
+func (c *DcsClient) SetOnlineMigrationTask(request *model.SetOnlineMigrationTaskRequest) (*model.SetOnlineMigrationTaskResponse, error) {
+	requestDef := GenReqDefForSetOnlineMigrationTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetOnlineMigrationTaskResponse), nil
+	}
+}
+
 //查询大key自动分析配置。
 func (c *DcsClient) ShowBigkeyAutoscanConfig(request *model.ShowBigkeyAutoscanConfigRequest) (*model.ShowBigkeyAutoscanConfigResponse, error) {
 	requestDef := GenReqDefForShowBigkeyAutoscanConfig()
@@ -599,6 +632,17 @@ func (c *DcsClient) StopMigrationTask(request *model.StopMigrationTaskRequest) (
 		return nil, err
 	} else {
 		return resp.(*model.StopMigrationTaskResponse), nil
+	}
+}
+
+//同步停止数据迁移任务。
+func (c *DcsClient) StopMigrationTaskSync(request *model.StopMigrationTaskSyncRequest) (*model.StopMigrationTaskSyncResponse, error) {
+	requestDef := GenReqDefForStopMigrationTaskSync()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopMigrationTaskSyncResponse), nil
 	}
 }
 

@@ -92,6 +92,7 @@ type ListDependenciesRequestRuntimeEnum struct {
 	PYTHON_2_7      ListDependenciesRequestRuntime
 	PYTHON_3_6      ListDependenciesRequestRuntime
 	GO_1_8          ListDependenciesRequestRuntime
+	GO_1_X          ListDependenciesRequestRuntime
 	C__NET_CORE_2_0 ListDependenciesRequestRuntime
 	C__NET_CORE_2_1 ListDependenciesRequestRuntime
 	C__NET_CORE_3_1 ListDependenciesRequestRuntime
@@ -123,6 +124,9 @@ func GetListDependenciesRequestRuntimeEnum() ListDependenciesRequestRuntimeEnum 
 		},
 		GO_1_8: ListDependenciesRequestRuntime{
 			value: "Go 1.8",
+		},
+		GO_1_X: ListDependenciesRequestRuntime{
+			value: "Go 1.x",
 		},
 		C__NET_CORE_2_0: ListDependenciesRequestRuntime{
 			value: "C#(.NET Core 2.0)",

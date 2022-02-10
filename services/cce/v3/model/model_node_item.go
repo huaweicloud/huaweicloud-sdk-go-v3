@@ -9,7 +9,7 @@ import (
 type NodeItem struct {
 	// 节点ID
 
-	Uid *string `json:"uid,omitempty"`
+	Uid string `json:"uid"`
 }
 
 func (o NodeItem) String() string {

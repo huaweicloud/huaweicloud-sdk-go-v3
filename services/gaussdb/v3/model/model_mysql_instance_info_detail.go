@@ -22,6 +22,9 @@ type MysqlInstanceInfoDetail struct {
 	// 数据库端口号。
 
 	Port *string `json:"port,omitempty"`
+	// 实例备注
+
+	Alias *string `json:"alias,omitempty"`
 	// 实例类型，取值为“Cluster”。
 
 	Type *string `json:"type,omitempty"`

@@ -228,7 +228,7 @@ func (c *KmsClient) EnableKey(request *model.EnableKeyRequest) (*model.EnableKey
 	}
 }
 
-//- 功能介绍：开启用户主密钥轮换。 - 说明：   - 开启密钥轮换后，默认轮询间隔时间为365天。   - 默认主密钥及外部导入密钥不支持轮换操作。
+//- 功能介绍：开启用户主密钥轮换。 - 说明：   - 开启密钥轮换后，默认轮换间隔时间为365天。   - 默认主密钥及外部导入密钥不支持轮换操作。
 func (c *KmsClient) EnableKeyRotation(request *model.EnableKeyRotationRequest) (*model.EnableKeyRotationResponse, error) {
 	requestDef := GenReqDefForEnableKeyRotation()
 
@@ -437,7 +437,7 @@ func (c *KmsClient) UpdateKeyRotationInterval(request *model.UpdateKeyRotationIn
 	}
 }
 
-//- 功能介绍：使用非对称密钥的私钥对消息或消息摘要进行数字签名。
+//- 功能介绍：使用非对称密钥的私钥对消息或消息摘要进行签名验证。
 func (c *KmsClient) ValidateSignature(request *model.ValidateSignatureRequest) (*model.ValidateSignatureResponse, error) {
 	requestDef := GenReqDefForValidateSignature()
 

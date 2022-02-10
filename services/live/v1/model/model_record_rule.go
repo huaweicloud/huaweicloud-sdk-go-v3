@@ -26,8 +26,6 @@ type RecordRule struct {
 
 	RecordType *RecordRuleRecordType `json:"record_type,omitempty"`
 
-	PlanRecordTime *PlanRecordTime `json:"plan_record_time,omitempty"`
-
 	DefaultRecordConfig *DefaultRecordConfig `json:"default_record_config,omitempty"`
 	// 创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
 

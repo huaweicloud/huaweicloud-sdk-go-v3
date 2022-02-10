@@ -28,7 +28,7 @@ type CreateFunctionVersionResponse struct {
 	// 函数所属的分组Package，用于用户针对函数的自定义分组。
 
 	Package *string `json:"package,omitempty"`
-	// FunctionGraph函数的执行环境 支持Node.js6.10、Python2.7、Python3.6、Java8、Go1.8、Node.js 8.10、C#.NET Core 2.0、C#.NET Core 2.1、PHP7.3。 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Go1.8: Go语言1.8版本。 Java8: Java语言8版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。
+	// FunctionGraph函数的执行环境 支持Node.js6.10、Python2.7、Python3.6、Java8、Go1.8、Node.js 8.10、C#.NET Core 2.0、C#.NET Core 2.1、PHP7.3。 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。
 
 	Runtime *CreateFunctionVersionResponseRuntime `json:"runtime,omitempty"`
 	// 函数执行超时时间，超时函数将被强行停止，范围3～900秒
@@ -137,38 +137,49 @@ type CreateFunctionVersionResponseRuntime struct {
 }
 
 type CreateFunctionVersionResponseRuntimeEnum struct {
-	PYTHON2_7       CreateFunctionVersionResponseRuntime
-	PYTHON3_6       CreateFunctionVersionResponseRuntime
-	GO1_8           CreateFunctionVersionResponseRuntime
-	JAVA8           CreateFunctionVersionResponseRuntime
-	NODE_JS6_10     CreateFunctionVersionResponseRuntime
-	NODE_JS8_10     CreateFunctionVersionResponseRuntime
+	JAVA_8          CreateFunctionVersionResponseRuntime
+	NODE_JS_6_10    CreateFunctionVersionResponseRuntime
+	NODE_JS_8_10    CreateFunctionVersionResponseRuntime
+	NODE_JS_10_16   CreateFunctionVersionResponseRuntime
+	NODE_JS_12_13   CreateFunctionVersionResponseRuntime
+	PYTHON_2_7      CreateFunctionVersionResponseRuntime
+	PYTHON_3_6      CreateFunctionVersionResponseRuntime
+	GO_1_8          CreateFunctionVersionResponseRuntime
+	GO_1_X          CreateFunctionVersionResponseRuntime
 	C__NET_CORE_2_0 CreateFunctionVersionResponseRuntime
 	C__NET_CORE_2_1 CreateFunctionVersionResponseRuntime
 	C__NET_CORE_3_1 CreateFunctionVersionResponseRuntime
-	CUSTOM          CreateFunctionVersionResponseRuntime
-	PHP7_3          CreateFunctionVersionResponseRuntime
+	PHP_7_3         CreateFunctionVersionResponseRuntime
 }
 
 func GetCreateFunctionVersionResponseRuntimeEnum() CreateFunctionVersionResponseRuntimeEnum {
 	return CreateFunctionVersionResponseRuntimeEnum{
-		PYTHON2_7: CreateFunctionVersionResponseRuntime{
-			value: "Python2.7",
+		JAVA_8: CreateFunctionVersionResponseRuntime{
+			value: "Java 8",
 		},
-		PYTHON3_6: CreateFunctionVersionResponseRuntime{
-			value: "Python3.6",
+		NODE_JS_6_10: CreateFunctionVersionResponseRuntime{
+			value: "Node.js 6.10",
 		},
-		GO1_8: CreateFunctionVersionResponseRuntime{
-			value: "Go1.8",
+		NODE_JS_8_10: CreateFunctionVersionResponseRuntime{
+			value: "Node.js 8.10",
 		},
-		JAVA8: CreateFunctionVersionResponseRuntime{
-			value: "Java8",
+		NODE_JS_10_16: CreateFunctionVersionResponseRuntime{
+			value: "Node.js 10.16",
 		},
-		NODE_JS6_10: CreateFunctionVersionResponseRuntime{
-			value: "Node.js6.10",
+		NODE_JS_12_13: CreateFunctionVersionResponseRuntime{
+			value: "Node.js 12.13",
 		},
-		NODE_JS8_10: CreateFunctionVersionResponseRuntime{
-			value: "Node.js8.10",
+		PYTHON_2_7: CreateFunctionVersionResponseRuntime{
+			value: "Python 2.7",
+		},
+		PYTHON_3_6: CreateFunctionVersionResponseRuntime{
+			value: "Python 3.6",
+		},
+		GO_1_8: CreateFunctionVersionResponseRuntime{
+			value: "Go 1.8",
+		},
+		GO_1_X: CreateFunctionVersionResponseRuntime{
+			value: "Go 1.x",
 		},
 		C__NET_CORE_2_0: CreateFunctionVersionResponseRuntime{
 			value: "C#(.NET Core 2.0)",
@@ -179,11 +190,8 @@ func GetCreateFunctionVersionResponseRuntimeEnum() CreateFunctionVersionResponse
 		C__NET_CORE_3_1: CreateFunctionVersionResponseRuntime{
 			value: "C#(.NET Core 3.1)",
 		},
-		CUSTOM: CreateFunctionVersionResponseRuntime{
-			value: "Custom",
-		},
-		PHP7_3: CreateFunctionVersionResponseRuntime{
-			value: "PHP7.3",
+		PHP_7_3: CreateFunctionVersionResponseRuntime{
+			value: "PHP 7.3",
 		},
 	}
 }

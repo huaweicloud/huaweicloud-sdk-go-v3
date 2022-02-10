@@ -52,6 +52,7 @@ type CreateDependencyRequestBodyRuntimeEnum struct {
 	PYTHON2_7       CreateDependencyRequestBodyRuntime
 	PYTHON3_6       CreateDependencyRequestBodyRuntime
 	GO1_8           CreateDependencyRequestBodyRuntime
+	GO1_X           CreateDependencyRequestBodyRuntime
 	C__NET_CORE_2_0 CreateDependencyRequestBodyRuntime
 	C__NET_CORE_2_1 CreateDependencyRequestBodyRuntime
 	C__NET_CORE_3_1 CreateDependencyRequestBodyRuntime
@@ -83,6 +84,9 @@ func GetCreateDependencyRequestBodyRuntimeEnum() CreateDependencyRequestBodyRunt
 		},
 		GO1_8: CreateDependencyRequestBodyRuntime{
 			value: "Go1.8",
+		},
+		GO1_X: CreateDependencyRequestBodyRuntime{
+			value: "Go1.x",
 		},
 		C__NET_CORE_2_0: CreateDependencyRequestBodyRuntime{
 			value: "C#(.NET Core 2.0)",

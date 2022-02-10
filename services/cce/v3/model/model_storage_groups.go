@@ -16,8 +16,9 @@ type StorageGroups struct {
 	// 对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。
 
 	SelectorNames []string `json:"selectorNames"`
+	// group中空间配置的详细管理。
 
-	VirtualSpaces *VirtualSpace `json:"virtualSpaces"`
+	VirtualSpaces []VirtualSpace `json:"virtualSpaces"`
 }
 
 func (o StorageGroups) String() string {

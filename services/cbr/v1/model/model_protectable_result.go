@@ -15,7 +15,7 @@ type ProtectableResult struct {
 	Reason *string `json:"reason,omitempty"`
 	// 是否可备份
 
-	Result string `json:"result"`
+	Result bool `json:"result"`
 
 	Vault *VaultGet `json:"vault,omitempty"`
 }
