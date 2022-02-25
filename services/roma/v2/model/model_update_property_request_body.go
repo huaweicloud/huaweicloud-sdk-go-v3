@@ -21,7 +21,7 @@ type UpdatePropertyRequestBody struct {
 	DataType UpdatePropertyRequestBodyDataType `json:"data_type"`
 	// 是否必填 0-非必填 1-必填
 
-	Required int32 `json:"required"`
+	Required UpdatePropertyRequestBodyRequired `json:"required"`
 	// 最小值，当data_type为integer或number时必填
 
 	Min *string `json:"min,omitempty"`
@@ -98,5 +98,42 @@ func (c *UpdatePropertyRequestBodyDataType) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type UpdatePropertyRequestBodyRequired struct {
+	value int32
+}
+
+type UpdatePropertyRequestBodyRequiredEnum struct {
+	E_0 UpdatePropertyRequestBodyRequired
+	E_1 UpdatePropertyRequestBodyRequired
+}
+
+func GetUpdatePropertyRequestBodyRequiredEnum() UpdatePropertyRequestBodyRequiredEnum {
+	return UpdatePropertyRequestBodyRequiredEnum{
+		E_0: UpdatePropertyRequestBodyRequired{
+			value: 0,
+		}, E_1: UpdatePropertyRequestBodyRequired{
+			value: 1,
+		},
+	}
+}
+
+func (c UpdatePropertyRequestBodyRequired) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdatePropertyRequestBodyRequired) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

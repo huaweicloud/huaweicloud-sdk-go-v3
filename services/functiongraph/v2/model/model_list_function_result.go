@@ -28,7 +28,7 @@ type ListFunctionResult struct {
 	// 函数所属的分组Package，用于用户针对函数的自定义分组。
 
 	Package string `json:"package"`
-	// FunctionGraph函数的执行环境 支持Node.js6.10、Python2.7、Python3.6、Java8、Go1.8、Node.js 8.10、C#.NET Core 2.0、C#.NET Core 2.1、PHP7.3。 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。
+	// FunctionGraph函数的执行环境 支持Node.js6.10、Python2.7、Python3.6、Java8、Go1.8、Node.js 8.10、C#.NET Core 2.0、C#.NET Core 2.1、PHP7.3。 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 Java11、Nodejs14.18、Python3.9在type为v2时支持
 
 	Runtime ListFunctionResultRuntime `json:"runtime"`
 	// 函数执行超时时间，超时函数将被强行停止，范围3～900秒
@@ -127,49 +127,61 @@ type ListFunctionResultRuntime struct {
 }
 
 type ListFunctionResultRuntimeEnum struct {
-	JAVA_8          ListFunctionResultRuntime
-	NODE_JS_6_10    ListFunctionResultRuntime
-	NODE_JS_8_10    ListFunctionResultRuntime
-	NODE_JS_10_16   ListFunctionResultRuntime
-	NODE_JS_12_13   ListFunctionResultRuntime
-	PYTHON_2_7      ListFunctionResultRuntime
-	PYTHON_3_6      ListFunctionResultRuntime
-	GO_1_8          ListFunctionResultRuntime
-	GO_1_X          ListFunctionResultRuntime
+	JAVA8           ListFunctionResultRuntime
+	JAVA11          ListFunctionResultRuntime
+	NODE_JS6_10     ListFunctionResultRuntime
+	NODE_JS8_10     ListFunctionResultRuntime
+	NODE_JS10_16    ListFunctionResultRuntime
+	NODE_JS12_13    ListFunctionResultRuntime
+	NODE_JS14_18    ListFunctionResultRuntime
+	PYTHON2_7       ListFunctionResultRuntime
+	PYTHON3_6       ListFunctionResultRuntime
+	PYTHON3_9       ListFunctionResultRuntime
+	GO1_8           ListFunctionResultRuntime
+	GO1_X           ListFunctionResultRuntime
 	C__NET_CORE_2_0 ListFunctionResultRuntime
 	C__NET_CORE_2_1 ListFunctionResultRuntime
 	C__NET_CORE_3_1 ListFunctionResultRuntime
-	PHP_7_3         ListFunctionResultRuntime
+	PHP7_3          ListFunctionResultRuntime
 }
 
 func GetListFunctionResultRuntimeEnum() ListFunctionResultRuntimeEnum {
 	return ListFunctionResultRuntimeEnum{
-		JAVA_8: ListFunctionResultRuntime{
-			value: "Java 8",
+		JAVA8: ListFunctionResultRuntime{
+			value: "Java8",
 		},
-		NODE_JS_6_10: ListFunctionResultRuntime{
-			value: "Node.js 6.10",
+		JAVA11: ListFunctionResultRuntime{
+			value: "Java11",
 		},
-		NODE_JS_8_10: ListFunctionResultRuntime{
-			value: "Node.js 8.10",
+		NODE_JS6_10: ListFunctionResultRuntime{
+			value: "Node.js6.10",
 		},
-		NODE_JS_10_16: ListFunctionResultRuntime{
-			value: "Node.js 10.16",
+		NODE_JS8_10: ListFunctionResultRuntime{
+			value: "Node.js8.10",
 		},
-		NODE_JS_12_13: ListFunctionResultRuntime{
-			value: "Node.js 12.13",
+		NODE_JS10_16: ListFunctionResultRuntime{
+			value: "Node.js10.16",
 		},
-		PYTHON_2_7: ListFunctionResultRuntime{
-			value: "Python 2.7",
+		NODE_JS12_13: ListFunctionResultRuntime{
+			value: "Node.js12.13",
 		},
-		PYTHON_3_6: ListFunctionResultRuntime{
-			value: "Python 3.6",
+		NODE_JS14_18: ListFunctionResultRuntime{
+			value: "Node.js14.18",
 		},
-		GO_1_8: ListFunctionResultRuntime{
-			value: "Go 1.8",
+		PYTHON2_7: ListFunctionResultRuntime{
+			value: "Python2.7",
 		},
-		GO_1_X: ListFunctionResultRuntime{
-			value: "Go 1.x",
+		PYTHON3_6: ListFunctionResultRuntime{
+			value: "Python3.6",
+		},
+		PYTHON3_9: ListFunctionResultRuntime{
+			value: "Python3.9",
+		},
+		GO1_8: ListFunctionResultRuntime{
+			value: "Go1.8",
+		},
+		GO1_X: ListFunctionResultRuntime{
+			value: "Go1.x",
 		},
 		C__NET_CORE_2_0: ListFunctionResultRuntime{
 			value: "C#(.NET Core 2.0)",
@@ -180,8 +192,8 @@ func GetListFunctionResultRuntimeEnum() ListFunctionResultRuntimeEnum {
 		C__NET_CORE_3_1: ListFunctionResultRuntime{
 			value: "C#(.NET Core 3.1)",
 		},
-		PHP_7_3: ListFunctionResultRuntime{
-			value: "PHP 7.3",
+		PHP7_3: ListFunctionResultRuntime{
+			value: "PHP7.3",
 		},
 	}
 }

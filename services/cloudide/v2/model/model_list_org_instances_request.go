@@ -17,7 +17,7 @@ type ListOrgInstancesRequest struct {
 	// 偏移量，表示从此偏移量开始查询
 
 	Offset *int64 `json:"offset,omitempty"`
-	// 组织id（对应华为云帐号的domainId）
+	// 租户id（对应华为云帐号的domainId）
 
 	OrgId string `json:"org_id"`
 	// 关键字查询(根据实例名，描述模糊查询)

@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -24,13 +27,13 @@ type CreateProductRequestBody struct {
 	Model string `json:"model"`
 	// 产品类型，0-普通产品(不支持子设备) 1-网关产品
 
-	ProductType int32 `json:"product_type"`
+	ProductType CreateProductRequestBodyProductType `json:"product_type"`
 	// 产品描述，长度0-200
 
 	Description *string `json:"description,omitempty"`
 	// 产品的协议类型 0-mqtt 2-modbus 4-opcua
 
-	ProtocolType int32 `json:"protocol_type"`
+	ProtocolType CreateProductRequestBodyProtocolType `json:"protocol_type"`
 	// 产品的设备类型（默认Default）
 
 	DeviceType *string `json:"device_type,omitempty"`
@@ -42,7 +45,7 @@ type CreateProductRequestBody struct {
 	Version *string `json:"version,omitempty"`
 	// 产品的数据格式 0-JSON 1-USER_DEFINED
 
-	DataFormat *int32 `json:"data_format,omitempty"`
+	DataFormat *CreateProductRequestBodyDataFormat `json:"data_format,omitempty"`
 }
 
 func (o CreateProductRequestBody) String() string {
@@ -52,4 +55,118 @@ func (o CreateProductRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"CreateProductRequestBody", string(data)}, " ")
+}
+
+type CreateProductRequestBodyProductType struct {
+	value int32
+}
+
+type CreateProductRequestBodyProductTypeEnum struct {
+	E_0 CreateProductRequestBodyProductType
+	E_1 CreateProductRequestBodyProductType
+}
+
+func GetCreateProductRequestBodyProductTypeEnum() CreateProductRequestBodyProductTypeEnum {
+	return CreateProductRequestBodyProductTypeEnum{
+		E_0: CreateProductRequestBodyProductType{
+			value: 0,
+		}, E_1: CreateProductRequestBodyProductType{
+			value: 1,
+		},
+	}
+}
+
+func (c CreateProductRequestBodyProductType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateProductRequestBodyProductType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type CreateProductRequestBodyProtocolType struct {
+	value int32
+}
+
+type CreateProductRequestBodyProtocolTypeEnum struct {
+	E_0 CreateProductRequestBodyProtocolType
+	E_2 CreateProductRequestBodyProtocolType
+	E_4 CreateProductRequestBodyProtocolType
+}
+
+func GetCreateProductRequestBodyProtocolTypeEnum() CreateProductRequestBodyProtocolTypeEnum {
+	return CreateProductRequestBodyProtocolTypeEnum{
+		E_0: CreateProductRequestBodyProtocolType{
+			value: 0,
+		}, E_2: CreateProductRequestBodyProtocolType{
+			value: 2,
+		}, E_4: CreateProductRequestBodyProtocolType{
+			value: 4,
+		},
+	}
+}
+
+func (c CreateProductRequestBodyProtocolType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateProductRequestBodyProtocolType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type CreateProductRequestBodyDataFormat struct {
+	value int32
+}
+
+type CreateProductRequestBodyDataFormatEnum struct {
+	E_0 CreateProductRequestBodyDataFormat
+	E_1 CreateProductRequestBodyDataFormat
+}
+
+func GetCreateProductRequestBodyDataFormatEnum() CreateProductRequestBodyDataFormatEnum {
+	return CreateProductRequestBodyDataFormatEnum{
+		E_0: CreateProductRequestBodyDataFormat{
+			value: 0,
+		}, E_1: CreateProductRequestBodyDataFormat{
+			value: 1,
+		},
+	}
+}
+
+func (c CreateProductRequestBodyDataFormat) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateProductRequestBodyDataFormat) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

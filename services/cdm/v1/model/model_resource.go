@@ -10,7 +10,7 @@ type Resource struct {
 	// 资源id
 
 	ResourceId *string `json:"resource_id,omitempty"`
-	// 资源类型
+	// 资源类型：server(服务器)
 
 	ResourceType *string `json:"resource_type,omitempty"`
 }

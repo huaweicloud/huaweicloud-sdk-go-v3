@@ -20,6 +20,9 @@ type CreateTempRequestBody struct {
 	// description
 
 	Description *string `json:"description,omitempty"`
+	// contents
+
+	Contents *[]interface{} `json:"contents,omitempty"`
 }
 
 func (o CreateTempRequestBody) String() string {

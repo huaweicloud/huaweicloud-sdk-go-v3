@@ -8,6 +8,9 @@ import (
 
 // Request Object
 type ShowTaskListByProjectIdRequest struct {
+	// 项目ID
+
+	ProjectId string `json:"project_id"`
 	// 分页索引，偏移量
 
 	Offset *int32 `json:"offset,omitempty"`

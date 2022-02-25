@@ -173,7 +173,7 @@ type Content struct {
 	SnmpNetworkProtocol *ContentSnmpNetworkProtocol `json:"snmp_network_protocol,omitempty"`
 	// SNMP版本号
 
-	SnmpVersion *int32 `json:"snmp_version,omitempty"`
+	SnmpVersion *ContentSnmpVersion `json:"snmp_version,omitempty"`
 	// SNMP团体名，用于访问SNMP管理代理的身份认证，相当于访问密码
 
 	SnmpCommunity *string `json:"snmp_community,omitempty"`
@@ -1021,5 +1021,45 @@ func (c *ContentSnmpNetworkProtocol) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type ContentSnmpVersion struct {
+	value int32
+}
+
+type ContentSnmpVersionEnum struct {
+	E_0 ContentSnmpVersion
+	E_1 ContentSnmpVersion
+	E_3 ContentSnmpVersion
+}
+
+func GetContentSnmpVersionEnum() ContentSnmpVersionEnum {
+	return ContentSnmpVersionEnum{
+		E_0: ContentSnmpVersion{
+			value: 0,
+		}, E_1: ContentSnmpVersion{
+			value: 1,
+		}, E_3: ContentSnmpVersion{
+			value: 3,
+		},
+	}
+}
+
+func (c ContentSnmpVersion) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ContentSnmpVersion) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

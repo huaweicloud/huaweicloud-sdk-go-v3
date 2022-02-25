@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -27,10 +30,10 @@ type Rule struct {
 	Description *string `json:"description,omitempty"`
 	// 规则状态 0-启用 1-停用
 
-	Status *int32 `json:"status,omitempty"`
+	Status *RuleStatus `json:"status,omitempty"`
 	// 数据解析状态，ENABLE时data_parsing必填 0-启用 1-停用
 
-	DataParsingStatus *int32 `json:"data_parsing_status,omitempty"`
+	DataParsingStatus *RuleDataParsingStatus `json:"data_parsing_status,omitempty"`
 	// SQL查询字段
 
 	SqlField *string `json:"sql_field,omitempty"`
@@ -59,4 +62,78 @@ func (o Rule) String() string {
 	}
 
 	return strings.Join([]string{"Rule", string(data)}, " ")
+}
+
+type RuleStatus struct {
+	value int32
+}
+
+type RuleStatusEnum struct {
+	E_0 RuleStatus
+	E_1 RuleStatus
+}
+
+func GetRuleStatusEnum() RuleStatusEnum {
+	return RuleStatusEnum{
+		E_0: RuleStatus{
+			value: 0,
+		}, E_1: RuleStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c RuleStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *RuleStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type RuleDataParsingStatus struct {
+	value int32
+}
+
+type RuleDataParsingStatusEnum struct {
+	E_0 RuleDataParsingStatus
+	E_1 RuleDataParsingStatus
+}
+
+func GetRuleDataParsingStatusEnum() RuleDataParsingStatusEnum {
+	return RuleDataParsingStatusEnum{
+		E_0: RuleDataParsingStatus{
+			value: 0,
+		}, E_1: RuleDataParsingStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c RuleDataParsingStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *RuleDataParsingStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

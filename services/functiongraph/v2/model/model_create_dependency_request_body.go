@@ -19,7 +19,7 @@ type CreateDependencyRequestBody struct {
 	// 导入类型,目前支持obs和zip。
 
 	DependType string `json:"depend_type"`
-	// 运行时语言。
+	// 运行时语言，Java11、Nodejs14:、Python3:在type为v2时支持。
 
 	Runtime CreateDependencyRequestBodyRuntime `json:"runtime"`
 	// 依赖包名称。必须以大、小写字母开头，以字母或数字结尾，只能由字母、数字、下划线、点和中划线组成，长度不超过96个字符。
@@ -45,12 +45,15 @@ type CreateDependencyRequestBodyRuntime struct {
 
 type CreateDependencyRequestBodyRuntimeEnum struct {
 	JAVA8           CreateDependencyRequestBodyRuntime
+	JAVA11          CreateDependencyRequestBodyRuntime
 	NODE_JS6_10     CreateDependencyRequestBodyRuntime
 	NODE_JS8_10     CreateDependencyRequestBodyRuntime
 	NODE_JS10_16    CreateDependencyRequestBodyRuntime
 	NODE_JS12_13    CreateDependencyRequestBodyRuntime
+	NODE_JS14_18    CreateDependencyRequestBodyRuntime
 	PYTHON2_7       CreateDependencyRequestBodyRuntime
 	PYTHON3_6       CreateDependencyRequestBodyRuntime
+	PYTHON3_9       CreateDependencyRequestBodyRuntime
 	GO1_8           CreateDependencyRequestBodyRuntime
 	GO1_X           CreateDependencyRequestBodyRuntime
 	C__NET_CORE_2_0 CreateDependencyRequestBodyRuntime
@@ -64,6 +67,9 @@ func GetCreateDependencyRequestBodyRuntimeEnum() CreateDependencyRequestBodyRunt
 		JAVA8: CreateDependencyRequestBodyRuntime{
 			value: "Java8",
 		},
+		JAVA11: CreateDependencyRequestBodyRuntime{
+			value: "Java11",
+		},
 		NODE_JS6_10: CreateDependencyRequestBodyRuntime{
 			value: "Node.js6.10",
 		},
@@ -76,11 +82,17 @@ func GetCreateDependencyRequestBodyRuntimeEnum() CreateDependencyRequestBodyRunt
 		NODE_JS12_13: CreateDependencyRequestBodyRuntime{
 			value: "Node.js12.13",
 		},
+		NODE_JS14_18: CreateDependencyRequestBodyRuntime{
+			value: "Node.js14.18",
+		},
 		PYTHON2_7: CreateDependencyRequestBodyRuntime{
 			value: "Python2.7",
 		},
 		PYTHON3_6: CreateDependencyRequestBodyRuntime{
 			value: "Python3.6",
+		},
+		PYTHON3_9: CreateDependencyRequestBodyRuntime{
+			value: "Python3.9",
 		},
 		GO1_8: CreateDependencyRequestBodyRuntime{
 			value: "Go1.8",

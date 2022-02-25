@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateSnapshotRequest struct {
-	// 指定要备份的集群ID。
+	// 指定要创建快照的集群ID。
 
 	ClusterId string `json:"cluster_id"`
 

@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// 标签对象列表。
 type TagList struct {
 	Tag *TagReq `json:"tag,omitempty"`
 }

@@ -7,72 +7,78 @@ import (
 )
 
 type ReportoutlineInfo struct {
-	// avgResponseTime
+	// 平均响应时间
 
-	AvgResponseTime *float32 `json:"avgResponseTime,omitempty"`
-	// caseRetry
+	AvgResponseTime *float64 `json:"avgResponseTime,omitempty"`
+	// 分支id
 
-	CaseRetry *int32 `json:"caseRetry,omitempty"`
-	// completeNum
+	BranchId *string `json:"branchId,omitempty"`
+	// 分支名称
 
-	CompleteNum *int32 `json:"completeNum,omitempty"`
-	// duration
+	BranchName *string `json:"branchName,omitempty"`
+	// 用例重试次数
 
-	Duration *int32 `json:"duration,omitempty"`
-	// endTime
+	CaseRetry *float64 `json:"caseRetry,omitempty"`
+	// 已完成的用例数
+
+	CompleteNum *float64 `json:"completeNum,omitempty"`
+	// 持续时间
+
+	Duration *float64 `json:"duration,omitempty"`
+	// 结束时间
 
 	EndTime *string `json:"endTime,omitempty"`
-	// executedNum
+	// 已执行用例数
 
-	ExecutedNum *int32 `json:"executedNum,omitempty"`
-	// iterationUri
+	ExecutedNum *float64 `json:"executedNum,omitempty"`
+	// 迭代id
 
 	IterationUri *string `json:"iterationUri,omitempty"`
-	// kpiCaseCount
+	// kpi用例数
 
-	KpiCaseCount *int32 `json:"kpiCaseCount,omitempty"`
-	// kpiCaseExecuteCount
+	KpiCaseCount *float64 `json:"kpiCaseCount,omitempty"`
+	// kpi用例执行次数
 
-	KpiCaseExecuteCount *int32 `json:"kpiCaseExecuteCount,omitempty"`
-	// kpiCasePassCount
+	KpiCaseExecuteCount *float64 `json:"kpiCaseExecuteCount,omitempty"`
+	// kpi用例通过次数
 
-	KpiCasePassCount *int32 `json:"kpiCasePassCount,omitempty"`
-	// maxUsers
+	KpiCasePassCount *float64 `json:"kpiCasePassCount,omitempty"`
+	// 最大并发数
 
-	MaxUsers *int32 `json:"maxUsers,omitempty"`
-	// passNum
+	MaxUsers *float64 `json:"maxUsers,omitempty"`
+	// 结果为pass的用例数
 
-	PassNum *int32 `json:"passNum,omitempty"`
-	// progressState
+	PassNum *float64 `json:"passNum,omitempty"`
+	// 阶段id
 
-	ProgressState *string `json:"progressState,omitempty"`
-	// stage
-
-	Stage *int32 `json:"stage,omitempty"`
-	// stageName
+	Stage *float64 `json:"stage,omitempty"`
+	// 阶段名称
 
 	StageName *string `json:"stageName,omitempty"`
-	// startTime
+	// 开始时间
 
 	StartTime *string `json:"startTime,omitempty"`
-	// statusValue
+	// 成功率
 
-	StatusValue *string `json:"statusValue,omitempty"`
-	// successRate
+	SuccessRate *float64 `json:"successRate,omitempty"`
+	// 任务状态
 
-	SuccessRate *int32 `json:"successRate,omitempty"`
-	// taskStatus
+	TaskStatus *float64 `json:"taskStatus,omitempty"`
+	// 总用例数
 
-	TaskStatus *int32 `json:"taskStatus,omitempty"`
-	// totalNum
+	TotalNum *float64 `json:"totalNum,omitempty"`
+	// 性能tps指标
 
-	TotalNum *int32 `json:"totalNum,omitempty"`
-	// tps
-
-	Tps *float32 `json:"tps,omitempty"`
-	// versionUri
+	Tps *float64 `json:"tps,omitempty"`
+	// 分支uri
 
 	VersionUri *string `json:"versionUri,omitempty"`
+	// 工程id
+
+	ProjectId *string `json:"projectId,omitempty"`
+	// 服务id
+
+	ServiceId *string `json:"serviceId,omitempty"`
 }
 
 func (o ReportoutlineInfo) String() string {

@@ -140,6 +140,17 @@ func (c *CdnClient) ShowDomainDetail(request *model.ShowDomainDetailRequest) (*m
 	}
 }
 
+//查询域名配置接口，支持配置回源请求头、http header配置、url鉴权
+func (c *CdnClient) ShowDomainFullConfig(request *model.ShowDomainFullConfigRequest) (*model.ShowDomainFullConfigResponse, error) {
+	requestDef := GenReqDefForShowDomainFullConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainFullConfigResponse), nil
+	}
+}
+
 //- 支持查询90天内的数据。 - 查询跨度不能超过7天。 - 最多同时指定100个域名。 - 起始时间和结束时间，左闭右开，需要同时指定。 - 开始时间、结束时间必须传毫秒级时间戳，且必须为5分钟整时刻点，如：0分、5分、10分、15分等，如果传的不是5分钟时刻点，返回数据可能与预期不一致。 - 统一用开始时间表示一个时间段，如：2019-01-24 20:15:00 表示取 [20:15:00, 20:20:00)的统计数据，且左闭右开。 - 流量类指标单位统一为Byte（字节）、带宽类指标单位统一为bit/s（比特/秒）、请求数类指标单位统一为次数。用于查询指定域名、指定统计指标的明细数据。 - 如果传的是多个域名，则每个域名的数据分开返回。 - 支持同时查询多个指标，不超过10个。
 func (c *CdnClient) ShowDomainItemDetails(request *model.ShowDomainItemDetailsRequest) (*model.ShowDomainItemDetailsResponse, error) {
 	requestDef := GenReqDefForShowDomainItemDetails()
@@ -162,7 +173,18 @@ func (c *CdnClient) ShowDomainItemLocationDetails(request *model.ShowDomainItemL
 	}
 }
 
-//- 支持同时指定多个指标。 - 支持同时指定多个域名。 - 起始时间和结束时间，需要同时指定。 - 开始时间、结束时间必须传毫秒级时间戳。
+//- 支持查询90天内的数据。 - 支持多指标同时查询，不超过5个。 - 最多同时指定20个域名。 - 起始时间和结束时间需要同时指定，左闭右开，毫秒级时间戳，必须为5分钟整时刻点，如：0分、5分、10分、15分等，如果传的不是5分钟时刻点， 返回数据可能与预期不一致。统一用开始时间表示一个时间段，如：2019-01-24 20:15:00 表示取 [20:15:00, 20:20:00)的统计数据，且左闭右开。 - action取值：location_detail,location_summary
+func (c *CdnClient) ShowDomainLocationStats(request *model.ShowDomainLocationStatsRequest) (*model.ShowDomainLocationStatsResponse, error) {
+	requestDef := GenReqDefForShowDomainLocationStats()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainLocationStatsResponse), nil
+	}
+}
+
+//- 支持查询90天内的数据。 - 支持多指标同时查询，不超过5个。 - 最多同时指定20个域名。 - 起始时间和结束时间需要同时指定，左闭右开，毫秒级时间戳，必须为5分钟整时刻点，如：0分、5分、10分、15分等，如果传的不是5分钟时刻点，返回数据可能与预期不一致。统一用开始时间表示一个时间段，如：2019-01-24 20:15:00 表示取 [20:15:00, 20:20:00)的统计数据，且左闭右开。 - action取值：detail,summary
 func (c *CdnClient) ShowDomainStats(request *model.ShowDomainStatsRequest) (*model.ShowDomainStatsResponse, error) {
 	requestDef := GenReqDefForShowDomainStats()
 

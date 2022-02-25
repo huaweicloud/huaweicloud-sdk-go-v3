@@ -27,7 +27,7 @@ type InstancesVo struct {
 	// 实例名。 可以输入中文、数字、字母、下划线、点、破折号。长度介于3-100之间
 
 	DisplayName *string `json:"display_name,omitempty"`
-	// 组织名
+	// 租户名
 
 	DomainName *string `json:"domain_name,omitempty"`
 	// id
@@ -45,7 +45,7 @@ type InstancesVo struct {
 	// 名称
 
 	Name *string `json:"name,omitempty"`
-	// 组织id（对应华为云帐号的domainId）
+	// 租户id（对应华为云帐号的domainId）
 
 	OrganizationId *string `json:"organization_id,omitempty"`
 	// 用户id

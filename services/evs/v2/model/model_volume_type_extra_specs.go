@@ -8,13 +8,13 @@ import (
 
 // 云硬盘类型的规格
 type VolumeTypeExtraSpecs struct {
-	// 支持当前云硬盘类型的可用区列表。
+	// 支持当前云硬盘类型的可用区列表，列表的元素以逗号分隔。
 
 	RESKEYavailabilityZones *string `json:"RESKEY:availability_zones,omitempty"`
 	// 预留属性。
 
 	AvailabilityZone *string `json:"availability-zone,omitempty"`
-	// 当前云硬盘类型已售罄的可用区列表。
+	// 当前云硬盘类型已售罄的可用区列表，列表的元素以逗号分隔。
 
 	OsVendorExtendedsoldOutAvailabilityZones *string `json:"os-vendor-extended:sold_out_availability_zones,omitempty"`
 	// 预留属性。

@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -34,13 +37,13 @@ type ShowProductResponse struct {
 	Model *string `json:"model,omitempty"`
 	// 产品类型，0-普通产品(不支持子设备) 1-网关产品
 
-	ProductType *int32 `json:"product_type,omitempty"`
+	ProductType *ShowProductResponseProductType `json:"product_type,omitempty"`
 	// 产品描述，长度0-200
 
 	Description *string `json:"description,omitempty"`
 	// 产品的协议类型 0-mqtt 2-modbus 4-opcua
 
-	ProtocolType *int32 `json:"protocol_type,omitempty"`
+	ProtocolType *ShowProductResponseProtocolType `json:"protocol_type,omitempty"`
 	// 产品的设备类型（默认Default）
 
 	DeviceType *string `json:"device_type,omitempty"`
@@ -72,4 +75,81 @@ func (o ShowProductResponse) String() string {
 	}
 
 	return strings.Join([]string{"ShowProductResponse", string(data)}, " ")
+}
+
+type ShowProductResponseProductType struct {
+	value int32
+}
+
+type ShowProductResponseProductTypeEnum struct {
+	E_0 ShowProductResponseProductType
+	E_1 ShowProductResponseProductType
+}
+
+func GetShowProductResponseProductTypeEnum() ShowProductResponseProductTypeEnum {
+	return ShowProductResponseProductTypeEnum{
+		E_0: ShowProductResponseProductType{
+			value: 0,
+		}, E_1: ShowProductResponseProductType{
+			value: 1,
+		},
+	}
+}
+
+func (c ShowProductResponseProductType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowProductResponseProductType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type ShowProductResponseProtocolType struct {
+	value int32
+}
+
+type ShowProductResponseProtocolTypeEnum struct {
+	E_0 ShowProductResponseProtocolType
+	E_2 ShowProductResponseProtocolType
+	E_4 ShowProductResponseProtocolType
+}
+
+func GetShowProductResponseProtocolTypeEnum() ShowProductResponseProtocolTypeEnum {
+	return ShowProductResponseProtocolTypeEnum{
+		E_0: ShowProductResponseProtocolType{
+			value: 0,
+		}, E_2: ShowProductResponseProtocolType{
+			value: 2,
+		}, E_4: ShowProductResponseProtocolType{
+			value: 4,
+		},
+	}
+}
+
+func (c ShowProductResponseProtocolType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowProductResponseProtocolType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

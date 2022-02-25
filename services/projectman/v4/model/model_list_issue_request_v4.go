@@ -52,6 +52,12 @@ type ListIssueRequestV4 struct {
 	// 工作项类型,2任务/task,3缺陷/bug,5epic,6feature,7story
 
 	TrackerIds *[]int32 `json:"tracker_ids,omitempty"`
+	// true 查询的工作项包含已经逻辑删除的，false 查询的工作项不包含已经删除的
+
+	IncludeDeleted *bool `json:"include_deleted,omitempty"`
+	// 根据工作项的更新时间查询工作项，(查询的起始时间,查询的结束时间)
+
+	UpdatedTimeInterval *string `json:"updated_time_interval,omitempty"`
 }
 
 func (o ListIssueRequestV4) String() string {

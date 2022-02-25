@@ -7,16 +7,16 @@ import (
 )
 
 type ReportdetailsInfo struct {
-	// data
+	// 表格数据
 
 	Data *[]ReportdetailItemInfo `json:"data,omitempty"`
-	// pageIndex
+	// 页码
 
 	PageIndex *int32 `json:"pageIndex,omitempty"`
-	// pageSize
+	// 每页大小
 
 	PageSize *int32 `json:"pageSize,omitempty"`
-	// total
+	// 总记录数
 
 	Total *int32 `json:"total,omitempty"`
 }

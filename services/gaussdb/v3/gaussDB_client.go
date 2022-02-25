@@ -239,6 +239,17 @@ func (c *GaussDBClient) SetGaussMySqlQuotas(request *model.SetGaussMySqlQuotasRe
 	}
 }
 
+//查询审计日志开关状态
+func (c *GaussDBClient) ShowAuditLog(request *model.ShowAuditLogRequest) (*model.ShowAuditLogResponse, error) {
+	requestDef := GenReqDefForShowAuditLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAuditLogResponse), nil
+	}
+}
+
 //查询备份列表
 func (c *GaussDBClient) ShowGaussMySqlBackupList(request *model.ShowGaussMySqlBackupListRequest) (*model.ShowGaussMySqlBackupListResponse, error) {
 	requestDef := GenReqDefForShowGaussMySqlBackupList()
@@ -357,6 +368,17 @@ func (c *GaussDBClient) ShowInstanceMonitorExtend(request *model.ShowInstanceMon
 		return nil, err
 	} else {
 		return resp.(*model.ShowInstanceMonitorExtendResponse), nil
+	}
+}
+
+//开启或者关闭审计日志
+func (c *GaussDBClient) UpdateAuditLog(request *model.UpdateAuditLogRequest) (*model.UpdateAuditLogResponse, error) {
+	requestDef := GenReqDefForUpdateAuditLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAuditLogResponse), nil
 	}
 }
 

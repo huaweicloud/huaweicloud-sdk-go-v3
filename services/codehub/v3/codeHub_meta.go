@@ -989,6 +989,35 @@ func GenReqDefForShowStatisticCommit() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowStatisticCommitV3() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/repositories/{repository_id}/commit-lines").
+		WithResponse(new(model.ShowStatisticCommitV3Response)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RefName").
+		WithJsonTag("ref_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BeginDate").
+		WithJsonTag("begin_date").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EndDate").
+		WithJsonTag("end_date").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowStatisticalData() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

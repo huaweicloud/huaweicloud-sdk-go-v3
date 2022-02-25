@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -38,10 +41,10 @@ type Device struct {
 	AppName *string `json:"app_name,omitempty"`
 	// 设备状态 0-启用 1-禁用
 
-	Status *int32 `json:"status,omitempty"`
+	Status *DeviceStatus `json:"status,omitempty"`
 	// 是否在线 0-未连接 1-在线 2-离线
 
-	OnlineStatus *int32 `json:"online_status,omitempty"`
+	OnlineStatus *DeviceOnlineStatus `json:"online_status,omitempty"`
 	// 备注
 
 	Description *string `json:"description,omitempty"`
@@ -80,7 +83,7 @@ type Device struct {
 	NodeType *int32 `json:"node_type,omitempty"`
 	// 设备类型<br>0-普通设备（无子设备也无父设备）<br>1-网关设备(可挂载子设备)<br>2-子设备(归属于某个网关设备)
 
-	DeviceType *int32 `json:"device_type,omitempty"`
+	DeviceType *DeviceDeviceType `json:"device_type,omitempty"`
 	// 客户端ip
 
 	ClientIp *string `json:"client_ip,omitempty"`
@@ -95,7 +98,7 @@ type Device struct {
 	Version *string `json:"version,omitempty"`
 	// modbus和opcua设备特有,表示设备所属产品的类型 0-普通产品 1-modbus网关产品 2-opcua网关产品
 
-	PluginId *int32 `json:"plugin_id,omitempty"`
+	PluginId *DevicePluginId `json:"plugin_id,omitempty"`
 	// 应用ID
 
 	AppId *string `json:"app_id,omitempty"`
@@ -108,4 +111,161 @@ func (o Device) String() string {
 	}
 
 	return strings.Join([]string{"Device", string(data)}, " ")
+}
+
+type DeviceStatus struct {
+	value int32
+}
+
+type DeviceStatusEnum struct {
+	E_0 DeviceStatus
+	E_1 DeviceStatus
+}
+
+func GetDeviceStatusEnum() DeviceStatusEnum {
+	return DeviceStatusEnum{
+		E_0: DeviceStatus{
+			value: 0,
+		}, E_1: DeviceStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c DeviceStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DeviceStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type DeviceOnlineStatus struct {
+	value int32
+}
+
+type DeviceOnlineStatusEnum struct {
+	E_0 DeviceOnlineStatus
+	E_1 DeviceOnlineStatus
+	E_2 DeviceOnlineStatus
+}
+
+func GetDeviceOnlineStatusEnum() DeviceOnlineStatusEnum {
+	return DeviceOnlineStatusEnum{
+		E_0: DeviceOnlineStatus{
+			value: 0,
+		}, E_1: DeviceOnlineStatus{
+			value: 1,
+		}, E_2: DeviceOnlineStatus{
+			value: 2,
+		},
+	}
+}
+
+func (c DeviceOnlineStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DeviceOnlineStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type DeviceDeviceType struct {
+	value int32
+}
+
+type DeviceDeviceTypeEnum struct {
+	E_0 DeviceDeviceType
+	E_1 DeviceDeviceType
+	E_2 DeviceDeviceType
+}
+
+func GetDeviceDeviceTypeEnum() DeviceDeviceTypeEnum {
+	return DeviceDeviceTypeEnum{
+		E_0: DeviceDeviceType{
+			value: 0,
+		}, E_1: DeviceDeviceType{
+			value: 1,
+		}, E_2: DeviceDeviceType{
+			value: 2,
+		},
+	}
+}
+
+func (c DeviceDeviceType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DeviceDeviceType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type DevicePluginId struct {
+	value int32
+}
+
+type DevicePluginIdEnum struct {
+	E_0 DevicePluginId
+	E_1 DevicePluginId
+	E_2 DevicePluginId
+}
+
+func GetDevicePluginIdEnum() DevicePluginIdEnum {
+	return DevicePluginIdEnum{
+		E_0: DevicePluginId{
+			value: 0,
+		}, E_1: DevicePluginId{
+			value: 1,
+		}, E_2: DevicePluginId{
+			value: 2,
+		},
+	}
+}
+
+func (c DevicePluginId) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DevicePluginId) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

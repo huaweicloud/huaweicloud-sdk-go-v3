@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListConnectionsResponse struct {
-	Total *string `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty"`
 
 	Connections    *[]ConnectionInfo `json:"connections,omitempty"`
 	HttpStatusCode int               `json:"-"`

@@ -25,7 +25,7 @@ type ShowDetailsOfInstanceV2Response struct {
 	Status *ShowDetailsOfInstanceV2ResponseStatus `json:"status,omitempty"`
 	// 实例状态对应编号 - 1：创建中 - 2：创建成功 - 3：创建失败 - 4：初始化中 - 5：注册中 - 6：运行中 - 7：初始化失败 - 8：注册失败 - 10：安装中 - 11：安装失败 - 12：升级中 - 13：升级失败 - 20：回滚中 - 21：回滚成功 - 22：回滚失败 - 23：删除中 - 24：删除失败 - 25：注销中 - 26：注销失败 - 27：创建超时 - 28：初始化超时 - 29：注册超时 - 30：安装超时 - 31：升级超时 - 32：回滚超时 - 33：删除超时 - 34：注销超时 - 35：启动中 - 36：冻结中 - 37：已冻结 - 38：重启中 - 39：重启失败 - 40：实例异常 - 41：重启超时
 
-	InstanceStatus *int32 `json:"instance_status,omitempty"`
+	InstanceStatus *ShowDetailsOfInstanceV2ResponseInstanceStatus `json:"instance_status,omitempty"`
 	// 实例类型  暂不支持
 
 	Type *string `json:"type,omitempty"`
@@ -43,7 +43,7 @@ type ShowDetailsOfInstanceV2Response struct {
 	EipAddress *string `json:"eip_address,omitempty"`
 	// 实例计费方式： - 0：按需计费 - 1：包周期计费
 
-	ChargingMode *int32 `json:"charging_mode,omitempty"`
+	ChargingMode *ShowDetailsOfInstanceV2ResponseChargingMode `json:"charging_mode,omitempty"`
 	// 包周期计费订单编号
 
 	CbcMetadata *string `json:"cbc_metadata,omitempty"`
@@ -284,6 +284,139 @@ func (c *ShowDetailsOfInstanceV2ResponseStatus) UnmarshalJSON(b []byte) error {
 	}
 }
 
+type ShowDetailsOfInstanceV2ResponseInstanceStatus struct {
+	value int32
+}
+
+type ShowDetailsOfInstanceV2ResponseInstanceStatusEnum struct {
+	E_1  ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_2  ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_3  ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_4  ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_5  ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_6  ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_7  ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_8  ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_10 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_11 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_12 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_13 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_20 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_21 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_22 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_23 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_24 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_25 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_26 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_27 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_28 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_29 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_30 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_31 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_32 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_33 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_34 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_35 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_36 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_37 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_38 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_39 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_40 ShowDetailsOfInstanceV2ResponseInstanceStatus
+	E_41 ShowDetailsOfInstanceV2ResponseInstanceStatus
+}
+
+func GetShowDetailsOfInstanceV2ResponseInstanceStatusEnum() ShowDetailsOfInstanceV2ResponseInstanceStatusEnum {
+	return ShowDetailsOfInstanceV2ResponseInstanceStatusEnum{
+		E_1: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 1,
+		}, E_2: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 2,
+		}, E_3: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 3,
+		}, E_4: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 4,
+		}, E_5: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 5,
+		}, E_6: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 6,
+		}, E_7: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 7,
+		}, E_8: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 8,
+		}, E_10: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 10,
+		}, E_11: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 11,
+		}, E_12: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 12,
+		}, E_13: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 13,
+		}, E_20: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 20,
+		}, E_21: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 21,
+		}, E_22: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 22,
+		}, E_23: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 23,
+		}, E_24: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 24,
+		}, E_25: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 25,
+		}, E_26: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 26,
+		}, E_27: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 27,
+		}, E_28: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 28,
+		}, E_29: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 29,
+		}, E_30: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 30,
+		}, E_31: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 31,
+		}, E_32: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 32,
+		}, E_33: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 33,
+		}, E_34: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 34,
+		}, E_35: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 35,
+		}, E_36: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 36,
+		}, E_37: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 37,
+		}, E_38: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 38,
+		}, E_39: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 39,
+		}, E_40: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 40,
+		}, E_41: ShowDetailsOfInstanceV2ResponseInstanceStatus{
+			value: 41,
+		},
+	}
+}
+
+func (c ShowDetailsOfInstanceV2ResponseInstanceStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowDetailsOfInstanceV2ResponseInstanceStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
 type ShowDetailsOfInstanceV2ResponseSpec struct {
 	value string
 }
@@ -343,5 +476,42 @@ func (c *ShowDetailsOfInstanceV2ResponseSpec) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowDetailsOfInstanceV2ResponseChargingMode struct {
+	value int32
+}
+
+type ShowDetailsOfInstanceV2ResponseChargingModeEnum struct {
+	E_0 ShowDetailsOfInstanceV2ResponseChargingMode
+	E_1 ShowDetailsOfInstanceV2ResponseChargingMode
+}
+
+func GetShowDetailsOfInstanceV2ResponseChargingModeEnum() ShowDetailsOfInstanceV2ResponseChargingModeEnum {
+	return ShowDetailsOfInstanceV2ResponseChargingModeEnum{
+		E_0: ShowDetailsOfInstanceV2ResponseChargingMode{
+			value: 0,
+		}, E_1: ShowDetailsOfInstanceV2ResponseChargingMode{
+			value: 1,
+		},
+	}
+}
+
+func (c ShowDetailsOfInstanceV2ResponseChargingMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowDetailsOfInstanceV2ResponseChargingMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

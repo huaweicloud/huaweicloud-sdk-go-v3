@@ -16,7 +16,13 @@ type ExportCertificateResponse struct {
 	CertificateChain *string `json:"certificate_chain,omitempty"`
 	// 证书私钥。
 
-	PrivateKey     *string `json:"private_key,omitempty"`
+	PrivateKey *string `json:"private_key,omitempty"`
+	// 国密证书返回，加密证书内容。
+
+	EncCertificate *string `json:"enc_certificate,omitempty"`
+	// 国密证书返回，加密证书私钥。
+
+	EncPrivateKey  *string `json:"enc_private_key,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

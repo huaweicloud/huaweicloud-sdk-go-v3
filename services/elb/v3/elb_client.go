@@ -19,6 +19,28 @@ func ElbClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+//在指定pool下批量创建后端服务器。
+func (c *ElbClient) BatchCreateMembers(request *model.BatchCreateMembersRequest) (*model.BatchCreateMembersResponse, error) {
+	requestDef := GenReqDefForBatchCreateMembers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateMembersResponse), nil
+	}
+}
+
+//在指定pool下批量删除后端服务器。
+func (c *ElbClient) BatchDeleteMembers(request *model.BatchDeleteMembersRequest) (*model.BatchDeleteMembersResponse, error) {
+	requestDef := GenReqDefForBatchDeleteMembers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteMembersResponse), nil
+	}
+}
+
 //批量更新转发策略的优先级。
 func (c *ElbClient) BatchUpdatePoliciesPriority(request *model.BatchUpdatePoliciesPriorityRequest) (*model.BatchUpdatePoliciesPriorityResponse, error) {
 	requestDef := GenReqDefForBatchUpdatePoliciesPriority()

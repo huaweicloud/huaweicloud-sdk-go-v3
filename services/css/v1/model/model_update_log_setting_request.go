@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateLogSettingRequest struct {
-	// 指定查询集群ID。
+	// 指定待更改的集群ID。
 
 	ClusterId string `json:"cluster_id"`
 

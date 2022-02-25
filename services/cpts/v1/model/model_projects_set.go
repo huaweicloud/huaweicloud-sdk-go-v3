@@ -10,10 +10,10 @@ import (
 type ProjectsSet struct {
 	// 创建时间
 
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *sdktime.SdkTime `json:"CreateTime,omitempty"`
 	// 更新时间
 
-	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
+	UpdateTime *sdktime.SdkTime `json:"UpdateTime,omitempty"`
 	// 描述
 
 	Description *string `json:"description,omitempty"`
@@ -26,9 +26,12 @@ type ProjectsSet struct {
 	// 工程状态
 
 	Status *int32 `json:"status,omitempty"`
-	// 工程所属组
+	// 外部参数
 
-	Group *string `json:"group,omitempty"`
+	ExternalParams *interface{} `json:"external_params,omitempty"`
+	// 文件变量
+
+	VariablesNoFile *[]string `json:"variables_no_file,omitempty"`
 }
 
 func (o ProjectsSet) String() string {

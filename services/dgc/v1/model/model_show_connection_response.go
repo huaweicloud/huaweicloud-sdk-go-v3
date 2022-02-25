@@ -13,10 +13,12 @@ import (
 type ShowConnectionResponse struct {
 	Name *string `json:"name,omitempty"`
 
-	ConnectionType *ShowConnectionResponseConnectionType `json:"connectionType,omitempty"`
+	Type *ShowConnectionResponseType `json:"type,omitempty"`
 
-	Config         *interface{} `json:"config,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Config *interface{} `json:"config,omitempty"`
+
+	Description    *string `json:"description,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowConnectionResponse) String() string {
@@ -28,47 +30,47 @@ func (o ShowConnectionResponse) String() string {
 	return strings.Join([]string{"ShowConnectionResponse", string(data)}, " ")
 }
 
-type ShowConnectionResponseConnectionType struct {
+type ShowConnectionResponseType struct {
 	value string
 }
 
-type ShowConnectionResponseConnectionTypeEnum struct {
-	DWS         ShowConnectionResponseConnectionType
-	DLI         ShowConnectionResponseConnectionType
-	SPARK_SQL   ShowConnectionResponseConnectionType
-	HIVE        ShowConnectionResponseConnectionType
-	RDS         ShowConnectionResponseConnectionType
-	CLOUD_TABLE ShowConnectionResponseConnectionType
+type ShowConnectionResponseTypeEnum struct {
+	DWS         ShowConnectionResponseType
+	DLI         ShowConnectionResponseType
+	SPARK_SQL   ShowConnectionResponseType
+	HIVE        ShowConnectionResponseType
+	RDS         ShowConnectionResponseType
+	CLOUD_TABLE ShowConnectionResponseType
 }
 
-func GetShowConnectionResponseConnectionTypeEnum() ShowConnectionResponseConnectionTypeEnum {
-	return ShowConnectionResponseConnectionTypeEnum{
-		DWS: ShowConnectionResponseConnectionType{
+func GetShowConnectionResponseTypeEnum() ShowConnectionResponseTypeEnum {
+	return ShowConnectionResponseTypeEnum{
+		DWS: ShowConnectionResponseType{
 			value: "DWS",
 		},
-		DLI: ShowConnectionResponseConnectionType{
+		DLI: ShowConnectionResponseType{
 			value: "DLI",
 		},
-		SPARK_SQL: ShowConnectionResponseConnectionType{
+		SPARK_SQL: ShowConnectionResponseType{
 			value: "SparkSQL",
 		},
-		HIVE: ShowConnectionResponseConnectionType{
+		HIVE: ShowConnectionResponseType{
 			value: "Hive",
 		},
-		RDS: ShowConnectionResponseConnectionType{
+		RDS: ShowConnectionResponseType{
 			value: "RDS",
 		},
-		CLOUD_TABLE: ShowConnectionResponseConnectionType{
+		CLOUD_TABLE: ShowConnectionResponseType{
 			value: "CloudTable",
 		},
 	}
 }
 
-func (c ShowConnectionResponseConnectionType) MarshalJSON() ([]byte, error) {
+func (c ShowConnectionResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *ShowConnectionResponseConnectionType) UnmarshalJSON(b []byte) error {
+func (c *ShowConnectionResponseType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

@@ -30,6 +30,17 @@ func (c *CodeCheckClient) CheckParameters(request *model.CheckParametersRequest)
 	}
 }
 
+//提供每次扫描的问题数量统计
+func (c *CodeCheckClient) CheckRecord(request *model.CheckRecordRequest) (*model.CheckRecordResponse, error) {
+	requestDef := GenReqDefForCheckRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckRecordResponse), nil
+	}
+}
+
 //可根据需求灵活的组合规则。
 func (c *CodeCheckClient) CreateRuleset(request *model.CreateRulesetRequest) (*model.CreateRulesetResponse, error) {
 	requestDef := GenReqDefForCreateRuleset()

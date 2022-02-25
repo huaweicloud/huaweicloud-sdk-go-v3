@@ -14,7 +14,7 @@ type ListDependenciesRequest struct {
 	// 依赖包类型public：公开,private:私有，all：全部。缺省时查询全量。
 
 	DependencyType *ListDependenciesRequestDependencyType `json:"dependency_type,omitempty"`
-	// 运行时语言
+	// 运行时语言 Java11、Nodejs14.18、Python3.9在type为v2时支持
 
 	Runtime *ListDependenciesRequestRuntime `json:"runtime,omitempty"`
 	// 依赖包名称。
@@ -84,49 +84,61 @@ type ListDependenciesRequestRuntime struct {
 }
 
 type ListDependenciesRequestRuntimeEnum struct {
-	JAVA_8          ListDependenciesRequestRuntime
-	NODE_JS_6_10    ListDependenciesRequestRuntime
-	NODE_JS_8_10    ListDependenciesRequestRuntime
-	NODE_JS_10_16   ListDependenciesRequestRuntime
-	NODE_JS_12_13   ListDependenciesRequestRuntime
-	PYTHON_2_7      ListDependenciesRequestRuntime
-	PYTHON_3_6      ListDependenciesRequestRuntime
-	GO_1_8          ListDependenciesRequestRuntime
-	GO_1_X          ListDependenciesRequestRuntime
+	JAVA8           ListDependenciesRequestRuntime
+	JAVA11          ListDependenciesRequestRuntime
+	NODE_JS6_10     ListDependenciesRequestRuntime
+	NODE_JS8_10     ListDependenciesRequestRuntime
+	NODE_JS10_16    ListDependenciesRequestRuntime
+	NODE_JS12_13    ListDependenciesRequestRuntime
+	NODE_JS14_18    ListDependenciesRequestRuntime
+	PYTHON2_7       ListDependenciesRequestRuntime
+	PYTHON3_6       ListDependenciesRequestRuntime
+	PYTHON3_9       ListDependenciesRequestRuntime
+	GO1_8           ListDependenciesRequestRuntime
+	GO1_X           ListDependenciesRequestRuntime
 	C__NET_CORE_2_0 ListDependenciesRequestRuntime
 	C__NET_CORE_2_1 ListDependenciesRequestRuntime
 	C__NET_CORE_3_1 ListDependenciesRequestRuntime
-	PHP_7_3         ListDependenciesRequestRuntime
+	PHP7_3          ListDependenciesRequestRuntime
 }
 
 func GetListDependenciesRequestRuntimeEnum() ListDependenciesRequestRuntimeEnum {
 	return ListDependenciesRequestRuntimeEnum{
-		JAVA_8: ListDependenciesRequestRuntime{
-			value: "Java 8",
+		JAVA8: ListDependenciesRequestRuntime{
+			value: "Java8",
 		},
-		NODE_JS_6_10: ListDependenciesRequestRuntime{
-			value: "Node.js 6.10",
+		JAVA11: ListDependenciesRequestRuntime{
+			value: "Java11",
 		},
-		NODE_JS_8_10: ListDependenciesRequestRuntime{
-			value: "Node.js 8.10",
+		NODE_JS6_10: ListDependenciesRequestRuntime{
+			value: "Node.js6.10",
 		},
-		NODE_JS_10_16: ListDependenciesRequestRuntime{
-			value: "Node.js 10.16",
+		NODE_JS8_10: ListDependenciesRequestRuntime{
+			value: "Node.js8.10",
 		},
-		NODE_JS_12_13: ListDependenciesRequestRuntime{
-			value: "Node.js 12.13",
+		NODE_JS10_16: ListDependenciesRequestRuntime{
+			value: "Node.js10.16",
 		},
-		PYTHON_2_7: ListDependenciesRequestRuntime{
-			value: "Python 2.7",
+		NODE_JS12_13: ListDependenciesRequestRuntime{
+			value: "Node.js12.13",
 		},
-		PYTHON_3_6: ListDependenciesRequestRuntime{
-			value: "Python 3.6",
+		NODE_JS14_18: ListDependenciesRequestRuntime{
+			value: "Node.js14.18",
 		},
-		GO_1_8: ListDependenciesRequestRuntime{
-			value: "Go 1.8",
+		PYTHON2_7: ListDependenciesRequestRuntime{
+			value: "Python2.7",
 		},
-		GO_1_X: ListDependenciesRequestRuntime{
-			value: "Go 1.x",
+		PYTHON3_6: ListDependenciesRequestRuntime{
+			value: "Python3.6",
+		},
+		PYTHON3_9: ListDependenciesRequestRuntime{
+			value: "Python3.9",
+		},
+		GO1_8: ListDependenciesRequestRuntime{
+			value: "Go1.8",
+		},
+		GO1_X: ListDependenciesRequestRuntime{
+			value: "Go1.x",
 		},
 		C__NET_CORE_2_0: ListDependenciesRequestRuntime{
 			value: "C#(.NET Core 2.0)",
@@ -137,8 +149,8 @@ func GetListDependenciesRequestRuntimeEnum() ListDependenciesRequestRuntimeEnum 
 		C__NET_CORE_3_1: ListDependenciesRequestRuntime{
 			value: "C#(.NET Core 3.1)",
 		},
-		PHP_7_3: ListDependenciesRequestRuntime{
-			value: "PHP 7.3",
+		PHP7_3: ListDependenciesRequestRuntime{
+			value: "PHP7.3",
 		},
 	}
 }

@@ -8,6 +8,10 @@ import (
 
 // Request Object
 type CreateTaskRequest struct {
+	// 项目ID
+
+	ProjectId string `json:"project_id"`
+
 	Body *CreateTaskRequestV2 `json:"body,omitempty"`
 }
 

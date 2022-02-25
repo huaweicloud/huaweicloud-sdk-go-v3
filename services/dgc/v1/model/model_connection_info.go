@@ -10,11 +10,13 @@ import (
 )
 
 type ConnectionInfo struct {
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
-	ConnectionType *ConnectionInfoConnectionType `json:"connectionType,omitempty"`
+	Type ConnectionInfoType `json:"type"`
 
 	Config *interface{} `json:"config,omitempty"`
+
+	Description *string `json:"description,omitempty"`
 }
 
 func (o ConnectionInfo) String() string {
@@ -26,47 +28,47 @@ func (o ConnectionInfo) String() string {
 	return strings.Join([]string{"ConnectionInfo", string(data)}, " ")
 }
 
-type ConnectionInfoConnectionType struct {
+type ConnectionInfoType struct {
 	value string
 }
 
-type ConnectionInfoConnectionTypeEnum struct {
-	DWS         ConnectionInfoConnectionType
-	DLI         ConnectionInfoConnectionType
-	SPARK_SQL   ConnectionInfoConnectionType
-	HIVE        ConnectionInfoConnectionType
-	RDS         ConnectionInfoConnectionType
-	CLOUD_TABLE ConnectionInfoConnectionType
+type ConnectionInfoTypeEnum struct {
+	DWS         ConnectionInfoType
+	DLI         ConnectionInfoType
+	SPARK_SQL   ConnectionInfoType
+	HIVE        ConnectionInfoType
+	RDS         ConnectionInfoType
+	CLOUD_TABLE ConnectionInfoType
 }
 
-func GetConnectionInfoConnectionTypeEnum() ConnectionInfoConnectionTypeEnum {
-	return ConnectionInfoConnectionTypeEnum{
-		DWS: ConnectionInfoConnectionType{
+func GetConnectionInfoTypeEnum() ConnectionInfoTypeEnum {
+	return ConnectionInfoTypeEnum{
+		DWS: ConnectionInfoType{
 			value: "DWS",
 		},
-		DLI: ConnectionInfoConnectionType{
+		DLI: ConnectionInfoType{
 			value: "DLI",
 		},
-		SPARK_SQL: ConnectionInfoConnectionType{
+		SPARK_SQL: ConnectionInfoType{
 			value: "SparkSQL",
 		},
-		HIVE: ConnectionInfoConnectionType{
+		HIVE: ConnectionInfoType{
 			value: "Hive",
 		},
-		RDS: ConnectionInfoConnectionType{
+		RDS: ConnectionInfoType{
 			value: "RDS",
 		},
-		CLOUD_TABLE: ConnectionInfoConnectionType{
+		CLOUD_TABLE: ConnectionInfoType{
 			value: "CloudTable",
 		},
 	}
 }
 
-func (c ConnectionInfoConnectionType) MarshalJSON() ([]byte, error) {
+func (c ConnectionInfoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *ConnectionInfoConnectionType) UnmarshalJSON(b []byte) error {
+func (c *ConnectionInfoType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

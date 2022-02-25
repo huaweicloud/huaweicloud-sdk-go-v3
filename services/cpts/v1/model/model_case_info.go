@@ -18,7 +18,7 @@ type CaseInfo struct {
 	CaseType *int32 `json:"case_type,omitempty"`
 	// contents
 
-	Content *[]Contents `json:"content,omitempty"`
+	Contents *[]Contents `json:"contents,omitempty"`
 	// for_loop_params
 
 	ForLoopParams *[]interface{} `json:"for_loop_params,omitempty"`
@@ -34,6 +34,9 @@ type CaseInfo struct {
 	// temp_id
 
 	TempId *int32 `json:"temp_id,omitempty"`
+	// sort
+
+	Sort *int32 `json:"sort,omitempty"`
 }
 
 func (o CaseInfo) String() string {

@@ -13,9 +13,6 @@ type AddressAndPorts struct {
 	// 端口号。
 
 	Port *int32 `json:"port,omitempty"`
-	// 联通状态
-
-	Status *int32 `json:"status,omitempty"`
 }
 
 func (o AddressAndPorts) String() string {

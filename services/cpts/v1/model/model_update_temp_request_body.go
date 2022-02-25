@@ -16,7 +16,7 @@ type UpdateTempRequestBody struct {
 	ProjectId int32 `json:"project_id"`
 	// name
 
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 	// temp_type
 
 	TempType *int32 `json:"temp_type,omitempty"`

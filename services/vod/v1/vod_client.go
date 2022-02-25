@@ -239,6 +239,17 @@ func (c *VodClient) ListAssetList(request *model.ListAssetListRequest) (*model.L
 	}
 }
 
+//查询指定点播域名某段时间内在CDN的相关日志。
+func (c *VodClient) ListDomainLogs(request *model.ListDomainLogsRequest) (*model.ListDomainLogsResponse, error) {
+	requestDef := GenReqDefForListDomainLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDomainLogsResponse), nil
+	}
+}
+
 //查询转码模板组列表。
 func (c *VodClient) ListTemplateGroup(request *model.ListTemplateGroupRequest) (*model.ListTemplateGroupResponse, error) {
 	requestDef := GenReqDefForListTemplateGroup()

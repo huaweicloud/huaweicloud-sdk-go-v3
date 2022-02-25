@@ -28,7 +28,7 @@ type ImportFunctionResponse struct {
 	// 函数所属的分组Package，用于用户针对函数的自定义分组。
 
 	Package *string `json:"package,omitempty"`
-	// FunctionGraph函数的执行环境 支持Node.js6.10、Python2.7、Python3.6、Java8、Go1.8、Node.js 8.10、C#.NET Core 2.0、C#.NET Core 2.1、PHP7.3。 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。
+	// FunctionGraph函数的执行环境 支持Node.js6.10、Python2.7、Python3.6、Java8、Go1.8、Node.js 8.10、C#.NET Core 2.0、C#.NET Core 2.1、PHP7.3。 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 Java11、Nodejs14:、Python3:在type为v2时支持
 
 	Runtime *ImportFunctionResponseRuntime `json:"runtime,omitempty"`
 	// 函数执行超时时间，超时函数将被强行停止，范围3～900秒
@@ -118,49 +118,61 @@ type ImportFunctionResponseRuntime struct {
 }
 
 type ImportFunctionResponseRuntimeEnum struct {
-	JAVA_8          ImportFunctionResponseRuntime
-	NODE_JS_6_10    ImportFunctionResponseRuntime
-	NODE_JS_8_10    ImportFunctionResponseRuntime
-	NODE_JS_10_16   ImportFunctionResponseRuntime
-	NODE_JS_12_13   ImportFunctionResponseRuntime
-	PYTHON_2_7      ImportFunctionResponseRuntime
-	PYTHON_3_6      ImportFunctionResponseRuntime
-	GO_1_8          ImportFunctionResponseRuntime
-	GO_1_X          ImportFunctionResponseRuntime
+	JAVA8           ImportFunctionResponseRuntime
+	JAVA11          ImportFunctionResponseRuntime
+	NODE_JS6_10     ImportFunctionResponseRuntime
+	NODE_JS8_10     ImportFunctionResponseRuntime
+	NODE_JS10_16    ImportFunctionResponseRuntime
+	NODE_JS12_13    ImportFunctionResponseRuntime
+	NODE_JS14_18    ImportFunctionResponseRuntime
+	PYTHON2_7       ImportFunctionResponseRuntime
+	PYTHON3_6       ImportFunctionResponseRuntime
+	PYTHON3_9       ImportFunctionResponseRuntime
+	GO1_8           ImportFunctionResponseRuntime
+	GO1_X           ImportFunctionResponseRuntime
 	C__NET_CORE_2_0 ImportFunctionResponseRuntime
 	C__NET_CORE_2_1 ImportFunctionResponseRuntime
 	C__NET_CORE_3_1 ImportFunctionResponseRuntime
-	PHP_7_3         ImportFunctionResponseRuntime
+	PHP7_3          ImportFunctionResponseRuntime
 }
 
 func GetImportFunctionResponseRuntimeEnum() ImportFunctionResponseRuntimeEnum {
 	return ImportFunctionResponseRuntimeEnum{
-		JAVA_8: ImportFunctionResponseRuntime{
-			value: "Java 8",
+		JAVA8: ImportFunctionResponseRuntime{
+			value: "Java8",
 		},
-		NODE_JS_6_10: ImportFunctionResponseRuntime{
-			value: "Node.js 6.10",
+		JAVA11: ImportFunctionResponseRuntime{
+			value: "Java11",
 		},
-		NODE_JS_8_10: ImportFunctionResponseRuntime{
-			value: "Node.js 8.10",
+		NODE_JS6_10: ImportFunctionResponseRuntime{
+			value: "Node.js6.10",
 		},
-		NODE_JS_10_16: ImportFunctionResponseRuntime{
-			value: "Node.js 10.16",
+		NODE_JS8_10: ImportFunctionResponseRuntime{
+			value: "Node.js8.10",
 		},
-		NODE_JS_12_13: ImportFunctionResponseRuntime{
-			value: "Node.js 12.13",
+		NODE_JS10_16: ImportFunctionResponseRuntime{
+			value: "Node.js10.16",
 		},
-		PYTHON_2_7: ImportFunctionResponseRuntime{
-			value: "Python 2.7",
+		NODE_JS12_13: ImportFunctionResponseRuntime{
+			value: "Node.js12.13",
 		},
-		PYTHON_3_6: ImportFunctionResponseRuntime{
-			value: "Python 3.6",
+		NODE_JS14_18: ImportFunctionResponseRuntime{
+			value: "Node.js14.18",
 		},
-		GO_1_8: ImportFunctionResponseRuntime{
-			value: "Go 1.8",
+		PYTHON2_7: ImportFunctionResponseRuntime{
+			value: "Python2.7",
 		},
-		GO_1_X: ImportFunctionResponseRuntime{
-			value: "Go 1.x",
+		PYTHON3_6: ImportFunctionResponseRuntime{
+			value: "Python3.6",
+		},
+		PYTHON3_9: ImportFunctionResponseRuntime{
+			value: "Python3.9",
+		},
+		GO1_8: ImportFunctionResponseRuntime{
+			value: "Go1.8",
+		},
+		GO1_X: ImportFunctionResponseRuntime{
+			value: "Go1.x",
 		},
 		C__NET_CORE_2_0: ImportFunctionResponseRuntime{
 			value: "C#(.NET Core 2.0)",
@@ -171,8 +183,8 @@ func GetImportFunctionResponseRuntimeEnum() ImportFunctionResponseRuntimeEnum {
 		C__NET_CORE_3_1: ImportFunctionResponseRuntime{
 			value: "C#(.NET Core 3.1)",
 		},
-		PHP_7_3: ImportFunctionResponseRuntime{
-			value: "PHP 7.3",
+		PHP7_3: ImportFunctionResponseRuntime{
+			value: "PHP7.3",
 		},
 	}
 }

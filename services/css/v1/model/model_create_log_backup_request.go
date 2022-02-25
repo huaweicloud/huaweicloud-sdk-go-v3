@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateLogBackupRequest struct {
-	// 指定查询集群ID。
+	// 指定待备份的集群ID。
 
 	ClusterId string `json:"cluster_id"`
 }

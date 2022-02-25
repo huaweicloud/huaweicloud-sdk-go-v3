@@ -151,7 +151,7 @@ func (c *CloudIDEClient) ListInstances(request *model.ListInstancesRequest) (*mo
 	}
 }
 
-//查询某个组织下的IDE实例列表
+//查询某个租户下的IDE实例列表
 func (c *CloudIDEClient) ListOrgInstances(request *model.ListOrgInstancesRequest) (*model.ListOrgInstancesResponse, error) {
 	requestDef := GenReqDefForListOrgInstances()
 

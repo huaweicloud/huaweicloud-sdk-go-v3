@@ -52,9 +52,10 @@ type ClusterList struct {
 	// 集群所属的企业项目ID。  如果集群所属用户没有开通企业项目，则不会返回该参数。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	// 是为包周期集群。
 
 	Period *bool `json:"period,omitempty"`
-	// 是否开启https访问
+	// 是否开启https访问。
 
 	HttpsEnable *bool `json:"httpsEnable,omitempty"`
 	// 集群标签。

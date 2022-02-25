@@ -11,6 +11,9 @@ type ClusterDetailInstanceFlavor struct {
 	// 节点虚拟机的规格ID。
 
 	Id *string `json:"id,omitempty"`
+	// 链接信息
+
+	Links *[]ClusterLinks `json:"links,omitempty"`
 }
 
 func (o ClusterDetailInstanceFlavor) String() string {

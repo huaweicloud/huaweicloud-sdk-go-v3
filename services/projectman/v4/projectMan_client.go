@@ -63,6 +63,17 @@ func (c *ProjectManClient) BatchDeleteMembersV4(request *model.BatchDeleteMember
 	}
 }
 
+//拥有te_admin角色的用户可以更新其他用户的昵称
+func (c *ProjectManClient) BatchUpdateChildNickNames(request *model.BatchUpdateChildNickNamesRequest) (*model.BatchUpdateChildNickNamesResponse, error) {
+	requestDef := GenReqDefForBatchUpdateChildNickNames()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateChildNickNamesResponse), nil
+	}
+}
+
 //检查项目名称是否存在
 func (c *ProjectManClient) CheckProjectNameV4(request *model.CheckProjectNameV4Request) (*model.CheckProjectNameV4Response, error) {
 	requestDef := GenReqDefForCheckProjectNameV4()
@@ -401,6 +412,17 @@ func (c *ProjectManClient) ListIssuesV4(request *model.ListIssuesV4Request) (*mo
 		return nil, err
 	} else {
 		return resp.(*model.ListIssuesV4Response), nil
+	}
+}
+
+//查看迭代历史记录
+func (c *ProjectManClient) ListIterationHistories(request *model.ListIterationHistoriesRequest) (*model.ListIterationHistoriesResponse, error) {
+	requestDef := GenReqDefForListIterationHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIterationHistoriesResponse), nil
 	}
 }
 

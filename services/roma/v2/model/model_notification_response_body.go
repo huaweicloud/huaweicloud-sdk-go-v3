@@ -40,7 +40,7 @@ func (o NotificationResponseBody) String() string {
 }
 
 type NotificationResponseBodyType struct {
-	value int64
+	value int32
 }
 
 type NotificationResponseBodyTypeEnum struct {
@@ -72,21 +72,21 @@ func (c NotificationResponseBodyType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *NotificationResponseBodyType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int64")
+	myConverter := converter.StringConverterFactory("int32")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
 		if err == nil {
-			c.value = val.(int64)
+			c.value = val.(int32)
 			return nil
 		}
 		return err
 	} else {
-		return errors.New("convert enum data to int64 error")
+		return errors.New("convert enum data to int32 error")
 	}
 }
 
 type NotificationResponseBodyStatus struct {
-	value int64
+	value int32
 }
 
 type NotificationResponseBodyStatusEnum struct {
@@ -109,15 +109,15 @@ func (c NotificationResponseBodyStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *NotificationResponseBodyStatus) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int64")
+	myConverter := converter.StringConverterFactory("int32")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
 		if err == nil {
-			c.value = val.(int64)
+			c.value = val.(int32)
 			return nil
 		}
 		return err
 	} else {
-		return errors.New("convert enum data to int64 error")
+		return errors.New("convert enum data to int32 error")
 	}
 }

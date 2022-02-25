@@ -459,6 +459,17 @@ func (c *CodeHubClient) ShowStatisticCommit(request *model.ShowStatisticCommitRe
 	}
 }
 
+//获取指定日期内代码仓指定分支的代码提交行数
+func (c *CodeHubClient) ShowStatisticCommitV3(request *model.ShowStatisticCommitV3Request) (*model.ShowStatisticCommitV3Response, error) {
+	requestDef := GenReqDefForShowStatisticCommitV3()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStatisticCommitV3Response), nil
+	}
+}
+
 //获取仓库统计数据
 func (c *CodeHubClient) ShowStatisticalData(request *model.ShowStatisticalDataRequest) (*model.ShowStatisticalDataResponse, error) {
 	requestDef := GenReqDefForShowStatisticalData()

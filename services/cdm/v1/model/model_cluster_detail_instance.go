@@ -31,7 +31,7 @@ type ClusterDetailInstance struct {
 	// 组件
 
 	Components *string `json:"components,omitempty"`
-	// 节点配置状态： - In-Sync：配置已同步。 - Applying：配置中。 - Sync-Failure：配置失败。
+	// 节点配置状态（查询集群列表时为null）： - In-Sync：配置已同步。 - Applying：配置中。 - Sync-Failure：配置失败。
 
 	ConfigStatus *string `json:"config_status,omitempty"`
 	// 实例角色
@@ -67,7 +67,7 @@ type ClusterDetailInstance struct {
 	// 内部ip
 
 	InternalIp *string `json:"internal_ip,omitempty"`
-	// 资源信息
+	// 资源信息（查询集群列表时返回值为null）
 
 	Resource *[]Resource `json:"resource,omitempty"`
 }

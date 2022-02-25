@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -28,11 +31,11 @@ type CreateSourceResponse struct {
 	ProductName *string `json:"product_name,omitempty"`
 	// 是否payload使用base64，0-是 1-否
 
-	IsBase64 *int32 `json:"is_base64,omitempty"`
+	IsBase64 *CreateSourceResponseIsBase64 `json:"is_base64,omitempty"`
 	// 是否包含设备信息，0-是，1-否
 
-	ContainDeviceInfo *int32 `json:"contain_device_info,omitempty"`
-	HttpStatusCode    int    `json:"-"`
+	ContainDeviceInfo *CreateSourceResponseContainDeviceInfo `json:"contain_device_info,omitempty"`
+	HttpStatusCode    int                                    `json:"-"`
 }
 
 func (o CreateSourceResponse) String() string {
@@ -42,4 +45,78 @@ func (o CreateSourceResponse) String() string {
 	}
 
 	return strings.Join([]string{"CreateSourceResponse", string(data)}, " ")
+}
+
+type CreateSourceResponseIsBase64 struct {
+	value int32
+}
+
+type CreateSourceResponseIsBase64Enum struct {
+	E_0 CreateSourceResponseIsBase64
+	E_1 CreateSourceResponseIsBase64
+}
+
+func GetCreateSourceResponseIsBase64Enum() CreateSourceResponseIsBase64Enum {
+	return CreateSourceResponseIsBase64Enum{
+		E_0: CreateSourceResponseIsBase64{
+			value: 0,
+		}, E_1: CreateSourceResponseIsBase64{
+			value: 1,
+		},
+	}
+}
+
+func (c CreateSourceResponseIsBase64) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateSourceResponseIsBase64) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type CreateSourceResponseContainDeviceInfo struct {
+	value int32
+}
+
+type CreateSourceResponseContainDeviceInfoEnum struct {
+	E_0 CreateSourceResponseContainDeviceInfo
+	E_1 CreateSourceResponseContainDeviceInfo
+}
+
+func GetCreateSourceResponseContainDeviceInfoEnum() CreateSourceResponseContainDeviceInfoEnum {
+	return CreateSourceResponseContainDeviceInfoEnum{
+		E_0: CreateSourceResponseContainDeviceInfo{
+			value: 0,
+		}, E_1: CreateSourceResponseContainDeviceInfo{
+			value: 1,
+		},
+	}
+}
+
+func (c CreateSourceResponseContainDeviceInfo) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateSourceResponseContainDeviceInfo) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

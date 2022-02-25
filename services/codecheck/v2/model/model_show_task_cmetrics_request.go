@@ -8,6 +8,9 @@ import (
 
 // Request Object
 type ShowTaskCmetricsRequest struct {
+	// 项目ID
+
+	ProjectId string `json:"project_id"`
 	// 任务ID
 
 	TaskId string `json:"task_id"`

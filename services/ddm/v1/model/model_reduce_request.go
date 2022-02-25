@@ -11,6 +11,9 @@ type ReduceRequest struct {
 	// 需要缩容的节点数量，最大值为实例节点数减1。
 
 	NodeNumber int32 `json:"node_number"`
+	// 组id，指定当前进行节点扩容的组。当实例的组>1时，必填。
+
+	GroupId *string `json:"group_id,omitempty"`
 }
 
 func (o ReduceRequest) String() string {

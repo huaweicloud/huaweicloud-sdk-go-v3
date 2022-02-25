@@ -251,6 +251,10 @@ func GenReqDefForDeleteAssets() *def.HttpRequestDef {
 		WithName("AssetId").
 		WithJsonTag("asset_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DeleteType").
+		WithJsonTag("delete_type").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -358,6 +362,34 @@ func GenReqDefForListAssetList() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Order").
 		WithJsonTag("order").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListDomainLogs() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1.0/{project_id}/vod/cdn/logs").
+		WithResponse(new(model.ListDomainLogsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DomainName").
+		WithJsonTag("domain_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("QueryDate").
+		WithJsonTag("query_date").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PageSize").
+		WithJsonTag("page_size").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PageNumber").
+		WithJsonTag("page_number").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

@@ -8,7 +8,7 @@ import (
 
 // 创建终端节接口请求结构体
 type CreateEndpointRequestBody struct {
-	// 说明： 创建Interface类型Client必选。需要指定vpc_id对应VPC下已 创建的网络（network）的 ID，UUID格式。 详细内容请参考《虚拟私有云 API参考》中的“查询子 网”，详见响应消息中的 “id”字段。 创建连接Interface类型终端节 点服务的终端节点时，此参数 必选。 说明 ● VPC的子网网段不能与 198.19.128.0/20重叠 ● VPC路由表中自定义路由的目 的地址不能与 198.19.128.0/20重叠
+	// 说明： 创建Interface类型Client必选。需要指定vpc_id对应VPC下已 创建的网络（network）的 ID，UUID格式。 详细内容请参考《虚拟私有云 API参考》中的“查询子 网”，详见响应消息中的 “id”字段。 创建连接Interface类型终端节 点服务的终端节点时，此参数 必选。 说明 ● VPC的子网网段不能与 198.19.128.0/17重叠 ● VPC路由表中自定义路由的目 的地址不能与 198.19.128.0/17重叠
 
 	SubnetId *string `json:"subnet_id,omitempty"`
 	// 终端节点服务的ID。 可以通过查询终端节点服务概 要获取要连接的终端节点服务 ID。

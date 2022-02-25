@@ -36,13 +36,13 @@ type StartJobSubmission struct {
 	ExecuteDate *int64 `json:"execute-date,omitempty"`
 	// 作业进度，失败时为“-1”，其它情况为0～100
 
-	Progress int32 `json:"progress"`
+	Progress float32 `json:"progress"`
 	// 作业状态： - BOOTING：启动中。 - FAILURE_ON_SUBMIT：提交失败。 - RUNNING：运行中。 - SUCCEEDED：成功。 - FAILED：失败。 - UNKNOWN：未知。 - NEVER_EXECUTED：未被执行
 
 	Status string `json:"status"`
 	// 是否停止增量迁移
 
-	IsStopingIncrement *bool `json:"isStopingIncrement,omitempty"`
+	IsStopingIncrement *string `json:"isStopingIncrement,omitempty"`
 	// 是否定时执行作业
 
 	IsExecuteAuto *bool `json:"is-execute-auto,omitempty"`

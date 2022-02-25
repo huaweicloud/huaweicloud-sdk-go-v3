@@ -31,7 +31,7 @@ type QueryCustomerOnDemandResourcesReq struct {
 	// 一次查询的条数，默认值为10。
 
 	Limit *int32 `json:"limit,omitempty"`
-	// 资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+	// 资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
 
 	Status *int32 `json:"status,omitempty"`
 	// 精英服务商ID。获取方法请参见查询精英服务商列表。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。

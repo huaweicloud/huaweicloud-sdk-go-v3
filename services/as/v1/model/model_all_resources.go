@@ -23,6 +23,9 @@ type AllResources struct {
 	// 配额上限。
 
 	Max *int32 `json:"max,omitempty"`
+	// 配额下限。
+
+	Min *int32 `json:"min,omitempty"`
 }
 
 func (o AllResources) String() string {

@@ -92,6 +92,21 @@ func GenReqDefForBatchDeleteMembersV4() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchUpdateChildNickNames() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v4/domain/child-users").
+		WithResponse(new(model.BatchUpdateChildNickNamesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCheckProjectNameV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -703,6 +718,31 @@ func GenReqDefForListIssuesV4() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListIterationHistories() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/iterations/{iteration_id}/histories").
+		WithResponse(new(model.ListIterationHistoriesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IterationId").
+		WithJsonTag("iteration_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListProjectIterationsV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -714,6 +754,15 @@ func GenReqDefForListProjectIterationsV4() *def.HttpRequestDef {
 		WithName("ProjectId").
 		WithJsonTag("project_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("UpdatedTimeInterval").
+		WithJsonTag("updated_time_interval").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IncludeDeleted").
+		WithJsonTag("include_deleted").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

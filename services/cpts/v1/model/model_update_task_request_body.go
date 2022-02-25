@@ -13,7 +13,7 @@ type UpdateTaskRequestBody struct {
 	Id int32 `json:"id"`
 	// name
 
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 	// description
 
 	Description *string `json:"description,omitempty"`

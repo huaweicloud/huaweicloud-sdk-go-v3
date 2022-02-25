@@ -22,7 +22,7 @@ type TaskMonitorInfo struct {
 	TaskType *TaskMonitorInfoTaskType `json:"task_type,omitempty"`
 	// 任务状态, 只允许两种类型:0-停止, 1-运行中
 
-	Status *int32 `json:"status,omitempty"`
+	Status *TaskMonitorInfoStatus `json:"status,omitempty"`
 	// 任务最近一次执行时间，格式timestamp(ms)，使用UTC时区
 
 	LastExecuteTime *int64 `json:"last_execute_time,omitempty"`
@@ -117,6 +117,43 @@ func (c *TaskMonitorInfoTaskType) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type TaskMonitorInfoStatus struct {
+	value int32
+}
+
+type TaskMonitorInfoStatusEnum struct {
+	E_0 TaskMonitorInfoStatus
+	E_1 TaskMonitorInfoStatus
+}
+
+func GetTaskMonitorInfoStatusEnum() TaskMonitorInfoStatusEnum {
+	return TaskMonitorInfoStatusEnum{
+		E_0: TaskMonitorInfoStatus{
+			value: 0,
+		}, E_1: TaskMonitorInfoStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c TaskMonitorInfoStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *TaskMonitorInfoStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }
 

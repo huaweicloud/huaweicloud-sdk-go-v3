@@ -20,6 +20,9 @@ type PolicyInstanceResources struct {
 	// 配额上限。
 
 	Max *int32 `json:"max,omitempty"`
+	// 配额下限。
+
+	Min *int32 `json:"min,omitempty"`
 }
 
 func (o PolicyInstanceResources) String() string {

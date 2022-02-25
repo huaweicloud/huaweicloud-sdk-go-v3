@@ -31,7 +31,7 @@ type Clusters struct {
 	// 选择是否启用定时开关机功能。定时开关机功能和自动关机功能不可同时开启
 
 	IsScheduleBootOff *bool `json:"isScheduleBootOff,omitempty"`
-	// 集群模式
+	// 集群模式：sharding(分片集群)
 
 	ClusterMode *string `json:"clusterMode,omitempty"`
 	// 命名空间
@@ -56,7 +56,7 @@ type Clusters struct {
 	// 集群名称
 
 	Name string `json:"name"`
-	// 集群状态描述
+	// 集群状态描述：Normal（正常）
 
 	StatusDetail *string `json:"statusDetail,omitempty"`
 	// 集群ID

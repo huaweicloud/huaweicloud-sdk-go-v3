@@ -22,18 +22,18 @@ type InstanceEdgeParam struct {
 	// 实例名。 可以输入中文、数字、字母、下划线、点、破折号。长度介于3-100之间
 
 	InstanceName string `json:"instance_name"`
-	// 组织id（对应华为云帐号的domainId）
+	// 租户id（对应华为云帐号的domainId）
 
 	InstanceUserDomainId *string `json:"instance_user_domain_id,omitempty"`
-	// 用户组织名
+	// 用户租户名
 
-	InstanceUserDomainName string `json:"instance_user_domain_name"`
+	InstanceUserDomainName *string `json:"instance_user_domain_name,omitempty"`
 	// 用户id
 
 	InstanceUserId *string `json:"instance_user_id,omitempty"`
 	// 用户名
 
-	InstanceUserName string `json:"instance_user_name"`
+	InstanceUserName *string `json:"instance_user_name,omitempty"`
 	// 是否页面显示（以标签配置为准）
 
 	IsTemporary *bool `json:"is_temporary,omitempty"`

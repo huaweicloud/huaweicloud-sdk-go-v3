@@ -11,7 +11,7 @@ type CreateClusterPublicIpReq struct {
 	Eip *CreateClusterPublicEip `json:"eip"`
 
 	ElbWhiteListReq *CreateClusterElbWhiteList `json:"elbWhiteListReq"`
-	// 是否自动绑定弹性公网IP。auto_assgin为自动分配，bind_existing为绑定已有IP，需要填写eipId字段。
+	// 是否自动绑定弹性公网IP。auto_assign为自动分配，bind_existing为绑定已有IP，需要填写eipId字段。
 
 	PublicBindType string `json:"publicBindType"`
 	// 弹性公网IP的ID。

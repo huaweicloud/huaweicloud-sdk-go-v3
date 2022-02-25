@@ -25,6 +25,12 @@ type ListProjectVersionsV4ResponseBodyIterations struct {
 	// 迭代状态
 
 	Status *string `json:"status,omitempty"`
+	// 迭代更新时间，长整型时间戳
+
+	UpdatedTime *int64 `json:"updated_time,omitempty"`
+	// 迭代是否已经删除，false, 未删除， true已经删除
+
+	Deleted *bool `json:"deleted,omitempty"`
 }
 
 func (o ListProjectVersionsV4ResponseBodyIterations) String() string {

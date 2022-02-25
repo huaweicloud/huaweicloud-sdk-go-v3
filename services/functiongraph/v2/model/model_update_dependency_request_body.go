@@ -19,7 +19,7 @@ type UpdateDependencyRequestBody struct {
 	// 导入类型,目前支持obs和zip。
 
 	DependType string `json:"depend_type"`
-	// 运行时语言。
+	// 运行时语言， Java11、Nodejs14:、Python3:在type为v2时支持。
 
 	Runtime UpdateDependencyRequestBodyRuntime `json:"runtime"`
 	// 依赖包名称。必须以大、小写字母开头，以字母或数字结尾，只能由字母、数字、下划线、点和中划线组成，长度不超过96个字符。
@@ -44,46 +44,58 @@ type UpdateDependencyRequestBodyRuntime struct {
 }
 
 type UpdateDependencyRequestBodyRuntimeEnum struct {
-	JAVA_8          UpdateDependencyRequestBodyRuntime
-	NODE_JS_6_10    UpdateDependencyRequestBodyRuntime
-	NODE_JS_8_10    UpdateDependencyRequestBodyRuntime
-	NODE_JS_10_16   UpdateDependencyRequestBodyRuntime
-	NODE_JS_12_13   UpdateDependencyRequestBodyRuntime
-	PYTHON_2_7      UpdateDependencyRequestBodyRuntime
-	PYTHON_3_6      UpdateDependencyRequestBodyRuntime
-	GO_1_8          UpdateDependencyRequestBodyRuntime
+	JAVA8           UpdateDependencyRequestBodyRuntime
+	JAVA11          UpdateDependencyRequestBodyRuntime
+	NODE_JS6_10     UpdateDependencyRequestBodyRuntime
+	NODE_JS8_10     UpdateDependencyRequestBodyRuntime
+	NODE_JS10_16    UpdateDependencyRequestBodyRuntime
+	NODE_JS12_13    UpdateDependencyRequestBodyRuntime
+	NODE_JS14_18    UpdateDependencyRequestBodyRuntime
+	PYTHON2_7       UpdateDependencyRequestBodyRuntime
+	PYTHON3_6       UpdateDependencyRequestBodyRuntime
+	PYTHON3_9       UpdateDependencyRequestBodyRuntime
+	GO1_8           UpdateDependencyRequestBodyRuntime
 	GO1_X           UpdateDependencyRequestBodyRuntime
 	C__NET_CORE_2_0 UpdateDependencyRequestBodyRuntime
 	C__NET_CORE_2_1 UpdateDependencyRequestBodyRuntime
 	C__NET_CORE_3_1 UpdateDependencyRequestBodyRuntime
-	PHP_7_3         UpdateDependencyRequestBodyRuntime
+	PHP7_3          UpdateDependencyRequestBodyRuntime
 }
 
 func GetUpdateDependencyRequestBodyRuntimeEnum() UpdateDependencyRequestBodyRuntimeEnum {
 	return UpdateDependencyRequestBodyRuntimeEnum{
-		JAVA_8: UpdateDependencyRequestBodyRuntime{
-			value: "Java 8",
+		JAVA8: UpdateDependencyRequestBodyRuntime{
+			value: "Java8",
 		},
-		NODE_JS_6_10: UpdateDependencyRequestBodyRuntime{
-			value: "Node.js 6.10",
+		JAVA11: UpdateDependencyRequestBodyRuntime{
+			value: "Java11",
 		},
-		NODE_JS_8_10: UpdateDependencyRequestBodyRuntime{
-			value: "Node.js 8.10",
+		NODE_JS6_10: UpdateDependencyRequestBodyRuntime{
+			value: "Node.js6.10",
 		},
-		NODE_JS_10_16: UpdateDependencyRequestBodyRuntime{
-			value: "Node.js 10.16",
+		NODE_JS8_10: UpdateDependencyRequestBodyRuntime{
+			value: "Node.js8.10",
 		},
-		NODE_JS_12_13: UpdateDependencyRequestBodyRuntime{
-			value: "Node.js 12.13",
+		NODE_JS10_16: UpdateDependencyRequestBodyRuntime{
+			value: "Node.js10.16",
 		},
-		PYTHON_2_7: UpdateDependencyRequestBodyRuntime{
-			value: "Python 2.7",
+		NODE_JS12_13: UpdateDependencyRequestBodyRuntime{
+			value: "Node.js12.13",
 		},
-		PYTHON_3_6: UpdateDependencyRequestBodyRuntime{
-			value: "Python 3.6",
+		NODE_JS14_18: UpdateDependencyRequestBodyRuntime{
+			value: "Node.js14.18",
 		},
-		GO_1_8: UpdateDependencyRequestBodyRuntime{
-			value: "Go 1.8",
+		PYTHON2_7: UpdateDependencyRequestBodyRuntime{
+			value: "Python2.7",
+		},
+		PYTHON3_6: UpdateDependencyRequestBodyRuntime{
+			value: "Python3.6",
+		},
+		PYTHON3_9: UpdateDependencyRequestBodyRuntime{
+			value: "Python3.9",
+		},
+		GO1_8: UpdateDependencyRequestBodyRuntime{
+			value: "Go1.8",
 		},
 		GO1_X: UpdateDependencyRequestBodyRuntime{
 			value: "Go1.x",
@@ -97,8 +109,8 @@ func GetUpdateDependencyRequestBodyRuntimeEnum() UpdateDependencyRequestBodyRunt
 		C__NET_CORE_3_1: UpdateDependencyRequestBodyRuntime{
 			value: "C#(.NET Core 3.1)",
 		},
-		PHP_7_3: UpdateDependencyRequestBodyRuntime{
-			value: "PHP 7.3",
+		PHP7_3: UpdateDependencyRequestBodyRuntime{
+			value: "PHP7.3",
 		},
 	}
 }

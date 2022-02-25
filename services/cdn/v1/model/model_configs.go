@@ -16,6 +16,8 @@ type Configs struct {
 	HttpResponseHeader *[]HttpResponseHeader `json:"http_response_header,omitempty"`
 
 	UrlAuth *UrlAuth `json:"url_auth,omitempty"`
+
+	Https *HttpPutBody `json:"https,omitempty"`
 }
 
 func (o Configs) String() string {

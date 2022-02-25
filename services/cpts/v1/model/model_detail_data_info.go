@@ -7,171 +7,180 @@ import (
 )
 
 type DetailDataInfo struct {
-	// averageRespTime
+	// 平均响应时间
 
-	AverageRespTime *float32 `json:"averageRespTime,omitempty"`
-	// avgRecBytes
+	AverageRespTime *float64 `json:"averageRespTime,omitempty"`
+	// 平均接收字节数
 
-	AvgRecBytes *float32 `json:"avgRecBytes,omitempty"`
-	// avgSentBytes
+	AvgRecBytes *float64 `json:"avgRecBytes,omitempty"`
+	// 平均发送字节数
 
-	AvgSentBytes *int32 `json:"avgSentBytes,omitempty"`
-	// avgTranRespTime
+	AvgSentBytes *float64 `json:"avgSentBytes,omitempty"`
+	// 事务平均响应时间
 
-	AvgTranRespTime *string `json:"avgTranRespTime,omitempty"`
-	// caseUri
+	AvgTranRespTime *float64 `json:"avgTranRespTime,omitempty"`
+	// 用例Uri
 
 	CaseUri *string `json:"caseUri,omitempty"`
-	// createTime
+	// 创建时间
 
 	CreateTime *string `json:"createTime,omitempty"`
-	// currentThreadNum
+	// 最大并发数
 
-	CurrentThreadNum *int32 `json:"currentThreadNum,omitempty"`
-	// detailId
+	CurrentThreadNum *float64 `json:"currentThreadNum,omitempty"`
+	// 详情id
 
 	DetailId *string `json:"detailId,omitempty"`
-	// endTime
+	// 结束时间
 
 	EndTime *string `json:"endTime,omitempty"`
-	// errorCount
+	// 失败请求数
 
-	ErrorCount *int32 `json:"errorCount,omitempty"`
-	// errorEventsCount
+	ErrorCount *float64 `json:"errorCount,omitempty"`
+	// ERROR级别的事件个数
 
-	ErrorEventsCount *int32 `json:"errorEventsCount,omitempty"`
-	// failedAssert
+	ErrorEventsCount *float64 `json:"errorEventsCount,omitempty"`
+	// 断言失败
 
-	FailedAssert *int32 `json:"failedAssert,omitempty"`
-	// failedOthers
+	FailedAssert *float64 `json:"failedAssert,omitempty"`
+	// 其他失败
 
-	FailedOthers *int32 `json:"failedOthers,omitempty"`
-	// failedParsed
+	FailedOthers *float64 `json:"failedOthers,omitempty"`
+	// 解析失败
 
-	FailedParsed *int32 `json:"failedParsed,omitempty"`
-	// failedRefused
+	FailedParsed *float64 `json:"failedParsed,omitempty"`
+	// 连接被拒
 
-	FailedRefused *int32 `json:"failedRefused,omitempty"`
-	// failedTimeout
+	FailedRefused *float64 `json:"failedRefused,omitempty"`
+	// 超时失败
 
-	FailedTimeout *int32 `json:"failedTimeout,omitempty"`
+	FailedTimeout *float64 `json:"failedTimeout,omitempty"`
 	// id
 
 	Id *string `json:"id,omitempty"`
-	// isAW
+	// 是否aw
 
 	IsAW *bool `json:"isAW,omitempty"`
-	// max
+	// 最大响应时间
 
-	Max *int32 `json:"max,omitempty"`
-	// maxRecBytes
+	Max *float64 `json:"max,omitempty"`
+	// 最大接收字节数
 
-	MaxRecBytes *int32 `json:"maxRecBytes,omitempty"`
-	// maxRespTime
+	MaxRecBytes *float64 `json:"maxRecBytes,omitempty"`
+	// 探底最大响应时间
 
-	MaxRespTime *int32 `json:"maxRespTime,omitempty"`
-	// maxSentBytes
+	MaxRespTime *float64 `json:"maxRespTime,omitempty"`
+	// 最大发送字节数
 
-	MaxSentBytes *int32 `json:"maxSentBytes,omitempty"`
-	// maxTranRespTime
+	MaxSentBytes *float64 `json:"maxSentBytes,omitempty"`
+	// 事务最大响应时间
 
-	MaxTranRespTime *int32 `json:"maxTranRespTime,omitempty"`
-	// min
+	MaxTranRespTime *float64 `json:"maxTranRespTime,omitempty"`
+	// 最小响应时间
 
-	Min *int32 `json:"min,omitempty"`
-	// name
+	Min *float64 `json:"min,omitempty"`
+	// 最小带宽
+
+	MinNetworkTraffic *float64 `json:"minNetworkTraffic,omitempty"`
+	// 名字
 
 	Name *string `json:"name,omitempty"`
-	// requests
+	// 请求数
 
-	Requests *int32 `json:"requests,omitempty"`
-	// result
+	Requests *float64 `json:"requests,omitempty"`
+	// aw执行结果
 
-	Result *int32 `json:"result,omitempty"`
-	// startTime
+	Result *float64 `json:"result,omitempty"`
+	// 开始时间
 
 	StartTime *string `json:"startTime,omitempty"`
-	// status
+	// 用例状态
 
-	Status *int32 `json:"status,omitempty"`
-	// successCount
+	Status *float64 `json:"status,omitempty"`
+	// 成功请求数
 
-	SuccessCount *int32 `json:"successCount,omitempty"`
-	// successRate
+	SuccessCount *float64 `json:"successCount,omitempty"`
+	// 成功率
 
-	SuccessRate *int32 `json:"successRate,omitempty"`
-	// sum1xx
+	SuccessRate *float64 `json:"successRate,omitempty"`
+	// 1xx请求数
 
-	Sum1xx *int32 `json:"sum1xx,omitempty"`
-	// sum2xx
+	Sum1xx *float64 `json:"sum1xx,omitempty"`
+	// 2xx请求数
 
-	Sum2xx *int32 `json:"sum2xx,omitempty"`
-	// sum3xx
+	Sum2xx *float64 `json:"sum2xx,omitempty"`
+	// 3xx请求数
 
-	Sum3xx *int32 `json:"sum3xx,omitempty"`
-	// sum4xx
+	Sum3xx *float64 `json:"sum3xx,omitempty"`
+	// 4xx请求数
 
-	Sum4xx *int32 `json:"sum4xx,omitempty"`
-	// sum5xx
+	Sum4xx *float64 `json:"sum4xx,omitempty"`
+	// 5xx请求数
 
-	Sum5xx *int32 `json:"sum5xx,omitempty"`
-	// taskId
+	Sum5xx *float64 `json:"sum5xx,omitempty"`
+	// 任务id_轮次
 
 	TaskId *string `json:"taskId,omitempty"`
-	// taskProjectId
+	// 任务id
 
 	TaskProjectId *string `json:"taskProjectId,omitempty"`
-	// taskStatus
+	// 任务状态
 
-	TaskStatus *int32 `json:"taskStatus,omitempty"`
-	// testCaseUri
+	TaskStatus *float64 `json:"taskStatus,omitempty"`
+	// 用例uri
 
 	TestCaseUri *string `json:"testCaseUri,omitempty"`
 	// tp50
 
-	Tp50 *int32 `json:"tp50,omitempty"`
+	Tp50 *float64 `json:"tp50,omitempty"`
 	// tp75
 
-	Tp75 *int32 `json:"tp75,omitempty"`
+	Tp75 *float64 `json:"tp75,omitempty"`
 	// tp90
 
-	Tp90 *int32 `json:"tp90,omitempty"`
+	Tp90 *float64 `json:"tp90,omitempty"`
 	// tp95
 
-	Tp95 *int32 `json:"tp95,omitempty"`
+	Tp95 *float64 `json:"tp95,omitempty"`
 	// tp99
 
-	Tp99 *int32 `json:"tp99,omitempty"`
+	Tp99 *float64 `json:"tp99,omitempty"`
 	// tps
 
-	Tps *float32 `json:"tps,omitempty"`
-	// tranTPS
+	Tps *float64 `json:"tps,omitempty"`
+	// 事务tps
 
-	TranTPS *string `json:"tranTPS,omitempty"`
-	// transactionId
+	TranTPS *float64 `json:"tranTPS,omitempty"`
+	// 事务id
 
 	TransactionId *string `json:"transactionId,omitempty"`
-	// transactionSuccess
+	// 事务成功率
 
-	TransactionSuccess *string `json:"transactionSuccess,omitempty"`
-	// transactionalSuccessRate
+	TransactionSuccess *float64 `json:"transactionSuccess,omitempty"`
+	// 事务成功率
 
-	TransactionalSuccessRate *int32 `json:"transactionalSuccessRate,omitempty"`
-	// transactionalTps
+	TransactionalSuccessRate *float64 `json:"transactionalSuccessRate,omitempty"`
+	// 自定义事务tps
 
-	TransactionalTps *int32 `json:"transactionalTps,omitempty"`
-	// transactionalTpsSuccess
+	TransactionalTps *float64 `json:"transactionalTps,omitempty"`
+	// 自定义事务成功率
 
-	TransactionalTpsSuccess *int32 `json:"transactionalTpsSuccess,omitempty"`
-	// transactions
+	TransactionalTpsSuccess *float64 `json:"transactionalTpsSuccess,omitempty"`
+	// 事务数
 
-	Transactions *string `json:"transactions,omitempty"`
-	// updateTime
+	Transactions *float64 `json:"transactions,omitempty"`
+	// 更新时间
 
 	UpdateTime *string `json:"updateTime,omitempty"`
-	// vum
+	// 分钟*并发数
 
-	Vum *int32 `json:"vum,omitempty"`
+	Vum *float64 `json:"vum,omitempty"`
+	// 平均带宽
+
+	AvgNetworkTraffic *float64 `json:"avgNetworkTraffic,omitempty"`
+	// 最大带宽
+
+	MaxNetworkTraffic *float64 `json:"maxNetworkTraffic,omitempty"`
 }
 
 func (o DetailDataInfo) String() string {

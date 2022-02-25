@@ -14,7 +14,7 @@ type ListScalingV2PoliciesRequest struct {
 	// 伸缩策略名称。
 
 	ScalingPolicyName *string `json:"scaling_policy_name,omitempty"`
-	// 策略类型。
+	// 策略类型：  - 告警策略：ALARM - 定时策略：SCHEDULED - 周期策略：RECURRENCE
 
 	ScalingPolicyType *string `json:"scaling_policy_type,omitempty"`
 	// 伸缩策略ID。

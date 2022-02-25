@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -28,10 +31,10 @@ type UpdateRuleResponse struct {
 	Description *string `json:"description,omitempty"`
 	// 规则状态 0-启用 1-停用
 
-	Status *int32 `json:"status,omitempty"`
+	Status *UpdateRuleResponseStatus `json:"status,omitempty"`
 	// 数据解析状态，ENABLE时data_parsing必填 0-启用 1-停用
 
-	DataParsingStatus *int32 `json:"data_parsing_status,omitempty"`
+	DataParsingStatus *UpdateRuleResponseDataParsingStatus `json:"data_parsing_status,omitempty"`
 	// SQL查询字段
 
 	SqlField *string `json:"sql_field,omitempty"`
@@ -61,4 +64,78 @@ func (o UpdateRuleResponse) String() string {
 	}
 
 	return strings.Join([]string{"UpdateRuleResponse", string(data)}, " ")
+}
+
+type UpdateRuleResponseStatus struct {
+	value int32
+}
+
+type UpdateRuleResponseStatusEnum struct {
+	E_0 UpdateRuleResponseStatus
+	E_1 UpdateRuleResponseStatus
+}
+
+func GetUpdateRuleResponseStatusEnum() UpdateRuleResponseStatusEnum {
+	return UpdateRuleResponseStatusEnum{
+		E_0: UpdateRuleResponseStatus{
+			value: 0,
+		}, E_1: UpdateRuleResponseStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c UpdateRuleResponseStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateRuleResponseStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type UpdateRuleResponseDataParsingStatus struct {
+	value int32
+}
+
+type UpdateRuleResponseDataParsingStatusEnum struct {
+	E_0 UpdateRuleResponseDataParsingStatus
+	E_1 UpdateRuleResponseDataParsingStatus
+}
+
+func GetUpdateRuleResponseDataParsingStatusEnum() UpdateRuleResponseDataParsingStatusEnum {
+	return UpdateRuleResponseDataParsingStatusEnum{
+		E_0: UpdateRuleResponseDataParsingStatus{
+			value: 0,
+		}, E_1: UpdateRuleResponseDataParsingStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c UpdateRuleResponseDataParsingStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateRuleResponseDataParsingStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

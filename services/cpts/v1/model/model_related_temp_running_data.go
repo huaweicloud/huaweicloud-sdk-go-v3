@@ -19,6 +19,9 @@ type RelatedTempRunningData struct {
 	// temp_name
 
 	TempName *string `json:"temp_name,omitempty"`
+	// related_temp_running_data
+
+	RelatedTempRunningData *[]TempRunningData `json:"related_temp_running_data,omitempty"`
 }
 
 func (o RelatedTempRunningData) String() string {

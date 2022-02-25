@@ -96,6 +96,17 @@ func (c *LtsClient) CreateNotificationTemplate(request *model.CreateNotification
 	}
 }
 
+//该接口通过结构化模板创建结构化配置。
+func (c *LtsClient) CreateStructConfig(request *model.CreateStructConfigRequest) (*model.CreateStructConfigResponse, error) {
+	requestDef := GenReqDefForCreateStructConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateStructConfigResponse), nil
+	}
+}
+
 //该接口用于创建指定日志流下的结构化配置。
 func (c *LtsClient) CreateStructTemplate(request *model.CreateStructTemplateRequest) (*model.CreateStructTemplateResponse, error) {
 	requestDef := GenReqDefForCreateStructTemplate()
@@ -261,6 +272,17 @@ func (c *LtsClient) ListActiveOrHistoryAlarms(request *model.ListActiveOrHistory
 	}
 }
 
+//该接口用于查询结构化模板简略列表。
+func (c *LtsClient) ListBreifStructTemplate(request *model.ListBreifStructTemplateRequest) (*model.ListBreifStructTemplateResponse, error) {
+	requestDef := GenReqDefForListBreifStructTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBreifStructTemplateResponse), nil
+	}
+}
+
 //该接口用于查询日志流图表
 func (c *LtsClient) ListCharts(request *model.ListChartsRequest) (*model.ListChartsResponse, error) {
 	requestDef := GenReqDefForListCharts()
@@ -404,6 +426,17 @@ func (c *LtsClient) ListQueryStructuredLogs(request *model.ListQueryStructuredLo
 	}
 }
 
+//该接口用于查询结构化模板。
+func (c *LtsClient) ListStructTemplate(request *model.ListStructTemplateRequest) (*model.ListStructTemplateResponse, error) {
+	requestDef := GenReqDefForListStructTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListStructTemplateResponse), nil
+	}
+}
+
 //该接口用于查询指定日志流下的结构化日志内容（新版）。
 func (c *LtsClient) ListStructuredLogsWithTimeRange(request *model.ListStructuredLogsWithTimeRangeRequest) (*model.ListStructuredLogsWithTimeRangeResponse, error) {
 	requestDef := GenReqDefForListStructuredLogsWithTimeRange()
@@ -511,6 +544,17 @@ func (c *LtsClient) UpdateNotificationTemplate(request *model.UpdateNotification
 		return nil, err
 	} else {
 		return resp.(*model.UpdateNotificationTemplateResponse), nil
+	}
+}
+
+//该接口通过结构化模板修改结构化配置
+func (c *LtsClient) UpdateStructConfig(request *model.UpdateStructConfigRequest) (*model.UpdateStructConfigResponse, error) {
+	requestDef := GenReqDefForUpdateStructConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateStructConfigResponse), nil
 	}
 }
 

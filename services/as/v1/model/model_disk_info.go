@@ -11,13 +11,13 @@ import (
 
 // 磁盘组信息，系统盘必选，数据盘可选。
 type DiskInfo struct {
-	// 磁盘大小，容量单位为GB。系统盘输入最大为32768，且不小于镜像中系统盘的最小(min_disk属性)值。数据盘输入大小范围为10~32768。
+	// 磁盘大小，容量单位为GB。系统盘输入大小范围为1~1024，且不小于镜像中系统盘的最小(min_disk属性)值。数据盘输入大小范围为10~32768。
 
 	Size int32 `json:"size"`
-	// 云服务器数据盘对应的磁盘类型，需要与系统所提供的磁盘类型相匹配。磁盘类型枚举值：SATA：普通IO磁盘类型。SAS：高IO磁盘类型。SSD：超高IO磁盘类型。co-pl：高IO (性能优化Ⅰ型)磁盘类型。uh-l1：超高 IO (时延优化)磁盘类型。说明：对于HANA云服务器和HL1型云服务器，需使用co-p1和uh-l1两种磁盘类型。对于其他类型的云服务器，不能使用co-p1和uh-l1两种磁盘类型。
+	// 云服务器系统盘对应的磁盘类型，需要与系统所提供的磁盘类型相匹配。  SATA：普通IO磁盘类型。 SAS：高IO磁盘类型。 SSD：超高IO磁盘类型。 GPSSD：通用型SSD磁盘类型。 co-p1：高IO (性能优化Ⅰ型) uh-l1：超高IO (时延优化) 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 对于HANA云服务器、HL1型云服务器、HL2型云服务器，需使用co-p1和uh-l1两种磁盘类型。对于其他类型的云服务器，不能使用co-p1和uh-l1两种磁盘类型。  了解不同磁盘类型的详细信息，请参见[磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
 
 	VolumeType DiskInfoVolumeType `json:"volume_type"`
-	// 系统盘还是数据盘，DATA表示为数据盘，SYS表示为系统盘。
+	// 系统盘还是数据盘，DATA表示为数据盘，SYS表示为系统盘。 说明： 系统盘不支持加密。
 
 	DiskType DiskInfoDiskType `json:"disk_type"`
 	// 云服务器的磁盘可指定创建在用户的专属存储中，需要指定专属存储ID。说明：同一个伸缩配置中的磁盘需统一指定或统一不指定专属存储，不支持混用；当指定专属存储时，所有专属存储需要属于同一个可用分区，且每个磁盘选择的专属存储支持的磁盘类型都需要和参数volume_type保持一致。
@@ -52,6 +52,7 @@ type DiskInfoVolumeTypeEnum struct {
 	SSD   DiskInfoVolumeType
 	CO_PL DiskInfoVolumeType
 	UH_11 DiskInfoVolumeType
+	GPSSD DiskInfoVolumeType
 }
 
 func GetDiskInfoVolumeTypeEnum() DiskInfoVolumeTypeEnum {
@@ -70,6 +71,9 @@ func GetDiskInfoVolumeTypeEnum() DiskInfoVolumeTypeEnum {
 		},
 		UH_11: DiskInfoVolumeType{
 			value: "uh-11",
+		},
+		GPSSD: DiskInfoVolumeType{
+			value: "GPSSD",
 		},
 	}
 }

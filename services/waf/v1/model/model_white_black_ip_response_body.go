@@ -24,7 +24,7 @@ type WhiteBlackIpResponseBody struct {
 	Status *int32 `json:"status,omitempty"`
 	// 黑白名单
 
-	Ip *string `json:"ip,omitempty"`
+	Addr *string `json:"addr,omitempty"`
 	// 防护动作：  - 0拦截  - 1放行  - 2仅记录
 
 	White *int32 `json:"white,omitempty"`

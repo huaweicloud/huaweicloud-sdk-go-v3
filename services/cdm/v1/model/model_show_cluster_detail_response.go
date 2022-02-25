@@ -71,7 +71,7 @@ type ShowClusterDetailResponse struct {
 	Dbuser *string `json:"dbuser,omitempty"`
 
 	Links *[]ClusterLinks `json:"links,omitempty"`
-	// 集群模式
+	// 集群模式：sharding(分片集群)
 
 	ClusterMode *string `json:"clusterMode,omitempty"`
 
@@ -79,7 +79,7 @@ type ShowClusterDetailResponse struct {
 	// 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
 
 	Created *string `json:"created,omitempty"`
-	// 集群状态描述
+	// 集群状态描述：Normal（正常）
 
 	StatusDetail *string `json:"statusDetail,omitempty"`
 	// 集群配置状态： - In-Sync：配置已同步。 - Applying：配置中。 - Sync-Failure：配置失败

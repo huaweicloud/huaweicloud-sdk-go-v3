@@ -13,7 +13,7 @@ type VariableDetail struct {
 	// id
 
 	Id *int32 `json:"id,omitempty"`
-	// is_quoted
+	// 是否被引用
 
 	IsQuoted *bool `json:"is_quoted,omitempty"`
 	// name

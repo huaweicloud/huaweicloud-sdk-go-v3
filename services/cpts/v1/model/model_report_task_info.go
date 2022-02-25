@@ -6,10 +6,11 @@ import (
 	"strings"
 )
 
+// 报告任务信息
 type ReportTaskInfo struct {
-	// vum
+	// 分钟*并发数
 
-	Vum *int32 `json:"vum,omitempty"`
+	Vum *float64 `json:"vum,omitempty"`
 }
 
 func (o ReportTaskInfo) String() string {

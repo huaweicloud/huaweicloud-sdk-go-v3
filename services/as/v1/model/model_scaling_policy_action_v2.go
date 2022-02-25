@@ -11,7 +11,7 @@ import (
 
 // 策略执行具体动作。
 type ScalingPolicyActionV2 struct {
-	// 操作选项。ADD：添加实例。REMOVE/REDUCE：移除实例。SET：设置实例数为
+	// 操作选项，默认为ADD。 当scaling_resource_type为SCALING_GROUP，支持如下操作： - ADD：增加 - REMOVE/REDUCE：减少 - SET：设置为 当scaling_resource_type为BANDWIDTH，支持如下操作： - ADD：增加 - REDUCE：减少 - SET：设置为
 
 	Operation *ScalingPolicyActionV2Operation `json:"operation,omitempty"`
 	// 操作大小，取值范围为0到300的整数，默认为1。当scaling_resource_type为SCALING_GROUP时，size为实例个数,取值范围为0-300的整数，默认为1。当scaling_resource_type为BANDWIDTH时，size表示带宽大小，单位为Mbit/s，取值范围为1到300的整数，默认为1。当scaling_resource_type为SCALING_GROUP时，size和percentage参数只能选其中一个进行配置。

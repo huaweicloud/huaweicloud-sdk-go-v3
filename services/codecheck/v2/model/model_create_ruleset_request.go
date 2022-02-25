@@ -8,10 +8,6 @@ import (
 
 // Request Object
 type CreateRulesetRequest struct {
-	// 设置媒体类型和编码格式
-
-	ContentType string `json:"Content-Type"`
-
 	Body *Ruleset `json:"body,omitempty"`
 }
 

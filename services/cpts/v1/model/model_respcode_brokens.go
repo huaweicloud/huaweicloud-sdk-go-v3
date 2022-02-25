@@ -7,27 +7,27 @@ import (
 )
 
 type RespcodeBrokens struct {
-	// checkPointFailed
+	// 校验失败
 
-	CheckPointFailed *[]int32 `json:"checkPointFailed,omitempty"`
-	// error
+	CheckPointFailed *[]float64 `json:"checkPointFailed,omitempty"`
+	// 异常请求
 
-	Error *[]int32 `json:"error,omitempty"`
-	// othersFailed
+	Error *[]float64 `json:"error,omitempty"`
+	// 其他失败
 
-	OthersFailed *[]int32 `json:"othersFailed,omitempty"`
-	// parsedFailed
+	OthersFailed *[]float64 `json:"othersFailed,omitempty"`
+	// 解析失败
 
-	ParsedFailed *[]int32 `json:"parsedFailed,omitempty"`
-	// refusedFailed
+	ParsedFailed *[]float64 `json:"parsedFailed,omitempty"`
+	// 连接被拒
 
-	RefusedFailed *[]int32 `json:"refusedFailed,omitempty"`
-	// success
+	RefusedFailed *[]float64 `json:"refusedFailed,omitempty"`
+	// 成功请求
 
-	Success *[]int32 `json:"success,omitempty"`
-	// timeout
+	Success *[]float64 `json:"success,omitempty"`
+	// 超时失败
 
-	Timeout *[]int32 `json:"timeout,omitempty"`
+	Timeout *[]float64 `json:"timeout,omitempty"`
 }
 
 func (o RespcodeBrokens) String() string {

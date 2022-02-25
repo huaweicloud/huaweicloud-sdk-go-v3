@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DeleteTemplateRequest struct {
-	// 指定查询集群ID。
+	// 指定待删除的集群ID。
 
 	ClusterId string `json:"cluster_id"`
 

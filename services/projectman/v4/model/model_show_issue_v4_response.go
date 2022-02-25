@@ -67,8 +67,16 @@ type ShowIssueV4Response struct {
 	UpdatedTime *string `json:"updated_time,omitempty"`
 	// 关闭时间 年-月-日 时:分:秒
 
-	ClosedTime     *string `json:"closed_time,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	ClosedTime *string `json:"closed_time,omitempty"`
+	// 工作项描述
+
+	Description *string `json:"description,omitempty"`
+
+	Order *IssueOrder `json:"order,omitempty"`
+	// 附近列表
+
+	Accessories    *[]IssueAccessory `json:"accessories,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ShowIssueV4Response) String() string {

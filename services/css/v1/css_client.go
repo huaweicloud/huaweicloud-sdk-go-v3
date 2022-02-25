@@ -173,6 +173,17 @@ func (c *CssClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 	}
 }
 
+//该接口用于查询具体某个集群的日志任务记录列表。
+func (c *CssClient) ListLogsJob(request *model.ListLogsJobRequest) (*model.ListLogsJobResponse, error) {
+	requestDef := GenReqDefForListLogsJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLogsJobResponse), nil
+	}
+}
+
 //该接口用于查询集群的所有快照。
 func (c *CssClient) ListSnapshots(request *model.ListSnapshotsRequest) (*model.ListSnapshotsResponse, error) {
 	requestDef := GenReqDefForListSnapshots()
@@ -247,6 +258,17 @@ func (c *CssClient) ShowAutoCreatePolicy(request *model.ShowAutoCreatePolicyRequ
 		return nil, err
 	} else {
 		return resp.(*model.ShowAutoCreatePolicyResponse), nil
+	}
+}
+
+//该接口用于查询并显示单个集群详情。
+func (c *CssClient) ShowClusterDetail(request *model.ShowClusterDetailRequest) (*model.ShowClusterDetailResponse, error) {
+	requestDef := GenReqDefForShowClusterDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClusterDetailResponse), nil
 	}
 }
 
@@ -459,6 +481,28 @@ func (c *CssClient) UpdateExtendInstanceStorage(request *model.UpdateExtendInsta
 	}
 }
 
+//该接口用于变更集群规格。只支持变更ess节点类型。
+func (c *CssClient) UpdateFlavor(request *model.UpdateFlavorRequest) (*model.UpdateFlavorResponse, error) {
+	requestDef := GenReqDefForUpdateFlavor()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFlavorResponse), nil
+	}
+}
+
+//修改集群规格。支持修改ess， ess-cold， ess-client， ess-master节点类型。
+func (c *CssClient) UpdateFlavorByType(request *model.UpdateFlavorByTypeRequest) (*model.UpdateFlavorByTypeResponse, error) {
+	requestDef := GenReqDefForUpdateFlavorByType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFlavorByTypeResponse), nil
+	}
+}
+
 //该接口用于修改日志基础配置。
 func (c *CssClient) UpdateLogSetting(request *model.UpdateLogSettingRequest) (*model.UpdateLogSettingResponse, error) {
 	requestDef := GenReqDefForUpdateLogSetting()
@@ -489,6 +533,28 @@ func (c *CssClient) UpdatePublicBandWidth(request *model.UpdatePublicBandWidthRe
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePublicBandWidthResponse), nil
+	}
+}
+
+//该接口用于集群缩容不同类型实例的个数以及存储容量。
+func (c *CssClient) UpdateShrinkCluster(request *model.UpdateShrinkClusterRequest) (*model.UpdateShrinkClusterResponse, error) {
+	requestDef := GenReqDefForUpdateShrinkCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateShrinkClusterResponse), nil
+	}
+}
+
+//该接口用于下线集群指定角色。
+func (c *CssClient) UpdateShrinkNodes(request *model.UpdateShrinkNodesRequest) (*model.UpdateShrinkNodesResponse, error) {
+	requestDef := GenReqDefForUpdateShrinkNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateShrinkNodesResponse), nil
 	}
 }
 

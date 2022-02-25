@@ -8,9 +8,9 @@ import (
 
 // Request Object
 type ShowTasklogRequest struct {
-	// 设置媒体类型和编码格式
+	// 项目ID
 
-	ContentType string `json:"Content-Type"`
+	ProjectId string `json:"project_id"`
 	// 任务ID
 
 	TaskId string `json:"task_id"`

@@ -8,7 +8,7 @@ import (
 
 type ReportbrokensInfo struct {
 	BrandBrokens *BrandBrokens `json:"brand_brokens,omitempty"`
-	// commonTimestamps
+	// 时间戳
 
 	CommonTimestamps *[]string `json:"commonTimestamps,omitempty"`
 

@@ -22,7 +22,7 @@ type OrderLineItemEntityV2 struct {
 	// 周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
 
 	PeriodType *int32 `json:"period_type,omitempty"`
-	// 周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
+	// 周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。当订单为变更/一次性/订购中的新增附属资源的订单时，参数取值为null。
 
 	PeriodNum *int32 `json:"period_num,omitempty"`
 	// 生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。

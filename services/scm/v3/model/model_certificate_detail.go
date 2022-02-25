@@ -16,6 +16,15 @@ type CertificateDetail struct {
 	// 证书绑定的域名。
 
 	Domain *string `json:"domain,omitempty"`
+	// 多域名证书绑定的附加域名。
+
+	Sans *string `json:"sans,omitempty"`
+	// 签名算法。
+
+	SignatureAlgorithm *string `json:"signature_algorithm,omitempty"`
+	// 是否支持部署。
+
+	DeploySupport *bool `json:"deploy_support,omitempty"`
 	// 证书类型。取值如下： DV_SSL_CERT、DV_SSL_CERT_BASIC、EV_SSL_CERT、 EV_SSL_CERT_PRO、OV_SSL_CERT、OV_SSL_CERT_PRO
 
 	Type *string `json:"type,omitempty"`

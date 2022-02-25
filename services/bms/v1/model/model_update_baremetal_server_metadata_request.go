@@ -12,7 +12,7 @@ type UpdateBaremetalServerMetadataRequest struct {
 
 	ServerId string `json:"server_id"`
 
-	Body *MetaData `json:"body,omitempty"`
+	Body *UpdateBaremetalServerMetadataReq `json:"body,omitempty"`
 }
 
 func (o UpdateBaremetalServerMetadataRequest) String() string {

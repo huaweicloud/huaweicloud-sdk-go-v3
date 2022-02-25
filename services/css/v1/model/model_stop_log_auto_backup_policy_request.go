@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type StopLogAutoBackupPolicyRequest struct {
-	// 指定查询集群ID。
+	// 指定待关闭的集群ID。
 
 	ClusterId string `json:"cluster_id"`
 }

@@ -38,6 +38,9 @@ type TaskInfo struct {
 	// update_time
 
 	UpdateTime *string `json:"update_time,omitempty"`
+	// parallel
+
+	Parallel *bool `json:"parallel,omitempty"`
 }
 
 func (o TaskInfo) String() string {

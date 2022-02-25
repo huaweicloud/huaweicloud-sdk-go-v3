@@ -7,12 +7,12 @@ import (
 )
 
 type TpsBrokens struct {
-	// average
+	// 平均响应时间
 
-	Average *[]int32 `json:"average,omitempty"`
+	Average *[]float64 `json:"average,omitempty"`
 	// tps
 
-	Tps *[]int32 `json:"tps,omitempty"`
+	Tps *[]float64 `json:"tps,omitempty"`
 }
 
 func (o TpsBrokens) String() string {

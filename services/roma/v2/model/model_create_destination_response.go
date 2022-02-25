@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -13,7 +16,7 @@ type CreateDestinationResponse struct {
 	DestinationId *int32 `json:"destination_id,omitempty"`
 	// 操作类型，枚举值:0-目标端为本ROMA实例内MQS； 7-目标端为设备
 
-	DestinationType *int32 `json:"destination_type,omitempty"`
+	DestinationType *CreateDestinationResponseDestinationType `json:"destination_type,omitempty"`
 	// 应用ID，目标端为0时需明确对方的APP_ID
 
 	AppId *string `json:"app_id,omitempty"`
@@ -51,4 +54,41 @@ func (o CreateDestinationResponse) String() string {
 	}
 
 	return strings.Join([]string{"CreateDestinationResponse", string(data)}, " ")
+}
+
+type CreateDestinationResponseDestinationType struct {
+	value int32
+}
+
+type CreateDestinationResponseDestinationTypeEnum struct {
+	E_0 CreateDestinationResponseDestinationType
+	E_7 CreateDestinationResponseDestinationType
+}
+
+func GetCreateDestinationResponseDestinationTypeEnum() CreateDestinationResponseDestinationTypeEnum {
+	return CreateDestinationResponseDestinationTypeEnum{
+		E_0: CreateDestinationResponseDestinationType{
+			value: 0,
+		}, E_7: CreateDestinationResponseDestinationType{
+			value: 7,
+		},
+	}
+}
+
+func (c CreateDestinationResponseDestinationType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateDestinationResponseDestinationType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

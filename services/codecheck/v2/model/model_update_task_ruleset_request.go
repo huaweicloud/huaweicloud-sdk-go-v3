@@ -8,9 +8,6 @@ import (
 
 // Request Object
 type UpdateTaskRulesetRequest struct {
-	// 设置媒体类型和编码格式
-
-	ContentType string `json:"Content-Type"`
 	// 任务ID
 
 	TaskId string `json:"task_id"`

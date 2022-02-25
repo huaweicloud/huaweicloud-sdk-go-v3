@@ -41,7 +41,7 @@ type Submission struct {
 	ExternalId string `json:"external-id"`
 	// 作业进度，失败时为“-1”，其它情况为0～100
 
-	Progress float64 `json:"progress"`
+	Progress float32 `json:"progress"`
 	// 作业提交id
 
 	SubmissionId *int32 `json:"submission-id,omitempty"`

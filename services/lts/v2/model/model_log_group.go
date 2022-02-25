@@ -20,6 +20,9 @@ type LogGroup struct {
 	// 日志存储时间 天
 
 	TtlInDays int32 `json:"ttl_in_days"`
+	// 日志流所属标签
+
+	Tag map[string]string `json:"tag,omitempty"`
 }
 
 func (o LogGroup) String() string {

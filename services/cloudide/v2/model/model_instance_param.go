@@ -64,12 +64,18 @@ type InstanceParam struct {
 	// 云服务器对应的vpcId，小网连接ecs的场景下使用
 
 	VpcId *string `json:"vpc_id,omitempty"`
-	// 实例授权用户组织名
+	// 实例授权用户租户名
 
 	InstanceUserDomainName *string `json:"instance_user_domain_name,omitempty"`
 	// 实例授权用户名
 
 	InstanceUserName *string `json:"instance_user_name,omitempty"`
+	// 实例授权用户租户ID
+
+	InstanceDomainId *string `json:"instance_domain_id,omitempty"`
+	// 实例授权用户ID
+
+	InstanceUserId *string `json:"instance_user_id,omitempty"`
 }
 
 func (o InstanceParam) String() string {

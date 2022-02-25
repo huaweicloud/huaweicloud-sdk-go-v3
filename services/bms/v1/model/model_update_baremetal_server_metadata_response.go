@@ -8,8 +8,10 @@ import (
 
 // Response Object
 type UpdateBaremetalServerMetadataResponse struct {
-	Metadata       *KeyValue `json:"metadata,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	//
+
+	Metadata       map[string]string `json:"metadata,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o UpdateBaremetalServerMetadataResponse) String() string {

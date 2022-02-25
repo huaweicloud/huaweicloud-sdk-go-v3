@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -27,10 +30,10 @@ type Source struct {
 	ProductName *string `json:"product_name,omitempty"`
 	// 是否payload使用base64，0-是 1-否
 
-	IsBase64 *int32 `json:"is_base64,omitempty"`
+	IsBase64 *SourceIsBase64 `json:"is_base64,omitempty"`
 	// 是否包含设备信息，0-是，1-否
 
-	ContainDeviceInfo *int32 `json:"contain_device_info,omitempty"`
+	ContainDeviceInfo *SourceContainDeviceInfo `json:"contain_device_info,omitempty"`
 }
 
 func (o Source) String() string {
@@ -40,4 +43,78 @@ func (o Source) String() string {
 	}
 
 	return strings.Join([]string{"Source", string(data)}, " ")
+}
+
+type SourceIsBase64 struct {
+	value int32
+}
+
+type SourceIsBase64Enum struct {
+	E_0 SourceIsBase64
+	E_1 SourceIsBase64
+}
+
+func GetSourceIsBase64Enum() SourceIsBase64Enum {
+	return SourceIsBase64Enum{
+		E_0: SourceIsBase64{
+			value: 0,
+		}, E_1: SourceIsBase64{
+			value: 1,
+		},
+	}
+}
+
+func (c SourceIsBase64) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SourceIsBase64) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type SourceContainDeviceInfo struct {
+	value int32
+}
+
+type SourceContainDeviceInfoEnum struct {
+	E_0 SourceContainDeviceInfo
+	E_1 SourceContainDeviceInfo
+}
+
+func GetSourceContainDeviceInfoEnum() SourceContainDeviceInfoEnum {
+	return SourceContainDeviceInfoEnum{
+		E_0: SourceContainDeviceInfo{
+			value: 0,
+		}, E_1: SourceContainDeviceInfo{
+			value: 1,
+		},
+	}
+}
+
+func (c SourceContainDeviceInfo) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SourceContainDeviceInfo) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

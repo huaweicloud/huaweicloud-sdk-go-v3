@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -21,7 +24,7 @@ type CreateServiceRequestBody struct {
 	Description *string `json:"description,omitempty"`
 	// 服务状态 0-启用 1-停用
 
-	Status int32 `json:"status"`
+	Status CreateServiceRequestBodyStatus `json:"status"`
 }
 
 func (o CreateServiceRequestBody) String() string {
@@ -31,4 +34,41 @@ func (o CreateServiceRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"CreateServiceRequestBody", string(data)}, " ")
+}
+
+type CreateServiceRequestBodyStatus struct {
+	value int32
+}
+
+type CreateServiceRequestBodyStatusEnum struct {
+	E_0 CreateServiceRequestBodyStatus
+	E_1 CreateServiceRequestBodyStatus
+}
+
+func GetCreateServiceRequestBodyStatusEnum() CreateServiceRequestBodyStatusEnum {
+	return CreateServiceRequestBodyStatusEnum{
+		E_0: CreateServiceRequestBodyStatus{
+			value: 0,
+		}, E_1: CreateServiceRequestBodyStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c CreateServiceRequestBodyStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateServiceRequestBodyStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

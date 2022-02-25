@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -19,7 +22,7 @@ type ShowProductTemplateResponse struct {
 	Description *string `json:"description,omitempty"`
 	// 产品模板状态 0-启用 1-停用
 
-	Status *int32 `json:"status,omitempty"`
+	Status *ShowProductTemplateResponseStatus `json:"status,omitempty"`
 
 	CreatedUser *CreatedUser `json:"created_user,omitempty"`
 
@@ -40,4 +43,41 @@ func (o ShowProductTemplateResponse) String() string {
 	}
 
 	return strings.Join([]string{"ShowProductTemplateResponse", string(data)}, " ")
+}
+
+type ShowProductTemplateResponseStatus struct {
+	value int32
+}
+
+type ShowProductTemplateResponseStatusEnum struct {
+	E_0 ShowProductTemplateResponseStatus
+	E_1 ShowProductTemplateResponseStatus
+}
+
+func GetShowProductTemplateResponseStatusEnum() ShowProductTemplateResponseStatusEnum {
+	return ShowProductTemplateResponseStatusEnum{
+		E_0: ShowProductTemplateResponseStatus{
+			value: 0,
+		}, E_1: ShowProductTemplateResponseStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c ShowProductTemplateResponseStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowProductTemplateResponseStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

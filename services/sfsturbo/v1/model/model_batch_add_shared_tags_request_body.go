@@ -10,7 +10,7 @@ import (
 )
 
 type BatchAddSharedTagsRequestBody struct {
-	// 操作标识，取值范围为：“create”和“delete”。 为指定共享批量添加标签时使用“create”。
+	// 操作标识，取值范围为：\"create\"。 为指定共享批量添加标签时使用\"create\"。
 
 	Action BatchAddSharedTagsRequestBodyAction `json:"action"`
 	// 标签列表。 用户权限时该字段必选，op_service权限时和sys_tags二选一。
@@ -36,16 +36,12 @@ type BatchAddSharedTagsRequestBodyAction struct {
 
 type BatchAddSharedTagsRequestBodyActionEnum struct {
 	CREATE BatchAddSharedTagsRequestBodyAction
-	DELETE BatchAddSharedTagsRequestBodyAction
 }
 
 func GetBatchAddSharedTagsRequestBodyActionEnum() BatchAddSharedTagsRequestBodyActionEnum {
 	return BatchAddSharedTagsRequestBodyActionEnum{
 		CREATE: BatchAddSharedTagsRequestBodyAction{
-			value: "“create”",
-		},
-		DELETE: BatchAddSharedTagsRequestBodyAction{
-			value: "“delete”",
+			value: "create",
 		},
 	}
 }

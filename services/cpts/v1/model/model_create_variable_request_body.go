@@ -20,6 +20,9 @@ type CreateVariableRequestBody struct {
 	// variable
 
 	Variable []interface{} `json:"variable"`
+	// 是否被引用
+
+	IsQuoted bool `json:"is_quoted"`
 }
 
 func (o CreateVariableRequestBody) String() string {

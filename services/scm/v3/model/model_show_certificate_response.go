@@ -34,7 +34,7 @@ type ShowCertificateResponse struct {
 	RevokeReason *string `json:"revoke_reason,omitempty"`
 	// 签名算法。
 
-	SignatureAlgrithm *string `json:"signature_algrithm,omitempty"`
+	SignatureAlgorithm *string `json:"signature_algorithm,omitempty"`
 	// 证书签发时间，没有获取到有效值时为空。
 
 	IssueTime *string `json:"issue_time,omitempty"`

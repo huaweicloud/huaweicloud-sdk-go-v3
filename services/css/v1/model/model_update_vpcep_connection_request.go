@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateVpcepConnectionRequest struct {
-	// 指定查询集群ID。
+	// 指定待更新的集群ID。
 
 	ClusterId string `json:"cluster_id"`
 

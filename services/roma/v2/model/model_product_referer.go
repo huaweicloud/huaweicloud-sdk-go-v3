@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -22,10 +25,10 @@ type ProductReferer struct {
 	Model *string `json:"model,omitempty"`
 	// 产品的协议类型：0-mqtt，1-coap，2-modbus，3-http, 4-opcua
 
-	ProtocolType *int32 `json:"protocol_type,omitempty"`
+	ProtocolType *ProductRefererProtocolType `json:"protocol_type,omitempty"`
 	// 产品类型：0-普通产品 1-网关产品
 
-	ProductType *int32 `json:"product_type,omitempty"`
+	ProductType *ProductRefererProductType `json:"product_type,omitempty"`
 }
 
 func (o ProductReferer) String() string {
@@ -35,4 +38,87 @@ func (o ProductReferer) String() string {
 	}
 
 	return strings.Join([]string{"ProductReferer", string(data)}, " ")
+}
+
+type ProductRefererProtocolType struct {
+	value int32
+}
+
+type ProductRefererProtocolTypeEnum struct {
+	E_0 ProductRefererProtocolType
+	E_1 ProductRefererProtocolType
+	E_2 ProductRefererProtocolType
+	E_3 ProductRefererProtocolType
+	E_4 ProductRefererProtocolType
+}
+
+func GetProductRefererProtocolTypeEnum() ProductRefererProtocolTypeEnum {
+	return ProductRefererProtocolTypeEnum{
+		E_0: ProductRefererProtocolType{
+			value: 0,
+		}, E_1: ProductRefererProtocolType{
+			value: 1,
+		}, E_2: ProductRefererProtocolType{
+			value: 2,
+		}, E_3: ProductRefererProtocolType{
+			value: 3,
+		}, E_4: ProductRefererProtocolType{
+			value: 4,
+		},
+	}
+}
+
+func (c ProductRefererProtocolType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ProductRefererProtocolType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type ProductRefererProductType struct {
+	value int32
+}
+
+type ProductRefererProductTypeEnum struct {
+	E_0 ProductRefererProductType
+	E_1 ProductRefererProductType
+}
+
+func GetProductRefererProductTypeEnum() ProductRefererProductTypeEnum {
+	return ProductRefererProductTypeEnum{
+		E_0: ProductRefererProductType{
+			value: 0,
+		}, E_1: ProductRefererProductType{
+			value: 1,
+		},
+	}
+}
+
+func (c ProductRefererProductType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ProductRefererProductType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

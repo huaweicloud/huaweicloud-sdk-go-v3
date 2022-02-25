@@ -32,7 +32,7 @@ type ProjectVpcChannelInfo struct {
 	Id *string `json:"id,omitempty"`
 	// VPC通道的状态。 - 1：正常 - 2：异常
 
-	Status *int32 `json:"status,omitempty"`
+	Status *ProjectVpcChannelInfoStatus `json:"status,omitempty"`
 	// 后端云服务器组列表。
 
 	MemberGroups *[]MemberGroupInfo `json:"member_groups,omitempty"`
@@ -136,5 +136,42 @@ func (c *ProjectVpcChannelInfoMemberType) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type ProjectVpcChannelInfoStatus struct {
+	value int32
+}
+
+type ProjectVpcChannelInfoStatusEnum struct {
+	E_1 ProjectVpcChannelInfoStatus
+	E_2 ProjectVpcChannelInfoStatus
+}
+
+func GetProjectVpcChannelInfoStatusEnum() ProjectVpcChannelInfoStatusEnum {
+	return ProjectVpcChannelInfoStatusEnum{
+		E_1: ProjectVpcChannelInfoStatus{
+			value: 1,
+		}, E_2: ProjectVpcChannelInfoStatus{
+			value: 2,
+		},
+	}
+}
+
+func (c ProjectVpcChannelInfoStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ProjectVpcChannelInfoStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

@@ -7,9 +7,12 @@ import (
 )
 
 type BrandBrokens struct {
-	RecBytes *[]int32 `json:"recBytes,omitempty"`
+	// 接收字节数
 
-	SentBytes *[]int32 `json:"sentBytes,omitempty"`
+	RecBytes *[]float64 `json:"recBytes,omitempty"`
+	// 发送字节数
+
+	SentBytes *[]float64 `json:"sentBytes,omitempty"`
 }
 
 func (o BrandBrokens) String() string {

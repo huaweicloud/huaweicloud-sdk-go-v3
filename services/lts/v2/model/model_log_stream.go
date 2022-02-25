@@ -20,6 +20,9 @@ type LogStream struct {
 	// 过滤器个数
 
 	FilterCount int32 `json:"filter_count"`
+	// 日志流所属标签
+
+	Tag map[string]string `json:"tag,omitempty"`
 }
 
 func (o LogStream) String() string {

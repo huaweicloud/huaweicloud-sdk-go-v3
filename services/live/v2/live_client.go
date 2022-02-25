@@ -195,6 +195,17 @@ func (c *LiveClient) ListSingleStreamBitrate(request *model.ListSingleStreamBitr
 	}
 }
 
+//查询流监控数据接口，包括帧率码率断流情况。  最大查询跨度1天，最大查询周期1个月。  返回的码率数据列表粒度为1秒钟。
+func (c *LiveClient) ListSingleStreamDetail(request *model.ListSingleStreamDetailRequest) (*model.ListSingleStreamDetailResponse, error) {
+	requestDef := GenReqDefForListSingleStreamDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSingleStreamDetailResponse), nil
+	}
+}
+
 //查询推流帧率数据接口。  最大查询跨度1天，最大查询周期1个月。  返回的帧率数据列表粒度为1秒钟。
 func (c *LiveClient) ListSingleStreamFramerate(request *model.ListSingleStreamFramerateRequest) (*model.ListSingleStreamFramerateResponse, error) {
 	requestDef := GenReqDefForListSingleStreamFramerate()

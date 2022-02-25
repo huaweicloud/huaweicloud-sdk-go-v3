@@ -8,13 +8,7 @@ import (
 
 // Response Object
 type UpdateExtendClusterResponse struct {
-	// 集群ID。
-
-	Id *string `json:"id,omitempty"`
-	// 扩容实例列表。
-
-	Instances      *[]ExtendClusterInstancesResp `json:"instances,omitempty"`
-	HttpStatusCode int                           `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateExtendClusterResponse) String() string {

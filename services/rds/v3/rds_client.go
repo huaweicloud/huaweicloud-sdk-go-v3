@@ -371,6 +371,17 @@ func (c *RdsClient) ListRestoreTimes(request *model.ListRestoreTimesRequest) (*m
 	}
 }
 
+//查询慢日志文件列表。 调用该接口取到慢日志文件名后，可以调用接口/v3/{project_id}/instances/{instance_id}/slowlog-download 获取慢日志文件下载链接
+func (c *RdsClient) ListSlowLogFile(request *model.ListSlowLogFileRequest) (*model.ListSlowLogFileResponse, error) {
+	requestDef := GenReqDefForListSlowLogFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSlowLogFileResponse), nil
+	}
+}
+
 //查询数据库慢日志。
 func (c *RdsClient) ListSlowLogs(request *model.ListSlowLogsRequest) (*model.ListSlowLogsResponse, error) {
 	requestDef := GenReqDefForListSlowLogs()
@@ -687,6 +698,28 @@ func (c *RdsClient) StartResizeFlavorAction(request *model.StartResizeFlavorActi
 		return nil, err
 	} else {
 		return resp.(*model.StartResizeFlavorActionResponse), nil
+	}
+}
+
+//停止实例以节省费用，在停止数据库实例后，支持手动重新开启实例。
+func (c *RdsClient) StartupInstance(request *model.StartupInstanceRequest) (*model.StartupInstanceResponse, error) {
+	requestDef := GenReqDefForStartupInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartupInstanceResponse), nil
+	}
+}
+
+//实例进行关机，通过暂时停止按需实例以节省费用，实例默认停止七天。
+func (c *RdsClient) StopInstance(request *model.StopInstanceRequest) (*model.StopInstanceResponse, error) {
+	requestDef := GenReqDefForStopInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopInstanceResponse), nil
 	}
 }
 

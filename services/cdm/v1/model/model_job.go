@@ -15,16 +15,16 @@ type Job struct {
 	JobType *JobJobType `json:"job_type,omitempty"`
 	// 源端连接类型
 
-	FromConnectorName *string `json:"from-connector-name,omitempty"`
+	FromConnectorName string `json:"from-connector-name"`
 
-	ToConfigValues *ConfigValues `json:"to-config-values,omitempty"`
+	ToConfigValues *ConfigValues `json:"to-config-values"`
 	// 目的端连接名称
 
-	ToLinkName *string `json:"to-link-name,omitempty"`
+	ToLinkName string `json:"to-link-name"`
 
-	DriverConfigValues *ConfigValues `json:"driver-config-values,omitempty"`
+	DriverConfigValues *ConfigValues `json:"driver-config-values"`
 
-	FromConfigValues *ConfigValues `json:"from-config-values,omitempty"`
+	FromConfigValues *ConfigValues `json:"from-config-values"`
 	// 目的端连接类型
 
 	ToConnectorName *string `json:"to-connector-name,omitempty"`

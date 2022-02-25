@@ -19,6 +19,12 @@ type ImportCertificateRequestBody struct {
 	// 证书私钥。 不能上传带有口令保护的私钥，回车换行需要使用转义字符\\n或者\\r\\n替换。
 
 	PrivateKey string `json:"private_key"`
+	// 可选参数，国密证书的加密证书内容。书回车换行需要使用转义字符\\n或者\\r\\n替换。
+
+	EncCertificate *string `json:"enc_certificate,omitempty"`
+	// 可选参数，国密证书的加密私钥。 不能上传带有口令保护的私钥，回车换行需要使用转义字符\\n或者\\r\\n替换。
+
+	EncPrivateKey *string `json:"enc_private_key,omitempty"`
 }
 
 func (o ImportCertificateRequestBody) String() string {
