@@ -23,7 +23,7 @@ type CreateJobReq struct {
 	// 任务描述。  **约束**：任务描述不能超过256位，且不能包含!<>&'\"\\特殊字符。
 
 	Description *string `json:"description,omitempty"`
-	// 引擎类型，mysql：迁移，同步使用；mongodb：迁移使用；cloudDataGuard-mysql：灾备使用。
+	// 引擎类型 - mysql：迁移，同步使用 - mongodb：迁移使用 - cloudDataGuard-mysql：灾备使用 - gaussdbv5，postgresql：同步使用
 
 	EngineType CreateJobReqEngineType `json:"engine_type"`
 	// 指定目标实例是否限制为只读，MySQL迁移和灾备，且job_direction为up时设置有效。（灾备场景下，单主灾备且本云为备为必填且为true，不填默认设置为true）。
@@ -54,7 +54,7 @@ type CreateJobReq struct {
 	// 迁移模式，FULL_TRANS 全量,FULL_INCR_TRANS 全量+增量,INCR_TRANS 增量，灾备场景单主灾备仅支持全量加增量（FULL_INCR_TRANS）
 
 	TaskType CreateJobReqTaskType `json:"task_type"`
-	// drs实例所在子网ID
+	// DRS实例所在子网ID，对应目标库相同VPC下已创建的子网（subnet）的网络ID，UUID格式。
 
 	CustomizeSutnetId string `json:"customize_sutnet_id"`
 	// 产品id。
@@ -127,6 +127,8 @@ type CreateJobReqEngineTypeEnum struct {
 	MYSQL                  CreateJobReqEngineType
 	MONGODB                CreateJobReqEngineType
 	CLOUD_DATA_GUARD_MYSQL CreateJobReqEngineType
+	GAUSSDBV5              CreateJobReqEngineType
+	POSTGRESQL             CreateJobReqEngineType
 }
 
 func GetCreateJobReqEngineTypeEnum() CreateJobReqEngineTypeEnum {
@@ -139,6 +141,12 @@ func GetCreateJobReqEngineTypeEnum() CreateJobReqEngineTypeEnum {
 		},
 		CLOUD_DATA_GUARD_MYSQL: CreateJobReqEngineType{
 			value: "cloudDataGuard-mysql",
+		},
+		GAUSSDBV5: CreateJobReqEngineType{
+			value: "gaussdbv5",
+		},
+		POSTGRESQL: CreateJobReqEngineType{
+			value: "postgresql",
 		},
 	}
 }

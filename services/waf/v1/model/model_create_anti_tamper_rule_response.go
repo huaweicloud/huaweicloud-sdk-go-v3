@@ -23,7 +23,7 @@ type CreateAntiTamperRuleResponse struct {
 	// 创建规则的时间戳
 
 	Description *string `json:"description,omitempty"`
-	// 规则状态
+	// 规则状态，0：关闭，1：开启
 
 	Status         *int32 `json:"status,omitempty"`
 	HttpStatusCode int    `json:"-"`

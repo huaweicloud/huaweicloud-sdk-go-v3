@@ -17,7 +17,7 @@ type ListTasksDetailsRequest struct {
 	// 目标服务作业对应的服务版本号
 
 	ServiceVersion *string `json:"service_version,omitempty"`
-	// 目标服务作业的状态
+	// 目标服务作业的状态，分别为PENDING（等待中），RECOVERING（恢复中），STARTING（启动中），UPGRADING（升级中），CREATE_FAILED（创建失败），START_FAILED（启动失败），RUNNING（运行中），STOPPING（停止中），STOPPED（已停止），ABNORMAL（异常），SUCCEEDED（运行成功），FAILED（运行失败），DELETING（删除中），FREEZING（冻结中），FROZEN（已冻结）
 
 	State *ListTasksDetailsRequestState `json:"state,omitempty"`
 	// 目标服务作业的名称，支持模糊匹配
@@ -32,7 +32,7 @@ type ListTasksDetailsRequest struct {
 	// 目标服务作业的创建截止时间
 
 	CreatedUntil *int64 `json:"created_until,omitempty"`
-	// 展示服务作业时的排序字段和顺序
+	// 展示服务作业时的排序字段和顺序，分别为name:ASC（按名称顺序排序），name:DESC（按名称倒序排序），created_at:ASC（按创建时间正序排序），created_at:DESC（按创建时间倒序排序），updated_at:ASC（按更新时间正序排序），updated_at:DESC（按更新时间倒序排序）
 
 	Order *ListTasksDetailsRequestOrder `json:"order,omitempty"`
 	// 首个展示的服务作业的偏移量

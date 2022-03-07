@@ -26,6 +26,9 @@ type UpdateUserReq struct {
 	// 是否迁移用户
 
 	IsMigrateUser bool `json:"is_migrate_user"`
+	// 是否同步权限，不填默认为false，PG同步使用。
+
+	IsSyncObjectPrivilege *bool `json:"is_sync_object_privilege,omitempty"`
 }
 
 func (o UpdateUserReq) String() string {

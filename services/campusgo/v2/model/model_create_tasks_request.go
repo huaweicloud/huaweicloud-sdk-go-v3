@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateTasksRequest struct {
-	// 服务名称
+	// 服务API,具体API名称见园区智能体提供的API参考列表中URI描述[API列表](https://support.huaweicloud.com/api-campusgo/campusgo_03_0013.html)
 
 	ServiceName string `json:"service_name"`
 

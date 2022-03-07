@@ -23,7 +23,7 @@ type DeleteWhiteBlackIpRuleResponse struct {
 	// 描述
 
 	Description *string `json:"description,omitempty"`
-	// 规则状态
+	// 规则状态，0：关闭，1：开启
 
 	Status *int32 `json:"status,omitempty"`
 	// 黑白名单ip地址，标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16

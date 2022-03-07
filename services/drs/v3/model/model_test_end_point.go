@@ -38,13 +38,13 @@ type TestEndPoint struct {
 	// 是否SSL安全连接。
 
 	SslLink *bool `json:"ssl_link,omitempty"`
-	// SSL证书内容，用base64加密后，源库安全连接必选。
+	// SSL证书内容，base64加密后的值，源库安全连接必选。
 
 	SslCertKey *string `json:"ssl_cert_key,omitempty"`
 	// SSL证书名字，源库安全连接必选。
 
 	SslCertName *string `json:"ssl_cert_name,omitempty"`
-	// SSL证书内容checksum值，后端校验，源库安全连接必选。
+	// SSL证书内容checksum值，证书经过sha256加密后的值，后端校验，源库安全连接必选。
 
 	SslCertCheckSum *string `json:"ssl_cert_check_sum,omitempty"`
 	// SSL证书密码，证书文件后缀为.p12，需要密码。
@@ -68,6 +68,8 @@ type TestEndPoint struct {
 	// 数据库用户名，DDS的账号认证数据库，Oracle的serviceName。
 
 	DbName *string `json:"db_name,omitempty"`
+
+	KafkaSecurityConfig *KafkaSecurity `json:"kafka_security_config,omitempty"`
 }
 
 func (o TestEndPoint) String() string {
@@ -126,8 +128,9 @@ type TestEndPointDbType struct {
 }
 
 type TestEndPointDbTypeEnum struct {
-	MYSQL   TestEndPointDbType
-	MONGODB TestEndPointDbType
+	MYSQL      TestEndPointDbType
+	MONGODB    TestEndPointDbType
+	POSTGRESQL TestEndPointDbType
 }
 
 func GetTestEndPointDbTypeEnum() TestEndPointDbTypeEnum {
@@ -137,6 +140,9 @@ func GetTestEndPointDbTypeEnum() TestEndPointDbTypeEnum {
 		},
 		MONGODB: TestEndPointDbType{
 			value: "mongodb",
+		},
+		POSTGRESQL: TestEndPointDbType{
+			value: "postgresql",
 		},
 	}
 }

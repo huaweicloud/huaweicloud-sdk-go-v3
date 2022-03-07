@@ -25,7 +25,7 @@ type IndirectPartnerInfo struct {
 	// 精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
 
 	AssociatedOn *string `json:"associated_on,omitempty"`
-	// 客户经理ID。
+	// 客户经理登录账户名。
 
 	AccountManagerId *string `json:"account_manager_id,omitempty"`
 	// 客户经理的名称。

@@ -15,7 +15,7 @@ func NewIoTDAClient(hcClient *http_client.HcHttpClient) *IoTDAClient {
 }
 
 func IoTDAClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+	builder := http_client.NewHcHttpClientBuilder().WithDerivedAuthServiceName("iotdm")
 	return builder
 }
 

@@ -32,6 +32,15 @@ type QueryUserDetailResp struct {
 	// 是否选择。
 
 	Selected *bool `json:"selected,omitempty"`
+	// 无法同步的用户权限
+
+	NoPrivileges *string `json:"no_privileges,omitempty"`
+	// 父用户
+
+	ParentAccount *string `json:"parent_account,omitempty"`
+	// 无法同步父子关系的父用户
+
+	NoParentAccount *string `json:"no_parent_account,omitempty"`
 }
 
 func (o QueryUserDetailResp) String() string {

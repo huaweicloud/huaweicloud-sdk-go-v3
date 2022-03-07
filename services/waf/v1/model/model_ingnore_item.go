@@ -19,7 +19,7 @@ type IngnoreItem struct {
 	// 规则描述
 
 	Description *string `json:"description,omitempty"`
-	// 状态（0：关闭，1：开启）
+	// 规则状态，0：关闭，1：开启
 
 	Status *int32 `json:"status,omitempty"`
 	// 防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀

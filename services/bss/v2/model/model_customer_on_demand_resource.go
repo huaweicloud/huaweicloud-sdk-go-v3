@@ -34,7 +34,7 @@ type CustomerOnDemandResource struct {
 	// 失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
 
 	ExpireTime *string `json:"expire_time,omitempty"`
-	// 资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+	// 资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
 
 	Status *int32 `json:"status,omitempty"`
 	// 云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。

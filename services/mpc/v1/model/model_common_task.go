@@ -22,6 +22,9 @@ type CommonTask struct {
 	// 任务结束时间
 
 	EndTime *string `json:"end_time,omitempty"`
+	// 任务的返回码。
+
+	ErrorCode *string `json:"error_code,omitempty"`
 	// 错误描述
 
 	Description *string `json:"description,omitempty"`
