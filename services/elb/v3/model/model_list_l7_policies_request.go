@@ -17,7 +17,7 @@ type ListL7PoliciesRequest struct {
 	// 分页的顺序，true表示从后往前分页，false表示从前往后分页，默认为false。  使用说明： - 必须与limit一起使用。
 
 	PageReverse *bool `json:"page_reverse,omitempty"`
-	// 企业项目ID。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test)
+	// 企业项目ID。  支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
 
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 	// 转发策略ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。

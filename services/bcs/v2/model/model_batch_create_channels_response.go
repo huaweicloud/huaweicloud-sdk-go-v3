@@ -8,7 +8,10 @@ import (
 
 // Response Object
 type BatchCreateChannelsResponse struct {
-	HttpStatusCode int `json:"-"`
+	// 操作记录id
+
+	OperationId    *string `json:"operation_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o BatchCreateChannelsResponse) String() string {

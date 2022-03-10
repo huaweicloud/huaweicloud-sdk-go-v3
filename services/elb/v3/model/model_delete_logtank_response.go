@@ -7,15 +7,15 @@ import (
 )
 
 // Response Object
-type DeleteAlarmResponse struct {
+type DeleteLogtankResponse struct {
 	HttpStatusCode int `json:"-"`
 }
 
-func (o DeleteAlarmResponse) String() string {
+func (o DeleteLogtankResponse) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "DeleteAlarmResponse struct{}"
+		return "DeleteLogtankResponse struct{}"
 	}
 
-	return strings.Join([]string{"DeleteAlarmResponse", string(data)}, " ")
+	return strings.Join([]string{"DeleteLogtankResponse", string(data)}, " ")
 }

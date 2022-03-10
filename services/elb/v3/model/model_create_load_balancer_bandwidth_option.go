@@ -17,13 +17,13 @@ type CreateLoadBalancerBandwidthOption struct {
 	// 带宽大小 取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。  注意：调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s:默认最小单位为1Mbit/s。 300Mbit/s~1000Mbit/s:默认最小单位为50Mbit/s。 大于1000Mbit/s:默认最小单位为500Mbit/s。  使用说明： - 当id字段为null时，size是必须的。
 
 	Size *int32 `json:"size,omitempty"`
-	// 计费模式。 [取值范围：bandwidth表示按带宽计费，traffic表示按流量计费。](tag:hws,hk,ocb,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk-g42) [当前仅支持traffic按流量计费](tag:dt,dt_test) 使用说明： - 当id字段为null时，charge_mode是必须的。
+	// 计费模式。 [取值范围：bandwidth表示按带宽计费，traffic表示按流量计费。](tag:hws,ocb,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk-g42) [当前仅支持traffic按流量计费](tag:dt,dt_test,hcso_dt) 使用说明：   - 当id字段为null时，charge_mode是必须的。
 
 	ChargeMode *CreateLoadBalancerBandwidthOptionChargeMode `json:"charge_mode,omitempty"`
 	// 带宽类型。 取值： - PER：独享带宽。 - WHOLE：共享带宽。  使用说明： - 当id字段为null时，share_type是必须的。当id不为null时，该字段被忽略。 - 该字段为WHOLE时,必须指定带宽ID。 - IPv6的EIP不支持WHOLE类型带宽。
 
 	ShareType *CreateLoadBalancerBandwidthOptionShareType `json:"share_type,omitempty"`
-	// 预留资源账单信息，默认为空表示按需计费， 非空为包周期。admin权限才能更新此字段
+	// 预留资源账单信息，默认为空表示按需计费，非空为包周期。 不支持该字段，请勿使用。
 
 	BillingInfo *string `json:"billing_info,omitempty"`
 	// 功能说明：使用已有的共享带宽创建IP 取值范围：共享带宽ID  使用说明： - WHOLE类型的带宽ID； - 在预付费的情况下，不填该值。该字段取空字符串时，会被忽略。

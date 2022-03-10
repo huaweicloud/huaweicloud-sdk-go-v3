@@ -8,6 +8,9 @@ import (
 
 // Response Object
 type ListLogsResponse struct {
+	// 日志条数。
+
+	Count *int32 `json:"count,omitempty"`
 	// 日志信息。
 
 	Logs           *[]LogContents `json:"logs,omitempty"`

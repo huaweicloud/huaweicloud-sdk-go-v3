@@ -15,7 +15,7 @@ type CreateRequestBody struct {
 	VersionType int64 `json:"version_type"`
 	// Fabric版本，当前邀请方以及私有链的创建仅可选：2.2 ;被邀请方创建时，和邀请方保持一致，1.4版本服务仅支持1.15及以下版本集群
 
-	FabricVersion string `json:"fabric_version"`
+	FabricVersion *string `json:"fabric_version,omitempty"`
 	// 区块链类型，默认私有链，可选：联盟链（union），私有链（private）。被邀请方创建时，和邀请方保持一致。
 
 	BlockchainType *string `json:"blockchain_type,omitempty"`

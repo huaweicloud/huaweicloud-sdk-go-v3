@@ -23,7 +23,7 @@ type ListHealthMonitorsRequest struct {
 	// 健康检查端口号。  支持多值查询，查询条件格式：***monitor_port=xxx&monitor_port=xxx***。
 
 	MonitorPort *[]int32 `json:"monitor_port,omitempty"`
-	// 发送健康检查请求的域名。  取值：以数字或字母开头，只能包含数字、字母、’-’、’.’。  支持多值查询，查询条件格式：**domain_name=xxx&domain_name=xxx**。
+	// 发送健康检查请求的域名。  取值：以数字或字母开头，只能包含数字、字母、'-'、'.'。  支持多值查询，查询条件格式：**domain_name=xxx&domain_name=xxx**。
 
 	DomainName *[]string `json:"domain_name,omitempty"`
 	// 健康检查名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
@@ -50,13 +50,13 @@ type ListHealthMonitorsRequest struct {
 	// 期望响应状态码。支持多种取值格式：   单值：单个返回码，例如200。   列表：多个特定返回码，例如200，202。   区间：一个返回码区间，例如200-204。 仅支持HTTP/HTTPS设置该字段，其他协议设置不会生效。 支持多值查询，查询条件格式：****expected_codes=xxx&expected_codes=xxx****。
 
 	ExpectedCodes *[]string `json:"expected_codes,omitempty"`
-	// 健康检查测试member健康时发送的http请求路径。默认为“/”。  使用说明： - 以“/”开头。仅当type为HTTP时生效。  支持多值查询，查询条件格式：***url_path=xxx&url_path=xxx***。
+	// 健康检查测试member健康时发送的http请求路径。默认为\"/\"。  使用说明： - 以\"/\"开头。仅当type为HTTP时生效。  支持多值查询，查询条件格式：***url_path=xxx&url_path=xxx***。
 
 	UrlPath *[]string `json:"url_path,omitempty"`
 	// HTTP请求方法，取值：GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH。  支持多值查询，查询条件格式：**http_method=xxx&http_method=xxx**。  不支持该字段，请勿使用。
 
 	HttpMethod *[]string `json:"http_method,omitempty"`
-	// 企业项目ID。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test)
+	// 企业项目ID。  支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
 
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 }

@@ -129,6 +129,17 @@ func (c *ElbClient) CreateLoadBalancer(request *model.CreateLoadBalancerRequest)
 	}
 }
 
+//创建云日志
+func (c *ElbClient) CreateLogtank(request *model.CreateLogtankRequest) (*model.CreateLogtankResponse, error) {
+	requestDef := GenReqDefForCreateLogtank()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateLogtankResponse), nil
+	}
+}
+
 //创建后端服务器。
 func (c *ElbClient) CreateMember(request *model.CreateMemberRequest) (*model.CreateMemberResponse, error) {
 	requestDef := GenReqDefForCreateMember()
@@ -228,6 +239,17 @@ func (c *ElbClient) DeleteLoadBalancer(request *model.DeleteLoadBalancerRequest)
 	}
 }
 
+//删除云日志。
+func (c *ElbClient) DeleteLogtank(request *model.DeleteLogtankRequest) (*model.DeleteLogtankResponse, error) {
+	requestDef := GenReqDefForDeleteLogtank()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLogtankResponse), nil
+	}
+}
+
 //删除后端服务器。
 func (c *ElbClient) DeleteMember(request *model.DeleteMemberRequest) (*model.DeleteMemberResponse, error) {
 	requestDef := GenReqDefForDeleteMember()
@@ -272,7 +294,7 @@ func (c *ElbClient) ListAllMembers(request *model.ListAllMembersRequest) (*model
 	}
 }
 
-//返回租户创建LB时可使用的可用区集合列表情况。  默认情况下，会返回一个可用区集合。在（如创建LB）设置可用区时，填写的可用区必须包含在可用区集合中、为这个可用区集合的子集。  [特殊场景下，部分客户要求负载均衡只能创建在指定可用区集合中，此时会返回客户定制的可用区集合。返回可用区集合可能为一个也可能为多个，比如列表有两个可用区集合[az1,az2], [az2,az3]。在创建负载均衡器时，可以选择创建在多个可用区，但所选的多个可用区必须同属于其中一个可用区集合，如可以选az2和az3，但不能选择az1和az3。你可以选择多个可用区，只要这些可用区在一个子集中](tag:hws,hk,ocb,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk-g42)
+//返回租户创建LB时可使用的可用区集合列表情况。  默认情况下，会返回一个可用区集合。在（如创建LB）设置可用区时，填写的可用区必须包含在可用区集合中、为这个可用区集合的子集。  [特殊场景下，部分客户要求负载均衡只能创建在指定可用区集合中，此时会返回客户定制的可用区集合。返回可用区集合可能为一个也可能为多个，比如列表有两个可用区集合[az1,az2], [az2,az3]。在创建负载均衡器时，可以选择创建在多个可用区，但所选的多个可用区必须同属于其中一个可用区集合，如可以选az2和az3，但不能选择az1和az3。你可以选择多个可用区，只要这些可用区在一个子集中](tag:hws,ocb,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk-g42)
 func (c *ElbClient) ListAvailabilityZones(request *model.ListAvailabilityZonesRequest) (*model.ListAvailabilityZonesResponse, error) {
 	requestDef := GenReqDefForListAvailabilityZones()
 
@@ -357,6 +379,17 @@ func (c *ElbClient) ListLoadBalancers(request *model.ListLoadBalancersRequest) (
 		return nil, err
 	} else {
 		return resp.(*model.ListLoadBalancersResponse), nil
+	}
+}
+
+//云日志列表
+func (c *ElbClient) ListLogtanks(request *model.ListLogtanksRequest) (*model.ListLogtanksResponse, error) {
+	requestDef := GenReqDefForListLogtanks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLogtanksResponse), nil
 	}
 }
 
@@ -492,7 +525,7 @@ func (c *ElbClient) ShowLoadBalancer(request *model.ShowLoadBalancerRequest) (*m
 	}
 }
 
-//查询负载均衡器状态树，包括负载均衡器及其关联的子资源的状态信息。 注意：该接口中的operating_status不一定与对应资源的operating_status相同。如：当Member的admin_state_up=false且operating_status=OFFLINE时，该接口返回member的operating_status=DISABLE。
+//查询负载均衡器状态树，包括负载均衡器及其关联的子资源的状态信息。  注意：该接口中的operating_status不一定与对应资源的operating_status相同。如：当Member的admin_state_up=false且operating_status=OFFLINE时，该接口返回member的operating_status=DISABLE。
 func (c *ElbClient) ShowLoadBalancerStatus(request *model.ShowLoadBalancerStatusRequest) (*model.ShowLoadBalancerStatusResponse, error) {
 	requestDef := GenReqDefForShowLoadBalancerStatus()
 
@@ -500,6 +533,17 @@ func (c *ElbClient) ShowLoadBalancerStatus(request *model.ShowLoadBalancerStatus
 		return nil, err
 	} else {
 		return resp.(*model.ShowLoadBalancerStatusResponse), nil
+	}
+}
+
+//云日志详情。
+func (c *ElbClient) ShowLogtank(request *model.ShowLogtankRequest) (*model.ShowLogtankResponse, error) {
+	requestDef := GenReqDefForShowLogtank()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLogtankResponse), nil
 	}
 }
 
@@ -613,6 +657,17 @@ func (c *ElbClient) UpdateLoadBalancer(request *model.UpdateLoadBalancerRequest)
 	}
 }
 
+//更新云日志
+func (c *ElbClient) UpdateLogtank(request *model.UpdateLogtankRequest) (*model.UpdateLogtankResponse, error) {
+	requestDef := GenReqDefForUpdateLogtank()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLogtankResponse), nil
+	}
+}
+
 //更新后端服务器。
 func (c *ElbClient) UpdateMember(request *model.UpdateMemberRequest) (*model.UpdateMemberResponse, error) {
 	requestDef := GenReqDefForUpdateMember()
@@ -679,7 +734,7 @@ func (c *ElbClient) CountPreoccupyIpNum(request *model.CountPreoccupyIpNumReques
 	}
 }
 
-//创建IP地址组。输入的ip可为ip地址或者CIDR子网，支持IPV4和IPV6。需要注意，0.0.0.0与0.0.0.0/32视为重复，0&#58;0&#58;0&#58;0&#58;0&#58;0&#58;0&#58;1与&#58;&#58;1与&#58;&#58;1/128视为重复，会只保留其中一个写入。
+//创建IP地址组。输入的ip可为ip地址或者CIDR子网，支持IPV4和IPV6。需要注意，0.0.0.0与0.0.0.0/32视为重复，0:0:0:0:0:0:0:1与::1与::1/128视为重复，会只保留其中一个写入。 [不支持IPv6，请勿传入IPv6地址。](tag:dt,dt_test)
 func (c *ElbClient) CreateIpGroup(request *model.CreateIpGroupRequest) (*model.CreateIpGroupResponse, error) {
 	requestDef := GenReqDefForCreateIpGroup()
 
@@ -723,7 +778,7 @@ func (c *ElbClient) ShowIpGroup(request *model.ShowIpGroupRequest) (*model.ShowI
 	}
 }
 
-//更新IP地址组，只支持全量更新IP。即IP地址组中的ip_list将被全量覆盖，不在请求参数中的IP地址将被移除。输入的ip可为ip地址或者CIDR子网，支持IPV4和IPV6。需要注意，0.0.0.0与0.0.0.0/32视为重复，0&#58;0&#58;0&#58;0&#58;0&#58;0&#58;0&#58;1与&#58;&#58;1与&#58;&#58;1/128视为重复，会只保留其中一个写入。
+//更新IP地址组，只支持全量更新IP。即IP地址组中的ip_list将被全量覆盖，不在请求参数中的IP地址将被移除。输入的ip可为ip地址或者CIDR子网，支持IPV4和IPV6。需要注意，0.0.0.0与0.0.0.0/32视为重复，0:0:0:0:0:0:0:1与::1与::1/128视为重复，会只保留其中一个写入。 [不支持IPv6，请勿传入IPv6地址。](tag:dt,dt_test)
 func (c *ElbClient) UpdateIpGroup(request *model.UpdateIpGroupRequest) (*model.UpdateIpGroupResponse, error) {
 	requestDef := GenReqDefForUpdateIpGroup()
 

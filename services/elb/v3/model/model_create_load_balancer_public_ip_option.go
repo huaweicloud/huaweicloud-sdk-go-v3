@@ -11,7 +11,7 @@ type CreateLoadBalancerPublicIpOption struct {
 	// IP版本。取值：4表示IPv4，6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
 
 	IpVersion *int32 `json:"ip_version,omitempty"`
-	// 弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建
+	// 弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  [> 德国Region只支持5_gray.](tag:dt,dt_test) [> hcso_dt Cloud只支持5_gray.](tag:hcso_dt)
 
 	NetworkType string `json:"network_type"`
 	// 资源账单信息，取值： - 空：按需计费。 - 非空：包周期计费。  [不支持该字段，请勿使用](tag:dt,dt_test)

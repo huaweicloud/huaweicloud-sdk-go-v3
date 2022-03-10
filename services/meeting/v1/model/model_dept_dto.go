@@ -31,6 +31,9 @@ type DeptDto struct {
 	// 允许访问的部门列表,仅outPermission为DESIGNATED_DEPARTMENT时有效，最多支持配置150
 
 	DesignatedOutDeptCodes *[]string `json:"designatedOutDeptCodes,omitempty"`
+	// 部门排序号，序号越小,部门排序越靠前 minimum: 1 maximum: 10000
+
+	SortLevel *int32 `json:"sortLevel,omitempty"`
 }
 
 func (o DeptDto) String() string {

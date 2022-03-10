@@ -14,7 +14,7 @@ type ClusterMetadata struct {
 	// 资源唯一标识，创建成功后自动生成，填写无效
 
 	Uid *string `json:"uid,omitempty"`
-	// 集群注解，由key/value组成：   ```  \"annotations\": {    \"key1\" : \"value1\",    \"key2\" : \"value2\" }  ```   >    - Annotations不用于标识和选择对象。Annotations中的元数据可以是small 或large，structured 或unstructured，并且可以包括标签不允许使用的字符。 >    - 该字段不会被数据库保存，当前仅用于指定集群待安装插件。
+	// 集群注解，由key/value组成：   ```  \"annotations\": {    \"key1\" : \"value1\",    \"key2\" : \"value2\" }  ```   >    - Annotations不用于标识和选择对象。Annotations中的元数据可以是small 或large，structured 或unstructured，并且可以包括标签不允许使用的字符。 >    - 该字段不会被数据库保存，当前仅用于指定集群待安装插件。 >    - 可通过加入\"cluster.install.addons.external/install\": \"[{\"addonTemplateName\":\"icagent\"}]\"的键值对在创建集群时安装ICAgent。
 
 	Annotations map[string]string `json:"annotations,omitempty"`
 	// 集群标签，key/value对格式。  >  该字段值由系统自动生成，用于升级时前端识别集群支持的特性开关，用户指定无效。

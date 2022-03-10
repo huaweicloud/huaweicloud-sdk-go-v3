@@ -43,6 +43,9 @@ type QueryDeptResultDto struct {
 	// 允许访问的部门列表，id为部门编码。
 
 	DesignatedOutDeptCodes *[]IdMarkDto `json:"designatedOutDeptCodes,omitempty"`
+	// 部门排序号
+
+	SortLevel *int32 `json:"sortLevel,omitempty"`
 }
 
 func (o QueryDeptResultDto) String() string {

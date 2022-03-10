@@ -35,10 +35,10 @@ type Quota struct {
 	// 单个pool下的member的配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
 
 	MembersPerPool int32 `json:"members_per_pool"`
-	// IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+	// IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
 
 	Ipgroup int32 `json:"ipgroup"`
-	// 自定义安全策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+	// 自定义安全策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
 
 	SecurityPolicy int32 `json:"security_policy"`
 }

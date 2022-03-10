@@ -41,7 +41,7 @@ type ListAllMembersRequest struct {
 	// 后端云服务器的健康状态，取值： ONLINE，后端服务器正常运行。 NO_MONITOR，后端服务器无健康检查。 OFFLINE，已下线。  支持多值查询，查询条件格式：*operating_status=xxx&operating_status=*。
 
 	OperatingStatus *[]string `json:"operating_status,omitempty"`
-	// 企业项目ID。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test)
+	// 企业项目ID。  支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
 
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 	// IP版本，取值v4、v6。  支持多值查询，查询条件格式：*ip_version=xxx&ip_version=xxx*。

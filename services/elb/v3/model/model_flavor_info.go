@@ -20,9 +20,12 @@ type FlavorInfo struct {
 	// 带宽。
 
 	Bandwidth *int32 `json:"bandwidth,omitempty"`
-	// flavor对应的lcu数量。
+	// 当前flavor对应的lcu数量。LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。
 
 	Lcu *int32 `json:"lcu,omitempty"`
+	// https新建连接数。
+
+	HttpsCps *int32 `json:"https_cps,omitempty"`
 }
 
 func (o FlavorInfo) String() string {

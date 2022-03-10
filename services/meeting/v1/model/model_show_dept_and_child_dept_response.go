@@ -46,8 +46,11 @@ type ShowDeptAndChildDeptResponse struct {
 	DesignatedOutDeptCodes *[]IdMarkDto `json:"designatedOutDeptCodes,omitempty"`
 	// 子部门列表
 
-	ChildDepts     *[]QueryDeptResultDto `json:"childDepts,omitempty"`
-	HttpStatusCode int                   `json:"-"`
+	ChildDepts *[]QueryDeptResultDto `json:"childDepts,omitempty"`
+	// 部门排序号
+
+	SortLevel      *int32 `json:"sortLevel,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowDeptAndChildDeptResponse) String() string {

@@ -1,6 +1,7 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -34,7 +35,7 @@ type ShowSimCardResponse struct {
 	DeviceModel *string `json:"device_model,omitempty"`
 	// 激活日期 例如2020-01-31T16:00:00.000Z
 
-	ActDate *string `json:"act_date,omitempty"`
+	ActDate *sdktime.SdkTime `json:"act_date,omitempty"`
 	// 设备状态变更时间 例如2020-01-31T16:00:00.000Z
 
 	DeviceStatusDate *string `json:"device_status_date,omitempty"`

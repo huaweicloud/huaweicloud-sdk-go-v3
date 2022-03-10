@@ -44,7 +44,7 @@ type ListMembersRequest struct {
 	// 后端云服务器的健康状态。取值： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。  支持多值查询，查询条件格式：*operating_status=xxx&operating_status=xxx*。
 
 	OperatingStatus *[]string `json:"operating_status,omitempty"`
-	// 企业项目ID。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。 [不支持该字段，请勿使用。](tag:dt,dt_test)
+	// 企业项目ID。  支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
 
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 	// 当前后端服务器的IP地址版本。取值：v4、v6。
@@ -53,7 +53,7 @@ type ListMembersRequest struct {
 	// 后端云服务器的类型。取值： - ip：跨VPC的member。 - instance：关联到ECS的member。  支持多值查询，查询条件格式：*member_type=xxx&member_type=xxx*。
 
 	MemberType *[]string `json:"member_type,omitempty"`
-	// member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）。取值： - ip：跨VPC的member。 - instance：关联到ECS的member。  支持多值查询，查询条件格式：*member_type=xxx&member_type=xxx*。
+	// member关联的ECS实例ID，空表示跨VPC场景的member。  支持多值查询，查询条件格式：*instance_id=xxx&instance_id=xxx*。
 
 	InstanceId *[]string `json:"instance_id,omitempty"`
 }

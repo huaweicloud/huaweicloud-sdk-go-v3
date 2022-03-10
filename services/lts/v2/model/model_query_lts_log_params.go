@@ -35,7 +35,7 @@ type QueryLtsLogParams struct {
 	// 首次查询为 “init”, 分页查询时为 “forwards”或者“backwards”, 默认为首次查询“init”, 与 is_desc 参数配合进行分页查询。
 
 	SearchType *QueryLtsLogParamsSearchType `json:"search_type,omitempty"`
-	// 表示每次查询的日志条数，不填时默认为5000，建议您设置为100。
+	// 表示每次查询的日志条数，不填时默认为50，建议您设置为100。
 
 	Limit *int32 `json:"limit,omitempty"`
 	// 日志关键词高亮显示，默认为true（高亮显示），false为取消高亮显示。

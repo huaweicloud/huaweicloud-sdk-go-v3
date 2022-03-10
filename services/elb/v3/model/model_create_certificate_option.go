@@ -20,7 +20,7 @@ type CreateCertificateOption struct {
 	// 证书的描述。
 
 	Description *string `json:"description,omitempty"`
-	// 服务器证书所签域名。该字段仅type为server或server_sm时有效。 总长度为0-1024，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过30个域名。 普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com； 泛域名：在普通域名的基础上仅允许首字母为\"\"。例：.test.com
+	// 服务器证书所签域名。该字段仅type为server或server_sm时有效。  总长度为0-1024，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过30个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\"。例：.test.com
 
 	Domain *string `json:"domain,omitempty"`
 	// 证书的名称。
@@ -35,7 +35,7 @@ type CreateCertificateOption struct {
 	// SSL证书的类型。分为服务器证书(server)、CA证书(client)和服务器SM双证书(server_sm)。 默认值：server
 
 	Type *CreateCertificateOptionType `json:"type,omitempty"`
-	// 证书所属的企业项目ID。
+	// 证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  使用说明： - 仅type为server_sm时有效且必选。

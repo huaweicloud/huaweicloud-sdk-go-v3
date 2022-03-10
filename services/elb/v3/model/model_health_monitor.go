@@ -14,13 +14,13 @@ type HealthMonitor struct {
 	// 健康检查间隔。取值：1-50s。
 
 	Delay int32 `json:"delay"`
-	// 发送健康检查请求的域名。  取值：以数字或字母开头，只能包含数字、字母、’-’、’.’。  默认为空，表示使用负载均衡器的vip作为http请求的目的地址。  使用说明： - 仅当type为HTTP时生效。
+	// 发送健康检查请求的域名。  取值：以数字或字母开头，只能包含数字、字母、'-'、'.'。  默认为空，表示使用负载均衡器的vip作为http请求的目的地址。  使用说明： - 仅当type为HTTP时生效。
 
 	DomainName string `json:"domain_name"`
 	// 期望响应状态码。支持多种取值格式： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。   默认值：200。  仅支持HTTP/HTTPS设置该字段，其他协议设置不会生效。
 
 	ExpectedCodes string `json:"expected_codes"`
-	// HTTP请求方法，取值：GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH，默认GET。 使用说明： - 仅当type为HTTP时生效。 不支持该字段，请勿使用。
+	// HTTP请求方法，取值：GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH，默认GET。 使用说明：  - 仅当type为HTTP时生效。 不支持该字段，请勿使用。
 
 	HttpMethod string `json:"http_method"`
 	// 健康检查ID

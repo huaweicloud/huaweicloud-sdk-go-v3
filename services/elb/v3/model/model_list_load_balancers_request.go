@@ -59,13 +59,13 @@ type ListLoadBalancersRequest struct {
 	// 双栈类型负载均衡器所在的子网IPv6网络ID。  支持多值查询，查询条件格式：*ipv6_vip_virsubnet_id=xxx&ipv6_vip_virsubnet_id=xxx*。   [不支持IPv6，请勿使用。](tag:dt,dt_test)
 
 	Ipv6VipVirsubnetId *[]string `json:"ipv6_vip_virsubnet_id,omitempty"`
-	// 负载均衡器绑定的EIP ID。示例如下： \"eips\"&#58; [             {                 \"eip_id\"&#58; \"e9b72a9d-4275-455e-a724-853504e4d9c6\",                 \"eip_address\"&#58; \"88.88.14.122\",                 \"ip_version\"&#58; 4             }         ]  支持多值查询，查询条件格式： - eip_id作为查询条件：*eips=eip_id=xxx&eips=eip_id=xxx*。 - eip_address作为查询条件：*eips=eip_address=xxx&eips=eip_address=xxx*。 - ip_version作为查询条件：*eips=ip_version=xxx&eips=ip_version=xxx*。  注：该字段与publicips字段一致。
+	// 负载均衡器绑定的EIP ID。示例如下： \"eips\": [             {                 \"eip_id\": \"e9b72a9d-4275-455e-a724-853504e4d9c6\",                 \"eip_address\": \"88.88.14.122\",                 \"ip_version\": 4             }         ]  支持多值查询，查询条件格式： - eip_id作为查询条件：*eips=eip_id=xxx&eips=eip_id=xxx*。 - eip_address作为查询条件：*eips=eip_address=xxx&eips=eip_address=xxx*。 - ip_version作为查询条件：*eips=ip_version=xxx&eips=ip_version=xxx*。  注：该字段与publicips字段一致。
 
 	Eips *[]string `json:"eips,omitempty"`
-	// 负载均衡器绑定的公网IP。示例如下： \"publicips\"&#58; [                 {                     \"publicip_id\"&#58; \"e9b72a9d-4275-455e-a724-853504e4d9c6\",                     \"publicip_address\"&#58; \"88.88.14.122\",                     \"ip_version\"&#58; 4                 }             ]  支持多值查询，查询条件格式： - publicip_id作为查询条件：*publicips=publicip_id=xxx&publicips=publicip_id=xxx*。 - publicip_address作为查询条件：*publicips=publicip_address=xxx&publicips=publicip_address=xxx*。 - ip_version作为查询条件：*publicips=ip_version=xxx&publicips=ip_version=xxx*。 注：该字段与eips字段一致。
+	// 负载均衡器绑定的公网IP。示例如下：  \"publicips\": [                 {                     \"publicip_id\": \"e9b72a9d-4275-455e-a724-853504e4d9c6\",                     \"publicip_address\": \"88.88.14.122\",                     \"ip_version\": 4                 }             ]  支持多值查询，查询条件格式： - publicip_id作为查询条件：*publicips=publicip_id=xxx&publicips=publicip_id=xxx*。 - publicip_address作为查询条件：*publicips=publicip_address=xxx&publicips=publicip_address=xxx*。 - ip_version作为查询条件：*publicips=ip_version=xxx&publicips=ip_version=xxx*。  注：该字段与eips字段一致。
 
 	Publicips *[]string `json:"publicips,omitempty"`
-	// 负载均衡器所在可用区列表。 支持多值查询，查询条件格式：*availability_zone_list=xxx&availability_zone_list=xxx*。
+	// 负载均衡器所在可用区列表。  支持多值查询，查询条件格式：*availability_zone_list=xxx&availability_zone_list=xxx*。
 
 	AvailabilityZoneList *[]string `json:"availability_zone_list,omitempty"`
 	// 四层Flavor ID。  支持多值查询，查询条件格式：*l4_flavor_id=xxx&l4_flavor_id=xxx*。
@@ -89,7 +89,7 @@ type ListLoadBalancersRequest struct {
 	// 负载均衡器中的后端云服务器对应的弹性云服务器的IP地址。仅用于查询条件，不作为响应参数字段。  支持多值查询，查询条件格式：*member_address=xxx&member_address=xxx*。
 
 	MemberAddress *[]string `json:"member_address,omitempty"`
-	// 负载均衡器所属的企业项目ID。 支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。 [不支持该字段，请勿使用。](tag:dt,dt_test)
+	// 负载均衡器所属的企业项目ID。  支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
 
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 	// IP版本信息。 取值：4代表IPv4，6代表IPv6。  支持多值查询，查询条件格式：*ip_version=xxx&ip_version=xxx*。   [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
