@@ -1,3 +1,145 @@
+# 0.0.81 2022-03-25
+
+### HuaweiCloud SDK AOM
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `responseStatus` to the interface `DeleteserviceDiscoveryRules`
+  - Add the response parameter `responseStatus` to the interface `AddOrUpdateServiceDiscoveryRules`
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - Support the interfaces(v2):
+    - `ShowDomainLocationStats`
+    - `ShowDomainStats`
+    - `ShowTopUrl`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK DAS
+
+- _Features_
+  - Support the interface `ShowSqlExplain`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK DCS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `group_name`, `replication_ip` to the interface `ListRedislog`
+
+### HuaweiCloud SDK DNS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the response parameter `routers` from the interface `ListPublicZones`
+  - Add the request parameters `marker`, `limit`, `offset`, `line_id`, `tags`, `status`, `type`, `name`, `id`, `sort_key`, `sort_dir`, `search_mode` to the interface `ShowRecordSetByZone`
+
+### HuaweiCloud SDK FunctionGraph
+
+- _Features_
+  - Support the following interfaces：
+    - `ListWorkflows`
+    - `CreateWorkflow`
+    - `BatchDeleteWorkflows`
+    - `ListWorkflowExecutions`
+    - `StartWorkflowExecution`
+    - `ShowWorkflowExecution`
+    - `ShowWorkFlow`
+    - `UpdateWorkFlow`
+    - `ShowTenantMetric`
+    - `ShowWorkFlowMetric`
+    - `RetryWorkFlow`
+    - `StopWorkFlow`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK GSL
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `ListSimCards`:
+    - Add the request parameters `min_flow`, `max_flow`, `order_id`, `filter_downtime_period`
+    - Modify the type `date` -> `date-time` of the response parameter `device_status_date`
+    - Modify the type `date` -> `date-time` of the response parameter `expire_time`
+  - Add the request parameter `price_plan_list` to the interface `StopSimCard`
+  - Add the request parameter `price_plan_list` to the interface `ResetSimCard`
+  - Changes of the interface `ShowSimCard`:
+    - Modify the type `date` -> `date-time` of the response parameter `device_status_date`
+    - Modify the type `date` -> `date-time` of the response parameter `expire_time`
+
+### HuaweiCloud SDK IMS
+
+- _Features_
+  - Support the interfaces `ListVersions`, `ShowVersion`
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `os_type` changed to not required of the interface `CreateDataImage`
+
+### HuaweiCloud SDK IoTDA
+
+- _Features_
+  - Support the interface `ResetFingerprint`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `RecognizeVatInvoice`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+  - Changes of the interface `RecognizeIdCard`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+  - Changes of the interface `RecognizeDriverLicense`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+
+### HuaweiCloud SDK VSS
+
+- _Features_
+  - Support the following interfaces：
+    - `ShowDomainSettings`
+    - `UpdateDomainSettings`
+    - `ListTaskHistories`
+    - `ListPortResults`
+    - `ListBusinessRisks`
+    - `UpdateFalsePositive`
+    - `CancelTasks`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `domain_id` to the interface `ListDomains`
+  - Add the response parameter `hit_details` to the interface `ShowResults`
+
 # 0.0.80 2022-03-10
 
 ### HuaweiCloud SDK BCS

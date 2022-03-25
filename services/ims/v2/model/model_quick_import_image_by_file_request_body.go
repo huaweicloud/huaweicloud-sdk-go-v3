@@ -38,7 +38,7 @@ type QuickImportImageByFileRequestBody struct {
 	// 镜像的架构类型。取值包括： x86 arm 默认使用“x86”。
 
 	Architecture *QuickImportImageByFileRequestBodyArchitecture `json:"architecture,omitempty"`
-	// 操作系统版本。 创建数据盘镜像时该参数必填，取值为Linux或Windows。
+	// 操作系统版本。 创建数据盘镜像时该参数取值为Linux或Windows，默认Linux。
 
 	OsType *QuickImportImageByFileRequestBodyOsType `json:"os_type,omitempty"`
 	// 新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。

@@ -22,7 +22,7 @@ type QuerySubCustomerListReq struct {
 	// 标签，支持模糊查找。
 
 	Label *string `json:"label,omitempty"`
-	// 关联类型： 1：推荐2：垫付
+	// 关联类型： 1：顾问销售2：代售
 
 	AssociationType *string `json:"association_type,omitempty"`
 	// 关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。

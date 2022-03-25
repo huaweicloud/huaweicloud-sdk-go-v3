@@ -63,6 +63,50 @@ func (c *VssClient) ListDomains(request *model.ListDomainsRequest) (*model.ListD
 	}
 }
 
+//获取域名登录配置
+func (c *VssClient) ShowDomainSettings(request *model.ShowDomainSettingsRequest) (*model.ShowDomainSettingsResponse, error) {
+	requestDef := GenReqDefForShowDomainSettings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainSettingsResponse), nil
+	}
+}
+
+//更新域名登录配置
+func (c *VssClient) UpdateDomainSettings(request *model.UpdateDomainSettingsRequest) (*model.UpdateDomainSettingsResponse, error) {
+	requestDef := GenReqDefForUpdateDomainSettings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDomainSettingsResponse), nil
+	}
+}
+
+//获取域名业务风险扫描结果
+func (c *VssClient) ListBusinessRisks(request *model.ListBusinessRisksRequest) (*model.ListBusinessRisksResponse, error) {
+	requestDef := GenReqDefForListBusinessRisks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBusinessRisksResponse), nil
+	}
+}
+
+//获取域名端口扫描结果
+func (c *VssClient) ListPortResults(request *model.ListPortResultsRequest) (*model.ListPortResultsResponse, error) {
+	requestDef := GenReqDefForListPortResults()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPortResultsResponse), nil
+	}
+}
+
 //获取域名漏洞扫描结果
 func (c *VssClient) ShowResults(request *model.ShowResultsRequest) (*model.ShowResultsResponse, error) {
 	requestDef := GenReqDefForShowResults()
@@ -74,6 +118,28 @@ func (c *VssClient) ShowResults(request *model.ShowResultsRequest) (*model.ShowR
 	}
 }
 
+//更新域名扫描漏洞的误报状态
+func (c *VssClient) UpdateFalsePositive(request *model.UpdateFalsePositiveRequest) (*model.UpdateFalsePositiveResponse, error) {
+	requestDef := GenReqDefForUpdateFalsePositive()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFalsePositiveResponse), nil
+	}
+}
+
+//取消或重启域名漏洞扫描任务
+func (c *VssClient) CancelTasks(request *model.CancelTasksRequest) (*model.CancelTasksResponse, error) {
+	requestDef := GenReqDefForCancelTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelTasksResponse), nil
+	}
+}
+
 //创建域名漏洞扫描任务并启动
 func (c *VssClient) CreateTasks(request *model.CreateTasksRequest) (*model.CreateTasksResponse, error) {
 	requestDef := GenReqDefForCreateTasks()
@@ -82,6 +148,17 @@ func (c *VssClient) CreateTasks(request *model.CreateTasksRequest) (*model.Creat
 		return nil, err
 	} else {
 		return resp.(*model.CreateTasksResponse), nil
+	}
+}
+
+//获取域名漏洞扫描的历史扫描任务
+func (c *VssClient) ListTaskHistories(request *model.ListTaskHistoriesRequest) (*model.ListTaskHistoriesResponse, error) {
+	requestDef := GenReqDefForListTaskHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTaskHistoriesResponse), nil
 	}
 }
 

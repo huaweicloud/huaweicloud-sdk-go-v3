@@ -13,8 +13,11 @@ type AddOrUpdateServiceDiscoveryRulesResponse struct {
 	ErrorCode *string `json:"errorCode,omitempty"`
 	// 响应信息描述。
 
-	ErrorMessage   *string `json:"errorMessage,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	ErrorMessage *string `json:"errorMessage,omitempty"`
+	// 响应状态码。
+
+	ResponseStatus *int32 `json:"responseStatus,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o AddOrUpdateServiceDiscoveryRulesResponse) String() string {

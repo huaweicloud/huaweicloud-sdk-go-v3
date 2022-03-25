@@ -140,7 +140,7 @@ func (c *OcrClient) RecognizeHandwriting(request *model.RecognizeHandwritingRequ
 	}
 }
 
-//识别身份证图片中的文字内容，并将识别的结果返回给用户。  说明：   身份证识别只支持中国大陆汉族身份证识别。  如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=OCR&api=AutoClassification)服务。
+//识别身份证图片中的文字内容，并将识别的结果返回给用户。  说明：   身份证识别支持中华人民共和国居民身份证识别。  如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=OCR&api=AutoClassification)服务。
 func (c *OcrClient) RecognizeIdCard(request *model.RecognizeIdCardRequest) (*model.RecognizeIdCardResponse, error) {
 	requestDef := GenReqDefForRecognizeIdCard()
 

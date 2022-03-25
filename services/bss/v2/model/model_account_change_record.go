@@ -22,7 +22,7 @@ type AccountChangeRecord struct {
 	// 变更金额，单位为元。
 
 	ChangeAmount *string `json:"change_amount,omitempty"`
-	// 变更后余额，单位    为元。
+	// 变更后余额，单位为元。
 
 	BalanceAfterChange *string `json:"balance_after_change,omitempty"`
 	// 收支类型。 1：收入2：支出

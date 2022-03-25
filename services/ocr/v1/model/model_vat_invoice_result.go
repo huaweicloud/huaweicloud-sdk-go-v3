@@ -97,6 +97,9 @@ type VatInvoiceResult struct {
 	// 各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
 
 	Confidence *interface{} `json:"confidence,omitempty"`
+	// 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+
+	TextLocation *interface{} `json:"text_location,omitempty"`
 }
 
 func (o VatInvoiceResult) String() string {

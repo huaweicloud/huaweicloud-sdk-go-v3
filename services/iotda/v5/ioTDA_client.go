@@ -382,6 +382,17 @@ func (c *IoTDAClient) ResetDeviceSecret(request *model.ResetDeviceSecretRequest)
 	}
 }
 
+//应用服务器可调用此接口重置设备指纹。携带指定设备指纹时将之重置为指定值；不携带时将之置空，后续设备第一次接入时，该设备指纹的值将设置为第一次接入时的证书指纹。
+func (c *IoTDAClient) ResetFingerprint(request *model.ResetFingerprintRequest) (*model.ResetFingerprintResponse, error) {
+	requestDef := GenReqDefForResetFingerprint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetFingerprintResponse), nil
+	}
+}
+
 //应用服务器可调用此接口查询物联网平台中指定设备的详细信息。
 func (c *IoTDAClient) ShowDevice(request *model.ShowDeviceRequest) (*model.ShowDeviceResponse, error) {
 	requestDef := GenReqDefForShowDevice()

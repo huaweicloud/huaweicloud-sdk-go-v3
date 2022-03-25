@@ -470,7 +470,7 @@ func (c *DnsClient) ShowPrivateZone(request *model.ShowPrivateZoneRequest) (*mod
 	}
 }
 
-//查询内网Zone的列表
+//查询内网Zone的名称服务器
 func (c *DnsClient) ShowPrivateZoneNameServer(request *model.ShowPrivateZoneNameServerRequest) (*model.ShowPrivateZoneNameServerResponse, error) {
 	requestDef := GenReqDefForShowPrivateZoneNameServer()
 

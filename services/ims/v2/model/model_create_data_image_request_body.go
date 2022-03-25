@@ -32,9 +32,9 @@ type CreateDataImageRequestBody struct {
 	// 镜像名称。
 
 	Name string `json:"name"`
-	// 操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
+	// 操作系统类型。只能是Windows、Linux二者之一，默认Linux。
 
-	OsType CreateDataImageRequestBodyOsType `json:"os_type"`
+	OsType *CreateDataImageRequestBodyOsType `json:"os_type,omitempty"`
 	// 镜像标签列表。默认为空。 tags和image_tags只能使用一个。
 
 	Tags *[]string `json:"tags,omitempty"`

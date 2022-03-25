@@ -546,3 +546,135 @@ func (c *FunctionGraphClient) UpdateTrigger(request *model.UpdateTriggerRequest)
 		return resp.(*model.UpdateTriggerResponse), nil
 	}
 }
+
+//删除工作流列表
+func (c *FunctionGraphClient) BatchDeleteWorkflows(request *model.BatchDeleteWorkflowsRequest) (*model.BatchDeleteWorkflowsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteWorkflows()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteWorkflowsResponse), nil
+	}
+}
+
+//创建工作流列表
+func (c *FunctionGraphClient) CreateWorkflow(request *model.CreateWorkflowRequest) (*model.CreateWorkflowResponse, error) {
+	requestDef := GenReqDefForCreateWorkflow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateWorkflowResponse), nil
+	}
+}
+
+//获取指定函数流执行实例列表
+func (c *FunctionGraphClient) ListWorkflowExecutions(request *model.ListWorkflowExecutionsRequest) (*model.ListWorkflowExecutionsResponse, error) {
+	requestDef := GenReqDefForListWorkflowExecutions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWorkflowExecutionsResponse), nil
+	}
+}
+
+//查询工作流列表
+func (c *FunctionGraphClient) ListWorkflows(request *model.ListWorkflowsRequest) (*model.ListWorkflowsResponse, error) {
+	requestDef := GenReqDefForListWorkflows()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWorkflowsResponse), nil
+	}
+}
+
+//重试工作流
+func (c *FunctionGraphClient) RetryWorkFlow(request *model.RetryWorkFlowRequest) (*model.RetryWorkFlowResponse, error) {
+	requestDef := GenReqDefForRetryWorkFlow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RetryWorkFlowResponse), nil
+	}
+}
+
+//获取函数流指标
+func (c *FunctionGraphClient) ShowTenantMetric(request *model.ShowTenantMetricRequest) (*model.ShowTenantMetricResponse, error) {
+	requestDef := GenReqDefForShowTenantMetric()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTenantMetricResponse), nil
+	}
+}
+
+//获取指定函数流实例
+func (c *FunctionGraphClient) ShowWorkFlow(request *model.ShowWorkFlowRequest) (*model.ShowWorkFlowResponse, error) {
+	requestDef := GenReqDefForShowWorkFlow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWorkFlowResponse), nil
+	}
+}
+
+//获取指定工作流指标
+func (c *FunctionGraphClient) ShowWorkFlowMetric(request *model.ShowWorkFlowMetricRequest) (*model.ShowWorkFlowMetricResponse, error) {
+	requestDef := GenReqDefForShowWorkFlowMetric()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWorkFlowMetricResponse), nil
+	}
+}
+
+//获取指定函数流执行实例。
+func (c *FunctionGraphClient) ShowWorkflowExecution(request *model.ShowWorkflowExecutionRequest) (*model.ShowWorkflowExecutionResponse, error) {
+	requestDef := GenReqDefForShowWorkflowExecution()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWorkflowExecutionResponse), nil
+	}
+}
+
+//开始执行函数流
+func (c *FunctionGraphClient) StartWorkflowExecution(request *model.StartWorkflowExecutionRequest) (*model.StartWorkflowExecutionResponse, error) {
+	requestDef := GenReqDefForStartWorkflowExecution()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartWorkflowExecutionResponse), nil
+	}
+}
+
+//停止工作流
+func (c *FunctionGraphClient) StopWorkFlow(request *model.StopWorkFlowRequest) (*model.StopWorkFlowResponse, error) {
+	requestDef := GenReqDefForStopWorkFlow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopWorkFlowResponse), nil
+	}
+}
+
+//修改指定函数流实例
+func (c *FunctionGraphClient) UpdateWorkFlow(request *model.UpdateWorkFlowRequest) (*model.UpdateWorkFlowResponse, error) {
+	requestDef := GenReqDefForUpdateWorkFlow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateWorkFlowResponse), nil
+	}
+}

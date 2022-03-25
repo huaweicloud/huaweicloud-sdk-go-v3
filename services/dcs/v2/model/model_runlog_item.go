@@ -14,6 +14,12 @@ type RunlogItem struct {
 	// 运行日志文件名
 
 	FileName *string `json:"file_name,omitempty"`
+	// 分片名称
+
+	GroupName *string `json:"group_name,omitempty"`
+	// 采集运行日志所在副本的IP
+
+	ReplicationIp *string `json:"replication_ip,omitempty"`
 	// 获取运行日志状态
 
 	Status *string `json:"status,omitempty"`

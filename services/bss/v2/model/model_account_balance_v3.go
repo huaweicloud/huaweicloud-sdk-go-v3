@@ -10,7 +10,7 @@ type AccountBalanceV3 struct {
 	// 账户标识。
 
 	AccountId string `json:"account_id"`
-	// 账户类型。 1：余额2：信用5：奖励金
+	// 账户类型。 1：余额2：信用5：奖励金7：保证金
 
 	AccountType int32 `json:"account_type"`
 	// 账户余额。

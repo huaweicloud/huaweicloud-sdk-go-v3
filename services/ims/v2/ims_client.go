@@ -272,6 +272,28 @@ func (c *ImsClient) UpdateImage(request *model.UpdateImageRequest) (*model.Updat
 	}
 }
 
+//查询API的版本信息列表，包括API的版本兼容性、域名信息等。
+func (c *ImsClient) ListVersions(request *model.ListVersionsRequest) (*model.ListVersionsResponse, error) {
+	requestDef := GenReqDefForListVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVersionsResponse), nil
+	}
+}
+
+//查询API的版本信息列表，包括API的版本兼容性、域名信息等。
+func (c *ImsClient) ShowVersion(request *model.ShowVersionRequest) (*model.ShowVersionResponse, error) {
+	requestDef := GenReqDefForShowVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVersionResponse), nil
+	}
+}
+
 //该接口为扩展接口，主要用于查询异步接口执行情况，比如查询导出镜像任务的执行状态。
 func (c *ImsClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
 	requestDef := GenReqDefForShowJob()

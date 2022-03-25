@@ -19,7 +19,7 @@ type CustomerInformation struct {
 	// 客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
 
 	AssociatedOn *string `json:"associated_on,omitempty"`
-	// 关联类型： 1：推荐2：垫付
+	// 关联类型： 1：顾问销售2：代售
 
 	AssociationType *string `json:"association_type,omitempty"`
 	// 标签。

@@ -33,6 +33,8 @@ type TestPlanDetail struct {
 
 	ExpireDay *string `json:"expire_day,omitempty"`
 
+	Creator *TestPlanDetailCreator `json:"creator,omitempty"`
+
 	Owner *TestPlanDetailOwner `json:"owner,omitempty"`
 
 	DesignStage *TestPlanDetailDesignStage `json:"design_stage,omitempty"`

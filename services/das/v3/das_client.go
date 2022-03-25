@@ -206,6 +206,17 @@ func (c *DasClient) ShowSqlExecutionPlan(request *model.ShowSqlExecutionPlanRequ
 	}
 }
 
+//查询SQL执行计划。 目前仅支持MySQL实例。 补充GET请求，处理超长SQL
+func (c *DasClient) ShowSqlExplain(request *model.ShowSqlExplainRequest) (*model.ShowSqlExplainResponse, error) {
+	requestDef := GenReqDefForShowSqlExplain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSqlExplainResponse), nil
+	}
+}
+
 //查询DAS收集全量SQL和慢SQL的开关状态。该功能仅支持付费实例。
 func (c *DasClient) ShowSqlSwitchStatus(request *model.ShowSqlSwitchStatusRequest) (*model.ShowSqlSwitchStatusResponse, error) {
 	requestDef := GenReqDefForShowSqlSwitchStatus()

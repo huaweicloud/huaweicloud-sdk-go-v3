@@ -13,7 +13,7 @@ type SubCustomerMonthlyBillDetail struct {
 	// 客户账号ID。
 
 	CustomerId *string `json:"customer_id,omitempty"`
-	// 子客户的关联类型： 1：推荐2：垫付
+	// 子客户的关联类型： 1：顾问销售2：代售
 
 	AssociationType *string `json:"association_type,omitempty"`
 	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。

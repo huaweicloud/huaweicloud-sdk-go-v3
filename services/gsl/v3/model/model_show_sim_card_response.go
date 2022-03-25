@@ -38,7 +38,7 @@ type ShowSimCardResponse struct {
 	ActDate *sdktime.SdkTime `json:"act_date,omitempty"`
 	// 设备状态变更时间 例如2020-01-31T16:00:00.000Z
 
-	DeviceStatusDate *string `json:"device_status_date,omitempty"`
+	DeviceStatusDate *sdktime.SdkTime `json:"device_status_date,omitempty"`
 	// 设备标识
 
 	NodeId *string `json:"node_id,omitempty"`
@@ -65,7 +65,7 @@ type ShowSimCardResponse struct {
 	OrderId *int64 `json:"order_id,omitempty"`
 	// 到期时间 例如2021-06-30T00:00:00.000Z
 
-	ExpireTime *string `json:"expire_time,omitempty"`
+	ExpireTime *sdktime.SdkTime `json:"expire_time,omitempty"`
 	// 在用套餐名
 
 	PricePlanName *string `json:"price_plan_name,omitempty"`

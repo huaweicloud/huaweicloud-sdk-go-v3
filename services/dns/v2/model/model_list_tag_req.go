@@ -30,7 +30,7 @@ type ListTagReq struct {
 	Action string `json:"action"`
 	// key为要匹配的字段，value为匹配的值。  如果value为空字符串则精确匹配，否则模糊匹配。
 
-	Matches *[]Tag `json:"matches,omitempty"`
+	Matches *[]Match `json:"matches,omitempty"`
 }
 
 func (o ListTagReq) String() string {

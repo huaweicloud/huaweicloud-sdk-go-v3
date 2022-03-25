@@ -7,6 +7,9 @@ import (
 )
 
 type DownUpTimeForSimCardReq struct {
+	// 套餐列表
+
+	PricePlanList *[]SimPricePlanInfoVo `json:"price_plan_list,omitempty"`
 	// 启用停用开关
 
 	DownUpSwitch *int32 `json:"down_up_switch,omitempty"`

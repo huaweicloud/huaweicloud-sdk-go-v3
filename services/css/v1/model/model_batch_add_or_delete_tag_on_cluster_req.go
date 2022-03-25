@@ -12,7 +12,7 @@ type BatchAddOrDeleteTagOnClusterReq struct {
 	Action string `json:"action"`
 	// 标签列表。
 
-	Tags []TagList `json:"tags"`
+	Tags []Tag `json:"tags"`
 	// 标签列表。
 
 	SysTags *[]SysTags `json:"sysTags,omitempty"`

@@ -35,7 +35,7 @@ type ListSimCardsRequest struct {
 	// 排序的顺序，asc表示顺序排序，desc表示倒序排序，不传则默认asc
 
 	Order *ListSimCardsRequestOrder `json:"order,omitempty"`
-	// 排序的属性，目前支持:cid（容器ID）、flow_used（已用流量）、flow_left（剩余流量）
+	// 排序的属性，目前支持:cid（容器ID）、flow_used（已用流量）、flow_left（剩余流量）、act_date（激活时间）、expire_time（到期时间）
 
 	Sort *ListSimCardsRequestSort `json:"sort,omitempty"`
 	// MSISDN
@@ -59,9 +59,21 @@ type ListSimCardsRequest struct {
 	// 自定义属性六
 
 	CustomerAttribute6 *string `json:"customer_attribute6,omitempty"`
+	// 最小使用流量(MB)
+
+	MinFlow *int64 `json:"min_flow,omitempty"`
+	// 最大使用流量(MB)
+
+	MaxFlow *int64 `json:"max_flow,omitempty"`
 	// 是否已实名认证: true表示是，false表示否，系统SIM卡实名认证状态非实时。
 
 	RealNamed *bool `json:"real_named,omitempty"`
+	// 订单号
+
+	OrderId *int64 `json:"order_id,omitempty"`
+	// 是否过滤停机保号的卡
+
+	FilterDowntimePeriod *bool `json:"filter_downtime_period,omitempty"`
 }
 
 func (o ListSimCardsRequest) String() string {
@@ -116,9 +128,11 @@ type ListSimCardsRequestSort struct {
 }
 
 type ListSimCardsRequestSortEnum struct {
-	CID       ListSimCardsRequestSort
-	FLOW_USED ListSimCardsRequestSort
-	FLOW_LEFT ListSimCardsRequestSort
+	CID         ListSimCardsRequestSort
+	FLOW_USED   ListSimCardsRequestSort
+	FLOW_LEFT   ListSimCardsRequestSort
+	ACT_DATE    ListSimCardsRequestSort
+	EXPIRE_TIME ListSimCardsRequestSort
 }
 
 func GetListSimCardsRequestSortEnum() ListSimCardsRequestSortEnum {
@@ -131,6 +145,12 @@ func GetListSimCardsRequestSortEnum() ListSimCardsRequestSortEnum {
 		},
 		FLOW_LEFT: ListSimCardsRequestSort{
 			value: "flow_left",
+		},
+		ACT_DATE: ListSimCardsRequestSort{
+			value: "act_date",
+		},
+		EXPIRE_TIME: ListSimCardsRequestSort{
+			value: "expire_time",
 		},
 	}
 }

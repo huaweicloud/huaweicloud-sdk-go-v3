@@ -80,7 +80,7 @@ func GenReqDefForCheckNeedVerify() *def.HttpRequestDef {
 func GenReqDefForCheckVerifyCodes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2/servicerequest/verifycodes/").
+		WithPath("/v2/servicerequest/verifycodes").
 		WithResponse(new(model.CheckVerifyCodesResponse)).
 		WithContentType("application/json")
 
@@ -1729,7 +1729,7 @@ func GenReqDefForListUnreadNewInstantMessages() *def.HttpRequestDef {
 func GenReqDefForSendVerifyCodes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/servicerequest/verifycodes/").
+		WithPath("/v2/servicerequest/verifycodes").
 		WithResponse(new(model.SendVerifyCodesResponse)).
 		WithContentType("application/json")
 
