@@ -41,6 +41,17 @@ func (c *DcsClient) BatchDeleteInstances(request *model.BatchDeleteInstancesRequ
 	}
 }
 
+//批量查询指定项目所有实例的节点信息、有效实例个数及节点个数。 创建中实例不返回节点信息。 仅支持Redis4.0和Redis5.0实例查询
+func (c *DcsClient) BatchShowNodesInformation(request *model.BatchShowNodesInformationRequest) (*model.BatchShowNodesInformationResponse, error) {
+	requestDef := GenReqDefForBatchShowNodesInformation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchShowNodesInformationResponse), nil
+	}
+}
+
 //批量停止数据迁移任务，接口响应成功，仅表示下发任务成功。查询到迁移任务状态为TERMINATED时，即停止成功。
 func (c *DcsClient) BatchStopMigrationTasks(request *model.BatchStopMigrationTasksRequest) (*model.BatchStopMigrationTasksResponse, error) {
 	requestDef := GenReqDefForBatchStopMigrationTasks()

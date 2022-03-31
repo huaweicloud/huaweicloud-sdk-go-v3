@@ -50,6 +50,7 @@ type PrePaidServerRootVolumeVolumetypeEnum struct {
 	GPSSD PrePaidServerRootVolumeVolumetype
 	CO_P1 PrePaidServerRootVolumeVolumetype
 	UH_L1 PrePaidServerRootVolumeVolumetype
+	ESSD  PrePaidServerRootVolumeVolumetype
 }
 
 func GetPrePaidServerRootVolumeVolumetypeEnum() PrePaidServerRootVolumeVolumetypeEnum {
@@ -71,6 +72,9 @@ func GetPrePaidServerRootVolumeVolumetypeEnum() PrePaidServerRootVolumeVolumetyp
 		},
 		UH_L1: PrePaidServerRootVolumeVolumetype{
 			value: "uh-l1",
+		},
+		ESSD: PrePaidServerRootVolumeVolumetype{
+			value: "ESSD",
 		},
 	}
 }

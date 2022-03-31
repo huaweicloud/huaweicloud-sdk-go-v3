@@ -50,6 +50,7 @@ type PostPaidServerRootVolumeVolumetypeEnum struct {
 	GPSSD PostPaidServerRootVolumeVolumetype
 	CO_P1 PostPaidServerRootVolumeVolumetype
 	UH_L1 PostPaidServerRootVolumeVolumetype
+	ESSD  PostPaidServerRootVolumeVolumetype
 }
 
 func GetPostPaidServerRootVolumeVolumetypeEnum() PostPaidServerRootVolumeVolumetypeEnum {
@@ -71,6 +72,9 @@ func GetPostPaidServerRootVolumeVolumetypeEnum() PostPaidServerRootVolumeVolumet
 		},
 		UH_L1: PostPaidServerRootVolumeVolumetype{
 			value: "uh-l1",
+		},
+		ESSD: PostPaidServerRootVolumeVolumetype{
+			value: "ESSD",
 		},
 	}
 }

@@ -11,7 +11,7 @@ type RestoreNewInstanceRequestBody struct {
 	// 实例名称。用于表示实例的名称，用于表示实例的名称，允许和已有名称重复。 取值范围：长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。
 
 	Name string `json:"name"`
-	// 可用区ID。
+	// 可用区ID，请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
 
 	AvailabilityZone string `json:"availability_zone"`
 	// 虚拟私有云ID。获取方法请参见《虚拟私有云API参考》中“VPC”的内容。 取值：非空，字符长度校验，严格UUID正则校验。
