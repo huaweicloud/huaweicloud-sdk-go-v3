@@ -17,9 +17,6 @@ type QuotaDetail struct {
 	// 预留属性。
 
 	Reserved int32 `json:"reserved"`
-	// 预留属性。
-
-	Allocated int32 `json:"allocated"`
 }
 
 func (o QuotaDetail) String() string {

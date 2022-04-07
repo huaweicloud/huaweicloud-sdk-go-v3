@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 每个云硬盘的容量配额限制。键值对，包含：reserved（预留）、allocated（预留）、limit（最大）和in_use（已使用）。
+// 每个云硬盘的容量配额限制。键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
 type QuotaDetailPerVolumeGigabytes struct {
 	// 已使用的数量。
 
@@ -17,9 +17,6 @@ type QuotaDetailPerVolumeGigabytes struct {
 	// 预留属性。
 
 	Reserved int32 `json:"reserved"`
-	// 预留属性。
-
-	Allocated int32 `json:"allocated"`
 }
 
 func (o QuotaDetailPerVolumeGigabytes) String() string {

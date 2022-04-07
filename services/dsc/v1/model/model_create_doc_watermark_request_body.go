@@ -18,13 +18,13 @@ type CreateDocWatermarkRequestBody struct {
 	// 要嵌入水印的文档类型
 	DocType *def.MultiPart `json:"doc_type"`
 
-	// 解密文件的密码， 最大支持长度256。添加水印后的文件不带密码。如果Office文档有读密码或域控的权限密码，请输入读密码，或者有读权限的域控密码。
+	// 输入文件有密码时，读取文件的密码， 最大支持长度256。如果Office文档有读密码或域控的权限密码，请输入读密码，或者有读权限的域控密码。
 	FilePassword *def.MultiPart `json:"file_password,omitempty"`
 
-	// 添加水印后给文件设置密码， 最大支持长度256。
+	// 添加水印后给文件设置密码， 最大支持长度256。默认不加文档密码。
 	MarkedFilePassword *def.MultiPart `json:"marked_file_password,omitempty"`
 
-	// 添加水印后给文件设置只读密码， 最大支持长度256。
+	// 添加水印后给文件设置只读密码， 最大支持长度256。默认不加只读密码。
 	ReadonlyPassword *def.MultiPart `json:"readonly_password,omitempty"`
 
 	// 明水印内容，与“blind_watermark”字段至少有一个不为空

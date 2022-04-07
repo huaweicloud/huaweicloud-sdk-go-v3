@@ -19,6 +19,12 @@ type UsageType struct {
 	// 云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
 
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
+	// 资源类型名称。例如ECS的资源类型名称为“云主机”。
+
+	ResourceTypeName *string `json:"resource_type_name,omitempty"`
+	// 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+
+	ServiceTypeName *string `json:"service_type_name,omitempty"`
 }
 
 func (o UsageType) String() string {

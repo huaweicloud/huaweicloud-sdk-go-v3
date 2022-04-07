@@ -338,6 +338,17 @@ func (c *OcrClient) RecognizeVehicleLicense(request *model.RecognizeVehicleLicen
 	}
 }
 
+//识别用户上传的韵达电子面单图片中的文字内容，并将识别的结果以json格式返回给用户。
+func (c *OcrClient) RecognizeWaybillElectronic(request *model.RecognizeWaybillElectronicRequest) (*model.RecognizeWaybillElectronicResponse, error) {
+	requestDef := GenReqDefForRecognizeWaybillElectronic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeWaybillElectronicResponse), nil
+	}
+}
+
 //识别网络图片中的文字内容，并返回识别的结构化结果。
 func (c *OcrClient) RecognizeWebImage(request *model.RecognizeWebImageRequest) (*model.RecognizeWebImageResponse, error) {
 	requestDef := GenReqDefForRecognizeWebImage()

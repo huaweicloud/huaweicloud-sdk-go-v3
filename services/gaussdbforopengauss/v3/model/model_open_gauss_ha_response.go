@@ -11,7 +11,7 @@ import (
 
 // 实例部署形态。
 type OpenGaussHaResponse struct {
-	// GaussDB(for openGauss)仅支持分布式模式，返回值为：Enterprise（企业版）。
+	// GaussDB(for openGauss) 分布式模式，返回值为：Enterprise（企业版）；主备版，返回值为：Ha(主备版)。
 
 	Mode OpenGaussHaResponseMode `json:"mode"`
 	// 备机同步参数。  取值：  GaussDB(for openGauss)为“sync”。 说明： - “sync”为同步模式。
@@ -37,12 +37,16 @@ type OpenGaussHaResponseMode struct {
 
 type OpenGaussHaResponseModeEnum struct {
 	ENTERPRISE OpenGaussHaResponseMode
+	HA         OpenGaussHaResponseMode
 }
 
 func GetOpenGaussHaResponseModeEnum() OpenGaussHaResponseModeEnum {
 	return OpenGaussHaResponseModeEnum{
 		ENTERPRISE: OpenGaussHaResponseMode{
 			value: "Enterprise",
+		},
+		HA: OpenGaussHaResponseMode{
+			value: "Ha",
 		},
 	}
 }

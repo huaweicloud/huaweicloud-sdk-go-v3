@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type ServiceType struct {
+type ServiceTypes struct {
 	// 云服务类型的名称。
 
 	ServiceTypeName *string `json:"service_type_name,omitempty"`
@@ -18,11 +18,11 @@ type ServiceType struct {
 	Abbreviation *string `json:"abbreviation,omitempty"`
 }
 
-func (o ServiceType) String() string {
+func (o ServiceTypes) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ServiceType struct{}"
+		return "ServiceTypes struct{}"
 	}
 
-	return strings.Join([]string{"ServiceType", string(data)}, " ")
+	return strings.Join([]string{"ServiceTypes", string(data)}, " ")
 }

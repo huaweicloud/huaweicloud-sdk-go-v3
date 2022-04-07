@@ -23,21 +23,6 @@ func GenReqDefForAutoRenewalResources() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForBatchSetSubCustomerDiscount() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v2/partners/discounts").
-		WithResponse(new(model.BatchSetSubCustomerDiscountResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForCancelAutoRenewalResources() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
@@ -426,6 +411,14 @@ func GenReqDefForListCustomerBillsFeeRecords() *def.HttpRequestDef {
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BillDateBegin").
+		WithJsonTag("bill_date_begin").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BillDateEnd").
+		WithJsonTag("bill_date_end").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
@@ -448,10 +441,6 @@ func GenReqDefForListCustomerBillsMonthlyBreakDown() *def.HttpRequestDef {
 		WithJsonTag("shared_month").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ChargingMode").
-		WithJsonTag("charging_mode").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServiceTypeCode").
 		WithJsonTag("service_type_code").
 		WithLocationType(def.Query))
@@ -462,6 +451,10 @@ func GenReqDefForListCustomerBillsMonthlyBreakDown() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("RegionCode").
 		WithJsonTag("region_code").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ChargingMode").
+		WithJsonTag("charging_mode").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BillType").
@@ -1275,13 +1268,17 @@ func GenReqDefForListRateOnPeriodDetail() *def.HttpRequestDef {
 func GenReqDefForListResourceTypes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/bases/resource-types").
+		WithPath("/v2/products/resource-types").
 		WithResponse(new(model.ListResourceTypesResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceTypeCode").
-		WithJsonTag("resource_type_code").
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1411,19 +1408,51 @@ func GenReqDefForListServiceResources() *def.HttpRequestDef {
 func GenReqDefForListServiceTypes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/bases/service-types").
+		WithPath("/v2/products/service-types").
 		WithResponse(new(model.ListServiceTypesResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTypeCode").
-		WithJsonTag("service_type_code").
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListStoredValueCards() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/promotions/benefits/stored-value-cards").
+		WithResponse(new(model.ListStoredValueCardsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Status").
+		WithJsonTag("status").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CardId").
+		WithJsonTag("card_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1556,26 +1585,6 @@ func GenReqDefForListSubCustomerCoupons() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SourceId").
 		WithJsonTag("source_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("IndirectPartnerId").
-		WithJsonTag("indirect_partner_id").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListSubCustomerDiscounts() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/partners/discounts").
-		WithResponse(new(model.ListSubCustomerDiscountsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("CustomerId").
-		WithJsonTag("customer_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("IndirectPartnerId").

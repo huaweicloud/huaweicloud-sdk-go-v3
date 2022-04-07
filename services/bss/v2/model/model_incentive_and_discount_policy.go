@@ -10,6 +10,9 @@ type IncentiveAndDiscountPolicy struct {
 	// 云服务类型列表。
 
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
+	// 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+
+	ServiceTypeName *string `json:"service_type_name,omitempty"`
 	// 激励策略。 0：非特定产品1：特定产品2：无业绩无返点13：有业绩无返点
 
 	IncentivePolicy *string `json:"incentive_policy,omitempty"`

@@ -1449,6 +1449,17 @@ func (c *MeetingClient) ShowWebinar(request *model.ShowWebinarRequest) (*model.S
 	}
 }
 
+//终端到会管进行鉴权并激活会议，先通过该接口获取会议所在Region信息，该接口需要携带会议主席密码，在会议未召开的情况下，该接口会拉起会议。如果已存在会议，则直接返回在线会议所在Region信息
+func (c *MeetingClient) StartMeeting(request *model.StartMeetingRequest) (*model.StartMeetingResponse, error) {
+	requestDef := GenReqDefForStartMeeting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartMeetingResponse), nil
+	}
+}
+
 //结束会议。
 func (c *MeetingClient) StopMeeting(request *model.StopMeetingRequest) (*model.StopMeetingResponse, error) {
 	requestDef := GenReqDefForStopMeeting()

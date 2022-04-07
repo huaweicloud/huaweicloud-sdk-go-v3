@@ -15,8 +15,11 @@ type CreateImageWatermarkRequestBody struct {
 	// 要添加水印的图片文件，添加的图片短边尺寸需要超过512像素。
 	File *def.FilePart `json:"file"`
 
-	// 嵌入暗水印的内容，长度不超过32个字符。当前仅支持数字及英文大小写。
-	BlindWatermark *def.MultiPart `json:"blind_watermark"`
+	// 待嵌入的文字暗水印内容，长度不超过32个字符。当前仅支持数字及英文大小写。与图片暗水印image_watermark二选一填充。
+	BlindWatermark *def.MultiPart `json:"blind_watermark,omitempty"`
+
+	// 待嵌入的图片暗水印文件，与文字暗水印 blind_watermark 二选一填充。
+	ImageWatermark *def.FilePart `json:"image_watermark,omitempty"`
 }
 
 func (o CreateImageWatermarkRequestBody) String() string {

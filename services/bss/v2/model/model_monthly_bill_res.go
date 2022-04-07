@@ -31,6 +31,12 @@ type MonthlyBillRes struct {
 	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
 
 	ResourceTypeCode *string `json:"resource_Type_code,omitempty"`
+	// 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+
+	CloudServiceTypeName *string `json:"cloud_service_type_name,omitempty"`
+	// 资源类型名称。例如ECS的资源类型名称为“云主机”。
+
+	ResourceTypeName *string `json:"resource_type_name,omitempty"`
 	// 资源实例ID。
 
 	ResInstanceId *string `json:"res_instance_id,omitempty"`
@@ -88,6 +94,9 @@ type MonthlyBillRes struct {
 	// 金额单位。 1：元
 
 	MeasureId *int32 `json:"measure_id,omitempty"`
+	// 周期类型： 19：年20：月24：天25：小时5：一次性
+
+	PeriodType *int32 `json:"period_type,omitempty"`
 }
 
 func (o MonthlyBillRes) String() string {

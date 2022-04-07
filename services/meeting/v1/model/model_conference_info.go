@@ -138,9 +138,8 @@ type ConferenceInfo struct {
 	// 会议方数，会议最大与会人数限制
 
 	ConcurrentParticipants *int32 `json:"concurrentParticipants,omitempty"`
-	// 当前多画面信息。
 
-	PicDisplay *interface{} `json:"picDisplay,omitempty"`
+	PicDisplay *MultiPicDisplayDo `json:"picDisplay,omitempty"`
 	// 周期子会议列表
 
 	SubConfs *[]CycleSubConf `json:"subConfs,omitempty"`

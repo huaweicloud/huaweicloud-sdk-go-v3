@@ -8,10 +8,13 @@ import (
 
 // Response Object
 type ListResourceTypesResponse struct {
-	// 资源类型信息，具体参见表3。
+	// 总数。
 
-	ResourceTypes  *[]ResourceType `json:"resource_types,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	TotalCount *int32 `json:"total_count,omitempty"`
+	// 资源类型信息列表，具体请参见表3。
+
+	ResourceTypes  *[]ResourceTypes `json:"resource_types,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ListResourceTypesResponse) String() string {

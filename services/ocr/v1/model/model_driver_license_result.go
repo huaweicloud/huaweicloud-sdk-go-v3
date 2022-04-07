@@ -7,6 +7,9 @@ import (
 )
 
 type DriverLicenseResult struct {
+	// 驾驶证类型。 normal：纸质驾驶证 electronic：电子驾驶证
+
+	Type *string `json:"type,omitempty"`
 	// 驾驶证号。
 
 	Number *string `json:"number,omitempty"`
@@ -46,7 +49,19 @@ type DriverLicenseResult struct {
 	// 记录。
 
 	Record *string `json:"record,omitempty"`
-	// 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+	// 累积记分。
+
+	AccumulatedScores *string `json:"accumulated_scores,omitempty"`
+	// 状态。
+
+	Status *[]DriverLicenseResultStatus `json:"status,omitempty"`
+	// 生成时间。
+
+	GenerationDate *string `json:"generation_date,omitempty"`
+	// 当前时间。
+
+	CurrentTime *string `json:"current_time,omitempty"`
+	// 对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
 
 	TextLocation *interface{} `json:"text_location,omitempty"`
 }

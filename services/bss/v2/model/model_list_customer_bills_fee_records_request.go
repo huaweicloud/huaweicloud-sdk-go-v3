@@ -56,6 +56,12 @@ type ListCustomerBillsFeeRecordsRequest struct {
 	// 页面大小。默认值为10。
 
 	Limit *int32 `json:"limit,omitempty"`
+	// 查询的流水账单的开始日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
+
+	BillDateBegin *string `json:"bill_date_begin,omitempty"`
+	// 查询的流水账单的结束日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
+
+	BillDateEnd *string `json:"bill_date_end,omitempty"`
 }
 
 func (o ListCustomerBillsFeeRecordsRequest) String() string {

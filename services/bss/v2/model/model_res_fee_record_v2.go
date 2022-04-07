@@ -28,6 +28,12 @@ type ResFeeRecordV2 struct {
 	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
 
 	ResourceType *string `json:"resource_type,omitempty"`
+	// 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+
+	CloudServiceTypeName *string `json:"cloud_service_type_name,omitempty"`
+	// 资源类型名称。例如ECS的资源类型名称为“云主机”。
+
+	ResourceTypeName *string `json:"resource_type_name,omitempty"`
 	// 费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
 
 	EffectiveTime *string `json:"effective_time,omitempty"`

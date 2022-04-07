@@ -8,10 +8,13 @@ import (
 
 // Response Object
 type ListServiceTypesResponse struct {
-	// 返回的云服务类型信息，具体参见表3。
+	// 总数。
 
-	ServiceTypes   *[]ServiceType `json:"service_types,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	TotalCount *int32 `json:"total_count,omitempty"`
+	// 云服务类型信息列表，具体请参见表3。
+
+	ServiceTypes   *[]ServiceTypes `json:"service_types,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o ListServiceTypesResponse) String() string {

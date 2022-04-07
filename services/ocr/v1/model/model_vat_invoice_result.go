@@ -22,6 +22,9 @@ type VatInvoiceResult struct {
 	// 发票代码。
 
 	Code *string `json:"code,omitempty"`
+	// 打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
+
+	PrintCode *string `json:"print_code,omitempty"`
 	// 机器编号。 当“advanced_mode”设置为“true”时才返回。
 
 	MachineNumber *string `json:"machine_number,omitempty"`

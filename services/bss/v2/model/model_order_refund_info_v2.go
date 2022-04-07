@@ -25,6 +25,12 @@ type OrderRefundInfoV2 struct {
 	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
 
 	ServiceTypeCode string `json:"service_type_code"`
+	// 资源类型名称。例如ECS的资源类型名称为“云主机”。
+
+	ResourceTypeName *string `json:"resource_type_name,omitempty"`
+	// 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+
+	ServiceTypeName *string `json:"service_type_name,omitempty"`
 	// 云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
 
 	RegionCode string `json:"region_code"`

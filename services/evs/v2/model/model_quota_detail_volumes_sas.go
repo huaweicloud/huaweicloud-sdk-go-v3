@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SAS类型云硬盘预留的云硬盘个数，键值对，包含：reserved（预留）、allocated（预留）、limit（最大）和in_use（已使用）。
+// SAS类型云硬盘预留的云硬盘个数，键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
 type QuotaDetailVolumesSas struct {
 	// 已使用的数量。
 
@@ -17,9 +17,6 @@ type QuotaDetailVolumesSas struct {
 	// 预留属性。
 
 	Reserved int32 `json:"reserved"`
-	// 预留属性。
-
-	Allocated int32 `json:"allocated"`
 }
 
 func (o QuotaDetailVolumesSas) String() string {

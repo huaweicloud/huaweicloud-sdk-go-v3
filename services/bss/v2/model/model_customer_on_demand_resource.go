@@ -22,6 +22,12 @@ type CustomerOnDemandResource struct {
 	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
 
 	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
+	// 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+
+	ServiceTypeName *string `json:"service_type_name,omitempty"`
+	// 资源类型名称。例如ECS的资源类型名称为“云主机”。
+
+	ResourceTypeName *string `json:"resource_type_name,omitempty"`
 	// 资源ID。
 
 	ResourceId *string `json:"resource_id,omitempty"`

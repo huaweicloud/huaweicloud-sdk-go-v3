@@ -20,6 +20,9 @@ type VehicleLicenseRequestBody struct {
 	// 是否返回发证机关的开关，可选值包括：  - true：返回发证机关  - false：不返回发证机关  > 说明：  - 如果无该参数，系统默认不返回发证机关。如果输入参数不是Boolean类型，则会报非法参数错误。
 
 	ReturnIssuingAuthority *bool `json:"return_issuing_authority,omitempty"`
+	// 识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。::
+
+	ReturnTextLocation *bool `json:"return_text_location,omitempty"`
 }
 
 func (o VehicleLicenseRequestBody) String() string {

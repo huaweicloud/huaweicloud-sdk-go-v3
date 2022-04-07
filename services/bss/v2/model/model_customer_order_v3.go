@@ -16,6 +16,9 @@ type CustomerOrderV3 struct {
 	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
 
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
+	// 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+
+	ServiceTypeName *string `json:"service_type_name,omitempty"`
 	// 客户订单来源类型： 1：客户2：代理3：合同4：分销商
 
 	SourceType *int32 `json:"source_type,omitempty"`

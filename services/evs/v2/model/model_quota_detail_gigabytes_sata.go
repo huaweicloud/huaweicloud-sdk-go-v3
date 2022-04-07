@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SATA云硬盘类型预留的容量大小，单位为GB，键值对，包含：reserved（预留）、allocated（预留）、limit（最大）和in_use（已使用）。
+// SATA云硬盘类型预留的容量大小，单位为GB，键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
 type QuotaDetailGigabytesSata struct {
 	// 已使用的数量。
 
@@ -17,9 +17,6 @@ type QuotaDetailGigabytesSata struct {
 	// 预留属性。
 
 	Reserved int32 `json:"reserved"`
-	// 预留属性。
-
-	Allocated int32 `json:"allocated"`
 }
 
 func (o QuotaDetailGigabytesSata) String() string {

@@ -13,6 +13,9 @@ type BillSumInfoV2 struct {
 	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
 
 	CloudServiceType *string `json:"cloud_service_type,omitempty"`
+	// 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+
+	CloudServiceTypeName *string `json:"cloud_service_type_name,omitempty"`
 	// 账单类型。 0：正常1：退订2：华为核销
 
 	BillType *string `json:"bill_type,omitempty"`
@@ -37,9 +40,12 @@ type BillSumInfoV2 struct {
 	// 按不同账户消费类型和付费方式区分的支付总金额。 具体请参见表3。
 
 	AccountDetails *[]BalanceTypeDeductSumV2 `json:"account_details,omitempty"`
-	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
 
 	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
+	// 资源类型名称。例如ECS的资源类型名称为“云主机”。
+
+	ResourceTypeName *string `json:"resource_type_name,omitempty"`
 }
 
 func (o BillSumInfoV2) String() string {

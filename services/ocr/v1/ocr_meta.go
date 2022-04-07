@@ -442,6 +442,21 @@ func GenReqDefForRecognizeVehicleLicense() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRecognizeWaybillElectronic() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/ocr/waybill-electronic").
+		WithResponse(new(model.RecognizeWaybillElectronicResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRecognizeWebImage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

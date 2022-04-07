@@ -30,17 +30,6 @@ func (c *BssClient) AutoRenewalResources(request *model.AutoRenewalResourcesRequ
 	}
 }
 
-//合作伙伴可以为客户设置产品折扣，可指定有效期。被授予折扣后，客户在购买华为云产品（特殊产品除外）时，可享受伙伴授予折扣。  伙伴登录合作伙伴中心为客户设置折扣请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072335153.html)。  >![](public_sys-resources/icon-note.gif) **说明：**  >-   精英服务商（二级经销商）也可以通过该接口给子客户设置折扣。 >-   暂不支持设置产品分类折扣。
-func (c *BssClient) BatchSetSubCustomerDiscount(request *model.BatchSetSubCustomerDiscountRequest) (*model.BatchSetSubCustomerDiscountResponse, error) {
-	requestDef := GenReqDefForBatchSetSubCustomerDiscount()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchSetSubCustomerDiscountResponse), nil
-	}
-}
-
 //客户设置自动续费后，还可以执行取消自动续费的操作。关闭自动续费后，资源到期将不会被自动续费。  客户在费用中心取消包年/包月资源自动续费请参见[这里](https://support.huaweicloud.com/usermanual-billing/renewals_topic_20000005.html)。  >![](public_sys-resources/icon-note.gif) **说明：**  >-   前提是已经调用“[设置包年/包月资源自动续费](设置包年-包月资源自动续费.md)”接口设置自动续费或在调用“[续订包年/包月资源](续订包年-包月资源.md)”接口时设置到期策略为自动续订。 >-   目前支持取消自动续费的包年/包月产品同支持自动续费的包年/包月产品。 >-   在调用本接口前，您可以调用“[查询客户包年/包月资源列表](查询客户包年-包月资源列表.md)”接口获取资源ID、资源过期时间以及资源过期后扣费策略等信息。
 func (c *BssClient) CancelAutoRenewalResources(request *model.CancelAutoRenewalResourcesRequest) (*model.CancelAutoRenewalResourcesResponse, error) {
 	requestDef := GenReqDefForCancelAutoRenewalResources()
@@ -239,7 +228,7 @@ func (c *BssClient) ListCustomerBillsFeeRecords(request *model.ListCustomerBills
 	}
 }
 
-//功能描述：查询月度成本
+//客户可以查询指定月份的月度摊销成本。当前仅支持查询近18个月的摊销成本。摊销成本计算规则请参见[成本摊销规则](https://support.huaweicloud.com/usermanual-cost/costcenter_000002_01.html)。  客户可查询的数据范围同成本中心提供的[数据范围](https://support.huaweicloud.com/usermanual-cost/costcenter_0000004.html)一致。  客户登录成本中心导出成本明细请参见[导出成本明细数据](https://support.huaweicloud.com/usermanual-cost/costcenter_000002_03.html)。  >![](public_sys-resources/icon-note.gif) **说明：**  >该接口仅面向已开通成本中心的客户开放。如何开启成本中心请参见[这里](https://support.huaweicloud.com/usermanual-cost/costcenter_000004.html)。
 func (c *BssClient) ListCustomerBillsMonthlyBreakDown(request *model.ListCustomerBillsMonthlyBreakDownRequest) (*model.ListCustomerBillsMonthlyBreakDownResponse, error) {
 	requestDef := GenReqDefForListCustomerBillsMonthlyBreakDown()
 
@@ -558,7 +547,7 @@ func (c *BssClient) ListResourceTypes(request *model.ListResourceTypesRequest) (
 	}
 }
 
-//客户在自建平台查询自己的资源使用量明细。  >![](public_sys-resources/icon-caution.gif) **注意：**  >当前仅支持查询CDN和OBS两种云服务类型的资源用量明细，仅针对95计费场景。
+//客户在自建平台查询自己的资源使用量明细。  >![](public_sys-resources/icon-note.gif) **说明：**  >当前仅支持查询CDN和OBS两种云服务类型的资源用量明细，仅针对95计费场景。
 func (c *BssClient) ListResourceUsage(request *model.ListResourceUsageRequest) (*model.ListResourceUsageResponse, error) {
 	requestDef := GenReqDefForListResourceUsage()
 
@@ -569,7 +558,7 @@ func (c *BssClient) ListResourceUsage(request *model.ListResourceUsageRequest) (
 	}
 }
 
-//客户在自建平台查询自己的资源使用量汇总。  >![](public_sys-resources/icon-caution.gif) **注意：**  >-   当前仅支持查询CDN和OBS两种云服务类型的资源用量汇总，仅针对95计费场景。 >-   使用量汇总列表只包含月汇总金额和资源ID，若要查询具体某个资源的用量明细，请调用[查询资源用量明细](查询95计费资源用量明细.md)接口获取。
+//客户在自建平台查询自己的资源使用量汇总。  >![](public_sys-resources/icon-note.gif) **说明：**  >-   当前仅支持查询CDN和OBS两种云服务类型的资源用量汇总，仅针对95计费场景。 >-   使用量汇总列表只包含月汇总金额和资源ID，若要查询具体某个资源的用量明细，请调用[查询资源用量明细](查询95计费资源用量明细.md)接口获取。
 func (c *BssClient) ListResourceUsageSummary(request *model.ListResourceUsageSummaryRequest) (*model.ListResourceUsageSummaryResponse, error) {
 	requestDef := GenReqDefForListResourceUsageSummary()
 
@@ -602,6 +591,17 @@ func (c *BssClient) ListServiceTypes(request *model.ListServiceTypesRequest) (*m
 	}
 }
 
+//客户可以查看自己已经购买的储值卡列表。
+func (c *BssClient) ListStoredValueCards(request *model.ListStoredValueCardsRequest) (*model.ListStoredValueCardsResponse, error) {
+	requestDef := GenReqDefForListStoredValueCards()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListStoredValueCardsResponse), nil
+	}
+}
+
 //伙伴在伙伴销售平台可实时查询子客户的消费记录，了解客户的资源消耗情况。  伙伴在伙伴中心查询客户消费明细请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435155.html)。  >![](public_sys-resources/icon-note.gif) **说明：**  >-   消费记录支持查询18个月内的记录。 >-   如果是客户经理主管来查询，只支持按照单个客户经理查询，必须输入客户经理ID。 >-   目前支持伙伴查询所有子客户（包含代售类和顾问销售类）的消费记录。
 func (c *BssClient) ListSubCustomerBillDetail(request *model.ListSubCustomerBillDetailRequest) (*model.ListSubCustomerBillDetailResponse, error) {
 	requestDef := GenReqDefForListSubCustomerBillDetail()
@@ -621,17 +621,6 @@ func (c *BssClient) ListSubCustomerCoupons(request *model.ListSubCustomerCoupons
 		return nil, err
 	} else {
 		return resp.(*model.ListSubCustomerCouponsResponse), nil
-	}
-}
-
-//合作伙伴可以查看为客户设置的折扣，每次查询一个客户。如果该客户没有设置折扣，返回null。精英服务商（二级经销商）也可以通过该接口查询子客户的折扣。  伙伴登录合作伙伴中心查看为客户设置折扣请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072335153.html)。  >![](public_sys-resources/icon-note.gif) **说明：**  >目前通过该接口只能查询统一折扣信息。 >暂不支持查询产品分类折扣。
-func (c *BssClient) ListSubCustomerDiscounts(request *model.ListSubCustomerDiscountsRequest) (*model.ListSubCustomerDiscountsResponse, error) {
-	requestDef := GenReqDefForListSubCustomerDiscounts()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListSubCustomerDiscountsResponse), nil
 	}
 }
 

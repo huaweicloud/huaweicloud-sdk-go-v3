@@ -19,7 +19,7 @@ func GaussDBforopenGaussClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//创建数据库实例
+//创建数据库企业版和集中式实例
 func (c *GaussDBforopenGaussClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
 	requestDef := GenReqDefForCreateInstance()
 
@@ -41,6 +41,39 @@ func (c *GaussDBforopenGaussClient) DeleteInstance(request *model.DeleteInstance
 	}
 }
 
+//获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
+func (c *GaussDBforopenGaussClient) ListConfigurations(request *model.ListConfigurationsRequest) (*model.ListConfigurationsResponse, error) {
+	requestDef := GenReqDefForListConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConfigurationsResponse), nil
+	}
+}
+
+//查询指定数据库引擎对应的版本信息。
+func (c *GaussDBforopenGaussClient) ListDatastores(request *model.ListDatastoresRequest) (*model.ListDatastoresResponse, error) {
+	requestDef := GenReqDefForListDatastores()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDatastoresResponse), nil
+	}
+}
+
+//查询指定数据库引擎对应的规格信息。
+func (c *GaussDBforopenGaussClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
+	requestDef := GenReqDefForListFlavors()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFlavorsResponse), nil
+	}
+}
+
 //查询数据库实例列表/查询实例详情
 func (c *GaussDBforopenGaussClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
 	requestDef := GenReqDefForListInstances()
@@ -49,6 +82,17 @@ func (c *GaussDBforopenGaussClient) ListInstances(request *model.ListInstancesRe
 		return nil, err
 	} else {
 		return resp.(*model.ListInstancesResponse), nil
+	}
+}
+
+//查询指定数据库引擎对应的磁盘类型。
+func (c *GaussDBforopenGaussClient) ListStorageTypes(request *model.ListStorageTypesRequest) (*model.ListStorageTypesResponse, error) {
+	requestDef := GenReqDefForListStorageTypes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListStorageTypesResponse), nil
 	}
 }
 

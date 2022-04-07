@@ -20,7 +20,7 @@ type WebHookConfigRequest struct {
 	// 订阅者秘钥
 
 	SubscriberKey string `json:"subscriberKey"`
-	// 订阅url
+	// 订阅url，建议使用HTTPS
 
 	Url string `json:"url"`
 }

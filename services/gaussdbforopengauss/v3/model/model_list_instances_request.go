@@ -58,12 +58,16 @@ type ListInstancesRequestType struct {
 
 type ListInstancesRequestTypeEnum struct {
 	ENTERPRISE ListInstancesRequestType
+	HA         ListInstancesRequestType
 }
 
 func GetListInstancesRequestTypeEnum() ListInstancesRequestTypeEnum {
 	return ListInstancesRequestTypeEnum{
 		ENTERPRISE: ListInstancesRequestType{
 			value: "Enterprise",
+		},
+		HA: ListInstancesRequestType{
+			value: "Ha",
 		},
 	}
 }

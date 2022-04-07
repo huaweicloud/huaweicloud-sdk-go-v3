@@ -11,7 +11,7 @@ import (
 
 // volume信息。
 type OpenGaussVolume struct {
-	// 磁盘类型。  仅支持ULTRAHIGH，区分大小写，表示SSD。
+	// 磁盘类型。  仅支持ULTRAHIGH和ESSD，区分大小写，分别表示SSD和急速云盘。
 
 	Type OpenGaussVolumeType `json:"type"`
 	// 磁盘大小。例如：该参数填写为“40”，表示为创建的实例分配40GB的磁盘空间。  取值范围：（分片数*40GB）~（分片数*16TB），且大小只能为分片数*40的整数倍。
@@ -34,12 +34,16 @@ type OpenGaussVolumeType struct {
 
 type OpenGaussVolumeTypeEnum struct {
 	ULTRAHIGH OpenGaussVolumeType
+	ESSD      OpenGaussVolumeType
 }
 
 func GetOpenGaussVolumeTypeEnum() OpenGaussVolumeTypeEnum {
 	return OpenGaussVolumeTypeEnum{
 		ULTRAHIGH: OpenGaussVolumeType{
 			value: "ULTRAHIGH",
+		},
+		ESSD: OpenGaussVolumeType{
+			value: "ESSD",
 		},
 	}
 }

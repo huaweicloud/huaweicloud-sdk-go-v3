@@ -19,7 +19,7 @@ type MigrateNodeExtendParam struct {
 	// 安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
 
 	AlphaCcePostInstall *string `json:"alpha.cce/postInstall,omitempty"`
-	// 指定待切换目标操作系统所使用的用户镜像ID。 当指定“alpha.cce/NodeImageID”参数时，“os”参数必须和用户自定义镜像的操作系统一致。 镜像需满足条件：[使用私有镜像制作工作节点镜像（公测）](https://support.huaweicloud.com/bestpractice-cce/cce_bestpractice_00026.html)或[使用私有镜像制作Turbo集群共池裸机工作节点镜像](https://support.huaweicloud.com/bestpractice-cce/cce_bestpractice_0134.html)
+	// 指定待切换目标操作系统所使用的用户镜像ID。 当指定“alpha.cce/NodeImageID”参数时，“os”参数必须和用户自定义镜像的操作系统一致。
 
 	AlphaCceNodeImageID *string `json:"alpha.cce/NodeImageID,omitempty"`
 }

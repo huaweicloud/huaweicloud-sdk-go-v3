@@ -50,7 +50,7 @@ type ListSubCustomerBillDetailRequest struct {
 	// 每次查询的数量限制。默认值为10。
 
 	Limit *int32 `json:"limit,omitempty"`
-	// 精英服务商ID。获取方法请参见查询精英服务商列表。如果华为云伙伴能力中心需要查询客户在精英服务商关联期间的消费，需要携带该字段；否则只能查询该客户在与自己关联期间的消费。 说明： 如果是普通经销商，那么此处可以为空。
+	// 精英服务商ID。获取方法请参见查询精英服务商列表。 说明： 华为云伙伴能力中心可以查询名下所有子客户消费（包括精英服务商子客户）。如果是普通经销商，那么此处可以为空。
 
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 	// 查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。
