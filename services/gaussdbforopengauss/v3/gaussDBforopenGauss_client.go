@@ -1,9 +1,9 @@
 package v3
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	http_client "code.byted.org/ti/huaweicloud-sdk-go-v3/core"
 
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/gaussdbforopengauss/v3/model"
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/services/gaussdbforopengauss/v3/model"
 )
 
 type GaussDBforopenGaussClient struct {

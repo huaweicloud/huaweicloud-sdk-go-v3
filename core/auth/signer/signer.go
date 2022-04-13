@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/request"
 )
 
 const (

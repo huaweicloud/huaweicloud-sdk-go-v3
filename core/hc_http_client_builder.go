@@ -20,12 +20,12 @@
 package core
 
 import (
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/auth"
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/auth/env"
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/config"
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/impl"
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/region"
 	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/env"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
 	"reflect"
 	"strings"
 )

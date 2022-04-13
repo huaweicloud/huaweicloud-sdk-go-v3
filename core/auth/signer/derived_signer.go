@@ -1,10 +1,10 @@
 package signer
 
 import (
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/request"
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
 	"golang.org/x/crypto/hkdf"
 	"io"
 	"strings"

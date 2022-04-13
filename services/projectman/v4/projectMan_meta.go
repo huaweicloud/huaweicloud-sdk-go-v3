@@ -1,9 +1,9 @@
 package v4
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/def"
 
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/projectman/v4/model"
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/services/projectman/v4/model"
 	"net/http"
 )
 

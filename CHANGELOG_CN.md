@@ -4109,7 +4109,7 @@
 - _新增特性_
     - 无
 - _解决问题_
-    - [Issue 40](https://github.com/huaweicloud/huaweicloud-sdk-java-v3/issues/40): 修复响应参数`__lazyloading`类型定义错误的问题
+    - [Issue 40](https://code.byted.org/ti/huaweicloud-sdk-java-v3/issues/40): 修复响应参数`__lazyloading`类型定义错误的问题
 - _特性变更_
     - 无
 
@@ -4432,7 +4432,7 @@
 - _新增特性_
     - 无
 - _解决问题_
-    - [Issue 22](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/22): 修正接口`ListAddonInstances`的响应参数`status`可选值
+    - [Issue 22](https://code.byted.org/ti/huaweicloud-sdk-go-v3/issues/22): 修正接口`ListAddonInstances`的响应参数`status`可选值
 - _特性变更_
     - 无
 
@@ -4569,7 +4569,7 @@
 - _新增特性_
     - 无
 - _解决问题_
-    - [Issue 20](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/20): 修复`extendParam`类型定义错误的问题
+    - [Issue 20](https://code.byted.org/ti/huaweicloud-sdk-go-v3/issues/20): 修复`extendParam`类型定义错误的问题
 - _特性变更_
     - 接口`DeleteCluster`新增请求参数`tobedeleted`
 
@@ -4795,7 +4795,7 @@
 - _新增特性_
     - 无
 - _解决问题_
-    - [Issue 17](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/17): 修复`EpDetailType`枚举定义错误的问题
+    - [Issue 17](https://code.byted.org/ti/huaweicloud-sdk-go-v3/issues/17): 修复`EpDetailType`枚举定义错误的问题
 - _特性变更_
     - 无
 
@@ -4804,7 +4804,7 @@
 - _新增特性_
     - 无
 - _解决问题_
-    - [Issue 19](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/19): 修复`ListKeypairs`响应体类型的问题
+    - [Issue 19](https://code.byted.org/ti/huaweicloud-sdk-go-v3/issues/19): 修复`ListKeypairs`响应体类型的问题
 - _特性变更_
     - 无
 
@@ -5837,7 +5837,7 @@
 - _解决问题_
     - 无
 - _特性变更_
-    - [Issue 21](https://github.com/huaweicloud/huaweicloud-sdk-java-v3/issues/21) 开放查询SSH密钥详情接口
+    - [Issue 21](https://code.byted.org/ti/huaweicloud-sdk-java-v3/issues/21) 开放查询SSH密钥详情接口
 
 ### HuaweiCloud SDK FunctionGraph
 
@@ -5873,7 +5873,7 @@
 - _新增特性_
     - 无
 - _解决问题_
-    - [Issue 8](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/8) Fix the problem that creating scaling
+    - [Issue 8](https://code.byted.org/ti/huaweicloud-sdk-go-v3/issues/8) Fix the problem that creating scaling
       policy failed.
 - _特性变更_
     - 无
@@ -5921,7 +5921,7 @@
 - _新增特性_
     - 无
 - _解决问题_
-    - 同步[Pull requests #11](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/pull/11)修改
+    - 同步[Pull requests #11](https://code.byted.org/ti/huaweicloud-sdk-go-v3/pull/11)修改
 - _特性变更_
     - 无
 
@@ -5992,7 +5992,7 @@
     - 无
 - _解决问题_
     - Fix: query参数中包含枚举变量时请求失败
-    - [Issue 7](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/7) 解决json.Marshal变成{}对象的问题
+    - [Issue 7](https://code.byted.org/ti/huaweicloud-sdk-go-v3/issues/7) 解决json.Marshal变成{}对象的问题
 - _特性变更_
     - 无
 
@@ -6001,7 +6001,7 @@
 - _新增特性_
     - 新增支持接口：TAG标签相关接口
 - _解决问题_
-    - [Issue 17](https://github.com/huaweicloud/huaweicloud-sdk-java-v3/issues/17) 修复ListBackups接口响应体问题
+    - [Issue 17](https://code.byted.org/ti/huaweicloud-sdk-java-v3/issues/17) 修复ListBackups接口响应体问题
 - _特性变更_
     - 无
 

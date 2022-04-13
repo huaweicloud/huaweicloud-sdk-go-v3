@@ -28,14 +28,14 @@ Run the following command to install Huawei Cloud Go SDK:
 
 ``` bash
 # Install the library of Huawei Cloud Go SDK
-go get github.com/huaweicloud/huaweicloud-sdk-go-v3
+go get code.byted.org/ti/huaweicloud-sdk-go-v3
 ```
 
 ## Code Example
 
 - The following example shows how to query a list of VPCs in a specific region, you need to substitute your
-  real `{service} "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/{service}/{version}"`
-  for `vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"` in actual use, and initialize the client
+  real `{service} "code.byted.org/ti/huaweicloud-sdk-go-v3/services/{service}/{version}"`
+  for `vpc "code.byted.org/ti/huaweicloud-sdk-go-v3/services/vpc/v2"` in actual use, and initialize the client
   as `{service}.New{Service}Client`.
 - Substitute the values for `{your ak string}`, `{your sk string}`, `{your endpoint string}` and `{your project id}`.
 
@@ -44,11 +44,11 @@ package main
 
 import (
     "fmt"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
-    vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
+    "code.byted.org/ti/huaweicloud-sdk-go-v3/core/auth/basic"
+    "code.byted.org/ti/huaweicloud-sdk-go-v3/core/config"
+    "code.byted.org/ti/huaweicloud-sdk-go-v3/core/httphandler"
+    vpc "code.byted.org/ti/huaweicloud-sdk-go-v3/services/vpc/v2"
+    "code.byted.org/ti/huaweicloud-sdk-go-v3/services/vpc/v2/model"
     "net/http"
 )
 
@@ -94,7 +94,7 @@ func main() {
 ## Changelog
 
 Detailed changes for each released version are documented in
-the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/master/CHANGELOG.md).
+the [CHANGELOG.md](https://code.byted.org/ti/huaweicloud-sdk-go-v3/blob/master/CHANGELOG.md).
 
 ## User Manual [:top:](#huawei-cloud-go-software-development-kit-go-sdk)
 
@@ -276,7 +276,7 @@ client := vpc.NewVpcClient(
 ``` go
 import (
     // dependency for region module
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iam/v3/region"
+    "code.byted.org/ti/huaweicloud-sdk-go-v3/services/iam/v3/region"
 )
 
 // Initialize the credentials, projectId or domainId could be unassigned in this situation, take initializing GlobalCredentials for example
@@ -391,10 +391,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
-	dsc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dsc/v1"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dsc/v1/model"
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/auth/basic"
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/def"
+	dsc "code.byted.org/ti/huaweicloud-sdk-go-v3/services/dsc/v1"
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/services/dsc/v1/model"
 	"os"
 )
 

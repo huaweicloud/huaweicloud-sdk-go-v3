@@ -1,9 +1,9 @@
 package v2
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	http_client "code.byted.org/ti/huaweicloud-sdk-go-v3/core"
 
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/roma/v2/model"
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/services/roma/v2/model"
 )
 
 type RomaClient struct {

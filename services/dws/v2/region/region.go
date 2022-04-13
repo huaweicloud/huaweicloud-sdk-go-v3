@@ -1,8 +1,8 @@
 package region
 
 import (
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/region"
 	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
 )
 
 var CN_EAST_2 = region.NewRegion("cn-east-2", "https://dws.cn-east-2.myhuaweicloud.com")

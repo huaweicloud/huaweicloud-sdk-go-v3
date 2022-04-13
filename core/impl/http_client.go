@@ -20,8 +20,8 @@
 package impl
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/response"
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/request"
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/response"
 )
 
 type HttpClient interface {

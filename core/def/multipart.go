@@ -20,8 +20,8 @@
 package def
 
 import (
+	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/converter"
 	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"io"
 	"mime/multipart"
 	"net/textproto"
