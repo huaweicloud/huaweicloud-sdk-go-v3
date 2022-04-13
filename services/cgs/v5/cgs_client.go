@@ -1,9 +1,9 @@
 package v5
 
 import (
-	http_client "code.byted.org/ti/huaweicloud-sdk-go-v3/core"
+	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/services/cgs/v5/model"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cgs/v5/model"
 )
 
 type CgsClient struct {

@@ -20,7 +20,7 @@
 package config
 
 import (
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/httphandler"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
 	"context"
 	"fmt"
 	"net"

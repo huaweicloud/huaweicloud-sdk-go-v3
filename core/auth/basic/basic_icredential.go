@@ -20,12 +20,12 @@
 package basic
 
 import (
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/auth"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/auth/cache"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/auth/iam"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/auth/signer"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/impl"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/request"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/cache"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/iam"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/signer"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
 	"fmt"
 	"strings"
 )

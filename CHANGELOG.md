@@ -4108,7 +4108,7 @@
 - _Features_
     - None
 - _Bug Fix_
-    - [Issue 40](https://code.byted.org/ti/huaweicloud-sdk-java-v3/issues/40): Fix the issue that the type of the response parameter `__lazyloading` is incorrectly defined.
+    - [Issue 40](https://github.com/huaweicloud/huaweicloud-sdk-java-v3/issues/40): Fix the issue that the type of the response parameter `__lazyloading` is incorrectly defined.
 - _Change_
     - None
 
@@ -4431,7 +4431,7 @@
 - _Features_
     - None
 - _Bug Fix_
-    - [Issue 22](https://code.byted.org/ti/huaweicloud-sdk-go-v3/issues/22): Modify the optional value of response parameter `status` of interface `ListAddonInstances`.
+    - [Issue 22](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/22): Modify the optional value of response parameter `status` of interface `ListAddonInstances`.
 - _Change_
     - None
 
@@ -4568,7 +4568,7 @@
 - _Features_
     - None
 - _Bug Fix_
-    - [Issue 20](https://code.byted.org/ti/huaweicloud-sdk-go-v3/issues/20): Fix the issue that the type of `extendParam`
+    - [Issue 20](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/20): Fix the issue that the type of `extendParam`
       is defined incorrectly.
 - _Change_
     - Add the request parameter `tobedeleted` to the interface `DeleteCluster`.
@@ -4805,7 +4805,7 @@
 - _Features_
     - None
 - _Bug Fix_
-    - [Issue 17](https://code.byted.org/ti/huaweicloud-sdk-go-v3/issues/17): Fix the issue that `EpDetailType` enum
+    - [Issue 17](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/17): Fix the issue that `EpDetailType` enum
       is defined incorrectly.
 - _Change_
     - None
@@ -4815,7 +4815,7 @@
 - _Features_
     - None
 - _Bug Fix_
-    - [Issue 19](https://code.byted.org/ti/huaweicloud-sdk-go-v3/issues/19): Fix the issue of type of response body
+    - [Issue 19](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/19): Fix the issue of type of response body
       in `ListKeypairs`.
 - _Change_
     - None
@@ -5881,7 +5881,7 @@
 - _Bug Fix_
     - None
 - _Change_
-    - [Issue 21](https://code.byted.org/ti/huaweicloud-sdk-java-v3/issues/21) Open related interface.
+    - [Issue 21](https://github.com/huaweicloud/huaweicloud-sdk-java-v3/issues/21) Open related interface.
 
 ### HuaweiCloud SDK FunctionGraph
 
@@ -5917,7 +5917,7 @@
 - _Features_
     - None
 - _Bug Fix_
-    - [Issue 8](https://code.byted.org/ti/huaweicloud-sdk-go-v3/issues/8) Fix the problem that creating scaling
+    - [Issue 8](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/8) Fix the problem that creating scaling
       policy failed.
 - _Change_
     - None
@@ -5967,7 +5967,7 @@
 - _Features_
     - None
 - _Bug Fix_
-    - Update core code from [Pull requests #11](https://code.byted.org/ti/huaweicloud-sdk-go-v3/pull/11).
+    - Update core code from [Pull requests #11](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/pull/11).
 - _Change_
     - None
 
@@ -6039,7 +6039,7 @@
     - None
 - _Bug Fix_
     - Fix: fix the problem that when query parameter contains enumerated variables the request will fail.
-    - [Issue 7](https://code.byted.org/ti/huaweicloud-sdk-go-v3/issues/7) resolve the problem of using
+    - [Issue 7](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/issues/7) resolve the problem of using
       json.Marshal()
       returns object{}.
 - _Change_
@@ -6050,7 +6050,7 @@
 - _Features_
     - Support more interfaces: interfaces related to `TAG`.
 - _Bug Fix_
-    - [Issue 17](https://code.byted.org/ti/huaweicloud-sdk-java-v3/issues/17) fix the problem of interface:
+    - [Issue 17](https://github.com/huaweicloud/huaweicloud-sdk-java-v3/issues/17) fix the problem of interface:
       ListBackups.
 - _Change_
     - None

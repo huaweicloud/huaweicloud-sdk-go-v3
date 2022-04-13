@@ -32,7 +32,7 @@ import (
 	"reflect"
 	"strings"
 
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/def"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 )
 
 type DefaultHttpRequest struct {

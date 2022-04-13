@@ -21,10 +21,10 @@ package impl
 
 import (
 	"bytes"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/config"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/httphandler"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/request"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/response"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/response"
 	"crypto/tls"
 	"io/ioutil"
 	"net/http"

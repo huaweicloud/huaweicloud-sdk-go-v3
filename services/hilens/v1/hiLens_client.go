@@ -1,9 +1,9 @@
 package v1
 
 import (
-	http_client "code.byted.org/ti/huaweicloud-sdk-go-v3/core"
+	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/services/hilens/v1/model"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/hilens/v1/model"
 )
 
 type HiLensClient struct {

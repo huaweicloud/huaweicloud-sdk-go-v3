@@ -1,9 +1,9 @@
 package v5
 
 import (
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/def"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/services/iotda/v5/model"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iotda/v5/model"
 	"net/http"
 )
 

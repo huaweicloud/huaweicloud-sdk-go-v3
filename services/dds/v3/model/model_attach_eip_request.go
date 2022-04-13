@@ -1,7 +1,7 @@
 package model
 
 import (
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
 )

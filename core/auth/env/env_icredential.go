@@ -20,10 +20,10 @@
 package env
 
 import (
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/auth"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/auth/basic"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/auth/global"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/request"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
 	"os"
 )
 

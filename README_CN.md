@@ -28,13 +28,13 @@
 
 ``` bash
 # 安装华为云 Go SDK 库
-go get code.byted.org/ti/huaweicloud-sdk-go-v3
+go get github.com/huaweicloud/huaweicloud-sdk-go-v3
 ```
 
 ## 代码示例
 
-- 使用如下代码在指定 Region 下查询 VPC 列表，实际使用中请将 `vpc "code.byted.org/ti/huaweicloud-sdk-go-v3/services/vpc/v2"`
-  替换为您使用的产品/服务相应的 `{service} "code.byted.org/ti/huaweicloud-sdk-go-v3/services/{service}/{version}"`
+- 使用如下代码在指定 Region 下查询 VPC 列表，实际使用中请将 `vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"`
+  替换为您使用的产品/服务相应的 `{service} "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/{service}/{version}"`
   ，且初始化为 `{service}.New{Service}Client` 。
 - 调用前请根据实际情况替换如下变量： `{your ak string}`、`{your sk string}`、`{your endpoint string}` 以及 `{your project id}` 。
 
@@ -43,11 +43,11 @@ package main
 
 import (
     "fmt"
-    "code.byted.org/ti/huaweicloud-sdk-go-v3/core/auth/basic"
-    "code.byted.org/ti/huaweicloud-sdk-go-v3/core/config"
-    "code.byted.org/ti/huaweicloud-sdk-go-v3/core/httphandler"
-    vpc "code.byted.org/ti/huaweicloud-sdk-go-v3/services/vpc/v2"
-    "code.byted.org/ti/huaweicloud-sdk-go-v3/services/vpc/v2/model"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
+    vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
     "net/http"
 )
 
@@ -97,7 +97,7 @@ func main() {
 
 ## 变更日志
 
-每个版本的详细更改记录可在 [变更日志](https://code.byted.org/ti/huaweicloud-sdk-go-v3/blob/master/CHANGELOG_CN.md) 中查看。
+每个版本的详细更改记录可在 [变更日志](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/master/CHANGELOG_CN.md) 中查看。
 
 ## 用户手册 [:top:](#华为云开发者-go-软件开发工具包go-sdk)
 
@@ -271,7 +271,7 @@ client := vpc.NewVpcClient(
 ``` go
 import (
     // 增加region依赖
-    "code.byted.org/ti/huaweicloud-sdk-go-v3/services/iam/v3/region"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iam/v3/region"
 )
 
 // 初始化客户端认证信息，使用当前客户端初始化方式可不填 projectId/domainId，以初始化 global.NewCredentialsBuilder() 为例
@@ -383,10 +383,10 @@ package main
 
 import (
 	"fmt"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/auth/basic"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/def"
-	dsc "code.byted.org/ti/huaweicloud-sdk-go-v3/services/dsc/v1"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/services/dsc/v1/model"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+	dsc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dsc/v1"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dsc/v1/model"
 	"os"
 )
 

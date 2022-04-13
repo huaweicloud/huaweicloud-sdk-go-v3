@@ -1,9 +1,9 @@
 package v4
 
 import (
-	http_client "code.byted.org/ti/huaweicloud-sdk-go-v3/core"
+	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/services/projectman/v4/model"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/projectman/v4/model"
 )
 
 type ProjectManClient struct {

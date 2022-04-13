@@ -1,9 +1,9 @@
 package v1
 
 import (
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/def"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/services/mrs/v1/model"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/mrs/v1/model"
 	"net/http"
 )
 

@@ -2,10 +2,10 @@ package iam
 
 import (
 	"bytes"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/impl"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/request"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/response"
-	"code.byted.org/ti/huaweicloud-sdk-go-v3/core/sdkerr"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/response"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
 	"errors"
 	jsoniter "github.com/json-iterator/go"
 	"io/ioutil"
