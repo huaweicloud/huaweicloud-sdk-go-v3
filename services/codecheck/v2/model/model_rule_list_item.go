@@ -7,6 +7,9 @@ import (
 )
 
 type RuleListItem struct {
+	// 规则集规范分类
+
+	RuleSet *string `json:"rule_set,omitempty"`
 	// 规则id
 
 	RuleId *string `json:"rule_id,omitempty"`

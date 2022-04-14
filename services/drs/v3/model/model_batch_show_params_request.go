@@ -13,7 +13,7 @@ import (
 type BatchShowParamsRequest struct {
 	// 请求语言类型
 
-	XLanguage BatchShowParamsRequestXLanguage `json:"X-Language"`
+	XLanguage *BatchShowParamsRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchQueryParamReq `json:"body,omitempty"`
 }

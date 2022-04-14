@@ -105,8 +105,13 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
     * [1.4  SSL Certification](#14-ssl-certification-top)
     * [1.5  Custom Network Connection](#15-custom-network-connection-top)
 * [2. Credentials Configuration](#2-credentials-configuration-top)
-    * [2.1  Use Permanent AK&SK](#21-use-permanent-aksk-top)
-    * [2.2  Use Temporary AK&SK](#22-use-temporary-aksk-top)
+  * [2.1  Use Permanent AK&SK](#21-use-permanent-aksk-top)
+    * [2.1.1 Manually specify](#211-Manually-specify)
+    * [2.1.2 Environment variable](#212-Environment-variable)
+  * [2.2  Use Temporary AK&SK](#22-use-temporary-aksk-top)
+    * [2.2.1 Manually specify](#221-Manually-specify)
+    * [2.2.2 Metadata](#222-Metadata)
+  * [2.3 Credential supply chain](#23-credential-supply-chain)
 * [3. Client Initialization](#3-client-initialization-top)
     * [3.1  Initialize client with specified Endpoint](#31-initialize-the-serviceclient-with-specified-endpoint-top)
     * [3.2  Initialize client with specified Region](#32-initialize-the-serviceclient-with-specified-region-recommended-top)
@@ -183,6 +188,8 @@ configuration.
 
 #### 2.1 Use Permanent AK&SK [:top:](#user-manual-top)
 
+##### 2.1.1 Manually specify
+
 ``` go
 // Regional Services
 basicCredentials := basic.NewCredentialsBuilder().
@@ -207,10 +214,16 @@ globalCredentials := global.NewCredentialsBuilder().
   to [3.2  Initialize client with specified Region](#32-initialize-the-serviceclient-with-specified-region-recommended-top)
   .
 
+##### 2.1.2 Environment variable
+
+Load ak, sk, projectId and domainId from environment variables `HUAWEICLOUD_SDK_AK`, `HUAWEICLOUD_SDK_SK`, `HUAWEICLOUD_SDK_PROJECT_ID` and `HUAWEICLOUD_SDK_DOMAIN_ID`.
+
 #### 2.2 Use Temporary AK&SK [:top:](#user-manual-top)
 
+##### 2.2.1 Manually specify
+
 It's required to obtain temporary access key, security key and security token first, which could be obtained through
-permanent access key and security key or through an agency.
+permanent access key and security key or through an agency.A temporary access key and securityToken are issued by the system to IAM users, and can be valid for 15 minutes to 24 hours.
 
 Obtaining a temporary access key token through permanent access key and security key, you could refer to
 document: https://support.huaweicloud.com/en-us/api-iam/iam_04_0002.html . The API mentioned in the document above
@@ -237,6 +250,31 @@ globalCredentials := global.NewCredentialsBuilder().
             WithSecurityToken(securityToken).
             Build()
 ```
+
+##### 2.2.2 Metadata
+
+Get temporary AK/SK and securitytoken from instance's metadata. Refer to the [Obtaining Metadata](https://support.huaweicloud.com/intl/en-us/usermanual-ecs/ecs_03_0166.html) for more information.
+
+In the following two cases, the credential information will be obtained from the metadata of the instance:
+
+1. basic.Credentials or global.Credentials were not manually specified when creating the client.
+2. AK/SK was not specified when creating basic.Credentials or global.Credentials.
+
+```go
+// Regional Services
+basicAuth := basic.NewCredentialsBuilder().WithProjectId(projectId).Build()
+
+// Global Services
+globalAuth := global.NewCredentialsBuilder().WithDomainId(domainId).Build()
+```
+
+#### 2.3 Credential supply chain
+
+Credential is loaded in the following order when creating a client:
+
+1. [Specify manually](#211-Manually-specify) basic.Credentials or global.Credentials.
+2. Not specified manually, loaded from [environment variables](#212-Environment-variable).
+3. Obtain temporary authentication information from the [metadata](#222-Metadata) of the instance.
 
 ### 3. Client Initialization [:top:](#user-manual-top)
 

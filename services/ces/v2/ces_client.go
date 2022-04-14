@@ -29,14 +29,3 @@ func (c *CesClient) ListAlarmHistories(request *model.ListAlarmHistoriesRequest)
 		return resp.(*model.ListAlarmHistoriesResponse), nil
 	}
 }
-
-//查询告警列表,实际上内部对应的是v3的版本号
-func (c *CesClient) ListAlarms(request *model.ListAlarmsRequest) (*model.ListAlarmsResponse, error) {
-	requestDef := GenReqDefForListAlarms()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAlarmsResponse), nil
-	}
-}

@@ -81,6 +81,14 @@ func GenReqDefForListCertificates() *def.HttpRequestDef {
 		WithName("Status").
 		WithJsonTag("status").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DeploySupport").
+		WithJsonTag("deploy_support").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

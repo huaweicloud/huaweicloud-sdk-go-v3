@@ -23,7 +23,7 @@ type BackupReplicateRespBody struct {
 	// 执行复制的项目ID
 
 	ProjectId *string `json:"project_id,omitempty"`
-	// 备份提供商ID，用于区分备份对象.
+	// 资源类型id
 
 	ProviderId *string `json:"provider_id,omitempty"`
 	// 复制记录ID

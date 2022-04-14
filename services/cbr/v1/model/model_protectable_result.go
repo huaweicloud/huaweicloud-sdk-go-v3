@@ -18,6 +18,9 @@ type ProtectableResult struct {
 	Result bool `json:"result"`
 
 	Vault *VaultGet `json:"vault,omitempty"`
+	// 资源不可备份的原因信息，当资源可保护性检验失败时才有该字段。
+
+	Message *string `json:"message,omitempty"`
 }
 
 func (o ProtectableResult) String() string {

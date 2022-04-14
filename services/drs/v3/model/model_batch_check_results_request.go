@@ -13,7 +13,7 @@ import (
 type BatchCheckResultsRequest struct {
 	// 请求语言类型
 
-	XLanguage BatchCheckResultsRequestXLanguage `json:"X-Language"`
+	XLanguage *BatchCheckResultsRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchQueryPrecheckResultReq `json:"body,omitempty"`
 }

@@ -1,6 +1,7 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -30,13 +31,13 @@ type SimPricePlanVo struct {
 	OrderId *string `json:"order_id,omitempty"`
 	// 创建时间 例如2020-08-24T07:57:56.000Z
 
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 	// 激活时间 例如2020-10-31T16:00:00.000Z
 
-	ActiveTime *string `json:"active_time,omitempty"`
+	ActiveTime *sdktime.SdkTime `json:"active_time,omitempty"`
 	// 停用时间 2021-10-31T16:00:00.000Z
 
-	StopTime *string `json:"stop_time,omitempty"`
+	StopTime *sdktime.SdkTime `json:"stop_time,omitempty"`
 	// 总流量(MB)
 
 	FlowTotal *float64 `json:"flow_total,omitempty"`

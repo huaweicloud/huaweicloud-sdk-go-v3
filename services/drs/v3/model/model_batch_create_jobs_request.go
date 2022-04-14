@@ -13,7 +13,7 @@ import (
 type BatchCreateJobsRequest struct {
 	// 请求语言类型
 
-	XLanguage BatchCreateJobsRequestXLanguage `json:"X-Language"`
+	XLanguage *BatchCreateJobsRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchCreateJobReq `json:"body,omitempty"`
 }

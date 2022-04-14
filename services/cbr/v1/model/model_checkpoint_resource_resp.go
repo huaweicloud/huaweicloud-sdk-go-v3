@@ -19,13 +19,13 @@ type CheckpointResourceResp struct {
 	// 待备份资源名称
 
 	Name string `json:"name"`
-	// 保护状态
+	// 保护状态。available（可用），error（错误），protecting（备份中），restoring（恢复中），removing（删除中）。
 
 	ProtectStatus *CheckpointResourceRespProtectStatus `json:"protect_status,omitempty"`
 	// 资源已分配容量,单位为GB
 
 	ResourceSize *string `json:"resource_size,omitempty"`
-	//
+	// 待备份资源的类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo
 
 	Type string `json:"type"`
 	// 副本大小

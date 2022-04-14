@@ -29,9 +29,8 @@ type ReplicationRecordGet struct {
 	// 目标存储库ID
 
 	DestinationVaultId *string `json:"destination_vault_id,omitempty"`
-	// 复制附加信息
 
-	ExtraInfo *string `json:"extra_info,omitempty"`
+	ExtraInfo *ReplicationRecordsExtraInfo `json:"extra_info,omitempty"`
 	// 复制记录ID
 
 	Id string `json:"id"`

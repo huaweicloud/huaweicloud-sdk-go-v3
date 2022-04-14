@@ -12,9 +12,6 @@ type BackupDetail struct {
 	// 还原点ID
 
 	CheckpointId string `json:"checkpoint_id"`
-	// 备份提供商ID，用于区分备份对象。当前取值包含：0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
-
-	ProviderId string `json:"provider_id"`
 	// 创建时间，例如:\"2020-02-05T10:38:34.209782\"
 
 	CreatedAt *sdktime.SdkTime `json:"created_at"`
@@ -70,10 +67,13 @@ type BackupDetail struct {
 	VaultId string `json:"vault_id"`
 	// 复制记录
 
-	ReplicationRecords []ReplicationRecordGet `json:"replication_records"`
+	ReplicationRecords *[]ReplicationRecordGet `json:"replication_records,omitempty"`
 	// 企业项目id,默认为‘0’。
 
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	// 备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
+
+	ProviderId string `json:"provider_id"`
 	//
 
 	Children []BackupResp `json:"children"`

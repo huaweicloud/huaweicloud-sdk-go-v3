@@ -17,6 +17,9 @@ type SpeedLimitInfo struct {
 	// 限速，取值范围为1~9999 ,单位为MB/s
 
 	Speed string `json:"speed"`
+	// 是否为UTC时间
+
+	IsUtc *bool `json:"is_utc,omitempty"`
 }
 
 func (o SpeedLimitInfo) String() string {

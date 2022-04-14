@@ -13,7 +13,7 @@ import (
 type BatchChangeDataRequest struct {
 	// 请求语言类型
 
-	XLanguage BatchChangeDataRequestXLanguage `json:"X-Language"`
+	XLanguage *BatchChangeDataRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchDataTransformationReq `json:"body,omitempty"`
 }

@@ -16,7 +16,7 @@ type UpdateParamsRequest struct {
 	JobId string `json:"job_id"`
 	// 请求语言类型
 
-	XLanguage UpdateParamsRequestXLanguage `json:"X-Language"`
+	XLanguage *UpdateParamsRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *ModifyTargetParamsReq `json:"body,omitempty"`
 }

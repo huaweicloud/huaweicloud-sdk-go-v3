@@ -63,7 +63,7 @@ func (c *GaussDBforopenGaussClient) ListDatastores(request *model.ListDatastores
 	}
 }
 
-//查询指定数据库引擎对应的规格信息。
+//查询数据库的规格信息。
 func (c *GaussDBforopenGaussClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
 
@@ -107,6 +107,17 @@ func (c *GaussDBforopenGaussClient) ResetPwd(request *model.ResetPwdRequest) (*m
 	}
 }
 
+//重启数据库实例。
+func (c *GaussDBforopenGaussClient) RestartInstance(request *model.RestartInstanceRequest) (*model.RestartInstanceResponse, error) {
+	requestDef := GenReqDefForRestartInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestartInstanceResponse), nil
+	}
+}
+
 //CN横向扩容/DN分片扩容/磁盘扩容
 func (c *GaussDBforopenGaussClient) RunInstanceAction(request *model.RunInstanceActionRequest) (*model.RunInstanceActionResponse, error) {
 	requestDef := GenReqDefForRunInstanceAction()
@@ -126,6 +137,17 @@ func (c *GaussDBforopenGaussClient) SetBackupPolicy(request *model.SetBackupPoli
 		return nil, err
 	} else {
 		return resp.(*model.SetBackupPolicyResponse), nil
+	}
+}
+
+//获取指定实例的参数模板。
+func (c *GaussDBforopenGaussClient) ShowInstanceConfiguration(request *model.ShowInstanceConfigurationRequest) (*model.ShowInstanceConfigurationResponse, error) {
+	requestDef := GenReqDefForShowInstanceConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceConfigurationResponse), nil
 	}
 }
 

@@ -11,16 +11,16 @@ type Vault struct {
 	// 存储库自定义描述信息。
 
 	Description *string `json:"description,omitempty"`
-	// 保管库ID
+	// 存储库ID
 
 	Id string `json:"id"`
-	// 保管库名称
+	// 存储库名称
 
 	Name string `json:"name"`
 	// 项目ID
 
 	ProjectId string `json:"project_id"`
-	// 保管库资源类型id
+	// 存储库资源类型id
 
 	ProviderId string `json:"provider_id"`
 	// 存储库资源
@@ -37,6 +37,12 @@ type Vault struct {
 	AutoBind *bool `json:"auto_bind,omitempty"`
 
 	BindRules *VaultBindRules `json:"bind_rules,omitempty"`
+	// 用户id
+
+	UserId *string `json:"user_id,omitempty"`
+	// 创建时间,例如:\"2020-02-05T10:38:34.209782\"
+
+	CreatedAt *string `json:"created_at,omitempty"`
 	// 是否开启存储库自动扩容能力（只支持按需存储库）。
 
 	AutoExpand *bool `json:"auto_expand,omitempty"`
@@ -46,12 +52,6 @@ type Vault struct {
 	// 存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
 
 	Threshold *int32 `json:"threshold,omitempty"`
-	// 用户id
-
-	UserId *string `json:"user_id,omitempty"`
-	// 创建时间
-
-	CreatedAt *string `json:"created_at,omitempty"`
 }
 
 func (o Vault) String() string {

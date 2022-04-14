@@ -140,7 +140,7 @@ func (c *CdnClient) ShowDomainDetail(request *model.ShowDomainDetailRequest) (*m
 	}
 }
 
-//查询域名配置接口，支持配置回源请求头、http header配置、url鉴权
+//查询域名全量配置接口，支持配置回源请求头、http header配置、url鉴权、证书设置等
 func (c *CdnClient) ShowDomainFullConfig(request *model.ShowDomainFullConfigRequest) (*model.ShowDomainFullConfigResponse, error) {
 	requestDef := GenReqDefForShowDomainFullConfig()
 
@@ -327,7 +327,7 @@ func (c *CdnClient) UpdateCacheRules(request *model.UpdateCacheRulesRequest) (*m
 	}
 }
 
-//修改域名全量配置接口，支持配置回源请求头、http header配置、url鉴权
+//修改域名全量配置接口，支持配置回源请求头、http header配置、url鉴权、证书设置等
 func (c *CdnClient) UpdateDomainFullConfig(request *model.UpdateDomainFullConfigRequest) (*model.UpdateDomainFullConfigResponse, error) {
 	requestDef := GenReqDefForUpdateDomainFullConfig()
 

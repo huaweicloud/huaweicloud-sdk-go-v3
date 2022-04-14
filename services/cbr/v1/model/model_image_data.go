@@ -8,7 +8,7 @@ import (
 
 // 镜像元素
 type ImageData struct {
-	//
+	// 镜像ID
 
 	ImageId *string `json:"image_id,omitempty"`
 }

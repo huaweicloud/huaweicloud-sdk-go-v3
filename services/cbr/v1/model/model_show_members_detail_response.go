@@ -11,7 +11,7 @@ type ShowMembersDetailResponse struct {
 	// 添加备份共享成员响应信息
 
 	Members *[]Member `json:"members,omitempty"`
-	//
+	// 备份共享成员数量
 
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`

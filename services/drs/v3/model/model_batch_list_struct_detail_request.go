@@ -16,7 +16,7 @@ type BatchListStructDetailRequest struct {
 	Type BatchListStructDetailRequestType `json:"type"`
 	// 请求语言类型
 
-	XLanguage BatchListStructDetailRequestXLanguage `json:"X-Language"`
+	XLanguage *BatchListStructDetailRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchQueryJobReqPage `json:"body,omitempty"`
 }

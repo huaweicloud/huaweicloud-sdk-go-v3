@@ -108,8 +108,13 @@ func main() {
     * [1.4 SSL配置](#14-ssl-配置-top)
     * [1.5 自定义网络连接创建](#15-自定义网络连接创建-top)
 * [2. 客户端认证信息](#2-客户端认证信息-top)
-    * [2.1 使用永久 AK 和 SK](#21-使用永久-ak-和-sk-top)
-    * [2.2 使用临时 AK 和 SK](#22-使用临时-ak-和-sk-top)
+  * [2.1 使用永久 AK 和 SK](#21-使用永久-ak-和-sk-top)
+    * [2.1.1 手动指定](#211-手动指定)
+    * [2.1.2 环境变量](#212-环境变量)
+  * [2.2 使用临时 AK 和 SK](#22-使用临时-ak-和-sk-top)
+    * [2.2.1 手动指定](#221-手动指定)
+    * [2.2.2 元数据获取](#222-元数据获取)
+  * [2.3 认证信息提供链](#23-认证信息提供链)
 * [3. 客户端初始化](#3-客户端初始化-top)
     * [3.1 指定云服务 Endpoint 方式](#31-指定云服务-endpoint-方式-top)
     * [3.2 指定 Region 方式（推荐）](#32-指定-region-方式-推荐-top)
@@ -185,6 +190,8 @@ domainId 。
 
 #### 2.1 使用永久 AK 和 SK [:top:](#用户手册-top)
 
+##### 2.1.1 手动指定
+
 ``` go
 // Region 级服务
 basicAuth := basic.NewCredentialsBuilder().
@@ -206,9 +213,15 @@ globalAuth := global.NewCredentialsBuilder().
 - `0.0.26-beta` 及以上版本支持自动获取 projectId/domainId ，用户需要指定当前华为云账号的永久 AK&SK 和 对应的 region_id，同时在初始化客户端时配合 `WithRegion()`
   方法使用。 代码示例详见 [3.2 指定Region方式（推荐）](#32-指定-region-方式-推荐-top) 。
 
+##### 2.1.2 环境变量
+
+默认从环境变量`HUAWEICLOUD_SDK_AK`、`HUAWEICLOUD_SDK_SK`、`HUAWEICLOUD_SDK_PROJECT_ID`和`HUAWEICLOUD_SDK_DOMAIN_ID`中读取 ak、sk、projectId 和 domainId。
+
 #### 2.2 使用临时 AK 和 SK [:top:](#用户手册-top)
 
-首先需要获得临时 AK、SK 和 SecurityToken ，可以从永久 AK&SK 获得，或者通过委托授权获得。
+##### 2.2.1 手动指定
+
+临时AK/SK和securitytoken是系统颁发给IAM用户的临时访问令牌，有效期可在15分钟至24小时范围内设置，过期后需要重新获取。首先需要获得临时 AK、SK 和 SecurityToken ，可以从永久 AK&SK 获得，或者通过委托授权获得。
 
 - 通过永久 AK&SK 获得可以参考文档：https://support.huaweicloud.com/api-iam/iam_04_0002.html ，对应 IAM SDK
   中的 `CreateTemporaryAccessKeyByToken` 方法。
@@ -235,6 +248,31 @@ globalAuth := global.NewCredentialsBuilder().
     WithSecurityToken(securityToken).
     Build()
 ```
+
+##### 2.2.2 元数据获取
+
+从实例元数据获取临时AK/SK和securitytoken，关于元数据获取请参阅：[元数据获取](https://support.huaweicloud.com/usermanual-ecs/ecs_03_0166.html)
+
+以下两种情况，会尝试从实例元数据中读取认证信息：
+
+1. 创建客户端时未手动指定 basic.Credentials 或 global.Credentials
+2. 创建 basic.Credentials 或 global.Credentials 时未指定 AK/SK
+
+```go
+// Region级服务
+basicAuth := basic.NewCredentialsBuilder().WithProjectId(projectId).Build()
+
+// Global级服务
+globalAuth := global.NewCredentialsBuilder().WithDomainId(domainId).Build()
+```
+
+#### 2.3 认证信息提供链
+
+在创建客户端时按照以下顺序加载认证信息：
+
+1. [手动指定](#211-手动指定) basic.Credentials 或 global.Credentials
+2. 未手动指定，尝试从 [环境变量](#212-环境变量) 加载
+3. 环境变量中获取不到，尝试从 [实例元数据](#222-元数据获取) 读取临时认证信息
 
 ### 3. 客户端初始化 [:top:](#用户手册-top)
 
@@ -402,7 +440,7 @@ func createImageWatermark(client *dsc.DscClient) {
 
 	body := &model.CreateImageWatermarkRequestBody{
 		File:           def.NewFilePart(file),
-		BlindWatermark: def.NewMultiPart("test_watermark"),
+		BlindWatermark: def.NewMultiPart("test123"),
 	}
 
 	request := &model.CreateImageWatermarkRequest{Body: body}

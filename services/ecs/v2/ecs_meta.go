@@ -625,6 +625,10 @@ func GenReqDefForListServersDetails() *def.HttpRequestDef {
 		WithName("Tags").
 		WithJsonTag("tags").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IpEq").
+		WithJsonTag("ip_eq").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

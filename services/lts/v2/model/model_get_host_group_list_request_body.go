@@ -9,9 +9,9 @@ import (
 type GetHostGroupListRequestBody struct {
 	// 主机组ID
 
-	HostGroupIdList *[]string `json:"host_group_id_list,omitempty"`
+	HostGroupIdList []string `json:"host_group_id_list"`
 
-	Filter *GetHostGroupListFilter `json:"filter,omitempty"`
+	Filter *GetHostGroupListFilter `json:"filter"`
 }
 
 func (o GetHostGroupListRequestBody) String() string {

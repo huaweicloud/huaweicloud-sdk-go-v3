@@ -195,7 +195,7 @@ func (c *CbrClient) DisassociateVaultPolicy(request *model.DisassociateVaultPoli
 	}
 }
 
-//同步备份副本
+//同步线下混合云VMware备份副本
 func (c *CbrClient) ImportBackup(request *model.ImportBackupRequest) (*model.ImportBackupResponse, error) {
 	requestDef := GenReqDefForImportBackup()
 

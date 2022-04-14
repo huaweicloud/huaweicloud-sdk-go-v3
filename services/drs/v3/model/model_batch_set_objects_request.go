@@ -13,7 +13,7 @@ import (
 type BatchSetObjectsRequest struct {
 	// 请求语言类型
 
-	XLanguage BatchSetObjectsRequestXLanguage `json:"X-Language"`
+	XLanguage *BatchSetObjectsRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchUpdateDatabaseObjectReq `json:"body,omitempty"`
 }

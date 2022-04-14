@@ -13,7 +13,7 @@ import (
 type BatchUpdateUserRequest struct {
 	// 请求语言类型
 
-	XLanguage BatchUpdateUserRequestXLanguage `json:"X-Language"`
+	XLanguage *BatchUpdateUserRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchUpdateSrcUserReq `json:"body,omitempty"`
 }

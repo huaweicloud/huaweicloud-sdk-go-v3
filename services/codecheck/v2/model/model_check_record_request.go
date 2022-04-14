@@ -17,13 +17,13 @@ type CheckRecordRequest struct {
 	// 分页索引，偏移量
 
 	Offset *int32 `json:"offset,omitempty"`
-	// 每页显示的数量,每页最多显示100条
+	// 每页显示的数量,每页最多显示1000条
 
 	Limit *int32 `json:"limit,omitempty"`
-	// 开始时间
+	// 过滤开始时间,根据任务检查开始时间过滤
 
 	StartTime *string `json:"start_time,omitempty"`
-	// 结束时间
+	// 过滤结束时间,根据任务检查开始时间过滤
 
 	EndTime *string `json:"end_time,omitempty"`
 }

@@ -13,7 +13,7 @@ import (
 type BatchRestoreTaskRequest struct {
 	// 请求语言类型
 
-	XLanguage BatchRestoreTaskRequestXLanguage `json:"X-Language"`
+	XLanguage *BatchRestoreTaskRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchRetryReq `json:"body,omitempty"`
 }

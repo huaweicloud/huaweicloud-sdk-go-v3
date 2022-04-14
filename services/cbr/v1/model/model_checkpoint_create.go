@@ -19,7 +19,7 @@ type CheckpointCreate struct {
 	// 项目ID
 
 	ProjectId string `json:"project_id"`
-	// 状态
+	// 状态:available,deleting,protecting,deleted,error-deleting,error
 
 	Status CheckpointCreateStatus `json:"status"`
 
@@ -42,11 +42,12 @@ type CheckpointCreateStatus struct {
 }
 
 type CheckpointCreateStatusEnum struct {
-	AVAILABLE CheckpointCreateStatus
-	DELETING  CheckpointCreateStatus
-	CREATING  CheckpointCreateStatus
-	RESTORING CheckpointCreateStatus
-	ERROR     CheckpointCreateStatus
+	AVAILABLE      CheckpointCreateStatus
+	DELETING       CheckpointCreateStatus
+	PROTECTING     CheckpointCreateStatus
+	DELETED        CheckpointCreateStatus
+	ERROR_DELETING CheckpointCreateStatus
+	ERROR          CheckpointCreateStatus
 }
 
 func GetCheckpointCreateStatusEnum() CheckpointCreateStatusEnum {
@@ -57,11 +58,14 @@ func GetCheckpointCreateStatusEnum() CheckpointCreateStatusEnum {
 		DELETING: CheckpointCreateStatus{
 			value: "deleting",
 		},
-		CREATING: CheckpointCreateStatus{
-			value: "creating",
+		PROTECTING: CheckpointCreateStatus{
+			value: "protecting",
 		},
-		RESTORING: CheckpointCreateStatus{
-			value: "restoring",
+		DELETED: CheckpointCreateStatus{
+			value: "deleted",
+		},
+		ERROR_DELETING: CheckpointCreateStatus{
+			value: "error-deleting",
 		},
 		ERROR: CheckpointCreateStatus{
 			value: "error",

@@ -23,10 +23,10 @@ type Flavor struct {
 	// 其中key是可用区编号，value是规格所在az的状态，包含以下状态： - normal，在售。 - unsupported，暂不支持该规格。 - sellout，售罄。
 
 	AzStatus map[string]string `json:"az_status"`
-	// 数组形式版本号
+	// 该规格支持的数据库版本号
 
 	Version string `json:"version"`
-	// 数组库引擎版本
+	// 数组库引擎名称
 
 	Name string `json:"name"`
 	// 性能规格，包含以下状态： - normal：通用增强型。 - normal2：通用增强Ⅱ型。 - armFlavors：鲲鹏通用增强型。 - dedicicatenormal ：x86独享型。 - armlocalssd：鲲鹏通用型。 - normallocalssd：x86通用型。 - general：通用型。 - dedicated：独享型，仅云盘SSD支持。 - rapid：独享型，仅极速型SSD支持。

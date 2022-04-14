@@ -401,6 +401,10 @@ func GenReqDefForListBackups() *def.HttpRequestDef {
 		WithName("UsedPercent").
 		WithJsonTag("used_percent").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ShowReplication").
+		WithJsonTag("show_replication").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

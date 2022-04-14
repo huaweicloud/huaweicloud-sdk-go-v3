@@ -184,7 +184,7 @@ func (c *DrsClient) BatchSetObjects(request *model.BatchSetObjectsRequest) (*mod
 	}
 }
 
-//批量设置MySQL同步策略，包括冲突策略、过滤DROP Datase、对象同步范围。
+//- 批量设置同步策略，包括冲突策略、过滤DROP Datase、对象同步范围。 - 设置kafka同步策略
 func (c *DrsClient) BatchSetPolicy(request *model.BatchSetPolicyRequest) (*model.BatchSetPolicyResponse, error) {
 	requestDef := GenReqDefForBatchSetPolicy()
 
@@ -192,6 +192,17 @@ func (c *DrsClient) BatchSetPolicy(request *model.BatchSetPolicyRequest) (*model
 		return nil, err
 	} else {
 		return resp.(*model.BatchSetPolicyResponse), nil
+	}
+}
+
+//批量设置告警信息，已结束的任务不支持设置。 - 支持选择已有的SMN主题和手动输入手机号、邮箱两种方式，具体根据自己使用情况选择
+func (c *DrsClient) BatchSetSmn(request *model.BatchSetSmnRequest) (*model.BatchSetSmnResponse, error) {
+	requestDef := GenReqDefForBatchSetSmn()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchSetSmnResponse), nil
 	}
 }
 

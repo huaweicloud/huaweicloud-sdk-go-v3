@@ -22,9 +22,12 @@ type CheckpointParam struct {
 	// 待备份的资源id列表:uuid
 
 	Resources *[]string `json:"resources,omitempty"`
-	//
+	// 资源详情
 
 	ResourceDetails *[]Resource `json:"resource_details,omitempty"`
+	// 自动备份时的策略id
+
+	PolicyId *string `json:"policy_id,omitempty"`
 }
 
 func (o CheckpointParam) String() string {

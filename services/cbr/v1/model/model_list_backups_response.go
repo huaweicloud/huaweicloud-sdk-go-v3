@@ -13,7 +13,13 @@ type ListBackupsResponse struct {
 	Backups *[]BackupResp `json:"backups,omitempty"`
 	// 备份个数
 
-	Count          *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty"`
+	// 偏移量，表示从此偏移量开始查询
+
+	Offset *int32 `json:"offset,omitempty"`
+	// 每页显示的条目数量
+
+	Limit          *int32 `json:"limit,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -40,6 +40,9 @@ type BackupExtendInfo struct {
 	// 是否是系统盘
 
 	SystemDisk *bool `json:"system_disk,omitempty"`
+	// 备份类型是否为多AZ
+
+	IsMultiAz *bool `json:"is_multi_az,omitempty"`
 }
 
 func (o BackupExtendInfo) String() string {

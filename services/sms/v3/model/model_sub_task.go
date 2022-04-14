@@ -26,6 +26,9 @@ type SubTask struct {
 	// 触发子任务的用户操作名称
 
 	UserOp *string `json:"user_op,omitempty"`
+	// 迁移或同步时，具体的迁移详情
+
+	ProcessTrace *string `json:"process_trace,omitempty"`
 }
 
 func (o SubTask) String() string {

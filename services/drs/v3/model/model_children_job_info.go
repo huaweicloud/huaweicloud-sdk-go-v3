@@ -13,7 +13,7 @@ import (
 type ChildrenJobInfo struct {
 	// 计费字段
 
-	BillingTag string `json:"billing_tag"`
+	BillingTag bool `json:"billing_tag"`
 	// 任务创建时间
 
 	CreateTime string `json:"create_time"`
@@ -43,7 +43,7 @@ type ChildrenJobInfo struct {
 	NetType ChildrenJobInfoNetType `json:"net_type"`
 	// 新框架
 
-	NodeNewFramework string `json:"node_newFramework"`
+	NodeNewFramework bool `json:"node_newFramework"`
 	// 任务状态
 
 	Status string `json:"status"`

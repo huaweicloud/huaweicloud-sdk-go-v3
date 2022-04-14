@@ -29,10 +29,10 @@ type BillingCreate struct {
 	// 创建模式，按需：post_paid，包周期：pre_paid，默认为post_paid
 
 	ChargingMode *BillingCreateChargingMode `json:"charging_mode,omitempty"`
-	// 创建类型，按年(year)或者按月(month)
+	// 创建类型，charging_mode为pre_paid必填，按年(year)或者按月(month)
 
 	PeriodType *BillingCreatePeriodType `json:"period_type,omitempty"`
-	// 创建类型的数量
+	// 创建类型的数量，charging_mode为pre_paid必填
 
 	PeriodNum *int32 `json:"period_num,omitempty"`
 	// 到期后是否自动续期，默认不续期
@@ -46,6 +46,9 @@ type BillingCreate struct {
 	ConsoleUrl *string `json:"console_url,omitempty"`
 
 	ExtraInfo *BillbingCreateExtraInfo `json:"extra_info,omitempty"`
+	// 存储库多az属性，默认为false
+
+	IsMultiAz *bool `json:"is_multi_az,omitempty"`
 }
 
 func (o BillingCreate) String() string {

@@ -53,7 +53,7 @@ type ListBackupsRequest struct {
 	// 备份产生时间范围的开始时间，格式为%YYYY-%mm-%ddT%HH:%MM:%SSZ，例如2018-02-01T12:00:00Z
 
 	StartTime *string `json:"start_time,omitempty"`
-	// 状态
+	// 状态。 调用API时，支持通过传多个status值进行过滤。例如：status=available&status=error
 
 	Status *ListBackupsRequestStatus `json:"status,omitempty"`
 	// 存储库ID
@@ -74,6 +74,9 @@ type ListBackupsRequest struct {
 	// 根据存储库使用率过滤备份，取值范围 [1, 100]，含1和100。例如，used_percent=80，表示筛选所属存储库使用率大于等于80%的所有备份。
 
 	UsedPercent *string `json:"used_percent,omitempty"`
+	// 是否返回复制记录
+
+	ShowReplication *bool `json:"show_replication,omitempty"`
 }
 
 func (o ListBackupsRequest) String() string {
@@ -270,9 +273,9 @@ type ListBackupsRequestMemberStatus struct {
 }
 
 type ListBackupsRequestMemberStatusEnum struct {
-	PENDING ListBackupsRequestMemberStatus
-	ACCEPT  ListBackupsRequestMemberStatus
-	REJECT  ListBackupsRequestMemberStatus
+	PENDING  ListBackupsRequestMemberStatus
+	ACCEPTED ListBackupsRequestMemberStatus
+	REJECTED ListBackupsRequestMemberStatus
 }
 
 func GetListBackupsRequestMemberStatusEnum() ListBackupsRequestMemberStatusEnum {
@@ -280,11 +283,11 @@ func GetListBackupsRequestMemberStatusEnum() ListBackupsRequestMemberStatusEnum 
 		PENDING: ListBackupsRequestMemberStatus{
 			value: "pending",
 		},
-		ACCEPT: ListBackupsRequestMemberStatus{
-			value: "accept",
+		ACCEPTED: ListBackupsRequestMemberStatus{
+			value: "accepted",
 		},
-		REJECT: ListBackupsRequestMemberStatus{
-			value: "reject",
+		REJECTED: ListBackupsRequestMemberStatus{
+			value: "rejected",
 		},
 	}
 }

@@ -30,6 +30,17 @@ func (c *IecClient) AddNics(request *model.AddNicsRequest) (*model.AddNicsRespon
 	}
 }
 
+//路由表关联子网
+func (c *IecClient) AssociateSubnet(request *model.AssociateSubnetRequest) (*model.AssociateSubnetResponse, error) {
+	requestDef := GenReqDefForAssociateSubnet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateSubnetResponse), nil
+	}
+}
+
 //批量重启边缘实例。
 func (c *IecClient) BatchRebootInstance(request *model.BatchRebootInstanceRequest) (*model.BatchRebootInstanceResponse, error) {
 	requestDef := GenReqDefForBatchRebootInstance()
@@ -107,6 +118,28 @@ func (c *IecClient) CreatePort(request *model.CreatePortRequest) (*model.CreateP
 	}
 }
 
+//创建路由
+func (c *IecClient) CreateRoutes(request *model.CreateRoutesRequest) (*model.CreateRoutesResponse, error) {
+	requestDef := GenReqDefForCreateRoutes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRoutesResponse), nil
+	}
+}
+
+//创建路由表
+func (c *IecClient) CreateRoutetable(request *model.CreateRoutetableRequest) (*model.CreateRoutetableResponse, error) {
+	requestDef := GenReqDefForCreateRoutetable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRoutetableResponse), nil
+	}
+}
+
 //根据用户的请求内容，创建对应的安全组。
 func (c *IecClient) CreateSecurityGroup(request *model.CreateSecurityGroupRequest) (*model.CreateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForCreateSecurityGroup()
@@ -151,7 +184,7 @@ func (c *IecClient) DeleteDeployment(request *model.DeleteDeploymentRequest) (*m
 	}
 }
 
-//删除边缘业务以及其下边缘实例。
+//删除边缘业务。
 func (c *IecClient) DeleteEdgeCloud(request *model.DeleteEdgeCloudRequest) (*model.DeleteEdgeCloudResponse, error) {
 	requestDef := GenReqDefForDeleteEdgeCloud()
 
@@ -206,6 +239,28 @@ func (c *IecClient) DeletePort(request *model.DeletePortRequest) (*model.DeleteP
 	}
 }
 
+//删除路由
+func (c *IecClient) DeleteRoutes(request *model.DeleteRoutesRequest) (*model.DeleteRoutesResponse, error) {
+	requestDef := GenReqDefForDeleteRoutes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRoutesResponse), nil
+	}
+}
+
+//删除路由表
+func (c *IecClient) DeleteRoutetable(request *model.DeleteRoutetableRequest) (*model.DeleteRoutetableResponse, error) {
+	requestDef := GenReqDefForDeleteRoutetable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRoutetableResponse), nil
+	}
+}
+
 //根据安全组的ID，删除对应的安全组。
 func (c *IecClient) DeleteSecurityGroup(request *model.DeleteSecurityGroupRequest) (*model.DeleteSecurityGroupResponse, error) {
 	requestDef := GenReqDefForDeleteSecurityGroup()
@@ -247,6 +302,17 @@ func (c *IecClient) DeleteVpc(request *model.DeleteVpcRequest) (*model.DeleteVpc
 		return nil, err
 	} else {
 		return resp.(*model.DeleteVpcResponse), nil
+	}
+}
+
+//路由表解关联子网
+func (c *IecClient) DisassociateSubnet(request *model.DisassociateSubnetRequest) (*model.DisassociateSubnetResponse, error) {
+	requestDef := GenReqDefForDisassociateSubnet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisassociateSubnetResponse), nil
 	}
 }
 
@@ -371,6 +437,39 @@ func (c *IecClient) ListQuota(request *model.ListQuotaRequest) (*model.ListQuota
 	}
 }
 
+//查询子网关联的路由表。
+func (c *IecClient) ListRelatedRoutetables(request *model.ListRelatedRoutetablesRequest) (*model.ListRelatedRoutetablesResponse, error) {
+	requestDef := GenReqDefForListRelatedRoutetables()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRelatedRoutetablesResponse), nil
+	}
+}
+
+//查询路由列表
+func (c *IecClient) ListRoutes(request *model.ListRoutesRequest) (*model.ListRoutesResponse, error) {
+	requestDef := GenReqDefForListRoutes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRoutesResponse), nil
+	}
+}
+
+//查询路由列表
+func (c *IecClient) ListRoutetables(request *model.ListRoutetablesRequest) (*model.ListRoutetablesResponse, error) {
+	requestDef := GenReqDefForListRoutetables()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRoutetablesResponse), nil
+	}
+}
+
 //根据用户的查询条件，获取安全组规则的列表信息。
 func (c *IecClient) ListSecurityGroupRules(request *model.ListSecurityGroupRulesRequest) (*model.ListSecurityGroupRulesResponse, error) {
 	requestDef := GenReqDefForListSecurityGroupRules()
@@ -492,6 +591,17 @@ func (c *IecClient) ShowPort(request *model.ShowPortRequest) (*model.ShowPortRes
 	}
 }
 
+//查询路由表详情
+func (c *IecClient) ShowRoutetable(request *model.ShowRoutetableRequest) (*model.ShowRoutetableResponse, error) {
+	requestDef := GenReqDefForShowRoutetable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRoutetableResponse), nil
+	}
+}
+
 //根据安全组的ID，获取特定安全组的详细信息。
 func (c *IecClient) ShowSecurityGroup(request *model.ShowSecurityGroupRequest) (*model.ShowSecurityGroupResponse, error) {
 	requestDef := GenReqDefForShowSecurityGroup()
@@ -566,6 +676,28 @@ func (c *IecClient) UpdatePort(request *model.UpdatePortRequest) (*model.UpdateP
 		return nil, err
 	} else {
 		return resp.(*model.UpdatePortResponse), nil
+	}
+}
+
+//更新路由信息
+func (c *IecClient) UpdateRoutes(request *model.UpdateRoutesRequest) (*model.UpdateRoutesResponse, error) {
+	requestDef := GenReqDefForUpdateRoutes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRoutesResponse), nil
+	}
+}
+
+//更新路由表基本信息
+func (c *IecClient) UpdateRoutetable(request *model.UpdateRoutetableRequest) (*model.UpdateRoutetableResponse, error) {
+	requestDef := GenReqDefForUpdateRoutetable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRoutetableResponse), nil
 	}
 }
 

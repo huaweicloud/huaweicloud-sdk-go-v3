@@ -17,7 +17,7 @@ type ListStorageTypesRequest struct {
 	// 数据库版本号。
 
 	Version string `json:"version"`
-	// 实例类型： enterprise(企业版)， ha(主备版)，不区分大小写。
+	// 实例类型： enterprise(企业版)， centralization_standard(主备版)，不区分大小写。
 
 	HaMode *ListStorageTypesRequestHaMode `json:"ha_mode,omitempty"`
 }
@@ -36,8 +36,8 @@ type ListStorageTypesRequestHaMode struct {
 }
 
 type ListStorageTypesRequestHaModeEnum struct {
-	ENTERPRISE ListStorageTypesRequestHaMode
-	HA         ListStorageTypesRequestHaMode
+	ENTERPRISE              ListStorageTypesRequestHaMode
+	CENTRALIZATION_STANDARD ListStorageTypesRequestHaMode
 }
 
 func GetListStorageTypesRequestHaModeEnum() ListStorageTypesRequestHaModeEnum {
@@ -45,8 +45,8 @@ func GetListStorageTypesRequestHaModeEnum() ListStorageTypesRequestHaModeEnum {
 		ENTERPRISE: ListStorageTypesRequestHaMode{
 			value: "enterprise",
 		},
-		HA: ListStorageTypesRequestHaMode{
-			value: "ha",
+		CENTRALIZATION_STANDARD: ListStorageTypesRequestHaMode{
+			value: "centralization_standard",
 		},
 	}
 }

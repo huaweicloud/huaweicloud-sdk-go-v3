@@ -38,6 +38,12 @@ type CreateSecurityGroupRuleOption struct {
 	// 远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址。  取值范围：IP地址，或者cidr格式  约束：和remote_group_id互斥
 
 	RemoteIpPrefix *string `json:"remote_ip_prefix,omitempty"`
+	// 安全组规则生效策略 取值范围：allow 允许，deny 拒绝  约束：默认值为allow
+
+	Action *string `json:"action,omitempty"`
+	// 规则在安全组中的优先级  取值范围：1~100，1代表最高优先级  约束：默认值为1
+
+	Priority *int32 `json:"priority,omitempty"`
 }
 
 func (o CreateSecurityGroupRuleOption) String() string {

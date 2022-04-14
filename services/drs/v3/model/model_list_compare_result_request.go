@@ -13,7 +13,7 @@ import (
 type ListCompareResultRequest struct {
 	// 请求语言类型
 
-	XLanguage ListCompareResultRequestXLanguage `json:"X-Language"`
+	XLanguage *ListCompareResultRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *QueryCompareResultReq `json:"body,omitempty"`
 }

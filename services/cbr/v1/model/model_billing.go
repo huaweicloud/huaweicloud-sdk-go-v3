@@ -10,7 +10,7 @@ import (
 )
 
 type Billing struct {
-	// 已分配容量，单位MB
+	// 已分配容量，单位GB
 
 	Allocated int32 `json:"allocated"`
 	// 创建模式
@@ -40,7 +40,7 @@ type Billing struct {
 	// 规格编码: 云服务备份存储库:vault.backup.server.normal;云硬盘备份存储库:vault.backup.volume.normal;文件备份存储库:vault.backup.turbo.normal;数据库备份存储库:vault.backup.database.normal;混合云备份存储库:vault.hybrid.server.normal;复制备份存储库:vault.replication.server.normal
 
 	SpecCode BillingSpecCode `json:"spec_code"`
-	// 保管库状态
+	// 存储库状态
 
 	Status BillingStatus `json:"status"`
 	// 存储库桶名
@@ -52,6 +52,9 @@ type Billing struct {
 	// 冻结场景
 
 	FrozenScene *string `json:"frozen_scene,omitempty"`
+	// 存储库多az属性
+
+	IsMultiAz *bool `json:"is_multi_az,omitempty"`
 }
 
 func (o Billing) String() string {

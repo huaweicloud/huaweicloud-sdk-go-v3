@@ -28,7 +28,7 @@ type PolicyoOdCreate struct {
 	// 备份保留时长，单位天。最长支持99999天。-1代表不按时间清理。若该字段和max_backups 参数同时为空，备份会永久保留。
 
 	RetentionDurationDays *int32 `json:"retention_duration_days,omitempty"`
-	// 用户所在时区,格式形如UTC+08:00,若没有选择年备，月备，周备，日备中任一参数，则不能选择该参数。
+	// 用户所在时区,格式形如UTC+08:00, 若选择年备，月备，周备，日备中任一参数，则该参数不能为空。
 
 	Timezone *string `json:"timezone,omitempty"`
 	// 保留周备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。

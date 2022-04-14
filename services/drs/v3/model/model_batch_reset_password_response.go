@@ -8,13 +8,11 @@ import (
 
 // Response Object
 type BatchResetPasswordResponse struct {
+	Results *[]ModifyDbPwdResp `json:"results,omitempty"`
 	// 总数
 
-	Count *int32 `json:"count,omitempty"`
-	// 批量修改任务返回列表
-
-	Results        *[]ModifyJobResp `json:"results,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	Count          *int32 `json:"count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o BatchResetPasswordResponse) String() string {

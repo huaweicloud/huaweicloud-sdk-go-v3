@@ -65,6 +65,9 @@ type ShowCertificateResponse struct {
 	// 证书可绑定附加域名个数。
 
 	WildcardCount *int32 `json:"wildcard_count,omitempty"`
+	// 企业项目ID，默认为“0”。 对于开通企业项目的用户，表示资源处于默认企业项目下。 对于未开通企业项目的用户，表示资源未处于企业项目下。
+
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 	// 域名所有权认证信息，详情请参见Authentification字段数据结构说明。
 
 	Authentification *[]Authentification `json:"authentification,omitempty"`

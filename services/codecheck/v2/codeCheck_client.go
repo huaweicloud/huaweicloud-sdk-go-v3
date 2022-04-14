@@ -41,6 +41,17 @@ func (c *CodeCheckClient) CheckRecord(request *model.CheckRecordRequest) (*model
 	}
 }
 
+//查询任务规则集的检查参数
+func (c *CodeCheckClient) CheckRulesetParameters(request *model.CheckRulesetParametersRequest) (*model.CheckRulesetParametersResponse, error) {
+	requestDef := GenReqDefForCheckRulesetParameters()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckRulesetParametersResponse), nil
+	}
+}
+
 //可根据需求灵活的组合规则。
 func (c *CodeCheckClient) CreateRuleset(request *model.CreateRulesetRequest) (*model.CreateRulesetResponse, error) {
 	requestDef := GenReqDefForCreateRuleset()
@@ -236,6 +247,17 @@ func (c *CodeCheckClient) ShowTasklog(request *model.ShowTasklogRequest) (*model
 		return nil, err
 	} else {
 		return resp.(*model.ShowTasklogResponse), nil
+	}
+}
+
+//查询任务的已选规则集列表。
+func (c *CodeCheckClient) ShowTasksRulesets(request *model.ShowTasksRulesetsRequest) (*model.ShowTasksRulesetsResponse, error) {
+	requestDef := GenReqDefForShowTasksRulesets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTasksRulesetsResponse), nil
 	}
 }
 

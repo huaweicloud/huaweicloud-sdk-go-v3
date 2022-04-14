@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Response body of resource
+// 资源详情
 type ResourceResp struct {
 	ExtraInfo *ResourceExtraInfo `json:"extra_info,omitempty"`
 	// 待备份资源id
@@ -33,6 +33,9 @@ type ResourceResp struct {
 	// 副本数量
 
 	BackupCount *int32 `json:"backup_count,omitempty"`
+	// 是否跟随存储库自动备份策略进行备份
+
+	AutoProtect *bool `json:"auto_protect,omitempty"`
 }
 
 func (o ResourceResp) String() string {

@@ -13,7 +13,7 @@ import (
 type BatchListProgressesRequest struct {
 	// 请求语言类型
 
-	XLanguage BatchListProgressesRequestXLanguage `json:"X-Language"`
+	XLanguage *BatchListProgressesRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchQueryProgressReq `json:"body,omitempty"`
 }

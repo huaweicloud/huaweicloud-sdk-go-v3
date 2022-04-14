@@ -13,7 +13,7 @@ import (
 type ShowMonitoringDataRequest struct {
 	// 请求语言类型
 
-	XLanguage ShowMonitoringDataRequestXLanguage `json:"X-Language"`
+	XLanguage *ShowMonitoringDataRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchQueryJobReq `json:"body,omitempty"`
 }

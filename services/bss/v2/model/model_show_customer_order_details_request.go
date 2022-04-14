@@ -8,10 +8,10 @@ import (
 
 // Request Object
 type ShowCustomerOrderDetailsRequest struct {
-	// |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
+	// 语言：中文：zh_CN 英文：en_US 缺省为zh_CN
 
 	XLanguage *string `json:"X-Language,omitempty"`
-	// |参数名称：订单ID。| |参数的约束及描述：|
+	// 订单ID。
 
 	OrderId string `json:"order_id"`
 	// 每页大小。默认值为10。

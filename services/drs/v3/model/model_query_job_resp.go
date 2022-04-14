@@ -9,7 +9,6 @@ import (
 	"strings"
 )
 
-//
 type QueryJobResp struct {
 	// 任务id
 
@@ -141,9 +140,8 @@ type QueryJobResp struct {
 	// 断点的GTID集合
 
 	Gtid *string `json:"gtid,omitempty"`
-	// 获取异常通知设置信息。
 
-	AlarmNotify *string `json:"alarm_notify,omitempty"`
+	AlarmNotify *QuerySmnInfoResp `json:"alarm_notify,omitempty"`
 	// 增量任务启动位点
 
 	IncreStartPosition *string `json:"incre_start_position,omitempty"`

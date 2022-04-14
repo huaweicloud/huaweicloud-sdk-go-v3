@@ -28,6 +28,9 @@ type UpdateFunctionConfigRequestBody struct {
 	// 用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
 
 	UserData *string `json:"user_data,omitempty"`
+	// 用户自定义的name/value信息，用于需要加密的配置。
+
+	EncryptedUserData *string `json:"encrypted_user_data,omitempty"`
 	// 函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
 
 	Xrole *string `json:"xrole,omitempty"`

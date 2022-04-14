@@ -23,6 +23,9 @@ type SubTaskAssociatedWithTask struct {
 	// 子任务结束时间（如果子任务还没有结束，则为空）
 
 	EndDate *int64 `json:"end_date,omitempty"`
+	// 迁移或同步时，具体的迁移详情
+
+	ProcessTrace *string `json:"process_trace,omitempty"`
 }
 
 func (o SubTaskAssociatedWithTask) String() string {

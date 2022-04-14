@@ -16,23 +16,23 @@ type SyncPolicyReq struct {
 	JobId string `json:"job_id"`
 	// 冲突策略。 - ignore：忽略 - overwrite：覆盖 - stop：报错
 
-	ConflictPolicy SyncPolicyReqConflictPolicy `json:"conflict_policy"`
+	ConflictPolicy *SyncPolicyReqConflictPolicy `json:"conflict_policy,omitempty"`
 	// 过滤DDL策略。
 
-	FilterDdlPolicy SyncPolicyReqFilterDdlPolicy `json:"filter_ddl_policy"`
+	FilterDdlPolicy *SyncPolicyReqFilterDdlPolicy `json:"filter_ddl_policy,omitempty"`
 	// 同步增量是否同步DDL。
 
 	DdlTrans *bool `json:"ddl_trans,omitempty"`
 	// 同步增量是否同步索引。
 
 	IndexTrans *bool `json:"index_trans,omitempty"`
-	// 同步Topic策略，目标库为kafka时必填，取值： - 0：集中投递到一个Topic - 1：按库名-schema自动生成Topic名字 - 2：按库名自动生成Topic名字 - 3：按库名-schema-表名自动生成Topic名字
+	// 同步Topic策略，目标库为kafka时必填，取值： - 0：集中投递到一个Topic - 1：按库名-schema-表名自动生成Topic名字 - 2：按库名自动生成Topic名字 - 3：按库名-schema自动生成Topic名字
 
 	TopicPolicy *SyncPolicyReqTopicPolicy `json:"topic_policy,omitempty"`
 	// Topic名称，topic_policy为0时必填，确保topic已存在。
 
 	Topic *string `json:"topic,omitempty"`
-	// 同步到kafka partition策略，取值： - 0：按库名.schema.表名的hash值投递到不同Partition - 1：全部投递到Partition 0 - 2：按主键的hash值投递到不同Partition - 3：按库名.schema的hash值投递到不同Partition **当topic_policy取0时，可以取0,1,2,3；当topic_policy取1时，可以取0,1；当topic_policy取2时，可以取0,1,3；当topic_policy取3时，可以取1,2；**
+	// 同步到kafka partition策略，取值： - 0：按库名.schema.表名的hash值投递到不同Partition - 1：全部投递到Partition 0 - 2：按主键的hash值投递到不同Partition - 3：按库名.schema的hash值投递到不同Partition **当topic_policy取0时，可以取0,1,2,3；当topic_policy取1时，可以取1,2；当topic_policy取2时，可以取0,1,3；当topic_policy取3时，可以取0,1；**
 
 	PartitionPolicy *SyncPolicyReqPartitionPolicy `json:"partition_policy,omitempty"`
 	// 投送到kafka的数据格式，不填默认为json：
@@ -52,7 +52,7 @@ type SyncPolicyReq struct {
 	IsFillMaterializedView *bool `json:"is_fill_materialized_view,omitempty"`
 	// PostgreSQL同步全量阶段是否使用快照模式导出，不填默认为false
 
-	ExportSnapshot *string `json:"export_snapshot,omitempty"`
+	ExportSnapshot *bool `json:"export_snapshot,omitempty"`
 }
 
 func (o SyncPolicyReq) String() string {

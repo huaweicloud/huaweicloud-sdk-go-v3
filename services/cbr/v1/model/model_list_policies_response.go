@@ -11,7 +11,7 @@ type ListPoliciesResponse struct {
 	//
 
 	Policies *[]Policy `json:"policies,omitempty"`
-	//
+	// 策略总数
 
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`

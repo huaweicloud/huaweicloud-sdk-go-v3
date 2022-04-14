@@ -13,7 +13,7 @@ import (
 type BatchSetPolicyRequest struct {
 	// 请求语言类型。
 
-	XLanguage BatchSetPolicyRequestXLanguage `json:"X-Language"`
+	XLanguage *BatchSetPolicyRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchSetupSyncPolicyReq `json:"body,omitempty"`
 }

@@ -17,6 +17,16 @@ type RuleAction struct {
 	DeviceAlarm *ActionDeviceAlarm `json:"device_alarm,omitempty"`
 
 	DeviceCommand *ActionDeviceCommand `json:"device_command,omitempty"`
+
+	DisForwarding *ActionDisForwarding `json:"dis_forwarding,omitempty"`
+
+	ObsForwarding *ActionObsForwarding `json:"obs_forwarding,omitempty"`
+
+	RomaForwarding *ActionRomaForwarding `json:"roma_forwarding,omitempty"`
+
+	IotaForwarding *ActionIoTaForwarding `json:"iota_forwarding,omitempty"`
+
+	KafkaForwarding *ActionKafkaForwarding `json:"kafka_forwarding,omitempty"`
 }
 
 func (o RuleAction) String() string {

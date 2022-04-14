@@ -8,6 +8,8 @@ import (
 
 // Response Object
 type ListConfigurationsResponse struct {
+	Count *int32 `json:"count,omitempty"`
+
 	Configurations *[]ConfigurationSummary `json:"configurations,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

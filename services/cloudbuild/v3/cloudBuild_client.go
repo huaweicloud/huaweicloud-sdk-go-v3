@@ -74,6 +74,17 @@ func (c *CloudBuildClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*
 	}
 }
 
+//根据开始时间和结束时间查看构建任务的构建成功率
+func (c *CloudBuildClient) ShowJobSuccessRatio(request *model.ShowJobSuccessRatioRequest) (*model.ShowJobSuccessRatioResponse, error) {
+	requestDef := GenReqDefForShowJobSuccessRatio()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJobSuccessRatioResponse), nil
+	}
+}
+
 //查询指定代码仓库最近一次成功的构建历史
 func (c *CloudBuildClient) ShowLastHistory(request *model.ShowLastHistoryRequest) (*model.ShowLastHistoryResponse, error) {
 	requestDef := GenReqDefForShowLastHistory()

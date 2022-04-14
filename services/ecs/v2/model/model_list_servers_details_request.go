@@ -38,6 +38,9 @@ type ListServersDetailsRequest struct {
 	// 查询tag字段中包含该值的云服务器。
 
 	Tags *string `json:"tags,omitempty"`
+	// IPv4地址过滤结果，匹配规则为精确匹配。
+
+	IpEq *string `json:"ip_eq,omitempty"`
 }
 
 func (o ListServersDetailsRequest) String() string {

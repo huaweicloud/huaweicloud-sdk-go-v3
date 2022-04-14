@@ -23,9 +23,15 @@ type UpdateTaskSpeedReq struct {
 	// 当前任务的总迁移数据大小
 
 	Totalsize int64 `json:"totalsize"`
+	// 迁移或同步时，具体的迁移详情
+
+	ProcessTrace string `json:"process_trace"`
 	// 实施迁移速率，单位Mb/s
 
-	MigrateSpeed float64 `json:"migrate_speed"`
+	MigrateSpeed *float64 `json:"migrate_speed,omitempty"`
+	// 实施文件压缩率
+
+	CompressRate *float64 `json:"compress_rate,omitempty"`
 }
 
 func (o UpdateTaskSpeedReq) String() string {

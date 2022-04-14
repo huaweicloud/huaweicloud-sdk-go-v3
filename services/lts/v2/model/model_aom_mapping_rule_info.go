@@ -21,7 +21,7 @@ type AomMappingRuleInfo struct {
 	Namespace string `json:"namespace"`
 	// 容器名称
 
-	ContainerName string `json:"container_name"`
+	ContainerName *string `json:"container_name,omitempty"`
 	// 接入规则详情
 
 	Files []AomMappingfilesInfo `json:"files"`

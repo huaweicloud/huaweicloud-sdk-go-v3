@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateVaultResponse struct {
-	Vault          *Vault `json:"vault,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	Vault          *VaultCreateResource `json:"vault,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o CreateVaultResponse) String() string {

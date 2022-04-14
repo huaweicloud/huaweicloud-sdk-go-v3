@@ -63,6 +63,17 @@ func (c *ModerationClient) RunImageModeration(request *model.RunImageModerationR
 	}
 }
 
+//分析并识别用户上传的语音内容是否有敏感内容（如色情、政治等），并将识别结果 返回给用户。
+func (c *ModerationClient) RunModerationAudio(request *model.RunModerationAudioRequest) (*model.RunModerationAudioResponse, error) {
+	requestDef := GenReqDefForRunModerationAudio()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunModerationAudioResponse), nil
+	}
+}
+
 //提交批量图像内容审核任务，返回任务标识，任务标识可用于查询任务结果。此接口为异步接口，相对于批量接口，支持更大图片列表批次。
 func (c *ModerationClient) RunTaskSumbit(request *model.RunTaskSumbitRequest) (*model.RunTaskSumbitResponse, error) {
 	requestDef := GenReqDefForRunTaskSumbit()
