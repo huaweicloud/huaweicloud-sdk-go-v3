@@ -70,6 +70,10 @@ func NewDefaultHttpClient(httpConfig *config.HttpConfig) *DefaultHttpClient {
 		Timeout:   httpConfig.Timeout,
 	}
 
+	if httpConfig.HttpClient != nil {
+		client.goHttpClient = httpConfig.HttpClient
+	}
+
 	client.httpHandler = httpConfig.HttpHandler
 
 	return client

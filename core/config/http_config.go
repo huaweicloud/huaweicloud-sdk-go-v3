@@ -20,9 +20,9 @@
 package config
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
 	"context"
 	"fmt"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
 	"net"
 	"net/http"
 	"time"
@@ -41,7 +41,7 @@ type HttpConfig struct {
 	HttpProxy             *Proxy
 	IgnoreSSLVerification bool
 	HttpHandler           *httphandler.HttpHandler
-	HttpTransport         *http.Transport
+	HttpClient            *http.Client
 }
 
 func DefaultHttpConfig() *HttpConfig {
@@ -82,8 +82,8 @@ func (config *HttpConfig) WithProxy(proxy *Proxy) *HttpConfig {
 	return config
 }
 
-func (config *HttpConfig) WithHttpTransport(transport *http.Transport) *HttpConfig {
-	config.HttpTransport = transport
+func (config *HttpConfig) WithHttpClient(client *http.Client) *HttpConfig {
+	config.HttpClient = client
 	return config
 }
 
