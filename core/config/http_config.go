@@ -24,6 +24,7 @@ import (
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
 	"net"
+	"net/http"
 	"time"
 )
 
@@ -40,6 +41,7 @@ type HttpConfig struct {
 	HttpProxy             *Proxy
 	IgnoreSSLVerification bool
 	HttpHandler           *httphandler.HttpHandler
+	HttpTransport         *http.Transport
 }
 
 func DefaultHttpConfig() *HttpConfig {

@@ -41,8 +41,11 @@ type DefaultHttpClient struct {
 }
 
 func NewDefaultHttpClient(httpConfig *config.HttpConfig) *DefaultHttpClient {
-	transport := &http.Transport{
-		TLSClientConfig: &tls.Config{InsecureSkipVerify: httpConfig.IgnoreSSLVerification},
+	transport := httpConfig.HttpTransport
+	if transport == nil {
+		transport = &http.Transport{
+			TLSClientConfig: &tls.Config{InsecureSkipVerify: httpConfig.IgnoreSSLVerification},
+		}
 	}
 
 	if httpConfig.DialContext != nil {
