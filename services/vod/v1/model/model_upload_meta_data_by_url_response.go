@@ -10,7 +10,7 @@ import (
 type UploadMetaDataByUrlResponse struct {
 	// 待拉取创建的媒资元数据
 
-	UploadAssets   *[]UploadAsset `json:"upload_assets,omitempty"`
+	UploadAssets   []*UploadAsset `json:"upload_assets,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 
