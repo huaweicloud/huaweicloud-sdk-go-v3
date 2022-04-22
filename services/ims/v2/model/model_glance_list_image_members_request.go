@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type GlanceListImageMembersRequest struct {
-	// 镜像id
 
+	// 镜像id
 	ImageId string `json:"image_id"`
 }
 

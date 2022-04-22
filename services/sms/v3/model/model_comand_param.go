@@ -8,11 +8,11 @@ import (
 
 // 命令响应参数
 type ComandParam struct {
+
 	// 任务id
-
 	TaskId *string `json:"task_id,omitempty"`
-	// 桶名
 
+	// 桶名
 	Bucket *string `json:"bucket,omitempty"`
 }
 

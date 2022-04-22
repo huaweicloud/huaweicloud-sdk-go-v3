@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteDeviceRequest struct {
+
 	// 边缘节点ID
-
 	EdgeNodeId string `json:"edge_node_id"`
-	// 设备ID
 
+	// 设备ID
 	DeviceId string `json:"device_id"`
 }
 

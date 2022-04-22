@@ -8,8 +8,8 @@ import (
 
 // This is a auto create Response Object
 type CreateDatabaseDetailResponses struct {
-	// 逻辑库名称。
 
+	// 逻辑库名称。
 	Name string `json:"name"`
 }
 

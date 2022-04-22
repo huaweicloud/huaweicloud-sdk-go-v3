@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListAppsResponse struct {
+
 	// app的总数
-
 	Count *int32 `json:"count,omitempty"`
-	// app的列表
 
+	// app的列表
 	Apps *[]App `json:"apps,omitempty"`
 
 	XRequestId     *string `json:"X-request-Id,omitempty"`

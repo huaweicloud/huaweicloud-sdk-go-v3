@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type DeleteDeploymentRequest struct {
+
 	// 铂金版实例ID，专业版实例为空值
-
 	IefInstanceId *string `json:"ief-instance-id,omitempty"`
+
 	// 应用部署ID
-
 	DeploymentId string `json:"deployment_id"`
-	// 是否强制删除；默认为false。
 
+	// 是否强制删除；默认为false。
 	ForceDelete *string `json:"force_delete,omitempty"`
 }
 

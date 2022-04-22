@@ -8,11 +8,11 @@ import (
 
 // CCE资源标签
 type ResourceTag struct {
+
 	// Key值。 - 支持最大长度为36个UTF-8字符。 - 不支持特殊字符[\\=\\*\\<\\>\\\\\\,\\|/]+ - 不支持ASCII控制字符(0-31)
-
 	Key *string `json:"key,omitempty"`
-	// Value值。 - 支持最大长度为43个UTF-8字符。 - 不支持特殊字符[\\=\\*\\<\\>\\\\\\,\\|/]+ - 不支持ASCII控制字符(0-31)
 
+	// Value值。 - 支持最大长度为43个UTF-8字符。 - 不支持特殊字符[\\=\\*\\<\\>\\\\\\,\\|/]+ - 不支持ASCII控制字符(0-31)
 	Value *string `json:"value,omitempty"`
 }
 

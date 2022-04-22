@@ -8,11 +8,11 @@ import (
 
 // 对象编号与名称
 type NameAndId struct {
+
 	// 对象编号
-
 	Id *string `json:"id,omitempty"`
-	// 对象名称
 
+	// 对象名称
 	Name *string `json:"name,omitempty"`
 }
 

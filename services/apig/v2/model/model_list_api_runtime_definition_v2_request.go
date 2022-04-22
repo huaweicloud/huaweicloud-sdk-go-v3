@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ListApiRuntimeDefinitionV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
+
 	// API的编号
-
 	ApiId string `json:"api_id"`
-	// API的发布环境编号
 
+	// API的发布环境编号
 	EnvId *string `json:"env_id,omitempty"`
 }
 

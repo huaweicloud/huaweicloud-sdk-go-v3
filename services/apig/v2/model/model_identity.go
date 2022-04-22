@@ -10,14 +10,14 @@ import (
 )
 
 type Identity struct {
+
 	// 参数名称
-
 	Name string `json:"name"`
+
 	// 参数位置
-
 	Location IdentityLocation `json:"location"`
-	// 参数校验表达式，默认为null，不做校验
 
+	// 参数校验表达式，默认为null，不做校验
 	Validation *string `json:"validation,omitempty"`
 }
 

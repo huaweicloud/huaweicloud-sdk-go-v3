@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteConfRequest struct {
-	// 指定待删除的集群ID。
 
+	// 指定待删除的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *DeleteConfReq `json:"body,omitempty"`

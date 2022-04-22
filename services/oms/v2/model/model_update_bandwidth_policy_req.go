@@ -7,8 +7,8 @@ import (
 )
 
 type UpdateBandwidthPolicyReq struct {
-	// 配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
 
+	// 配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
 	BandwidthPolicy []BandwidthPolicyDto `json:"bandwidth_policy"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // This is a auto create Body Object
 type LanguageDetectionReq struct {
-	// 需要识别语种的文本。仅支持utf-8编码，长度不超过1000字符。
 
+	// 需要识别语种的文本。仅支持utf-8编码，长度不超过1000字符。
 	Text string `json:"text"`
 }
 

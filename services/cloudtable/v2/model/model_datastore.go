@@ -8,11 +8,11 @@ import (
 
 // 创建集群数据库参数。
 type Datastore struct {
+
 	// controller版本号，默认1.0.6
-
 	Version string `json:"version"`
-	// 集群数据库类型
 
+	// 集群数据库类型
 	Type string `json:"type"`
 }
 

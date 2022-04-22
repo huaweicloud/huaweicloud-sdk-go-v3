@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type RunInstanceActionRequest struct {
+
 	// 语言
-
 	XLanguage *string `json:"X-Language,omitempty"`
-	// 实例ID。
 
+	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
 	Body *OpenGaussInstanceActionRequest `json:"body,omitempty"`

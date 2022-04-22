@@ -10,11 +10,11 @@ import (
 )
 
 type RefreshTaskRequestBody struct {
+
 	// 刷新的类型，其值可以为file 或directory，默认为file
-
 	Type *RefreshTaskRequestBodyType `json:"type,omitempty"`
-	// 输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
 
+	// 输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
 	Urls []string `json:"urls"`
 }
 

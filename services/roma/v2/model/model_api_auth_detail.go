@@ -11,47 +11,47 @@ import (
 
 // api鉴权字段
 type ApiAuthDetail struct {
+
 	// 访问API服务的认证方式 - none - basicauth - oauth2.0 - hmac - secret - md5 - apiGateway - keyTop - hikVision - huaweiNetworkManagement - liHe
-
 	AuthMethod *ApiAuthDetailAuthMethod `json:"auth_method,omitempty"`
+
 	// 访问API服务的APP认证方式，认证方式为（apiGateway）时填写 - default - secret - jwt
-
 	AppAuthType *ApiAuthDetailAppAuthType `json:"app_auth_type,omitempty"`
+
 	// 访问API服务的用户名 - 认证方式为（lihe、huaweiNetworkManagement、basicauth）时填写
-
 	UserName *string `json:"user_name,omitempty"`
+
 	// 访问API服务的密码 - 认证方式为（lihe、huaweiNetworkManagement、basicauth、secret、md5、hmac）时填写
-
 	Password *string `json:"password,omitempty"`
+
 	// 访问API服务的AppKey - 认证方式为（apiGateway、oauth2.0）时填写
-
 	AppKey *string `json:"app_key,omitempty"`
+
 	// 访问API服务的AppSecret - 认证方式为（apiGateway、oauth2.0）时填写
-
 	AppSecret *string `json:"app_secret,omitempty"`
+
 	// 访问API服务的Secret - 认证方式为（KeyTop、HikVision、Secret、HMAC、MD5）时填写
-
 	Secret *string `json:"secret,omitempty"`
+
 	// 访问API服务的备用IP - 认证方式为（HuaweiNetworkManagement）时填写
-
 	AltIp *string `json:"alt_ip,omitempty"`
+
 	// 访问API服务的AccessTokenUrl - 认证方式为（liHe、oauth2.0 huaweiNetworkManagement）时填写
-
 	AccessTokenUrl *string `json:"access_token_url,omitempty"`
+
 	// 访问API服务的客户端标识 - 认证方式为Oauth2时填写
-
 	ClientId *string `json:"client_id,omitempty"`
+
 	// 访问API服务的客户端密钥 - 认证方式为Oauth2时填写
-
 	ClientSecret *string `json:"client_secret,omitempty"`
+
 	// 访问API服务的Scope - 认证方式为（LiHe、Oauth2）时填写
-
 	Scope *string `json:"scope,omitempty"`
+
 	// 访问API服务的Authorization - 认证方式为（LiHe）时填写
-
 	Authorization *string `json:"authorization,omitempty"`
-	// 访问API服务的授权类型 - 认证方式为（LiHe、Oauth2）时填写 - client_credentials （oauth2.0使用）
 
+	// 访问API服务的授权类型 - 认证方式为（LiHe、Oauth2）时填写 - client_credentials （oauth2.0使用）
 	GrantType *string `json:"grant_type,omitempty"`
 }
 

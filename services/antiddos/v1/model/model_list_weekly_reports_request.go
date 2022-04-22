@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListWeeklyReportsRequest struct {
-	// 每周的起始时间
 
+	// 每周的起始时间
 	PeriodStartDate *string `json:"period_start_date,omitempty"`
 }
 

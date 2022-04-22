@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateInstanceNameResponse struct {
-	// 修改实例名称的任务ID。
 
+	// 修改实例名称的任务ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

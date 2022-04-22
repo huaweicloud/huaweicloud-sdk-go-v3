@@ -8,17 +8,17 @@ import (
 
 // 支持的磁盘IO类型信息。
 type ListEngineIosEntity struct {
+
 	// 磁盘IO编码。
-
 	IoSpec *string `json:"io_spec,omitempty"`
+
 	// 磁盘类型。
-
 	Type *string `json:"type,omitempty"`
+
 	// 可用区。
-
 	AvailableZones *[]string `json:"available_zones,omitempty"`
-	// 不可用区。
 
+	// 不可用区。
 	UnavailableZones *[]string `json:"unavailable_zones,omitempty"`
 }
 

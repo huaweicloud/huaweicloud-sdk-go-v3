@@ -19,7 +19,12 @@ func CloudPipelineClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//批量获取流水线状态和阶段信息
+// 批量获取流水线状态
+//
+// 批量获取流水线状态和阶段信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudPipelineClient) BatchShowPipelinesStatus(request *model.BatchShowPipelinesStatusRequest) (*model.BatchShowPipelinesStatusResponse, error) {
 	requestDef := GenReqDefForBatchShowPipelinesStatus()
 
@@ -30,7 +35,12 @@ func (c *CloudPipelineClient) BatchShowPipelinesStatus(request *model.BatchShowP
 	}
 }
 
-//基于模板快速创建流水线及流水线内任务
+// 基于模板快速创建流水线及流水线内任务
+//
+// 基于模板快速创建流水线及流水线内任务
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudPipelineClient) CreatePipelineByTemplate(request *model.CreatePipelineByTemplateRequest) (*model.CreatePipelineByTemplateResponse, error) {
 	requestDef := GenReqDefForCreatePipelineByTemplate()
 
@@ -41,7 +51,12 @@ func (c *CloudPipelineClient) CreatePipelineByTemplate(request *model.CreatePipe
 	}
 }
 
-//获取流水线列表接口
+// 获取流水线列表接口
+//
+// 获取流水线列表接口
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudPipelineClient) ListPipelineSimpleInfo(request *model.ListPipelineSimpleInfoRequest) (*model.ListPipelineSimpleInfoResponse, error) {
 	requestDef := GenReqDefForListPipelineSimpleInfo()
 
@@ -52,7 +67,12 @@ func (c *CloudPipelineClient) ListPipelineSimpleInfo(request *model.ListPipeline
 	}
 }
 
-//获取项目下流水线执行状况
+// 获取项目下流水线执行状况
+//
+// 获取项目下流水线执行状况
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudPipelineClient) ListPipleineBuildResult(request *model.ListPipleineBuildResultRequest) (*model.ListPipleineBuildResultResponse, error) {
 	requestDef := GenReqDefForListPipleineBuildResult()
 
@@ -63,7 +83,12 @@ func (c *CloudPipelineClient) ListPipleineBuildResult(request *model.ListPiplein
 	}
 }
 
-//查询模板列表，支持分页查询,支持模板名字模糊查询
+// 查询模板列表
+//
+// 查询模板列表，支持分页查询,支持模板名字模糊查询
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudPipelineClient) ListTemplates(request *model.ListTemplatesRequest) (*model.ListTemplatesResponse, error) {
 	requestDef := GenReqDefForListTemplates()
 
@@ -74,7 +99,12 @@ func (c *CloudPipelineClient) ListTemplates(request *model.ListTemplatesRequest)
 	}
 }
 
-//注册创建Slave接口
+// register注册Slave接口
+//
+// 注册创建Slave接口
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudPipelineClient) RegisterAgent(request *model.RegisterAgentRequest) (*model.RegisterAgentResponse, error) {
 	requestDef := GenReqDefForRegisterAgent()
 
@@ -85,7 +115,12 @@ func (c *CloudPipelineClient) RegisterAgent(request *model.RegisterAgentRequest)
 	}
 }
 
-//根据id删除流水线
+// 删除流水线
+//
+// 根据id删除流水线
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudPipelineClient) RemovePipeline(request *model.RemovePipelineRequest) (*model.RemovePipelineResponse, error) {
 	requestDef := GenReqDefForRemovePipeline()
 
@@ -96,7 +131,12 @@ func (c *CloudPipelineClient) RemovePipeline(request *model.RemovePipelineReques
 	}
 }
 
-//Agent状态查询
+// Agent状态查询
+//
+// Agent状态查询
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudPipelineClient) ShowAgentStatus(request *model.ShowAgentStatusRequest) (*model.ShowAgentStatusResponse, error) {
 	requestDef := GenReqDefForShowAgentStatus()
 
@@ -107,7 +147,12 @@ func (c *CloudPipelineClient) ShowAgentStatus(request *model.ShowAgentStatusRequ
 	}
 }
 
-//检查流水线创建状态
+// 检查流水线创建状态
+//
+// 检查流水线创建状态
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudPipelineClient) ShowInstanceStatus(request *model.ShowInstanceStatusRequest) (*model.ShowInstanceStatusResponse, error) {
 	requestDef := GenReqDefForShowInstanceStatus()
 
@@ -118,7 +163,12 @@ func (c *CloudPipelineClient) ShowInstanceStatus(request *model.ShowInstanceStat
 	}
 }
 
-//获取流水线状态,阶段及任务信息
+// 获取流水线状态
+//
+// 获取流水线状态,阶段及任务信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudPipelineClient) ShowPipleineStatus(request *model.ShowPipleineStatusRequest) (*model.ShowPipleineStatusResponse, error) {
 	requestDef := GenReqDefForShowPipleineStatus()
 
@@ -129,7 +179,12 @@ func (c *CloudPipelineClient) ShowPipleineStatus(request *model.ShowPipleineStat
 	}
 }
 
-//查询模板详情
+// 查询模板详情
+//
+// 查询模板详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudPipelineClient) ShowTemplateDetail(request *model.ShowTemplateDetailRequest) (*model.ShowTemplateDetailResponse, error) {
 	requestDef := GenReqDefForShowTemplateDetail()
 
@@ -140,7 +195,12 @@ func (c *CloudPipelineClient) ShowTemplateDetail(request *model.ShowTemplateDeta
 	}
 }
 
-//启动流水线
+// 启动流水线
+//
+// 启动流水线
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudPipelineClient) StartNewPipeline(request *model.StartNewPipelineRequest) (*model.StartNewPipelineResponse, error) {
 	requestDef := GenReqDefForStartNewPipeline()
 
@@ -151,7 +211,12 @@ func (c *CloudPipelineClient) StartNewPipeline(request *model.StartNewPipelineRe
 	}
 }
 
-//停止流水线
+// 停止流水线
+//
+// 停止流水线
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudPipelineClient) StopPipelineNew(request *model.StopPipelineNewRequest) (*model.StopPipelineNewResponse, error) {
 	requestDef := GenReqDefForStopPipelineNew()
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowBatchJobRequest struct {
-	// 数据开发任务ID。
 
+	// 数据开发任务ID。
 	JobId string `json:"job_id"`
 }
 

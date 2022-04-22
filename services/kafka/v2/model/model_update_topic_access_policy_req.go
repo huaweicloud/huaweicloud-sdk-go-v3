@@ -7,8 +7,8 @@ import (
 )
 
 type UpdateTopicAccessPolicyReq struct {
-	// topic列表。
 
+	// topic列表。
 	Topics []AccessPolicyTopicEntity `json:"topics"`
 }
 

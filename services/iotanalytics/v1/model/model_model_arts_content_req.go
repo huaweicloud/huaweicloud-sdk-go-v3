@@ -8,23 +8,23 @@ import (
 
 // ModelArts数据源配置内容
 type ModelArtsContentReq struct {
+
 	// 服务名称
-
 	ServiceName string `json:"service_name"`
+
 	// 访问地址
-
 	AccessAddress string `json:"access_address"`
+
 	// 校验参数
-
 	VerifyBody string `json:"verify_body"`
+
 	// 租户的AK
-
 	Ak string `json:"ak"`
+
 	// 租户的SK
-
 	Sk string `json:"sk"`
-	// 项目id
 
+	// 项目id
 	ProjectId string `json:"project_id"`
 }
 

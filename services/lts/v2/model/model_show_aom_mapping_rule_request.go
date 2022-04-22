@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowAomMappingRuleRequest struct {
-	// 接入规则ID
 
+	// 接入规则ID
 	RuleId string `json:"rule_id"`
 }
 

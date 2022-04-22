@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateInstanceSecurityGroupResponse struct {
-	// 安全组ID
 
+	// 安全组ID
 	SecurityGroupId *string `json:"security_group_id,omitempty"`
 	HttpStatusCode  int     `json:"-"`
 }

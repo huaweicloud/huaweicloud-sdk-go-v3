@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowProtectionGroupRequest struct {
-	// 保护组的ID。
 
+	// 保护组的ID。
 	ServerGroupId string `json:"server_group_id"`
 }
 

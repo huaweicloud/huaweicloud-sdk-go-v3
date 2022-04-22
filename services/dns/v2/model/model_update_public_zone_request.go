@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdatePublicZoneRequest struct {
-	// 待修改zone的ID
 
+	// 待修改zone的ID
 	ZoneId string `json:"zone_id"`
 
 	Body *UpdatePublicZoneInfo `json:"body,omitempty"`

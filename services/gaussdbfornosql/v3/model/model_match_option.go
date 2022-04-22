@@ -10,11 +10,11 @@ import (
 )
 
 type MatchOption struct {
+
 	// 取值为“instance_name”或“instance_id”，分别表示按实例名称或按实例ID匹配查询。
-
 	Key MatchOptionKey `json:"key"`
-	// 待匹配的实例名称或实例ID。
 
+	// 待匹配的实例名称或实例ID。
 	Value string `json:"value"`
 }
 

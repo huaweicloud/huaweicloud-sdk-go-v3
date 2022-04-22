@@ -8,11 +8,11 @@ import (
 
 //
 type Cluster struct {
+
 	// API类型，固定值“Cluster”或“cluster”，该值不可修改。
-
 	Kind string `json:"kind"`
-	// API版本，固定值“v3”，该值不可修改。
 
+	// API版本，固定值“v3”，该值不可修改。
 	ApiVersion string `json:"apiVersion"`
 
 	Metadata *ClusterMetadata `json:"metadata"`

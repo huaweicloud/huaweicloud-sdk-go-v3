@@ -7,14 +7,14 @@ import (
 )
 
 type SupportAzsInfo struct {
+
 	// 可用区编码。
-
 	Code *string `json:"code,omitempty"`
+
 	// 可用区名称。
-
 	Name *string `json:"name,omitempty"`
-	// 是否支持。
 
+	// 是否支持。
 	Favored *bool `json:"favored,omitempty"`
 }
 

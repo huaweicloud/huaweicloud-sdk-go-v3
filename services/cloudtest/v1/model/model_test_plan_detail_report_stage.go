@@ -8,8 +8,8 @@ import (
 
 // 测试计划完成阶段信息
 type TestPlanDetailReportStage struct {
-	// 用例完成率,按状态统计
 
+	// 用例完成率,按状态统计
 	CaseCompleteRate *string `json:"case_complete_rate,omitempty"`
 }
 

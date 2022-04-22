@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type StartConnectivityTestRequest struct {
-	// 指定待测试的集群ID。
 
+	// 指定待测试的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *StartConnectivityTestReq `json:"body,omitempty"`

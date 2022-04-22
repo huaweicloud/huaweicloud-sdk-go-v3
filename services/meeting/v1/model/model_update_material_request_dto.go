@@ -8,8 +8,8 @@ import (
 
 // 更新素材信息请求（只能修改素材名称）
 type UpdateMaterialRequestDto struct {
-	// 素材名称
 
+	// 素材名称
 	MaterialName *string `json:"materialName,omitempty"`
 }
 

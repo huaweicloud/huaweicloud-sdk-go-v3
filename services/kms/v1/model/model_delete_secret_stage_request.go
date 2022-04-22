@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteSecretStageRequest struct {
+
 	// 凭据的资源标识符。
-
 	SecretId string `json:"secret_id"`
-	// 凭据版本状态的名称。
 
+	// 凭据版本状态的名称。
 	StageName string `json:"stage_name"`
 }
 

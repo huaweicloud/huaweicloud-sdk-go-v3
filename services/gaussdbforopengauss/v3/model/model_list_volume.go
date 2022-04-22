@@ -8,11 +8,11 @@ import (
 
 // Volume信息。
 type ListVolume struct {
+
 	// 磁盘类型。
-
 	Type string `json:"type"`
-	// 磁盘大小。
 
+	// 磁盘大小。
 	Size int32 `json:"size"`
 }
 

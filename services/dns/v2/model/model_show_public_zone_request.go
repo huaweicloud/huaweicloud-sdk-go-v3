@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowPublicZoneRequest struct {
-	// 待查询zone的ID。
 
+	// 待查询zone的ID。
 	ZoneId string `json:"zone_id"`
 }
 

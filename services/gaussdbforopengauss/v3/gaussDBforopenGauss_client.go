@@ -19,7 +19,12 @@ func GaussDBforopenGaussClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//创建数据库企业版和集中式实例
+// 创建数据库实例
+//
+// 创建数据库企业版和集中式实例
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
 	requestDef := GenReqDefForCreateInstance()
 
@@ -30,7 +35,12 @@ func (c *GaussDBforopenGaussClient) CreateInstance(request *model.CreateInstance
 	}
 }
 
-//删除数据库实例。
+// 删除实例
+//
+// 删除数据库实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteInstance()
 
@@ -41,7 +51,12 @@ func (c *GaussDBforopenGaussClient) DeleteInstance(request *model.DeleteInstance
 	}
 }
 
-//获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
+// 获取参数模板列表
+//
+// 获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ListConfigurations(request *model.ListConfigurationsRequest) (*model.ListConfigurationsResponse, error) {
 	requestDef := GenReqDefForListConfigurations()
 
@@ -52,7 +67,12 @@ func (c *GaussDBforopenGaussClient) ListConfigurations(request *model.ListConfig
 	}
 }
 
-//查询指定数据库引擎对应的版本信息。
+// 查询数据库引擎的版本
+//
+// 查询指定数据库引擎对应的版本信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ListDatastores(request *model.ListDatastoresRequest) (*model.ListDatastoresResponse, error) {
 	requestDef := GenReqDefForListDatastores()
 
@@ -63,7 +83,12 @@ func (c *GaussDBforopenGaussClient) ListDatastores(request *model.ListDatastores
 	}
 }
 
-//查询数据库的规格信息。
+// 查询数据库规格
+//
+// 查询数据库的规格信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
 
@@ -74,7 +99,12 @@ func (c *GaussDBforopenGaussClient) ListFlavors(request *model.ListFlavorsReques
 	}
 }
 
-//查询数据库实例列表/查询实例详情
+// 查询数据库实例列表/查询实例详情
+//
+// 查询数据库实例列表/查询实例详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
 	requestDef := GenReqDefForListInstances()
 
@@ -85,7 +115,12 @@ func (c *GaussDBforopenGaussClient) ListInstances(request *model.ListInstancesRe
 	}
 }
 
-//查询指定数据库引擎对应的磁盘类型。
+// 查询数据库磁盘类型
+//
+// 查询指定数据库引擎对应的磁盘类型。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ListStorageTypes(request *model.ListStorageTypesRequest) (*model.ListStorageTypesResponse, error) {
 	requestDef := GenReqDefForListStorageTypes()
 
@@ -96,7 +131,12 @@ func (c *GaussDBforopenGaussClient) ListStorageTypes(request *model.ListStorageT
 	}
 }
 
-//重置数据库密码。
+// 重置数据库密码。
+//
+// 重置数据库密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ResetPwd(request *model.ResetPwdRequest) (*model.ResetPwdResponse, error) {
 	requestDef := GenReqDefForResetPwd()
 
@@ -107,7 +147,12 @@ func (c *GaussDBforopenGaussClient) ResetPwd(request *model.ResetPwdRequest) (*m
 	}
 }
 
-//重启数据库实例。
+// 重启数据库实例
+//
+// 重启数据库实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) RestartInstance(request *model.RestartInstanceRequest) (*model.RestartInstanceResponse, error) {
 	requestDef := GenReqDefForRestartInstance()
 
@@ -118,7 +163,12 @@ func (c *GaussDBforopenGaussClient) RestartInstance(request *model.RestartInstan
 	}
 }
 
-//CN横向扩容/DN分片扩容/磁盘扩容
+// CN横向扩容/DN分片扩容/磁盘扩容
+//
+// CN横向扩容/DN分片扩容/磁盘扩容
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) RunInstanceAction(request *model.RunInstanceActionRequest) (*model.RunInstanceActionResponse, error) {
 	requestDef := GenReqDefForRunInstanceAction()
 
@@ -129,7 +179,12 @@ func (c *GaussDBforopenGaussClient) RunInstanceAction(request *model.RunInstance
 	}
 }
 
-//设置自动备份策略。
+// 设置自动备份策略。
+//
+// 设置自动备份策略。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) SetBackupPolicy(request *model.SetBackupPolicyRequest) (*model.SetBackupPolicyResponse, error) {
 	requestDef := GenReqDefForSetBackupPolicy()
 
@@ -140,7 +195,12 @@ func (c *GaussDBforopenGaussClient) SetBackupPolicy(request *model.SetBackupPoli
 	}
 }
 
-//获取指定实例的参数模板。
+// 获取指定实例的参数模板
+//
+// 获取指定实例的参数模板。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ShowInstanceConfiguration(request *model.ShowInstanceConfigurationRequest) (*model.ShowInstanceConfigurationResponse, error) {
 	requestDef := GenReqDefForShowInstanceConfiguration()
 
@@ -151,7 +211,12 @@ func (c *GaussDBforopenGaussClient) ShowInstanceConfiguration(request *model.Sho
 	}
 }
 
-//修改指定实例的参数。
+// 修改指定实例的参数
+//
+// 修改指定实例的参数。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) UpdateInstanceConfiguration(request *model.UpdateInstanceConfigurationRequest) (*model.UpdateInstanceConfigurationResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceConfiguration()
 
@@ -162,7 +227,12 @@ func (c *GaussDBforopenGaussClient) UpdateInstanceConfiguration(request *model.U
 	}
 }
 
-//修改实例名称。
+// 修改实例名称
+//
+// 修改实例名称。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) UpdateInstanceName(request *model.UpdateInstanceNameRequest) (*model.UpdateInstanceNameResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceName()
 

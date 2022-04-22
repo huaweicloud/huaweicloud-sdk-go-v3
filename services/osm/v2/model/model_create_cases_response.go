@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateCasesResponse struct {
-	// 工单id
 
+	// 工单id
 	IncidentId     *string `json:"incident_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

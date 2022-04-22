@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UploadIssueImgRequest struct {
-	// devcloud的项目ID
 
+	// devcloud的项目ID
 	ProjectId string `json:"project_id"`
 
 	Body *UploadIssueImgRequestBody `json:"body,omitempty" type:"multipart"`

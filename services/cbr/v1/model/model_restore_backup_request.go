@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type RestoreBackupRequest struct {
-	// 备份id
 
+	// 备份id
 	BackupId string `json:"backup_id"`
 
 	Body *BackupRestoreReq `json:"body,omitempty"`

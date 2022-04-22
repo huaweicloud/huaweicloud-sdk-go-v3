@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type DeleteProcessRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 语言
 
+	// 语言
 	XLanguage *DeleteProcessRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *DeleteProcessReqBody `json:"body,omitempty"`

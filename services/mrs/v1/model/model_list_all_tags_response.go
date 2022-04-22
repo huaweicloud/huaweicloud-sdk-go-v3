@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListAllTagsResponse struct {
-	// 标签列表信息
 
+	// 标签列表信息
 	Tags           *[]TagWithMultiValue `json:"tags,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

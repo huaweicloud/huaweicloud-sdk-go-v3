@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type CreateWatermarkTemplateResponse struct {
+
 	// 水印配置模板id<br/>
-
 	Id *string `json:"id,omitempty"`
-	// 水印图片上传地址<br/>
 
+	// 水印图片上传地址<br/>
 	UploadUrl      *string `json:"upload_url,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

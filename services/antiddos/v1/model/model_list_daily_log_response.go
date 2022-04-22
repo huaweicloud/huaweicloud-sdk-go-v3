@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListDailyLogResponse struct {
+
 	// 弹性IP总数
-
 	Total *int64 `json:"total,omitempty"`
-	// 异常事件列表
 
+	// 异常事件列表
 	Logs           *[]DailyLog `json:"logs,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

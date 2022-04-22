@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UploadJsonAccessoriesResponse struct {
-	// 附件id
 
+	// 附件id
 	AccessoryId    *string `json:"accessory_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

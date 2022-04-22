@@ -7,11 +7,11 @@ import (
 )
 
 type RuleSetV2 struct {
+
 	// 规则集id，需要从web界面获取
-
 	RulesetId *string `json:"ruleset_id,omitempty"`
-	// 检查语言，支持cpp,java,js,python,php,css,html,go,typescript
 
+	// 检查语言，支持cpp,java,js,python,php,css,html,go,typescript
 	Language string `json:"language"`
 }
 

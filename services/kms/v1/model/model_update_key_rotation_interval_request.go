@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateKeyRotationIntervalRequest struct {
-	// API版本号
 
+	// API版本号
 	VersionId string `json:"version_id"`
 
 	Body *UpdateKeyRotationIntervalRequestBody `json:"body,omitempty"`

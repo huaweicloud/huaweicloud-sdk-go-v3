@@ -7,14 +7,14 @@ import (
 )
 
 type ModifyTransTemplateGroup struct {
+
 	// 模板组ID
-
 	GroupId *string `json:"group_id,omitempty"`
+
 	// 模板组名称
-
 	Name *string `json:"name,omitempty"`
-	// 视频信息列表
 
+	// 视频信息列表
 	Videos *[]VideoObj `json:"videos,omitempty"`
 
 	Audio *Audio `json:"audio,omitempty"`

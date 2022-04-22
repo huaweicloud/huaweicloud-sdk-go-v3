@@ -7,11 +7,11 @@ import (
 )
 
 type ProductsCalculation struct {
+
 	// 普通产品数量
-
 	NormalProductsNumbers *int32 `json:"normal_products_numbers,omitempty"`
-	// 网关产品数量
 
+	// 网关产品数量
 	GatewayProductsNumbers *int32 `json:"gateway_products_numbers,omitempty"`
 }
 

@@ -7,20 +7,20 @@ import (
 )
 
 type PipelineTemplate struct {
+
 	// 模板名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 模板id
-
 	Id *string `json:"id,omitempty"`
+
 	// 描述信息
-
 	Description *string `json:"description,omitempty"`
+
 	// 区域id
-
 	RegionId *string `json:"region_id,omitempty"`
-	// 预览链接
 
+	// 预览链接
 	Url *string `json:"url,omitempty"`
 }
 

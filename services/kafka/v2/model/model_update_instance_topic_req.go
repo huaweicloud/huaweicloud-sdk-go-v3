@@ -8,8 +8,8 @@ import (
 
 // 修改的topic列表。
 type UpdateInstanceTopicReq struct {
-	// 修改的topic列表。
 
+	// 修改的topic列表。
 	Topics *[]UpdateInstanceTopicReqTopics `json:"topics,omitempty"`
 }
 

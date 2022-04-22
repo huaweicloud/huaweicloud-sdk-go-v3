@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateOndemandClusterToPeriodResponse struct {
-	// 订单ID（此订单类型为“新购”）。
 
+	// 订单ID（此订单类型为“新购”）。
 	OrderId        *string `json:"orderId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

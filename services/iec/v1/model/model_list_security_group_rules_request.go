@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ListSecurityGroupRulesRequest struct {
+
 	// 查询返回边缘安全组规则列表数量。取值范围：0~1000。
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 查询的偏移量。
-
 	Offset *int32 `json:"offset,omitempty"`
-	// 安全组ID。uuid
 
+	// 安全组ID。uuid
 	SecurityGroupId *string `json:"security_group_id,omitempty"`
 }
 

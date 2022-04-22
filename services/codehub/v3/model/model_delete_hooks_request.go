@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type DeleteHooksRequest struct {
+
 	// 组名
-
 	GroupName string `json:"group_name"`
+
 	// 通过id删除指定仓库的hook
-
 	HookId int32 `json:"hook_id"`
-	// 仓库名
 
+	// 仓库名
 	RepositoryName string `json:"repository_name"`
 }
 

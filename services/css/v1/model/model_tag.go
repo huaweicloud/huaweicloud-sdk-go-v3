@@ -8,11 +8,11 @@ import (
 
 // 标签对象。
 type Tag struct {
+
 	// 标签名。
-
 	Key string `json:"key"`
-	// 标签值。
 
+	// 标签值。
 	Value string `json:"value"`
 }
 

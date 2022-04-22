@@ -11,20 +11,20 @@ import (
 
 // Response Object
 type UpdatePrivacyRuleResponse struct {
+
 	// 规则id
-
 	Id *string `json:"id,omitempty"`
+
 	// 策略id
-
 	Policyid *string `json:"policyid,omitempty"`
+
 	// 隐私屏蔽规则应用的url
-
 	Url *string `json:"url,omitempty"`
+
 	// 屏蔽字段
-
 	Category *UpdatePrivacyRuleResponseCategory `json:"category,omitempty"`
-	// 屏蔽字段名
 
+	// 屏蔽字段名
 	Index          *string `json:"index,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

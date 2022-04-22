@@ -8,13 +8,13 @@ import (
 
 // 告警页面
 type BlockPage struct {
-	// 模板名称
 
+	// 模板名称
 	Template string `json:"template"`
 
 	CustomPage *CustomPage `json:"custom_page,omitempty"`
-	// 重定向URL
 
+	// 重定向URL
 	RedirectUrl *string `json:"redirect_url,omitempty"`
 }
 

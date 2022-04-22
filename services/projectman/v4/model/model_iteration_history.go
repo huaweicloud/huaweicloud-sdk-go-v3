@@ -7,22 +7,22 @@ import (
 )
 
 type IterationHistory struct {
+
 	// 迭代ID
-
 	IterationId *string `json:"iteration_id,omitempty"`
-	// 项目ID
 
+	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
 	Operator *VersionHistoryOperator `json:"operator,omitempty"`
+
 	// 操作类型
-
 	Operate *string `json:"operate,omitempty"`
+
 	// 操作时间
-
 	OperateTime *string `json:"operate_time,omitempty"`
-	// 操作详情
 
+	// 操作详情
 	Details *[]IterationHistoryDetails `json:"details,omitempty"`
 }
 

@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type StartPipelineRequest struct {
+
 	// 语言类型 中文:zh-cn 英文:en-us
-
 	XLanguage *StartPipelineRequestXLanguage `json:"X-Language,omitempty"`
-	// 流水线ID
 
+	// 流水线ID
 	PipelineId string `json:"pipeline_id"`
 }
 

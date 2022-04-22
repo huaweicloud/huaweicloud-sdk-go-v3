@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type AttachCallbackInstanceLifeCycleHookRequest struct {
-	// 伸缩组标识。
 
+	// 伸缩组标识。
 	ScalingGroupId string `json:"scaling_group_id"`
 
 	Body *CallbackLifeCycleHookOption `json:"body,omitempty"`

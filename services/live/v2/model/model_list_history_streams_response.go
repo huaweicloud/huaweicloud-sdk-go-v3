@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListHistoryStreamsResponse struct {
+
 	// 历史流信息列表。
-
 	HistoryStreamList *[]HistoryStreamInfo `json:"history_stream_list,omitempty"`
-	// 总记录数。
 
+	// 总记录数。
 	Total *int32 `json:"total,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

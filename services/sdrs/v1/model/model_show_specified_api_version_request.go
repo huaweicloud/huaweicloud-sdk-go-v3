@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowSpecifiedApiVersionRequest struct {
-	// API版本号。例如: v1。
 
+	// API版本号。例如: v1。
 	ApiVersion string `json:"api_version"`
 }
 

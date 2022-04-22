@@ -11,31 +11,31 @@ import (
 
 // 函数执行节点信息
 type OperationState struct {
+
 	// 节点ID，需要在当前工作流中唯一
-
 	Id *string `json:"id,omitempty"`
+
 	// 节点名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 节点类型
-
 	Type *OperationStateType `json:"type,omitempty"`
+
 	// 是否是结束节点
-
 	End *bool `json:"end,omitempty"`
-	// 下一步骤节点ID
 
+	// 下一步骤节点ID
 	Transition *string `json:"transition,omitempty"`
 
 	StateDataFilter *StateDataFilter `json:"state_data_filter,omitempty"`
+
 	// Action执行模式，支持串行，并行两种模式，默认串行
-
 	ActionMode *OperationStateActionMode `json:"action_mode,omitempty"`
+
 	// 节点中要执行的操作列表
-
 	Actions *[]Action `json:"actions,omitempty"`
-	// 错误处理策略
 
+	// 错误处理策略
 	OnErrors *[]OnError `json:"on_errors,omitempty"`
 }
 

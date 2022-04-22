@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteSnapshotRequest struct {
+
 	// 快照所属的集群的ID。
-
 	ClusterId string `json:"cluster_id"`
-	// 要删除快照的ID。
 
+	// 要删除快照的ID。
 	SnapshotId string `json:"snapshot_id"`
 }
 

@@ -7,11 +7,11 @@ import (
 )
 
 type FreezeSubCustomersReq struct {
+
 	// 需要冻结的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
-
 	CustomerIds []string `json:"customer_ids"`
-	// 冻结原因。
 
+	// 冻结原因。
 	Reason string `json:"reason"`
 }
 

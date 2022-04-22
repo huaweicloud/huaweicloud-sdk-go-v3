@@ -7,22 +7,22 @@ import (
 )
 
 type LogsTree struct {
-	// 存储块id
 
+	// 存储块id
 	BlobId *string `json:"blob_id,omitempty"`
 
 	Commit *Commit `json:"commit,omitempty"`
+
 	// 文件名称
-
 	FileName *string `json:"file_name,omitempty"`
+
 	// 文件路径
-
 	FilePath *string `json:"file_path,omitempty"`
+
 	// MD5
-
 	Md5 *string `json:"md5,omitempty"`
-	// 存储类型
 
+	// 存储类型
 	Type *string `json:"type,omitempty"`
 }
 

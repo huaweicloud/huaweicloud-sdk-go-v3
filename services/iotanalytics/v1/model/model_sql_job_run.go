@@ -8,8 +8,8 @@ import (
 
 // SQL作业运行。
 type SqlJobRun struct {
-	// 作业类型。DDL, DCL, IMPORT, EXPORT, QUERY, INSERT.
 
+	// 作业类型。DDL, DCL, IMPORT, EXPORT, QUERY, INSERT.
 	SqlType string `json:"sql_type"`
 }
 

@@ -7,8 +7,8 @@ import (
 )
 
 type StartConnectivityTestReq struct {
-	// 地址和端口列表。
 
+	// 地址和端口列表。
 	AddressAndPorts []AddressAndPorts `json:"addressAndPorts"`
 }
 

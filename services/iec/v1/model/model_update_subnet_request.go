@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateSubnetRequest struct {
-	// 子网ID。
 
+	// 子网ID。
 	SubnetId string `json:"subnet_id"`
 
 	Body *UpdateSubnetRequestBody `json:"body,omitempty"`

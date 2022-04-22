@@ -8,14 +8,14 @@ import (
 
 // 类型
 type RouteServerBody struct {
+
 	// 后端协议
-
 	BackProtocol *string `json:"back_protocol,omitempty"`
+
 	// 后端ip地址
-
 	Address *string `json:"address,omitempty"`
-	// 端口信息
 
+	// 端口信息
 	Port *int32 `json:"port,omitempty"`
 }
 

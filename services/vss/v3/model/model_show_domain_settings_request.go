@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowDomainSettingsRequest struct {
-	// 域名ID
 
+	// 域名ID
 	DomainId string `json:"domain_id"`
 }
 

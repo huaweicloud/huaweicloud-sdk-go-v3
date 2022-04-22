@@ -8,11 +8,11 @@ import (
 
 // 单个结果文件result.json所在的OBS桶和路径
 type TaskOutputHostingForDisplayObs struct {
+
 	// 结果文件result.json所在的OBS桶
-
 	Bucket *string `json:"bucket,omitempty"`
-	// 结果文件result.json所在的路径
 
+	// 结果文件result.json所在的路径
 	Path *string `json:"path,omitempty"`
 }
 

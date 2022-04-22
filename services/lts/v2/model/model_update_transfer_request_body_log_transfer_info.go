@@ -11,11 +11,11 @@ import (
 
 // 日志转储信息
 type UpdateTransferRequestBodyLogTransferInfo struct {
+
 	// 日志转储格式。只支持\"RAW\", \"JSON\"。RAW是指原始日志格式，JSON是指JSON日志格式。OBS转储和DIS转储支持JSON和RAW，DMS转储仅支持RAW
-
 	LogStorageFormat UpdateTransferRequestBodyLogTransferInfoLogStorageFormat `json:"log_storage_format"`
-	// 日志转储状态，ENABLE是指日志转储开启状态，DISABLE是指日志转储关闭状态，EXCEPTION是指日志转储异常状态
 
+	// 日志转储状态，ENABLE是指日志转储开启状态，DISABLE是指日志转储关闭状态，EXCEPTION是指日志转储异常状态
 	LogTransferStatus UpdateTransferRequestBodyLogTransferInfoLogTransferStatus `json:"log_transfer_status"`
 
 	LogTransferDetail *TransferDetail `json:"log_transfer_detail"`

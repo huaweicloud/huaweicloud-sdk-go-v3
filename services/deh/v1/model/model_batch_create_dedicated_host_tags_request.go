@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type BatchCreateDedicatedHostTagsRequest struct {
-	// 专属主机ID。  可以从专属主机控制台查询，或者通过调用查询专属主机列表API获取。
 
+	// 专属主机ID。  可以从专属主机控制台查询，或者通过调用查询专属主机列表API获取。
 	DedicatedHostId string `json:"dedicated_host_id"`
 
 	Body *ReqSetOrDeleteTags `json:"body,omitempty"`

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteNetworkInstanceRequest struct {
-	// 网络实例ID。
 
+	// 网络实例ID。
 	Id string `json:"id"`
 }
 

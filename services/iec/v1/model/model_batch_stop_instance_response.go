@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type BatchStopInstanceResponse struct {
-	// 任务列表对象。
 
+	// 任务列表对象。
 	Jobs           *[]JobResult `json:"jobs,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

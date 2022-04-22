@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ExportLiveDataApiDefinitionsV2Request struct {
-	// 实例ID
 
+	// 实例ID
 	InstanceId string `json:"instance_id"`
 
 	Body *LiveDataExportReq `json:"body,omitempty"`

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteServerGroupFailureJobsRequest struct {
-	// 保护组ID。
 
+	// 保护组ID。
 	ServerGroupId string `json:"server_group_id"`
 }
 

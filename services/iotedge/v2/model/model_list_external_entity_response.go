@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListExternalEntityResponse struct {
-	// 外部实体列表
 
+	// 外部实体列表
 	Externals      *[]ExternalEntityRespDto `json:"externals,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }

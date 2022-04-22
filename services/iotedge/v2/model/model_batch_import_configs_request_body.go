@@ -7,8 +7,8 @@ import (
 )
 
 type BatchImportConfigsRequestBody struct {
-	// 南向IA配置项列表
 
+	// 南向IA配置项列表
 	Configs *[]BatchImportConfigRequestBody `json:"configs,omitempty"`
 }
 

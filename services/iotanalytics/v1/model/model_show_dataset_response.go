@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ShowDatasetResponse struct {
+
 	// 作业结果总个数。
-
 	Count *int64 `json:"count,omitempty"`
+
 	// 作业运行ID。
-
 	RunId *string `json:"run_id,omitempty"`
-	// 作业类型。
 
+	// 作业类型。
 	JobType *string `json:"job_type,omitempty"`
 
 	SqlJob         *SqlJobQueryDataset `json:"sql_job,omitempty"`

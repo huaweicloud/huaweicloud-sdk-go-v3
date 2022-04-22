@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ValidateDictionaryResponse struct {
+
 	// 字典名称 - 字符集：中文、英文字母、数字、下划线和空格 - 约束：实例下唯一
-
 	Name *string `json:"name,omitempty"`
-	// 字典编码 - 字符集：英文字母、数字、下划线和空格 - 约束：实例下唯一
 
+	// 字典编码 - 字符集：英文字母、数字、下划线和空格 - 约束：实例下唯一
 	Code           *string `json:"code,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

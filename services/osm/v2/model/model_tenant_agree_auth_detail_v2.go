@@ -7,17 +7,17 @@ import (
 )
 
 type TenantAgreeAuthDetailV2 struct {
+
 	// 端口
-
 	Port *int32 `json:"port,omitempty"`
+
 	// 账号
-
 	Account *string `json:"account,omitempty"`
+
 	// 密码
-
 	Password *string `json:"password,omitempty"`
-	// 授权详情id
 
+	// 授权详情id
 	AuthDetailId int64 `json:"auth_detail_id"`
 }
 

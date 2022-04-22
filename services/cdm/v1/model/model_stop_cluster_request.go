@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type StopClusterRequest struct {
-	// 集群ID
 
+	// 集群ID
 	ClusterId string `json:"cluster_id"`
 
 	Body *CdmStopClusterReq `json:"body,omitempty"`

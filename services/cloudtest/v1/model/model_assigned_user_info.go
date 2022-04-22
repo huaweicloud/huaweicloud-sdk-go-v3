@@ -7,11 +7,11 @@ import (
 )
 
 type AssignedUserInfo struct {
+
 	// id信息
-
 	Id *string `json:"id,omitempty"`
-	// 名称信息
 
+	// 名称信息
 	Name *string `json:"name,omitempty"`
 }
 

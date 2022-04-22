@@ -8,8 +8,8 @@ import (
 
 // 删除通知模板参数体
 type DeleteNotificationTemplateBody struct {
-	// 待删除模板名称数组
 
+	// 待删除模板名称数组
 	TemplateNames []string `json:"template_names"`
 }
 

@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type ListCbhInstanceResponse struct {
-	// 实例总数
 
+	// 实例总数
 	Total *int32 `json:"total,omitempty"`
 
 	QuotaDetail *QuotaDetail `json:"quota_detail,omitempty"`
-	// 实例列表
 
+	// 实例列表
 	Instance       *[]InstanceDetail `json:"instance,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListSystemTasksRequest struct {
-	// 系统任务id.
 
+	// 系统任务id.
 	TaskId string `json:"task_id"`
 }
 

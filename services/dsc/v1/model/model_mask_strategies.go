@@ -11,14 +11,14 @@ import (
 
 // 脱敏策略列表，每个策略对应一个字段，脱敏策略数最多100个。详情见“动态脱敏策略配置”。
 type MaskStrategies struct {
+
 	// 需要脱敏的字段名称，最大支持长度256。
-
 	Name string `json:"name"`
+
 	// 脱敏算法名称，详情见附录\"动态脱敏策略配置\"。
-
 	Algorithm MaskStrategiesAlgorithm `json:"algorithm"`
-	// 脱敏算法参数，详情见附录\"动态脱敏策略配置\"。
 
+	// 脱敏算法参数，详情见附录\"动态脱敏策略配置\"。
 	Parameters map[string]interface{} `json:"parameters,omitempty"`
 }
 

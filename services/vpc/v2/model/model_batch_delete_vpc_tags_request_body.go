@@ -11,11 +11,11 @@ import (
 
 // This is a auto create Body Object
 type BatchDeleteVpcTagsRequestBody struct {
+
 	// 操作标识
-
 	Action BatchDeleteVpcTagsRequestBodyAction `json:"action"`
-	// 标签列表
 
+	// 标签列表
 	Tags []ResourceTag `json:"tags"`
 }
 

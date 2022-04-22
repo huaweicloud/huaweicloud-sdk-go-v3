@@ -8,8 +8,8 @@ import (
 
 // 创建路由请求体
 type CreateRoutesRequestBody struct {
-	// 待创建的路由列表
 
+	// 待创建的路由列表
 	Routes []RouteOption `json:"routes"`
 }
 

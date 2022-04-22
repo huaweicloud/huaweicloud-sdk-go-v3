@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type RollbackSnapshotRequest struct {
-	// 快照ID
 
+	// 快照ID
 	SnapshotId string `json:"snapshot_id"`
 
 	Body *RollbackSnapshotRequestBody `json:"body,omitempty"`

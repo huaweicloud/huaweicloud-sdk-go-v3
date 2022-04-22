@@ -11,8 +11,8 @@ import (
 
 // Request Object
 type CreateCompareTaskRequest struct {
-	// 请求语言类型
 
+	// 请求语言类型
 	XLanguage *CreateCompareTaskRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *CreateCompareTaskReq `json:"body,omitempty"`

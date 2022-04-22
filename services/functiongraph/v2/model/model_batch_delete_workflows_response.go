@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type BatchDeleteWorkflowsResponse struct {
+
 	// 成功流程URN列表
-
 	Success *[]string `json:"success,omitempty"`
-	// 错误流程详情
 
+	// 错误流程详情
 	Fail           *[]OperateErrorInfo `json:"fail,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListHasVerifiedContactsResponse struct {
+
 	// 总数
-
 	Count *int32 `json:"count,omitempty"`
-	// 联系方式列表
 
+	// 联系方式列表
 	ContactList    *[]ContactV2 `json:"contact_list,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

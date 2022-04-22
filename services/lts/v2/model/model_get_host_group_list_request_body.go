@@ -7,8 +7,8 @@ import (
 )
 
 type GetHostGroupListRequestBody struct {
-	// 主机组ID
 
+	// 主机组ID
 	HostGroupIdList []string `json:"host_group_id_list"`
 
 	Filter *GetHostGroupListFilter `json:"filter"`

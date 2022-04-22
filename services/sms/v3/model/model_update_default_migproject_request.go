@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateDefaultMigprojectRequest struct {
-	// 迁移项目ID
 
+	// 迁移项目ID
 	MigProjectId string `json:"mig_project_id"`
 }
 

@@ -7,11 +7,11 @@ import (
 )
 
 type MetricList struct {
+
 	// metric 名称
-
 	MetricName *string `json:"metric_name,omitempty"`
-	// 计算结果
 
+	// 计算结果
 	Values *[]interface{} `json:"values,omitempty"`
 }
 

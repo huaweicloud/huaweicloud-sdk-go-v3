@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type ListFlavorsRequest struct {
+
 	// 实例所在区域。
-
 	Region *string `json:"region,omitempty"`
-	// 数据库版本类型。取值为“DDS-Community”。
 
+	// 数据库版本类型。取值为“DDS-Community”。
 	EngineName *ListFlavorsRequestEngineName `json:"engine_name,omitempty"`
 }
 

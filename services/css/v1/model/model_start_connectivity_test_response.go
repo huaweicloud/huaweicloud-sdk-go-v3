@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type StartConnectivityTestResponse struct {
-	// 连通性测试结果。
 
+	// 连通性测试结果。
 	Result         *[]Result `json:"result,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

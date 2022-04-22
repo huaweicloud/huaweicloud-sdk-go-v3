@@ -11,8 +11,8 @@ import (
 
 // eip信息
 type EipResult struct {
-	// IP地址类型。
 
+	// IP地址类型。
 	IpType *EipResultIpType `json:"ip_type,omitempty"`
 
 	Bandwidth *BandwidthResult `json:"bandwidth,omitempty"`

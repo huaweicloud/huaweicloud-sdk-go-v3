@@ -7,8 +7,8 @@ import (
 )
 
 type ComponentCreate struct {
-	// 应用组件名称。
 
+	// 应用组件名称。
 	Name string `json:"name"`
 
 	Runtime *RuntimeType `json:"runtime"`
@@ -16,8 +16,8 @@ type ComponentCreate struct {
 	Category *ComponentCategory `json:"category"`
 
 	SubCategory *ComponentSubCategory `json:"sub_category,omitempty"`
-	// 描述。
 
+	// 描述。
 	Description *string `json:"description,omitempty"`
 
 	Source *SourceObject `json:"source,omitempty"`

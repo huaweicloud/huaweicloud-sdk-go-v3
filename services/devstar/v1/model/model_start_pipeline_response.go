@@ -11,11 +11,11 @@ import (
 
 // Response Object
 type StartPipelineResponse struct {
+
 	// 流水线id
-
 	Id *string `json:"id,omitempty"`
-	// 流水线操作成功
 
+	// 流水线操作成功
 	Result         *StartPipelineResponseResult `json:"result,omitempty"`
 	HttpStatusCode int                          `json:"-"`
 }

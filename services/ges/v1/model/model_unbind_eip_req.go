@@ -8,8 +8,8 @@ import (
 
 // This is a auto create Body Object
 type UnbindEipReq struct {
-	// 弹性公网IP的ID。
 
+	// 弹性公网IP的ID。
 	EipId string `json:"eipId"`
 }
 

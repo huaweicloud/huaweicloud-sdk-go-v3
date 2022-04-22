@@ -7,17 +7,17 @@ import (
 )
 
 type Metric struct {
+
 	// 指标名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 指标值类型
-
 	Type *string `json:"type,omitempty"`
+
 	// 指标描述
-
 	Description *string `json:"description,omitempty"`
-	// 指标单位
 
+	// 指标单位
 	Unit *string `json:"unit,omitempty"`
 }
 

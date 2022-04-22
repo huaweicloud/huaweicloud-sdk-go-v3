@@ -7,8 +7,8 @@ import (
 )
 
 type ExecuteScriptReq struct {
-	// 脚本的执行参数
 
+	// 脚本的执行参数
 	Params *interface{} `json:"params,omitempty"`
 }
 

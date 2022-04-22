@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListBusinessResponse struct {
-	// 获取业务列表数据结构
 
+	// 获取业务列表数据结构
 	BusinessNodes  *[]BusinessNodeModel `json:"business_nodes,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

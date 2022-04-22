@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateLogtankRequest struct {
-	// 云日志ID。
 
+	// 云日志ID。
 	LogtankId string `json:"logtank_id"`
 
 	Body *UpdateLogtankRequestBody `json:"body,omitempty"`

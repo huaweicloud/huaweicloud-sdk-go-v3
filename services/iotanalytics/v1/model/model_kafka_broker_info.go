@@ -8,11 +8,11 @@ import (
 
 // Kafka Server地址
 type KafkaBrokerInfo struct {
+
 	// IP
-
 	Ip string `json:"ip"`
-	// Port
 
+	// Port
 	Port int32 `json:"port"`
 }
 

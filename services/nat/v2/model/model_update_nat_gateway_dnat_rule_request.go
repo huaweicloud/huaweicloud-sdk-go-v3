@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateNatGatewayDnatRuleRequest struct {
-	// DNAT规则的ID。
 
+	// DNAT规则的ID。
 	DnatRuleId string `json:"dnat_rule_id"`
 
 	Body *UpdateNatGatewayDnatRuleRequestBody `json:"body,omitempty"`

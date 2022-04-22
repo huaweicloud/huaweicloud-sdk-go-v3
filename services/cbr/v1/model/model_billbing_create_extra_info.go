@@ -8,11 +8,11 @@ import (
 
 //
 type BillbingCreateExtraInfo struct {
+
 	// 组合创建ID，组合创建时必传。
-
 	CombinedOrderId *string `json:"combined_order_id,omitempty"`
-	// 组合创建数量，组合创建时必填。
 
+	// 组合创建数量，组合创建时必填。
 	CombinedOrderEcsNum *int32 `json:"combined_order_ecs_num,omitempty"`
 }
 

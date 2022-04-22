@@ -8,17 +8,17 @@ import (
 
 // Request Object
 type DeleteTagRequest struct {
+
 	// 授权名称。
-
 	XRepoAuth string `json:"X-Repo-Auth"`
+
 	// 组织ID。
-
 	Namespace string `json:"namespace"`
+
 	// 仓库项目ID，如果含有“/”，需要将“/”替换为“:”。
-
 	Project string `json:"project"`
-	// tag标签名称。
 
+	// tag标签名称。
 	TagName string `json:"tag_name"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListRelatedRoutetablesRequest struct {
-	// 子网ID
 
+	// 子网ID
 	SubnetId string `json:"subnet_id"`
 }
 

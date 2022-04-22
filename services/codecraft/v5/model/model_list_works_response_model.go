@@ -7,14 +7,14 @@ import (
 )
 
 type ListWorksResponseModel struct {
+
 	// 作品ID
-
 	WorksId string `json:"works_id"`
+
 	// 租户ID
-
 	DomainId string `json:"domain_id"`
-	// 团队ID
 
+	// 团队ID
 	TeamId string `json:"team_id"`
 }
 

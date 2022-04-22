@@ -7,11 +7,11 @@ import (
 )
 
 type RepositoryMemberList struct {
+
 	// 仓库成员总数
-
 	Total *int32 `json:"total,omitempty"`
-	// 仓库成员列表
 
+	// 仓库成员列表
 	Users *[]RepositoryMember `json:"users,omitempty"`
 }
 

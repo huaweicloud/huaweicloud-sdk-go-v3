@@ -8,11 +8,11 @@ import (
 
 // 更新节目详情响应
 type UpdateProgramRequestDto struct {
+
 	// 节目名称
-
 	ProgramName string `json:"programName"`
-	// 节目素材列表
 
+	// 节目素材列表
 	ProgramItemList *[]ProgramItemRequestBase `json:"programItemList,omitempty"`
 }
 

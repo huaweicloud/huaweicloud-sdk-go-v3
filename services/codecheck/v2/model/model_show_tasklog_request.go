@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ShowTasklogRequest struct {
+
 	// 项目ID
-
 	ProjectId string `json:"project_id"`
+
 	// 任务ID
-
 	TaskId string `json:"task_id"`
-	// 任务单次的执行ID
 
+	// 任务单次的执行ID
 	ExecuteId *string `json:"execute_id,omitempty"`
 }
 

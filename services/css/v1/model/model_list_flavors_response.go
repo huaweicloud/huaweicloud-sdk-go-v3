@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListFlavorsResponse struct {
-	// 引擎版本列表。
 
+	// 引擎版本列表。
 	Versions       *[]EsflavorsVersionsResp `json:"versions,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }

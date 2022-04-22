@@ -7,14 +7,14 @@ import (
 )
 
 type AccessoryLimitVo struct {
+
 	// 限制文件数量
-
 	LimitCount *string `json:"limit_count,omitempty"`
+
 	// 限制文件大小，单位是M
-
 	LimitSize *string `json:"limit_size,omitempty"`
-	// 限制文件类型
 
+	// 限制文件类型
 	LimitFileType *string `json:"limit_file_type,omitempty"`
 }
 

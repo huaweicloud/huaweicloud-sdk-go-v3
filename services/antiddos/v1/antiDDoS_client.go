@@ -19,7 +19,12 @@ func AntiDDoSClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//配置用户的默认防护策略。配置防护策略后，新购买的资源在自动开启防护时，会按照该默认防护策略进行配置。
+// 配置Anti-DDoS默认防护策略
+//
+// 配置用户的默认防护策略。配置防护策略后，新购买的资源在自动开启防护时，会按照该默认防护策略进行配置。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *AntiDDoSClient) CreateDefaultConfig(request *model.CreateDefaultConfigRequest) (*model.CreateDefaultConfigResponse, error) {
 	requestDef := GenReqDefForCreateDefaultConfig()
 
@@ -30,7 +35,12 @@ func (c *AntiDDoSClient) CreateDefaultConfig(request *model.CreateDefaultConfigR
 	}
 }
 
-//删除用户配置的默认防护策略。
+// 删除Ani-DDoS默认防护策略
+//
+// 删除用户配置的默认防护策略。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *AntiDDoSClient) DeleteDefaultConfig(request *model.DeleteDefaultConfigRequest) (*model.DeleteDefaultConfigResponse, error) {
 	requestDef := GenReqDefForDeleteDefaultConfig()
 
@@ -41,7 +51,12 @@ func (c *AntiDDoSClient) DeleteDefaultConfig(request *model.DeleteDefaultConfigR
 	}
 }
 
-//查询用户配置信息，用户可以通过此接口查询是否接收某类告警，同时可以配置是手机短信还是电子邮件接收告警信息。
+// 查询告警配置信息
+//
+// 查询用户配置信息，用户可以通过此接口查询是否接收某类告警，同时可以配置是手机短信还是电子邮件接收告警信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *AntiDDoSClient) ShowAlertConfig(request *model.ShowAlertConfigRequest) (*model.ShowAlertConfigResponse, error) {
 	requestDef := GenReqDefForShowAlertConfig()
 
@@ -52,7 +67,12 @@ func (c *AntiDDoSClient) ShowAlertConfig(request *model.ShowAlertConfigRequest) 
 	}
 }
 
-//查询用户配置的默认防护策略。
+// 查询Ani-DDoS默认防护策略
+//
+// 查询用户配置的默认防护策略。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *AntiDDoSClient) ShowDefaultConfig(request *model.ShowDefaultConfigRequest) (*model.ShowDefaultConfigResponse, error) {
 	requestDef := GenReqDefForShowDefaultConfig()
 
@@ -63,7 +83,12 @@ func (c *AntiDDoSClient) ShowDefaultConfig(request *model.ShowDefaultConfigReque
 	}
 }
 
-//更新用户配置信息，用户可以通过此接口更新是否接收某类告警，同时可以配置是手机短信还是电子邮件接收告警信息。
+// 更新告警配置信息
+//
+// 更新用户配置信息，用户可以通过此接口更新是否接收某类告警，同时可以配置是手机短信还是电子邮件接收告警信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *AntiDDoSClient) UpdateAlertConfig(request *model.UpdateAlertConfigRequest) (*model.UpdateAlertConfigResponse, error) {
 	requestDef := GenReqDefForUpdateAlertConfig()
 
@@ -74,7 +99,12 @@ func (c *AntiDDoSClient) UpdateAlertConfig(request *model.UpdateAlertConfigReque
 	}
 }
 
-//查询用户所有EIP的Anti-DDoS防护状态信息，用户的EIP无论是否绑定到云服务器，都可以进行查询。
+// 查询EIP防护状态列表
+//
+// 查询用户所有EIP的Anti-DDoS防护状态信息，用户的EIP无论是否绑定到云服务器，都可以进行查询。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *AntiDDoSClient) ListDDosStatus(request *model.ListDDosStatusRequest) (*model.ListDDosStatusResponse, error) {
 	requestDef := GenReqDefForListDDosStatus()
 
@@ -85,7 +115,12 @@ func (c *AntiDDoSClient) ListDDosStatus(request *model.ListDDosStatusRequest) (*
 	}
 }
 
-//查询指定EIP在过去24小时之内的异常事件信息，异常事件包括清洗事件和黑洞事件，查询延迟在5分钟之内。
+// 查询指定EIP异常事件
+//
+// 查询指定EIP在过去24小时之内的异常事件信息，异常事件包括清洗事件和黑洞事件，查询延迟在5分钟之内。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *AntiDDoSClient) ListDailyLog(request *model.ListDailyLogRequest) (*model.ListDailyLogResponse, error) {
 	requestDef := GenReqDefForListDailyLog()
 
@@ -96,7 +131,12 @@ func (c *AntiDDoSClient) ListDailyLog(request *model.ListDailyLogRequest) (*mode
 	}
 }
 
-//查询指定EIP在过去24小时之内的防护流量信息，流量的间隔时间单位为5分钟。
+// 查询指定EIP防护流量
+//
+// 查询指定EIP在过去24小时之内的防护流量信息，流量的间隔时间单位为5分钟。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *AntiDDoSClient) ListDailyReport(request *model.ListDailyReportRequest) (*model.ListDailyReportResponse, error) {
 	requestDef := GenReqDefForListDailyReport()
 
@@ -107,7 +147,12 @@ func (c *AntiDDoSClient) ListDailyReport(request *model.ListDailyReportRequest) 
 	}
 }
 
-//查询系统支持的Anti-DDoS防护策略配置的可选范围，用户根据范围列表选择适合自已业务的防护策略进行Anti-DDoS流量清洗。
+// 查询Anti-DDoS配置可选范围
+//
+// 查询系统支持的Anti-DDoS防护策略配置的可选范围，用户根据范围列表选择适合自已业务的防护策略进行Anti-DDoS流量清洗。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *AntiDDoSClient) ListNewConfigs(request *model.ListNewConfigsRequest) (*model.ListNewConfigsResponse, error) {
 	requestDef := GenReqDefForListNewConfigs()
 
@@ -118,7 +163,12 @@ func (c *AntiDDoSClient) ListNewConfigs(request *model.ListNewConfigsRequest) (*
 	}
 }
 
-//查询用户所有Anti-DDoS防护周统计情况，包括一周内DDoS拦截次数和攻击次数、以及按照被攻击次数进行的排名信息等统计数据。系统支持当前时间之前四周的周统计数据查询，超过这个时间的请求是查询不到统计数据的。
+// 查询周防护统计情况
+//
+// 查询用户所有Anti-DDoS防护周统计情况，包括一周内DDoS拦截次数和攻击次数、以及按照被攻击次数进行的排名信息等统计数据。系统支持当前时间之前四周的周统计数据查询，超过这个时间的请求是查询不到统计数据的。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *AntiDDoSClient) ListWeeklyReports(request *model.ListWeeklyReportsRequest) (*model.ListWeeklyReportsResponse, error) {
 	requestDef := GenReqDefForListWeeklyReports()
 
@@ -129,7 +179,12 @@ func (c *AntiDDoSClient) ListWeeklyReports(request *model.ListWeeklyReportsReque
 	}
 }
 
-//查询配置的Anti-DDoS防护策略，用户可以查询指定EIP的Anti-DDoS防护策略。
+// 查询Anti-DDoS服务
+//
+// 查询配置的Anti-DDoS防护策略，用户可以查询指定EIP的Anti-DDoS防护策略。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *AntiDDoSClient) ShowDDos(request *model.ShowDDosRequest) (*model.ShowDDosResponse, error) {
 	requestDef := GenReqDefForShowDDos()
 
@@ -140,7 +195,12 @@ func (c *AntiDDoSClient) ShowDDos(request *model.ShowDDosRequest) (*model.ShowDD
 	}
 }
 
-//查询指定EIP的Anti-DDoS防护状态。
+// 查询指定EIP防护状态
+//
+// 查询指定EIP的Anti-DDoS防护状态。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *AntiDDoSClient) ShowDDosStatus(request *model.ShowDDosStatusRequest) (*model.ShowDDosStatusResponse, error) {
 	requestDef := GenReqDefForShowDDosStatus()
 
@@ -151,7 +211,12 @@ func (c *AntiDDoSClient) ShowDDosStatus(request *model.ShowDDosStatusRequest) (*
 	}
 }
 
-//用户查询指定的Anti-DDoS防护配置任务，得到任务当前执行的状态。
+// 查询Anti-DDoS任务
+//
+// 用户查询指定的Anti-DDoS防护配置任务，得到任务当前执行的状态。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *AntiDDoSClient) ShowNewTaskStatus(request *model.ShowNewTaskStatusRequest) (*model.ShowNewTaskStatusResponse, error) {
 	requestDef := GenReqDefForShowNewTaskStatus()
 
@@ -162,7 +227,12 @@ func (c *AntiDDoSClient) ShowNewTaskStatus(request *model.ShowNewTaskStatusReque
 	}
 }
 
-//更新指定EIP的Anti-DDoS防护策略配置。调用成功，只是说明服务节点收到了关闭更新配置请求，操作是否成功需要通过任务查询接口查询该任务的执行状态，具体请参考查询Anti-DDoS任务。
+// 更新Anti-DDoS服务
+//
+// 更新指定EIP的Anti-DDoS防护策略配置。调用成功，只是说明服务节点收到了关闭更新配置请求，操作是否成功需要通过任务查询接口查询该任务的执行状态，具体请参考查询Anti-DDoS任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *AntiDDoSClient) UpdateDDos(request *model.UpdateDDosRequest) (*model.UpdateDDosResponse, error) {
 	requestDef := GenReqDefForUpdateDDos()
 

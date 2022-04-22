@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ListHooksRequest struct {
+
 	// 组名
-
 	GroupName string `json:"group_name"`
+
 	// hook id
-
 	HookId *string `json:"hook_id,omitempty"`
-	// 仓库名
 
+	// 仓库名
 	RepositoryName string `json:"repository_name"`
 }
 

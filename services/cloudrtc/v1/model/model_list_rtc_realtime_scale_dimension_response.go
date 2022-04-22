@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListRtcRealtimeScaleDimensionResponse struct {
-	// 维度分布信息
 
+	// 维度分布信息
 	Dimensions *[]RealtimeScaleDimensionValue `json:"dimensions,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

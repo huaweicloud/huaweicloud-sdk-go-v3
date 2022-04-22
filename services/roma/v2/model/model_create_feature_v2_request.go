@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateFeatureV2Request struct {
-	// 实例ID
 
+	// 实例ID
 	InstanceId string `json:"instance_id"`
 
 	Body *FeatureToggleV2 `json:"body,omitempty"`

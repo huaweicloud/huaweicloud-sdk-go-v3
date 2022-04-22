@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowPartnersCasesPrivilegeResponse struct {
-	// 是否有权限
 
+	// 是否有权限
 	HasPrivilege   *bool `json:"has_privilege,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }

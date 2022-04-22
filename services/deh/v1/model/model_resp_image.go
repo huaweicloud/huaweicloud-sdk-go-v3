@@ -8,8 +8,8 @@ import (
 
 // 弹性云服务器镜像信息。
 type RespImage struct {
-	// 弹性云服务器镜像ID。
 
+	// 弹性云服务器镜像ID。
 	Id *string `json:"id,omitempty"`
 }
 

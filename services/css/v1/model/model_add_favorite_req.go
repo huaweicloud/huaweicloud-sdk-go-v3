@@ -7,8 +7,8 @@ import (
 )
 
 type AddFavoriteReq struct {
-	// 自定义模板名称。
 
+	// 自定义模板名称。
 	Name string `json:"name"`
 
 	Template *AddFavoriteReqTemplate `json:"template"`

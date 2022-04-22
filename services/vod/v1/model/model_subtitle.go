@@ -10,20 +10,20 @@ import (
 )
 
 type Subtitle struct {
+
 	// 字幕id。  取值范围：[1,8]。
-
 	Id int32 `json:"id"`
+
 	// 字幕文件类型，目前暂只支持“SRT”。
-
 	Type SubtitleType `json:"type"`
+
 	// 字幕语音类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
-
 	Language SubtitleLanguage `json:"language"`
+
 	// 字幕文件的MD5值。
-
 	Md5 *string `json:"md5,omitempty"`
-	// 字幕描述。
 
+	// 字幕描述。
 	Description *string `json:"description,omitempty"`
 }
 

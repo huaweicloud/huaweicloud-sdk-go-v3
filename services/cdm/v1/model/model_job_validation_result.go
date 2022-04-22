@@ -11,11 +11,11 @@ import (
 
 // 失败原因
 type JobValidationResult struct {
+
 	// 错误描述
-
 	Message *string `json:"message,omitempty"`
-	// ERROR,WARNING
 
+	// ERROR,WARNING
 	Status *JobValidationResultStatus `json:"status,omitempty"`
 }
 

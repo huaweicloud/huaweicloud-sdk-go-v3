@@ -10,11 +10,11 @@ import (
 )
 
 type BatchDeleteInstanceUsersReq struct {
+
 	// 删除类型。当前只支持delete。
-
 	Action *BatchDeleteInstanceUsersReqAction `json:"action,omitempty"`
-	// 用户列表。
 
+	// 用户列表。
 	Users *[]string `json:"users,omitempty"`
 }
 

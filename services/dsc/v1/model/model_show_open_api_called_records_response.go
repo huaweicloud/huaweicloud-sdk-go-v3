@@ -8,20 +8,20 @@ import (
 
 // Response Object
 type ShowOpenApiCalledRecordsResponse struct {
+
 	// 调用API总次数
-
 	Total *int32 `json:"total,omitempty"`
+
 	// 调用API成功次数
-
 	Succeed *int32 `json:"succeed,omitempty"`
+
 	// 调用API失败次数
-
 	Failed *int32 `json:"failed,omitempty"`
+
 	// API调用记录列表
-
 	OpenapiCalledRecords *[]OpenApiCalledRecord `json:"openapi_called_records,omitempty"`
-	// 获取下一页所需的标识符。
 
+	// 获取下一页所需的标识符。
 	NextMarker     *string `json:"next_marker,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

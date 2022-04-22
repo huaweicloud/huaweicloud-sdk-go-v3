@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type BatchStartOrStopTasksRequest struct {
-	// 实例ID
 
+	// 实例ID
 	InstanceId string `json:"instance_id"`
 
 	Body *OperateTasksBean `json:"body,omitempty"`

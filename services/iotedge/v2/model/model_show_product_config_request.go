@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowProductConfigRequest struct {
-	// 协议类型
 
+	// 协议类型
 	ProtocolType string `json:"protocol_type"`
 }
 

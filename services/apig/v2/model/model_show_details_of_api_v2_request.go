@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowDetailsOfApiV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// API的编号
 
+	// API的编号
 	ApiId string `json:"api_id"`
 }
 

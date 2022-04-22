@@ -11,29 +11,29 @@ import (
 
 // 云连接路由实例。
 type CloudConnectionRoute struct {
+
 	// 云连接实例路由的ID。
-
 	Id *string `json:"id,omitempty"`
+
 	// 云连接实例的ID。
-
 	CloudConnectionId *string `json:"cloud_connection_id,omitempty"`
+
 	// 帐号ID。
-
 	DomainId *string `json:"domain_id,omitempty"`
+
 	// 网络实例的项目ID。
-
 	ProjectId *string `json:"project_id,omitempty"`
+
 	// 路由条目下一跳指向的网络实例的ID。
-
 	InstanceId *string `json:"instance_id,omitempty"`
+
 	// 路由条目下一跳指向的网络实例的类型。 |- VPC：虚拟私有云。 VGW：虚拟网关。
-
 	Type *CloudConnectionRouteType `json:"type,omitempty"`
+
 	// Region的ID。
-
 	RegionId *string `json:"region_id,omitempty"`
-	// 目的地址。
 
+	// 目的地址。
 	Destination *string `json:"destination,omitempty"`
 }
 

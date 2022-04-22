@@ -9,8 +9,8 @@ import (
 // Response Object
 type CreateInstanceResponse struct {
 	Instance *OpenGaussInstanceResponse `json:"instance,omitempty"`
-	// 实例创建的任务id。  仅创建按需实例时会返回该参数。
 
+	// 实例创建的任务id。  仅创建按需实例时会返回该参数。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

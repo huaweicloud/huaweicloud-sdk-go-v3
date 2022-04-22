@@ -8,17 +8,17 @@ import (
 
 // 暂停任务返回体
 type PauseJobResp struct {
+
 	// 任务id
-
 	Id string `json:"id"`
+
 	// 暂停结果
-
 	Status string `json:"status"`
+
 	// 错误码
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 错误信息
 
+	// 错误信息
 	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 

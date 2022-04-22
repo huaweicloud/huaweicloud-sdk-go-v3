@@ -11,8 +11,8 @@ import (
 
 // 停用启用企业项目操作
 type EnableAction struct {
-	// 启用操作
 
+	// 启用操作
 	Action EnableActionAction `json:"action"`
 }
 

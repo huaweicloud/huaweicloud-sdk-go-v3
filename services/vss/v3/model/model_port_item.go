@@ -10,17 +10,17 @@ import (
 )
 
 type PortItem struct {
+
 	// 端口号
-
 	Port *int32 `json:"port,omitempty"`
+
 	// 服务
-
 	Service *string `json:"service,omitempty"`
+
 	// 端口协议:   * TCP   * UDP
-
 	Protocol *PortItemProtocol `json:"protocol,omitempty"`
-	// 端口状态:   * filtered - 过滤的   * open - 开放
 
+	// 端口状态:   * filtered - 过滤的   * open - 开放
 	Status *PortItemStatus `json:"status,omitempty"`
 }
 

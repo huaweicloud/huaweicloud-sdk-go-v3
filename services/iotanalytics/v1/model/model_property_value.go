@@ -7,14 +7,14 @@ import (
 )
 
 type PropertyValue struct {
+
 	// 属性名称
-
 	PropertyName *string `json:"property_name,omitempty"`
+
 	// 属性值
-
 	Value *interface{} `json:"value,omitempty"`
-	// 属性值最后更新时间
 
+	// 属性值最后更新时间
 	Timestamp *string `json:"timestamp,omitempty"`
 }
 

@@ -11,11 +11,11 @@ import (
 
 // This is a auto create Body Object
 type BatchCreateVpcTagsRequestBody struct {
+
 	// 功能说明：操作标识 取值范围：create
-
 	Action BatchCreateVpcTagsRequestBodyAction `json:"action"`
-	// 功能说明：标签列表
 
+	// 功能说明：标签列表
 	Tags []ResourceTag `json:"tags"`
 }
 

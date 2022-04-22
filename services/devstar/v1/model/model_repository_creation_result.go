@@ -12,14 +12,14 @@ import (
 // 仓库信息
 type RepositoryCreationResult struct {
 	Repository *RepositoryBasicInfo `json:"repository,omitempty"`
+
 	// 任务id
-
 	TaskId *string `json:"task_id,omitempty"`
+
 	// 任务状态, success:成功,failed:失败,creating:创建中
-
 	Status *RepositoryCreationResultStatus `json:"status,omitempty"`
-	// 失败原因
 
+	// 失败原因
 	FailureReason *string `json:"failure_reason,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ValidateSignatureRequest struct {
-	// API版本号
 
+	// API版本号
 	VersionId string `json:"version_id"`
 
 	Body *VerifyRequestBody `json:"body,omitempty"`

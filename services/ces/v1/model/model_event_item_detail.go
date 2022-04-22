@@ -11,26 +11,26 @@ import (
 
 //
 type EventItemDetail struct {
+
 	// 事件内容，最大长度4096。
-
 	Content *string `json:"content,omitempty"`
+
 	// 所属分组。  资源分组对应的ID，必须传存在的分组ID。
-
 	GroupId *string `json:"group_id,omitempty"`
+
 	// 资源ID，支持字母、数字_ -：，最大长度128。
-
 	ResourceId *string `json:"resource_id,omitempty"`
+
 	// 资源名称，支持字母 中文 数字_ -. ，最大长度128。
-
 	ResourceName *string `json:"resource_name,omitempty"`
+
 	// 事件状态。  枚举类型：normal\\warning\\incident
-
 	EventState *EventItemDetailEventState `json:"event_state,omitempty"`
+
 	// 事件级别。  枚举类型：Critical, Major, Minor, Info
-
 	EventLevel *EventItemDetailEventLevel `json:"event_level,omitempty"`
-	// 事件用户。  支持字母 数字_ -/空格 ，最大长度64。
 
+	// 事件用户。  支持字母 数字_ -/空格 ，最大长度64。
 	EventUser *string `json:"event_user,omitempty"`
 }
 

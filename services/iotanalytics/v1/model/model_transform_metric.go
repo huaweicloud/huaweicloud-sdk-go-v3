@@ -8,14 +8,14 @@ import (
 
 // 查询指标
 type TransformMetric struct {
+
 	// 声明属性作为表达式参数
-
 	Inputs []InputParam `json:"inputs"`
+
 	// 指标名称
-
 	MetricName string `json:"metric_name"`
-	// 表达式
 
+	// 表达式
 	Expression string `json:"expression"`
 }
 

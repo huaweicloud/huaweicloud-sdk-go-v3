@@ -19,7 +19,12 @@ func CgsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//查询容器节点列表（仅新版本容器安全支持，即将上线，敬请期待！）
+// 查询容器节点列表
+//
+// 查询容器节点列表（仅新版本容器安全支持，即将上线，敬请期待！）
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CgsClient) ListContainerNodes(request *model.ListContainerNodesRequest) (*model.ListContainerNodesResponse, error) {
 	requestDef := GenReqDefForListContainerNodes()
 

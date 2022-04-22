@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateNaRequest struct {
-	// 北向数据接收端点ID
 
+	// 北向数据接收端点ID
 	NaId string `json:"na_id"`
 
 	Body *UpdateNaRequestDto `json:"body,omitempty"`

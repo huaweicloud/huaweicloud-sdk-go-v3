@@ -11,11 +11,11 @@ import (
 
 // This is a auto create Body Object
 type BatchCreateBaremetalServerTagsRequestBody struct {
+
 	// 操作标识（仅支持小写）：create（创建）。
-
 	Action BatchCreateBaremetalServerTagsRequestBodyAction `json:"action"`
-	// 标签列表。
 
+	// 标签列表。
 	Tags []BaremetalServerTag `json:"tags"`
 }
 

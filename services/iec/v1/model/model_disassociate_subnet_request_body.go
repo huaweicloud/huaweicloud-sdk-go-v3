@@ -8,8 +8,8 @@ import (
 
 // 路由表解关联子网请求体
 type DisassociateSubnetRequestBody struct {
-	// 子网ID
 
+	// 子网ID
 	SubnetIds []string `json:"subnet_ids"`
 }
 

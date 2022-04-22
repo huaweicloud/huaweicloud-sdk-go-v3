@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListCaseCountsResponse struct {
-	// 状态数量统计列表
 
+	// 状态数量统计列表
 	IncidentStatusCounts *[]IncidentStatusCount `json:"incident_status_counts,omitempty"`
 	HttpStatusCode       int                    `json:"-"`
 }

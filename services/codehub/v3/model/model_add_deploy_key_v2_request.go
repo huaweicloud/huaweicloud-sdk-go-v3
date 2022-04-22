@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type AddDeployKeyV2Request struct {
-	// 仓库主键id
 
+	// 仓库主键id
 	RepositoryId int32 `json:"repository_id"`
 
 	Body *AddDeployKeyRequestBody `json:"body,omitempty"`

@@ -11,20 +11,20 @@ import (
 
 // Tag字段对象
 type TagFieldNew struct {
+
 	// 字段名称
-
 	FieldName string `json:"field_name"`
+
 	// 字段示例内容
-
 	Content *string `json:"content,omitempty"`
+
 	// 字段数据类型。 可选范围：string、long、float
-
 	Type TagFieldNewType `json:"type"`
+
 	// 是否开启快速分析
-
 	IsAnalysis *bool `json:"is_analysis,omitempty"`
-	// 序号，从0开始
 
+	// 序号，从0开始
 	Index *int32 `json:"index,omitempty"`
 }
 

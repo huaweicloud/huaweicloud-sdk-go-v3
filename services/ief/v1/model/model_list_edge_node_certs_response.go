@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListEdgeNodeCertsResponse struct {
+
 	// 节点上已关联的应用证书和设备证书的数目
-
 	Count *int32 `json:"count,omitempty"`
-	// 节点上的证书列表
 
+	// 节点上的证书列表
 	NodeCerts      *[]NodeCert `json:"node_certs,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

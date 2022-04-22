@@ -11,20 +11,20 @@ import (
 
 // 可用分区结构体
 type AvailableZones struct {
+
 	// 可用区编码。
-
 	Code *string `json:"code,omitempty"`
+
 	// 可用区端口号。
-
 	Port *string `json:"port,omitempty"`
+
 	// 可用区名称。
-
 	Name *string `json:"name,omitempty"`
+
 	// 可用区ID。
-
 	Id *string `json:"id,omitempty"`
-	// 分区上是否还有可用资源。 - true：还有资源。 - false：资源已售罄。
 
+	// 分区上是否还有可用资源。 - true：还有资源。 - false：资源已售罄。
 	ResourceAvailability *AvailableZonesResourceAvailability `json:"resource_availability,omitempty"`
 }
 

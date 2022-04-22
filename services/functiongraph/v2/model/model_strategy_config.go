@@ -8,11 +8,11 @@ import (
 
 // 函数策略配置。
 type StrategyConfig struct {
+
 	// 0：函数被禁用;-1：函数被启用。
-
 	Concurrency int32 `json:"concurrency"`
-	// 函数并发数
 
+	// 函数并发数
 	ConcurrentNum *int32 `json:"concurrent_num,omitempty"`
 }
 

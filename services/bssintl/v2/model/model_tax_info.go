@@ -7,17 +7,17 @@ import (
 )
 
 type TaxInfo struct {
+
 	// 税种。 VATISSWHTGST
-
 	TaxClass *string `json:"taxClass,omitempty"`
+
 	// 税率。
-
 	TaxRate *string `json:"taxRate,omitempty"`
+
 	// 税种子类。 PISCOFINSCGSTSGSTIGSTISSWHTVAT
-
 	SubTaxClass *string `json:"subTaxClass,omitempty"`
-	// 税金金额。 单位：美元
 
+	// 税金金额。 单位：美元
 	TaxAmount *float64 `json:"taxAmount,omitempty"`
 }
 

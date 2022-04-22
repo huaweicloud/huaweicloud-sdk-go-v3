@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListTriggersDetailsResponse struct {
-	// 触发器列表
 
+	// 触发器列表
 	Body           *[]Trigger `json:"body,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

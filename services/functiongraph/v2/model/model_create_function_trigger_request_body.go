@@ -10,17 +10,17 @@ import (
 )
 
 type CreateFunctionTriggerRequestBody struct {
+
 	// 触发器类型。  - TIMER: 定时触发器。 - APIG: APIGW触发器。 - CTS: 云审计触发器，需要先开通云审计服务。 - DDS: 文档数据库触发器，需要开启函数vpc。 - DMS: 分布式消息服务触发器，需要配置dms委托。 - DIS: 数据接入服务触发器，需要配置dis委托。 - LTS: 云审计日志服务触发器，需要配置lts委托。 - OBS: 对象存储服务触发器。 - KAFKA: 专享版本kafka触发器。
-
 	TriggerTypeCode CreateFunctionTriggerRequestBodyTriggerTypeCode `json:"trigger_type_code"`
+
 	// 触发器状态，取值为ACTIVE,DISABLED。
-
 	TriggerStatus *CreateFunctionTriggerRequestBodyTriggerStatus `json:"trigger_status,omitempty"`
+
 	// 消息代码。
-
 	EventTypeCode *string `json:"event_type_code,omitempty"`
-	// 事件结构体。
 
+	// 事件结构体。
 	EventData *interface{} `json:"event_data"`
 }
 

@@ -7,8 +7,8 @@ import (
 )
 
 type StartPublicWhitelistReq struct {
-	// 开启白名单的用户IP。
 
+	// 开启白名单的用户IP。
 	WhiteList string `json:"whiteList"`
 }
 

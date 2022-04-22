@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListBandwidthsResponse struct {
-	// 带宽列表对象
 
+	// 带宽列表对象
 	Bandwidths     *[]BandwidthResp `json:"bandwidths,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

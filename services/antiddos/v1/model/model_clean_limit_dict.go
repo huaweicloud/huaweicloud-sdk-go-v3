@@ -8,14 +8,14 @@ import (
 
 // 连接数限制列表
 type CleanLimitDict struct {
+
 	// 清洗时访问限制分段ID
-
 	CleaningAccessPosId int64 `json:"cleaning_access_pos_id"`
+
 	// 单一源IP新建连接个数
-
 	NewConnectionLimited int64 `json:"new_connection_limited"`
-	// 单一源IP连接数总个数
 
+	// 单一源IP连接数总个数
 	TotalConnectionLimited int64 `json:"total_connection_limited"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // This is a auto create Body Object
 type BatchDeleteMemberRequestBody struct {
-	// 批量删除后端服务器请求body。
 
+	// 批量删除后端服务器请求body。
 	Members []BatchDeleteMembersOption `json:"members"`
 }
 

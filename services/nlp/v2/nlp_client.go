@@ -19,7 +19,13 @@ func NlpClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//属性级情感分析，针对手机领域的用户评论进行属性级情感分析。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 属性级情感分析
+//
+// 属性级情感分析，针对手机领域的用户评论进行属性级情感分析。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunAspectSentiment(request *model.RunAspectSentimentRequest) (*model.RunAspectSentimentResponse, error) {
 	requestDef := GenReqDefForRunAspectSentiment()
 
@@ -30,7 +36,13 @@ func (c *NlpClient) RunAspectSentiment(request *model.RunAspectSentimentRequest)
 	}
 }
 
-//属性级情感分析（高级版），针对手机、汽车领域的用户评论进行属性级情感分析。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 属性级情感分析（高级版）
+//
+// 属性级情感分析（高级版），针对手机、汽车领域的用户评论进行属性级情感分析。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunAspectSentimentAdvance(request *model.RunAspectSentimentAdvanceRequest) (*model.RunAspectSentimentAdvanceResponse, error) {
 	requestDef := GenReqDefForRunAspectSentimentAdvance()
 
@@ -41,7 +53,13 @@ func (c *NlpClient) RunAspectSentimentAdvance(request *model.RunAspectSentimentA
 	}
 }
 
-//针对广告领域的自动分类，判断是否是广告。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 文本分类
+//
+// 针对广告领域的自动分类，判断是否是广告。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunClassification(request *model.RunClassificationRequest) (*model.RunClassificationResponse, error) {
 	requestDef := GenReqDefForRunClassification()
 
@@ -52,7 +70,13 @@ func (c *NlpClient) RunClassification(request *model.RunClassificationRequest) (
 	}
 }
 
-//识别句子中词汇与词汇之间的相互依存关系。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 依存句法分析
+//
+// 识别句子中词汇与词汇之间的相互依存关系。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunDependencyParser(request *model.RunDependencyParserRequest) (*model.RunDependencyParserResponse, error) {
 	requestDef := GenReqDefForRunDependencyParser()
 
@@ -63,7 +87,13 @@ func (c *NlpClient) RunDependencyParser(request *model.RunDependencyParserReques
 	}
 }
 
-//文档分类接口，输入文档内容，输出文档的标签和置信度，支持多个标签。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 文档分类
+//
+// 文档分类接口，输入文档内容，输出文档的标签和置信度，支持多个标签。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunDocClassification(request *model.RunDocClassificationRequest) (*model.RunDocClassificationResponse, error) {
 	requestDef := GenReqDefForRunDocClassification()
 
@@ -74,7 +104,13 @@ func (c *NlpClient) RunDocClassification(request *model.RunDocClassificationRequ
 	}
 }
 
-//领域情感分析，针对未知领域，电商，汽车领域的用户评论进行情感分析。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 情感分析（领域版）
+//
+// 领域情感分析，针对未知领域，电商，汽车领域的用户评论进行情感分析。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunDomainSentiment(request *model.RunDomainSentimentRequest) (*model.RunDomainSentimentResponse, error) {
 	requestDef := GenReqDefForRunDomainSentiment()
 
@@ -85,7 +121,13 @@ func (c *NlpClient) RunDomainSentiment(request *model.RunDomainSentimentRequest)
 	}
 }
 
-//针对通用领域的文本进行实体链接分析，识别出其中的实体，并返回实体相关信息。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 实体链接
+//
+// 针对通用领域的文本进行实体链接分析，识别出其中的实体，并返回实体相关信息。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunEntityLinking(request *model.RunEntityLinkingRequest) (*model.RunEntityLinkingResponse, error) {
 	requestDef := GenReqDefForRunEntityLinking()
 
@@ -96,7 +138,13 @@ func (c *NlpClient) RunEntityLinking(request *model.RunEntityLinkingRequest) (*m
 	}
 }
 
-//实体级情感分析，本产品适用于金融方面公司实体正负面新闻的分析。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 实体级情感分析
+//
+// 实体级情感分析，本产品适用于金融方面公司实体正负面新闻的分析。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunEntitySentiment(request *model.RunEntitySentimentRequest) (*model.RunEntitySentimentResponse, error) {
 	requestDef := GenReqDefForRunEntitySentiment()
 
@@ -107,7 +155,14 @@ func (c *NlpClient) RunEntitySentiment(request *model.RunEntitySentimentRequest)
 	}
 }
 
-//事件抽取是指从自然语言文本中抽取指定类型的事件以及相关实体信息，并形成结构化数据输出的文本处理技术。 目前只支持金融公告中会议召开、聘任、辞职、股票增持、股票减持5类事件以及相关要素的抽取。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 事件抽取
+//
+// 事件抽取是指从自然语言文本中抽取指定类型的事件以及相关实体信息，并形成结构化数据输出的文本处理技术。
+// 目前只支持金融公告中会议召开、聘任、辞职、股票增持、股票减持5类事件以及相关要素的抽取。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunEventExtraction(request *model.RunEventExtractionRequest) (*model.RunEventExtractionResponse, error) {
 	requestDef := GenReqDefForRunEventExtraction()
 
@@ -118,7 +173,13 @@ func (c *NlpClient) RunEventExtraction(request *model.RunEventExtractionRequest)
 	}
 }
 
-//文档翻译接口，用于翻译文档格式文件。由于文档翻译会需要较长的时间，因此识别是异步的，也即接口分为创建翻译任务和查询任务状态两个接口。创建翻译任务接口创建任务完成后返回，然后用户通过调用查询任务状态接口来获得翻译状态和临时URL。 用户可以使用临时URL下载翻译好的文件，每个临时URL有效期为10分种。翻译结果会保存24小时（从翻译完成的时间算起）。24小时后如果再访问，将会返回 \\\"task id is not found\\\"错误。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 文档翻译
+//
+// 文档翻译接口，用于翻译文档格式文件。由于文档翻译会需要较长的时间，因此识别是异步的，也即接口分为创建翻译任务和查询任务状态两个接口。创建翻译任务接口创建任务完成后返回，然后用户通过调用查询任务状态接口来获得翻译状态和临时URL。 用户可以使用临时URL下载翻译好的文件，每个临时URL有效期为10分种。翻译结果会保存24小时（从翻译完成的时间算起）。24小时后如果再访问，将会返回 \\\&quot;task id is not found\\\&quot;错误。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunFileTranslation(request *model.RunFileTranslationRequest) (*model.RunFileTranslationResponse, error) {
 	requestDef := GenReqDefForRunFileTranslation()
 
@@ -129,7 +190,12 @@ func (c *NlpClient) RunFileTranslation(request *model.RunFileTranslationRequest)
 	}
 }
 
-//该接口用于获取文档翻译识别状态以及临时url，临时url可以用与获取翻译后的文档，每个临时url有效期为十分钟。
+// 文档翻译状态查询
+//
+// 该接口用于获取文档翻译识别状态以及临时url，临时url可以用与获取翻译后的文档，每个临时url有效期为十分钟。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunGetFileTranslationResult(request *model.RunGetFileTranslationResultRequest) (*model.RunGetFileTranslationResultResponse, error) {
 	requestDef := GenReqDefForRunGetFileTranslationResult()
 
@@ -140,7 +206,13 @@ func (c *NlpClient) RunGetFileTranslationResult(request *model.RunGetFileTransla
 	}
 }
 
-//给定一段文本，抽取其中最能够反映文本主题或者意思的词汇。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 关键词抽取
+//
+// 给定一段文本，抽取其中最能够反映文本主题或者意思的词汇。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunKeywordExtract(request *model.RunKeywordExtractRequest) (*model.RunKeywordExtractResponse, error) {
 	requestDef := GenReqDefForRunKeywordExtract()
 
@@ -151,7 +223,13 @@ func (c *NlpClient) RunKeywordExtract(request *model.RunKeywordExtractRequest) (
 	}
 }
 
-//对于用户输入的文本，返回识别出的所属语种。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 语种识别
+//
+// 对于用户输入的文本，返回识别出的所属语种。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunLanguageDetection(request *model.RunLanguageDetectionRequest) (*model.RunLanguageDetectionResponse, error) {
 	requestDef := GenReqDefForRunLanguageDetection()
 
@@ -162,7 +240,13 @@ func (c *NlpClient) RunLanguageDetection(request *model.RunLanguageDetectionRequ
 	}
 }
 
-//多粒度分词：给定一个句子输入，输出不同粒度的所有单词的层次结构。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 多粒度分词
+//
+// 多粒度分词：给定一个句子输入，输出不同粒度的所有单词的层次结构。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunMultiGrainedSegment(request *model.RunMultiGrainedSegmentRequest) (*model.RunMultiGrainedSegmentResponse, error) {
 	requestDef := GenReqDefForRunMultiGrainedSegment()
 
@@ -173,7 +257,13 @@ func (c *NlpClient) RunMultiGrainedSegment(request *model.RunMultiGrainedSegment
 	}
 }
 
-//基础版命名实体识别，对文本进行命名实体识别分析，目前支持人名、地名、时间、组织机构类实体的识别。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 命名实体识别（基础版）
+//
+// 基础版命名实体识别，对文本进行命名实体识别分析，目前支持人名、地名、时间、组织机构类实体的识别。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunNer(request *model.RunNerRequest) (*model.RunNerResponse, error) {
 	requestDef := GenReqDefForRunNer()
 
@@ -184,7 +274,13 @@ func (c *NlpClient) RunNer(request *model.RunNerRequest) (*model.RunNerResponse,
 	}
 }
 
-//领域版本命名实体识别，对文本进行命名实体识别分析，目前支持人名、地名、组织机构、时间点、日期、百分比、货币额度、序数词、计量规格词、民族、职业、邮箱12类实体的识别。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 命名实体识别（领域版）
+//
+// 领域版本命名实体识别，对文本进行命名实体识别分析，目前支持人名、地名、组织机构、时间点、日期、百分比、货币额度、序数词、计量规格词、民族、职业、邮箱12类实体的识别。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunNerDomain(request *model.RunNerDomainRequest) (*model.RunNerDomainResponse, error) {
 	requestDef := GenReqDefForRunNerDomain()
 
@@ -195,7 +291,13 @@ func (c *NlpClient) RunNerDomain(request *model.RunNerDomainRequest) (*model.Run
 	}
 }
 
-//根据用户的输入生成诗歌。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 诗歌生成
+//
+// 根据用户的输入生成诗歌。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunPoem(request *model.RunPoemRequest) (*model.RunPoemResponse, error) {
 	requestDef := GenReqDefForRunPoem()
 
@@ -206,7 +308,13 @@ func (c *NlpClient) RunPoem(request *model.RunPoemRequest) (*model.RunPoemRespon
 	}
 }
 
-//对文本进行分词和词性标注处理。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 分词
+//
+// 对文本进行分词和词性标注处理。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunSegment(request *model.RunSegmentRequest) (*model.RunSegmentResponse, error) {
 	requestDef := GenReqDefForRunSegment()
 
@@ -217,7 +325,13 @@ func (c *NlpClient) RunSegment(request *model.RunSegmentRequest) (*model.RunSegm
 	}
 }
 
-//针对天气、报时、新闻、笑话、翻译、提醒、闹钟、音乐8个领域进行意图理解，对用户的问题进行领域识别并提取领域内的参数。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 意图理解
+//
+// 针对天气、报时、新闻、笑话、翻译、提醒、闹钟、音乐8个领域进行意图理解，对用户的问题进行领域识别并提取领域内的参数。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunSemanticParser(request *model.RunSemanticParserRequest) (*model.RunSemanticParserResponse, error) {
 	requestDef := GenReqDefForRunSemanticParser()
 
@@ -228,7 +342,13 @@ func (c *NlpClient) RunSemanticParser(request *model.RunSemanticParserRequest) (
 	}
 }
 
-//输入句子，返回对应的句向量。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 句向量
+//
+// 输入句子，返回对应的句向量。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunSentenceEmbedding(request *model.RunSentenceEmbeddingRequest) (*model.RunSentenceEmbeddingResponse, error) {
 	requestDef := GenReqDefForRunSentenceEmbedding()
 
@@ -239,7 +359,13 @@ func (c *NlpClient) RunSentenceEmbedding(request *model.RunSentenceEmbeddingRequ
 	}
 }
 
-//通用情感分析，针对通用领域的用户评论进行情感分析。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 情感分析（基础版）
+//
+// 通用情感分析，针对通用领域的用户评论进行情感分析。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunSentiment(request *model.RunSentimentRequest) (*model.RunSentimentResponse, error) {
 	requestDef := GenReqDefForRunSentiment()
 
@@ -250,7 +376,13 @@ func (c *NlpClient) RunSentiment(request *model.RunSentimentRequest) (*model.Run
 	}
 }
 
-//对文本生成摘要。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 文本摘要（基础版）
+//
+// 对文本生成摘要。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunSummary(request *model.RunSummaryRequest) (*model.RunSummaryResponse, error) {
 	requestDef := GenReqDefForRunSummary()
 
@@ -261,7 +393,13 @@ func (c *NlpClient) RunSummary(request *model.RunSummaryRequest) (*model.RunSumm
 	}
 }
 
-//对文本生成摘要。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 文本摘要（领域版）
+//
+// 对文本生成摘要。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunSummaryDomain(request *model.RunSummaryDomainRequest) (*model.RunSummaryDomainResponse, error) {
 	requestDef := GenReqDefForRunSummaryDomain()
 
@@ -272,7 +410,13 @@ func (c *NlpClient) RunSummaryDomain(request *model.RunSummaryDomainRequest) (*m
 	}
 }
 
-//文本相似度服务，对文本对进行相似度计算。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 文本相似度（基础版）
+//
+// 文本相似度服务，对文本对进行相似度计算。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunTextSimilarity(request *model.RunTextSimilarityRequest) (*model.RunTextSimilarityResponse, error) {
 	requestDef := GenReqDefForRunTextSimilarity()
 
@@ -283,7 +427,13 @@ func (c *NlpClient) RunTextSimilarity(request *model.RunTextSimilarityRequest) (
 	}
 }
 
-//文本相似度服务高级版，对文本对进行相似度计算。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 文本相似度（高级版）
+//
+// 文本相似度服务高级版，对文本对进行相似度计算。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunTextSimilarityAdvance(request *model.RunTextSimilarityAdvanceRequest) (*model.RunTextSimilarityAdvanceResponse, error) {
 	requestDef := GenReqDefForRunTextSimilarityAdvance()
 
@@ -294,7 +444,13 @@ func (c *NlpClient) RunTextSimilarityAdvance(request *model.RunTextSimilarityAdv
 	}
 }
 
-//对于用户输入原始语种的文本，转换为目标语种的文本。 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+// 文本翻译
+//
+// 对于用户输入原始语种的文本，转换为目标语种的文本。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *NlpClient) RunTextTranslation(request *model.RunTextTranslationRequest) (*model.RunTextTranslationResponse, error) {
 	requestDef := GenReqDefForRunTextTranslation()
 

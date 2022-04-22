@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListHooksResponse struct {
-	// hook列表。
 
+	// hook列表。
 	Hooks          *[]Hook `json:"hooks,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

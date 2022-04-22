@@ -7,8 +7,8 @@ import (
 )
 
 type CreateUsersDatabases struct {
-	// 关联逻辑库名称。
 
+	// 关联逻辑库名称。
 	Name string `json:"name"`
 }
 

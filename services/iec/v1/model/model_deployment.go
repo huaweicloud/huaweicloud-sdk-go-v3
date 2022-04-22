@@ -8,11 +8,11 @@ import (
 
 // 部署计划对象
 type Deployment struct {
+
 	// 部署计划ID。
-
 	Id *string `json:"id,omitempty"`
-	// 部署位置信息列表
 
+	// 部署位置信息列表
 	Distribution *[]Distribution `json:"distribution,omitempty"`
 
 	Edgecloud *DeploymentEdgecloud `json:"edgecloud,omitempty"`

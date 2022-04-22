@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ResetMultiTaskOffsetResponse struct {
-	// 任务重置结果
 
+	// 任务重置结果
 	Message        *string `json:"message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

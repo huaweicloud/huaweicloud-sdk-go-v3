@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListEnvironmentsResponse struct {
+
 	// 环境总数。
-
 	Count *int32 `json:"count,omitempty"`
-	// 环境列表。
 
+	// 环境列表。
 	Environments   *[]Environment `json:"environments,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

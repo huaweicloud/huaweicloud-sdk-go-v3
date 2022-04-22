@@ -11,17 +11,17 @@ import (
 
 // 转码输出数组。 - HLS或DASH格式：此数组的成员个数为n+1，n为转码输出路数。 - MP4格式：此数组的成员个数为n，n为转码输出路数。
 type Output struct {
+
 	// 协议类型。  取值如下： - hls - dash - mp4
-
 	PlayType OutputPlayType `json:"play_type"`
+
 	// 播放URL。
-
 	Url string `json:"url"`
+
 	// 标记流是否已被加密。  取值如下： - 0：表示未加密。 - 1：表示已被加密。
-
 	Encrypted *int32 `json:"encrypted,omitempty"`
-	// 清晰度。  取值如下： - FLUENT：流畅 - SD：标清 - HD：高清 - FULL_HD：超清
 
+	// 清晰度。  取值如下： - FLUENT：流畅 - SD：标清 - HD：高清 - FULL_HD：超清
 	Quality *OutputQuality `json:"quality,omitempty"`
 
 	MetaData *MetaData `json:"meta_data"`

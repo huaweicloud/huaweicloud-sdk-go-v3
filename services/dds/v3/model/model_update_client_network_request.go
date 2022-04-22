@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateClientNetworkRequest struct {
-	// 实例ID。
 
+	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
 	Body *ClientNetworkRequestBody `json:"body,omitempty"`

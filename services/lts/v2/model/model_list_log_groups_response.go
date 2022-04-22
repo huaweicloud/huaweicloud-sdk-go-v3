@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListLogGroupsResponse struct {
-	// 日志组信息。
 
+	// 日志组信息。
 	LogGroups      *[]LogGroup `json:"log_groups,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

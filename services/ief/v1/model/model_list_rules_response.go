@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListRulesResponse struct {
+
 	// 规则配置
-
 	Rules *[]RuleResponse `json:"rules,omitempty"`
-	// 满足条件的规则个数
 
+	// 满足条件的规则个数
 	Count          *int64 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

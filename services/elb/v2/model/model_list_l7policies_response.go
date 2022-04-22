@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListL7policiesResponse struct {
-	// 转发策略对象的列表
 
+	// 转发策略对象的列表
 	L7policies     *[]L7policyResp `json:"l7policies,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

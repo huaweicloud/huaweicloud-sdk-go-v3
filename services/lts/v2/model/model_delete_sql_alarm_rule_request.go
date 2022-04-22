@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteSqlAlarmRuleRequest struct {
-	// Sql告警规则id
 
+	// Sql告警规则id
 	SqlAlarmRuleId string `json:"sql_alarm_rule_id"`
 }
 

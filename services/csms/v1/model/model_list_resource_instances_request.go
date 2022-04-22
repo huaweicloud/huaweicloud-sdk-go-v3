@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListResourceInstancesRequest struct {
-	// 定值为resource_instances。
 
+	// 定值为resource_instances。
 	ResourceInstances string `json:"resource_instances"`
 
 	Body *ListResourceInstancesRequestBody `json:"body,omitempty"`

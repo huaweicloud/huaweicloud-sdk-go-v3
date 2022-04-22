@@ -8,17 +8,17 @@ import (
 
 // 数据盘信息
 type CreateDataImage struct {
+
 	// 数据盘镜像名称。
-
 	Name string `json:"name"`
+
 	// 数据盘ID。
-
 	VolumeId string `json:"volume_id"`
+
 	// 数据盘描述。
-
 	Description *string `json:"description,omitempty"`
-	// 数据盘镜像标签。
 
+	// 数据盘镜像标签。
 	Tags *[]string `json:"tags,omitempty"`
 }
 

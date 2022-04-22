@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowJobStatusResponse struct {
-	// 作业运行信息，详见submissions参数说明。
 
+	// 作业运行信息，详见submissions参数说明。
 	Submissions    *[]Submission `json:"submissions,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

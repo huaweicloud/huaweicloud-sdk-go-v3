@@ -10,23 +10,23 @@ import (
 )
 
 type ConfigurationParameter struct {
+
 	// 参数名称。
-
 	Name string `json:"name"`
+
 	// 参数值。
-
 	Value string `json:"value"`
+
 	// 修改该参数是否需要重启实例。
-
 	RestartRequired bool `json:"restart_required"`
+
 	// 参数取值范围。
-
 	ValueRange string `json:"value_range"`
+
 	// 参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
-
 	Type ConfigurationParameterType `json:"type"`
-	// 参数描述。
 
+	// 参数描述。
 	Description string `json:"description"`
 }
 

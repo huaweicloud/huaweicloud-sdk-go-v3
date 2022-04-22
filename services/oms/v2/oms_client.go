@@ -19,7 +19,12 @@ func OmsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//源端有对象需要进行同步时，调用该接口创建一个同步事件，系统将根据同步事件中包含的对象名称进行同步
+// 创建同步事件
+//
+// 源端有对象需要进行同步时，调用该接口创建一个同步事件，系统将根据同步事件中包含的对象名称进行同步
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *OmsClient) CreateSyncEvents(request *model.CreateSyncEventsRequest) (*model.CreateSyncEventsResponse, error) {
 	requestDef := GenReqDefForCreateSyncEvents()
 
@@ -30,7 +35,12 @@ func (c *OmsClient) CreateSyncEvents(request *model.CreateSyncEventsRequest) (*m
 	}
 }
 
-//创建迁移任务，创建成功后，任务会被自动启动，不需要额外调用启动任务命令。
+// 创建迁移任务
+//
+// 创建迁移任务，创建成功后，任务会被自动启动，不需要额外调用启动任务命令。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *OmsClient) CreateTask(request *model.CreateTaskRequest) (*model.CreateTaskResponse, error) {
 	requestDef := GenReqDefForCreateTask()
 
@@ -41,7 +51,13 @@ func (c *OmsClient) CreateTask(request *model.CreateTaskRequest) (*model.CreateT
 	}
 }
 
-//调用该接口删除迁移任务。 正在运行的任务不允许删除，如果删除会返回失败；若要删除，请先行暂停任务。
+// 删除迁移任务
+//
+// 调用该接口删除迁移任务。
+// 正在运行的任务不允许删除，如果删除会返回失败；若要删除，请先行暂停任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *OmsClient) DeleteTask(request *model.DeleteTaskRequest) (*model.DeleteTaskResponse, error) {
 	requestDef := GenReqDefForDeleteTask()
 
@@ -52,7 +68,12 @@ func (c *OmsClient) DeleteTask(request *model.DeleteTaskRequest) (*model.DeleteT
 	}
 }
 
-//查询用户账户下的所有任务信息。
+// 查询迁移任务列表
+//
+// 查询用户账户下的所有任务信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *OmsClient) ListTasks(request *model.ListTasksRequest) (*model.ListTasksResponse, error) {
 	requestDef := GenReqDefForListTasks()
 
@@ -63,7 +84,12 @@ func (c *OmsClient) ListTasks(request *model.ListTasksRequest) (*model.ListTasks
 	}
 }
 
-//查询指定ID的任务详情。
+// 查询指定ID的任务详情
+//
+// 查询指定ID的任务详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *OmsClient) ShowTask(request *model.ShowTaskRequest) (*model.ShowTaskResponse, error) {
 	requestDef := GenReqDefForShowTask()
 
@@ -74,7 +100,12 @@ func (c *OmsClient) ShowTask(request *model.ShowTaskRequest) (*model.ShowTaskRes
 	}
 }
 
-//迁移任务暂停或失败后，调用该接口以启动任务。
+// 启动迁移任务
+//
+// 迁移任务暂停或失败后，调用该接口以启动任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *OmsClient) StartTask(request *model.StartTaskRequest) (*model.StartTaskResponse, error) {
 	requestDef := GenReqDefForStartTask()
 
@@ -85,7 +116,12 @@ func (c *OmsClient) StartTask(request *model.StartTaskRequest) (*model.StartTask
 	}
 }
 
-//当迁移任务处于迁移中时，调用该接口停止任务。
+// 暂停迁移任务
+//
+// 当迁移任务处于迁移中时，调用该接口停止任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *OmsClient) StopTask(request *model.StopTaskRequest) (*model.StopTaskResponse, error) {
 	requestDef := GenReqDefForStopTask()
 
@@ -96,7 +132,12 @@ func (c *OmsClient) StopTask(request *model.StopTaskRequest) (*model.StopTaskRes
 	}
 }
 
-//当迁移任务未执行完成时，修改迁移任务的流量控制策略。
+// 更新任务带宽策略
+//
+// 当迁移任务未执行完成时，修改迁移任务的流量控制策略。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *OmsClient) UpdateBandwidthPolicy(request *model.UpdateBandwidthPolicyRequest) (*model.UpdateBandwidthPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateBandwidthPolicy()
 
@@ -107,7 +148,12 @@ func (c *OmsClient) UpdateBandwidthPolicy(request *model.UpdateBandwidthPolicyRe
 	}
 }
 
-//查询对象存储迁移服务的API版本信息。
+// 查询API版本信息列表
+//
+// 查询对象存储迁移服务的API版本信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *OmsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*model.ListApiVersionsResponse, error) {
 	requestDef := GenReqDefForListApiVersions()
 
@@ -118,7 +164,12 @@ func (c *OmsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*mod
 	}
 }
 
-//查询对象存储迁移服务指定API版本信息。
+// 查询指定API版本信息
+//
+// 查询对象存储迁移服务指定API版本信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *OmsClient) ShowApiInfo(request *model.ShowApiInfoRequest) (*model.ShowApiInfoResponse, error) {
 	requestDef := GenReqDefForShowApiInfo()
 

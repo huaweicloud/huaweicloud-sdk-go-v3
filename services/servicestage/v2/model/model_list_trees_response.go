@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListTreesResponse struct {
-	// 仓库文件列表。
 
+	// 仓库文件列表。
 	Paths          *[]string `json:"paths,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

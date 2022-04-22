@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListDailyReportResponse struct {
-	// 24小时内的流量数据
 
+	// 24小时内的流量数据
 	Data           *[]DailyData `json:"data,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

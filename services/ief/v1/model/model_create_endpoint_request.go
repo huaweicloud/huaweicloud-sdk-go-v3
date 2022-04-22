@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateEndpointRequest struct {
-	// 铂金版实例ID，专业版实例为空值
 
+	// 铂金版实例ID，专业版实例为空值
 	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 
 	Body *Endpoint `json:"body,omitempty"`

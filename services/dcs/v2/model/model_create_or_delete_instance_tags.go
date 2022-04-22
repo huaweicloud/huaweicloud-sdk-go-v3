@@ -7,11 +7,11 @@ import (
 )
 
 type CreateOrDeleteInstanceTags struct {
+
 	// 操作标识：仅限于create（创建）、delete（删除）。
-
 	Action string `json:"action"`
-	// 标签列表。
 
+	// 标签列表。
 	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 

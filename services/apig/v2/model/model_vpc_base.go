@@ -10,17 +10,17 @@ import (
 )
 
 type VpcBase struct {
+
 	// VPC通道的名称。  长度为3 ~ 64位的字符串，字符串由中文、英文字母、数字、中划线、下划线组成，且只能以英文或中文开头。 > 中文字符必须为UTF-8或者unicode编码。
-
 	Name string `json:"name"`
+
 	// VPC通道中主机的端口号。  取值范围1 ~ 65535，仅VPC通道类型为2时有效。  VPC通道类型为2时必选。
-
 	Port *int32 `json:"port,omitempty"`
+
 	// 分发算法。 - 1：加权轮询（wrr） - 2：加权最少连接（wleastconn） - 3：源地址哈希（source） - 4：URI哈希（uri）  VPC通道类型为2时必选。
-
 	BalanceStrategy *VpcBaseBalanceStrategy `json:"balance_strategy,omitempty"`
-	// VPC通道的成员类型。 - ip - ecs  VPC通道类型为2时必选。
 
+	// VPC通道的成员类型。 - ip - ecs  VPC通道类型为2时必选。
 	MemberType *VpcBaseMemberType `json:"member_type,omitempty"`
 }
 

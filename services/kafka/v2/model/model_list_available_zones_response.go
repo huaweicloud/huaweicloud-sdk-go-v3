@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListAvailableZonesResponse struct {
+
 	// 区域ID。
-
 	RegionId *string `json:"region_id,omitempty"`
-	// 可用区数组。
 
+	// 可用区数组。
 	AvailableZones *[]ListAvailableZonesRespAvailableZones `json:"available_zones,omitempty"`
 	HttpStatusCode int                                     `json:"-"`
 }

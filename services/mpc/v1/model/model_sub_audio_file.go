@@ -7,15 +7,15 @@ import (
 )
 
 type SubAudioFile struct {
-	// 音轨信息
 
+	// 音轨信息
 	TracksInfo *[]TracksInfo `json:"tracks_info,omitempty"`
 
 	Input *ObsObjInfo `json:"input,omitempty"`
 
 	Output *ObsObjInfo `json:"output,omitempty"`
-	// 输出文件名。
 
+	// 输出文件名。
 	OutputFilename *string `json:"output_filename,omitempty"`
 }
 

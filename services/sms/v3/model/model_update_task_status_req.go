@@ -11,11 +11,11 @@ import (
 
 // This is a auto create Body Object
 type UpdateTaskStatusReq struct {
+
 	// 操作任务的具体动作
-
 	Operation UpdateTaskStatusReqOperation `json:"operation"`
-	// 操作参数
 
+	// 操作参数
 	Param map[string]string `json:"param,omitempty"`
 }
 

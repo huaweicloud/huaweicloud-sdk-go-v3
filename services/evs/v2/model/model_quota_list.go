@@ -13,8 +13,8 @@ type QuotaList struct {
 	Backups *QuotaDetailBackups `json:"backups"`
 
 	Gigabytes *QuotaDetailGigabytes `json:"gigabytes"`
-	// 项目ID。
 
+	// 项目ID。
 	Id string `json:"id"`
 
 	Snapshots *QuotaDetailSnapshots `json:"snapshots"`

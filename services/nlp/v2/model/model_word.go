@@ -8,11 +8,11 @@ import (
 
 // 词汇类
 type Word struct {
+
 	// 词汇文本。
-
 	Content string `json:"content"`
-	// 词汇对应的词性。
 
+	// 词汇对应的词性。
 	Pos string `json:"pos"`
 }
 

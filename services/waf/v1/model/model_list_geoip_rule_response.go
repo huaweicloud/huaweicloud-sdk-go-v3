@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListGeoipRuleResponse struct {
+
 	// 该策略下地理位置封禁数量
-
 	Total *int32 `json:"total,omitempty"`
-	// 地理位置封禁列表
 
+	// 地理位置封禁列表
 	Items          *[]GeOIpItem `json:"items,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

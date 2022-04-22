@@ -10,202 +10,202 @@ import (
 )
 
 type Content struct {
+
 	// gauss100的版本号 - V100R003C20 - V300R001C00
-
 	Gauss100Version *ContentGauss100Version `json:"gauss100_version,omitempty"`
+
 	// 主机IP地址 - 数据源为DWS、HANA、RABBITMQ、SAP、SNMP、IBMMQ类型时需要配置。 - 数据源为MYSQL、ORACLE、SQLSERVER、DB2、GAUSS200、GAUSS100、TAURUS、ARTEMISMQ、POSTGRESQL、HIVE类型且mode为default时需要配置。 - 数据源为HL7类型且作为目标端（position为target）时需要配置。 - 初始值为空，配置任务启动后生成host
-
 	Host *string `json:"host,omitempty"`
+
 	// 端口，端口号为0到65535 - 数据源为DWS、HANA、RABBITMQ、SAP、SNMP、IBMMQ，obs类型时需要配置， - 数据源为MYSQL、ORACLE、SQLSERVER、DB2、GAUSS200、GAUSS100、TAURUS、ARTEMISMQ、POSTGRESQL、HIVE类型且mode为default时需要配置， - 数据源为HL7类型且作为目标端（position为target）时需要配置
-
 	Port *string `json:"port,omitempty"`
+
 	// 数据库名称 - 数据源为DWS、HANA、RABBITMQ、SAP、SNMP、IBMMQ，obs类型时需要配置， - 数据源为MYSQL、SQLSERVER、DB2、GAUSS200、GAUSS100、TAURUS、ARTEMISMQ、POSTGRESQL、HIVE类型且mode为default时需要配置， - 数据源为ORACLE类型且mode为（default、multiAddress）时需要配置
-
 	DatabaseName *string `json:"database_name,omitempty"`
+
 	// REDIS数据源类型配置，数据库编号, 纯数字编码
-
 	RedisDatabase *string `json:"redis_database,omitempty"`
+
 	// 访问服务的用户名 - 数据源为MYSQL、DWS、FTP、ORACLE、MONGODB、HANA、SQLSERVER、DB2、GAUSS200、GAUSS100、TAURUS、ACTIVEMQ、ARTEMISMQ、POSTGRESQL、RABBITMQ、SAP、IBMMQ、HIVE类型时需要配置 - 数据源为WEBSOCKET类型，认证方式（basicauth）时需要配置 - 数据源为LDAP，安全认证类型（security_auth_type）为simple时需要配置
-
 	UserName *string `json:"user_name,omitempty"`
+
 	// 访问服务的密码 - 数据源为MYSQL、DWS、FTP、ORACLE、MONGODB、HANA、SQLSERVER、DB2、GAUSS200、GAUSS100、TAURUS、ACTIVEMQ、ARTEMISMQ、POSTGRESQL、RABBITMQ、SAP、IBMMQ、HIVE类型时需要配置 - 数据源为WEBSOCKET，且认证方式（basicauth）时需要配置 - 数据源为LDAP，且安全认证类型（security_auth_type）为simple时需要配置
-
 	Password *string `json:"password,omitempty"`
+
 	// 数据源连接模式 - 数据源为DWS、MONGODB、REDIS、HANA时配置默认， - 数据源为MYSQL、SQLSERVER、DB2、GAUSS200、GAUSS100、TAURUS、POSTGRESQL、HIVE时配置（default,professional）， - 数据源为ORACLE时配置专有的模式multiAddress - default (默认模式) - professional (专业模式) - multiAddress (多地址)
-
 	Mode *ContentMode `json:"mode,omitempty"`
+
 	// cdc模式，只有组合任务使用
-
 	CdcMode *ContentCdcMode `json:"cdc_mode,omitempty"`
+
 	// ORACLE集群地址，当mode为multiAddress时需要配置
-
 	MultiOracleAddress *[]MultiOracleAddress `json:"multi_oracle_address,omitempty"`
+
 	// ORACLE集群服务名
-
 	OracleServiceName *string `json:"oracle_service_name,omitempty"`
+
 	// 访问FTP服务的连接模式 - active (主动模式) - passive (被动模式)
-
 	FtpConnectMode *ContentFtpConnectMode `json:"ftp_connect_mode,omitempty"`
+
 	// 访问FTP服务协议类型 - sftp - ftp
-
 	FtpProtocol *ContentFtpProtocol `json:"ftp_protocol,omitempty"`
+
 	// 地址 - OBS (obs远端地址，obs数据源使用) - MONGODB (MONGODB数据源类型主机IP地址，多个IP:PORT, 使用\",\"隔开) - REDIS (redis服务地址，多个IP:PORT, 使用\",\"隔开)
-
 	Address *string `json:"address,omitempty"`
+
 	// Access Key ID - 数据源为OBS，DIS类型时需要配置
-
 	Ak *string `json:"ak,omitempty"`
+
 	// Secret Access Key - 数据源为OBS，DIS类型时需要配置
-
 	Sk *string `json:"sk,omitempty"`
+
 	// 桶名称，数据源为OBS时需要配置
-
 	BucketName *string `json:"bucket_name,omitempty"`
+
 	// 是否使用https, 数据源为OBS时需要配置，一般默认使用
-
 	Https *bool `json:"https,omitempty"`
+
 	// 连接字符串，访问url - 数据源为API、LDAP、WEBSOCKE类型时需要配置， - 数据源为MYSQL、ORACLE、DB2、GAUSS200、GAUSS100、TAURUS、POSTGRESQL，且mode配置为professional专业时需要配置
-
 	Url *string `json:"url,omitempty"`
+
 	// 访问API请求方式 - POST - PUT - DELETE - PATCH - GET
-
 	ApiMethod *ContentApiMethod `json:"api_method,omitempty"`
-	// 访问WEBSOCKET服务的认证方式 - none - basicauth
 
+	// 访问WEBSOCKET服务的认证方式 - none - basicauth
 	AuthMethod *ContentAuthMethod `json:"auth_method,omitempty"`
 
 	ApiAuthDetail *ApiAuthDetail `json:"api_auth_detail,omitempty"`
+
 	// KAFKA、ACTIVEMQ的服务器地址，多个IP:PORT, 使用\",\"分隔
-
 	Broker *string `json:"broker,omitempty"`
+
 	// 是否开启SSL认证 - 数据源为KAFKA时需要配置，连接MQS内网地址时，若MQS同时开启了SSL与VPC内网明文访问，请选择“否” - 数据源为ARTEMISMQ、ACTIVEMQ、RABBITMQ、IBMMQ时需要配置， - 数据源为HL7时且作为源端时需要配置
-
 	SslEnable *bool `json:"ssl_enable,omitempty"`
+
 	// SSL用户名/应用Key - 数据源为KAFKA且开启SSL认证时需要配置
-
 	SslUsername *string `json:"ssl_username,omitempty"`
+
 	// SSL密码/应用Secret - 数据源为KAFKA且开启SSL认证时需要配置
-
 	SslPassword *string `json:"ssl_password,omitempty"`
+
 	// MONGODB认证源
-
 	MongodbAuthSource *string `json:"mongodb_auth_source,omitempty"`
+
 	// MONGODB集群模式 - true (集群模式) - false （非集群模式）
-
 	MongodbClusterEnable *bool `json:"mongodb_cluster_enable,omitempty"`
+
 	// MONGODB副本集 当MONGODB为非集群模式时配置
-
 	MongodbReplicaSet *string `json:"mongodb_replica_set,omitempty"`
+
 	// 编码格式 - 数据源为GAUSS200、GAUSS100、POSTGRESQL类型时配置\"big5\"， - 数据源为MYSQL、TAURUS类型且mode为default时配置
-
 	Encoding *ContentEncoding `json:"encoding,omitempty"`
+
 	// MYSQL连接超时时间（秒）
-
 	MysqlTimeout *int32 `json:"mysql_timeout,omitempty"`
+
 	// 公钥库密码 - 数据源类型为ACTIVEMQ、ARTEMISMQ、RABBITMQ、IBMMQ且开启SSL认证时需要配置 - 数据源类为HL7且HL7为目标端（position为target）时，并且开启SSL认证时需要配置
-
 	TrustStorePassword *string `json:"trust_store_password,omitempty"`
-	// - 数据源类型为ACTIVEMQ、ARTEMISMQ、RABBITMQ、IBMMQ且开启SSL认证时需要配置，公钥库密码 - 数据源类型为HL7且为目标端（position为target），并且开启SSL认证时需要配置，公钥库密码
 
+	// - 数据源类型为ACTIVEMQ、ARTEMISMQ、RABBITMQ、IBMMQ且开启SSL认证时需要配置，公钥库密码 - 数据源类型为HL7且为目标端（position为target），并且开启SSL认证时需要配置，公钥库密码
 	TrustStore *string `json:"trust_store,omitempty"`
+
 	// - 数据源类型为ACTIVEMQ、ARTEMISMQ、RABBITMQ、IBMMQ且开启SSL认证时需要配置，公钥库密码 - 数据源类型为HL7且为目标端（position为target），并且开启SSL认证时需要配置，公钥库密码
-
 	TrustStoreFileType *ContentTrustStoreFileType `json:"trust_store_file_type,omitempty"`
+
 	// 数据源类型为ACTIVEMQ、ARTEMISMQ且开启SSL认证时需要配置 - one-way (单向认证) - two-way (双向认证)
-
 	SslAuthMethod *ContentSslAuthMethod `json:"ssl_auth_method,omitempty"`
+
 	// 私钥库文件内容， - 数据源类型为ACTIVEMQ、ARTEMISMQ，开启SSL认证并且认证方式是two-way时需要配置 - 数据源类型HL7且为源端（position为source），并且开启SSL认证时需要配置
-
 	KeyStore *string `json:"key_store,omitempty"`
+
 	// 私钥库文件类型 - 数据源类型为ACTIVEMQ、ARTEMISMQ，开启SSL认证并且认证方式是two-way时需要配置
-
 	KeyStoreFileType *ContentKeyStoreFileType `json:"key_store_file_type,omitempty"`
+
 	// 私钥库密码 - 数据源类型为ACTIVEMQ、ARTEMISMQ，开启SSL认证并且认证方式是two-way时需要配置 - 数据源为HL7类型，为源端（position为source）并且开启SSL认证时需要配置
-
 	KeyStorePassword *string `json:"key_store_password,omitempty"`
+
 	// 私钥库私钥密码 - 数据源类型为ACTIVEMQ、ARTEMISMQ，开启SSL认证并且认证方式是two-way时需要配置 - 数据源为HL7类型，为源端（position为source）并且开启SSL认证时需要配置
-
 	KeyStoreKeyPassword *string `json:"key_store_key_password,omitempty"`
+
 	// DIS通道名称
-
 	DisTunnelName *string `json:"dis_tunnel_name,omitempty"`
+
 	// DIS数据类别 - JSON
-
 	DisDataType *ContentDisDataType `json:"dis_data_type,omitempty"`
+
 	// DIS配置类别 - senior (高级) - basic (基础)
-
 	DisSettingType *ContentDisSettingType `json:"dis_setting_type,omitempty"`
+
 	// DIS Endpoint，当setting_type为senior时填写
-
 	DisEndpoint *string `json:"dis_endpoint,omitempty"`
+
 	// DIS Region，当setting_type为senior时填写
-
 	DisRegion *string `json:"dis_region,omitempty"`
+
 	// DIS源端项目id，当setting_type为senior时填写
-
 	DisSourceProjectId *string `json:"dis_source_project_id,omitempty"`
+
 	// HL7数据源方向 - source (源端) - target (目标端)
-
 	Hl7Position *ContentHl7Position `json:"hl7_position,omitempty"`
+
 	// HL7是否开启白名单设置
-
 	Hl7WhitelistEnable *bool `json:"hl7_whitelist_enable,omitempty"`
+
 	// HL7白名单 - 允许同步数据到源端HL7的服务器地址，当HL7为源端（position为source）并且开启白名单设置(open_whitelist为true)时填写
-
 	Hl7Whitelist *string `json:"hl7_whitelist,omitempty"`
+
 	// LDAP安全认证类型
-
 	LdapSecurityAuthType *ContentLdapSecurityAuthType `json:"ldap_security_auth_type,omitempty"`
+
 	// RABBITMQ虚拟主机
-
 	RabbitmqVirtualHost *string `json:"rabbitmq_virtual_host,omitempty"`
+
 	// RABBITMQ SSL认证协议 - TLS
-
 	RabbitmqSslProtocol *ContentRabbitmqSslProtocol `json:"rabbitmq_ssl_protocol,omitempty"`
+
 	// SAP客户端号
-
 	SapClient *string `json:"sap_client,omitempty"`
+
 	// SAP实例编号
-
 	SapSysnr *string `json:"sap_sysnr,omitempty"`
+
 	// SNMP网络协议 - udp - tcp
-
 	SnmpNetworkProtocol *ContentSnmpNetworkProtocol `json:"snmp_network_protocol,omitempty"`
+
 	// SNMP版本号
-
 	SnmpVersion *ContentSnmpVersion `json:"snmp_version,omitempty"`
+
 	// SNMP团体名，用于访问SNMP管理代理的身份认证，相当于访问密码
-
 	SnmpCommunity *string `json:"snmp_community,omitempty"`
+
 	// IBMMQ字符集标识
-
 	IbmmqCcsId *string `json:"ibmmq_ccs_id,omitempty"`
+
 	// IBMMQ队列管理器
-
 	IbmmqQueueManager *string `json:"ibmmq_queue_manager,omitempty"`
+
 	// IBMMQ通道名称
-
 	IbmmqChannel *string `json:"ibmmq_channel,omitempty"`
+
 	// IBMMQ密钥算法套件
-
 	IbmmqCipherSuite *string `json:"ibmmq_cipher_suite,omitempty"`
+
 	// HDFS URL - 数据源为MRSHIVE、MRSHDFS、FIHDFS、FIHIVE类型时配置 - fihadfs (/fdi/autotest)
-
 	HdfsPath *string `json:"hdfs_path,omitempty"`
+
 	// 机机交互用户名 - 数据源为MRSHIVE、MRSHDFS、MRSHBASE、MRSKAFKA、FIHDFS、FIHIVE、FIKAFKA类型时配置
-
 	PrincipalName *string `json:"principal_name,omitempty"`
+
 	// - 用户认证文件，文件获取方式参考《ROMA Connect API参考》的“附录>获取数据源配置文件”章节 - 将获取到的文件打包成zip文件，文件名配置在config_file_name中，内容以BASE64编码形式放到config_file_content。 - 数据源为MRSHIVE、MRSHDFS、MRSHBASE、MRSKAFKA、FIHDFS、FIHIVE、FIKAFKA类型时配置
-
 	ConfigFileName *string `json:"config_file_name,omitempty"`
+
 	// - 用户认证文件内容，config_file_name对应的文件内容BASE64编码 - 数据源为MRSHIVE、MRSHDFS、MRSHBASE、MRSKAFKA、FIHDFS、FIHIVE、FIKAFKA类型时配置
-
 	ConfigFileContent *string `json:"config_file_content,omitempty"`
+
 	// 连接器实例ID，连接器发布后对应的实例ID
-
 	ConnectionInstanceId *string `json:"connection_instance_id,omitempty"`
-	// 连接器对应的数据源参数，值按实际填写
 
+	// 连接器对应的数据源参数，值按实际填写
 	ConnectorParams *interface{} `json:"connector_params,omitempty"`
 }
 

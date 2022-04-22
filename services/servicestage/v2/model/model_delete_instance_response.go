@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteInstanceResponse struct {
-	// Job ID。
 
+	// Job ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

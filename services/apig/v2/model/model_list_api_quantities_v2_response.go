@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ListApiQuantitiesV2Response struct {
+
 	// API总个数
-
 	InstanceNum *int32 `json:"instance_num,omitempty"`
+
 	// 已发布到release环境的API个数
-
 	NumsOnRelease *int32 `json:"nums_on_release,omitempty"`
-	// 未发布到release环境的API个数
 
+	// 未发布到release环境的API个数
 	NumsOffRelease *int32 `json:"nums_off_release,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

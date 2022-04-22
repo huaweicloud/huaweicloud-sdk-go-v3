@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListVersionDetailsResponse struct {
-	// VPC终端节点版本信息列表。
 
+	// VPC终端节点版本信息列表。
 	Versions       *[]Version `json:"versions,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

@@ -7,8 +7,8 @@ import (
 )
 
 type VaultBindRules struct {
-	// 按tags过滤自动绑定的资源
 
+	// 按tags过滤自动绑定的资源
 	Tags *[]Tag `json:"tags,omitempty"`
 }
 

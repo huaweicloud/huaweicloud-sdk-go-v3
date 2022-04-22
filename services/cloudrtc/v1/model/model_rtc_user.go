@@ -10,50 +10,50 @@ import (
 )
 
 type RtcUser struct {
+
 	// 域名
-
 	Domain *string `json:"domain,omitempty"`
+
 	// 应用标识
-
 	App *string `json:"app,omitempty"`
+
 	// 房间ID
-
 	RoomId *string `json:"room_id,omitempty"`
+
 	// 用户id
-
 	Uid *string `json:"uid,omitempty"`
+
 	// 会话id
-
 	Session *string `json:"session,omitempty"`
+
 	// 用户状态   - FAIL： 加入失败   - ONLINE：在线   - OFFLINE：离开
-
 	State *RtcUserState `json:"state,omitempty"`
+
 	// 用户昵称
-
 	NickName *string `json:"nick_name,omitempty"`
+
 	// 用户接入IP
-
 	Ip *string `json:"ip,omitempty"`
+
 	// 用户接入IP所在省份
-
 	Region *string `json:"region,omitempty"`
+
 	// 用户接入IP所在运营商
-
 	Isp *string `json:"isp,omitempty"`
+
 	// 用户设备型号
-
 	DeviceModel *string `json:"device_model,omitempty"`
+
 	// 用户设备平台
-
 	Platform *string `json:"platform,omitempty"`
+
 	// 用户sdk版本
-
 	Sdk *string `json:"sdk,omitempty"`
+
 	// 用户加入房间时间。格式为：YYYY-MM-DDThh:mm:ssZ
-
 	JoinTime *string `json:"join_time,omitempty"`
-	// 用户离开房间时间。格式为：YYYY-MM-DDThh:mm:ssZ，若用户未离开，则返回 “-”
 
+	// 用户离开房间时间。格式为：YYYY-MM-DDThh:mm:ssZ，若用户未离开，则返回 “-”
 	LeaveTime *string `json:"leave_time,omitempty"`
 }
 

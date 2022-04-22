@@ -11,20 +11,20 @@ import (
 
 //
 type PostPreCheckResp struct {
+
 	// 任务id。
-
 	Id *string `json:"id,omitempty"`
+
 	// 预检查id。
-
 	PrecheckId *string `json:"precheck_id,omitempty"`
+
 	// 成功或失败的状态
-
 	Status *PostPreCheckRespStatus `json:"status,omitempty"`
+
 	// 错误码。
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 错误信息。
 
+	// 错误信息。
 	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 

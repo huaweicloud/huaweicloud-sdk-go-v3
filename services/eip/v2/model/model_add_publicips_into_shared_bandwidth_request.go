@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type AddPublicipsIntoSharedBandwidthRequest struct {
-	// 带宽唯一标识
 
+	// 带宽唯一标识
 	BandwidthId string `json:"bandwidth_id"`
 
 	Body *AddPublicipsIntoSharedBandwidthRequestBody `json:"body,omitempty"`

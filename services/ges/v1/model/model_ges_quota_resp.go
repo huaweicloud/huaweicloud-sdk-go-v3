@@ -7,8 +7,8 @@ import (
 )
 
 type GesQuotaResp struct {
-	// GES资源配额列表。
 
+	// GES资源配额列表。
 	Resources *[]Quota `json:"resources,omitempty"`
 }
 

@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type ShowRepositoryStatisticalDataV2Request struct {
+
 	// 语言类型 中文:zh-cn 英文:en-us
-
 	XLanguage *ShowRepositoryStatisticalDataV2RequestXLanguage `json:"X-Language,omitempty"`
-	// 代码仓库id
 
+	// 代码仓库id
 	RepositoryId string `json:"repository_id"`
 }
 

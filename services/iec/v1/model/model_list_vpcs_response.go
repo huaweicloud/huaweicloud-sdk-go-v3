@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListVpcsResponse struct {
+
 	// 虚拟私有云的总数。
-
 	Count *int32 `json:"count,omitempty"`
-	// 虚拟私有云数组对象。
 
+	// 虚拟私有云数组对象。
 	Vpcs           *[]Vpc `json:"vpcs,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

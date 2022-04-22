@@ -7,8 +7,8 @@ import (
 )
 
 type EnvVariableBase struct {
-	// 变量值支持英文字母、数字、英文格式的下划线、中划线，斜线（/）、点、冒号，1 ~ 255个字符。
 
+	// 变量值支持英文字母、数字、英文格式的下划线、中划线，斜线（/）、点、冒号，1 ~ 255个字符。
 	VariableValue string `json:"variable_value"`
 }
 

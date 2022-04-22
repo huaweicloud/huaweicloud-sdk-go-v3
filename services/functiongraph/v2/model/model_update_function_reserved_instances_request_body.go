@@ -7,8 +7,8 @@ import (
 )
 
 type UpdateFunctionReservedInstancesRequestBody struct {
-	// 预留实例个数
 
+	// 预留实例个数
 	Count int32 `json:"count"`
 }
 

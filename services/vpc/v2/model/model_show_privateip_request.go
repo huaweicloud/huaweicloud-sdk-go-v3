@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowPrivateipRequest struct {
-	// 私有IP ID
 
+	// 私有IP ID
 	PrivateipId string `json:"privateip_id"`
 }
 

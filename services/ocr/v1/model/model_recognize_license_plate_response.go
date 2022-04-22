@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type RecognizeLicensePlateResponse struct {
-	// 调用成功时表示调用结果。  调用失败时无此字段。
 
+	// 调用成功时表示调用结果。  调用失败时无此字段。
 	Result         *[]LicensePlateResult `json:"result,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

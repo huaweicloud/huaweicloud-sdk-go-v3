@@ -7,8 +7,8 @@ import (
 )
 
 type ReplicationReq struct {
-	// 新扩副本数量。
 
+	// 新扩副本数量。
 	Replication string `json:"replication"`
 }
 

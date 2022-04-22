@@ -11,17 +11,17 @@ import (
 
 // 文本检测结果
 type TextReviewRet struct {
+
 	// 检测结果是否通过。  取值如下： - block：包含敏感信息，不通过。 - pass：不包含敏感信息，通过。 - review：需要人工复检。
-
 	Suggestion TextReviewRetSuggestion `json:"suggestion"`
+
 	// 涉政敏感词列表
-
 	Politics *string `json:"politics,omitempty"`
+
 	// 涉黄敏感词列表
-
 	Porn *string `json:"porn,omitempty"`
-	// 辱骂敏感词列表
 
+	// 辱骂敏感词列表
 	Abuse *string `json:"abuse,omitempty"`
 }
 

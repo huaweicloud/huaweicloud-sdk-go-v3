@@ -8,8 +8,8 @@ import (
 
 // 可选。SQL作业。
 type SqlJob struct {
-	// 作业的SQL。
 
+	// 作业的SQL。
 	Sql string `json:"sql"`
 }
 

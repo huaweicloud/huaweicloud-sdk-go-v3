@@ -8,8 +8,8 @@ import (
 
 // 调度策略
 type DtSchedule struct {
-	// 调度周期，正则： \"1m|5m|15m|1h\"，表示从每小时第0分0秒开始，每1m、5m、15m、1h调度
 
+	// 调度周期，正则： \"1m|5m|15m|1h\"，表示从每小时第0分0秒开始，每1m、5m、15m、1h调度
 	Period string `json:"period"`
 }
 

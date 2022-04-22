@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateCustomLineRequest struct {
-	// 解析线路ID。
 
+	// 解析线路ID。
 	LineId string `json:"line_id"`
 
 	Body *UpdateCustomsLineReq `json:"body,omitempty"`

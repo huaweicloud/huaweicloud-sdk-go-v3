@@ -8,8 +8,8 @@ import (
 
 // 邀请共享请求body
 type InviteShareDto struct {
-	// 0:取消邀请 1:邀请
 
+	// 0:取消邀请 1:邀请
 	Share int32 `json:"share"`
 }
 

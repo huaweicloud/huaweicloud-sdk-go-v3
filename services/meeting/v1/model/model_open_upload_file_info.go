@@ -8,8 +8,8 @@ import (
 
 // 文件上传信息
 type OpenUploadFileInfo struct {
-	// 文件Id
 
+	// 文件Id
 	FileId *string `json:"fileId,omitempty"`
 
 	ImageModeration *ImageModerationResult `json:"imageModeration,omitempty"`

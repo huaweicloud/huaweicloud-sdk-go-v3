@@ -8,11 +8,11 @@ import (
 
 //
 type NodePool struct {
+
 	// API类型，固定值“NodePool”。
-
 	Kind string `json:"kind"`
-	// API版本，固定值“v3”。
 
+	// API版本，固定值“v3”。
 	ApiVersion string `json:"apiVersion"`
 
 	Metadata *NodePoolMetadata `json:"metadata"`

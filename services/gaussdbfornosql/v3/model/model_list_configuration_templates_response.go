@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListConfigurationTemplatesResponse struct {
-	// 总记录数。
 
+	// 总记录数。
 	Count *int32 `json:"count,omitempty"`
 
 	Configurations *[]ListConfigurationsResult `json:"configurations,omitempty"`

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateDeviceGroupRequest struct {
-	// 实例ID
 
+	// 实例ID
 	InstanceId string `json:"instance_id"`
 
 	Body *CreateDeviceGroupRequestBody `json:"body,omitempty"`

@@ -8,21 +8,21 @@ import (
 
 // 配置项。
 type ConfigsGetBody struct {
+
 	// 回源请求头配置。
-
 	OriginRequestHeader *[]OriginRequestHeader `json:"origin_request_header,omitempty"`
-	// http header配置。
 
+	// http header配置。
 	HttpResponseHeader *[]HttpResponseHeader `json:"http_response_header,omitempty"`
 
 	UrlAuth *UrlAuthGetBody `json:"url_auth,omitempty"`
 
 	Https *HttpGetBody `json:"https,omitempty"`
+
 	// 源站配置。
-
 	Sources *[]SourcesConfig `json:"sources,omitempty"`
-	// 回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
 
+	// 回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
 	OriginProtocol *string `json:"origin_protocol,omitempty"`
 
 	ForceRedirect *ForceRedirectConfig `json:"force_redirect,omitempty"`

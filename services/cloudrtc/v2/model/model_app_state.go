@@ -11,11 +11,11 @@ import (
 
 // app状态信息
 type AppState struct {
+
 	// 状态 - ACTIVATION：开启 - DEACTIVATION：停用 - ARREARS：欠费 - DELETED：已删除
-
 	State *AppStateState `json:"state,omitempty"`
-	// app鉴权的更新时间，形如“2006-01-02T15:04:05.075Z”，时区为：UTC
 
+	// app鉴权的更新时间，形如“2006-01-02T15:04:05.075Z”，时区为：UTC
 	UpdateTime *string `json:"update_time,omitempty"`
 }
 

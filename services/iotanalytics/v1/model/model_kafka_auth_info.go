@@ -8,8 +8,8 @@ import (
 
 // Kafka 认证信息
 type KafkaAuthInfo struct {
-	// 安全协议
 
+	// 安全协议
 	SecurityProtocol string `json:"security_protocol"`
 
 	SaslPlainAuthInfo *SaslPlainAuthInfo `json:"sasl_plain_auth_info,omitempty"`

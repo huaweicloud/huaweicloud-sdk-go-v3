@@ -7,11 +7,11 @@ import (
 )
 
 type UpdateLabelsReq struct {
+
 	// 标签名称
-
 	Name string `json:"name"`
-	// 颜色id
 
+	// 颜色id
 	Color string `json:"color"`
 }
 

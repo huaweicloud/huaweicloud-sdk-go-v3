@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ChangeSecurityGroupResponse struct {
-	// SFS Turbo文件系统ID。
 
+	// SFS Turbo文件系统ID。
 	Id             *string `json:"id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type MigrateResourceRequest struct {
-	// 目标企业项目ID，enterprise_project_id为0时表示迁移资源到默认资源组default。
 
+	// 目标企业项目ID，enterprise_project_id为0时表示迁移资源到默认资源组default。
 	EnterpriseProjectId string `json:"enterprise_project_id"`
 
 	Body *MigrateResource `json:"body,omitempty"`

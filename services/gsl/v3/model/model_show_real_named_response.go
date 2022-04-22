@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowRealNamedResponse struct {
+
 	// ICCID
-
 	Iccid *string `json:"iccid,omitempty"`
-	// 是否已实名认证: true表示是，false表示否。
 
+	// 是否已实名认证: true表示是，false表示否。
 	RealNamed      *bool `json:"real_named,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }

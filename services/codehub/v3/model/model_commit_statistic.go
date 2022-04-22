@@ -7,11 +7,11 @@ import (
 )
 
 type CommitStatistic struct {
+
 	// 增加的行数
-
 	Additions *int32 `json:"additions,omitempty"`
-	// 删除的行数
 
+	// 删除的行数
 	Deletions *int32 `json:"deletions,omitempty"`
 }
 

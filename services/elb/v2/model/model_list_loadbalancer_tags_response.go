@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListLoadbalancerTagsResponse struct {
-	// 标签列表
 
+	// 标签列表
 	Tags           *[]ListTag `json:"tags,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

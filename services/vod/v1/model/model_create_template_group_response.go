@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateTemplateGroupResponse struct {
-	// 模板组ID<br/>
 
+	// 模板组ID<br/>
 	GroupId        *string `json:"group_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

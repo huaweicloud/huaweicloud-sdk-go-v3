@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type SetRepoRoleRequest struct {
+
 	// 用户id
-
 	MemberId string `json:"member_id"`
-	// 仓库uuid
 
+	// 仓库uuid
 	RepositoryUuid string `json:"repository_uuid"`
 
 	Body *SetRepoRoleRequestBody `json:"body,omitempty"`

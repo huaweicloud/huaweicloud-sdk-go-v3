@@ -8,8 +8,8 @@ import (
 
 // 网卡ID信息。
 type NicId struct {
-	// 网卡ID。
 
+	// 网卡ID。
 	Id string `json:"id"`
 }
 

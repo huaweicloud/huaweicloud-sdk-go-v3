@@ -11,14 +11,14 @@ import (
 
 // 文本相似度请求体
 type TextSimilarityAdvanceRequest struct {
-	// 待计算文本1，长度1~512，文本编码为UTF-8。
 
+	// 待计算文本1，长度1~512，文本编码为UTF-8。
 	Text1 string `json:"text1"`
+
 	// 待计算文本1，长度1~512，文本编码为UTF-8。
-
 	Text2 string `json:"text2"`
-	// 支持的文本语言类型，目前只支持中文（zh），默认为中文。
 
+	// 支持的文本语言类型，目前只支持中文（zh），默认为中文。
 	Lang *TextSimilarityAdvanceRequestLang `json:"lang,omitempty"`
 }
 

@@ -7,11 +7,11 @@ import (
 )
 
 type AclApiBindingCreate struct {
+
 	// ACL策略编号
-
 	AclId *string `json:"acl_id,omitempty"`
-	// API发布记录编号
 
+	// API发布记录编号
 	PublishIds *[]string `json:"publish_ids,omitempty"`
 }
 

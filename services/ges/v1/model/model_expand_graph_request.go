@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ExpandGraphRequest struct {
-	// 图ID。
 
+	// 图ID。
 	GraphId string `json:"graph_id"`
 
 	Body *ExpandGraphReq `json:"body,omitempty"`

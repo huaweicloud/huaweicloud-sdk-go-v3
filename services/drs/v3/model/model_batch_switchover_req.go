@@ -8,8 +8,8 @@ import (
 
 // 批量主备倒换请求体
 type BatchSwitchoverReq struct {
-	// 批量主备调换的任务详情ID请求列表
 
+	// 批量主备调换的任务详情ID请求列表
 	Jobs []string `json:"jobs"`
 }
 

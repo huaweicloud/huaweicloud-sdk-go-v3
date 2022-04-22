@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListTransportHistoriesResponse struct {
+
 	// 总数
-
 	TotalCount *int32 `json:"total_count,omitempty"`
-	// 文件记录列表
 
+	// 文件记录列表
 	FileOpsList    *[]FileOperateLog `json:"file_ops_list,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

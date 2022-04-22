@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteServiceRequest struct {
-	// 注册服务唯一标识，该值由注册接口返回
 
+	// 注册服务唯一标识，该值由注册接口返回
 	ServiceId int32 `json:"service_id"`
 }
 

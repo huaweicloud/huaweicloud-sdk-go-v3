@@ -7,8 +7,8 @@ import (
 )
 
 type UpdateUnreadNewInstantMsgV2Req struct {
-	// 组id
 
+	// 组id
 	GroupId *string `json:"group_id,omitempty"`
 }
 

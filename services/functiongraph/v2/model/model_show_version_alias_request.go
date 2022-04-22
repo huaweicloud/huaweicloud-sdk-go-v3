@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowVersionAliasRequest struct {
+
 	// 函数的URN，详细解释见FunctionGraph函数模型的描述。
-
 	FunctionUrn string `json:"function_urn"`
-	// 要查询的别名名称。
 
+	// 要查询的别名名称。
 	AliasName string `json:"alias_name"`
 }
 

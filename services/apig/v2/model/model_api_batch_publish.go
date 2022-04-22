@@ -7,14 +7,14 @@ import (
 )
 
 type ApiBatchPublish struct {
+
 	// 需要发布或下线的API ID列表，单次更新上限为1000个API
-
 	Apis *[]string `json:"apis,omitempty"`
+
 	// 环境ID
-
 	EnvId *string `json:"env_id,omitempty"`
-	// 对本次发布的描述信息  字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
 
+	// 对本次发布的描述信息  字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
 	Remark *string `json:"remark,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowDataourceDetailRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 数据源ID
 
+	// 数据源ID
 	DatasourceId string `json:"datasource_id"`
 }
 

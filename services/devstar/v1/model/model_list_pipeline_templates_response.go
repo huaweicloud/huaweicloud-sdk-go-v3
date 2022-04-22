@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListPipelineTemplatesResponse struct {
+
 	// 模板列表
-
 	Templates *[]PipelineTemplate `json:"templates,omitempty"`
-	// 模板总数
 
+	// 模板总数
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

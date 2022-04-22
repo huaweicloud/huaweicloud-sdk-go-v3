@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateRoutesRequest struct {
-	// 路由表ID
 
+	// 路由表ID
 	RoutetableId string `json:"routetable_id"`
 
 	Body *CreateRoutesRequestBody `json:"body,omitempty"`

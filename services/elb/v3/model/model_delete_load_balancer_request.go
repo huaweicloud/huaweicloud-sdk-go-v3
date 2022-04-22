@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteLoadBalancerRequest struct {
-	// 负载均衡器ID。
 
+	// 负载均衡器ID。
 	LoadbalancerId string `json:"loadbalancer_id"`
 }
 

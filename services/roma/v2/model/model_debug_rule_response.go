@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DebugRuleResponse struct {
-	// 规则测试输出结果
 
+	// 规则测试输出结果
 	TestResult     *string `json:"test_result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

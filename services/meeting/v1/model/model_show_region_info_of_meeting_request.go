@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowRegionInfoOfMeetingRequest struct {
-	// 会议ID。
 
+	// 会议ID。
 	ConferenceID string `json:"conferenceID"`
 }
 

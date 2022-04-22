@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListBreifStructTemplateResponse struct {
-	// 结构化模板缩略信息列表
 
+	// 结构化模板缩略信息列表
 	Results        *[]BriefStructTemplateModel `json:"results,omitempty"`
 	HttpStatusCode int                         `json:"-"`
 }

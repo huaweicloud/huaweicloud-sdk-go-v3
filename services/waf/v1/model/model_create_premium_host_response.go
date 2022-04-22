@@ -8,23 +8,23 @@ import (
 
 // Response Object
 type CreatePremiumHostResponse struct {
-	// 域名id
 
+	// 域名id
 	Id *string `json:"id,omitempty"`
+
 	// 策略id
-
 	Policyid *string `json:"policyid,omitempty"`
+
 	// 域名id
-
 	Hostname *string `json:"hostname,omitempty"`
+
 	// 租户id
-
 	Domainid *string `json:"domainid,omitempty"`
+
 	// 项目projectid
-
 	Projectid *string `json:"projectid,omitempty"`
-	// http协议
 
+	// http协议
 	Protocol       *string `json:"protocol,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

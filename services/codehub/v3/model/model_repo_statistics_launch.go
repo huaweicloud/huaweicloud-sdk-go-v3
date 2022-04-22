@@ -7,14 +7,14 @@ import (
 )
 
 type RepoStatisticsLaunch struct {
+
 	// 仓库是否可以统计
-
 	CanStatistics *bool `json:"can_statistics,omitempty"`
+
 	// sidekiq任务的 id
-
 	JoinId *string `json:"join_id,omitempty"`
-	// 启动仓库统计返回的信息
 
+	// 启动仓库统计返回的信息
 	Message *string `json:"message,omitempty"`
 }
 

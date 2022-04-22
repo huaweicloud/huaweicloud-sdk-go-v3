@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListAccessConfigResponse struct {
+
 	// 日志接入列表
-
 	Result *[]AccessConfigInfo `json:"result,omitempty"`
-	// 日志接入总数
 
+	// 日志接入总数
 	Total          *int64 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

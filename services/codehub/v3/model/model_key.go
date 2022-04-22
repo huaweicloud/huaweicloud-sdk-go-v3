@@ -7,20 +7,20 @@ import (
 )
 
 type Key struct {
+
 	// 是否允许推送
-
 	CanPush *bool `json:"can_push,omitempty"`
+
 	// 部署密钥新建时间
-
 	CreatedAt *string `json:"created_at,omitempty"`
+
 	// 部署密钥
-
 	Key *string `json:"key,omitempty"`
+
 	// 部署密钥id
-
 	KeyId *string `json:"key_id,omitempty"`
-	// 部署密钥名称
 
+	// 部署密钥名称
 	KeyTitle *string `json:"key_title,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // 节点内部ip信息
 type NodeIps struct {
+
 	// 自定义后端服务livedta组件节点ip列表
-
 	Livedata *[]string `json:"livedata,omitempty"`
-	// API网关shubao组件节点ip列表
 
+	// API网关shubao组件节点ip列表
 	Shubao *[]string `json:"shubao,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListBlockchainChannelsRequest struct {
-	// blockchainID
 
+	// blockchainID
 	BlockchainId string `json:"blockchain_id"`
 }
 

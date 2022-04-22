@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateExtendInstanceStorageResponse struct {
-	// 集群ID。
 
+	// 集群ID。
 	Id             *string `json:"id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

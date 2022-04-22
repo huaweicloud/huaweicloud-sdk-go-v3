@@ -7,11 +7,11 @@ import (
 )
 
 type NetworkTrafficStats struct {
+
 	// 下行吞吐量（byte）
-
 	OutputThroughput *int64 `json:"output_throughput,omitempty"`
-	// 上行吞吐量（byte）
 
+	// 上行吞吐量（byte）
 	InputThroughput *int64 `json:"input_throughput,omitempty"`
 }
 

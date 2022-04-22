@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateAlterKibanaRequest struct {
-	// 指定待更改的集群ID。
 
+	// 指定待更改的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *UpdatePublicKibanaBandwidthReq `json:"body,omitempty"`

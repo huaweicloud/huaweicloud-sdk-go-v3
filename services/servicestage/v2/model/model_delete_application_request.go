@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteApplicationRequest struct {
-	// 应用ID。
 
+	// 应用ID。
 	ApplicationId string `json:"application_id"`
 }
 

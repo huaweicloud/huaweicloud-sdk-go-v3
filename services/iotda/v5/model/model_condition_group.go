@@ -8,11 +8,11 @@ import (
 
 // 规则条件组
 type ConditionGroup struct {
+
 	// **参数说明**：规则的条件列表，单个规则最多支持设置10个条件。
-
 	Conditions *[]RuleCondition `json:"conditions,omitempty"`
-	// **参数说明**：规则条件列表中多个条件之间的逻辑关系，默认值：and。 **取值范围**： - and：逻辑且。 - or：逻辑或。
 
+	// **参数说明**：规则条件列表中多个条件之间的逻辑关系，默认值：and。 **取值范围**： - and：逻辑且。 - or：逻辑或。
 	Logic *string `json:"logic,omitempty"`
 
 	TimeRange *TimeRange `json:"time_range,omitempty"`

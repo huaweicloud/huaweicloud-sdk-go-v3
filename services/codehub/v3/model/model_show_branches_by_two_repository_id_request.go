@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowBranchesByTwoRepositoryIdRequest struct {
-	// 仓库的主键id
 
+	// 仓库的主键id
 	RepositoryId string `json:"repository_id"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListRtcRealtimeNetworkResponse struct {
-	// 时间戳及相应时间的指标数值列表
 
+	// 时间戳及相应时间的指标数值列表
 	Network *[]TimeDoubleValueData `json:"network,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

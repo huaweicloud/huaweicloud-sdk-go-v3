@@ -11,14 +11,14 @@ import (
 
 // 多模态评测的配置
 type MultiModalConfig struct {
+
 	// 视频的封装格式。不填写此字段，则默认为auto。注意不论何种格式，均要求帧率在25fps以上，清晰度在240*240以上。   auto  自动判断，系统会自动判断视频封装格式。  avi  avi封装格式。  mp4  mp4封装格式。  webm  webm封装格式。  mkv  mkv封装格式。  flv  flv封装格式。
-
 	VideoFormat *MultiModalConfigVideoFormat `json:"video_format,omitempty"`
+
 	// 评测语言和口音。  en_gb 英语-英式口音。
-
 	Language MultiModalConfigLanguage `json:"language"`
-	// 评测模式。  word 单词模式。  sentence 句子模式。
 
+	// 评测模式。  word 单词模式。  sentence 句子模式。
 	Mode MultiModalConfigMode `json:"mode"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowPortRequest struct {
-	// 端口ID
 
+	// 端口ID
 	PortId string `json:"port_id"`
 }
 

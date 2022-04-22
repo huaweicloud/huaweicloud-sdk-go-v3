@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteInstanceResponse struct {
-	// DDM实例ID。
 
+	// DDM实例ID。
 	Id             *string `json:"id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

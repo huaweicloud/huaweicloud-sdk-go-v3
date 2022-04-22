@@ -9,19 +9,19 @@ import (
 	"strings"
 )
 
-// 登录主机鉴权，使用密码登录则填写密码即可，使用密钥则填写密钥，二选一即可
+// 登录主机鉴权，使用密码登录则填写密码即可，使用密钥则填写密钥，二选一即可。
 type DeploymentHostAuthorizationBody struct {
+
 	// 用户名，可输入中英文，数字和符号(-_.)。
-
 	Username string `json:"username"`
+
 	// 密码，认证类型为0时，密码必填。
-
 	Password *string `json:"password,omitempty"`
+
 	// 密钥，认证类型为1时，密钥必填
-
 	PrivateKey *string `json:"private_key,omitempty"`
-	// 认证类型，0表示使用密码认证，1表示使用密钥认证
 
+	// 认证类型，0表示使用密码认证，1表示使用密钥认证
 	TrustedType DeploymentHostAuthorizationBodyTrustedType `json:"trusted_type"`
 }
 

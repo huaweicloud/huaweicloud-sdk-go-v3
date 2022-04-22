@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListClustersResponse struct {
-	// 集群对象列表
 
+	// 集群对象列表。
 	Clusters *[]ClusterInfo `json:"clusters,omitempty"`
-	// 集群对象列表总数
 
+	// 集群对象列表总数。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

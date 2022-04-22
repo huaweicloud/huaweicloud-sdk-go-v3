@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeletePipelineJobRequest struct {
-	// 管道ID
 
+	// 管道ID
 	PipelineId string `json:"pipeline_id"`
 }
 

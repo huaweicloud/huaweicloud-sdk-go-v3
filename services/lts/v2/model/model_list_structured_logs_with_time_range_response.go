@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListStructuredLogsWithTimeRangeResponse struct {
-	// 此参数在请求实体中，采用json字符串格式。
 
+	// 此参数在请求实体中，采用json字符串格式。
 	Body           map[string][]interface{} `json:"body,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }

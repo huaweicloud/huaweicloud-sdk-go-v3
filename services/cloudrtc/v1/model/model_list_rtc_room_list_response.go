@@ -8,17 +8,17 @@ import (
 
 // Response Object
 type ListRtcRoomListResponse struct {
+
 	// 总数
-
 	Total *int32 `json:"total,omitempty"`
+
 	// 查询结果限制
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 查询偏移量
-
 	Offset *int32 `json:"offset,omitempty"`
-	// 房间列表信息
 
+	// 房间列表信息
 	RoomInfoList *[]RtcServerRoomInfo `json:"room_info_list,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

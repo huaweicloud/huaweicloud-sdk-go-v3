@@ -8,11 +8,11 @@ import (
 
 // 可用的专属主机类型。
 type RespHostType struct {
+
 	// 专属主机类型。
-
 	HostType string `json:"host_type"`
-	// 专属主机类型名字。
 
+	// 专属主机类型名字。
 	HostTypeName string `json:"host_type_name"`
 }
 

@@ -11,25 +11,25 @@ import (
 
 // 专属资源池信息。
 type DedicatedResource struct {
+
 	// 专属资源池ID。
-
 	Id *string `json:"id,omitempty"`
+
 	// 专属资源池名称
-
 	ResourceName *string `json:"resource_name,omitempty"`
+
 	// 数据库引擎名称
-
 	EngineName *string `json:"engine_name,omitempty"`
+
 	// CPU架构
-
 	Architecture *string `json:"architecture,omitempty"`
-	// 专属资源池状态
 
+	// 专属资源池状态
 	Status *DedicatedResourceStatus `json:"status,omitempty"`
 
 	Capacity *DedicatedResourceCapacity `json:"capacity,omitempty"`
-	// 专属资源池可用区信息。
 
+	// 专属资源池可用区信息。
 	AvailabilityZone *[]string `json:"availability_zone,omitempty"`
 }
 

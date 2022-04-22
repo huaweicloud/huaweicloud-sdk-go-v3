@@ -8,11 +8,11 @@ import (
 
 // swagger文档导入结果  暂不支持
 type Swagger struct {
+
 	// swagger文档编号
-
 	Id *string `json:"id,omitempty"`
-	// 导入结果说明
 
+	// 导入结果说明
 	Result *string `json:"result,omitempty"`
 }
 

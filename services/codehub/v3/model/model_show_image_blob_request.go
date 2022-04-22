@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ShowImageBlobRequest struct {
+
 	// 仓库id
-
 	RepositoryUuid string `json:"repository_uuid"`
+
 	// 分支名称
-
 	BranchName string `json:"branch_name"`
-	// 图片路径
 
+	// 图片路径
 	Path string `json:"path"`
 }
 

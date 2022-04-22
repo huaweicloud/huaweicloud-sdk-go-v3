@@ -7,11 +7,11 @@ import (
 )
 
 type UnfreezeSubCustomersReq struct {
+
 	// 需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
-
 	CustomerIds []string `json:"customer_ids"`
-	// 解冻原因。
 
+	// 解冻原因。
 	Reason string `json:"reason"`
 }
 

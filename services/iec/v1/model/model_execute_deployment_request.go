@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ExecuteDeploymentRequest struct {
-	// 部署计划ID。  约束： - 该接口只能执行指定名称（name）创建的部署计划。
 
+	// 部署计划ID。  约束： - 该接口只能执行指定名称（name）创建的部署计划。
 	DeploymentId string `json:"deployment_id"`
 }
 

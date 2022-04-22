@@ -9,44 +9,44 @@ import (
 )
 
 type AuthorizerResp struct {
+
 	// 自定义认证的名称。 长度为3 ~ 64位的字符串，字符串由中文、英文字母、数字、“_”组成，且只能以英文或中文开头。
-
 	Name string `json:"name"`
+
 	// 自定义认证类型  - FRONTEND：前端 - BACKEND：后端  不支持修改
-
 	Type AuthorizerRespType `json:"type"`
+
 	// 只能为：FUNC
-
 	AuthorizerType AuthorizerRespAuthorizerType `json:"authorizer_type"`
+
 	// 函数地址。
-
 	AuthorizerUri string `json:"authorizer_uri"`
+
 	// 认证来源
-
 	Identities *[]Identity `json:"identities,omitempty"`
+
 	// 缓存时间
-
 	Ttl *int32 `json:"ttl,omitempty"`
+
 	// 用户数据
-
 	UserData *string `json:"user_data,omitempty"`
+
 	// 自定义后端服务ID。  暂不支持
-
 	LdApiId *string `json:"ld_api_id,omitempty"`
+
 	// 是否发送body
-
 	NeedBody *bool `json:"need_body,omitempty"`
+
 	// 自定义认证编号
-
 	Id *string `json:"id,omitempty"`
+
 	// 创建时间
-
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+
 	// 自定义认证所属应用编号  暂不支持
-
 	RomaAppId *string `json:"roma_app_id,omitempty"`
-	// 自定义认证所属应用名称  暂不支持
 
+	// 自定义认证所属应用名称  暂不支持
 	RomaAppName *string `json:"roma_app_name,omitempty"`
 }
 

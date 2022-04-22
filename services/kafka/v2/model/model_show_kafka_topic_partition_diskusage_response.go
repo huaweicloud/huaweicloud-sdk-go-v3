@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowKafkaTopicPartitionDiskusageResponse struct {
-	// Broker列表。
 
+	// Broker列表。
 	BrokerList     *[]DiskusageEntity `json:"broker_list,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

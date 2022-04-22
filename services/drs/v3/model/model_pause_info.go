@@ -11,11 +11,11 @@ import (
 
 // 暂停任务请求参数
 type PauseInfo struct {
+
 	// 任务id
-
 	JobId string `json:"job_id"`
-	// 暂停类型，target:停回放,all:停日志抓取和回放
 
+	// 暂停类型，target:停回放,all:停日志抓取和回放
 	PauseMode PauseInfoPauseMode `json:"pause_mode"`
 }
 

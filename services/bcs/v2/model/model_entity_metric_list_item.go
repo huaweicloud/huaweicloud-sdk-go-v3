@@ -8,23 +8,23 @@ import (
 
 // 监控数据列表项目
 type EntityMetricListItem struct {
+
 	// cpu使用率
-
 	CpuUsage *string `json:"cpuUsage,omitempty"`
+
 	// 磁盘使用率
-
 	DiskReadRate *string `json:"diskReadRate,omitempty"`
+
 	// 磁盘写入速率
-
 	DiskWriteRate *string `json:"diskWriteRate,omitempty"`
+
 	// 物理内存使用率
-
 	MemUsage *string `json:"memUsage,omitempty"`
+
 	// 下行BPs
-
 	RecvBytesRate *string `json:"recvBytesRate,omitempty"`
-	// 上行BPs
 
+	// 上行BPs
 	SendBytesRate *string `json:"sendBytesRate,omitempty"`
 }
 

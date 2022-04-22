@@ -19,7 +19,12 @@ func HssClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//查入侵事件列表
+// 查入侵事件列表
+//
+// 查入侵事件列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *HssClient) ListEvents(request *model.ListEventsRequest) (*model.ListEventsResponse, error) {
 	requestDef := GenReqDefForListEvents()
 
@@ -30,7 +35,12 @@ func (c *HssClient) ListEvents(request *model.ListEventsRequest) (*model.ListEve
 	}
 }
 
-//查询弹性云服务器状态列表
+// 查询弹性云服务器状态列表
+//
+// 查询弹性云服务器状态列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *HssClient) ListHosts(request *model.ListHostsRequest) (*model.ListHostsResponse, error) {
 	requestDef := GenReqDefForListHosts()
 

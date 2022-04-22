@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowCloudConnectionRequest struct {
-	// 云连接实例ID。
 
+	// 云连接实例ID。
 	Id string `json:"id"`
 }
 

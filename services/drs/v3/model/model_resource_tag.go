@@ -8,11 +8,11 @@ import (
 
 // 标签信息体
 type ResourceTag struct {
+
 	// 标签键，最大长度36，只能包含字母、数字、下划线、中划线和中文。
-
 	Key string `json:"key"`
-	// 标签值，最大长度43，只能包含字母、数字、下划线、中划线和中文。
 
+	// 标签值，最大长度43，只能包含字母、数字、下划线、中划线和中文。
 	Value string `json:"value"`
 }
 

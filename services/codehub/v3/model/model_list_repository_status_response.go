@@ -9,11 +9,11 @@ import (
 // Response Object
 type ListRepositoryStatusResponse struct {
 	Error *Error `json:"error,omitempty"`
+
 	// 响应结果
-
 	Result *int32 `json:"result,omitempty"`
-	// 响应状态
 
+	// 响应状态
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

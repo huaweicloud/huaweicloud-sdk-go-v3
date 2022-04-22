@@ -7,26 +7,26 @@ import (
 )
 
 type Actions struct {
+
 	// 操作记录id。
-
 	Id *string `json:"id,omitempty"`
+
 	// 操作类型。
-
 	ActionType *string `json:"actionType,omitempty"`
+
 	// 配置文件内容。
-
 	ConfContent *string `json:"confContent,omitempty"`
+
 	// 操作状态。
-
 	Status *string `json:"status,omitempty"`
+
 	// 更新时间。
-
 	UpdateAt *string `json:"updateAt,omitempty"`
+
 	// 错误信息。
-
 	ErrorMsg *string `json:"errorMsg,omitempty"`
-	// 内容。
 
+	// 内容。
 	Message *string `json:"message,omitempty"`
 }
 

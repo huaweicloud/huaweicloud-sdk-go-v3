@@ -7,11 +7,11 @@ import (
 )
 
 type OpExtendInfoDelete struct {
+
 	// 备份副本ID
-
 	BackupId string `json:"backup_id"`
-	// 备份名称
 
+	// 备份名称
 	BackupName string `json:"backup_name"`
 }
 

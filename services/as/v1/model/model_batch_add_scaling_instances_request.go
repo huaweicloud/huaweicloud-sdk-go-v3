@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type BatchAddScalingInstancesRequest struct {
-	// 实例ID。
 
+	// 实例ID。
 	ScalingGroupId string `json:"scaling_group_id"`
 
 	Body *BatchAddInstancesOption `json:"body,omitempty"`

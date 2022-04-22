@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ListTagValuesResponse struct {
+
 	// 标签的名称
-
 	TagName *string `json:"tag_name,omitempty"`
+
 	// 标签的值列表
-
 	TagValues *[]string `json:"tag_values,omitempty"`
-	// 当前列表元素总数
 
+	// 当前列表元素总数
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

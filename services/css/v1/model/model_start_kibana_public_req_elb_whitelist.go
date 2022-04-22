@@ -7,11 +7,11 @@ import (
 )
 
 type StartKibanaPublicReqElbWhitelist struct {
+
 	// 开启白名单。
-
 	EnableWhiteList bool `json:"enableWhiteList"`
-	// 白名单。
 
+	// 白名单。
 	WhiteList string `json:"whiteList"`
 }
 

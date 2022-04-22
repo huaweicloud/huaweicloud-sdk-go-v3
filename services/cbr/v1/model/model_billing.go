@@ -10,50 +10,50 @@ import (
 )
 
 type Billing struct {
+
 	// 已分配容量，单位GB
-
 	Allocated int32 `json:"allocated"`
+
 	// 创建模式
-
 	ChargingMode BillingChargingMode `json:"charging_mode"`
+
 	// 云平台
-
 	CloudType *BillingCloudType `json:"cloud_type,omitempty"`
+
 	// 崩溃一致性（crash_consistent）或应用一致性（app_consistent）
-
 	ConsistentLevel BillingConsistentLevel `json:"consistent_level"`
+
 	// 对象类型
-
 	ObjectType *BillingObjectType `json:"object_type,omitempty"`
+
 	// 订单ID
-
 	OrderId *string `json:"order_id,omitempty"`
+
 	// 产品ID
-
 	ProductId *string `json:"product_id,omitempty"`
+
 	// 保护类型
-
 	ProtectType BillingProtectType `json:"protect_type"`
+
 	// 容量，单位GB
-
 	Size int32 `json:"size"`
+
 	// 规格编码: 云服务备份存储库:vault.backup.server.normal;云硬盘备份存储库:vault.backup.volume.normal;文件备份存储库:vault.backup.turbo.normal;数据库备份存储库:vault.backup.database.normal;混合云备份存储库:vault.hybrid.server.normal;复制备份存储库:vault.replication.server.normal
-
 	SpecCode BillingSpecCode `json:"spec_code"`
+
 	// 存储库状态
-
 	Status BillingStatus `json:"status"`
+
 	// 存储库桶名
-
 	StorageUnit *string `json:"storage_unit,omitempty"`
+
 	// 已使用容量，单位MB
-
 	Used int32 `json:"used"`
+
 	// 冻结场景
-
 	FrozenScene *string `json:"frozen_scene,omitempty"`
-	// 存储库多az属性
 
+	// 存储库多az属性
 	IsMultiAz *bool `json:"is_multi_az,omitempty"`
 }
 

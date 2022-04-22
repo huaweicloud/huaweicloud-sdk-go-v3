@@ -8,14 +8,14 @@ import (
 
 // 单个录制文件下载链接信息
 type RecordDownloadUrlDo struct {
+
 	// 下载鉴权token
-
 	Token *string `json:"token,omitempty"`
+
 	// 文件类型
-
 	FileType *string `json:"fileType,omitempty"`
-	// 录制文件下载URL
 
+	// 录制文件下载URL
 	Url *string `json:"url,omitempty"`
 }
 

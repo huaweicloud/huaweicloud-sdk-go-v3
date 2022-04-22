@@ -8,14 +8,14 @@ import (
 
 // 查询结果要点
 type MetricDataPoints struct {
+
 	// 时间戳。
-
 	Timestamp *int64 `json:"timestamp,omitempty"`
+
 	// 指标单位。
-
 	Unit *string `json:"unit,omitempty"`
-	// 统计方式。
 
+	// 统计方式。
 	Statistics *[]StatisticValue `json:"statistics,omitempty"`
 }
 

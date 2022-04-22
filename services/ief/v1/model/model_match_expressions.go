@@ -8,8 +8,8 @@ import (
 
 // 匹配规则表达式
 type MatchExpressions struct {
-	// 匹配规则表达式
 
+	// 匹配规则表达式
 	MatchExpressions *[]MatchExpression `json:"matchExpressions,omitempty"`
 }
 

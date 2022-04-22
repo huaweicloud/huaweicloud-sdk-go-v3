@@ -7,8 +7,8 @@ import (
 )
 
 type AclBindingBatchDelete struct {
-	// 需要解除绑定的API和ACL绑定关系ID列表
 
+	// 需要解除绑定的API和ACL绑定关系ID列表
 	AclBindings *[]string `json:"acl_bindings,omitempty"`
 }
 

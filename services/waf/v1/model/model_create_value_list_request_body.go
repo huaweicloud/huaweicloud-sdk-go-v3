@@ -11,17 +11,17 @@ import (
 
 // 创建或更新引用表
 type CreateValueListRequestBody struct {
+
 	// 引用表名称，只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64
-
 	Name string `json:"name"`
+
 	// 引用表类型，参见枚举列表
-
 	Type CreateValueListRequestBodyType `json:"type"`
+
 	// 引用表的值
-
 	Values []string `json:"values"`
-	// 引用表描述，最长128字符
 
+	// 引用表描述，最长128字符
 	Description *string `json:"description,omitempty"`
 }
 

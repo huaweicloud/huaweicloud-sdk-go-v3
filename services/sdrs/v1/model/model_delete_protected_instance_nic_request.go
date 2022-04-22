@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteProtectedInstanceNicRequest struct {
-	// 保护实例的ID。
 
+	// 保护实例的ID。
 	ProtectedInstanceId string `json:"protected_instance_id"`
 
 	Body *ProtectedInstanceDeleteNicRequestBody `json:"body,omitempty"`

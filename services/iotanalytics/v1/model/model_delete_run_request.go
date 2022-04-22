@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteRunRequest struct {
+
 	// 作业ID。
-
 	JobId string `json:"job_id"`
-	// 作业运行ID。
 
+	// 作业运行ID。
 	RunId string `json:"run_id"`
 }
 

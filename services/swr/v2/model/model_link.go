@@ -7,11 +7,11 @@ import (
 )
 
 type Link struct {
+
 	// 链接
-
 	Href string `json:"href"`
-	// 描述
 
+	// 描述
 	Rel string `json:"rel"`
 }
 

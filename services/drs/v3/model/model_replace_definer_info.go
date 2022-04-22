@@ -8,11 +8,11 @@ import (
 
 // 设置replaceDefiner信息
 type ReplaceDefinerInfo struct {
+
 	// 任务id
-
 	JobId string `json:"job_id"`
-	// 是否使用目标库的用户替换掉definer
 
+	// 是否使用目标库的用户替换掉definer
 	ReplaceDefiner bool `json:"replace_definer"`
 }
 

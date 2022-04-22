@@ -8,8 +8,8 @@ import (
 
 // 配额信息
 type QuotasDetail struct {
-	// 资源配额
 
+	// 资源配额
 	Resources []EpQuotas `json:"resources"`
 }
 

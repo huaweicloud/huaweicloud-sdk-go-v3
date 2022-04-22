@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type EnableSimCardResponse struct {
-	// 业务受理单号
 
+	// 业务受理单号
 	WorkOrderId    *int64 `json:"work_order_id,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

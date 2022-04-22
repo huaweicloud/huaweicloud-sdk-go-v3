@@ -8,8 +8,8 @@ import (
 
 // 镜像详情
 type QueryImageByTagsResourceDetail struct {
-	// 镜像状态
 
+	// 镜像状态
 	Status string `json:"status"`
 }
 

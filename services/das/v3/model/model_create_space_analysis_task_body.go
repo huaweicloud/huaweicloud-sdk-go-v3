@@ -10,11 +10,11 @@ import (
 )
 
 type CreateSpaceAnalysisTaskBody struct {
+
 	// 操作类型
-
 	Operate CreateSpaceAnalysisTaskBodyOperate `json:"operate"`
-	// 引擎类型
 
+	// 引擎类型
 	DatastoreType CreateSpaceAnalysisTaskBodyDatastoreType `json:"datastore_type"`
 }
 

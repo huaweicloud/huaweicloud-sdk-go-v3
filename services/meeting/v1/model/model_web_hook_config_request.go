@@ -8,20 +8,20 @@ import (
 
 // 会议推送参数配置请求体
 type WebHookConfigRequest struct {
+
 	// 企业ID，与spId二者必填一个
-
 	CorpId *string `json:"corpId,omitempty"`
+
 	// sp管理员ID，与corpId二者必填一个
-
 	SpId *string `json:"spId,omitempty"`
+
 	// 订阅者ID
-
 	SubscriberId string `json:"subscriberId"`
+
 	// 订阅者秘钥
-
 	SubscriberKey string `json:"subscriberKey"`
-	// 订阅url，建议使用HTTPS
 
+	// 订阅url，建议使用HTTPS
 	Url string `json:"url"`
 }
 

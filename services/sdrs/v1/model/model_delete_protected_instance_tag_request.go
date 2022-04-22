@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteProtectedInstanceTagRequest struct {
+
 	// 保护实例的ID。
-
 	ProtectedInstanceId string `json:"protected_instance_id"`
-	// 标签key。
 
+	// 标签key。
 	Key string `json:"key"`
 }
 

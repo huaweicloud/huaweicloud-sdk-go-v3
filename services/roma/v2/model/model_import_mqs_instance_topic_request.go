@@ -11,14 +11,14 @@ import (
 
 // Request Object
 type ImportMqsInstanceTopicRequest struct {
+
 	// 实例ID。
-
 	InstanceId string `json:"instance_id"`
+
 	// 导入topic的模式。 - AddNew：全量新增导入。 - Merge：合并导入。  默认为AddNew模式。
-
 	Mode *ImportMqsInstanceTopicRequestMode `json:"mode,omitempty"`
-	// App应用的前缀。  若加上前缀，导入Topic时会拼接前缀和已有的App应用，形成新的App应用名称，再根据新的App应用名称导入Topic。
 
+	// App应用的前缀。  若加上前缀，导入Topic时会拼接前缀和已有的App应用，形成新的App应用名称，再根据新的App应用名称导入Topic。
 	Prefix *string `json:"prefix,omitempty"`
 
 	Body *ImportMqsInstanceTopicRequestBody `json:"body,omitempty" type:"multipart"`

@@ -8,8 +8,8 @@ import (
 
 // 动态属性的元数据信息
 type ValueInTwinResponseMetadata struct {
-	// 修改时间，UNIX timestamp格式
 
+	// 修改时间，UNIX timestamp格式
 	Timestamp *string `json:"timestamp,omitempty"`
 }
 

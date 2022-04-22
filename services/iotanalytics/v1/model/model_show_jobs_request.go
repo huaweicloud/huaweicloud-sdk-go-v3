@@ -11,17 +11,17 @@ import (
 
 // Request Object
 type ShowJobsRequest struct {
+
 	// 接收数据类型，支持两种接收数据类型：“管道数据”、“资产数据”。管道数据：“实时分析”使用来自“数据管道”的数据进行分析，并可将数据输出到其他云服务。资产数据：“实时分析”使用来自“资产模型”的数据进行分析，并将分析后的结果返回给“资产模型”，丰富资产模型。
-
 	JobInputType *ShowJobsRequestJobInputType `json:"job_input_type,omitempty"`
+
 	// 偏移量，表示从此偏移量开始查询，offset大于等于0
-
 	Offset *int64 `json:"offset,omitempty"`
+
 	// 每页显示的条目数量
-
 	Limit *int32 `json:"limit,omitempty"`
-	// 立即同步作业状态，默认是false
 
+	// 立即同步作业状态，默认是false
 	SyncStatus *bool `json:"sync_status,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // 需要提取音频的参数信息。
 type Parameter struct {
-	// 封装格式。  取值如下： - MP3 - AAC
 
+	// 封装格式。  取值如下： - MP3 - AAC
 	Format *string `json:"format,omitempty"`
 }
 

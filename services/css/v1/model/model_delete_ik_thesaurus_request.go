@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteIkThesaurusRequest struct {
-	// 指定要删除自定义词库的集群ID。
 
+	// 指定要删除自定义词库的集群ID。
 	ClusterId string `json:"cluster_id"`
 }
 

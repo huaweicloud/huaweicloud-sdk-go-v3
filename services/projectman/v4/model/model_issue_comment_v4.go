@@ -7,14 +7,14 @@ import (
 )
 
 type IssueCommentV4 struct {
+
 	// 评论内容
-
 	Comment *string `json:"comment,omitempty"`
+
 	// 评论id
-
 	Id *int32 `json:"id,omitempty"`
-	// 评论时间
 
+	// 评论时间
 	CreatedTime *string `json:"created_time,omitempty"`
 
 	User *CommentUserV4 `json:"user,omitempty"`

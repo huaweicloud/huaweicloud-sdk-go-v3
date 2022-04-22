@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type RestartClusterRequest struct {
-	// 指定待查询的集群ID。
 
+	// 指定待查询的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *RestartClusterReq `json:"body,omitempty"`

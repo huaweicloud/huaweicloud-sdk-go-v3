@@ -7,14 +7,14 @@ import (
 )
 
 type FeatureToggleV2 struct {
+
 	// 特性名称
-
 	Name string `json:"name"`
+
 	// 是否开启特性
-
 	Enable bool `json:"enable"`
-	// 特性参数配置
 
+	// 特性参数配置
 	Config *string `json:"config,omitempty"`
 }
 

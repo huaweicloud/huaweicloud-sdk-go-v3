@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShrinkInstanceNodesRequest struct {
-	// DDM实例ID
 
+	// DDM实例ID
 	InstanceId string `json:"instance_id"`
 
 	Body *ReduceRequest `json:"body,omitempty"`

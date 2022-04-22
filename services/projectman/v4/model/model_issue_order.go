@@ -7,11 +7,11 @@ import (
 )
 
 type IssueOrder struct {
+
 	// 顺序id
-
 	Id *int32 `json:"id,omitempty"`
-	// 顺序值
 
+	// 顺序值
 	Name *string `json:"name,omitempty"`
 }
 

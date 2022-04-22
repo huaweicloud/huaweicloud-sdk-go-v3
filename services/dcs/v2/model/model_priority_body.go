@@ -7,8 +7,8 @@ import (
 )
 
 type PriorityBody struct {
-	// 副本优先级，取值范围是0到100，0为默认禁止倒换。
 
+	// 副本优先级，取值范围是0到100，0为默认禁止倒换。
 	SlavePriorityWeight int32 `json:"slave_priority_weight"`
 }
 

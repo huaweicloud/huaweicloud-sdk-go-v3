@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowAssetModelRequest struct {
-	// 模型ID
 
+	// 模型ID
 	ModelId string `json:"model_id"`
 }
 

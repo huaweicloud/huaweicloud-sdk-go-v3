@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListSubCustomersResponse struct {
-	// 子用户列表
 
+	// 子用户列表
 	SubCustomerInfos *[]SubCutomerInfoV2 `json:"sub_customer_infos,omitempty"`
 	HttpStatusCode   int                 `json:"-"`
 }

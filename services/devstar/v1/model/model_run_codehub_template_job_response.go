@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type RunCodehubTemplateJobResponse struct {
+
 	// 任务id。
-
 	JobId *string `json:"job_id,omitempty"`
-	// 文件列表。
 
+	// 文件列表。
 	FileList       *[]FileTreeNode `json:"file_list,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type ListEngineProductsRequest struct {
+
 	// 消息引擎的类型。
-
 	Engine ListEngineProductsRequestEngine `json:"engine"`
-	// 产品ID。
 
+	// 产品ID。
 	ProductId *string `json:"product_id,omitempty"`
 }
 

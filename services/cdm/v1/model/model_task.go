@@ -8,11 +8,11 @@ import (
 
 // 任务信息
 type Task struct {
+
 	// 任务id
-
 	Id *string `json:"id,omitempty"`
-	// 任务名称
 
+	// 任务名称
 	Name *string `json:"name,omitempty"`
 }
 

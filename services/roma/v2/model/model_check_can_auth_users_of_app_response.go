@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CheckCanAuthUsersOfAppResponse struct {
-	// 候选用户成员列表
 
+	// 候选用户成员列表
 	Users          *[]CandidatesUser `json:"users,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

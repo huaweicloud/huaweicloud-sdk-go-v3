@@ -11,11 +11,11 @@ import (
 
 // 结构化类型。
 type ShowStructTemplateRule struct {
+
 	// 测试
-
 	Param *string `json:"param,omitempty"`
-	// 结构化类型
 
+	// 结构化类型
 	Type *ShowStructTemplateRuleType `json:"type,omitempty"`
 }
 

@@ -7,11 +7,11 @@ import (
 )
 
 type MonthUsed struct {
+
 	// 日期
-
 	Date *string `json:"date,omitempty"`
-	// 使用量
 
+	// 使用量
 	Value *float32 `json:"value,omitempty"`
 }
 

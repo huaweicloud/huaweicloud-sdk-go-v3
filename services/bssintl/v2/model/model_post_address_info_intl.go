@@ -7,17 +7,17 @@ import (
 )
 
 type PostAddressInfoIntl struct {
+
 	// 收件人地址。
-
 	Address *string `json:"address,omitempty"`
+
 	// 收件人。
-
 	Recipients *string `json:"recipients,omitempty"`
+
 	// 收件所在地邮政编码。
-
 	ZipCode *string `json:"zipCode,omitempty"`
-	// 收件人手机号码。
 
+	// 收件人手机号码。
 	MobilePhone *string `json:"mobilePhone,omitempty"`
 }
 

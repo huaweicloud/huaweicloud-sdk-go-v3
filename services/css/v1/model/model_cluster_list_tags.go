@@ -8,11 +8,11 @@ import (
 
 // 集群标签。
 type ClusterListTags struct {
+
 	// 集群标签的key值。
-
 	Key *string `json:"key,omitempty"`
-	// 集群标签的value值。
 
+	// 集群标签的value值。
 	Value *string `json:"value,omitempty"`
 }
 

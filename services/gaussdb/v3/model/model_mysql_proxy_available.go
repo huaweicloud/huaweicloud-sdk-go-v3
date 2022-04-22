@@ -7,11 +7,11 @@ import (
 )
 
 type MysqlProxyAvailable struct {
+
 	// 可用区编码。
-
 	Code *string `json:"code,omitempty"`
-	// 可用区描述。
 
+	// 可用区描述。
 	Description *string `json:"description,omitempty"`
 }
 

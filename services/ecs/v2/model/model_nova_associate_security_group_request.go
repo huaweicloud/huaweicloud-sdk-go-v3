@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type NovaAssociateSecurityGroupRequest struct {
-	// 弹性云服务器ID。
 
+	// 弹性云服务器ID。
 	ServerId string `json:"server_id"`
 
 	Body *NovaAssociateSecurityGroupRequestBody `json:"body,omitempty"`

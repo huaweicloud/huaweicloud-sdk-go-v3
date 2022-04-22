@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type EncryptDatakeyResponse struct {
+
 	// 密钥ID
-
 	KeyId *string `json:"key_id,omitempty"`
+
 	// DEK密文16进制，两位表示1byte。
-
 	CipherText *string `json:"cipher_text,omitempty"`
-	// DEK字节长度。
 
+	// DEK字节长度。
 	DatakeyLength  *string `json:"datakey_length,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

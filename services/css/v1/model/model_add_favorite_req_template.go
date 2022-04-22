@@ -7,11 +7,11 @@ import (
 )
 
 type AddFavoriteReqTemplate struct {
+
 	// 模板名称。
-
 	TemplateName string `json:"templateName"`
-	// 模板描述。
 
+	// 模板描述。
 	Desc *string `json:"desc,omitempty"`
 }
 

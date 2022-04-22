@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type BatchPublishOrOfflineApiV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// - online：发布 - offline：下线
 
+	// - online：发布 - offline：下线
 	Action string `json:"action"`
 
 	Body *ApiBatchPublish `json:"body,omitempty"`

@@ -10,11 +10,11 @@ import (
 )
 
 type JobSubmitResult struct {
+
 	// 作业ID。
-
 	JobId *string `json:"job_id,omitempty"`
-	// 作业提交状态。 枚举值： - COMPLETE：作业提交完成。 - FAILED：作业提交失败。
 
+	// 作业提交状态。 枚举值： - COMPLETE：作业提交完成。 - FAILED：作业提交失败。
 	State *JobSubmitResultState `json:"state,omitempty"`
 }
 

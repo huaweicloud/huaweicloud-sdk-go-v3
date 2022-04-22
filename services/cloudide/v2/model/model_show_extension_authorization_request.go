@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ShowExtensionAuthorizationRequest struct {
+
 	// 插件版本
-
 	ExtensionVersion string `json:"extension_version"`
+
 	// 插件标识(发布者.插件名)
-
 	Identifier string `json:"identifier"`
-	// CloudIDE实例ID
 
+	// CloudIDE实例ID
 	InstanceId string `json:"instance_id"`
 }
 

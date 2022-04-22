@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowAssetNewRequest struct {
+
 	// 资产ID
-
 	AssetId string `json:"asset_id"`
-	// SKETCH：草稿态；RELEASE：发布态
 
+	// SKETCH：草稿态；RELEASE：发布态
 	Type string `json:"type"`
 }
 

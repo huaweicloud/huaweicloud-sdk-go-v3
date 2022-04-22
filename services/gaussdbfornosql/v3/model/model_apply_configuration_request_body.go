@@ -7,8 +7,8 @@ import (
 )
 
 type ApplyConfigurationRequestBody struct {
-	// 实例ID列表对象。
 
+	// 实例ID列表对象。
 	InstanceIds []string `json:"instance_ids"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListFunctionAsyncInvocationsResponse struct {
-	// 异步调用记录列表。
 
+	// 异步调用记录列表。
 	Invocations    *[]ListFunctionAsyncInvocationsResult `json:"invocations,omitempty"`
 	HttpStatusCode int                                   `json:"-"`
 }

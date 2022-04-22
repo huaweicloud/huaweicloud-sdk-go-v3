@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListVersionAliasesResponse struct {
-	// 函数版本别名列表
 
+	// 函数版本别名列表
 	Body           *[]ListVersionAliasResult `json:"body,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

@@ -8,11 +8,11 @@ import (
 
 // 音素的发音打分
 type PhonemePronunciation struct {
-	//
 
+	//
 	Score float32 `json:"score"`
-	//
 
+	//
 	Gop float32 `json:"gop"`
 }
 

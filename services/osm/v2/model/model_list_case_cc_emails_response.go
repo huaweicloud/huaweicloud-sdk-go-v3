@@ -9,8 +9,8 @@ import (
 // Response Object
 type ListCaseCcEmailsResponse struct {
 	CcEmailInfo *IncidentOrderCcEmailInfoV2 `json:"cc_email_info,omitempty"`
-	// 抄送邮箱信息
 
+	// 抄送邮箱信息
 	McEmailInfos   *[]string `json:"mc_email_infos,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

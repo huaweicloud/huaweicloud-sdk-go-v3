@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateDeviceTemplateByIdRequest struct {
+
 	// 铂金版实例ID，专业版实例为空值
-
 	IefInstanceId *string `json:"ief-instance-id,omitempty"`
-	// 设备模板ID
 
+	// 设备模板ID
 	DeviceTemplateId string `json:"device_template_id"`
 
 	Body *DeviceTemplateUpdate `json:"body,omitempty"`

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowJudgementDetailRequest struct {
-	// 判题任务ID
 
+	// 判题任务ID
 	JudgementId string `json:"judgement_id"`
 }
 

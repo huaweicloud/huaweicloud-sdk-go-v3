@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteSecurityPolicyRequest struct {
-	// 自定义安全策略的ID。
 
+	// 自定义安全策略的ID。
 	SecurityPolicyId string `json:"security_policy_id"`
 }
 

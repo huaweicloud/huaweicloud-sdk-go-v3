@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListTransfersResponse struct {
-	// 查询日志转储信息数组
 
+	// 查询日志转储信息数组
 	LogTransfers   *[]CreateTransferResponseBody `json:"log_transfers,omitempty"`
 	HttpStatusCode int                           `json:"-"`
 }

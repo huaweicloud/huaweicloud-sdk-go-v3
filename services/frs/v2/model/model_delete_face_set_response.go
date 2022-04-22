@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteFaceSetResponse struct {
-	// 人脸库名称。 调用失败时无此字段。
 
+	// 人脸库名称。 调用失败时无此字段。
 	FaceSetName    *string `json:"face_set_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateInstanceAutoCreateTopicRequest struct {
-	// 实例ID。
 
+	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
 	Body *UpdateInstanceAutoCreateTopicReq `json:"body,omitempty"`

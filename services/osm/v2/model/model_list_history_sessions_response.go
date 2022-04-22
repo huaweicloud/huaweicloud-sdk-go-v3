@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListHistorySessionsResponse struct {
+
 	// 总记录数
-
 	TotalCount *int32 `json:"total_count,omitempty"`
-	// 会话列表
 
+	// 会话列表
 	SessionList    *[]OperateHistorySession `json:"session_list,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }

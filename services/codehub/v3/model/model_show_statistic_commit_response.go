@@ -9,11 +9,11 @@ import (
 // Response Object
 type ShowStatisticCommitResponse struct {
 	Error *Error `json:"error,omitempty"`
+
 	// 代码增加和删除的行数
-
 	Result *[]CommitStatistic `json:"result,omitempty"`
-	// 响应状态
 
+	// 响应状态
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

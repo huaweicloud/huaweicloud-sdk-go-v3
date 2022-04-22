@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ListNotificationRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 应用ID
 
+	// 应用ID
 	AppId *string `json:"app_id,omitempty"`
 }
 

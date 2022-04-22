@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type CreateRedislogDownloadLinkRequest struct {
+
 	// 实例ID。
-
 	InstanceId string `json:"instance_id"`
-	// 日志的唯一ID，来自于查询运行日志查询接口
 
+	// 日志的唯一ID，来自于查询运行日志查询接口
 	Id string `json:"id"`
 }
 

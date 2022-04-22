@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateVocabularyResponse struct {
-	// 调用成功返回热词表ID，调用失败时无此字段。
 
+	// 调用成功返回热词表ID，调用失败时无此字段。
 	VocabularyId   *string `json:"vocabulary_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

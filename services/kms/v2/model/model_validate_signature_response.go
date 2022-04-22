@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ValidateSignatureResponse struct {
+
 	// 密钥ID。
-
 	KeyId *string `json:"key_id,omitempty"`
-	// 签名验证合法性，“true”表示验证签名合法，“false”表示验证签名非法。
 
+	// 签名验证合法性，“true”表示验证签名合法，“false”表示验证签名非法。
 	SignatureVaild *bool `json:"signature_vaild,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }

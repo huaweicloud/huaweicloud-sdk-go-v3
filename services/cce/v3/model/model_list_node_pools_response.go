@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ListNodePoolsResponse struct {
+
 	// API type. The value is fixed to List.
-
 	Kind *string `json:"kind,omitempty"`
+
 	// API version. The value is fixed to v3.
-
 	ApiVersion *string `json:"apiVersion,omitempty"`
-	// /
 
+	// /
 	Items          *[]NodePool `json:"items,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

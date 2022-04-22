@@ -8,11 +8,11 @@ import (
 
 // 创建日志流参数。
 type CreateLogStreamParams struct {
+
 	// 需要创建的日志流名称。
-
 	LogStreamName string `json:"log_stream_name"`
-	// 企业项目名称。
 
+	// 企业项目名称。
 	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
 }
 

@@ -7,14 +7,14 @@ import (
 )
 
 type TypeProperties struct {
+
 	// Kill chain事件分类，仅当business为attack有效
-
 	Killchain *string `json:"killchain,omitempty"`
+
 	// Mitre Array 事件分类，仅当business为attack有效
-
 	Ttps *string `json:"ttps,omitempty"`
-	// 影响，适用全部类型
 
+	// 影响，适用全部类型
 	Effects *string `json:"effects,omitempty"`
 }
 

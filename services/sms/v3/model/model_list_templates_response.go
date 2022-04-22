@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListTemplatesResponse struct {
+
 	// 模板个数
-
 	Count *int32 `json:"count,omitempty"`
-	// 模板信息
 
+	// 模板信息
 	Templates      *[]TemplateResponse `json:"templates,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

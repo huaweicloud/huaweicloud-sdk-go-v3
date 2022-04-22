@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListClustersTagsResponse struct {
-	// 集群的标签列表。
 
+	// 集群的标签列表。
 	Tags           *[]ShowAllTagsTagsResp `json:"tags,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

@@ -11,14 +11,14 @@ import (
 
 // Request Object
 type ListInnodbLocksRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
+
 	// 数据库用户ID
-
 	DbUserId string `json:"db_user_id"`
-	// 语言
 
+	// 语言
 	XLanguage *ListInnodbLocksRequestXLanguage `json:"X-Language,omitempty"`
 }
 

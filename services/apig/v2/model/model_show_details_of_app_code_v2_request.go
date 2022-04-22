@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ShowDetailsOfAppCodeV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
+
 	// 应用编号
-
 	AppId string `json:"app_id"`
-	// APP Code编号
 
+	// APP Code编号
 	AppCodeId string `json:"app_code_id"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowNewTaskStatusRequest struct {
-	// 任务ID（非负整数）的字符串
 
+	// 任务ID（非负整数）的字符串
 	TaskId *string `json:"task_id,omitempty"`
 }
 

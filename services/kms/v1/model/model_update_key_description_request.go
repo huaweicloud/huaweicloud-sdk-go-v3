@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateKeyDescriptionRequest struct {
-	// API版本号
 
+	// API版本号
 	VersionId string `json:"version_id"`
 
 	Body *UpdateKeyDescriptionRequestBody `json:"body,omitempty"`

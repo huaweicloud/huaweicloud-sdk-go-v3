@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type UpdateIaConfigRequest struct {
+
 	// 边缘节点ID
-
 	NodeId string `json:"node_id"`
+
 	// 边侧第三方应用的模块ID
-
 	IaId string `json:"ia_id"`
-	// 配置ID
 
+	// 配置ID
 	ConfigId string `json:"config_id"`
 
 	Body *UpdateIaConfigRequestDto `json:"body,omitempty"`

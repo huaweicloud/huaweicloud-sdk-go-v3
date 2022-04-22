@@ -7,17 +7,17 @@ import (
 )
 
 type UpdateTopicAccessPolicyTopicsObject struct {
+
 	// topic名称。
-
 	Name string `json:"name"`
+
 	// 权限列表。
-
 	Policies []UpdateTopicAccessPolicyPoliciesObject `json:"policies"`
+
 	// 描述。
-
 	Description *string `json:"description,omitempty"`
-	// 敏感字段。
 
+	// 敏感字段。
 	SensitiveWord *string `json:"sensitive_word,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListFreeResourceUsagesResponse struct {
-	// 资源套餐内的资源项信息（资源项ID级的详情），具体参见表2。
 
+	// 资源套餐内的资源项信息（资源项ID级的详情），具体参见表2。
 	FreeResources  *[]FreeResourceDetail `json:"free_resources,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

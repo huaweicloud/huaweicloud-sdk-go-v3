@@ -8,8 +8,8 @@ import (
 
 // 删除会场消息体。
 type RestBulkDelAttendReqBody struct {
-	// 待删除列表
 
+	// 待删除列表
 	BulkDelAttendInfo []DelAttendInfo `json:"bulkDelAttendInfo"`
 }
 

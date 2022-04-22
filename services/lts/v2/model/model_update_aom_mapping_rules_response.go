@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type UpdateAomMappingRulesResponse struct {
+
 	// 项目id
-
 	ProjectId *string `json:"project_id,omitempty"`
+
 	// 接入规则名称
-
 	RuleName *string `json:"rule_name,omitempty"`
-	// 接入规则id
 
+	// 接入规则id
 	RuleId *string `json:"rule_id,omitempty"`
 
 	RuleInfo       *AomMappingRuleInfo `json:"rule_info,omitempty"`

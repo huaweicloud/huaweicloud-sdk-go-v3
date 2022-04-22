@@ -11,29 +11,29 @@ import (
 
 // Request Object
 type ListSpaceAnalysisRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
+
 	// 语言
-
 	XLanguage *string `json:"X-Language,omitempty"`
+
 	// 对象类型
-
 	ObjectType ListSpaceAnalysisRequestObjectType `json:"object_type"`
+
 	// 数据库ID
-
 	DatabaseId *string `json:"database_id,omitempty"`
+
 	// 偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。offset必须是limit的整数倍。
-
 	Offset *string `json:"offset,omitempty"`
+
 	// 查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
-
 	Limit *string `json:"limit,omitempty"`
+
 	// 是否返回实例级别数据，取值：true或者false
-
 	ShowInstanceInfo *string `json:"show_instance_info,omitempty"`
-	// 引擎类型
 
+	// 引擎类型
 	DatastoreType ListSpaceAnalysisRequestDatastoreType `json:"datastore_type"`
 }
 

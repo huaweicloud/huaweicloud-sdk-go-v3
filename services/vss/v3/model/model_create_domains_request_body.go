@@ -7,11 +7,11 @@ import (
 )
 
 type CreateDomainsRequestBody struct {
+
 	// 域名
-
 	DomainName string `json:"domain_name"`
-	// 域名的别名
 
+	// 域名的别名
 	Alias string `json:"alias"`
 }
 

@@ -11,14 +11,14 @@ import (
 
 // 数据库信息。
 type Datastore struct {
+
 	// 数据库版本类型。取值“DDS-Community”。
-
 	Type DatastoreType `json:"type"`
+
 	// 数据库版本。支持3.4、3.2和4.0版本。取值为“3.4”、“3.2”或“4.0”。
-
 	Version string `json:"version"`
-	// 存储引擎。支持WiredTiger存储引擎。取值为“wiredTiger”。
 
+	// 存储引擎。支持WiredTiger存储引擎。取值为“wiredTiger”。
 	StorageEngine DatastoreStorageEngine `json:"storage_engine"`
 }
 

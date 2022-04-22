@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteSessionRequest struct {
+
 	// 机器人标识符。
-
 	QabotId string `json:"qabot_id"`
-	// 会话标识符。
 
+	// 会话标识符。
 	SessionId string `json:"session_id"`
 }
 

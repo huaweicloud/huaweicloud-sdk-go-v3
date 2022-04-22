@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type CreateInstanceResponse struct {
+
 	// 应用组件实例ID。
-
 	InstanceId *string `json:"instance_id,omitempty"`
-	// Job ID，用于查询创建任务信息。
 
+	// Job ID，用于查询创建任务信息。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

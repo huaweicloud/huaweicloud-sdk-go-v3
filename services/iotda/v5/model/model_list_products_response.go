@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListProductsResponse struct {
-	// 产品信息列表。
 
+	// 产品信息列表。
 	Products *[]ProductSummary `json:"products,omitempty"`
 
 	Page           *Page `json:"page,omitempty"`

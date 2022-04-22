@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type BatchCreateAndDeleteVaultTagsRequest struct {
-	// 资源id
 
+	// 资源id
 	VaultId string `json:"vault_id"`
 
 	Body *BulkCreateAndDeleteVaultTagsReq `json:"body,omitempty"`

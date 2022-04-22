@@ -7,8 +7,8 @@ import (
 )
 
 type AssetExportRequestApps struct {
-	// 应用ID
 
+	// 应用ID
 	Id *string `json:"id,omitempty"`
 }
 

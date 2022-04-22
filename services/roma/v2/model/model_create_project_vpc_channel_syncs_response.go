@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateProjectVpcChannelSyncsResponse struct {
-	// 项目VPC通道列表
 
+	// 项目VPC通道列表
 	ProjectVpcChannels *[]ProjectVpcChannelInfo `json:"project_vpc_channels,omitempty"`
 	HttpStatusCode     int                      `json:"-"`
 }

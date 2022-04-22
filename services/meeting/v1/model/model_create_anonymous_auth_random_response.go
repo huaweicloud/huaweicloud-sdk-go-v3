@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type CreateAnonymousAuthRandomResponse struct {
+
 	// 下一跳URL。
-
 	SiteUrl *string `json:"siteUrl,omitempty"`
-	// 鉴权随机数。
 
+	// 鉴权随机数。
 	Random         *string `json:"random,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

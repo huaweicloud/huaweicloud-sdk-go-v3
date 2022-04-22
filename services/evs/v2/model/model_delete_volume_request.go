@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteVolumeRequest struct {
-	// 云硬盘ID。
 
+	// 云硬盘ID。
 	VolumeId string `json:"volume_id"`
 }
 

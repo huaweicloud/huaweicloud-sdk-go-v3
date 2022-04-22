@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListSingleStreamFramerateResponse struct {
-	// 用量详情。
 
+	// 用量详情。
 	FramerateInfoList *[]V2FramerateInfo `json:"framerate_info_list,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

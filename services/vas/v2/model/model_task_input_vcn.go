@@ -8,17 +8,17 @@ import (
 
 // VCN服务器信息，仅输入类型为vcn时需填且必填。
 type TaskInputVcn struct {
+
 	// VCN服务器的IP地址，仅输入类型为vcn时需填且必填。
-
 	Ip string `json:"ip"`
+
 	// VCN服务器的端口号，仅输入类型为vcn时需填且必填。
-
 	Port int32 `json:"port"`
+
 	// VCN服务器的账号名，仅输入类型为vcn时需填且必填。
-
 	Username string `json:"username"`
-	// VCN服务器的与账号对应的密码，仅输入类型为vcn时需填且必填。
 
+	// VCN服务器的与账号对应的密码，仅输入类型为vcn时需填且必填。
 	Password string `json:"password"`
 }
 

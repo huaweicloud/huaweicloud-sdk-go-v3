@@ -8,8 +8,8 @@ import (
 
 // 创建边缘模块请求结构体
 type UpdateEdgeModuleReqDto struct {
-	// 边缘应用版本
 
+	// 边缘应用版本
 	AppVersion string `json:"app_version"`
 }
 

@@ -19,7 +19,12 @@ func DdsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//扩容指定集群实例的节点数量。
+// 扩容集群实例的节点数量
+//
+// 扩容指定集群实例的节点数量。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) AddShardingNode(request *model.AddShardingNodeRequest) (*model.AddShardingNodeResponse, error) {
 	requestDef := GenReqDefForAddShardingNode()
 
@@ -30,7 +35,12 @@ func (c *DdsClient) AddShardingNode(request *model.AddShardingNodeRequest) (*mod
 	}
 }
 
-//为实例下的节点绑定弹性公网IP。
+// 绑定弹性公网IP
+//
+// 为实例下的节点绑定弹性公网IP。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) AttachEip(request *model.AttachEipRequest) (*model.AttachEipResponse, error) {
 	requestDef := GenReqDefForAttachEip()
 
@@ -41,7 +51,12 @@ func (c *DdsClient) AttachEip(request *model.AttachEipRequest) (*model.AttachEip
 	}
 }
 
-//修改实例的内网地址
+// 修改实例内网地址
+//
+// 修改实例的内网地址
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) AttachInternalIp(request *model.AttachInternalIpRequest) (*model.AttachInternalIpResponse, error) {
 	requestDef := GenReqDefForAttachInternalIp()
 
@@ -52,7 +67,12 @@ func (c *DdsClient) AttachInternalIp(request *model.AttachInternalIpRequest) (*m
 	}
 }
 
-//批量添加或删除指定实例的标签。
+// 批量添加或删除资源标签
+//
+// 批量添加或删除指定实例的标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) BatchTagAction(request *model.BatchTagActionRequest) (*model.BatchTagActionResponse, error) {
 	requestDef := GenReqDefForBatchTagAction()
 
@@ -63,7 +83,12 @@ func (c *DdsClient) BatchTagAction(request *model.BatchTagActionRequest) (*model
 	}
 }
 
-//解绑实例下节点已经绑定的弹性公网IP。
+// 解绑弹性公网IP
+//
+// 解绑实例下节点已经绑定的弹性公网IP。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) CancelEip(request *model.CancelEipRequest) (*model.CancelEipResponse, error) {
 	requestDef := GenReqDefForCancelEip()
 
@@ -74,7 +99,12 @@ func (c *DdsClient) CancelEip(request *model.CancelEipRequest) (*model.CancelEip
 	}
 }
 
-//检查数据库密码。
+// 检查数据库密码
+//
+// 检查数据库密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) CheckPassword(request *model.CheckPasswordRequest) (*model.CheckPasswordResponse, error) {
 	requestDef := GenReqDefForCheckPassword()
 
@@ -85,7 +115,12 @@ func (c *DdsClient) CheckPassword(request *model.CheckPasswordRequest) (*model.C
 	}
 }
 
-//创建数据库角色。
+// 创建数据库角色
+//
+// 创建数据库角色。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) CreateDatabaseRole(request *model.CreateDatabaseRoleRequest) (*model.CreateDatabaseRoleResponse, error) {
 	requestDef := GenReqDefForCreateDatabaseRole()
 
@@ -96,7 +131,12 @@ func (c *DdsClient) CreateDatabaseRole(request *model.CreateDatabaseRoleRequest)
 	}
 }
 
-//创建数据库用户。
+// 创建数据库用户
+//
+// 创建数据库用户。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) CreateDatabaseUser(request *model.CreateDatabaseUserRequest) (*model.CreateDatabaseUserResponse, error) {
 	requestDef := GenReqDefForCreateDatabaseUser()
 
@@ -107,7 +147,12 @@ func (c *DdsClient) CreateDatabaseUser(request *model.CreateDatabaseUserRequest)
 	}
 }
 
-//创建文档数据库实例，包括集群实例、副本集实例、以及单节点实例。
+// 创建实例
+//
+// 创建文档数据库实例，包括集群实例、副本集实例、以及单节点实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
 	requestDef := GenReqDefForCreateInstance()
 
@@ -118,7 +163,12 @@ func (c *DdsClient) CreateInstance(request *model.CreateInstanceRequest) (*model
 	}
 }
 
-//打开集群的Shard/Config IP开关
+// 打开集群的Shard/Config IP开关
+//
+// 打开集群的Shard/Config IP开关
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) CreateIp(request *model.CreateIpRequest) (*model.CreateIpResponse, error) {
 	requestDef := GenReqDefForCreateIp()
 
@@ -129,7 +179,12 @@ func (c *DdsClient) CreateIp(request *model.CreateIpRequest) (*model.CreateIpRes
 	}
 }
 
-//创建数据库实例的手动备份。
+// 创建手动备份
+//
+// 创建数据库实例的手动备份。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) CreateManualBackup(request *model.CreateManualBackupRequest) (*model.CreateManualBackupResponse, error) {
 	requestDef := GenReqDefForCreateManualBackup()
 
@@ -140,7 +195,12 @@ func (c *DdsClient) CreateManualBackup(request *model.CreateManualBackupRequest)
 	}
 }
 
-//删除数据库角色。
+// 删除数据库角色
+//
+// 删除数据库角色。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) DeleteDatabaseRole(request *model.DeleteDatabaseRoleRequest) (*model.DeleteDatabaseRoleResponse, error) {
 	requestDef := GenReqDefForDeleteDatabaseRole()
 
@@ -151,7 +211,12 @@ func (c *DdsClient) DeleteDatabaseRole(request *model.DeleteDatabaseRoleRequest)
 	}
 }
 
-//删除数据库用户。
+// 删除数据库用户
+//
+// 删除数据库用户。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) DeleteDatabaseUser(request *model.DeleteDatabaseUserRequest) (*model.DeleteDatabaseUserResponse, error) {
 	requestDef := GenReqDefForDeleteDatabaseUser()
 
@@ -162,7 +227,12 @@ func (c *DdsClient) DeleteDatabaseUser(request *model.DeleteDatabaseUserRequest)
 	}
 }
 
-//删除数据库实例。
+// 删除实例
+//
+// 删除数据库实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteInstance()
 
@@ -173,7 +243,12 @@ func (c *DdsClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model
 	}
 }
 
-//删除数据库实例的手动备份。
+// 删除手动备份
+//
+// 删除数据库实例的手动备份。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) DeleteManualBackup(request *model.DeleteManualBackupRequest) (*model.DeleteManualBackupResponse, error) {
 	requestDef := GenReqDefForDeleteManualBackup()
 
@@ -184,7 +259,12 @@ func (c *DdsClient) DeleteManualBackup(request *model.DeleteManualBackupRequest)
 	}
 }
 
-//终结实例节点会话。
+// 终结实例节点会话
+//
+// 终结实例节点会话。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) DeleteSession(request *model.DeleteSessionRequest) (*model.DeleteSessionResponse, error) {
 	requestDef := GenReqDefForDeleteSession()
 
@@ -195,7 +275,12 @@ func (c *DdsClient) DeleteSession(request *model.DeleteSessionRequest) (*model.D
 	}
 }
 
-//获取错误日志下载链接。
+// 获取错误日志下载链接
+//
+// 获取错误日志下载链接。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) DownloadErrorlog(request *model.DownloadErrorlogRequest) (*model.DownloadErrorlogResponse, error) {
 	requestDef := GenReqDefForDownloadErrorlog()
 
@@ -206,7 +291,12 @@ func (c *DdsClient) DownloadErrorlog(request *model.DownloadErrorlogRequest) (*m
 	}
 }
 
-//获取慢日志下载链接。
+// 获取慢日志下载链接
+//
+// 获取慢日志下载链接。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) DownloadSlowlog(request *model.DownloadSlowlogRequest) (*model.DownloadSlowlogResponse, error) {
 	requestDef := GenReqDefForDownloadSlowlog()
 
@@ -217,7 +307,12 @@ func (c *DdsClient) DownloadSlowlog(request *model.DownloadSlowlogRequest) (*mod
 	}
 }
 
-//获取审计日志下载链接。
+// 获取审计日志下载链接
+//
+// 获取审计日志下载链接。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListAuditlogLinks(request *model.ListAuditlogLinksRequest) (*model.ListAuditlogLinksResponse, error) {
 	requestDef := GenReqDefForListAuditlogLinks()
 
@@ -228,7 +323,12 @@ func (c *DdsClient) ListAuditlogLinks(request *model.ListAuditlogLinksRequest) (
 	}
 }
 
-//获取审计日志列表。
+// 获取审计日志列表
+//
+// 获取审计日志列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListAuditlogs(request *model.ListAuditlogsRequest) (*model.ListAuditlogsResponse, error) {
 	requestDef := GenReqDefForListAuditlogs()
 
@@ -239,7 +339,12 @@ func (c *DdsClient) ListAuditlogs(request *model.ListAuditlogsRequest) (*model.L
 	}
 }
 
-//查询实例可迁移到的可用区。
+// 查询实例可迁移到的可用区
+//
+// 查询实例可迁移到的可用区。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListAz2Migrate(request *model.ListAz2MigrateRequest) (*model.ListAz2MigrateResponse, error) {
 	requestDef := GenReqDefForListAz2Migrate()
 
@@ -250,7 +355,12 @@ func (c *DdsClient) ListAz2Migrate(request *model.ListAz2MigrateRequest) (*model
 	}
 }
 
-//根据指定条件查询备份列表。
+// 查询备份列表
+//
+// 根据指定条件查询备份列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListBackups(request *model.ListBackupsRequest) (*model.ListBackupsResponse, error) {
 	requestDef := GenReqDefForListBackups()
 
@@ -261,7 +371,12 @@ func (c *DdsClient) ListBackups(request *model.ListBackupsRequest) (*model.ListB
 	}
 }
 
-//查询数据库角色列表。
+// 查询数据库角色列表
+//
+// 查询数据库角色列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListDatabaseRoles(request *model.ListDatabaseRolesRequest) (*model.ListDatabaseRolesResponse, error) {
 	requestDef := GenReqDefForListDatabaseRoles()
 
@@ -272,7 +387,12 @@ func (c *DdsClient) ListDatabaseRoles(request *model.ListDatabaseRolesRequest) (
 	}
 }
 
-//查询数据库用户列表。
+// 查询数据库用户列表
+//
+// 查询数据库用户列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListDatabaseUsers(request *model.ListDatabaseUsersRequest) (*model.ListDatabaseUsersResponse, error) {
 	requestDef := GenReqDefForListDatabaseUsers()
 
@@ -283,7 +403,12 @@ func (c *DdsClient) ListDatabaseUsers(request *model.ListDatabaseUsersRequest) (
 	}
 }
 
-//查询指定实例类型的数据库版本信息。
+// 查询数据库版本信息
+//
+// 查询指定实例类型的数据库版本信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListDatastoreVersions(request *model.ListDatastoreVersionsRequest) (*model.ListDatastoreVersionsResponse, error) {
 	requestDef := GenReqDefForListDatastoreVersions()
 
@@ -294,7 +419,12 @@ func (c *DdsClient) ListDatastoreVersions(request *model.ListDatastoreVersionsRe
 	}
 }
 
-//查询数据库错误信息。
+// 查询数据库错误日志
+//
+// 查询数据库错误信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListErrorLogs(request *model.ListErrorLogsRequest) (*model.ListErrorLogsResponse, error) {
 	requestDef := GenReqDefForListErrorLogs()
 
@@ -305,7 +435,12 @@ func (c *DdsClient) ListErrorLogs(request *model.ListErrorLogsRequest) (*model.L
 	}
 }
 
-//查询指定条件下的实例规格信息。
+// 查询数据库规格
+//
+// 查询指定条件下的实例规格信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListFlavorInfos(request *model.ListFlavorInfosRequest) (*model.ListFlavorInfosResponse, error) {
 	requestDef := GenReqDefForListFlavorInfos()
 
@@ -316,7 +451,12 @@ func (c *DdsClient) ListFlavorInfos(request *model.ListFlavorInfosRequest) (*mod
 	}
 }
 
-//查询指定条件下的所有实例规格信息。
+// 查询所有实例规格信息
+//
+// 查询指定条件下的所有实例规格信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
 
@@ -327,7 +467,12 @@ func (c *DdsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 	}
 }
 
-//查询指定实例的标签信息。
+// 查询资源标签
+//
+// 查询指定实例的标签信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListInstanceTags(request *model.ListInstanceTagsRequest) (*model.ListInstanceTagsResponse, error) {
 	requestDef := GenReqDefForListInstanceTags()
 
@@ -338,7 +483,12 @@ func (c *DdsClient) ListInstanceTags(request *model.ListInstanceTagsRequest) (*m
 	}
 }
 
-//根据指定条件查询实例列表和详情。
+// 查询实例列表和详情
+//
+// 根据指定条件查询实例列表和详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
 	requestDef := GenReqDefForListInstances()
 
@@ -349,7 +499,12 @@ func (c *DdsClient) ListInstances(request *model.ListInstancesRequest) (*model.L
 	}
 }
 
-//根据标签查询指定的数据库实例。
+// 查询资源实例
+//
+// 根据标签查询指定的数据库实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListInstancesByTags(request *model.ListInstancesByTagsRequest) (*model.ListInstancesByTagsResponse, error) {
 	requestDef := GenReqDefForListInstancesByTags()
 
@@ -360,7 +515,12 @@ func (c *DdsClient) ListInstancesByTags(request *model.ListInstancesByTagsReques
 	}
 }
 
-//查询指定project ID下实例的所有标签集合。
+// 查询项目标签
+//
+// 查询指定project ID下实例的所有标签集合。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
 	requestDef := GenReqDefForListProjectTags()
 
@@ -371,7 +531,12 @@ func (c *DdsClient) ListProjectTags(request *model.ListProjectTagsRequest) (*mod
 	}
 }
 
-//获取可恢复的数据库集合列表。
+// 获取可恢复的数据库集合列表
+//
+// 获取可恢复的数据库集合列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListRestoreCollections(request *model.ListRestoreCollectionsRequest) (*model.ListRestoreCollectionsResponse, error) {
 	requestDef := GenReqDefForListRestoreCollections()
 
@@ -382,7 +547,12 @@ func (c *DdsClient) ListRestoreCollections(request *model.ListRestoreCollections
 	}
 }
 
-//获取可恢复的数据库列表。
+// 获取可恢复的数据库列表
+//
+// 获取可恢复的数据库列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListRestoreDatabases(request *model.ListRestoreDatabasesRequest) (*model.ListRestoreDatabasesResponse, error) {
 	requestDef := GenReqDefForListRestoreDatabases()
 
@@ -393,7 +563,12 @@ func (c *DdsClient) ListRestoreDatabases(request *model.ListRestoreDatabasesRequ
 	}
 }
 
-//查询实例的可恢复时间段。
+// 查询可恢复的时间段
+//
+// 查询实例的可恢复时间段。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListRestoreTimes(request *model.ListRestoreTimesRequest) (*model.ListRestoreTimesResponse, error) {
 	requestDef := GenReqDefForListRestoreTimes()
 
@@ -404,7 +579,12 @@ func (c *DdsClient) ListRestoreTimes(request *model.ListRestoreTimesRequest) (*m
 	}
 }
 
-//查询实例节点会话。
+// 查询实例节点会话
+//
+// 查询实例节点会话。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListSessions(request *model.ListSessionsRequest) (*model.ListSessionsResponse, error) {
 	requestDef := GenReqDefForListSessions()
 
@@ -415,7 +595,12 @@ func (c *DdsClient) ListSessions(request *model.ListSessionsRequest) (*model.Lis
 	}
 }
 
-//查询数据库慢日志信息。
+// 查询数据库慢日志
+//
+// 查询数据库慢日志信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListSlowLogs(request *model.ListSlowLogsRequest) (*model.ListSlowLogsResponse, error) {
 	requestDef := GenReqDefForListSlowLogs()
 
@@ -426,7 +611,12 @@ func (c *DdsClient) ListSlowLogs(request *model.ListSlowLogsRequest) (*model.Lis
 	}
 }
 
-//查询当前区域下的数据库磁盘类型。
+// 查询数据库磁盘类型
+//
+// 查询当前区域下的数据库磁盘类型。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListStorageType(request *model.ListStorageTypeRequest) (*model.ListStorageTypeResponse, error) {
 	requestDef := GenReqDefForListStorageType()
 
@@ -437,7 +627,12 @@ func (c *DdsClient) ListStorageType(request *model.ListStorageTypeRequest) (*mod
 	}
 }
 
-//实例可用区迁移。
+// 实例可用区迁移
+//
+// 实例可用区迁移。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) MigrateAz(request *model.MigrateAzRequest) (*model.MigrateAzResponse, error) {
 	requestDef := GenReqDefForMigrateAz()
 
@@ -448,7 +643,12 @@ func (c *DdsClient) MigrateAz(request *model.MigrateAzRequest) (*model.MigrateAz
 	}
 }
 
-//修改数据库用户密码。
+// 修改数据库用户密码
+//
+// 修改数据库用户密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ResetPassword(request *model.ResetPasswordRequest) (*model.ResetPasswordResponse, error) {
 	requestDef := GenReqDefForResetPassword()
 
@@ -459,7 +659,12 @@ func (c *DdsClient) ResetPassword(request *model.ResetPasswordRequest) (*model.R
 	}
 }
 
-//变更实例的规格。
+// 变更实例规格
+//
+// 变更实例的规格。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
 	requestDef := GenReqDefForResizeInstance()
 
@@ -470,7 +675,12 @@ func (c *DdsClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model
 	}
 }
 
-//扩容实例相关的存储容量大小。
+// 扩容实例存储容量
+//
+// 扩容实例相关的存储容量大小。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ResizeInstanceVolume(request *model.ResizeInstanceVolumeRequest) (*model.ResizeInstanceVolumeResponse, error) {
 	requestDef := GenReqDefForResizeInstanceVolume()
 
@@ -481,7 +691,12 @@ func (c *DdsClient) ResizeInstanceVolume(request *model.ResizeInstanceVolumeRequ
 	}
 }
 
-//重启实例的数据库服务。
+// 重启实例
+//
+// 重启实例的数据库服务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) RestartInstance(request *model.RestartInstanceRequest) (*model.RestartInstanceResponse, error) {
 	requestDef := GenReqDefForRestartInstance()
 
@@ -492,7 +707,12 @@ func (c *DdsClient) RestartInstance(request *model.RestartInstanceRequest) (*mod
 	}
 }
 
-//恢复到当前实例。
+// 恢复到当前实例
+//
+// 恢复到当前实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) RestoreInstance(request *model.RestoreInstanceRequest) (*model.RestoreInstanceResponse, error) {
 	requestDef := GenReqDefForRestoreInstance()
 
@@ -503,7 +723,12 @@ func (c *DdsClient) RestoreInstance(request *model.RestoreInstanceRequest) (*mod
 	}
 }
 
-//库表级时间点恢复。
+// 库表级时间点恢复
+//
+// 库表级时间点恢复。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) RestoreInstanceFromCollection(request *model.RestoreInstanceFromCollectionRequest) (*model.RestoreInstanceFromCollectionResponse, error) {
 	requestDef := GenReqDefForRestoreInstanceFromCollection()
 
@@ -514,7 +739,12 @@ func (c *DdsClient) RestoreInstanceFromCollection(request *model.RestoreInstance
 	}
 }
 
-//根据备份恢复新实例。
+// 恢复到新实例
+//
+// 根据备份恢复新实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) RestoreNewInstance(request *model.RestoreNewInstanceRequest) (*model.RestoreNewInstanceResponse, error) {
 	requestDef := GenReqDefForRestoreNewInstance()
 
@@ -525,7 +755,12 @@ func (c *DdsClient) RestoreNewInstance(request *model.RestoreNewInstanceRequest)
 	}
 }
 
-//设置审计日志策略。
+// 设置审计日志策略
+//
+// 设置审计日志策略。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) SetAuditlogPolicy(request *model.SetAuditlogPolicyRequest) (*model.SetAuditlogPolicyResponse, error) {
 	requestDef := GenReqDefForSetAuditlogPolicy()
 
@@ -536,7 +771,12 @@ func (c *DdsClient) SetAuditlogPolicy(request *model.SetAuditlogPolicyRequest) (
 	}
 }
 
-//设置自动备份策略。
+// 设置自动备份策略
+//
+// 设置自动备份策略。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) SetBackupPolicy(request *model.SetBackupPolicyRequest) (*model.SetBackupPolicyResponse, error) {
 	requestDef := GenReqDefForSetBackupPolicy()
 
@@ -547,7 +787,12 @@ func (c *DdsClient) SetBackupPolicy(request *model.SetBackupPolicyRequest) (*mod
 	}
 }
 
-//设置集群均衡开关。
+// 设置集群均衡开关
+//
+// 设置集群均衡开关。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) SetBalancerSwitch(request *model.SetBalancerSwitchRequest) (*model.SetBalancerSwitchResponse, error) {
 	requestDef := GenReqDefForSetBalancerSwitch()
 
@@ -558,7 +803,12 @@ func (c *DdsClient) SetBalancerSwitch(request *model.SetBalancerSwitchRequest) (
 	}
 }
 
-//设置集群均衡活动时间窗。
+// 设置集群均衡活动时间窗
+//
+// 设置集群均衡活动时间窗。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) SetBalancerWindow(request *model.SetBalancerWindowRequest) (*model.SetBalancerWindowResponse, error) {
 	requestDef := GenReqDefForSetBalancerWindow()
 
@@ -569,7 +819,12 @@ func (c *DdsClient) SetBalancerWindow(request *model.SetBalancerWindowRequest) (
 	}
 }
 
-//查询审计日志策略。
+// 查询审计日志策略
+//
+// 查询审计日志策略。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ShowAuditlogPolicy(request *model.ShowAuditlogPolicyRequest) (*model.ShowAuditlogPolicyResponse, error) {
 	requestDef := GenReqDefForShowAuditlogPolicy()
 
@@ -580,7 +835,12 @@ func (c *DdsClient) ShowAuditlogPolicy(request *model.ShowAuditlogPolicyRequest)
 	}
 }
 
-//获取备份下载链接。
+// 获取备份下载链接
+//
+// 获取备份下载链接。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ShowBackupDownloadLink(request *model.ShowBackupDownloadLinkRequest) (*model.ShowBackupDownloadLinkResponse, error) {
 	requestDef := GenReqDefForShowBackupDownloadLink()
 
@@ -591,7 +851,12 @@ func (c *DdsClient) ShowBackupDownloadLink(request *model.ShowBackupDownloadLink
 	}
 }
 
-//查询自动备份策略。
+// 查询自动备份策略
+//
+// 查询自动备份策略。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ShowBackupPolicy(request *model.ShowBackupPolicyRequest) (*model.ShowBackupPolicyResponse, error) {
 	requestDef := GenReqDefForShowBackupPolicy()
 
@@ -602,7 +867,12 @@ func (c *DdsClient) ShowBackupPolicy(request *model.ShowBackupPolicyRequest) (*m
 	}
 }
 
-//查询客户端IP访问至DDS数据库实例的连接数统计信息。
+// 查询实例连接数统计信息
+//
+// 查询客户端IP访问至DDS数据库实例的连接数统计信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ShowConnectionStatistics(request *model.ShowConnectionStatisticsRequest) (*model.ShowConnectionStatisticsResponse, error) {
 	requestDef := GenReqDefForShowConnectionStatistics()
 
@@ -613,7 +883,12 @@ func (c *DdsClient) ShowConnectionStatistics(request *model.ShowConnectionStatis
 	}
 }
 
-//获取DDS任务中心指定ID的任务信息。
+// 获取DDS任务中心指定ID的任务信息。
+//
+// 获取DDS任务中心指定ID的任务信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*model.ShowJobDetailResponse, error) {
 	requestDef := GenReqDefForShowJobDetail()
 
@@ -624,7 +899,12 @@ func (c *DdsClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*model.S
 	}
 }
 
-//查询单租户在DDS服务下的资源配额，包括单节点实例配额、副本集实例配额、集群实例配额等。
+// 查询配额
+//
+// 查询单租户在DDS服务下的资源配额，包括单节点实例配额、副本集实例配额、集群实例配额等。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
 	requestDef := GenReqDefForShowQuotas()
 
@@ -635,7 +915,12 @@ func (c *DdsClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuo
 	}
 }
 
-//查询集群均衡设置。
+// 查询集群均衡设置
+//
+// 查询集群均衡设置。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ShowShardingBalancer(request *model.ShowShardingBalancerRequest) (*model.ShowShardingBalancerResponse, error) {
 	requestDef := GenReqDefForShowShardingBalancer()
 
@@ -646,7 +931,12 @@ func (c *DdsClient) ShowShardingBalancer(request *model.ShowShardingBalancerRequ
 	}
 }
 
-//设置实例的慢日志明文开关。
+// 设置慢日志明文开关
+//
+// 设置实例的慢日志明文开关。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) SwitchSlowlogDesensitization(request *model.SwitchSlowlogDesensitizationRequest) (*model.SwitchSlowlogDesensitizationResponse, error) {
 	requestDef := GenReqDefForSwitchSlowlogDesensitization()
 
@@ -657,7 +947,12 @@ func (c *DdsClient) SwitchSlowlogDesensitization(request *model.SwitchSlowlogDes
 	}
 }
 
-//切换实例的SSL开关
+// 切换SSL开关
+//
+// 切换实例的SSL开关
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) SwitchSsl(request *model.SwitchSslRequest) (*model.SwitchSslResponse, error) {
 	requestDef := GenReqDefForSwitchSsl()
 
@@ -668,7 +963,12 @@ func (c *DdsClient) SwitchSsl(request *model.SwitchSslRequest) (*model.SwitchSsl
 	}
 }
 
-//切换副本集实例下的主备节点
+// 切换副本集实例的主备节点
+//
+// 切换副本集实例下的主备节点
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) SwitchoverReplicaSet(request *model.SwitchoverReplicaSetRequest) (*model.SwitchoverReplicaSetResponse, error) {
 	requestDef := GenReqDefForSwitchoverReplicaSet()
 
@@ -679,7 +979,12 @@ func (c *DdsClient) SwitchoverReplicaSet(request *model.SwitchoverReplicaSetRequ
 	}
 }
 
-//副本集跨网段访问配置。
+// 副本集跨网段访问配置。
+//
+// 副本集跨网段访问配置。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) UpdateClientNetwork(request *model.UpdateClientNetworkRequest) (*model.UpdateClientNetworkResponse, error) {
 	requestDef := GenReqDefForUpdateClientNetwork()
 
@@ -690,7 +995,12 @@ func (c *DdsClient) UpdateClientNetwork(request *model.UpdateClientNetworkReques
 	}
 }
 
-//修改实例名称
+// 修改实例名称
+//
+// 修改实例名称
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) UpdateInstanceName(request *model.UpdateInstanceNameRequest) (*model.UpdateInstanceNameResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceName()
 
@@ -701,7 +1011,12 @@ func (c *DdsClient) UpdateInstanceName(request *model.UpdateInstanceNameRequest)
 	}
 }
 
-//修改数据库实例的端口。
+// 修改数据库端口
+//
+// 修改数据库实例的端口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) UpdateInstancePort(request *model.UpdateInstancePortRequest) (*model.UpdateInstancePortResponse, error) {
 	requestDef := GenReqDefForUpdateInstancePort()
 
@@ -712,7 +1027,12 @@ func (c *DdsClient) UpdateInstancePort(request *model.UpdateInstancePortRequest)
 	}
 }
 
-//修改实例备注。
+// 修改实例备注
+//
+// 修改实例备注。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) UpdateInstanceRemark(request *model.UpdateInstanceRemarkRequest) (*model.UpdateInstanceRemarkResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceRemark()
 
@@ -723,7 +1043,12 @@ func (c *DdsClient) UpdateInstanceRemark(request *model.UpdateInstanceRemarkRequ
 	}
 }
 
-//变更实例关联的安全组
+// 变更实例安全组
+//
+// 变更实例关联的安全组
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) UpdateSecurityGroup(request *model.UpdateSecurityGroupRequest) (*model.UpdateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForUpdateSecurityGroup()
 
@@ -734,7 +1059,12 @@ func (c *DdsClient) UpdateSecurityGroup(request *model.UpdateSecurityGroupReques
 	}
 }
 
-//查询当前支持的API版本信息列表。
+// 查询当前支持的API版本信息列表
+//
+// 查询当前支持的API版本信息列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ListApiVersion(request *model.ListApiVersionRequest) (*model.ListApiVersionResponse, error) {
 	requestDef := GenReqDefForListApiVersion()
 
@@ -745,7 +1075,12 @@ func (c *DdsClient) ListApiVersion(request *model.ListApiVersionRequest) (*model
 	}
 }
 
-//查询指定API版本信息。
+// 查询指定API版本信息
+//
+// 查询指定API版本信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model.ShowApiVersionResponse, error) {
 	requestDef := GenReqDefForShowApiVersion()
 

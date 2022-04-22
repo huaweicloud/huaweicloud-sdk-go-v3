@@ -8,11 +8,11 @@ import (
 
 // 截图结果
 type ThumbnailRsp struct {
+
 	// 截图在视频中的时间偏移，单位为秒。
-
 	Offset int32 `json:"offset"`
-	// 截图访问URL
 
+	// 截图访问URL
 	Url string `json:"url"`
 }
 

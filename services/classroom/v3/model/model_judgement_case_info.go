@@ -8,11 +8,11 @@ import (
 
 // 用例数据
 type JudgementCaseInfo struct {
+
 	// 用例数据输入
-
 	Input string `json:"input"`
-	// 用例数据期望输出
 
+	// 用例数据期望输出
 	Output *string `json:"output,omitempty"`
 }
 

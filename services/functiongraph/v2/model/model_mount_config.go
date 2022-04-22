@@ -9,8 +9,8 @@ import (
 // 函数挂载配置。
 type MountConfig struct {
 	MountUser *MountUser `json:"mount_user"`
-	// 函数挂载列表。
 
+	// 函数挂载列表。
 	FuncMounts []FuncMount `json:"func_mounts"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateClusterRequest struct {
-	// 请求语言。
 
+	// 请求语言。
 	XLanguage string `json:"X-Language"`
 
 	Body *CdmCreateClusterReq `json:"body,omitempty"`

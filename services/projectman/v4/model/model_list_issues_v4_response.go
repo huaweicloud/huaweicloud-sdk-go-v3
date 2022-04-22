@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListIssuesV4Response struct {
+
 	// 工作项列表
-
 	Issues *[]ListIssueItemResponse `json:"issues,omitempty"`
-	// 总数
 
+	// 总数
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

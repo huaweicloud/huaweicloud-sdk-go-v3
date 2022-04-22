@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateSecretTagRequest struct {
-	// 凭据ID
 
+	// 凭据ID
 	SecretId string `json:"secret_id"`
 
 	Body *CreateSecretTagRequestBody `json:"body,omitempty"`

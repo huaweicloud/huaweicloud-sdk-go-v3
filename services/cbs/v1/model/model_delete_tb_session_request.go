@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteTbSessionRequest struct {
+
 	// 话务机器人ID。
-
 	BotId string `json:"bot_id"`
-	// 会话ID。
 
+	// 会话ID。
 	SessionId string `json:"session_id"`
 }
 

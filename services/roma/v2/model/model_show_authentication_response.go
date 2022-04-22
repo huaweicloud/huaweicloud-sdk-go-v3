@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowAuthenticationResponse struct {
+
 	// 一型一密/一机一密的用户名
-
 	UserName *string `json:"user_name,omitempty"`
-	// 一型一密/一机一密的密码，输入要求：至少1个数字，1个大写字母，1个小写字母，1个特殊字符(~!@#$%^&*()-_=+|[{}];:<>/?)，长度8-32个字符
 
+	// 一型一密/一机一密的密码，输入要求：至少1个数字，1个大写字母，1个小写字母，1个特殊字符(~!@#$%^&*()-_=+|[{}];:<>/?)，长度8-32个字符
 	Password       *string `json:"password,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

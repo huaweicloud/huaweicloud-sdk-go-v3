@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowTopUrlResponse struct {
+
 	// 服务区域
-
 	ServiceArea *string `json:"service_area,omitempty"`
-	// 详情数据对象。
 
+	// 详情数据对象。
 	TopUrlSummary  *[]map[string]interface{} `json:"top_url_summary,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

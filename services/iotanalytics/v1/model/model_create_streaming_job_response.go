@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type CreateStreamingJobResponse struct {
+
 	// 作业ID
-
 	JobId *string `json:"job_id,omitempty"`
-	// 作业错误详情
 
+	// 作业错误详情
 	CheckInfo      map[string]interface{} `json:"check_info,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

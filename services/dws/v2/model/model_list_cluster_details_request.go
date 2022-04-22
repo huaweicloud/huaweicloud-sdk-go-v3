@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListClusterDetailsRequest struct {
-	// 集群ID
 
+	// 集群ID
 	ClusterId string `json:"cluster_id"`
 }
 

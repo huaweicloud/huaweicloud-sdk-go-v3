@@ -10,41 +10,41 @@ import (
 
 // 伸缩策略
 type ScalingAllPolicyDetail struct {
+
 	// 伸缩策略名称。
-
 	ScalingPolicyName *string `json:"scaling_policy_name,omitempty"`
+
 	// 伸缩策略ID。
-
 	ScalingPolicyId *string `json:"scaling_policy_id,omitempty"`
+
 	// 伸缩资源ID。
-
 	ScalingResourceId *string `json:"scaling_resource_id,omitempty"`
+
 	// 伸缩资源类型。伸缩组：SCALING_GROUP。带宽：BANDWIDTH。
-
 	ScalingResourceType *ScalingAllPolicyDetailScalingResourceType `json:"scaling_resource_type,omitempty"`
+
 	// 伸缩策略状态。INSERVICE：使用中。PAUSED：停止。EXECUTING：执行中。
-
 	PolicyStatus *ScalingAllPolicyDetailPolicyStatus `json:"policy_status,omitempty"`
+
 	// 伸缩策略类型：ALARM：告警策略，此时alarm_id有返回，scheduled_policy不会返回。SCHEDULED：定时策略，此时alarm_id不会返回，scheduled_policy有返回，并且recurrence_type、recurrence_value、start_time和end_time不会返回。RECURRENCE：周期策略，此时alarm_id不会返回，scheduled_policy有返回，并且recurrence_type、recurrence_value、start_time和end_time有返回。
-
 	ScalingPolicyType *ScalingAllPolicyDetailScalingPolicyType `json:"scaling_policy_type,omitempty"`
-	// 告警ID。
 
+	// 告警ID。
 	AlarmId *string `json:"alarm_id,omitempty"`
 
 	ScheduledPolicy *ScheduledPolicy `json:"scheduled_policy,omitempty"`
 
 	ScalingPolicyAction *ScalingPolicyActionV2 `json:"scaling_policy_action,omitempty"`
+
 	// 冷却时间，取值范围0-86400，默认为300，单位是秒。
-
 	CoolDownTime *int32 `json:"cool_down_time,omitempty"`
-	// 创建伸缩策略时间，遵循UTC时间
 
+	// 创建伸缩策略时间，遵循UTC时间
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
 	MetaData *ScalingPolicyV2MetaData `json:"meta_data,omitempty"`
-	// 伸缩策略描述（1-256个字符）
 
+	// 伸缩策略描述（1-256个字符）
 	Description *string `json:"description,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 type Event struct {
 	Metadata *Metadata `json:"metadata"`
-	// 告警产生时间(时间戳)
 
+	// 告警产生时间(时间戳)
 	StartsAt int64 `json:"starts_at"`
 }
 

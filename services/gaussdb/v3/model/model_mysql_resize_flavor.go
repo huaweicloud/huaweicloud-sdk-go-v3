@@ -7,8 +7,8 @@ import (
 )
 
 type MysqlResizeFlavor struct {
-	// 规格码
 
+	// 规格码
 	SpecCode string `json:"spec_code"`
 }
 

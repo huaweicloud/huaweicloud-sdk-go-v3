@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type StartReverseProtectionGroupRequest struct {
-	// 保护组的ID。
 
+	// 保护组的ID。
 	ServerGroupId string `json:"server_group_id"`
 
 	Body *ReverseProtectionGroupRequestBody `json:"body,omitempty"`

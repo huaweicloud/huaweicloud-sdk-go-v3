@@ -11,8 +11,8 @@ import (
 
 // 启停伸缩组请求
 type PauseScalingGroupOption struct {
-	// 启用或停止伸缩组操作的标识。启用：resume 停止：pause
 
+	// 启用或停止伸缩组操作的标识。启用：resume 停止：pause
 	Action PauseScalingGroupOptionAction `json:"action"`
 }
 

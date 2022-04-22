@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowUrlAuthResponse struct {
-	// 应用id
 
+	// 应用id
 	AppId *string `json:"app_id,omitempty"`
 
 	Authentication *AppAuth `json:"authentication,omitempty"`

@@ -7,11 +7,11 @@ import (
 )
 
 type QueryAuthorizedNodeDto struct {
+
 	// 边缘节点ID
-
 	NodeId *string `json:"node_id,omitempty"`
-	// 授权时间
 
+	// 授权时间
 	AuthorizedTime *string `json:"authorized_time,omitempty"`
 }
 

@@ -11,14 +11,14 @@ import (
 
 // Request Object
 type DownloadBlockchainCertRequest struct {
+
 	// blockchainID
-
 	BlockchainId string `json:"blockchain_id"`
+
 	// order或者peer组织名称
-
 	OrgName string `json:"org_name"`
-	// 下载证书类别
 
+	// 下载证书类别
 	CertType DownloadBlockchainCertRequestCertType `json:"cert_type"`
 }
 

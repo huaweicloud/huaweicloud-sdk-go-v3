@@ -8,14 +8,14 @@ import (
 
 // 企业项目配额响应
 type EpQuotas struct {
+
 	// 总配额
-
 	Quota int32 `json:"quota"`
+
 	// qutoa的资源类型
-
 	Type string `json:"type"`
-	// 配额使用量
 
+	// 配额使用量
 	Used int32 `json:"used"`
 }
 

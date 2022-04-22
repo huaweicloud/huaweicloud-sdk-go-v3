@@ -8,8 +8,8 @@ import (
 
 // 批量启动任务请求体。
 type BatchStartJobReq struct {
-	// 批量启动任务请求列表。
 
+	// 批量启动任务请求列表。
 	Jobs []StartInfo `json:"jobs"`
 }
 

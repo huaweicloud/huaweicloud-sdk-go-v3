@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type UpdateReadAndWriteStrategyResponse struct {
+
 	// 操作是否成功。
-
 	Success *bool `json:"success,omitempty"`
-	// DDM实例ID。
 
+	// DDM实例ID。
 	InstanceId     *string `json:"instance_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

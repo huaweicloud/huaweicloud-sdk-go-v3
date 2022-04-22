@@ -7,11 +7,11 @@ import (
 )
 
 type BatchRestartOrDeleteInstanceRespResults struct {
+
 	// 操作结果：   - success: 操作成功   - failed: 操作失败
-
 	Result *string `json:"result,omitempty"`
-	// 实例ID。
 
+	// 实例ID。
 	Instance *string `json:"instance,omitempty"`
 }
 

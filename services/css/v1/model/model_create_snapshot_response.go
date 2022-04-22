@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type CreateSnapshotResponse struct {
+
 	// 快照名称。
-
 	Name *string `json:"name,omitempty"`
+
 	// 快照描述。
-
 	Description *string `json:"description,omitempty"`
-	// 指定要备份的索引名称。
 
+	// 指定要备份的索引名称。
 	Indices        *string `json:"indices,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

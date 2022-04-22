@@ -11,8 +11,8 @@ import (
 
 // This is a auto create Body Object
 type Follow302StatusRequest struct {
-	// follow302状态（\"off\"/\"on\"）
 
+	// follow302状态（\"off\"/\"on\"）
 	Follow302Status Follow302StatusRequestFollow302Status `json:"follow302_status"`
 }
 

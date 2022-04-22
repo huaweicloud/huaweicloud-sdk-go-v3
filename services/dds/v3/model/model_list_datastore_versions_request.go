@@ -11,8 +11,8 @@ import (
 
 // Request Object
 type ListDatastoreVersionsRequest struct {
-	// 数据库版本类型。取值为“DDS-Community”。
 
+	// 数据库版本类型。取值为“DDS-Community”。
 	DatastoreName ListDatastoreVersionsRequestDatastoreName `json:"datastore_name"`
 }
 

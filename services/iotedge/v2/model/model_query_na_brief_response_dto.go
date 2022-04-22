@@ -8,23 +8,23 @@ import (
 
 // 创建及查询北向NA返回结构体（简洁版）
 type QueryNaBriefResponseDto struct {
+
 	// NA系统ID，提供给其他系统访问的唯一标识
-
 	NaId *string `json:"na_id,omitempty"`
+
 	// NA系统名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 北向NA系统描述
-
 	Description *string `json:"description,omitempty"`
+
 	// 访问URL地址
-
 	Endpoint *string `json:"endpoint,omitempty"`
+
 	// 创建时间
-
 	CreateTime *string `json:"create_time,omitempty"`
-	// 更新时间
 
+	// 更新时间
 	UpdateTime *string `json:"update_time,omitempty"`
 }
 

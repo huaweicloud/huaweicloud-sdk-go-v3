@@ -7,11 +7,11 @@ import (
 )
 
 type ProgressDetailV2 struct {
+
 	// 进度百分比
-
 	Ratio *string `json:"ratio,omitempty"`
-	// 中文信息
 
+	// 中文信息
 	Info *string `json:"info,omitempty"`
 }
 

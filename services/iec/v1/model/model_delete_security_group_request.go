@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteSecurityGroupRequest struct {
-	// 安全组的ID。uuid
 
+	// 安全组的ID。uuid
 	SecurityGroupId string `json:"security_group_id"`
 }
 

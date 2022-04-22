@@ -8,8 +8,8 @@ import (
 
 // 批量数据加工规则请求体
 type BatchDataTransformationReq struct {
-	// 批量数据加工规则请求列表
 
+	// 批量数据加工规则请求列表
 	Jobs []CheckDataTransformationReq `json:"jobs"`
 }
 

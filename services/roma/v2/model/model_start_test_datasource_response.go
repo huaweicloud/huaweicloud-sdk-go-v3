@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type StartTestDatasourceResponse struct {
-	// 返回结果 - true (成功)
 
+	// 返回结果 - true (成功)
 	Result         *bool `json:"result,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }

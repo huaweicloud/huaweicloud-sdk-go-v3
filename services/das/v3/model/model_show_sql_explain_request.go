@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type ShowSqlExplainRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 语言
 
+	// 语言
 	XLanguage *ShowSqlExplainRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *QuerySqlPlanBody `json:"body,omitempty"`

@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type BatchListStructDetailRequest struct {
+
 	// 数据库支持迁移对象类型
-
 	Type BatchListStructDetailRequestType `json:"type"`
-	// 请求语言类型
 
+	// 请求语言类型
 	XLanguage *BatchListStructDetailRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchQueryJobReqPage `json:"body,omitempty"`

@@ -8,11 +8,11 @@ import (
 
 // 防火墙关联的子网对象
 type FirewallSubnetOption struct {
+
 	// 子网ID。
-
 	Id string `json:"id"`
-	// 虚拟私有云ID。
 
+	// 虚拟私有云ID。
 	VpcId *string `json:"vpc_id,omitempty"`
 }
 

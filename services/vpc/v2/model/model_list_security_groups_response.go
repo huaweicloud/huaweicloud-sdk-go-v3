@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListSecurityGroupsResponse struct {
-	// 安全组列表对象
 
+	// 安全组列表对象
 	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

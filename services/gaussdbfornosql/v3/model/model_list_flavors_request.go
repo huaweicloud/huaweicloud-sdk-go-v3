@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ListFlavorsRequest struct {
+
 	// 实例所在区域。
-
 	Region string `json:"region"`
-	// 数据库类型。   - 取值为“cassandra”，表示查询GaussDB(for Cassandra)数据库实例支持的规格。   - 取值为“mongodb”，表示查询GaussDB(for Mongo)数据库实例支持的规格。   - 取值为“influxdb”，表示查询GaussDB(for Influx)数据库实例支持的规格。   - 如果不传该参数，默认为“cassandra”。
 
+	// 数据库类型。   - 取值为“cassandra”，表示查询GaussDB(for Cassandra)数据库实例支持的规格。   - 取值为“mongodb”，表示查询GaussDB(for Mongo)数据库实例支持的规格。   - 取值为“influxdb”，表示查询GaussDB(for Influx)数据库实例支持的规格。   - 如果不传该参数，默认为“cassandra”。
 	EngineName *string `json:"engine_name,omitempty"`
 }
 

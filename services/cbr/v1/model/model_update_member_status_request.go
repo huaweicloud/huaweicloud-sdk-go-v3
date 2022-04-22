@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateMemberStatusRequest struct {
+
 	// 成员id，成员id与项目id为同一个。
-
 	MemberId string `json:"member_id"`
-	// 备份副本id
 
+	// 备份副本id
 	BackupId string `json:"backup_id"`
 
 	Body *UpdateMember `json:"body,omitempty"`

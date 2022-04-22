@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DisassociateVaultPolicyRequest struct {
-	// 存储库ID
 
+	// 存储库ID
 	VaultId string `json:"vault_id"`
 
 	Body *VaultDissociate `json:"body,omitempty"`

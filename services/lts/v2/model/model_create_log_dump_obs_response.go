@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateLogDumpObsResponse struct {
-	// 转储id。
 
+	// 转储id。
 	LogDumpObsId   *string `json:"log_dump_obs_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

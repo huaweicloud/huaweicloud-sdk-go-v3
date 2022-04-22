@@ -8,11 +8,11 @@ import (
 
 //
 type KeyWordsStat struct {
+
 	// 关键词。
-
 	Keyword string `json:"keyword"`
-	// 关键词频次。
 
+	// 关键词频次。
 	Freq int64 `json:"freq"`
 }
 

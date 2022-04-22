@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListSubnetsResponse struct {
+
 	// 子网数组。
-
 	Subnets *[]Subnet `json:"subnets,omitempty"`
-	// 子网数目。
 
+	// 子网数目。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

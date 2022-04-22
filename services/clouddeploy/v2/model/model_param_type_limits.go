@@ -8,8 +8,8 @@ import (
 
 // 枚举类型参数实体类
 type ParamTypeLimits struct {
-	// 枚举值可选参数
 
+	// 枚举值可选参数
 	Name *string `json:"name,omitempty"`
 }
 

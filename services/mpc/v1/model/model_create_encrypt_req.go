@@ -12,8 +12,8 @@ type CreateEncryptReq struct {
 	Output *ObsObjInfo `json:"output,omitempty"`
 
 	Encryption *Encryption `json:"encryption,omitempty"`
-	// 用户自定义数据。
 
+	// 用户自定义数据。
 	UserData *string `json:"user_data,omitempty"`
 }
 

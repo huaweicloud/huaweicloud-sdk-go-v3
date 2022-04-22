@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type SetOnlineMigrationTaskRequest struct {
-	// 在线迁移任务ID。
 
+	// 在线迁移任务ID。
 	TaskId string `json:"task_id"`
 
 	Body *SetOnlineMigrationTaskBody `json:"body,omitempty"`

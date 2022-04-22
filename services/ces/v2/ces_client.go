@@ -19,7 +19,12 @@ func CesClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//查询告警历史列表
+// 查询告警历史
+//
+// 查询告警历史列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CesClient) ListAlarmHistories(request *model.ListAlarmHistoriesRequest) (*model.ListAlarmHistoriesResponse, error) {
 	requestDef := GenReqDefForListAlarmHistories()
 

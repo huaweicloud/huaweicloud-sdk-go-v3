@@ -9,35 +9,35 @@ import (
 )
 
 type LdApiScript struct {
+
 	// 数据源编号，当api_type = data时，必选
-
 	DsId *string `json:"ds_id,omitempty"`
+
 	// 数据源名称
-
 	DsName *string `json:"ds_name,omitempty"`
+
 	// 数据源类型： - oracle：oracle数据源类型 - mysql：mysql数据源类型 - mongodb：mongodb数据源类型 - redis：redis数据源类型 - postgresql：postgresql数据源类型 - hive：hive数据源类型 - mssql：sqlserver数据源类型 - sqlserver：sqlserver数据源类型 - gauss200：gauss200数据源类型 - dws：dws数据源类型 - gauss100：gauss100数据源类型 - zenith：zenith数据源类型
-
 	DsType *LdApiScriptDsType `json:"ds_type,omitempty"`
+
 	// 脚本类型 - SQL：sql语句 - SP：存储过程
-
 	Type *string `json:"type,omitempty"`
+
 	// 返回对象。  当api_type = data时，必选
-
 	ObjectName *string `json:"object_name,omitempty"`
+
 	// API脚本内容  请对脚本进行base64编码
-
 	Content string `json:"content"`
+
 	// 数据脚本是否结果分页，当api_type = data时有效
-
 	EnableResultPaging *bool `json:"enable_result_paging,omitempty"`
+
 	// 数据脚本是否预编译，当api_type = data时有效
-
 	EnablePreparestatement *bool `json:"enable_preparestatement,omitempty"`
+
 	// 后端API脚本创建时间
-
 	CreatedTime *sdktime.SdkTime `json:"created_time,omitempty"`
-	// 后端API脚本修改时间
 
+	// 后端API脚本修改时间
 	ModifiedTime *sdktime.SdkTime `json:"modified_time,omitempty"`
 }
 

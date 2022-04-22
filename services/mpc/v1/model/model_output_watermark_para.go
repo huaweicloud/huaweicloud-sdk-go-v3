@@ -7,8 +7,8 @@ import (
 )
 
 type OutputWatermarkPara struct {
-	// 水印时长
 
+	// 水印时长
 	TimeDuration *int32 `json:"time_duration,omitempty"`
 }
 

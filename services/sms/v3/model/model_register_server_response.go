@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type RegisterServerResponse struct {
-	// 源端id
 
+	// 源端id
 	Id             *string `json:"id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

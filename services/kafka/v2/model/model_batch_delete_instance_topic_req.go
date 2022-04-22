@@ -7,8 +7,8 @@ import (
 )
 
 type BatchDeleteInstanceTopicReq struct {
-	// 待删除的topic列表。
 
+	// 待删除的topic列表。
 	Topics *[]string `json:"topics,omitempty"`
 }
 

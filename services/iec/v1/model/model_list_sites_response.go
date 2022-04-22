@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListSitesResponse struct {
+
 	// 边缘站点总数。
-
 	Count *int32 `json:"count,omitempty"`
-	// 站点列表。
 
+	// 站点列表。
 	Sites          *[]Site `json:"sites,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

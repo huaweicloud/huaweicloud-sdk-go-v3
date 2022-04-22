@@ -7,14 +7,14 @@ import (
 )
 
 type EnvironmentModify struct {
+
 	// 环境名称。
-
 	Name *string `json:"name,omitempty"`
+
 	// 环境别名。
-
 	Alias *string `json:"alias,omitempty"`
-	// 环境描述。
 
+	// 环境描述。
 	Description *string `json:"description,omitempty"`
 }
 

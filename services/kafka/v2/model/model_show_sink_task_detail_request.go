@@ -11,14 +11,14 @@ import (
 
 // Request Object
 type ShowSinkTaskDetailRequest struct {
+
 	// 实例转储ID。 请参考[实例生命周期][查询实例]接口返回的数据。
-
 	ConnectorId string `json:"connector_id"`
+
 	// 转储任务ID。
-
 	TaskId string `json:"task_id"`
-	// 是否包含topic信息。默认是false。
 
+	// 是否包含topic信息。默认是false。
 	TopicInfo *ShowSinkTaskDetailRequestTopicInfo `json:"topic-info,omitempty"`
 }
 

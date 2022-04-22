@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListDomainBandwidthPeakResponse struct {
-	// 域名对应的带宽峰值列表。
 
+	// 域名对应的带宽峰值列表。
 	BandwidthList *[]PeakBandwidthData `json:"bandwidth_list,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

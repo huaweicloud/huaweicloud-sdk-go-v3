@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowDomainQuotaRequest struct {
-	// 租户ID。
 
+	// 租户ID。
 	DomainId string `json:"domain_id"`
 }
 

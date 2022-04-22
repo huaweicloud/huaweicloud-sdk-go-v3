@@ -8,11 +8,11 @@ import (
 
 // 工作项类型
 type IssueItemSfV4Tracker struct {
+
 	// 类型id
-
 	Id *int32 `json:"id,omitempty"`
-	// 类型名称
 
+	// 类型名称
 	Name *string `json:"name,omitempty"`
 }
 

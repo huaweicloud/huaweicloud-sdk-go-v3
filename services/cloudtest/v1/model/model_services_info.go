@@ -7,11 +7,11 @@ import (
 )
 
 type ServicesInfo struct {
+
 	// 服务id
-
 	Id *int32 `json:"id,omitempty"`
-	// 服务名称
 
+	// 服务名称
 	Name *string `json:"name,omitempty"`
 }
 

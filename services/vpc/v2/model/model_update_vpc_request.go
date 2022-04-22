@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateVpcRequest struct {
-	// 虚拟私有云ID
 
+	// 虚拟私有云ID
 	VpcId string `json:"vpc_id"`
 
 	Body *UpdateVpcRequestBody `json:"body,omitempty"`

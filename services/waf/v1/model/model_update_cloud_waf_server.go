@@ -11,20 +11,20 @@ import (
 
 // 服务器配置
 type UpdateCloudWafServer struct {
+
 	// 对外协议
-
 	FrontProtocol *UpdateCloudWafServerFrontProtocol `json:"front_protocol,omitempty"`
+
 	// 源站协议
-
 	BackProtocol *UpdateCloudWafServerBackProtocol `json:"back_protocol,omitempty"`
+
 	// 源站地址
-
 	Address *string `json:"address,omitempty"`
+
 	// 源站端口
-
 	Port *int32 `json:"port,omitempty"`
-	// 源站地址为ipv4或ipv6
 
+	// 源站地址为ipv4或ipv6
 	Type *UpdateCloudWafServerType `json:"type,omitempty"`
 }
 

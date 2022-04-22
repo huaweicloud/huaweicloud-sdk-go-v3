@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListWatermarkTemplateResponse struct {
+
 	// 水印模板信息。
-
 	Templates *[]WatermarkTemplate `json:"templates,omitempty"`
-	// 总数。
 
+	// 总数。
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

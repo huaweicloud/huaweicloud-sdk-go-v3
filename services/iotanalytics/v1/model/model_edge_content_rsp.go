@@ -8,11 +8,11 @@ import (
 
 // IoTDA数据源详细配置内容
 type EdgeContentRsp struct {
+
 	// Edge实例Id
-
 	IotdaInstanceId string `json:"iotda_instance_id"`
-	// 在Edge实例中要配置的转发规则，包含推送数据的资源空间和产品列表
 
+	// 在Edge实例中要配置的转发规则，包含推送数据的资源空间和产品列表
 	Rules []EdgeContentRuleRsp `json:"rules"`
 }
 

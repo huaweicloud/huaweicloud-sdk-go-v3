@@ -11,17 +11,17 @@ import (
 
 // Request Object
 type ListProjectsV4Request struct {
+
 	// 语言类型 中文:zh-cn 英文:en-us
-
 	XLanguage *ListProjectsV4RequestXLanguage `json:"X-Language,omitempty"`
+
 	// 搜索关键字,支持按名称和描述搜索，默认null
-
 	Keyword *string `json:"keyword,omitempty"`
+
 	// 每页显示的条目数量,默认100
-
 	Limit *int32 `json:"limit,omitempty"`
-	// 偏移量，表示从此偏移量开始查询,默认0
 
+	// 偏移量，表示从此偏移量开始查询,默认0
 	Offset *int32 `json:"offset,omitempty"`
 }
 

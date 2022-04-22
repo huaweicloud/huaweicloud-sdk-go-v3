@@ -8,11 +8,11 @@ import (
 
 // 整体发音打分
 type Pronunciation struct {
+
 	// 发音质量综合得分 0-100
-
 	Score float32 `json:"score"`
-	// 发音质量好坏 0-100
 
+	// 发音质量好坏 0-100
 	Gop float32 `json:"gop"`
 }
 

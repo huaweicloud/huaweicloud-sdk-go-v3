@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type BatchDeletePublicipTagsRequest struct {
-	// 资源ID
 
+	// 资源ID
 	PublicipId string `json:"publicip_id"`
 
 	Body *BatchDeletePublicipTagsRequestBody `json:"body,omitempty"`

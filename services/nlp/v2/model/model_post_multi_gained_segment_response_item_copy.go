@@ -11,14 +11,14 @@ import (
 
 // 多粒度分词结果中的词汇节点
 type PostMultiGainedSegmentResponseItemCopy struct {
+
 	// 当前节点对应的文本内容
-
 	Content string `json:"content"`
+
 	// 文本类型，取值如下： WORD-词汇类型 CHAR-字符类型
-
 	Type PostMultiGainedSegmentResponseItemCopyType `json:"type"`
-	// 当前节点的子节点列表
 
+	// 当前节点的子节点列表
 	SubContents *[]PostMultiGainedSegmentResponseItem `json:"sub_contents,omitempty"`
 }
 

@@ -7,11 +7,11 @@ import (
 )
 
 type RepoListInfo struct {
+
 	// 仓库列表
-
 	Repositorys *[]RepoInfo `json:"repositorys,omitempty"`
-	// 仓库总数
 
+	// 仓库总数
 	Total *int32 `json:"total,omitempty"`
 }
 

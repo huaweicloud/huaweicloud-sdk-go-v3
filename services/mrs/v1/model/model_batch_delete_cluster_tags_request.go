@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type BatchDeleteClusterTagsRequest struct {
-	// 集群ID。获取方法，请参见[获取集群ID](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)。
 
+	// 集群ID。获取方法，请参见[获取集群ID](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)。
 	ClusterId string `json:"cluster_id"`
 
 	Body *BatchDeleteClusterTagsReq `json:"body,omitempty"`

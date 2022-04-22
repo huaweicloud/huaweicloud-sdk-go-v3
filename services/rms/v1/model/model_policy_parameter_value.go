@@ -8,8 +8,8 @@ import (
 
 // 规则参数值
 type PolicyParameterValue struct {
-	// 规则参数值
 
+	// 规则参数值
 	Value *interface{} `json:"value,omitempty"`
 }
 

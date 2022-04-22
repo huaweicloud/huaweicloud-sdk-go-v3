@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type StartGraphRequest struct {
+
 	// 图ID。
-
 	GraphId string `json:"graph_id"`
-	// 图actionId
 
+	// 图actionId
 	ActionId StartGraphRequestActionId `json:"action_id"`
 
 	Body *StartGraphReq `json:"body,omitempty"`

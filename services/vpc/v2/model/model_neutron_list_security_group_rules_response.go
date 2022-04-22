@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type NeutronListSecurityGroupRulesResponse struct {
-	// 安全组规则对象列表
 
+	// 安全组规则对象列表
 	SecurityGroupRules *[]NeutronSecurityGroupRule `json:"security_group_rules,omitempty"`
 	HttpStatusCode     int                         `json:"-"`
 }

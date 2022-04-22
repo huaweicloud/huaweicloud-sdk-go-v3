@@ -8,8 +8,8 @@ import (
 
 // Kibana公网访问信息
 type CreateClusterPublicKibanaReq struct {
-	// 带宽大小。
 
+	// 带宽大小。
 	EipSize int32 `json:"eipSize"`
 
 	ElbWhiteList *CreateClusterPublicKibanaElbWhiteList `json:"elbWhiteList"`

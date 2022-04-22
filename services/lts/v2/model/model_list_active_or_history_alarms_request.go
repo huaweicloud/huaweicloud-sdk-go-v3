@@ -11,17 +11,17 @@ import (
 
 // Request Object
 type ListActiveOrHistoryAlarmsRequest struct {
+
 	// domainId
-
 	DomainId string `json:"domain_id"`
+
 	// 是活动告警还是历史告警
-
 	Type ListActiveOrHistoryAlarmsRequestType `json:"type"`
+
 	// 取值为上一页数据的最后一条记录的id(填写上一页数据返回得previous_marker或者next_marker值。)
-
 	Marker *string `json:"marker,omitempty"`
-	// 每页数据量
 
+	// 每页数据量
 	Limit *int32 `json:"limit,omitempty"`
 
 	Body *ListActiveOrHistoryAlarmsRequestBody `json:"body,omitempty"`

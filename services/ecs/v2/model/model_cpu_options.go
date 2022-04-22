@@ -8,8 +8,8 @@ import (
 
 // 自定义CPU选项。
 type CpuOptions struct {
-	// CPU超线程数， 决定CPU是否开启超线程
 
+	// CPU超线程数， 决定CPU是否开启超线程
 	HwcpuThreads *int32 `json:"hw:cpu_threads,omitempty"`
 }
 

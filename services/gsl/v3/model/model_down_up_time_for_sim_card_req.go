@@ -7,8 +7,8 @@ import (
 )
 
 type DownUpTimeForSimCardReq struct {
-	// 启用停用开关
 
+	// 启用停用开关
 	DownUpSwitch *int32 `json:"down_up_switch,omitempty"`
 }
 

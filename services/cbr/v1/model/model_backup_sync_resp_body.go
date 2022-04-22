@@ -7,11 +7,11 @@ import (
 )
 
 type BackupSyncRespBody struct {
+
 	// 备份副本ID
-
 	BackupId string `json:"backup_id"`
-	// 同步任务ID
 
+	// 同步任务ID
 	OperationLogId string `json:"operation_log_id"`
 }
 

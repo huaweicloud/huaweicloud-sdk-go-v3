@@ -8,8 +8,8 @@ import (
 
 // 更新测试事件请求体。
 type UpdateEventRequestBody struct {
-	// 测试事件content。
 
+	// 测试事件content。
 	Content *string `json:"content,omitempty"`
 }
 

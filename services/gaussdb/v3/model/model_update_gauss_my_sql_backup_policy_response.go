@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type UpdateGaussMySqlBackupPolicyResponse struct {
+
 	// 状态信息
-
 	Status *string `json:"status,omitempty"`
+
 	// 实例ID
-
 	InstanceId *string `json:"instance_id,omitempty"`
-	// 实例名称
 
+	// 实例名称
 	InstanceName   *string `json:"instance_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

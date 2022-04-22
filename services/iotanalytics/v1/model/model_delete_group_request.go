@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteGroupRequest struct {
-	// 存储组 ID
 
+	// 存储组 ID
 	GroupId string `json:"group_id"`
 }
 

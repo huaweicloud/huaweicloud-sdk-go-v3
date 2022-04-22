@@ -8,8 +8,8 @@ import (
 
 // 锁定会议消息体。
 type RestLockReqBody struct {
-	// - 0: 解锁。 - 1: 锁定。
 
+	// - 0: 解锁。 - 1: 锁定。
 	IsLock int32 `json:"isLock"`
 }
 

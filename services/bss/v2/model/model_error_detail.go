@@ -7,14 +7,14 @@ import (
 )
 
 type ErrorDetail struct {
+
 	// 状态码。
-
 	ErrorCode *string `json:"error_code,omitempty"`
+
 	// 错误描述信息。
-
 	ErrorMsg *string `json:"error_msg,omitempty"`
-	// 出现错误的客户ID或批量处理消息的ID。
 
+	// 出现错误的客户ID或批量处理消息的ID。
 	Id *string `json:"id,omitempty"`
 }
 

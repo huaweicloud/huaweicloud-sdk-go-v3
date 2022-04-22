@@ -7,11 +7,11 @@ import (
 )
 
 type BackendLatencyStats struct {
+
 	// 最大后端延时
-
 	MaxBackendLatency *int32 `json:"max_backend_latency,omitempty"`
-	// 平均后端延时
 
+	// 平均后端延时
 	AvgBackendLatency *float32 `json:"avg_backend_latency,omitempty"`
 }
 

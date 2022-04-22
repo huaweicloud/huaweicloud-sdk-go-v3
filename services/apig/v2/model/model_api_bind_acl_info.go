@@ -9,32 +9,32 @@ import (
 )
 
 type ApiBindAclInfo struct {
+
 	// ACL策略编号
-
 	AclId *string `json:"acl_id,omitempty"`
+
 	// ACL策略名称
-
 	AclName *string `json:"acl_name,omitempty"`
+
 	// ACL策略作用的对象类型
-
 	EntityType *ApiBindAclInfoEntityType `json:"entity_type,omitempty"`
+
 	// ACL策略类型 - PERMIT：白名单类型 - DENY：黑名单类型
-
 	AclType *ApiBindAclInfoAclType `json:"acl_type,omitempty"`
+
 	// ACL策略值
-
 	AclValue *string `json:"acl_value,omitempty"`
+
 	// 生效的环境编号
-
 	EnvId *string `json:"env_id,omitempty"`
+
 	// 生效的环境名称
-
 	EnvName *string `json:"env_name,omitempty"`
+
 	// 绑定关系编号
-
 	BindId *string `json:"bind_id,omitempty"`
-	// 绑定时间
 
+	// 绑定时间
 	BindTime *sdktime.SdkTime `json:"bind_time,omitempty"`
 }
 

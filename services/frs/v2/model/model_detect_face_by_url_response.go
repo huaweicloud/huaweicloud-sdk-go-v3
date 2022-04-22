@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DetectFaceByUrlResponse struct {
-	// 检测到的人脸。 调用失败时无此字段。
 
+	// 检测到的人脸。 调用失败时无此字段。
 	Faces          *[]DetectFace `json:"faces,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

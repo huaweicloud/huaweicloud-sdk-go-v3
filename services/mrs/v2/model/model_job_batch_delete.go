@@ -7,8 +7,8 @@ import (
 )
 
 type JobBatchDelete struct {
-	// 作业ID列表。获取方法，请参见[获取作业ID](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)。
 
+	// 作业ID列表。获取方法，请参见[获取作业ID](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)。
 	JobIdList *[]string `json:"job_id_list,omitempty"`
 }
 

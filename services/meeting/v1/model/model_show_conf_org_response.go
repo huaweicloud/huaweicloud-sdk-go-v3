@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowConfOrgResponse struct {
-	// 企业ID
 
+	// 企业ID
 	OrgID          *string `json:"orgID,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

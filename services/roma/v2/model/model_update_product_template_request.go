@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateProductTemplateRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 产品模板ID
 
+	// 产品模板ID
 	ProductTemplateId int32 `json:"product_template_id"`
 
 	Body *UpdateProductTemplateRequestBody `json:"body,omitempty"`

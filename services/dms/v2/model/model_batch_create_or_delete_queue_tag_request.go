@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type BatchCreateOrDeleteQueueTagRequest struct {
-	// 队列ID。
 
+	// 队列ID。
 	QueueId string `json:"queue_id"`
 
 	Body *BatchCreateOrDeleteTagReq `json:"body,omitempty"`

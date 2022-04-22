@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DownloadAssetArchiveRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 作业执行成功后，查询作业进度返回的entities.archive_id字段
 
+	// 作业执行成功后，查询作业进度返回的entities.archive_id字段
 	ArchiveId string `json:"archive_id"`
 }
 

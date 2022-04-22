@@ -7,29 +7,29 @@ import (
 )
 
 type ApplicationBaseV3 struct {
+
 	// 应用id
-
 	Id *string `json:"id,omitempty"`
+
 	// 应用名称
-
 	Name string `json:"name"`
+
 	// 应用描述
-
 	Description *string `json:"description,omitempty"`
+
 	// 区域id
-
 	RegionId string `json:"region_id"`
+
 	// 区域名称
-
 	RegionName string `json:"region_name"`
+
 	// 所属项目id
-
 	ProjectId string `json:"project_id"`
+
 	// 项目名称
-
 	ProjectName string `json:"project_name"`
-	// 应用图标
 
+	// 应用图标
 	Icon *string `json:"icon,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateTaskRulesetRequest struct {
+
 	// 任务ID
-
 	TaskId string `json:"task_id"`
-	// 修改任务规则集
 
+	// 修改任务规则集
 	Body *[]UpdateTaskRulesetItem `json:"body,omitempty"`
 }
 

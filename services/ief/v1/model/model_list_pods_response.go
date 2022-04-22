@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListPodsResponse struct {
+
 	// 应用实例总数
-
 	Count *int32 `json:"count,omitempty"`
-	// 应用实例列表
 
+	// 应用实例列表
 	Pods           *[]PodResp `json:"pods,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

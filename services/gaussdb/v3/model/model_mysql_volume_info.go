@@ -8,11 +8,11 @@ import (
 
 // 存储盘信息。
 type MysqlVolumeInfo struct {
+
 	// 磁盘类型。
-
 	Type string `json:"type"`
-	// 已使用磁盘大小，单位GB。
 
+	// 已使用磁盘大小，单位GB。
 	Size string `json:"size"`
 }
 

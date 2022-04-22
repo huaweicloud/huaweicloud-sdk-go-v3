@@ -19,7 +19,12 @@ func ApmClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//获取该用户创建的aksk列表
+// 获取ak-sk
+//
+// 获取该用户创建的aksk列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *ApmClient) ListAkSk(request *model.ListAkSkRequest) (*model.ListAkSkResponse, error) {
 	requestDef := GenReqDefForListAkSk()
 
@@ -30,7 +35,12 @@ func (c *ApmClient) ListAkSk(request *model.ListAkSkRequest) (*model.ListAkSkRes
 	}
 }
 
-//该接口用于查询对应用户下的业务。
+// 查询业务列表
+//
+// 该接口用于查询对应用户下的业务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *ApmClient) ListBusiness(request *model.ListBusinessRequest) (*model.ListBusinessResponse, error) {
 	requestDef := GenReqDefForListBusiness()
 
@@ -41,7 +51,12 @@ func (c *ApmClient) ListBusiness(request *model.ListBusinessRequest) (*model.Lis
 	}
 }
 
-//根据region名称获取该名称下的master服务podlb地址信息
+// 查询master地址
+//
+// 根据region名称获取该名称下的master服务podlb地址信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *ApmClient) ShowMasterAddress(request *model.ShowMasterAddressRequest) (*model.ShowMasterAddressResponse, error) {
 	requestDef := GenReqDefForShowMasterAddress()
 

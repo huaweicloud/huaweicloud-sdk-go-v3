@@ -8,8 +8,8 @@ import (
 
 // 配置文件信息。
 type UpdateYmlsReqEditModify struct {
-	// 参数配置列表。
 
+	// 参数配置列表。
 	ElasticsearchYml *interface{} `json:"elasticsearch.yml"`
 }
 

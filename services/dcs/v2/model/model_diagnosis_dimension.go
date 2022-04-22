@@ -11,17 +11,17 @@ import (
 
 // 诊断维度
 type DiagnosisDimension struct {
+
 	// 诊断维度名称
-
 	Name DiagnosisDimensionName `json:"name"`
+
 	// 诊断结果为异常的诊断项总数
-
 	AbnormalNum int32 `json:"abnormal_num"`
+
 	// 诊断失败的诊断项总数
-
 	FailedNum int32 `json:"failed_num"`
-	// 诊断项列表
 
+	// 诊断项列表
 	DiagnosisItemList []DiagnosisItem `json:"diagnosis_item_list"`
 }
 

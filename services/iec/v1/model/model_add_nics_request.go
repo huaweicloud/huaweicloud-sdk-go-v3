@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type AddNicsRequest struct {
-	// 边缘实例ID。
 
+	// 边缘实例ID。
 	InstanceId string `json:"instance_id"`
 
 	Body *AddNicsRequestBody `json:"body,omitempty"`

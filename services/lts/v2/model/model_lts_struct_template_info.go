@@ -10,38 +10,38 @@ import (
 )
 
 type LtsStructTemplateInfo struct {
+
 	// 结构化字段
-
 	DemoFields []StructFieldInfo `json:"demo_fields"`
+
 	// tag字段列表（使用tag字段解析时需要，其中系统模板不支持使用tag字段）。
-
 	TagFields []TagField `json:"tag_fields"`
+
 	// 示例日志
-
 	Content string `json:"content"`
+
 	// 日志组ID
-
 	LogGroupId string `json:"log_group_id"`
+
 	// 结构化方式
-
 	ParseType LtsStructTemplateInfoParseType `json:"parse_type"`
+
 	// 日志流ID
-
 	LogStreamId string `json:"log_stream_id"`
+
 	// 项目ID
-
 	ProjectId string `json:"project_id"`
+
 	// parse_type为custom_regex类型时必填，regex提取规则
-
 	RegexRules *string `json:"regex_rules,omitempty"`
+
 	// parse_type为json类型时必填，解析层数，目前固定是3
-
 	Layers *int32 `json:"layers,omitempty"`
+
 	// parse_type为split类型时必填，分隔符，分词符号
-
 	Tokenizer *string `json:"tokenizer,omitempty"`
-	// parse_type为nginx类型时必填，nginx日志格式模板
 
+	// parse_type为nginx类型时必填，nginx日志格式模板
 	LogFormat *string `json:"log_format,omitempty"`
 }
 

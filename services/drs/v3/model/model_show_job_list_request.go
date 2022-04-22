@@ -11,8 +11,8 @@ import (
 
 // Request Object
 type ShowJobListRequest struct {
-	// 请求语言类型
 
+	// 请求语言类型
 	XLanguage *ShowJobListRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *QueryJobsReq `json:"body,omitempty"`

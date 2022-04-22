@@ -8,11 +8,11 @@ import (
 
 // 分组详情
 type CommonPoolsWithBorderGroupDict struct {
+
 	// 同组的公共池列表
-
 	PublicipPools *[]string `json:"publicip_pools,omitempty"`
-	// 分组：中心还是边缘
 
+	// 分组：中心还是边缘
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 }
 

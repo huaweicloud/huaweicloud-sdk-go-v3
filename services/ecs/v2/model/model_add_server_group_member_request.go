@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type AddServerGroupMemberRequest struct {
-	// 云服务器组ID。
 
+	// 云服务器组ID。
 	ServerGroupId string `json:"server_group_id"`
 
 	Body *AddServerGroupMemberRequestBody `json:"body,omitempty"`

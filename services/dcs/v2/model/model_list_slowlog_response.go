@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListSlowlogResponse struct {
+
 	// 总数
-
 	Count *int32 `json:"count,omitempty"`
-	// 慢日志列表
 
+	// 慢日志列表
 	Slowlogs       *[]SlowlogItem `json:"slowlogs,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

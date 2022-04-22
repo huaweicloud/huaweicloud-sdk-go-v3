@@ -8,14 +8,14 @@ import (
 
 // 任务信息
 type ClusterTask struct {
+
 	// 任务描述
-
 	Description *string `json:"description,omitempty"`
+
 	// 任务id
-
 	Id *string `json:"id,omitempty"`
-	// 任务名称
 
+	// 任务名称
 	Name *string `json:"name,omitempty"`
 }
 

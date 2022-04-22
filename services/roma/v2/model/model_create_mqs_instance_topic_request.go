@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateMqsInstanceTopicRequest struct {
-	// 实例ID。
 
+	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
 	Body *CreateMqsInstanceTopicReq `json:"body,omitempty"`

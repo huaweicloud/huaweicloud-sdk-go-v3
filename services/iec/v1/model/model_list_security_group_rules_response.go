@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListSecurityGroupRulesResponse struct {
+
 	// 安全组规则列表对象。
-
 	SecurityGroupRules *[]SecurityGroupRule `json:"security_group_rules,omitempty"`
-	// 安全组规则数目。
 
+	// 安全组规则数目。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

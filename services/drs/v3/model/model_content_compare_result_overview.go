@@ -11,14 +11,14 @@ import (
 
 //
 type ContentCompareResultOverview struct {
+
 	// 源库名称。
-
 	SourceDbName string `json:"source_db_name"`
+
 	// 目标库名称。
-
 	TargetDbName string `json:"target_db_name"`
-	// 对比结果。
 
+	// 对比结果。
 	ContentCompareResult ContentCompareResultOverviewContentCompareResult `json:"content_compare_result"`
 }
 

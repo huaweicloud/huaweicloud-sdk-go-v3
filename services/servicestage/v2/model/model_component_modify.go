@@ -7,11 +7,11 @@ import (
 )
 
 type ComponentModify struct {
+
 	// 应用组件名称。
-
 	Name *string `json:"name,omitempty"`
-	// 描述。
 
+	// 描述。
 	Description *string `json:"description,omitempty"`
 
 	Source *SourceObject `json:"source,omitempty"`

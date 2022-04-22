@@ -10,11 +10,11 @@ import (
 )
 
 type OriginHostBody struct {
+
 	// accelerate：选择加速域名作为回源地址；  customize：使用自定义的域名作为回源host域名；
-
 	OriginHostType OriginHostBodyOriginHostType `json:"origin_host_type"`
-	// 自定义回源域名，origin_host_type为 customize时传入该参数。
 
+	// 自定义回源域名，origin_host_type为 customize时传入该参数。
 	CustomizeDomain *string `json:"customize_domain,omitempty"`
 }
 

@@ -11,20 +11,20 @@ import (
 
 // 授权结果
 type AuthResult struct {
+
 	// 授权结果 - SUCCESS：授权成功 - SKIPPED：跳过 - FAILED：授权失败
-
 	Status *AuthResultStatus `json:"status,omitempty"`
+
 	// 授权失败错误信息
-
 	ErrorMsg *string `json:"error_msg,omitempty"`
+
 	// 授权失败错误码
-
 	ErrorCode *string `json:"error_code,omitempty"`
+
 	// 授权失败的API名称
-
 	ApiName *string `json:"api_name,omitempty"`
-	// 授权失败的APP名称
 
+	// 授权失败的APP名称
 	AppName *string `json:"app_name,omitempty"`
 }
 

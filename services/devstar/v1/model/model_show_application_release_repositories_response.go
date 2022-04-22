@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowApplicationReleaseRepositoriesResponse struct {
+
 	// 软件包列表
-
 	ReleaseRepositories *[]ReleaseRepository `json:"release_repositories,omitempty"`
-	// 软件包总条数
 
+	// 软件包总条数
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

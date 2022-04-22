@@ -8,8 +8,8 @@ import (
 
 // This is a auto create Body Object
 type BatchCreateMembersRequestBody struct {
-	// 后端服务器对象。
 
+	// 后端服务器对象。
 	Members []BatchCreateMembersOption `json:"members"`
 }
 

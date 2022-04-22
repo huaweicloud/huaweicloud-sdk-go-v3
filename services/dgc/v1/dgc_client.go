@@ -19,7 +19,11 @@ func DgcClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// 停止脚本实例的执行
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) CancelScript(request *model.CancelScriptRequest) (*model.CancelScriptResponse, error) {
 	requestDef := GenReqDefForCancelScript()
 
@@ -30,7 +34,11 @@ func (c *DgcClient) CancelScript(request *model.CancelScriptRequest) (*model.Can
 	}
 }
 
+// 创建连接
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) CreateConnection(request *model.CreateConnectionRequest) (*model.CreateConnectionResponse, error) {
 	requestDef := GenReqDefForCreateConnection()
 
@@ -41,7 +49,11 @@ func (c *DgcClient) CreateConnection(request *model.CreateConnectionRequest) (*m
 	}
 }
 
+// 创建作业
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) CreateJob(request *model.CreateJobRequest) (*model.CreateJobResponse, error) {
 	requestDef := GenReqDefForCreateJob()
 
@@ -52,7 +64,11 @@ func (c *DgcClient) CreateJob(request *model.CreateJobRequest) (*model.CreateJob
 	}
 }
 
+// 创建资源
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) CreateResource(request *model.CreateResourceRequest) (*model.CreateResourceResponse, error) {
 	requestDef := GenReqDefForCreateResource()
 
@@ -63,7 +79,11 @@ func (c *DgcClient) CreateResource(request *model.CreateResourceRequest) (*model
 	}
 }
 
+// 创建脚本
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) CreateScript(request *model.CreateScriptRequest) (*model.CreateScriptResponse, error) {
 	requestDef := GenReqDefForCreateScript()
 
@@ -74,7 +94,11 @@ func (c *DgcClient) CreateScript(request *model.CreateScriptRequest) (*model.Cre
 	}
 }
 
+// 删除连接
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) DeleteConnction(request *model.DeleteConnctionRequest) (*model.DeleteConnctionResponse, error) {
 	requestDef := GenReqDefForDeleteConnction()
 
@@ -85,7 +109,11 @@ func (c *DgcClient) DeleteConnction(request *model.DeleteConnctionRequest) (*mod
 	}
 }
 
+// 删除作业
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) DeleteJob(request *model.DeleteJobRequest) (*model.DeleteJobResponse, error) {
 	requestDef := GenReqDefForDeleteJob()
 
@@ -96,7 +124,11 @@ func (c *DgcClient) DeleteJob(request *model.DeleteJobRequest) (*model.DeleteJob
 	}
 }
 
+// 删除资源
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) DeleteResource(request *model.DeleteResourceRequest) (*model.DeleteResourceResponse, error) {
 	requestDef := GenReqDefForDeleteResource()
 
@@ -107,7 +139,11 @@ func (c *DgcClient) DeleteResource(request *model.DeleteResourceRequest) (*model
 	}
 }
 
+// 删除脚本
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) DeleteScript(request *model.DeleteScriptRequest) (*model.DeleteScriptResponse, error) {
 	requestDef := GenReqDefForDeleteScript()
 
@@ -118,7 +154,11 @@ func (c *DgcClient) DeleteScript(request *model.DeleteScriptRequest) (*model.Del
 	}
 }
 
+// 执行脚本
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ExecuteScript(request *model.ExecuteScriptRequest) (*model.ExecuteScriptResponse, error) {
 	requestDef := GenReqDefForExecuteScript()
 
@@ -129,7 +169,11 @@ func (c *DgcClient) ExecuteScript(request *model.ExecuteScriptRequest) (*model.E
 	}
 }
 
+// 导出连接
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ExportConnections(request *model.ExportConnectionsRequest) (*model.ExportConnectionsResponse, error) {
 	requestDef := GenReqDefForExportConnections()
 
@@ -140,7 +184,11 @@ func (c *DgcClient) ExportConnections(request *model.ExportConnectionsRequest) (
 	}
 }
 
+// 导出作业
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ExportJob(request *model.ExportJobRequest) (*model.ExportJobResponse, error) {
 	requestDef := GenReqDefForExportJob()
 
@@ -151,7 +199,11 @@ func (c *DgcClient) ExportJob(request *model.ExportJobRequest) (*model.ExportJob
 	}
 }
 
+// 批量导出作业
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ExportJobList(request *model.ExportJobListRequest) (*model.ExportJobListResponse, error) {
 	requestDef := GenReqDefForExportJobList()
 
@@ -162,7 +214,11 @@ func (c *DgcClient) ExportJobList(request *model.ExportJobListRequest) (*model.E
 	}
 }
 
+// 导入连接
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ImportConnections(request *model.ImportConnectionsRequest) (*model.ImportConnectionsResponse, error) {
 	requestDef := GenReqDefForImportConnections()
 
@@ -173,7 +229,11 @@ func (c *DgcClient) ImportConnections(request *model.ImportConnectionsRequest) (
 	}
 }
 
+// 导入作业
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ImportJob(request *model.ImportJobRequest) (*model.ImportJobResponse, error) {
 	requestDef := GenReqDefForImportJob()
 
@@ -184,7 +244,11 @@ func (c *DgcClient) ImportJob(request *model.ImportJobRequest) (*model.ImportJob
 	}
 }
 
+// 查询连接列表
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ListConnections(request *model.ListConnectionsRequest) (*model.ListConnectionsResponse, error) {
 	requestDef := GenReqDefForListConnections()
 
@@ -195,7 +259,11 @@ func (c *DgcClient) ListConnections(request *model.ListConnectionsRequest) (*mod
 	}
 }
 
+// 查询作业实例列表
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ListJobInstances(request *model.ListJobInstancesRequest) (*model.ListJobInstancesResponse, error) {
 	requestDef := GenReqDefForListJobInstances()
 
@@ -206,7 +274,11 @@ func (c *DgcClient) ListJobInstances(request *model.ListJobInstancesRequest) (*m
 	}
 }
 
+// 查询作业列表
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ListJobs(request *model.ListJobsRequest) (*model.ListJobsResponse, error) {
 	requestDef := GenReqDefForListJobs()
 
@@ -217,6 +289,7 @@ func (c *DgcClient) ListJobs(request *model.ListJobsRequest) (*model.ListJobsRes
 	}
 }
 
+// 查询资源列表
 //
 func (c *DgcClient) ListResources(request *model.ListResourcesRequest) (*model.ListResourcesResponse, error) {
 	requestDef := GenReqDefForListResources()
@@ -228,7 +301,11 @@ func (c *DgcClient) ListResources(request *model.ListResourcesRequest) (*model.L
 	}
 }
 
+// 查询脚本实例执行结果
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ListScriptResults(request *model.ListScriptResultsRequest) (*model.ListScriptResultsResponse, error) {
 	requestDef := GenReqDefForListScriptResults()
 
@@ -239,7 +316,11 @@ func (c *DgcClient) ListScriptResults(request *model.ListScriptResultsRequest) (
 	}
 }
 
+// 查询脚本列表
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ListScripts(request *model.ListScriptsRequest) (*model.ListScriptsResponse, error) {
 	requestDef := GenReqDefForListScripts()
 
@@ -250,7 +331,11 @@ func (c *DgcClient) ListScripts(request *model.ListScriptsRequest) (*model.ListS
 	}
 }
 
+// 查询系统任务详情
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ListSystemTasks(request *model.ListSystemTasksRequest) (*model.ListSystemTasksResponse, error) {
 	requestDef := GenReqDefForListSystemTasks()
 
@@ -261,7 +346,11 @@ func (c *DgcClient) ListSystemTasks(request *model.ListSystemTasksRequest) (*mod
 	}
 }
 
+// 重跑作业实例
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) RestoreJobInstance(request *model.RestoreJobInstanceRequest) (*model.RestoreJobInstanceResponse, error) {
 	requestDef := GenReqDefForRestoreJobInstance()
 
@@ -272,7 +361,11 @@ func (c *DgcClient) RestoreJobInstance(request *model.RestoreJobInstanceRequest)
 	}
 }
 
+// 单次执行作业
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) RunOnce(request *model.RunOnceRequest) (*model.RunOnceResponse, error) {
 	requestDef := GenReqDefForRunOnce()
 
@@ -283,7 +376,11 @@ func (c *DgcClient) RunOnce(request *model.RunOnceRequest) (*model.RunOnceRespon
 	}
 }
 
+// 查询连接详情
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ShowConnection(request *model.ShowConnectionRequest) (*model.ShowConnectionResponse, error) {
 	requestDef := GenReqDefForShowConnection()
 
@@ -294,7 +391,11 @@ func (c *DgcClient) ShowConnection(request *model.ShowConnectionRequest) (*model
 	}
 }
 
+// 检查导入作业文件中的作业和脚本
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ShowFileInfo(request *model.ShowFileInfoRequest) (*model.ShowFileInfoResponse, error) {
 	requestDef := GenReqDefForShowFileInfo()
 
@@ -305,7 +406,11 @@ func (c *DgcClient) ShowFileInfo(request *model.ShowFileInfoRequest) (*model.Sho
 	}
 }
 
+// 查询作业详情
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
 	requestDef := GenReqDefForShowJob()
 
@@ -316,7 +421,11 @@ func (c *DgcClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobRespon
 	}
 }
 
+// 查询作业实例详情
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ShowJobInstance(request *model.ShowJobInstanceRequest) (*model.ShowJobInstanceResponse, error) {
 	requestDef := GenReqDefForShowJobInstance()
 
@@ -327,7 +436,11 @@ func (c *DgcClient) ShowJobInstance(request *model.ShowJobInstanceRequest) (*mod
 	}
 }
 
+// 查询实时作业的运行状态
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*model.ShowJobStatusResponse, error) {
 	requestDef := GenReqDefForShowJobStatus()
 
@@ -338,7 +451,11 @@ func (c *DgcClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*model.S
 	}
 }
 
+// 查询资源详情
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ShowResource(request *model.ShowResourceRequest) (*model.ShowResourceResponse, error) {
 	requestDef := GenReqDefForShowResource()
 
@@ -349,7 +466,11 @@ func (c *DgcClient) ShowResource(request *model.ShowResourceRequest) (*model.Sho
 	}
 }
 
+// 查询脚本信息
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) ShowScript(request *model.ShowScriptRequest) (*model.ShowScriptResponse, error) {
 	requestDef := GenReqDefForShowScript()
 
@@ -360,7 +481,11 @@ func (c *DgcClient) ShowScript(request *model.ShowScriptRequest) (*model.ShowScr
 	}
 }
 
+// 启动作业
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) StartJob(request *model.StartJobRequest) (*model.StartJobResponse, error) {
 	requestDef := GenReqDefForStartJob()
 
@@ -371,7 +496,11 @@ func (c *DgcClient) StartJob(request *model.StartJobRequest) (*model.StartJobRes
 	}
 }
 
+// 停止作业
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) StopJob(request *model.StopJobRequest) (*model.StopJobResponse, error) {
 	requestDef := GenReqDefForStopJob()
 
@@ -382,7 +511,11 @@ func (c *DgcClient) StopJob(request *model.StopJobRequest) (*model.StopJobRespon
 	}
 }
 
+// 停止作业实例
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) StopJobInstance(request *model.StopJobInstanceRequest) (*model.StopJobInstanceResponse, error) {
 	requestDef := GenReqDefForStopJobInstance()
 
@@ -393,7 +526,11 @@ func (c *DgcClient) StopJobInstance(request *model.StopJobInstanceRequest) (*mod
 	}
 }
 
+// 修改连接
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) UpdateConnection(request *model.UpdateConnectionRequest) (*model.UpdateConnectionResponse, error) {
 	requestDef := GenReqDefForUpdateConnection()
 
@@ -404,7 +541,11 @@ func (c *DgcClient) UpdateConnection(request *model.UpdateConnectionRequest) (*m
 	}
 }
 
+// 修改作业
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) UpdateJob(request *model.UpdateJobRequest) (*model.UpdateJobResponse, error) {
 	requestDef := GenReqDefForUpdateJob()
 
@@ -415,7 +556,11 @@ func (c *DgcClient) UpdateJob(request *model.UpdateJobRequest) (*model.UpdateJob
 	}
 }
 
+// 修改资源
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) UpdateResource(request *model.UpdateResourceRequest) (*model.UpdateResourceResponse, error) {
 	requestDef := GenReqDefForUpdateResource()
 
@@ -426,7 +571,11 @@ func (c *DgcClient) UpdateResource(request *model.UpdateResourceRequest) (*model
 	}
 }
 
+// 修改脚本内容
 //
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DgcClient) UpdateScript(request *model.UpdateScriptRequest) (*model.UpdateScriptResponse, error) {
 	requestDef := GenReqDefForUpdateScript()
 

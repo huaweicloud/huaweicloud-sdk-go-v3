@@ -9,11 +9,11 @@ import (
 // Response Object
 type CreateConfTokenResponse struct {
 	Data *TokenInfo `json:"data,omitempty"`
+
 	// 地址本查询临时Token。
-
 	AddressToken *string `json:"addressToken,omitempty"`
-	// global外网IP。
 
+	// global外网IP。
 	GloablPublicIP *string `json:"gloablPublicIP,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

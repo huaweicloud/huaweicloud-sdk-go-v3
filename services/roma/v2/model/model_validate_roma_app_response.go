@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ValidateRomaAppResponse struct {
+
 	// 应用ID
-
 	Id *string `json:"id,omitempty"`
+
 	// 应用名称 - 字符集：支持中文、英文字母、数字、中划线、下划线、点、空格和中英文圆括号 - 约束：实例下唯一
-
 	Name *string `json:"name,omitempty"`
-	// 应用描述
 
+	// 应用描述
 	Remark         *string `json:"remark,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

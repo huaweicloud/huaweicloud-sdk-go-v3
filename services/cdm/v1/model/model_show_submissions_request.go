@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowSubmissionsRequest struct {
+
 	// 集群ID
-
 	ClusterId string `json:"cluster_id"`
-	// 作业名称
 
+	// 作业名称
 	Jname string `json:"jname"`
 }
 

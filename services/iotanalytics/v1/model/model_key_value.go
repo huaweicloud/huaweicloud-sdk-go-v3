@@ -7,11 +7,11 @@ import (
 )
 
 type KeyValue struct {
+
 	// 键。
-
 	Key *string `json:"key,omitempty"`
-	// 值。
 
+	// 值。
 	Value *string `json:"value,omitempty"`
 }
 

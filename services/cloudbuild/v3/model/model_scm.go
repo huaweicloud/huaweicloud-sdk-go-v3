@@ -8,11 +8,11 @@ import (
 
 // 代码信息
 type Scm struct {
+
 	// 代码Tag
-
 	BuildTag *string `json:"build_tag,omitempty"`
-	// 代码提交ID
 
+	// 代码提交ID
 	BuildCommitId *string `json:"build_commit_id,omitempty"`
 }
 

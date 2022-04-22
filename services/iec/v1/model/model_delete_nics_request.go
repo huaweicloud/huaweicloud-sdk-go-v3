@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteNicsRequest struct {
-	// 边缘实例ID。
 
+	// 边缘实例ID。
 	InstanceId string `json:"instance_id"`
 
 	Body *DeleteNicsRequestBody `json:"body,omitempty"`

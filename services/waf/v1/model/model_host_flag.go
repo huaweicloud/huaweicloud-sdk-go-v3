@@ -8,20 +8,20 @@ import (
 
 // 域名配置
 type HostFlag struct {
-	// true/false
 
+	// true/false
 	PciDss *string `json:"pci_dss,omitempty"`
-	// true/false
 
+	// true/false
 	Pci3ds *string `json:"pci_3ds,omitempty"`
+
 	// old/new
-
 	Cname *string `json:"cname,omitempty"`
-	// true/false
 
+	// true/false
 	IsDualAz *string `json:"is_dual_az,omitempty"`
-	// true/false
 
+	// true/false
 	Ipv6 *string `json:"ipv6,omitempty"`
 }
 

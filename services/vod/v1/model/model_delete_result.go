@@ -10,11 +10,11 @@ import (
 )
 
 type DeleteResult struct {
+
 	// 媒资ID。
-
 	AssetId *string `json:"asset_id,omitempty"`
-	// 删除状态。  取值如下： - DELETED：已删除。 - FAILED：删除失败。
 
+	// 删除状态。  取值如下： - DELETED：已删除。 - FAILED：删除失败。
 	Status *DeleteResultStatus `json:"status,omitempty"`
 }
 

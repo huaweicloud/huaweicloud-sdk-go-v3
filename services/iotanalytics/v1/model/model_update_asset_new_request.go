@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateAssetNewRequest struct {
-	// 资产ID
 
+	// 资产ID
 	AssetId string `json:"asset_id"`
 
 	Body *AssetModRequest `json:"body,omitempty"`

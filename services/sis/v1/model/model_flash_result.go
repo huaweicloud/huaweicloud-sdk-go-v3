@@ -8,11 +8,11 @@ import (
 
 //
 type FlashResult struct {
+
 	// 音频声道id
-
 	ChannelId *int32 `json:"channel_id,omitempty"`
-	// 分句结果
 
+	// 分句结果
 	Sentences *[]Sentences `json:"sentences,omitempty"`
 }
 

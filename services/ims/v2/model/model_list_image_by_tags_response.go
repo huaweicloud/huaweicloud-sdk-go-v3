@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListImageByTagsResponse struct {
+
 	// 镜像信息列表
-
 	Resources *[]ShowImageByTagsResource `json:"resources,omitempty"`
-	// 总记录数
 
+	// 总记录数
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

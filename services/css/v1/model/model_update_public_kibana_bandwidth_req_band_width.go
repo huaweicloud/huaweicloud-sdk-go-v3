@@ -8,8 +8,8 @@ import (
 
 // 带宽。
 type UpdatePublicKibanaBandwidthReqBandWidth struct {
-	// 修改后的带宽。
 
+	// 修改后的带宽。
 	Size int32 `json:"size"`
 }
 

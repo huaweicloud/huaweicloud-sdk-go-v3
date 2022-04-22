@@ -11,17 +11,17 @@ import (
 
 // Response Object
 type CreateAccessConfigResponse struct {
+
 	// 日志接入ID
-
 	AccessConfigId *string `json:"access_config_id,omitempty"`
+
 	// 日志接入名称
-
 	AccessConfigName *string `json:"access_config_name,omitempty"`
+
 	// 日志接入类型。AGENT：主机接入
-
 	AccessConfigType *CreateAccessConfigResponseAccessConfigType `json:"access_config_type,omitempty"`
-	// 创建时间
 
+	// 创建时间
 	CreateTime *int64 `json:"create_time,omitempty"`
 
 	AccessConfigDetail *AccessConfigDeatil `json:"access_config_detail,omitempty"`

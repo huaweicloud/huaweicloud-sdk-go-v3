@@ -8,11 +8,11 @@ import (
 
 // BCS组织维度监控数据列表结构
 type EntityMetricList struct {
+
 	// 指标对象列表。
-
 	Dimensions *[]Dimension `json:"dimensions,omitempty"`
-	// 监控数据列表项目。
 
+	// 监控数据列表项目。
 	Values *[]EntityMetricListItem `json:"values,omitempty"`
 }
 

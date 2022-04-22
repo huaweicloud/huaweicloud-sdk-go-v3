@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type CheckAuthUsersOfAppRequest struct {
+
 	// 应用ID
-
 	AppId string `json:"app_id"`
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 查询应用的指定名称的成员，精确匹配
 
+	// 查询应用的指定名称的成员，精确匹配
 	UserName *string `json:"user_name,omitempty"`
 }
 

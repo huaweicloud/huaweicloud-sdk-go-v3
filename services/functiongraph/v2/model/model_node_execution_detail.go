@@ -8,11 +8,11 @@ import (
 
 // 函数流节点执行详细信息
 type NodeExecutionDetail struct {
+
 	// 流程节点ID
-
 	NodeId *string `json:"node_id,omitempty"`
-	// 节点执行记录
 
+	// 节点执行记录
 	Executions *[]NodeExecution `json:"executions,omitempty"`
 }
 

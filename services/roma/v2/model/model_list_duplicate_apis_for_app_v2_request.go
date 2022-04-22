@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ListDuplicateApisForAppV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 应用id
 
+	// 应用id
 	AppId string `json:"app_id"`
 }
 

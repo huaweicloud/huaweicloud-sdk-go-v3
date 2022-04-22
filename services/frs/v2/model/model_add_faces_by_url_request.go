@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type AddFacesByUrlRequest struct {
-	// 人脸库名称。
 
+	// 人脸库名称。
 	FaceSetName string `json:"face_set_name"`
 
 	Body *AddFacesUrlReq `json:"body,omitempty"`

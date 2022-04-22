@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListRecordRulesResponse struct {
-	// 录制规则列表
 
+	// 录制规则列表
 	Rules *[]RecordRule `json:"rules,omitempty"`
 
 	XRequestId     *string `json:"X-request-Id,omitempty"`

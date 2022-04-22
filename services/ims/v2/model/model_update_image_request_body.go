@@ -11,14 +11,14 @@ import (
 
 // 扩展更新镜像接口请求体
 type UpdateImageRequestBody struct {
+
 	// 操作类型，目前取值为add，replace和remove。
-
 	Op UpdateImageRequestBodyOp `json:"op"`
+
 	// 需要更新的属性名称，需要在属性名称前加“/”。
-
 	Path string `json:"path"`
-	// 需要更新属性的值。
 
+	// 需要更新属性的值。
 	Value string `json:"value"`
 }
 

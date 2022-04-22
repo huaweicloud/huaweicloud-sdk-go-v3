@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type SwitchRiskRuleRequest struct {
-	// instance_id
 
+	// instance_id
 	InstanceId string `json:"instance_id"`
 
 	Body *BatchSwitchesRequest `json:"body,omitempty"`

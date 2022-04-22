@@ -8,17 +8,17 @@ import (
 
 // Request Object
 type ShowMqsInstanceTopicAccessPolicyRequest struct {
+
 	// 实例ID。
-
 	InstanceId string `json:"instance_id"`
+
 	// topic名称。
-
 	TopicName string `json:"topic_name"`
+
 	// 分页查询偏移量。
-
 	Offset *string `json:"offset,omitempty"`
-	// 分页查询大小。
 
+	// 分页查询大小。
 	Limit *string `json:"limit,omitempty"`
 }
 

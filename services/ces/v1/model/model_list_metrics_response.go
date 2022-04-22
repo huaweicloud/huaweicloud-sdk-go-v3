@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListMetricsResponse struct {
-	// 指标信息列表
 
+	// 指标信息列表
 	Metrics *[]MetricInfoList `json:"metrics,omitempty"`
 
 	MetaData       *MetaData `json:"meta_data,omitempty"`

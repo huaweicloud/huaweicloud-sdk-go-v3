@@ -7,14 +7,14 @@ import (
 )
 
 type SeverityV2Do struct {
+
 	// 语言
-
 	Language *string `json:"language,omitempty"`
+
 	// 严重性名称
-
 	SeverityName *string `json:"severity_name,omitempty"`
-	// 严重性id
 
+	// 严重性id
 	SeverityId *string `json:"severity_id,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowMultiAccountTransferAmountResponse struct {
+
 	// 记录条数。
-
 	TotalCount *int32 `json:"total_count,omitempty"`
-	// 可拨款余额信息，如果是余额账户，只会有一条记录。 具体请参见表2。
 
+	// 可拨款余额信息，如果是余额账户，只会有一条记录。 具体请参见表2。
 	AmountInfos    *[]TransferAmountInfoV2 `json:"amount_infos,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

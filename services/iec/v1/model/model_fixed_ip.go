@@ -8,11 +8,11 @@ import (
 
 // 私有IP对象
 type FixedIp struct {
+
 	// 所属子网ID
-
 	SubnetId *string `json:"subnet_id,omitempty"`
-	// 端口IP地址
 
+	// 端口IP地址
 	IpAddress *string `json:"ip_address,omitempty"`
 }
 

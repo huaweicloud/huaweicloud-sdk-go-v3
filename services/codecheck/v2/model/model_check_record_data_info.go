@@ -7,8 +7,8 @@ import (
 )
 
 type CheckRecordDataInfo struct {
-	// 检查时间
 
+	// 检查时间
 	CheckTime *string `json:"check_time,omitempty"`
 
 	IssueCounts *CheckRecordIssueCountsInfo `json:"issue_counts,omitempty"`

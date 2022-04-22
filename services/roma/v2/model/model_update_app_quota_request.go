@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateAppQuotaRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 客户端配额编号
 
+	// 客户端配额编号
 	AppQuotaId string `json:"app_quota_id"`
 
 	Body *AppQuotaCreate `json:"body,omitempty"`

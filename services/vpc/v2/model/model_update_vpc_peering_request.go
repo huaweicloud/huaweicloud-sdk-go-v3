@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateVpcPeeringRequest struct {
-	// 对等连接ID
 
+	// 对等连接ID
 	PeeringId string `json:"peering_id"`
 
 	Body *UpdateVpcPeeringRequestBody `json:"body,omitempty"`

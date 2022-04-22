@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type CreateInstallCmdRequest struct {
+
 	// 边缘节点ID
-
 	EdgeNodeId string `json:"edge_node_id"`
-	// 节点架构
 
+	// 节点架构
 	Arch string `json:"arch"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListResourcesResponse struct {
-	// 资源列表
 
+	// 资源列表
 	Resources *[]ResourceEntity `json:"resources,omitempty"`
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`

@@ -7,14 +7,14 @@ import (
 )
 
 type StartLogsReq struct {
+
 	// IAM委托。
-
 	Agency string `json:"agency"`
+
 	// 备份路径。
-
 	LogBasePath string `json:"logBasePath"`
-	// OBS桶。
 
+	// OBS桶。
 	LogBucket string `json:"logBucket"`
 }
 

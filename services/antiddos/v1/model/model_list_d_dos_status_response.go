@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListDDosStatusResponse struct {
+
 	// 弹性IP总数
-
 	Total *int32 `json:"total,omitempty"`
-	// 防护状态列表
 
+	// 防护状态列表
 	DdosStatus     *[]DDosStatus `json:"ddosStatus,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

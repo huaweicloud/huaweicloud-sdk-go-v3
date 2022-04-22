@@ -8,11 +8,11 @@ import (
 
 // API数据源配置内容
 type ApiContentRsp struct {
+
 	// 数据源名称
-
 	Name *string `json:"name,omitempty"`
-	// 数据上报url
 
+	// 数据上报url
 	Url *string `json:"url,omitempty"`
 }
 

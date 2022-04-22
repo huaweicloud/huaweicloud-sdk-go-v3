@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateWatermarkTemplateResponse struct {
-	// 水印模板Id
 
+	// 水印模板Id
 	TemplateId     *int32 `json:"template_id,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 //
 type BatchModifyPwdReq struct {
-	// 批量修改数据库密码信息列表
 
+	// 批量修改数据库密码信息列表
 	Jobs []ModifyPwdEndPoint `json:"jobs"`
 }
 

@@ -8,17 +8,17 @@ import (
 
 // Request Object
 type ListPublicIpsRequest struct {
+
 	// 查询返回弹性IP列表数量。取值范围：0~1000。
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 查询的偏移量。
-
 	Offset *int32 `json:"offset,omitempty"`
+
 	// 站点ID。
-
 	SiteId *string `json:"site_id,omitempty"`
-	// 端口ID
 
+	// 端口ID
 	PortId *string `json:"port_id,omitempty"`
 }
 

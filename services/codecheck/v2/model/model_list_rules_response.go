@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListRulesResponse struct {
+
 	// 规则信息
-
 	Info *[]RuleListItem `json:"info,omitempty"`
-	// 总数
 
+	// 总数
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -11,11 +11,11 @@ import (
 
 // 命名实体识别post请求体
 type NerRequest struct {
+
 	// 待分析文本，中文长度为1~512，英文和西班牙文长度为1~2000，文本编码为UTF-8。
-
 	Text string `json:"text"`
-	// 支持的文本语言类型，目前支持中文（zh）,英文（en）,和西班牙文（es），默认为中文。
 
+	// 支持的文本语言类型，目前支持中文（zh）,英文（en）,和西班牙文（es），默认为中文。
 	Lang *NerRequestLang `json:"lang,omitempty"`
 }
 

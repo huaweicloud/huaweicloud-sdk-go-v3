@@ -8,8 +8,8 @@ import (
 
 // 日志接入主机组ID列表
 type AccessConfigHostGroupIdList struct {
-	// 主机组ID列表
 
+	// 主机组ID列表
 	HostGroupIdList []string `json:"host_group_id_list"`
 }
 

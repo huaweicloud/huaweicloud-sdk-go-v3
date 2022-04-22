@@ -8,11 +8,11 @@ import (
 
 // 创建结构化模板中的字段模型
 type FieldModel struct {
+
 	// 字段名称
-
 	FieldName string `json:"field_name"`
-	// 是否开启快速分析。
 
+	// 是否开启快速分析。
 	IsAnalysis bool `json:"is_analysis"`
 }
 

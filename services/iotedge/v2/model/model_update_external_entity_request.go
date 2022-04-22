@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateExternalEntityRequest struct {
+
 	// 边缘节点ID
-
 	EdgeNodeId string `json:"edge_node_id"`
-	// 外部实体ID
 
+	// 外部实体ID
 	ExternalId string `json:"external_id"`
 
 	Body *UpdateExternalEntityReqDto `json:"body,omitempty"`

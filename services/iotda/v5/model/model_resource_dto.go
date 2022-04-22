@@ -8,8 +8,8 @@ import (
 
 // 资源结构体。
 type ResourceDto struct {
-	// 资源id。例如，要查询的资源类型为device，那么对应的资源id就是device_id。
 
+	// 资源id。例如，要查询的资源类型为device，那么对应的资源id就是device_id。
 	ResourceId *string `json:"resource_id,omitempty"`
 }
 

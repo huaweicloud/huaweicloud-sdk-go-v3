@@ -7,8 +7,8 @@ import (
 )
 
 type ValidateSqlRequestBody struct {
-	// 待执行的SQL语句。
 
+	// 待执行的SQL语句。
 	Sql *string `json:"sql,omitempty"`
 }
 

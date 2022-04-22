@@ -8,8 +8,8 @@ import (
 
 // This is a auto create Body Object
 type RestartClusterRequestBody struct {
-	// 重启标识
 
+	// 重启标识
 	Restart *interface{} `json:"restart"`
 }
 

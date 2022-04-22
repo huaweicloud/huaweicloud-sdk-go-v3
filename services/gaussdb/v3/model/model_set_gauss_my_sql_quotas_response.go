@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type SetGaussMySqlQuotasResponse struct {
-	// 资源列表对象。
 
+	// 资源列表对象。
 	QuotaList      *[]SetQuota `json:"quota_list,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

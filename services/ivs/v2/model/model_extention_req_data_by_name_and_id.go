@@ -7,11 +7,11 @@ import (
 )
 
 type ExtentionReqDataByNameAndId struct {
+
 	// 被验证人的姓名。
-
 	VerificationName string `json:"verification_name"`
-	// 被验证人的身份证号码。
 
+	// 被验证人的身份证号码。
 	VerificationId string `json:"verification_id"`
 }
 

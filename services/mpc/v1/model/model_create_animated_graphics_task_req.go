@@ -10,8 +10,8 @@ type CreateAnimatedGraphicsTaskReq struct {
 	Input *ObsObjInfo `json:"input,omitempty"`
 
 	Output *ObsObjInfo `json:"output,omitempty"`
-	// 用户自定义数据。
 
+	// 用户自定义数据。
 	UserData *string `json:"user_data,omitempty"`
 
 	OutputParam *AnimatedGraphicsOutputParam `json:"output_param,omitempty"`

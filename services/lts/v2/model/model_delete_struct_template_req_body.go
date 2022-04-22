@@ -8,8 +8,8 @@ import (
 
 // 删除结构化配置参数
 type DeleteStructTemplateReqBody struct {
-	// 结构化规则ID
 
+	// 结构化规则ID
 	Id string `json:"id"`
 }
 

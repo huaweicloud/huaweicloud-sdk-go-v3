@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowClassroomDetailRequest struct {
-	// 课堂ID
 
+	// 课堂ID
 	ClassroomId string `json:"classroom_id"`
 }
 

@@ -7,14 +7,14 @@ import (
 )
 
 type PublicKey struct {
+
 	// 密钥id
-
 	Id string `json:"id"`
+
 	// 密钥
-
 	Key string `json:"key"`
-	// 密钥名称
 
+	// 密钥名称
 	Title string `json:"title"`
 }
 

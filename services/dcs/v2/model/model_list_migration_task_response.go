@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListMigrationTaskResponse struct {
+
 	// 迁移任务数量。
-
 	Count *int32 `json:"count,omitempty"`
-	// 迁移任务列表。
 
+	// 迁移任务列表。
 	MigrationTasks *[]MigrationTaskList `json:"migration_tasks,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

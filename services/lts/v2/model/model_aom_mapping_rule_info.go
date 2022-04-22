@@ -7,23 +7,23 @@ import (
 )
 
 type AomMappingRuleInfo struct {
+
 	// 集群id
-
 	ClusterId string `json:"cluster_id"`
+
 	// 集群名称
-
 	ClusterName string `json:"cluster_name"`
+
 	// 工作负载
-
 	Deployments []string `json:"deployments"`
+
 	// 命名空间
-
 	Namespace string `json:"namespace"`
+
 	// 容器名称
-
 	ContainerName *string `json:"container_name,omitempty"`
-	// 接入规则详情
 
+	// 接入规则详情
 	Files []AomMappingfilesInfo `json:"files"`
 }
 

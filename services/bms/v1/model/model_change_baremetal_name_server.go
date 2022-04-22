@@ -8,8 +8,8 @@ import (
 
 // server字段数据结构说明
 type ChangeBaremetalNameServer struct {
-	// 修改后的裸金属服务器名称
 
+	// 修改后的裸金属服务器名称
 	Name string `json:"name"`
 }
 

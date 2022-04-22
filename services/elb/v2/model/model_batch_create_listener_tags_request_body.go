@@ -11,11 +11,11 @@ import (
 
 // This is a auto create Body Object
 type BatchCreateListenerTagsRequestBody struct {
+
 	// 操作类型。 取值范围：create - 创建标签。
-
 	Action BatchCreateListenerTagsRequestBodyAction `json:"action"`
-	// 标签对象列表。
 
+	// 标签对象列表。
 	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 

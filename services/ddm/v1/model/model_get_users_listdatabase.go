@@ -8,11 +8,11 @@ import (
 
 // This is a auto query response Object
 type GetUsersListdatabase struct {
+
 	// DDM实例帐号关联的逻辑库名称。
-
 	Name *string `json:"name,omitempty"`
-	// 逻辑库的描述信息。
 
+	// 逻辑库的描述信息。
 	Description *string `json:"description,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowLiveDataApiV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 后端API的编号
 
+	// 后端API的编号
 	LdApiId string `json:"ld_api_id"`
 }
 

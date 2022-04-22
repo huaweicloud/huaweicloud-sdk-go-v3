@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteProtectionGroupResponse struct {
-	// 成功返回jobId信息
 
+	// 成功返回jobId信息
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type ChangeSqlSwitchRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 请求语言类型。
 
+	// 请求语言类型。
 	XLanguage *ChangeSqlSwitchRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *ChangeSqlSwitchBody `json:"body,omitempty"`

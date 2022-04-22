@@ -11,11 +11,11 @@ import (
 
 // 主机组标签信息
 type GetHostGroupListTag struct {
+
 	// 标签类型。AND：标签过滤的逻辑为与，OR：标签过滤的逻辑为或
-
 	TagType *GetHostGroupListTagTagType `json:"tag_type,omitempty"`
-	// 主机组标签
 
+	// 主机组标签
 	TagList *[]HostGroupTag `json:"tag_list,omitempty"`
 }
 

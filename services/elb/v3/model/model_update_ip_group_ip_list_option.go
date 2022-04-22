@@ -8,14 +8,14 @@ import (
 
 // 更新IP地址组IP列表请求参数。
 type UpdateIpGroupIpListOption struct {
+
 	// IP地址组的名称
-
 	Name *string `json:"name,omitempty"`
+
 	// IP地址组中包含的IP列表。
-
 	IpList *[]UpadateIpGroupIpOption `json:"ip_list,omitempty"`
-	// IP地址组的描述信息
 
+	// IP地址组的描述信息
 	Description *string `json:"description,omitempty"`
 }
 

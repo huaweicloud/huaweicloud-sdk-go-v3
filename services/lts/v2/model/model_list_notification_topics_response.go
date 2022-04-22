@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ListNotificationTopicsResponse struct {
+
 	// request_id
-
 	RequestId *string `json:"request_id,omitempty"`
+
 	// topics数量
-
 	TopicCount *int32 `json:"topic_count,omitempty"`
-	// 主题信息
 
+	// 主题信息
 	Topics         *[]Topics `json:"topics,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

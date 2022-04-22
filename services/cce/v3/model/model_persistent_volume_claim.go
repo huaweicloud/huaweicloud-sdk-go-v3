@@ -8,11 +8,11 @@ import (
 
 //
 type PersistentVolumeClaim struct {
+
 	// API版本，固定值**v1**
-
 	ApiVersion string `json:"apiVersion"`
-	// API类型，固定值**PersistentVolumeClaim**
 
+	// API类型，固定值**PersistentVolumeClaim**
 	Kind string `json:"kind"`
 
 	Metadata *PersistentVolumeClaimMetadata `json:"metadata"`

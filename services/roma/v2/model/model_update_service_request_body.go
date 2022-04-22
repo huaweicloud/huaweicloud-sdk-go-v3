@@ -10,14 +10,14 @@ import (
 )
 
 type UpdateServiceRequestBody struct {
+
 	// 服务名称，支持中文,英文大小写，数字，下划线和中划线,长度2-64
-
 	ServiceName string `json:"service_name"`
+
 	// 服务描述，长度0-200
-
 	Description *string `json:"description,omitempty"`
-	// 服务状态 0-启用 1-停用
 
+	// 服务状态 0-启用 1-停用
 	Status UpdateServiceRequestBodyStatus `json:"status"`
 }
 

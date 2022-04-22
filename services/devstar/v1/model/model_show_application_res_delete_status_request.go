@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type ShowApplicationResDeleteStatusRequest struct {
+
 	// 语言类型 中文:zh-cn 英文:en-us
-
 	XLanguage *ShowApplicationResDeleteStatusRequestXLanguage `json:"X-Language,omitempty"`
-	// 应用id
 
+	// 应用id
 	ApplicationId string `json:"application_id"`
 }
 

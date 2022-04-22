@@ -7,8 +7,8 @@ import (
 )
 
 type TaskStatus struct {
-	// 任务ID，供调用者查询任务进度。
 
+	// 任务ID，供调用者查询任务进度。
 	JobID *string `json:"jobID,omitempty"`
 }
 

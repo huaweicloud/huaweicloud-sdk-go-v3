@@ -11,33 +11,33 @@ import (
 
 // 防火墙对象
 type Firewall struct {
+
 	// 网络ACL ID
-
 	Id *string `json:"id,omitempty"`
+
 	// 网络ACL名称。
-
 	Name *string `json:"name,omitempty"`
+
 	// 网络ACL使能开关。  取值范围：true（开启），false（关闭）。默认为true
-
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
+
 	// 网络ACL状态。  取值范围：INACTIVE
-
 	Status *FirewallStatus `json:"status,omitempty"`
+
 	// 网络ACL描述。
-
 	Description *string `json:"description,omitempty"`
-	// 租户domainID
 
+	// 租户domainID
 	DomainId *string `json:"domain_id,omitempty"`
 
 	EgressFirewallPolicy *FirewallPolicy `json:"egress_firewall_policy,omitempty"`
-	// 出方向网络ACL规则个数。
 
+	// 出方向网络ACL规则个数。
 	EgressFirewallRuleCount *int32 `json:"egress_firewall_rule_count,omitempty"`
 
 	IngressFirewallPolicy *FirewallPolicy `json:"ingress_firewall_policy,omitempty"`
-	// 入方向网络ACL规则个数。
 
+	// 入方向网络ACL规则个数。
 	IngressFirewallRuleCount *int32 `json:"ingress_firewall_rule_count,omitempty"`
 }
 

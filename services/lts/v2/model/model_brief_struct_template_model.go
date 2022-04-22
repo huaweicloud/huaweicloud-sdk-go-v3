@@ -11,20 +11,20 @@ import (
 
 // 结构化模板简略对象
 type BriefStructTemplateModel struct {
+
 	// 模板创建/更新时间
-
 	CreateTime int64 `json:"create_time"`
+
 	// 模板id
-
 	Id string `json:"id"`
+
 	// 模板名称
-
 	TemplateName string `json:"template_name"`
+
 	// 结构化类型，当前支持regex,json,split,nginx
-
 	TemplateType BriefStructTemplateModelTemplateType `json:"template_type"`
-	// 项目ID，获取方式请参见：获取账号ID、项目ID、日志组ID、日志流ID（https://support.huaweicloud.com/api-lts/lts_api_0006.html）。
 
+	// 项目ID，获取方式请参见：获取账号ID、项目ID、日志组ID、日志流ID（https://support.huaweicloud.com/api-lts/lts_api_0006.html）。
 	ProjectId string `json:"project_id"`
 }
 

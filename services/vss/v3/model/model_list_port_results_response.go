@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListPortResultsResponse struct {
+
 	// 端口总数
-
 	Total *int32 `json:"total,omitempty"`
-	// 端口信息列表
 
+	// 端口信息列表
 	Data           *[]PortItem `json:"data,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

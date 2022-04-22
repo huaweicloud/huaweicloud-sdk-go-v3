@@ -8,11 +8,11 @@ import (
 
 // 带名称的公式
 type NamedFormula struct {
+
 	// 公式名称，不能和输入参数名重复，正则：\"^[A-Za-z][A-Za-z_]{0,31}$\"
-
 	Name string `json:"name"`
-	// 公式，最多1024个字符
 
+	// 公式，最多1024个字符
 	Formula string `json:"formula"`
 }
 

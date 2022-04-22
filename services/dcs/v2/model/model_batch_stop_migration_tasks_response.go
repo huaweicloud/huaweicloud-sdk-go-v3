@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type BatchStopMigrationTasksResponse struct {
-	// 数据迁移任务列表。
 
+	// 数据迁移任务列表。
 	MigrationTasks *[]StopMigrationTaskResult `json:"migration_tasks,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }

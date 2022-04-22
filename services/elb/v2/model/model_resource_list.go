@@ -8,8 +8,8 @@ import (
 
 // 用于资源对象id列表，{“id”：id值}
 type ResourceList struct {
-	// 资源ID
 
+	// 资源ID
 	Id string `json:"id"`
 }
 

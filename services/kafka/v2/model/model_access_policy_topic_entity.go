@@ -8,11 +8,11 @@ import (
 
 // 权限实体。
 type AccessPolicyTopicEntity struct {
+
 	// topic名称。
-
 	Name string `json:"name"`
-	// 权限列表。
 
+	// 权限列表。
 	Policies []AccessPolicyEntity `json:"policies"`
 }
 

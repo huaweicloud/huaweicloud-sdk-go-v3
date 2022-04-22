@@ -8,11 +8,11 @@ import (
 
 // OBS桶信息
 type ObsInfo struct {
+
 	// OBS桶名称
-
 	Name *string `json:"name,omitempty"`
-	// OBS桶地址
 
+	// OBS桶地址
 	Addr *string `json:"addr,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteEnvironmentRequest struct {
-	// 环境ID。
 
+	// 环境ID。
 	EnvironmentId string `json:"environment_id"`
 }
 

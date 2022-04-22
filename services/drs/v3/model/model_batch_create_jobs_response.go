@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type BatchCreateJobsResponse struct {
+
 	// 批量创建任务的响应体集合。
-
 	Results *[]CreateJobResp `json:"results,omitempty"`
-	// 总记录数。
 
+	// 总记录数。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

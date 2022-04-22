@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateTransTemplateResponse struct {
-	// 自定义转码模板编号。
 
+	// 自定义转码模板编号。
 	TemplateId     *int32 `json:"template_id,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -7,8 +7,8 @@ import (
 )
 
 type DeletePictureReq struct {
-	// 图片URL路径，作为图片库中索引图片的ID。
 
+	// 图片URL路径，作为图片库中索引图片的ID。
 	Path *string `json:"path,omitempty"`
 }
 

@@ -10,17 +10,17 @@ import (
 )
 
 type Success struct {
+
 	// API请求路径
-
 	Path *string `json:"path,omitempty"`
+
 	// API请求方法
-
 	Method *string `json:"method,omitempty"`
+
 	// 导入行为： - update：表示更新API - create：表示新建API
-
 	Action *SuccessAction `json:"action,omitempty"`
-	// 导入成功的API编号
 
+	// 导入成功的API编号
 	Id *string `json:"id,omitempty"`
 }
 

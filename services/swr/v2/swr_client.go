@@ -19,7 +19,12 @@ func SwrClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//创建镜像自动同步任务
+// 创建镜像自动同步任务
+//
+// 创建镜像自动同步任务
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) CreateImageSyncRepo(request *model.CreateImageSyncRepoRequest) (*model.CreateImageSyncRepoResponse, error) {
 	requestDef := GenReqDefForCreateImageSyncRepo()
 
@@ -30,7 +35,12 @@ func (c *SwrClient) CreateImageSyncRepo(request *model.CreateImageSyncRepoReques
 	}
 }
 
-//手动同步镜像
+// 手动同步镜像
+//
+// 手动同步镜像
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) CreateManualImageSyncRepo(request *model.CreateManualImageSyncRepoRequest) (*model.CreateManualImageSyncRepoResponse, error) {
 	requestDef := GenReqDefForCreateManualImageSyncRepo()
 
@@ -41,7 +51,12 @@ func (c *SwrClient) CreateManualImageSyncRepo(request *model.CreateManualImageSy
 	}
 }
 
-//创建组织
+// 创建组织
+//
+// 创建组织
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) CreateNamespace(request *model.CreateNamespaceRequest) (*model.CreateNamespaceResponse, error) {
 	requestDef := GenReqDefForCreateNamespace()
 
@@ -52,7 +67,12 @@ func (c *SwrClient) CreateNamespace(request *model.CreateNamespaceRequest) (*mod
 	}
 }
 
-//创建组织权限
+// 创建组织权限
+//
+// 创建组织权限
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) CreateNamespaceAuth(request *model.CreateNamespaceAuthRequest) (*model.CreateNamespaceAuthResponse, error) {
 	requestDef := GenReqDefForCreateNamespaceAuth()
 
@@ -63,7 +83,12 @@ func (c *SwrClient) CreateNamespaceAuth(request *model.CreateNamespaceAuthReques
 	}
 }
 
-//在组织下创建镜像仓库。
+// 在组织下创建镜像仓库
+//
+// 在组织下创建镜像仓库。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) CreateRepo(request *model.CreateRepoRequest) (*model.CreateRepoResponse, error) {
 	requestDef := GenReqDefForCreateRepo()
 
@@ -74,7 +99,12 @@ func (c *SwrClient) CreateRepo(request *model.CreateRepoRequest) (*model.CreateR
 	}
 }
 
-//创建共享帐号。镜像上传后，您可以共享私有镜像给其他帐号，并授予下载该镜像的权限。
+// 创建共享帐号
+//
+// 创建共享帐号。镜像上传后，您可以共享私有镜像给其他帐号，并授予下载该镜像的权限。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) CreateRepoDomains(request *model.CreateRepoDomainsRequest) (*model.CreateRepoDomainsResponse, error) {
 	requestDef := GenReqDefForCreateRepoDomains()
 
@@ -85,7 +115,12 @@ func (c *SwrClient) CreateRepoDomains(request *model.CreateRepoDomainsRequest) (
 	}
 }
 
-//创建镜像老化规则
+// 创建镜像老化规则
+//
+// 创建镜像老化规则
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) CreateRetention(request *model.CreateRetentionRequest) (*model.CreateRetentionResponse, error) {
 	requestDef := GenReqDefForCreateRetention()
 
@@ -96,7 +131,12 @@ func (c *SwrClient) CreateRetention(request *model.CreateRetentionRequest) (*mod
 	}
 }
 
-//调用该接口，通过获取响应消息头的X-Swr-Dockerlogin的值及响应消息体的host值，可生成临时登录指令。
+// 生成临时登录指令
+//
+// 调用该接口，通过获取响应消息头的X-Swr-Dockerlogin的值及响应消息体的host值，可生成临时登录指令。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) CreateSecret(request *model.CreateSecretRequest) (*model.CreateSecretResponse, error) {
 	requestDef := GenReqDefForCreateSecret()
 
@@ -107,7 +147,12 @@ func (c *SwrClient) CreateSecret(request *model.CreateSecretRequest) (*model.Cre
 	}
 }
 
-//创建触发器
+// 创建触发器
+//
+// 创建触发器
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) CreateTrigger(request *model.CreateTriggerRequest) (*model.CreateTriggerResponse, error) {
 	requestDef := GenReqDefForCreateTrigger()
 
@@ -118,7 +163,12 @@ func (c *SwrClient) CreateTrigger(request *model.CreateTriggerRequest) (*model.C
 	}
 }
 
-//创建镜像权限
+// 创建镜像权限
+//
+// 创建镜像权限
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) CreateUserRepositoryAuth(request *model.CreateUserRepositoryAuthRequest) (*model.CreateUserRepositoryAuthResponse, error) {
 	requestDef := GenReqDefForCreateUserRepositoryAuth()
 
@@ -129,7 +179,12 @@ func (c *SwrClient) CreateUserRepositoryAuth(request *model.CreateUserRepository
 	}
 }
 
-//删除镜像自动同步任务
+// 删除镜像自动同步任务
+//
+// 删除镜像自动同步任务
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) DeleteImageSyncRepo(request *model.DeleteImageSyncRepoRequest) (*model.DeleteImageSyncRepoResponse, error) {
 	requestDef := GenReqDefForDeleteImageSyncRepo()
 
@@ -140,7 +195,12 @@ func (c *SwrClient) DeleteImageSyncRepo(request *model.DeleteImageSyncRepoReques
 	}
 }
 
-//删除组织权限
+// 删除组织权限
+//
+// 删除组织权限
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) DeleteNamespaceAuth(request *model.DeleteNamespaceAuthRequest) (*model.DeleteNamespaceAuthResponse, error) {
 	requestDef := GenReqDefForDeleteNamespaceAuth()
 
@@ -151,7 +211,12 @@ func (c *SwrClient) DeleteNamespaceAuth(request *model.DeleteNamespaceAuthReques
 	}
 }
 
-//删除组织
+// 删除组织
+//
+// 删除组织
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) DeleteNamespaces(request *model.DeleteNamespacesRequest) (*model.DeleteNamespacesResponse, error) {
 	requestDef := GenReqDefForDeleteNamespaces()
 
@@ -162,7 +227,12 @@ func (c *SwrClient) DeleteNamespaces(request *model.DeleteNamespacesRequest) (*m
 	}
 }
 
-//删除组织下的镜像仓库。
+// 删除组织下的镜像仓库
+//
+// 删除组织下的镜像仓库。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) DeleteRepo(request *model.DeleteRepoRequest) (*model.DeleteRepoResponse, error) {
 	requestDef := GenReqDefForDeleteRepo()
 
@@ -173,7 +243,12 @@ func (c *SwrClient) DeleteRepo(request *model.DeleteRepoRequest) (*model.DeleteR
 	}
 }
 
-//删除共享帐号
+// 删除共享帐号
+//
+// 删除共享帐号
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) DeleteRepoDomains(request *model.DeleteRepoDomainsRequest) (*model.DeleteRepoDomainsResponse, error) {
 	requestDef := GenReqDefForDeleteRepoDomains()
 
@@ -184,7 +259,12 @@ func (c *SwrClient) DeleteRepoDomains(request *model.DeleteRepoDomainsRequest) (
 	}
 }
 
-//删除镜像仓库中指定tag的镜像
+// 删除指定tag的镜像
+//
+// 删除镜像仓库中指定tag的镜像
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) DeleteRepoTag(request *model.DeleteRepoTagRequest) (*model.DeleteRepoTagResponse, error) {
 	requestDef := GenReqDefForDeleteRepoTag()
 
@@ -195,7 +275,12 @@ func (c *SwrClient) DeleteRepoTag(request *model.DeleteRepoTagRequest) (*model.D
 	}
 }
 
-//删除镜像老化规则
+// 删除镜像老化规则
+//
+// 删除镜像老化规则
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) DeleteRetention(request *model.DeleteRetentionRequest) (*model.DeleteRetentionResponse, error) {
 	requestDef := GenReqDefForDeleteRetention()
 
@@ -206,7 +291,12 @@ func (c *SwrClient) DeleteRetention(request *model.DeleteRetentionRequest) (*mod
 	}
 }
 
-//删除触发器
+// 删除触发器
+//
+// 删除触发器
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) DeleteTrigger(request *model.DeleteTriggerRequest) (*model.DeleteTriggerResponse, error) {
 	requestDef := GenReqDefForDeleteTrigger()
 
@@ -217,7 +307,12 @@ func (c *SwrClient) DeleteTrigger(request *model.DeleteTriggerRequest) (*model.D
 	}
 }
 
-//删除镜像权限
+// 删除镜像权限
+//
+// 删除镜像权限
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) DeleteUserRepositoryAuth(request *model.DeleteUserRepositoryAuthRequest) (*model.DeleteUserRepositoryAuthResponse, error) {
 	requestDef := GenReqDefForDeleteUserRepositoryAuth()
 
@@ -228,7 +323,12 @@ func (c *SwrClient) DeleteUserRepositoryAuth(request *model.DeleteUserRepository
 	}
 }
 
-//获取镜像自动同步任务列表
+// 获取镜像自动同步任务信息
+//
+// 获取镜像自动同步任务列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ListImageAutoSyncReposDetails(request *model.ListImageAutoSyncReposDetailsRequest) (*model.ListImageAutoSyncReposDetailsResponse, error) {
 	requestDef := GenReqDefForListImageAutoSyncReposDetails()
 
@@ -239,7 +339,12 @@ func (c *SwrClient) ListImageAutoSyncReposDetails(request *model.ListImageAutoSy
 	}
 }
 
-//查询组织列表
+// 查询组织列表
+//
+// 查询组织列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ListNamespaces(request *model.ListNamespacesRequest) (*model.ListNamespacesResponse, error) {
 	requestDef := GenReqDefForListNamespaces()
 
@@ -250,7 +355,12 @@ func (c *SwrClient) ListNamespaces(request *model.ListNamespacesRequest) (*model
 	}
 }
 
-//获取配额信息
+// 获取配额信息
+//
+// 获取配额信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuotasResponse, error) {
 	requestDef := GenReqDefForListQuotas()
 
@@ -261,7 +371,12 @@ func (c *SwrClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuo
 	}
 }
 
-//获取共享帐号列表
+// 获取共享帐号列表
+//
+// 获取共享帐号列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ListRepoDomains(request *model.ListRepoDomainsRequest) (*model.ListRepoDomainsResponse, error) {
 	requestDef := GenReqDefForListRepoDomains()
 
@@ -272,7 +387,12 @@ func (c *SwrClient) ListRepoDomains(request *model.ListRepoDomainsRequest) (*mod
 	}
 }
 
-//查询镜像仓库列表
+// 查询镜像仓库列表
+//
+// 查询镜像仓库列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ListReposDetails(request *model.ListReposDetailsRequest) (*model.ListReposDetailsResponse, error) {
 	requestDef := GenReqDefForListReposDetails()
 
@@ -283,7 +403,12 @@ func (c *SwrClient) ListReposDetails(request *model.ListReposDetailsRequest) (*m
 	}
 }
 
-//查询镜像tag列表
+// 查询镜像tag列表
+//
+// 查询镜像tag列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ListRepositoryTags(request *model.ListRepositoryTagsRequest) (*model.ListRepositoryTagsResponse, error) {
 	requestDef := GenReqDefForListRepositoryTags()
 
@@ -294,7 +419,12 @@ func (c *SwrClient) ListRepositoryTags(request *model.ListRepositoryTagsRequest)
 	}
 }
 
-//获取镜像老化记录
+// 获取镜像老化记录
+//
+// 获取镜像老化记录
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ListRetentionHistories(request *model.ListRetentionHistoriesRequest) (*model.ListRetentionHistoriesResponse, error) {
 	requestDef := GenReqDefForListRetentionHistories()
 
@@ -305,7 +435,12 @@ func (c *SwrClient) ListRetentionHistories(request *model.ListRetentionHistories
 	}
 }
 
-//获取镜像老化规则列表
+// 获取镜像老化规则列表
+//
+// 获取镜像老化规则列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ListRetentions(request *model.ListRetentionsRequest) (*model.ListRetentionsResponse, error) {
 	requestDef := GenReqDefForListRetentions()
 
@@ -316,7 +451,12 @@ func (c *SwrClient) ListRetentions(request *model.ListRetentionsRequest) (*model
 	}
 }
 
-//查询共享镜像列表
+// 查询共享镜像列表
+//
+// 查询共享镜像列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ListSharedReposDetails(request *model.ListSharedReposDetailsRequest) (*model.ListSharedReposDetailsResponse, error) {
 	requestDef := GenReqDefForListSharedReposDetails()
 
@@ -327,7 +467,12 @@ func (c *SwrClient) ListSharedReposDetails(request *model.ListSharedReposDetails
 	}
 }
 
-//获取镜像仓库下的触发器列表
+// 获取镜像仓库下的触发器列表
+//
+// 获取镜像仓库下的触发器列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ListTriggersDetails(request *model.ListTriggersDetailsRequest) (*model.ListTriggersDetailsResponse, error) {
 	requestDef := GenReqDefForListTriggersDetails()
 
@@ -338,7 +483,12 @@ func (c *SwrClient) ListTriggersDetails(request *model.ListTriggersDetailsReques
 	}
 }
 
-//判断共享租户是否存在
+// 判断共享帐号是否存在
+//
+// 判断共享租户是否存在
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ShowAccessDomain(request *model.ShowAccessDomainRequest) (*model.ShowAccessDomainResponse, error) {
 	requestDef := GenReqDefForShowAccessDomain()
 
@@ -349,7 +499,12 @@ func (c *SwrClient) ShowAccessDomain(request *model.ShowAccessDomainRequest) (*m
 	}
 }
 
-//获取组织详情
+// 获取组织详情
+//
+// 获取组织详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ShowNamespace(request *model.ShowNamespaceRequest) (*model.ShowNamespaceResponse, error) {
 	requestDef := GenReqDefForShowNamespace()
 
@@ -360,7 +515,12 @@ func (c *SwrClient) ShowNamespace(request *model.ShowNamespaceRequest) (*model.S
 	}
 }
 
-//查询组织权限
+// 查询组织权限
+//
+// 查询组织权限
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ShowNamespaceAuth(request *model.ShowNamespaceAuthRequest) (*model.ShowNamespaceAuthResponse, error) {
 	requestDef := GenReqDefForShowNamespaceAuth()
 
@@ -371,7 +531,12 @@ func (c *SwrClient) ShowNamespaceAuth(request *model.ShowNamespaceAuthRequest) (
 	}
 }
 
-//查询镜像仓库概要信息
+// 查询镜像仓库概要信息
+//
+// 查询镜像仓库概要信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ShowRepository(request *model.ShowRepositoryRequest) (*model.ShowRepositoryResponse, error) {
 	requestDef := GenReqDefForShowRepository()
 
@@ -382,7 +547,12 @@ func (c *SwrClient) ShowRepository(request *model.ShowRepositoryRequest) (*model
 	}
 }
 
-//获取镜像老化规则记录
+// 获取镜像老化规则记录
+//
+// 获取镜像老化规则记录
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ShowRetention(request *model.ShowRetentionRequest) (*model.ShowRetentionResponse, error) {
 	requestDef := GenReqDefForShowRetention()
 
@@ -393,7 +563,12 @@ func (c *SwrClient) ShowRetention(request *model.ShowRetentionRequest) (*model.S
 	}
 }
 
-//获取镜像同步任务信息
+// 获取镜像同步任务信息
+//
+// 获取镜像同步任务信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ShowSyncJob(request *model.ShowSyncJobRequest) (*model.ShowSyncJobResponse, error) {
 	requestDef := GenReqDefForShowSyncJob()
 
@@ -404,7 +579,12 @@ func (c *SwrClient) ShowSyncJob(request *model.ShowSyncJobRequest) (*model.ShowS
 	}
 }
 
-//获取触发器详情
+// 获取触发器详情
+//
+// 获取触发器详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ShowTrigger(request *model.ShowTriggerRequest) (*model.ShowTriggerResponse, error) {
 	requestDef := GenReqDefForShowTrigger()
 
@@ -415,7 +595,12 @@ func (c *SwrClient) ShowTrigger(request *model.ShowTriggerRequest) (*model.ShowT
 	}
 }
 
-//查询镜像权限
+// 查询镜像权限
+//
+// 查询镜像权限
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ShowUserRepositoryAuth(request *model.ShowUserRepositoryAuthRequest) (*model.ShowUserRepositoryAuthResponse, error) {
 	requestDef := GenReqDefForShowUserRepositoryAuth()
 
@@ -426,7 +611,12 @@ func (c *SwrClient) ShowUserRepositoryAuth(request *model.ShowUserRepositoryAuth
 	}
 }
 
-//更新组织权限
+// 更新组织权限
+//
+// 更新组织权限
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) UpdateNamespaceAuth(request *model.UpdateNamespaceAuthRequest) (*model.UpdateNamespaceAuthResponse, error) {
 	requestDef := GenReqDefForUpdateNamespaceAuth()
 
@@ -437,7 +627,12 @@ func (c *SwrClient) UpdateNamespaceAuth(request *model.UpdateNamespaceAuthReques
 	}
 }
 
-//更新租户命名空间下的镜像概要信息，包括镜像类型、是否公有、描述信息
+// 更新镜像仓库的概要信息
+//
+// 更新租户命名空间下的镜像概要信息，包括镜像类型、是否公有、描述信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) UpdateRepo(request *model.UpdateRepoRequest) (*model.UpdateRepoResponse, error) {
 	requestDef := GenReqDefForUpdateRepo()
 
@@ -448,7 +643,12 @@ func (c *SwrClient) UpdateRepo(request *model.UpdateRepoRequest) (*model.UpdateR
 	}
 }
 
-//更新共享帐号
+// 更新共享帐号
+//
+// 更新共享帐号
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) UpdateRepoDomains(request *model.UpdateRepoDomainsRequest) (*model.UpdateRepoDomainsResponse, error) {
 	requestDef := GenReqDefForUpdateRepoDomains()
 
@@ -459,7 +659,12 @@ func (c *SwrClient) UpdateRepoDomains(request *model.UpdateRepoDomainsRequest) (
 	}
 }
 
-//修改镜像老化规则
+// 修改镜像老化规则
+//
+// 修改镜像老化规则
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) UpdateRetention(request *model.UpdateRetentionRequest) (*model.UpdateRetentionResponse, error) {
 	requestDef := GenReqDefForUpdateRetention()
 
@@ -470,7 +675,12 @@ func (c *SwrClient) UpdateRetention(request *model.UpdateRetentionRequest) (*mod
 	}
 }
 
-//更新触发器配置
+// 更新触发器配置
+//
+// 更新触发器配置
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) UpdateTrigger(request *model.UpdateTriggerRequest) (*model.UpdateTriggerResponse, error) {
 	requestDef := GenReqDefForUpdateTrigger()
 
@@ -481,7 +691,12 @@ func (c *SwrClient) UpdateTrigger(request *model.UpdateTriggerRequest) (*model.U
 	}
 }
 
-//更新镜像权限
+// 更新镜像权限
+//
+// 更新镜像权限
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) UpdateUserRepositoryAuth(request *model.UpdateUserRepositoryAuthRequest) (*model.UpdateUserRepositoryAuthResponse, error) {
 	requestDef := GenReqDefForUpdateUserRepositoryAuth()
 
@@ -492,7 +707,12 @@ func (c *SwrClient) UpdateUserRepositoryAuth(request *model.UpdateUserRepository
 	}
 }
 
-//查询所有API版本信息
+// 查询所有API版本信息
+//
+// 查询所有API版本信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ListApiVersions(request *model.ListApiVersionsRequest) (*model.ListApiVersionsResponse, error) {
 	requestDef := GenReqDefForListApiVersions()
 
@@ -503,7 +723,12 @@ func (c *SwrClient) ListApiVersions(request *model.ListApiVersionsRequest) (*mod
 	}
 }
 
-//查询指定API版本信息
+// 查询指定API版本信息
+//
+// 查询指定API版本信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *SwrClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model.ShowApiVersionResponse, error) {
 	requestDef := GenReqDefForShowApiVersion()
 

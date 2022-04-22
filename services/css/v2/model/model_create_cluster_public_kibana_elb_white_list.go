@@ -8,11 +8,11 @@ import (
 
 // 白名单信息。
 type CreateClusterPublicKibanaElbWhiteList struct {
+
 	// 白名单。
-
 	WhiteList string `json:"whiteList"`
-	// 是否开启访问控制。
 
+	// 是否开启访问控制。
 	EnableWhiteList bool `json:"enableWhiteList"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListIgnoreRuleResponse struct {
+
 	// 该策略下规则数量
-
 	Total *int32 `json:"total,omitempty"`
-	// 误报屏蔽规则对象列表
 
+	// 误报屏蔽规则对象列表
 	Items          *[]IngnoreItem `json:"items,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

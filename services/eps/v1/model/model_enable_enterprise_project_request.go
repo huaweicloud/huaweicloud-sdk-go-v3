@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type EnableEnterpriseProjectRequest struct {
-	// 企业项目ID，不能为0。
 
+	// 企业项目ID，不能为0。
 	EnterpriseProjectId string `json:"enterprise_project_id"`
 
 	Body *EnableAction `json:"body,omitempty"`

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type CreatePrivilegesResponse struct {
+
 	// 错误码
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 错误描述
 
+	// 错误描述
 	ErrorMsg       *string `json:"error_msg,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

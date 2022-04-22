@@ -8,18 +8,18 @@ import (
 
 // RPO和RTO信息体
 type QueryRpoAndRtoResp struct {
-	// 任务ID
 
+	// 任务ID
 	JobId *string `json:"job_id,omitempty"`
 
 	RpoInfo *RpoAndRtoInfo `json:"rpo_info,omitempty"`
 
 	RtoInfo *RpoAndRtoInfo `json:"rto_info,omitempty"`
+
 	// 错误码
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 错误信息
 
+	// 错误信息
 	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 

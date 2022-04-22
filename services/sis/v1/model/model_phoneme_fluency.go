@@ -8,11 +8,11 @@ import (
 
 //  音素的流利度打分
 type PhonemeFluency struct {
-	//
 
+	//
 	Score float32 `json:"score"`
-	//
 
+	//
 	Rhythm float32 `json:"rhythm"`
 }
 

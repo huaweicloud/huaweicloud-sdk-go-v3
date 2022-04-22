@@ -8,14 +8,14 @@ import (
 
 // 实例信息响应体
 type InstanceNodesInfoResp struct {
+
 	// 实例ID
-
 	InstanceId *string `json:"instance_id,omitempty"`
+
 	// 当前实例节点总数
-
 	NodeCount *int32 `json:"node_count,omitempty"`
-	// 节点详情。
 
+	// 节点详情。
 	Nodes *[]NodesInfoResp `json:"nodes,omitempty"`
 }
 

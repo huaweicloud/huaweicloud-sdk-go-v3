@@ -11,41 +11,41 @@ import (
 
 // 批量查询迁移项目返回的迁移项目信息
 type MigprojectsResponseBody struct {
+
 	// 迁移项目ID
-
 	Id *string `json:"id,omitempty"`
+
 	// 迁移项目名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 是否使用公网IP迁移
-
 	UsePublicIp *bool `json:"use_public_ip,omitempty"`
+
 	// 是否为默认模板
-
 	Isdefault *bool `json:"isdefault,omitempty"`
+
 	// 迁移后是否启动目的端虚拟机
-
 	StartTargetServer *bool `json:"start_target_server,omitempty"`
+
 	// 区域名称
-
 	Region *string `json:"region,omitempty"`
+
 	// 模板中配置的限速信息，单位：Mbps
-
 	SpeedLimit *int32 `json:"speed_limit,omitempty"`
+
 	// 迁移项目下是否存在服务器
-
 	ExistServer *bool `json:"exist_server,omitempty"`
+
 	// 迁移项目描述
-
 	Description *string `json:"description,omitempty"`
+
 	// 迁移项目默认迁移类型
-
 	Type *MigprojectsResponseBodyType `json:"type,omitempty"`
+
 	// 迁移项目所属的企业项目名称
-
 	EnterpriseProject *string `json:"enterprise_project,omitempty"`
-	// 是否持续同步
 
+	// 是否持续同步
 	Syncing *bool `json:"syncing,omitempty"`
 }
 

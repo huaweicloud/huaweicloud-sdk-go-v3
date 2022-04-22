@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateRecordCallbackResponse struct {
-	// 应用id
 
+	// 应用id
 	AppId *string `json:"app_id,omitempty"`
 
 	RecordCallback *AppCallbackUrl `json:"record_callback,omitempty"`

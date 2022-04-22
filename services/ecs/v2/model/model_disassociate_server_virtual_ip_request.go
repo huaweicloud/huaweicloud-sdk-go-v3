@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DisassociateServerVirtualIpRequest struct {
-	// 云服务器网卡ID。
 
+	// 云服务器网卡ID。
 	NicId string `json:"nic_id"`
 
 	Body *DisassociateServerVirtualIpRequestBody `json:"body,omitempty"`

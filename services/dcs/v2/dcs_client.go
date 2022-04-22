@@ -19,7 +19,12 @@ func DcsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//为指定实例批量添加标签，或批量删除标签。
+// 批量添加或删除标签
+//
+// 为指定实例批量添加标签，或批量删除标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) BatchCreateOrDeleteTags(request *model.BatchCreateOrDeleteTagsRequest) (*model.BatchCreateOrDeleteTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateOrDeleteTags()
 
@@ -30,7 +35,12 @@ func (c *DcsClient) BatchCreateOrDeleteTags(request *model.BatchCreateOrDeleteTa
 	}
 }
 
-//批量删除多个缓存实例。
+// 批量删除实例
+//
+// 批量删除多个缓存实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) BatchDeleteInstances(request *model.BatchDeleteInstancesRequest) (*model.BatchDeleteInstancesResponse, error) {
 	requestDef := GenReqDefForBatchDeleteInstances()
 
@@ -41,7 +51,14 @@ func (c *DcsClient) BatchDeleteInstances(request *model.BatchDeleteInstancesRequ
 	}
 }
 
-//批量查询指定项目所有实例的节点信息、有效实例个数及节点个数。 创建中实例不返回节点信息。 仅支持Redis4.0和Redis5.0实例查询
+// 批量查询实例节点信息
+//
+// 批量查询指定项目所有实例的节点信息、有效实例个数及节点个数。
+// 创建中实例不返回节点信息。
+// 仅支持Redis4.0和Redis5.0实例查询
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) BatchShowNodesInformation(request *model.BatchShowNodesInformationRequest) (*model.BatchShowNodesInformationResponse, error) {
 	requestDef := GenReqDefForBatchShowNodesInformation()
 
@@ -52,7 +69,12 @@ func (c *DcsClient) BatchShowNodesInformation(request *model.BatchShowNodesInfor
 	}
 }
 
-//批量停止数据迁移任务，接口响应成功，仅表示下发任务成功。查询到迁移任务状态为TERMINATED时，即停止成功。
+// 批量停止数据迁移任务
+//
+// 批量停止数据迁移任务，接口响应成功，仅表示下发任务成功。查询到迁移任务状态为TERMINATED时，即停止成功。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) BatchStopMigrationTasks(request *model.BatchStopMigrationTasksRequest) (*model.BatchStopMigrationTasksResponse, error) {
 	requestDef := GenReqDefForBatchStopMigrationTasks()
 
@@ -63,7 +85,12 @@ func (c *DcsClient) BatchStopMigrationTasks(request *model.BatchStopMigrationTas
 	}
 }
 
-//切换实例主备节点，只有主备实例支持该操作。
+// 主备切换
+//
+// 切换实例主备节点，只有主备实例支持该操作。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ChangeMasterStandby(request *model.ChangeMasterStandbyRequest) (*model.ChangeMasterStandbyResponse, error) {
 	requestDef := GenReqDefForChangeMasterStandby()
 
@@ -74,7 +101,13 @@ func (c *DcsClient) ChangeMasterStandby(request *model.ChangeMasterStandbyReques
 	}
 }
 
-//备份指定的缓存实例。 > 只有主备和集群类型的缓存实例支持备份恢复操作，单机实例不支持备份恢复操作。
+// 备份指定实例
+//
+// 备份指定的缓存实例。
+// &gt; 只有主备和集群类型的缓存实例支持备份恢复操作，单机实例不支持备份恢复操作。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) CopyInstance(request *model.CopyInstanceRequest) (*model.CopyInstanceResponse, error) {
 	requestDef := GenReqDefForCopyInstance()
 
@@ -85,7 +118,12 @@ func (c *DcsClient) CopyInstance(request *model.CopyInstanceRequest) (*model.Cop
 	}
 }
 
-//为Redis实例创建大key分析任务。
+// 创建大key分析任务
+//
+// 为Redis实例创建大key分析任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) CreateBigkeyScanTask(request *model.CreateBigkeyScanTaskRequest) (*model.CreateBigkeyScanTaskResponse, error) {
 	requestDef := GenReqDefForCreateBigkeyScanTask()
 
@@ -96,7 +134,12 @@ func (c *DcsClient) CreateBigkeyScanTask(request *model.CreateBigkeyScanTaskRequ
 	}
 }
 
-//诊断指定的缓存实例。
+// 创建实例诊断任务
+//
+// 诊断指定的缓存实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) CreateDiagnosisTask(request *model.CreateDiagnosisTaskRequest) (*model.CreateDiagnosisTaskResponse, error) {
 	requestDef := GenReqDefForCreateDiagnosisTask()
 
@@ -107,7 +150,14 @@ func (c *DcsClient) CreateDiagnosisTask(request *model.CreateDiagnosisTaskReques
 	}
 }
 
-//创建热key分析任务，Redis 3.0 不支持热key分析。  热key分析需要将缓存实例配置参数maxmemory-policy设置为allkeys-lfu或volatile-lfu。
+// 创建热key分析任务
+//
+// 创建热key分析任务，Redis 3.0 不支持热key分析。
+//
+// 热key分析需要将缓存实例配置参数maxmemory-policy设置为allkeys-lfu或volatile-lfu。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) CreateHotkeyScanTask(request *model.CreateHotkeyScanTaskRequest) (*model.CreateHotkeyScanTaskResponse, error) {
 	requestDef := GenReqDefForCreateHotkeyScanTask()
 
@@ -118,7 +168,12 @@ func (c *DcsClient) CreateHotkeyScanTask(request *model.CreateHotkeyScanTaskRequ
 	}
 }
 
-//创建缓存实例，该接口创建的缓存实例支持按需计费和包周期两种方式。
+// 创建缓存实例
+//
+// 创建缓存实例，该接口创建的缓存实例支持按需计费和包周期两种方式。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
 	requestDef := GenReqDefForCreateInstance()
 
@@ -129,7 +184,12 @@ func (c *DcsClient) CreateInstance(request *model.CreateInstanceRequest) (*model
 	}
 }
 
-//创建数据迁移任务。
+// 创建数据迁移任务
+//
+// 创建数据迁移任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) CreateMigrationTask(request *model.CreateMigrationTaskRequest) (*model.CreateMigrationTaskResponse, error) {
 	requestDef := GenReqDefForCreateMigrationTask()
 
@@ -140,7 +200,12 @@ func (c *DcsClient) CreateMigrationTask(request *model.CreateMigrationTaskReques
 	}
 }
 
-//创建在线数据迁移任务。
+// 创建在线数据迁移任务
+//
+// 创建在线数据迁移任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) CreateOnlineMigrationTask(request *model.CreateOnlineMigrationTaskRequest) (*model.CreateOnlineMigrationTaskResponse, error) {
 	requestDef := GenReqDefForCreateOnlineMigrationTask()
 
@@ -151,7 +216,12 @@ func (c *DcsClient) CreateOnlineMigrationTask(request *model.CreateOnlineMigrati
 	}
 }
 
-//采集Redis运行日志。
+// 采集Redis运行日志
+//
+// 采集Redis运行日志。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) CreateRedislog(request *model.CreateRedislogRequest) (*model.CreateRedislogResponse, error) {
 	requestDef := GenReqDefForCreateRedislog()
 
@@ -162,7 +232,12 @@ func (c *DcsClient) CreateRedislog(request *model.CreateRedislogRequest) (*model
 	}
 }
 
-//获取日志下载链接。
+// 获取日志下载链接
+//
+// 获取日志下载链接。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) CreateRedislogDownloadLink(request *model.CreateRedislogDownloadLinkRequest) (*model.CreateRedislogDownloadLinkResponse, error) {
 	requestDef := GenReqDefForCreateRedislogDownloadLink()
 
@@ -173,7 +248,12 @@ func (c *DcsClient) CreateRedislogDownloadLink(request *model.CreateRedislogDown
 	}
 }
 
-//删除后台任务
+// 删除后台任务
+//
+// 删除后台任务
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) DeleteBackgroundTask(request *model.DeleteBackgroundTaskRequest) (*model.DeleteBackgroundTaskResponse, error) {
 	requestDef := GenReqDefForDeleteBackgroundTask()
 
@@ -184,7 +264,12 @@ func (c *DcsClient) DeleteBackgroundTask(request *model.DeleteBackgroundTaskRequ
 	}
 }
 
-//删除缓存实例已备份的文件。
+// 删除备份文件
+//
+// 删除缓存实例已备份的文件。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) DeleteBackupFile(request *model.DeleteBackupFileRequest) (*model.DeleteBackupFileResponse, error) {
 	requestDef := GenReqDefForDeleteBackupFile()
 
@@ -195,7 +280,12 @@ func (c *DcsClient) DeleteBackupFile(request *model.DeleteBackupFileRequest) (*m
 	}
 }
 
-//删除大key分析记录。
+// 删除大key分析记录
+//
+// 删除大key分析记录。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) DeleteBigkeyScanTask(request *model.DeleteBigkeyScanTaskRequest) (*model.DeleteBigkeyScanTaskResponse, error) {
 	requestDef := GenReqDefForDeleteBigkeyScanTask()
 
@@ -206,7 +296,12 @@ func (c *DcsClient) DeleteBigkeyScanTask(request *model.DeleteBigkeyScanTaskRequ
 	}
 }
 
-//删除热key分析任务。
+// 删除热key分析任务
+//
+// 删除热key分析任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) DeleteHotkeyScanTask(request *model.DeleteHotkeyScanTaskRequest) (*model.DeleteHotkeyScanTaskResponse, error) {
 	requestDef := GenReqDefForDeleteHotkeyScanTask()
 
@@ -217,7 +312,12 @@ func (c *DcsClient) DeleteHotkeyScanTask(request *model.DeleteHotkeyScanTaskRequ
 	}
 }
 
-//将只读副本的IP从域名中摘除，摘除成功后，只读域名不会再解析到该副本IP。
+// 域名摘除IP
+//
+// 将只读副本的IP从域名中摘除，摘除成功后，只读域名不会再解析到该副本IP。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) DeleteIpFromDomainName(request *model.DeleteIpFromDomainNameRequest) (*model.DeleteIpFromDomainNameResponse, error) {
 	requestDef := GenReqDefForDeleteIpFromDomainName()
 
@@ -228,7 +328,12 @@ func (c *DcsClient) DeleteIpFromDomainName(request *model.DeleteIpFromDomainName
 	}
 }
 
-//删除数据迁移任务。
+// 删除数据迁移任务
+//
+// 删除数据迁移任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) DeleteMigrationTask(request *model.DeleteMigrationTaskRequest) (*model.DeleteMigrationTaskResponse, error) {
 	requestDef := GenReqDefForDeleteMigrationTask()
 
@@ -239,7 +344,14 @@ func (c *DcsClient) DeleteMigrationTask(request *model.DeleteMigrationTaskReques
 	}
 }
 
-//删除指定的缓存实例，释放该实例的所有资源。  > 如果是删除按需资源，请按照本章节执行；如果是删除包周期资源，即退订，请参考[退订包周期资源](https://support.huaweicloud.com/api-oce/zh-cn_topic_0082522030.html#section2)。
+// 删除实例
+//
+// 删除指定的缓存实例，释放该实例的所有资源。
+//
+// &gt; 如果是删除按需资源，请按照本章节执行；如果是删除包周期资源，即退订，请参考[退订包周期资源](https://support.huaweicloud.com/api-oce/zh-cn_topic_0082522030.html#section2)。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) DeleteSingleInstance(request *model.DeleteSingleInstanceRequest) (*model.DeleteSingleInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteSingleInstance()
 
@@ -250,7 +362,12 @@ func (c *DcsClient) DeleteSingleInstance(request *model.DeleteSingleInstanceRequ
 	}
 }
 
-//查询所在局点的可用区信息
+// 查询可用区信息
+//
+// 查询所在局点的可用区信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListAvailableZones(request *model.ListAvailableZonesRequest) (*model.ListAvailableZonesResponse, error) {
 	requestDef := GenReqDefForListAvailableZones()
 
@@ -261,7 +378,12 @@ func (c *DcsClient) ListAvailableZones(request *model.ListAvailableZonesRequest)
 	}
 }
 
-//查询后台任务列表
+// 查询后台任务列表
+//
+// 查询后台任务列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListBackgroundTask(request *model.ListBackgroundTaskRequest) (*model.ListBackgroundTaskResponse, error) {
 	requestDef := GenReqDefForListBackgroundTask()
 
@@ -272,7 +394,12 @@ func (c *DcsClient) ListBackgroundTask(request *model.ListBackgroundTaskRequest)
 	}
 }
 
-//获取指定实例的备份文件下载链接，下载备份文件。
+// 获取备份文件下载链接
+//
+// 获取指定实例的备份文件下载链接，下载备份文件。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListBackupFileLinks(request *model.ListBackupFileLinksRequest) (*model.ListBackupFileLinksResponse, error) {
 	requestDef := GenReqDefForListBackupFileLinks()
 
@@ -283,7 +410,12 @@ func (c *DcsClient) ListBackupFileLinks(request *model.ListBackupFileLinksReques
 	}
 }
 
-//查询指定缓存实例的备份信息列表。
+// 查询实例备份信息
+//
+// 查询指定缓存实例的备份信息列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListBackupRecords(request *model.ListBackupRecordsRequest) (*model.ListBackupRecordsResponse, error) {
 	requestDef := GenReqDefForListBackupRecords()
 
@@ -294,7 +426,12 @@ func (c *DcsClient) ListBackupRecords(request *model.ListBackupRecordsRequest) (
 	}
 }
 
-//查询大key分析任务列表。
+// 查询大key分析任务列表
+//
+// 查询大key分析任务列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListBigkeyScanTasks(request *model.ListBigkeyScanTasksRequest) (*model.ListBigkeyScanTasksResponse, error) {
 	requestDef := GenReqDefForListBigkeyScanTasks()
 
@@ -305,7 +442,12 @@ func (c *DcsClient) ListBigkeyScanTasks(request *model.ListBigkeyScanTasksReques
 	}
 }
 
-//查询指定实例的配置参数信息。
+// 查询实例配置参数
+//
+// 查询指定实例的配置参数信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListConfigurations(request *model.ListConfigurationsRequest) (*model.ListConfigurationsResponse, error) {
 	requestDef := GenReqDefForListConfigurations()
 
@@ -316,7 +458,12 @@ func (c *DcsClient) ListConfigurations(request *model.ListConfigurationsRequest)
 	}
 }
 
-//查询指定缓存实例诊断任务列表。
+// 查询实例诊断任务列表
+//
+// 查询指定缓存实例诊断任务列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListDiagnosisTasks(request *model.ListDiagnosisTasksRequest) (*model.ListDiagnosisTasksResponse, error) {
 	requestDef := GenReqDefForListDiagnosisTasks()
 
@@ -327,7 +474,12 @@ func (c *DcsClient) ListDiagnosisTasks(request *model.ListDiagnosisTasksRequest)
 	}
 }
 
-//在创建缓存实例时，需要配置订购的产品规格编码（spec_code），可通过该接口查询产品规格，查询条件不选时默认查询全部。
+// 查询产品规格
+//
+// 在创建缓存实例时，需要配置订购的产品规格编码（spec_code），可通过该接口查询产品规格，查询条件不选时默认查询全部。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
 
@@ -338,7 +490,12 @@ func (c *DcsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 	}
 }
 
-//查询读写分离实例和集群实例的分片和副本信息，其中，读写分离实例仅Redis4.0和Redis5.0的主备实例支持。
+// 查询分片信息
+//
+// 查询读写分离实例和集群实例的分片和副本信息，其中，读写分离实例仅Redis4.0和Redis5.0的主备实例支持。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListGroupReplicationInfo(request *model.ListGroupReplicationInfoRequest) (*model.ListGroupReplicationInfoResponse, error) {
 	requestDef := GenReqDefForListGroupReplicationInfo()
 
@@ -349,7 +506,12 @@ func (c *DcsClient) ListGroupReplicationInfo(request *model.ListGroupReplication
 	}
 }
 
-//查询热key分析历史记录。
+// 查询热key分析任务列表
+//
+// 查询热key分析历史记录。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListHotKeyScanTasks(request *model.ListHotKeyScanTasksRequest) (*model.ListHotKeyScanTasksResponse, error) {
 	requestDef := GenReqDefForListHotKeyScanTasks()
 
@@ -360,7 +522,12 @@ func (c *DcsClient) ListHotKeyScanTasks(request *model.ListHotKeyScanTasksReques
 	}
 }
 
-//查询租户的缓存实例列表，支持按照条件查询。
+// 查询所有实例列表
+//
+// 查询租户的缓存实例列表，支持按照条件查询。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
 	requestDef := GenReqDefForListInstances()
 
@@ -371,7 +538,12 @@ func (c *DcsClient) ListInstances(request *model.ListInstancesRequest) (*model.L
 	}
 }
 
-//查询维护时间窗开始时间和结束时间。
+// 查询维护时间窗时间段
+//
+// 查询维护时间窗开始时间和结束时间。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListMaintenanceWindows(request *model.ListMaintenanceWindowsRequest) (*model.ListMaintenanceWindowsResponse, error) {
 	requestDef := GenReqDefForListMaintenanceWindows()
 
@@ -382,7 +554,12 @@ func (c *DcsClient) ListMaintenanceWindows(request *model.ListMaintenanceWindows
 	}
 }
 
-//查询迁移任务列表。
+// 查询迁移任务列表
+//
+// 查询迁移任务列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListMigrationTask(request *model.ListMigrationTaskRequest) (*model.ListMigrationTaskResponse, error) {
 	requestDef := GenReqDefForListMigrationTask()
 
@@ -393,7 +570,13 @@ func (c *DcsClient) ListMigrationTask(request *model.ListMigrationTaskRequest) (
 	}
 }
 
-//查询主维度对象列表，主维度ID当前支持dcs_instance_id，dcs_memcached_instance_id。 > 该接口当前仅在中国华南区开放。
+// 查询主维度信息列表
+//
+// 查询主维度对象列表，主维度ID当前支持dcs_instance_id，dcs_memcached_instance_id。
+// &gt; 该接口当前仅在中国华南区开放。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListMonitoredObjects(request *model.ListMonitoredObjectsRequest) (*model.ListMonitoredObjectsResponse, error) {
 	requestDef := GenReqDefForListMonitoredObjects()
 
@@ -404,7 +587,13 @@ func (c *DcsClient) ListMonitoredObjects(request *model.ListMonitoredObjectsRequ
 	}
 }
 
-//查询主维度下子维度监控对象列表，当前支持子维度的主维度ID的有 dcs_instance_id > 该接口当前仅在中国华南区开放。
+// 查询单个主维度下子维度监控对象列表
+//
+// 查询主维度下子维度监控对象列表，当前支持子维度的主维度ID的有 dcs_instance_id
+// &gt; 该接口当前仅在中国华南区开放。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListMonitoredObjectsOfInstance(request *model.ListMonitoredObjectsOfInstanceRequest) (*model.ListMonitoredObjectsOfInstanceResponse, error) {
 	requestDef := GenReqDefForListMonitoredObjectsOfInstance()
 
@@ -415,7 +604,12 @@ func (c *DcsClient) ListMonitoredObjectsOfInstance(request *model.ListMonitoredO
 	}
 }
 
-//查询该租户在当前区域下不同状态的实例数。
+// 查询实例状态
+//
+// 查询该租户在当前区域下不同状态的实例数。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListNumberOfInstancesInDifferentStatus(request *model.ListNumberOfInstancesInDifferentStatusRequest) (*model.ListNumberOfInstancesInDifferentStatusResponse, error) {
 	requestDef := GenReqDefForListNumberOfInstancesInDifferentStatus()
 
@@ -426,7 +620,12 @@ func (c *DcsClient) ListNumberOfInstancesInDifferentStatus(request *model.ListNu
 	}
 }
 
-//查询Redis运行日志列表。
+// 查询Redis运行日志列表
+//
+// 查询Redis运行日志列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListRedislog(request *model.ListRedislogRequest) (*model.ListRedislogResponse, error) {
 	requestDef := GenReqDefForListRedislog()
 
@@ -437,7 +636,12 @@ func (c *DcsClient) ListRedislog(request *model.ListRedislogRequest) (*model.Lis
 	}
 }
 
-//查询指定缓存实例的恢复记录列表。
+// 查询实例恢复记录
+//
+// 查询指定缓存实例的恢复记录列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListRestoreRecords(request *model.ListRestoreRecordsRequest) (*model.ListRestoreRecordsResponse, error) {
 	requestDef := GenReqDefForListRestoreRecords()
 
@@ -448,7 +652,12 @@ func (c *DcsClient) ListRestoreRecords(request *model.ListRestoreRecordsRequest)
 	}
 }
 
-//查询慢日志。
+// 查询慢日志
+//
+// 查询慢日志。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListSlowlog(request *model.ListSlowlogRequest) (*model.ListSlowlogResponse, error) {
 	requestDef := GenReqDefForListSlowlog()
 
@@ -459,7 +668,12 @@ func (c *DcsClient) ListSlowlog(request *model.ListSlowlogRequest) (*model.ListS
 	}
 }
 
-//查询当前租户下处于“运行中”状态的缓存实例的统计信息。
+// 查询运行中实例的统计信息
+//
+// 查询当前租户下处于“运行中”状态的缓存实例的统计信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListStatisticsOfRunningInstances(request *model.ListStatisticsOfRunningInstancesRequest) (*model.ListStatisticsOfRunningInstancesResponse, error) {
 	requestDef := GenReqDefForListStatisticsOfRunningInstances()
 
@@ -470,7 +684,12 @@ func (c *DcsClient) ListStatisticsOfRunningInstances(request *model.ListStatisti
 	}
 }
 
-//查询租户在指定Project中实例类型的所有资源标签集合。
+// 查询租户所有标签
+//
+// 查询租户在指定Project中实例类型的所有资源标签集合。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ListTagsOfTenant(request *model.ListTagsOfTenantRequest) (*model.ListTagsOfTenantResponse, error) {
 	requestDef := GenReqDefForListTagsOfTenant()
 
@@ -481,7 +700,12 @@ func (c *DcsClient) ListTagsOfTenant(request *model.ListTagsOfTenantRequest) (*m
 	}
 }
 
-//用户可以为状态为“运行中”的DCS缓存实例进行规格变更，当前仅能支持按需实例的同副本或分片数量的实例规格变更。
+// 变更实例规格
+//
+// 用户可以为状态为“运行中”的DCS缓存实例进行规格变更，当前仅能支持按需实例的同副本或分片数量的实例规格变更。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
 	requestDef := GenReqDefForResizeInstance()
 
@@ -492,7 +716,14 @@ func (c *DcsClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model
 	}
 }
 
-//重启运行中的DCS缓存实例。  清空Redis4.0/Redis5.0的实例数据，数据清空后，无法撤销，且无法恢复，请谨慎操作。
+// 重启实例或清空数据
+//
+// 重启运行中的DCS缓存实例。
+//
+// 清空Redis4.0/Redis5.0的实例数据，数据清空后，无法撤销，且无法恢复，请谨慎操作。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) RestartOrFlushInstances(request *model.RestartOrFlushInstancesRequest) (*model.RestartOrFlushInstancesResponse, error) {
 	requestDef := GenReqDefForRestartOrFlushInstances()
 
@@ -503,7 +734,13 @@ func (c *DcsClient) RestartOrFlushInstances(request *model.RestartOrFlushInstanc
 	}
 }
 
-//恢复指定的缓存实例。 > 只有主备和集群类型的缓存实例支持备份恢复操作，单机实例不支持备份恢复操作。
+// 恢复指定实例
+//
+// 恢复指定的缓存实例。
+// &gt; 只有主备和集群类型的缓存实例支持备份恢复操作，单机实例不支持备份恢复操作。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) RestoreInstance(request *model.RestoreInstanceRequest) (*model.RestoreInstanceResponse, error) {
 	requestDef := GenReqDefForRestoreInstance()
 
@@ -514,7 +751,12 @@ func (c *DcsClient) RestoreInstance(request *model.RestoreInstanceRequest) (*mod
 	}
 }
 
-//配置在线数据迁移任务。
+// 配置在线数据迁移任务
+//
+// 配置在线数据迁移任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) SetOnlineMigrationTask(request *model.SetOnlineMigrationTaskRequest) (*model.SetOnlineMigrationTaskResponse, error) {
 	requestDef := GenReqDefForSetOnlineMigrationTask()
 
@@ -525,7 +767,12 @@ func (c *DcsClient) SetOnlineMigrationTask(request *model.SetOnlineMigrationTask
 	}
 }
 
-//查询大key自动分析配置。
+// 查询大key自动分析配置
+//
+// 查询大key自动分析配置。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ShowBigkeyAutoscanConfig(request *model.ShowBigkeyAutoscanConfigRequest) (*model.ShowBigkeyAutoscanConfigResponse, error) {
 	requestDef := GenReqDefForShowBigkeyAutoscanConfig()
 
@@ -536,7 +783,12 @@ func (c *DcsClient) ShowBigkeyAutoscanConfig(request *model.ShowBigkeyAutoscanCo
 	}
 }
 
-//查询大key分析详情。
+// 查询大key分析详情
+//
+// 查询大key分析详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ShowBigkeyScanTaskDetails(request *model.ShowBigkeyScanTaskDetailsRequest) (*model.ShowBigkeyScanTaskDetailsResponse, error) {
 	requestDef := GenReqDefForShowBigkeyScanTaskDetails()
 
@@ -547,7 +799,12 @@ func (c *DcsClient) ShowBigkeyScanTaskDetails(request *model.ShowBigkeyScanTaskD
 	}
 }
 
-//通过报告ID查询诊断报告的详细信息。
+// 查询指定诊断报告
+//
+// 通过报告ID查询诊断报告的详细信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ShowDiagnosisTaskDetails(request *model.ShowDiagnosisTaskDetailsRequest) (*model.ShowDiagnosisTaskDetailsResponse, error) {
 	requestDef := GenReqDefForShowDiagnosisTaskDetails()
 
@@ -558,7 +815,12 @@ func (c *DcsClient) ShowDiagnosisTaskDetails(request *model.ShowDiagnosisTaskDet
 	}
 }
 
-//查询热key自动分析配置。
+// 查询热key自动分析配置
+//
+// 查询热key自动分析配置。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ShowHotkeyAutoscanConfig(request *model.ShowHotkeyAutoscanConfigRequest) (*model.ShowHotkeyAutoscanConfigResponse, error) {
 	requestDef := GenReqDefForShowHotkeyAutoscanConfig()
 
@@ -569,7 +831,12 @@ func (c *DcsClient) ShowHotkeyAutoscanConfig(request *model.ShowHotkeyAutoscanCo
 	}
 }
 
-//查询热key分析详情。
+// 查询热key分析详情
+//
+// 查询热key分析详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ShowHotkeyTaskDetails(request *model.ShowHotkeyTaskDetailsRequest) (*model.ShowHotkeyTaskDetailsResponse, error) {
 	requestDef := GenReqDefForShowHotkeyTaskDetails()
 
@@ -580,7 +847,12 @@ func (c *DcsClient) ShowHotkeyTaskDetails(request *model.ShowHotkeyTaskDetailsRe
 	}
 }
 
-//通过实例ID查询实例的详细信息。
+// 查询指定实例
+//
+// 通过实例ID查询实例的详细信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ShowInstance(request *model.ShowInstanceRequest) (*model.ShowInstanceResponse, error) {
 	requestDef := GenReqDefForShowInstance()
 
@@ -591,7 +863,12 @@ func (c *DcsClient) ShowInstance(request *model.ShowInstanceRequest) (*model.Sho
 	}
 }
 
-//查询迁移任务详情。
+// 查询迁移任务详情
+//
+// 查询迁移任务详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ShowMigrationTask(request *model.ShowMigrationTaskRequest) (*model.ShowMigrationTaskResponse, error) {
 	requestDef := GenReqDefForShowMigrationTask()
 
@@ -602,7 +879,12 @@ func (c *DcsClient) ShowMigrationTask(request *model.ShowMigrationTaskRequest) (
 	}
 }
 
-//查询在线迁移进度明细。
+// 查询在线迁移进度明细
+//
+// 查询在线迁移进度明细。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ShowMigrationTaskStats(request *model.ShowMigrationTaskStatsRequest) (*model.ShowMigrationTaskStatsResponse, error) {
 	requestDef := GenReqDefForShowMigrationTaskStats()
 
@@ -613,7 +895,12 @@ func (c *DcsClient) ShowMigrationTaskStats(request *model.ShowMigrationTaskStats
 	}
 }
 
-//查询租户默认可以创建的实例数和总内存的配额限制，以及可以申请配额的最大值和最小值。不同的租户在不同的区域配额可能不同。
+// 查询租户配额
+//
+// 查询租户默认可以创建的实例数和总内存的配额限制，以及可以申请配额的最大值和最小值。不同的租户在不同的区域配额可能不同。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ShowQuotaOfTenant(request *model.ShowQuotaOfTenantRequest) (*model.ShowQuotaOfTenantResponse, error) {
 	requestDef := GenReqDefForShowQuotaOfTenant()
 
@@ -624,7 +911,12 @@ func (c *DcsClient) ShowQuotaOfTenant(request *model.ShowQuotaOfTenantRequest) (
 	}
 }
 
-//通过实例ID查询标签。
+// 查询单个实例标签
+//
+// 通过实例ID查询标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ShowTags(request *model.ShowTagsRequest) (*model.ShowTagsResponse, error) {
 	requestDef := GenReqDefForShowTags()
 
@@ -635,7 +927,12 @@ func (c *DcsClient) ShowTags(request *model.ShowTagsRequest) (*model.ShowTagsRes
 	}
 }
 
-//停止数据迁移任务。
+// 停止数据迁移任务
+//
+// 停止数据迁移任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) StopMigrationTask(request *model.StopMigrationTaskRequest) (*model.StopMigrationTaskResponse, error) {
 	requestDef := GenReqDefForStopMigrationTask()
 
@@ -646,7 +943,12 @@ func (c *DcsClient) StopMigrationTask(request *model.StopMigrationTaskRequest) (
 	}
 }
 
-//同步停止数据迁移任务。
+// 同步停止数据迁移任务
+//
+// 同步停止数据迁移任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) StopMigrationTaskSync(request *model.StopMigrationTaskSyncRequest) (*model.StopMigrationTaskSyncResponse, error) {
 	requestDef := GenReqDefForStopMigrationTaskSync()
 
@@ -657,7 +959,12 @@ func (c *DcsClient) StopMigrationTaskSync(request *model.StopMigrationTaskSyncRe
 	}
 }
 
-//设置大key自动分析配置。
+// 设置大key自动分析配置
+//
+// 设置大key自动分析配置。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) UpdateBigkeyAutoscanConfig(request *model.UpdateBigkeyAutoscanConfigRequest) (*model.UpdateBigkeyAutoscanConfigResponse, error) {
 	requestDef := GenReqDefForUpdateBigkeyAutoscanConfig()
 
@@ -668,7 +975,12 @@ func (c *DcsClient) UpdateBigkeyAutoscanConfig(request *model.UpdateBigkeyAutosc
 	}
 }
 
-//为了确保分布式缓存服务发挥出最优性能，您可以根据自己的业务情况对DCS缓存实例的运行参数进行调整。
+// 修改实例配置参数
+//
+// 为了确保分布式缓存服务发挥出最优性能，您可以根据自己的业务情况对DCS缓存实例的运行参数进行调整。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) UpdateConfigurations(request *model.UpdateConfigurationsRequest) (*model.UpdateConfigurationsResponse, error) {
 	requestDef := GenReqDefForUpdateConfigurations()
 
@@ -679,7 +991,12 @@ func (c *DcsClient) UpdateConfigurations(request *model.UpdateConfigurationsRequ
 	}
 }
 
-//设置热key自动分析配置。
+// 设置热key自动分析配置
+//
+// 设置热key自动分析配置。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) UpdateHotkeyAutoScanConfig(request *model.UpdateHotkeyAutoScanConfigRequest) (*model.UpdateHotkeyAutoScanConfigResponse, error) {
 	requestDef := GenReqDefForUpdateHotkeyAutoScanConfig()
 
@@ -690,7 +1007,12 @@ func (c *DcsClient) UpdateHotkeyAutoScanConfig(request *model.UpdateHotkeyAutoSc
 	}
 }
 
-//修改缓存实例的信息，可修改信息包括实例名称、描述、备份策略、维护时间窗开始和结束时间以及安全组。
+// 修改实例信息
+//
+// 修改缓存实例的信息，可修改信息包括实例名称、描述、备份策略、维护时间窗开始和结束时间以及安全组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) UpdateInstance(request *model.UpdateInstanceRequest) (*model.UpdateInstanceResponse, error) {
 	requestDef := GenReqDefForUpdateInstance()
 
@@ -701,7 +1023,12 @@ func (c *DcsClient) UpdateInstance(request *model.UpdateInstanceRequest) (*model
 	}
 }
 
-//修改缓存实例的密码。
+// 修改密码
+//
+// 修改缓存实例的密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) UpdatePassword(request *model.UpdatePasswordRequest) (*model.UpdatePasswordResponse, error) {
 	requestDef := GenReqDefForUpdatePassword()
 
@@ -712,7 +1039,12 @@ func (c *DcsClient) UpdatePassword(request *model.UpdatePasswordRequest) (*model
 	}
 }
 
-//设置副本优先级，主节点故障时，权重越小的备节点切换为主节点的优先级越高。
+// 设置备节点优先级
+//
+// 设置副本优先级，主节点故障时，权重越小的备节点切换为主节点的优先级越高。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) UpdateSlavePriority(request *model.UpdateSlavePriorityRequest) (*model.UpdateSlavePriorityResponse, error) {
 	requestDef := GenReqDefForUpdateSlavePriority()
 
@@ -723,7 +1055,12 @@ func (c *DcsClient) UpdateSlavePriority(request *model.UpdateSlavePriorityReques
 	}
 }
 
-//查询指定实例的IP白名单。
+// 查询指定实例的IP白名单
+//
+// 查询指定实例的IP白名单。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) ShowIpWhitelist(request *model.ShowIpWhitelistRequest) (*model.ShowIpWhitelistResponse, error) {
 	requestDef := GenReqDefForShowIpWhitelist()
 
@@ -734,7 +1071,12 @@ func (c *DcsClient) ShowIpWhitelist(request *model.ShowIpWhitelistRequest) (*mod
 	}
 }
 
-//为指定实例设置IP白名单分组，包含创建、停用、编辑、删除白名单四个功能
+// 设置IP白名单分组
+//
+// 为指定实例设置IP白名单分组，包含创建、停用、编辑、删除白名单四个功能
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DcsClient) UpdateIpWhitelist(request *model.UpdateIpWhitelistRequest) (*model.UpdateIpWhitelistResponse, error) {
 	requestDef := GenReqDefForUpdateIpWhitelist()
 

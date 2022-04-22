@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListPipelinesResponse struct {
-	// pipeline列表。
 
+	// pipeline列表。
 	Pipelines      *[]Pipelines `json:"pipelines,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

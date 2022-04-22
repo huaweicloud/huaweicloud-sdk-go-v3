@@ -8,8 +8,8 @@ import (
 
 // 租户需求
 type DemandResp struct {
-	// 站点需要发放的资源(组)总数。  > 实际发放实例数量为count*demand_count。
 
+	// 站点需要发放的资源(组)总数。  > 实际发放实例数量为count*demand_count。
 	DemandCount int32 `json:"demand_count"`
 }
 

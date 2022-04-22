@@ -8,8 +8,8 @@ import (
 
 // 复制集群相关参数
 type ReplicationClusterParams struct {
-	// 可用区名称。
 
+	// 可用区名称。
 	AvailabilityZone string `json:"availability_zone"`
 }
 

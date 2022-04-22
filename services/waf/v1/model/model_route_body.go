@@ -8,14 +8,14 @@ import (
 
 // 修改路由body
 type RouteBody struct {
+
 	// cname后缀
-
 	Cname *string `json:"cname,omitempty"`
+
 	// 名称
-
 	Name *string `json:"name,omitempty"`
-	// 路由信息
 
+	// 路由信息
 	Servers *[]RouteServerBody `json:"servers,omitempty"`
 }
 

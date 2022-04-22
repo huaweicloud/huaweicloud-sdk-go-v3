@@ -11,23 +11,23 @@ import (
 
 // 节点执行详情
 type NodeExecution struct {
+
 	// 流程节点执行状态
-
 	Status *NodeExecutionStatus `json:"status,omitempty"`
+
 	// 函数执行时的入参
-
 	Input *interface{} `json:"input,omitempty"`
+
 	// 函数执行结果
-
 	Output *interface{} `json:"output,omitempty"`
+
 	// 节点启动时间，UTC毫秒时间戳格式
-
 	BeginTime *int64 `json:"begin_time,omitempty"`
+
 	// 节点结束时间，UTC毫秒时间戳格式
-
 	EndTime *int64 `json:"end_time,omitempty"`
-	// 节点错误信息，仅在节点出错时非空
 
+	// 节点错误信息，仅在节点出错时非空
 	ErrorMessage *interface{} `json:"error_message,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdatePrivateBucketAccessResponse struct {
-	// 桶开启关闭状态（true：开启；false：关闭）
 
+	// 桶开启关闭状态（true：开启；false：关闭）
 	Status         *bool `json:"status,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }

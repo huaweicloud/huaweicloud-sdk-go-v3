@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListBlockchainsResponse struct {
+
 	// 服务实例简要信息
-
 	Blockchains *[]BlockchainInfo `json:"blockchains,omitempty"`
-	// 实例总数
 
+	// 实例总数
 	Count          *int64 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

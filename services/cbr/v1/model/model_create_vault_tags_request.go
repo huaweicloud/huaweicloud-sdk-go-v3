@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateVaultTagsRequest struct {
-	// 资源id
 
+	// 资源id
 	VaultId string `json:"vault_id"`
 
 	Body *VaultTagsCreateReq `json:"body,omitempty"`

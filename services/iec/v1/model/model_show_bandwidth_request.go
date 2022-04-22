@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowBandwidthRequest struct {
-	// 带宽ID。
 
+	// 带宽ID。
 	BandwidthId string `json:"bandwidth_id"`
 }
 

@@ -8,20 +8,20 @@ import (
 
 // Response Object
 type ListLiveDataQuotaV2Response struct {
+
 	// 数据源配额
-
 	Datasource *string `json:"datasource,omitempty"`
+
 	// 后端api配额
-
 	Api *string `json:"api,omitempty"`
+
 	// 脚本配额
-
 	Scripts *string `json:"scripts,omitempty"`
+
 	// 已使用的数据源数量
-
 	DatasourceUsed *string `json:"datasource_used,omitempty"`
-	// 已使用的后端api数量
 
+	// 已使用的后端api数量
 	ApiUsed        *string `json:"api_used,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

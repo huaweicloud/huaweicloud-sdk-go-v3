@@ -7,11 +7,11 @@ import (
 )
 
 type RestoreInstanceBody struct {
+
 	// 备份记录ID。
-
 	BackupId string `json:"backup_id"`
-	// 恢复缓存实例的备注信息。
 
+	// 恢复缓存实例的备注信息。
 	Remark *string `json:"remark,omitempty"`
 }
 

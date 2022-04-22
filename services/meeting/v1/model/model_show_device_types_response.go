@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowDeviceTypesResponse struct {
-	// 查询到的终端类型列表
 
+	// 查询到的终端类型列表
 	Body           *[]QueryDeviceTypeResultDto `json:"body,omitempty"`
 	HttpStatusCode int                         `json:"-"`
 }

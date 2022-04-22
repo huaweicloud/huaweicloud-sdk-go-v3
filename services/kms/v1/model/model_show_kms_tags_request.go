@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowKmsTagsRequest struct {
+
 	// API版本号
-
 	VersionId string `json:"version_id"`
-	// 密钥ID
 
+	// 密钥ID
 	KeyId string `json:"key_id"`
 }
 

@@ -7,8 +7,8 @@ import (
 )
 
 type CreateRepoMemberRequest struct {
-	// 添加用户的信息列表
 
+	// 添加用户的信息列表
 	Users *[]RepoMemberInfo `json:"users,omitempty"`
 }
 

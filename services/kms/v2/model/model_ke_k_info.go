@@ -8,11 +8,11 @@ import (
 
 // 密钥详细信息。
 type KeKInfo struct {
+
 	// 密钥ID。
-
 	KeyId *string `json:"key_id,omitempty"`
-	// 用户域ID。
 
+	// 用户域ID。
 	DomainId *string `json:"domain_id,omitempty"`
 }
 

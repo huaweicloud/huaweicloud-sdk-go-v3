@@ -8,8 +8,8 @@ import (
 
 // 执行命令检查，与http_get二选一
 type ProbeExec struct {
-	// 探针执行命令，最大长度10240个字符
 
+	// 探针执行命令，最大长度10240个字符
 	Command string `json:"command"`
 }
 

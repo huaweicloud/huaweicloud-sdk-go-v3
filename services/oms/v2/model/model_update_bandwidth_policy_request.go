@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateBandwidthPolicyRequest struct {
-	// 任务ID。
 
+	// 任务ID。
 	TaskId int64 `json:"task_id"`
 
 	Body *UpdateBandwidthPolicyReq `json:"body,omitempty"`

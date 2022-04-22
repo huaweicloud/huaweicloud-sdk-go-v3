@@ -11,11 +11,11 @@ import (
 
 // 批量重启边缘实例对象
 type BatchReboot struct {
+
 	// 待重启的边缘实例列表。
-
 	Servers *[]BaseId `json:"servers,omitempty"`
-	// 重启类型：   - SOFT：普通重启。  - HARD：强制重启。  > 重启必须指定重启类型。
 
+	// 重启类型：   - SOFT：普通重启。  - HARD：强制重启。  > 重启必须指定重启类型。
 	Type *BatchRebootType `json:"type,omitempty"`
 }
 

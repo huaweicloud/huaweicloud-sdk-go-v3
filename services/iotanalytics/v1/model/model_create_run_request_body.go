@@ -7,11 +7,11 @@ import (
 )
 
 type CreateRunRequestBody struct {
+
 	// 计算资源ID。
-
 	ComputingResourceId string `json:"computing_resource_id"`
-	// 作业配置项。
 
+	// 作业配置项。
 	Conf *[]string `json:"conf,omitempty"`
 }
 

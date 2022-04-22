@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteSpecifiedConsumerGroupRequest struct {
+
 	// 队列ID
-
 	QueueId string `json:"queue_id"`
-	// 待删除的消费组ID
 
+	// 待删除的消费组ID
 	GroupId string `json:"group_id"`
 }
 

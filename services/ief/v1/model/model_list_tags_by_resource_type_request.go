@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ListTagsByResourceTypeRequest struct {
+
 	// 铂金版实例ID，专业版实例为空值
-
 	IefInstanceId *string `json:"ief-instance-id,omitempty"`
-	// 资源类型 - ief-edge_node - ief-deployment - ief-application - ief-device
 
+	// 资源类型 - ief-edge_node - ief-deployment - ief-application - ief-device
 	ResourceType string `json:"resource_type"`
 }
 

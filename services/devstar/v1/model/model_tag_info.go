@@ -7,11 +7,11 @@ import (
 )
 
 type TagInfo struct {
+
 	// 自定义标签id。
-
 	Id *string `json:"id,omitempty"`
-	// 自定义标签名称。
 
+	// 自定义标签名称。
 	Name *string `json:"name,omitempty"`
 }
 

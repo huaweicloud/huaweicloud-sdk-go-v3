@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListSingleStreamBitrateResponse struct {
-	// 用量详情。
 
+	// 用量详情。
 	BitrateInfoList *[]V2BitrateInfo `json:"bitrate_info_list,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

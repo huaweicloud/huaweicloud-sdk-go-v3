@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteClustersTagsRequest struct {
+
 	// 指定删除集群ID。
-
 	ClusterId string `json:"cluster_id"`
-	// 需要删除的标签名。
 
+	// 需要删除的标签名。
 	Key string `json:"key"`
 }
 

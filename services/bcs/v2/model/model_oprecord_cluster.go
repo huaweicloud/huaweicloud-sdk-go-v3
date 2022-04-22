@@ -8,17 +8,17 @@ import (
 
 // 集群信息
 type OprecordCluster struct {
+
 	// 集群类型
-
 	ClusterType *string `json:"cluster_type,omitempty"`
+
 	// 集群名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 集群ID
-
 	ClusterId *string `json:"cluster_id,omitempty"`
-	// 节点信息
 
+	// 节点信息
 	NodeInfos *[]NodeInfo `json:"node_infos,omitempty"`
 }
 

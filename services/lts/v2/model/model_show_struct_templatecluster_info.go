@@ -8,14 +8,14 @@ import (
 
 // 结构化类型。
 type ShowStructTemplateclusterInfo struct {
-	// 测试
 
+	// 测试
 	ClusterName *string `json:"cluster_name,omitempty"`
-	// 测试
 
+	// 测试
 	KafkaBootstrapServers *string `json:"kafka_bootstrap_servers,omitempty"`
-	// 测试
 
+	// 测试
 	KafkaSslEnable *bool `json:"kafka_ssl_enable,omitempty"`
 }
 

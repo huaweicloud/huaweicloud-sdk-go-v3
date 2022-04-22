@@ -11,26 +11,26 @@ import (
 
 // Request Object
 type ListTasksRequest struct {
+
 	// 迁移任务状态
-
 	State *ListTasksRequestState `json:"state,omitempty"`
+
 	// 任务的名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 任务的ID
-
 	Id *string `json:"id,omitempty"`
+
 	// 源端服务器的ID
-
 	SourceServerId *string `json:"source_server_id,omitempty"`
+
 	// 每一页记录的任务数量
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 偏移量
-
 	Offset *int32 `json:"offset,omitempty"`
-	// 需要查询的企业项目id
 
+	// 需要查询的企业项目id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

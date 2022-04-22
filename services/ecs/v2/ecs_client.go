@@ -19,7 +19,12 @@ func EcsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//将云服务器加入云服务器组。添加成功后，如果该云服务器组是反亲和性策略的，则该云服务器与云服务器组中的其他成员尽量分散地创建在不同主机上。如果该云服务器时故障域类型的，则该云服务器会拥有故障域属性。
+// 云服务器组添加成员
+//
+// 将云服务器加入云服务器组。添加成功后，如果该云服务器组是反亲和性策略的，则该云服务器与云服务器组中的其他成员尽量分散地创建在不同主机上。如果该云服务器时故障域类型的，则该云服务器会拥有故障域属性。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) AddServerGroupMember(request *model.AddServerGroupMemberRequest) (*model.AddServerGroupMemberResponse, error) {
 	requestDef := GenReqDefForAddServerGroupMember()
 
@@ -30,7 +35,18 @@ func (c *EcsClient) AddServerGroupMember(request *model.AddServerGroupMemberRequ
 	}
 }
 
-//虚拟IP地址用于为网卡提供第二个IP地址，同时支持与多个弹性云服务器的网卡绑定，从而实现多个弹性云服务器之间的高可用性。  该接口用于给云服务器网卡配置虚拟IP地址：  - 当指定的IP地址是一个不存在的虚拟IP地址时，系统会创建该虚拟IP，并绑定至对应网卡。  - 当指定的IP地址是一个已经创建好的私有IP时，系统会将指定的网卡和虚拟IP绑定。如果该IP的device_owner为空，则仅支持VPC内二三层通信；如果该IP的device_owner为neutron:VIP_PORT，则支持VPC内二三层通信、VPC之间对等连接访问，以及弹性公网IP、VPN、云专线等Internet接入。
+// 云服务器网卡配置虚拟IP地址
+//
+// 虚拟IP地址用于为网卡提供第二个IP地址，同时支持与多个弹性云服务器的网卡绑定，从而实现多个弹性云服务器之间的高可用性。
+//
+// 该接口用于给云服务器网卡配置虚拟IP地址：
+//
+// - 当指定的IP地址是一个不存在的虚拟IP地址时，系统会创建该虚拟IP，并绑定至对应网卡。
+//
+// - 当指定的IP地址是一个已经创建好的私有IP时，系统会将指定的网卡和虚拟IP绑定。如果该IP的device_owner为空，则仅支持VPC内二三层通信；如果该IP的device_owner为neutron:VIP_PORT，则支持VPC内二三层通信、VPC之间对等连接访问，以及弹性公网IP、VPN、云专线等Internet接入。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) AssociateServerVirtualIp(request *model.AssociateServerVirtualIpRequest) (*model.AssociateServerVirtualIpResponse, error) {
 	requestDef := GenReqDefForAssociateServerVirtualIp()
 
@@ -41,7 +57,12 @@ func (c *EcsClient) AssociateServerVirtualIp(request *model.AssociateServerVirtu
 	}
 }
 
-//把磁盘挂载到弹性云服务器上。
+// 弹性云服务器挂载磁盘
+//
+// 把磁盘挂载到弹性云服务器上。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) AttachServerVolume(request *model.AttachServerVolumeRequest) (*model.AttachServerVolumeResponse, error) {
 	requestDef := GenReqDefForAttachServerVolume()
 
@@ -52,7 +73,12 @@ func (c *EcsClient) AttachServerVolume(request *model.AttachServerVolumeRequest)
 	}
 }
 
-//给云服务器添加一张或多张网卡。
+// 批量添加云服务器网卡
+//
+// 给云服务器添加一张或多张网卡。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) BatchAddServerNics(request *model.BatchAddServerNicsRequest) (*model.BatchAddServerNicsResponse, error) {
 	requestDef := GenReqDefForBatchAddServerNics()
 
@@ -63,7 +89,12 @@ func (c *EcsClient) BatchAddServerNics(request *model.BatchAddServerNicsRequest)
 	}
 }
 
-//将指定的共享磁盘一次性挂载到多个弹性云服务器，实现批量挂载。
+// 批量挂载指定共享盘
+//
+// 将指定的共享磁盘一次性挂载到多个弹性云服务器，实现批量挂载。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) BatchAttachSharableVolumes(request *model.BatchAttachSharableVolumesRequest) (*model.BatchAttachSharableVolumesResponse, error) {
 	requestDef := GenReqDefForBatchAttachSharableVolumes()
 
@@ -74,7 +105,14 @@ func (c *EcsClient) BatchAttachSharableVolumes(request *model.BatchAttachSharabl
 	}
 }
 
-//- 为指定云服务器批量添加标签。  - 标签管理服务TMS使用该接口批量管理云服务器的标签。
+// 批量添加云服务器标签
+//
+// - 为指定云服务器批量添加标签。
+//
+// - 标签管理服务TMS使用该接口批量管理云服务器的标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) BatchCreateServerTags(request *model.BatchCreateServerTagsRequest) (*model.BatchCreateServerTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateServerTags()
 
@@ -85,7 +123,12 @@ func (c *EcsClient) BatchCreateServerTags(request *model.BatchCreateServerTagsRe
 	}
 }
 
-//卸载并删除云服务器中的一张或多张网卡。
+// 批量删除云服务器网卡
+//
+// 卸载并删除云服务器中的一张或多张网卡。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) BatchDeleteServerNics(request *model.BatchDeleteServerNicsRequest) (*model.BatchDeleteServerNicsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteServerNics()
 
@@ -96,7 +139,14 @@ func (c *EcsClient) BatchDeleteServerNics(request *model.BatchDeleteServerNicsRe
 	}
 }
 
-//- 为指定云服务器批量删除标签。  - 标签管理服务TMS使用该接口批量管理云服务器的标签。
+// 批量删除云服务器标签
+//
+// - 为指定云服务器批量删除标签。
+//
+// - 标签管理服务TMS使用该接口批量管理云服务器的标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) BatchDeleteServerTags(request *model.BatchDeleteServerTagsRequest) (*model.BatchDeleteServerTagsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteServerTags()
 
@@ -107,7 +157,12 @@ func (c *EcsClient) BatchDeleteServerTags(request *model.BatchDeleteServerTagsRe
 	}
 }
 
-//根据给定的云服务器ID列表，批量重启云服务器，一次最多可以重启1000台。
+// 批量重启云服务器
+//
+// 根据给定的云服务器ID列表，批量重启云服务器，一次最多可以重启1000台。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) BatchRebootServers(request *model.BatchRebootServersRequest) (*model.BatchRebootServersResponse, error) {
 	requestDef := GenReqDefForBatchRebootServers()
 
@@ -118,7 +173,12 @@ func (c *EcsClient) BatchRebootServers(request *model.BatchRebootServersRequest)
 	}
 }
 
-//批量重置弹性云服务器管理帐号（root用户或Administrator用户）的密码。
+// 批量重置弹性云服务器密码
+//
+// 批量重置弹性云服务器管理帐号（root用户或Administrator用户）的密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) BatchResetServersPassword(request *model.BatchResetServersPasswordRequest) (*model.BatchResetServersPasswordResponse, error) {
 	requestDef := GenReqDefForBatchResetServersPassword()
 
@@ -129,7 +189,12 @@ func (c *EcsClient) BatchResetServersPassword(request *model.BatchResetServersPa
 	}
 }
 
-//根据给定的云服务器ID列表，批量启动云服务器，一次最多可以启动1000台。
+// 批量启动云服务器
+//
+// 根据给定的云服务器ID列表，批量启动云服务器，一次最多可以启动1000台。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) BatchStartServers(request *model.BatchStartServersRequest) (*model.BatchStartServersResponse, error) {
 	requestDef := GenReqDefForBatchStartServers()
 
@@ -140,7 +205,12 @@ func (c *EcsClient) BatchStartServers(request *model.BatchStartServersRequest) (
 	}
 }
 
-//根据给定的云服务器ID列表，批量关闭云服务器，一次最多可以关闭1000台。
+// 批量关闭云服务器
+//
+// 根据给定的云服务器ID列表，批量关闭云服务器，一次最多可以关闭1000台。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) BatchStopServers(request *model.BatchStopServersRequest) (*model.BatchStopServersResponse, error) {
 	requestDef := GenReqDefForBatchStopServers()
 
@@ -151,7 +221,13 @@ func (c *EcsClient) BatchStopServers(request *model.BatchStopServersRequest) (*m
 	}
 }
 
-//批量修改弹性云服务器信息。 当前仅支持批量修改云服务器名称，一次最多可以修改1000台。
+// 批量修改弹性云服务器
+//
+// 批量修改弹性云服务器信息。
+// 当前仅支持批量修改云服务器名称，一次最多可以修改1000台。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) BatchUpdateServersName(request *model.BatchUpdateServersNameRequest) (*model.BatchUpdateServersNameResponse, error) {
 	requestDef := GenReqDefForBatchUpdateServersName()
 
@@ -162,7 +238,14 @@ func (c *EcsClient) BatchUpdateServersName(request *model.BatchUpdateServersName
 	}
 }
 
-//切换弹性云服务器操作系统。支持弹性云服务器数据盘不变的情况下，使用新镜像重装系统盘。  调用该接口后，系统将卸载系统盘，然后使用新镜像重新创建系统盘，并挂载至弹性云服务器，实现切换操作系统功能。
+// 切换弹性云服务器操作系统(安装Cloud init)
+//
+// 切换弹性云服务器操作系统。支持弹性云服务器数据盘不变的情况下，使用新镜像重装系统盘。
+//
+// 调用该接口后，系统将卸载系统盘，然后使用新镜像重新创建系统盘，并挂载至弹性云服务器，实现切换操作系统功能。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ChangeServerOsWithCloudInit(request *model.ChangeServerOsWithCloudInitRequest) (*model.ChangeServerOsWithCloudInitResponse, error) {
 	requestDef := GenReqDefForChangeServerOsWithCloudInit()
 
@@ -173,7 +256,14 @@ func (c *EcsClient) ChangeServerOsWithCloudInit(request *model.ChangeServerOsWit
 	}
 }
 
-//切换弹性云服务器操作系统。  该接口支持未安装Cloud-init或Cloudbase-init的镜像使用。
+// 切换弹性云服务器操作系统(未安装Cloud init)
+//
+// 切换弹性云服务器操作系统。
+//
+// 该接口支持未安装Cloud-init或Cloudbase-init的镜像使用。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ChangeServerOsWithoutCloudInit(request *model.ChangeServerOsWithoutCloudInitRequest) (*model.ChangeServerOsWithoutCloudInitResponse, error) {
 	requestDef := GenReqDefForChangeServerOsWithoutCloudInit()
 
@@ -184,7 +274,25 @@ func (c *EcsClient) ChangeServerOsWithoutCloudInit(request *model.ChangeServerOs
 	}
 }
 
-//创建一台或多台[按需付费](https://support.huaweicloud.com/productdesc-ecs/ecs_01_0065.html)方式的云服务器。  弹性云服务器的登录鉴权方式包括两种：密钥对、密码。为安全起见，推荐使用密钥对方式。  - 密钥对 密钥对指使用密钥对作为弹性云服务器的鉴权方式。 接口调用方法：使用key_name字段，指定弹性云服务器登录时使用的密钥文件。  - 密码 密码指使用设置初始密码方式作为弹性云服务器的鉴权方式，此时，您可以通过用户名密码方式登录弹性云服务器，Linux操作系统时为root用户的初始密码，Windows操作系统时为Administrator用户的初始密码。  接口调用方法：使用adminPass字段，指定管理员帐号的初始登录密码。对于镜像已安装Cloud-init的Linux云服务器，如果需要使用密文密码，可以使用user_data字段进行密码注入。  > 对于安装Cloud-init镜像的Linux云服务器云主机，若指定user_data字段，则adminPass字段无效。
+// 创建云服务器(按需)
+//
+// 创建一台或多台[按需付费](https://support.huaweicloud.com/productdesc-ecs/ecs_01_0065.html)方式的云服务器。
+//
+// 弹性云服务器的登录鉴权方式包括两种：密钥对、密码。为安全起见，推荐使用密钥对方式。
+//
+// - 密钥对
+// 密钥对指使用密钥对作为弹性云服务器的鉴权方式。
+// 接口调用方法：使用key_name字段，指定弹性云服务器登录时使用的密钥文件。
+//
+// - 密码
+// 密码指使用设置初始密码方式作为弹性云服务器的鉴权方式，此时，您可以通过用户名密码方式登录弹性云服务器，Linux操作系统时为root用户的初始密码，Windows操作系统时为Administrator用户的初始密码。
+//
+// 接口调用方法：使用adminPass字段，指定管理员帐号的初始登录密码。对于镜像已安装Cloud-init的Linux云服务器，如果需要使用密文密码，可以使用user_data字段进行密码注入。
+//
+// &gt; 对于安装Cloud-init镜像的Linux云服务器云主机，若指定user_data字段，则adminPass字段无效。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) CreatePostPaidServers(request *model.CreatePostPaidServersRequest) (*model.CreatePostPaidServersResponse, error) {
 	requestDef := GenReqDefForCreatePostPaidServers()
 
@@ -195,7 +303,14 @@ func (c *EcsClient) CreatePostPaidServers(request *model.CreatePostPaidServersRe
 	}
 }
 
-//创建弹性云服务器组。  与原生的创建云服务器组接口不同之处在于该接口支持企业项目细粒度权限的校验。
+// 创建云服务器组
+//
+// 创建弹性云服务器组。
+//
+// 与原生的创建云服务器组接口不同之处在于该接口支持企业项目细粒度权限的校验。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) CreateServerGroup(request *model.CreateServerGroupRequest) (*model.CreateServerGroupResponse, error) {
 	requestDef := GenReqDefForCreateServerGroup()
 
@@ -206,7 +321,34 @@ func (c *EcsClient) CreateServerGroup(request *model.CreateServerGroupRequest) (
 	}
 }
 
-//创建一台或多台云服务器。  指该接口兼容《弹性云服务器接口参考》创建云服务器v1的功能，同时合入新功能，支持创建[包年/包月](https://support.huaweicloud.com/productdesc-ecs/ecs_01_0065.html)的弹性云服务器。  弹性云服务器的登录鉴权方式包括两种：密钥对、密码。为安全起见，推荐使用密钥对方式。  - 密钥对  指使用密钥对作为弹性云服务器的鉴权方式。  接口调用方法：使用key_name字段，指定弹性云服务器登录时使用的密钥文件。  - 密码  指使用设置初始密码方式作为弹性云服务器的鉴权方式，此时，您可以通过用户名密码方式登录弹性云服务器，Linux操作系统时为root用户的初始密码，Windows操作系统时为Administrator用户的初始密码。  接口调用方法：使用adminPass字段，指定管理员帐号的初始登录密码。对于镜像已安装Cloud-init的Linux云服务器，如果需要使用密文密码，可以使用user_data字段进行密码注入。  > 对于安装Cloud-init镜像的Linux云服务器云主机，若指定user_data字段，则adminPass字段无效。  购买操作示例： - [使用API购买ECS过程中常见问题及处理方法](https://support.huaweicloud.com/api-ecs/ecs_04_0007.html) - [获取Token并检验Token的有效期 ](https://support.huaweicloud.com/api-ecs/ecs_04_0008.html)
+// 创建云服务器
+//
+// 创建一台或多台云服务器。
+//
+// 指该接口兼容《弹性云服务器接口参考》创建云服务器v1的功能，同时合入新功能，支持创建[包年/包月](https://support.huaweicloud.com/productdesc-ecs/ecs_01_0065.html)的弹性云服务器。
+//
+// 弹性云服务器的登录鉴权方式包括两种：密钥对、密码。为安全起见，推荐使用密钥对方式。
+//
+// - 密钥对
+//
+// 指使用密钥对作为弹性云服务器的鉴权方式。
+//
+// 接口调用方法：使用key_name字段，指定弹性云服务器登录时使用的密钥文件。
+//
+// - 密码
+//
+// 指使用设置初始密码方式作为弹性云服务器的鉴权方式，此时，您可以通过用户名密码方式登录弹性云服务器，Linux操作系统时为root用户的初始密码，Windows操作系统时为Administrator用户的初始密码。
+//
+// 接口调用方法：使用adminPass字段，指定管理员帐号的初始登录密码。对于镜像已安装Cloud-init的Linux云服务器，如果需要使用密文密码，可以使用user_data字段进行密码注入。
+//
+// &gt; 对于安装Cloud-init镜像的Linux云服务器云主机，若指定user_data字段，则adminPass字段无效。
+//
+// 购买操作示例：
+// - [使用API购买ECS过程中常见问题及处理方法](https://support.huaweicloud.com/api-ecs/ecs_04_0007.html)
+// - [获取Token并检验Token的有效期 ](https://support.huaweicloud.com/api-ecs/ecs_04_0008.html)
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) CreateServers(request *model.CreateServersRequest) (*model.CreateServersResponse, error) {
 	requestDef := GenReqDefForCreateServers()
 
@@ -217,7 +359,14 @@ func (c *EcsClient) CreateServers(request *model.CreateServersRequest) (*model.C
 	}
 }
 
-//删除云服务器组。  与原生的删除云服务器组接口不同之处在于该接口支持企业项目细粒度权限的校验。
+// 删除云服务器组
+//
+// 删除云服务器组。
+//
+// 与原生的删除云服务器组接口不同之处在于该接口支持企业项目细粒度权限的校验。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) DeleteServerGroup(request *model.DeleteServerGroupRequest) (*model.DeleteServerGroupResponse, error) {
 	requestDef := GenReqDefForDeleteServerGroup()
 
@@ -228,7 +377,12 @@ func (c *EcsClient) DeleteServerGroup(request *model.DeleteServerGroupRequest) (
 	}
 }
 
-//将弹性云服务器移出云服务器组。移出后，该云服务器与云服务器组中的成员不再遵从反亲和策略。
+// 云服务器组删除成员
+//
+// 将弹性云服务器移出云服务器组。移出后，该云服务器与云服务器组中的成员不再遵从反亲和策略。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) DeleteServerGroupMember(request *model.DeleteServerGroupMemberRequest) (*model.DeleteServerGroupMemberResponse, error) {
 	requestDef := GenReqDefForDeleteServerGroupMember()
 
@@ -239,7 +393,12 @@ func (c *EcsClient) DeleteServerGroupMember(request *model.DeleteServerGroupMemb
 	}
 }
 
-//删除云服务器指定元数据。
+// 删除云服务器指定元数据
+//
+// 删除云服务器指定元数据。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) DeleteServerMetadata(request *model.DeleteServerMetadataRequest) (*model.DeleteServerMetadataResponse, error) {
 	requestDef := GenReqDefForDeleteServerMetadata()
 
@@ -250,7 +409,12 @@ func (c *EcsClient) DeleteServerMetadata(request *model.DeleteServerMetadataRequ
 	}
 }
 
-//清除Windows云服务器初始安装时系统生成的密码记录。清除密码后，不影响云服务器密码登录功能，但不能再使用获取密码功能来查询该云服务器密码。
+// 云服务器清除密码(企业项目)
+//
+// 清除Windows云服务器初始安装时系统生成的密码记录。清除密码后，不影响云服务器密码登录功能，但不能再使用获取密码功能来查询该云服务器密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) DeleteServerPassword(request *model.DeleteServerPasswordRequest) (*model.DeleteServerPasswordResponse, error) {
 	requestDef := GenReqDefForDeleteServerPassword()
 
@@ -261,7 +425,14 @@ func (c *EcsClient) DeleteServerPassword(request *model.DeleteServerPasswordRequ
 	}
 }
 
-//根据指定的云服务器ID列表，删除云服务器。  系统支持删除单台云服务器和批量删除多台云服务器操作，批量删除云服务器时，一次最多可以删除1000台。
+// 删除云服务器
+//
+// 根据指定的云服务器ID列表，删除云服务器。
+//
+// 系统支持删除单台云服务器和批量删除多台云服务器操作，批量删除云服务器时，一次最多可以删除1000台。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) DeleteServers(request *model.DeleteServersRequest) (*model.DeleteServersResponse, error) {
 	requestDef := GenReqDefForDeleteServers()
 
@@ -272,7 +443,12 @@ func (c *EcsClient) DeleteServers(request *model.DeleteServersRequest) (*model.D
 	}
 }
 
-//从弹性云服务器中卸载磁盘。
+// 弹性云服务器卸载磁盘
+//
+// 从弹性云服务器中卸载磁盘。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) DetachServerVolume(request *model.DetachServerVolumeRequest) (*model.DetachServerVolumeResponse, error) {
 	requestDef := GenReqDefForDetachServerVolume()
 
@@ -283,7 +459,14 @@ func (c *EcsClient) DetachServerVolume(request *model.DetachServerVolumeRequest)
 	}
 }
 
-//虚拟IP地址用于为网卡提供第二个IP地址，同时支持与多个弹性云服务器的网卡绑定，从而实现多个弹性云服务器之间的高可用性。  该接口用于解绑定弹性云服务器网卡的虚拟IP地址。解绑后，网卡不会被删除。
+// 云服务器网卡解绑虚拟IP地址
+//
+// 虚拟IP地址用于为网卡提供第二个IP地址，同时支持与多个弹性云服务器的网卡绑定，从而实现多个弹性云服务器之间的高可用性。
+//
+// 该接口用于解绑定弹性云服务器网卡的虚拟IP地址。解绑后，网卡不会被删除。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) DisassociateServerVirtualIp(request *model.DisassociateServerVirtualIpRequest) (*model.DisassociateServerVirtualIpResponse, error) {
 	requestDef := GenReqDefForDisassociateServerVirtualIp()
 
@@ -294,7 +477,12 @@ func (c *EcsClient) DisassociateServerVirtualIp(request *model.DisassociateServe
 	}
 }
 
-//查询云服务器规格详情信息和规格扩展信息列表。
+// 查询规格详情和规格扩展信息列表
+//
+// 查询云服务器规格详情信息和规格扩展信息列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
 
@@ -305,7 +493,12 @@ func (c *EcsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 	}
 }
 
-//变更规格时，部分规格的云服务器之间不能互相变更。您可以通过本接口，通过指定弹性云服务器规格，查询该规格可以变更的规格列表。
+// 查询云服务器规格变更支持列表
+//
+// 变更规格时，部分规格的云服务器之间不能互相变更。您可以通过本接口，通过指定弹性云服务器规格，查询该规格可以变更的规格列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ListResizeFlavors(request *model.ListResizeFlavorsRequest) (*model.ListResizeFlavorsResponse, error) {
 	requestDef := GenReqDefForListResizeFlavors()
 
@@ -316,7 +509,12 @@ func (c *EcsClient) ListResizeFlavors(request *model.ListResizeFlavorsRequest) (
 	}
 }
 
-//查询弹性云服务器挂载的磁盘信息。
+// 查询弹性云服务器磁盘信息
+//
+// 查询弹性云服务器挂载的磁盘信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ListServerBlockDevices(request *model.ListServerBlockDevicesRequest) (*model.ListServerBlockDevicesResponse, error) {
 	requestDef := GenReqDefForListServerBlockDevices()
 
@@ -327,7 +525,14 @@ func (c *EcsClient) ListServerBlockDevices(request *model.ListServerBlockDevices
 	}
 }
 
-//查询弹性云服务器组。  与原生的创建云服务器组接口不同之处在于该接口支持企业项目细粒度权限的校验。
+// 查询云服务器组列表
+//
+// 查询弹性云服务器组。
+//
+// 与原生的创建云服务器组接口不同之处在于该接口支持企业项目细粒度权限的校验。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ListServerGroups(request *model.ListServerGroupsRequest) (*model.ListServerGroupsResponse, error) {
 	requestDef := GenReqDefForListServerGroups()
 
@@ -338,7 +543,12 @@ func (c *EcsClient) ListServerGroups(request *model.ListServerGroupsRequest) (*m
 	}
 }
 
-//查询云服务器网卡信息。
+// 查询云服务器网卡信息
+//
+// 查询云服务器网卡信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ListServerInterfaces(request *model.ListServerInterfacesRequest) (*model.ListServerInterfacesResponse, error) {
 	requestDef := GenReqDefForListServerInterfaces()
 
@@ -349,7 +559,14 @@ func (c *EcsClient) ListServerInterfaces(request *model.ListServerInterfacesRequ
 	}
 }
 
-//项目（Project）用于将OpenStack的资源（计算资源、存储资源和网络资源）进行分组和隔离。项目可以是一个部门或者一个项目组。一个帐户中可以创建多个项目。  该接口用于查询用户在指定项目所使用的全部标签。
+// 查询项目标签
+//
+// 项目（Project）用于将OpenStack的资源（计算资源、存储资源和网络资源）进行分组和隔离。项目可以是一个部门或者一个项目组。一个帐户中可以创建多个项目。
+//
+// 该接口用于查询用户在指定项目所使用的全部标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ListServerTags(request *model.ListServerTagsRequest) (*model.ListServerTagsResponse, error) {
 	requestDef := GenReqDefForListServerTags()
 
@@ -360,7 +577,14 @@ func (c *EcsClient) ListServerTags(request *model.ListServerTagsRequest) (*model
 	}
 }
 
-//根据用户请求条件从数据库筛选、查询所有的弹性云服务器，并关联相关表获取到弹性云服务器的详细信息。  该接口支持查询弹性云服务器计费方式，以及是否被冻结。
+// 查询云服务器详情列表
+//
+// 根据用户请求条件从数据库筛选、查询所有的弹性云服务器，并关联相关表获取到弹性云服务器的详细信息。
+//
+// 该接口支持查询弹性云服务器计费方式，以及是否被冻结。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ListServersDetails(request *model.ListServersDetailsRequest) (*model.ListServersDetailsResponse, error) {
 	requestDef := GenReqDefForListServersDetails()
 
@@ -371,7 +595,14 @@ func (c *EcsClient) ListServersDetails(request *model.ListServersDetailsRequest)
 	}
 }
 
-//- 将部署在专属主机上的弹性云服务器迁移至其他专属主机。 - 将部署在专属主机上的弹性云服务器迁移至公共资源池，即不再部署在专属主机上。 - 将公共资源池的弹性云服务器迁移至专属主机上，成为专属主机上部署的弹性云服务器。
+// 冷迁移云服务器
+//
+// - 将部署在专属主机上的弹性云服务器迁移至其他专属主机。
+// - 将部署在专属主机上的弹性云服务器迁移至公共资源池，即不再部署在专属主机上。
+// - 将公共资源池的弹性云服务器迁移至专属主机上，成为专属主机上部署的弹性云服务器。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) MigrateServer(request *model.MigrateServerRequest) (*model.MigrateServerResponse, error) {
 	requestDef := GenReqDefForMigrateServer()
 
@@ -382,7 +613,14 @@ func (c *EcsClient) MigrateServer(request *model.MigrateServerRequest) (*model.M
 	}
 }
 
-//为弹性云服务器添加一个安全组。  添加多个安全组时，建议最多为弹性云服务器添加5个安全组。
+// 添加安全组
+//
+// 为弹性云服务器添加一个安全组。
+//
+// 添加多个安全组时，建议最多为弹性云服务器添加5个安全组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) NovaAssociateSecurityGroup(request *model.NovaAssociateSecurityGroupRequest) (*model.NovaAssociateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForNovaAssociateSecurityGroup()
 
@@ -393,7 +631,14 @@ func (c *EcsClient) NovaAssociateSecurityGroup(request *model.NovaAssociateSecur
 	}
 }
 
-//创建SSH密钥，或把公钥导入系统，生成密钥对。  创建SSH密钥成功后，请把响应数据中的私钥内容保存到本地文件，用户使用该私钥登录云服务器云主机。为保证云服务器云主机器安全，私钥数据只能读取一次，请妥善保管。
+// 创建和导入SSH密钥
+//
+// 创建SSH密钥，或把公钥导入系统，生成密钥对。
+//
+// 创建SSH密钥成功后，请把响应数据中的私钥内容保存到本地文件，用户使用该私钥登录云服务器云主机。为保证云服务器云主机器安全，私钥数据只能读取一次，请妥善保管。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) NovaCreateKeypair(request *model.NovaCreateKeypairRequest) (*model.NovaCreateKeypairResponse, error) {
 	requestDef := GenReqDefForNovaCreateKeypair()
 
@@ -404,7 +649,16 @@ func (c *EcsClient) NovaCreateKeypair(request *model.NovaCreateKeypairRequest) (
 	}
 }
 
-//创建一台弹性云服务器。  弹性云服务器创建完成后，如需开启自动恢复功能，可以调用配置云服务器自动恢复的接口，具体使用请参见管理云服务器自动恢复动作。  该接口在云服务器创建失败后不支持自动回滚。若需要自动回滚能力，可以调用POST /v1/{project_id}/cloudservers接口，具体使用请参见创建云服务器（按需）。
+// 创建云服务器
+//
+// 创建一台弹性云服务器。
+//
+// 弹性云服务器创建完成后，如需开启自动恢复功能，可以调用配置云服务器自动恢复的接口，具体使用请参见管理云服务器自动恢复动作。
+//
+// 该接口在云服务器创建失败后不支持自动回滚。若需要自动回滚能力，可以调用POST /v1/{project_id}/cloudservers接口，具体使用请参见创建云服务器（按需）。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) NovaCreateServers(request *model.NovaCreateServersRequest) (*model.NovaCreateServersResponse, error) {
 	requestDef := GenReqDefForNovaCreateServers()
 
@@ -415,7 +669,12 @@ func (c *EcsClient) NovaCreateServers(request *model.NovaCreateServersRequest) (
 	}
 }
 
-//根据SSH密钥的名称，删除指定SSH密钥。
+// 删除SSH密钥
+//
+// 根据SSH密钥的名称，删除指定SSH密钥。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) NovaDeleteKeypair(request *model.NovaDeleteKeypairRequest) (*model.NovaDeleteKeypairResponse, error) {
 	requestDef := GenReqDefForNovaDeleteKeypair()
 
@@ -426,7 +685,12 @@ func (c *EcsClient) NovaDeleteKeypair(request *model.NovaDeleteKeypairRequest) (
 	}
 }
 
-//删除一台云服务器。
+// 删除云服务器
+//
+// 删除一台云服务器。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) NovaDeleteServer(request *model.NovaDeleteServerRequest) (*model.NovaDeleteServerResponse, error) {
 	requestDef := GenReqDefForNovaDeleteServer()
 
@@ -437,7 +701,12 @@ func (c *EcsClient) NovaDeleteServer(request *model.NovaDeleteServerRequest) (*m
 	}
 }
 
-//移除弹性云服务器中的安全组。
+// 移除安全组
+//
+// 移除弹性云服务器中的安全组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) NovaDisassociateSecurityGroup(request *model.NovaDisassociateSecurityGroupRequest) (*model.NovaDisassociateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForNovaDisassociateSecurityGroup()
 
@@ -448,7 +717,12 @@ func (c *EcsClient) NovaDisassociateSecurityGroup(request *model.NovaDisassociat
 	}
 }
 
-//查询可用域列表。
+// 查询可用区列表
+//
+// 查询可用域列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) NovaListAvailabilityZones(request *model.NovaListAvailabilityZonesRequest) (*model.NovaListAvailabilityZonesResponse, error) {
 	requestDef := GenReqDefForNovaListAvailabilityZones()
 
@@ -459,7 +733,12 @@ func (c *EcsClient) NovaListAvailabilityZones(request *model.NovaListAvailabilit
 	}
 }
 
-//查询SSH密钥信息列表。
+// 查询SSH密钥列表
+//
+// 查询SSH密钥信息列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) NovaListKeypairs(request *model.NovaListKeypairsRequest) (*model.NovaListKeypairsResponse, error) {
 	requestDef := GenReqDefForNovaListKeypairs()
 
@@ -470,7 +749,12 @@ func (c *EcsClient) NovaListKeypairs(request *model.NovaListKeypairsRequest) (*m
 	}
 }
 
-//查询指定弹性云服务器的安全组。
+// 查询指定云服务器安全组列表
+//
+// 查询指定弹性云服务器的安全组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) NovaListServerSecurityGroups(request *model.NovaListServerSecurityGroupsRequest) (*model.NovaListServerSecurityGroupsResponse, error) {
 	requestDef := GenReqDefForNovaListServerSecurityGroups()
 
@@ -481,7 +765,12 @@ func (c *EcsClient) NovaListServerSecurityGroups(request *model.NovaListServerSe
 	}
 }
 
-//查询云服务器详情信息列表。
+// 查询云服务器详情列表
+//
+// 查询云服务器详情信息列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) NovaListServersDetails(request *model.NovaListServersDetailsRequest) (*model.NovaListServersDetailsResponse, error) {
 	requestDef := GenReqDefForNovaListServersDetails()
 
@@ -492,7 +781,12 @@ func (c *EcsClient) NovaListServersDetails(request *model.NovaListServersDetails
 	}
 }
 
-//根据SSH密钥名称查询指定SSH密钥。
+// 查询SSH密钥详情
+//
+// 根据SSH密钥名称查询指定SSH密钥。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) NovaShowKeypair(request *model.NovaShowKeypairRequest) (*model.NovaShowKeypairResponse, error) {
 	requestDef := GenReqDefForNovaShowKeypair()
 
@@ -503,7 +797,12 @@ func (c *EcsClient) NovaShowKeypair(request *model.NovaShowKeypairRequest) (*mod
 	}
 }
 
-//根据云服务器ID，查询云服务器的详细信息。
+// 查询云服务器详情
+//
+// 根据云服务器ID，查询云服务器的详细信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) NovaShowServer(request *model.NovaShowServerRequest) (*model.NovaShowServerResponse, error) {
 	requestDef := GenReqDefForNovaShowServer()
 
@@ -514,7 +813,12 @@ func (c *EcsClient) NovaShowServer(request *model.NovaShowServerRequest) (*model
 	}
 }
 
-//配置、删除云服务器自动恢复动作。
+// 管理云服务器自动恢复动作
+//
+// 配置、删除云服务器自动恢复动作。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) RegisterServerAutoRecovery(request *model.RegisterServerAutoRecoveryRequest) (*model.RegisterServerAutoRecoveryResponse, error) {
 	requestDef := GenReqDefForRegisterServerAutoRecovery()
 
@@ -525,7 +829,14 @@ func (c *EcsClient) RegisterServerAutoRecovery(request *model.RegisterServerAuto
 	}
 }
 
-//重装弹性云服务器的操作系统。支持弹性云服务器数据盘不变的情况下，使用原镜像重装系统盘。  调用该接口后，系统将卸载系统盘，然后使用原镜像重新创建系统盘，并挂载至弹性云服务器，实现重装操作系统功能。
+// 重装弹性云服务器操作系统(安装Cloud-init)
+//
+// 重装弹性云服务器的操作系统。支持弹性云服务器数据盘不变的情况下，使用原镜像重装系统盘。
+//
+// 调用该接口后，系统将卸载系统盘，然后使用原镜像重新创建系统盘，并挂载至弹性云服务器，实现重装操作系统功能。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ReinstallServerWithCloudInit(request *model.ReinstallServerWithCloudInitRequest) (*model.ReinstallServerWithCloudInitResponse, error) {
 	requestDef := GenReqDefForReinstallServerWithCloudInit()
 
@@ -536,7 +847,14 @@ func (c *EcsClient) ReinstallServerWithCloudInit(request *model.ReinstallServerW
 	}
 }
 
-//重装弹性云服务器的操作系统。  该接口支持未安装Cloud-init或Cloudbase-init的镜像。
+// 重装弹性云服务器操作系统(未安装Cloud init)
+//
+// 重装弹性云服务器的操作系统。
+//
+// 该接口支持未安装Cloud-init或Cloudbase-init的镜像。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ReinstallServerWithoutCloudInit(request *model.ReinstallServerWithoutCloudInitRequest) (*model.ReinstallServerWithoutCloudInitResponse, error) {
 	requestDef := GenReqDefForReinstallServerWithoutCloudInit()
 
@@ -547,7 +865,12 @@ func (c *EcsClient) ReinstallServerWithoutCloudInit(request *model.ReinstallServ
 	}
 }
 
-//重置弹性云服务器管理帐号（root用户或Administrator用户）的密码。
+// 一键重置弹性云服务器密码(企业项目)
+//
+// 重置弹性云服务器管理帐号（root用户或Administrator用户）的密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ResetServerPassword(request *model.ResetServerPasswordRequest) (*model.ResetServerPasswordResponse, error) {
 	requestDef := GenReqDefForResetServerPassword()
 
@@ -558,7 +881,16 @@ func (c *EcsClient) ResetServerPassword(request *model.ResetServerPasswordReques
 	}
 }
 
-//当您创建的弹性云服务器规格无法满足业务需要时，可以变更云服务器规格，升级vCPU、内存。具体接口的使用，请参见本节内容。  变更规格时，部分规格的云服务器之间不能互相变更。  您可以通过接口“/v1/{project_id}/cloudservers/resize_flavors?{instance_uuid,source_flavor_id,source_flavor_name}”查询支持列表。
+// 变更云服务器规格(按需)
+//
+// 当您创建的弹性云服务器规格无法满足业务需要时，可以变更云服务器规格，升级vCPU、内存。具体接口的使用，请参见本节内容。
+//
+// 变更规格时，部分规格的云服务器之间不能互相变更。
+//
+// 您可以通过接口“/v1/{project_id}/cloudservers/resize_flavors?{instance_uuid,source_flavor_id,source_flavor_name}”查询支持列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ResizePostPaidServer(request *model.ResizePostPaidServerRequest) (*model.ResizePostPaidServerResponse, error) {
 	requestDef := GenReqDefForResizePostPaidServer()
 
@@ -569,7 +901,20 @@ func (c *EcsClient) ResizePostPaidServer(request *model.ResizePostPaidServerRequ
 	}
 }
 
-//变更云服务器规格。  v1.1版本：指该接口兼容v1接口的功能，同时合入新功能，支持变更包年/包月弹性云服务器的规格。  注意事项：  - 该接口可以使用合作伙伴自身的AK/SK或者token调用，也可以用合作伙伴子客户的AK/SK或者token来调用。 - 如果使用AK/SK认证方式，示例代码中region请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)中“弹性云服务 ECS”下“区域”的内容，，serviceName（英文服务名称缩写）请指定为ECS。 - Endpoint请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)中“弹性云服务 ECS”下“终端节点（Endpoint）”的内容。
+// 变更云服务器规格
+//
+// 变更云服务器规格。
+//
+// v1.1版本：指该接口兼容v1接口的功能，同时合入新功能，支持变更包年/包月弹性云服务器的规格。
+//
+// 注意事项：
+//
+// - 该接口可以使用合作伙伴自身的AK/SK或者token调用，也可以用合作伙伴子客户的AK/SK或者token来调用。
+// - 如果使用AK/SK认证方式，示例代码中region请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)中“弹性云服务 ECS”下“区域”的内容，，serviceName（英文服务名称缩写）请指定为ECS。
+// - Endpoint请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)中“弹性云服务 ECS”下“终端节点（Endpoint）”的内容。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ResizeServer(request *model.ResizeServerRequest) (*model.ResizeServerResponse, error) {
 	requestDef := GenReqDefForResizeServer()
 
@@ -580,7 +925,12 @@ func (c *EcsClient) ResizeServer(request *model.ResizeServerRequest) (*model.Res
 	}
 }
 
-//查询弹性云服务器是否支持一键重置密码。
+// 查询是否支持一键重置密码
+//
+// 查询弹性云服务器是否支持一键重置密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ShowResetPasswordFlag(request *model.ShowResetPasswordFlagRequest) (*model.ShowResetPasswordFlagResponse, error) {
 	requestDef := GenReqDefForShowResetPasswordFlag()
 
@@ -591,7 +941,14 @@ func (c *EcsClient) ShowResetPasswordFlag(request *model.ShowResetPasswordFlagRe
 	}
 }
 
-//查询弹性云服务器的详细信息。  该接口支持查询弹性云服务器的计费方式，以及是否被冻结。
+// 查询云服务器详情
+//
+// 查询弹性云服务器的详细信息。
+//
+// 该接口支持查询弹性云服务器的计费方式，以及是否被冻结。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ShowServer(request *model.ShowServerRequest) (*model.ShowServerResponse, error) {
 	requestDef := GenReqDefForShowServer()
 
@@ -602,7 +959,12 @@ func (c *EcsClient) ShowServer(request *model.ShowServerRequest) (*model.ShowSer
 	}
 }
 
-//查询云服务器是否配置了自动恢复动作。
+// 查询云服务器是否配置了自动恢复动作
+//
+// 查询云服务器是否配置了自动恢复动作。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ShowServerAutoRecovery(request *model.ShowServerAutoRecoveryRequest) (*model.ShowServerAutoRecoveryResponse, error) {
 	requestDef := GenReqDefForShowServerAutoRecovery()
 
@@ -613,7 +975,12 @@ func (c *EcsClient) ShowServerAutoRecovery(request *model.ShowServerAutoRecovery
 	}
 }
 
-//查询弹性云服务器挂载的单个磁盘信息。
+// 查询弹性云服务器单个磁盘信息
+//
+// 查询弹性云服务器挂载的单个磁盘信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ShowServerBlockDevice(request *model.ShowServerBlockDeviceRequest) (*model.ShowServerBlockDeviceResponse, error) {
 	requestDef := GenReqDefForShowServerBlockDevice()
 
@@ -624,7 +991,14 @@ func (c *EcsClient) ShowServerBlockDevice(request *model.ShowServerBlockDeviceRe
 	}
 }
 
-//查询弹性云服务器组详情。  与原生的创建云服务器组接口不同之处在于该接口支持企业项目细粒度权限的校验。
+// 查询云服务器组详情
+//
+// 查询弹性云服务器组详情。
+//
+// 与原生的创建云服务器组接口不同之处在于该接口支持企业项目细粒度权限的校验。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ShowServerGroup(request *model.ShowServerGroupRequest) (*model.ShowServerGroupResponse, error) {
 	requestDef := GenReqDefForShowServerGroup()
 
@@ -635,7 +1009,12 @@ func (c *EcsClient) ShowServerGroup(request *model.ShowServerGroupRequest) (*mod
 	}
 }
 
-//查询租户配额信息。
+// 查询租户配额
+//
+// 查询租户配额信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ShowServerLimits(request *model.ShowServerLimitsRequest) (*model.ShowServerLimitsResponse, error) {
 	requestDef := GenReqDefForShowServerLimits()
 
@@ -646,7 +1025,12 @@ func (c *EcsClient) ShowServerLimits(request *model.ShowServerLimitsRequest) (*m
 	}
 }
 
-//当通过支持Cloudbase-init功能的镜像创建Windows云服务器时，获取云服务器初始安装时系统生成的管理员帐户（Administrator帐户或Cloudbase-init设置的帐户）随机密码。
+// 云服务器获取密码(企业项目)
+//
+// 当通过支持Cloudbase-init功能的镜像创建Windows云服务器时，获取云服务器初始安装时系统生成的管理员帐户（Administrator帐户或Cloudbase-init设置的帐户）随机密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ShowServerPassword(request *model.ShowServerPasswordRequest) (*model.ShowServerPasswordResponse, error) {
 	requestDef := GenReqDefForShowServerPassword()
 
@@ -657,7 +1041,12 @@ func (c *EcsClient) ShowServerPassword(request *model.ShowServerPasswordRequest)
 	}
 }
 
-//获取弹性云服务器VNC远程登录地址。
+// 获取VNC远程登录地址
+//
+// 获取弹性云服务器VNC远程登录地址。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ShowServerRemoteConsole(request *model.ShowServerRemoteConsoleRequest) (*model.ShowServerRemoteConsoleResponse, error) {
 	requestDef := GenReqDefForShowServerRemoteConsole()
 
@@ -668,7 +1057,14 @@ func (c *EcsClient) ShowServerRemoteConsole(request *model.ShowServerRemoteConso
 	}
 }
 
-//- 查询指定云服务器的标签信息。  - 标签管理服务TMS使用该接口查询指定云服务器的全部标签数据。
+// 查询云服务器标签
+//
+// - 查询指定云服务器的标签信息。
+//
+// - 标签管理服务TMS使用该接口查询指定云服务器的全部标签数据。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ShowServerTags(request *model.ShowServerTagsRequest) (*model.ShowServerTagsResponse, error) {
 	requestDef := GenReqDefForShowServerTags()
 
@@ -679,7 +1075,12 @@ func (c *EcsClient) ShowServerTags(request *model.ShowServerTagsRequest) (*model
 	}
 }
 
-//修改云服务器信息，目前支持修改云服务器名称及描述和hostname。
+// 修改云服务器
+//
+// 修改云服务器信息，目前支持修改云服务器名称及描述和hostname。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) UpdateServer(request *model.UpdateServerRequest) (*model.UpdateServerResponse, error) {
 	requestDef := GenReqDefForUpdateServer()
 
@@ -690,7 +1091,14 @@ func (c *EcsClient) UpdateServer(request *model.UpdateServerRequest) (*model.Upd
 	}
 }
 
-//修改按需服务器，设置定时销毁时间。如果设置的销毁时间为空，表示取消销毁时间。  该接口支持企业项目细粒度权限的校验，具体细粒度请参见 ecs:cloudServers:put。
+// 修改云服务器销毁时间
+//
+// 修改按需服务器，设置定时销毁时间。如果设置的销毁时间为空，表示取消销毁时间。
+//
+// 该接口支持企业项目细粒度权限的校验，具体细粒度请参见 ecs:cloudServers:put。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) UpdateServerAutoTerminateTime(request *model.UpdateServerAutoTerminateTimeRequest) (*model.UpdateServerAutoTerminateTimeResponse, error) {
 	requestDef := GenReqDefForUpdateServerAutoTerminateTime()
 
@@ -701,7 +1109,18 @@ func (c *EcsClient) UpdateServerAutoTerminateTime(request *model.UpdateServerAut
 	}
 }
 
-//更新云服务器元数据。  - 如果元数据中没有待更新字段，则自动添加该字段。  - 如果元数据中已存在待更新字段，则直接更新字段值。  - 如果元数据中的字段不再请求参数中，则保持不变
+// 更新云服务器元数据
+//
+// 更新云服务器元数据。
+//
+// - 如果元数据中没有待更新字段，则自动添加该字段。
+//
+// - 如果元数据中已存在待更新字段，则直接更新字段值。
+//
+// - 如果元数据中的字段不再请求参数中，则保持不变
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) UpdateServerMetadata(request *model.UpdateServerMetadataRequest) (*model.UpdateServerMetadataResponse, error) {
 	requestDef := GenReqDefForUpdateServerMetadata()
 
@@ -712,7 +1131,14 @@ func (c *EcsClient) UpdateServerMetadata(request *model.UpdateServerMetadataRequ
 	}
 }
 
-//查询Job的执行状态。  对于创建云服务器、删除云服务器、云服务器批量操作和网卡操作等异步API，命令下发后，会返回job_id，通过job_id可以查询任务的执行状态。
+// 查询任务的执行状态
+//
+// 查询Job的执行状态。
+//
+// 对于创建云服务器、删除云服务器、云服务器批量操作和网卡操作等异步API，命令下发后，会返回job_id，通过job_id可以查询任务的执行状态。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EcsClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
 	requestDef := GenReqDefForShowJob()
 

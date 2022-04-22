@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type ResetMessagesRequest struct {
+
 	// 实例ID。
-
 	InstanceId string `json:"instance_id"`
-	// 重发类型。当前只支持“resend”。
 
+	// 重发类型。当前只支持“resend”。
 	ActionId ResetMessagesRequestActionId `json:"action_id"`
 
 	Body *ResetMessagesReq `json:"body,omitempty"`

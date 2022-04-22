@@ -12,6 +12,7 @@ import (
 )
 
 type ShowImageWatermarkRequestBody struct {
+
 	// 待提取暗水印的图片文件。
 	File *def.FilePart `json:"file"`
 

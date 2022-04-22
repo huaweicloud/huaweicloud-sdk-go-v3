@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateRecurringMeetingResponse struct {
-	// 会议信息列表
 
+	// 会议信息列表
 	Body           *[]ConferenceInfo `json:"body,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

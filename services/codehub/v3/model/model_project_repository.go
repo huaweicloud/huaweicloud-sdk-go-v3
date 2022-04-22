@@ -7,11 +7,11 @@ import (
 )
 
 type ProjectRepository struct {
+
 	// 创建项目的UUID
-
 	ProjectUuid *string `json:"projectUuid,omitempty"`
-	// 创建仓库的UUID
 
+	// 创建仓库的UUID
 	RepositoryUuid *string `json:"repositoryUuid,omitempty"`
 }
 

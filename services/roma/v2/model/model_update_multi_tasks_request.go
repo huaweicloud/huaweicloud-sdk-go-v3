@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateMultiTasksRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 任务ID
 
+	// 任务ID
 	TaskId string `json:"task_id"`
 
 	Body *MultiTaskUpdateBody `json:"body,omitempty"`

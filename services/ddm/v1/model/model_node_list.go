@@ -7,17 +7,17 @@ import (
 )
 
 type NodeList struct {
+
 	// 端口。
-
 	Port *string `json:"port,omitempty"`
+
 	// 节点状态。
-
 	Status *string `json:"status,omitempty"`
+
 	// 节点id。
-
 	NodeId *string `json:"node_id,omitempty"`
-	// ip
 
+	// ip
 	Ip *string `json:"ip,omitempty"`
 }
 

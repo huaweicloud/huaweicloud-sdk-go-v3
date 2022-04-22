@@ -11,20 +11,20 @@ import (
 
 // 服务器配置
 type CloudWafServer struct {
+
 	// 对外协议
-
 	FrontProtocol CloudWafServerFrontProtocol `json:"front_protocol"`
+
 	// 源站协议
-
 	BackProtocol CloudWafServerBackProtocol `json:"back_protocol"`
+
 	// 源站地址
-
 	Address string `json:"address"`
+
 	// 源站端口
-
 	Port int32 `json:"port"`
-	// 源站地址为ipv4或ipv6
 
+	// 源站地址为ipv4或ipv6
 	Type CloudWafServerType `json:"type"`
 }
 

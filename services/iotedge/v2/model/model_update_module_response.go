@@ -11,35 +11,35 @@ import (
 
 // Response Object
 type UpdateModuleResponse struct {
+
 	// 应用ID
-
 	EdgeAppId *string `json:"edge_app_id,omitempty"`
+
 	// 应用版本
-
 	AppVersion *string `json:"app_version,omitempty"`
+
 	// 模块状态
-
 	State *UpdateModuleResponseState `json:"state,omitempty"`
+
 	// 边缘节点（同deviceID）ID
-
 	NodeId *string `json:"node_id,omitempty"`
+
 	// 模块名称
-
 	ModuleName *string `json:"module_name,omitempty"`
+
 	// 模块ID
-
 	ModuleId *string `json:"module_id,omitempty"`
+
 	// 创建时间
-
 	CreateTime *string `json:"create_time,omitempty"`
+
 	// 最后一次修改时间
-
 	UpdateTime *string `json:"update_time,omitempty"`
+
 	// 应用类型
-
 	AppType *UpdateModuleResponseAppType `json:"app_type,omitempty"`
-	// 功能类型
 
+	// 功能类型
 	FunctionType   *UpdateModuleResponseFunctionType `json:"function_type,omitempty"`
 	HttpStatusCode int                               `json:"-"`
 }

@@ -7,11 +7,11 @@ import (
 )
 
 type RestartClusterReq struct {
+
 	// 操作角色
-
 	Type string `json:"type"`
-	// 节点类型
 
+	// 节点类型
 	Value string `json:"value"`
 }
 

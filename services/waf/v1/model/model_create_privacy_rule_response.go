@@ -11,20 +11,20 @@ import (
 
 // Response Object
 type CreatePrivacyRuleResponse struct {
+
 	// 规则id
-
 	Id *string `json:"id,omitempty"`
+
 	// 策略id
-
 	Policyid *string `json:"policyid,omitempty"`
+
 	// 隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
-
 	Url *string `json:"url,omitempty"`
+
 	// 屏蔽字段
-
 	Category *CreatePrivacyRuleResponseCategory `json:"category,omitempty"`
-	// 屏蔽字段名
 
+	// 屏蔽字段名
 	Index          *string `json:"index,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -7,11 +7,11 @@ import (
 )
 
 type UpdateDefectRequestBody struct {
+
 	// 问题id,多个时英文逗号分隔
-
 	DefectId *string `json:"defect_id,omitempty"`
-	// 状态2：已忽略 1：已解决 0：未解决
 
+	// 状态2：已忽略 1：已解决 0：未解决
 	DefectStatus *string `json:"defect_status,omitempty"`
 }
 

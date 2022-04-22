@@ -7,11 +7,11 @@ import (
 )
 
 type OperateLog struct {
+
 	// 操作指令
-
 	Oper *string `json:"oper,omitempty"`
-	// 操作时间
 
+	// 操作时间
 	OperateTime *string `json:"operate_time,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type BatchAddOrDeleteTagsRequest struct {
-	// 镜像ID。
 
+	// 镜像ID。
 	ImageId string `json:"image_id"`
 
 	Body *BatchAddOrDeleteTagsRequestBody `json:"body,omitempty"`

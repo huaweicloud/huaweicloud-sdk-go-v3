@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateShrinkClusterRequest struct {
-	// 指定待缩容的集群ID。
 
+	// 指定待缩容的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *ShrinkClusterReq `json:"body,omitempty"`

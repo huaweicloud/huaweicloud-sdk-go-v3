@@ -8,11 +8,11 @@ import (
 
 // 作业运行失败时收集到的错误信息
 type TaskDetailsError struct {
+
 	// 算法服务定义的错误码
-
 	Code string `json:"code"`
-	// 算法服务反馈的错误信息
 
+	// 算法服务反馈的错误信息
 	Message string `json:"message"`
 }
 

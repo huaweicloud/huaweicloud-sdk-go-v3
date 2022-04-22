@@ -7,11 +7,11 @@ import (
 )
 
 type Segment struct {
+
 	// 一句的起始时间戳，单位ms。
-
 	StartTime int32 `json:"start_time"`
-	// 一句的结束时间戳，单位ms。
 
+	// 一句的结束时间戳，单位ms。
 	EndTime int32 `json:"end_time"`
 
 	Result *TranscriberResult `json:"result"`

@@ -8,8 +8,8 @@ import (
 
 // 修改日志接入请求体
 type UpdateAccessConfigRequestBody struct {
-	// 日志接入ID
 
+	// 日志接入ID
 	AccessConfigId string `json:"access_config_id"`
 
 	AccessConfigDetail *AccessConfigDeatil `json:"access_config_detail,omitempty"`

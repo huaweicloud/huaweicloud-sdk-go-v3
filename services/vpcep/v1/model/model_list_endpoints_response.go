@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListEndpointsResponse struct {
+
 	// 终端节点列表。
-
 	Endpoints *[]EndpointResp `json:"endpoints,omitempty"`
-	// 满足查询条件的终端节点总条数，不受分页（即limit、offset参数）影响。
 
+	// 满足查询条件的终端节点总条数，不受分页（即limit、offset参数）影响。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

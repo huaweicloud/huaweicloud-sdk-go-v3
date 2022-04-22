@@ -9,8 +9,8 @@ import (
 // 节点网卡的描述信息。
 type NodeNicSpec struct {
 	PrimaryNic *NicSpec `json:"primaryNic,omitempty"`
-	// 扩展网卡
 
+	// 扩展网卡
 	ExtNics *[]NicSpec `json:"extNics,omitempty"`
 }
 

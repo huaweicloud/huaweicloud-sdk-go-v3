@@ -8,8 +8,8 @@ import (
 
 // ID对象
 type BaseId struct {
-	// 对象ID，uuid。
 
+	// 对象ID，uuid。
 	Id string `json:"id"`
 }
 

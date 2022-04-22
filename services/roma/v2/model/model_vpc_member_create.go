@@ -7,8 +7,8 @@ import (
 )
 
 type VpcMemberCreate struct {
-	// 后端实例列表
 
+	// 后端实例列表
 	Members []MemberInfo `json:"members"`
 }
 

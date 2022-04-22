@@ -8,14 +8,14 @@ import (
 
 // 统计信息
 type CreateCommitResponseBodyStats struct {
+
 	// 变更增加的行数
-
 	Additions *int32 `json:"additions,omitempty"`
+
 	// 变更删除的行数
-
 	Deletions *int32 `json:"deletions,omitempty"`
-	// 变更的总行数
 
+	// 变更的总行数
 	Total *int32 `json:"total,omitempty"`
 }
 

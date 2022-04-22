@@ -7,8 +7,8 @@ import (
 )
 
 type ProductTemplatesCalculation struct {
-	// 产品模板数量
 
+	// 产品模板数量
 	ProductTemplatesNumbers *int32 `json:"product_templates_numbers,omitempty"`
 }
 

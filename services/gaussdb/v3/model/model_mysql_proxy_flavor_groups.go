@@ -7,11 +7,11 @@ import (
 )
 
 type MysqlProxyFlavorGroups struct {
+
 	// 规格组类型,如x86，arm。
-
 	GroupType *string `json:"group_type,omitempty"`
-	// 规格信息。
 
+	// 规格信息。
 	ProxyFlavors *[]MysqlProxyComputeFlavor `json:"proxy_flavors,omitempty"`
 }
 

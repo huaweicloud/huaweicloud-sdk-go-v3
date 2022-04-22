@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListRtcAbnormalEventDimensionResponse struct {
-	// 异常体验列表
 
+	// 异常体验列表
 	Dimensions *[]AbnormalEventDimensionValue `json:"dimensions,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

@@ -11,11 +11,11 @@ type PodRequest struct {
 	Configs *PodConfigs `json:"configs"`
 
 	Affinity *Affinity `json:"affinity,omitempty"`
+
 	// 应用部署init业务容器
-
 	InitContainers *[]ContainerDef `json:"init_containers,omitempty"`
-	// 应用部署业务容器
 
+	// 应用部署业务容器
 	Containers []ContainerDef `json:"containers"`
 }
 

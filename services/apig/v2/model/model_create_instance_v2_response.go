@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type CreateInstanceV2Response struct {
+
 	// 实例ID
-
 	InstanceId *string `json:"instance_id,omitempty"`
-	// 创建实例任务信息
 
+	// 创建实例任务信息
 	Message        *string `json:"message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

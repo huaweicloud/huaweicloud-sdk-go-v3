@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ListAppQuotasResponse struct {
+
 	// 本次返回的列表长度
-
 	Size int32 `json:"size"`
+
 	// 满足条件的记录数
-
 	Total int64 `json:"total"`
-	// 客户端配额列表
 
+	// 客户端配额列表
 	Quotas         *[]AppQuotaInfo `json:"quotas,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

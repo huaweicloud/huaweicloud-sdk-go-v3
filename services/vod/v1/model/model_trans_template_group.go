@@ -10,28 +10,28 @@ import (
 )
 
 type TransTemplateGroup struct {
+
 	// 模板组名称。
-
 	Name string `json:"name"`
+
 	// 是否设置默认。
-
 	Status *TransTemplateGroupStatus `json:"status,omitempty"`
+
 	// 模板组类型。
-
 	Type TransTemplateGroupType `json:"type"`
+
 	// 是否自动加密。  取值如下： - 0：表示不加密。 - 1：表示需要加密。  默认值：0。  加密与转码必须要一起进行，当需要加密时，转码参数不能为空，且转码输出格式必须要为HLS。
-
 	AutoEncrypt *int32 `json:"auto_encrypt,omitempty"`
-	// 画质配置信息列表。
 
+	// 画质配置信息列表。
 	QualityInfoList *[]QualityInfo `json:"quality_info_list,omitempty"`
 
 	Common *Common `json:"common,omitempty"`
+
 	// 绑定的水印模板组ID数组。
-
 	WatermarkTemplateIds *[]string `json:"watermark_template_ids,omitempty"`
-	// 模板介绍。
 
+	// 模板介绍。
 	Description *string `json:"description,omitempty"`
 }
 

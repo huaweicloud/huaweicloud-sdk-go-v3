@@ -7,13 +7,13 @@ import (
 )
 
 type TranscriberResult struct {
-	// 识别结果文本。
 
+	// 识别结果文本。
 	Text string `json:"text"`
 
 	AnalysisInfo *AnalysisInfoResult `json:"analysis_info,omitempty"`
-	// 分词输出列表
 
+	// 分词输出列表
 	WordInfo *[]WordInfo `json:"word_info,omitempty"`
 }
 

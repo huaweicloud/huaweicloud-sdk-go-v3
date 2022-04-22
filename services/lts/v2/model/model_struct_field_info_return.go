@@ -7,20 +7,20 @@ import (
 )
 
 type StructFieldInfoReturn struct {
+
 	// 字段名称
-
 	FieldName *string `json:"fieldName,omitempty"`
+
 	// 字段数据类型
-
 	Type *string `json:"type,omitempty"`
+
 	// 字段内容
-
 	Content *string `json:"content,omitempty"`
+
 	// 结构化方式
-
 	IsAnalysis *bool `json:"isAnalysis,omitempty"`
-	// 序号
 
+	// 序号
 	Index *int32 `json:"index,omitempty"`
 }
 

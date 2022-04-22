@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type RunModifyPictureRequest struct {
-	// 实例名称。
 
+	// 实例名称。
 	InstanceName string `json:"instance_name"`
 
 	Body *RunModifyPictureReq `json:"body,omitempty"`

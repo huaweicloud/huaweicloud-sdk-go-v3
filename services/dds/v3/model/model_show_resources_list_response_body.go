@@ -7,8 +7,8 @@ import (
 )
 
 type ShowResourcesListResponseBody struct {
-	// 资源列表对象。
 
+	// 资源列表对象。
 	Resources []ShowResourcesDetailResponseBody `json:"resources"`
 }
 

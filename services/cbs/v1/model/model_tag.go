@@ -8,8 +8,8 @@ import (
 
 //
 type Tag struct {
-	// 必须要包含其中之一的答案标签id列表
 
+	// 必须要包含其中之一的答案标签id列表
 	Should *[]string `json:"should,omitempty"`
 }
 

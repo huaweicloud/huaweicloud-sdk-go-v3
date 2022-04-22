@@ -8,8 +8,8 @@ import (
 
 // 函数流批量删除Body体
 type BatchDeleteWorkflowsRequestBody struct {
-	// 流程URN列表
 
+	// 流程URN列表
 	WorkflowUrns *[]string `json:"workflow_urns,omitempty"`
 }
 

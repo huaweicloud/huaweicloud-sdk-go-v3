@@ -8,14 +8,14 @@ import (
 
 // 流量标识（用于攻击惩罚）
 type TrafficMark struct {
+
 	// 惩罚ip
-
 	Sip *[]string `json:"sip,omitempty"`
+
 	// cookie
-
 	Cookie *string `json:"cookie,omitempty"`
-	// 参数
 
+	// 参数
 	Params *string `json:"params,omitempty"`
 }
 

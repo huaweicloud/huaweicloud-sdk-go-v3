@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteIssueV4Request struct {
+
 	// devcloud的项目id
-
 	ProjectId string `json:"project_id"`
-	// 工作项id
 
+	// 工作项id
 	IssueId int32 `json:"issue_id"`
 }
 

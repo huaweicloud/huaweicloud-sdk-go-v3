@@ -7,8 +7,8 @@ import (
 )
 
 type ShowCeshierarchyRespPartitions struct {
-	// 分区名称。
 
+	// 分区名称。
 	Name *string `json:"name,omitempty"`
 }
 

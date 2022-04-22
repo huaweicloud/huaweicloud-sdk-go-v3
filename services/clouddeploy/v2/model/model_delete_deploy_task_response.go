@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteDeployTaskResponse struct {
-	// 部署任务id
 
+	// 部署任务id
 	TaskId         *string `json:"task_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

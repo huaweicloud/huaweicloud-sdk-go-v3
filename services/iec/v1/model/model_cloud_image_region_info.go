@@ -8,11 +8,11 @@ import (
 
 //
 type CloudImageRegionInfo struct {
+
 	// 区域ID
-
 	RegionId *string `json:"region_id,omitempty"`
-	// 镜像ID
 
+	// 镜像ID
 	ImageId *string `json:"image_id,omitempty"`
 }
 

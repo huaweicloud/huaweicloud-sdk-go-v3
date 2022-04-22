@@ -8,8 +8,8 @@ import (
 
 //
 type PreoccupyIp struct {
-	// 预占IP总数
 
+	// 预占IP总数
 	Total int32 `json:"total"`
 }
 

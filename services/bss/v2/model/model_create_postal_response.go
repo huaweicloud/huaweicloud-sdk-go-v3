@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreatePostalResponse struct {
-	// 邮寄地址ID。
 
+	// 邮寄地址ID。
 	AddressId      *string `json:"address_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

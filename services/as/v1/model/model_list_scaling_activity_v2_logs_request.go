@@ -11,29 +11,29 @@ import (
 
 // Request Object
 type ListScalingActivityV2LogsRequest struct {
+
 	// 伸缩组ID。
-
 	ScalingGroupId string `json:"scaling_group_id"`
+
 	// 伸缩活动日志ID
-
 	LogId *string `json:"log_id,omitempty"`
+
 	// 查询的起始时间，格式是“yyyy-MM-ddThh:mm:ssZ”。
-
 	StartTime *string `json:"start_time,omitempty"`
+
 	// 查询的截止时间，格式是“yyyy-MM-ddThh:mm:ssZ”。
-
 	EndTime *string `json:"end_time,omitempty"`
+
 	// 查询的起始行号，默认为0。
-
 	StartNumber *int32 `json:"start_number,omitempty"`
+
 	// 查询记录数，默认20，最大100。
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 查询的伸缩活动类型（查询多类型使用逗号分隔）： - NORMAL：普通伸缩活动 - MANNUAL_REMOVE：从伸缩组手动移除实例 - MANNUAL_DELETE：从伸缩组手动移除并删除实例 - MANNUAL_ADD：实例手动加入伸缩组。 - ELB_CHECK_DELETE：ELB检查移除并删除实例。 - AUDIT_CHECK_DELETE：通过审计openstack移除并删除实例。 - DIFF：期望实例数与实际实例数不一致。 - MODIFY_ELB：LB迁移。 - ENTER_STANDBY：实例转入备用。 - EXIT_STANDBY：实例移出备用。
-
 	Type *ListScalingActivityV2LogsRequestType `json:"type,omitempty"`
-	// 查询的伸缩活动状态：SUCCESS：成功；FAIL：失败；DOING：伸缩中
 
+	// 查询的伸缩活动状态：SUCCESS：成功；FAIL：失败；DOING：伸缩中
 	Status *ListScalingActivityV2LogsRequestStatus `json:"status,omitempty"`
 }
 

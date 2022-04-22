@@ -7,14 +7,14 @@ import (
 )
 
 type UploadFromObsReq struct {
+
 	// 元数据存储地址。
-
 	MetadataPath string `json:"metadataPath"`
+
 	// 元数据的名字。
-
 	Name string `json:"name"`
-	// 对元数据的描述。
 
+	// 对元数据的描述。
 	Description *string `json:"description,omitempty"`
 
 	Encryption *EncryptionReq `json:"encryption,omitempty"`

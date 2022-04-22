@@ -8,8 +8,8 @@ import (
 
 // 保护实例删除网卡请求体
 type ProtectedInstanceDeleteNicRequestBody struct {
-	// 网卡Port ID。
 
+	// 网卡Port ID。
 	NicId string `json:"nic_id"`
 }
 

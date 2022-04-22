@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteDeployKeyV2Request struct {
+
 	// 部署密钥id
-
 	KeyId int32 `json:"key_id"`
-	// 仓库主键id
 
+	// 仓库主键id
 	RepositoryId int32 `json:"repository_id"`
 }
 

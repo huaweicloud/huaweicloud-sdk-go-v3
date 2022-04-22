@@ -7,17 +7,17 @@ import (
 )
 
 type RepositoryHookRequest struct {
+
 	// 触发url
-
 	HookUrl string `json:"hook_url"`
+
 	// 事件来源
-
 	Service string `json:"service"`
+
 	// 安全令牌
-
 	Token *string `json:"token,omitempty"`
-	// 触发事件
 
+	// 触发事件
 	HookEvents []string `json:"hook_events"`
 }
 

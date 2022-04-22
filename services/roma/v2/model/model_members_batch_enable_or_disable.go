@@ -7,8 +7,8 @@ import (
 )
 
 type MembersBatchEnableOrDisable struct {
-	// 后端服务器编号列表。
 
+	// 后端服务器编号列表。
 	MemberIds *[]string `json:"member_ids,omitempty"`
 }
 

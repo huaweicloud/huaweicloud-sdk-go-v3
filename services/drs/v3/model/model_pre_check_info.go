@@ -11,11 +11,11 @@ import (
 
 // 预检查信息体
 type PreCheckInfo struct {
+
 	// 任务id
-
 	JobId string `json:"job_id"`
-	// 预检查模式
 
+	// 预检查模式
 	PrecheckMode PreCheckInfoPrecheckMode `json:"precheck_mode"`
 }
 

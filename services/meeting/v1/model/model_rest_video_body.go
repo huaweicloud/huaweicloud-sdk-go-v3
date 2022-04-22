@@ -8,8 +8,8 @@ import (
 
 // 主持人邀请开启、关闭摄像头的请求body
 type RestVideoBody struct {
-	// 1：关闭视频 0：开启视频
 
+	// 1：关闭视频 0：开启视频
 	Status int32 `json:"status"`
 }
 

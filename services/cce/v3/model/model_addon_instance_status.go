@@ -11,17 +11,17 @@ import (
 
 // 插件状态信息
 type AddonInstanceStatus struct {
+
 	// 插件实例状态
-
 	Status AddonInstanceStatusStatus `json:"status"`
+
 	// 插件安装失败原因
-
 	Reason string `json:"Reason"`
+
 	// 安装错误详情
-
 	Message string `json:"message"`
-	// 此插件版本，支持升级的集群版本
 
+	// 此插件版本，支持升级的集群版本
 	TargetVersions *[]string `json:"targetVersions,omitempty"`
 
 	CurrentVersion *Versions `json:"currentVersion"`

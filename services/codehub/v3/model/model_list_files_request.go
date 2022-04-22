@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ListFilesRequest struct {
+
 	// 仓库id
-
 	RepositoryUuid string `json:"repository_uuid"`
+
 	// 分支名称
-
 	BranchName string `json:"branch_name"`
-	// 文件路径
 
+	// 文件路径
 	Path string `json:"path"`
 }
 

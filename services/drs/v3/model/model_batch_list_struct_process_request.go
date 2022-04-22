@@ -11,8 +11,8 @@ import (
 
 // Request Object
 type BatchListStructProcessRequest struct {
-	// 请求语言类型
 
+	// 请求语言类型
 	XLanguage *BatchListStructProcessRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchQueryJobReq `json:"body,omitempty"`

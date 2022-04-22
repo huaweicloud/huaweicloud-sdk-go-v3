@@ -8,8 +8,8 @@ import (
 
 // ResetUserPasswordReq。
 type ResetUserPasswordReq struct {
-	// 重置后的新密码。
 
+	// 重置后的新密码。
 	Password string `json:"password"`
 }
 

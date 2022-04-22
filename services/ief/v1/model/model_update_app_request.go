@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateAppRequest struct {
+
 	// 铂金版实例ID，专业版实例为空值
-
 	IefInstanceId *string `json:"ief-instance-id,omitempty"`
-	// 应用模板ID
 
+	// 应用模板ID
 	AppId string `json:"app_id"`
 
 	Body *AppUpdate `json:"body,omitempty"`

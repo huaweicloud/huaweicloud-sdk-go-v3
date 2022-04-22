@@ -7,11 +7,11 @@ import (
 )
 
 type QualityEnhanceTemplate struct {
+
 	// 模板名称。
-
 	TemplateName string `json:"template_name"`
-	// 模板描述，查询预置模板时才会返回。
 
+	// 模板描述，查询预置模板时才会返回。
 	TemplateDescription *string `json:"template_description,omitempty"`
 
 	Video *QualityEnhanceVideo `json:"video,omitempty"`

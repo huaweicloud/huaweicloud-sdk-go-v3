@@ -8,11 +8,11 @@ import (
 
 // 集群负载均衡信息。
 type CreateClusterLoadBalance struct {
+
 	// 是否开启内网域名。
-
 	EndpointWithDnsName bool `json:"endpointWithDnsName"`
-	// 访问控制。
 
+	// 访问控制。
 	VpcPermisssions *[]string `json:"vpcPermisssions,omitempty"`
 }
 

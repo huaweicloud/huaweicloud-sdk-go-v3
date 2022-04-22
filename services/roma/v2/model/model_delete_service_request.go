@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteServiceRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 服务ID
 
+	// 服务ID
 	ServiceId string `json:"service_id"`
 }
 

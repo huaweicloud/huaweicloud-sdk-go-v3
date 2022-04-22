@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListQuotasResponse struct {
-	// 配额列表
 
+	// 配额列表
 	Quotas         *[]ShowQuota `json:"quotas,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

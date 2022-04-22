@@ -11,8 +11,8 @@ type TrackerConfigBody struct {
 	Channel *ChannelConfigBody `json:"channel"`
 
 	Selector *SelectorConfigBody `json:"selector"`
-	// IAM委托名称
 
+	// IAM委托名称
 	AgencyName string `json:"agency_name"`
 }
 

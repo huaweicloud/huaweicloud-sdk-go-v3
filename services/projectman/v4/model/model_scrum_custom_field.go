@@ -7,11 +7,11 @@ import (
 )
 
 type ScrumCustomField struct {
+
 	// 自定义字段
-
 	Name *string `json:"name,omitempty"`
-	// 自定义字段值
 
+	// 自定义字段值
 	Value *string `json:"value,omitempty"`
 }
 

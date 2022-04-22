@@ -7,17 +7,17 @@ import (
 )
 
 type CommonParamV2 struct {
+
 	// 参数标识
-
 	ParamKey *string `json:"param_key,omitempty"`
+
 	// 参数名称
-
 	ParamName *string `json:"param_name,omitempty"`
+
 	// 是否展示
-
 	IsShow *int32 `json:"is_show,omitempty"`
-	// 是否必填
 
+	// 是否必填
 	IsRequired *int32 `json:"is_required,omitempty"`
 }
 

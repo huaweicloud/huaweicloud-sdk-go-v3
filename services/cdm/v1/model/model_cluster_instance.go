@@ -8,17 +8,17 @@ import (
 
 // 集群的节点信息
 type ClusterInstance struct {
+
 	// 节点的虚拟机ID。
-
 	Id *string `json:"id,omitempty"`
+
 	// 节点的虚拟机名称。
-
 	Name *string `json:"name,omitempty"`
+
 	// 节点类型，只支持一种类型“cdm”。
-
 	Type *string `json:"type,omitempty"`
-	// 分片ID
 
+	// 分片ID
 	ShardId *string `json:"shard_id,omitempty"`
 }
 

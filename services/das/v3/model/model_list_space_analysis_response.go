@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListSpaceAnalysisResponse struct {
+
 	// 记录总数
-
 	Total *int64 `json:"total,omitempty"`
-	// 数据库对象列表
 
+	// 数据库对象列表
 	DbObjects *[]DbObjectSpaceInfo `json:"db_objects,omitempty"`
 
 	InstanceInfo   *InstanceSpaceInfo `json:"instance_info,omitempty"`

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListSecurityPoliciesResponse struct {
+
 	// 自定义安全策略列表返回对象。
-
 	SecurityPolicies *[]SecurityPolicy `json:"security_policies,omitempty"`
-	// 请求ID。  注：自动生成 。
 
+	// 请求ID。  注：自动生成 。
 	RequestId *string `json:"request_id,omitempty"`
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`

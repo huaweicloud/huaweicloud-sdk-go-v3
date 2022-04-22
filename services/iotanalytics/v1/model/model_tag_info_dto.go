@@ -8,14 +8,14 @@ import (
 
 // 标签信息
 type TagInfoDto struct {
+
 	// 算子Id
-
 	OperatorId *string `json:"operator_id,omitempty"`
+
 	// 存储ID
-
 	DataStoreId *string `json:"data_store_id,omitempty"`
-	// 标签信息
 
+	// 标签信息
 	Tag *string `json:"tag,omitempty"`
 }
 

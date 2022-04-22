@@ -11,11 +11,11 @@ import (
 
 //
 type DocumentClassificationReq struct {
+
 	// 输入的文档，最大长度10000, 长度超过10000字符截取前10000个字符。
-
 	Content string `json:"content"`
-	// 预留字段，支持的文本语言类型，当前只支持zh（中文），默认zh。
 
+	// 预留字段，支持的文本语言类型，当前只支持zh（中文），默认zh。
 	Lang *DocumentClassificationReqLang `json:"lang,omitempty"`
 }
 

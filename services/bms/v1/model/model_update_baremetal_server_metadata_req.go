@@ -8,8 +8,8 @@ import (
 
 // This is a auto create Body Object
 type UpdateBaremetalServerMetadataReq struct {
-	// 用户自定义metadata键值对。  结构体允许为空，取值为空时不更新数据。
 
+	// 用户自定义metadata键值对。  结构体允许为空，取值为空时不更新数据。
 	Metadata map[string]string `json:"metadata"`
 }
 

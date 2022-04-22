@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type UpdateNodeResponse struct {
+
 	// API类型，固定值“Node”，该值不可修改。
-
 	Kind *string `json:"kind,omitempty"`
-	// API版本，固定值“v3”，该值不可修改。
 
+	// API版本，固定值“v3”，该值不可修改。
 	ApiVersion *string `json:"apiVersion,omitempty"`
 
 	Metadata *NodeMetadata `json:"metadata,omitempty"`

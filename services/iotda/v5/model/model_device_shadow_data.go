@@ -8,15 +8,15 @@ import (
 
 // 设备影子数据结构体。
 type DeviceShadowData struct {
-	// 设备的服务ID，在设备关联的产品模型中定义。
 
+	// 设备的服务ID，在设备关联的产品模型中定义。
 	ServiceId string `json:"service_id"`
 
 	Desired *DeviceShadowProperties `json:"desired,omitempty"`
 
 	Reported *DeviceShadowProperties `json:"reported,omitempty"`
-	// 设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
 
+	// 设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
 	Version *int64 `json:"version,omitempty"`
 }
 

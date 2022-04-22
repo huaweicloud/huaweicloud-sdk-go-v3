@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowPolicyAssignmentRequest struct {
-	// 规则ID
 
+	// 规则ID
 	PolicyAssignmentId string `json:"policy_assignment_id"`
 }
 

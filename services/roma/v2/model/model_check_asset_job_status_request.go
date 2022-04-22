@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type CheckAssetJobStatusRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 作业ID
 
+	// 作业ID
 	JobId string `json:"job_id"`
 }
 

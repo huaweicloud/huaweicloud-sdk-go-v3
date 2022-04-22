@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowRegionInfoOfMeetingResponse struct {
+
 	// 会议所在区域的公网IP地址。
-
 	RegionIP *string `json:"regionIP,omitempty"`
-	// 会议所在区域的公网域名。
 
+	// 会议所在区域的公网域名。
 	RegionUrl      *string `json:"regionUrl,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

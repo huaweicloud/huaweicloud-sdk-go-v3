@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateBaremetalServerMetadataRequest struct {
-	// 裸金属服务器ID
 
+	// 裸金属服务器ID
 	ServerId string `json:"server_id"`
 
 	Body *UpdateBaremetalServerMetadataReq `json:"body,omitempty"`

@@ -8,11 +8,11 @@ import (
 
 // security_groups数据结构说明
 type SecurityGroupsList struct {
+
 	// 安全组名称或者UUID
-
 	Name *string `json:"name,omitempty"`
-	// 安全组ID。
 
+	// 安全组ID。
 	Id *string `json:"id,omitempty"`
 }
 

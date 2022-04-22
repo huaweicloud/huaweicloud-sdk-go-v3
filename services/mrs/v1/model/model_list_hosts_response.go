@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListHostsResponse struct {
+
 	// 主机参数。
-
 	Hosts *[]HostModel `json:"hosts,omitempty"`
-	// 主机列表总数。
 
+	// 主机列表总数。
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

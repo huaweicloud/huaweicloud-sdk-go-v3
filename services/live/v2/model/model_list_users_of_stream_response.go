@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListUsersOfStreamResponse struct {
-	// 观众趋势列表。
 
+	// 观众趋势列表。
 	DataList *[]V2UserData `json:"data_list,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

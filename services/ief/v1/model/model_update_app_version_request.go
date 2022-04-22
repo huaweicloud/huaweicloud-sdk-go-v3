@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type UpdateAppVersionRequest struct {
+
 	// 铂金版实例ID，专业版实例为空值
-
 	IefInstanceId *string `json:"ief-instance-id,omitempty"`
+
 	// 应用模板ID
-
 	AppId string `json:"app_id"`
-	// 应用模板版本ID
 
+	// 应用模板版本ID
 	VersionId string `json:"version_id"`
 
 	Body *VersionUpdate `json:"body,omitempty"`

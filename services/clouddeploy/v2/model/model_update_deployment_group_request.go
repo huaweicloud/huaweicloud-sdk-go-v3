@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateDeploymentGroupRequest struct {
-	// 主机组ID
 
+	// 主机组ID
 	GroupId string `json:"group_id"`
 
 	Body *DeploymentGroupUpdateRequest `json:"body,omitempty"`

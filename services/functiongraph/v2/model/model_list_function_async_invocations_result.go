@@ -10,20 +10,20 @@ import (
 
 // 异步调用记录
 type ListFunctionAsyncInvocationsResult struct {
+
 	// 异步调用请求ID
-
 	RequestId *string `json:"request_id,omitempty"`
+
 	// 异步调用状态，支持5种状态 WAIT: 等待 RUNNING: 执行中 SUCCESS: 执行成功 FAIL: 执行失败 DISCARD: 请求丢弃
-
 	Status *ListFunctionAsyncInvocationsResultStatus `json:"status,omitempty"`
+
 	// 异步调用错误信息，如果执行成功，则返回空
-
 	ErrorMessage *string `json:"error_message,omitempty"`
+
 	// 异步调用开始时间（格式为YYYY-MM-DD'T'HH:mm:ss,UTC时间）。
-
 	StartTime *sdktime.SdkTime `json:"start_time,omitempty"`
-	// 异步调用结束时间（格式为YYYY-MM-DD'T'HH:mm:ss,UTC时间）。
 
+	// 异步调用结束时间（格式为YYYY-MM-DD'T'HH:mm:ss,UTC时间）。
 	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
 }
 

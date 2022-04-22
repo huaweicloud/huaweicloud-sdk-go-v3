@@ -10,11 +10,11 @@ import (
 )
 
 type BatchDeleteClusterTagsReq struct {
+
 	// 操作标识：仅限于delete（删除）。
-
 	Action BatchDeleteClusterTagsReqAction `json:"action"`
-	// 标签列表。
 
+	// 标签列表。
 	Tags []Tag `json:"tags"`
 }
 

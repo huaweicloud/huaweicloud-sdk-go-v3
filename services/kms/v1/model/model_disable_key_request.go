@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DisableKeyRequest struct {
-	// API版本号
 
+	// API版本号
 	VersionId string `json:"version_id"`
 
 	Body *OperateKeyRequestBody `json:"body,omitempty"`

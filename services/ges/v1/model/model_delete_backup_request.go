@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteBackupRequest struct {
+
 	// 图备份ID。
-
 	BackupId string `json:"backup_id"`
-	// 图ID。
 
+	// 图ID。
 	GraphId string `json:"graph_id"`
 }
 

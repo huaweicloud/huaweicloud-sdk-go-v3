@@ -8,18 +8,18 @@ import (
 
 // Response Object
 type CreateCompareTaskResponse struct {
-	// 任务id。
 
+	// 任务id。
 	JobId *string `json:"job_id,omitempty"`
 
 	ObjectLevelCompareCreateResult *CreateCompareTaskResult `json:"object_level_compare_create_result,omitempty"`
 
 	DataLevelCompareCreateResult *CreateCompareTaskResult `json:"data_level_compare_create_result,omitempty"`
+
 	// 错误码。
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 错误信息。
 
+	// 错误信息。
 	ErrorMsg       *string `json:"error_msg,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

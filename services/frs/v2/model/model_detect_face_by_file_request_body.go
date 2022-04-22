@@ -12,6 +12,7 @@ import (
 )
 
 type DetectFaceByFileRequestBody struct {
+
 	// 本地图片文件，图片不能超过8MB。上传文件时，请求格式为multipart。
 	ImageFile *def.FilePart `json:"image_file"`
 

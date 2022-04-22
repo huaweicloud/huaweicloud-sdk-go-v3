@@ -8,14 +8,14 @@ import (
 
 // 日志列表。
 type LogList struct {
+
 	// 日志内容。
-
 	Content *string `json:"content,omitempty"`
+
 	// 日期。
-
 	Date *string `json:"date,omitempty"`
-	// 日志级别。
 
+	// 日志级别。
 	Level *string `json:"level,omitempty"`
 }
 

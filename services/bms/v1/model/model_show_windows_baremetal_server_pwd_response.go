@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowWindowsBaremetalServerPwdResponse struct {
-	// 加密后的密码
 
+	// 加密后的密码
 	Password       *string `json:"password,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

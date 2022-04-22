@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type RunOnceResponse struct {
-	// 作业实例id
 
+	// 作业实例id
 	InstanceId     *string `json:"instanceId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

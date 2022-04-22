@@ -10,17 +10,17 @@ import (
 )
 
 type HttpGetDto struct {
+
 	// 请求路径
-
 	Path string `json:"path"`
+
 	// 端口
-
 	Port int32 `json:"port"`
+
 	// 主机地址
-
 	Host *string `json:"host,omitempty"`
-	// 协议类型
 
+	// 协议类型
 	Scheme HttpGetDtoScheme `json:"scheme"`
 }
 

@@ -7,11 +7,11 @@ import (
 )
 
 type AssetExportRequest struct {
+
 	// 应用列表
-
 	Apps []AssetExportRequestApps `json:"apps"`
-	// 任务列表
 
+	// 任务列表
 	Tasks *[]AssetExportRequestTasks `json:"tasks,omitempty"`
 }
 

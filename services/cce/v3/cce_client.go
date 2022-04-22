@@ -19,7 +19,13 @@ func CceClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//该API用于在指定集群下纳管节点。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+// 纳管节点
+//
+// 该API用于在指定集群下纳管节点。
+// &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) AddNode(request *model.AddNodeRequest) (*model.AddNodeResponse, error) {
 	requestDef := GenReqDefForAddNode()
 
@@ -30,7 +36,12 @@ func (c *CceClient) AddNode(request *model.AddNodeRequest) (*model.AddNodeRespon
 	}
 }
 
-//集群唤醒用于唤醒已休眠的集群，唤醒后，将继续收取控制节点资源费用。
+// 集群唤醒
+//
+// 集群唤醒用于唤醒已休眠的集群，唤醒后，将继续收取控制节点资源费用。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) AwakeCluster(request *model.AwakeClusterRequest) (*model.AwakeClusterResponse, error) {
 	requestDef := GenReqDefForAwakeCluster()
 
@@ -41,7 +52,12 @@ func (c *CceClient) AwakeCluster(request *model.AwakeClusterRequest) (*model.Awa
 	}
 }
 
-//根据提供的插件模板，安装插件实例。
+// 创建AddonInstance
+//
+// 根据提供的插件模板，安装插件实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) CreateAddonInstance(request *model.CreateAddonInstanceRequest) (*model.CreateAddonInstanceResponse, error) {
 	requestDef := GenReqDefForCreateAddonInstance()
 
@@ -52,7 +68,14 @@ func (c *CceClient) CreateAddonInstance(request *model.CreateAddonInstanceReques
 	}
 }
 
-//该API用于在指定的Namespace下通过云存储服务中的云存储（EVS、SFS、OBS）去创建PVC（PersistentVolumeClaim）。  >存储管理的URL格式为：https://{clusterid}.Endpoint/uri。其中{clusterid}为集群ID，uri为资源路径，也即API访问的路径。如果使用https://Endpoint/uri，则必须指定请求header中的X-Cluster-ID参数。
+// 创建PVC
+//
+// 该API用于在指定的Namespace下通过云存储服务中的云存储（EVS、SFS、OBS）去创建PVC（PersistentVolumeClaim）。
+//
+// &gt;存储管理的URL格式为：https://{clusterid}.Endpoint/uri。其中{clusterid}为集群ID，uri为资源路径，也即API访问的路径。如果使用https://Endpoint/uri，则必须指定请求header中的X-Cluster-ID参数。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) CreateCloudPersistentVolumeClaims(request *model.CreateCloudPersistentVolumeClaimsRequest) (*model.CreateCloudPersistentVolumeClaimsResponse, error) {
 	requestDef := GenReqDefForCreateCloudPersistentVolumeClaims()
 
@@ -63,7 +86,15 @@ func (c *CceClient) CreateCloudPersistentVolumeClaims(request *model.CreateCloud
 	}
 }
 
-//该API用于创建一个空集群（即只有控制节点Master，没有工作节点Node）。请在调用本接口完成集群创建之后，通过[创建节点](cce_02_0242.xml)添加节点。  >   - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。 >   - 调用该接口创建集群时，默认不安装ICAgent，若需安装ICAgent，可在请求Body参数的annotations中加入\"cluster.install.addons.external/install\": \"[{\"addonTemplateName\":\"icagent\"}]\"的集群注解，将在创建集群时自动安装ICAgent。ICAgent是应用性能管理APM的采集代理，运行在应用所在的服务器上，用于实时采集探针所获取的数据，安装ICAgent是使用应用性能管理APM的前提。
+// 创建集群
+//
+// 该API用于创建一个空集群（即只有控制节点Master，没有工作节点Node）。请在调用本接口完成集群创建之后，通过[创建节点](cce_02_0242.xml)添加节点。
+//
+// &gt;   - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+// &gt;   - 调用该接口创建集群时，默认不安装ICAgent，若需安装ICAgent，可在请求Body参数的annotations中加入\&quot;cluster.install.addons.external/install\&quot;: \&quot;[{\&quot;addonTemplateName\&quot;:\&quot;icagent\&quot;}]\&quot;的集群注解，将在创建集群时自动安装ICAgent。ICAgent是应用性能管理APM的采集代理，运行在应用所在的服务器上，用于实时采集探针所获取的数据，安装ICAgent是使用应用性能管理APM的前提。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) CreateCluster(request *model.CreateClusterRequest) (*model.CreateClusterResponse, error) {
 	requestDef := GenReqDefForCreateCluster()
 
@@ -74,7 +105,12 @@ func (c *CceClient) CreateCluster(request *model.CreateClusterRequest) (*model.C
 	}
 }
 
-//该API用于获取指定集群的证书信息。
+// 获取集群证书
+//
+// 该API用于获取指定集群的证书信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) CreateKubernetesClusterCert(request *model.CreateKubernetesClusterCertRequest) (*model.CreateKubernetesClusterCertResponse, error) {
 	requestDef := GenReqDefForCreateKubernetesClusterCert()
 
@@ -85,7 +121,14 @@ func (c *CceClient) CreateKubernetesClusterCert(request *model.CreateKubernetesC
 	}
 }
 
-//该API用于在指定集群下创建节点。 > - 若无集群，请先[创建集群](cce_02_0236.xml)。 > - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+// 创建节点
+//
+// 该API用于在指定集群下创建节点。
+// &gt; - 若无集群，请先[创建集群](cce_02_0236.xml)。
+// &gt; - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) CreateNode(request *model.CreateNodeRequest) (*model.CreateNodeResponse, error) {
 	requestDef := GenReqDefForCreateNode()
 
@@ -96,7 +139,16 @@ func (c *CceClient) CreateNode(request *model.CreateNodeRequest) (*model.CreateN
 	}
 }
 
-//该API用于在指定集群下创建节点池。仅支持集群在处于可用、扩容、缩容状态时调用。1.21版本的集群创建节点池时支持绑定安全组，每个节点池最多绑定五个安全组。更新节点池的安全组后，只针对新创的pod生效，建议驱逐节点上原有的pod。  > 若无集群，请先[创建集群](cce_02_0236.xml)。  > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+// 创建节点池
+//
+// 该API用于在指定集群下创建节点池。仅支持集群在处于可用、扩容、缩容状态时调用。1.21版本的集群创建节点池时支持绑定安全组，每个节点池最多绑定五个安全组。更新节点池的安全组后，只针对新创的pod生效，建议驱逐节点上原有的pod。
+//
+// &gt; 若无集群，请先[创建集群](cce_02_0236.xml)。
+//
+// &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) CreateNodePool(request *model.CreateNodePoolRequest) (*model.CreateNodePoolResponse, error) {
 	requestDef := GenReqDefForCreateNodePool()
 
@@ -107,7 +159,12 @@ func (c *CceClient) CreateNodePool(request *model.CreateNodePoolRequest) (*model
 	}
 }
 
-//删除插件实例的功能。
+// 删除AddonInstance
+//
+// 删除插件实例的功能。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) DeleteAddonInstance(request *model.DeleteAddonInstanceRequest) (*model.DeleteAddonInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteAddonInstance()
 
@@ -118,7 +175,14 @@ func (c *CceClient) DeleteAddonInstance(request *model.DeleteAddonInstanceReques
 	}
 }
 
-//该API用于删除指定Namespace下的PVC（PersistentVolumeClaim）对象，并可以选择保留后端的云存储。  >存储管理的URL格式为：https://{clusterid}.Endpoint/uri。其中{clusterid}为集群ID，uri为资源路径，也即API访问的路径。如果使用https://Endpoint/uri，则必须指定请求header中的X-Cluster-ID参数。
+// 删除PVC
+//
+// 该API用于删除指定Namespace下的PVC（PersistentVolumeClaim）对象，并可以选择保留后端的云存储。
+//
+// &gt;存储管理的URL格式为：https://{clusterid}.Endpoint/uri。其中{clusterid}为集群ID，uri为资源路径，也即API访问的路径。如果使用https://Endpoint/uri，则必须指定请求header中的X-Cluster-ID参数。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) DeleteCloudPersistentVolumeClaims(request *model.DeleteCloudPersistentVolumeClaimsRequest) (*model.DeleteCloudPersistentVolumeClaimsResponse, error) {
 	requestDef := GenReqDefForDeleteCloudPersistentVolumeClaims()
 
@@ -129,7 +193,13 @@ func (c *CceClient) DeleteCloudPersistentVolumeClaims(request *model.DeleteCloud
 	}
 }
 
-//该API用于删除一个指定的集群。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+// 删除集群
+//
+// 该API用于删除一个指定的集群。
+// &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.DeleteClusterResponse, error) {
 	requestDef := GenReqDefForDeleteCluster()
 
@@ -140,7 +210,13 @@ func (c *CceClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.D
 	}
 }
 
-//该API用于删除指定的节点。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+// 删除节点
+//
+// 该API用于删除指定的节点。
+// &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) DeleteNode(request *model.DeleteNodeRequest) (*model.DeleteNodeResponse, error) {
 	requestDef := GenReqDefForDeleteNode()
 
@@ -151,7 +227,13 @@ func (c *CceClient) DeleteNode(request *model.DeleteNodeRequest) (*model.DeleteN
 	}
 }
 
-//该API用于删除指定的节点池。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+// 删除节点池
+//
+// 该API用于删除指定的节点池。
+// &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) DeleteNodePool(request *model.DeleteNodePoolRequest) (*model.DeleteNodePoolResponse, error) {
 	requestDef := GenReqDefForDeleteNodePool()
 
@@ -162,7 +244,12 @@ func (c *CceClient) DeleteNodePool(request *model.DeleteNodePoolRequest) (*model
 	}
 }
 
-//集群休眠用于将运行中的集群置于休眠状态，休眠后，将不再收取控制节点资源费用。
+// 集群休眠
+//
+// 集群休眠用于将运行中的集群置于休眠状态，休眠后，将不再收取控制节点资源费用。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) HibernateCluster(request *model.HibernateClusterRequest) (*model.HibernateClusterResponse, error) {
 	requestDef := GenReqDefForHibernateCluster()
 
@@ -173,7 +260,12 @@ func (c *CceClient) HibernateCluster(request *model.HibernateClusterRequest) (*m
 	}
 }
 
-//获取集群所有已安装插件实例
+// 获取AddonInstance列表
+//
+// 获取集群所有已安装插件实例
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) ListAddonInstances(request *model.ListAddonInstancesRequest) (*model.ListAddonInstancesResponse, error) {
 	requestDef := GenReqDefForListAddonInstances()
 
@@ -184,7 +276,12 @@ func (c *CceClient) ListAddonInstances(request *model.ListAddonInstancesRequest)
 	}
 }
 
-//插件模板查询接口，查询插件信息。
+// 查询AddonTemplates列表
+//
+// 插件模板查询接口，查询插件信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) ListAddonTemplates(request *model.ListAddonTemplatesRequest) (*model.ListAddonTemplatesResponse, error) {
 	requestDef := GenReqDefForListAddonTemplates()
 
@@ -195,7 +292,12 @@ func (c *CceClient) ListAddonTemplates(request *model.ListAddonTemplatesRequest)
 	}
 }
 
-//该API用于获取指定项目下所有集群的详细信息。
+// 获取指定项目下的集群
+//
+// 该API用于获取指定项目下所有集群的详细信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) ListClusters(request *model.ListClustersRequest) (*model.ListClustersResponse, error) {
 	requestDef := GenReqDefForListClusters()
 
@@ -206,7 +308,14 @@ func (c *CceClient) ListClusters(request *model.ListClustersRequest) (*model.Lis
 	}
 }
 
-//该API用于获取集群下所有节点池。 > - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径 > - nodepool是集群中具有相同配置的节点实例的子集。
+// 获取集群下所有节点池
+//
+// 该API用于获取集群下所有节点池。
+// &gt; - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+// &gt; - nodepool是集群中具有相同配置的节点实例的子集。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) ListNodePools(request *model.ListNodePoolsRequest) (*model.ListNodePoolsResponse, error) {
 	requestDef := GenReqDefForListNodePools()
 
@@ -217,7 +326,13 @@ func (c *CceClient) ListNodePools(request *model.ListNodePoolsRequest) (*model.L
 	}
 }
 
-//该API用于通过集群ID获取指定集群下所有节点的详细信息。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+// 获取集群下所有节点
+//
+// 该API用于通过集群ID获取指定集群下所有节点的详细信息。
+// &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) ListNodes(request *model.ListNodesRequest) (*model.ListNodesResponse, error) {
 	requestDef := GenReqDefForListNodes()
 
@@ -228,7 +343,13 @@ func (c *CceClient) ListNodes(request *model.ListNodesRequest) (*model.ListNodes
 	}
 }
 
-//该API用于在指定集群下迁移节点到另一集群。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+// 节点迁移
+//
+// 该API用于在指定集群下迁移节点到另一集群。
+// &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) MigrateNode(request *model.MigrateNodeRequest) (*model.MigrateNodeResponse, error) {
 	requestDef := GenReqDefForMigrateNode()
 
@@ -239,7 +360,13 @@ func (c *CceClient) MigrateNode(request *model.MigrateNodeRequest) (*model.Migra
 	}
 }
 
-//该API用于在指定集群下移除节点。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+// 节点移除
+//
+// 该API用于在指定集群下移除节点。
+// &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) RemoveNode(request *model.RemoveNodeRequest) (*model.RemoveNodeResponse, error) {
 	requestDef := GenReqDefForRemoveNode()
 
@@ -250,7 +377,13 @@ func (c *CceClient) RemoveNode(request *model.RemoveNodeRequest) (*model.RemoveN
 	}
 }
 
-//该API用于在指定集群下重置节点。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+// 重置节点
+//
+// 该API用于在指定集群下重置节点。
+// &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) ResetNode(request *model.ResetNodeRequest) (*model.ResetNodeResponse, error) {
 	requestDef := GenReqDefForResetNode()
 
@@ -261,7 +394,12 @@ func (c *CceClient) ResetNode(request *model.ResetNodeRequest) (*model.ResetNode
 	}
 }
 
-//获取插件实例详情。
+// 获取AddonInstance详情
+//
+// 获取插件实例详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) ShowAddonInstance(request *model.ShowAddonInstanceRequest) (*model.ShowAddonInstanceResponse, error) {
 	requestDef := GenReqDefForShowAddonInstance()
 
@@ -272,7 +410,13 @@ func (c *CceClient) ShowAddonInstance(request *model.ShowAddonInstanceRequest) (
 	}
 }
 
-//该API用于获取指定集群的详细信息。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+// 获取指定的集群
+//
+// 该API用于获取指定集群的详细信息。
+// &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) ShowCluster(request *model.ShowClusterRequest) (*model.ShowClusterResponse, error) {
 	requestDef := GenReqDefForShowCluster()
 
@@ -283,7 +427,16 @@ func (c *CceClient) ShowCluster(request *model.ShowClusterRequest) (*model.ShowC
 	}
 }
 
-//该API用于获取任务信息。通过某一任务请求下发后返回的jobID来查询指定任务的进度。 > - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径 > - 该接口通常使用场景为： >   - 创建、删除集群时，查询相应任务的进度。 >   - 创建、删除节点时，查询相应任务的进度。
+// 获取任务信息
+//
+// 该API用于获取任务信息。通过某一任务请求下发后返回的jobID来查询指定任务的进度。
+// &gt; - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+// &gt; - 该接口通常使用场景为：
+// &gt;   - 创建、删除集群时，查询相应任务的进度。
+// &gt;   - 创建、删除节点时，查询相应任务的进度。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
 	requestDef := GenReqDefForShowJob()
 
@@ -294,7 +447,13 @@ func (c *CceClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobRespon
 	}
 }
 
-//该API用于通过节点ID获取指定节点的详细信息。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+// 获取指定的节点
+//
+// 该API用于通过节点ID获取指定节点的详细信息。
+// &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) ShowNode(request *model.ShowNodeRequest) (*model.ShowNodeResponse, error) {
 	requestDef := GenReqDefForShowNode()
 
@@ -305,7 +464,13 @@ func (c *CceClient) ShowNode(request *model.ShowNodeRequest) (*model.ShowNodeRes
 	}
 }
 
-//该API用于获取指定节点池的详细信息。 > 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+// 获取指定的节点池
+//
+// 该API用于获取指定节点池的详细信息。
+// &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) ShowNodePool(request *model.ShowNodePoolRequest) (*model.ShowNodePoolResponse, error) {
 	requestDef := GenReqDefForShowNodePool()
 
@@ -316,7 +481,12 @@ func (c *CceClient) ShowNodePool(request *model.ShowNodePoolRequest) (*model.Sho
 	}
 }
 
-//该API用于查询CCE服务下的资源配额。
+// 查询CCE服务下的资源配额。
+//
+// 该API用于查询CCE服务下的资源配额。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
 	requestDef := GenReqDefForShowQuotas()
 
@@ -327,7 +497,12 @@ func (c *CceClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuo
 	}
 }
 
-//更新插件实例的功能。
+// 更新AddonInstance
+//
+// 更新插件实例的功能。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) UpdateAddonInstance(request *model.UpdateAddonInstanceRequest) (*model.UpdateAddonInstanceResponse, error) {
 	requestDef := GenReqDefForUpdateAddonInstance()
 
@@ -338,7 +513,13 @@ func (c *CceClient) UpdateAddonInstance(request *model.UpdateAddonInstanceReques
 	}
 }
 
-//该API用于更新指定的集群。 >集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+// 更新指定的集群
+//
+// 该API用于更新指定的集群。
+// &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) UpdateCluster(request *model.UpdateClusterRequest) (*model.UpdateClusterResponse, error) {
 	requestDef := GenReqDefForUpdateCluster()
 
@@ -349,7 +530,14 @@ func (c *CceClient) UpdateCluster(request *model.UpdateClusterRequest) (*model.U
 	}
 }
 
-//该API用于更新指定的节点。 > - 当前仅支持更新metadata下的name字段，即节点的名字。 > - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+// 更新指定的节点
+//
+// 该API用于更新指定的节点。
+// &gt; - 当前仅支持更新metadata下的name字段，即节点的名字。
+// &gt; - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) UpdateNode(request *model.UpdateNodeRequest) (*model.UpdateNodeResponse, error) {
 	requestDef := GenReqDefForUpdateNode()
 
@@ -360,7 +548,17 @@ func (c *CceClient) UpdateNode(request *model.UpdateNodeRequest) (*model.UpdateN
 	}
 }
 
-//该API用于更新指定的节点池。仅支持集群在处于可用、扩容、缩容状态时调用。  > - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径  > - 当前仅支持更新节点池名称，spec下的initialNodeCount，k8sTags， taints，login，userTags与节点池的扩缩容配置相关字段。若此次更新未设置相关值，默认更新为初始值。
+// 更新指定节点池
+//
+// 该API用于更新指定的节点池。仅支持集群在处于可用、扩容、缩容状态时调用。
+//
+// &gt; - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+//
+// &gt; - 当前仅支持更新节点池名称，spec下的initialNodeCount，k8sTags，
+// taints，login，userTags与节点池的扩缩容配置相关字段。若此次更新未设置相关值，默认更新为初始值。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CceClient) UpdateNodePool(request *model.UpdateNodePoolRequest) (*model.UpdateNodePoolResponse, error) {
 	requestDef := GenReqDefForUpdateNodePool()
 

@@ -7,8 +7,8 @@ import (
 )
 
 type AccessRomaBriefInfo struct {
-	// 认证key，加密存储
 
+	// 认证key，加密存储
 	AppKey *string `json:"app_key,omitempty"`
 }
 

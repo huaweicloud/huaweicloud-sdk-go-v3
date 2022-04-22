@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowStatisticalDataRequest struct {
-	// 仓库id
 
+	// 仓库id
 	RepositoryUuid string `json:"repository_uuid"`
 }
 

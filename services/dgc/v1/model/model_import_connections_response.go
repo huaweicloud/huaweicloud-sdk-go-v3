@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ImportConnectionsResponse struct {
-	// 任务id
 
+	// 任务id
 	TaskId         *string `json:"taskId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

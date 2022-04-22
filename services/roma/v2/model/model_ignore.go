@@ -7,11 +7,11 @@ import (
 )
 
 type Ignore struct {
+
 	// API请求方法
-
 	Method *string `json:"method,omitempty"`
-	// API请求路径
 
+	// API请求路径
 	Path *string `json:"path,omitempty"`
 }
 

@@ -11,11 +11,11 @@ import (
 
 // 创建日志接入请求体
 type CreateAccessConfigRequestBody struct {
+
 	// 日志接入名称
-
 	AccessConfigName string `json:"access_config_name"`
-	// 日志接入类型。AGENT：主机接入类型
 
+	// 日志接入类型。AGENT：主机接入类型
 	AccessConfigType CreateAccessConfigRequestBodyAccessConfigType `json:"access_config_type"`
 
 	AccessConfigDetail *AccessConfigDeatilCreate `json:"access_config_detail"`

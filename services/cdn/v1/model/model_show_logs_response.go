@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowLogsResponse struct {
+
 	// 总数。
-
 	Total *int32 `json:"total,omitempty"`
-	// 日志列表数据
 
+	// 日志列表数据
 	Logs           *[]LogObject `json:"logs,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

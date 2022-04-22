@@ -8,8 +8,8 @@ import (
 
 // 封面信息。
 type CoverInfo struct {
-	// 封面文件的下载地址。
 
+	// 封面文件的下载地址。
 	CoverUrl *string `json:"cover_url,omitempty"`
 }
 

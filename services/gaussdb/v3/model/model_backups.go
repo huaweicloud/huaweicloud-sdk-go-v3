@@ -10,40 +10,40 @@ import (
 )
 
 type Backups struct {
+
 	// 备份ID。
-
 	Id *string `json:"id,omitempty"`
+
 	// 备份名称。
-
 	Name *string `json:"name,omitempty"`
+
 	// 备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-
 	BeginTime *string `json:"begin_time,omitempty"`
+
 	// 备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-
 	EndTime *string `json:"end_time,omitempty"`
+
 	// 备份状态
-
 	Status *BackupsStatus `json:"status,omitempty"`
+
 	// 备份花费时间(单位：minutes)
-
 	TakeUpTime *int32 `json:"take_up_time,omitempty"`
+
 	// 备份类型
-
 	Type *BackupsType `json:"type,omitempty"`
-	// 备份大小，(单位：MB)
 
+	// 备份大小，(单位：MB)
 	Size *int64 `json:"size,omitempty"`
 
 	Datastore *MysqlDatastore `json:"datastore,omitempty"`
+
 	// 实例ID。
-
 	InstanceId *string `json:"instance_id,omitempty"`
+
 	// 备份级别。当开启一级备份开关时，返回该参数。
-
 	BackupLevel *BackupsBackupLevel `json:"backup_level,omitempty"`
-	// 备份文件描述信息
 
+	// 备份文件描述信息
 	Description *string `json:"description,omitempty"`
 }
 

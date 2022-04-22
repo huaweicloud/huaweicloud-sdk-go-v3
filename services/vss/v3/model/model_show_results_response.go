@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowResultsResponse struct {
+
 	// 漏洞总数
-
 	Total *int32 `json:"total,omitempty"`
-	// 漏洞信息列表
 
+	// 漏洞信息列表
 	Data *[]VulnItem `json:"data,omitempty"`
 
 	Statistics     *VulnsLevel `json:"statistics,omitempty"`

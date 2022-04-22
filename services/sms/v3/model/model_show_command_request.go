@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowCommandRequest struct {
-	// 命令对应的服务器id
 
+	// 命令对应的服务器id
 	ServerId string `json:"server_id"`
 }
 

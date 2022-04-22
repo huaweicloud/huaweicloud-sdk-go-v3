@@ -19,7 +19,12 @@ func CampusGoClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//该接口用于创建服务作业
+// 创建服务作业
+//
+// 该接口用于创建服务作业
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CampusGoClient) CreateTasks(request *model.CreateTasksRequest) (*model.CreateTasksResponse, error) {
 	requestDef := GenReqDefForCreateTasks()
 
@@ -30,7 +35,12 @@ func (c *CampusGoClient) CreateTasks(request *model.CreateTasksRequest) (*model.
 	}
 }
 
-//该接口用于删除服务作业
+// 删除服务作业
+//
+// 该接口用于删除服务作业
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CampusGoClient) DeleteTask(request *model.DeleteTaskRequest) (*model.DeleteTaskResponse, error) {
 	requestDef := GenReqDefForDeleteTask()
 
@@ -41,7 +51,12 @@ func (c *CampusGoClient) DeleteTask(request *model.DeleteTaskRequest) (*model.De
 	}
 }
 
-//该接口用于获取服务作业列表
+// 获取服务作业列表
+//
+// 该接口用于获取服务作业列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CampusGoClient) ListTasksDetails(request *model.ListTasksDetailsRequest) (*model.ListTasksDetailsResponse, error) {
 	requestDef := GenReqDefForListTasksDetails()
 
@@ -52,7 +67,12 @@ func (c *CampusGoClient) ListTasksDetails(request *model.ListTasksDetailsRequest
 	}
 }
 
-//该接口用于查询服务作业
+// 查询服务作业
+//
+// 该接口用于查询服务作业
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CampusGoClient) ShowTask(request *model.ShowTaskRequest) (*model.ShowTaskResponse, error) {
 	requestDef := GenReqDefForShowTask()
 

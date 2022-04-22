@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListRouteTablesResponse struct {
-	// 路由表对象列表
 
+	// 路由表对象列表
 	Routetables    *[]RouteTableListResp `json:"routetables,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

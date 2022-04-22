@@ -8,14 +8,14 @@ import (
 
 // DNS配置
 type DnsAssignment struct {
+
 	// 端口内网fqdn
-
 	Fqdn *string `json:"fqdn,omitempty"`
+
 	// 端口hostname
-
 	Hostname *string `json:"hostname,omitempty"`
-	// 端口IP地址
 
+	// 端口IP地址
 	IpAddress *string `json:"ip_address,omitempty"`
 }
 

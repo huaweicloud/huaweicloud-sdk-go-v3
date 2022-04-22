@@ -8,8 +8,8 @@ import (
 
 // 扩展属性，目前只支持server_id
 type MultiTaskInitElementExtInfo struct {
-	// Mysql的ServerID
 
+	// Mysql的ServerID
 	ServerId *string `json:"server_id,omitempty"`
 }
 

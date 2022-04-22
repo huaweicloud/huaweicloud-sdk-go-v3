@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type CreateApplicationResponse struct {
+
 	// 请求的唯一标识ID。
-
 	RequestId *string `json:"request_id,omitempty"`
+
 	// Application的唯一资源标识。
-
 	ApplicationUrn *string `json:"application_urn,omitempty"`
-	// Application资源的ID。
 
+	// Application资源的ID。
 	ApplicationId  *string `json:"application_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,11 +8,11 @@ import (
 
 // 锁定会场视频源请求体
 type RestLockSiteViewReqBody struct {
+
 	// - 0: 取消锁定。 - 1: 锁定。
-
 	Status int32 `json:"status"`
-	// 被锁定视频源的与会者标识。
 
+	// 被锁定视频源的与会者标识。
 	ParticipantID string `json:"participantID"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // 定义指标计算查询的输入资产属性
 type MetricInput struct {
+
 	// 指标计算表达式的入参名称
-
 	Name string `json:"name"`
-	// 入参所对应的资产属性名称
 
+	// 入参所对应的资产属性名称
 	PropertyName string `json:"property_name"`
 }
 

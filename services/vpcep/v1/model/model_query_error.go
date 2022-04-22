@@ -8,11 +8,11 @@ import (
 
 // 查询资源返回的异常信息
 type QueryError struct {
+
 	// 错误编码。
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 错误信息。
 
+	// 错误信息。
 	ErrorMessage *string `json:"error_message,omitempty"`
 }
 

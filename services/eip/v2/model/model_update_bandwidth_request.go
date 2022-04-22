@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateBandwidthRequest struct {
-	// 带宽唯一标识
 
+	// 带宽唯一标识
 	BandwidthId string `json:"bandwidth_id"`
 
 	Body *UpdateBandwidthRequestBody `json:"body,omitempty"`

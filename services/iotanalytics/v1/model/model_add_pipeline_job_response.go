@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type AddPipelineJobResponse struct {
+
 	// 管道ID
-
 	PipelineId *string `json:"pipeline_id,omitempty"`
-	// 管道错误详情
 
+	// 管道错误详情
 	CheckInfo      map[string]interface{} `json:"check_info,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

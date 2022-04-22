@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type AddRepoMembersRequest struct {
-	// 仓库uuid
 
+	// 仓库uuid
 	RepositoryUuid string `json:"repository_uuid"`
 
 	Body *CreateRepoMemberRequest `json:"body,omitempty"`

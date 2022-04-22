@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListDatasourceTablesResponse struct {
-	// 数据源中所有的表名称
 
+	// 数据源中所有的表名称
 	Tables         *[]string `json:"tables,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

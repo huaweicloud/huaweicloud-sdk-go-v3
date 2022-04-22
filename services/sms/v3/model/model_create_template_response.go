@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateTemplateResponse struct {
-	// 服务端返回的新添加的模板的id
 
+	// 服务端返回的新添加的模板的id
 	Id             *string `json:"id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

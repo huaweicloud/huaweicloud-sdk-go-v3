@@ -11,11 +11,11 @@ import (
 
 // This is a auto create Body Object
 type BatchCreateSubnetTagsRequestBody struct {
+
 	// 操作标识
-
 	Action BatchCreateSubnetTagsRequestBodyAction `json:"action"`
-	// 标签列表
 
+	// 标签列表
 	Tags []ResourceTag `json:"tags"`
 }
 

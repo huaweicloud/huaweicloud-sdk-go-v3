@@ -11,17 +11,17 @@ import (
 
 // WAF支持的认证项
 type Flag struct {
+
 	// true:通过pci_3ds标准认证,false:未通过pci_3ds标准认证
-
 	Pci3ds *FlagPci3ds `json:"pci_3ds,omitempty"`
+
 	// true:通过pci_dss标准认证,false:未通过pci_dss标准认证
-
 	PciDss *FlagPciDss `json:"pci_dss,omitempty"`
+
 	// old：代表域名使用的老的cname，new：代表域名使用新的cname
-
 	Cname *FlagCname `json:"cname,omitempty"`
-	// true：WAF支持多可用区容灾,false：WAF不支持多可用区容灾
 
+	// true：WAF支持多可用区容灾,false：WAF不支持多可用区容灾
 	IsDualAz *FlagIsDualAz `json:"is_dual_az,omitempty"`
 }
 

@@ -8,17 +8,17 @@ import (
 
 // Response Object
 type CreateRunResponse struct {
+
 	// 作业运行ID。
-
 	RunId *string `json:"run_id,omitempty"`
+
 	// 作业ID。
-
 	JobId *string `json:"job_id,omitempty"`
+
 	// 作业类型。
-
 	JobType *string `json:"job_type,omitempty"`
-	// 创建运行时间。
 
+	// 创建运行时间。
 	CreatedTime *string `json:"created_time,omitempty"`
 
 	SqlJob         *SqlJobRunResponseBody `json:"sql_job,omitempty"`

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteAssetCategoryRequest struct {
-	// 视频分类ID
 
+	// 视频分类ID
 	Id int32 `json:"id"`
 }
 

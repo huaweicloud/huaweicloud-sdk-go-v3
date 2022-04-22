@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type AddDevDataRequest struct {
-	// 数据源id
 
+	// 数据源id
 	DatasourceId string `json:"datasource_id"`
 
 	Body *interface{} `json:"body,omitempty"`

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type BatchImportConfigsResponse struct {
-	// 已成功导入的配置项id
 
+	// 已成功导入的配置项id
 	Ids            *interface{} `json:"ids,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

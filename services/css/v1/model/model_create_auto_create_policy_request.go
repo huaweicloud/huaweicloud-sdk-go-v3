@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateAutoCreatePolicyRequest struct {
-	// 指定要自动创建快照的集群ID。
 
+	// 指定要自动创建快照的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *SetRdsBackupCnfReq `json:"body,omitempty"`

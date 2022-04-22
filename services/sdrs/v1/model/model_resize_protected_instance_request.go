@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ResizeProtectedInstanceRequest struct {
-	// 保护实例的ID。
 
+	// 保护实例的ID。
 	ProtectedInstanceId string `json:"protected_instance_id"`
 
 	Body *ResizeProtectedInstanceRequestBody `json:"body,omitempty"`

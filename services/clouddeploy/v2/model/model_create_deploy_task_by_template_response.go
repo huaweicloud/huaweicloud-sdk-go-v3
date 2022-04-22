@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type CreateDeployTaskByTemplateResponse struct {
+
 	// 部署任务名称
-
 	TaskName *string `json:"task_name,omitempty"`
-	// 部署任务id
 
+	// 部署任务id
 	TaskId         *string `json:"task_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

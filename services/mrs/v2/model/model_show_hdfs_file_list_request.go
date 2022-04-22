@@ -11,23 +11,23 @@ import (
 
 // Request Object
 type ShowHdfsFileListRequest struct {
+
 	// 集群ID。获取方法，请参见[获取集群ID](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)。
-
 	ClusterId string `json:"cluster_id"`
+
 	// 文件目录，比如访问“/tmp/test”目录列表，此处必须是目录，整体URI为  /v2/{project_id}/clusters/{cluster_id}/files?path=%2Ftmp%2Ftest  单层目录要遵循以下规则：  - 不能为空 - 不能以\".\"开头或结尾 - 不能包括下列符号 : :*?\"<>|\\;&,'`!{}[]$%+ - 不能超过255个字节
-
 	Path string `json:"path"`
+
 	// 分页参数，表示从该偏移量开始查询文件列表，默认值为1。
-
 	Offset *string `json:"offset,omitempty"`
+
 	// 分页参数，列表当前分页的数量限制，默认为100，最大1000。
-
 	Limit *string `json:"limit,omitempty"`
+
 	// 列表排序按该属性排序。缺省值：path_suffix  - path_suffix：文件或目录名称 - length：文件大小 - modification_time：修改时间
-
 	SortKey *ShowHdfsFileListRequestSortKey `json:"sort_key,omitempty"`
-	// 列表排序方式，desc为降序，asc为升序，默认值为desc。
 
+	// 列表排序方式，desc为降序，asc为升序，默认值为desc。
 	Order *ShowHdfsFileListRequestOrder `json:"order,omitempty"`
 }
 

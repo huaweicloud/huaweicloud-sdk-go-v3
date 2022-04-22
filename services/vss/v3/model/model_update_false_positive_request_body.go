@@ -10,17 +10,17 @@ import (
 )
 
 type UpdateFalsePositiveRequestBody struct {
+
 	// 漏洞ID
-
 	VulnId string `json:"vuln_id"`
+
 	// 误报确认人
-
 	Provider *string `json:"provider,omitempty"`
+
 	// 误报确认理由
-
 	Reason *string `json:"reason,omitempty"`
-	// 对漏洞的操作:   * false_report - 更新漏洞状态为误报，并忽略   * repairing - 更新漏洞状态未修复
 
+	// 对漏洞的操作:   * false_report - 更新漏洞状态为误报，并忽略   * repairing - 更新漏洞状态未修复
 	VulnStatus *UpdateFalsePositiveRequestBodyVulnStatus `json:"vuln_status,omitempty"`
 }
 

@@ -7,14 +7,14 @@ import (
 )
 
 type ProjectVpcSync struct {
+
 	// VPC通道编号
-
 	VpcChannelId *string `json:"vpc_channel_id,omitempty"`
+
 	// 新增关联的实例列表
-
 	InstanceIds *[]string `json:"instance_ids,omitempty"`
-	// 是否强制同步，默认不强制同步
 
+	// 是否强制同步，默认不强制同步
 	ForceSync *bool `json:"force_sync,omitempty"`
 }
 

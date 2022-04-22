@@ -7,8 +7,8 @@ import (
 )
 
 type ShowRepositoryStatisticsRequestBody struct {
-	// 仓库分支名
 
+	// 仓库分支名
 	BranchName string `json:"branch_name"`
 }
 

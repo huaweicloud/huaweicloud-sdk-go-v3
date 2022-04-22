@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListSatisfactionDimensionsResponse struct {
+
 	// 总数
-
 	TotalCount *int32 `json:"total_count,omitempty"`
-	// 满意度分类列表
 
+	// 满意度分类列表
 	SatisfactionDimensionList *[]SatisfactionDimensionSimpleInfoV2 `json:"satisfaction_dimension_list,omitempty"`
 	HttpStatusCode            int                                  `json:"-"`
 }

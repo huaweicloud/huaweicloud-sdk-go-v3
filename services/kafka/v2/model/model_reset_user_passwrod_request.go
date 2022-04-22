@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ResetUserPasswrodRequest struct {
+
 	// 实例ID。
-
 	InstanceId string `json:"instance_id"`
-	// 用户名称。
 
+	// 用户名称。
 	UserName string `json:"user_name"`
 
 	Body *ResetUserPasswrodReq `json:"body,omitempty"`

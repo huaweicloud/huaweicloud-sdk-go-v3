@@ -8,17 +8,17 @@ import (
 
 // VPCEP信息
 type VpcepInfo struct {
+
 	// Kafka的Broker ip
-
 	KafkaBrokerIp string `json:"kafka_broker_ip"`
+
 	// Kafka的VPCEP的service id
-
 	VpcepServiceId string `json:"vpcep_service_id"`
+
 	// Kafka的VPCEP的service name
-
 	VpcepServiceName string `json:"vpcep_service_name"`
-	// Kafka的VPCEP的client port
 
+	// Kafka的VPCEP的client port
 	VpcepClientPort int32 `json:"vpcep_client_port"`
 }
 

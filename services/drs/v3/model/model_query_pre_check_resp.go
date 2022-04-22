@@ -11,32 +11,32 @@ import (
 
 // 获取预检查结果返回体
 type QueryPreCheckResp struct {
+
 	// 预检查id。
-
 	PrecheckId *string `json:"precheck_id,omitempty"`
+
 	// 返回的预检查结果是否通过。true表示预检查通过，通过后才可进行启动任务。
-
 	Result *bool `json:"result,omitempty"`
+
 	// 预检查进度百分比。
-
 	Process *string `json:"process,omitempty"`
+
 	// 预检查通过百分比。
-
 	TotalPassedRate *string `json:"total_passed_rate,omitempty"`
+
 	// RDS实例id。
-
 	RdsInstanceId *string `json:"rds_instance_id,omitempty"`
+
 	// 迁移方向
-
 	JobDirection *QueryPreCheckRespJobDirection `json:"job_direction,omitempty"`
+
 	// 预检查各项结果。
-
 	PrecheckResult *[]PrecheckResult `json:"precheck_result,omitempty"`
+
 	// 错误信息
-
 	ErrorMsg *string `json:"error_msg,omitempty"`
-	// 任务错误码。
 
+	// 任务错误码。
 	ErrorCode *string `json:"error_code,omitempty"`
 }
 

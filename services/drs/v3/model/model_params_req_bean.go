@@ -8,11 +8,11 @@ import (
 
 // 参数信息
 type ParamsReqBean struct {
+
 	// 数据库参数名
-
 	Key string `json:"key"`
-	// 目标数据库参数值
 
+	// 目标数据库参数值
 	TargetValue string `json:"target_value"`
 }
 

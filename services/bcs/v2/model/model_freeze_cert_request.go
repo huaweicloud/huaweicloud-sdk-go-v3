@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type FreezeCertRequest struct {
+
 	// userName
-
 	UserName string `json:"user_name"`
+
 	// blockchainID
-
 	BlockchainId string `json:"blockchain_id"`
-	// orgName
 
+	// orgName
 	OrgName string `json:"org_name"`
 }
 

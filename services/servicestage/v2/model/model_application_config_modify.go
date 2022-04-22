@@ -7,8 +7,8 @@ import (
 )
 
 type ApplicationConfigModify struct {
-	// 环境ID。
 
+	// 环境ID。
 	EnvironmentId string `json:"environment_id"`
 
 	Configuration *ApplicationConfigModifyConfiguration `json:"configuration"`

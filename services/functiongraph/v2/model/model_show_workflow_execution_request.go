@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowWorkflowExecutionRequest struct {
+
 	// 函数工作流ID
-
 	WorkflowId string `json:"workflow_id"`
-	// 函数流执行实例ID
 
+	// 函数流执行实例ID
 	ExecutionId string `json:"execution_id"`
 }
 

@@ -11,17 +11,17 @@ import (
 
 // 批量查询任务状态返回体
 type QueryJobStatusResp struct {
+
 	// 任务ID
-
 	Id *string `json:"id,omitempty"`
+
 	// 任务状态
-
 	Status *QueryJobStatusRespStatus `json:"status,omitempty"`
+
 	// 错误码
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 错误信息
 
+	// 错误信息
 	ErrorMessage *string `json:"error_message,omitempty"`
 }
 

@@ -7,8 +7,8 @@ import (
 )
 
 type ActionReq struct {
-	// 集群当前行为，REBOOTING表示重启，GROWING表示扩容，RESTORING表示恢复集群，SNAPSHOTTING表示创建快照。
 
+	// 集群当前行为，REBOOTING表示重启，GROWING表示扩容，RESTORING表示恢复集群，SNAPSHOTTING表示创建快照。
 	Action *string `json:"action,omitempty"`
 }
 

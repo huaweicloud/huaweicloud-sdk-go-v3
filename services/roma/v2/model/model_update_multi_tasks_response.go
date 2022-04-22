@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateMultiTasksResponse struct {
-	// 任务ID, 可为空
 
+	// 任务ID, 可为空
 	TaskId         *string `json:"task_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

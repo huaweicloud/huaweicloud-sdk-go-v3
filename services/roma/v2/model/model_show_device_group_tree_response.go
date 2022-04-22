@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ShowDeviceGroupTreeResponse struct {
+
 	// 总数
-
 	Total *int32 `json:"total,omitempty"`
+
 	// 本次返回数量
-
 	Size *int32 `json:"size,omitempty"`
-	// 设备分组信息
 
+	// 设备分组信息
 	Items          *[]GroupTreeResponse `json:"items,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

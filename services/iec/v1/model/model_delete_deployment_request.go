@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteDeploymentRequest struct {
-	// 部署计划ID。
 
+	// 部署计划ID。
 	DeploymentId string `json:"deployment_id"`
 }
 

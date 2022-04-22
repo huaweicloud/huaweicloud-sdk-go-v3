@@ -7,17 +7,17 @@ import (
 )
 
 type ShowQuota struct {
+
 	// 配额限制
-
 	QuotaLimit int32 `json:"quota_limit"`
+
 	// 配额类型
-
 	QuotaKey string `json:"quota_key"`
+
 	// 单位
-
 	Unit string `json:"unit"`
-	// 已用配额
 
+	// 已用配额
 	Used int32 `json:"used"`
 }
 

@@ -10,14 +10,14 @@ import (
 )
 
 type CreateSinkTaskReq struct {
+
 	// 源数据类型，目前只支持BLOB。
-
 	SourceType CreateSinkTaskReqSourceType `json:"source_type"`
+
 	// 转储任务名称。
-
 	TaskName string `json:"task_name"`
-	// 转存的目标类型，当前只支持OBS。
 
+	// 转存的目标类型，当前只支持OBS。
 	DestinationType CreateSinkTaskReqDestinationType `json:"destination_type"`
 
 	ObsDestinationDescriptor *ObsDestinationDescriptor `json:"obs_destination_descriptor"`

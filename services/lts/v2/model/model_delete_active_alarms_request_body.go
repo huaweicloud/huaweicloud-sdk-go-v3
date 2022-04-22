@@ -7,8 +7,8 @@ import (
 )
 
 type DeleteActiveAlarmsRequestBody struct {
-	// 主题信息
 
+	// 主题信息
 	Events []Event `json:"events"`
 }
 

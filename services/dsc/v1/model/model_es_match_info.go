@@ -8,17 +8,17 @@ import (
 
 // ES数据项匹配信息
 type EsMatchInfo struct {
+
 	// 数据字段名
-
 	FieldName *string `json:"field_name,omitempty"`
+
 	// 规则名
-
 	RuleName *string `json:"rule_name,omitempty"`
+
 	// 规则ID
-
 	RuleId *string `json:"rule_id,omitempty"`
-	// 规则风险等级
 
+	// 规则风险等级
 	RuleRiskLevel *int32 `json:"rule_risk_level,omitempty"`
 }
 

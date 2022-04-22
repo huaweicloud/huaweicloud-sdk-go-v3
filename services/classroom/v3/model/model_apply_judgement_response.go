@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ApplyJudgementResponse struct {
-	// 判题任务ID
 
+	// 判题任务ID
 	JudgementId    *string `json:"judgement_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -11,11 +11,11 @@ import (
 
 // 批量删除保护实例标签请求体
 type BatchDeleteTagsRequestBody struct {
+
 	// 标签列表。
-
 	Tags []DeleteResourceTag `json:"tags"`
-	// 操作标识，取值仅限于：delete：删除
 
+	// 操作标识，取值仅限于：delete：删除
 	Action BatchDeleteTagsRequestBodyAction `json:"action"`
 }
 

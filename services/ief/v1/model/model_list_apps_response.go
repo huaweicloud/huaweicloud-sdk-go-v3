@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListAppsResponse struct {
+
 	// 应用模板配置
-
 	Apps *[]AppResp `json:"apps,omitempty"`
-	// 满足条件的应用模板个数
 
+	// 满足条件的应用模板个数
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

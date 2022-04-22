@@ -11,23 +11,23 @@ import (
 
 // 主机组详细信息
 type DeploymentGroup struct {
+
 	// 主机组名
-
 	Name string `json:"name"`
+
 	// 局点信息
-
 	RegionName string `json:"region_name"`
+
 	// devcloud项目id
-
 	ProjectId string `json:"project_id"`
+
 	// 操作信息：windows|linux
-
 	Os DeploymentGroupOs `json:"os"`
+
 	// slave集群id，默认为null时使用devcloud八爪鱼slave集群，用户自定义slave时为slave集群id
-
 	SlaveClusterId *string `json:"slave_cluster_id,omitempty"`
-	// 描述
 
+	// 描述
 	Description *string `json:"description,omitempty"`
 }
 

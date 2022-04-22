@@ -7,14 +7,14 @@ import (
 )
 
 type IssueUser struct {
+
 	// 用户id
-
 	Id *int32 `json:"id,omitempty"`
+
 	// 用户名
-
 	Name *string `json:"name,omitempty"`
-	// 昵称
 
+	// 昵称
 	NickName *string `json:"nick_name,omitempty"`
 }
 

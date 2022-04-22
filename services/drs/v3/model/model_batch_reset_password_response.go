@@ -9,8 +9,8 @@ import (
 // Response Object
 type BatchResetPasswordResponse struct {
 	Results *[]ModifyDbPwdResp `json:"results,omitempty"`
-	// 总数
 
+	// 总数
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

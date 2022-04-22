@@ -8,8 +8,8 @@ import (
 
 // 删除主机组请求体
 type DeleteHostGroupRequestBody struct {
-	// 主机组ID列表
 
+	// 主机组ID列表
 	HostGroupIdList []string `json:"host_group_id_list"`
 }
 

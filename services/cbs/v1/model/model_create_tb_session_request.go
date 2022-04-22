@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateTbSessionRequest struct {
-	// 话务机器人ID
 
+	// 话务机器人ID
 	BotId string `json:"bot_id"`
 }
 

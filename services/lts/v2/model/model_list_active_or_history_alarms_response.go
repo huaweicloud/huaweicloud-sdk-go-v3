@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListActiveOrHistoryAlarmsResponse struct {
-	// 告警信息
 
+	// 告警信息
 	Events *[]Events `json:"events,omitempty"`
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`

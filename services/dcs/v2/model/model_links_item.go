@@ -7,11 +7,11 @@ import (
 )
 
 type LinksItem struct {
+
 	// 备份文件名称。
-
 	FileName *string `json:"file_name,omitempty"`
-	// 备份文件下载链接地址。
 
+	// 备份文件下载链接地址。
 	Link *string `json:"link,omitempty"`
 }
 

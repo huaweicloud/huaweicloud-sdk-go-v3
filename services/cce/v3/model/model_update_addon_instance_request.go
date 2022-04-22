@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateAddonInstanceRequest struct {
-	// 插件实例id
 
+	// 插件实例id
 	Id string `json:"id"`
 
 	Body *InstanceRequest `json:"body,omitempty"`

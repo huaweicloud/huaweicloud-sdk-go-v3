@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CollectHotQuestionsResponse struct {
-	// 指定时间范围内，热点问题列表。
 
+	// 指定时间范围内，热点问题列表。
 	Questions      *[]HotQuestionCount `json:"questions,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

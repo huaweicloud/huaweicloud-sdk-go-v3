@@ -7,14 +7,14 @@ import (
 )
 
 type RegisterInfoRequestModel struct {
+
 	// 大赛ID，大赛平台提供
-
 	CompetitionId string `json:"competition_id"`
+
 	// 大赛阶段ID，大赛平台提供
-
 	StageId string `json:"stage_id"`
-	// 租户ID
 
+	// 租户ID
 	DomainId string `json:"domain_id"`
 }
 

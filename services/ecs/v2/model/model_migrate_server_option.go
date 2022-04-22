@@ -8,8 +8,8 @@ import (
 
 // 冷迁移云服务器请求结构
 type MigrateServerOption struct {
-	// 专属主机ID。 当弹性云服务器从公共资源池迁移至专属主机上，或者弹性云服务器在专属主机之间迁移时，该字段生效。
 
+	// 专属主机ID。 当弹性云服务器从公共资源池迁移至专属主机上，或者弹性云服务器在专属主机之间迁移时，该字段生效。
 	DedicatedHostId *string `json:"dedicated_host_id,omitempty"`
 }
 

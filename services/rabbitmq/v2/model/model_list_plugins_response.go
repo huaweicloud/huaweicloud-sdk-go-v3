@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListPluginsResponse struct {
-	// 插件信息列表。
 
+	// 插件信息列表。
 	Plugins        *[]PluginEntity `json:"plugins,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

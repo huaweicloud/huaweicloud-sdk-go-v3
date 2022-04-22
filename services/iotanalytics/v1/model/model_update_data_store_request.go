@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateDataStoreRequest struct {
-	// 存储 ID
 
+	// 存储 ID
 	DataStoreId string `json:"data_store_id"`
 
 	Body *UpdateDataStore `json:"body,omitempty"`

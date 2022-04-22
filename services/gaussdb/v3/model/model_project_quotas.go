@@ -7,8 +7,8 @@ import (
 )
 
 type ProjectQuotas struct {
-	// 资源列表对象。
 
+	// 资源列表对象。
 	Resources []Resource `json:"resources"`
 }
 

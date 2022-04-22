@@ -8,8 +8,8 @@ import (
 
 type VaultBackup struct {
 	Parameters *CheckpointParam `json:"parameters,omitempty"`
-	// 存储库ID
 
+	// 存储库ID
 	VaultId string `json:"vault_id"`
 }
 

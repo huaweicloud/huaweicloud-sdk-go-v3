@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type ListNetworkInstancesResponse struct {
-	// 网络实例列表。
 
+	// 网络实例列表。
 	NetworkInstances *[]NetworkInstance `json:"network_instances,omitempty"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`
-	// 请求ID。
 
+	// 请求ID。
 	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

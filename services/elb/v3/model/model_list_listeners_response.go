@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type ListListenersResponse struct {
-	// 请求ID。  注：自动生成 。
 
+	// 请求ID。  注：自动生成 。
 	RequestId *string `json:"request_id,omitempty"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`
-	// Listener的列表。
 
+	// Listener的列表。
 	Listeners      *[]Listener `json:"listeners,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

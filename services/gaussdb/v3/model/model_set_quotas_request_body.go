@@ -7,8 +7,8 @@ import (
 )
 
 type SetQuotasRequestBody struct {
-	// 资源列表对象。
 
+	// 资源列表对象。
 	QuotaList []SetQuota `json:"quota_list"`
 }
 

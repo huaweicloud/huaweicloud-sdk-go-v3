@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteListenerRequest struct {
-	// 监听器ID。
 
+	// 监听器ID。
 	ListenerId string `json:"listener_id"`
 }
 

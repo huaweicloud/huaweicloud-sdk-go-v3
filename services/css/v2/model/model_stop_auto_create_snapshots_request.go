@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type StopAutoCreateSnapshotsRequest struct {
-	// 快照所属的集群的ID。
 
+	// 快照所属的集群的ID。
 	ClusterId string `json:"cluster_id"`
 }
 

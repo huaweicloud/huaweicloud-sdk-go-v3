@@ -7,11 +7,11 @@ import (
 )
 
 type XCodeError struct {
+
 	// 错误码
-
 	Code *string `json:"code,omitempty"`
-	// 错误信息
 
+	// 错误信息
 	Msg *string `json:"msg,omitempty"`
 }
 

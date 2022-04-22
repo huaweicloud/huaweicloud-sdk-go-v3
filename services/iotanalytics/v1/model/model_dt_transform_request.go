@@ -8,8 +8,8 @@ import (
 
 // 转换计算
 type DtTransformRequest struct {
-	// 输入参数，最多支持10个
 
+	// 输入参数，最多支持10个
 	Inputs *[]InputRequest `json:"inputs,omitempty"`
 
 	Outputs *[]OutputRequest `json:"outputs,omitempty"`

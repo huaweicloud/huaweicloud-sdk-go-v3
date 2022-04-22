@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowDevicesInGroupResponse struct {
-	// 设备列表。
 
+	// 设备列表。
 	Devices *[]SimplifyDevice `json:"devices,omitempty"`
 
 	Page           *Page `json:"page,omitempty"`

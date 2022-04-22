@@ -10,26 +10,26 @@ import (
 )
 
 type Backup struct {
+
 	// 备份ID
-
 	Id *string `json:"id,omitempty"`
+
 	// 备份名称。
-
 	Name *string `json:"name,omitempty"`
+
 	// 备份描述。
-
 	Descriprion *string `json:"descriprion,omitempty"`
+
 	// 备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”，其中T指时间字段的开始；Z指时区偏移量。
-
 	BeginTime *string `json:"begin_time,omitempty"`
+
 	// 备份状态
-
 	Status *BackupStatus `json:"status,omitempty"`
+
 	// 备份类型，取值：
-
 	Type *BackupType `json:"type,omitempty"`
-	// 实例ID。
 
+	// 实例ID。
 	InstanceId *string `json:"instance_id,omitempty"`
 }
 

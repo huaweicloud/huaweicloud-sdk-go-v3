@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type BatchAssociateNaToNodesRequest struct {
+
 	// 北向数据接收端点ID
-
 	NaId string `json:"na_id"`
-	// 批量删除delete，批量添加add
 
+	// 批量删除delete，批量添加add
 	Action string `json:"action"`
 
 	Body *AuthorizeNa2NodesRequestDto `json:"body,omitempty"`

@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowSharedTagsRequest struct {
+
 	// MIME类型
-
 	ContentType string `json:"Content-Type"`
-	// 共享ID
 
+	// 共享ID
 	ShareId string `json:"share_id"`
 }
 

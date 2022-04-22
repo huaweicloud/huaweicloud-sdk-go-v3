@@ -11,14 +11,14 @@ import (
 
 // 批量修改数据库密码请求列表
 type ModifyPwdEndPoint struct {
+
 	// 数据库密码
-
 	DbPassword string `json:"db_password"`
+
 	// 类型，so：源库；ta：目标库。
-
 	EndPointType ModifyPwdEndPointEndPointType `json:"end_point_type"`
-	// 任务id
 
+	// 任务id
 	JobId string `json:"job_id"`
 
 	Kerberos *KerberosVo `json:"kerberos,omitempty"`

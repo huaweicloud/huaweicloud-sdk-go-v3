@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateFunctionCodeRequest struct {
-	// 函数的URN，详细解释见表1 FunctionGraph函数字段说明表的描述。
 
+	// 函数的URN，详细解释见表1 FunctionGraph函数字段说明表的描述。
 	FunctionUrn string `json:"function_urn"`
 
 	Body *UpdateFunctionCodeRequestBody `json:"body,omitempty"`

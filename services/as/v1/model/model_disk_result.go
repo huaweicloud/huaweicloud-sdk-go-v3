@@ -11,23 +11,23 @@ import (
 
 // 磁盘信息
 type DiskResult struct {
+
 	// 磁盘大小，容量单位为GB。
-
 	Size *int32 `json:"size,omitempty"`
+
 	// 磁盘类型。
-
 	VolumeType *DiskResultVolumeType `json:"volume_type,omitempty"`
+
 	// 系统盘还是数据盘，DATA表示为数据盘，SYS表示为系统盘。
-
 	DiskType *DiskResultDiskType `json:"disk_type,omitempty"`
+
 	// 磁盘所属的专属存储ID。
-
 	DedicatedStorageId *string `json:"dedicated_storage_id,omitempty"`
+
 	// 导入数据盘的数据盘镜像ID。
-
 	DataDiskImageId *string `json:"data_disk_image_id,omitempty"`
-	// 磁盘备份的快照ID。
 
+	// 磁盘备份的快照ID。
 	SnapshotId *string `json:"snapshot_id,omitempty"`
 
 	Metadata *MetaData `json:"metadata,omitempty"`

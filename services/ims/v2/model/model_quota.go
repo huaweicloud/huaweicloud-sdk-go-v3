@@ -8,8 +8,8 @@ import (
 
 // quota响应
 type Quota struct {
-	// 查询的配额信息。
 
+	// 查询的配额信息。
 	Resources []QuotaInfo `json:"resources"`
 }
 

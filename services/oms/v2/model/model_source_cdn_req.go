@@ -11,17 +11,17 @@ import (
 
 // 源端CDN配置。
 type SourceCdnReq struct {
+
 	// CDN鉴权秘钥，如果CDN需要进行鉴权，则此选项为必选。  无需授权：无需配置此项。 Qiniu：无需配置此项。 Aliyun：根据authentication_type指定的鉴权方式配置此项。 KingsoftCloud：无需配置此项。
-
 	AuthenticationKey *string `json:"authentication_key,omitempty"`
+
 	// 鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN
-
 	AuthenticationType SourceCdnReqAuthenticationType `json:"authentication_type"`
+
 	//   从指定域名获取对象。
-
 	Domain string `json:"domain"`
-	// 协议类型，支持http和https协议。
 
+	// 协议类型，支持http和https协议。
 	Protocol SourceCdnReqProtocol `json:"protocol"`
 }
 

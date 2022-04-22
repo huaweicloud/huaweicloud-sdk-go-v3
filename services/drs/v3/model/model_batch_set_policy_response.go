@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type BatchSetPolicyResponse struct {
+
 	// 批量设置同步策略响应体
-
 	Results *[]SyncPolicyResp `json:"results,omitempty"`
-	// 总数
 
+	// 总数
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

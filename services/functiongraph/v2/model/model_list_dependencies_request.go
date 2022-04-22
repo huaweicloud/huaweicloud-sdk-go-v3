@@ -11,20 +11,20 @@ import (
 
 // Request Object
 type ListDependenciesRequest struct {
+
 	// 依赖包类型public：公开,private:私有，all：全部。缺省时查询全量。
-
 	DependencyType *ListDependenciesRequestDependencyType `json:"dependency_type,omitempty"`
+
 	// 运行时语言 Java11、Nodejs14.18、Python3.9在type为v2时支持
-
 	Runtime *ListDependenciesRequestRuntime `json:"runtime,omitempty"`
+
 	// 依赖包名称。
-
 	Name *string `json:"name,omitempty"`
+
 	// 上一次查询依赖包的最后记录位置，默认为\"0\"。
-
 	Marker *string `json:"marker,omitempty"`
-	// 本次查询可获取的依赖包的最大数目，默认为\"400\"。
 
+	// 本次查询可获取的依赖包的最大数目，默认为\"400\"。
 	Limit *string `json:"limit,omitempty"`
 }
 

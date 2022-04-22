@@ -7,14 +7,14 @@ import (
 )
 
 type CreateScoreV2Req struct {
+
 	// 评价内容
-
 	Judgement string `json:"judgement"`
+
 	// 满意度列表
-
 	IncidentSatisfactionList []IncidentSatisfactionV2Do `json:"incident_satisfaction_list"`
-	// 组id
 
+	// 组id
 	GroupId *string `json:"group_id,omitempty"`
 }
 

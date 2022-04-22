@@ -11,11 +11,11 @@ import (
 
 // 配置app自动录制模式请求
 type AutoRecordModeReq struct {
+
 	// 录制模式。 - AUTO_RECORD_OFF：关闭自动录制。 - AUTO_INDIVIDUAL_RECORD：开启单流自动录制，此时record_rule_id必须非空。
-
 	Mode AutoRecordModeReqMode `json:"mode"`
-	// 录制规则id。
 
+	// 录制规则id。
 	RecordRuleId *string `json:"record_rule_id,omitempty"`
 }
 

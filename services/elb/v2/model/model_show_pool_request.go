@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowPoolRequest struct {
-	// 后端云服务器组id
 
+	// 后端云服务器组id
 	PoolId string `json:"pool_id"`
 }
 

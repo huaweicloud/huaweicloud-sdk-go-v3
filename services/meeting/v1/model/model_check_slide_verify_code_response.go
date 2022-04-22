@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type CheckSlideVerifyCodeResponse struct {
+
 	// 访问token字符串
-
 	Token *string `json:"token,omitempty"`
-	// 过期时间，单位：秒
 
+	// 过期时间，单位：秒
 	Expire         *int32 `json:"expire,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

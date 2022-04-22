@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type ListStatisticsRequest struct {
+
 	// 参数过滤器。
-
 	Filter ListStatisticsRequestFilter `json:"filter"`
-	// 时间段单位为分钟，与filter参数配合使用。
 
+	// 时间段单位为分钟，与filter参数配合使用。
 	Period *string `json:"period,omitempty"`
 }
 

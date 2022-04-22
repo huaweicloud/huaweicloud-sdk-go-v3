@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListVpcsByTagsResponse struct {
+
 	// 资源列表
-
 	Resources *[]ListResourceResp `json:"resources,omitempty"`
-	// 资源数量
 
+	// 资源数量
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateConfigurationRequest struct {
-	// 参数模板ID。
 
+	// 参数模板ID。
 	ConfigId string `json:"config_id"`
 
 	Body *UpdateConfigurationRequestBody `json:"body,omitempty"`

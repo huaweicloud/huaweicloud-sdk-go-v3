@@ -10,17 +10,17 @@ import (
 )
 
 type CreateNotificationRequestBody struct {
+
 	// 通知归属的应用ID
-
 	AppId string `json:"app_id"`
+
 	// 通知类型 0-设备上线通知 1-设备下线通知 2-设备添加通知 3-设备删除通知 4-设备变更通知
-
 	Type CreateNotificationRequestBodyType `json:"type"`
+
 	// 通知发送的主题名，该主题需要在MQS存在
-
 	Topic string `json:"topic"`
-	// 启停状态 0-启用 1-停用
 
+	// 启停状态 0-启用 1-停用
 	Status CreateNotificationRequestBodyStatus `json:"status"`
 }
 

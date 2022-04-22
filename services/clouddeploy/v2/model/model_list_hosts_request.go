@@ -11,29 +11,29 @@ import (
 
 // Request Object
 type ListHostsRequest struct {
+
 	// 主机组id
-
 	GroupId string `json:"group_id"`
+
 	// 是否为代理机
-
 	AsProxy *bool `json:"as_proxy,omitempty"`
+
 	// 偏移量,表示从此偏移量开始查询,offset大于等于0
-
 	Offset *int32 `json:"offset,omitempty"`
+
 	// 每页显示的条目数量，默认为1000
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 主机名，可输入中英文，数字和符号(-_.)
-
 	Name *string `json:"name,omitempty"`
+
 	// 排序字段，支持：AS_PROXY|HOST_NAME|OS|OWNER_NAME|as_proxy|host_name|os|owner_name|nickName。不填默认为：as_proxy
-
 	SortKey *string `json:"sort_key,omitempty"`
-	// 排序方式,默认为：DESC
 
+	// 排序方式,默认为：DESC。DESC：降序排序。ASC：升序排序
 	SortDir *ListHostsRequestSortDir `json:"sort_dir,omitempty"`
-	// 返回结果是否加密
 
+	// 返回结果是否加密
 	WithAuth *bool `json:"with_auth,omitempty"`
 }
 

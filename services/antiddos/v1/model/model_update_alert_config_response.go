@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type UpdateAlertConfigResponse struct {
+
 	// 内部错误码
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 内部错误描述
 
+	// 内部错误描述
 	ErrorMsg       *string `json:"error_msg,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

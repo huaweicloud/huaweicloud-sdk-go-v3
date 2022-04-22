@@ -7,8 +7,8 @@ import (
 )
 
 type StartVpecpReq struct {
-	// 内网域名。
 
+	// 内网域名。
 	EndpointWithDnsName string `json:"endpointWithDnsName"`
 }
 

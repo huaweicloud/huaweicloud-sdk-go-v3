@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListActiveActiveDomainsResponse struct {
-	// 双活域列表信息。
 
+	// 双活域列表信息。
 	Domains        *[]ShowActiveActiveDomainParams `json:"domains,omitempty"`
 	HttpStatusCode int                             `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateFileResponse struct {
-	// 文件路径。
 
+	// 文件路径。
 	Path           *string `json:"path,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

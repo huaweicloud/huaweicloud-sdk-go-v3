@@ -8,14 +8,14 @@ import (
 
 // 速率参数
 type SpeedLimitlJson struct {
+
 	// 时间段开始时间，格式：XX:XX。
-
 	Start string `json:"start"`
+
 	// 时间段结束时间，格式：XX:XX。
-
 	End string `json:"end"`
-	// 时间段的速率，0-1000的整数，单位：Mbit/s。
 
+	// 时间段的速率，0-1000的整数，单位：Mbit/s。
 	Speed int32 `json:"speed"`
 }
 

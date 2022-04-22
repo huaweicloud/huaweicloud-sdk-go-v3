@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListSecretVersionsResponse struct {
-	// version_metadata对象。
 
+	// version_metadata对象。
 	VersionMetadatas *[]VersionMetadata `json:"version_metadatas,omitempty"`
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`

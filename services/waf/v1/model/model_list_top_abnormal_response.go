@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListTopAbnormalResponse struct {
+
 	// 攻击类型种类
-
 	Total *int32 `json:"total,omitempty"`
-	// CountItem详细信息
 
+	// CountItem详细信息
 	Items          *[]UrlCountItem `json:"items,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

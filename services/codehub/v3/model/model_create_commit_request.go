@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateCommitRequest struct {
-	// 仓库短id
 
+	// 仓库短id
 	RepoId int32 `json:"repo_id"`
 
 	Body *CreateCommitRequestBody `json:"body,omitempty"`

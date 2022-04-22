@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateMemberRequest struct {
+
 	// 后端服务器ID。
-
 	MemberId string `json:"member_id"`
-	// 后端服务器组ID。
 
+	// 后端服务器组ID。
 	PoolId string `json:"pool_id"`
 
 	Body *UpdateMemberRequestBody `json:"body,omitempty"`

@@ -7,11 +7,11 @@ import (
 )
 
 type Dependent struct {
+
 	// 部署方式。
-
 	Name *string `json:"name,omitempty"`
-	// 依赖云资源信息
 
+	// 依赖云资源信息
 	DependentServices *[]ResouceInfo `json:"dependent_services,omitempty"`
 }
 

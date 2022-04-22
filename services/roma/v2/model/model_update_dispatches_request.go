@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type UpdateDispatchesRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
+
 	// 任务ID
-
 	TaskId string `json:"task_id"`
-	// 调度唯一标识，调度计划ID
 
+	// 调度唯一标识，调度计划ID
 	DispatchId string `json:"dispatch_id"`
 
 	Body *TaskDispatch `json:"body,omitempty"`

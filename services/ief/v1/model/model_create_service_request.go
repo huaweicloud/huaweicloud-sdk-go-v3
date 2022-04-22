@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateServiceRequest struct {
-	// 铂金版实例ID
 
+	// 铂金版实例ID
 	IefInstanceId string `json:"ief-instance-id"`
 
 	Body *Service `json:"body,omitempty"`

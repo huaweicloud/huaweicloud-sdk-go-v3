@@ -7,17 +7,17 @@ import (
 )
 
 type QosQualityData struct {
+
 	// 用户id
-
 	Uid *string `json:"uid,omitempty"`
+
 	// 对端的用户ID，为0时表示本端上行数据
-
 	Peerid *string `json:"peerid,omitempty"`
+
 	// 指标ID
-
 	Mid *string `json:"mid,omitempty"`
-	// 时间戳及相应时间的指标数值列表
 
+	// 时间戳及相应时间的指标数值列表
 	Data *[]TimeFloatValueData `json:"data,omitempty"`
 }
 

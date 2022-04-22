@@ -8,11 +8,11 @@ import (
 
 //
 type RetryInfo struct {
+
 	// 任务ID
-
 	JobId string `json:"job_id"`
-	// 再编辑之后启动，必填为true。
 
+	// 再编辑之后启动，必填为true。
 	IsSyncReEdit *bool `json:"is_sync_re_edit,omitempty"`
 }
 

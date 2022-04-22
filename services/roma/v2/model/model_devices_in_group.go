@@ -10,23 +10,23 @@ import (
 )
 
 type DevicesInGroup struct {
+
 	// 设备ID
-
 	DeviceId *int32 `json:"device_id,omitempty"`
+
 	// 设备名称
-
 	DeviceName *string `json:"device_name,omitempty"`
+
 	// 产品ID
-
 	ProductId *int32 `json:"product_id,omitempty"`
+
 	// 产品名称
-
 	ProductName *string `json:"product_name,omitempty"`
+
 	// 设备状态 0-启用 1-禁用
-
 	Status *DevicesInGroupStatus `json:"status,omitempty"`
-	// 是否在线 0-未连接 1-在线 2-离线
 
+	// 是否在线 0-未连接 1-在线 2-离线
 	OnlineStatus *DevicesInGroupOnlineStatus `json:"online_status,omitempty"`
 }
 

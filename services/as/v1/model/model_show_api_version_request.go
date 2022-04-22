@@ -11,8 +11,8 @@ import (
 
 // Request Object
 type ShowApiVersionRequest struct {
-	// API版本ID。
 
+	// API版本ID。
 	ApiVersion ShowApiVersionRequestApiVersion `json:"api_version"`
 }
 

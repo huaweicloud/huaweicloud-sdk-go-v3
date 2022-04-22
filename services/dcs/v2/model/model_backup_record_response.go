@@ -11,44 +11,44 @@ import (
 
 // 实例备份信息。
 type BackupRecordResponse struct {
+
 	// 备份记录ID。
-
 	BackupId *string `json:"backup_id,omitempty"`
+
 	// 备份执行时间段。
-
 	Period *string `json:"period,omitempty"`
+
 	// 备份记录名称。
-
 	BackupName *string `json:"backup_name,omitempty"`
+
 	// 实例ID。
-
 	InstanceId *string `json:"instance_id,omitempty"`
+
 	// 备份文件大小（Byte）。
-
 	Size *int64 `json:"size,omitempty"`
+
 	// 备份类型。 - manual：表示备份类型为手动备份 - auto：表示备份类型为自动备份
-
 	BackupType *BackupRecordResponseBackupType `json:"backup_type,omitempty"`
+
 	// 备份任务创建时间。
-
 	CreatedAt *string `json:"created_at,omitempty"`
+
 	// 备份完成时间。
-
 	UpdatedAt *string `json:"updated_at,omitempty"`
+
 	// 备份进度。
-
 	Progress *string `json:"progress,omitempty"`
+
 	// 备份失败后错误码 * `dcs.08.0001` - 启动备份恢复工具失败。 * `dcs.08.0002` - 执行超时。 * `dcs.08.0003` - 删除桶失败。 * `dcs.08.0004` - 获取ak/sk 失败。 * `dcs.08.0005` - 创建桶失败。 * `dcs.08.0006` - 查询备份数据大小失败。 * `dcs.08.0007` - 恢复时同步数据失败。 * `dcs.08.0008` - 自动备份任务未运行，实例正在运行其他任务。
-
 	ErrorCode *string `json:"error_code,omitempty"`
+
 	// 备份缓存实例的备注信息。
-
 	Remark *string `json:"remark,omitempty"`
+
 	// 备份状态。 - waiting：等待中。 - backuping：备份中。 - succeed：备份成功。 - failed：备份失败。 - expired：备份文件过期。 - deleted：已手动删除备份文件。
-
 	Status *BackupRecordResponseStatus `json:"status,omitempty"`
-	// 是否可以进行恢复操作，取值为TRUE或FALSE。
 
+	// 是否可以进行恢复操作，取值为TRUE或FALSE。
 	IsSupportRestore *string `json:"is_support_restore,omitempty"`
 }
 

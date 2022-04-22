@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListAlarmHistoriesResponse struct {
+
 	// alarmHistories列表
-
 	AlarmHistories *[]AlarmHistoryItemV2 `json:"alarm_histories,omitempty"`
-	// 告警历史列表总数
 
+	// 告警历史列表总数
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

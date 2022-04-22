@@ -11,11 +11,11 @@ import (
 
 // 批量添加的标签。
 type ReqSetOrDeleteTags struct {
+
 	// 标签列表。
-
 	Tags []ResourceTag `json:"tags"`
-	// 操作标识（仅支持小写）：create（创建），delete（删除）。
 
+	// 操作标识（仅支持小写）：create（创建），delete（删除）。
 	Action ReqSetOrDeleteTagsAction `json:"action"`
 }
 

@@ -9,8 +9,8 @@ import (
 // 终端设备信息
 type DevicesDevices struct {
 	Added *DevicesDevicesAdded `json:"added,omitempty"`
-	// 要解绑的终端设备ID
 
+	// 要解绑的终端设备ID
 	Removed *[]string `json:"removed,omitempty"`
 }
 

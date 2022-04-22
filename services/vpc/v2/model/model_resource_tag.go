@@ -8,11 +8,11 @@ import (
 
 //
 type ResourceTag struct {
+
 	// 功能说明：标签键 约束：同一资源的key值不能重复。
-
 	Key string `json:"key"`
-	// 功能说明：标签值
 
+	// 功能说明：标签值
 	Value string `json:"value"`
 }
 

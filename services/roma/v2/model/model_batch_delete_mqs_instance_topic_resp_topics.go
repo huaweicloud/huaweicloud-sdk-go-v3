@@ -7,11 +7,11 @@ import (
 )
 
 type BatchDeleteMqsInstanceTopicRespTopics struct {
+
 	// topic名称。
-
 	Id *string `json:"id,omitempty"`
-	// 是否删除成功。
 
+	// 是否删除成功。
 	Success *bool `json:"success,omitempty"`
 }
 

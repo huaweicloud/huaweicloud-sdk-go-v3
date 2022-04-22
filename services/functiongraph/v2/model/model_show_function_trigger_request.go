@@ -11,8 +11,8 @@ import (
 
 // Request Object
 type ShowFunctionTriggerRequest struct {
-	// 函数的URN，详细解释见FunctionGraph函数模型的描述。
 
+	// 函数的URN，详细解释见FunctionGraph函数模型的描述。
 	FunctionUrn string `json:"function_urn"`
 
 	TriggerTypeCode ShowFunctionTriggerRequestTriggerTypeCode `json:"trigger_type_code"`

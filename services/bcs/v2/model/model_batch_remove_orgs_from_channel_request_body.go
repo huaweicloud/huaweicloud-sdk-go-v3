@@ -7,8 +7,8 @@ import (
 )
 
 type BatchRemoveOrgsFromChannelRequestBody struct {
-	// 组织名称列表
 
+	// 组织名称列表
 	OrgNames []string `json:"org_names"`
 }
 

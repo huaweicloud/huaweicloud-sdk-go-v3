@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteComputingResourceResponse struct {
-	// 被删除计算资源ID。
 
+	// 被删除计算资源ID。
 	ComputingResourceId *string `json:"computing_resource_id,omitempty"`
 	HttpStatusCode      int     `json:"-"`
 }

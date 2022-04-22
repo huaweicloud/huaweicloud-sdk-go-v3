@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateTestCaseRequest struct {
-	// 测试用例唯一标识，固定长度32位字符
 
+	// 测试用例唯一标识，固定长度32位字符
 	TestcaseId string `json:"testcase_id"`
 
 	Body *UpdateTestCaseRequestBody `json:"body,omitempty"`

@@ -7,11 +7,11 @@ import (
 )
 
 type CandidatesUser struct {
+
 	// 用户名称
-
 	Name *string `json:"name,omitempty"`
-	// 用户ID
 
+	// 用户ID
 	Id *string `json:"id,omitempty"`
 }
 

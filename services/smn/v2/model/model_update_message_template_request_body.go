@@ -7,8 +7,8 @@ import (
 )
 
 type UpdateMessageTemplateRequestBody struct {
-	// 模板内容。
 
+	// 模板内容。
 	Content string `json:"content"`
 }
 

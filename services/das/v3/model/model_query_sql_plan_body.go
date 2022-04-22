@@ -7,14 +7,14 @@ import (
 )
 
 type QuerySqlPlanBody struct {
+
 	// 数据库用户ID
-
 	DbUserId *string `json:"db_user_id,omitempty"`
+
 	// 数据库名称
-
 	Database *string `json:"database,omitempty"`
-	// SQL语句
 
+	// SQL语句
 	Sql *string `json:"sql,omitempty"`
 }
 

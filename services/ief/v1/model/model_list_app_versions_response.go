@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListAppVersionsResponse struct {
+
 	// app详情
-
 	Versions *[]AppVersionDetail `json:"versions,omitempty"`
-	// 满足条件的应用版本个数
 
+	// 满足条件的应用版本个数
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

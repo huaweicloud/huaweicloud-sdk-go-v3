@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowGaussMySqlFlavorsResponse struct {
-	// 实例规格信息列表
 
+	// 实例规格信息列表
 	Flavors        *[]MysqlFlavorsInfo `json:"flavors,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

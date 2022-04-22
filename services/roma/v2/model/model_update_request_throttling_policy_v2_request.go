@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateRequestThrottlingPolicyV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 流控策略的编号
 
+	// 流控策略的编号
 	ThrottleId string `json:"throttle_id"`
 
 	Body *ThrottleBaseInfo `json:"body,omitempty"`

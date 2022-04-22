@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateFlavorByTypeRequest struct {
+
 	// 指定待更改的集群ID。
-
 	ClusterId string `json:"cluster_id"`
-	// 指定待更改的集群节点类型。
 
+	// 指定待更改的集群节点类型。
 	Types string `json:"types"`
 
 	Body *UpdateFlavorReq `json:"body,omitempty"`

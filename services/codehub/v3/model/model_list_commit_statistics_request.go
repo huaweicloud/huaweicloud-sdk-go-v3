@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ListCommitStatisticsRequest struct {
+
 	// 分支名
-
 	BranchName string `json:"branch_name"`
-	// 仓库的主键id
 
+	// 仓库的主键id
 	RepositoryId string `json:"repository_id"`
 }
 

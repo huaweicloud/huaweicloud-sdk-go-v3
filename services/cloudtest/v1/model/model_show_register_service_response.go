@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowRegisterServiceResponse struct {
-	// 注册服务信息
 
+	// 注册服务信息
 	Services       *[]ServicesInfo `json:"services,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

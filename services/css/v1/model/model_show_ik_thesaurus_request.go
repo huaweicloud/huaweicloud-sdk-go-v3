@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowIkThesaurusRequest struct {
-	// 指定需查询词库状态的集群ID。
 
+	// 指定需查询词库状态的集群ID。
 	ClusterId string `json:"cluster_id"`
 }
 

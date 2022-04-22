@@ -7,14 +7,14 @@ import (
 )
 
 type Resource struct {
+
 	// 资源ID
-
 	ResourceId string `json:"resource_id"`
+
 	// 标签列表，没有标签默认为空数组
-
 	Tags []ResourceTag `json:"tags"`
-	// 资源名称，资源没有名称时默认为空字符串。
 
+	// 资源名称，资源没有名称时默认为空字符串。
 	ResourceName string `json:"resource_name"`
 }
 

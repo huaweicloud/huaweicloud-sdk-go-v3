@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListWhitelistsResponse struct {
-	// 白名单对象的列表
 
+	// 白名单对象的列表
 	Whitelists     *[]WhitelistResp `json:"whitelists,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

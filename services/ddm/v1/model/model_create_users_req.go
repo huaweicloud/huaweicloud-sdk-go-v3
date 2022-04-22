@@ -8,8 +8,8 @@ import (
 
 // This is a auto create Body Object
 type CreateUsersReq struct {
-	// DDM实例帐号相关信息的集合。
 
+	// DDM实例帐号相关信息的集合。
 	Users []CreateUsersInfo `json:"users"`
 }
 

@@ -11,32 +11,32 @@ import (
 
 // Response Object
 type CreateHotkeyScanTaskResponse struct {
+
 	// 热key分析记录ID
-
 	Id *string `json:"id,omitempty"`
+
 	// 实例ID
-
 	InstanceId *string `json:"instance_id,omitempty"`
+
 	// 分析任务状态
-
 	Status *CreateHotkeyScanTaskResponseStatus `json:"status,omitempty"`
+
 	// 分析方式
-
 	ScanType *CreateHotkeyScanTaskResponseScanType `json:"scan_type,omitempty"`
+
 	// 分析任务创建时间,格式为：\"2020-06-15T02:21:18.669Z\"
-
 	CreatedAt *string `json:"created_at,omitempty"`
+
 	// 分析任务开始时间,格式为：\"2020-06-15T02:21:18.669Z\"
-
 	StartedAt *string `json:"started_at,omitempty"`
+
 	// 分析任务结束时间,格式为：\"2020-06-15T02:21:18.669Z\"
-
 	FinishedAt *string `json:"finished_at,omitempty"`
+
 	// 热key的数量
-
 	Num *int32 `json:"num,omitempty"`
-	// 热key记录
 
+	// 热key记录
 	Keys           *[]HotkeysBody `json:"keys,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

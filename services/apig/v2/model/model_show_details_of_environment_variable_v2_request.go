@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowDetailsOfEnvironmentVariableV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 环境变量的编号
 
+	// 环境变量的编号
 	EnvVariableId string `json:"env_variable_id"`
 }
 

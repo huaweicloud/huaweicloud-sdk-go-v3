@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteCustomAuthorizerV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 自定义认证的编号
 
+	// 自定义认证的编号
 	AuthorizerId string `json:"authorizer_id"`
 }
 

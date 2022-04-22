@@ -8,8 +8,8 @@ import (
 
 // 与相应权重关联的节点选择器项。
 type PreferredSchedulingTermPreference struct {
-	// 匹配规则表达式
 
+	// 匹配规则表达式
 	MatchExpressions *[]MatchExpression `json:"matchExpressions,omitempty"`
 }
 

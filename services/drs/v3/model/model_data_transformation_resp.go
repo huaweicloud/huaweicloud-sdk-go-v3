@@ -11,17 +11,17 @@ import (
 
 // 数据加工返回体
 type DataTransformationResp struct {
+
 	// 任务id
-
 	Id *string `json:"id,omitempty"`
+
 	// 状态
-
 	Status *DataTransformationRespStatus `json:"status,omitempty"`
+
 	// 错误码
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 错误信息
 
+	// 错误信息
 	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 

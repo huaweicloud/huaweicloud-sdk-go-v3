@@ -8,20 +8,20 @@ import (
 
 // DCS数据源配置内容
 type DcsContentReq struct {
+
 	// VPC-EP服务端id
-
 	EndpointServiceId string `json:"endpoint_service_id"`
+
 	// VPC-EP服务端名称
-
 	EndpointServiceName string `json:"endpoint_service_name"`
+
 	// VPC-EP客户端Port
-
 	Port int32 `json:"port"`
+
 	// redis实例类型
-
 	DcsType string `json:"dcs_type"`
-	// redis访问密码
 
+	// redis访问密码
 	Password string `json:"password"`
 }
 

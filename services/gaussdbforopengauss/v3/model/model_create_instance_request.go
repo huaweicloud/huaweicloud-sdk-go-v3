@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateInstanceRequest struct {
-	// 语言
 
+	// 语言
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	Body *OpenGaussInstanceRequest `json:"body,omitempty"`

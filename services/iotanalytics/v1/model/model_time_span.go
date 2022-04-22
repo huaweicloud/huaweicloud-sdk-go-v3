@@ -8,11 +8,11 @@ import (
 
 // 起止时间范围
 type TimeSpan struct {
+
 	// 起始时间
-
 	From string `json:"from"`
-	// 结束时间
 
+	// 结束时间
 	To string `json:"to"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateRoutesResponse struct {
-	// 路由列表
 
+	// 路由列表
 	Routes         *[]Route `json:"routes,omitempty"`
 	HttpStatusCode int      `json:"-"`
 }

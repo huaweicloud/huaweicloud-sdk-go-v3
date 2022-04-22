@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type BatchDeleteRulesRequest struct {
-	// 实例ID
 
+	// 实例ID
 	InstanceId string `json:"instance_id"`
 
 	Body *BatchDeleteRulesRequestBody `json:"body,omitempty"`

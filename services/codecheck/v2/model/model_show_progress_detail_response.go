@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowProgressDetailResponse struct {
-	// 任务状态,0表示检查中，1表示检查失败，2表示检查成功，3表示任务中止
 
+	// 任务状态,0表示检查中，1表示检查失败，2表示检查成功，3表示任务中止
 	TaskStatus *int32 `json:"task_status,omitempty"`
 
 	Progress       *ProgressDetailV2 `json:"progress,omitempty"`

@@ -11,11 +11,11 @@ import (
 
 // 收件方式与信息体
 type SubscriptionInfo struct {
+
 	// 短信或者邮件列表
-
 	Endpoints *[]string `json:"endpoints,omitempty"`
-	// 收件方式，sms：短信,email：邮件
 
+	// 收件方式，sms：短信,email：邮件
 	Protocol *SubscriptionInfoProtocol `json:"protocol,omitempty"`
 }
 

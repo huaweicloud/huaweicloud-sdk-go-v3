@@ -8,11 +8,11 @@ import (
 
 // OBS设置对象
 type TrackerObsChannelConfigBody struct {
+
 	// OBS桶名称
-
 	BucketName string `json:"bucket_name"`
-	// region id
 
+	// region id
 	RegionId string `json:"region_id"`
 }
 

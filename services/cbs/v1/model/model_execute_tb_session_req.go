@@ -8,11 +8,11 @@ import (
 
 //
 type ExecuteTbSessionReq struct {
+
 	// 客户回复。
-
 	Reply *string `json:"reply,omitempty"`
-	// 客户回复属性，0表示通用回复，1表示客户打断， 2表示客户长时未回复。
 
+	// 客户回复属性，0表示通用回复，1表示客户打断， 2表示客户长时未回复。
 	Type int32 `json:"type"`
 }
 

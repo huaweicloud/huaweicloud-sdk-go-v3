@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowRepositoryNameExistRequest struct {
+
 	// 项目的uuid
-
 	ProjectUuid string `json:"project_uuid"`
-	// 仓库名
 
+	// 仓库名
 	RepositoryName string `json:"repository_name"`
 }
 

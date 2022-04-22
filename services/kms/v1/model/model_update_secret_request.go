@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateSecretRequest struct {
-	// 凭据对象唯一资源标识符。
 
+	// 凭据对象唯一资源标识符。
 	SecretId string `json:"secret_id"`
 
 	Body *UpdateSecretRequestBody `json:"body,omitempty"`

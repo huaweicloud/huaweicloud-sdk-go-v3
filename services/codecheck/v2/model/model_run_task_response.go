@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type RunTaskResponse struct {
-	// 执行id
 
+	// 执行id
 	ExecId         *string `json:"exec_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteDisasterRecoveryDrillRequest struct {
-	// 容灾演练的ID。
 
+	// 容灾演练的ID。
 	DisasterRecoveryDrillId string `json:"disaster_recovery_drill_id"`
 }
 

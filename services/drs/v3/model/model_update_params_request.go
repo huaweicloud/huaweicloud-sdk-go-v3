@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type UpdateParamsRequest struct {
+
 	// 任务ID
-
 	JobId string `json:"job_id"`
-	// 请求语言类型
 
+	// 请求语言类型
 	XLanguage *UpdateParamsRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *ModifyTargetParamsReq `json:"body,omitempty"`

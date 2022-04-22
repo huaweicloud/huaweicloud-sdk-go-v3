@@ -7,11 +7,11 @@ import (
 )
 
 type BranchList struct {
+
 	// 指定仓库的分支列表
-
 	Branches *[]Branch `json:"branches,omitempty"`
-	// 指定仓库的分支总数
 
+	// 指定仓库的分支总数
 	Total *int32 `json:"total,omitempty"`
 }
 

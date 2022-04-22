@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateSnapshotRequest struct {
-	// 快照ID
 
+	// 快照ID
 	SnapshotId string `json:"snapshot_id"`
 
 	Body *UpdateSnapshotRequestBody `json:"body,omitempty"`

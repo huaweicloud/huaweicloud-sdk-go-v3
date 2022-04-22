@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type CreateAnonymousAuthRandomRequest struct {
+
 	// 会议ID。
-
 	ConferenceID string `json:"conferenceID"`
-	// 会议密码。
 
+	// 会议密码。
 	XPassword string `json:"X-Password"`
 }
 

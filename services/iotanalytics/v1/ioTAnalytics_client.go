@@ -19,7 +19,12 @@ func IoTAnalyticsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//创建资产模型
+// 创建资产模型
+//
+// 创建资产模型
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) CreateAssetModel(request *model.CreateAssetModelRequest) (*model.CreateAssetModelResponse, error) {
 	requestDef := GenReqDefForCreateAssetModel()
 
@@ -30,7 +35,12 @@ func (c *IoTAnalyticsClient) CreateAssetModel(request *model.CreateAssetModelReq
 	}
 }
 
-//删除资产模型
+// 删除资产模型
+//
+// 删除资产模型
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) DeleteAssetModel(request *model.DeleteAssetModelRequest) (*model.DeleteAssetModelResponse, error) {
 	requestDef := GenReqDefForDeleteAssetModel()
 
@@ -41,7 +51,12 @@ func (c *IoTAnalyticsClient) DeleteAssetModel(request *model.DeleteAssetModelReq
 	}
 }
 
-//获取资产模型列表
+// 获取资产模型列表
+//
+// 获取资产模型列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ListAssetModels(request *model.ListAssetModelsRequest) (*model.ListAssetModelsResponse, error) {
 	requestDef := GenReqDefForListAssetModels()
 
@@ -52,7 +67,12 @@ func (c *IoTAnalyticsClient) ListAssetModels(request *model.ListAssetModelsReque
 	}
 }
 
-//获取资产模型详情
+// 获取资产模型详情
+//
+// 获取资产模型详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowAssetModel(request *model.ShowAssetModelRequest) (*model.ShowAssetModelResponse, error) {
 	requestDef := GenReqDefForShowAssetModel()
 
@@ -63,7 +83,12 @@ func (c *IoTAnalyticsClient) ShowAssetModel(request *model.ShowAssetModelRequest
 	}
 }
 
-//修改资产模型
+// 修改资产模型
+//
+// 修改资产模型
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) UpdateAssetModel(request *model.UpdateAssetModelRequest) (*model.UpdateAssetModelResponse, error) {
 	requestDef := GenReqDefForUpdateAssetModel()
 
@@ -74,7 +99,12 @@ func (c *IoTAnalyticsClient) UpdateAssetModel(request *model.UpdateAssetModelReq
 	}
 }
 
-//创建资产
+// 创建资产
+//
+// 创建资产
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) CreateAssetNew(request *model.CreateAssetNewRequest) (*model.CreateAssetNewResponse, error) {
 	requestDef := GenReqDefForCreateAssetNew()
 
@@ -85,7 +115,12 @@ func (c *IoTAnalyticsClient) CreateAssetNew(request *model.CreateAssetNewRequest
 	}
 }
 
-//删除资产
+// 删除资产
+//
+// 删除资产
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) DeleteAssetNew(request *model.DeleteAssetNewRequest) (*model.DeleteAssetNewResponse, error) {
 	requestDef := GenReqDefForDeleteAssetNew()
 
@@ -96,7 +131,12 @@ func (c *IoTAnalyticsClient) DeleteAssetNew(request *model.DeleteAssetNewRequest
 	}
 }
 
-//获取资产列表
+// 获取资产列表
+//
+// 获取资产列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ListAssetsNew(request *model.ListAssetsNewRequest) (*model.ListAssetsNewResponse, error) {
 	requestDef := GenReqDefForListAssetsNew()
 
@@ -107,7 +147,12 @@ func (c *IoTAnalyticsClient) ListAssetsNew(request *model.ListAssetsNewRequest) 
 	}
 }
 
-//发布资产
+// 发布资产
+//
+// 发布资产
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) PublishRootAsset(request *model.PublishRootAssetRequest) (*model.PublishRootAssetResponse, error) {
 	requestDef := GenReqDefForPublishRootAsset()
 
@@ -118,7 +163,12 @@ func (c *IoTAnalyticsClient) PublishRootAsset(request *model.PublishRootAssetReq
 	}
 }
 
-//获取资产详情
+// 获取资产详情
+//
+// 获取资产详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowAssetNew(request *model.ShowAssetNewRequest) (*model.ShowAssetNewResponse, error) {
 	requestDef := GenReqDefForShowAssetNew()
 
@@ -129,7 +179,12 @@ func (c *IoTAnalyticsClient) ShowAssetNew(request *model.ShowAssetNewRequest) (*
 	}
 }
 
-//修改资产
+// 修改资产
+//
+// 修改资产
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) UpdateAssetNew(request *model.UpdateAssetNewRequest) (*model.UpdateAssetNewResponse, error) {
 	requestDef := GenReqDefForUpdateAssetNew()
 
@@ -140,7 +195,12 @@ func (c *IoTAnalyticsClient) UpdateAssetNew(request *model.UpdateAssetNewRequest
 	}
 }
 
-//获取资产属性最新值
+// 获取资产属性最新值
+//
+// 获取资产属性最新值
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowLastPropertyValue(request *model.ShowLastPropertyValueRequest) (*model.ShowLastPropertyValueResponse, error) {
 	requestDef := GenReqDefForShowLastPropertyValue()
 
@@ -151,7 +211,12 @@ func (c *IoTAnalyticsClient) ShowLastPropertyValue(request *model.ShowLastProper
 	}
 }
 
-//获取资产属性聚合值
+// 获取资产属性聚合值
+//
+// 获取资产属性聚合值
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowMetricValue(request *model.ShowMetricValueRequest) (*model.ShowMetricValueResponse, error) {
 	requestDef := GenReqDefForShowMetricValue()
 
@@ -162,7 +227,12 @@ func (c *IoTAnalyticsClient) ShowMetricValue(request *model.ShowMetricValueReque
 	}
 }
 
-//获取资产属性历史值
+// 获取资产属性历史值
+//
+// 获取资产属性历史值
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowPropertyRawValue(request *model.ShowPropertyRawValueRequest) (*model.ShowPropertyRawValueResponse, error) {
 	requestDef := GenReqDefForShowPropertyRawValue()
 
@@ -173,7 +243,12 @@ func (c *IoTAnalyticsClient) ShowPropertyRawValue(request *model.ShowPropertyRaw
 	}
 }
 
-//创建批计算资源。
+// 创建批计算资源
+//
+// 创建批计算资源。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) CreateComputingResource(request *model.CreateComputingResourceRequest) (*model.CreateComputingResourceResponse, error) {
 	requestDef := GenReqDefForCreateComputingResource()
 
@@ -184,7 +259,12 @@ func (c *IoTAnalyticsClient) CreateComputingResource(request *model.CreateComput
 	}
 }
 
-//删除批计算资源。
+// 删除批计算资源
+//
+// 删除批计算资源。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) DeleteComputingResource(request *model.DeleteComputingResourceRequest) (*model.DeleteComputingResourceResponse, error) {
 	requestDef := GenReqDefForDeleteComputingResource()
 
@@ -195,7 +275,12 @@ func (c *IoTAnalyticsClient) DeleteComputingResource(request *model.DeleteComput
 	}
 }
 
-//查询批计算资源列表。
+// 查询批计算资源列表
+//
+// 查询批计算资源列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ListComputingResources(request *model.ListComputingResourcesRequest) (*model.ListComputingResourcesResponse, error) {
 	requestDef := GenReqDefForListComputingResources()
 
@@ -206,7 +291,12 @@ func (c *IoTAnalyticsClient) ListComputingResources(request *model.ListComputing
 	}
 }
 
-//创建数据源
+// 创建数据源
+//
+// 创建数据源
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) CreateDatasource(request *model.CreateDatasourceRequest) (*model.CreateDatasourceResponse, error) {
 	requestDef := GenReqDefForCreateDatasource()
 
@@ -217,7 +307,12 @@ func (c *IoTAnalyticsClient) CreateDatasource(request *model.CreateDatasourceReq
 	}
 }
 
-//删除数据源
+// 删除数据源
+//
+// 删除数据源
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) DeleteDatasource(request *model.DeleteDatasourceRequest) (*model.DeleteDatasourceResponse, error) {
 	requestDef := GenReqDefForDeleteDatasource()
 
@@ -228,7 +323,12 @@ func (c *IoTAnalyticsClient) DeleteDatasource(request *model.DeleteDatasourceReq
 	}
 }
 
-//查询数据源列表
+// 查询数据源列表
+//
+// 查询数据源列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowAllDataSource(request *model.ShowAllDataSourceRequest) (*model.ShowAllDataSourceResponse, error) {
 	requestDef := GenReqDefForShowAllDataSource()
 
@@ -239,7 +339,12 @@ func (c *IoTAnalyticsClient) ShowAllDataSource(request *model.ShowAllDataSourceR
 	}
 }
 
-//查询数据源详情
+// 查询数据源详情
+//
+// 查询数据源详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowDataSource(request *model.ShowDataSourceRequest) (*model.ShowDataSourceResponse, error) {
 	requestDef := GenReqDefForShowDataSource()
 
@@ -250,7 +355,12 @@ func (c *IoTAnalyticsClient) ShowDataSource(request *model.ShowDataSourceRequest
 	}
 }
 
-//修改数据源
+// 修改数据源
+//
+// 修改数据源
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) UpdateDataSource(request *model.UpdateDataSourceRequest) (*model.UpdateDataSourceResponse, error) {
 	requestDef := GenReqDefForUpdateDataSource()
 
@@ -261,7 +371,12 @@ func (c *IoTAnalyticsClient) UpdateDataSource(request *model.UpdateDataSourceReq
 	}
 }
 
-//创建存储组
+// 创建存储组
+//
+// 创建存储组
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) CreateGroup(request *model.CreateGroupRequest) (*model.CreateGroupResponse, error) {
 	requestDef := GenReqDefForCreateGroup()
 
@@ -272,7 +387,12 @@ func (c *IoTAnalyticsClient) CreateGroup(request *model.CreateGroupRequest) (*mo
 	}
 }
 
-//删除存储组
+// 删除存储组
+//
+// 删除存储组
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) DeleteGroup(request *model.DeleteGroupRequest) (*model.DeleteGroupResponse, error) {
 	requestDef := GenReqDefForDeleteGroup()
 
@@ -283,7 +403,12 @@ func (c *IoTAnalyticsClient) DeleteGroup(request *model.DeleteGroupRequest) (*mo
 	}
 }
 
-//查询存储组列表
+// 查询存储组列表
+//
+// 查询存储组列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ListGroups(request *model.ListGroupsRequest) (*model.ListGroupsResponse, error) {
 	requestDef := GenReqDefForListGroups()
 
@@ -294,7 +419,12 @@ func (c *IoTAnalyticsClient) ListGroups(request *model.ListGroupsRequest) (*mode
 	}
 }
 
-//更新存储组
+// 更新存储组
+//
+// 更新存储组
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) UpdateGroup(request *model.UpdateGroupRequest) (*model.UpdateGroupResponse, error) {
 	requestDef := GenReqDefForUpdateGroup()
 
@@ -305,7 +435,12 @@ func (c *IoTAnalyticsClient) UpdateGroup(request *model.UpdateGroupRequest) (*mo
 	}
 }
 
-//删除存储
+// 删除存储
+//
+// 删除存储
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) DeleteDataStore(request *model.DeleteDataStoreRequest) (*model.DeleteDataStoreResponse, error) {
 	requestDef := GenReqDefForDeleteDataStore()
 
@@ -316,7 +451,12 @@ func (c *IoTAnalyticsClient) DeleteDataStore(request *model.DeleteDataStoreReque
 	}
 }
 
-//查询存储列表
+// 查询存储列表
+//
+// 查询存储列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ListDataStores(request *model.ListDataStoresRequest) (*model.ListDataStoresResponse, error) {
 	requestDef := GenReqDefForListDataStores()
 
@@ -327,7 +467,12 @@ func (c *IoTAnalyticsClient) ListDataStores(request *model.ListDataStoresRequest
 	}
 }
 
-//更新存储
+// 更新存储
+//
+// 更新存储
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) UpdateDataStore(request *model.UpdateDataStoreRequest) (*model.UpdateDataStoreResponse, error) {
 	requestDef := GenReqDefForUpdateDataStore()
 
@@ -338,7 +483,12 @@ func (c *IoTAnalyticsClient) UpdateDataStore(request *model.UpdateDataStoreReque
 	}
 }
 
-//根据标签查询设备历史值
+// 根据标签查询设备历史值
+//
+// 根据标签查询设备历史值
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ListHistory(request *model.ListHistoryRequest) (*model.ListHistoryResponse, error) {
 	requestDef := GenReqDefForListHistory()
 
@@ -349,7 +499,12 @@ func (c *IoTAnalyticsClient) ListHistory(request *model.ListHistoryRequest) (*mo
 	}
 }
 
-//根据标签聚合、查询数据
+// 根据标签聚合、查询指标数据
+//
+// 根据标签聚合、查询数据
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ListMetrics(request *model.ListMetricsRequest) (*model.ListMetricsResponse, error) {
 	requestDef := GenReqDefForListMetrics()
 
@@ -360,7 +515,12 @@ func (c *IoTAnalyticsClient) ListMetrics(request *model.ListMetricsRequest) (*mo
 	}
 }
 
-//查询设备属性最新状态值
+// 查询设备属性最新状态值
+//
+// 查询设备属性最新状态值
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowPropertyValues(request *model.ShowPropertyValuesRequest) (*model.ShowPropertyValuesResponse, error) {
 	requestDef := GenReqDefForShowPropertyValues()
 
@@ -371,7 +531,12 @@ func (c *IoTAnalyticsClient) ShowPropertyValues(request *model.ShowPropertyValue
 	}
 }
 
-//查询标签的值列表
+// 查询标签的值列表
+//
+// 查询标签的值列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ListTagValues(request *model.ListTagValuesRequest) (*model.ListTagValuesResponse, error) {
 	requestDef := GenReqDefForListTagValues()
 
@@ -382,7 +547,12 @@ func (c *IoTAnalyticsClient) ListTagValues(request *model.ListTagValuesRequest) 
 	}
 }
 
-//将SQL语句的查询结果下载到本地，只支持下载“QUERY”类型作业的查询结果。
+// 下载离线作业结果
+//
+// 将SQL语句的查询结果下载到本地，只支持下载“QUERY”类型作业的查询结果。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ExportDataset(request *model.ExportDatasetRequest) (*model.ExportDatasetResponse, error) {
 	requestDef := GenReqDefForExportDataset()
 
@@ -393,7 +563,12 @@ func (c *IoTAnalyticsClient) ExportDataset(request *model.ExportDatasetRequest) 
 	}
 }
 
-//将数据从文件导入OBS表。
+// 执行导入数据离线作业
+//
+// 将数据从文件导入OBS表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ImportData(request *model.ImportDataRequest) (*model.ImportDataResponse, error) {
 	requestDef := GenReqDefForImportData()
 
@@ -404,7 +579,12 @@ func (c *IoTAnalyticsClient) ImportData(request *model.ImportDataRequest) (*mode
 	}
 }
 
-//在执行SQL查询语句的作业完成后，查看该作业执行的结果。目前仅支持查看“QUERY”类型作业的执行结果。该API只能查看前1000条的结果记录，若要查看全部的结果记录，需要先导出查询结果再进行查看。
+// 查询离线作业结果
+//
+// 在执行SQL查询语句的作业完成后，查看该作业执行的结果。目前仅支持查看“QUERY”类型作业的执行结果。该API只能查看前1000条的结果记录，若要查看全部的结果记录，需要先导出查询结果再进行查看。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowDataset(request *model.ShowDatasetRequest) (*model.ShowDatasetResponse, error) {
 	requestDef := GenReqDefForShowDataset()
 
@@ -415,7 +595,12 @@ func (c *IoTAnalyticsClient) ShowDataset(request *model.ShowDatasetRequest) (*mo
 	}
 }
 
-//检查离线作业SQL语法。
+// 检查离线作业SQL语法
+//
+// 检查离线作业SQL语法。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ValidateSql(request *model.ValidateSqlRequest) (*model.ValidateSqlResponse, error) {
 	requestDef := GenReqDefForValidateSql()
 
@@ -426,7 +611,12 @@ func (c *IoTAnalyticsClient) ValidateSql(request *model.ValidateSqlRequest) (*mo
 	}
 }
 
-//通过API数据源上报设备数据
+// 通过API数据源上报设备数据
+//
+// 通过API数据源上报设备数据
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) AddDevData(request *model.AddDevDataRequest) (*model.AddDevDataResponse, error) {
 	requestDef := GenReqDefForAddDevData()
 
@@ -437,7 +627,12 @@ func (c *IoTAnalyticsClient) AddDevData(request *model.AddDevDataRequest) (*mode
 	}
 }
 
-//创建离线作业。
+// 创建离线作业
+//
+// 创建离线作业。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) CreateBatchJob(request *model.CreateBatchJobRequest) (*model.CreateBatchJobResponse, error) {
 	requestDef := GenReqDefForCreateBatchJob()
 
@@ -448,7 +643,12 @@ func (c *IoTAnalyticsClient) CreateBatchJob(request *model.CreateBatchJobRequest
 	}
 }
 
-//删除离线作业。
+// 删除离线作业
+//
+// 删除离线作业。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) DeleteBatchJob(request *model.DeleteBatchJobRequest) (*model.DeleteBatchJobResponse, error) {
 	requestDef := GenReqDefForDeleteBatchJob()
 
@@ -459,7 +659,12 @@ func (c *IoTAnalyticsClient) DeleteBatchJob(request *model.DeleteBatchJobRequest
 	}
 }
 
-//查询离线作业列表。
+// 查询离线作业列表
+//
+// 查询离线作业列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ListBatchJobs(request *model.ListBatchJobsRequest) (*model.ListBatchJobsResponse, error) {
 	requestDef := GenReqDefForListBatchJobs()
 
@@ -470,7 +675,12 @@ func (c *IoTAnalyticsClient) ListBatchJobs(request *model.ListBatchJobsRequest) 
 	}
 }
 
-//查询离线作业详情。
+// 查询离线作业详情
+//
+// 查询离线作业详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowBatchJob(request *model.ShowBatchJobRequest) (*model.ShowBatchJobResponse, error) {
 	requestDef := GenReqDefForShowBatchJob()
 
@@ -481,7 +691,12 @@ func (c *IoTAnalyticsClient) ShowBatchJob(request *model.ShowBatchJobRequest) (*
 	}
 }
 
-//修改离线作业。
+// 修改离线作业
+//
+// 修改离线作业。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) UpdateBatchJob(request *model.UpdateBatchJobRequest) (*model.UpdateBatchJobResponse, error) {
 	requestDef := GenReqDefForUpdateBatchJob()
 
@@ -492,7 +707,12 @@ func (c *IoTAnalyticsClient) UpdateBatchJob(request *model.UpdateBatchJobRequest
 	}
 }
 
-//新建管道作业时，需要在URL中指定是更新哪一个作业，将在body中附带完整的作业信息。（作业中各算子的详细配置请参考算子配置章节。） check参数表示是否需要对作业配置进行检查，若为false，则不检查，将作业保存为草稿；若为true，则对作业配置进行检查。当检查不通过时，将作业状态修改为草稿；检查通过时，将作业状态修改为就绪，并返回成功。
+// 新建管道作业
+//
+// 新建管道作业时，需要在URL中指定是更新哪一个作业，将在body中附带完整的作业信息。（作业中各算子的详细配置请参考算子配置章节。） check参数表示是否需要对作业配置进行检查，若为false，则不检查，将作业保存为草稿；若为true，则对作业配置进行检查。当检查不通过时，将作业状态修改为草稿；检查通过时，将作业状态修改为就绪，并返回成功。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) AddPipelineJob(request *model.AddPipelineJobRequest) (*model.AddPipelineJobResponse, error) {
 	requestDef := GenReqDefForAddPipelineJob()
 
@@ -503,7 +723,12 @@ func (c *IoTAnalyticsClient) AddPipelineJob(request *model.AddPipelineJobRequest
 	}
 }
 
-//删除用户指定的管道作业
+// 删除管道作业
+//
+// 删除用户指定的管道作业
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) DeletePipelineJob(request *model.DeletePipelineJobRequest) (*model.DeletePipelineJobResponse, error) {
 	requestDef := GenReqDefForDeletePipelineJob()
 
@@ -514,7 +739,12 @@ func (c *IoTAnalyticsClient) DeletePipelineJob(request *model.DeletePipelineJobR
 	}
 }
 
-//获取用户下的所有管道作业，支持分页。
+// 获取管道作业列表
+//
+// 获取用户下的所有管道作业，支持分页。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ListPipelineJobs(request *model.ListPipelineJobsRequest) (*model.ListPipelineJobsResponse, error) {
 	requestDef := GenReqDefForListPipelineJobs()
 
@@ -525,7 +755,12 @@ func (c *IoTAnalyticsClient) ListPipelineJobs(request *model.ListPipelineJobsReq
 	}
 }
 
-//获取指定管道作业的详情
+// 获取管道作业详情
+//
+// 获取指定管道作业的详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowPipelineJob(request *model.ShowPipelineJobRequest) (*model.ShowPipelineJobResponse, error) {
 	requestDef := GenReqDefForShowPipelineJob()
 
@@ -536,7 +771,12 @@ func (c *IoTAnalyticsClient) ShowPipelineJob(request *model.ShowPipelineJobReque
 	}
 }
 
-//提交管道作业到运行环境，实时接收数据源的数据并按用户定义的数据清洗逻辑对数据进行处理。
+// 启动管道作业
+//
+// 提交管道作业到运行环境，实时接收数据源的数据并按用户定义的数据清洗逻辑对数据进行处理。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) StartPipelineJob(request *model.StartPipelineJobRequest) (*model.StartPipelineJobResponse, error) {
 	requestDef := GenReqDefForStartPipelineJob()
 
@@ -547,7 +787,12 @@ func (c *IoTAnalyticsClient) StartPipelineJob(request *model.StartPipelineJobReq
 	}
 }
 
-//停止一个正在运行中的管道作业
+// 停止管道作业
+//
+// 停止一个正在运行中的管道作业
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) StopPipelineJob(request *model.StopPipelineJobRequest) (*model.StopPipelineJobResponse, error) {
 	requestDef := GenReqDefForStopPipelineJob()
 
@@ -558,7 +803,12 @@ func (c *IoTAnalyticsClient) StopPipelineJob(request *model.StopPipelineJobReque
 	}
 }
 
-//更新管道作业时，需要在URL中指定是更新哪一个作业，将在body中附带完整的作业信息。（管道作业详细配置，每个作业可选择不同的算子进行组合，各算子的使用方法详见：数据管道算子配置指南。） check参数表示是否需要对作业配置进行检查，若为false，则不检查，将作业保存为草稿；若为true，则对作业配置进行检查。当检查不通过时，将作业状态修改为草稿；检查通过时，将作业状态修改为就绪，并返回成功。
+// 更新管道作业
+//
+// 更新管道作业时，需要在URL中指定是更新哪一个作业，将在body中附带完整的作业信息。（管道作业详细配置，每个作业可选择不同的算子进行组合，各算子的使用方法详见：数据管道算子配置指南。） check参数表示是否需要对作业配置进行检查，若为false，则不检查，将作业保存为草稿；若为true，则对作业配置进行检查。当检查不通过时，将作业状态修改为草稿；检查通过时，将作业状态修改为就绪，并返回成功。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) UpdatePipelineJob(request *model.UpdatePipelineJobRequest) (*model.UpdatePipelineJobResponse, error) {
 	requestDef := GenReqDefForUpdatePipelineJob()
 
@@ -569,7 +819,12 @@ func (c *IoTAnalyticsClient) UpdatePipelineJob(request *model.UpdatePipelineJobR
 	}
 }
 
-//除名称和描述外，可先不提供作业的详细配置信息。 check参数表示是否需要对作业配置进行检查，若为false，则不检查，将作业保存为草稿；若为true，则对作业配置进行检查，无论检查是否通过，都将作业及配置信息保存为草稿，当检查不通过时，返回失败及错误信息，检查通过时，将作业状态修改为就绪，并返回成功。
+// 新建实时作业
+//
+// 除名称和描述外，可先不提供作业的详细配置信息。 check参数表示是否需要对作业配置进行检查，若为false，则不检查，将作业保存为草稿；若为true，则对作业配置进行检查，无论检查是否通过，都将作业及配置信息保存为草稿，当检查不通过时，返回失败及错误信息，检查通过时，将作业状态修改为就绪，并返回成功。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) CreateStreamingJob(request *model.CreateStreamingJobRequest) (*model.CreateStreamingJobResponse, error) {
 	requestDef := GenReqDefForCreateStreamingJob()
 
@@ -580,7 +835,12 @@ func (c *IoTAnalyticsClient) CreateStreamingJob(request *model.CreateStreamingJo
 	}
 }
 
-//删除用户指定的作业
+// 删除实时作业
+//
+// 删除用户指定的作业
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) DeleteStreamingJobById(request *model.DeleteStreamingJobByIdRequest) (*model.DeleteStreamingJobByIdResponse, error) {
 	requestDef := GenReqDefForDeleteStreamingJobById()
 
@@ -591,7 +851,12 @@ func (c *IoTAnalyticsClient) DeleteStreamingJobById(request *model.DeleteStreami
 	}
 }
 
-//获取指定作业的详情
+// 获取实时作业详情
+//
+// 获取指定作业的详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowJobById(request *model.ShowJobByIdRequest) (*model.ShowJobByIdResponse, error) {
 	requestDef := GenReqDefForShowJobById()
 
@@ -602,7 +867,12 @@ func (c *IoTAnalyticsClient) ShowJobById(request *model.ShowJobByIdRequest) (*mo
 	}
 }
 
-//获取用户下的所有实时分析作业，支持分页。
+// 获取实时作业列表
+//
+// 获取用户下的所有实时分析作业，支持分页。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowJobs(request *model.ShowJobsRequest) (*model.ShowJobsResponse, error) {
 	requestDef := GenReqDefForShowJobs()
 
@@ -613,7 +883,12 @@ func (c *IoTAnalyticsClient) ShowJobs(request *model.ShowJobsRequest) (*model.Sh
 	}
 }
 
-//更新作业时，需要在URL中指定是更新哪一个作业，将在body中附带完整的作业信息。 check参数表示是否需要对作业配置进行检查，若为false，则不检查，将作业保存为草稿；若为true，则对作业配置进行检查，无论检查是否通过，都将作业及配置信息保存为草稿，当检查不通过时，返回失败及错误信息，检查通过时，将作业状态修改为就绪，并返回成功。
+// 更新实时作业
+//
+// 更新作业时，需要在URL中指定是更新哪一个作业，将在body中附带完整的作业信息。 check参数表示是否需要对作业配置进行检查，若为false，则不检查，将作业保存为草稿；若为true，则对作业配置进行检查，无论检查是否通过，都将作业及配置信息保存为草稿，当检查不通过时，返回失败及错误信息，检查通过时，将作业状态修改为就绪，并返回成功。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) UpdateStreamingJob(request *model.UpdateStreamingJobRequest) (*model.UpdateStreamingJobResponse, error) {
 	requestDef := GenReqDefForUpdateStreamingJob()
 
@@ -624,7 +899,12 @@ func (c *IoTAnalyticsClient) UpdateStreamingJob(request *model.UpdateStreamingJo
 	}
 }
 
-//提交作业到运行环境，实时接收数据并按用户定义的业务逻辑对数据进行处理。
+// 启动实时作业
+//
+// 提交作业到运行环境，实时接收数据并按用户定义的业务逻辑对数据进行处理。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) StartJob(request *model.StartJobRequest) (*model.StartJobResponse, error) {
 	requestDef := GenReqDefForStartJob()
 
@@ -635,7 +915,12 @@ func (c *IoTAnalyticsClient) StartJob(request *model.StartJobRequest) (*model.St
 	}
 }
 
-//停止一个正在运行中的作业
+// 停止实时作业
+//
+// 停止一个正在运行中的作业
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) StopJob(request *model.StopJobRequest) (*model.StopJobResponse, error) {
 	requestDef := GenReqDefForStopJob()
 
@@ -646,7 +931,12 @@ func (c *IoTAnalyticsClient) StopJob(request *model.StopJobRequest) (*model.Stop
 	}
 }
 
-//执行离线作业。
+// 执行离线作业
+//
+// 执行离线作业。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) CreateRun(request *model.CreateRunRequest) (*model.CreateRunResponse, error) {
 	requestDef := GenReqDefForCreateRun()
 
@@ -657,7 +947,12 @@ func (c *IoTAnalyticsClient) CreateRun(request *model.CreateRunRequest) (*model.
 	}
 }
 
-//停止提交中或运行中的离线作业，若作业已经执行结束或失败则无法停止。
+// 停止离线作业
+//
+// 停止提交中或运行中的离线作业，若作业已经执行结束或失败则无法停止。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) DeleteRun(request *model.DeleteRunRequest) (*model.DeleteRunResponse, error) {
 	requestDef := GenReqDefForDeleteRun()
 
@@ -668,7 +963,12 @@ func (c *IoTAnalyticsClient) DeleteRun(request *model.DeleteRunRequest) (*model.
 	}
 }
 
-//查询离线作业运行列表。
+// 查询离线作业运行列表
+//
+// 查询离线作业运行列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ListRuns(request *model.ListRunsRequest) (*model.ListRunsResponse, error) {
 	requestDef := GenReqDefForListRuns()
 
@@ -679,7 +979,12 @@ func (c *IoTAnalyticsClient) ListRuns(request *model.ListRunsRequest) (*model.Li
 	}
 }
 
-//查询离线作业运行详情。
+// 查询离线作业运行详情
+//
+// 查询离线作业运行详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowRun(request *model.ShowRunRequest) (*model.ShowRunResponse, error) {
 	requestDef := GenReqDefForShowRun()
 
@@ -690,7 +995,12 @@ func (c *IoTAnalyticsClient) ShowRun(request *model.ShowRunRequest) (*model.Show
 	}
 }
 
-//创建离线数据表。
+// 创建离线数据表
+//
+// 创建离线数据表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) CreateTable(request *model.CreateTableRequest) (*model.CreateTableResponse, error) {
 	requestDef := GenReqDefForCreateTable()
 
@@ -701,7 +1011,12 @@ func (c *IoTAnalyticsClient) CreateTable(request *model.CreateTableRequest) (*mo
 	}
 }
 
-//删除离线数据表。
+// 删除离线数据表
+//
+// 删除离线数据表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) DeleteTable(request *model.DeleteTableRequest) (*model.DeleteTableResponse, error) {
 	requestDef := GenReqDefForDeleteTable()
 
@@ -712,7 +1027,12 @@ func (c *IoTAnalyticsClient) DeleteTable(request *model.DeleteTableRequest) (*mo
 	}
 }
 
-//查询离线数据表列表。
+// 查询离线数据表列表
+//
+// 查询离线数据表列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ListTables(request *model.ListTablesRequest) (*model.ListTablesResponse, error) {
 	requestDef := GenReqDefForListTables()
 
@@ -723,7 +1043,12 @@ func (c *IoTAnalyticsClient) ListTables(request *model.ListTablesRequest) (*mode
 	}
 }
 
-//预览离线数据表内容。
+// 预览离线数据表内容
+//
+// 预览离线数据表内容。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowTablePreview(request *model.ShowTablePreviewRequest) (*model.ShowTablePreviewResponse, error) {
 	requestDef := GenReqDefForShowTablePreview()
 
@@ -734,7 +1059,12 @@ func (c *IoTAnalyticsClient) ShowTablePreview(request *model.ShowTablePreviewReq
 	}
 }
 
-//查询离线数据表结构。
+// 查询离线数据表结构
+//
+// 查询离线数据表结构。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IoTAnalyticsClient) ShowTableSchema(request *model.ShowTableSchemaRequest) (*model.ShowTableSchemaResponse, error) {
 	requestDef := GenReqDefForShowTableSchema()
 

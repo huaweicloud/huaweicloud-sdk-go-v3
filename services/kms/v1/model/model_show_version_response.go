@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowVersionResponse struct {
-	// 描述version 对象的列表，详情请参见 ApiVersionDetail字段数据结构说明。
 
+	// 描述version 对象的列表，详情请参见 ApiVersionDetail字段数据结构说明。
 	Version        *interface{} `json:"version,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

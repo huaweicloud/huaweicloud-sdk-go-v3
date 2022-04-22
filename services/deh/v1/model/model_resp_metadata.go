@@ -8,8 +8,8 @@ import (
 
 // 弹性云服务器元数据。
 type RespMetadata struct {
-	// 弹性云服务器系统类型。
 
+	// 弹性云服务器系统类型。
 	OsType *string `json:"os_type,omitempty"`
 }
 

@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ImportDataResponse struct {
+
 	// 表ID。
-
 	TableId *string `json:"table_id,omitempty"`
+
 	// 作业ID。
-
 	JobId *string `json:"job_id,omitempty"`
-	// 作业运行ID。
 
+	// 作业运行ID。
 	RunId          *string `json:"run_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

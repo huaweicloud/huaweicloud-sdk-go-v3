@@ -8,8 +8,8 @@ import (
 
 // 删除网卡请求体。
 type DeleteNicsRequestBody struct {
-	// 待删除网卡信息。
 
+	// 待删除网卡信息。
 	Nics []NicId `json:"nics"`
 }
 

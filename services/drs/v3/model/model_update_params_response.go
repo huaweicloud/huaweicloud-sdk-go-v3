@@ -11,17 +11,17 @@ import (
 
 // Response Object
 type UpdateParamsResponse struct {
+
 	// 修改参数是否成功
-
 	Success *bool `json:"success,omitempty"`
+
 	// 是否需要重启
-
 	ShouldRestart *UpdateParamsResponseShouldRestart `json:"should_restart,omitempty"`
+
 	// 错误码
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 错误信息
 
+	// 错误信息
 	ErrorMsg       *string `json:"error_msg,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

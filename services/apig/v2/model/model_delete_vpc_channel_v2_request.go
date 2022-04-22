@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteVpcChannelV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// VPC通道的编号
 
+	// VPC通道的编号
 	VpcChannelId string `json:"vpc_channel_id"`
 }
 

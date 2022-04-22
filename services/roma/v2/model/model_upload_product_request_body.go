@@ -12,6 +12,7 @@ import (
 )
 
 type UploadProductRequestBody struct {
+
 	// 上传产品文件(.csv格式)
 	File *def.FilePart `json:"file,omitempty"`
 }

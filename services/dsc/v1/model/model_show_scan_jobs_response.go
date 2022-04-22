@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowScanJobsResponse struct {
+
 	// 本次返回的扫描任务列表
-
 	Tasks *[]ScanJob `json:"tasks,omitempty"`
-	// 任务总数
 
+	// 任务总数
 	Total          *int64 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

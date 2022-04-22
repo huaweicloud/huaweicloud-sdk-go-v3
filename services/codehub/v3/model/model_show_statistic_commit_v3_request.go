@@ -8,17 +8,17 @@ import (
 
 // Request Object
 type ShowStatisticCommitV3Request struct {
+
 	// 仓库短id
-
 	RepositoryId int32 `json:"repository_id"`
+
 	// 分支名称
-
 	RefName string `json:"ref_name"`
+
 	// 起始提交日期,格式为yyyy-MM-dd
-
 	BeginDate string `json:"begin_date"`
-	// 终止提交日期,格式为yyyy-MM-dd（begin_date和end_date时间间隔不超过60天）
 
+	// 终止提交日期,格式为yyyy-MM-dd（begin_date和end_date时间间隔不超过60天）
 	EndDate string `json:"end_date"`
 }
 

@@ -11,17 +11,17 @@ import (
 
 // Request Object
 type ListDomainsRequest struct {
+
 	// 域名ID
-
 	DomainId *string `json:"domain_id,omitempty"`
+
 	// 域名的认证状态:   * unauth - 未认证   * auth - 已认证   * invalid - 认证文件无效   * manual - 人工认证   * skip - 免认证
-
 	AuthStatus *ListDomainsRequestAuthStatus `json:"auth_status,omitempty"`
+
 	// 分页查询，偏移量，表示从此偏移量开始查询
-
 	Offset *int32 `json:"offset,omitempty"`
-	// 分页查询，每页显示的条目数量
 
+	// 分页查询，每页显示的条目数量
 	Limit *int32 `json:"limit,omitempty"`
 }
 

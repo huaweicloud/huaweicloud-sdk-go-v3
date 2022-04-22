@@ -19,7 +19,13 @@ func CbsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//获取完全匹配的热点标准问题列表。 默认按照完全匹配标准问题被问及的频次降序排序。
+// 热点问题统计
+//
+// 获取完全匹配的热点标准问题列表。
+// 默认按照完全匹配标准问题被问及的频次降序排序。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbsClient) CollectHotQuestions(request *model.CollectHotQuestionsRequest) (*model.CollectHotQuestionsResponse, error) {
 	requestDef := GenReqDefForCollectHotQuestions()
 
@@ -30,7 +36,12 @@ func (c *CbsClient) CollectHotQuestions(request *model.CollectHotQuestionsReques
 	}
 }
 
-//用户问关键词统计。
+// 关键词统计
+//
+// 用户问关键词统计。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbsClient) CollectKeyWords(request *model.CollectKeyWordsRequest) (*model.CollectKeyWordsResponse, error) {
 	requestDef := GenReqDefForCollectKeyWords()
 
@@ -41,7 +52,13 @@ func (c *CbsClient) CollectKeyWords(request *model.CollectKeyWordsRequest) (*mod
 	}
 }
 
-//指定领域获取指定时间范围内的问题答复率，支持按周期统计。 如果领域未指定则表示获取所有领域的问题答复率。
+// 问答统计
+//
+// 指定领域获取指定时间范围内的问题答复率，支持按周期统计。
+// 如果领域未指定则表示获取所有领域的问题答复率。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbsClient) CollectReplyRates(request *model.CollectReplyRatesRequest) (*model.CollectReplyRatesResponse, error) {
 	requestDef := GenReqDefForCollectReplyRates()
 
@@ -52,7 +69,12 @@ func (c *CbsClient) CollectReplyRates(request *model.CollectReplyRatesRequest) (
 	}
 }
 
-//获取用户会话统计信息。
+// 访问统计
+//
+// 获取用户会话统计信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbsClient) CollectSessionStats(request *model.CollectSessionStatsRequest) (*model.CollectSessionStatsResponse, error) {
 	requestDef := GenReqDefForCollectSessionStats()
 
@@ -63,7 +85,12 @@ func (c *CbsClient) CollectSessionStats(request *model.CollectSessionStatsReques
 	}
 }
 
-//问答会话API由开启会话、处理会话、关闭会话三个接口组成。用户可通过调用该接口创建会话。该接口仅支持老用户，新用户请优先使用问答机器人API接口进行调用。
+// 开启会话
+//
+// 问答会话API由开启会话、处理会话、关闭会话三个接口组成。用户可通过调用该接口创建会话。该接口仅支持老用户，新用户请优先使用问答机器人API接口进行调用。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbsClient) CreateSession(request *model.CreateSessionRequest) (*model.CreateSessionResponse, error) {
 	requestDef := GenReqDefForCreateSession()
 
@@ -74,7 +101,12 @@ func (c *CbsClient) CreateSession(request *model.CreateSessionRequest) (*model.C
 	}
 }
 
-//发起话务机器人会话。
+// 发起会话
+//
+// 发起话务机器人会话。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbsClient) CreateTbSession(request *model.CreateTbSessionRequest) (*model.CreateTbSessionResponse, error) {
 	requestDef := GenReqDefForCreateTbSession()
 
@@ -85,7 +117,12 @@ func (c *CbsClient) CreateTbSession(request *model.CreateTbSessionRequest) (*mod
 	}
 }
 
-//问答会话API由开启会话、处理会话、关闭会话三个接口组成。用户可通过调用该接口关闭会话。该接口即将下线，请优先使用问答机器人API接口进行调用。
+// 关闭会话
+//
+// 问答会话API由开启会话、处理会话、关闭会话三个接口组成。用户可通过调用该接口关闭会话。该接口即将下线，请优先使用问答机器人API接口进行调用。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbsClient) DeleteSession(request *model.DeleteSessionRequest) (*model.DeleteSessionResponse, error) {
 	requestDef := GenReqDefForDeleteSession()
 
@@ -96,7 +133,12 @@ func (c *CbsClient) DeleteSession(request *model.DeleteSessionRequest) (*model.D
 	}
 }
 
-//结束话务机器人会话。如果会话持续10分钟无会话请求则被清理。
+// 结束会话
+//
+// 结束话务机器人会话。如果会话持续10分钟无会话请求则被清理。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbsClient) DeleteTbSession(request *model.DeleteTbSessionRequest) (*model.DeleteTbSessionResponse, error) {
 	requestDef := GenReqDefForDeleteTbSession()
 
@@ -107,7 +149,12 @@ func (c *CbsClient) DeleteTbSession(request *model.DeleteTbSessionRequest) (*mod
 	}
 }
 
-//用户调用该接口和机器人进行聊天。
+// 问答机器人会话
+//
+// 用户调用该接口和机器人进行聊天。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbsClient) ExecuteQaChat(request *model.ExecuteQaChatRequest) (*model.ExecuteQaChatResponse, error) {
 	requestDef := GenReqDefForExecuteQaChat()
 
@@ -118,7 +165,12 @@ func (c *CbsClient) ExecuteQaChat(request *model.ExecuteQaChatRequest) (*model.E
 	}
 }
 
-//问答会话API由开启会话、处理会话、关闭会话三个接口组成。用户可通过调用该接口与机器人进行会话。该接口即将下线，请优先使用问答机器人API接口进行调用。
+// 处理会话
+//
+// 问答会话API由开启会话、处理会话、关闭会话三个接口组成。用户可通过调用该接口与机器人进行会话。该接口即将下线，请优先使用问答机器人API接口进行调用。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbsClient) ExecuteSession(request *model.ExecuteSessionRequest) (*model.ExecuteSessionResponse, error) {
 	requestDef := GenReqDefForExecuteSession()
 
@@ -129,7 +181,12 @@ func (c *CbsClient) ExecuteSession(request *model.ExecuteSessionRequest) (*model
 	}
 }
 
-//进行话务机器人会话。
+// 进行会话
+//
+// 进行话务机器人会话。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbsClient) ExecuteTbSession(request *model.ExecuteTbSessionRequest) (*model.ExecuteTbSessionResponse, error) {
 	requestDef := GenReqDefForExecuteTbSession()
 
@@ -140,7 +197,12 @@ func (c *CbsClient) ExecuteTbSession(request *model.ExecuteTbSessionRequest) (*m
 	}
 }
 
-//获取用户输入问题的提示问题列表。
+// 获取问题提示
+//
+// 获取用户输入问题的提示问题列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbsClient) ListSuggestions(request *model.ListSuggestionsRequest) (*model.ListSuggestionsResponse, error) {
 	requestDef := GenReqDefForListSuggestions()
 
@@ -151,7 +213,12 @@ func (c *CbsClient) ListSuggestions(request *model.ListSuggestionsRequest) (*mod
 	}
 }
 
-//智能问答返回的结果后，用户是否转人工。
+// 标记为转人工
+//
+// 智能问答返回的结果后，用户是否转人工。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbsClient) TagLabor(request *model.TagLaborRequest) (*model.TagLaborResponse, error) {
 	requestDef := GenReqDefForTagLabor()
 
@@ -162,7 +229,12 @@ func (c *CbsClient) TagLabor(request *model.TagLaborRequest) (*model.TagLaborRes
 	}
 }
 
-//用户提出问题后，对智能问答返回的结果是否满意。
+// 问答满意评价
+//
+// 用户提出问题后，对智能问答返回的结果是否满意。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbsClient) TagSatisfaction(request *model.TagSatisfactionRequest) (*model.TagSatisfactionResponse, error) {
 	requestDef := GenReqDefForTagSatisfaction()
 

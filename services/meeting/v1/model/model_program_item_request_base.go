@@ -8,11 +8,11 @@ import (
 
 // 新增/更新节目素材信息请求
 type ProgramItemRequestBase struct {
+
 	// 素材ID
-
 	MaterialId string `json:"materialId"`
-	// 播放时长
 
+	// 播放时长
 	PlayTime int32 `json:"playTime"`
 }
 

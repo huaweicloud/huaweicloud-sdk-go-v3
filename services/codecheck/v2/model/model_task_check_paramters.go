@@ -7,14 +7,14 @@ import (
 )
 
 type TaskCheckParamters struct {
+
 	// 检查工具ID
-
 	CheckId *int32 `json:"check_id,omitempty"`
+
 	// 编译参数名称
-
 	Name *string `json:"name,omitempty"`
-	// 检查参数配置信息
 
+	// 检查参数配置信息
 	CheckerConfigs *[]CheckConfigInfo `json:"checker_configs,omitempty"`
 }
 

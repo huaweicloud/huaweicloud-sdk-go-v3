@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateRetentionResponse struct {
-	// 镜像老化规则id
 
+	// 镜像老化规则id
 	Id             *int32 `json:"id,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowExtensionAuthorizationResponse struct {
+
 	// 返回值
-
 	Result *interface{} `json:"result,omitempty"`
-	// 状态
 
+	// 状态
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

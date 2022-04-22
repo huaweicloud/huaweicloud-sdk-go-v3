@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type StartNewPipelineResponse struct {
+
 	// 流水线ID
-
 	PipelineId *string `json:"pipeline_id,omitempty"`
-	// 流水线构建ID
 
+	// 流水线构建ID
 	BuildId        *string `json:"build_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

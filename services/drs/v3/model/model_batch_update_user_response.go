@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type BatchUpdateUserResponse struct {
+
 	// 总数
-
 	AllCounts *int32 `json:"all_counts,omitempty"`
-	// 迁移用户信息
 
+	// 迁移用户信息
 	Results        *[]QueryUserResp `json:"results,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

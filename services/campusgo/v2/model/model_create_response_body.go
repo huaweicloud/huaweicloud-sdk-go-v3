@@ -7,8 +7,8 @@ import (
 )
 
 type CreateResponseBody struct {
-	// 创建出的服务作业ID
 
+	// 创建出的服务作业ID
 	Id string `json:"id"`
 }
 

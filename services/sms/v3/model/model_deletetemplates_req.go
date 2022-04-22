@@ -8,8 +8,8 @@ import (
 
 // This is a auto create Body Object
 type DeletetemplatesReq struct {
-	// 需要删除的模板ID
 
+	// 需要删除的模板ID
 	Ids *[]string `json:"ids,omitempty"`
 }
 

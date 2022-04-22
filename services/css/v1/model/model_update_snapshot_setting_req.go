@@ -7,14 +7,14 @@ import (
 )
 
 type UpdateSnapshotSettingReq struct {
+
 	// 备份使用的OBS桶，如果桶已经存放快照数据了，不可更改。
-
 	Bucket string `json:"bucket"`
+
 	// 访问OBS使用的IAM委托名称。
-
 	Agency string `json:"agency"`
-	// 快照在OBS桶中的存放路径。
 
+	// 快照在OBS桶中的存放路径。
 	BasePath string `json:"basePath"`
 }
 

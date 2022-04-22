@@ -7,14 +7,14 @@ import (
 )
 
 type ExpireVo struct {
+
 	// 过期时间。UNIX时间戳，单位毫秒。eg:1635905480465
-
 	Expiration *int64 `json:"expiration,omitempty"`
+
 	// CloudIDE实例id
-
 	InstanceId *string `json:"instance_id,omitempty"`
-	// CloudIDE实例自动休眠时长，单位‘分钟’
 
+	// CloudIDE实例自动休眠时长，单位‘分钟’
 	Interval *int64 `json:"interval,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowDomainLocationStatsResponse struct {
+
 	// 数据分组方式
-
 	GroupBy *string `json:"group_by,omitempty"`
-	// 按指定的分组方式组织的数据
 
+	// 按指定的分组方式组织的数据
 	Result         map[string]interface{} `json:"result,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

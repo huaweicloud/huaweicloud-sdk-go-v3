@@ -8,8 +8,8 @@ import (
 
 // This is a auto create response Object
 type CreateUsersDetailResponses struct {
-	// DDM实例帐号名称。
 
+	// DDM实例帐号名称。
 	Name string `json:"name"`
 }
 

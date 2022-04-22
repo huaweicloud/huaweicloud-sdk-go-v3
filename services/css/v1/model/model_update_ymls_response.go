@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type UpdateYmlsResponse struct {
+
 	// 返回值。
-
 	Acknowledged *bool `json:"acknowledged,omitempty"`
+
 	// 返回信息。
-
 	ExternalMessage *string `json:"externalMessage,omitempty"`
-	// 返回错误信息。
 
+	// 返回错误信息。
 	HttpErrorResponse *string `json:"httpErrorResponse,omitempty"`
 	HttpStatusCode    int     `json:"-"`
 }

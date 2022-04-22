@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type RenewalResourcesResponse struct {
-	// 续订资源生成的订单ID的列表。
 
+	// 续订资源生成的订单ID的列表。
 	OrderIds       *[]string `json:"order_ids,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

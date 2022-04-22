@@ -7,8 +7,8 @@ import (
 )
 
 type ShrinkNodesReq struct {
-	// 需要下线的节点ID。
 
+	// 需要下线的节点ID。
 	ShrinkNodes []string `json:"shrinkNodes"`
 }
 

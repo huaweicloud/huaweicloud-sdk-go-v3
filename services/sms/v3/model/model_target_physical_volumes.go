@@ -11,29 +11,29 @@ import (
 
 // 物理分区
 type TargetPhysicalVolumes struct {
+
 	// 分区类型
-
 	DeviceUse *TargetPhysicalVolumesDeviceUse `json:"device_use,omitempty"`
+
 	// 文件系统
-
 	FileSystem *string `json:"file_system,omitempty"`
+
 	// 编号
-
 	Index *int32 `json:"index,omitempty"`
+
 	// 挂载点
-
 	MountPoint *string `json:"mount_point,omitempty"`
+
 	// 名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 大小
-
 	Size *int64 `json:"size,omitempty"`
+
 	// 使用大小
-
 	UsedSize *int64 `json:"used_size,omitempty"`
-	// uuid
 
+	// uuid
 	Uuid *string `json:"uuid,omitempty"`
 }
 

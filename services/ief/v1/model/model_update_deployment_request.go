@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateDeploymentRequest struct {
+
 	// 铂金版实例ID，专业版实例为空值
-
 	IefInstanceId *string `json:"ief-instance-id,omitempty"`
-	// 应用部署ID
 
+	// 应用部署ID
 	DeploymentId string `json:"deployment_id"`
 
 	Body *UpdateDeployment `json:"body,omitempty"`

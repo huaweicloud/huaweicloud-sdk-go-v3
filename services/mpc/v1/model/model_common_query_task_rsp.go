@@ -7,8 +7,8 @@ import (
 )
 
 type CommonQueryTaskRsp struct {
-	// 任务总数
 
+	// 任务总数
 	Total *int32 `json:"total,omitempty"`
 }
 

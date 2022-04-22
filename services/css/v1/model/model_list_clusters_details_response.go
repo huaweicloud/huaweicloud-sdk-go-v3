@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListClustersDetailsResponse struct {
-	// 集群对象列表。
 
+	// 集群对象列表。
 	Clusters       *[]ClusterList `json:"clusters,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

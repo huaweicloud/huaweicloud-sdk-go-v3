@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListDomainNotAddedProjectsV4Response struct {
+
 	// 项目信息列表
-
 	Projects *[]ListDomainNotAddedProjectsV4ResponseBodyProjects `json:"projects,omitempty"`
-	// 总数
 
+	// 总数
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

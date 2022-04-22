@@ -8,14 +8,14 @@ import (
 
 // SMN数据源配置内容
 type SmnContentRsp struct {
+
 	// 项目id
-
 	ProjectId *string `json:"projectId,omitempty"`
+
 	// 租户的AK
-
 	Ak *string `json:"ak,omitempty"`
-	// 租户的SK
 
+	// 租户的SK
 	Sk *string `json:"sk,omitempty"`
 }
 

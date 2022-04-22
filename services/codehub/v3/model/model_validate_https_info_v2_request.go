@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ValidateHttpsInfoV2Request struct {
-	// 用户iam_user_uuid
 
+	// 用户iam_user_uuid
 	IamUserUuid string `json:"iam_user_uuid"`
 
 	Body *PasswordRequest `json:"body,omitempty"`

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListStructTemplateResponse struct {
-	// 查询的自定义结构化模板数组
 
+	// 查询的自定义结构化模板数组
 	Results        *[]StructTemplateModel `json:"results,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

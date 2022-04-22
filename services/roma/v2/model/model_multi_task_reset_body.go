@@ -7,8 +7,8 @@ import (
 )
 
 type MultiTaskResetBody struct {
-	// 任务重置开始时间，UTC时间戳，允许为空
 
+	// 任务重置开始时间，UTC时间戳，允许为空
 	DateFrom *int64 `json:"date_from,omitempty"`
 }
 

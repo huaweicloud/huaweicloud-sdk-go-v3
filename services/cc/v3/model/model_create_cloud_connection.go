@@ -11,17 +11,17 @@ import (
 
 // 创建云连接实例的详细信息。
 type CreateCloudConnection struct {
+
 	// 云连接实例的名字。
-
 	Name string `json:"name"`
+
 	// 云连接实例的描述。
-
 	Description *string `json:"description,omitempty"`
+
 	// 云连接实例所属的企业项目ID。
-
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-	// 云连接使用场景。|- VPC：虚拟私有云。 ER：虚拟路由器。
 
+	// 云连接使用场景。|- VPC：虚拟私有云。 ER：虚拟路由器。
 	UsedScene *CreateCloudConnectionUsedScene `json:"used_scene,omitempty"`
 }
 

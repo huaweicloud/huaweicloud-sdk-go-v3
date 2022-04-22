@@ -7,11 +7,11 @@ import (
 )
 
 type UpdateChildUserNickNameRequestBody struct {
+
 	// 用户昵称
-
 	NickName string `json:"nick_name"`
-	// 用户id
 
+	// 用户id
 	UserId string `json:"user_id"`
 }
 

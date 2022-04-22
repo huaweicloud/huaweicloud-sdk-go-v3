@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ListKeypairsRequest struct {
+
 	// 查询返回keypair列表当前页面的数量。 取值范围：0~1000。
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 偏移量。 当前偏移量，默认为0。
-
 	Offset *int32 `json:"offset,omitempty"`
-	// 根据名称查询keypair列表。
 
+	// 根据名称查询keypair列表。
 	Name *string `json:"name,omitempty"`
 }
 

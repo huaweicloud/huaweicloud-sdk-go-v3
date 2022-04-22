@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListDbUsersResponse struct {
+
 	// 总数
-
 	Total *int32 `json:"total,omitempty"`
-	// 数据库用户列表
 
+	// 数据库用户列表
 	DbUsers        *[]DbUser `json:"db_users,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

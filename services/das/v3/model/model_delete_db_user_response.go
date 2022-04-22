@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteDbUserResponse struct {
-	// 删除结果，删除成功返回OK
 
+	// 删除结果，删除成功返回OK
 	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

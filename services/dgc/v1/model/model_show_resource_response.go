@@ -14,15 +14,15 @@ type ShowResourceResponse struct {
 	Name *string `json:"name,omitempty"`
 
 	Type *ShowResourceResponseType `json:"type,omitempty"`
-	// 资源文件所在OBS路径
 
+	// 资源文件所在OBS路径
 	Location *string `json:"location,omitempty"`
 
 	DependFiles *[]string `json:"dependFiles,omitempty"`
 
 	Desc *string `json:"desc,omitempty"`
-	// 资源所在目录
 
+	// 资源所在目录
 	Directory      *string `json:"directory,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

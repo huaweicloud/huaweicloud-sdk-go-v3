@@ -7,11 +7,11 @@ import (
 )
 
 type AgentSwitchRequest struct {
+
 	// 审计agent的ID
-
 	AgentId string `json:"agent_id"`
-	// Agent开关状态 1：开启 0：关闭
 
+	// Agent开关状态 1：开启 0：关闭
 	Status int32 `json:"status"`
 }
 

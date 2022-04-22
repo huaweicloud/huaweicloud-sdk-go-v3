@@ -12,6 +12,7 @@ import (
 )
 
 type UploadProtocolMappingsRequestBody struct {
+
 	// 上传协议映射文件。当前仅支持xlsx/xls文件格式，且文件最大行数为10000行。
 	File *def.FilePart `json:"file"`
 }

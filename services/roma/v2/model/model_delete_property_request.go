@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type DeletePropertyRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
+
 	// 服务ID
-
 	ServiceId string `json:"service_id"`
-	// 属性/请求属性/响应属性ID
 
+	// 属性/请求属性/响应属性ID
 	PropertyId int32 `json:"property_id"`
 }
 

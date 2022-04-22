@@ -11,26 +11,26 @@ import (
 
 // Request Object
 type ListProcessesRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
+
 	// 数据库用户ID
-
 	DbUserId string `json:"db_user_id"`
+
 	// 用户
-
 	User *string `json:"user,omitempty"`
+
 	// 数据库
-
 	Database *string `json:"database,omitempty"`
+
 	// 偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
-
 	Offset *int32 `json:"offset,omitempty"`
+
 	// 每页记录数，默认为20，最大取值100。
-
 	Limit *int32 `json:"limit,omitempty"`
-	// 语言
 
+	// 语言
 	XLanguage *ListProcessesRequestXLanguage `json:"X-Language,omitempty"`
 }
 

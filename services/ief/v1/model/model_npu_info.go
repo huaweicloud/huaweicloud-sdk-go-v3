@@ -7,17 +7,17 @@ import (
 )
 
 type NpuInfo struct {
+
 	// NPU名称
-
 	Name *string `json:"name,omitempty"`
+
 	// NPU类型
-
 	Type *string `json:"type,omitempty"`
+
 	// NPU memory大小
-
 	Capacity *string `json:"capacity,omitempty"`
-	// NPU驱动版本
 
+	// NPU驱动版本
 	DriverVersion *string `json:"driver_version,omitempty"`
 }
 

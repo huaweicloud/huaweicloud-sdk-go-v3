@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListQueryStructuredLogsResponse struct {
-	// 日志信息。
 
+	// 日志信息。
 	StructLogs     *[]StructLogContents `json:"struct_logs,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

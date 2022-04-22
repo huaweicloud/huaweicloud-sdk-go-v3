@@ -7,14 +7,14 @@ import (
 )
 
 type BasePathDto struct {
+
 	// 节点日志根目录
-
 	LogBasePath *string `json:"log_base_path,omitempty"`
+
 	// 节点配置根目录
-
 	ConfigBasePath *string `json:"config_base_path,omitempty"`
-	// 节点数据存储根目录
 
+	// 节点数据存储根目录
 	DbBasePath *string `json:"db_base_path,omitempty"`
 }
 

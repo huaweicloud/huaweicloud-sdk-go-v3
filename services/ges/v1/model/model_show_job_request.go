@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowJobRequest struct {
+
 	// 图ID。
-
 	GraphId string `json:"graph_id"`
-	// Job ID。
 
+	// Job ID。
 	JobId string `json:"job_id"`
 }
 

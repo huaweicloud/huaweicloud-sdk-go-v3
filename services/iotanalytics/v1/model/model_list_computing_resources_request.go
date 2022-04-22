@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ListComputingResourcesRequest struct {
+
 	// 计算资源名称。
-
 	ComputingResourceName *string `json:"computing_resource_name,omitempty"`
+
 	// 当前偏移量，默认为0。
-
 	Offset *int32 `json:"offset,omitempty"`
-	// 每页显示的最大作业个数，范围: [1, 100]。默认值：10。
 
+	// 每页显示的最大作业个数，范围: [1, 100]。默认值：10。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

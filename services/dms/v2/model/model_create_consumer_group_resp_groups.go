@@ -7,11 +7,11 @@ import (
 )
 
 type CreateConsumerGroupRespGroups struct {
+
 	// 消费组的ID。
-
 	Id *string `json:"id,omitempty"`
-	// 消费组的名称。
 
+	// 消费组的名称。
 	Name *string `json:"name,omitempty"`
 }
 

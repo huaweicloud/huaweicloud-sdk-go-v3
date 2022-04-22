@@ -9,8 +9,8 @@ import (
 // Response Object
 type ListStacksResponse struct {
 	Stack *StacksTags `json:"stack,omitempty"`
-	// 状态
 
+	// 状态
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

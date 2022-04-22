@@ -7,8 +7,8 @@ import (
 )
 
 type ErrorDetailInfo struct {
-	// 批量操作失败的资源的详情信息
 
+	// 批量操作失败的资源的详情信息
 	Failed *[]ErrorCaseInfoBean `json:"failed,omitempty"`
 }
 

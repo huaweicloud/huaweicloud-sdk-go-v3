@@ -10,11 +10,11 @@ import (
 )
 
 type Follow302StatusBody struct {
+
 	// 加速域名id。获取方法请参见查询加速域名。
-
 	DomainId *string `json:"domain_id,omitempty"`
-	// follow302状态（\"off\"/\"on\"）
 
+	// follow302状态（\"off\"/\"on\"）
 	FollowStatus *Follow302StatusBodyFollowStatus `json:"follow_status,omitempty"`
 }
 

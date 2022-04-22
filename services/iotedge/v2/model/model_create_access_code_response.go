@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateAccessCodeResponse struct {
-	// 设备接入码
 
+	// 设备接入码
 	AccessCode     *string `json:"access_code,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

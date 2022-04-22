@@ -11,11 +11,11 @@ import (
 
 //
 type UpdateFirewallRuleResp struct {
+
 	// 网络ACL ID
-
 	Id string `json:"id"`
-	// 网络ACL状态。
 
+	// 网络ACL状态。
 	Status UpdateFirewallRuleRespStatus `json:"status"`
 
 	EgressFirewallPolicy *FirewallPolicy `json:"egress_firewall_policy"`

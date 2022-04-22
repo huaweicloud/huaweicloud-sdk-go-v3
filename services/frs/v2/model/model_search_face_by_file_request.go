@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type SearchFaceByFileRequest struct {
-	// 人脸库名称。
 
+	// 人脸库名称。
 	FaceSetName string `json:"face_set_name"`
 
 	Body *SearchFaceByFileRequestBody `json:"body,omitempty" type:"multipart"`

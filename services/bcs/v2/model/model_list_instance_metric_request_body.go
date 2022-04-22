@@ -8,14 +8,14 @@ import (
 
 // BCS组织实例监控数据详情查询请求结构
 type ListInstanceMetricRequestBody struct {
+
 	// 实体类型，[可选值如下 org     # 节点组织 plugin  # 插件](tag:online) 默认为org
-
 	Type string `json:"type"`
+
 	// 所属实体的名称
-
 	EntityName string `json:"entity_name"`
-	// 具体实例的名称
 
+	// 具体实例的名称
 	InstanceName string `json:"instance_name"`
 }
 

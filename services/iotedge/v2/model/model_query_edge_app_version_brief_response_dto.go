@@ -10,35 +10,35 @@ import (
 )
 
 type QueryEdgeAppVersionBriefResponseDto struct {
+
 	// 应用ID
-
 	EdgeAppId *string `json:"edge_app_id,omitempty"`
+
 	// 应用名称
-
 	Version *string `json:"version,omitempty"`
+
 	// 应用描述
-
 	Description *string `json:"description,omitempty"`
+
 	// 部署类型docker|process
-
 	DeployType *string `json:"deploy_type,omitempty"`
+
 	// 创建时间
-
 	CreateTime *string `json:"create_time,omitempty"`
+
 	// 最后一次修改时间
-
 	UpdateTime *string `json:"update_time,omitempty"`
+
 	// 应用版本状态
-
 	State *QueryEdgeAppVersionBriefResponseDtoState `json:"state,omitempty"`
+
 	// 架构
-
 	Arch *[]string `json:"arch,omitempty"`
+
 	// 发布时间
-
 	PublishTime *string `json:"publish_time,omitempty"`
-	// 下线时间
 
+	// 下线时间
 	OffShelfTime *string `json:"off_shelf_time,omitempty"`
 }
 

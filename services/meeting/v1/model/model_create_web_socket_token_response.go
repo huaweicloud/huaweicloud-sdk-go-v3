@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateWebSocketTokenResponse struct {
-	// websocket建链Token。
 
+	// websocket建链Token。
 	WebSocketToken *string `json:"webSocketToken,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

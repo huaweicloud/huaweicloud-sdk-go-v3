@@ -8,11 +8,11 @@ import (
 
 // 会议与会者CPU QoS数据，当qosType = cpu 时有效。
 type QosCpuInfo struct {
+
 	// 华为云会议最大CPU使用率。
-
 	ClientCpuMax *[]QosDataElement `json:"client_cpu_max,omitempty"`
-	// 系统最大CPU使用率。
 
+	// 系统最大CPU使用率。
 	SystemCpuMax *[]QosDataElement `json:"system_cpu_max,omitempty"`
 }
 

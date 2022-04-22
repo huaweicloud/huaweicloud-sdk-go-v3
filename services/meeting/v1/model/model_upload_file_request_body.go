@@ -12,6 +12,7 @@ import (
 )
 
 type UploadFileRequestBody struct {
+
 	// 需要上传的文件
 	File *def.FilePart `json:"file"`
 }

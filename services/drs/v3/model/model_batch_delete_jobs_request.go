@@ -11,8 +11,8 @@ import (
 
 // Request Object
 type BatchDeleteJobsRequest struct {
-	// 请求语言类型
 
+	// 请求语言类型
 	XLanguage *BatchDeleteJobsRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchDeleteJobReq `json:"body,omitempty"`

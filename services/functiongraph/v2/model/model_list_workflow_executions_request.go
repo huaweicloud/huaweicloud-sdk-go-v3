@@ -11,20 +11,20 @@ import (
 
 // Request Object
 type ListWorkflowExecutionsRequest struct {
+
 	// 函数工作流ID
-
 	WorkflowId string `json:"workflow_id"`
+
 	// 分页查询，每页显示的条目数量，最大数量200，超过200后只返回200
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 需要过滤的流程实例状态
-
 	Status *ListWorkflowExecutionsRequestStatus `json:"status,omitempty"`
+
 	// 查询开始时间，UTC时间。若起始时间未填写，以终止时间前推3天为起始时间
-
 	StartTime *string `json:"start_time,omitempty"`
-	// 查询开始时间，UTC时间。若终止时间未填写，以起始时间后退3天未终止时间。若均未填写，默认查询最近3天数据。
 
+	// 查询开始时间，UTC时间。若终止时间未填写，以起始时间后退3天未终止时间。若均未填写，默认查询最近3天数据。
 	EndTime *string `json:"end_time,omitempty"`
 }
 

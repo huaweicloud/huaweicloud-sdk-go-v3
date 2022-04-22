@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateEnvironmentV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 环境的ID
 
+	// 环境的ID
 	EnvId string `json:"env_id"`
 
 	Body *EnvCreate `json:"body,omitempty"`

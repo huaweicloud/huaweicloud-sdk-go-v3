@@ -11,44 +11,44 @@ import (
 
 // 查询迁移任务列表
 type MigrationTaskList struct {
+
 	// 迁移任务ID。
-
 	TaskId *string `json:"task_id,omitempty"`
+
 	// 迁移任务名称。
-
 	TaskName *string `json:"task_name,omitempty"`
+
 	// 迁移任务状态，这个字段的值包括：SUCCESS, FAILED, MIGRATING，TERMINATED
-
 	Status *MigrationTaskListStatus `json:"status,omitempty"`
+
 	// 迁移任务类型,包括备份文件导入和在线迁移两种类型。
-
 	MigrationType *MigrationTaskListMigrationType `json:"migration_type,omitempty"`
+
 	// 迁移方式，包括全量迁移和增量迁移两种类型。
-
 	MigrationMethod *MigrationTaskListMigrationMethod `json:"migration_method,omitempty"`
+
 	// 迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单
-
 	EcsTenantPrivateIp *string `json:"ecs_tenant_private_ip,omitempty"`
+
 	// 数据源，格式为ip:port或者桶名。
-
 	DataSource *string `json:"data_source,omitempty"`
+
 	// 源实例名称，若自建redis则为空。
-
 	SourceInstanceName *string `json:"source_instance_name,omitempty"`
+
 	// 源实例ID，若自建redis则为空。
-
 	SourceInstanceId *string `json:"source_instance_id,omitempty"`
+
 	// 目标redis地址，格式为ip:port。
-
 	TargetInstanceAddrs *string `json:"target_instance_addrs,omitempty"`
+
 	// 目标实例名称。
-
 	TargetInstanceName *string `json:"target_instance_name,omitempty"`
+
 	// 目标实例ID。
-
 	TargetInstanceId *string `json:"target_instance_id,omitempty"`
-	// 迁移任务创建时间
 
+	// 迁移任务创建时间
 	CreatedAt *string `json:"created_at,omitempty"`
 }
 

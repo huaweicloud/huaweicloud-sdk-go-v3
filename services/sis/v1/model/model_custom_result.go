@@ -8,8 +8,8 @@ import (
 
 // 调用成功表示识别结果，调用失败时无此字段。
 type CustomResult struct {
-	// 语音数据， Base64编码格式返回。
 
+	// 语音数据， Base64编码格式返回。
 	Data string `json:"data"`
 }
 

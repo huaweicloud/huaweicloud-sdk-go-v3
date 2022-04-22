@@ -7,11 +7,11 @@ import (
 )
 
 type UserInstantIncidentMsgV2 struct {
+
 	// 工单id
-
 	IncidentId *string `json:"incident_id,omitempty"`
-	// 留言列表
 
+	// 留言列表
 	MessageList *[]QueryMessageInfoV2 `json:"message_list,omitempty"`
 }
 

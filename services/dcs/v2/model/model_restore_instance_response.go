@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type RestoreInstanceResponse struct {
-	// 恢复记录ID。
 
+	// 恢复记录ID。
 	RestoreId      *string `json:"restore_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

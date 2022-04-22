@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListConfsResponse struct {
-	// 配置文件列表。
 
+	// 配置文件列表。
 	Confs          *[]Confs `json:"confs,omitempty"`
 	HttpStatusCode int      `json:"-"`
 }

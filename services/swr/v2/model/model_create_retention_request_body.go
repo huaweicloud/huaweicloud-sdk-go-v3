@@ -7,11 +7,11 @@ import (
 )
 
 type CreateRetentionRequestBody struct {
+
 	// 回收规则匹配策略，固定为\"or\"
-
 	Algorithm string `json:"algorithm"`
-	// 镜像老化规则
 
+	// 镜像老化规则
 	Rules []Rule `json:"rules"`
 }
 

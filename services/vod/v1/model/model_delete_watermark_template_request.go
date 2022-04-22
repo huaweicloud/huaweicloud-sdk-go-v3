@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteWatermarkTemplateRequest struct {
-	// 水印模板配置id
 
+	// 水印模板配置id
 	Id string `json:"id"`
 }
 

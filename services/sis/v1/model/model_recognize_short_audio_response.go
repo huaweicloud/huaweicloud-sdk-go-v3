@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type RecognizeShortAudioResponse struct {
-	// 服务内部的令牌，可用于在日志中追溯具体流程，调用失败无此字段。  在某些错误情况下可能没有此令牌字符串。
 
+	// 服务内部的令牌，可用于在日志中追溯具体流程，调用失败无此字段。  在某些错误情况下可能没有此令牌字符串。
 	TraceId *string `json:"trace_id,omitempty"`
 
 	Result         *Result `json:"result,omitempty"`

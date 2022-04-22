@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListServicesResponse struct {
+
 	// 满足条件的端点个数
-
 	Count *int64 `json:"count,omitempty"`
-	// 服务列表
 
+	// 服务列表
 	Services       *[]ServiceRespDetail `json:"services,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

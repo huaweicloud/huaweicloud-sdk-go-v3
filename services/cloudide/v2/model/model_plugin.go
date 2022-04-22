@@ -7,11 +7,11 @@ import (
 )
 
 type Plugin struct {
+
 	// 插件属性
-
 	Attribute *string `json:"attribute,omitempty"`
-	// 插件名
 
+	// 插件名
 	Name *string `json:"name,omitempty"`
 }
 

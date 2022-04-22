@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListAz2MigrateResponse struct {
-	// 可用区具体信息。
 
+	// 可用区具体信息。
 	AzList         *[]Az2Migrate `json:"az_list,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

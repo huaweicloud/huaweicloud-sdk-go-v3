@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type FreezeSubCustomersResponse struct {
-	// 错误原因，只有部分失败的时候才返回。 具体请参见表1。
 
+	// 错误原因，只有部分失败的时候才返回。 具体请参见表1。
 	ErrorDetails   *[]CustomerErrorDetail `json:"error_details,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

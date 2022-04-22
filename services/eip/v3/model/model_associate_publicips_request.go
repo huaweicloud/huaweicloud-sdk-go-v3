@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type AssociatePublicipsRequest struct {
-	// 弹性公网IP的ID
 
+	// 弹性公网IP的ID
 	PublicipId string `json:"publicip_id"`
 
 	Body *AssociatePublicipsRequestBody `json:"body,omitempty"`

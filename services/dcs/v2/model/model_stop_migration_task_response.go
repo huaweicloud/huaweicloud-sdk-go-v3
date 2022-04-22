@@ -11,41 +11,41 @@ import (
 
 // Response Object
 type StopMigrationTaskResponse struct {
+
 	// 迁移任务ID。
-
 	TaskId *string `json:"task_id,omitempty"`
+
 	// 迁移任务名称。
-
 	TaskName *string `json:"task_name,omitempty"`
+
 	// 迁移任务描述。
-
 	Description *string `json:"description,omitempty"`
+
 	// 迁移任务状态，这个字段的值包括：SUCCESS, FAILED, MIGRATING，TERMINATED。
-
 	Status *StopMigrationTaskResponseStatus `json:"status,omitempty"`
+
 	// 迁移任务类型,包括备份文件导入和在线迁移两种类型。
-
 	MigrationType *StopMigrationTaskResponseMigrationType `json:"migration_type,omitempty"`
+
 	// 迁移方式，包括全量迁移和增量迁移两种类型。
-
 	MigrationMethod *StopMigrationTaskResponseMigrationMethod `json:"migration_method,omitempty"`
-	// 迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单
 
+	// 迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单
 	EcsTenantPrivateIp *string `json:"ecs_tenant_private_ip,omitempty"`
 
 	BackupFiles *BackupFilesBody `json:"backup_files,omitempty"`
-	// 网络类型，包括vpc和vpn两种类型。
 
+	// 网络类型，包括vpc和vpn两种类型。
 	NetworkType *StopMigrationTaskResponseNetworkType `json:"network_type,omitempty"`
 
 	SourceInstance *SourceInstanceBody `json:"source_instance,omitempty"`
 
 	TargetInstance *TargetInstanceBody `json:"target_instance,omitempty"`
+
 	// 迁移任务创建时间。
-
 	CreatedAt *string `json:"created_at,omitempty"`
-	// 迁移任务完成时间。
 
+	// 迁移任务完成时间。
 	UpdatedAt      *string `json:"updated_at,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

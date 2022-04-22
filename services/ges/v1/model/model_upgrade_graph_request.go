@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type UpgradeGraphRequest struct {
+
 	// 图ID。
-
 	GraphId string `json:"graph_id"`
-	// 图actionId
 
+	// 图actionId
 	ActionId UpgradeGraphRequestActionId `json:"action_id"`
 
 	Body *UpgradeGraphReq `json:"body,omitempty"`

@@ -7,8 +7,8 @@ import (
 )
 
 type DeleteConfReq struct {
-	// 配置文件名称。
 
+	// 配置文件名称。
 	Name string `json:"name"`
 }
 

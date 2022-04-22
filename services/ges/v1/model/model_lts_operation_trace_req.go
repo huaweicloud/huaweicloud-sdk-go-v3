@@ -7,11 +7,11 @@ import (
 )
 
 type LtsOperationTraceReq struct {
+
 	// 是否开启图审计，默认“false”。
-
 	EnableAudit *bool `json:"enableAudit,omitempty"`
-	// LTS日志组名称。
 
+	// LTS日志组名称。
 	AuditLogGroupName *string `json:"auditLogGroupName,omitempty"`
 }
 

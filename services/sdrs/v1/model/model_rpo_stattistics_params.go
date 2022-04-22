@@ -11,23 +11,23 @@ import (
 
 // rpo超标记录
 type RpoStattisticsParams struct {
+
 	// 资源的RPO超标趋势记录id。
-
 	Id string `json:"id"`
+
 	// 资源的RPO超标趋势记录打点时间。默认格式为：\"yyyy-MM-dd HH:mm\"。
-
 	PointTime string `json:"point_time"`
+
 	// RPO超标的资源个数。
-
 	ResourceNum int32 `json:"resource_num"`
+
 	// RPO超标的资源类型。replication：表示查询复制对的RPO超标趋势记录。
-
 	ResourceType RpoStattisticsParamsResourceType `json:"resource_type"`
+
 	// 创建时间。默认格式为：\"yyyy-MM-dd HH:mm:ss.SSS\"，例：\"2019-04-01 12:00:00.000\"。
-
 	CreatedAt string `json:"created_at"`
-	// 更新时间。默认格式为：\"yyyy-MM-dd HH:mm:ss.SSS\"，例：\"2019-04-01 12:00:00.000\"。
 
+	// 更新时间。默认格式为：\"yyyy-MM-dd HH:mm:ss.SSS\"，例：\"2019-04-01 12:00:00.000\"。
 	UpdatedAt string `json:"updated_at"`
 }
 

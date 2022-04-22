@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListVersionAliasesRequest struct {
-	// 函数的URN。
 
+	// 函数的URN。
 	FunctionUrn string `json:"function_urn"`
 }
 

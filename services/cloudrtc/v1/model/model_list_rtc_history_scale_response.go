@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListRtcHistoryScaleResponse struct {
-	// 时间戳及相应时间的指标数值列表
 
+	// 时间戳及相应时间的指标数值列表
 	Scale *[]RtcHistoryScaleTimeValue `json:"scale,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

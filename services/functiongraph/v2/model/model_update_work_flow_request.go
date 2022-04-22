@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateWorkFlowRequest struct {
-	// 函数工作流ID
 
+	// 函数工作流ID
 	WorkflowId string `json:"workflow_id"`
 
 	Body *UpdateWorkflowRequestBody `json:"body,omitempty"`

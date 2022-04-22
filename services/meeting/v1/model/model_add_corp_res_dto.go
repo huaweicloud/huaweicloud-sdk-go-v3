@@ -8,8 +8,8 @@ import (
 
 // 企业的资源信息
 type AddCorpResDto struct {
-	// 企业待添加的资源列表
 
+	// 企业待添加的资源列表
 	Resource *[]ResourceDto `json:"resource,omitempty"`
 }
 

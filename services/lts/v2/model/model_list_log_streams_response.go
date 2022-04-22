@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListLogStreamsResponse struct {
-	// 日志流数组
 
+	// 日志流数组
 	LogStreams     *[]ListLogStreamsResponseBody1LogStreams `json:"log_streams,omitempty"`
 	HttpStatusCode int                                      `json:"-"`
 }

@@ -8,11 +8,11 @@ import (
 
 // 集群连接信息
 type ClusterLinks struct {
+
 	// 关系
-
 	Rel *string `json:"rel,omitempty"`
-	// 链接地址
 
+	// 链接地址
 	Href *string `json:"href,omitempty"`
 }
 

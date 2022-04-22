@@ -8,8 +8,8 @@ import (
 
 // 查询指标请求
 type GetMetricsRequest struct {
-	// 查询类型
 
+	// 查询类型
 	Type string `json:"type"`
 
 	Transform *TransformMetrics `json:"transform,omitempty"`

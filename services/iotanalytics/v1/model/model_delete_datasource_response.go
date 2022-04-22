@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteDatasourceResponse struct {
-	// 删除数据源的id
 
+	// 删除数据源的id
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

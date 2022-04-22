@@ -11,14 +11,14 @@ import (
 
 // app自动录制模式
 type AppAutoRecordMode struct {
+
 	// 录制模式。 - AUTO_RECORD_OFF：关闭自动录制。 - AUTO_INDIVIDUAL_RECORD：开启单流自动录制，此时record_rule_id必须非空。
-
 	Mode AppAutoRecordModeMode `json:"mode"`
+
 	// 录制规则id。
-
 	RecordRuleId *string `json:"record_rule_id,omitempty"`
-	// 更新时间，形如“2006-01-02T15:04:05.075Z”，时区为：UTC。
 
+	// 更新时间，形如“2006-01-02T15:04:05.075Z”，时区为：UTC。
 	UpdateTime *string `json:"update_time,omitempty"`
 }
 

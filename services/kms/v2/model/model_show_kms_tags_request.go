@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowKmsTagsRequest struct {
-	// 密钥ID
 
+	// 密钥ID
 	KeyId string `json:"key_id"`
 }
 

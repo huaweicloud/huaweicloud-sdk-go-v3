@@ -7,8 +7,8 @@ import (
 )
 
 type AddSubsetsToGatewayRequestBody struct {
-	// 待添加子设备ID列表，且设备需是普通设备，自动向下取整
 
+	// 待添加子设备ID列表，且设备需是普通设备，自动向下取整
 	Resources []int32 `json:"resources"`
 }
 

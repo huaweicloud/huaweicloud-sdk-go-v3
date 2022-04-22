@@ -7,11 +7,11 @@ import (
 )
 
 type QueryConnectionsResponse struct {
+
 	// 连接到该实例或节点的客户端IP地址。
-
 	ClientIp string `json:"client_ip"`
-	// 该IP对应的连接数。
 
+	// 该IP对应的连接数。
 	Count int32 `json:"count"`
 }
 

@@ -19,7 +19,12 @@ func CssClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//该接口用于创建集群V2。
+// 创建集群V2
+//
+// 该接口用于创建集群V2。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CssClient) CreateCluster(request *model.CreateClusterRequest) (*model.CreateClusterResponse, error) {
 	requestDef := GenReqDefForCreateCluster()
 
@@ -30,7 +35,12 @@ func (c *CssClient) CreateCluster(request *model.CreateClusterRequest) (*model.C
 	}
 }
 
-//该接口用于重启集群。
+// 重启集群V2
+//
+// 该接口用于重启集群。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CssClient) RestartCluster(request *model.RestartClusterRequest) (*model.RestartClusterResponse, error) {
 	requestDef := GenReqDefForRestartCluster()
 
@@ -41,7 +51,12 @@ func (c *CssClient) RestartCluster(request *model.RestartClusterRequest) (*model
 	}
 }
 
-//该接口用于滚动重启。
+// 滚动重启
+//
+// 该接口用于滚动重启。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CssClient) RollingRestart(request *model.RollingRestartRequest) (*model.RollingRestartResponse, error) {
 	requestDef := GenReqDefForRollingRestart()
 
@@ -52,7 +67,12 @@ func (c *CssClient) RollingRestart(request *model.RollingRestartRequest) (*model
 	}
 }
 
-//该接口用于打开自动创建快照功能。
+// 开启自动创建快照功能
+//
+// 该接口用于打开自动创建快照功能。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CssClient) StartAutoCreateSnapshots(request *model.StartAutoCreateSnapshotsRequest) (*model.StartAutoCreateSnapshotsResponse, error) {
 	requestDef := GenReqDefForStartAutoCreateSnapshots()
 
@@ -63,7 +83,12 @@ func (c *CssClient) StartAutoCreateSnapshots(request *model.StartAutoCreateSnaps
 	}
 }
 
-//该接口用于关闭自动创建快照功能。
+// 关闭自动创建快照功能
+//
+// 该接口用于关闭自动创建快照功能。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CssClient) StopAutoCreateSnapshots(request *model.StopAutoCreateSnapshotsRequest) (*model.StopAutoCreateSnapshotsResponse, error) {
 	requestDef := GenReqDefForStopAutoCreateSnapshots()
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowTenantMetricRequest struct {
-	// 时间段，单位为分钟
 
+	// 时间段，单位为分钟
 	Period *string `json:"period,omitempty"`
 }
 

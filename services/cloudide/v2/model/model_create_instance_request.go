@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateInstanceRequest struct {
-	// 租户id（对应华为云帐号的domainId）
 
+	// 租户id（对应华为云帐号的domainId）
 	OrgId string `json:"org_id"`
 
 	Body *InstanceParam `json:"body,omitempty"`

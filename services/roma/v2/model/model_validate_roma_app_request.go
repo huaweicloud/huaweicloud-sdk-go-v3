@@ -8,17 +8,17 @@ import (
 
 // Request Object
 type ValidateRomaAppRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
+
 	// 应用名称，不支持模糊匹配
-
 	Name *string `json:"name,omitempty"`
+
 	// 应用ID
-
 	Id *string `json:"id,omitempty"`
-	// 应用key
 
+	// 应用key
 	Key *string `json:"key,omitempty"`
 }
 

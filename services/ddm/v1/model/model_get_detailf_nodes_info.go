@@ -8,14 +8,14 @@ import (
 
 // nodes参数说明。
 type GetDetailfNodesInfo struct {
+
 	// DDM实例节点状态。
-
 	Status string `json:"status"`
+
 	// DDM实例节点port。
-
 	Port string `json:"port"`
-	// DDM实例节点IP。
 
+	// DDM实例节点IP。
 	Ip string `json:"ip"`
 }
 

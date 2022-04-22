@@ -8,20 +8,20 @@ import (
 
 // Response Object
 type CreateKeypairResponse struct {
+
 	// 密钥对名称。
-
 	Name *string `json:"name,omitempty"`
+
 	// 公钥。
-
 	PublicKey *string `json:"public_key,omitempty"`
+
 	// 私钥。
-
 	PrivateKey *string `json:"private_key,omitempty"`
+
 	// 用户ID。
-
 	UserId *string `json:"user_id,omitempty"`
-	// 指纹。
 
+	// 指纹。
 	Fingerprint    *string `json:"fingerprint,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

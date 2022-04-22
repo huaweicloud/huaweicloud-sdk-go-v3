@@ -11,44 +11,44 @@ import (
 
 // 在线迁移任务列表信息体
 type JobInfo struct {
+
 	// 任务id
-
 	Id string `json:"id"`
+
 	// 任务名称
-
 	Name string `json:"name"`
+
 	// 任务状态
-
 	Status JobInfoStatus `json:"status"`
+
 	// 任务描述
-
 	Description string `json:"description"`
+
 	// 任务创建时间
-
 	CreateTime string `json:"create_time"`
+
 	// 引擎类型
-
 	EngineType JobInfoEngineType `json:"engine_type"`
+
 	// 网络类型
-
 	NetType JobInfoNetType `json:"net_type"`
+
 	// 计费字段
-
 	BillingTag bool `json:"billing_tag"`
+
 	// 迁移方向
-
 	JobDirection JobInfoJobDirection `json:"job_direction"`
+
 	// 迁移场景
-
 	DbUseType JobInfoDbUseType `json:"db_use_type"`
+
 	// 迁移模式
-
 	TaskType JobInfoTaskType `json:"task_type"`
+
 	// 子任务信息体
-
 	Children *[]ChildrenJobInfo `json:"children,omitempty"`
-	// 是否新框架
 
+	// 是否新框架
 	NodeNewFramework bool `json:"node_newFramework"`
 }
 

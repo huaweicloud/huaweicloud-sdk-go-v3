@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateScalingGroupResponse struct {
-	// 伸缩组ID
 
+	// 伸缩组ID
 	ScalingGroupId *string `json:"scaling_group_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

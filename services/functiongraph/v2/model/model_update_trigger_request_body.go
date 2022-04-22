@@ -10,8 +10,8 @@ import (
 )
 
 type UpdateTriggerRequestBody struct {
-	// 触发器状态
 
+	// 触发器状态
 	TriggerStatus UpdateTriggerRequestBodyTriggerStatus `json:"trigger_status"`
 }
 

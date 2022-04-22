@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateVpcepWhitelistRequest struct {
-	// 指定待更改的集群ID。
 
+	// 指定待更改的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *UpdateVpcepWhitelistReq `json:"body,omitempty"`

@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteEdgeApplicationVersionRequest struct {
+
 	// 应用版本,应用内版本唯一。
-
 	EdgeAppId string `json:"edge_app_id"`
-	// 应用版本ID，应用版本唯一。
 
+	// 应用版本ID，应用版本唯一。
 	Version string `json:"version"`
 }
 

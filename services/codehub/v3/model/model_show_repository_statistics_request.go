@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowRepositoryStatisticsRequest struct {
-	// 仓库的主键id
 
+	// 仓库的主键id
 	RepositoryId int32 `json:"repository_id"`
 
 	Body *ShowRepositoryStatisticsRequestBody `json:"body,omitempty"`

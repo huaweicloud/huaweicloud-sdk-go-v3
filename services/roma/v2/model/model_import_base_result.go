@@ -7,11 +7,11 @@ import (
 )
 
 type ImportBaseResult struct {
+
 	// 导入成功信息
-
 	Success *[]Success `json:"success,omitempty"`
-	// 导入失败信息
 
+	// 导入失败信息
 	Failure *[]Failure `json:"failure,omitempty"`
 
 	Swagger *Swagger `json:"swagger,omitempty"`

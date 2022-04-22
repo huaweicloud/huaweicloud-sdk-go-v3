@@ -9,8 +9,8 @@ import (
 // Response Object
 type ShowBatchTaskResponse struct {
 	Batchtask *Task `json:"batchtask,omitempty"`
-	// 子任务详情列表。
 
+	// 子任务详情列表。
 	TaskDetails *[]TaskDetail `json:"task_details,omitempty"`
 
 	Page           *Page `json:"page,omitempty"`

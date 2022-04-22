@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ResizeClusterRequest struct {
-	// 待调整大小的集群ID
 
+	// 待调整大小的集群ID
 	ClusterId string `json:"cluster_id"`
 
 	Body *ResizeClusterRequestBody `json:"body,omitempty"`

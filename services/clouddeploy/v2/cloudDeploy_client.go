@@ -19,7 +19,12 @@ func CloudDeployClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//通过模板新建部署任务cloudpipeline流水线调用
+// 通过模板新建部署任务
+//
+// 通过模板新建部署任务cloudpipeline流水线调用。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudDeployClient) CreateDeployTaskByTemplate(request *model.CreateDeployTaskByTemplateRequest) (*model.CreateDeployTaskByTemplateResponse, error) {
 	requestDef := GenReqDefForCreateDeployTaskByTemplate()
 
@@ -30,7 +35,12 @@ func (c *CloudDeployClient) CreateDeployTaskByTemplate(request *model.CreateDepl
 	}
 }
 
-//Delete Task by id
+// 删除部署任务
+//
+// 根据部署任务id删除部署任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudDeployClient) DeleteDeployTask(request *model.DeleteDeployTaskRequest) (*model.DeleteDeployTaskResponse, error) {
 	requestDef := GenReqDefForDeleteDeployTask()
 
@@ -41,7 +51,44 @@ func (c *CloudDeployClient) DeleteDeployTask(request *model.DeleteDeployTaskRequ
 	}
 }
 
-//Get Task Detail By Id
+// 根据开始时间和结束时间查询项目下指定任务的历史执行记录列表
+//
+// 根据开始时间和结束时间查询项目下指定任务的历史执行记录列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudDeployClient) ListDeployTaskHistoryByDate(request *model.ListDeployTaskHistoryByDateRequest) (*model.ListDeployTaskHistoryByDateResponse, error) {
+	requestDef := GenReqDefForListDeployTaskHistoryByDate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDeployTaskHistoryByDateResponse), nil
+	}
+}
+
+// 获取部署任务列表
+//
+// 查询项目下部署任务列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudDeployClient) ListDeployTasks(request *model.ListDeployTasksRequest) (*model.ListDeployTasksResponse, error) {
+	requestDef := GenReqDefForListDeployTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDeployTasksResponse), nil
+	}
+}
+
+// 获取部署任务详情
+//
+// 根据部署任务id获取部署任务详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudDeployClient) ShowDeployTaskDetail(request *model.ShowDeployTaskDetailRequest) (*model.ShowDeployTaskDetailResponse, error) {
 	requestDef := GenReqDefForShowDeployTaskDetail()
 
@@ -52,7 +99,12 @@ func (c *CloudDeployClient) ShowDeployTaskDetail(request *model.ShowDeployTaskDe
 	}
 }
 
-//Deploy Task Start
+// 启动部署任务
+//
+// 根据部署任务id启动部署任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudDeployClient) StartDeployTask(request *model.StartDeployTaskRequest) (*model.StartDeployTaskResponse, error) {
 	requestDef := GenReqDefForStartDeployTask()
 
@@ -63,7 +115,12 @@ func (c *CloudDeployClient) StartDeployTask(request *model.StartDeployTaskReques
 	}
 }
 
-//在指定主机组下新建主机
+// 新建主机
+//
+// 在指定主机组下新建主机。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudDeployClient) CreateDeploymentHost(request *model.CreateDeploymentHostRequest) (*model.CreateDeploymentHostResponse, error) {
 	requestDef := GenReqDefForCreateDeploymentHost()
 
@@ -74,7 +131,12 @@ func (c *CloudDeployClient) CreateDeploymentHost(request *model.CreateDeployment
 	}
 }
 
-//根据主机id删除主机
+// 删除主机
+//
+// 根据主机id删除主机。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudDeployClient) DeleteDeploymentHost(request *model.DeleteDeploymentHostRequest) (*model.DeleteDeploymentHostResponse, error) {
 	requestDef := GenReqDefForDeleteDeploymentHost()
 
@@ -85,7 +147,12 @@ func (c *CloudDeployClient) DeleteDeploymentHost(request *model.DeleteDeployment
 	}
 }
 
-//查询指定主机组下的主机列表
+// 查询主机列表
+//
+// 根据主机组id查询指定主机组下的主机列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudDeployClient) ListHosts(request *model.ListHostsRequest) (*model.ListHostsResponse, error) {
 	requestDef := GenReqDefForListHosts()
 
@@ -96,7 +163,12 @@ func (c *CloudDeployClient) ListHosts(request *model.ListHostsRequest) (*model.L
 	}
 }
 
-//根据主机id查询主机详情
+// 查询主机详情
+//
+// 根据主机id查询主机详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudDeployClient) ShowDeploymentHostDetail(request *model.ShowDeploymentHostDetailRequest) (*model.ShowDeploymentHostDetailResponse, error) {
 	requestDef := GenReqDefForShowDeploymentHostDetail()
 
@@ -107,7 +179,12 @@ func (c *CloudDeployClient) ShowDeploymentHostDetail(request *model.ShowDeployme
 	}
 }
 
-//修改主机信息
+// 修改主机
+//
+// 根据主机id修改主机信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudDeployClient) UpdateDeploymentHost(request *model.UpdateDeploymentHostRequest) (*model.UpdateDeploymentHostResponse, error) {
 	requestDef := GenReqDefForUpdateDeploymentHost()
 
@@ -118,7 +195,12 @@ func (c *CloudDeployClient) UpdateDeploymentHost(request *model.UpdateDeployment
 	}
 }
 
-//新建主机组
+// 新建主机组
+//
+// 在项目下新建主机组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudDeployClient) CreateDeploymentGroup(request *model.CreateDeploymentGroupRequest) (*model.CreateDeploymentGroupResponse, error) {
 	requestDef := GenReqDefForCreateDeploymentGroup()
 
@@ -129,7 +211,12 @@ func (c *CloudDeployClient) CreateDeploymentGroup(request *model.CreateDeploymen
 	}
 }
 
-//根据主机组id删除主机组
+// 删除主机组
+//
+// 根据主机组id删除主机组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudDeployClient) DeleteDeploymentGroup(request *model.DeleteDeploymentGroupRequest) (*model.DeleteDeploymentGroupResponse, error) {
 	requestDef := GenReqDefForDeleteDeploymentGroup()
 
@@ -140,7 +227,12 @@ func (c *CloudDeployClient) DeleteDeploymentGroup(request *model.DeleteDeploymen
 	}
 }
 
-//查询主机组列表
+// 查询主机组列表
+//
+// 按条件查询主机组列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudDeployClient) ListHostGroups(request *model.ListHostGroupsRequest) (*model.ListHostGroupsResponse, error) {
 	requestDef := GenReqDefForListHostGroups()
 
@@ -151,7 +243,12 @@ func (c *CloudDeployClient) ListHostGroups(request *model.ListHostGroupsRequest)
 	}
 }
 
-//根据主机组id查询主机组详情
+// 查询主机组
+//
+// 根据主机组id查询主机组详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudDeployClient) ShowDeploymentGroupDetail(request *model.ShowDeploymentGroupDetailRequest) (*model.ShowDeploymentGroupDetailResponse, error) {
 	requestDef := GenReqDefForShowDeploymentGroupDetail()
 
@@ -162,7 +259,12 @@ func (c *CloudDeployClient) ShowDeploymentGroupDetail(request *model.ShowDeploym
 	}
 }
 
-//修改主机组信息
+// 修改主机组
+//
+// 根据主机组id修改主机组信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CloudDeployClient) UpdateDeploymentGroup(request *model.UpdateDeploymentGroupRequest) (*model.UpdateDeploymentGroupResponse, error) {
 	requestDef := GenReqDefForUpdateDeploymentGroup()
 
@@ -170,5 +272,37 @@ func (c *CloudDeployClient) UpdateDeploymentGroup(request *model.UpdateDeploymen
 		return nil, err
 	} else {
 		return resp.(*model.UpdateDeploymentGroupResponse), nil
+	}
+}
+
+// 获取指定任务的部署任务执行成功率
+//
+// 获取指定任务的部署任务执行成功率
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudDeployClient) ListTaskSuccessRate(request *model.ListTaskSuccessRateRequest) (*model.ListTaskSuccessRateResponse, error) {
+	requestDef := GenReqDefForListTaskSuccessRate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTaskSuccessRateResponse), nil
+	}
+}
+
+// 获取指定项目的部署任务执行成功率
+//
+// 获取指定项目的部署任务执行成功率
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudDeployClient) ShowProjectSuccessRate(request *model.ShowProjectSuccessRateRequest) (*model.ShowProjectSuccessRateResponse, error) {
+	requestDef := GenReqDefForShowProjectSuccessRate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProjectSuccessRateResponse), nil
 	}
 }

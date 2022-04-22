@@ -15,6 +15,7 @@ import (
 )
 
 type ImportApiDefinitionsV2RequestBody struct {
+
 	// 是否创建新分组
 	IsCreateGroup *def.MultiPart `json:"is_create_group,omitempty"`
 

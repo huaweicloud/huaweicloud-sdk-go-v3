@@ -7,11 +7,11 @@ import (
 )
 
 type CreateTransferResponseBodyLogStreams struct {
+
 	// 日志流ID
-
 	LogStreamId string `json:"log_stream_id"`
-	// 日志流名称
 
+	// 日志流名称
 	LogStreamName string `json:"log_stream_name"`
 }
 

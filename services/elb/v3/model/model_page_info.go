@@ -8,14 +8,14 @@ import (
 
 // 分页信息
 type PageInfo struct {
+
 	// 分页查询结果中第一条记录的ID
-
 	PreviousMarker string `json:"previous_marker"`
+
 	// 分页查询结果中最后一条记录的ID。
-
 	NextMarker *string `json:"next_marker,omitempty"`
-	// 当前的记录数。
 
+	// 当前的记录数。
 	CurrentCount int32 `json:"current_count"`
 }
 

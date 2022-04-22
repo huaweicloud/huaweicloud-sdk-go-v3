@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateMemberResponse struct {
-	// 请求ID。  注：自动生成 。
 
+	// 请求ID。  注：自动生成 。
 	RequestId *string `json:"request_id,omitempty"`
 
 	Member         *Member `json:"member,omitempty"`

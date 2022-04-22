@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteVaultRequest struct {
-	// 存储库ID
 
+	// 存储库ID
 	VaultId string `json:"vault_id"`
 }
 

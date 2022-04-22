@@ -11,8 +11,8 @@ import (
 
 // Request Object
 type BatchStopJobsRequest struct {
-	// 请求语言类型
 
+	// 请求语言类型
 	XLanguage *BatchStopJobsRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchPauseJobReq `json:"body,omitempty"`

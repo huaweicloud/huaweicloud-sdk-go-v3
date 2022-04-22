@@ -8,8 +8,8 @@ import (
 
 // 分析任务
 type AnalysisRequest struct {
-	// 分析任务名，必须是模型中已存在的
 
+	// 分析任务名，必须是模型中已存在的
 	Name string `json:"name"`
 
 	Transform *DtTransformRequest `json:"transform,omitempty"`

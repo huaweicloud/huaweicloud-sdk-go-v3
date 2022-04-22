@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ShowJobListByProjectIdRequest struct {
+
 	// DevCloud项目ID，32位数字、小写字母组合。[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)
-
 	ProjectId string `json:"project_id"`
+
 	// 分页页码， 表示从此页开始查询， page_index大于等于0
-
 	PageIndex int32 `json:"page_index"`
-	// 每页显示的条目数量，page_size小于等于100
 
+	// 每页显示的条目数量，page_size小于等于100
 	PageSize int32 `json:"page_size"`
 }
 

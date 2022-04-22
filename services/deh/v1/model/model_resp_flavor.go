@@ -8,8 +8,8 @@ import (
 
 // 弹性云服务器规格信息。
 type RespFlavor struct {
-	// 弹性云服务器规格ID。
 
+	// 弹性云服务器规格ID。
 	Id string `json:"id"`
 }
 

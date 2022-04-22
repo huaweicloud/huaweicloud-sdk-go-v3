@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowEventRequest struct {
+
 	// 事件ID。
-
 	EventId string `json:"event_id"`
-	// 函数的URN（Uniform Resource Name），唯一标识函数。
 
+	// 函数的URN（Uniform Resource Name），唯一标识函数。
 	FunctionUrn string `json:"function_urn"`
 }
 

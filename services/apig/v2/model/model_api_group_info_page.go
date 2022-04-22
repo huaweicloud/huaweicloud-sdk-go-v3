@@ -7,14 +7,14 @@ import (
 )
 
 type ApiGroupInfoPage struct {
+
 	// 本次返回的列表长度
-
 	Size int32 `json:"size"`
+
 	// 满足条件的记录数
-
 	Total int64 `json:"total"`
-	// 分组列表
 
+	// 分组列表
 	Groups *[]ApiGroupInfoPage `json:"groups,omitempty"`
 }
 

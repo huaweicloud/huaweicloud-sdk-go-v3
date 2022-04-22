@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateLogStreamResponse struct {
-	// 创建的日志流的Id。
 
+	// 创建的日志流的Id。
 	LogStreamId    *string `json:"log_stream_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

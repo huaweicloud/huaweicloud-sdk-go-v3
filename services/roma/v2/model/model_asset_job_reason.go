@@ -10,17 +10,17 @@ import (
 )
 
 type AssetJobReason struct {
+
 	// 资源类型
-
 	ResourceType *AssetJobReasonResourceType `json:"resource_type,omitempty"`
+
 	// 资源名称
-
 	ResourceName *string `json:"resource_name,omitempty"`
+
 	// 错误码
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 错误信息
 
+	// 错误信息
 	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteKeyRequest struct {
-	// API版本号
 
+	// API版本号
 	VersionId string `json:"version_id"`
 
 	Body *ScheduleKeyDeletionRequestBody `json:"body,omitempty"`

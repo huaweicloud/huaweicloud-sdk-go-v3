@@ -7,14 +7,14 @@ import (
 )
 
 type JobEntitiesResult struct {
+
 	// 镜像ID。
-
 	ImageId *string `json:"image_id,omitempty"`
+
 	// 项目ID。
-
 	ProjectId *string `json:"project_id,omitempty"`
-	// 任务状态。
 
+	// 任务状态。
 	Status *string `json:"status,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowLoadbalancerTagsRequest struct {
-	// 负载均衡器所在的项目id
 
+	// 负载均衡器所在的项目id
 	LoadbalancerId string `json:"loadbalancer_id"`
 }
 

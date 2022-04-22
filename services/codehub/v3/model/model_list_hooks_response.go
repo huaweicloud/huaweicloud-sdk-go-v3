@@ -11,8 +11,8 @@ type ListHooksResponse struct {
 	Error *Error `json:"error,omitempty"`
 
 	Result *RepoListHook `json:"result,omitempty"`
-	// 响应状态
 
+	// 响应状态
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

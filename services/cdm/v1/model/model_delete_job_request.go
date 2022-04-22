@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteJobRequest struct {
+
 	// 集群ID
-
 	ClusterId string `json:"cluster_id"`
-	// 作业名称
 
+	// 作业名称
 	JobName string `json:"job_name"`
 }
 

@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type DisassociateRouterResponse struct {
+
 	// Router(VPC)的ID。
-
 	RouterId *string `json:"router_id,omitempty"`
+
 	// Router(VPC)所在的region。
-
 	RouterRegion *string `json:"router_region,omitempty"`
-	// 资源状态。
 
+	// 资源状态。
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

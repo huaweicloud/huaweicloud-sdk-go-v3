@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListSuggestionsResponse struct {
-	// 推荐问列表。
 
+	// 推荐问列表。
 	Questions      *[]string `json:"questions,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

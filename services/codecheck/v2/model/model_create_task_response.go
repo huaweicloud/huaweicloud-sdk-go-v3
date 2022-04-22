@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateTaskResponse struct {
-	// 检查任务id
 
+	// 检查任务id
 	TaskId         *string `json:"task_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

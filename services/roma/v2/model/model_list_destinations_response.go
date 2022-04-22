@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ListDestinationsResponse struct {
+
 	// 总数
-
 	Total *int32 `json:"total,omitempty"`
+
 	// 本次返回数量
-
 	Size *int32 `json:"size,omitempty"`
-	// 目标数据源列表
 
+	// 目标数据源列表
 	Items          *[]Destination `json:"items,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

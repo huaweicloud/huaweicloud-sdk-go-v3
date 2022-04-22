@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowSqlExplainResponse struct {
+
 	// SQL执行计划列表
-
 	ExecutionPlans *[]ExecutionPlan `json:"execution_plans,omitempty"`
-	// SQL执行失败时，显示执行错误信息
 
+	// SQL执行失败时，显示执行错误信息
 	ErrorMessage   *string `json:"error_message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

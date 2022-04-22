@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteSShkeyRequest struct {
-	// sshKey的id
 
+	// sshKey的id
 	Id string `json:"id"`
 }
 

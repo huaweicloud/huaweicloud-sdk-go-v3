@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowJobExesRequest struct {
-	// 作业ID。
 
+	// 作业ID。
 	JobExeId string `json:"job_exe_id"`
 }
 

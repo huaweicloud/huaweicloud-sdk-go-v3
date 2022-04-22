@@ -10,23 +10,23 @@ import (
 )
 
 type TaskBasicRequestBody struct {
+
 	// 任务名称，只能以字母、数字为开头，包含字母、数字和 . _ -  3~100个字符
-
 	TaskName *string `json:"task_name,omitempty"`
+
 	// 任务类型 - REALTIME (实时) - TIMING (定时)
-
 	TaskType *TaskBasicRequestBodyTaskType `json:"task_type,omitempty"`
+
 	// 源端数据源ID
-
 	SourceDatasourceId *string `json:"source_datasource_id,omitempty"`
+
 	// 目标端数据源ID
-
 	TargetDatasourceId *string `json:"target_datasource_id,omitempty"`
+
 	// 描述信息
-
 	Description *string `json:"description,omitempty"`
-	// 任务标签,只能包含字母、数字、中划线、下划线
 
+	// 任务标签,只能包含字母、数字、中划线、下划线
 	TaskTag *string `json:"task_tag,omitempty"`
 }
 

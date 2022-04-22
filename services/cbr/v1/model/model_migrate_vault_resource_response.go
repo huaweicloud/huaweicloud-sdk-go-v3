@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type MigrateVaultResourceResponse struct {
-	//
 
+	//
 	MigratedResources *[]string `json:"migrated_resources,omitempty"`
 	HttpStatusCode    int       `json:"-"`
 }

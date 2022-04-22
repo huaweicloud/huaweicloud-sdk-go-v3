@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowLogtankRequest struct {
-	// 云日志ID。
 
+	// 云日志ID。
 	LogtankId string `json:"logtank_id"`
 }
 

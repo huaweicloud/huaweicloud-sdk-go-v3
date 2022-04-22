@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteMqsInstanceTopicRequest struct {
+
 	// 实例ID。
-
 	InstanceId string `json:"instance_id"`
-	// 待删除的topic，多个topic以“,”分割。
 
+	// 待删除的topic，多个topic以“,”分割。
 	Name string `json:"name"`
 }
 

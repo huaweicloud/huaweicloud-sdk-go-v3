@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateEditingJobResponse struct {
-	// 接受任务后产生的任务ID。
 
+	// 接受任务后产生的任务ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

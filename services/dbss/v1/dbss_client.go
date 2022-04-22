@@ -19,7 +19,12 @@ func DbssClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//用于开启和关闭agent的功能，当开启后，开始抓取用户的访问信息。
+// 开启关闭Agent
+//
+// 用于开启和关闭agent的功能，当开启后，开始抓取用户的访问信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DbssClient) SwitchAgent(request *model.SwitchAgentRequest) (*model.SwitchAgentResponse, error) {
 	requestDef := GenReqDefForSwitchAgent()
 
@@ -30,7 +35,12 @@ func (c *DbssClient) SwitchAgent(request *model.SwitchAgentRequest) (*model.Swit
 	}
 }
 
-//开启关闭风险规则
+// 开启关闭风险规则
+//
+// 开启关闭风险规则
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DbssClient) SwitchRiskRule(request *model.SwitchRiskRuleRequest) (*model.SwitchRiskRuleResponse, error) {
 	requestDef := GenReqDefForSwitchRiskRule()
 

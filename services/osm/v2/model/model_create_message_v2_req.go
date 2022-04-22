@@ -8,8 +8,8 @@ import (
 
 type CreateMessageV2Req struct {
 	Message *CreateMessageDoV2 `json:"message"`
-	// 组id
 
+	// 组id
 	GroupId *string `json:"group_id,omitempty"`
 }
 

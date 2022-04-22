@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowGetConfDetailRequest struct {
+
 	// 指定查询集群ID。
-
 	ClusterId string `json:"cluster_id"`
-	// 配置文件名称。
 
+	// 配置文件名称。
 	Name string `json:"name"`
 }
 

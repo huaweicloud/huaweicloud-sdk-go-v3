@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowTemplateRequest struct {
-	// 需要查询的模板信息的id
 
+	// 需要查询的模板信息的id
 	Id string `json:"id"`
 }
 

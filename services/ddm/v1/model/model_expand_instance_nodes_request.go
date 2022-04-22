@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ExpandInstanceNodesRequest struct {
-	// DDM实例ID
 
+	// DDM实例ID
 	InstanceId string `json:"instance_id"`
 
 	Body *EnlargeRequest `json:"body,omitempty"`

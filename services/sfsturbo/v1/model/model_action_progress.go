@@ -7,8 +7,8 @@ import (
 )
 
 type ActionProgress struct {
-	// 创建文件系统的进度。
 
+	// 创建文件系统的进度。
 	Creating *string `json:"CREATING,omitempty"`
 }
 

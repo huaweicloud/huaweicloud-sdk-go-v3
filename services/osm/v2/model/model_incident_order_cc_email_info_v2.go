@@ -7,14 +7,14 @@ import (
 )
 
 type IncidentOrderCcEmailInfoV2 struct {
+
 	// 用户id
-
 	UserId *string `json:"user_id,omitempty"`
+
 	// 客户id
-
 	CustomerId *string `json:"customer_id,omitempty"`
-	// 操作邮箱
 
+	// 操作邮箱
 	CcEmail *string `json:"cc_email,omitempty"`
 }
 

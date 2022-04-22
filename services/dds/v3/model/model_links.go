@@ -8,11 +8,11 @@ import (
 
 // 对应API的链接信息，v3版本该字段为[]。
 type Links struct {
+
 	// 对应该API的URL，该字段为\"\"。
-
 	Href *string `json:"href,omitempty"`
-	// 值为“self”，表示URL为本地链接。
 
+	// 值为“self”，表示URL为本地链接。
 	Rel *string `json:"rel,omitempty"`
 }
 

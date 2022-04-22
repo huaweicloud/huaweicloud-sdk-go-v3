@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShrinkInstanceNodeResponse struct {
+
 	// 任务ID。
-
 	JobId *string `json:"job_id,omitempty"`
-	// 订单ID，仅创建包年包月实例时返回该参数。
 
+	// 订单ID，仅创建包年包月实例时返回该参数。
 	OrderId        *string `json:"order_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

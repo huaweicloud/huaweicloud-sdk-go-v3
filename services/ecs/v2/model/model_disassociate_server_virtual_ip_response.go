@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DisassociateServerVirtualIpResponse struct {
-	// 云服务器网卡ID
 
+	// 云服务器网卡ID
 	PortId         *string `json:"port_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

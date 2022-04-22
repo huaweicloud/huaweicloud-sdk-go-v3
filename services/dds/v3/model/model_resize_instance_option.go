@@ -10,14 +10,14 @@ import (
 )
 
 type ResizeInstanceOption struct {
+
 	// 对象类型。 - 对于集群实例，该参数为必选。变更mongos节点规格时，取值为“mongos”；变更shard组规格时，取值为“shard”。 - 对于副本集和单节点实例，不传该参数。
-
 	TargetType *ResizeInstanceOptionTargetType `json:"target_type,omitempty"`
+
 	// 待变更规格的节点ID或实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，取值为mongos节点ID；变更shard组规格时，取值为shard组ID。 - 对于副本集实例，取值为相应的实例ID。 - 对于单节点实例，取值为相应的实例ID。
-
 	TargetId string `json:"target_id"`
-	// 变更至新规格的资源规格编码。
 
+	// 变更至新规格的资源规格编码。
 	TargetSpecCode string `json:"target_spec_code"`
 }
 

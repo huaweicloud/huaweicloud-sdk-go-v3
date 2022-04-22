@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteIpGroupRequest struct {
-	// IP地址组的ID。
 
+	// IP地址组的ID。
 	IpgroupId string `json:"ipgroup_id"`
 }
 

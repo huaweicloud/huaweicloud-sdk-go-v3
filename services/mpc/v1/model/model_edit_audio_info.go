@@ -7,17 +7,17 @@ import (
 )
 
 type EditAudioInfo struct {
+
 	// 音频编码格式,取值有：[AAC, HEAAC, MP3]。
-
 	Codec *string `json:"codec,omitempty"`
+
 	// 视频码率，单位: bit/s
-
 	Bitrate *int32 `json:"bitrate,omitempty"`
+
 	// 采样率, 单位: HZ
-
 	Sample *int32 `json:"sample,omitempty"`
-	// 声道数。
 
+	// 声道数。
 	Channels *string `json:"channels,omitempty"`
 }
 

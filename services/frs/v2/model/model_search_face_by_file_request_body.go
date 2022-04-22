@@ -12,6 +12,7 @@ import (
 )
 
 type SearchFaceByFileRequestBody struct {
+
 	// 本地图片文件，图片不能超过8MB,建议小于1MB。上传文件时，请求格式为multipart。  必选，与image_url、image_base64、face_id四选一。
 	ImageFile *def.FilePart `json:"image_file"`
 

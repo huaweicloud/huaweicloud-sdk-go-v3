@@ -19,7 +19,12 @@ func CdmClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//随机集群创建作业并执行接口。
+// 随机集群创建作业并执行
+//
+// 随机集群创建作业并执行接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) CreateAndStartRandomClusterJob(request *model.CreateAndStartRandomClusterJobRequest) (*model.CreateAndStartRandomClusterJobResponse, error) {
 	requestDef := GenReqDefForCreateAndStartRandomClusterJob()
 
@@ -30,7 +35,12 @@ func (c *CdmClient) CreateAndStartRandomClusterJob(request *model.CreateAndStart
 	}
 }
 
-//创建集群接口。
+// 创建集群
+//
+// 创建集群接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) CreateCluster(request *model.CreateClusterRequest) (*model.CreateClusterResponse, error) {
 	requestDef := GenReqDefForCreateCluster()
 
@@ -41,7 +51,12 @@ func (c *CdmClient) CreateCluster(request *model.CreateClusterRequest) (*model.C
 	}
 }
 
-//指定集群创建作业接口。
+// 指定集群创建作业
+//
+// 指定集群创建作业接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) CreateJob(request *model.CreateJobRequest) (*model.CreateJobResponse, error) {
 	requestDef := GenReqDefForCreateJob()
 
@@ -52,7 +67,12 @@ func (c *CdmClient) CreateJob(request *model.CreateJobRequest) (*model.CreateJob
 	}
 }
 
-//创建连接接口。
+// 创建连接
+//
+// 创建连接接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) CreateLink(request *model.CreateLinkRequest) (*model.CreateLinkResponse, error) {
 	requestDef := GenReqDefForCreateLink()
 
@@ -63,7 +83,12 @@ func (c *CdmClient) CreateLink(request *model.CreateLinkRequest) (*model.CreateL
 	}
 }
 
-//删除集群接口。
+// 删除集群
+//
+// 删除集群接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.DeleteClusterResponse, error) {
 	requestDef := GenReqDefForDeleteCluster()
 
@@ -74,7 +99,12 @@ func (c *CdmClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.D
 	}
 }
 
-//删除作业接口。
+// 删除作业
+//
+// 删除作业接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) DeleteJob(request *model.DeleteJobRequest) (*model.DeleteJobResponse, error) {
 	requestDef := GenReqDefForDeleteJob()
 
@@ -85,7 +115,12 @@ func (c *CdmClient) DeleteJob(request *model.DeleteJobRequest) (*model.DeleteJob
 	}
 }
 
-//删除连接接口。
+// 删除连接
+//
+// 删除连接接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) DeleteLink(request *model.DeleteLinkRequest) (*model.DeleteLinkResponse, error) {
 	requestDef := GenReqDefForDeleteLink()
 
@@ -96,7 +131,12 @@ func (c *CdmClient) DeleteLink(request *model.DeleteLinkRequest) (*model.DeleteL
 	}
 }
 
-//查询集群列表接口。
+// 查询集群列表
+//
+// 查询集群列表接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) ListClusters(request *model.ListClustersRequest) (*model.ListClustersResponse, error) {
 	requestDef := GenReqDefForListClusters()
 
@@ -107,7 +147,12 @@ func (c *CdmClient) ListClusters(request *model.ListClustersRequest) (*model.Lis
 	}
 }
 
-//重启集群接口。
+// 重启集群
+//
+// 重启集群接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) RestartCluster(request *model.RestartClusterRequest) (*model.RestartClusterResponse, error) {
 	requestDef := GenReqDefForRestartCluster()
 
@@ -118,7 +163,12 @@ func (c *CdmClient) RestartCluster(request *model.RestartClusterRequest) (*model
 	}
 }
 
-//查询集群详情接口。
+// 查询集群详情
+//
+// 查询集群详情接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) ShowClusterDetail(request *model.ShowClusterDetailRequest) (*model.ShowClusterDetailResponse, error) {
 	requestDef := GenReqDefForShowClusterDetail()
 
@@ -129,7 +179,12 @@ func (c *CdmClient) ShowClusterDetail(request *model.ShowClusterDetailRequest) (
 	}
 }
 
-//查询作业状态接口。
+// 查询作业状态
+//
+// 查询作业状态接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*model.ShowJobStatusResponse, error) {
 	requestDef := GenReqDefForShowJobStatus()
 
@@ -140,7 +195,12 @@ func (c *CdmClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*model.S
 	}
 }
 
-//查询作业接口。
+// 查询作业
+//
+// 查询作业接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) ShowJobs(request *model.ShowJobsRequest) (*model.ShowJobsResponse, error) {
 	requestDef := GenReqDefForShowJobs()
 
@@ -151,7 +211,12 @@ func (c *CdmClient) ShowJobs(request *model.ShowJobsRequest) (*model.ShowJobsRes
 	}
 }
 
-//查询连接接口。
+// 查询连接
+//
+// 查询连接接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) ShowLink(request *model.ShowLinkRequest) (*model.ShowLinkResponse, error) {
 	requestDef := GenReqDefForShowLink()
 
@@ -162,7 +227,12 @@ func (c *CdmClient) ShowLink(request *model.ShowLinkRequest) (*model.ShowLinkRes
 	}
 }
 
-//查询作业执行历史接口。
+// 查询作业执行历史
+//
+// 查询作业执行历史接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) ShowSubmissions(request *model.ShowSubmissionsRequest) (*model.ShowSubmissionsResponse, error) {
 	requestDef := GenReqDefForShowSubmissions()
 
@@ -173,7 +243,12 @@ func (c *CdmClient) ShowSubmissions(request *model.ShowSubmissionsRequest) (*mod
 	}
 }
 
-//启动集群接口。
+// 启动集群
+//
+// 启动集群接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) StartCluster(request *model.StartClusterRequest) (*model.StartClusterResponse, error) {
 	requestDef := GenReqDefForStartCluster()
 
@@ -184,7 +259,12 @@ func (c *CdmClient) StartCluster(request *model.StartClusterRequest) (*model.Sta
 	}
 }
 
-//启动作业接口。
+// 启动作业
+//
+// 启动作业接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) StartJob(request *model.StartJobRequest) (*model.StartJobResponse, error) {
 	requestDef := GenReqDefForStartJob()
 
@@ -195,7 +275,12 @@ func (c *CdmClient) StartJob(request *model.StartJobRequest) (*model.StartJobRes
 	}
 }
 
-//停止集群接口。
+// 停止集群
+//
+// 停止集群接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) StopCluster(request *model.StopClusterRequest) (*model.StopClusterResponse, error) {
 	requestDef := GenReqDefForStopCluster()
 
@@ -206,7 +291,12 @@ func (c *CdmClient) StopCluster(request *model.StopClusterRequest) (*model.StopC
 	}
 }
 
-//停止作业接口。
+// 停止作业
+//
+// 停止作业接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) StopJob(request *model.StopJobRequest) (*model.StopJobResponse, error) {
 	requestDef := GenReqDefForStopJob()
 
@@ -217,7 +307,12 @@ func (c *CdmClient) StopJob(request *model.StopJobRequest) (*model.StopJobRespon
 	}
 }
 
-//修改作业接口。
+// 修改作业
+//
+// 修改作业接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) UpdateJob(request *model.UpdateJobRequest) (*model.UpdateJobResponse, error) {
 	requestDef := GenReqDefForUpdateJob()
 
@@ -228,7 +323,12 @@ func (c *CdmClient) UpdateJob(request *model.UpdateJobRequest) (*model.UpdateJob
 	}
 }
 
-//修改连接接口。
+// 修改连接
+//
+// 修改连接接口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CdmClient) UpdateLink(request *model.UpdateLinkRequest) (*model.UpdateLinkResponse, error) {
 	requestDef := GenReqDefForUpdateLink()
 

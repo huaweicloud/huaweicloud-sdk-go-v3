@@ -8,11 +8,11 @@ import (
 
 // 消息的内容。
 type ConsumeDeadlettersMessageMessage struct {
+
 	// 消息体的内容。
-
 	Body *interface{} `json:"body,omitempty"`
-	// 属性的列表。
 
+	// 属性的列表。
 	Attributes *interface{} `json:"attributes,omitempty"`
 }
 

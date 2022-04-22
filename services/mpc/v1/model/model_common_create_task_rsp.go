@@ -7,8 +7,8 @@ import (
 )
 
 type CommonCreateTaskRsp struct {
-	// 任务ID
 
+	// 任务ID
 	TaskId *string `json:"task_id,omitempty"`
 }
 

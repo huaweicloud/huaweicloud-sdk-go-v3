@@ -7,8 +7,8 @@ import (
 )
 
 type UpdateTransferRequestBody struct {
-	// 日志转储ID
 
+	// 日志转储ID
 	LogTransferId string `json:"log_transfer_id"`
 
 	LogTransferInfo *UpdateTransferRequestBodyLogTransferInfo `json:"log_transfer_info"`

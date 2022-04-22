@@ -8,11 +8,11 @@ import (
 
 // 此参数在请求实体中，采用json字符串格式
 type QueryLtsStructLogParamsNew struct {
+
 	// sql语句字符串。
-
 	Query string `json:"query"`
-	// 查询结果格式。当前仅支持：\"k-v\"。
 
+	// 查询结果格式。当前仅支持：\"k-v\"。
 	Format string `json:"format"`
 
 	TimeRange *TimeRange `json:"time_range"`

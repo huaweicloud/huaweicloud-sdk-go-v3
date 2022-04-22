@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DisassociateSignatureKeyV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// API与签名密钥的绑定关系编号
 
+	// API与签名密钥的绑定关系编号
 	SignBindingsId string `json:"sign_bindings_id"`
 }
 

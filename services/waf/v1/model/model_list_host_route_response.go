@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListHostRouteResponse struct {
+
 	// 数量
-
 	Total *int32 `json:"total,omitempty"`
-	// 路由信息body
 
+	// 路由信息body
 	Items          *[]RouteBody `json:"items,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

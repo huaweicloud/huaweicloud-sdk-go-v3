@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteActiveAlarmsRequest struct {
-	// domainId
 
+	// domainId
 	DomainId string `json:"domain_id"`
 
 	Body *DeleteActiveAlarmsRequestBody `json:"body,omitempty"`

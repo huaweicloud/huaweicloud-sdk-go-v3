@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListTablesResponse struct {
+
 	// 表的信息。
-
 	Tables *[]Table `json:"tables,omitempty"`
-	// 数据表总数。
 
+	// 数据表总数。
 	Count          *int64 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

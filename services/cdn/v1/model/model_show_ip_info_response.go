@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowIpInfoResponse struct {
-	// IP归属信息列表。
 
+	// IP归属信息列表。
 	CdnIps         *[]CdnIps `json:"cdn_ips,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowAutoRecordResponse struct {
-	// 应用id
 
+	// 应用id
 	AppId *string `json:"app_id,omitempty"`
 
 	AutoRecordMode *AppAutoRecordMode `json:"auto_record_mode,omitempty"`

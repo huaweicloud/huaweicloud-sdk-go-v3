@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteFirewallRequest struct {
-	// 网络ACL ID
 
+	// 网络ACL ID
 	FirewallId string `json:"firewall_id"`
 }
 

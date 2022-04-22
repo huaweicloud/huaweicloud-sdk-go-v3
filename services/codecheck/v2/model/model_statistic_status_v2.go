@@ -7,14 +7,14 @@ import (
 )
 
 type StatisticStatusV2 struct {
+
 	// 未解决
-
 	Unresolved *int32 `json:"unresolved,omitempty"`
+
 	// 已解决
-
 	Resolved *int32 `json:"resolved,omitempty"`
-	// 已忽略
 
+	// 已忽略
 	Dismissed *int32 `json:"dismissed,omitempty"`
 }
 

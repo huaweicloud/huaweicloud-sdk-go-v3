@@ -8,8 +8,8 @@ import (
 
 // 需要修改的目标安全组ID
 type ChangeSecurityGroup struct {
-	// 需要修改的目标安全组ID。
 
+	// 需要修改的目标安全组ID。
 	SecurityGroupId string `json:"security_group_id"`
 }
 

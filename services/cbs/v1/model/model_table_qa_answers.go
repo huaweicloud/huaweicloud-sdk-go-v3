@@ -8,14 +8,14 @@ import (
 
 //
 type TableQaAnswers struct {
+
 	// 表格问答答案。
-
 	Answer string `json:"answer"`
+
 	// 评分。
-
 	Score float64 `json:"score"`
-	// 表格ID。
 
+	// 表格ID。
 	TableId string `json:"table_id"`
 }
 

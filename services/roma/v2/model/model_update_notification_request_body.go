@@ -10,11 +10,11 @@ import (
 )
 
 type UpdateNotificationRequestBody struct {
+
 	// 通知发送的主题名，该主题需要在MQS存在
-
 	Topic string `json:"topic"`
-	// 启停状态 0-启用 1-停用
 
+	// 启停状态 0-启用 1-停用
 	Status UpdateNotificationRequestBodyStatus `json:"status"`
 }
 

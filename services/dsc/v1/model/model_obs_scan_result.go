@@ -7,11 +7,11 @@ import (
 )
 
 type ObsScanResult struct {
+
 	// 扫描结果总数
-
 	Total *int32 `json:"total,omitempty"`
-	// OBS扫描结果列表
 
+	// OBS扫描结果列表
 	DbScanResults *[]ObsScanResultInfo `json:"db_scan_results,omitempty"`
 }
 

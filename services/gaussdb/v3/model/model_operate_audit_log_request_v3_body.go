@@ -8,8 +8,8 @@ import (
 
 // 开启/关闭审计日志参数体
 type OperateAuditLogRequestV3Body struct {
-	// 审计日志开关状态。取值：ON|OFF
 
+	// 审计日志开关状态。取值：ON|OFF
 	SwitchStatus string `json:"switch_status"`
 }
 

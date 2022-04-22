@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowRecordingFileDownloadUrlsResponse struct {
-	// 录制文件下载URL
 
+	// 录制文件下载URL
 	RecordUrls     *[]RecordDownloadInfoBo `json:"recordUrls,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

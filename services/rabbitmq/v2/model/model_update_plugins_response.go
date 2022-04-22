@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdatePluginsResponse struct {
-	// 后台任务ID。
 
+	// 后台任务ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

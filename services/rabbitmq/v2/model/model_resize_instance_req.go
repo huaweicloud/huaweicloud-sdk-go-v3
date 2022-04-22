@@ -10,11 +10,11 @@ import (
 )
 
 type ResizeInstanceReq struct {
+
 	// 规格变更后的规格ID。
-
 	NewSpecCode ResizeInstanceReqNewSpecCode `json:"new_spec_code"`
-	// 规格变更后的消息存储空间，单位：GB。
 
+	// 规格变更后的消息存储空间，单位：GB。
 	NewStorageSpace int32 `json:"new_storage_space"`
 }
 

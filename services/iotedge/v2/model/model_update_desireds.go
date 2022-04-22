@@ -8,8 +8,8 @@ import (
 
 // 修改设备设备配置结构体。
 type UpdateDesireds struct {
-	// 设备配置，内容由产品的$config服务定义。
 
+	// 设备配置，内容由产品的$config服务定义。
 	Config *interface{} `json:"config,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // 安全组object
 type SgObject struct {
+
 	// 安全组ID
-
 	Id string `json:"id"`
-	// 安全组名称
 
+	// 安全组名称
 	Name string `json:"name"`
 }
 

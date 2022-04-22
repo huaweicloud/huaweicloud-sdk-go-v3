@@ -8,14 +8,14 @@ import (
 
 //
 type TaskBotAnswers struct {
+
 	// 答案。
-
 	Answer string `json:"answer"`
+
 	// 技能ID。
-
 	SkillId string `json:"skill_id"`
-	// 技能回复信息。
 
+	// 技能回复信息。
 	SkillResponses []SkillResponse `json:"skill_responses"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowQuotasResponse struct {
-	// 资源
 
+	// 资源
 	Quotas         *[]QuotaResource `json:"quotas,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

@@ -8,11 +8,11 @@ import (
 
 // 用于返回具体的错误码和错误消息
 type ErrMsg struct {
+
 	// 错误码
-
 	ErrorCode string `json:"error_code"`
-	// 错误描述
 
+	// 错误描述
 	ErrorMsg string `json:"error_msg"`
 }
 

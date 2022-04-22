@@ -11,11 +11,11 @@ import (
 
 //
 type ConfirmImageUploadReq struct {
+
 	// 水印配置模板id。
-
 	Id string `json:"id"`
-	// 水印上传状态。
 
+	// 水印上传状态。
 	Status ConfirmImageUploadReqStatus `json:"status"`
 }
 

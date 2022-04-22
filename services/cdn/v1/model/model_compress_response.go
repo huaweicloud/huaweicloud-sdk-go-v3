@@ -7,11 +7,11 @@ import (
 )
 
 type CompressResponse struct {
+
 	// GZIP压缩开关。0关闭。1打开
-
 	CompressSwitch int32 `json:"compress_switch"`
-	// GZIP压缩规则
 
+	// GZIP压缩规则
 	CompressRules *[]CompressRules `json:"compress_rules,omitempty"`
 }
 

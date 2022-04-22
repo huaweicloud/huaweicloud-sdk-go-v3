@@ -10,20 +10,20 @@ import (
 )
 
 type UpdateTopicAccessPolicyPoliciesObject struct {
+
 	// 集成应用key。
-
 	AppId string `json:"app_id"`
+
 	// 应用名称。
-
 	AppName string `json:"app_name"`
+
 	// 权限类型。   - all：发布+订阅   - pub：发布   - sub：订阅
-
 	AccessPolicy UpdateTopicAccessPolicyPoliciesObjectAccessPolicy `json:"access_policy"`
+
 	// 是否为创建topic时所选择的应用。  默认为false。
-
 	Owner *bool `json:"owner,omitempty"`
-	// 权限类型对应的标签。  当权限类型是all时，发布和订阅的标签用符号“&”隔开。  当有多个标签时，标签用符号“||”隔开。
 
+	// 权限类型对应的标签。  当权限类型是all时，发布和订阅的标签用符号“&”隔开。  当有多个标签时，标签用符号“||”隔开。
 	Tag *string `json:"tag,omitempty"`
 }
 

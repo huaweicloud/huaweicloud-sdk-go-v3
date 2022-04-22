@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ChangeApiVersionV2Request struct {
+
 	// 实例编号
-
 	InstanceId string `json:"instance_id"`
-	// API的编号
 
+	// API的编号
 	ApiId string `json:"api_id"`
 
 	Body *ApiVersion `json:"body,omitempty"`

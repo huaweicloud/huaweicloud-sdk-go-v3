@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListMetricsRequest struct {
-	// 存储ID
 
+	// 存储ID
 	DataStoreId string `json:"data_store_id"`
 
 	Body *GetMetricsRequest `json:"body,omitempty"`

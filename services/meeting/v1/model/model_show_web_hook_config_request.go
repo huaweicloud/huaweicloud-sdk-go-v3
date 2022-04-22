@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowWebHookConfigRequest struct {
+
 	// 企业ID，与spId二者必填一个
-
 	CorpId *string `json:"corpId,omitempty"`
-	// sp管理员ID，与corpId二者必填一个
 
+	// sp管理员ID，与corpId二者必填一个
 	SpId *string `json:"spId,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // 安全组信息
 type SecurityGroup struct {
-	// 安全组ID。
 
+	// 安全组ID。
 	Id string `json:"id"`
 }
 

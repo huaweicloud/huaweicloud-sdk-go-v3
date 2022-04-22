@@ -7,8 +7,8 @@ import (
 )
 
 type UpdatePublicZoneStatus struct {
-	// Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
 
+	// Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
 	Status string `json:"status"`
 }
 

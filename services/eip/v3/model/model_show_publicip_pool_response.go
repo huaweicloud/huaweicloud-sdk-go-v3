@@ -9,8 +9,8 @@ import (
 // Response Object
 type ShowPublicipPoolResponse struct {
 	PublicipPool *PublicipPoolShowResp `json:"publicip_pool,omitempty"`
-	// 本次请求的编号
 
+	// 本次请求的编号
 	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

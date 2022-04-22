@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowQueueTagsResponse struct {
-	// 标签列表
 
+	// 标签列表
 	Tags           *[]BatchCreateOrDeleteTagReqTags `json:"tags,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }

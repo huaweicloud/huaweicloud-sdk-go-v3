@@ -8,14 +8,14 @@ import (
 
 // 规格信息。
 type Az2Migrate struct {
+
 	// 可用区ID。
-
 	Code string `json:"code"`
+
 	// 可用区描述。
-
 	Description string `json:"description"`
-	// 当前可用区的的状态。 - ENABLED，表示该可用区（组合）可用。 - DISABLED，表示该可用区（组合）不可用。
 
+	// 当前可用区的的状态。 - ENABLED，表示该可用区（组合）可用。 - DISABLED，表示该可用区（组合）不可用。
 	Status string `json:"status"`
 }
 

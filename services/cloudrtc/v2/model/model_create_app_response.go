@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateAppResponse struct {
-	// 应用id
 
+	// 应用id
 	AppId *string `json:"app_id,omitempty"`
 
 	XRequestId     *string `json:"X-request-Id,omitempty"`

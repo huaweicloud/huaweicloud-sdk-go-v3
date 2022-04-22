@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteRunResponse struct {
-	// 被取消作业运行ID
 
+	// 被取消作业运行ID
 	RunId          *string `json:"run_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

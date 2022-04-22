@@ -8,8 +8,8 @@ import (
 
 // 批量挂断会场消息体。
 type RestBulkHangUpReqBody struct {
-	// 批量挂断会场列表，列表元素为与会者标识。
 
+	// 批量挂断会场列表，列表元素为与会者标识。
 	BulkHangUpParticipants []string `json:"bulkHangUpParticipants"`
 }
 

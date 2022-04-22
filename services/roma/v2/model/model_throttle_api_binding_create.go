@@ -7,11 +7,11 @@ import (
 )
 
 type ThrottleApiBindingCreate struct {
+
 	// 流控策略编号
-
 	StrategyId string `json:"strategy_id"`
-	// API的发布记录编号
 
+	// API的发布记录编号
 	PublishIds []string `json:"publish_ids"`
 }
 

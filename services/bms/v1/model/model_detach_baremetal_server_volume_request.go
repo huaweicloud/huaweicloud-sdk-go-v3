@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DetachBaremetalServerVolumeRequest struct {
+
 	// 裸金属服务器ID
-
 	ServerId string `json:"server_id"`
-	// 裸金属服务器的云磁盘ID
 
+	// 裸金属服务器的云磁盘ID
 	AttachmentId string `json:"attachment_id"`
 }
 

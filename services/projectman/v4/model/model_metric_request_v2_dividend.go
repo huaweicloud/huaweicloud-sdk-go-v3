@@ -8,8 +8,8 @@ import (
 
 // 指标分子过滤条件
 type MetricRequestV2Dividend struct {
-	// 自定义类型过滤条件
 
+	// 自定义类型过滤条件
 	CustomFields *[]MetricRequestV2DividendCustomFields `json:"custom_fields,omitempty"`
 }
 

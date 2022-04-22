@@ -8,8 +8,8 @@ import (
 
 // 修改速率的参数
 type SpeedLimit struct {
-	// 按时间段限速信息
 
+	// 按时间段限速信息
 	SpeedLimit []SpeedLimitlJson `json:"speed_limit"`
 }
 

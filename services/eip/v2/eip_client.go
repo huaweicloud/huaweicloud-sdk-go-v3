@@ -19,7 +19,12 @@ func EipClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//共享带宽插入弹性公网IP。
+// 共享带宽插入弹性公网IP
+//
+// 共享带宽插入弹性公网IP。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) AddPublicipsIntoSharedBandwidth(request *model.AddPublicipsIntoSharedBandwidthRequest) (*model.AddPublicipsIntoSharedBandwidthResponse, error) {
 	requestDef := GenReqDefForAddPublicipsIntoSharedBandwidth()
 
@@ -30,7 +35,12 @@ func (c *EipClient) AddPublicipsIntoSharedBandwidth(request *model.AddPublicipsI
 	}
 }
 
-//批量创建共享带宽。
+// 批量创建共享带宽
+//
+// 批量创建共享带宽。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) BatchCreateSharedBandwidths(request *model.BatchCreateSharedBandwidthsRequest) (*model.BatchCreateSharedBandwidthsResponse, error) {
 	requestDef := GenReqDefForBatchCreateSharedBandwidths()
 
@@ -41,7 +51,12 @@ func (c *EipClient) BatchCreateSharedBandwidths(request *model.BatchCreateShared
 	}
 }
 
-//创建共享带宽。
+// 创建共享带宽
+//
+// 创建共享带宽。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) CreateSharedBandwidth(request *model.CreateSharedBandwidthRequest) (*model.CreateSharedBandwidthResponse, error) {
 	requestDef := GenReqDefForCreateSharedBandwidth()
 
@@ -52,7 +67,12 @@ func (c *EipClient) CreateSharedBandwidth(request *model.CreateSharedBandwidthRe
 	}
 }
 
-//删除共享带宽。
+// 删除共享带宽
+//
+// 删除共享带宽。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) DeleteSharedBandwidth(request *model.DeleteSharedBandwidthRequest) (*model.DeleteSharedBandwidthResponse, error) {
 	requestDef := GenReqDefForDeleteSharedBandwidth()
 
@@ -63,7 +83,12 @@ func (c *EipClient) DeleteSharedBandwidth(request *model.DeleteSharedBandwidthRe
 	}
 }
 
-//查询带宽列表。
+// 查询带宽列表
+//
+// 查询带宽列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ListBandwidths(request *model.ListBandwidthsRequest) (*model.ListBandwidthsResponse, error) {
 	requestDef := GenReqDefForListBandwidths()
 
@@ -74,7 +99,12 @@ func (c *EipClient) ListBandwidths(request *model.ListBandwidthsRequest) (*model
 	}
 }
 
-//查询配额
+// 查询配额接口
+//
+// 查询配额
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuotasResponse, error) {
 	requestDef := GenReqDefForListQuotas()
 
@@ -85,7 +115,12 @@ func (c *EipClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuo
 	}
 }
 
-//共享带宽移除弹性公网IP。
+// 共享带宽移除弹性公网IP
+//
+// 共享带宽移除弹性公网IP。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) RemovePublicipsFromSharedBandwidth(request *model.RemovePublicipsFromSharedBandwidthRequest) (*model.RemovePublicipsFromSharedBandwidthResponse, error) {
 	requestDef := GenReqDefForRemovePublicipsFromSharedBandwidth()
 
@@ -96,7 +131,12 @@ func (c *EipClient) RemovePublicipsFromSharedBandwidth(request *model.RemovePubl
 	}
 }
 
-//查询带宽
+// 查询带宽
+//
+// 查询带宽
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ShowBandwidth(request *model.ShowBandwidthRequest) (*model.ShowBandwidthResponse, error) {
 	requestDef := GenReqDefForShowBandwidth()
 
@@ -107,7 +147,12 @@ func (c *EipClient) ShowBandwidth(request *model.ShowBandwidthRequest) (*model.S
 	}
 }
 
-//更新带宽。
+// 更新带宽
+//
+// 更新带宽。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) UpdateBandwidth(request *model.UpdateBandwidthRequest) (*model.UpdateBandwidthResponse, error) {
 	requestDef := GenReqDefForUpdateBandwidth()
 
@@ -118,7 +163,12 @@ func (c *EipClient) UpdateBandwidth(request *model.UpdateBandwidthRequest) (*mod
 	}
 }
 
-//更新带宽。
+// 更新包周期带宽
+//
+// 更新带宽。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) UpdatePrePaidBandwidth(request *model.UpdatePrePaidBandwidthRequest) (*model.UpdatePrePaidBandwidthResponse, error) {
 	requestDef := GenReqDefForUpdatePrePaidBandwidth()
 
@@ -129,7 +179,12 @@ func (c *EipClient) UpdatePrePaidBandwidth(request *model.UpdatePrePaidBandwidth
 	}
 }
 
-//为指定的弹性公网IP资源实例批量添加标签。
+// 批量创建弹性公网IP资源标签
+//
+// 为指定的弹性公网IP资源实例批量添加标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) BatchCreatePublicipTags(request *model.BatchCreatePublicipTagsRequest) (*model.BatchCreatePublicipTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreatePublicipTags()
 
@@ -140,7 +195,12 @@ func (c *EipClient) BatchCreatePublicipTags(request *model.BatchCreatePublicipTa
 	}
 }
 
-//为指定的弹性公网IP资源实例批量删除标签。
+// 批量删除弹性公网IP资源标签
+//
+// 为指定的弹性公网IP资源实例批量删除标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) BatchDeletePublicipTags(request *model.BatchDeletePublicipTagsRequest) (*model.BatchDeletePublicipTagsResponse, error) {
 	requestDef := GenReqDefForBatchDeletePublicipTags()
 
@@ -151,7 +211,12 @@ func (c *EipClient) BatchDeletePublicipTags(request *model.BatchDeletePublicipTa
 	}
 }
 
-//申请包年包月的弹性公网IP。
+// 申请包周期弹性公网IP
+//
+// 申请包年包月的弹性公网IP。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) CreatePrePaidPublicip(request *model.CreatePrePaidPublicipRequest) (*model.CreatePrePaidPublicipResponse, error) {
 	requestDef := GenReqDefForCreatePrePaidPublicip()
 
@@ -162,7 +227,13 @@ func (c *EipClient) CreatePrePaidPublicip(request *model.CreatePrePaidPublicipRe
 	}
 }
 
-//申请弹性公网IP，支持IPv4和IPv6。  弹性公网IP（Elastic IP）提供独立的公网IP资源，包括公网IP地址与公网出口带宽服务。可以与弹性云服务器、裸金属服务器、虚拟IP、弹性负载均衡、NAT网关等资源灵活地绑定及解绑。拥有多种灵活的计费方式，可以满足各种业务场景的需要。
+// 申请弹性公网IP
+//
+// 申请弹性公网IP，支持IPv4和IPv6。
+//  弹性公网IP（Elastic IP）提供独立的公网IP资源，包括公网IP地址与公网出口带宽服务。可以与弹性云服务器、裸金属服务器、虚拟IP、弹性负载均衡、NAT网关等资源灵活地绑定及解绑。拥有多种灵活的计费方式，可以满足各种业务场景的需要。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) CreatePublicip(request *model.CreatePublicipRequest) (*model.CreatePublicipResponse, error) {
 	requestDef := GenReqDefForCreatePublicip()
 
@@ -173,7 +244,12 @@ func (c *EipClient) CreatePublicip(request *model.CreatePublicipRequest) (*model
 	}
 }
 
-//给指定弹性IP资源实例增加标签信息。
+// 创建弹性公网IP资源标签
+//
+// 给指定弹性IP资源实例增加标签信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) CreatePublicipTag(request *model.CreatePublicipTagRequest) (*model.CreatePublicipTagResponse, error) {
 	requestDef := GenReqDefForCreatePublicipTag()
 
@@ -184,7 +260,12 @@ func (c *EipClient) CreatePublicipTag(request *model.CreatePublicipTagRequest) (
 	}
 }
 
-//删除弹性公网IP,绑定状态eip不允许直接删除。
+// 删除弹性公网IP
+//
+// 删除弹性公网IP,绑定状态eip不允许直接删除。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) DeletePublicip(request *model.DeletePublicipRequest) (*model.DeletePublicipResponse, error) {
 	requestDef := GenReqDefForDeletePublicip()
 
@@ -195,7 +276,12 @@ func (c *EipClient) DeletePublicip(request *model.DeletePublicipRequest) (*model
 	}
 }
 
-//删除指定弹性公网IP的标签信息。其中project_id是项目ID，publicip_id 是要操作的弹性公网IP的id。key是要删除标签的键。
+// 删除弹性公网IP的标签
+//
+// 删除指定弹性公网IP的标签信息。其中project_id是项目ID，publicip_id 是要操作的弹性公网IP的id。key是要删除标签的键。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) DeletePublicipTag(request *model.DeletePublicipTagRequest) (*model.DeletePublicipTagResponse, error) {
 	requestDef := GenReqDefForDeletePublicipTag()
 
@@ -206,7 +292,12 @@ func (c *EipClient) DeletePublicipTag(request *model.DeletePublicipTagRequest) (
 	}
 }
 
-//查询租户在指定区域和实例类型的所有标签集合。
+// 查询租户的弹性公网IP标签
+//
+// 查询租户在指定区域和实例类型的所有标签集合。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ListPublicipTags(request *model.ListPublicipTagsRequest) (*model.ListPublicipTagsResponse, error) {
 	requestDef := GenReqDefForListPublicipTags()
 
@@ -217,7 +308,12 @@ func (c *EipClient) ListPublicipTags(request *model.ListPublicipTagsRequest) (*m
 	}
 }
 
-//查询弹性公网IP列表
+// 查询弹性公网IP列表
+//
+// 查询弹性公网IP列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ListPublicips(request *model.ListPublicipsRequest) (*model.ListPublicipsResponse, error) {
 	requestDef := GenReqDefForListPublicips()
 
@@ -228,7 +324,12 @@ func (c *EipClient) ListPublicips(request *model.ListPublicipsRequest) (*model.L
 	}
 }
 
-//使用标签过滤弹性公网IP。
+// 按标签查询弹性公网IP列表
+//
+// 使用标签过滤弹性公网IP。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ListPublicipsByTags(request *model.ListPublicipsByTagsRequest) (*model.ListPublicipsByTagsResponse, error) {
 	requestDef := GenReqDefForListPublicipsByTags()
 
@@ -239,7 +340,12 @@ func (c *EipClient) ListPublicipsByTags(request *model.ListPublicipsByTagsReques
 	}
 }
 
-//查询指定的弹性公网IP。
+// 查询弹性公网IP
+//
+// 查询指定的弹性公网IP。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ShowPublicip(request *model.ShowPublicipRequest) (*model.ShowPublicipResponse, error) {
 	requestDef := GenReqDefForShowPublicip()
 
@@ -250,7 +356,12 @@ func (c *EipClient) ShowPublicip(request *model.ShowPublicipRequest) (*model.Sho
 	}
 }
 
-//查询指定弹性IP实例的标签信息。
+// 查询弹性公网IP的标签
+//
+// 查询指定弹性IP实例的标签信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ShowPublicipTags(request *model.ShowPublicipTagsRequest) (*model.ShowPublicipTagsResponse, error) {
 	requestDef := GenReqDefForShowPublicipTags()
 
@@ -261,7 +372,12 @@ func (c *EipClient) ShowPublicipTags(request *model.ShowPublicipTagsRequest) (*m
 	}
 }
 
-//更新弹性公网IP，将弹性公网IP跟一个网卡绑定或者解绑定，转换IP地址版本类型。
+// 更新弹性公网IP
+//
+// 更新弹性公网IP，将弹性公网IP跟一个网卡绑定或者解绑定，转换IP地址版本类型。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) UpdatePublicip(request *model.UpdatePublicipRequest) (*model.UpdatePublicipResponse, error) {
 	requestDef := GenReqDefForUpdatePublicip()
 
@@ -272,7 +388,12 @@ func (c *EipClient) UpdatePublicip(request *model.UpdatePublicipRequest) (*model
 	}
 }
 
-//创建浮动IP的外部网络UUID，请使用GET /v2.0/networks?router:external=True或neutron net-external-list方式获取。
+// 创建浮动IP
+//
+// 创建浮动IP的外部网络UUID，请使用GET /v2.0/networks?router:external&#x3D;True或neutron net-external-list方式获取。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) NeutronCreateFloatingIp(request *model.NeutronCreateFloatingIpRequest) (*model.NeutronCreateFloatingIpResponse, error) {
 	requestDef := GenReqDefForNeutronCreateFloatingIp()
 
@@ -283,7 +404,12 @@ func (c *EipClient) NeutronCreateFloatingIp(request *model.NeutronCreateFloating
 	}
 }
 
-//删除指定的浮动IP。
+// 删除浮动IP
+//
+// 删除指定的浮动IP。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) NeutronDeleteFloatingIp(request *model.NeutronDeleteFloatingIpRequest) (*model.NeutronDeleteFloatingIpResponse, error) {
 	requestDef := GenReqDefForNeutronDeleteFloatingIp()
 
@@ -294,7 +420,12 @@ func (c *EipClient) NeutronDeleteFloatingIp(request *model.NeutronDeleteFloating
 	}
 }
 
-//查询提交请求的租户有权限操作的所有浮动IP地址。
+// 查询浮动IP列表
+//
+// 查询提交请求的租户有权限操作的所有浮动IP地址。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) NeutronListFloatingIps(request *model.NeutronListFloatingIpsRequest) (*model.NeutronListFloatingIpsResponse, error) {
 	requestDef := GenReqDefForNeutronListFloatingIps()
 
@@ -305,7 +436,12 @@ func (c *EipClient) NeutronListFloatingIps(request *model.NeutronListFloatingIps
 	}
 }
 
-//查询浮动IP详情，包括浮动IP状态，浮动IP所属路由器ID，浮动IP的外部网络ID等等。
+// 查询浮动IP
+//
+// 查询浮动IP详情，包括浮动IP状态，浮动IP所属路由器ID，浮动IP的外部网络ID等等。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) NeutronShowFloatingIp(request *model.NeutronShowFloatingIpRequest) (*model.NeutronShowFloatingIpResponse, error) {
 	requestDef := GenReqDefForNeutronShowFloatingIp()
 
@@ -316,7 +452,14 @@ func (c *EipClient) NeutronShowFloatingIp(request *model.NeutronShowFloatingIpRe
 	}
 }
 
-//更新浮动IP。  更新时需在URL中给出浮动IP地址的ID。  port_id 为空，则表示浮动IP从端口解绑。
+// 更新浮动IP
+//
+// 更新浮动IP。
+//  更新时需在URL中给出浮动IP地址的ID。
+//  port_id 为空，则表示浮动IP从端口解绑。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) NeutronUpdateFloatingIp(request *model.NeutronUpdateFloatingIpRequest) (*model.NeutronUpdateFloatingIpResponse, error) {
 	requestDef := GenReqDefForNeutronUpdateFloatingIp()
 

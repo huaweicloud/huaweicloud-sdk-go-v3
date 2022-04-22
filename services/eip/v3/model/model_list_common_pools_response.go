@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListCommonPoolsResponse struct {
+
 	// 功能说明：公共池对象
-
 	CommonPools *[]CommonPoolDict `json:"common_pools,omitempty"`
-	// 本次请求的编号
 
+	// 本次请求的编号
 	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

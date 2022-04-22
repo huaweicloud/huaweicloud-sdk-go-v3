@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowCommandResponse struct {
-	// 命令名称，分为：START、STOP、DELETE、SYNC
 
+	// 命令名称，分为：START、STOP、DELETE、SYNC
 	CommandName *string `json:"command_name,omitempty"`
 
 	CommandParam   *ComandParam `json:"command_param,omitempty"`

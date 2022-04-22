@@ -10,11 +10,11 @@ import (
 )
 
 type BatchSwitchesRequest struct {
+
 	// risk id, ids 中间逗号分隔
-
 	Ids *string `json:"ids,omitempty"`
-	// OFF：关闭 ON：开启
 
+	// OFF：关闭 ON：开启
 	Status *BatchSwitchesRequestStatus `json:"status,omitempty"`
 }
 

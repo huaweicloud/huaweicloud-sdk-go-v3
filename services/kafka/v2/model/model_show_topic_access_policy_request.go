@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowTopicAccessPolicyRequest struct {
+
 	// 实例ID。
-
 	InstanceId string `json:"instance_id"`
-	// Topic名称。
 
+	// Topic名称。
 	TopicName string `json:"topic_name"`
 }
 

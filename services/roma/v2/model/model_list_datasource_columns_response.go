@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListDatasourceColumnsResponse struct {
-	// 返回的实体对象
 
+	// 返回的实体对象
 	Columns        *[]ColumnInfo `json:"columns,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

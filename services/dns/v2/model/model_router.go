@@ -7,11 +7,11 @@ import (
 )
 
 type Router struct {
+
 	// Router(VPC)所属VPC的ID。
-
 	RouterId string `json:"router_id"`
-	// Router(VPC)所在的region。
 
+	// Router(VPC)所在的region。
 	RouterRegion *string `json:"router_region,omitempty"`
 }
 

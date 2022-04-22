@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateFunctionAsyncInvokeConfigRequest struct {
-	// 函数的URN（Uniform Resource Name），唯一标识函数。
 
+	// 函数的URN（Uniform Resource Name），唯一标识函数。
 	FunctionUrn string `json:"function_urn"`
 
 	Body *UpdateFunctionAsyncInvokeConfigRequestBody `json:"body,omitempty"`

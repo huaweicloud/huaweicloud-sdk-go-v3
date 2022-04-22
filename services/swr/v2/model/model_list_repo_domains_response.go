@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListRepoDomainsResponse struct {
-	// 共享租户列表
 
+	// 共享租户列表
 	Body           *[]ShowRepoDomainsResponse `json:"body,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }

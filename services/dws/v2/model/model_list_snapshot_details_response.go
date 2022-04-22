@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListSnapshotDetailsResponse struct {
-	Snapshot       *SnapshoDetail `json:"snapshot,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	Snapshot       *SnapshotDetail `json:"snapshot,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o ListSnapshotDetailsResponse) String() string {

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type BatchCreateOrDeleteTagsRequest struct {
-	// 凭据ID
 
+	// 凭据ID
 	SecretId string `json:"secret_id"`
 
 	Body *BatchCreateOrDeleteTagsRequestBody `json:"body,omitempty"`

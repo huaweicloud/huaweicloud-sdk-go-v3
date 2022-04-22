@@ -7,8 +7,8 @@ import (
 )
 
 type BatchUpdateChildUserNickNamesRequestBody struct {
-	// 修改的用户列表
 
+	// 修改的用户列表
 	Users []UpdateChildUserNickNameRequestBody `json:"users"`
 }
 

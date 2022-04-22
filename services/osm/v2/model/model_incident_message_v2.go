@@ -8,29 +8,29 @@ import (
 )
 
 type IncidentMessageV2 struct {
+
 	// 类型，0客户留言 1华为工程师留言
-
 	Type *int32 `json:"type,omitempty"`
+
 	// 回复人ID
-
 	Replier *string `json:"replier,omitempty"`
+
 	// 留言内容
-
 	Content *string `json:"content,omitempty"`
+
 	// 留言id
-
 	MessageId *string `json:"message_id,omitempty"`
+
 	// 回复人名称
-
 	ReplierName *string `json:"replier_name,omitempty"`
+
 	// 创建时间
-
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+
 	// 是否是第一条留言
-
 	IsFirstMessage *int32 `json:"is_first_message,omitempty"`
-	// 附件列表
 
+	// 附件列表
 	AccessoryList *[]SimpleAccessoryV2 `json:"accessory_list,omitempty"`
 }
 

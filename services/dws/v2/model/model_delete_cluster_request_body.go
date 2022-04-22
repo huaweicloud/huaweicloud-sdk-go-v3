@@ -8,8 +8,8 @@ import (
 
 // This is a auto create Body Object
 type DeleteClusterRequestBody struct {
-	// 集群需要保留的快照数
 
+	// 集群需要保留的快照数
 	KeepLastManualSnapshot int32 `json:"keep_last_manual_snapshot"`
 }
 

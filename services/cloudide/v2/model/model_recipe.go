@@ -7,11 +7,11 @@ import (
 )
 
 type Recipe struct {
+
 	// 镜像内容
-
 	Content *string `json:"content,omitempty"`
-	// 镜像类型
 
+	// 镜像类型
 	Type *string `json:"type,omitempty"`
 }
 

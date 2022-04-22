@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListSnapshotsResponse struct {
-	// 快照列表。
 
+	// 快照列表。
 	Backups        *[]ListSnapshotBackupsResp `json:"backups,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }

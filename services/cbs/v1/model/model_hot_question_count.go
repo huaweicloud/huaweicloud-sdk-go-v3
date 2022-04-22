@@ -8,14 +8,14 @@ import (
 
 //
 type HotQuestionCount struct {
+
 	// 问答对ID。
-
 	QaPairId *string `json:"qa_pair_id,omitempty"`
+
 	// 标准问题。
-
 	StQuestion *string `json:"st_question,omitempty"`
-	// 标准问题所属领域。
 
+	// 标准问题所属领域。
 	Domain *string `json:"domain,omitempty"`
 }
 

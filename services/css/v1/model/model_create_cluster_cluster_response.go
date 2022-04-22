@@ -8,11 +8,11 @@ import (
 
 // 集群对象。
 type CreateClusterClusterResponse struct {
+
 	// 集群ID。
-
 	Id *string `json:"id,omitempty"`
-	// 集群名称。
 
+	// 集群名称。
 	Name *string `json:"name,omitempty"`
 }
 

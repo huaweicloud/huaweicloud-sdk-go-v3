@@ -7,11 +7,11 @@ import (
 )
 
 type AssetOperateRequest struct {
+
 	// 应用列表
-
 	Apps []string `json:"apps"`
-	// 任务列表
 
+	// 任务列表
 	Tasks []AssetOperateRequestTasks `json:"tasks"`
 }
 

@@ -7,11 +7,11 @@ import (
 )
 
 type FinancialStatementResultImageSize struct {
+
 	// 矫正后图像的高。
-
 	Height *int32 `json:"height,omitempty"`
-	// 矫正后图像的宽。
 
+	// 矫正后图像的宽。
 	Width *int32 `json:"width,omitempty"`
 }
 

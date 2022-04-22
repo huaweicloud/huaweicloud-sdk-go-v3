@@ -18,8 +18,8 @@ type ShowJobStatusResponse struct {
 	Starttime *string `json:"starttime,omitempty"`
 
 	EndTime *string `json:"endTime,omitempty"`
-	// 状态最后更新时间
 
+	// 状态最后更新时间
 	LastUpdateTime *string `json:"lastUpdateTime,omitempty"`
 
 	Nodes          *[]RealTimeNodeStatus `json:"nodes,omitempty"`

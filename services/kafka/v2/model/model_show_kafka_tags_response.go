@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowKafkaTagsResponse struct {
-	// 标签列表
 
+	// 标签列表
 	Tags           *[]TagEntity `json:"tags,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

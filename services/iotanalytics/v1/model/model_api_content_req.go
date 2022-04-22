@@ -8,8 +8,8 @@ import (
 
 // Api数据源请求内容
 type ApiContentReq struct {
-	// api数据源名称
 
+	// api数据源名称
 	Name string `json:"name"`
 }
 

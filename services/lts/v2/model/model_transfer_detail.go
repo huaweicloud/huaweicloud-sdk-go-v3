@@ -11,50 +11,50 @@ import (
 
 // 日志转储详细信息
 type TransferDetail struct {
+
 	// OBS转储时间
-
 	ObsPeriod TransferDetailObsPeriod `json:"obs_period"`
+
 	// OBS转储KMS秘钥ID。若OBS转储未加密则不返回此字段
-
 	ObsEncryptedId *string `json:"obs_encrypted_id,omitempty"`
+
 	// OBS转储日志文件前缀
-
 	ObsPrefixName *string `json:"obs_prefix_name,omitempty"`
+
 	// OBS转储单位
-
 	ObsPeriodUnit string `json:"obs_period_unit"`
+
 	// OBS转储路径，指OBS日志桶中的路径
-
 	ObsTransferPath *string `json:"obs_transfer_path,omitempty"`
+
 	// OBS企业项目ID
-
 	ObsEpsId *string `json:"obs_eps_id,omitempty"`
+
 	// OBS日志桶名称
-
 	ObsBucketName string `json:"obs_bucket_name"`
+
 	// OBS是否开启加密。
-
 	ObsEncryptedEnable *bool `json:"obs_encrypted_enable,omitempty"`
+
 	// OBS转储自定义转储路径
-
 	ObsDirPreFixName *string `json:"obs_dir_pre_fix_name,omitempty"`
+
 	// DIS转储通道ID
-
 	DisId *string `json:"dis_id,omitempty"`
+
 	// DIS转储通道名称
-
 	DisName *string `json:"dis_name,omitempty"`
+
 	// DMS转储kafka ID
-
 	KafkaId *string `json:"kafka_id,omitempty"`
+
 	// DMS转储kafka topic
-
 	KafkaTopic *string `json:"kafka_topic,omitempty"`
+
 	// OBS转储时区。如果选择该参数，则必须选择obs_time_zone_id。
-
 	ObsTimeZone *string `json:"obs_time_zone,omitempty"`
-	// OBS转储时区ID。参数选择参考OBS转储时区表。如果选择该参数，则必须选择obs_time_zone。
 
+	// OBS转储时区ID。参数选择参考OBS转储时区表。如果选择该参数，则必须选择obs_time_zone。
 	ObsTimeZoneId *string `json:"obs_time_zone_id,omitempty"`
 }
 

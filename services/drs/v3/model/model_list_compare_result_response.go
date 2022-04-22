@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListCompareResultResponse struct {
-	// 任务id。
 
+	// 任务id。
 	JobId *string `json:"job_id,omitempty"`
 
 	ObjectLevelCompareResults *ObjectCompareResult `json:"object_level_compare_results,omitempty"`
@@ -19,11 +19,11 @@ type ListCompareResultResponse struct {
 	ContentCompareResults *ContentCompareResult `json:"content_compare_results,omitempty"`
 
 	CompareTaskListResults *CompareTaskListResult `json:"compare_task_list_results,omitempty"`
+
 	// 错误码。
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 错误信息。
 
+	// 错误信息。
 	ErrorMsg       *string `json:"error_msg,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

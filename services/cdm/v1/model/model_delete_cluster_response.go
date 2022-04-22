@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteClusterResponse struct {
-	// 作业ID
 
+	// 作业ID
 	JobId          *string `json:"jobId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

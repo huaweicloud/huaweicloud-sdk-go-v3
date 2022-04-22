@@ -8,29 +8,29 @@ import (
 
 type Links struct {
 	LinkConfigValues *LinksLinkconfigvalues `json:"link-config-values"`
+
 	// 创建连接的用户
-
 	CreationUser *string `json:"creation-user,omitempty"`
+
 	// 连接名称
-
 	Name string `json:"name"`
+
 	// 连接ID
-
 	Id *int32 `json:"id,omitempty"`
+
 	// 创建连接的时间
-
 	CreationDate *int64 `json:"creation-date,omitempty"`
+
 	// 连接器名称，对应的连接参数如下：generic-jdbc-connector：关系数据库连接。obs-connector：OBS连接、阿里云OSS连接。hdfs-connector：HDFS连接。hbase-connector：HBase连接、CloudTable连接。hive-connector：Hive连接。ftp-connector/sftp-connector：FTP/SFTP连接。mongodb-connector：MongoDB连接。redis-connector：Redis/DCS连接。nas-connector：NAS/SFS连接。kafka-connector：Kafka连接。dis-connector：DIS连接。elasticsearch-connector：Elasticsearch/云搜索服务连接。dli-connector：DLI连接。opentsdb-connector：CloudTable OpenTSDB连接。http-connector：HTTP/HTTPS连接，该连接暂无连接参数。thirdparty-obs-connector：七牛云KODO/腾讯云COS连接、亚马逊对象存储连接。dms-kafka-connector：DMS Kafka连接
-
 	ConnectorName string `json:"connector-name"`
+
 	// 更新连接的时间
-
 	UpdateDate *int64 `json:"update-date,omitempty"`
+
 	// 是否激活连接，默认为“true”
-
 	Enabled *bool `json:"enabled,omitempty"`
-	// 更新连接的用户
 
+	// 更新连接的用户
 	UpdateUser *string `json:"update-user,omitempty"`
 }
 

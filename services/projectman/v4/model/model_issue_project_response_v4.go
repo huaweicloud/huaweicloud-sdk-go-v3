@@ -8,14 +8,14 @@ import (
 
 // 项目信息
 type IssueProjectResponseV4 struct {
+
 	// 项目id
-
 	ProjectId *string `json:"project_id,omitempty"`
+
 	// 项目名称
-
 	ProjectName *string `json:"project_name,omitempty"`
-	// 项目数字id
 
+	// 项目数字id
 	ProjectNumId *int32 `json:"project_num_id,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteMemberRequest struct {
+
 	// 备份副本id
-
 	BackupId string `json:"backup_id"`
-	// 成员id
 
+	// 成员id
 	MemberId string `json:"member_id"`
 }
 

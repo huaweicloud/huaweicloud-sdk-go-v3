@@ -10,23 +10,23 @@ import (
 )
 
 type Frequency struct {
+
 	// 时间类型
-
 	Type FrequencyType `json:"type"`
+
 	// 当字段type为\"CRON\"时取该字段
-
 	CronExpr *string `json:"cron_expr,omitempty"`
+
 	// 当字段type为\"DAILY\"或者\"WEEKLY\"时取该字段
-
 	HourOfDay *int32 `json:"hour_of_day,omitempty"`
+
 	// 当字段type为\"WEEKLY\"时取该字段(周日~周六)
-
 	DayOfWeek *int32 `json:"day_of_week,omitempty"`
+
 	// 当字段type为\"FIXED_RATE\"时取该字段(当fixed_rate_unit单位为minute，最大值60;当fixed_rate_unit单位为hour，最大值24)
-
 	FixedRate *int32 `json:"fixed_rate,omitempty"`
-	// 时间单位
 
+	// 时间单位
 	FixedRateUnit *FrequencyFixedRateUnit `json:"fixed_rate_unit,omitempty"`
 }
 

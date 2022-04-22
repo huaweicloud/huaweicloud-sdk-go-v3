@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListRelationResponse struct {
-	// 关联工单列表
 
+	// 关联工单列表
 	CaseRelationList *[]CaseRealtionInfo `json:"case_relation_list,omitempty"`
 	HttpStatusCode   int                 `json:"-"`
 }

@@ -7,8 +7,8 @@ import (
 )
 
 type ApiPolicyMockBase struct {
-	// 返回结果
 
+	// 返回结果
 	ResultContent *string `json:"result_content,omitempty"`
 }
 

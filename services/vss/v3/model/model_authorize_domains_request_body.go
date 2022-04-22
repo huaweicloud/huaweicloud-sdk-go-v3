@@ -10,11 +10,11 @@ import (
 )
 
 type AuthorizeDomainsRequestBody struct {
+
 	// 域名
-
 	DomainName string `json:"domain_name"`
-	// 认证方式:   * file - 文件认证   * auto - 一键认证
 
+	// 认证方式:   * file - 文件认证   * auto - 一键认证
 	AuthMode *AuthorizeDomainsRequestBodyAuthMode `json:"auth_mode,omitempty"`
 }
 

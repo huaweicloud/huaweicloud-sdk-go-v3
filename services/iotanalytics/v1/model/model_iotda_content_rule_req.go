@@ -8,11 +8,11 @@ import (
 
 // 在IoTDA实例中要配置转发规则推送数据的资源空间和产品列表
 type IotdaContentRuleReq struct {
+
 	// IoTDA中的资源空间Id
-
 	AppId string `json:"app_id"`
-	// IoTDA中某资源空间Id下的产品列表
 
+	// IoTDA中某资源空间Id下的产品列表
 	Products []string `json:"products"`
 }
 

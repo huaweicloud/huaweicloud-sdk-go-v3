@@ -9,14 +9,14 @@ import (
 
 // 客户端应用与客户端配额绑定信息
 type AppQuotaAppBinding struct {
+
 	// 客户端配额编号
-
 	AppQuotaId *string `json:"app_quota_id,omitempty"`
+
 	// 客户端应用编号
-
 	AppId *string `json:"app_id,omitempty"`
-	// 绑定时间
 
+	// 绑定时间
 	BoundTime *sdktime.SdkTime `json:"bound_time,omitempty"`
 }
 

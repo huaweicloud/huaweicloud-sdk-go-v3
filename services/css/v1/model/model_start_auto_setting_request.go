@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type StartAutoSettingRequest struct {
-	// 指定要备份的集群ID。
 
+	// 指定要备份的集群ID。
 	ClusterId string `json:"cluster_id"`
 }
 

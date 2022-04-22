@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type AssociateSubnetRequest struct {
-	// 路由表ID
 
+	// 路由表ID
 	RoutetableId string `json:"routetable_id"`
 
 	Body *AssociateSubnetRequestBody `json:"body,omitempty"`

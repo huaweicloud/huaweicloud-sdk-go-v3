@@ -7,13 +7,13 @@ import (
 )
 
 type MediaDetail struct {
-	// 任务名称
 
+	// 任务名称
 	Features *[]string `json:"features,omitempty"`
 
 	OriginPara *OriginPara `json:"origin_para,omitempty"`
-	// 多路输出片源信息
 
+	// 多路输出片源信息
 	OutputVideoParas *[]OutputVideoPara `json:"output_video_paras,omitempty"`
 
 	OutputThumbnailPara *OutputThumbnailPara `json:"output_thumbnail_para,omitempty"`

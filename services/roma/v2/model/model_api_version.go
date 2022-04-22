@@ -7,8 +7,8 @@ import (
 )
 
 type ApiVersion struct {
-	// API版本的编号
 
+	// API版本的编号
 	VersionId string `json:"version_id"`
 }
 

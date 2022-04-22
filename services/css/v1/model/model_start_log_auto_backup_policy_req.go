@@ -7,8 +7,8 @@ import (
 )
 
 type StartLogAutoBackupPolicyReq struct {
-	// 备份开始时间。
 
+	// 备份开始时间。
 	Period string `json:"period"`
 }
 

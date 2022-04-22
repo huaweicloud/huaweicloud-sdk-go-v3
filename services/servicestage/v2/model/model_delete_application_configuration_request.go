@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteApplicationConfigurationRequest struct {
+
 	// 应用ID。
-
 	ApplicationId string `json:"application_id"`
-	// 环境ID。
 
+	// 环境ID。
 	EnvironmentId string `json:"environment_id"`
 }
 

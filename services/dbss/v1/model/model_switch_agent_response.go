@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type SwitchAgentResponse struct {
-	// 响应状态
 
+	// 响应状态
 	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteExternalEntityRequest struct {
+
 	// 边缘节点ID
-
 	EdgeNodeId string `json:"edge_node_id"`
-	// 外部实体ID
 
+	// 外部实体ID
 	ExternalId string `json:"external_id"`
 }
 

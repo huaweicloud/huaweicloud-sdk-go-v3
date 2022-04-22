@@ -11,8 +11,8 @@ type ShowGaussMySqlProxyResponse struct {
 	Proxy *MysqlProxy `json:"proxy,omitempty"`
 
 	MasterNode *MysqlProxyNode `json:"master_node,omitempty"`
-	// 只读节点信息。
 
+	// 只读节点信息。
 	ReadonlyNodes  *[]MysqlProxyNode `json:"readonly_nodes,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

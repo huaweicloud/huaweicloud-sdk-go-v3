@@ -7,8 +7,8 @@ import (
 )
 
 type UpdateSinkTaskQuotaReq struct {
-	// 转储任务的总个数。
 
+	// 转储任务的总个数。
 	SinkMaxTasks int32 `json:"sink_max_tasks"`
 }
 

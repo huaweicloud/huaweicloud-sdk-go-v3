@@ -8,11 +8,11 @@ import (
 
 // 创建边缘模块请求结构体
 type CreateEdgeModuleReqDto struct {
+
 	// 边缘应用名称
-
 	EdgeAppId string `json:"edge_app_id"`
-	// 边缘应用版本
 
+	// 边缘应用版本
 	AppVersion string `json:"app_version"`
 }
 

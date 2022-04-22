@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListListenersResponse struct {
-	// 监听器对象列表
 
+	// 监听器对象列表
 	Listeners      *[]ListenerResp `json:"listeners,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

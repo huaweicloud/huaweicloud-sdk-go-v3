@@ -11,35 +11,35 @@ import (
 
 // 内容对比结果详情。
 type ContentCompareDetail struct {
+
 	// 源库名称。
-
 	SourceDbName string `json:"source_db_name"`
+
 	// 目标库名称。
-
 	TargetDbName string `json:"target_db_name"`
+
 	// 源库的表名称。
-
 	SourceTableName string `json:"source_table_name"`
+
 	// 目标库的表名称。
-
 	TargetTableName string `json:"target_table_name"`
+
 	// 源库的表的行数。
-
 	SourceRowNum int32 `json:"source_row_num"`
+
 	// 目标库的表的行数。
-
 	TargetRowNum int32 `json:"target_row_num"`
+
 	// 源库的表和目标库的表的差异值。
-
 	DiffRowNum int32 `json:"diff_row_num"`
+
 	// 行对比结果。
-
 	LineCompareResult *ContentCompareDetailLineCompareResult `json:"line_compare_result,omitempty"`
+
 	// 内容对比结果。
-
 	ContentCompareResult ContentCompareDetailContentCompareResult `json:"content_compare_result"`
-	// 附加信息。
 
+	// 附加信息。
 	Message *string `json:"message,omitempty"`
 }
 

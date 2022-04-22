@@ -8,11 +8,11 @@ import (
 
 // 属性定义为输入参数
 type InputParam struct {
+
 	// 参数名称
-
 	Name string `json:"name"`
-	// 属性名称
 
+	// 属性名称
 	PropertyName string `json:"property_name"`
 }
 

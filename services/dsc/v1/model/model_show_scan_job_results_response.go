@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ShowScanJobResultsResponse struct {
+
 	// 任务ID
-
 	JobId *string `json:"job_id,omitempty"`
+
 	// 任务名
-
 	JobName *string `json:"job_name,omitempty"`
-	// 查询资产类型
 
+	// 查询资产类型
 	Type *string `json:"type,omitempty"`
 
 	DbScanResult *DbScanResult `json:"db_scan_result,omitempty"`

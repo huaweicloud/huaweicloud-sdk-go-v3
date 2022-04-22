@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowLifeCycleHookRequest struct {
+
 	// 伸缩组标识。
-
 	ScalingGroupId string `json:"scaling_group_id"`
-	// 生命周期挂钩标识。
 
+	// 生命周期挂钩标识。
 	LifecycleHookName string `json:"lifecycle_hook_name"`
 }
 

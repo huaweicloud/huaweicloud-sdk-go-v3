@@ -8,11 +8,11 @@ import (
 
 // 日志接入基础日志信息。
 type AccessConfigBaseLogInfo struct {
+
 	// 日志组ID
-
 	LogGroupId *string `json:"log_group_id,omitempty"`
-	// 日志流ID
 
+	// 日志流ID
 	LogStreamId *string `json:"log_stream_id,omitempty"`
 }
 

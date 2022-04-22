@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteRulesetRequest struct {
+
 	// 项目ID
-
 	ProjectId string `json:"project_id"`
-	// 规则集ID
 
+	// 规则集ID
 	RulesetId string `json:"ruleset_id"`
 }
 

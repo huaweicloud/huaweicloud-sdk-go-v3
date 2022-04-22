@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowTracingResponse struct {
+
 	// apm的ak
-
 	TracingAk *string `json:"tracing_ak,omitempty"`
-	// apm的sk
 
+	// apm的sk
 	TracingSk      *string `json:"tracing_sk,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

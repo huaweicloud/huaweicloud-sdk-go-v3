@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListCaseLabelsResponse struct {
-	// 工单关联的标签列表
 
+	// 工单关联的标签列表
 	CaseLabelList  *[]CaseLabelInfo `json:"case_label_list,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

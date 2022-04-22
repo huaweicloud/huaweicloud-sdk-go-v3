@@ -7,8 +7,8 @@ import (
 )
 
 type UpdatePolicyRuleStatusRequestBody struct {
-	// 状态（开启：1，关闭：0）
 
+	// 状态（开启：1，关闭：0）
 	Status *int32 `json:"status,omitempty"`
 }
 

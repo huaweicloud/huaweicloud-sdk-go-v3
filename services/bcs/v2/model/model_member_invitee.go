@@ -8,14 +8,14 @@ import (
 
 // 联盟成员中的被邀请方
 type MemberInvitee struct {
+
 	// 被邀请方实例id
-
 	InviteeBcsId *string `json:"invitee_bcs_id,omitempty"`
+
 	// 被邀请方租户id
-
 	InviteeUserId *string `json:"invitee_user_id,omitempty"`
-	// 被邀请方租户名
 
+	// 被邀请方租户名
 	InviteeUsername *string `json:"invitee_username,omitempty"`
 }
 

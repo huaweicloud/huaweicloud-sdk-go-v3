@@ -7,8 +7,8 @@ import (
 )
 
 type BatchAddMembersV4RequestBody struct {
-	// 添加的用户信息
 
+	// 添加的用户信息
 	Users []BatchAddMemberRequestV4 `json:"users"`
 }
 

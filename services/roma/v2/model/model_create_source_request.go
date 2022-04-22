@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type CreateSourceRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 规则ID
 
+	// 规则ID
 	RuleId string `json:"rule_id"`
 
 	Body *CreateSourceRequestBody `json:"body,omitempty"`

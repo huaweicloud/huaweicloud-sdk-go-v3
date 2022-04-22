@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListServerGroupsResponse struct {
-	// 弹性云服务器组信息
 
+	// 弹性云服务器组信息
 	ServerGroups *[]ListServerGroupsResult `json:"server_groups,omitempty"`
 
 	PageInfo       *ListServerGroupsPageInfoResult `json:"page_info,omitempty"`

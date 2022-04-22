@@ -11,18 +11,18 @@ import (
 
 // 处理联盟邀请body数据
 type HandleNotificationRequestBody struct {
+
 	// 邀请目标通道
-
 	ChannelName string `json:"channel_name"`
-	// 处理邀请
 
+	// 处理邀请
 	Status HandleNotificationRequestBodyStatus `json:"status"`
 
 	InvitorInfo *HandleNotificationInvitor `json:"invitor_info"`
 
 	InviteeInfo *HandleNotificationInvitee `json:"invitee_info,omitempty"`
-	// 加入联盟的组织，同意加入时必填
 
+	// 加入联盟的组织，同意加入时必填
 	InvitedOrgs *[]HandleNotificationOrg `json:"invited_orgs,omitempty"`
 }
 

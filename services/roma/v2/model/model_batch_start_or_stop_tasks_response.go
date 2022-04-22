@@ -8,17 +8,17 @@ import (
 
 // Response Object
 type BatchStartOrStopTasksResponse struct {
+
 	// 成功的个数
-
 	SuccessCount *int32 `json:"success_count,omitempty"`
+
 	// 失败的个数
-
 	FailureCount *int32 `json:"failure_count,omitempty"`
+
 	// 失败的详情
-
 	Failure *[]TaskBeanFacade `json:"failure,omitempty"`
-	// 成功的任务信息
 
+	// 成功的任务信息
 	Success        *[]TaskBeanFacade `json:"success,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

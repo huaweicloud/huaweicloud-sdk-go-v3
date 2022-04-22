@@ -8,14 +8,14 @@ import (
 
 // 链接的实体 类
 type LinkedEntity struct {
+
 	// 实体指称
-
 	Mention string `json:"mention"`
+
 	// 偏移量
-
 	Offset int32 `json:"offset"`
-	// 实体名称
 
+	// 实体名称
 	EntityTitle string `json:"entity_title"`
 }
 

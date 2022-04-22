@@ -8,8 +8,8 @@ import (
 
 // 专属主机上创建的云服务器规格。
 type RespInstanceCapacity struct {
-	// 支持创建的云服务器规格。
 
+	// 支持创建的云服务器规格。
 	Flavor string `json:"flavor"`
 }
 

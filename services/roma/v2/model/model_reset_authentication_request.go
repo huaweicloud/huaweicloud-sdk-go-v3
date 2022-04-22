@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ResetAuthenticationRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 设备ID
 
+	// 设备ID
 	DeviceId int32 `json:"device_id"`
 }
 

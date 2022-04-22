@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ExpandReplicationRequest struct {
-	// 复制对的ID。
 
+	// 复制对的ID。
 	ReplicationId string `json:"replication_id"`
 
 	Body *ExtendReplicationRequestBody `json:"body,omitempty"`

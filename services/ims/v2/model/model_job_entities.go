@@ -8,20 +8,20 @@ import (
 
 //
 type JobEntities struct {
+
 	// 镜像ID
-
 	ImageId *string `json:"image_id,omitempty"`
+
 	// 当前任务名称
-
 	CurrentTask *string `json:"current_task,omitempty"`
+
 	// 镜像名称
-
 	ImageName *string `json:"image_name,omitempty"`
+
 	// 任务执行进度
-
 	ProcessPercent *float64 `json:"process_percent,omitempty"`
-	// 批量任务执行结果
 
+	// 批量任务执行结果
 	Results *[]JobEntitiesResult `json:"results,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // 会中修改配置项
 type UpdateStartedConfigReqBody struct {
+
 	// 锁定共享标志位 0:不锁定  1:锁定
-
 	LockSharing *int32 `json:"lockSharing,omitempty"`
-	// 允许呼入的范围 0：所有用户  2：企业内用户  3：被邀请用户
 
+	// 允许呼入的范围 0：所有用户  2：企业内用户  3：被邀请用户
 	CallInRestriction *int32 `json:"callInRestriction,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteSharedBandwidthRequest struct {
-	// 带宽唯一标识  约束： 当前仅支持删除共享带宽
 
+	// 带宽唯一标识  约束： 当前仅支持删除共享带宽
 	BandwidthId string `json:"bandwidth_id"`
 }
 

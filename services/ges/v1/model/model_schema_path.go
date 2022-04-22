@@ -8,17 +8,17 @@ import (
 
 // 点数据
 type SchemaPath struct {
+
 	// OBS文件路径
-
 	Path string `json:"path"`
+
 	// OBS文件导入日志存储文件
-
 	Log *string `json:"log,omitempty"`
+
 	// - OBS文件导入状态。 - success：完全成功 - failed：完全失败 - partFailed：部分成功
-
 	Status string `json:"status"`
-	// 导入失败原因
 
+	// 导入失败原因
 	Cause *string `json:"cause,omitempty"`
 }
 

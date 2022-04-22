@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteConnctionRequest struct {
-	// 连接名称.
 
+	// 连接名称.
 	ConnectionName string `json:"connection_name"`
 }
 

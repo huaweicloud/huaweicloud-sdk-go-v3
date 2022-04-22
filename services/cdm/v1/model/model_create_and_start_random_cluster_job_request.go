@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateAndStartRandomClusterJobRequest struct {
-	// 请求语言。
 
+	// 请求语言。
 	XLanguage string `json:"X-Language"`
 
 	Body *CdmRandomCreateAndStartJobJsonReq `json:"body,omitempty"`

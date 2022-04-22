@@ -7,14 +7,14 @@ import (
 )
 
 type PicLayoutInfo struct {
+
 	// 多画面布局的宽度
-
 	X *int32 `json:"x,omitempty"`
+
 	// 多画面布局的高度
-
 	Y *int32 `json:"y,omitempty"`
-	// 子画面布局具体列表
 
+	// 子画面布局具体列表
 	SubPicLayoutInfoList *[]SubPicLayoutInfo `json:"subPicLayoutInfoList,omitempty"`
 }
 

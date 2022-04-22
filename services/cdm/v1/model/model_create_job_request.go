@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateJobRequest struct {
-	// 集群ID
 
+	// 集群ID
 	ClusterId string `json:"cluster_id"`
 
 	Body *CdmCreateJobJsonReq `json:"body,omitempty"`

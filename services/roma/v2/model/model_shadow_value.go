@@ -7,14 +7,14 @@ import (
 )
 
 type ShadowValue struct {
+
 	// 属性名称
-
 	PropertyName *string `json:"property_name,omitempty"`
+
 	// 属性最后一次上报值
-
 	PropertyValue *string `json:"property_value,omitempty"`
-	// 属性最后一次上报时间，格式timestamp(ms)，使用UTC时区
 
+	// 属性最后一次上报时间，格式timestamp(ms)，使用UTC时区
 	PropertyUpdatedDate *int64 `json:"property_updated_date,omitempty"`
 }
 

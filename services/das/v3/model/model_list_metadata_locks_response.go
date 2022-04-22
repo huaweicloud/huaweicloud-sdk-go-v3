@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListMetadataLocksResponse struct {
+
 	// 元数据锁列表
-
 	MetadataLocks *[]MetadataLock `json:"metadata_locks,omitempty"`
-	// 元数据锁数量
 
+	// 元数据锁数量
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

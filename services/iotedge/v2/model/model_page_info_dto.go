@@ -7,11 +7,11 @@ import (
 )
 
 type PageInfoDto struct {
+
 	// 页码
-
 	Offset *int32 `json:"offset,omitempty"`
-	// 每页记录数
 
+	// 每页记录数
 	Limit *int32 `json:"limit,omitempty"`
 }
 

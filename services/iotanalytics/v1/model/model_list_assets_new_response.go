@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListAssetsNewResponse struct {
+
 	// 总数
-
 	Count *int64 `json:"count,omitempty"`
-	// 资产集，数量不超过limit
 
+	// 资产集，数量不超过limit
 	Assets         *[]AssetResponse `json:"assets,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

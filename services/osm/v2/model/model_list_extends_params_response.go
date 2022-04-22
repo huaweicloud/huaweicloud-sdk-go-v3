@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListExtendsParamsResponse struct {
+
 	// 附加参数列表
-
 	ExtendsParams *[]ExtendsParamV2 `json:"extends_params,omitempty"`
-	// 公共附加参数列表
 
+	// 公共附加参数列表
 	CommonParams   *[]CommonParamV2 `json:"common_params,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

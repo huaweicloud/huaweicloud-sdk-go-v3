@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListRtcClientQosDetailsResponse struct {
+
 	// 房间ID
-
 	RoomId *string `json:"room_id,omitempty"`
-	// QoS质量数据
 
+	// QoS质量数据
 	Data *[]QosQualityData `json:"data,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

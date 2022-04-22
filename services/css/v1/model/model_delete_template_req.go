@@ -7,8 +7,8 @@ import (
 )
 
 type DeleteTemplateReq struct {
-	// 模板名称。
 
+	// 模板名称。
 	Name string `json:"name"`
 }
 

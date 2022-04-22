@@ -8,26 +8,26 @@ import (
 
 // Request Object
 type ListTemplateRulesRequest struct {
+
 	// 项目ID
-
 	ProjectId string `json:"project_id"`
+
 	// 规则集ID
-
 	RulesetId string `json:"ruleset_id"`
+
 	// 规则状态  '1查询全部，2已启动，3未启用'
-
 	Types string `json:"types"`
+
 	// 规则语言
-
 	Languages *string `json:"languages,omitempty"`
+
 	// 规则所属标签
-
 	Tags *string `json:"tags,omitempty"`
+
 	// 分页索引，偏移量
-
 	Offset *int32 `json:"offset,omitempty"`
-	// 每页显示的数量
 
+	// 每页显示的数量
 	Limit *int32 `json:"limit,omitempty"`
 }
 

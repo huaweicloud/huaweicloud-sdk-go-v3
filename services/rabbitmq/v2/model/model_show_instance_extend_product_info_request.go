@@ -11,14 +11,14 @@ import (
 
 // Request Object
 type ShowInstanceExtendProductInfoRequest struct {
+
 	// 实例ID。
-
 	InstanceId string `json:"instance_id"`
+
 	// 产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
-
 	Type ShowInstanceExtendProductInfoRequestType `json:"type"`
-	// 消息引擎的类型。支持的类型为rabbitmq。
 
+	// 消息引擎的类型。支持的类型为rabbitmq。
 	Engine string `json:"engine"`
 }
 

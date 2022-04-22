@@ -8,17 +8,17 @@ import (
 
 // Response Object
 type ListGraphBackupsResponse struct {
+
 	// 系统提示信息，执行成功时，字段可能为空。执行失败时，用于显示错误信息。
-
 	ErrorMessage *string `json:"errorMessage,omitempty"`
+
 	// 系统提示信息，执行成功时，字段可能为空。执行失败时，用于显示错误码。
-
 	ErrorCode *string `json:"errorCode,omitempty"`
+
 	// 备份总个数。请求失败时。字段为空。
-
 	BackupCount *int32 `json:"backupCount,omitempty"`
-	// 当前Project下指定Graph的的备份列表。请求失败时，字段为空。
 
+	// 当前Project下指定Graph的的备份列表。请求失败时，字段为空。
 	BackupList     *[]Backup `json:"backupList,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

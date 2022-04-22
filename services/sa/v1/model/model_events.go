@@ -7,8 +7,8 @@ import (
 )
 
 type Events struct {
-	// event 批量导入
 
+	// event 批量导入
 	Events *[]Event `json:"events,omitempty"`
 }
 

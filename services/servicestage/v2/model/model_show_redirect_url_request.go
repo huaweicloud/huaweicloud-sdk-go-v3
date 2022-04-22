@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type ShowRedirectUrlRequest struct {
+
 	// 仓库类型。 取值范围：github、gitlab、gitee、bitbucket。
-
 	RepoType ShowRedirectUrlRequestRepoType `json:"repo_type"`
-	// 站点标签。 比如国际站的，?tag=intl。 默认为空。
 
+	// 站点标签。 比如国际站的，?tag=intl。 默认为空。
 	Tag *string `json:"tag,omitempty"`
 }
 

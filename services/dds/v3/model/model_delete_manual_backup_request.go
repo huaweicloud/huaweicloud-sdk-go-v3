@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteManualBackupRequest struct {
-	// 备份文件ID。
 
+	// 备份文件ID。
 	BackupId string `json:"backup_id"`
 }
 

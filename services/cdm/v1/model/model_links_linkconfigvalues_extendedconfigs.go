@@ -8,11 +8,11 @@ import (
 
 // 扩展配置，请参见extended-configs参数说明。
 type LinksLinkconfigvaluesExtendedconfigs struct {
+
 	// 名称
-
 	Name *string `json:"name,omitempty"`
-	// 值
 
+	// 值
 	Value *string `json:"value,omitempty"`
 }
 

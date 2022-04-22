@@ -27,32 +27,32 @@ type ShowCorpResourceResponse struct {
 	HwVisionCount *ResDetailDto `json:"hwVisionCount,omitempty"`
 
 	IdeaHubCount *ResDetailDto `json:"ideaHubCount,omitempty"`
+
 	// 查询云会议室套餐包分配数量结果。
-
 	Vmr *[]QueryVmrPkgResResultDto `json:"vmr,omitempty"`
+
 	// 在创建企业的时候设置的pstn权限开关
-
 	EnablePstn *bool `json:"enablePstn,omitempty"`
+
 	// 在创建企业的时候设置的短信权限开关
-
 	EnableSMS *bool `json:"enableSMS,omitempty"`
+
 	// 企业是否开启混合云模式
-
 	EnableHybridCloud *bool `json:"enableHybridCloud,omitempty"`
+
 	// 是否开启云盘
-
 	EnableCloudDisk *bool `json:"enableCloudDisk,omitempty"`
+
 	// 是否开启UC功能
-
 	EnableUc *bool `json:"enableUc,omitempty"`
+
 	// 是否开启Ai会议纪要
-
 	EnableAiMinutes *bool `json:"enableAiMinutes,omitempty"`
+
 	// 单会议并发呼叫数
-
 	SingleConfCallCount *int32 `json:"singleConfCallCount,omitempty"`
-	// 会议时长
 
+	// 会议时长
 	ConfLength     *int32 `json:"confLength,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

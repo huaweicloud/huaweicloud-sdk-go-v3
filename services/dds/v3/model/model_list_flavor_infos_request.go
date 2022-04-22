@@ -11,17 +11,17 @@ import (
 
 // Request Object
 type ListFlavorInfosRequest struct {
+
 	// 数据库版本类型。取值为“DDS-Community”。
-
 	EngineName *ListFlavorInfosRequestEngineName `json:"engine_name,omitempty"`
+
 	// 数据库版本号。
-
 	EngineVersion *string `json:"engine_version,omitempty"`
+
 	// 索引位置，偏移量。   - 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。   - 取值必须为数字，不能为负数。
-
 	Offset *int32 `json:"offset,omitempty"`
-	// 查询规格信息上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条规格信息。
 
+	// 查询规格信息上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条规格信息。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListProblemTypesResponse struct {
+
 	// 总数
-
 	TotalCount *int32 `json:"total_count,omitempty"`
-	// 问题类型列表
 
+	// 问题类型列表
 	IncidentBusinessTypeList *[]SimpleIncidentBusinessTypeV2 `json:"incident_business_type_list,omitempty"`
 	HttpStatusCode           int                             `json:"-"`
 }

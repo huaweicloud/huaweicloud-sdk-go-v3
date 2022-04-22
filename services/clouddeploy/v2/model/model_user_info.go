@@ -6,12 +6,13 @@ import (
 	"strings"
 )
 
+// 用户信息
 type UserInfo struct {
+
 	// 用户id
-
 	UserId *string `json:"user_id,omitempty"`
-	// 用户名
 
+	// 用户名
 	UserName *string `json:"user_name,omitempty"`
 }
 

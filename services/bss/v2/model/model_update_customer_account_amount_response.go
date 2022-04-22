@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateCustomerAccountAmountResponse struct {
-	// 事务流水ID，只有成功响应才会返回。
 
+	// 事务流水ID，只有成功响应才会返回。
 	TransferId     *string `json:"transfer_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

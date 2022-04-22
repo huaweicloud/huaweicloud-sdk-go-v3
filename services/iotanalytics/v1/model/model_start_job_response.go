@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type StartJobResponse struct {
-	// 作业ID
 
+	// 作业ID
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 // 公网带宽信息。
 type CreateClusterPublicEipSize struct {
-	// 带宽大小。
 
+	// 带宽大小。
 	Size int32 `json:"size"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowQuotaSetsResponse struct {
-	// 专属主机的配额。
 
+	// 专属主机的配额。
 	QuotaSet       *[]RespQuotaSet `json:"quota_set,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateDatabaseResponse struct {
-	// 逻辑库相关信息的集合。
 
+	// 逻辑库相关信息的集合。
 	Databases      *[]CreateDatabaseDetailResponses `json:"databases,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }

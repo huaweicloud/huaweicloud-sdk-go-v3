@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type RestoreSecretRequest struct {
-	// 凭据名称。
 
+	// 凭据名称。
 	SecretName string `json:"secret_name"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowEdgeCloudRequest struct {
-	// 边缘业务ID。
 
+	// 边缘业务ID。
 	EdgecloudId string `json:"edgecloud_id"`
 }
 

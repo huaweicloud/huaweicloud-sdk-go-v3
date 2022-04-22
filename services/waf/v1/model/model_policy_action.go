@@ -11,8 +11,8 @@ import (
 
 // 操作
 type PolicyAction struct {
-	// 防护等级（log为仅记录、block为拦截）
 
+	// 防护等级（log为仅记录、block为拦截）
 	Category *PolicyActionCategory `json:"category,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateLinkRequest struct {
+
 	// 集群ID
-
 	ClusterId string `json:"cluster_id"`
-	// 连接名称
 
+	// 连接名称
 	LinkName string `json:"link_name"`
 
 	Body *CdmCreateAndUpdateLinkReq `json:"body,omitempty"`

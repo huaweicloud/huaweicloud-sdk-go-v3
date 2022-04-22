@@ -7,17 +7,17 @@ import (
 )
 
 type CreateRepoMemberResult struct {
+
 	// 用户id
-
 	Id *string `json:"id,omitempty"`
+
 	// 创建仓库成员信息
-
 	Message *string `json:"message,omitempty"`
+
 	// 用户名
-
 	Name *string `json:"name,omitempty"`
-	// 创建仓库成员状态
 
+	// 创建仓库成员状态
 	Status *string `json:"status,omitempty"`
 }
 

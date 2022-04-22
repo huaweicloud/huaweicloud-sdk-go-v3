@@ -11,8 +11,8 @@ import (
 
 // 计费类型信息，仅支持按需。
 type OpenGaussChargeInfo struct {
-	// 计费模式。仅支持postPaid，后付费，即按需付费。
 
+	// 计费模式。仅支持postPaid，后付费，即按需付费。
 	ChargeMode OpenGaussChargeInfoChargeMode `json:"charge_mode"`
 }
 

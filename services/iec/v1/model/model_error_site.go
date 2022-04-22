@@ -8,8 +8,8 @@ import (
 
 // 异常站点
 type ErrorSite struct {
-	// 异常站点。
 
+	// 异常站点。
 	ErrSites *[]string `json:"err_sites,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListDatabasesResponse struct {
+
 	// 逻辑库相关信息的集合
-
 	Databases *[]GetDatabaseInfo `json:"databases,omitempty"`
-	// 总条数
 
+	// 总条数
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

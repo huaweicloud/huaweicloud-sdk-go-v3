@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type ShowCustomerOrderDetailsResponse struct {
-	// 订单项个数。
 
+	// 订单项个数。
 	TotalCount *int32 `json:"total_count,omitempty"`
 
 	OrderInfo *CustomerOrderV3 `json:"order_info,omitempty"`
-	// 订单对应的订单项。 具体请参见表5。
 
+	// 订单对应的订单项。 具体请参见表5。
 	OrderLineItems *[]OrderLineItemEntityV2 `json:"order_line_items,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 // 删除日志接入请求体
 type DeleteAccessConfigRequestBody struct {
-	// 日志接入ID列表
 
+	// 日志接入ID列表
 	AccessConfigIdList []string `json:"access_config_id_list"`
 }
 

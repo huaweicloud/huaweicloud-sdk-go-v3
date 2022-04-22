@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type DeleteAppVersionRequest struct {
+
 	// 铂金版实例ID，专业版实例为空值
-
 	IefInstanceId *string `json:"ief-instance-id,omitempty"`
+
 	// 应用ID
-
 	AppId string `json:"app_id"`
-	// 版本ID
 
+	// 版本ID
 	VersionId string `json:"version_id"`
 }
 

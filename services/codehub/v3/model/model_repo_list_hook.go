@@ -7,8 +7,8 @@ import (
 )
 
 type RepoListHook struct {
-	// hook列表
 
+	// hook列表
 	Hooks *[]RepoHook `json:"hooks,omitempty"`
 }
 

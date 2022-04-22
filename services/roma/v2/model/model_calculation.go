@@ -7,14 +7,14 @@ import (
 )
 
 type Calculation struct {
+
 	// 从未连接过的设备数量
-
 	NeverConnected *int32 `json:"never_connected,omitempty"`
+
 	// 在线设备数量
-
 	Online *int32 `json:"online,omitempty"`
-	// 离线设备数量
 
+	// 离线设备数量
 	Offline *int32 `json:"offline,omitempty"`
 }
 

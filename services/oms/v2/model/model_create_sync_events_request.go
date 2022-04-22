@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateSyncEventsRequest struct {
-	// 同步任务ID
 
+	// 同步任务ID
 	SyncTaskId string `json:"sync_task_id"`
 
 	Body *SyncObjectReq `json:"body,omitempty"`

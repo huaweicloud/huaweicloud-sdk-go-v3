@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateClusterResponse struct {
-	// 集群唯一标识，新建集群的ID。
 
+	// 集群唯一标识，新建集群的ID。
 	ClusterId      *string `json:"cluster_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

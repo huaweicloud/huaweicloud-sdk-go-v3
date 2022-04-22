@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListL7rulesResponse struct {
-	// 转发规则对象的列表
 
+	// 转发规则对象的列表
 	Rules          *[]L7ruleResp `json:"rules,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

@@ -7,11 +7,11 @@ import (
 )
 
 type Branch struct {
+
 	// 是否开启保护分支功能
-
 	IsProtected *bool `json:"is_protected,omitempty"`
-	// 分支名
 
+	// 分支名
 	Name *string `json:"name,omitempty"`
 }
 

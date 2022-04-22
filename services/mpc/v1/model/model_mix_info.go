@@ -7,8 +7,8 @@ import (
 )
 
 type MixInfo struct {
-	// 合成任务原始视频配置
 
+	// 合成任务原始视频配置
 	Inputs *[]InputSetting `json:"inputs,omitempty"`
 
 	Layout *MixInfoLayout `json:"layout,omitempty"`

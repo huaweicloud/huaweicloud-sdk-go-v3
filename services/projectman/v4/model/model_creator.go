@@ -7,8 +7,8 @@ import (
 )
 
 type Creator struct {
-	// 指定工作项的创建者用户id
 
+	// 指定工作项的创建者用户id
 	UserId string `json:"user_id"`
 }
 

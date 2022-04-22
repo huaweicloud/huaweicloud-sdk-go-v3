@@ -8,20 +8,20 @@ import (
 
 // Request Object
 type ListSimPoolMembersRequest struct {
+
 	// 流量池标识
-
 	SimPoolId int64 `json:"sim_pool_id"`
+
 	// 容器ID
-
 	Cid *string `json:"cid,omitempty"`
+
 	// 每页记录数
-
 	Limit *int64 `json:"limit,omitempty"`
+
 	// 页码
-
 	Offset *int64 `json:"offset,omitempty"`
-	// 账期，例如：2021-04
 
+	// 账期，例如：2021-04
 	BillingCycle string `json:"billing_cycle"`
 }
 

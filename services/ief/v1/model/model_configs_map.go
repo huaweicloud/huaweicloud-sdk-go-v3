@@ -8,11 +8,11 @@ import (
 
 // 环境变量引用配置项时使用。
 type ConfigsMap struct {
+
 	// 配置项的名称
-
 	Name string `json:"name"`
-	// 配置项的属性名
 
+	// 配置项的属性名
 	Key string `json:"key"`
 }
 

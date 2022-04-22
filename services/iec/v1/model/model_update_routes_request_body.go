@@ -8,8 +8,8 @@ import (
 
 // 更新路由请求体
 type UpdateRoutesRequestBody struct {
-	// 待更新的路由信息
 
+	// 待更新的路由信息
 	Routes []RouteOption `json:"routes"`
 }
 

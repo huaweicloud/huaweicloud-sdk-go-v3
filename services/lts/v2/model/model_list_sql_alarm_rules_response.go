@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListSqlAlarmRulesResponse struct {
-	// SQL告警
 
+	// SQL告警
 	SqlAlarmRules  *[]SqlAlarmRuleRespList `json:"sql_alarm_rules,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

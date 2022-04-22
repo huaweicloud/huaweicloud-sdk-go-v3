@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type StartTaskRequest struct {
-	// 迁移任务ID。
 
+	// 迁移任务ID。
 	TaskId int64 `json:"task_id"`
 
 	Body *StartTaskReq `json:"body,omitempty"`

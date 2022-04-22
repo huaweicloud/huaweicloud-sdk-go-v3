@@ -7,11 +7,11 @@ import (
 )
 
 type Nics struct {
+
 	// 安全组ID
-
 	SecurityGroupId string `json:"securityGroupId"`
-	// 子网ID
 
+	// 子网ID
 	NetId string `json:"net-id"`
 }
 

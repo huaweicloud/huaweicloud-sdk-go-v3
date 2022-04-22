@@ -8,11 +8,11 @@ import (
 
 // 作业对应服务的标题
 type TaskDetailsServiceTitle struct {
+
 	// 作业对应服务的中文标题
-
 	Zh *string `json:"zh,omitempty"`
-	// 作业对应服务的英文标题
 
+	// 作业对应服务的英文标题
 	En *string `json:"en,omitempty"`
 }
 

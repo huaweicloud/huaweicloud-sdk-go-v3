@@ -19,7 +19,12 @@ func RabbitMQClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//批量添加或删除实例标签。
+// 批量添加或删除实例标签
+//
+// 批量添加或删除实例标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) BatchCreateOrDeleteRabbitMqTag(request *model.BatchCreateOrDeleteRabbitMqTagRequest) (*model.BatchCreateOrDeleteRabbitMqTagResponse, error) {
 	requestDef := GenReqDefForBatchCreateOrDeleteRabbitMqTag()
 
@@ -30,7 +35,16 @@ func (c *RabbitMQClient) BatchCreateOrDeleteRabbitMqTag(request *model.BatchCrea
 	}
 }
 
-//批量重启或删除实例。  在实例重启过程中，客户端的生产与消费消息等请求会被拒绝。  实例删除后，实例中原有的数据将被删除，且没有备份，请谨慎操作。
+// 批量重启或删除实例
+//
+// 批量重启或删除实例。
+//
+// 在实例重启过程中，客户端的生产与消费消息等请求会被拒绝。
+//
+// 实例删除后，实例中原有的数据将被删除，且没有备份，请谨慎操作。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) BatchRestartOrDeleteInstances(request *model.BatchRestartOrDeleteInstancesRequest) (*model.BatchRestartOrDeleteInstancesResponse, error) {
 	requestDef := GenReqDefForBatchRestartOrDeleteInstances()
 
@@ -41,7 +55,12 @@ func (c *RabbitMQClient) BatchRestartOrDeleteInstances(request *model.BatchResta
 	}
 }
 
-//创建实例，该接口创建的实例为按需计费的方式。
+// 创建实例(按需)
+//
+// 创建实例，该接口创建的实例为按需计费的方式。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) CreatePostPaidInstance(request *model.CreatePostPaidInstanceRequest) (*model.CreatePostPaidInstanceResponse, error) {
 	requestDef := GenReqDefForCreatePostPaidInstance()
 
@@ -52,7 +71,12 @@ func (c *RabbitMQClient) CreatePostPaidInstance(request *model.CreatePostPaidIns
 	}
 }
 
-//删除后台任务管理中的指定记录。
+// 删除后台任务管理中的指定记录
+//
+// 删除后台任务管理中的指定记录。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) DeleteBackgroundTask(request *model.DeleteBackgroundTaskRequest) (*model.DeleteBackgroundTaskResponse, error) {
 	requestDef := GenReqDefForDeleteBackgroundTask()
 
@@ -63,7 +87,12 @@ func (c *RabbitMQClient) DeleteBackgroundTask(request *model.DeleteBackgroundTas
 	}
 }
 
-//删除指定的实例，释放该实例的所有资源。
+// 删除指定的实例
+//
+// 删除指定的实例，释放该实例的所有资源。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteInstance()
 
@@ -74,7 +103,12 @@ func (c *RabbitMQClient) DeleteInstance(request *model.DeleteInstanceRequest) (*
 	}
 }
 
-//在创建实例时，需要配置实例所在的可用区ID，可通过该接口查询可用区的ID。
+// 查询可用区信息
+//
+// 在创建实例时，需要配置实例所在的可用区ID，可通过该接口查询可用区的ID。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) ListAvailableZones(request *model.ListAvailableZonesRequest) (*model.ListAvailableZonesResponse, error) {
 	requestDef := GenReqDefForListAvailableZones()
 
@@ -85,7 +119,12 @@ func (c *RabbitMQClient) ListAvailableZones(request *model.ListAvailableZonesReq
 	}
 }
 
-//查询实例的后台任务列表。
+// 查询实例的后台任务列表
+//
+// 查询实例的后台任务列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) ListBackgroundTasks(request *model.ListBackgroundTasksRequest) (*model.ListBackgroundTasksResponse, error) {
 	requestDef := GenReqDefForListBackgroundTasks()
 
@@ -96,7 +135,12 @@ func (c *RabbitMQClient) ListBackgroundTasks(request *model.ListBackgroundTasksR
 	}
 }
 
-//查询产品规格列表。
+// 查询产品规格列表
+//
+// 查询产品规格列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) ListEngineProducts(request *model.ListEngineProductsRequest) (*model.ListEngineProductsResponse, error) {
 	requestDef := GenReqDefForListEngineProducts()
 
@@ -107,7 +151,12 @@ func (c *RabbitMQClient) ListEngineProducts(request *model.ListEngineProductsReq
 	}
 }
 
-//查询租户的实例列表，支持按照条件查询。
+// 查询所有实例列表
+//
+// 查询租户的实例列表，支持按照条件查询。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) ListInstancesDetails(request *model.ListInstancesDetailsRequest) (*model.ListInstancesDetailsResponse, error) {
 	requestDef := GenReqDefForListInstancesDetails()
 
@@ -118,7 +167,12 @@ func (c *RabbitMQClient) ListInstancesDetails(request *model.ListInstancesDetail
 	}
 }
 
-//查询插件列表。
+// 查询插件列表
+//
+// 查询插件列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) ListPlugins(request *model.ListPluginsRequest) (*model.ListPluginsResponse, error) {
 	requestDef := GenReqDefForListPlugins()
 
@@ -129,7 +183,12 @@ func (c *RabbitMQClient) ListPlugins(request *model.ListPluginsRequest) (*model.
 	}
 }
 
-//在创建实例时，需要配置订购的产品ID（即product_id），可通过该接口查询产品规格。
+// 查询产品规格列表
+//
+// 在创建实例时，需要配置订购的产品ID（即product_id），可通过该接口查询产品规格。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) ListProducts(request *model.ListProductsRequest) (*model.ListProductsResponse, error) {
 	requestDef := GenReqDefForListProducts()
 
@@ -140,7 +199,12 @@ func (c *RabbitMQClient) ListProducts(request *model.ListProductsRequest) (*mode
 	}
 }
 
-//重置密码。
+// 重置密码
+//
+// 重置密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) ResetPassword(request *model.ResetPasswordRequest) (*model.ResetPasswordResponse, error) {
 	requestDef := GenReqDefForResetPassword()
 
@@ -151,7 +215,14 @@ func (c *RabbitMQClient) ResetPassword(request *model.ResetPasswordRequest) (*mo
 	}
 }
 
-//实例规格变更。  [**当前通过调用API，只支持按需实例进行实例规格变更。**](tag:hws,ctc)
+// 实例规格变更
+//
+// 实例规格变更。
+//
+// [**当前通过调用API，只支持按需实例进行实例规格变更。**](tag:hws,ctc)
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
 	requestDef := GenReqDefForResizeInstance()
 
@@ -162,7 +233,12 @@ func (c *RabbitMQClient) ResizeInstance(request *model.ResizeInstanceRequest) (*
 	}
 }
 
-//查询后台任务管理中的指定记录。
+// 查询后台任务管理中的指定记录
+//
+// 查询后台任务管理中的指定记录。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) ShowBackgroundTask(request *model.ShowBackgroundTaskRequest) (*model.ShowBackgroundTaskResponse, error) {
 	requestDef := GenReqDefForShowBackgroundTask()
 
@@ -173,7 +249,12 @@ func (c *RabbitMQClient) ShowBackgroundTask(request *model.ShowBackgroundTaskReq
 	}
 }
 
-//查询指定实例的详细信息。
+// 查询指定实例
+//
+// 查询指定实例的详细信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) ShowInstance(request *model.ShowInstanceRequest) (*model.ShowInstanceResponse, error) {
 	requestDef := GenReqDefForShowInstance()
 
@@ -184,7 +265,14 @@ func (c *RabbitMQClient) ShowInstance(request *model.ShowInstanceRequest) (*mode
 	}
 }
 
-//查询可扩容规格列表。  RabbtiMQ只支持只增加节点数的扩容方式。
+// 查询可扩容规格列表
+//
+// 查询可扩容规格列表。
+//
+// RabbtiMQ只支持只增加节点数的扩容方式。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) ShowInstanceExtendProductInfo(request *model.ShowInstanceExtendProductInfoRequest) (*model.ShowInstanceExtendProductInfoResponse, error) {
 	requestDef := GenReqDefForShowInstanceExtendProductInfo()
 
@@ -195,7 +283,12 @@ func (c *RabbitMQClient) ShowInstanceExtendProductInfo(request *model.ShowInstan
 	}
 }
 
-//查询维护时间窗开始时间和结束时间。
+// 查询维护时间窗时间段
+//
+// 查询维护时间窗开始时间和结束时间。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) ShowMaintainWindows(request *model.ShowMaintainWindowsRequest) (*model.ShowMaintainWindowsResponse, error) {
 	requestDef := GenReqDefForShowMaintainWindows()
 
@@ -206,7 +299,12 @@ func (c *RabbitMQClient) ShowMaintainWindows(request *model.ShowMaintainWindowsR
 	}
 }
 
-//查询项目标签。
+// 查询项目标签
+//
+// 查询项目标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) ShowRabbitMqProjectTags(request *model.ShowRabbitMqProjectTagsRequest) (*model.ShowRabbitMqProjectTagsResponse, error) {
 	requestDef := GenReqDefForShowRabbitMqProjectTags()
 
@@ -217,7 +315,12 @@ func (c *RabbitMQClient) ShowRabbitMqProjectTags(request *model.ShowRabbitMqProj
 	}
 }
 
-//查询实例标签。
+// 查询实例标签
+//
+// 查询实例标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) ShowRabbitMqTags(request *model.ShowRabbitMqTagsRequest) (*model.ShowRabbitMqTagsResponse, error) {
 	requestDef := GenReqDefForShowRabbitMqTags()
 
@@ -228,7 +331,12 @@ func (c *RabbitMQClient) ShowRabbitMqTags(request *model.ShowRabbitMqTagsRequest
 	}
 }
 
-//修改实例的名称和描述信息。
+// 修改实例信息
+//
+// 修改实例的名称和描述信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) UpdateInstance(request *model.UpdateInstanceRequest) (*model.UpdateInstanceResponse, error) {
 	requestDef := GenReqDefForUpdateInstance()
 
@@ -239,7 +347,12 @@ func (c *RabbitMQClient) UpdateInstance(request *model.UpdateInstanceRequest) (*
 	}
 }
 
-//开启或关闭插件。
+// 开启或关闭插件
+//
+// 开启或关闭插件。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *RabbitMQClient) UpdatePlugins(request *model.UpdatePluginsRequest) (*model.UpdatePluginsResponse, error) {
 	requestDef := GenReqDefForUpdatePlugins()
 

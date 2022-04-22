@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListDedicatedHostsByTagsResponse struct {
+
 	// 返回的专属主机列表。
-
 	Resources *[]RespDeh `json:"resources,omitempty"`
-	// 总记录数。
 
+	// 总记录数。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

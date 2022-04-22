@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShareTemplatesRequest struct {
-	// 仓库id
 
+	// 仓库id
 	RepositoryUuid string `json:"repository_uuid"`
 
 	Body *RepositoryTemplateVo `json:"body,omitempty"`

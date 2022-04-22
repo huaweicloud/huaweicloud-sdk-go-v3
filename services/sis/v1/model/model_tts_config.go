@@ -11,23 +11,23 @@ import (
 
 // 语音合成配置数据结构。
 type TtsConfig struct {
+
 	// 语音格式头：wav、mp3、pcm。 默认：wav
-
 	AudioFormat *TtsConfigAudioFormat `json:"audio_format,omitempty"`
+
 	// 采样率：16000、8000 默认：8000
-
 	SampleRate *TtsConfigSampleRate `json:"sample_rate,omitempty"`
+
 	// 语音合成特征字符串，组成形式为{language}_{speaker}_{domain}，即“语种_人员标识_领域”。发音人分为普通发音人和精品发音人。  普通发音人每100字计一次调用，取值范围如下：   chinese_xiaoqi_common  小琪，标准女声发音人。  chinese_xiaoyu_common  小宇，标准男声发音人。  chinese_xiaoyan_common  小燕，温柔女声发音人。  chinese_xiaowang_common  小王，童声发音人。  chinese_xiaowen_common   小雯，柔美女声发音人。  chinese_xiaojing_common 小婧，俏皮女声发音人。  chinese_xiaosong_common  小宋，激昂男声发音人。  chinese_xiaoxia_common   小夏，热情女声发音人。  chinese_xiaodai_common   小呆，呆萌童声发音人。  chinese_xiaoqian_common  小倩，成熟女声发音人。  english_cameal_common    cameal，柔美女声英文发音人。   精品发音人每50字计一次调用，区域仅支持cn-north-4，cn-east-3，暂时不支持音高调节，取值范围如下：  chinese_huaxiaoxia_common  华小夏，热情女声发音人。  chinese_huaxiaogang_common  华晓刚，利落男声发音人。  chinese_huaxiaolu_common  华小璐，知性女声发音人。  chinese_huaxiaoshu_common  华小舒，舒缓女声发音人。  chinese_huaxiaowei_common  华小唯，嗲柔女声发音人。  chinese_huaxiaoliang_common  华小靓，嘹亮女声发音人。  chinese_huaxiaodong_common  华晓东，成熟男声发音人。  chinese_huaxiaoyan_common  华小颜，严厉女声发音人。  chinese_huaxiaoxuan_common  华小萱，台湾女声发音人。  chinese_huaxiaowen_common  华小雯，柔美女声发音人。  chinese_huaxiaoyang_common  华晓阳，朝气男声发音人。  chinese_huaxiaomin_common  华小闽，闽南女声发音人。  chinese_huanvxia_literature 华女侠，武侠女生发音人，只支持16k的采样率。  chinese_huaxiaoxuan_literature 华晓悬，悬疑男声发音人，只支持16k的采样率。  默认：chinese_xiaoyan_common
-
 	Property *TtsConfigProperty `json:"property,omitempty"`
+
 	// 语速。 取值范围：[-500,500]  默认值：0
-
 	Speed *int32 `json:"speed,omitempty"`
+
 	// 音高。 取值范围： [-500,500]  默认值：0
-
 	Pitch *int32 `json:"pitch,omitempty"`
-	// 音量。 取值范围：[0, 100]  默认值：50
 
+	// 音量。 取值范围：[0, 100]  默认值：50
 	Volume *int32 `json:"volume,omitempty"`
 }
 

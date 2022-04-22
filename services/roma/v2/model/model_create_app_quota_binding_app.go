@@ -7,8 +7,8 @@ import (
 )
 
 type CreateAppQuotaBindingApp struct {
-	// 客户端应用编号列表
 
+	// 客户端应用编号列表
 	AppIds []string `json:"app_ids"`
 }
 

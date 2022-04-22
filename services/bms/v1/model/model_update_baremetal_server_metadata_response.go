@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateBaremetalServerMetadataResponse struct {
-	//
 
+	//
 	Metadata       map[string]string `json:"metadata,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

@@ -7,8 +7,8 @@ import (
 )
 
 type UpdatePolicyRequestBody struct {
-	// 防护策略名
 
+	// 防护策略名
 	Name *string `json:"name,omitempty"`
 
 	Action *PolicyAction `json:"action,omitempty"`

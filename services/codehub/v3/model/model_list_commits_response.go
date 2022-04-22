@@ -9,11 +9,11 @@ import (
 // Response Object
 type ListCommitsResponse struct {
 	Error *Error `json:"error,omitempty"`
+
 	// 提交列表
-
 	Result *[]CommitInfo `json:"result,omitempty"`
-	// 响应状态
 
+	// 响应状态
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

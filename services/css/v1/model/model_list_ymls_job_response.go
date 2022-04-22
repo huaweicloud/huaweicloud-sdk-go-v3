@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListYmlsJobResponse struct {
-	// 配置列表。
 
+	// 配置列表。
 	ConfigList     *[]ConfigList `json:"configList,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

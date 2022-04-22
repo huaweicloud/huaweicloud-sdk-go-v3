@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteDedicatedHostRequest struct {
-	// 专属主机ID。
 
+	// 专属主机ID。
 	DedicatedHostId string `json:"dedicated_host_id"`
 }
 

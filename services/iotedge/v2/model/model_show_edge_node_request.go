@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowEdgeNodeRequest struct {
-	// 边缘节点ID
 
+	// 边缘节点ID
 	EdgeNodeId string `json:"edge_node_id"`
 }
 

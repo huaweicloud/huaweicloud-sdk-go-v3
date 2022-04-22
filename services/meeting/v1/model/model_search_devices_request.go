@@ -8,29 +8,29 @@ import (
 
 // Request Object
 type SearchDevicesRequest struct {
+
 	// 请求requestId，用来标识一路请求，用于问题跟踪定位，建议使用uuId，若不携带，则后台自动生成
-
 	XRequestId *string `json:"X-Request-Id,omitempty"`
+
 	// 语言参数，默认为中文zh-CN, 英文为en-US
-
 	AcceptLanguage *string `json:"Accept-Language,omitempty"`
+
 	// 查询偏移量，若超过最大数量，则返回最后一页。
-
 	Offset *int32 `json:"offset,omitempty"`
+
 	// 查询数量 默认值：0
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 搜索条件。支持名称、SN模糊查询。
-
 	SearchKey *string `json:"searchKey,omitempty"`
+
 	// 终端型号，枚举类型。当前支持TE系列硬件终端，具体的终端类型可以通过获取所有终端类型接口查询。 maxLength：128 minLength：0
-
 	Model *string `json:"model,omitempty"`
+
 	// 部门编号，默认为根部门 默认值：1 maxLength：32 minLength：0
-
 	DeptCode *string `json:"deptCode,omitempty"`
-	// 是否查询子部门 默认值：true
 
+	// 是否查询子部门 默认值：true
 	EnableSubDept *bool `json:"enableSubDept,omitempty"`
 }
 

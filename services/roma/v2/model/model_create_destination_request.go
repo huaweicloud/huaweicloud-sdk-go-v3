@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type CreateDestinationRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 规则ID
 
+	// 规则ID
 	RuleId string `json:"rule_id"`
 
 	Body *CreateDestinationRequestBody `json:"body,omitempty"`

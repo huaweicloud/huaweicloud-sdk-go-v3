@@ -8,14 +8,14 @@ import (
 
 // 子画面信息
 type PicInfoNotify struct {
+
 	// 多画面中每个画面的编号，编号从1开始
-
 	Index *int32 `json:"index,omitempty"`
+
 	// 每个画面中会话标识，即callNumber。
-
 	Id *[]string `json:"id,omitempty"`
-	// 是否为辅流 0： 不是辅流 1： 是辅流
 
+	// 是否为辅流 0： 不是辅流 1： 是辅流
 	Share *int32 `json:"share,omitempty"`
 }
 

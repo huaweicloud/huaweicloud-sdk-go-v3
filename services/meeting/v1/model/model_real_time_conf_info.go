@@ -8,8 +8,8 @@ import (
 
 // 在线会场信息。
 type RealTimeConfInfo struct {
-	// 主持人与会者标识。
 
+	// 主持人与会者标识。
 	ChairID *string `json:"chairID,omitempty"`
 }
 

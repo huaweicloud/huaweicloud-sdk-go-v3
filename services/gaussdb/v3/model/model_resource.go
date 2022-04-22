@@ -10,14 +10,14 @@ import (
 )
 
 type Resource struct {
+
 	// 指定类型的配额。 - instance: 表示实例的配额
-
 	Type ResourceType `json:"type"`
+
 	// 已创建的资源个数。
-
 	Used int32 `json:"used"`
-	// 资源最大的配额数。
 
+	// 资源最大的配额数。
 	Quota int32 `json:"quota"`
 }
 

@@ -7,8 +7,8 @@ import (
 )
 
 type InputModel struct {
-	// 参数名称，正则：\"^[A-Za-z][A-Za-z_]{0,31}$\"
 
+	// 参数名称，正则：\"^[A-Za-z][A-Za-z_]{0,31}$\"
 	Name string `json:"name"`
 
 	PropertyReference *PropertyReferenceModel `json:"property_reference"`

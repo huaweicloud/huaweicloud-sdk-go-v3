@@ -7,11 +7,11 @@ import (
 )
 
 type OpenMysqlProxyRequestBody struct {
+
 	// 代理规格码。
-
 	FlavorRef *string `json:"flavor_ref,omitempty"`
-	// 代理实例节点数，取值整数2-32。
 
+	// 代理实例节点数，取值整数2-32。
 	NodeNum *int32 `json:"node_num,omitempty"`
 }
 

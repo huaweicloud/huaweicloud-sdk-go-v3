@@ -12,6 +12,7 @@ import (
 )
 
 type UploadIssueImgRequestBody struct {
+
 	// 图片文件
 	File *def.FilePart `json:"file"`
 }

@@ -19,7 +19,12 @@ func CbrClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//添加备份可共享的成员，只有云服务器备份可以添加备份共享成员，且仅支持在同一区域的不同用户间共享。
+// 添加备份成员
+//
+// 添加备份可共享的成员，只有云服务器备份可以添加备份共享成员，且仅支持在同一区域的不同用户间共享。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) AddMember(request *model.AddMemberRequest) (*model.AddMemberResponse, error) {
 	requestDef := GenReqDefForAddMember()
 
@@ -30,7 +35,12 @@ func (c *CbrClient) AddMember(request *model.AddMemberRequest) (*model.AddMember
 	}
 }
 
-//存储库添加资源
+// 添加资源
+//
+// 存储库添加资源
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) AddVaultResource(request *model.AddVaultResourceRequest) (*model.AddVaultResourceResponse, error) {
 	requestDef := GenReqDefForAddVaultResource()
 
@@ -41,7 +51,12 @@ func (c *CbrClient) AddVaultResource(request *model.AddVaultResourceRequest) (*m
 	}
 }
 
-//存储库设置策略
+// 设置存储库策略
+//
+// 存储库设置策略
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) AssociateVaultPolicy(request *model.AssociateVaultPolicyRequest) (*model.AssociateVaultPolicyResponse, error) {
 	requestDef := GenReqDefForAssociateVaultPolicy()
 
@@ -52,7 +67,19 @@ func (c *CbrClient) AssociateVaultPolicy(request *model.AssociateVaultPolicyRequ
 	}
 }
 
-//为指定实例批量添加或删除标签 标签管理服务需要使用该接口批量管理实例的标签。 一个资源上最多有10个标签。 此接口为幂等接口：     创建时如果请求体中存在重复key则报错。     创建时，不允许重复key，如果数据库存在就覆盖。     删除时，允许重复key。     删除时，如果删除的标签不存在，默认处理成功,删除时不对标签字符集范围做校验。key长度127个字符，value为255个字符。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+// 批量添加删除存储库资源标签
+//
+// 为指定实例批量添加或删除标签
+// 标签管理服务需要使用该接口批量管理实例的标签。
+// 一个资源上最多有10个标签。
+// 此接口为幂等接口：
+//     创建时如果请求体中存在重复key则报错。
+//     创建时，不允许重复key，如果数据库存在就覆盖。
+//     删除时，允许重复key。
+//     删除时，如果删除的标签不存在，默认处理成功,删除时不对标签字符集范围做校验。key长度127个字符，value为255个字符。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) BatchCreateAndDeleteVaultTags(request *model.BatchCreateAndDeleteVaultTagsRequest) (*model.BatchCreateAndDeleteVaultTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateAndDeleteVaultTags()
 
@@ -63,7 +90,12 @@ func (c *CbrClient) BatchCreateAndDeleteVaultTags(request *model.BatchCreateAndD
 	}
 }
 
-//跨区域复制备份。
+// 复制备份
+//
+// 跨区域复制备份。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) CopyBackup(request *model.CopyBackupRequest) (*model.CopyBackupResponse, error) {
 	requestDef := GenReqDefForCopyBackup()
 
@@ -74,7 +106,12 @@ func (c *CbrClient) CopyBackup(request *model.CopyBackupRequest) (*model.CopyBac
 	}
 }
 
-//执行复制
+// 复制备份还原点
+//
+// 执行复制
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) CopyCheckpoint(request *model.CopyCheckpointRequest) (*model.CopyCheckpointResponse, error) {
 	requestDef := GenReqDefForCopyCheckpoint()
 
@@ -85,7 +122,12 @@ func (c *CbrClient) CopyCheckpoint(request *model.CopyCheckpointRequest) (*model
 	}
 }
 
-//对存储库执行备份，生成备份还原点
+// 创建备份还原点
+//
+// 对存储库执行备份，生成备份还原点
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) CreateCheckpoint(request *model.CreateCheckpointRequest) (*model.CreateCheckpointResponse, error) {
 	requestDef := GenReqDefForCreateCheckpoint()
 
@@ -96,7 +138,12 @@ func (c *CbrClient) CreateCheckpoint(request *model.CreateCheckpointRequest) (*m
 	}
 }
 
-//创建策略，策略分为备份策略和复制策略。
+// 创建策略
+//
+// 创建策略，策略分为备份策略和复制策略。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) CreatePolicy(request *model.CreatePolicyRequest) (*model.CreatePolicyResponse, error) {
 	requestDef := GenReqDefForCreatePolicy()
 
@@ -107,7 +154,12 @@ func (c *CbrClient) CreatePolicy(request *model.CreatePolicyRequest) (*model.Cre
 	}
 }
 
-//创建存储库
+// 创建存储库
+//
+// 创建存储库
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) CreateVault(request *model.CreateVaultRequest) (*model.CreateVaultResponse, error) {
 	requestDef := GenReqDefForCreateVault()
 
@@ -118,7 +170,13 @@ func (c *CbrClient) CreateVault(request *model.CreateVaultRequest) (*model.Creat
 	}
 }
 
-//一个资源上最多有10个标签。 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
+// 添加存储库资源标签
+//
+// 一个资源上最多有10个标签。
+// 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) CreateVaultTags(request *model.CreateVaultTagsRequest) (*model.CreateVaultTagsResponse, error) {
 	requestDef := GenReqDefForCreateVaultTags()
 
@@ -129,7 +187,12 @@ func (c *CbrClient) CreateVaultTags(request *model.CreateVaultTagsRequest) (*mod
 	}
 }
 
-//删除单个备份。
+// 删除备份
+//
+// 删除单个备份。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) DeleteBackup(request *model.DeleteBackupRequest) (*model.DeleteBackupResponse, error) {
 	requestDef := GenReqDefForDeleteBackup()
 
@@ -140,7 +203,12 @@ func (c *CbrClient) DeleteBackup(request *model.DeleteBackupRequest) (*model.Del
 	}
 }
 
-//删除指定的备份共享成员
+// 删除指定备份成员
+//
+// 删除指定的备份共享成员
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) DeleteMember(request *model.DeleteMemberRequest) (*model.DeleteMemberResponse, error) {
 	requestDef := GenReqDefForDeleteMember()
 
@@ -151,7 +219,12 @@ func (c *CbrClient) DeleteMember(request *model.DeleteMemberRequest) (*model.Del
 	}
 }
 
-//删除策略
+// 删除策略
+//
+// 删除策略
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) DeletePolicy(request *model.DeletePolicyRequest) (*model.DeletePolicyResponse, error) {
 	requestDef := GenReqDefForDeletePolicy()
 
@@ -162,7 +235,12 @@ func (c *CbrClient) DeletePolicy(request *model.DeletePolicyRequest) (*model.Del
 	}
 }
 
-//删除存储库。若删除储存库，将一并删除存储库中的所有备份。
+// 删除存储库
+//
+// 删除存储库。若删除储存库，将一并删除存储库中的所有备份。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) DeleteVault(request *model.DeleteVaultRequest) (*model.DeleteVaultResponse, error) {
 	requestDef := GenReqDefForDeleteVault()
 
@@ -173,7 +251,12 @@ func (c *CbrClient) DeleteVault(request *model.DeleteVaultRequest) (*model.Delet
 	}
 }
 
-//幂等接口：删除时，如果删除的标签不存在，返回404。Key不能为空或者空字符串。
+// 删除存储库资源标签
+//
+// 幂等接口：删除时，如果删除的标签不存在，返回404。Key不能为空或者空字符串。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) DeleteVaultTag(request *model.DeleteVaultTagRequest) (*model.DeleteVaultTagResponse, error) {
 	requestDef := GenReqDefForDeleteVaultTag()
 
@@ -184,7 +267,12 @@ func (c *CbrClient) DeleteVaultTag(request *model.DeleteVaultTagRequest) (*model
 	}
 }
 
-//存储库解除策略
+// 解除存储库策略
+//
+// 存储库解除策略
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) DisassociateVaultPolicy(request *model.DisassociateVaultPolicyRequest) (*model.DisassociateVaultPolicyResponse, error) {
 	requestDef := GenReqDefForDisassociateVaultPolicy()
 
@@ -195,7 +283,12 @@ func (c *CbrClient) DisassociateVaultPolicy(request *model.DisassociateVaultPoli
 	}
 }
 
-//同步线下混合云VMware备份副本
+// 同步备份
+//
+// 同步线下混合云VMware备份副本
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ImportBackup(request *model.ImportBackupRequest) (*model.ImportBackupResponse, error) {
 	requestDef := GenReqDefForImportBackup()
 
@@ -206,7 +299,12 @@ func (c *CbrClient) ImportBackup(request *model.ImportBackupRequest) (*model.Imp
 	}
 }
 
-//查询所有副本
+// 查询所有备份
+//
+// 查询所有副本
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ListBackups(request *model.ListBackupsRequest) (*model.ListBackupsResponse, error) {
 	requestDef := GenReqDefForListBackups()
 
@@ -217,7 +315,12 @@ func (c *CbrClient) ListBackups(request *model.ListBackupsRequest) (*model.ListB
 	}
 }
 
-//查询任务列表
+// 查询任务列表
+//
+// 查询任务列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ListOpLogs(request *model.ListOpLogsRequest) (*model.ListOpLogsResponse, error) {
 	requestDef := GenReqDefForListOpLogs()
 
@@ -228,7 +331,12 @@ func (c *CbrClient) ListOpLogs(request *model.ListOpLogsRequest) (*model.ListOpL
 	}
 }
 
-//查询策略列表
+// 查询策略列表
+//
+// 查询策略列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ListPolicies(request *model.ListPoliciesRequest) (*model.ListPoliciesResponse, error) {
 	requestDef := GenReqDefForListPolicies()
 
@@ -239,7 +347,12 @@ func (c *CbrClient) ListPolicies(request *model.ListPoliciesRequest) (*model.Lis
 	}
 }
 
-//查询可保护性资源列表
+// 查询可保护资源
+//
+// 查询可保护性资源列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ListProtectable(request *model.ListProtectableRequest) (*model.ListProtectableResponse, error) {
 	requestDef := GenReqDefForListProtectable()
 
@@ -250,7 +363,12 @@ func (c *CbrClient) ListProtectable(request *model.ListProtectableRequest) (*mod
 	}
 }
 
-//查询存储库列表
+// 查询存储库列表
+//
+// 查询存储库列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ListVault(request *model.ListVaultRequest) (*model.ListVaultResponse, error) {
 	requestDef := GenReqDefForListVault()
 
@@ -261,7 +379,12 @@ func (c *CbrClient) ListVault(request *model.ListVaultRequest) (*model.ListVault
 	}
 }
 
-//支持资源迁移到另一个存储库，不删除备份。
+// 迁移资源
+//
+// 支持资源迁移到另一个存储库，不删除备份。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) MigrateVaultResource(request *model.MigrateVaultResourceRequest) (*model.MigrateVaultResourceResponse, error) {
 	requestDef := GenReqDefForMigrateVaultResource()
 
@@ -272,7 +395,12 @@ func (c *CbrClient) MigrateVaultResource(request *model.MigrateVaultResourceRequ
 	}
 }
 
-//移除存储库中的资源，若移除资源，将一并删除该资源在保管库中的备份
+// 移除资源
+//
+// 移除存储库中的资源，若移除资源，将一并删除该资源在保管库中的备份
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) RemoveVaultResource(request *model.RemoveVaultResourceRequest) (*model.RemoveVaultResourceResponse, error) {
 	requestDef := GenReqDefForRemoveVaultResource()
 
@@ -283,7 +411,12 @@ func (c *CbrClient) RemoveVaultResource(request *model.RemoveVaultResourceReques
 	}
 }
 
-//恢复备份数据
+// 备份恢复
+//
+// 恢复备份数据
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) RestoreBackup(request *model.RestoreBackupRequest) (*model.RestoreBackupResponse, error) {
 	requestDef := GenReqDefForRestoreBackup()
 
@@ -294,7 +427,12 @@ func (c *CbrClient) RestoreBackup(request *model.RestoreBackupRequest) (*model.R
 	}
 }
 
-//根据指定id查询单个副本。
+// 查询指定备份
+//
+// 根据指定id查询单个副本。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ShowBackup(request *model.ShowBackupRequest) (*model.ShowBackupResponse, error) {
 	requestDef := GenReqDefForShowBackup()
 
@@ -305,7 +443,12 @@ func (c *CbrClient) ShowBackup(request *model.ShowBackupRequest) (*model.ShowBac
 	}
 }
 
-//根据还原点ID查询指定还原点
+// 查询备份还原点
+//
+// 根据还原点ID查询指定还原点
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ShowCheckpoint(request *model.ShowCheckpointRequest) (*model.ShowCheckpointResponse, error) {
 	requestDef := GenReqDefForShowCheckpoint()
 
@@ -316,7 +459,12 @@ func (c *CbrClient) ShowCheckpoint(request *model.ShowCheckpointRequest) (*model
 	}
 }
 
-//获取备份成员的详情
+// 获取备份成员详情
+//
+// 获取备份成员的详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ShowMemberDetail(request *model.ShowMemberDetailRequest) (*model.ShowMemberDetailResponse, error) {
 	requestDef := GenReqDefForShowMemberDetail()
 
@@ -327,7 +475,12 @@ func (c *CbrClient) ShowMemberDetail(request *model.ShowMemberDetailRequest) (*m
 	}
 }
 
-//获取备份共享成员的列表信息
+// 获取备份成员列表
+//
+// 获取备份共享成员的列表信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ShowMembersDetail(request *model.ShowMembersDetailRequest) (*model.ShowMembersDetailResponse, error) {
 	requestDef := GenReqDefForShowMembersDetail()
 
@@ -338,7 +491,12 @@ func (c *CbrClient) ShowMembersDetail(request *model.ShowMembersDetailRequest) (
 	}
 }
 
-//根据指定任务ID查询任务
+// 查询单个任务
+//
+// 根据指定任务ID查询任务
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ShowOpLog(request *model.ShowOpLogRequest) (*model.ShowOpLogResponse, error) {
 	requestDef := GenReqDefForShowOpLog()
 
@@ -349,7 +507,12 @@ func (c *CbrClient) ShowOpLog(request *model.ShowOpLogRequest) (*model.ShowOpLog
 	}
 }
 
-//查询单个策略
+// 查询单个策略
+//
+// 查询单个策略
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ShowPolicy(request *model.ShowPolicyRequest) (*model.ShowPolicyResponse, error) {
 	requestDef := GenReqDefForShowPolicy()
 
@@ -360,7 +523,12 @@ func (c *CbrClient) ShowPolicy(request *model.ShowPolicyRequest) (*model.ShowPol
 	}
 }
 
-//根据ID查询可保护性资源
+// 查询指定可保护资源
+//
+// 根据ID查询可保护性资源
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ShowProtectable(request *model.ShowProtectableRequest) (*model.ShowProtectableResponse, error) {
 	requestDef := GenReqDefForShowProtectable()
 
@@ -371,7 +539,12 @@ func (c *CbrClient) ShowProtectable(request *model.ShowProtectableRequest) (*mod
 	}
 }
 
-//查询本区域的复制能力
+// 查询复制能力
+//
+// 查询本区域的复制能力
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ShowReplicationCapabilities(request *model.ShowReplicationCapabilitiesRequest) (*model.ShowReplicationCapabilitiesResponse, error) {
 	requestDef := GenReqDefForShowReplicationCapabilities()
 
@@ -382,7 +555,12 @@ func (c *CbrClient) ShowReplicationCapabilities(request *model.ShowReplicationCa
 	}
 }
 
-//根据ID查询指定存储库
+// 查询指定存储库
+//
+// 根据ID查询指定存储库
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ShowVault(request *model.ShowVaultRequest) (*model.ShowVaultResponse, error) {
 	requestDef := GenReqDefForShowVault()
 
@@ -393,7 +571,13 @@ func (c *CbrClient) ShowVault(request *model.ShowVaultRequest) (*model.ShowVault
 	}
 }
 
-//查询租户在指定Region和实例类型的所有标签集合 标签管理服务需要能够列出当前租户全部已使用的标签集合，为各服务Console打标签和过滤实例时提供标签联想功能
+// 查询存储库项目标签
+//
+// 查询租户在指定Region和实例类型的所有标签集合
+// 标签管理服务需要能够列出当前租户全部已使用的标签集合，为各服务Console打标签和过滤实例时提供标签联想功能
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ShowVaultProjectTag(request *model.ShowVaultProjectTagRequest) (*model.ShowVaultProjectTagResponse, error) {
 	requestDef := GenReqDefForShowVaultProjectTag()
 
@@ -404,7 +588,13 @@ func (c *CbrClient) ShowVaultProjectTag(request *model.ShowVaultProjectTagReques
 	}
 }
 
-//使用标签过滤实例 标签管理服务需要提供按标签过滤各服务实例并汇总显示在列表中，需要各服务提供查询能力
+// 查询存储库资源实例
+//
+// 使用标签过滤实例
+// 标签管理服务需要提供按标签过滤各服务实例并汇总显示在列表中，需要各服务提供查询能力
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ShowVaultResourceInstances(request *model.ShowVaultResourceInstancesRequest) (*model.ShowVaultResourceInstancesResponse, error) {
 	requestDef := GenReqDefForShowVaultResourceInstances()
 
@@ -415,7 +605,13 @@ func (c *CbrClient) ShowVaultResourceInstances(request *model.ShowVaultResourceI
 	}
 }
 
-//查询指定实例的标签信息 标签管理服务需要使用该接口查询指定实例的全部标签数据
+// 查询存储库资源标签
+//
+// 查询指定实例的标签信息
+// 标签管理服务需要使用该接口查询指定实例的全部标签数据
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) ShowVaultTag(request *model.ShowVaultTagRequest) (*model.ShowVaultTagResponse, error) {
 	requestDef := GenReqDefForShowVaultTag()
 
@@ -426,7 +622,12 @@ func (c *CbrClient) ShowVaultTag(request *model.ShowVaultTagRequest) (*model.Sho
 	}
 }
 
-//更新备份共享成员的状态，需要接收方执行此API。
+// 更新备份成员状态
+//
+// 更新备份共享成员的状态，需要接收方执行此API。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) UpdateMemberStatus(request *model.UpdateMemberStatusRequest) (*model.UpdateMemberStatusResponse, error) {
 	requestDef := GenReqDefForUpdateMemberStatus()
 
@@ -437,7 +638,12 @@ func (c *CbrClient) UpdateMemberStatus(request *model.UpdateMemberStatusRequest)
 	}
 }
 
-//修改策略
+// 修改策略
+//
+// 修改策略
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) UpdatePolicy(request *model.UpdatePolicyRequest) (*model.UpdatePolicyResponse, error) {
 	requestDef := GenReqDefForUpdatePolicy()
 
@@ -448,7 +654,12 @@ func (c *CbrClient) UpdatePolicy(request *model.UpdatePolicyRequest) (*model.Upd
 	}
 }
 
-//根据存储库ID修改存储库
+// 修改存储库
+//
+// 根据存储库ID修改存储库
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CbrClient) UpdateVault(request *model.UpdateVaultRequest) (*model.UpdateVaultResponse, error) {
 	requestDef := GenReqDefForUpdateVault()
 

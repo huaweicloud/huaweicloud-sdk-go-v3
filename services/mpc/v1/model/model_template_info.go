@@ -7,8 +7,8 @@ import (
 )
 
 type TemplateInfo struct {
-	// 转码模板ID。
 
+	// 转码模板ID。
 	TemplateId *int32 `json:"template_id,omitempty"`
 
 	Template *QueryTransTemplate `json:"template,omitempty"`

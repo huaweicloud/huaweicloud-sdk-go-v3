@@ -19,7 +19,12 @@ func KafkaClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//批量添加或删除实例标签。
+// 批量添加或删除实例标签
+//
+// 批量添加或删除实例标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) BatchCreateOrDeleteKafkaTag(request *model.BatchCreateOrDeleteKafkaTagRequest) (*model.BatchCreateOrDeleteKafkaTagResponse, error) {
 	requestDef := GenReqDefForBatchCreateOrDeleteKafkaTag()
 
@@ -30,7 +35,12 @@ func (c *KafkaClient) BatchCreateOrDeleteKafkaTag(request *model.BatchCreateOrDe
 	}
 }
 
-//该接口用于向Kafka实例批量删除Topic。
+// Kafka实例批量删除Topic
+//
+// 该接口用于向Kafka实例批量删除Topic。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) BatchDeleteInstanceTopic(request *model.BatchDeleteInstanceTopicRequest) (*model.BatchDeleteInstanceTopicResponse, error) {
 	requestDef := GenReqDefForBatchDeleteInstanceTopic()
 
@@ -41,7 +51,12 @@ func (c *KafkaClient) BatchDeleteInstanceTopic(request *model.BatchDeleteInstanc
 	}
 }
 
-//批量删除Kafka实例的用户
+// 批量删除用户
+//
+// 批量删除Kafka实例的用户
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) BatchDeleteInstanceUsers(request *model.BatchDeleteInstanceUsersRequest) (*model.BatchDeleteInstanceUsersResponse, error) {
 	requestDef := GenReqDefForBatchDeleteInstanceUsers()
 
@@ -52,7 +67,16 @@ func (c *KafkaClient) BatchDeleteInstanceUsers(request *model.BatchDeleteInstanc
 	}
 }
 
-//批量重启或删除实例。  在实例重启过程中，客户端的生产与消费消息等请求会被拒绝。  实例删除后，实例中原有的数据将被删除，且没有备份，请谨慎操作。
+// 批量重启或删除实例
+//
+// 批量重启或删除实例。
+//
+// 在实例重启过程中，客户端的生产与消费消息等请求会被拒绝。
+//
+// 实例删除后，实例中原有的数据将被删除，且没有备份，请谨慎操作。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) BatchRestartOrDeleteInstances(request *model.BatchRestartOrDeleteInstancesRequest) (*model.BatchRestartOrDeleteInstancesResponse, error) {
 	requestDef := GenReqDefForBatchRestartOrDeleteInstances()
 
@@ -63,7 +87,14 @@ func (c *KafkaClient) BatchRestartOrDeleteInstances(request *model.BatchRestartO
 	}
 }
 
-//创建实例的转储节点。  **当前通过调用API，只支持按需实例创建转储节点。**
+// 创建实例的转储节点
+//
+// 创建实例的转储节点。
+//
+// **当前通过调用API，只支持按需实例创建转储节点。**
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) CreateConnector(request *model.CreateConnectorRequest) (*model.CreateConnectorResponse, error) {
 	requestDef := GenReqDefForCreateConnector()
 
@@ -74,7 +105,12 @@ func (c *KafkaClient) CreateConnector(request *model.CreateConnectorRequest) (*m
 	}
 }
 
-//该接口用于向Kafka实例创建Topic。
+// Kafka实例创建Topic
+//
+// 该接口用于向Kafka实例创建Topic。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) CreateInstanceTopic(request *model.CreateInstanceTopicRequest) (*model.CreateInstanceTopicResponse, error) {
 	requestDef := GenReqDefForCreateInstanceTopic()
 
@@ -85,7 +121,12 @@ func (c *KafkaClient) CreateInstanceTopic(request *model.CreateInstanceTopicRequ
 	}
 }
 
-//创建Kafka实例的用户，用户可连接开启SASL的Kafka实例。
+// 创建用户
+//
+// 创建Kafka实例的用户，用户可连接开启SASL的Kafka实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) CreateInstanceUser(request *model.CreateInstanceUserRequest) (*model.CreateInstanceUserResponse, error) {
 	requestDef := GenReqDefForCreateInstanceUser()
 
@@ -96,7 +137,12 @@ func (c *KafkaClient) CreateInstanceUser(request *model.CreateInstanceUserReques
 	}
 }
 
-//新增Kafka实例指定Topic分区。
+// 新增Kafka实例指定Topic分区
+//
+// 新增Kafka实例指定Topic分区。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) CreatePartition(request *model.CreatePartitionRequest) (*model.CreatePartitionResponse, error) {
 	requestDef := GenReqDefForCreatePartition()
 
@@ -107,7 +153,12 @@ func (c *KafkaClient) CreatePartition(request *model.CreatePartitionRequest) (*m
 	}
 }
 
-//创建实例，该接口创建的实例为按需计费的方式。
+// 创建实例（按需）
+//
+// 创建实例，该接口创建的实例为按需计费的方式。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) CreatePostPaidInstance(request *model.CreatePostPaidInstanceRequest) (*model.CreatePostPaidInstanceResponse, error) {
 	requestDef := GenReqDefForCreatePostPaidInstance()
 
@@ -118,7 +169,12 @@ func (c *KafkaClient) CreatePostPaidInstance(request *model.CreatePostPaidInstan
 	}
 }
 
-//创建转储任务。
+// 创建转储任务
+//
+// 创建转储任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) CreateSinkTask(request *model.CreateSinkTaskRequest) (*model.CreateSinkTaskResponse, error) {
 	requestDef := GenReqDefForCreateSinkTask()
 
@@ -129,7 +185,12 @@ func (c *KafkaClient) CreateSinkTask(request *model.CreateSinkTaskRequest) (*mod
 	}
 }
 
-//删除后台任务管理中的指定记录。
+// 删除后台任务管理中的指定记录
+//
+// 删除后台任务管理中的指定记录。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) DeleteBackgroundTask(request *model.DeleteBackgroundTaskRequest) (*model.DeleteBackgroundTaskResponse, error) {
 	requestDef := GenReqDefForDeleteBackgroundTask()
 
@@ -140,7 +201,12 @@ func (c *KafkaClient) DeleteBackgroundTask(request *model.DeleteBackgroundTaskRe
 	}
 }
 
-//删除指定的实例，释放该实例的所有资源。
+// 删除指定的实例
+//
+// 删除指定的实例，释放该实例的所有资源。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteInstance()
 
@@ -151,7 +217,12 @@ func (c *KafkaClient) DeleteInstance(request *model.DeleteInstanceRequest) (*mod
 	}
 }
 
-//删除单个转储任务。
+// 删除单个转储任务
+//
+// 删除单个转储任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) DeleteSinkTask(request *model.DeleteSinkTaskRequest) (*model.DeleteSinkTaskResponse, error) {
 	requestDef := GenReqDefForDeleteSinkTask()
 
@@ -162,7 +233,12 @@ func (c *KafkaClient) DeleteSinkTask(request *model.DeleteSinkTaskRequest) (*mod
 	}
 }
 
-//在创建实例时，需要配置实例所在的可用区ID，可通过该接口查询可用区的ID。
+// 查询可用区信息
+//
+// 在创建实例时，需要配置实例所在的可用区ID，可通过该接口查询可用区的ID。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ListAvailableZones(request *model.ListAvailableZonesRequest) (*model.ListAvailableZonesResponse, error) {
 	requestDef := GenReqDefForListAvailableZones()
 
@@ -173,7 +249,12 @@ func (c *KafkaClient) ListAvailableZones(request *model.ListAvailableZonesReques
 	}
 }
 
-//查询实例的后台任务列表。
+// 查询实例的后台任务列表
+//
+// 查询实例的后台任务列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ListBackgroundTasks(request *model.ListBackgroundTasksRequest) (*model.ListBackgroundTasksResponse, error) {
 	requestDef := GenReqDefForListBackgroundTasks()
 
@@ -184,7 +265,12 @@ func (c *KafkaClient) ListBackgroundTasks(request *model.ListBackgroundTasksRequ
 	}
 }
 
-//查询产品规格列表。
+// 查询产品规格列表
+//
+// 查询产品规格列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ListEngineProducts(request *model.ListEngineProductsRequest) (*model.ListEngineProductsResponse, error) {
 	requestDef := GenReqDefForListEngineProducts()
 
@@ -195,7 +281,12 @@ func (c *KafkaClient) ListEngineProducts(request *model.ListEngineProductsReques
 	}
 }
 
-//该接口用于查询指定Kafka实例的Topic详情。
+// Kafka实例查询Topic
+//
+// 该接口用于查询指定Kafka实例的Topic详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ListInstanceTopics(request *model.ListInstanceTopicsRequest) (*model.ListInstanceTopicsResponse, error) {
 	requestDef := GenReqDefForListInstanceTopics()
 
@@ -206,7 +297,12 @@ func (c *KafkaClient) ListInstanceTopics(request *model.ListInstanceTopicsReques
 	}
 }
 
-//查询租户的实例列表，支持按照条件查询。
+// 查询所有实例列表
+//
+// 查询租户的实例列表，支持按照条件查询。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
 	requestDef := GenReqDefForListInstances()
 
@@ -217,7 +313,18 @@ func (c *KafkaClient) ListInstances(request *model.ListInstancesRequest) (*model
 	}
 }
 
-//在创建kafka实例时，需要配置订购的产品ID（即product_id），可通过该接口查询产品规格。  例如，要订购按需计费、基准带宽为100MB的kafka实例，可从接口响应消息中，查找Hourly的消息体，然后找到bandwidth为100MB的记录对应的product_id，该product_id的值即是创建上述kafka实例时需要配置的产品ID。  同时，unavailable_zones字段表示资源不足的可用区列表，如果为空，则表示所有可用区都有资源，如果不为空，则表示字段值的可用区没有资源。所以必须确保您购买的资源所在的可用区有资源，不在该字段列表内。  例如，响应消息中bandwidth字段为1200MB的记录，unavailable_zones字段包含cn-east-2b、cn-east-2a和cn-east-2d，表示在华东-上海2的可用区1、可用区2、可用区3都没有该资源。
+// 查询产品规格列表
+//
+// 在创建kafka实例时，需要配置订购的产品ID（即product_id），可通过该接口查询产品规格。
+//
+// 例如，要订购按需计费、基准带宽为100MB的kafka实例，可从接口响应消息中，查找Hourly的消息体，然后找到bandwidth为100MB的记录对应的product_id，该product_id的值即是创建上述kafka实例时需要配置的产品ID。
+//
+// 同时，unavailable_zones字段表示资源不足的可用区列表，如果为空，则表示所有可用区都有资源，如果不为空，则表示字段值的可用区没有资源。所以必须确保您购买的资源所在的可用区有资源，不在该字段列表内。
+//
+// 例如，响应消息中bandwidth字段为1200MB的记录，unavailable_zones字段包含cn-east-2b、cn-east-2a和cn-east-2d，表示在华东-上海2的可用区1、可用区2、可用区3都没有该资源。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ListProducts(request *model.ListProductsRequest) (*model.ListProductsResponse, error) {
 	requestDef := GenReqDefForListProducts()
 
@@ -228,7 +335,12 @@ func (c *KafkaClient) ListProducts(request *model.ListProductsRequest) (*model.L
 	}
 }
 
-//查询转储任务列表。
+// 查询转储任务列表
+//
+// 查询转储任务列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ListSinkTasks(request *model.ListSinkTasksRequest) (*model.ListSinkTasksResponse, error) {
 	requestDef := GenReqDefForListSinkTasks()
 
@@ -239,7 +351,12 @@ func (c *KafkaClient) ListSinkTasks(request *model.ListSinkTasksRequest) (*model
 	}
 }
 
-//重置Manager密码。
+// 重置Manager密码
+//
+// 重置Manager密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ResetManagerPassword(request *model.ResetManagerPasswordRequest) (*model.ResetManagerPasswordResponse, error) {
 	requestDef := GenReqDefForResetManagerPassword()
 
@@ -250,7 +367,14 @@ func (c *KafkaClient) ResetManagerPassword(request *model.ResetManagerPasswordRe
 	}
 }
 
-//Kafka实例不支持在线重置消费进度。在执行重置消费进度之前，必须停止被重置消费组客户端。  > 在停止被重置消费组客户端后，需要经过ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG配置的时间（默认10000毫秒），服务端才认为消费组客户端真正下线。
+// 重置消费组消费进度到指定位置
+//
+// Kafka实例不支持在线重置消费进度。在执行重置消费进度之前，必须停止被重置消费组客户端。
+//
+// &gt; 在停止被重置消费组客户端后，需要经过ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG配置的时间（默认10000毫秒），服务端才认为消费组客户端真正下线。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ResetMessageOffset(request *model.ResetMessageOffsetRequest) (*model.ResetMessageOffsetResponse, error) {
 	requestDef := GenReqDefForResetMessageOffset()
 
@@ -261,7 +385,12 @@ func (c *KafkaClient) ResetMessageOffset(request *model.ResetMessageOffsetReques
 	}
 }
 
-//重置密码。
+// 重置密码
+//
+// 重置密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ResetPassword(request *model.ResetPasswordRequest) (*model.ResetPasswordResponse, error) {
 	requestDef := GenReqDefForResetPassword()
 
@@ -272,7 +401,12 @@ func (c *KafkaClient) ResetPassword(request *model.ResetPasswordRequest) (*model
 	}
 }
 
-//重置用户密码
+// 重置用户密码
+//
+// 重置用户密码
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ResetUserPasswrod(request *model.ResetUserPasswrodRequest) (*model.ResetUserPasswrodResponse, error) {
 	requestDef := GenReqDefForResetUserPasswrod()
 
@@ -283,7 +417,14 @@ func (c *KafkaClient) ResetUserPasswrod(request *model.ResetUserPasswrodRequest)
 	}
 }
 
-//实例规格变更。  **当前通过调用API，只支持按需实例进行实例规格变更。**
+// 实例规格变更
+//
+// 实例规格变更。
+//
+// **当前通过调用API，只支持按需实例进行实例规格变更。**
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
 	requestDef := GenReqDefForResizeInstance()
 
@@ -294,7 +435,12 @@ func (c *KafkaClient) ResizeInstance(request *model.ResizeInstanceRequest) (*mod
 	}
 }
 
-//重启Manager。
+// 重启Manager
+//
+// 重启Manager。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) RestartManager(request *model.RestartManagerRequest) (*model.RestartManagerResponse, error) {
 	requestDef := GenReqDefForRestartManager()
 
@@ -305,7 +451,12 @@ func (c *KafkaClient) RestartManager(request *model.RestartManagerRequest) (*mod
 	}
 }
 
-//查询后台任务管理中的指定记录。
+// 查询后台任务管理中的指定记录
+//
+// 查询后台任务管理中的指定记录。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowBackgroundTask(request *model.ShowBackgroundTaskRequest) (*model.ShowBackgroundTaskResponse, error) {
 	requestDef := GenReqDefForShowBackgroundTask()
 
@@ -316,7 +467,12 @@ func (c *KafkaClient) ShowBackgroundTask(request *model.ShowBackgroundTaskReques
 	}
 }
 
-//查询实例在CES的监控层级关系。
+// 查询实例在CES的监控层级关系
+//
+// 查询实例在CES的监控层级关系。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowCesHierarchy(request *model.ShowCesHierarchyRequest) (*model.ShowCesHierarchyResponse, error) {
 	requestDef := GenReqDefForShowCesHierarchy()
 
@@ -327,7 +483,12 @@ func (c *KafkaClient) ShowCesHierarchy(request *model.ShowCesHierarchyRequest) (
 	}
 }
 
-//查询Kafka集群元数据信息。
+// 查询Kafka集群元数据信息
+//
+// 查询Kafka集群元数据信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowCluster(request *model.ShowClusterRequest) (*model.ShowClusterResponse, error) {
 	requestDef := GenReqDefForShowCluster()
 
@@ -338,7 +499,12 @@ func (c *KafkaClient) ShowCluster(request *model.ShowClusterRequest) (*model.Sho
 	}
 }
 
-//查询Kafka实例的协调器信息。
+// 查询Kafka实例的协调器信息
+//
+// 查询Kafka实例的协调器信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowCoordinators(request *model.ShowCoordinatorsRequest) (*model.ShowCoordinatorsResponse, error) {
 	requestDef := GenReqDefForShowCoordinators()
 
@@ -349,7 +515,12 @@ func (c *KafkaClient) ShowCoordinators(request *model.ShowCoordinatorsRequest) (
 	}
 }
 
-//查询消费组信息。
+// 查询消费组信息
+//
+// 查询消费组信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowGroups(request *model.ShowGroupsRequest) (*model.ShowGroupsResponse, error) {
 	requestDef := GenReqDefForShowGroups()
 
@@ -360,7 +531,12 @@ func (c *KafkaClient) ShowGroups(request *model.ShowGroupsRequest) (*model.ShowG
 	}
 }
 
-//查询指定实例的详细信息。
+// 查询指定实例
+//
+// 查询指定实例的详细信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowInstance(request *model.ShowInstanceRequest) (*model.ShowInstanceResponse, error) {
 	requestDef := GenReqDefForShowInstance()
 
@@ -371,7 +547,12 @@ func (c *KafkaClient) ShowInstance(request *model.ShowInstanceRequest) (*model.S
 	}
 }
 
-//查询实例的扩容规格列表。
+// 查询实例的扩容规格列表
+//
+// 查询实例的扩容规格列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowInstanceExtendProductInfo(request *model.ShowInstanceExtendProductInfoRequest) (*model.ShowInstanceExtendProductInfoResponse, error) {
 	requestDef := GenReqDefForShowInstanceExtendProductInfo()
 
@@ -382,7 +563,13 @@ func (c *KafkaClient) ShowInstanceExtendProductInfo(request *model.ShowInstanceE
 	}
 }
 
-//查询消息的偏移量和消息内容。 先根据时间戳查询消息的偏移量，再根据偏移量查询消息内容。
+// 查询消息
+//
+// 查询消息的偏移量和消息内容。
+// 先根据时间戳查询消息的偏移量，再根据偏移量查询消息内容。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowInstanceMessages(request *model.ShowInstanceMessagesRequest) (*model.ShowInstanceMessagesResponse, error) {
 	requestDef := GenReqDefForShowInstanceMessages()
 
@@ -393,7 +580,12 @@ func (c *KafkaClient) ShowInstanceMessages(request *model.ShowInstanceMessagesRe
 	}
 }
 
-//查询Kafka实例Topic详细信息。
+// 查询Kafka实例Topic详细信息
+//
+// 查询Kafka实例Topic详细信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowInstanceTopicDetail(request *model.ShowInstanceTopicDetailRequest) (*model.ShowInstanceTopicDetailResponse, error) {
 	requestDef := GenReqDefForShowInstanceTopicDetail()
 
@@ -404,7 +596,14 @@ func (c *KafkaClient) ShowInstanceTopicDetail(request *model.ShowInstanceTopicDe
 	}
 }
 
-//查询用户列表。  Kafka实例开启SASL功能时，才支持多用户管理的功能。
+// 查询用户列表
+//
+// 查询用户列表。
+//
+// Kafka实例开启SASL功能时，才支持多用户管理的功能。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowInstanceUsers(request *model.ShowInstanceUsersRequest) (*model.ShowInstanceUsersResponse, error) {
 	requestDef := GenReqDefForShowInstanceUsers()
 
@@ -415,7 +614,12 @@ func (c *KafkaClient) ShowInstanceUsers(request *model.ShowInstanceUsersRequest)
 	}
 }
 
-//查询项目标签。
+// 查询项目标签
+//
+// 查询项目标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowKafkaProjectTags(request *model.ShowKafkaProjectTagsRequest) (*model.ShowKafkaProjectTagsResponse, error) {
 	requestDef := GenReqDefForShowKafkaProjectTags()
 
@@ -426,7 +630,12 @@ func (c *KafkaClient) ShowKafkaProjectTags(request *model.ShowKafkaProjectTagsRe
 	}
 }
 
-//查询实例标签。
+// 查询实例标签
+//
+// 查询实例标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowKafkaTags(request *model.ShowKafkaTagsRequest) (*model.ShowKafkaTagsResponse, error) {
 	requestDef := GenReqDefForShowKafkaTags()
 
@@ -437,7 +646,12 @@ func (c *KafkaClient) ShowKafkaTags(request *model.ShowKafkaTagsRequest) (*model
 	}
 }
 
-//查询topic在Broker上磁盘占用情况。
+// 查询topic的磁盘存储情况
+//
+// 查询topic在Broker上磁盘占用情况。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowKafkaTopicPartitionDiskusage(request *model.ShowKafkaTopicPartitionDiskusageRequest) (*model.ShowKafkaTopicPartitionDiskusageResponse, error) {
 	requestDef := GenReqDefForShowKafkaTopicPartitionDiskusage()
 
@@ -448,7 +662,12 @@ func (c *KafkaClient) ShowKafkaTopicPartitionDiskusage(request *model.ShowKafkaT
 	}
 }
 
-//查询维护时间窗开始时间和结束时间。
+// 查询维护时间窗时间段
+//
+// 查询维护时间窗开始时间和结束时间。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowMaintainWindows(request *model.ShowMaintainWindowsRequest) (*model.ShowMaintainWindowsResponse, error) {
 	requestDef := GenReqDefForShowMaintainWindows()
 
@@ -459,7 +678,12 @@ func (c *KafkaClient) ShowMaintainWindows(request *model.ShowMaintainWindowsRequ
 	}
 }
 
-//查询分区指定时间段的消息。
+// 查询分区指定时间段的消息
+//
+// 查询分区指定时间段的消息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowMessages(request *model.ShowMessagesRequest) (*model.ShowMessagesResponse, error) {
 	requestDef := GenReqDefForShowMessages()
 
@@ -470,7 +694,12 @@ func (c *KafkaClient) ShowMessages(request *model.ShowMessagesRequest) (*model.S
 	}
 }
 
-//查询分区最早消息的位置。
+// 查询分区最早消息的位置
+//
+// 查询分区最早消息的位置。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowPartitionBeginningMessage(request *model.ShowPartitionBeginningMessageRequest) (*model.ShowPartitionBeginningMessageResponse, error) {
 	requestDef := GenReqDefForShowPartitionBeginningMessage()
 
@@ -481,7 +710,12 @@ func (c *KafkaClient) ShowPartitionBeginningMessage(request *model.ShowPartition
 	}
 }
 
-//查询分区最新消息的位置。
+// 查询分区最新消息的位置
+//
+// 查询分区最新消息的位置。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowPartitionEndMessage(request *model.ShowPartitionEndMessageRequest) (*model.ShowPartitionEndMessageResponse, error) {
 	requestDef := GenReqDefForShowPartitionEndMessage()
 
@@ -492,7 +726,12 @@ func (c *KafkaClient) ShowPartitionEndMessage(request *model.ShowPartitionEndMes
 	}
 }
 
-//查询分区指定偏移量的消息。
+// 查询分区指定偏移量的消息
+//
+// 查询分区指定偏移量的消息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowPartitionMessage(request *model.ShowPartitionMessageRequest) (*model.ShowPartitionMessageResponse, error) {
 	requestDef := GenReqDefForShowPartitionMessage()
 
@@ -503,7 +742,12 @@ func (c *KafkaClient) ShowPartitionMessage(request *model.ShowPartitionMessageRe
 	}
 }
 
-//查询单个转储任务。
+// 查询单个转储任务
+//
+// 查询单个转储任务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowSinkTaskDetail(request *model.ShowSinkTaskDetailRequest) (*model.ShowSinkTaskDetailResponse, error) {
 	requestDef := GenReqDefForShowSinkTaskDetail()
 
@@ -514,7 +758,14 @@ func (c *KafkaClient) ShowSinkTaskDetail(request *model.ShowSinkTaskDetailReques
 	}
 }
 
-//查询用户权限。  Kafka实例开启SASL功能时，才支持多用户管理的功能。
+// 查询用户权限
+//
+// 查询用户权限。
+//
+// Kafka实例开启SASL功能时，才支持多用户管理的功能。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) ShowTopicAccessPolicy(request *model.ShowTopicAccessPolicyRequest) (*model.ShowTopicAccessPolicyResponse, error) {
 	requestDef := GenReqDefForShowTopicAccessPolicy()
 
@@ -525,7 +776,12 @@ func (c *KafkaClient) ShowTopicAccessPolicy(request *model.ShowTopicAccessPolicy
 	}
 }
 
-//修改实例的名称和描述信息。
+// 修改实例信息
+//
+// 修改实例的名称和描述信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) UpdateInstance(request *model.UpdateInstanceRequest) (*model.UpdateInstanceResponse, error) {
 	requestDef := GenReqDefForUpdateInstance()
 
@@ -536,7 +792,12 @@ func (c *KafkaClient) UpdateInstance(request *model.UpdateInstanceRequest) (*mod
 	}
 }
 
-//开启或关闭实例自动创建topic功能。
+// 开启或关闭实例自动创建topic功能
+//
+// 开启或关闭实例自动创建topic功能。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) UpdateInstanceAutoCreateTopic(request *model.UpdateInstanceAutoCreateTopicRequest) (*model.UpdateInstanceAutoCreateTopicResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceAutoCreateTopic()
 
@@ -547,7 +808,12 @@ func (c *KafkaClient) UpdateInstanceAutoCreateTopic(request *model.UpdateInstanc
 	}
 }
 
-//修改实例跨VPC访问的内网IP。
+// 修改实例跨VPC访问的内网IP
+//
+// 修改实例跨VPC访问的内网IP。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) UpdateInstanceCrossVpcIp(request *model.UpdateInstanceCrossVpcIpRequest) (*model.UpdateInstanceCrossVpcIpResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceCrossVpcIp()
 
@@ -558,7 +824,12 @@ func (c *KafkaClient) UpdateInstanceCrossVpcIp(request *model.UpdateInstanceCros
 	}
 }
 
-//修改Kafka实例Topic
+// 修改Kafka实例Topic
+//
+// 修改Kafka实例Topic
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) UpdateInstanceTopic(request *model.UpdateInstanceTopicRequest) (*model.UpdateInstanceTopicResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceTopic()
 
@@ -569,7 +840,12 @@ func (c *KafkaClient) UpdateInstanceTopic(request *model.UpdateInstanceTopicRequ
 	}
 }
 
-//修改转储任务的配额。
+// 修改转储任务的配额
+//
+// 修改转储任务的配额。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) UpdateSinkTaskQuota(request *model.UpdateSinkTaskQuotaRequest) (*model.UpdateSinkTaskQuotaResponse, error) {
 	requestDef := GenReqDefForUpdateSinkTaskQuota()
 
@@ -580,7 +856,14 @@ func (c *KafkaClient) UpdateSinkTaskQuota(request *model.UpdateSinkTaskQuotaRequ
 	}
 }
 
-//设置用户权限。  Kafka实例开启SASL功能时，才支持多用户管理的功能。
+// 设置用户权限
+//
+// 设置用户权限。
+//
+// Kafka实例开启SASL功能时，才支持多用户管理的功能。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) UpdateTopicAccessPolicy(request *model.UpdateTopicAccessPolicyRequest) (*model.UpdateTopicAccessPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateTopicAccessPolicy()
 
@@ -591,7 +874,12 @@ func (c *KafkaClient) UpdateTopicAccessPolicy(request *model.UpdateTopicAccessPo
 	}
 }
 
-//修改Kafka实例Topic分区的副本。
+// 修改Kafka实例Topic分区的副本
+//
+// 修改Kafka实例Topic分区的副本。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *KafkaClient) UpdateTopicReplica(request *model.UpdateTopicReplicaRequest) (*model.UpdateTopicReplicaResponse, error) {
 	requestDef := GenReqDefForUpdateTopicReplica()
 

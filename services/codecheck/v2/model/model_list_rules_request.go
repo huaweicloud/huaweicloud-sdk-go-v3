@@ -8,17 +8,17 @@ import (
 
 // Request Object
 type ListRulesRequest struct {
+
 	// 规则对应的语言
-
 	RuleLanguages *string `json:"rule_languages,omitempty"`
+
 	// 缺陷等级，0致命，1严重，2一般，3提示
-
 	RuleSeverity *string `json:"rule_severity,omitempty"`
+
 	// 分页索引，偏移量
-
 	Offset *int32 `json:"offset,omitempty"`
-	// 每页显示的数量
 
+	// 每页显示的数量
 	Limit *int32 `json:"limit,omitempty"`
 }
 

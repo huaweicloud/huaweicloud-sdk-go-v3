@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListUnreadNewInstantMessagesResponse struct {
-	// 未读消息列表
 
+	// 未读消息列表
 	Imunread       *[]ImUnreadV2 `json:"imunread,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

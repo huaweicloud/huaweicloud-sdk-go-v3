@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type StopPipelineJobResponse struct {
-	// 管道ID
 
+	// 管道ID
 	PipelineId     *string `json:"pipeline_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

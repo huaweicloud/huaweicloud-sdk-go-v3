@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type BatchRemoveOrgsFromChannelRequest struct {
+
 	// 区块链服务id。
-
 	BlockchainId string `json:"blockchain_id"`
-	// 区块链通道名称。
 
+	// 区块链通道名称。
 	ChannelId string `json:"channel_id"`
 
 	Body *BatchRemoveOrgsFromChannelRequestBody `json:"body,omitempty"`

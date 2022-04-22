@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ListLatelyGroupStatisticsV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// API分组的编号
 
+	// API分组的编号
 	GroupId string `json:"group_id"`
 }
 

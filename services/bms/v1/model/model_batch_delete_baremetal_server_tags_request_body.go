@@ -11,11 +11,11 @@ import (
 
 // This is a auto create Body Object
 type BatchDeleteBaremetalServerTagsRequestBody struct {
+
 	// 操作标识（仅支持小写）：delete（删除）。
-
 	Action BatchDeleteBaremetalServerTagsRequestBodyAction `json:"action"`
-	// 标签列表。
 
+	// 标签列表。
 	Tags []BaremetalServerTag `json:"tags"`
 }
 

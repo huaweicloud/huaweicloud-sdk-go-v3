@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-//
+// 集群的内网连接信息。
 type Endpoints struct {
+
 	// 内网连接信息。
-
 	ConnectInfo *string `json:"connect_info,omitempty"`
-	// 内网JDBC URL，默认格式如下： jdbc:postgresql://< connect_info>/<YOUR_DATABASE_NAME>
 
+	// 内网JDBC URL，默认格式如下： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
 	JdbcUrl *string `json:"jdbc_url,omitempty"`
 }
 

@@ -11,11 +11,11 @@ import (
 
 // 标签列表
 type CreateTagsOption struct {
+
 	// 标签列表。action为delete时，tags结构体不能缺失，key不能为空，或者空字符串。
-
 	Tags []TagsSingleValue `json:"tags"`
-	// 操作标识（区分大小写）：delete：删除。create：创建。若已经存在相同的key值则会覆盖对应的value值。
 
+	// 操作标识（区分大小写）：delete：删除。create：创建。若已经存在相同的key值则会覆盖对应的value值。
 	Action CreateTagsOptionAction `json:"action"`
 }
 

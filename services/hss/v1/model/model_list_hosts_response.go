@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListHostsResponse struct {
+
 	// 总数
-
 	TotalNum *int32 `json:"total_num,omitempty"`
-	// 查询弹性云服务器状态列表
 
+	// 查询弹性云服务器状态列表
 	DataList       *[]Host `json:"data_list,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -7,11 +7,11 @@ import (
 )
 
 type ShowCeshierarchyRespQueues1 struct {
+
 	// topic名称。
-
 	Name *string `json:"name,omitempty"`
-	// 分区信息。
 
+	// 分区信息。
 	Partitions *[]ShowCeshierarchyRespPartitions `json:"partitions,omitempty"`
 }
 

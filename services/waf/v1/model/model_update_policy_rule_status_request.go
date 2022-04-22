@@ -11,17 +11,17 @@ import (
 
 // Request Object
 type UpdatePolicyRuleStatusRequest struct {
+
 	// 企业项目id
-
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	// 策略id（策略id从查询防护策略列表接口获取）
-
 	PolicyId string `json:"policy_id"`
+
 	// 策略类型
-
 	Ruletype UpdatePolicyRuleStatusRequestRuletype `json:"ruletype"`
-	// 规则id，根据不同的规则类型（ruletype）调用规则列表接口获取规则id，例如黑白名单（whiteblackip）规则id，您可以通过调用查询黑白名单规则列表（ListWhiteblackipRule）获取规则id
 
+	// 规则id，根据不同的规则类型（ruletype）调用规则列表接口获取规则id，例如黑白名单（whiteblackip）规则id，您可以通过调用查询黑白名单规则列表（ListWhiteblackipRule）获取规则id
 	RuleId string `json:"rule_id"`
 
 	Body *UpdatePolicyRuleStatusRequestBody `json:"body,omitempty"`

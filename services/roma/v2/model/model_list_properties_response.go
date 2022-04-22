@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ListPropertiesResponse struct {
+
 	// 总数
-
 	Total *int32 `json:"total,omitempty"`
+
 	// 本次返回数量
-
 	Size *int32 `json:"size,omitempty"`
-	// 属性列表
 
+	// 属性列表
 	Items          *[]Property `json:"items,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

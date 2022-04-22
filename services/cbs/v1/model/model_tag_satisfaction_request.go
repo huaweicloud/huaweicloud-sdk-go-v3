@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type TagSatisfactionRequest struct {
+
 	// qabot编号，UUID格式。
-
 	QabotId string `json:"qabot_id"`
-	// 请求ID，由问答机器人会话生成。
 
+	// 请求ID，由问答机器人会话生成。
 	RequestId string `json:"request_id"`
 
 	Body *PostSatisfactionReq `json:"body,omitempty"`

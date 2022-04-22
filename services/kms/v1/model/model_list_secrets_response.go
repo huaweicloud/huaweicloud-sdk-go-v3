@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListSecretsResponse struct {
-	// 凭据详情列表。
 
+	// 凭据详情列表。
 	Secrets *[]Secret `json:"secrets,omitempty"`
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`

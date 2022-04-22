@@ -10,17 +10,17 @@ import (
 )
 
 type RecordObsFileAddr struct {
+
 	// OBS Bucket所在RegionID
-
 	Location RecordObsFileAddrLocation `json:"location"`
+
 	// OBS Bucket所在Region的项目ID
-
 	ProjectId string `json:"project_id"`
+
 	// OBS的bucket名称
-
 	Bucket string `json:"bucket"`
-	// OBS对象路径，遵守OBS Object定义。如果为空则保存到根目录
 
+	// OBS对象路径，遵守OBS Object定义。如果为空则保存到根目录
 	Object *string `json:"object,omitempty"`
 }
 

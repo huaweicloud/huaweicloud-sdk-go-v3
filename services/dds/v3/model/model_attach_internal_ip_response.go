@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type AttachInternalIpResponse struct {
+
 	// 任务ID。
-
 	JobId *string `json:"job_id,omitempty"`
+
 	// 节点ID。
-
 	NodeId *string `json:"node_id,omitempty"`
-	// 新的内网IP。
 
+	// 新的内网IP。
 	NewIp          *string `json:"new_ip,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

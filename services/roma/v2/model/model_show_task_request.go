@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowTaskRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 任务ID
 
+	// 任务ID
 	TaskId string `json:"task_id"`
 }
 

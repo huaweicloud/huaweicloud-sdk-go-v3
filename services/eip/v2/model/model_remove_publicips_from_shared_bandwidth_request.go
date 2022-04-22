@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type RemovePublicipsFromSharedBandwidthRequest struct {
-	// 带宽唯一标识
 
+	// 带宽唯一标识
 	BandwidthId string `json:"bandwidth_id"`
 
 	Body *RemovePublicipsFromSharedBandwidthRequestBody `json:"body,omitempty"`

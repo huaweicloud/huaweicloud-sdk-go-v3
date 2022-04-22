@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ShowMqsInstanceMessagesResponse struct {
+
 	// 消息列表。
-
 	Messages *[]ShowMqsInstanceMessagesRespMessages `json:"messages,omitempty"`
+
 	// 消息总数。
-
 	Total float32 `json:"total,omitempty"`
-	// 返回总条数。
 
+	// 返回总条数。
 	Size           float32 `json:"size,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

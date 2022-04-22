@@ -19,7 +19,12 @@ func DdmClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//创建DDM逻辑库。
+// 创建DDM逻辑库
+//
+// 创建DDM逻辑库。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) CreateDatabase(request *model.CreateDatabaseRequest) (*model.CreateDatabaseResponse, error) {
 	requestDef := GenReqDefForCreateDatabase()
 
@@ -30,7 +35,14 @@ func (c *DdmClient) CreateDatabase(request *model.CreateDatabaseRequest) (*model
 	}
 }
 
-//创建一个DDM实例。  DDM运行于虚拟私有云。申请DDM实例前，需保证有可用的虚拟私有云，并且已配置好子网与安全组。
+// 购买DDM实例
+//
+// 创建一个DDM实例。
+//
+// DDM运行于虚拟私有云。申请DDM实例前，需保证有可用的虚拟私有云，并且已配置好子网与安全组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
 	requestDef := GenReqDefForCreateInstance()
 
@@ -41,7 +53,12 @@ func (c *DdmClient) CreateInstance(request *model.CreateInstanceRequest) (*model
 	}
 }
 
-//DDM帐号用于连接和管理逻辑库。一个DDM实例最多能创建100个DDM帐号，一个DDM帐号可以关联多个逻辑库。
+// 创建DDM帐号
+//
+// DDM帐号用于连接和管理逻辑库。一个DDM实例最多能创建100个DDM帐号，一个DDM帐号可以关联多个逻辑库。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) CreateUsers(request *model.CreateUsersRequest) (*model.CreateUsersResponse, error) {
 	requestDef := GenReqDefForCreateUsers()
 
@@ -52,7 +69,12 @@ func (c *DdmClient) CreateUsers(request *model.CreateUsersRequest) (*model.Creat
 	}
 }
 
-//删除指定的逻辑库，释放该逻辑库的所有资源。
+// 删除DDM逻辑库
+//
+// 删除指定的逻辑库，释放该逻辑库的所有资源。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) DeleteDatabase(request *model.DeleteDatabaseRequest) (*model.DeleteDatabaseResponse, error) {
 	requestDef := GenReqDefForDeleteDatabase()
 
@@ -63,7 +85,12 @@ func (c *DdmClient) DeleteDatabase(request *model.DeleteDatabaseRequest) (*model
 	}
 }
 
-//删除指定的DDM实例，释放该实例的所有资源。
+// 删除DDM实例
+//
+// 删除指定的DDM实例，释放该实例的所有资源。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteInstance()
 
@@ -74,7 +101,12 @@ func (c *DdmClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model
 	}
 }
 
-//删除指定的DDM实例帐号，如果帐号关联了逻辑库，则对应的关联关系也会删除。
+// 删除DDM帐号
+//
+// 删除指定的DDM实例帐号，如果帐号关联了逻辑库，则对应的关联关系也会删除。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) DeleteUser(request *model.DeleteUserRequest) (*model.DeleteUserResponse, error) {
 	requestDef := GenReqDefForDeleteUser()
 
@@ -85,7 +117,12 @@ func (c *DdmClient) DeleteUser(request *model.DeleteUserRequest) (*model.DeleteU
 	}
 }
 
-//对指定的DDM实例的节点个数进行扩容。
+// DDM实例节点扩容
+//
+// 对指定的DDM实例的节点个数进行扩容。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ExpandInstanceNodes(request *model.ExpandInstanceNodesRequest) (*model.ExpandInstanceNodesResponse, error) {
 	requestDef := GenReqDefForExpandInstanceNodes()
 
@@ -96,7 +133,12 @@ func (c *DdmClient) ExpandInstanceNodes(request *model.ExpandInstanceNodesReques
 	}
 }
 
-//查询创建逻辑库可选取的数据库实例列表。
+// 查询创建逻辑库可选取的数据库实例列表
+//
+// 查询创建逻辑库可选取的数据库实例列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ListAvailableRdsList(request *model.ListAvailableRdsListRequest) (*model.ListAvailableRdsListResponse, error) {
 	requestDef := GenReqDefForListAvailableRdsList()
 
@@ -107,7 +149,12 @@ func (c *DdmClient) ListAvailableRdsList(request *model.ListAvailableRdsListRequ
 	}
 }
 
-//查询DDM逻辑库列表。
+// 查询DDM逻辑库列表
+//
+// 查询DDM逻辑库列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ListDatabases(request *model.ListDatabasesRequest) (*model.ListDatabasesResponse, error) {
 	requestDef := GenReqDefForListDatabases()
 
@@ -118,7 +165,12 @@ func (c *DdmClient) ListDatabases(request *model.ListDatabasesRequest) (*model.L
 	}
 }
 
-//查询DDM引擎信息详情。
+// 查询DDM引擎信息
+//
+// 查询DDM引擎信息详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ListEngines(request *model.ListEnginesRequest) (*model.ListEnginesResponse, error) {
 	requestDef := GenReqDefForListEngines()
 
@@ -129,7 +181,12 @@ func (c *DdmClient) ListEngines(request *model.ListEnginesRequest) (*model.ListE
 	}
 }
 
-//查询DDM可用区规格信息详情。
+// 查询DDM可用区规格信息
+//
+// 查询DDM可用区规格信息详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
 
@@ -140,7 +197,12 @@ func (c *DdmClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 	}
 }
 
-//查询DDM实例列表。
+// 查询DDM实例列表
+//
+// 查询DDM实例列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
 	requestDef := GenReqDefForListInstances()
 
@@ -151,7 +213,12 @@ func (c *DdmClient) ListInstances(request *model.ListInstancesRequest) (*model.L
 	}
 }
 
-//查询DDM实例节点列表。
+// 查询DDM实例节点列表
+//
+// 查询DDM实例节点列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ListNodes(request *model.ListNodesRequest) (*model.ListNodesResponse, error) {
 	requestDef := GenReqDefForListNodes()
 
@@ -162,7 +229,12 @@ func (c *DdmClient) ListNodes(request *model.ListNodesRequest) (*model.ListNodes
 	}
 }
 
-//查询指定时间段内在DDM实例的读写次数。
+// 读写比例监控
+//
+// 查询指定时间段内在DDM实例的读写次数。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ListReadWriteRatio(request *model.ListReadWriteRatioRequest) (*model.ListReadWriteRatioResponse, error) {
 	requestDef := GenReqDefForListReadWriteRatio()
 
@@ -173,7 +245,12 @@ func (c *DdmClient) ListReadWriteRatio(request *model.ListReadWriteRatioRequest)
 	}
 }
 
-//查询指定时间段内在DDM实例上执行过的慢sql相关信息。
+// 慢日志监控
+//
+// 查询指定时间段内在DDM实例上执行过的慢sql相关信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ListSlowLog(request *model.ListSlowLogRequest) (*model.ListSlowLogResponse, error) {
 	requestDef := GenReqDefForListSlowLog()
 
@@ -184,7 +261,12 @@ func (c *DdmClient) ListSlowLog(request *model.ListSlowLogRequest) (*model.ListS
 	}
 }
 
-//查询DDM帐号列表。
+// 查询DDM帐号列表
+//
+// 查询DDM帐号列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ListUsers(request *model.ListUsersRequest) (*model.ListUsersResponse, error) {
 	requestDef := GenReqDefForListUsers()
 
@@ -195,7 +277,12 @@ func (c *DdmClient) ListUsers(request *model.ListUsersRequest) (*model.ListUsers
 	}
 }
 
-//DDM实例跨region容灾场景下，针对目标DDM实例实现表数据reload，使数据同步。
+// DDM表数据重载
+//
+// DDM实例跨region容灾场景下，针对目标DDM实例实现表数据reload，使数据同步。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) RebuildConfig(request *model.RebuildConfigRequest) (*model.RebuildConfigResponse, error) {
 	requestDef := GenReqDefForRebuildConfig()
 
@@ -206,7 +293,12 @@ func (c *DdmClient) RebuildConfig(request *model.RebuildConfigRequest) (*model.R
 	}
 }
 
-//重置现有DDM帐号的密码。
+// 重置DDM账号密码
+//
+// 重置现有DDM帐号的密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ResetUserPassword(request *model.ResetUserPasswordRequest) (*model.ResetUserPasswordResponse, error) {
 	requestDef := GenReqDefForResetUserPassword()
 
@@ -217,7 +309,12 @@ func (c *DdmClient) ResetUserPassword(request *model.ResetUserPasswordRequest) (
 	}
 }
 
-//重启指定的DDM实例。
+// 重启DDM实例
+//
+// 重启指定的DDM实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) RestartInstance(request *model.RestartInstanceRequest) (*model.RestartInstanceResponse, error) {
 	requestDef := GenReqDefForRestartInstance()
 
@@ -228,7 +325,12 @@ func (c *DdmClient) RestartInstance(request *model.RestartInstanceRequest) (*mod
 	}
 }
 
-//查询指定逻辑库的详细信息。
+// 查询DDM逻辑库详细信息
+//
+// 查询指定逻辑库的详细信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ShowDatabase(request *model.ShowDatabaseRequest) (*model.ShowDatabaseResponse, error) {
 	requestDef := GenReqDefForShowDatabase()
 
@@ -239,7 +341,12 @@ func (c *DdmClient) ShowDatabase(request *model.ShowDatabaseRequest) (*model.Sho
 	}
 }
 
-//查询指定DDM实例的详细信息。
+// 查询DDM实例详情
+//
+// 查询指定DDM实例的详细信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ShowInstance(request *model.ShowInstanceRequest) (*model.ShowInstanceResponse, error) {
 	requestDef := GenReqDefForShowInstance()
 
@@ -250,7 +357,12 @@ func (c *DdmClient) ShowInstance(request *model.ShowInstanceRequest) (*model.Sho
 	}
 }
 
-//查询DDM指定实例的参数详情。
+// 查询DDM指定实例的参数详情
+//
+// 查询DDM指定实例的参数详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ShowInstanceParam(request *model.ShowInstanceParamRequest) (*model.ShowInstanceParamResponse, error) {
 	requestDef := GenReqDefForShowInstanceParam()
 
@@ -261,7 +373,12 @@ func (c *DdmClient) ShowInstanceParam(request *model.ShowInstanceParamRequest) (
 	}
 }
 
-//查询DDM实例节点详情。
+// 查询DDM实例节点详情
+//
+// 查询DDM实例节点详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ShowNode(request *model.ShowNodeRequest) (*model.ShowNodeResponse, error) {
 	requestDef := GenReqDefForShowNode()
 
@@ -272,7 +389,12 @@ func (c *DdmClient) ShowNode(request *model.ShowNodeRequest) (*model.ShowNodeRes
 	}
 }
 
-//对指定的DDM实例的节点个数进行缩容。
+// DDM实例节点缩容
+//
+// 对指定的DDM实例的节点个数进行缩容。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) ShrinkInstanceNodes(request *model.ShrinkInstanceNodesRequest) (*model.ShrinkInstanceNodesResponse, error) {
 	requestDef := GenReqDefForShrinkInstanceNodes()
 
@@ -283,7 +405,12 @@ func (c *DdmClient) ShrinkInstanceNodes(request *model.ShrinkInstanceNodesReques
 	}
 }
 
-//同步当前DDM实例已关的所有数据库实例配置信息。
+// 同步数据库实例信息
+//
+// 同步当前DDM实例已关的所有数据库实例配置信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) UpdateDatabaseInfo(request *model.UpdateDatabaseInfoRequest) (*model.UpdateDatabaseInfoResponse, error) {
 	requestDef := GenReqDefForUpdateDatabaseInfo()
 
@@ -294,7 +421,12 @@ func (c *DdmClient) UpdateDatabaseInfo(request *model.UpdateDatabaseInfoRequest)
 	}
 }
 
-//修改DDM实例名称。
+// 修改DDM实例名称
+//
+// 修改DDM实例名称。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) UpdateInstanceName(request *model.UpdateInstanceNameRequest) (*model.UpdateInstanceNameResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceName()
 
@@ -305,7 +437,12 @@ func (c *DdmClient) UpdateInstanceName(request *model.UpdateInstanceNameRequest)
 	}
 }
 
-//修改DDM实例参数。
+// 修改DDM实例参数
+//
+// 修改DDM实例参数。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) UpdateInstanceParam(request *model.UpdateInstanceParamRequest) (*model.UpdateInstanceParamResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceParam()
 
@@ -316,7 +453,12 @@ func (c *DdmClient) UpdateInstanceParam(request *model.UpdateInstanceParamReques
 	}
 }
 
-//修改DDM实例安全组。
+// 修改DDM实例安全组
+//
+// 修改DDM实例安全组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) UpdateInstanceSecurityGroup(request *model.UpdateInstanceSecurityGroupRequest) (*model.UpdateInstanceSecurityGroupResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceSecurityGroup()
 
@@ -327,7 +469,12 @@ func (c *DdmClient) UpdateInstanceSecurityGroup(request *model.UpdateInstanceSec
 	}
 }
 
-//修改DDM已关联的数据库实例的读策略。
+// 修改DDM已关联的数据库实例的读策略
+//
+// 修改DDM已关联的数据库实例的读策略。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) UpdateReadAndWriteStrategy(request *model.UpdateReadAndWriteStrategyRequest) (*model.UpdateReadAndWriteStrategyResponse, error) {
 	requestDef := GenReqDefForUpdateReadAndWriteStrategy()
 
@@ -338,7 +485,12 @@ func (c *DdmClient) UpdateReadAndWriteStrategy(request *model.UpdateReadAndWrite
 	}
 }
 
-//修改现有DDM帐号的权限或者与逻辑库的管理关系。
+// 修改DDM帐号
+//
+// 修改现有DDM帐号的权限或者与逻辑库的管理关系。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *DdmClient) UpdateUser(request *model.UpdateUserRequest) (*model.UpdateUserResponse, error) {
 	requestDef := GenReqDefForUpdateUser()
 

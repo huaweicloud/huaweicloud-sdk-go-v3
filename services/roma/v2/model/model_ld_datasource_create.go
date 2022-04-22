@@ -10,26 +10,26 @@ import (
 )
 
 type LdDatasourceCreate struct {
+
 	// 数据源名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 数据源类型： - oracle：oracle数据源类型 - mysql：mysql数据源类型 - mongodb：mongodb数据源类型 - redis：redis数据源类型 - postgresql：postgresql数据源类型 - hive：hive数据源类型 - mssql：sqlserver数据源类型 - sqlserver：sqlserver数据源类型 - gauss200：gauss200数据源类型 - dws：dws数据源类型 - gauss100：gauss100数据源类型 - zenith：zenith数据源类型
-
 	Type *LdDatasourceCreateType `json:"type,omitempty"`
+
 	// 数据源描述
-
 	Description *string `json:"description,omitempty"`
+
 	// 数据源连接字符串
-
 	Url *string `json:"url,omitempty"`
+
 	// 用户名
-
 	User *string `json:"user,omitempty"`
+
 	// 密码。  敏感信息不作为响应返回
-
 	Password *string `json:"password,omitempty"`
-	// ftp上传路径  预留字段，暂不支持。
 
+	// ftp上传路径  预留字段，暂不支持。
 	Remotepath *string `json:"remotepath,omitempty"`
 }
 

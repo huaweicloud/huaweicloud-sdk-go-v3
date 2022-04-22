@@ -11,17 +11,17 @@ import (
 
 // image数据结构说明
 type ImageInfo struct {
+
 	// 镜像ID，格式为UUID。
-
 	Id *string `json:"id,omitempty"`
+
 	// 镜像的名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 镜像的类型。取值为：Linux（包括SUSE/RedHat/CentOS/Oracle Linux/EulerOS/Ubuntu操作系统）Windows（Windows操作系统）Other（ESXi操作系统）
-
 	OsType *ImageInfoOsType `json:"__os_type,omitempty"`
-	// 镜像相关快捷链接地址。
 
+	// 镜像相关快捷链接地址。
 	Links *[]Links `json:"links,omitempty"`
 }
 

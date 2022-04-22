@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type RestoreSnapshotRequest struct {
+
 	// 快照所属的集群ID。
-
 	ClusterId string `json:"cluster_id"`
-	// 快照ID。
 
+	// 快照ID。
 	SnapshotId string `json:"snapshot_id"`
 
 	Body *RestoreSnapshotReq `json:"body,omitempty"`

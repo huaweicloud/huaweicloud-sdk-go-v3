@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListSharedTagsResponse struct {
-	// tag标签的列表
 
+	// tag标签的列表
 	Tags           *[]Tag `json:"tags,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowReplicationRequest struct {
-	// 复制对ID。
 
+	// 复制对ID。
 	ReplicationId string `json:"replication_id"`
 }
 

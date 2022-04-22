@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteVolumeResponse struct {
-	// 正常返回时返回的任务ID。
 
+	// 正常返回时返回的任务ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

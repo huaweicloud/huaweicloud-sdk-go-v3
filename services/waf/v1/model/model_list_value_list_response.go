@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListValueListResponse struct {
+
 	// 引用表条数
-
 	Total *int32 `json:"total,omitempty"`
-	// 引用表列表
 
+	// 引用表列表
 	Items          *[]ValueListResponseBody `json:"items,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }

@@ -8,17 +8,17 @@ import (
 
 // Response Object
 type DeleteValueListResponse struct {
+
 	// 引用表id
-
 	Id *string `json:"id,omitempty"`
+
 	// 引用表名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 引用表类型
-
 	Type *string `json:"type,omitempty"`
-	// 删除引用表的时间，时间为13位毫秒时间戳
 
+	// 删除引用表的时间，时间为13位毫秒时间戳
 	Timestamp      *int64 `json:"timestamp,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

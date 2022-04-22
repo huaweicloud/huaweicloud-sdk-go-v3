@@ -11,23 +11,23 @@ import (
 
 // Request Object
 type ListGroupsRequest struct {
+
 	// 存储用量单位
-
 	Unit *ListGroupsRequestUnit `json:"unit,omitempty"`
+
 	// 存储类型，有资产存储(取值:AssetStorage)、设备存储(取值:DeviceStorage)两种类型
-
 	Type *string `json:"type,omitempty"`
+
 	// 存储组 ID
-
 	GroupId *string `json:"group_id,omitempty"`
+
 	// 存储组名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 页码
-
 	Offset *int32 `json:"offset,omitempty"`
-	// 返回条数限制
 
+	// 返回条数限制
 	Limit *int32 `json:"limit,omitempty"`
 }
 

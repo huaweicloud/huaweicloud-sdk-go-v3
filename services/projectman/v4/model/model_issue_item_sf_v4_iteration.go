@@ -8,11 +8,11 @@ import (
 
 // 迭代
 type IssueItemSfV4Iteration struct {
+
 	// 迭代id
-
 	Id *int32 `json:"id,omitempty"`
-	// 迭代名
 
+	// 迭代名
 	Name *string `json:"name,omitempty"`
 }
 

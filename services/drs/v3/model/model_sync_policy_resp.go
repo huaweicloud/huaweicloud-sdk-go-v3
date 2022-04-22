@@ -7,17 +7,17 @@ import (
 )
 
 type SyncPolicyResp struct {
+
 	// 任务ID
-
 	Id *string `json:"id,omitempty"`
+
 	// 状态 - success：成功 - failed：失败
-
 	Status *string `json:"status,omitempty"`
+
 	// 错误码
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 错误信息
 
+	// 错误信息
 	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 

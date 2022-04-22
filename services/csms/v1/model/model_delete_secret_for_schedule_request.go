@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteSecretForScheduleRequest struct {
-	// 凭据名称。
 
+	// 凭据名称。
 	SecretName string `json:"secret_name"`
 
 	Body *DeleteSecretForScheduleRequestBody `json:"body,omitempty"`

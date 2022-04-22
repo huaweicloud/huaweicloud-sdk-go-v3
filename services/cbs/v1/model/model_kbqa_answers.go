@@ -8,11 +8,11 @@ import (
 
 //
 type KbqaAnswers struct {
+
 	// 答案。
-
 	Answer string `json:"answer"`
-	// 答案评分。
 
+	// 答案评分。
 	Score float64 `json:"score"`
 }
 

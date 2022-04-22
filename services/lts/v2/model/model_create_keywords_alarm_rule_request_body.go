@@ -10,28 +10,28 @@ import (
 )
 
 type CreateKeywordsAlarmRuleRequestBody struct {
+
 	// 关键词告警名称
-
 	KeywordsAlarmRuleName string `json:"keywords_alarm_rule_name"`
+
 	// 关键词告警信息描述
-
 	KeywordsAlarmRuleDescription *string `json:"keywords_alarm_rule_description,omitempty"`
-	// 关键词详细信息
 
+	// 关键词详细信息
 	KeywordsRequests []KeywordsRequest `json:"keywords_requests"`
 
 	Frequency *Frequency `json:"frequency"`
+
 	// 告警级别
-
 	KeywordsAlarmLevel CreateKeywordsAlarmRuleRequestBodyKeywordsAlarmLevel `json:"keywords_alarm_level"`
+
 	// 是否发送
-
 	KeywordsAlarmSend bool `json:"keywords_alarm_send"`
+
 	// domainId
-
 	DomainId string `json:"domain_id"`
-	// 通知主题
 
+	// 通知主题
 	NotificationSaveRule *NotificationSaveRule `json:"notification_save_rule,omitempty"`
 }
 

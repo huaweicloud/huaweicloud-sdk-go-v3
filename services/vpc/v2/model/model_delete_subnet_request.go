@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteSubnetRequest struct {
+
 	// 子网对应的vpc_id
-
 	VpcId string `json:"vpc_id"`
-	// 子网ID
 
+	// 子网ID
 	SubnetId string `json:"subnet_id"`
 }
 

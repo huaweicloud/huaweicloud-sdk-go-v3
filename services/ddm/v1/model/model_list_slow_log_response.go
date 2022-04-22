@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListSlowLogResponse struct {
+
 	// DDM慢sql日志条数。
-
 	TotalRecord *int32 `json:"totalRecord,omitempty"`
-	// DDM慢sql日志信息列表的集合。
 
+	// DDM慢sql日志信息列表的集合。
 	SlowLogList    *[]SlowLogList `json:"slowLogList,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

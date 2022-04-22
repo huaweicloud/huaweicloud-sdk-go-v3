@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateInstanceRequest struct {
-	// bcs 服务id
 
+	// bcs 服务id
 	BlockchainId string `json:"blockchain_id"`
 
 	Body *UpdateInstanceRequestBody `json:"body,omitempty"`

@@ -11,14 +11,14 @@ import (
 
 // Request Object
 type CreateDeploymentJobsRequest struct {
+
 	// 语言类型 中文:zh-cn 英文:en-us
-
 	XLanguage *CreateDeploymentJobsRequestXLanguage `json:"X-Language,omitempty"`
+
 	// 应用id
-
 	ApplicationId string `json:"application_id"`
-	// 环境标识，从 [应用详情接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=DevStar&api=ShowApplication) 返回报文中的环境信息获取。
 
+	// 环境标识，从 [应用详情接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=DevStar&api=ShowApplication) 返回报文中的环境信息获取。
 	EnvironmentTag string `json:"environment_tag"`
 
 	Body *CreateDeploymentJobsParams `json:"body,omitempty"`

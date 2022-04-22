@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowTableSchemaRequest struct {
-	// 表ID。
 
+	// 表ID。
 	TableId string `json:"table_id"`
 }
 

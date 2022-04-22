@@ -8,14 +8,14 @@ import (
 
 // 当前租户CBH的配额信息
 type QuotaDetail struct {
+
 	// 中文配额描述
-
 	ZhCn *string `json:"zh_cn,omitempty"`
+
 	// 英文配额描述
-
 	EnUs *string `json:"en_us,omitempty"`
-	// 租户剩余配额数量
 
+	// 租户剩余配额数量
 	Remaining int32 `json:"remaining"`
 }
 

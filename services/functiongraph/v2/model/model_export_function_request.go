@@ -11,17 +11,17 @@ import (
 
 // Request Object
 type ExportFunctionRequest struct {
+
 	// 函数的URN（Uniform Resource Name），唯一标识函数。
-
 	FunctionUrn string `json:"function_urn"`
+
 	// 是否导出函数配置
-
 	Config *bool `json:"config,omitempty"`
+
 	// 是否导出函数代码
-
 	Code *bool `json:"code,omitempty"`
-	// 兼容老的方式，type=code代表导出代码,type=config代码导出配置
 
+	// 兼容老的方式，type=code代表导出代码,type=config代码导出配置
 	Type *ExportFunctionRequestType `json:"type,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListPipelineSimpleInfoRequest struct {
-	// 语言类型 中文:zh-cn 英文:en-us，默认en-us
 
+	// 语言类型 中文:zh-cn 英文:en-us，默认en-us
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	Body *ListPipelineSimpleInfoRequestBody `json:"body,omitempty"`

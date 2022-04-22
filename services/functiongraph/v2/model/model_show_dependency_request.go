@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowDependencyRequest struct {
-	// 依赖包的ID。
 
+	// 依赖包的ID。
 	DependId string `json:"depend_id"`
 }
 

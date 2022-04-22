@@ -8,20 +8,20 @@ import (
 
 // Response Object
 type ShowMqsInstanceTopicAccessPolicyResponse struct {
-	// topic名称。
 
+	// topic名称。
 	Name *string `json:"name,omitempty"`
+
 	// 策略列表。
-
 	Policies *[]ShowMqsInstanceTopicAccessPolicyRespPolicies `json:"policies,omitempty"`
+
 	// 权限策略的总数。
-
 	Total *int32 `json:"total,omitempty"`
+
 	// 查询权限策略的数量。
-
 	Size *int32 `json:"size,omitempty"`
-	// topic名称。
 
+	// topic名称。
 	Operation      *string `json:"operation,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

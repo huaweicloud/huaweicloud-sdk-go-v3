@@ -7,11 +7,11 @@ import (
 )
 
 type RegisterDmsKafkaInstanceRequestBody struct {
+
 	// kafka ID
-
 	InstanceId string `json:"instance_id"`
-	// kafka 名称
 
+	// kafka 名称
 	KafkaName string `json:"kafka_name"`
 
 	ConnectInfo *RegisterDmsKafkaInstanceRequestBodyConnectInfo `json:"connect_info"`

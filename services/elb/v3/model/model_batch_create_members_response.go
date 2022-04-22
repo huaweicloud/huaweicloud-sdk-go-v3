@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type BatchCreateMembersResponse struct {
+
 	// 请求ID。  注：自动生成 。
-
 	RequestId *string `json:"request_id,omitempty"`
-	// 后端服务器对象列表。
 
+	// 后端服务器对象列表。
 	Members        *[]BatchMember `json:"members,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

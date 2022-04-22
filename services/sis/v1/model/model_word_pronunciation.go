@@ -8,11 +8,11 @@ import (
 
 //  单词发音打分
 type WordPronunciation struct {
+
 	// 单词发音综合得分 0-100
-
 	Score float32 `json:"score"`
-	// 单词发音好坏得分 0-100
 
+	// 单词发音好坏得分 0-100
 	Gop float32 `json:"gop"`
 }
 

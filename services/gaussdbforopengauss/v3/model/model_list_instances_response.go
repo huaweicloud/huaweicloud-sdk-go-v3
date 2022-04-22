@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListInstancesResponse struct {
+
 	// 实例信息。
-
 	Instances *[]ListInstanceResponse `json:"instances,omitempty"`
-	// 总记录数。
 
+	// 总记录数。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

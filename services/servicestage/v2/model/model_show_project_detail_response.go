@@ -8,17 +8,17 @@ import (
 
 // Response Object
 type ShowProjectDetailResponse struct {
+
 	// 命名空间ID。
-
 	NamespaceId *string `json:"namespace_id,omitempty"`
+
 	// 命名空间。
-
 	Namespace *string `json:"namespace,omitempty"`
+
 	// 仓库项目ID。
-
 	ProjectId *string `json:"project_id,omitempty"`
-	// 仓库项目。
 
+	// 仓库项目。
 	Project        *string `json:"project,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 // 一个az对象
 type AzInfo struct {
-	// 可用分区的名字。
 
+	// 可用分区的名字。
 	ZoneName string `json:"zoneName"`
 
 	ZoneState *ZoneState `json:"zoneState"`

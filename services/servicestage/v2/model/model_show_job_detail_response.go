@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type ShowJobDetailResponse struct {
-	// 部署任务数量。
 
+	// 部署任务数量。
 	TaskCount *int32 `json:"task_count,omitempty"`
 
 	Job *JobInfo `json:"job,omitempty"`
-	// 部署任务列表。
 
+	// 部署任务列表。
 	Tasks          *[]TaskInfo `json:"tasks,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

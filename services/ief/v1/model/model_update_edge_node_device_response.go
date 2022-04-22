@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type UpdateEdgeNodeDeviceResponse struct {
-	// 工业终端设备预留字段
 
+	// 工业终端设备预留字段
 	DeleteConnector *bool `json:"delete_connector,omitempty"`
-	// 工业终端设备预留字段
 
+	// 工业终端设备预留字段
 	DeployConnector *bool `json:"deploy_connector,omitempty"`
-	// 工业终端设备预留字段
 
+	// 工业终端设备预留字段
 	DeploymentId *string `json:"deployment_id,omitempty"`
 
 	UpdateDevices  *NodeDevice `json:"update_devices,omitempty"`

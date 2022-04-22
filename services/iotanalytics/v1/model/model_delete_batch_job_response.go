@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteBatchJobResponse struct {
-	// 被删除作业ID。
 
+	// 被删除作业ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

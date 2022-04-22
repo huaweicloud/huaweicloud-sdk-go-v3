@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type StopJobRequest struct {
+
 	// 作业ID
-
 	JobId string `json:"job_id"`
-	// 停止作业触发savepoint
 
+	// 停止作业触发savepoint
 	TriggerSavepoint *bool `json:"trigger_savepoint,omitempty"`
 }
 

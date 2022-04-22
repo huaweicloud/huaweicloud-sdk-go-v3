@@ -7,11 +7,11 @@ import (
 )
 
 type OperateAuthorizationV2Req struct {
+
 	// 拒绝理由
-
 	RejectReason *string `json:"reject_reason,omitempty"`
-	// 组id
 
+	// 组id
 	GroupId *string `json:"group_id,omitempty"`
 }
 

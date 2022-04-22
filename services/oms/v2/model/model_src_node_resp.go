@@ -11,20 +11,20 @@ import (
 
 // 源端节点信息。
 type SrcNodeResp struct {
+
 	// 源端桶的名称。
-
 	Bucket *string `json:"bucket,omitempty"`
+
 	// 源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
-
 	CloudType *SrcNodeRespCloudType `json:"cloud_type,omitempty"`
+
 	// 源端桶所处的区域。
-
 	Region *string `json:"region,omitempty"`
+
 	// 当源端为腾讯云时，会返回此参数。
-
 	AppId *string `json:"app_id,omitempty"`
-	// 任务类型为对象迁移任务时，表示待迁移对象名称； 任务类型为前缀迁移任务时，表示待迁移前缀。
 
+	// 任务类型为对象迁移任务时，表示待迁移对象名称； 任务类型为前缀迁移任务时，表示待迁移前缀。
 	ObjectKey *[]string `json:"object_key,omitempty"`
 
 	ListFile *ListFile `json:"list_file,omitempty"`

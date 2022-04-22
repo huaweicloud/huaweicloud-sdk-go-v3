@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowInstanceRequest struct {
-	// 实例id
 
+	// 实例id
 	InstanceId string `json:"instance_id"`
 }
 

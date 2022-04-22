@@ -8,8 +8,8 @@ import (
 
 // 批量启动\\停止任务的详情
 type TaskBean struct {
-	// 任务ID, 可为空
 
+	// 任务ID, 可为空
 	TaskId *string `json:"task_id,omitempty"`
 }
 

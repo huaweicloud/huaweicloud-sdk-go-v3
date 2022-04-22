@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListTaskHistoriesResponse struct {
+
 	// 历史扫描任务总数
-
 	Total *int32 `json:"total,omitempty"`
-	// 历史扫描任务列表
 
+	// 历史扫描任务列表
 	Data           *[]ShowTasksResponseBody `json:"data,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }

@@ -7,8 +7,8 @@ import (
 )
 
 type CdmUpdateJobJsonReq struct {
-	// 作业列表，请参见jobs数据结构说明。
 
+	// 作业列表，请参见jobs数据结构说明。
 	Jobs []Job `json:"jobs"`
 }
 

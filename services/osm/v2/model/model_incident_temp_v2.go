@@ -7,14 +7,14 @@ import (
 )
 
 type IncidentTempV2 struct {
+
 	// 模板id
-
 	IncidentTemplateId *string `json:"incident_template_id,omitempty"`
+
 	// 模板名称
-
 	IncidentTemplateName *string `json:"incident_template_name,omitempty"`
-	// 模板内容
 
+	// 模板内容
 	IncidentTemplateContent *string `json:"incident_template_content,omitempty"`
 }
 

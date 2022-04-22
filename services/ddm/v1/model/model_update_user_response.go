@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateUserResponse struct {
-	// DDM实例帐号名称。
 
+	// DDM实例帐号名称。
 	Name           *string `json:"name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

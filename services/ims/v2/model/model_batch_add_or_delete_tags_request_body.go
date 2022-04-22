@@ -11,11 +11,11 @@ import (
 
 // 镜像标签请求体
 type BatchAddOrDeleteTagsRequestBody struct {
+
 	// 要进行的标签操作，区分大小写。支持create、delete，分别用于批量地创建/更新、删除标签。
-
 	Action BatchAddOrDeleteTagsRequestBodyAction `json:"action"`
-	// 需要增加、修改或者删除的标签键值对集合。
 
+	// 需要增加、修改或者删除的标签键值对集合。
 	Tags []ResourceTag `json:"tags"`
 }
 

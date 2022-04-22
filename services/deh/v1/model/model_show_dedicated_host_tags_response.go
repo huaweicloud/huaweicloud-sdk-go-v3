@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowDedicatedHostTagsResponse struct {
-	// 专属主机标签列表。
 
+	// 专属主机标签列表。
 	Tags           *[]ResourceTag `json:"tags,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

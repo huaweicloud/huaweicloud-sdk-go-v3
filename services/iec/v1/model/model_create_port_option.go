@@ -11,14 +11,14 @@ import (
 
 // 创建端口参数对象。
 type CreatePortOption struct {
+
 	// 端口设备所属。  取值范围：目前只支持指定\"neutron:VIP_PORT\"，neutron:VIP_PORT表示创建的是VIP
-
 	DeviceOwner CreatePortOptionDeviceOwner `json:"device_owner"`
+
 	// 端口所属网络的ID。  约束：必须是存在的网络ID。
-
 	NetworkId string `json:"network_id"`
-	// 端口IP  约束：一个端口只支持一个fixed_ip，且不支持更新。
 
+	// 端口IP  约束：一个端口只支持一个fixed_ip，且不支持更新。
 	FixedIps *[]FixedIp `json:"fixed_ips,omitempty"`
 }
 

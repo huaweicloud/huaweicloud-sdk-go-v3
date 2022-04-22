@@ -11,35 +11,35 @@ import (
 
 // 健康检查详情，VPC通道类型为2时必选。
 type VpcHealthConfigBase struct {
+
 	// 使用以下协议，对VPC中主机执行健康检查。
-
 	Protocol VpcHealthConfigBaseProtocol `json:"protocol"`
+
 	// 健康检查时的目标路径。protocol = http时必选
-
 	Path *string `json:"path,omitempty"`
+
 	// 健康检查时的请求方法
-
 	Method *VpcHealthConfigBaseMethod `json:"method,omitempty"`
+
 	// 健康检查的目标端口，缺省时为VPC中主机的端口号。
-
 	Port *int32 `json:"port,omitempty"`
+
 	// 正常阈值。判定VPC通道中主机正常的依据为：连续检查x成功，x为您设置的正常阈值。
-
 	ThresholdNormal int32 `json:"threshold_normal"`
+
 	// 异常阙值。判定VPC通道中主机异常的依据为：连续检查x失败，x为您设置的异常阈值。
-
 	ThresholdAbnormal int32 `json:"threshold_abnormal"`
+
 	// 间隔时间：连续两次检查的间隔时间，单位为秒。必须大于timeout字段取值。
-
 	TimeInterval int32 `json:"time_interval"`
+
 	// 检查目标HTTP响应时，判断成功使用的HTTP响应码。取值范围为100到599之前的任意整数值，支持如下三种格式： - 多个值，如：200,201,202 - 一系列值，如：200-299 - 组合值，如：201,202,210-299 protocol = http时必选
-
 	HttpCode *string `json:"http_code,omitempty"`
+
 	// 是否开启双向认证。若开启，则使用实例配置中的backend_client_certificate配置项的证书
-
 	EnableClientSsl *bool `json:"enable_client_ssl,omitempty"`
-	// 健康检查状态   - 1：可用   - 2：不可用
 
+	// 健康检查状态   - 1：可用   - 2：不可用
 	Status *VpcHealthConfigBaseStatus `json:"status,omitempty"`
 }
 

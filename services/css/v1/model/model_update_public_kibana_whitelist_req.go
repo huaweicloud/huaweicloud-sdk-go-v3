@@ -7,8 +7,8 @@ import (
 )
 
 type UpdatePublicKibanaWhitelistReq struct {
-	// 白名单。
 
+	// 白名单。
 	WhiteList string `json:"whiteList"`
 }
 

@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type CreateTagRequest struct {
+
 	// 资源id
-
 	ResourceId string `json:"resource_id"`
+
 	// 资源类型
-
 	ResourceType string `json:"resource_type"`
-	// 铂金版实例ID，专业版实例为空值
 
+	// 铂金版实例ID，专业版实例为空值
 	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 
 	Body *AddTag `json:"body,omitempty"`

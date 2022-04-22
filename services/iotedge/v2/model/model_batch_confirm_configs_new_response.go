@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type BatchConfirmConfigsNewResponse struct {
-	// 已确认的配置项id
 
+	// 已确认的配置项id
 	Ids            *interface{} `json:"ids,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

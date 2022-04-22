@@ -12,6 +12,7 @@ import (
 )
 
 type CreateImageWatermarkRequestBody struct {
+
 	// 要添加水印的图片文件，添加的图片短边尺寸需要超过512像素。
 	File *def.FilePart `json:"file"`
 

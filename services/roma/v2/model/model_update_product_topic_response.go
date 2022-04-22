@@ -11,23 +11,23 @@ import (
 
 // Response Object
 type UpdateProductTopicResponse struct {
+
 	// 归属产品ID
-
 	ProductId *int32 `json:"product_id,omitempty"`
+
 	// 产品主题ID
-
 	TopicId *int32 `json:"topic_id,omitempty"`
+
 	// 主题权限 0-发布 1-订阅
-
 	Permission *UpdateProductTopicResponsePermission `json:"permission,omitempty"`
+
 	// 主题名称
-
 	TopicName *string `json:"topic_name,omitempty"`
+
 	// 版本号
-
 	Version *string `json:"version,omitempty"`
-	// 描述
 
+	// 描述
 	Description    *string `json:"description,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

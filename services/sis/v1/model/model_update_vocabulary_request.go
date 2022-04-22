@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateVocabularyRequest struct {
-	// 被更新的热词表id。
 
+	// 被更新的热词表id。
 	VocabularyId string `json:"vocabulary_id"`
 
 	Body *PutUpdateVocabReq `json:"body,omitempty"`

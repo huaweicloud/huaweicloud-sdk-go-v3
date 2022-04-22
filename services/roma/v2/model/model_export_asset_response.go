@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ExportAssetResponse struct {
-	// 资产导出作业的ID，可用于查询作业进度，获取导出作业进度
 
+	// 资产导出作业的ID，可用于查询作业进度，获取导出作业进度
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

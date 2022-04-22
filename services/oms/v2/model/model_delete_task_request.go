@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteTaskRequest struct {
-	// 迁移任务ID。
 
+	// 迁移任务ID。
 	TaskId int64 `json:"task_id"`
 }
 

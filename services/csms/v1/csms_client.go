@@ -19,7 +19,12 @@ func CsmsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//- 功能介绍：批量添加或删除凭据标签。
+// 批量添加或删除凭据标签
+//
+// - 功能介绍：批量添加或删除凭据标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) BatchCreateOrDeleteTags(request *model.BatchCreateOrDeleteTagsRequest) (*model.BatchCreateOrDeleteTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateOrDeleteTags()
 
@@ -30,7 +35,16 @@ func (c *CsmsClient) BatchCreateOrDeleteTags(request *model.BatchCreateOrDeleteT
 	}
 }
 
-//创建新的凭据，并将凭据值存入凭据的初始版本。  凭据管理服务将凭据值加密后，存储在凭据对象下的版本中。每个版本可与多个凭据版本状态相关联，凭据版本状态用于标识凭据版本处于的阶段，没有版本状态标记的版本视为已弃用，可用凭据管理服务自动删除。  初始版本的状态被标记为SYSCURRENT。
+// 创建凭据
+//
+// 创建新的凭据，并将凭据值存入凭据的初始版本。
+//
+// 凭据管理服务将凭据值加密后，存储在凭据对象下的版本中。每个版本可与多个凭据版本状态相关联，凭据版本状态用于标识凭据版本处于的阶段，没有版本状态标记的版本视为已弃用，可用凭据管理服务自动删除。
+//
+// 初始版本的状态被标记为SYSCURRENT。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) CreateSecret(request *model.CreateSecretRequest) (*model.CreateSecretResponse, error) {
 	requestDef := GenReqDefForCreateSecret()
 
@@ -41,7 +55,12 @@ func (c *CsmsClient) CreateSecret(request *model.CreateSecretRequest) (*model.Cr
 	}
 }
 
-//- 功能介绍：添加凭据标签。
+// 添加凭据标签
+//
+// - 功能介绍：添加凭据标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) CreateSecretTag(request *model.CreateSecretTagRequest) (*model.CreateSecretTagResponse, error) {
 	requestDef := GenReqDefForCreateSecretTag()
 
@@ -52,7 +71,12 @@ func (c *CsmsClient) CreateSecretTag(request *model.CreateSecretTagRequest) (*mo
 	}
 }
 
-//在指定的凭据中，创建一个新的凭据版本，用于加密保管新的凭据值。默认情况下，新创建的凭据版本被标记为SYSCURRENT状态，而SYSCURRENT标记的前一个凭据版本被标记为SYSPREVIOUS状态。您可以通过指定VersionStage参数来覆盖默认行为。
+// 创建凭据版本
+//
+// 在指定的凭据中，创建一个新的凭据版本，用于加密保管新的凭据值。默认情况下，新创建的凭据版本被标记为SYSCURRENT状态，而SYSCURRENT标记的前一个凭据版本被标记为SYSPREVIOUS状态。您可以通过指定VersionStage参数来覆盖默认行为。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) CreateSecretVersion(request *model.CreateSecretVersionRequest) (*model.CreateSecretVersionResponse, error) {
 	requestDef := GenReqDefForCreateSecretVersion()
 
@@ -63,7 +87,12 @@ func (c *CsmsClient) CreateSecretVersion(request *model.CreateSecretVersionReque
 	}
 }
 
-//立即删除指定的凭据，且无法恢复。
+// 立即删除凭据
+//
+// 立即删除指定的凭据，且无法恢复。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) DeleteSecret(request *model.DeleteSecretRequest) (*model.DeleteSecretResponse, error) {
 	requestDef := GenReqDefForDeleteSecret()
 
@@ -74,7 +103,12 @@ func (c *CsmsClient) DeleteSecret(request *model.DeleteSecretRequest) (*model.De
 	}
 }
 
-//指定延迟删除时间，创建删除凭据的定时任务，可设置7~30天的的延迟删除时间。
+// 创建凭据的定时删除任务
+//
+// 指定延迟删除时间，创建删除凭据的定时任务，可设置7~30天的的延迟删除时间。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) DeleteSecretForSchedule(request *model.DeleteSecretForScheduleRequest) (*model.DeleteSecretForScheduleResponse, error) {
 	requestDef := GenReqDefForDeleteSecretForSchedule()
 
@@ -85,7 +119,12 @@ func (c *CsmsClient) DeleteSecretForSchedule(request *model.DeleteSecretForSched
 	}
 }
 
-//删除指定的凭据版本状态。
+// 删除凭据的版本状态
+//
+// 删除指定的凭据版本状态。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) DeleteSecretStage(request *model.DeleteSecretStageRequest) (*model.DeleteSecretStageResponse, error) {
 	requestDef := GenReqDefForDeleteSecretStage()
 
@@ -96,7 +135,12 @@ func (c *CsmsClient) DeleteSecretStage(request *model.DeleteSecretStageRequest) 
 	}
 }
 
-//- 功能介绍：删除凭据标签。
+// 删除凭据标签
+//
+// - 功能介绍：删除凭据标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) DeleteSecretTag(request *model.DeleteSecretTagRequest) (*model.DeleteSecretTagResponse, error) {
 	requestDef := GenReqDefForDeleteSecretTag()
 
@@ -107,7 +151,12 @@ func (c *CsmsClient) DeleteSecretTag(request *model.DeleteSecretTagRequest) (*mo
 	}
 }
 
-//- 功能介绍：查询用户在指定项目下的所有凭据标签集合。
+// 查询项目标签
+//
+// - 功能介绍：查询用户在指定项目下的所有凭据标签集合。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) ListProjectSecretsTags(request *model.ListProjectSecretsTagsRequest) (*model.ListProjectSecretsTagsResponse, error) {
 	requestDef := GenReqDefForListProjectSecretsTags()
 
@@ -118,7 +167,12 @@ func (c *CsmsClient) ListProjectSecretsTags(request *model.ListProjectSecretsTag
 	}
 }
 
-//- 功能介绍：查询凭据实例。通过标签过滤，筛选用户凭据,返回凭据列表。
+// 查询凭据实例
+//
+// - 功能介绍：查询凭据实例。通过标签过滤，筛选用户凭据,返回凭据列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) ListResourceInstances(request *model.ListResourceInstancesRequest) (*model.ListResourceInstancesResponse, error) {
 	requestDef := GenReqDefForListResourceInstances()
 
@@ -129,7 +183,12 @@ func (c *CsmsClient) ListResourceInstances(request *model.ListResourceInstancesR
 	}
 }
 
-//- 功能介绍：查询凭据标签。
+// 查询凭据标签
+//
+// - 功能介绍：查询凭据标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) ListSecretTags(request *model.ListSecretTagsRequest) (*model.ListSecretTagsResponse, error) {
 	requestDef := GenReqDefForListSecretTags()
 
@@ -140,7 +199,12 @@ func (c *CsmsClient) ListSecretTags(request *model.ListSecretTagsRequest) (*mode
 	}
 }
 
-//查询指定凭据下的版本列表信息。
+// 查询凭据的版本列表
+//
+// 查询指定凭据下的版本列表信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) ListSecretVersions(request *model.ListSecretVersionsRequest) (*model.ListSecretVersionsResponse, error) {
 	requestDef := GenReqDefForListSecretVersions()
 
@@ -151,7 +215,12 @@ func (c *CsmsClient) ListSecretVersions(request *model.ListSecretVersionsRequest
 	}
 }
 
-//查询当前用户在本项目下创建的所有凭据。
+// 查询凭据列表
+//
+// 查询当前用户在本项目下创建的所有凭据。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) ListSecrets(request *model.ListSecretsRequest) (*model.ListSecretsResponse, error) {
 	requestDef := GenReqDefForListSecrets()
 
@@ -162,7 +231,12 @@ func (c *CsmsClient) ListSecrets(request *model.ListSecretsRequest) (*model.List
 	}
 }
 
-//取消凭据的定时删除任务，凭据对象恢复可使用状态。
+// 取消凭据的定时删除任务
+//
+// 取消凭据的定时删除任务，凭据对象恢复可使用状态。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) RestoreSecret(request *model.RestoreSecretRequest) (*model.RestoreSecretResponse, error) {
 	requestDef := GenReqDefForRestoreSecret()
 
@@ -173,7 +247,12 @@ func (c *CsmsClient) RestoreSecret(request *model.RestoreSecretRequest) (*model.
 	}
 }
 
-//查询指定凭据的信息。
+// 查询凭据
+//
+// 查询指定凭据的信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) ShowSecret(request *model.ShowSecretRequest) (*model.ShowSecretResponse, error) {
 	requestDef := GenReqDefForShowSecret()
 
@@ -184,7 +263,12 @@ func (c *CsmsClient) ShowSecret(request *model.ShowSecretRequest) (*model.ShowSe
 	}
 }
 
-//查询指定凭据版本状态标记的版本信息。
+// 查询凭据的版本状态
+//
+// 查询指定凭据版本状态标记的版本信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) ShowSecretStage(request *model.ShowSecretStageRequest) (*model.ShowSecretStageResponse, error) {
 	requestDef := GenReqDefForShowSecretStage()
 
@@ -195,7 +279,13 @@ func (c *CsmsClient) ShowSecretStage(request *model.ShowSecretStageRequest) (*mo
 	}
 }
 
-//查询指定凭据版本的信息和版本中的明文凭据值，只能查询ENABLED状态的凭据。 通过/v1/{project_id}/secrets/{secret_id}/versions/latest可访问凭据最新版本的凭据值。
+// 查询凭据的版本与凭据值
+//
+// 查询指定凭据版本的信息和版本中的明文凭据值，只能查询ENABLED状态的凭据。
+// 通过/v1/{project_id}/secrets/{secret_id}/versions/latest可访问凭据最新版本的凭据值。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) ShowSecretVersion(request *model.ShowSecretVersionRequest) (*model.ShowSecretVersionResponse, error) {
 	requestDef := GenReqDefForShowSecretVersion()
 
@@ -206,7 +296,12 @@ func (c *CsmsClient) ShowSecretVersion(request *model.ShowSecretVersionRequest) 
 	}
 }
 
-//更新指定凭据的元数据信息。
+// 更新凭据
+//
+// 更新指定凭据的元数据信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) UpdateSecret(request *model.UpdateSecretRequest) (*model.UpdateSecretResponse, error) {
 	requestDef := GenReqDefForUpdateSecret()
 
@@ -217,7 +312,12 @@ func (c *CsmsClient) UpdateSecret(request *model.UpdateSecretRequest) (*model.Up
 	}
 }
 
-//更新凭据的版本状态。
+// 更新凭据的版本状态
+//
+// 更新凭据的版本状态。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CsmsClient) UpdateSecretStage(request *model.UpdateSecretStageRequest) (*model.UpdateSecretStageResponse, error) {
 	requestDef := GenReqDefForUpdateSecretStage()
 

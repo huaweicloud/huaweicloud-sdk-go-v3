@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteJobExecutionRequest struct {
-	// 作业ID。
 
+	// 作业ID。
 	JobExecutionId string `json:"job_execution_id"`
 }
 

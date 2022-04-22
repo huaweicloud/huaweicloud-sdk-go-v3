@@ -11,35 +11,35 @@ import (
 
 // 失败任务数据结构
 type FailureJobParams struct {
+
 	// 任务名称。
-
 	JobType string `json:"job_type"`
+
 	// 任务状态。当前仅支持“FAIL”。FAIL：表示任务失败。
-
 	JobStatus FailureJobParamsJobStatus `json:"job_status"`
+
 	// 任务操作时间。默认格式为：\"yyyy-MM-ddTHH:mm:ss.SSSZ\"，例：\"2019-04-01T12:00:00.000Z\"。
-
 	BeginTime string `json:"begin_time"`
+
 	// 任务id。执行异步API命令下发成功的返回参数。
-
 	JobId string `json:"job_id"`
+
 	// 失败任务状态。createFail：表示创建失败。deleteFail：表示删除失败。attachFail：表示挂载失败。detachFail：表示卸载失败。expandFail：表示扩容失败。resizeFail：表示变更规格失败。startFail：表示开启保护失败。stopFail：表示停止保护失败。reverseFail：表示切换失败。failoverFail：表示故障切换失败。reprotectFail : 表示重保护失败。
-
 	FailureStatus FailureJobParamsFailureStatus `json:"failure_status"`
+
 	// 资源ID。
-
 	ResourceId string `json:"resource_id"`
+
 	// 资源名称。
-
 	ResourceName string `json:"resource_name"`
+
 	// 任务失败错误码。
-
 	ErrorCode string `json:"error_code"`
+
 	// 任务失败原因。
-
 	FailReason string `json:"fail_reason"`
-	// 资源类型。 server_groups：表示保护组。 protected_instances：表示保护实例。 replications：表示复制对。 disaster_recovery_drills：表示容灾演练。
 
+	// 资源类型。 server_groups：表示保护组。 protected_instances：表示保护实例。 replications：表示复制对。 disaster_recovery_drills：表示容灾演练。
 	ResourceType FailureJobParamsResourceType `json:"resource_type"`
 }
 

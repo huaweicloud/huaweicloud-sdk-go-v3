@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowRepositoryByUuidRequest struct {
-	// 仓库的uuid
 
+	// 仓库的uuid
 	RepositoryUuid string `json:"repository_uuid"`
 }
 

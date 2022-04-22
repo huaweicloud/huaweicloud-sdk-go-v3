@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteCertificateRequest struct {
-	// SSL证书ID
 
+	// SSL证书ID
 	CertificateId string `json:"certificate_id"`
 }
 

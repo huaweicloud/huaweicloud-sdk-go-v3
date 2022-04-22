@@ -7,11 +7,11 @@ import (
 )
 
 type FgsDeploymentJobsParam struct {
+
 	// 版本包id,使用历史版本包部署时需要
-
 	FileId *string `json:"file_id,omitempty"`
-	// 函数入口
 
+	// 函数入口
 	Handler *string `json:"handler,omitempty"`
 }
 

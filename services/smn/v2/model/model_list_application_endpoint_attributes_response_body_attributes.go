@@ -7,14 +7,14 @@ import (
 )
 
 type ListApplicationEndpointAttributesResponseBodyAttributes struct {
+
 	// 设备是否可用。
-
 	Enabled string `json:"enabled"`
+
 	// 设备token。
-
 	Token string `json:"token"`
-	// 用户数据。
 
+	// 用户数据。
 	UserData string `json:"user_data"`
 }
 

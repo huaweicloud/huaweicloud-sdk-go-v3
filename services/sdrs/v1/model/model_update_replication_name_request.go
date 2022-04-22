@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateReplicationNameRequest struct {
-	// replication_id
 
+	// replication_id
 	ReplicationId string `json:"replication_id"`
 
 	Body *UpdateReplicationNameRequestBody `json:"body,omitempty"`

@@ -7,8 +7,8 @@ import (
 )
 
 type ShrinkClusterReq struct {
-	// 需要缩容的节点类型和数量集合。
 
+	// 需要缩容的节点类型和数量集合。
 	Shrink []ShrinkNodeReq `json:"shrink"`
 }
 

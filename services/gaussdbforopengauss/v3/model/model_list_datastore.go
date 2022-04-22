@@ -8,11 +8,11 @@ import (
 
 // 数据库信息。
 type ListDatastore struct {
+
 	// 数据库引擎。
-
 	Type string `json:"type"`
-	// 数据库版本。
 
+	// 数据库版本。
 	Version string `json:"version"`
 }
 

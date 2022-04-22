@@ -8,8 +8,8 @@ import (
 
 // 请求消息的数据部分。
 type IvsStandardByIdCardImageRequestBodyData struct {
-	// 请求列表，用于支持批量调用。目前暂时只支持单个数据查询。
 
+	// 请求列表，用于支持批量调用。目前暂时只支持单个数据查询。
 	ReqData *[]ReqDataByIdCardImage `json:"req_data,omitempty"`
 }
 

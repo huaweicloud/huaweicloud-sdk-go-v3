@@ -8,8 +8,8 @@ import (
 
 // 源端服务器信息
 type SourceServerByTask struct {
-	// 源端服务器id
 
+	// 源端服务器id
 	Id string `json:"id"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListStatisticsResponse struct {
+
 	// 月度调用次数
-
 	Count *[]MonthUsed `json:"count,omitempty"`
-	// 月度资源用量
 
+	// 月度资源用量
 	Gbs *[]MonthUsed `json:"gbs,omitempty"`
 
 	Statistics     *ListFunctionStatisticsResponseBody `json:"statistics,omitempty"`

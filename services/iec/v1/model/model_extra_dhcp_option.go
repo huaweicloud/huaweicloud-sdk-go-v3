@@ -8,11 +8,11 @@ import (
 
 // DHCP扩展属性
 type ExtraDhcpOption struct {
+
 	// Option名称
-
 	OptName *string `json:"opt_name,omitempty"`
-	// Option值
 
+	// Option值
 	OptValue *string `json:"opt_value,omitempty"`
 }
 

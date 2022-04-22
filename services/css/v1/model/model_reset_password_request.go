@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ResetPasswordRequest struct {
-	// 指定待更改的集群ID。
 
+	// 指定待更改的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *ResetPasswordReq `json:"body,omitempty"`

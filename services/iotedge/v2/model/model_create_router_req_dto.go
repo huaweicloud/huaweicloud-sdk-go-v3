@@ -8,11 +8,11 @@ import (
 
 // 创建路由请求结构体
 type CreateRouterReqDto struct {
+
 	// 路由ID，节点下唯一
-
 	RouteId string `json:"route_id"`
-	// sql參數
 
+	// sql參數
 	Sql string `json:"sql"`
 }
 

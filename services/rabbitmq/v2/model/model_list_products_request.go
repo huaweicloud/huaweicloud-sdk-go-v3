@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListProductsRequest struct {
-	// 消息引擎的类型。当前只支持rabbitmq。
 
+	// 消息引擎的类型。当前只支持rabbitmq。
 	Engine *string `json:"engine,omitempty"`
 }
 

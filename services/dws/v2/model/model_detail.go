@@ -8,15 +8,15 @@ import (
 
 // 节点类型详细
 type Detail struct {
-	// 属性单位
 
-	Unit string `json:"unit"`
-	// 属性类型
-
+	// 属性类型。
 	Type *string `json:"type,omitempty"`
-	// 属性值
 
+	// 属性值。
 	Value string `json:"value"`
+
+	// 属性单位。
+	Unit string `json:"unit"`
 }
 
 func (o Detail) String() string {

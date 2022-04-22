@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateNotificationRequest struct {
-	// 实例ID
 
+	// 实例ID
 	InstanceId string `json:"instance_id"`
 
 	Body *CreateNotificationRequestBody `json:"body,omitempty"`

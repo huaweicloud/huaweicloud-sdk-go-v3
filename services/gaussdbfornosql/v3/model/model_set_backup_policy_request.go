@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type SetBackupPolicyRequest struct {
-	// 实例ID。
 
+	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
 	Body *SetBackupPolicyRequestBody `json:"body,omitempty"`

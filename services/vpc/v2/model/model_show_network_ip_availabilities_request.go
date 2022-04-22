@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowNetworkIpAvailabilitiesRequest struct {
-	// 网络ID
 
+	// 网络ID
 	NetworkId string `json:"network_id"`
 }
 

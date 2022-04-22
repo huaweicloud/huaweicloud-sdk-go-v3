@@ -10,140 +10,140 @@ import (
 )
 
 type QueryJobResp struct {
+
 	// 任务id
-
 	Id *string `json:"id,omitempty"`
+
 	// 父任务id。
-
 	ParentId *string `json:"parent_id,omitempty"`
+
 	// 任务名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 任务状态
-
 	Status *QueryJobRespStatus `json:"status,omitempty"`
+
 	// 描述信息
-
 	Description *string `json:"description,omitempty"`
+
 	// 创建时间，时间戳格式。
-
 	CreateTime *string `json:"create_time,omitempty"`
-	// 迁移模式
 
+	// 迁移模式
 	TaskType *QueryJobRespTaskType `json:"task_type,omitempty"`
 
 	SourceEndpoint *Endpoint `json:"source_endpoint,omitempty"`
 
 	DmqEndpoint *Endpoint `json:"dmq_endpoint,omitempty"`
-	// 物理源库信息。
 
+	// 物理源库信息。
 	SourceSharding *[]Endpoint `json:"source_sharding,omitempty"`
 
 	TargetEndpoint *Endpoint `json:"target_endpoint,omitempty"`
+
 	// 网络类型
-
 	NetType *QueryJobRespNetType `json:"net_type,omitempty"`
-	// 失败原因。
 
+	// 失败原因。
 	FailedReason *string `json:"failed_reason,omitempty"`
 
 	InstInfo *InstInfo `json:"inst_info,omitempty"`
+
 	// 实际启动时间，时间戳格式。
-
 	ActualStartTime *string `json:"actual_start_time,omitempty"`
+
 	// 全量完成时间，时间戳格式。
-
 	FullTransferCompleteTime *string `json:"full_transfer_complete_time,omitempty"`
+
 	// 更新时间，时间戳格式
-
 	UpdateTime *string `json:"update_time,omitempty"`
+
 	// 任务方向
-
 	JobDirection *QueryJobRespJobDirection `json:"job_direction,omitempty"`
+
 	// 迁移场景 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备
-
 	DbUseType *QueryJobRespDbUseType `json:"db_use_type,omitempty"`
+
 	// 是否需要重启
-
 	NeedRestart *bool `json:"need_restart,omitempty"`
+
 	// 指定目标实例是否限制为只读
-
 	IsTargetReadonly *bool `json:"is_target_readonly,omitempty"`
+
 	// 冲突忽略策略 - stop：冲突失败 - overwrite：冲突覆盖 - ignore：冲突忽略
-
 	ConflictPolicy *QueryJobRespConflictPolicy `json:"conflict_policy,omitempty"`
+
 	// 过滤DDL策略 - drop_database：过滤drop_database - drop_databasefilter_all：过滤所有ddl - \"\"：不过滤
-
 	FilterDdlPolicy *string `json:"filter_ddl_policy,omitempty"`
+
 	// 迁移速度限制。
-
 	SpeedLimit *[]SpeedLimitInfo `json:"speed_limit,omitempty"`
+
 	// 迁移方案 - Replication-主从复制 - Tungsten-日志解析 - PGBaseBackup-PG备份
-
 	SchemaType *QueryJobRespSchemaType `json:"schema_type,omitempty"`
+
 	// 节点个数。
-
 	NodeNum *string `json:"node_num,omitempty"`
+
 	// 对象选择开关
-
 	ObjectSwitch *bool `json:"object_switch,omitempty"`
+
 	// 主任务Id。
-
 	MasterJobId *string `json:"master_job_id,omitempty"`
+
 	// 全量快照模式。
-
 	FullMode *string `json:"full_mode,omitempty"`
+
 	// 是否迁移结构。
-
 	StructTrans *bool `json:"struct_trans,omitempty"`
+
 	// 否迁移索引。
-
 	IndexTrans *bool `json:"index_trans,omitempty"`
+
 	// 是否使用目标库的用户替换掉definer。
-
 	ReplaceDefiner *bool `json:"replace_definer,omitempty"`
+
 	// 是否迁移用户。
-
 	MigrateUser *bool `json:"migrate_user,omitempty"`
+
 	// 是否库级同步。
-
 	SyncDatabase *bool `json:"sync_database,omitempty"`
+
 	// 错误码
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 错误信息。
 
+	// 错误信息。
 	ErrorMessage *string `json:"error_message,omitempty"`
 
 	TargetRootDb *DefaultRootDb `json:"target_root_db,omitempty"`
+
 	// node所在AZ
-
 	AzCode *string `json:"az_code,omitempty"`
+
 	// node所在VPC
-
 	VpcId *string `json:"vpc_id,omitempty"`
+
 	// node所在子网
-
 	SubnetId *string `json:"subnet_id,omitempty"`
+
 	// node所在安全组
-
 	SecurityGroupId *string `json:"security_group_id,omitempty"`
+
 	// 是否多主灾备任务,双主灾备时有值为true
-
 	MultiWrite *bool `json:"multi_write,omitempty"`
+
 	// 是否支持IPV6
-
 	SupportIpV6 *bool `json:"support_ip_v6,omitempty"`
+
 	// 继承的任务ID，Oracle_Mrskafka链路时使用。
-
 	InheritId *string `json:"inherit_id,omitempty"`
-	// 断点的GTID集合
 
+	// 断点的GTID集合
 	Gtid *string `json:"gtid,omitempty"`
 
 	AlarmNotify *QuerySmnInfoResp `json:"alarm_notify,omitempty"`
-	// 增量任务启动位点
 
+	// 增量任务启动位点
 	IncreStartPosition *string `json:"incre_start_position,omitempty"`
 }
 

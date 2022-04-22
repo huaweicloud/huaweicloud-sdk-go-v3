@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateSqlAlarmRuleResponse struct {
-	// 告警规则id
 
+	// 告警规则id
 	SqlAlarmRuleId *string `json:"sql_alarm_rule_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

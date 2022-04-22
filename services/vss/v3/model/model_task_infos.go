@@ -10,14 +10,14 @@ import (
 )
 
 type TaskInfos struct {
+
 	// 任务名称
-
 	TaskName string `json:"task_name"`
+
 	// 待扫描的目标网址
-
 	Url string `json:"url"`
-	// 扫描任务类型:   * normal - 普通任务   * monitor - 监测任务
 
+	// 扫描任务类型:   * normal - 普通任务   * monitor - 监测任务
 	TaskType *TaskInfosTaskType `json:"task_type,omitempty"`
 }
 

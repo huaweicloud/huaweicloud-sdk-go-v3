@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateSpaceAnalysisTaskResponse struct {
-	// 执行时间，毫秒为单位的时间戳
 
+	// 执行时间，毫秒为单位的时间戳
 	ExecutionTime  *int64 `json:"execution_time,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

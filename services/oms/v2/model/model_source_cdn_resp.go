@@ -11,14 +11,14 @@ import (
 
 // 源端CDN配置返回值。
 type SourceCdnResp struct {
+
 	//   从指定域名获取对象。
-
 	Domain string `json:"domain"`
+
 	// 协议类型，支持http和https协议。
-
 	Protocol SourceCdnRespProtocol `json:"protocol"`
-	// 鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN
 
+	// 鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN
 	AuthenticationType *SourceCdnRespAuthenticationType `json:"authentication_type,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateTaskStatusRequest struct {
-	// 迁移任务ID
 
+	// 迁移任务ID
 	TaskId string `json:"task_id"`
 
 	Body *UpdateTaskStatusReq `json:"body,omitempty"`

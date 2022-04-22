@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ResizeInstanceResponse struct {
-	// 规格变更任务ID。
 
+	// 规格变更任务ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

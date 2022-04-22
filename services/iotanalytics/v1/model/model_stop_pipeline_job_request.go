@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type StopPipelineJobRequest struct {
+
 	// 管道ID
-
 	PipelineId string `json:"pipeline_id"`
-	// 停止管道作业触发savepoint
 
+	// 停止管道作业触发savepoint
 	TriggerSavepoint *bool `json:"trigger_savepoint,omitempty"`
 }
 

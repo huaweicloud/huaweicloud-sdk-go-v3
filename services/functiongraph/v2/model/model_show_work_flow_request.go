@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowWorkFlowRequest struct {
-	// 函数工作流ID
 
+	// 函数工作流ID
 	WorkflowId string `json:"workflow_id"`
 }
 

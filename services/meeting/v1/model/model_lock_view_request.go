@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type LockViewRequest struct {
+
 	// 会议ID。
-
 	ConferenceID string `json:"conferenceID"`
+
 	// 与会者标识。
-
 	ParticipantID string `json:"participantID"`
-	// 会控授权令牌，通过获取会控token接口获得。
 
+	// 会控授权令牌，通过获取会控token接口获得。
 	XConferenceAuthorization string `json:"X-Conference-Authorization"`
 
 	Body *RestLockSiteViewReqBody `json:"body,omitempty"`

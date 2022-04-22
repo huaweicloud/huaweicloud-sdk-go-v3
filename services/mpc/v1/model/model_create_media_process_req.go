@@ -10,8 +10,8 @@ type CreateMediaProcessReq struct {
 	Input *ObsObjInfo `json:"input,omitempty"`
 
 	Output *ObsObjInfo `json:"output,omitempty"`
-	// 模板ID
 
+	// 模板ID
 	TemplateId *string `json:"template_id,omitempty"`
 }
 

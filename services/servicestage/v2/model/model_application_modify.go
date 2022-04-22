@@ -7,11 +7,11 @@ import (
 )
 
 type ApplicationModify struct {
+
 	// 应用名称。
-
 	Name *string `json:"name,omitempty"`
-	// 应用描述。
 
+	// 应用描述。
 	Description *string `json:"description,omitempty"`
 }
 

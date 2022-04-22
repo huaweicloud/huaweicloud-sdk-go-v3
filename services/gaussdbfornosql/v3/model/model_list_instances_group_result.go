@@ -8,16 +8,16 @@ import (
 
 // 实例组信息。
 type ListInstancesGroupResult struct {
+
 	// 组ID。
-
 	Id string `json:"id"`
-	// 组状态。
 
+	// 组状态。
 	Status string `json:"status"`
 
 	Volume *Volume `json:"volume"`
-	// 节点信息。
 
+	// 节点信息。
 	Nodes []ListInstancesNodeResult `json:"nodes"`
 }
 

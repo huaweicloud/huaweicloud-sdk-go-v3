@@ -10,20 +10,20 @@ import (
 )
 
 type CreateRuleRequestBody struct {
+
 	// 规则名称，支持英文大小写，数字，下划线和中划线,长度1-64
-
 	Name string `json:"name"`
+
 	// 应用ID
-
 	AppId string `json:"app_id"`
+
 	// 描述，长度0-200
-
 	Description *string `json:"description,omitempty"`
+
 	// 规则状态 0-启用 1-停用，不填写时默认为0-启用
-
 	Status *CreateRuleRequestBodyStatus `json:"status,omitempty"`
-	// 数据解析状态，0-启用 1-停用，不填写时默认为1-禁用
 
+	// 数据解析状态，0-启用 1-停用，不填写时默认为1-禁用
 	DataParsingStatus *CreateRuleRequestBodyDataParsingStatus `json:"data_parsing_status,omitempty"`
 }
 

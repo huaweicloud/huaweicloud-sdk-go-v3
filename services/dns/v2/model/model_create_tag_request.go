@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type CreateTagRequest struct {
+
 	// 资源的类型：DNS-public_zone，DNS-private_zone，DNS-public_recordset，DNS-private_recordset，DNS-ptr_record。
-
 	ResourceType string `json:"resource_type"`
-	// 资源id。
 
+	// 资源id。
 	ResourceId string `json:"resource_id"`
 
 	Body *CreateTagReq `json:"body,omitempty"`

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateBindPublicResponse struct {
-	// 操作行为。
 
+	// 操作行为。
 	Action         *string `json:"action,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

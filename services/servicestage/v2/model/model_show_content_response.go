@@ -11,17 +11,17 @@ import (
 
 // Response Object
 type ShowContentResponse struct {
+
 	// 文件路径。
-
 	Path *string `json:"path,omitempty"`
+
 	// commit 哈希。
-
 	Sha *string `json:"sha,omitempty"`
+
 	// 编码方式：base64或者text/plain。
-
 	Encoding *ShowContentResponseEncoding `json:"encoding,omitempty"`
-	// 文件内容。
 
+	// 文件内容。
 	Content        *string `json:"content,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

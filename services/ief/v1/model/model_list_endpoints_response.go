@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListEndpointsResponse struct {
+
 	// 端点详情
-
 	Endpoints *[]EndpointObjResp `json:"endpoints,omitempty"`
-	// 满足条件的端点个数
 
+	// 满足条件的端点个数
 	Count          *int64 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

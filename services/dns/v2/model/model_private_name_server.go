@@ -7,11 +7,11 @@ import (
 )
 
 type PrivateNameServer struct {
+
 	// 优先级。如果priority的值为“1”，表示会第一个采用该域名服务器进行解析。
-
 	Priority *int32 `json:"priority,omitempty"`
-	// DNS服务器地址。
 
+	// DNS服务器地址。
 	Address *string `json:"address,omitempty"`
 }
 

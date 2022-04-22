@@ -7,11 +7,11 @@ import (
 )
 
 type OutputFileInfo struct {
+
 	// 输出文件名。
-
 	OutputFileName *string `json:"output_file_name,omitempty"`
-	// 处理信息。
 
+	// 处理信息。
 	ExecDescription *string `json:"exec_description,omitempty"`
 
 	MetaData *SourceInfo `json:"meta_data,omitempty"`

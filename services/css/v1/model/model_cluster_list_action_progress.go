@@ -8,8 +8,8 @@ import (
 
 // 集群行为进度，显示创建和扩容进度的百分比。CREATING表示创建的百分比。
 type ClusterListActionProgress struct {
-	// 进度百分比。
 
+	// 进度百分比。
 	Creating *string `json:"CREATING,omitempty"`
 }
 

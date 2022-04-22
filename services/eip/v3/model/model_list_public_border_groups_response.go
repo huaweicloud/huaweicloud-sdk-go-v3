@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListPublicBorderGroupsResponse struct {
+
 	// 功能说明：公共池分组对象
-
 	PublicBorderGroups *[]CommonPoolsWithBorderGroupDict `json:"public_border_groups,omitempty"`
-	// 本次请求的编号
 
+	// 本次请求的编号
 	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

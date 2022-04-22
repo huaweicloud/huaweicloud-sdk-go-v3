@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowPartitionMessageResponse struct {
-	// 消息列表。
 
+	// 消息列表。
 	Message        *[]ShowPartitionMessageEntity `json:"message,omitempty"`
 	HttpStatusCode int                           `json:"-"`
 }

@@ -7,8 +7,8 @@ import (
 )
 
 type CdmCreateAndUpdateLinkReq struct {
-	// 连接列表，请参见links数据结构说明
 
+	// 连接列表，请参见links数据结构说明
 	Links []Links `json:"links"`
 }
 

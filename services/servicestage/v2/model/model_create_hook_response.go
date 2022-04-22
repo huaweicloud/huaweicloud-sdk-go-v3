@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type CreateHookResponse struct {
+
 	// hook ID。
-
 	Id *string `json:"id,omitempty"`
+
 	// hook类型。
-
 	Type *string `json:"type,omitempty"`
-	// 回滚URL。
 
+	// 回滚URL。
 	CallbackUrl    *string `json:"callback_url,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

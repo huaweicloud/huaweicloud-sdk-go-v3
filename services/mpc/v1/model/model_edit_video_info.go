@@ -10,23 +10,23 @@ import (
 )
 
 type EditVideoInfo struct {
+
 	// 剪辑输出视频参数的参照物。取值如下： - MAX，以输入片源中最大分辨率的视频参数作为输出参照。 - MIN，以输入片源中最小分辨率的视频参数作为输出参照。 - CUSTOM，自定义视频输出参数，使用该参数时，所有视频参数必填。- SHORT_HEIGHT_SHORT_WIDTH，当edit_type为MIX时，只能使用该值。
-
 	Reference *EditVideoInfoReference `json:"reference,omitempty"`
+
 	// 视频宽度。
-
 	Width *int32 `json:"width,omitempty"`
+
 	// 视频高度。
-
 	Height *int32 `json:"height,omitempty"`
+
 	// 视频频编码格式。
-
 	Codec *EditVideoInfoCodec `json:"codec,omitempty"`
+
 	// 视频码率，单位: bit/s
-
 	Bitrate *int32 `json:"bitrate,omitempty"`
-	// 帧率。
 
+	// 帧率。
 	FrameRate *int32 `json:"frame_rate,omitempty"`
 }
 

@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ShowAssetCipherResponse struct {
+
 	// 媒资ID。
-
 	AssetId *string `json:"asset_id,omitempty"`
+
 	// 密钥密文。
-
 	Edk *string `json:"edk,omitempty"`
-	// 密钥明文。
 
+	// 密钥明文。
 	Dk             *string `json:"dk,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

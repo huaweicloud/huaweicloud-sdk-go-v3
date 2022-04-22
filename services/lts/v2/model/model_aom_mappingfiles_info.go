@@ -7,8 +7,8 @@ import (
 )
 
 type AomMappingfilesInfo struct {
-	// 路径名
 
+	// 路径名
 	FileName string `json:"file_name"`
 
 	LogStreamInfo *AomMappingLogStreamInfo `json:"log_stream_info"`

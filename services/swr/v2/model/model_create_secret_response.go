@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateSecretResponse struct {
-	// 认证信息
 
+	// 认证信息
 	Auths          map[string]AuthInfo `json:"auths,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

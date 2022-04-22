@@ -8,8 +8,8 @@ import (
 
 // 批量设置replaceDefiner请求体
 type BatchReplaceDefinerReq struct {
-	// 批量设置replaceDefiner请求列表
 
+	// 批量设置replaceDefiner请求列表
 	Jobs []ReplaceDefinerInfo `json:"jobs"`
 }
 

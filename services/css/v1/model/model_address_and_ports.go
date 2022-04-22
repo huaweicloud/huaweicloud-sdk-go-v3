@@ -7,11 +7,11 @@ import (
 )
 
 type AddressAndPorts struct {
+
 	// IP地址或域名。
-
 	Address string `json:"address"`
-	// 端口号。
 
+	// 端口号。
 	Port *int32 `json:"port,omitempty"`
 }
 

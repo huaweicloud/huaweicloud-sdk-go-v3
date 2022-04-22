@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateApiAclBindingV2Response struct {
-	// API与ACL的绑定关系列表
 
+	// API与ACL的绑定关系列表
 	AclBindings    *[]AclApiBindingInfo `json:"acl_bindings,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

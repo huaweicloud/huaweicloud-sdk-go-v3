@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type AsyncInvokeReservedFunctionResponse struct {
-	// 预留实例id
 
+	// 预留实例id
 	InstanceId     *string `json:"instance_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,11 +8,11 @@ import (
 
 // 云服务器的vpc信息。
 type RespAddr struct {
+
 	// 云服务器的vpc ip。
-
 	Addr string `json:"addr"`
-	// 云服务器的vpc版本。
 
+	// 云服务器的vpc版本。
 	Version string `json:"version"`
 }
 

@@ -7,8 +7,8 @@ import (
 )
 
 type BatchFreezeDevicesRequestBody struct {
-	// 设备ID列表，自动向下取整
 
+	// 设备ID列表，自动向下取整
 	DeviceIds []int32 `json:"device_ids"`
 }
 

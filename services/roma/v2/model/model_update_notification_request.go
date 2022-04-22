@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateNotificationRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 订阅管理ID
 
+	// 订阅管理ID
 	NotificationId int64 `json:"notification_id"`
 
 	Body *UpdateNotificationRequestBody `json:"body,omitempty"`

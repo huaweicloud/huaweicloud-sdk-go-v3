@@ -8,8 +8,8 @@ import (
 
 // 转推参数
 type PublishParam struct {
-	// 合流任务完成后，转推的RTMP推流地址。
 
+	// 合流任务完成后，转推的RTMP推流地址。
 	RtmpUrls []string `json:"rtmp_urls"`
 }
 

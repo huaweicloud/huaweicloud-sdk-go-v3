@@ -8,17 +8,17 @@ import (
 
 // Request Object
 type CheckParametersRequest struct {
+
 	// 项目ID
-
 	ProjectId string `json:"project_id"`
+
 	// 任务ID
-
 	TaskId string `json:"task_id"`
+
 	// 规则集ID
-
 	RulesetId string `json:"ruleset_id"`
-	// 规则集语言
 
+	// 规则集语言
 	Language string `json:"language"`
 }
 

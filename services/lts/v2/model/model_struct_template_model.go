@@ -11,34 +11,34 @@ import (
 
 // 更新或者查询结构化模板对象
 type StructTemplateModel struct {
+
 	// 项目id
-
 	ProjectId string `json:"project_id"`
+
 	// 模板名称
-
 	TemplateName string `json:"template_name"`
+
 	// 模板类型，regex,json,split,nginx
-
 	TemplateType StructTemplateModelTemplateType `json:"template_type"`
+
 	// 示例日志
-
 	DemoLog string `json:"demo_log"`
+
 	// 示例字段数组
-
 	DemoFields []DemoField `json:"demo_fields"`
-	// Tag字段数组
 
+	// Tag字段数组
 	TagFields []TagFieldNew `json:"tag_fields"`
 
 	Rule *TemplateRule `json:"rule"`
+
 	// 示例日志标签
-
 	DemoLabel *string `json:"demo_label,omitempty"`
+
 	// 创建时间
-
 	CreateTime *int64 `json:"create_time,omitempty"`
-	// 模板id
 
+	// 模板id
 	Id *string `json:"id,omitempty"`
 }
 

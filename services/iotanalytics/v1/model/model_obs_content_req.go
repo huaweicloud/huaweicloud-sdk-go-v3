@@ -8,14 +8,14 @@ import (
 
 // OBS数据源配置内容
 type ObsContentReq struct {
+
 	// 桶名称
-
 	BucketName string `json:"bucket_name"`
+
 	// 租户的AK
-
 	Ak string `json:"ak"`
-	// 租户的SK
 
+	// 租户的SK
 	Sk string `json:"sk"`
 }
 

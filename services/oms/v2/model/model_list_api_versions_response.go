@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListApiVersionsResponse struct {
-	// 版本信息列表。
 
+	// 版本信息列表。
 	Versions       *[]Version `json:"versions,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

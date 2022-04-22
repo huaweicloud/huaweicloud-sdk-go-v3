@@ -7,11 +7,11 @@ import (
 )
 
 type ShowGroupsRespGroupAssignment struct {
+
 	// topic名称。
-
 	Topic *string `json:"topic,omitempty"`
-	// 分区列表。
 
+	// 分区列表。
 	Partitions *[]int32 `json:"partitions,omitempty"`
 }
 

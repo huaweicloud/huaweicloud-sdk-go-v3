@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListDeploymentsResponse struct {
+
 	// 应用部署总数
-
 	Count *int64 `json:"count,omitempty"`
-	// 应用部署列表
 
+	// 应用部署列表
 	Deployments    *[]DeploymentResp `json:"deployments,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

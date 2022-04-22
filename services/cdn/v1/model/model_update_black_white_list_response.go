@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type UpdateBlackWhiteListResponse struct {
+
 	// 编码
-
 	Code *string `json:"code,omitempty"`
+
 	// 结果
-
 	Result *string `json:"result,omitempty"`
-	// 数据
 
+	// 数据
 	Data           *interface{} `json:"data,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

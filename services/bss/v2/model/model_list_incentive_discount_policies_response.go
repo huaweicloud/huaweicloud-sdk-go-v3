@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListIncentiveDiscountPoliciesResponse struct {
+
 	// 产品折扣和激励策略信息列表。 具体请参见表2。
-
 	Policies *[]IncentiveAndDiscountPolicy `json:"policies,omitempty"`
-	// 查询总条数。
 
+	// 查询总条数。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

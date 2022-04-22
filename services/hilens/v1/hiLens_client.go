@@ -19,7 +19,12 @@ func HiLensClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//获取设备告警列表
+// 获取设备告警列表
+//
+// 获取设备告警列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *HiLensClient) ListDeviceAlarms(request *model.ListDeviceAlarmsRequest) (*model.ListDeviceAlarmsResponse, error) {
 	requestDef := GenReqDefForListDeviceAlarms()
 
@@ -30,7 +35,12 @@ func (c *HiLensClient) ListDeviceAlarms(request *model.ListDeviceAlarmsRequest) 
 	}
 }
 
-//获取设备列表
+// 获取设备列表
+//
+// 获取设备列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *HiLensClient) ListDevices(request *model.ListDevicesRequest) (*model.ListDevicesResponse, error) {
 	requestDef := GenReqDefForListDevices()
 

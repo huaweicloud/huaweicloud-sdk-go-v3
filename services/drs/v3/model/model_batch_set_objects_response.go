@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type BatchSetObjectsResponse struct {
+
 	// 总数
-
 	AllCounts *int64 `json:"all_counts,omitempty"`
-	// 批量对象选择响应列表
 
+	// 批量对象选择响应列表
 	Results        *[]DatabaseObjectResp `json:"results,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

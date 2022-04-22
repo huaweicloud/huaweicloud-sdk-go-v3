@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListSeveritiesResponse struct {
+
 	// 是否展示
-
 	Show *bool `json:"show,omitempty"`
-	// 严重性列表
 
+	// 严重性列表
 	SeverityList   *[]SeverityV2Do `json:"severity_list,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

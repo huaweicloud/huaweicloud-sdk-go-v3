@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListFlavorsResponse struct {
-	// 产品规格详情。
 
+	// 产品规格详情。
 	Flavors        *[]FlavorsItems `json:"flavors,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

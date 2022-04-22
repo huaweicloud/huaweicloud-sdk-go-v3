@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteClusterRequest struct {
-	// 集群ID
 
+	// 集群ID
 	ClusterId string `json:"cluster_id"`
 
 	Body *CdmDeleteClusterReq `json:"body,omitempty"`

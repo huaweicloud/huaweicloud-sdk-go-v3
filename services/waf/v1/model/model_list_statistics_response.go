@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListStatisticsResponse struct {
-	// 安全统计数据
 
+	// 安全统计数据
 	Body           *[]CountItem `json:"body,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

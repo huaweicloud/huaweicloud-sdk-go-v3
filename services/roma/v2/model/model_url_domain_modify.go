@@ -10,8 +10,8 @@ import (
 )
 
 type UrlDomainModify struct {
-	// 最小ssl协议版本号。支持TLSv1.1或TLSv1.2
 
+	// 最小ssl协议版本号。支持TLSv1.1或TLSv1.2
 	MinSslVersion *UrlDomainModifyMinSslVersion `json:"min_ssl_version,omitempty"`
 }
 

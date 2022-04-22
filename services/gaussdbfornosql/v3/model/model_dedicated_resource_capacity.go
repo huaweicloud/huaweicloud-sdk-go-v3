@@ -8,14 +8,14 @@ import (
 
 // 专属资源信息容量信息。
 type DedicatedResourceCapacity struct {
+
 	// CPU核数。
-
 	Vcpus int32 `json:"vcpus"`
+
 	// 内存大小，单位GB。
-
 	Ram int32 `json:"ram"`
-	// 存储大小，单位GB
 
+	// 存储大小，单位GB
 	Volume int32 `json:"volume"`
 }
 

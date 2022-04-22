@@ -7,11 +7,11 @@ import (
 )
 
 type DeleteRelationsReq struct {
+
 	// 要解除关联的工单id
-
 	RelatedId string `json:"related_id"`
-	// 组id
 
+	// 组id
 	GroupId string `json:"group_id"`
 }
 

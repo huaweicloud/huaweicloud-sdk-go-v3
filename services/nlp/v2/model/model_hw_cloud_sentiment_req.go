@@ -11,11 +11,11 @@ import (
 
 //
 type HwCloudSentimentReq struct {
+
 	// 待分析文本。文本编码要求为utf-8。仅支持中文和英文情感分析。 限定180个字符以内，超过180个字符，只截取前180个字符。
-
 	Content string `json:"content"`
-	// 支持的文本语言类型，目前支持中文（zh）和英文（en），默认为中文。
 
+	// 支持的文本语言类型，目前支持中文（zh）和英文（en），默认为中文。
 	Lang *HwCloudSentimentReqLang `json:"lang,omitempty"`
 }
 

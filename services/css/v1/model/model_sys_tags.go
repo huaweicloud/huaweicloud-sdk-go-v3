@@ -8,11 +8,11 @@ import (
 
 // 预定义标签对象。
 type SysTags struct {
+
 	// 标签名。
-
 	Key string `json:"key"`
-	// 标签值。
 
+	// 标签值。
 	Value string `json:"value"`
 }
 

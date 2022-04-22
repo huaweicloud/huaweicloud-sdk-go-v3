@@ -7,11 +7,11 @@ import (
 )
 
 type PublicKeyList struct {
+
 	// 密钥列表
-
 	Sshkey *[]PublicKey `json:"sshkey,omitempty"`
-	// 密钥总数
 
+	// 密钥总数
 	Total *int32 `json:"total,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DetachProtectedInstanceReplicationRequest struct {
+
 	// 保护实例的ID。
-
 	ProtectedInstanceId string `json:"protected_instance_id"`
-	// 复制对的ID。
 
+	// 复制对的ID。
 	ReplicationId string `json:"replication_id"`
 }
 

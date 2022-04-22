@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListProtectedInstanceTagsResponse struct {
-	// 标签列表。
 
+	// 标签列表。
 	Tags           *[]ResourceTag `json:"tags,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

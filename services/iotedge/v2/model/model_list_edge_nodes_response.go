@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type ListEdgeNodesResponse struct {
-	// 总记录数
 
+	// 总记录数
 	Count *int64 `json:"count,omitempty"`
 
 	PageInfo *PageInfoDto `json:"page_info,omitempty"`
-	// 节点列表
 
+	// 节点列表
 	Nodes          *[]EdgeNodeDto `json:"nodes,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

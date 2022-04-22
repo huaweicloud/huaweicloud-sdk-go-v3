@@ -7,11 +7,11 @@ import (
 )
 
 type RoutetableInfoErrorDetial struct {
+
 	// 路由表ID。
-
 	Id *string `json:"id,omitempty"`
-	// 详细错误信息。
 
+	// 详细错误信息。
 	ErrorMessage *string `json:"error_message,omitempty"`
 }
 

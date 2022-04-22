@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ImportApiDefinitionsV2Request struct {
-	// 实例ID
 
+	// 实例ID
 	InstanceId string `json:"instance_id"`
 
 	Body *ImportApiDefinitionsV2RequestBody `json:"body,omitempty" type:"multipart"`

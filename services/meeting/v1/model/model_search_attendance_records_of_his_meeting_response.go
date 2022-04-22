@@ -8,17 +8,17 @@ import (
 
 // Response Object
 type SearchAttendanceRecordsOfHisMeetingResponse struct {
+
 	// 第几条。
-
 	Offset *int32 `json:"offset,omitempty"`
+
 	// 每页的记录数。
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 总记录数。
-
 	Count *int32 `json:"count,omitempty"`
-	// 与会者列表。
 
+	// 与会者列表。
 	Data           *[]ConfAttendeeRecordInfo `json:"data,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

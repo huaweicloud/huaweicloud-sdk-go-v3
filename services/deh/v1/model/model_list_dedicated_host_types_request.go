@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListDedicatedHostTypesRequest struct {
-	// AZ。
 
+	// AZ。
 	AvailabilityZone string `json:"availability_zone"`
 }
 

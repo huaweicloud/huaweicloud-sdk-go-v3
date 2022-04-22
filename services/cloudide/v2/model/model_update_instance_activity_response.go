@@ -9,8 +9,8 @@ import (
 // Response Object
 type UpdateInstanceActivityResponse struct {
 	Result *ExpireVo `json:"result,omitempty"`
-	// 状态
 
+	// 状态
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

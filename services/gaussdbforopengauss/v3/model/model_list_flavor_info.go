@@ -8,11 +8,11 @@ import (
 
 // 规格信息。
 type ListFlavorInfo struct {
+
 	// cpu核数。
-
 	Vcpu int32 `json:"vcpu"`
-	// 内存大小。
 
+	// 内存大小。
 	Mem int32 `json:"mem"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type BatchCreateOrDeleteRabbitMqTagRequest struct {
-	// 实例ID。
 
+	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
 	Body *BatchCreateOrDeleteTagReq `json:"body,omitempty"`

@@ -8,8 +8,8 @@ import (
 
 // 批量修改任务请求体
 type BatchModifyJobReq struct {
-	// 修改任务请求体
 
+	// 修改任务请求体
 	Jobs []ModifyJobReq `json:"jobs"`
 }
 

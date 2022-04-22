@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListPublicIpsResponse struct {
+
 	// 弹性公网IP数目。
-
 	Count *int32 `json:"count,omitempty"`
-	// 弹性公网IP数组对象。
 
+	// 弹性公网IP数组对象。
 	Publicips      *[]PublicIp `json:"publicips,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

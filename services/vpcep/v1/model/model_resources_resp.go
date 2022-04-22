@@ -8,8 +8,8 @@ import (
 
 // 查询配额接口响应结构体
 type ResourcesResp struct {
-	// 资源列表
 
+	// 资源列表
 	Resources *[]Quotas `json:"resources,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowSqlResultWithJobResponse struct {
-	// SQL语句查询结果。
 
+	// SQL语句查询结果。
 	SqlResults     *interface{} `json:"sql_results,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

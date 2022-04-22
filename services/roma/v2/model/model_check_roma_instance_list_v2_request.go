@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type CheckRomaInstanceListV2Request struct {
+
 	// 实例状态
-
 	Status *string `json:"status,omitempty"`
+
 	// 偏移量，大于等于0
-
 	Offset *int32 `json:"offset,omitempty"`
-	// 每页显示的条目数量
 
+	// 每页显示的条目数量
 	Limit *int32 `json:"limit,omitempty"`
 }
 

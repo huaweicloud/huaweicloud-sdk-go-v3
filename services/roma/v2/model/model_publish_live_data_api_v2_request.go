@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type PublishLiveDataApiV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 后端API的编号
 
+	// 后端API的编号
 	LdApiId string `json:"ld_api_id"`
 
 	Body *LdApiDeploy `json:"body,omitempty"`

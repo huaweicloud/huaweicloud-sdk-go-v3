@@ -10,20 +10,20 @@ import (
 )
 
 type ApiPolicyReqBase struct {
+
 	// 关联的策略组合模式： - ALL：满足全部条件 - ANY：满足任一条件
-
 	EffectMode ApiPolicyReqBaseEffectMode `json:"effect_mode"`
+
 	// 策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
-
 	Name string `json:"name"`
+
 	// 后端参数列表
-
 	BackendParams *[]BackendParamBase `json:"backend_params,omitempty"`
+
 	// 策略条件列表
-
 	Conditions []ApiConditionBase `json:"conditions"`
-	// 后端自定义认证对象的ID
 
+	// 后端自定义认证对象的ID
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateDatasourceInfoRequest struct {
-	// 实例ID
 
+	// 实例ID
 	InstanceId string `json:"instance_id"`
 
 	Body *DatasourceInfo `json:"body,omitempty"`

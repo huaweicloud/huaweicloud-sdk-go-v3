@@ -7,11 +7,11 @@ import (
 )
 
 type BatchHandTags struct {
+
 	// 标签列表。删除时tags结构体不能缺失。
-
 	Tags []Tag `json:"tags"`
-	// 操作标识（区分大小写）：create（创建）、delete（删除）。
 
+	// 操作标识（区分大小写）：create（创建）、delete（删除）。
 	Action string `json:"action"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowDeploymentGroupDetailRequest struct {
-	// 主机组id
 
+	// 主机组id
 	GroupId string `json:"group_id"`
 }
 

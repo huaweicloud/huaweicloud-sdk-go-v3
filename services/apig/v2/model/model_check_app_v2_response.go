@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type CheckAppV2Response struct {
+
 	// 编号
-
 	Id *string `json:"id,omitempty"`
+
 	// 名称
-
 	Name *string `json:"name,omitempty"`
-	// 描述
 
+	// 描述
 	Remark         *string `json:"remark,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

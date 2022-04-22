@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type CreateProjectRequest struct {
+
 	// 授权名称。
-
 	XRepoAuth string `json:"X-Repo-Auth"`
-	// 组织ID。
 
+	// 组织ID。
 	Namespace string `json:"namespace"`
 
 	Body *ProjectCreate `json:"body,omitempty"`

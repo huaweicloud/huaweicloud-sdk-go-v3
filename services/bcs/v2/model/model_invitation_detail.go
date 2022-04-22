@@ -11,14 +11,14 @@ import (
 
 // 被邀请列表
 type InvitationDetail struct {
+
 	// 被邀请方租户名，IAM用户名
-
 	InvitedUser string `json:"invited_user"`
+
 	// 邀请状态，可选：已退出（quit），等待中（waiting），已拒绝（reject），已解散（released），其他状态不允许删除
-
 	Status *InvitationDetailStatus `json:"status,omitempty"`
-	// 被邀请方bcs实例id
 
+	// 被邀请方bcs实例id
 	InvitedBcsId *string `json:"invited_bcs_id,omitempty"`
 }
 

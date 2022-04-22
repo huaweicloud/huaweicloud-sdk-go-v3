@@ -8,59 +8,59 @@ import (
 
 // 选项
 type PolicyOption struct {
+
 	// 基础防护是否开启
-
 	Webattack *bool `json:"webattack,omitempty"`
+
 	// 常规检测是否开启
-
 	Common *bool `json:"common,omitempty"`
+
 	// 反爬虫是否开启
-
 	Crawler *bool `json:"crawler,omitempty"`
+
 	// 搜索engine是否开启
-
 	CrawlerEngine *bool `json:"crawler_engine,omitempty"`
+
 	// 反爬虫检测是否开启
-
 	CrawlerScanner *bool `json:"crawler_scanner,omitempty"`
+
 	// 脚本反爬虫是否开启
-
 	CrawlerScript *bool `json:"crawler_script,omitempty"`
+
 	// 其他爬虫是否开启
-
 	CrawlerOther *bool `json:"crawler_other,omitempty"`
+
 	// Webshell检测是否开启
-
 	Webshell *bool `json:"webshell,omitempty"`
+
 	// cc规则是否开启
-
 	Cc *bool `json:"cc,omitempty"`
+
 	// 精准防护是否开启
-
 	Custom *bool `json:"custom,omitempty"`
+
 	// 黑白名单防护是否开启
-
 	Whiteblackip *bool `json:"whiteblackip,omitempty"`
+
 	// 地理位置访问控制规则是否开启
-
 	Geoip *bool `json:"geoip,omitempty"`
+
 	// 误报屏蔽是否开启
-
 	Ignore *bool `json:"ignore,omitempty"`
+
 	// 隐私屏蔽是否开启
-
 	Privacy *bool `json:"privacy,omitempty"`
+
 	// 网页防篡改规则是否开启
-
 	Antitamper *bool `json:"antitamper,omitempty"`
+
 	// 防敏感信息泄露规则是否开启
-
 	Antileakage *bool `json:"antileakage,omitempty"`
+
 	// 防网络机器人攻击是否开启
-
 	BotEnable *bool `json:"bot_enable,omitempty"`
-	// modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
 
+	// modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
 	ModulexEnabled *bool `json:"modulex_enabled,omitempty"`
 }
 

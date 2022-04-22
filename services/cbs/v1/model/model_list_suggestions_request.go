@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListSuggestionsRequest struct {
-	// qabot编号，UUID格式。
 
+	// qabot编号，UUID格式。
 	QabotId string `json:"qabot_id"`
 
 	Body *PostSuggestionsReq `json:"body,omitempty"`

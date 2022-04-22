@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteWebHookConfigRequest struct {
-	// 订阅配置记录id
 
+	// 订阅配置记录id
 	Id string `json:"id"`
 }
 

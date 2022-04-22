@@ -11,46 +11,46 @@ import (
 
 // 带宽对象
 type Bandwidth struct {
+
 	// 带宽类型。 取值范围： share：共享类型
-
 	BandwidthType *BandwidthBandwidthType `json:"bandwidth_type,omitempty"`
+
 	// 计费模式，当前只支持峰值95计费。  取值范围：  - 95peak_plus：峰值95计费
-
 	ChargeMode *BandwidthChargeMode `json:"charge_mode,omitempty"`
+
 	// 创建时间。
-
 	CreateTime *string `json:"create_time,omitempty"`
+
 	// 带宽ID。
-
 	Id *string `json:"id,omitempty"`
-	// 带宽名称。
 
+	// 带宽名称。
 	Name *string `json:"name,omitempty"`
 
 	Operator *Operator `json:"operator,omitempty"`
+
 	// 弹性公网IP信息。
-
 	PublicipInfo *[]PublicipInfo `json:"publicip_info,omitempty"`
+
 	// 共享带宽类型，标识是否是共享带宽。  取值范围：  - WHOLE：共享带宽
-
 	ShareType *BandwidthShareType `json:"share_type,omitempty"`
+
 	// 边缘站点ID。
-
 	SiteId *string `json:"site_id,omitempty"`
+
 	// 站点信息。
-
 	SiteInfo *string `json:"site_info,omitempty"`
+
 	// 带宽大小。
-
 	Size *int32 `json:"size,omitempty"`
+
 	// 带宽的状态。  取值范围：  - FREEZED：冻结  - NORMAL：正常
-
 	Status *BandwidthStatus `json:"status,omitempty"`
+
 	// 更新时间。
-
 	UpdateTime *string `json:"update_time,omitempty"`
-	// 线路ID。
 
+	// 线路ID。
 	PoolId *string `json:"pool_id,omitempty"`
 }
 

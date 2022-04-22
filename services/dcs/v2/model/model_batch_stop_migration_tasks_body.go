@@ -8,8 +8,8 @@ import (
 
 // 批量停止数据迁移任务结构体
 type BatchStopMigrationTasksBody struct {
-	// 数据迁移任务列表。
 
+	// 数据迁移任务列表。
 	MigrationTasks []string `json:"migration_tasks"`
 }
 

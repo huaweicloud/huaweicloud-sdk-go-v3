@@ -10,8 +10,8 @@ import (
 )
 
 type UpdateEdgeAppVersionStateDto struct {
-	// 应用版本状态
 
+	// 应用版本状态
 	State *UpdateEdgeAppVersionStateDtoState `json:"state,omitempty"`
 }
 

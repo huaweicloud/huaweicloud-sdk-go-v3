@@ -8,11 +8,11 @@ import (
 
 // 不含阈值告警的QoS数据元素，包括时间，QoS取值。
 type QosDataNoThrElement struct {
+
 	// Qos时间点, UTC时间，格式：yyyy-MM-ddTHH:mm:ss.SSSZ。
-
 	Time *string `json:"time,omitempty"`
-	// QoS值。
 
+	// QoS值。
 	Value *string `json:"value,omitempty"`
 }
 

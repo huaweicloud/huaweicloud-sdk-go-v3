@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ResetVisionActiveCodeResponse struct {
-	// 激活码
 
+	// 激活码
 	ActiveCode     *string `json:"activeCode,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

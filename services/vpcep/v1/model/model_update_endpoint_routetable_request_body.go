@@ -8,8 +8,8 @@ import (
 
 // 更新终端节点路由表请求结构体
 type UpdateEndpointRoutetableRequestBody struct {
-	// 路由表ID列表。
 
+	// 路由表ID列表。
 	Routetables []string `json:"routetables"`
 }
 

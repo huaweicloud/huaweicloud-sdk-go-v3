@@ -11,14 +11,14 @@ import (
 
 // This is a auto create Body Object
 type KeywordExtractReq struct {
+
 	// 待分析文本，长度为1~512，文本编码为UTF-8。
-
 	Text string `json:"text"`
+
 	// 返回关键词的最大数量，默认为5。
-
 	Limit *int32 `json:"limit,omitempty"`
-	// 支持的文本语言类型，目前只支持中文，默认为zh。
 
+	// 支持的文本语言类型，目前只支持中文，默认为zh。
 	Lang *KeywordExtractReqLang `json:"lang,omitempty"`
 }
 

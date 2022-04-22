@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateDependencyRequest struct {
-	// 依赖包的ID。
 
+	// 依赖包的ID。
 	DependId string `json:"depend_id"`
 
 	Body *UpdateDependencyRequestBody `json:"body,omitempty"`

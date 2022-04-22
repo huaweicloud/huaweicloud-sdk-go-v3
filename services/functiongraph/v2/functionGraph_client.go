@@ -19,7 +19,12 @@ func FunctionGraphClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//异步执行函数。
+// 异步执行函数。
+//
+// 异步执行函数。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) AsyncInvokeFunction(request *model.AsyncInvokeFunctionRequest) (*model.AsyncInvokeFunctionResponse, error) {
 	requestDef := GenReqDefForAsyncInvokeFunction()
 
@@ -30,7 +35,13 @@ func (c *FunctionGraphClient) AsyncInvokeFunction(request *model.AsyncInvokeFunc
 	}
 }
 
-//函数异步执行并返回预留实例ID用于场景指客户端请求执行比较费时任务，不需要同步等待执行完成返回结果，该方法提前返回任务执行对应的预留实例ID, 如果预留实例有异常， 可以通过该实例ID把对应实例删除（该接口主要针对白名单用户）。
+// 函数异步执行并返回预留实例ID。
+//
+// 函数异步执行并返回预留实例ID用于场景指客户端请求执行比较费时任务，不需要同步等待执行完成返回结果，该方法提前返回任务执行对应的预留实例ID, 如果预留实例有异常，
+// 可以通过该实例ID把对应实例删除（该接口主要针对白名单用户）。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) AsyncInvokeReservedFunction(request *model.AsyncInvokeReservedFunctionRequest) (*model.AsyncInvokeReservedFunctionResponse, error) {
 	requestDef := GenReqDefForAsyncInvokeReservedFunction()
 
@@ -41,7 +52,12 @@ func (c *FunctionGraphClient) AsyncInvokeReservedFunction(request *model.AsyncIn
 	}
 }
 
-//创建依赖包。
+// 创建依赖包
+//
+// 创建依赖包。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) CreateDependency(request *model.CreateDependencyRequest) (*model.CreateDependencyResponse, error) {
 	requestDef := GenReqDefForCreateDependency()
 
@@ -52,7 +68,12 @@ func (c *FunctionGraphClient) CreateDependency(request *model.CreateDependencyRe
 	}
 }
 
-//创建测试事件。
+// 创建测试事件
+//
+// 创建测试事件。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) CreateEvent(request *model.CreateEventRequest) (*model.CreateEventResponse, error) {
 	requestDef := GenReqDefForCreateEvent()
 
@@ -63,7 +84,12 @@ func (c *FunctionGraphClient) CreateEvent(request *model.CreateEventRequest) (*m
 	}
 }
 
-//创建指定的函数。
+// 创建函数。
+//
+// 创建指定的函数。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) CreateFunction(request *model.CreateFunctionRequest) (*model.CreateFunctionResponse, error) {
 	requestDef := GenReqDefForCreateFunction()
 
@@ -74,7 +100,12 @@ func (c *FunctionGraphClient) CreateFunction(request *model.CreateFunctionReques
 	}
 }
 
-//发布函数版本。
+// 发布函数版本。
+//
+// 发布函数版本。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) CreateFunctionVersion(request *model.CreateFunctionVersionRequest) (*model.CreateFunctionVersionResponse, error) {
 	requestDef := GenReqDefForCreateFunctionVersion()
 
@@ -85,7 +116,12 @@ func (c *FunctionGraphClient) CreateFunctionVersion(request *model.CreateFunctio
 	}
 }
 
-//创建函数灰度版本别名。
+// 创建函数版本别名。
+//
+// 创建函数灰度版本别名。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) CreateVersionAlias(request *model.CreateVersionAliasRequest) (*model.CreateVersionAliasResponse, error) {
 	requestDef := GenReqDefForCreateVersionAlias()
 
@@ -96,7 +132,12 @@ func (c *FunctionGraphClient) CreateVersionAlias(request *model.CreateVersionAli
 	}
 }
 
-//删除指定的依赖包。
+// 删除依赖包
+//
+// 删除指定的依赖包。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) DeleteDependency(request *model.DeleteDependencyRequest) (*model.DeleteDependencyResponse, error) {
 	requestDef := GenReqDefForDeleteDependency()
 
@@ -107,7 +148,12 @@ func (c *FunctionGraphClient) DeleteDependency(request *model.DeleteDependencyRe
 	}
 }
 
-//删除测试事件。
+// 删除测试事件
+//
+// 删除测试事件。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) DeleteEvent(request *model.DeleteEventRequest) (*model.DeleteEventResponse, error) {
 	requestDef := GenReqDefForDeleteEvent()
 
@@ -118,7 +164,15 @@ func (c *FunctionGraphClient) DeleteEvent(request *model.DeleteEventRequest) (*m
 	}
 }
 
-//删除指定的函数或者特定的版本（不允许删除latest版本）。  如果URN中包含函数版本或者别名，则删除特定的函数版本或者别名指向的版本以及该版本关联的trigger。 如果URN中不包含版本或者别名，则删除整个函数，包含所有版本以及别名，触发器。
+// 删除函数/版本。
+//
+// 删除指定的函数或者特定的版本（不允许删除latest版本）。
+//
+// 如果URN中包含函数版本或者别名，则删除特定的函数版本或者别名指向的版本以及该版本关联的trigger。
+// 如果URN中不包含版本或者别名，则删除整个函数，包含所有版本以及别名，触发器。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) DeleteFunction(request *model.DeleteFunctionRequest) (*model.DeleteFunctionResponse, error) {
 	requestDef := GenReqDefForDeleteFunction()
 
@@ -129,7 +183,12 @@ func (c *FunctionGraphClient) DeleteFunction(request *model.DeleteFunctionReques
 	}
 }
 
-//删除函数异步配置信息。
+// 删除函数异步配置信息。
+//
+// 删除函数异步配置信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) DeleteFunctionAsyncInvokeConfig(request *model.DeleteFunctionAsyncInvokeConfigRequest) (*model.DeleteFunctionAsyncInvokeConfigResponse, error) {
 	requestDef := GenReqDefForDeleteFunctionAsyncInvokeConfig()
 
@@ -140,7 +199,12 @@ func (c *FunctionGraphClient) DeleteFunctionAsyncInvokeConfig(request *model.Del
 	}
 }
 
-//删除函数版本别名。
+// 删除函数版本别名。
+//
+// 删除函数版本别名。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) DeleteVersionAlias(request *model.DeleteVersionAliasRequest) (*model.DeleteVersionAliasResponse, error) {
 	requestDef := GenReqDefForDeleteVersionAlias()
 
@@ -151,7 +215,12 @@ func (c *FunctionGraphClient) DeleteVersionAlias(request *model.DeleteVersionAli
 	}
 }
 
-//开通lts日志上报功能。
+// 开通lts日志上报功能。
+//
+// 开通lts日志上报功能。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) EnableLtsLogs(request *model.EnableLtsLogsRequest) (*model.EnableLtsLogsResponse, error) {
 	requestDef := GenReqDefForEnableLtsLogs()
 
@@ -162,7 +231,12 @@ func (c *FunctionGraphClient) EnableLtsLogs(request *model.EnableLtsLogsRequest)
 	}
 }
 
-//导出函数。
+// 导出函数。
+//
+// 导出函数。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ExportFunction(request *model.ExportFunctionRequest) (*model.ExportFunctionResponse, error) {
 	requestDef := GenReqDefForExportFunction()
 
@@ -173,7 +247,12 @@ func (c *FunctionGraphClient) ExportFunction(request *model.ExportFunctionReques
 	}
 }
 
-//导入函数。
+// 导入函数。
+//
+// 导入函数。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ImportFunction(request *model.ImportFunctionRequest) (*model.ImportFunctionResponse, error) {
 	requestDef := GenReqDefForImportFunction()
 
@@ -184,7 +263,12 @@ func (c *FunctionGraphClient) ImportFunction(request *model.ImportFunctionReques
 	}
 }
 
-//同步调用指的是客户端请求需要明确等到响应结果，也就是说这样的请求必须得调用到用户的函数，并且等到调用完成才返回。
+// 同步执行函数。
+//
+// 同步调用指的是客户端请求需要明确等到响应结果，也就是说这样的请求必须得调用到用户的函数，并且等到调用完成才返回。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) InvokeFunction(request *model.InvokeFunctionRequest) (*model.InvokeFunctionResponse, error) {
 	requestDef := GenReqDefForInvokeFunction()
 
@@ -195,7 +279,12 @@ func (c *FunctionGraphClient) InvokeFunction(request *model.InvokeFunctionReques
 	}
 }
 
-//获取依赖包列表。
+// 获取依赖包列表
+//
+// 获取依赖包列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ListDependencies(request *model.ListDependenciesRequest) (*model.ListDependenciesResponse, error) {
 	requestDef := GenReqDefForListDependencies()
 
@@ -206,7 +295,12 @@ func (c *FunctionGraphClient) ListDependencies(request *model.ListDependenciesRe
 	}
 }
 
-//获取指定函数的测试事件列表。
+// 获取测试事件列表
+//
+// 获取指定函数的测试事件列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ListEvents(request *model.ListEventsRequest) (*model.ListEventsResponse, error) {
 	requestDef := GenReqDefForListEvents()
 
@@ -217,7 +311,12 @@ func (c *FunctionGraphClient) ListEvents(request *model.ListEventsRequest) (*mod
 	}
 }
 
-//获取函数异步调用请求列表
+// 获取函数异步调用请求列表
+//
+// 获取函数异步调用请求列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ListFunctionAsyncInvocations(request *model.ListFunctionAsyncInvocationsRequest) (*model.ListFunctionAsyncInvocationsResponse, error) {
 	requestDef := GenReqDefForListFunctionAsyncInvocations()
 
@@ -228,7 +327,12 @@ func (c *FunctionGraphClient) ListFunctionAsyncInvocations(request *model.ListFu
 	}
 }
 
-//获取函数异步配置列表。
+// 获取函数异步配置列表
+//
+// 获取函数异步配置列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ListFunctionAsyncInvokeConfig(request *model.ListFunctionAsyncInvokeConfigRequest) (*model.ListFunctionAsyncInvokeConfigResponse, error) {
 	requestDef := GenReqDefForListFunctionAsyncInvokeConfig()
 
@@ -239,7 +343,12 @@ func (c *FunctionGraphClient) ListFunctionAsyncInvokeConfig(request *model.ListF
 	}
 }
 
-//获取指定时间段的函数运行指标。
+// 获取指定时间段的函数运行指标
+//
+// 获取指定时间段的函数运行指标。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ListFunctionStatistics(request *model.ListFunctionStatisticsRequest) (*model.ListFunctionStatisticsResponse, error) {
 	requestDef := GenReqDefForListFunctionStatistics()
 
@@ -250,7 +359,12 @@ func (c *FunctionGraphClient) ListFunctionStatistics(request *model.ListFunction
 	}
 }
 
-//获取指定函数的版本列表。
+// 获取指定函数的版本列表。
+//
+// 获取指定函数的版本列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ListFunctionVersions(request *model.ListFunctionVersionsRequest) (*model.ListFunctionVersionsResponse, error) {
 	requestDef := GenReqDefForListFunctionVersions()
 
@@ -261,7 +375,12 @@ func (c *FunctionGraphClient) ListFunctionVersions(request *model.ListFunctionVe
 	}
 }
 
-//获取函数列表
+// 获取函数列表
+//
+// 获取函数列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ListFunctions(request *model.ListFunctionsRequest) (*model.ListFunctionsResponse, error) {
 	requestDef := GenReqDefForListFunctions()
 
@@ -272,7 +391,12 @@ func (c *FunctionGraphClient) ListFunctions(request *model.ListFunctionsRequest)
 	}
 }
 
-//查询租户配额
+// 查询租户配额
+//
+// 查询租户配额
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuotasResponse, error) {
 	requestDef := GenReqDefForListQuotas()
 
@@ -283,7 +407,15 @@ func (c *FunctionGraphClient) ListQuotas(request *model.ListQuotasRequest) (*mod
 	}
 }
 
-//租户函数统计信息。  返回三类的统计信息，函数格式和大小使用情况包括配额和使用量，流量报告。 通过查询参数filter可以进行过滤，查询参数period可以指定返回的时间段。
+// 租户函数统计信息
+//
+// 租户函数统计信息。
+//
+// 返回三类的统计信息，函数格式和大小使用情况包括配额和使用量，流量报告。
+// 通过查询参数filter可以进行过滤，查询参数period可以指定返回的时间段。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ListStatistics(request *model.ListStatisticsRequest) (*model.ListStatisticsResponse, error) {
 	requestDef := GenReqDefForListStatistics()
 
@@ -294,7 +426,12 @@ func (c *FunctionGraphClient) ListStatistics(request *model.ListStatisticsReques
 	}
 }
 
-//获取函数版本别名列表。
+// 获取指定函数所有版本别名列表。
+//
+// 获取函数版本别名列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ListVersionAliases(request *model.ListVersionAliasesRequest) (*model.ListVersionAliasesResponse, error) {
 	requestDef := GenReqDefForListVersionAliases()
 
@@ -305,7 +442,12 @@ func (c *FunctionGraphClient) ListVersionAliases(request *model.ListVersionAlias
 	}
 }
 
-//获取指定依赖包。
+// 获取指定依赖包
+//
+// 获取指定依赖包。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ShowDependency(request *model.ShowDependencyRequest) (*model.ShowDependencyResponse, error) {
 	requestDef := GenReqDefForShowDependency()
 
@@ -316,7 +458,12 @@ func (c *FunctionGraphClient) ShowDependency(request *model.ShowDependencyReques
 	}
 }
 
-//获取测试事件详细信息。
+// 获取测试事件详细信息
+//
+// 获取测试事件详细信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ShowEvent(request *model.ShowEventRequest) (*model.ShowEventResponse, error) {
 	requestDef := GenReqDefForShowEvent()
 
@@ -327,7 +474,12 @@ func (c *FunctionGraphClient) ShowEvent(request *model.ShowEventRequest) (*model
 	}
 }
 
-//获取函数异步配置信息。
+// 获取函数异步配置信息。
+//
+// 获取函数异步配置信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ShowFunctionAsyncInvokeConfig(request *model.ShowFunctionAsyncInvokeConfigRequest) (*model.ShowFunctionAsyncInvokeConfigResponse, error) {
 	requestDef := GenReqDefForShowFunctionAsyncInvokeConfig()
 
@@ -338,7 +490,12 @@ func (c *FunctionGraphClient) ShowFunctionAsyncInvokeConfig(request *model.ShowF
 	}
 }
 
-//获取指定函数的代码。
+// 获取指定函数代码。
+//
+// 获取指定函数的代码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ShowFunctionCode(request *model.ShowFunctionCodeRequest) (*model.ShowFunctionCodeResponse, error) {
 	requestDef := GenReqDefForShowFunctionCode()
 
@@ -349,7 +506,12 @@ func (c *FunctionGraphClient) ShowFunctionCode(request *model.ShowFunctionCodeRe
 	}
 }
 
-//获取指定函数的metadata。
+// 获取函数的metadata。
+//
+// 获取指定函数的metadata。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ShowFunctionConfig(request *model.ShowFunctionConfigRequest) (*model.ShowFunctionConfigResponse, error) {
 	requestDef := GenReqDefForShowFunctionConfig()
 
@@ -360,7 +522,12 @@ func (c *FunctionGraphClient) ShowFunctionConfig(request *model.ShowFunctionConf
 	}
 }
 
-//获取指定函数的lts日志组日志流配置。
+// 获取指定函数的lts日志组日志流配置。
+//
+// 获取指定函数的lts日志组日志流配置。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ShowLtsLogDetails(request *model.ShowLtsLogDetailsRequest) (*model.ShowLtsLogDetailsResponse, error) {
 	requestDef := GenReqDefForShowLtsLogDetails()
 
@@ -371,7 +538,12 @@ func (c *FunctionGraphClient) ShowLtsLogDetails(request *model.ShowLtsLogDetails
 	}
 }
 
-//获取函数调用链配置
+// 获取函数调用链配置
+//
+// 获取函数调用链配置
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ShowTracing(request *model.ShowTracingRequest) (*model.ShowTracingResponse, error) {
 	requestDef := GenReqDefForShowTracing()
 
@@ -382,7 +554,12 @@ func (c *FunctionGraphClient) ShowTracing(request *model.ShowTracingRequest) (*m
 	}
 }
 
-//获取函数指定的版本别名信息。
+// 获取函数版本的指定别名信息。
+//
+// 获取函数指定的版本别名信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ShowVersionAlias(request *model.ShowVersionAliasRequest) (*model.ShowVersionAliasResponse, error) {
 	requestDef := GenReqDefForShowVersionAlias()
 
@@ -393,7 +570,12 @@ func (c *FunctionGraphClient) ShowVersionAlias(request *model.ShowVersionAliasRe
 	}
 }
 
-//更新依赖包指定依赖包。
+// 更新依赖包指定依赖包
+//
+// 更新依赖包指定依赖包。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) UpdateDependency(request *model.UpdateDependencyRequest) (*model.UpdateDependencyResponse, error) {
 	requestDef := GenReqDefForUpdateDependency()
 
@@ -404,7 +586,12 @@ func (c *FunctionGraphClient) UpdateDependency(request *model.UpdateDependencyRe
 	}
 }
 
-//更新测试事件。
+// 更新测试事件
+//
+// 更新测试事件。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) UpdateEvent(request *model.UpdateEventRequest) (*model.UpdateEventResponse, error) {
 	requestDef := GenReqDefForUpdateEvent()
 
@@ -415,7 +602,12 @@ func (c *FunctionGraphClient) UpdateEvent(request *model.UpdateEventRequest) (*m
 	}
 }
 
-//设置函数异步配置信息。
+// 设置函数异步配置信息。
+//
+// 设置函数异步配置信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) UpdateFunctionAsyncInvokeConfig(request *model.UpdateFunctionAsyncInvokeConfigRequest) (*model.UpdateFunctionAsyncInvokeConfigResponse, error) {
 	requestDef := GenReqDefForUpdateFunctionAsyncInvokeConfig()
 
@@ -426,7 +618,12 @@ func (c *FunctionGraphClient) UpdateFunctionAsyncInvokeConfig(request *model.Upd
 	}
 }
 
-//修改指定的函数的代码。
+// 修改函数代码。
+//
+// 修改指定的函数的代码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) UpdateFunctionCode(request *model.UpdateFunctionCodeRequest) (*model.UpdateFunctionCodeResponse, error) {
 	requestDef := GenReqDefForUpdateFunctionCode()
 
@@ -437,7 +634,12 @@ func (c *FunctionGraphClient) UpdateFunctionCode(request *model.UpdateFunctionCo
 	}
 }
 
-//修改指定的函数的metadata信息。
+// 修改函数的metadata信息。
+//
+// 修改指定的函数的metadata信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) UpdateFunctionConfig(request *model.UpdateFunctionConfigRequest) (*model.UpdateFunctionConfigResponse, error) {
 	requestDef := GenReqDefForUpdateFunctionConfig()
 
@@ -448,7 +650,12 @@ func (c *FunctionGraphClient) UpdateFunctionConfig(request *model.UpdateFunction
 	}
 }
 
-//为函数绑定预留实例
+// 更新函数预留实例个数
+//
+// 为函数绑定预留实例
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) UpdateFunctionReservedInstances(request *model.UpdateFunctionReservedInstancesRequest) (*model.UpdateFunctionReservedInstancesResponse, error) {
 	requestDef := GenReqDefForUpdateFunctionReservedInstances()
 
@@ -459,7 +666,12 @@ func (c *FunctionGraphClient) UpdateFunctionReservedInstances(request *model.Upd
 	}
 }
 
-//修改函数调用链配置,开通/修改传入aksk，关闭aksk传空
+// 修改函数调用链配置
+//
+// 修改函数调用链配置,开通/修改传入aksk，关闭aksk传空
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) UpdateTracing(request *model.UpdateTracingRequest) (*model.UpdateTracingResponse, error) {
 	requestDef := GenReqDefForUpdateTracing()
 
@@ -470,7 +682,12 @@ func (c *FunctionGraphClient) UpdateTracing(request *model.UpdateTracingRequest)
 	}
 }
 
-//修改函数版本别名信息。
+// 修改函数版本别名信息。
+//
+// 修改函数版本别名信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) UpdateVersionAlias(request *model.UpdateVersionAliasRequest) (*model.UpdateVersionAliasResponse, error) {
 	requestDef := GenReqDefForUpdateVersionAlias()
 
@@ -481,7 +698,16 @@ func (c *FunctionGraphClient) UpdateVersionAlias(request *model.UpdateVersionAli
 	}
 }
 
-//删除指定函数所有触发器设置。  在提供函数版本且非latest的情况下，删除对应函数版本的触发器。 在提供函数别名的情况下，删除对应函数别名的触发器。 在不提供函数版本（也不提供别名）或版本为latest的情况下，删除该函数所有的触发器（包括所有版本和别名）。
+// 删除指定函数的所有触发器。
+//
+// 删除指定函数所有触发器设置。
+//
+// 在提供函数版本且非latest的情况下，删除对应函数版本的触发器。
+// 在提供函数别名的情况下，删除对应函数别名的触发器。
+// 在不提供函数版本（也不提供别名）或版本为latest的情况下，删除该函数所有的触发器（包括所有版本和别名）。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) BatchDeleteFunctionTriggers(request *model.BatchDeleteFunctionTriggersRequest) (*model.BatchDeleteFunctionTriggersResponse, error) {
 	requestDef := GenReqDefForBatchDeleteFunctionTriggers()
 
@@ -492,7 +718,16 @@ func (c *FunctionGraphClient) BatchDeleteFunctionTriggers(request *model.BatchDe
 	}
 }
 
-//创建触发器。  - 可以创建的触发器类型包括TIMER、APIG、CTS、DDS、DMS、DIS、LTS、OBS、SMN、KAFKA。 - DDS和KAFKA触发器创建时默认为DISABLED状态，其他触发器默认为ACTIVE状态。 - TIMER、DDS、DMS、KAFKA、LTS触发器支持禁用，其他触发器不支持。
+// 创建触发器。
+//
+// 创建触发器。
+//
+// - 可以创建的触发器类型包括TIMER、APIG、CTS、DDS、DMS、DIS、LTS、OBS、SMN、KAFKA。
+// - DDS和KAFKA触发器创建时默认为DISABLED状态，其他触发器默认为ACTIVE状态。
+// - TIMER、DDS、DMS、KAFKA、LTS触发器支持禁用，其他触发器不支持。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) CreateFunctionTrigger(request *model.CreateFunctionTriggerRequest) (*model.CreateFunctionTriggerResponse, error) {
 	requestDef := GenReqDefForCreateFunctionTrigger()
 
@@ -503,7 +738,12 @@ func (c *FunctionGraphClient) CreateFunctionTrigger(request *model.CreateFunctio
 	}
 }
 
-//删除触发器。
+// 删除触发器。
+//
+// 删除触发器。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) DeleteFunctionTrigger(request *model.DeleteFunctionTriggerRequest) (*model.DeleteFunctionTriggerResponse, error) {
 	requestDef := GenReqDefForDeleteFunctionTrigger()
 
@@ -514,7 +754,12 @@ func (c *FunctionGraphClient) DeleteFunctionTrigger(request *model.DeleteFunctio
 	}
 }
 
-//获取指定函数的所有触发器设置。
+// 获取指定函数的所有触发器。
+//
+// 获取指定函数的所有触发器设置。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ListFunctionTriggers(request *model.ListFunctionTriggersRequest) (*model.ListFunctionTriggersResponse, error) {
 	requestDef := GenReqDefForListFunctionTriggers()
 
@@ -525,7 +770,12 @@ func (c *FunctionGraphClient) ListFunctionTriggers(request *model.ListFunctionTr
 	}
 }
 
-//获取特定触发器的信息。
+// 获取指定触发器的信息。
+//
+// 获取特定触发器的信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ShowFunctionTrigger(request *model.ShowFunctionTriggerRequest) (*model.ShowFunctionTriggerResponse, error) {
 	requestDef := GenReqDefForShowFunctionTrigger()
 
@@ -536,7 +786,12 @@ func (c *FunctionGraphClient) ShowFunctionTrigger(request *model.ShowFunctionTri
 	}
 }
 
-//更新触发器
+// 更新触发器
+//
+// 更新触发器
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) UpdateTrigger(request *model.UpdateTriggerRequest) (*model.UpdateTriggerResponse, error) {
 	requestDef := GenReqDefForUpdateTrigger()
 
@@ -547,7 +802,12 @@ func (c *FunctionGraphClient) UpdateTrigger(request *model.UpdateTriggerRequest)
 	}
 }
 
-//删除工作流列表
+// 删除工作流列表
+//
+// 删除工作流列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) BatchDeleteWorkflows(request *model.BatchDeleteWorkflowsRequest) (*model.BatchDeleteWorkflowsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteWorkflows()
 
@@ -558,7 +818,12 @@ func (c *FunctionGraphClient) BatchDeleteWorkflows(request *model.BatchDeleteWor
 	}
 }
 
-//创建工作流列表
+// 创建工作流列表
+//
+// 创建工作流列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) CreateWorkflow(request *model.CreateWorkflowRequest) (*model.CreateWorkflowResponse, error) {
 	requestDef := GenReqDefForCreateWorkflow()
 
@@ -569,7 +834,12 @@ func (c *FunctionGraphClient) CreateWorkflow(request *model.CreateWorkflowReques
 	}
 }
 
-//获取指定函数流执行实例列表
+// 获取指定函数流执行实例列表
+//
+// 获取指定函数流执行实例列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ListWorkflowExecutions(request *model.ListWorkflowExecutionsRequest) (*model.ListWorkflowExecutionsResponse, error) {
 	requestDef := GenReqDefForListWorkflowExecutions()
 
@@ -580,7 +850,12 @@ func (c *FunctionGraphClient) ListWorkflowExecutions(request *model.ListWorkflow
 	}
 }
 
-//查询工作流列表
+// 查询工作流列表
+//
+// 查询工作流列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ListWorkflows(request *model.ListWorkflowsRequest) (*model.ListWorkflowsResponse, error) {
 	requestDef := GenReqDefForListWorkflows()
 
@@ -591,7 +866,12 @@ func (c *FunctionGraphClient) ListWorkflows(request *model.ListWorkflowsRequest)
 	}
 }
 
-//重试工作流
+// 重试工作流
+//
+// 重试工作流
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) RetryWorkFlow(request *model.RetryWorkFlowRequest) (*model.RetryWorkFlowResponse, error) {
 	requestDef := GenReqDefForRetryWorkFlow()
 
@@ -602,7 +882,12 @@ func (c *FunctionGraphClient) RetryWorkFlow(request *model.RetryWorkFlowRequest)
 	}
 }
 
-//获取函数流指标
+// 获取函数流指标
+//
+// 获取函数流指标
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ShowTenantMetric(request *model.ShowTenantMetricRequest) (*model.ShowTenantMetricResponse, error) {
 	requestDef := GenReqDefForShowTenantMetric()
 
@@ -613,7 +898,12 @@ func (c *FunctionGraphClient) ShowTenantMetric(request *model.ShowTenantMetricRe
 	}
 }
 
-//获取指定函数流实例
+// 获取指定函数流实例
+//
+// 获取指定函数流实例
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ShowWorkFlow(request *model.ShowWorkFlowRequest) (*model.ShowWorkFlowResponse, error) {
 	requestDef := GenReqDefForShowWorkFlow()
 
@@ -624,7 +914,12 @@ func (c *FunctionGraphClient) ShowWorkFlow(request *model.ShowWorkFlowRequest) (
 	}
 }
 
-//获取指定工作流指标
+// 获取指定工作流指标
+//
+// 获取指定工作流指标
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ShowWorkFlowMetric(request *model.ShowWorkFlowMetricRequest) (*model.ShowWorkFlowMetricResponse, error) {
 	requestDef := GenReqDefForShowWorkFlowMetric()
 
@@ -635,7 +930,12 @@ func (c *FunctionGraphClient) ShowWorkFlowMetric(request *model.ShowWorkFlowMetr
 	}
 }
 
-//获取指定函数流执行实例。
+// 获取指定函数流执行实例
+//
+// 获取指定函数流执行实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) ShowWorkflowExecution(request *model.ShowWorkflowExecutionRequest) (*model.ShowWorkflowExecutionResponse, error) {
 	requestDef := GenReqDefForShowWorkflowExecution()
 
@@ -646,7 +946,12 @@ func (c *FunctionGraphClient) ShowWorkflowExecution(request *model.ShowWorkflowE
 	}
 }
 
-//开始执行函数流
+// 开始执行函数流
+//
+// 开始执行函数流
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) StartWorkflowExecution(request *model.StartWorkflowExecutionRequest) (*model.StartWorkflowExecutionResponse, error) {
 	requestDef := GenReqDefForStartWorkflowExecution()
 
@@ -657,7 +962,12 @@ func (c *FunctionGraphClient) StartWorkflowExecution(request *model.StartWorkflo
 	}
 }
 
-//停止工作流
+// 停止工作流
+//
+// 停止工作流
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) StopWorkFlow(request *model.StopWorkFlowRequest) (*model.StopWorkFlowResponse, error) {
 	requestDef := GenReqDefForStopWorkFlow()
 
@@ -668,7 +978,12 @@ func (c *FunctionGraphClient) StopWorkFlow(request *model.StopWorkFlowRequest) (
 	}
 }
 
-//修改指定函数流实例
+// 修改指定函数流实例
+//
+// 修改指定函数流实例
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FunctionGraphClient) UpdateWorkFlow(request *model.UpdateWorkFlowRequest) (*model.UpdateWorkFlowResponse, error) {
 	requestDef := GenReqDefForUpdateWorkFlow()
 

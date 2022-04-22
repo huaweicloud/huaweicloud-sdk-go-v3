@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type DecryptDataResponse struct {
+
 	// 密钥ID。
-
 	KeyId *string `json:"key_id,omitempty"`
-	// 明文。
 
+	// 明文。
 	PlainText      *string `json:"plain_text,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

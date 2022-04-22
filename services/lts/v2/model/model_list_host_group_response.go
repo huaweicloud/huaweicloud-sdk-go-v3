@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListHostGroupResponse struct {
+
 	// 主机组列表
-
 	Result *[]GetHostGroupInfo `json:"result,omitempty"`
-	// 主机组信息总数量
 
+	// 主机组信息总数量
 	Total          *int64 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

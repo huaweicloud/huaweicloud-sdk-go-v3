@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteListenerRequest struct {
+
 	// （不再支持）级联删除负载均衡器
-
 	Cascade *bool `json:"cascade,omitempty"`
-	// 监听器id
 
+	// 监听器id
 	ListenerId string `json:"listener_id"`
 }
 

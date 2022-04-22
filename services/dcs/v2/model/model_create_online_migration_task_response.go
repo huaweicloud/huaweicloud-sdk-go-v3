@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateOnlineMigrationTaskResponse struct {
-	// 在线迁移任务ID。
 
+	// 在线迁移任务ID。
 	InstanceId     *string `json:"instance_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

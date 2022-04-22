@@ -8,14 +8,14 @@ import (
 
 // 存储信息
 type DataStoreDto struct {
+
 	// 存储ID
-
 	DataStoreId *string `json:"data_store_id,omitempty"`
+
 	// 存储组ID
-
 	DataStoreGroupId *string `json:"data_store_group_id,omitempty"`
-	// 产品ID
 
+	// 产品ID
 	ProductId *string `json:"product_id,omitempty"`
 }
 

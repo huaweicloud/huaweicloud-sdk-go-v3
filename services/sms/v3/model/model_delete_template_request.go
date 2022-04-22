@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteTemplateRequest struct {
-	// 需要删除的模板的ID
 
+	// 需要删除的模板的ID
 	Id string `json:"id"`
 }
 

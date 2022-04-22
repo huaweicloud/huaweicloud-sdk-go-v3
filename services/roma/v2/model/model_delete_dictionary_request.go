@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteDictionaryRequest struct {
+
 	// 字典ID
-
 	DictId string `json:"dict_id"`
-	// 实例ID
 
+	// 实例ID
 	InstanceId string `json:"instance_id"`
 }
 

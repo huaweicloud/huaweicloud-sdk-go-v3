@@ -10,14 +10,14 @@ import (
 )
 
 type CreateEdgeApplicationVersionDto struct {
+
 	// 应用版本
-
 	Version string `json:"version"`
+
 	// 应用描述
-
 	Description *string `json:"description,omitempty"`
-	// 应用部署类型，分为docker容器部署类型和process进程部署类型，兼容之前数据，此字段可以为空，为空情况为docker类型
 
+	// 应用部署类型，分为docker容器部署类型和process进程部署类型，兼容之前数据，此字段可以为空，为空情况为docker类型
 	DeployType *CreateEdgeApplicationVersionDtoDeployType `json:"deploy_type,omitempty"`
 
 	ContainerSettings *ContainerSettingsDto `json:"container_settings"`
@@ -25,23 +25,23 @@ type CreateEdgeApplicationVersionDto struct {
 	LivenessProbe *ProbeDto `json:"liveness_probe,omitempty"`
 
 	ReadinessProbe *ProbeDto `json:"readiness_probe,omitempty"`
+
 	// 架构
-
 	Arch *interface{} `json:"arch"`
+
 	// 启动命令
-
 	Command *interface{} `json:"command,omitempty"`
+
 	// 启动参数
-
 	Args *interface{} `json:"args,omitempty"`
+
 	// 应用输出路由端点
-
 	Outputs *interface{} `json:"outputs,omitempty"`
+
 	// 应用输入路由
-
 	Inputs *interface{} `json:"inputs,omitempty"`
-	// 应用实现的服务列表
 
+	// 应用实现的服务列表
 	Services *interface{} `json:"services,omitempty"`
 }
 

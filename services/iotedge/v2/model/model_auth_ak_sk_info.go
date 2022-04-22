@@ -7,8 +7,8 @@ import (
 )
 
 type AuthAkSkInfo struct {
-	// 鉴权秘钥
 
+	// 鉴权秘钥
 	Secret *string `json:"secret,omitempty"`
 }
 

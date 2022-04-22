@@ -8,8 +8,8 @@ import (
 
 // 弹性云服务器的网络属性。
 type RespAddresses struct {
-	// 云服务器的vpc信息。
 
+	// 云服务器的vpc信息。
 	VpcId []RespAddr `json:"vpc_id"`
 }
 

@@ -11,26 +11,26 @@ import (
 
 // 示例字段对象
 type DemoField struct {
+
 	// 字段名称
-
 	FieldName string `json:"field_name"`
+
 	// 字段示例内容
-
 	Content *string `json:"content,omitempty"`
+
 	// 字段数据类型。 可选范围：string、long、float
-
 	Type DemoFieldType `json:"type"`
+
 	// 是否开启快速分析
-
 	IsAnalysis *bool `json:"is_analysis,omitempty"`
+
 	// 手动正则及分隔符方式中字段序号
-
 	Index *int32 `json:"index,omitempty"`
+
 	// 描叙多层级json中字段间的层级关系
-
 	Relation *string `json:"relation,omitempty"`
-	// json及nginx方式中字段自定义别名
 
+	// json及nginx方式中字段自定义别名
 	UserDefinedName *string `json:"user_defined_name,omitempty"`
 }
 

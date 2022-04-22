@@ -10,17 +10,17 @@ import (
 )
 
 type ApiActionInfo struct {
+
 	// 需要进行的操作。 - online：发布 - offline：下线
-
 	Action ApiActionInfoAction `json:"action"`
+
 	// 环境的编号，即：API需要发布到哪个环境
-
 	EnvId string `json:"env_id"`
+
 	// API的编号，即：需要进行发布或下线的API的编号
-
 	ApiId string `json:"api_id"`
-	// 对发布动作的简述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
 
+	// 对发布动作的简述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
 	Remark *string `json:"remark,omitempty"`
 }
 

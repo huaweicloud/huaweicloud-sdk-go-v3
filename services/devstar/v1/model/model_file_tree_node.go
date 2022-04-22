@@ -7,14 +7,14 @@ import (
 )
 
 type FileTreeNode struct {
+
 	// 文件路径
-
 	FilePath *string `json:"file_path,omitempty"`
+
 	// 文件名称
-
 	FileName *string `json:"file_name,omitempty"`
-	// 是否文件夹
 
+	// 是否文件夹
 	FileType *string `json:"file_type,omitempty"`
 }
 

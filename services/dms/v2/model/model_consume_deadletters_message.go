@@ -8,8 +8,8 @@ import (
 
 type ConsumeDeadlettersMessage struct {
 	Message *ConsumeDeadlettersMessageMessage `json:"message,omitempty"`
-	// 消息handler。
 
+	// 消息handler。
 	Handler *string `json:"handler,omitempty"`
 }
 

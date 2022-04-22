@@ -8,17 +8,17 @@ import (
 
 // 日志接入日志详情
 type AccessConfigQueryLogInfo struct {
+
 	// 日志组ID
-
 	LogGroupId *string `json:"log_group_id,omitempty"`
+
 	// 日志流ID
-
 	LogStreamId *string `json:"log_stream_id,omitempty"`
+
 	// 日志组名称
-
 	LogGroupName *string `json:"log_group_name,omitempty"`
-	// 日志流名称
 
+	// 日志流名称
 	LogStreamName *string `json:"log_stream_name,omitempty"`
 }
 

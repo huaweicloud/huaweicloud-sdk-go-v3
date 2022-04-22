@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowAuditLogResponse struct {
-	// 审计日志开关状态。取值：ON|OFF
 
+	// 审计日志开关状态。取值：ON|OFF
 	SwitchStatus   *string `json:"switch_status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

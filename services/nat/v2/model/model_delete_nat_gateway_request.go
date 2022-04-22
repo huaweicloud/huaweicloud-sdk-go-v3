@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteNatGatewayRequest struct {
-	// 公网NAT网关实例的ID。
 
+	// 公网NAT网关实例的ID。
 	NatGatewayId string `json:"nat_gateway_id"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateAomMappingRulesRequest struct {
-	// 是否开启自动映射
 
+	// 是否开启自动映射
 	IsBatch bool `json:"isBatch"`
 
 	Body *AomMappingRequestInfo `json:"body,omitempty"`

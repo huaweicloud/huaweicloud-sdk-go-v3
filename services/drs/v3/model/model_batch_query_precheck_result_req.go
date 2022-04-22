@@ -8,8 +8,8 @@ import (
 
 // 批量查询预检查结果请求体
 type BatchQueryPrecheckResultReq struct {
-	// 批量查询预检查结果请求列表。 约束：不能包含空对象。集合中的元素取值严格匹配UUID规则。任务id不能重复。
 
+	// 批量查询预检查结果请求列表。 约束：不能包含空对象。集合中的元素取值严格匹配UUID规则。任务id不能重复。
 	Jobs []string `json:"jobs"`
 }
 

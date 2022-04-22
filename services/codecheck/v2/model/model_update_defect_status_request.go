@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateDefectStatusRequest struct {
-	// 任务id
 
+	// 任务id
 	TaskId string `json:"task_id"`
 
 	Body *UpdateDefectRequestBody `json:"body,omitempty"`

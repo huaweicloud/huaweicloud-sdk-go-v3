@@ -9,8 +9,8 @@ import (
 // Response Object
 type ShowTasklogResponse struct {
 	ParamInfo *ParamInfo `json:"param_info,omitempty"`
-	// 日志信息
 
+	// 日志信息
 	LogInfo        *[]LogInfo `json:"log_info,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

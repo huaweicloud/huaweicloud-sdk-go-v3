@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ChangeOsRequest struct {
-	// 边缘实例ID。
 
+	// 边缘实例ID。
 	InstanceId string `json:"instance_id"`
 
 	Body *ChangeOsOption `json:"body,omitempty"`

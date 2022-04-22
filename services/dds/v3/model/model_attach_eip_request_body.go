@@ -7,11 +7,11 @@ import (
 )
 
 type AttachEipRequestBody struct {
+
 	// 公网IP的ID。
-
 	PublicIpId string `json:"public_ip_id"`
-	// 公网IP。
 
+	// 公网IP。
 	PublicIp string `json:"public_ip"`
 }
 

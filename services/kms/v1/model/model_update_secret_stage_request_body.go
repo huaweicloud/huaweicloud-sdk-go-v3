@@ -7,8 +7,8 @@ import (
 )
 
 type UpdateSecretStageRequestBody struct {
-	// 凭据的版本号标识符。
 
+	// 凭据的版本号标识符。
 	VersionId string `json:"version_id"`
 }
 

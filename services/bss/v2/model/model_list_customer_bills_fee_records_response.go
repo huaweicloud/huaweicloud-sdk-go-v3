@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ListCustomerBillsFeeRecordsResponse struct {
+
 	// 结果集数量，只有成功才返回这个参数。
-
 	TotalCount *int32 `json:"total_count,omitempty"`
+
 	// 资源费用记录数据。 具体请参见表2。
-
 	Records *[]MonthlyBillRecord `json:"records,omitempty"`
-	// 币种。 CNY：人民币
 
+	// 币种。 CNY：人民币
 	Currency       *string `json:"currency,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

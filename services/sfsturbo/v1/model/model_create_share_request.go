@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateShareRequest struct {
-	// MIME类型
 
+	// MIME类型
 	ContentType string `json:"Content-Type"`
 
 	Body *CreateShareRequestBody `json:"body,omitempty"`

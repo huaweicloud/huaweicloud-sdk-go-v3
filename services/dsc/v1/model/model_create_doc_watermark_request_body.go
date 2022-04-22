@@ -15,6 +15,7 @@ import (
 )
 
 type CreateDocWatermarkRequestBody struct {
+
 	// 要嵌入水印的文档类型
 	DocType *def.MultiPart `json:"doc_type"`
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowCertificateRequest struct {
-	// 证书ID。
 
+	// 证书ID。
 	CertificateId string `json:"certificate_id"`
 }
 

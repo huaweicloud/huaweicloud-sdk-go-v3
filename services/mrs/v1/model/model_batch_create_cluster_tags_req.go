@@ -10,11 +10,11 @@ import (
 )
 
 type BatchCreateClusterTagsReq struct {
+
 	// 操作标识：仅限于create（创建）。
-
 	Action BatchCreateClusterTagsReqAction `json:"action"`
-	// 标签列表。
 
+	// 标签列表。
 	Tags []Tag `json:"tags"`
 }
 

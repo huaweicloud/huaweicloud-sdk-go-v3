@@ -13,8 +13,8 @@ type ValueInTwinResponse struct {
 	Actual *ValueInTwinResponseActual `json:"actual,omitempty"`
 
 	Metadata *ValueInTwinResponseMetadata `json:"metadata,omitempty"`
-	// 标识属性是否可选，默认为true，继承模板的属性默认为false
 
+	// 标识属性是否可选，默认为true，继承模板的属性默认为false
 	Optional *bool `json:"optional,omitempty"`
 }
 

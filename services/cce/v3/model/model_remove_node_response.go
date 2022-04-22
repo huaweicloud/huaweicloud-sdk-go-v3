@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type RemoveNodeResponse struct {
+
 	// API版本，固定值“v3”。
-
 	ApiVersion *string `json:"apiVersion,omitempty"`
-	// API类型，固定值“RemoveNodesTask”。
 
+	// API类型，固定值“RemoveNodesTask”。
 	Kind *string `json:"kind,omitempty"`
 
 	Spec *RemoveNodesSpec `json:"spec,omitempty"`

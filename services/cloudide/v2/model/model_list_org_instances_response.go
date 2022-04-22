@@ -9,8 +9,8 @@ import (
 // Response Object
 type ListOrgInstancesResponse struct {
 	Instances *PageInstancesVo `json:"instances,omitempty"`
-	// 状态
 
+	// 状态
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

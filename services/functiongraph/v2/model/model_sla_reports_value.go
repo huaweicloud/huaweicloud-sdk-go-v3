@@ -7,11 +7,11 @@ import (
 )
 
 type SlaReportsValue struct {
+
 	// 时间戳
-
 	Timestamp *int32 `json:"timestamp,omitempty"`
-	// 值
 
+	// 值
 	Value *int32 `json:"value,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type RunSearchPictureResponse struct {
+
 	// 搜索结果总数。
-
 	Count *int32 `json:"count,omitempty"`
-	// 搜索结果详情。
 
+	// 搜索结果详情。
 	Result         *[]SearchPictureItem `json:"result,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

@@ -7,8 +7,8 @@ import (
 )
 
 type ComponentList struct {
-	// 组件名称
 
+	// 组件名称
 	ComponentName string `json:"component_name"`
 }
 

@@ -7,8 +7,8 @@ import (
 )
 
 type Repository struct {
-	// 创建仓库的UUID
 
+	// 创建仓库的UUID
 	RepositoryUuid *string `json:"repository_uuid,omitempty"`
 }
 

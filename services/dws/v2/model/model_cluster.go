@@ -7,8 +7,8 @@ import (
 )
 
 type Cluster struct {
-	// 集群ID
 
+	// 集群ID
 	Id string `json:"id"`
 }
 

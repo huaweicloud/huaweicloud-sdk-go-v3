@@ -7,8 +7,8 @@ import (
 )
 
 type ConfirmDeadLettersMessagesReq struct {
-	// 确认消息数组。
 
+	// 确认消息数组。
 	Message *[]ConfirmMessageEntity `json:"message,omitempty"`
 }
 

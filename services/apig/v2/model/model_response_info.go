@@ -7,11 +7,11 @@ import (
 )
 
 type ResponseInfo struct {
+
 	// 响应的HTTP状态码
-
 	Status *int32 `json:"status,omitempty"`
-	// 响应的Body模板
 
+	// 响应的Body模板
 	Body *string `json:"body,omitempty"`
 }
 

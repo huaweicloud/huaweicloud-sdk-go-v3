@@ -11,32 +11,32 @@ import (
 
 // 磁盘信息
 type Disk struct {
+
 	// 磁盘名称
-
 	Name string `json:"name"`
+
 	// 磁盘的分区类型，添加源端时源端磁盘必选
-
 	PartitionStyle *DiskPartitionStyle `json:"partition_style,omitempty"`
+
 	// 磁盘类型
-
 	DeviceUse DiskDeviceUse `json:"device_use"`
+
 	// 磁盘总大小，以字节为单位
-
 	Size int64 `json:"size"`
+
 	// 磁盘已使用大小，以字节为单位
-
 	UsedSize int64 `json:"used_size"`
+
 	// 磁盘上的物理分区信息
-
 	PhysicalVolumes []PhysicalVolumes `json:"physical_volumes"`
+
 	// 创建任务时，如果选择已有虚拟机，此参数必选
-
 	DiskId *string `json:"disk_id,omitempty"`
+
 	// 是否为系统盘
-
 	OsDisk *bool `json:"os_disk,omitempty"`
-	// Linux系统 目的端ECS中与源端关联的磁盘名称
 
+	// Linux系统 目的端ECS中与源端关联的磁盘名称
 	RelationName *string `json:"relation_name,omitempty"`
 }
 

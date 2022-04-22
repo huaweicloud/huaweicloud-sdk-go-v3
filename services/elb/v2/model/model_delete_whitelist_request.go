@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteWhitelistRequest struct {
-	// 白名单id
 
+	// 白名单id
 	WhitelistId string `json:"whitelist_id"`
 }
 

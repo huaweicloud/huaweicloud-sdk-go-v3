@@ -29,14 +29,14 @@ type ShowSpResourceResponse struct {
 	HwVisionCount *ResDetailDto `json:"hwVisionCount,omitempty"`
 
 	IdeaHubCount *ResDetailDto `json:"ideaHubCount,omitempty"`
+
 	// 在创建SP的时候设置的pstn权限开关
-
 	EnablePstn *bool `json:"enablePstn,omitempty"`
+
 	// 在创建SP的时候设置发送短信开关
-
 	EnableSMS *bool `json:"enableSMS,omitempty"`
-	// sp管理员绑定的分组列表
 
+	// sp管理员绑定的分组列表
 	GroupList      *[]QueryCorpGroupDto `json:"groupList,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

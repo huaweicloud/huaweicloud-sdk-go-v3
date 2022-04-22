@@ -12,6 +12,7 @@ import (
 )
 
 type ImportMqsInstanceTopicRequestBody struct {
+
 	// 待导入的topic列表文件。
 	UploadFileName *def.FilePart `json:"upload_file_name"`
 }

@@ -7,11 +7,11 @@ import (
 )
 
 type IdMarkDto struct {
+
 	// 唯一标识。
-
 	Id *string `json:"id,omitempty"`
-	// id对应的回显描述，一般为名称等。
 
+	// id对应的回显描述，一般为名称等。
 	Mark *string `json:"mark,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListSnapshotsRequest struct {
-	// 指定需查询的快照所属的集群的ID。
 
+	// 指定需查询的快照所属的集群的ID。
 	ClusterId string `json:"cluster_id"`
 }
 

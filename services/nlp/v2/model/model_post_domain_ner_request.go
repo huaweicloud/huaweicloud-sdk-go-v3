@@ -11,14 +11,14 @@ import (
 
 // 命名实体识别post请求体
 type PostDomainNerRequest struct {
+
 	// 待分析文本，长度为1~64，文本编码为UTF-8。
-
 	Text string `json:"text"`
+
 	// 支持的文本语言类型，目前只支持中文，默认为zh。
-
 	Lang *PostDomainNerRequestLang `json:"lang,omitempty"`
-	// 支持的领域类型，目前支持通用（general）领域、商务（business）领域、娱乐（entertainment）领域，默认为general。
 
+	// 支持的领域类型，目前支持通用（general）领域、商务（business）领域、娱乐（entertainment）领域，默认为general。
 	Domain *PostDomainNerRequestDomain `json:"domain,omitempty"`
 }
 

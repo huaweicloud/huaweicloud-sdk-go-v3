@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteRepoMemberRequest struct {
+
 	// 仓库成员id
-
 	MemberId string `json:"member_id"`
-	// 仓库uuid
 
+	// 仓库uuid
 	RepositoryUuid string `json:"repository_uuid"`
 }
 

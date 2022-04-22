@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListSharedTagsRequest struct {
-	// MIME类型
 
+	// MIME类型
 	ContentType string `json:"Content-Type"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type AddVaultResourceRequest struct {
-	// 存储库ID
 
+	// 存储库ID
 	VaultId string `json:"vault_id"`
 
 	Body *VaultAddResourceReq `json:"body,omitempty"`

@@ -8,17 +8,17 @@ import (
 
 // 逻辑卷组信息
 type PutVolumeGroups struct {
+
 	// lv信息
-
 	LogicalVolumes *[]PutLogicalVolume `json:"logical_volumes,omitempty"`
+
 	// 卷组id
-
 	Id string `json:"id"`
+
 	// 是否迁移
-
 	NeedMigration *bool `json:"need_migration,omitempty"`
-	// 调整大小
 
+	// 调整大小
 	AdjustSize *int64 `json:"adjust_size,omitempty"`
 }
 

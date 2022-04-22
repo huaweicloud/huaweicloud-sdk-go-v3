@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ListEnvironmentsV2Response struct {
+
 	// 本次返回的列表长度
-
 	Size int32 `json:"size"`
+
 	// 满足条件的记录数
-
 	Total int64 `json:"total"`
-	// 本次返回的环境列表
 
+	// 本次返回的环境列表
 	Envs           *[]EnvInfo `json:"envs,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

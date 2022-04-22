@@ -8,14 +8,14 @@ import (
 
 // 查询版本响应体
 type OsVersionResponse struct {
+
 	// 接口状态。
-
 	Status string `json:"status"`
+
 	// 接口ID。
-
 	Id *string `json:"id,omitempty"`
-	// 自描述信息。
 
+	// 自描述信息。
 	Links *[]Links `json:"links,omitempty"`
 }
 

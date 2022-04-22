@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateTestCaseInPlanRequest struct {
-	// 计划唯一标识，固定长度32位字符
 
+	// 计划唯一标识，固定长度32位字符
 	PlanId string `json:"plan_id"`
 
 	Body *CreateTestCaseInPlanRequestBody `json:"body,omitempty"`

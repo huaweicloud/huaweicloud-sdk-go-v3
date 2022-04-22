@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type RegisterDbUserResponse struct {
-	// 数据库用户ID
 
+	// 数据库用户ID
 	DbUserId       *string `json:"db_user_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

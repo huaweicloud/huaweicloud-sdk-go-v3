@@ -11,51 +11,51 @@ import (
 
 // 自动创建虚拟机模板
 type TemplateResponseBody struct {
+
 	// 模板ID
-
 	Id *string `json:"id,omitempty"`
+
 	// 模板名称
-
 	Name string `json:"name"`
+
 	// 是否是通用模板，如果模板关联一个任务，则不算通用模板
-
 	IsTemplate *string `json:"is_template,omitempty"`
+
 	// Region信息
-
 	Region string `json:"region"`
+
 	// 项目ID
-
 	Projectid string `json:"projectid"`
+
 	// 目标端服务器名称
-
 	TargetServerName string `json:"target_server_name"`
+
 	// 可用区
-
 	AvailabilityZone string `json:"availability_zone"`
+
 	// 磁盘类型
-
 	Volumetype TemplateResponseBodyVolumetype `json:"volumetype"`
-	// 虚拟机规格
 
+	// 虚拟机规格
 	Flavor string `json:"flavor"`
 
 	Vpc *VpcObject `json:"vpc"`
+
 	// 网卡信息，支持多个网卡，如果是自动创建，只填一个，id使用“autoCreate”
-
 	Nics []Nics `json:"nics"`
-	// 安全组，支持多个安全组，如果是自动创建，只填一个，id使用“autoCreate”
 
+	// 安全组，支持多个安全组，如果是自动创建，只填一个，id使用“autoCreate”
 	SecurityGroups []SgObject `json:"security_groups"`
 
 	Publicip *PublicIp `json:"publicip"`
+
 	// 磁盘信息
-
 	Disk []TemplateDisk `json:"disk"`
+
 	// 数据盘磁盘类型
-
 	DataVolumeType TemplateResponseBodyDataVolumeType `json:"data_volume_type"`
-	// 目的端密码
 
+	// 目的端密码
 	TargetPassword string `json:"target_password"`
 }
 

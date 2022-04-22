@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type SwitchAgentRequest struct {
-	// instance_id
 
+	// instance_id
 	InstanceId string `json:"instance_id"`
 
 	Body *AgentSwitchRequest `json:"body,omitempty"`

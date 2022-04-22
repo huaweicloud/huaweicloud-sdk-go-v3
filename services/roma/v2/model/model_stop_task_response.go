@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type StopTaskResponse struct {
-	// 手工启动/停止任务成功返回消息
 
+	// 手工启动/停止任务成功返回消息
 	Message        *string `json:"message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

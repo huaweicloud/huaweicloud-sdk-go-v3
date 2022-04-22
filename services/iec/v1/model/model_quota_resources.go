@@ -8,8 +8,8 @@ import (
 
 //
 type QuotaResources struct {
-	// 配额信息列表。
 
+	// 配额信息列表。
 	Resources *[]QuotaResource `json:"resources,omitempty"`
 }
 

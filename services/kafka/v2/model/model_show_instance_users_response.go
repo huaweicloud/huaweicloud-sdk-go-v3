@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowInstanceUsersResponse struct {
-	// 用户列表。
 
+	// 用户列表。
 	Users          *[]ShowInstanceUsersEntity `json:"users,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }

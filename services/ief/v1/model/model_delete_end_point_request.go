@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteEndPointRequest struct {
+
 	// 铂金版实例ID，专业版实例为空值
-
 	IefInstanceId *string `json:"ief-instance-id,omitempty"`
-	// 端点ID
 
+	// 端点ID
 	EndpointId string `json:"endpoint_id"`
 }
 

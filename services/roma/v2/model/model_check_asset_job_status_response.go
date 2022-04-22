@@ -11,29 +11,29 @@ import (
 
 // Response Object
 type CheckAssetJobStatusResponse struct {
+
 	// 作业ID
-
 	Id *string `json:"id,omitempty"`
+
 	// 作业类型
-
 	Type *CheckAssetJobStatusResponseType `json:"type,omitempty"`
+
 	// 作业状态 - RUNNING : 作业正在执行 - SUCCEEDED : 作业执行成功，对于导出作业，用户可以通过archive_id来下载资产包 - FAILED : 作业执行失败，通过reason字段查看具体错误原因
-
 	Status *CheckAssetJobStatusResponseStatus `json:"status,omitempty"`
+
 	// 导致作业失败的错误原因
-
 	Reasons *[]AssetJobReason `json:"reasons,omitempty"`
+
 	// 作业进度百分比
-
 	ProgressPercent *float32 `json:"progress_percent,omitempty"`
+
 	// 导出作业成功时，供下载的资产包ID
-
 	ArchiveId *string `json:"archive_id,omitempty"`
+
 	// 作业开始时间
-
 	BeginTime *string `json:"begin_time,omitempty"`
-	// 作业结束时间
 
+	// 作业结束时间
 	EndTime        *string `json:"end_time,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

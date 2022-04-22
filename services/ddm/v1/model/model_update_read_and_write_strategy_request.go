@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateReadAndWriteStrategyRequest struct {
-	// DDM实例ID
 
+	// DDM实例ID
 	InstanceId string `json:"instance_id"`
 
 	Body *ModifyReadAndWriteStrategyReq `json:"body,omitempty"`

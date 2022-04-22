@@ -7,11 +7,11 @@ import (
 )
 
 type UpdateDeviceGroupRequestBody struct {
+
 	// 分组名称，支持中文，英文大小写，数字，下划线和中划线,长度2-64
-
 	Name string `json:"name"`
-	// 分组描述，长度0-200
 
+	// 分组描述，长度0-200
 	Description *string `json:"description,omitempty"`
 }
 

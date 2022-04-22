@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type BatchAddTagsRequest struct {
-	// 保护实例的ID。
 
+	// 保护实例的ID。
 	ProtectedInstanceId string `json:"protected_instance_id"`
 
 	Body *BatchAddTagsRequestBody `json:"body,omitempty"`

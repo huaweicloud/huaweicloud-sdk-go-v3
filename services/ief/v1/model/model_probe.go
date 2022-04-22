@@ -11,11 +11,11 @@ type Probe struct {
 	Exec *ProbeExec `json:"exec,omitempty"`
 
 	HttpGet *InstancesLivenessProbeHttpGet `json:"http_get,omitempty"`
+
 	// 表示从工作负载启动后从多久开始探测，大于0且不大于3600的整数，默认为10
-
 	InitialDelaySeconds *int32 `json:"initial_delay_seconds,omitempty"`
-	// 表示探测超时时间，大于0且不大于3600的整数，默认为1
 
+	// 表示探测超时时间，大于0且不大于3600的整数，默认为1
 	TimeoutSeconds *int32 `json:"timeout_seconds,omitempty"`
 }
 

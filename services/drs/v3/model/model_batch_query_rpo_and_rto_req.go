@@ -8,8 +8,8 @@ import (
 
 // 批量查询RPO和RTO的请求体
 type BatchQueryRpoAndRtoReq struct {
-	// 批量查询RPO和RTO的任务详情ID请求列表
 
+	// 批量查询RPO和RTO的任务详情ID请求列表
 	Jobs []string `json:"jobs"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ExecuteTbSessionResponse struct {
-	// 所有数据的信息。
 
+	// 所有数据的信息。
 	Questions      *[]ExecuteTbQuestion `json:"questions,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

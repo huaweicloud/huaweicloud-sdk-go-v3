@@ -7,14 +7,14 @@ import (
 )
 
 type Attributes struct {
+
 	// cpu限制
-
 	CpuLimit *string `json:"cpu_limit,omitempty"`
+
 	// 内存限制
-
 	MemoryLimitBytes *string `json:"memory_limit_bytes,omitempty"`
-	// pvc规格
 
+	// pvc规格
 	PvcQuantity *string `json:"pvc_quantity,omitempty"`
 }
 

@@ -7,38 +7,38 @@ import (
 )
 
 type RepoInfo struct {
+
 	// 创建时间
-
 	CreateAt *string `json:"createAt,omitempty"`
+
 	// 仓库组名
-
 	GroupName *string `json:"groupName,omitempty"`
+
 	// https url
-
 	HttpUrl *string `json:"httpUrl,omitempty"`
+
 	// 仓库uuid
-
 	Id *string `json:"id,omitempty"`
+
 	// 仓库名
-
 	Name *string `json:"name,omitempty"`
+
 	// 项目的uuid
-
 	ProjectId *string `json:"projectId,omitempty"`
+
 	// 项目是否被删除
-
 	ProjectIsDelete *string `json:"projectIsDelete,omitempty"`
+
 	// 仓库主键id
-
 	RepoId *string `json:"repoId,omitempty"`
+
 	// ssh url
-
 	SshUrl *string `json:"sshUrl,omitempty"`
+
 	// 是否可见：0私有仓库，20公有仓库
-
 	VisibilityLevel *int32 `json:"visibilityLevel,omitempty"`
-	// web url 访问路径
 
+	// web url 访问路径
 	WebUrl *string `json:"webUrl,omitempty"`
 }
 

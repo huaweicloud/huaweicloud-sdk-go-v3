@@ -8,11 +8,11 @@ import (
 
 // 时间线
 type StatisticsTimelineItem struct {
+
 	// 键值
-
 	Key *string `json:"key,omitempty"`
-	// 对应键值的时间线
 
+	// 对应键值的时间线
 	Timeline *[]TimeLineItem `json:"timeline,omitempty"`
 }
 

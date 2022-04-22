@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListServiceResourcesResponse struct {
+
 	// 总数。
-
 	TotalCount *int32 `json:"total_count,omitempty"`
-	// 资源基本信息列表，具体请参见表3。
 
+	// 资源基本信息列表，具体请参见表3。
 	Infos          *[]ServiceResourceInfo `json:"infos,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

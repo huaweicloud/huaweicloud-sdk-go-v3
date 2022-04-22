@@ -8,11 +8,11 @@ import (
 
 // couchDB信息
 type Couchdb struct {
+
 	// couchDB用户名
-
 	UserName string `json:"user_name"`
-	// couchDB密码
 
+	// couchDB密码
 	Password string `json:"password"`
 }
 

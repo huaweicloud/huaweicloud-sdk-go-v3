@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteMemberRequest struct {
+
 	// 后端服务器组ID。
-
 	PoolId string `json:"pool_id"`
-	// 后端服务器ID。
 
+	// 后端服务器ID。
 	MemberId string `json:"member_id"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListNamespacesResponse struct {
-	// 命名空间列表。
 
+	// 命名空间列表。
 	Namespaces     *[]NamespacesNamespaces `json:"namespaces,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

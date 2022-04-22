@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteClusterRequest struct {
-	// 指定删除集群ID。
 
+	// 指定删除集群ID。
 	ClusterId string `json:"cluster_id"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListFirewallsResponse struct {
+
 	// 网络ACL数量。
-
 	Count *int32 `json:"count,omitempty"`
-	// 网络ACL列表。
 
+	// 网络ACL列表。
 	Firewalls      *[]Firewall `json:"firewalls,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

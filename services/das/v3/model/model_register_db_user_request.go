@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type RegisterDbUserRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 语言
 
+	// 语言
 	XLanguage *RegisterDbUserRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *RegisterDbUserRequestBody `json:"body,omitempty"`

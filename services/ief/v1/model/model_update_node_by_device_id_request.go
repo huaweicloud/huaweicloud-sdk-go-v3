@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdateNodeByDeviceIdRequest struct {
-	// 设备ID
 
+	// 设备ID
 	DeviceId string `json:"device_id"`
 
 	Body *EdgeNodeUpdateByDevice `json:"body,omitempty"`

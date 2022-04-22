@@ -10,29 +10,29 @@ import (
 )
 
 type DiagnosisReportInfo struct {
+
 	// 诊断报告ID
-
 	ReportId string `json:"report_id"`
+
 	// 诊断任务状态
-
 	Status DiagnosisReportInfoStatus `json:"status"`
+
 	// 诊断时间段的开始时间。格式为：2017-03-31T12:24:46.297Z
-
 	BeginTime string `json:"begin_time"`
+
 	// 诊断时间段的结束时间。格式为：2017-03-31T12:24:46.297Z
-
 	EndTime string `json:"end_time"`
+
 	// 诊断报告创建时间
-
 	CreatedAt string `json:"created_at"`
+
 	// 参与诊断的节点个数
-
 	NodeNum int32 `json:"node_num"`
+
 	// 诊断结果为异常的诊断项总数
-
 	AbnormalItemSum int32 `json:"abnormal_item_sum"`
-	// 诊断失败的诊断项总数
 
+	// 诊断失败的诊断项总数
 	FailedItemSum int32 `json:"failed_item_sum"`
 }
 

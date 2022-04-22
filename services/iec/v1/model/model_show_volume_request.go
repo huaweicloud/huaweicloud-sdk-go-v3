@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowVolumeRequest struct {
-	// 磁盘ID。
 
+	// 磁盘ID。
 	VolumeId string `json:"volume_id"`
 }
 

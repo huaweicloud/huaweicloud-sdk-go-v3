@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type BatchFreezeDevicesResponse struct {
+
 	// 下线成功设备列表
-
 	Success *[]DeviceInfoSimple `json:"success,omitempty"`
-	// 下线失败设备列表
 
+	// 下线失败设备列表
 	Failed         *[]DeviceInfoSimple `json:"failed,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

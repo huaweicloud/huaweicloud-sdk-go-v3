@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type CreateLinkRequest struct {
+
 	// 集群ID
-
 	ClusterId string `json:"cluster_id"`
-	// 为“true”时，此API仅校验参数是否正确，不创建连接
 
+	// 为“true”时，此API仅校验参数是否正确，不创建连接
 	Validate *string `json:"validate,omitempty"`
 
 	Body *CdmCreateAndUpdateLinkReq `json:"body,omitempty"`

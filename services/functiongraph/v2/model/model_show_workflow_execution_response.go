@@ -11,41 +11,41 @@ import (
 
 // Response Object
 type ShowWorkflowExecutionResponse struct {
+
 	// 流程定义ID
-
 	WorkflowId *string `json:"workflow_id,omitempty"`
+
 	// 唯一标识ID，流程URN
-
 	WorkflowUrn *string `json:"workflow_urn,omitempty"`
+
 	// 流程执行实例ID
-
 	ExecutionId *string `json:"execution_id,omitempty"`
+
 	// 流程实例执行状态
-
 	Status *ShowWorkflowExecutionResponseStatus `json:"status,omitempty"`
+
 	// 函数执行时需要的Header
-
 	Headers *interface{} `json:"headers,omitempty"`
+
 	// 函数执行时的入参
-
 	Input *interface{} `json:"input,omitempty"`
+
 	// 函数执行结果
-
 	Output *interface{} `json:"output,omitempty"`
+
 	// 流程实例创建时间，格式：yyyy-MM-ddTHH:mm:ssZ，UTC时间
-
 	BeginTime *string `json:"begin_time,omitempty"`
+
 	// 流程实例结束时间，格式：yyyy-MM-ddTHH:mm:ssZ，UTC时间
-
 	EndTime *string `json:"end_time,omitempty"`
+
 	// 流程实例上次更新时间，格式：yyyy-MM-ddTHH:mm:ssZ，UTC时间
-
 	LastUpdateTime *string `json:"last_update_time,omitempty"`
+
 	// 流程实例创建者
-
 	CreatedBy *string `json:"created_by,omitempty"`
-	// 节点执行信息
 
+	// 节点执行信息
 	NodeExecutionDetails *[]NodeExecutionDetail `json:"node_execution_details,omitempty"`
 	HttpStatusCode       int                    `json:"-"`
 }

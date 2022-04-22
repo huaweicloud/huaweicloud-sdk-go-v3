@@ -8,11 +8,11 @@ import (
 
 // ORACLE集群地址
 type MultiOracleAddress struct {
+
 	// ORACLE地址
-
 	OracleAddress *string `json:"oracle_address,omitempty"`
-	// ORACLE端口
 
+	// ORACLE端口
 	OraclePort *string `json:"oracle_port,omitempty"`
 }
 

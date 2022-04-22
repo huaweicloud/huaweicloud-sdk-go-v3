@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type CreateAppCodeV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 应用编号
 
+	// 应用编号
 	AppId string `json:"app_id"`
 
 	Body *AppCodeCreate `json:"body,omitempty"`

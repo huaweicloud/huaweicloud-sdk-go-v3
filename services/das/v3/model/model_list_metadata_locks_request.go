@@ -11,23 +11,23 @@ import (
 
 // Request Object
 type ListMetadataLocksRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
+
 	// 数据库用户ID
-
 	DbUserId string `json:"db_user_id"`
+
 	// 会话ID
-
 	ThreadId *string `json:"thread_id,omitempty"`
+
 	// 数据库名称
-
 	Database *string `json:"database,omitempty"`
+
 	// 表名
-
 	Table *string `json:"table,omitempty"`
-	// 语言
 
+	// 语言
 	XLanguage *ListMetadataLocksRequestXLanguage `json:"X-Language,omitempty"`
 }
 

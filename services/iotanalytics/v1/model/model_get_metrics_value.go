@@ -7,8 +7,8 @@ import (
 )
 
 type GetMetricsValue struct {
-	// 查询类型，经过转换计算的序列值（transform）、经过聚合计算的序列值（aggregate）
 
+	// 查询类型，经过转换计算的序列值（transform）、经过聚合计算的序列值（aggregate）
 	Type string `json:"type"`
 
 	Transform *TransformMetricsRequest `json:"transform,omitempty"`

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListRepositoryStatusRequest struct {
-	// 仓库的uuid,用来指定需要查看的仓库
 
+	// 仓库的uuid,用来指定需要查看的仓库
 	RepositoryUuid string `json:"repository_uuid"`
 }
 

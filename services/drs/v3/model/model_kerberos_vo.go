@@ -8,17 +8,17 @@ import (
 
 // kerberos认证需要的信息
 type KerberosVo struct {
+
 	// krb5配置文件
-
 	Krb5ConfFile *string `json:"krb5_conf_file,omitempty"`
+
 	// key文件
-
 	KeyTabFile *string `json:"key_tab_file,omitempty"`
+
 	// 域名
-
 	DomainName *string `json:"domain_name,omitempty"`
-	// Kerberos用户对象
 
+	// Kerberos用户对象
 	UserPrincipal *string `json:"user_principal,omitempty"`
 }
 

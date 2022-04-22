@@ -11,11 +11,11 @@ import (
 
 // 更新专属主机属性消息体。
 type ReqUpdateDehMessage struct {
+
 	// 在创建云服务器时（未指定专属主机ID），是否允许云服务器自动分配在一台可用的专属主机上。  取值范围：“on”或“off”。
-
 	AutoPlacement *ReqUpdateDehMessageAutoPlacement `json:"auto_placement,omitempty"`
-	// 专属主机名称。
 
+	// 专属主机名称。
 	Name *string `json:"name,omitempty"`
 }
 

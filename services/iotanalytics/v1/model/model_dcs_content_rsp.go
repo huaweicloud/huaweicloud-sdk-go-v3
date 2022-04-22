@@ -8,23 +8,23 @@ import (
 
 // redis数据源配置内容
 type DcsContentRsp struct {
+
 	// VPC-EP服务端id
-
 	EndpointServiceId *string `json:"endpointServiceId,omitempty"`
+
 	// VPC-EP服务端名称
-
 	EndpointServiceName *string `json:"endpointServiceName,omitempty"`
+
 	// VPC-EP客户端IP
-
 	EndpointIp *string `json:"endpointIp,omitempty"`
+
 	// VPC-EP客户端Port
-
 	Port *int32 `json:"port,omitempty"`
+
 	// redis实例类型
-
 	DcsType *string `json:"dcsType,omitempty"`
-	// redis访问密码
 
+	// redis访问密码
 	Password *string `json:"password,omitempty"`
 }
 

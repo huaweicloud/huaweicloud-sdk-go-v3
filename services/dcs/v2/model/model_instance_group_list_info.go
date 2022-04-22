@@ -8,14 +8,14 @@ import (
 
 // 分片列表
 type InstanceGroupListInfo struct {
+
 	// 分片id
-
 	GroupId *string `json:"group_id,omitempty"`
+
 	// 分片名称
-
 	GroupName *string `json:"group_name,omitempty"`
-	// 每个分片包含的副本列表。
 
+	// 每个分片包含的副本列表。
 	ReplicationList *[]InstanceReplicationListInfo `json:"replication_list,omitempty"`
 }
 

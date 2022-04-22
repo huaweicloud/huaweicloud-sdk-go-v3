@@ -8,11 +8,11 @@ import (
 
 // 模块
 type IssueItemSfV4Module struct {
+
 	// 模块id
-
 	Id *int32 `json:"id,omitempty"`
-	// 模块
 
+	// 模块
 	Name *string `json:"name,omitempty"`
 }
 

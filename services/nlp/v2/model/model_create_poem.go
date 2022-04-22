@@ -11,14 +11,14 @@ import (
 
 //
 type CreatePoem struct {
+
 	// 诗歌标题，目前仅支持UTF-8编码，仅支持中文，长度为1-10
-
 	Title string `json:"title"`
+
 	// 诗歌类型，取值如下： 0：五言绝句； 1：七言绝句； 2：五言律诗； 3：七言律诗；
-
 	Type CreatePoemType `json:"type"`
-	// 藏头诗，取值如下： 取值为true，为藏头诗； 取值为false，非藏头诗； 默认取值为false。
 
+	// 藏头诗，取值如下： 取值为true，为藏头诗； 取值为false，非藏头诗； 默认取值为false。
 	Acrostic *bool `json:"acrostic,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowPropertyValuesResponse struct {
-	// 查询设备的属性值
 
+	// 查询设备的属性值
 	Properties     *[]PropertyValue `json:"properties,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

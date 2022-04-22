@@ -8,8 +8,8 @@ import (
 
 //
 type VinResult struct {
-	// 识别检测到的车架号。
 
+	// 识别检测到的车架号。
 	Vin string `json:"vin"`
 }
 

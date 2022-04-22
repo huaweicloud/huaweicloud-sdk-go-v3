@@ -11,26 +11,26 @@ import (
 
 // 主机详细信息
 type GetHostListInfo struct {
+
 	// 主机ID
-
 	HostId *string `json:"host_id,omitempty"`
+
 	// 主机IP
-
 	HostIp *string `json:"host_ip,omitempty"`
+
 	// 主机名称
-
 	HostName *string `json:"host_name,omitempty"`
+
 	// 主机状态。 uninstall:未安装 running:运行 offline:离线 error:异常 plugin error:插件错误 installing:安装中 install-fail:安装失败 upgrading:升级中 upgrading-transient:升级中 upgrade failed:升级失败 upgrade-fail:升级失败 uninstalling:卸载中 uninstalling-transient:卸载中 authentication error:鉴权失败
-
 	HostStatus *GetHostListInfoHostStatus `json:"host_status,omitempty"`
+
 	// 主机类型。linux:linux类型,windows:windows类型
-
 	HostType *GetHostListInfoHostType `json:"host_type,omitempty"`
+
 	// 主机版本
-
 	HostVersion *string `json:"host_version,omitempty"`
-	// 更新时间
 
+	// 更新时间
 	UpdateTime *int64 `json:"update_time,omitempty"`
 }
 

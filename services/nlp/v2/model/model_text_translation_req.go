@@ -11,17 +11,17 @@ import (
 
 // This is a auto create Body Object
 type TextTranslationReq struct {
+
 	// 待翻译文本，仅支持utf-8编码，长度不超过5000字符。
-
 	Text string `json:"text"`
+
 	// 翻译原语言，具体取值见支持的语言列表: zh    中文 en    英文 ru    俄语 ja    日文 de    德文 fr    法文 es    西班牙文 ko    韩语 auto  自动检测输入语种并翻译成目标语种，您需要指定目标语种。
-
 	From TextTranslationReqFrom `json:"from"`
+
 	// 翻译原语言，具体取值见支持的语言列表: zh    中文 en    英文 ru    俄语 ja    日文 de    德文 fr    法文 es    西班牙文 ko    韩语
-
 	To TextTranslationReqTo `json:"to"`
-	// 默认为“common”，当前只有通用场景
 
+	// 默认为“common”，当前只有通用场景
 	Scene *TextTranslationReqScene `json:"scene,omitempty"`
 }
 

@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type AddUserToAppResponse struct {
+
 	// 应用的总成员数量
-
 	Total *int32 `json:"total,omitempty"`
+
 	// 应用ID
-
 	Id *string `json:"id,omitempty"`
-	// 用户成员列表
 
+	// 用户成员列表
 	Users          *[]AppUsersUsers `json:"users,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

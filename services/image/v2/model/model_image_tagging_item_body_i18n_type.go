@@ -8,11 +8,11 @@ import (
 
 // 标签类别的多种语言输出。
 type ImageTaggingItemBodyI18nType struct {
+
 	// 中文标签类别
-
 	Zh *string `json:"zh,omitempty"`
-	// 英文标签类别
 
+	// 英文标签类别
 	En *string `json:"en,omitempty"`
 }
 

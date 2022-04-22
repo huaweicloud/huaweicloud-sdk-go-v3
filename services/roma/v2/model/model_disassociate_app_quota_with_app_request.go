@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type DisassociateAppQuotaWithAppRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
+
 	// 客户端配额编号
-
 	AppQuotaId string `json:"app_quota_id"`
-	// 应用编号
 
+	// 应用编号
 	AppId string `json:"app_id"`
 }
 

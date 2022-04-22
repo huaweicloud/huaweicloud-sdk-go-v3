@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateRulesetResponse struct {
-	// 规则集ID
 
+	// 规则集ID
 	TemplateId     *string `json:"template_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

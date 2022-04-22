@@ -8,11 +8,11 @@ import (
 
 // 系统标签。
 type SysTags struct {
+
 	// 系统标签的Key值。
-
 	Key *string `json:"key,omitempty"`
-	// 系统标签的value值。
 
+	// 系统标签的value值。
 	Value *string `json:"value,omitempty"`
 }
 

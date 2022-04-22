@@ -8,17 +8,17 @@ import (
 
 // Kafka数据源请求内容
 type KafkaContentRsp struct {
+
 	// KAFKA连接类型
-
 	ConnectionType *string `json:"connection_type,omitempty"`
+
 	// Kafka实例ID
-
 	InstanceId *string `json:"instance_id,omitempty"`
+
 	// Kafka的VPCEP信息包括service_id,service_name,client_port
-
 	VpcepInfos *[]VpcepInfoRsp `json:"vpcep_infos,omitempty"`
-	// Kafka的broker信息包括broker_ip, broker_port
 
+	// Kafka的broker信息包括broker_ip, broker_port
 	BrokerInfos *[]KafkaBrokerInfo `json:"broker_infos,omitempty"`
 
 	AuthInfo *KafkaAuthInfo `json:"auth_info,omitempty"`

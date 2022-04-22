@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowGaussMySqlEngineVersionResponse struct {
-	// 数据库版本信息列表
 
+	// 数据库版本信息列表
 	Datastores     *[]MysqlEngineVersionInfo `json:"datastores,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

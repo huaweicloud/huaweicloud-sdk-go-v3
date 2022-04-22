@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ListLatelyApiStatisticsV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
+
 	// API的编号
-
 	ApiId string `json:"api_id"`
-	// 最近统计时长，单位必须为h和m，比如1h和1m，分别代表最近1小时和最近1分钟
 
+	// 最近统计时长，单位必须为h和m，比如1h和1m，分别代表最近1小时和最近1分钟
 	Duration string `json:"duration"`
 }
 

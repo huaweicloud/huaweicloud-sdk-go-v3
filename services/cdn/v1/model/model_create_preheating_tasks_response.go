@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreatePreheatingTasksResponse struct {
-	// 任务ID
 
+	// 任务ID
 	PreheatingTask *string `json:"preheating_task,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

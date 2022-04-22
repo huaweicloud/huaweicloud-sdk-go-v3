@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type UpdatePublicIpRequest struct {
-	// 弹性公网IP ID
 
+	// 弹性公网IP ID
 	PublicipId string `json:"publicip_id"`
 
 	Body *UpdatePublicIpRequestBody `json:"body,omitempty"`

@@ -19,7 +19,12 @@ func IecClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//添加网卡。
+// 添加网卡
+//
+// 添加网卡。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) AddNics(request *model.AddNicsRequest) (*model.AddNicsResponse, error) {
 	requestDef := GenReqDefForAddNics()
 
@@ -30,7 +35,12 @@ func (c *IecClient) AddNics(request *model.AddNicsRequest) (*model.AddNicsRespon
 	}
 }
 
-//路由表关联子网
+// 路由表关联子网
+//
+// 路由表关联子网
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) AssociateSubnet(request *model.AssociateSubnetRequest) (*model.AssociateSubnetResponse, error) {
 	requestDef := GenReqDefForAssociateSubnet()
 
@@ -41,7 +51,12 @@ func (c *IecClient) AssociateSubnet(request *model.AssociateSubnetRequest) (*mod
 	}
 }
 
-//批量重启边缘实例。
+// 批量重启边缘实例
+//
+// 批量重启边缘实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) BatchRebootInstance(request *model.BatchRebootInstanceRequest) (*model.BatchRebootInstanceResponse, error) {
 	requestDef := GenReqDefForBatchRebootInstance()
 
@@ -52,7 +67,12 @@ func (c *IecClient) BatchRebootInstance(request *model.BatchRebootInstanceReques
 	}
 }
 
-//批量操作启动边缘实例。
+// 批量启动边缘实例
+//
+// 批量操作启动边缘实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) BatchStartInstance(request *model.BatchStartInstanceRequest) (*model.BatchStartInstanceResponse, error) {
 	requestDef := GenReqDefForBatchStartInstance()
 
@@ -63,7 +83,12 @@ func (c *IecClient) BatchStartInstance(request *model.BatchStartInstanceRequest)
 	}
 }
 
-//批量关闭边缘实例。
+// 批量关机边缘实例
+//
+// 批量关闭边缘实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) BatchStopInstance(request *model.BatchStopInstanceRequest) (*model.BatchStopInstanceResponse, error) {
 	requestDef := GenReqDefForBatchStopInstance()
 
@@ -74,7 +99,14 @@ func (c *IecClient) BatchStopInstance(request *model.BatchStopInstanceRequest) (
 	}
 }
 
-//切换边缘实例操作系统，支持边缘实例创建成功后，保持ip、数据盘不变的情况下重装操作系统。  调用该接口后，系统将卸载系统盘，然后使用新镜像重新创建系统盘，并挂载至实例，实现切换操作系统功能。
+// 切换操作系统
+//
+// 切换边缘实例操作系统，支持边缘实例创建成功后，保持ip、数据盘不变的情况下重装操作系统。
+//
+// 调用该接口后，系统将卸载系统盘，然后使用新镜像重新创建系统盘，并挂载至实例，实现切换操作系统功能。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ChangeOs(request *model.ChangeOsRequest) (*model.ChangeOsResponse, error) {
 	requestDef := GenReqDefForChangeOs()
 
@@ -85,7 +117,18 @@ func (c *IecClient) ChangeOs(request *model.ChangeOsRequest) (*model.ChangeOsRes
 	}
 }
 
-//为方便您的统一管理，以及跨边缘站点管理资源，IEC基于业务场景角度，定义了边缘业务。 边缘业务即为逻辑层面的一套资源管理集合。这里的资源主要是指计算实例，包含实例规格、镜像、硬盘、网络等方面。通过指定计算实例的数量、调度策略以及区域分布等形成一套管理集合。[了解更多](https://support.huaweicloud.com/usermanual-iec/iec_02_0301.html)  创建一个部署计划并执行，即可创建一个边缘业务。  - 边缘业务下实例分布取决于部署计划的实例分布与调度策略。 - 边缘业务下实例名称、规格、镜像等参数取决于部署计划配置计算实例字段。
+// 创建部署计划
+//
+// 为方便您的统一管理，以及跨边缘站点管理资源，IEC基于业务场景角度，定义了边缘业务。
+// 边缘业务即为逻辑层面的一套资源管理集合。这里的资源主要是指计算实例，包含实例规格、镜像、硬盘、网络等方面。通过指定计算实例的数量、调度策略以及区域分布等形成一套管理集合。[了解更多](https://support.huaweicloud.com/usermanual-iec/iec_02_0301.html)
+//
+// 创建一个部署计划并执行，即可创建一个边缘业务。
+//
+// - 边缘业务下实例分布取决于部署计划的实例分布与调度策略。
+// - 边缘业务下实例名称、规格、镜像等参数取决于部署计划配置计算实例字段。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) CreateDeployment(request *model.CreateDeploymentRequest) (*model.CreateDeploymentResponse, error) {
 	requestDef := GenReqDefForCreateDeployment()
 
@@ -96,7 +139,14 @@ func (c *IecClient) CreateDeployment(request *model.CreateDeploymentRequest) (*m
 	}
 }
 
-//创建SSH密钥，或把公钥导入系统，生成密钥对。  创建SSH密钥成功后，请把响应数据中的私钥内容保存到本地文件，用户使用该私钥登录边缘实例。为保证边缘实例安全，私钥数据只能读取一次，请妥善保管。
+// 创建和导入密钥
+//
+// 创建SSH密钥，或把公钥导入系统，生成密钥对。
+//
+// 创建SSH密钥成功后，请把响应数据中的私钥内容保存到本地文件，用户使用该私钥登录边缘实例。为保证边缘实例安全，私钥数据只能读取一次，请妥善保管。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) CreateKeypair(request *model.CreateKeypairRequest) (*model.CreateKeypairResponse, error) {
 	requestDef := GenReqDefForCreateKeypair()
 
@@ -107,7 +157,12 @@ func (c *IecClient) CreateKeypair(request *model.CreateKeypairRequest) (*model.C
 	}
 }
 
-//创建端口。
+// 创建端口
+//
+// 创建端口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) CreatePort(request *model.CreatePortRequest) (*model.CreatePortResponse, error) {
 	requestDef := GenReqDefForCreatePort()
 
@@ -118,7 +173,12 @@ func (c *IecClient) CreatePort(request *model.CreatePortRequest) (*model.CreateP
 	}
 }
 
-//创建路由
+// 创建路由
+//
+// 创建路由
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) CreateRoutes(request *model.CreateRoutesRequest) (*model.CreateRoutesResponse, error) {
 	requestDef := GenReqDefForCreateRoutes()
 
@@ -129,7 +189,12 @@ func (c *IecClient) CreateRoutes(request *model.CreateRoutesRequest) (*model.Cre
 	}
 }
 
-//创建路由表
+// 创建路由表
+//
+// 创建路由表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) CreateRoutetable(request *model.CreateRoutetableRequest) (*model.CreateRoutetableResponse, error) {
 	requestDef := GenReqDefForCreateRoutetable()
 
@@ -140,7 +205,12 @@ func (c *IecClient) CreateRoutetable(request *model.CreateRoutetableRequest) (*m
 	}
 }
 
-//根据用户的请求内容，创建对应的安全组。
+// 创建边缘安全组
+//
+// 根据用户的请求内容，创建对应的安全组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) CreateSecurityGroup(request *model.CreateSecurityGroupRequest) (*model.CreateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForCreateSecurityGroup()
 
@@ -151,7 +221,12 @@ func (c *IecClient) CreateSecurityGroup(request *model.CreateSecurityGroupReques
 	}
 }
 
-//根据用户的请求内容，创建安全组规则。
+// 创建安全组规则
+//
+// 根据用户的请求内容，创建安全组规则。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) CreateSecurityGroupRule(request *model.CreateSecurityGroupRuleRequest) (*model.CreateSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForCreateSecurityGroupRule()
 
@@ -162,7 +237,12 @@ func (c *IecClient) CreateSecurityGroupRule(request *model.CreateSecurityGroupRu
 	}
 }
 
-//根据用户的请求内容，创建虚拟私有云。
+// 创建虚拟私有云
+//
+// 根据用户的请求内容，创建虚拟私有云。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) CreateVpc(request *model.CreateVpcRequest) (*model.CreateVpcResponse, error) {
 	requestDef := GenReqDefForCreateVpc()
 
@@ -173,7 +253,12 @@ func (c *IecClient) CreateVpc(request *model.CreateVpcRequest) (*model.CreateVpc
 	}
 }
 
-//删除部署计划。
+// 删除部署计划
+//
+// 删除部署计划。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DeleteDeployment(request *model.DeleteDeploymentRequest) (*model.DeleteDeploymentResponse, error) {
 	requestDef := GenReqDefForDeleteDeployment()
 
@@ -184,7 +269,12 @@ func (c *IecClient) DeleteDeployment(request *model.DeleteDeploymentRequest) (*m
 	}
 }
 
-//删除边缘业务。
+// 删除边缘业务
+//
+// 删除边缘业务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DeleteEdgeCloud(request *model.DeleteEdgeCloudRequest) (*model.DeleteEdgeCloudResponse, error) {
 	requestDef := GenReqDefForDeleteEdgeCloud()
 
@@ -195,7 +285,12 @@ func (c *IecClient) DeleteEdgeCloud(request *model.DeleteEdgeCloudRequest) (*mod
 	}
 }
 
-//批量删除边缘实例。
+// 批量删除边缘实例
+//
+// 批量删除边缘实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DeleteInstances(request *model.DeleteInstancesRequest) (*model.DeleteInstancesResponse, error) {
 	requestDef := GenReqDefForDeleteInstances()
 
@@ -206,7 +301,12 @@ func (c *IecClient) DeleteInstances(request *model.DeleteInstancesRequest) (*mod
 	}
 }
 
-//删除密钥。
+// 删除密钥
+//
+// 删除密钥。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DeleteKeypair(request *model.DeleteKeypairRequest) (*model.DeleteKeypairResponse, error) {
 	requestDef := GenReqDefForDeleteKeypair()
 
@@ -217,7 +317,12 @@ func (c *IecClient) DeleteKeypair(request *model.DeleteKeypairRequest) (*model.D
 	}
 }
 
-//删除网卡。
+// 删除网卡
+//
+// 删除网卡。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DeleteNics(request *model.DeleteNicsRequest) (*model.DeleteNicsResponse, error) {
 	requestDef := GenReqDefForDeleteNics()
 
@@ -228,7 +333,12 @@ func (c *IecClient) DeleteNics(request *model.DeleteNicsRequest) (*model.DeleteN
 	}
 }
 
-//删除端口。
+// 删除端口
+//
+// 删除端口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DeletePort(request *model.DeletePortRequest) (*model.DeletePortResponse, error) {
 	requestDef := GenReqDefForDeletePort()
 
@@ -239,7 +349,12 @@ func (c *IecClient) DeletePort(request *model.DeletePortRequest) (*model.DeleteP
 	}
 }
 
-//删除路由
+// 删除路由
+//
+// 删除路由
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DeleteRoutes(request *model.DeleteRoutesRequest) (*model.DeleteRoutesResponse, error) {
 	requestDef := GenReqDefForDeleteRoutes()
 
@@ -250,7 +365,12 @@ func (c *IecClient) DeleteRoutes(request *model.DeleteRoutesRequest) (*model.Del
 	}
 }
 
-//删除路由表
+// 删除路由表
+//
+// 删除路由表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DeleteRoutetable(request *model.DeleteRoutetableRequest) (*model.DeleteRoutetableResponse, error) {
 	requestDef := GenReqDefForDeleteRoutetable()
 
@@ -261,7 +381,12 @@ func (c *IecClient) DeleteRoutetable(request *model.DeleteRoutetableRequest) (*m
 	}
 }
 
-//根据安全组的ID，删除对应的安全组。
+// 删除安全组
+//
+// 根据安全组的ID，删除对应的安全组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DeleteSecurityGroup(request *model.DeleteSecurityGroupRequest) (*model.DeleteSecurityGroupResponse, error) {
 	requestDef := GenReqDefForDeleteSecurityGroup()
 
@@ -272,7 +397,12 @@ func (c *IecClient) DeleteSecurityGroup(request *model.DeleteSecurityGroupReques
 	}
 }
 
-//根据安全组的ID，删除对应的安全组。
+// 删除安全组规则
+//
+// 根据安全组的ID，删除对应的安全组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DeleteSecurityGroupRule(request *model.DeleteSecurityGroupRuleRequest) (*model.DeleteSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForDeleteSecurityGroupRule()
 
@@ -283,7 +413,12 @@ func (c *IecClient) DeleteSecurityGroupRule(request *model.DeleteSecurityGroupRu
 	}
 }
 
-//根据子网的ID，删除子网。
+// 删除子网
+//
+// 根据子网的ID，删除子网。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DeleteSubnet(request *model.DeleteSubnetRequest) (*model.DeleteSubnetResponse, error) {
 	requestDef := GenReqDefForDeleteSubnet()
 
@@ -294,7 +429,12 @@ func (c *IecClient) DeleteSubnet(request *model.DeleteSubnetRequest) (*model.Del
 	}
 }
 
-//根据虚拟机私有云的ID，删除对应的虚拟私有云。
+// 删除虚拟私有云
+//
+// 根据虚拟机私有云的ID，删除对应的虚拟私有云。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DeleteVpc(request *model.DeleteVpcRequest) (*model.DeleteVpcResponse, error) {
 	requestDef := GenReqDefForDeleteVpc()
 
@@ -305,7 +445,12 @@ func (c *IecClient) DeleteVpc(request *model.DeleteVpcRequest) (*model.DeleteVpc
 	}
 }
 
-//路由表解关联子网
+// 路由表解关联子网
+//
+// 路由表解关联子网
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DisassociateSubnet(request *model.DisassociateSubnetRequest) (*model.DisassociateSubnetResponse, error) {
 	requestDef := GenReqDefForDisassociateSubnet()
 
@@ -316,7 +461,12 @@ func (c *IecClient) DisassociateSubnet(request *model.DisassociateSubnetRequest)
 	}
 }
 
-//执行部署计划，创建一个边缘业务。单租户默认可创建10个边缘业务。
+// 执行部署计划
+//
+// 执行部署计划，创建一个边缘业务。单租户默认可创建10个边缘业务。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ExecuteDeployment(request *model.ExecuteDeploymentRequest) (*model.ExecuteDeploymentResponse, error) {
 	requestDef := GenReqDefForExecuteDeployment()
 
@@ -327,7 +477,12 @@ func (c *IecClient) ExecuteDeployment(request *model.ExecuteDeploymentRequest) (
 	}
 }
 
-//执行部署计划，对边缘业务进行扩容操作。
+// 扩容边缘业务
+//
+// 执行部署计划，对边缘业务进行扩容操作。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ExpandEdgecloud(request *model.ExpandEdgecloudRequest) (*model.ExpandEdgecloudResponse, error) {
 	requestDef := GenReqDefForExpandEdgecloud()
 
@@ -338,7 +493,12 @@ func (c *IecClient) ExpandEdgecloud(request *model.ExpandEdgecloudRequest) (*mod
 	}
 }
 
-//查询带宽列表。
+// 查询带宽列表
+//
+// 查询带宽列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListBandwidths(request *model.ListBandwidthsRequest) (*model.ListBandwidthsResponse, error) {
 	requestDef := GenReqDefForListBandwidths()
 
@@ -349,7 +509,12 @@ func (c *IecClient) ListBandwidths(request *model.ListBandwidthsRequest) (*model
 	}
 }
 
-//查询部署计划列表。
+// 查询部署计划列表
+//
+// 查询部署计划列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListDeployments(request *model.ListDeploymentsRequest) (*model.ListDeploymentsResponse, error) {
 	requestDef := GenReqDefForListDeployments()
 
@@ -360,7 +525,12 @@ func (c *IecClient) ListDeployments(request *model.ListDeploymentsRequest) (*mod
 	}
 }
 
-//查询边缘业务列表。
+// 查询边缘业务列表
+//
+// 查询边缘业务列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListEdgeCloud(request *model.ListEdgeCloudRequest) (*model.ListEdgeCloudResponse, error) {
 	requestDef := GenReqDefForListEdgeCloud()
 
@@ -371,7 +541,12 @@ func (c *IecClient) ListEdgeCloud(request *model.ListEdgeCloudRequest) (*model.L
 	}
 }
 
-//查询边缘规格列表。
+// 查询边缘规格列表
+//
+// 查询边缘规格列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
 
@@ -382,7 +557,15 @@ func (c *IecClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 	}
 }
 
-//根据不同条件查询镜像列表，例:  -  查询已注册的私有镜像列表: visibility=private - 公共镜像: visibility=public
+// 查询镜像列表
+//
+// 根据不同条件查询镜像列表，例:
+//
+// -  查询已注册的私有镜像列表: visibility&#x3D;private
+// - 公共镜像: visibility&#x3D;public
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListImages(request *model.ListImagesRequest) (*model.ListImagesResponse, error) {
 	requestDef := GenReqDefForListImages()
 
@@ -393,7 +576,12 @@ func (c *IecClient) ListImages(request *model.ListImagesRequest) (*model.ListIma
 	}
 }
 
-//查询边缘实例列表。
+// 查询边缘实例列表
+//
+// 查询边缘实例列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
 	requestDef := GenReqDefForListInstances()
 
@@ -404,7 +592,12 @@ func (c *IecClient) ListInstances(request *model.ListInstancesRequest) (*model.L
 	}
 }
 
-//查询密钥信息列表。
+// 查询密钥列表
+//
+// 查询密钥信息列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListKeypairs(request *model.ListKeypairsRequest) (*model.ListKeypairsResponse, error) {
 	requestDef := GenReqDefForListKeypairs()
 
@@ -415,7 +608,12 @@ func (c *IecClient) ListKeypairs(request *model.ListKeypairsRequest) (*model.Lis
 	}
 }
 
-//查询端口的列表信息
+// 查询端口列表
+//
+// 查询端口的列表信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListPorts(request *model.ListPortsRequest) (*model.ListPortsResponse, error) {
 	requestDef := GenReqDefForListPorts()
 
@@ -426,7 +624,12 @@ func (c *IecClient) ListPorts(request *model.ListPortsRequest) (*model.ListPorts
 	}
 }
 
-//查询租户资源配额。
+// 查询配额
+//
+// 查询租户资源配额。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListQuota(request *model.ListQuotaRequest) (*model.ListQuotaResponse, error) {
 	requestDef := GenReqDefForListQuota()
 
@@ -437,7 +640,12 @@ func (c *IecClient) ListQuota(request *model.ListQuotaRequest) (*model.ListQuota
 	}
 }
 
-//查询子网关联的路由表。
+// 查询子网关联的路由表
+//
+// 查询子网关联的路由表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListRelatedRoutetables(request *model.ListRelatedRoutetablesRequest) (*model.ListRelatedRoutetablesResponse, error) {
 	requestDef := GenReqDefForListRelatedRoutetables()
 
@@ -448,7 +656,12 @@ func (c *IecClient) ListRelatedRoutetables(request *model.ListRelatedRoutetables
 	}
 }
 
-//查询路由列表
+// 查询路由列表
+//
+// 查询路由列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListRoutes(request *model.ListRoutesRequest) (*model.ListRoutesResponse, error) {
 	requestDef := GenReqDefForListRoutes()
 
@@ -459,7 +672,12 @@ func (c *IecClient) ListRoutes(request *model.ListRoutesRequest) (*model.ListRou
 	}
 }
 
-//查询路由列表
+// 查询路由表列表
+//
+// 查询路由列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListRoutetables(request *model.ListRoutetablesRequest) (*model.ListRoutetablesResponse, error) {
 	requestDef := GenReqDefForListRoutetables()
 
@@ -470,7 +688,12 @@ func (c *IecClient) ListRoutetables(request *model.ListRoutetablesRequest) (*mod
 	}
 }
 
-//根据用户的查询条件，获取安全组规则的列表信息。
+// 查询安全组规则列表
+//
+// 根据用户的查询条件，获取安全组规则的列表信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListSecurityGroupRules(request *model.ListSecurityGroupRulesRequest) (*model.ListSecurityGroupRulesResponse, error) {
 	requestDef := GenReqDefForListSecurityGroupRules()
 
@@ -481,7 +704,12 @@ func (c *IecClient) ListSecurityGroupRules(request *model.ListSecurityGroupRules
 	}
 }
 
-//根据特定查询条件，获取安全组的列表信息。
+// 查询安全组列表
+//
+// 根据特定查询条件，获取安全组的列表信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListSecurityGroups(request *model.ListSecurityGroupsRequest) (*model.ListSecurityGroupsResponse, error) {
 	requestDef := GenReqDefForListSecurityGroups()
 
@@ -492,7 +720,15 @@ func (c *IecClient) ListSecurityGroups(request *model.ListSecurityGroupsRequest)
 	}
 }
 
-//查询边缘站点列表。  - 边缘站点：靠近终端应用的位置，基于一个或多个运营商建立的一个城市级站点。边缘站点提供物理隔离的资源池，提供多元算力、存储和网络的能力。用户可以将业务灵活就近部署在边缘站点上，以降低网络时延和成本。 - 边缘区域：为依据边缘站点的物理位置划分的区域，一个边缘区域包含多个相靠近的边缘站点的集合。IEC当前提供城市级、省级和大区级三个分布层级的边缘区域。
+// 查询边缘站点列表
+//
+// 查询边缘站点列表。
+//
+// - 边缘站点：靠近终端应用的位置，基于一个或多个运营商建立的一个城市级站点。边缘站点提供物理隔离的资源池，提供多元算力、存储和网络的能力。用户可以将业务灵活就近部署在边缘站点上，以降低网络时延和成本。
+// - 边缘区域：为依据边缘站点的物理位置划分的区域，一个边缘区域包含多个相靠近的边缘站点的集合。IEC当前提供城市级、省级和大区级三个分布层级的边缘区域。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListSites(request *model.ListSitesRequest) (*model.ListSitesResponse, error) {
 	requestDef := GenReqDefForListSites()
 
@@ -503,7 +739,12 @@ func (c *IecClient) ListSites(request *model.ListSitesRequest) (*model.ListSites
 	}
 }
 
-//根据查询条件获取子网的列表信息。
+// 查询子网列表
+//
+// 根据查询条件获取子网的列表信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListSubnets(request *model.ListSubnetsRequest) (*model.ListSubnetsResponse, error) {
 	requestDef := GenReqDefForListSubnets()
 
@@ -514,7 +755,12 @@ func (c *IecClient) ListSubnets(request *model.ListSubnetsRequest) (*model.ListS
 	}
 }
 
-//获取虚拟私有云的列表。
+// 查询虚拟私有云列表
+//
+// 获取虚拟私有云的列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListVpcs(request *model.ListVpcsRequest) (*model.ListVpcsResponse, error) {
 	requestDef := GenReqDefForListVpcs()
 
@@ -525,7 +771,12 @@ func (c *IecClient) ListVpcs(request *model.ListVpcsRequest) (*model.ListVpcsRes
 	}
 }
 
-//查询带宽详情。
+// 查询带宽详情
+//
+// 查询带宽详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ShowBandwidth(request *model.ShowBandwidthRequest) (*model.ShowBandwidthResponse, error) {
 	requestDef := GenReqDefForShowBandwidth()
 
@@ -536,7 +787,12 @@ func (c *IecClient) ShowBandwidth(request *model.ShowBandwidthRequest) (*model.S
 	}
 }
 
-//查询边缘业务详情。
+// 查询边缘业务详情
+//
+// 查询边缘业务详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ShowEdgeCloud(request *model.ShowEdgeCloudRequest) (*model.ShowEdgeCloudResponse, error) {
 	requestDef := GenReqDefForShowEdgeCloud()
 
@@ -547,7 +803,12 @@ func (c *IecClient) ShowEdgeCloud(request *model.ShowEdgeCloudRequest) (*model.S
 	}
 }
 
-//查询镜像详情。
+// 查询镜像详情
+//
+// 查询镜像详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ShowImage(request *model.ShowImageRequest) (*model.ShowImageResponse, error) {
 	requestDef := GenReqDefForShowImage()
 
@@ -558,7 +819,12 @@ func (c *IecClient) ShowImage(request *model.ShowImageRequest) (*model.ShowImage
 	}
 }
 
-//查询边缘实例详情。
+// 查询边缘实例详情
+//
+// 查询边缘实例详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ShowInstance(request *model.ShowInstanceRequest) (*model.ShowInstanceResponse, error) {
 	requestDef := GenReqDefForShowInstance()
 
@@ -569,7 +835,12 @@ func (c *IecClient) ShowInstance(request *model.ShowInstanceRequest) (*model.Sho
 	}
 }
 
-//查询密钥信息列表。
+// 查询密钥详情
+//
+// 查询密钥信息列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ShowKeypair(request *model.ShowKeypairRequest) (*model.ShowKeypairResponse, error) {
 	requestDef := GenReqDefForShowKeypair()
 
@@ -580,7 +851,12 @@ func (c *IecClient) ShowKeypair(request *model.ShowKeypairRequest) (*model.ShowK
 	}
 }
 
-//根据端口的ID，获取端口的详细信息。
+// 查询端口详情
+//
+// 根据端口的ID，获取端口的详细信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ShowPort(request *model.ShowPortRequest) (*model.ShowPortResponse, error) {
 	requestDef := GenReqDefForShowPort()
 
@@ -591,7 +867,12 @@ func (c *IecClient) ShowPort(request *model.ShowPortRequest) (*model.ShowPortRes
 	}
 }
 
-//查询路由表详情
+// 查询路由表详情
+//
+// 查询路由表详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ShowRoutetable(request *model.ShowRoutetableRequest) (*model.ShowRoutetableResponse, error) {
 	requestDef := GenReqDefForShowRoutetable()
 
@@ -602,7 +883,12 @@ func (c *IecClient) ShowRoutetable(request *model.ShowRoutetableRequest) (*model
 	}
 }
 
-//根据安全组的ID，获取特定安全组的详细信息。
+// 查询安全组详情
+//
+// 根据安全组的ID，获取特定安全组的详细信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ShowSecurityGroup(request *model.ShowSecurityGroupRequest) (*model.ShowSecurityGroupResponse, error) {
 	requestDef := GenReqDefForShowSecurityGroup()
 
@@ -613,7 +899,12 @@ func (c *IecClient) ShowSecurityGroup(request *model.ShowSecurityGroupRequest) (
 	}
 }
 
-//根据安全组规则的ID，获取安全组规则的详细信息。
+// 查询安全组规则详情
+//
+// 根据安全组规则的ID，获取安全组规则的详细信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ShowSecurityGroupRule(request *model.ShowSecurityGroupRuleRequest) (*model.ShowSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForShowSecurityGroupRule()
 
@@ -624,7 +915,12 @@ func (c *IecClient) ShowSecurityGroupRule(request *model.ShowSecurityGroupRuleRe
 	}
 }
 
-//根据子网的ID，获取子网的详细信息。
+// 查询子网详情
+//
+// 根据子网的ID，获取子网的详细信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ShowSubnet(request *model.ShowSubnetRequest) (*model.ShowSubnetResponse, error) {
 	requestDef := GenReqDefForShowSubnet()
 
@@ -635,7 +931,12 @@ func (c *IecClient) ShowSubnet(request *model.ShowSubnetRequest) (*model.ShowSub
 	}
 }
 
-//查询硬盘详情。
+// 查询硬盘详情
+//
+// 查询硬盘详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ShowVolume(request *model.ShowVolumeRequest) (*model.ShowVolumeResponse, error) {
 	requestDef := GenReqDefForShowVolume()
 
@@ -646,7 +947,12 @@ func (c *IecClient) ShowVolume(request *model.ShowVolumeRequest) (*model.ShowVol
 	}
 }
 
-//根据虚拟私有云ID，获取虚拟私有云的详情。
+// 查询虚拟私有云详情
+//
+// 根据虚拟私有云ID，获取虚拟私有云的详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ShowVpc(request *model.ShowVpcRequest) (*model.ShowVpcResponse, error) {
 	requestDef := GenReqDefForShowVpc()
 
@@ -657,7 +963,12 @@ func (c *IecClient) ShowVpc(request *model.ShowVpcRequest) (*model.ShowVpcRespon
 	}
 }
 
-//修改边缘实例。
+// 修改边缘实例
+//
+// 修改边缘实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) UpdateInstance(request *model.UpdateInstanceRequest) (*model.UpdateInstanceResponse, error) {
 	requestDef := GenReqDefForUpdateInstance()
 
@@ -668,7 +979,12 @@ func (c *IecClient) UpdateInstance(request *model.UpdateInstanceRequest) (*model
 	}
 }
 
-//更新端口。
+// 更新端口
+//
+// 更新端口。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) UpdatePort(request *model.UpdatePortRequest) (*model.UpdatePortResponse, error) {
 	requestDef := GenReqDefForUpdatePort()
 
@@ -679,7 +995,12 @@ func (c *IecClient) UpdatePort(request *model.UpdatePortRequest) (*model.UpdateP
 	}
 }
 
-//更新路由信息
+// 更新路由
+//
+// 更新路由信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) UpdateRoutes(request *model.UpdateRoutesRequest) (*model.UpdateRoutesResponse, error) {
 	requestDef := GenReqDefForUpdateRoutes()
 
@@ -690,7 +1011,12 @@ func (c *IecClient) UpdateRoutes(request *model.UpdateRoutesRequest) (*model.Upd
 	}
 }
 
-//更新路由表基本信息
+// 更新路由表
+//
+// 更新路由表基本信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) UpdateRoutetable(request *model.UpdateRoutetableRequest) (*model.UpdateRoutetableResponse, error) {
 	requestDef := GenReqDefForUpdateRoutetable()
 
@@ -701,7 +1027,12 @@ func (c *IecClient) UpdateRoutetable(request *model.UpdateRoutetableRequest) (*m
 	}
 }
 
-//更新子网的基本信息。
+// 更新子网
+//
+// 更新子网的基本信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) UpdateSubnet(request *model.UpdateSubnetRequest) (*model.UpdateSubnetResponse, error) {
 	requestDef := GenReqDefForUpdateSubnet()
 
@@ -712,7 +1043,12 @@ func (c *IecClient) UpdateSubnet(request *model.UpdateSubnetRequest) (*model.Upd
 	}
 }
 
-//更新虚拟私有云的信息
+// 更新虚拟私有云
+//
+// 更新虚拟私有云的信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) UpdateVpc(request *model.UpdateVpcRequest) (*model.UpdateVpcResponse, error) {
 	requestDef := GenReqDefForUpdateVpc()
 
@@ -723,7 +1059,12 @@ func (c *IecClient) UpdateVpc(request *model.UpdateVpcRequest) (*model.UpdateVpc
 	}
 }
 
-//创建网络ACL。
+// 创建网络ACL
+//
+// 创建网络ACL。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) CreateFirewall(request *model.CreateFirewallRequest) (*model.CreateFirewallResponse, error) {
 	requestDef := GenReqDefForCreateFirewall()
 
@@ -734,7 +1075,12 @@ func (c *IecClient) CreateFirewall(request *model.CreateFirewallRequest) (*model
 	}
 }
 
-//删除网络ACL。
+// 删除网络ACL
+//
+// 删除网络ACL。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DeleteFirewall(request *model.DeleteFirewallRequest) (*model.DeleteFirewallResponse, error) {
 	requestDef := GenReqDefForDeleteFirewall()
 
@@ -745,7 +1091,12 @@ func (c *IecClient) DeleteFirewall(request *model.DeleteFirewallRequest) (*model
 	}
 }
 
-//查询网络ACL列表。
+// 查询网络ACL列表
+//
+// 查询网络ACL列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListFirewalls(request *model.ListFirewallsRequest) (*model.ListFirewallsResponse, error) {
 	requestDef := GenReqDefForListFirewalls()
 
@@ -756,7 +1107,12 @@ func (c *IecClient) ListFirewalls(request *model.ListFirewallsRequest) (*model.L
 	}
 }
 
-//查询网络ACL详情。
+// 查询网络ACL详情
+//
+// 查询网络ACL详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ShowFirewall(request *model.ShowFirewallRequest) (*model.ShowFirewallResponse, error) {
 	requestDef := GenReqDefForShowFirewall()
 
@@ -767,7 +1123,12 @@ func (c *IecClient) ShowFirewall(request *model.ShowFirewallRequest) (*model.Sho
 	}
 }
 
-//更新网络ACL。
+// 更新网络ACL
+//
+// 更新网络ACL。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) UpdateFirewall(request *model.UpdateFirewallRequest) (*model.UpdateFirewallResponse, error) {
 	requestDef := GenReqDefForUpdateFirewall()
 
@@ -778,7 +1139,12 @@ func (c *IecClient) UpdateFirewall(request *model.UpdateFirewallRequest) (*model
 	}
 }
 
-//更新网络ACL规则。
+// 更新网络ACL规则
+//
+// 更新网络ACL规则。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) UpdateFirewallRule(request *model.UpdateFirewallRuleRequest) (*model.UpdateFirewallRuleResponse, error) {
 	requestDef := GenReqDefForUpdateFirewallRule()
 
@@ -789,7 +1155,12 @@ func (c *IecClient) UpdateFirewallRule(request *model.UpdateFirewallRuleRequest)
 	}
 }
 
-//根据用户的请求内容，创建弹性公网IP
+// 创建弹性公网IP
+//
+// 根据用户的请求内容，创建弹性公网IP
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) CreatePublicIp(request *model.CreatePublicIpRequest) (*model.CreatePublicIpResponse, error) {
 	requestDef := GenReqDefForCreatePublicIp()
 
@@ -800,7 +1171,12 @@ func (c *IecClient) CreatePublicIp(request *model.CreatePublicIpRequest) (*model
 	}
 }
 
-//根据弹性公网IP的ID，删除对应的弹性公网IP。
+// 删除弹性公网IP
+//
+// 根据弹性公网IP的ID，删除对应的弹性公网IP。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) DeletePublicIp(request *model.DeletePublicIpRequest) (*model.DeletePublicIpResponse, error) {
 	requestDef := GenReqDefForDeletePublicIp()
 
@@ -811,7 +1187,12 @@ func (c *IecClient) DeletePublicIp(request *model.DeletePublicIpRequest) (*model
 	}
 }
 
-//获取弹性公网IP列表信息。
+// 查询弹性公网IP列表
+//
+// 获取弹性公网IP列表信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ListPublicIps(request *model.ListPublicIpsRequest) (*model.ListPublicIpsResponse, error) {
 	requestDef := GenReqDefForListPublicIps()
 
@@ -822,7 +1203,12 @@ func (c *IecClient) ListPublicIps(request *model.ListPublicIpsRequest) (*model.L
 	}
 }
 
-//获取弹性公网IP的详情信息。
+// 查询弹性公网IP
+//
+// 获取弹性公网IP的详情信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) ShowPublicIp(request *model.ShowPublicIpRequest) (*model.ShowPublicIpResponse, error) {
 	requestDef := GenReqDefForShowPublicIp()
 
@@ -833,7 +1219,12 @@ func (c *IecClient) ShowPublicIp(request *model.ShowPublicIpRequest) (*model.Sho
 	}
 }
 
-//更新弹性公网IP的信息，主要用于解绑和绑定EIP和VIP之间的关系。
+// 更新弹性公网IP
+//
+// 更新弹性公网IP的信息，主要用于解绑和绑定EIP和VIP之间的关系。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *IecClient) UpdatePublicIp(request *model.UpdatePublicIpRequest) (*model.UpdatePublicIpResponse, error) {
 	requestDef := GenReqDefForUpdatePublicIp()
 

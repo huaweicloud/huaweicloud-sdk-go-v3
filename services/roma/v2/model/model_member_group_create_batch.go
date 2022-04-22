@@ -7,8 +7,8 @@ import (
 )
 
 type MemberGroupCreateBatch struct {
-	// 后端服务器组列表
 
+	// 后端服务器组列表
 	MemberGroups *[]MemberGroupCreate `json:"member_groups,omitempty"`
 }
 

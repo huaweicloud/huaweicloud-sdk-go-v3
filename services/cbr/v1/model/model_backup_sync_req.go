@@ -7,8 +7,8 @@ import (
 )
 
 type BackupSyncReq struct {
-	// 待同步备份副本列表
 
+	// 待同步备份副本列表
 	Sync []BackupSync `json:"sync"`
 }
 

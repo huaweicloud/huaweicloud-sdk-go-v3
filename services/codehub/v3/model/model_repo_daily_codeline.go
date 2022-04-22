@@ -7,14 +7,14 @@ import (
 )
 
 type RepoDailyCodeline struct {
+
 	// 每日增加代码行
-
 	Additions *int32 `json:"additions,omitempty"`
+
 	// 日期
-
 	Date *string `json:"date,omitempty"`
-	// 每日删除代码行
 
+	// 每日删除代码行
 	Deletions *int32 `json:"deletions,omitempty"`
 }
 

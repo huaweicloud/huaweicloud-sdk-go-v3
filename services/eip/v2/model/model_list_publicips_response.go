@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListPublicipsResponse struct {
-	// 弹性公网IP对象
 
+	// 弹性公网IP对象
 	Publicips      *[]PublicipShowResp `json:"publicips,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

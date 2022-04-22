@@ -8,17 +8,17 @@ import (
 
 // Response Object
 type ShowTenantMetricResponse struct {
+
 	// 执行次数
-
 	Count *[]SlaReportsValue `json:"count,omitempty"`
+
 	// 平均时延，单位毫秒
-
 	Duration *[]SlaReportsValue `json:"duration,omitempty"`
+
 	// 错误次数
-
 	FailCount *[]SlaReportsValue `json:"fail_count,omitempty"`
-	// 运行中数量
 
+	// 运行中数量
 	RunningCount   *[]SlaReportsValue `json:"running_count,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

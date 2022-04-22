@@ -7,8 +7,8 @@ import (
 )
 
 type Crop struct {
-	// 截取的视频时长。  单位：秒  从0秒开始算起
 
+	// 截取的视频时长。  单位：秒  从0秒开始算起
 	Duration *int32 `json:"duration,omitempty"`
 }
 

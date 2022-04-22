@@ -9,8 +9,8 @@ import (
 // Response Object
 type ListGaussMySqlConfigurationsResponse struct {
 	Configurations *[]ConfigurationSummary `json:"configurations,omitempty"`
-	// 参数模板的总数。
 
+	// 参数模板的总数。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

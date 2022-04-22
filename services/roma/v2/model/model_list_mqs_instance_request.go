@@ -11,8 +11,8 @@ import (
 
 // Request Object
 type ListMqsInstanceRequest struct {
-	// 是否包含内部的实例。include_internal参数必须为true。
 
+	// 是否包含内部的实例。include_internal参数必须为true。
 	IncludeInternal ListMqsInstanceRequestIncludeInternal `json:"include_internal"`
 }
 

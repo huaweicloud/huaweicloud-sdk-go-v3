@@ -7,14 +7,14 @@ import (
 )
 
 type Input struct {
+
 	// 参数名
-
 	Name string `json:"name"`
+
 	// 参数值
-
 	Values string `json:"values"`
-	// 值类型
 
+	// 值类型
 	Type *string `json:"type,omitempty"`
 }
 

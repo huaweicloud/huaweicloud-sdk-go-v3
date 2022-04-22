@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateUnbindPublicResponse struct {
-	// 操作行为。
 
+	// 操作行为。
 	Action         *string `json:"action,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

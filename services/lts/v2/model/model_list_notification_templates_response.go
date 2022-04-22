@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListNotificationTemplatesResponse struct {
-	// 模板数组
 
+	// 模板数组
 	Results        *[]NotificationTemplate `json:"results,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

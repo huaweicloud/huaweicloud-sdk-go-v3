@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListHistoryResponse struct {
+
 	// 时间序列
-
 	Timestamps *[]string `json:"timestamps,omitempty"`
-	// 查询设备的属性值
 
+	// 查询设备的属性值
 	Properties     *[]HistoryValues `json:"properties,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

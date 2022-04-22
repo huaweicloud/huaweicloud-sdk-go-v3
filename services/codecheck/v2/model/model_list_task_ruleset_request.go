@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ListTaskRulesetRequest struct {
+
 	// 项目ID
-
 	ProjectId string `json:"project_id"`
-	// 任务ID
 
+	// 任务ID
 	TaskId string `json:"task_id"`
 }
 

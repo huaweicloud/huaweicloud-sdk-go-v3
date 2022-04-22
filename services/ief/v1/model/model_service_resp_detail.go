@@ -8,21 +8,21 @@ import (
 
 // 服务详情
 type ServiceRespDetail struct {
+
 	// 创建时间
-
 	CreatedAt string `json:"created_at"`
-	// 服务ID
 
+	// 服务ID
 	Id string `json:"id"`
 
 	MetaData *SvcMetadata `json:"meta_data"`
-	// 租户ID
 
+	// 租户ID
 	ProjectId string `json:"project_id"`
 
 	Spec *SvcSpec `json:"spec"`
-	// 更新时间
 
+	// 更新时间
 	UpdatedAt string `json:"updated_at"`
 }
 

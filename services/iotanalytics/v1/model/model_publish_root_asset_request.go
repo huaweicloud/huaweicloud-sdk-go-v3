@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type PublishRootAssetRequest struct {
-	// 根资产ID
 
+	// 根资产ID
 	RootAssetId string `json:"root_asset_id"`
 }
 

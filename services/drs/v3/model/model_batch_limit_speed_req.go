@@ -8,8 +8,8 @@ import (
 
 //
 type BatchLimitSpeedReq struct {
-	// 灾备限速设置信息
 
+	// 灾备限速设置信息
 	SpeedLimits []LimitSpeedReq `json:"speed_limits"`
 }
 

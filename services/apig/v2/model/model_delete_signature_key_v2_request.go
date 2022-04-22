@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteSignatureKeyV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 签名密钥编号
 
+	// 签名密钥编号
 	SignId string `json:"sign_id"`
 }
 

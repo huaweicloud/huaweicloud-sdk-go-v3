@@ -10,17 +10,17 @@ import (
 )
 
 type CheckpointCreate struct {
+
 	// 创建时间，例如:\"2020-02-05T10:38:34.209782\"
-
 	CreatedAt string `json:"created_at"`
+
 	// 还原点ID
-
 	Id string `json:"id"`
+
 	// 项目ID
-
 	ProjectId string `json:"project_id"`
-	// 状态:available,deleting,protecting,deleted,error-deleting,error
 
+	// 状态:available,deleting,protecting,deleted,error-deleting,error
 	Status CheckpointCreateStatus `json:"status"`
 
 	Vault *CheckpointPlanCreate `json:"vault,omitempty"`

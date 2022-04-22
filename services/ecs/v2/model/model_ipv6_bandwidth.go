@@ -8,8 +8,8 @@ import (
 
 //
 type Ipv6Bandwidth struct {
-	// IPv6带宽的ID。
 
+	// IPv6带宽的ID。
 	Id *string `json:"id,omitempty"`
 }
 

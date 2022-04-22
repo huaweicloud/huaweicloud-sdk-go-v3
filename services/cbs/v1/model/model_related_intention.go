@@ -8,11 +8,11 @@ import (
 
 //
 type RelatedIntention struct {
+
 	// 意图名称。
-
 	Intention string `json:"intention"`
-	// 意图置信度。
 
+	// 意图置信度。
 	Confidence *float64 `json:"confidence,omitempty"`
 }
 

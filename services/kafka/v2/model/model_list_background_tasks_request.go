@@ -8,20 +8,20 @@ import (
 
 // Request Object
 type ListBackgroundTasksRequest struct {
+
 	// 实例ID。
-
 	InstanceId string `json:"instance_id"`
+
 	// 开启查询的任务编号。
-
 	Start *int32 `json:"start,omitempty"`
+
 	// 查询的任务个数。
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 查询任务的最小时间，格式为YYYYMMDDHHmmss。
-
 	BeginTime *string `json:"begin_time,omitempty"`
-	// 查询任务的最大时间，格式为YYYYMMDDHHmmss。
 
+	// 查询任务的最大时间，格式为YYYYMMDDHHmmss。
 	EndTime *string `json:"end_time,omitempty"`
 }
 

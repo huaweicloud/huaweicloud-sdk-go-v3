@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type BatchCreateKmsTagsRequest struct {
+
 	// 密钥ID
-
 	KeyId string `json:"key_id"`
-	// API版本号
 
+	// API版本号
 	VersionId string `json:"version_id"`
 
 	Body *BatchCreateKmsTagsRequestBody `json:"body,omitempty"`

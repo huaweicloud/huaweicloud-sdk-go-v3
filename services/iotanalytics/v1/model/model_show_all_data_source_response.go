@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowAllDataSourceResponse struct {
+
 	// 总数
-
 	Count *int32 `json:"count,omitempty"`
-	// 数据源列表
 
+	// 数据源列表
 	Datasources    *[]DatasourceRestDto `json:"datasources,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

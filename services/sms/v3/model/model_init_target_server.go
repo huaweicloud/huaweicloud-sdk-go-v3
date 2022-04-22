@@ -8,8 +8,8 @@ import (
 
 // 推荐的目的端服务器配置
 type InitTargetServer struct {
-	// 推荐的目的端服务器的磁盘信息
 
+	// 推荐的目的端服务器的磁盘信息
 	Disks []DiskIntargetServer `json:"disks"`
 }
 

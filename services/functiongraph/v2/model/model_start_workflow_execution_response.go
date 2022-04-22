@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type StartWorkflowExecutionResponse struct {
-	// 错误码
 
+	// 错误码
 	ExecutionId    *string `json:"execution_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

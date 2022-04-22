@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowHotkeyTaskDetailsRequest struct {
+
 	// 实例ID。
-
 	InstanceId string `json:"instance_id"`
-	// 热key分析任务ID。
 
+	// 热key分析任务ID。
 	HotkeyId string `json:"hotkey_id"`
 }
 

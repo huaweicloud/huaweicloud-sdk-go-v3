@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListGraphMetadatasRequest struct {
-	// 元数据ID。
 
+	// 元数据ID。
 	MetadataId string `json:"metadata_id"`
 }
 

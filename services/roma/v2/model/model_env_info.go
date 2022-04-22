@@ -8,17 +8,17 @@ import (
 )
 
 type EnvInfo struct {
+
 	// 创建时间
-
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+
 	// 环境名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 描述信息
-
 	Remark *string `json:"remark,omitempty"`
-	// 环境编号
 
+	// 环境编号
 	Id *string `json:"id,omitempty"`
 }
 

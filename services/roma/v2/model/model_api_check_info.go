@@ -10,26 +10,26 @@ import (
 )
 
 type ApiCheckInfo struct {
+
 	// API名称。  type = name时必填
-
 	Name *string `json:"name,omitempty"`
+
 	// 请求方式。  type = path时必填
-
 	ReqMethod *ApiCheckInfoReqMethod `json:"req_method,omitempty"`
+
 	// API的访问地址。  type = path时必填
-
 	ReqUri *string `json:"req_uri,omitempty"`
+
 	// API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配）  type = path时必填
-
 	MatchMode *ApiCheckInfoMatchMode `json:"match_mode,omitempty"`
+
 	// 分组ID。  校验分组下API定义是否重复时必填
-
 	GroupId *string `json:"group_id,omitempty"`
+
 	// 集成应用ID。  校验应用下API定义是否重复时必填
-
 	RomaAppId *string `json:"roma_app_id,omitempty"`
-	// 需要对比的API ID
 
+	// 需要对比的API ID
 	ApiId *string `json:"api_id,omitempty"`
 }
 

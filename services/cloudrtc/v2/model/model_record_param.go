@@ -8,8 +8,8 @@ import (
 
 // 录制参数
 type RecordParam struct {
-	// 录制规则id。
 
+	// 录制规则id。
 	RecordRuleId string `json:"record_rule_id"`
 }
 

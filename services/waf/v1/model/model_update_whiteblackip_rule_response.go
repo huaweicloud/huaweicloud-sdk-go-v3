@@ -8,20 +8,20 @@ import (
 
 // Response Object
 type UpdateWhiteblackipRuleResponse struct {
+
 	// 规则id
-
 	Id *string `json:"id,omitempty"`
+
 	// 策略id
-
 	Policyid *string `json:"policyid,omitempty"`
+
 	// 黑白名单地址
-
 	Addr *string `json:"addr,omitempty"`
+
 	// 黑白名单规则描述
-
 	Description *string `json:"description,omitempty"`
-	// 防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
 
+	// 防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
 	White          *int32 `json:"white,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -7,11 +7,11 @@ import (
 )
 
 type InnerLatencyStats struct {
+
 	// 最大网关内部延时
-
 	MaxInnerLatency *int32 `json:"max_inner_latency,omitempty"`
-	// 平均网关内部延时
 
+	// 平均网关内部延时
 	AvgInnerLatency *float32 `json:"avg_inner_latency,omitempty"`
 }
 

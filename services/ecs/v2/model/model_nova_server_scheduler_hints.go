@@ -11,11 +11,11 @@ import (
 
 //
 type NovaServerSchedulerHints struct {
+
 	// 在指定的专属主机或者共享主机上创建弹性云服务器。 参数值为shared或者dedicated。
-
 	Tenancy *[]NovaServerSchedulerHintsTenancy `json:"tenancy,omitempty"`
-	// 专属主机ID。 此属性仅在tenancy值为dedicated时有效。
 
+	// 专属主机ID。 此属性仅在tenancy值为dedicated时有效。
 	DedicatedHostId *[]string `json:"dedicated_host_id,omitempty"`
 }
 

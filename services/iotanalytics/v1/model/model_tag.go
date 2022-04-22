@@ -7,11 +7,11 @@ import (
 )
 
 type Tag struct {
+
 	// 标签名称
-
 	Name *string `json:"name,omitempty"`
-	// 标签描述
 
+	// 标签描述
 	Description *string `json:"description,omitempty"`
 }
 

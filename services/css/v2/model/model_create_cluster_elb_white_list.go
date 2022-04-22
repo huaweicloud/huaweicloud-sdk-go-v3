@@ -8,11 +8,11 @@ import (
 
 // 弹性IP白名单。
 type CreateClusterElbWhiteList struct {
+
 	// 是否开启访问控制。
-
 	EnableWhiteList bool `json:"enableWhiteList"`
-	// 访问控制白名单。
 
+	// 访问控制白名单。
 	WhiteList *string `json:"whiteList,omitempty"`
 }
 

@@ -7,11 +7,11 @@ import (
 )
 
 type ConfirmIaConfigRequestBody struct {
+
 	// 配置项ID
-
 	Id string `json:"id"`
-	// 版本号
 
+	// 版本号
 	Version string `json:"version"`
 }
 

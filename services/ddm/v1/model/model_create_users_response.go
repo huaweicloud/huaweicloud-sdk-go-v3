@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateUsersResponse struct {
-	// DDM实例帐号相关信息的集合。
 
+	// DDM实例帐号相关信息的集合。
 	Users          *[]CreateUsersDetailResponses `json:"users,omitempty"`
 	HttpStatusCode int                           `json:"-"`
 }

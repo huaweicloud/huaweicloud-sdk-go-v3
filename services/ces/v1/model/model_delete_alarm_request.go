@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteAlarmRequest struct {
-	// 告警规则的ID。
 
+	// 告警规则的ID。
 	AlarmId string `json:"alarm_id"`
 }
 

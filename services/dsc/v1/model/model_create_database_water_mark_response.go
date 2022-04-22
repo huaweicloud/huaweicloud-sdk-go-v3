@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateDatabaseWaterMarkResponse struct {
-	// 嵌入水印后的数据
 
+	// 嵌入水印后的数据
 	MarkedData     *[]map[string]interface{} `json:"marked_data,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

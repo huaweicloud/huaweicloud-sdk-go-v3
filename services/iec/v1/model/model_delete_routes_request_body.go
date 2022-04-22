@@ -8,8 +8,8 @@ import (
 
 // 删除路由请求体
 type DeleteRoutesRequestBody struct {
-	// 待删除的路由信息
 
+	// 待删除的路由信息
 	Routes []DeleteRouteOption `json:"routes"`
 }
 

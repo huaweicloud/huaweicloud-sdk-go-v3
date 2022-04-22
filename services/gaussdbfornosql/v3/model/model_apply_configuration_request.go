@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ApplyConfigurationRequest struct {
-	// 参数模板ID。
 
+	// 参数模板ID。
 	ConfigId string `json:"config_id"`
 
 	Body *ApplyConfigurationRequestBody `json:"body,omitempty"`

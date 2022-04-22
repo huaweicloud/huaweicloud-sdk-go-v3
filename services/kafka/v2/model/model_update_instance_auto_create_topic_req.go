@@ -7,8 +7,8 @@ import (
 )
 
 type UpdateInstanceAutoCreateTopicReq struct {
-	// 是否开启自动创建topic功能。
 
+	// 是否开启自动创建topic功能。
 	EnableAutoTopic bool `json:"enable_auto_topic"`
 }
 

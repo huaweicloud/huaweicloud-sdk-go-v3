@@ -7,8 +7,8 @@ import (
 )
 
 type QueryTransTemplate struct {
-	// 转码模板名称。
 
+	// 转码模板名称。
 	TemplateName string `json:"template_name"`
 
 	Video *Video `json:"video"`

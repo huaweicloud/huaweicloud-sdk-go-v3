@@ -8,11 +8,11 @@ import (
 
 // 单词的流利度打分
 type WordFluency struct {
-	//
 
+	//
 	Score float32 `json:"score"`
-	//
 
+	//
 	Rhythm float32 `json:"rhythm"`
 }
 

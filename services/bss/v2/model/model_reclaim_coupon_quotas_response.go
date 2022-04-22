@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ReclaimCouponQuotasResponse struct {
+
 	// 回收失败的精英服务商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
-
 	ErrorDetails *[]ErrorDetail `json:"error_details,omitempty"`
-	// 回收成功的精英服务商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
 
+	// 回收成功的精英服务商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
 	SimpleQuotaInfos *[]QuotaReclaim `json:"simple_quota_infos,omitempty"`
 	HttpStatusCode   int             `json:"-"`
 }

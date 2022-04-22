@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListBlockchainChannelsResponse struct {
-	// 通道信息列表
 
+	// 通道信息列表
 	Channels       *[]Channel `json:"channels,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

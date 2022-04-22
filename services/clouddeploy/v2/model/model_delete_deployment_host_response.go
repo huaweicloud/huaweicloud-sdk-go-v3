@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteDeploymentHostResponse struct {
-	// 主机id
 
+	// 主机id
 	HostId         *string `json:"host_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

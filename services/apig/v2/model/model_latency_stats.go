@@ -7,11 +7,11 @@ import (
 )
 
 type LatencyStats struct {
+
 	// 最大延时  单位：ms
-
 	MaxLatency *int32 `json:"max_latency,omitempty"`
-	// 平均延时  单位：ms
 
+	// 平均延时  单位：ms
 	AvgLatency *float32 `json:"avg_latency,omitempty"`
 }
 

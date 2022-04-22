@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateDatabaseRequest struct {
-	// DDM实例ID
 
+	// DDM实例ID
 	InstanceId string `json:"instance_id"`
 
 	Body *CreateDatabaseReq `json:"body,omitempty"`

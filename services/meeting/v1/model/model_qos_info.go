@@ -8,8 +8,8 @@ import (
 
 // QoS数据。
 type QosInfo struct {
-	// Qos类型 - aduio：音频 - video：视频 - screen：屏幕共享 - cpu：cpu
 
+	// Qos类型 - aduio：音频 - video：视频 - screen：屏幕共享 - cpu：cpu
 	Type *string `json:"type,omitempty"`
 
 	Send *QosSendReceiveInfo `json:"send,omitempty"`

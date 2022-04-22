@@ -7,17 +7,17 @@ import (
 )
 
 type PoolMemVo struct {
+
 	// 流量池标识
-
 	Id *int64 `json:"id,omitempty"`
+
 	// 容器ID
-
 	Cid *string `json:"cid,omitempty"`
+
 	// 套餐订购实例ID
-
 	SimPricePlanId *int64 `json:"sim_price_plan_id,omitempty"`
-	// 已用流量(查询账期所在月份), 单位MB
 
+	// 已用流量(查询账期所在月份), 单位MB
 	FlowUsed *float64 `json:"flow_used,omitempty"`
 }
 

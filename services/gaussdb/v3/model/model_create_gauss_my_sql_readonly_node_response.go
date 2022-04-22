@@ -8,17 +8,17 @@ import (
 
 // Response Object
 type CreateGaussMySqlReadonlyNodeResponse struct {
+
 	// 实例ID。
-
 	InstanceId *string `json:"instance_id,omitempty"`
+
 	// 节点名称列表。
-
 	NodeNames *[]string `json:"node_names,omitempty"`
+
 	// 实例创建的任务id。  仅创建按需实例时会返回该参数。
-
 	JobId *string `json:"job_id,omitempty"`
-	// 订单号，创建包年包月时返回该参数。
 
+	// 订单号，创建包年包月时返回该参数。
 	OrderId        *string `json:"order_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

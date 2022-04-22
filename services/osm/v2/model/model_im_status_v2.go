@@ -7,11 +7,11 @@ import (
 )
 
 type ImStatusV2 struct {
+
 	// 状态
-
 	Status *int32 `json:"status,omitempty"`
-	// 工单id
 
+	// 工单id
 	IncidentId *string `json:"incident_id,omitempty"`
 }
 

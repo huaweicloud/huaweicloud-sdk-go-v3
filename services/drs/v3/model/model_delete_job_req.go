@@ -11,11 +11,11 @@ import (
 
 // 删除在线迁移任务请求体
 type DeleteJobReq struct {
+
 	// terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
-
 	DeleteType DeleteJobReqDeleteType `json:"delete_type"`
-	// 任务ID
 
+	// 任务ID
 	JobId string `json:"job_id"`
 }
 

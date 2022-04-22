@@ -8,11 +8,11 @@ import (
 
 // 在IoTDA实例中的规则ID及其配套的推送数据动作ID
 type IotdaRuleAction struct {
+
 	// IoTDA中的规则Id
-
 	RuleId string `json:"rule_id"`
-	// IoTDA中推送数据动作ID
 
+	// IoTDA中推送数据动作ID
 	ActionId string `json:"action_id"`
 }
 

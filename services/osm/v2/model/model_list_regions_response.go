@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListRegionsResponse struct {
+
 	// 总数
-
 	TotalCount *int32 `json:"total_count,omitempty"`
-	// 区域列表
 
+	// 区域列表
 	DataCenterList *[]DataCenterV2Do `json:"data_center_list,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteAssetResponse struct {
-	// 资产导出或删除作业的ID，可用于查询作业进。
 
+	// 资产导出或删除作业的ID，可用于查询作业进。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

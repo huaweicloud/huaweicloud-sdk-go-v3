@@ -11,11 +11,11 @@ import (
 
 //
 type AspectSentimentRequest struct {
+
 	// 待分析文本。仅支持中文，文本编码要求为utf-8。 建议文本长度1000个字符以内。
-
 	Content string `json:"content"`
-	// 取值如下： 1 手机领域
 
+	// 取值如下： 1 手机领域
 	Type AspectSentimentRequestType `json:"type"`
 }
 

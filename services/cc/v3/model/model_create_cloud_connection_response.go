@@ -9,8 +9,8 @@ import (
 // Response Object
 type CreateCloudConnectionResponse struct {
 	CloudConnection *CloudConnection `json:"cloud_connection,omitempty"`
-	// 请求ID。
 
+	// 请求ID。
 	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

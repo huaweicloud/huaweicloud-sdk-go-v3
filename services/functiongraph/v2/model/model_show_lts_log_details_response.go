@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ShowLtsLogDetailsResponse struct {
+
 	// 日志组id
-
 	GroupId *string `json:"group_id,omitempty"`
+
 	// 日志流id
-
 	StreamId *string `json:"stream_id,omitempty"`
-	// 日志流名称
 
+	// 日志流名称
 	StreamName     *string `json:"stream_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

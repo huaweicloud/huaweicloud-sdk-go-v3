@@ -15,6 +15,7 @@ import (
 )
 
 type ImportLiveDataApiDefinitionsV2RequestBody struct {
+
 	// 扩展信息导入模式 - merge：当扩展信息定义冲突时，merge保留原有扩展信息 - override：当扩展信息定义冲突时，override会覆盖原有扩展信息
 	ExtendMode *def.MultiPart `json:"extend_mode,omitempty"`
 

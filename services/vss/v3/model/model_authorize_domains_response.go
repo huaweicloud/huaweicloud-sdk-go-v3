@@ -11,11 +11,11 @@ import (
 
 // Response Object
 type AuthorizeDomainsResponse struct {
+
 	// 状态码:   * success - 成功   * failure - 失败
-
 	InfoCode *AuthorizeDomainsResponseInfoCode `json:"info_code,omitempty"`
-	// 返回的提示信息
 
+	// 返回的提示信息
 	InfoDescription *string `json:"info_description,omitempty"`
 	HttpStatusCode  int     `json:"-"`
 }

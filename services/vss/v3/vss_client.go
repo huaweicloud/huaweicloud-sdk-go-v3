@@ -19,7 +19,12 @@ func VssClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//认证租户的域名资产
+// 认证域名资产
+//
+// 认证租户的域名资产
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *VssClient) AuthorizeDomains(request *model.AuthorizeDomainsRequest) (*model.AuthorizeDomainsResponse, error) {
 	requestDef := GenReqDefForAuthorizeDomains()
 
@@ -30,7 +35,12 @@ func (c *VssClient) AuthorizeDomains(request *model.AuthorizeDomainsRequest) (*m
 	}
 }
 
-//创建租户的域名资产
+// 创建域名资产
+//
+// 创建租户的域名资产
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *VssClient) CreateDomains(request *model.CreateDomainsRequest) (*model.CreateDomainsResponse, error) {
 	requestDef := GenReqDefForCreateDomains()
 
@@ -41,7 +51,12 @@ func (c *VssClient) CreateDomains(request *model.CreateDomainsRequest) (*model.C
 	}
 }
 
-//删除租户的域名资产
+// 删除域名资产
+//
+// 删除租户的域名资产
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *VssClient) DeleteDomains(request *model.DeleteDomainsRequest) (*model.DeleteDomainsResponse, error) {
 	requestDef := GenReqDefForDeleteDomains()
 
@@ -52,7 +67,12 @@ func (c *VssClient) DeleteDomains(request *model.DeleteDomainsRequest) (*model.D
 	}
 }
 
-//获取租户的所有域名资产
+// 获取域名资产
+//
+// 获取租户的所有域名资产
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *VssClient) ListDomains(request *model.ListDomainsRequest) (*model.ListDomainsResponse, error) {
 	requestDef := GenReqDefForListDomains()
 
@@ -63,7 +83,12 @@ func (c *VssClient) ListDomains(request *model.ListDomainsRequest) (*model.ListD
 	}
 }
 
-//获取域名登录配置
+// 获取域名配置
+//
+// 获取域名登录配置
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *VssClient) ShowDomainSettings(request *model.ShowDomainSettingsRequest) (*model.ShowDomainSettingsResponse, error) {
 	requestDef := GenReqDefForShowDomainSettings()
 
@@ -74,7 +99,12 @@ func (c *VssClient) ShowDomainSettings(request *model.ShowDomainSettingsRequest)
 	}
 }
 
-//更新域名登录配置
+// 更新域名配置
+//
+// 更新域名登录配置
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *VssClient) UpdateDomainSettings(request *model.UpdateDomainSettingsRequest) (*model.UpdateDomainSettingsResponse, error) {
 	requestDef := GenReqDefForUpdateDomainSettings()
 
@@ -85,7 +115,12 @@ func (c *VssClient) UpdateDomainSettings(request *model.UpdateDomainSettingsRequ
 	}
 }
 
-//获取域名业务风险扫描结果
+// 获取业务风险扫描结果
+//
+// 获取域名业务风险扫描结果
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *VssClient) ListBusinessRisks(request *model.ListBusinessRisksRequest) (*model.ListBusinessRisksResponse, error) {
 	requestDef := GenReqDefForListBusinessRisks()
 
@@ -96,7 +131,12 @@ func (c *VssClient) ListBusinessRisks(request *model.ListBusinessRisksRequest) (
 	}
 }
 
-//获取域名端口扫描结果
+// 获取端口扫描结果
+//
+// 获取域名端口扫描结果
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *VssClient) ListPortResults(request *model.ListPortResultsRequest) (*model.ListPortResultsResponse, error) {
 	requestDef := GenReqDefForListPortResults()
 
@@ -107,7 +147,12 @@ func (c *VssClient) ListPortResults(request *model.ListPortResultsRequest) (*mod
 	}
 }
 
-//获取域名漏洞扫描结果
+// 获取扫描结果
+//
+// 获取域名漏洞扫描结果
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *VssClient) ShowResults(request *model.ShowResultsRequest) (*model.ShowResultsResponse, error) {
 	requestDef := GenReqDefForShowResults()
 
@@ -118,7 +163,12 @@ func (c *VssClient) ShowResults(request *model.ShowResultsRequest) (*model.ShowR
 	}
 }
 
-//更新域名扫描漏洞的误报状态
+// 更新漏洞的误报状态
+//
+// 更新域名扫描漏洞的误报状态
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *VssClient) UpdateFalsePositive(request *model.UpdateFalsePositiveRequest) (*model.UpdateFalsePositiveResponse, error) {
 	requestDef := GenReqDefForUpdateFalsePositive()
 
@@ -129,7 +179,12 @@ func (c *VssClient) UpdateFalsePositive(request *model.UpdateFalsePositiveReques
 	}
 }
 
-//取消或重启域名漏洞扫描任务
+// 取消或重启扫描任务
+//
+// 取消或重启域名漏洞扫描任务
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *VssClient) CancelTasks(request *model.CancelTasksRequest) (*model.CancelTasksResponse, error) {
 	requestDef := GenReqDefForCancelTasks()
 
@@ -140,7 +195,12 @@ func (c *VssClient) CancelTasks(request *model.CancelTasksRequest) (*model.Cance
 	}
 }
 
-//创建域名漏洞扫描任务并启动
+// 创建扫描任务并启动
+//
+// 创建域名漏洞扫描任务并启动
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *VssClient) CreateTasks(request *model.CreateTasksRequest) (*model.CreateTasksResponse, error) {
 	requestDef := GenReqDefForCreateTasks()
 
@@ -151,7 +211,12 @@ func (c *VssClient) CreateTasks(request *model.CreateTasksRequest) (*model.Creat
 	}
 }
 
-//获取域名漏洞扫描的历史扫描任务
+// 获取域名的历史扫描任务
+//
+// 获取域名漏洞扫描的历史扫描任务
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *VssClient) ListTaskHistories(request *model.ListTaskHistoriesRequest) (*model.ListTaskHistoriesResponse, error) {
 	requestDef := GenReqDefForListTaskHistories()
 
@@ -162,7 +227,12 @@ func (c *VssClient) ListTaskHistories(request *model.ListTaskHistoriesRequest) (
 	}
 }
 
-//获取域名漏洞扫描任务详情
+// 获取扫描任务详情
+//
+// 获取域名漏洞扫描任务详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *VssClient) ShowTasks(request *model.ShowTasksRequest) (*model.ShowTasksResponse, error) {
 	requestDef := GenReqDefForShowTasks()
 

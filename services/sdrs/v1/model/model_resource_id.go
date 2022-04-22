@@ -8,8 +8,8 @@ import (
 
 // 保护实例Id
 type ResourceId struct {
-	// 资源ID
 
+	// 资源ID
 	Id string `json:"id"`
 }
 

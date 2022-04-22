@@ -7,14 +7,14 @@ import (
 )
 
 type ChartConfig struct {
+
 	// 是否开启排序
-
 	CanSort bool `json:"can_sort"`
+
 	// 是否开启搜索
-
 	CanSearch bool `json:"can_search"`
-	// 每页显示数量
 
+	// 每页显示数量
 	PageSize int32 `json:"page_size"`
 }
 

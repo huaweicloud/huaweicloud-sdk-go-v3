@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListDatastoresResponse struct {
-	// 数据库版本号。
 
+	// 数据库版本号。
 	Versions       *[]string `json:"versions,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

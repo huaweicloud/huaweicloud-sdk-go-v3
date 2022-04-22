@@ -7,8 +7,8 @@ import (
 )
 
 type ResetUserPasswrodReq struct {
-	// 用户新密码。
 
+	// 用户新密码。
 	NewPassword *string `json:"new_password,omitempty"`
 }
 

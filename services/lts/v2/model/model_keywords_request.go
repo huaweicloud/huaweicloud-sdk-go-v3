@@ -10,32 +10,32 @@ import (
 )
 
 type KeywordsRequest struct {
+
 	// 日志流id
-
 	LogStreamId string `json:"log_stream_id"`
+
 	// 日志流名称
-
 	LogStreamName *string `json:"log_stream_name,omitempty"`
+
 	// 日志组id
-
 	LogGroupId string `json:"log_group_id"`
+
 	// 日志组名称
-
 	LogGroupName *string `json:"log_group_name,omitempty"`
+
 	// 关键词
-
 	Keywords string `json:"keywords"`
+
 	// 条件
-
 	Condition KeywordsRequestCondition `json:"condition"`
+
 	// 行数
-
 	Number int32 `json:"number"`
+
 	// 查询执行任务时最近数据的时间范围，最大值为60
-
 	SearchTimeRange int32 `json:"search_time_range"`
-	// 查询时间单位
 
+	// 查询时间单位
 	SearchTimeRangeUnit KeywordsRequestSearchTimeRangeUnit `json:"search_time_range_unit"`
 }
 

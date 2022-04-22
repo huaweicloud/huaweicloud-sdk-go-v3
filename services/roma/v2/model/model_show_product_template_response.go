@@ -11,27 +11,27 @@ import (
 
 // Response Object
 type ShowProductTemplateResponse struct {
+
 	// 产品模板ID
-
 	Id *int32 `json:"id,omitempty"`
+
 	// 产品模板名称
-
 	Name *string `json:"name,omitempty"`
+
 	// 产品模板描述
-
 	Description *string `json:"description,omitempty"`
-	// 产品模板状态 0-启用 1-停用
 
+	// 产品模板状态 0-启用 1-停用
 	Status *ShowProductTemplateResponseStatus `json:"status,omitempty"`
 
 	CreatedUser *CreatedUser `json:"created_user,omitempty"`
 
 	LastUpdatedUser *LastUpdatedUser `json:"last_updated_user,omitempty"`
+
 	// 创建时间，timestamp(ms)，使用UTC时区
-
 	CreatedDatetime *int64 `json:"created_datetime,omitempty"`
-	// 最后修改时间，timestamp(ms)，使用UTC时区
 
+	// 最后修改时间，timestamp(ms)，使用UTC时区
 	LastUpdatedDatetime *int64 `json:"last_updated_datetime,omitempty"`
 	HttpStatusCode      int    `json:"-"`
 }

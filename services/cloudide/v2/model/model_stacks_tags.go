@@ -7,11 +7,11 @@ import (
 )
 
 type StacksTags struct {
+
 	// 技术栈列表
-
 	StackList *[]StackInfo `json:"stack_list,omitempty"`
-	// 技术栈tag集合
 
+	// 技术栈tag集合
 	Tags *[]string `json:"tags,omitempty"`
 }
 

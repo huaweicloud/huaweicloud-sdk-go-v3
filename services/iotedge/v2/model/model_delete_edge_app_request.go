@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteEdgeAppRequest struct {
-	// 应用ID，应用唯一。
 
+	// 应用ID，应用唯一。
 	EdgeAppId string `json:"edge_app_id"`
 }
 

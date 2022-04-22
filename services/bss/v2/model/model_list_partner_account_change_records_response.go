@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ListPartnerAccountChangeRecordsResponse struct {
+
 	// 返回总条数。
-
 	TotalCount *int32 `json:"total_count,omitempty"`
+
 	// 币种。 CNY：人民币。
-
 	Currency *string `json:"currency,omitempty"`
-	// 调账记录列表。 具体请参见表2。
 
+	// 调账记录列表。 具体请参见表2。
 	Records        *[]AccountChangeRecord `json:"records,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

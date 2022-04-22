@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListQualityEnhanceDefaultTemplateResponse struct {
+
 	// 任务列表
-
 	TaskArray *[]QualityEnhanceTemplateInfo `json:"task_array,omitempty"`
-	// 查询结果数量
 
+	// 查询结果数量
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

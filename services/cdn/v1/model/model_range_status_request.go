@@ -10,8 +10,8 @@ import (
 )
 
 type RangeStatusRequest struct {
-	// range状态（\"off\"/\"on\"）
 
+	// range状态（\"off\"/\"on\"）
 	RangeStatus RangeStatusRequestRangeStatus `json:"range_status"`
 }
 

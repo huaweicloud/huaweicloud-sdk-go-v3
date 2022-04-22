@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type DeleteWindowsBareMetalServerPasswordRequest struct {
-	// 裸金属服务器ID
 
+	// 裸金属服务器ID
 	ServerId string `json:"server_id"`
 }
 

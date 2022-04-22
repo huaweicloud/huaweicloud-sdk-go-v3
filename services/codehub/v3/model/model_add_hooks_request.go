@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type AddHooksRequest struct {
+
 	// 组名
-
 	GroupName string `json:"group_name"`
-	// 仓库名
 
+	// 仓库名
 	RepositoryName string `json:"repository_name"`
 
 	Body *RepositoryHookRequest `json:"body,omitempty"`

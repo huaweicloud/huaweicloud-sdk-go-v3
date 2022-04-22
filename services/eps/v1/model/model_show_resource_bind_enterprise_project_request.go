@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowResourceBindEnterpriseProjectRequest struct {
-	// 企业项目ID
 
+	// 企业项目ID
 	EnterpriseProjectId string `json:"enterprise_project_id"`
 
 	Body *ResqEpResouce `json:"body,omitempty"`

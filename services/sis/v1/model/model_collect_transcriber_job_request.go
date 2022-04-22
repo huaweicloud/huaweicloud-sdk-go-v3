@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CollectTranscriberJobRequest struct {
-	// 录音文件识别任务标识符。
 
+	// 录音文件识别任务标识符。
 	JobId string `json:"job_id"`
 }
 

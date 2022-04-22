@@ -8,17 +8,17 @@ import (
 
 // Response Object
 type SearchQosParticipantsResponse struct {
+
 	// 总记录数。
-
 	Count *int32 `json:"count,omitempty"`
+
 	// 查询条目数量。
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 查询偏移量。
-
 	Offset *int32 `json:"offset,omitempty"`
-	// QoS会议与会者列表。
 
+	// QoS会议与会者列表。
 	Data           *[]QosParticipantInfo `json:"data,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

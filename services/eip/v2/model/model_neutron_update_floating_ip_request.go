@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type NeutronUpdateFloatingIpRequest struct {
-	// floatingip的ID
 
+	// floatingip的ID
 	FloatingipId string `json:"floatingip_id"`
 
 	Body *NeutronUpdateFloatingIpRequestBody `json:"body,omitempty"`

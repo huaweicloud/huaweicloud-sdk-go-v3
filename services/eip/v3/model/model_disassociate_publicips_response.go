@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DisassociatePublicipsResponse struct {
-	// 本次请求的编号
 
+	// 本次请求的编号
 	RequestId *string `json:"request_id,omitempty"`
 
 	Publicip       *PublicipInstanceResp `json:"publicip,omitempty"`

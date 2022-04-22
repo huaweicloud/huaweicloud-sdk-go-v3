@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowPropertyRawValueResponse struct {
+
 	// 时间序列,使用UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',示例：2021-02-01T00:00:00.123Z
-
 	Timestamps *[]string `json:"timestamps,omitempty"`
-	// 响应属性列表
 
+	// 响应属性列表
 	Properties     *[]RawValue `json:"properties,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

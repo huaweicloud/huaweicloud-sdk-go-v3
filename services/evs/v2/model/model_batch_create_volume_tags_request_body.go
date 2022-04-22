@@ -11,11 +11,11 @@ import (
 
 // This is a auto create Body Object
 type BatchCreateVolumeTagsRequestBody struct {
+
 	// 操作标识，当前支持的取值如下：  添加标签：create
-
 	Action BatchCreateVolumeTagsRequestBodyAction `json:"action"`
-	// 标签列表。
 
+	// 标签列表。
 	Tags []Tag `json:"tags"`
 }
 

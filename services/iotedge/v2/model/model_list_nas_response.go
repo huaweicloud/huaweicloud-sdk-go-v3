@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListNasResponse struct {
-	// 北向NA列表
 
+	// 北向NA列表
 	Nas            *[]QueryNaBriefResponseDto `json:"nas,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }

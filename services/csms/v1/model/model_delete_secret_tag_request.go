@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteSecretTagRequest struct {
+
 	// 凭据ID
-
 	SecretId string `json:"secret_id"`
-	// 标签键的值
 
+	// 标签键的值
 	Key string `json:"key"`
 }
 

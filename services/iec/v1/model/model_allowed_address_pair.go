@@ -8,11 +8,11 @@ import (
 
 // IP/Mac对象
 type AllowedAddressPair struct {
+
 	// IP地址  约束：不支持0.0.0.0/0  建议：如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
-
 	IpAddress string `json:"ip_address"`
-	// MAC地址
 
+	// MAC地址
 	MacAddress *string `json:"mac_address,omitempty"`
 }
 

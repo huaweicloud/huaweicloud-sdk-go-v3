@@ -7,8 +7,8 @@ import (
 )
 
 type RemuxRetryReq struct {
-	// 任务Id。
 
+	// 任务Id。
 	TaskId *string `json:"task_id,omitempty"`
 }
 

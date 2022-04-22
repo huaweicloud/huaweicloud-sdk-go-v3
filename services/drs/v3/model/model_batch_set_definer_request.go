@@ -11,8 +11,8 @@ import (
 
 // Request Object
 type BatchSetDefinerRequest struct {
-	// 请求语言类型
 
+	// 请求语言类型
 	XLanguage *BatchSetDefinerRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *BatchReplaceDefinerReq `json:"body,omitempty"`

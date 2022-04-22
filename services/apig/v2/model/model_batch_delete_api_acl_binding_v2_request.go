@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type BatchDeleteApiAclBindingV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 必须为delete
 
+	// 必须为delete
 	Action string `json:"action"`
 
 	Body *AclBindingBatchDelete `json:"body,omitempty"`

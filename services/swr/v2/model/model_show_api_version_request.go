@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type ShowApiVersionRequest struct {
+
 	// 消息体的类型（格式），下方类型可任选其一使用： application/json;charset=utf-8 application/json
-
 	ContentType ShowApiVersionRequestContentType `json:"Content-Type"`
-	// API版本号。
 
+	// API版本号。
 	ApiVersion string `json:"api_version"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateAssetReviewTaskResponse struct {
-	// 媒资ID
 
+	// 媒资ID
 	AssetId *string `json:"asset_id,omitempty"`
 
 	Review         *Review `json:"review,omitempty"`

@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ShowTopicAccessPolicyResponse struct {
+
 	// topic名称。
-
 	Name *string `json:"name,omitempty"`
+
 	// topic类型。
-
 	TopicType *int32 `json:"topic_type,omitempty"`
-	// 权限列表。
 
+	// 权限列表。
 	Policies       *[]PolicyEntity `json:"policies,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

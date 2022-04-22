@@ -8,8 +8,8 @@ import (
 
 // 验证CA证书结构体。
 type VerifyCertificateDto struct {
-	// **参数说明**：验证证书的内容信息。
 
+	// **参数说明**：验证证书的内容信息。
 	VerifyContent string `json:"verify_content"`
 }
 

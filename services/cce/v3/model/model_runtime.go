@@ -10,8 +10,8 @@ import (
 )
 
 type Runtime struct {
-	// 容器运行时，默认为“docker”
 
+	// 容器运行时，默认为“docker”
 	Name *RuntimeName `json:"name,omitempty"`
 }
 

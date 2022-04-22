@@ -10,11 +10,11 @@ import (
 )
 
 type ValidationLinkConfig struct {
+
 	// 错误描述
-
 	Message *string `json:"message,omitempty"`
-	// ERROR,WARNING
 
+	// ERROR,WARNING
 	Status *ValidationLinkConfigStatus `json:"status,omitempty"`
 }
 

@@ -10,11 +10,11 @@ import (
 )
 
 type Sort struct {
+
 	// 排序字段
-
 	OrderBy []string `json:"order_by"`
-	// 排序顺序
 
+	// 排序顺序
 	Order SortOrder `json:"order"`
 }
 

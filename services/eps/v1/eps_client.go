@@ -19,7 +19,12 @@ func EpsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//创建企业项目。
+// 创建企业项目
+//
+// 创建企业项目。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EpsClient) CreateEnterpriseProject(request *model.CreateEnterpriseProjectRequest) (*model.CreateEnterpriseProjectResponse, error) {
 	requestDef := GenReqDefForCreateEnterpriseProject()
 
@@ -30,7 +35,12 @@ func (c *EpsClient) CreateEnterpriseProject(request *model.CreateEnterpriseProje
 	}
 }
 
-//停用企业项目。
+// 停用企业项目
+//
+// 停用企业项目。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EpsClient) DisableEnterpriseProject(request *model.DisableEnterpriseProjectRequest) (*model.DisableEnterpriseProjectResponse, error) {
 	requestDef := GenReqDefForDisableEnterpriseProject()
 
@@ -41,7 +51,12 @@ func (c *EpsClient) DisableEnterpriseProject(request *model.DisableEnterprisePro
 	}
 }
 
-//启用企业项目。
+// 启用企业项目
+//
+// 启用企业项目。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EpsClient) EnableEnterpriseProject(request *model.EnableEnterpriseProjectRequest) (*model.EnableEnterpriseProjectResponse, error) {
 	requestDef := GenReqDefForEnableEnterpriseProject()
 
@@ -52,7 +67,12 @@ func (c *EpsClient) EnableEnterpriseProject(request *model.EnableEnterpriseProje
 	}
 }
 
-//查询企业项目的API版本列表。
+// 查询API版本列表
+//
+// 查询企业项目的API版本列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EpsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*model.ListApiVersionsResponse, error) {
 	requestDef := GenReqDefForListApiVersions()
 
@@ -63,7 +83,12 @@ func (c *EpsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*mod
 	}
 }
 
-//查询当前用户已授权的企业项目列表，用户可以使用企业项目绑定资源。
+// 查询企业项目列表
+//
+// 查询当前用户已授权的企业项目列表，用户可以使用企业项目绑定资源。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EpsClient) ListEnterpriseProject(request *model.ListEnterpriseProjectRequest) (*model.ListEnterpriseProjectResponse, error) {
 	requestDef := GenReqDefForListEnterpriseProject()
 
@@ -74,7 +99,12 @@ func (c *EpsClient) ListEnterpriseProject(request *model.ListEnterpriseProjectRe
 	}
 }
 
-//迁移资源到目标企业项目。
+// 迁移资源
+//
+// 迁移资源到目标企业项目。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EpsClient) MigrateResource(request *model.MigrateResourceRequest) (*model.MigrateResourceResponse, error) {
 	requestDef := GenReqDefForMigrateResource()
 
@@ -85,7 +115,12 @@ func (c *EpsClient) MigrateResource(request *model.MigrateResourceRequest) (*mod
 	}
 }
 
-//查询指定的企业项目API版本号详情
+// 查询API版本号详情
+//
+// 查询指定的企业项目API版本号详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EpsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model.ShowApiVersionResponse, error) {
 	requestDef := GenReqDefForShowApiVersion()
 
@@ -96,7 +131,12 @@ func (c *EpsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model
 	}
 }
 
-//查询企业项目详情。
+// 查询企业项目详情
+//
+// 查询企业项目详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EpsClient) ShowEnterpriseProject(request *model.ShowEnterpriseProjectRequest) (*model.ShowEnterpriseProjectResponse, error) {
 	requestDef := GenReqDefForShowEnterpriseProject()
 
@@ -107,7 +147,12 @@ func (c *EpsClient) ShowEnterpriseProject(request *model.ShowEnterpriseProjectRe
 	}
 }
 
-//查询企业项目的配额信息。
+// 查询企业项目配额
+//
+// 查询企业项目的配额信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EpsClient) ShowEnterpriseProjectQuota(request *model.ShowEnterpriseProjectQuotaRequest) (*model.ShowEnterpriseProjectQuotaResponse, error) {
 	requestDef := GenReqDefForShowEnterpriseProjectQuota()
 
@@ -118,7 +163,12 @@ func (c *EpsClient) ShowEnterpriseProjectQuota(request *model.ShowEnterpriseProj
 	}
 }
 
-//查询企业项目下绑定的资源详情。
+// 查询企业项目绑定的资源列表
+//
+// 查询企业项目下绑定的资源详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EpsClient) ShowResourceBindEnterpriseProject(request *model.ShowResourceBindEnterpriseProjectRequest) (*model.ShowResourceBindEnterpriseProjectResponse, error) {
 	requestDef := GenReqDefForShowResourceBindEnterpriseProject()
 
@@ -129,7 +179,12 @@ func (c *EpsClient) ShowResourceBindEnterpriseProject(request *model.ShowResourc
 	}
 }
 
-//修改企业项目。当前仅支持修改名称和描述。
+// 修改企业项目
+//
+// 修改企业项目。当前仅支持修改名称和描述。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EpsClient) UpdateEnterpriseProject(request *model.UpdateEnterpriseProjectRequest) (*model.UpdateEnterpriseProjectResponse, error) {
 	requestDef := GenReqDefForUpdateEnterpriseProject()
 

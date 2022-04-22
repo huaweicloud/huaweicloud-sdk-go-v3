@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DownloadKeystoreRequest struct {
+
 	// 下载的文件名称
-
 	FileName string `json:"file_name"`
-	// 租户ID。32位数字、小写字母组合
 
+	// 租户ID。32位数字、小写字母组合
 	DomainId string `json:"domain_id"`
 }
 

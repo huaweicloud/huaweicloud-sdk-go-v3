@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateBackupRequest struct {
-	// 图ID。
 
+	// 图ID。
 	GraphId string `json:"graph_id"`
 }
 

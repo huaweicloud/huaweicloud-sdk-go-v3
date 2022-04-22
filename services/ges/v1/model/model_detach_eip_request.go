@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type DetachEipRequest struct {
+
 	// 图ID。
-
 	GraphId string `json:"graph_id"`
-	// 图actionId
 
+	// 图actionId
 	ActionId DetachEipRequestActionId `json:"action_id"`
 
 	Body *UnbindEipReq `json:"body,omitempty"`

@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ListDependenciesResponse struct {
+
 	// 依赖包总数。
-
 	Count *int32 `json:"count,omitempty"`
+
 	// 依赖包列表。
-
 	Dependencies *[]ListDependenciesResult `json:"dependencies,omitempty"`
-	// 下次读取位置。
 
+	// 下次读取位置。
 	NextMarker     *int64 `json:"next_marker,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

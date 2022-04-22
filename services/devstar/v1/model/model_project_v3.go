@@ -7,23 +7,23 @@ import (
 )
 
 type ProjectV3 struct {
+
 	// 项目id
-
 	ProjectId string `json:"project_id"`
+
 	// 项目名
-
 	Name string `json:"name"`
+
 	// 区域编码
-
 	RegionId *string `json:"region_id,omitempty"`
+
 	// 区域名称
-
 	RegionName *string `json:"region_name,omitempty"`
+
 	// 管理权限
-
 	ManagementPermission *bool `json:"management_permission,omitempty"`
-	// 是否是存量项目
 
+	// 是否是存量项目
 	IsStock *bool `json:"is_stock,omitempty"`
 }
 

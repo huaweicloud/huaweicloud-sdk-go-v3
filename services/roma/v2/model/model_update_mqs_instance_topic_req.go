@@ -7,8 +7,8 @@ import (
 )
 
 type UpdateMqsInstanceTopicReq struct {
-	// Topic列表。
 
+	// Topic列表。
 	Topics []UpdateTopicObject `json:"topics"`
 }
 

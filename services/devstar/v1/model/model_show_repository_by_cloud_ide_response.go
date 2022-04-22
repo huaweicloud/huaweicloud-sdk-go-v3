@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowRepositoryByCloudIdeResponse struct {
-	// CloudIde打开链接:https://xxx/cloudide/loading?instanceId=xxx&scmUrl=xxx
 
+	// CloudIde打开链接:https://xxx/cloudide/loading?instanceId=xxx&scmUrl=xxx
 	Url            *string `json:"url,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,11 +8,11 @@ import (
 
 // EIP状态信息
 type CdmQueryClusterDetailsRepsonsePublicEndpointStatus struct {
+
 	// 状态
-
 	Status *string `json:"status,omitempty"`
-	// 错误信息
 
+	// 错误信息
 	ErrorMessage *string `json:"errorMessage,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type RegisterDmsKafkaInstanceResponse struct {
-	// kafka ID
 
+	// kafka ID
 	InstanceId     *string `json:"instance_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

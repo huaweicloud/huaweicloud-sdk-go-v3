@@ -10,11 +10,11 @@ import (
 )
 
 type Match struct {
+
 	// 键。取值范围如下： resource_name：资源名称。 service_type：服务类型。
-
 	Key MatchKey `json:"key"`
-	// 值。最大长度255个字符。 key为“resource_name”时，value为模糊匹配。
 
+	// 值。最大长度255个字符。 key为“resource_name”时，value为模糊匹配。
 	Value string `json:"value"`
 }
 

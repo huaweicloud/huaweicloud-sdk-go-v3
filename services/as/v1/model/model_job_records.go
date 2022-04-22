@@ -11,29 +11,29 @@ import (
 
 // 策略执行动作包含的具体任务
 type JobRecords struct {
+
 	// 任务名称
-
 	JobName *string `json:"job_name,omitempty"`
+
 	// 记录类型。API：接口调用类型。MEG：消息类型。
-
 	RecordType *JobRecordsRecordType `json:"record_type,omitempty"`
+
 	// 记录时间。
-
 	RecordTime *string `json:"record_time,omitempty"`
+
 	// 请求体，仅当record_type为API时有效
-
 	Request *string `json:"request,omitempty"`
+
 	// 返回体，仅当record_type为API时有效
-
 	Response *string `json:"response,omitempty"`
+
 	// 返回码，仅当record_type为API时有效
-
 	Code *string `json:"code,omitempty"`
+
 	// 消息，仅当record_type为MEG时有效
-
 	Message *string `json:"message,omitempty"`
-	// job执行状态：SUCCESS：成功。FAIL：失败。
 
+	// job执行状态：SUCCESS：成功。FAIL：失败。
 	JobStatus *JobRecordsJobStatus `json:"job_status,omitempty"`
 }
 

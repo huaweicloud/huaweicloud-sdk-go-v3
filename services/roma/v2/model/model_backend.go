@@ -8,11 +8,11 @@ import (
 
 // 后端服务定义
 type Backend struct {
+
 	// 后端主机地址列表
-
 	Ip *[]string `json:"ip,omitempty"`
-	// 后端服务端口，不存在时使用监听器端口
 
+	// 后端服务端口，不存在时使用监听器端口
 	Port *int32 `json:"port,omitempty"`
 
 	HealthCheck *HealthCheck `json:"health_check,omitempty"`

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowIssuesByPlanIdResponse struct {
-	// 项目下某个测试计划关联的需求列表的返回结构
 
+	// 项目下某个测试计划关联的需求列表的返回结构
 	Body           *[]TestPlanIssueDetail `json:"body,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

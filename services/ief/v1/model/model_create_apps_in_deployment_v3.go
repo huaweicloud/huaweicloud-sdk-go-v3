@@ -8,8 +8,8 @@ import (
 
 // 部署参数配置
 type CreateAppsInDeploymentV3 struct {
-	// 副本数量
 
+	// 副本数量
 	Replicas int32 `json:"replicas"`
 
 	Template *PodRequest `json:"template"`

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowPropertyRawValueRequest struct {
-	// 资产ID
 
+	// 资产ID
 	AssetId string `json:"asset_id"`
 
 	Body *RawRequest `json:"body,omitempty"`

@@ -19,7 +19,12 @@ func EipClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//查询公共池列表
+// 查询公共池列表
+//
+// 查询公共池列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ListCommonPools(request *model.ListCommonPoolsRequest) (*model.ListCommonPoolsResponse, error) {
 	requestDef := GenReqDefForListCommonPools()
 
@@ -30,7 +35,12 @@ func (c *EipClient) ListCommonPools(request *model.ListCommonPoolsRequest) (*mod
 	}
 }
 
-//查询公共池分组列表，包含名称和位置信息
+// 查询公共池分组列表
+//
+// 查询公共池分组列表，包含名称和位置信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ListPublicBorderGroups(request *model.ListPublicBorderGroupsRequest) (*model.ListPublicBorderGroupsResponse, error) {
 	requestDef := GenReqDefForListPublicBorderGroups()
 
@@ -41,7 +51,12 @@ func (c *EipClient) ListPublicBorderGroups(request *model.ListPublicBorderGroups
 	}
 }
 
-//查询指定租户下的共享带宽类型列表
+// 查询指定租户下的共享带宽类型列表
+//
+// 查询指定租户下的共享带宽类型列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ListShareBandwidthTypes(request *model.ListShareBandwidthTypesRequest) (*model.ListShareBandwidthTypesResponse, error) {
 	requestDef := GenReqDefForListShareBandwidthTypes()
 
@@ -52,7 +67,12 @@ func (c *EipClient) ListShareBandwidthTypes(request *model.ListShareBandwidthTyp
 	}
 }
 
-//绑定弹性公网IP
+// 绑定弹性公网IP
+//
+// 绑定弹性公网IP
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) AssociatePublicips(request *model.AssociatePublicipsRequest) (*model.AssociatePublicipsResponse, error) {
 	requestDef := GenReqDefForAssociatePublicips()
 
@@ -63,7 +83,12 @@ func (c *EipClient) AssociatePublicips(request *model.AssociatePublicipsRequest)
 	}
 }
 
-//解绑弹性公网IP
+// 解绑弹性公网IP
+//
+// 解绑弹性公网IP
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) DisassociatePublicips(request *model.DisassociatePublicipsRequest) (*model.DisassociatePublicipsResponse, error) {
 	requestDef := GenReqDefForDisassociatePublicips()
 
@@ -74,7 +99,12 @@ func (c *EipClient) DisassociatePublicips(request *model.DisassociatePublicipsRe
 	}
 }
 
-//全量查询公网IP池列表
+// 查询公网IP池列表
+//
+// 全量查询公网IP池列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ListPublicipPool(request *model.ListPublicipPoolRequest) (*model.ListPublicipPoolResponse, error) {
 	requestDef := GenReqDefForListPublicipPool()
 
@@ -85,7 +115,12 @@ func (c *EipClient) ListPublicipPool(request *model.ListPublicipPoolRequest) (*m
 	}
 }
 
-//查询弹性公网IP列表信息
+// 全量查询弹性公网IP列表
+//
+// 查询弹性公网IP列表信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ListPublicips(request *model.ListPublicipsRequest) (*model.ListPublicipsResponse, error) {
 	requestDef := GenReqDefForListPublicips()
 
@@ -96,7 +131,12 @@ func (c *EipClient) ListPublicips(request *model.ListPublicipsRequest) (*model.L
 	}
 }
 
-//查询弹性公网IP详情
+// 查询弹性公网IP详情
+//
+// 查询弹性公网IP详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ShowPublicip(request *model.ShowPublicipRequest) (*model.ShowPublicipResponse, error) {
 	requestDef := GenReqDefForShowPublicip()
 
@@ -107,7 +147,12 @@ func (c *EipClient) ShowPublicip(request *model.ShowPublicipRequest) (*model.Sho
 	}
 }
 
-//查询公网IP池详情
+// 查询公网IP池详情
+//
+// 查询公网IP池详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *EipClient) ShowPublicipPool(request *model.ShowPublicipPoolRequest) (*model.ShowPublicipPoolResponse, error) {
 	requestDef := GenReqDefForShowPublicipPool()
 

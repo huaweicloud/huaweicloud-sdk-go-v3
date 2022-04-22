@@ -7,11 +7,11 @@ import (
 )
 
 type HistoryValues struct {
+
 	// 属性名称
-
 	PropertyName *string `json:"property_name,omitempty"`
-	// 属性值
 
+	// 属性值
 	Values *[]interface{} `json:"values,omitempty"`
 }
 

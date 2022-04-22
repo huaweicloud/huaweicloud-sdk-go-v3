@@ -8,20 +8,20 @@ import (
 
 // LB状态树的转发策略状态信息
 type LoadBalancerStatusPolicy struct {
+
 	// 匹配后动作。取值： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。
-
 	Action *string `json:"action,omitempty"`
+
 	// 转发策略ID。
-
 	Id *string `json:"id,omitempty"`
+
 	// 转发策略的配置状态。取值： - ACTIVE：使用中，默认值。 - ERROR：表示当前策略与同一监听器下的其他策略存在相同的规则配置。
-
 	ProvisioningStatus *string `json:"provisioning_status,omitempty"`
+
 	// 转发策略名称。
-
 	Name *string `json:"name,omitempty"`
-	// 转发规则状态信息。
 
+	// 转发规则状态信息。
 	Rules *[]LoadBalancerStatusL7Rule `json:"rules,omitempty"`
 }
 

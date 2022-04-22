@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateTasksRequest struct {
-	// 服务名称
 
+	// 服务名称
 	ServiceName string `json:"service_name"`
 
 	Body *CreateTasksRequestBody `json:"body,omitempty"`

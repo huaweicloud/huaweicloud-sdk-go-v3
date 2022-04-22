@@ -8,11 +8,11 @@ import (
 
 //
 type FailedReason struct {
+
 	// 错误码。
-
 	ErrorCode *string `json:"error_code,omitempty"`
-	// 错误信息。
 
+	// 错误信息。
 	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 

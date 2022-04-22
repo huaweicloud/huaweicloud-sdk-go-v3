@@ -8,11 +8,11 @@ import (
 
 // 标签信息
 type HostGroupTag struct {
+
 	// 标签Key
-
 	Key *string `json:"key,omitempty"`
-	// 标签Value
 
+	// 标签Value
 	Value *string `json:"value,omitempty"`
 }
 

@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type RestartInstanceRequest struct {
+
 	// 语言
-
 	XLanguage *RestartInstanceRequestXLanguage `json:"X-Language,omitempty"`
-	// 实例ID。
 
+	// 实例ID。
 	InstanceId string `json:"instance_id"`
 }
 

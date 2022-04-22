@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type DeleteMultiTaskMappingResponse struct {
-	// 映射唯一ID
 
+	// 映射唯一ID
 	MappingId      *string `json:"mapping_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

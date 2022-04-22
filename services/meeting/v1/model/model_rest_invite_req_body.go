@@ -8,8 +8,8 @@ import (
 
 // 邀请会场请求消息体。
 type RestInviteReqBody struct {
-	// 邀请的与会者列表。
 
+	// 邀请的与会者列表。
 	Attendees []Attendee `json:"attendees"`
 }
 

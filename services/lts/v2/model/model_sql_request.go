@@ -10,32 +10,32 @@ import (
 )
 
 type SqlRequest struct {
+
 	// 是时间范围相对
-
 	IsTimeRangeRelative *bool `json:"is_time_range_relative,omitempty"`
+
 	// 日志流id
-
 	LogStreamId string `json:"log_stream_id"`
+
 	// 日志流名称
-
 	LogStreamName *string `json:"log_stream_name,omitempty"`
+
 	// 日志组id
-
 	LogGroupId string `json:"log_group_id"`
+
 	// 日志组名称
-
 	LogGroupName *string `json:"log_group_name,omitempty"`
+
 	// sql语句
-
 	Sql string `json:"sql"`
+
 	// 图表名称
-
 	SqlRequestTitle string `json:"sql_request_title"`
+
 	// 查询执行任务时最近数据的时间范围(当search_time_range_unit为minute，则最大值为60;当search_time_range_unit为hour，则最大值为24)
-
 	SearchTimeRange int32 `json:"search_time_range"`
-	// 查询时间单位
 
+	// 查询时间单位
 	SearchTimeRangeUnit SqlRequestSearchTimeRangeUnit `json:"search_time_range_unit"`
 }
 

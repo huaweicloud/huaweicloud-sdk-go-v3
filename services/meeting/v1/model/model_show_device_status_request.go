@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ShowDeviceStatusRequest struct {
+
 	// 请求requestId，用来标识一路请求，用于问题跟踪定位，建议使用uuId，若不携带，则后台自动生成
-
 	XRequestID *string `json:"X-Request-ID,omitempty"`
+
 	// 语言参数，默认为中文zh-CN, 英文为en-US
-
 	AcceptLanguage *string `json:"Accept-Language,omitempty"`
-	// 所请求查询的终端的号码。
 
+	// 所请求查询的终端的号码。
 	Body *[]string `json:"body,omitempty"`
 }
 

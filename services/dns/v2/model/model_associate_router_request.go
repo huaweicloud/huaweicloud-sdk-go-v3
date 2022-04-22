@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type AssociateRouterRequest struct {
-	// 关联VPC的Zone ID。
 
+	// 关联VPC的Zone ID。
 	ZoneId string `json:"zone_id"`
 
 	Body *AssociateRouterReq `json:"body,omitempty"`

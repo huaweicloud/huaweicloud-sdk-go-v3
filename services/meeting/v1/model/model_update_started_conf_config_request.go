@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateStartedConfConfigRequest struct {
+
 	// 会议ID。
-
 	ConferenceID string `json:"conferenceID"`
-	// 会控正式Token。 该头域统一为BASE64编码。
 
+	// 会控正式Token。 该头域统一为BASE64编码。
 	XConferenceAuthorization string `json:"X-Conference-Authorization"`
 
 	Body *UpdateStartedConfigReqBody `json:"body,omitempty"`

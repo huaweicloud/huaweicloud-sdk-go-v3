@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowResourceRelationsResponse struct {
-	// 资源关系列表
 
+	// 资源关系列表
 	Relations *[]ResourceRelation `json:"relations,omitempty"`
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`

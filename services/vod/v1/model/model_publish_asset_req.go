@@ -7,8 +7,8 @@ import (
 )
 
 type PublishAssetReq struct {
-	// 媒资ID。
 
+	// 媒资ID。
 	AssetId []string `json:"asset_id"`
 }
 

@@ -8,14 +8,14 @@ import (
 
 // 专属主机的配额。
 type RespQuotaSet struct {
+
 	// 配额类别。
-
 	Resource string `json:"resource"`
+
 	// 配额最大限制。  “-1”表示资源配额不受限制。
-
 	HardLimit int32 `json:"hard_limit"`
-	// 已使用配额数量。
 
+	// 已使用配额数量。
 	Used int32 `json:"used"`
 }
 

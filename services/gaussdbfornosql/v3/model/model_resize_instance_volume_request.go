@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ResizeInstanceVolumeRequest struct {
-	// 实例ID。
 
+	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
 	Body *ResizeInstanceVolumeRequestBody `json:"body,omitempty"`

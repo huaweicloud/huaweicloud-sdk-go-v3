@@ -8,8 +8,8 @@ import (
 
 // GES 元数据
 type GesMetaData struct {
-	// Label数据结构集合。
 
+	// Label数据结构集合。
 	Labels []Label `json:"labels"`
 }
 

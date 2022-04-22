@@ -7,8 +7,8 @@ import (
 )
 
 type AccountManager struct {
-	// 客户经理登录名称。
 
+	// 客户经理登录名称。
 	AccountName *string `json:"account_name,omitempty"`
 }
 

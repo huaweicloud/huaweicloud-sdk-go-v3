@@ -10,41 +10,41 @@ import (
 )
 
 type SqlAlarmRuleRespList struct {
+
 	// SQL告警名称
-
 	SqlAlarmRuleName string `json:"sql_alarm_rule_name"`
+
 	// SQL告警规则id
-
 	SqlAlarmRuleId string `json:"sql_alarm_rule_id"`
+
 	// SQL告警信息描述
-
 	SqlAlarmRuleDescription string `json:"sql_alarm_rule_description"`
+
 	// SQL详细信息
-
 	SqlRequests []SqlRequest `json:"sql_requests"`
+
 	// 告警统计周期
-
 	Frequency *Frequency `json:"frequency"`
+
 	// 条件表达式
-
 	ConditionExpression string `json:"condition_expression"`
+
 	// 主题信息
-
 	Topics []Topics `json:"topics"`
+
 	// 告警级别
-
 	SqlAlarmLevel SqlAlarmRuleRespListSqlAlarmLevel `json:"sql_alarm_level"`
+
 	// 是否发送
-
 	SqlAlarmSend bool `json:"sql_alarm_send"`
+
 	// domainId
-
 	DomainId string `json:"domain_id"`
+
 	// 创建时间(毫秒时间戳)
-
 	CreateTime int64 `json:"create_time"`
-	// 更新时间(毫秒时间戳)
 
+	// 更新时间(毫秒时间戳)
 	UpdateTime int64 `json:"update_time"`
 
 	TemplateName *string `json:"template_name,omitempty"`

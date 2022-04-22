@@ -8,8 +8,8 @@ import (
 
 // This is a auto create Body Object
 type CreateDatabaseReq struct {
-	// 逻辑库相关信息的集合
 
+	// 逻辑库相关信息的集合
 	Databases []CreateDatabaseDetail `json:"databases"`
 }
 

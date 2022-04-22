@@ -19,7 +19,12 @@ func CcClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-//创建云连接实例。
+// 创建云连接实例
+//
+// 创建云连接实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CcClient) CreateCloudConnection(request *model.CreateCloudConnectionRequest) (*model.CreateCloudConnectionResponse, error) {
 	requestDef := GenReqDefForCreateCloudConnection()
 
@@ -30,7 +35,12 @@ func (c *CcClient) CreateCloudConnection(request *model.CreateCloudConnectionReq
 	}
 }
 
-//创建网络实例。
+// 创建网络实例
+//
+// 创建网络实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CcClient) CreateNetworkInstance(request *model.CreateNetworkInstanceRequest) (*model.CreateNetworkInstanceResponse, error) {
 	requestDef := GenReqDefForCreateNetworkInstance()
 
@@ -41,7 +51,12 @@ func (c *CcClient) CreateNetworkInstance(request *model.CreateNetworkInstanceReq
 	}
 }
 
-//删除云连接实例。
+// 删除云连接实例
+//
+// 删除云连接实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CcClient) DeleteCloudConnection(request *model.DeleteCloudConnectionRequest) (*model.DeleteCloudConnectionResponse, error) {
 	requestDef := GenReqDefForDeleteCloudConnection()
 
@@ -52,7 +67,12 @@ func (c *CcClient) DeleteCloudConnection(request *model.DeleteCloudConnectionReq
 	}
 }
 
-//删除网络实例。
+// 删除网络实例
+//
+// 删除网络实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CcClient) DeleteNetworkInstance(request *model.DeleteNetworkInstanceRequest) (*model.DeleteNetworkInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteNetworkInstance()
 
@@ -63,7 +83,13 @@ func (c *CcClient) DeleteNetworkInstance(request *model.DeleteNetworkInstanceReq
 	}
 }
 
-//查询云连接路由条目列表。 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+// 查询云连接路由条目列表
+//
+// 查询云连接路由条目列表。
+// 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CcClient) ListCloudConnectionRoutes(request *model.ListCloudConnectionRoutesRequest) (*model.ListCloudConnectionRoutesResponse, error) {
 	requestDef := GenReqDefForListCloudConnectionRoutes()
 
@@ -74,7 +100,13 @@ func (c *CcClient) ListCloudConnectionRoutes(request *model.ListCloudConnectionR
 	}
 }
 
-//查询云连接列表。 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+// 查询云连接列表
+//
+// 查询云连接列表。
+// 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CcClient) ListCloudConnections(request *model.ListCloudConnectionsRequest) (*model.ListCloudConnectionsResponse, error) {
 	requestDef := GenReqDefForListCloudConnections()
 
@@ -85,7 +117,13 @@ func (c *CcClient) ListCloudConnections(request *model.ListCloudConnectionsReque
 	}
 }
 
-//查询云连接列表。 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+// 查询网络实例列表
+//
+// 查询云连接列表。
+// 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CcClient) ListNetworkInstances(request *model.ListNetworkInstancesRequest) (*model.ListNetworkInstancesResponse, error) {
 	requestDef := GenReqDefForListNetworkInstances()
 
@@ -96,7 +134,12 @@ func (c *CcClient) ListNetworkInstances(request *model.ListNetworkInstancesReque
 	}
 }
 
-//查询云连接实例。
+// 查询云连接实例
+//
+// 查询云连接实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CcClient) ShowCloudConnection(request *model.ShowCloudConnectionRequest) (*model.ShowCloudConnectionResponse, error) {
 	requestDef := GenReqDefForShowCloudConnection()
 
@@ -107,7 +150,13 @@ func (c *CcClient) ShowCloudConnection(request *model.ShowCloudConnectionRequest
 	}
 }
 
-//查询云连接路由条目列表。 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+// 查询云连接路由条目详情
+//
+// 查询云连接路由条目列表。
+// 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CcClient) ShowCloudConnectionRoutes(request *model.ShowCloudConnectionRoutesRequest) (*model.ShowCloudConnectionRoutesResponse, error) {
 	requestDef := GenReqDefForShowCloudConnectionRoutes()
 
@@ -118,7 +167,12 @@ func (c *CcClient) ShowCloudConnectionRoutes(request *model.ShowCloudConnectionR
 	}
 }
 
-//查询网络实例。
+// 查询网络实例
+//
+// 查询网络实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CcClient) ShowNetworkInstance(request *model.ShowNetworkInstanceRequest) (*model.ShowNetworkInstanceResponse, error) {
 	requestDef := GenReqDefForShowNetworkInstance()
 
@@ -129,7 +183,12 @@ func (c *CcClient) ShowNetworkInstance(request *model.ShowNetworkInstanceRequest
 	}
 }
 
-//更新云连接实例。
+// 更新云连接实例
+//
+// 更新云连接实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CcClient) UpdateCloudConnection(request *model.UpdateCloudConnectionRequest) (*model.UpdateCloudConnectionResponse, error) {
 	requestDef := GenReqDefForUpdateCloudConnection()
 
@@ -140,7 +199,12 @@ func (c *CcClient) UpdateCloudConnection(request *model.UpdateCloudConnectionReq
 	}
 }
 
-//更新网络实例。
+// 更新网络实例
+//
+// 更新网络实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *CcClient) UpdateNetworkInstance(request *model.UpdateNetworkInstanceRequest) (*model.UpdateNetworkInstanceResponse, error) {
 	requestDef := GenReqDefForUpdateNetworkInstance()
 

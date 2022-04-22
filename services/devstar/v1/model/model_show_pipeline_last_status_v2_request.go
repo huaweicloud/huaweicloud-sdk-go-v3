@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type ShowPipelineLastStatusV2Request struct {
+
 	// 语言类型 中文:zh-cn 英文:en-us
-
 	XLanguage *ShowPipelineLastStatusV2RequestXLanguage `json:"X-Language,omitempty"`
-	// 流水线ID
 
+	// 流水线ID
 	PipelineId string `json:"pipeline_id"`
 }
 

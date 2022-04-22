@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowNodeRequest struct {
+
 	// DDM实例ID
-
 	InstanceId string `json:"instance_id"`
-	// DDM节点ID
 
+	// DDM节点ID
 	NodeId string `json:"node_id"`
 }
 

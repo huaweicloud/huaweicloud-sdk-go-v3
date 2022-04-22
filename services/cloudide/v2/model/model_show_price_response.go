@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowPriceResponse struct {
+
 	// 技术栈价格列表
-
 	Prices *[]ResourcePrice `json:"prices,omitempty"`
-	// 状态
 
+	// 状态
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -7,8 +7,8 @@ import (
 )
 
 type PasswordRequest struct {
-	// https密码
 
+	// https密码
 	Pwd string `json:"pwd"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // 智能压缩。
 type Compress struct {
+
 	// 智能压缩开关（on：开启，off：关闭）。
-
 	Status string `json:"status"`
-	// 智能压缩类型（gzip：gzip压缩，br：br压缩）。
 
+	// 智能压缩类型（gzip：gzip压缩，br：br压缩）。
 	Type *string `json:"type,omitempty"`
 }
 

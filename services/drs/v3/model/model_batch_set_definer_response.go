@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type BatchSetDefinerResponse struct {
+
 	// 总数
-
 	Count *int32 `json:"count,omitempty"`
-	// 批量修改任务返回列表
 
+	// 批量修改任务返回列表
 	Results        *[]ModifyJobResp `json:"results,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

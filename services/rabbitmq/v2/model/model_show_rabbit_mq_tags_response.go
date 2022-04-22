@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowRabbitMqTagsResponse struct {
-	// 标签列表
 
+	// 标签列表
 	Tags           *[]TagEntity `json:"tags,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

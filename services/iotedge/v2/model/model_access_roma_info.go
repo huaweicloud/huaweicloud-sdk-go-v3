@@ -7,11 +7,11 @@ import (
 )
 
 type AccessRomaInfo struct {
+
 	// 认证key，加密存储
-
 	AppKey *string `json:"app_key,omitempty"`
-	// 认证secret，加密存储
 
+	// 认证secret，加密存储
 	AppSecret *string `json:"app_secret,omitempty"`
 }
 

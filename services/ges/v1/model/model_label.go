@@ -8,11 +8,11 @@ import (
 
 // GES 元数据中lable类型
 type Label struct {
+
 	// Label名称。
-
 	Name *string `json:"name,omitempty"`
-	// 属性Map
 
+	// 属性Map
 	Properties *interface{} `json:"properties,omitempty"`
 }
 

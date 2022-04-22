@@ -8,14 +8,14 @@ import (
 
 // Response Object
 type ListTemplatesResponse struct {
+
 	// 返回模板的数量。
-
 	Count *int32 `json:"count,omitempty"`
+
 	// 返回关联了失效资源的模板数量。
-
 	InvalidCount *int32 `json:"invalid_count,omitempty"`
-	// 返回模板的列表。
 
+	// 返回模板的列表。
 	Templates      *[]TemplateInfo `json:"templates,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

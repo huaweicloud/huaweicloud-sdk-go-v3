@@ -8,17 +8,17 @@ import (
 
 // Response Object
 type ListStatisticsApiResponse struct {
+
 	// 响应码
-
 	Code *string `json:"code,omitempty"`
+
 	// 开始时间的UTC的时间戳
-
 	StartTime *int64 `json:"start_time,omitempty"`
+
 	// 截止时间的UTC的时间戳
-
 	EndTime *int64 `json:"end_time,omitempty"`
-	// 统计指标的数据结构结构体
 
+	// 统计指标的数据结构结构体
 	List           *[]StatisticsApi `json:"list,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

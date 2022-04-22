@@ -8,11 +8,11 @@ import (
 
 // 密钥描述信息。
 type KeyDescriptionInfo struct {
+
 	// 密钥ID。
-
 	KeyId *string `json:"key_id,omitempty"`
-	// 密钥描述。
 
+	// 密钥描述。
 	KeyDescription *string `json:"key_description,omitempty"`
 }
 

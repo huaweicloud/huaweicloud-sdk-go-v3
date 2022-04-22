@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ListConfsRequest struct {
-	// 指定查询集群ID。
 
+	// 指定查询集群ID。
 	ClusterId string `json:"cluster_id"`
 }
 

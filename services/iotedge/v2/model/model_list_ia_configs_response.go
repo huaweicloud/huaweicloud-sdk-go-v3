@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListIaConfigsResponse struct {
-	// 南向3rdIA配置项列表
 
+	// 南向3rdIA配置项列表
 	Configs        *[]QueryIaConfigResponseDto `json:"configs,omitempty"`
 	HttpStatusCode int                         `json:"-"`
 }

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type SendMessagesResponse struct {
-	// 消息列表。
 
+	// 消息列表。
 	Messages       *[]SendMessagesRespMessages `json:"messages,omitempty"`
 	HttpStatusCode int                         `json:"-"`
 }

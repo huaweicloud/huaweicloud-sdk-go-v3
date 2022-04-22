@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowPipelineJobResponse struct {
-	// 管道作业详细配置，每个作业可选择不同的算子进行组合，各算子的使用方法详见：数据管道算子配置指南。
 
+	// 管道作业详细配置，每个作业可选择不同的算子进行组合，各算子的使用方法详见：数据管道算子配置指南。
 	PipelineConfig map[string]interface{} `json:"pipeline_config,omitempty"`
 
 	PipelineInfo   *PipelineJobInfoDto `json:"pipeline_info,omitempty"`

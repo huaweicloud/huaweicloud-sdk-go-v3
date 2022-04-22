@@ -11,17 +11,17 @@ import (
 
 // 返回值
 type InstancesResponseInstancesVoResult struct {
+
 	// 链接
-
 	Link *string `json:"link,omitempty"`
+
 	// cpu架构 x86|arm
-
 	Arch *InstancesResponseInstancesVoResultArch `json:"arch,omitempty"`
+
 	// 实例id
-
 	Id *string `json:"id,omitempty"`
-	// 是否私有平台
 
+	// 是否私有平台
 	Private *bool `json:"private,omitempty"`
 }
 

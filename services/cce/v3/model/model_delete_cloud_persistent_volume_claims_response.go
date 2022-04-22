@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type DeleteCloudPersistentVolumeClaimsResponse struct {
+
 	// API版本，固定值**v1**
-
 	ApiVersion *string `json:"apiVersion,omitempty"`
-	// API类型，固定值**PersistentVolumeClaim**
 
+	// API类型，固定值**PersistentVolumeClaim**
 	Kind *string `json:"kind,omitempty"`
 
 	Metadata *PersistentVolumeClaimMetadata `json:"metadata,omitempty"`

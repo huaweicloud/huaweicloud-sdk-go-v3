@@ -10,17 +10,17 @@ import (
 )
 
 type CreateRepoRequestBody struct {
+
 	// 镜像仓库名称。小写字母或数字开头，后面跟小写字母、数字、小数点、斜杠、下划线或中划线（其中下划线最多允许连续两个，小数点、斜杠、下划线、中划线不能直接相连），小写字母或数字结尾，1-128个字符。
-
 	Repository string `json:"repository"`
+
 	// 是否为公共仓库，可选值为true或false。
-
 	IsPublic bool `json:"is_public"`
+
 	// 仓库类型，可设置为app_server, linux, framework_app, database, lang, other, windows, arm。
-
 	Category *CreateRepoRequestBodyCategory `json:"category,omitempty"`
-	// 镜像仓库的描述信息。
 
+	// 镜像仓库的描述信息。
 	Description *string `json:"description,omitempty"`
 }
 

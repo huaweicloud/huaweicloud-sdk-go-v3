@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowServerRequest struct {
-	// 源端服务器在主机迁移服务中的id
 
+	// 源端服务器在主机迁移服务中的id
 	SourceId string `json:"source_id"`
 }
 

@@ -7,16 +7,16 @@ import (
 )
 
 type ProbeDto struct {
-	// 执行探测的命令行命令
 
+	// 执行探测的命令行命令
 	ExecCommand *string `json:"exec_command,omitempty"`
 
 	HttpGet *HttpGetDto `json:"http_get,omitempty"`
+
 	// 表示从工作负载启动后从多久开始探测
-
 	InitialDelaySeconds int32 `json:"initial_delay_seconds"`
-	// 表示探测超时时间
 
+	// 表示探测超时时间
 	TimeoutSeconds int32 `json:"timeout_seconds"`
 }
 

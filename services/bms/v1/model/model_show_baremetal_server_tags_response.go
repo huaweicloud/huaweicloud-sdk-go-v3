@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowBaremetalServerTagsResponse struct {
-	//
 
+	//
 	Tags           *[]BaremetalServerTag `json:"tags,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

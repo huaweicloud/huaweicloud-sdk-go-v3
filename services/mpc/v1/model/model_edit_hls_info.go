@@ -7,8 +7,8 @@ import (
 )
 
 type EditHlsInfo struct {
-	// 切片间隔。
 
+	// 切片间隔。
 	Interval *int32 `json:"interval,omitempty"`
 }
 

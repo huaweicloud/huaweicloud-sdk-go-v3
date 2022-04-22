@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowBlockchainNodesResponse struct {
-	// key:组织名，value：组织详细信息
 
+	// key:组织名，value：组织详细信息
 	NodeOrgs       map[string]Org `json:"node_orgs,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

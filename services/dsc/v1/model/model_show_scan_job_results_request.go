@@ -11,23 +11,23 @@ import (
 
 // Request Object
 type ShowScanJobResultsRequest struct {
+
 	// 任务ID
-
 	JobId string `json:"job_id"`
+
 	// 页码
-
 	Offset *int32 `json:"offset,omitempty"`
+
 	// 分页大小
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 资产类型
-
 	Type *ShowScanJobResultsRequestType `json:"type,omitempty"`
-	// 预留，待启用
 
+	// 预留，待启用
 	StartTime *string `json:"start_time,omitempty"`
-	// 预留，待启用
 
+	// 预留，待启用
 	EndTime *string `json:"end_time,omitempty"`
 }
 

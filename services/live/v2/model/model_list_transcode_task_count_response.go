@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListTranscodeTaskCountResponse struct {
-	// 时间戳及相应时间的数值。
 
+	// 时间戳及相应时间的数值。
 	TranscodeDataList *[]TranscodeCountData `json:"transcode_data_list,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

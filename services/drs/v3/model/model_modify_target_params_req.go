@@ -11,11 +11,11 @@ import (
 
 // 修改数据库参数请求体
 type ModifyTargetParamsReq struct {
+
 	// 参数分组
-
 	Group ModifyTargetParamsReqGroup `json:"group"`
-	// 修改的参数信息
 
+	// 修改的参数信息
 	Params []ParamsReqBean `json:"params"`
 }
 

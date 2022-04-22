@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ImportAssetRequest struct {
-	// 实例ID
 
+	// 实例ID
 	InstanceId string `json:"instance_id"`
 
-	Body *string `json:"body,omitempty"`
+	Body string `json:"body,omitempty"`
 }
 
 func (o ImportAssetRequest) String() string {

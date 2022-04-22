@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteImageTagRequest struct {
+
 	// 镜像ID。
-
 	ImageId string `json:"image_id"`
-	// 要删除的标签的键。
 
+	// 要删除的标签的键。
 	Key string `json:"key"`
 }
 

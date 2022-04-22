@@ -7,8 +7,8 @@ import (
 )
 
 type NodeItem struct {
-	// 节点ID
 
+	// 节点ID
 	Uid string `json:"uid"`
 }
 

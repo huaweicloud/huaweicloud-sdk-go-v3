@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type ListCloudConnectionsResponse struct {
-	// 云连接实例列表。
 
+	// 云连接实例列表。
 	CloudConnections *[]CloudConnection `json:"cloud_connections,omitempty"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`
-	// 请求ID。
 
+	// 请求ID。
 	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

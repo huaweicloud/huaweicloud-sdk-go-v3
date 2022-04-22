@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type BatchDeleteMqsInstanceTopicResponse struct {
-	// 待删除的topic列表。
 
+	// 待删除的topic列表。
 	Topics         *[]BatchDeleteMqsInstanceTopicRespTopics `json:"topics,omitempty"`
 	HttpStatusCode int                                      `json:"-"`
 }

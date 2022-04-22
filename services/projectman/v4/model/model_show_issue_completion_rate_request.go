@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowIssueCompletionRateRequest struct {
-	// devcloud的项目id
 
+	// devcloud的项目id
 	ProjectId string `json:"project_id"`
 }
 

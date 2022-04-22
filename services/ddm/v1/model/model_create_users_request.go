@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateUsersRequest struct {
-	// DDM实例ID。
 
+	// DDM实例ID。
 	InstanceId string `json:"instance_id"`
 
 	Body *CreateUsersReq `json:"body,omitempty"`

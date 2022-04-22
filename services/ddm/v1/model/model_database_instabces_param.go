@@ -8,14 +8,14 @@ import (
 
 // used_rds参数说明
 type DatabaseInstabcesParam struct {
+
 	// 逻辑库关联的RDS的id
-
 	Id string `json:"id"`
+
 	// 关联RDS实例的用户。
-
 	AdminUser string `json:"adminUser"`
-	// 关联RDS实例的密码。
 
+	// 关联RDS实例的密码。
 	AdminPassword string `json:"adminPassword"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type CreateRemuxTaskResponse struct {
-	// 任务ID
 
+	// 任务ID
 	TaskId         *string `json:"task_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

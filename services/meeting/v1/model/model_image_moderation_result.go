@@ -8,8 +8,8 @@ import (
 
 // 图片审核结果
 type ImageModerationResult struct {
-	// 审核情况
 
+	// 审核情况
 	Suggestion *string `json:"suggestion,omitempty"`
 
 	CategorySuggestions *CategorySuggestions `json:"category_suggestions,omitempty"`

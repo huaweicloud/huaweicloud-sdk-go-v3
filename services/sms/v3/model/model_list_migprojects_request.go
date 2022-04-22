@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ListMigprojectsRequest struct {
+
 	// 每一页记录的迁移项目
-
 	Limit *int32 `json:"limit,omitempty"`
-	// 偏移量
 
+	// 偏移量
 	Offset *int32 `json:"offset,omitempty"`
 }
 

@@ -11,11 +11,11 @@ import (
 
 // Request Object
 type CreateSpaceAnalysisTaskRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 语言
 
+	// 语言
 	XLanguage *CreateSpaceAnalysisTaskRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *CreateSpaceAnalysisTaskBody `json:"body,omitempty"`

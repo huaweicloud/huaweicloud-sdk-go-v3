@@ -8,11 +8,11 @@ import (
 
 // 保护实例挂载信息结构
 type ProtectedInstanceAttachment struct {
+
 	// 复制对ID。
-
 	Replication string `json:"replication"`
-	// 挂载点。
 
+	// 挂载点。
 	Device string `json:"device"`
 }
 

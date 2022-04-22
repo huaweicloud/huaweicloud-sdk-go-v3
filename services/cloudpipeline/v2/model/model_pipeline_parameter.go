@@ -7,11 +7,11 @@ import (
 )
 
 type PipelineParameter struct {
+
 	// 参数名称
-
 	Name string `json:"name"`
-	// 参数值
 
+	// 参数值
 	Value string `json:"value"`
 }
 

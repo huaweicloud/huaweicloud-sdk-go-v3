@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type CreateBareMetalServersResponse struct {
+
 	// 订单ID
-
 	OrderId *string `json:"order_id,omitempty"`
-	// 任务ID
 
+	// 任务ID
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

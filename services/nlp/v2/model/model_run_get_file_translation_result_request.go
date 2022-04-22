@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type RunGetFileTranslationResultRequest struct {
-	// 文档翻译任务标识符。通过文档翻译接口获取。
 
+	// 文档翻译任务标识符。通过文档翻译接口获取。
 	JobId string `json:"job_id"`
 }
 

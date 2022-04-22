@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListTemplateResponse struct {
+
 	// 转码模板
-
 	TemplateArray *[]TemplateInfo `json:"template_array,omitempty"`
-	// 转码模板总数
 
+	// 转码模板总数
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

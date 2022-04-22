@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateDbUserResponse struct {
-	// 修改结果，修改成功返回OK
 
+	// 修改结果，修改成功返回OK
 	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

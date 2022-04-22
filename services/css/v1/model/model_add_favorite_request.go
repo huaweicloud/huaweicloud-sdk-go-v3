@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type AddFavoriteRequest struct {
-	// 指定待添加的集群ID。
 
+	// 指定待添加的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *AddFavoriteReq `json:"body,omitempty"`

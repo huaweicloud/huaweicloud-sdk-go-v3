@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListEventsResponse struct {
-	// 一条或者多条事件数据。
 
+	// 一条或者多条事件数据。
 	Events *[]EventInfo `json:"events,omitempty"`
 
 	MetaData       *TotalMetaData `json:"meta_data,omitempty"`

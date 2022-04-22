@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type BatchDeleteIssuesV4Request struct {
-	// devcloud的项目id
 
+	// devcloud的项目id
 	ProjectId string `json:"project_id"`
 
 	Body *BatchDelelteIssuesRequestV4 `json:"body,omitempty"`

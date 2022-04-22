@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateUserRequest struct {
+
 	// DDM实例ID。
-
 	InstanceId string `json:"instance_id"`
-	// 需要修改的DDM帐号名称。
 
+	// 需要修改的DDM帐号名称。
 	Username string `json:"username"`
 
 	Body *UpdateUserReq `json:"body,omitempty"`

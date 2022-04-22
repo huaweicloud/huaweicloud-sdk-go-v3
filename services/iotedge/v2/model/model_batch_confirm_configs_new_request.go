@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type BatchConfirmConfigsNewRequest struct {
+
 	// 边缘节点ID
-
 	NodeId string `json:"node_id"`
-	// 边侧第三方应用的模块ID
 
+	// 边侧第三方应用的模块ID
 	IaId string `json:"ia_id"`
 
 	Body *ConfirmIaConfigsRequestBody `json:"body,omitempty"`

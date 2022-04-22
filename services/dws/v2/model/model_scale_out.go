@@ -8,8 +8,8 @@ import (
 
 // 扩容集群详情
 type ScaleOut struct {
-	// 扩容节点数
 
+	// 扩容节点数。
 	Count int32 `json:"count"`
 }
 

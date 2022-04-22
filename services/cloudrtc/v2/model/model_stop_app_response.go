@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type StopAppResponse struct {
-	// 应用id
 
+	// 应用id
 	AppId *string `json:"app_id,omitempty"`
 
 	State *AppState `json:"state,omitempty"`

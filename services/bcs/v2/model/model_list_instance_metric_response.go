@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListInstanceMetricResponse struct {
-	// 指标对象列表。
 
+	// 指标对象列表。
 	Metrics        *[]MetricItemResultApi `json:"metrics,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

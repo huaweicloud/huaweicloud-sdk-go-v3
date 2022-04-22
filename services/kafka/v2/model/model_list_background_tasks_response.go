@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListBackgroundTasksResponse struct {
+
 	// 任务数量。
-
 	TaskCount *string `json:"task_count,omitempty"`
-	// 任务列表。
 
+	// 任务列表。
 	Tasks          *[]ListBackgroundTasksRespTasks `json:"tasks,omitempty"`
 	HttpStatusCode int                             `json:"-"`
 }

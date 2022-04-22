@@ -11,11 +11,11 @@ import (
 
 // 源端复制状态
 type PutCopyStateReq struct {
+
 	// 源端服务器状
-
 	Copystate *PutCopyStateReqCopystate `json:"copystate,omitempty"`
-	// 迁移周期
 
+	// 迁移周期
 	Migrationcycle *PutCopyStateReqMigrationcycle `json:"migrationcycle,omitempty"`
 }
 

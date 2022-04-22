@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowRefundOrderDetailsResponse struct {
+
 	// 查询总数。
-
 	TotalCount *int32 `json:"total_count,omitempty"`
-	// 资源信息列表。 具体请参见表2。
 
+	// 资源信息列表。 具体请参见表2。
 	RefundInfos    *[]OrderRefundInfoV2 `json:"refund_infos,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

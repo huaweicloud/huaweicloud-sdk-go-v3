@@ -11,23 +11,23 @@ import (
 
 // Response Object
 type UpdateNotificationResponse struct {
+
 	// 订阅ID
-
 	NotificationId *int64 `json:"notification_id,omitempty"`
+
 	// 订阅类型, 0:设备上线通知类型, 1:设备下线通知类型, 2:设备添加通知类型, 3:设备删除通知类型, 4:设备变更通知类型
-
 	Type *UpdateNotificationResponseType `json:"type,omitempty"`
+
 	// 订阅管理状态，0：启用，1：停用
-
 	Status *UpdateNotificationResponseStatus `json:"status,omitempty"`
+
 	// 订阅的topic名称
-
 	Topic *string `json:"topic,omitempty"`
+
 	// 实例ID
-
 	InstanceId *string `json:"instance_id,omitempty"`
-	// 应用ID
 
+	// 应用ID
 	AppId          *string `json:"app_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,11 +8,11 @@ import (
 
 // 数据库对象信息体
 type DatabaseObjectVo struct {
+
 	// 数据库对象和数据库表名称，例如格式为hec-*-*-drs_test1。
-
 	Id string `json:"id"`
-	// 是否选择高级配置，值为true。
 
+	// 是否选择高级配置，值为true。
 	Select string `json:"select"`
 }
 

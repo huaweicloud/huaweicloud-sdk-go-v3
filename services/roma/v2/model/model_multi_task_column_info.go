@@ -7,14 +7,14 @@ import (
 )
 
 type MultiTaskColumnInfo struct {
+
 	// 字段名
-
 	FieldName *string `json:"field_name,omitempty"`
+
 	// 字段类型
-
 	FieldType *string `json:"field_type,omitempty"`
-	// 字段长度
 
+	// 字段长度
 	FieldLength *string `json:"field_length,omitempty"`
 }
 

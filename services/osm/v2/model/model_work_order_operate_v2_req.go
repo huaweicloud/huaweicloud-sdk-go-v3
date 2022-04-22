@@ -7,17 +7,17 @@ import (
 )
 
 type WorkOrderOperateV2Req struct {
+
 	// 评价内容
-
 	Judgement *string `json:"judgement,omitempty"`
+
 	// 操作描述
-
 	OperateDesc *string `json:"operate_desc,omitempty"`
+
 	// 组id
-
 	GroupId *string `json:"group_id,omitempty"`
-	// 工单满意度列表
 
+	// 工单满意度列表
 	IncidentSatisfactionList *[]IncidentSatisfactionV2Do `json:"incident_satisfaction_list,omitempty"`
 }
 

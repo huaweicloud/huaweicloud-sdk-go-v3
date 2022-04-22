@@ -7,14 +7,14 @@ import (
 )
 
 type UrlCountItem struct {
+
 	// 攻击类型
-
 	Key *string `json:"key,omitempty"`
+
 	// 数量
-
 	Num *int32 `json:"num,omitempty"`
-	// 域名
 
+	// 域名
 	Host *string `json:"host,omitempty"`
 }
 

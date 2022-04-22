@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowLastPropertyValueResponse struct {
-	// 查询到的资产属性列表
 
+	// 查询到的资产属性列表
 	Properties     *[]AssetPropertyLastValue `json:"properties,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

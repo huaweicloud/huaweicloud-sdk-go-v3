@@ -10,8 +10,8 @@ import (
 )
 
 type AutoScalingPolicyReqV11 struct {
-	// 弹性伸缩规则适用的节点类型，当前只支持task节点。
 
+	// 弹性伸缩规则适用的节点类型，当前只支持task节点。
 	NodeGroup AutoScalingPolicyReqV11NodeGroup `json:"node_group"`
 
 	AutoScalingPolicy *AutoScalingPolicy `json:"auto_scaling_policy"`

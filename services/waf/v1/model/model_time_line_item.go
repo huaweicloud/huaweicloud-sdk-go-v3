@@ -7,11 +7,11 @@ import (
 )
 
 type TimeLineItem struct {
+
 	// 时间点
-
 	Time *int64 `json:"time,omitempty"`
-	// 数量
 
+	// 数量
 	Num *int32 `json:"num,omitempty"`
 }
 

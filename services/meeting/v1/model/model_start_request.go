@@ -8,11 +8,11 @@ import (
 
 // 开始会议请求参数
 type StartRequest struct {
+
 	// 会议ID
-
 	ConferenceID string `json:"conferenceID"`
-	// 主席密码
 
+	// 主席密码
 	Password string `json:"password"`
 }
 

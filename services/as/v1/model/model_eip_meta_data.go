@@ -8,14 +8,14 @@ import (
 
 // 用户自定义键值对
 type EipMetaData struct {
+
 	// 伸缩带宽策略中带宽对应的共享类型。
-
 	MetadataBandwidthShareType *string `json:"metadata_bandwidth_share_type,omitempty"`
+
 	// 伸缩带宽策略中带宽对应的EIP的ID。
-
 	MetadataEipId *string `json:"metadata_eip_id,omitempty"`
-	// 伸缩带宽策略中带宽对应的EIP地址。
 
+	// 伸缩带宽策略中带宽对应的EIP地址。
 	MetadataeipAddress *string `json:"metadataeip_address,omitempty"`
 }
 

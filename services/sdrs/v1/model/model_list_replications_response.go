@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListReplicationsResponse struct {
+
 	// 复制对列表。
-
 	Replications *[]ShowReplicationParams `json:"replications,omitempty"`
-	// 列表中包含的复制对个数。
 
+	// 列表中包含的复制对个数。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

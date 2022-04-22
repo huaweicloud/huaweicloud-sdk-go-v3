@@ -8,11 +8,11 @@ import (
 
 // ntp配置
 type NtpConfigs struct {
+
 	// ntp服务是否开启
-
 	NtpEnabled *bool `json:"ntp_enabled,omitempty"`
-	// ntp server地址
 
+	// ntp server地址
 	Ntpservers *[]string `json:"ntpservers,omitempty"`
 }
 

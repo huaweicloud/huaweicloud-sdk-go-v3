@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ShowDomainStatsResponse struct {
-	// 按指定的分组方式组织的数据
 
+	// 按指定的分组方式组织的数据
 	Result         map[string]interface{} `json:"result,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

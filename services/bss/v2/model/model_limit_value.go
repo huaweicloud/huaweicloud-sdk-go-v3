@@ -7,11 +7,11 @@ import (
 )
 
 type LimitValue struct {
+
 	// 属性值1。
-
 	Value1 *string `json:"value1,omitempty"`
-	// 属性值2。
 
+	// 属性值2。
 	Value2 *string `json:"value2,omitempty"`
 }
 

@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowHealthMonitorRequest struct {
-	// 健康检查ID。
 
+	// 健康检查ID。
 	HealthmonitorId string `json:"healthmonitor_id"`
 }
 

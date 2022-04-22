@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type SwitchRiskRuleResponse struct {
-	// 响应状态
 
+	// 响应状态
 	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

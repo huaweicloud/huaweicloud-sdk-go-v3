@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListDeploymentsResponse struct {
+
 	// 部署计划列表的总和。
-
 	Count *int32 `json:"count,omitempty"`
-	// 部署计划列表。
 
+	// 部署计划列表。
 	Deployments    *[]Deployment `json:"deployments,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

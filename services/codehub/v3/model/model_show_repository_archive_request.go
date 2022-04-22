@@ -8,14 +8,14 @@ import (
 
 // Request Object
 type ShowRepositoryArchiveRequest struct {
+
 	// 仓库的uuid
-
 	RepositoryUuid string `json:"repository_uuid"`
+
 	// 分支名称
-
 	Sha string `json:"sha"`
-	// 下载的压缩包格式
 
+	// 下载的压缩包格式
 	Format string `json:"format"`
 }
 

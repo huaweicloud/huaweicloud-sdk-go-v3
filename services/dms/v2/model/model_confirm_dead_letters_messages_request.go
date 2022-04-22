@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ConfirmDeadLettersMessagesRequest struct {
+
 	// 队列ID。
-
 	QueueId string `json:"queue_id"`
-	// 消费组ID。
 
+	// 消费组ID。
 	ConsumerGroupId string `json:"consumer_group_id"`
 
 	Body *ConfirmDeadLettersMessagesReq `json:"body,omitempty"`

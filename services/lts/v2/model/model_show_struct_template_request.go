@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type ShowStructTemplateRequest struct {
+
 	// 日志组ID
-
 	LogGroupId string `json:"logGroupId"`
-	// 日志流ID
 
+	// 日志流ID
 	LogStreamId string `json:"logStreamId"`
 }
 

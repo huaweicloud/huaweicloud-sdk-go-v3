@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type ShowServerTagsRequest struct {
-	// 云服务器ID。
 
+	// 云服务器ID。
 	ServerId string `json:"server_id"`
 }
 

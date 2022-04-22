@@ -8,8 +8,8 @@ import (
 
 // 期望值设置的时间信息
 type ValueInTwinExceptedMetadata struct {
-	// 修改时间，UNIX timestamp格式
 
+	// 修改时间，UNIX timestamp格式
 	Timestamp *string `json:"timestamp,omitempty"`
 }
 

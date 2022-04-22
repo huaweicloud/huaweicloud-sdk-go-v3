@@ -8,11 +8,11 @@ import (
 
 // API的URL地址。
 type ShowApiVersionLinksParams struct {
+
 	// 链接的描述
-
 	Rel string `json:"rel"`
-	// 版本号查询链接
 
+	// 版本号查询链接
 	Href string `json:"href"`
 }
 

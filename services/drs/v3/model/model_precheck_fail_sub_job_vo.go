@@ -8,14 +8,14 @@ import (
 
 // 预检查失败子任务信息体
 type PrecheckFailSubJobVo struct {
+
 	// 预检查失败子任务id。
-
 	Id *string `json:"id,omitempty"`
+
 	// 预检查失败子任务名称。
-
 	Name *string `json:"name,omitempty"`
-	// 检查结果。
 
+	// 检查结果。
 	CheckResult *string `json:"check_result,omitempty"`
 }
 

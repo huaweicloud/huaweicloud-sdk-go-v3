@@ -9,14 +9,14 @@ import (
 // 负载均衡器
 type ModifyLb struct {
 	LbaasListener *LbaasListener `json:"lbaas_listener,omitempty"`
+
 	// 经典型负载均衡器信息
-
 	Listener *string `json:"listener,omitempty"`
+
 	// 负载均衡器迁移失败原因。
-
 	FailedReason *string `json:"failed_reason,omitempty"`
-	// 负载均衡器迁移失败详情。
 
+	// 负载均衡器迁移失败详情。
 	FailedDetails *string `json:"failed_details,omitempty"`
 }
 

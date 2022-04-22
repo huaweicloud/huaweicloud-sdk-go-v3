@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type BatchDeleteLoadbalancerTagsRequest struct {
-	// 负载均衡器ID。
 
+	// 负载均衡器ID。
 	LoadbalancerId string `json:"loadbalancer_id"`
 
 	Body *BatchDeleteLoadbalancerTagsRequestBody `json:"body,omitempty"`

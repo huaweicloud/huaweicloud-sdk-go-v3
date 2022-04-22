@@ -10,8 +10,8 @@ import (
 )
 
 type OutputSetting struct {
-	// 剪切或拼接的输出封装格式。
 
+	// 剪切或拼接的输出封装格式。
 	Format *OutputSettingFormat `json:"format,omitempty"`
 
 	Video *EditVideoInfo `json:"video,omitempty"`

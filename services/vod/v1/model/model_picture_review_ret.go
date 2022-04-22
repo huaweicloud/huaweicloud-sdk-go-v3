@@ -11,23 +11,23 @@ import (
 
 // 图片审核结果
 type PictureReviewRet struct {
+
 	// 检测结果是否通过。  取值如下： - block：包含敏感信息，不通过。 - pass：不包含敏感信息，通过。 - review：需要人工复检。
-
 	Suggestion *PictureReviewRetSuggestion `json:"suggestion,omitempty"`
+
 	// 截图在视频中的时间偏移值。封面不涉及此字段  单位：秒。
-
 	Offset *int32 `json:"offset,omitempty"`
+
 	// 对应截图/封面的访问URL。
-
 	Url string `json:"url"`
+
 	// 政治因素审核结果。
-
 	Politics *[]ReviewDetail `json:"politics,omitempty"`
+
 	// 暴恐元素审核结果。
-
 	Terrorism *[]ReviewDetail `json:"terrorism,omitempty"`
-	// 涉黄内容审核结果。
 
+	// 涉黄内容审核结果。
 	Porn *[]ReviewDetail `json:"porn,omitempty"`
 }
 

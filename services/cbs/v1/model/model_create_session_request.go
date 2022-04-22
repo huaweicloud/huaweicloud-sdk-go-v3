@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateSessionRequest struct {
-	// 机器人标识符。
 
+	// 机器人标识符。
 	QabotId string `json:"qabot_id"`
 }
 

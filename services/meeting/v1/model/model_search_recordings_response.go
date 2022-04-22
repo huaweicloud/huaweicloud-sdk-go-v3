@@ -8,17 +8,17 @@ import (
 
 // Response Object
 type SearchRecordingsResponse struct {
+
 	// 第几条。
-
 	Offset *int32 `json:"offset,omitempty"`
+
 	// 每页的记录数。
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 总记录数。
-
 	Count *int32 `json:"count,omitempty"`
-	// 录播文件列表。
 
+	// 录播文件列表。
 	Data           *[]RecordResultDo `json:"data,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

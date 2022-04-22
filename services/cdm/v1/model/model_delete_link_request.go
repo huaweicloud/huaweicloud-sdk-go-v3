@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type DeleteLinkRequest struct {
+
 	// 集群ID
-
 	ClusterId string `json:"cluster_id"`
-	// 需要删除的连接名
 
+	// 需要删除的连接名
 	LinkName string `json:"link_name"`
 }
 

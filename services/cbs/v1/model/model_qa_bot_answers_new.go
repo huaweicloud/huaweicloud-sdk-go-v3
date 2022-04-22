@@ -8,11 +8,11 @@ import (
 
 //
 type QaBotAnswersNew struct {
+
 	// 问答机器人回复。
-
 	Answers *[]QaBotAnswer `json:"answers,omitempty"`
-	// 问答机器人推荐问题
 
+	// 问答机器人推荐问题
 	RecommendAnswers *[]RecomendAnswer `json:"recommend_answers,omitempty"`
 }
 

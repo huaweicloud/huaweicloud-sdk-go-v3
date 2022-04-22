@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListSubnetTagsResponse struct {
-	// tag对象列表
 
+	// tag对象列表
 	Tags           *[]ListTag `json:"tags,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdateCustomAuthorizerV2Request struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
-	// 自定义认证的编号
 
+	// 自定义认证的编号
 	AuthorizerId string `json:"authorizer_id"`
 
 	Body *AuthorizerCreate `json:"body,omitempty"`

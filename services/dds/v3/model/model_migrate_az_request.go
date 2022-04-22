@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type MigrateAzRequest struct {
-	// 实例ID。
 
+	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
 	Body *MigrateAzRequestBody `json:"body,omitempty"`

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListEdgeCloudResponse struct {
+
 	// 边缘业务数量。
-
 	Count *int32 `json:"count,omitempty"`
-	// 边缘业务列表。
 
+	// 边缘业务列表。
 	Edgeclouds     *[]EdgeCloud `json:"edgeclouds,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

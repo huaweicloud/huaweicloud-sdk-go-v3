@@ -8,11 +8,11 @@ import (
 
 // 更新项目信息
 type UpdateProjectRequestV4 struct {
+
 	// 项目描述
-
 	Description *string `json:"description,omitempty"`
-	// 项目名
 
+	// 项目名
 	ProjectName string `json:"project_name"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type UpdateDatabaseInfoResponse struct {
+
 	// DDM实例id。
-
 	InstanceId *string `json:"instanceId,omitempty"`
-	// 任务ID。
 
+	// 任务ID。
 	JobId          *string `json:"jobId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

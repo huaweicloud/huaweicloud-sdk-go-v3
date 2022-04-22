@@ -8,8 +8,8 @@ import (
 
 // Request Object
 type CreateKmsTagRequest struct {
-	// 密钥ID
 
+	// 密钥ID
 	KeyId string `json:"key_id"`
 
 	Body *CreateKmsTagRequestBody `json:"body,omitempty"`

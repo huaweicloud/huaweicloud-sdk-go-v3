@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListRtcAbnormalEventsResponse struct {
+
 	// 异常总数
-
 	Total *int32 `json:"total,omitempty"`
-	// 异常体验列表
 
+	// 异常体验列表
 	Events *[]AbnormalEvent `json:"events,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

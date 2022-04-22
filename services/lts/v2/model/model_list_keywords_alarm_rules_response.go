@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListKeywordsAlarmRulesResponse struct {
-	// 项目id
 
+	// 项目id
 	KeywordsAlarmRules *[]KeywordsAlarmRuleRespList `json:"keywords_alarm_rules,omitempty"`
 	HttpStatusCode     int                          `json:"-"`
 }

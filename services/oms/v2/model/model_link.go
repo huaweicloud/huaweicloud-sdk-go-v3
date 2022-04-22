@@ -8,11 +8,11 @@ import (
 
 // 链接信息。
 type Link struct {
+
 	// 链接地址。
-
 	Href *string `json:"href,omitempty"`
-	// 取值为“self”，表示href为本地链接。
 
+	// 取值为“self”，表示href为本地链接。
 	Rel *string `json:"rel,omitempty"`
 }
 

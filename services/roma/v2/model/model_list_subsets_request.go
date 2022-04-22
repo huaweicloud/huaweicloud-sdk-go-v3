@@ -11,26 +11,26 @@ import (
 
 // Request Object
 type ListSubsetsRequest struct {
+
 	// 实例ID
-
 	InstanceId string `json:"instance_id"`
+
 	// 设备ID
-
 	DeviceId int32 `json:"device_id"`
+
 	// 每页显示条目数量，最大数量999，超过999后只返回999
-
 	Limit *int32 `json:"limit,omitempty"`
+
 	// 设备名称
-
 	DeviceName *string `json:"device_name,omitempty"`
+
 	// 设备状态 0-启动 1-停用
-
 	Status *ListSubsetsRequestStatus `json:"status,omitempty"`
+
 	// 设备状态 0-未连接 1-在线 2-离线
-
 	OnlineStatus *ListSubsetsRequestOnlineStatus `json:"online_status,omitempty"`
-	// 偏移量，表示从此偏移量开始查询， offset大于等于0
 
+	// 偏移量，表示从此偏移量开始查询， offset大于等于0
 	Offset *int32 `json:"offset,omitempty"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListSubfilesResponse struct {
+
 	// 文件日志树
-
 	Trees *[]LogsTree `json:"trees,omitempty"`
-	// 记录总数
 
+	// 记录总数
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

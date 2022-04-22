@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListQpsTimelineResponse struct {
-	// 安全统计的时间线
 
+	// 安全统计的时间线
 	Body           *[]StatisticsTimelineItem `json:"body,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

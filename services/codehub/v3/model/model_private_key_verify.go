@@ -7,11 +7,11 @@ import (
 )
 
 type PrivateKeyVerify struct {
+
 	// 仓库UUID
-
 	RepositoryUuid string `json:"repository_uuid"`
-	// 私钥
 
+	// 私钥
 	PrivateKey string `json:"private_key"`
 }
 

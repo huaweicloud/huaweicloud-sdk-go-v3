@@ -7,11 +7,11 @@ import (
 )
 
 type CreateAndDeletePrivilegeReq struct {
+
 	// 执行的操作(create|delete)
-
 	Operation string `json:"operation"`
-	// 权限标识
 
+	// 权限标识
 	Privilege *string `json:"privilege,omitempty"`
 }
 
