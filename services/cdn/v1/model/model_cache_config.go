@@ -26,8 +26,8 @@ type CacheConfig struct {
 }
 
 type CacheUrlParamsConfig struct {
-	ParamType string `json:"param_type"` // reserve_params/del_params/"",表示保留参数，忽略参数，忽略所有
-	ParamValue string `json:"param_value"`
+	ParamsType string `json:"params_type"` // reserve_params/del_params/"",表示保留参数，忽略参数，忽略所有
+	ParamsValue string `json:"params_Value"`
 }
 
 func (o CacheConfig) String() string {
