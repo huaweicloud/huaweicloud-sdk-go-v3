@@ -42,7 +42,8 @@ type ListEventItems struct {
 	// 请求方法和路径
 	RequestLine *string `json:"request_line,omitempty"`
 
-	Headers *ListEventItemsHeaders `json:"headers,omitempty"`
+	// http请求header
+	Headers *interface{} `json:"headers,omitempty"`
 
 	// 请求cookie
 	Cookie *string `json:"cookie,omitempty"`
@@ -50,7 +51,10 @@ type ListEventItems struct {
 	// 响应码状态
 	Status *string `json:"status,omitempty"`
 
-	// 区域
+	// 处理时长
+	ProcessTime *int32 `json:"process_time,omitempty"`
+
+	// 地理位置
 	Region *string `json:"region,omitempty"`
 
 	// 域名id
@@ -64,6 +68,9 @@ type ListEventItems struct {
 
 	// 响应体
 	ResponseBody *string `json:"response_body,omitempty"`
+
+	// 请求体
+	RequestBody *string `json:"request_body,omitempty"`
 }
 
 func (o ListEventItems) String() string {

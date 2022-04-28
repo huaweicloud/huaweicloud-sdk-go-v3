@@ -11,6 +11,12 @@ type ShowTenantMetricRequest struct {
 
 	// 时间段，单位为分钟
 	Period *string `json:"period,omitempty"`
+
+	// 开始时间，精确到ms的时间戳
+	StartTime *string `json:"start_time,omitempty"`
+
+	// 结束时间，精确到ms的时间戳
+	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o ShowTenantMetricRequest) String() string {

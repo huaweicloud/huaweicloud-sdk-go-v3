@@ -54,7 +54,7 @@ type DriverLicenseResult struct {
 	AccumulatedScores *string `json:"accumulated_scores,omitempty"`
 
 	// 状态。
-	Status *[]DriverLicenseResultStatus `json:"status,omitempty"`
+	Status *[]string `json:"status,omitempty"`
 
 	// 生成时间。
 	GenerationDate *string `json:"generation_date,omitempty"`

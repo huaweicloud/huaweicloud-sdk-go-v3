@@ -9,10 +9,10 @@ import (
 // Request Object
 type ListPartnerAccountChangeRecordsRequest struct {
 
-	// 账户类型。BALANCE_TYPE_DEBIT：现金账户BALANCE_TYPE_CREDIT：信用账户
+	// 账户类型。BALANCE_TYPE_DEBIT：现金账户,BALANCE_TYPE_CREDIT：信用账户
 	BalanceType string `json:"balance_type"`
 
-	// 交易类型。RECHARGE：充值DEDEUCT：消费REFUND：退款RFROZEN：冻结TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户）ADJUST：调账（华为核销等）BEADJUST：经销商拨款BERETRIEVE：经销商回收BEUNBIND：解绑/关联模式切换导致的回收EXPIRED：过期清零BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户）TRADE_MODE_TRANSFER：交易模式变更SYSTEM：系统操作（购买标销合同的伙伴涉及该模式）COUPONCANCEL：代金券回收
+	// 交易类型。RECHARGE：充值,DEDEUCT：消费,REFUND：退款,RFROZEN：冻结,TRANS：转账，余额和保证金互换（老商务模式，当前已无保证金账户）,ADJUST：调账（华为核销等）,BEADJUST：经销商拨款,BERETRIEVE：经销商回收,BEUNBIND：解绑/关联模式切换导致的回收,EXPIRED：过期清零,BONUSCONVERT：奖励金转换（老商务模式，当前已无奖励金账户）,TRADE_MODE_TRANSFER：交易模式变更,SYSTEM：系统操作（购买标销合同的伙伴涉及该模式）,COUPONCANCEL：代金券回收
 	TradeType *string `json:"trade_type,omitempty"`
 
 	// 查询收支明细的开始日期。 说明： 东八区时间，格式为YYYY-MM-DD，如“2017-10-21”。默认值为一年前的当天日期。
@@ -27,7 +27,7 @@ type ListPartnerAccountChangeRecordsRequest struct {
 	// 每次查询的数量，默认值为10。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 精英服务商ID。获取方法请参见查询精英服务商列表。 说明： 华为云伙伴能力中心（一级经销商）查询精英服务商（二级经销商）的收支明细时，需携带此参数；否则只能查询自身的收支明细。
+	// 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 说明： 华为云伙伴能力中心（一级经销商）查询精英服务商（二级经销商）的收支明细时，需携带此参数；否则只能查询自身的收支明细。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

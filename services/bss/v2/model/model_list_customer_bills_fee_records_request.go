@@ -9,7 +9,7 @@ import (
 // Request Object
 type ListCustomerBillsFeeRecordsRequest struct {
 
-	// |zh_CN：中文 en_US：英文。默认为zh_CN：中文。|
+	// 语言。zh_CN：中文 en_US：英文。默认为zh_CN：中文。
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 查询的流水账单所在账期，格式为YYYY-MM。
@@ -18,13 +18,13 @@ type ListCustomerBillsFeeRecordsRequest struct {
 	// 服务商。1：华为云2：云市场为空时查询包含华为云和云市场在内的全部服务商。
 	ProviderType *int32 `json:"provider_type,omitempty"`
 
-	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
 
-	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用[查询资源类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256519451.html)接口获取。
 	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
 
-	// 云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+	// 云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
 	RegionCode *string `json:"region_code,omitempty"`
 
 	// 计费模式：1 : 包年/包月3：按需10：预留实例
@@ -36,7 +36,7 @@ type ListCustomerBillsFeeRecordsRequest struct {
 	// 订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。
 	TradeId *string `json:"trade_id,omitempty"`
 
-	// 企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+	// 企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 返回是否包含应付金额为0的记录。true：包含false：不包含

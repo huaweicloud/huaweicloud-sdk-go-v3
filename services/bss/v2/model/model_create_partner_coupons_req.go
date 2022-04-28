@@ -11,7 +11,7 @@ type CreatePartnerCouponsReq struct {
 	// 优惠券额度ID。该值在查询优惠券额度接口的响应参数中获取。
 	QuotaId string `json:"quota_id"`
 
-	// 客户账号ID。您可以调用查询客户列表接口获取customer_id。
+	// 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
 	CustomerIds []string `json:"customer_ids"`
 
 	// 代金券面值。 单位：元。取值大于0且精确到小数点后2位。
@@ -32,7 +32,7 @@ type CreatePartnerCouponsReq struct {
 	// 发券时的备注信息。
 	Memo *string `json:"memo,omitempty"`
 
-	// 精英服务商ID。获取方法请参见查询精英服务商列表。 精英服务商给子客户发放优惠券时，需要携带该参数。
+	// 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商给子客户发放优惠券时，需要携带该参数。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

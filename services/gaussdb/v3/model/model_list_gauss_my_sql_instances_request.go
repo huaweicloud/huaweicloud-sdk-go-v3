@@ -12,10 +12,10 @@ type ListGaussMySqlInstancesRequest struct {
 	// 语言。
 	XLanguage *string `json:"X-Language,omitempty"`
 
-	// 实例ID。 “*”为系统保留字符，如果id是以 “*”起始，表示按照 “*”后面的值模糊匹配，否则，按照id精确匹配查询。不能只传入 “*”。
+	// 实例ID。 \\“\\*\\”为系统保留字符，如果id是以 \\“\\*\\”起始，表示按照 \\“\\*\\”后面的值模糊匹配，否则，按照id精确匹配查询。不能只传入 \\“\\*\\”。
 	Id *string `json:"id,omitempty"`
 
-	// 实例名称。  “*”为系统保留字符，如果name是以 “*”起始，表示按照 “*”后面的值模糊匹配，否则，按照name精确匹配查询。不能只传入 “*”。
+	// 实例名称。  \\“\\*\\”为系统保留字符，如果name是以 \\“\\*\\”起始，表示按照 \\“\\*\\”后面的值模糊匹配，否则，按照name精确匹配查询。不能只传入 \\“\\*\\”。
 	Name *string `json:"name,omitempty"`
 
 	// 按照实例类型查询。目前仅支持Cluster。

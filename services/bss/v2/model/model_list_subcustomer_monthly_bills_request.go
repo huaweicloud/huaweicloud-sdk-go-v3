@@ -9,13 +9,13 @@ import (
 // Request Object
 type ListSubcustomerMonthlyBillsRequest struct {
 
-	// 客户账号ID。您可以调用查询客户列表接口获取customer_id。
+	// 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
 	CustomerId *string `json:"customer_id,omitempty"`
 
 	// 消费时间。格式固定为YYYY-MM。示例：2018-08
 	Cycle string `json:"cycle"`
 
-	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0000001256679455.html)接口获取。
 	CloudServiceType *string `json:"cloud_service_type,omitempty"`
 
 	// 计费模式。1：包年/包月3：按需
@@ -30,7 +30,7 @@ type ListSubcustomerMonthlyBillsRequest struct {
 	// 账单类型。0：消费1：退订2：华为核销
 	BillType *string `json:"bill_type,omitempty"`
 
-	// 精英服务商ID。获取方法请参见查询精英服务商列表。
+	// 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

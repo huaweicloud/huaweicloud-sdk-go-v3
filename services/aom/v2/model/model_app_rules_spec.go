@@ -36,7 +36,7 @@ type AppRulesSpec struct {
 	NameRule *NameRule `json:"nameRule"`
 
 	// 规则优先级。 1~9999的整数字符串,默认取值为9999
-	Priority string `json:"priority"`
+	Priority int32 `json:"priority"`
 }
 
 func (o AppRulesSpec) String() string {

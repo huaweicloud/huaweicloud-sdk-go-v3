@@ -12,7 +12,7 @@ type ListCustomerOrdersRequest struct {
 	// 订单ID。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
 	OrderId *string `json:"order_id,omitempty"`
 
-	// 客户账号ID。您可以调用查询客户列表接口获取customer_id。
+	// 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
 	CustomerId *string `json:"customer_id,omitempty"`
 
 	// 订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
@@ -45,7 +45,7 @@ type ListCustomerOrdersRequest struct {
 	// 订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
 	PaymentTimeEnd *string `json:"payment_time_end,omitempty"`
 
-	// 精英服务商ID。获取方法请参见查询精英服务商列表。华为云伙伴能力中心（一级经销商）查询精英服务商的客户订单列表时，需要携带该参数；否则只能查询自己客户的订单列表。
+	// 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商的客户订单列表时，需要携带该参数；否则只能查询自己客户的订单列表。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

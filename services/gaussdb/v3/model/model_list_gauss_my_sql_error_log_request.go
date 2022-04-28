@@ -31,7 +31,7 @@ type ListGaussMySqlErrorLogRequest struct {
 	Level *string `json:"level,omitempty"`
 
 	// 节点ID
-	NodeId *string `json:"node_id,omitempty"`
+	NodeId string `json:"node_id"`
 }
 
 func (o ListGaussMySqlErrorLogRequest) String() string {

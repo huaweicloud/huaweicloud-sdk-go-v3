@@ -18,14 +18,17 @@ type ValueListResponseBody struct {
 	// 引用表类型
 	Type *string `json:"type,omitempty"`
 
-	// 引用表描述
-	Description *string `json:"description,omitempty"`
-
 	// 引用表时间戳
 	Timestamp *int64 `json:"timestamp,omitempty"`
 
 	// 引用表的值
 	Values *[]string `json:"values,omitempty"`
+
+	// 引用表来源，1代表用户创建，其它值代表modulleX自动生成
+	Producer *int32 `json:"producer,omitempty"`
+
+	// 引用表描述
+	Description *string `json:"description,omitempty"`
 }
 
 func (o ValueListResponseBody) String() string {

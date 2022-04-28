@@ -9,16 +9,16 @@ import (
 // Request Object
 type ListCustomerselfResourceRecordsRequest struct {
 
-	// |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US。缺省为zh_CN|
+	// 语言：中文：zh_CN 英文：en_US。缺省为zh_CN
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 查询的资源消费记录所在账期，格式：YYYY-MM。
 	Cycle string `json:"cycle"`
 
-	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
 	CloudServiceType *string `json:"cloud_service_type,omitempty"`
 
-	// 云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+	// 云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
 	Region *string `json:"region,omitempty"`
 
 	// 计费模式。1：包年/包月3：按需10：预留实例
@@ -36,7 +36,7 @@ type ListCustomerselfResourceRecordsRequest struct {
 	// 资源ID。
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// 企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+	// 企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 返回是否包含应付金额为0的记录。true：包含false：不包含

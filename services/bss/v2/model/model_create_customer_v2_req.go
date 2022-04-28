@@ -32,7 +32,7 @@ type CreateCustomerV2Req struct {
 	// 合作类型。 1：顾问销售。 仅支持1，如果不传递，默认会创建成代售模式的客户。
 	CooperationType *string `json:"cooperation_type,omitempty"`
 
-	// 精英服务商ID。获取方法请参见查询精英服务商列表。
+	// 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 
 	// 是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。

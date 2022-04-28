@@ -14,6 +14,8 @@ type DeleteGaussMySqlProxyRequest struct {
 
 	// 实例ID
 	InstanceId string `json:"instance_id"`
+
+	Body *CloseMysqlProxyRequestBody `json:"body,omitempty"`
 }
 
 func (o DeleteGaussMySqlProxyRequest) String() string {

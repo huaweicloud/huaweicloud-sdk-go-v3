@@ -52,6 +52,22 @@ func (c *FunctionGraphClient) AsyncInvokeReservedFunction(request *model.AsyncIn
 	}
 }
 
+// 停止函数异步调用请求
+//
+// 停止函数异步调用请求
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) CancelAsyncInvocation(request *model.CancelAsyncInvocationRequest) (*model.CancelAsyncInvocationResponse, error) {
+	requestDef := GenReqDefForCancelAsyncInvocation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelAsyncInvocationResponse), nil
+	}
+}
+
 // 创建依赖包
 //
 // 创建依赖包。
@@ -943,6 +959,22 @@ func (c *FunctionGraphClient) ShowWorkflowExecution(request *model.ShowWorkflowE
 		return nil, err
 	} else {
 		return resp.(*model.ShowWorkflowExecutionResponse), nil
+	}
+}
+
+// 同步执行函数流
+//
+// 同步执行函数流
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) StartSyncWorkflowExecution(request *model.StartSyncWorkflowExecutionRequest) (*model.StartSyncWorkflowExecutionResponse, error) {
+	requestDef := GenReqDefForStartSyncWorkflowExecution()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartSyncWorkflowExecutionResponse), nil
 	}
 }
 

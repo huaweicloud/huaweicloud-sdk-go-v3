@@ -150,6 +150,22 @@ func (c *DevStarClient) DownloadApplicationCode(request *model.DownloadApplicati
 	}
 }
 
+// 部署任务执行变更人工审核
+//
+// 部署任务执行变更人工审核，终止或者继续部署任务
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DevStarClient) ConfirmDeploymentJob(request *model.ConfirmDeploymentJobRequest) (*model.ConfirmDeploymentJobResponse, error) {
+	requestDef := GenReqDefForConfirmDeploymentJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ConfirmDeploymentJobResponse), nil
+	}
+}
+
 // 创建部署任务
 //
 // 创建部署任务，并触发任务执行，当前只支持函数部署。

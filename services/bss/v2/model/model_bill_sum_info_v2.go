@@ -11,7 +11,7 @@ type BillSumInfoV2 struct {
 	// 客户账号ID。
 	CustomerId *string `json:"customer_id,omitempty"`
 
-	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
 	CloudServiceType *string `json:"cloud_service_type,omitempty"`
 
 	// 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。

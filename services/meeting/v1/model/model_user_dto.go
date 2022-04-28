@@ -59,6 +59,9 @@ type UserDto struct {
 
 	// 类型： * NORMAL_USER=普通用户 * HARD_TERMINAL=硬终端用户 * WHITE_BOARD=第三方白板 * HW_VISION_MEMBER=智慧屏
 	Type *string `json:"type,omitempty"`
+
+	// 部门编码列表
+	DeptCodes *[]string `json:"deptCodes,omitempty"`
 }
 
 func (o UserDto) String() string {

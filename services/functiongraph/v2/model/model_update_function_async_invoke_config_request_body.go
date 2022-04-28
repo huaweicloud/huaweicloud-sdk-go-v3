@@ -16,6 +16,9 @@ type UpdateFunctionAsyncInvokeConfigRequestBody struct {
 	MaxAsyncRetryAttempts *int32 `json:"max_async_retry_attempts,omitempty"`
 
 	DestinationConfig *FuncAsyncDestinationConfig `json:"destination_config,omitempty"`
+
+	// 开启异步调用状态持久化
+	EnableAsyncStatusLog *bool `json:"enable_async_status_log,omitempty"`
 }
 
 func (o UpdateFunctionAsyncInvokeConfigRequestBody) String() string {

@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -48,8 +51,8 @@ type DeleteHostResponse struct {
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
 	// 套餐付费模式，目前只支持prePaid预付款模式
-	PaidType       *string `json:"paid_type,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	PaidType       *DeleteHostResponsePaidType `json:"paid_type,omitempty"`
+	HttpStatusCode int                         `json:"-"`
 }
 
 func (o DeleteHostResponse) String() string {
@@ -59,4 +62,38 @@ func (o DeleteHostResponse) String() string {
 	}
 
 	return strings.Join([]string{"DeleteHostResponse", string(data)}, " ")
+}
+
+type DeleteHostResponsePaidType struct {
+	value string
+}
+
+type DeleteHostResponsePaidTypeEnum struct {
+	PRE_PAID DeleteHostResponsePaidType
+}
+
+func GetDeleteHostResponsePaidTypeEnum() DeleteHostResponsePaidTypeEnum {
+	return DeleteHostResponsePaidTypeEnum{
+		PRE_PAID: DeleteHostResponsePaidType{
+			value: "prePaid",
+		},
+	}
+}
+
+func (c DeleteHostResponsePaidType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DeleteHostResponsePaidType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

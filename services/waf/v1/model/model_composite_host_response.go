@@ -37,7 +37,7 @@ type CompositeHostResponse struct {
 
 	Flag *HostFlag `json:"flag,omitempty"`
 
-	// 域名所属WAF模式
+	// 域名所属WAF模式,cloud为云模式，premium为独享模式
 	WafType *string `json:"waf_type,omitempty"`
 }
 

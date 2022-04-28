@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// This is an auto create Body Object
 type BatchCreateNatGatewayDnatRulesRequestBody struct {
 
 	// DNAT规则批量创建对象的请求体。

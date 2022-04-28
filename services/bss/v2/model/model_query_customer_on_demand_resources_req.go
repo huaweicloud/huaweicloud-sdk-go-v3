@@ -8,7 +8,7 @@ import (
 
 type QueryCustomerOnDemandResourcesReq struct {
 
-	// 客户账号ID。 您可以调用查询客户列表接口获取customer_id。
+	// 客户账号ID。 您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
 	CustomerId string `json:"customer_id"`
 
 	// 云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
@@ -35,7 +35,7 @@ type QueryCustomerOnDemandResourcesReq struct {
 	// 资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
 	Status *int32 `json:"status,omitempty"`
 
-	// 精英服务商ID。获取方法请参见查询精英服务商列表。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。
+	// 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

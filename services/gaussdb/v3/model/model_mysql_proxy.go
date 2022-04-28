@@ -11,7 +11,7 @@ type MysqlProxy struct {
 	// Proxy实例id。
 	PoolId *string `json:"pool_id,omitempty"`
 
-	// Proxy实例开启状态。  取值范围：closed、open、frozen、opening、closing、enlarging、freezing和unfreezin。
+	// Proxy实例开启状态。  取值范围：closed、open、frozen、opening、closing、enlarging、freezing和unfreezing。
 	Status *string `json:"status,omitempty"`
 
 	// Proxy读写分离地址。
@@ -20,7 +20,7 @@ type MysqlProxy struct {
 	// Proxy端口信息。
 	Port *int32 `json:"port,omitempty"`
 
-	// Proxy实例状态。 取值范围：abnormal、normal、creating和deleted。
+	// Proxy实例状态。 取值范围：ACTIVE、BUILD、FAILED和DELETED。
 	PoolStatus *string `json:"pool_status,omitempty"`
 
 	// 延时阈值，单位：秒。
@@ -49,6 +49,9 @@ type MysqlProxy struct {
 
 	// Proxy规格信息。
 	FlavorRef *string `json:"flavor_ref,omitempty"`
+
+	// Proxy实例名称。
+	Name *string `json:"name,omitempty"`
 }
 
 func (o MysqlProxy) String() string {

@@ -12,7 +12,7 @@ type CreateClusterInfo struct {
 	// 节点类型
 	NodeType string `json:"node_type"`
 
-	// 集群节点数量，取值范围为3~32。
+	// 集群节点数量，取值范围为2~256。
 	NumberOfNode int32 `json:"number_of_node"`
 
 	// 指定子网ID，用于集群网络配置。

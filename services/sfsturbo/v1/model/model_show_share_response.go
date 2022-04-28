@@ -42,7 +42,7 @@ type ShowShareResponse struct {
 	// 创建时指定的SFS Turbo文件系统名称。
 	Name *string `json:"name,omitempty"`
 
-	// SFS Turbo文件系统的计费模式。“0”代表按需付费，“1”代表包周期计费。
+	// SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。
 	PayModel *ShowShareResponsePayModel `json:"pay_model,omitempty"`
 
 	// SFS Turbo文件系统所在区域。

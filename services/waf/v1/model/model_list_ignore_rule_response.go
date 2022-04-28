@@ -9,12 +9,12 @@ import (
 // Response Object
 type ListIgnoreRuleResponse struct {
 
-	// 该策略下规则数量
+	// 该策略下误报屏蔽规则数量
 	Total *int32 `json:"total,omitempty"`
 
 	// 误报屏蔽规则对象列表
-	Items          *[]IngnoreItem `json:"items,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	Items          *[]IgnoreRuleBody `json:"items,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ListIgnoreRuleResponse) String() string {

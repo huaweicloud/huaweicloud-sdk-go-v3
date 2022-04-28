@@ -12,7 +12,7 @@ type ListIssuedCouponQuotasRequest struct {
 	// 精英服务商的代金券额度ID。获取方法请参见查询优惠券额度。
 	QuotaId *string `json:"quota_id,omitempty"`
 
-	// 精英服务商ID。获取方法请参见查询精英服务商列表。
+	// 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 
 	// 父额度ID，即华为云伙伴能力中心用于发放给精英服务商代金券额度的额度ID。

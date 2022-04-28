@@ -9,19 +9,19 @@ import (
 // Request Object
 type ListCustomerBillsMonthlyBreakDownRequest struct {
 
-	// |忽略大小写，默认 zh_cn：中文 en_us：英文|
+	// 语言。en_US：英文。zh_CN：中文
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 查询分摊成本的月份，格式：YYYY-MM。
 	SharedMonth string `json:"shared_month"`
 
-	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
 
-	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用[查询资源类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256519451.html)接口获取。
 	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
 
-	// 云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+	// 云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
 	RegionCode *string `json:"region_code,omitempty"`
 
 	// 计费模式。1：包年/包月3：按需10：预留实例
@@ -42,7 +42,7 @@ type ListCustomerBillsMonthlyBreakDownRequest struct {
 	// 资源名称
 	ResourceName *string `json:"resource_name,omitempty"`
 
-	// 企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+	// 企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户默认为all，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。

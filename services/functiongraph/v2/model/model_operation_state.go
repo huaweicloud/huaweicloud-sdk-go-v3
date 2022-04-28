@@ -55,6 +55,7 @@ type OperationStateType struct {
 type OperationStateTypeEnum struct {
 	OPERATION OperationStateType
 	SLEEP     OperationStateType
+	END       OperationStateType
 }
 
 func GetOperationStateTypeEnum() OperationStateTypeEnum {
@@ -64,6 +65,9 @@ func GetOperationStateTypeEnum() OperationStateTypeEnum {
 		},
 		SLEEP: OperationStateType{
 			value: "Sleep",
+		},
+		END: OperationStateType{
+			value: "End",
 		},
 	}
 }

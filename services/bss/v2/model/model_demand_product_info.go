@@ -11,16 +11,16 @@ type DemandProductInfo struct {
 	// ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
 	Id string `json:"id"`
 
-	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
 	CloudServiceType string `json:"cloud_service_type"`
 
-	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
+	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
 	ResourceType string `json:"resource_type"`
 
 	// 云服务类型的资源规格，部分云服务类型和资源规格举例如下： 弹性云服务器：根据操作系统类型在云服务器规格的ID后添加“.win”或“.linux”，例如“s2.small.1.linux”。云服务器规格的ID字段，您可以调用查询规格详情和规格扩展信息列表接口获取。 带宽：12_bgp：动态BGP按流量计费带宽12_sbgp：静态BGP按流量计费带宽19_bgp：动态BGP按带宽计费带宽19_sbgp：静态BGP按带宽计费带宽19_share：按带宽计费共享带宽 IP：5_bgp：动态BGP公网IP5_sbgp：静态BGP公网IP 云硬盘：SATA：普通IO云硬盘SAS：高IO云硬盘GPSSD：通用型SSD云硬盘SSD：超高IO云硬盘
 	ResourceSpec string `json:"resource_spec"`
 
-	// 云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+	// 云服务区编码，例如：“cn-north-1”。
 	Region string `json:"region"`
 
 	// 可用区标识。
@@ -38,7 +38,7 @@ type DemandProductInfo struct {
 	// 使用量值。 例如按小时询价，使用量值为1，使用量单位为小时。
 	UsageValue float64 `json:"usage_value"`
 
-	// 使用量度量单位，您可以调用查询度量单位列表接口获取。 例如按小时询价，使用量值为1，使用量单位为小时。
+	// 使用量度量单位， 例如按小时询价，使用量值为1，使用量单位为小时。
 	UsageMeasureId int32 `json:"usage_measure_id"`
 
 	// 订购数量。

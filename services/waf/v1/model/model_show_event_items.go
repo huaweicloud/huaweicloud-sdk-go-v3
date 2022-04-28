@@ -37,12 +37,12 @@ type ShowEventItems struct {
 	Cookie *string `json:"cookie,omitempty"`
 
 	// 攻击请求的headers
-	Headers *string `json:"headers,omitempty"`
+	Headers *interface{} `json:"headers,omitempty"`
 
 	// 被攻击的域名id
 	HostId *string `json:"host_id,omitempty"`
 
-	// 攻击请求的id
+	// 防护事件id
 	Id *string `json:"id,omitempty"`
 
 	// 恶意负载
@@ -54,17 +54,23 @@ type ShowEventItems struct {
 	// 源ip地理位置
 	Region *string `json:"region,omitempty"`
 
+	// 处理时长
+	ProcessTime *int32 `json:"process_time,omitempty"`
+
 	// 攻击请求的请求行
 	RequestLine *string `json:"request_line,omitempty"`
 
 	// 返回大小（字节）
-	ResponseSize *string `json:"response_size,omitempty"`
+	ResponseSize *int32 `json:"response_size,omitempty"`
 
 	// 响应时间（毫秒）
-	ResponseTime *string `json:"response_time,omitempty"`
+	ResponseTime *int64 `json:"response_time,omitempty"`
 
 	// 响应码
 	Status *string `json:"status,omitempty"`
+
+	// 请求体
+	RequestBody *string `json:"request_body,omitempty"`
 }
 
 func (o ShowEventItems) String() string {

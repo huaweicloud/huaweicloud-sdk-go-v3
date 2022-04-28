@@ -500,6 +500,22 @@ func (c *GaussDBClient) ShowGaussMySqlProxyFlavors(request *model.ShowGaussMySql
 	}
 }
 
+// 查询数据库代理信息列表
+//
+// 查询数据库代理信息列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) ShowGaussMySqlProxyList(request *model.ShowGaussMySqlProxyListRequest) (*model.ShowGaussMySqlProxyListResponse, error) {
+	requestDef := GenReqDefForShowGaussMySqlProxyList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGaussMySqlProxyListResponse), nil
+	}
+}
+
 // 查询租户基于企业项目的资源配额
 //
 // 获取指定企业项目的资源配额。

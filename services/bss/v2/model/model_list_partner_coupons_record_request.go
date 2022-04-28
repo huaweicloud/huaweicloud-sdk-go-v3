@@ -21,7 +21,7 @@ type ListPartnerCouponsRecordRequest struct {
 	// 代金券ID列表。请从“发放优惠券”接口的响应参数中获取。
 	CouponIds *[]string `json:"coupon_ids,omitempty"`
 
-	// 客户账号ID。您可以调用查询客户列表接口获取customer_id。
+	// 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
 	CustomerId *string `json:"customer_id,omitempty"`
 
 	// 操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。
@@ -39,7 +39,7 @@ type ListPartnerCouponsRecordRequest struct {
 	// 每页记录数。默认值为10。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 精英服务商ID。获取方法请参见查询精英服务商列表。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
+	// 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

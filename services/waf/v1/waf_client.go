@@ -99,6 +99,22 @@ func (c *WafClient) CreateHost(request *model.CreateHostRequest) (*model.CreateH
 	}
 }
 
+// 创建误报屏蔽规则
+//
+// 创建误报屏蔽规则
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) CreateIgnoreRule(request *model.CreateIgnoreRuleRequest) (*model.CreateIgnoreRuleResponse, error) {
+	requestDef := GenReqDefForCreateIgnoreRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateIgnoreRuleResponse), nil
+	}
+}
+
 // 创建防护策略
 //
 // 创建防护策略
@@ -240,6 +256,22 @@ func (c *WafClient) DeleteHost(request *model.DeleteHostRequest) (*model.DeleteH
 		return nil, err
 	} else {
 		return resp.(*model.DeleteHostResponse), nil
+	}
+}
+
+// 删除误报屏蔽防护规则
+//
+// 删除误报屏蔽防护规则
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) DeleteIgnoreRule(request *model.DeleteIgnoreRuleRequest) (*model.DeleteIgnoreRuleResponse, error) {
+	requestDef := GenReqDefForDeleteIgnoreRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteIgnoreRuleResponse), nil
 	}
 }
 

@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -33,6 +36,11 @@ type CreateWorkflowRequestBody struct {
 	// 重试策略清单
 	Retries *[]Retry `json:"retries,omitempty"`
 
+	// 工作流模式，当前支持两种模式 NORMAL: 标准模式，普通模式面向普通的业务场景，支持长时间任务，支持执行历史持久化和查询，只支持异步调用 EXPRESS: 快速模式，快速模式面向业务执行时长较短，需要极致性能的场景，只支持流程执行时长低于5分钟的场景，不支持执行历史持久化，支持同步和异步调用 默认为标准模式
+	Mode *CreateWorkflowRequestBodyMode `json:"mode,omitempty"`
+
+	ExpressConfig *ExpressConfig `json:"express_config,omitempty"`
+
 	// 企业项目ID，在企业用户创建函数时必填。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
@@ -44,4 +52,42 @@ func (o CreateWorkflowRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"CreateWorkflowRequestBody", string(data)}, " ")
+}
+
+type CreateWorkflowRequestBodyMode struct {
+	value string
+}
+
+type CreateWorkflowRequestBodyModeEnum struct {
+	NORMAL  CreateWorkflowRequestBodyMode
+	EXPRESS CreateWorkflowRequestBodyMode
+}
+
+func GetCreateWorkflowRequestBodyModeEnum() CreateWorkflowRequestBodyModeEnum {
+	return CreateWorkflowRequestBodyModeEnum{
+		NORMAL: CreateWorkflowRequestBodyMode{
+			value: "NORMAL",
+		},
+		EXPRESS: CreateWorkflowRequestBodyMode{
+			value: "EXPRESS",
+		},
+	}
+}
+
+func (c CreateWorkflowRequestBodyMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateWorkflowRequestBodyMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

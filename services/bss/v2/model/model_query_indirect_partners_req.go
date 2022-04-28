@@ -23,7 +23,7 @@ type QueryIndirectPartnersReq struct {
 	// 每次查询的数量限制。默认值为10。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 精英服务商ID。获取方法请参见查询精英服务商列表。
+	// 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

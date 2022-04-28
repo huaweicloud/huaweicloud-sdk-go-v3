@@ -25,6 +25,9 @@ type ListFunctionAsyncInvokeConfigResult struct {
 
 	// 异步调用配置的最后更改时间。
 	LastModified *string `json:"last_modified,omitempty"`
+
+	// 开启异步调用状态持久化
+	EnableAsyncStatusLog *bool `json:"enable_async_status_log,omitempty"`
 }
 
 func (o ListFunctionAsyncInvokeConfigResult) String() string {

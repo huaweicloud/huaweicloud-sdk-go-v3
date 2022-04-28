@@ -8,7 +8,7 @@ import (
 
 type ReclaimIndirectPartnerAccountReq struct {
 
-	// 精英服务商ID。获取方法请参见查询精英服务商列表。
+	// 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
 	IndirectPartnerId string `json:"indirect_partner_id"`
 
 	// 回收金额。 华为云伙伴能力中心回收的精英服务商的账户金额。  说明： 回收金额不能大于精英服务商的账户余额。 单位：元。取值大于0且精确到小数点后2位。

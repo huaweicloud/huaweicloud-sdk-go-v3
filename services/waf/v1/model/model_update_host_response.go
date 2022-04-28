@@ -28,7 +28,7 @@ type UpdateHostResponse struct {
 	AccessCode *string `json:"access_code,omitempty"`
 
 	// 后端协议类型
-	Protocol *string `json:"protocol,omitempty"`
+	Protocol *UpdateHostResponseProtocol `json:"protocol,omitempty"`
 
 	// 源站信息
 	Server *[]CloudWafServer `json:"server,omitempty"`
@@ -85,6 +85,48 @@ func (o UpdateHostResponse) String() string {
 	}
 
 	return strings.Join([]string{"UpdateHostResponse", string(data)}, " ")
+}
+
+type UpdateHostResponseProtocol struct {
+	value string
+}
+
+type UpdateHostResponseProtocolEnum struct {
+	HTTPS     UpdateHostResponseProtocol
+	HTTP      UpdateHostResponseProtocol
+	HTTPHTTPS UpdateHostResponseProtocol
+}
+
+func GetUpdateHostResponseProtocolEnum() UpdateHostResponseProtocolEnum {
+	return UpdateHostResponseProtocolEnum{
+		HTTPS: UpdateHostResponseProtocol{
+			value: "HTTPS",
+		},
+		HTTP: UpdateHostResponseProtocol{
+			value: "HTTP",
+		},
+		HTTPHTTPS: UpdateHostResponseProtocol{
+			value: "HTTP&HTTPS",
+		},
+	}
+}
+
+func (c UpdateHostResponseProtocol) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateHostResponseProtocol) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type UpdateHostResponseTls struct {

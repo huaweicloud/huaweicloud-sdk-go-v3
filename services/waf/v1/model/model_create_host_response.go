@@ -39,6 +39,8 @@ type CreateHostResponse struct {
 	// 源站信息
 	Server *[]CloudWafServer `json:"server,omitempty"`
 
+	Flag *Flag `json:"flag,omitempty"`
+
 	// 是否开启了代理
 	Proxy *bool `json:"proxy,omitempty"`
 
@@ -46,7 +48,10 @@ type CreateHostResponse struct {
 	Timestamp *int64 `json:"timestamp,omitempty"`
 
 	// 是否使用独享ip
-	ExclusiveIp    *bool `json:"exclusive_ip,omitempty"`
+	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
+
+	// 是否支持http2
+	Http2Enable    *bool `json:"http2_enable,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }
 

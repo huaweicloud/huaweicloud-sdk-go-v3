@@ -1719,6 +1719,22 @@ func (c *MeetingClient) ShowCorpResource(request *model.ShowCorpResourceRequest)
 	}
 }
 
+// 通过部门编码查询部门信息
+//
+// 通过部门编码查询部门信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *MeetingClient) ShowDepartment(request *model.ShowDepartmentRequest) (*model.ShowDepartmentResponse, error) {
+	requestDef := GenReqDefForShowDepartment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDepartmentResponse), nil
+	}
+}
+
 // 查询部门及其一级子部门列表
 //
 // 企业管理员通过该接口查询部门及其一级子部门列表。

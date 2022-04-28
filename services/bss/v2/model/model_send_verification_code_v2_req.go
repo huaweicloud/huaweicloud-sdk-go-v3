@@ -23,7 +23,7 @@ type SendVerificationCodeV2Req struct {
 	// 验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 不填写默认为29。
 	Scene *int32 `json:"scene,omitempty"`
 
-	// 客户账号ID。您可以调用查询客户列表接口获取customer_id。 如果scene=18的时候必填。
+	// 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
 	CustomerId *string `json:"customer_id,omitempty"`
 }
 

@@ -9,7 +9,7 @@ import (
 // Request Object
 type ShowRealnameAuthenticationReviewResultRequest struct {
 
-	// 客户账号ID。您可以调用查询客户列表接口获取customer_id。
+	// 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
 	CustomerId string `json:"customer_id"`
 }
 

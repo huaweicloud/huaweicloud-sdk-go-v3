@@ -7,6 +7,8 @@ import (
 )
 
 type SnapshotResp struct {
+
+	// Snapshot ID
 	Id *string `json:"id,omitempty"`
 }
 
