@@ -1,3 +1,23 @@
+# 0.0.87 2022-05-05
+
+### HuaweiCloud SDK Moderation
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`RunImageModeration`请求参数`image`类型调整 `byte` -> `string`
+
+### HuaweiCloud SDK RES
+
+- _新增特性_
+  - 支持推荐系统服务
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
 # 0.0.86 2022-04-28
 
 ### HuaweiCloud SDK AOM

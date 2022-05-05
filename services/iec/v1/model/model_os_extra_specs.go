@@ -16,16 +16,16 @@ type OsExtraSpecs struct {
 	Ecsgeneration *string `json:"ecs:generation,omitempty"`
 
 	// 边缘实例规格的分类。
-	EcsperformanceType *string `json:"ecs:performance_type,omitempty"`
+	Ecsperformancetype *string `json:"ecs:performancetype,omitempty"`
 
 	// 虚拟化类型。
 	EcsvirtualizationEnvTypes *string `json:"ecs:virtualization_env_types,omitempty"`
 
 	// 此参数是规格的CPU详细信息。
-	InfoCpuName *string `json:"info_cpu_name,omitempty"`
+	Infocpuname *string `json:"info:cpu:name,omitempty"`
 
 	// 此参数是规格的GPU详细信息。
-	InfoGpuName *string `json:"info_gpu_name,omitempty"`
+	Infogpuname *string `json:"info:gpu:name,omitempty"`
 
 	// P1型本地直通GPU的型号和数量，参数值可设置为“nvidia-p100:1”，表示使用该规格创建的边缘实例将占用1张NVIDIA P100显卡。
 	PciPassthroughalias *string `json:"pci_passthrough:alias,omitempty"`

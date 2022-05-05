@@ -84,6 +84,9 @@ type LoadBalancer struct {
 	// 企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
 	EnterpriseProjectId string `json:"enterprise_project_id"`
 
+	// 资源账单信息。 [取值： - 空：按需计费。  - 非空：包周期计费，  包周期计费billing_info字段的格式为：order_id:product_id:region_id:project_id，如：  CS2107161019CDJZZ:OFFI569702121789763584:eu-de:057ef081eb00d2732fd1c01a9be75e6f  使用说明：  - admin权限才能更新此字段。](tag:hws,hws_hk,ocb,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk-g42)  [不支持该字段，请勿使用](tag:dt,dt_test,hcso_dt)
+	BillingInfo string `json:"billing_info"`
+
 	// 四层Flavor ID。  [hcso场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hws,hcso)
 	L4FlavorId string `json:"l4_flavor_id"`
 

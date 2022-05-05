@@ -16,7 +16,7 @@ type ImageDetectionReq struct {
 	Url *string `json:"url,omitempty"`
 
 	// 与url二选一  图片文件Base64编码字符串。要求base64编码后大小不超过10M。  政治人物检测人脸部分不小于50*50像素。  支持JPG/PNG/BMP格式。
-	Image string `json:"image,omitempty"`
+	Image *string `json:"image,omitempty"`
 
 	// 图像审核规则名称，默认使用default规则。  > 审核规则的创建和使用请参见[配置审核规则](https://support.huaweicloud.com/api-moderation/moderation_03_0063.html)
 	ModerationRule *string `json:"moderation_rule,omitempty"`

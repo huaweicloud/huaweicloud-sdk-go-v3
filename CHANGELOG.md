@@ -1,3 +1,23 @@
+# 0.0.87 2022-05-05
+
+### HuaweiCloud SDK Moderation
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `byte` -> `string` of the request parameter `image` of the interface `RunImageModeration`
+
+### HuaweiCloud SDK RES
+
+- _Features_
+  - Support the service `Recommender System`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
 # 0.0.86 2022-04-28
 
 ### HuaweiCloud SDK AOM
