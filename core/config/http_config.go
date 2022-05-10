@@ -82,6 +82,11 @@ func (config *HttpConfig) WithProxy(proxy *Proxy) *HttpConfig {
 	return config
 }
 
+func (config *HttpConfig) WithHttpTransport(transport *http.Transport) *HttpConfig {
+	config.HttpTransport = transport
+	return config
+}
+
 type Proxy struct {
 	Schema   string
 	Host     string
