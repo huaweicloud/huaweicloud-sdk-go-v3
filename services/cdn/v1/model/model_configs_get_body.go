@@ -9,10 +9,10 @@ import (
 // 配置项。
 type ConfigsGetBody struct {
 
-	// 回源请求头配置。
+	// 回源请求头配置
 	OriginRequestHeader *[]OriginRequestHeader `json:"origin_request_header,omitempty"`
 
-	// http header配置。
+	// http header配置
 	HttpResponseHeader *[]HttpResponseHeader `json:"http_response_header,omitempty"`
 
 	UrlAuth *UrlAuthGetBody `json:"url_auth,omitempty"`

@@ -217,6 +217,22 @@ func (c *FrsClient) DetectFaceByBase64(request *model.DetectFaceByBase64Request)
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
+func (c *FrsClient) DetectFaceByBase64Intl(request *model.DetectFaceByBase64IntlRequest) (*model.DetectFaceByBase64IntlResponse, error) {
+	requestDef := GenReqDefForDetectFaceByBase64Intl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetectFaceByBase64IntlResponse), nil
+	}
+}
+
+// 人脸检测
+//
+// 人脸检测是对输入图片进行人脸检测和分析，输出人脸在图像中的位置、人脸关键点位置和人脸关键属性。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FrsClient) DetectFaceByFile(request *model.DetectFaceByFileRequest) (*model.DetectFaceByFileResponse, error) {
 	requestDef := GenReqDefForDetectFaceByFile()
 
@@ -233,6 +249,22 @@ func (c *FrsClient) DetectFaceByFile(request *model.DetectFaceByFileRequest) (*m
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
+func (c *FrsClient) DetectFaceByFileIntl(request *model.DetectFaceByFileIntlRequest) (*model.DetectFaceByFileIntlResponse, error) {
+	requestDef := GenReqDefForDetectFaceByFileIntl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetectFaceByFileIntlResponse), nil
+	}
+}
+
+// 人脸检测
+//
+// 人脸检测是对输入图片进行人脸检测和分析，输出人脸在图像中的位置、人脸关键点位置和人脸关键属性。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FrsClient) DetectFaceByUrl(request *model.DetectFaceByUrlRequest) (*model.DetectFaceByUrlResponse, error) {
 	requestDef := GenReqDefForDetectFaceByUrl()
 
@@ -240,6 +272,22 @@ func (c *FrsClient) DetectFaceByUrl(request *model.DetectFaceByUrlRequest) (*mod
 		return nil, err
 	} else {
 		return resp.(*model.DetectFaceByUrlResponse), nil
+	}
+}
+
+// 人脸检测
+//
+// 人脸检测是对输入图片进行人脸检测和分析，输出人脸在图像中的位置、人脸关键点位置和人脸关键属性。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FrsClient) DetectFaceByUrlIntl(request *model.DetectFaceByUrlIntlRequest) (*model.DetectFaceByUrlIntlResponse, error) {
+	requestDef := GenReqDefForDetectFaceByUrlIntl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetectFaceByUrlIntlResponse), nil
 	}
 }
 
@@ -265,6 +313,22 @@ func (c *FrsClient) DetectLiveByBase64(request *model.DetectLiveByBase64Request)
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
+func (c *FrsClient) DetectLiveByBase64Intl(request *model.DetectLiveByBase64IntlRequest) (*model.DetectLiveByBase64IntlResponse, error) {
+	requestDef := GenReqDefForDetectLiveByBase64Intl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetectLiveByBase64IntlResponse), nil
+	}
+}
+
+// 动作活体检测
+//
+// 动作活体检测是通过判断视频中的人物动作与传入动作列表是否一致来识别视频中人物是否为活体。如果有多张人脸出现，则选取最大的人脸进行判定。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FrsClient) DetectLiveByFile(request *model.DetectLiveByFileRequest) (*model.DetectLiveByFileResponse, error) {
 	requestDef := GenReqDefForDetectLiveByFile()
 
@@ -281,6 +345,22 @@ func (c *FrsClient) DetectLiveByFile(request *model.DetectLiveByFileRequest) (*m
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
+func (c *FrsClient) DetectLiveByFileIntl(request *model.DetectLiveByFileIntlRequest) (*model.DetectLiveByFileIntlResponse, error) {
+	requestDef := GenReqDefForDetectLiveByFileIntl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetectLiveByFileIntlResponse), nil
+	}
+}
+
+// 动作活体检测
+//
+// 动作活体检测是通过判断视频中的人物动作与传入动作列表是否一致来识别视频中人物是否为活体。如果有多张人脸出现，则选取最大的人脸进行判定。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
 func (c *FrsClient) DetectLiveByUrl(request *model.DetectLiveByUrlRequest) (*model.DetectLiveByUrlResponse, error) {
 	requestDef := GenReqDefForDetectLiveByUrl()
 
@@ -288,6 +368,22 @@ func (c *FrsClient) DetectLiveByUrl(request *model.DetectLiveByUrlRequest) (*mod
 		return nil, err
 	} else {
 		return resp.(*model.DetectLiveByUrlResponse), nil
+	}
+}
+
+// 动作活体检测
+//
+// 动作活体检测是通过判断视频中的人物动作与传入动作列表是否一致来识别视频中人物是否为活体。如果有多张人脸出现，则选取最大的人脸进行判定。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FrsClient) DetectLiveByUrlIntl(request *model.DetectLiveByUrlIntlRequest) (*model.DetectLiveByUrlIntlResponse, error) {
+	requestDef := GenReqDefForDetectLiveByUrlIntl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetectLiveByUrlIntlResponse), nil
 	}
 }
 

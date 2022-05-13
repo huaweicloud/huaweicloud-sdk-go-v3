@@ -259,6 +259,38 @@ func (c *CodeHubClient) AddDeployKeyV2(request *model.AddDeployKeyV2Request) (*m
 	}
 }
 
+// 新建保护分支
+//
+// 新建保护分支
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CodeHubClient) AddProtectBranchV2(request *model.AddProtectBranchV2Request) (*model.AddProtectBranchV2Response, error) {
+	requestDef := GenReqDefForAddProtectBranchV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddProtectBranchV2Response), nil
+	}
+}
+
+// 新建标签
+//
+// 新建标签
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CodeHubClient) AddTagV2(request *model.AddTagV2Request) (*model.AddTagV2Response, error) {
+	requestDef := GenReqDefForAddTagV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddTagV2Response), nil
+	}
+}
+
 // 创建仓库
 //
 // 用指定的名称在指定项目上创建仓库。传入参数：仓库名、模板id、是否导入项目成员、归属项目

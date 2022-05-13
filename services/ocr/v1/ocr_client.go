@@ -215,6 +215,22 @@ func (c *OcrClient) RecognizeHandwriting(request *model.RecognizeHandwritingRequ
 	}
 }
 
+// 防疫健康码识别
+//
+// 识别防疫健康码中的文字信息，并将识别的结构化结果返回给用户。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OcrClient) RecognizeHealthCode(request *model.RecognizeHealthCodeRequest) (*model.RecognizeHealthCodeResponse, error) {
+	requestDef := GenReqDefForRecognizeHealthCode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeHealthCodeResponse), nil
+	}
+}
+
 // 身份证识别
 //
 // 识别身份证图片中的文字内容，并将识别的结果返回给用户。

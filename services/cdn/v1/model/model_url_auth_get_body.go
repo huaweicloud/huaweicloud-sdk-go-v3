@@ -9,7 +9,7 @@ import (
 // URL鉴权查询响应体
 type UrlAuthGetBody struct {
 
-	// A/B/C类防盗链开关（on：开启，off：关闭）。
+	// A/B/C类防盗链开关（\"off\"/\"on\"）。
 	Status string `json:"status"`
 
 	// 鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2

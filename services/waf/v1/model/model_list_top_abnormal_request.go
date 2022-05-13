@@ -24,7 +24,7 @@ type ListTopAbnormalRequest struct {
 	// 状态码
 	Code *int32 `json:"code,omitempty"`
 
-	// 要查询域名列表（通过ListHost接口查询）
+	// 域名id数组，通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id
 	Hosts *string `json:"hosts,omitempty"`
 
 	// 要查询实例列表（仅独享模式涉及）

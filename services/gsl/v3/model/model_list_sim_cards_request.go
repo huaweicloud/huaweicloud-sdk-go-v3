@@ -61,10 +61,16 @@ type ListSimCardsRequest struct {
 	CustomerAttribute6 *string `json:"customer_attribute6,omitempty"`
 
 	// 最小使用流量(MB)
-	MinFlow *int64 `json:"min_flow,omitempty"`
+	MinUsedFlow *int64 `json:"min_used_flow,omitempty"`
 
 	// 最大使用流量(MB)
-	MaxFlow *int64 `json:"max_flow,omitempty"`
+	MaxUsedFlow *int64 `json:"max_used_flow,omitempty"`
+
+	// 最小剩余流量(MB)
+	MinLeftFlow *int64 `json:"min_left_flow,omitempty"`
+
+	// 最大剩余流量(MB)
+	MaxLeftFlow *int64 `json:"max_left_flow,omitempty"`
 
 	// 是否已实名认证: true表示是，false表示否，系统SIM卡实名认证状态非实时。
 	RealNamed *bool `json:"real_named,omitempty"`

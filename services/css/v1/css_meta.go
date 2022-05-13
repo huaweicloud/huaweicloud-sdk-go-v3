@@ -210,6 +210,17 @@ func GenReqDefForDeleteSnapshot() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForDownloadCert() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1.0/{project_id}/cer/download").
+		WithResponse(new(model.DownloadCertResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListClustersDetails() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

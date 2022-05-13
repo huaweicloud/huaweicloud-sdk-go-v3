@@ -195,6 +195,22 @@ func (c *CssClient) DeleteSnapshot(request *model.DeleteSnapshotRequest) (*model
 	}
 }
 
+// 下载安全证书
+//
+// 该接口用于下载安全证书。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CssClient) DownloadCert(request *model.DownloadCertRequest) (*model.DownloadCertResponse, error) {
+	requestDef := GenReqDefForDownloadCert()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadCertResponse), nil
+	}
+}
+
 // 查询集群列表
 //
 // 该接口用于查询并显示集群列表以及集群的状态。

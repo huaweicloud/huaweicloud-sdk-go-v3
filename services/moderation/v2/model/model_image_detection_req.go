@@ -32,6 +32,9 @@ type ImageDetectionReq struct {
 
 	// - 结果过滤门限，只有置信度不低于此门限的结果才会呈现在detail的列表中，取值范围 0-1，当未设置此值时各个检测场景会使用各自的默认值。  - politics检测场景的默认值为0.95。  - terrorism检测场景的默认值为0。  - ad检测场景的默认值为0。  - 无特殊需求直接不传此参数或像示例中一样值设为空字符串即可。  > - 如果检测场景中的最高置信度也未达到threshold，则结果列表为空；反之threshold过小，则会使结果列表中内容过多。 > - threshold参数不支持porn场景筛选。 > -  threshold参数不会影响响应中的suggestion。
 	Threshold *float32 `json:"threshold,omitempty"`
+
+	// 是否返回ocr识别结果，默认为false。
+	ShowOcrText *bool `json:"show_ocr_text,omitempty"`
 }
 
 func (o ImageDetectionReq) String() string {

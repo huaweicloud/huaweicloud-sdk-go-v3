@@ -15,6 +15,9 @@ type ImageDetectionResultBody struct {
 
 	// 具体每个场景的检测结果。  block：包含敏感信息，不通过  pass：不包含敏感信息，通过  review：需要人工复检
 	CategorySuggestions map[string]string `json:"category_suggestions,omitempty"`
+
+	// 文本结果
+	OcrText *string `json:"ocr_text,omitempty"`
 }
 
 func (o ImageDetectionResultBody) String() string {

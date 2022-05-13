@@ -19,6 +19,70 @@ func GaussDBforopenGaussClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// 授权数据库帐号
+//
+// 在指定实例的数据库中, 设置帐号的权限。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) AllowDbPrivileges(request *model.AllowDbPrivilegesRequest) (*model.AllowDbPrivilegesResponse, error) {
+	requestDef := GenReqDefForAllowDbPrivileges()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AllowDbPrivilegesResponse), nil
+	}
+}
+
+// 创建数据库
+//
+// 在指定实例中创建数据库。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) CreateDatabase(request *model.CreateDatabaseRequest) (*model.CreateDatabaseResponse, error) {
+	requestDef := GenReqDefForCreateDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDatabaseResponse), nil
+	}
+}
+
+// 创建数据库SCHEMA
+//
+// 在指定实例的数据库中, 创建数据库schema。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) CreateDatabaseSchemas(request *model.CreateDatabaseSchemasRequest) (*model.CreateDatabaseSchemasResponse, error) {
+	requestDef := GenReqDefForCreateDatabaseSchemas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDatabaseSchemasResponse), nil
+	}
+}
+
+// 创建数据库用户
+//
+// 在指定实例中创建数据库用户。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) CreateDbUser(request *model.CreateDbUserRequest) (*model.CreateDbUserResponse, error) {
+	requestDef := GenReqDefForCreateDbUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDbUserResponse), nil
+	}
+}
+
 // 创建数据库实例
 //
 // 创建数据库企业版和集中式实例
@@ -32,6 +96,38 @@ func (c *GaussDBforopenGaussClient) CreateInstance(request *model.CreateInstance
 		return nil, err
 	} else {
 		return resp.(*model.CreateInstanceResponse), nil
+	}
+}
+
+// 创建手动备份
+//
+// 创建手动备份。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) CreateManualBackup(request *model.CreateManualBackupRequest) (*model.CreateManualBackupResponse, error) {
+	requestDef := GenReqDefForCreateManualBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateManualBackupResponse), nil
+	}
+}
+
+// 恢复到新实例
+//
+// 根据备份恢复新实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) CreateRestoreInstance(request *model.CreateRestoreInstanceRequest) (*model.CreateRestoreInstanceResponse, error) {
+	requestDef := GenReqDefForCreateRestoreInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRestoreInstanceResponse), nil
 	}
 }
 
@@ -51,6 +147,38 @@ func (c *GaussDBforopenGaussClient) DeleteInstance(request *model.DeleteInstance
 	}
 }
 
+// 删除手动备份
+//
+// 删除手动备份。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) DeleteManualBackup(request *model.DeleteManualBackupRequest) (*model.DeleteManualBackupResponse, error) {
+	requestDef := GenReqDefForDeleteManualBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteManualBackupResponse), nil
+	}
+}
+
+// 查询备份列表
+//
+// 获取备份列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListBackups(request *model.ListBackupsRequest) (*model.ListBackupsResponse, error) {
+	requestDef := GenReqDefForListBackups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBackupsResponse), nil
+	}
+}
+
 // 获取参数模板列表
 //
 // 获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
@@ -67,6 +195,38 @@ func (c *GaussDBforopenGaussClient) ListConfigurations(request *model.ListConfig
 	}
 }
 
+// 查询数据库SCHEMA列表
+//
+// 查询指定实例的数据库SCHEMA列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListDatabaseSchemas(request *model.ListDatabaseSchemasRequest) (*model.ListDatabaseSchemasResponse, error) {
+	requestDef := GenReqDefForListDatabaseSchemas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDatabaseSchemasResponse), nil
+	}
+}
+
+// 查询数据库列表
+//
+// 查询指定实例中的数据库列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListDatabases(request *model.ListDatabasesRequest) (*model.ListDatabasesResponse, error) {
+	requestDef := GenReqDefForListDatabases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDatabasesResponse), nil
+	}
+}
+
 // 查询数据库引擎的版本
 //
 // 查询指定数据库引擎对应的版本信息。
@@ -80,6 +240,22 @@ func (c *GaussDBforopenGaussClient) ListDatastores(request *model.ListDatastores
 		return nil, err
 	} else {
 		return resp.(*model.ListDatastoresResponse), nil
+	}
+}
+
+// 查询数据库用户列表
+//
+// 在指定实例中查询数据库用户列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListDbUsers(request *model.ListDbUsersRequest) (*model.ListDbUsersResponse, error) {
+	requestDef := GenReqDefForListDbUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDbUsersResponse), nil
 	}
 }
 
@@ -112,6 +288,23 @@ func (c *GaussDBforopenGaussClient) ListInstances(request *model.ListInstancesRe
 		return nil, err
 	} else {
 		return resp.(*model.ListInstancesResponse), nil
+	}
+}
+
+// 查询可恢复时间段
+//
+// 查询可恢复时间段。
+// 如果您备份策略中的保存天数设置较长，建议您传入查询日期“date”。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListRestoreTimes(request *model.ListRestoreTimesRequest) (*model.ListRestoreTimesResponse, error) {
+	requestDef := GenReqDefForListRestoreTimes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRestoreTimesResponse), nil
 	}
 }
 
@@ -192,6 +385,38 @@ func (c *GaussDBforopenGaussClient) SetBackupPolicy(request *model.SetBackupPoli
 		return nil, err
 	} else {
 		return resp.(*model.SetBackupPolicyResponse), nil
+	}
+}
+
+// 重置数据库帐号密码
+//
+// 重置指定数据库帐号的密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) SetDbUserPwd(request *model.SetDbUserPwdRequest) (*model.SetDbUserPwdResponse, error) {
+	requestDef := GenReqDefForSetDbUserPwd()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetDbUserPwdResponse), nil
+	}
+}
+
+// 查询自动备份策略
+//
+// 查询自动备份策略。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ShowBackupPolicy(request *model.ShowBackupPolicyRequest) (*model.ShowBackupPolicyResponse, error) {
+	requestDef := GenReqDefForShowBackupPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBackupPolicyResponse), nil
 	}
 }
 

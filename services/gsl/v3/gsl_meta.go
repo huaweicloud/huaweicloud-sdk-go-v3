@@ -155,12 +155,20 @@ func GenReqDefForListSimCards() *def.HttpRequestDef {
 		WithJsonTag("customer_attribute6").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("MinFlow").
-		WithJsonTag("min_flow").
+		WithName("MinUsedFlow").
+		WithJsonTag("min_used_flow").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("MaxFlow").
-		WithJsonTag("max_flow").
+		WithName("MaxUsedFlow").
+		WithJsonTag("max_used_flow").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MinLeftFlow").
+		WithJsonTag("min_left_flow").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MaxLeftFlow").
+		WithJsonTag("max_left_flow").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("RealNamed").

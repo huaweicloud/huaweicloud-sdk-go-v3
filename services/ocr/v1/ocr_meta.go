@@ -172,6 +172,21 @@ func GenReqDefForRecognizeHandwriting() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRecognizeHealthCode() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/ocr/health-code").
+		WithResponse(new(model.RecognizeHealthCodeResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRecognizeIdCard() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
