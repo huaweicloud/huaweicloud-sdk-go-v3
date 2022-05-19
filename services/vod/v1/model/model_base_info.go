@@ -41,6 +41,9 @@ type BaseInfo struct {
 	// 原始视频文件的访问地址。
 	VideoUrl *string `json:"video_url,omitempty"`
 
+	// 原视频文件的OBS临时访问地址,仅媒资详情接口生效
+	SignUrl *string `json:"sign_url,omitempty"`
+
 	// 封面信息。
 	CoverInfoArray *[]CoverInfo `json:"cover_info_array,omitempty"`
 

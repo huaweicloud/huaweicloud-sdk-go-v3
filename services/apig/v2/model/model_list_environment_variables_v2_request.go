@@ -18,6 +18,9 @@ type ListEnvironmentVariablesV2Request struct {
 	// 每页显示的条目数量
 	Limit *int32 `json:"limit,omitempty"`
 
+	// API分组编号
+	GroupId string `json:"group_id"`
+
 	// 环境编号
 	EnvId *string `json:"env_id,omitempty"`
 

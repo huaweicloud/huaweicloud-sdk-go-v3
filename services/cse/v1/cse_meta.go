@@ -97,11 +97,6 @@ func GenReqDefForListEngines() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnterpriseProjectID").
-		WithJsonTag("X-Enterprise-Project-ID").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

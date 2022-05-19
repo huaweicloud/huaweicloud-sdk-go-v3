@@ -21,7 +21,7 @@ type TransportationLicenseResult struct {
 	VehicleType *string `json:"vehicle_type,omitempty"`
 
 	// 吨(座)位。
-	VehicleWeight *string `json:"vehicle_weight,omitempty"`
+	MaximumCapacity *string `json:"maximum_capacity,omitempty"`
 
 	// 车辆尺寸。
 	VehicleSize *string `json:"vehicle_size,omitempty"`

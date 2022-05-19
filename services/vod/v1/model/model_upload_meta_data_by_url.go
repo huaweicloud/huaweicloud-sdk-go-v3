@@ -11,7 +11,7 @@ import (
 
 type UploadMetaDataByUrl struct {
 
-	// 上传音视频文件的格式。  取值如下： - 视频文件：MP4、TS、MOV、MXF、MPG、FLV、WMV、AVI、M4V、F4V、MPEG、3GP、ASF、MKV - 音频文件：MP3、OGG、WAV、WMA、APE、FLAC、AAC、AC3、MMF、AMR、M4A、M4R、WV、MP2  若上传格式为音频文件，则不支持转码、添加水印和字幕。
+	// 上传音视频文件的格式。  取值如下： - 视频文件：MP4、TS、MOV、MXF、MPG、FLV、WMV、AVI、M4V、F4V、MPEG、3GP、ASF、MKV、M3U8 - 音频文件：MP3、OGG、WAV、WMA、APE、FLAC、AAC、AC3、MMF、AMR、M4A、M4R、WV、MP2  若上传格式为音频文件，则不支持转码、添加水印和字幕。
 	VideoType UploadMetaDataByUrlVideoType `json:"video_type"`
 
 	// 媒资标题，长度不超过128个字节，UTF-8编码。
@@ -91,6 +91,7 @@ type UploadMetaDataByUrlVideoTypeEnum struct {
 	M4_R   UploadMetaDataByUrlVideoType
 	WV     UploadMetaDataByUrlVideoType
 	MP2    UploadMetaDataByUrlVideoType
+	M3_U8  UploadMetaDataByUrlVideoType
 }
 
 func GetUploadMetaDataByUrlVideoTypeEnum() UploadMetaDataByUrlVideoTypeEnum {
@@ -178,6 +179,9 @@ func GetUploadMetaDataByUrlVideoTypeEnum() UploadMetaDataByUrlVideoTypeEnum {
 		},
 		MP2: UploadMetaDataByUrlVideoType{
 			value: "MP2",
+		},
+		M3_U8: UploadMetaDataByUrlVideoType{
+			value: "M3U8",
 		},
 	}
 }

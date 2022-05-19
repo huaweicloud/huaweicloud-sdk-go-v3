@@ -17,7 +17,7 @@ type Subtitle struct {
 	// 字幕文件类型，目前暂只支持“SRT”。
 	Type SubtitleType `json:"type"`
 
-	// 字幕语音类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
+	// 字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
 	Language SubtitleLanguage `json:"language"`
 
 	// 字幕文件的MD5值。

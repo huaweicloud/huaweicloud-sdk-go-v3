@@ -375,6 +375,22 @@ func (c *OcrClient) RecognizePassport(request *model.RecognizePassportRequest) (
 	}
 }
 
+// 核酸检测记录
+//
+// 识别核酸检测记录中的文字信息，并将识别的结构化结果返回给用户。PCR，全称Polymerase chain reaction,即聚合酶链式反应.PCR-test也为大众所认知为新型冠状病毒核酸检测测试。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OcrClient) RecognizePcrTestRecord(request *model.RecognizePcrTestRecordRequest) (*model.RecognizePcrTestRecordResponse, error) {
+	requestDef := GenReqDefForRecognizePcrTestRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizePcrTestRecordResponse), nil
+	}
+}
+
 // 从业资格证识别
 //
 // 识别道路运输从业资格证上的关键文字信息，并返回识别的结构化结果。

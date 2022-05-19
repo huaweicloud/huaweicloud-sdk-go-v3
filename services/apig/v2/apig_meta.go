@@ -773,6 +773,10 @@ func GenReqDefForListEnvironmentVariablesV2() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("GroupId").
+		WithJsonTag("group_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnvId").
 		WithJsonTag("env_id").
 		WithLocationType(def.Query))

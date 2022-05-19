@@ -64,7 +64,7 @@ type ListPortsRequestDeviceOwner struct {
 
 type ListPortsRequestDeviceOwnerEnum struct {
 	NETWORKDHCP                         ListPortsRequestDeviceOwner
-	NETWORKVIP_PORT                     ListPortsRequestDeviceOwner
+	NEUTRONVIP_PORT                     ListPortsRequestDeviceOwner
 	NETWORKROUTER_INTERFACE_DISTRIBUTED ListPortsRequestDeviceOwner
 	NETWORKROUTER_CENTRALIZED_SNAT      ListPortsRequestDeviceOwner
 }
@@ -74,8 +74,8 @@ func GetListPortsRequestDeviceOwnerEnum() ListPortsRequestDeviceOwnerEnum {
 		NETWORKDHCP: ListPortsRequestDeviceOwner{
 			value: "network:dhcp",
 		},
-		NETWORKVIP_PORT: ListPortsRequestDeviceOwner{
-			value: "network:VIP_PORT",
+		NEUTRONVIP_PORT: ListPortsRequestDeviceOwner{
+			value: "neutron:VIP_PORT",
 		},
 		NETWORKROUTER_INTERFACE_DISTRIBUTED: ListPortsRequestDeviceOwner{
 			value: "network:router_interface_distributed",

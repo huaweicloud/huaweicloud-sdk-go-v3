@@ -60,7 +60,7 @@ type CreateAndExecuteJobResponse struct {
 	// 作业执行组ID。
 	GroupId *string `json:"group_id,omitempty"`
 
-	// 执行程序Jar包或sql文件地址，需要满足如下要求：  - 最多为1023字符，不能包含;|&><'$特殊字符，且不可为空或全空格。  - 需要以“/”或“s3a://”开头。OBS路径不支持KMS加密的文件或程序。  - Spark Script需要以“.sql”结尾，MapReduce和Spark Jar需要以“.jar”结尾，sql和jar不区分大小写。
+	// 执行程序Jar包或sql文件地址，需要满足如下要求：   - 最多为1023字符，不能包含;|&><'$特殊字符，且不可为空或全空格。   - 需要以“/”或“s3a://”开头。OBS路径不支持KMS加密的文件或程序。  - Spark Script需要以“.sql”结尾，MapReduce和Spark Jar需要以“.jar”结尾，sql和jar不区分大小写。
 	JarPath *string `json:"jar_path,omitempty"`
 
 	// 数据输入地址，必须以“/”或“s3a://”开头。请配置为正确的OBS路径，OBS路径不支持KMS加密的文件或程序。  最多为1023字符，不能包含;|&>'<$特殊字符，可为空。

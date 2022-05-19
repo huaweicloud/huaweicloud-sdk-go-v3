@@ -48,6 +48,9 @@ type UpdateInstanceV2Response struct {
 	// 包周期计费订单编号
 	CbcMetadata *string `json:"cbc_metadata,omitempty"`
 
+	// 实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
+	LoadbalancerProvider *UpdateInstanceV2ResponseLoadbalancerProvider `json:"loadbalancer_provider,omitempty"`
+
 	// 实例描述
 	Description *string `json:"description,omitempty"`
 
@@ -101,7 +104,20 @@ type UpdateInstanceV2Response struct {
 
 	// 实例支持的特性列表
 	SupportedFeatures *[]string `json:"supported_features,omitempty"`
-	HttpStatusCode    int       `json:"-"`
+
+	EndpointService *EndpointService `json:"endpoint_service,omitempty"`
+
+	// 终端节点服务列表
+	EndpointServices *[]EndpointService `json:"endpoint_services,omitempty"`
+
+	NodeIps *NodeIps `json:"node_ips,omitempty"`
+
+	// 公网入口地址列表
+	Publicips *[]IpDetails `json:"publicips,omitempty"`
+
+	// 私网入口地址列表
+	Privateips     *[]IpDetails `json:"privateips,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o UpdateInstanceV2Response) String() string {
@@ -508,5 +524,43 @@ func (c *UpdateInstanceV2ResponseChargingMode) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type UpdateInstanceV2ResponseLoadbalancerProvider struct {
+	value string
+}
+
+type UpdateInstanceV2ResponseLoadbalancerProviderEnum struct {
+	LVS UpdateInstanceV2ResponseLoadbalancerProvider
+	ELB UpdateInstanceV2ResponseLoadbalancerProvider
+}
+
+func GetUpdateInstanceV2ResponseLoadbalancerProviderEnum() UpdateInstanceV2ResponseLoadbalancerProviderEnum {
+	return UpdateInstanceV2ResponseLoadbalancerProviderEnum{
+		LVS: UpdateInstanceV2ResponseLoadbalancerProvider{
+			value: "lvs",
+		},
+		ELB: UpdateInstanceV2ResponseLoadbalancerProvider{
+			value: "elb",
+		},
+	}
+}
+
+func (c UpdateInstanceV2ResponseLoadbalancerProvider) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateInstanceV2ResponseLoadbalancerProvider) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
 	}
 }

@@ -15,10 +15,10 @@ type ShowJobExeListNewRequest struct {
 	// 集群ID。获取方法，请参见[获取集群ID](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)。
 	ClusterId string `json:"cluster_id"`
 
-	// 作业名称，只能由字母、数字、中划线和下划线组成，并且长度为1～36个字符。
+	// 作业名称，只能由字母、数字、中划线和下划线组成，并且长度为1～128个字符。
 	JobName *string `json:"job_name,omitempty"`
 
-	// 作业ID，只能由字母、数字、中划线(-)组成，并且长度为1~36字符。
+	// 作业ID，只能由字母、数字、中划线(-)组成，并且长度为1~64字符。
 	JobId *string `json:"job_id,omitempty"`
 
 	// 用户名称、只能由字母、数字、特殊字符(-_.)组成，且不能以数字开头，并且长度为1～32字符。

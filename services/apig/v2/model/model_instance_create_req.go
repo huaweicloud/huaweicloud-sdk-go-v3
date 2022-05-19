@@ -52,6 +52,9 @@ type InstanceCreateReq struct {
 
 	// 公网访问是否支持IPv6。  当前仅部分region部分可用区支持IPv6
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+
+	// 实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
+	LoadbalancerProvider *InstanceCreateReqLoadbalancerProvider `json:"loadbalancer_provider,omitempty"`
 }
 
 func (o InstanceCreateReq) String() string {
@@ -112,6 +115,44 @@ func (c InstanceCreateReqSpecId) MarshalJSON() ([]byte, error) {
 }
 
 func (c *InstanceCreateReqSpecId) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type InstanceCreateReqLoadbalancerProvider struct {
+	value string
+}
+
+type InstanceCreateReqLoadbalancerProviderEnum struct {
+	LVS InstanceCreateReqLoadbalancerProvider
+	ELB InstanceCreateReqLoadbalancerProvider
+}
+
+func GetInstanceCreateReqLoadbalancerProviderEnum() InstanceCreateReqLoadbalancerProviderEnum {
+	return InstanceCreateReqLoadbalancerProviderEnum{
+		LVS: InstanceCreateReqLoadbalancerProvider{
+			value: "lvs",
+		},
+		ELB: InstanceCreateReqLoadbalancerProvider{
+			value: "elb",
+		},
+	}
+}
+
+func (c InstanceCreateReqLoadbalancerProvider) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *InstanceCreateReqLoadbalancerProvider) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

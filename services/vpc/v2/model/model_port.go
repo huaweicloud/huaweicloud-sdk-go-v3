@@ -33,7 +33,7 @@ type Port struct {
 	// 功能说明：端口所属设备ID 约束：不支持设置和更新，由系统自动维护
 	DeviceId string `json:"device_id"`
 
-	// 功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、network:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
+	// 功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、neutron:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
 	DeviceOwner PortDeviceOwner `json:"device_owner"`
 
 	// 项目ID
@@ -93,7 +93,7 @@ type PortDeviceOwner struct {
 
 type PortDeviceOwnerEnum struct {
 	NETWORKDHCP                         PortDeviceOwner
-	NETWORKVIP_PORT                     PortDeviceOwner
+	NEUTRONVIP_PORT                     PortDeviceOwner
 	NETWORKROUTER_INTERFACE_DISTRIBUTED PortDeviceOwner
 	NETWORKROUTER_CENTRALIZED_SNAT      PortDeviceOwner
 }
@@ -103,8 +103,8 @@ func GetPortDeviceOwnerEnum() PortDeviceOwnerEnum {
 		NETWORKDHCP: PortDeviceOwner{
 			value: "network:dhcp",
 		},
-		NETWORKVIP_PORT: PortDeviceOwner{
-			value: "network:VIP_PORT",
+		NEUTRONVIP_PORT: PortDeviceOwner{
+			value: "neutron:VIP_PORT",
 		},
 		NETWORKROUTER_INTERFACE_DISTRIBUTED: PortDeviceOwner{
 			value: "network:router_interface_distributed",

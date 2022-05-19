@@ -16,8 +16,8 @@ type ListApiGroupsV2Response struct {
 	Total int64 `json:"total"`
 
 	// 分组列表
-	Groups         *[]ApiGroupInfoPage `json:"groups,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	Groups         *[]ApiGroupInfo `json:"groups,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o ListApiGroupsV2Response) String() string {

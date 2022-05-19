@@ -46,6 +46,9 @@ type RespInstanceBase struct {
 
 	// 包周期计费订单编号
 	CbcMetadata *string `json:"cbc_metadata,omitempty"`
+
+	// 实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
+	LoadbalancerProvider *RespInstanceBaseLoadbalancerProvider `json:"loadbalancer_provider,omitempty"`
 }
 
 func (o RespInstanceBase) String() string {
@@ -452,5 +455,43 @@ func (c *RespInstanceBaseChargingMode) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type RespInstanceBaseLoadbalancerProvider struct {
+	value string
+}
+
+type RespInstanceBaseLoadbalancerProviderEnum struct {
+	LVS RespInstanceBaseLoadbalancerProvider
+	ELB RespInstanceBaseLoadbalancerProvider
+}
+
+func GetRespInstanceBaseLoadbalancerProviderEnum() RespInstanceBaseLoadbalancerProviderEnum {
+	return RespInstanceBaseLoadbalancerProviderEnum{
+		LVS: RespInstanceBaseLoadbalancerProvider{
+			value: "lvs",
+		},
+		ELB: RespInstanceBaseLoadbalancerProvider{
+			value: "elb",
+		},
+	}
+}
+
+func (c RespInstanceBaseLoadbalancerProvider) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *RespInstanceBaseLoadbalancerProvider) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
 	}
 }

@@ -12,7 +12,7 @@ type ListDomainLogsRequest struct {
 	// 加速域名，参考格式：www.test1.com。
 	DomainName string `json:"domain_name"`
 
-	// 查询日期，yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
+	// 查询开始时间，格式为yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
 	QueryDate string `json:"query_date"`
 
 	// 每页显示日志数量。
