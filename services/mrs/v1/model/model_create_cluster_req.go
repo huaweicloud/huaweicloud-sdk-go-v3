@@ -145,6 +145,10 @@ func GetCreateClusterReqBillingTypeEnum() CreateClusterReqBillingTypeEnum {
 	}
 }
 
+func (c CreateClusterReqBillingType) Value() int32 {
+	return c.value
+}
+
 func (c CreateClusterReqBillingType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -189,6 +193,10 @@ func GetCreateClusterReqVolumeTypeEnum() CreateClusterReqVolumeTypeEnum {
 			value: "GPSSD",
 		},
 	}
+}
+
+func (c CreateClusterReqVolumeType) Value() string {
+	return c.value
 }
 
 func (c CreateClusterReqVolumeType) MarshalJSON() ([]byte, error) {
@@ -237,6 +245,10 @@ func GetCreateClusterReqMasterDataVolumeTypeEnum() CreateClusterReqMasterDataVol
 	}
 }
 
+func (c CreateClusterReqMasterDataVolumeType) Value() string {
+	return c.value
+}
+
 func (c CreateClusterReqMasterDataVolumeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -269,6 +281,10 @@ func GetCreateClusterReqMasterDataVolumeCountEnum() CreateClusterReqMasterDataVo
 			value: 1,
 		},
 	}
+}
+
+func (c CreateClusterReqMasterDataVolumeCount) Value() int32 {
+	return c.value
 }
 
 func (c CreateClusterReqMasterDataVolumeCount) MarshalJSON() ([]byte, error) {
@@ -317,6 +333,10 @@ func GetCreateClusterReqCoreDataVolumeTypeEnum() CreateClusterReqCoreDataVolumeT
 	}
 }
 
+func (c CreateClusterReqCoreDataVolumeType) Value() string {
+	return c.value
+}
+
 func (c CreateClusterReqCoreDataVolumeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -352,6 +372,10 @@ func GetCreateClusterReqSafeModeEnum() CreateClusterReqSafeModeEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c CreateClusterReqSafeMode) Value() int32 {
+	return c.value
 }
 
 func (c CreateClusterReqSafeMode) MarshalJSON() ([]byte, error) {
@@ -391,6 +415,10 @@ func GetCreateClusterReqClusterTypeEnum() CreateClusterReqClusterTypeEnum {
 	}
 }
 
+func (c CreateClusterReqClusterType) Value() int32 {
+	return c.value
+}
+
 func (c CreateClusterReqClusterType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -428,6 +456,10 @@ func GetCreateClusterReqLogCollectionEnum() CreateClusterReqLogCollectionEnum {
 	}
 }
 
+func (c CreateClusterReqLogCollection) Value() int32 {
+	return c.value
+}
+
 func (c CreateClusterReqLogCollection) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -463,6 +495,10 @@ func GetCreateClusterReqLoginModeEnum() CreateClusterReqLoginModeEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c CreateClusterReqLoginMode) Value() int32 {
+	return c.value
 }
 
 func (c CreateClusterReqLoginMode) MarshalJSON() ([]byte, error) {

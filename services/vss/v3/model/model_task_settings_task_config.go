@@ -70,6 +70,10 @@ func GetTaskSettingsTaskConfigScanModeEnum() TaskSettingsTaskConfigScanModeEnum 
 	}
 }
 
+func (c TaskSettingsTaskConfigScanMode) Value() string {
+	return c.value
+}
+
 func (c TaskSettingsTaskConfigScanMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

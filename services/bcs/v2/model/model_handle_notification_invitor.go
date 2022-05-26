@@ -8,16 +8,16 @@ import (
 
 type HandleNotificationInvitor struct {
 
-	// 邀请方实例id
+	// 邀请方BCS服务实例ID
 	InvitorBcsId string `json:"invitor_bcs_id"`
 
-	// 邀请方实例名称
+	// 邀请方BCS服务实例名称
 	InvitorBcsName string `json:"invitor_bcs_name"`
 
 	// 邀请方project id
 	InvitorProjectId string `json:"invitor_project_id"`
 
-	// 邀请方租户id
+	// 邀请方租户id。控制台->邀请方账号->我的凭证->API凭证->账号ID
 	InvitorUserId string `json:"invitor_user_id"`
 }
 

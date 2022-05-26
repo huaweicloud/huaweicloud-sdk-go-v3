@@ -47,6 +47,10 @@ func GetListTemplatesRequestXLanguageEnum() ListTemplatesRequestXLanguageEnum {
 	}
 }
 
+func (c ListTemplatesRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ListTemplatesRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

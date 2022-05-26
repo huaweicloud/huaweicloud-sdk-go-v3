@@ -123,6 +123,10 @@ func GetCreateClusterReqV2LogCollectionEnum() CreateClusterReqV2LogCollectionEnu
 	}
 }
 
+func (c CreateClusterReqV2LogCollection) Value() int32 {
+	return c.value
+}
+
 func (c CreateClusterReqV2LogCollection) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

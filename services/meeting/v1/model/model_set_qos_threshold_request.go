@@ -55,6 +55,10 @@ func GetSetQosThresholdRequestThresholdTypeEnum() SetQosThresholdRequestThreshol
 	}
 }
 
+func (c SetQosThresholdRequestThresholdType) Value() string {
+	return c.value
+}
+
 func (c SetQosThresholdRequestThresholdType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

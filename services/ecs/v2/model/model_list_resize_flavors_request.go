@@ -63,6 +63,10 @@ func GetListResizeFlavorsRequestSortDirEnum() ListResizeFlavorsRequestSortDirEnu
 	}
 }
 
+func (c ListResizeFlavorsRequestSortDir) Value() string {
+	return c.value
+}
+
 func (c ListResizeFlavorsRequestSortDir) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -115,6 +119,10 @@ func GetListResizeFlavorsRequestSortKeyEnum() ListResizeFlavorsRequestSortKeyEnu
 			value: "root_gb",
 		},
 	}
+}
+
+func (c ListResizeFlavorsRequestSortKey) Value() string {
+	return c.value
 }
 
 func (c ListResizeFlavorsRequestSortKey) MarshalJSON() ([]byte, error) {

@@ -69,6 +69,10 @@ func GetListScalingPolicyExecuteLogsRequestScalingResourceTypeEnum() ListScaling
 	}
 }
 
+func (c ListScalingPolicyExecuteLogsRequestScalingResourceType) Value() string {
+	return c.value
+}
+
 func (c ListScalingPolicyExecuteLogsRequestScalingResourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -113,6 +117,10 @@ func GetListScalingPolicyExecuteLogsRequestExecuteTypeEnum() ListScalingPolicyEx
 			value: "MANUAL",
 		},
 	}
+}
+
+func (c ListScalingPolicyExecuteLogsRequestExecuteType) Value() string {
+	return c.value
 }
 
 func (c ListScalingPolicyExecuteLogsRequestExecuteType) MarshalJSON() ([]byte, error) {

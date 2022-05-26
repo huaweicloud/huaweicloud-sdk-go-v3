@@ -66,6 +66,10 @@ func GetBackendParamLocationEnum() BackendParamLocationEnum {
 	}
 }
 
+func (c BackendParamLocation) Value() string {
+	return c.value
+}
+
 func (c BackendParamLocation) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -106,6 +110,10 @@ func GetBackendParamOriginEnum() BackendParamOriginEnum {
 			value: "SYSTEM",
 		},
 	}
+}
+
+func (c BackendParamOrigin) Value() string {
+	return c.value
 }
 
 func (c BackendParamOrigin) MarshalJSON() ([]byte, error) {

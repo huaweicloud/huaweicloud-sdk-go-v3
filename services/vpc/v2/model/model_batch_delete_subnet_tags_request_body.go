@@ -44,6 +44,10 @@ func GetBatchDeleteSubnetTagsRequestBodyActionEnum() BatchDeleteSubnetTagsReques
 	}
 }
 
+func (c BatchDeleteSubnetTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c BatchDeleteSubnetTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

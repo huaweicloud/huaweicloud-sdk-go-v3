@@ -54,6 +54,10 @@ func GetListServiceDescribeDetailsResponseServiceTypeEnum() ListServiceDescribeD
 	}
 }
 
+func (c ListServiceDescribeDetailsResponseServiceType) Value() string {
+	return c.value
+}
+
 func (c ListServiceDescribeDetailsResponseServiceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

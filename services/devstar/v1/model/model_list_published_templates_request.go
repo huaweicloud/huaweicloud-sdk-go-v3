@@ -54,6 +54,10 @@ func GetListPublishedTemplatesRequestXLanguageEnum() ListPublishedTemplatesReque
 	}
 }
 
+func (c ListPublishedTemplatesRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ListPublishedTemplatesRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

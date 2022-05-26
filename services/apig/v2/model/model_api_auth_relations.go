@@ -69,6 +69,10 @@ func GetApiAuthRelationsAuthRoleEnum() ApiAuthRelationsAuthRoleEnum {
 	}
 }
 
+func (c ApiAuthRelationsAuthRole) Value() string {
+	return c.value
+}
+
 func (c ApiAuthRelationsAuthRole) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -105,6 +109,10 @@ func GetApiAuthRelationsAuthTunnelEnum() ApiAuthRelationsAuthTunnelEnum {
 			value: "GREEN",
 		},
 	}
+}
+
+func (c ApiAuthRelationsAuthTunnel) Value() string {
+	return c.value
 }
 
 func (c ApiAuthRelationsAuthTunnel) MarshalJSON() ([]byte, error) {

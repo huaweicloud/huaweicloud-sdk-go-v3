@@ -102,6 +102,10 @@ func GetTaskMonitorInfoTaskTypeEnum() TaskMonitorInfoTaskTypeEnum {
 	}
 }
 
+func (c TaskMonitorInfoTaskType) Value() string {
+	return c.value
+}
+
 func (c TaskMonitorInfoTaskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -137,6 +141,10 @@ func GetTaskMonitorInfoStatusEnum() TaskMonitorInfoStatusEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c TaskMonitorInfoStatus) Value() int32 {
+	return c.value
 }
 
 func (c TaskMonitorInfoStatus) MarshalJSON() ([]byte, error) {
@@ -189,6 +197,10 @@ func GetTaskMonitorInfoPeriodEnum() TaskMonitorInfoPeriodEnum {
 	}
 }
 
+func (c TaskMonitorInfoPeriod) Value() string {
+	return c.value
+}
+
 func (c TaskMonitorInfoPeriod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -229,6 +241,10 @@ func GetTaskMonitorInfoPositionEnum() TaskMonitorInfoPositionEnum {
 			value: "WRITER",
 		},
 	}
+}
+
+func (c TaskMonitorInfoPosition) Value() string {
+	return c.value
 }
 
 func (c TaskMonitorInfoPosition) MarshalJSON() ([]byte, error) {
@@ -285,6 +301,10 @@ func GetTaskMonitorInfoExecuteStatusEnum() TaskMonitorInfoExecuteStatusEnum {
 	}
 }
 
+func (c TaskMonitorInfoExecuteStatus) Value() string {
+	return c.value
+}
+
 func (c TaskMonitorInfoExecuteStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -317,6 +337,10 @@ func GetTaskMonitorInfoExtTypeEnum() TaskMonitorInfoExtTypeEnum {
 			value: "CDC",
 		},
 	}
+}
+
+func (c TaskMonitorInfoExtType) Value() string {
+	return c.value
 }
 
 func (c TaskMonitorInfoExtType) MarshalJSON() ([]byte, error) {

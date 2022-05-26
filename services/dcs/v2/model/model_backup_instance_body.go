@@ -48,6 +48,10 @@ func GetBackupInstanceBodyBackupFormatEnum() BackupInstanceBodyBackupFormatEnum 
 	}
 }
 
+func (c BackupInstanceBodyBackupFormat) Value() string {
+	return c.value
+}
+
 func (c BackupInstanceBodyBackupFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

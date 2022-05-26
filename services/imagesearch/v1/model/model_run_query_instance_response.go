@@ -87,6 +87,10 @@ func GetRunQueryInstanceResponseStatusEnum() RunQueryInstanceResponseStatusEnum 
 	}
 }
 
+func (c RunQueryInstanceResponseStatus) Value() string {
+	return c.value
+}
+
 func (c RunQueryInstanceResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

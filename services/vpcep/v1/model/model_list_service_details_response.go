@@ -98,6 +98,10 @@ func GetListServiceDetailsResponseStatusEnum() ListServiceDetailsResponseStatusE
 	}
 }
 
+func (c ListServiceDetailsResponseStatus) Value() string {
+	return c.value
+}
+
 func (c ListServiceDetailsResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -138,6 +142,10 @@ func GetListServiceDetailsResponseServerTypeEnum() ListServiceDetailsResponseSer
 			value: "LB",
 		},
 	}
+}
+
+func (c ListServiceDetailsResponseServerType) Value() string {
+	return c.value
 }
 
 func (c ListServiceDetailsResponseServerType) MarshalJSON() ([]byte, error) {
@@ -184,6 +192,10 @@ func GetListServiceDetailsResponseTcpProxyEnum() ListServiceDetailsResponseTcpPr
 			value: "open",
 		},
 	}
+}
+
+func (c ListServiceDetailsResponseTcpProxy) Value() string {
+	return c.value
 }
 
 func (c ListServiceDetailsResponseTcpProxy) MarshalJSON() ([]byte, error) {

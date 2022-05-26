@@ -71,6 +71,10 @@ func GetListDomainsRequestBusinessTypeEnum() ListDomainsRequestBusinessTypeEnum 
 	}
 }
 
+func (c ListDomainsRequestBusinessType) Value() string {
+	return c.value
+}
+
 func (c ListDomainsRequestBusinessType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -129,6 +133,10 @@ func GetListDomainsRequestDomainStatusEnum() ListDomainsRequestDomainStatusEnum 
 	}
 }
 
+func (c ListDomainsRequestDomainStatus) Value() string {
+	return c.value
+}
+
 func (c ListDomainsRequestDomainStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -169,6 +177,10 @@ func GetListDomainsRequestServiceAreaEnum() ListDomainsRequestServiceAreaEnum {
 			value: "global",
 		},
 	}
+}
+
+func (c ListDomainsRequestServiceArea) Value() string {
+	return c.value
 }
 
 func (c ListDomainsRequestServiceArea) MarshalJSON() ([]byte, error) {

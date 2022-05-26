@@ -83,6 +83,10 @@ func GetDeleteFunctionTriggerRequestTriggerTypeCodeEnum() DeleteFunctionTriggerR
 	}
 }
 
+func (c DeleteFunctionTriggerRequestTriggerTypeCode) Value() string {
+	return c.value
+}
+
 func (c DeleteFunctionTriggerRequestTriggerTypeCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

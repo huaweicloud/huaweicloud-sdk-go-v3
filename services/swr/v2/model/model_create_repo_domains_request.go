@@ -53,6 +53,10 @@ func GetCreateRepoDomainsRequestContentTypeEnum() CreateRepoDomainsRequestConten
 	}
 }
 
+func (c CreateRepoDomainsRequestContentType) Value() string {
+	return c.value
+}
+
 func (c CreateRepoDomainsRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

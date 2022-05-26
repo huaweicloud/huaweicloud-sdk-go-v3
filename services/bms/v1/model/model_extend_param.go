@@ -59,6 +59,10 @@ func GetExtendParamChargingModeEnum() ExtendParamChargingModeEnum {
 	}
 }
 
+func (c ExtendParamChargingMode) Value() string {
+	return c.value
+}
+
 func (c ExtendParamChargingMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -95,6 +99,10 @@ func GetExtendParamPeriodTypeEnum() ExtendParamPeriodTypeEnum {
 			value: "year",
 		},
 	}
+}
+
+func (c ExtendParamPeriodType) Value() string {
+	return c.value
 }
 
 func (c ExtendParamPeriodType) MarshalJSON() ([]byte, error) {

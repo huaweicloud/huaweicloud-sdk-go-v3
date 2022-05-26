@@ -87,6 +87,10 @@ func GetBriefTaskRespBeanTaskTypeEnum() BriefTaskRespBeanTaskTypeEnum {
 	}
 }
 
+func (c BriefTaskRespBeanTaskType) Value() string {
+	return c.value
+}
+
 func (c BriefTaskRespBeanTaskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -122,6 +126,10 @@ func GetBriefTaskRespBeanStatusEnum() BriefTaskRespBeanStatusEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c BriefTaskRespBeanStatus) Value() int32 {
+	return c.value
 }
 
 func (c BriefTaskRespBeanStatus) MarshalJSON() ([]byte, error) {

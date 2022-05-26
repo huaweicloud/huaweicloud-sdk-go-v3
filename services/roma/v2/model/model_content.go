@@ -238,6 +238,10 @@ func GetContentGauss100VersionEnum() ContentGauss100VersionEnum {
 	}
 }
 
+func (c ContentGauss100Version) Value() string {
+	return c.value
+}
+
 func (c ContentGauss100Version) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -280,6 +284,10 @@ func GetContentModeEnum() ContentModeEnum {
 	}
 }
 
+func (c ContentMode) Value() string {
+	return c.value
+}
+
 func (c ContentMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -316,6 +324,10 @@ func GetContentCdcModeEnum() ContentCdcModeEnum {
 			value: "logminer",
 		},
 	}
+}
+
+func (c ContentCdcMode) Value() string {
+	return c.value
 }
 
 func (c ContentCdcMode) MarshalJSON() ([]byte, error) {
@@ -356,6 +368,10 @@ func GetContentFtpConnectModeEnum() ContentFtpConnectModeEnum {
 	}
 }
 
+func (c ContentFtpConnectMode) Value() string {
+	return c.value
+}
+
 func (c ContentFtpConnectMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -392,6 +408,10 @@ func GetContentFtpProtocolEnum() ContentFtpProtocolEnum {
 			value: "ftp",
 		},
 	}
+}
+
+func (c ContentFtpProtocol) Value() string {
+	return c.value
 }
 
 func (c ContentFtpProtocol) MarshalJSON() ([]byte, error) {
@@ -444,6 +464,10 @@ func GetContentApiMethodEnum() ContentApiMethodEnum {
 	}
 }
 
+func (c ContentApiMethod) Value() string {
+	return c.value
+}
+
 func (c ContentApiMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -480,6 +504,10 @@ func GetContentAuthMethodEnum() ContentAuthMethodEnum {
 			value: "basicauth",
 		},
 	}
+}
+
+func (c ContentAuthMethod) Value() string {
+	return c.value
 }
 
 func (c ContentAuthMethod) MarshalJSON() ([]byte, error) {
@@ -672,6 +700,10 @@ func GetContentEncodingEnum() ContentEncodingEnum {
 	}
 }
 
+func (c ContentEncoding) Value() string {
+	return c.value
+}
+
 func (c ContentEncoding) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -708,6 +740,10 @@ func GetContentTrustStoreFileTypeEnum() ContentTrustStoreFileTypeEnum {
 			value: "ts",
 		},
 	}
+}
+
+func (c ContentTrustStoreFileType) Value() string {
+	return c.value
 }
 
 func (c ContentTrustStoreFileType) MarshalJSON() ([]byte, error) {
@@ -748,6 +784,10 @@ func GetContentSslAuthMethodEnum() ContentSslAuthMethodEnum {
 	}
 }
 
+func (c ContentSslAuthMethod) Value() string {
+	return c.value
+}
+
 func (c ContentSslAuthMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -786,6 +826,10 @@ func GetContentKeyStoreFileTypeEnum() ContentKeyStoreFileTypeEnum {
 	}
 }
 
+func (c ContentKeyStoreFileType) Value() string {
+	return c.value
+}
+
 func (c ContentKeyStoreFileType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -818,6 +862,10 @@ func GetContentDisDataTypeEnum() ContentDisDataTypeEnum {
 			value: "JSON",
 		},
 	}
+}
+
+func (c ContentDisDataType) Value() string {
+	return c.value
 }
 
 func (c ContentDisDataType) MarshalJSON() ([]byte, error) {
@@ -858,6 +906,10 @@ func GetContentDisSettingTypeEnum() ContentDisSettingTypeEnum {
 	}
 }
 
+func (c ContentDisSettingType) Value() string {
+	return c.value
+}
+
 func (c ContentDisSettingType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -894,6 +946,10 @@ func GetContentHl7PositionEnum() ContentHl7PositionEnum {
 			value: "target",
 		},
 	}
+}
+
+func (c ContentHl7Position) Value() string {
+	return c.value
 }
 
 func (c ContentHl7Position) MarshalJSON() ([]byte, error) {
@@ -934,6 +990,10 @@ func GetContentLdapSecurityAuthTypeEnum() ContentLdapSecurityAuthTypeEnum {
 	}
 }
 
+func (c ContentLdapSecurityAuthType) Value() string {
+	return c.value
+}
+
 func (c ContentLdapSecurityAuthType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -966,6 +1026,10 @@ func GetContentRabbitmqSslProtocolEnum() ContentRabbitmqSslProtocolEnum {
 			value: "TLS",
 		},
 	}
+}
+
+func (c ContentRabbitmqSslProtocol) Value() string {
+	return c.value
 }
 
 func (c ContentRabbitmqSslProtocol) MarshalJSON() ([]byte, error) {
@@ -1006,6 +1070,10 @@ func GetContentSnmpNetworkProtocolEnum() ContentSnmpNetworkProtocolEnum {
 	}
 }
 
+func (c ContentSnmpNetworkProtocol) Value() string {
+	return c.value
+}
+
 func (c ContentSnmpNetworkProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -1044,6 +1112,10 @@ func GetContentSnmpVersionEnum() ContentSnmpVersionEnum {
 			value: 3,
 		},
 	}
+}
+
+func (c ContentSnmpVersion) Value() int32 {
+	return c.value
 }
 
 func (c ContentSnmpVersion) MarshalJSON() ([]byte, error) {

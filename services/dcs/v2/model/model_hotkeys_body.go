@@ -75,6 +75,10 @@ func GetHotkeysBodyTypeEnum() HotkeysBodyTypeEnum {
 	}
 }
 
+func (c HotkeysBodyType) Value() string {
+	return c.value
+}
+
 func (c HotkeysBodyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

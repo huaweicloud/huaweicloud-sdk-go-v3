@@ -68,6 +68,10 @@ func GetApiPolicyFunctionCreateInvocationTypeEnum() ApiPolicyFunctionCreateInvoc
 	}
 }
 
+func (c ApiPolicyFunctionCreateInvocationType) Value() string {
+	return c.value
+}
+
 func (c ApiPolicyFunctionCreateInvocationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -104,6 +108,10 @@ func GetApiPolicyFunctionCreateEffectModeEnum() ApiPolicyFunctionCreateEffectMod
 			value: "ANY",
 		},
 	}
+}
+
+func (c ApiPolicyFunctionCreateEffectMode) Value() string {
+	return c.value
 }
 
 func (c ApiPolicyFunctionCreateEffectMode) MarshalJSON() ([]byte, error) {

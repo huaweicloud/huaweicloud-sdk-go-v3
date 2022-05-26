@@ -75,6 +75,10 @@ func GetCreateL7policyReqActionEnum() CreateL7policyReqActionEnum {
 	}
 }
 
+func (c CreateL7policyReqAction) Value() string {
+	return c.value
+}
+
 func (c CreateL7policyReqAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

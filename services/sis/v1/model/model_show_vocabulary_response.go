@@ -58,6 +58,10 @@ func GetShowVocabularyResponseLanguageEnum() ShowVocabularyResponseLanguageEnum 
 	}
 }
 
+func (c ShowVocabularyResponseLanguage) Value() string {
+	return c.value
+}
+
 func (c ShowVocabularyResponseLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

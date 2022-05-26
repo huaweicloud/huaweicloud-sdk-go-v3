@@ -66,6 +66,10 @@ func GetCreateDeviceRequestBodyStatusEnum() CreateDeviceRequestBodyStatusEnum {
 	}
 }
 
+func (c CreateDeviceRequestBodyStatus) Value() int32 {
+	return c.value
+}
+
 func (c CreateDeviceRequestBodyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

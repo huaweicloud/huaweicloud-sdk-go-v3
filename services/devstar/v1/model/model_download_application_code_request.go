@@ -48,6 +48,10 @@ func GetDownloadApplicationCodeRequestXLanguageEnum() DownloadApplicationCodeReq
 	}
 }
 
+func (c DownloadApplicationCodeRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c DownloadApplicationCodeRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -50,6 +50,10 @@ func GetComponentSubCategoryEnum() ComponentSubCategoryEnum {
 	}
 }
 
+func (c ComponentSubCategory) Value() string {
+	return c.value
+}
+
 func (c ComponentSubCategory) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

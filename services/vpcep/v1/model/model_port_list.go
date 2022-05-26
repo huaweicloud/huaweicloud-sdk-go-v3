@@ -47,6 +47,10 @@ func GetPortListProtocolEnum() PortListProtocolEnum {
 	}
 }
 
+func (c PortListProtocol) Value() string {
+	return c.value
+}
+
 func (c PortListProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

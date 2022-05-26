@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/eps/v1/model"
 )
 
@@ -19,7 +19,7 @@ func EpsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 创建企业项目
+// CreateEnterpriseProject 创建企业项目
 //
 // 创建企业项目。
 //
@@ -35,7 +35,13 @@ func (c *EpsClient) CreateEnterpriseProject(request *model.CreateEnterpriseProje
 	}
 }
 
-// 停用企业项目
+// CreateEnterpriseProjectInvoker 创建企业项目
+func (c *EpsClient) CreateEnterpriseProjectInvoker(request *model.CreateEnterpriseProjectRequest) *CreateEnterpriseProjectInvoker {
+	requestDef := GenReqDefForCreateEnterpriseProject()
+	return &CreateEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisableEnterpriseProject 停用企业项目
 //
 // 停用企业项目。
 //
@@ -51,7 +57,13 @@ func (c *EpsClient) DisableEnterpriseProject(request *model.DisableEnterprisePro
 	}
 }
 
-// 启用企业项目
+// DisableEnterpriseProjectInvoker 停用企业项目
+func (c *EpsClient) DisableEnterpriseProjectInvoker(request *model.DisableEnterpriseProjectRequest) *DisableEnterpriseProjectInvoker {
+	requestDef := GenReqDefForDisableEnterpriseProject()
+	return &DisableEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableEnterpriseProject 启用企业项目
 //
 // 启用企业项目。
 //
@@ -67,7 +79,13 @@ func (c *EpsClient) EnableEnterpriseProject(request *model.EnableEnterpriseProje
 	}
 }
 
-// 查询API版本列表
+// EnableEnterpriseProjectInvoker 启用企业项目
+func (c *EpsClient) EnableEnterpriseProjectInvoker(request *model.EnableEnterpriseProjectRequest) *EnableEnterpriseProjectInvoker {
+	requestDef := GenReqDefForEnableEnterpriseProject()
+	return &EnableEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiVersions 查询API版本列表
 //
 // 查询企业项目的API版本列表。
 //
@@ -83,7 +101,13 @@ func (c *EpsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*mod
 	}
 }
 
-// 查询企业项目列表
+// ListApiVersionsInvoker 查询API版本列表
+func (c *EpsClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest) *ListApiVersionsInvoker {
+	requestDef := GenReqDefForListApiVersions()
+	return &ListApiVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEnterpriseProject 查询企业项目列表
 //
 // 查询当前用户已授权的企业项目列表，用户可以使用企业项目绑定资源。
 //
@@ -99,7 +123,13 @@ func (c *EpsClient) ListEnterpriseProject(request *model.ListEnterpriseProjectRe
 	}
 }
 
-// 迁移资源
+// ListEnterpriseProjectInvoker 查询企业项目列表
+func (c *EpsClient) ListEnterpriseProjectInvoker(request *model.ListEnterpriseProjectRequest) *ListEnterpriseProjectInvoker {
+	requestDef := GenReqDefForListEnterpriseProject()
+	return &ListEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// MigrateResource 迁移资源
 //
 // 迁移资源到目标企业项目。
 //
@@ -115,7 +145,13 @@ func (c *EpsClient) MigrateResource(request *model.MigrateResourceRequest) (*mod
 	}
 }
 
-// 查询API版本号详情
+// MigrateResourceInvoker 迁移资源
+func (c *EpsClient) MigrateResourceInvoker(request *model.MigrateResourceRequest) *MigrateResourceInvoker {
+	requestDef := GenReqDefForMigrateResource()
+	return &MigrateResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowApiVersion 查询API版本号详情
 //
 // 查询指定的企业项目API版本号详情
 //
@@ -131,7 +167,13 @@ func (c *EpsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model
 	}
 }
 
-// 查询企业项目详情
+// ShowApiVersionInvoker 查询API版本号详情
+func (c *EpsClient) ShowApiVersionInvoker(request *model.ShowApiVersionRequest) *ShowApiVersionInvoker {
+	requestDef := GenReqDefForShowApiVersion()
+	return &ShowApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEnterpriseProject 查询企业项目详情
 //
 // 查询企业项目详情。
 //
@@ -147,7 +189,13 @@ func (c *EpsClient) ShowEnterpriseProject(request *model.ShowEnterpriseProjectRe
 	}
 }
 
-// 查询企业项目配额
+// ShowEnterpriseProjectInvoker 查询企业项目详情
+func (c *EpsClient) ShowEnterpriseProjectInvoker(request *model.ShowEnterpriseProjectRequest) *ShowEnterpriseProjectInvoker {
+	requestDef := GenReqDefForShowEnterpriseProject()
+	return &ShowEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEnterpriseProjectQuota 查询企业项目配额
 //
 // 查询企业项目的配额信息。
 //
@@ -163,7 +211,13 @@ func (c *EpsClient) ShowEnterpriseProjectQuota(request *model.ShowEnterpriseProj
 	}
 }
 
-// 查询企业项目绑定的资源列表
+// ShowEnterpriseProjectQuotaInvoker 查询企业项目配额
+func (c *EpsClient) ShowEnterpriseProjectQuotaInvoker(request *model.ShowEnterpriseProjectQuotaRequest) *ShowEnterpriseProjectQuotaInvoker {
+	requestDef := GenReqDefForShowEnterpriseProjectQuota()
+	return &ShowEnterpriseProjectQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResourceBindEnterpriseProject 查询企业项目绑定的资源列表
 //
 // 查询企业项目下绑定的资源详情。
 //
@@ -179,7 +233,13 @@ func (c *EpsClient) ShowResourceBindEnterpriseProject(request *model.ShowResourc
 	}
 }
 
-// 修改企业项目
+// ShowResourceBindEnterpriseProjectInvoker 查询企业项目绑定的资源列表
+func (c *EpsClient) ShowResourceBindEnterpriseProjectInvoker(request *model.ShowResourceBindEnterpriseProjectRequest) *ShowResourceBindEnterpriseProjectInvoker {
+	requestDef := GenReqDefForShowResourceBindEnterpriseProject()
+	return &ShowResourceBindEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEnterpriseProject 修改企业项目
 //
 // 修改企业项目。当前仅支持修改名称和描述。
 //
@@ -193,4 +253,10 @@ func (c *EpsClient) UpdateEnterpriseProject(request *model.UpdateEnterpriseProje
 	} else {
 		return resp.(*model.UpdateEnterpriseProjectResponse), nil
 	}
+}
+
+// UpdateEnterpriseProjectInvoker 修改企业项目
+func (c *EpsClient) UpdateEnterpriseProjectInvoker(request *model.UpdateEnterpriseProjectRequest) *UpdateEnterpriseProjectInvoker {
+	requestDef := GenReqDefForUpdateEnterpriseProject()
+	return &UpdateEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

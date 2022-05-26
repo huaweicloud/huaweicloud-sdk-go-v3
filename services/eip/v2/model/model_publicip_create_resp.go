@@ -118,6 +118,10 @@ func GetPublicipCreateRespStatusEnum() PublicipCreateRespStatusEnum {
 	}
 }
 
+func (c PublicipCreateRespStatus) Value() string {
+	return c.value
+}
+
 func (c PublicipCreateRespStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -153,6 +157,10 @@ func GetPublicipCreateRespIpVersionEnum() PublicipCreateRespIpVersionEnum {
 			value: 6,
 		},
 	}
+}
+
+func (c PublicipCreateRespIpVersion) Value() int32 {
+	return c.value
 }
 
 func (c PublicipCreateRespIpVersion) MarshalJSON() ([]byte, error) {

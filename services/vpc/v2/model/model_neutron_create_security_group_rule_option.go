@@ -69,6 +69,10 @@ func GetNeutronCreateSecurityGroupRuleOptionDirectionEnum() NeutronCreateSecurit
 	}
 }
 
+func (c NeutronCreateSecurityGroupRuleOptionDirection) Value() string {
+	return c.value
+}
+
 func (c NeutronCreateSecurityGroupRuleOptionDirection) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -105,6 +109,10 @@ func GetNeutronCreateSecurityGroupRuleOptionEthertypeEnum() NeutronCreateSecurit
 			value: "IPv6",
 		},
 	}
+}
+
+func (c NeutronCreateSecurityGroupRuleOptionEthertype) Value() string {
+	return c.value
 }
 
 func (c NeutronCreateSecurityGroupRuleOptionEthertype) MarshalJSON() ([]byte, error) {

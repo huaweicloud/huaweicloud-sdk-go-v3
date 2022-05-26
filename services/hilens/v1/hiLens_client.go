@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/hilens/v1/model"
 )
 
@@ -19,7 +19,7 @@ func HiLensClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 获取设备告警列表
+// ListDeviceAlarms 获取设备告警列表
 //
 // 获取设备告警列表
 //
@@ -35,7 +35,13 @@ func (c *HiLensClient) ListDeviceAlarms(request *model.ListDeviceAlarmsRequest) 
 	}
 }
 
-// 获取设备列表
+// ListDeviceAlarmsInvoker 获取设备告警列表
+func (c *HiLensClient) ListDeviceAlarmsInvoker(request *model.ListDeviceAlarmsRequest) *ListDeviceAlarmsInvoker {
+	requestDef := GenReqDefForListDeviceAlarms()
+	return &ListDeviceAlarmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDevices 获取设备列表
 //
 // 获取设备列表
 //
@@ -49,4 +55,10 @@ func (c *HiLensClient) ListDevices(request *model.ListDevicesRequest) (*model.Li
 	} else {
 		return resp.(*model.ListDevicesResponse), nil
 	}
+}
+
+// ListDevicesInvoker 获取设备列表
+func (c *HiLensClient) ListDevicesInvoker(request *model.ListDevicesRequest) *ListDevicesInvoker {
+	requestDef := GenReqDefForListDevices()
+	return &ListDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -44,6 +44,10 @@ func GetBatchDeleteVpcTagsRequestBodyActionEnum() BatchDeleteVpcTagsRequestBodyA
 	}
 }
 
+func (c BatchDeleteVpcTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c BatchDeleteVpcTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

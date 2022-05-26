@@ -54,6 +54,10 @@ func GetShowTemplateFileRequestXLanguageEnum() ShowTemplateFileRequestXLanguageE
 	}
 }
 
+func (c ShowTemplateFileRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ShowTemplateFileRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -90,6 +94,10 @@ func GetShowTemplateFileRequestTypeEnum() ShowTemplateFileRequestTypeEnum {
 			value: "introduction",
 		},
 	}
+}
+
+func (c ShowTemplateFileRequestType) Value() string {
+	return c.value
 }
 
 func (c ShowTemplateFileRequestType) MarshalJSON() ([]byte, error) {

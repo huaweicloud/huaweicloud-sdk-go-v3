@@ -57,6 +57,10 @@ func GetCloudWafServerFrontProtocolEnum() CloudWafServerFrontProtocolEnum {
 	}
 }
 
+func (c CloudWafServerFrontProtocol) Value() string {
+	return c.value
+}
+
 func (c CloudWafServerFrontProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -95,6 +99,10 @@ func GetCloudWafServerBackProtocolEnum() CloudWafServerBackProtocolEnum {
 	}
 }
 
+func (c CloudWafServerBackProtocol) Value() string {
+	return c.value
+}
+
 func (c CloudWafServerBackProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -131,6 +139,10 @@ func GetCloudWafServerTypeEnum() CloudWafServerTypeEnum {
 			value: "ipv6",
 		},
 	}
+}
+
+func (c CloudWafServerType) Value() string {
+	return c.value
 }
 
 func (c CloudWafServerType) MarshalJSON() ([]byte, error) {

@@ -54,6 +54,10 @@ func GetBandwidthInfoShareTypeEnum() BandwidthInfoShareTypeEnum {
 	}
 }
 
+func (c BandwidthInfoShareType) Value() string {
+	return c.value
+}
+
 func (c BandwidthInfoShareType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -90,6 +94,10 @@ func GetBandwidthInfoChargingModeEnum() BandwidthInfoChargingModeEnum {
 			value: "traffic",
 		},
 	}
+}
+
+func (c BandwidthInfoChargingMode) Value() string {
+	return c.value
 }
 
 func (c BandwidthInfoChargingMode) MarshalJSON() ([]byte, error) {

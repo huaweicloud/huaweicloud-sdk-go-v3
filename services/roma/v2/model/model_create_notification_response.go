@@ -69,6 +69,10 @@ func GetCreateNotificationResponseTypeEnum() CreateNotificationResponseTypeEnum 
 	}
 }
 
+func (c CreateNotificationResponseType) Value() int32 {
+	return c.value
+}
+
 func (c CreateNotificationResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -104,6 +108,10 @@ func GetCreateNotificationResponseStatusEnum() CreateNotificationResponseStatusE
 			value: 1,
 		},
 	}
+}
+
+func (c CreateNotificationResponseStatus) Value() int32 {
+	return c.value
 }
 
 func (c CreateNotificationResponseStatus) MarshalJSON() ([]byte, error) {

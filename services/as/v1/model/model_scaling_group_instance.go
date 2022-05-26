@@ -83,6 +83,10 @@ func GetScalingGroupInstanceLifeCycleStateEnum() ScalingGroupInstanceLifeCycleSt
 	}
 }
 
+func (c ScalingGroupInstanceLifeCycleState) Value() string {
+	return c.value
+}
+
 func (c ScalingGroupInstanceLifeCycleState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -123,6 +127,10 @@ func GetScalingGroupInstanceHealthStatusEnum() ScalingGroupInstanceHealthStatusE
 			value: "INITAILIZING",
 		},
 	}
+}
+
+func (c ScalingGroupInstanceHealthStatus) Value() string {
+	return c.value
 }
 
 func (c ScalingGroupInstanceHealthStatus) MarshalJSON() ([]byte, error) {

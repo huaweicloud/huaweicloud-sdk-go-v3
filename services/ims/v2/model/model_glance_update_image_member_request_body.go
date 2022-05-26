@@ -48,6 +48,10 @@ func GetGlanceUpdateImageMemberRequestBodyStatusEnum() GlanceUpdateImageMemberRe
 	}
 }
 
+func (c GlanceUpdateImageMemberRequestBodyStatus) Value() string {
+	return c.value
+}
+
 func (c GlanceUpdateImageMemberRequestBodyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

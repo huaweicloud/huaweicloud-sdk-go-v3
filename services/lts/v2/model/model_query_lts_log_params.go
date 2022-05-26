@@ -72,6 +72,10 @@ func GetQueryLtsLogParamsSearchTypeEnum() QueryLtsLogParamsSearchTypeEnum {
 	}
 }
 
+func (c QueryLtsLogParamsSearchType) Value() string {
+	return c.value
+}
+
 func (c QueryLtsLogParamsSearchType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

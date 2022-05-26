@@ -54,6 +54,10 @@ func GetCommandTimeTakenListResultEnum() CommandTimeTakenListResultEnum {
 	}
 }
 
+func (c CommandTimeTakenListResult) Value() string {
+	return c.value
+}
+
 func (c CommandTimeTakenListResult) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

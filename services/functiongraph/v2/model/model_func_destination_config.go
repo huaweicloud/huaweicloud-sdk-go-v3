@@ -56,6 +56,10 @@ func GetFuncDestinationConfigDestinationEnum() FuncDestinationConfigDestinationE
 	}
 }
 
+func (c FuncDestinationConfigDestination) Value() string {
+	return c.value
+}
+
 func (c FuncDestinationConfigDestination) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

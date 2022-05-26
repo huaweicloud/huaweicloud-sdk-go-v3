@@ -83,6 +83,10 @@ func GetLineCompareDetailLineCompareResultEnum() LineCompareDetailLineCompareRes
 	}
 }
 
+func (c LineCompareDetailLineCompareResult) Value() string {
+	return c.value
+}
+
 func (c LineCompareDetailLineCompareResult) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -47,6 +47,10 @@ func GetShowMonitoringDataRequestXLanguageEnum() ShowMonitoringDataRequestXLangu
 	}
 }
 
+func (c ShowMonitoringDataRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ShowMonitoringDataRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

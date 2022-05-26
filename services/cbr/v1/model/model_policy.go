@@ -60,6 +60,10 @@ func GetPolicyOperationTypeEnum() PolicyOperationTypeEnum {
 	}
 }
 
+func (c PolicyOperationType) Value() string {
+	return c.value
+}
+
 func (c PolicyOperationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

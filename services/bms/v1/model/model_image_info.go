@@ -58,6 +58,10 @@ func GetImageInfoOsTypeEnum() ImageInfoOsTypeEnum {
 	}
 }
 
+func (c ImageInfoOsType) Value() string {
+	return c.value
+}
+
 func (c ImageInfoOsType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

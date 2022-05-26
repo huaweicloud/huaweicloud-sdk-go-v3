@@ -51,6 +51,10 @@ func GetPreviewTemplateBodyLanguageEnum() PreviewTemplateBodyLanguageEnum {
 	}
 }
 
+func (c PreviewTemplateBodyLanguage) Value() string {
+	return c.value
+}
+
 func (c PreviewTemplateBodyLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

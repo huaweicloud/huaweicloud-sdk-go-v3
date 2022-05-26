@@ -88,6 +88,10 @@ func GetBackendApiReqProtocolEnum() BackendApiReqProtocolEnum {
 	}
 }
 
+func (c BackendApiReqProtocol) Value() string {
+	return c.value
+}
+
 func (c BackendApiReqProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -150,6 +154,10 @@ func GetBackendApiReqMethodEnum() BackendApiReqMethodEnum {
 	}
 }
 
+func (c BackendApiReqMethod) Value() string {
+	return c.value
+}
+
 func (c BackendApiReqMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -182,6 +190,10 @@ func GetBackendApiStatusEnum() BackendApiStatusEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c BackendApiStatus) Value() int32 {
+	return c.value
 }
 
 func (c BackendApiStatus) MarshalJSON() ([]byte, error) {

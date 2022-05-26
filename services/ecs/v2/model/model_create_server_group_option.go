@@ -44,6 +44,10 @@ func GetCreateServerGroupOptionPoliciesEnum() CreateServerGroupOptionPoliciesEnu
 	}
 }
 
+func (c CreateServerGroupOptionPolicies) Value() string {
+	return c.value
+}
+
 func (c CreateServerGroupOptionPolicies) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

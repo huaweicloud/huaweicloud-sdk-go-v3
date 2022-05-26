@@ -54,6 +54,10 @@ func GetPrepaidCreateOptionPeriodTypeEnum() PrepaidCreateOptionPeriodTypeEnum {
 	}
 }
 
+func (c PrepaidCreateOptionPeriodType) Value() string {
+	return c.value
+}
+
 func (c PrepaidCreateOptionPeriodType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

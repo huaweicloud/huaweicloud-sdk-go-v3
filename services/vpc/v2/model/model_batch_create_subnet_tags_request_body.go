@@ -44,6 +44,10 @@ func GetBatchCreateSubnetTagsRequestBodyActionEnum() BatchCreateSubnetTagsReques
 	}
 }
 
+func (c BatchCreateSubnetTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c BatchCreateSubnetTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

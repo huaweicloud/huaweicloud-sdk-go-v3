@@ -56,6 +56,10 @@ func GetEntrypointItemTypeEnum() EntrypointItemTypeEnum {
 	}
 }
 
+func (c EntrypointItemType) Value() string {
+	return c.value
+}
+
 func (c EntrypointItemType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

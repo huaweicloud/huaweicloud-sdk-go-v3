@@ -46,6 +46,10 @@ func GetBatchAddSharedTagsRequestBodyActionEnum() BatchAddSharedTagsRequestBodyA
 	}
 }
 
+func (c BatchAddSharedTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c BatchAddSharedTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

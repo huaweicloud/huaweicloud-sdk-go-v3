@@ -45,6 +45,10 @@ func GetPostPaidServerEipExtendParamChargingModeEnum() PostPaidServerEipExtendPa
 	}
 }
 
+func (c PostPaidServerEipExtendParamChargingMode) Value() string {
+	return c.value
+}
+
 func (c PostPaidServerEipExtendParamChargingMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

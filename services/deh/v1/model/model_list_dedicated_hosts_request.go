@@ -88,6 +88,10 @@ func GetListDedicatedHostsRequestStateEnum() ListDedicatedHostsRequestStateEnum 
 	}
 }
 
+func (c ListDedicatedHostsRequestState) Value() string {
+	return c.value
+}
+
 func (c ListDedicatedHostsRequestState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

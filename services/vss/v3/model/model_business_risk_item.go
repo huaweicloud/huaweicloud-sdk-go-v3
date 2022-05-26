@@ -71,6 +71,10 @@ func GetBusinessRiskItemRiskTypeEnum() BusinessRiskItemRiskTypeEnum {
 	}
 }
 
+func (c BusinessRiskItemRiskType) Value() string {
+	return c.value
+}
+
 func (c BusinessRiskItemRiskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -111,6 +115,10 @@ func GetBusinessRiskItemRiskStatusEnum() BusinessRiskItemRiskStatusEnum {
 			value: "false_report",
 		},
 	}
+}
+
+func (c BusinessRiskItemRiskStatus) Value() string {
+	return c.value
 }
 
 func (c BusinessRiskItemRiskStatus) MarshalJSON() ([]byte, error) {

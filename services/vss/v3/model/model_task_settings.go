@@ -60,6 +60,10 @@ func GetTaskSettingsTaskPeriodEnum() TaskSettingsTaskPeriodEnum {
 	}
 }
 
+func (c TaskSettingsTaskPeriod) Value() string {
+	return c.value
+}
+
 func (c TaskSettingsTaskPeriod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

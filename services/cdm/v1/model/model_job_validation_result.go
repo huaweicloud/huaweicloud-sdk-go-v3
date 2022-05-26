@@ -48,6 +48,10 @@ func GetJobValidationResultStatusEnum() JobValidationResultStatusEnum {
 	}
 }
 
+func (c JobValidationResultStatus) Value() string {
+	return c.value
+}
+
 func (c JobValidationResultStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

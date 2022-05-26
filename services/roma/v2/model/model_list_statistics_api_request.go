@@ -74,6 +74,10 @@ func GetListStatisticsApiRequestModeEnum() ListStatisticsApiRequestModeEnum {
 	}
 }
 
+func (c ListStatisticsApiRequestMode) Value() string {
+	return c.value
+}
+
 func (c ListStatisticsApiRequestMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -114,6 +118,10 @@ func GetListStatisticsApiRequestCycleEnum() ListStatisticsApiRequestCycleEnum {
 			value: "day",
 		},
 	}
+}
+
+func (c ListStatisticsApiRequestCycle) Value() string {
+	return c.value
 }
 
 func (c ListStatisticsApiRequestCycle) MarshalJSON() ([]byte, error) {

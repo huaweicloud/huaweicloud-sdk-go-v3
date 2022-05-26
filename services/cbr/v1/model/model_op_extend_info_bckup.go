@@ -59,6 +59,10 @@ func GetOpExtendInfoBckupAppConsistencyStatusEnum() OpExtendInfoBckupAppConsiste
 	}
 }
 
+func (c OpExtendInfoBckupAppConsistencyStatus) Value() string {
+	return c.value
+}
+
 func (c OpExtendInfoBckupAppConsistencyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -95,6 +99,10 @@ func GetOpExtendInfoBckupIncrementalEnum() OpExtendInfoBckupIncrementalEnum {
 			value: "\"false\"",
 		},
 	}
+}
+
+func (c OpExtendInfoBckupIncremental) Value() string {
+	return c.value
 }
 
 func (c OpExtendInfoBckupIncremental) MarshalJSON() ([]byte, error) {

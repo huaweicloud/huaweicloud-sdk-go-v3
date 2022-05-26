@@ -47,6 +47,10 @@ func GetBatchValidateClustersConnectionsRequestXLanguageEnum() BatchValidateClus
 	}
 }
 
+func (c BatchValidateClustersConnectionsRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c BatchValidateClustersConnectionsRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

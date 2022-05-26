@@ -75,6 +75,10 @@ func GetObsDestinationDescriptorConsumerStrategyEnum() ObsDestinationDescriptorC
 	}
 }
 
+func (c ObsDestinationDescriptorConsumerStrategy) Value() string {
+	return c.value
+}
+
 func (c ObsDestinationDescriptorConsumerStrategy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -107,6 +111,10 @@ func GetObsDestinationDescriptorDestinationFileTypeEnum() ObsDestinationDescript
 			value: "TEXT",
 		},
 	}
+}
+
+func (c ObsDestinationDescriptorDestinationFileType) Value() string {
+	return c.value
 }
 
 func (c ObsDestinationDescriptorDestinationFileType) MarshalJSON() ([]byte, error) {

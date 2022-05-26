@@ -51,6 +51,10 @@ func GetListTriggersDetailsRequestContentTypeEnum() ListTriggersDetailsRequestCo
 	}
 }
 
+func (c ListTriggersDetailsRequestContentType) Value() string {
+	return c.value
+}
+
 func (c ListTriggersDetailsRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

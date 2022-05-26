@@ -48,6 +48,10 @@ func GetBatchRebootTypeEnum() BatchRebootTypeEnum {
 	}
 }
 
+func (c BatchRebootType) Value() string {
+	return c.value
+}
+
 func (c BatchRebootType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

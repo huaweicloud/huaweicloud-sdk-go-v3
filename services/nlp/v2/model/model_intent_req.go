@@ -44,6 +44,10 @@ func GetIntentReqLangEnum() IntentReqLangEnum {
 	}
 }
 
+func (c IntentReqLang) Value() string {
+	return c.value
+}
+
 func (c IntentReqLang) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

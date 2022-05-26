@@ -63,6 +63,10 @@ func GetListServicePublicDetailsRequestSortKeyEnum() ListServicePublicDetailsReq
 	}
 }
 
+func (c ListServicePublicDetailsRequestSortKey) Value() string {
+	return c.value
+}
+
 func (c ListServicePublicDetailsRequestSortKey) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -99,6 +103,10 @@ func GetListServicePublicDetailsRequestSortDirEnum() ListServicePublicDetailsReq
 			value: "desc",
 		},
 	}
+}
+
+func (c ListServicePublicDetailsRequestSortDir) Value() string {
+	return c.value
 }
 
 func (c ListServicePublicDetailsRequestSortDir) MarshalJSON() ([]byte, error) {

@@ -50,6 +50,10 @@ func GetDeleteNodeRequestNodepoolScaleDownEnum() DeleteNodeRequestNodepoolScaleD
 	}
 }
 
+func (c DeleteNodeRequestNodepoolScaleDown) Value() string {
+	return c.value
+}
+
 func (c DeleteNodeRequestNodepoolScaleDown) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

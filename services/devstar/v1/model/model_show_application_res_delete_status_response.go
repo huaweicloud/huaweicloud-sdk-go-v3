@@ -53,6 +53,10 @@ func GetShowApplicationResDeleteStatusResponseRepoStatusEnum() ShowApplicationRe
 	}
 }
 
+func (c ShowApplicationResDeleteStatusResponseRepoStatus) Value() string {
+	return c.value
+}
+
 func (c ShowApplicationResDeleteStatusResponseRepoStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

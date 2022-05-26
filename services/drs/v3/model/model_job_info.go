@@ -161,6 +161,10 @@ func GetJobInfoStatusEnum() JobInfoStatusEnum {
 	}
 }
 
+func (c JobInfoStatus) Value() string {
+	return c.value
+}
+
 func (c JobInfoStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -211,6 +215,10 @@ func GetJobInfoEngineTypeEnum() JobInfoEngineTypeEnum {
 	}
 }
 
+func (c JobInfoEngineType) Value() string {
+	return c.value
+}
+
 func (c JobInfoEngineType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -253,6 +261,10 @@ func GetJobInfoNetTypeEnum() JobInfoNetTypeEnum {
 	}
 }
 
+func (c JobInfoNetType) Value() string {
+	return c.value
+}
+
 func (c JobInfoNetType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -289,6 +301,10 @@ func GetJobInfoJobDirectionEnum() JobInfoJobDirectionEnum {
 			value: "down",
 		},
 	}
+}
+
+func (c JobInfoJobDirection) Value() string {
+	return c.value
 }
 
 func (c JobInfoJobDirection) MarshalJSON() ([]byte, error) {
@@ -333,6 +349,10 @@ func GetJobInfoDbUseTypeEnum() JobInfoDbUseTypeEnum {
 	}
 }
 
+func (c JobInfoDbUseType) Value() string {
+	return c.value
+}
+
 func (c JobInfoDbUseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -373,6 +393,10 @@ func GetJobInfoTaskTypeEnum() JobInfoTaskTypeEnum {
 			value: "INCR_TRANS 增量",
 		},
 	}
+}
+
+func (c JobInfoTaskType) Value() string {
+	return c.value
 }
 
 func (c JobInfoTaskType) MarshalJSON() ([]byte, error) {

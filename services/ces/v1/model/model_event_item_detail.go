@@ -67,6 +67,10 @@ func GetEventItemDetailEventStateEnum() EventItemDetailEventStateEnum {
 	}
 }
 
+func (c EventItemDetailEventState) Value() string {
+	return c.value
+}
+
 func (c EventItemDetailEventState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -111,6 +115,10 @@ func GetEventItemDetailEventLevelEnum() EventItemDetailEventLevelEnum {
 			value: "Info",
 		},
 	}
+}
+
+func (c EventItemDetailEventLevel) Value() string {
+	return c.value
 }
 
 func (c EventItemDetailEventLevel) MarshalJSON() ([]byte, error) {

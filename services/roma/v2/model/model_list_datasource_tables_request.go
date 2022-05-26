@@ -60,6 +60,10 @@ func GetListDatasourceTablesRequestPositionEnum() ListDatasourceTablesRequestPos
 	}
 }
 
+func (c ListDatasourceTablesRequestPosition) Value() string {
+	return c.value
+}
+
 func (c ListDatasourceTablesRequestPosition) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

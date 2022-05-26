@@ -73,6 +73,10 @@ func GetUserDefaultTopicPermEnum() UserDefaultTopicPermEnum {
 	}
 }
 
+func (c UserDefaultTopicPerm) Value() string {
+	return c.value
+}
+
 func (c UserDefaultTopicPerm) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -117,6 +121,10 @@ func GetUserDefaultGroupPermEnum() UserDefaultGroupPermEnum {
 			value: "DENY",
 		},
 	}
+}
+
+func (c UserDefaultGroupPerm) Value() string {
+	return c.value
 }
 
 func (c UserDefaultGroupPerm) MarshalJSON() ([]byte, error) {

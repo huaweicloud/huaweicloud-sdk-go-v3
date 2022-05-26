@@ -56,6 +56,10 @@ func GetUpdateRepoDomainsRequestContentTypeEnum() UpdateRepoDomainsRequestConten
 	}
 }
 
+func (c UpdateRepoDomainsRequestContentType) Value() string {
+	return c.value
+}
+
 func (c UpdateRepoDomainsRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

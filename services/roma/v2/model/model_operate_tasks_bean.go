@@ -47,6 +47,10 @@ func GetOperateTasksBeanActionIdEnum() OperateTasksBeanActionIdEnum {
 	}
 }
 
+func (c OperateTasksBeanActionId) Value() string {
+	return c.value
+}
+
 func (c OperateTasksBeanActionId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

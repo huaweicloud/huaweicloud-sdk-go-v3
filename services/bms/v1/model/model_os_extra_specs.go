@@ -77,6 +77,10 @@ func GetOsExtraSpecsResourceTypeEnum() OsExtraSpecsResourceTypeEnum {
 	}
 }
 
+func (c OsExtraSpecsResourceType) Value() string {
+	return c.value
+}
+
 func (c OsExtraSpecsResourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -115,6 +119,10 @@ func GetOsExtraSpecsCapabilitiescpuArchEnum() OsExtraSpecsCapabilitiescpuArchEnu
 	}
 }
 
+func (c OsExtraSpecsCapabilitiescpuArch) Value() string {
+	return c.value
+}
+
 func (c OsExtraSpecsCapabilitiescpuArch) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -151,6 +159,10 @@ func GetOsExtraSpecsBaremetalextBootTypeEnum() OsExtraSpecsBaremetalextBootTypeE
 			value: "Volume",
 		},
 	}
+}
+
+func (c OsExtraSpecsBaremetalextBootType) Value() string {
+	return c.value
 }
 
 func (c OsExtraSpecsBaremetalextBootType) MarshalJSON() ([]byte, error) {
@@ -201,6 +213,10 @@ func GetOsExtraSpecsCondoperationstatusEnum() OsExtraSpecsCondoperationstatusEnu
 			value: "promotion",
 		},
 	}
+}
+
+func (c OsExtraSpecsCondoperationstatus) Value() string {
+	return c.value
 }
 
 func (c OsExtraSpecsCondoperationstatus) MarshalJSON() ([]byte, error) {

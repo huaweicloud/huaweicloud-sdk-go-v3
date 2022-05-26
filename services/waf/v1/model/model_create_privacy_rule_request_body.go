@@ -61,6 +61,10 @@ func GetCreatePrivacyRuleRequestBodyCategoryEnum() CreatePrivacyRuleRequestBodyC
 	}
 }
 
+func (c CreatePrivacyRuleRequestBodyCategory) Value() string {
+	return c.value
+}
+
 func (c CreatePrivacyRuleRequestBodyCategory) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

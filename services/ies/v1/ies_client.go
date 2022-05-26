@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ies/v1/model"
 )
 
@@ -19,7 +19,7 @@ func IesClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 创建边缘小站
+// CreateEdgeSite 创建边缘小站
 //
 // 创建边缘小站。
 // - 一个边缘小站关联一个华为云指定的区域。
@@ -36,7 +36,13 @@ func (c *IesClient) CreateEdgeSite(request *model.CreateEdgeSiteRequest) (*model
 	}
 }
 
-// 删除边缘小站
+// CreateEdgeSiteInvoker 创建边缘小站
+func (c *IesClient) CreateEdgeSiteInvoker(request *model.CreateEdgeSiteRequest) *CreateEdgeSiteInvoker {
+	requestDef := GenReqDefForCreateEdgeSite()
+	return &CreateEdgeSiteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEdgeSite 删除边缘小站
 //
 // 删除指定的边缘小站。
 //
@@ -52,7 +58,13 @@ func (c *IesClient) DeleteEdgeSite(request *model.DeleteEdgeSiteRequest) (*model
 	}
 }
 
-// 查询边缘小站列表
+// DeleteEdgeSiteInvoker 删除边缘小站
+func (c *IesClient) DeleteEdgeSiteInvoker(request *model.DeleteEdgeSiteRequest) *DeleteEdgeSiteInvoker {
+	requestDef := GenReqDefForDeleteEdgeSite()
+	return &DeleteEdgeSiteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEdgeSites 查询边缘小站列表
 //
 // 查询边缘小站列表。
 //
@@ -68,7 +80,13 @@ func (c *IesClient) ListEdgeSites(request *model.ListEdgeSitesRequest) (*model.L
 	}
 }
 
-// 查询边缘小站详情
+// ListEdgeSitesInvoker 查询边缘小站列表
+func (c *IesClient) ListEdgeSitesInvoker(request *model.ListEdgeSitesRequest) *ListEdgeSitesInvoker {
+	requestDef := GenReqDefForListEdgeSites()
+	return &ListEdgeSitesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEdgeSite 查询边缘小站详情
 //
 // 查询边缘小站详情。
 //
@@ -84,7 +102,13 @@ func (c *IesClient) ShowEdgeSite(request *model.ShowEdgeSiteRequest) (*model.Sho
 	}
 }
 
-// 更新边缘小站
+// ShowEdgeSiteInvoker 查询边缘小站详情
+func (c *IesClient) ShowEdgeSiteInvoker(request *model.ShowEdgeSiteRequest) *ShowEdgeSiteInvoker {
+	requestDef := GenReqDefForShowEdgeSite()
+	return &ShowEdgeSiteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEdgeSite 更新边缘小站
 //
 // 更新边缘小站。
 // - 允许更新边缘小站描述或场地信息。
@@ -101,7 +125,13 @@ func (c *IesClient) UpdateEdgeSite(request *model.UpdateEdgeSiteRequest) (*model
 	}
 }
 
-// 查看站点容量信息
+// UpdateEdgeSiteInvoker 更新边缘小站
+func (c *IesClient) UpdateEdgeSiteInvoker(request *model.UpdateEdgeSiteRequest) *UpdateEdgeSiteInvoker {
+	requestDef := GenReqDefForUpdateEdgeSite()
+	return &UpdateEdgeSiteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEdgeSiteMetrics 查看站点容量信息
 //
 // 查看站点容量信息。
 //
@@ -117,7 +147,13 @@ func (c *IesClient) ListEdgeSiteMetrics(request *model.ListEdgeSiteMetricsReques
 	}
 }
 
-// 查询配额
+// ListEdgeSiteMetricsInvoker 查看站点容量信息
+func (c *IesClient) ListEdgeSiteMetricsInvoker(request *model.ListEdgeSiteMetricsRequest) *ListEdgeSiteMetricsInvoker {
+	requestDef := GenReqDefForListEdgeSiteMetrics()
+	return &ListEdgeSiteMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQuotas 查询配额
 //
 // 查询租户资源配额。
 //
@@ -133,7 +169,13 @@ func (c *IesClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuo
 	}
 }
 
-// 查询支持的区域列表
+// ListQuotasInvoker 查询配额
+func (c *IesClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuotasInvoker {
+	requestDef := GenReqDefForListQuotas()
+	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSupportedRegions 查询支持的区域列表
 //
 // 查询支持智能边缘小站接入的华为云区域（region）列表。
 //
@@ -147,4 +189,10 @@ func (c *IesClient) ListSupportedRegions(request *model.ListSupportedRegionsRequ
 	} else {
 		return resp.(*model.ListSupportedRegionsResponse), nil
 	}
+}
+
+// ListSupportedRegionsInvoker 查询支持的区域列表
+func (c *IesClient) ListSupportedRegionsInvoker(request *model.ListSupportedRegionsRequest) *ListSupportedRegionsInvoker {
+	requestDef := GenReqDefForListSupportedRegions()
+	return &ListSupportedRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

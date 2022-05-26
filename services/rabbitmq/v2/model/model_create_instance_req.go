@@ -98,6 +98,10 @@ func GetCreateInstanceReqEngineEnum() CreateInstanceReqEngineEnum {
 	}
 }
 
+func (c CreateInstanceReqEngine) Value() string {
+	return c.value
+}
+
 func (c CreateInstanceReqEngine) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -130,6 +134,10 @@ func GetCreateInstanceReqEngineVersionEnum() CreateInstanceReqEngineVersionEnum 
 			value: "3.7.17",
 		},
 	}
+}
+
+func (c CreateInstanceReqEngineVersion) Value() string {
+	return c.value
 }
 
 func (c CreateInstanceReqEngineVersion) MarshalJSON() ([]byte, error) {
@@ -172,6 +180,10 @@ func GetCreateInstanceReqStorageSpecCodeEnum() CreateInstanceReqStorageSpecCodeE
 			value: "dms.physical.storage.ultra",
 		},
 	}
+}
+
+func (c CreateInstanceReqStorageSpecCode) Value() string {
+	return c.value
 }
 
 func (c CreateInstanceReqStorageSpecCode) MarshalJSON() ([]byte, error) {

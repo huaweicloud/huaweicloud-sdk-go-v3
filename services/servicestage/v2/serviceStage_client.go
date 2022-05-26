@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/servicestage/v2/model"
 )
 
@@ -19,7 +19,7 @@ func ServiceStageClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 修改应用信息
+// ChangeApplication 修改应用信息
 //
 // 此API通过应用ID修改应用信息。
 func (c *ServiceStageClient) ChangeApplication(request *model.ChangeApplicationRequest) (*model.ChangeApplicationResponse, error) {
@@ -32,7 +32,13 @@ func (c *ServiceStageClient) ChangeApplication(request *model.ChangeApplicationR
 	}
 }
 
-// 修改应用配置信息
+// ChangeApplicationInvoker 修改应用信息
+func (c *ServiceStageClient) ChangeApplicationInvoker(request *model.ChangeApplicationRequest) *ChangeApplicationInvoker {
+	requestDef := GenReqDefForChangeApplication()
+	return &ChangeApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeApplicationConfiguration 修改应用配置信息
 //
 // 通过此API修改应用配置信息。
 func (c *ServiceStageClient) ChangeApplicationConfiguration(request *model.ChangeApplicationConfigurationRequest) (*model.ChangeApplicationConfigurationResponse, error) {
@@ -45,7 +51,13 @@ func (c *ServiceStageClient) ChangeApplicationConfiguration(request *model.Chang
 	}
 }
 
-// 根据组件ID修改组件信息
+// ChangeApplicationConfigurationInvoker 修改应用配置信息
+func (c *ServiceStageClient) ChangeApplicationConfigurationInvoker(request *model.ChangeApplicationConfigurationRequest) *ChangeApplicationConfigurationInvoker {
+	requestDef := GenReqDefForChangeApplicationConfiguration()
+	return &ChangeApplicationConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeComponent 根据组件ID修改组件信息
 //
 // 此API通过组件ID修改组件信息。
 func (c *ServiceStageClient) ChangeComponent(request *model.ChangeComponentRequest) (*model.ChangeComponentResponse, error) {
@@ -58,7 +70,13 @@ func (c *ServiceStageClient) ChangeComponent(request *model.ChangeComponentReque
 	}
 }
 
-// 修改环境信息
+// ChangeComponentInvoker 根据组件ID修改组件信息
+func (c *ServiceStageClient) ChangeComponentInvoker(request *model.ChangeComponentRequest) *ChangeComponentInvoker {
+	requestDef := GenReqDefForChangeComponent()
+	return &ChangeComponentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeEnvironment 修改环境信息
 //
 // 此API通过环境ID修改环境信息。
 func (c *ServiceStageClient) ChangeEnvironment(request *model.ChangeEnvironmentRequest) (*model.ChangeEnvironmentResponse, error) {
@@ -71,7 +89,13 @@ func (c *ServiceStageClient) ChangeEnvironment(request *model.ChangeEnvironmentR
 	}
 }
 
-// 修改应用组件实例
+// ChangeEnvironmentInvoker 修改环境信息
+func (c *ServiceStageClient) ChangeEnvironmentInvoker(request *model.ChangeEnvironmentRequest) *ChangeEnvironmentInvoker {
+	requestDef := GenReqDefForChangeEnvironment()
+	return &ChangeEnvironmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeInstance 修改应用组件实例
 //
 // 通过此API修改应用组件实例。
 func (c *ServiceStageClient) ChangeInstance(request *model.ChangeInstanceRequest) (*model.ChangeInstanceResponse, error) {
@@ -84,7 +108,13 @@ func (c *ServiceStageClient) ChangeInstance(request *model.ChangeInstanceRequest
 	}
 }
 
-// 修改环境资源
+// ChangeInstanceInvoker 修改应用组件实例
+func (c *ServiceStageClient) ChangeInstanceInvoker(request *model.ChangeInstanceRequest) *ChangeInstanceInvoker {
+	requestDef := GenReqDefForChangeInstance()
+	return &ChangeInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeResourceInEnvironment 修改环境资源
 //
 // 此API用来修改环境资源。
 func (c *ServiceStageClient) ChangeResourceInEnvironment(request *model.ChangeResourceInEnvironmentRequest) (*model.ChangeResourceInEnvironmentResponse, error) {
@@ -97,7 +127,13 @@ func (c *ServiceStageClient) ChangeResourceInEnvironment(request *model.ChangeRe
 	}
 }
 
-// 创建应用
+// ChangeResourceInEnvironmentInvoker 修改环境资源
+func (c *ServiceStageClient) ChangeResourceInEnvironmentInvoker(request *model.ChangeResourceInEnvironmentRequest) *ChangeResourceInEnvironmentInvoker {
+	requestDef := GenReqDefForChangeResourceInEnvironment()
+	return &ChangeResourceInEnvironmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateApplication 创建应用
 //
 // 应用是一个功能相对完备的业务系统，由一个或多个特性相关的组件组成。
 //
@@ -112,7 +148,13 @@ func (c *ServiceStageClient) CreateApplication(request *model.CreateApplicationR
 	}
 }
 
-// 应用中创建组件
+// CreateApplicationInvoker 创建应用
+func (c *ServiceStageClient) CreateApplicationInvoker(request *model.CreateApplicationRequest) *CreateApplicationInvoker {
+	requestDef := GenReqDefForCreateApplication()
+	return &CreateApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateComponent 应用中创建组件
 //
 // 应用组件是组成应用的某个业务特性实现，以代码或者软件包为载体，可独立部署运行。
 //
@@ -127,7 +169,13 @@ func (c *ServiceStageClient) CreateComponent(request *model.CreateComponentReque
 	}
 }
 
-// 创建环境
+// CreateComponentInvoker 应用中创建组件
+func (c *ServiceStageClient) CreateComponentInvoker(request *model.CreateComponentRequest) *CreateComponentInvoker {
+	requestDef := GenReqDefForCreateComponent()
+	return &CreateComponentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEnvironment 创建环境
 //
 // 环境是用于应用部署和运行的计算、存储、网络等基础设施的集合。Servicestage把相同VPC下的CCE集群加上多个ELB、RDS、DCS实例组合为一个环境，如：开发环境，测试环境，预生产环境，生产环境。环境内网络互通，可以按环境维度来管理资源、部署服务，减少具体基础设施运维管理的复杂性。
 //
@@ -142,7 +190,13 @@ func (c *ServiceStageClient) CreateEnvironment(request *model.CreateEnvironmentR
 	}
 }
 
-// 创建组件实例
+// CreateEnvironmentInvoker 创建环境
+func (c *ServiceStageClient) CreateEnvironmentInvoker(request *model.CreateEnvironmentRequest) *CreateEnvironmentInvoker {
+	requestDef := GenReqDefForCreateEnvironment()
+	return &CreateEnvironmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateInstance 创建组件实例
 //
 // 此API用来创建应用组件实例。
 func (c *ServiceStageClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
@@ -155,7 +209,13 @@ func (c *ServiceStageClient) CreateInstance(request *model.CreateInstanceRequest
 	}
 }
 
-// 根据应用ID删除应用
+// CreateInstanceInvoker 创建组件实例
+func (c *ServiceStageClient) CreateInstanceInvoker(request *model.CreateInstanceRequest) *CreateInstanceInvoker {
+	requestDef := GenReqDefForCreateInstance()
+	return &CreateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApplication 根据应用ID删除应用
 //
 // 此API通过应用ID删除应用。
 func (c *ServiceStageClient) DeleteApplication(request *model.DeleteApplicationRequest) (*model.DeleteApplicationResponse, error) {
@@ -168,7 +228,13 @@ func (c *ServiceStageClient) DeleteApplication(request *model.DeleteApplicationR
 	}
 }
 
-// 删除应用配置
+// DeleteApplicationInvoker 根据应用ID删除应用
+func (c *ServiceStageClient) DeleteApplicationInvoker(request *model.DeleteApplicationRequest) *DeleteApplicationInvoker {
+	requestDef := GenReqDefForDeleteApplication()
+	return &DeleteApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApplicationConfiguration 删除应用配置
 //
 // 通过此API删除应用配置信息。
 func (c *ServiceStageClient) DeleteApplicationConfiguration(request *model.DeleteApplicationConfigurationRequest) (*model.DeleteApplicationConfigurationResponse, error) {
@@ -181,7 +247,13 @@ func (c *ServiceStageClient) DeleteApplicationConfiguration(request *model.Delet
 	}
 }
 
-// 根据应用组件ID删除应用组件
+// DeleteApplicationConfigurationInvoker 删除应用配置
+func (c *ServiceStageClient) DeleteApplicationConfigurationInvoker(request *model.DeleteApplicationConfigurationRequest) *DeleteApplicationConfigurationInvoker {
+	requestDef := GenReqDefForDeleteApplicationConfiguration()
+	return &DeleteApplicationConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteComponent 根据应用组件ID删除应用组件
 //
 // 此API通过应用组件ID删除应用组件。
 func (c *ServiceStageClient) DeleteComponent(request *model.DeleteComponentRequest) (*model.DeleteComponentResponse, error) {
@@ -194,7 +266,13 @@ func (c *ServiceStageClient) DeleteComponent(request *model.DeleteComponentReque
 	}
 }
 
-// 根据环境ID删除环境
+// DeleteComponentInvoker 根据应用组件ID删除应用组件
+func (c *ServiceStageClient) DeleteComponentInvoker(request *model.DeleteComponentRequest) *DeleteComponentInvoker {
+	requestDef := GenReqDefForDeleteComponent()
+	return &DeleteComponentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEnvironment 根据环境ID删除环境
 //
 // 此API通过环境ID删除环境。
 func (c *ServiceStageClient) DeleteEnvironment(request *model.DeleteEnvironmentRequest) (*model.DeleteEnvironmentResponse, error) {
@@ -207,7 +285,13 @@ func (c *ServiceStageClient) DeleteEnvironment(request *model.DeleteEnvironmentR
 	}
 }
 
-// 删除应用组件实例
+// DeleteEnvironmentInvoker 根据环境ID删除环境
+func (c *ServiceStageClient) DeleteEnvironmentInvoker(request *model.DeleteEnvironmentRequest) *DeleteEnvironmentInvoker {
+	requestDef := GenReqDefForDeleteEnvironment()
+	return &DeleteEnvironmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteInstance 删除应用组件实例
 //
 // 通过此API删除应用组件实例。
 func (c *ServiceStageClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
@@ -220,7 +304,13 @@ func (c *ServiceStageClient) DeleteInstance(request *model.DeleteInstanceRequest
 	}
 }
 
-// 获取所有应用
+// DeleteInstanceInvoker 删除应用组件实例
+func (c *ServiceStageClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) *DeleteInstanceInvoker {
+	requestDef := GenReqDefForDeleteInstance()
+	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApplications 获取所有应用
 //
 // 通过此API可以获取所有已经创建的应用。
 func (c *ServiceStageClient) ListApplications(request *model.ListApplicationsRequest) (*model.ListApplicationsResponse, error) {
@@ -233,7 +323,13 @@ func (c *ServiceStageClient) ListApplications(request *model.ListApplicationsReq
 	}
 }
 
-// 获取应用所有组件
+// ListApplicationsInvoker 获取所有应用
+func (c *ServiceStageClient) ListApplicationsInvoker(request *model.ListApplicationsRequest) *ListApplicationsInvoker {
+	requestDef := GenReqDefForListApplications()
+	return &ListApplicationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListComponents 获取应用所有组件
 //
 // 通过此API获取应用下所有应用组件。
 func (c *ServiceStageClient) ListComponents(request *model.ListComponentsRequest) (*model.ListComponentsResponse, error) {
@@ -246,7 +342,13 @@ func (c *ServiceStageClient) ListComponents(request *model.ListComponentsRequest
 	}
 }
 
-// 获取所有环境
+// ListComponentsInvoker 获取应用所有组件
+func (c *ServiceStageClient) ListComponentsInvoker(request *model.ListComponentsRequest) *ListComponentsInvoker {
+	requestDef := GenReqDefForListComponents()
+	return &ListComponentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEnvironments 获取所有环境
 //
 // 此API用来获取所有已经创建环境。
 func (c *ServiceStageClient) ListEnvironments(request *model.ListEnvironmentsRequest) (*model.ListEnvironmentsResponse, error) {
@@ -259,7 +361,13 @@ func (c *ServiceStageClient) ListEnvironments(request *model.ListEnvironmentsReq
 	}
 }
 
-// 获取组件实例快照
+// ListEnvironmentsInvoker 获取所有环境
+func (c *ServiceStageClient) ListEnvironmentsInvoker(request *model.ListEnvironmentsRequest) *ListEnvironmentsInvoker {
+	requestDef := GenReqDefForListEnvironments()
+	return &ListEnvironmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceSnapshots 获取组件实例快照
 //
 // 通过此API获取应用组件实例快照信息。
 func (c *ServiceStageClient) ListInstanceSnapshots(request *model.ListInstanceSnapshotsRequest) (*model.ListInstanceSnapshotsResponse, error) {
@@ -272,7 +380,13 @@ func (c *ServiceStageClient) ListInstanceSnapshots(request *model.ListInstanceSn
 	}
 }
 
-// 获取应用组件实例
+// ListInstanceSnapshotsInvoker 获取组件实例快照
+func (c *ServiceStageClient) ListInstanceSnapshotsInvoker(request *model.ListInstanceSnapshotsRequest) *ListInstanceSnapshotsInvoker {
+	requestDef := GenReqDefForListInstanceSnapshots()
+	return &ListInstanceSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstances 获取应用组件实例
 //
 // 通过此API获取组件下的所有组件实例。
 func (c *ServiceStageClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
@@ -285,7 +399,13 @@ func (c *ServiceStageClient) ListInstances(request *model.ListInstancesRequest) 
 	}
 }
 
-// 获取应用配置
+// ListInstancesInvoker 获取应用组件实例
+func (c *ServiceStageClient) ListInstancesInvoker(request *model.ListInstancesRequest) *ListInstancesInvoker {
+	requestDef := GenReqDefForListInstances()
+	return &ListInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowApplicationConfiguration 获取应用配置
 //
 // 通过此API获取应用配置信息。
 func (c *ServiceStageClient) ShowApplicationConfiguration(request *model.ShowApplicationConfigurationRequest) (*model.ShowApplicationConfigurationResponse, error) {
@@ -298,7 +418,13 @@ func (c *ServiceStageClient) ShowApplicationConfiguration(request *model.ShowApp
 	}
 }
 
-// 根据应用ID获取应用详细信息
+// ShowApplicationConfigurationInvoker 获取应用配置
+func (c *ServiceStageClient) ShowApplicationConfigurationInvoker(request *model.ShowApplicationConfigurationRequest) *ShowApplicationConfigurationInvoker {
+	requestDef := GenReqDefForShowApplicationConfiguration()
+	return &ShowApplicationConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowApplicationDetail 根据应用ID获取应用详细信息
 //
 // 此API通过应用ID获取应用详细信息。
 func (c *ServiceStageClient) ShowApplicationDetail(request *model.ShowApplicationDetailRequest) (*model.ShowApplicationDetailResponse, error) {
@@ -311,7 +437,13 @@ func (c *ServiceStageClient) ShowApplicationDetail(request *model.ShowApplicatio
 	}
 }
 
-// 根据组件ID获取应用组件信息
+// ShowApplicationDetailInvoker 根据应用ID获取应用详细信息
+func (c *ServiceStageClient) ShowApplicationDetailInvoker(request *model.ShowApplicationDetailRequest) *ShowApplicationDetailInvoker {
+	requestDef := GenReqDefForShowApplicationDetail()
+	return &ShowApplicationDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowComponentDetail 根据组件ID获取应用组件信息
 //
 // 通过组件ID获取应用组件信息。
 func (c *ServiceStageClient) ShowComponentDetail(request *model.ShowComponentDetailRequest) (*model.ShowComponentDetailResponse, error) {
@@ -324,7 +456,13 @@ func (c *ServiceStageClient) ShowComponentDetail(request *model.ShowComponentDet
 	}
 }
 
-// 根据环境ID获取环境详细信息
+// ShowComponentDetailInvoker 根据组件ID获取应用组件信息
+func (c *ServiceStageClient) ShowComponentDetailInvoker(request *model.ShowComponentDetailRequest) *ShowComponentDetailInvoker {
+	requestDef := GenReqDefForShowComponentDetail()
+	return &ShowComponentDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEnvironmentDetail 根据环境ID获取环境详细信息
 //
 // 此API通过环境ID获取环境详细信息。
 func (c *ServiceStageClient) ShowEnvironmentDetail(request *model.ShowEnvironmentDetailRequest) (*model.ShowEnvironmentDetailResponse, error) {
@@ -337,7 +475,13 @@ func (c *ServiceStageClient) ShowEnvironmentDetail(request *model.ShowEnvironmen
 	}
 }
 
-// 根据实例ID获取实例详细信息
+// ShowEnvironmentDetailInvoker 根据环境ID获取环境详细信息
+func (c *ServiceStageClient) ShowEnvironmentDetailInvoker(request *model.ShowEnvironmentDetailRequest) *ShowEnvironmentDetailInvoker {
+	requestDef := GenReqDefForShowEnvironmentDetail()
+	return &ShowEnvironmentDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceDetail 根据实例ID获取实例详细信息
 //
 // 此API通过实例ID获取实例详细信息。
 func (c *ServiceStageClient) ShowInstanceDetail(request *model.ShowInstanceDetailRequest) (*model.ShowInstanceDetailResponse, error) {
@@ -350,7 +494,13 @@ func (c *ServiceStageClient) ShowInstanceDetail(request *model.ShowInstanceDetai
 	}
 }
 
-// 获取部署任务详细信息
+// ShowInstanceDetailInvoker 根据实例ID获取实例详细信息
+func (c *ServiceStageClient) ShowInstanceDetailInvoker(request *model.ShowInstanceDetailRequest) *ShowInstanceDetailInvoker {
+	requestDef := GenReqDefForShowInstanceDetail()
+	return &ShowInstanceDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobDetail 获取部署任务详细信息
 //
 // 通过此API获取部署任务详细信息。
 func (c *ServiceStageClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*model.ShowJobDetailResponse, error) {
@@ -363,7 +513,13 @@ func (c *ServiceStageClient) ShowJobDetail(request *model.ShowJobDetailRequest) 
 	}
 }
 
-// 对组件实例的操作
+// ShowJobDetailInvoker 获取部署任务详细信息
+func (c *ServiceStageClient) ShowJobDetailInvoker(request *model.ShowJobDetailRequest) *ShowJobDetailInvoker {
+	requestDef := GenReqDefForShowJobDetail()
+	return &ShowJobDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceAction 对组件实例的操作
 //
 // 通过此API获取对组件实例的操作。
 func (c *ServiceStageClient) UpdateInstanceAction(request *model.UpdateInstanceActionRequest) (*model.UpdateInstanceActionResponse, error) {
@@ -376,7 +532,13 @@ func (c *ServiceStageClient) UpdateInstanceAction(request *model.UpdateInstanceA
 	}
 }
 
-// 创建仓库文件
+// UpdateInstanceActionInvoker 对组件实例的操作
+func (c *ServiceStageClient) UpdateInstanceActionInvoker(request *model.UpdateInstanceActionRequest) *UpdateInstanceActionInvoker {
+	requestDef := GenReqDefForUpdateInstanceAction()
+	return &UpdateInstanceActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateFile 创建仓库文件
 //
 // 在指定仓库项目下创建文件。
 func (c *ServiceStageClient) CreateFile(request *model.CreateFileRequest) (*model.CreateFileResponse, error) {
@@ -389,7 +551,13 @@ func (c *ServiceStageClient) CreateFile(request *model.CreateFileRequest) (*mode
 	}
 }
 
-// 创建项目hook
+// CreateFileInvoker 创建仓库文件
+func (c *ServiceStageClient) CreateFileInvoker(request *model.CreateFileRequest) *CreateFileInvoker {
+	requestDef := GenReqDefForCreateFile()
+	return &CreateFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateHook 创建项目hook
 //
 // 创建指定项目的hook。
 func (c *ServiceStageClient) CreateHook(request *model.CreateHookRequest) (*model.CreateHookResponse, error) {
@@ -402,7 +570,13 @@ func (c *ServiceStageClient) CreateHook(request *model.CreateHookRequest) (*mode
 	}
 }
 
-// 创建OAuth授权
+// CreateHookInvoker 创建项目hook
+func (c *ServiceStageClient) CreateHookInvoker(request *model.CreateHookRequest) *CreateHookInvoker {
+	requestDef := GenReqDefForCreateHook()
+	return &CreateHookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateOAuth 创建OAuth授权
 //
 // 创建指定Git仓库类型的OAuth授权。
 func (c *ServiceStageClient) CreateOAuth(request *model.CreateOAuthRequest) (*model.CreateOAuthResponse, error) {
@@ -415,7 +589,13 @@ func (c *ServiceStageClient) CreateOAuth(request *model.CreateOAuthRequest) (*mo
 	}
 }
 
-// 创建口令授权
+// CreateOAuthInvoker 创建OAuth授权
+func (c *ServiceStageClient) CreateOAuthInvoker(request *model.CreateOAuthRequest) *CreateOAuthInvoker {
+	requestDef := GenReqDefForCreateOAuth()
+	return &CreateOAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePasswordAuth 创建口令授权
 //
 // 创建指定Git仓库类型的口令授权。
 func (c *ServiceStageClient) CreatePasswordAuth(request *model.CreatePasswordAuthRequest) (*model.CreatePasswordAuthResponse, error) {
@@ -428,7 +608,13 @@ func (c *ServiceStageClient) CreatePasswordAuth(request *model.CreatePasswordAut
 	}
 }
 
-// 创建私人令牌授权
+// CreatePasswordAuthInvoker 创建口令授权
+func (c *ServiceStageClient) CreatePasswordAuthInvoker(request *model.CreatePasswordAuthRequest) *CreatePasswordAuthInvoker {
+	requestDef := GenReqDefForCreatePasswordAuth()
+	return &CreatePasswordAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePersonalAuth 创建私人令牌授权
 //
 // 创建指定Git仓库类型的私人令牌授权。
 func (c *ServiceStageClient) CreatePersonalAuth(request *model.CreatePersonalAuthRequest) (*model.CreatePersonalAuthResponse, error) {
@@ -441,7 +627,13 @@ func (c *ServiceStageClient) CreatePersonalAuth(request *model.CreatePersonalAut
 	}
 }
 
-// 创建软件仓库项目
+// CreatePersonalAuthInvoker 创建私人令牌授权
+func (c *ServiceStageClient) CreatePersonalAuthInvoker(request *model.CreatePersonalAuthRequest) *CreatePersonalAuthInvoker {
+	requestDef := GenReqDefForCreatePersonalAuth()
+	return &CreatePersonalAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProject 创建软件仓库项目
 //
 // 创建指定组织下的软件仓库项目。
 func (c *ServiceStageClient) CreateProject(request *model.CreateProjectRequest) (*model.CreateProjectResponse, error) {
@@ -454,7 +646,13 @@ func (c *ServiceStageClient) CreateProject(request *model.CreateProjectRequest) 
 	}
 }
 
-// 创建项目tag标签
+// CreateProjectInvoker 创建软件仓库项目
+func (c *ServiceStageClient) CreateProjectInvoker(request *model.CreateProjectRequest) *CreateProjectInvoker {
+	requestDef := GenReqDefForCreateProject()
+	return &CreateProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTag 创建项目tag标签
 //
 // 创建指定项目的tag标签。
 func (c *ServiceStageClient) CreateTag(request *model.CreateTagRequest) (*model.CreateTagResponse, error) {
@@ -467,7 +665,13 @@ func (c *ServiceStageClient) CreateTag(request *model.CreateTagRequest) (*model.
 	}
 }
 
-// 删除仓库授权
+// CreateTagInvoker 创建项目tag标签
+func (c *ServiceStageClient) CreateTagInvoker(request *model.CreateTagRequest) *CreateTagInvoker {
+	requestDef := GenReqDefForCreateTag()
+	return &CreateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAuthorize 删除仓库授权
 //
 // 通过名称删除仓库授权。
 func (c *ServiceStageClient) DeleteAuthorize(request *model.DeleteAuthorizeRequest) (*model.DeleteAuthorizeResponse, error) {
@@ -480,7 +684,13 @@ func (c *ServiceStageClient) DeleteAuthorize(request *model.DeleteAuthorizeReque
 	}
 }
 
-// 删除仓库文件
+// DeleteAuthorizeInvoker 删除仓库授权
+func (c *ServiceStageClient) DeleteAuthorizeInvoker(request *model.DeleteAuthorizeRequest) *DeleteAuthorizeInvoker {
+	requestDef := GenReqDefForDeleteAuthorize()
+	return &DeleteAuthorizeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFile 删除仓库文件
 //
 // 删除指定项目仓库下的文件。
 func (c *ServiceStageClient) DeleteFile(request *model.DeleteFileRequest) (*model.DeleteFileResponse, error) {
@@ -493,7 +703,13 @@ func (c *ServiceStageClient) DeleteFile(request *model.DeleteFileRequest) (*mode
 	}
 }
 
-// 删除项目hook
+// DeleteFileInvoker 删除仓库文件
+func (c *ServiceStageClient) DeleteFileInvoker(request *model.DeleteFileRequest) *DeleteFileInvoker {
+	requestDef := GenReqDefForDeleteFile()
+	return &DeleteFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHook 删除项目hook
 //
 // 删除指定项目的hook。
 func (c *ServiceStageClient) DeleteHook(request *model.DeleteHookRequest) (*model.DeleteHookResponse, error) {
@@ -506,7 +722,13 @@ func (c *ServiceStageClient) DeleteHook(request *model.DeleteHookRequest) (*mode
 	}
 }
 
-// 删除项目tag标签
+// DeleteHookInvoker 删除项目hook
+func (c *ServiceStageClient) DeleteHookInvoker(request *model.DeleteHookRequest) *DeleteHookInvoker {
+	requestDef := GenReqDefForDeleteHook()
+	return &DeleteHookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTag 删除项目tag标签
 //
 // 删除指定项目的tag标签。
 func (c *ServiceStageClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
@@ -519,7 +741,13 @@ func (c *ServiceStageClient) DeleteTag(request *model.DeleteTagRequest) (*model.
 	}
 }
 
-// 获取仓库授权列表
+// DeleteTagInvoker 删除项目tag标签
+func (c *ServiceStageClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTagInvoker {
+	requestDef := GenReqDefForDeleteTag()
+	return &DeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAuthorizations 获取仓库授权列表
 //
 // 获取所有Git仓库授权信息。
 func (c *ServiceStageClient) ListAuthorizations(request *model.ListAuthorizationsRequest) (*model.ListAuthorizationsResponse, error) {
@@ -532,7 +760,13 @@ func (c *ServiceStageClient) ListAuthorizations(request *model.ListAuthorization
 	}
 }
 
-// 获取项目分支
+// ListAuthorizationsInvoker 获取仓库授权列表
+func (c *ServiceStageClient) ListAuthorizationsInvoker(request *model.ListAuthorizationsRequest) *ListAuthorizationsInvoker {
+	requestDef := GenReqDefForListAuthorizations()
+	return &ListAuthorizationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBranches 获取项目分支
 //
 // 获取指定项目的所有分支列表。
 func (c *ServiceStageClient) ListBranches(request *model.ListBranchesRequest) (*model.ListBranchesResponse, error) {
@@ -545,7 +779,13 @@ func (c *ServiceStageClient) ListBranches(request *model.ListBranchesRequest) (*
 	}
 }
 
-// 获取项目commit提交记录
+// ListBranchesInvoker 获取项目分支
+func (c *ServiceStageClient) ListBranchesInvoker(request *model.ListBranchesRequest) *ListBranchesInvoker {
+	requestDef := GenReqDefForListBranches()
+	return &ListBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCommits 获取项目commit提交记录
 //
 // 获取指定项目的最近10次commit提交记录。
 func (c *ServiceStageClient) ListCommits(request *model.ListCommitsRequest) (*model.ListCommitsResponse, error) {
@@ -558,7 +798,13 @@ func (c *ServiceStageClient) ListCommits(request *model.ListCommitsRequest) (*mo
 	}
 }
 
-// 获取项目hooks
+// ListCommitsInvoker 获取项目commit提交记录
+func (c *ServiceStageClient) ListCommitsInvoker(request *model.ListCommitsRequest) *ListCommitsInvoker {
+	requestDef := GenReqDefForListCommits()
+	return &ListCommitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHooks 获取项目hooks
 //
 // 获取指定项目的所有hooks
 func (c *ServiceStageClient) ListHooks(request *model.ListHooksRequest) (*model.ListHooksResponse, error) {
@@ -571,7 +817,13 @@ func (c *ServiceStageClient) ListHooks(request *model.ListHooksRequest) (*model.
 	}
 }
 
-// 获取仓库的namespaces
+// ListHooksInvoker 获取项目hooks
+func (c *ServiceStageClient) ListHooksInvoker(request *model.ListHooksRequest) *ListHooksInvoker {
+	requestDef := GenReqDefForListHooks()
+	return &ListHooksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNamespaces 获取仓库的namespaces
 //
 // 获取仓库的namespaces。
 func (c *ServiceStageClient) ListNamespaces(request *model.ListNamespacesRequest) (*model.ListNamespacesResponse, error) {
@@ -584,7 +836,13 @@ func (c *ServiceStageClient) ListNamespaces(request *model.ListNamespacesRequest
 	}
 }
 
-// 获取组织下所有项目
+// ListNamespacesInvoker 获取仓库的namespaces
+func (c *ServiceStageClient) ListNamespacesInvoker(request *model.ListNamespacesRequest) *ListNamespacesInvoker {
+	requestDef := GenReqDefForListNamespaces()
+	return &ListNamespacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjects 获取组织下所有项目
 //
 // 获取指定组织下的所有项目。
 func (c *ServiceStageClient) ListProjects(request *model.ListProjectsRequest) (*model.ListProjectsResponse, error) {
@@ -597,7 +855,13 @@ func (c *ServiceStageClient) ListProjects(request *model.ListProjectsRequest) (*
 	}
 }
 
-// 获取项目的所有tag标签
+// ListProjectsInvoker 获取组织下所有项目
+func (c *ServiceStageClient) ListProjectsInvoker(request *model.ListProjectsRequest) *ListProjectsInvoker {
+	requestDef := GenReqDefForListProjects()
+	return &ListProjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTags 获取项目的所有tag标签
 //
 // 获取指定项目的所有tag标签。
 func (c *ServiceStageClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsResponse, error) {
@@ -610,7 +874,13 @@ func (c *ServiceStageClient) ListTags(request *model.ListTagsRequest) (*model.Li
 	}
 }
 
-// 获取仓库文件列表
+// ListTagsInvoker 获取项目的所有tag标签
+func (c *ServiceStageClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInvoker {
+	requestDef := GenReqDefForListTags()
+	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTrees 获取仓库文件列表
 //
 // 获取指定项目仓库的文件列表。
 func (c *ServiceStageClient) ListTrees(request *model.ListTreesRequest) (*model.ListTreesResponse, error) {
@@ -623,7 +893,13 @@ func (c *ServiceStageClient) ListTrees(request *model.ListTreesRequest) (*model.
 	}
 }
 
-// 获取仓库文件内容
+// ListTreesInvoker 获取仓库文件列表
+func (c *ServiceStageClient) ListTreesInvoker(request *model.ListTreesRequest) *ListTreesInvoker {
+	requestDef := GenReqDefForListTrees()
+	return &ListTreesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowContent 获取仓库文件内容
 //
 // 获取指定项目仓库下文件的内容。
 func (c *ServiceStageClient) ShowContent(request *model.ShowContentRequest) (*model.ShowContentResponse, error) {
@@ -636,7 +912,13 @@ func (c *ServiceStageClient) ShowContent(request *model.ShowContentRequest) (*mo
 	}
 }
 
-// 通过clone url 获取仓库信息
+// ShowContentInvoker 获取仓库文件内容
+func (c *ServiceStageClient) ShowContentInvoker(request *model.ShowContentRequest) *ShowContentInvoker {
+	requestDef := GenReqDefForShowContent()
+	return &ShowContentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProjectDetail 通过clone url 获取仓库信息
 //
 // 通过指定的clone url 获取仓库信息。
 func (c *ServiceStageClient) ShowProjectDetail(request *model.ShowProjectDetailRequest) (*model.ShowProjectDetailResponse, error) {
@@ -649,7 +931,13 @@ func (c *ServiceStageClient) ShowProjectDetail(request *model.ShowProjectDetailR
 	}
 }
 
-// 获取授权重定向URL
+// ShowProjectDetailInvoker 通过clone url 获取仓库信息
+func (c *ServiceStageClient) ShowProjectDetailInvoker(request *model.ShowProjectDetailRequest) *ShowProjectDetailInvoker {
+	requestDef := GenReqDefForShowProjectDetail()
+	return &ShowProjectDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRedirectUrl 获取授权重定向URL
 //
 // 获取指定Git仓库类型的授权重定向URL。
 func (c *ServiceStageClient) ShowRedirectUrl(request *model.ShowRedirectUrlRequest) (*model.ShowRedirectUrlResponse, error) {
@@ -662,7 +950,13 @@ func (c *ServiceStageClient) ShowRedirectUrl(request *model.ShowRedirectUrlReque
 	}
 }
 
-// 更新仓库文件内容
+// ShowRedirectUrlInvoker 获取授权重定向URL
+func (c *ServiceStageClient) ShowRedirectUrlInvoker(request *model.ShowRedirectUrlRequest) *ShowRedirectUrlInvoker {
+	requestDef := GenReqDefForShowRedirectUrl()
+	return &ShowRedirectUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFile 更新仓库文件内容
 //
 // 更新指定项目仓库下的文件内容。
 func (c *ServiceStageClient) UpdateFile(request *model.UpdateFileRequest) (*model.UpdateFileResponse, error) {
@@ -675,7 +969,13 @@ func (c *ServiceStageClient) UpdateFile(request *model.UpdateFileRequest) (*mode
 	}
 }
 
-// 获取所有支持的应用资源规格
+// UpdateFileInvoker 更新仓库文件内容
+func (c *ServiceStageClient) UpdateFileInvoker(request *model.UpdateFileRequest) *UpdateFileInvoker {
+	requestDef := GenReqDefForUpdateFile()
+	return &UpdateFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFlavors 获取所有支持的应用资源规格
 //
 // 通过此API获取所用支持的应用资源规格。
 func (c *ServiceStageClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
@@ -688,7 +988,13 @@ func (c *ServiceStageClient) ListFlavors(request *model.ListFlavorsRequest) (*mo
 	}
 }
 
-// 获取所有支持的应用组件运行时类型
+// ListFlavorsInvoker 获取所有支持的应用资源规格
+func (c *ServiceStageClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListFlavorsInvoker {
+	requestDef := GenReqDefForListFlavors()
+	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRuntimes 获取所有支持的应用组件运行时类型
 //
 // 此API用来获取所有支持应用组件运行时类型。
 func (c *ServiceStageClient) ListRuntimes(request *model.ListRuntimesRequest) (*model.ListRuntimesResponse, error) {
@@ -701,7 +1007,13 @@ func (c *ServiceStageClient) ListRuntimes(request *model.ListRuntimesRequest) (*
 	}
 }
 
-// 获取所有支持的应用组件模板
+// ListRuntimesInvoker 获取所有支持的应用组件运行时类型
+func (c *ServiceStageClient) ListRuntimesInvoker(request *model.ListRuntimesRequest) *ListRuntimesInvoker {
+	requestDef := GenReqDefForListRuntimes()
+	return &ListRuntimesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTemplates 获取所有支持的应用组件模板
 //
 // 此API用来获取所有内置应用组件模板。
 func (c *ServiceStageClient) ListTemplates(request *model.ListTemplatesRequest) (*model.ListTemplatesResponse, error) {
@@ -712,4 +1024,10 @@ func (c *ServiceStageClient) ListTemplates(request *model.ListTemplatesRequest) 
 	} else {
 		return resp.(*model.ListTemplatesResponse), nil
 	}
+}
+
+// ListTemplatesInvoker 获取所有支持的应用组件模板
+func (c *ServiceStageClient) ListTemplatesInvoker(request *model.ListTemplatesRequest) *ListTemplatesInvoker {
+	requestDef := GenReqDefForListTemplates()
+	return &ListTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

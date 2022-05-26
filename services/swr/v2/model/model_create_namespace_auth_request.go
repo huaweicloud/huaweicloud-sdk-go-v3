@@ -50,6 +50,10 @@ func GetCreateNamespaceAuthRequestContentTypeEnum() CreateNamespaceAuthRequestCo
 	}
 }
 
+func (c CreateNamespaceAuthRequestContentType) Value() string {
+	return c.value
+}
+
 func (c CreateNamespaceAuthRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

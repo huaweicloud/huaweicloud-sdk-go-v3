@@ -54,6 +54,10 @@ func GetListEnvironmentsRequestOrderEnum() ListEnvironmentsRequestOrderEnum {
 	}
 }
 
+func (c ListEnvironmentsRequestOrder) Value() string {
+	return c.value
+}
+
 func (c ListEnvironmentsRequestOrder) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

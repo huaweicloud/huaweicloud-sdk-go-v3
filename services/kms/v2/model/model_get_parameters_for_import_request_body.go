@@ -50,6 +50,10 @@ func GetGetParametersForImportRequestBodyWrappingAlgorithmEnum() GetParametersFo
 	}
 }
 
+func (c GetParametersForImportRequestBodyWrappingAlgorithm) Value() string {
+	return c.value
+}
+
 func (c GetParametersForImportRequestBodyWrappingAlgorithm) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

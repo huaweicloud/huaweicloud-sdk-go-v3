@@ -103,6 +103,10 @@ func GetShowShareResponsePayModelEnum() ShowShareResponsePayModelEnum {
 	}
 }
 
+func (c ShowShareResponsePayModel) Value() string {
+	return c.value
+}
+
 func (c ShowShareResponsePayModel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

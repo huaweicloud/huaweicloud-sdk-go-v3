@@ -81,6 +81,10 @@ func GetGlanceCreateImageMetadataRequestBodyDiskFormatEnum() GlanceCreateImageMe
 	}
 }
 
+func (c GlanceCreateImageMetadataRequestBodyDiskFormat) Value() string {
+	return c.value
+}
+
 func (c GlanceCreateImageMetadataRequestBodyDiskFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

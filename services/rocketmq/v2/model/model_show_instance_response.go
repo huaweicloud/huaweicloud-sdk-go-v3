@@ -196,6 +196,10 @@ func GetShowInstanceResponseTypeEnum() ShowInstanceResponseTypeEnum {
 	}
 }
 
+func (c ShowInstanceResponseType) Value() string {
+	return c.value
+}
+
 func (c ShowInstanceResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

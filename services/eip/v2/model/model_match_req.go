@@ -44,6 +44,10 @@ func GetMatchReqKeyEnum() MatchReqKeyEnum {
 	}
 }
 
+func (c MatchReqKey) Value() string {
+	return c.value
+}
+
 func (c MatchReqKey) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

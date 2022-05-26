@@ -198,6 +198,10 @@ func GetListFunctionResultRuntimeEnum() ListFunctionResultRuntimeEnum {
 	}
 }
 
+func (c ListFunctionResultRuntime) Value() string {
+	return c.value
+}
+
 func (c ListFunctionResultRuntime) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -244,6 +248,10 @@ func GetListFunctionResultCodeTypeEnum() ListFunctionResultCodeTypeEnum {
 	}
 }
 
+func (c ListFunctionResultCodeType) Value() string {
+	return c.value
+}
+
 func (c ListFunctionResultCodeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -280,6 +288,10 @@ func GetListFunctionResultTypeEnum() ListFunctionResultTypeEnum {
 			value: "v2",
 		},
 	}
+}
+
+func (c ListFunctionResultType) Value() string {
+	return c.value
 }
 
 func (c ListFunctionResultType) MarshalJSON() ([]byte, error) {

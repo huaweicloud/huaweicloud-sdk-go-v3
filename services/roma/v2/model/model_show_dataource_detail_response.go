@@ -213,6 +213,10 @@ func GetShowDataourceDetailResponseDatasourceTypeEnum() ShowDataourceDetailRespo
 	}
 }
 
+func (c ShowDataourceDetailResponseDatasourceType) Value() string {
+	return c.value
+}
+
 func (c ShowDataourceDetailResponseDatasourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -257,6 +261,10 @@ func GetShowDataourceDetailResponseAppPermissionEnum() ShowDataourceDetailRespon
 			value: "modify",
 		},
 	}
+}
+
+func (c ShowDataourceDetailResponseAppPermission) Value() string {
+	return c.value
 }
 
 func (c ShowDataourceDetailResponseAppPermission) MarshalJSON() ([]byte, error) {

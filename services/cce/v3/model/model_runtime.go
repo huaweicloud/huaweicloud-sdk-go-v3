@@ -44,6 +44,10 @@ func GetRuntimeNameEnum() RuntimeNameEnum {
 	}
 }
 
+func (c RuntimeName) Value() string {
+	return c.value
+}
+
 func (c RuntimeName) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

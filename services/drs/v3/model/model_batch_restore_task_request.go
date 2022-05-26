@@ -47,6 +47,10 @@ func GetBatchRestoreTaskRequestXLanguageEnum() BatchRestoreTaskRequestXLanguageE
 	}
 }
 
+func (c BatchRestoreTaskRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c BatchRestoreTaskRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

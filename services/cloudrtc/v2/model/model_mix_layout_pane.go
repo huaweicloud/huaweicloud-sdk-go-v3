@@ -69,6 +69,10 @@ func GetMixLayoutPaneVideoTypeEnum() MixLayoutPaneVideoTypeEnum {
 	}
 }
 
+func (c MixLayoutPaneVideoType) Value() string {
+	return c.value
+}
+
 func (c MixLayoutPaneVideoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -105,6 +109,10 @@ func GetMixLayoutPaneCropModeEnum() MixLayoutPaneCropModeEnum {
 			value: "KEEP_RATIO_CROP",
 		},
 	}
+}
+
+func (c MixLayoutPaneCropMode) Value() string {
+	return c.value
 }
 
 func (c MixLayoutPaneCropMode) MarshalJSON() ([]byte, error) {

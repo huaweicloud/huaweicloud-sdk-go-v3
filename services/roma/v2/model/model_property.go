@@ -86,6 +86,10 @@ func GetPropertyDataTypeEnum() PropertyDataTypeEnum {
 	}
 }
 
+func (c PropertyDataType) Value() string {
+	return c.value
+}
+
 func (c PropertyDataType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -121,6 +125,10 @@ func GetPropertyRequiredEnum() PropertyRequiredEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c PropertyRequired) Value() int32 {
+	return c.value
 }
 
 func (c PropertyRequired) MarshalJSON() ([]byte, error) {

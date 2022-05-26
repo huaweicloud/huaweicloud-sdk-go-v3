@@ -61,6 +61,10 @@ func GetUpdateNotificationTemplateResponseLocaleEnum() UpdateNotificationTemplat
 	}
 }
 
+func (c UpdateNotificationTemplateResponseLocale) Value() string {
+	return c.value
+}
+
 func (c UpdateNotificationTemplateResponseLocale) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

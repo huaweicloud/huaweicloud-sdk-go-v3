@@ -44,6 +44,10 @@ func GetBatchCreateVpcTagsRequestBodyActionEnum() BatchCreateVpcTagsRequestBodyA
 	}
 }
 
+func (c BatchCreateVpcTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c BatchCreateVpcTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

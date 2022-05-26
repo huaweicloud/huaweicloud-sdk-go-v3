@@ -92,6 +92,10 @@ func GetReqParamTypeEnum() ReqParamTypeEnum {
 	}
 }
 
+func (c ReqParamType) Value() string {
+	return c.value
+}
+
 func (c ReqParamType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -134,6 +138,10 @@ func GetReqParamLocationEnum() ReqParamLocationEnum {
 	}
 }
 
+func (c ReqParamLocation) Value() string {
+	return c.value
+}
+
 func (c ReqParamLocation) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -169,6 +177,10 @@ func GetReqParamRequiredEnum() ReqParamRequiredEnum {
 			value: 2,
 		},
 	}
+}
+
+func (c ReqParamRequired) Value() int32 {
+	return c.value
 }
 
 func (c ReqParamRequired) MarshalJSON() ([]byte, error) {
@@ -208,6 +220,10 @@ func GetReqParamValidEnableEnum() ReqParamValidEnableEnum {
 	}
 }
 
+func (c ReqParamValidEnable) Value() int32 {
+	return c.value
+}
+
 func (c ReqParamValidEnable) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -243,6 +259,10 @@ func GetReqParamPassThroughEnum() ReqParamPassThroughEnum {
 			value: 2,
 		},
 	}
+}
+
+func (c ReqParamPassThrough) Value() int32 {
+	return c.value
 }
 
 func (c ReqParamPassThrough) MarshalJSON() ([]byte, error) {

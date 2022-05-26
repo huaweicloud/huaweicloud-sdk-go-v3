@@ -68,6 +68,10 @@ func GetServiceStatusEnum() ServiceStatusEnum {
 	}
 }
 
+func (c ServiceStatus) Value() int32 {
+	return c.value
+}
+
 func (c ServiceStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

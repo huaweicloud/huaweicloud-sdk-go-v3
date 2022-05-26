@@ -55,6 +55,10 @@ func GetTaintEffectEnum() TaintEffectEnum {
 	}
 }
 
+func (c TaintEffect) Value() string {
+	return c.value
+}
+
 func (c TaintEffect) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

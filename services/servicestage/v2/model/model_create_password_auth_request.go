@@ -51,6 +51,10 @@ func GetCreatePasswordAuthRequestRepoTypeEnum() CreatePasswordAuthRequestRepoTyp
 	}
 }
 
+func (c CreatePasswordAuthRequestRepoType) Value() string {
+	return c.value
+}
+
 func (c CreatePasswordAuthRequestRepoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

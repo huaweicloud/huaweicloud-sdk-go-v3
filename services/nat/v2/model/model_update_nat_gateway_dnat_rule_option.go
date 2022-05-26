@@ -76,6 +76,10 @@ func GetUpdateNatGatewayDnatRuleOptionProtocolEnum() UpdateNatGatewayDnatRuleOpt
 	}
 }
 
+func (c UpdateNatGatewayDnatRuleOptionProtocol) Value() string {
+	return c.value
+}
+
 func (c UpdateNatGatewayDnatRuleOptionProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

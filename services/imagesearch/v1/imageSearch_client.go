@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/imagesearch/v1/model"
 )
 
@@ -19,7 +19,7 @@ func ImageSearchClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 添加图片
+// RunAddPicture 添加图片
 //
 // 添加图片
 // 将图片导入图片索引库，该图片可以是同一区域OBS桶内的图片或请求消息体里的图片，只有导入图片索引库的图片方可被搜索到。
@@ -38,7 +38,13 @@ func (c *ImageSearchClient) RunAddPicture(request *model.RunAddPictureRequest) (
 	}
 }
 
-// 查询图片
+// RunAddPictureInvoker 添加图片
+func (c *ImageSearchClient) RunAddPictureInvoker(request *model.RunAddPictureRequest) *RunAddPictureInvoker {
+	requestDef := GenReqDefForRunAddPicture()
+	return &RunAddPictureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunCheckPicture 查询图片
 //
 // 通过图片路径查询索引库中对应图片是否存在。
 //
@@ -54,7 +60,13 @@ func (c *ImageSearchClient) RunCheckPicture(request *model.RunCheckPictureReques
 	}
 }
 
-// 创建实例
+// RunCheckPictureInvoker 查询图片
+func (c *ImageSearchClient) RunCheckPictureInvoker(request *model.RunCheckPictureRequest) *RunCheckPictureInvoker {
+	requestDef := GenReqDefForRunCheckPicture()
+	return &RunCheckPictureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunCreateInstance 创建实例
 //
 // 创建实例，实例中会生成图片索引库，用来存放图片特征。
 //
@@ -70,7 +82,13 @@ func (c *ImageSearchClient) RunCreateInstance(request *model.RunCreateInstanceRe
 	}
 }
 
-// 删除实例
+// RunCreateInstanceInvoker 创建实例
+func (c *ImageSearchClient) RunCreateInstanceInvoker(request *model.RunCreateInstanceRequest) *RunCreateInstanceInvoker {
+	requestDef := GenReqDefForRunCreateInstance()
+	return &RunCreateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunDeleteInstance 删除实例
 //
 // 删除已存在的实例。
 //
@@ -86,7 +104,13 @@ func (c *ImageSearchClient) RunDeleteInstance(request *model.RunDeleteInstanceRe
 	}
 }
 
-// 删除图片
+// RunDeleteInstanceInvoker 删除实例
+func (c *ImageSearchClient) RunDeleteInstanceInvoker(request *model.RunDeleteInstanceRequest) *RunDeleteInstanceInvoker {
+	requestDef := GenReqDefForRunDeleteInstance()
+	return &RunDeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunDeletePicture 删除图片
 //
 // 通过图片路径删除索引库中对应图片。
 //
@@ -102,7 +126,13 @@ func (c *ImageSearchClient) RunDeletePicture(request *model.RunDeletePictureRequ
 	}
 }
 
-// 修改图片信息
+// RunDeletePictureInvoker 删除图片
+func (c *ImageSearchClient) RunDeletePictureInvoker(request *model.RunDeletePictureRequest) *RunDeletePictureInvoker {
+	requestDef := GenReqDefForRunDeletePicture()
+	return &RunDeletePictureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunModifyPicture 修改图片信息
 //
 // 修改图像索引库中已存在的图片信息。
 //
@@ -118,7 +148,13 @@ func (c *ImageSearchClient) RunModifyPicture(request *model.RunModifyPictureRequ
 	}
 }
 
-// 查询用户实例信息
+// RunModifyPictureInvoker 修改图片信息
+func (c *ImageSearchClient) RunModifyPictureInvoker(request *model.RunModifyPictureRequest) *RunModifyPictureInvoker {
+	requestDef := GenReqDefForRunModifyPicture()
+	return &RunModifyPictureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunQueryInstance 查询用户实例信息
 //
 // 查看用户指定实例详细信息。
 //
@@ -134,7 +170,13 @@ func (c *ImageSearchClient) RunQueryInstance(request *model.RunQueryInstanceRequ
 	}
 }
 
-// 搜索图片
+// RunQueryInstanceInvoker 查询用户实例信息
+func (c *ImageSearchClient) RunQueryInstanceInvoker(request *model.RunQueryInstanceRequest) *RunQueryInstanceInvoker {
+	requestDef := GenReqDefForRunQueryInstance()
+	return &RunQueryInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunSearchPicture 搜索图片
 //
 // 从图片索引库中搜索相似图片。
 //
@@ -148,4 +190,10 @@ func (c *ImageSearchClient) RunSearchPicture(request *model.RunSearchPictureRequ
 	} else {
 		return resp.(*model.RunSearchPictureResponse), nil
 	}
+}
+
+// RunSearchPictureInvoker 搜索图片
+func (c *ImageSearchClient) RunSearchPictureInvoker(request *model.RunSearchPictureRequest) *RunSearchPictureInvoker {
+	requestDef := GenReqDefForRunSearchPicture()
+	return &RunSearchPictureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

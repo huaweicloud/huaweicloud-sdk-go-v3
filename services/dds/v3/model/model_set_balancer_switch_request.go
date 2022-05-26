@@ -48,6 +48,10 @@ func GetSetBalancerSwitchRequestActionEnum() SetBalancerSwitchRequestActionEnum 
 	}
 }
 
+func (c SetBalancerSwitchRequestAction) Value() string {
+	return c.value
+}
+
 func (c SetBalancerSwitchRequestAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

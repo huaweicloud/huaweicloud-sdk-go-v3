@@ -15,7 +15,7 @@ type GaussDBforOpenGaussUserForList struct {
 	Attributes *GaussDBforOpenGaussUserForListAttributes `json:"attributes,omitempty"`
 
 	// 用户的默认权限。
-	Memberof *interface{} `json:"memberof,omitempty"`
+	Memberof *string `json:"memberof,omitempty"`
 }
 
 func (o GaussDBforOpenGaussUserForList) String() string {

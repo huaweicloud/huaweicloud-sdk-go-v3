@@ -48,6 +48,10 @@ func GetOsStopBodyTypeTypeEnum() OsStopBodyTypeTypeEnum {
 	}
 }
 
+func (c OsStopBodyTypeType) Value() string {
+	return c.value
+}
+
 func (c OsStopBodyTypeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

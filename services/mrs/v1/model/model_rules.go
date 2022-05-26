@@ -58,6 +58,10 @@ func GetRulesAdjustmentTypeEnum() RulesAdjustmentTypeEnum {
 	}
 }
 
+func (c RulesAdjustmentType) Value() string {
+	return c.value
+}
+
 func (c RulesAdjustmentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

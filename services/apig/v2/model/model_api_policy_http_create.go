@@ -76,6 +76,10 @@ func GetApiPolicyHttpCreateReqProtocolEnum() ApiPolicyHttpCreateReqProtocolEnum 
 	}
 }
 
+func (c ApiPolicyHttpCreateReqProtocol) Value() string {
+	return c.value
+}
+
 func (c ApiPolicyHttpCreateReqProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -138,6 +142,10 @@ func GetApiPolicyHttpCreateReqMethodEnum() ApiPolicyHttpCreateReqMethodEnum {
 	}
 }
 
+func (c ApiPolicyHttpCreateReqMethod) Value() string {
+	return c.value
+}
+
 func (c ApiPolicyHttpCreateReqMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -176,6 +184,10 @@ func GetApiPolicyHttpCreateEffectModeEnum() ApiPolicyHttpCreateEffectModeEnum {
 	}
 }
 
+func (c ApiPolicyHttpCreateEffectMode) Value() string {
+	return c.value
+}
+
 func (c ApiPolicyHttpCreateEffectMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -211,6 +223,10 @@ func GetApiPolicyHttpCreateVpcChannelStatusEnum() ApiPolicyHttpCreateVpcChannelS
 			value: 2,
 		},
 	}
+}
+
+func (c ApiPolicyHttpCreateVpcChannelStatus) Value() int32 {
+	return c.value
 }
 
 func (c ApiPolicyHttpCreateVpcChannelStatus) MarshalJSON() ([]byte, error) {

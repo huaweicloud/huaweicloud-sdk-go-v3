@@ -30,6 +30,10 @@ func GetExternalAccessStatusEnum() ExternalAccessStatusEnum {
 	}
 }
 
+func (c ExternalAccessStatus) Value() string {
+	return c.value
+}
+
 func (c ExternalAccessStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

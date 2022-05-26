@@ -70,6 +70,10 @@ func GetTargetPhysicalVolumesDeviceUseEnum() TargetPhysicalVolumesDeviceUseEnum 
 	}
 }
 
+func (c TargetPhysicalVolumesDeviceUse) Value() string {
+	return c.value
+}
+
 func (c TargetPhysicalVolumesDeviceUse) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

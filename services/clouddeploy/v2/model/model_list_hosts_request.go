@@ -66,6 +66,10 @@ func GetListHostsRequestSortDirEnum() ListHostsRequestSortDirEnum {
 	}
 }
 
+func (c ListHostsRequestSortDir) Value() string {
+	return c.value
+}
+
 func (c ListHostsRequestSortDir) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

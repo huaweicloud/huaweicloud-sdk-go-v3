@@ -68,6 +68,10 @@ func GetTasksObjectTaskTypeEnum() TasksObjectTaskTypeEnum {
 	}
 }
 
+func (c TasksObjectTaskType) Value() string {
+	return c.value
+}
+
 func (c TasksObjectTaskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -104,6 +108,10 @@ func GetTasksObjectFileTypeEnum() TasksObjectFileTypeEnum {
 			value: "directory",
 		},
 	}
+}
+
+func (c TasksObjectFileType) Value() string {
+	return c.value
 }
 
 func (c TasksObjectFileType) MarshalJSON() ([]byte, error) {

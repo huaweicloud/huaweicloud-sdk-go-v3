@@ -148,6 +148,10 @@ func GetUpdateFunctionConfigRequestBodyRuntimeEnum() UpdateFunctionConfigRequest
 	}
 }
 
+func (c UpdateFunctionConfigRequestBodyRuntime) Value() string {
+	return c.value
+}
+
 func (c UpdateFunctionConfigRequestBodyRuntime) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

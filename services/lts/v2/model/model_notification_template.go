@@ -68,6 +68,10 @@ func GetNotificationTemplateLocaleEnum() NotificationTemplateLocaleEnum {
 	}
 }
 
+func (c NotificationTemplateLocale) Value() string {
+	return c.value
+}
+
 func (c NotificationTemplateLocale) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

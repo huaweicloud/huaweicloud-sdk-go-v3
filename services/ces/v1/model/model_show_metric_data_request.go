@@ -87,6 +87,10 @@ func GetShowMetricDataRequestFilterEnum() ShowMetricDataRequestFilterEnum {
 	}
 }
 
+func (c ShowMetricDataRequestFilter) Value() string {
+	return c.value
+}
+
 func (c ShowMetricDataRequestFilter) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

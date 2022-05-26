@@ -105,6 +105,10 @@ func GetListMessageTraceRespTraceTraceTypeEnum() ListMessageTraceRespTraceTraceT
 	}
 }
 
+func (c ListMessageTraceRespTraceTraceType) Value() string {
+	return c.value
+}
+
 func (c ListMessageTraceRespTraceTraceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -151,6 +155,10 @@ func GetListMessageTraceRespTraceMsgTypeEnum() ListMessageTraceRespTraceMsgTypeE
 	}
 }
 
+func (c ListMessageTraceRespTraceMsgType) Value() string {
+	return c.value
+}
+
 func (c ListMessageTraceRespTraceMsgType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -191,6 +199,10 @@ func GetListMessageTraceRespTraceTransactionStateEnum() ListMessageTraceRespTrac
 			value: "UNKNOW",
 		},
 	}
+}
+
+func (c ListMessageTraceRespTraceTransactionState) Value() string {
+	return c.value
 }
 
 func (c ListMessageTraceRespTraceTransactionState) MarshalJSON() ([]byte, error) {

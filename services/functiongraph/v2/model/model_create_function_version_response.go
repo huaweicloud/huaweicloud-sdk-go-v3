@@ -208,6 +208,10 @@ func GetCreateFunctionVersionResponseRuntimeEnum() CreateFunctionVersionResponse
 	}
 }
 
+func (c CreateFunctionVersionResponseRuntime) Value() string {
+	return c.value
+}
+
 func (c CreateFunctionVersionResponseRuntime) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -254,6 +258,10 @@ func GetCreateFunctionVersionResponseCodeTypeEnum() CreateFunctionVersionRespons
 	}
 }
 
+func (c CreateFunctionVersionResponseCodeType) Value() string {
+	return c.value
+}
+
 func (c CreateFunctionVersionResponseCodeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -290,6 +298,10 @@ func GetCreateFunctionVersionResponseTypeEnum() CreateFunctionVersionResponseTyp
 			value: "v2",
 		},
 	}
+}
+
+func (c CreateFunctionVersionResponseType) Value() string {
+	return c.value
 }
 
 func (c CreateFunctionVersionResponseType) MarshalJSON() ([]byte, error) {

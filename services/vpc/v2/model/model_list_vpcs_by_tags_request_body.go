@@ -57,6 +57,10 @@ func GetListVpcsByTagsRequestBodyActionEnum() ListVpcsByTagsRequestBodyActionEnu
 	}
 }
 
+func (c ListVpcsByTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c ListVpcsByTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

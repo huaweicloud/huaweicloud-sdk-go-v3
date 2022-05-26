@@ -60,6 +60,10 @@ func GetCreateLifeCycleHookOptionLifecycleHookTypeEnum() CreateLifeCycleHookOpti
 	}
 }
 
+func (c CreateLifeCycleHookOptionLifecycleHookType) Value() string {
+	return c.value
+}
+
 func (c CreateLifeCycleHookOptionLifecycleHookType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -96,6 +100,10 @@ func GetCreateLifeCycleHookOptionDefaultResultEnum() CreateLifeCycleHookOptionDe
 			value: "CONTINUE",
 		},
 	}
+}
+
+func (c CreateLifeCycleHookOptionDefaultResult) Value() string {
+	return c.value
 }
 
 func (c CreateLifeCycleHookOptionDefaultResult) MarshalJSON() ([]byte, error) {

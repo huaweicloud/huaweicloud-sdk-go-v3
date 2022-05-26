@@ -99,6 +99,10 @@ func GetScalingActivityLogV2StatusEnum() ScalingActivityLogV2StatusEnum {
 	}
 }
 
+func (c ScalingActivityLogV2Status) Value() string {
+	return c.value
+}
+
 func (c ScalingActivityLogV2Status) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

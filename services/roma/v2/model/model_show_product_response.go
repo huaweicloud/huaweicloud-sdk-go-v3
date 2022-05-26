@@ -96,6 +96,10 @@ func GetShowProductResponseProductTypeEnum() ShowProductResponseProductTypeEnum 
 	}
 }
 
+func (c ShowProductResponseProductType) Value() int32 {
+	return c.value
+}
+
 func (c ShowProductResponseProductType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -134,6 +138,10 @@ func GetShowProductResponseProtocolTypeEnum() ShowProductResponseProtocolTypeEnu
 			value: 4,
 		},
 	}
+}
+
+func (c ShowProductResponseProtocolType) Value() int32 {
+	return c.value
 }
 
 func (c ShowProductResponseProtocolType) MarshalJSON() ([]byte, error) {

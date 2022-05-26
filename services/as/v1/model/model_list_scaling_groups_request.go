@@ -68,6 +68,10 @@ func GetListScalingGroupsRequestScalingGroupStatusEnum() ListScalingGroupsReques
 	}
 }
 
+func (c ListScalingGroupsRequestScalingGroupStatus) Value() string {
+	return c.value
+}
+
 func (c ListScalingGroupsRequestScalingGroupStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

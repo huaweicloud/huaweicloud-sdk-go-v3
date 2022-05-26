@@ -65,6 +65,10 @@ func GetSourceOrArtifactStorageEnum() SourceOrArtifactStorageEnum {
 	}
 }
 
+func (c SourceOrArtifactStorage) Value() string {
+	return c.value
+}
+
 func (c SourceOrArtifactStorage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -97,6 +101,10 @@ func GetSourceOrArtifactTypeEnum() SourceOrArtifactTypeEnum {
 			value: "package",
 		},
 	}
+}
+
+func (c SourceOrArtifactType) Value() string {
+	return c.value
 }
 
 func (c SourceOrArtifactType) MarshalJSON() ([]byte, error) {

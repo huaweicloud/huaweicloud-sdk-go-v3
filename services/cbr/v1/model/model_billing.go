@@ -86,6 +86,10 @@ func GetBillingChargingModeEnum() BillingChargingModeEnum {
 	}
 }
 
+func (c BillingChargingMode) Value() string {
+	return c.value
+}
+
 func (c BillingChargingMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -122,6 +126,10 @@ func GetBillingCloudTypeEnum() BillingCloudTypeEnum {
 			value: "hybrid",
 		},
 	}
+}
+
+func (c BillingCloudType) Value() string {
+	return c.value
 }
 
 func (c BillingCloudType) MarshalJSON() ([]byte, error) {
@@ -162,6 +170,10 @@ func GetBillingConsistentLevelEnum() BillingConsistentLevelEnum {
 	}
 }
 
+func (c BillingConsistentLevel) Value() string {
+	return c.value
+}
+
 func (c BillingConsistentLevel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -198,6 +210,10 @@ func GetBillingObjectTypeEnum() BillingObjectTypeEnum {
 			value: "disk",
 		},
 	}
+}
+
+func (c BillingObjectType) Value() string {
+	return c.value
 }
 
 func (c BillingObjectType) MarshalJSON() ([]byte, error) {
@@ -242,6 +258,10 @@ func GetBillingProtectTypeEnum() BillingProtectTypeEnum {
 	}
 }
 
+func (c BillingProtectType) Value() string {
+	return c.value
+}
+
 func (c BillingProtectType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -278,6 +298,10 @@ func GetBillingSpecCodeEnum() BillingSpecCodeEnum {
 			value: "vault.backup.volume.normal",
 		},
 	}
+}
+
+func (c BillingSpecCode) Value() string {
+	return c.value
 }
 
 func (c BillingSpecCode) MarshalJSON() ([]byte, error) {
@@ -328,6 +352,10 @@ func GetBillingStatusEnum() BillingStatusEnum {
 			value: "error",
 		},
 	}
+}
+
+func (c BillingStatus) Value() string {
+	return c.value
 }
 
 func (c BillingStatus) MarshalJSON() ([]byte, error) {

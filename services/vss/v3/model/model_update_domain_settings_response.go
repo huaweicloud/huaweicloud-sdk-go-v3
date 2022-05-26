@@ -49,6 +49,10 @@ func GetUpdateDomainSettingsResponseInfoCodeEnum() UpdateDomainSettingsResponseI
 	}
 }
 
+func (c UpdateDomainSettingsResponseInfoCode) Value() string {
+	return c.value
+}
+
 func (c UpdateDomainSettingsResponseInfoCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

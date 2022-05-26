@@ -47,6 +47,10 @@ func GetBatchListRposAndRtosRequestXLanguageEnum() BatchListRposAndRtosRequestXL
 	}
 }
 
+func (c BatchListRposAndRtosRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c BatchListRposAndRtosRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

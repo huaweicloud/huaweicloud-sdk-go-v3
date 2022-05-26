@@ -68,6 +68,10 @@ func GetUpdateHostRequestBodyTlsEnum() UpdateHostRequestBodyTlsEnum {
 	}
 }
 
+func (c UpdateHostRequestBodyTls) Value() string {
+	return c.value
+}
+
 func (c UpdateHostRequestBodyTls) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -116,6 +120,10 @@ func GetUpdateHostRequestBodyCipherEnum() UpdateHostRequestBodyCipherEnum {
 			value: "cipher_default",
 		},
 	}
+}
+
+func (c UpdateHostRequestBodyCipher) Value() string {
+	return c.value
 }
 
 func (c UpdateHostRequestBodyCipher) MarshalJSON() ([]byte, error) {

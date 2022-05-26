@@ -74,6 +74,10 @@ func GetUpdateRepoRequestBodyCategoryEnum() UpdateRepoRequestBodyCategoryEnum {
 	}
 }
 
+func (c UpdateRepoRequestBodyCategory) Value() string {
+	return c.value
+}
+
 func (c UpdateRepoRequestBodyCategory) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

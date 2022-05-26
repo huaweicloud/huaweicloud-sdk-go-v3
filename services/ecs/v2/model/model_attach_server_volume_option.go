@@ -14,6 +14,12 @@ type AttachServerVolumeOption struct {
 
 	// 待挂载磁盘的磁盘ID，UUID格式。
 	VolumeId string `json:"volumeId"`
+
+	// 云硬盘类型。  该字段于dry_run为true并且volumeId不存在时有效且为必选字段。
+	VolumeType *string `json:"volume_type,omitempty"`
+
+	// - true: 表示云硬盘的设备类型为SCSI类型，即允许ECS操作系统直接访问底层存储介质。支持SCSI锁命令 - false: 表示云硬盘的设备类型为VBD (虚拟块存储设备 , Virtual Block Device)类型，VBD只能支持简单的SCSI读写命令。 该字段于dry_run为true并且volumeId不存在时有效且为必选字段。
+	Hwpassthrough *string `json:"hw:passthrough,omitempty"`
 }
 
 func (o AttachServerVolumeOption) String() string {

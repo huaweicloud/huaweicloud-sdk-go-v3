@@ -63,6 +63,10 @@ func GetShowRepositoryByCloudIdeRequestXLanguageEnum() ShowRepositoryByCloudIdeR
 	}
 }
 
+func (c ShowRepositoryByCloudIdeRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ShowRepositoryByCloudIdeRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

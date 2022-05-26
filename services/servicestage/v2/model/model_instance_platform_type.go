@@ -30,6 +30,10 @@ func GetInstancePlatformTypeEnum() InstancePlatformTypeEnum {
 	}
 }
 
+func (c InstancePlatformType) Value() string {
+	return c.value
+}
+
 func (c InstancePlatformType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -60,6 +60,10 @@ func GetShowStructTemplateRuleTypeEnum() ShowStructTemplateRuleTypeEnum {
 	}
 }
 
+func (c ShowStructTemplateRuleType) Value() string {
+	return c.value
+}
+
 func (c ShowStructTemplateRuleType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

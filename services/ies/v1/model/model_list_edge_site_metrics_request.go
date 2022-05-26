@@ -48,6 +48,10 @@ func GetListEdgeSiteMetricsRequestDimEnum() ListEdgeSiteMetricsRequestDimEnum {
 	}
 }
 
+func (c ListEdgeSiteMetricsRequestDim) Value() string {
+	return c.value
+}
+
 func (c ListEdgeSiteMetricsRequestDim) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -55,6 +55,10 @@ func GetTopicPermissionEnum() TopicPermissionEnum {
 	}
 }
 
+func (c TopicPermission) Value() int32 {
+	return c.value
+}
+
 func (c TopicPermission) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -90,6 +94,10 @@ func GetTopicIsPrivateEnum() TopicIsPrivateEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c TopicIsPrivate) Value() int32 {
+	return c.value
 }
 
 func (c TopicIsPrivate) MarshalJSON() ([]byte, error) {

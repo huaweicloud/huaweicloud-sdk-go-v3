@@ -91,6 +91,10 @@ func GetPortStatusEnum() PortStatusEnum {
 	}
 }
 
+func (c PortStatus) Value() string {
+	return c.value
+}
+
 func (c PortStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

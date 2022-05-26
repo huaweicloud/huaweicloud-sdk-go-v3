@@ -77,6 +77,10 @@ func GetCreateScoresRequestModelStatusEnum() CreateScoresRequestModelStatusEnum 
 	}
 }
 
+func (c CreateScoresRequestModelStatus) Value() string {
+	return c.value
+}
+
 func (c CreateScoresRequestModelStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

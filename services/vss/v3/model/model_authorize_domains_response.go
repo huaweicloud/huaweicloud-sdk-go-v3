@@ -49,6 +49,10 @@ func GetAuthorizeDomainsResponseInfoCodeEnum() AuthorizeDomainsResponseInfoCodeE
 	}
 }
 
+func (c AuthorizeDomainsResponseInfoCode) Value() string {
+	return c.value
+}
+
 func (c AuthorizeDomainsResponseInfoCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

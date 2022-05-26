@@ -54,6 +54,10 @@ func GetBatchDeleteScalingPoliciesOptionForceDeleteEnum() BatchDeleteScalingPoli
 	}
 }
 
+func (c BatchDeleteScalingPoliciesOptionForceDelete) Value() string {
+	return c.value
+}
+
 func (c BatchDeleteScalingPoliciesOptionForceDelete) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -86,6 +90,10 @@ func GetBatchDeleteScalingPoliciesOptionActionEnum() BatchDeleteScalingPoliciesO
 			value: "delete",
 		},
 	}
+}
+
+func (c BatchDeleteScalingPoliciesOptionAction) Value() string {
+	return c.value
 }
 
 func (c BatchDeleteScalingPoliciesOptionAction) MarshalJSON() ([]byte, error) {

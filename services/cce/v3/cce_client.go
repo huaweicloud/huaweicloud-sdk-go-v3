@@ -2,7 +2,7 @@ package v3
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cce/v3/model"
 )
 
@@ -19,7 +19,7 @@ func CceClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 纳管节点
+// AddNode 纳管节点
 //
 // 该API用于在指定集群下纳管节点。
 // &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
@@ -36,7 +36,13 @@ func (c *CceClient) AddNode(request *model.AddNodeRequest) (*model.AddNodeRespon
 	}
 }
 
-// 集群唤醒
+// AddNodeInvoker 纳管节点
+func (c *CceClient) AddNodeInvoker(request *model.AddNodeRequest) *AddNodeInvoker {
+	requestDef := GenReqDefForAddNode()
+	return &AddNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AwakeCluster 集群唤醒
 //
 // 集群唤醒用于唤醒已休眠的集群，唤醒后，将继续收取控制节点资源费用。
 //
@@ -52,7 +58,13 @@ func (c *CceClient) AwakeCluster(request *model.AwakeClusterRequest) (*model.Awa
 	}
 }
 
-// 创建AddonInstance
+// AwakeClusterInvoker 集群唤醒
+func (c *CceClient) AwakeClusterInvoker(request *model.AwakeClusterRequest) *AwakeClusterInvoker {
+	requestDef := GenReqDefForAwakeCluster()
+	return &AwakeClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAddonInstance 创建AddonInstance
 //
 // 根据提供的插件模板，安装插件实例。
 //
@@ -68,7 +80,13 @@ func (c *CceClient) CreateAddonInstance(request *model.CreateAddonInstanceReques
 	}
 }
 
-// 创建PVC
+// CreateAddonInstanceInvoker 创建AddonInstance
+func (c *CceClient) CreateAddonInstanceInvoker(request *model.CreateAddonInstanceRequest) *CreateAddonInstanceInvoker {
+	requestDef := GenReqDefForCreateAddonInstance()
+	return &CreateAddonInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCloudPersistentVolumeClaims 创建PVC
 //
 // 该API用于在指定的Namespace下通过云存储服务中的云存储（EVS、SFS、OBS）去创建PVC（PersistentVolumeClaim）。
 //
@@ -86,7 +104,13 @@ func (c *CceClient) CreateCloudPersistentVolumeClaims(request *model.CreateCloud
 	}
 }
 
-// 创建集群
+// CreateCloudPersistentVolumeClaimsInvoker 创建PVC
+func (c *CceClient) CreateCloudPersistentVolumeClaimsInvoker(request *model.CreateCloudPersistentVolumeClaimsRequest) *CreateCloudPersistentVolumeClaimsInvoker {
+	requestDef := GenReqDefForCreateCloudPersistentVolumeClaims()
+	return &CreateCloudPersistentVolumeClaimsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCluster 创建集群
 //
 // 该API用于创建一个空集群（即只有控制节点Master，没有工作节点Node）。请在调用本接口完成集群创建之后，通过[创建节点](cce_02_0242.xml)添加节点。
 //
@@ -105,7 +129,13 @@ func (c *CceClient) CreateCluster(request *model.CreateClusterRequest) (*model.C
 	}
 }
 
-// 获取集群证书
+// CreateClusterInvoker 创建集群
+func (c *CceClient) CreateClusterInvoker(request *model.CreateClusterRequest) *CreateClusterInvoker {
+	requestDef := GenReqDefForCreateCluster()
+	return &CreateClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateKubernetesClusterCert 获取集群证书
 //
 // 该API用于获取指定集群的证书信息。
 //
@@ -121,7 +151,13 @@ func (c *CceClient) CreateKubernetesClusterCert(request *model.CreateKubernetesC
 	}
 }
 
-// 创建节点
+// CreateKubernetesClusterCertInvoker 获取集群证书
+func (c *CceClient) CreateKubernetesClusterCertInvoker(request *model.CreateKubernetesClusterCertRequest) *CreateKubernetesClusterCertInvoker {
+	requestDef := GenReqDefForCreateKubernetesClusterCert()
+	return &CreateKubernetesClusterCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNode 创建节点
 //
 // 该API用于在指定集群下创建节点。
 // &gt; - 若无集群，请先[创建集群](cce_02_0236.xml)。
@@ -139,7 +175,13 @@ func (c *CceClient) CreateNode(request *model.CreateNodeRequest) (*model.CreateN
 	}
 }
 
-// 创建节点池
+// CreateNodeInvoker 创建节点
+func (c *CceClient) CreateNodeInvoker(request *model.CreateNodeRequest) *CreateNodeInvoker {
+	requestDef := GenReqDefForCreateNode()
+	return &CreateNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNodePool 创建节点池
 //
 // 该API用于在指定集群下创建节点池。仅支持集群在处于可用、扩容、缩容状态时调用。1.21版本的集群创建节点池时支持绑定安全组，每个节点池最多绑定五个安全组。更新节点池的安全组后，只针对新创的pod生效，建议驱逐节点上原有的pod。
 //
@@ -159,7 +201,13 @@ func (c *CceClient) CreateNodePool(request *model.CreateNodePoolRequest) (*model
 	}
 }
 
-// 删除AddonInstance
+// CreateNodePoolInvoker 创建节点池
+func (c *CceClient) CreateNodePoolInvoker(request *model.CreateNodePoolRequest) *CreateNodePoolInvoker {
+	requestDef := GenReqDefForCreateNodePool()
+	return &CreateNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAddonInstance 删除AddonInstance
 //
 // 删除插件实例的功能。
 //
@@ -175,7 +223,13 @@ func (c *CceClient) DeleteAddonInstance(request *model.DeleteAddonInstanceReques
 	}
 }
 
-// 删除PVC
+// DeleteAddonInstanceInvoker 删除AddonInstance
+func (c *CceClient) DeleteAddonInstanceInvoker(request *model.DeleteAddonInstanceRequest) *DeleteAddonInstanceInvoker {
+	requestDef := GenReqDefForDeleteAddonInstance()
+	return &DeleteAddonInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCloudPersistentVolumeClaims 删除PVC
 //
 // 该API用于删除指定Namespace下的PVC（PersistentVolumeClaim）对象，并可以选择保留后端的云存储。
 //
@@ -193,7 +247,13 @@ func (c *CceClient) DeleteCloudPersistentVolumeClaims(request *model.DeleteCloud
 	}
 }
 
-// 删除集群
+// DeleteCloudPersistentVolumeClaimsInvoker 删除PVC
+func (c *CceClient) DeleteCloudPersistentVolumeClaimsInvoker(request *model.DeleteCloudPersistentVolumeClaimsRequest) *DeleteCloudPersistentVolumeClaimsInvoker {
+	requestDef := GenReqDefForDeleteCloudPersistentVolumeClaims()
+	return &DeleteCloudPersistentVolumeClaimsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCluster 删除集群
 //
 // 该API用于删除一个指定的集群。
 // &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
@@ -210,7 +270,13 @@ func (c *CceClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.D
 	}
 }
 
-// 删除节点
+// DeleteClusterInvoker 删除集群
+func (c *CceClient) DeleteClusterInvoker(request *model.DeleteClusterRequest) *DeleteClusterInvoker {
+	requestDef := GenReqDefForDeleteCluster()
+	return &DeleteClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNode 删除节点
 //
 // 该API用于删除指定的节点。
 // &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
@@ -227,7 +293,13 @@ func (c *CceClient) DeleteNode(request *model.DeleteNodeRequest) (*model.DeleteN
 	}
 }
 
-// 删除节点池
+// DeleteNodeInvoker 删除节点
+func (c *CceClient) DeleteNodeInvoker(request *model.DeleteNodeRequest) *DeleteNodeInvoker {
+	requestDef := GenReqDefForDeleteNode()
+	return &DeleteNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNodePool 删除节点池
 //
 // 该API用于删除指定的节点池。
 // &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
@@ -244,7 +316,13 @@ func (c *CceClient) DeleteNodePool(request *model.DeleteNodePoolRequest) (*model
 	}
 }
 
-// 集群休眠
+// DeleteNodePoolInvoker 删除节点池
+func (c *CceClient) DeleteNodePoolInvoker(request *model.DeleteNodePoolRequest) *DeleteNodePoolInvoker {
+	requestDef := GenReqDefForDeleteNodePool()
+	return &DeleteNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// HibernateCluster 集群休眠
 //
 // 集群休眠用于将运行中的集群置于休眠状态，休眠后，将不再收取控制节点资源费用。
 //
@@ -260,7 +338,13 @@ func (c *CceClient) HibernateCluster(request *model.HibernateClusterRequest) (*m
 	}
 }
 
-// 获取AddonInstance列表
+// HibernateClusterInvoker 集群休眠
+func (c *CceClient) HibernateClusterInvoker(request *model.HibernateClusterRequest) *HibernateClusterInvoker {
+	requestDef := GenReqDefForHibernateCluster()
+	return &HibernateClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAddonInstances 获取AddonInstance列表
 //
 // 获取集群所有已安装插件实例
 //
@@ -276,7 +360,13 @@ func (c *CceClient) ListAddonInstances(request *model.ListAddonInstancesRequest)
 	}
 }
 
-// 查询AddonTemplates列表
+// ListAddonInstancesInvoker 获取AddonInstance列表
+func (c *CceClient) ListAddonInstancesInvoker(request *model.ListAddonInstancesRequest) *ListAddonInstancesInvoker {
+	requestDef := GenReqDefForListAddonInstances()
+	return &ListAddonInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAddonTemplates 查询AddonTemplates列表
 //
 // 插件模板查询接口，查询插件信息。
 //
@@ -292,7 +382,13 @@ func (c *CceClient) ListAddonTemplates(request *model.ListAddonTemplatesRequest)
 	}
 }
 
-// 获取指定项目下的集群
+// ListAddonTemplatesInvoker 查询AddonTemplates列表
+func (c *CceClient) ListAddonTemplatesInvoker(request *model.ListAddonTemplatesRequest) *ListAddonTemplatesInvoker {
+	requestDef := GenReqDefForListAddonTemplates()
+	return &ListAddonTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClusters 获取指定项目下的集群
 //
 // 该API用于获取指定项目下所有集群的详细信息。
 //
@@ -308,7 +404,13 @@ func (c *CceClient) ListClusters(request *model.ListClustersRequest) (*model.Lis
 	}
 }
 
-// 获取集群下所有节点池
+// ListClustersInvoker 获取指定项目下的集群
+func (c *CceClient) ListClustersInvoker(request *model.ListClustersRequest) *ListClustersInvoker {
+	requestDef := GenReqDefForListClusters()
+	return &ListClustersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNodePools 获取集群下所有节点池
 //
 // 该API用于获取集群下所有节点池。
 // &gt; - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
@@ -326,7 +428,13 @@ func (c *CceClient) ListNodePools(request *model.ListNodePoolsRequest) (*model.L
 	}
 }
 
-// 获取集群下所有节点
+// ListNodePoolsInvoker 获取集群下所有节点池
+func (c *CceClient) ListNodePoolsInvoker(request *model.ListNodePoolsRequest) *ListNodePoolsInvoker {
+	requestDef := GenReqDefForListNodePools()
+	return &ListNodePoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNodes 获取集群下所有节点
 //
 // 该API用于通过集群ID获取指定集群下所有节点的详细信息。
 // &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
@@ -343,7 +451,13 @@ func (c *CceClient) ListNodes(request *model.ListNodesRequest) (*model.ListNodes
 	}
 }
 
-// 节点迁移
+// ListNodesInvoker 获取集群下所有节点
+func (c *CceClient) ListNodesInvoker(request *model.ListNodesRequest) *ListNodesInvoker {
+	requestDef := GenReqDefForListNodes()
+	return &ListNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// MigrateNode 节点迁移
 //
 // 该API用于在指定集群下迁移节点到另一集群。
 // &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
@@ -360,7 +474,13 @@ func (c *CceClient) MigrateNode(request *model.MigrateNodeRequest) (*model.Migra
 	}
 }
 
-// 节点移除
+// MigrateNodeInvoker 节点迁移
+func (c *CceClient) MigrateNodeInvoker(request *model.MigrateNodeRequest) *MigrateNodeInvoker {
+	requestDef := GenReqDefForMigrateNode()
+	return &MigrateNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveNode 节点移除
 //
 // 该API用于在指定集群下移除节点。
 // &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
@@ -377,7 +497,13 @@ func (c *CceClient) RemoveNode(request *model.RemoveNodeRequest) (*model.RemoveN
 	}
 }
 
-// 重置节点
+// RemoveNodeInvoker 节点移除
+func (c *CceClient) RemoveNodeInvoker(request *model.RemoveNodeRequest) *RemoveNodeInvoker {
+	requestDef := GenReqDefForRemoveNode()
+	return &RemoveNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetNode 重置节点
 //
 // 该API用于在指定集群下重置节点。
 // &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
@@ -394,7 +520,13 @@ func (c *CceClient) ResetNode(request *model.ResetNodeRequest) (*model.ResetNode
 	}
 }
 
-// 获取AddonInstance详情
+// ResetNodeInvoker 重置节点
+func (c *CceClient) ResetNodeInvoker(request *model.ResetNodeRequest) *ResetNodeInvoker {
+	requestDef := GenReqDefForResetNode()
+	return &ResetNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAddonInstance 获取AddonInstance详情
 //
 // 获取插件实例详情。
 //
@@ -410,7 +542,13 @@ func (c *CceClient) ShowAddonInstance(request *model.ShowAddonInstanceRequest) (
 	}
 }
 
-// 获取指定的集群
+// ShowAddonInstanceInvoker 获取AddonInstance详情
+func (c *CceClient) ShowAddonInstanceInvoker(request *model.ShowAddonInstanceRequest) *ShowAddonInstanceInvoker {
+	requestDef := GenReqDefForShowAddonInstance()
+	return &ShowAddonInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCluster 获取指定的集群
 //
 // 该API用于获取指定集群的详细信息。
 // &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
@@ -427,7 +565,13 @@ func (c *CceClient) ShowCluster(request *model.ShowClusterRequest) (*model.ShowC
 	}
 }
 
-// 获取任务信息
+// ShowClusterInvoker 获取指定的集群
+func (c *CceClient) ShowClusterInvoker(request *model.ShowClusterRequest) *ShowClusterInvoker {
+	requestDef := GenReqDefForShowCluster()
+	return &ShowClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJob 获取任务信息
 //
 // 该API用于获取任务信息。通过某一任务请求下发后返回的jobID来查询指定任务的进度。
 // &gt; - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
@@ -447,7 +591,13 @@ func (c *CceClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobRespon
 	}
 }
 
-// 获取指定的节点
+// ShowJobInvoker 获取任务信息
+func (c *CceClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
+	requestDef := GenReqDefForShowJob()
+	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNode 获取指定的节点
 //
 // 该API用于通过节点ID获取指定节点的详细信息。
 // &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
@@ -464,7 +614,13 @@ func (c *CceClient) ShowNode(request *model.ShowNodeRequest) (*model.ShowNodeRes
 	}
 }
 
-// 获取指定的节点池
+// ShowNodeInvoker 获取指定的节点
+func (c *CceClient) ShowNodeInvoker(request *model.ShowNodeRequest) *ShowNodeInvoker {
+	requestDef := GenReqDefForShowNode()
+	return &ShowNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNodePool 获取指定的节点池
 //
 // 该API用于获取指定节点池的详细信息。
 // &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
@@ -481,7 +637,13 @@ func (c *CceClient) ShowNodePool(request *model.ShowNodePoolRequest) (*model.Sho
 	}
 }
 
-// 查询CCE服务下的资源配额。
+// ShowNodePoolInvoker 获取指定的节点池
+func (c *CceClient) ShowNodePoolInvoker(request *model.ShowNodePoolRequest) *ShowNodePoolInvoker {
+	requestDef := GenReqDefForShowNodePool()
+	return &ShowNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuotas 查询CCE服务下的资源配额。
 //
 // 该API用于查询CCE服务下的资源配额。
 //
@@ -497,7 +659,13 @@ func (c *CceClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuo
 	}
 }
 
-// 更新AddonInstance
+// ShowQuotasInvoker 查询CCE服务下的资源配额。
+func (c *CceClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuotasInvoker {
+	requestDef := GenReqDefForShowQuotas()
+	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAddonInstance 更新AddonInstance
 //
 // 更新插件实例的功能。
 //
@@ -513,7 +681,13 @@ func (c *CceClient) UpdateAddonInstance(request *model.UpdateAddonInstanceReques
 	}
 }
 
-// 更新指定的集群
+// UpdateAddonInstanceInvoker 更新AddonInstance
+func (c *CceClient) UpdateAddonInstanceInvoker(request *model.UpdateAddonInstanceRequest) *UpdateAddonInstanceInvoker {
+	requestDef := GenReqDefForUpdateAddonInstance()
+	return &UpdateAddonInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCluster 更新指定的集群
 //
 // 该API用于更新指定的集群。
 // &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
@@ -530,7 +704,13 @@ func (c *CceClient) UpdateCluster(request *model.UpdateClusterRequest) (*model.U
 	}
 }
 
-// 更新指定的节点
+// UpdateClusterInvoker 更新指定的集群
+func (c *CceClient) UpdateClusterInvoker(request *model.UpdateClusterRequest) *UpdateClusterInvoker {
+	requestDef := GenReqDefForUpdateCluster()
+	return &UpdateClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNode 更新指定的节点
 //
 // 该API用于更新指定的节点。
 // &gt; - 当前仅支持更新metadata下的name字段，即节点的名字。
@@ -548,7 +728,13 @@ func (c *CceClient) UpdateNode(request *model.UpdateNodeRequest) (*model.UpdateN
 	}
 }
 
-// 更新指定节点池
+// UpdateNodeInvoker 更新指定的节点
+func (c *CceClient) UpdateNodeInvoker(request *model.UpdateNodeRequest) *UpdateNodeInvoker {
+	requestDef := GenReqDefForUpdateNode()
+	return &UpdateNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNodePool 更新指定节点池
 //
 // 该API用于更新指定的节点池。仅支持集群在处于可用、扩容、缩容状态时调用。
 //
@@ -567,4 +753,10 @@ func (c *CceClient) UpdateNodePool(request *model.UpdateNodePoolRequest) (*model
 	} else {
 		return resp.(*model.UpdateNodePoolResponse), nil
 	}
+}
+
+// UpdateNodePoolInvoker 更新指定节点池
+func (c *CceClient) UpdateNodePoolInvoker(request *model.UpdateNodePoolRequest) *UpdateNodePoolInvoker {
+	requestDef := GenReqDefForUpdateNodePool()
+	return &UpdateNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

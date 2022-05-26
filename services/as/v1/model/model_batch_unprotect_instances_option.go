@@ -54,6 +54,10 @@ func GetBatchUnprotectInstancesOptionInstanceDeleteEnum() BatchUnprotectInstance
 	}
 }
 
+func (c BatchUnprotectInstancesOptionInstanceDelete) Value() string {
+	return c.value
+}
+
 func (c BatchUnprotectInstancesOptionInstanceDelete) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -86,6 +90,10 @@ func GetBatchUnprotectInstancesOptionActionEnum() BatchUnprotectInstancesOptionA
 			value: "UNPROTECT",
 		},
 	}
+}
+
+func (c BatchUnprotectInstancesOptionAction) Value() string {
+	return c.value
 }
 
 func (c BatchUnprotectInstancesOptionAction) MarshalJSON() ([]byte, error) {
@@ -124,6 +132,10 @@ func GetBatchUnprotectInstancesOptionInstanceAppendEnum() BatchUnprotectInstance
 			value: "yes",
 		},
 	}
+}
+
+func (c BatchUnprotectInstancesOptionInstanceAppend) Value() string {
+	return c.value
 }
 
 func (c BatchUnprotectInstancesOptionInstanceAppend) MarshalJSON() ([]byte, error) {

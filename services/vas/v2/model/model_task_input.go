@@ -66,6 +66,10 @@ func GetTaskInputTypeEnum() TaskInputTypeEnum {
 	}
 }
 
+func (c TaskInputType) Value() string {
+	return c.value
+}
+
 func (c TaskInputType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

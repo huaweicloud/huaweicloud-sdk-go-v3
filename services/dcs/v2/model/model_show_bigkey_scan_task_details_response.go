@@ -78,6 +78,10 @@ func GetShowBigkeyScanTaskDetailsResponseStatusEnum() ShowBigkeyScanTaskDetailsR
 	}
 }
 
+func (c ShowBigkeyScanTaskDetailsResponseStatus) Value() string {
+	return c.value
+}
+
 func (c ShowBigkeyScanTaskDetailsResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -114,6 +118,10 @@ func GetShowBigkeyScanTaskDetailsResponseScanTypeEnum() ShowBigkeyScanTaskDetail
 			value: "auto",
 		},
 	}
+}
+
+func (c ShowBigkeyScanTaskDetailsResponseScanType) Value() string {
+	return c.value
 }
 
 func (c ShowBigkeyScanTaskDetailsResponseScanType) MarshalJSON() ([]byte, error) {

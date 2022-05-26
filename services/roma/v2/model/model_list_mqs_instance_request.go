@@ -41,6 +41,10 @@ func GetListMqsInstanceRequestIncludeInternalEnum() ListMqsInstanceRequestInclud
 	}
 }
 
+func (c ListMqsInstanceRequestIncludeInternal) Value() string {
+	return c.value
+}
+
 func (c ListMqsInstanceRequestIncludeInternal) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

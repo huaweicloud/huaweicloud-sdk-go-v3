@@ -44,6 +44,10 @@ func GetUrlDomainModifyMinSslVersionEnum() UrlDomainModifyMinSslVersionEnum {
 	}
 }
 
+func (c UrlDomainModifyMinSslVersion) Value() string {
+	return c.value
+}
+
 func (c UrlDomainModifyMinSslVersion) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

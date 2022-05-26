@@ -60,6 +60,10 @@ func GetDeploymentGroupOsEnum() DeploymentGroupOsEnum {
 	}
 }
 
+func (c DeploymentGroupOs) Value() string {
+	return c.value
+}
+
 func (c DeploymentGroupOs) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

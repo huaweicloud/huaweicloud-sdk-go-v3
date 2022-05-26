@@ -134,6 +134,10 @@ func GetListApiRuntimeDefinitionV2ResponseTypeEnum() ListApiRuntimeDefinitionV2R
 	}
 }
 
+func (c ListApiRuntimeDefinitionV2ResponseType) Value() int32 {
+	return c.value
+}
+
 func (c ListApiRuntimeDefinitionV2ResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -174,6 +178,10 @@ func GetListApiRuntimeDefinitionV2ResponseReqProtocolEnum() ListApiRuntimeDefini
 			value: "BOTH",
 		},
 	}
+}
+
+func (c ListApiRuntimeDefinitionV2ResponseReqProtocol) Value() string {
+	return c.value
 }
 
 func (c ListApiRuntimeDefinitionV2ResponseReqProtocol) MarshalJSON() ([]byte, error) {
@@ -238,6 +246,10 @@ func GetListApiRuntimeDefinitionV2ResponseReqMethodEnum() ListApiRuntimeDefiniti
 	}
 }
 
+func (c ListApiRuntimeDefinitionV2ResponseReqMethod) Value() string {
+	return c.value
+}
+
 func (c ListApiRuntimeDefinitionV2ResponseReqMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -284,6 +296,10 @@ func GetListApiRuntimeDefinitionV2ResponseAuthTypeEnum() ListApiRuntimeDefinitio
 	}
 }
 
+func (c ListApiRuntimeDefinitionV2ResponseAuthType) Value() string {
+	return c.value
+}
+
 func (c ListApiRuntimeDefinitionV2ResponseAuthType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -320,6 +336,10 @@ func GetListApiRuntimeDefinitionV2ResponseMatchModeEnum() ListApiRuntimeDefiniti
 			value: "NORMAL",
 		},
 	}
+}
+
+func (c ListApiRuntimeDefinitionV2ResponseMatchMode) Value() string {
+	return c.value
 }
 
 func (c ListApiRuntimeDefinitionV2ResponseMatchMode) MarshalJSON() ([]byte, error) {
@@ -362,6 +382,10 @@ func GetListApiRuntimeDefinitionV2ResponseBackendTypeEnum() ListApiRuntimeDefini
 			value: "MOCK",
 		},
 	}
+}
+
+func (c ListApiRuntimeDefinitionV2ResponseBackendType) Value() string {
+	return c.value
 }
 
 func (c ListApiRuntimeDefinitionV2ResponseBackendType) MarshalJSON() ([]byte, error) {
@@ -408,6 +432,10 @@ func GetListApiRuntimeDefinitionV2ResponseContentTypeEnum() ListApiRuntimeDefini
 			value: "text/plain",
 		},
 	}
+}
+
+func (c ListApiRuntimeDefinitionV2ResponseContentType) Value() string {
+	return c.value
 }
 
 func (c ListApiRuntimeDefinitionV2ResponseContentType) MarshalJSON() ([]byte, error) {

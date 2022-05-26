@@ -75,6 +75,10 @@ func GetAppQuotaInfoTimeUnitEnum() AppQuotaInfoTimeUnitEnum {
 	}
 }
 
+func (c AppQuotaInfoTimeUnit) Value() string {
+	return c.value
+}
+
 func (c AppQuotaInfoTimeUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

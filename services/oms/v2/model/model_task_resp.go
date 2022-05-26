@@ -143,6 +143,10 @@ func GetTaskRespTaskTypeEnum() TaskRespTaskTypeEnum {
 	}
 }
 
+func (c TaskRespTaskType) Value() string {
+	return c.value
+}
+
 func (c TaskRespTaskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -183,6 +187,10 @@ func GetTaskRespGroupTypeEnum() TaskRespGroupTypeEnum {
 			value: "GROUP_TASK",
 		},
 	}
+}
+
+func (c TaskRespGroupType) Value() string {
+	return c.value
 }
 
 func (c TaskRespGroupType) MarshalJSON() ([]byte, error) {

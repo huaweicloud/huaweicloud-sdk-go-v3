@@ -57,6 +57,10 @@ func GetShowSqlExecutionPlanRequestXLanguageEnum() ShowSqlExecutionPlanRequestXL
 	}
 }
 
+func (c ShowSqlExecutionPlanRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ShowSqlExecutionPlanRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

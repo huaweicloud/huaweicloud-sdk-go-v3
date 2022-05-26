@@ -61,6 +61,10 @@ func GetPipelineBasicLastRunningStatusEnum() PipelineBasicLastRunningStatusEnum 
 	}
 }
 
+func (c PipelineBasicLastRunningStatus) Value() string {
+	return c.value
+}
+
 func (c PipelineBasicLastRunningStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

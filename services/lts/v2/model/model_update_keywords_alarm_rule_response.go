@@ -95,6 +95,10 @@ func GetUpdateKeywordsAlarmRuleResponseKeywordsAlarmLevelEnum() UpdateKeywordsAl
 	}
 }
 
+func (c UpdateKeywordsAlarmRuleResponseKeywordsAlarmLevel) Value() string {
+	return c.value
+}
+
 func (c UpdateKeywordsAlarmRuleResponseKeywordsAlarmLevel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

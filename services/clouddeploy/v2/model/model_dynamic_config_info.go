@@ -61,6 +61,10 @@ func GetDynamicConfigInfoTypeEnum() DynamicConfigInfoTypeEnum {
 	}
 }
 
+func (c DynamicConfigInfoType) Value() string {
+	return c.value
+}
+
 func (c DynamicConfigInfoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

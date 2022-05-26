@@ -84,6 +84,10 @@ func GetRunModerationAudioRequestBodyConfigFormatEnum() RunModerationAudioReques
 	}
 }
 
+func (c RunModerationAudioRequestBodyConfigFormat) Value() string {
+	return c.value
+}
+
 func (c RunModerationAudioRequestBodyConfigFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -120,6 +124,10 @@ func GetRunModerationAudioRequestBodyConfigPropertyEnum() RunModerationAudioRequ
 			value: "chinese_16k_common",
 		},
 	}
+}
+
+func (c RunModerationAudioRequestBodyConfigProperty) Value() string {
+	return c.value
 }
 
 func (c RunModerationAudioRequestBodyConfigProperty) MarshalJSON() ([]byte, error) {

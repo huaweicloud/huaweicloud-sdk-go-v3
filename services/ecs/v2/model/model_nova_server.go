@@ -215,6 +215,10 @@ func GetNovaServerStatusEnum() NovaServerStatusEnum {
 	}
 }
 
+func (c NovaServerStatus) Value() string {
+	return c.value
+}
+
 func (c NovaServerStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -251,6 +255,10 @@ func GetNovaServerOSDCFdiskConfigEnum() NovaServerOSDCFdiskConfigEnum {
 			value: "MANUAL",
 		},
 	}
+}
+
+func (c NovaServerOSDCFdiskConfig) Value() string {
+	return c.value
 }
 
 func (c NovaServerOSDCFdiskConfig) MarshalJSON() ([]byte, error) {
@@ -339,6 +347,10 @@ func GetNovaServerOSEXTSTStaskStateEnum() NovaServerOSEXTSTStaskStateEnum {
 	}
 }
 
+func (c NovaServerOSEXTSTStaskState) Value() string {
+	return c.value
+}
+
 func (c NovaServerOSEXTSTStaskState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -417,6 +429,10 @@ func GetNovaServerOSEXTSTSvmStateEnum() NovaServerOSEXTSTSvmStateEnum {
 	}
 }
 
+func (c NovaServerOSEXTSTSvmState) Value() string {
+	return c.value
+}
+
 func (c NovaServerOSEXTSTSvmState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -461,6 +477,10 @@ func GetNovaServerHostStatusEnum() NovaServerHostStatusEnum {
 			value: "MAINTENANCE",
 		},
 	}
+}
+
+func (c NovaServerHostStatus) Value() string {
+	return c.value
 }
 
 func (c NovaServerHostStatus) MarshalJSON() ([]byte, error) {

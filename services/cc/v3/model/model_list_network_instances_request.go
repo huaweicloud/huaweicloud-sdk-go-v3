@@ -68,6 +68,10 @@ func GetListNetworkInstancesRequestStatusEnum() ListNetworkInstancesRequestStatu
 	}
 }
 
+func (c ListNetworkInstancesRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListNetworkInstancesRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

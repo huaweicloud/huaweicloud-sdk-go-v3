@@ -68,6 +68,10 @@ func GetRecordsResponseStatusEnum() RecordsResponseStatusEnum {
 	}
 }
 
+func (c RecordsResponseStatus) Value() string {
+	return c.value
+}
+
 func (c RecordsResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -104,6 +108,10 @@ func GetRecordsResponseScanTypeEnum() RecordsResponseScanTypeEnum {
 			value: "auto",
 		},
 	}
+}
+
+func (c RecordsResponseScanType) Value() string {
+	return c.value
 }
 
 func (c RecordsResponseScanType) MarshalJSON() ([]byte, error) {

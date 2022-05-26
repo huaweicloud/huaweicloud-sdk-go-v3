@@ -206,6 +206,10 @@ func GetShowFunctionConfigResponseRuntimeEnum() ShowFunctionConfigResponseRuntim
 	}
 }
 
+func (c ShowFunctionConfigResponseRuntime) Value() string {
+	return c.value
+}
+
 func (c ShowFunctionConfigResponseRuntime) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -252,6 +256,10 @@ func GetShowFunctionConfigResponseCodeTypeEnum() ShowFunctionConfigResponseCodeT
 	}
 }
 
+func (c ShowFunctionConfigResponseCodeType) Value() string {
+	return c.value
+}
+
 func (c ShowFunctionConfigResponseCodeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -288,6 +296,10 @@ func GetShowFunctionConfigResponseTypeEnum() ShowFunctionConfigResponseTypeEnum 
 			value: "v2",
 		},
 	}
+}
+
+func (c ShowFunctionConfigResponseType) Value() string {
+	return c.value
 }
 
 func (c ShowFunctionConfigResponseType) MarshalJSON() ([]byte, error) {

@@ -101,6 +101,10 @@ func GetNodesInfoRespStatusEnum() NodesInfoRespStatusEnum {
 	}
 }
 
+func (c NodesInfoRespStatus) Value() string {
+	return c.value
+}
+
 func (c NodesInfoRespStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -137,6 +141,10 @@ func GetNodesInfoRespNodeRoleEnum() NodesInfoRespNodeRoleEnum {
 			value: "redis-proxy",
 		},
 	}
+}
+
+func (c NodesInfoRespNodeRole) Value() string {
+	return c.value
 }
 
 func (c NodesInfoRespNodeRole) MarshalJSON() ([]byte, error) {
@@ -179,6 +187,10 @@ func GetNodesInfoRespNodeTypeEnum() NodesInfoRespNodeTypeEnum {
 			value: "proxy",
 		},
 	}
+}
+
+func (c NodesInfoRespNodeType) Value() string {
+	return c.value
 }
 
 func (c NodesInfoRespNodeType) MarshalJSON() ([]byte, error) {

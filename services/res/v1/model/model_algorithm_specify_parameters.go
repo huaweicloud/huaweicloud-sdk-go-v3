@@ -84,6 +84,10 @@ func GetAlgorithmSpecifyParametersActiveFunctionEnum() AlgorithmSpecifyParameter
 	}
 }
 
+func (c AlgorithmSpecifyParametersActiveFunction) Value() string {
+	return c.value
+}
+
 func (c AlgorithmSpecifyParametersActiveFunction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

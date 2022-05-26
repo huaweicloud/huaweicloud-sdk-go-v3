@@ -59,6 +59,10 @@ func GetTaskBasicRequestBodyTaskTypeEnum() TaskBasicRequestBodyTaskTypeEnum {
 	}
 }
 
+func (c TaskBasicRequestBodyTaskType) Value() string {
+	return c.value
+}
+
 func (c TaskBasicRequestBodyTaskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

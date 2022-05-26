@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/apig/v2/model"
 )
 
@@ -19,7 +19,7 @@ func ApigClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 实例更新或绑定EIP
+// AddEipV2 实例更新或绑定EIP
 //
 // 实例更新或绑定EIP
 //
@@ -35,7 +35,13 @@ func (c *ApigClient) AddEipV2(request *model.AddEipV2Request) (*model.AddEipV2Re
 	}
 }
 
-// 开启实例公网出口
+// AddEipV2Invoker 实例更新或绑定EIP
+func (c *ApigClient) AddEipV2Invoker(request *model.AddEipV2Request) *AddEipV2Invoker {
+	requestDef := GenReqDefForAddEipV2()
+	return &AddEipV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddEngressEipV2 开启实例公网出口
 //
 // 实例开启公网出口
 //
@@ -51,7 +57,13 @@ func (c *ApigClient) AddEngressEipV2(request *model.AddEngressEipV2Request) (*mo
 	}
 }
 
-// 绑定域名证书
+// AddEngressEipV2Invoker 开启实例公网出口
+func (c *ApigClient) AddEngressEipV2Invoker(request *model.AddEngressEipV2Request) *AddEngressEipV2Invoker {
+	requestDef := GenReqDefForAddEngressEipV2()
+	return &AddEngressEipV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateCertificateV2 绑定域名证书
 //
 // 如果创建API时，“定义API请求”使用HTTPS请求协议，那么在独立域名中需要添加SSL证书。
 // 本章节主要介绍为特定域名绑定证书。
@@ -68,7 +80,13 @@ func (c *ApigClient) AssociateCertificateV2(request *model.AssociateCertificateV
 	}
 }
 
-// 绑定域名
+// AssociateCertificateV2Invoker 绑定域名证书
+func (c *ApigClient) AssociateCertificateV2Invoker(request *model.AssociateCertificateV2Request) *AssociateCertificateV2Invoker {
+	requestDef := GenReqDefForAssociateCertificateV2()
+	return &AssociateCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateDomainV2 绑定域名
 //
 // 用户自定义的域名，需要CNAME到API分组的子域名上才能生效，具体方法请参见《云解析服务用户指南》的“添加CANME类型记录集”章节。
 // 每个API分组下最多可绑定5个域名。绑定域名后，用户可通过自定义域名调用API。
@@ -85,7 +103,13 @@ func (c *ApigClient) AssociateDomainV2(request *model.AssociateDomainV2Request) 
 	}
 }
 
-// 绑定签名密钥
+// AssociateDomainV2Invoker 绑定域名
+func (c *ApigClient) AssociateDomainV2Invoker(request *model.AssociateDomainV2Request) *AssociateDomainV2Invoker {
+	requestDef := GenReqDefForAssociateDomainV2()
+	return &AssociateDomainV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateSignatureKeyV2 绑定签名密钥
 //
 // 签名密钥创建后，需要绑定到API才能生效。
 //
@@ -105,7 +129,13 @@ func (c *ApigClient) AssociateSignatureKeyV2(request *model.AssociateSignatureKe
 	}
 }
 
-// 创建自定义认证
+// AssociateSignatureKeyV2Invoker 绑定签名密钥
+func (c *ApigClient) AssociateSignatureKeyV2Invoker(request *model.AssociateSignatureKeyV2Request) *AssociateSignatureKeyV2Invoker {
+	requestDef := GenReqDefForAssociateSignatureKeyV2()
+	return &AssociateSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCustomAuthorizerV2 创建自定义认证
 //
 // 创建自定义认证
 //
@@ -121,7 +151,13 @@ func (c *ApigClient) CreateCustomAuthorizerV2(request *model.CreateCustomAuthori
 	}
 }
 
-// 创建环境
+// CreateCustomAuthorizerV2Invoker 创建自定义认证
+func (c *ApigClient) CreateCustomAuthorizerV2Invoker(request *model.CreateCustomAuthorizerV2Request) *CreateCustomAuthorizerV2Invoker {
+	requestDef := GenReqDefForCreateCustomAuthorizerV2()
+	return &CreateCustomAuthorizerV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEnvironmentV2 创建环境
 //
 // 在实际的生产中，API提供者可能有多个环境，如开发环境、测试环境、生产环境等，用户可以自由将API发布到某个环境，供调用者调用。
 //
@@ -141,7 +177,13 @@ func (c *ApigClient) CreateEnvironmentV2(request *model.CreateEnvironmentV2Reque
 	}
 }
 
-// 新建变量
+// CreateEnvironmentV2Invoker 创建环境
+func (c *ApigClient) CreateEnvironmentV2Invoker(request *model.CreateEnvironmentV2Request) *CreateEnvironmentV2Invoker {
+	requestDef := GenReqDefForCreateEnvironmentV2()
+	return &CreateEnvironmentV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEnvironmentVariableV2 新建变量
 //
 // 将API发布到不同的环境后，对于不同的环境，可能会有不同的环境变量，比如，API的服务部署地址，请求的版本号等。
 //
@@ -165,7 +207,13 @@ func (c *ApigClient) CreateEnvironmentVariableV2(request *model.CreateEnvironmen
 	}
 }
 
-// 实例配置特性
+// CreateEnvironmentVariableV2Invoker 新建变量
+func (c *ApigClient) CreateEnvironmentVariableV2Invoker(request *model.CreateEnvironmentVariableV2Request) *CreateEnvironmentVariableV2Invoker {
+	requestDef := GenReqDefForCreateEnvironmentVariableV2()
+	return &CreateEnvironmentVariableV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateFeatureV2 实例配置特性
 //
 // 为实例配置需要的特性。
 //
@@ -214,7 +262,13 @@ func (c *ApigClient) CreateFeatureV2(request *model.CreateFeatureV2Request) (*mo
 	}
 }
 
-// 创建分组自定义响应
+// CreateFeatureV2Invoker 实例配置特性
+func (c *ApigClient) CreateFeatureV2Invoker(request *model.CreateFeatureV2Request) *CreateFeatureV2Invoker {
+	requestDef := GenReqDefForCreateFeatureV2()
+	return &CreateFeatureV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateGatewayResponseV2 创建分组自定义响应
 //
 // 新增分组下自定义响应
 //
@@ -230,7 +284,13 @@ func (c *ApigClient) CreateGatewayResponseV2(request *model.CreateGatewayRespons
 	}
 }
 
-// 创建专享版实例
+// CreateGatewayResponseV2Invoker 创建分组自定义响应
+func (c *ApigClient) CreateGatewayResponseV2Invoker(request *model.CreateGatewayResponseV2Request) *CreateGatewayResponseV2Invoker {
+	requestDef := GenReqDefForCreateGatewayResponseV2()
+	return &CreateGatewayResponseV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateInstanceV2 创建专享版实例
 //
 // 创建专享版实例
 //
@@ -246,7 +306,13 @@ func (c *ApigClient) CreateInstanceV2(request *model.CreateInstanceV2Request) (*
 	}
 }
 
-// 创建流控策略
+// CreateInstanceV2Invoker 创建专享版实例
+func (c *ApigClient) CreateInstanceV2Invoker(request *model.CreateInstanceV2Request) *CreateInstanceV2Invoker {
+	requestDef := GenReqDefForCreateInstanceV2()
+	return &CreateInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRequestThrottlingPolicyV2 创建流控策略
 //
 // 当API上线后，系统会默认给每个API提供一个流控策略，API提供者可以根据自身API的服务能力及负载情况变更这个流控策略。 流控策略即限制API在一定长度的时间内，能够允许被访问的最大次数。
 //
@@ -262,7 +328,13 @@ func (c *ApigClient) CreateRequestThrottlingPolicyV2(request *model.CreateReques
 	}
 }
 
-// 创建签名密钥
+// CreateRequestThrottlingPolicyV2Invoker 创建流控策略
+func (c *ApigClient) CreateRequestThrottlingPolicyV2Invoker(request *model.CreateRequestThrottlingPolicyV2Request) *CreateRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForCreateRequestThrottlingPolicyV2()
+	return &CreateRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSignatureKeyV2 创建签名密钥
 //
 // 为了保护API的安全性，建议租户为API的访问提供一套保护机制，即租户开放的API，需要对请求来源进行认证，不符合认证的请求直接拒绝访问。
 //
@@ -282,7 +354,13 @@ func (c *ApigClient) CreateSignatureKeyV2(request *model.CreateSignatureKeyV2Req
 	}
 }
 
-// 创建特殊设置
+// CreateSignatureKeyV2Invoker 创建签名密钥
+func (c *ApigClient) CreateSignatureKeyV2Invoker(request *model.CreateSignatureKeyV2Request) *CreateSignatureKeyV2Invoker {
+	requestDef := GenReqDefForCreateSignatureKeyV2()
+	return &CreateSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSpecialThrottlingConfigurationV2 创建特殊设置
 //
 // 流控策略可以限制一段时间内可以访问API的最大次数，也可以限制一段时间内单个租户和单个APP可以访问API的最大次数。
 //
@@ -302,7 +380,13 @@ func (c *ApigClient) CreateSpecialThrottlingConfigurationV2(request *model.Creat
 	}
 }
 
-// 删除自定义认证
+// CreateSpecialThrottlingConfigurationV2Invoker 创建特殊设置
+func (c *ApigClient) CreateSpecialThrottlingConfigurationV2Invoker(request *model.CreateSpecialThrottlingConfigurationV2Request) *CreateSpecialThrottlingConfigurationV2Invoker {
+	requestDef := GenReqDefForCreateSpecialThrottlingConfigurationV2()
+	return &CreateSpecialThrottlingConfigurationV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCustomAuthorizerV2 删除自定义认证
 //
 // 删除自定义认证
 //
@@ -318,7 +402,13 @@ func (c *ApigClient) DeleteCustomAuthorizerV2(request *model.DeleteCustomAuthori
 	}
 }
 
-// 删除环境
+// DeleteCustomAuthorizerV2Invoker 删除自定义认证
+func (c *ApigClient) DeleteCustomAuthorizerV2Invoker(request *model.DeleteCustomAuthorizerV2Request) *DeleteCustomAuthorizerV2Invoker {
+	requestDef := GenReqDefForDeleteCustomAuthorizerV2()
+	return &DeleteCustomAuthorizerV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEnvironmentV2 删除环境
 //
 // 删除指定的环境。
 //
@@ -338,7 +428,13 @@ func (c *ApigClient) DeleteEnvironmentV2(request *model.DeleteEnvironmentV2Reque
 	}
 }
 
-// 删除变量
+// DeleteEnvironmentV2Invoker 删除环境
+func (c *ApigClient) DeleteEnvironmentV2Invoker(request *model.DeleteEnvironmentV2Request) *DeleteEnvironmentV2Invoker {
+	requestDef := GenReqDefForDeleteEnvironmentV2()
+	return &DeleteEnvironmentV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEnvironmentVariableV2 删除变量
 //
 // 删除指定的环境变量。
 //
@@ -354,7 +450,13 @@ func (c *ApigClient) DeleteEnvironmentVariableV2(request *model.DeleteEnvironmen
 	}
 }
 
-// 删除分组指定错误类型的自定义响应配置
+// DeleteEnvironmentVariableV2Invoker 删除变量
+func (c *ApigClient) DeleteEnvironmentVariableV2Invoker(request *model.DeleteEnvironmentVariableV2Request) *DeleteEnvironmentVariableV2Invoker {
+	requestDef := GenReqDefForDeleteEnvironmentVariableV2()
+	return &DeleteEnvironmentVariableV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGatewayResponseTypeV2 删除分组指定错误类型的自定义响应配置
 //
 // 删除分组指定错误类型的自定义响应配置，还原为使用默认值的配置。
 //
@@ -370,7 +472,13 @@ func (c *ApigClient) DeleteGatewayResponseTypeV2(request *model.DeleteGatewayRes
 	}
 }
 
-// 删除分组自定义响应
+// DeleteGatewayResponseTypeV2Invoker 删除分组指定错误类型的自定义响应配置
+func (c *ApigClient) DeleteGatewayResponseTypeV2Invoker(request *model.DeleteGatewayResponseTypeV2Request) *DeleteGatewayResponseTypeV2Invoker {
+	requestDef := GenReqDefForDeleteGatewayResponseTypeV2()
+	return &DeleteGatewayResponseTypeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGatewayResponseV2 删除分组自定义响应
 //
 // 删除分组自定义响应
 //
@@ -386,7 +494,13 @@ func (c *ApigClient) DeleteGatewayResponseV2(request *model.DeleteGatewayRespons
 	}
 }
 
-// 删除专享版实例
+// DeleteGatewayResponseV2Invoker 删除分组自定义响应
+func (c *ApigClient) DeleteGatewayResponseV2Invoker(request *model.DeleteGatewayResponseV2Request) *DeleteGatewayResponseV2Invoker {
+	requestDef := GenReqDefForDeleteGatewayResponseV2()
+	return &DeleteGatewayResponseV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteInstancesV2 删除专享版实例
 //
 // 删除专享版实例
 //
@@ -402,7 +516,13 @@ func (c *ApigClient) DeleteInstancesV2(request *model.DeleteInstancesV2Request) 
 	}
 }
 
-// 删除流控策略
+// DeleteInstancesV2Invoker 删除专享版实例
+func (c *ApigClient) DeleteInstancesV2Invoker(request *model.DeleteInstancesV2Request) *DeleteInstancesV2Invoker {
+	requestDef := GenReqDefForDeleteInstancesV2()
+	return &DeleteInstancesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRequestThrottlingPolicyV2 删除流控策略
 //
 // 删除指定的流控策略,以及该流控策略与API的所有绑定关系。
 //
@@ -418,7 +538,13 @@ func (c *ApigClient) DeleteRequestThrottlingPolicyV2(request *model.DeleteReques
 	}
 }
 
-// 删除签名密钥
+// DeleteRequestThrottlingPolicyV2Invoker 删除流控策略
+func (c *ApigClient) DeleteRequestThrottlingPolicyV2Invoker(request *model.DeleteRequestThrottlingPolicyV2Request) *DeleteRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForDeleteRequestThrottlingPolicyV2()
+	return &DeleteRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSignatureKeyV2 删除签名密钥
 //
 // 删除指定的签名密钥,删除签名密钥时，其配置的绑定关系会一并删除，相应的签名密钥会失效。
 //
@@ -434,7 +560,13 @@ func (c *ApigClient) DeleteSignatureKeyV2(request *model.DeleteSignatureKeyV2Req
 	}
 }
 
-// 删除特殊设置
+// DeleteSignatureKeyV2Invoker 删除签名密钥
+func (c *ApigClient) DeleteSignatureKeyV2Invoker(request *model.DeleteSignatureKeyV2Request) *DeleteSignatureKeyV2Invoker {
+	requestDef := GenReqDefForDeleteSignatureKeyV2()
+	return &DeleteSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSpecialThrottlingConfigurationV2 删除特殊设置
 //
 // 删除某个流控策略的某个特殊配置。
 //
@@ -450,7 +582,13 @@ func (c *ApigClient) DeleteSpecialThrottlingConfigurationV2(request *model.Delet
 	}
 }
 
-// 删除域名证书
+// DeleteSpecialThrottlingConfigurationV2Invoker 删除特殊设置
+func (c *ApigClient) DeleteSpecialThrottlingConfigurationV2Invoker(request *model.DeleteSpecialThrottlingConfigurationV2Request) *DeleteSpecialThrottlingConfigurationV2Invoker {
+	requestDef := GenReqDefForDeleteSpecialThrottlingConfigurationV2()
+	return &DeleteSpecialThrottlingConfigurationV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateCertificateV2 删除域名证书
 //
 // 如果域名证书不再需要或者已过期，则可以删除证书内容。
 //
@@ -466,7 +604,13 @@ func (c *ApigClient) DisassociateCertificateV2(request *model.DisassociateCertif
 	}
 }
 
-// 解绑域名
+// DisassociateCertificateV2Invoker 删除域名证书
+func (c *ApigClient) DisassociateCertificateV2Invoker(request *model.DisassociateCertificateV2Request) *DisassociateCertificateV2Invoker {
+	requestDef := GenReqDefForDisassociateCertificateV2()
+	return &DisassociateCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateDomainV2 解绑域名
 //
 // 如果API分组不再需要绑定某个自定义域名，则可以为此API分组解绑此域名。
 //
@@ -482,7 +626,13 @@ func (c *ApigClient) DisassociateDomainV2(request *model.DisassociateDomainV2Req
 	}
 }
 
-// 解除绑定
+// DisassociateDomainV2Invoker 解绑域名
+func (c *ApigClient) DisassociateDomainV2Invoker(request *model.DisassociateDomainV2Request) *DisassociateDomainV2Invoker {
+	requestDef := GenReqDefForDisassociateDomainV2()
+	return &DisassociateDomainV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateSignatureKeyV2 解除绑定
 //
 // 解除API与签名密钥的绑定关系。
 //
@@ -498,7 +648,13 @@ func (c *ApigClient) DisassociateSignatureKeyV2(request *model.DisassociateSigna
 	}
 }
 
-// 查询API分组概况
+// DisassociateSignatureKeyV2Invoker 解除绑定
+func (c *ApigClient) DisassociateSignatureKeyV2Invoker(request *model.DisassociateSignatureKeyV2Request) *DisassociateSignatureKeyV2Invoker {
+	requestDef := GenReqDefForDisassociateSignatureKeyV2()
+	return &DisassociateSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiGroupsQuantitiesV2 查询API分组概况
 //
 // 查询租户名下的API分组概况。
 //
@@ -514,7 +670,13 @@ func (c *ApigClient) ListApiGroupsQuantitiesV2(request *model.ListApiGroupsQuant
 	}
 }
 
-// 查询API概况
+// ListApiGroupsQuantitiesV2Invoker 查询API分组概况
+func (c *ApigClient) ListApiGroupsQuantitiesV2Invoker(request *model.ListApiGroupsQuantitiesV2Request) *ListApiGroupsQuantitiesV2Invoker {
+	requestDef := GenReqDefForListApiGroupsQuantitiesV2()
+	return &ListApiGroupsQuantitiesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiQuantitiesV2 查询API概况
 //
 // 查询租户名下的API概况：已发布到RELEASE环境的API个数，未发布到RELEASE环境的API个数。
 //
@@ -530,7 +692,13 @@ func (c *ApigClient) ListApiQuantitiesV2(request *model.ListApiQuantitiesV2Reque
 	}
 }
 
-// 查看签名密钥绑定的API列表
+// ListApiQuantitiesV2Invoker 查询API概况
+func (c *ApigClient) ListApiQuantitiesV2Invoker(request *model.ListApiQuantitiesV2Request) *ListApiQuantitiesV2Invoker {
+	requestDef := GenReqDefForListApiQuantitiesV2()
+	return &ListApiQuantitiesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisBindedToSignatureKeyV2 查看签名密钥绑定的API列表
 //
 // 查询某个签名密钥上已经绑定的API列表。
 //
@@ -546,7 +714,13 @@ func (c *ApigClient) ListApisBindedToSignatureKeyV2(request *model.ListApisBinde
 	}
 }
 
-// 查看签名密钥未绑定的API列表
+// ListApisBindedToSignatureKeyV2Invoker 查看签名密钥绑定的API列表
+func (c *ApigClient) ListApisBindedToSignatureKeyV2Invoker(request *model.ListApisBindedToSignatureKeyV2Request) *ListApisBindedToSignatureKeyV2Invoker {
+	requestDef := GenReqDefForListApisBindedToSignatureKeyV2()
+	return &ListApisBindedToSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisNotBoundWithSignatureKeyV2 查看签名密钥未绑定的API列表
 //
 // 查询所有未绑定到该签名密钥上的API列表。需要API已经发布，未发布的API不予展示。
 //
@@ -562,7 +736,13 @@ func (c *ApigClient) ListApisNotBoundWithSignatureKeyV2(request *model.ListApisN
 	}
 }
 
-// 查询APP概况
+// ListApisNotBoundWithSignatureKeyV2Invoker 查看签名密钥未绑定的API列表
+func (c *ApigClient) ListApisNotBoundWithSignatureKeyV2Invoker(request *model.ListApisNotBoundWithSignatureKeyV2Request) *ListApisNotBoundWithSignatureKeyV2Invoker {
+	requestDef := GenReqDefForListApisNotBoundWithSignatureKeyV2()
+	return &ListApisNotBoundWithSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppQuantitiesV2 查询APP概况
 //
 // 查询租户名下的APP概况：已进行API访问授权的APP个数，未进行API访问授权的APP个数。
 //
@@ -578,7 +758,13 @@ func (c *ApigClient) ListAppQuantitiesV2(request *model.ListAppQuantitiesV2Reque
 	}
 }
 
-// 查看可用区信息
+// ListAppQuantitiesV2Invoker 查询APP概况
+func (c *ApigClient) ListAppQuantitiesV2Invoker(request *model.ListAppQuantitiesV2Request) *ListAppQuantitiesV2Invoker {
+	requestDef := GenReqDefForListAppQuantitiesV2()
+	return &ListAppQuantitiesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAvailableZonesV2 查看可用区信息
 //
 // 查看可用区信息
 //
@@ -594,7 +780,13 @@ func (c *ApigClient) ListAvailableZonesV2(request *model.ListAvailableZonesV2Req
 	}
 }
 
-// 查询自定义认证列表
+// ListAvailableZonesV2Invoker 查看可用区信息
+func (c *ApigClient) ListAvailableZonesV2Invoker(request *model.ListAvailableZonesV2Request) *ListAvailableZonesV2Invoker {
+	requestDef := GenReqDefForListAvailableZonesV2()
+	return &ListAvailableZonesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCustomAuthorizersV2 查询自定义认证列表
 //
 // 查询自定义认证列表
 //
@@ -610,7 +802,13 @@ func (c *ApigClient) ListCustomAuthorizersV2(request *model.ListCustomAuthorizer
 	}
 }
 
-// 查询变量列表
+// ListCustomAuthorizersV2Invoker 查询自定义认证列表
+func (c *ApigClient) ListCustomAuthorizersV2Invoker(request *model.ListCustomAuthorizersV2Request) *ListCustomAuthorizersV2Invoker {
+	requestDef := GenReqDefForListCustomAuthorizersV2()
+	return &ListCustomAuthorizersV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEnvironmentVariablesV2 查询变量列表
 //
 // 查询分组下的所有环境变量的列表。
 //
@@ -626,7 +824,13 @@ func (c *ApigClient) ListEnvironmentVariablesV2(request *model.ListEnvironmentVa
 	}
 }
 
-// 查询环境列表
+// ListEnvironmentVariablesV2Invoker 查询变量列表
+func (c *ApigClient) ListEnvironmentVariablesV2Invoker(request *model.ListEnvironmentVariablesV2Request) *ListEnvironmentVariablesV2Invoker {
+	requestDef := GenReqDefForListEnvironmentVariablesV2()
+	return &ListEnvironmentVariablesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEnvironmentsV2 查询环境列表
 //
 // 查询符合条件的环境列表。
 //
@@ -642,7 +846,13 @@ func (c *ApigClient) ListEnvironmentsV2(request *model.ListEnvironmentsV2Request
 	}
 }
 
-// 查看实例特性列表
+// ListEnvironmentsV2Invoker 查询环境列表
+func (c *ApigClient) ListEnvironmentsV2Invoker(request *model.ListEnvironmentsV2Request) *ListEnvironmentsV2Invoker {
+	requestDef := GenReqDefForListEnvironmentsV2()
+	return &ListEnvironmentsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFeaturesV2 查看实例特性列表
 //
 // 查看实例特性列表。注意：实例不支持以下特性的需要联系技术支持升级实例版本。
 //
@@ -682,7 +892,13 @@ func (c *ApigClient) ListFeaturesV2(request *model.ListFeaturesV2Request) (*mode
 	}
 }
 
-// 查询分组自定义响应列表
+// ListFeaturesV2Invoker 查看实例特性列表
+func (c *ApigClient) ListFeaturesV2Invoker(request *model.ListFeaturesV2Request) *ListFeaturesV2Invoker {
+	requestDef := GenReqDefForListFeaturesV2()
+	return &ListFeaturesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGatewayResponsesV2 查询分组自定义响应列表
 //
 // 查询分组自定义响应列表
 //
@@ -698,7 +914,13 @@ func (c *ApigClient) ListGatewayResponsesV2(request *model.ListGatewayResponsesV
 	}
 }
 
-// 查询租户实例配置列表
+// ListGatewayResponsesV2Invoker 查询分组自定义响应列表
+func (c *ApigClient) ListGatewayResponsesV2Invoker(request *model.ListGatewayResponsesV2Request) *ListGatewayResponsesV2Invoker {
+	requestDef := GenReqDefForListGatewayResponsesV2()
+	return &ListGatewayResponsesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceConfigsV2 查询租户实例配置列表
 //
 // 查询租户实例配置列表
 //
@@ -714,7 +936,13 @@ func (c *ApigClient) ListInstanceConfigsV2(request *model.ListInstanceConfigsV2R
 	}
 }
 
-// 查询专享版实例列表
+// ListInstanceConfigsV2Invoker 查询租户实例配置列表
+func (c *ApigClient) ListInstanceConfigsV2Invoker(request *model.ListInstanceConfigsV2Request) *ListInstanceConfigsV2Invoker {
+	requestDef := GenReqDefForListInstanceConfigsV2()
+	return &ListInstanceConfigsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstancesV2 查询专享版实例列表
 //
 // 查询专享版实例列表
 //
@@ -730,7 +958,13 @@ func (c *ApigClient) ListInstancesV2(request *model.ListInstancesV2Request) (*mo
 	}
 }
 
-// API统计信息查询-最近一段时间
+// ListInstancesV2Invoker 查询专享版实例列表
+func (c *ApigClient) ListInstancesV2Invoker(request *model.ListInstancesV2Request) *ListInstancesV2Invoker {
+	requestDef := GenReqDefForListInstancesV2()
+	return &ListInstancesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLatelyApiStatisticsV2 API统计信息查询-最近一段时间
 //
 // 根据API的id和最近的一段时间查询API被调用的次数，统计周期为1分钟。查询范围一小时以内，一分钟一个样本，其样本值为一分钟内的累计值。
 // &gt; 为了安全起见，在服务器上使用curl命令调用接口查询信息后，需要清理历史操作记录，包括但不限于“~/.bash_history”、“/var/log/messages”（如有）。
@@ -747,7 +981,13 @@ func (c *ApigClient) ListLatelyApiStatisticsV2(request *model.ListLatelyApiStati
 	}
 }
 
-// 分组统计信息查询-最近一小时内
+// ListLatelyApiStatisticsV2Invoker API统计信息查询-最近一段时间
+func (c *ApigClient) ListLatelyApiStatisticsV2Invoker(request *model.ListLatelyApiStatisticsV2Request) *ListLatelyApiStatisticsV2Invoker {
+	requestDef := GenReqDefForListLatelyApiStatisticsV2()
+	return &ListLatelyApiStatisticsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLatelyGroupStatisticsV2 分组统计信息查询-最近一小时内
 //
 // 根据API分组的编号查询该分组下所有API被调用的总次数，统计周期为1分钟。查询范围一小时以内，一分钟一个样本，其样本值为一分钟内的累计值。
 // &gt; 为了安全起见，在服务器上使用curl命令调用接口查询信息后，需要清理历史操作记录，包括但不限于“~/.bash_history”、“/var/log/messages”（如有）。
@@ -764,7 +1004,13 @@ func (c *ApigClient) ListLatelyGroupStatisticsV2(request *model.ListLatelyGroupS
 	}
 }
 
-// 查询某个实例的租户配置列表
+// ListLatelyGroupStatisticsV2Invoker 分组统计信息查询-最近一小时内
+func (c *ApigClient) ListLatelyGroupStatisticsV2Invoker(request *model.ListLatelyGroupStatisticsV2Request) *ListLatelyGroupStatisticsV2Invoker {
+	requestDef := GenReqDefForListLatelyGroupStatisticsV2()
+	return &ListLatelyGroupStatisticsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectCofigsV2 查询某个实例的租户配置列表
 //
 // 查询某个实例的租户配置列表，用户可以通过此接口查看各类型资源配置及使用情况。
 //
@@ -780,7 +1026,13 @@ func (c *ApigClient) ListProjectCofigsV2(request *model.ListProjectCofigsV2Reque
 	}
 }
 
-// 查询流控策略列表
+// ListProjectCofigsV2Invoker 查询某个实例的租户配置列表
+func (c *ApigClient) ListProjectCofigsV2Invoker(request *model.ListProjectCofigsV2Request) *ListProjectCofigsV2Invoker {
+	requestDef := GenReqDefForListProjectCofigsV2()
+	return &ListProjectCofigsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRequestThrottlingPolicyV2 查询流控策略列表
 //
 // 查询所有流控策略的信息。
 //
@@ -796,7 +1048,13 @@ func (c *ApigClient) ListRequestThrottlingPolicyV2(request *model.ListRequestThr
 	}
 }
 
-// 查看API绑定的签名密钥列表
+// ListRequestThrottlingPolicyV2Invoker 查询流控策略列表
+func (c *ApigClient) ListRequestThrottlingPolicyV2Invoker(request *model.ListRequestThrottlingPolicyV2Request) *ListRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForListRequestThrottlingPolicyV2()
+	return &ListRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSignatureKeysBindedToApiV2 查看API绑定的签名密钥列表
 //
 // 查询某个API绑定的签名密钥列表。每个API在每个环境上应该最多只会绑定一个签名密钥。
 //
@@ -812,7 +1070,13 @@ func (c *ApigClient) ListSignatureKeysBindedToApiV2(request *model.ListSignature
 	}
 }
 
-// 查询签名密钥列表
+// ListSignatureKeysBindedToApiV2Invoker 查看API绑定的签名密钥列表
+func (c *ApigClient) ListSignatureKeysBindedToApiV2Invoker(request *model.ListSignatureKeysBindedToApiV2Request) *ListSignatureKeysBindedToApiV2Invoker {
+	requestDef := GenReqDefForListSignatureKeysBindedToApiV2()
+	return &ListSignatureKeysBindedToApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSignatureKeysV2 查询签名密钥列表
 //
 // 查询所有签名密钥的信息。
 //
@@ -828,7 +1092,13 @@ func (c *ApigClient) ListSignatureKeysV2(request *model.ListSignatureKeysV2Reque
 	}
 }
 
-// 查看特殊设置列表
+// ListSignatureKeysV2Invoker 查询签名密钥列表
+func (c *ApigClient) ListSignatureKeysV2Invoker(request *model.ListSignatureKeysV2Request) *ListSignatureKeysV2Invoker {
+	requestDef := GenReqDefForListSignatureKeysV2()
+	return &ListSignatureKeysV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSpecialThrottlingConfigurationsV2 查看特殊设置列表
 //
 // 查看给流控策略设置的特殊配置。
 //
@@ -844,7 +1114,13 @@ func (c *ApigClient) ListSpecialThrottlingConfigurationsV2(request *model.ListSp
 	}
 }
 
-// 查询标签列表
+// ListSpecialThrottlingConfigurationsV2Invoker 查看特殊设置列表
+func (c *ApigClient) ListSpecialThrottlingConfigurationsV2Invoker(request *model.ListSpecialThrottlingConfigurationsV2Request) *ListSpecialThrottlingConfigurationsV2Invoker {
+	requestDef := GenReqDefForListSpecialThrottlingConfigurationsV2()
+	return &ListSpecialThrottlingConfigurationsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTagsV2 查询标签列表
 //
 // 查询标签列表
 //
@@ -860,7 +1136,13 @@ func (c *ApigClient) ListTagsV2(request *model.ListTagsV2Request) (*model.ListTa
 	}
 }
 
-// 实例解绑EIP
+// ListTagsV2Invoker 查询标签列表
+func (c *ApigClient) ListTagsV2Invoker(request *model.ListTagsV2Request) *ListTagsV2Invoker {
+	requestDef := GenReqDefForListTagsV2()
+	return &ListTagsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveEipV2 实例解绑EIP
 //
 // 实例解绑EIP
 //
@@ -876,7 +1158,13 @@ func (c *ApigClient) RemoveEipV2(request *model.RemoveEipV2Request) (*model.Remo
 	}
 }
 
-// 关闭实例公网出口
+// RemoveEipV2Invoker 实例解绑EIP
+func (c *ApigClient) RemoveEipV2Invoker(request *model.RemoveEipV2Request) *RemoveEipV2Invoker {
+	requestDef := GenReqDefForRemoveEipV2()
+	return &RemoveEipV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveEngressEipV2 关闭实例公网出口
 //
 // 关闭实例公网出口
 //
@@ -892,7 +1180,13 @@ func (c *ApigClient) RemoveEngressEipV2(request *model.RemoveEngressEipV2Request
 	}
 }
 
-// 查看自定义认证详情
+// RemoveEngressEipV2Invoker 关闭实例公网出口
+func (c *ApigClient) RemoveEngressEipV2Invoker(request *model.RemoveEngressEipV2Request) *RemoveEngressEipV2Invoker {
+	requestDef := GenReqDefForRemoveEngressEipV2()
+	return &RemoveEngressEipV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfCustomAuthorizersV2 查看自定义认证详情
 //
 // 查看自定义认证详情
 //
@@ -908,7 +1202,13 @@ func (c *ApigClient) ShowDetailsOfCustomAuthorizersV2(request *model.ShowDetails
 	}
 }
 
-// 查看域名证书
+// ShowDetailsOfCustomAuthorizersV2Invoker 查看自定义认证详情
+func (c *ApigClient) ShowDetailsOfCustomAuthorizersV2Invoker(request *model.ShowDetailsOfCustomAuthorizersV2Request) *ShowDetailsOfCustomAuthorizersV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfCustomAuthorizersV2()
+	return &ShowDetailsOfCustomAuthorizersV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfDomainNameCertificateV2 查看域名证书
 //
 // 查看域名下绑定的证书详情。
 //
@@ -924,7 +1224,13 @@ func (c *ApigClient) ShowDetailsOfDomainNameCertificateV2(request *model.ShowDet
 	}
 }
 
-// 查看变量详情
+// ShowDetailsOfDomainNameCertificateV2Invoker 查看域名证书
+func (c *ApigClient) ShowDetailsOfDomainNameCertificateV2Invoker(request *model.ShowDetailsOfDomainNameCertificateV2Request) *ShowDetailsOfDomainNameCertificateV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfDomainNameCertificateV2()
+	return &ShowDetailsOfDomainNameCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfEnvironmentVariableV2 查看变量详情
 //
 // 查看指定的环境变量的详情。
 //
@@ -940,7 +1246,13 @@ func (c *ApigClient) ShowDetailsOfEnvironmentVariableV2(request *model.ShowDetai
 	}
 }
 
-// 查看分组下指定错误类型的自定义响应
+// ShowDetailsOfEnvironmentVariableV2Invoker 查看变量详情
+func (c *ApigClient) ShowDetailsOfEnvironmentVariableV2Invoker(request *model.ShowDetailsOfEnvironmentVariableV2Request) *ShowDetailsOfEnvironmentVariableV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfEnvironmentVariableV2()
+	return &ShowDetailsOfEnvironmentVariableV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfGatewayResponseTypeV2 查看分组下指定错误类型的自定义响应
 //
 // 查看分组下指定错误类型的自定义响应
 //
@@ -956,7 +1268,13 @@ func (c *ApigClient) ShowDetailsOfGatewayResponseTypeV2(request *model.ShowDetai
 	}
 }
 
-// 查询分组自定义响应详情
+// ShowDetailsOfGatewayResponseTypeV2Invoker 查看分组下指定错误类型的自定义响应
+func (c *ApigClient) ShowDetailsOfGatewayResponseTypeV2Invoker(request *model.ShowDetailsOfGatewayResponseTypeV2Request) *ShowDetailsOfGatewayResponseTypeV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfGatewayResponseTypeV2()
+	return &ShowDetailsOfGatewayResponseTypeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfGatewayResponseV2 查询分组自定义响应详情
 //
 // 查询分组自定义响应详情
 //
@@ -972,7 +1290,13 @@ func (c *ApigClient) ShowDetailsOfGatewayResponseV2(request *model.ShowDetailsOf
 	}
 }
 
-// 查看专享版实例创建进度
+// ShowDetailsOfGatewayResponseV2Invoker 查询分组自定义响应详情
+func (c *ApigClient) ShowDetailsOfGatewayResponseV2Invoker(request *model.ShowDetailsOfGatewayResponseV2Request) *ShowDetailsOfGatewayResponseV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfGatewayResponseV2()
+	return &ShowDetailsOfGatewayResponseV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfInstanceProgressV2 查看专享版实例创建进度
 //
 // 查看专享版实例创建进度
 //
@@ -988,7 +1312,13 @@ func (c *ApigClient) ShowDetailsOfInstanceProgressV2(request *model.ShowDetailsO
 	}
 }
 
-// 查看专享版实例详情
+// ShowDetailsOfInstanceProgressV2Invoker 查看专享版实例创建进度
+func (c *ApigClient) ShowDetailsOfInstanceProgressV2Invoker(request *model.ShowDetailsOfInstanceProgressV2Request) *ShowDetailsOfInstanceProgressV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfInstanceProgressV2()
+	return &ShowDetailsOfInstanceProgressV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfInstanceV2 查看专享版实例详情
 //
 // 查看专享版实例详情
 //
@@ -1004,7 +1334,13 @@ func (c *ApigClient) ShowDetailsOfInstanceV2(request *model.ShowDetailsOfInstanc
 	}
 }
 
-// 查看流控策略详情
+// ShowDetailsOfInstanceV2Invoker 查看专享版实例详情
+func (c *ApigClient) ShowDetailsOfInstanceV2Invoker(request *model.ShowDetailsOfInstanceV2Request) *ShowDetailsOfInstanceV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfInstanceV2()
+	return &ShowDetailsOfInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfRequestThrottlingPolicyV2 查看流控策略详情
 //
 // 查看指定流控策略的详细信息。
 //
@@ -1020,7 +1356,13 @@ func (c *ApigClient) ShowDetailsOfRequestThrottlingPolicyV2(request *model.ShowD
 	}
 }
 
-// 修改自定义认证
+// ShowDetailsOfRequestThrottlingPolicyV2Invoker 查看流控策略详情
+func (c *ApigClient) ShowDetailsOfRequestThrottlingPolicyV2Invoker(request *model.ShowDetailsOfRequestThrottlingPolicyV2Request) *ShowDetailsOfRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfRequestThrottlingPolicyV2()
+	return &ShowDetailsOfRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCustomAuthorizerV2 修改自定义认证
 //
 // 修改自定义认证
 //
@@ -1036,7 +1378,13 @@ func (c *ApigClient) UpdateCustomAuthorizerV2(request *model.UpdateCustomAuthori
 	}
 }
 
-// 修改域名
+// UpdateCustomAuthorizerV2Invoker 修改自定义认证
+func (c *ApigClient) UpdateCustomAuthorizerV2Invoker(request *model.UpdateCustomAuthorizerV2Request) *UpdateCustomAuthorizerV2Invoker {
+	requestDef := GenReqDefForUpdateCustomAuthorizerV2()
+	return &UpdateCustomAuthorizerV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDomainV2 修改域名
 //
 // 修改绑定的域名所对应的配置信息。
 //
@@ -1052,7 +1400,13 @@ func (c *ApigClient) UpdateDomainV2(request *model.UpdateDomainV2Request) (*mode
 	}
 }
 
-// 更新实例出公网带宽
+// UpdateDomainV2Invoker 修改域名
+func (c *ApigClient) UpdateDomainV2Invoker(request *model.UpdateDomainV2Request) *UpdateDomainV2Invoker {
+	requestDef := GenReqDefForUpdateDomainV2()
+	return &UpdateDomainV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEngressEipV2 更新实例出公网带宽
 //
 // 更新实例出公网带宽
 //
@@ -1068,7 +1422,13 @@ func (c *ApigClient) UpdateEngressEipV2(request *model.UpdateEngressEipV2Request
 	}
 }
 
-// 修改环境
+// UpdateEngressEipV2Invoker 更新实例出公网带宽
+func (c *ApigClient) UpdateEngressEipV2Invoker(request *model.UpdateEngressEipV2Request) *UpdateEngressEipV2Invoker {
+	requestDef := GenReqDefForUpdateEngressEipV2()
+	return &UpdateEngressEipV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEnvironmentV2 修改环境
 //
 // 修改指定环境的信息。其中可修改的属性为：name、remark，其它属性不可修改。
 //
@@ -1084,7 +1444,13 @@ func (c *ApigClient) UpdateEnvironmentV2(request *model.UpdateEnvironmentV2Reque
 	}
 }
 
-// 修改分组下指定错误类型的自定义响应
+// UpdateEnvironmentV2Invoker 修改环境
+func (c *ApigClient) UpdateEnvironmentV2Invoker(request *model.UpdateEnvironmentV2Request) *UpdateEnvironmentV2Invoker {
+	requestDef := GenReqDefForUpdateEnvironmentV2()
+	return &UpdateEnvironmentV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGatewayResponseTypeV2 修改分组下指定错误类型的自定义响应
 //
 // 修改分组下指定错误类型的自定义响应。
 //
@@ -1100,7 +1466,13 @@ func (c *ApigClient) UpdateGatewayResponseTypeV2(request *model.UpdateGatewayRes
 	}
 }
 
-// 修改分组自定义响应
+// UpdateGatewayResponseTypeV2Invoker 修改分组下指定错误类型的自定义响应
+func (c *ApigClient) UpdateGatewayResponseTypeV2Invoker(request *model.UpdateGatewayResponseTypeV2Request) *UpdateGatewayResponseTypeV2Invoker {
+	requestDef := GenReqDefForUpdateGatewayResponseTypeV2()
+	return &UpdateGatewayResponseTypeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGatewayResponseV2 修改分组自定义响应
 //
 // 修改分组自定义响应
 //
@@ -1116,7 +1488,13 @@ func (c *ApigClient) UpdateGatewayResponseV2(request *model.UpdateGatewayRespons
 	}
 }
 
-// 更新专享版实例
+// UpdateGatewayResponseV2Invoker 修改分组自定义响应
+func (c *ApigClient) UpdateGatewayResponseV2Invoker(request *model.UpdateGatewayResponseV2Request) *UpdateGatewayResponseV2Invoker {
+	requestDef := GenReqDefForUpdateGatewayResponseV2()
+	return &UpdateGatewayResponseV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceV2 更新专享版实例
 //
 // 更新专享版实例
 //
@@ -1132,7 +1510,13 @@ func (c *ApigClient) UpdateInstanceV2(request *model.UpdateInstanceV2Request) (*
 	}
 }
 
-// 修改流控策略
+// UpdateInstanceV2Invoker 更新专享版实例
+func (c *ApigClient) UpdateInstanceV2Invoker(request *model.UpdateInstanceV2Request) *UpdateInstanceV2Invoker {
+	requestDef := GenReqDefForUpdateInstanceV2()
+	return &UpdateInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRequestThrottlingPolicyV2 修改流控策略
 //
 // 修改指定流控策略的详细信息。
 //
@@ -1148,7 +1532,13 @@ func (c *ApigClient) UpdateRequestThrottlingPolicyV2(request *model.UpdateReques
 	}
 }
 
-// 修改签名密钥
+// UpdateRequestThrottlingPolicyV2Invoker 修改流控策略
+func (c *ApigClient) UpdateRequestThrottlingPolicyV2Invoker(request *model.UpdateRequestThrottlingPolicyV2Request) *UpdateRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForUpdateRequestThrottlingPolicyV2()
+	return &UpdateRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSignatureKeyV2 修改签名密钥
 //
 // 修改指定签名密钥的详细信息。
 //
@@ -1164,7 +1554,13 @@ func (c *ApigClient) UpdateSignatureKeyV2(request *model.UpdateSignatureKeyV2Req
 	}
 }
 
-// 修改特殊设置
+// UpdateSignatureKeyV2Invoker 修改签名密钥
+func (c *ApigClient) UpdateSignatureKeyV2Invoker(request *model.UpdateSignatureKeyV2Request) *UpdateSignatureKeyV2Invoker {
+	requestDef := GenReqDefForUpdateSignatureKeyV2()
+	return &UpdateSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSpecialThrottlingConfigurationV2 修改特殊设置
 //
 // 修改某个流控策略下的某个特殊设置。
 //
@@ -1180,7 +1576,13 @@ func (c *ApigClient) UpdateSpecialThrottlingConfigurationV2(request *model.Updat
 	}
 }
 
-// 批量删除ACL策略
+// UpdateSpecialThrottlingConfigurationV2Invoker 修改特殊设置
+func (c *ApigClient) UpdateSpecialThrottlingConfigurationV2Invoker(request *model.UpdateSpecialThrottlingConfigurationV2Request) *UpdateSpecialThrottlingConfigurationV2Invoker {
+	requestDef := GenReqDefForUpdateSpecialThrottlingConfigurationV2()
+	return &UpdateSpecialThrottlingConfigurationV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteAclV2 批量删除ACL策略
 //
 // 批量删除指定的多个ACL策略。
 //
@@ -1198,7 +1600,13 @@ func (c *ApigClient) BatchDeleteAclV2(request *model.BatchDeleteAclV2Request) (*
 	}
 }
 
-// 创建ACL策略
+// BatchDeleteAclV2Invoker 批量删除ACL策略
+func (c *ApigClient) BatchDeleteAclV2Invoker(request *model.BatchDeleteAclV2Request) *BatchDeleteAclV2Invoker {
+	requestDef := GenReqDefForBatchDeleteAclV2()
+	return &BatchDeleteAclV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAclStrategyV2 创建ACL策略
 //
 // 增加一个ACL策略，策略类型通过字段acl_type来确定（permit或者deny），限制的对象的类型可以为IP或者DOMAIN，这里的DOMAIN对应的acl_value的值为租户名称，而非“www.exampleDomain.com\&quot;之类的网络域名。
 //
@@ -1214,7 +1622,13 @@ func (c *ApigClient) CreateAclStrategyV2(request *model.CreateAclStrategyV2Reque
 	}
 }
 
-// 删除ACL策略
+// CreateAclStrategyV2Invoker 创建ACL策略
+func (c *ApigClient) CreateAclStrategyV2Invoker(request *model.CreateAclStrategyV2Request) *CreateAclStrategyV2Invoker {
+	requestDef := GenReqDefForCreateAclStrategyV2()
+	return &CreateAclStrategyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAclV2 删除ACL策略
 //
 // 删除指定的ACL策略， 如果存在api与该ACL策略的绑定关系，则无法删除
 //
@@ -1230,7 +1644,13 @@ func (c *ApigClient) DeleteAclV2(request *model.DeleteAclV2Request) (*model.Dele
 	}
 }
 
-// 查看ACL策略列表
+// DeleteAclV2Invoker 删除ACL策略
+func (c *ApigClient) DeleteAclV2Invoker(request *model.DeleteAclV2Request) *DeleteAclV2Invoker {
+	requestDef := GenReqDefForDeleteAclV2()
+	return &DeleteAclV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAclStrategiesV2 查看ACL策略列表
 //
 // 查询所有的ACL策略列表。
 //
@@ -1246,7 +1666,13 @@ func (c *ApigClient) ListAclStrategiesV2(request *model.ListAclStrategiesV2Reque
 	}
 }
 
-// 查看ACL策略详情
+// ListAclStrategiesV2Invoker 查看ACL策略列表
+func (c *ApigClient) ListAclStrategiesV2Invoker(request *model.ListAclStrategiesV2Request) *ListAclStrategiesV2Invoker {
+	requestDef := GenReqDefForListAclStrategiesV2()
+	return &ListAclStrategiesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfAclPolicyV2 查看ACL策略详情
 //
 // 查询指定ACL策略的详情。
 //
@@ -1262,7 +1688,13 @@ func (c *ApigClient) ShowDetailsOfAclPolicyV2(request *model.ShowDetailsOfAclPol
 	}
 }
 
-// 修改ACL策略
+// ShowDetailsOfAclPolicyV2Invoker 查看ACL策略详情
+func (c *ApigClient) ShowDetailsOfAclPolicyV2Invoker(request *model.ShowDetailsOfAclPolicyV2Request) *ShowDetailsOfAclPolicyV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfAclPolicyV2()
+	return &ShowDetailsOfAclPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAclStrategyV2 修改ACL策略
 //
 // 修改指定的ACL策略，其中可修改的属性为：acl_name、acl_type、acl_value，其它属性不可修改。
 //
@@ -1278,7 +1710,13 @@ func (c *ApigClient) UpdateAclStrategyV2(request *model.UpdateAclStrategyV2Reque
 	}
 }
 
-// 绑定流控策略
+// UpdateAclStrategyV2Invoker 修改ACL策略
+func (c *ApigClient) UpdateAclStrategyV2Invoker(request *model.UpdateAclStrategyV2Request) *UpdateAclStrategyV2Invoker {
+	requestDef := GenReqDefForUpdateAclStrategyV2()
+	return &UpdateAclStrategyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateRequestThrottlingPolicyV2 绑定流控策略
 //
 // 将流控策略应用于API，则所有对该API的访问将会受到该流控策略的限制。
 //
@@ -1298,7 +1736,13 @@ func (c *ApigClient) AssociateRequestThrottlingPolicyV2(request *model.Associate
 	}
 }
 
-// 批量解绑流控策略
+// AssociateRequestThrottlingPolicyV2Invoker 绑定流控策略
+func (c *ApigClient) AssociateRequestThrottlingPolicyV2Invoker(request *model.AssociateRequestThrottlingPolicyV2Request) *AssociateRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForAssociateRequestThrottlingPolicyV2()
+	return &AssociateRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDisassociateThrottlingPolicyV2 批量解绑流控策略
 //
 // 批量解除API与流控策略的绑定关系
 //
@@ -1314,7 +1758,13 @@ func (c *ApigClient) BatchDisassociateThrottlingPolicyV2(request *model.BatchDis
 	}
 }
 
-// 批量发布或下线API
+// BatchDisassociateThrottlingPolicyV2Invoker 批量解绑流控策略
+func (c *ApigClient) BatchDisassociateThrottlingPolicyV2Invoker(request *model.BatchDisassociateThrottlingPolicyV2Request) *BatchDisassociateThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForBatchDisassociateThrottlingPolicyV2()
+	return &BatchDisassociateThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchPublishOrOfflineApiV2 批量发布或下线API
 //
 // 将多个API发布到一个指定的环境，或将多个API从指定的环境下线。
 //
@@ -1330,7 +1780,13 @@ func (c *ApigClient) BatchPublishOrOfflineApiV2(request *model.BatchPublishOrOff
 	}
 }
 
-// 切换API版本
+// BatchPublishOrOfflineApiV2Invoker 批量发布或下线API
+func (c *ApigClient) BatchPublishOrOfflineApiV2Invoker(request *model.BatchPublishOrOfflineApiV2Request) *BatchPublishOrOfflineApiV2Invoker {
+	requestDef := GenReqDefForBatchPublishOrOfflineApiV2()
+	return &BatchPublishOrOfflineApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeApiVersionV2 切换API版本
 //
 // API每次发布时，会基于当前的API定义生成一个版本。版本记录了API发布时的各种定义及状态。
 //
@@ -1348,7 +1804,13 @@ func (c *ApigClient) ChangeApiVersionV2(request *model.ChangeApiVersionV2Request
 	}
 }
 
-// 创建API分组
+// ChangeApiVersionV2Invoker 切换API版本
+func (c *ApigClient) ChangeApiVersionV2Invoker(request *model.ChangeApiVersionV2Request) *ChangeApiVersionV2Invoker {
+	requestDef := GenReqDefForChangeApiVersionV2()
+	return &ChangeApiVersionV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateApiGroupV2 创建API分组
 //
 // API分组是API的管理单元，一个API分组等同于一个服务入口，创建API分组时，返回一个子域名作为访问入口。建议一个API分组下的API具有一定的相关性。
 //
@@ -1364,7 +1826,13 @@ func (c *ApigClient) CreateApiGroupV2(request *model.CreateApiGroupV2Request) (*
 	}
 }
 
-// 注册API
+// CreateApiGroupV2Invoker 创建API分组
+func (c *ApigClient) CreateApiGroupV2Invoker(request *model.CreateApiGroupV2Request) *CreateApiGroupV2Invoker {
+	requestDef := GenReqDefForCreateApiGroupV2()
+	return &CreateApiGroupV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateApiV2 注册API
 //
 // 添加一个API，API即一个服务接口，具体的服务能力。
 //
@@ -1382,7 +1850,13 @@ func (c *ApigClient) CreateApiV2(request *model.CreateApiV2Request) (*model.Crea
 	}
 }
 
-// 发布或下线API
+// CreateApiV2Invoker 注册API
+func (c *ApigClient) CreateApiV2Invoker(request *model.CreateApiV2Request) *CreateApiV2Invoker {
+	requestDef := GenReqDefForCreateApiV2()
+	return &CreateApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateOrDeletePublishRecordForApiV2 发布或下线API
 //
 // 对API进行发布或下线。
 //
@@ -1402,7 +1876,13 @@ func (c *ApigClient) CreateOrDeletePublishRecordForApiV2(request *model.CreateOr
 	}
 }
 
-// 调试API
+// CreateOrDeletePublishRecordForApiV2Invoker 发布或下线API
+func (c *ApigClient) CreateOrDeletePublishRecordForApiV2Invoker(request *model.CreateOrDeletePublishRecordForApiV2Request) *CreateOrDeletePublishRecordForApiV2Invoker {
+	requestDef := GenReqDefForCreateOrDeletePublishRecordForApiV2()
+	return &CreateOrDeletePublishRecordForApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DebugApiV2 调试API
 //
 // 调试一个API在指定运行环境下的定义，接口调用者需要具有操作该API的权限。
 //
@@ -1418,7 +1898,13 @@ func (c *ApigClient) DebugApiV2(request *model.DebugApiV2Request) (*model.DebugA
 	}
 }
 
-// 根据版本编号下线API
+// DebugApiV2Invoker 调试API
+func (c *ApigClient) DebugApiV2Invoker(request *model.DebugApiV2Request) *DebugApiV2Invoker {
+	requestDef := GenReqDefForDebugApiV2()
+	return &DebugApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApiByVersionIdV2 根据版本编号下线API
 //
 // 对某个生效中的API版本进行下线操作，下线后，API在该版本生效的环境中将不再能够被调用。
 //
@@ -1434,7 +1920,13 @@ func (c *ApigClient) DeleteApiByVersionIdV2(request *model.DeleteApiByVersionIdV
 	}
 }
 
-// 删除API分组
+// DeleteApiByVersionIdV2Invoker 根据版本编号下线API
+func (c *ApigClient) DeleteApiByVersionIdV2Invoker(request *model.DeleteApiByVersionIdV2Request) *DeleteApiByVersionIdV2Invoker {
+	requestDef := GenReqDefForDeleteApiByVersionIdV2()
+	return &DeleteApiByVersionIdV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApiGroupV2 删除API分组
 //
 // 删除指定的API分组。
 // 删除API分组前，要先下线并删除分组下的所有API。
@@ -1452,7 +1944,13 @@ func (c *ApigClient) DeleteApiGroupV2(request *model.DeleteApiGroupV2Request) (*
 	}
 }
 
-// 删除API
+// DeleteApiGroupV2Invoker 删除API分组
+func (c *ApigClient) DeleteApiGroupV2Invoker(request *model.DeleteApiGroupV2Request) *DeleteApiGroupV2Invoker {
+	requestDef := GenReqDefForDeleteApiGroupV2()
+	return &DeleteApiGroupV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApiV2 删除API
 //
 // 删除指定的API。
 //
@@ -1470,7 +1968,13 @@ func (c *ApigClient) DeleteApiV2(request *model.DeleteApiV2Request) (*model.Dele
 	}
 }
 
-// 解除API与流控策略的绑定关系
+// DeleteApiV2Invoker 删除API
+func (c *ApigClient) DeleteApiV2Invoker(request *model.DeleteApiV2Request) *DeleteApiV2Invoker {
+	requestDef := GenReqDefForDeleteApiV2()
+	return &DeleteApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateRequestThrottlingPolicyV2 解除API与流控策略的绑定关系
 //
 // 解除API与流控策略的绑定关系。
 //
@@ -1486,7 +1990,13 @@ func (c *ApigClient) DisassociateRequestThrottlingPolicyV2(request *model.Disass
 	}
 }
 
-// 查询分组列表
+// DisassociateRequestThrottlingPolicyV2Invoker 解除API与流控策略的绑定关系
+func (c *ApigClient) DisassociateRequestThrottlingPolicyV2Invoker(request *model.DisassociateRequestThrottlingPolicyV2Request) *DisassociateRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForDisassociateRequestThrottlingPolicyV2()
+	return &DisassociateRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiGroupsV2 查询分组列表
 //
 // 查询API分组列表。
 //
@@ -1504,7 +2014,13 @@ func (c *ApigClient) ListApiGroupsV2(request *model.ListApiGroupsV2Request) (*mo
 	}
 }
 
-// 查询API运行时定义
+// ListApiGroupsV2Invoker 查询分组列表
+func (c *ApigClient) ListApiGroupsV2Invoker(request *model.ListApiGroupsV2Request) *ListApiGroupsV2Invoker {
+	requestDef := GenReqDefForListApiGroupsV2()
+	return &ListApiGroupsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiRuntimeDefinitionV2 查询API运行时定义
 //
 // 查看指定的API在指定的环境上的运行时定义，默认查询RELEASE环境上的运行时定义。
 //
@@ -1526,7 +2042,13 @@ func (c *ApigClient) ListApiRuntimeDefinitionV2(request *model.ListApiRuntimeDef
 	}
 }
 
-// 查看版本详情
+// ListApiRuntimeDefinitionV2Invoker 查询API运行时定义
+func (c *ApigClient) ListApiRuntimeDefinitionV2Invoker(request *model.ListApiRuntimeDefinitionV2Request) *ListApiRuntimeDefinitionV2Invoker {
+	requestDef := GenReqDefForListApiRuntimeDefinitionV2()
+	return &ListApiRuntimeDefinitionV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiVersionDetailV2 查看版本详情
 //
 // 查询某个指定的版本详情。
 //
@@ -1542,7 +2064,13 @@ func (c *ApigClient) ListApiVersionDetailV2(request *model.ListApiVersionDetailV
 	}
 }
 
-// 查询API历史版本列表
+// ListApiVersionDetailV2Invoker 查看版本详情
+func (c *ApigClient) ListApiVersionDetailV2Invoker(request *model.ListApiVersionDetailV2Request) *ListApiVersionDetailV2Invoker {
+	requestDef := GenReqDefForListApiVersionDetailV2()
+	return &ListApiVersionDetailV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiVersionsV2 查询API历史版本列表
 //
 // 查询某个API的历史版本。每个API在一个环境上最多存在10个历史版本。
 //
@@ -1558,7 +2086,13 @@ func (c *ApigClient) ListApiVersionsV2(request *model.ListApiVersionsV2Request) 
 	}
 }
 
-// 查看流控策略绑定的API列表
+// ListApiVersionsV2Invoker 查询API历史版本列表
+func (c *ApigClient) ListApiVersionsV2Invoker(request *model.ListApiVersionsV2Request) *ListApiVersionsV2Invoker {
+	requestDef := GenReqDefForListApiVersionsV2()
+	return &ListApiVersionsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisBindedToRequestThrottlingPolicyV2 查看流控策略绑定的API列表
 //
 // 查询某个流控策略上已经绑定的API列表。
 //
@@ -1574,7 +2108,13 @@ func (c *ApigClient) ListApisBindedToRequestThrottlingPolicyV2(request *model.Li
 	}
 }
 
-// 查看流控策略未绑定的API列表
+// ListApisBindedToRequestThrottlingPolicyV2Invoker 查看流控策略绑定的API列表
+func (c *ApigClient) ListApisBindedToRequestThrottlingPolicyV2Invoker(request *model.ListApisBindedToRequestThrottlingPolicyV2Request) *ListApisBindedToRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForListApisBindedToRequestThrottlingPolicyV2()
+	return &ListApisBindedToRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisUnbindedToRequestThrottlingPolicyV2 查看流控策略未绑定的API列表
 //
 // 查询所有未绑定到该流控策略上的自有API列表。需要API已经发布，未发布的API不予展示。
 //
@@ -1590,7 +2130,13 @@ func (c *ApigClient) ListApisUnbindedToRequestThrottlingPolicyV2(request *model.
 	}
 }
 
-// 查询API列表
+// ListApisUnbindedToRequestThrottlingPolicyV2Invoker 查看流控策略未绑定的API列表
+func (c *ApigClient) ListApisUnbindedToRequestThrottlingPolicyV2Invoker(request *model.ListApisUnbindedToRequestThrottlingPolicyV2Request) *ListApisUnbindedToRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForListApisUnbindedToRequestThrottlingPolicyV2()
+	return &ListApisUnbindedToRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisV2 查询API列表
 //
 // 查看API列表，返回API详细信息、发布信息等，但不能查看到后端服务信息。
 //
@@ -1606,7 +2152,13 @@ func (c *ApigClient) ListApisV2(request *model.ListApisV2Request) (*model.ListAp
 	}
 }
 
-// 查看API绑定的流控策略列表
+// ListApisV2Invoker 查询API列表
+func (c *ApigClient) ListApisV2Invoker(request *model.ListApisV2Request) *ListApisV2Invoker {
+	requestDef := GenReqDefForListApisV2()
+	return &ListApisV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRequestThrottlingPoliciesBindedToApiV2 查看API绑定的流控策略列表
 //
 // 查询某个API绑定的流控策略列表。每个环境上应该最多只有一个流控策略。
 //
@@ -1622,7 +2174,13 @@ func (c *ApigClient) ListRequestThrottlingPoliciesBindedToApiV2(request *model.L
 	}
 }
 
-// 查询分组详情
+// ListRequestThrottlingPoliciesBindedToApiV2Invoker 查看API绑定的流控策略列表
+func (c *ApigClient) ListRequestThrottlingPoliciesBindedToApiV2Invoker(request *model.ListRequestThrottlingPoliciesBindedToApiV2Request) *ListRequestThrottlingPoliciesBindedToApiV2Invoker {
+	requestDef := GenReqDefForListRequestThrottlingPoliciesBindedToApiV2()
+	return &ListRequestThrottlingPoliciesBindedToApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfApiGroupV2 查询分组详情
 //
 // 查询指定分组的详细信息。
 //
@@ -1638,7 +2196,13 @@ func (c *ApigClient) ShowDetailsOfApiGroupV2(request *model.ShowDetailsOfApiGrou
 	}
 }
 
-// 查询API详情
+// ShowDetailsOfApiGroupV2Invoker 查询分组详情
+func (c *ApigClient) ShowDetailsOfApiGroupV2Invoker(request *model.ShowDetailsOfApiGroupV2Request) *ShowDetailsOfApiGroupV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfApiGroupV2()
+	return &ShowDetailsOfApiGroupV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfApiV2 查询API详情
 //
 // 查看指定的API的详细信息。
 //
@@ -1654,7 +2218,13 @@ func (c *ApigClient) ShowDetailsOfApiV2(request *model.ShowDetailsOfApiV2Request
 	}
 }
 
-// 修改API分组
+// ShowDetailsOfApiV2Invoker 查询API详情
+func (c *ApigClient) ShowDetailsOfApiV2Invoker(request *model.ShowDetailsOfApiV2Request) *ShowDetailsOfApiV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfApiV2()
+	return &ShowDetailsOfApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateApiGroupV2 修改API分组
 //
 // 修改API分组属性。其中name和remark可修改，其他属性不可修改。
 //
@@ -1670,7 +2240,13 @@ func (c *ApigClient) UpdateApiGroupV2(request *model.UpdateApiGroupV2Request) (*
 	}
 }
 
-// 修改API
+// UpdateApiGroupV2Invoker 修改API分组
+func (c *ApigClient) UpdateApiGroupV2Invoker(request *model.UpdateApiGroupV2Request) *UpdateApiGroupV2Invoker {
+	requestDef := GenReqDefForUpdateApiGroupV2()
+	return &UpdateApiGroupV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateApiV2 修改API
 //
 // 修改指定API的信息，包括后端服务信息。
 //
@@ -1686,7 +2262,13 @@ func (c *ApigClient) UpdateApiV2(request *model.UpdateApiV2Request) (*model.Upda
 	}
 }
 
-// 批量解除API与ACL策略的绑定
+// UpdateApiV2Invoker 修改API
+func (c *ApigClient) UpdateApiV2Invoker(request *model.UpdateApiV2Request) *UpdateApiV2Invoker {
+	requestDef := GenReqDefForUpdateApiV2()
+	return &UpdateApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteApiAclBindingV2 批量解除API与ACL策略的绑定
 //
 // 批量解除API与ACL策略的绑定
 //
@@ -1702,7 +2284,13 @@ func (c *ApigClient) BatchDeleteApiAclBindingV2(request *model.BatchDeleteApiAcl
 	}
 }
 
-// 将API与ACL策略进行绑定
+// BatchDeleteApiAclBindingV2Invoker 批量解除API与ACL策略的绑定
+func (c *ApigClient) BatchDeleteApiAclBindingV2Invoker(request *model.BatchDeleteApiAclBindingV2Request) *BatchDeleteApiAclBindingV2Invoker {
+	requestDef := GenReqDefForBatchDeleteApiAclBindingV2()
+	return &BatchDeleteApiAclBindingV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateApiAclBindingV2 将API与ACL策略进行绑定
 //
 // 将API与ACL策略进行绑定。
 //
@@ -1720,7 +2308,13 @@ func (c *ApigClient) CreateApiAclBindingV2(request *model.CreateApiAclBindingV2R
 	}
 }
 
-// 解除API与ACL策略的绑定
+// CreateApiAclBindingV2Invoker 将API与ACL策略进行绑定
+func (c *ApigClient) CreateApiAclBindingV2Invoker(request *model.CreateApiAclBindingV2Request) *CreateApiAclBindingV2Invoker {
+	requestDef := GenReqDefForCreateApiAclBindingV2()
+	return &CreateApiAclBindingV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApiAclBindingV2 解除API与ACL策略的绑定
 //
 // 解除某条API与ACL策略的绑定关系
 //
@@ -1736,7 +2330,13 @@ func (c *ApigClient) DeleteApiAclBindingV2(request *model.DeleteApiAclBindingV2R
 	}
 }
 
-// 查看API绑定的ACL策略列表
+// DeleteApiAclBindingV2Invoker 解除API与ACL策略的绑定
+func (c *ApigClient) DeleteApiAclBindingV2Invoker(request *model.DeleteApiAclBindingV2Request) *DeleteApiAclBindingV2Invoker {
+	requestDef := GenReqDefForDeleteApiAclBindingV2()
+	return &DeleteApiAclBindingV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAclPolicyBindedToApiV2 查看API绑定的ACL策略列表
 //
 // 查看API绑定的ACL策略列表
 //
@@ -1752,7 +2352,13 @@ func (c *ApigClient) ListAclPolicyBindedToApiV2(request *model.ListAclPolicyBind
 	}
 }
 
-// 查看ACL策略绑定的API列表
+// ListAclPolicyBindedToApiV2Invoker 查看API绑定的ACL策略列表
+func (c *ApigClient) ListAclPolicyBindedToApiV2Invoker(request *model.ListAclPolicyBindedToApiV2Request) *ListAclPolicyBindedToApiV2Invoker {
+	requestDef := GenReqDefForListAclPolicyBindedToApiV2()
+	return &ListAclPolicyBindedToApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisBindedToAclPolicyV2 查看ACL策略绑定的API列表
 //
 // 查看ACL策略绑定的API列表
 //
@@ -1768,7 +2374,13 @@ func (c *ApigClient) ListApisBindedToAclPolicyV2(request *model.ListApisBindedTo
 	}
 }
 
-// 查看ACL策略未绑定的API列表
+// ListApisBindedToAclPolicyV2Invoker 查看ACL策略绑定的API列表
+func (c *ApigClient) ListApisBindedToAclPolicyV2Invoker(request *model.ListApisBindedToAclPolicyV2Request) *ListApisBindedToAclPolicyV2Invoker {
+	requestDef := GenReqDefForListApisBindedToAclPolicyV2()
+	return &ListApisBindedToAclPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisUnbindedToAclPolicyV2 查看ACL策略未绑定的API列表
 //
 // 查看ACL策略未绑定的API列表，需要API已发布
 //
@@ -1784,7 +2396,13 @@ func (c *ApigClient) ListApisUnbindedToAclPolicyV2(request *model.ListApisUnbind
 	}
 }
 
-// 解除授权
+// ListApisUnbindedToAclPolicyV2Invoker 查看ACL策略未绑定的API列表
+func (c *ApigClient) ListApisUnbindedToAclPolicyV2Invoker(request *model.ListApisUnbindedToAclPolicyV2Request) *ListApisUnbindedToAclPolicyV2Invoker {
+	requestDef := GenReqDefForListApisUnbindedToAclPolicyV2()
+	return &ListApisUnbindedToAclPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelingAuthorizationV2 解除授权
 //
 // 解除API对APP的授权关系。解除授权后，APP将不再能够调用该API。
 //
@@ -1800,7 +2418,13 @@ func (c *ApigClient) CancelingAuthorizationV2(request *model.CancelingAuthorizat
 	}
 }
 
-// 校验APP
+// CancelingAuthorizationV2Invoker 解除授权
+func (c *ApigClient) CancelingAuthorizationV2Invoker(request *model.CancelingAuthorizationV2Request) *CancelingAuthorizationV2Invoker {
+	requestDef := GenReqDefForCancelingAuthorizationV2()
+	return &CancelingAuthorizationV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckAppV2 校验APP
 //
 // 校验app是否存在，非APP所有者可以调用该接口校验APP是否真实存在。这个接口只展示app的基本信息id 、name、 remark，其他信息不显示。
 //
@@ -1816,7 +2440,13 @@ func (c *ApigClient) CheckAppV2(request *model.CheckAppV2Request) (*model.CheckA
 	}
 }
 
-// 创建APP
+// CheckAppV2Invoker 校验APP
+func (c *ApigClient) CheckAppV2Invoker(request *model.CheckAppV2Request) *CheckAppV2Invoker {
+	requestDef := GenReqDefForCheckAppV2()
+	return &CheckAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAnAppV2 创建APP
 //
 // APP即应用，是一个可以访问API的身份标识。将API授权给APP后，APP即可调用API。
 // 创建一个APP。
@@ -1833,7 +2463,13 @@ func (c *ApigClient) CreateAnAppV2(request *model.CreateAnAppV2Request) (*model.
 	}
 }
 
-// 自动生成APP Code
+// CreateAnAppV2Invoker 创建APP
+func (c *ApigClient) CreateAnAppV2Invoker(request *model.CreateAnAppV2Request) *CreateAnAppV2Invoker {
+	requestDef := GenReqDefForCreateAnAppV2()
+	return &CreateAnAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAppCodeAutoV2 自动生成APP Code
 //
 // 创建App Code时，可以不指定具体值，由后台自动生成随机字符串填充。
 //
@@ -1849,7 +2485,13 @@ func (c *ApigClient) CreateAppCodeAutoV2(request *model.CreateAppCodeAutoV2Reque
 	}
 }
 
-// 创建APP Code
+// CreateAppCodeAutoV2Invoker 自动生成APP Code
+func (c *ApigClient) CreateAppCodeAutoV2Invoker(request *model.CreateAppCodeAutoV2Request) *CreateAppCodeAutoV2Invoker {
+	requestDef := GenReqDefForCreateAppCodeAutoV2()
+	return &CreateAppCodeAutoV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAppCodeV2 创建APP Code
 //
 // App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
 //
@@ -1865,7 +2507,13 @@ func (c *ApigClient) CreateAppCodeV2(request *model.CreateAppCodeV2Request) (*mo
 	}
 }
 
-// APP授权
+// CreateAppCodeV2Invoker 创建APP Code
+func (c *ApigClient) CreateAppCodeV2Invoker(request *model.CreateAppCodeV2Request) *CreateAppCodeV2Invoker {
+	requestDef := GenReqDefForCreateAppCodeV2()
+	return &CreateAppCodeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAuthorizingAppsV2 APP授权
 //
 // APP创建成功后，还不能访问API，如果想要访问某个环境上的API，需要将该API在该环境上授权给APP。授权成功后，APP即可访问该环境上的这个API。
 //
@@ -1881,7 +2529,13 @@ func (c *ApigClient) CreateAuthorizingAppsV2(request *model.CreateAuthorizingApp
 	}
 }
 
-// 删除APP Code
+// CreateAuthorizingAppsV2Invoker APP授权
+func (c *ApigClient) CreateAuthorizingAppsV2Invoker(request *model.CreateAuthorizingAppsV2Request) *CreateAuthorizingAppsV2Invoker {
+	requestDef := GenReqDefForCreateAuthorizingAppsV2()
+	return &CreateAuthorizingAppsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAppCodeV2 删除APP Code
 //
 // 删除App Code，App Code删除后，将无法再通过简易认证访问对应的API。
 //
@@ -1897,7 +2551,13 @@ func (c *ApigClient) DeleteAppCodeV2(request *model.DeleteAppCodeV2Request) (*mo
 	}
 }
 
-// 删除APP
+// DeleteAppCodeV2Invoker 删除APP Code
+func (c *ApigClient) DeleteAppCodeV2Invoker(request *model.DeleteAppCodeV2Request) *DeleteAppCodeV2Invoker {
+	requestDef := GenReqDefForDeleteAppCodeV2()
+	return &DeleteAppCodeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAppV2 删除APP
 //
 // 删除指定的APP。
 // APP删除后，将无法再调用任何API；其中，云市场自动创建的APP无法被删除。
@@ -1914,7 +2574,13 @@ func (c *ApigClient) DeleteAppV2(request *model.DeleteAppV2Request) (*model.Dele
 	}
 }
 
-// 查看APP已绑定的API列表
+// DeleteAppV2Invoker 删除APP
+func (c *ApigClient) DeleteAppV2Invoker(request *model.DeleteAppV2Request) *DeleteAppV2Invoker {
+	requestDef := GenReqDefForDeleteAppV2()
+	return &DeleteAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisBindedToAppV2 查看APP已绑定的API列表
 //
 // 查询APP已经绑定的API列表。
 //
@@ -1930,7 +2596,13 @@ func (c *ApigClient) ListApisBindedToAppV2(request *model.ListApisBindedToAppV2R
 	}
 }
 
-// 查看APP未绑定的API列表
+// ListApisBindedToAppV2Invoker 查看APP已绑定的API列表
+func (c *ApigClient) ListApisBindedToAppV2Invoker(request *model.ListApisBindedToAppV2Request) *ListApisBindedToAppV2Invoker {
+	requestDef := GenReqDefForListApisBindedToAppV2()
+	return &ListApisBindedToAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisUnbindedToAppV2 查看APP未绑定的API列表
 //
 // 查询指定环境上某个APP未绑定的API列表，包括自有API和从云市场购买的API。
 //
@@ -1946,7 +2618,13 @@ func (c *ApigClient) ListApisUnbindedToAppV2(request *model.ListApisUnbindedToAp
 	}
 }
 
-// 查询APP Code列表
+// ListApisUnbindedToAppV2Invoker 查看APP未绑定的API列表
+func (c *ApigClient) ListApisUnbindedToAppV2Invoker(request *model.ListApisUnbindedToAppV2Request) *ListApisUnbindedToAppV2Invoker {
+	requestDef := GenReqDefForListApisUnbindedToAppV2()
+	return &ListApisUnbindedToAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppCodesV2 查询APP Code列表
 //
 // 查询App Code列表。
 //
@@ -1962,7 +2640,13 @@ func (c *ApigClient) ListAppCodesV2(request *model.ListAppCodesV2Request) (*mode
 	}
 }
 
-// 查看API已绑定的APP列表
+// ListAppCodesV2Invoker 查询APP Code列表
+func (c *ApigClient) ListAppCodesV2Invoker(request *model.ListAppCodesV2Request) *ListAppCodesV2Invoker {
+	requestDef := GenReqDefForListAppCodesV2()
+	return &ListAppCodesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppsBindedToApiV2 查看API已绑定的APP列表
 //
 // 查询API绑定的APP列表。
 //
@@ -1978,7 +2662,13 @@ func (c *ApigClient) ListAppsBindedToApiV2(request *model.ListAppsBindedToApiV2R
 	}
 }
 
-// 查询APP列表
+// ListAppsBindedToApiV2Invoker 查看API已绑定的APP列表
+func (c *ApigClient) ListAppsBindedToApiV2Invoker(request *model.ListAppsBindedToApiV2Request) *ListAppsBindedToApiV2Invoker {
+	requestDef := GenReqDefForListAppsBindedToApiV2()
+	return &ListAppsBindedToApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppsV2 查询APP列表
 //
 // 查询APP列表。
 //
@@ -1994,7 +2684,13 @@ func (c *ApigClient) ListAppsV2(request *model.ListAppsV2Request) (*model.ListAp
 	}
 }
 
-// 重置密钥
+// ListAppsV2Invoker 查询APP列表
+func (c *ApigClient) ListAppsV2Invoker(request *model.ListAppsV2Request) *ListAppsV2Invoker {
+	requestDef := GenReqDefForListAppsV2()
+	return &ListAppsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResettingAppSecretV2 重置密钥
 //
 // 重置指定APP的密钥。
 //
@@ -2010,7 +2706,13 @@ func (c *ApigClient) ResettingAppSecretV2(request *model.ResettingAppSecretV2Req
 	}
 }
 
-// 查看APP Code详情
+// ResettingAppSecretV2Invoker 重置密钥
+func (c *ApigClient) ResettingAppSecretV2Invoker(request *model.ResettingAppSecretV2Request) *ResettingAppSecretV2Invoker {
+	requestDef := GenReqDefForResettingAppSecretV2()
+	return &ResettingAppSecretV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfAppCodeV2 查看APP Code详情
 //
 // App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
 //
@@ -2026,7 +2728,13 @@ func (c *ApigClient) ShowDetailsOfAppCodeV2(request *model.ShowDetailsOfAppCodeV
 	}
 }
 
-// 查看APP详情
+// ShowDetailsOfAppCodeV2Invoker 查看APP Code详情
+func (c *ApigClient) ShowDetailsOfAppCodeV2Invoker(request *model.ShowDetailsOfAppCodeV2Request) *ShowDetailsOfAppCodeV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfAppCodeV2()
+	return &ShowDetailsOfAppCodeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfAppV2 查看APP详情
 //
 // 查看指定APP的详细信息。
 //
@@ -2042,7 +2750,13 @@ func (c *ApigClient) ShowDetailsOfAppV2(request *model.ShowDetailsOfAppV2Request
 	}
 }
 
-// 修改APP
+// ShowDetailsOfAppV2Invoker 查看APP详情
+func (c *ApigClient) ShowDetailsOfAppV2Invoker(request *model.ShowDetailsOfAppV2Request) *ShowDetailsOfAppV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfAppV2()
+	return &ShowDetailsOfAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAppV2 修改APP
 //
 // 修改指定APP的信息。其中可修改的属性为：name、remark，当支持用户自定义key和secret的开关开启时，app_key和app_secret也支持修改，其它属性不可修改。
 //
@@ -2058,7 +2772,13 @@ func (c *ApigClient) UpdateAppV2(request *model.UpdateAppV2Request) (*model.Upda
 	}
 }
 
-// 导出API
+// UpdateAppV2Invoker 修改APP
+func (c *ApigClient) UpdateAppV2Invoker(request *model.UpdateAppV2Request) *UpdateAppV2Invoker {
+	requestDef := GenReqDefForUpdateAppV2()
+	return &UpdateAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportApiDefinitionsV2 导出API
 //
 // 导出分组下API的定义信息。导出文件内容符合swagger标准规范，API网关自定义扩展字段请参考《API网关开发指南》的“导入导出API：扩展定义”章节。
 //
@@ -2074,7 +2794,13 @@ func (c *ApigClient) ExportApiDefinitionsV2(request *model.ExportApiDefinitionsV
 	}
 }
 
-// 导入API
+// ExportApiDefinitionsV2Invoker 导出API
+func (c *ApigClient) ExportApiDefinitionsV2Invoker(request *model.ExportApiDefinitionsV2Request) *ExportApiDefinitionsV2Invoker {
+	requestDef := GenReqDefForExportApiDefinitionsV2()
+	return &ExportApiDefinitionsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportApiDefinitionsV2 导入API
 //
 // 导入API。导入文件内容需要符合swagger标准规范，API网关自定义扩展字段请参考《API网关开发指南》的“导入导出API：扩展定义”章节。
 //
@@ -2090,7 +2816,13 @@ func (c *ApigClient) ImportApiDefinitionsV2(request *model.ImportApiDefinitionsV
 	}
 }
 
-// 添加后端实例
+// ImportApiDefinitionsV2Invoker 导入API
+func (c *ApigClient) ImportApiDefinitionsV2Invoker(request *model.ImportApiDefinitionsV2Request) *ImportApiDefinitionsV2Invoker {
+	requestDef := GenReqDefForImportApiDefinitionsV2()
+	return &ImportApiDefinitionsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddingBackendInstancesV2 添加后端实例
 //
 // 为指定的VPC通道添加弹性云服务器
 //
@@ -2106,7 +2838,13 @@ func (c *ApigClient) AddingBackendInstancesV2(request *model.AddingBackendInstan
 	}
 }
 
-// 创建VPC通道
+// AddingBackendInstancesV2Invoker 添加后端实例
+func (c *ApigClient) AddingBackendInstancesV2Invoker(request *model.AddingBackendInstancesV2Request) *AddingBackendInstancesV2Invoker {
+	requestDef := GenReqDefForAddingBackendInstancesV2()
+	return &AddingBackendInstancesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVpcChannelV2 创建VPC通道
 //
 // 在API网关中创建连接私有VPC资源的通道，并在创建API时将后端节点配置为使用这些VPC通道，以便API网关直接访问私有VPC资源。
 // &gt; 每个用户最多创建30个VPC通道。
@@ -2123,7 +2861,13 @@ func (c *ApigClient) CreateVpcChannelV2(request *model.CreateVpcChannelV2Request
 	}
 }
 
-// 删除后端实例
+// CreateVpcChannelV2Invoker 创建VPC通道
+func (c *ApigClient) CreateVpcChannelV2Invoker(request *model.CreateVpcChannelV2Request) *CreateVpcChannelV2Invoker {
+	requestDef := GenReqDefForCreateVpcChannelV2()
+	return &CreateVpcChannelV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteBackendInstanceV2 删除后端实例
 //
 // 删除指定VPC通道中的弹性云服务器
 //
@@ -2139,7 +2883,13 @@ func (c *ApigClient) DeleteBackendInstanceV2(request *model.DeleteBackendInstanc
 	}
 }
 
-// 删除VPC通道
+// DeleteBackendInstanceV2Invoker 删除后端实例
+func (c *ApigClient) DeleteBackendInstanceV2Invoker(request *model.DeleteBackendInstanceV2Request) *DeleteBackendInstanceV2Invoker {
+	requestDef := GenReqDefForDeleteBackendInstanceV2()
+	return &DeleteBackendInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVpcChannelV2 删除VPC通道
 //
 // 删除指定的VPC通道
 //
@@ -2155,7 +2905,13 @@ func (c *ApigClient) DeleteVpcChannelV2(request *model.DeleteVpcChannelV2Request
 	}
 }
 
-// 查看后端实例列表
+// DeleteVpcChannelV2Invoker 删除VPC通道
+func (c *ApigClient) DeleteVpcChannelV2Invoker(request *model.DeleteVpcChannelV2Request) *DeleteVpcChannelV2Invoker {
+	requestDef := GenReqDefForDeleteVpcChannelV2()
+	return &DeleteVpcChannelV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBackendInstancesV2 查看后端实例列表
 //
 // 查看指定VPC通道的弹性云服务器列表。
 //
@@ -2171,7 +2927,13 @@ func (c *ApigClient) ListBackendInstancesV2(request *model.ListBackendInstancesV
 	}
 }
 
-// 查询VPC通道列表
+// ListBackendInstancesV2Invoker 查看后端实例列表
+func (c *ApigClient) ListBackendInstancesV2Invoker(request *model.ListBackendInstancesV2Request) *ListBackendInstancesV2Invoker {
+	requestDef := GenReqDefForListBackendInstancesV2()
+	return &ListBackendInstancesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVpcChannelsV2 查询VPC通道列表
 //
 // 查看VPC通道列表
 //
@@ -2187,7 +2949,13 @@ func (c *ApigClient) ListVpcChannelsV2(request *model.ListVpcChannelsV2Request) 
 	}
 }
 
-// 查看VPC通道详情
+// ListVpcChannelsV2Invoker 查询VPC通道列表
+func (c *ApigClient) ListVpcChannelsV2Invoker(request *model.ListVpcChannelsV2Request) *ListVpcChannelsV2Invoker {
+	requestDef := GenReqDefForListVpcChannelsV2()
+	return &ListVpcChannelsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfVpcChannelV2 查看VPC通道详情
 //
 // 查看指定的VPC通道详情
 //
@@ -2203,7 +2971,13 @@ func (c *ApigClient) ShowDetailsOfVpcChannelV2(request *model.ShowDetailsOfVpcCh
 	}
 }
 
-// 更新VPC通道
+// ShowDetailsOfVpcChannelV2Invoker 查看VPC通道详情
+func (c *ApigClient) ShowDetailsOfVpcChannelV2Invoker(request *model.ShowDetailsOfVpcChannelV2Request) *ShowDetailsOfVpcChannelV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfVpcChannelV2()
+	return &ShowDetailsOfVpcChannelV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVpcChannelV2 更新VPC通道
 //
 // 更新指定VPC通道的参数
 //
@@ -2217,4 +2991,10 @@ func (c *ApigClient) UpdateVpcChannelV2(request *model.UpdateVpcChannelV2Request
 	} else {
 		return resp.(*model.UpdateVpcChannelV2Response), nil
 	}
+}
+
+// UpdateVpcChannelV2Invoker 更新VPC通道
+func (c *ApigClient) UpdateVpcChannelV2Invoker(request *model.UpdateVpcChannelV2Request) *UpdateVpcChannelV2Invoker {
+	requestDef := GenReqDefForUpdateVpcChannelV2()
+	return &UpdateVpcChannelV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

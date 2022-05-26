@@ -43,6 +43,10 @@ func GetListResourceInstancesRequestResourceTypeEnum() ListResourceInstancesRequ
 	}
 }
 
+func (c ListResourceInstancesRequestResourceType) Value() string {
+	return c.value
+}
+
 func (c ListResourceInstancesRequestResourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

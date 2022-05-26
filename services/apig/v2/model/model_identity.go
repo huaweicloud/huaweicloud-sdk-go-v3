@@ -50,6 +50,10 @@ func GetIdentityLocationEnum() IdentityLocationEnum {
 	}
 }
 
+func (c IdentityLocation) Value() string {
+	return c.value
+}
+
 func (c IdentityLocation) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

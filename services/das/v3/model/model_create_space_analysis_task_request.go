@@ -50,6 +50,10 @@ func GetCreateSpaceAnalysisTaskRequestXLanguageEnum() CreateSpaceAnalysisTaskReq
 	}
 }
 
+func (c CreateSpaceAnalysisTaskRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c CreateSpaceAnalysisTaskRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

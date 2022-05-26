@@ -44,6 +44,10 @@ func GetListScalingTagInfosByResourceIdRequestResourceTypeEnum() ListScalingTagI
 	}
 }
 
+func (c ListScalingTagInfosByResourceIdRequestResourceType) Value() string {
+	return c.value
+}
+
 func (c ListScalingTagInfosByResourceIdRequestResourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

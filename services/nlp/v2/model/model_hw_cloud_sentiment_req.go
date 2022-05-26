@@ -48,6 +48,10 @@ func GetHwCloudSentimentReqLangEnum() HwCloudSentimentReqLangEnum {
 	}
 }
 
+func (c HwCloudSentimentReqLang) Value() string {
+	return c.value
+}
+
 func (c HwCloudSentimentReqLang) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

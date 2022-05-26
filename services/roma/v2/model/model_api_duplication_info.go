@@ -77,6 +77,10 @@ func GetApiDuplicationInfoReqMethodEnum() ApiDuplicationInfoReqMethodEnum {
 	}
 }
 
+func (c ApiDuplicationInfoReqMethod) Value() string {
+	return c.value
+}
+
 func (c ApiDuplicationInfoReqMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -113,6 +117,10 @@ func GetApiDuplicationInfoMatchModeEnum() ApiDuplicationInfoMatchModeEnum {
 			value: "NORMAL",
 		},
 	}
+}
+
+func (c ApiDuplicationInfoMatchMode) Value() string {
+	return c.value
 }
 
 func (c ApiDuplicationInfoMatchMode) MarshalJSON() ([]byte, error) {

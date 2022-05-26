@@ -86,6 +86,10 @@ func GetListNatGatewaysRequestStatusEnum() ListNatGatewaysRequestStatusEnum {
 	}
 }
 
+func (c ListNatGatewaysRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListNatGatewaysRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -130,6 +134,10 @@ func GetListNatGatewaysRequestSpecEnum() ListNatGatewaysRequestSpecEnum {
 			value: "4",
 		},
 	}
+}
+
+func (c ListNatGatewaysRequestSpec) Value() string {
+	return c.value
 }
 
 func (c ListNatGatewaysRequestSpec) MarshalJSON() ([]byte, error) {

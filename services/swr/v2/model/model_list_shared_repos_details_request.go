@@ -48,6 +48,10 @@ func GetListSharedReposDetailsRequestContentTypeEnum() ListSharedReposDetailsReq
 	}
 }
 
+func (c ListSharedReposDetailsRequestContentType) Value() string {
+	return c.value
+}
+
 func (c ListSharedReposDetailsRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

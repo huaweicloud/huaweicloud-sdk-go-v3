@@ -51,6 +51,10 @@ func GetListInnodbLocksRequestXLanguageEnum() ListInnodbLocksRequestXLanguageEnu
 	}
 }
 
+func (c ListInnodbLocksRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ListInnodbLocksRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

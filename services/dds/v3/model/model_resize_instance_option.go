@@ -50,6 +50,10 @@ func GetResizeInstanceOptionTargetTypeEnum() ResizeInstanceOptionTargetTypeEnum 
 	}
 }
 
+func (c ResizeInstanceOptionTargetType) Value() string {
+	return c.value
+}
+
 func (c ResizeInstanceOptionTargetType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

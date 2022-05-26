@@ -57,6 +57,10 @@ func GetCreatePrePaidPublicipExtendParamOptionChargeModeEnum() CreatePrePaidPubl
 	}
 }
 
+func (c CreatePrePaidPublicipExtendParamOptionChargeMode) Value() string {
+	return c.value
+}
+
 func (c CreatePrePaidPublicipExtendParamOptionChargeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -93,6 +97,10 @@ func GetCreatePrePaidPublicipExtendParamOptionPeriodTypeEnum() CreatePrePaidPubl
 			value: "year",
 		},
 	}
+}
+
+func (c CreatePrePaidPublicipExtendParamOptionPeriodType) Value() string {
+	return c.value
 }
 
 func (c CreatePrePaidPublicipExtendParamOptionPeriodType) MarshalJSON() ([]byte, error) {

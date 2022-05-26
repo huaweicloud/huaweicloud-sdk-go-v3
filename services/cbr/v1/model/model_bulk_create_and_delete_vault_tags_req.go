@@ -51,6 +51,10 @@ func GetBulkCreateAndDeleteVaultTagsReqActionEnum() BulkCreateAndDeleteVaultTags
 	}
 }
 
+func (c BulkCreateAndDeleteVaultTagsReqAction) Value() string {
+	return c.value
+}
+
 func (c BulkCreateAndDeleteVaultTagsReqAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

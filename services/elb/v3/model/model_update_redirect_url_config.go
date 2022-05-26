@@ -64,6 +64,10 @@ func GetUpdateRedirectUrlConfigProtocolEnum() UpdateRedirectUrlConfigProtocolEnu
 	}
 }
 
+func (c UpdateRedirectUrlConfigProtocol) Value() string {
+	return c.value
+}
+
 func (c UpdateRedirectUrlConfigProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -112,6 +116,10 @@ func GetUpdateRedirectUrlConfigStatusCodeEnum() UpdateRedirectUrlConfigStatusCod
 			value: "308",
 		},
 	}
+}
+
+func (c UpdateRedirectUrlConfigStatusCode) Value() string {
+	return c.value
 }
 
 func (c UpdateRedirectUrlConfigStatusCode) MarshalJSON() ([]byte, error) {

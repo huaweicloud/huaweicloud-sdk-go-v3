@@ -50,6 +50,10 @@ func GetDeleteProcessRequestXLanguageEnum() DeleteProcessRequestXLanguageEnum {
 	}
 }
 
+func (c DeleteProcessRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c DeleteProcessRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

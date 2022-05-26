@@ -45,6 +45,10 @@ func GetListRegionsRequestXLanguageEnum() ListRegionsRequestXLanguageEnum {
 	}
 }
 
+func (c ListRegionsRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ListRegionsRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

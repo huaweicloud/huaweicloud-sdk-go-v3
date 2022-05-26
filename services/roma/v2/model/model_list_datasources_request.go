@@ -201,6 +201,10 @@ func GetListDatasourcesRequestDatasourceTypeEnum() ListDatasourcesRequestDatasou
 	}
 }
 
+func (c ListDatasourcesRequestDatasourceType) Value() string {
+	return c.value
+}
+
 func (c ListDatasourcesRequestDatasourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -237,6 +241,10 @@ func GetListDatasourcesRequestSortTypeEnum() ListDatasourcesRequestSortTypeEnum 
 			value: "DESC",
 		},
 	}
+}
+
+func (c ListDatasourcesRequestSortType) Value() string {
+	return c.value
 }
 
 func (c ListDatasourcesRequestSortType) MarshalJSON() ([]byte, error) {

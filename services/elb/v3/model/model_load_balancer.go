@@ -151,6 +151,10 @@ func GetLoadBalancerElbVirsubnetTypeEnum() LoadBalancerElbVirsubnetTypeEnum {
 	}
 }
 
+func (c LoadBalancerElbVirsubnetType) Value() string {
+	return c.value
+}
+
 func (c LoadBalancerElbVirsubnetType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

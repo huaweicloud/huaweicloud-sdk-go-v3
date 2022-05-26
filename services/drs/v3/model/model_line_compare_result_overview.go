@@ -71,6 +71,10 @@ func GetLineCompareResultOverviewLineCompareResultEnum() LineCompareResultOvervi
 	}
 }
 
+func (c LineCompareResultOverviewLineCompareResult) Value() string {
+	return c.value
+}
+
 func (c LineCompareResultOverviewLineCompareResult) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

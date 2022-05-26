@@ -59,6 +59,10 @@ func GetShowInstanceExtendProductInfoRequestTypeEnum() ShowInstanceExtendProduct
 	}
 }
 
+func (c ShowInstanceExtendProductInfoRequestType) Value() string {
+	return c.value
+}
+
 func (c ShowInstanceExtendProductInfoRequestType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

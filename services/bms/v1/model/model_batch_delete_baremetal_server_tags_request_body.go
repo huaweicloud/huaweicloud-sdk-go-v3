@@ -44,6 +44,10 @@ func GetBatchDeleteBaremetalServerTagsRequestBodyActionEnum() BatchDeleteBaremet
 	}
 }
 
+func (c BatchDeleteBaremetalServerTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c BatchDeleteBaremetalServerTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -46,6 +46,10 @@ func GetCreateCompareTaskReqObjectLevelCompareTypeEnum() CreateCompareTaskReqObj
 	}
 }
 
+func (c CreateCompareTaskReqObjectLevelCompareType) Value() string {
+	return c.value
+}
+
 func (c CreateCompareTaskReqObjectLevelCompareType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

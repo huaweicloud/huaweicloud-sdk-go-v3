@@ -94,6 +94,10 @@ func GetVulnItemSeverityEnum() VulnItemSeverityEnum {
 	}
 }
 
+func (c VulnItemSeverity) Value() string {
+	return c.value
+}
+
 func (c VulnItemSeverity) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -134,6 +138,10 @@ func GetVulnItemVulnStatusEnum() VulnItemVulnStatusEnum {
 			value: "false_report",
 		},
 	}
+}
+
+func (c VulnItemVulnStatus) Value() string {
+	return c.value
 }
 
 func (c VulnItemVulnStatus) MarshalJSON() ([]byte, error) {

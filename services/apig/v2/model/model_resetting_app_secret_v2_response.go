@@ -75,6 +75,10 @@ func GetResettingAppSecretV2ResponseCreatorEnum() ResettingAppSecretV2ResponseCr
 	}
 }
 
+func (c ResettingAppSecretV2ResponseCreator) Value() string {
+	return c.value
+}
+
 func (c ResettingAppSecretV2ResponseCreator) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -107,6 +111,10 @@ func GetResettingAppSecretV2ResponseStatusEnum() ResettingAppSecretV2ResponseSta
 			value: 1,
 		},
 	}
+}
+
+func (c ResettingAppSecretV2ResponseStatus) Value() int32 {
+	return c.value
 }
 
 func (c ResettingAppSecretV2ResponseStatus) MarshalJSON() ([]byte, error) {
@@ -145,6 +153,10 @@ func GetResettingAppSecretV2ResponseAppTypeEnum() ResettingAppSecretV2ResponseAp
 			value: "roma",
 		},
 	}
+}
+
+func (c ResettingAppSecretV2ResponseAppType) Value() string {
+	return c.value
 }
 
 func (c ResettingAppSecretV2ResponseAppType) MarshalJSON() ([]byte, error) {

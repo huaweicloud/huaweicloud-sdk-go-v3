@@ -95,6 +95,10 @@ func GetTaskBasicRspTaskTypeEnum() TaskBasicRspTaskTypeEnum {
 	}
 }
 
+func (c TaskBasicRspTaskType) Value() string {
+	return c.value
+}
+
 func (c TaskBasicRspTaskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -131,6 +135,10 @@ func GetTaskBasicRspStatusEnum() TaskBasicRspStatusEnum {
 			value: "running",
 		},
 	}
+}
+
+func (c TaskBasicRspStatus) Value() string {
+	return c.value
 }
 
 func (c TaskBasicRspStatus) MarshalJSON() ([]byte, error) {

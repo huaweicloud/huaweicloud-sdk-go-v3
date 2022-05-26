@@ -59,6 +59,10 @@ func GetUpdateNatGatewayOptionSpecEnum() UpdateNatGatewayOptionSpecEnum {
 	}
 }
 
+func (c UpdateNatGatewayOptionSpec) Value() string {
+	return c.value
+}
+
 func (c UpdateNatGatewayOptionSpec) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -64,6 +64,10 @@ func GetShowApiVersionParamsStatusEnum() ShowApiVersionParamsStatusEnum {
 	}
 }
 
+func (c ShowApiVersionParamsStatus) Value() string {
+	return c.value
+}
+
 func (c ShowApiVersionParamsStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

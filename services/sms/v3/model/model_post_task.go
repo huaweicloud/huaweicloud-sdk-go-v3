@@ -82,6 +82,10 @@ func GetPostTaskTypeEnum() PostTaskTypeEnum {
 	}
 }
 
+func (c PostTaskType) Value() string {
+	return c.value
+}
+
 func (c PostTaskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -109,6 +109,10 @@ func GetShowEngineResponseAuthTypeEnum() ShowEngineResponseAuthTypeEnum {
 	}
 }
 
+func (c ShowEngineResponseAuthType) Value() string {
+	return c.value
+}
+
 func (c ShowEngineResponseAuthType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -187,6 +191,10 @@ func GetShowEngineResponseStatusEnum() ShowEngineResponseStatusEnum {
 	}
 }
 
+func (c ShowEngineResponseStatus) Value() string {
+	return c.value
+}
+
 func (c ShowEngineResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -233,6 +241,10 @@ func GetShowEngineResponseEngineAdditionalActionsEnum() ShowEngineResponseEngine
 	}
 }
 
+func (c ShowEngineResponseEngineAdditionalActions) Value() string {
+	return c.value
+}
+
 func (c ShowEngineResponseEngineAdditionalActions) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -275,6 +287,10 @@ func GetShowEngineResponseSpecTypeEnum() ShowEngineResponseSpecTypeEnum {
 	}
 }
 
+func (c ShowEngineResponseSpecType) Value() string {
+	return c.value
+}
+
 func (c ShowEngineResponseSpecType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -311,6 +327,10 @@ func GetShowEngineResponseTypeEnum() ShowEngineResponseTypeEnum {
 			value: "CSE_Share",
 		},
 	}
+}
+
+func (c ShowEngineResponseType) Value() string {
+	return c.value
 }
 
 func (c ShowEngineResponseType) MarshalJSON() ([]byte, error) {

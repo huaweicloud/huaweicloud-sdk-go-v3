@@ -76,6 +76,10 @@ func GetShowMigprojectResponseTypeEnum() ShowMigprojectResponseTypeEnum {
 	}
 }
 
+func (c ShowMigprojectResponseType) Value() string {
+	return c.value
+}
+
 func (c ShowMigprojectResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

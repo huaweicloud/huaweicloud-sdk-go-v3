@@ -44,6 +44,10 @@ func GetCinderListQuotasRequestUsageEnum() CinderListQuotasRequestUsageEnum {
 	}
 }
 
+func (c CinderListQuotasRequestUsage) Value() string {
+	return c.value
+}
+
 func (c CinderListQuotasRequestUsage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

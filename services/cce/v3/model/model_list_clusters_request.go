@@ -93,6 +93,10 @@ func GetListClustersRequestStatusEnum() ListClustersRequestStatusEnum {
 	}
 }
 
+func (c ListClustersRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListClustersRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -129,6 +133,10 @@ func GetListClustersRequestTypeEnum() ListClustersRequestTypeEnum {
 			value: "ARM64",
 		},
 	}
+}
+
+func (c ListClustersRequestType) Value() string {
+	return c.value
 }
 
 func (c ListClustersRequestType) MarshalJSON() ([]byte, error) {

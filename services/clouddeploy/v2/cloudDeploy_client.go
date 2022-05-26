@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/clouddeploy/v2/model"
 )
 
@@ -19,7 +19,7 @@ func CloudDeployClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 通过模板新建部署任务
+// CreateDeployTaskByTemplate 通过模板新建部署任务
 //
 // 通过模板新建部署任务cloudpipeline流水线调用。
 //
@@ -35,7 +35,13 @@ func (c *CloudDeployClient) CreateDeployTaskByTemplate(request *model.CreateDepl
 	}
 }
 
-// 删除部署任务
+// CreateDeployTaskByTemplateInvoker 通过模板新建部署任务
+func (c *CloudDeployClient) CreateDeployTaskByTemplateInvoker(request *model.CreateDeployTaskByTemplateRequest) *CreateDeployTaskByTemplateInvoker {
+	requestDef := GenReqDefForCreateDeployTaskByTemplate()
+	return &CreateDeployTaskByTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDeployTask 删除部署任务
 //
 // 根据部署任务id删除部署任务。
 //
@@ -51,7 +57,13 @@ func (c *CloudDeployClient) DeleteDeployTask(request *model.DeleteDeployTaskRequ
 	}
 }
 
-// 根据开始时间和结束时间查询项目下指定任务的历史执行记录列表
+// DeleteDeployTaskInvoker 删除部署任务
+func (c *CloudDeployClient) DeleteDeployTaskInvoker(request *model.DeleteDeployTaskRequest) *DeleteDeployTaskInvoker {
+	requestDef := GenReqDefForDeleteDeployTask()
+	return &DeleteDeployTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDeployTaskHistoryByDate 根据开始时间和结束时间查询项目下指定任务的历史执行记录列表
 //
 // 根据开始时间和结束时间查询项目下指定任务的历史执行记录列表
 //
@@ -67,7 +79,13 @@ func (c *CloudDeployClient) ListDeployTaskHistoryByDate(request *model.ListDeplo
 	}
 }
 
-// 获取部署任务列表
+// ListDeployTaskHistoryByDateInvoker 根据开始时间和结束时间查询项目下指定任务的历史执行记录列表
+func (c *CloudDeployClient) ListDeployTaskHistoryByDateInvoker(request *model.ListDeployTaskHistoryByDateRequest) *ListDeployTaskHistoryByDateInvoker {
+	requestDef := GenReqDefForListDeployTaskHistoryByDate()
+	return &ListDeployTaskHistoryByDateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDeployTasks 获取部署任务列表
 //
 // 查询项目下部署任务列表
 //
@@ -83,7 +101,13 @@ func (c *CloudDeployClient) ListDeployTasks(request *model.ListDeployTasksReques
 	}
 }
 
-// 获取部署任务详情
+// ListDeployTasksInvoker 获取部署任务列表
+func (c *CloudDeployClient) ListDeployTasksInvoker(request *model.ListDeployTasksRequest) *ListDeployTasksInvoker {
+	requestDef := GenReqDefForListDeployTasks()
+	return &ListDeployTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDeployTaskDetail 获取部署任务详情
 //
 // 根据部署任务id获取部署任务详情。
 //
@@ -99,7 +123,13 @@ func (c *CloudDeployClient) ShowDeployTaskDetail(request *model.ShowDeployTaskDe
 	}
 }
 
-// 启动部署任务
+// ShowDeployTaskDetailInvoker 获取部署任务详情
+func (c *CloudDeployClient) ShowDeployTaskDetailInvoker(request *model.ShowDeployTaskDetailRequest) *ShowDeployTaskDetailInvoker {
+	requestDef := GenReqDefForShowDeployTaskDetail()
+	return &ShowDeployTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartDeployTask 启动部署任务
 //
 // 根据部署任务id启动部署任务。
 //
@@ -115,7 +145,13 @@ func (c *CloudDeployClient) StartDeployTask(request *model.StartDeployTaskReques
 	}
 }
 
-// 新建主机
+// StartDeployTaskInvoker 启动部署任务
+func (c *CloudDeployClient) StartDeployTaskInvoker(request *model.StartDeployTaskRequest) *StartDeployTaskInvoker {
+	requestDef := GenReqDefForStartDeployTask()
+	return &StartDeployTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDeploymentHost 新建主机
 //
 // 在指定主机组下新建主机。
 //
@@ -131,7 +167,13 @@ func (c *CloudDeployClient) CreateDeploymentHost(request *model.CreateDeployment
 	}
 }
 
-// 删除主机
+// CreateDeploymentHostInvoker 新建主机
+func (c *CloudDeployClient) CreateDeploymentHostInvoker(request *model.CreateDeploymentHostRequest) *CreateDeploymentHostInvoker {
+	requestDef := GenReqDefForCreateDeploymentHost()
+	return &CreateDeploymentHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDeploymentHost 删除主机
 //
 // 根据主机id删除主机。
 //
@@ -147,7 +189,13 @@ func (c *CloudDeployClient) DeleteDeploymentHost(request *model.DeleteDeployment
 	}
 }
 
-// 查询主机列表
+// DeleteDeploymentHostInvoker 删除主机
+func (c *CloudDeployClient) DeleteDeploymentHostInvoker(request *model.DeleteDeploymentHostRequest) *DeleteDeploymentHostInvoker {
+	requestDef := GenReqDefForDeleteDeploymentHost()
+	return &DeleteDeploymentHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHosts 查询主机列表
 //
 // 根据主机组id查询指定主机组下的主机列表。
 //
@@ -163,7 +211,13 @@ func (c *CloudDeployClient) ListHosts(request *model.ListHostsRequest) (*model.L
 	}
 }
 
-// 查询主机详情
+// ListHostsInvoker 查询主机列表
+func (c *CloudDeployClient) ListHostsInvoker(request *model.ListHostsRequest) *ListHostsInvoker {
+	requestDef := GenReqDefForListHosts()
+	return &ListHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDeploymentHostDetail 查询主机详情
 //
 // 根据主机id查询主机详情。
 //
@@ -179,7 +233,13 @@ func (c *CloudDeployClient) ShowDeploymentHostDetail(request *model.ShowDeployme
 	}
 }
 
-// 修改主机
+// ShowDeploymentHostDetailInvoker 查询主机详情
+func (c *CloudDeployClient) ShowDeploymentHostDetailInvoker(request *model.ShowDeploymentHostDetailRequest) *ShowDeploymentHostDetailInvoker {
+	requestDef := GenReqDefForShowDeploymentHostDetail()
+	return &ShowDeploymentHostDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDeploymentHost 修改主机
 //
 // 根据主机id修改主机信息。
 //
@@ -195,7 +255,13 @@ func (c *CloudDeployClient) UpdateDeploymentHost(request *model.UpdateDeployment
 	}
 }
 
-// 新建主机组
+// UpdateDeploymentHostInvoker 修改主机
+func (c *CloudDeployClient) UpdateDeploymentHostInvoker(request *model.UpdateDeploymentHostRequest) *UpdateDeploymentHostInvoker {
+	requestDef := GenReqDefForUpdateDeploymentHost()
+	return &UpdateDeploymentHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDeploymentGroup 新建主机组
 //
 // 在项目下新建主机组。
 //
@@ -211,7 +277,13 @@ func (c *CloudDeployClient) CreateDeploymentGroup(request *model.CreateDeploymen
 	}
 }
 
-// 删除主机组
+// CreateDeploymentGroupInvoker 新建主机组
+func (c *CloudDeployClient) CreateDeploymentGroupInvoker(request *model.CreateDeploymentGroupRequest) *CreateDeploymentGroupInvoker {
+	requestDef := GenReqDefForCreateDeploymentGroup()
+	return &CreateDeploymentGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDeploymentGroup 删除主机组
 //
 // 根据主机组id删除主机组。
 //
@@ -227,7 +299,13 @@ func (c *CloudDeployClient) DeleteDeploymentGroup(request *model.DeleteDeploymen
 	}
 }
 
-// 查询主机组列表
+// DeleteDeploymentGroupInvoker 删除主机组
+func (c *CloudDeployClient) DeleteDeploymentGroupInvoker(request *model.DeleteDeploymentGroupRequest) *DeleteDeploymentGroupInvoker {
+	requestDef := GenReqDefForDeleteDeploymentGroup()
+	return &DeleteDeploymentGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHostGroups 查询主机组列表
 //
 // 按条件查询主机组列表。
 //
@@ -243,7 +321,13 @@ func (c *CloudDeployClient) ListHostGroups(request *model.ListHostGroupsRequest)
 	}
 }
 
-// 查询主机组
+// ListHostGroupsInvoker 查询主机组列表
+func (c *CloudDeployClient) ListHostGroupsInvoker(request *model.ListHostGroupsRequest) *ListHostGroupsInvoker {
+	requestDef := GenReqDefForListHostGroups()
+	return &ListHostGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDeploymentGroupDetail 查询主机组
 //
 // 根据主机组id查询主机组详情。
 //
@@ -259,7 +343,13 @@ func (c *CloudDeployClient) ShowDeploymentGroupDetail(request *model.ShowDeploym
 	}
 }
 
-// 修改主机组
+// ShowDeploymentGroupDetailInvoker 查询主机组
+func (c *CloudDeployClient) ShowDeploymentGroupDetailInvoker(request *model.ShowDeploymentGroupDetailRequest) *ShowDeploymentGroupDetailInvoker {
+	requestDef := GenReqDefForShowDeploymentGroupDetail()
+	return &ShowDeploymentGroupDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDeploymentGroup 修改主机组
 //
 // 根据主机组id修改主机组信息。
 //
@@ -275,7 +365,13 @@ func (c *CloudDeployClient) UpdateDeploymentGroup(request *model.UpdateDeploymen
 	}
 }
 
-// 获取指定任务的部署任务执行成功率
+// UpdateDeploymentGroupInvoker 修改主机组
+func (c *CloudDeployClient) UpdateDeploymentGroupInvoker(request *model.UpdateDeploymentGroupRequest) *UpdateDeploymentGroupInvoker {
+	requestDef := GenReqDefForUpdateDeploymentGroup()
+	return &UpdateDeploymentGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTaskSuccessRate 获取指定任务的部署任务执行成功率
 //
 // 获取指定任务的部署任务执行成功率
 //
@@ -291,7 +387,13 @@ func (c *CloudDeployClient) ListTaskSuccessRate(request *model.ListTaskSuccessRa
 	}
 }
 
-// 获取指定项目的部署任务执行成功率
+// ListTaskSuccessRateInvoker 获取指定任务的部署任务执行成功率
+func (c *CloudDeployClient) ListTaskSuccessRateInvoker(request *model.ListTaskSuccessRateRequest) *ListTaskSuccessRateInvoker {
+	requestDef := GenReqDefForListTaskSuccessRate()
+	return &ListTaskSuccessRateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProjectSuccessRate 获取指定项目的部署任务执行成功率
 //
 // 获取指定项目的部署任务执行成功率
 //
@@ -305,4 +407,10 @@ func (c *CloudDeployClient) ShowProjectSuccessRate(request *model.ShowProjectSuc
 	} else {
 		return resp.(*model.ShowProjectSuccessRateResponse), nil
 	}
+}
+
+// ShowProjectSuccessRateInvoker 获取指定项目的部署任务执行成功率
+func (c *CloudDeployClient) ShowProjectSuccessRateInvoker(request *model.ShowProjectSuccessRateRequest) *ShowProjectSuccessRateInvoker {
+	requestDef := GenReqDefForShowProjectSuccessRate()
+	return &ShowProjectSuccessRateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

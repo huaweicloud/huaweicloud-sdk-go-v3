@@ -18,6 +18,15 @@ type ImageBatchModerationResultBody struct {
 
 	// 具体每个场景的检测结果。  block：包含敏感信息，不通过  pass：不包含敏感信息，通过  review：需要人工复检
 	CategorySuggestions *interface{} `json:"category_suggestions,omitempty"`
+
+	// ocr识别结果。
+	OcrText *string `json:"ocr_text,omitempty"`
+
+	// 图像审核失败时错误码
+	ErrorCode *string `json:"error_code,omitempty"`
+
+	// 图像审核失败时错误信息
+	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 
 func (o ImageBatchModerationResultBody) String() string {

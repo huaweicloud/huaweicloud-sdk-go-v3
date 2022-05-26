@@ -67,6 +67,10 @@ func GetMultiModalConfigVideoFormatEnum() MultiModalConfigVideoFormatEnum {
 	}
 }
 
+func (c MultiModalConfigVideoFormat) Value() string {
+	return c.value
+}
+
 func (c MultiModalConfigVideoFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -99,6 +103,10 @@ func GetMultiModalConfigLanguageEnum() MultiModalConfigLanguageEnum {
 			value: "en_gb",
 		},
 	}
+}
+
+func (c MultiModalConfigLanguage) Value() string {
+	return c.value
 }
 
 func (c MultiModalConfigLanguage) MarshalJSON() ([]byte, error) {
@@ -137,6 +145,10 @@ func GetMultiModalConfigModeEnum() MultiModalConfigModeEnum {
 			value: "sentence",
 		},
 	}
+}
+
+func (c MultiModalConfigMode) Value() string {
+	return c.value
 }
 
 func (c MultiModalConfigMode) MarshalJSON() ([]byte, error) {

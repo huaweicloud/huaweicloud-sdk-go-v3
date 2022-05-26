@@ -85,6 +85,10 @@ func GetScanJobCycleEnum() ScanJobCycleEnum {
 	}
 }
 
+func (c ScanJobCycle) Value() string {
+	return c.value
+}
+
 func (c ScanJobCycle) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -141,6 +145,10 @@ func GetScanJobStatusEnum() ScanJobStatusEnum {
 			value: "TERMINATED",
 		},
 	}
+}
+
+func (c ScanJobStatus) Value() string {
+	return c.value
 }
 
 func (c ScanJobStatus) MarshalJSON() ([]byte, error) {

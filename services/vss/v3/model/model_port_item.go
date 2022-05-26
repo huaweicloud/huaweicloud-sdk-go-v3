@@ -53,6 +53,10 @@ func GetPortItemProtocolEnum() PortItemProtocolEnum {
 	}
 }
 
+func (c PortItemProtocol) Value() string {
+	return c.value
+}
+
 func (c PortItemProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -89,6 +93,10 @@ func GetPortItemStatusEnum() PortItemStatusEnum {
 			value: "open",
 		},
 	}
+}
+
+func (c PortItemStatus) Value() string {
+	return c.value
 }
 
 func (c PortItemStatus) MarshalJSON() ([]byte, error) {

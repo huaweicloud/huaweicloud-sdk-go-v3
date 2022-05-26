@@ -98,6 +98,10 @@ func GetImportApiDefinitionsV2RequestBodyExtendModeEnum() ImportApiDefinitionsV2
 	}
 }
 
+func (c ImportApiDefinitionsV2RequestBodyExtendMode) Value() string {
+	return c.value
+}
+
 func (c ImportApiDefinitionsV2RequestBodyExtendMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -134,6 +138,10 @@ func GetImportApiDefinitionsV2RequestBodyApiModeEnum() ImportApiDefinitionsV2Req
 			value: "override",
 		},
 	}
+}
+
+func (c ImportApiDefinitionsV2RequestBodyApiMode) Value() string {
+	return c.value
 }
 
 func (c ImportApiDefinitionsV2RequestBodyApiMode) MarshalJSON() ([]byte, error) {

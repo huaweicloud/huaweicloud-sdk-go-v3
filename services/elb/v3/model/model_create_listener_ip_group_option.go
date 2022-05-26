@@ -51,6 +51,10 @@ func GetCreateListenerIpGroupOptionTypeEnum() CreateListenerIpGroupOptionTypeEnu
 	}
 }
 
+func (c CreateListenerIpGroupOptionType) Value() string {
+	return c.value
+}
+
 func (c CreateListenerIpGroupOptionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

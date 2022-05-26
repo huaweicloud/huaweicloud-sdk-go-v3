@@ -106,6 +106,10 @@ func GetSubnetStatusEnum() SubnetStatusEnum {
 	}
 }
 
+func (c SubnetStatus) Value() string {
+	return c.value
+}
+
 func (c SubnetStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

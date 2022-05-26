@@ -44,6 +44,10 @@ func GetUpdateTriggerRequestBodyTriggerStatusEnum() UpdateTriggerRequestBodyTrig
 	}
 }
 
+func (c UpdateTriggerRequestBodyTriggerStatus) Value() string {
+	return c.value
+}
+
 func (c UpdateTriggerRequestBodyTriggerStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

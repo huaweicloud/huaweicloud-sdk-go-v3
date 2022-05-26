@@ -262,6 +262,10 @@ func GetShowMqsInstanceResponseTypeEnum() ShowMqsInstanceResponseTypeEnum {
 	}
 }
 
+func (c ShowMqsInstanceResponseType) Value() string {
+	return c.value
+}
+
 func (c ShowMqsInstanceResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -298,6 +302,10 @@ func GetShowMqsInstanceResponseRetentionPolicyEnum() ShowMqsInstanceResponseRete
 			value: "produce_reject",
 		},
 	}
+}
+
+func (c ShowMqsInstanceResponseRetentionPolicy) Value() string {
+	return c.value
 }
 
 func (c ShowMqsInstanceResponseRetentionPolicy) MarshalJSON() ([]byte, error) {

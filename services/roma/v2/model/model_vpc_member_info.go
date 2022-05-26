@@ -75,6 +75,10 @@ func GetVpcMemberInfoStatusEnum() VpcMemberInfoStatusEnum {
 	}
 }
 
+func (c VpcMemberInfoStatus) Value() int32 {
+	return c.value
+}
+
 func (c VpcMemberInfoStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

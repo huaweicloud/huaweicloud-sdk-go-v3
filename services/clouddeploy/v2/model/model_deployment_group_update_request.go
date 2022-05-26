@@ -56,6 +56,10 @@ func GetDeploymentGroupUpdateRequestAutoConnectionTestSwitchEnum() DeploymentGro
 	}
 }
 
+func (c DeploymentGroupUpdateRequestAutoConnectionTestSwitch) Value() int32 {
+	return c.value
+}
+
 func (c DeploymentGroupUpdateRequestAutoConnectionTestSwitch) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

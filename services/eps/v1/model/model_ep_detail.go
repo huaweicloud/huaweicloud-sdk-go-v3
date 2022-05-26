@@ -62,6 +62,10 @@ func GetEpDetailTypeEnum() EpDetailTypeEnum {
 	}
 }
 
+func (c EpDetailType) Value() string {
+	return c.value
+}
+
 func (c EpDetailType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

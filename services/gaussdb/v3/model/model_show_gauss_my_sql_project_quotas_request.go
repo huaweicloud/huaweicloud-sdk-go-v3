@@ -44,6 +44,10 @@ func GetShowGaussMySqlProjectQuotasRequestTypeEnum() ShowGaussMySqlProjectQuotas
 	}
 }
 
+func (c ShowGaussMySqlProjectQuotasRequestType) Value() string {
+	return c.value
+}
+
 func (c ShowGaussMySqlProjectQuotasRequestType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

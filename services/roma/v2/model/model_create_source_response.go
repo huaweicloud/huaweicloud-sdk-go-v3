@@ -66,6 +66,10 @@ func GetCreateSourceResponseIsBase64Enum() CreateSourceResponseIsBase64Enum {
 	}
 }
 
+func (c CreateSourceResponseIsBase64) Value() int32 {
+	return c.value
+}
+
 func (c CreateSourceResponseIsBase64) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -101,6 +105,10 @@ func GetCreateSourceResponseContainDeviceInfoEnum() CreateSourceResponseContainD
 			value: 1,
 		},
 	}
+}
+
+func (c CreateSourceResponseContainDeviceInfo) Value() int32 {
+	return c.value
 }
 
 func (c CreateSourceResponseContainDeviceInfo) MarshalJSON() ([]byte, error) {

@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpcep/v1/model"
 )
 
@@ -19,7 +19,7 @@ func VpcepClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 接受或拒绝终端节点的连接
+// AcceptOrRejectEndpoint 接受或拒绝终端节点的连接
 //
 // 功能介绍
 // 接受或者拒绝终端节点连接到当前的终端节点服务。
@@ -36,7 +36,13 @@ func (c *VpcepClient) AcceptOrRejectEndpoint(request *model.AcceptOrRejectEndpoi
 	}
 }
 
-// 批量添加或移除终端节点服务的白名单
+// AcceptOrRejectEndpointInvoker 接受或拒绝终端节点的连接
+func (c *VpcepClient) AcceptOrRejectEndpointInvoker(request *model.AcceptOrRejectEndpointRequest) *AcceptOrRejectEndpointInvoker {
+	requestDef := GenReqDefForAcceptOrRejectEndpoint()
+	return &AcceptOrRejectEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddOrRemoveServicePermissions 批量添加或移除终端节点服务的白名单
 //
 // 功能介绍
 // 批量添加或移除当前用户下终端节点服务的白名单。
@@ -55,7 +61,13 @@ func (c *VpcepClient) AddOrRemoveServicePermissions(request *model.AddOrRemoveSe
 	}
 }
 
-// 创建终端节点
+// AddOrRemoveServicePermissionsInvoker 批量添加或移除终端节点服务的白名单
+func (c *VpcepClient) AddOrRemoveServicePermissionsInvoker(request *model.AddOrRemoveServicePermissionsRequest) *AddOrRemoveServicePermissionsInvoker {
+	requestDef := GenReqDefForAddOrRemoveServicePermissions()
+	return &AddOrRemoveServicePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEndpoint 创建终端节点
 //
 // 功能介绍
 // 创建终端节点，以便访问终端节点服务。
@@ -72,7 +84,13 @@ func (c *VpcepClient) CreateEndpoint(request *model.CreateEndpointRequest) (*mod
 	}
 }
 
-// 创建终端节点服务
+// CreateEndpointInvoker 创建终端节点
+func (c *VpcepClient) CreateEndpointInvoker(request *model.CreateEndpointRequest) *CreateEndpointInvoker {
+	requestDef := GenReqDefForCreateEndpoint()
+	return &CreateEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEndpointService 创建终端节点服务
 //
 // 功能介绍
 // 创建终端节点服务，允许其他用户创建终端节点连接您创建的终端节点服务，使用您所提供的服务。
@@ -91,7 +109,13 @@ func (c *VpcepClient) CreateEndpointService(request *model.CreateEndpointService
 	}
 }
 
-// 删除终端节点
+// CreateEndpointServiceInvoker 创建终端节点服务
+func (c *VpcepClient) CreateEndpointServiceInvoker(request *model.CreateEndpointServiceRequest) *CreateEndpointServiceInvoker {
+	requestDef := GenReqDefForCreateEndpointService()
+	return &CreateEndpointServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEndpoint 删除终端节点
 //
 // 功能介绍
 // 删除终端节点。
@@ -108,7 +132,13 @@ func (c *VpcepClient) DeleteEndpoint(request *model.DeleteEndpointRequest) (*mod
 	}
 }
 
-// 删除终端节点服务
+// DeleteEndpointInvoker 删除终端节点
+func (c *VpcepClient) DeleteEndpointInvoker(request *model.DeleteEndpointRequest) *DeleteEndpointInvoker {
+	requestDef := GenReqDefForDeleteEndpoint()
+	return &DeleteEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEndpointService 删除终端节点服务
 //
 // 功能介绍
 // 删除终端节点服务。
@@ -125,7 +155,13 @@ func (c *VpcepClient) DeleteEndpointService(request *model.DeleteEndpointService
 	}
 }
 
-// 查询终端节点详情
+// DeleteEndpointServiceInvoker 删除终端节点服务
+func (c *VpcepClient) DeleteEndpointServiceInvoker(request *model.DeleteEndpointServiceRequest) *DeleteEndpointServiceInvoker {
+	requestDef := GenReqDefForDeleteEndpointService()
+	return &DeleteEndpointServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEndpointInfoDetails 查询终端节点详情
 //
 // 功能介绍
 // 查询终端节点的详细信息。
@@ -142,7 +178,13 @@ func (c *VpcepClient) ListEndpointInfoDetails(request *model.ListEndpointInfoDet
 	}
 }
 
-// 查询终端节点服务列表
+// ListEndpointInfoDetailsInvoker 查询终端节点详情
+func (c *VpcepClient) ListEndpointInfoDetailsInvoker(request *model.ListEndpointInfoDetailsRequest) *ListEndpointInfoDetailsInvoker {
+	requestDef := GenReqDefForListEndpointInfoDetails()
+	return &ListEndpointInfoDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEndpointService 查询终端节点服务列表
 //
 // 功能介绍
 // 查询当前用户下的终端节点服务的列表。
@@ -159,7 +201,13 @@ func (c *VpcepClient) ListEndpointService(request *model.ListEndpointServiceRequ
 	}
 }
 
-// 查询终端节点列表
+// ListEndpointServiceInvoker 查询终端节点服务列表
+func (c *VpcepClient) ListEndpointServiceInvoker(request *model.ListEndpointServiceRequest) *ListEndpointServiceInvoker {
+	requestDef := GenReqDefForListEndpointService()
+	return &ListEndpointServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEndpoints 查询终端节点列表
 //
 // 功能介绍
 // 查询当前用户下的终端节点的列表。
@@ -176,7 +224,13 @@ func (c *VpcepClient) ListEndpoints(request *model.ListEndpointsRequest) (*model
 	}
 }
 
-// 查询配额
+// ListEndpointsInvoker 查询终端节点列表
+func (c *VpcepClient) ListEndpointsInvoker(request *model.ListEndpointsRequest) *ListEndpointsInvoker {
+	requestDef := GenReqDefForListEndpoints()
+	return &ListEndpointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQuotaDetails 查询配额
 //
 // 功能介绍
 // 查询用户的资源配额，包括终端节点服务和终端节点。
@@ -193,7 +247,13 @@ func (c *VpcepClient) ListQuotaDetails(request *model.ListQuotaDetailsRequest) (
 	}
 }
 
-// 查询连接终端节点服务的连接列表
+// ListQuotaDetailsInvoker 查询配额
+func (c *VpcepClient) ListQuotaDetailsInvoker(request *model.ListQuotaDetailsRequest) *ListQuotaDetailsInvoker {
+	requestDef := GenReqDefForListQuotaDetails()
+	return &ListQuotaDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServiceConnections 查询连接终端节点服务的连接列表
 //
 // 功能介绍
 // 查询连接当前用户下的某一个终端节点服务的连接列表。marker_id是连接的唯一标识。
@@ -210,7 +270,13 @@ func (c *VpcepClient) ListServiceConnections(request *model.ListServiceConnectio
 	}
 }
 
-// 查询终端节点服务概要
+// ListServiceConnectionsInvoker 查询连接终端节点服务的连接列表
+func (c *VpcepClient) ListServiceConnectionsInvoker(request *model.ListServiceConnectionsRequest) *ListServiceConnectionsInvoker {
+	requestDef := GenReqDefForListServiceConnections()
+	return &ListServiceConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServiceDescribeDetails 查询终端节点服务概要
 //
 // 功能介绍
 // 查询终端节点服务的概要信息，此接口是供创建终端节点的用户来查询需要连接的终端节点服务信息。此接口既可以方便其他用户查询到您的终端节点服务概要信息又可以避免您的终端节点服务的细节信息暴露给其他用户。
@@ -227,7 +293,13 @@ func (c *VpcepClient) ListServiceDescribeDetails(request *model.ListServiceDescr
 	}
 }
 
-// 查询终端节点服务详情
+// ListServiceDescribeDetailsInvoker 查询终端节点服务概要
+func (c *VpcepClient) ListServiceDescribeDetailsInvoker(request *model.ListServiceDescribeDetailsRequest) *ListServiceDescribeDetailsInvoker {
+	requestDef := GenReqDefForListServiceDescribeDetails()
+	return &ListServiceDescribeDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServiceDetails 查询终端节点服务详情
 //
 // 功能介绍
 // 查询终端节点服务的详细信息。
@@ -244,7 +316,13 @@ func (c *VpcepClient) ListServiceDetails(request *model.ListServiceDetailsReques
 	}
 }
 
-// 查询终端节点服务的白名单列表
+// ListServiceDetailsInvoker 查询终端节点服务详情
+func (c *VpcepClient) ListServiceDetailsInvoker(request *model.ListServiceDetailsRequest) *ListServiceDetailsInvoker {
+	requestDef := GenReqDefForListServiceDetails()
+	return &ListServiceDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServicePermissionsDetails 查询终端节点服务的白名单列表
 //
 // 功能介绍
 // 查询当前用户下终端节点服务的白名单列表。
@@ -263,7 +341,13 @@ func (c *VpcepClient) ListServicePermissionsDetails(request *model.ListServicePe
 	}
 }
 
-// 查询公共终端节点服务列表
+// ListServicePermissionsDetailsInvoker 查询终端节点服务的白名单列表
+func (c *VpcepClient) ListServicePermissionsDetailsInvoker(request *model.ListServicePermissionsDetailsRequest) *ListServicePermissionsDetailsInvoker {
+	requestDef := GenReqDefForListServicePermissionsDetails()
+	return &ListServicePermissionsDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServicePublicDetails 查询公共终端节点服务列表
 //
 // 功能介绍
 // 查询公共终端节点服务的列表，公共终端节点服务是所有用户可见且可连接的终端节点服务，由运维人员创建，用户可直接使用，但无权创建。
@@ -280,7 +364,13 @@ func (c *VpcepClient) ListServicePublicDetails(request *model.ListServicePublicD
 	}
 }
 
-// 查询指定VPC终端节点接口版本信息
+// ListServicePublicDetailsInvoker 查询公共终端节点服务列表
+func (c *VpcepClient) ListServicePublicDetailsInvoker(request *model.ListServicePublicDetailsRequest) *ListServicePublicDetailsInvoker {
+	requestDef := GenReqDefForListServicePublicDetails()
+	return &ListServicePublicDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSpecifiedVersionDetails 查询指定VPC终端节点接口版本信息
 //
 // 功能介绍
 // 查询指定VPC终端节点接口版本信息。
@@ -297,7 +387,13 @@ func (c *VpcepClient) ListSpecifiedVersionDetails(request *model.ListSpecifiedVe
 	}
 }
 
-// 查询VPC终端节点接口版本列表
+// ListSpecifiedVersionDetailsInvoker 查询指定VPC终端节点接口版本信息
+func (c *VpcepClient) ListSpecifiedVersionDetailsInvoker(request *model.ListSpecifiedVersionDetailsRequest) *ListSpecifiedVersionDetailsInvoker {
+	requestDef := GenReqDefForListSpecifiedVersionDetails()
+	return &ListSpecifiedVersionDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVersionDetails 查询VPC终端节点接口版本列表
 //
 // 功能介绍
 // 查询VPC终端节点接口版本列表。
@@ -314,7 +410,13 @@ func (c *VpcepClient) ListVersionDetails(request *model.ListVersionDetailsReques
 	}
 }
 
-// 修改终端节点路由表
+// ListVersionDetailsInvoker 查询VPC终端节点接口版本列表
+func (c *VpcepClient) ListVersionDetailsInvoker(request *model.ListVersionDetailsRequest) *ListVersionDetailsInvoker {
+	requestDef := GenReqDefForListVersionDetails()
+	return &ListVersionDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEndpointRoutetable 修改终端节点路由表
 //
 // 功能介绍
 // 修改终端节点路由表。
@@ -331,7 +433,13 @@ func (c *VpcepClient) UpdateEndpointRoutetable(request *model.UpdateEndpointRout
 	}
 }
 
-// 修改终端节点服务
+// UpdateEndpointRoutetableInvoker 修改终端节点路由表
+func (c *VpcepClient) UpdateEndpointRoutetableInvoker(request *model.UpdateEndpointRoutetableRequest) *UpdateEndpointRoutetableInvoker {
+	requestDef := GenReqDefForUpdateEndpointRoutetable()
+	return &UpdateEndpointRoutetableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEndpointService 修改终端节点服务
 //
 // 功能介绍
 // 修改终端节点服务。
@@ -348,7 +456,13 @@ func (c *VpcepClient) UpdateEndpointService(request *model.UpdateEndpointService
 	}
 }
 
-// 更新终端节点的白名单
+// UpdateEndpointServiceInvoker 修改终端节点服务
+func (c *VpcepClient) UpdateEndpointServiceInvoker(request *model.UpdateEndpointServiceRequest) *UpdateEndpointServiceInvoker {
+	requestDef := GenReqDefForUpdateEndpointService()
+	return &UpdateEndpointServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEndpointWhite 更新终端节点的白名单
 //
 // 功能介绍
 // 更新或删除允许访问终端节点的白名单。
@@ -365,7 +479,13 @@ func (c *VpcepClient) UpdateEndpointWhite(request *model.UpdateEndpointWhiteRequ
 	}
 }
 
-// 批量添加或删除资源标签接口
+// UpdateEndpointWhiteInvoker 更新终端节点的白名单
+func (c *VpcepClient) UpdateEndpointWhiteInvoker(request *model.UpdateEndpointWhiteRequest) *UpdateEndpointWhiteInvoker {
+	requestDef := GenReqDefForUpdateEndpointWhite()
+	return &UpdateEndpointWhiteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchAddOrRemoveResourceInstance 批量添加或删除资源标签接口
 //
 // 功能介绍
 // 为指定Endpoint Service或Endpoint批量添加或删除标签。
@@ -383,7 +503,13 @@ func (c *VpcepClient) BatchAddOrRemoveResourceInstance(request *model.BatchAddOr
 	}
 }
 
-// 查询租户资源标签接口
+// BatchAddOrRemoveResourceInstanceInvoker 批量添加或删除资源标签接口
+func (c *VpcepClient) BatchAddOrRemoveResourceInstanceInvoker(request *model.BatchAddOrRemoveResourceInstanceRequest) *BatchAddOrRemoveResourceInstanceInvoker {
+	requestDef := GenReqDefForBatchAddOrRemoveResourceInstance()
+	return &BatchAddOrRemoveResourceInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQueryProjectResourceTags 查询租户资源标签接口
 //
 // 功能介绍
 // 根据租户ID和资源类型，获取租户下资源的标签。
@@ -400,7 +526,13 @@ func (c *VpcepClient) ListQueryProjectResourceTags(request *model.ListQueryProje
 	}
 }
 
-// 查询资源实例接口
+// ListQueryProjectResourceTagsInvoker 查询租户资源标签接口
+func (c *VpcepClient) ListQueryProjectResourceTagsInvoker(request *model.ListQueryProjectResourceTagsRequest) *ListQueryProjectResourceTagsInvoker {
+	requestDef := GenReqDefForListQueryProjectResourceTags()
+	return &ListQueryProjectResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourceInstances 查询资源实例接口
 //
 // 功能介绍
 // 使用标签过滤查询租户下资源的实例。
@@ -415,4 +547,10 @@ func (c *VpcepClient) ListResourceInstances(request *model.ListResourceInstances
 	} else {
 		return resp.(*model.ListResourceInstancesResponse), nil
 	}
+}
+
+// ListResourceInstancesInvoker 查询资源实例接口
+func (c *VpcepClient) ListResourceInstancesInvoker(request *model.ListResourceInstancesRequest) *ListResourceInstancesInvoker {
+	requestDef := GenReqDefForListResourceInstances()
+	return &ListResourceInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -75,6 +75,10 @@ func GetCreateAnAppV2ResponseCreatorEnum() CreateAnAppV2ResponseCreatorEnum {
 	}
 }
 
+func (c CreateAnAppV2ResponseCreator) Value() string {
+	return c.value
+}
+
 func (c CreateAnAppV2ResponseCreator) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -107,6 +111,10 @@ func GetCreateAnAppV2ResponseStatusEnum() CreateAnAppV2ResponseStatusEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c CreateAnAppV2ResponseStatus) Value() int32 {
+	return c.value
 }
 
 func (c CreateAnAppV2ResponseStatus) MarshalJSON() ([]byte, error) {
@@ -145,6 +153,10 @@ func GetCreateAnAppV2ResponseAppTypeEnum() CreateAnAppV2ResponseAppTypeEnum {
 			value: "roma",
 		},
 	}
+}
+
+func (c CreateAnAppV2ResponseAppType) Value() string {
+	return c.value
 }
 
 func (c CreateAnAppV2ResponseAppType) MarshalJSON() ([]byte, error) {

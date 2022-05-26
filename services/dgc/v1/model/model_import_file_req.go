@@ -52,6 +52,10 @@ func GetImportFileReqSameNamePolicyEnum() ImportFileReqSameNamePolicyEnum {
 	}
 }
 
+func (c ImportFileReqSameNamePolicy) Value() string {
+	return c.value
+}
+
 func (c ImportFileReqSameNamePolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

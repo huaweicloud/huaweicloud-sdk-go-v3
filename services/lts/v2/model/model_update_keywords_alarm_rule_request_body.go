@@ -79,6 +79,10 @@ func GetUpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmLevelEnum() UpdateKeyword
 	}
 }
 
+func (c UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmLevel) Value() string {
+	return c.value
+}
+
 func (c UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmLevel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -120,6 +124,10 @@ func GetUpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCodeEnum() UpdateKeyw
 			value: 3,
 		},
 	}
+}
+
+func (c UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode) Value() int32 {
+	return c.value
 }
 
 func (c UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode) MarshalJSON() ([]byte, error) {

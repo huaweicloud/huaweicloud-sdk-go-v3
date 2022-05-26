@@ -89,6 +89,10 @@ func GetApiCheckInfoV2ReqMethodEnum() ApiCheckInfoV2ReqMethodEnum {
 	}
 }
 
+func (c ApiCheckInfoV2ReqMethod) Value() string {
+	return c.value
+}
+
 func (c ApiCheckInfoV2ReqMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -127,6 +131,10 @@ func GetApiCheckInfoV2MatchModeEnum() ApiCheckInfoV2MatchModeEnum {
 	}
 }
 
+func (c ApiCheckInfoV2MatchMode) Value() string {
+	return c.value
+}
+
 func (c ApiCheckInfoV2MatchMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -163,6 +171,10 @@ func GetApiCheckInfoV2TypeEnum() ApiCheckInfoV2TypeEnum {
 			value: "name",
 		},
 	}
+}
+
+func (c ApiCheckInfoV2Type) Value() string {
+	return c.value
 }
 
 func (c ApiCheckInfoV2Type) MarshalJSON() ([]byte, error) {

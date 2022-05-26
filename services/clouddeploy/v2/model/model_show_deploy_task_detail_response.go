@@ -124,6 +124,10 @@ func GetShowDeployTaskDetailResponseStateEnum() ShowDeployTaskDetailResponseStat
 	}
 }
 
+func (c ShowDeployTaskDetailResponseState) Value() string {
+	return c.value
+}
+
 func (c ShowDeployTaskDetailResponseState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

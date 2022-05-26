@@ -106,6 +106,10 @@ func GetUpdateHealthMonitorOptionHttpMethodEnum() UpdateHealthMonitorOptionHttpM
 	}
 }
 
+func (c UpdateHealthMonitorOptionHttpMethod) Value() string {
+	return c.value
+}
+
 func (c UpdateHealthMonitorOptionHttpMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -84,6 +84,10 @@ func GetDeploymentHostDetailOsEnum() DeploymentHostDetailOsEnum {
 	}
 }
 
+func (c DeploymentHostDetailOs) Value() string {
+	return c.value
+}
+
 func (c DeploymentHostDetailOs) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

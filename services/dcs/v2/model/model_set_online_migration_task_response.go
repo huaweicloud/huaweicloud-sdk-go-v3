@@ -60,6 +60,10 @@ func GetSetOnlineMigrationTaskResponseStatusEnum() SetOnlineMigrationTaskRespons
 	}
 }
 
+func (c SetOnlineMigrationTaskResponseStatus) Value() string {
+	return c.value
+}
+
 func (c SetOnlineMigrationTaskResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

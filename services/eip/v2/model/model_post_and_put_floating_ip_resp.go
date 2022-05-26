@@ -76,6 +76,10 @@ func GetPostAndPutFloatingIpRespStatusEnum() PostAndPutFloatingIpRespStatusEnum 
 	}
 }
 
+func (c PostAndPutFloatingIpRespStatus) Value() string {
+	return c.value
+}
+
 func (c PostAndPutFloatingIpRespStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

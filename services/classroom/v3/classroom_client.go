@@ -2,7 +2,7 @@ package v3
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/classroom/v3/model"
 )
 
@@ -19,7 +19,7 @@ func ClassroomClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 下发判题任务
+// ApplyJudgement 下发判题任务
 //
 // 下发判题任务，根据回调地址、代码来源、源代码文本、语言类型、超时时长、输出类型，触发后台代码编译运行和判题
 //
@@ -35,7 +35,13 @@ func (c *ClassroomClient) ApplyJudgement(request *model.ApplyJudgementRequest) (
 	}
 }
 
-// 获取判题结果详情
+// ApplyJudgementInvoker 下发判题任务
+func (c *ClassroomClient) ApplyJudgementInvoker(request *model.ApplyJudgementRequest) *ApplyJudgementInvoker {
+	requestDef := GenReqDefForApplyJudgement()
+	return &ApplyJudgementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJudgementDetail 获取判题结果详情
 //
 // 根据判题任务ID获取判题结果详情
 //
@@ -51,7 +57,13 @@ func (c *ClassroomClient) ShowJudgementDetail(request *model.ShowJudgementDetail
 	}
 }
 
-// 下载判题结果文件
+// ShowJudgementDetailInvoker 获取判题结果详情
+func (c *ClassroomClient) ShowJudgementDetailInvoker(request *model.ShowJudgementDetailRequest) *ShowJudgementDetailInvoker {
+	requestDef := GenReqDefForShowJudgementDetail()
+	return &ShowJudgementDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJudgementFile 下载判题结果文件
 //
 // 根据文件id或图片id下载输出结果文件
 //
@@ -67,7 +79,13 @@ func (c *ClassroomClient) ShowJudgementFile(request *model.ShowJudgementFileRequ
 	}
 }
 
-// 根据课堂ID获取指定课堂的课堂成员列表
+// ShowJudgementFileInvoker 下载判题结果文件
+func (c *ClassroomClient) ShowJudgementFileInvoker(request *model.ShowJudgementFileRequest) *ShowJudgementFileInvoker {
+	requestDef := GenReqDefForShowJudgementFile()
+	return &ShowJudgementFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClassroomMembers 根据课堂ID获取指定课堂的课堂成员列表
 //
 // 根据课堂ID获取指定课堂的课堂成员列表，支持分页，搜索字段默认同时匹配姓名，学号，用户名，班级。
 //
@@ -83,7 +101,13 @@ func (c *ClassroomClient) ListClassroomMembers(request *model.ListClassroomMembe
 	}
 }
 
-// 获取当前用户的课堂列表
+// ListClassroomMembersInvoker 根据课堂ID获取指定课堂的课堂成员列表
+func (c *ClassroomClient) ListClassroomMembersInvoker(request *model.ListClassroomMembersRequest) *ListClassroomMembersInvoker {
+	requestDef := GenReqDefForListClassroomMembers()
+	return &ListClassroomMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClassrooms 获取当前用户的课堂列表
 //
 // 获取当前用户的课堂列表，课堂课表分为我创建的课堂，我加入的课堂以及所有课堂，支持分页查询。
 //
@@ -99,7 +123,13 @@ func (c *ClassroomClient) ListClassrooms(request *model.ListClassroomsRequest) (
 	}
 }
 
-// 根据课堂ID获取指定课堂的详细信息
+// ListClassroomsInvoker 获取当前用户的课堂列表
+func (c *ClassroomClient) ListClassroomsInvoker(request *model.ListClassroomsRequest) *ListClassroomsInvoker {
+	requestDef := GenReqDefForListClassrooms()
+	return &ListClassroomsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClassroomDetail 根据课堂ID获取指定课堂的详细信息
 //
 // 根据课堂ID获取指定课堂的详细信息
 //
@@ -115,7 +145,13 @@ func (c *ClassroomClient) ShowClassroomDetail(request *model.ShowClassroomDetail
 	}
 }
 
-// 查询课堂下指定成员的作业信息
+// ShowClassroomDetailInvoker 根据课堂ID获取指定课堂的详细信息
+func (c *ClassroomClient) ShowClassroomDetailInvoker(request *model.ShowClassroomDetailRequest) *ShowClassroomDetailInvoker {
+	requestDef := GenReqDefForShowClassroomDetail()
+	return &ShowClassroomDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClassroomMemberJobs 查询课堂下指定成员的作业信息
 //
 // 查询课堂下指定成员的作业信息
 //
@@ -131,7 +167,13 @@ func (c *ClassroomClient) ListClassroomMemberJobs(request *model.ListClassroomMe
 	}
 }
 
-// 查询指定课堂下的作业列表信息
+// ListClassroomMemberJobsInvoker 查询课堂下指定成员的作业信息
+func (c *ClassroomClient) ListClassroomMemberJobsInvoker(request *model.ListClassroomMemberJobsRequest) *ListClassroomMemberJobsInvoker {
+	requestDef := GenReqDefForListClassroomMemberJobs()
+	return &ListClassroomMemberJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListJobs 查询指定课堂下的作业列表信息
 //
 // 查询指定课堂下的作业列表信息，支持分页查询。
 //
@@ -147,7 +189,13 @@ func (c *ClassroomClient) ListJobs(request *model.ListJobsRequest) (*model.ListJ
 	}
 }
 
-// 查询学生函数习题提交记录信息
+// ListJobsInvoker 查询指定课堂下的作业列表信息
+func (c *ClassroomClient) ListJobsInvoker(request *model.ListJobsRequest) *ListJobsInvoker {
+	requestDef := GenReqDefForListJobs()
+	return &ListJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMemberJobRecords 查询学生函数习题提交记录信息
 //
 // 查询学生指定作业的习题提交记录信息(针对函数习题)
 //
@@ -163,7 +211,13 @@ func (c *ClassroomClient) ListMemberJobRecords(request *model.ListMemberJobRecor
 	}
 }
 
-// 根据作业ID，查询指定作业的信息
+// ListMemberJobRecordsInvoker 查询学生函数习题提交记录信息
+func (c *ClassroomClient) ListMemberJobRecordsInvoker(request *model.ListMemberJobRecordsRequest) *ListMemberJobRecordsInvoker {
+	requestDef := GenReqDefForListMemberJobRecords()
+	return &ListMemberJobRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobDetail 根据作业ID，查询指定作业的信息
 //
 // 根据作业ID，查询指定作业的信息
 //
@@ -179,7 +233,13 @@ func (c *ClassroomClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*m
 	}
 }
 
-// 查询指定作业下的习题信息
+// ShowJobDetailInvoker 根据作业ID，查询指定作业的信息
+func (c *ClassroomClient) ShowJobDetailInvoker(request *model.ShowJobDetailRequest) *ShowJobDetailInvoker {
+	requestDef := GenReqDefForShowJobDetail()
+	return &ShowJobDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobExercises 查询指定作业下的习题信息
 //
 // 查询指定作业下的习题信息
 //
@@ -193,4 +253,10 @@ func (c *ClassroomClient) ShowJobExercises(request *model.ShowJobExercisesReques
 	} else {
 		return resp.(*model.ShowJobExercisesResponse), nil
 	}
+}
+
+// ShowJobExercisesInvoker 查询指定作业下的习题信息
+func (c *ClassroomClient) ShowJobExercisesInvoker(request *model.ShowJobExercisesRequest) *ShowJobExercisesInvoker {
+	requestDef := GenReqDefForShowJobExercises()
+	return &ShowJobExercisesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

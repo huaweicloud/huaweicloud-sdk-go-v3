@@ -49,6 +49,10 @@ func GetUpdateFalsePositiveResponseInfoCodeEnum() UpdateFalsePositiveResponseInf
 	}
 }
 
+func (c UpdateFalsePositiveResponseInfoCode) Value() string {
+	return c.value
+}
+
 func (c UpdateFalsePositiveResponseInfoCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

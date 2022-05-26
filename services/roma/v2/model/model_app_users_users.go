@@ -62,6 +62,10 @@ func GetAppUsersUsersRolesEnum() AppUsersUsersRolesEnum {
 	}
 }
 
+func (c AppUsersUsersRoles) Value() string {
+	return c.value
+}
+
 func (c AppUsersUsersRoles) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

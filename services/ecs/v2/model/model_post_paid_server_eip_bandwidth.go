@@ -54,6 +54,10 @@ func GetPostPaidServerEipBandwidthSharetypeEnum() PostPaidServerEipBandwidthShar
 	}
 }
 
+func (c PostPaidServerEipBandwidthSharetype) Value() string {
+	return c.value
+}
+
 func (c PostPaidServerEipBandwidthSharetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

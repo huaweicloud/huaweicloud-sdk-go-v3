@@ -58,6 +58,10 @@ func GetRootVolumeVolumetypeEnum() RootVolumeVolumetypeEnum {
 	}
 }
 
+func (c RootVolumeVolumetype) Value() string {
+	return c.value
+}
+
 func (c RootVolumeVolumetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -90,6 +94,10 @@ func GetRootVolumeClusterTypeEnum() RootVolumeClusterTypeEnum {
 			value: "DSS",
 		},
 	}
+}
+
+func (c RootVolumeClusterType) Value() string {
+	return c.value
 }
 
 func (c RootVolumeClusterType) MarshalJSON() ([]byte, error) {

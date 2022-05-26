@@ -60,6 +60,10 @@ func GetSearchStatisticConferenceInfoRequestTimeUnitEnum() SearchStatisticConfer
 	}
 }
 
+func (c SearchStatisticConferenceInfoRequestTimeUnit) Value() string {
+	return c.value
+}
+
 func (c SearchStatisticConferenceInfoRequestTimeUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -96,6 +100,10 @@ func GetSearchStatisticConferenceInfoRequestCategoryEnum() SearchStatisticConfer
 			value: "conference_hourly_info",
 		},
 	}
+}
+
+func (c SearchStatisticConferenceInfoRequestCategory) Value() string {
+	return c.value
 }
 
 func (c SearchStatisticConferenceInfoRequestCategory) MarshalJSON() ([]byte, error) {

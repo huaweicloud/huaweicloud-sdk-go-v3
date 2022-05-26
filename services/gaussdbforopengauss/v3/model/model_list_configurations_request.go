@@ -51,6 +51,10 @@ func GetListConfigurationsRequestXLanguageEnum() ListConfigurationsRequestXLangu
 	}
 }
 
+func (c ListConfigurationsRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ListConfigurationsRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

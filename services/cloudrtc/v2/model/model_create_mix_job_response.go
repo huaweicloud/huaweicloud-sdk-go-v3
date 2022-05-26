@@ -86,6 +86,10 @@ func GetCreateMixJobResponseStateEnum() CreateMixJobResponseStateEnum {
 	}
 }
 
+func (c CreateMixJobResponseState) Value() string {
+	return c.value
+}
+
 func (c CreateMixJobResponseState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -126,6 +130,10 @@ func GetCreateMixJobResponseStopReasonEnum() CreateMixJobResponseStopReasonEnum 
 			value: "INTERNAL_ERROR",
 		},
 	}
+}
+
+func (c CreateMixJobResponseStopReason) Value() string {
+	return c.value
 }
 
 func (c CreateMixJobResponseStopReason) MarshalJSON() ([]byte, error) {

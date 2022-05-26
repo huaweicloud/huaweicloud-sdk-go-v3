@@ -44,6 +44,10 @@ func GetBatchCreateListenerTagsRequestBodyActionEnum() BatchCreateListenerTagsRe
 	}
 }
 
+func (c BatchCreateListenerTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c BatchCreateListenerTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

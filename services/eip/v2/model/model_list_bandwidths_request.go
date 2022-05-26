@@ -54,6 +54,10 @@ func GetListBandwidthsRequestShareTypeEnum() ListBandwidthsRequestShareTypeEnum 
 	}
 }
 
+func (c ListBandwidthsRequestShareType) Value() string {
+	return c.value
+}
+
 func (c ListBandwidthsRequestShareType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

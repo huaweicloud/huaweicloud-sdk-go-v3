@@ -51,6 +51,10 @@ func GetShowRepositoryRequestContentTypeEnum() ShowRepositoryRequestContentTypeE
 	}
 }
 
+func (c ShowRepositoryRequestContentType) Value() string {
+	return c.value
+}
+
 func (c ShowRepositoryRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

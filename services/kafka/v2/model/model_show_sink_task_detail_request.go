@@ -51,6 +51,10 @@ func GetShowSinkTaskDetailRequestTopicInfoEnum() ShowSinkTaskDetailRequestTopicI
 	}
 }
 
+func (c ShowSinkTaskDetailRequestTopicInfo) Value() string {
+	return c.value
+}
+
 func (c ShowSinkTaskDetailRequestTopicInfo) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

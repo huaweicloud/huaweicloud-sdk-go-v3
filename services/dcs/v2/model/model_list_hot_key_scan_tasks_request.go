@@ -62,6 +62,10 @@ func GetListHotKeyScanTasksRequestStatusEnum() ListHotKeyScanTasksRequestStatusE
 	}
 }
 
+func (c ListHotKeyScanTasksRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListHotKeyScanTasksRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

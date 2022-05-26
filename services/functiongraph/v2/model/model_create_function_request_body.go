@@ -151,6 +151,10 @@ func GetCreateFunctionRequestBodyRuntimeEnum() CreateFunctionRequestBodyRuntimeE
 	}
 }
 
+func (c CreateFunctionRequestBodyRuntime) Value() string {
+	return c.value
+}
+
 func (c CreateFunctionRequestBodyRuntime) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -197,6 +201,10 @@ func GetCreateFunctionRequestBodyCodeTypeEnum() CreateFunctionRequestBodyCodeTyp
 	}
 }
 
+func (c CreateFunctionRequestBodyCodeType) Value() string {
+	return c.value
+}
+
 func (c CreateFunctionRequestBodyCodeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -233,6 +241,10 @@ func GetCreateFunctionRequestBodyTypeEnum() CreateFunctionRequestBodyTypeEnum {
 			value: "v2",
 		},
 	}
+}
+
+func (c CreateFunctionRequestBodyType) Value() string {
+	return c.value
 }
 
 func (c CreateFunctionRequestBodyType) MarshalJSON() ([]byte, error) {

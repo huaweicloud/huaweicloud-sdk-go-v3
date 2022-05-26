@@ -70,6 +70,10 @@ func GetCreateDestinationRequestBodyDestinationTypeEnum() CreateDestinationReque
 	}
 }
 
+func (c CreateDestinationRequestBodyDestinationType) Value() int32 {
+	return c.value
+}
+
 func (c CreateDestinationRequestBodyDestinationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

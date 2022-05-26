@@ -260,6 +260,10 @@ func GetShowInstanceRespTypeEnum() ShowInstanceRespTypeEnum {
 	}
 }
 
+func (c ShowInstanceRespType) Value() string {
+	return c.value
+}
+
 func (c ShowInstanceRespType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -296,6 +300,10 @@ func GetShowInstanceRespRetentionPolicyEnum() ShowInstanceRespRetentionPolicyEnu
 			value: "produce_reject",
 		},
 	}
+}
+
+func (c ShowInstanceRespRetentionPolicy) Value() string {
+	return c.value
 }
 
 func (c ShowInstanceRespRetentionPolicy) MarshalJSON() ([]byte, error) {

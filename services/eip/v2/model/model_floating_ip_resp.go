@@ -84,6 +84,10 @@ func GetFloatingIpRespStatusEnum() FloatingIpRespStatusEnum {
 	}
 }
 
+func (c FloatingIpRespStatus) Value() string {
+	return c.value
+}
+
 func (c FloatingIpRespStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

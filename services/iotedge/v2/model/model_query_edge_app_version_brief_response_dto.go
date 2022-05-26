@@ -75,6 +75,10 @@ func GetQueryEdgeAppVersionBriefResponseDtoStateEnum() QueryEdgeAppVersionBriefR
 	}
 }
 
+func (c QueryEdgeAppVersionBriefResponseDtoState) Value() string {
+	return c.value
+}
+
 func (c QueryEdgeAppVersionBriefResponseDtoState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

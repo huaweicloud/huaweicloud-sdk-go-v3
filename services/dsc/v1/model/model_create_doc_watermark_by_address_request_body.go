@@ -92,6 +92,10 @@ func GetCreateDocWatermarkByAddressRequestBodyDocTypeEnum() CreateDocWatermarkBy
 	}
 }
 
+func (c CreateDocWatermarkByAddressRequestBodyDocType) Value() string {
+	return c.value
+}
+
 func (c CreateDocWatermarkByAddressRequestBodyDocType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -128,6 +132,10 @@ func GetCreateDocWatermarkByAddressRequestBodyVisibleTypeEnum() CreateDocWaterma
 			value: "IMAGE",
 		},
 	}
+}
+
+func (c CreateDocWatermarkByAddressRequestBodyVisibleType) Value() string {
+	return c.value
 }
 
 func (c CreateDocWatermarkByAddressRequestBodyVisibleType) MarshalJSON() ([]byte, error) {

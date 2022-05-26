@@ -57,6 +57,10 @@ func GetExtensionAuthorizationStatusEnum() ExtensionAuthorizationStatusEnum {
 	}
 }
 
+func (c ExtensionAuthorizationStatus) Value() string {
+	return c.value
+}
+
 func (c ExtensionAuthorizationStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

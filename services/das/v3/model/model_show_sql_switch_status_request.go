@@ -54,6 +54,10 @@ func GetShowSqlSwitchStatusRequestXLanguageEnum() ShowSqlSwitchStatusRequestXLan
 	}
 }
 
+func (c ShowSqlSwitchStatusRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ShowSqlSwitchStatusRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

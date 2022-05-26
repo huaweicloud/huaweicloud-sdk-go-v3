@@ -55,6 +55,10 @@ func GetCreateRuleRequestBodyStatusEnum() CreateRuleRequestBodyStatusEnum {
 	}
 }
 
+func (c CreateRuleRequestBodyStatus) Value() int32 {
+	return c.value
+}
+
 func (c CreateRuleRequestBodyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -90,6 +94,10 @@ func GetCreateRuleRequestBodyDataParsingStatusEnum() CreateRuleRequestBodyDataPa
 			value: 1,
 		},
 	}
+}
+
+func (c CreateRuleRequestBodyDataParsingStatus) Value() int32 {
+	return c.value
 }
 
 func (c CreateRuleRequestBodyDataParsingStatus) MarshalJSON() ([]byte, error) {

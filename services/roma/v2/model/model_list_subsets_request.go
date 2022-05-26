@@ -62,6 +62,10 @@ func GetListSubsetsRequestStatusEnum() ListSubsetsRequestStatusEnum {
 	}
 }
 
+func (c ListSubsetsRequestStatus) Value() int32 {
+	return c.value
+}
+
 func (c ListSubsetsRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -100,6 +104,10 @@ func GetListSubsetsRequestOnlineStatusEnum() ListSubsetsRequestOnlineStatusEnum 
 			value: 2,
 		},
 	}
+}
+
+func (c ListSubsetsRequestOnlineStatus) Value() int32 {
+	return c.value
 }
 
 func (c ListSubsetsRequestOnlineStatus) MarshalJSON() ([]byte, error) {

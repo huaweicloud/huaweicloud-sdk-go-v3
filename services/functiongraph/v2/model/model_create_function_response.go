@@ -191,6 +191,10 @@ func GetCreateFunctionResponseRuntimeEnum() CreateFunctionResponseRuntimeEnum {
 	}
 }
 
+func (c CreateFunctionResponseRuntime) Value() string {
+	return c.value
+}
+
 func (c CreateFunctionResponseRuntime) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -235,6 +239,10 @@ func GetCreateFunctionResponseCodeTypeEnum() CreateFunctionResponseCodeTypeEnum 
 			value: "jar",
 		},
 	}
+}
+
+func (c CreateFunctionResponseCodeType) Value() string {
+	return c.value
 }
 
 func (c CreateFunctionResponseCodeType) MarshalJSON() ([]byte, error) {

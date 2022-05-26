@@ -53,6 +53,10 @@ func GetSuccessActionEnum() SuccessActionEnum {
 	}
 }
 
+func (c SuccessAction) Value() string {
+	return c.value
+}
+
 func (c SuccessAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

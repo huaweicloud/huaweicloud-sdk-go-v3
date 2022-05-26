@@ -60,6 +60,10 @@ func GetUpdateTopicAccessPolicyPoliciesObjectAccessPolicyEnum() UpdateTopicAcces
 	}
 }
 
+func (c UpdateTopicAccessPolicyPoliciesObjectAccessPolicy) Value() string {
+	return c.value
+}
+
 func (c UpdateTopicAccessPolicyPoliciesObjectAccessPolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

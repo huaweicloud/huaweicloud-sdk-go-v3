@@ -50,6 +50,10 @@ func GetShowSqlExplainRequestXLanguageEnum() ShowSqlExplainRequestXLanguageEnum 
 	}
 }
 
+func (c ShowSqlExplainRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ShowSqlExplainRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

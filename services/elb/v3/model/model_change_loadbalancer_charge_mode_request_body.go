@@ -46,6 +46,10 @@ func GetChangeLoadbalancerChargeModeRequestBodyChargeModeEnum() ChangeLoadbalanc
 	}
 }
 
+func (c ChangeLoadbalancerChargeModeRequestBodyChargeMode) Value() string {
+	return c.value
+}
+
 func (c ChangeLoadbalancerChargeModeRequestBodyChargeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

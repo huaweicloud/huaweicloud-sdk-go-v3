@@ -62,6 +62,10 @@ func GetListBigkeyScanTasksRequestStatusEnum() ListBigkeyScanTasksRequestStatusE
 	}
 }
 
+func (c ListBigkeyScanTasksRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListBigkeyScanTasksRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -48,6 +48,10 @@ func GetShowTemplateDetailRequestXLanguageEnum() ShowTemplateDetailRequestXLangu
 	}
 }
 
+func (c ShowTemplateDetailRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ShowTemplateDetailRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

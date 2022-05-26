@@ -78,6 +78,10 @@ func GetCreateMqsInstanceTopicReqAccessPolicyEnum() CreateMqsInstanceTopicReqAcc
 	}
 }
 
+func (c CreateMqsInstanceTopicReqAccessPolicy) Value() string {
+	return c.value
+}
+
 func (c CreateMqsInstanceTopicReqAccessPolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

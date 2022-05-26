@@ -53,6 +53,10 @@ func GetSummaryReqLangEnum() SummaryReqLangEnum {
 	}
 }
 
+func (c SummaryReqLang) Value() string {
+	return c.value
+}
+
 func (c SummaryReqLang) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

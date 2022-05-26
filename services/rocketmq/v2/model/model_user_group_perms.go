@@ -55,6 +55,10 @@ func GetUserGroupPermsPermEnum() UserGroupPermsPermEnum {
 	}
 }
 
+func (c UserGroupPermsPerm) Value() string {
+	return c.value
+}
+
 func (c UserGroupPermsPerm) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

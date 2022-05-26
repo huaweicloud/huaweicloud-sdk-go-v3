@@ -79,6 +79,10 @@ func GetLdApiCreateMethodEnum() LdApiCreateMethodEnum {
 	}
 }
 
+func (c LdApiCreateMethod) Value() string {
+	return c.value
+}
+
 func (c LdApiCreateMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -119,6 +123,10 @@ func GetLdApiCreateContentTypeEnum() LdApiCreateContentTypeEnum {
 			value: "stream",
 		},
 	}
+}
+
+func (c LdApiCreateContentType) Value() string {
+	return c.value
 }
 
 func (c LdApiCreateContentType) MarshalJSON() ([]byte, error) {

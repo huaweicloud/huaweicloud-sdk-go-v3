@@ -64,6 +64,10 @@ func GetIndividualStreamJobReqVideoTypeEnum() IndividualStreamJobReqVideoTypeEnu
 	}
 }
 
+func (c IndividualStreamJobReqVideoType) Value() string {
+	return c.value
+}
+
 func (c IndividualStreamJobReqVideoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -108,6 +112,10 @@ func GetIndividualStreamJobReqSelectStreamTypeEnum() IndividualStreamJobReqSelec
 			value: "FHD",
 		},
 	}
+}
+
+func (c IndividualStreamJobReqSelectStreamType) Value() string {
+	return c.value
 }
 
 func (c IndividualStreamJobReqSelectStreamType) MarshalJSON() ([]byte, error) {

@@ -44,6 +44,10 @@ func GetUpdateFirewallRespStatusEnum() UpdateFirewallRespStatusEnum {
 	}
 }
 
+func (c UpdateFirewallRespStatus) Value() string {
+	return c.value
+}
+
 func (c UpdateFirewallRespStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -86,6 +86,10 @@ func GetDomainItemAuthStatusEnum() DomainItemAuthStatusEnum {
 	}
 }
 
+func (c DomainItemAuthStatus) Value() string {
+	return c.value
+}
+
 func (c DomainItemAuthStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -122,6 +126,10 @@ func GetDomainItemProtocolTypeEnum() DomainItemProtocolTypeEnum {
 			value: "https://",
 		},
 	}
+}
+
+func (c DomainItemProtocolType) Value() string {
+	return c.value
 }
 
 func (c DomainItemProtocolType) MarshalJSON() ([]byte, error) {

@@ -83,6 +83,10 @@ func GetShowPublicationResponsePublishStatusEnum() ShowPublicationResponsePublis
 	}
 }
 
+func (c ShowPublicationResponsePublishStatus) Value() string {
+	return c.value
+}
+
 func (c ShowPublicationResponsePublishStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

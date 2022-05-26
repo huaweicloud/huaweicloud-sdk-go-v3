@@ -54,6 +54,10 @@ func GetCreateHostGroupRequestBodyHostGroupTypeEnum() CreateHostGroupRequestBody
 	}
 }
 
+func (c CreateHostGroupRequestBodyHostGroupType) Value() string {
+	return c.value
+}
+
 func (c CreateHostGroupRequestBodyHostGroupType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

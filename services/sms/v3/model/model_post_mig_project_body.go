@@ -75,6 +75,10 @@ func GetPostMigProjectBodyTypeEnum() PostMigProjectBodyTypeEnum {
 	}
 }
 
+func (c PostMigProjectBodyType) Value() string {
+	return c.value
+}
+
 func (c PostMigProjectBodyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

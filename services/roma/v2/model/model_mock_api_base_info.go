@@ -176,6 +176,10 @@ func GetMockApiBaseInfoStatusCodeEnum() MockApiBaseInfoStatusCodeEnum {
 	}
 }
 
+func (c MockApiBaseInfoStatusCode) Value() int32 {
+	return c.value
+}
+
 func (c MockApiBaseInfoStatusCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

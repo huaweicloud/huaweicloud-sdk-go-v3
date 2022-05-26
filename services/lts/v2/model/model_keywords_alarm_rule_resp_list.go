@@ -92,6 +92,10 @@ func GetKeywordsAlarmRuleRespListKeywordsAlarmLevelEnum() KeywordsAlarmRuleRespL
 	}
 }
 
+func (c KeywordsAlarmRuleRespListKeywordsAlarmLevel) Value() string {
+	return c.value
+}
+
 func (c KeywordsAlarmRuleRespListKeywordsAlarmLevel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -128,6 +132,10 @@ func GetKeywordsAlarmRuleRespListStatusEnum() KeywordsAlarmRuleRespListStatusEnu
 			value: "STOPPING",
 		},
 	}
+}
+
+func (c KeywordsAlarmRuleRespListStatus) Value() string {
+	return c.value
 }
 
 func (c KeywordsAlarmRuleRespListStatus) MarshalJSON() ([]byte, error) {

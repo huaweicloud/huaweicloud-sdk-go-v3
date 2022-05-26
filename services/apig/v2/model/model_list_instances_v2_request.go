@@ -185,6 +185,10 @@ func GetListInstancesV2RequestStatusEnum() ListInstancesV2RequestStatusEnum {
 	}
 }
 
+func (c ListInstancesV2RequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListInstancesV2RequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

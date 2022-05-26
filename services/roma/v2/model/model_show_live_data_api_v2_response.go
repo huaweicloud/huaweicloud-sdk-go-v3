@@ -104,6 +104,10 @@ func GetShowLiveDataApiV2ResponseMethodEnum() ShowLiveDataApiV2ResponseMethodEnu
 	}
 }
 
+func (c ShowLiveDataApiV2ResponseMethod) Value() string {
+	return c.value
+}
+
 func (c ShowLiveDataApiV2ResponseMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -146,6 +150,10 @@ func GetShowLiveDataApiV2ResponseContentTypeEnum() ShowLiveDataApiV2ResponseCont
 	}
 }
 
+func (c ShowLiveDataApiV2ResponseContentType) Value() string {
+	return c.value
+}
+
 func (c ShowLiveDataApiV2ResponseContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -182,6 +190,10 @@ func GetShowLiveDataApiV2ResponseTypeEnum() ShowLiveDataApiV2ResponseTypeEnum {
 			value: "function",
 		},
 	}
+}
+
+func (c ShowLiveDataApiV2ResponseType) Value() string {
+	return c.value
 }
 
 func (c ShowLiveDataApiV2ResponseType) MarshalJSON() ([]byte, error) {
@@ -222,6 +234,10 @@ func GetShowLiveDataApiV2ResponseStatusEnum() ShowLiveDataApiV2ResponseStatusEnu
 			value: 4,
 		},
 	}
+}
+
+func (c ShowLiveDataApiV2ResponseStatus) Value() int32 {
+	return c.value
 }
 
 func (c ShowLiveDataApiV2ResponseStatus) MarshalJSON() ([]byte, error) {

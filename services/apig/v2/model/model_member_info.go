@@ -64,6 +64,10 @@ func GetMemberInfoStatusEnum() MemberInfoStatusEnum {
 	}
 }
 
+func (c MemberInfoStatus) Value() int32 {
+	return c.value
+}
+
 func (c MemberInfoStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

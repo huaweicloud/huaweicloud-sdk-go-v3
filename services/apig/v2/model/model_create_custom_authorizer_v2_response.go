@@ -81,6 +81,10 @@ func GetCreateCustomAuthorizerV2ResponseTypeEnum() CreateCustomAuthorizerV2Respo
 	}
 }
 
+func (c CreateCustomAuthorizerV2ResponseType) Value() string {
+	return c.value
+}
+
 func (c CreateCustomAuthorizerV2ResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -113,6 +117,10 @@ func GetCreateCustomAuthorizerV2ResponseAuthorizerTypeEnum() CreateCustomAuthori
 			value: "FUNC",
 		},
 	}
+}
+
+func (c CreateCustomAuthorizerV2ResponseAuthorizerType) Value() string {
+	return c.value
 }
 
 func (c CreateCustomAuthorizerV2ResponseAuthorizerType) MarshalJSON() ([]byte, error) {

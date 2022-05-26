@@ -55,6 +55,10 @@ func GetCreateServiceRequestBodyStatusEnum() CreateServiceRequestBodyStatusEnum 
 	}
 }
 
+func (c CreateServiceRequestBodyStatus) Value() int32 {
+	return c.value
+}
+
 func (c CreateServiceRequestBodyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

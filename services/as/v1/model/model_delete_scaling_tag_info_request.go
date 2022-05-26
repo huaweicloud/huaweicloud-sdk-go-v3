@@ -46,6 +46,10 @@ func GetDeleteScalingTagInfoRequestResourceTypeEnum() DeleteScalingTagInfoReques
 	}
 }
 
+func (c DeleteScalingTagInfoRequestResourceType) Value() string {
+	return c.value
+}
+
 func (c DeleteScalingTagInfoRequestResourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

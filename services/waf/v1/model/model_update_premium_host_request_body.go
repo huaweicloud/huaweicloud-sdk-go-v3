@@ -65,6 +65,10 @@ func GetUpdatePremiumHostRequestBodyTlsEnum() UpdatePremiumHostRequestBodyTlsEnu
 	}
 }
 
+func (c UpdatePremiumHostRequestBodyTls) Value() string {
+	return c.value
+}
+
 func (c UpdatePremiumHostRequestBodyTls) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -113,6 +117,10 @@ func GetUpdatePremiumHostRequestBodyCipherEnum() UpdatePremiumHostRequestBodyCip
 			value: "cipher_default",
 		},
 	}
+}
+
+func (c UpdatePremiumHostRequestBodyCipher) Value() string {
+	return c.value
 }
 
 func (c UpdatePremiumHostRequestBodyCipher) MarshalJSON() ([]byte, error) {

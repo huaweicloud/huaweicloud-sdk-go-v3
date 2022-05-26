@@ -105,6 +105,10 @@ func GetShowJobExeListNewRequestJobStateEnum() ShowJobExeListNewRequestJobStateE
 	}
 }
 
+func (c ShowJobExeListNewRequestJobState) Value() string {
+	return c.value
+}
+
 func (c ShowJobExeListNewRequestJobState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -149,6 +153,10 @@ func GetShowJobExeListNewRequestJobResultEnum() ShowJobExeListNewRequestJobResul
 			value: "SUCCEEDED：执行成功的作业。",
 		},
 	}
+}
+
+func (c ShowJobExeListNewRequestJobResult) Value() string {
+	return c.value
 }
 
 func (c ShowJobExeListNewRequestJobResult) MarshalJSON() ([]byte, error) {

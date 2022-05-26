@@ -46,6 +46,10 @@ func GetFlavorIdEnum() FlavorIdEnum {
 	}
 }
 
+func (c FlavorId) Value() string {
+	return c.value
+}
+
 func (c FlavorId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -57,6 +57,10 @@ func GetMultiTaskUpdateBodyOperationTypesEnum() MultiTaskUpdateBodyOperationType
 	}
 }
 
+func (c MultiTaskUpdateBodyOperationTypes) Value() string {
+	return c.value
+}
+
 func (c MultiTaskUpdateBodyOperationTypes) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

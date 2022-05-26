@@ -50,6 +50,10 @@ func GetCreateVpcRouteOptionTypeEnum() CreateVpcRouteOptionTypeEnum {
 	}
 }
 
+func (c CreateVpcRouteOptionType) Value() string {
+	return c.value
+}
+
 func (c CreateVpcRouteOptionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

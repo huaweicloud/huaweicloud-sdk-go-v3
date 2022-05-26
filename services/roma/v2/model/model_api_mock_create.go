@@ -176,6 +176,10 @@ func GetApiMockCreateStatusCodeEnum() ApiMockCreateStatusCodeEnum {
 	}
 }
 
+func (c ApiMockCreateStatusCode) Value() int32 {
+	return c.value
+}
+
 func (c ApiMockCreateStatusCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

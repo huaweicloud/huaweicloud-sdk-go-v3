@@ -101,6 +101,10 @@ func GetPublicipInstanceRespIpVersionEnum() PublicipInstanceRespIpVersionEnum {
 	}
 }
 
+func (c PublicipInstanceRespIpVersion) Value() int32 {
+	return c.value
+}
+
 func (c PublicipInstanceRespIpVersion) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -183,6 +187,10 @@ func GetPublicipInstanceRespStatusEnum() PublicipInstanceRespStatusEnum {
 	}
 }
 
+func (c PublicipInstanceRespStatus) Value() string {
+	return c.value
+}
+
 func (c PublicipInstanceRespStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -223,6 +231,10 @@ func GetPublicipInstanceRespTypeEnum() PublicipInstanceRespTypeEnum {
 			value: "DUALSTACK_SUBNET",
 		},
 	}
+}
+
+func (c PublicipInstanceRespType) Value() string {
+	return c.value
 }
 
 func (c PublicipInstanceRespType) MarshalJSON() ([]byte, error) {
@@ -277,6 +289,10 @@ func GetPublicipInstanceRespAssociateInstanceTypeEnum() PublicipInstanceRespAsso
 			value: "null",
 		},
 	}
+}
+
+func (c PublicipInstanceRespAssociateInstanceType) Value() string {
+	return c.value
 }
 
 func (c PublicipInstanceRespAssociateInstanceType) MarshalJSON() ([]byte, error) {

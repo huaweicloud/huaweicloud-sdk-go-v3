@@ -74,6 +74,10 @@ func GetListEndpointServiceRequestStatusEnum() ListEndpointServiceRequestStatusE
 	}
 }
 
+func (c ListEndpointServiceRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListEndpointServiceRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -112,6 +116,10 @@ func GetListEndpointServiceRequestSortKeyEnum() ListEndpointServiceRequestSortKe
 	}
 }
 
+func (c ListEndpointServiceRequestSortKey) Value() string {
+	return c.value
+}
+
 func (c ListEndpointServiceRequestSortKey) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -148,6 +156,10 @@ func GetListEndpointServiceRequestSortDirEnum() ListEndpointServiceRequestSortDi
 			value: "desc",
 		},
 	}
+}
+
+func (c ListEndpointServiceRequestSortDir) Value() string {
+	return c.value
 }
 
 func (c ListEndpointServiceRequestSortDir) MarshalJSON() ([]byte, error) {

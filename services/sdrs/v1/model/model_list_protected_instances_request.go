@@ -69,6 +69,10 @@ func GetListProtectedInstancesRequestQueryTypeEnum() ListProtectedInstancesReque
 	}
 }
 
+func (c ListProtectedInstancesRequestQueryType) Value() string {
+	return c.value
+}
+
 func (c ListProtectedInstancesRequestQueryType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

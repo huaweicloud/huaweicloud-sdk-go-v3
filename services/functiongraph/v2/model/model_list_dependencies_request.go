@@ -61,6 +61,10 @@ func GetListDependenciesRequestDependencyTypeEnum() ListDependenciesRequestDepen
 	}
 }
 
+func (c ListDependenciesRequestDependencyType) Value() string {
+	return c.value
+}
+
 func (c ListDependenciesRequestDependencyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -153,6 +157,10 @@ func GetListDependenciesRequestRuntimeEnum() ListDependenciesRequestRuntimeEnum 
 			value: "PHP7.3",
 		},
 	}
+}
+
+func (c ListDependenciesRequestRuntime) Value() string {
+	return c.value
 }
 
 func (c ListDependenciesRequestRuntime) MarshalJSON() ([]byte, error) {

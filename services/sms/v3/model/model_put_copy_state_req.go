@@ -84,6 +84,10 @@ func GetPutCopyStateReqCopystateEnum() PutCopyStateReqCopystateEnum {
 	}
 }
 
+func (c PutCopyStateReqCopystate) Value() string {
+	return c.value
+}
+
 func (c PutCopyStateReqCopystate) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -136,6 +140,10 @@ func GetPutCopyStateReqMigrationcycleEnum() PutCopyStateReqMigrationcycleEnum {
 			value: "syncing",
 		},
 	}
+}
+
+func (c PutCopyStateReqMigrationcycle) Value() string {
+	return c.value
 }
 
 func (c PutCopyStateReqMigrationcycle) MarshalJSON() ([]byte, error) {

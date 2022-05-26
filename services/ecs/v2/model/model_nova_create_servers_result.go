@@ -60,6 +60,10 @@ func GetNovaCreateServersResultOSDCFdiskConfigEnum() NovaCreateServersResultOSDC
 	}
 }
 
+func (c NovaCreateServersResultOSDCFdiskConfig) Value() string {
+	return c.value
+}
+
 func (c NovaCreateServersResultOSDCFdiskConfig) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

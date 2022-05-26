@@ -64,6 +64,10 @@ func GetEnvironmentCheckResultEnum() EnvironmentCheckResultEnum {
 	}
 }
 
+func (c EnvironmentCheckResult) Value() string {
+	return c.value
+}
+
 func (c EnvironmentCheckResult) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

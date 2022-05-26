@@ -111,6 +111,10 @@ func GetCreateScalingGroupOptionHealthPeriodicAuditMethodEnum() CreateScalingGro
 	}
 }
 
+func (c CreateScalingGroupOptionHealthPeriodicAuditMethod) Value() string {
+	return c.value
+}
+
 func (c CreateScalingGroupOptionHealthPeriodicAuditMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -157,6 +161,10 @@ func GetCreateScalingGroupOptionInstanceTerminatePolicyEnum() CreateScalingGroup
 	}
 }
 
+func (c CreateScalingGroupOptionInstanceTerminatePolicy) Value() string {
+	return c.value
+}
+
 func (c CreateScalingGroupOptionInstanceTerminatePolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -193,6 +201,10 @@ func GetCreateScalingGroupOptionMultiAzPriorityPolicyEnum() CreateScalingGroupOp
 			value: "PICK_FIRST",
 		},
 	}
+}
+
+func (c CreateScalingGroupOptionMultiAzPriorityPolicy) Value() string {
+	return c.value
 }
 
 func (c CreateScalingGroupOptionMultiAzPriorityPolicy) MarshalJSON() ([]byte, error) {

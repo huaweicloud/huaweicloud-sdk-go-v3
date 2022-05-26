@@ -108,6 +108,10 @@ func GetDomainsServiceAreaEnum() DomainsServiceAreaEnum {
 	}
 }
 
+func (c DomainsServiceArea) Value() string {
+	return c.value
+}
+
 func (c DomainsServiceArea) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

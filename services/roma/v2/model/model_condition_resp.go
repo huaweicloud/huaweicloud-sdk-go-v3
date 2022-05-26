@@ -65,6 +65,10 @@ func GetConditionRespSysParamNameEnum() ConditionRespSysParamNameEnum {
 	}
 }
 
+func (c ConditionRespSysParamName) Value() string {
+	return c.value
+}
+
 func (c ConditionRespSysParamName) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -107,6 +111,10 @@ func GetConditionRespConditionTypeEnum() ConditionRespConditionTypeEnum {
 	}
 }
 
+func (c ConditionRespConditionType) Value() string {
+	return c.value
+}
+
 func (c ConditionRespConditionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -143,6 +151,10 @@ func GetConditionRespConditionOriginEnum() ConditionRespConditionOriginEnum {
 			value: "source",
 		},
 	}
+}
+
+func (c ConditionRespConditionOrigin) Value() string {
+	return c.value
 }
 
 func (c ConditionRespConditionOrigin) MarshalJSON() ([]byte, error) {

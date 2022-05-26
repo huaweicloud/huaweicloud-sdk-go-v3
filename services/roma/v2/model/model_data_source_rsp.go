@@ -212,6 +212,10 @@ func GetDataSourceRspDatasourceTypeEnum() DataSourceRspDatasourceTypeEnum {
 	}
 }
 
+func (c DataSourceRspDatasourceType) Value() string {
+	return c.value
+}
+
 func (c DataSourceRspDatasourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -256,6 +260,10 @@ func GetDataSourceRspAppPermissionEnum() DataSourceRspAppPermissionEnum {
 			value: "modify",
 		},
 	}
+}
+
+func (c DataSourceRspAppPermission) Value() string {
+	return c.value
 }
 
 func (c DataSourceRspAppPermission) MarshalJSON() ([]byte, error) {

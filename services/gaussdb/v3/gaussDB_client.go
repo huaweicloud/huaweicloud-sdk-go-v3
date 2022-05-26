@@ -2,7 +2,7 @@ package v3
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/gaussdb/v3/model"
 )
 
@@ -19,7 +19,7 @@ func GaussDBClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 批量添加或删除标签
+// BatchTagAction 批量添加或删除标签
 //
 // 批量添加或删除指定实例的标签。
 //
@@ -35,7 +35,13 @@ func (c *GaussDBClient) BatchTagAction(request *model.BatchTagActionRequest) (*m
 	}
 }
 
-// 变更实例规格
+// BatchTagActionInvoker 批量添加或删除标签
+func (c *GaussDBClient) BatchTagActionInvoker(request *model.BatchTagActionRequest) *BatchTagActionInvoker {
+	requestDef := GenReqDefForBatchTagAction()
+	return &BatchTagActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeGaussMySqlInstanceSpecification 变更实例规格
 //
 // 变更数据库实例的规格。
 //
@@ -51,7 +57,13 @@ func (c *GaussDBClient) ChangeGaussMySqlInstanceSpecification(request *model.Cha
 	}
 }
 
-// 创建手动备份
+// ChangeGaussMySqlInstanceSpecificationInvoker 变更实例规格
+func (c *GaussDBClient) ChangeGaussMySqlInstanceSpecificationInvoker(request *model.ChangeGaussMySqlInstanceSpecificationRequest) *ChangeGaussMySqlInstanceSpecificationInvoker {
+	requestDef := GenReqDefForChangeGaussMySqlInstanceSpecification()
+	return &ChangeGaussMySqlInstanceSpecificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateGaussMySqlBackup 创建手动备份
 //
 // 创建手动备份
 //
@@ -67,7 +79,13 @@ func (c *GaussDBClient) CreateGaussMySqlBackup(request *model.CreateGaussMySqlBa
 	}
 }
 
-// 创建数据库实例
+// CreateGaussMySqlBackupInvoker 创建手动备份
+func (c *GaussDBClient) CreateGaussMySqlBackupInvoker(request *model.CreateGaussMySqlBackupRequest) *CreateGaussMySqlBackupInvoker {
+	requestDef := GenReqDefForCreateGaussMySqlBackup()
+	return &CreateGaussMySqlBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateGaussMySqlInstance 创建数据库实例
 //
 // 创建云数据库 GaussDB(for MySQL)实例。
 //
@@ -83,7 +101,13 @@ func (c *GaussDBClient) CreateGaussMySqlInstance(request *model.CreateGaussMySql
 	}
 }
 
-// 开启数据库代理
+// CreateGaussMySqlInstanceInvoker 创建数据库实例
+func (c *GaussDBClient) CreateGaussMySqlInstanceInvoker(request *model.CreateGaussMySqlInstanceRequest) *CreateGaussMySqlInstanceInvoker {
+	requestDef := GenReqDefForCreateGaussMySqlInstance()
+	return &CreateGaussMySqlInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateGaussMySqlProxy 开启数据库代理
 //
 // 开启数据库代理，只支持ELB模式。
 //
@@ -99,7 +123,13 @@ func (c *GaussDBClient) CreateGaussMySqlProxy(request *model.CreateGaussMySqlPro
 	}
 }
 
-// 创建只读节点
+// CreateGaussMySqlProxyInvoker 开启数据库代理
+func (c *GaussDBClient) CreateGaussMySqlProxyInvoker(request *model.CreateGaussMySqlProxyRequest) *CreateGaussMySqlProxyInvoker {
+	requestDef := GenReqDefForCreateGaussMySqlProxy()
+	return &CreateGaussMySqlProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateGaussMySqlReadonlyNode 创建只读节点
 //
 // 创建只读节点。
 //
@@ -115,7 +145,13 @@ func (c *GaussDBClient) CreateGaussMySqlReadonlyNode(request *model.CreateGaussM
 	}
 }
 
-// 删除实例
+// CreateGaussMySqlReadonlyNodeInvoker 创建只读节点
+func (c *GaussDBClient) CreateGaussMySqlReadonlyNodeInvoker(request *model.CreateGaussMySqlReadonlyNodeRequest) *CreateGaussMySqlReadonlyNodeInvoker {
+	requestDef := GenReqDefForCreateGaussMySqlReadonlyNode()
+	return &CreateGaussMySqlReadonlyNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGaussMySqlInstance 删除实例
 //
 // 删除数据库实例，不支持删除包周期实例。
 //
@@ -131,7 +167,13 @@ func (c *GaussDBClient) DeleteGaussMySqlInstance(request *model.DeleteGaussMySql
 	}
 }
 
-// 关闭数据库代理
+// DeleteGaussMySqlInstanceInvoker 删除实例
+func (c *GaussDBClient) DeleteGaussMySqlInstanceInvoker(request *model.DeleteGaussMySqlInstanceRequest) *DeleteGaussMySqlInstanceInvoker {
+	requestDef := GenReqDefForDeleteGaussMySqlInstance()
+	return &DeleteGaussMySqlInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGaussMySqlProxy 关闭数据库代理
 //
 // 关闭数据库代理。
 //
@@ -147,7 +189,13 @@ func (c *GaussDBClient) DeleteGaussMySqlProxy(request *model.DeleteGaussMySqlPro
 	}
 }
 
-// 删除只读节点
+// DeleteGaussMySqlProxyInvoker 关闭数据库代理
+func (c *GaussDBClient) DeleteGaussMySqlProxyInvoker(request *model.DeleteGaussMySqlProxyRequest) *DeleteGaussMySqlProxyInvoker {
+	requestDef := GenReqDefForDeleteGaussMySqlProxy()
+	return &DeleteGaussMySqlProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGaussMySqlReadonlyNode 删除只读节点
 //
 // 删除实例的只读节点。多可用区模式删除只读节点时，要保证删除后，剩余的只读节点和主节点在不同的可用区中，否则无法删除该只读节点。
 //
@@ -163,7 +211,13 @@ func (c *GaussDBClient) DeleteGaussMySqlReadonlyNode(request *model.DeleteGaussM
 	}
 }
 
-// 包周期存储扩容
+// DeleteGaussMySqlReadonlyNodeInvoker 删除只读节点
+func (c *GaussDBClient) DeleteGaussMySqlReadonlyNodeInvoker(request *model.DeleteGaussMySqlReadonlyNodeRequest) *DeleteGaussMySqlReadonlyNodeInvoker {
+	requestDef := GenReqDefForDeleteGaussMySqlReadonlyNode()
+	return &DeleteGaussMySqlReadonlyNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExpandGaussMySqlInstanceVolume 包周期存储扩容
 //
 // 包周期存储扩容
 //
@@ -179,7 +233,13 @@ func (c *GaussDBClient) ExpandGaussMySqlInstanceVolume(request *model.ExpandGaus
 	}
 }
 
-// 扩容数据库代理节点的数量
+// ExpandGaussMySqlInstanceVolumeInvoker 包周期存储扩容
+func (c *GaussDBClient) ExpandGaussMySqlInstanceVolumeInvoker(request *model.ExpandGaussMySqlInstanceVolumeRequest) *ExpandGaussMySqlInstanceVolumeInvoker {
+	requestDef := GenReqDefForExpandGaussMySqlInstanceVolume()
+	return &ExpandGaussMySqlInstanceVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExpandGaussMySqlProxy 扩容数据库代理节点的数量
 //
 // 扩容数据库代理节点的数量。
 // DeC专属云账号暂不支持数据库代理。
@@ -196,7 +256,13 @@ func (c *GaussDBClient) ExpandGaussMySqlProxy(request *model.ExpandGaussMySqlPro
 	}
 }
 
-// 查询参数模板
+// ExpandGaussMySqlProxyInvoker 扩容数据库代理节点的数量
+func (c *GaussDBClient) ExpandGaussMySqlProxyInvoker(request *model.ExpandGaussMySqlProxyRequest) *ExpandGaussMySqlProxyInvoker {
+	requestDef := GenReqDefForExpandGaussMySqlProxy()
+	return &ExpandGaussMySqlProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGaussMySqlConfigurations 查询参数模板
 //
 // 获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
 //
@@ -212,7 +278,13 @@ func (c *GaussDBClient) ListGaussMySqlConfigurations(request *model.ListGaussMyS
 	}
 }
 
-// 查询专属资源池列表
+// ListGaussMySqlConfigurationsInvoker 查询参数模板
+func (c *GaussDBClient) ListGaussMySqlConfigurationsInvoker(request *model.ListGaussMySqlConfigurationsRequest) *ListGaussMySqlConfigurationsInvoker {
+	requestDef := GenReqDefForListGaussMySqlConfigurations()
+	return &ListGaussMySqlConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGaussMySqlDedicatedResources 查询专属资源池列表
 //
 // 获取专属资源池列表，包括用户开通的所有专属资源池信息。
 //
@@ -228,7 +300,13 @@ func (c *GaussDBClient) ListGaussMySqlDedicatedResources(request *model.ListGaus
 	}
 }
 
-// 查询数据库错误日志
+// ListGaussMySqlDedicatedResourcesInvoker 查询专属资源池列表
+func (c *GaussDBClient) ListGaussMySqlDedicatedResourcesInvoker(request *model.ListGaussMySqlDedicatedResourcesRequest) *ListGaussMySqlDedicatedResourcesInvoker {
+	requestDef := GenReqDefForListGaussMySqlDedicatedResources()
+	return &ListGaussMySqlDedicatedResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGaussMySqlErrorLog 查询数据库错误日志
 //
 // 查询数据库错误日志。
 //
@@ -244,7 +322,13 @@ func (c *GaussDBClient) ListGaussMySqlErrorLog(request *model.ListGaussMySqlErro
 	}
 }
 
-// 查询实例列表
+// ListGaussMySqlErrorLogInvoker 查询数据库错误日志
+func (c *GaussDBClient) ListGaussMySqlErrorLogInvoker(request *model.ListGaussMySqlErrorLogRequest) *ListGaussMySqlErrorLogInvoker {
+	requestDef := GenReqDefForListGaussMySqlErrorLog()
+	return &ListGaussMySqlErrorLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGaussMySqlInstances 查询实例列表
 //
 // 根据指定条件查询实例列表。
 //
@@ -260,7 +344,13 @@ func (c *GaussDBClient) ListGaussMySqlInstances(request *model.ListGaussMySqlIns
 	}
 }
 
-// 查询数据库慢日志
+// ListGaussMySqlInstancesInvoker 查询实例列表
+func (c *GaussDBClient) ListGaussMySqlInstancesInvoker(request *model.ListGaussMySqlInstancesRequest) *ListGaussMySqlInstancesInvoker {
+	requestDef := GenReqDefForListGaussMySqlInstances()
+	return &ListGaussMySqlInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGaussMySqlSlowLog 查询数据库慢日志
 //
 // 查询数据库慢日志
 //
@@ -276,7 +366,13 @@ func (c *GaussDBClient) ListGaussMySqlSlowLog(request *model.ListGaussMySqlSlowL
 	}
 }
 
-// 查询资源标签
+// ListGaussMySqlSlowLogInvoker 查询数据库慢日志
+func (c *GaussDBClient) ListGaussMySqlSlowLogInvoker(request *model.ListGaussMySqlSlowLogRequest) *ListGaussMySqlSlowLogInvoker {
+	requestDef := GenReqDefForListGaussMySqlSlowLog()
+	return &ListGaussMySqlSlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceTags 查询资源标签
 //
 // 查询指定实例的标签信息。
 //
@@ -292,7 +388,13 @@ func (c *GaussDBClient) ListInstanceTags(request *model.ListInstanceTagsRequest)
 	}
 }
 
-// 查询项目标签
+// ListInstanceTagsInvoker 查询资源标签
+func (c *GaussDBClient) ListInstanceTagsInvoker(request *model.ListInstanceTagsRequest) *ListInstanceTagsInvoker {
+	requestDef := GenReqDefForListInstanceTags()
+	return &ListInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectTags 查询项目标签
 //
 // 查询指定project ID下实例的所有标签集合。
 //
@@ -308,7 +410,13 @@ func (c *GaussDBClient) ListProjectTags(request *model.ListProjectTagsRequest) (
 	}
 }
 
-// 重置数据库密码
+// ListProjectTagsInvoker 查询项目标签
+func (c *GaussDBClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest) *ListProjectTagsInvoker {
+	requestDef := GenReqDefForListProjectTags()
+	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetGaussMySqlPassword 重置数据库密码
 //
 // 重置数据库密码
 //
@@ -324,7 +432,13 @@ func (c *GaussDBClient) ResetGaussMySqlPassword(request *model.ResetGaussMySqlPa
 	}
 }
 
-// 设置租户基于企业项目的资源配额
+// ResetGaussMySqlPasswordInvoker 重置数据库密码
+func (c *GaussDBClient) ResetGaussMySqlPasswordInvoker(request *model.ResetGaussMySqlPasswordRequest) *ResetGaussMySqlPasswordInvoker {
+	requestDef := GenReqDefForResetGaussMySqlPassword()
+	return &ResetGaussMySqlPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetGaussMySqlQuotas 设置租户基于企业项目的资源配额
 //
 // 设置指定企业项目的资源配额。
 //
@@ -340,7 +454,13 @@ func (c *GaussDBClient) SetGaussMySqlQuotas(request *model.SetGaussMySqlQuotasRe
 	}
 }
 
-// 查询审计日志开关状态
+// SetGaussMySqlQuotasInvoker 设置租户基于企业项目的资源配额
+func (c *GaussDBClient) SetGaussMySqlQuotasInvoker(request *model.SetGaussMySqlQuotasRequest) *SetGaussMySqlQuotasInvoker {
+	requestDef := GenReqDefForSetGaussMySqlQuotas()
+	return &SetGaussMySqlQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAuditLog 查询审计日志开关状态
 //
 // 查询审计日志开关状态
 //
@@ -356,7 +476,13 @@ func (c *GaussDBClient) ShowAuditLog(request *model.ShowAuditLogRequest) (*model
 	}
 }
 
-// 查询备份列表
+// ShowAuditLogInvoker 查询审计日志开关状态
+func (c *GaussDBClient) ShowAuditLogInvoker(request *model.ShowAuditLogRequest) *ShowAuditLogInvoker {
+	requestDef := GenReqDefForShowAuditLog()
+	return &ShowAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGaussMySqlBackupList 查询备份列表
 //
 // 查询备份列表
 //
@@ -372,7 +498,13 @@ func (c *GaussDBClient) ShowGaussMySqlBackupList(request *model.ShowGaussMySqlBa
 	}
 }
 
-// 查询自动备份策略
+// ShowGaussMySqlBackupListInvoker 查询备份列表
+func (c *GaussDBClient) ShowGaussMySqlBackupListInvoker(request *model.ShowGaussMySqlBackupListRequest) *ShowGaussMySqlBackupListInvoker {
+	requestDef := GenReqDefForShowGaussMySqlBackupList()
+	return &ShowGaussMySqlBackupListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGaussMySqlBackupPolicy 查询自动备份策略
 //
 // 查询自动备份策略。
 //
@@ -388,7 +520,13 @@ func (c *GaussDBClient) ShowGaussMySqlBackupPolicy(request *model.ShowGaussMySql
 	}
 }
 
-// 查询数据库引擎的版本
+// ShowGaussMySqlBackupPolicyInvoker 查询自动备份策略
+func (c *GaussDBClient) ShowGaussMySqlBackupPolicyInvoker(request *model.ShowGaussMySqlBackupPolicyRequest) *ShowGaussMySqlBackupPolicyInvoker {
+	requestDef := GenReqDefForShowGaussMySqlBackupPolicy()
+	return &ShowGaussMySqlBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGaussMySqlEngineVersion 查询数据库引擎的版本
 //
 // 获取指定数据库引擎对应的数据库版本信息。
 //
@@ -404,7 +542,13 @@ func (c *GaussDBClient) ShowGaussMySqlEngineVersion(request *model.ShowGaussMySq
 	}
 }
 
-// 查询数据库规格
+// ShowGaussMySqlEngineVersionInvoker 查询数据库引擎的版本
+func (c *GaussDBClient) ShowGaussMySqlEngineVersionInvoker(request *model.ShowGaussMySqlEngineVersionRequest) *ShowGaussMySqlEngineVersionInvoker {
+	requestDef := GenReqDefForShowGaussMySqlEngineVersion()
+	return &ShowGaussMySqlEngineVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGaussMySqlFlavors 查询数据库规格
 //
 // 获取指定数据库引擎版本对应的规格信息。
 //
@@ -420,7 +564,13 @@ func (c *GaussDBClient) ShowGaussMySqlFlavors(request *model.ShowGaussMySqlFlavo
 	}
 }
 
-// 查询实例详情信息
+// ShowGaussMySqlFlavorsInvoker 查询数据库规格
+func (c *GaussDBClient) ShowGaussMySqlFlavorsInvoker(request *model.ShowGaussMySqlFlavorsRequest) *ShowGaussMySqlFlavorsInvoker {
+	requestDef := GenReqDefForShowGaussMySqlFlavors()
+	return &ShowGaussMySqlFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGaussMySqlInstanceInfo 查询实例详情信息
 //
 // 查询实例详情信息
 //
@@ -436,7 +586,13 @@ func (c *GaussDBClient) ShowGaussMySqlInstanceInfo(request *model.ShowGaussMySql
 	}
 }
 
-// 获取指定ID的任务信息
+// ShowGaussMySqlInstanceInfoInvoker 查询实例详情信息
+func (c *GaussDBClient) ShowGaussMySqlInstanceInfoInvoker(request *model.ShowGaussMySqlInstanceInfoRequest) *ShowGaussMySqlInstanceInfoInvoker {
+	requestDef := GenReqDefForShowGaussMySqlInstanceInfo()
+	return &ShowGaussMySqlInstanceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGaussMySqlJobInfo 获取指定ID的任务信息
 //
 // 获取指定ID的任务信息。
 //
@@ -452,7 +608,13 @@ func (c *GaussDBClient) ShowGaussMySqlJobInfo(request *model.ShowGaussMySqlJobIn
 	}
 }
 
-// 查询租户的实例配额
+// ShowGaussMySqlJobInfoInvoker 获取指定ID的任务信息
+func (c *GaussDBClient) ShowGaussMySqlJobInfoInvoker(request *model.ShowGaussMySqlJobInfoRequest) *ShowGaussMySqlJobInfoInvoker {
+	requestDef := GenReqDefForShowGaussMySqlJobInfo()
+	return &ShowGaussMySqlJobInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGaussMySqlProjectQuotas 查询租户的实例配额
 //
 // 获取指定租户的资源配额。
 //
@@ -468,7 +630,13 @@ func (c *GaussDBClient) ShowGaussMySqlProjectQuotas(request *model.ShowGaussMySq
 	}
 }
 
-// 查询数据库代理信息
+// ShowGaussMySqlProjectQuotasInvoker 查询租户的实例配额
+func (c *GaussDBClient) ShowGaussMySqlProjectQuotasInvoker(request *model.ShowGaussMySqlProjectQuotasRequest) *ShowGaussMySqlProjectQuotasInvoker {
+	requestDef := GenReqDefForShowGaussMySqlProjectQuotas()
+	return &ShowGaussMySqlProjectQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGaussMySqlProxy 查询数据库代理信息
 //
 // 查询数据库代理信息。
 //
@@ -484,7 +652,13 @@ func (c *GaussDBClient) ShowGaussMySqlProxy(request *model.ShowGaussMySqlProxyRe
 	}
 }
 
-// 查询数据库代理规格信息
+// ShowGaussMySqlProxyInvoker 查询数据库代理信息
+func (c *GaussDBClient) ShowGaussMySqlProxyInvoker(request *model.ShowGaussMySqlProxyRequest) *ShowGaussMySqlProxyInvoker {
+	requestDef := GenReqDefForShowGaussMySqlProxy()
+	return &ShowGaussMySqlProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGaussMySqlProxyFlavors 查询数据库代理规格信息
 //
 // 查询数据库代理规格信息。
 //
@@ -500,7 +674,13 @@ func (c *GaussDBClient) ShowGaussMySqlProxyFlavors(request *model.ShowGaussMySql
 	}
 }
 
-// 查询数据库代理信息列表
+// ShowGaussMySqlProxyFlavorsInvoker 查询数据库代理规格信息
+func (c *GaussDBClient) ShowGaussMySqlProxyFlavorsInvoker(request *model.ShowGaussMySqlProxyFlavorsRequest) *ShowGaussMySqlProxyFlavorsInvoker {
+	requestDef := GenReqDefForShowGaussMySqlProxyFlavors()
+	return &ShowGaussMySqlProxyFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGaussMySqlProxyList 查询数据库代理信息列表
 //
 // 查询数据库代理信息列表。
 //
@@ -516,7 +696,13 @@ func (c *GaussDBClient) ShowGaussMySqlProxyList(request *model.ShowGaussMySqlPro
 	}
 }
 
-// 查询租户基于企业项目的资源配额
+// ShowGaussMySqlProxyListInvoker 查询数据库代理信息列表
+func (c *GaussDBClient) ShowGaussMySqlProxyListInvoker(request *model.ShowGaussMySqlProxyListRequest) *ShowGaussMySqlProxyListInvoker {
+	requestDef := GenReqDefForShowGaussMySqlProxyList()
+	return &ShowGaussMySqlProxyListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGaussMySqlQuotas 查询租户基于企业项目的资源配额
 //
 // 获取指定企业项目的资源配额。
 //
@@ -532,7 +718,13 @@ func (c *GaussDBClient) ShowGaussMySqlQuotas(request *model.ShowGaussMySqlQuotas
 	}
 }
 
-// 查询实例秒级监控频率
+// ShowGaussMySqlQuotasInvoker 查询租户基于企业项目的资源配额
+func (c *GaussDBClient) ShowGaussMySqlQuotasInvoker(request *model.ShowGaussMySqlQuotasRequest) *ShowGaussMySqlQuotasInvoker {
+	requestDef := GenReqDefForShowGaussMySqlQuotas()
+	return &ShowGaussMySqlQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceMonitorExtend 查询实例秒级监控频率
 //
 // 查询实例秒级监控频率。
 //
@@ -548,7 +740,13 @@ func (c *GaussDBClient) ShowInstanceMonitorExtend(request *model.ShowInstanceMon
 	}
 }
 
-// 开启或者关闭审计日志
+// ShowInstanceMonitorExtendInvoker 查询实例秒级监控频率
+func (c *GaussDBClient) ShowInstanceMonitorExtendInvoker(request *model.ShowInstanceMonitorExtendRequest) *ShowInstanceMonitorExtendInvoker {
+	requestDef := GenReqDefForShowInstanceMonitorExtend()
+	return &ShowInstanceMonitorExtendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAuditLog 开启或者关闭审计日志
 //
 // 开启或者关闭审计日志
 //
@@ -564,7 +762,13 @@ func (c *GaussDBClient) UpdateAuditLog(request *model.UpdateAuditLogRequest) (*m
 	}
 }
 
-// 修改备份策略
+// UpdateAuditLogInvoker 开启或者关闭审计日志
+func (c *GaussDBClient) UpdateAuditLogInvoker(request *model.UpdateAuditLogRequest) *UpdateAuditLogInvoker {
+	requestDef := GenReqDefForUpdateAuditLog()
+	return &UpdateAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGaussMySqlBackupPolicy 修改备份策略
 //
 // 修改备份策略
 //
@@ -580,7 +784,13 @@ func (c *GaussDBClient) UpdateGaussMySqlBackupPolicy(request *model.UpdateGaussM
 	}
 }
 
-// 修改实例名称
+// UpdateGaussMySqlBackupPolicyInvoker 修改备份策略
+func (c *GaussDBClient) UpdateGaussMySqlBackupPolicyInvoker(request *model.UpdateGaussMySqlBackupPolicyRequest) *UpdateGaussMySqlBackupPolicyInvoker {
+	requestDef := GenReqDefForUpdateGaussMySqlBackupPolicy()
+	return &UpdateGaussMySqlBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGaussMySqlInstanceName 修改实例名称
 //
 // 修改实例名称
 //
@@ -596,7 +806,13 @@ func (c *GaussDBClient) UpdateGaussMySqlInstanceName(request *model.UpdateGaussM
 	}
 }
 
-// 修改租户基于企业项目的资源配额
+// UpdateGaussMySqlInstanceNameInvoker 修改实例名称
+func (c *GaussDBClient) UpdateGaussMySqlInstanceNameInvoker(request *model.UpdateGaussMySqlInstanceNameRequest) *UpdateGaussMySqlInstanceNameInvoker {
+	requestDef := GenReqDefForUpdateGaussMySqlInstanceName()
+	return &UpdateGaussMySqlInstanceNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGaussMySqlQuotas 修改租户基于企业项目的资源配额
 //
 // 修改指定企业项目的资源配额。
 //
@@ -612,7 +828,13 @@ func (c *GaussDBClient) UpdateGaussMySqlQuotas(request *model.UpdateGaussMySqlQu
 	}
 }
 
-// 修改实例秒级监控频率
+// UpdateGaussMySqlQuotasInvoker 修改租户基于企业项目的资源配额
+func (c *GaussDBClient) UpdateGaussMySqlQuotasInvoker(request *model.UpdateGaussMySqlQuotasRequest) *UpdateGaussMySqlQuotasInvoker {
+	requestDef := GenReqDefForUpdateGaussMySqlQuotas()
+	return &UpdateGaussMySqlQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceMonitor 修改实例秒级监控频率
 //
 // 打开/关闭/修改实例秒级监控。
 //
@@ -626,4 +848,10 @@ func (c *GaussDBClient) UpdateInstanceMonitor(request *model.UpdateInstanceMonit
 	} else {
 		return resp.(*model.UpdateInstanceMonitorResponse), nil
 	}
+}
+
+// UpdateInstanceMonitorInvoker 修改实例秒级监控频率
+func (c *GaussDBClient) UpdateInstanceMonitorInvoker(request *model.UpdateInstanceMonitorRequest) *UpdateInstanceMonitorInvoker {
+	requestDef := GenReqDefForUpdateInstanceMonitor()
+	return &UpdateInstanceMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

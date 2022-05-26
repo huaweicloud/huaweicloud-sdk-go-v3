@@ -88,6 +88,10 @@ func GetShowRequestPropertyResponseDataTypeEnum() ShowRequestPropertyResponseDat
 	}
 }
 
+func (c ShowRequestPropertyResponseDataType) Value() string {
+	return c.value
+}
+
 func (c ShowRequestPropertyResponseDataType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -123,6 +127,10 @@ func GetShowRequestPropertyResponseRequiredEnum() ShowRequestPropertyResponseReq
 			value: 1,
 		},
 	}
+}
+
+func (c ShowRequestPropertyResponseRequired) Value() int32 {
+	return c.value
 }
 
 func (c ShowRequestPropertyResponseRequired) MarshalJSON() ([]byte, error) {

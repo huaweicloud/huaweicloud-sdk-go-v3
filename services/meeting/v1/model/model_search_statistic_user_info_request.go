@@ -60,6 +60,10 @@ func GetSearchStatisticUserInfoRequestTimeUnitEnum() SearchStatisticUserInfoRequ
 	}
 }
 
+func (c SearchStatisticUserInfoRequestTimeUnit) Value() string {
+	return c.value
+}
+
 func (c SearchStatisticUserInfoRequestTimeUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -100,6 +104,10 @@ func GetSearchStatisticUserInfoRequestCategoryEnum() SearchStatisticUserInfoRequ
 			value: "user_login_device_info",
 		},
 	}
+}
+
+func (c SearchStatisticUserInfoRequestCategory) Value() string {
+	return c.value
 }
 
 func (c SearchStatisticUserInfoRequestCategory) MarshalJSON() ([]byte, error) {

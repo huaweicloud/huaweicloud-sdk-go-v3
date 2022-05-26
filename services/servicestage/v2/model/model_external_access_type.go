@@ -34,6 +34,10 @@ func GetExternalAccessTypeEnum() ExternalAccessTypeEnum {
 	}
 }
 
+func (c ExternalAccessType) Value() string {
+	return c.value
+}
+
 func (c ExternalAccessType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

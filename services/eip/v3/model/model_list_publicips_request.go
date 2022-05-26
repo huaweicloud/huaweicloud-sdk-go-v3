@@ -185,6 +185,10 @@ func GetListPublicipsRequestSortKeyEnum() ListPublicipsRequestSortKeyEnum {
 	}
 }
 
+func (c ListPublicipsRequestSortKey) Value() string {
+	return c.value
+}
+
 func (c ListPublicipsRequestSortKey) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -223,6 +227,10 @@ func GetListPublicipsRequestSortDirEnum() ListPublicipsRequestSortDirEnum {
 	}
 }
 
+func (c ListPublicipsRequestSortDir) Value() string {
+	return c.value
+}
+
 func (c ListPublicipsRequestSortDir) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -258,6 +266,10 @@ func GetListPublicipsRequestIpVersionEnum() ListPublicipsRequestIpVersionEnum {
 			value: 6,
 		},
 	}
+}
+
+func (c ListPublicipsRequestIpVersion) Value() int32 {
+	return c.value
 }
 
 func (c ListPublicipsRequestIpVersion) MarshalJSON() ([]byte, error) {
@@ -300,6 +312,10 @@ func GetListPublicipsRequestTypeEnum() ListPublicipsRequestTypeEnum {
 			value: "DUALSTACK_SUBNET",
 		},
 	}
+}
+
+func (c ListPublicipsRequestType) Value() string {
+	return c.value
 }
 
 func (c ListPublicipsRequestType) MarshalJSON() ([]byte, error) {
@@ -356,6 +372,10 @@ func GetListPublicipsRequestNetworkTypeEnum() ListPublicipsRequestNetworkTypeEnu
 	}
 }
 
+func (c ListPublicipsRequestNetworkType) Value() string {
+	return c.value
+}
+
 func (c ListPublicipsRequestNetworkType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -402,6 +422,10 @@ func GetListPublicipsRequestStatusEnum() ListPublicipsRequestStatusEnum {
 	}
 }
 
+func (c ListPublicipsRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListPublicipsRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -438,6 +462,10 @@ func GetListPublicipsRequestBandwidthShareTypeEnum() ListPublicipsRequestBandwid
 			value: "WHOLE",
 		},
 	}
+}
+
+func (c ListPublicipsRequestBandwidthShareType) Value() string {
+	return c.value
 }
 
 func (c ListPublicipsRequestBandwidthShareType) MarshalJSON() ([]byte, error) {
@@ -482,6 +510,10 @@ func GetListPublicipsRequestBandwidthChargeModeEnum() ListPublicipsRequestBandwi
 	}
 }
 
+func (c ListPublicipsRequestBandwidthChargeMode) Value() string {
+	return c.value
+}
+
 func (c ListPublicipsRequestBandwidthChargeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -518,6 +550,10 @@ func GetListPublicipsRequestBillingModeEnum() ListPublicipsRequestBillingModeEnu
 			value: "PAY_PER_USE",
 		},
 	}
+}
+
+func (c ListPublicipsRequestBillingMode) Value() string {
+	return c.value
 }
 
 func (c ListPublicipsRequestBillingMode) MarshalJSON() ([]byte, error) {
@@ -568,6 +604,10 @@ func GetListPublicipsRequestAssociateInstanceTypeEnum() ListPublicipsRequestAsso
 			value: "ELBV1",
 		},
 	}
+}
+
+func (c ListPublicipsRequestAssociateInstanceType) Value() string {
+	return c.value
 }
 
 func (c ListPublicipsRequestAssociateInstanceType) MarshalJSON() ([]byte, error) {

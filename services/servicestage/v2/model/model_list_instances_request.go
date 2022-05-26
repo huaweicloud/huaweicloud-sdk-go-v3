@@ -60,6 +60,10 @@ func GetListInstancesRequestOrderEnum() ListInstancesRequestOrderEnum {
 	}
 }
 
+func (c ListInstancesRequestOrder) Value() string {
+	return c.value
+}
+
 func (c ListInstancesRequestOrder) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

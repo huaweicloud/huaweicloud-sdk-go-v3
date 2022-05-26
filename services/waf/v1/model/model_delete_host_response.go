@@ -80,6 +80,10 @@ func GetDeleteHostResponsePaidTypeEnum() DeleteHostResponsePaidTypeEnum {
 	}
 }
 
+func (c DeleteHostResponsePaidType) Value() string {
+	return c.value
+}
+
 func (c DeleteHostResponsePaidType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

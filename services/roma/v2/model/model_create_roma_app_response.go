@@ -86,6 +86,10 @@ func GetCreateRomaAppResponseRolesEnum() CreateRomaAppResponseRolesEnum {
 	}
 }
 
+func (c CreateRomaAppResponseRoles) Value() string {
+	return c.value
+}
+
 func (c CreateRomaAppResponseRoles) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

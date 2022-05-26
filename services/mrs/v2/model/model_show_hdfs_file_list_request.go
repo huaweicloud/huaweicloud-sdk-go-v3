@@ -64,6 +64,10 @@ func GetShowHdfsFileListRequestSortKeyEnum() ShowHdfsFileListRequestSortKeyEnum 
 	}
 }
 
+func (c ShowHdfsFileListRequestSortKey) Value() string {
+	return c.value
+}
+
 func (c ShowHdfsFileListRequestSortKey) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -100,6 +104,10 @@ func GetShowHdfsFileListRequestOrderEnum() ShowHdfsFileListRequestOrderEnum {
 			value: "asc",
 		},
 	}
+}
+
+func (c ShowHdfsFileListRequestOrder) Value() string {
+	return c.value
 }
 
 func (c ShowHdfsFileListRequestOrder) MarshalJSON() ([]byte, error) {

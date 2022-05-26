@@ -75,6 +75,10 @@ func GetCreateProtectedInstanceRequestParamsTenancyEnum() CreateProtectedInstanc
 	}
 }
 
+func (c CreateProtectedInstanceRequestParamsTenancy) Value() string {
+	return c.value
+}
+
 func (c CreateProtectedInstanceRequestParamsTenancy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

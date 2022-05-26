@@ -99,6 +99,10 @@ func GetListImagesRequestProtectedEnum() ListImagesRequestProtectedEnum {
 	}
 }
 
+func (c ListImagesRequestProtected) Value() string {
+	return c.value
+}
+
 func (c ListImagesRequestProtected) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -131,6 +135,10 @@ func GetListImagesRequestVirtualEnvTypeEnum() ListImagesRequestVirtualEnvTypeEnu
 			value: "FusionCompute",
 		},
 	}
+}
+
+func (c ListImagesRequestVirtualEnvType) Value() string {
+	return c.value
 }
 
 func (c ListImagesRequestVirtualEnvType) MarshalJSON() ([]byte, error) {
@@ -169,6 +177,10 @@ func GetListImagesRequestIsregisteredEnum() ListImagesRequestIsregisteredEnum {
 			value: "false",
 		},
 	}
+}
+
+func (c ListImagesRequestIsregistered) Value() string {
+	return c.value
 }
 
 func (c ListImagesRequestIsregistered) MarshalJSON() ([]byte, error) {
@@ -217,6 +229,10 @@ func GetListImagesRequestSortKeyEnum() ListImagesRequestSortKeyEnum {
 	}
 }
 
+func (c ListImagesRequestSortKey) Value() string {
+	return c.value
+}
+
 func (c ListImagesRequestSortKey) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -253,6 +269,10 @@ func GetListImagesRequestSortDirEnum() ListImagesRequestSortDirEnum {
 			value: "desc",
 		},
 	}
+}
+
+func (c ListImagesRequestSortDir) Value() string {
+	return c.value
 }
 
 func (c ListImagesRequestSortDir) MarshalJSON() ([]byte, error) {

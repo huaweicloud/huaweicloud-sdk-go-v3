@@ -72,6 +72,10 @@ func GetVpcChannelInfoBalanceStrategyEnum() VpcChannelInfoBalanceStrategyEnum {
 	}
 }
 
+func (c VpcChannelInfoBalanceStrategy) Value() int32 {
+	return c.value
+}
+
 func (c VpcChannelInfoBalanceStrategy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -110,6 +114,10 @@ func GetVpcChannelInfoMemberTypeEnum() VpcChannelInfoMemberTypeEnum {
 	}
 }
 
+func (c VpcChannelInfoMemberType) Value() string {
+	return c.value
+}
+
 func (c VpcChannelInfoMemberType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -145,6 +153,10 @@ func GetVpcChannelInfoStatusEnum() VpcChannelInfoStatusEnum {
 			value: 2,
 		},
 	}
+}
+
+func (c VpcChannelInfoStatus) Value() int32 {
+	return c.value
 }
 
 func (c VpcChannelInfoStatus) MarshalJSON() ([]byte, error) {

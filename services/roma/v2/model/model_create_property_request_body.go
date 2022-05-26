@@ -83,6 +83,10 @@ func GetCreatePropertyRequestBodyDataTypeEnum() CreatePropertyRequestBodyDataTyp
 	}
 }
 
+func (c CreatePropertyRequestBodyDataType) Value() string {
+	return c.value
+}
+
 func (c CreatePropertyRequestBodyDataType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -118,6 +122,10 @@ func GetCreatePropertyRequestBodyRequiredEnum() CreatePropertyRequestBodyRequire
 			value: 1,
 		},
 	}
+}
+
+func (c CreatePropertyRequestBodyRequired) Value() int32 {
+	return c.value
 }
 
 func (c CreatePropertyRequestBodyRequired) MarshalJSON() ([]byte, error) {

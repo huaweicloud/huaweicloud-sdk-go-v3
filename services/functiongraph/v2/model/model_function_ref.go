@@ -47,6 +47,10 @@ func GetFunctionRefInvokeModeEnum() FunctionRefInvokeModeEnum {
 	}
 }
 
+func (c FunctionRefInvokeMode) Value() string {
+	return c.value
+}
+
 func (c FunctionRefInvokeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

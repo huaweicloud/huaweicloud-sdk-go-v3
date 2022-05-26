@@ -54,6 +54,10 @@ func GetAppConfigModifyRequestV2ConfigTypeEnum() AppConfigModifyRequestV2ConfigT
 	}
 }
 
+func (c AppConfigModifyRequestV2ConfigType) Value() string {
+	return c.value
+}
+
 func (c AppConfigModifyRequestV2ConfigType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

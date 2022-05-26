@@ -57,6 +57,10 @@ func GetBssParamForCreateVolumeChargingModeEnum() BssParamForCreateVolumeChargin
 	}
 }
 
+func (c BssParamForCreateVolumeChargingMode) Value() string {
+	return c.value
+}
+
 func (c BssParamForCreateVolumeChargingMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -93,6 +97,10 @@ func GetBssParamForCreateVolumeIsAutoPayEnum() BssParamForCreateVolumeIsAutoPayE
 			value: "false",
 		},
 	}
+}
+
+func (c BssParamForCreateVolumeIsAutoPay) Value() string {
+	return c.value
 }
 
 func (c BssParamForCreateVolumeIsAutoPay) MarshalJSON() ([]byte, error) {
@@ -133,6 +141,10 @@ func GetBssParamForCreateVolumeIsAutoRenewEnum() BssParamForCreateVolumeIsAutoRe
 	}
 }
 
+func (c BssParamForCreateVolumeIsAutoRenew) Value() string {
+	return c.value
+}
+
 func (c BssParamForCreateVolumeIsAutoRenew) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -169,6 +181,10 @@ func GetBssParamForCreateVolumePeriodTypeEnum() BssParamForCreateVolumePeriodTyp
 			value: "year",
 		},
 	}
+}
+
+func (c BssParamForCreateVolumePeriodType) Value() string {
+	return c.value
 }
 
 func (c BssParamForCreateVolumePeriodType) MarshalJSON() ([]byte, error) {

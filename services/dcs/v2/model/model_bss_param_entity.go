@@ -44,6 +44,10 @@ func GetBssParamEntityIsAutoPayEnum() BssParamEntityIsAutoPayEnum {
 	}
 }
 
+func (c BssParamEntityIsAutoPay) Value() string {
+	return c.value
+}
+
 func (c BssParamEntityIsAutoPay) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

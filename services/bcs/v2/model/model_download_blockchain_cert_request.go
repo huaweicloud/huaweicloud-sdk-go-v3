@@ -55,6 +55,10 @@ func GetDownloadBlockchainCertRequestCertTypeEnum() DownloadBlockchainCertReques
 	}
 }
 
+func (c DownloadBlockchainCertRequestCertType) Value() string {
+	return c.value
+}
+
 func (c DownloadBlockchainCertRequestCertType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

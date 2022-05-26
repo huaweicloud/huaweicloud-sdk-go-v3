@@ -47,6 +47,10 @@ func GetOperateInfoResponseBodyInfoCodeEnum() OperateInfoResponseBodyInfoCodeEnu
 	}
 }
 
+func (c OperateInfoResponseBodyInfoCode) Value() string {
+	return c.value
+}
+
 func (c OperateInfoResponseBodyInfoCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

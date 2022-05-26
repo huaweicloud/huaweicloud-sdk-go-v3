@@ -25,7 +25,7 @@ type GaussDBforOpenGaussUserForListAttributes struct {
 	Rolcanlogin *bool `json:"rolcanlogin,omitempty"`
 
 	// 用户连接实例的最大并发连接数。-1表示没有限制。
-	Rolconnlimit *bool `json:"rolconnlimit,omitempty"`
+	Rolconnlimit *int32 `json:"rolconnlimit,omitempty"`
 
 	// 用户是否属于复制角色，取值为“true”或“false”。
 	Rolreplication *bool `json:"rolreplication,omitempty"`

@@ -66,6 +66,10 @@ func GetInstanceReplicationListInfoStatusEnum() InstanceReplicationListInfoStatu
 	}
 }
 
+func (c InstanceReplicationListInfoStatus) Value() string {
+	return c.value
+}
+
 func (c InstanceReplicationListInfoStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -50,6 +50,10 @@ func GetChangeSqlSwitchRequestXLanguageEnum() ChangeSqlSwitchRequestXLanguageEnu
 	}
 }
 
+func (c ChangeSqlSwitchRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ChangeSqlSwitchRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

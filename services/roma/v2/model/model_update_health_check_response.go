@@ -88,6 +88,10 @@ func GetUpdateHealthCheckResponseProtocolEnum() UpdateHealthCheckResponseProtoco
 	}
 }
 
+func (c UpdateHealthCheckResponseProtocol) Value() string {
+	return c.value
+}
+
 func (c UpdateHealthCheckResponseProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -126,6 +130,10 @@ func GetUpdateHealthCheckResponseMethodEnum() UpdateHealthCheckResponseMethodEnu
 	}
 }
 
+func (c UpdateHealthCheckResponseMethod) Value() string {
+	return c.value
+}
+
 func (c UpdateHealthCheckResponseMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -161,6 +169,10 @@ func GetUpdateHealthCheckResponseStatusEnum() UpdateHealthCheckResponseStatusEnu
 			value: 2,
 		},
 	}
+}
+
+func (c UpdateHealthCheckResponseStatus) Value() int32 {
+	return c.value
 }
 
 func (c UpdateHealthCheckResponseStatus) MarshalJSON() ([]byte, error) {

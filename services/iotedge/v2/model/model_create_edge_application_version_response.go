@@ -101,6 +101,10 @@ func GetCreateEdgeApplicationVersionResponseStateEnum() CreateEdgeApplicationVer
 	}
 }
 
+func (c CreateEdgeApplicationVersionResponseState) Value() string {
+	return c.value
+}
+
 func (c CreateEdgeApplicationVersionResponseState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

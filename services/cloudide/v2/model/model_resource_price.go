@@ -53,6 +53,10 @@ func GetResourcePriceArchEnum() ResourcePriceArchEnum {
 	}
 }
 
+func (c ResourcePriceArch) Value() string {
+	return c.value
+}
+
 func (c ResourcePriceArch) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -46,6 +46,10 @@ func GetUpdateNotificationRequestBodyStatusEnum() UpdateNotificationRequestBodyS
 	}
 }
 
+func (c UpdateNotificationRequestBodyStatus) Value() int32 {
+	return c.value
+}
+
 func (c UpdateNotificationRequestBodyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

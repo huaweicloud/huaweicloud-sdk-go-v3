@@ -53,6 +53,10 @@ func GetSegmentRequestPosSwitchEnum() SegmentRequestPosSwitchEnum {
 	}
 }
 
+func (c SegmentRequestPosSwitch) Value() int32 {
+	return c.value
+}
+
 func (c SegmentRequestPosSwitch) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -91,6 +95,10 @@ func GetSegmentRequestLangEnum() SegmentRequestLangEnum {
 	}
 }
 
+func (c SegmentRequestLang) Value() string {
+	return c.value
+}
+
 func (c SegmentRequestLang) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -127,6 +135,10 @@ func GetSegmentRequestCriterionEnum() SegmentRequestCriterionEnum {
 			value: "CTB",
 		},
 	}
+}
+
+func (c SegmentRequestCriterion) Value() string {
+	return c.value
 }
 
 func (c SegmentRequestCriterion) MarshalJSON() ([]byte, error) {

@@ -48,6 +48,10 @@ func GetOpenGaussVolumeResponseTypeEnum() OpenGaussVolumeResponseTypeEnum {
 	}
 }
 
+func (c OpenGaussVolumeResponseType) Value() string {
+	return c.value
+}
+
 func (c OpenGaussVolumeResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

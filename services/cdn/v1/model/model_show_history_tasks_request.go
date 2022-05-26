@@ -69,6 +69,10 @@ func GetShowHistoryTasksRequestStatusEnum() ShowHistoryTasksRequestStatusEnum {
 	}
 }
 
+func (c ShowHistoryTasksRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ShowHistoryTasksRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -105,6 +109,10 @@ func GetShowHistoryTasksRequestFileTypeEnum() ShowHistoryTasksRequestFileTypeEnu
 			value: "directory",
 		},
 	}
+}
+
+func (c ShowHistoryTasksRequestFileType) Value() string {
+	return c.value
 }
 
 func (c ShowHistoryTasksRequestFileType) MarshalJSON() ([]byte, error) {

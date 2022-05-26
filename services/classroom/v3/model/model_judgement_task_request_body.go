@@ -62,6 +62,10 @@ func GetJudgementTaskRequestBodyCodeTypeEnum() JudgementTaskRequestBodyCodeTypeE
 	}
 }
 
+func (c JudgementTaskRequestBodyCodeType) Value() string {
+	return c.value
+}
+
 func (c JudgementTaskRequestBodyCodeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -106,6 +110,10 @@ func GetJudgementTaskRequestBodyRuntimeTypeEnum() JudgementTaskRequestBodyRuntim
 			value: "python",
 		},
 	}
+}
+
+func (c JudgementTaskRequestBodyRuntimeType) Value() string {
+	return c.value
 }
 
 func (c JudgementTaskRequestBodyRuntimeType) MarshalJSON() ([]byte, error) {
@@ -156,6 +164,10 @@ func GetJudgementTaskRequestBodyOutputTypeEnum() JudgementTaskRequestBodyOutputT
 			value: "judgeout",
 		},
 	}
+}
+
+func (c JudgementTaskRequestBodyOutputType) Value() string {
+	return c.value
 }
 
 func (c JudgementTaskRequestBodyOutputType) MarshalJSON() ([]byte, error) {

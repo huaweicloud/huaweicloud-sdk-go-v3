@@ -48,6 +48,10 @@ func GetListUsersRequestXLanguageEnum() ListUsersRequestXLanguageEnum {
 	}
 }
 
+func (c ListUsersRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ListUsersRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -49,6 +49,10 @@ func GetDeleteDomainsResponseInfoCodeEnum() DeleteDomainsResponseInfoCodeEnum {
 	}
 }
 
+func (c DeleteDomainsResponseInfoCode) Value() string {
+	return c.value
+}
+
 func (c DeleteDomainsResponseInfoCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -53,6 +53,10 @@ func GetTriggerTriggerTypeEnum() TriggerTriggerTypeEnum {
 	}
 }
 
+func (c TriggerTriggerType) Value() string {
+	return c.value
+}
+
 func (c TriggerTriggerType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

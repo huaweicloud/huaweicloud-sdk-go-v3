@@ -120,6 +120,7 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
 * [5. Troubleshooting](#5-troubleshooting-top)
     * [5.1  Original HTTP Listener](#51-original-http-listener-top)
 * [6. Upload and download files](#6-upload-and-download-files-top)
+* [7. Retry For Request](#7-retry-for-request-top)
 
 ### 1. Client Configuration [:top:](#user-manual-top)
 
@@ -489,5 +490,46 @@ func main() {
 			Build())
 
 	createImageWatermark(client)
+}
+```
+
+### 7. Retry For Request [:top:](#user-manual-top)
+
+When a request encounters a network exception or flow control on the interface, the request needs to be retried. The
+Java SDK provides the retry method for our users which could be used to the requests of `GET` HTTP method. 
+If you want to use the retry method, the following parameters are required:
+
+- _maxRetryTimes_: the max retry times
+- _retryCondition_: a function, which determine the condition of when to retry
+- _backoffStrategy_: calculate the wait duration before next retry
+
+Take the interface `ListVpcs` of VPC service for example, assume the request would retry at most 3 times, 
+retry when service responses an error, the code would be like the following:
+
+``` go
+// initialize the client
+client := vpc.NewVpcClient(
+	vpc.VpcClientBuilder().
+		WithEndpoint("<input your endpoint>").
+		WithCredential(
+			basic.NewCredentialsBuilder().
+				WithAk("<input your ak>").
+				WithSk("<input your sk>").
+				WithProjectId("<input your project id>").
+				Build()).
+		Build())
+
+// initialize the request
+request := &model.ListVpcsRequest{}
+
+// send the requet and retry when service responses an error
+response, err := client.ListVpcsInvoker(request).WithRetry(3, func(i interface{}, err error) bool {
+	return err != nil
+}, new(retry.None)).Invoke()
+
+if err == nil {
+	fmt.Printf("%+v\n", response)
+} else {
+	fmt.Printf("%+v\n", err)
 }
 ```

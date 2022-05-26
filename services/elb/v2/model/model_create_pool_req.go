@@ -72,6 +72,10 @@ func GetCreatePoolReqProtocolEnum() CreatePoolReqProtocolEnum {
 	}
 }
 
+func (c CreatePoolReqProtocol) Value() string {
+	return c.value
+}
+
 func (c CreatePoolReqProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

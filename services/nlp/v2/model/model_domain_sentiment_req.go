@@ -50,6 +50,10 @@ func GetDomainSentimentReqTypeEnum() DomainSentimentReqTypeEnum {
 	}
 }
 
+func (c DomainSentimentReqType) Value() int32 {
+	return c.value
+}
+
 func (c DomainSentimentReqType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

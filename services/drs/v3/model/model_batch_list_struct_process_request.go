@@ -47,6 +47,10 @@ func GetBatchListStructProcessRequestXLanguageEnum() BatchListStructProcessReque
 	}
 }
 
+func (c BatchListStructProcessRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c BatchListStructProcessRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

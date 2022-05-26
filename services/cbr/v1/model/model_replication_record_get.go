@@ -95,6 +95,10 @@ func GetReplicationRecordGetStatusEnum() ReplicationRecordGetStatusEnum {
 	}
 }
 
+func (c ReplicationRecordGetStatus) Value() string {
+	return c.value
+}
+
 func (c ReplicationRecordGetStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

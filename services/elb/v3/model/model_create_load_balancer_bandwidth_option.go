@@ -60,6 +60,10 @@ func GetCreateLoadBalancerBandwidthOptionChargeModeEnum() CreateLoadBalancerBand
 	}
 }
 
+func (c CreateLoadBalancerBandwidthOptionChargeMode) Value() string {
+	return c.value
+}
+
 func (c CreateLoadBalancerBandwidthOptionChargeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -96,6 +100,10 @@ func GetCreateLoadBalancerBandwidthOptionShareTypeEnum() CreateLoadBalancerBandw
 			value: "WHOLE",
 		},
 	}
+}
+
+func (c CreateLoadBalancerBandwidthOptionShareType) Value() string {
+	return c.value
 }
 
 func (c CreateLoadBalancerBandwidthOptionShareType) MarshalJSON() ([]byte, error) {

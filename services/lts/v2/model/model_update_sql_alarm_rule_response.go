@@ -99,6 +99,10 @@ func GetUpdateSqlAlarmRuleResponseSqlAlarmLevelEnum() UpdateSqlAlarmRuleResponse
 	}
 }
 
+func (c UpdateSqlAlarmRuleResponseSqlAlarmLevel) Value() string {
+	return c.value
+}
+
 func (c UpdateSqlAlarmRuleResponseSqlAlarmLevel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

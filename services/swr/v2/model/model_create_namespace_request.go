@@ -47,6 +47,10 @@ func GetCreateNamespaceRequestContentTypeEnum() CreateNamespaceRequestContentTyp
 	}
 }
 
+func (c CreateNamespaceRequestContentType) Value() string {
+	return c.value
+}
+
 func (c CreateNamespaceRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

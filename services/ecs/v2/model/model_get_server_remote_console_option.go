@@ -43,6 +43,10 @@ func GetGetServerRemoteConsoleOptionProtocolEnum() GetServerRemoteConsoleOptionP
 	}
 }
 
+func (c GetServerRemoteConsoleOptionProtocol) Value() string {
+	return c.value
+}
+
 func (c GetServerRemoteConsoleOptionProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -75,6 +79,10 @@ func GetGetServerRemoteConsoleOptionTypeEnum() GetServerRemoteConsoleOptionTypeE
 			value: "novnc",
 		},
 	}
+}
+
+func (c GetServerRemoteConsoleOptionType) Value() string {
+	return c.value
 }
 
 func (c GetServerRemoteConsoleOptionType) MarshalJSON() ([]byte, error) {

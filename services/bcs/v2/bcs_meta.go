@@ -86,12 +86,36 @@ func GenReqDefForBatchRemoveOrgsFromChannel() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchRemovePeersFromChannel() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/blockchains/{blockchain_id}/{channel_id}/peers/quit").
+		WithResponse(new(model.BatchRemovePeersFromChannelResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BlockchainId").
+		WithJsonTag("blockchain_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ChannelId").
+		WithJsonTag("channel_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateBlockchainCertByUserName() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/blockchains/{blockchain_id}/orgs/{org_name}/usercert/{user_name}").
 		WithResponse(new(model.CreateBlockchainCertByUserNameResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BlockchainId").
@@ -105,6 +129,10 @@ func GenReqDefForCreateBlockchainCertByUserName() *def.HttpRequestDef {
 		WithName("UserName").
 		WithJsonTag("user_name").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -149,6 +177,38 @@ func GenReqDefForDeleteBlockchain() *def.HttpRequestDef {
 		WithName("IsDeleteResource").
 		WithJsonTag("is_delete_resource").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsDeleteIef").
+		WithJsonTag("is_delete_ief").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsDeleteLightpeer").
+		WithJsonTag("is_delete_lightpeer").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IefNodesId").
+		WithJsonTag("ief_nodes_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteChannel() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/blockchains/{blockchain_id}/channel/{channel_id}").
+		WithResponse(new(model.DeleteChannelResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BlockchainId").
+		WithJsonTag("blockchain_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ChannelId").
+		WithJsonTag("channel_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -219,7 +279,7 @@ func GenReqDefForFreezeCert() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/blockchains/{blockchain_id}/orgs/{org_name}/usercert/{user_name}/freeze").
 		WithResponse(new(model.FreezeCertResponse)).
-		WithContentType("application/json")
+		WithContentType("multipart/form-data")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("UserName").
@@ -234,6 +294,10 @@ func GenReqDefForFreezeCert() *def.HttpRequestDef {
 		WithJsonTag("org_name").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -243,6 +307,21 @@ func GenReqDefForHandleNotification() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/notification/handle").
 		WithResponse(new(model.HandleNotificationResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForHandleUnionMemberQuitList() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/members/quit").
+		WithResponse(new(model.HandleUnionMemberQuitListResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -478,7 +557,7 @@ func GenReqDefForUnfreezeCert() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/blockchains/{blockchain_id}/orgs/{org_name}/usercert/{user_name}/unfreeze").
 		WithResponse(new(model.UnfreezeCertResponse)).
-		WithContentType("application/json")
+		WithContentType("multipart/form-data")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("UserName").
@@ -492,6 +571,10 @@ func GenReqDefForUnfreezeCert() *def.HttpRequestDef {
 		WithName("OrgName").
 		WithJsonTag("org_name").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

@@ -46,6 +46,10 @@ func GetImportGraphRequestActionIdEnum() ImportGraphRequestActionIdEnum {
 	}
 }
 
+func (c ImportGraphRequestActionId) Value() string {
+	return c.value
+}
+
 func (c ImportGraphRequestActionId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

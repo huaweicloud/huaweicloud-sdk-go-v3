@@ -55,6 +55,10 @@ func GetColumnsTypeEnum() ColumnsTypeEnum {
 	}
 }
 
+func (c ColumnsType) Value() string {
+	return c.value
+}
+
 func (c ColumnsType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

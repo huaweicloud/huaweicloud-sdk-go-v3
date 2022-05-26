@@ -111,6 +111,10 @@ func GetPostSourceServerBodyOsTypeEnum() PostSourceServerBodyOsTypeEnum {
 	}
 }
 
+func (c PostSourceServerBodyOsType) Value() string {
+	return c.value
+}
+
 func (c PostSourceServerBodyOsType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -149,6 +153,10 @@ func GetPostSourceServerBodyFirmwareEnum() PostSourceServerBodyFirmwareEnum {
 	}
 }
 
+func (c PostSourceServerBodyFirmware) Value() string {
+	return c.value
+}
+
 func (c PostSourceServerBodyFirmware) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -185,6 +193,10 @@ func GetPostSourceServerBodyBootLoaderEnum() PostSourceServerBodyBootLoaderEnum 
 			value: "LILO",
 		},
 	}
+}
+
+func (c PostSourceServerBodyBootLoader) Value() string {
+	return c.value
 }
 
 func (c PostSourceServerBodyBootLoader) MarshalJSON() ([]byte, error) {

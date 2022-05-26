@@ -56,6 +56,10 @@ func GetRepositoryCreationResultStatusEnum() RepositoryCreationResultStatusEnum 
 	}
 }
 
+func (c RepositoryCreationResultStatus) Value() string {
+	return c.value
+}
+
 func (c RepositoryCreationResultStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

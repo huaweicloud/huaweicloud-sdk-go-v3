@@ -69,6 +69,10 @@ func GetShowDetailsOfInstanceProgressV2ResponseProgressEnum() ShowDetailsOfInsta
 	}
 }
 
+func (c ShowDetailsOfInstanceProgressV2ResponseProgress) Value() int32 {
+	return c.value
+}
+
 func (c ShowDetailsOfInstanceProgressV2ResponseProgress) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -109,6 +113,10 @@ func GetShowDetailsOfInstanceProgressV2ResponseStatusEnum() ShowDetailsOfInstanc
 			value: "failed",
 		},
 	}
+}
+
+func (c ShowDetailsOfInstanceProgressV2ResponseStatus) Value() string {
+	return c.value
 }
 
 func (c ShowDetailsOfInstanceProgressV2ResponseStatus) MarshalJSON() ([]byte, error) {

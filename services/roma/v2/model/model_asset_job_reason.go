@@ -53,6 +53,10 @@ func GetAssetJobReasonResourceTypeEnum() AssetJobReasonResourceTypeEnum {
 	}
 }
 
+func (c AssetJobReasonResourceType) Value() string {
+	return c.value
+}
+
 func (c AssetJobReasonResourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

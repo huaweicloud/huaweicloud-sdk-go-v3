@@ -81,6 +81,10 @@ func GetLdApiDeployProtocolEnum() LdApiDeployProtocolEnum {
 	}
 }
 
+func (c LdApiDeployProtocol) Value() string {
+	return c.value
+}
+
 func (c LdApiDeployProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

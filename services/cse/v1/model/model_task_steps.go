@@ -74,6 +74,10 @@ func GetTaskStepsStatusEnum() TaskStepsStatusEnum {
 	}
 }
 
+func (c TaskStepsStatus) Value() string {
+	return c.value
+}
+
 func (c TaskStepsStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -56,6 +56,10 @@ func GetBssParamIsAutoRenewEnum() BssParamIsAutoRenewEnum {
 	}
 }
 
+func (c BssParamIsAutoRenew) Value() string {
+	return c.value
+}
+
 func (c BssParamIsAutoRenew) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -92,6 +96,10 @@ func GetBssParamChargingModeEnum() BssParamChargingModeEnum {
 			value: "postPaid",
 		},
 	}
+}
+
+func (c BssParamChargingMode) Value() string {
+	return c.value
 }
 
 func (c BssParamChargingMode) MarshalJSON() ([]byte, error) {
@@ -132,6 +140,10 @@ func GetBssParamIsAutoPayEnum() BssParamIsAutoPayEnum {
 	}
 }
 
+func (c BssParamIsAutoPay) Value() string {
+	return c.value
+}
+
 func (c BssParamIsAutoPay) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -168,6 +180,10 @@ func GetBssParamPeriodTypeEnum() BssParamPeriodTypeEnum {
 			value: "year",
 		},
 	}
+}
+
+func (c BssParamPeriodType) Value() string {
+	return c.value
 }
 
 func (c BssParamPeriodType) MarshalJSON() ([]byte, error) {

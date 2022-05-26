@@ -48,6 +48,10 @@ func GetDeleteScalingInstanceRequestInstanceDeleteEnum() DeleteScalingInstanceRe
 	}
 }
 
+func (c DeleteScalingInstanceRequestInstanceDelete) Value() string {
+	return c.value
+}
+
 func (c DeleteScalingInstanceRequestInstanceDelete) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

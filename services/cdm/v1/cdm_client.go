@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cdm/v1/model"
 )
 
@@ -19,7 +19,7 @@ func CdmClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 随机集群创建作业并执行
+// CreateAndStartRandomClusterJob 随机集群创建作业并执行
 //
 // 随机集群创建作业并执行接口。
 //
@@ -35,7 +35,13 @@ func (c *CdmClient) CreateAndStartRandomClusterJob(request *model.CreateAndStart
 	}
 }
 
-// 创建集群
+// CreateAndStartRandomClusterJobInvoker 随机集群创建作业并执行
+func (c *CdmClient) CreateAndStartRandomClusterJobInvoker(request *model.CreateAndStartRandomClusterJobRequest) *CreateAndStartRandomClusterJobInvoker {
+	requestDef := GenReqDefForCreateAndStartRandomClusterJob()
+	return &CreateAndStartRandomClusterJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCluster 创建集群
 //
 // 创建集群接口。
 //
@@ -51,7 +57,13 @@ func (c *CdmClient) CreateCluster(request *model.CreateClusterRequest) (*model.C
 	}
 }
 
-// 指定集群创建作业
+// CreateClusterInvoker 创建集群
+func (c *CdmClient) CreateClusterInvoker(request *model.CreateClusterRequest) *CreateClusterInvoker {
+	requestDef := GenReqDefForCreateCluster()
+	return &CreateClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateJob 指定集群创建作业
 //
 // 指定集群创建作业接口。
 //
@@ -67,7 +79,13 @@ func (c *CdmClient) CreateJob(request *model.CreateJobRequest) (*model.CreateJob
 	}
 }
 
-// 创建连接
+// CreateJobInvoker 指定集群创建作业
+func (c *CdmClient) CreateJobInvoker(request *model.CreateJobRequest) *CreateJobInvoker {
+	requestDef := GenReqDefForCreateJob()
+	return &CreateJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateLink 创建连接
 //
 // 创建连接接口。
 //
@@ -83,7 +101,13 @@ func (c *CdmClient) CreateLink(request *model.CreateLinkRequest) (*model.CreateL
 	}
 }
 
-// 删除集群
+// CreateLinkInvoker 创建连接
+func (c *CdmClient) CreateLinkInvoker(request *model.CreateLinkRequest) *CreateLinkInvoker {
+	requestDef := GenReqDefForCreateLink()
+	return &CreateLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCluster 删除集群
 //
 // 删除集群接口。
 //
@@ -99,7 +123,13 @@ func (c *CdmClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.D
 	}
 }
 
-// 删除作业
+// DeleteClusterInvoker 删除集群
+func (c *CdmClient) DeleteClusterInvoker(request *model.DeleteClusterRequest) *DeleteClusterInvoker {
+	requestDef := GenReqDefForDeleteCluster()
+	return &DeleteClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteJob 删除作业
 //
 // 删除作业接口。
 //
@@ -115,7 +145,13 @@ func (c *CdmClient) DeleteJob(request *model.DeleteJobRequest) (*model.DeleteJob
 	}
 }
 
-// 删除连接
+// DeleteJobInvoker 删除作业
+func (c *CdmClient) DeleteJobInvoker(request *model.DeleteJobRequest) *DeleteJobInvoker {
+	requestDef := GenReqDefForDeleteJob()
+	return &DeleteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLink 删除连接
 //
 // 删除连接接口。
 //
@@ -131,7 +167,13 @@ func (c *CdmClient) DeleteLink(request *model.DeleteLinkRequest) (*model.DeleteL
 	}
 }
 
-// 查询集群列表
+// DeleteLinkInvoker 删除连接
+func (c *CdmClient) DeleteLinkInvoker(request *model.DeleteLinkRequest) *DeleteLinkInvoker {
+	requestDef := GenReqDefForDeleteLink()
+	return &DeleteLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClusters 查询集群列表
 //
 // 查询集群列表接口。
 //
@@ -147,7 +189,13 @@ func (c *CdmClient) ListClusters(request *model.ListClustersRequest) (*model.Lis
 	}
 }
 
-// 重启集群
+// ListClustersInvoker 查询集群列表
+func (c *CdmClient) ListClustersInvoker(request *model.ListClustersRequest) *ListClustersInvoker {
+	requestDef := GenReqDefForListClusters()
+	return &ListClustersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestartCluster 重启集群
 //
 // 重启集群接口。
 //
@@ -163,7 +211,13 @@ func (c *CdmClient) RestartCluster(request *model.RestartClusterRequest) (*model
 	}
 }
 
-// 查询集群详情
+// RestartClusterInvoker 重启集群
+func (c *CdmClient) RestartClusterInvoker(request *model.RestartClusterRequest) *RestartClusterInvoker {
+	requestDef := GenReqDefForRestartCluster()
+	return &RestartClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClusterDetail 查询集群详情
 //
 // 查询集群详情接口。
 //
@@ -179,7 +233,13 @@ func (c *CdmClient) ShowClusterDetail(request *model.ShowClusterDetailRequest) (
 	}
 }
 
-// 查询作业状态
+// ShowClusterDetailInvoker 查询集群详情
+func (c *CdmClient) ShowClusterDetailInvoker(request *model.ShowClusterDetailRequest) *ShowClusterDetailInvoker {
+	requestDef := GenReqDefForShowClusterDetail()
+	return &ShowClusterDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobStatus 查询作业状态
 //
 // 查询作业状态接口。
 //
@@ -195,7 +255,13 @@ func (c *CdmClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*model.S
 	}
 }
 
-// 查询作业
+// ShowJobStatusInvoker 查询作业状态
+func (c *CdmClient) ShowJobStatusInvoker(request *model.ShowJobStatusRequest) *ShowJobStatusInvoker {
+	requestDef := GenReqDefForShowJobStatus()
+	return &ShowJobStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobs 查询作业
 //
 // 查询作业接口。
 //
@@ -211,7 +277,13 @@ func (c *CdmClient) ShowJobs(request *model.ShowJobsRequest) (*model.ShowJobsRes
 	}
 }
 
-// 查询连接
+// ShowJobsInvoker 查询作业
+func (c *CdmClient) ShowJobsInvoker(request *model.ShowJobsRequest) *ShowJobsInvoker {
+	requestDef := GenReqDefForShowJobs()
+	return &ShowJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLink 查询连接
 //
 // 查询连接接口。
 //
@@ -227,7 +299,13 @@ func (c *CdmClient) ShowLink(request *model.ShowLinkRequest) (*model.ShowLinkRes
 	}
 }
 
-// 查询作业执行历史
+// ShowLinkInvoker 查询连接
+func (c *CdmClient) ShowLinkInvoker(request *model.ShowLinkRequest) *ShowLinkInvoker {
+	requestDef := GenReqDefForShowLink()
+	return &ShowLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSubmissions 查询作业执行历史
 //
 // 查询作业执行历史接口。
 //
@@ -243,7 +321,13 @@ func (c *CdmClient) ShowSubmissions(request *model.ShowSubmissionsRequest) (*mod
 	}
 }
 
-// 启动集群
+// ShowSubmissionsInvoker 查询作业执行历史
+func (c *CdmClient) ShowSubmissionsInvoker(request *model.ShowSubmissionsRequest) *ShowSubmissionsInvoker {
+	requestDef := GenReqDefForShowSubmissions()
+	return &ShowSubmissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartCluster 启动集群
 //
 // 启动集群接口。
 //
@@ -259,7 +343,13 @@ func (c *CdmClient) StartCluster(request *model.StartClusterRequest) (*model.Sta
 	}
 }
 
-// 启动作业
+// StartClusterInvoker 启动集群
+func (c *CdmClient) StartClusterInvoker(request *model.StartClusterRequest) *StartClusterInvoker {
+	requestDef := GenReqDefForStartCluster()
+	return &StartClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartJob 启动作业
 //
 // 启动作业接口。
 //
@@ -275,7 +365,13 @@ func (c *CdmClient) StartJob(request *model.StartJobRequest) (*model.StartJobRes
 	}
 }
 
-// 停止集群
+// StartJobInvoker 启动作业
+func (c *CdmClient) StartJobInvoker(request *model.StartJobRequest) *StartJobInvoker {
+	requestDef := GenReqDefForStartJob()
+	return &StartJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopCluster 停止集群
 //
 // 停止集群接口。
 //
@@ -291,7 +387,13 @@ func (c *CdmClient) StopCluster(request *model.StopClusterRequest) (*model.StopC
 	}
 }
 
-// 停止作业
+// StopClusterInvoker 停止集群
+func (c *CdmClient) StopClusterInvoker(request *model.StopClusterRequest) *StopClusterInvoker {
+	requestDef := GenReqDefForStopCluster()
+	return &StopClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopJob 停止作业
 //
 // 停止作业接口。
 //
@@ -307,7 +409,13 @@ func (c *CdmClient) StopJob(request *model.StopJobRequest) (*model.StopJobRespon
 	}
 }
 
-// 修改作业
+// StopJobInvoker 停止作业
+func (c *CdmClient) StopJobInvoker(request *model.StopJobRequest) *StopJobInvoker {
+	requestDef := GenReqDefForStopJob()
+	return &StopJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateJob 修改作业
 //
 // 修改作业接口。
 //
@@ -323,7 +431,13 @@ func (c *CdmClient) UpdateJob(request *model.UpdateJobRequest) (*model.UpdateJob
 	}
 }
 
-// 修改连接
+// UpdateJobInvoker 修改作业
+func (c *CdmClient) UpdateJobInvoker(request *model.UpdateJobRequest) *UpdateJobInvoker {
+	requestDef := GenReqDefForUpdateJob()
+	return &UpdateJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLink 修改连接
 //
 // 修改连接接口。
 //
@@ -337,4 +451,10 @@ func (c *CdmClient) UpdateLink(request *model.UpdateLinkRequest) (*model.UpdateL
 	} else {
 		return resp.(*model.UpdateLinkResponse), nil
 	}
+}
+
+// UpdateLinkInvoker 修改连接
+func (c *CdmClient) UpdateLinkInvoker(request *model.UpdateLinkRequest) *UpdateLinkInvoker {
+	requestDef := GenReqDefForUpdateLink()
+	return &UpdateLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

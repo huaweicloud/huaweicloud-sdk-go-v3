@@ -54,6 +54,10 @@ func GetNovaCreateKeypairOptionTypeEnum() NovaCreateKeypairOptionTypeEnum {
 	}
 }
 
+func (c NovaCreateKeypairOptionType) Value() string {
+	return c.value
+}
+
 func (c NovaCreateKeypairOptionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

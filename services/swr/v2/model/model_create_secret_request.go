@@ -48,6 +48,10 @@ func GetCreateSecretRequestContentTypeEnum() CreateSecretRequestContentTypeEnum 
 	}
 }
 
+func (c CreateSecretRequestContentType) Value() string {
+	return c.value
+}
+
 func (c CreateSecretRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

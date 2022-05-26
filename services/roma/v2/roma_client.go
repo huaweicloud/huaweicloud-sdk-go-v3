@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/roma/v2/model"
 )
 
@@ -19,7 +19,7 @@ func RomaClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 添加子设备到网关
+// AddSubsetsToGateway 添加子设备到网关
 //
 // 添加子设备到网关
 //
@@ -35,7 +35,13 @@ func (c *RomaClient) AddSubsetsToGateway(request *model.AddSubsetsToGatewayReque
 	}
 }
 
-// 客户端配额绑定客户端应用列表
+// AddSubsetsToGatewayInvoker 添加子设备到网关
+func (c *RomaClient) AddSubsetsToGatewayInvoker(request *model.AddSubsetsToGatewayRequest) *AddSubsetsToGatewayInvoker {
+	requestDef := GenReqDefForAddSubsetsToGateway()
+	return &AddSubsetsToGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateAppsForAppQuota 客户端配额绑定客户端应用列表
 //
 // 客户端配额绑定客户端应用列表
 //
@@ -51,7 +57,13 @@ func (c *RomaClient) AssociateAppsForAppQuota(request *model.AssociateAppsForApp
 	}
 }
 
-// 绑定域名证书
+// AssociateAppsForAppQuotaInvoker 客户端配额绑定客户端应用列表
+func (c *RomaClient) AssociateAppsForAppQuotaInvoker(request *model.AssociateAppsForAppQuotaRequest) *AssociateAppsForAppQuotaInvoker {
+	requestDef := GenReqDefForAssociateAppsForAppQuota()
+	return &AssociateAppsForAppQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateCertificateV2 绑定域名证书
 //
 // 如果创建API时，“定义API请求”使用HTTPS请求协议，那么在独立域名中需要添加SSL证书。
 // 本章节主要介绍为特定域名绑定证书。
@@ -68,7 +80,13 @@ func (c *RomaClient) AssociateCertificateV2(request *model.AssociateCertificateV
 	}
 }
 
-// 绑定域名
+// AssociateCertificateV2Invoker 绑定域名证书
+func (c *RomaClient) AssociateCertificateV2Invoker(request *model.AssociateCertificateV2Request) *AssociateCertificateV2Invoker {
+	requestDef := GenReqDefForAssociateCertificateV2()
+	return &AssociateCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateDomainV2 绑定域名
 //
 // 用户自定义的域名，需要CNAME到API分组的子域名上才能生效。 每个API分组下最多可绑定5个域名。绑定域名后，用户可通过自定义域名调用API。
 //
@@ -84,7 +102,13 @@ func (c *RomaClient) AssociateDomainV2(request *model.AssociateDomainV2Request) 
 	}
 }
 
-// 绑定签名密钥
+// AssociateDomainV2Invoker 绑定域名
+func (c *RomaClient) AssociateDomainV2Invoker(request *model.AssociateDomainV2Request) *AssociateDomainV2Invoker {
+	requestDef := GenReqDefForAssociateDomainV2()
+	return &AssociateDomainV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateSignatureKeyV2 绑定签名密钥
 //
 // 签名密钥创建后，需要绑定到API才能生效。
 //
@@ -104,7 +128,13 @@ func (c *RomaClient) AssociateSignatureKeyV2(request *model.AssociateSignatureKe
 	}
 }
 
-// 批量添加设备到设备分组
+// AssociateSignatureKeyV2Invoker 绑定签名密钥
+func (c *RomaClient) AssociateSignatureKeyV2Invoker(request *model.AssociateSignatureKeyV2Request) *AssociateSignatureKeyV2Invoker {
+	requestDef := GenReqDefForAssociateSignatureKeyV2()
+	return &AssociateSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchAddDeviceToGroup 批量添加设备到设备分组
 //
 // 批量添加设备到设备分组
 //
@@ -120,7 +150,13 @@ func (c *RomaClient) BatchAddDeviceToGroup(request *model.BatchAddDeviceToGroupR
 	}
 }
 
-// 批量删除设备
+// BatchAddDeviceToGroupInvoker 批量添加设备到设备分组
+func (c *RomaClient) BatchAddDeviceToGroupInvoker(request *model.BatchAddDeviceToGroupRequest) *BatchAddDeviceToGroupInvoker {
+	requestDef := GenReqDefForBatchAddDeviceToGroup()
+	return &BatchAddDeviceToGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteDevices 批量删除设备
 //
 // 批量删除设备
 //
@@ -136,7 +172,13 @@ func (c *RomaClient) BatchDeleteDevices(request *model.BatchDeleteDevicesRequest
 	}
 }
 
-// 批量删除Topic
+// BatchDeleteDevicesInvoker 批量删除设备
+func (c *RomaClient) BatchDeleteDevicesInvoker(request *model.BatchDeleteDevicesRequest) *BatchDeleteDevicesInvoker {
+	requestDef := GenReqDefForBatchDeleteDevices()
+	return &BatchDeleteDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteMqsInstanceTopic 批量删除Topic
 //
 // 批量删除Topic。
 //
@@ -152,7 +194,13 @@ func (c *RomaClient) BatchDeleteMqsInstanceTopic(request *model.BatchDeleteMqsIn
 	}
 }
 
-// 批量删除规则
+// BatchDeleteMqsInstanceTopicInvoker 批量删除Topic
+func (c *RomaClient) BatchDeleteMqsInstanceTopicInvoker(request *model.BatchDeleteMqsInstanceTopicRequest) *BatchDeleteMqsInstanceTopicInvoker {
+	requestDef := GenReqDefForBatchDeleteMqsInstanceTopic()
+	return &BatchDeleteMqsInstanceTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteRules 批量删除规则
 //
 // 批量删除规则
 //
@@ -168,7 +216,13 @@ func (c *RomaClient) BatchDeleteRules(request *model.BatchDeleteRulesRequest) (*
 	}
 }
 
-// 设备批量下线
+// BatchDeleteRulesInvoker 批量删除规则
+func (c *RomaClient) BatchDeleteRulesInvoker(request *model.BatchDeleteRulesRequest) *BatchDeleteRulesInvoker {
+	requestDef := GenReqDefForBatchDeleteRules()
+	return &BatchDeleteRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchFreezeDevices 设备批量下线
 //
 // 设备批量下线
 //
@@ -184,7 +238,13 @@ func (c *RomaClient) BatchFreezeDevices(request *model.BatchFreezeDevicesRequest
 	}
 }
 
-// 批量启动\\停止任务
+// BatchFreezeDevicesInvoker 设备批量下线
+func (c *RomaClient) BatchFreezeDevicesInvoker(request *model.BatchFreezeDevicesRequest) *BatchFreezeDevicesInvoker {
+	requestDef := GenReqDefForBatchFreezeDevices()
+	return &BatchFreezeDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchStartOrStopTasks 批量启动\\停止任务
 //
 // 批量启动\\停止任务
 //
@@ -200,7 +260,13 @@ func (c *RomaClient) BatchStartOrStopTasks(request *model.BatchStartOrStopTasksR
 	}
 }
 
-// 校验自定义后端API定义
+// BatchStartOrStopTasksInvoker 批量启动\\停止任务
+func (c *RomaClient) BatchStartOrStopTasksInvoker(request *model.BatchStartOrStopTasksRequest) *BatchStartOrStopTasksInvoker {
+	requestDef := GenReqDefForBatchStartOrStopTasks()
+	return &BatchStartOrStopTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckLivedataApisV2 校验自定义后端API定义
 //
 // 校验自定义后端API定义。校验自定义后端API的路径或名称是否已存在
 //
@@ -216,7 +282,13 @@ func (c *RomaClient) CheckLivedataApisV2(request *model.CheckLivedataApisV2Reque
 	}
 }
 
-// 设备数量统计
+// CheckLivedataApisV2Invoker 校验自定义后端API定义
+func (c *RomaClient) CheckLivedataApisV2Invoker(request *model.CheckLivedataApisV2Request) *CheckLivedataApisV2Invoker {
+	requestDef := GenReqDefForCheckLivedataApisV2()
+	return &CheckLivedataApisV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountDevices 设备数量统计
 //
 // 设备数量统计
 //
@@ -232,7 +304,13 @@ func (c *RomaClient) CountDevices(request *model.CountDevicesRequest) (*model.Co
 	}
 }
 
-// 统计不同类型不同状态任务数量
+// CountDevicesInvoker 设备数量统计
+func (c *RomaClient) CountDevicesInvoker(request *model.CountDevicesRequest) *CountDevicesInvoker {
+	requestDef := GenReqDefForCountDevices()
+	return &CountDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountTasks 统计不同类型不同状态任务数量
 //
 // 统计不同类型不同状态任务数量
 //
@@ -248,7 +326,13 @@ func (c *RomaClient) CountTasks(request *model.CountTasksRequest) (*model.CountT
 	}
 }
 
-// 自动生成APP Code
+// CountTasksInvoker 统计不同类型不同状态任务数量
+func (c *RomaClient) CountTasksInvoker(request *model.CountTasksRequest) *CountTasksInvoker {
+	requestDef := GenReqDefForCountTasks()
+	return &CountTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAppCodeAutoV2 自动生成APP Code
 //
 // 创建App Code时，可以不指定具体值，由后台自动生成随机字符串填充。
 //
@@ -264,7 +348,13 @@ func (c *RomaClient) CreateAppCodeAutoV2(request *model.CreateAppCodeAutoV2Reque
 	}
 }
 
-// 创建APP Code
+// CreateAppCodeAutoV2Invoker 自动生成APP Code
+func (c *RomaClient) CreateAppCodeAutoV2Invoker(request *model.CreateAppCodeAutoV2Request) *CreateAppCodeAutoV2Invoker {
+	requestDef := GenReqDefForCreateAppCodeAutoV2()
+	return &CreateAppCodeAutoV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAppCodeV2 创建APP Code
 //
 // App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
 //
@@ -280,7 +370,13 @@ func (c *RomaClient) CreateAppCodeV2(request *model.CreateAppCodeV2Request) (*mo
 	}
 }
 
-// 创建应用配置
+// CreateAppCodeV2Invoker 创建APP Code
+func (c *RomaClient) CreateAppCodeV2Invoker(request *model.CreateAppCodeV2Request) *CreateAppCodeV2Invoker {
+	requestDef := GenReqDefForCreateAppCodeV2()
+	return &CreateAppCodeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAppConfigV2 创建应用配置
 //
 // 创建应用配置
 //
@@ -296,7 +392,13 @@ func (c *RomaClient) CreateAppConfigV2(request *model.CreateAppConfigV2Request) 
 	}
 }
 
-// 创建客户端配额
+// CreateAppConfigV2Invoker 创建应用配置
+func (c *RomaClient) CreateAppConfigV2Invoker(request *model.CreateAppConfigV2Request) *CreateAppConfigV2Invoker {
+	requestDef := GenReqDefForCreateAppConfigV2()
+	return &CreateAppConfigV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAppQuota 创建客户端配额
 //
 // 创建客户端配额
 //
@@ -312,7 +414,13 @@ func (c *RomaClient) CreateAppQuota(request *model.CreateAppQuotaRequest) (*mode
 	}
 }
 
-// 创建命令
+// CreateAppQuotaInvoker 创建客户端配额
+func (c *RomaClient) CreateAppQuotaInvoker(request *model.CreateAppQuotaRequest) *CreateAppQuotaInvoker {
+	requestDef := GenReqDefForCreateAppQuota()
+	return &CreateAppQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCommand 创建命令
 //
 // 创建命令
 //
@@ -328,7 +436,13 @@ func (c *RomaClient) CreateCommand(request *model.CreateCommandRequest) (*model.
 	}
 }
 
-// 创建普通任务
+// CreateCommandInvoker 创建命令
+func (c *RomaClient) CreateCommandInvoker(request *model.CreateCommandRequest) *CreateCommandInvoker {
+	requestDef := GenReqDefForCreateCommand()
+	return &CreateCommandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCommonTask 创建普通任务
 //
 // 创建普通任务(区别于组合任务)
 //
@@ -344,7 +458,13 @@ func (c *RomaClient) CreateCommonTask(request *model.CreateCommonTaskRequest) (*
 	}
 }
 
-// 创建自定义认证
+// CreateCommonTaskInvoker 创建普通任务
+func (c *RomaClient) CreateCommonTaskInvoker(request *model.CreateCommonTaskRequest) *CreateCommonTaskInvoker {
+	requestDef := GenReqDefForCreateCommonTask()
+	return &CreateCommonTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCustomAuthorizerV2 创建自定义认证
 //
 // 创建自定义认证
 //
@@ -360,7 +480,13 @@ func (c *RomaClient) CreateCustomAuthorizerV2(request *model.CreateCustomAuthori
 	}
 }
 
-// 创建数据源
+// CreateCustomAuthorizerV2Invoker 创建自定义认证
+func (c *RomaClient) CreateCustomAuthorizerV2Invoker(request *model.CreateCustomAuthorizerV2Request) *CreateCustomAuthorizerV2Invoker {
+	requestDef := GenReqDefForCreateCustomAuthorizerV2()
+	return &CreateCustomAuthorizerV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDatasourceInfo 创建数据源
 //
 // 创建数据源
 //
@@ -376,7 +502,13 @@ func (c *RomaClient) CreateDatasourceInfo(request *model.CreateDatasourceInfoReq
 	}
 }
 
-// 添加目标数据源
+// CreateDatasourceInfoInvoker 创建数据源
+func (c *RomaClient) CreateDatasourceInfoInvoker(request *model.CreateDatasourceInfoRequest) *CreateDatasourceInfoInvoker {
+	requestDef := GenReqDefForCreateDatasourceInfo()
+	return &CreateDatasourceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDestination 添加目标数据源
 //
 // 添加目标数据源
 //
@@ -392,7 +524,13 @@ func (c *RomaClient) CreateDestination(request *model.CreateDestinationRequest) 
 	}
 }
 
-// 创建设备
+// CreateDestinationInvoker 添加目标数据源
+func (c *RomaClient) CreateDestinationInvoker(request *model.CreateDestinationRequest) *CreateDestinationInvoker {
+	requestDef := GenReqDefForCreateDestination()
+	return &CreateDestinationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDevice 创建设备
 //
 // 创建设备
 //
@@ -408,7 +546,13 @@ func (c *RomaClient) CreateDevice(request *model.CreateDeviceRequest) (*model.Cr
 	}
 }
 
-// 创建设备分组
+// CreateDeviceInvoker 创建设备
+func (c *RomaClient) CreateDeviceInvoker(request *model.CreateDeviceRequest) *CreateDeviceInvoker {
+	requestDef := GenReqDefForCreateDevice()
+	return &CreateDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDeviceGroup 创建设备分组
 //
 // 创建设备分组
 //
@@ -424,7 +568,13 @@ func (c *RomaClient) CreateDeviceGroup(request *model.CreateDeviceGroupRequest) 
 	}
 }
 
-// 创建调度计划
+// CreateDeviceGroupInvoker 创建设备分组
+func (c *RomaClient) CreateDeviceGroupInvoker(request *model.CreateDeviceGroupRequest) *CreateDeviceGroupInvoker {
+	requestDef := GenReqDefForCreateDeviceGroup()
+	return &CreateDeviceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDispatches 创建调度计划
 //
 // 创建调度计划
 //
@@ -440,7 +590,13 @@ func (c *RomaClient) CreateDispatches(request *model.CreateDispatchesRequest) (*
 	}
 }
 
-// 创建环境
+// CreateDispatchesInvoker 创建调度计划
+func (c *RomaClient) CreateDispatchesInvoker(request *model.CreateDispatchesRequest) *CreateDispatchesInvoker {
+	requestDef := GenReqDefForCreateDispatches()
+	return &CreateDispatchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEnvironmentV2 创建环境
 //
 // 在实际的生产中，API提供者可能有多个环境，如开发环境、测试环境、生产环境等，用户可以自由将API发布到某个环境，供调用者调用。
 //
@@ -460,7 +616,13 @@ func (c *RomaClient) CreateEnvironmentV2(request *model.CreateEnvironmentV2Reque
 	}
 }
 
-// 新建变量
+// CreateEnvironmentV2Invoker 创建环境
+func (c *RomaClient) CreateEnvironmentV2Invoker(request *model.CreateEnvironmentV2Request) *CreateEnvironmentV2Invoker {
+	requestDef := GenReqDefForCreateEnvironmentV2()
+	return &CreateEnvironmentV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEnvironmentVariableV2 新建变量
 //
 // 将API发布到不同的环境后，对于不同的环境，可能会有不同的环境变量，比如，API的服务部署地址，请求的版本号等。
 //
@@ -484,7 +646,13 @@ func (c *RomaClient) CreateEnvironmentVariableV2(request *model.CreateEnvironmen
 	}
 }
 
-// 实例配置特性
+// CreateEnvironmentVariableV2Invoker 新建变量
+func (c *RomaClient) CreateEnvironmentVariableV2Invoker(request *model.CreateEnvironmentVariableV2Request) *CreateEnvironmentVariableV2Invoker {
+	requestDef := GenReqDefForCreateEnvironmentVariableV2()
+	return &CreateEnvironmentVariableV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateFeatureV2 实例配置特性
 //
 // 为实例配置需要的特性。
 //
@@ -502,7 +670,13 @@ func (c *RomaClient) CreateFeatureV2(request *model.CreateFeatureV2Request) (*mo
 	}
 }
 
-// 创建后端API脚本
+// CreateFeatureV2Invoker 实例配置特性
+func (c *RomaClient) CreateFeatureV2Invoker(request *model.CreateFeatureV2Request) *CreateFeatureV2Invoker {
+	requestDef := GenReqDefForCreateFeatureV2()
+	return &CreateFeatureV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateLiveDataApiScriptV2 创建后端API脚本
 //
 // 在某个实例中创建后端API脚本。
 //
@@ -518,7 +692,13 @@ func (c *RomaClient) CreateLiveDataApiScriptV2(request *model.CreateLiveDataApiS
 	}
 }
 
-// 创建后端API
+// CreateLiveDataApiScriptV2Invoker 创建后端API脚本
+func (c *RomaClient) CreateLiveDataApiScriptV2Invoker(request *model.CreateLiveDataApiScriptV2Request) *CreateLiveDataApiScriptV2Invoker {
+	requestDef := GenReqDefForCreateLiveDataApiScriptV2()
+	return &CreateLiveDataApiScriptV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateLiveDataApiV2 创建后端API
 //
 // 在某个实例中创建后端API。
 //
@@ -534,7 +714,13 @@ func (c *RomaClient) CreateLiveDataApiV2(request *model.CreateLiveDataApiV2Reque
 	}
 }
 
-// 创建Topic
+// CreateLiveDataApiV2Invoker 创建后端API
+func (c *RomaClient) CreateLiveDataApiV2Invoker(request *model.CreateLiveDataApiV2Request) *CreateLiveDataApiV2Invoker {
+	requestDef := GenReqDefForCreateLiveDataApiV2()
+	return &CreateLiveDataApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMqsInstanceTopic 创建Topic
 //
 // 创建Topic。
 //
@@ -550,7 +736,13 @@ func (c *RomaClient) CreateMqsInstanceTopic(request *model.CreateMqsInstanceTopi
 	}
 }
 
-// 创建组合任务映射
+// CreateMqsInstanceTopicInvoker 创建Topic
+func (c *RomaClient) CreateMqsInstanceTopicInvoker(request *model.CreateMqsInstanceTopicRequest) *CreateMqsInstanceTopicInvoker {
+	requestDef := GenReqDefForCreateMqsInstanceTopic()
+	return &CreateMqsInstanceTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMultiTaskMappings 创建组合任务映射
 //
 // 创建组合任务映射
 //
@@ -566,7 +758,13 @@ func (c *RomaClient) CreateMultiTaskMappings(request *model.CreateMultiTaskMappi
 	}
 }
 
-// 创建组合任务
+// CreateMultiTaskMappingsInvoker 创建组合任务映射
+func (c *RomaClient) CreateMultiTaskMappingsInvoker(request *model.CreateMultiTaskMappingsRequest) *CreateMultiTaskMappingsInvoker {
+	requestDef := GenReqDefForCreateMultiTaskMappings()
+	return &CreateMultiTaskMappingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMultiTasks 创建组合任务
 //
 // 创建组合任务
 //
@@ -582,7 +780,13 @@ func (c *RomaClient) CreateMultiTasks(request *model.CreateMultiTasksRequest) (*
 	}
 }
 
-// 创建订阅管理
+// CreateMultiTasksInvoker 创建组合任务
+func (c *RomaClient) CreateMultiTasksInvoker(request *model.CreateMultiTasksRequest) *CreateMultiTasksInvoker {
+	requestDef := GenReqDefForCreateMultiTasks()
+	return &CreateMultiTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNotification 创建订阅管理
 //
 // 该接口用于创建指定实例下对应的应用下的设备操作，订阅到指定的topic
 //
@@ -598,7 +802,13 @@ func (c *RomaClient) CreateNotification(request *model.CreateNotificationRequest
 	}
 }
 
-// 创建产品
+// CreateNotificationInvoker 创建订阅管理
+func (c *RomaClient) CreateNotificationInvoker(request *model.CreateNotificationRequest) *CreateNotificationInvoker {
+	requestDef := GenReqDefForCreateNotification()
+	return &CreateNotificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProduct 创建产品
 //
 // 创建产品
 //
@@ -614,7 +824,13 @@ func (c *RomaClient) CreateProduct(request *model.CreateProductRequest) (*model.
 	}
 }
 
-// 创建产品模板
+// CreateProductInvoker 创建产品
+func (c *RomaClient) CreateProductInvoker(request *model.CreateProductRequest) *CreateProductInvoker {
+	requestDef := GenReqDefForCreateProduct()
+	return &CreateProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProductTemplate 创建产品模板
 //
 // 创建产品模板
 //
@@ -630,7 +846,13 @@ func (c *RomaClient) CreateProductTemplate(request *model.CreateProductTemplateR
 	}
 }
 
-// 添加产品主题
+// CreateProductTemplateInvoker 创建产品模板
+func (c *RomaClient) CreateProductTemplateInvoker(request *model.CreateProductTemplateRequest) *CreateProductTemplateInvoker {
+	requestDef := GenReqDefForCreateProductTemplate()
+	return &CreateProductTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProductTopic 添加产品主题
 //
 // 添加产品主题
 //
@@ -646,7 +868,13 @@ func (c *RomaClient) CreateProductTopic(request *model.CreateProductTopicRequest
 	}
 }
 
-// 创建属性
+// CreateProductTopicInvoker 添加产品主题
+func (c *RomaClient) CreateProductTopicInvoker(request *model.CreateProductTopicRequest) *CreateProductTopicInvoker {
+	requestDef := GenReqDefForCreateProductTopic()
+	return &CreateProductTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProperty 创建属性
 //
 // 创建属性
 //
@@ -662,7 +890,13 @@ func (c *RomaClient) CreateProperty(request *model.CreatePropertyRequest) (*mode
 	}
 }
 
-// 创建请求属性
+// CreatePropertyInvoker 创建属性
+func (c *RomaClient) CreatePropertyInvoker(request *model.CreatePropertyRequest) *CreatePropertyInvoker {
+	requestDef := GenReqDefForCreateProperty()
+	return &CreatePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRequestProperty 创建请求属性
 //
 // 创建请求属性
 //
@@ -678,7 +912,13 @@ func (c *RomaClient) CreateRequestProperty(request *model.CreateRequestPropertyR
 	}
 }
 
-// 创建流控策略
+// CreateRequestPropertyInvoker 创建请求属性
+func (c *RomaClient) CreateRequestPropertyInvoker(request *model.CreateRequestPropertyRequest) *CreateRequestPropertyInvoker {
+	requestDef := GenReqDefForCreateRequestProperty()
+	return &CreateRequestPropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRequestThrottlingPolicyV2 创建流控策略
 //
 // 当API上线后，系统会默认给每个API提供一个流控策略，API提供者可以根据自身API的服务能力及负载情况变更这个流控策略。 流控策略即限制API在一定长度的时间内，能够允许被访问的最大次数。
 //
@@ -694,7 +934,13 @@ func (c *RomaClient) CreateRequestThrottlingPolicyV2(request *model.CreateReques
 	}
 }
 
-// 创建响应属性
+// CreateRequestThrottlingPolicyV2Invoker 创建流控策略
+func (c *RomaClient) CreateRequestThrottlingPolicyV2Invoker(request *model.CreateRequestThrottlingPolicyV2Request) *CreateRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForCreateRequestThrottlingPolicyV2()
+	return &CreateRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateResponseProperty 创建响应属性
 //
 // 创建响应属性
 //
@@ -710,7 +956,13 @@ func (c *RomaClient) CreateResponseProperty(request *model.CreateResponsePropert
 	}
 }
 
-// 创建规则
+// CreateResponsePropertyInvoker 创建响应属性
+func (c *RomaClient) CreateResponsePropertyInvoker(request *model.CreateResponsePropertyRequest) *CreateResponsePropertyInvoker {
+	requestDef := GenReqDefForCreateResponseProperty()
+	return &CreateResponsePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRule 创建规则
 //
 // 创建规则
 //
@@ -726,7 +978,13 @@ func (c *RomaClient) CreateRule(request *model.CreateRuleRequest) (*model.Create
 	}
 }
 
-// 创建服务
+// CreateRuleInvoker 创建规则
+func (c *RomaClient) CreateRuleInvoker(request *model.CreateRuleRequest) *CreateRuleInvoker {
+	requestDef := GenReqDefForCreateRule()
+	return &CreateRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateService 创建服务
 //
 // 创建服务
 //
@@ -742,7 +1000,13 @@ func (c *RomaClient) CreateService(request *model.CreateServiceRequest) (*model.
 	}
 }
 
-// 创建签名密钥
+// CreateServiceInvoker 创建服务
+func (c *RomaClient) CreateServiceInvoker(request *model.CreateServiceRequest) *CreateServiceInvoker {
+	requestDef := GenReqDefForCreateService()
+	return &CreateServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSignatureKeyV2 创建签名密钥
 //
 // 为了保护API的安全性，建议租户为API的访问提供一套保护机制，即租户开放的API，需要对请求来源进行认证，不符合认证的请求直接拒绝访问。
 //
@@ -762,7 +1026,13 @@ func (c *RomaClient) CreateSignatureKeyV2(request *model.CreateSignatureKeyV2Req
 	}
 }
 
-// 添加源数据源
+// CreateSignatureKeyV2Invoker 创建签名密钥
+func (c *RomaClient) CreateSignatureKeyV2Invoker(request *model.CreateSignatureKeyV2Request) *CreateSignatureKeyV2Invoker {
+	requestDef := GenReqDefForCreateSignatureKeyV2()
+	return &CreateSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSource 添加源数据源
 //
 // 添加源数据源
 //
@@ -778,7 +1048,13 @@ func (c *RomaClient) CreateSource(request *model.CreateSourceRequest) (*model.Cr
 	}
 }
 
-// 创建特殊设置
+// CreateSourceInvoker 添加源数据源
+func (c *RomaClient) CreateSourceInvoker(request *model.CreateSourceRequest) *CreateSourceInvoker {
+	requestDef := GenReqDefForCreateSource()
+	return &CreateSourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSpecialThrottlingConfigurationV2 创建特殊设置
 //
 // 流控策略可以限制一段时间内可以访问API的最大次数，也可以限制一段时间内单个租户和单个APP可以访问API的最大次数。
 //
@@ -798,7 +1074,13 @@ func (c *RomaClient) CreateSpecialThrottlingConfigurationV2(request *model.Creat
 	}
 }
 
-// 测试后端API
+// CreateSpecialThrottlingConfigurationV2Invoker 创建特殊设置
+func (c *RomaClient) CreateSpecialThrottlingConfigurationV2Invoker(request *model.CreateSpecialThrottlingConfigurationV2Request) *CreateSpecialThrottlingConfigurationV2Invoker {
+	requestDef := GenReqDefForCreateSpecialThrottlingConfigurationV2()
+	return &CreateSpecialThrottlingConfigurationV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DebugLiveDataApiV2 测试后端API
 //
 // 测试后端API是否可用。
 //
@@ -814,7 +1096,13 @@ func (c *RomaClient) DebugLiveDataApiV2(request *model.DebugLiveDataApiV2Request
 	}
 }
 
-// 规则调试
+// DebugLiveDataApiV2Invoker 测试后端API
+func (c *RomaClient) DebugLiveDataApiV2Invoker(request *model.DebugLiveDataApiV2Request) *DebugLiveDataApiV2Invoker {
+	requestDef := GenReqDefForDebugLiveDataApiV2()
+	return &DebugLiveDataApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DebugRule 规则调试
 //
 // 规则调试
 //
@@ -830,7 +1118,13 @@ func (c *RomaClient) DebugRule(request *model.DebugRuleRequest) (*model.DebugRul
 	}
 }
 
-// 删除APP的访问控制
+// DebugRuleInvoker 规则调试
+func (c *RomaClient) DebugRuleInvoker(request *model.DebugRuleRequest) *DebugRuleInvoker {
+	requestDef := GenReqDefForDebugRule()
+	return &DebugRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAppAcl 删除APP的访问控制
 //
 // 删除客户端配置的访问控制信息。
 //
@@ -846,7 +1140,13 @@ func (c *RomaClient) DeleteAppAcl(request *model.DeleteAppAclRequest) (*model.De
 	}
 }
 
-// 删除APP Code
+// DeleteAppAclInvoker 删除APP的访问控制
+func (c *RomaClient) DeleteAppAclInvoker(request *model.DeleteAppAclRequest) *DeleteAppAclInvoker {
+	requestDef := GenReqDefForDeleteAppAcl()
+	return &DeleteAppAclInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAppCodeV2 删除APP Code
 //
 // 删除App Code，App Code删除后，将无法再通过简易认证访问对应的API。
 //
@@ -862,7 +1162,13 @@ func (c *RomaClient) DeleteAppCodeV2(request *model.DeleteAppCodeV2Request) (*mo
 	}
 }
 
-// 删除应用配置
+// DeleteAppCodeV2Invoker 删除APP Code
+func (c *RomaClient) DeleteAppCodeV2Invoker(request *model.DeleteAppCodeV2Request) *DeleteAppCodeV2Invoker {
+	requestDef := GenReqDefForDeleteAppCodeV2()
+	return &DeleteAppCodeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAppConfigV2 删除应用配置
 //
 // 删除应用配置
 //
@@ -878,7 +1184,13 @@ func (c *RomaClient) DeleteAppConfigV2(request *model.DeleteAppConfigV2Request) 
 	}
 }
 
-// 删除客户端配额
+// DeleteAppConfigV2Invoker 删除应用配置
+func (c *RomaClient) DeleteAppConfigV2Invoker(request *model.DeleteAppConfigV2Request) *DeleteAppConfigV2Invoker {
+	requestDef := GenReqDefForDeleteAppConfigV2()
+	return &DeleteAppConfigV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAppQuota 删除客户端配额
 //
 // 删除客户端配额。删除客户端配额时，同时删除客户端配额和客户端应用的关联关系
 //
@@ -894,7 +1206,13 @@ func (c *RomaClient) DeleteAppQuota(request *model.DeleteAppQuotaRequest) (*mode
 	}
 }
 
-// 删除命令
+// DeleteAppQuotaInvoker 删除客户端配额
+func (c *RomaClient) DeleteAppQuotaInvoker(request *model.DeleteAppQuotaRequest) *DeleteAppQuotaInvoker {
+	requestDef := GenReqDefForDeleteAppQuota()
+	return &DeleteAppQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCommand 删除命令
 //
 // 删除命令
 //
@@ -910,7 +1228,13 @@ func (c *RomaClient) DeleteCommand(request *model.DeleteCommandRequest) (*model.
 	}
 }
 
-// 删除自定义认证
+// DeleteCommandInvoker 删除命令
+func (c *RomaClient) DeleteCommandInvoker(request *model.DeleteCommandRequest) *DeleteCommandInvoker {
+	requestDef := GenReqDefForDeleteCommand()
+	return &DeleteCommandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCustomAuthorizerV2 删除自定义认证
 //
 // 删除自定义认证
 //
@@ -926,7 +1250,13 @@ func (c *RomaClient) DeleteCustomAuthorizerV2(request *model.DeleteCustomAuthori
 	}
 }
 
-// 通过数据源Id删除指定数据源信息
+// DeleteCustomAuthorizerV2Invoker 删除自定义认证
+func (c *RomaClient) DeleteCustomAuthorizerV2Invoker(request *model.DeleteCustomAuthorizerV2Request) *DeleteCustomAuthorizerV2Invoker {
+	requestDef := GenReqDefForDeleteCustomAuthorizerV2()
+	return &DeleteCustomAuthorizerV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDatasourceInfoById 通过数据源Id删除指定数据源信息
 //
 // 通过数据源Id删除指定数据源信息
 //
@@ -942,7 +1272,13 @@ func (c *RomaClient) DeleteDatasourceInfoById(request *model.DeleteDatasourceInf
 	}
 }
 
-// 删除目标数据源
+// DeleteDatasourceInfoByIdInvoker 通过数据源Id删除指定数据源信息
+func (c *RomaClient) DeleteDatasourceInfoByIdInvoker(request *model.DeleteDatasourceInfoByIdRequest) *DeleteDatasourceInfoByIdInvoker {
+	requestDef := GenReqDefForDeleteDatasourceInfoById()
+	return &DeleteDatasourceInfoByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDestination 删除目标数据源
 //
 // 删除目标数据源
 //
@@ -958,7 +1294,13 @@ func (c *RomaClient) DeleteDestination(request *model.DeleteDestinationRequest) 
 	}
 }
 
-// 删除设备
+// DeleteDestinationInvoker 删除目标数据源
+func (c *RomaClient) DeleteDestinationInvoker(request *model.DeleteDestinationRequest) *DeleteDestinationInvoker {
+	requestDef := GenReqDefForDeleteDestination()
+	return &DeleteDestinationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDevice 删除设备
 //
 // 删除指定设备ID的设备
 //
@@ -974,7 +1316,13 @@ func (c *RomaClient) DeleteDevice(request *model.DeleteDeviceRequest) (*model.De
 	}
 }
 
-// 删除设备分组内的设备
+// DeleteDeviceInvoker 删除设备
+func (c *RomaClient) DeleteDeviceInvoker(request *model.DeleteDeviceRequest) *DeleteDeviceInvoker {
+	requestDef := GenReqDefForDeleteDevice()
+	return &DeleteDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDeviceFromGroup 删除设备分组内的设备
 //
 // 删除设备分组内的设备
 //
@@ -990,7 +1338,13 @@ func (c *RomaClient) DeleteDeviceFromGroup(request *model.DeleteDeviceFromGroupR
 	}
 }
 
-// 删除设备分组
+// DeleteDeviceFromGroupInvoker 删除设备分组内的设备
+func (c *RomaClient) DeleteDeviceFromGroupInvoker(request *model.DeleteDeviceFromGroupRequest) *DeleteDeviceFromGroupInvoker {
+	requestDef := GenReqDefForDeleteDeviceFromGroup()
+	return &DeleteDeviceFromGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDeviceGroup 删除设备分组
 //
 // 删除分组
 //
@@ -1006,7 +1360,13 @@ func (c *RomaClient) DeleteDeviceGroup(request *model.DeleteDeviceGroupRequest) 
 	}
 }
 
-// 删除环境
+// DeleteDeviceGroupInvoker 删除设备分组
+func (c *RomaClient) DeleteDeviceGroupInvoker(request *model.DeleteDeviceGroupRequest) *DeleteDeviceGroupInvoker {
+	requestDef := GenReqDefForDeleteDeviceGroup()
+	return &DeleteDeviceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEnvironmentV2 删除环境
 //
 // 删除指定的环境。
 // 该操作将导致此API在指定的环境无法被访问，可能会影响相当一部分应用和用户。请确保已经告知用户，或者确认需要强制下线。环境上存在已发布的API时，该环境不能被删除。
@@ -1023,7 +1383,13 @@ func (c *RomaClient) DeleteEnvironmentV2(request *model.DeleteEnvironmentV2Reque
 	}
 }
 
-// 删除变量
+// DeleteEnvironmentV2Invoker 删除环境
+func (c *RomaClient) DeleteEnvironmentV2Invoker(request *model.DeleteEnvironmentV2Request) *DeleteEnvironmentV2Invoker {
+	requestDef := GenReqDefForDeleteEnvironmentV2()
+	return &DeleteEnvironmentV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEnvironmentVariableV2 删除变量
 //
 // 删除指定的环境变量。
 //
@@ -1039,7 +1405,13 @@ func (c *RomaClient) DeleteEnvironmentVariableV2(request *model.DeleteEnvironmen
 	}
 }
 
-// 删除后端API
+// DeleteEnvironmentVariableV2Invoker 删除变量
+func (c *RomaClient) DeleteEnvironmentVariableV2Invoker(request *model.DeleteEnvironmentVariableV2Request) *DeleteEnvironmentVariableV2Invoker {
+	requestDef := GenReqDefForDeleteEnvironmentVariableV2()
+	return &DeleteEnvironmentVariableV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLiveDataApiV2 删除后端API
 //
 // 在某个实例中删除后端API。
 //
@@ -1055,7 +1427,13 @@ func (c *RomaClient) DeleteLiveDataApiV2(request *model.DeleteLiveDataApiV2Reque
 	}
 }
 
-// 删除Topic
+// DeleteLiveDataApiV2Invoker 删除后端API
+func (c *RomaClient) DeleteLiveDataApiV2Invoker(request *model.DeleteLiveDataApiV2Request) *DeleteLiveDataApiV2Invoker {
+	requestDef := GenReqDefForDeleteLiveDataApiV2()
+	return &DeleteLiveDataApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteMqsInstanceTopic 删除Topic
 //
 // 删除Topic。
 //
@@ -1071,7 +1449,13 @@ func (c *RomaClient) DeleteMqsInstanceTopic(request *model.DeleteMqsInstanceTopi
 	}
 }
 
-// 删除指定任务映射
+// DeleteMqsInstanceTopicInvoker 删除Topic
+func (c *RomaClient) DeleteMqsInstanceTopicInvoker(request *model.DeleteMqsInstanceTopicRequest) *DeleteMqsInstanceTopicInvoker {
+	requestDef := GenReqDefForDeleteMqsInstanceTopic()
+	return &DeleteMqsInstanceTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteMultiTaskMapping 删除指定任务映射
 //
 // 通过映射ID删除指定任务映射
 //
@@ -1087,7 +1471,13 @@ func (c *RomaClient) DeleteMultiTaskMapping(request *model.DeleteMultiTaskMappin
 	}
 }
 
-// 删除订阅管理
+// DeleteMultiTaskMappingInvoker 删除指定任务映射
+func (c *RomaClient) DeleteMultiTaskMappingInvoker(request *model.DeleteMultiTaskMappingRequest) *DeleteMultiTaskMappingInvoker {
+	requestDef := GenReqDefForDeleteMultiTaskMapping()
+	return &DeleteMultiTaskMappingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNotification 删除订阅管理
 //
 // 该接口用于删除指定订阅管理
 //
@@ -1103,7 +1493,13 @@ func (c *RomaClient) DeleteNotification(request *model.DeleteNotificationRequest
 	}
 }
 
-// 删除产品
+// DeleteNotificationInvoker 删除订阅管理
+func (c *RomaClient) DeleteNotificationInvoker(request *model.DeleteNotificationRequest) *DeleteNotificationInvoker {
+	requestDef := GenReqDefForDeleteNotification()
+	return &DeleteNotificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProduct 删除产品
 //
 // 删除产品
 //
@@ -1119,7 +1515,13 @@ func (c *RomaClient) DeleteProduct(request *model.DeleteProductRequest) (*model.
 	}
 }
 
-// 删除产品模板
+// DeleteProductInvoker 删除产品
+func (c *RomaClient) DeleteProductInvoker(request *model.DeleteProductRequest) *DeleteProductInvoker {
+	requestDef := GenReqDefForDeleteProduct()
+	return &DeleteProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProductTemplate 删除产品模板
 //
 // 删除产品模板
 //
@@ -1135,7 +1537,13 @@ func (c *RomaClient) DeleteProductTemplate(request *model.DeleteProductTemplateR
 	}
 }
 
-// 删除产品主题
+// DeleteProductTemplateInvoker 删除产品模板
+func (c *RomaClient) DeleteProductTemplateInvoker(request *model.DeleteProductTemplateRequest) *DeleteProductTemplateInvoker {
+	requestDef := GenReqDefForDeleteProductTemplate()
+	return &DeleteProductTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProductTopic 删除产品主题
 //
 // 删除产品主题
 //
@@ -1151,7 +1559,13 @@ func (c *RomaClient) DeleteProductTopic(request *model.DeleteProductTopicRequest
 	}
 }
 
-// 删除服务属性
+// DeleteProductTopicInvoker 删除产品主题
+func (c *RomaClient) DeleteProductTopicInvoker(request *model.DeleteProductTopicRequest) *DeleteProductTopicInvoker {
+	requestDef := GenReqDefForDeleteProductTopic()
+	return &DeleteProductTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProperty 删除服务属性
 //
 // 删除服务属性
 //
@@ -1167,7 +1581,13 @@ func (c *RomaClient) DeleteProperty(request *model.DeletePropertyRequest) (*mode
 	}
 }
 
-// 删除请求属性
+// DeletePropertyInvoker 删除服务属性
+func (c *RomaClient) DeletePropertyInvoker(request *model.DeletePropertyRequest) *DeletePropertyInvoker {
+	requestDef := GenReqDefForDeleteProperty()
+	return &DeletePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRequestProperty 删除请求属性
 //
 // 删除请求属性
 //
@@ -1183,7 +1603,13 @@ func (c *RomaClient) DeleteRequestProperty(request *model.DeleteRequestPropertyR
 	}
 }
 
-// 删除流控策略
+// DeleteRequestPropertyInvoker 删除请求属性
+func (c *RomaClient) DeleteRequestPropertyInvoker(request *model.DeleteRequestPropertyRequest) *DeleteRequestPropertyInvoker {
+	requestDef := GenReqDefForDeleteRequestProperty()
+	return &DeleteRequestPropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRequestThrottlingPolicyV2 删除流控策略
 //
 // 删除指定的流控策略。当该流控策略绑定了API时，需要先解除流控策略与API的所有绑定关系后再删除。
 //
@@ -1199,7 +1625,13 @@ func (c *RomaClient) DeleteRequestThrottlingPolicyV2(request *model.DeleteReques
 	}
 }
 
-// 删除响应属性
+// DeleteRequestThrottlingPolicyV2Invoker 删除流控策略
+func (c *RomaClient) DeleteRequestThrottlingPolicyV2Invoker(request *model.DeleteRequestThrottlingPolicyV2Request) *DeleteRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForDeleteRequestThrottlingPolicyV2()
+	return &DeleteRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteResponseProperty 删除响应属性
 //
 // 删除响应属性
 //
@@ -1215,7 +1647,13 @@ func (c *RomaClient) DeleteResponseProperty(request *model.DeleteResponsePropert
 	}
 }
 
-// 删除规则
+// DeleteResponsePropertyInvoker 删除响应属性
+func (c *RomaClient) DeleteResponsePropertyInvoker(request *model.DeleteResponsePropertyRequest) *DeleteResponsePropertyInvoker {
+	requestDef := GenReqDefForDeleteResponseProperty()
+	return &DeleteResponsePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRule 删除规则
 //
 // 删除规则
 //
@@ -1231,7 +1669,13 @@ func (c *RomaClient) DeleteRule(request *model.DeleteRuleRequest) (*model.Delete
 	}
 }
 
-// 删除服务
+// DeleteRuleInvoker 删除规则
+func (c *RomaClient) DeleteRuleInvoker(request *model.DeleteRuleRequest) *DeleteRuleInvoker {
+	requestDef := GenReqDefForDeleteRule()
+	return &DeleteRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteService 删除服务
 //
 // 删除服务
 //
@@ -1247,7 +1691,13 @@ func (c *RomaClient) DeleteService(request *model.DeleteServiceRequest) (*model.
 	}
 }
 
-// 删除签名密钥
+// DeleteServiceInvoker 删除服务
+func (c *RomaClient) DeleteServiceInvoker(request *model.DeleteServiceRequest) *DeleteServiceInvoker {
+	requestDef := GenReqDefForDeleteService()
+	return &DeleteServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSignatureKeyV2 删除签名密钥
 //
 // 删除指定的签名密钥。签名密钥绑定了API时无法删除，需要先解除与API的绑定关系后删除。
 //
@@ -1263,7 +1713,13 @@ func (c *RomaClient) DeleteSignatureKeyV2(request *model.DeleteSignatureKeyV2Req
 	}
 }
 
-// 删除源数据源
+// DeleteSignatureKeyV2Invoker 删除签名密钥
+func (c *RomaClient) DeleteSignatureKeyV2Invoker(request *model.DeleteSignatureKeyV2Request) *DeleteSignatureKeyV2Invoker {
+	requestDef := GenReqDefForDeleteSignatureKeyV2()
+	return &DeleteSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSource 删除源数据源
 //
 // 删除源数据源
 //
@@ -1279,7 +1735,13 @@ func (c *RomaClient) DeleteSource(request *model.DeleteSourceRequest) (*model.De
 	}
 }
 
-// 删除特殊设置
+// DeleteSourceInvoker 删除源数据源
+func (c *RomaClient) DeleteSourceInvoker(request *model.DeleteSourceRequest) *DeleteSourceInvoker {
+	requestDef := GenReqDefForDeleteSource()
+	return &DeleteSourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSpecialThrottlingConfigurationV2 删除特殊设置
 //
 // 删除某个流控策略的某个特殊配置。
 //
@@ -1295,7 +1757,13 @@ func (c *RomaClient) DeleteSpecialThrottlingConfigurationV2(request *model.Delet
 	}
 }
 
-// 通过任务ID删除指定任务
+// DeleteSpecialThrottlingConfigurationV2Invoker 删除特殊设置
+func (c *RomaClient) DeleteSpecialThrottlingConfigurationV2Invoker(request *model.DeleteSpecialThrottlingConfigurationV2Request) *DeleteSpecialThrottlingConfigurationV2Invoker {
+	requestDef := GenReqDefForDeleteSpecialThrottlingConfigurationV2()
+	return &DeleteSpecialThrottlingConfigurationV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTask 通过任务ID删除指定任务
 //
 // 通过任务ID删除指定任务
 //
@@ -1311,7 +1779,13 @@ func (c *RomaClient) DeleteTask(request *model.DeleteTaskRequest) (*model.Delete
 	}
 }
 
-// 解除客户端配额和客户端应用的绑定
+// DeleteTaskInvoker 通过任务ID删除指定任务
+func (c *RomaClient) DeleteTaskInvoker(request *model.DeleteTaskRequest) *DeleteTaskInvoker {
+	requestDef := GenReqDefForDeleteTask()
+	return &DeleteTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateAppQuotaWithApp 解除客户端配额和客户端应用的绑定
 //
 // 解除客户端配额和客户端应用的绑定
 //
@@ -1327,7 +1801,13 @@ func (c *RomaClient) DisassociateAppQuotaWithApp(request *model.DisassociateAppQ
 	}
 }
 
-// 删除域名证书
+// DisassociateAppQuotaWithAppInvoker 解除客户端配额和客户端应用的绑定
+func (c *RomaClient) DisassociateAppQuotaWithAppInvoker(request *model.DisassociateAppQuotaWithAppRequest) *DisassociateAppQuotaWithAppInvoker {
+	requestDef := GenReqDefForDisassociateAppQuotaWithApp()
+	return &DisassociateAppQuotaWithAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateCertificateV2 删除域名证书
 //
 // 如果域名证书不再需要或者已过期，则可以删除证书内容。
 //
@@ -1343,7 +1823,13 @@ func (c *RomaClient) DisassociateCertificateV2(request *model.DisassociateCertif
 	}
 }
 
-// 解绑域名
+// DisassociateCertificateV2Invoker 删除域名证书
+func (c *RomaClient) DisassociateCertificateV2Invoker(request *model.DisassociateCertificateV2Request) *DisassociateCertificateV2Invoker {
+	requestDef := GenReqDefForDisassociateCertificateV2()
+	return &DisassociateCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateDomainV2 解绑域名
 //
 // 如果API分组不再需要绑定某个自定义域名，则可以为此API分组解绑此域名。
 //
@@ -1359,7 +1845,13 @@ func (c *RomaClient) DisassociateDomainV2(request *model.DisassociateDomainV2Req
 	}
 }
 
-// 解除绑定
+// DisassociateDomainV2Invoker 解绑域名
+func (c *RomaClient) DisassociateDomainV2Invoker(request *model.DisassociateDomainV2Request) *DisassociateDomainV2Invoker {
+	requestDef := GenReqDefForDisassociateDomainV2()
+	return &DisassociateDomainV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateSignatureKeyV2 解除绑定
 //
 // 解除API与签名密钥的绑定关系。
 //
@@ -1375,7 +1867,13 @@ func (c *RomaClient) DisassociateSignatureKeyV2(request *model.DisassociateSigna
 	}
 }
 
-// 导出产品
+// DisassociateSignatureKeyV2Invoker 解除绑定
+func (c *RomaClient) DisassociateSignatureKeyV2Invoker(request *model.DisassociateSignatureKeyV2Request) *DisassociateSignatureKeyV2Invoker {
+	requestDef := GenReqDefForDisassociateSignatureKeyV2()
+	return &DisassociateSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadProducts 导出产品
 //
 // 导出产品
 //
@@ -1391,7 +1889,13 @@ func (c *RomaClient) DownloadProducts(request *model.DownloadProductsRequest) (*
 	}
 }
 
-// 导出Topic
+// DownloadProductsInvoker 导出产品
+func (c *RomaClient) DownloadProductsInvoker(request *model.DownloadProductsRequest) *DownloadProductsInvoker {
+	requestDef := GenReqDefForDownloadProducts()
+	return &DownloadProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportMqsInstanceTopic 导出Topic
 //
 // 导出Topic。
 //
@@ -1407,7 +1911,13 @@ func (c *RomaClient) ExportMqsInstanceTopic(request *model.ExportMqsInstanceTopi
 	}
 }
 
-// 导入Topic
+// ExportMqsInstanceTopicInvoker 导出Topic
+func (c *RomaClient) ExportMqsInstanceTopicInvoker(request *model.ExportMqsInstanceTopicRequest) *ExportMqsInstanceTopicInvoker {
+	requestDef := GenReqDefForExportMqsInstanceTopic()
+	return &ExportMqsInstanceTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportMqsInstanceTopic 导入Topic
 //
 // 导入Topic。
 //
@@ -1423,7 +1933,13 @@ func (c *RomaClient) ImportMqsInstanceTopic(request *model.ImportMqsInstanceTopi
 	}
 }
 
-// 组合任务初始化
+// ImportMqsInstanceTopicInvoker 导入Topic
+func (c *RomaClient) ImportMqsInstanceTopicInvoker(request *model.ImportMqsInstanceTopicRequest) *ImportMqsInstanceTopicInvoker {
+	requestDef := GenReqDefForImportMqsInstanceTopic()
+	return &ImportMqsInstanceTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// InstallMultiTasks 组合任务初始化
 //
 // 初始化组合任务，分配任务ID，初始化映射等
 //
@@ -1439,7 +1955,13 @@ func (c *RomaClient) InstallMultiTasks(request *model.InstallMultiTasksRequest) 
 	}
 }
 
-// 查看签名密钥绑定的API列表
+// InstallMultiTasksInvoker 组合任务初始化
+func (c *RomaClient) InstallMultiTasksInvoker(request *model.InstallMultiTasksRequest) *InstallMultiTasksInvoker {
+	requestDef := GenReqDefForInstallMultiTasks()
+	return &InstallMultiTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisBindedToSignatureKeyV2 查看签名密钥绑定的API列表
 //
 // 查询某个签名密钥上已经绑定的API列表。
 //
@@ -1455,7 +1977,13 @@ func (c *RomaClient) ListApisBindedToSignatureKeyV2(request *model.ListApisBinde
 	}
 }
 
-// 查看签名密钥未绑定的API列表
+// ListApisBindedToSignatureKeyV2Invoker 查看签名密钥绑定的API列表
+func (c *RomaClient) ListApisBindedToSignatureKeyV2Invoker(request *model.ListApisBindedToSignatureKeyV2Request) *ListApisBindedToSignatureKeyV2Invoker {
+	requestDef := GenReqDefForListApisBindedToSignatureKeyV2()
+	return &ListApisBindedToSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisNotBoundWithSignatureKeyV2 查看签名密钥未绑定的API列表
 //
 // 查询所有未绑定到该签名密钥上的API列表。需要API已经发布，未发布的API不予展示。
 //
@@ -1471,7 +1999,13 @@ func (c *RomaClient) ListApisNotBoundWithSignatureKeyV2(request *model.ListApisN
 	}
 }
 
-// 查询APP Code列表
+// ListApisNotBoundWithSignatureKeyV2Invoker 查看签名密钥未绑定的API列表
+func (c *RomaClient) ListApisNotBoundWithSignatureKeyV2Invoker(request *model.ListApisNotBoundWithSignatureKeyV2Request) *ListApisNotBoundWithSignatureKeyV2Invoker {
+	requestDef := GenReqDefForListApisNotBoundWithSignatureKeyV2()
+	return &ListApisNotBoundWithSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppCodesV2 查询APP Code列表
 //
 // 查询App Code列表。
 //
@@ -1487,7 +2021,13 @@ func (c *RomaClient) ListAppCodesV2(request *model.ListAppCodesV2Request) (*mode
 	}
 }
 
-// 查询应用配置列表
+// ListAppCodesV2Invoker 查询APP Code列表
+func (c *RomaClient) ListAppCodesV2Invoker(request *model.ListAppCodesV2Request) *ListAppCodesV2Invoker {
+	requestDef := GenReqDefForListAppCodesV2()
+	return &ListAppCodesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppConfigsV2 查询应用配置列表
 //
 // 查询应用配置列表
 //
@@ -1503,7 +2043,13 @@ func (c *RomaClient) ListAppConfigsV2(request *model.ListAppConfigsV2Request) (*
 	}
 }
 
-// 查询客户端配额可绑定的客户端应用列表
+// ListAppConfigsV2Invoker 查询应用配置列表
+func (c *RomaClient) ListAppConfigsV2Invoker(request *model.ListAppConfigsV2Request) *ListAppConfigsV2Invoker {
+	requestDef := GenReqDefForListAppConfigsV2()
+	return &ListAppConfigsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppQuotaBindableApps 查询客户端配额可绑定的客户端应用列表
 //
 // 查询客户端配额可绑定的客户端应用列表。支持按客户端应用名称模糊搜索
 //
@@ -1519,7 +2065,13 @@ func (c *RomaClient) ListAppQuotaBindableApps(request *model.ListAppQuotaBindabl
 	}
 }
 
-// 查询客户端配额已绑定的客户端应用列表
+// ListAppQuotaBindableAppsInvoker 查询客户端配额可绑定的客户端应用列表
+func (c *RomaClient) ListAppQuotaBindableAppsInvoker(request *model.ListAppQuotaBindableAppsRequest) *ListAppQuotaBindableAppsInvoker {
+	requestDef := GenReqDefForListAppQuotaBindableApps()
+	return &ListAppQuotaBindableAppsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppQuotaBoundApps 查询客户端配额已绑定的客户端应用列表
 //
 // 查询客户端配额已绑定的客户端应用列表。支持按客户端应用名称模糊匹配
 //
@@ -1535,7 +2087,13 @@ func (c *RomaClient) ListAppQuotaBoundApps(request *model.ListAppQuotaBoundAppsR
 	}
 }
 
-// 获取客户端配额列表
+// ListAppQuotaBoundAppsInvoker 查询客户端配额已绑定的客户端应用列表
+func (c *RomaClient) ListAppQuotaBoundAppsInvoker(request *model.ListAppQuotaBoundAppsRequest) *ListAppQuotaBoundAppsInvoker {
+	requestDef := GenReqDefForListAppQuotaBoundApps()
+	return &ListAppQuotaBoundAppsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppQuotas 获取客户端配额列表
 //
 // 获取客户端配额列表。支持根据名称模糊查询
 //
@@ -1551,7 +2109,13 @@ func (c *RomaClient) ListAppQuotas(request *model.ListAppQuotasRequest) (*model.
 	}
 }
 
-// 查询APP列表
+// ListAppQuotasInvoker 获取客户端配额列表
+func (c *RomaClient) ListAppQuotasInvoker(request *model.ListAppQuotasRequest) *ListAppQuotasInvoker {
+	requestDef := GenReqDefForListAppQuotas()
+	return &ListAppQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppsV2 查询APP列表
 //
 // 查询APP列表。
 //
@@ -1567,7 +2131,13 @@ func (c *RomaClient) ListAppsV2(request *model.ListAppsV2Request) (*model.ListAp
 	}
 }
 
-// 查询命令
+// ListAppsV2Invoker 查询APP列表
+func (c *RomaClient) ListAppsV2Invoker(request *model.ListAppsV2Request) *ListAppsV2Invoker {
+	requestDef := GenReqDefForListAppsV2()
+	return &ListAppsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCommands 查询命令
 //
 // 查询命令
 //
@@ -1583,7 +2153,13 @@ func (c *RomaClient) ListCommands(request *model.ListCommandsRequest) (*model.Li
 	}
 }
 
-// 查询自定义认证列表
+// ListCommandsInvoker 查询命令
+func (c *RomaClient) ListCommandsInvoker(request *model.ListCommandsRequest) *ListCommandsInvoker {
+	requestDef := GenReqDefForListCommands()
+	return &ListCommandsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCustomAuthorizersV2 查询自定义认证列表
 //
 // 查询自定义认证列表
 //
@@ -1599,7 +2175,13 @@ func (c *RomaClient) ListCustomAuthorizersV2(request *model.ListCustomAuthorizer
 	}
 }
 
-// 获取数据源中某个表中所有字段
+// ListCustomAuthorizersV2Invoker 查询自定义认证列表
+func (c *RomaClient) ListCustomAuthorizersV2Invoker(request *model.ListCustomAuthorizersV2Request) *ListCustomAuthorizersV2Invoker {
+	requestDef := GenReqDefForListCustomAuthorizersV2()
+	return &ListCustomAuthorizersV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDatasourceColumns 获取数据源中某个表中所有字段
 //
 // 获取数据源中中某个表中所有字段
 //
@@ -1615,7 +2197,13 @@ func (c *RomaClient) ListDatasourceColumns(request *model.ListDatasourceColumnsR
 	}
 }
 
-// 获取数据源中所有的表
+// ListDatasourceColumnsInvoker 获取数据源中某个表中所有字段
+func (c *RomaClient) ListDatasourceColumnsInvoker(request *model.ListDatasourceColumnsRequest) *ListDatasourceColumnsInvoker {
+	requestDef := GenReqDefForListDatasourceColumns()
+	return &ListDatasourceColumnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDatasourceTables 获取数据源中所有的表
 //
 // 获取数据源中所有的表
 //
@@ -1631,7 +2219,13 @@ func (c *RomaClient) ListDatasourceTables(request *model.ListDatasourceTablesReq
 	}
 }
 
-// 查询数据源
+// ListDatasourceTablesInvoker 获取数据源中所有的表
+func (c *RomaClient) ListDatasourceTablesInvoker(request *model.ListDatasourceTablesRequest) *ListDatasourceTablesInvoker {
+	requestDef := GenReqDefForListDatasourceTables()
+	return &ListDatasourceTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDatasources 查询数据源
 //
 // 查询数据源
 //
@@ -1647,7 +2241,13 @@ func (c *RomaClient) ListDatasources(request *model.ListDatasourcesRequest) (*mo
 	}
 }
 
-// 查询目标数据源列表
+// ListDatasourcesInvoker 查询数据源
+func (c *RomaClient) ListDatasourcesInvoker(request *model.ListDatasourcesRequest) *ListDatasourcesInvoker {
+	requestDef := GenReqDefForListDatasources()
+	return &ListDatasourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDestinations 查询目标数据源列表
 //
 // 查询目标数据源列表
 //
@@ -1663,7 +2263,13 @@ func (c *RomaClient) ListDestinations(request *model.ListDestinationsRequest) (*
 	}
 }
 
-// 查询设备
+// ListDestinationsInvoker 查询目标数据源列表
+func (c *RomaClient) ListDestinationsInvoker(request *model.ListDestinationsRequest) *ListDestinationsInvoker {
+	requestDef := GenReqDefForListDestinations()
+	return &ListDestinationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDevices 查询设备
 //
 // 查询设备
 //
@@ -1679,7 +2285,13 @@ func (c *RomaClient) ListDevices(request *model.ListDevicesRequest) (*model.List
 	}
 }
 
-// 查询产品内设备数量
+// ListDevicesInvoker 查询设备
+func (c *RomaClient) ListDevicesInvoker(request *model.ListDevicesRequest) *ListDevicesInvoker {
+	requestDef := GenReqDefForListDevices()
+	return &ListDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDevicesInProduct 查询产品内设备数量
 //
 // 查询产品内设备数量
 //
@@ -1695,7 +2307,13 @@ func (c *RomaClient) ListDevicesInProduct(request *model.ListDevicesInProductReq
 	}
 }
 
-// 查询变量列表
+// ListDevicesInProductInvoker 查询产品内设备数量
+func (c *RomaClient) ListDevicesInProductInvoker(request *model.ListDevicesInProductRequest) *ListDevicesInProductInvoker {
+	requestDef := GenReqDefForListDevicesInProduct()
+	return &ListDevicesInProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEnvironmentVariablesV2 查询变量列表
 //
 // 查询分组下的所有环境变量的列表。
 //
@@ -1711,7 +2329,13 @@ func (c *RomaClient) ListEnvironmentVariablesV2(request *model.ListEnvironmentVa
 	}
 }
 
-// 查询环境列表
+// ListEnvironmentVariablesV2Invoker 查询变量列表
+func (c *RomaClient) ListEnvironmentVariablesV2Invoker(request *model.ListEnvironmentVariablesV2Request) *ListEnvironmentVariablesV2Invoker {
+	requestDef := GenReqDefForListEnvironmentVariablesV2()
+	return &ListEnvironmentVariablesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEnvironmentsV2 查询环境列表
 //
 // 查询符合条件的环境列表。
 //
@@ -1727,7 +2351,13 @@ func (c *RomaClient) ListEnvironmentsV2(request *model.ListEnvironmentsV2Request
 	}
 }
 
-// 查看实例特性列表
+// ListEnvironmentsV2Invoker 查询环境列表
+func (c *RomaClient) ListEnvironmentsV2Invoker(request *model.ListEnvironmentsV2Request) *ListEnvironmentsV2Invoker {
+	requestDef := GenReqDefForListEnvironmentsV2()
+	return &ListEnvironmentsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFeaturesV2 查看实例特性列表
 //
 // 查看实例特性列表。注意：实例不支持以下特性的需要联系技术支持升级实例版本。
 //
@@ -1745,7 +2375,13 @@ func (c *RomaClient) ListFeaturesV2(request *model.ListFeaturesV2Request) (*mode
 	}
 }
 
-// API指标统计值查询-最近一段时间
+// ListFeaturesV2Invoker 查看实例特性列表
+func (c *RomaClient) ListFeaturesV2Invoker(request *model.ListFeaturesV2Request) *ListFeaturesV2Invoker {
+	requestDef := GenReqDefForListFeaturesV2()
+	return &ListFeaturesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLatelyApiStatisticsV2 API指标统计值查询-最近一段时间
 //
 // 根据API的id和最近的一段时间查询API被调用的次数，统计周期为1分钟。查询范围一小时以内，一分钟一个样本，其样本值为一分钟内的累计值。
 // &gt; 为了安全起见，在服务器上使用curl命令调用接口查询信息后，需要清理历史操作记录，包括但不限于“~/.bash_history”、“/var/log/messages”（如有）。
@@ -1762,7 +2398,13 @@ func (c *RomaClient) ListLatelyApiStatisticsV2(request *model.ListLatelyApiStati
 	}
 }
 
-// 查询后端API部署历史
+// ListLatelyApiStatisticsV2Invoker API指标统计值查询-最近一段时间
+func (c *RomaClient) ListLatelyApiStatisticsV2Invoker(request *model.ListLatelyApiStatisticsV2Request) *ListLatelyApiStatisticsV2Invoker {
+	requestDef := GenReqDefForListLatelyApiStatisticsV2()
+	return &ListLatelyApiStatisticsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLiveDataApiDeploymentHistoryV2 查询后端API部署历史
 //
 // 在某个实例中查询后端API的部署记录。
 //
@@ -1778,7 +2420,13 @@ func (c *RomaClient) ListLiveDataApiDeploymentHistoryV2(request *model.ListLiveD
 	}
 }
 
-// 查询后端API测试结果
+// ListLiveDataApiDeploymentHistoryV2Invoker 查询后端API部署历史
+func (c *RomaClient) ListLiveDataApiDeploymentHistoryV2Invoker(request *model.ListLiveDataApiDeploymentHistoryV2Request) *ListLiveDataApiDeploymentHistoryV2Invoker {
+	requestDef := GenReqDefForListLiveDataApiDeploymentHistoryV2()
+	return &ListLiveDataApiDeploymentHistoryV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLiveDataApiTestHistoryV2 查询后端API测试结果
 //
 // 在某个实例中查询后端API的测试结果。
 //
@@ -1794,7 +2442,13 @@ func (c *RomaClient) ListLiveDataApiTestHistoryV2(request *model.ListLiveDataApi
 	}
 }
 
-// 查询后端API列表
+// ListLiveDataApiTestHistoryV2Invoker 查询后端API测试结果
+func (c *RomaClient) ListLiveDataApiTestHistoryV2Invoker(request *model.ListLiveDataApiTestHistoryV2Request) *ListLiveDataApiTestHistoryV2Invoker {
+	requestDef := GenReqDefForListLiveDataApiTestHistoryV2()
+	return &ListLiveDataApiTestHistoryV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLiveDataApiV2 查询后端API列表
 //
 // 获取某个实例下的所有后端API。
 //
@@ -1810,7 +2464,13 @@ func (c *RomaClient) ListLiveDataApiV2(request *model.ListLiveDataApiV2Request) 
 	}
 }
 
-// 查询自定义后端服务数据源列表
+// ListLiveDataApiV2Invoker 查询后端API列表
+func (c *RomaClient) ListLiveDataApiV2Invoker(request *model.ListLiveDataApiV2Request) *ListLiveDataApiV2Invoker {
+	requestDef := GenReqDefForListLiveDataApiV2()
+	return &ListLiveDataApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLiveDataDataSourcesV2 查询自定义后端服务数据源列表
 //
 // 查询自定义后端服务数据源列表。
 //
@@ -1826,7 +2486,13 @@ func (c *RomaClient) ListLiveDataDataSourcesV2(request *model.ListLiveDataDataSo
 	}
 }
 
-// 查询自定义后端服务配额
+// ListLiveDataDataSourcesV2Invoker 查询自定义后端服务数据源列表
+func (c *RomaClient) ListLiveDataDataSourcesV2Invoker(request *model.ListLiveDataDataSourcesV2Request) *ListLiveDataDataSourcesV2Invoker {
+	requestDef := GenReqDefForListLiveDataDataSourcesV2()
+	return &ListLiveDataDataSourcesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLiveDataQuotaV2 查询自定义后端服务配额
 //
 // 查询自定义后端服务配额。
 //
@@ -1842,7 +2508,13 @@ func (c *RomaClient) ListLiveDataQuotaV2(request *model.ListLiveDataQuotaV2Reque
 	}
 }
 
-// 任务监控信息列表查询
+// ListLiveDataQuotaV2Invoker 查询自定义后端服务配额
+func (c *RomaClient) ListLiveDataQuotaV2Invoker(request *model.ListLiveDataQuotaV2Request) *ListLiveDataQuotaV2Invoker {
+	requestDef := GenReqDefForListLiveDataQuotaV2()
+	return &ListLiveDataQuotaV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMonitorInfos 任务监控信息列表查询
 //
 // 查询所有任务的监控信息
 //
@@ -1858,7 +2530,13 @@ func (c *RomaClient) ListMonitorInfos(request *model.ListMonitorInfosRequest) (*
 	}
 }
 
-// 任务监控日志查询
+// ListMonitorInfosInvoker 任务监控信息列表查询
+func (c *RomaClient) ListMonitorInfosInvoker(request *model.ListMonitorInfosRequest) *ListMonitorInfosInvoker {
+	requestDef := GenReqDefForListMonitorInfos()
+	return &ListMonitorInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMonitorLog 任务监控日志查询
 //
 // 查询单个任务的所有日志信息
 //
@@ -1874,7 +2552,13 @@ func (c *RomaClient) ListMonitorLog(request *model.ListMonitorLogRequest) (*mode
 	}
 }
 
-// 查询Topic列表
+// ListMonitorLogInvoker 任务监控日志查询
+func (c *RomaClient) ListMonitorLogInvoker(request *model.ListMonitorLogRequest) *ListMonitorLogInvoker {
+	requestDef := GenReqDefForListMonitorLog()
+	return &ListMonitorLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMqsInstanceTopics 查询Topic列表
 //
 // 查询Topic列表。
 //
@@ -1890,7 +2574,13 @@ func (c *RomaClient) ListMqsInstanceTopics(request *model.ListMqsInstanceTopicsR
 	}
 }
 
-// 查询订阅管理信息
+// ListMqsInstanceTopicsInvoker 查询Topic列表
+func (c *RomaClient) ListMqsInstanceTopicsInvoker(request *model.ListMqsInstanceTopicsRequest) *ListMqsInstanceTopicsInvoker {
+	requestDef := GenReqDefForListMqsInstanceTopics()
+	return &ListMqsInstanceTopicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNotification 查询订阅管理信息
 //
 // 该接口用于查询指定应用订阅管理信息的数据
 //
@@ -1906,7 +2596,13 @@ func (c *RomaClient) ListNotification(request *model.ListNotificationRequest) (*
 	}
 }
 
-// 查询产品模板
+// ListNotificationInvoker 查询订阅管理信息
+func (c *RomaClient) ListNotificationInvoker(request *model.ListNotificationRequest) *ListNotificationInvoker {
+	requestDef := GenReqDefForListNotification()
+	return &ListNotificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProductTemplates 查询产品模板
 //
 // 查询产品模板
 //
@@ -1922,7 +2618,13 @@ func (c *RomaClient) ListProductTemplates(request *model.ListProductTemplatesReq
 	}
 }
 
-// 查询产品主题
+// ListProductTemplatesInvoker 查询产品模板
+func (c *RomaClient) ListProductTemplatesInvoker(request *model.ListProductTemplatesRequest) *ListProductTemplatesInvoker {
+	requestDef := GenReqDefForListProductTemplates()
+	return &ListProductTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProductTopics 查询产品主题
 //
 // 查询产品主题
 //
@@ -1938,7 +2640,13 @@ func (c *RomaClient) ListProductTopics(request *model.ListProductTopicsRequest) 
 	}
 }
 
-// 查询产品
+// ListProductTopicsInvoker 查询产品主题
+func (c *RomaClient) ListProductTopicsInvoker(request *model.ListProductTopicsRequest) *ListProductTopicsInvoker {
+	requestDef := GenReqDefForListProductTopics()
+	return &ListProductTopicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProducts 查询产品
 //
 // 查询产品
 //
@@ -1954,7 +2662,13 @@ func (c *RomaClient) ListProducts(request *model.ListProductsRequest) (*model.Li
 	}
 }
 
-// 查询某个实例的租户配置列表
+// ListProductsInvoker 查询产品
+func (c *RomaClient) ListProductsInvoker(request *model.ListProductsRequest) *ListProductsInvoker {
+	requestDef := GenReqDefForListProducts()
+	return &ListProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectCofigsV2 查询某个实例的租户配置列表
 //
 // 查询某个实例的租户配置列表，用户可以通过此接口查看各类型资源配置及使用情况。
 //
@@ -1970,7 +2684,13 @@ func (c *RomaClient) ListProjectCofigsV2(request *model.ListProjectCofigsV2Reque
 	}
 }
 
-// 查询属性
+// ListProjectCofigsV2Invoker 查询某个实例的租户配置列表
+func (c *RomaClient) ListProjectCofigsV2Invoker(request *model.ListProjectCofigsV2Request) *ListProjectCofigsV2Invoker {
+	requestDef := GenReqDefForListProjectCofigsV2()
+	return &ListProjectCofigsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProperties 查询属性
 //
 // 查询属性
 //
@@ -1986,7 +2706,13 @@ func (c *RomaClient) ListProperties(request *model.ListPropertiesRequest) (*mode
 	}
 }
 
-// 查询请求属性
+// ListPropertiesInvoker 查询属性
+func (c *RomaClient) ListPropertiesInvoker(request *model.ListPropertiesRequest) *ListPropertiesInvoker {
+	requestDef := GenReqDefForListProperties()
+	return &ListPropertiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRequestProperties 查询请求属性
 //
 // 查询请求属性
 //
@@ -2002,7 +2728,13 @@ func (c *RomaClient) ListRequestProperties(request *model.ListRequestPropertiesR
 	}
 }
 
-// 查询流控策略列表
+// ListRequestPropertiesInvoker 查询请求属性
+func (c *RomaClient) ListRequestPropertiesInvoker(request *model.ListRequestPropertiesRequest) *ListRequestPropertiesInvoker {
+	requestDef := GenReqDefForListRequestProperties()
+	return &ListRequestPropertiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRequestThrottlingPolicyV2 查询流控策略列表
 //
 // 查询所有流控策略的信息。
 //
@@ -2018,7 +2750,13 @@ func (c *RomaClient) ListRequestThrottlingPolicyV2(request *model.ListRequestThr
 	}
 }
 
-// 查询响应属性
+// ListRequestThrottlingPolicyV2Invoker 查询流控策略列表
+func (c *RomaClient) ListRequestThrottlingPolicyV2Invoker(request *model.ListRequestThrottlingPolicyV2Request) *ListRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForListRequestThrottlingPolicyV2()
+	return &ListRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResponseProperties 查询响应属性
 //
 // 查询响应属性
 //
@@ -2034,7 +2772,13 @@ func (c *RomaClient) ListResponseProperties(request *model.ListResponsePropertie
 	}
 }
 
-// 查询规则
+// ListResponsePropertiesInvoker 查询响应属性
+func (c *RomaClient) ListResponsePropertiesInvoker(request *model.ListResponsePropertiesRequest) *ListResponsePropertiesInvoker {
+	requestDef := GenReqDefForListResponseProperties()
+	return &ListResponsePropertiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRules 查询规则
 //
 // 查询规则
 //
@@ -2050,7 +2794,13 @@ func (c *RomaClient) ListRules(request *model.ListRulesRequest) (*model.ListRule
 	}
 }
 
-// 查询服务
+// ListRulesInvoker 查询规则
+func (c *RomaClient) ListRulesInvoker(request *model.ListRulesRequest) *ListRulesInvoker {
+	requestDef := GenReqDefForListRules()
+	return &ListRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServices 查询服务
 //
 // 查询服务
 //
@@ -2066,7 +2816,13 @@ func (c *RomaClient) ListServices(request *model.ListServicesRequest) (*model.Li
 	}
 }
 
-// 查询设备影子
+// ListServicesInvoker 查询服务
+func (c *RomaClient) ListServicesInvoker(request *model.ListServicesRequest) *ListServicesInvoker {
+	requestDef := GenReqDefForListServices()
+	return &ListServicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListShadows 查询设备影子
 //
 // 查询设备影子
 //
@@ -2082,7 +2838,13 @@ func (c *RomaClient) ListShadows(request *model.ListShadowsRequest) (*model.List
 	}
 }
 
-// 查看API绑定的签名密钥列表
+// ListShadowsInvoker 查询设备影子
+func (c *RomaClient) ListShadowsInvoker(request *model.ListShadowsRequest) *ListShadowsInvoker {
+	requestDef := GenReqDefForListShadows()
+	return &ListShadowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSignatureKeysBindedToApiV2 查看API绑定的签名密钥列表
 //
 // 查询某个API绑定的签名密钥列表。每个API在每个环境上应该最多只会绑定一个签名密钥。
 //
@@ -2098,7 +2860,13 @@ func (c *RomaClient) ListSignatureKeysBindedToApiV2(request *model.ListSignature
 	}
 }
 
-// 查询签名密钥列表
+// ListSignatureKeysBindedToApiV2Invoker 查看API绑定的签名密钥列表
+func (c *RomaClient) ListSignatureKeysBindedToApiV2Invoker(request *model.ListSignatureKeysBindedToApiV2Request) *ListSignatureKeysBindedToApiV2Invoker {
+	requestDef := GenReqDefForListSignatureKeysBindedToApiV2()
+	return &ListSignatureKeysBindedToApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSignatureKeysV2 查询签名密钥列表
 //
 // 查询所有签名密钥的信息。
 //
@@ -2114,7 +2882,13 @@ func (c *RomaClient) ListSignatureKeysV2(request *model.ListSignatureKeysV2Reque
 	}
 }
 
-// 查询源数据源列表
+// ListSignatureKeysV2Invoker 查询签名密钥列表
+func (c *RomaClient) ListSignatureKeysV2Invoker(request *model.ListSignatureKeysV2Request) *ListSignatureKeysV2Invoker {
+	requestDef := GenReqDefForListSignatureKeysV2()
+	return &ListSignatureKeysV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSources 查询源数据源列表
 //
 // 查询源数据源列表
 //
@@ -2130,7 +2904,13 @@ func (c *RomaClient) ListSources(request *model.ListSourcesRequest) (*model.List
 	}
 }
 
-// 查看特殊设置列表
+// ListSourcesInvoker 查询源数据源列表
+func (c *RomaClient) ListSourcesInvoker(request *model.ListSourcesRequest) *ListSourcesInvoker {
+	requestDef := GenReqDefForListSources()
+	return &ListSourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSpecialThrottlingConfigurationsV2 查看特殊设置列表
 //
 // 查看给流控策略设置的特殊配置。
 //
@@ -2146,7 +2926,13 @@ func (c *RomaClient) ListSpecialThrottlingConfigurationsV2(request *model.ListSp
 	}
 }
 
-// 查询API指标统计值
+// ListSpecialThrottlingConfigurationsV2Invoker 查看特殊设置列表
+func (c *RomaClient) ListSpecialThrottlingConfigurationsV2Invoker(request *model.ListSpecialThrottlingConfigurationsV2Request) *ListSpecialThrottlingConfigurationsV2Invoker {
+	requestDef := GenReqDefForListSpecialThrottlingConfigurationsV2()
+	return &ListSpecialThrottlingConfigurationsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListStatisticsApi 查询API指标统计值
 //
 // 查询某个实例下的API统计信息。
 //
@@ -2162,7 +2948,13 @@ func (c *RomaClient) ListStatisticsApi(request *model.ListStatisticsApiRequest) 
 	}
 }
 
-// 查询子设备
+// ListStatisticsApiInvoker 查询API指标统计值
+func (c *RomaClient) ListStatisticsApiInvoker(request *model.ListStatisticsApiRequest) *ListStatisticsApiInvoker {
+	requestDef := GenReqDefForListStatisticsApi()
+	return &ListStatisticsApiInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubsets 查询子设备
 //
 // 查询子设备
 //
@@ -2178,7 +2970,13 @@ func (c *RomaClient) ListSubsets(request *model.ListSubsetsRequest) (*model.List
 	}
 }
 
-// 查询标签列表
+// ListSubsetsInvoker 查询子设备
+func (c *RomaClient) ListSubsetsInvoker(request *model.ListSubsetsRequest) *ListSubsetsInvoker {
+	requestDef := GenReqDefForListSubsets()
+	return &ListSubsetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTagsV2 查询标签列表
 //
 // 查询标签列表
 //
@@ -2194,7 +2992,13 @@ func (c *RomaClient) ListTagsV2(request *model.ListTagsV2Request) (*model.ListTa
 	}
 }
 
-// 查询任务列表
+// ListTagsV2Invoker 查询标签列表
+func (c *RomaClient) ListTagsV2Invoker(request *model.ListTagsV2Request) *ListTagsV2Invoker {
+	requestDef := GenReqDefForListTagsV2()
+	return &ListTagsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTasks 查询任务列表
 //
 // 查询任务列表
 //
@@ -2210,7 +3014,13 @@ func (c *RomaClient) ListTasks(request *model.ListTasksRequest) (*model.ListTask
 	}
 }
 
-// 查询设备主题
+// ListTasksInvoker 查询任务列表
+func (c *RomaClient) ListTasksInvoker(request *model.ListTasksRequest) *ListTasksInvoker {
+	requestDef := GenReqDefForListTasks()
+	return &ListTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTopics 查询设备主题
 //
 // 查询设备主题
 //
@@ -2226,7 +3036,13 @@ func (c *RomaClient) ListTopics(request *model.ListTopicsRequest) (*model.ListTo
 	}
 }
 
-// 部署后端API
+// ListTopicsInvoker 查询设备主题
+func (c *RomaClient) ListTopicsInvoker(request *model.ListTopicsRequest) *ListTopicsInvoker {
+	requestDef := GenReqDefForListTopics()
+	return &ListTopicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PublishLiveDataApiV2 部署后端API
 //
 // 在某个实例中部署后端API。
 //
@@ -2242,7 +3058,13 @@ func (c *RomaClient) PublishLiveDataApiV2(request *model.PublishLiveDataApiV2Req
 	}
 }
 
-// 重置设备鉴权信息
+// PublishLiveDataApiV2Invoker 部署后端API
+func (c *RomaClient) PublishLiveDataApiV2Invoker(request *model.PublishLiveDataApiV2Request) *PublishLiveDataApiV2Invoker {
+	requestDef := GenReqDefForPublishLiveDataApiV2()
+	return &PublishLiveDataApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetAuthentication 重置设备鉴权信息
 //
 // 重置设备鉴权信息
 //
@@ -2258,7 +3080,13 @@ func (c *RomaClient) ResetAuthentication(request *model.ResetAuthenticationReque
 	}
 }
 
-// 重发消息
+// ResetAuthenticationInvoker 重置设备鉴权信息
+func (c *RomaClient) ResetAuthenticationInvoker(request *model.ResetAuthenticationRequest) *ResetAuthenticationInvoker {
+	requestDef := GenReqDefForResetAuthentication()
+	return &ResetAuthenticationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetMessages 重发消息
 //
 // 重发消息。
 //
@@ -2274,7 +3102,13 @@ func (c *RomaClient) ResetMessages(request *model.ResetMessagesRequest) (*model.
 	}
 }
 
-// 重置组合任务进度
+// ResetMessagesInvoker 重发消息
+func (c *RomaClient) ResetMessagesInvoker(request *model.ResetMessagesRequest) *ResetMessagesInvoker {
+	requestDef := GenReqDefForResetMessages()
+	return &ResetMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetMultiTaskOffset 重置组合任务进度
 //
 // 重置组合任务进度
 //
@@ -2290,7 +3124,13 @@ func (c *RomaClient) ResetMultiTaskOffset(request *model.ResetMultiTaskOffsetReq
 	}
 }
 
-// 重置产品鉴权信息
+// ResetMultiTaskOffsetInvoker 重置组合任务进度
+func (c *RomaClient) ResetMultiTaskOffsetInvoker(request *model.ResetMultiTaskOffsetRequest) *ResetMultiTaskOffsetInvoker {
+	requestDef := GenReqDefForResetMultiTaskOffset()
+	return &ResetMultiTaskOffsetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetProductAuthentication 重置产品鉴权信息
 //
 // 重置产品鉴权信息
 //
@@ -2306,7 +3146,13 @@ func (c *RomaClient) ResetProductAuthentication(request *model.ResetProductAuthe
 	}
 }
 
-// 手工触发单个任务
+// ResetProductAuthenticationInvoker 重置产品鉴权信息
+func (c *RomaClient) ResetProductAuthenticationInvoker(request *model.ResetProductAuthenticationRequest) *ResetProductAuthenticationInvoker {
+	requestDef := GenReqDefForResetProductAuthentication()
+	return &ResetProductAuthenticationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunTask 手工触发单个任务
 //
 // 手工触发一次任务调度
 //
@@ -2322,7 +3168,13 @@ func (c *RomaClient) RunTask(request *model.RunTaskRequest) (*model.RunTaskRespo
 	}
 }
 
-// 发送命令
+// RunTaskInvoker 手工触发单个任务
+func (c *RomaClient) RunTaskInvoker(request *model.RunTaskRequest) *RunTaskInvoker {
+	requestDef := GenReqDefForRunTask()
+	return &RunTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SendCommand 发送命令
 //
 // 发送命令
 //
@@ -2338,7 +3190,13 @@ func (c *RomaClient) SendCommand(request *model.SendCommandRequest) (*model.Send
 	}
 }
 
-// 查询客户端应用关联的应用配额
+// SendCommandInvoker 发送命令
+func (c *RomaClient) SendCommandInvoker(request *model.SendCommandRequest) *SendCommandInvoker {
+	requestDef := GenReqDefForSendCommand()
+	return &SendCommandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAppBoundAppQuota 查询客户端应用关联的应用配额
 //
 // 查看指定客户端应用关联的应用配额。
 //
@@ -2354,7 +3212,13 @@ func (c *RomaClient) ShowAppBoundAppQuota(request *model.ShowAppBoundAppQuotaReq
 	}
 }
 
-// 获取客户端配额详情
+// ShowAppBoundAppQuotaInvoker 查询客户端应用关联的应用配额
+func (c *RomaClient) ShowAppBoundAppQuotaInvoker(request *model.ShowAppBoundAppQuotaRequest) *ShowAppBoundAppQuotaInvoker {
+	requestDef := GenReqDefForShowAppBoundAppQuota()
+	return &ShowAppBoundAppQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAppQuota 获取客户端配额详情
 //
 // 获取客户端配额详情
 //
@@ -2370,7 +3234,13 @@ func (c *RomaClient) ShowAppQuota(request *model.ShowAppQuotaRequest) (*model.Sh
 	}
 }
 
-// 查询设备鉴权信息
+// ShowAppQuotaInvoker 获取客户端配额详情
+func (c *RomaClient) ShowAppQuotaInvoker(request *model.ShowAppQuotaRequest) *ShowAppQuotaInvoker {
+	requestDef := GenReqDefForShowAppQuota()
+	return &ShowAppQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAuthentication 查询设备鉴权信息
 //
 // 查询设备鉴权信息
 //
@@ -2386,7 +3256,13 @@ func (c *RomaClient) ShowAuthentication(request *model.ShowAuthenticationRequest
 	}
 }
 
-// 查询命令详情
+// ShowAuthenticationInvoker 查询设备鉴权信息
+func (c *RomaClient) ShowAuthenticationInvoker(request *model.ShowAuthenticationRequest) *ShowAuthenticationInvoker {
+	requestDef := GenReqDefForShowAuthentication()
+	return &ShowAuthenticationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCommand 查询命令详情
 //
 // 查询命令详情
 //
@@ -2402,7 +3278,13 @@ func (c *RomaClient) ShowCommand(request *model.ShowCommandRequest) (*model.Show
 	}
 }
 
-// 查询指定数据源
+// ShowCommandInvoker 查询命令详情
+func (c *RomaClient) ShowCommandInvoker(request *model.ShowCommandRequest) *ShowCommandInvoker {
+	requestDef := GenReqDefForShowCommand()
+	return &ShowCommandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDataourceDetail 查询指定数据源
 //
 // 根据数据源id查询数据源
 //
@@ -2418,7 +3300,13 @@ func (c *RomaClient) ShowDataourceDetail(request *model.ShowDataourceDetailReque
 	}
 }
 
-// 查看APP的访问控制详情
+// ShowDataourceDetailInvoker 查询指定数据源
+func (c *RomaClient) ShowDataourceDetailInvoker(request *model.ShowDataourceDetailRequest) *ShowDataourceDetailInvoker {
+	requestDef := GenReqDefForShowDataourceDetail()
+	return &ShowDataourceDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfAppAcl 查看APP的访问控制详情
 //
 // 查看APP的访问控制详情。
 //
@@ -2434,7 +3322,13 @@ func (c *RomaClient) ShowDetailsOfAppAcl(request *model.ShowDetailsOfAppAclReque
 	}
 }
 
-// 查看APP Code详情
+// ShowDetailsOfAppAclInvoker 查看APP的访问控制详情
+func (c *RomaClient) ShowDetailsOfAppAclInvoker(request *model.ShowDetailsOfAppAclRequest) *ShowDetailsOfAppAclInvoker {
+	requestDef := GenReqDefForShowDetailsOfAppAcl()
+	return &ShowDetailsOfAppAclInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfAppCodeV2 查看APP Code详情
 //
 // App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
 //
@@ -2450,7 +3344,13 @@ func (c *RomaClient) ShowDetailsOfAppCodeV2(request *model.ShowDetailsOfAppCodeV
 	}
 }
 
-// 查看应用配置详情
+// ShowDetailsOfAppCodeV2Invoker 查看APP Code详情
+func (c *RomaClient) ShowDetailsOfAppCodeV2Invoker(request *model.ShowDetailsOfAppCodeV2Request) *ShowDetailsOfAppCodeV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfAppCodeV2()
+	return &ShowDetailsOfAppCodeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfAppConfigV2 查看应用配置详情
 //
 // 查看应用配置详情
 //
@@ -2466,7 +3366,13 @@ func (c *RomaClient) ShowDetailsOfAppConfigV2(request *model.ShowDetailsOfAppCon
 	}
 }
 
-// 查看APP详情
+// ShowDetailsOfAppConfigV2Invoker 查看应用配置详情
+func (c *RomaClient) ShowDetailsOfAppConfigV2Invoker(request *model.ShowDetailsOfAppConfigV2Request) *ShowDetailsOfAppConfigV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfAppConfigV2()
+	return &ShowDetailsOfAppConfigV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfAppV2 查看APP详情
 //
 // 查看指定APP的详细信息。
 //
@@ -2482,7 +3388,13 @@ func (c *RomaClient) ShowDetailsOfAppV2(request *model.ShowDetailsOfAppV2Request
 	}
 }
 
-// 查看自定义认证详情
+// ShowDetailsOfAppV2Invoker 查看APP详情
+func (c *RomaClient) ShowDetailsOfAppV2Invoker(request *model.ShowDetailsOfAppV2Request) *ShowDetailsOfAppV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfAppV2()
+	return &ShowDetailsOfAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfCustomAuthorizersV2 查看自定义认证详情
 //
 // 查看自定义认证详情
 //
@@ -2498,7 +3410,13 @@ func (c *RomaClient) ShowDetailsOfCustomAuthorizersV2(request *model.ShowDetails
 	}
 }
 
-// 查看域名证书
+// ShowDetailsOfCustomAuthorizersV2Invoker 查看自定义认证详情
+func (c *RomaClient) ShowDetailsOfCustomAuthorizersV2Invoker(request *model.ShowDetailsOfCustomAuthorizersV2Request) *ShowDetailsOfCustomAuthorizersV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfCustomAuthorizersV2()
+	return &ShowDetailsOfCustomAuthorizersV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfDomainNameCertificateV2 查看域名证书
 //
 // 查看域名下绑定的证书详情。
 //
@@ -2514,7 +3432,13 @@ func (c *RomaClient) ShowDetailsOfDomainNameCertificateV2(request *model.ShowDet
 	}
 }
 
-// 查看变量详情
+// ShowDetailsOfDomainNameCertificateV2Invoker 查看域名证书
+func (c *RomaClient) ShowDetailsOfDomainNameCertificateV2Invoker(request *model.ShowDetailsOfDomainNameCertificateV2Request) *ShowDetailsOfDomainNameCertificateV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfDomainNameCertificateV2()
+	return &ShowDetailsOfDomainNameCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfEnvironmentVariableV2 查看变量详情
 //
 // 查看指定的环境变量的详情。
 //
@@ -2530,7 +3454,13 @@ func (c *RomaClient) ShowDetailsOfEnvironmentVariableV2(request *model.ShowDetai
 	}
 }
 
-// 查看ROMA Connect实例详情
+// ShowDetailsOfEnvironmentVariableV2Invoker 查看变量详情
+func (c *RomaClient) ShowDetailsOfEnvironmentVariableV2Invoker(request *model.ShowDetailsOfEnvironmentVariableV2Request) *ShowDetailsOfEnvironmentVariableV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfEnvironmentVariableV2()
+	return &ShowDetailsOfEnvironmentVariableV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfInstanceV2 查看ROMA Connect实例详情
 //
 // 查看ROMA Connect实例详情
 //
@@ -2546,7 +3476,13 @@ func (c *RomaClient) ShowDetailsOfInstanceV2(request *model.ShowDetailsOfInstanc
 	}
 }
 
-// 查看流控策略详情
+// ShowDetailsOfInstanceV2Invoker 查看ROMA Connect实例详情
+func (c *RomaClient) ShowDetailsOfInstanceV2Invoker(request *model.ShowDetailsOfInstanceV2Request) *ShowDetailsOfInstanceV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfInstanceV2()
+	return &ShowDetailsOfInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfRequestThrottlingPolicyV2 查看流控策略详情
 //
 // 查看指定流控策略的详细信息。
 //
@@ -2562,7 +3498,13 @@ func (c *RomaClient) ShowDetailsOfRequestThrottlingPolicyV2(request *model.ShowD
 	}
 }
 
-// 查询设备详情
+// ShowDetailsOfRequestThrottlingPolicyV2Invoker 查看流控策略详情
+func (c *RomaClient) ShowDetailsOfRequestThrottlingPolicyV2Invoker(request *model.ShowDetailsOfRequestThrottlingPolicyV2Request) *ShowDetailsOfRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfRequestThrottlingPolicyV2()
+	return &ShowDetailsOfRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDevice 查询设备详情
 //
 // 查询设备详情
 //
@@ -2578,7 +3520,13 @@ func (c *RomaClient) ShowDevice(request *model.ShowDeviceRequest) (*model.ShowDe
 	}
 }
 
-// 查询设备分组详情
+// ShowDeviceInvoker 查询设备详情
+func (c *RomaClient) ShowDeviceInvoker(request *model.ShowDeviceRequest) *ShowDeviceInvoker {
+	requestDef := GenReqDefForShowDevice()
+	return &ShowDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDeviceGroup 查询设备分组详情
 //
 // 获取设备分组及下一层分组信息
 //
@@ -2594,7 +3542,13 @@ func (c *RomaClient) ShowDeviceGroup(request *model.ShowDeviceGroupRequest) (*mo
 	}
 }
 
-// 查询所有设备分组
+// ShowDeviceGroupInvoker 查询设备分组详情
+func (c *RomaClient) ShowDeviceGroupInvoker(request *model.ShowDeviceGroupRequest) *ShowDeviceGroupInvoker {
+	requestDef := GenReqDefForShowDeviceGroup()
+	return &ShowDeviceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDeviceGroupTree 查询所有设备分组
 //
 // 查询所有设备分组
 //
@@ -2610,7 +3564,13 @@ func (c *RomaClient) ShowDeviceGroupTree(request *model.ShowDeviceGroupTreeReque
 	}
 }
 
-// 查询设备分组内设备
+// ShowDeviceGroupTreeInvoker 查询所有设备分组
+func (c *RomaClient) ShowDeviceGroupTreeInvoker(request *model.ShowDeviceGroupTreeRequest) *ShowDeviceGroupTreeInvoker {
+	requestDef := GenReqDefForShowDeviceGroupTree()
+	return &ShowDeviceGroupTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDevicesInGroup 查询设备分组内设备
 //
 // 查询设备分组内设备
 //
@@ -2626,7 +3586,13 @@ func (c *RomaClient) ShowDevicesInGroup(request *model.ShowDevicesInGroupRequest
 	}
 }
 
-// 查询调度计划
+// ShowDevicesInGroupInvoker 查询设备分组内设备
+func (c *RomaClient) ShowDevicesInGroupInvoker(request *model.ShowDevicesInGroupRequest) *ShowDevicesInGroupInvoker {
+	requestDef := GenReqDefForShowDevicesInGroup()
+	return &ShowDevicesInGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDispatches 查询调度计划
 //
 // 查询调度计划
 //
@@ -2642,7 +3608,13 @@ func (c *RomaClient) ShowDispatches(request *model.ShowDispatchesRequest) (*mode
 	}
 }
 
-// 查询后端API详情
+// ShowDispatchesInvoker 查询调度计划
+func (c *RomaClient) ShowDispatchesInvoker(request *model.ShowDispatchesRequest) *ShowDispatchesInvoker {
+	requestDef := GenReqDefForShowDispatches()
+	return &ShowDispatchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLiveDataApiV2 查询后端API详情
 //
 // 查询后端API的详细信息。
 //
@@ -2658,7 +3630,13 @@ func (c *RomaClient) ShowLiveDataApiV2(request *model.ShowLiveDataApiV2Request) 
 	}
 }
 
-// 查询消息
+// ShowLiveDataApiV2Invoker 查询后端API详情
+func (c *RomaClient) ShowLiveDataApiV2Invoker(request *model.ShowLiveDataApiV2Request) *ShowLiveDataApiV2Invoker {
+	requestDef := GenReqDefForShowLiveDataApiV2()
+	return &ShowLiveDataApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMqsInstanceMessages 查询消息
 //
 // 查询消息的偏移量和消息内容。
 // 先根据时间戳查询消息的偏移量，再根据偏移量查询消息内容。
@@ -2675,7 +3653,13 @@ func (c *RomaClient) ShowMqsInstanceMessages(request *model.ShowMqsInstanceMessa
 	}
 }
 
-// 查询Topic权限
+// ShowMqsInstanceMessagesInvoker 查询消息
+func (c *RomaClient) ShowMqsInstanceMessagesInvoker(request *model.ShowMqsInstanceMessagesRequest) *ShowMqsInstanceMessagesInvoker {
+	requestDef := GenReqDefForShowMqsInstanceMessages()
+	return &ShowMqsInstanceMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMqsInstanceTopicAccessPolicy 查询Topic权限
 //
 // 查询Topic权限。
 //
@@ -2691,7 +3675,13 @@ func (c *RomaClient) ShowMqsInstanceTopicAccessPolicy(request *model.ShowMqsInst
 	}
 }
 
-// 查询产品详情
+// ShowMqsInstanceTopicAccessPolicyInvoker 查询Topic权限
+func (c *RomaClient) ShowMqsInstanceTopicAccessPolicyInvoker(request *model.ShowMqsInstanceTopicAccessPolicyRequest) *ShowMqsInstanceTopicAccessPolicyInvoker {
+	requestDef := GenReqDefForShowMqsInstanceTopicAccessPolicy()
+	return &ShowMqsInstanceTopicAccessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProduct 查询产品详情
 //
 // 查询产品详情
 //
@@ -2707,7 +3697,13 @@ func (c *RomaClient) ShowProduct(request *model.ShowProductRequest) (*model.Show
 	}
 }
 
-// 查询产品鉴权信息
+// ShowProductInvoker 查询产品详情
+func (c *RomaClient) ShowProductInvoker(request *model.ShowProductRequest) *ShowProductInvoker {
+	requestDef := GenReqDefForShowProduct()
+	return &ShowProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProductAuthentication 查询产品鉴权信息
 //
 // 查询产品鉴权信息
 //
@@ -2723,7 +3719,13 @@ func (c *RomaClient) ShowProductAuthentication(request *model.ShowProductAuthent
 	}
 }
 
-// 查询产品模板详情
+// ShowProductAuthenticationInvoker 查询产品鉴权信息
+func (c *RomaClient) ShowProductAuthenticationInvoker(request *model.ShowProductAuthenticationRequest) *ShowProductAuthenticationInvoker {
+	requestDef := GenReqDefForShowProductAuthentication()
+	return &ShowProductAuthenticationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProductTemplate 查询产品模板详情
 //
 // 查询产品模板详情
 //
@@ -2739,7 +3741,13 @@ func (c *RomaClient) ShowProductTemplate(request *model.ShowProductTemplateReque
 	}
 }
 
-// 查询服务属性详情
+// ShowProductTemplateInvoker 查询产品模板详情
+func (c *RomaClient) ShowProductTemplateInvoker(request *model.ShowProductTemplateRequest) *ShowProductTemplateInvoker {
+	requestDef := GenReqDefForShowProductTemplate()
+	return &ShowProductTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProperty 查询服务属性详情
 //
 // 查询服务属性详情
 //
@@ -2755,7 +3763,13 @@ func (c *RomaClient) ShowProperty(request *model.ShowPropertyRequest) (*model.Sh
 	}
 }
 
-// 查询请求属性详情
+// ShowPropertyInvoker 查询服务属性详情
+func (c *RomaClient) ShowPropertyInvoker(request *model.ShowPropertyRequest) *ShowPropertyInvoker {
+	requestDef := GenReqDefForShowProperty()
+	return &ShowPropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRequestProperty 查询请求属性详情
 //
 // 查询请求属性详情
 //
@@ -2771,7 +3785,13 @@ func (c *RomaClient) ShowRequestProperty(request *model.ShowRequestPropertyReque
 	}
 }
 
-// 查询响应属性详情
+// ShowRequestPropertyInvoker 查询请求属性详情
+func (c *RomaClient) ShowRequestPropertyInvoker(request *model.ShowRequestPropertyRequest) *ShowRequestPropertyInvoker {
+	requestDef := GenReqDefForShowRequestProperty()
+	return &ShowRequestPropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResponseProperty 查询响应属性详情
 //
 // 查询响应属性详情
 //
@@ -2787,7 +3807,13 @@ func (c *RomaClient) ShowResponseProperty(request *model.ShowResponsePropertyReq
 	}
 }
 
-// 查看ROMA Connect实例约束信息
+// ShowResponsePropertyInvoker 查询响应属性详情
+func (c *RomaClient) ShowResponsePropertyInvoker(request *model.ShowResponsePropertyRequest) *ShowResponsePropertyInvoker {
+	requestDef := GenReqDefForShowResponseProperty()
+	return &ShowResponsePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRestrictionOfInstanceV2 查看ROMA Connect实例约束信息
 //
 // 查看ROMA Connect实例约束信息
 //
@@ -2803,7 +3829,13 @@ func (c *RomaClient) ShowRestrictionOfInstanceV2(request *model.ShowRestrictionO
 	}
 }
 
-// 查询规则详情
+// ShowRestrictionOfInstanceV2Invoker 查看ROMA Connect实例约束信息
+func (c *RomaClient) ShowRestrictionOfInstanceV2Invoker(request *model.ShowRestrictionOfInstanceV2Request) *ShowRestrictionOfInstanceV2Invoker {
+	requestDef := GenReqDefForShowRestrictionOfInstanceV2()
+	return &ShowRestrictionOfInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRule 查询规则详情
 //
 // 查询规则详情
 //
@@ -2819,7 +3851,13 @@ func (c *RomaClient) ShowRule(request *model.ShowRuleRequest) (*model.ShowRuleRe
 	}
 }
 
-// 查询服务详情
+// ShowRuleInvoker 查询规则详情
+func (c *RomaClient) ShowRuleInvoker(request *model.ShowRuleRequest) *ShowRuleInvoker {
+	requestDef := GenReqDefForShowRule()
+	return &ShowRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowService 查询服务详情
 //
 // 查询服务详情
 //
@@ -2835,7 +3873,13 @@ func (c *RomaClient) ShowService(request *model.ShowServiceRequest) (*model.Show
 	}
 }
 
-// 通过任务ID查询指定任务的信息
+// ShowServiceInvoker 查询服务详情
+func (c *RomaClient) ShowServiceInvoker(request *model.ShowServiceRequest) *ShowServiceInvoker {
+	requestDef := GenReqDefForShowService()
+	return &ShowServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTask 通过任务ID查询指定任务的信息
 //
 // 通过任务ID查询指定任务的信息
 //
@@ -2851,7 +3895,13 @@ func (c *RomaClient) ShowTask(request *model.ShowTaskRequest) (*model.ShowTaskRe
 	}
 }
 
-// 测试数据源连通性
+// ShowTaskInvoker 通过任务ID查询指定任务的信息
+func (c *RomaClient) ShowTaskInvoker(request *model.ShowTaskRequest) *ShowTaskInvoker {
+	requestDef := GenReqDefForShowTask()
+	return &ShowTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartTestDatasource 测试数据源连通性
 //
 // 测试数据源连通性
 //
@@ -2867,7 +3917,13 @@ func (c *RomaClient) StartTestDatasource(request *model.StartTestDatasourceReque
 	}
 }
 
-// 手工停止当前执行的任务
+// StartTestDatasourceInvoker 测试数据源连通性
+func (c *RomaClient) StartTestDatasourceInvoker(request *model.StartTestDatasourceRequest) *StartTestDatasourceInvoker {
+	requestDef := GenReqDefForStartTestDatasource()
+	return &StartTestDatasourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopTask 手工停止当前执行的任务
 //
 // 手工停止当前执行的任务
 //
@@ -2883,7 +3939,13 @@ func (c *RomaClient) StopTask(request *model.StopTaskRequest) (*model.StopTaskRe
 	}
 }
 
-// 撤销后端API
+// StopTaskInvoker 手工停止当前执行的任务
+func (c *RomaClient) StopTaskInvoker(request *model.StopTaskRequest) *StopTaskInvoker {
+	requestDef := GenReqDefForStopTask()
+	return &StopTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnpublishLiveDataApiV2 撤销后端API
 //
 // 在某个实例中取消部署后端API。
 //
@@ -2899,7 +3961,13 @@ func (c *RomaClient) UnpublishLiveDataApiV2(request *model.UnpublishLiveDataApiV
 	}
 }
 
-// 设置APP的访问控制
+// UnpublishLiveDataApiV2Invoker 撤销后端API
+func (c *RomaClient) UnpublishLiveDataApiV2Invoker(request *model.UnpublishLiveDataApiV2Request) *UnpublishLiveDataApiV2Invoker {
+	requestDef := GenReqDefForUnpublishLiveDataApiV2()
+	return &UnpublishLiveDataApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAppAcl 设置APP的访问控制
 //
 // 设置客户端配置的访问控制。
 //
@@ -2915,7 +3983,13 @@ func (c *RomaClient) UpdateAppAcl(request *model.UpdateAppAclRequest) (*model.Up
 	}
 }
 
-// 修改应用配置
+// UpdateAppAclInvoker 设置APP的访问控制
+func (c *RomaClient) UpdateAppAclInvoker(request *model.UpdateAppAclRequest) *UpdateAppAclInvoker {
+	requestDef := GenReqDefForUpdateAppAcl()
+	return &UpdateAppAclInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAppConfigV2 修改应用配置
 //
 // 修改应用配置
 //
@@ -2931,7 +4005,13 @@ func (c *RomaClient) UpdateAppConfigV2(request *model.UpdateAppConfigV2Request) 
 	}
 }
 
-// 修改客户端配额
+// UpdateAppConfigV2Invoker 修改应用配置
+func (c *RomaClient) UpdateAppConfigV2Invoker(request *model.UpdateAppConfigV2Request) *UpdateAppConfigV2Invoker {
+	requestDef := GenReqDefForUpdateAppConfigV2()
+	return &UpdateAppConfigV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAppQuota 修改客户端配额
 //
 // 修改客户端配额
 //
@@ -2947,7 +4027,13 @@ func (c *RomaClient) UpdateAppQuota(request *model.UpdateAppQuotaRequest) (*mode
 	}
 }
 
-// 修改命令
+// UpdateAppQuotaInvoker 修改客户端配额
+func (c *RomaClient) UpdateAppQuotaInvoker(request *model.UpdateAppQuotaRequest) *UpdateAppQuotaInvoker {
+	requestDef := GenReqDefForUpdateAppQuota()
+	return &UpdateAppQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCommand 修改命令
 //
 // 修改命令
 //
@@ -2963,7 +4049,13 @@ func (c *RomaClient) UpdateCommand(request *model.UpdateCommandRequest) (*model.
 	}
 }
 
-// 修改自定义认证
+// UpdateCommandInvoker 修改命令
+func (c *RomaClient) UpdateCommandInvoker(request *model.UpdateCommandRequest) *UpdateCommandInvoker {
+	requestDef := GenReqDefForUpdateCommand()
+	return &UpdateCommandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCustomAuthorizerV2 修改自定义认证
 //
 // 修改自定义认证
 //
@@ -2979,7 +4071,13 @@ func (c *RomaClient) UpdateCustomAuthorizerV2(request *model.UpdateCustomAuthori
 	}
 }
 
-// 修改数据源
+// UpdateCustomAuthorizerV2Invoker 修改自定义认证
+func (c *RomaClient) UpdateCustomAuthorizerV2Invoker(request *model.UpdateCustomAuthorizerV2Request) *UpdateCustomAuthorizerV2Invoker {
+	requestDef := GenReqDefForUpdateCustomAuthorizerV2()
+	return &UpdateCustomAuthorizerV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDatasourceInfo 修改数据源
 //
 // 修改数据源
 //
@@ -2995,7 +4093,13 @@ func (c *RomaClient) UpdateDatasourceInfo(request *model.UpdateDatasourceInfoReq
 	}
 }
 
-// 修改设备
+// UpdateDatasourceInfoInvoker 修改数据源
+func (c *RomaClient) UpdateDatasourceInfoInvoker(request *model.UpdateDatasourceInfoRequest) *UpdateDatasourceInfoInvoker {
+	requestDef := GenReqDefForUpdateDatasourceInfo()
+	return &UpdateDatasourceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDevice 修改设备
 //
 // 修改设备信息
 //
@@ -3011,7 +4115,13 @@ func (c *RomaClient) UpdateDevice(request *model.UpdateDeviceRequest) (*model.Up
 	}
 }
 
-// 修改设备分组
+// UpdateDeviceInvoker 修改设备
+func (c *RomaClient) UpdateDeviceInvoker(request *model.UpdateDeviceRequest) *UpdateDeviceInvoker {
+	requestDef := GenReqDefForUpdateDevice()
+	return &UpdateDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDeviceGroup 修改设备分组
 //
 // 修改设备分组
 //
@@ -3027,7 +4137,13 @@ func (c *RomaClient) UpdateDeviceGroup(request *model.UpdateDeviceGroupRequest) 
 	}
 }
 
-// 修改调度计划
+// UpdateDeviceGroupInvoker 修改设备分组
+func (c *RomaClient) UpdateDeviceGroupInvoker(request *model.UpdateDeviceGroupRequest) *UpdateDeviceGroupInvoker {
+	requestDef := GenReqDefForUpdateDeviceGroup()
+	return &UpdateDeviceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDispatches 修改调度计划
 //
 // 通过任务ID和调度ID修改调度计划
 //
@@ -3043,7 +4159,13 @@ func (c *RomaClient) UpdateDispatches(request *model.UpdateDispatchesRequest) (*
 	}
 }
 
-// 修改域名
+// UpdateDispatchesInvoker 修改调度计划
+func (c *RomaClient) UpdateDispatchesInvoker(request *model.UpdateDispatchesRequest) *UpdateDispatchesInvoker {
+	requestDef := GenReqDefForUpdateDispatches()
+	return &UpdateDispatchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDomainV2 修改域名
 //
 // 修改绑定的域名所对应的配置信息。
 //
@@ -3059,7 +4181,13 @@ func (c *RomaClient) UpdateDomainV2(request *model.UpdateDomainV2Request) (*mode
 	}
 }
 
-// 修改环境
+// UpdateDomainV2Invoker 修改域名
+func (c *RomaClient) UpdateDomainV2Invoker(request *model.UpdateDomainV2Request) *UpdateDomainV2Invoker {
+	requestDef := GenReqDefForUpdateDomainV2()
+	return &UpdateDomainV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEnvironmentV2 修改环境
 //
 // 修改指定环境的信息。其中可修改的属性为：name、remark，其它属性不可修改。
 //
@@ -3075,7 +4203,13 @@ func (c *RomaClient) UpdateEnvironmentV2(request *model.UpdateEnvironmentV2Reque
 	}
 }
 
-// 修改变量
+// UpdateEnvironmentV2Invoker 修改环境
+func (c *RomaClient) UpdateEnvironmentV2Invoker(request *model.UpdateEnvironmentV2Request) *UpdateEnvironmentV2Invoker {
+	requestDef := GenReqDefForUpdateEnvironmentV2()
+	return &UpdateEnvironmentV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEnvironmentVariableV2 修改变量
 //
 // 修改环境变量。环境变量引用位置为api的后端服务地址时，修改对应环境变量会将使用该变量的所有api重新发布。
 //
@@ -3091,7 +4225,13 @@ func (c *RomaClient) UpdateEnvironmentVariableV2(request *model.UpdateEnvironmen
 	}
 }
 
-// 修改后端API
+// UpdateEnvironmentVariableV2Invoker 修改变量
+func (c *RomaClient) UpdateEnvironmentVariableV2Invoker(request *model.UpdateEnvironmentVariableV2Request) *UpdateEnvironmentVariableV2Invoker {
+	requestDef := GenReqDefForUpdateEnvironmentVariableV2()
+	return &UpdateEnvironmentVariableV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLiveDataApiV2 修改后端API
 //
 // 在某个实例中更新后端API的参数。
 //
@@ -3107,7 +4247,13 @@ func (c *RomaClient) UpdateLiveDataApiV2(request *model.UpdateLiveDataApiV2Reque
 	}
 }
 
-// 修改Topic
+// UpdateLiveDataApiV2Invoker 修改后端API
+func (c *RomaClient) UpdateLiveDataApiV2Invoker(request *model.UpdateLiveDataApiV2Request) *UpdateLiveDataApiV2Invoker {
+	requestDef := GenReqDefForUpdateLiveDataApiV2()
+	return &UpdateLiveDataApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMqsInstanceTopic 修改Topic
 //
 // 修改Topic。
 //
@@ -3123,7 +4269,13 @@ func (c *RomaClient) UpdateMqsInstanceTopic(request *model.UpdateMqsInstanceTopi
 	}
 }
 
-// 修改组合任务
+// UpdateMqsInstanceTopicInvoker 修改Topic
+func (c *RomaClient) UpdateMqsInstanceTopicInvoker(request *model.UpdateMqsInstanceTopicRequest) *UpdateMqsInstanceTopicInvoker {
+	requestDef := GenReqDefForUpdateMqsInstanceTopic()
+	return &UpdateMqsInstanceTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMultiTasks 修改组合任务
 //
 // 修改组合任务
 //
@@ -3139,7 +4291,13 @@ func (c *RomaClient) UpdateMultiTasks(request *model.UpdateMultiTasksRequest) (*
 	}
 }
 
-// 修改订阅管理
+// UpdateMultiTasksInvoker 修改组合任务
+func (c *RomaClient) UpdateMultiTasksInvoker(request *model.UpdateMultiTasksRequest) *UpdateMultiTasksInvoker {
+	requestDef := GenReqDefForUpdateMultiTasks()
+	return &UpdateMultiTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNotification 修改订阅管理
 //
 // 该接口用于修改指定的订阅管理
 //
@@ -3155,7 +4313,13 @@ func (c *RomaClient) UpdateNotification(request *model.UpdateNotificationRequest
 	}
 }
 
-// 修改产品信息
+// UpdateNotificationInvoker 修改订阅管理
+func (c *RomaClient) UpdateNotificationInvoker(request *model.UpdateNotificationRequest) *UpdateNotificationInvoker {
+	requestDef := GenReqDefForUpdateNotification()
+	return &UpdateNotificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProduct 修改产品信息
 //
 // 修改产品信息
 //
@@ -3171,7 +4335,13 @@ func (c *RomaClient) UpdateProduct(request *model.UpdateProductRequest) (*model.
 	}
 }
 
-// 修改产品模板
+// UpdateProductInvoker 修改产品信息
+func (c *RomaClient) UpdateProductInvoker(request *model.UpdateProductRequest) *UpdateProductInvoker {
+	requestDef := GenReqDefForUpdateProduct()
+	return &UpdateProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProductTemplate 修改产品模板
 //
 // 修改产品模板
 //
@@ -3187,7 +4357,13 @@ func (c *RomaClient) UpdateProductTemplate(request *model.UpdateProductTemplateR
 	}
 }
 
-// 更新产品主题
+// UpdateProductTemplateInvoker 修改产品模板
+func (c *RomaClient) UpdateProductTemplateInvoker(request *model.UpdateProductTemplateRequest) *UpdateProductTemplateInvoker {
+	requestDef := GenReqDefForUpdateProductTemplate()
+	return &UpdateProductTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProductTopic 更新产品主题
 //
 // 更新产品主题
 //
@@ -3203,7 +4379,13 @@ func (c *RomaClient) UpdateProductTopic(request *model.UpdateProductTopicRequest
 	}
 }
 
-// 修改服务属性
+// UpdateProductTopicInvoker 更新产品主题
+func (c *RomaClient) UpdateProductTopicInvoker(request *model.UpdateProductTopicRequest) *UpdateProductTopicInvoker {
+	requestDef := GenReqDefForUpdateProductTopic()
+	return &UpdateProductTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProperty 修改服务属性
 //
 // 修改服务属性
 //
@@ -3219,7 +4401,13 @@ func (c *RomaClient) UpdateProperty(request *model.UpdatePropertyRequest) (*mode
 	}
 }
 
-// 修改请求属性
+// UpdatePropertyInvoker 修改服务属性
+func (c *RomaClient) UpdatePropertyInvoker(request *model.UpdatePropertyRequest) *UpdatePropertyInvoker {
+	requestDef := GenReqDefForUpdateProperty()
+	return &UpdatePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRequestProperty 修改请求属性
 //
 // 修改请求属性
 //
@@ -3235,7 +4423,13 @@ func (c *RomaClient) UpdateRequestProperty(request *model.UpdateRequestPropertyR
 	}
 }
 
-// 修改流控策略
+// UpdateRequestPropertyInvoker 修改请求属性
+func (c *RomaClient) UpdateRequestPropertyInvoker(request *model.UpdateRequestPropertyRequest) *UpdateRequestPropertyInvoker {
+	requestDef := GenReqDefForUpdateRequestProperty()
+	return &UpdateRequestPropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRequestThrottlingPolicyV2 修改流控策略
 //
 // 修改指定流控策略的详细信息。
 //
@@ -3251,7 +4445,13 @@ func (c *RomaClient) UpdateRequestThrottlingPolicyV2(request *model.UpdateReques
 	}
 }
 
-// 修改响应属性
+// UpdateRequestThrottlingPolicyV2Invoker 修改流控策略
+func (c *RomaClient) UpdateRequestThrottlingPolicyV2Invoker(request *model.UpdateRequestThrottlingPolicyV2Request) *UpdateRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForUpdateRequestThrottlingPolicyV2()
+	return &UpdateRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateResponseProperty 修改响应属性
 //
 // 修改响应属性
 //
@@ -3267,7 +4467,13 @@ func (c *RomaClient) UpdateResponseProperty(request *model.UpdateResponsePropert
 	}
 }
 
-// 修改规则
+// UpdateResponsePropertyInvoker 修改响应属性
+func (c *RomaClient) UpdateResponsePropertyInvoker(request *model.UpdateResponsePropertyRequest) *UpdateResponsePropertyInvoker {
+	requestDef := GenReqDefForUpdateResponseProperty()
+	return &UpdateResponsePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRule 修改规则
 //
 // 修改规则
 //
@@ -3283,7 +4489,13 @@ func (c *RomaClient) UpdateRule(request *model.UpdateRuleRequest) (*model.Update
 	}
 }
 
-// 修改服务
+// UpdateRuleInvoker 修改规则
+func (c *RomaClient) UpdateRuleInvoker(request *model.UpdateRuleRequest) *UpdateRuleInvoker {
+	requestDef := GenReqDefForUpdateRule()
+	return &UpdateRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateService 修改服务
 //
 // 修改服务
 //
@@ -3299,7 +4511,13 @@ func (c *RomaClient) UpdateService(request *model.UpdateServiceRequest) (*model.
 	}
 }
 
-// 修改签名密钥
+// UpdateServiceInvoker 修改服务
+func (c *RomaClient) UpdateServiceInvoker(request *model.UpdateServiceRequest) *UpdateServiceInvoker {
+	requestDef := GenReqDefForUpdateService()
+	return &UpdateServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSignatureKeyV2 修改签名密钥
 //
 // 修改指定签名密钥的详细信息。
 //
@@ -3315,7 +4533,13 @@ func (c *RomaClient) UpdateSignatureKeyV2(request *model.UpdateSignatureKeyV2Req
 	}
 }
 
-// 修改特殊设置
+// UpdateSignatureKeyV2Invoker 修改签名密钥
+func (c *RomaClient) UpdateSignatureKeyV2Invoker(request *model.UpdateSignatureKeyV2Request) *UpdateSignatureKeyV2Invoker {
+	requestDef := GenReqDefForUpdateSignatureKeyV2()
+	return &UpdateSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSpecialThrottlingConfigurationV2 修改特殊设置
 //
 // 修改某个流控策略下的某个特殊设置。
 //
@@ -3331,7 +4555,13 @@ func (c *RomaClient) UpdateSpecialThrottlingConfigurationV2(request *model.Updat
 	}
 }
 
-// 更新普通任务
+// UpdateSpecialThrottlingConfigurationV2Invoker 修改特殊设置
+func (c *RomaClient) UpdateSpecialThrottlingConfigurationV2Invoker(request *model.UpdateSpecialThrottlingConfigurationV2Request) *UpdateSpecialThrottlingConfigurationV2Invoker {
+	requestDef := GenReqDefForUpdateSpecialThrottlingConfigurationV2()
+	return &UpdateSpecialThrottlingConfigurationV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTask 更新普通任务
 //
 // 更新普通任务
 //
@@ -3347,7 +4577,13 @@ func (c *RomaClient) UpdateTask(request *model.UpdateTaskRequest) (*model.Update
 	}
 }
 
-// 更新Topic权限
+// UpdateTaskInvoker 更新普通任务
+func (c *RomaClient) UpdateTaskInvoker(request *model.UpdateTaskRequest) *UpdateTaskInvoker {
+	requestDef := GenReqDefForUpdateTask()
+	return &UpdateTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTopicAccessPolicy 更新Topic权限
 //
 // 更新Topic权限。
 //
@@ -3363,7 +4599,13 @@ func (c *RomaClient) UpdateTopicAccessPolicy(request *model.UpdateTopicAccessPol
 	}
 }
 
-// 导入产品
+// UpdateTopicAccessPolicyInvoker 更新Topic权限
+func (c *RomaClient) UpdateTopicAccessPolicyInvoker(request *model.UpdateTopicAccessPolicyRequest) *UpdateTopicAccessPolicyInvoker {
+	requestDef := GenReqDefForUpdateTopicAccessPolicy()
+	return &UpdateTopicAccessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadProduct 导入产品
 //
 // 导入产品
 //
@@ -3379,7 +4621,13 @@ func (c *RomaClient) UploadProduct(request *model.UploadProductRequest) (*model.
 	}
 }
 
-// 批量删除ACL策略
+// UploadProductInvoker 导入产品
+func (c *RomaClient) UploadProductInvoker(request *model.UploadProductRequest) *UploadProductInvoker {
+	requestDef := GenReqDefForUploadProduct()
+	return &UploadProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteAclV2 批量删除ACL策略
 //
 // 批量删除指定的多个ACL策略。
 //
@@ -3397,7 +4645,13 @@ func (c *RomaClient) BatchDeleteAclV2(request *model.BatchDeleteAclV2Request) (*
 	}
 }
 
-// 创建ACL策略
+// BatchDeleteAclV2Invoker 批量删除ACL策略
+func (c *RomaClient) BatchDeleteAclV2Invoker(request *model.BatchDeleteAclV2Request) *BatchDeleteAclV2Invoker {
+	requestDef := GenReqDefForBatchDeleteAclV2()
+	return &BatchDeleteAclV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAclStrategyV2 创建ACL策略
 //
 // 增加一个ACL策略，策略类型通过字段acl_type来确定（permit或者deny），限制的对象的类型可以为IP[或者DOMAIN，这里的DOMAIN对应的acl_value的值为租户名称，而非“www.exampleDomain.com\&quot;之类的网络域名。](tag:hws;hws_hk;hcs;fcs;g42;)
 //
@@ -3413,7 +4667,13 @@ func (c *RomaClient) CreateAclStrategyV2(request *model.CreateAclStrategyV2Reque
 	}
 }
 
-// 删除ACL策略
+// CreateAclStrategyV2Invoker 创建ACL策略
+func (c *RomaClient) CreateAclStrategyV2Invoker(request *model.CreateAclStrategyV2Request) *CreateAclStrategyV2Invoker {
+	requestDef := GenReqDefForCreateAclStrategyV2()
+	return &CreateAclStrategyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAclV2 删除ACL策略
 //
 // 删除指定的ACL策略， 如果存在api与该ACL策略的绑定关系，则无法删除
 //
@@ -3429,7 +4689,13 @@ func (c *RomaClient) DeleteAclV2(request *model.DeleteAclV2Request) (*model.Dele
 	}
 }
 
-// 查看ACL策略列表
+// DeleteAclV2Invoker 删除ACL策略
+func (c *RomaClient) DeleteAclV2Invoker(request *model.DeleteAclV2Request) *DeleteAclV2Invoker {
+	requestDef := GenReqDefForDeleteAclV2()
+	return &DeleteAclV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAclStrategiesV2 查看ACL策略列表
 //
 // 查询所有的ACL策略列表。
 //
@@ -3445,7 +4711,13 @@ func (c *RomaClient) ListAclStrategiesV2(request *model.ListAclStrategiesV2Reque
 	}
 }
 
-// 查看ACL策略详情
+// ListAclStrategiesV2Invoker 查看ACL策略列表
+func (c *RomaClient) ListAclStrategiesV2Invoker(request *model.ListAclStrategiesV2Request) *ListAclStrategiesV2Invoker {
+	requestDef := GenReqDefForListAclStrategiesV2()
+	return &ListAclStrategiesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfAclPolicyV2 查看ACL策略详情
 //
 // 查询指定ACL策略的详情。
 //
@@ -3461,7 +4733,13 @@ func (c *RomaClient) ShowDetailsOfAclPolicyV2(request *model.ShowDetailsOfAclPol
 	}
 }
 
-// 修改ACL策略
+// ShowDetailsOfAclPolicyV2Invoker 查看ACL策略详情
+func (c *RomaClient) ShowDetailsOfAclPolicyV2Invoker(request *model.ShowDetailsOfAclPolicyV2Request) *ShowDetailsOfAclPolicyV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfAclPolicyV2()
+	return &ShowDetailsOfAclPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAclStrategyV2 修改ACL策略
 //
 // 修改指定的ACL策略，其中可修改的属性为：acl_name、acl_type、acl_value，其它属性不可修改。
 //
@@ -3477,7 +4755,13 @@ func (c *RomaClient) UpdateAclStrategyV2(request *model.UpdateAclStrategyV2Reque
 	}
 }
 
-// 绑定流控策略
+// UpdateAclStrategyV2Invoker 修改ACL策略
+func (c *RomaClient) UpdateAclStrategyV2Invoker(request *model.UpdateAclStrategyV2Request) *UpdateAclStrategyV2Invoker {
+	requestDef := GenReqDefForUpdateAclStrategyV2()
+	return &UpdateAclStrategyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateRequestThrottlingPolicyV2 绑定流控策略
 //
 // 将流控策略应用于API，则所有对该API的访问将会受到该流控策略的限制。
 //
@@ -3497,7 +4781,13 @@ func (c *RomaClient) AssociateRequestThrottlingPolicyV2(request *model.Associate
 	}
 }
 
-// 批量解绑流控策略
+// AssociateRequestThrottlingPolicyV2Invoker 绑定流控策略
+func (c *RomaClient) AssociateRequestThrottlingPolicyV2Invoker(request *model.AssociateRequestThrottlingPolicyV2Request) *AssociateRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForAssociateRequestThrottlingPolicyV2()
+	return &AssociateRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDisassociateThrottlingPolicyV2 批量解绑流控策略
 //
 // 批量解除API与流控策略的绑定关系
 //
@@ -3513,7 +4803,13 @@ func (c *RomaClient) BatchDisassociateThrottlingPolicyV2(request *model.BatchDis
 	}
 }
 
-// 批量发布或下线API
+// BatchDisassociateThrottlingPolicyV2Invoker 批量解绑流控策略
+func (c *RomaClient) BatchDisassociateThrottlingPolicyV2Invoker(request *model.BatchDisassociateThrottlingPolicyV2Request) *BatchDisassociateThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForBatchDisassociateThrottlingPolicyV2()
+	return &BatchDisassociateThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchPublishOrOfflineApiV2 批量发布或下线API
 //
 // 将多个API发布到一个指定的环境，或将多个API从指定的环境下线。
 //
@@ -3531,7 +4827,13 @@ func (c *RomaClient) BatchPublishOrOfflineApiV2(request *model.BatchPublishOrOff
 	}
 }
 
-// 切换API版本
+// BatchPublishOrOfflineApiV2Invoker 批量发布或下线API
+func (c *RomaClient) BatchPublishOrOfflineApiV2Invoker(request *model.BatchPublishOrOfflineApiV2Request) *BatchPublishOrOfflineApiV2Invoker {
+	requestDef := GenReqDefForBatchPublishOrOfflineApiV2()
+	return &BatchPublishOrOfflineApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeApiVersionV2 切换API版本
 //
 // API每次发布时，会基于当前的API定义生成一个版本。版本记录了API发布时的各种定义及状态。
 //
@@ -3549,7 +4851,13 @@ func (c *RomaClient) ChangeApiVersionV2(request *model.ChangeApiVersionV2Request
 	}
 }
 
-// 校验API分组名称是否存在
+// ChangeApiVersionV2Invoker 切换API版本
+func (c *RomaClient) ChangeApiVersionV2Invoker(request *model.ChangeApiVersionV2Request) *ChangeApiVersionV2Invoker {
+	requestDef := GenReqDefForChangeApiVersionV2()
+	return &ChangeApiVersionV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckApiGroupsV2 校验API分组名称是否存在
 //
 // 校验API分组名称是否存在。
 //
@@ -3565,7 +4873,13 @@ func (c *RomaClient) CheckApiGroupsV2(request *model.CheckApiGroupsV2Request) (*
 	}
 }
 
-// 校验API定义
+// CheckApiGroupsV2Invoker 校验API分组名称是否存在
+func (c *RomaClient) CheckApiGroupsV2Invoker(request *model.CheckApiGroupsV2Request) *CheckApiGroupsV2Invoker {
+	requestDef := GenReqDefForCheckApiGroupsV2()
+	return &CheckApiGroupsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckApisV2 校验API定义
 //
 // 校验API定义。校验API的路径或名称是否已存在
 //
@@ -3581,7 +4895,13 @@ func (c *RomaClient) CheckApisV2(request *model.CheckApisV2Request) (*model.Chec
 	}
 }
 
-// 创建API分组
+// CheckApisV2Invoker 校验API定义
+func (c *RomaClient) CheckApisV2Invoker(request *model.CheckApisV2Request) *CheckApisV2Invoker {
+	requestDef := GenReqDefForCheckApisV2()
+	return &CheckApisV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateApiGroupV2 创建API分组
 //
 // API分组是API的管理单元，一个API分组等同于一个服务入口，创建API分组时，返回一个子域名作为访问入口。建议一个API分组下的API具有一定的相关性。
 //
@@ -3597,7 +4917,13 @@ func (c *RomaClient) CreateApiGroupV2(request *model.CreateApiGroupV2Request) (*
 	}
 }
 
-// 创建API
+// CreateApiGroupV2Invoker 创建API分组
+func (c *RomaClient) CreateApiGroupV2Invoker(request *model.CreateApiGroupV2Request) *CreateApiGroupV2Invoker {
+	requestDef := GenReqDefForCreateApiGroupV2()
+	return &CreateApiGroupV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateApiV2 创建API
 //
 // 添加一个API，API即一个服务接口，具体的服务能力。
 //
@@ -3615,7 +4941,13 @@ func (c *RomaClient) CreateApiV2(request *model.CreateApiV2Request) (*model.Crea
 	}
 }
 
-// 发布或下线API
+// CreateApiV2Invoker 创建API
+func (c *RomaClient) CreateApiV2Invoker(request *model.CreateApiV2Request) *CreateApiV2Invoker {
+	requestDef := GenReqDefForCreateApiV2()
+	return &CreateApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateOrDeletePublishRecordForApiV2 发布或下线API
 //
 // 对API进行发布或下线。
 //
@@ -3635,7 +4967,13 @@ func (c *RomaClient) CreateOrDeletePublishRecordForApiV2(request *model.CreateOr
 	}
 }
 
-// 调试API
+// CreateOrDeletePublishRecordForApiV2Invoker 发布或下线API
+func (c *RomaClient) CreateOrDeletePublishRecordForApiV2Invoker(request *model.CreateOrDeletePublishRecordForApiV2Request) *CreateOrDeletePublishRecordForApiV2Invoker {
+	requestDef := GenReqDefForCreateOrDeletePublishRecordForApiV2()
+	return &CreateOrDeletePublishRecordForApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DebugApiV2 调试API
 //
 // 调试一个API在指定运行环境下的定义，接口调用者需要具有操作该API的权限。
 //
@@ -3651,7 +4989,13 @@ func (c *RomaClient) DebugApiV2(request *model.DebugApiV2Request) (*model.DebugA
 	}
 }
 
-// 根据版本编号下线API
+// DebugApiV2Invoker 调试API
+func (c *RomaClient) DebugApiV2Invoker(request *model.DebugApiV2Request) *DebugApiV2Invoker {
+	requestDef := GenReqDefForDebugApiV2()
+	return &DebugApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApiByVersionIdV2 根据版本编号下线API
 //
 // 对某个生效中的API版本进行下线操作，下线后，API在该版本生效的环境中将不再能够被调用。
 //
@@ -3667,7 +5011,13 @@ func (c *RomaClient) DeleteApiByVersionIdV2(request *model.DeleteApiByVersionIdV
 	}
 }
 
-// 删除API分组
+// DeleteApiByVersionIdV2Invoker 根据版本编号下线API
+func (c *RomaClient) DeleteApiByVersionIdV2Invoker(request *model.DeleteApiByVersionIdV2Request) *DeleteApiByVersionIdV2Invoker {
+	requestDef := GenReqDefForDeleteApiByVersionIdV2()
+	return &DeleteApiByVersionIdV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApiGroupV2 删除API分组
 //
 // 删除指定的API分组。
 // 分组下存在API时分组无法删除，需要删除所有分组下的API后，再删除分组。
@@ -3685,7 +5035,13 @@ func (c *RomaClient) DeleteApiGroupV2(request *model.DeleteApiGroupV2Request) (*
 	}
 }
 
-// 删除API
+// DeleteApiGroupV2Invoker 删除API分组
+func (c *RomaClient) DeleteApiGroupV2Invoker(request *model.DeleteApiGroupV2Request) *DeleteApiGroupV2Invoker {
+	requestDef := GenReqDefForDeleteApiGroupV2()
+	return &DeleteApiGroupV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApiV2 删除API
 //
 // 删除指定的API。
 //
@@ -3703,7 +5059,13 @@ func (c *RomaClient) DeleteApiV2(request *model.DeleteApiV2Request) (*model.Dele
 	}
 }
 
-// 解除API与流控策略的绑定关系
+// DeleteApiV2Invoker 删除API
+func (c *RomaClient) DeleteApiV2Invoker(request *model.DeleteApiV2Request) *DeleteApiV2Invoker {
+	requestDef := GenReqDefForDeleteApiV2()
+	return &DeleteApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateRequestThrottlingPolicyV2 解除API与流控策略的绑定关系
 //
 // 解除API与流控策略的绑定关系。
 //
@@ -3719,7 +5081,13 @@ func (c *RomaClient) DisassociateRequestThrottlingPolicyV2(request *model.Disass
 	}
 }
 
-// 查询分组列表
+// DisassociateRequestThrottlingPolicyV2Invoker 解除API与流控策略的绑定关系
+func (c *RomaClient) DisassociateRequestThrottlingPolicyV2Invoker(request *model.DisassociateRequestThrottlingPolicyV2Request) *DisassociateRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForDisassociateRequestThrottlingPolicyV2()
+	return &DisassociateRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiGroupsV2 查询分组列表
 //
 // 查询API分组列表。
 //
@@ -3737,7 +5105,13 @@ func (c *RomaClient) ListApiGroupsV2(request *model.ListApiGroupsV2Request) (*mo
 	}
 }
 
-// 查询API运行时定义
+// ListApiGroupsV2Invoker 查询分组列表
+func (c *RomaClient) ListApiGroupsV2Invoker(request *model.ListApiGroupsV2Request) *ListApiGroupsV2Invoker {
+	requestDef := GenReqDefForListApiGroupsV2()
+	return &ListApiGroupsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiRuntimeDefinitionV2 查询API运行时定义
 //
 // 查看指定的API在指定的环境上的运行时定义，默认查询RELEASE环境上的运行时定义。
 //
@@ -3759,7 +5133,13 @@ func (c *RomaClient) ListApiRuntimeDefinitionV2(request *model.ListApiRuntimeDef
 	}
 }
 
-// 查看版本详情
+// ListApiRuntimeDefinitionV2Invoker 查询API运行时定义
+func (c *RomaClient) ListApiRuntimeDefinitionV2Invoker(request *model.ListApiRuntimeDefinitionV2Request) *ListApiRuntimeDefinitionV2Invoker {
+	requestDef := GenReqDefForListApiRuntimeDefinitionV2()
+	return &ListApiRuntimeDefinitionV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiVersionDetailV2 查看版本详情
 //
 // 查询某个指定的版本详情。
 //
@@ -3775,7 +5155,13 @@ func (c *RomaClient) ListApiVersionDetailV2(request *model.ListApiVersionDetailV
 	}
 }
 
-// 查询API历史版本列表
+// ListApiVersionDetailV2Invoker 查看版本详情
+func (c *RomaClient) ListApiVersionDetailV2Invoker(request *model.ListApiVersionDetailV2Request) *ListApiVersionDetailV2Invoker {
+	requestDef := GenReqDefForListApiVersionDetailV2()
+	return &ListApiVersionDetailV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiVersionsV2 查询API历史版本列表
 //
 // 查询某个API的历史版本。每个API在一个环境上最多存在10个历史版本。
 //
@@ -3791,7 +5177,13 @@ func (c *RomaClient) ListApiVersionsV2(request *model.ListApiVersionsV2Request) 
 	}
 }
 
-// 查看流控策略绑定的API列表
+// ListApiVersionsV2Invoker 查询API历史版本列表
+func (c *RomaClient) ListApiVersionsV2Invoker(request *model.ListApiVersionsV2Request) *ListApiVersionsV2Invoker {
+	requestDef := GenReqDefForListApiVersionsV2()
+	return &ListApiVersionsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisBindedToRequestThrottlingPolicyV2 查看流控策略绑定的API列表
 //
 // 查询某个流控策略上已经绑定的API列表。
 //
@@ -3807,7 +5199,13 @@ func (c *RomaClient) ListApisBindedToRequestThrottlingPolicyV2(request *model.Li
 	}
 }
 
-// 查看流控策略未绑定的API列表
+// ListApisBindedToRequestThrottlingPolicyV2Invoker 查看流控策略绑定的API列表
+func (c *RomaClient) ListApisBindedToRequestThrottlingPolicyV2Invoker(request *model.ListApisBindedToRequestThrottlingPolicyV2Request) *ListApisBindedToRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForListApisBindedToRequestThrottlingPolicyV2()
+	return &ListApisBindedToRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisUnbindedToRequestThrottlingPolicyV2 查看流控策略未绑定的API列表
 //
 // 查询所有未绑定到该流控策略上的自有API列表。需要API已经发布，未发布的API不予展示。
 //
@@ -3823,7 +5221,13 @@ func (c *RomaClient) ListApisUnbindedToRequestThrottlingPolicyV2(request *model.
 	}
 }
 
-// 查询API列表
+// ListApisUnbindedToRequestThrottlingPolicyV2Invoker 查看流控策略未绑定的API列表
+func (c *RomaClient) ListApisUnbindedToRequestThrottlingPolicyV2Invoker(request *model.ListApisUnbindedToRequestThrottlingPolicyV2Request) *ListApisUnbindedToRequestThrottlingPolicyV2Invoker {
+	requestDef := GenReqDefForListApisUnbindedToRequestThrottlingPolicyV2()
+	return &ListApisUnbindedToRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisV2 查询API列表
 //
 // 查看API列表，返回API详细信息、发布信息等，但不能查看到后端服务信息。
 //
@@ -3839,7 +5243,13 @@ func (c *RomaClient) ListApisV2(request *model.ListApisV2Request) (*model.ListAp
 	}
 }
 
-// 查看API绑定的流控策略列表
+// ListApisV2Invoker 查询API列表
+func (c *RomaClient) ListApisV2Invoker(request *model.ListApisV2Request) *ListApisV2Invoker {
+	requestDef := GenReqDefForListApisV2()
+	return &ListApisV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRequestThrottlingPoliciesBindedToApiV2 查看API绑定的流控策略列表
 //
 // 查询某个API绑定的流控策略列表。每个环境上应该最多只有一个流控策略。
 //
@@ -3855,7 +5265,13 @@ func (c *RomaClient) ListRequestThrottlingPoliciesBindedToApiV2(request *model.L
 	}
 }
 
-// 查询分组详情
+// ListRequestThrottlingPoliciesBindedToApiV2Invoker 查看API绑定的流控策略列表
+func (c *RomaClient) ListRequestThrottlingPoliciesBindedToApiV2Invoker(request *model.ListRequestThrottlingPoliciesBindedToApiV2Request) *ListRequestThrottlingPoliciesBindedToApiV2Invoker {
+	requestDef := GenReqDefForListRequestThrottlingPoliciesBindedToApiV2()
+	return &ListRequestThrottlingPoliciesBindedToApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfApiGroupV2 查询分组详情
 //
 // 查询指定分组的详细信息。
 //
@@ -3871,7 +5287,13 @@ func (c *RomaClient) ShowDetailsOfApiGroupV2(request *model.ShowDetailsOfApiGrou
 	}
 }
 
-// 查询API详情
+// ShowDetailsOfApiGroupV2Invoker 查询分组详情
+func (c *RomaClient) ShowDetailsOfApiGroupV2Invoker(request *model.ShowDetailsOfApiGroupV2Request) *ShowDetailsOfApiGroupV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfApiGroupV2()
+	return &ShowDetailsOfApiGroupV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfApiV2 查询API详情
 //
 // 查看指定的API的详细信息。
 //
@@ -3887,7 +5309,13 @@ func (c *RomaClient) ShowDetailsOfApiV2(request *model.ShowDetailsOfApiV2Request
 	}
 }
 
-// 修改API分组
+// ShowDetailsOfApiV2Invoker 查询API详情
+func (c *RomaClient) ShowDetailsOfApiV2Invoker(request *model.ShowDetailsOfApiV2Request) *ShowDetailsOfApiV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfApiV2()
+	return &ShowDetailsOfApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateApiGroupV2 修改API分组
 //
 // 修改API分组属性。其中name和remark可修改，其他属性不可修改。
 //
@@ -3903,7 +5331,13 @@ func (c *RomaClient) UpdateApiGroupV2(request *model.UpdateApiGroupV2Request) (*
 	}
 }
 
-// 修改API
+// UpdateApiGroupV2Invoker 修改API分组
+func (c *RomaClient) UpdateApiGroupV2Invoker(request *model.UpdateApiGroupV2Request) *UpdateApiGroupV2Invoker {
+	requestDef := GenReqDefForUpdateApiGroupV2()
+	return &UpdateApiGroupV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateApiV2 修改API
 //
 // 修改指定API的信息，包括后端服务信息。
 //
@@ -3919,7 +5353,13 @@ func (c *RomaClient) UpdateApiV2(request *model.UpdateApiV2Request) (*model.Upda
 	}
 }
 
-// 批量解除API与ACL策略的绑定
+// UpdateApiV2Invoker 修改API
+func (c *RomaClient) UpdateApiV2Invoker(request *model.UpdateApiV2Request) *UpdateApiV2Invoker {
+	requestDef := GenReqDefForUpdateApiV2()
+	return &UpdateApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteApiAclBindingV2 批量解除API与ACL策略的绑定
 //
 // 批量解除API与ACL策略的绑定
 //
@@ -3935,7 +5375,13 @@ func (c *RomaClient) BatchDeleteApiAclBindingV2(request *model.BatchDeleteApiAcl
 	}
 }
 
-// 将API与ACL策略进行绑定
+// BatchDeleteApiAclBindingV2Invoker 批量解除API与ACL策略的绑定
+func (c *RomaClient) BatchDeleteApiAclBindingV2Invoker(request *model.BatchDeleteApiAclBindingV2Request) *BatchDeleteApiAclBindingV2Invoker {
+	requestDef := GenReqDefForBatchDeleteApiAclBindingV2()
+	return &BatchDeleteApiAclBindingV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateApiAclBindingV2 将API与ACL策略进行绑定
 //
 // 将API与ACL策略进行绑定。
 //
@@ -3953,7 +5399,13 @@ func (c *RomaClient) CreateApiAclBindingV2(request *model.CreateApiAclBindingV2R
 	}
 }
 
-// 解除API与ACL策略的绑定
+// CreateApiAclBindingV2Invoker 将API与ACL策略进行绑定
+func (c *RomaClient) CreateApiAclBindingV2Invoker(request *model.CreateApiAclBindingV2Request) *CreateApiAclBindingV2Invoker {
+	requestDef := GenReqDefForCreateApiAclBindingV2()
+	return &CreateApiAclBindingV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApiAclBindingV2 解除API与ACL策略的绑定
 //
 // 解除某条API与ACL策略的绑定关系
 //
@@ -3969,7 +5421,13 @@ func (c *RomaClient) DeleteApiAclBindingV2(request *model.DeleteApiAclBindingV2R
 	}
 }
 
-// 查看API绑定的ACL策略列表
+// DeleteApiAclBindingV2Invoker 解除API与ACL策略的绑定
+func (c *RomaClient) DeleteApiAclBindingV2Invoker(request *model.DeleteApiAclBindingV2Request) *DeleteApiAclBindingV2Invoker {
+	requestDef := GenReqDefForDeleteApiAclBindingV2()
+	return &DeleteApiAclBindingV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAclPolicyBindedToApiV2 查看API绑定的ACL策略列表
 //
 // 查看API绑定的ACL策略列表
 //
@@ -3985,7 +5443,13 @@ func (c *RomaClient) ListAclPolicyBindedToApiV2(request *model.ListAclPolicyBind
 	}
 }
 
-// 查看ACL策略绑定的API列表
+// ListAclPolicyBindedToApiV2Invoker 查看API绑定的ACL策略列表
+func (c *RomaClient) ListAclPolicyBindedToApiV2Invoker(request *model.ListAclPolicyBindedToApiV2Request) *ListAclPolicyBindedToApiV2Invoker {
+	requestDef := GenReqDefForListAclPolicyBindedToApiV2()
+	return &ListAclPolicyBindedToApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisBindedToAclPolicyV2 查看ACL策略绑定的API列表
 //
 // 查看ACL策略绑定的API列表
 //
@@ -4001,7 +5465,13 @@ func (c *RomaClient) ListApisBindedToAclPolicyV2(request *model.ListApisBindedTo
 	}
 }
 
-// 查看ACL策略未绑定的API列表
+// ListApisBindedToAclPolicyV2Invoker 查看ACL策略绑定的API列表
+func (c *RomaClient) ListApisBindedToAclPolicyV2Invoker(request *model.ListApisBindedToAclPolicyV2Request) *ListApisBindedToAclPolicyV2Invoker {
+	requestDef := GenReqDefForListApisBindedToAclPolicyV2()
+	return &ListApisBindedToAclPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisUnbindedToAclPolicyV2 查看ACL策略未绑定的API列表
 //
 // 查看ACL策略未绑定的API列表，需要API已发布
 //
@@ -4017,7 +5487,13 @@ func (c *RomaClient) ListApisUnbindedToAclPolicyV2(request *model.ListApisUnbind
 	}
 }
 
-// 解除授权
+// ListApisUnbindedToAclPolicyV2Invoker 查看ACL策略未绑定的API列表
+func (c *RomaClient) ListApisUnbindedToAclPolicyV2Invoker(request *model.ListApisUnbindedToAclPolicyV2Request) *ListApisUnbindedToAclPolicyV2Invoker {
+	requestDef := GenReqDefForListApisUnbindedToAclPolicyV2()
+	return &ListApisUnbindedToAclPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelingAuthorizationV2 解除授权
 //
 // 解除API对APP的授权关系。解除授权后，APP将不再能够调用该API。
 //
@@ -4033,7 +5509,13 @@ func (c *RomaClient) CancelingAuthorizationV2(request *model.CancelingAuthorizat
 	}
 }
 
-// APP授权
+// CancelingAuthorizationV2Invoker 解除授权
+func (c *RomaClient) CancelingAuthorizationV2Invoker(request *model.CancelingAuthorizationV2Request) *CancelingAuthorizationV2Invoker {
+	requestDef := GenReqDefForCancelingAuthorizationV2()
+	return &CancelingAuthorizationV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAuthorizingAppsV2 APP授权
 //
 // APP创建成功后，还不能访问API，如果想要访问某个环境上的API，需要将该API在该环境上授权给APP。授权成功后，APP即可访问该环境上的这个API。
 //
@@ -4049,7 +5531,13 @@ func (c *RomaClient) CreateAuthorizingAppsV2(request *model.CreateAuthorizingApp
 	}
 }
 
-// 查看APP已绑定的API列表
+// CreateAuthorizingAppsV2Invoker APP授权
+func (c *RomaClient) CreateAuthorizingAppsV2Invoker(request *model.CreateAuthorizingAppsV2Request) *CreateAuthorizingAppsV2Invoker {
+	requestDef := GenReqDefForCreateAuthorizingAppsV2()
+	return &CreateAuthorizingAppsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisBindedToAppV2 查看APP已绑定的API列表
 //
 // 查询APP已经绑定的API列表。
 //
@@ -4065,7 +5553,13 @@ func (c *RomaClient) ListApisBindedToAppV2(request *model.ListApisBindedToAppV2R
 	}
 }
 
-// 查看APP未绑定的API列表
+// ListApisBindedToAppV2Invoker 查看APP已绑定的API列表
+func (c *RomaClient) ListApisBindedToAppV2Invoker(request *model.ListApisBindedToAppV2Request) *ListApisBindedToAppV2Invoker {
+	requestDef := GenReqDefForListApisBindedToAppV2()
+	return &ListApisBindedToAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApisUnbindedToAppV2 查看APP未绑定的API列表
 //
 // 查询指定环境上某个APP未绑定的API列表，包括自有API和从云市场购买的API。
 //
@@ -4081,7 +5575,13 @@ func (c *RomaClient) ListApisUnbindedToAppV2(request *model.ListApisUnbindedToAp
 	}
 }
 
-// 查看API已绑定的APP列表
+// ListApisUnbindedToAppV2Invoker 查看APP未绑定的API列表
+func (c *RomaClient) ListApisUnbindedToAppV2Invoker(request *model.ListApisUnbindedToAppV2Request) *ListApisUnbindedToAppV2Invoker {
+	requestDef := GenReqDefForListApisUnbindedToAppV2()
+	return &ListApisUnbindedToAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppsBindedToApiV2 查看API已绑定的APP列表
 //
 // 查询API绑定的APP列表。
 //
@@ -4097,7 +5597,13 @@ func (c *RomaClient) ListAppsBindedToApiV2(request *model.ListAppsBindedToApiV2R
 	}
 }
 
-// 查看APP下路径冲突的api列表
+// ListAppsBindedToApiV2Invoker 查看API已绑定的APP列表
+func (c *RomaClient) ListAppsBindedToApiV2Invoker(request *model.ListAppsBindedToApiV2Request) *ListAppsBindedToApiV2Invoker {
+	requestDef := GenReqDefForListAppsBindedToApiV2()
+	return &ListAppsBindedToApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDuplicateApisForAppV2 查看APP下路径冲突的api列表
 //
 // 查询指定APP下路径冲突的api列表。
 //
@@ -4113,7 +5619,13 @@ func (c *RomaClient) ListDuplicateApisForAppV2(request *model.ListDuplicateApisF
 	}
 }
 
-// 设置用户成员
+// ListDuplicateApisForAppV2Invoker 查看APP下路径冲突的api列表
+func (c *RomaClient) ListDuplicateApisForAppV2Invoker(request *model.ListDuplicateApisForAppV2Request) *ListDuplicateApisForAppV2Invoker {
+	requestDef := GenReqDefForListDuplicateApisForAppV2()
+	return &ListDuplicateApisForAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddUserToApp 设置用户成员
 //
 // - 设置应用的用户成员，为空数组时会清空已有应用成员列表
 // - 设置动作为全量更新非增量更新，应用的成员列表都会替换为当次请求的应用成员列表
@@ -4130,7 +5642,13 @@ func (c *RomaClient) AddUserToApp(request *model.AddUserToAppRequest) (*model.Ad
 	}
 }
 
-// 查询用户成员列表
+// AddUserToAppInvoker 设置用户成员
+func (c *RomaClient) AddUserToAppInvoker(request *model.AddUserToAppRequest) *AddUserToAppInvoker {
+	requestDef := GenReqDefForAddUserToApp()
+	return &AddUserToAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckAuthUsersOfApp 查询用户成员列表
 //
 // 查询用户成列表
 //
@@ -4146,7 +5664,13 @@ func (c *RomaClient) CheckAuthUsersOfApp(request *model.CheckAuthUsersOfAppReque
 	}
 }
 
-// 查询候选用户成员
+// CheckAuthUsersOfAppInvoker 查询用户成员列表
+func (c *RomaClient) CheckAuthUsersOfAppInvoker(request *model.CheckAuthUsersOfAppRequest) *CheckAuthUsersOfAppInvoker {
+	requestDef := GenReqDefForCheckAuthUsersOfApp()
+	return &CheckAuthUsersOfAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckCanAuthUsersOfApp 查询候选用户成员
 //
 // 查询应用的候选用户成员列表,会过滤掉异常状态用户
 //
@@ -4162,7 +5686,13 @@ func (c *RomaClient) CheckCanAuthUsersOfApp(request *model.CheckCanAuthUsersOfAp
 	}
 }
 
-// 查询应用详情
+// CheckCanAuthUsersOfAppInvoker 查询候选用户成员
+func (c *RomaClient) CheckCanAuthUsersOfAppInvoker(request *model.CheckCanAuthUsersOfAppRequest) *CheckCanAuthUsersOfAppInvoker {
+	requestDef := GenReqDefForCheckCanAuthUsersOfApp()
+	return &CheckCanAuthUsersOfAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckRomaAppDetails 查询应用详情
 //
 // 查询应用详情
 //
@@ -4178,7 +5708,13 @@ func (c *RomaClient) CheckRomaAppDetails(request *model.CheckRomaAppDetailsReque
 	}
 }
 
-// 查询应用密钥
+// CheckRomaAppDetailsInvoker 查询应用详情
+func (c *RomaClient) CheckRomaAppDetailsInvoker(request *model.CheckRomaAppDetailsRequest) *CheckRomaAppDetailsInvoker {
+	requestDef := GenReqDefForCheckRomaAppDetails()
+	return &CheckRomaAppDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckRomaAppSecret 查询应用密钥
 //
 // 查询应用密钥
 //
@@ -4194,7 +5730,13 @@ func (c *RomaClient) CheckRomaAppSecret(request *model.CheckRomaAppSecretRequest
 	}
 }
 
-// 创建应用
+// CheckRomaAppSecretInvoker 查询应用密钥
+func (c *RomaClient) CheckRomaAppSecretInvoker(request *model.CheckRomaAppSecretRequest) *CheckRomaAppSecretInvoker {
+	requestDef := GenReqDefForCheckRomaAppSecret()
+	return &CheckRomaAppSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRomaApp 创建应用
 //
 // 创建应用
 //
@@ -4210,7 +5752,13 @@ func (c *RomaClient) CreateRomaApp(request *model.CreateRomaAppRequest) (*model.
 	}
 }
 
-// 删除应用
+// CreateRomaAppInvoker 创建应用
+func (c *RomaClient) CreateRomaAppInvoker(request *model.CreateRomaAppRequest) *CreateRomaAppInvoker {
+	requestDef := GenReqDefForCreateRomaApp()
+	return &CreateRomaAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRomaApp 删除应用
 //
 // 删除单个应用
 //
@@ -4226,7 +5774,13 @@ func (c *RomaClient) DeleteRomaApp(request *model.DeleteRomaAppRequest) (*model.
 	}
 }
 
-// 查询应用列表
+// DeleteRomaAppInvoker 删除应用
+func (c *RomaClient) DeleteRomaAppInvoker(request *model.DeleteRomaAppRequest) *DeleteRomaAppInvoker {
+	requestDef := GenReqDefForDeleteRomaApp()
+	return &DeleteRomaAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRomaApp 查询应用列表
 //
 // 查询应用列表，支持条件查询，所有条件是并且的关系
 //
@@ -4242,7 +5796,13 @@ func (c *RomaClient) ListRomaApp(request *model.ListRomaAppRequest) (*model.List
 	}
 }
 
-// 重置应用密钥
+// ListRomaAppInvoker 查询应用列表
+func (c *RomaClient) ListRomaAppInvoker(request *model.ListRomaAppRequest) *ListRomaAppInvoker {
+	requestDef := GenReqDefForListRomaApp()
+	return &ListRomaAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetRomaAppSecret 重置应用密钥
 //
 // 重置应用密钥
 //
@@ -4258,7 +5818,13 @@ func (c *RomaClient) ResetRomaAppSecret(request *model.ResetRomaAppSecretRequest
 	}
 }
 
-// 更新应用
+// ResetRomaAppSecretInvoker 重置应用密钥
+func (c *RomaClient) ResetRomaAppSecretInvoker(request *model.ResetRomaAppSecretRequest) *ResetRomaAppSecretInvoker {
+	requestDef := GenReqDefForResetRomaAppSecret()
+	return &ResetRomaAppSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRomaApp 更新应用
 //
 // 更新应用
 //
@@ -4274,7 +5840,13 @@ func (c *RomaClient) UpdateRomaApp(request *model.UpdateRomaAppRequest) (*model.
 	}
 }
 
-// 校验应用是否存在
+// UpdateRomaAppInvoker 更新应用
+func (c *RomaClient) UpdateRomaAppInvoker(request *model.UpdateRomaAppRequest) *UpdateRomaAppInvoker {
+	requestDef := GenReqDefForUpdateRomaApp()
+	return &UpdateRomaAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ValidateRomaApp 校验应用是否存在
 //
 // 校验指定条件的应用是否存在
 //
@@ -4290,7 +5862,13 @@ func (c *RomaClient) ValidateRomaApp(request *model.ValidateRomaAppRequest) (*mo
 	}
 }
 
-// 查询作业进度
+// ValidateRomaAppInvoker 校验应用是否存在
+func (c *RomaClient) ValidateRomaAppInvoker(request *model.ValidateRomaAppRequest) *ValidateRomaAppInvoker {
+	requestDef := GenReqDefForValidateRomaApp()
+	return &ValidateRomaAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckAssetJobStatus 查询作业进度
 //
 // 查询作业进度
 //
@@ -4306,7 +5884,13 @@ func (c *RomaClient) CheckAssetJobStatus(request *model.CheckAssetJobStatusReque
 	}
 }
 
-// 批量删除资产
+// CheckAssetJobStatusInvoker 查询作业进度
+func (c *RomaClient) CheckAssetJobStatusInvoker(request *model.CheckAssetJobStatusRequest) *CheckAssetJobStatusInvoker {
+	requestDef := GenReqDefForCheckAssetJobStatus()
+	return &CheckAssetJobStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAsset 批量删除资产
 //
 // 批量删除资产
 // - 创建批量删除指定条件的资产的作业任务
@@ -4325,7 +5909,13 @@ func (c *RomaClient) DeleteAsset(request *model.DeleteAssetRequest) (*model.Dele
 	}
 }
 
-// 下载资产包
+// DeleteAssetInvoker 批量删除资产
+func (c *RomaClient) DeleteAssetInvoker(request *model.DeleteAssetRequest) *DeleteAssetInvoker {
+	requestDef := GenReqDefForDeleteAsset()
+	return &DeleteAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadAssetArchive 下载资产包
 //
 // - 导出作业执行成功后，通过该接口获取导出作业产生的资产包，仅能下载一次
 // - 可先压缩后存在数据库，下载后删除
@@ -4342,7 +5932,13 @@ func (c *RomaClient) DownloadAssetArchive(request *model.DownloadAssetArchiveReq
 	}
 }
 
-// 批量导出资产
+// DownloadAssetArchiveInvoker 下载资产包
+func (c *RomaClient) DownloadAssetArchiveInvoker(request *model.DownloadAssetArchiveRequest) *DownloadAssetArchiveInvoker {
+	requestDef := GenReqDefForDownloadAssetArchive()
+	return &DownloadAssetArchiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportAsset 批量导出资产
 //
 // 批量导出资产
 // - 创建批量导出指定条件的资产的作业任务
@@ -4361,7 +5957,13 @@ func (c *RomaClient) ExportAsset(request *model.ExportAssetRequest) (*model.Expo
 	}
 }
 
-// 导入资产
+// ExportAssetInvoker 批量导出资产
+func (c *RomaClient) ExportAssetInvoker(request *model.ExportAssetRequest) *ExportAssetInvoker {
+	requestDef := GenReqDefForExportAsset()
+	return &ExportAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportAsset 导入资产
 //
 // - 创建导入资产作业任务，资产版本和具体哪些资产从资产内容里读取
 // - 最大支持100个应用和任务
@@ -4379,7 +5981,13 @@ func (c *RomaClient) ImportAsset(request *model.ImportAssetRequest) (*model.Impo
 	}
 }
 
-// 查询字典详情
+// ImportAssetInvoker 导入资产
+func (c *RomaClient) ImportAssetInvoker(request *model.ImportAssetRequest) *ImportAssetInvoker {
+	requestDef := GenReqDefForImportAsset()
+	return &ImportAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckDictionary 查询字典详情
 //
 // 查询字典详情,
 //
@@ -4395,7 +6003,13 @@ func (c *RomaClient) CheckDictionary(request *model.CheckDictionaryRequest) (*mo
 	}
 }
 
-// 创建字典
+// CheckDictionaryInvoker 查询字典详情
+func (c *RomaClient) CheckDictionaryInvoker(request *model.CheckDictionaryRequest) *CheckDictionaryInvoker {
+	requestDef := GenReqDefForCheckDictionary()
+	return &CheckDictionaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDictionary 创建字典
 //
 // 创建字典
 //
@@ -4411,7 +6025,13 @@ func (c *RomaClient) CreateDictionary(request *model.CreateDictionaryRequest) (*
 	}
 }
 
-// 删除字典
+// CreateDictionaryInvoker 创建字典
+func (c *RomaClient) CreateDictionaryInvoker(request *model.CreateDictionaryRequest) *CreateDictionaryInvoker {
+	requestDef := GenReqDefForCreateDictionary()
+	return &CreateDictionaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDictionary 删除字典
 //
 // 删除单个字典，会同时删除该字典的所有子字典
 //
@@ -4427,7 +6047,13 @@ func (c *RomaClient) DeleteDictionary(request *model.DeleteDictionaryRequest) (*
 	}
 }
 
-// 查询字典列表
+// DeleteDictionaryInvoker 删除字典
+func (c *RomaClient) DeleteDictionaryInvoker(request *model.DeleteDictionaryRequest) *DeleteDictionaryInvoker {
+	requestDef := GenReqDefForDeleteDictionary()
+	return &DeleteDictionaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDictionary 查询字典列表
 //
 // 查询字典列表
 //
@@ -4443,7 +6069,13 @@ func (c *RomaClient) ListDictionary(request *model.ListDictionaryRequest) (*mode
 	}
 }
 
-// 更新字典
+// ListDictionaryInvoker 查询字典列表
+func (c *RomaClient) ListDictionaryInvoker(request *model.ListDictionaryRequest) *ListDictionaryInvoker {
+	requestDef := GenReqDefForListDictionary()
+	return &ListDictionaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDictionary 更新字典
 //
 // 更新字典
 //
@@ -4459,7 +6091,13 @@ func (c *RomaClient) UpdateDictionary(request *model.UpdateDictionaryRequest) (*
 	}
 }
 
-// 校验字典是否存在
+// UpdateDictionaryInvoker 更新字典
+func (c *RomaClient) UpdateDictionaryInvoker(request *model.UpdateDictionaryRequest) *UpdateDictionaryInvoker {
+	requestDef := GenReqDefForUpdateDictionary()
+	return &UpdateDictionaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ValidateDictionary 校验字典是否存在
 //
 // 校验指定条件的字典是否存在，支持字典名称和字典编码
 //
@@ -4475,7 +6113,13 @@ func (c *RomaClient) ValidateDictionary(request *model.ValidateDictionaryRequest
 	}
 }
 
-// 查询实例列表
+// ValidateDictionaryInvoker 校验字典是否存在
+func (c *RomaClient) ValidateDictionaryInvoker(request *model.ValidateDictionaryRequest) *ValidateDictionaryInvoker {
+	requestDef := GenReqDefForValidateDictionary()
+	return &ValidateDictionaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckRomaInstanceListV2 查询实例列表
 //
 // 获取符合条件的服务实例列表。
 //
@@ -4491,7 +6135,13 @@ func (c *RomaClient) CheckRomaInstanceListV2(request *model.CheckRomaInstanceLis
 	}
 }
 
-// 查询MQS实例列表
+// CheckRomaInstanceListV2Invoker 查询实例列表
+func (c *RomaClient) CheckRomaInstanceListV2Invoker(request *model.CheckRomaInstanceListV2Request) *CheckRomaInstanceListV2Invoker {
+	requestDef := GenReqDefForCheckRomaInstanceListV2()
+	return &CheckRomaInstanceListV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMqsInstance 查询MQS实例列表
 //
 // 查询MQS实例列表。
 //
@@ -4507,7 +6157,13 @@ func (c *RomaClient) ListMqsInstance(request *model.ListMqsInstanceRequest) (*mo
 	}
 }
 
-// 查询MQS实例详情
+// ListMqsInstanceInvoker 查询MQS实例列表
+func (c *RomaClient) ListMqsInstanceInvoker(request *model.ListMqsInstanceRequest) *ListMqsInstanceInvoker {
+	requestDef := GenReqDefForListMqsInstance()
+	return &ListMqsInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMqsInstance 查询MQS实例详情
 //
 // 查询指定MQS实例详情。
 //
@@ -4523,7 +6179,13 @@ func (c *RomaClient) ShowMqsInstance(request *model.ShowMqsInstanceRequest) (*mo
 	}
 }
 
-// 导出API
+// ShowMqsInstanceInvoker 查询MQS实例详情
+func (c *RomaClient) ShowMqsInstanceInvoker(request *model.ShowMqsInstanceRequest) *ShowMqsInstanceInvoker {
+	requestDef := GenReqDefForShowMqsInstance()
+	return &ShowMqsInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportApiDefinitionsV2 导出API
 //
 // 导出分组下API的定义信息，导出文件内容符合swagger标准规范。
 //
@@ -4539,7 +6201,13 @@ func (c *RomaClient) ExportApiDefinitionsV2(request *model.ExportApiDefinitionsV
 	}
 }
 
-// 导出自定义后端API
+// ExportApiDefinitionsV2Invoker 导出API
+func (c *RomaClient) ExportApiDefinitionsV2Invoker(request *model.ExportApiDefinitionsV2Request) *ExportApiDefinitionsV2Invoker {
+	requestDef := GenReqDefForExportApiDefinitionsV2()
+	return &ExportApiDefinitionsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportLiveDataApiDefinitionsV2 导出自定义后端API
 //
 // 导出自定义后端API，导出文件内容符合swagger标准规范。
 //
@@ -4555,7 +6223,13 @@ func (c *RomaClient) ExportLiveDataApiDefinitionsV2(request *model.ExportLiveDat
 	}
 }
 
-// 导入API
+// ExportLiveDataApiDefinitionsV2Invoker 导出自定义后端API
+func (c *RomaClient) ExportLiveDataApiDefinitionsV2Invoker(request *model.ExportLiveDataApiDefinitionsV2Request) *ExportLiveDataApiDefinitionsV2Invoker {
+	requestDef := GenReqDefForExportLiveDataApiDefinitionsV2()
+	return &ExportLiveDataApiDefinitionsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportApiDefinitionsV2 导入API
 //
 // 导入API。导入文件内容需要符合swagger标准规范，自定义扩展字段请参考用户指南的“附录：前端API的Swagger扩展定义”章节。
 //
@@ -4571,7 +6245,13 @@ func (c *RomaClient) ImportApiDefinitionsV2(request *model.ImportApiDefinitionsV
 	}
 }
 
-// 导入自定义后端API
+// ImportApiDefinitionsV2Invoker 导入API
+func (c *RomaClient) ImportApiDefinitionsV2Invoker(request *model.ImportApiDefinitionsV2Request) *ImportApiDefinitionsV2Invoker {
+	requestDef := GenReqDefForImportApiDefinitionsV2()
+	return &ImportApiDefinitionsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportLiveDataApiDefinitionsV2 导入自定义后端API
 //
 // 导入自定义后端API。导入文件内容需要符合swagger标准规范，自定义扩展字段请参考用户指南的“附录：后端API的Swagger扩展定义”章节
 //
@@ -4587,7 +6267,13 @@ func (c *RomaClient) ImportLiveDataApiDefinitionsV2(request *model.ImportLiveDat
 	}
 }
 
-// 添加或更新后端实例
+// ImportLiveDataApiDefinitionsV2Invoker 导入自定义后端API
+func (c *RomaClient) ImportLiveDataApiDefinitionsV2Invoker(request *model.ImportLiveDataApiDefinitionsV2Request) *ImportLiveDataApiDefinitionsV2Invoker {
+	requestDef := GenReqDefForImportLiveDataApiDefinitionsV2()
+	return &ImportLiveDataApiDefinitionsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddingBackendInstancesV2 添加或更新后端实例
 //
 // 为指定的VPC通道添加后端实例
 //
@@ -4605,7 +6291,13 @@ func (c *RomaClient) AddingBackendInstancesV2(request *model.AddingBackendInstan
 	}
 }
 
-// 批量修改后端服务器状态不可用
+// AddingBackendInstancesV2Invoker 添加或更新后端实例
+func (c *RomaClient) AddingBackendInstancesV2Invoker(request *model.AddingBackendInstancesV2Request) *AddingBackendInstancesV2Invoker {
+	requestDef := GenReqDefForAddingBackendInstancesV2()
+	return &AddingBackendInstancesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDisableMembers 批量修改后端服务器状态不可用
 //
 // 批量修改后端服务器状态不可用。
 //
@@ -4621,7 +6313,13 @@ func (c *RomaClient) BatchDisableMembers(request *model.BatchDisableMembersReque
 	}
 }
 
-// 批量修改后端服务器状态可用
+// BatchDisableMembersInvoker 批量修改后端服务器状态不可用
+func (c *RomaClient) BatchDisableMembersInvoker(request *model.BatchDisableMembersRequest) *BatchDisableMembersInvoker {
+	requestDef := GenReqDefForBatchDisableMembers()
+	return &BatchDisableMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchEnableMembers 批量修改后端服务器状态可用
 //
 // 批量修改后端服务器状态可用。
 //
@@ -4637,7 +6335,13 @@ func (c *RomaClient) BatchEnableMembers(request *model.BatchEnableMembersRequest
 	}
 }
 
-// 添加或更新VPC通道后端服务器组
+// BatchEnableMembersInvoker 批量修改后端服务器状态可用
+func (c *RomaClient) BatchEnableMembersInvoker(request *model.BatchEnableMembersRequest) *BatchEnableMembersInvoker {
+	requestDef := GenReqDefForBatchEnableMembers()
+	return &BatchEnableMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMemberGroup 添加或更新VPC通道后端服务器组
 //
 // 在ROMA Connect APIC中创建VPC通道后端服务器组，VPC通道后端实例可以选择是否关联后端实例服务器组，以便管理后端服务器节点。
 //
@@ -4655,7 +6359,13 @@ func (c *RomaClient) CreateMemberGroup(request *model.CreateMemberGroupRequest) 
 	}
 }
 
-// 项目下创建VPC通道
+// CreateMemberGroupInvoker 添加或更新VPC通道后端服务器组
+func (c *RomaClient) CreateMemberGroupInvoker(request *model.CreateMemberGroupRequest) *CreateMemberGroupInvoker {
+	requestDef := GenReqDefForCreateMemberGroup()
+	return &CreateMemberGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProjectVpcChannel 项目下创建VPC通道
 //
 // 创建相同的VPC通道关联到多个实例。同一个项目下VPC通道名称不可重复。注意：实例特性vpc_name_modifiable配置为off时才可使用。
 //
@@ -4671,7 +6381,13 @@ func (c *RomaClient) CreateProjectVpcChannel(request *model.CreateProjectVpcChan
 	}
 }
 
-// 项目下同步VPC通道
+// CreateProjectVpcChannelInvoker 项目下创建VPC通道
+func (c *RomaClient) CreateProjectVpcChannelInvoker(request *model.CreateProjectVpcChannelRequest) *CreateProjectVpcChannelInvoker {
+	requestDef := GenReqDefForCreateProjectVpcChannel()
+	return &CreateProjectVpcChannelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProjectVpcChannelSyncs 项目下同步VPC通道
 //
 // 同步VPC通道到多个实例。注意：实例特性vpc_name_modifiable配置为off时才可使用。
 //
@@ -4687,7 +6403,13 @@ func (c *RomaClient) CreateProjectVpcChannelSyncs(request *model.CreateProjectVp
 	}
 }
 
-// 创建VPC通道
+// CreateProjectVpcChannelSyncsInvoker 项目下同步VPC通道
+func (c *RomaClient) CreateProjectVpcChannelSyncsInvoker(request *model.CreateProjectVpcChannelSyncsRequest) *CreateProjectVpcChannelSyncsInvoker {
+	requestDef := GenReqDefForCreateProjectVpcChannelSyncs()
+	return &CreateProjectVpcChannelSyncsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVpcChannelV2 创建VPC通道
 //
 // 在ROMA Connect APIC中创建连接私有VPC资源的通道，并在创建API时将后端节点配置为使用这些VPC通道，以便ROMA Connect APIC直接访问私有VPC资源。
 // &gt; 每个用户默认最多创建200个VPC通道，如需支持更多请联系技术支持调整配额。
@@ -4704,7 +6426,13 @@ func (c *RomaClient) CreateVpcChannelV2(request *model.CreateVpcChannelV2Request
 	}
 }
 
-// 删除后端实例
+// CreateVpcChannelV2Invoker 创建VPC通道
+func (c *RomaClient) CreateVpcChannelV2Invoker(request *model.CreateVpcChannelV2Request) *CreateVpcChannelV2Invoker {
+	requestDef := GenReqDefForCreateVpcChannelV2()
+	return &CreateVpcChannelV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteBackendInstanceV2 删除后端实例
 //
 // 删除指定VPC通道中的后端实例
 //
@@ -4720,7 +6448,13 @@ func (c *RomaClient) DeleteBackendInstanceV2(request *model.DeleteBackendInstanc
 	}
 }
 
-// 删除VPC通道后端服务器组
+// DeleteBackendInstanceV2Invoker 删除后端实例
+func (c *RomaClient) DeleteBackendInstanceV2Invoker(request *model.DeleteBackendInstanceV2Request) *DeleteBackendInstanceV2Invoker {
+	requestDef := GenReqDefForDeleteBackendInstanceV2()
+	return &DeleteBackendInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteMemberGroup 删除VPC通道后端服务器组
 //
 // 删除指定的VPC通道后端服务器组
 //
@@ -4736,7 +6470,13 @@ func (c *RomaClient) DeleteMemberGroup(request *model.DeleteMemberGroupRequest) 
 	}
 }
 
-// 删除VPC通道
+// DeleteMemberGroupInvoker 删除VPC通道后端服务器组
+func (c *RomaClient) DeleteMemberGroupInvoker(request *model.DeleteMemberGroupRequest) *DeleteMemberGroupInvoker {
+	requestDef := GenReqDefForDeleteMemberGroup()
+	return &DeleteMemberGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVpcChannelV2 删除VPC通道
 //
 // 删除指定的VPC通道
 //
@@ -4752,7 +6492,13 @@ func (c *RomaClient) DeleteVpcChannelV2(request *model.DeleteVpcChannelV2Request
 	}
 }
 
-// 查看后端实例列表
+// DeleteVpcChannelV2Invoker 删除VPC通道
+func (c *RomaClient) DeleteVpcChannelV2Invoker(request *model.DeleteVpcChannelV2Request) *DeleteVpcChannelV2Invoker {
+	requestDef := GenReqDefForDeleteVpcChannelV2()
+	return &DeleteVpcChannelV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBackendInstancesV2 查看后端实例列表
 //
 // 查看指定VPC通道的后端实例列表。
 //
@@ -4768,7 +6514,13 @@ func (c *RomaClient) ListBackendInstancesV2(request *model.ListBackendInstancesV
 	}
 }
 
-// 查询VPC通道后端云服务组列表
+// ListBackendInstancesV2Invoker 查看后端实例列表
+func (c *RomaClient) ListBackendInstancesV2Invoker(request *model.ListBackendInstancesV2Request) *ListBackendInstancesV2Invoker {
+	requestDef := GenReqDefForListBackendInstancesV2()
+	return &ListBackendInstancesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMemberGroups 查询VPC通道后端云服务组列表
 //
 // 查询VPC通道后端云服务组列表
 //
@@ -4784,7 +6536,13 @@ func (c *RomaClient) ListMemberGroups(request *model.ListMemberGroupsRequest) (*
 	}
 }
 
-// 查询项目下所有实例的VPC通道列表
+// ListMemberGroupsInvoker 查询VPC通道后端云服务组列表
+func (c *RomaClient) ListMemberGroupsInvoker(request *model.ListMemberGroupsRequest) *ListMemberGroupsInvoker {
+	requestDef := GenReqDefForListMemberGroups()
+	return &ListMemberGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectVpcChannelsV2 查询项目下所有实例的VPC通道列表
 //
 // 查询项目下所有实例的VPC通道列表
 //
@@ -4800,7 +6558,13 @@ func (c *RomaClient) ListProjectVpcChannelsV2(request *model.ListProjectVpcChann
 	}
 }
 
-// 查询VPC通道列表
+// ListProjectVpcChannelsV2Invoker 查询项目下所有实例的VPC通道列表
+func (c *RomaClient) ListProjectVpcChannelsV2Invoker(request *model.ListProjectVpcChannelsV2Request) *ListProjectVpcChannelsV2Invoker {
+	requestDef := GenReqDefForListProjectVpcChannelsV2()
+	return &ListProjectVpcChannelsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVpcChannelsV2 查询VPC通道列表
 //
 // 查看VPC通道列表
 //
@@ -4816,7 +6580,13 @@ func (c *RomaClient) ListVpcChannelsV2(request *model.ListVpcChannelsV2Request) 
 	}
 }
 
-// 查看VPC通道后端服务器组详情
+// ListVpcChannelsV2Invoker 查询VPC通道列表
+func (c *RomaClient) ListVpcChannelsV2Invoker(request *model.ListVpcChannelsV2Request) *ListVpcChannelsV2Invoker {
+	requestDef := GenReqDefForListVpcChannelsV2()
+	return &ListVpcChannelsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfMemberGroup 查看VPC通道后端服务器组详情
 //
 // 查看指定的VPC通道后端服务器组详情
 //
@@ -4832,7 +6602,13 @@ func (c *RomaClient) ShowDetailsOfMemberGroup(request *model.ShowDetailsOfMember
 	}
 }
 
-// 查看VPC通道详情
+// ShowDetailsOfMemberGroupInvoker 查看VPC通道后端服务器组详情
+func (c *RomaClient) ShowDetailsOfMemberGroupInvoker(request *model.ShowDetailsOfMemberGroupRequest) *ShowDetailsOfMemberGroupInvoker {
+	requestDef := GenReqDefForShowDetailsOfMemberGroup()
+	return &ShowDetailsOfMemberGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfVpcChannelV2 查看VPC通道详情
 //
 // 查看指定的VPC通道详情
 //
@@ -4848,7 +6624,13 @@ func (c *RomaClient) ShowDetailsOfVpcChannelV2(request *model.ShowDetailsOfVpcCh
 	}
 }
 
-// 更新后端实例
+// ShowDetailsOfVpcChannelV2Invoker 查看VPC通道详情
+func (c *RomaClient) ShowDetailsOfVpcChannelV2Invoker(request *model.ShowDetailsOfVpcChannelV2Request) *ShowDetailsOfVpcChannelV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfVpcChannelV2()
+	return &ShowDetailsOfVpcChannelV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateBackendInstancesV2 更新后端实例
 //
 // 更新指定的VPC通道的后端实例。更新时，使用传入的请求参数对对应云服务组的后端实例进行全量覆盖修改。若未指定修改的云服务器组，则进行全量覆盖。
 //
@@ -4864,7 +6646,13 @@ func (c *RomaClient) UpdateBackendInstancesV2(request *model.UpdateBackendInstan
 	}
 }
 
-// 修改VPC通道健康检查
+// UpdateBackendInstancesV2Invoker 更新后端实例
+func (c *RomaClient) UpdateBackendInstancesV2Invoker(request *model.UpdateBackendInstancesV2Request) *UpdateBackendInstancesV2Invoker {
+	requestDef := GenReqDefForUpdateBackendInstancesV2()
+	return &UpdateBackendInstancesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHealthCheck 修改VPC通道健康检查
 //
 // 修改VPC通道健康检查。
 //
@@ -4880,7 +6668,13 @@ func (c *RomaClient) UpdateHealthCheck(request *model.UpdateHealthCheckRequest) 
 	}
 }
 
-// 更新VPC通道后端服务器组
+// UpdateHealthCheckInvoker 修改VPC通道健康检查
+func (c *RomaClient) UpdateHealthCheckInvoker(request *model.UpdateHealthCheckRequest) *UpdateHealthCheckInvoker {
+	requestDef := GenReqDefForUpdateHealthCheck()
+	return &UpdateHealthCheckInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMemberGroup 更新VPC通道后端服务器组
 //
 // 更新指定VPC通道后端服务器组
 //
@@ -4896,7 +6690,13 @@ func (c *RomaClient) UpdateMemberGroup(request *model.UpdateMemberGroupRequest) 
 	}
 }
 
-// 项目下批量修改VPC通道
+// UpdateMemberGroupInvoker 更新VPC通道后端服务器组
+func (c *RomaClient) UpdateMemberGroupInvoker(request *model.UpdateMemberGroupRequest) *UpdateMemberGroupInvoker {
+	requestDef := GenReqDefForUpdateMemberGroup()
+	return &UpdateMemberGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProjectVpcChannel 项目下批量修改VPC通道
 //
 // 项目下根据VPC通道名称批量修改多个多个实例下的VPC通道。若实例下不存在该VPC通道则创建。注意：实例特性vpc_name_modifiable配置为off时才可使用。
 //
@@ -4912,7 +6712,13 @@ func (c *RomaClient) UpdateProjectVpcChannel(request *model.UpdateProjectVpcChan
 	}
 }
 
-// 更新VPC通道
+// UpdateProjectVpcChannelInvoker 项目下批量修改VPC通道
+func (c *RomaClient) UpdateProjectVpcChannelInvoker(request *model.UpdateProjectVpcChannelRequest) *UpdateProjectVpcChannelInvoker {
+	requestDef := GenReqDefForUpdateProjectVpcChannel()
+	return &UpdateProjectVpcChannelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVpcChannelV2 更新VPC通道
 //
 // 更新指定VPC通道的参数
 //
@@ -4930,4 +6736,10 @@ func (c *RomaClient) UpdateVpcChannelV2(request *model.UpdateVpcChannelV2Request
 	} else {
 		return resp.(*model.UpdateVpcChannelV2Response), nil
 	}
+}
+
+// UpdateVpcChannelV2Invoker 更新VPC通道
+func (c *RomaClient) UpdateVpcChannelV2Invoker(request *model.UpdateVpcChannelV2Request) *UpdateVpcChannelV2Invoker {
+	requestDef := GenReqDefForUpdateVpcChannelV2()
+	return &UpdateVpcChannelV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

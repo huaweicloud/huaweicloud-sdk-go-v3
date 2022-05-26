@@ -56,6 +56,10 @@ func GetAppStateStateEnum() AppStateStateEnum {
 	}
 }
 
+func (c AppStateState) Value() string {
+	return c.value
+}
+
 func (c AppStateState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

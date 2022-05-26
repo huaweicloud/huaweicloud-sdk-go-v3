@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/smn/v2/model"
 )
 
@@ -19,7 +19,7 @@ func SmnClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 订阅
+// AddSubscription 订阅
 //
 // 为指定Topic添加一个订阅者，如果订阅者的状态为未确认，则向订阅者发送一个确认的消息。待订阅者进行ConfirmSubscription确认后，该订阅者才能收到Topic发布的消息。单Topic默认可添加10000个订阅者，高并发场景下，可能会出现订阅者数量超过10000仍添加成功的情况，此为正常现象。接口是幂等的，如果添加已存在的订阅者，则返回成功，且status code为200，否则status code为201。
 //
@@ -35,7 +35,13 @@ func (c *SmnClient) AddSubscription(request *model.AddSubscriptionRequest) (*mod
 	}
 }
 
-// 批量添加删除资源标签
+// AddSubscriptionInvoker 订阅
+func (c *SmnClient) AddSubscriptionInvoker(request *model.AddSubscriptionRequest) *AddSubscriptionInvoker {
+	requestDef := GenReqDefForAddSubscription()
+	return &AddSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateOrDeleteResourceTags 批量添加删除资源标签
 //
 // 为指定实例批量添加或删除标签。一个资源上最多有10个标签。
 // 此接口为幂等接口：创建时如果请求体中存在重复key则报错。
@@ -54,7 +60,13 @@ func (c *SmnClient) BatchCreateOrDeleteResourceTags(request *model.BatchCreateOr
 	}
 }
 
-// 取消订阅
+// BatchCreateOrDeleteResourceTagsInvoker 批量添加删除资源标签
+func (c *SmnClient) BatchCreateOrDeleteResourceTagsInvoker(request *model.BatchCreateOrDeleteResourceTagsRequest) *BatchCreateOrDeleteResourceTagsInvoker {
+	requestDef := GenReqDefForBatchCreateOrDeleteResourceTags()
+	return &BatchCreateOrDeleteResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelSubscription 取消订阅
 //
 // 删除指定的订阅者。
 //
@@ -70,7 +82,13 @@ func (c *SmnClient) CancelSubscription(request *model.CancelSubscriptionRequest)
 	}
 }
 
-// 创建消息模板
+// CancelSubscriptionInvoker 取消订阅
+func (c *SmnClient) CancelSubscriptionInvoker(request *model.CancelSubscriptionRequest) *CancelSubscriptionInvoker {
+	requestDef := GenReqDefForCancelSubscription()
+	return &CancelSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMessageTemplate 创建消息模板
 //
 // 创建一个模板，用户可以按照模板去发送消息，这样可以减少请求的数据量。
 // 单用户默认可创建100个消息模板，高并发场景下，可能会出现消息模板数量超过100仍创建成功的情况，此为正常现象。
@@ -87,7 +105,13 @@ func (c *SmnClient) CreateMessageTemplate(request *model.CreateMessageTemplateRe
 	}
 }
 
-// 添加资源标签
+// CreateMessageTemplateInvoker 创建消息模板
+func (c *SmnClient) CreateMessageTemplateInvoker(request *model.CreateMessageTemplateRequest) *CreateMessageTemplateInvoker {
+	requestDef := GenReqDefForCreateMessageTemplate()
+	return &CreateMessageTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateResourceTag 添加资源标签
 //
 // 一个资源上最多有10个标签。此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
 //
@@ -103,7 +127,13 @@ func (c *SmnClient) CreateResourceTag(request *model.CreateResourceTagRequest) (
 	}
 }
 
-// 创建主题
+// CreateResourceTagInvoker 添加资源标签
+func (c *SmnClient) CreateResourceTagInvoker(request *model.CreateResourceTagRequest) *CreateResourceTagInvoker {
+	requestDef := GenReqDefForCreateResourceTag()
+	return &CreateResourceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTopic 创建主题
 //
 // 创建Topic，单用户默认配额为3000。高并发场景下，可能会出现Topic数量超过3000仍创建成功的情况，此为正常现象。
 // 接口是幂等的，接口调用返回成功时，若已存在同名的Topic，返回的status code为200，否则返回的status code为201
@@ -120,7 +150,13 @@ func (c *SmnClient) CreateTopic(request *model.CreateTopicRequest) (*model.Creat
 	}
 }
 
-// 删除消息模板
+// CreateTopicInvoker 创建主题
+func (c *SmnClient) CreateTopicInvoker(request *model.CreateTopicRequest) *CreateTopicInvoker {
+	requestDef := GenReqDefForCreateTopic()
+	return &CreateTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteMessageTemplate 删除消息模板
 //
 // 删除消息模板。删除模板之前的消息请求都可以使用该模板发送，删除之后无法再使用该模板发送消息。
 //
@@ -136,7 +172,13 @@ func (c *SmnClient) DeleteMessageTemplate(request *model.DeleteMessageTemplateRe
 	}
 }
 
-// 删除资源标签
+// DeleteMessageTemplateInvoker 删除消息模板
+func (c *SmnClient) DeleteMessageTemplateInvoker(request *model.DeleteMessageTemplateRequest) *DeleteMessageTemplateInvoker {
+	requestDef := GenReqDefForDeleteMessageTemplate()
+	return &DeleteMessageTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteResourceTag 删除资源标签
 //
 // 幂等接口：删除时，不对标签做校验。删除的key不存在报404，key不能为空或者空字符串。
 //
@@ -152,7 +194,13 @@ func (c *SmnClient) DeleteResourceTag(request *model.DeleteResourceTagRequest) (
 	}
 }
 
-// 删除主题
+// DeleteResourceTagInvoker 删除资源标签
+func (c *SmnClient) DeleteResourceTagInvoker(request *model.DeleteResourceTagRequest) *DeleteResourceTagInvoker {
+	requestDef := GenReqDefForDeleteResourceTag()
+	return &DeleteResourceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTopic 删除主题
 //
 // 删除主题。
 //
@@ -168,7 +216,13 @@ func (c *SmnClient) DeleteTopic(request *model.DeleteTopicRequest) (*model.Delet
 	}
 }
 
-// 删除指定名称的主题策略
+// DeleteTopicInvoker 删除主题
+func (c *SmnClient) DeleteTopicInvoker(request *model.DeleteTopicRequest) *DeleteTopicInvoker {
+	requestDef := GenReqDefForDeleteTopic()
+	return &DeleteTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTopicAttributeByName 删除指定名称的主题策略
 //
 // 删除指定名称的主题策略。
 //
@@ -184,7 +238,13 @@ func (c *SmnClient) DeleteTopicAttributeByName(request *model.DeleteTopicAttribu
 	}
 }
 
-// 删除所有主题策略
+// DeleteTopicAttributeByNameInvoker 删除指定名称的主题策略
+func (c *SmnClient) DeleteTopicAttributeByNameInvoker(request *model.DeleteTopicAttributeByNameRequest) *DeleteTopicAttributeByNameInvoker {
+	requestDef := GenReqDefForDeleteTopicAttributeByName()
+	return &DeleteTopicAttributeByNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTopicAttributes 删除所有主题策略
 //
 // 删除所有主题策略。
 //
@@ -200,7 +260,13 @@ func (c *SmnClient) DeleteTopicAttributes(request *model.DeleteTopicAttributesRe
 	}
 }
 
-// 查询消息模板详情
+// DeleteTopicAttributesInvoker 删除所有主题策略
+func (c *SmnClient) DeleteTopicAttributesInvoker(request *model.DeleteTopicAttributesRequest) *DeleteTopicAttributesInvoker {
+	requestDef := GenReqDefForDeleteTopicAttributes()
+	return &DeleteTopicAttributesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMessageTemplateDetails 查询消息模板详情
 //
 // 查询模板详情，包括模板内容。
 //
@@ -216,7 +282,13 @@ func (c *SmnClient) ListMessageTemplateDetails(request *model.ListMessageTemplat
 	}
 }
 
-// 查询消息模板列表
+// ListMessageTemplateDetailsInvoker 查询消息模板详情
+func (c *SmnClient) ListMessageTemplateDetailsInvoker(request *model.ListMessageTemplateDetailsRequest) *ListMessageTemplateDetailsInvoker {
+	requestDef := GenReqDefForListMessageTemplateDetails()
+	return &ListMessageTemplateDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMessageTemplates 查询消息模板列表
 //
 // 分页查询模板列表，模板列表按照创建时间进行升序排列。分页查询可以指定offset以及limit。如果不存在模板，则返回空列表。额外的查询参数分别有message_template_name和protocol。
 //
@@ -232,7 +304,13 @@ func (c *SmnClient) ListMessageTemplates(request *model.ListMessageTemplatesRequ
 	}
 }
 
-// 查询项目标签
+// ListMessageTemplatesInvoker 查询消息模板列表
+func (c *SmnClient) ListMessageTemplatesInvoker(request *model.ListMessageTemplatesRequest) *ListMessageTemplatesInvoker {
+	requestDef := GenReqDefForListMessageTemplates()
+	return &ListMessageTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectTags 查询项目标签
 //
 // 查询租户在指定Region和实例类型的所有标签集合。
 //
@@ -248,7 +326,13 @@ func (c *SmnClient) ListProjectTags(request *model.ListProjectTagsRequest) (*mod
 	}
 }
 
-// 查询资源实例
+// ListProjectTagsInvoker 查询项目标签
+func (c *SmnClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest) *ListProjectTagsInvoker {
+	requestDef := GenReqDefForListProjectTags()
+	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourceInstances 查询资源实例
 //
 // 使用标签过滤实例。
 //
@@ -264,7 +348,13 @@ func (c *SmnClient) ListResourceInstances(request *model.ListResourceInstancesRe
 	}
 }
 
-// 查询资源标签
+// ListResourceInstancesInvoker 查询资源实例
+func (c *SmnClient) ListResourceInstancesInvoker(request *model.ListResourceInstancesRequest) *ListResourceInstancesInvoker {
+	requestDef := GenReqDefForListResourceInstances()
+	return &ListResourceInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourceTags 查询资源标签
 //
 // 查询指定实例的标签信息。
 //
@@ -280,7 +370,13 @@ func (c *SmnClient) ListResourceTags(request *model.ListResourceTagsRequest) (*m
 	}
 }
 
-// 查询订阅者列表
+// ListResourceTagsInvoker 查询资源标签
+func (c *SmnClient) ListResourceTagsInvoker(request *model.ListResourceTagsRequest) *ListResourceTagsInvoker {
+	requestDef := GenReqDefForListResourceTags()
+	return &ListResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubscriptions 查询订阅者列表
 //
 // 分页返回请求者的所有的订阅列表，订阅列表按照订阅创建时间进行升序排列。分页查询可以指定offset以及limit。如果订阅者不存在，返回空列表。
 //
@@ -296,7 +392,13 @@ func (c *SmnClient) ListSubscriptions(request *model.ListSubscriptionsRequest) (
 	}
 }
 
-// 查询指定Topic的订阅者列表
+// ListSubscriptionsInvoker 查询订阅者列表
+func (c *SmnClient) ListSubscriptionsInvoker(request *model.ListSubscriptionsRequest) *ListSubscriptionsInvoker {
+	requestDef := GenReqDefForListSubscriptions()
+	return &ListSubscriptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubscriptionsByTopic 查询指定Topic的订阅者列表
 //
 // 分页获取特定Topic的订阅列表，订阅列表按照订阅创建时间进行升序排列。分页查询可以指定offset以及limit。如果指定Topic不存在订阅者，返回空列表。
 //
@@ -312,7 +414,13 @@ func (c *SmnClient) ListSubscriptionsByTopic(request *model.ListSubscriptionsByT
 	}
 }
 
-// 查询主题策略
+// ListSubscriptionsByTopicInvoker 查询指定Topic的订阅者列表
+func (c *SmnClient) ListSubscriptionsByTopicInvoker(request *model.ListSubscriptionsByTopicRequest) *ListSubscriptionsByTopicInvoker {
+	requestDef := GenReqDefForListSubscriptionsByTopic()
+	return &ListSubscriptionsByTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTopicAttributes 查询主题策略
 //
 // 查询主题的策略信息。
 //
@@ -328,7 +436,13 @@ func (c *SmnClient) ListTopicAttributes(request *model.ListTopicAttributesReques
 	}
 }
 
-// 查询主题详情
+// ListTopicAttributesInvoker 查询主题策略
+func (c *SmnClient) ListTopicAttributesInvoker(request *model.ListTopicAttributesRequest) *ListTopicAttributesInvoker {
+	requestDef := GenReqDefForListTopicAttributes()
+	return &ListTopicAttributesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTopicDetails 查询主题详情
 //
 // 查询Topic的详细信息。
 //
@@ -344,7 +458,13 @@ func (c *SmnClient) ListTopicDetails(request *model.ListTopicDetailsRequest) (*m
 	}
 }
 
-// 查询主题列表
+// ListTopicDetailsInvoker 查询主题详情
+func (c *SmnClient) ListTopicDetailsInvoker(request *model.ListTopicDetailsRequest) *ListTopicDetailsInvoker {
+	requestDef := GenReqDefForListTopicDetails()
+	return &ListTopicDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTopics 查询主题列表
 //
 // 分页查询Topic列表，Topic列表按照Topic创建时间进行降序排列。分页查询可以指定offset以及limit。如果不存在Topic，则返回空列表。
 //
@@ -360,7 +480,13 @@ func (c *SmnClient) ListTopics(request *model.ListTopicsRequest) (*model.ListTop
 	}
 }
 
-// 查询SMN API V2版本信息
+// ListTopicsInvoker 查询主题列表
+func (c *SmnClient) ListTopicsInvoker(request *model.ListTopicsRequest) *ListTopicsInvoker {
+	requestDef := GenReqDefForListTopics()
+	return &ListTopicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVersion 查询SMN API V2版本信息
 //
 // 查询SMN API V2版本信息。
 //
@@ -376,7 +502,13 @@ func (c *SmnClient) ListVersion(request *model.ListVersionRequest) (*model.ListV
 	}
 }
 
-// 查询SMN支持的API版本号信息
+// ListVersionInvoker 查询SMN API V2版本信息
+func (c *SmnClient) ListVersionInvoker(request *model.ListVersionRequest) *ListVersionInvoker {
+	requestDef := GenReqDefForListVersion()
+	return &ListVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVersions 查询SMN支持的API版本号信息
 //
 // 查询SMN开放API支持的版本号。
 //
@@ -392,7 +524,13 @@ func (c *SmnClient) ListVersions(request *model.ListVersionsRequest) (*model.Lis
 	}
 }
 
-// 消息发布
+// ListVersionsInvoker 查询SMN支持的API版本号信息
+func (c *SmnClient) ListVersionsInvoker(request *model.ListVersionsRequest) *ListVersionsInvoker {
+	requestDef := GenReqDefForListVersions()
+	return &ListVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PublishMessage 消息发布
 //
 // 将消息发送给Topic的所有订阅端点。当返回消息ID时，该消息已被保存并开始尝试将其推送给Topic的订阅者。三种消息发送方式
 //
@@ -417,7 +555,13 @@ func (c *SmnClient) PublishMessage(request *model.PublishMessageRequest) (*model
 	}
 }
 
-// 更新消息模板
+// PublishMessageInvoker 消息发布
+func (c *SmnClient) PublishMessageInvoker(request *model.PublishMessageRequest) *PublishMessageInvoker {
+	requestDef := GenReqDefForPublishMessage()
+	return &PublishMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMessageTemplate 更新消息模板
 //
 // 修改消息模板的内容。
 //
@@ -433,7 +577,13 @@ func (c *SmnClient) UpdateMessageTemplate(request *model.UpdateMessageTemplateRe
 	}
 }
 
-// 更新主题
+// UpdateMessageTemplateInvoker 更新消息模板
+func (c *SmnClient) UpdateMessageTemplateInvoker(request *model.UpdateMessageTemplateRequest) *UpdateMessageTemplateInvoker {
+	requestDef := GenReqDefForUpdateMessageTemplate()
+	return &UpdateMessageTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTopic 更新主题
 //
 // 更新显示名。
 //
@@ -449,7 +599,13 @@ func (c *SmnClient) UpdateTopic(request *model.UpdateTopicRequest) (*model.Updat
 	}
 }
 
-// 更新主题策略
+// UpdateTopicInvoker 更新主题
+func (c *SmnClient) UpdateTopicInvoker(request *model.UpdateTopicRequest) *UpdateTopicInvoker {
+	requestDef := GenReqDefForUpdateTopic()
+	return &UpdateTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTopicAttribute 更新主题策略
 //
 // 更新主题的策略信息。
 //
@@ -465,7 +621,13 @@ func (c *SmnClient) UpdateTopicAttribute(request *model.UpdateTopicAttributeRequ
 	}
 }
 
-// 创建Application
+// UpdateTopicAttributeInvoker 更新主题策略
+func (c *SmnClient) UpdateTopicAttributeInvoker(request *model.UpdateTopicAttributeRequest) *UpdateTopicAttributeInvoker {
+	requestDef := GenReqDefForUpdateTopicAttribute()
+	return &UpdateTopicAttributeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateApplication 创建Application
 //
 // 创建平台应用。
 //
@@ -481,7 +643,13 @@ func (c *SmnClient) CreateApplication(request *model.CreateApplicationRequest) (
 	}
 }
 
-// 删除Application
+// CreateApplicationInvoker 创建Application
+func (c *SmnClient) CreateApplicationInvoker(request *model.CreateApplicationRequest) *CreateApplicationInvoker {
+	requestDef := GenReqDefForCreateApplication()
+	return &CreateApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApplication 删除Application
 //
 // 删除平台应用。
 //
@@ -497,7 +665,13 @@ func (c *SmnClient) DeleteApplication(request *model.DeleteApplicationRequest) (
 	}
 }
 
-// 查询Application属性
+// DeleteApplicationInvoker 删除Application
+func (c *SmnClient) DeleteApplicationInvoker(request *model.DeleteApplicationRequest) *DeleteApplicationInvoker {
+	requestDef := GenReqDefForDeleteApplication()
+	return &DeleteApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApplicationAttributes 查询Application属性
 //
 // 获取应用平台属性。
 //
@@ -513,7 +687,13 @@ func (c *SmnClient) ListApplicationAttributes(request *model.ListApplicationAttr
 	}
 }
 
-// 查询Application
+// ListApplicationAttributesInvoker 查询Application属性
+func (c *SmnClient) ListApplicationAttributesInvoker(request *model.ListApplicationAttributesRequest) *ListApplicationAttributesInvoker {
+	requestDef := GenReqDefForListApplicationAttributes()
+	return &ListApplicationAttributesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApplications 查询Application
 //
 // 查询应用平台列表。
 //
@@ -529,7 +709,13 @@ func (c *SmnClient) ListApplications(request *model.ListApplicationsRequest) (*m
 	}
 }
 
-// App消息发布
+// ListApplicationsInvoker 查询Application
+func (c *SmnClient) ListApplicationsInvoker(request *model.ListApplicationsRequest) *ListApplicationsInvoker {
+	requestDef := GenReqDefForListApplications()
+	return &ListApplicationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PublishAppMessage App消息发布
 //
 // 将消息直发给endpoint设备。
 //
@@ -545,7 +731,13 @@ func (c *SmnClient) PublishAppMessage(request *model.PublishAppMessageRequest) (
 	}
 }
 
-// 更新Application
+// PublishAppMessageInvoker App消息发布
+func (c *SmnClient) PublishAppMessageInvoker(request *model.PublishAppMessageRequest) *PublishAppMessageInvoker {
+	requestDef := GenReqDefForPublishAppMessage()
+	return &PublishAppMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateApplication 更新Application
 //
 // 更新应用平台。
 //
@@ -561,7 +753,13 @@ func (c *SmnClient) UpdateApplication(request *model.UpdateApplicationRequest) (
 	}
 }
 
-// 创建Application endpoint
+// UpdateApplicationInvoker 更新Application
+func (c *SmnClient) UpdateApplicationInvoker(request *model.UpdateApplicationRequest) *UpdateApplicationInvoker {
+	requestDef := GenReqDefForUpdateApplication()
+	return &UpdateApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateApplicationEndpoint 创建Application endpoint
 //
 // 创建应用平台的endpoint终端。
 //
@@ -577,7 +775,13 @@ func (c *SmnClient) CreateApplicationEndpoint(request *model.CreateApplicationEn
 	}
 }
 
-// 删除Application endpoint
+// CreateApplicationEndpointInvoker 创建Application endpoint
+func (c *SmnClient) CreateApplicationEndpointInvoker(request *model.CreateApplicationEndpointRequest) *CreateApplicationEndpointInvoker {
+	requestDef := GenReqDefForCreateApplicationEndpoint()
+	return &CreateApplicationEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApplicationEndpoint 删除Application endpoint
 //
 // 删除设备。
 //
@@ -593,7 +797,13 @@ func (c *SmnClient) DeleteApplicationEndpoint(request *model.DeleteApplicationEn
 	}
 }
 
-// 查询Application的Endpoint属性
+// DeleteApplicationEndpointInvoker 删除Application endpoint
+func (c *SmnClient) DeleteApplicationEndpointInvoker(request *model.DeleteApplicationEndpointRequest) *DeleteApplicationEndpointInvoker {
+	requestDef := GenReqDefForDeleteApplicationEndpoint()
+	return &DeleteApplicationEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApplicationEndpointAttributes 查询Application的Endpoint属性
 //
 // 获取endpoint的属性。
 //
@@ -609,7 +819,13 @@ func (c *SmnClient) ListApplicationEndpointAttributes(request *model.ListApplica
 	}
 }
 
-// 查询Application的Endpoint列表
+// ListApplicationEndpointAttributesInvoker 查询Application的Endpoint属性
+func (c *SmnClient) ListApplicationEndpointAttributesInvoker(request *model.ListApplicationEndpointAttributesRequest) *ListApplicationEndpointAttributesInvoker {
+	requestDef := GenReqDefForListApplicationEndpointAttributes()
+	return &ListApplicationEndpointAttributesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApplicationEndpoints 查询Application的Endpoint列表
 //
 // 查询平台的endpoint列表。
 //
@@ -625,7 +841,13 @@ func (c *SmnClient) ListApplicationEndpoints(request *model.ListApplicationEndpo
 	}
 }
 
-// 更新Application endpoint
+// ListApplicationEndpointsInvoker 查询Application的Endpoint列表
+func (c *SmnClient) ListApplicationEndpointsInvoker(request *model.ListApplicationEndpointsRequest) *ListApplicationEndpointsInvoker {
+	requestDef := GenReqDefForListApplicationEndpoints()
+	return &ListApplicationEndpointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateApplicationEndpoint 更新Application endpoint
 //
 // 更新设备属性。
 //
@@ -639,4 +861,10 @@ func (c *SmnClient) UpdateApplicationEndpoint(request *model.UpdateApplicationEn
 	} else {
 		return resp.(*model.UpdateApplicationEndpointResponse), nil
 	}
+}
+
+// UpdateApplicationEndpointInvoker 更新Application endpoint
+func (c *SmnClient) UpdateApplicationEndpointInvoker(request *model.UpdateApplicationEndpointRequest) *UpdateApplicationEndpointInvoker {
+	requestDef := GenReqDefForUpdateApplicationEndpoint()
+	return &UpdateApplicationEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

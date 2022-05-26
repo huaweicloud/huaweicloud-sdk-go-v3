@@ -165,6 +165,10 @@ func GetShowServerResponseStateEnum() ShowServerResponseStateEnum {
 	}
 }
 
+func (c ShowServerResponseState) Value() string {
+	return c.value
+}
+
 func (c ShowServerResponseState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -201,6 +205,10 @@ func GetShowServerResponseFirmwareEnum() ShowServerResponseFirmwareEnum {
 			value: "UEFI",
 		},
 	}
+}
+
+func (c ShowServerResponseFirmware) Value() string {
+	return c.value
 }
 
 func (c ShowServerResponseFirmware) MarshalJSON() ([]byte, error) {
@@ -255,6 +263,10 @@ func GetShowServerResponseMigrationCycleEnum() ShowServerResponseMigrationCycleE
 			value: "syncing",
 		},
 	}
+}
+
+func (c ShowServerResponseMigrationCycle) Value() string {
+	return c.value
 }
 
 func (c ShowServerResponseMigrationCycle) MarshalJSON() ([]byte, error) {

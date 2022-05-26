@@ -81,6 +81,10 @@ func GetDeleteClusterRequestDeleteEfsEnum() DeleteClusterRequestDeleteEfsEnum {
 	}
 }
 
+func (c DeleteClusterRequestDeleteEfs) Value() string {
+	return c.value
+}
+
 func (c DeleteClusterRequestDeleteEfs) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -129,6 +133,10 @@ func GetDeleteClusterRequestDeleteEniEnum() DeleteClusterRequestDeleteEniEnum {
 			value: "skip",
 		},
 	}
+}
+
+func (c DeleteClusterRequestDeleteEni) Value() string {
+	return c.value
 }
 
 func (c DeleteClusterRequestDeleteEni) MarshalJSON() ([]byte, error) {
@@ -181,6 +189,10 @@ func GetDeleteClusterRequestDeleteEvsEnum() DeleteClusterRequestDeleteEvsEnum {
 	}
 }
 
+func (c DeleteClusterRequestDeleteEvs) Value() string {
+	return c.value
+}
+
 func (c DeleteClusterRequestDeleteEvs) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -229,6 +241,10 @@ func GetDeleteClusterRequestDeleteNetEnum() DeleteClusterRequestDeleteNetEnum {
 			value: "skip",
 		},
 	}
+}
+
+func (c DeleteClusterRequestDeleteNet) Value() string {
+	return c.value
 }
 
 func (c DeleteClusterRequestDeleteNet) MarshalJSON() ([]byte, error) {
@@ -281,6 +297,10 @@ func GetDeleteClusterRequestDeleteObsEnum() DeleteClusterRequestDeleteObsEnum {
 	}
 }
 
+func (c DeleteClusterRequestDeleteObs) Value() string {
+	return c.value
+}
+
 func (c DeleteClusterRequestDeleteObs) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -331,6 +351,10 @@ func GetDeleteClusterRequestDeleteSfsEnum() DeleteClusterRequestDeleteSfsEnum {
 	}
 }
 
+func (c DeleteClusterRequestDeleteSfs) Value() string {
+	return c.value
+}
+
 func (c DeleteClusterRequestDeleteSfs) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -363,6 +387,10 @@ func GetDeleteClusterRequestTobedeletedEnum() DeleteClusterRequestTobedeletedEnu
 			value: "true",
 		},
 	}
+}
+
+func (c DeleteClusterRequestTobedeleted) Value() string {
+	return c.value
 }
 
 func (c DeleteClusterRequestTobedeleted) MarshalJSON() ([]byte, error) {

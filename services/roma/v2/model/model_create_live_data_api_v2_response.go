@@ -104,6 +104,10 @@ func GetCreateLiveDataApiV2ResponseMethodEnum() CreateLiveDataApiV2ResponseMetho
 	}
 }
 
+func (c CreateLiveDataApiV2ResponseMethod) Value() string {
+	return c.value
+}
+
 func (c CreateLiveDataApiV2ResponseMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -146,6 +150,10 @@ func GetCreateLiveDataApiV2ResponseContentTypeEnum() CreateLiveDataApiV2Response
 	}
 }
 
+func (c CreateLiveDataApiV2ResponseContentType) Value() string {
+	return c.value
+}
+
 func (c CreateLiveDataApiV2ResponseContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -182,6 +190,10 @@ func GetCreateLiveDataApiV2ResponseTypeEnum() CreateLiveDataApiV2ResponseTypeEnu
 			value: "function",
 		},
 	}
+}
+
+func (c CreateLiveDataApiV2ResponseType) Value() string {
+	return c.value
 }
 
 func (c CreateLiveDataApiV2ResponseType) MarshalJSON() ([]byte, error) {
@@ -222,6 +234,10 @@ func GetCreateLiveDataApiV2ResponseStatusEnum() CreateLiveDataApiV2ResponseStatu
 			value: 4,
 		},
 	}
+}
+
+func (c CreateLiveDataApiV2ResponseStatus) Value() int32 {
+	return c.value
 }
 
 func (c CreateLiveDataApiV2ResponseStatus) MarshalJSON() ([]byte, error) {

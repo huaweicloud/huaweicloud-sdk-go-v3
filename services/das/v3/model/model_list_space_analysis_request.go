@@ -66,6 +66,10 @@ func GetListSpaceAnalysisRequestObjectTypeEnum() ListSpaceAnalysisRequestObjectT
 	}
 }
 
+func (c ListSpaceAnalysisRequestObjectType) Value() string {
+	return c.value
+}
+
 func (c ListSpaceAnalysisRequestObjectType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -102,6 +106,10 @@ func GetListSpaceAnalysisRequestDatastoreTypeEnum() ListSpaceAnalysisRequestData
 			value: "GaussDB(for MySQL)",
 		},
 	}
+}
+
+func (c ListSpaceAnalysisRequestDatastoreType) Value() string {
+	return c.value
 }
 
 func (c ListSpaceAnalysisRequestDatastoreType) MarshalJSON() ([]byte, error) {

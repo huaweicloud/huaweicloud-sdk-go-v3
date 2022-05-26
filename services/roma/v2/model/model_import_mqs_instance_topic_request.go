@@ -53,6 +53,10 @@ func GetImportMqsInstanceTopicRequestModeEnum() ImportMqsInstanceTopicRequestMod
 	}
 }
 
+func (c ImportMqsInstanceTopicRequestMode) Value() string {
+	return c.value
+}
+
 func (c ImportMqsInstanceTopicRequestMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

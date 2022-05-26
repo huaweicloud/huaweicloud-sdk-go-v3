@@ -79,6 +79,10 @@ func GetQuickImportImageByFileRequestBodyTypeEnum() QuickImportImageByFileReques
 	}
 }
 
+func (c QuickImportImageByFileRequestBodyType) Value() string {
+	return c.value
+}
+
 func (c QuickImportImageByFileRequestBodyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -117,6 +121,10 @@ func GetQuickImportImageByFileRequestBodyArchitectureEnum() QuickImportImageByFi
 	}
 }
 
+func (c QuickImportImageByFileRequestBodyArchitecture) Value() string {
+	return c.value
+}
+
 func (c QuickImportImageByFileRequestBodyArchitecture) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -153,6 +161,10 @@ func GetQuickImportImageByFileRequestBodyOsTypeEnum() QuickImportImageByFileRequ
 			value: "Windows",
 		},
 	}
+}
+
+func (c QuickImportImageByFileRequestBodyOsType) Value() string {
+	return c.value
 }
 
 func (c QuickImportImageByFileRequestBodyOsType) MarshalJSON() ([]byte, error) {

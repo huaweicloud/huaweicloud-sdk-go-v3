@@ -110,6 +110,10 @@ func GetRomaInstanceCheckListRespInstancesCpuArchEnum() RomaInstanceCheckListRes
 	}
 }
 
+func (c RomaInstanceCheckListRespInstancesCpuArch) Value() string {
+	return c.value
+}
+
 func (c RomaInstanceCheckListRespInstancesCpuArch) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -172,6 +176,10 @@ func GetRomaInstanceCheckListRespInstancesStatusEnum() RomaInstanceCheckListResp
 	}
 }
 
+func (c RomaInstanceCheckListRespInstancesStatus) Value() string {
+	return c.value
+}
+
 func (c RomaInstanceCheckListRespInstancesStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -208,6 +216,10 @@ func GetRomaInstanceCheckListRespInstancesChargeTypeEnum() RomaInstanceCheckList
 			value: "postPaid",
 		},
 	}
+}
+
+func (c RomaInstanceCheckListRespInstancesChargeType) Value() string {
+	return c.value
 }
 
 func (c RomaInstanceCheckListRespInstancesChargeType) MarshalJSON() ([]byte, error) {

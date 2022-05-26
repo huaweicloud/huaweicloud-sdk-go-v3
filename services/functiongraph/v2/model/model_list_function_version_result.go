@@ -203,6 +203,10 @@ func GetListFunctionVersionResultRuntimeEnum() ListFunctionVersionResultRuntimeE
 	}
 }
 
+func (c ListFunctionVersionResultRuntime) Value() string {
+	return c.value
+}
+
 func (c ListFunctionVersionResultRuntime) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -247,6 +251,10 @@ func GetListFunctionVersionResultCodeTypeEnum() ListFunctionVersionResultCodeTyp
 			value: "jar",
 		},
 	}
+}
+
+func (c ListFunctionVersionResultCodeType) Value() string {
+	return c.value
 }
 
 func (c ListFunctionVersionResultCodeType) MarshalJSON() ([]byte, error) {

@@ -69,6 +69,10 @@ func GetBatchCreateProtectedInstancesRequestParamsTenancyEnum() BatchCreateProte
 	}
 }
 
+func (c BatchCreateProtectedInstancesRequestParamsTenancy) Value() string {
+	return c.value
+}
+
 func (c BatchCreateProtectedInstancesRequestParamsTenancy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

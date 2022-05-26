@@ -34,6 +34,10 @@ func GetChargeModeEnum() ChargeModeEnum {
 	}
 }
 
+func (c ChargeMode) Value() string {
+	return c.value
+}
+
 func (c ChargeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -44,6 +44,10 @@ func GetDeleteTagsOptionActionEnum() DeleteTagsOptionActionEnum {
 	}
 }
 
+func (c DeleteTagsOptionAction) Value() string {
+	return c.value
+}
+
 func (c DeleteTagsOptionAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

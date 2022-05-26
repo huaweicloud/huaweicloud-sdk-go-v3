@@ -2,7 +2,7 @@ package v3
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/gsl/v3/model"
 )
 
@@ -19,7 +19,7 @@ func GslClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 查询套餐列表信息
+// ListProPricePlans 查询套餐列表信息
 //
 // 查询套餐列表信息
 //
@@ -35,7 +35,13 @@ func (c *GslClient) ListProPricePlans(request *model.ListProPricePlansRequest) (
 	}
 }
 
-// 清除实名认证信息
+// ListProPricePlansInvoker 查询套餐列表信息
+func (c *GslClient) ListProPricePlansInvoker(request *model.ListProPricePlansRequest) *ListProPricePlansInvoker {
+	requestDef := GenReqDefForListProPricePlans()
+	return &ListProPricePlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRealName 清除实名认证信息
 //
 // 清除实名认证信息，接口只支持电信卡调用
 //
@@ -51,7 +57,13 @@ func (c *GslClient) DeleteRealName(request *model.DeleteRealNameRequest) (*model
 	}
 }
 
-// 激活实体卡
+// DeleteRealNameInvoker 清除实名认证信息
+func (c *GslClient) DeleteRealNameInvoker(request *model.DeleteRealNameRequest) *DeleteRealNameInvoker {
+	requestDef := GenReqDefForDeleteRealName()
+	return &DeleteRealNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableSimCard 激活实体卡
 //
 // 创建激活实体卡申请，返回业务受理单号。1~2个工作日完成激活操作。
 //
@@ -67,7 +79,13 @@ func (c *GslClient) EnableSimCard(request *model.EnableSimCardRequest) (*model.E
 	}
 }
 
-// 查询SIM卡列表
+// EnableSimCardInvoker 激活实体卡
+func (c *GslClient) EnableSimCardInvoker(request *model.EnableSimCardRequest) *EnableSimCardInvoker {
+	requestDef := GenReqDefForEnableSimCard()
+	return &EnableSimCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSimCards 查询SIM卡列表
 //
 // 查询SIM卡列表
 //
@@ -83,7 +101,13 @@ func (c *GslClient) ListSimCards(request *model.ListSimCardsRequest) (*model.Lis
 	}
 }
 
-// SIM卡机卡重绑
+// ListSimCardsInvoker 查询SIM卡列表
+func (c *GslClient) ListSimCardsInvoker(request *model.ListSimCardsRequest) *ListSimCardsInvoker {
+	requestDef := GenReqDefForListSimCards()
+	return &ListSimCardsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RegisterImei SIM卡机卡重绑
 //
 // 支持固定机卡重绑(需要上传IMEI，将SIM卡绑定到指定IMEI的设备)和普通机卡重绑(会清除之前绑定的设备,将SIM卡绑定到正在使用的设备)，单卡每月只允许重绑2次，接口只支持电信卡调用。
 //
@@ -99,7 +123,13 @@ func (c *GslClient) RegisterImei(request *model.RegisterImeiRequest) (*model.Reg
 	}
 }
 
-// SIM卡单卡复机
+// RegisterImeiInvoker SIM卡机卡重绑
+func (c *GslClient) RegisterImeiInvoker(request *model.RegisterImeiRequest) *RegisterImeiInvoker {
+	requestDef := GenReqDefForRegisterImei()
+	return &RegisterImeiInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetSimCard SIM卡单卡复机
 //
 // 创建复机申请，返回业务受理单号。1~2个工作日完成复机操作。
 //
@@ -115,7 +145,13 @@ func (c *GslClient) ResetSimCard(request *model.ResetSimCardRequest) (*model.Res
 	}
 }
 
-// SIM卡达量断网/恢复在用
+// ResetSimCardInvoker SIM卡单卡复机
+func (c *GslClient) ResetSimCardInvoker(request *model.ResetSimCardRequest) *ResetSimCardInvoker {
+	requestDef := GenReqDefForResetSimCard()
+	return &ResetSimCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetExceedCutNet SIM卡达量断网/恢复在用
 //
 // SIM卡达量断网/恢复在用,只支持电信卡。
 //
@@ -131,7 +167,13 @@ func (c *GslClient) SetExceedCutNet(request *model.SetExceedCutNetRequest) (*mod
 	}
 }
 
-// 实体卡限速
+// SetExceedCutNetInvoker SIM卡达量断网/恢复在用
+func (c *GslClient) SetExceedCutNetInvoker(request *model.SetExceedCutNetRequest) *SetExceedCutNetInvoker {
+	requestDef := GenReqDefForSetExceedCutNet()
+	return &SetExceedCutNetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetSpeedValue 实体卡限速
 //
 // 实体卡限速接口,支持电信和联通实体卡调用。
 //
@@ -147,7 +189,13 @@ func (c *GslClient) SetSpeedValue(request *model.SetSpeedValueRequest) (*model.S
 	}
 }
 
-// 查询SIM卡实名认证信息
+// SetSpeedValueInvoker 实体卡限速
+func (c *GslClient) SetSpeedValueInvoker(request *model.SetSpeedValueRequest) *SetSpeedValueInvoker {
+	requestDef := GenReqDefForSetSpeedValue()
+	return &SetSpeedValueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRealNamed 查询SIM卡实名认证信息
 //
 // 实时查询SIM卡实名认证信息。
 //
@@ -163,7 +211,13 @@ func (c *GslClient) ShowRealNamed(request *model.ShowRealNamedRequest) (*model.S
 	}
 }
 
-// 查询SIM卡详情
+// ShowRealNamedInvoker 查询SIM卡实名认证信息
+func (c *GslClient) ShowRealNamedInvoker(request *model.ShowRealNamedRequest) *ShowRealNamedInvoker {
+	requestDef := GenReqDefForShowRealNamed()
+	return &ShowRealNamedInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSimCard 查询SIM卡详情
 //
 // 查询SIM卡详情
 //
@@ -179,7 +233,13 @@ func (c *GslClient) ShowSimCard(request *model.ShowSimCardRequest) (*model.ShowS
 	}
 }
 
-// SIM卡申请断网/恢复在用
+// ShowSimCardInvoker 查询SIM卡详情
+func (c *GslClient) ShowSimCardInvoker(request *model.ShowSimCardRequest) *ShowSimCardInvoker {
+	requestDef := GenReqDefForShowSimCard()
+	return &ShowSimCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartStopNet SIM卡申请断网/恢复在用
 //
 // SIM卡申请断网/恢复在用,只支持电信卡。
 //
@@ -195,7 +255,13 @@ func (c *GslClient) StartStopNet(request *model.StartStopNetRequest) (*model.Sta
 	}
 }
 
-// SIM卡单卡停机
+// StartStopNetInvoker SIM卡申请断网/恢复在用
+func (c *GslClient) StartStopNetInvoker(request *model.StartStopNetRequest) *StartStopNetInvoker {
+	requestDef := GenReqDefForStartStopNet()
+	return &StartStopNetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopSimCard SIM卡单卡停机
 //
 // 创建停机申请，返回业务受理单号。1~2个工作日完成停机操作。
 //
@@ -211,7 +277,13 @@ func (c *GslClient) StopSimCard(request *model.StopSimCardRequest) (*model.StopS
 	}
 }
 
-// 查询流量池成员列表
+// StopSimCardInvoker SIM卡单卡停机
+func (c *GslClient) StopSimCardInvoker(request *model.StopSimCardRequest) *StopSimCardInvoker {
+	requestDef := GenReqDefForStopSimCard()
+	return &StopSimCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSimPoolMembers 查询流量池成员列表
 //
 // 查询流量池成员列表
 //
@@ -227,7 +299,13 @@ func (c *GslClient) ListSimPoolMembers(request *model.ListSimPoolMembersRequest)
 	}
 }
 
-// 查询流量池列表
+// ListSimPoolMembersInvoker 查询流量池成员列表
+func (c *GslClient) ListSimPoolMembersInvoker(request *model.ListSimPoolMembersRequest) *ListSimPoolMembersInvoker {
+	requestDef := GenReqDefForListSimPoolMembers()
+	return &ListSimPoolMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSimPools 查询流量池列表
 //
 // 查询流量池列表
 //
@@ -243,7 +321,13 @@ func (c *GslClient) ListSimPools(request *model.ListSimPoolsRequest) (*model.Lis
 	}
 }
 
-// 批量查询实体卡流量
+// ListSimPoolsInvoker 查询流量池列表
+func (c *GslClient) ListSimPoolsInvoker(request *model.ListSimPoolsRequest) *ListSimPoolsInvoker {
+	requestDef := GenReqDefForListSimPools()
+	return &ListSimPoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFlowBySimCards 批量查询实体卡流量
 //
 // 批量查询实体卡流量
 //
@@ -259,7 +343,13 @@ func (c *GslClient) ListFlowBySimCards(request *model.ListFlowBySimCardsRequest)
 	}
 }
 
-// sim卡套餐列表查询
+// ListFlowBySimCardsInvoker 批量查询实体卡流量
+func (c *GslClient) ListFlowBySimCardsInvoker(request *model.ListFlowBySimCardsRequest) *ListFlowBySimCardsInvoker {
+	requestDef := GenReqDefForListFlowBySimCards()
+	return &ListFlowBySimCardsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSimPricePlans sim卡套餐列表查询
 //
 // SIM卡套餐列表查询，实体卡只会有一个套餐，eSIM/vSIM可能会有多个套餐
 //
@@ -273,4 +363,10 @@ func (c *GslClient) ListSimPricePlans(request *model.ListSimPricePlansRequest) (
 	} else {
 		return resp.(*model.ListSimPricePlansResponse), nil
 	}
+}
+
+// ListSimPricePlansInvoker sim卡套餐列表查询
+func (c *GslClient) ListSimPricePlansInvoker(request *model.ListSimPricePlansRequest) *ListSimPricePlansInvoker {
+	requestDef := GenReqDefForListSimPricePlans()
+	return &ListSimPricePlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

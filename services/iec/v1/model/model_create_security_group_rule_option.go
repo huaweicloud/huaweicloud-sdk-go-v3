@@ -75,6 +75,10 @@ func GetCreateSecurityGroupRuleOptionDirectionEnum() CreateSecurityGroupRuleOpti
 	}
 }
 
+func (c CreateSecurityGroupRuleOptionDirection) Value() string {
+	return c.value
+}
+
 func (c CreateSecurityGroupRuleOptionDirection) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -107,6 +111,10 @@ func GetCreateSecurityGroupRuleOptionEthertypeEnum() CreateSecurityGroupRuleOpti
 			value: "IPv4",
 		},
 	}
+}
+
+func (c CreateSecurityGroupRuleOptionEthertype) Value() string {
+	return c.value
 }
 
 func (c CreateSecurityGroupRuleOptionEthertype) MarshalJSON() ([]byte, error) {

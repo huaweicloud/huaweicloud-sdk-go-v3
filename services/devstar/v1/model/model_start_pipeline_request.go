@@ -48,6 +48,10 @@ func GetStartPipelineRequestXLanguageEnum() StartPipelineRequestXLanguageEnum {
 	}
 }
 
+func (c StartPipelineRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c StartPipelineRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

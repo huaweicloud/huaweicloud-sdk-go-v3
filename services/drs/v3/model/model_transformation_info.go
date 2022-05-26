@@ -48,6 +48,10 @@ func GetTransformationInfoTransformationTypeEnum() TransformationInfoTransformat
 	}
 }
 
+func (c TransformationInfoTransformationType) Value() string {
+	return c.value
+}
+
 func (c TransformationInfoTransformationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

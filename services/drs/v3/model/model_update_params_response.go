@@ -55,6 +55,10 @@ func GetUpdateParamsResponseShouldRestartEnum() UpdateParamsResponseShouldRestar
 	}
 }
 
+func (c UpdateParamsResponseShouldRestart) Value() string {
+	return c.value
+}
+
 func (c UpdateParamsResponseShouldRestart) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

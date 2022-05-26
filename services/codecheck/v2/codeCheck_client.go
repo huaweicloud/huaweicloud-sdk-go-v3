@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codecheck/v2/model"
 )
 
@@ -19,7 +19,7 @@ func CodeCheckClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 查询任务规则集的检查参数
+// CheckParameters 查询任务规则集的检查参数
 //
 // 查询任务规则集的检查参数
 //
@@ -35,7 +35,13 @@ func (c *CodeCheckClient) CheckParameters(request *model.CheckParametersRequest)
 	}
 }
 
-// 历史扫描结果查询
+// CheckParametersInvoker 查询任务规则集的检查参数
+func (c *CodeCheckClient) CheckParametersInvoker(request *model.CheckParametersRequest) *CheckParametersInvoker {
+	requestDef := GenReqDefForCheckParameters()
+	return &CheckParametersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckRecord 历史扫描结果查询
 //
 // 提供每次扫描的问题数量统计
 //
@@ -51,7 +57,13 @@ func (c *CodeCheckClient) CheckRecord(request *model.CheckRecordRequest) (*model
 	}
 }
 
-// 查询任务规则集的检查参数
+// CheckRecordInvoker 历史扫描结果查询
+func (c *CodeCheckClient) CheckRecordInvoker(request *model.CheckRecordRequest) *CheckRecordInvoker {
+	requestDef := GenReqDefForCheckRecord()
+	return &CheckRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckRulesetParameters 查询任务规则集的检查参数
 //
 // 查询任务规则集的检查参数
 //
@@ -67,7 +79,13 @@ func (c *CodeCheckClient) CheckRulesetParameters(request *model.CheckRulesetPara
 	}
 }
 
-// 创建自定义规则集
+// CheckRulesetParametersInvoker 查询任务规则集的检查参数
+func (c *CodeCheckClient) CheckRulesetParametersInvoker(request *model.CheckRulesetParametersRequest) *CheckRulesetParametersInvoker {
+	requestDef := GenReqDefForCheckRulesetParameters()
+	return &CheckRulesetParametersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRuleset 创建自定义规则集
 //
 // 可根据需求灵活的组合规则。
 //
@@ -83,7 +101,13 @@ func (c *CodeCheckClient) CreateRuleset(request *model.CreateRulesetRequest) (*m
 	}
 }
 
-// 新建检查任务
+// CreateRulesetInvoker 创建自定义规则集
+func (c *CodeCheckClient) CreateRulesetInvoker(request *model.CreateRulesetRequest) *CreateRulesetInvoker {
+	requestDef := GenReqDefForCreateRuleset()
+	return &CreateRulesetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTask 新建检查任务
 //
 // 新建检查任务但是不执行。
 //
@@ -99,7 +123,13 @@ func (c *CodeCheckClient) CreateTask(request *model.CreateTaskRequest) (*model.C
 	}
 }
 
-// 删除自定义规则集
+// CreateTaskInvoker 新建检查任务
+func (c *CodeCheckClient) CreateTaskInvoker(request *model.CreateTaskRequest) *CreateTaskInvoker {
+	requestDef := GenReqDefForCreateTask()
+	return &CreateTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRuleset 删除自定义规则集
 //
 // 删除自定义规则集，正在使用中的或默认规则集不能删除
 //
@@ -115,7 +145,13 @@ func (c *CodeCheckClient) DeleteRuleset(request *model.DeleteRulesetRequest) (*m
 	}
 }
 
-// 删除检查任务
+// DeleteRulesetInvoker 删除自定义规则集
+func (c *CodeCheckClient) DeleteRulesetInvoker(request *model.DeleteRulesetRequest) *DeleteRulesetInvoker {
+	requestDef := GenReqDefForDeleteRuleset()
+	return &DeleteRulesetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTask 删除检查任务
 //
 // 删除检查任务，执行中的任务删除无法再查看
 //
@@ -131,7 +167,13 @@ func (c *CodeCheckClient) DeleteTask(request *model.DeleteTaskRequest) (*model.D
 	}
 }
 
-// 获取规则列表接口
+// DeleteTaskInvoker 删除检查任务
+func (c *CodeCheckClient) DeleteTaskInvoker(request *model.DeleteTaskRequest) *DeleteTaskInvoker {
+	requestDef := GenReqDefForDeleteTask()
+	return &DeleteTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRules 获取规则列表接口
 //
 // 根据语言、问题级别等条件查询规则列表。
 //
@@ -147,7 +189,13 @@ func (c *CodeCheckClient) ListRules(request *model.ListRulesRequest) (*model.Lis
 	}
 }
 
-// 查询规则集列表
+// ListRulesInvoker 获取规则列表接口
+func (c *CodeCheckClient) ListRulesInvoker(request *model.ListRulesRequest) *ListRulesInvoker {
+	requestDef := GenReqDefForListRules()
+	return &ListRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRulesets 查询规则集列表
 //
 // 根据项目ID、语言等条件查询规则集列表。
 //
@@ -163,7 +211,13 @@ func (c *CodeCheckClient) ListRulesets(request *model.ListRulesetsRequest) (*mod
 	}
 }
 
-// 任务配置检查参数
+// ListRulesetsInvoker 查询规则集列表
+func (c *CodeCheckClient) ListRulesetsInvoker(request *model.ListRulesetsRequest) *ListRulesetsInvoker {
+	requestDef := GenReqDefForListRulesets()
+	return &ListRulesetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTaskParameter 任务配置检查参数
 //
 // 任务配置检查参数
 //
@@ -179,7 +233,13 @@ func (c *CodeCheckClient) ListTaskParameter(request *model.ListTaskParameterRequ
 	}
 }
 
-// 查询任务的已选规则集列表
+// ListTaskParameterInvoker 任务配置检查参数
+func (c *CodeCheckClient) ListTaskParameterInvoker(request *model.ListTaskParameterRequest) *ListTaskParameterInvoker {
+	requestDef := GenReqDefForListTaskParameter()
+	return &ListTaskParameterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTaskRuleset 查询任务的已选规则集列表
 //
 // 查询任务的已选规则集列表。
 //
@@ -195,7 +255,13 @@ func (c *CodeCheckClient) ListTaskRuleset(request *model.ListTaskRulesetRequest)
 	}
 }
 
-// 查看规则集的规则列表
+// ListTaskRulesetInvoker 查询任务的已选规则集列表
+func (c *CodeCheckClient) ListTaskRulesetInvoker(request *model.ListTaskRulesetRequest) *ListTaskRulesetInvoker {
+	requestDef := GenReqDefForListTaskRuleset()
+	return &ListTaskRulesetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTemplateRules 查看规则集的规则列表
 //
 // 根据项目ID、规则集ID等条件查询规则列表。
 //
@@ -211,7 +277,13 @@ func (c *CodeCheckClient) ListTemplateRules(request *model.ListTemplateRulesRequ
 	}
 }
 
-// 执行检查任务
+// ListTemplateRulesInvoker 查看规则集的规则列表
+func (c *CodeCheckClient) ListTemplateRulesInvoker(request *model.ListTemplateRulesRequest) *ListTemplateRulesInvoker {
+	requestDef := GenReqDefForListTemplateRules()
+	return &ListTemplateRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunTask 执行检查任务
 //
 // 执行检查任务。
 //
@@ -227,7 +299,13 @@ func (c *CodeCheckClient) RunTask(request *model.RunTaskRequest) (*model.RunTask
 	}
 }
 
-// 设置每个项目对应语言的默认规则集配置
+// RunTaskInvoker 执行检查任务
+func (c *CodeCheckClient) RunTaskInvoker(request *model.RunTaskRequest) *RunTaskInvoker {
+	requestDef := GenReqDefForRunTask()
+	return &RunTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetDefaulTemplate 设置每个项目对应语言的默认规则集配置
 //
 // 设置每个项目对应语言的默认规则集配置。
 //
@@ -243,7 +321,13 @@ func (c *CodeCheckClient) SetDefaulTemplate(request *model.SetDefaulTemplateRequ
 	}
 }
 
-// 查询任务执行状态
+// SetDefaulTemplateInvoker 设置每个项目对应语言的默认规则集配置
+func (c *CodeCheckClient) SetDefaulTemplateInvoker(request *model.SetDefaulTemplateRequest) *SetDefaulTemplateInvoker {
+	requestDef := GenReqDefForSetDefaulTemplate()
+	return &SetDefaulTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProgressDetail 查询任务执行状态
 //
 // 根据任务ID查询任务执行状态。任务状态：0表示检查中，1表示检查失败，2表示检查成功，3表示任务中止。只有正在检查中才有进度的详细信息。
 //
@@ -259,7 +343,13 @@ func (c *CodeCheckClient) ShowProgressDetail(request *model.ShowProgressDetailRe
 	}
 }
 
-// 查询cmertrics缺陷概要
+// ShowProgressDetailInvoker 查询任务执行状态
+func (c *CodeCheckClient) ShowProgressDetailInvoker(request *model.ShowProgressDetailRequest) *ShowProgressDetailInvoker {
+	requestDef := GenReqDefForShowProgressDetail()
+	return &ShowProgressDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTaskCmetrics 查询cmertrics缺陷概要
 //
 // 根据检查任务ID查询cmertrics缺陷概要。
 //
@@ -275,7 +365,13 @@ func (c *CodeCheckClient) ShowTaskCmetrics(request *model.ShowTaskCmetricsReques
 	}
 }
 
-// 查询缺陷详情
+// ShowTaskCmetricsInvoker 查询cmertrics缺陷概要
+func (c *CodeCheckClient) ShowTaskCmetricsInvoker(request *model.ShowTaskCmetricsRequest) *ShowTaskCmetricsInvoker {
+	requestDef := GenReqDefForShowTaskCmetrics()
+	return &ShowTaskCmetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTaskDefects 查询缺陷详情
 //
 // 根据检查任务ID分页查询缺陷结果详情。
 //
@@ -291,7 +387,13 @@ func (c *CodeCheckClient) ShowTaskDefects(request *model.ShowTaskDefectsRequest)
 	}
 }
 
-// 查询缺陷详情的统计
+// ShowTaskDefectsInvoker 查询缺陷详情
+func (c *CodeCheckClient) ShowTaskDefectsInvoker(request *model.ShowTaskDefectsRequest) *ShowTaskDefectsInvoker {
+	requestDef := GenReqDefForShowTaskDefects()
+	return &ShowTaskDefectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTaskDefectsStatistic 查询缺陷详情的统计
 //
 // 根据检查任务ID查询缺陷详情的统计
 //
@@ -307,7 +409,13 @@ func (c *CodeCheckClient) ShowTaskDefectsStatistic(request *model.ShowTaskDefect
 	}
 }
 
-// 查询缺陷概要
+// ShowTaskDefectsStatisticInvoker 查询缺陷详情的统计
+func (c *CodeCheckClient) ShowTaskDefectsStatisticInvoker(request *model.ShowTaskDefectsStatisticRequest) *ShowTaskDefectsStatisticInvoker {
+	requestDef := GenReqDefForShowTaskDefectsStatistic()
+	return &ShowTaskDefectsStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTaskDetail 查询缺陷概要
 //
 // 根据检查任务ID查询缺陷结果的概要。包括问题概述、问题状态、圈复杂度、代码重复率等。
 //
@@ -323,7 +431,13 @@ func (c *CodeCheckClient) ShowTaskDetail(request *model.ShowTaskDetailRequest) (
 	}
 }
 
-// 查询任务列表
+// ShowTaskDetailInvoker 查询缺陷概要
+func (c *CodeCheckClient) ShowTaskDetailInvoker(request *model.ShowTaskDetailRequest) *ShowTaskDetailInvoker {
+	requestDef := GenReqDefForShowTaskDetail()
+	return &ShowTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTaskListByProjectId 查询任务列表
 //
 // 根据DEVCLOUD_PROJECT_UUID查询该项目下的任务列表。
 //
@@ -339,7 +453,13 @@ func (c *CodeCheckClient) ShowTaskListByProjectId(request *model.ShowTaskListByP
 	}
 }
 
-// 查询任务检查失败日志
+// ShowTaskListByProjectIdInvoker 查询任务列表
+func (c *CodeCheckClient) ShowTaskListByProjectIdInvoker(request *model.ShowTaskListByProjectIdRequest) *ShowTaskListByProjectIdInvoker {
+	requestDef := GenReqDefForShowTaskListByProjectId()
+	return &ShowTaskListByProjectIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTasklog 查询任务检查失败日志
 //
 // 查询任务检查失败日志，不传execute_id则查询最近一次的检查日志
 //
@@ -355,7 +475,13 @@ func (c *CodeCheckClient) ShowTasklog(request *model.ShowTasklogRequest) (*model
 	}
 }
 
-// 查询任务的已选规则集列表
+// ShowTasklogInvoker 查询任务检查失败日志
+func (c *CodeCheckClient) ShowTasklogInvoker(request *model.ShowTasklogRequest) *ShowTasklogInvoker {
+	requestDef := GenReqDefForShowTasklog()
+	return &ShowTasklogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTasksRulesets 查询任务的已选规则集列表
 //
 // 查询任务的已选规则集列表。
 //
@@ -371,7 +497,13 @@ func (c *CodeCheckClient) ShowTasksRulesets(request *model.ShowTasksRulesetsRequ
 	}
 }
 
-// 终止检查任务
+// ShowTasksRulesetsInvoker 查询任务的已选规则集列表
+func (c *CodeCheckClient) ShowTasksRulesetsInvoker(request *model.ShowTasksRulesetsRequest) *ShowTasksRulesetsInvoker {
+	requestDef := GenReqDefForShowTasksRulesets()
+	return &ShowTasksRulesetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopTaskById 终止检查任务
 //
 // 根据任务ID终止检查任务。
 //
@@ -387,7 +519,13 @@ func (c *CodeCheckClient) StopTaskById(request *model.StopTaskByIdRequest) (*mod
 	}
 }
 
-// 修改缺陷状态
+// StopTaskByIdInvoker 终止检查任务
+func (c *CodeCheckClient) StopTaskByIdInvoker(request *model.StopTaskByIdRequest) *StopTaskByIdInvoker {
+	requestDef := GenReqDefForStopTaskById()
+	return &StopTaskByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDefectStatus 修改缺陷状态
 //
 // 修改检查出的缺陷的状态为已解决、已忽略
 //
@@ -403,7 +541,13 @@ func (c *CodeCheckClient) UpdateDefectStatus(request *model.UpdateDefectStatusRe
 	}
 }
 
-// 修改任务规则集
+// UpdateDefectStatusInvoker 修改缺陷状态
+func (c *CodeCheckClient) UpdateDefectStatusInvoker(request *model.UpdateDefectStatusRequest) *UpdateDefectStatusInvoker {
+	requestDef := GenReqDefForUpdateDefectStatus()
+	return &UpdateDefectStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTaskRuleset 修改任务规则集
 //
 // 修改任务规则集。
 //
@@ -417,4 +561,10 @@ func (c *CodeCheckClient) UpdateTaskRuleset(request *model.UpdateTaskRulesetRequ
 	} else {
 		return resp.(*model.UpdateTaskRulesetResponse), nil
 	}
+}
+
+// UpdateTaskRulesetInvoker 修改任务规则集
+func (c *CodeCheckClient) UpdateTaskRulesetInvoker(request *model.UpdateTaskRulesetRequest) *UpdateTaskRulesetInvoker {
+	requestDef := GenReqDefForUpdateTaskRuleset()
+	return &UpdateTaskRulesetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/csms/v1/model"
 )
 
@@ -19,7 +19,7 @@ func CsmsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 批量添加或删除凭据标签
+// BatchCreateOrDeleteTags 批量添加或删除凭据标签
 //
 // - 功能介绍：批量添加或删除凭据标签。
 //
@@ -35,7 +35,13 @@ func (c *CsmsClient) BatchCreateOrDeleteTags(request *model.BatchCreateOrDeleteT
 	}
 }
 
-// 创建凭据
+// BatchCreateOrDeleteTagsInvoker 批量添加或删除凭据标签
+func (c *CsmsClient) BatchCreateOrDeleteTagsInvoker(request *model.BatchCreateOrDeleteTagsRequest) *BatchCreateOrDeleteTagsInvoker {
+	requestDef := GenReqDefForBatchCreateOrDeleteTags()
+	return &BatchCreateOrDeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSecret 创建凭据
 //
 // 创建新的凭据，并将凭据值存入凭据的初始版本。
 //
@@ -55,7 +61,13 @@ func (c *CsmsClient) CreateSecret(request *model.CreateSecretRequest) (*model.Cr
 	}
 }
 
-// 添加凭据标签
+// CreateSecretInvoker 创建凭据
+func (c *CsmsClient) CreateSecretInvoker(request *model.CreateSecretRequest) *CreateSecretInvoker {
+	requestDef := GenReqDefForCreateSecret()
+	return &CreateSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSecretTag 添加凭据标签
 //
 // - 功能介绍：添加凭据标签。
 //
@@ -71,7 +83,13 @@ func (c *CsmsClient) CreateSecretTag(request *model.CreateSecretTagRequest) (*mo
 	}
 }
 
-// 创建凭据版本
+// CreateSecretTagInvoker 添加凭据标签
+func (c *CsmsClient) CreateSecretTagInvoker(request *model.CreateSecretTagRequest) *CreateSecretTagInvoker {
+	requestDef := GenReqDefForCreateSecretTag()
+	return &CreateSecretTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSecretVersion 创建凭据版本
 //
 // 在指定的凭据中，创建一个新的凭据版本，用于加密保管新的凭据值。默认情况下，新创建的凭据版本被标记为SYSCURRENT状态，而SYSCURRENT标记的前一个凭据版本被标记为SYSPREVIOUS状态。您可以通过指定VersionStage参数来覆盖默认行为。
 //
@@ -87,7 +105,13 @@ func (c *CsmsClient) CreateSecretVersion(request *model.CreateSecretVersionReque
 	}
 }
 
-// 立即删除凭据
+// CreateSecretVersionInvoker 创建凭据版本
+func (c *CsmsClient) CreateSecretVersionInvoker(request *model.CreateSecretVersionRequest) *CreateSecretVersionInvoker {
+	requestDef := GenReqDefForCreateSecretVersion()
+	return &CreateSecretVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSecret 立即删除凭据
 //
 // 立即删除指定的凭据，且无法恢复。
 //
@@ -103,7 +127,13 @@ func (c *CsmsClient) DeleteSecret(request *model.DeleteSecretRequest) (*model.De
 	}
 }
 
-// 创建凭据的定时删除任务
+// DeleteSecretInvoker 立即删除凭据
+func (c *CsmsClient) DeleteSecretInvoker(request *model.DeleteSecretRequest) *DeleteSecretInvoker {
+	requestDef := GenReqDefForDeleteSecret()
+	return &DeleteSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSecretForSchedule 创建凭据的定时删除任务
 //
 // 指定延迟删除时间，创建删除凭据的定时任务，可设置7~30天的的延迟删除时间。
 //
@@ -119,7 +149,13 @@ func (c *CsmsClient) DeleteSecretForSchedule(request *model.DeleteSecretForSched
 	}
 }
 
-// 删除凭据的版本状态
+// DeleteSecretForScheduleInvoker 创建凭据的定时删除任务
+func (c *CsmsClient) DeleteSecretForScheduleInvoker(request *model.DeleteSecretForScheduleRequest) *DeleteSecretForScheduleInvoker {
+	requestDef := GenReqDefForDeleteSecretForSchedule()
+	return &DeleteSecretForScheduleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSecretStage 删除凭据的版本状态
 //
 // 删除指定的凭据版本状态。
 //
@@ -135,7 +171,13 @@ func (c *CsmsClient) DeleteSecretStage(request *model.DeleteSecretStageRequest) 
 	}
 }
 
-// 删除凭据标签
+// DeleteSecretStageInvoker 删除凭据的版本状态
+func (c *CsmsClient) DeleteSecretStageInvoker(request *model.DeleteSecretStageRequest) *DeleteSecretStageInvoker {
+	requestDef := GenReqDefForDeleteSecretStage()
+	return &DeleteSecretStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSecretTag 删除凭据标签
 //
 // - 功能介绍：删除凭据标签。
 //
@@ -151,7 +193,13 @@ func (c *CsmsClient) DeleteSecretTag(request *model.DeleteSecretTagRequest) (*mo
 	}
 }
 
-// 查询项目标签
+// DeleteSecretTagInvoker 删除凭据标签
+func (c *CsmsClient) DeleteSecretTagInvoker(request *model.DeleteSecretTagRequest) *DeleteSecretTagInvoker {
+	requestDef := GenReqDefForDeleteSecretTag()
+	return &DeleteSecretTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectSecretsTags 查询项目标签
 //
 // - 功能介绍：查询用户在指定项目下的所有凭据标签集合。
 //
@@ -167,7 +215,13 @@ func (c *CsmsClient) ListProjectSecretsTags(request *model.ListProjectSecretsTag
 	}
 }
 
-// 查询凭据实例
+// ListProjectSecretsTagsInvoker 查询项目标签
+func (c *CsmsClient) ListProjectSecretsTagsInvoker(request *model.ListProjectSecretsTagsRequest) *ListProjectSecretsTagsInvoker {
+	requestDef := GenReqDefForListProjectSecretsTags()
+	return &ListProjectSecretsTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourceInstances 查询凭据实例
 //
 // - 功能介绍：查询凭据实例。通过标签过滤，筛选用户凭据,返回凭据列表。
 //
@@ -183,7 +237,13 @@ func (c *CsmsClient) ListResourceInstances(request *model.ListResourceInstancesR
 	}
 }
 
-// 查询凭据标签
+// ListResourceInstancesInvoker 查询凭据实例
+func (c *CsmsClient) ListResourceInstancesInvoker(request *model.ListResourceInstancesRequest) *ListResourceInstancesInvoker {
+	requestDef := GenReqDefForListResourceInstances()
+	return &ListResourceInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecretTags 查询凭据标签
 //
 // - 功能介绍：查询凭据标签。
 //
@@ -199,7 +259,13 @@ func (c *CsmsClient) ListSecretTags(request *model.ListSecretTagsRequest) (*mode
 	}
 }
 
-// 查询凭据的版本列表
+// ListSecretTagsInvoker 查询凭据标签
+func (c *CsmsClient) ListSecretTagsInvoker(request *model.ListSecretTagsRequest) *ListSecretTagsInvoker {
+	requestDef := GenReqDefForListSecretTags()
+	return &ListSecretTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecretVersions 查询凭据的版本列表
 //
 // 查询指定凭据下的版本列表信息。
 //
@@ -215,7 +281,13 @@ func (c *CsmsClient) ListSecretVersions(request *model.ListSecretVersionsRequest
 	}
 }
 
-// 查询凭据列表
+// ListSecretVersionsInvoker 查询凭据的版本列表
+func (c *CsmsClient) ListSecretVersionsInvoker(request *model.ListSecretVersionsRequest) *ListSecretVersionsInvoker {
+	requestDef := GenReqDefForListSecretVersions()
+	return &ListSecretVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecrets 查询凭据列表
 //
 // 查询当前用户在本项目下创建的所有凭据。
 //
@@ -231,7 +303,13 @@ func (c *CsmsClient) ListSecrets(request *model.ListSecretsRequest) (*model.List
 	}
 }
 
-// 取消凭据的定时删除任务
+// ListSecretsInvoker 查询凭据列表
+func (c *CsmsClient) ListSecretsInvoker(request *model.ListSecretsRequest) *ListSecretsInvoker {
+	requestDef := GenReqDefForListSecrets()
+	return &ListSecretsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestoreSecret 取消凭据的定时删除任务
 //
 // 取消凭据的定时删除任务，凭据对象恢复可使用状态。
 //
@@ -247,7 +325,13 @@ func (c *CsmsClient) RestoreSecret(request *model.RestoreSecretRequest) (*model.
 	}
 }
 
-// 查询凭据
+// RestoreSecretInvoker 取消凭据的定时删除任务
+func (c *CsmsClient) RestoreSecretInvoker(request *model.RestoreSecretRequest) *RestoreSecretInvoker {
+	requestDef := GenReqDefForRestoreSecret()
+	return &RestoreSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecret 查询凭据
 //
 // 查询指定凭据的信息。
 //
@@ -263,7 +347,13 @@ func (c *CsmsClient) ShowSecret(request *model.ShowSecretRequest) (*model.ShowSe
 	}
 }
 
-// 查询凭据的版本状态
+// ShowSecretInvoker 查询凭据
+func (c *CsmsClient) ShowSecretInvoker(request *model.ShowSecretRequest) *ShowSecretInvoker {
+	requestDef := GenReqDefForShowSecret()
+	return &ShowSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecretStage 查询凭据的版本状态
 //
 // 查询指定凭据版本状态标记的版本信息。
 //
@@ -279,7 +369,13 @@ func (c *CsmsClient) ShowSecretStage(request *model.ShowSecretStageRequest) (*mo
 	}
 }
 
-// 查询凭据的版本与凭据值
+// ShowSecretStageInvoker 查询凭据的版本状态
+func (c *CsmsClient) ShowSecretStageInvoker(request *model.ShowSecretStageRequest) *ShowSecretStageInvoker {
+	requestDef := GenReqDefForShowSecretStage()
+	return &ShowSecretStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecretVersion 查询凭据的版本与凭据值
 //
 // 查询指定凭据版本的信息和版本中的明文凭据值，只能查询ENABLED状态的凭据。
 // 通过/v1/{project_id}/secrets/{secret_id}/versions/latest可访问凭据最新版本的凭据值。
@@ -296,7 +392,13 @@ func (c *CsmsClient) ShowSecretVersion(request *model.ShowSecretVersionRequest) 
 	}
 }
 
-// 更新凭据
+// ShowSecretVersionInvoker 查询凭据的版本与凭据值
+func (c *CsmsClient) ShowSecretVersionInvoker(request *model.ShowSecretVersionRequest) *ShowSecretVersionInvoker {
+	requestDef := GenReqDefForShowSecretVersion()
+	return &ShowSecretVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSecret 更新凭据
 //
 // 更新指定凭据的元数据信息。
 //
@@ -312,7 +414,13 @@ func (c *CsmsClient) UpdateSecret(request *model.UpdateSecretRequest) (*model.Up
 	}
 }
 
-// 更新凭据的版本状态
+// UpdateSecretInvoker 更新凭据
+func (c *CsmsClient) UpdateSecretInvoker(request *model.UpdateSecretRequest) *UpdateSecretInvoker {
+	requestDef := GenReqDefForUpdateSecret()
+	return &UpdateSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSecretStage 更新凭据的版本状态
 //
 // 更新凭据的版本状态。
 //
@@ -326,4 +434,10 @@ func (c *CsmsClient) UpdateSecretStage(request *model.UpdateSecretStageRequest) 
 	} else {
 		return resp.(*model.UpdateSecretStageResponse), nil
 	}
+}
+
+// UpdateSecretStageInvoker 更新凭据的版本状态
+func (c *CsmsClient) UpdateSecretStageInvoker(request *model.UpdateSecretStageRequest) *UpdateSecretStageInvoker {
+	requestDef := GenReqDefForUpdateSecretStage()
+	return &UpdateSecretStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

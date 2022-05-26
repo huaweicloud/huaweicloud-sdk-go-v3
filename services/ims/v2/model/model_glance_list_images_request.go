@@ -142,6 +142,10 @@ func GetGlanceListImagesRequestImagetypeEnum() GlanceListImagesRequestImagetypeE
 	}
 }
 
+func (c GlanceListImagesRequestImagetype) Value() string {
+	return c.value
+}
+
 func (c GlanceListImagesRequestImagetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -178,6 +182,10 @@ func GetGlanceListImagesRequestOsBitEnum() GlanceListImagesRequestOsBitEnum {
 			value: "64",
 		},
 	}
+}
+
+func (c GlanceListImagesRequestOsBit) Value() string {
+	return c.value
 }
 
 func (c GlanceListImagesRequestOsBit) MarshalJSON() ([]byte, error) {
@@ -220,6 +228,10 @@ func GetGlanceListImagesRequestOsTypeEnum() GlanceListImagesRequestOsTypeEnum {
 			value: "Other",
 		},
 	}
+}
+
+func (c GlanceListImagesRequestOsType) Value() string {
+	return c.value
 }
 
 func (c GlanceListImagesRequestOsType) MarshalJSON() ([]byte, error) {
@@ -300,6 +312,10 @@ func GetGlanceListImagesRequestPlatformEnum() GlanceListImagesRequestPlatformEnu
 	}
 }
 
+func (c GlanceListImagesRequestPlatform) Value() string {
+	return c.value
+}
+
 func (c GlanceListImagesRequestPlatform) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -344,6 +360,10 @@ func GetGlanceListImagesRequestDiskFormatEnum() GlanceListImagesRequestDiskForma
 			value: "qcow2",
 		},
 	}
+}
+
+func (c GlanceListImagesRequestDiskFormat) Value() string {
+	return c.value
 }
 
 func (c GlanceListImagesRequestDiskFormat) MarshalJSON() ([]byte, error) {
@@ -396,6 +416,10 @@ func GetGlanceListImagesRequestStatusEnum() GlanceListImagesRequestStatusEnum {
 	}
 }
 
+func (c GlanceListImagesRequestStatus) Value() string {
+	return c.value
+}
+
 func (c GlanceListImagesRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -436,6 +460,10 @@ func GetGlanceListImagesRequestVisibilityEnum() GlanceListImagesRequestVisibilit
 			value: "shared",
 		},
 	}
+}
+
+func (c GlanceListImagesRequestVisibility) Value() string {
+	return c.value
 }
 
 func (c GlanceListImagesRequestVisibility) MarshalJSON() ([]byte, error) {

@@ -87,6 +87,10 @@ func GetListInstancesDetailsRequestStatusEnum() ListInstancesDetailsRequestStatu
 	}
 }
 
+func (c ListInstancesDetailsRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListInstancesDetailsRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -125,6 +129,10 @@ func GetListInstancesDetailsRequestIncludeFailureEnum() ListInstancesDetailsRequ
 	}
 }
 
+func (c ListInstancesDetailsRequestIncludeFailure) Value() string {
+	return c.value
+}
+
 func (c ListInstancesDetailsRequestIncludeFailure) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -161,6 +169,10 @@ func GetListInstancesDetailsRequestExactMatchNameEnum() ListInstancesDetailsRequ
 			value: "false",
 		},
 	}
+}
+
+func (c ListInstancesDetailsRequestExactMatchName) Value() string {
+	return c.value
 }
 
 func (c ListInstancesDetailsRequestExactMatchName) MarshalJSON() ([]byte, error) {

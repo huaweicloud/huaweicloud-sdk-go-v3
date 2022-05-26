@@ -41,6 +41,10 @@ func GetPauseScalingGroupOptionActionEnum() PauseScalingGroupOptionActionEnum {
 	}
 }
 
+func (c PauseScalingGroupOptionAction) Value() string {
+	return c.value
+}
+
 func (c PauseScalingGroupOptionAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

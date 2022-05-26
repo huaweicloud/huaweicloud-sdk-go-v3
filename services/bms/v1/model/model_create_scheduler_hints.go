@@ -45,6 +45,10 @@ func GetCreateSchedulerHintsDecBaremetalEnum() CreateSchedulerHintsDecBaremetalE
 	}
 }
 
+func (c CreateSchedulerHintsDecBaremetal) Value() string {
+	return c.value
+}
+
 func (c CreateSchedulerHintsDecBaremetal) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

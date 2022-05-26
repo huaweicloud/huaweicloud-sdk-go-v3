@@ -86,6 +86,10 @@ func GetCreatePostPaidInstanceReqEngineEnum() CreatePostPaidInstanceReqEngineEnu
 	}
 }
 
+func (c CreatePostPaidInstanceReqEngine) Value() string {
+	return c.value
+}
+
 func (c CreatePostPaidInstanceReqEngine) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -118,6 +122,10 @@ func GetCreatePostPaidInstanceReqEngineVersionEnum() CreatePostPaidInstanceReqEn
 			value: "4.8.0",
 		},
 	}
+}
+
+func (c CreatePostPaidInstanceReqEngineVersion) Value() string {
+	return c.value
 }
 
 func (c CreatePostPaidInstanceReqEngineVersion) MarshalJSON() ([]byte, error) {
@@ -166,6 +174,10 @@ func GetCreatePostPaidInstanceReqProductIdEnum() CreatePostPaidInstanceReqProduc
 	}
 }
 
+func (c CreatePostPaidInstanceReqProductId) Value() string {
+	return c.value
+}
+
 func (c CreatePostPaidInstanceReqProductId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -202,6 +214,10 @@ func GetCreatePostPaidInstanceReqStorageSpecCodeEnum() CreatePostPaidInstanceReq
 			value: "dms.physical.storage.ultra.v2",
 		},
 	}
+}
+
+func (c CreatePostPaidInstanceReqStorageSpecCode) Value() string {
+	return c.value
 }
 
 func (c CreatePostPaidInstanceReqStorageSpecCode) MarshalJSON() ([]byte, error) {

@@ -51,6 +51,10 @@ func GetExternalAccessesCreateProtocolEnum() ExternalAccessesCreateProtocolEnum 
 	}
 }
 
+func (c ExternalAccessesCreateProtocol) Value() string {
+	return c.value
+}
+
 func (c ExternalAccessesCreateProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

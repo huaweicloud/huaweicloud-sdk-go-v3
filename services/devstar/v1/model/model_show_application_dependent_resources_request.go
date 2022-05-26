@@ -54,6 +54,10 @@ func GetShowApplicationDependentResourcesRequestXLanguageEnum() ShowApplicationD
 	}
 }
 
+func (c ShowApplicationDependentResourcesRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ShowApplicationDependentResourcesRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

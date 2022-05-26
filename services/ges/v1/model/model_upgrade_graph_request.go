@@ -46,6 +46,10 @@ func GetUpgradeGraphRequestActionIdEnum() UpgradeGraphRequestActionIdEnum {
 	}
 }
 
+func (c UpgradeGraphRequestActionId) Value() string {
+	return c.value
+}
+
 func (c UpgradeGraphRequestActionId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

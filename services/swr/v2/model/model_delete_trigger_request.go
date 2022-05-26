@@ -54,6 +54,10 @@ func GetDeleteTriggerRequestContentTypeEnum() DeleteTriggerRequestContentTypeEnu
 	}
 }
 
+func (c DeleteTriggerRequestContentType) Value() string {
+	return c.value
+}
+
 func (c DeleteTriggerRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

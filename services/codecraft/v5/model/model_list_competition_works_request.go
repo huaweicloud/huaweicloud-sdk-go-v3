@@ -66,6 +66,10 @@ func GetListCompetitionWorksRequestTimeUnitEnum() ListCompetitionWorksRequestTim
 	}
 }
 
+func (c ListCompetitionWorksRequestTimeUnit) Value() string {
+	return c.value
+}
+
 func (c ListCompetitionWorksRequestTimeUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -102,6 +106,10 @@ func GetListCompetitionWorksRequestSortDirEnum() ListCompetitionWorksRequestSort
 			value: "desc",
 		},
 	}
+}
+
+func (c ListCompetitionWorksRequestSortDir) Value() string {
+	return c.value
 }
 
 func (c ListCompetitionWorksRequestSortDir) MarshalJSON() ([]byte, error) {

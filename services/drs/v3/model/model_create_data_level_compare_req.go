@@ -60,6 +60,10 @@ func GetCreateDataLevelCompareReqConflictPolicyEnum() CreateDataLevelCompareReqC
 	}
 }
 
+func (c CreateDataLevelCompareReqConflictPolicy) Value() string {
+	return c.value
+}
+
 func (c CreateDataLevelCompareReqConflictPolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -98,6 +102,10 @@ func GetCreateDataLevelCompareReqCompareTypeEnum() CreateDataLevelCompareReqComp
 	}
 }
 
+func (c CreateDataLevelCompareReqCompareType) Value() string {
+	return c.value
+}
+
 func (c CreateDataLevelCompareReqCompareType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -130,6 +138,10 @@ func GetCreateDataLevelCompareReqCompareModeEnum() CreateDataLevelCompareReqComp
 			value: "quick_comparison",
 		},
 	}
+}
+
+func (c CreateDataLevelCompareReqCompareMode) Value() string {
+	return c.value
 }
 
 func (c CreateDataLevelCompareReqCompareMode) MarshalJSON() ([]byte, error) {

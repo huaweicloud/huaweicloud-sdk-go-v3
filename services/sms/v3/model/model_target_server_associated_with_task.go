@@ -60,6 +60,10 @@ func GetTargetServerAssociatedWithTaskOsTypeEnum() TargetServerAssociatedWithTas
 	}
 }
 
+func (c TargetServerAssociatedWithTaskOsType) Value() string {
+	return c.value
+}
+
 func (c TargetServerAssociatedWithTaskOsType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

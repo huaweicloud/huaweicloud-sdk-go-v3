@@ -55,6 +55,10 @@ func GetHandleNotificationRequestBodyStatusEnum() HandleNotificationRequestBodyS
 	}
 }
 
+func (c HandleNotificationRequestBodyStatus) Value() string {
+	return c.value
+}
+
 func (c HandleNotificationRequestBodyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -47,6 +47,10 @@ func GetBatchSwitchoverRequestXLanguageEnum() BatchSwitchoverRequestXLanguageEnu
 	}
 }
 
+func (c BatchSwitchoverRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c BatchSwitchoverRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

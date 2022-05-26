@@ -34,6 +34,10 @@ func GetTemplateEnum() TemplateEnum {
 	}
 }
 
+func (c Template) Value() string {
+	return c.value
+}
+
 func (c Template) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

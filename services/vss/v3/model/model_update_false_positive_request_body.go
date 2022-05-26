@@ -53,6 +53,10 @@ func GetUpdateFalsePositiveRequestBodyVulnStatusEnum() UpdateFalsePositiveReques
 	}
 }
 
+func (c UpdateFalsePositiveRequestBodyVulnStatus) Value() string {
+	return c.value
+}
+
 func (c UpdateFalsePositiveRequestBodyVulnStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

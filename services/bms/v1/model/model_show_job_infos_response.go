@@ -79,6 +79,10 @@ func GetShowJobInfosResponseStatusEnum() ShowJobInfosResponseStatusEnum {
 	}
 }
 
+func (c ShowJobInfosResponseStatus) Value() string {
+	return c.value
+}
+
 func (c ShowJobInfosResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

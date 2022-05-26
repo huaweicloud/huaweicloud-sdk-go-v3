@@ -66,6 +66,10 @@ func GetShowConnectionResponseTypeEnum() ShowConnectionResponseTypeEnum {
 	}
 }
 
+func (c ShowConnectionResponseType) Value() string {
+	return c.value
+}
+
 func (c ShowConnectionResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

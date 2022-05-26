@@ -72,6 +72,10 @@ func GetTaskDispatchPeriodEnum() TaskDispatchPeriodEnum {
 	}
 }
 
+func (c TaskDispatchPeriod) Value() string {
+	return c.value
+}
+
 func (c TaskDispatchPeriod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

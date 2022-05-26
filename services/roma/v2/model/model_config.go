@@ -262,6 +262,10 @@ func GetConfigConfigNameEnum() ConfigConfigNameEnum {
 	}
 }
 
+func (c ConfigConfigName) Value() string {
+	return c.value
+}
+
 func (c ConfigConfigName) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

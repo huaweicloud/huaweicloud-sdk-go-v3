@@ -117,6 +117,10 @@ func GetNovaListServersDetailsRequestSortKeyEnum() NovaListServersDetailsRequest
 	}
 }
 
+func (c NovaListServersDetailsRequestSortKey) Value() string {
+	return c.value
+}
+
 func (c NovaListServersDetailsRequestSortKey) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -201,6 +205,10 @@ func GetNovaListServersDetailsRequestStatusEnum() NovaListServersDetailsRequestS
 			value: "VERIFY_RESIZE",
 		},
 	}
+}
+
+func (c NovaListServersDetailsRequestStatus) Value() string {
+	return c.value
 }
 
 func (c NovaListServersDetailsRequestStatus) MarshalJSON() ([]byte, error) {

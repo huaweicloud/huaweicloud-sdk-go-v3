@@ -68,6 +68,10 @@ func GetSwitchoverRespJobDirectionEnum() SwitchoverRespJobDirectionEnum {
 	}
 }
 
+func (c SwitchoverRespJobDirection) Value() string {
+	return c.value
+}
+
 func (c SwitchoverRespJobDirection) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

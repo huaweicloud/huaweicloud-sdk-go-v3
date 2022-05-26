@@ -94,6 +94,10 @@ func GetApiDebugInfoMethodEnum() ApiDebugInfoMethodEnum {
 	}
 }
 
+func (c ApiDebugInfoMethod) Value() string {
+	return c.value
+}
+
 func (c ApiDebugInfoMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

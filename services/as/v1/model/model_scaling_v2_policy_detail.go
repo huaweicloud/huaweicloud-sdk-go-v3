@@ -77,6 +77,10 @@ func GetScalingV2PolicyDetailScalingResourceTypeEnum() ScalingV2PolicyDetailScal
 	}
 }
 
+func (c ScalingV2PolicyDetailScalingResourceType) Value() string {
+	return c.value
+}
+
 func (c ScalingV2PolicyDetailScalingResourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -119,6 +123,10 @@ func GetScalingV2PolicyDetailPolicyStatusEnum() ScalingV2PolicyDetailPolicyStatu
 	}
 }
 
+func (c ScalingV2PolicyDetailPolicyStatus) Value() string {
+	return c.value
+}
+
 func (c ScalingV2PolicyDetailPolicyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -159,6 +167,10 @@ func GetScalingV2PolicyDetailScalingPolicyTypeEnum() ScalingV2PolicyDetailScalin
 			value: "RECURRENCE",
 		},
 	}
+}
+
+func (c ScalingV2PolicyDetailScalingPolicyType) Value() string {
+	return c.value
 }
 
 func (c ScalingV2PolicyDetailScalingPolicyType) MarshalJSON() ([]byte, error) {

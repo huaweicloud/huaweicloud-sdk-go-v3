@@ -79,6 +79,10 @@ func GetStructTemplateModelTemplateTypeEnum() StructTemplateModelTemplateTypeEnu
 	}
 }
 
+func (c StructTemplateModelTemplateType) Value() string {
+	return c.value
+}
+
 func (c StructTemplateModelTemplateType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

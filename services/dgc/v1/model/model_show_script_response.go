@@ -81,6 +81,10 @@ func GetShowScriptResponseTypeEnum() ShowScriptResponseTypeEnum {
 	}
 }
 
+func (c ShowScriptResponseType) Value() string {
+	return c.value
+}
+
 func (c ShowScriptResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

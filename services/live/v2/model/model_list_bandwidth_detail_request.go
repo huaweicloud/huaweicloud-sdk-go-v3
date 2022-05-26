@@ -72,6 +72,10 @@ func GetListBandwidthDetailRequestProtocolEnum() ListBandwidthDetailRequestProto
 	}
 }
 
+func (c ListBandwidthDetailRequestProtocol) Value() string {
+	return c.value
+}
+
 func (c ListBandwidthDetailRequestProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -110,6 +114,10 @@ func GetListBandwidthDetailRequestIntervalEnum() ListBandwidthDetailRequestInter
 			value: 86400,
 		},
 	}
+}
+
+func (c ListBandwidthDetailRequestInterval) Value() int32 {
+	return c.value
 }
 
 func (c ListBandwidthDetailRequestInterval) MarshalJSON() ([]byte, error) {

@@ -70,6 +70,10 @@ func GetDedicatedResourceStatusEnum() DedicatedResourceStatusEnum {
 	}
 }
 
+func (c DedicatedResourceStatus) Value() string {
+	return c.value
+}
+
 func (c DedicatedResourceStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

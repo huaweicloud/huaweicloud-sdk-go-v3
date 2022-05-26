@@ -55,6 +55,10 @@ func GetContainerNetworkModeEnum() ContainerNetworkModeEnum {
 	}
 }
 
+func (c ContainerNetworkMode) Value() string {
+	return c.value
+}
+
 func (c ContainerNetworkMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

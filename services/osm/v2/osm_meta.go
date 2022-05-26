@@ -1728,23 +1728,10 @@ func GenReqDefForListUnreadNewInstantMessages() *def.HttpRequestDef {
 
 func GenReqDefForSendVerifyCodes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/servicerequest/verifycodes").
+		WithMethod(http.MethodPost).
+		WithPath("/v2/servicerequest/verifycodes/send").
 		WithResponse(new(model.SendVerifyCodesResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContactValue").
-		WithJsonTag("contact_value").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContactWay").
-		WithJsonTag("contact_way").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AreaCode").
-		WithJsonTag("area_code").
-		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XSite").
@@ -1758,6 +1745,10 @@ func GenReqDefForSendVerifyCodes() *def.HttpRequestDef {
 		WithName("XTimeZone").
 		WithJsonTag("X-Time-Zone").
 		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

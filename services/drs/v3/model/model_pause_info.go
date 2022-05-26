@@ -48,6 +48,10 @@ func GetPauseInfoPauseModeEnum() PauseInfoPauseModeEnum {
 	}
 }
 
+func (c PauseInfoPauseMode) Value() string {
+	return c.value
+}
+
 func (c PauseInfoPauseMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

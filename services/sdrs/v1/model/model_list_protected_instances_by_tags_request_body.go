@@ -66,6 +66,10 @@ func GetListProtectedInstancesByTagsRequestBodyActionEnum() ListProtectedInstanc
 	}
 }
 
+func (c ListProtectedInstancesByTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c ListProtectedInstancesByTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

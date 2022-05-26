@@ -79,6 +79,10 @@ func GetCreateTaskReqTaskTypeEnum() CreateTaskReqTaskTypeEnum {
 	}
 }
 
+func (c CreateTaskReqTaskType) Value() string {
+	return c.value
+}
+
 func (c CreateTaskReqTaskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

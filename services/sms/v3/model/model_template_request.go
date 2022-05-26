@@ -89,6 +89,10 @@ func GetTemplateRequestVolumetypeEnum() TemplateRequestVolumetypeEnum {
 	}
 }
 
+func (c TemplateRequestVolumetype) Value() string {
+	return c.value
+}
+
 func (c TemplateRequestVolumetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -129,6 +133,10 @@ func GetTemplateRequestDataVolumeTypeEnum() TemplateRequestDataVolumeTypeEnum {
 			value: "SATA",
 		},
 	}
+}
+
+func (c TemplateRequestDataVolumeType) Value() string {
+	return c.value
 }
 
 func (c TemplateRequestDataVolumeType) MarshalJSON() ([]byte, error) {

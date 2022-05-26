@@ -67,6 +67,10 @@ func GetInstInfoEngineTypeEnum() InstInfoEngineTypeEnum {
 	}
 }
 
+func (c InstInfoEngineType) Value() string {
+	return c.value
+}
+
 func (c InstInfoEngineType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -99,6 +103,10 @@ func GetInstInfoInstTypeEnum() InstInfoInstTypeEnum {
 			value: "high",
 		},
 	}
+}
+
+func (c InstInfoInstType) Value() string {
+	return c.value
 }
 
 func (c InstInfoInstType) MarshalJSON() ([]byte, error) {
@@ -137,6 +145,10 @@ func GetInstInfoStatusEnum() InstInfoStatusEnum {
 			value: "deleted",
 		},
 	}
+}
+
+func (c InstInfoStatus) Value() string {
+	return c.value
 }
 
 func (c InstInfoStatus) MarshalJSON() ([]byte, error) {

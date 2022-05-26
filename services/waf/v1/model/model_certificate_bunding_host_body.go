@@ -51,6 +51,10 @@ func GetCertificateBundingHostBodyWafTypeEnum() CertificateBundingHostBodyWafTyp
 	}
 }
 
+func (c CertificateBundingHostBodyWafType) Value() string {
+	return c.value
+}
+
 func (c CertificateBundingHostBodyWafType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

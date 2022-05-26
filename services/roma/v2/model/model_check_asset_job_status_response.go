@@ -67,6 +67,10 @@ func GetCheckAssetJobStatusResponseTypeEnum() CheckAssetJobStatusResponseTypeEnu
 	}
 }
 
+func (c CheckAssetJobStatusResponseType) Value() string {
+	return c.value
+}
+
 func (c CheckAssetJobStatusResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -107,6 +111,10 @@ func GetCheckAssetJobStatusResponseStatusEnum() CheckAssetJobStatusResponseStatu
 			value: "FAILED",
 		},
 	}
+}
+
+func (c CheckAssetJobStatusResponseStatus) Value() string {
+	return c.value
 }
 
 func (c CheckAssetJobStatusResponseStatus) MarshalJSON() ([]byte, error) {

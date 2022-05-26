@@ -67,6 +67,10 @@ func GetApiBindAclInfoEntityTypeEnum() ApiBindAclInfoEntityTypeEnum {
 	}
 }
 
+func (c ApiBindAclInfoEntityType) Value() string {
+	return c.value
+}
+
 func (c ApiBindAclInfoEntityType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -103,6 +107,10 @@ func GetApiBindAclInfoAclTypeEnum() ApiBindAclInfoAclTypeEnum {
 			value: "DENY",
 		},
 	}
+}
+
+func (c ApiBindAclInfoAclType) Value() string {
+	return c.value
 }
 
 func (c ApiBindAclInfoAclType) MarshalJSON() ([]byte, error) {

@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/mrs/v2/model"
 )
 
@@ -19,7 +19,7 @@ func MrsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 批量删除作业
+// BatchDeleteJobs 批量删除作业
 //
 // 在MRS集群中批量删除作业。
 //
@@ -35,7 +35,13 @@ func (c *MrsClient) BatchDeleteJobs(request *model.BatchDeleteJobsRequest) (*mod
 	}
 }
 
-// 创建集群
+// BatchDeleteJobsInvoker 批量删除作业
+func (c *MrsClient) BatchDeleteJobsInvoker(request *model.BatchDeleteJobsRequest) *BatchDeleteJobsInvoker {
+	requestDef := GenReqDefForBatchDeleteJobs()
+	return &BatchDeleteJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCluster 创建集群
 //
 // 创建一个MRS集群。
 //
@@ -57,7 +63,13 @@ func (c *MrsClient) CreateCluster(request *model.CreateClusterRequest) (*model.C
 	}
 }
 
-// 新增并执行作业
+// CreateClusterInvoker 创建集群
+func (c *MrsClient) CreateClusterInvoker(request *model.CreateClusterRequest) *CreateClusterInvoker {
+	requestDef := GenReqDefForCreateCluster()
+	return &CreateClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateExecuteJob 新增并执行作业
 //
 // 在MRS集群中新增并提交一个作业。
 //
@@ -79,7 +91,13 @@ func (c *MrsClient) CreateExecuteJob(request *model.CreateExecuteJobRequest) (*m
 	}
 }
 
-// 查询用户（组）与IAM委托的映射关系
+// CreateExecuteJobInvoker 新增并执行作业
+func (c *MrsClient) CreateExecuteJobInvoker(request *model.CreateExecuteJobRequest) *CreateExecuteJobInvoker {
+	requestDef := GenReqDefForCreateExecuteJob()
+	return &CreateExecuteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAgencyMapping 查询用户（组）与IAM委托的映射关系
 //
 // 获取用户（组）与IAM委托之间的映射关系的详细信息。
 //
@@ -95,7 +113,13 @@ func (c *MrsClient) ShowAgencyMapping(request *model.ShowAgencyMappingRequest) (
 	}
 }
 
-// 查询作业列表信息
+// ShowAgencyMappingInvoker 查询用户（组）与IAM委托的映射关系
+func (c *MrsClient) ShowAgencyMappingInvoker(request *model.ShowAgencyMappingRequest) *ShowAgencyMappingInvoker {
+	requestDef := GenReqDefForShowAgencyMapping()
+	return &ShowAgencyMappingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobExeListNew 查询作业列表信息
 //
 // 在MRS指定集群中查询作业列表信息。
 //
@@ -111,7 +135,13 @@ func (c *MrsClient) ShowJobExeListNew(request *model.ShowJobExeListNewRequest) (
 	}
 }
 
-// 查询单个作业信息
+// ShowJobExeListNewInvoker 查询作业列表信息
+func (c *MrsClient) ShowJobExeListNewInvoker(request *model.ShowJobExeListNewRequest) *ShowJobExeListNewInvoker {
+	requestDef := GenReqDefForShowJobExeListNew()
+	return &ShowJobExeListNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSingleJobExe 查询单个作业信息
 //
 // 在MRS集群中查询指定作业的详细信息。
 //
@@ -127,7 +157,13 @@ func (c *MrsClient) ShowSingleJobExe(request *model.ShowSingleJobExeRequest) (*m
 	}
 }
 
-// 获取SQL结果
+// ShowSingleJobExeInvoker 查询单个作业信息
+func (c *MrsClient) ShowSingleJobExeInvoker(request *model.ShowSingleJobExeRequest) *ShowSingleJobExeInvoker {
+	requestDef := GenReqDefForShowSingleJobExe()
+	return &ShowSingleJobExeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSqlResultWithJob 获取SQL结果
 //
 // 在MRS集群中查询SparkSql和SparkScript两种类型作业的SQL语句运行完成后返回的查询结果。
 //
@@ -143,7 +179,13 @@ func (c *MrsClient) ShowSqlResultWithJob(request *model.ShowSqlResultWithJobRequ
 	}
 }
 
-// 终止作业
+// ShowSqlResultWithJobInvoker 获取SQL结果
+func (c *MrsClient) ShowSqlResultWithJobInvoker(request *model.ShowSqlResultWithJobRequest) *ShowSqlResultWithJobInvoker {
+	requestDef := GenReqDefForShowSqlResultWithJob()
+	return &ShowSqlResultWithJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopJob 终止作业
 //
 // 在MRS集群中终止指定作业。
 //
@@ -159,7 +201,13 @@ func (c *MrsClient) StopJob(request *model.StopJobRequest) (*model.StopJobRespon
 	}
 }
 
-// 更新用户（组）与IAM委托的映射关系
+// StopJobInvoker 终止作业
+func (c *MrsClient) StopJobInvoker(request *model.StopJobRequest) *StopJobInvoker {
+	requestDef := GenReqDefForStopJob()
+	return &StopJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAgencyMapping 更新用户（组）与IAM委托的映射关系
 //
 // 更新用户（组）与IAM委托之间的映射关系。
 //
@@ -175,7 +223,13 @@ func (c *MrsClient) UpdateAgencyMapping(request *model.UpdateAgencyMappingReques
 	}
 }
 
-// 获取指定目录文件列表
+// UpdateAgencyMappingInvoker 更新用户（组）与IAM委托的映射关系
+func (c *MrsClient) UpdateAgencyMappingInvoker(request *model.UpdateAgencyMappingRequest) *UpdateAgencyMappingInvoker {
+	requestDef := GenReqDefForUpdateAgencyMapping()
+	return &UpdateAgencyMappingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHdfsFileList 获取指定目录文件列表
 //
 // 在MRS集群中获取指定目录文件列表。
 //
@@ -191,7 +245,13 @@ func (c *MrsClient) ShowHdfsFileList(request *model.ShowHdfsFileListRequest) (*m
 	}
 }
 
-// 取消SQL执行任务
+// ShowHdfsFileListInvoker 获取指定目录文件列表
+func (c *MrsClient) ShowHdfsFileListInvoker(request *model.ShowHdfsFileListRequest) *ShowHdfsFileListInvoker {
+	requestDef := GenReqDefForShowHdfsFileList()
+	return &ShowHdfsFileListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelSql 取消SQL执行任务
 //
 // 在MRS集群中取消一条SQL的执行任务。
 //
@@ -207,7 +267,13 @@ func (c *MrsClient) CancelSql(request *model.CancelSqlRequest) (*model.CancelSql
 	}
 }
 
-// 提交SQL语句
+// CancelSqlInvoker 取消SQL执行任务
+func (c *MrsClient) CancelSqlInvoker(request *model.CancelSqlRequest) *CancelSqlInvoker {
+	requestDef := GenReqDefForCancelSql()
+	return &CancelSqlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteSql 提交SQL语句
 //
 // 在MRS集群中提交并执行一条SQL语句。
 //
@@ -223,7 +289,13 @@ func (c *MrsClient) ExecuteSql(request *model.ExecuteSqlRequest) (*model.Execute
 	}
 }
 
-// 查询SQL结果
+// ExecuteSqlInvoker 提交SQL语句
+func (c *MrsClient) ExecuteSqlInvoker(request *model.ExecuteSqlRequest) *ExecuteSqlInvoker {
+	requestDef := GenReqDefForExecuteSql()
+	return &ExecuteSqlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSqlResult 查询SQL结果
 //
 // 在MRS集群中查询一条SQL的执行结果。
 //
@@ -237,4 +309,10 @@ func (c *MrsClient) ShowSqlResult(request *model.ShowSqlResultRequest) (*model.S
 	} else {
 		return resp.(*model.ShowSqlResultResponse), nil
 	}
+}
+
+// ShowSqlResultInvoker 查询SQL结果
+func (c *MrsClient) ShowSqlResultInvoker(request *model.ShowSqlResultRequest) *ShowSqlResultInvoker {
+	requestDef := GenReqDefForShowSqlResult()
+	return &ShowSqlResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

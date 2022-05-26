@@ -105,6 +105,10 @@ func GetBackupRespImageTypeEnum() BackupRespImageTypeEnum {
 	}
 }
 
+func (c BackupRespImageType) Value() string {
+	return c.value
+}
+
 func (c BackupRespImageType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -141,6 +145,10 @@ func GetBackupRespResourceTypeEnum() BackupRespResourceTypeEnum {
 			value: "OS::Cinder::Volume",
 		},
 	}
+}
+
+func (c BackupRespResourceType) Value() string {
+	return c.value
 }
 
 func (c BackupRespResourceType) MarshalJSON() ([]byte, error) {
@@ -203,6 +211,10 @@ func GetBackupRespStatusEnum() BackupRespStatusEnum {
 			value: "waiting_restore",
 		},
 	}
+}
+
+func (c BackupRespStatus) Value() string {
+	return c.value
 }
 
 func (c BackupRespStatus) MarshalJSON() ([]byte, error) {

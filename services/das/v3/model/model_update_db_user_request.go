@@ -53,6 +53,10 @@ func GetUpdateDbUserRequestXLanguageEnum() UpdateDbUserRequestXLanguageEnum {
 	}
 }
 
+func (c UpdateDbUserRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c UpdateDbUserRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -54,6 +54,10 @@ func GetFlagPci3dsEnum() FlagPci3dsEnum {
 	}
 }
 
+func (c FlagPci3ds) Value() string {
+	return c.value
+}
+
 func (c FlagPci3ds) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -90,6 +94,10 @@ func GetFlagPciDssEnum() FlagPciDssEnum {
 			value: "false",
 		},
 	}
+}
+
+func (c FlagPciDss) Value() string {
+	return c.value
 }
 
 func (c FlagPciDss) MarshalJSON() ([]byte, error) {
@@ -130,6 +138,10 @@ func GetFlagCnameEnum() FlagCnameEnum {
 	}
 }
 
+func (c FlagCname) Value() string {
+	return c.value
+}
+
 func (c FlagCname) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -166,6 +178,10 @@ func GetFlagIsDualAzEnum() FlagIsDualAzEnum {
 			value: "false",
 		},
 	}
+}
+
+func (c FlagIsDualAz) Value() string {
+	return c.value
 }
 
 func (c FlagIsDualAz) MarshalJSON() ([]byte, error) {

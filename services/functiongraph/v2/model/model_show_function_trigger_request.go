@@ -81,6 +81,10 @@ func GetShowFunctionTriggerRequestTriggerTypeCodeEnum() ShowFunctionTriggerReque
 	}
 }
 
+func (c ShowFunctionTriggerRequestTriggerTypeCode) Value() string {
+	return c.value
+}
+
 func (c ShowFunctionTriggerRequestTriggerTypeCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

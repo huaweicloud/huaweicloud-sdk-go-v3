@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/waf/v1/model"
 )
 
@@ -19,7 +19,7 @@ func WafClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 绑定证书到域名
+// ApplyCertificateToHost 绑定证书到域名
 //
 // 绑定证书到域名
 //
@@ -35,7 +35,13 @@ func (c *WafClient) ApplyCertificateToHost(request *model.ApplyCertificateToHost
 	}
 }
 
-// 创建防篡改规则
+// ApplyCertificateToHostInvoker 绑定证书到域名
+func (c *WafClient) ApplyCertificateToHostInvoker(request *model.ApplyCertificateToHostRequest) *ApplyCertificateToHostInvoker {
+	requestDef := GenReqDefForApplyCertificateToHost()
+	return &ApplyCertificateToHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAntiTamperRule 创建防篡改规则
 //
 // 创建防篡改规则
 //
@@ -51,7 +57,13 @@ func (c *WafClient) CreateAntiTamperRule(request *model.CreateAntiTamperRuleRequ
 	}
 }
 
-// 创建证书
+// CreateAntiTamperRuleInvoker 创建防篡改规则
+func (c *WafClient) CreateAntiTamperRuleInvoker(request *model.CreateAntiTamperRuleRequest) *CreateAntiTamperRuleInvoker {
+	requestDef := GenReqDefForCreateAntiTamperRule()
+	return &CreateAntiTamperRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCertificate 创建证书
 //
 // 创建证书
 //
@@ -67,7 +79,13 @@ func (c *WafClient) CreateCertificate(request *model.CreateCertificateRequest) (
 	}
 }
 
-// 创建地理位置规则
+// CreateCertificateInvoker 创建证书
+func (c *WafClient) CreateCertificateInvoker(request *model.CreateCertificateRequest) *CreateCertificateInvoker {
+	requestDef := GenReqDefForCreateCertificate()
+	return &CreateCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateGeoipRule 创建地理位置规则
 //
 // 创建地理位置规则
 //
@@ -83,7 +101,13 @@ func (c *WafClient) CreateGeoipRule(request *model.CreateGeoipRuleRequest) (*mod
 	}
 }
 
-// 创建云模式防护域名
+// CreateGeoipRuleInvoker 创建地理位置规则
+func (c *WafClient) CreateGeoipRuleInvoker(request *model.CreateGeoipRuleRequest) *CreateGeoipRuleInvoker {
+	requestDef := GenReqDefForCreateGeoipRule()
+	return &CreateGeoipRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateHost 创建云模式防护域名
 //
 // 创建云模式防护域名
 //
@@ -99,7 +123,13 @@ func (c *WafClient) CreateHost(request *model.CreateHostRequest) (*model.CreateH
 	}
 }
 
-// 创建误报屏蔽规则
+// CreateHostInvoker 创建云模式防护域名
+func (c *WafClient) CreateHostInvoker(request *model.CreateHostRequest) *CreateHostInvoker {
+	requestDef := GenReqDefForCreateHost()
+	return &CreateHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateIgnoreRule 创建误报屏蔽规则
 //
 // 创建误报屏蔽规则
 //
@@ -115,7 +145,13 @@ func (c *WafClient) CreateIgnoreRule(request *model.CreateIgnoreRuleRequest) (*m
 	}
 }
 
-// 创建防护策略
+// CreateIgnoreRuleInvoker 创建误报屏蔽规则
+func (c *WafClient) CreateIgnoreRuleInvoker(request *model.CreateIgnoreRuleRequest) *CreateIgnoreRuleInvoker {
+	requestDef := GenReqDefForCreateIgnoreRule()
+	return &CreateIgnoreRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePolicy 创建防护策略
 //
 // 创建防护策略
 //
@@ -131,7 +167,13 @@ func (c *WafClient) CreatePolicy(request *model.CreatePolicyRequest) (*model.Cre
 	}
 }
 
-// 创建独享模式域名
+// CreatePolicyInvoker 创建防护策略
+func (c *WafClient) CreatePolicyInvoker(request *model.CreatePolicyRequest) *CreatePolicyInvoker {
+	requestDef := GenReqDefForCreatePolicy()
+	return &CreatePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePremiumHost 创建独享模式域名
 //
 // 创建独享模式域名
 //
@@ -147,7 +189,13 @@ func (c *WafClient) CreatePremiumHost(request *model.CreatePremiumHostRequest) (
 	}
 }
 
-// 创建隐私屏蔽防护规则
+// CreatePremiumHostInvoker 创建独享模式域名
+func (c *WafClient) CreatePremiumHostInvoker(request *model.CreatePremiumHostRequest) *CreatePremiumHostInvoker {
+	requestDef := GenReqDefForCreatePremiumHost()
+	return &CreatePremiumHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePrivacyRule 创建隐私屏蔽防护规则
 //
 // 创建隐私屏蔽防护规则
 //
@@ -163,7 +211,13 @@ func (c *WafClient) CreatePrivacyRule(request *model.CreatePrivacyRuleRequest) (
 	}
 }
 
-// 创建引用表
+// CreatePrivacyRuleInvoker 创建隐私屏蔽防护规则
+func (c *WafClient) CreatePrivacyRuleInvoker(request *model.CreatePrivacyRuleRequest) *CreatePrivacyRuleInvoker {
+	requestDef := GenReqDefForCreatePrivacyRule()
+	return &CreatePrivacyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateValueList 创建引用表
 //
 // 创建引用表
 //
@@ -179,7 +233,13 @@ func (c *WafClient) CreateValueList(request *model.CreateValueListRequest) (*mod
 	}
 }
 
-// 创建黑白名单规则
+// CreateValueListInvoker 创建引用表
+func (c *WafClient) CreateValueListInvoker(request *model.CreateValueListRequest) *CreateValueListInvoker {
+	requestDef := GenReqDefForCreateValueList()
+	return &CreateValueListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateWhiteblackipRule 创建黑白名单规则
 //
 // 创建黑白名单规则
 //
@@ -195,7 +255,13 @@ func (c *WafClient) CreateWhiteblackipRule(request *model.CreateWhiteblackipRule
 	}
 }
 
-// 删除防篡改防护规则
+// CreateWhiteblackipRuleInvoker 创建黑白名单规则
+func (c *WafClient) CreateWhiteblackipRuleInvoker(request *model.CreateWhiteblackipRuleRequest) *CreateWhiteblackipRuleInvoker {
+	requestDef := GenReqDefForCreateWhiteblackipRule()
+	return &CreateWhiteblackipRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAntitamperRule 删除防篡改防护规则
 //
 // 删除防篡改防护规则
 //
@@ -211,7 +277,13 @@ func (c *WafClient) DeleteAntitamperRule(request *model.DeleteAntitamperRuleRequ
 	}
 }
 
-// 删除证书
+// DeleteAntitamperRuleInvoker 删除防篡改防护规则
+func (c *WafClient) DeleteAntitamperRuleInvoker(request *model.DeleteAntitamperRuleRequest) *DeleteAntitamperRuleInvoker {
+	requestDef := GenReqDefForDeleteAntitamperRule()
+	return &DeleteAntitamperRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCertificate 删除证书
 //
 // 删除证书
 //
@@ -227,7 +299,13 @@ func (c *WafClient) DeleteCertificate(request *model.DeleteCertificateRequest) (
 	}
 }
 
-// 删除地理位置防护规则
+// DeleteCertificateInvoker 删除证书
+func (c *WafClient) DeleteCertificateInvoker(request *model.DeleteCertificateRequest) *DeleteCertificateInvoker {
+	requestDef := GenReqDefForDeleteCertificate()
+	return &DeleteCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGeoipRule 删除地理位置防护规则
 //
 // 删除地理位置防护规则
 //
@@ -243,7 +321,13 @@ func (c *WafClient) DeleteGeoipRule(request *model.DeleteGeoipRuleRequest) (*mod
 	}
 }
 
-// 删除云模式防护域名
+// DeleteGeoipRuleInvoker 删除地理位置防护规则
+func (c *WafClient) DeleteGeoipRuleInvoker(request *model.DeleteGeoipRuleRequest) *DeleteGeoipRuleInvoker {
+	requestDef := GenReqDefForDeleteGeoipRule()
+	return &DeleteGeoipRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHost 删除云模式防护域名
 //
 // 删除云模式防护域名
 //
@@ -259,7 +343,13 @@ func (c *WafClient) DeleteHost(request *model.DeleteHostRequest) (*model.DeleteH
 	}
 }
 
-// 删除误报屏蔽防护规则
+// DeleteHostInvoker 删除云模式防护域名
+func (c *WafClient) DeleteHostInvoker(request *model.DeleteHostRequest) *DeleteHostInvoker {
+	requestDef := GenReqDefForDeleteHost()
+	return &DeleteHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteIgnoreRule 删除误报屏蔽防护规则
 //
 // 删除误报屏蔽防护规则
 //
@@ -275,7 +365,13 @@ func (c *WafClient) DeleteIgnoreRule(request *model.DeleteIgnoreRuleRequest) (*m
 	}
 }
 
-// 删除防护策略
+// DeleteIgnoreRuleInvoker 删除误报屏蔽防护规则
+func (c *WafClient) DeleteIgnoreRuleInvoker(request *model.DeleteIgnoreRuleRequest) *DeleteIgnoreRuleInvoker {
+	requestDef := GenReqDefForDeleteIgnoreRule()
+	return &DeleteIgnoreRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePolicy 删除防护策略
 //
 // 删除防护策略
 //
@@ -291,7 +387,13 @@ func (c *WafClient) DeletePolicy(request *model.DeletePolicyRequest) (*model.Del
 	}
 }
 
-// 删除独享模式域名
+// DeletePolicyInvoker 删除防护策略
+func (c *WafClient) DeletePolicyInvoker(request *model.DeletePolicyRequest) *DeletePolicyInvoker {
+	requestDef := GenReqDefForDeletePolicy()
+	return &DeletePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePremiumHost 删除独享模式域名
 //
 // 删除独享模式域名
 //
@@ -307,7 +409,13 @@ func (c *WafClient) DeletePremiumHost(request *model.DeletePremiumHostRequest) (
 	}
 }
 
-// 删除隐私屏蔽防护规则
+// DeletePremiumHostInvoker 删除独享模式域名
+func (c *WafClient) DeletePremiumHostInvoker(request *model.DeletePremiumHostRequest) *DeletePremiumHostInvoker {
+	requestDef := GenReqDefForDeletePremiumHost()
+	return &DeletePremiumHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePrivacyRule 删除隐私屏蔽防护规则
 //
 // 删除隐私屏蔽防护规则
 //
@@ -323,7 +431,13 @@ func (c *WafClient) DeletePrivacyRule(request *model.DeletePrivacyRuleRequest) (
 	}
 }
 
-// 删除引用表
+// DeletePrivacyRuleInvoker 删除隐私屏蔽防护规则
+func (c *WafClient) DeletePrivacyRuleInvoker(request *model.DeletePrivacyRuleRequest) *DeletePrivacyRuleInvoker {
+	requestDef := GenReqDefForDeletePrivacyRule()
+	return &DeletePrivacyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteValueList 删除引用表
 //
 // 删除引用表
 //
@@ -339,7 +453,13 @@ func (c *WafClient) DeleteValueList(request *model.DeleteValueListRequest) (*mod
 	}
 }
 
-// 删除黑白名单防护规则
+// DeleteValueListInvoker 删除引用表
+func (c *WafClient) DeleteValueListInvoker(request *model.DeleteValueListRequest) *DeleteValueListInvoker {
+	requestDef := GenReqDefForDeleteValueList()
+	return &DeleteValueListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteWhiteBlackIpRule 删除黑白名单防护规则
 //
 // 删除黑白名单防护规则
 //
@@ -355,7 +475,13 @@ func (c *WafClient) DeleteWhiteBlackIpRule(request *model.DeleteWhiteBlackIpRule
 	}
 }
 
-// 查询防篡改规则列表
+// DeleteWhiteBlackIpRuleInvoker 删除黑白名单防护规则
+func (c *WafClient) DeleteWhiteBlackIpRuleInvoker(request *model.DeleteWhiteBlackIpRuleRequest) *DeleteWhiteBlackIpRuleInvoker {
+	requestDef := GenReqDefForDeleteWhiteBlackIpRule()
+	return &DeleteWhiteBlackIpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAntitamperRule 查询防篡改规则列表
 //
 // 查询防篡改规则列表
 //
@@ -371,7 +497,13 @@ func (c *WafClient) ListAntitamperRule(request *model.ListAntitamperRuleRequest)
 	}
 }
 
-// 查询安全统计带宽数据
+// ListAntitamperRuleInvoker 查询防篡改规则列表
+func (c *WafClient) ListAntitamperRuleInvoker(request *model.ListAntitamperRuleRequest) *ListAntitamperRuleInvoker {
+	requestDef := GenReqDefForListAntitamperRule()
+	return &ListAntitamperRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBandwidthTimeline 查询安全统计带宽数据
 //
 // 查询安全统计带宽数据
 //
@@ -387,7 +519,13 @@ func (c *WafClient) ListBandwidthTimeline(request *model.ListBandwidthTimelineRe
 	}
 }
 
-// 查询证书列表
+// ListBandwidthTimelineInvoker 查询安全统计带宽数据
+func (c *WafClient) ListBandwidthTimelineInvoker(request *model.ListBandwidthTimelineRequest) *ListBandwidthTimelineInvoker {
+	requestDef := GenReqDefForListBandwidthTimeline()
+	return &ListBandwidthTimelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCertificates 查询证书列表
 //
 // 查询证书列表
 //
@@ -403,7 +541,13 @@ func (c *WafClient) ListCertificates(request *model.ListCertificatesRequest) (*m
 	}
 }
 
-// 查询全部防护域名列表
+// ListCertificatesInvoker 查询证书列表
+func (c *WafClient) ListCertificatesInvoker(request *model.ListCertificatesRequest) *ListCertificatesInvoker {
+	requestDef := GenReqDefForListCertificates()
+	return &ListCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCompositeHosts 查询全部防护域名列表
 //
 // 查询全部防护域名列表
 //
@@ -419,7 +563,13 @@ func (c *WafClient) ListCompositeHosts(request *model.ListCompositeHostsRequest)
 	}
 }
 
-// 查询攻击事件列表
+// ListCompositeHostsInvoker 查询全部防护域名列表
+func (c *WafClient) ListCompositeHostsInvoker(request *model.ListCompositeHostsRequest) *ListCompositeHostsInvoker {
+	requestDef := GenReqDefForListCompositeHosts()
+	return &ListCompositeHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEvent 查询攻击事件列表
 //
 // 查询攻击事件列表，该API暂时不支持查询全部防护事件，pagesize参数不可设为-1，由于性能原因，数据量越大消耗的内存越大，后端最多限制查询10000条数据，例如：自定义时间段内的数据超过了10000条，就无法查出page为101，pagesize为100之后的数据，需要调整时间区间，再进行查询
 //
@@ -435,7 +585,13 @@ func (c *WafClient) ListEvent(request *model.ListEventRequest) (*model.ListEvent
 	}
 }
 
-// 查询地理位置规则列表
+// ListEventInvoker 查询攻击事件列表
+func (c *WafClient) ListEventInvoker(request *model.ListEventRequest) *ListEventInvoker {
+	requestDef := GenReqDefForListEvent()
+	return &ListEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGeoipRule 查询地理位置规则列表
 //
 // 查询地理位置规则列表
 //
@@ -451,7 +607,13 @@ func (c *WafClient) ListGeoipRule(request *model.ListGeoipRuleRequest) (*model.L
 	}
 }
 
-// 查询云模式防护域名列表
+// ListGeoipRuleInvoker 查询地理位置规则列表
+func (c *WafClient) ListGeoipRuleInvoker(request *model.ListGeoipRuleRequest) *ListGeoipRuleInvoker {
+	requestDef := GenReqDefForListGeoipRule()
+	return &ListGeoipRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHost 查询云模式防护域名列表
 //
 // 查询云模式防护域名列表
 //
@@ -467,7 +629,13 @@ func (c *WafClient) ListHost(request *model.ListHostRequest) (*model.ListHostRes
 	}
 }
 
-// 获取云模式域名路由信息
+// ListHostInvoker 查询云模式防护域名列表
+func (c *WafClient) ListHostInvoker(request *model.ListHostRequest) *ListHostInvoker {
+	requestDef := GenReqDefForListHost()
+	return &ListHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHostRoute 获取云模式域名路由信息
 //
 // 返回路由信息
 //
@@ -483,7 +651,13 @@ func (c *WafClient) ListHostRoute(request *model.ListHostRouteRequest) (*model.L
 	}
 }
 
-// 查询误报屏蔽规则列表
+// ListHostRouteInvoker 获取云模式域名路由信息
+func (c *WafClient) ListHostRouteInvoker(request *model.ListHostRouteRequest) *ListHostRouteInvoker {
+	requestDef := GenReqDefForListHostRoute()
+	return &ListHostRouteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIgnoreRule 查询误报屏蔽规则列表
 //
 // 查询误报屏蔽规则列表
 //
@@ -499,7 +673,13 @@ func (c *WafClient) ListIgnoreRule(request *model.ListIgnoreRuleRequest) (*model
 	}
 }
 
-// 查询防护策略列表
+// ListIgnoreRuleInvoker 查询误报屏蔽规则列表
+func (c *WafClient) ListIgnoreRuleInvoker(request *model.ListIgnoreRuleRequest) *ListIgnoreRuleInvoker {
+	requestDef := GenReqDefForListIgnoreRule()
+	return &ListIgnoreRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPolicy 查询防护策略列表
 //
 // 查询防护策略列表
 //
@@ -515,7 +695,13 @@ func (c *WafClient) ListPolicy(request *model.ListPolicyRequest) (*model.ListPol
 	}
 }
 
-// 独享模式域名列表
+// ListPolicyInvoker 查询防护策略列表
+func (c *WafClient) ListPolicyInvoker(request *model.ListPolicyRequest) *ListPolicyInvoker {
+	requestDef := GenReqDefForListPolicy()
+	return &ListPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPremiumHost 独享模式域名列表
 //
 // 独享模式域名列表
 //
@@ -531,7 +717,13 @@ func (c *WafClient) ListPremiumHost(request *model.ListPremiumHostRequest) (*mod
 	}
 }
 
-// 查询隐私屏蔽防护规则
+// ListPremiumHostInvoker 独享模式域名列表
+func (c *WafClient) ListPremiumHostInvoker(request *model.ListPremiumHostRequest) *ListPremiumHostInvoker {
+	requestDef := GenReqDefForListPremiumHost()
+	return &ListPremiumHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPrivacyRule 查询隐私屏蔽防护规则
 //
 // 查询隐私屏蔽防护规则
 //
@@ -547,7 +739,13 @@ func (c *WafClient) ListPrivacyRule(request *model.ListPrivacyRuleRequest) (*mod
 	}
 }
 
-// 查询安全统计qps次数
+// ListPrivacyRuleInvoker 查询隐私屏蔽防护规则
+func (c *WafClient) ListPrivacyRuleInvoker(request *model.ListPrivacyRuleRequest) *ListPrivacyRuleInvoker {
+	requestDef := GenReqDefForListPrivacyRule()
+	return &ListPrivacyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQpsTimeline 查询安全统计qps次数
 //
 // 查询安全统计qps次数
 //
@@ -563,7 +761,13 @@ func (c *WafClient) ListQpsTimeline(request *model.ListQpsTimelineRequest) (*mod
 	}
 }
 
-// 查询安全总览请求数据
+// ListQpsTimelineInvoker 查询安全统计qps次数
+func (c *WafClient) ListQpsTimelineInvoker(request *model.ListQpsTimelineRequest) *ListQpsTimelineInvoker {
+	requestDef := GenReqDefForListQpsTimeline()
+	return &ListQpsTimelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListStatistics 查询安全总览请求数据
 //
 // 查询安全总览请求数据
 //
@@ -579,7 +783,13 @@ func (c *WafClient) ListStatistics(request *model.ListStatisticsRequest) (*model
 	}
 }
 
-// 查询业务异常数量
+// ListStatisticsInvoker 查询安全总览请求数据
+func (c *WafClient) ListStatisticsInvoker(request *model.ListStatisticsRequest) *ListStatisticsInvoker {
+	requestDef := GenReqDefForListStatistics()
+	return &ListStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTopAbnormal 查询业务异常数量
 //
 // 查询业务异常数量
 //
@@ -595,7 +805,13 @@ func (c *WafClient) ListTopAbnormal(request *model.ListTopAbnormalRequest) (*mod
 	}
 }
 
-// 查询引用表列表
+// ListTopAbnormalInvoker 查询业务异常数量
+func (c *WafClient) ListTopAbnormalInvoker(request *model.ListTopAbnormalRequest) *ListTopAbnormalInvoker {
+	requestDef := GenReqDefForListTopAbnormal()
+	return &ListTopAbnormalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListValueList 查询引用表列表
 //
 // 查询引用表列表
 //
@@ -611,7 +827,13 @@ func (c *WafClient) ListValueList(request *model.ListValueListRequest) (*model.L
 	}
 }
 
-// 查询黑白名单规则列表
+// ListValueListInvoker 查询引用表列表
+func (c *WafClient) ListValueListInvoker(request *model.ListValueListRequest) *ListValueListInvoker {
+	requestDef := GenReqDefForListValueList()
+	return &ListValueListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWhiteblackipRule 查询黑白名单规则列表
 //
 // 查询黑白名单规则列表
 //
@@ -627,7 +849,13 @@ func (c *WafClient) ListWhiteblackipRule(request *model.ListWhiteblackipRuleRequ
 	}
 }
 
-// 查询证书
+// ListWhiteblackipRuleInvoker 查询黑白名单规则列表
+func (c *WafClient) ListWhiteblackipRuleInvoker(request *model.ListWhiteblackipRuleRequest) *ListWhiteblackipRuleInvoker {
+	requestDef := GenReqDefForListWhiteblackipRule()
+	return &ListWhiteblackipRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCertificate 查询证书
 //
 // 查询证书
 //
@@ -643,7 +871,13 @@ func (c *WafClient) ShowCertificate(request *model.ShowCertificateRequest) (*mod
 	}
 }
 
-// 根据Id查询防护域名
+// ShowCertificateInvoker 查询证书
+func (c *WafClient) ShowCertificateInvoker(request *model.ShowCertificateRequest) *ShowCertificateInvoker {
+	requestDef := GenReqDefForShowCertificate()
+	return &ShowCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCompositeHost 根据Id查询防护域名
 //
 // 根据Id查询防护域名
 //
@@ -659,7 +893,13 @@ func (c *WafClient) ShowCompositeHost(request *model.ShowCompositeHostRequest) (
 	}
 }
 
-// 局点支持特性查询
+// ShowCompositeHostInvoker 根据Id查询防护域名
+func (c *WafClient) ShowCompositeHostInvoker(request *model.ShowCompositeHostRequest) *ShowCompositeHostInvoker {
+	requestDef := GenReqDefForShowCompositeHost()
+	return &ShowCompositeHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowConsoleConfig 局点支持特性查询
 //
 // 局点支持特性查询
 //
@@ -675,7 +915,13 @@ func (c *WafClient) ShowConsoleConfig(request *model.ShowConsoleConfigRequest) (
 	}
 }
 
-// 查询攻击事件详情
+// ShowConsoleConfigInvoker 局点支持特性查询
+func (c *WafClient) ShowConsoleConfigInvoker(request *model.ShowConsoleConfigRequest) *ShowConsoleConfigInvoker {
+	requestDef := GenReqDefForShowConsoleConfig()
+	return &ShowConsoleConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEvent 查询攻击事件详情
 //
 // 查询攻击事件详情
 //
@@ -691,7 +937,13 @@ func (c *WafClient) ShowEvent(request *model.ShowEventRequest) (*model.ShowEvent
 	}
 }
 
-// 根据Id查询云模式防护域名
+// ShowEventInvoker 查询攻击事件详情
+func (c *WafClient) ShowEventInvoker(request *model.ShowEventRequest) *ShowEventInvoker {
+	requestDef := GenReqDefForShowEvent()
+	return &ShowEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHost 根据Id查询云模式防护域名
 //
 // 根据Id查询云模式防护域名
 //
@@ -707,7 +959,13 @@ func (c *WafClient) ShowHost(request *model.ShowHostRequest) (*model.ShowHostRes
 	}
 }
 
-// 根据Id查询防护策略
+// ShowHostInvoker 根据Id查询云模式防护域名
+func (c *WafClient) ShowHostInvoker(request *model.ShowHostRequest) *ShowHostInvoker {
+	requestDef := GenReqDefForShowHost()
+	return &ShowHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPolicy 根据Id查询防护策略
 //
 // 根据Id查询防护策略
 //
@@ -723,7 +981,13 @@ func (c *WafClient) ShowPolicy(request *model.ShowPolicyRequest) (*model.ShowPol
 	}
 }
 
-// 查看独享模式域名配置
+// ShowPolicyInvoker 根据Id查询防护策略
+func (c *WafClient) ShowPolicyInvoker(request *model.ShowPolicyRequest) *ShowPolicyInvoker {
+	requestDef := GenReqDefForShowPolicy()
+	return &ShowPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPremiumHost 查看独享模式域名配置
 //
 // 查看独享模式域名配置
 //
@@ -739,7 +1003,13 @@ func (c *WafClient) ShowPremiumHost(request *model.ShowPremiumHostRequest) (*mod
 	}
 }
 
-// 修改证书
+// ShowPremiumHostInvoker 查看独享模式域名配置
+func (c *WafClient) ShowPremiumHostInvoker(request *model.ShowPremiumHostRequest) *ShowPremiumHostInvoker {
+	requestDef := GenReqDefForShowPremiumHost()
+	return &ShowPremiumHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCertificate 修改证书
 //
 // 修改证书
 //
@@ -755,7 +1025,13 @@ func (c *WafClient) UpdateCertificate(request *model.UpdateCertificateRequest) (
 	}
 }
 
-// 更新地理位置防护规则
+// UpdateCertificateInvoker 修改证书
+func (c *WafClient) UpdateCertificateInvoker(request *model.UpdateCertificateRequest) *UpdateCertificateInvoker {
+	requestDef := GenReqDefForUpdateCertificate()
+	return &UpdateCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGeoipRule 更新地理位置防护规则
 //
 // 更新地理位置防护规则
 //
@@ -771,7 +1047,13 @@ func (c *WafClient) UpdateGeoipRule(request *model.UpdateGeoipRuleRequest) (*mod
 	}
 }
 
-// 更新云模式防护域名
+// UpdateGeoipRuleInvoker 更新地理位置防护规则
+func (c *WafClient) UpdateGeoipRuleInvoker(request *model.UpdateGeoipRuleRequest) *UpdateGeoipRuleInvoker {
+	requestDef := GenReqDefForUpdateGeoipRule()
+	return &UpdateGeoipRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHost 更新云模式防护域名
 //
 // 更新云模式防护域名配置，在没有填入源站信息server的原始数据的情况下，则新的源站信息server会覆盖源站信息，而不是新增源站
 //
@@ -787,7 +1069,13 @@ func (c *WafClient) UpdateHost(request *model.UpdateHostRequest) (*model.UpdateH
 	}
 }
 
-// 修改域名防护状态
+// UpdateHostInvoker 更新云模式防护域名
+func (c *WafClient) UpdateHostInvoker(request *model.UpdateHostRequest) *UpdateHostInvoker {
+	requestDef := GenReqDefForUpdateHost()
+	return &UpdateHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHostProtectStatus 修改域名防护状态
 //
 // 返回路由信息
 //
@@ -803,7 +1091,13 @@ func (c *WafClient) UpdateHostProtectStatus(request *model.UpdateHostProtectStat
 	}
 }
 
-// 更新防护策略
+// UpdateHostProtectStatusInvoker 修改域名防护状态
+func (c *WafClient) UpdateHostProtectStatusInvoker(request *model.UpdateHostProtectStatusRequest) *UpdateHostProtectStatusInvoker {
+	requestDef := GenReqDefForUpdateHostProtectStatus()
+	return &UpdateHostProtectStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePolicy 更新防护策略
 //
 // 更新防护策略，请求体可只传需要更新的部分
 //
@@ -819,7 +1113,13 @@ func (c *WafClient) UpdatePolicy(request *model.UpdatePolicyRequest) (*model.Upd
 	}
 }
 
-// 更新防护策略的域名
+// UpdatePolicyInvoker 更新防护策略
+func (c *WafClient) UpdatePolicyInvoker(request *model.UpdatePolicyRequest) *UpdatePolicyInvoker {
+	requestDef := GenReqDefForUpdatePolicy()
+	return &UpdatePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePolicyProtectHost 更新防护策略的域名
 //
 // 更新防护策略的防护域名
 //
@@ -835,7 +1135,13 @@ func (c *WafClient) UpdatePolicyProtectHost(request *model.UpdatePolicyProtectHo
 	}
 }
 
-// 修改单条规则的状态
+// UpdatePolicyProtectHostInvoker 更新防护策略的域名
+func (c *WafClient) UpdatePolicyProtectHostInvoker(request *model.UpdatePolicyProtectHostRequest) *UpdatePolicyProtectHostInvoker {
+	requestDef := GenReqDefForUpdatePolicyProtectHost()
+	return &UpdatePolicyProtectHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePolicyRuleStatus 修改单条规则的状态
 //
 // 修改单条规则的状态
 //
@@ -851,7 +1157,13 @@ func (c *WafClient) UpdatePolicyRuleStatus(request *model.UpdatePolicyRuleStatus
 	}
 }
 
-// 修改独享模式域名配置
+// UpdatePolicyRuleStatusInvoker 修改单条规则的状态
+func (c *WafClient) UpdatePolicyRuleStatusInvoker(request *model.UpdatePolicyRuleStatusRequest) *UpdatePolicyRuleStatusInvoker {
+	requestDef := GenReqDefForUpdatePolicyRuleStatus()
+	return &UpdatePolicyRuleStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePremiumHost 修改独享模式域名配置
 //
 // 修改独享模式域名配置
 //
@@ -867,7 +1179,13 @@ func (c *WafClient) UpdatePremiumHost(request *model.UpdatePremiumHostRequest) (
 	}
 }
 
-// 修改独享模式域名防护状态
+// UpdatePremiumHostInvoker 修改独享模式域名配置
+func (c *WafClient) UpdatePremiumHostInvoker(request *model.UpdatePremiumHostRequest) *UpdatePremiumHostInvoker {
+	requestDef := GenReqDefForUpdatePremiumHost()
+	return &UpdatePremiumHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePremiumHostProtectStatus 修改独享模式域名防护状态
 //
 // 修改独享模式域名防护状态
 //
@@ -883,7 +1201,13 @@ func (c *WafClient) UpdatePremiumHostProtectStatus(request *model.UpdatePremiumH
 	}
 }
 
-// 更新隐私屏蔽防护规则
+// UpdatePremiumHostProtectStatusInvoker 修改独享模式域名防护状态
+func (c *WafClient) UpdatePremiumHostProtectStatusInvoker(request *model.UpdatePremiumHostProtectStatusRequest) *UpdatePremiumHostProtectStatusInvoker {
+	requestDef := GenReqDefForUpdatePremiumHostProtectStatus()
+	return &UpdatePremiumHostProtectStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePrivacyRule 更新隐私屏蔽防护规则
 //
 // 更新隐私屏蔽防护规则
 //
@@ -899,7 +1223,13 @@ func (c *WafClient) UpdatePrivacyRule(request *model.UpdatePrivacyRuleRequest) (
 	}
 }
 
-// 修改引用表
+// UpdatePrivacyRuleInvoker 更新隐私屏蔽防护规则
+func (c *WafClient) UpdatePrivacyRuleInvoker(request *model.UpdatePrivacyRuleRequest) *UpdatePrivacyRuleInvoker {
+	requestDef := GenReqDefForUpdatePrivacyRule()
+	return &UpdatePrivacyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateValueList 修改引用表
 //
 // 修改引用表
 //
@@ -915,7 +1245,13 @@ func (c *WafClient) UpdateValueList(request *model.UpdateValueListRequest) (*mod
 	}
 }
 
-// 更新黑白名单防护规则
+// UpdateValueListInvoker 修改引用表
+func (c *WafClient) UpdateValueListInvoker(request *model.UpdateValueListRequest) *UpdateValueListInvoker {
+	requestDef := GenReqDefForUpdateValueList()
+	return &UpdateValueListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateWhiteblackipRule 更新黑白名单防护规则
 //
 // 更新黑白名单防护规则
 //
@@ -929,4 +1265,10 @@ func (c *WafClient) UpdateWhiteblackipRule(request *model.UpdateWhiteblackipRule
 	} else {
 		return resp.(*model.UpdateWhiteblackipRuleResponse), nil
 	}
+}
+
+// UpdateWhiteblackipRuleInvoker 更新黑白名单防护规则
+func (c *WafClient) UpdateWhiteblackipRuleInvoker(request *model.UpdateWhiteblackipRuleRequest) *UpdateWhiteblackipRuleInvoker {
+	requestDef := GenReqDefForUpdateWhiteblackipRule()
+	return &UpdateWhiteblackipRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

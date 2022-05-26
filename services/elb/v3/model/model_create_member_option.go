@@ -59,6 +59,10 @@ func GetCreateMemberOptionProjectIdEnum() CreateMemberOptionProjectIdEnum {
 	}
 }
 
+func (c CreateMemberOptionProjectId) Value() string {
+	return c.value
+}
+
 func (c CreateMemberOptionProjectId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

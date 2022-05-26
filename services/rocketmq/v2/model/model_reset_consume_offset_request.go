@@ -49,6 +49,10 @@ func GetResetConsumeOffsetRequestEngineEnum() ResetConsumeOffsetRequestEngineEnu
 	}
 }
 
+func (c ResetConsumeOffsetRequestEngine) Value() string {
+	return c.value
+}
+
 func (c ResetConsumeOffsetRequestEngine) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

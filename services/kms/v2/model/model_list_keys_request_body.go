@@ -87,6 +87,10 @@ func GetListKeysRequestBodyKeySpecEnum() ListKeysRequestBodyKeySpecEnum {
 	}
 }
 
+func (c ListKeysRequestBodyKeySpec) Value() string {
+	return c.value
+}
+
 func (c ListKeysRequestBodyKeySpec) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -105,6 +105,10 @@ func GetNatGatewayDnatRuleResponseBodyStatusEnum() NatGatewayDnatRuleResponseBod
 	}
 }
 
+func (c NatGatewayDnatRuleResponseBodyStatus) Value() string {
+	return c.value
+}
+
 func (c NatGatewayDnatRuleResponseBodyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -145,6 +149,10 @@ func GetNatGatewayDnatRuleResponseBodyProtocolEnum() NatGatewayDnatRuleResponseB
 			value: "any",
 		},
 	}
+}
+
+func (c NatGatewayDnatRuleResponseBodyProtocol) Value() string {
+	return c.value
 }
 
 func (c NatGatewayDnatRuleResponseBodyProtocol) MarshalJSON() ([]byte, error) {

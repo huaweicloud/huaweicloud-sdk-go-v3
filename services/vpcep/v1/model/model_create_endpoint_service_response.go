@@ -98,6 +98,10 @@ func GetCreateEndpointServiceResponseServerTypeEnum() CreateEndpointServiceRespo
 	}
 }
 
+func (c CreateEndpointServiceResponseServerType) Value() string {
+	return c.value
+}
+
 func (c CreateEndpointServiceResponseServerType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -140,6 +144,10 @@ func GetCreateEndpointServiceResponseStatusEnum() CreateEndpointServiceResponseS
 	}
 }
 
+func (c CreateEndpointServiceResponseStatus) Value() string {
+	return c.value
+}
+
 func (c CreateEndpointServiceResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -176,6 +184,10 @@ func GetCreateEndpointServiceResponseCidrTypeEnum() CreateEndpointServiceRespons
 			value: "internal",
 		},
 	}
+}
+
+func (c CreateEndpointServiceResponseCidrType) Value() string {
+	return c.value
 }
 
 func (c CreateEndpointServiceResponseCidrType) MarshalJSON() ([]byte, error) {
@@ -222,6 +234,10 @@ func GetCreateEndpointServiceResponseTcpProxyEnum() CreateEndpointServiceRespons
 			value: "open",
 		},
 	}
+}
+
+func (c CreateEndpointServiceResponseTcpProxy) Value() string {
+	return c.value
 }
 
 func (c CreateEndpointServiceResponseTcpProxy) MarshalJSON() ([]byte, error) {

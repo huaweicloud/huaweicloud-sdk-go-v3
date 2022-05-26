@@ -79,6 +79,10 @@ func GetResourceRespProtectStatusEnum() ResourceRespProtectStatusEnum {
 	}
 }
 
+func (c ResourceRespProtectStatus) Value() string {
+	return c.value
+}
+
 func (c ResourceRespProtectStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

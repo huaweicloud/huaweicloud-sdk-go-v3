@@ -71,6 +71,10 @@ func GetApiPolicyFunctionRespInvocationTypeEnum() ApiPolicyFunctionRespInvocatio
 	}
 }
 
+func (c ApiPolicyFunctionRespInvocationType) Value() string {
+	return c.value
+}
+
 func (c ApiPolicyFunctionRespInvocationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -107,6 +111,10 @@ func GetApiPolicyFunctionRespEffectModeEnum() ApiPolicyFunctionRespEffectModeEnu
 			value: "ANY",
 		},
 	}
+}
+
+func (c ApiPolicyFunctionRespEffectMode) Value() string {
+	return c.value
 }
 
 func (c ApiPolicyFunctionRespEffectMode) MarshalJSON() ([]byte, error) {

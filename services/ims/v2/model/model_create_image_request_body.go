@@ -104,6 +104,10 @@ func GetCreateImageRequestBodyTypeEnum() CreateImageRequestBodyTypeEnum {
 	}
 }
 
+func (c CreateImageRequestBodyType) Value() string {
+	return c.value
+}
+
 func (c CreateImageRequestBodyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -140,6 +144,10 @@ func GetCreateImageRequestBodyArchitectureEnum() CreateImageRequestBodyArchitect
 			value: "arm",
 		},
 	}
+}
+
+func (c CreateImageRequestBodyArchitecture) Value() string {
+	return c.value
 }
 
 func (c CreateImageRequestBodyArchitecture) MarshalJSON() ([]byte, error) {

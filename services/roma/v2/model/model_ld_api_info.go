@@ -103,6 +103,10 @@ func GetLdApiInfoMethodEnum() LdApiInfoMethodEnum {
 	}
 }
 
+func (c LdApiInfoMethod) Value() string {
+	return c.value
+}
+
 func (c LdApiInfoMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -145,6 +149,10 @@ func GetLdApiInfoContentTypeEnum() LdApiInfoContentTypeEnum {
 	}
 }
 
+func (c LdApiInfoContentType) Value() string {
+	return c.value
+}
+
 func (c LdApiInfoContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -181,6 +189,10 @@ func GetLdApiInfoTypeEnum() LdApiInfoTypeEnum {
 			value: "function",
 		},
 	}
+}
+
+func (c LdApiInfoType) Value() string {
+	return c.value
 }
 
 func (c LdApiInfoType) MarshalJSON() ([]byte, error) {
@@ -221,6 +233,10 @@ func GetLdApiInfoStatusEnum() LdApiInfoStatusEnum {
 			value: 4,
 		},
 	}
+}
+
+func (c LdApiInfoStatus) Value() int32 {
+	return c.value
 }
 
 func (c LdApiInfoStatus) MarshalJSON() ([]byte, error) {

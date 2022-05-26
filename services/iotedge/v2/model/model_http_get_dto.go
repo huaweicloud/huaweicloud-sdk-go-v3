@@ -53,6 +53,10 @@ func GetHttpGetDtoSchemeEnum() HttpGetDtoSchemeEnum {
 	}
 }
 
+func (c HttpGetDtoScheme) Value() string {
+	return c.value
+}
+
 func (c HttpGetDtoScheme) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

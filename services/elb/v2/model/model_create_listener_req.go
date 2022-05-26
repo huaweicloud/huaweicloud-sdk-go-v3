@@ -94,6 +94,10 @@ func GetCreateListenerReqProtocolEnum() CreateListenerReqProtocolEnum {
 	}
 }
 
+func (c CreateListenerReqProtocol) Value() string {
+	return c.value
+}
+
 func (c CreateListenerReqProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -138,6 +142,10 @@ func GetCreateListenerReqTlsCiphersPolicyEnum() CreateListenerReqTlsCiphersPolic
 			value: " tls-1-2-strict",
 		},
 	}
+}
+
+func (c CreateListenerReqTlsCiphersPolicy) Value() string {
+	return c.value
 }
 
 func (c CreateListenerReqTlsCiphersPolicy) MarshalJSON() ([]byte, error) {

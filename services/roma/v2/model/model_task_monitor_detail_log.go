@@ -85,6 +85,10 @@ func GetTaskMonitorDetailLogPositionEnum() TaskMonitorDetailLogPositionEnum {
 	}
 }
 
+func (c TaskMonitorDetailLogPosition) Value() string {
+	return c.value
+}
+
 func (c TaskMonitorDetailLogPosition) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -139,6 +143,10 @@ func GetTaskMonitorDetailLogPositionStatusEnum() TaskMonitorDetailLogPositionSta
 	}
 }
 
+func (c TaskMonitorDetailLogPositionStatus) Value() string {
+	return c.value
+}
+
 func (c TaskMonitorDetailLogPositionStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -187,6 +195,10 @@ func GetTaskMonitorDetailLogDataSizeUnitEnum() TaskMonitorDetailLogDataSizeUnitE
 			value: "TB",
 		},
 	}
+}
+
+func (c TaskMonitorDetailLogDataSizeUnit) Value() string {
+	return c.value
 }
 
 func (c TaskMonitorDetailLogDataSizeUnit) MarshalJSON() ([]byte, error) {

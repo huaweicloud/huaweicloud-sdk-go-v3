@@ -52,6 +52,10 @@ func GetCreateProductTopicRequestBodyPermissionEnum() CreateProductTopicRequestB
 	}
 }
 
+func (c CreateProductTopicRequestBodyPermission) Value() int32 {
+	return c.value
+}
+
 func (c CreateProductTopicRequestBodyPermission) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

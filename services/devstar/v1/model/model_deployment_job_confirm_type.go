@@ -44,6 +44,10 @@ func GetDeploymentJobConfirmTypeTypeEnum() DeploymentJobConfirmTypeTypeEnum {
 	}
 }
 
+func (c DeploymentJobConfirmTypeType) Value() string {
+	return c.value
+}
+
 func (c DeploymentJobConfirmTypeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

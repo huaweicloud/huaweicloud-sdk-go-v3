@@ -53,6 +53,10 @@ func GetCreateDatakeyRequestBodyKeySpecEnum() CreateDatakeyRequestBodyKeySpecEnu
 	}
 }
 
+func (c CreateDatakeyRequestBodyKeySpec) Value() string {
+	return c.value
+}
+
 func (c CreateDatakeyRequestBodyKeySpec) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

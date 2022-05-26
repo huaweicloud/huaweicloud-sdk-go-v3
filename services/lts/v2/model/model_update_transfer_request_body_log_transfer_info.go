@@ -50,6 +50,10 @@ func GetUpdateTransferRequestBodyLogTransferInfoLogStorageFormatEnum() UpdateTra
 	}
 }
 
+func (c UpdateTransferRequestBodyLogTransferInfoLogStorageFormat) Value() string {
+	return c.value
+}
+
 func (c UpdateTransferRequestBodyLogTransferInfoLogStorageFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -90,6 +94,10 @@ func GetUpdateTransferRequestBodyLogTransferInfoLogTransferStatusEnum() UpdateTr
 			value: "EXCEPTION",
 		},
 	}
+}
+
+func (c UpdateTransferRequestBodyLogTransferInfoLogTransferStatus) Value() string {
+	return c.value
 }
 
 func (c UpdateTransferRequestBodyLogTransferInfoLogTransferStatus) MarshalJSON() ([]byte, error) {

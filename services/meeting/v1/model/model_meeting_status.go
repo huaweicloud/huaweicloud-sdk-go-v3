@@ -34,6 +34,10 @@ func GetMeetingStatusEnum() MeetingStatusEnum {
 	}
 }
 
+func (c MeetingStatus) Value() string {
+	return c.value
+}
+
 func (c MeetingStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -47,6 +47,10 @@ func GetBatchSetSmnRequestXLanguageEnum() BatchSetSmnRequestXLanguageEnum {
 	}
 }
 
+func (c BatchSetSmnRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c BatchSetSmnRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

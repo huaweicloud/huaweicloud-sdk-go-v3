@@ -57,6 +57,10 @@ func GetListRtcAbnormalEventDimensionRequestDimensionEnum() ListRtcAbnormalEvent
 	}
 }
 
+func (c ListRtcAbnormalEventDimensionRequestDimension) Value() string {
+	return c.value
+}
+
 func (c ListRtcAbnormalEventDimensionRequestDimension) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

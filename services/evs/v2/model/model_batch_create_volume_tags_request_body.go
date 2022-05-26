@@ -44,6 +44,10 @@ func GetBatchCreateVolumeTagsRequestBodyActionEnum() BatchCreateVolumeTagsReques
 	}
 }
 
+func (c BatchCreateVolumeTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c BatchCreateVolumeTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

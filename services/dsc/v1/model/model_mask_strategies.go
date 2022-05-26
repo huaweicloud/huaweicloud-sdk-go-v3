@@ -83,6 +83,10 @@ func GetMaskStrategiesAlgorithmEnum() MaskStrategiesAlgorithmEnum {
 	}
 }
 
+func (c MaskStrategiesAlgorithm) Value() string {
+	return c.value
+}
+
 func (c MaskStrategiesAlgorithm) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

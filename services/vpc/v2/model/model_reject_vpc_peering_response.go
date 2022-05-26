@@ -76,6 +76,10 @@ func GetRejectVpcPeeringResponseStatusEnum() RejectVpcPeeringResponseStatusEnum 
 	}
 }
 
+func (c RejectVpcPeeringResponseStatus) Value() string {
+	return c.value
+}
+
 func (c RejectVpcPeeringResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

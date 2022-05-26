@@ -87,6 +87,10 @@ func GetStopMigrationTaskResponseStatusEnum() StopMigrationTaskResponseStatusEnu
 	}
 }
 
+func (c StopMigrationTaskResponseStatus) Value() string {
+	return c.value
+}
+
 func (c StopMigrationTaskResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -123,6 +127,10 @@ func GetStopMigrationTaskResponseMigrationTypeEnum() StopMigrationTaskResponseMi
 			value: "online_migration",
 		},
 	}
+}
+
+func (c StopMigrationTaskResponseMigrationType) Value() string {
+	return c.value
 }
 
 func (c StopMigrationTaskResponseMigrationType) MarshalJSON() ([]byte, error) {
@@ -163,6 +171,10 @@ func GetStopMigrationTaskResponseMigrationMethodEnum() StopMigrationTaskResponse
 	}
 }
 
+func (c StopMigrationTaskResponseMigrationMethod) Value() string {
+	return c.value
+}
+
 func (c StopMigrationTaskResponseMigrationMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -199,6 +211,10 @@ func GetStopMigrationTaskResponseNetworkTypeEnum() StopMigrationTaskResponseNetw
 			value: "vpn",
 		},
 	}
+}
+
+func (c StopMigrationTaskResponseNetworkType) Value() string {
+	return c.value
 }
 
 func (c StopMigrationTaskResponseNetworkType) MarshalJSON() ([]byte, error) {

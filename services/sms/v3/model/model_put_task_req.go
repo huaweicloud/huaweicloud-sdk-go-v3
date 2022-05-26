@@ -126,6 +126,10 @@ func GetPutTaskReqTypeEnum() PutTaskReqTypeEnum {
 	}
 }
 
+func (c PutTaskReqType) Value() string {
+	return c.value
+}
+
 func (c PutTaskReqType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -162,6 +166,10 @@ func GetPutTaskReqOsTypeEnum() PutTaskReqOsTypeEnum {
 			value: "LINUX",
 		},
 	}
+}
+
+func (c PutTaskReqOsType) Value() string {
+	return c.value
 }
 
 func (c PutTaskReqOsType) MarshalJSON() ([]byte, error) {
@@ -202,6 +210,10 @@ func GetPutTaskReqPriorityEnum() PutTaskReqPriorityEnum {
 			value: 2,
 		},
 	}
+}
+
+func (c PutTaskReqPriority) Value() int32 {
+	return c.value
 }
 
 func (c PutTaskReqPriority) MarshalJSON() ([]byte, error) {

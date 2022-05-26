@@ -47,6 +47,10 @@ func GetCreatePortOptionDeviceOwnerEnum() CreatePortOptionDeviceOwnerEnum {
 	}
 }
 
+func (c CreatePortOptionDeviceOwner) Value() string {
+	return c.value
+}
+
 func (c CreatePortOptionDeviceOwner) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

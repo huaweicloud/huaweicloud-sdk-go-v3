@@ -59,6 +59,10 @@ func GetDuplicateApiInfoApiTypeEnum() DuplicateApiInfoApiTypeEnum {
 	}
 }
 
+func (c DuplicateApiInfoApiType) Value() string {
+	return c.value
+}
+
 func (c DuplicateApiInfoApiType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

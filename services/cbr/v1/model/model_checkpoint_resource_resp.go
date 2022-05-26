@@ -77,6 +77,10 @@ func GetCheckpointResourceRespProtectStatusEnum() CheckpointResourceRespProtectS
 	}
 }
 
+func (c CheckpointResourceRespProtectStatus) Value() string {
+	return c.value
+}
+
 func (c CheckpointResourceRespProtectStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

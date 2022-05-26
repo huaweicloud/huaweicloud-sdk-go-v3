@@ -138,6 +138,10 @@ func GetUpdateFunctionCodeResponseRuntimeEnum() UpdateFunctionCodeResponseRuntim
 	}
 }
 
+func (c UpdateFunctionCodeResponseRuntime) Value() string {
+	return c.value
+}
+
 func (c UpdateFunctionCodeResponseRuntime) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -182,6 +186,10 @@ func GetUpdateFunctionCodeResponseCodeTypeEnum() UpdateFunctionCodeResponseCodeT
 			value: "jar",
 		},
 	}
+}
+
+func (c UpdateFunctionCodeResponseCodeType) Value() string {
+	return c.value
 }
 
 func (c UpdateFunctionCodeResponseCodeType) MarshalJSON() ([]byte, error) {

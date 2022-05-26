@@ -48,6 +48,10 @@ func GetPagerRelEnum() PagerRelEnum {
 	}
 }
 
+func (c PagerRel) Value() string {
+	return c.value
+}
+
 func (c PagerRel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

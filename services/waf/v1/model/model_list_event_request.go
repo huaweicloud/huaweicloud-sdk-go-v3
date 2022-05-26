@@ -78,6 +78,10 @@ func GetListEventRequestRecentEnum() ListEventRequestRecentEnum {
 	}
 }
 
+func (c ListEventRequestRecent) Value() string {
+	return c.value
+}
+
 func (c ListEventRequestRecent) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

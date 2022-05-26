@@ -166,6 +166,10 @@ func GetApiPolicyMockBaseStatusCodeEnum() ApiPolicyMockBaseStatusCodeEnum {
 	}
 }
 
+func (c ApiPolicyMockBaseStatusCode) Value() int32 {
+	return c.value
+}
+
 func (c ApiPolicyMockBaseStatusCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

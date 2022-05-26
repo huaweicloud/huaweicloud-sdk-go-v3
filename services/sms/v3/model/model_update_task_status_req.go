@@ -68,6 +68,10 @@ func GetUpdateTaskStatusReqOperationEnum() UpdateTaskStatusReqOperationEnum {
 	}
 }
 
+func (c UpdateTaskStatusReqOperation) Value() string {
+	return c.value
+}
+
 func (c UpdateTaskStatusReqOperation) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

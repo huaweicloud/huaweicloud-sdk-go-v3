@@ -102,6 +102,10 @@ func GetDeleteGatewayResponseTypeV2RequestResponseTypeEnum() DeleteGatewayRespon
 	}
 }
 
+func (c DeleteGatewayResponseTypeV2RequestResponseType) Value() string {
+	return c.value
+}
+
 func (c DeleteGatewayResponseTypeV2RequestResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

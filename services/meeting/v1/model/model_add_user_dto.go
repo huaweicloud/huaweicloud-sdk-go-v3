@@ -91,6 +91,10 @@ func GetAddUserDtoStatusEnum() AddUserDtoStatusEnum {
 	}
 }
 
+func (c AddUserDtoStatus) Value() int32 {
+	return c.value
+}
+
 func (c AddUserDtoStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

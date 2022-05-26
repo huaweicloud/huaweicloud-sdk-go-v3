@@ -49,6 +49,10 @@ func GetCancelSqlResponseStatusEnum() CancelSqlResponseStatusEnum {
 	}
 }
 
+func (c CancelSqlResponseStatus) Value() string {
+	return c.value
+}
+
 func (c CancelSqlResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

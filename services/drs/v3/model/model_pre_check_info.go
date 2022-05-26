@@ -44,6 +44,10 @@ func GetPreCheckInfoPrecheckModeEnum() PreCheckInfoPrecheckModeEnum {
 	}
 }
 
+func (c PreCheckInfoPrecheckMode) Value() string {
+	return c.value
+}
+
 func (c PreCheckInfoPrecheckMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

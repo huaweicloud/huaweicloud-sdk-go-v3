@@ -48,6 +48,10 @@ func GetModifyTargetParamsReqGroupEnum() ModifyTargetParamsReqGroupEnum {
 	}
 }
 
+func (c ModifyTargetParamsReqGroup) Value() string {
+	return c.value
+}
+
 func (c ModifyTargetParamsReqGroup) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

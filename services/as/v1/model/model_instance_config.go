@@ -81,6 +81,10 @@ func GetInstanceConfigTenancyEnum() InstanceConfigTenancyEnum {
 	}
 }
 
+func (c InstanceConfigTenancy) Value() string {
+	return c.value
+}
+
 func (c InstanceConfigTenancy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -119,6 +123,10 @@ func GetInstanceConfigMultiFlavorPriorityPolicyEnum() InstanceConfigMultiFlavorP
 	}
 }
 
+func (c InstanceConfigMultiFlavorPriorityPolicy) Value() string {
+	return c.value
+}
+
 func (c InstanceConfigMultiFlavorPriorityPolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -151,6 +159,10 @@ func GetInstanceConfigMarketTypeEnum() InstanceConfigMarketTypeEnum {
 			value: "spot",
 		},
 	}
+}
+
+func (c InstanceConfigMarketType) Value() string {
+	return c.value
 }
 
 func (c InstanceConfigMarketType) MarshalJSON() ([]byte, error) {

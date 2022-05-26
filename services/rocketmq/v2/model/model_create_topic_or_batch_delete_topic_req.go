@@ -60,6 +60,10 @@ func GetCreateTopicOrBatchDeleteTopicReqPermissionEnum() CreateTopicOrBatchDelet
 	}
 }
 
+func (c CreateTopicOrBatchDeleteTopicReqPermission) Value() string {
+	return c.value
+}
+
 func (c CreateTopicOrBatchDeleteTopicReqPermission) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

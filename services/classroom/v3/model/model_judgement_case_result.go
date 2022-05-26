@@ -60,6 +60,10 @@ func GetJudgementCaseResultCaseStatusEnum() JudgementCaseResultCaseStatusEnum {
 	}
 }
 
+func (c JudgementCaseResultCaseStatus) Value() string {
+	return c.value
+}
+
 func (c JudgementCaseResultCaseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

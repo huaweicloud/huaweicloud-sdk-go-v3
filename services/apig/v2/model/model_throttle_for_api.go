@@ -99,6 +99,10 @@ func GetThrottleForApiTimeUnitEnum() ThrottleForApiTimeUnitEnum {
 	}
 }
 
+func (c ThrottleForApiTimeUnit) Value() string {
+	return c.value
+}
+
 func (c ThrottleForApiTimeUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -136,6 +140,10 @@ func GetThrottleForApiTypeEnum() ThrottleForApiTypeEnum {
 	}
 }
 
+func (c ThrottleForApiType) Value() int32 {
+	return c.value
+}
+
 func (c ThrottleForApiType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -171,6 +179,10 @@ func GetThrottleForApiIsIncluSpecialThrottleEnum() ThrottleForApiIsIncluSpecialT
 			value: 2,
 		},
 	}
+}
+
+func (c ThrottleForApiIsIncluSpecialThrottle) Value() int32 {
+	return c.value
 }
 
 func (c ThrottleForApiIsIncluSpecialThrottle) MarshalJSON() ([]byte, error) {

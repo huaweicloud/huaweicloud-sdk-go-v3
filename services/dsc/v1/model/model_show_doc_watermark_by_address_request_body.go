@@ -61,6 +61,10 @@ func GetShowDocWatermarkByAddressRequestBodyDocTypeEnum() ShowDocWatermarkByAddr
 	}
 }
 
+func (c ShowDocWatermarkByAddressRequestBodyDocType) Value() string {
+	return c.value
+}
+
 func (c ShowDocWatermarkByAddressRequestBodyDocType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

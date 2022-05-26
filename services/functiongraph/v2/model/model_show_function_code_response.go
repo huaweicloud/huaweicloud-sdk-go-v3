@@ -138,6 +138,10 @@ func GetShowFunctionCodeResponseRuntimeEnum() ShowFunctionCodeResponseRuntimeEnu
 	}
 }
 
+func (c ShowFunctionCodeResponseRuntime) Value() string {
+	return c.value
+}
+
 func (c ShowFunctionCodeResponseRuntime) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -182,6 +186,10 @@ func GetShowFunctionCodeResponseCodeTypeEnum() ShowFunctionCodeResponseCodeTypeE
 			value: "jar",
 		},
 	}
+}
+
+func (c ShowFunctionCodeResponseCodeType) Value() string {
+	return c.value
 }
 
 func (c ShowFunctionCodeResponseCodeType) MarshalJSON() ([]byte, error) {

@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/css/v1/model"
 )
 
@@ -19,7 +19,7 @@ func CssClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 设置自动创建快照策略
+// CreateAutoCreatePolicy 设置自动创建快照策略
 //
 // 该接口用于设置自动创建快照，默认一天创建一个快照。
 //
@@ -35,7 +35,13 @@ func (c *CssClient) CreateAutoCreatePolicy(request *model.CreateAutoCreatePolicy
 	}
 }
 
-// 开启公网访问
+// CreateAutoCreatePolicyInvoker 设置自动创建快照策略
+func (c *CssClient) CreateAutoCreatePolicyInvoker(request *model.CreateAutoCreatePolicyRequest) *CreateAutoCreatePolicyInvoker {
+	requestDef := GenReqDefForCreateAutoCreatePolicy()
+	return &CreateAutoCreatePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateBindPublic 开启公网访问
 //
 // 该接口用于开启公网访问。
 //
@@ -51,7 +57,13 @@ func (c *CssClient) CreateBindPublic(request *model.CreateBindPublicRequest) (*m
 	}
 }
 
-// 创建集群
+// CreateBindPublicInvoker 开启公网访问
+func (c *CssClient) CreateBindPublicInvoker(request *model.CreateBindPublicRequest) *CreateBindPublicInvoker {
+	requestDef := GenReqDefForCreateBindPublic()
+	return &CreateBindPublicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCluster 创建集群
 //
 // 该接口用于创建集群。
 //
@@ -67,7 +79,13 @@ func (c *CssClient) CreateCluster(request *model.CreateClusterRequest) (*model.C
 	}
 }
 
-// 添加指定集群标签
+// CreateClusterInvoker 创建集群
+func (c *CssClient) CreateClusterInvoker(request *model.CreateClusterRequest) *CreateClusterInvoker {
+	requestDef := GenReqDefForCreateCluster()
+	return &CreateClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateClustersTags 添加指定集群标签
 //
 // 该接口用于给指定集群添加标签。
 //
@@ -83,7 +101,13 @@ func (c *CssClient) CreateClustersTags(request *model.CreateClustersTagsRequest)
 	}
 }
 
-// 加载自定义词库
+// CreateClustersTagsInvoker 添加指定集群标签
+func (c *CssClient) CreateClustersTagsInvoker(request *model.CreateClustersTagsRequest) *CreateClustersTagsInvoker {
+	requestDef := GenReqDefForCreateClustersTags()
+	return &CreateClustersTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateLoadIkThesaurus 加载自定义词库
 //
 // 该接口用于加载存放于OBS的自定义词库。
 //
@@ -99,7 +123,13 @@ func (c *CssClient) CreateLoadIkThesaurus(request *model.CreateLoadIkThesaurusRe
 	}
 }
 
-// 备份日志
+// CreateLoadIkThesaurusInvoker 加载自定义词库
+func (c *CssClient) CreateLoadIkThesaurusInvoker(request *model.CreateLoadIkThesaurusRequest) *CreateLoadIkThesaurusInvoker {
+	requestDef := GenReqDefForCreateLoadIkThesaurus()
+	return &CreateLoadIkThesaurusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateLogBackup 备份日志
 //
 // 该接口用于备份日志。
 //
@@ -115,7 +145,13 @@ func (c *CssClient) CreateLogBackup(request *model.CreateLogBackupRequest) (*mod
 	}
 }
 
-// 手动创建快照
+// CreateLogBackupInvoker 备份日志
+func (c *CssClient) CreateLogBackupInvoker(request *model.CreateLogBackupRequest) *CreateLogBackupInvoker {
+	requestDef := GenReqDefForCreateLogBackup()
+	return &CreateLogBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSnapshot 手动创建快照
 //
 // 该接口用于手动创建一个快照。
 //
@@ -131,7 +167,13 @@ func (c *CssClient) CreateSnapshot(request *model.CreateSnapshotRequest) (*model
 	}
 }
 
-// 删除集群
+// CreateSnapshotInvoker 手动创建快照
+func (c *CssClient) CreateSnapshotInvoker(request *model.CreateSnapshotRequest) *CreateSnapshotInvoker {
+	requestDef := GenReqDefForCreateSnapshot()
+	return &CreateSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCluster 删除集群
 //
 // 此接口用于删除集群。集群删除将释放此集群的所有资源，包括客户数据。为了安全起见，请确保为这个集群创建快照。
 //
@@ -147,7 +189,13 @@ func (c *CssClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.D
 	}
 }
 
-// 删除集群标签
+// DeleteClusterInvoker 删除集群
+func (c *CssClient) DeleteClusterInvoker(request *model.DeleteClusterRequest) *DeleteClusterInvoker {
+	requestDef := GenReqDefForDeleteCluster()
+	return &DeleteClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteClustersTags 删除集群标签
 //
 // 此接口用于删除集群标签。
 //
@@ -163,7 +211,13 @@ func (c *CssClient) DeleteClustersTags(request *model.DeleteClustersTagsRequest)
 	}
 }
 
-// 删除自定义词库
+// DeleteClustersTagsInvoker 删除集群标签
+func (c *CssClient) DeleteClustersTagsInvoker(request *model.DeleteClustersTagsRequest) *DeleteClustersTagsInvoker {
+	requestDef := GenReqDefForDeleteClustersTags()
+	return &DeleteClustersTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteIkThesaurus 删除自定义词库
 //
 // 该接口用于删除自定义词库。
 //
@@ -179,7 +233,13 @@ func (c *CssClient) DeleteIkThesaurus(request *model.DeleteIkThesaurusRequest) (
 	}
 }
 
-// 删除快照
+// DeleteIkThesaurusInvoker 删除自定义词库
+func (c *CssClient) DeleteIkThesaurusInvoker(request *model.DeleteIkThesaurusRequest) *DeleteIkThesaurusInvoker {
+	requestDef := GenReqDefForDeleteIkThesaurus()
+	return &DeleteIkThesaurusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSnapshot 删除快照
 //
 // 该接口用于删除快照。
 //
@@ -195,7 +255,13 @@ func (c *CssClient) DeleteSnapshot(request *model.DeleteSnapshotRequest) (*model
 	}
 }
 
-// 下载安全证书
+// DeleteSnapshotInvoker 删除快照
+func (c *CssClient) DeleteSnapshotInvoker(request *model.DeleteSnapshotRequest) *DeleteSnapshotInvoker {
+	requestDef := GenReqDefForDeleteSnapshot()
+	return &DeleteSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadCert 下载安全证书
 //
 // 该接口用于下载安全证书。
 //
@@ -211,7 +277,13 @@ func (c *CssClient) DownloadCert(request *model.DownloadCertRequest) (*model.Dow
 	}
 }
 
-// 查询集群列表
+// DownloadCertInvoker 下载安全证书
+func (c *CssClient) DownloadCertInvoker(request *model.DownloadCertRequest) *DownloadCertInvoker {
+	requestDef := GenReqDefForDownloadCert()
+	return &DownloadCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClustersDetails 查询集群列表
 //
 // 该接口用于查询并显示集群列表以及集群的状态。
 //
@@ -227,7 +299,13 @@ func (c *CssClient) ListClustersDetails(request *model.ListClustersDetailsReques
 	}
 }
 
-// 查询所有标签
+// ListClustersDetailsInvoker 查询集群列表
+func (c *CssClient) ListClustersDetailsInvoker(request *model.ListClustersDetailsRequest) *ListClustersDetailsInvoker {
+	requestDef := GenReqDefForListClustersDetails()
+	return &ListClustersDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClustersTags 查询所有标签
 //
 // 该接口用于查询指定region下的所有标签集合。
 //
@@ -243,7 +321,13 @@ func (c *CssClient) ListClustersTags(request *model.ListClustersTagsRequest) (*m
 	}
 }
 
-// 获取实例规格列表
+// ListClustersTagsInvoker 查询所有标签
+func (c *CssClient) ListClustersTagsInvoker(request *model.ListClustersTagsRequest) *ListClustersTagsInvoker {
+	requestDef := GenReqDefForListClustersTags()
+	return &ListClustersTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFlavors 获取实例规格列表
 //
 // 该接口用于查询并显示支持的实例规格对应的ID。
 //
@@ -259,7 +343,13 @@ func (c *CssClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 	}
 }
 
-// 查询作业列表
+// ListFlavorsInvoker 获取实例规格列表
+func (c *CssClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListFlavorsInvoker {
+	requestDef := GenReqDefForListFlavors()
+	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLogsJob 查询作业列表
 //
 // 该接口用于查询具体某个集群的日志任务记录列表。
 //
@@ -275,7 +365,13 @@ func (c *CssClient) ListLogsJob(request *model.ListLogsJobRequest) (*model.ListL
 	}
 }
 
-// 查询快照列表
+// ListLogsJobInvoker 查询作业列表
+func (c *CssClient) ListLogsJobInvoker(request *model.ListLogsJobRequest) *ListLogsJobInvoker {
+	requestDef := GenReqDefForListLogsJob()
+	return &ListLogsJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSnapshots 查询快照列表
 //
 // 该接口用于查询集群的所有快照。
 //
@@ -291,7 +387,13 @@ func (c *CssClient) ListSnapshots(request *model.ListSnapshotsRequest) (*model.L
 	}
 }
 
-// 获取参数配置列表
+// ListSnapshotsInvoker 查询快照列表
+func (c *CssClient) ListSnapshotsInvoker(request *model.ListSnapshotsRequest) *ListSnapshotsInvoker {
+	requestDef := GenReqDefForListSnapshots()
+	return &ListSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListYmls 获取参数配置列表
 //
 // 该接口用于获取参数配置列表。
 //
@@ -307,7 +409,13 @@ func (c *CssClient) ListYmls(request *model.ListYmlsRequest) (*model.ListYmlsRes
 	}
 }
 
-// 获取参数配置任务列表
+// ListYmlsInvoker 获取参数配置列表
+func (c *CssClient) ListYmlsInvoker(request *model.ListYmlsRequest) *ListYmlsInvoker {
+	requestDef := GenReqDefForListYmls()
+	return &ListYmlsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListYmlsJob 获取参数配置任务列表
 //
 // 该接口用于获取参数配置任务列表。
 //
@@ -323,7 +431,13 @@ func (c *CssClient) ListYmlsJob(request *model.ListYmlsJobRequest) (*model.ListY
 	}
 }
 
-// 修改密码
+// ListYmlsJobInvoker 获取参数配置任务列表
+func (c *CssClient) ListYmlsJobInvoker(request *model.ListYmlsJobRequest) *ListYmlsJobInvoker {
+	requestDef := GenReqDefForListYmlsJob()
+	return &ListYmlsJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetPassword 修改密码
 //
 // 该接口用于修改集群密码。
 //
@@ -339,7 +453,13 @@ func (c *CssClient) ResetPassword(request *model.ResetPasswordRequest) (*model.R
 	}
 }
 
-// 重启集群
+// ResetPasswordInvoker 修改密码
+func (c *CssClient) ResetPasswordInvoker(request *model.ResetPasswordRequest) *ResetPasswordInvoker {
+	requestDef := GenReqDefForResetPassword()
+	return &ResetPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestartCluster 重启集群
 //
 // 此接口用于重启集群，重启集群将导致业务中断。
 //
@@ -355,7 +475,13 @@ func (c *CssClient) RestartCluster(request *model.RestartClusterRequest) (*model
 	}
 }
 
-// 恢复快照
+// RestartClusterInvoker 重启集群
+func (c *CssClient) RestartClusterInvoker(request *model.RestartClusterRequest) *RestartClusterInvoker {
+	requestDef := GenReqDefForRestartCluster()
+	return &RestartClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestoreSnapshot 恢复快照
 //
 // 该接口用于手动恢复一个快照。
 //
@@ -371,7 +497,13 @@ func (c *CssClient) RestoreSnapshot(request *model.RestoreSnapshotRequest) (*mod
 	}
 }
 
-// 查询集群的自动创建快照策略
+// RestoreSnapshotInvoker 恢复快照
+func (c *CssClient) RestoreSnapshotInvoker(request *model.RestoreSnapshotRequest) *RestoreSnapshotInvoker {
+	requestDef := GenReqDefForRestoreSnapshot()
+	return &RestoreSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAutoCreatePolicy 查询集群的自动创建快照策略
 //
 // 该接口用于查询自动创建快照策略。
 //
@@ -387,7 +519,13 @@ func (c *CssClient) ShowAutoCreatePolicy(request *model.ShowAutoCreatePolicyRequ
 	}
 }
 
-// 查询集群详情
+// ShowAutoCreatePolicyInvoker 查询集群的自动创建快照策略
+func (c *CssClient) ShowAutoCreatePolicyInvoker(request *model.ShowAutoCreatePolicyRequest) *ShowAutoCreatePolicyInvoker {
+	requestDef := GenReqDefForShowAutoCreatePolicy()
+	return &ShowAutoCreatePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClusterDetail 查询集群详情
 //
 // 该接口用于查询并显示单个集群详情。
 //
@@ -403,7 +541,13 @@ func (c *CssClient) ShowClusterDetail(request *model.ShowClusterDetailRequest) (
 	}
 }
 
-// 查询指定集群的标签
+// ShowClusterDetailInvoker 查询集群详情
+func (c *CssClient) ShowClusterDetailInvoker(request *model.ShowClusterDetailRequest) *ShowClusterDetailInvoker {
+	requestDef := GenReqDefForShowClusterDetail()
+	return &ShowClusterDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClusterTag 查询指定集群的标签
 //
 // 该接口用于查询指定集群的标签信息。
 //
@@ -419,7 +563,13 @@ func (c *CssClient) ShowClusterTag(request *model.ShowClusterTagRequest) (*model
 	}
 }
 
-// 查询日志基础配置
+// ShowClusterTagInvoker 查询指定集群的标签
+func (c *CssClient) ShowClusterTagInvoker(request *model.ShowClusterTagRequest) *ShowClusterTagInvoker {
+	requestDef := GenReqDefForShowClusterTag()
+	return &ShowClusterTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGetLogSetting 查询日志基础配置
 //
 // 该接口用于日志基础配置查询。
 //
@@ -435,7 +585,13 @@ func (c *CssClient) ShowGetLogSetting(request *model.ShowGetLogSettingRequest) (
 	}
 }
 
-// 查询自定义词库状态
+// ShowGetLogSettingInvoker 查询日志基础配置
+func (c *CssClient) ShowGetLogSettingInvoker(request *model.ShowGetLogSettingRequest) *ShowGetLogSettingInvoker {
+	requestDef := GenReqDefForShowGetLogSetting()
+	return &ShowGetLogSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIkThesaurus 查询自定义词库状态
 //
 // 该接口用于查询自定义词库的加载状态。
 //
@@ -451,7 +607,13 @@ func (c *CssClient) ShowIkThesaurus(request *model.ShowIkThesaurusRequest) (*mod
 	}
 }
 
-// 查询日志
+// ShowIkThesaurusInvoker 查询自定义词库状态
+func (c *CssClient) ShowIkThesaurusInvoker(request *model.ShowIkThesaurusRequest) *ShowIkThesaurusInvoker {
+	requestDef := GenReqDefForShowIkThesaurus()
+	return &ShowIkThesaurusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLogBackup 查询日志
 //
 // 该接口用于查询日志信息。
 //
@@ -467,7 +629,13 @@ func (c *CssClient) ShowLogBackup(request *model.ShowLogBackupRequest) (*model.S
 	}
 }
 
-// 获取终端节点连接
+// ShowLogBackupInvoker 查询日志
+func (c *CssClient) ShowLogBackupInvoker(request *model.ShowLogBackupRequest) *ShowLogBackupInvoker {
+	requestDef := GenReqDefForShowLogBackup()
+	return &ShowLogBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVpcepConnection 获取终端节点连接
 //
 // 该接口用于获取终端节点连接。
 //
@@ -483,7 +651,13 @@ func (c *CssClient) ShowVpcepConnection(request *model.ShowVpcepConnectionReques
 	}
 }
 
-// 自动设置集群快照的基础配置（不推荐使用）
+// ShowVpcepConnectionInvoker 获取终端节点连接
+func (c *CssClient) ShowVpcepConnectionInvoker(request *model.ShowVpcepConnectionRequest) *ShowVpcepConnectionInvoker {
+	requestDef := GenReqDefForShowVpcepConnection()
+	return &ShowVpcepConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartAutoSetting 自动设置集群快照的基础配置（不推荐使用）
 //
 // 说明：自动设置集群快照接口将会自动创建快照OBS桶和委托。如果有多个集群，每个集群使用这个接口都会创建一个不一样的OBS桶，可能会导致OBS的配额不够，较多的OBS桶也难以维护。建议可以直接使用[修改集群快照的基础配置](https://support.huaweicloud.com/api-css/css_03_0030.html)。
 //
@@ -505,7 +679,13 @@ func (c *CssClient) StartAutoSetting(request *model.StartAutoSettingRequest) (*m
 	}
 }
 
-// 开启日志自动备份策略
+// StartAutoSettingInvoker 自动设置集群快照的基础配置（不推荐使用）
+func (c *CssClient) StartAutoSettingInvoker(request *model.StartAutoSettingRequest) *StartAutoSettingInvoker {
+	requestDef := GenReqDefForStartAutoSetting()
+	return &StartAutoSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartLogAutoBackupPolicy 开启日志自动备份策略
 //
 // 该接口用于日志自动备份策略开启。
 //
@@ -521,7 +701,13 @@ func (c *CssClient) StartLogAutoBackupPolicy(request *model.StartLogAutoBackupPo
 	}
 }
 
-// 开启日志功能
+// StartLogAutoBackupPolicyInvoker 开启日志自动备份策略
+func (c *CssClient) StartLogAutoBackupPolicyInvoker(request *model.StartLogAutoBackupPolicyRequest) *StartLogAutoBackupPolicyInvoker {
+	requestDef := GenReqDefForStartLogAutoBackupPolicy()
+	return &StartLogAutoBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartLogs 开启日志功能
 //
 // 该接口用于开启日志功能。
 //
@@ -537,7 +723,13 @@ func (c *CssClient) StartLogs(request *model.StartLogsRequest) (*model.StartLogs
 	}
 }
 
-// 开启公网访问控制白名单
+// StartLogsInvoker 开启日志功能
+func (c *CssClient) StartLogsInvoker(request *model.StartLogsRequest) *StartLogsInvoker {
+	requestDef := GenReqDefForStartLogs()
+	return &StartLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartPublicWhitelist 开启公网访问控制白名单
 //
 // 该接口用于开启公网访问控制白名单。
 //
@@ -553,7 +745,13 @@ func (c *CssClient) StartPublicWhitelist(request *model.StartPublicWhitelistRequ
 	}
 }
 
-// 开启终端节点服务
+// StartPublicWhitelistInvoker 开启公网访问控制白名单
+func (c *CssClient) StartPublicWhitelistInvoker(request *model.StartPublicWhitelistRequest) *StartPublicWhitelistInvoker {
+	requestDef := GenReqDefForStartPublicWhitelist()
+	return &StartPublicWhitelistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartVpecp 开启终端节点服务
 //
 // 该接口用于开启终端节点服务。
 //
@@ -569,7 +767,13 @@ func (c *CssClient) StartVpecp(request *model.StartVpecpRequest) (*model.StartVp
 	}
 }
 
-// 关闭日志自动备份策略
+// StartVpecpInvoker 开启终端节点服务
+func (c *CssClient) StartVpecpInvoker(request *model.StartVpecpRequest) *StartVpecpInvoker {
+	requestDef := GenReqDefForStartVpecp()
+	return &StartVpecpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopLogAutoBackupPolicy 关闭日志自动备份策略
 //
 // 该接口用于日志自动备份策略关闭。
 //
@@ -585,7 +789,13 @@ func (c *CssClient) StopLogAutoBackupPolicy(request *model.StopLogAutoBackupPoli
 	}
 }
 
-// 关闭日志功能
+// StopLogAutoBackupPolicyInvoker 关闭日志自动备份策略
+func (c *CssClient) StopLogAutoBackupPolicyInvoker(request *model.StopLogAutoBackupPolicyRequest) *StopLogAutoBackupPolicyInvoker {
+	requestDef := GenReqDefForStopLogAutoBackupPolicy()
+	return &StopLogAutoBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopLogs 关闭日志功能
 //
 // 该接口用于关闭日志功能。
 //
@@ -601,7 +811,13 @@ func (c *CssClient) StopLogs(request *model.StopLogsRequest) (*model.StopLogsRes
 	}
 }
 
-// 关闭公网访问控制白名单
+// StopLogsInvoker 关闭日志功能
+func (c *CssClient) StopLogsInvoker(request *model.StopLogsRequest) *StopLogsInvoker {
+	requestDef := GenReqDefForStopLogs()
+	return &StopLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopPublicWhitelist 关闭公网访问控制白名单
 //
 // 该接口用于关闭公网访问控制白名单。
 //
@@ -617,7 +833,13 @@ func (c *CssClient) StopPublicWhitelist(request *model.StopPublicWhitelistReques
 	}
 }
 
-// 停用快照功能
+// StopPublicWhitelistInvoker 关闭公网访问控制白名单
+func (c *CssClient) StopPublicWhitelistInvoker(request *model.StopPublicWhitelistRequest) *StopPublicWhitelistInvoker {
+	requestDef := GenReqDefForStopPublicWhitelist()
+	return &StopPublicWhitelistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopSnapshot 停用快照功能
 //
 // 该接口用于停用快照功能。
 //
@@ -633,7 +855,13 @@ func (c *CssClient) StopSnapshot(request *model.StopSnapshotRequest) (*model.Sto
 	}
 }
 
-// 关闭终端节点服务
+// StopSnapshotInvoker 停用快照功能
+func (c *CssClient) StopSnapshotInvoker(request *model.StopSnapshotRequest) *StopSnapshotInvoker {
+	requestDef := GenReqDefForStopSnapshot()
+	return &StopSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopVpecp 关闭终端节点服务
 //
 // 该接口用于关闭终端节点服务。
 //
@@ -649,7 +877,13 @@ func (c *CssClient) StopVpecp(request *model.StopVpecpRequest) (*model.StopVpecp
 	}
 }
 
-// 批量添加或删除集群标签
+// StopVpecpInvoker 关闭终端节点服务
+func (c *CssClient) StopVpecpInvoker(request *model.StopVpecpRequest) *StopVpecpInvoker {
+	requestDef := GenReqDefForStopVpecp()
+	return &StopVpecpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateBatchClustersTags 批量添加或删除集群标签
 //
 // 该接口用于批量添加或删除集群标签。
 //
@@ -665,7 +899,13 @@ func (c *CssClient) UpdateBatchClustersTags(request *model.UpdateBatchClustersTa
 	}
 }
 
-// 修改集群名称
+// UpdateBatchClustersTagsInvoker 批量添加或删除集群标签
+func (c *CssClient) UpdateBatchClustersTagsInvoker(request *model.UpdateBatchClustersTagsRequest) *UpdateBatchClustersTagsInvoker {
+	requestDef := GenReqDefForUpdateBatchClustersTags()
+	return &UpdateBatchClustersTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateClusterName 修改集群名称
 //
 // 该接口用于修改集群名称。
 //
@@ -681,7 +921,13 @@ func (c *CssClient) UpdateClusterName(request *model.UpdateClusterNameRequest) (
 	}
 }
 
-// 扩容集群
+// UpdateClusterNameInvoker 修改集群名称
+func (c *CssClient) UpdateClusterNameInvoker(request *model.UpdateClusterNameRequest) *UpdateClusterNameInvoker {
+	requestDef := GenReqDefForUpdateClusterName()
+	return &UpdateClusterNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateExtendCluster 扩容集群
 //
 // 该接口用于集群扩容实例（仅支持扩容elasticsearch实例）。只扩容普通节点，且只针对要扩容的集群实例不存在特殊节点（Master、Client、冷数据节点）的情况。
 // 说明：推荐使用[扩容实例的数量和存储容量](https://support.huaweicloud.com/api-css/css_03_0038.html)进行扩容。
@@ -698,7 +944,13 @@ func (c *CssClient) UpdateExtendCluster(request *model.UpdateExtendClusterReques
 	}
 }
 
-// 扩容实例的数量和存储容量
+// UpdateExtendClusterInvoker 扩容集群
+func (c *CssClient) UpdateExtendClusterInvoker(request *model.UpdateExtendClusterRequest) *UpdateExtendClusterInvoker {
+	requestDef := GenReqDefForUpdateExtendCluster()
+	return &UpdateExtendClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateExtendInstanceStorage 扩容实例的数量和存储容量
 //
 // 该接口用于集群扩容不同类型实例的个数以及存储容量。已经存在独立Master、Client、冷数据节点的集群使用该接口扩容。（支持扩容elasticsearch和logstash实例）。
 //
@@ -714,7 +966,13 @@ func (c *CssClient) UpdateExtendInstanceStorage(request *model.UpdateExtendInsta
 	}
 }
 
-// 变更规格
+// UpdateExtendInstanceStorageInvoker 扩容实例的数量和存储容量
+func (c *CssClient) UpdateExtendInstanceStorageInvoker(request *model.UpdateExtendInstanceStorageRequest) *UpdateExtendInstanceStorageInvoker {
+	requestDef := GenReqDefForUpdateExtendInstanceStorage()
+	return &UpdateExtendInstanceStorageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFlavor 变更规格
 //
 // 该接口用于变更集群规格。只支持变更ess节点类型。
 //
@@ -730,7 +988,13 @@ func (c *CssClient) UpdateFlavor(request *model.UpdateFlavorRequest) (*model.Upd
 	}
 }
 
-// 全规格集群变更
+// UpdateFlavorInvoker 变更规格
+func (c *CssClient) UpdateFlavorInvoker(request *model.UpdateFlavorRequest) *UpdateFlavorInvoker {
+	requestDef := GenReqDefForUpdateFlavor()
+	return &UpdateFlavorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFlavorByType 全规格集群变更
 //
 // 修改集群规格。支持修改ess， ess-cold， ess-client， ess-master节点类型。
 //
@@ -746,7 +1010,13 @@ func (c *CssClient) UpdateFlavorByType(request *model.UpdateFlavorByTypeRequest)
 	}
 }
 
-// 修改日志基础配置
+// UpdateFlavorByTypeInvoker 全规格集群变更
+func (c *CssClient) UpdateFlavorByTypeInvoker(request *model.UpdateFlavorByTypeRequest) *UpdateFlavorByTypeInvoker {
+	requestDef := GenReqDefForUpdateFlavorByType()
+	return &UpdateFlavorByTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLogSetting 修改日志基础配置
 //
 // 该接口用于修改日志基础配置。
 //
@@ -762,7 +1032,13 @@ func (c *CssClient) UpdateLogSetting(request *model.UpdateLogSettingRequest) (*m
 	}
 }
 
-// 按需集群转包周期
+// UpdateLogSettingInvoker 修改日志基础配置
+func (c *CssClient) UpdateLogSettingInvoker(request *model.UpdateLogSettingRequest) *UpdateLogSettingInvoker {
+	requestDef := GenReqDefForUpdateLogSetting()
+	return &UpdateLogSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateOndemandClusterToPeriod 按需集群转包周期
 //
 // 该接口用于按需集群转包周期集群。
 //
@@ -778,7 +1054,13 @@ func (c *CssClient) UpdateOndemandClusterToPeriod(request *model.UpdateOndemandC
 	}
 }
 
-// 修改公网访问带宽
+// UpdateOndemandClusterToPeriodInvoker 按需集群转包周期
+func (c *CssClient) UpdateOndemandClusterToPeriodInvoker(request *model.UpdateOndemandClusterToPeriodRequest) *UpdateOndemandClusterToPeriodInvoker {
+	requestDef := GenReqDefForUpdateOndemandClusterToPeriod()
+	return &UpdateOndemandClusterToPeriodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePublicBandWidth 修改公网访问带宽
 //
 // 该接口用于修改公网访问带宽。
 //
@@ -794,7 +1076,13 @@ func (c *CssClient) UpdatePublicBandWidth(request *model.UpdatePublicBandWidthRe
 	}
 }
 
-// 缩容集群
+// UpdatePublicBandWidthInvoker 修改公网访问带宽
+func (c *CssClient) UpdatePublicBandWidthInvoker(request *model.UpdatePublicBandWidthRequest) *UpdatePublicBandWidthInvoker {
+	requestDef := GenReqDefForUpdatePublicBandWidth()
+	return &UpdatePublicBandWidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateShrinkCluster 缩容集群
 //
 // 该接口用于集群缩容不同类型实例的个数以及存储容量。
 //
@@ -810,7 +1098,13 @@ func (c *CssClient) UpdateShrinkCluster(request *model.UpdateShrinkClusterReques
 	}
 }
 
-// 指定角色下线
+// UpdateShrinkClusterInvoker 缩容集群
+func (c *CssClient) UpdateShrinkClusterInvoker(request *model.UpdateShrinkClusterRequest) *UpdateShrinkClusterInvoker {
+	requestDef := GenReqDefForUpdateShrinkCluster()
+	return &UpdateShrinkClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateShrinkNodes 指定角色下线
 //
 // 该接口用于下线集群指定角色。
 //
@@ -826,7 +1120,13 @@ func (c *CssClient) UpdateShrinkNodes(request *model.UpdateShrinkNodesRequest) (
 	}
 }
 
-// 修改集群快照的基础配置
+// UpdateShrinkNodesInvoker 指定角色下线
+func (c *CssClient) UpdateShrinkNodesInvoker(request *model.UpdateShrinkNodesRequest) *UpdateShrinkNodesInvoker {
+	requestDef := GenReqDefForUpdateShrinkNodes()
+	return &UpdateShrinkNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSnapshotSetting 修改集群快照的基础配置
 //
 // 该接口用于修改集群快照的基础配置，可修改OBS桶和IAM委托。 说明：如果未开启快照功能，使用该接口后，将会开启快照。
 //
@@ -842,7 +1142,13 @@ func (c *CssClient) UpdateSnapshotSetting(request *model.UpdateSnapshotSettingRe
 	}
 }
 
-// 关闭公网访问
+// UpdateSnapshotSettingInvoker 修改集群快照的基础配置
+func (c *CssClient) UpdateSnapshotSettingInvoker(request *model.UpdateSnapshotSettingRequest) *UpdateSnapshotSettingInvoker {
+	requestDef := GenReqDefForUpdateSnapshotSetting()
+	return &UpdateSnapshotSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateUnbindPublic 关闭公网访问
 //
 // 该接口用于关闭公网访问。
 //
@@ -858,7 +1164,13 @@ func (c *CssClient) UpdateUnbindPublic(request *model.UpdateUnbindPublicRequest)
 	}
 }
 
-// 更新终端节点连接
+// UpdateUnbindPublicInvoker 关闭公网访问
+func (c *CssClient) UpdateUnbindPublicInvoker(request *model.UpdateUnbindPublicRequest) *UpdateUnbindPublicInvoker {
+	requestDef := GenReqDefForUpdateUnbindPublic()
+	return &UpdateUnbindPublicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVpcepConnection 更新终端节点连接
 //
 // 该接口用于更新终端节点连接。
 //
@@ -874,7 +1186,13 @@ func (c *CssClient) UpdateVpcepConnection(request *model.UpdateVpcepConnectionRe
 	}
 }
 
-// 修改终端节点服务白名单
+// UpdateVpcepConnectionInvoker 更新终端节点连接
+func (c *CssClient) UpdateVpcepConnectionInvoker(request *model.UpdateVpcepConnectionRequest) *UpdateVpcepConnectionInvoker {
+	requestDef := GenReqDefForUpdateVpcepConnection()
+	return &UpdateVpcepConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVpcepWhitelist 修改终端节点服务白名单
 //
 // 该接口用于修改终端节点服务白名单。
 //
@@ -890,7 +1208,13 @@ func (c *CssClient) UpdateVpcepWhitelist(request *model.UpdateVpcepWhitelistRequ
 	}
 }
 
-// 修改参数配置
+// UpdateVpcepWhitelistInvoker 修改终端节点服务白名单
+func (c *CssClient) UpdateVpcepWhitelistInvoker(request *model.UpdateVpcepWhitelistRequest) *UpdateVpcepWhitelistInvoker {
+	requestDef := GenReqDefForUpdateVpcepWhitelist()
+	return &UpdateVpcepWhitelistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateYmls 修改参数配置
 //
 // 该接口用于修改参数配口。
 //
@@ -906,7 +1230,13 @@ func (c *CssClient) UpdateYmls(request *model.UpdateYmlsRequest) (*model.UpdateY
 	}
 }
 
-// 开启Kibana公网访问
+// UpdateYmlsInvoker 修改参数配置
+func (c *CssClient) UpdateYmlsInvoker(request *model.UpdateYmlsRequest) *UpdateYmlsInvoker {
+	requestDef := GenReqDefForUpdateYmls()
+	return &UpdateYmlsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartKibanaPublic 开启Kibana公网访问
 //
 // 该接口用于开启Kibana公网访问。
 //
@@ -922,7 +1252,13 @@ func (c *CssClient) StartKibanaPublic(request *model.StartKibanaPublicRequest) (
 	}
 }
 
-// 关闭访问控制
+// StartKibanaPublicInvoker 开启Kibana公网访问
+func (c *CssClient) StartKibanaPublicInvoker(request *model.StartKibanaPublicRequest) *StartKibanaPublicInvoker {
+	requestDef := GenReqDefForStartKibanaPublic()
+	return &StartKibanaPublicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopPublicKibanaWhitelist 关闭访问控制
 //
 // 该接口用于关闭Kibana公网访问控制。
 //
@@ -938,7 +1274,13 @@ func (c *CssClient) StopPublicKibanaWhitelist(request *model.StopPublicKibanaWhi
 	}
 }
 
-// 修改Kibana公网带宽
+// StopPublicKibanaWhitelistInvoker 关闭访问控制
+func (c *CssClient) StopPublicKibanaWhitelistInvoker(request *model.StopPublicKibanaWhitelistRequest) *StopPublicKibanaWhitelistInvoker {
+	requestDef := GenReqDefForStopPublicKibanaWhitelist()
+	return &StopPublicKibanaWhitelistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAlterKibana 修改Kibana公网带宽
 //
 // 该接口用于修改Kibana公网带宽。
 //
@@ -954,7 +1296,13 @@ func (c *CssClient) UpdateAlterKibana(request *model.UpdateAlterKibanaRequest) (
 	}
 }
 
-// 关闭Kibana公网访问
+// UpdateAlterKibanaInvoker 修改Kibana公网带宽
+func (c *CssClient) UpdateAlterKibanaInvoker(request *model.UpdateAlterKibanaRequest) *UpdateAlterKibanaInvoker {
+	requestDef := GenReqDefForUpdateAlterKibana()
+	return &UpdateAlterKibanaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCloseKibana 关闭Kibana公网访问
 //
 // 该接口用于关闭Kibana公网访问。
 //
@@ -970,7 +1318,13 @@ func (c *CssClient) UpdateCloseKibana(request *model.UpdateCloseKibanaRequest) (
 	}
 }
 
-// 修改访问控制
+// UpdateCloseKibanaInvoker 关闭Kibana公网访问
+func (c *CssClient) UpdateCloseKibanaInvoker(request *model.UpdateCloseKibanaRequest) *UpdateCloseKibanaInvoker {
+	requestDef := GenReqDefForUpdateCloseKibana()
+	return &UpdateCloseKibanaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePublicKibanaWhitelist 修改访问控制
 //
 // 该接口通过修改kibana白名单，修改kibana的访问权限。
 //
@@ -986,7 +1340,13 @@ func (c *CssClient) UpdatePublicKibanaWhitelist(request *model.UpdatePublicKiban
 	}
 }
 
-// 添加到自定义模板
+// UpdatePublicKibanaWhitelistInvoker 修改访问控制
+func (c *CssClient) UpdatePublicKibanaWhitelistInvoker(request *model.UpdatePublicKibanaWhitelistRequest) *UpdatePublicKibanaWhitelistInvoker {
+	requestDef := GenReqDefForUpdatePublicKibanaWhitelist()
+	return &UpdatePublicKibanaWhitelistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddFavorite 添加到自定义模板
 //
 // 该接口用于添加到自定义模板。
 //
@@ -1002,7 +1362,13 @@ func (c *CssClient) AddFavorite(request *model.AddFavoriteRequest) (*model.AddFa
 	}
 }
 
-// 创建配置文件
+// AddFavoriteInvoker 添加到自定义模板
+func (c *CssClient) AddFavoriteInvoker(request *model.AddFavoriteRequest) *AddFavoriteInvoker {
+	requestDef := GenReqDefForAddFavorite()
+	return &AddFavoriteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCnf 创建配置文件
 //
 // 该接口用于创建配置文件。
 //
@@ -1018,7 +1384,13 @@ func (c *CssClient) CreateCnf(request *model.CreateCnfRequest) (*model.CreateCnf
 	}
 }
 
-// 删除配置文件
+// CreateCnfInvoker 创建配置文件
+func (c *CssClient) CreateCnfInvoker(request *model.CreateCnfRequest) *CreateCnfInvoker {
+	requestDef := GenReqDefForCreateCnf()
+	return &CreateCnfInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteConf 删除配置文件
 //
 // 删除配置文件。
 //
@@ -1034,7 +1406,13 @@ func (c *CssClient) DeleteConf(request *model.DeleteConfRequest) (*model.DeleteC
 	}
 }
 
-// 删除自定义模板
+// DeleteConfInvoker 删除配置文件
+func (c *CssClient) DeleteConfInvoker(request *model.DeleteConfRequest) *DeleteConfInvoker {
+	requestDef := GenReqDefForDeleteConf()
+	return &DeleteConfInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTemplate 删除自定义模板
 //
 // 该接口用于删除自定义模板。
 //
@@ -1050,7 +1428,13 @@ func (c *CssClient) DeleteTemplate(request *model.DeleteTemplateRequest) (*model
 	}
 }
 
-// 查询操作记录
+// DeleteTemplateInvoker 删除自定义模板
+func (c *CssClient) DeleteTemplateInvoker(request *model.DeleteTemplateRequest) *DeleteTemplateInvoker {
+	requestDef := GenReqDefForDeleteTemplate()
+	return &DeleteTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListActions 查询操作记录
 //
 // 该接口用于查询操作记录。
 //
@@ -1066,7 +1450,13 @@ func (c *CssClient) ListActions(request *model.ListActionsRequest) (*model.ListA
 	}
 }
 
-// 查询配置文件列表
+// ListActionsInvoker 查询操作记录
+func (c *CssClient) ListActionsInvoker(request *model.ListActionsRequest) *ListActionsInvoker {
+	requestDef := GenReqDefForListActions()
+	return &ListActionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConfs 查询配置文件列表
 //
 // 该接口用于查询配置文件列表。
 //
@@ -1082,7 +1472,13 @@ func (c *CssClient) ListConfs(request *model.ListConfsRequest) (*model.ListConfs
 	}
 }
 
-// 查询pipeline列表
+// ListConfsInvoker 查询配置文件列表
+func (c *CssClient) ListConfsInvoker(request *model.ListConfsRequest) *ListConfsInvoker {
+	requestDef := GenReqDefForListConfs()
+	return &ListConfsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPipelines 查询pipeline列表
 //
 // 该接口用于查询pipeline列表。
 //
@@ -1098,7 +1494,13 @@ func (c *CssClient) ListPipelines(request *model.ListPipelinesRequest) (*model.L
 	}
 }
 
-// 查询模板列表
+// ListPipelinesInvoker 查询pipeline列表
+func (c *CssClient) ListPipelinesInvoker(request *model.ListPipelinesRequest) *ListPipelinesInvoker {
+	requestDef := GenReqDefForListPipelines()
+	return &ListPipelinesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTemplates 查询模板列表
 //
 // 该接口用于查询模板列表。
 //
@@ -1114,7 +1516,13 @@ func (c *CssClient) ListTemplates(request *model.ListTemplatesRequest) (*model.L
 	}
 }
 
-// 查询配置文件内容
+// ListTemplatesInvoker 查询模板列表
+func (c *CssClient) ListTemplatesInvoker(request *model.ListTemplatesRequest) *ListTemplatesInvoker {
+	requestDef := GenReqDefForListTemplates()
+	return &ListTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGetConfDetail 查询配置文件内容
 //
 // 该接口用于查询配置文件内容。
 //
@@ -1130,7 +1538,13 @@ func (c *CssClient) ShowGetConfDetail(request *model.ShowGetConfDetailRequest) (
 	}
 }
 
-// 连通性测试
+// ShowGetConfDetailInvoker 查询配置文件内容
+func (c *CssClient) ShowGetConfDetailInvoker(request *model.ShowGetConfDetailRequest) *ShowGetConfDetailInvoker {
+	requestDef := GenReqDefForShowGetConfDetail()
+	return &ShowGetConfDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartConnectivityTest 连通性测试
 //
 // 该接口用于连通性测试。
 //
@@ -1146,7 +1560,13 @@ func (c *CssClient) StartConnectivityTest(request *model.StartConnectivityTestRe
 	}
 }
 
-// 启动pipeline迁移数据
+// StartConnectivityTestInvoker 连通性测试
+func (c *CssClient) StartConnectivityTestInvoker(request *model.StartConnectivityTestRequest) *StartConnectivityTestInvoker {
+	requestDef := GenReqDefForStartConnectivityTest()
+	return &StartConnectivityTestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartPipeline 启动pipeline迁移数据
 //
 // 该接口用于启动pipeline迁移数据。
 //
@@ -1162,7 +1582,13 @@ func (c *CssClient) StartPipeline(request *model.StartPipelineRequest) (*model.S
 	}
 }
 
-// 停止pipeline迁移数据
+// StartPipelineInvoker 启动pipeline迁移数据
+func (c *CssClient) StartPipelineInvoker(request *model.StartPipelineRequest) *StartPipelineInvoker {
+	requestDef := GenReqDefForStartPipeline()
+	return &StartPipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopPipeline 停止pipeline迁移数据
 //
 // 该接口用于停止pipeline迁移数据。
 //
@@ -1178,7 +1604,13 @@ func (c *CssClient) StopPipeline(request *model.StopPipelineRequest) (*model.Sto
 	}
 }
 
-// 更新配置文件
+// StopPipelineInvoker 停止pipeline迁移数据
+func (c *CssClient) StopPipelineInvoker(request *model.StopPipelineRequest) *StopPipelineInvoker {
+	requestDef := GenReqDefForStopPipeline()
+	return &StopPipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCnf 更新配置文件
 //
 // 该接口用于更新配置文件。
 //
@@ -1192,4 +1624,10 @@ func (c *CssClient) UpdateCnf(request *model.UpdateCnfRequest) (*model.UpdateCnf
 	} else {
 		return resp.(*model.UpdateCnfResponse), nil
 	}
+}
+
+// UpdateCnfInvoker 更新配置文件
+func (c *CssClient) UpdateCnfInvoker(request *model.UpdateCnfRequest) *UpdateCnfInvoker {
+	requestDef := GenReqDefForUpdateCnf()
+	return &UpdateCnfInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

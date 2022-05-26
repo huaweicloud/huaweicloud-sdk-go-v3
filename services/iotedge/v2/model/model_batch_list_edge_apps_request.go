@@ -61,6 +61,10 @@ func GetBatchListEdgeAppsRequestAppTypeEnum() BatchListEdgeAppsRequestAppTypeEnu
 	}
 }
 
+func (c BatchListEdgeAppsRequestAppType) Value() string {
+	return c.value
+}
+
 func (c BatchListEdgeAppsRequestAppType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -101,6 +105,10 @@ func GetBatchListEdgeAppsRequestFunctionTypeEnum() BatchListEdgeAppsRequestFunct
 			value: "ON_PREMISE_INTEGRATION",
 		},
 	}
+}
+
+func (c BatchListEdgeAppsRequestFunctionType) Value() string {
+	return c.value
 }
 
 func (c BatchListEdgeAppsRequestFunctionType) MarshalJSON() ([]byte, error) {

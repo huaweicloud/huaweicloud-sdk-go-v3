@@ -48,6 +48,10 @@ func GetListTemplateViewHistoriesRequestXLanguageEnum() ListTemplateViewHistorie
 	}
 }
 
+func (c ListTemplateViewHistoriesRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ListTemplateViewHistoriesRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -83,6 +87,10 @@ func GetListTemplateViewHistoriesRequestPlatformSourceEnum() ListTemplateViewHis
 			value: 1,
 		},
 	}
+}
+
+func (c ListTemplateViewHistoriesRequestPlatformSource) Value() int32 {
+	return c.value
 }
 
 func (c ListTemplateViewHistoriesRequestPlatformSource) MarshalJSON() ([]byte, error) {

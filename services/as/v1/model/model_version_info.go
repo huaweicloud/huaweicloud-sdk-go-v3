@@ -58,6 +58,10 @@ func GetVersionInfoIdEnum() VersionInfoIdEnum {
 	}
 }
 
+func (c VersionInfoId) Value() string {
+	return c.value
+}
+
 func (c VersionInfoId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -98,6 +102,10 @@ func GetVersionInfoStatusEnum() VersionInfoStatusEnum {
 			value: "DEPRECATED",
 		},
 	}
+}
+
+func (c VersionInfoStatus) Value() string {
+	return c.value
 }
 
 func (c VersionInfoStatus) MarshalJSON() ([]byte, error) {

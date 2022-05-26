@@ -87,6 +87,10 @@ func GetRunCreateInstanceResponseStatusEnum() RunCreateInstanceResponseStatusEnu
 	}
 }
 
+func (c RunCreateInstanceResponseStatus) Value() string {
+	return c.value
+}
+
 func (c RunCreateInstanceResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

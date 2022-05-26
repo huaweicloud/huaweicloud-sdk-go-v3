@@ -86,6 +86,10 @@ func GetListTasksRequestStatusEnum() ListTasksRequestStatusEnum {
 	}
 }
 
+func (c ListTasksRequestStatus) Value() int32 {
+	return c.value
+}
+
 func (c ListTasksRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -122,6 +126,10 @@ func GetListTasksRequestTaskTypeEnum() ListTasksRequestTaskTypeEnum {
 			value: "timing",
 		},
 	}
+}
+
+func (c ListTasksRequestTaskType) Value() string {
+	return c.value
 }
 
 func (c ListTasksRequestTaskType) MarshalJSON() ([]byte, error) {
@@ -162,6 +170,10 @@ func GetListTasksRequestSortFieldEnum() ListTasksRequestSortFieldEnum {
 	}
 }
 
+func (c ListTasksRequestSortField) Value() string {
+	return c.value
+}
+
 func (c ListTasksRequestSortField) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -198,6 +210,10 @@ func GetListTasksRequestSortTypeEnum() ListTasksRequestSortTypeEnum {
 			value: "DESC",
 		},
 	}
+}
+
+func (c ListTasksRequestSortType) Value() string {
+	return c.value
 }
 
 func (c ListTasksRequestSortType) MarshalJSON() ([]byte, error) {

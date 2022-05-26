@@ -60,6 +60,10 @@ func GetSearchStatisticResourceInfoRequestTimeUnitEnum() SearchStatisticResource
 	}
 }
 
+func (c SearchStatisticResourceInfoRequestTimeUnit) Value() string {
+	return c.value
+}
+
 func (c SearchStatisticResourceInfoRequestTimeUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -104,6 +108,10 @@ func GetSearchStatisticResourceInfoRequestCategoryEnum() SearchStatisticResource
 			value: "used_pstn_info",
 		},
 	}
+}
+
+func (c SearchStatisticResourceInfoRequestCategory) Value() string {
+	return c.value
 }
 
 func (c SearchStatisticResourceInfoRequestCategory) MarshalJSON() ([]byte, error) {

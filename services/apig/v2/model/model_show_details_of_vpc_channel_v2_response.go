@@ -76,6 +76,10 @@ func GetShowDetailsOfVpcChannelV2ResponseBalanceStrategyEnum() ShowDetailsOfVpcC
 	}
 }
 
+func (c ShowDetailsOfVpcChannelV2ResponseBalanceStrategy) Value() int32 {
+	return c.value
+}
+
 func (c ShowDetailsOfVpcChannelV2ResponseBalanceStrategy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -114,6 +118,10 @@ func GetShowDetailsOfVpcChannelV2ResponseMemberTypeEnum() ShowDetailsOfVpcChanne
 	}
 }
 
+func (c ShowDetailsOfVpcChannelV2ResponseMemberType) Value() string {
+	return c.value
+}
+
 func (c ShowDetailsOfVpcChannelV2ResponseMemberType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -149,6 +157,10 @@ func GetShowDetailsOfVpcChannelV2ResponseStatusEnum() ShowDetailsOfVpcChannelV2R
 			value: 2,
 		},
 	}
+}
+
+func (c ShowDetailsOfVpcChannelV2ResponseStatus) Value() int32 {
+	return c.value
 }
 
 func (c ShowDetailsOfVpcChannelV2ResponseStatus) MarshalJSON() ([]byte, error) {

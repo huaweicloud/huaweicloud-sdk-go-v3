@@ -102,6 +102,10 @@ func GetShowDetailsOfGatewayResponseTypeV2RequestResponseTypeEnum() ShowDetailsO
 	}
 }
 
+func (c ShowDetailsOfGatewayResponseTypeV2RequestResponseType) Value() string {
+	return c.value
+}
+
 func (c ShowDetailsOfGatewayResponseTypeV2RequestResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -49,6 +49,10 @@ func GetExpressConfigLogLevelEnum() ExpressConfigLogLevelEnum {
 	}
 }
 
+func (c ExpressConfigLogLevel) Value() string {
+	return c.value
+}
+
 func (c ExpressConfigLogLevel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

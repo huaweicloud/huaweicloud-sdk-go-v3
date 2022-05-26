@@ -47,6 +47,10 @@ func GetBatchSetObjectsRequestXLanguageEnum() BatchSetObjectsRequestXLanguageEnu
 	}
 }
 
+func (c BatchSetObjectsRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c BatchSetObjectsRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

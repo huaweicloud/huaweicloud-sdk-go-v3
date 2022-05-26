@@ -50,6 +50,10 @@ func GetUpdateParamsRequestXLanguageEnum() UpdateParamsRequestXLanguageEnum {
 	}
 }
 
+func (c UpdateParamsRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c UpdateParamsRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -47,6 +47,10 @@ func GetLdApiScriptCreateApiTypeEnum() LdApiScriptCreateApiTypeEnum {
 	}
 }
 
+func (c LdApiScriptCreateApiType) Value() string {
+	return c.value
+}
+
 func (c LdApiScriptCreateApiType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

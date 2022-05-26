@@ -81,6 +81,10 @@ func GetBackupRecordResponseBackupTypeEnum() BackupRecordResponseBackupTypeEnum 
 	}
 }
 
+func (c BackupRecordResponseBackupType) Value() string {
+	return c.value
+}
+
 func (c BackupRecordResponseBackupType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -133,6 +137,10 @@ func GetBackupRecordResponseStatusEnum() BackupRecordResponseStatusEnum {
 			value: "deleted",
 		},
 	}
+}
+
+func (c BackupRecordResponseStatus) Value() string {
+	return c.value
 }
 
 func (c BackupRecordResponseStatus) MarshalJSON() ([]byte, error) {

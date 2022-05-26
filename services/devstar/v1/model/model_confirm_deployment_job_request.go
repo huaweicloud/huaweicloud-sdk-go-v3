@@ -53,6 +53,10 @@ func GetConfirmDeploymentJobRequestXLanguageEnum() ConfirmDeploymentJobRequestXL
 	}
 }
 
+func (c ConfirmDeploymentJobRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ConfirmDeploymentJobRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

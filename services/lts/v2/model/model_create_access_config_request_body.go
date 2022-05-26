@@ -52,6 +52,10 @@ func GetCreateAccessConfigRequestBodyAccessConfigTypeEnum() CreateAccessConfigRe
 	}
 }
 
+func (c CreateAccessConfigRequestBodyAccessConfigType) Value() string {
+	return c.value
+}
+
 func (c CreateAccessConfigRequestBodyAccessConfigType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

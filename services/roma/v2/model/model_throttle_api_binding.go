@@ -57,6 +57,10 @@ func GetThrottleApiBindingScopeEnum() ThrottleApiBindingScopeEnum {
 	}
 }
 
+func (c ThrottleApiBindingScope) Value() int32 {
+	return c.value
+}
+
 func (c ThrottleApiBindingScope) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

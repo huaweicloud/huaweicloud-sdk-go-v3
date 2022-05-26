@@ -66,6 +66,10 @@ func GetListDomainBandwidthPeakRequestProtocolEnum() ListDomainBandwidthPeakRequ
 	}
 }
 
+func (c ListDomainBandwidthPeakRequestProtocol) Value() string {
+	return c.value
+}
+
 func (c ListDomainBandwidthPeakRequestProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

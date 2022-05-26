@@ -77,6 +77,10 @@ func GetShowAppQuotaResponseTimeUnitEnum() ShowAppQuotaResponseTimeUnitEnum {
 	}
 }
 
+func (c ShowAppQuotaResponseTimeUnit) Value() string {
+	return c.value
+}
+
 func (c ShowAppQuotaResponseTimeUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -45,6 +45,10 @@ func GetRestarInstanceInfoTypeEnum() RestarInstanceInfoTypeEnum {
 	}
 }
 
+func (c RestarInstanceInfoType) Value() string {
+	return c.value
+}
+
 func (c RestarInstanceInfoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

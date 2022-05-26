@@ -99,6 +99,10 @@ func GetServiceListStatusEnum() ServiceListStatusEnum {
 	}
 }
 
+func (c ServiceListStatus) Value() string {
+	return c.value
+}
+
 func (c ServiceListStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -139,6 +143,10 @@ func GetServiceListServerTypeEnum() ServiceListServerTypeEnum {
 			value: "LB",
 		},
 	}
+}
+
+func (c ServiceListServerType) Value() string {
+	return c.value
 }
 
 func (c ServiceListServerType) MarshalJSON() ([]byte, error) {
@@ -185,6 +193,10 @@ func GetServiceListTcpProxyEnum() ServiceListTcpProxyEnum {
 			value: "open",
 		},
 	}
+}
+
+func (c ServiceListTcpProxy) Value() string {
+	return c.value
 }
 
 func (c ServiceListTcpProxy) MarshalJSON() ([]byte, error) {

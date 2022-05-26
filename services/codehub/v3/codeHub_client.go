@@ -2,7 +2,7 @@ package v3
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codehub/v3/model"
 )
 
@@ -19,7 +19,7 @@ func CodeHubClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 创建提交
+// CreateCommit 创建提交
 //
 // 能够一次提交位于不同目录的多个文件，目录不存在时，能自动创建目录。支持强制覆盖选项，当选择强制覆盖标志为true时，忽略冲突，强制提交。
 //
@@ -35,7 +35,13 @@ func (c *CodeHubClient) CreateCommit(request *model.CreateCommitRequest) (*model
 	}
 }
 
-// 查询某个仓库的提交信息
+// CreateCommitInvoker 创建提交
+func (c *CodeHubClient) CreateCommitInvoker(request *model.CreateCommitRequest) *CreateCommitInvoker {
+	requestDef := GenReqDefForCreateCommit()
+	return &CreateCommitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCommits 查询某个仓库的提交信息
 //
 // 根据仓库短ID获取提交信息，支持根据文件路径，查询这个路径下所有的commits列表。
 //
@@ -51,7 +57,13 @@ func (c *CodeHubClient) ListCommits(request *model.ListCommitsRequest) (*model.L
 	}
 }
 
-// 查询某个仓库的提交差异信息
+// ListCommitsInvoker 查询某个仓库的提交信息
+func (c *CodeHubClient) ListCommitsInvoker(request *model.ListCommitsRequest) *ListCommitsInvoker {
+	requestDef := GenReqDefForListCommits()
+	return &ListCommitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDiffCommit 查询某个仓库的提交差异信息
 //
 // 根据commit id查询提交差异信息。
 //
@@ -67,7 +79,13 @@ func (c *CodeHubClient) ShowDiffCommit(request *model.ShowDiffCommitRequest) (*m
 	}
 }
 
-// 查询某个仓库的特定提交信息
+// ShowDiffCommitInvoker 查询某个仓库的提交差异信息
+func (c *CodeHubClient) ShowDiffCommitInvoker(request *model.ShowDiffCommitRequest) *ShowDiffCommitInvoker {
+	requestDef := GenReqDefForShowDiffCommit()
+	return &ShowDiffCommitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSingleCommit 查询某个仓库的特定提交信息
 //
 // 获取由commit id或分支或标记的名称标识的特定提交。
 //
@@ -83,7 +101,13 @@ func (c *CodeHubClient) ShowSingleCommit(request *model.ShowSingleCommitRequest)
 	}
 }
 
-// 查询某个仓库的文件信息
+// ShowSingleCommitInvoker 查询某个仓库的特定提交信息
+func (c *CodeHubClient) ShowSingleCommitInvoker(request *model.ShowSingleCommitRequest) *ShowSingleCommitInvoker {
+	requestDef := GenReqDefForShowSingleCommit()
+	return &ShowSingleCommitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFile 查询某个仓库的文件信息
 //
 // 获取仓库中文件的信息，如名称、大小、内容。请注意，文件内容是Base64编码的。
 //
@@ -99,7 +123,13 @@ func (c *CodeHubClient) ShowFile(request *model.ShowFileRequest) (*model.ShowFil
 	}
 }
 
-// 获取项目下所有仓库信息
+// ShowFileInvoker 查询某个仓库的文件信息
+func (c *CodeHubClient) ShowFileInvoker(request *model.ShowFileRequest) *ShowFileInvoker {
+	requestDef := GenReqDefForShowFile()
+	return &ShowFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetAllRepositoryByProjectId 获取项目下所有仓库信息
 //
 // 获取仓库列表 模糊查询支持范围,如果未传入project_id，则支持按仓库名或项目名模糊查询，否则，只按仓库名模糊匹配。
 //
@@ -115,7 +145,13 @@ func (c *CodeHubClient) GetAllRepositoryByProjectId(request *model.GetAllReposit
 	}
 }
 
-// 获取一个项目下可以设置为公开状态的仓库列表
+// GetAllRepositoryByProjectIdInvoker 获取项目下所有仓库信息
+func (c *CodeHubClient) GetAllRepositoryByProjectIdInvoker(request *model.GetAllRepositoryByProjectIdRequest) *GetAllRepositoryByProjectIdInvoker {
+	requestDef := GenReqDefForGetAllRepositoryByProjectId()
+	return &GetAllRepositoryByProjectIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetProductTemplates 获取一个项目下可以设置为公开状态的仓库列表
 //
 // 获取一个项目下可以设置为公开状态的仓库列表
 //
@@ -131,7 +167,13 @@ func (c *CodeHubClient) GetProductTemplates(request *model.GetProductTemplatesRe
 	}
 }
 
-// 获取一个项目下可以设置为公开状态的仓库列表
+// GetProductTemplatesInvoker 获取一个项目下可以设置为公开状态的仓库列表
+func (c *CodeHubClient) GetProductTemplatesInvoker(request *model.GetProductTemplatesRequest) *GetProductTemplatesInvoker {
+	requestDef := GenReqDefForGetProductTemplates()
+	return &GetProductTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProductTwoTemplates 获取一个项目下可以设置为公开状态的仓库列表
 //
 // 获取一个项目下可以设置为公开状态的仓库列表
 //
@@ -147,7 +189,13 @@ func (c *CodeHubClient) ListProductTwoTemplates(request *model.ListProductTwoTem
 	}
 }
 
-// 校验指定项目下的仓库名
+// ListProductTwoTemplatesInvoker 获取一个项目下可以设置为公开状态的仓库列表
+func (c *CodeHubClient) ListProductTwoTemplatesInvoker(request *model.ListProductTwoTemplatesRequest) *ListProductTwoTemplatesInvoker {
+	requestDef := GenReqDefForListProductTwoTemplates()
+	return &ListProductTwoTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRepositoryNameExist 校验指定项目下的仓库名
 //
 // 一般创建仓库时调用。通过传入项目uuid,仓库名，调用CoudeHubAdapter接口，查询数据库来判断仓库是否重名。
 //
@@ -163,7 +211,13 @@ func (c *CodeHubClient) ShowRepositoryNameExist(request *model.ShowRepositoryNam
 	}
 }
 
-// 添加仓库成员
+// ShowRepositoryNameExistInvoker 校验指定项目下的仓库名
+func (c *CodeHubClient) ShowRepositoryNameExistInvoker(request *model.ShowRepositoryNameExistRequest) *ShowRepositoryNameExistInvoker {
+	requestDef := GenReqDefForShowRepositoryNameExist()
+	return &ShowRepositoryNameExistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddRepoMembers 添加仓库成员
 //
 // 调用方codehubportal,添加仓库成员。
 //
@@ -179,7 +233,13 @@ func (c *CodeHubClient) AddRepoMembers(request *model.AddRepoMembersRequest) (*m
 	}
 }
 
-// 删除仓库成员
+// AddRepoMembersInvoker 添加仓库成员
+func (c *CodeHubClient) AddRepoMembersInvoker(request *model.AddRepoMembersRequest) *AddRepoMembersInvoker {
+	requestDef := GenReqDefForAddRepoMembers()
+	return &AddRepoMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRepoMember 删除仓库成员
 //
 // 删除仓库成员
 //
@@ -195,7 +255,13 @@ func (c *CodeHubClient) DeleteRepoMember(request *model.DeleteRepoMemberRequest)
 	}
 }
 
-// 获取仓库所有成员记录
+// DeleteRepoMemberInvoker 删除仓库成员
+func (c *CodeHubClient) DeleteRepoMemberInvoker(request *model.DeleteRepoMemberRequest) *DeleteRepoMemberInvoker {
+	requestDef := GenReqDefForDeleteRepoMember()
+	return &DeleteRepoMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRepoMembers 获取仓库所有成员记录
 //
 // 获取仓库成员列表,可通过关键字搜索某成员。
 //
@@ -211,7 +277,13 @@ func (c *CodeHubClient) ListRepoMembers(request *model.ListRepoMembersRequest) (
 	}
 }
 
-// 设置成员在仓库中的角色
+// ListRepoMembersInvoker 获取仓库所有成员记录
+func (c *CodeHubClient) ListRepoMembersInvoker(request *model.ListRepoMembersRequest) *ListRepoMembersInvoker {
+	requestDef := GenReqDefForListRepoMembers()
+	return &ListRepoMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetRepoRole 设置成员在仓库中的角色
 //
 // 给仓库中成员设置仓库的操作权限，
 //
@@ -227,7 +299,13 @@ func (c *CodeHubClient) SetRepoRole(request *model.SetRepoRoleRequest) (*model.S
 	}
 }
 
-// 添加部署密钥
+// SetRepoRoleInvoker 设置成员在仓库中的角色
+func (c *CodeHubClient) SetRepoRoleInvoker(request *model.SetRepoRoleRequest) *SetRepoRoleInvoker {
+	requestDef := GenReqDefForSetRepoRole()
+	return &SetRepoRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddDeployKey 添加部署密钥
 //
 // 添加部署密钥
 //
@@ -243,7 +321,13 @@ func (c *CodeHubClient) AddDeployKey(request *model.AddDeployKeyRequest) (*model
 	}
 }
 
-// 添加部署密钥
+// AddDeployKeyInvoker 添加部署密钥
+func (c *CodeHubClient) AddDeployKeyInvoker(request *model.AddDeployKeyRequest) *AddDeployKeyInvoker {
+	requestDef := GenReqDefForAddDeployKey()
+	return &AddDeployKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddDeployKeyV2 添加部署密钥
 //
 // 添加部署密钥
 //
@@ -259,7 +343,13 @@ func (c *CodeHubClient) AddDeployKeyV2(request *model.AddDeployKeyV2Request) (*m
 	}
 }
 
-// 新建保护分支
+// AddDeployKeyV2Invoker 添加部署密钥
+func (c *CodeHubClient) AddDeployKeyV2Invoker(request *model.AddDeployKeyV2Request) *AddDeployKeyV2Invoker {
+	requestDef := GenReqDefForAddDeployKeyV2()
+	return &AddDeployKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddProtectBranchV2 新建保护分支
 //
 // 新建保护分支
 //
@@ -275,7 +365,13 @@ func (c *CodeHubClient) AddProtectBranchV2(request *model.AddProtectBranchV2Requ
 	}
 }
 
-// 新建标签
+// AddProtectBranchV2Invoker 新建保护分支
+func (c *CodeHubClient) AddProtectBranchV2Invoker(request *model.AddProtectBranchV2Request) *AddProtectBranchV2Invoker {
+	requestDef := GenReqDefForAddProtectBranchV2()
+	return &AddProtectBranchV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddTagV2 新建标签
 //
 // 新建标签
 //
@@ -291,7 +387,13 @@ func (c *CodeHubClient) AddTagV2(request *model.AddTagV2Request) (*model.AddTagV
 	}
 }
 
-// 创建仓库
+// AddTagV2Invoker 新建标签
+func (c *CodeHubClient) AddTagV2Invoker(request *model.AddTagV2Request) *AddTagV2Invoker {
+	requestDef := GenReqDefForAddTagV2()
+	return &AddTagV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRepository 创建仓库
 //
 // 用指定的名称在指定项目上创建仓库。传入参数：仓库名、模板id、是否导入项目成员、归属项目
 //
@@ -307,7 +409,13 @@ func (c *CodeHubClient) CreateRepository(request *model.CreateRepositoryRequest)
 	}
 }
 
-// 删除仓库部署密钥
+// CreateRepositoryInvoker 创建仓库
+func (c *CodeHubClient) CreateRepositoryInvoker(request *model.CreateRepositoryRequest) *CreateRepositoryInvoker {
+	requestDef := GenReqDefForCreateRepository()
+	return &CreateRepositoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDeployKey 删除仓库部署密钥
 //
 // 删除仓库部署密钥
 //
@@ -323,7 +431,13 @@ func (c *CodeHubClient) DeleteDeployKey(request *model.DeleteDeployKeyRequest) (
 	}
 }
 
-// 删除仓库部署密钥
+// DeleteDeployKeyInvoker 删除仓库部署密钥
+func (c *CodeHubClient) DeleteDeployKeyInvoker(request *model.DeleteDeployKeyRequest) *DeleteDeployKeyInvoker {
+	requestDef := GenReqDefForDeleteDeployKey()
+	return &DeleteDeployKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDeployKeyV2 删除仓库部署密钥
 //
 // 删除仓库部署密钥
 //
@@ -339,7 +453,13 @@ func (c *CodeHubClient) DeleteDeployKeyV2(request *model.DeleteDeployKeyV2Reques
 	}
 }
 
-// 删除仓库
+// DeleteDeployKeyV2Invoker 删除仓库部署密钥
+func (c *CodeHubClient) DeleteDeployKeyV2Invoker(request *model.DeleteDeployKeyV2Request) *DeleteDeployKeyV2Invoker {
+	requestDef := GenReqDefForDeleteDeployKeyV2()
+	return &DeleteDeployKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRepository 删除仓库
 //
 // 根据仓库32位uuid删除指定的仓库
 //
@@ -355,7 +475,13 @@ func (c *CodeHubClient) DeleteRepository(request *model.DeleteRepositoryRequest)
 	}
 }
 
-// 查询项目下的某个仓库
+// DeleteRepositoryInvoker 删除仓库
+func (c *CodeHubClient) DeleteRepositoryInvoker(request *model.DeleteRepositoryRequest) *DeleteRepositoryInvoker {
+	requestDef := GenReqDefForDeleteRepository()
+	return &DeleteRepositoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetRepositoryByProjectId 查询项目下的某个仓库
 //
 // 不建议再使用,建议使用/{repository_uuid}/status
 //
@@ -371,7 +497,13 @@ func (c *CodeHubClient) GetRepositoryByProjectId(request *model.GetRepositoryByP
 	}
 }
 
-// 获取公开示例模板列表
+// GetRepositoryByProjectIdInvoker 查询项目下的某个仓库
+func (c *CodeHubClient) GetRepositoryByProjectIdInvoker(request *model.GetRepositoryByProjectIdRequest) *GetRepositoryByProjectIdInvoker {
+	requestDef := GenReqDefForGetRepositoryByProjectId()
+	return &GetRepositoryByProjectIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetTemplates 获取公开示例模板列表
 //
 // 获取公开示例模板列表
 //
@@ -387,7 +519,13 @@ func (c *CodeHubClient) GetTemplates(request *model.GetTemplatesRequest) (*model
 	}
 }
 
-// 获取仓库上一次的提交统计信息
+// GetTemplatesInvoker 获取公开示例模板列表
+func (c *CodeHubClient) GetTemplatesInvoker(request *model.GetTemplatesRequest) *GetTemplatesInvoker {
+	requestDef := GenReqDefForGetTemplates()
+	return &GetTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCommitStatistics 获取仓库上一次的提交统计信息
 //
 // 获取仓库上一次的提交统计信息
 //
@@ -403,7 +541,13 @@ func (c *CodeHubClient) ListCommitStatistics(request *model.ListCommitStatistics
 	}
 }
 
-// 获取一个仓库下特定分支指定文件内容
+// ListCommitStatisticsInvoker 获取仓库上一次的提交统计信息
+func (c *CodeHubClient) ListCommitStatisticsInvoker(request *model.ListCommitStatisticsRequest) *ListCommitStatisticsInvoker {
+	requestDef := GenReqDefForListCommitStatistics()
+	return &ListCommitStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFiles 获取一个仓库下特定分支指定文件内容
 //
 // 获取一个仓库下特定分支指定文件内容
 //
@@ -419,7 +563,13 @@ func (c *CodeHubClient) ListFiles(request *model.ListFilesRequest) (*model.ListF
 	}
 }
 
-// 查看仓库的创建状态
+// ListFilesInvoker 获取一个仓库下特定分支指定文件内容
+func (c *CodeHubClient) ListFilesInvoker(request *model.ListFilesRequest) *ListFilesInvoker {
+	requestDef := GenReqDefForListFiles()
+	return &ListFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRepositoryStatus 查看仓库的创建状态
 //
 // 获取仓库状态。
 //
@@ -435,7 +585,13 @@ func (c *CodeHubClient) ListRepositoryStatus(request *model.ListRepositoryStatus
 	}
 }
 
-// 获取分支目录下的文件
+// ListRepositoryStatusInvoker 查看仓库的创建状态
+func (c *CodeHubClient) ListRepositoryStatusInvoker(request *model.ListRepositoryStatusRequest) *ListRepositoryStatusInvoker {
+	requestDef := GenReqDefForListRepositoryStatus()
+	return &ListRepositoryStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubfiles 获取分支目录下的文件
 //
 // 获取分支目录下的文件
 //
@@ -451,7 +607,13 @@ func (c *CodeHubClient) ListSubfiles(request *model.ListSubfilesRequest) (*model
 	}
 }
 
-// 设置仓库是公开状态还是私有状态
+// ListSubfilesInvoker 获取分支目录下的文件
+func (c *CodeHubClient) ListSubfilesInvoker(request *model.ListSubfilesRequest) *ListSubfilesInvoker {
+	requestDef := GenReqDefForListSubfiles()
+	return &ListSubfilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTemplatesTwo 设置仓库是公开状态还是私有状态
 //
 // 设置仓库是公开状态还是私有状态
 //
@@ -467,7 +629,13 @@ func (c *CodeHubClient) ListTemplatesTwo(request *model.ListTemplatesTwoRequest)
 	}
 }
 
-// 获取公开示例模板列表
+// ListTemplatesTwoInvoker 设置仓库是公开状态还是私有状态
+func (c *CodeHubClient) ListTemplatesTwoInvoker(request *model.ListTemplatesTwoRequest) *ListTemplatesTwoInvoker {
+	requestDef := GenReqDefForListTemplatesTwo()
+	return &ListTemplatesTwoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTwoTemplates 获取公开示例模板列表
 //
 // 获取公开示例模板列表
 //
@@ -483,7 +651,13 @@ func (c *CodeHubClient) ListTwoTemplates(request *model.ListTwoTemplatesRequest)
 	}
 }
 
-// 设置仓库是公开状态还是私有状态
+// ListTwoTemplatesInvoker 获取公开示例模板列表
+func (c *CodeHubClient) ListTwoTemplatesInvoker(request *model.ListTwoTemplatesRequest) *ListTwoTemplatesInvoker {
+	requestDef := GenReqDefForListTwoTemplates()
+	return &ListTwoTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShareTemplates 设置仓库是公开状态还是私有状态
 //
 // 设置仓库是公开状态还是私有状态
 //
@@ -499,7 +673,13 @@ func (c *CodeHubClient) ShareTemplates(request *model.ShareTemplatesRequest) (*m
 	}
 }
 
-// 查询某仓库对应的分支
+// ShareTemplatesInvoker 设置仓库是公开状态还是私有状态
+func (c *CodeHubClient) ShareTemplatesInvoker(request *model.ShareTemplatesRequest) *ShareTemplatesInvoker {
+	requestDef := GenReqDefForShareTemplates()
+	return &ShareTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBranchesByRepositoryId 查询某仓库对应的分支
 //
 // 根据仓库id获取指定仓库的分支列表.
 //
@@ -515,7 +695,13 @@ func (c *CodeHubClient) ShowBranchesByRepositoryId(request *model.ShowBranchesBy
 	}
 }
 
-// 查询某仓库的标签列表
+// ShowBranchesByRepositoryIdInvoker 查询某仓库对应的分支
+func (c *CodeHubClient) ShowBranchesByRepositoryIdInvoker(request *model.ShowBranchesByRepositoryIdRequest) *ShowBranchesByRepositoryIdInvoker {
+	requestDef := GenReqDefForShowBranchesByRepositoryId()
+	return &ShowBranchesByRepositoryIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBranchesByTwoRepositoryId 查询某仓库的标签列表
 //
 // 查询指定仓库对应的分支。
 //
@@ -531,7 +717,13 @@ func (c *CodeHubClient) ShowBranchesByTwoRepositoryId(request *model.ShowBranche
 	}
 }
 
-// 根据组名和仓库名查询某仓库某分支对应的提交
+// ShowBranchesByTwoRepositoryIdInvoker 查询某仓库的标签列表
+func (c *CodeHubClient) ShowBranchesByTwoRepositoryIdInvoker(request *model.ShowBranchesByTwoRepositoryIdRequest) *ShowBranchesByTwoRepositoryIdInvoker {
+	requestDef := GenReqDefForShowBranchesByTwoRepositoryId()
+	return &ShowBranchesByTwoRepositoryIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCommitsByBranch 根据组名和仓库名查询某仓库某分支对应的提交
 //
 // 根据仓库组名、仓库名和分支获取提交列表。
 //
@@ -547,7 +739,13 @@ func (c *CodeHubClient) ShowCommitsByBranch(request *model.ShowCommitsByBranchRe
 	}
 }
 
-// 根据仓库id查询仓库某分支对应的提交，提供更多可选参数
+// ShowCommitsByBranchInvoker 根据组名和仓库名查询某仓库某分支对应的提交
+func (c *CodeHubClient) ShowCommitsByBranchInvoker(request *model.ShowCommitsByBranchRequest) *ShowCommitsByBranchInvoker {
+	requestDef := GenReqDefForShowCommitsByBranch()
+	return &ShowCommitsByBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCommitsByRepoId 根据仓库id查询仓库某分支对应的提交，提供更多可选参数
 //
 // 根据仓库id查询仓库某分支对应的提交.
 //
@@ -563,7 +761,13 @@ func (c *CodeHubClient) ShowCommitsByRepoId(request *model.ShowCommitsByRepoIdRe
 	}
 }
 
-// 修改被流水线引用的仓库状态
+// ShowCommitsByRepoIdInvoker 根据仓库id查询仓库某分支对应的提交，提供更多可选参数
+func (c *CodeHubClient) ShowCommitsByRepoIdInvoker(request *model.ShowCommitsByRepoIdRequest) *ShowCommitsByRepoIdInvoker {
+	requestDef := GenReqDefForShowCommitsByRepoId()
+	return &ShowCommitsByRepoIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHasPipeline 修改被流水线引用的仓库状态
 //
 // 修改被流水线引用的仓库状态
 //
@@ -579,7 +783,13 @@ func (c *CodeHubClient) ShowHasPipeline(request *model.ShowHasPipelineRequest) (
 	}
 }
 
-// 获取一个仓库下特定分支的图片文件
+// ShowHasPipelineInvoker 修改被流水线引用的仓库状态
+func (c *CodeHubClient) ShowHasPipelineInvoker(request *model.ShowHasPipelineRequest) *ShowHasPipelineInvoker {
+	requestDef := GenReqDefForShowHasPipeline()
+	return &ShowHasPipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowImageBlob 获取一个仓库下特定分支的图片文件
 //
 // 获取一个仓库下特定分支的图片文件
 //
@@ -595,7 +805,13 @@ func (c *CodeHubClient) ShowImageBlob(request *model.ShowImageBlobRequest) (*mod
 	}
 }
 
-// 判断用户是否有仓库的管理员权限
+// ShowImageBlobInvoker 获取一个仓库下特定分支的图片文件
+func (c *CodeHubClient) ShowImageBlobInvoker(request *model.ShowImageBlobRequest) *ShowImageBlobInvoker {
+	requestDef := GenReqDefForShowImageBlob()
+	return &ShowImageBlobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMaster 判断用户是否有仓库的管理员权限
 //
 // 判断用户是否有仓库的管理员权限
 //
@@ -611,7 +827,13 @@ func (c *CodeHubClient) ShowMaster(request *model.ShowMasterRequest) (*model.Sho
 	}
 }
 
-// 根据仓库名组名获取仓库短id，用以拼接与commitid对应提交详情页面url
+// ShowMasterInvoker 判断用户是否有仓库的管理员权限
+func (c *CodeHubClient) ShowMasterInvoker(request *model.ShowMasterRequest) *ShowMasterInvoker {
+	requestDef := GenReqDefForShowMaster()
+	return &ShowMasterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRepoId 根据仓库名组名获取仓库短id，用以拼接与commitid对应提交详情页面url
 //
 // 获取仓库短id,用于获取仓库详情页面url
 //
@@ -627,7 +849,13 @@ func (c *CodeHubClient) ShowRepoId(request *model.ShowRepoIdRequest) (*model.Sho
 	}
 }
 
-// 下载仓库
+// ShowRepoIdInvoker 根据仓库名组名获取仓库短id，用以拼接与commitid对应提交详情页面url
+func (c *CodeHubClient) ShowRepoIdInvoker(request *model.ShowRepoIdRequest) *ShowRepoIdInvoker {
+	requestDef := GenReqDefForShowRepoId()
+	return &ShowRepoIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRepositoryArchive 下载仓库
 //
 // 按照指定格式下载仓库
 //
@@ -643,7 +871,13 @@ func (c *CodeHubClient) ShowRepositoryArchive(request *model.ShowRepositoryArchi
 	}
 }
 
-// 查询某个仓库的详细信息
+// ShowRepositoryArchiveInvoker 下载仓库
+func (c *CodeHubClient) ShowRepositoryArchiveInvoker(request *model.ShowRepositoryArchiveRequest) *ShowRepositoryArchiveInvoker {
+	requestDef := GenReqDefForShowRepositoryArchive()
+	return &ShowRepositoryArchiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRepositoryByUuid 查询某个仓库的详细信息
 //
 // 根据仓库UUID获取仓库信息仓库信息。返回 包含id，name，组名，仓库访问URL。
 //
@@ -659,7 +893,13 @@ func (c *CodeHubClient) ShowRepositoryByUuid(request *model.ShowRepositoryByUuid
 	}
 }
 
-// 仓库统计
+// ShowRepositoryByUuidInvoker 查询某个仓库的详细信息
+func (c *CodeHubClient) ShowRepositoryByUuidInvoker(request *model.ShowRepositoryByUuidRequest) *ShowRepositoryByUuidInvoker {
+	requestDef := GenReqDefForShowRepositoryByUuid()
+	return &ShowRepositoryByUuidInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRepositoryStatistics 仓库统计
 //
 // 根据仓库短id，查询仓库的代码提交记录统计
 //
@@ -675,7 +915,13 @@ func (c *CodeHubClient) ShowRepositoryStatistics(request *model.ShowRepositorySt
 	}
 }
 
-// 获取代码提交行数
+// ShowRepositoryStatisticsInvoker 仓库统计
+func (c *CodeHubClient) ShowRepositoryStatisticsInvoker(request *model.ShowRepositoryStatisticsRequest) *ShowRepositoryStatisticsInvoker {
+	requestDef := GenReqDefForShowRepositoryStatistics()
+	return &ShowRepositoryStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowStatisticCommit 获取代码提交行数
 //
 // 获取指定日期内代码仓指定分支的代码提交行数
 //
@@ -691,7 +937,13 @@ func (c *CodeHubClient) ShowStatisticCommit(request *model.ShowStatisticCommitRe
 	}
 }
 
-// 获取代码提交行数
+// ShowStatisticCommitInvoker 获取代码提交行数
+func (c *CodeHubClient) ShowStatisticCommitInvoker(request *model.ShowStatisticCommitRequest) *ShowStatisticCommitInvoker {
+	requestDef := GenReqDefForShowStatisticCommit()
+	return &ShowStatisticCommitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowStatisticCommitV3 获取代码提交行数
 //
 // 获取指定日期内代码仓指定分支的代码提交行数
 //
@@ -707,7 +959,13 @@ func (c *CodeHubClient) ShowStatisticCommitV3(request *model.ShowStatisticCommit
 	}
 }
 
-// 获取仓库统计数据
+// ShowStatisticCommitV3Invoker 获取代码提交行数
+func (c *CodeHubClient) ShowStatisticCommitV3Invoker(request *model.ShowStatisticCommitV3Request) *ShowStatisticCommitV3Invoker {
+	requestDef := GenReqDefForShowStatisticCommitV3()
+	return &ShowStatisticCommitV3Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowStatisticalData 获取仓库统计数据
 //
 // 获取仓库统计数据
 //
@@ -723,7 +981,13 @@ func (c *CodeHubClient) ShowStatisticalData(request *model.ShowStatisticalDataRe
 	}
 }
 
-// 添加ssh key
+// ShowStatisticalDataInvoker 获取仓库统计数据
+func (c *CodeHubClient) ShowStatisticalDataInvoker(request *model.ShowStatisticalDataRequest) *ShowStatisticalDataInvoker {
+	requestDef := GenReqDefForShowStatisticalData()
+	return &ShowStatisticalDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddSshKey 添加ssh key
 //
 // 添加ssh key
 //
@@ -739,7 +1003,13 @@ func (c *CodeHubClient) AddSshKey(request *model.AddSshKeyRequest) (*model.AddSs
 	}
 }
 
-// 删除用户公钥
+// AddSshKeyInvoker 添加ssh key
+func (c *CodeHubClient) AddSshKeyInvoker(request *model.AddSshKeyRequest) *AddSshKeyInvoker {
+	requestDef := GenReqDefForAddSshKey()
+	return &AddSshKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSShkey 删除用户公钥
 //
 // 调用gitlab原生接口删除用户公钥。
 //
@@ -755,7 +1025,13 @@ func (c *CodeHubClient) DeleteSShkey(request *model.DeleteSShkeyRequest) (*model
 	}
 }
 
-// 获取ssh key列表
+// DeleteSShkeyInvoker 删除用户公钥
+func (c *CodeHubClient) DeleteSShkeyInvoker(request *model.DeleteSShkeyRequest) *DeleteSShkeyInvoker {
+	requestDef := GenReqDefForDeleteSShkey()
+	return &DeleteSShkeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSshKeys 获取ssh key列表
 //
 // 获取ssh key列表。
 //
@@ -771,7 +1047,13 @@ func (c *CodeHubClient) ListSshKeys(request *model.ListSshKeysRequest) (*model.L
 	}
 }
 
-// 检验私钥是否有拉取代码的权限
+// ListSshKeysInvoker 获取ssh key列表
+func (c *CodeHubClient) ListSshKeysInvoker(request *model.ListSshKeysRequest) *ListSshKeysInvoker {
+	requestDef := GenReqDefForListSshKeys()
+	return &ListSshKeysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPrivateKeyVerify 检验私钥是否有拉取代码的权限
 //
 // 检验私钥是否有拉取代码的权限
 //
@@ -787,7 +1069,13 @@ func (c *CodeHubClient) ShowPrivateKeyVerify(request *model.ShowPrivateKeyVerify
 	}
 }
 
-//  https账号密码校验
+// ShowPrivateKeyVerifyInvoker 检验私钥是否有拉取代码的权限
+func (c *CodeHubClient) ShowPrivateKeyVerifyInvoker(request *model.ShowPrivateKeyVerifyRequest) *ShowPrivateKeyVerifyInvoker {
+	requestDef := GenReqDefForShowPrivateKeyVerify()
+	return &ShowPrivateKeyVerifyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ValidateHttpsInfo  https账号密码校验
 //
 // 调用 gitlab 接口判断用户使用 https 上传/下载代码时输入的用户名和密码是否合法。
 //
@@ -803,7 +1091,13 @@ func (c *CodeHubClient) ValidateHttpsInfo(request *model.ValidateHttpsInfoReques
 	}
 }
 
-//  https账号密码校验
+// ValidateHttpsInfoInvoker  https账号密码校验
+func (c *CodeHubClient) ValidateHttpsInfoInvoker(request *model.ValidateHttpsInfoRequest) *ValidateHttpsInfoInvoker {
+	requestDef := GenReqDefForValidateHttpsInfo()
+	return &ValidateHttpsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ValidateHttpsInfoV2  https账号密码校验
 //
 // 调用 gitlab 接口判断用户使用 https 上传/下载代码时输入的用户名和密码是否合法。
 //
@@ -819,7 +1113,13 @@ func (c *CodeHubClient) ValidateHttpsInfoV2(request *model.ValidateHttpsInfoV2Re
 	}
 }
 
-// 创建项目、仓库
+// ValidateHttpsInfoV2Invoker  https账号密码校验
+func (c *CodeHubClient) ValidateHttpsInfoV2Invoker(request *model.ValidateHttpsInfoV2Request) *ValidateHttpsInfoV2Invoker {
+	requestDef := GenReqDefForValidateHttpsInfoV2()
+	return &ValidateHttpsInfoV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProjectAndRepositories 创建项目、仓库
 //
 // 创建项目后，创建仓库组由后台生成方式 传入参数：仓库名、模板id、是否导入项目成员、归属项目
 //
@@ -835,7 +1135,13 @@ func (c *CodeHubClient) CreateProjectAndRepositories(request *model.CreateProjec
 	}
 }
 
-// 创建项目并fork仓库
+// CreateProjectAndRepositoriesInvoker 创建项目、仓库
+func (c *CodeHubClient) CreateProjectAndRepositoriesInvoker(request *model.CreateProjectAndRepositoriesRequest) *CreateProjectAndRepositoriesInvoker {
+	requestDef := GenReqDefForCreateProjectAndRepositories()
+	return &CreateProjectAndRepositoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProjectAndforkRepositories 创建项目并fork仓库
 //
 // 创建仓库后fork仓库 传入参数：仓库名、是否导入项目成员、归属项目
 //
@@ -851,7 +1157,13 @@ func (c *CodeHubClient) CreateProjectAndforkRepositories(request *model.CreatePr
 	}
 }
 
-// 查询用户的所有仓库
+// CreateProjectAndforkRepositoriesInvoker 创建项目并fork仓库
+func (c *CodeHubClient) CreateProjectAndforkRepositoriesInvoker(request *model.CreateProjectAndforkRepositoriesRequest) *CreateProjectAndforkRepositoriesInvoker {
+	requestDef := GenReqDefForCreateProjectAndforkRepositories()
+	return &CreateProjectAndforkRepositoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUserAllRepositories 查询用户的所有仓库
 //
 // 获取用户的所有仓库信息
 //
@@ -867,7 +1179,13 @@ func (c *CodeHubClient) ListUserAllRepositories(request *model.ListUserAllReposi
 	}
 }
 
-// 查询项目下的所有仓库
+// ListUserAllRepositoriesInvoker 查询用户的所有仓库
+func (c *CodeHubClient) ListUserAllRepositoriesInvoker(request *model.ListUserAllRepositoriesRequest) *ListUserAllRepositoriesInvoker {
+	requestDef := GenReqDefForListUserAllRepositories()
+	return &ListUserAllRepositoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAllRepositoryByTwoProjectId 查询项目下的所有仓库
 //
 // 获取仓库列表,模糊查询支持范围,如果未传入project uuid，则支持按仓库名或项目名模糊查询，否则，只按仓库名模糊匹配
 //
@@ -883,7 +1201,13 @@ func (c *CodeHubClient) ShowAllRepositoryByTwoProjectId(request *model.ShowAllRe
 	}
 }
 
-// 为指定仓库添加hook
+// ShowAllRepositoryByTwoProjectIdInvoker 查询项目下的所有仓库
+func (c *CodeHubClient) ShowAllRepositoryByTwoProjectIdInvoker(request *model.ShowAllRepositoryByTwoProjectIdRequest) *ShowAllRepositoryByTwoProjectIdInvoker {
+	requestDef := GenReqDefForShowAllRepositoryByTwoProjectId()
+	return &ShowAllRepositoryByTwoProjectIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddHooks 为指定仓库添加hook
 //
 // 提交代码自动触发编译构建，添加仓库钩子
 //
@@ -899,7 +1223,13 @@ func (c *CodeHubClient) AddHooks(request *model.AddHooksRequest) (*model.AddHook
 	}
 }
 
-// 删除指定仓库的 hook
+// AddHooksInvoker 为指定仓库添加hook
+func (c *CodeHubClient) AddHooksInvoker(request *model.AddHooksRequest) *AddHooksInvoker {
+	requestDef := GenReqDefForAddHooks()
+	return &AddHooksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHooks 删除指定仓库的 hook
 //
 // 提交代码自动触发编译构建，删除仓库钩子
 //
@@ -915,7 +1245,13 @@ func (c *CodeHubClient) DeleteHooks(request *model.DeleteHooksRequest) (*model.D
 	}
 }
 
-// 查询指定仓库的webhook
+// DeleteHooksInvoker 删除指定仓库的 hook
+func (c *CodeHubClient) DeleteHooksInvoker(request *model.DeleteHooksRequest) *DeleteHooksInvoker {
+	requestDef := GenReqDefForDeleteHooks()
+	return &DeleteHooksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHooks 查询指定仓库的webhook
 //
 // 获取仓库webhook
 //
@@ -929,4 +1265,10 @@ func (c *CodeHubClient) ListHooks(request *model.ListHooksRequest) (*model.ListH
 	} else {
 		return resp.(*model.ListHooksResponse), nil
 	}
+}
+
+// ListHooksInvoker 查询指定仓库的webhook
+func (c *CodeHubClient) ListHooksInvoker(request *model.ListHooksRequest) *ListHooksInvoker {
+	requestDef := GenReqDefForListHooks()
+	return &ListHooksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

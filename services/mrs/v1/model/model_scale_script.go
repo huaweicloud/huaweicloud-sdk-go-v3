@@ -62,6 +62,10 @@ func GetScaleScriptFailActionEnum() ScaleScriptFailActionEnum {
 	}
 }
 
+func (c ScaleScriptFailAction) Value() string {
+	return c.value
+}
+
 func (c ScaleScriptFailAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -106,6 +110,10 @@ func GetScaleScriptActionStageEnum() ScaleScriptActionStageEnum {
 			value: "after_scale_in",
 		},
 	}
+}
+
+func (c ScaleScriptActionStage) Value() string {
+	return c.value
 }
 
 func (c ScaleScriptActionStage) MarshalJSON() ([]byte, error) {

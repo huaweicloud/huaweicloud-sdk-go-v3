@@ -52,6 +52,10 @@ func GetCreateDomainsResponseInfoCodeEnum() CreateDomainsResponseInfoCodeEnum {
 	}
 }
 
+func (c CreateDomainsResponseInfoCode) Value() string {
+	return c.value
+}
+
 func (c CreateDomainsResponseInfoCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

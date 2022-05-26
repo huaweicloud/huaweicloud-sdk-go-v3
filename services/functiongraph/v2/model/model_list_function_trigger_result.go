@@ -90,6 +90,10 @@ func GetListFunctionTriggerResultTriggerTypeCodeEnum() ListFunctionTriggerResult
 	}
 }
 
+func (c ListFunctionTriggerResultTriggerTypeCode) Value() string {
+	return c.value
+}
+
 func (c ListFunctionTriggerResultTriggerTypeCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -126,6 +130,10 @@ func GetListFunctionTriggerResultTriggerStatusEnum() ListFunctionTriggerResultTr
 			value: "DISABLED",
 		},
 	}
+}
+
+func (c ListFunctionTriggerResultTriggerStatus) Value() string {
+	return c.value
 }
 
 func (c ListFunctionTriggerResultTriggerStatus) MarshalJSON() ([]byte, error) {

@@ -56,6 +56,10 @@ func GetListInstancesByTagsRequestBodyActionEnum() ListInstancesByTagsRequestBod
 	}
 }
 
+func (c ListInstancesByTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c ListInstancesByTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

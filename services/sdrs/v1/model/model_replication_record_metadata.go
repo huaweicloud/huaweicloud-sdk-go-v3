@@ -66,6 +66,10 @@ func GetReplicationRecordMetadataVolumeTypeEnum() ReplicationRecordMetadataVolum
 	}
 }
 
+func (c ReplicationRecordMetadataVolumeType) Value() string {
+	return c.value
+}
+
 func (c ReplicationRecordMetadataVolumeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

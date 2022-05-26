@@ -266,6 +266,10 @@ func GetShowDetailsOfInstanceV2ResponseStatusEnum() ShowDetailsOfInstanceV2Respo
 	}
 }
 
+func (c ShowDetailsOfInstanceV2ResponseStatus) Value() string {
+	return c.value
+}
+
 func (c ShowDetailsOfInstanceV2ResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -399,6 +403,10 @@ func GetShowDetailsOfInstanceV2ResponseInstanceStatusEnum() ShowDetailsOfInstanc
 	}
 }
 
+func (c ShowDetailsOfInstanceV2ResponseInstanceStatus) Value() int32 {
+	return c.value
+}
+
 func (c ShowDetailsOfInstanceV2ResponseInstanceStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -461,6 +469,10 @@ func GetShowDetailsOfInstanceV2ResponseSpecEnum() ShowDetailsOfInstanceV2Respons
 	}
 }
 
+func (c ShowDetailsOfInstanceV2ResponseSpec) Value() string {
+	return c.value
+}
+
 func (c ShowDetailsOfInstanceV2ResponseSpec) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -496,6 +508,10 @@ func GetShowDetailsOfInstanceV2ResponseChargingModeEnum() ShowDetailsOfInstanceV
 			value: 1,
 		},
 	}
+}
+
+func (c ShowDetailsOfInstanceV2ResponseChargingMode) Value() int32 {
+	return c.value
 }
 
 func (c ShowDetailsOfInstanceV2ResponseChargingMode) MarshalJSON() ([]byte, error) {

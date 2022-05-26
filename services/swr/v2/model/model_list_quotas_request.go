@@ -45,6 +45,10 @@ func GetListQuotasRequestContentTypeEnum() ListQuotasRequestContentTypeEnum {
 	}
 }
 
+func (c ListQuotasRequestContentType) Value() string {
+	return c.value
+}
+
 func (c ListQuotasRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -56,6 +56,10 @@ func GetPublicipInfoRespIpVersionEnum() PublicipInfoRespIpVersionEnum {
 	}
 }
 
+func (c PublicipInfoRespIpVersion) Value() int32 {
+	return c.value
+}
+
 func (c PublicipInfoRespIpVersion) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

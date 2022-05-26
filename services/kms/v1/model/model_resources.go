@@ -50,6 +50,10 @@ func GetResourcesTypeEnum() ResourcesTypeEnum {
 	}
 }
 
+func (c ResourcesType) Value() string {
+	return c.value
+}
+
 func (c ResourcesType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

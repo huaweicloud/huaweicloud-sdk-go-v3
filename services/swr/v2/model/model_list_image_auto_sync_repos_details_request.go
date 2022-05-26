@@ -51,6 +51,10 @@ func GetListImageAutoSyncReposDetailsRequestContentTypeEnum() ListImageAutoSyncR
 	}
 }
 
+func (c ListImageAutoSyncReposDetailsRequestContentType) Value() string {
+	return c.value
+}
+
 func (c ListImageAutoSyncReposDetailsRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

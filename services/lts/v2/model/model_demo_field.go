@@ -67,6 +67,10 @@ func GetDemoFieldTypeEnum() DemoFieldTypeEnum {
 	}
 }
 
+func (c DemoFieldType) Value() string {
+	return c.value
+}
+
 func (c DemoFieldType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

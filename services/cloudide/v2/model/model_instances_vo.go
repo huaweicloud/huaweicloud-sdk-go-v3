@@ -124,6 +124,10 @@ func GetInstancesVoArchEnum() InstancesVoArchEnum {
 	}
 }
 
+func (c InstancesVoArch) Value() string {
+	return c.value
+}
+
 func (c InstancesVoArch) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -170,6 +174,10 @@ func GetInstancesVoCpuMemoryEnum() InstancesVoCpuMemoryEnum {
 	}
 }
 
+func (c InstancesVoCpuMemory) Value() string {
+	return c.value
+}
+
 func (c InstancesVoCpuMemory) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -210,6 +218,10 @@ func GetInstancesVoPvcQuantityEnum() InstancesVoPvcQuantityEnum {
 			value: "20GB",
 		},
 	}
+}
+
+func (c InstancesVoPvcQuantity) Value() string {
+	return c.value
 }
 
 func (c InstancesVoPvcQuantity) MarshalJSON() ([]byte, error) {
@@ -272,6 +284,10 @@ func GetInstancesVoStatusEnum() InstancesVoStatusEnum {
 			value: "DELETE_FAILED",
 		},
 	}
+}
+
+func (c InstancesVoStatus) Value() string {
+	return c.value
 }
 
 func (c InstancesVoStatus) MarshalJSON() ([]byte, error) {

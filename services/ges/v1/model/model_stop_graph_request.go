@@ -44,6 +44,10 @@ func GetStopGraphRequestActionIdEnum() StopGraphRequestActionIdEnum {
 	}
 }
 
+func (c StopGraphRequestActionId) Value() string {
+	return c.value
+}
+
 func (c StopGraphRequestActionId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

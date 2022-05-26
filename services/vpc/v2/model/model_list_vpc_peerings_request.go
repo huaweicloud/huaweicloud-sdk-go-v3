@@ -75,6 +75,10 @@ func GetListVpcPeeringsRequestStatusEnum() ListVpcPeeringsRequestStatusEnum {
 	}
 }
 
+func (c ListVpcPeeringsRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListVpcPeeringsRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

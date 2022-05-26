@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/rabbitmq/v2/model"
 )
 
@@ -19,7 +19,7 @@ func RabbitMQClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 批量添加或删除实例标签
+// BatchCreateOrDeleteRabbitMqTag 批量添加或删除实例标签
 //
 // 批量添加或删除实例标签。
 //
@@ -35,7 +35,13 @@ func (c *RabbitMQClient) BatchCreateOrDeleteRabbitMqTag(request *model.BatchCrea
 	}
 }
 
-// 批量重启或删除实例
+// BatchCreateOrDeleteRabbitMqTagInvoker 批量添加或删除实例标签
+func (c *RabbitMQClient) BatchCreateOrDeleteRabbitMqTagInvoker(request *model.BatchCreateOrDeleteRabbitMqTagRequest) *BatchCreateOrDeleteRabbitMqTagInvoker {
+	requestDef := GenReqDefForBatchCreateOrDeleteRabbitMqTag()
+	return &BatchCreateOrDeleteRabbitMqTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchRestartOrDeleteInstances 批量重启或删除实例
 //
 // 批量重启或删除实例。
 //
@@ -55,7 +61,13 @@ func (c *RabbitMQClient) BatchRestartOrDeleteInstances(request *model.BatchResta
 	}
 }
 
-// 创建实例(按需)
+// BatchRestartOrDeleteInstancesInvoker 批量重启或删除实例
+func (c *RabbitMQClient) BatchRestartOrDeleteInstancesInvoker(request *model.BatchRestartOrDeleteInstancesRequest) *BatchRestartOrDeleteInstancesInvoker {
+	requestDef := GenReqDefForBatchRestartOrDeleteInstances()
+	return &BatchRestartOrDeleteInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePostPaidInstance 创建实例(按需)
 //
 // 创建实例，该接口创建的实例为按需计费的方式。
 //
@@ -71,7 +83,13 @@ func (c *RabbitMQClient) CreatePostPaidInstance(request *model.CreatePostPaidIns
 	}
 }
 
-// 删除后台任务管理中的指定记录
+// CreatePostPaidInstanceInvoker 创建实例(按需)
+func (c *RabbitMQClient) CreatePostPaidInstanceInvoker(request *model.CreatePostPaidInstanceRequest) *CreatePostPaidInstanceInvoker {
+	requestDef := GenReqDefForCreatePostPaidInstance()
+	return &CreatePostPaidInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteBackgroundTask 删除后台任务管理中的指定记录
 //
 // 删除后台任务管理中的指定记录。
 //
@@ -87,7 +105,13 @@ func (c *RabbitMQClient) DeleteBackgroundTask(request *model.DeleteBackgroundTas
 	}
 }
 
-// 删除指定的实例
+// DeleteBackgroundTaskInvoker 删除后台任务管理中的指定记录
+func (c *RabbitMQClient) DeleteBackgroundTaskInvoker(request *model.DeleteBackgroundTaskRequest) *DeleteBackgroundTaskInvoker {
+	requestDef := GenReqDefForDeleteBackgroundTask()
+	return &DeleteBackgroundTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteInstance 删除指定的实例
 //
 // 删除指定的实例，释放该实例的所有资源。
 //
@@ -103,7 +127,13 @@ func (c *RabbitMQClient) DeleteInstance(request *model.DeleteInstanceRequest) (*
 	}
 }
 
-// 查询可用区信息
+// DeleteInstanceInvoker 删除指定的实例
+func (c *RabbitMQClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) *DeleteInstanceInvoker {
+	requestDef := GenReqDefForDeleteInstance()
+	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAvailableZones 查询可用区信息
 //
 // 在创建实例时，需要配置实例所在的可用区ID，可通过该接口查询可用区的ID。
 //
@@ -119,7 +149,13 @@ func (c *RabbitMQClient) ListAvailableZones(request *model.ListAvailableZonesReq
 	}
 }
 
-// 查询实例的后台任务列表
+// ListAvailableZonesInvoker 查询可用区信息
+func (c *RabbitMQClient) ListAvailableZonesInvoker(request *model.ListAvailableZonesRequest) *ListAvailableZonesInvoker {
+	requestDef := GenReqDefForListAvailableZones()
+	return &ListAvailableZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBackgroundTasks 查询实例的后台任务列表
 //
 // 查询实例的后台任务列表。
 //
@@ -135,7 +171,13 @@ func (c *RabbitMQClient) ListBackgroundTasks(request *model.ListBackgroundTasksR
 	}
 }
 
-// 查询产品规格列表
+// ListBackgroundTasksInvoker 查询实例的后台任务列表
+func (c *RabbitMQClient) ListBackgroundTasksInvoker(request *model.ListBackgroundTasksRequest) *ListBackgroundTasksInvoker {
+	requestDef := GenReqDefForListBackgroundTasks()
+	return &ListBackgroundTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEngineProducts 查询产品规格列表
 //
 // 查询产品规格列表。
 //
@@ -151,7 +193,13 @@ func (c *RabbitMQClient) ListEngineProducts(request *model.ListEngineProductsReq
 	}
 }
 
-// 查询所有实例列表
+// ListEngineProductsInvoker 查询产品规格列表
+func (c *RabbitMQClient) ListEngineProductsInvoker(request *model.ListEngineProductsRequest) *ListEngineProductsInvoker {
+	requestDef := GenReqDefForListEngineProducts()
+	return &ListEngineProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstancesDetails 查询所有实例列表
 //
 // 查询租户的实例列表，支持按照条件查询。
 //
@@ -167,7 +215,13 @@ func (c *RabbitMQClient) ListInstancesDetails(request *model.ListInstancesDetail
 	}
 }
 
-// 查询插件列表
+// ListInstancesDetailsInvoker 查询所有实例列表
+func (c *RabbitMQClient) ListInstancesDetailsInvoker(request *model.ListInstancesDetailsRequest) *ListInstancesDetailsInvoker {
+	requestDef := GenReqDefForListInstancesDetails()
+	return &ListInstancesDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPlugins 查询插件列表
 //
 // 查询插件列表。
 //
@@ -183,7 +237,13 @@ func (c *RabbitMQClient) ListPlugins(request *model.ListPluginsRequest) (*model.
 	}
 }
 
-// 查询产品规格列表
+// ListPluginsInvoker 查询插件列表
+func (c *RabbitMQClient) ListPluginsInvoker(request *model.ListPluginsRequest) *ListPluginsInvoker {
+	requestDef := GenReqDefForListPlugins()
+	return &ListPluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProducts 查询产品规格列表
 //
 // 在创建实例时，需要配置订购的产品ID（即product_id），可通过该接口查询产品规格。
 //
@@ -199,7 +259,13 @@ func (c *RabbitMQClient) ListProducts(request *model.ListProductsRequest) (*mode
 	}
 }
 
-// 重置密码
+// ListProductsInvoker 查询产品规格列表
+func (c *RabbitMQClient) ListProductsInvoker(request *model.ListProductsRequest) *ListProductsInvoker {
+	requestDef := GenReqDefForListProducts()
+	return &ListProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetPassword 重置密码
 //
 // 重置密码。
 //
@@ -215,7 +281,13 @@ func (c *RabbitMQClient) ResetPassword(request *model.ResetPasswordRequest) (*mo
 	}
 }
 
-// 实例规格变更
+// ResetPasswordInvoker 重置密码
+func (c *RabbitMQClient) ResetPasswordInvoker(request *model.ResetPasswordRequest) *ResetPasswordInvoker {
+	requestDef := GenReqDefForResetPassword()
+	return &ResetPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResizeInstance 实例规格变更
 //
 // 实例规格变更。
 //
@@ -233,7 +305,13 @@ func (c *RabbitMQClient) ResizeInstance(request *model.ResizeInstanceRequest) (*
 	}
 }
 
-// 查询后台任务管理中的指定记录
+// ResizeInstanceInvoker 实例规格变更
+func (c *RabbitMQClient) ResizeInstanceInvoker(request *model.ResizeInstanceRequest) *ResizeInstanceInvoker {
+	requestDef := GenReqDefForResizeInstance()
+	return &ResizeInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBackgroundTask 查询后台任务管理中的指定记录
 //
 // 查询后台任务管理中的指定记录。
 //
@@ -249,7 +327,13 @@ func (c *RabbitMQClient) ShowBackgroundTask(request *model.ShowBackgroundTaskReq
 	}
 }
 
-// 查询指定实例
+// ShowBackgroundTaskInvoker 查询后台任务管理中的指定记录
+func (c *RabbitMQClient) ShowBackgroundTaskInvoker(request *model.ShowBackgroundTaskRequest) *ShowBackgroundTaskInvoker {
+	requestDef := GenReqDefForShowBackgroundTask()
+	return &ShowBackgroundTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstance 查询指定实例
 //
 // 查询指定实例的详细信息。
 //
@@ -265,7 +349,13 @@ func (c *RabbitMQClient) ShowInstance(request *model.ShowInstanceRequest) (*mode
 	}
 }
 
-// 查询可扩容规格列表
+// ShowInstanceInvoker 查询指定实例
+func (c *RabbitMQClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *ShowInstanceInvoker {
+	requestDef := GenReqDefForShowInstance()
+	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceExtendProductInfo 查询可扩容规格列表
 //
 // 查询可扩容规格列表。
 //
@@ -283,7 +373,13 @@ func (c *RabbitMQClient) ShowInstanceExtendProductInfo(request *model.ShowInstan
 	}
 }
 
-// 查询维护时间窗时间段
+// ShowInstanceExtendProductInfoInvoker 查询可扩容规格列表
+func (c *RabbitMQClient) ShowInstanceExtendProductInfoInvoker(request *model.ShowInstanceExtendProductInfoRequest) *ShowInstanceExtendProductInfoInvoker {
+	requestDef := GenReqDefForShowInstanceExtendProductInfo()
+	return &ShowInstanceExtendProductInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMaintainWindows 查询维护时间窗时间段
 //
 // 查询维护时间窗开始时间和结束时间。
 //
@@ -299,7 +395,13 @@ func (c *RabbitMQClient) ShowMaintainWindows(request *model.ShowMaintainWindowsR
 	}
 }
 
-// 查询项目标签
+// ShowMaintainWindowsInvoker 查询维护时间窗时间段
+func (c *RabbitMQClient) ShowMaintainWindowsInvoker(request *model.ShowMaintainWindowsRequest) *ShowMaintainWindowsInvoker {
+	requestDef := GenReqDefForShowMaintainWindows()
+	return &ShowMaintainWindowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRabbitMqProjectTags 查询项目标签
 //
 // 查询项目标签。
 //
@@ -315,7 +417,13 @@ func (c *RabbitMQClient) ShowRabbitMqProjectTags(request *model.ShowRabbitMqProj
 	}
 }
 
-// 查询实例标签
+// ShowRabbitMqProjectTagsInvoker 查询项目标签
+func (c *RabbitMQClient) ShowRabbitMqProjectTagsInvoker(request *model.ShowRabbitMqProjectTagsRequest) *ShowRabbitMqProjectTagsInvoker {
+	requestDef := GenReqDefForShowRabbitMqProjectTags()
+	return &ShowRabbitMqProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRabbitMqTags 查询实例标签
 //
 // 查询实例标签。
 //
@@ -331,7 +439,13 @@ func (c *RabbitMQClient) ShowRabbitMqTags(request *model.ShowRabbitMqTagsRequest
 	}
 }
 
-// 修改实例信息
+// ShowRabbitMqTagsInvoker 查询实例标签
+func (c *RabbitMQClient) ShowRabbitMqTagsInvoker(request *model.ShowRabbitMqTagsRequest) *ShowRabbitMqTagsInvoker {
+	requestDef := GenReqDefForShowRabbitMqTags()
+	return &ShowRabbitMqTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstance 修改实例信息
 //
 // 修改实例的名称和描述信息。
 //
@@ -347,7 +461,13 @@ func (c *RabbitMQClient) UpdateInstance(request *model.UpdateInstanceRequest) (*
 	}
 }
 
-// 开启或关闭插件
+// UpdateInstanceInvoker 修改实例信息
+func (c *RabbitMQClient) UpdateInstanceInvoker(request *model.UpdateInstanceRequest) *UpdateInstanceInvoker {
+	requestDef := GenReqDefForUpdateInstance()
+	return &UpdateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePlugins 开启或关闭插件
 //
 // 开启或关闭插件。
 //
@@ -361,4 +481,10 @@ func (c *RabbitMQClient) UpdatePlugins(request *model.UpdatePluginsRequest) (*mo
 	} else {
 		return resp.(*model.UpdatePluginsResponse), nil
 	}
+}
+
+// UpdatePluginsInvoker 开启或关闭插件
+func (c *RabbitMQClient) UpdatePluginsInvoker(request *model.UpdatePluginsRequest) *UpdatePluginsInvoker {
+	requestDef := GenReqDefForUpdatePlugins()
+	return &UpdatePluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

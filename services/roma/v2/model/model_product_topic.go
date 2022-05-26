@@ -58,6 +58,10 @@ func GetProductTopicPermissionEnum() ProductTopicPermissionEnum {
 	}
 }
 
+func (c ProductTopicPermission) Value() int32 {
+	return c.value
+}
+
 func (c ProductTopicPermission) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

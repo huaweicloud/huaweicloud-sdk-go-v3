@@ -85,6 +85,10 @@ func GetCreateDispatchesResponsePeriodEnum() CreateDispatchesResponsePeriodEnum 
 	}
 }
 
+func (c CreateDispatchesResponsePeriod) Value() string {
+	return c.value
+}
+
 func (c CreateDispatchesResponsePeriod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

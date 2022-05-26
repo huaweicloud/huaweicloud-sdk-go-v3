@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ecs/v2/model"
 )
 
@@ -19,7 +19,7 @@ func EcsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 云服务器组添加成员
+// AddServerGroupMember 云服务器组添加成员
 //
 // 将云服务器加入云服务器组。添加成功后，如果该云服务器组是反亲和性策略的，则该云服务器与云服务器组中的其他成员尽量分散地创建在不同主机上。如果该云服务器时故障域类型的，则该云服务器会拥有故障域属性。
 //
@@ -35,7 +35,13 @@ func (c *EcsClient) AddServerGroupMember(request *model.AddServerGroupMemberRequ
 	}
 }
 
-// 云服务器网卡配置虚拟IP地址
+// AddServerGroupMemberInvoker 云服务器组添加成员
+func (c *EcsClient) AddServerGroupMemberInvoker(request *model.AddServerGroupMemberRequest) *AddServerGroupMemberInvoker {
+	requestDef := GenReqDefForAddServerGroupMember()
+	return &AddServerGroupMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateServerVirtualIp 云服务器网卡配置虚拟IP地址
 //
 // 虚拟IP地址用于为网卡提供第二个IP地址，同时支持与多个弹性云服务器的网卡绑定，从而实现多个弹性云服务器之间的高可用性。
 //
@@ -57,7 +63,13 @@ func (c *EcsClient) AssociateServerVirtualIp(request *model.AssociateServerVirtu
 	}
 }
 
-// 弹性云服务器挂载磁盘
+// AssociateServerVirtualIpInvoker 云服务器网卡配置虚拟IP地址
+func (c *EcsClient) AssociateServerVirtualIpInvoker(request *model.AssociateServerVirtualIpRequest) *AssociateServerVirtualIpInvoker {
+	requestDef := GenReqDefForAssociateServerVirtualIp()
+	return &AssociateServerVirtualIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AttachServerVolume 弹性云服务器挂载磁盘
 //
 // 把磁盘挂载到弹性云服务器上。
 //
@@ -73,7 +85,13 @@ func (c *EcsClient) AttachServerVolume(request *model.AttachServerVolumeRequest)
 	}
 }
 
-// 批量添加云服务器网卡
+// AttachServerVolumeInvoker 弹性云服务器挂载磁盘
+func (c *EcsClient) AttachServerVolumeInvoker(request *model.AttachServerVolumeRequest) *AttachServerVolumeInvoker {
+	requestDef := GenReqDefForAttachServerVolume()
+	return &AttachServerVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchAddServerNics 批量添加云服务器网卡
 //
 // 给云服务器添加一张或多张网卡。
 //
@@ -89,7 +107,13 @@ func (c *EcsClient) BatchAddServerNics(request *model.BatchAddServerNicsRequest)
 	}
 }
 
-// 批量挂载指定共享盘
+// BatchAddServerNicsInvoker 批量添加云服务器网卡
+func (c *EcsClient) BatchAddServerNicsInvoker(request *model.BatchAddServerNicsRequest) *BatchAddServerNicsInvoker {
+	requestDef := GenReqDefForBatchAddServerNics()
+	return &BatchAddServerNicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchAttachSharableVolumes 批量挂载指定共享盘
 //
 // 将指定的共享磁盘一次性挂载到多个弹性云服务器，实现批量挂载。
 //
@@ -105,7 +129,13 @@ func (c *EcsClient) BatchAttachSharableVolumes(request *model.BatchAttachSharabl
 	}
 }
 
-// 批量添加云服务器标签
+// BatchAttachSharableVolumesInvoker 批量挂载指定共享盘
+func (c *EcsClient) BatchAttachSharableVolumesInvoker(request *model.BatchAttachSharableVolumesRequest) *BatchAttachSharableVolumesInvoker {
+	requestDef := GenReqDefForBatchAttachSharableVolumes()
+	return &BatchAttachSharableVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateServerTags 批量添加云服务器标签
 //
 // - 为指定云服务器批量添加标签。
 //
@@ -123,7 +153,13 @@ func (c *EcsClient) BatchCreateServerTags(request *model.BatchCreateServerTagsRe
 	}
 }
 
-// 批量删除云服务器网卡
+// BatchCreateServerTagsInvoker 批量添加云服务器标签
+func (c *EcsClient) BatchCreateServerTagsInvoker(request *model.BatchCreateServerTagsRequest) *BatchCreateServerTagsInvoker {
+	requestDef := GenReqDefForBatchCreateServerTags()
+	return &BatchCreateServerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteServerNics 批量删除云服务器网卡
 //
 // 卸载并删除云服务器中的一张或多张网卡。
 //
@@ -139,7 +175,13 @@ func (c *EcsClient) BatchDeleteServerNics(request *model.BatchDeleteServerNicsRe
 	}
 }
 
-// 批量删除云服务器标签
+// BatchDeleteServerNicsInvoker 批量删除云服务器网卡
+func (c *EcsClient) BatchDeleteServerNicsInvoker(request *model.BatchDeleteServerNicsRequest) *BatchDeleteServerNicsInvoker {
+	requestDef := GenReqDefForBatchDeleteServerNics()
+	return &BatchDeleteServerNicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteServerTags 批量删除云服务器标签
 //
 // - 为指定云服务器批量删除标签。
 //
@@ -157,7 +199,13 @@ func (c *EcsClient) BatchDeleteServerTags(request *model.BatchDeleteServerTagsRe
 	}
 }
 
-// 批量重启云服务器
+// BatchDeleteServerTagsInvoker 批量删除云服务器标签
+func (c *EcsClient) BatchDeleteServerTagsInvoker(request *model.BatchDeleteServerTagsRequest) *BatchDeleteServerTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteServerTags()
+	return &BatchDeleteServerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchRebootServers 批量重启云服务器
 //
 // 根据给定的云服务器ID列表，批量重启云服务器，一次最多可以重启1000台。
 //
@@ -173,7 +221,13 @@ func (c *EcsClient) BatchRebootServers(request *model.BatchRebootServersRequest)
 	}
 }
 
-// 批量重置弹性云服务器密码
+// BatchRebootServersInvoker 批量重启云服务器
+func (c *EcsClient) BatchRebootServersInvoker(request *model.BatchRebootServersRequest) *BatchRebootServersInvoker {
+	requestDef := GenReqDefForBatchRebootServers()
+	return &BatchRebootServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchResetServersPassword 批量重置弹性云服务器密码
 //
 // 批量重置弹性云服务器管理帐号（root用户或Administrator用户）的密码。
 //
@@ -189,7 +243,13 @@ func (c *EcsClient) BatchResetServersPassword(request *model.BatchResetServersPa
 	}
 }
 
-// 批量启动云服务器
+// BatchResetServersPasswordInvoker 批量重置弹性云服务器密码
+func (c *EcsClient) BatchResetServersPasswordInvoker(request *model.BatchResetServersPasswordRequest) *BatchResetServersPasswordInvoker {
+	requestDef := GenReqDefForBatchResetServersPassword()
+	return &BatchResetServersPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchStartServers 批量启动云服务器
 //
 // 根据给定的云服务器ID列表，批量启动云服务器，一次最多可以启动1000台。
 //
@@ -205,7 +265,13 @@ func (c *EcsClient) BatchStartServers(request *model.BatchStartServersRequest) (
 	}
 }
 
-// 批量关闭云服务器
+// BatchStartServersInvoker 批量启动云服务器
+func (c *EcsClient) BatchStartServersInvoker(request *model.BatchStartServersRequest) *BatchStartServersInvoker {
+	requestDef := GenReqDefForBatchStartServers()
+	return &BatchStartServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchStopServers 批量关闭云服务器
 //
 // 根据给定的云服务器ID列表，批量关闭云服务器，一次最多可以关闭1000台。
 //
@@ -221,7 +287,13 @@ func (c *EcsClient) BatchStopServers(request *model.BatchStopServersRequest) (*m
 	}
 }
 
-// 批量修改弹性云服务器
+// BatchStopServersInvoker 批量关闭云服务器
+func (c *EcsClient) BatchStopServersInvoker(request *model.BatchStopServersRequest) *BatchStopServersInvoker {
+	requestDef := GenReqDefForBatchStopServers()
+	return &BatchStopServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateServersName 批量修改弹性云服务器
 //
 // 批量修改弹性云服务器信息。
 // 当前仅支持批量修改云服务器名称，一次最多可以修改1000台。
@@ -238,7 +310,13 @@ func (c *EcsClient) BatchUpdateServersName(request *model.BatchUpdateServersName
 	}
 }
 
-// 切换弹性云服务器操作系统(安装Cloud init)
+// BatchUpdateServersNameInvoker 批量修改弹性云服务器
+func (c *EcsClient) BatchUpdateServersNameInvoker(request *model.BatchUpdateServersNameRequest) *BatchUpdateServersNameInvoker {
+	requestDef := GenReqDefForBatchUpdateServersName()
+	return &BatchUpdateServersNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeServerOsWithCloudInit 切换弹性云服务器操作系统(安装Cloud init)
 //
 // 切换弹性云服务器操作系统。支持弹性云服务器数据盘不变的情况下，使用新镜像重装系统盘。
 //
@@ -256,7 +334,13 @@ func (c *EcsClient) ChangeServerOsWithCloudInit(request *model.ChangeServerOsWit
 	}
 }
 
-// 切换弹性云服务器操作系统(未安装Cloud init)
+// ChangeServerOsWithCloudInitInvoker 切换弹性云服务器操作系统(安装Cloud init)
+func (c *EcsClient) ChangeServerOsWithCloudInitInvoker(request *model.ChangeServerOsWithCloudInitRequest) *ChangeServerOsWithCloudInitInvoker {
+	requestDef := GenReqDefForChangeServerOsWithCloudInit()
+	return &ChangeServerOsWithCloudInitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeServerOsWithoutCloudInit 切换弹性云服务器操作系统(未安装Cloud init)
 //
 // 切换弹性云服务器操作系统。
 //
@@ -274,7 +358,13 @@ func (c *EcsClient) ChangeServerOsWithoutCloudInit(request *model.ChangeServerOs
 	}
 }
 
-// 创建云服务器(按需)
+// ChangeServerOsWithoutCloudInitInvoker 切换弹性云服务器操作系统(未安装Cloud init)
+func (c *EcsClient) ChangeServerOsWithoutCloudInitInvoker(request *model.ChangeServerOsWithoutCloudInitRequest) *ChangeServerOsWithoutCloudInitInvoker {
+	requestDef := GenReqDefForChangeServerOsWithoutCloudInit()
+	return &ChangeServerOsWithoutCloudInitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePostPaidServers 创建云服务器(按需)
 //
 // 创建一台或多台[按需付费](https://support.huaweicloud.com/productdesc-ecs/ecs_01_0065.html)方式的云服务器。
 //
@@ -303,7 +393,13 @@ func (c *EcsClient) CreatePostPaidServers(request *model.CreatePostPaidServersRe
 	}
 }
 
-// 创建云服务器组
+// CreatePostPaidServersInvoker 创建云服务器(按需)
+func (c *EcsClient) CreatePostPaidServersInvoker(request *model.CreatePostPaidServersRequest) *CreatePostPaidServersInvoker {
+	requestDef := GenReqDefForCreatePostPaidServers()
+	return &CreatePostPaidServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateServerGroup 创建云服务器组
 //
 // 创建弹性云服务器组。
 //
@@ -321,7 +417,13 @@ func (c *EcsClient) CreateServerGroup(request *model.CreateServerGroupRequest) (
 	}
 }
 
-// 创建云服务器
+// CreateServerGroupInvoker 创建云服务器组
+func (c *EcsClient) CreateServerGroupInvoker(request *model.CreateServerGroupRequest) *CreateServerGroupInvoker {
+	requestDef := GenReqDefForCreateServerGroup()
+	return &CreateServerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateServers 创建云服务器
 //
 // 创建一台或多台云服务器。
 //
@@ -359,7 +461,13 @@ func (c *EcsClient) CreateServers(request *model.CreateServersRequest) (*model.C
 	}
 }
 
-// 删除云服务器组
+// CreateServersInvoker 创建云服务器
+func (c *EcsClient) CreateServersInvoker(request *model.CreateServersRequest) *CreateServersInvoker {
+	requestDef := GenReqDefForCreateServers()
+	return &CreateServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteServerGroup 删除云服务器组
 //
 // 删除云服务器组。
 //
@@ -377,7 +485,13 @@ func (c *EcsClient) DeleteServerGroup(request *model.DeleteServerGroupRequest) (
 	}
 }
 
-// 云服务器组删除成员
+// DeleteServerGroupInvoker 删除云服务器组
+func (c *EcsClient) DeleteServerGroupInvoker(request *model.DeleteServerGroupRequest) *DeleteServerGroupInvoker {
+	requestDef := GenReqDefForDeleteServerGroup()
+	return &DeleteServerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteServerGroupMember 云服务器组删除成员
 //
 // 将弹性云服务器移出云服务器组。移出后，该云服务器与云服务器组中的成员不再遵从反亲和策略。
 //
@@ -393,7 +507,13 @@ func (c *EcsClient) DeleteServerGroupMember(request *model.DeleteServerGroupMemb
 	}
 }
 
-// 删除云服务器指定元数据
+// DeleteServerGroupMemberInvoker 云服务器组删除成员
+func (c *EcsClient) DeleteServerGroupMemberInvoker(request *model.DeleteServerGroupMemberRequest) *DeleteServerGroupMemberInvoker {
+	requestDef := GenReqDefForDeleteServerGroupMember()
+	return &DeleteServerGroupMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteServerMetadata 删除云服务器指定元数据
 //
 // 删除云服务器指定元数据。
 //
@@ -409,7 +529,13 @@ func (c *EcsClient) DeleteServerMetadata(request *model.DeleteServerMetadataRequ
 	}
 }
 
-// 云服务器清除密码(企业项目)
+// DeleteServerMetadataInvoker 删除云服务器指定元数据
+func (c *EcsClient) DeleteServerMetadataInvoker(request *model.DeleteServerMetadataRequest) *DeleteServerMetadataInvoker {
+	requestDef := GenReqDefForDeleteServerMetadata()
+	return &DeleteServerMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteServerPassword 云服务器清除密码(企业项目)
 //
 // 清除Windows云服务器初始安装时系统生成的密码记录。清除密码后，不影响云服务器密码登录功能，但不能再使用获取密码功能来查询该云服务器密码。
 //
@@ -425,7 +551,13 @@ func (c *EcsClient) DeleteServerPassword(request *model.DeleteServerPasswordRequ
 	}
 }
 
-// 删除云服务器
+// DeleteServerPasswordInvoker 云服务器清除密码(企业项目)
+func (c *EcsClient) DeleteServerPasswordInvoker(request *model.DeleteServerPasswordRequest) *DeleteServerPasswordInvoker {
+	requestDef := GenReqDefForDeleteServerPassword()
+	return &DeleteServerPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteServers 删除云服务器
 //
 // 根据指定的云服务器ID列表，删除云服务器。
 //
@@ -443,7 +575,13 @@ func (c *EcsClient) DeleteServers(request *model.DeleteServersRequest) (*model.D
 	}
 }
 
-// 弹性云服务器卸载磁盘
+// DeleteServersInvoker 删除云服务器
+func (c *EcsClient) DeleteServersInvoker(request *model.DeleteServersRequest) *DeleteServersInvoker {
+	requestDef := GenReqDefForDeleteServers()
+	return &DeleteServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DetachServerVolume 弹性云服务器卸载磁盘
 //
 // 从弹性云服务器中卸载磁盘。
 //
@@ -459,7 +597,13 @@ func (c *EcsClient) DetachServerVolume(request *model.DetachServerVolumeRequest)
 	}
 }
 
-// 云服务器网卡解绑虚拟IP地址
+// DetachServerVolumeInvoker 弹性云服务器卸载磁盘
+func (c *EcsClient) DetachServerVolumeInvoker(request *model.DetachServerVolumeRequest) *DetachServerVolumeInvoker {
+	requestDef := GenReqDefForDetachServerVolume()
+	return &DetachServerVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateServerVirtualIp 云服务器网卡解绑虚拟IP地址
 //
 // 虚拟IP地址用于为网卡提供第二个IP地址，同时支持与多个弹性云服务器的网卡绑定，从而实现多个弹性云服务器之间的高可用性。
 //
@@ -477,7 +621,13 @@ func (c *EcsClient) DisassociateServerVirtualIp(request *model.DisassociateServe
 	}
 }
 
-// 查询规格详情和规格扩展信息列表
+// DisassociateServerVirtualIpInvoker 云服务器网卡解绑虚拟IP地址
+func (c *EcsClient) DisassociateServerVirtualIpInvoker(request *model.DisassociateServerVirtualIpRequest) *DisassociateServerVirtualIpInvoker {
+	requestDef := GenReqDefForDisassociateServerVirtualIp()
+	return &DisassociateServerVirtualIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFlavors 查询规格详情和规格扩展信息列表
 //
 // 查询云服务器规格详情信息和规格扩展信息列表。
 //
@@ -493,7 +643,13 @@ func (c *EcsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 	}
 }
 
-// 查询云服务器规格变更支持列表
+// ListFlavorsInvoker 查询规格详情和规格扩展信息列表
+func (c *EcsClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListFlavorsInvoker {
+	requestDef := GenReqDefForListFlavors()
+	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResizeFlavors 查询云服务器规格变更支持列表
 //
 // 变更规格时，部分规格的云服务器之间不能互相变更。您可以通过本接口，通过指定弹性云服务器规格，查询该规格可以变更的规格列表。
 //
@@ -509,7 +665,13 @@ func (c *EcsClient) ListResizeFlavors(request *model.ListResizeFlavorsRequest) (
 	}
 }
 
-// 查询弹性云服务器磁盘信息
+// ListResizeFlavorsInvoker 查询云服务器规格变更支持列表
+func (c *EcsClient) ListResizeFlavorsInvoker(request *model.ListResizeFlavorsRequest) *ListResizeFlavorsInvoker {
+	requestDef := GenReqDefForListResizeFlavors()
+	return &ListResizeFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServerBlockDevices 查询弹性云服务器磁盘信息
 //
 // 查询弹性云服务器挂载的磁盘信息。
 //
@@ -525,7 +687,13 @@ func (c *EcsClient) ListServerBlockDevices(request *model.ListServerBlockDevices
 	}
 }
 
-// 查询云服务器组列表
+// ListServerBlockDevicesInvoker 查询弹性云服务器磁盘信息
+func (c *EcsClient) ListServerBlockDevicesInvoker(request *model.ListServerBlockDevicesRequest) *ListServerBlockDevicesInvoker {
+	requestDef := GenReqDefForListServerBlockDevices()
+	return &ListServerBlockDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServerGroups 查询云服务器组列表
 //
 // 查询弹性云服务器组。
 //
@@ -543,7 +711,13 @@ func (c *EcsClient) ListServerGroups(request *model.ListServerGroupsRequest) (*m
 	}
 }
 
-// 查询云服务器网卡信息
+// ListServerGroupsInvoker 查询云服务器组列表
+func (c *EcsClient) ListServerGroupsInvoker(request *model.ListServerGroupsRequest) *ListServerGroupsInvoker {
+	requestDef := GenReqDefForListServerGroups()
+	return &ListServerGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServerInterfaces 查询云服务器网卡信息
 //
 // 查询云服务器网卡信息。
 //
@@ -559,7 +733,13 @@ func (c *EcsClient) ListServerInterfaces(request *model.ListServerInterfacesRequ
 	}
 }
 
-// 查询项目标签
+// ListServerInterfacesInvoker 查询云服务器网卡信息
+func (c *EcsClient) ListServerInterfacesInvoker(request *model.ListServerInterfacesRequest) *ListServerInterfacesInvoker {
+	requestDef := GenReqDefForListServerInterfaces()
+	return &ListServerInterfacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServerTags 查询项目标签
 //
 // 项目（Project）用于将OpenStack的资源（计算资源、存储资源和网络资源）进行分组和隔离。项目可以是一个部门或者一个项目组。一个帐户中可以创建多个项目。
 //
@@ -577,7 +757,13 @@ func (c *EcsClient) ListServerTags(request *model.ListServerTagsRequest) (*model
 	}
 }
 
-// 查询云服务器详情列表
+// ListServerTagsInvoker 查询项目标签
+func (c *EcsClient) ListServerTagsInvoker(request *model.ListServerTagsRequest) *ListServerTagsInvoker {
+	requestDef := GenReqDefForListServerTags()
+	return &ListServerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServersDetails 查询云服务器详情列表
 //
 // 根据用户请求条件从数据库筛选、查询所有的弹性云服务器，并关联相关表获取到弹性云服务器的详细信息。
 //
@@ -595,7 +781,13 @@ func (c *EcsClient) ListServersDetails(request *model.ListServersDetailsRequest)
 	}
 }
 
-// 冷迁移云服务器
+// ListServersDetailsInvoker 查询云服务器详情列表
+func (c *EcsClient) ListServersDetailsInvoker(request *model.ListServersDetailsRequest) *ListServersDetailsInvoker {
+	requestDef := GenReqDefForListServersDetails()
+	return &ListServersDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// MigrateServer 冷迁移云服务器
 //
 // - 将部署在专属主机上的弹性云服务器迁移至其他专属主机。
 // - 将部署在专属主机上的弹性云服务器迁移至公共资源池，即不再部署在专属主机上。
@@ -613,7 +805,13 @@ func (c *EcsClient) MigrateServer(request *model.MigrateServerRequest) (*model.M
 	}
 }
 
-// 添加安全组
+// MigrateServerInvoker 冷迁移云服务器
+func (c *EcsClient) MigrateServerInvoker(request *model.MigrateServerRequest) *MigrateServerInvoker {
+	requestDef := GenReqDefForMigrateServer()
+	return &MigrateServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NovaAssociateSecurityGroup 添加安全组
 //
 // 为弹性云服务器添加一个安全组。
 //
@@ -631,7 +829,13 @@ func (c *EcsClient) NovaAssociateSecurityGroup(request *model.NovaAssociateSecur
 	}
 }
 
-// 创建和导入SSH密钥
+// NovaAssociateSecurityGroupInvoker 添加安全组
+func (c *EcsClient) NovaAssociateSecurityGroupInvoker(request *model.NovaAssociateSecurityGroupRequest) *NovaAssociateSecurityGroupInvoker {
+	requestDef := GenReqDefForNovaAssociateSecurityGroup()
+	return &NovaAssociateSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NovaCreateKeypair 创建和导入SSH密钥
 //
 // 创建SSH密钥，或把公钥导入系统，生成密钥对。
 //
@@ -649,7 +853,13 @@ func (c *EcsClient) NovaCreateKeypair(request *model.NovaCreateKeypairRequest) (
 	}
 }
 
-// 创建云服务器
+// NovaCreateKeypairInvoker 创建和导入SSH密钥
+func (c *EcsClient) NovaCreateKeypairInvoker(request *model.NovaCreateKeypairRequest) *NovaCreateKeypairInvoker {
+	requestDef := GenReqDefForNovaCreateKeypair()
+	return &NovaCreateKeypairInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NovaCreateServers 创建云服务器
 //
 // 创建一台弹性云服务器。
 //
@@ -669,7 +879,13 @@ func (c *EcsClient) NovaCreateServers(request *model.NovaCreateServersRequest) (
 	}
 }
 
-// 删除SSH密钥
+// NovaCreateServersInvoker 创建云服务器
+func (c *EcsClient) NovaCreateServersInvoker(request *model.NovaCreateServersRequest) *NovaCreateServersInvoker {
+	requestDef := GenReqDefForNovaCreateServers()
+	return &NovaCreateServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NovaDeleteKeypair 删除SSH密钥
 //
 // 根据SSH密钥的名称，删除指定SSH密钥。
 //
@@ -685,7 +901,13 @@ func (c *EcsClient) NovaDeleteKeypair(request *model.NovaDeleteKeypairRequest) (
 	}
 }
 
-// 删除云服务器
+// NovaDeleteKeypairInvoker 删除SSH密钥
+func (c *EcsClient) NovaDeleteKeypairInvoker(request *model.NovaDeleteKeypairRequest) *NovaDeleteKeypairInvoker {
+	requestDef := GenReqDefForNovaDeleteKeypair()
+	return &NovaDeleteKeypairInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NovaDeleteServer 删除云服务器
 //
 // 删除一台云服务器。
 //
@@ -701,7 +923,13 @@ func (c *EcsClient) NovaDeleteServer(request *model.NovaDeleteServerRequest) (*m
 	}
 }
 
-// 移除安全组
+// NovaDeleteServerInvoker 删除云服务器
+func (c *EcsClient) NovaDeleteServerInvoker(request *model.NovaDeleteServerRequest) *NovaDeleteServerInvoker {
+	requestDef := GenReqDefForNovaDeleteServer()
+	return &NovaDeleteServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NovaDisassociateSecurityGroup 移除安全组
 //
 // 移除弹性云服务器中的安全组。
 //
@@ -717,7 +945,13 @@ func (c *EcsClient) NovaDisassociateSecurityGroup(request *model.NovaDisassociat
 	}
 }
 
-// 查询可用区列表
+// NovaDisassociateSecurityGroupInvoker 移除安全组
+func (c *EcsClient) NovaDisassociateSecurityGroupInvoker(request *model.NovaDisassociateSecurityGroupRequest) *NovaDisassociateSecurityGroupInvoker {
+	requestDef := GenReqDefForNovaDisassociateSecurityGroup()
+	return &NovaDisassociateSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NovaListAvailabilityZones 查询可用区列表
 //
 // 查询可用域列表。
 //
@@ -733,7 +967,13 @@ func (c *EcsClient) NovaListAvailabilityZones(request *model.NovaListAvailabilit
 	}
 }
 
-// 查询SSH密钥列表
+// NovaListAvailabilityZonesInvoker 查询可用区列表
+func (c *EcsClient) NovaListAvailabilityZonesInvoker(request *model.NovaListAvailabilityZonesRequest) *NovaListAvailabilityZonesInvoker {
+	requestDef := GenReqDefForNovaListAvailabilityZones()
+	return &NovaListAvailabilityZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NovaListKeypairs 查询SSH密钥列表
 //
 // 查询SSH密钥信息列表。
 //
@@ -749,7 +989,13 @@ func (c *EcsClient) NovaListKeypairs(request *model.NovaListKeypairsRequest) (*m
 	}
 }
 
-// 查询指定云服务器安全组列表
+// NovaListKeypairsInvoker 查询SSH密钥列表
+func (c *EcsClient) NovaListKeypairsInvoker(request *model.NovaListKeypairsRequest) *NovaListKeypairsInvoker {
+	requestDef := GenReqDefForNovaListKeypairs()
+	return &NovaListKeypairsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NovaListServerSecurityGroups 查询指定云服务器安全组列表
 //
 // 查询指定弹性云服务器的安全组。
 //
@@ -765,7 +1011,13 @@ func (c *EcsClient) NovaListServerSecurityGroups(request *model.NovaListServerSe
 	}
 }
 
-// 查询云服务器详情列表
+// NovaListServerSecurityGroupsInvoker 查询指定云服务器安全组列表
+func (c *EcsClient) NovaListServerSecurityGroupsInvoker(request *model.NovaListServerSecurityGroupsRequest) *NovaListServerSecurityGroupsInvoker {
+	requestDef := GenReqDefForNovaListServerSecurityGroups()
+	return &NovaListServerSecurityGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NovaListServersDetails 查询云服务器详情列表
 //
 // 查询云服务器详情信息列表。
 //
@@ -781,7 +1033,13 @@ func (c *EcsClient) NovaListServersDetails(request *model.NovaListServersDetails
 	}
 }
 
-// 查询SSH密钥详情
+// NovaListServersDetailsInvoker 查询云服务器详情列表
+func (c *EcsClient) NovaListServersDetailsInvoker(request *model.NovaListServersDetailsRequest) *NovaListServersDetailsInvoker {
+	requestDef := GenReqDefForNovaListServersDetails()
+	return &NovaListServersDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NovaShowKeypair 查询SSH密钥详情
 //
 // 根据SSH密钥名称查询指定SSH密钥。
 //
@@ -797,7 +1055,13 @@ func (c *EcsClient) NovaShowKeypair(request *model.NovaShowKeypairRequest) (*mod
 	}
 }
 
-// 查询云服务器详情
+// NovaShowKeypairInvoker 查询SSH密钥详情
+func (c *EcsClient) NovaShowKeypairInvoker(request *model.NovaShowKeypairRequest) *NovaShowKeypairInvoker {
+	requestDef := GenReqDefForNovaShowKeypair()
+	return &NovaShowKeypairInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NovaShowServer 查询云服务器详情
 //
 // 根据云服务器ID，查询云服务器的详细信息。
 //
@@ -813,7 +1077,13 @@ func (c *EcsClient) NovaShowServer(request *model.NovaShowServerRequest) (*model
 	}
 }
 
-// 管理云服务器自动恢复动作
+// NovaShowServerInvoker 查询云服务器详情
+func (c *EcsClient) NovaShowServerInvoker(request *model.NovaShowServerRequest) *NovaShowServerInvoker {
+	requestDef := GenReqDefForNovaShowServer()
+	return &NovaShowServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RegisterServerAutoRecovery 管理云服务器自动恢复动作
 //
 // 配置、删除云服务器自动恢复动作。
 //
@@ -829,7 +1099,13 @@ func (c *EcsClient) RegisterServerAutoRecovery(request *model.RegisterServerAuto
 	}
 }
 
-// 重装弹性云服务器操作系统(安装Cloud-init)
+// RegisterServerAutoRecoveryInvoker 管理云服务器自动恢复动作
+func (c *EcsClient) RegisterServerAutoRecoveryInvoker(request *model.RegisterServerAutoRecoveryRequest) *RegisterServerAutoRecoveryInvoker {
+	requestDef := GenReqDefForRegisterServerAutoRecovery()
+	return &RegisterServerAutoRecoveryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ReinstallServerWithCloudInit 重装弹性云服务器操作系统(安装Cloud-init)
 //
 // 重装弹性云服务器的操作系统。支持弹性云服务器数据盘不变的情况下，使用原镜像重装系统盘。
 //
@@ -847,7 +1123,13 @@ func (c *EcsClient) ReinstallServerWithCloudInit(request *model.ReinstallServerW
 	}
 }
 
-// 重装弹性云服务器操作系统(未安装Cloud init)
+// ReinstallServerWithCloudInitInvoker 重装弹性云服务器操作系统(安装Cloud-init)
+func (c *EcsClient) ReinstallServerWithCloudInitInvoker(request *model.ReinstallServerWithCloudInitRequest) *ReinstallServerWithCloudInitInvoker {
+	requestDef := GenReqDefForReinstallServerWithCloudInit()
+	return &ReinstallServerWithCloudInitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ReinstallServerWithoutCloudInit 重装弹性云服务器操作系统(未安装Cloud init)
 //
 // 重装弹性云服务器的操作系统。
 //
@@ -865,7 +1147,13 @@ func (c *EcsClient) ReinstallServerWithoutCloudInit(request *model.ReinstallServ
 	}
 }
 
-// 一键重置弹性云服务器密码(企业项目)
+// ReinstallServerWithoutCloudInitInvoker 重装弹性云服务器操作系统(未安装Cloud init)
+func (c *EcsClient) ReinstallServerWithoutCloudInitInvoker(request *model.ReinstallServerWithoutCloudInitRequest) *ReinstallServerWithoutCloudInitInvoker {
+	requestDef := GenReqDefForReinstallServerWithoutCloudInit()
+	return &ReinstallServerWithoutCloudInitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetServerPassword 一键重置弹性云服务器密码(企业项目)
 //
 // 重置弹性云服务器管理帐号（root用户或Administrator用户）的密码。
 //
@@ -881,7 +1169,13 @@ func (c *EcsClient) ResetServerPassword(request *model.ResetServerPasswordReques
 	}
 }
 
-// 变更云服务器规格(按需)
+// ResetServerPasswordInvoker 一键重置弹性云服务器密码(企业项目)
+func (c *EcsClient) ResetServerPasswordInvoker(request *model.ResetServerPasswordRequest) *ResetServerPasswordInvoker {
+	requestDef := GenReqDefForResetServerPassword()
+	return &ResetServerPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResizePostPaidServer 变更云服务器规格(按需)
 //
 // 当您创建的弹性云服务器规格无法满足业务需要时，可以变更云服务器规格，升级vCPU、内存。具体接口的使用，请参见本节内容。
 //
@@ -901,7 +1195,13 @@ func (c *EcsClient) ResizePostPaidServer(request *model.ResizePostPaidServerRequ
 	}
 }
 
-// 变更云服务器规格
+// ResizePostPaidServerInvoker 变更云服务器规格(按需)
+func (c *EcsClient) ResizePostPaidServerInvoker(request *model.ResizePostPaidServerRequest) *ResizePostPaidServerInvoker {
+	requestDef := GenReqDefForResizePostPaidServer()
+	return &ResizePostPaidServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResizeServer 变更云服务器规格
 //
 // 变更云服务器规格。
 //
@@ -925,7 +1225,13 @@ func (c *EcsClient) ResizeServer(request *model.ResizeServerRequest) (*model.Res
 	}
 }
 
-// 查询是否支持一键重置密码
+// ResizeServerInvoker 变更云服务器规格
+func (c *EcsClient) ResizeServerInvoker(request *model.ResizeServerRequest) *ResizeServerInvoker {
+	requestDef := GenReqDefForResizeServer()
+	return &ResizeServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResetPasswordFlag 查询是否支持一键重置密码
 //
 // 查询弹性云服务器是否支持一键重置密码。
 //
@@ -941,7 +1247,13 @@ func (c *EcsClient) ShowResetPasswordFlag(request *model.ShowResetPasswordFlagRe
 	}
 }
 
-// 查询云服务器详情
+// ShowResetPasswordFlagInvoker 查询是否支持一键重置密码
+func (c *EcsClient) ShowResetPasswordFlagInvoker(request *model.ShowResetPasswordFlagRequest) *ShowResetPasswordFlagInvoker {
+	requestDef := GenReqDefForShowResetPasswordFlag()
+	return &ShowResetPasswordFlagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowServer 查询云服务器详情
 //
 // 查询弹性云服务器的详细信息。
 //
@@ -959,7 +1271,13 @@ func (c *EcsClient) ShowServer(request *model.ShowServerRequest) (*model.ShowSer
 	}
 }
 
-// 查询云服务器是否配置了自动恢复动作
+// ShowServerInvoker 查询云服务器详情
+func (c *EcsClient) ShowServerInvoker(request *model.ShowServerRequest) *ShowServerInvoker {
+	requestDef := GenReqDefForShowServer()
+	return &ShowServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowServerAutoRecovery 查询云服务器是否配置了自动恢复动作
 //
 // 查询云服务器是否配置了自动恢复动作。
 //
@@ -975,7 +1293,13 @@ func (c *EcsClient) ShowServerAutoRecovery(request *model.ShowServerAutoRecovery
 	}
 }
 
-// 查询弹性云服务器单个磁盘信息
+// ShowServerAutoRecoveryInvoker 查询云服务器是否配置了自动恢复动作
+func (c *EcsClient) ShowServerAutoRecoveryInvoker(request *model.ShowServerAutoRecoveryRequest) *ShowServerAutoRecoveryInvoker {
+	requestDef := GenReqDefForShowServerAutoRecovery()
+	return &ShowServerAutoRecoveryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowServerBlockDevice 查询弹性云服务器单个磁盘信息
 //
 // 查询弹性云服务器挂载的单个磁盘信息。
 //
@@ -991,7 +1315,13 @@ func (c *EcsClient) ShowServerBlockDevice(request *model.ShowServerBlockDeviceRe
 	}
 }
 
-// 查询云服务器组详情
+// ShowServerBlockDeviceInvoker 查询弹性云服务器单个磁盘信息
+func (c *EcsClient) ShowServerBlockDeviceInvoker(request *model.ShowServerBlockDeviceRequest) *ShowServerBlockDeviceInvoker {
+	requestDef := GenReqDefForShowServerBlockDevice()
+	return &ShowServerBlockDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowServerGroup 查询云服务器组详情
 //
 // 查询弹性云服务器组详情。
 //
@@ -1009,7 +1339,13 @@ func (c *EcsClient) ShowServerGroup(request *model.ShowServerGroupRequest) (*mod
 	}
 }
 
-// 查询租户配额
+// ShowServerGroupInvoker 查询云服务器组详情
+func (c *EcsClient) ShowServerGroupInvoker(request *model.ShowServerGroupRequest) *ShowServerGroupInvoker {
+	requestDef := GenReqDefForShowServerGroup()
+	return &ShowServerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowServerLimits 查询租户配额
 //
 // 查询租户配额信息。
 //
@@ -1025,7 +1361,13 @@ func (c *EcsClient) ShowServerLimits(request *model.ShowServerLimitsRequest) (*m
 	}
 }
 
-// 云服务器获取密码(企业项目)
+// ShowServerLimitsInvoker 查询租户配额
+func (c *EcsClient) ShowServerLimitsInvoker(request *model.ShowServerLimitsRequest) *ShowServerLimitsInvoker {
+	requestDef := GenReqDefForShowServerLimits()
+	return &ShowServerLimitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowServerPassword 云服务器获取密码(企业项目)
 //
 // 当通过支持Cloudbase-init功能的镜像创建Windows云服务器时，获取云服务器初始安装时系统生成的管理员帐户（Administrator帐户或Cloudbase-init设置的帐户）随机密码。
 //
@@ -1041,7 +1383,13 @@ func (c *EcsClient) ShowServerPassword(request *model.ShowServerPasswordRequest)
 	}
 }
 
-// 获取VNC远程登录地址
+// ShowServerPasswordInvoker 云服务器获取密码(企业项目)
+func (c *EcsClient) ShowServerPasswordInvoker(request *model.ShowServerPasswordRequest) *ShowServerPasswordInvoker {
+	requestDef := GenReqDefForShowServerPassword()
+	return &ShowServerPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowServerRemoteConsole 获取VNC远程登录地址
 //
 // 获取弹性云服务器VNC远程登录地址。
 //
@@ -1057,7 +1405,13 @@ func (c *EcsClient) ShowServerRemoteConsole(request *model.ShowServerRemoteConso
 	}
 }
 
-// 查询云服务器标签
+// ShowServerRemoteConsoleInvoker 获取VNC远程登录地址
+func (c *EcsClient) ShowServerRemoteConsoleInvoker(request *model.ShowServerRemoteConsoleRequest) *ShowServerRemoteConsoleInvoker {
+	requestDef := GenReqDefForShowServerRemoteConsole()
+	return &ShowServerRemoteConsoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowServerTags 查询云服务器标签
 //
 // - 查询指定云服务器的标签信息。
 //
@@ -1075,7 +1429,13 @@ func (c *EcsClient) ShowServerTags(request *model.ShowServerTagsRequest) (*model
 	}
 }
 
-// 修改云服务器
+// ShowServerTagsInvoker 查询云服务器标签
+func (c *EcsClient) ShowServerTagsInvoker(request *model.ShowServerTagsRequest) *ShowServerTagsInvoker {
+	requestDef := GenReqDefForShowServerTags()
+	return &ShowServerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateServer 修改云服务器
 //
 // 修改云服务器信息，目前支持修改云服务器名称及描述和hostname。
 //
@@ -1091,7 +1451,13 @@ func (c *EcsClient) UpdateServer(request *model.UpdateServerRequest) (*model.Upd
 	}
 }
 
-// 修改云服务器销毁时间
+// UpdateServerInvoker 修改云服务器
+func (c *EcsClient) UpdateServerInvoker(request *model.UpdateServerRequest) *UpdateServerInvoker {
+	requestDef := GenReqDefForUpdateServer()
+	return &UpdateServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateServerAutoTerminateTime 修改云服务器销毁时间
 //
 // 修改按需服务器，设置定时销毁时间。如果设置的销毁时间为空，表示取消销毁时间。
 //
@@ -1109,7 +1475,13 @@ func (c *EcsClient) UpdateServerAutoTerminateTime(request *model.UpdateServerAut
 	}
 }
 
-// 更新云服务器元数据
+// UpdateServerAutoTerminateTimeInvoker 修改云服务器销毁时间
+func (c *EcsClient) UpdateServerAutoTerminateTimeInvoker(request *model.UpdateServerAutoTerminateTimeRequest) *UpdateServerAutoTerminateTimeInvoker {
+	requestDef := GenReqDefForUpdateServerAutoTerminateTime()
+	return &UpdateServerAutoTerminateTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateServerMetadata 更新云服务器元数据
 //
 // 更新云服务器元数据。
 //
@@ -1131,7 +1503,13 @@ func (c *EcsClient) UpdateServerMetadata(request *model.UpdateServerMetadataRequ
 	}
 }
 
-// 查询任务的执行状态
+// UpdateServerMetadataInvoker 更新云服务器元数据
+func (c *EcsClient) UpdateServerMetadataInvoker(request *model.UpdateServerMetadataRequest) *UpdateServerMetadataInvoker {
+	requestDef := GenReqDefForUpdateServerMetadata()
+	return &UpdateServerMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJob 查询任务的执行状态
 //
 // 查询Job的执行状态。
 //
@@ -1147,4 +1525,10 @@ func (c *EcsClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobRespon
 	} else {
 		return resp.(*model.ShowJobResponse), nil
 	}
+}
+
+// ShowJobInvoker 查询任务的执行状态
+func (c *EcsClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
+	requestDef := GenReqDefForShowJob()
+	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

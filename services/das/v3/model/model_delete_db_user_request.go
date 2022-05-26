@@ -51,6 +51,10 @@ func GetDeleteDbUserRequestXLanguageEnum() DeleteDbUserRequestXLanguageEnum {
 	}
 }
 
+func (c DeleteDbUserRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c DeleteDbUserRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

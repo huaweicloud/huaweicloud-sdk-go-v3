@@ -72,6 +72,10 @@ func GetOperationStateTypeEnum() OperationStateTypeEnum {
 	}
 }
 
+func (c OperationStateType) Value() string {
+	return c.value
+}
+
 func (c OperationStateType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -108,6 +112,10 @@ func GetOperationStateActionModeEnum() OperationStateActionModeEnum {
 			value: "parallel",
 		},
 	}
+}
+
+func (c OperationStateActionMode) Value() string {
+	return c.value
 }
 
 func (c OperationStateActionMode) MarshalJSON() ([]byte, error) {

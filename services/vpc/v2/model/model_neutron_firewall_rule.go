@@ -84,6 +84,10 @@ func GetNeutronFirewallRuleActionEnum() NeutronFirewallRuleActionEnum {
 	}
 }
 
+func (c NeutronFirewallRuleAction) Value() string {
+	return c.value
+}
+
 func (c NeutronFirewallRuleAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

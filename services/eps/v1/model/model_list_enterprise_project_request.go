@@ -63,6 +63,10 @@ func GetListEnterpriseProjectRequestSortDirEnum() ListEnterpriseProjectRequestSo
 	}
 }
 
+func (c ListEnterpriseProjectRequestSortDir) Value() string {
+	return c.value
+}
+
 func (c ListEnterpriseProjectRequestSortDir) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -99,6 +103,10 @@ func GetListEnterpriseProjectRequestSortKeyEnum() ListEnterpriseProjectRequestSo
 			value: "updated_at",
 		},
 	}
+}
+
+func (c ListEnterpriseProjectRequestSortKey) Value() string {
+	return c.value
 }
 
 func (c ListEnterpriseProjectRequestSortKey) MarshalJSON() ([]byte, error) {

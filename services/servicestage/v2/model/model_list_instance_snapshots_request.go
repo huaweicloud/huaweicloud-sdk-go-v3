@@ -63,6 +63,10 @@ func GetListInstanceSnapshotsRequestOrderEnum() ListInstanceSnapshotsRequestOrde
 	}
 }
 
+func (c ListInstanceSnapshotsRequestOrder) Value() string {
+	return c.value
+}
+
 func (c ListInstanceSnapshotsRequestOrder) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

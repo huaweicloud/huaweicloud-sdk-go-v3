@@ -80,6 +80,10 @@ func GetModUserDtoStatusEnum() ModUserDtoStatusEnum {
 	}
 }
 
+func (c ModUserDtoStatus) Value() int32 {
+	return c.value
+}
+
 func (c ModUserDtoStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

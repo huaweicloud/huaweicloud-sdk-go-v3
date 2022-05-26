@@ -82,6 +82,10 @@ func GetTextTranslationReqFromEnum() TextTranslationReqFromEnum {
 	}
 }
 
+func (c TextTranslationReqFrom) Value() string {
+	return c.value
+}
+
 func (c TextTranslationReqFrom) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -144,6 +148,10 @@ func GetTextTranslationReqToEnum() TextTranslationReqToEnum {
 	}
 }
 
+func (c TextTranslationReqTo) Value() string {
+	return c.value
+}
+
 func (c TextTranslationReqTo) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -176,6 +184,10 @@ func GetTextTranslationReqSceneEnum() TextTranslationReqSceneEnum {
 			value: "common",
 		},
 	}
+}
+
+func (c TextTranslationReqScene) Value() string {
+	return c.value
 }
 
 func (c TextTranslationReqScene) MarshalJSON() ([]byte, error) {

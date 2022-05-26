@@ -66,6 +66,10 @@ func GetUpdatePasswordResponseResultEnum() UpdatePasswordResponseResultEnum {
 	}
 }
 
+func (c UpdatePasswordResponseResult) Value() string {
+	return c.value
+}
+
 func (c UpdatePasswordResponseResult) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

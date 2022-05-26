@@ -57,6 +57,10 @@ func GetApiConditionBaseConditionTypeEnum() ApiConditionBaseConditionTypeEnum {
 	}
 }
 
+func (c ApiConditionBaseConditionType) Value() string {
+	return c.value
+}
+
 func (c ApiConditionBaseConditionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -93,6 +97,10 @@ func GetApiConditionBaseConditionOriginEnum() ApiConditionBaseConditionOriginEnu
 			value: "source",
 		},
 	}
+}
+
+func (c ApiConditionBaseConditionOrigin) Value() string {
+	return c.value
 }
 
 func (c ApiConditionBaseConditionOrigin) MarshalJSON() ([]byte, error) {

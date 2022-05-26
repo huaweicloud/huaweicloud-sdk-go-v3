@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ces/v2/model"
 )
 
@@ -19,7 +19,7 @@ func CesClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 查询告警历史
+// ListAlarmHistories 查询告警历史
 //
 // 查询告警历史列表
 //
@@ -33,4 +33,10 @@ func (c *CesClient) ListAlarmHistories(request *model.ListAlarmHistoriesRequest)
 	} else {
 		return resp.(*model.ListAlarmHistoriesResponse), nil
 	}
+}
+
+// ListAlarmHistoriesInvoker 查询告警历史
+func (c *CesClient) ListAlarmHistoriesInvoker(request *model.ListAlarmHistoriesRequest) *ListAlarmHistoriesInvoker {
+	requestDef := GenReqDefForListAlarmHistories()
+	return &ListAlarmHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

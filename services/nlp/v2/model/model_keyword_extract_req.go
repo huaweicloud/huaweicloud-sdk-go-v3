@@ -47,6 +47,10 @@ func GetKeywordExtractReqLangEnum() KeywordExtractReqLangEnum {
 	}
 }
 
+func (c KeywordExtractReqLang) Value() string {
+	return c.value
+}
+
 func (c KeywordExtractReqLang) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

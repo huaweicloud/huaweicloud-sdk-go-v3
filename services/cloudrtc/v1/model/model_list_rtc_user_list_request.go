@@ -87,6 +87,10 @@ func GetListRtcUserListRequestTypeEnum() ListRtcUserListRequestTypeEnum {
 	}
 }
 
+func (c ListRtcUserListRequestType) Value() string {
+	return c.value
+}
+
 func (c ListRtcUserListRequestType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

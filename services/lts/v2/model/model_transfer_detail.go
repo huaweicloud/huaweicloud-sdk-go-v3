@@ -101,6 +101,10 @@ func GetTransferDetailObsPeriodEnum() TransferDetailObsPeriodEnum {
 	}
 }
 
+func (c TransferDetailObsPeriod) Value() int32 {
+	return c.value
+}
+
 func (c TransferDetailObsPeriod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

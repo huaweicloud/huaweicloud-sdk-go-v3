@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/evs/v2/model"
 )
 
@@ -19,7 +19,7 @@ func EvsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 为指定云硬盘批量添加标签
+// BatchCreateVolumeTags 为指定云硬盘批量添加标签
 //
 // 为指定云硬盘批量添加标签。
 //
@@ -38,7 +38,13 @@ func (c *EvsClient) BatchCreateVolumeTags(request *model.BatchCreateVolumeTagsRe
 	}
 }
 
-// 为指定云硬盘批量删除标签
+// BatchCreateVolumeTagsInvoker 为指定云硬盘批量添加标签
+func (c *EvsClient) BatchCreateVolumeTagsInvoker(request *model.BatchCreateVolumeTagsRequest) *BatchCreateVolumeTagsInvoker {
+	requestDef := GenReqDefForBatchCreateVolumeTags()
+	return &BatchCreateVolumeTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteVolumeTags 为指定云硬盘批量删除标签
 //
 // 为指定云硬盘批量删除标签。
 //
@@ -54,7 +60,13 @@ func (c *EvsClient) BatchDeleteVolumeTags(request *model.BatchDeleteVolumeTagsRe
 	}
 }
 
-// 查询所有的可用分区信息
+// BatchDeleteVolumeTagsInvoker 为指定云硬盘批量删除标签
+func (c *EvsClient) BatchDeleteVolumeTagsInvoker(request *model.BatchDeleteVolumeTagsRequest) *BatchDeleteVolumeTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteVolumeTags()
+	return &BatchDeleteVolumeTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CinderListAvailabilityZones 查询所有的可用分区信息
 //
 // 查询所有的可用分区信息。
 //
@@ -70,7 +82,13 @@ func (c *EvsClient) CinderListAvailabilityZones(request *model.CinderListAvailab
 	}
 }
 
-// 查询租户的详细配额
+// CinderListAvailabilityZonesInvoker 查询所有的可用分区信息
+func (c *EvsClient) CinderListAvailabilityZonesInvoker(request *model.CinderListAvailabilityZonesRequest) *CinderListAvailabilityZonesInvoker {
+	requestDef := GenReqDefForCinderListAvailabilityZones()
+	return &CinderListAvailabilityZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CinderListQuotas 查询租户的详细配额
 //
 // 查询租户的详细配额。
 //
@@ -86,7 +104,13 @@ func (c *EvsClient) CinderListQuotas(request *model.CinderListQuotasRequest) (*m
 	}
 }
 
-// 查询云硬盘类型列表
+// CinderListQuotasInvoker 查询租户的详细配额
+func (c *EvsClient) CinderListQuotasInvoker(request *model.CinderListQuotasRequest) *CinderListQuotasInvoker {
+	requestDef := GenReqDefForCinderListQuotas()
+	return &CinderListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CinderListVolumeTypes 查询云硬盘类型列表
 //
 // 查询云硬盘类型列表。
 //
@@ -102,7 +126,13 @@ func (c *EvsClient) CinderListVolumeTypes(request *model.CinderListVolumeTypesRe
 	}
 }
 
-// 创建云硬盘快照
+// CinderListVolumeTypesInvoker 查询云硬盘类型列表
+func (c *EvsClient) CinderListVolumeTypesInvoker(request *model.CinderListVolumeTypesRequest) *CinderListVolumeTypesInvoker {
+	requestDef := GenReqDefForCinderListVolumeTypes()
+	return &CinderListVolumeTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSnapshot 创建云硬盘快照
 //
 // 创建云硬盘快照。
 //
@@ -118,7 +148,13 @@ func (c *EvsClient) CreateSnapshot(request *model.CreateSnapshotRequest) (*model
 	}
 }
 
-// 创建云硬盘
+// CreateSnapshotInvoker 创建云硬盘快照
+func (c *EvsClient) CreateSnapshotInvoker(request *model.CreateSnapshotRequest) *CreateSnapshotInvoker {
+	requestDef := GenReqDefForCreateSnapshot()
+	return &CreateSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVolume 创建云硬盘
 //
 // 创建按需或包周期云硬盘。
 // 在创建包周期云硬盘的场景下：
@@ -139,7 +175,13 @@ func (c *EvsClient) CreateVolume(request *model.CreateVolumeRequest) (*model.Cre
 	}
 }
 
-// 删除云硬盘快照
+// CreateVolumeInvoker 创建云硬盘
+func (c *EvsClient) CreateVolumeInvoker(request *model.CreateVolumeRequest) *CreateVolumeInvoker {
+	requestDef := GenReqDefForCreateVolume()
+	return &CreateVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSnapshot 删除云硬盘快照
 //
 // 删除云硬盘快照。
 //
@@ -155,7 +197,13 @@ func (c *EvsClient) DeleteSnapshot(request *model.DeleteSnapshotRequest) (*model
 	}
 }
 
-// 删除云硬盘
+// DeleteSnapshotInvoker 删除云硬盘快照
+func (c *EvsClient) DeleteSnapshotInvoker(request *model.DeleteSnapshotRequest) *DeleteSnapshotInvoker {
+	requestDef := GenReqDefForDeleteSnapshot()
+	return &DeleteSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVolume 删除云硬盘
 //
 // 删除一个云硬盘。
 //
@@ -171,7 +219,13 @@ func (c *EvsClient) DeleteVolume(request *model.DeleteVolumeRequest) (*model.Del
 	}
 }
 
-// 查询云硬盘快照详细列表信息
+// DeleteVolumeInvoker 删除云硬盘
+func (c *EvsClient) DeleteVolumeInvoker(request *model.DeleteVolumeRequest) *DeleteVolumeInvoker {
+	requestDef := GenReqDefForDeleteVolume()
+	return &DeleteVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSnapshots 查询云硬盘快照详细列表信息
 //
 // 查询云硬盘快照详细列表信息。
 //
@@ -187,7 +241,13 @@ func (c *EvsClient) ListSnapshots(request *model.ListSnapshotsRequest) (*model.L
 	}
 }
 
-// 获取云硬盘资源的所有标签
+// ListSnapshotsInvoker 查询云硬盘快照详细列表信息
+func (c *EvsClient) ListSnapshotsInvoker(request *model.ListSnapshotsRequest) *ListSnapshotsInvoker {
+	requestDef := GenReqDefForListSnapshots()
+	return &ListSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVolumeTags 获取云硬盘资源的所有标签
 //
 // 获取某个租户的所有云硬盘资源的标签信息。
 //
@@ -203,7 +263,13 @@ func (c *EvsClient) ListVolumeTags(request *model.ListVolumeTagsRequest) (*model
 	}
 }
 
-// 查询所有云硬盘详情
+// ListVolumeTagsInvoker 获取云硬盘资源的所有标签
+func (c *EvsClient) ListVolumeTagsInvoker(request *model.ListVolumeTagsRequest) *ListVolumeTagsInvoker {
+	requestDef := GenReqDefForListVolumeTags()
+	return &ListVolumeTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVolumes 查询所有云硬盘详情
 //
 // 查询所有云硬盘的详细信息。
 //
@@ -219,7 +285,13 @@ func (c *EvsClient) ListVolumes(request *model.ListVolumesRequest) (*model.ListV
 	}
 }
 
-// 通过标签查询云硬盘资源实例详情
+// ListVolumesInvoker 查询所有云硬盘详情
+func (c *EvsClient) ListVolumesInvoker(request *model.ListVolumesRequest) *ListVolumesInvoker {
+	requestDef := GenReqDefForListVolumes()
+	return &ListVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVolumesByTags 通过标签查询云硬盘资源实例详情
 //
 // 通过标签查询云硬盘资源实例详情。
 //
@@ -235,7 +307,13 @@ func (c *EvsClient) ListVolumesByTags(request *model.ListVolumesByTagsRequest) (
 	}
 }
 
-// 扩容云硬盘
+// ListVolumesByTagsInvoker 通过标签查询云硬盘资源实例详情
+func (c *EvsClient) ListVolumesByTagsInvoker(request *model.ListVolumesByTagsRequest) *ListVolumesByTagsInvoker {
+	requestDef := GenReqDefForListVolumesByTags()
+	return &ListVolumesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResizeVolume 扩容云硬盘
 //
 // 对按需或者包周期云硬盘进行扩容。
 // 在扩容包周期云硬盘的场景下：
@@ -256,7 +334,13 @@ func (c *EvsClient) ResizeVolume(request *model.ResizeVolumeRequest) (*model.Res
 	}
 }
 
-// 回滚快照到云硬盘
+// ResizeVolumeInvoker 扩容云硬盘
+func (c *EvsClient) ResizeVolumeInvoker(request *model.ResizeVolumeRequest) *ResizeVolumeInvoker {
+	requestDef := GenReqDefForResizeVolume()
+	return &ResizeVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RollbackSnapshot 回滚快照到云硬盘
 //
 // 将快照数据回滚到云硬盘。支持企业项目授权功能。
 //
@@ -272,7 +356,13 @@ func (c *EvsClient) RollbackSnapshot(request *model.RollbackSnapshotRequest) (*m
 	}
 }
 
-// 查询job的状态
+// RollbackSnapshotInvoker 回滚快照到云硬盘
+func (c *EvsClient) RollbackSnapshotInvoker(request *model.RollbackSnapshotRequest) *RollbackSnapshotInvoker {
+	requestDef := GenReqDefForRollbackSnapshot()
+	return &RollbackSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJob 查询job的状态
 //
 // 查询Job的执行状态。
 // 可用于查询创建云硬盘，扩容云硬盘，删除云硬盘等API的执行状态。
@@ -289,7 +379,13 @@ func (c *EvsClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobRespon
 	}
 }
 
-// 查询单个云硬盘快照详细信息
+// ShowJobInvoker 查询job的状态
+func (c *EvsClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
+	requestDef := GenReqDefForShowJob()
+	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSnapshot 查询单个云硬盘快照详细信息
 //
 // 查询单个云硬盘快照信息。支持企业项目授权功能。
 //
@@ -305,7 +401,13 @@ func (c *EvsClient) ShowSnapshot(request *model.ShowSnapshotRequest) (*model.Sho
 	}
 }
 
-// 查询单个云硬盘详情
+// ShowSnapshotInvoker 查询单个云硬盘快照详细信息
+func (c *EvsClient) ShowSnapshotInvoker(request *model.ShowSnapshotRequest) *ShowSnapshotInvoker {
+	requestDef := GenReqDefForShowSnapshot()
+	return &ShowSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVolume 查询单个云硬盘详情
 //
 // 查询单个云硬盘的详细信息。支持企业项目授权功能。
 //
@@ -321,7 +423,13 @@ func (c *EvsClient) ShowVolume(request *model.ShowVolumeRequest) (*model.ShowVol
 	}
 }
 
-// 查询云硬盘标签
+// ShowVolumeInvoker 查询单个云硬盘详情
+func (c *EvsClient) ShowVolumeInvoker(request *model.ShowVolumeRequest) *ShowVolumeInvoker {
+	requestDef := GenReqDefForShowVolume()
+	return &ShowVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVolumeTags 查询云硬盘标签
 //
 // 查询指定云硬盘的标签信息。
 //
@@ -337,7 +445,13 @@ func (c *EvsClient) ShowVolumeTags(request *model.ShowVolumeTagsRequest) (*model
 	}
 }
 
-// 更新云硬盘快照
+// ShowVolumeTagsInvoker 查询云硬盘标签
+func (c *EvsClient) ShowVolumeTagsInvoker(request *model.ShowVolumeTagsRequest) *ShowVolumeTagsInvoker {
+	requestDef := GenReqDefForShowVolumeTags()
+	return &ShowVolumeTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSnapshot 更新云硬盘快照
 //
 // 更新云硬盘快照。支持企业项目授权功能。
 //
@@ -353,7 +467,13 @@ func (c *EvsClient) UpdateSnapshot(request *model.UpdateSnapshotRequest) (*model
 	}
 }
 
-// 更新云硬盘
+// UpdateSnapshotInvoker 更新云硬盘快照
+func (c *EvsClient) UpdateSnapshotInvoker(request *model.UpdateSnapshotRequest) *UpdateSnapshotInvoker {
+	requestDef := GenReqDefForUpdateSnapshot()
+	return &UpdateSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVolume 更新云硬盘
 //
 // 更新一个云硬盘的名称和描述。
 //
@@ -367,4 +487,10 @@ func (c *EvsClient) UpdateVolume(request *model.UpdateVolumeRequest) (*model.Upd
 	} else {
 		return resp.(*model.UpdateVolumeResponse), nil
 	}
+}
+
+// UpdateVolumeInvoker 更新云硬盘
+func (c *EvsClient) UpdateVolumeInvoker(request *model.UpdateVolumeRequest) *UpdateVolumeInvoker {
+	requestDef := GenReqDefForUpdateVolume()
+	return &UpdateVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

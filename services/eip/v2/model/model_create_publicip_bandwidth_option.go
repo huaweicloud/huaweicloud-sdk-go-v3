@@ -57,6 +57,10 @@ func GetCreatePublicipBandwidthOptionChargeModeEnum() CreatePublicipBandwidthOpt
 	}
 }
 
+func (c CreatePublicipBandwidthOptionChargeMode) Value() string {
+	return c.value
+}
+
 func (c CreatePublicipBandwidthOptionChargeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -93,6 +97,10 @@ func GetCreatePublicipBandwidthOptionShareTypeEnum() CreatePublicipBandwidthOpti
 			value: "PER",
 		},
 	}
+}
+
+func (c CreatePublicipBandwidthOptionShareType) Value() string {
+	return c.value
 }
 
 func (c CreatePublicipBandwidthOptionShareType) MarshalJSON() ([]byte, error) {

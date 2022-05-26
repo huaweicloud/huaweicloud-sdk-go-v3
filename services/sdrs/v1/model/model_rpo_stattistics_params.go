@@ -56,6 +56,10 @@ func GetRpoStattisticsParamsResourceTypeEnum() RpoStattisticsParamsResourceTypeE
 	}
 }
 
+func (c RpoStattisticsParamsResourceType) Value() string {
+	return c.value
+}
+
 func (c RpoStattisticsParamsResourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

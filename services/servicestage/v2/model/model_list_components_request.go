@@ -57,6 +57,10 @@ func GetListComponentsRequestOrderEnum() ListComponentsRequestOrderEnum {
 	}
 }
 
+func (c ListComponentsRequestOrder) Value() string {
+	return c.value
+}
+
 func (c ListComponentsRequestOrder) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

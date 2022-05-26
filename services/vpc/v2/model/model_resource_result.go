@@ -114,6 +114,10 @@ func GetResourceResultTypeEnum() ResourceResultTypeEnum {
 	}
 }
 
+func (c ResourceResultType) Value() string {
+	return c.value
+}
+
 func (c ResourceResultType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

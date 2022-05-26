@@ -219,6 +219,10 @@ func GetImageInfoImageSourceTypeEnum() ImageInfoImageSourceTypeEnum {
 	}
 }
 
+func (c ImageInfoImageSourceType) Value() string {
+	return c.value
+}
+
 func (c ImageInfoImageSourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -261,6 +265,10 @@ func GetImageInfoImagetypeEnum() ImageInfoImagetypeEnum {
 	}
 }
 
+func (c ImageInfoImagetype) Value() string {
+	return c.value
+}
+
 func (c ImageInfoImagetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -299,6 +307,10 @@ func GetImageInfoIsregisteredEnum() ImageInfoIsregisteredEnum {
 	}
 }
 
+func (c ImageInfoIsregistered) Value() string {
+	return c.value
+}
+
 func (c ImageInfoIsregistered) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -335,6 +347,10 @@ func GetImageInfoOsBitEnum() ImageInfoOsBitEnum {
 			value: "64",
 		},
 	}
+}
+
+func (c ImageInfoOsBit) Value() string {
+	return c.value
 }
 
 func (c ImageInfoOsBit) MarshalJSON() ([]byte, error) {
@@ -377,6 +393,10 @@ func GetImageInfoOsTypeEnum() ImageInfoOsTypeEnum {
 			value: "Other",
 		},
 	}
+}
+
+func (c ImageInfoOsType) Value() string {
+	return c.value
 }
 
 func (c ImageInfoOsType) MarshalJSON() ([]byte, error) {
@@ -457,6 +477,10 @@ func GetImageInfoPlatformEnum() ImageInfoPlatformEnum {
 	}
 }
 
+func (c ImageInfoPlatform) Value() string {
+	return c.value
+}
+
 func (c ImageInfoPlatform) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -507,6 +531,10 @@ func GetImageInfoStatusEnum() ImageInfoStatusEnum {
 	}
 }
 
+func (c ImageInfoStatus) Value() string {
+	return c.value
+}
+
 func (c ImageInfoStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -549,6 +577,10 @@ func GetImageInfoVirtualEnvTypeEnum() ImageInfoVirtualEnvTypeEnum {
 	}
 }
 
+func (c ImageInfoVirtualEnvType) Value() string {
+	return c.value
+}
+
 func (c ImageInfoVirtualEnvType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -585,6 +617,10 @@ func GetImageInfoVisibilityEnum() ImageInfoVisibilityEnum {
 			value: "public",
 		},
 	}
+}
+
+func (c ImageInfoVisibility) Value() string {
+	return c.value
 }
 
 func (c ImageInfoVisibility) MarshalJSON() ([]byte, error) {
@@ -625,6 +661,10 @@ func GetImageInfoSupportFcInjectEnum() ImageInfoSupportFcInjectEnum {
 	}
 }
 
+func (c ImageInfoSupportFcInject) Value() string {
+	return c.value
+}
+
 func (c ImageInfoSupportFcInject) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -663,6 +703,10 @@ func GetImageInfoHwFirmwareTypeEnum() ImageInfoHwFirmwareTypeEnum {
 	}
 }
 
+func (c ImageInfoHwFirmwareType) Value() string {
+	return c.value
+}
+
 func (c ImageInfoHwFirmwareType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -699,6 +743,10 @@ func GetImageInfoSupportArmEnum() ImageInfoSupportArmEnum {
 			value: "false",
 		},
 	}
+}
+
+func (c ImageInfoSupportArm) Value() string {
+	return c.value
 }
 
 func (c ImageInfoSupportArm) MarshalJSON() ([]byte, error) {

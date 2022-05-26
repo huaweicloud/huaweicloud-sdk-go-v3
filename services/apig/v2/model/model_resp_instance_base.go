@@ -208,6 +208,10 @@ func GetRespInstanceBaseStatusEnum() RespInstanceBaseStatusEnum {
 	}
 }
 
+func (c RespInstanceBaseStatus) Value() string {
+	return c.value
+}
+
 func (c RespInstanceBaseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -341,6 +345,10 @@ func GetRespInstanceBaseInstanceStatusEnum() RespInstanceBaseInstanceStatusEnum 
 	}
 }
 
+func (c RespInstanceBaseInstanceStatus) Value() int32 {
+	return c.value
+}
+
 func (c RespInstanceBaseInstanceStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -403,6 +411,10 @@ func GetRespInstanceBaseSpecEnum() RespInstanceBaseSpecEnum {
 	}
 }
 
+func (c RespInstanceBaseSpec) Value() string {
+	return c.value
+}
+
 func (c RespInstanceBaseSpec) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -438,6 +450,10 @@ func GetRespInstanceBaseChargingModeEnum() RespInstanceBaseChargingModeEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c RespInstanceBaseChargingMode) Value() int32 {
+	return c.value
 }
 
 func (c RespInstanceBaseChargingMode) MarshalJSON() ([]byte, error) {
@@ -476,6 +492,10 @@ func GetRespInstanceBaseLoadbalancerProviderEnum() RespInstanceBaseLoadbalancerP
 			value: "elb",
 		},
 	}
+}
+
+func (c RespInstanceBaseLoadbalancerProvider) Value() string {
+	return c.value
 }
 
 func (c RespInstanceBaseLoadbalancerProvider) MarshalJSON() ([]byte, error) {

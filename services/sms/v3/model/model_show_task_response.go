@@ -130,6 +130,10 @@ func GetShowTaskResponseTypeEnum() ShowTaskResponseTypeEnum {
 	}
 }
 
+func (c ShowTaskResponseType) Value() string {
+	return c.value
+}
+
 func (c ShowTaskResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -166,6 +170,10 @@ func GetShowTaskResponseOsTypeEnum() ShowTaskResponseOsTypeEnum {
 			value: "LINUX",
 		},
 	}
+}
+
+func (c ShowTaskResponseOsType) Value() string {
+	return c.value
 }
 
 func (c ShowTaskResponseOsType) MarshalJSON() ([]byte, error) {
@@ -206,6 +214,10 @@ func GetShowTaskResponsePriorityEnum() ShowTaskResponsePriorityEnum {
 			value: 2,
 		},
 	}
+}
+
+func (c ShowTaskResponsePriority) Value() int32 {
+	return c.value
 }
 
 func (c ShowTaskResponsePriority) MarshalJSON() ([]byte, error) {

@@ -48,6 +48,10 @@ func GetShowRepositoryStatisticalDataV2RequestXLanguageEnum() ShowRepositoryStat
 	}
 }
 
+func (c ShowRepositoryStatisticalDataV2RequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ShowRepositoryStatisticalDataV2RequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

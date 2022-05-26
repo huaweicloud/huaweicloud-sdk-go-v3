@@ -92,6 +92,10 @@ func GetShowFunctionTriggerResponseTriggerTypeCodeEnum() ShowFunctionTriggerResp
 	}
 }
 
+func (c ShowFunctionTriggerResponseTriggerTypeCode) Value() string {
+	return c.value
+}
+
 func (c ShowFunctionTriggerResponseTriggerTypeCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -128,6 +132,10 @@ func GetShowFunctionTriggerResponseTriggerStatusEnum() ShowFunctionTriggerRespon
 			value: "DISABLED",
 		},
 	}
+}
+
+func (c ShowFunctionTriggerResponseTriggerStatus) Value() string {
+	return c.value
 }
 
 func (c ShowFunctionTriggerResponseTriggerStatus) MarshalJSON() ([]byte, error) {

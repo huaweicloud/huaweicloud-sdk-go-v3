@@ -88,6 +88,10 @@ func GetSignRequestBodySigningAlgorithmEnum() SignRequestBodySigningAlgorithmEnu
 	}
 }
 
+func (c SignRequestBodySigningAlgorithm) Value() string {
+	return c.value
+}
+
 func (c SignRequestBodySigningAlgorithm) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -124,6 +128,10 @@ func GetSignRequestBodyMessageTypeEnum() SignRequestBodyMessageTypeEnum {
 			value: "RAW",
 		},
 	}
+}
+
+func (c SignRequestBodyMessageType) Value() string {
+	return c.value
 }
 
 func (c SignRequestBodyMessageType) MarshalJSON() ([]byte, error) {

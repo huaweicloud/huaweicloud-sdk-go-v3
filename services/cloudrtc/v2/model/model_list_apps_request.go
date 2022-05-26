@@ -64,6 +64,10 @@ func GetListAppsRequestStateEnum() ListAppsRequestStateEnum {
 	}
 }
 
+func (c ListAppsRequestState) Value() string {
+	return c.value
+}
+
 func (c ListAppsRequestState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -66,6 +66,10 @@ func GetTaskNodeGroupsDataVolumeTypeEnum() TaskNodeGroupsDataVolumeTypeEnum {
 	}
 }
 
+func (c TaskNodeGroupsDataVolumeType) Value() string {
+	return c.value
+}
+
 func (c TaskNodeGroupsDataVolumeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

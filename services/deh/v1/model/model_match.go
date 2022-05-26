@@ -44,6 +44,10 @@ func GetMatchKeyEnum() MatchKeyEnum {
 	}
 }
 
+func (c MatchKey) Value() string {
+	return c.value
+}
+
 func (c MatchKey) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

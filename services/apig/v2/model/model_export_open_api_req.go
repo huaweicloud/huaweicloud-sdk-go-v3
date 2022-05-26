@@ -67,6 +67,10 @@ func GetExportOpenApiReqDefineEnum() ExportOpenApiReqDefineEnum {
 	}
 }
 
+func (c ExportOpenApiReqDefine) Value() string {
+	return c.value
+}
+
 func (c ExportOpenApiReqDefine) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -107,6 +111,10 @@ func GetExportOpenApiReqTypeEnum() ExportOpenApiReqTypeEnum {
 			value: "yml",
 		},
 	}
+}
+
+func (c ExportOpenApiReqType) Value() string {
+	return c.value
 }
 
 func (c ExportOpenApiReqType) MarshalJSON() ([]byte, error) {

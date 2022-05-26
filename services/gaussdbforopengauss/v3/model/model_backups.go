@@ -74,6 +74,10 @@ func GetBackupsStatusEnum() BackupsStatusEnum {
 	}
 }
 
+func (c BackupsStatus) Value() string {
+	return c.value
+}
+
 func (c BackupsStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -110,6 +114,10 @@ func GetBackupsTypeEnum() BackupsTypeEnum {
 			value: "manual：手动全量备份。",
 		},
 	}
+}
+
+func (c BackupsType) Value() string {
+	return c.value
 }
 
 func (c BackupsType) MarshalJSON() ([]byte, error) {

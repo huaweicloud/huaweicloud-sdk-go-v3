@@ -60,6 +60,10 @@ func GetListMetadataLocksRequestXLanguageEnum() ListMetadataLocksRequestXLanguag
 	}
 }
 
+func (c ListMetadataLocksRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ListMetadataLocksRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

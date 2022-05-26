@@ -54,6 +54,10 @@ func GetListApplicationsRequestOrderEnum() ListApplicationsRequestOrderEnum {
 	}
 }
 
+func (c ListApplicationsRequestOrder) Value() string {
+	return c.value
+}
+
 func (c ListApplicationsRequestOrder) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

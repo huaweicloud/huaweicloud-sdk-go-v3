@@ -90,6 +90,10 @@ func GetThrottlesInfoTimeUnitEnum() ThrottlesInfoTimeUnitEnum {
 	}
 }
 
+func (c ThrottlesInfoTimeUnit) Value() string {
+	return c.value
+}
+
 func (c ThrottlesInfoTimeUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -127,6 +131,10 @@ func GetThrottlesInfoTypeEnum() ThrottlesInfoTypeEnum {
 	}
 }
 
+func (c ThrottlesInfoType) Value() int32 {
+	return c.value
+}
+
 func (c ThrottlesInfoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -162,6 +170,10 @@ func GetThrottlesInfoIsIncluSpecialThrottleEnum() ThrottlesInfoIsIncluSpecialThr
 			value: 2,
 		},
 	}
+}
+
+func (c ThrottlesInfoIsIncluSpecialThrottle) Value() int32 {
+	return c.value
 }
 
 func (c ThrottlesInfoIsIncluSpecialThrottle) MarshalJSON() ([]byte, error) {

@@ -58,6 +58,10 @@ func GetDevicesInGroupStatusEnum() DevicesInGroupStatusEnum {
 	}
 }
 
+func (c DevicesInGroupStatus) Value() int32 {
+	return c.value
+}
+
 func (c DevicesInGroupStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -96,6 +100,10 @@ func GetDevicesInGroupOnlineStatusEnum() DevicesInGroupOnlineStatusEnum {
 			value: 2,
 		},
 	}
+}
+
+func (c DevicesInGroupOnlineStatus) Value() int32 {
+	return c.value
 }
 
 func (c DevicesInGroupOnlineStatus) MarshalJSON() ([]byte, error) {

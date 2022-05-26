@@ -70,6 +70,10 @@ func GetListBackupsRequestBackupTypeEnum() ListBackupsRequestBackupTypeEnum {
 	}
 }
 
+func (c ListBackupsRequestBackupType) Value() string {
+	return c.value
+}
+
 func (c ListBackupsRequestBackupType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -110,6 +114,10 @@ func GetListBackupsRequestModeEnum() ListBackupsRequestModeEnum {
 			value: "Single",
 		},
 	}
+}
+
+func (c ListBackupsRequestMode) Value() string {
+	return c.value
 }
 
 func (c ListBackupsRequestMode) MarshalJSON() ([]byte, error) {

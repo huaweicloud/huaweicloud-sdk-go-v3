@@ -73,6 +73,10 @@ func GetQueryPreCheckRespJobDirectionEnum() QueryPreCheckRespJobDirectionEnum {
 	}
 }
 
+func (c QueryPreCheckRespJobDirection) Value() string {
+	return c.value
+}
+
 func (c QueryPreCheckRespJobDirection) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

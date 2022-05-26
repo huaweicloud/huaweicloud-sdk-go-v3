@@ -56,6 +56,10 @@ func GetApiPolicyReqBaseEffectModeEnum() ApiPolicyReqBaseEffectModeEnum {
 	}
 }
 
+func (c ApiPolicyReqBaseEffectMode) Value() string {
+	return c.value
+}
+
 func (c ApiPolicyReqBaseEffectMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

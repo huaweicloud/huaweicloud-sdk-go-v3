@@ -58,6 +58,10 @@ func GetCallbackLifeCycleHookOptionLifecycleActionResultEnum() CallbackLifeCycle
 	}
 }
 
+func (c CallbackLifeCycleHookOptionLifecycleActionResult) Value() string {
+	return c.value
+}
+
 func (c CallbackLifeCycleHookOptionLifecycleActionResult) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

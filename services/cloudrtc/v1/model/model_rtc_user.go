@@ -90,6 +90,10 @@ func GetRtcUserStateEnum() RtcUserStateEnum {
 	}
 }
 
+func (c RtcUserState) Value() string {
+	return c.value
+}
+
 func (c RtcUserState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

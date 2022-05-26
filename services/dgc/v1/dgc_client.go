@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dgc/v1/model"
 )
 
@@ -19,7 +19,7 @@ func DgcClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 停止脚本实例的执行
+// CancelScript 停止脚本实例的执行
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -34,7 +34,13 @@ func (c *DgcClient) CancelScript(request *model.CancelScriptRequest) (*model.Can
 	}
 }
 
-// 创建连接
+// CancelScriptInvoker 停止脚本实例的执行
+func (c *DgcClient) CancelScriptInvoker(request *model.CancelScriptRequest) *CancelScriptInvoker {
+	requestDef := GenReqDefForCancelScript()
+	return &CancelScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateConnection 创建连接
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -49,7 +55,13 @@ func (c *DgcClient) CreateConnection(request *model.CreateConnectionRequest) (*m
 	}
 }
 
-// 创建作业
+// CreateConnectionInvoker 创建连接
+func (c *DgcClient) CreateConnectionInvoker(request *model.CreateConnectionRequest) *CreateConnectionInvoker {
+	requestDef := GenReqDefForCreateConnection()
+	return &CreateConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateJob 创建作业
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -64,7 +76,13 @@ func (c *DgcClient) CreateJob(request *model.CreateJobRequest) (*model.CreateJob
 	}
 }
 
-// 创建资源
+// CreateJobInvoker 创建作业
+func (c *DgcClient) CreateJobInvoker(request *model.CreateJobRequest) *CreateJobInvoker {
+	requestDef := GenReqDefForCreateJob()
+	return &CreateJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateResource 创建资源
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -79,7 +97,13 @@ func (c *DgcClient) CreateResource(request *model.CreateResourceRequest) (*model
 	}
 }
 
-// 创建脚本
+// CreateResourceInvoker 创建资源
+func (c *DgcClient) CreateResourceInvoker(request *model.CreateResourceRequest) *CreateResourceInvoker {
+	requestDef := GenReqDefForCreateResource()
+	return &CreateResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateScript 创建脚本
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -94,7 +118,13 @@ func (c *DgcClient) CreateScript(request *model.CreateScriptRequest) (*model.Cre
 	}
 }
 
-// 删除连接
+// CreateScriptInvoker 创建脚本
+func (c *DgcClient) CreateScriptInvoker(request *model.CreateScriptRequest) *CreateScriptInvoker {
+	requestDef := GenReqDefForCreateScript()
+	return &CreateScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteConnction 删除连接
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -109,7 +139,13 @@ func (c *DgcClient) DeleteConnction(request *model.DeleteConnctionRequest) (*mod
 	}
 }
 
-// 删除作业
+// DeleteConnctionInvoker 删除连接
+func (c *DgcClient) DeleteConnctionInvoker(request *model.DeleteConnctionRequest) *DeleteConnctionInvoker {
+	requestDef := GenReqDefForDeleteConnction()
+	return &DeleteConnctionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteJob 删除作业
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -124,7 +160,13 @@ func (c *DgcClient) DeleteJob(request *model.DeleteJobRequest) (*model.DeleteJob
 	}
 }
 
-// 删除资源
+// DeleteJobInvoker 删除作业
+func (c *DgcClient) DeleteJobInvoker(request *model.DeleteJobRequest) *DeleteJobInvoker {
+	requestDef := GenReqDefForDeleteJob()
+	return &DeleteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteResource 删除资源
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -139,7 +181,13 @@ func (c *DgcClient) DeleteResource(request *model.DeleteResourceRequest) (*model
 	}
 }
 
-// 删除脚本
+// DeleteResourceInvoker 删除资源
+func (c *DgcClient) DeleteResourceInvoker(request *model.DeleteResourceRequest) *DeleteResourceInvoker {
+	requestDef := GenReqDefForDeleteResource()
+	return &DeleteResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteScript 删除脚本
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -154,7 +202,13 @@ func (c *DgcClient) DeleteScript(request *model.DeleteScriptRequest) (*model.Del
 	}
 }
 
-// 执行脚本
+// DeleteScriptInvoker 删除脚本
+func (c *DgcClient) DeleteScriptInvoker(request *model.DeleteScriptRequest) *DeleteScriptInvoker {
+	requestDef := GenReqDefForDeleteScript()
+	return &DeleteScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteScript 执行脚本
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -169,7 +223,13 @@ func (c *DgcClient) ExecuteScript(request *model.ExecuteScriptRequest) (*model.E
 	}
 }
 
-// 导出连接
+// ExecuteScriptInvoker 执行脚本
+func (c *DgcClient) ExecuteScriptInvoker(request *model.ExecuteScriptRequest) *ExecuteScriptInvoker {
+	requestDef := GenReqDefForExecuteScript()
+	return &ExecuteScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportConnections 导出连接
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -184,7 +244,13 @@ func (c *DgcClient) ExportConnections(request *model.ExportConnectionsRequest) (
 	}
 }
 
-// 导出作业
+// ExportConnectionsInvoker 导出连接
+func (c *DgcClient) ExportConnectionsInvoker(request *model.ExportConnectionsRequest) *ExportConnectionsInvoker {
+	requestDef := GenReqDefForExportConnections()
+	return &ExportConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportJob 导出作业
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -199,7 +265,13 @@ func (c *DgcClient) ExportJob(request *model.ExportJobRequest) (*model.ExportJob
 	}
 }
 
-// 批量导出作业
+// ExportJobInvoker 导出作业
+func (c *DgcClient) ExportJobInvoker(request *model.ExportJobRequest) *ExportJobInvoker {
+	requestDef := GenReqDefForExportJob()
+	return &ExportJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportJobList 批量导出作业
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -214,7 +286,13 @@ func (c *DgcClient) ExportJobList(request *model.ExportJobListRequest) (*model.E
 	}
 }
 
-// 导入连接
+// ExportJobListInvoker 批量导出作业
+func (c *DgcClient) ExportJobListInvoker(request *model.ExportJobListRequest) *ExportJobListInvoker {
+	requestDef := GenReqDefForExportJobList()
+	return &ExportJobListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportConnections 导入连接
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -229,7 +307,13 @@ func (c *DgcClient) ImportConnections(request *model.ImportConnectionsRequest) (
 	}
 }
 
-// 导入作业
+// ImportConnectionsInvoker 导入连接
+func (c *DgcClient) ImportConnectionsInvoker(request *model.ImportConnectionsRequest) *ImportConnectionsInvoker {
+	requestDef := GenReqDefForImportConnections()
+	return &ImportConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportJob 导入作业
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -244,7 +328,13 @@ func (c *DgcClient) ImportJob(request *model.ImportJobRequest) (*model.ImportJob
 	}
 }
 
-// 查询连接列表
+// ImportJobInvoker 导入作业
+func (c *DgcClient) ImportJobInvoker(request *model.ImportJobRequest) *ImportJobInvoker {
+	requestDef := GenReqDefForImportJob()
+	return &ImportJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConnections 查询连接列表
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -259,7 +349,13 @@ func (c *DgcClient) ListConnections(request *model.ListConnectionsRequest) (*mod
 	}
 }
 
-// 查询作业实例列表
+// ListConnectionsInvoker 查询连接列表
+func (c *DgcClient) ListConnectionsInvoker(request *model.ListConnectionsRequest) *ListConnectionsInvoker {
+	requestDef := GenReqDefForListConnections()
+	return &ListConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListJobInstances 查询作业实例列表
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -274,7 +370,13 @@ func (c *DgcClient) ListJobInstances(request *model.ListJobInstancesRequest) (*m
 	}
 }
 
-// 查询作业列表
+// ListJobInstancesInvoker 查询作业实例列表
+func (c *DgcClient) ListJobInstancesInvoker(request *model.ListJobInstancesRequest) *ListJobInstancesInvoker {
+	requestDef := GenReqDefForListJobInstances()
+	return &ListJobInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListJobs 查询作业列表
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -289,7 +391,13 @@ func (c *DgcClient) ListJobs(request *model.ListJobsRequest) (*model.ListJobsRes
 	}
 }
 
-// 查询资源列表
+// ListJobsInvoker 查询作业列表
+func (c *DgcClient) ListJobsInvoker(request *model.ListJobsRequest) *ListJobsInvoker {
+	requestDef := GenReqDefForListJobs()
+	return &ListJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResources 查询资源列表
 //
 func (c *DgcClient) ListResources(request *model.ListResourcesRequest) (*model.ListResourcesResponse, error) {
 	requestDef := GenReqDefForListResources()
@@ -301,7 +409,13 @@ func (c *DgcClient) ListResources(request *model.ListResourcesRequest) (*model.L
 	}
 }
 
-// 查询脚本实例执行结果
+// ListResourcesInvoker 查询资源列表
+func (c *DgcClient) ListResourcesInvoker(request *model.ListResourcesRequest) *ListResourcesInvoker {
+	requestDef := GenReqDefForListResources()
+	return &ListResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListScriptResults 查询脚本实例执行结果
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -316,7 +430,13 @@ func (c *DgcClient) ListScriptResults(request *model.ListScriptResultsRequest) (
 	}
 }
 
-// 查询脚本列表
+// ListScriptResultsInvoker 查询脚本实例执行结果
+func (c *DgcClient) ListScriptResultsInvoker(request *model.ListScriptResultsRequest) *ListScriptResultsInvoker {
+	requestDef := GenReqDefForListScriptResults()
+	return &ListScriptResultsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListScripts 查询脚本列表
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -331,7 +451,13 @@ func (c *DgcClient) ListScripts(request *model.ListScriptsRequest) (*model.ListS
 	}
 }
 
-// 查询系统任务详情
+// ListScriptsInvoker 查询脚本列表
+func (c *DgcClient) ListScriptsInvoker(request *model.ListScriptsRequest) *ListScriptsInvoker {
+	requestDef := GenReqDefForListScripts()
+	return &ListScriptsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSystemTasks 查询系统任务详情
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -346,7 +472,13 @@ func (c *DgcClient) ListSystemTasks(request *model.ListSystemTasksRequest) (*mod
 	}
 }
 
-// 重跑作业实例
+// ListSystemTasksInvoker 查询系统任务详情
+func (c *DgcClient) ListSystemTasksInvoker(request *model.ListSystemTasksRequest) *ListSystemTasksInvoker {
+	requestDef := GenReqDefForListSystemTasks()
+	return &ListSystemTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestoreJobInstance 重跑作业实例
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -361,7 +493,13 @@ func (c *DgcClient) RestoreJobInstance(request *model.RestoreJobInstanceRequest)
 	}
 }
 
-// 单次执行作业
+// RestoreJobInstanceInvoker 重跑作业实例
+func (c *DgcClient) RestoreJobInstanceInvoker(request *model.RestoreJobInstanceRequest) *RestoreJobInstanceInvoker {
+	requestDef := GenReqDefForRestoreJobInstance()
+	return &RestoreJobInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunOnce 单次执行作业
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -376,7 +514,13 @@ func (c *DgcClient) RunOnce(request *model.RunOnceRequest) (*model.RunOnceRespon
 	}
 }
 
-// 查询连接详情
+// RunOnceInvoker 单次执行作业
+func (c *DgcClient) RunOnceInvoker(request *model.RunOnceRequest) *RunOnceInvoker {
+	requestDef := GenReqDefForRunOnce()
+	return &RunOnceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowConnection 查询连接详情
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -391,7 +535,13 @@ func (c *DgcClient) ShowConnection(request *model.ShowConnectionRequest) (*model
 	}
 }
 
-// 检查导入作业文件中的作业和脚本
+// ShowConnectionInvoker 查询连接详情
+func (c *DgcClient) ShowConnectionInvoker(request *model.ShowConnectionRequest) *ShowConnectionInvoker {
+	requestDef := GenReqDefForShowConnection()
+	return &ShowConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFileInfo 检查导入作业文件中的作业和脚本
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -406,7 +556,13 @@ func (c *DgcClient) ShowFileInfo(request *model.ShowFileInfoRequest) (*model.Sho
 	}
 }
 
-// 查询作业详情
+// ShowFileInfoInvoker 检查导入作业文件中的作业和脚本
+func (c *DgcClient) ShowFileInfoInvoker(request *model.ShowFileInfoRequest) *ShowFileInfoInvoker {
+	requestDef := GenReqDefForShowFileInfo()
+	return &ShowFileInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJob 查询作业详情
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -421,7 +577,13 @@ func (c *DgcClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobRespon
 	}
 }
 
-// 查询作业实例详情
+// ShowJobInvoker 查询作业详情
+func (c *DgcClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
+	requestDef := GenReqDefForShowJob()
+	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobInstance 查询作业实例详情
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -436,7 +598,13 @@ func (c *DgcClient) ShowJobInstance(request *model.ShowJobInstanceRequest) (*mod
 	}
 }
 
-// 查询实时作业的运行状态
+// ShowJobInstanceInvoker 查询作业实例详情
+func (c *DgcClient) ShowJobInstanceInvoker(request *model.ShowJobInstanceRequest) *ShowJobInstanceInvoker {
+	requestDef := GenReqDefForShowJobInstance()
+	return &ShowJobInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobStatus 查询实时作业的运行状态
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -451,7 +619,13 @@ func (c *DgcClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*model.S
 	}
 }
 
-// 查询资源详情
+// ShowJobStatusInvoker 查询实时作业的运行状态
+func (c *DgcClient) ShowJobStatusInvoker(request *model.ShowJobStatusRequest) *ShowJobStatusInvoker {
+	requestDef := GenReqDefForShowJobStatus()
+	return &ShowJobStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResource 查询资源详情
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -466,7 +640,13 @@ func (c *DgcClient) ShowResource(request *model.ShowResourceRequest) (*model.Sho
 	}
 }
 
-// 查询脚本信息
+// ShowResourceInvoker 查询资源详情
+func (c *DgcClient) ShowResourceInvoker(request *model.ShowResourceRequest) *ShowResourceInvoker {
+	requestDef := GenReqDefForShowResource()
+	return &ShowResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowScript 查询脚本信息
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -481,7 +661,13 @@ func (c *DgcClient) ShowScript(request *model.ShowScriptRequest) (*model.ShowScr
 	}
 }
 
-// 启动作业
+// ShowScriptInvoker 查询脚本信息
+func (c *DgcClient) ShowScriptInvoker(request *model.ShowScriptRequest) *ShowScriptInvoker {
+	requestDef := GenReqDefForShowScript()
+	return &ShowScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartJob 启动作业
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -496,7 +682,13 @@ func (c *DgcClient) StartJob(request *model.StartJobRequest) (*model.StartJobRes
 	}
 }
 
-// 停止作业
+// StartJobInvoker 启动作业
+func (c *DgcClient) StartJobInvoker(request *model.StartJobRequest) *StartJobInvoker {
+	requestDef := GenReqDefForStartJob()
+	return &StartJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopJob 停止作业
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -511,7 +703,13 @@ func (c *DgcClient) StopJob(request *model.StopJobRequest) (*model.StopJobRespon
 	}
 }
 
-// 停止作业实例
+// StopJobInvoker 停止作业
+func (c *DgcClient) StopJobInvoker(request *model.StopJobRequest) *StopJobInvoker {
+	requestDef := GenReqDefForStopJob()
+	return &StopJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopJobInstance 停止作业实例
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -526,7 +724,13 @@ func (c *DgcClient) StopJobInstance(request *model.StopJobInstanceRequest) (*mod
 	}
 }
 
-// 修改连接
+// StopJobInstanceInvoker 停止作业实例
+func (c *DgcClient) StopJobInstanceInvoker(request *model.StopJobInstanceRequest) *StopJobInstanceInvoker {
+	requestDef := GenReqDefForStopJobInstance()
+	return &StopJobInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateConnection 修改连接
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -541,7 +745,13 @@ func (c *DgcClient) UpdateConnection(request *model.UpdateConnectionRequest) (*m
 	}
 }
 
-// 修改作业
+// UpdateConnectionInvoker 修改连接
+func (c *DgcClient) UpdateConnectionInvoker(request *model.UpdateConnectionRequest) *UpdateConnectionInvoker {
+	requestDef := GenReqDefForUpdateConnection()
+	return &UpdateConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateJob 修改作业
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -556,7 +766,13 @@ func (c *DgcClient) UpdateJob(request *model.UpdateJobRequest) (*model.UpdateJob
 	}
 }
 
-// 修改资源
+// UpdateJobInvoker 修改作业
+func (c *DgcClient) UpdateJobInvoker(request *model.UpdateJobRequest) *UpdateJobInvoker {
+	requestDef := GenReqDefForUpdateJob()
+	return &UpdateJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateResource 修改资源
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -571,7 +787,13 @@ func (c *DgcClient) UpdateResource(request *model.UpdateResourceRequest) (*model
 	}
 }
 
-// 修改脚本内容
+// UpdateResourceInvoker 修改资源
+func (c *DgcClient) UpdateResourceInvoker(request *model.UpdateResourceRequest) *UpdateResourceInvoker {
+	requestDef := GenReqDefForUpdateResource()
+	return &UpdateResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateScript 修改脚本内容
 //
 //
 // 详细说明请参考华为云API Explorer。
@@ -584,4 +806,10 @@ func (c *DgcClient) UpdateScript(request *model.UpdateScriptRequest) (*model.Upd
 	} else {
 		return resp.(*model.UpdateScriptResponse), nil
 	}
+}
+
+// UpdateScriptInvoker 修改脚本内容
+func (c *DgcClient) UpdateScriptInvoker(request *model.UpdateScriptRequest) *UpdateScriptInvoker {
+	requestDef := GenReqDefForUpdateScript()
+	return &UpdateScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

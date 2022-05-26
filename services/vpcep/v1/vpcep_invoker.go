@@ -1,0 +1,282 @@
+package v1
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpcep/v1/model"
+)
+
+type AcceptOrRejectEndpointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AcceptOrRejectEndpointInvoker) Invoke() (*model.AcceptOrRejectEndpointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AcceptOrRejectEndpointResponse), nil
+	}
+}
+
+type AddOrRemoveServicePermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddOrRemoveServicePermissionsInvoker) Invoke() (*model.AddOrRemoveServicePermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddOrRemoveServicePermissionsResponse), nil
+	}
+}
+
+type CreateEndpointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEndpointInvoker) Invoke() (*model.CreateEndpointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEndpointResponse), nil
+	}
+}
+
+type CreateEndpointServiceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEndpointServiceInvoker) Invoke() (*model.CreateEndpointServiceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEndpointServiceResponse), nil
+	}
+}
+
+type DeleteEndpointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEndpointInvoker) Invoke() (*model.DeleteEndpointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEndpointResponse), nil
+	}
+}
+
+type DeleteEndpointServiceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEndpointServiceInvoker) Invoke() (*model.DeleteEndpointServiceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEndpointServiceResponse), nil
+	}
+}
+
+type ListEndpointInfoDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEndpointInfoDetailsInvoker) Invoke() (*model.ListEndpointInfoDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEndpointInfoDetailsResponse), nil
+	}
+}
+
+type ListEndpointServiceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEndpointServiceInvoker) Invoke() (*model.ListEndpointServiceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEndpointServiceResponse), nil
+	}
+}
+
+type ListEndpointsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEndpointsInvoker) Invoke() (*model.ListEndpointsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEndpointsResponse), nil
+	}
+}
+
+type ListQuotaDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQuotaDetailsInvoker) Invoke() (*model.ListQuotaDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQuotaDetailsResponse), nil
+	}
+}
+
+type ListServiceConnectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListServiceConnectionsInvoker) Invoke() (*model.ListServiceConnectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListServiceConnectionsResponse), nil
+	}
+}
+
+type ListServiceDescribeDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListServiceDescribeDetailsInvoker) Invoke() (*model.ListServiceDescribeDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListServiceDescribeDetailsResponse), nil
+	}
+}
+
+type ListServiceDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListServiceDetailsInvoker) Invoke() (*model.ListServiceDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListServiceDetailsResponse), nil
+	}
+}
+
+type ListServicePermissionsDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListServicePermissionsDetailsInvoker) Invoke() (*model.ListServicePermissionsDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListServicePermissionsDetailsResponse), nil
+	}
+}
+
+type ListServicePublicDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListServicePublicDetailsInvoker) Invoke() (*model.ListServicePublicDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListServicePublicDetailsResponse), nil
+	}
+}
+
+type ListSpecifiedVersionDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSpecifiedVersionDetailsInvoker) Invoke() (*model.ListSpecifiedVersionDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSpecifiedVersionDetailsResponse), nil
+	}
+}
+
+type ListVersionDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVersionDetailsInvoker) Invoke() (*model.ListVersionDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVersionDetailsResponse), nil
+	}
+}
+
+type UpdateEndpointRoutetableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEndpointRoutetableInvoker) Invoke() (*model.UpdateEndpointRoutetableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEndpointRoutetableResponse), nil
+	}
+}
+
+type UpdateEndpointServiceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEndpointServiceInvoker) Invoke() (*model.UpdateEndpointServiceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEndpointServiceResponse), nil
+	}
+}
+
+type UpdateEndpointWhiteInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEndpointWhiteInvoker) Invoke() (*model.UpdateEndpointWhiteResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEndpointWhiteResponse), nil
+	}
+}
+
+type BatchAddOrRemoveResourceInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchAddOrRemoveResourceInstanceInvoker) Invoke() (*model.BatchAddOrRemoveResourceInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchAddOrRemoveResourceInstanceResponse), nil
+	}
+}
+
+type ListQueryProjectResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQueryProjectResourceTagsInvoker) Invoke() (*model.ListQueryProjectResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQueryProjectResourceTagsResponse), nil
+	}
+}
+
+type ListResourceInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourceInstancesInvoker) Invoke() (*model.ListResourceInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourceInstancesResponse), nil
+	}
+}

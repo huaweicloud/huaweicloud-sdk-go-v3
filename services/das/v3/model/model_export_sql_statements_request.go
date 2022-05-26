@@ -63,6 +63,10 @@ func GetExportSqlStatementsRequestXLanguageEnum() ExportSqlStatementsRequestXLan
 	}
 }
 
+func (c ExportSqlStatementsRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ExportSqlStatementsRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

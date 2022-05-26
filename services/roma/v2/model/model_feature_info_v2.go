@@ -170,6 +170,10 @@ func GetFeatureInfoV2NameEnum() FeatureInfoV2NameEnum {
 	}
 }
 
+func (c FeatureInfoV2Name) Value() string {
+	return c.value
+}
+
 func (c FeatureInfoV2Name) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

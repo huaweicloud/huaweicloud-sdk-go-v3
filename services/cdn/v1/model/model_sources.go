@@ -58,6 +58,10 @@ func GetSourcesOriginTypeEnum() SourcesOriginTypeEnum {
 	}
 }
 
+func (c SourcesOriginType) Value() string {
+	return c.value
+}
+
 func (c SourcesOriginType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

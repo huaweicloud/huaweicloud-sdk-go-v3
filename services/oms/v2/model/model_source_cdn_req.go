@@ -70,6 +70,10 @@ func GetSourceCdnReqAuthenticationTypeEnum() SourceCdnReqAuthenticationTypeEnum 
 	}
 }
 
+func (c SourceCdnReqAuthenticationType) Value() string {
+	return c.value
+}
+
 func (c SourceCdnReqAuthenticationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -106,6 +110,10 @@ func GetSourceCdnReqProtocolEnum() SourceCdnReqProtocolEnum {
 			value: "https",
 		},
 	}
+}
+
+func (c SourceCdnReqProtocol) Value() string {
+	return c.value
 }
 
 func (c SourceCdnReqProtocol) MarshalJSON() ([]byte, error) {

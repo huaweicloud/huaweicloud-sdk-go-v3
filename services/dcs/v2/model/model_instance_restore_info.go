@@ -82,6 +82,10 @@ func GetInstanceRestoreInfoStatusEnum() InstanceRestoreInfoStatusEnum {
 	}
 }
 
+func (c InstanceRestoreInfoStatus) Value() string {
+	return c.value
+}
+
 func (c InstanceRestoreInfoStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

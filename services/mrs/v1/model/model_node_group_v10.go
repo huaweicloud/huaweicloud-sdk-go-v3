@@ -103,6 +103,10 @@ func GetNodeGroupV10DataVolumeTypeEnum() NodeGroupV10DataVolumeTypeEnum {
 	}
 }
 
+func (c NodeGroupV10DataVolumeType) Value() string {
+	return c.value
+}
+
 func (c NodeGroupV10DataVolumeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

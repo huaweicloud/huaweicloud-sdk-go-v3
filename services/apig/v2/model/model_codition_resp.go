@@ -66,6 +66,10 @@ func GetCoditionRespConditionTypeEnum() CoditionRespConditionTypeEnum {
 	}
 }
 
+func (c CoditionRespConditionType) Value() string {
+	return c.value
+}
+
 func (c CoditionRespConditionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -102,6 +106,10 @@ func GetCoditionRespConditionOriginEnum() CoditionRespConditionOriginEnum {
 			value: "source",
 		},
 	}
+}
+
+func (c CoditionRespConditionOrigin) Value() string {
+	return c.value
 }
 
 func (c CoditionRespConditionOrigin) MarshalJSON() ([]byte, error) {

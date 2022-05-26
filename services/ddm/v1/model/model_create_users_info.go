@@ -81,6 +81,10 @@ func GetCreateUsersInfoBaseAuthorityEnum() CreateUsersInfoBaseAuthorityEnum {
 	}
 }
 
+func (c CreateUsersInfoBaseAuthority) Value() string {
+	return c.value
+}
+
 func (c CreateUsersInfoBaseAuthority) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

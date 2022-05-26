@@ -51,6 +51,10 @@ func GetPrePaidServerSchedulerHintsTenancyEnum() PrePaidServerSchedulerHintsTena
 	}
 }
 
+func (c PrePaidServerSchedulerHintsTenancy) Value() string {
+	return c.value
+}
+
 func (c PrePaidServerSchedulerHintsTenancy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

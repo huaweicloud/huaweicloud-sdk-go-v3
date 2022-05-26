@@ -56,6 +56,10 @@ func GetApiPolicyHttpBaseReqProtocolEnum() ApiPolicyHttpBaseReqProtocolEnum {
 	}
 }
 
+func (c ApiPolicyHttpBaseReqProtocol) Value() string {
+	return c.value
+}
+
 func (c ApiPolicyHttpBaseReqProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -116,6 +120,10 @@ func GetApiPolicyHttpBaseReqMethodEnum() ApiPolicyHttpBaseReqMethodEnum {
 			value: "ANY",
 		},
 	}
+}
+
+func (c ApiPolicyHttpBaseReqMethod) Value() string {
+	return c.value
 }
 
 func (c ApiPolicyHttpBaseReqMethod) MarshalJSON() ([]byte, error) {

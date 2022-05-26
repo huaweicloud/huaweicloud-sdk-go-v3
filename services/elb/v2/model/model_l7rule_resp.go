@@ -72,6 +72,10 @@ func GetL7ruleRespTypeEnum() L7ruleRespTypeEnum {
 	}
 }
 
+func (c L7ruleRespType) Value() string {
+	return c.value
+}
+
 func (c L7ruleRespType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

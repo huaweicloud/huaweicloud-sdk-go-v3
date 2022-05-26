@@ -47,6 +47,10 @@ func GetRefreshTaskRequestBodyTypeEnum() RefreshTaskRequestBodyTypeEnum {
 	}
 }
 
+func (c RefreshTaskRequestBodyType) Value() string {
+	return c.value
+}
+
 func (c RefreshTaskRequestBodyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

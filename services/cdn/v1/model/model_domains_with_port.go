@@ -108,6 +108,10 @@ func GetDomainsWithPortServiceAreaEnum() DomainsWithPortServiceAreaEnum {
 	}
 }
 
+func (c DomainsWithPortServiceArea) Value() string {
+	return c.value
+}
+
 func (c DomainsWithPortServiceArea) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -48,6 +48,10 @@ func GetSubscriptionInfoProtocolEnum() SubscriptionInfoProtocolEnum {
 	}
 }
 
+func (c SubscriptionInfoProtocol) Value() string {
+	return c.value
+}
+
 func (c SubscriptionInfoProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

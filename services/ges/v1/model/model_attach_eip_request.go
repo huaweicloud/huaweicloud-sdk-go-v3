@@ -46,6 +46,10 @@ func GetAttachEipRequestActionIdEnum() AttachEipRequestActionIdEnum {
 	}
 }
 
+func (c AttachEipRequestActionId) Value() string {
+	return c.value
+}
+
 func (c AttachEipRequestActionId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

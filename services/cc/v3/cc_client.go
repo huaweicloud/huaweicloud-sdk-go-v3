@@ -2,7 +2,7 @@ package v3
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cc/v3/model"
 )
 
@@ -19,7 +19,7 @@ func CcClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 创建云连接实例
+// CreateCloudConnection 创建云连接实例
 //
 // 创建云连接实例。
 //
@@ -35,7 +35,13 @@ func (c *CcClient) CreateCloudConnection(request *model.CreateCloudConnectionReq
 	}
 }
 
-// 创建网络实例
+// CreateCloudConnectionInvoker 创建云连接实例
+func (c *CcClient) CreateCloudConnectionInvoker(request *model.CreateCloudConnectionRequest) *CreateCloudConnectionInvoker {
+	requestDef := GenReqDefForCreateCloudConnection()
+	return &CreateCloudConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNetworkInstance 创建网络实例
 //
 // 创建网络实例。
 //
@@ -51,7 +57,13 @@ func (c *CcClient) CreateNetworkInstance(request *model.CreateNetworkInstanceReq
 	}
 }
 
-// 删除云连接实例
+// CreateNetworkInstanceInvoker 创建网络实例
+func (c *CcClient) CreateNetworkInstanceInvoker(request *model.CreateNetworkInstanceRequest) *CreateNetworkInstanceInvoker {
+	requestDef := GenReqDefForCreateNetworkInstance()
+	return &CreateNetworkInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCloudConnection 删除云连接实例
 //
 // 删除云连接实例。
 //
@@ -67,7 +79,13 @@ func (c *CcClient) DeleteCloudConnection(request *model.DeleteCloudConnectionReq
 	}
 }
 
-// 删除网络实例
+// DeleteCloudConnectionInvoker 删除云连接实例
+func (c *CcClient) DeleteCloudConnectionInvoker(request *model.DeleteCloudConnectionRequest) *DeleteCloudConnectionInvoker {
+	requestDef := GenReqDefForDeleteCloudConnection()
+	return &DeleteCloudConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNetworkInstance 删除网络实例
 //
 // 删除网络实例。
 //
@@ -83,7 +101,13 @@ func (c *CcClient) DeleteNetworkInstance(request *model.DeleteNetworkInstanceReq
 	}
 }
 
-// 查询云连接路由条目列表
+// DeleteNetworkInstanceInvoker 删除网络实例
+func (c *CcClient) DeleteNetworkInstanceInvoker(request *model.DeleteNetworkInstanceRequest) *DeleteNetworkInstanceInvoker {
+	requestDef := GenReqDefForDeleteNetworkInstance()
+	return &DeleteNetworkInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCloudConnectionRoutes 查询云连接路由条目列表
 //
 // 查询云连接路由条目列表。
 // 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
@@ -100,7 +124,13 @@ func (c *CcClient) ListCloudConnectionRoutes(request *model.ListCloudConnectionR
 	}
 }
 
-// 查询云连接列表
+// ListCloudConnectionRoutesInvoker 查询云连接路由条目列表
+func (c *CcClient) ListCloudConnectionRoutesInvoker(request *model.ListCloudConnectionRoutesRequest) *ListCloudConnectionRoutesInvoker {
+	requestDef := GenReqDefForListCloudConnectionRoutes()
+	return &ListCloudConnectionRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCloudConnections 查询云连接列表
 //
 // 查询云连接列表。
 // 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
@@ -117,7 +147,13 @@ func (c *CcClient) ListCloudConnections(request *model.ListCloudConnectionsReque
 	}
 }
 
-// 查询网络实例列表
+// ListCloudConnectionsInvoker 查询云连接列表
+func (c *CcClient) ListCloudConnectionsInvoker(request *model.ListCloudConnectionsRequest) *ListCloudConnectionsInvoker {
+	requestDef := GenReqDefForListCloudConnections()
+	return &ListCloudConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNetworkInstances 查询网络实例列表
 //
 // 查询云连接列表。
 // 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
@@ -134,7 +170,13 @@ func (c *CcClient) ListNetworkInstances(request *model.ListNetworkInstancesReque
 	}
 }
 
-// 查询云连接实例
+// ListNetworkInstancesInvoker 查询网络实例列表
+func (c *CcClient) ListNetworkInstancesInvoker(request *model.ListNetworkInstancesRequest) *ListNetworkInstancesInvoker {
+	requestDef := GenReqDefForListNetworkInstances()
+	return &ListNetworkInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCloudConnection 查询云连接实例
 //
 // 查询云连接实例。
 //
@@ -150,7 +192,13 @@ func (c *CcClient) ShowCloudConnection(request *model.ShowCloudConnectionRequest
 	}
 }
 
-// 查询云连接路由条目详情
+// ShowCloudConnectionInvoker 查询云连接实例
+func (c *CcClient) ShowCloudConnectionInvoker(request *model.ShowCloudConnectionRequest) *ShowCloudConnectionInvoker {
+	requestDef := GenReqDefForShowCloudConnection()
+	return &ShowCloudConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCloudConnectionRoutes 查询云连接路由条目详情
 //
 // 查询云连接路由条目列表。
 // 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
@@ -167,7 +215,13 @@ func (c *CcClient) ShowCloudConnectionRoutes(request *model.ShowCloudConnectionR
 	}
 }
 
-// 查询网络实例
+// ShowCloudConnectionRoutesInvoker 查询云连接路由条目详情
+func (c *CcClient) ShowCloudConnectionRoutesInvoker(request *model.ShowCloudConnectionRoutesRequest) *ShowCloudConnectionRoutesInvoker {
+	requestDef := GenReqDefForShowCloudConnectionRoutes()
+	return &ShowCloudConnectionRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNetworkInstance 查询网络实例
 //
 // 查询网络实例。
 //
@@ -183,7 +237,13 @@ func (c *CcClient) ShowNetworkInstance(request *model.ShowNetworkInstanceRequest
 	}
 }
 
-// 更新云连接实例
+// ShowNetworkInstanceInvoker 查询网络实例
+func (c *CcClient) ShowNetworkInstanceInvoker(request *model.ShowNetworkInstanceRequest) *ShowNetworkInstanceInvoker {
+	requestDef := GenReqDefForShowNetworkInstance()
+	return &ShowNetworkInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCloudConnection 更新云连接实例
 //
 // 更新云连接实例。
 //
@@ -199,7 +259,13 @@ func (c *CcClient) UpdateCloudConnection(request *model.UpdateCloudConnectionReq
 	}
 }
 
-// 更新网络实例
+// UpdateCloudConnectionInvoker 更新云连接实例
+func (c *CcClient) UpdateCloudConnectionInvoker(request *model.UpdateCloudConnectionRequest) *UpdateCloudConnectionInvoker {
+	requestDef := GenReqDefForUpdateCloudConnection()
+	return &UpdateCloudConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNetworkInstance 更新网络实例
 //
 // 更新网络实例。
 //
@@ -213,4 +279,10 @@ func (c *CcClient) UpdateNetworkInstance(request *model.UpdateNetworkInstanceReq
 	} else {
 		return resp.(*model.UpdateNetworkInstanceResponse), nil
 	}
+}
+
+// UpdateNetworkInstanceInvoker 更新网络实例
+func (c *CcClient) UpdateNetworkInstanceInvoker(request *model.UpdateNetworkInstanceRequest) *UpdateNetworkInstanceInvoker {
+	requestDef := GenReqDefForUpdateNetworkInstance()
+	return &UpdateNetworkInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

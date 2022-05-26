@@ -67,6 +67,10 @@ func GetNotificationResponseBodyTypeEnum() NotificationResponseBodyTypeEnum {
 	}
 }
 
+func (c NotificationResponseBodyType) Value() int32 {
+	return c.value
+}
+
 func (c NotificationResponseBodyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -102,6 +106,10 @@ func GetNotificationResponseBodyStatusEnum() NotificationResponseBodyStatusEnum 
 			value: 1,
 		},
 	}
+}
+
+func (c NotificationResponseBodyStatus) Value() int32 {
+	return c.value
 }
 
 func (c NotificationResponseBodyStatus) MarshalJSON() ([]byte, error) {

@@ -220,6 +220,10 @@ func GetUpdateImageResponseImageSourceTypeEnum() UpdateImageResponseImageSourceT
 	}
 }
 
+func (c UpdateImageResponseImageSourceType) Value() string {
+	return c.value
+}
+
 func (c UpdateImageResponseImageSourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -262,6 +266,10 @@ func GetUpdateImageResponseImagetypeEnum() UpdateImageResponseImagetypeEnum {
 	}
 }
 
+func (c UpdateImageResponseImagetype) Value() string {
+	return c.value
+}
+
 func (c UpdateImageResponseImagetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -300,6 +308,10 @@ func GetUpdateImageResponseIsregisteredEnum() UpdateImageResponseIsregisteredEnu
 	}
 }
 
+func (c UpdateImageResponseIsregistered) Value() string {
+	return c.value
+}
+
 func (c UpdateImageResponseIsregistered) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -336,6 +348,10 @@ func GetUpdateImageResponseOsBitEnum() UpdateImageResponseOsBitEnum {
 			value: "64",
 		},
 	}
+}
+
+func (c UpdateImageResponseOsBit) Value() string {
+	return c.value
 }
 
 func (c UpdateImageResponseOsBit) MarshalJSON() ([]byte, error) {
@@ -378,6 +394,10 @@ func GetUpdateImageResponseOsTypeEnum() UpdateImageResponseOsTypeEnum {
 			value: "Other",
 		},
 	}
+}
+
+func (c UpdateImageResponseOsType) Value() string {
+	return c.value
 }
 
 func (c UpdateImageResponseOsType) MarshalJSON() ([]byte, error) {
@@ -458,6 +478,10 @@ func GetUpdateImageResponsePlatformEnum() UpdateImageResponsePlatformEnum {
 	}
 }
 
+func (c UpdateImageResponsePlatform) Value() string {
+	return c.value
+}
+
 func (c UpdateImageResponsePlatform) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -508,6 +532,10 @@ func GetUpdateImageResponseStatusEnum() UpdateImageResponseStatusEnum {
 	}
 }
 
+func (c UpdateImageResponseStatus) Value() string {
+	return c.value
+}
+
 func (c UpdateImageResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -550,6 +578,10 @@ func GetUpdateImageResponseVirtualEnvTypeEnum() UpdateImageResponseVirtualEnvTyp
 	}
 }
 
+func (c UpdateImageResponseVirtualEnvType) Value() string {
+	return c.value
+}
+
 func (c UpdateImageResponseVirtualEnvType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -586,6 +618,10 @@ func GetUpdateImageResponseVisibilityEnum() UpdateImageResponseVisibilityEnum {
 			value: "public",
 		},
 	}
+}
+
+func (c UpdateImageResponseVisibility) Value() string {
+	return c.value
 }
 
 func (c UpdateImageResponseVisibility) MarshalJSON() ([]byte, error) {
@@ -626,6 +662,10 @@ func GetUpdateImageResponseSupportFcInjectEnum() UpdateImageResponseSupportFcInj
 	}
 }
 
+func (c UpdateImageResponseSupportFcInject) Value() string {
+	return c.value
+}
+
 func (c UpdateImageResponseSupportFcInject) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -664,6 +704,10 @@ func GetUpdateImageResponseHwFirmwareTypeEnum() UpdateImageResponseHwFirmwareTyp
 	}
 }
 
+func (c UpdateImageResponseHwFirmwareType) Value() string {
+	return c.value
+}
+
 func (c UpdateImageResponseHwFirmwareType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -700,6 +744,10 @@ func GetUpdateImageResponseSupportArmEnum() UpdateImageResponseSupportArmEnum {
 			value: "false",
 		},
 	}
+}
+
+func (c UpdateImageResponseSupportArm) Value() string {
+	return c.value
 }
 
 func (c UpdateImageResponseSupportArm) MarshalJSON() ([]byte, error) {

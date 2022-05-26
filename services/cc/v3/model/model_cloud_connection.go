@@ -76,6 +76,10 @@ func GetCloudConnectionStatusEnum() CloudConnectionStatusEnum {
 	}
 }
 
+func (c CloudConnectionStatus) Value() string {
+	return c.value
+}
+
 func (c CloudConnectionStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -112,6 +116,10 @@ func GetCloudConnectionUsedSceneEnum() CloudConnectionUsedSceneEnum {
 			value: "vpc",
 		},
 	}
+}
+
+func (c CloudConnectionUsedScene) Value() string {
+	return c.value
 }
 
 func (c CloudConnectionUsedScene) MarshalJSON() ([]byte, error) {

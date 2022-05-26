@@ -61,6 +61,10 @@ func GetListTransfersRequestLogTransferTypeEnum() ListTransfersRequestLogTransfe
 	}
 }
 
+func (c ListTransfersRequestLogTransferType) Value() string {
+	return c.value
+}
+
 func (c ListTransfersRequestLogTransferType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

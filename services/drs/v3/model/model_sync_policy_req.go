@@ -88,6 +88,10 @@ func GetSyncPolicyReqConflictPolicyEnum() SyncPolicyReqConflictPolicyEnum {
 	}
 }
 
+func (c SyncPolicyReqConflictPolicy) Value() string {
+	return c.value
+}
+
 func (c SyncPolicyReqConflictPolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -120,6 +124,10 @@ func GetSyncPolicyReqFilterDdlPolicyEnum() SyncPolicyReqFilterDdlPolicyEnum {
 			value: "drop_database",
 		},
 	}
+}
+
+func (c SyncPolicyReqFilterDdlPolicy) Value() string {
+	return c.value
 }
 
 func (c SyncPolicyReqFilterDdlPolicy) MarshalJSON() ([]byte, error) {
@@ -168,6 +176,10 @@ func GetSyncPolicyReqTopicPolicyEnum() SyncPolicyReqTopicPolicyEnum {
 	}
 }
 
+func (c SyncPolicyReqTopicPolicy) Value() string {
+	return c.value
+}
+
 func (c SyncPolicyReqTopicPolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -214,6 +226,10 @@ func GetSyncPolicyReqPartitionPolicyEnum() SyncPolicyReqPartitionPolicyEnum {
 	}
 }
 
+func (c SyncPolicyReqPartitionPolicy) Value() string {
+	return c.value
+}
+
 func (c SyncPolicyReqPartitionPolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -250,6 +266,10 @@ func GetSyncPolicyReqKafkaDataFormatEnum() SyncPolicyReqKafkaDataFormatEnum {
 			value: "avro",
 		},
 	}
+}
+
+func (c SyncPolicyReqKafkaDataFormat) Value() string {
+	return c.value
 }
 
 func (c SyncPolicyReqKafkaDataFormat) MarshalJSON() ([]byte, error) {

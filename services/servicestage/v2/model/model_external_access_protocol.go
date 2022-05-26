@@ -30,6 +30,10 @@ func GetExternalAccessProtocolEnum() ExternalAccessProtocolEnum {
 	}
 }
 
+func (c ExternalAccessProtocol) Value() string {
+	return c.value
+}
+
 func (c ExternalAccessProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -72,6 +72,10 @@ func GetCreateKeywordsAlarmRuleRequestBodyKeywordsAlarmLevelEnum() CreateKeyword
 	}
 }
 
+func (c CreateKeywordsAlarmRuleRequestBodyKeywordsAlarmLevel) Value() string {
+	return c.value
+}
+
 func (c CreateKeywordsAlarmRuleRequestBodyKeywordsAlarmLevel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

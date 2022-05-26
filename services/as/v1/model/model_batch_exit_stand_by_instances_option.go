@@ -54,6 +54,10 @@ func GetBatchExitStandByInstancesOptionInstanceDeleteEnum() BatchExitStandByInst
 	}
 }
 
+func (c BatchExitStandByInstancesOptionInstanceDelete) Value() string {
+	return c.value
+}
+
 func (c BatchExitStandByInstancesOptionInstanceDelete) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -86,6 +90,10 @@ func GetBatchExitStandByInstancesOptionActionEnum() BatchExitStandByInstancesOpt
 			value: "EXIT_STANDBY",
 		},
 	}
+}
+
+func (c BatchExitStandByInstancesOptionAction) Value() string {
+	return c.value
 }
 
 func (c BatchExitStandByInstancesOptionAction) MarshalJSON() ([]byte, error) {
@@ -124,6 +132,10 @@ func GetBatchExitStandByInstancesOptionInstanceAppendEnum() BatchExitStandByInst
 			value: "yes",
 		},
 	}
+}
+
+func (c BatchExitStandByInstancesOptionInstanceAppend) Value() string {
+	return c.value
 }
 
 func (c BatchExitStandByInstancesOptionInstanceAppend) MarshalJSON() ([]byte, error) {

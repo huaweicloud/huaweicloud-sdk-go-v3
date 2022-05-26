@@ -47,6 +47,10 @@ func GetOriginRangeBodyRangeStatusEnum() OriginRangeBodyRangeStatusEnum {
 	}
 }
 
+func (c OriginRangeBodyRangeStatus) Value() string {
+	return c.value
+}
+
 func (c OriginRangeBodyRangeStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

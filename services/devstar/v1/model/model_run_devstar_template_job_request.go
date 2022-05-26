@@ -47,6 +47,10 @@ func GetRunDevstarTemplateJobRequestXLanguageEnum() RunDevstarTemplateJobRequest
 	}
 }
 
+func (c RunDevstarTemplateJobRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c RunDevstarTemplateJobRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

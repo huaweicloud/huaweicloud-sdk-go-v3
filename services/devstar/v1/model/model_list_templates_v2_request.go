@@ -50,6 +50,10 @@ func GetListTemplatesV2RequestXLanguageEnum() ListTemplatesV2RequestXLanguageEnu
 	}
 }
 
+func (c ListTemplatesV2RequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ListTemplatesV2RequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

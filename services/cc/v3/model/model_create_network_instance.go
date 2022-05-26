@@ -73,6 +73,10 @@ func GetCreateNetworkInstanceTypeEnum() CreateNetworkInstanceTypeEnum {
 	}
 }
 
+func (c CreateNetworkInstanceType) Value() string {
+	return c.value
+}
+
 func (c CreateNetworkInstanceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

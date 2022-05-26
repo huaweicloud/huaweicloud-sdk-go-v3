@@ -44,6 +44,10 @@ func GetPostEntityLinkingRequestLangEnum() PostEntityLinkingRequestLangEnum {
 	}
 }
 
+func (c PostEntityLinkingRequestLang) Value() string {
+	return c.value
+}
+
 func (c PostEntityLinkingRequestLang) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

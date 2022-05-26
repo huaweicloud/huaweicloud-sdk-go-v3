@@ -55,6 +55,10 @@ func GetSetOnlineMigrationTaskBodyMigrationMethodEnum() SetOnlineMigrationTaskBo
 	}
 }
 
+func (c SetOnlineMigrationTaskBodyMigrationMethod) Value() string {
+	return c.value
+}
+
 func (c SetOnlineMigrationTaskBodyMigrationMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -91,6 +95,10 @@ func GetSetOnlineMigrationTaskBodyResumeModeEnum() SetOnlineMigrationTaskBodyRes
 			value: "manual",
 		},
 	}
+}
+
+func (c SetOnlineMigrationTaskBodyResumeMode) Value() string {
+	return c.value
 }
 
 func (c SetOnlineMigrationTaskBodyResumeMode) MarshalJSON() ([]byte, error) {

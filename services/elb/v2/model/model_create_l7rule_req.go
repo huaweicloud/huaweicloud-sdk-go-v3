@@ -63,6 +63,10 @@ func GetCreateL7ruleReqTypeEnum() CreateL7ruleReqTypeEnum {
 	}
 }
 
+func (c CreateL7ruleReqType) Value() string {
+	return c.value
+}
+
 func (c CreateL7ruleReqType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

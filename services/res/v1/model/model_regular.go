@@ -57,6 +57,10 @@ func GetRegularRegularLossComputeModeEnum() RegularRegularLossComputeModeEnum {
 	}
 }
 
+func (c RegularRegularLossComputeMode) Value() string {
+	return c.value
+}
+
 func (c RegularRegularLossComputeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -73,6 +73,10 @@ func GetSubJobParamsStatusEnum() SubJobParamsStatusEnum {
 	}
 }
 
+func (c SubJobParamsStatus) Value() string {
+	return c.value
+}
+
 func (c SubJobParamsStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

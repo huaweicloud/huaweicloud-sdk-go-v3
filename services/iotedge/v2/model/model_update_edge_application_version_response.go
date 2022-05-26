@@ -77,6 +77,10 @@ func GetUpdateEdgeApplicationVersionResponseStateEnum() UpdateEdgeApplicationVer
 	}
 }
 
+func (c UpdateEdgeApplicationVersionResponseState) Value() string {
+	return c.value
+}
+
 func (c UpdateEdgeApplicationVersionResponseState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

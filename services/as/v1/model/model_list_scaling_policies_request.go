@@ -64,6 +64,10 @@ func GetListScalingPoliciesRequestScalingPolicyTypeEnum() ListScalingPoliciesReq
 	}
 }
 
+func (c ListScalingPoliciesRequestScalingPolicyType) Value() string {
+	return c.value
+}
+
 func (c ListScalingPoliciesRequestScalingPolicyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

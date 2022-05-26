@@ -46,6 +46,10 @@ func GetDetachEipRequestActionIdEnum() DetachEipRequestActionIdEnum {
 	}
 }
 
+func (c DetachEipRequestActionId) Value() string {
+	return c.value
+}
+
 func (c DetachEipRequestActionId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

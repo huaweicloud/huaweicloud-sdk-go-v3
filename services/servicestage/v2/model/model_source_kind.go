@@ -30,6 +30,10 @@ func GetSourceKindEnum() SourceKindEnum {
 	}
 }
 
+func (c SourceKind) Value() string {
+	return c.value
+}
+
 func (c SourceKind) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

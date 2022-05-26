@@ -108,6 +108,10 @@ func GetServerOsTypeEnum() ServerOsTypeEnum {
 	}
 }
 
+func (c ServerOsType) Value() string {
+	return c.value
+}
+
 func (c ServerOsType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -146,6 +150,10 @@ func GetServerFirmwareEnum() ServerFirmwareEnum {
 	}
 }
 
+func (c ServerFirmware) Value() string {
+	return c.value
+}
+
 func (c ServerFirmware) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -182,6 +190,10 @@ func GetServerBootLoaderEnum() ServerBootLoaderEnum {
 			value: "LILO",
 		},
 	}
+}
+
+func (c ServerBootLoader) Value() string {
+	return c.value
 }
 
 func (c ServerBootLoader) MarshalJSON() ([]byte, error) {

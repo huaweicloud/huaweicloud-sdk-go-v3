@@ -84,6 +84,10 @@ func GetPrePaidServerExtendParamChargingModeEnum() PrePaidServerExtendParamCharg
 	}
 }
 
+func (c PrePaidServerExtendParamChargingMode) Value() string {
+	return c.value
+}
+
 func (c PrePaidServerExtendParamChargingMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -120,6 +124,10 @@ func GetPrePaidServerExtendParamPeriodTypeEnum() PrePaidServerExtendParamPeriodT
 			value: "year",
 		},
 	}
+}
+
+func (c PrePaidServerExtendParamPeriodType) Value() string {
+	return c.value
 }
 
 func (c PrePaidServerExtendParamPeriodType) MarshalJSON() ([]byte, error) {
@@ -160,6 +168,10 @@ func GetPrePaidServerExtendParamIsAutoRenewEnum() PrePaidServerExtendParamIsAuto
 	}
 }
 
+func (c PrePaidServerExtendParamIsAutoRenew) Value() string {
+	return c.value
+}
+
 func (c PrePaidServerExtendParamIsAutoRenew) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -198,6 +210,10 @@ func GetPrePaidServerExtendParamIsAutoPayEnum() PrePaidServerExtendParamIsAutoPa
 	}
 }
 
+func (c PrePaidServerExtendParamIsAutoPay) Value() string {
+	return c.value
+}
+
 func (c PrePaidServerExtendParamIsAutoPay) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -230,6 +246,10 @@ func GetPrePaidServerExtendParamInterruptionPolicyEnum() PrePaidServerExtendPara
 			value: "immediate",
 		},
 	}
+}
+
+func (c PrePaidServerExtendParamInterruptionPolicy) Value() string {
+	return c.value
 }
 
 func (c PrePaidServerExtendParamInterruptionPolicy) MarshalJSON() ([]byte, error) {

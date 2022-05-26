@@ -79,6 +79,10 @@ func GetBatchBandwidthRespChargeModeEnum() BatchBandwidthRespChargeModeEnum {
 	}
 }
 
+func (c BatchBandwidthRespChargeMode) Value() string {
+	return c.value
+}
+
 func (c BatchBandwidthRespChargeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -117,6 +121,10 @@ func GetBatchBandwidthRespShareTypeEnum() BatchBandwidthRespShareTypeEnum {
 	}
 }
 
+func (c BatchBandwidthRespShareType) Value() string {
+	return c.value
+}
+
 func (c BatchBandwidthRespShareType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -153,6 +161,10 @@ func GetBatchBandwidthRespStatusEnum() BatchBandwidthRespStatusEnum {
 			value: "NORMAL",
 		},
 	}
+}
+
+func (c BatchBandwidthRespStatus) Value() string {
+	return c.value
 }
 
 func (c BatchBandwidthRespStatus) MarshalJSON() ([]byte, error) {

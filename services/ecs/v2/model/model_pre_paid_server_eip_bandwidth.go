@@ -54,6 +54,10 @@ func GetPrePaidServerEipBandwidthSharetypeEnum() PrePaidServerEipBandwidthSharet
 	}
 }
 
+func (c PrePaidServerEipBandwidthSharetype) Value() string {
+	return c.value
+}
+
 func (c PrePaidServerEipBandwidthSharetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

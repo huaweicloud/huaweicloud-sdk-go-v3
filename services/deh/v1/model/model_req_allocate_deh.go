@@ -60,6 +60,10 @@ func GetReqAllocateDehAutoPlacementEnum() ReqAllocateDehAutoPlacementEnum {
 	}
 }
 
+func (c ReqAllocateDehAutoPlacement) Value() string {
+	return c.value
+}
+
 func (c ReqAllocateDehAutoPlacement) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

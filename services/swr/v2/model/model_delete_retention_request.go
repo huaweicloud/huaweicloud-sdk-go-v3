@@ -54,6 +54,10 @@ func GetDeleteRetentionRequestContentTypeEnum() DeleteRetentionRequestContentTyp
 	}
 }
 
+func (c DeleteRetentionRequestContentType) Value() string {
+	return c.value
+}
+
 func (c DeleteRetentionRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

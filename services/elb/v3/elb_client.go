@@ -2,7 +2,7 @@ package v3
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/elb/v3/model"
 )
 
@@ -19,7 +19,7 @@ func ElbClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 批量创建后端服务器
+// BatchCreateMembers 批量创建后端服务器
 //
 // 在指定pool下批量创建后端服务器。
 //
@@ -35,7 +35,13 @@ func (c *ElbClient) BatchCreateMembers(request *model.BatchCreateMembersRequest)
 	}
 }
 
-// 批量删除后端服务器
+// BatchCreateMembersInvoker 批量创建后端服务器
+func (c *ElbClient) BatchCreateMembersInvoker(request *model.BatchCreateMembersRequest) *BatchCreateMembersInvoker {
+	requestDef := GenReqDefForBatchCreateMembers()
+	return &BatchCreateMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteMembers 批量删除后端服务器
 //
 // 在指定pool下批量删除后端服务器。
 //
@@ -51,7 +57,13 @@ func (c *ElbClient) BatchDeleteMembers(request *model.BatchDeleteMembersRequest)
 	}
 }
 
-// 批量更新转发策略优先级
+// BatchDeleteMembersInvoker 批量删除后端服务器
+func (c *ElbClient) BatchDeleteMembersInvoker(request *model.BatchDeleteMembersRequest) *BatchDeleteMembersInvoker {
+	requestDef := GenReqDefForBatchDeleteMembers()
+	return &BatchDeleteMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdatePoliciesPriority 批量更新转发策略优先级
 //
 // 批量更新转发策略的优先级。
 //
@@ -67,7 +79,13 @@ func (c *ElbClient) BatchUpdatePoliciesPriority(request *model.BatchUpdatePolici
 	}
 }
 
-// 负载均衡器计费模式变更
+// BatchUpdatePoliciesPriorityInvoker 批量更新转发策略优先级
+func (c *ElbClient) BatchUpdatePoliciesPriorityInvoker(request *model.BatchUpdatePoliciesPriorityRequest) *BatchUpdatePoliciesPriorityInvoker {
+	requestDef := GenReqDefForBatchUpdatePoliciesPriority()
+	return &BatchUpdatePoliciesPriorityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeLoadbalancerChargeMode 负载均衡器计费模式变更
 //
 // 负载均衡器计费模式变更，当前只支持按需计费转包周期计费。
 //
@@ -83,7 +101,13 @@ func (c *ElbClient) ChangeLoadbalancerChargeMode(request *model.ChangeLoadbalanc
 	}
 }
 
-// 创建证书
+// ChangeLoadbalancerChargeModeInvoker 负载均衡器计费模式变更
+func (c *ElbClient) ChangeLoadbalancerChargeModeInvoker(request *model.ChangeLoadbalancerChargeModeRequest) *ChangeLoadbalancerChargeModeInvoker {
+	requestDef := GenReqDefForChangeLoadbalancerChargeMode()
+	return &ChangeLoadbalancerChargeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCertificate 创建证书
 //
 // 创建证书。用于HTTPS协议监听器。
 //
@@ -99,7 +123,13 @@ func (c *ElbClient) CreateCertificate(request *model.CreateCertificateRequest) (
 	}
 }
 
-// 创建健康检查
+// CreateCertificateInvoker 创建证书
+func (c *ElbClient) CreateCertificateInvoker(request *model.CreateCertificateRequest) *CreateCertificateInvoker {
+	requestDef := GenReqDefForCreateCertificate()
+	return &CreateCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateHealthMonitor 创建健康检查
 //
 // 创建健康检查。
 //
@@ -115,7 +145,13 @@ func (c *ElbClient) CreateHealthMonitor(request *model.CreateHealthMonitorReques
 	}
 }
 
-// 创建转发策略
+// CreateHealthMonitorInvoker 创建健康检查
+func (c *ElbClient) CreateHealthMonitorInvoker(request *model.CreateHealthMonitorRequest) *CreateHealthMonitorInvoker {
+	requestDef := GenReqDefForCreateHealthMonitor()
+	return &CreateHealthMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateL7Policy 创建转发策略
 //
 // 创建七层转发策略。
 //
@@ -131,7 +167,13 @@ func (c *ElbClient) CreateL7Policy(request *model.CreateL7PolicyRequest) (*model
 	}
 }
 
-// 创建转发规则
+// CreateL7PolicyInvoker 创建转发策略
+func (c *ElbClient) CreateL7PolicyInvoker(request *model.CreateL7PolicyRequest) *CreateL7PolicyInvoker {
+	requestDef := GenReqDefForCreateL7Policy()
+	return &CreateL7PolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateL7Rule 创建转发规则
 //
 // 创建七层转发规则。
 //
@@ -147,7 +189,13 @@ func (c *ElbClient) CreateL7Rule(request *model.CreateL7RuleRequest) (*model.Cre
 	}
 }
 
-// 创建监听器
+// CreateL7RuleInvoker 创建转发规则
+func (c *ElbClient) CreateL7RuleInvoker(request *model.CreateL7RuleRequest) *CreateL7RuleInvoker {
+	requestDef := GenReqDefForCreateL7Rule()
+	return &CreateL7RuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateListener 创建监听器
 //
 // 创建监听器。
 //
@@ -163,7 +211,13 @@ func (c *ElbClient) CreateListener(request *model.CreateListenerRequest) (*model
 	}
 }
 
-// 创建负载均衡器
+// CreateListenerInvoker 创建监听器
+func (c *ElbClient) CreateListenerInvoker(request *model.CreateListenerRequest) *CreateListenerInvoker {
+	requestDef := GenReqDefForCreateListener()
+	return &CreateListenerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateLoadBalancer 创建负载均衡器
 //
 // 创建负载均衡器。
 //
@@ -193,7 +247,13 @@ func (c *ElbClient) CreateLoadBalancer(request *model.CreateLoadBalancerRequest)
 	}
 }
 
-// 创建云日志
+// CreateLoadBalancerInvoker 创建负载均衡器
+func (c *ElbClient) CreateLoadBalancerInvoker(request *model.CreateLoadBalancerRequest) *CreateLoadBalancerInvoker {
+	requestDef := GenReqDefForCreateLoadBalancer()
+	return &CreateLoadBalancerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateLogtank 创建云日志
 //
 // 创建云日志
 //
@@ -209,7 +269,13 @@ func (c *ElbClient) CreateLogtank(request *model.CreateLogtankRequest) (*model.C
 	}
 }
 
-// 创建后端服务器
+// CreateLogtankInvoker 创建云日志
+func (c *ElbClient) CreateLogtankInvoker(request *model.CreateLogtankRequest) *CreateLogtankInvoker {
+	requestDef := GenReqDefForCreateLogtank()
+	return &CreateLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMember 创建后端服务器
 //
 // 创建后端服务器。
 //
@@ -225,7 +291,13 @@ func (c *ElbClient) CreateMember(request *model.CreateMemberRequest) (*model.Cre
 	}
 }
 
-// 创建后端服务器组
+// CreateMemberInvoker 创建后端服务器
+func (c *ElbClient) CreateMemberInvoker(request *model.CreateMemberRequest) *CreateMemberInvoker {
+	requestDef := GenReqDefForCreateMember()
+	return &CreateMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePool 创建后端服务器组
 //
 // 创建后端服务器组。
 //
@@ -241,7 +313,13 @@ func (c *ElbClient) CreatePool(request *model.CreatePoolRequest) (*model.CreateP
 	}
 }
 
-// 创建自定义安全策略
+// CreatePoolInvoker 创建后端服务器组
+func (c *ElbClient) CreatePoolInvoker(request *model.CreatePoolRequest) *CreatePoolInvoker {
+	requestDef := GenReqDefForCreatePool()
+	return &CreatePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSecurityPolicy 创建自定义安全策略
 //
 // 创建自定义安全策略。用于在创建HTTPS监听器时，请求参数中指定security_policy_id来设置监听器的自定义安全策略。
 //
@@ -257,7 +335,13 @@ func (c *ElbClient) CreateSecurityPolicy(request *model.CreateSecurityPolicyRequ
 	}
 }
 
-// 删除证书
+// CreateSecurityPolicyInvoker 创建自定义安全策略
+func (c *ElbClient) CreateSecurityPolicyInvoker(request *model.CreateSecurityPolicyRequest) *CreateSecurityPolicyInvoker {
+	requestDef := GenReqDefForCreateSecurityPolicy()
+	return &CreateSecurityPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCertificate 删除证书
 //
 // 删除证书。
 //
@@ -273,7 +357,13 @@ func (c *ElbClient) DeleteCertificate(request *model.DeleteCertificateRequest) (
 	}
 }
 
-// 删除健康检查
+// DeleteCertificateInvoker 删除证书
+func (c *ElbClient) DeleteCertificateInvoker(request *model.DeleteCertificateRequest) *DeleteCertificateInvoker {
+	requestDef := GenReqDefForDeleteCertificate()
+	return &DeleteCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHealthMonitor 删除健康检查
 //
 // 删除健康检查。
 //
@@ -289,7 +379,13 @@ func (c *ElbClient) DeleteHealthMonitor(request *model.DeleteHealthMonitorReques
 	}
 }
 
-// 删除转发策略
+// DeleteHealthMonitorInvoker 删除健康检查
+func (c *ElbClient) DeleteHealthMonitorInvoker(request *model.DeleteHealthMonitorRequest) *DeleteHealthMonitorInvoker {
+	requestDef := GenReqDefForDeleteHealthMonitor()
+	return &DeleteHealthMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteL7Policy 删除转发策略
 //
 // 删除七层转发策略。
 //
@@ -305,7 +401,13 @@ func (c *ElbClient) DeleteL7Policy(request *model.DeleteL7PolicyRequest) (*model
 	}
 }
 
-// 删除转发规则
+// DeleteL7PolicyInvoker 删除转发策略
+func (c *ElbClient) DeleteL7PolicyInvoker(request *model.DeleteL7PolicyRequest) *DeleteL7PolicyInvoker {
+	requestDef := GenReqDefForDeleteL7Policy()
+	return &DeleteL7PolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteL7Rule 删除转发规则
 //
 // 删除七层转发规则。
 //
@@ -321,7 +423,13 @@ func (c *ElbClient) DeleteL7Rule(request *model.DeleteL7RuleRequest) (*model.Del
 	}
 }
 
-// 删除监听器
+// DeleteL7RuleInvoker 删除转发规则
+func (c *ElbClient) DeleteL7RuleInvoker(request *model.DeleteL7RuleRequest) *DeleteL7RuleInvoker {
+	requestDef := GenReqDefForDeleteL7Rule()
+	return &DeleteL7RuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteListener 删除监听器
 //
 // 删除监听器。
 //
@@ -337,7 +445,13 @@ func (c *ElbClient) DeleteListener(request *model.DeleteListenerRequest) (*model
 	}
 }
 
-// 删除负载均衡器
+// DeleteListenerInvoker 删除监听器
+func (c *ElbClient) DeleteListenerInvoker(request *model.DeleteListenerRequest) *DeleteListenerInvoker {
+	requestDef := GenReqDefForDeleteListener()
+	return &DeleteListenerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLoadBalancer 删除负载均衡器
 //
 // 删除负载均衡器。
 //
@@ -353,7 +467,13 @@ func (c *ElbClient) DeleteLoadBalancer(request *model.DeleteLoadBalancerRequest)
 	}
 }
 
-// 删除云日志
+// DeleteLoadBalancerInvoker 删除负载均衡器
+func (c *ElbClient) DeleteLoadBalancerInvoker(request *model.DeleteLoadBalancerRequest) *DeleteLoadBalancerInvoker {
+	requestDef := GenReqDefForDeleteLoadBalancer()
+	return &DeleteLoadBalancerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLogtank 删除云日志
 //
 // 删除云日志。
 //
@@ -369,7 +489,13 @@ func (c *ElbClient) DeleteLogtank(request *model.DeleteLogtankRequest) (*model.D
 	}
 }
 
-// 删除后端服务器
+// DeleteLogtankInvoker 删除云日志
+func (c *ElbClient) DeleteLogtankInvoker(request *model.DeleteLogtankRequest) *DeleteLogtankInvoker {
+	requestDef := GenReqDefForDeleteLogtank()
+	return &DeleteLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteMember 删除后端服务器
 //
 // 删除后端服务器。
 //
@@ -385,7 +511,13 @@ func (c *ElbClient) DeleteMember(request *model.DeleteMemberRequest) (*model.Del
 	}
 }
 
-// 删除后端服务器组
+// DeleteMemberInvoker 删除后端服务器
+func (c *ElbClient) DeleteMemberInvoker(request *model.DeleteMemberRequest) *DeleteMemberInvoker {
+	requestDef := GenReqDefForDeleteMember()
+	return &DeleteMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePool 删除后端服务器组
 //
 // 删除后端服务器组。
 //
@@ -401,7 +533,13 @@ func (c *ElbClient) DeletePool(request *model.DeletePoolRequest) (*model.DeleteP
 	}
 }
 
-// 删除自定义安全策略
+// DeletePoolInvoker 删除后端服务器组
+func (c *ElbClient) DeletePoolInvoker(request *model.DeletePoolRequest) *DeletePoolInvoker {
+	requestDef := GenReqDefForDeletePool()
+	return &DeletePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSecurityPolicy 删除自定义安全策略
 //
 // 删除自定义安全策略。
 //
@@ -417,7 +555,13 @@ func (c *ElbClient) DeleteSecurityPolicy(request *model.DeleteSecurityPolicyRequ
 	}
 }
 
-// 后端服务器全局列表
+// DeleteSecurityPolicyInvoker 删除自定义安全策略
+func (c *ElbClient) DeleteSecurityPolicyInvoker(request *model.DeleteSecurityPolicyRequest) *DeleteSecurityPolicyInvoker {
+	requestDef := GenReqDefForDeleteSecurityPolicy()
+	return &DeleteSecurityPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAllMembers 后端服务器全局列表
 //
 // 查询当前租户下的后端服务器列表。
 //
@@ -433,7 +577,13 @@ func (c *ElbClient) ListAllMembers(request *model.ListAllMembersRequest) (*model
 	}
 }
 
-// 查询可用区列表
+// ListAllMembersInvoker 后端服务器全局列表
+func (c *ElbClient) ListAllMembersInvoker(request *model.ListAllMembersRequest) *ListAllMembersInvoker {
+	requestDef := GenReqDefForListAllMembers()
+	return &ListAllMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAvailabilityZones 查询可用区列表
 //
 // 返回租户创建LB时可使用的可用区集合列表情况。
 //
@@ -454,7 +604,13 @@ func (c *ElbClient) ListAvailabilityZones(request *model.ListAvailabilityZonesRe
 	}
 }
 
-// 证书列表
+// ListAvailabilityZonesInvoker 查询可用区列表
+func (c *ElbClient) ListAvailabilityZonesInvoker(request *model.ListAvailabilityZonesRequest) *ListAvailabilityZonesInvoker {
+	requestDef := GenReqDefForListAvailabilityZones()
+	return &ListAvailabilityZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCertificates 证书列表
 //
 // 查询证书列表。
 //
@@ -470,7 +626,13 @@ func (c *ElbClient) ListCertificates(request *model.ListCertificatesRequest) (*m
 	}
 }
 
-// 查询规格列表
+// ListCertificatesInvoker 证书列表
+func (c *ElbClient) ListCertificatesInvoker(request *model.ListCertificatesRequest) *ListCertificatesInvoker {
+	requestDef := GenReqDefForListCertificates()
+	return &ListCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFlavors 查询规格列表
 //
 // 查询租户在当前region下可用的负载均衡规格列表。
 //
@@ -486,7 +648,13 @@ func (c *ElbClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 	}
 }
 
-// 查询健康检查列表
+// ListFlavorsInvoker 查询规格列表
+func (c *ElbClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListFlavorsInvoker {
+	requestDef := GenReqDefForListFlavors()
+	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHealthMonitors 查询健康检查列表
 //
 // 健康检查列表。
 //
@@ -502,7 +670,13 @@ func (c *ElbClient) ListHealthMonitors(request *model.ListHealthMonitorsRequest)
 	}
 }
 
-// 查询转发策略列表
+// ListHealthMonitorsInvoker 查询健康检查列表
+func (c *ElbClient) ListHealthMonitorsInvoker(request *model.ListHealthMonitorsRequest) *ListHealthMonitorsInvoker {
+	requestDef := GenReqDefForListHealthMonitors()
+	return &ListHealthMonitorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListL7Policies 查询转发策略列表
 //
 // 查询七层转发策略列表。
 //
@@ -518,7 +692,13 @@ func (c *ElbClient) ListL7Policies(request *model.ListL7PoliciesRequest) (*model
 	}
 }
 
-// 查询转发规则列表
+// ListL7PoliciesInvoker 查询转发策略列表
+func (c *ElbClient) ListL7PoliciesInvoker(request *model.ListL7PoliciesRequest) *ListL7PoliciesInvoker {
+	requestDef := GenReqDefForListL7Policies()
+	return &ListL7PoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListL7Rules 查询转发规则列表
 //
 // 查询转发规则列表。
 //
@@ -534,7 +714,13 @@ func (c *ElbClient) ListL7Rules(request *model.ListL7RulesRequest) (*model.ListL
 	}
 }
 
-// 查询监听器列表
+// ListL7RulesInvoker 查询转发规则列表
+func (c *ElbClient) ListL7RulesInvoker(request *model.ListL7RulesRequest) *ListL7RulesInvoker {
+	requestDef := GenReqDefForListL7Rules()
+	return &ListL7RulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListListeners 查询监听器列表
 //
 // 查询监听器列表。
 //
@@ -550,7 +736,13 @@ func (c *ElbClient) ListListeners(request *model.ListListenersRequest) (*model.L
 	}
 }
 
-// 查询负载均衡器列表
+// ListListenersInvoker 查询监听器列表
+func (c *ElbClient) ListListenersInvoker(request *model.ListListenersRequest) *ListListenersInvoker {
+	requestDef := GenReqDefForListListeners()
+	return &ListListenersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLoadBalancers 查询负载均衡器列表
 //
 // 查询负载均衡器列表。
 //
@@ -566,7 +758,13 @@ func (c *ElbClient) ListLoadBalancers(request *model.ListLoadBalancersRequest) (
 	}
 }
 
-// 云日志列表
+// ListLoadBalancersInvoker 查询负载均衡器列表
+func (c *ElbClient) ListLoadBalancersInvoker(request *model.ListLoadBalancersRequest) *ListLoadBalancersInvoker {
+	requestDef := GenReqDefForListLoadBalancers()
+	return &ListLoadBalancersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLogtanks 云日志列表
 //
 // 云日志列表
 //
@@ -582,7 +780,13 @@ func (c *ElbClient) ListLogtanks(request *model.ListLogtanksRequest) (*model.Lis
 	}
 }
 
-// 后端服务器列表
+// ListLogtanksInvoker 云日志列表
+func (c *ElbClient) ListLogtanksInvoker(request *model.ListLogtanksRequest) *ListLogtanksInvoker {
+	requestDef := GenReqDefForListLogtanks()
+	return &ListLogtanksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMembers 后端服务器列表
 //
 // Pool下的后端服务器列表。
 //
@@ -598,7 +802,13 @@ func (c *ElbClient) ListMembers(request *model.ListMembersRequest) (*model.ListM
 	}
 }
 
-// 查询后端服务器组列表
+// ListMembersInvoker 后端服务器列表
+func (c *ElbClient) ListMembersInvoker(request *model.ListMembersRequest) *ListMembersInvoker {
+	requestDef := GenReqDefForListMembers()
+	return &ListMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPools 查询后端服务器组列表
 //
 // 后端服务器组列表。
 //
@@ -614,7 +824,13 @@ func (c *ElbClient) ListPools(request *model.ListPoolsRequest) (*model.ListPools
 	}
 }
 
-// 查询配额使用详情
+// ListPoolsInvoker 查询后端服务器组列表
+func (c *ElbClient) ListPoolsInvoker(request *model.ListPoolsRequest) *ListPoolsInvoker {
+	requestDef := GenReqDefForListPools()
+	return &ListPoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQuotaDetails 查询配额使用详情
 //
 // 查询指定项目中负载均衡相关的各类资源的当前配额和已使用配额信息。
 //
@@ -630,7 +846,13 @@ func (c *ElbClient) ListQuotaDetails(request *model.ListQuotaDetailsRequest) (*m
 	}
 }
 
-// 查询自定义安全策略列表
+// ListQuotaDetailsInvoker 查询配额使用详情
+func (c *ElbClient) ListQuotaDetailsInvoker(request *model.ListQuotaDetailsRequest) *ListQuotaDetailsInvoker {
+	requestDef := GenReqDefForListQuotaDetails()
+	return &ListQuotaDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecurityPolicies 查询自定义安全策略列表
 //
 // 查询自定义安全策略列表。
 //
@@ -646,7 +868,13 @@ func (c *ElbClient) ListSecurityPolicies(request *model.ListSecurityPoliciesRequ
 	}
 }
 
-// 查询系统安全策略列表
+// ListSecurityPoliciesInvoker 查询自定义安全策略列表
+func (c *ElbClient) ListSecurityPoliciesInvoker(request *model.ListSecurityPoliciesRequest) *ListSecurityPoliciesInvoker {
+	requestDef := GenReqDefForListSecurityPolicies()
+	return &ListSecurityPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSystemSecurityPolicies 查询系统安全策略列表
 //
 // 查询系统安全策略列表。
 //
@@ -664,7 +892,13 @@ func (c *ElbClient) ListSystemSecurityPolicies(request *model.ListSystemSecurity
 	}
 }
 
-// 证书详情
+// ListSystemSecurityPoliciesInvoker 查询系统安全策略列表
+func (c *ElbClient) ListSystemSecurityPoliciesInvoker(request *model.ListSystemSecurityPoliciesRequest) *ListSystemSecurityPoliciesInvoker {
+	requestDef := GenReqDefForListSystemSecurityPolicies()
+	return &ListSystemSecurityPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCertificate 证书详情
 //
 // 查询证书详情。
 //
@@ -680,7 +914,13 @@ func (c *ElbClient) ShowCertificate(request *model.ShowCertificateRequest) (*mod
 	}
 }
 
-// 查询规格详情
+// ShowCertificateInvoker 证书详情
+func (c *ElbClient) ShowCertificateInvoker(request *model.ShowCertificateRequest) *ShowCertificateInvoker {
+	requestDef := GenReqDefForShowCertificate()
+	return &ShowCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFlavor 查询规格详情
 //
 // 查询规格的详情。
 //
@@ -696,7 +936,13 @@ func (c *ElbClient) ShowFlavor(request *model.ShowFlavorRequest) (*model.ShowFla
 	}
 }
 
-// 查询健康检查详情
+// ShowFlavorInvoker 查询规格详情
+func (c *ElbClient) ShowFlavorInvoker(request *model.ShowFlavorRequest) *ShowFlavorInvoker {
+	requestDef := GenReqDefForShowFlavor()
+	return &ShowFlavorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHealthMonitor 查询健康检查详情
 //
 // 查询健康检查详情。
 //
@@ -712,7 +958,13 @@ func (c *ElbClient) ShowHealthMonitor(request *model.ShowHealthMonitorRequest) (
 	}
 }
 
-// 查询转发策略详情
+// ShowHealthMonitorInvoker 查询健康检查详情
+func (c *ElbClient) ShowHealthMonitorInvoker(request *model.ShowHealthMonitorRequest) *ShowHealthMonitorInvoker {
+	requestDef := GenReqDefForShowHealthMonitor()
+	return &ShowHealthMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowL7Policy 查询转发策略详情
 //
 // 查询七层转发策略详情。
 //
@@ -728,7 +980,13 @@ func (c *ElbClient) ShowL7Policy(request *model.ShowL7PolicyRequest) (*model.Sho
 	}
 }
 
-// 查询转发规则详情
+// ShowL7PolicyInvoker 查询转发策略详情
+func (c *ElbClient) ShowL7PolicyInvoker(request *model.ShowL7PolicyRequest) *ShowL7PolicyInvoker {
+	requestDef := GenReqDefForShowL7Policy()
+	return &ShowL7PolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowL7Rule 查询转发规则详情
 //
 // 查询七层转发规则详情。
 //
@@ -744,7 +1002,13 @@ func (c *ElbClient) ShowL7Rule(request *model.ShowL7RuleRequest) (*model.ShowL7R
 	}
 }
 
-// 查询监听器详情
+// ShowL7RuleInvoker 查询转发规则详情
+func (c *ElbClient) ShowL7RuleInvoker(request *model.ShowL7RuleRequest) *ShowL7RuleInvoker {
+	requestDef := GenReqDefForShowL7Rule()
+	return &ShowL7RuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowListener 查询监听器详情
 //
 // 监听器详情。
 //
@@ -760,7 +1024,13 @@ func (c *ElbClient) ShowListener(request *model.ShowListenerRequest) (*model.Sho
 	}
 }
 
-// 查询负载均衡器详情
+// ShowListenerInvoker 查询监听器详情
+func (c *ElbClient) ShowListenerInvoker(request *model.ShowListenerRequest) *ShowListenerInvoker {
+	requestDef := GenReqDefForShowListener()
+	return &ShowListenerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLoadBalancer 查询负载均衡器详情
 //
 // 查询负载均衡器详情。
 //
@@ -776,7 +1046,13 @@ func (c *ElbClient) ShowLoadBalancer(request *model.ShowLoadBalancerRequest) (*m
 	}
 }
 
-// 查询负载均衡器状态树
+// ShowLoadBalancerInvoker 查询负载均衡器详情
+func (c *ElbClient) ShowLoadBalancerInvoker(request *model.ShowLoadBalancerRequest) *ShowLoadBalancerInvoker {
+	requestDef := GenReqDefForShowLoadBalancer()
+	return &ShowLoadBalancerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLoadBalancerStatus 查询负载均衡器状态树
 //
 // 查询负载均衡器状态树，包括负载均衡器及其关联的子资源的状态信息。
 //
@@ -794,7 +1070,13 @@ func (c *ElbClient) ShowLoadBalancerStatus(request *model.ShowLoadBalancerStatus
 	}
 }
 
-// 云日志配置详情
+// ShowLoadBalancerStatusInvoker 查询负载均衡器状态树
+func (c *ElbClient) ShowLoadBalancerStatusInvoker(request *model.ShowLoadBalancerStatusRequest) *ShowLoadBalancerStatusInvoker {
+	requestDef := GenReqDefForShowLoadBalancerStatus()
+	return &ShowLoadBalancerStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLogtank 云日志配置详情
 //
 // 云日志详情。
 //
@@ -810,7 +1092,13 @@ func (c *ElbClient) ShowLogtank(request *model.ShowLogtankRequest) (*model.ShowL
 	}
 }
 
-// 后端服务器详情
+// ShowLogtankInvoker 云日志配置详情
+func (c *ElbClient) ShowLogtankInvoker(request *model.ShowLogtankRequest) *ShowLogtankInvoker {
+	requestDef := GenReqDefForShowLogtank()
+	return &ShowLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMember 后端服务器详情
 //
 // 后端服务器详情。
 //
@@ -826,7 +1114,13 @@ func (c *ElbClient) ShowMember(request *model.ShowMemberRequest) (*model.ShowMem
 	}
 }
 
-// 查询后端服务器组详情
+// ShowMemberInvoker 后端服务器详情
+func (c *ElbClient) ShowMemberInvoker(request *model.ShowMemberRequest) *ShowMemberInvoker {
+	requestDef := GenReqDefForShowMember()
+	return &ShowMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPool 查询后端服务器组详情
 //
 // 后端服务器组详情。
 //
@@ -842,7 +1136,13 @@ func (c *ElbClient) ShowPool(request *model.ShowPoolRequest) (*model.ShowPoolRes
 	}
 }
 
-// 查询配额
+// ShowPoolInvoker 查询后端服务器组详情
+func (c *ElbClient) ShowPoolInvoker(request *model.ShowPoolRequest) *ShowPoolInvoker {
+	requestDef := GenReqDefForShowPool()
+	return &ShowPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuota 查询配额
 //
 // 查询指定项目中负载均衡相关的各类资源的当前配额。
 //
@@ -858,7 +1158,13 @@ func (c *ElbClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuota
 	}
 }
 
-// 查询自定义安全策略详情
+// ShowQuotaInvoker 查询配额
+func (c *ElbClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuotaInvoker {
+	requestDef := GenReqDefForShowQuota()
+	return &ShowQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecurityPolicy 查询自定义安全策略详情
 //
 // 查询自定义安全策略详情。
 //
@@ -874,7 +1180,13 @@ func (c *ElbClient) ShowSecurityPolicy(request *model.ShowSecurityPolicyRequest)
 	}
 }
 
-// 更新证书
+// ShowSecurityPolicyInvoker 查询自定义安全策略详情
+func (c *ElbClient) ShowSecurityPolicyInvoker(request *model.ShowSecurityPolicyRequest) *ShowSecurityPolicyInvoker {
+	requestDef := GenReqDefForShowSecurityPolicy()
+	return &ShowSecurityPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCertificate 更新证书
 //
 // 更新证书。
 //
@@ -890,7 +1202,13 @@ func (c *ElbClient) UpdateCertificate(request *model.UpdateCertificateRequest) (
 	}
 }
 
-// 更新健康检查
+// UpdateCertificateInvoker 更新证书
+func (c *ElbClient) UpdateCertificateInvoker(request *model.UpdateCertificateRequest) *UpdateCertificateInvoker {
+	requestDef := GenReqDefForUpdateCertificate()
+	return &UpdateCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHealthMonitor 更新健康检查
 //
 // 更新健康检查。
 //
@@ -906,7 +1224,13 @@ func (c *ElbClient) UpdateHealthMonitor(request *model.UpdateHealthMonitorReques
 	}
 }
 
-// 更新转发策略
+// UpdateHealthMonitorInvoker 更新健康检查
+func (c *ElbClient) UpdateHealthMonitorInvoker(request *model.UpdateHealthMonitorRequest) *UpdateHealthMonitorInvoker {
+	requestDef := GenReqDefForUpdateHealthMonitor()
+	return &UpdateHealthMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateL7Policy 更新转发策略
 //
 // 更新七层转发策略。
 //
@@ -922,7 +1246,13 @@ func (c *ElbClient) UpdateL7Policy(request *model.UpdateL7PolicyRequest) (*model
 	}
 }
 
-// 更新转发规则
+// UpdateL7PolicyInvoker 更新转发策略
+func (c *ElbClient) UpdateL7PolicyInvoker(request *model.UpdateL7PolicyRequest) *UpdateL7PolicyInvoker {
+	requestDef := GenReqDefForUpdateL7Policy()
+	return &UpdateL7PolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateL7Rule 更新转发规则
 //
 // 更新七层转发规则。
 //
@@ -938,7 +1268,13 @@ func (c *ElbClient) UpdateL7Rule(request *model.UpdateL7RuleRequest) (*model.Upd
 	}
 }
 
-// 更新监听器
+// UpdateL7RuleInvoker 更新转发规则
+func (c *ElbClient) UpdateL7RuleInvoker(request *model.UpdateL7RuleRequest) *UpdateL7RuleInvoker {
+	requestDef := GenReqDefForUpdateL7Rule()
+	return &UpdateL7RuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateListener 更新监听器
 //
 // 更新监听器。
 //
@@ -954,7 +1290,13 @@ func (c *ElbClient) UpdateListener(request *model.UpdateListenerRequest) (*model
 	}
 }
 
-// 更新负载均衡器
+// UpdateListenerInvoker 更新监听器
+func (c *ElbClient) UpdateListenerInvoker(request *model.UpdateListenerRequest) *UpdateListenerInvoker {
+	requestDef := GenReqDefForUpdateListener()
+	return &UpdateListenerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLoadBalancer 更新负载均衡器
 //
 // 更新负载均衡器。
 //
@@ -970,7 +1312,13 @@ func (c *ElbClient) UpdateLoadBalancer(request *model.UpdateLoadBalancerRequest)
 	}
 }
 
-// 更新云日志
+// UpdateLoadBalancerInvoker 更新负载均衡器
+func (c *ElbClient) UpdateLoadBalancerInvoker(request *model.UpdateLoadBalancerRequest) *UpdateLoadBalancerInvoker {
+	requestDef := GenReqDefForUpdateLoadBalancer()
+	return &UpdateLoadBalancerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLogtank 更新云日志
 //
 // 更新云日志
 //
@@ -986,7 +1334,13 @@ func (c *ElbClient) UpdateLogtank(request *model.UpdateLogtankRequest) (*model.U
 	}
 }
 
-// 更新后端服务器
+// UpdateLogtankInvoker 更新云日志
+func (c *ElbClient) UpdateLogtankInvoker(request *model.UpdateLogtankRequest) *UpdateLogtankInvoker {
+	requestDef := GenReqDefForUpdateLogtank()
+	return &UpdateLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMember 更新后端服务器
 //
 // 更新后端服务器。
 //
@@ -1002,7 +1356,13 @@ func (c *ElbClient) UpdateMember(request *model.UpdateMemberRequest) (*model.Upd
 	}
 }
 
-// 更新后端服务器组
+// UpdateMemberInvoker 更新后端服务器
+func (c *ElbClient) UpdateMemberInvoker(request *model.UpdateMemberRequest) *UpdateMemberInvoker {
+	requestDef := GenReqDefForUpdateMember()
+	return &UpdateMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePool 更新后端服务器组
 //
 // 更新后端服务器组。
 //
@@ -1018,7 +1378,13 @@ func (c *ElbClient) UpdatePool(request *model.UpdatePoolRequest) (*model.UpdateP
 	}
 }
 
-// 更新自定义安全策略
+// UpdatePoolInvoker 更新后端服务器组
+func (c *ElbClient) UpdatePoolInvoker(request *model.UpdatePoolRequest) *UpdatePoolInvoker {
+	requestDef := GenReqDefForUpdatePool()
+	return &UpdatePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSecurityPolicy 更新自定义安全策略
 //
 // 更新自定义安全策略。
 //
@@ -1034,7 +1400,13 @@ func (c *ElbClient) UpdateSecurityPolicy(request *model.UpdateSecurityPolicyRequ
 	}
 }
 
-// 查询API版本列表信息
+// UpdateSecurityPolicyInvoker 更新自定义安全策略
+func (c *ElbClient) UpdateSecurityPolicyInvoker(request *model.UpdateSecurityPolicyRequest) *UpdateSecurityPolicyInvoker {
+	requestDef := GenReqDefForUpdateSecurityPolicy()
+	return &UpdateSecurityPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiVersions 查询API版本列表信息
 //
 // 返回ELB当前所有可用的API版本。
 //
@@ -1050,7 +1422,13 @@ func (c *ElbClient) ListApiVersions(request *model.ListApiVersionsRequest) (*mod
 	}
 }
 
-// 删除IP地址组的IP列表项
+// ListApiVersionsInvoker 查询API版本列表信息
+func (c *ElbClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest) *ListApiVersionsInvoker {
+	requestDef := GenReqDefForListApiVersions()
+	return &ListApiVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteIpList 删除IP地址组的IP列表项
 //
 // 批量删除IP地址组的IP列表项。
 //
@@ -1066,7 +1444,13 @@ func (c *ElbClient) BatchDeleteIpList(request *model.BatchDeleteIpListRequest) (
 	}
 }
 
-// 计算预占IP数
+// BatchDeleteIpListInvoker 删除IP地址组的IP列表项
+func (c *ElbClient) BatchDeleteIpListInvoker(request *model.BatchDeleteIpListRequest) *BatchDeleteIpListInvoker {
+	requestDef := GenReqDefForBatchDeleteIpList()
+	return &BatchDeleteIpListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountPreoccupyIpNum 计算预占IP数
 //
 // 计算以下几种场景的预占用IP数量：
 // - 计算创建LB的第一个七层监听器后总占用IP数量：传入loadbalancer_id、l7_flavor_id为空、ip_target_enable不传或为false。
@@ -1086,7 +1470,13 @@ func (c *ElbClient) CountPreoccupyIpNum(request *model.CountPreoccupyIpNumReques
 	}
 }
 
-// 创建IP地址组
+// CountPreoccupyIpNumInvoker 计算预占IP数
+func (c *ElbClient) CountPreoccupyIpNumInvoker(request *model.CountPreoccupyIpNumRequest) *CountPreoccupyIpNumInvoker {
+	requestDef := GenReqDefForCountPreoccupyIpNum()
+	return &CountPreoccupyIpNumInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateIpGroup 创建IP地址组
 //
 // 创建IP地址组。输入的ip可为ip地址或者CIDR子网，支持IPV4和IPV6。需要注意，0.0.0.0与0.0.0.0/32视为重复，0:0:0:0:0:0:0:1与::1与::1/128视为重复，会只保留其中一个写入。
 // [不支持IPv6，请勿传入IPv6地址。](tag:dt,dt_test)
@@ -1103,7 +1493,13 @@ func (c *ElbClient) CreateIpGroup(request *model.CreateIpGroupRequest) (*model.C
 	}
 }
 
-// 删除IP地址组
+// CreateIpGroupInvoker 创建IP地址组
+func (c *ElbClient) CreateIpGroupInvoker(request *model.CreateIpGroupRequest) *CreateIpGroupInvoker {
+	requestDef := GenReqDefForCreateIpGroup()
+	return &CreateIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteIpGroup 删除IP地址组
 //
 // 删除ip地址组。
 //
@@ -1119,7 +1515,13 @@ func (c *ElbClient) DeleteIpGroup(request *model.DeleteIpGroupRequest) (*model.D
 	}
 }
 
-// 查询IP地址组列表
+// DeleteIpGroupInvoker 删除IP地址组
+func (c *ElbClient) DeleteIpGroupInvoker(request *model.DeleteIpGroupRequest) *DeleteIpGroupInvoker {
+	requestDef := GenReqDefForDeleteIpGroup()
+	return &DeleteIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIpGroups 查询IP地址组列表
 //
 // 查询IP地址组列表。
 //
@@ -1135,7 +1537,13 @@ func (c *ElbClient) ListIpGroups(request *model.ListIpGroupsRequest) (*model.Lis
 	}
 }
 
-// 查询IP地址组详情
+// ListIpGroupsInvoker 查询IP地址组列表
+func (c *ElbClient) ListIpGroupsInvoker(request *model.ListIpGroupsRequest) *ListIpGroupsInvoker {
+	requestDef := GenReqDefForListIpGroups()
+	return &ListIpGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIpGroup 查询IP地址组详情
 //
 // 获取IP地址组详情。
 //
@@ -1151,7 +1559,13 @@ func (c *ElbClient) ShowIpGroup(request *model.ShowIpGroupRequest) (*model.ShowI
 	}
 }
 
-// 更新IP地址组
+// ShowIpGroupInvoker 查询IP地址组详情
+func (c *ElbClient) ShowIpGroupInvoker(request *model.ShowIpGroupRequest) *ShowIpGroupInvoker {
+	requestDef := GenReqDefForShowIpGroup()
+	return &ShowIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateIpGroup 更新IP地址组
 //
 // 更新IP地址组，只支持全量更新IP。即IP地址组中的ip_list将被全量覆盖，不在请求参数中的IP地址将被移除。输入的ip可为ip地址或者CIDR子网，支持IPV4和IPV6。需要注意，0.0.0.0与0.0.0.0/32视为重复，0:0:0:0:0:0:0:1与::1与::1/128视为重复，会只保留其中一个写入。
 // [不支持IPv6，请勿传入IPv6地址。](tag:dt,dt_test)
@@ -1168,7 +1582,13 @@ func (c *ElbClient) UpdateIpGroup(request *model.UpdateIpGroupRequest) (*model.U
 	}
 }
 
-// 更新IP地址组的IP列表项
+// UpdateIpGroupInvoker 更新IP地址组
+func (c *ElbClient) UpdateIpGroupInvoker(request *model.UpdateIpGroupRequest) *UpdateIpGroupInvoker {
+	requestDef := GenReqDefForUpdateIpGroup()
+	return &UpdateIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateIpList 更新IP地址组的IP列表项
 //
 // 更新IP地址组的IP列表信息。
 //
@@ -1182,4 +1602,10 @@ func (c *ElbClient) UpdateIpList(request *model.UpdateIpListRequest) (*model.Upd
 	} else {
 		return resp.(*model.UpdateIpListResponse), nil
 	}
+}
+
+// UpdateIpListInvoker 更新IP地址组的IP列表项
+func (c *ElbClient) UpdateIpListInvoker(request *model.UpdateIpListRequest) *UpdateIpListInvoker {
+	requestDef := GenReqDefForUpdateIpList()
+	return &UpdateIpListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

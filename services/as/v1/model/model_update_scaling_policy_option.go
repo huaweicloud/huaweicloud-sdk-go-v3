@@ -62,6 +62,10 @@ func GetUpdateScalingPolicyOptionScalingPolicyTypeEnum() UpdateScalingPolicyOpti
 	}
 }
 
+func (c UpdateScalingPolicyOptionScalingPolicyType) Value() string {
+	return c.value
+}
+
 func (c UpdateScalingPolicyOptionScalingPolicyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

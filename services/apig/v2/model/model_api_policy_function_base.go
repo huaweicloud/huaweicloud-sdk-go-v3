@@ -53,6 +53,10 @@ func GetApiPolicyFunctionBaseInvocationTypeEnum() ApiPolicyFunctionBaseInvocatio
 	}
 }
 
+func (c ApiPolicyFunctionBaseInvocationType) Value() string {
+	return c.value
+}
+
 func (c ApiPolicyFunctionBaseInvocationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

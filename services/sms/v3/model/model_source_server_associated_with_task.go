@@ -63,6 +63,10 @@ func GetSourceServerAssociatedWithTaskOsTypeEnum() SourceServerAssociatedWithTas
 	}
 }
 
+func (c SourceServerAssociatedWithTaskOsType) Value() string {
+	return c.value
+}
+
 func (c SourceServerAssociatedWithTaskOsType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -139,6 +143,10 @@ func GetSourceServerAssociatedWithTaskStateEnum() SourceServerAssociatedWithTask
 			value: "finished",
 		},
 	}
+}
+
+func (c SourceServerAssociatedWithTaskState) Value() string {
+	return c.value
 }
 
 func (c SourceServerAssociatedWithTaskState) MarshalJSON() ([]byte, error) {

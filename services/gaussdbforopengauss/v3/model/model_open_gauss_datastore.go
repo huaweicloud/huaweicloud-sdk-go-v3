@@ -44,6 +44,10 @@ func GetOpenGaussDatastoreTypeEnum() OpenGaussDatastoreTypeEnum {
 	}
 }
 
+func (c OpenGaussDatastoreType) Value() string {
+	return c.value
+}
+
 func (c OpenGaussDatastoreType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

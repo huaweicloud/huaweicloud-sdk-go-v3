@@ -52,6 +52,10 @@ func GetNerRequestLangEnum() NerRequestLangEnum {
 	}
 }
 
+func (c NerRequestLang) Value() string {
+	return c.value
+}
+
 func (c NerRequestLang) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

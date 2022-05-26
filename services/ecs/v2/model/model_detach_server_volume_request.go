@@ -51,6 +51,10 @@ func GetDetachServerVolumeRequestDeleteFlagEnum() DetachServerVolumeRequestDelet
 	}
 }
 
+func (c DetachServerVolumeRequestDeleteFlag) Value() string {
+	return c.value
+}
+
 func (c DetachServerVolumeRequestDeleteFlag) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

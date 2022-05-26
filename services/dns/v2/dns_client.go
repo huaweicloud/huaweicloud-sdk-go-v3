@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dns/v2/model"
 )
 
@@ -19,7 +19,7 @@ func DnsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 创建单个自定义线路
+// CreateCustomLine 创建单个自定义线路
 //
 // 创建单个自定义线路
 //
@@ -35,7 +35,13 @@ func (c *DnsClient) CreateCustomLine(request *model.CreateCustomLineRequest) (*m
 	}
 }
 
-// 删除单个自定义线路
+// CreateCustomLineInvoker 创建单个自定义线路
+func (c *DnsClient) CreateCustomLineInvoker(request *model.CreateCustomLineRequest) *CreateCustomLineInvoker {
+	requestDef := GenReqDefForCreateCustomLine()
+	return &CreateCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCustomLine 删除单个自定义线路
 //
 // 删除单个自定义线路
 //
@@ -51,7 +57,13 @@ func (c *DnsClient) DeleteCustomLine(request *model.DeleteCustomLineRequest) (*m
 	}
 }
 
-// 查询所有的云解析服务API版本号
+// DeleteCustomLineInvoker 删除单个自定义线路
+func (c *DnsClient) DeleteCustomLineInvoker(request *model.DeleteCustomLineRequest) *DeleteCustomLineInvoker {
+	requestDef := GenReqDefForDeleteCustomLine()
+	return &DeleteCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiVersions 查询所有的云解析服务API版本号
 //
 // 查询所有的云解析服务API版本号列表
 //
@@ -67,7 +79,13 @@ func (c *DnsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*mod
 	}
 }
 
-// 查询自定义线路
+// ListApiVersionsInvoker 查询所有的云解析服务API版本号
+func (c *DnsClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest) *ListApiVersionsInvoker {
+	requestDef := GenReqDefForListApiVersions()
+	return &ListApiVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCustomLine 查询自定义线路
 //
 // 查询自定义线路
 //
@@ -83,7 +101,13 @@ func (c *DnsClient) ListCustomLine(request *model.ListCustomLineRequest) (*model
 	}
 }
 
-// 查询名称服务器列表
+// ListCustomLineInvoker 查询自定义线路
+func (c *DnsClient) ListCustomLineInvoker(request *model.ListCustomLineRequest) *ListCustomLineInvoker {
+	requestDef := GenReqDefForListCustomLine()
+	return &ListCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNameServers 查询名称服务器列表
 //
 // 查询名称服务器列表
 //
@@ -99,7 +123,13 @@ func (c *DnsClient) ListNameServers(request *model.ListNameServersRequest) (*mod
 	}
 }
 
-// 查询指定的云解析服务API版本号
+// ListNameServersInvoker 查询名称服务器列表
+func (c *DnsClient) ListNameServersInvoker(request *model.ListNameServersRequest) *ListNameServersInvoker {
+	requestDef := GenReqDefForListNameServers()
+	return &ListNameServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowApiInfo 查询指定的云解析服务API版本号
 //
 // 查询指定的云解析服务API版本号
 //
@@ -115,7 +145,13 @@ func (c *DnsClient) ShowApiInfo(request *model.ShowApiInfoRequest) (*model.ShowA
 	}
 }
 
-// 查询租户配额
+// ShowApiInfoInvoker 查询指定的云解析服务API版本号
+func (c *DnsClient) ShowApiInfoInvoker(request *model.ShowApiInfoRequest) *ShowApiInfoInvoker {
+	requestDef := GenReqDefForShowApiInfo()
+	return &ShowApiInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainQuota 查询租户配额
 //
 // 查询单租户在DNS服务下的资源配额，包括公网zone配额、内网zone配额、Record Set配额、PTR Record配额、入站终端节点配额、出站终端节点配额、自定义线路配额、线路分组配额等。
 //
@@ -131,7 +167,13 @@ func (c *DnsClient) ShowDomainQuota(request *model.ShowDomainQuotaRequest) (*mod
 	}
 }
 
-// 更新单个自定义线路
+// ShowDomainQuotaInvoker 查询租户配额
+func (c *DnsClient) ShowDomainQuotaInvoker(request *model.ShowDomainQuotaRequest) *ShowDomainQuotaInvoker {
+	requestDef := GenReqDefForShowDomainQuota()
+	return &ShowDomainQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCustomLine 更新单个自定义线路
 //
 // 更新单个自定义线路
 //
@@ -147,7 +189,13 @@ func (c *DnsClient) UpdateCustomLine(request *model.UpdateCustomLineRequest) (*m
 	}
 }
 
-// 设置弹性IP的PTR记录
+// UpdateCustomLineInvoker 更新单个自定义线路
+func (c *DnsClient) UpdateCustomLineInvoker(request *model.UpdateCustomLineRequest) *UpdateCustomLineInvoker {
+	requestDef := GenReqDefForUpdateCustomLine()
+	return &UpdateCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEipRecordSet 设置弹性IP的PTR记录
 //
 // 设置弹性IP的PTR记录
 //
@@ -163,7 +211,13 @@ func (c *DnsClient) CreateEipRecordSet(request *model.CreateEipRecordSetRequest)
 	}
 }
 
-// 查询租户弹性IP的PTR记录列表
+// CreateEipRecordSetInvoker 设置弹性IP的PTR记录
+func (c *DnsClient) CreateEipRecordSetInvoker(request *model.CreateEipRecordSetRequest) *CreateEipRecordSetInvoker {
+	requestDef := GenReqDefForCreateEipRecordSet()
+	return &CreateEipRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPtrRecords 查询租户弹性IP的PTR记录列表
 //
 // 查询租户弹性IP的PTR记录列表
 //
@@ -179,7 +233,13 @@ func (c *DnsClient) ListPtrRecords(request *model.ListPtrRecordsRequest) (*model
 	}
 }
 
-// 将弹性IP的PTR记录恢复为默认值
+// ListPtrRecordsInvoker 查询租户弹性IP的PTR记录列表
+func (c *DnsClient) ListPtrRecordsInvoker(request *model.ListPtrRecordsRequest) *ListPtrRecordsInvoker {
+	requestDef := GenReqDefForListPtrRecords()
+	return &ListPtrRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestorePtrRecord 将弹性IP的PTR记录恢复为默认值
 //
 // 将弹性IP的PTR记录恢复为默认值
 //
@@ -195,7 +255,13 @@ func (c *DnsClient) RestorePtrRecord(request *model.RestorePtrRecordRequest) (*m
 	}
 }
 
-// 查询单个弹性IP的PTR记录
+// RestorePtrRecordInvoker 将弹性IP的PTR记录恢复为默认值
+func (c *DnsClient) RestorePtrRecordInvoker(request *model.RestorePtrRecordRequest) *RestorePtrRecordInvoker {
+	requestDef := GenReqDefForRestorePtrRecord()
+	return &RestorePtrRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPtrRecordSet 查询单个弹性IP的PTR记录
 //
 // 查询单个弹性IP的PTR记录
 //
@@ -211,7 +277,13 @@ func (c *DnsClient) ShowPtrRecordSet(request *model.ShowPtrRecordSetRequest) (*m
 	}
 }
 
-// 修改弹性IP的PTR记录
+// ShowPtrRecordSetInvoker 查询单个弹性IP的PTR记录
+func (c *DnsClient) ShowPtrRecordSetInvoker(request *model.ShowPtrRecordSetRequest) *ShowPtrRecordSetInvoker {
+	requestDef := GenReqDefForShowPtrRecordSet()
+	return &ShowPtrRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePtrRecord 修改弹性IP的PTR记录
 //
 // 修改弹性IP的PTR记录
 //
@@ -227,7 +299,13 @@ func (c *DnsClient) UpdatePtrRecord(request *model.UpdatePtrRecordRequest) (*mod
 	}
 }
 
-// 创建单个Record Set
+// UpdatePtrRecordInvoker 修改弹性IP的PTR记录
+func (c *DnsClient) UpdatePtrRecordInvoker(request *model.UpdatePtrRecordRequest) *UpdatePtrRecordInvoker {
+	requestDef := GenReqDefForUpdatePtrRecord()
+	return &UpdatePtrRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRecordSet 创建单个Record Set
 //
 // 创建单个Record Set
 //
@@ -243,7 +321,13 @@ func (c *DnsClient) CreateRecordSet(request *model.CreateRecordSetRequest) (*mod
 	}
 }
 
-// 创建单个Record Set，仅适用于公网DNS
+// CreateRecordSetInvoker 创建单个Record Set
+func (c *DnsClient) CreateRecordSetInvoker(request *model.CreateRecordSetRequest) *CreateRecordSetInvoker {
+	requestDef := GenReqDefForCreateRecordSet()
+	return &CreateRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRecordSetWithLine 创建单个Record Set，仅适用于公网DNS
 //
 // 创建单个Record Set，仅适用于公网DNS
 //
@@ -259,7 +343,13 @@ func (c *DnsClient) CreateRecordSetWithLine(request *model.CreateRecordSetWithLi
 	}
 }
 
-// 删除单个Record Set
+// CreateRecordSetWithLineInvoker 创建单个Record Set，仅适用于公网DNS
+func (c *DnsClient) CreateRecordSetWithLineInvoker(request *model.CreateRecordSetWithLineRequest) *CreateRecordSetWithLineInvoker {
+	requestDef := GenReqDefForCreateRecordSetWithLine()
+	return &CreateRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRecordSet 删除单个Record Set
 //
 // 删除单个Record Set
 //
@@ -275,7 +365,13 @@ func (c *DnsClient) DeleteRecordSet(request *model.DeleteRecordSetRequest) (*mod
 	}
 }
 
-// 删除单个Record Set
+// DeleteRecordSetInvoker 删除单个Record Set
+func (c *DnsClient) DeleteRecordSetInvoker(request *model.DeleteRecordSetRequest) *DeleteRecordSetInvoker {
+	requestDef := GenReqDefForDeleteRecordSet()
+	return &DeleteRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRecordSets 删除单个Record Set
 //
 // 删除单个Record Set
 //
@@ -291,7 +387,13 @@ func (c *DnsClient) DeleteRecordSets(request *model.DeleteRecordSetsRequest) (*m
 	}
 }
 
-// 查询租户Record Set资源列表
+// DeleteRecordSetsInvoker 删除单个Record Set
+func (c *DnsClient) DeleteRecordSetsInvoker(request *model.DeleteRecordSetsRequest) *DeleteRecordSetsInvoker {
+	requestDef := GenReqDefForDeleteRecordSets()
+	return &DeleteRecordSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRecordSets 查询租户Record Set资源列表
 //
 // 查询租户Record Set资源列表
 //
@@ -307,7 +409,13 @@ func (c *DnsClient) ListRecordSets(request *model.ListRecordSetsRequest) (*model
 	}
 }
 
-// 查询单个Zone下Record Set列表
+// ListRecordSetsInvoker 查询租户Record Set资源列表
+func (c *DnsClient) ListRecordSetsInvoker(request *model.ListRecordSetsRequest) *ListRecordSetsInvoker {
+	requestDef := GenReqDefForListRecordSets()
+	return &ListRecordSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRecordSetsByZone 查询单个Zone下Record Set列表
 //
 // 查询单个Zone下Record Set列表
 //
@@ -323,7 +431,13 @@ func (c *DnsClient) ListRecordSetsByZone(request *model.ListRecordSetsByZoneRequ
 	}
 }
 
-// 查询租户Record Set资源列表
+// ListRecordSetsByZoneInvoker 查询单个Zone下Record Set列表
+func (c *DnsClient) ListRecordSetsByZoneInvoker(request *model.ListRecordSetsByZoneRequest) *ListRecordSetsByZoneInvoker {
+	requestDef := GenReqDefForListRecordSetsByZone()
+	return &ListRecordSetsByZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRecordSetsWithLine 查询租户Record Set资源列表
 //
 // 查询租户Record Set资源列表
 //
@@ -339,7 +453,13 @@ func (c *DnsClient) ListRecordSetsWithLine(request *model.ListRecordSetsWithLine
 	}
 }
 
-// 设置Record Set状态
+// ListRecordSetsWithLineInvoker 查询租户Record Set资源列表
+func (c *DnsClient) ListRecordSetsWithLineInvoker(request *model.ListRecordSetsWithLineRequest) *ListRecordSetsWithLineInvoker {
+	requestDef := GenReqDefForListRecordSetsWithLine()
+	return &ListRecordSetsWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetRecordSetsStatus 设置Record Set状态
 //
 // 设置Record Set状态
 //
@@ -355,7 +475,13 @@ func (c *DnsClient) SetRecordSetsStatus(request *model.SetRecordSetsStatusReques
 	}
 }
 
-// 查询单个Record Set
+// SetRecordSetsStatusInvoker 设置Record Set状态
+func (c *DnsClient) SetRecordSetsStatusInvoker(request *model.SetRecordSetsStatusRequest) *SetRecordSetsStatusInvoker {
+	requestDef := GenReqDefForSetRecordSetsStatus()
+	return &SetRecordSetsStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRecordSet 查询单个Record Set
 //
 // 查询单个Record Set
 //
@@ -371,7 +497,13 @@ func (c *DnsClient) ShowRecordSet(request *model.ShowRecordSetRequest) (*model.S
 	}
 }
 
-// 查询单个Zone下Record Set列表
+// ShowRecordSetInvoker 查询单个Record Set
+func (c *DnsClient) ShowRecordSetInvoker(request *model.ShowRecordSetRequest) *ShowRecordSetInvoker {
+	requestDef := GenReqDefForShowRecordSet()
+	return &ShowRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRecordSetByZone 查询单个Zone下Record Set列表
 //
 // 查询单个Zone下Record Set列表
 //
@@ -387,7 +519,13 @@ func (c *DnsClient) ShowRecordSetByZone(request *model.ShowRecordSetByZoneReques
 	}
 }
 
-// 查询单个Record Set，仅适用于公网DNS
+// ShowRecordSetByZoneInvoker 查询单个Zone下Record Set列表
+func (c *DnsClient) ShowRecordSetByZoneInvoker(request *model.ShowRecordSetByZoneRequest) *ShowRecordSetByZoneInvoker {
+	requestDef := GenReqDefForShowRecordSetByZone()
+	return &ShowRecordSetByZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRecordSetWithLine 查询单个Record Set，仅适用于公网DNS
 //
 // 查询单个Record Set，仅适用于公网DNS
 //
@@ -403,7 +541,13 @@ func (c *DnsClient) ShowRecordSetWithLine(request *model.ShowRecordSetWithLineRe
 	}
 }
 
-// 修改单个Record Set
+// ShowRecordSetWithLineInvoker 查询单个Record Set，仅适用于公网DNS
+func (c *DnsClient) ShowRecordSetWithLineInvoker(request *model.ShowRecordSetWithLineRequest) *ShowRecordSetWithLineInvoker {
+	requestDef := GenReqDefForShowRecordSetWithLine()
+	return &ShowRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRecordSet 修改单个Record Set
 //
 // 修改单个Record Set
 //
@@ -419,7 +563,13 @@ func (c *DnsClient) UpdateRecordSet(request *model.UpdateRecordSetRequest) (*mod
 	}
 }
 
-// 修改单个Record Set
+// UpdateRecordSetInvoker 修改单个Record Set
+func (c *DnsClient) UpdateRecordSetInvoker(request *model.UpdateRecordSetRequest) *UpdateRecordSetInvoker {
+	requestDef := GenReqDefForUpdateRecordSet()
+	return &UpdateRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRecordSets 修改单个Record Set
 //
 // 修改单个Record Set
 //
@@ -435,7 +585,13 @@ func (c *DnsClient) UpdateRecordSets(request *model.UpdateRecordSetsRequest) (*m
 	}
 }
 
-// 为指定实例批量添加或删除标签
+// UpdateRecordSetsInvoker 修改单个Record Set
+func (c *DnsClient) UpdateRecordSetsInvoker(request *model.UpdateRecordSetsRequest) *UpdateRecordSetsInvoker {
+	requestDef := GenReqDefForUpdateRecordSets()
+	return &UpdateRecordSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateTag 为指定实例批量添加或删除标签
 //
 // 为指定实例批量添加或删除标签
 //
@@ -451,7 +607,13 @@ func (c *DnsClient) BatchCreateTag(request *model.BatchCreateTagRequest) (*model
 	}
 }
 
-// 为指定实例添加标签
+// BatchCreateTagInvoker 为指定实例批量添加或删除标签
+func (c *DnsClient) BatchCreateTagInvoker(request *model.BatchCreateTagRequest) *BatchCreateTagInvoker {
+	requestDef := GenReqDefForBatchCreateTag()
+	return &BatchCreateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTag 为指定实例添加标签
 //
 // 为指定实例添加标签
 //
@@ -467,7 +629,13 @@ func (c *DnsClient) CreateTag(request *model.CreateTagRequest) (*model.CreateTag
 	}
 }
 
-// 删除资源标签
+// CreateTagInvoker 为指定实例添加标签
+func (c *DnsClient) CreateTagInvoker(request *model.CreateTagRequest) *CreateTagInvoker {
+	requestDef := GenReqDefForCreateTag()
+	return &CreateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTag 删除资源标签
 //
 // 删除资源标签
 //
@@ -483,7 +651,13 @@ func (c *DnsClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTag
 	}
 }
 
-// 使用标签查询资源实例
+// DeleteTagInvoker 删除资源标签
+func (c *DnsClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTagInvoker {
+	requestDef := GenReqDefForDeleteTag()
+	return &DeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTag 使用标签查询资源实例
 //
 // 使用标签查询资源实例
 //
@@ -499,7 +673,13 @@ func (c *DnsClient) ListTag(request *model.ListTagRequest) (*model.ListTagRespon
 	}
 }
 
-// 查询指定实例类型的所有标签集合
+// ListTagInvoker 使用标签查询资源实例
+func (c *DnsClient) ListTagInvoker(request *model.ListTagRequest) *ListTagInvoker {
+	requestDef := GenReqDefForListTag()
+	return &ListTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTags 查询指定实例类型的所有标签集合
 //
 // 查询指定实例类型的所有标签集合
 //
@@ -515,7 +695,13 @@ func (c *DnsClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsRes
 	}
 }
 
-// 查询指定实例的标签信息
+// ListTagsInvoker 查询指定实例类型的所有标签集合
+func (c *DnsClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInvoker {
+	requestDef := GenReqDefForListTags()
+	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResourceTag 查询指定实例的标签信息
 //
 // 查询指定实例的标签信息
 //
@@ -531,7 +717,13 @@ func (c *DnsClient) ShowResourceTag(request *model.ShowResourceTagRequest) (*mod
 	}
 }
 
-// 在内网Zone上关联VPC
+// ShowResourceTagInvoker 查询指定实例的标签信息
+func (c *DnsClient) ShowResourceTagInvoker(request *model.ShowResourceTagRequest) *ShowResourceTagInvoker {
+	requestDef := GenReqDefForShowResourceTag()
+	return &ShowResourceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateRouter 在内网Zone上关联VPC
 //
 // 在内网Zone上关联VPC
 //
@@ -547,7 +739,13 @@ func (c *DnsClient) AssociateRouter(request *model.AssociateRouterRequest) (*mod
 	}
 }
 
-// 创建单个内网Zone
+// AssociateRouterInvoker 在内网Zone上关联VPC
+func (c *DnsClient) AssociateRouterInvoker(request *model.AssociateRouterRequest) *AssociateRouterInvoker {
+	requestDef := GenReqDefForAssociateRouter()
+	return &AssociateRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePrivateZone 创建单个内网Zone
 //
 // 创建单个内网Zone
 //
@@ -563,7 +761,13 @@ func (c *DnsClient) CreatePrivateZone(request *model.CreatePrivateZoneRequest) (
 	}
 }
 
-// 创建单个公网Zone
+// CreatePrivateZoneInvoker 创建单个内网Zone
+func (c *DnsClient) CreatePrivateZoneInvoker(request *model.CreatePrivateZoneRequest) *CreatePrivateZoneInvoker {
+	requestDef := GenReqDefForCreatePrivateZone()
+	return &CreatePrivateZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePublicZone 创建单个公网Zone
 //
 // 创建单个公网Zone
 //
@@ -579,7 +783,13 @@ func (c *DnsClient) CreatePublicZone(request *model.CreatePublicZoneRequest) (*m
 	}
 }
 
-// 删除单个内网Zone
+// CreatePublicZoneInvoker 创建单个公网Zone
+func (c *DnsClient) CreatePublicZoneInvoker(request *model.CreatePublicZoneRequest) *CreatePublicZoneInvoker {
+	requestDef := GenReqDefForCreatePublicZone()
+	return &CreatePublicZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePrivateZone 删除单个内网Zone
 //
 // 删除单个内网Zone
 //
@@ -595,7 +805,13 @@ func (c *DnsClient) DeletePrivateZone(request *model.DeletePrivateZoneRequest) (
 	}
 }
 
-// 删除单个公网Zone
+// DeletePrivateZoneInvoker 删除单个内网Zone
+func (c *DnsClient) DeletePrivateZoneInvoker(request *model.DeletePrivateZoneRequest) *DeletePrivateZoneInvoker {
+	requestDef := GenReqDefForDeletePrivateZone()
+	return &DeletePrivateZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePublicZone 删除单个公网Zone
 //
 // 删除单个公网Zone
 //
@@ -611,7 +827,13 @@ func (c *DnsClient) DeletePublicZone(request *model.DeletePublicZoneRequest) (*m
 	}
 }
 
-// 在Private Zone上解关联VPC
+// DeletePublicZoneInvoker 删除单个公网Zone
+func (c *DnsClient) DeletePublicZoneInvoker(request *model.DeletePublicZoneRequest) *DeletePublicZoneInvoker {
+	requestDef := GenReqDefForDeletePublicZone()
+	return &DeletePublicZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateRouter 在Private Zone上解关联VPC
 //
 // 在Private Zone上解关联VPC
 //
@@ -627,7 +849,13 @@ func (c *DnsClient) DisassociateRouter(request *model.DisassociateRouterRequest)
 	}
 }
 
-// 查询内网Zone的列表
+// DisassociateRouterInvoker 在Private Zone上解关联VPC
+func (c *DnsClient) DisassociateRouterInvoker(request *model.DisassociateRouterRequest) *DisassociateRouterInvoker {
+	requestDef := GenReqDefForDisassociateRouter()
+	return &DisassociateRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPrivateZones 查询内网Zone的列表
 //
 // 查询内网Zone的列表
 //
@@ -643,7 +871,13 @@ func (c *DnsClient) ListPrivateZones(request *model.ListPrivateZonesRequest) (*m
 	}
 }
 
-// 查询公网Zone的列表
+// ListPrivateZonesInvoker 查询内网Zone的列表
+func (c *DnsClient) ListPrivateZonesInvoker(request *model.ListPrivateZonesRequest) *ListPrivateZonesInvoker {
+	requestDef := GenReqDefForListPrivateZones()
+	return &ListPrivateZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPublicZones 查询公网Zone的列表
 //
 // 查询公网Zone的列表
 //
@@ -659,7 +893,13 @@ func (c *DnsClient) ListPublicZones(request *model.ListPublicZonesRequest) (*mod
 	}
 }
 
-// 查询单个内网Zone
+// ListPublicZonesInvoker 查询公网Zone的列表
+func (c *DnsClient) ListPublicZonesInvoker(request *model.ListPublicZonesRequest) *ListPublicZonesInvoker {
+	requestDef := GenReqDefForListPublicZones()
+	return &ListPublicZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPrivateZone 查询单个内网Zone
 //
 // 查询单个内网Zone
 //
@@ -675,7 +915,13 @@ func (c *DnsClient) ShowPrivateZone(request *model.ShowPrivateZoneRequest) (*mod
 	}
 }
 
-// 查询内网Zone的名称服务器
+// ShowPrivateZoneInvoker 查询单个内网Zone
+func (c *DnsClient) ShowPrivateZoneInvoker(request *model.ShowPrivateZoneRequest) *ShowPrivateZoneInvoker {
+	requestDef := GenReqDefForShowPrivateZone()
+	return &ShowPrivateZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPrivateZoneNameServer 查询内网Zone的名称服务器
 //
 // 查询内网Zone的名称服务器
 //
@@ -691,7 +937,13 @@ func (c *DnsClient) ShowPrivateZoneNameServer(request *model.ShowPrivateZoneName
 	}
 }
 
-// 查询单个公网Zone
+// ShowPrivateZoneNameServerInvoker 查询内网Zone的名称服务器
+func (c *DnsClient) ShowPrivateZoneNameServerInvoker(request *model.ShowPrivateZoneNameServerRequest) *ShowPrivateZoneNameServerInvoker {
+	requestDef := GenReqDefForShowPrivateZoneNameServer()
+	return &ShowPrivateZoneNameServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPublicZone 查询单个公网Zone
 //
 // 查询单个公网Zone
 //
@@ -707,7 +959,13 @@ func (c *DnsClient) ShowPublicZone(request *model.ShowPublicZoneRequest) (*model
 	}
 }
 
-// 查询单个公网Zone的名称服务器
+// ShowPublicZoneInvoker 查询单个公网Zone
+func (c *DnsClient) ShowPublicZoneInvoker(request *model.ShowPublicZoneRequest) *ShowPublicZoneInvoker {
+	requestDef := GenReqDefForShowPublicZone()
+	return &ShowPublicZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPublicZoneNameServer 查询单个公网Zone的名称服务器
 //
 // 查询单个公网Zone的名称服务器
 //
@@ -723,7 +981,13 @@ func (c *DnsClient) ShowPublicZoneNameServer(request *model.ShowPublicZoneNameSe
 	}
 }
 
-// 修改单个Zone
+// ShowPublicZoneNameServerInvoker 查询单个公网Zone的名称服务器
+func (c *DnsClient) ShowPublicZoneNameServerInvoker(request *model.ShowPublicZoneNameServerRequest) *ShowPublicZoneNameServerInvoker {
+	requestDef := GenReqDefForShowPublicZoneNameServer()
+	return &ShowPublicZoneNameServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePrivateZone 修改单个Zone
 //
 // 修改单个Zone
 //
@@ -739,7 +1003,13 @@ func (c *DnsClient) UpdatePrivateZone(request *model.UpdatePrivateZoneRequest) (
 	}
 }
 
-// 修改单个Zone
+// UpdatePrivateZoneInvoker 修改单个Zone
+func (c *DnsClient) UpdatePrivateZoneInvoker(request *model.UpdatePrivateZoneRequest) *UpdatePrivateZoneInvoker {
+	requestDef := GenReqDefForUpdatePrivateZone()
+	return &UpdatePrivateZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePublicZone 修改单个Zone
 //
 // 修改单个Zone
 //
@@ -755,7 +1025,13 @@ func (c *DnsClient) UpdatePublicZone(request *model.UpdatePublicZoneRequest) (*m
 	}
 }
 
-// 设置单个公网Zone状态，支持暂停、启用Zone
+// UpdatePublicZoneInvoker 修改单个Zone
+func (c *DnsClient) UpdatePublicZoneInvoker(request *model.UpdatePublicZoneRequest) *UpdatePublicZoneInvoker {
+	requestDef := GenReqDefForUpdatePublicZone()
+	return &UpdatePublicZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePublicZoneStatus 设置单个公网Zone状态，支持暂停、启用Zone
 //
 // 设置单个公网Zone状态，支持暂停、启用Zone
 //
@@ -769,4 +1045,10 @@ func (c *DnsClient) UpdatePublicZoneStatus(request *model.UpdatePublicZoneStatus
 	} else {
 		return resp.(*model.UpdatePublicZoneStatusResponse), nil
 	}
+}
+
+// UpdatePublicZoneStatusInvoker 设置单个公网Zone状态，支持暂停、启用Zone
+func (c *DnsClient) UpdatePublicZoneStatusInvoker(request *model.UpdatePublicZoneStatusRequest) *UpdatePublicZoneStatusInvoker {
+	requestDef := GenReqDefForUpdatePublicZoneStatus()
+	return &UpdatePublicZoneStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

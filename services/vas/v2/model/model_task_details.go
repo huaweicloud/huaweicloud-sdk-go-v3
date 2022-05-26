@@ -146,6 +146,10 @@ func GetTaskDetailsStateEnum() TaskDetailsStateEnum {
 	}
 }
 
+func (c TaskDetailsState) Value() string {
+	return c.value
+}
+
 func (c TaskDetailsState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -182,6 +186,10 @@ func GetTaskDetailsTimingStatusEnum() TaskDetailsTimingStatusEnum {
 			value: "INACTIVATED",
 		},
 	}
+}
+
+func (c TaskDetailsTimingStatus) Value() string {
+	return c.value
 }
 
 func (c TaskDetailsTimingStatus) MarshalJSON() ([]byte, error) {

@@ -93,6 +93,10 @@ func GetCreateVolumeOptionVolumeTypeEnum() CreateVolumeOptionVolumeTypeEnum {
 	}
 }
 
+func (c CreateVolumeOptionVolumeType) Value() string {
+	return c.value
+}
+
 func (c CreateVolumeOptionVolumeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

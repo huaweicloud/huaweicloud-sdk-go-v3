@@ -47,6 +47,10 @@ func GetBatchCreateOrDeleteTagReqActionEnum() BatchCreateOrDeleteTagReqActionEnu
 	}
 }
 
+func (c BatchCreateOrDeleteTagReqAction) Value() string {
+	return c.value
+}
+
 func (c BatchCreateOrDeleteTagReqAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

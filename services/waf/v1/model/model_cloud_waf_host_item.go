@@ -78,6 +78,10 @@ func GetCloudWafHostItemPaidTypeEnum() CloudWafHostItemPaidTypeEnum {
 	}
 }
 
+func (c CloudWafHostItemPaidType) Value() string {
+	return c.value
+}
+
 func (c CloudWafHostItemPaidType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

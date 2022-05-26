@@ -97,6 +97,10 @@ func GetShowReplicationParamsReplicationStatusEnum() ShowReplicationParamsReplic
 	}
 }
 
+func (c ShowReplicationParamsReplicationStatus) Value() string {
+	return c.value
+}
+
 func (c ShowReplicationParamsReplicationStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

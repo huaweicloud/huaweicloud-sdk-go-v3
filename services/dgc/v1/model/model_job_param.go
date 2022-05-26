@@ -46,6 +46,10 @@ func GetJobParamParamTypeEnum() JobParamParamTypeEnum {
 	}
 }
 
+func (c JobParamParamType) Value() string {
+	return c.value
+}
+
 func (c JobParamParamType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

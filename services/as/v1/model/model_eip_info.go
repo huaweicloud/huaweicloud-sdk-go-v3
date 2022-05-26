@@ -55,6 +55,10 @@ func GetEipInfoIpTypeEnum() EipInfoIpTypeEnum {
 	}
 }
 
+func (c EipInfoIpType) Value() string {
+	return c.value
+}
+
 func (c EipInfoIpType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

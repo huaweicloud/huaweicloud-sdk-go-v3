@@ -57,6 +57,10 @@ func GetSearchQosParticipantsRequestConfTypeEnum() SearchQosParticipantsRequestC
 	}
 }
 
+func (c SearchQosParticipantsRequestConfType) Value() string {
+	return c.value
+}
+
 func (c SearchQosParticipantsRequestConfType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

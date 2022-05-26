@@ -48,6 +48,10 @@ func GetAddOrRemoveServicePermissionsRequestBodyActionEnum() AddOrRemoveServiceP
 	}
 }
 
+func (c AddOrRemoveServicePermissionsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c AddOrRemoveServicePermissionsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

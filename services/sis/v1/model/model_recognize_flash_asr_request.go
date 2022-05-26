@@ -69,6 +69,10 @@ func GetRecognizeFlashAsrRequestPropertyEnum() RecognizeFlashAsrRequestPropertyE
 	}
 }
 
+func (c RecognizeFlashAsrRequestProperty) Value() string {
+	return c.value
+}
+
 func (c RecognizeFlashAsrRequestProperty) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -119,6 +123,10 @@ func GetRecognizeFlashAsrRequestAudioFormatEnum() RecognizeFlashAsrRequestAudioF
 	}
 }
 
+func (c RecognizeFlashAsrRequestAudioFormat) Value() string {
+	return c.value
+}
+
 func (c RecognizeFlashAsrRequestAudioFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -155,6 +163,10 @@ func GetRecognizeFlashAsrRequestAddPuncEnum() RecognizeFlashAsrRequestAddPuncEnu
 			value: "no",
 		},
 	}
+}
+
+func (c RecognizeFlashAsrRequestAddPunc) Value() string {
+	return c.value
 }
 
 func (c RecognizeFlashAsrRequestAddPunc) MarshalJSON() ([]byte, error) {
@@ -195,6 +207,10 @@ func GetRecognizeFlashAsrRequestDigitNormEnum() RecognizeFlashAsrRequestDigitNor
 	}
 }
 
+func (c RecognizeFlashAsrRequestDigitNorm) Value() string {
+	return c.value
+}
+
 func (c RecognizeFlashAsrRequestDigitNorm) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -233,6 +249,10 @@ func GetRecognizeFlashAsrRequestNeedWordInfoEnum() RecognizeFlashAsrRequestNeedW
 	}
 }
 
+func (c RecognizeFlashAsrRequestNeedWordInfo) Value() string {
+	return c.value
+}
+
 func (c RecognizeFlashAsrRequestNeedWordInfo) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -269,6 +289,10 @@ func GetRecognizeFlashAsrRequestFirstChannelOnlyEnum() RecognizeFlashAsrRequestF
 			value: "no",
 		},
 	}
+}
+
+func (c RecognizeFlashAsrRequestFirstChannelOnly) Value() string {
+	return c.value
 }
 
 func (c RecognizeFlashAsrRequestFirstChannelOnly) MarshalJSON() ([]byte, error) {

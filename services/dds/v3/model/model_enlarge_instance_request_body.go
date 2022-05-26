@@ -52,6 +52,10 @@ func GetEnlargeInstanceRequestBodyTypeEnum() EnlargeInstanceRequestBodyTypeEnum 
 	}
 }
 
+func (c EnlargeInstanceRequestBodyType) Value() string {
+	return c.value
+}
+
 func (c EnlargeInstanceRequestBodyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

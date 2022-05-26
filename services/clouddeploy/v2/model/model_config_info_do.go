@@ -67,6 +67,10 @@ func GetConfigInfoDoTypeEnum() ConfigInfoDoTypeEnum {
 	}
 }
 
+func (c ConfigInfoDoType) Value() string {
+	return c.value
+}
+
 func (c ConfigInfoDoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -102,6 +106,10 @@ func GetConfigInfoDoStaticStatusEnum() ConfigInfoDoStaticStatusEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c ConfigInfoDoStaticStatus) Value() int32 {
+	return c.value
 }
 
 func (c ConfigInfoDoStaticStatus) MarshalJSON() ([]byte, error) {

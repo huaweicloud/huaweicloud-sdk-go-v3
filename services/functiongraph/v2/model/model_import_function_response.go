@@ -189,6 +189,10 @@ func GetImportFunctionResponseRuntimeEnum() ImportFunctionResponseRuntimeEnum {
 	}
 }
 
+func (c ImportFunctionResponseRuntime) Value() string {
+	return c.value
+}
+
 func (c ImportFunctionResponseRuntime) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -233,6 +237,10 @@ func GetImportFunctionResponseCodeTypeEnum() ImportFunctionResponseCodeTypeEnum 
 			value: "jar",
 		},
 	}
+}
+
+func (c ImportFunctionResponseCodeType) Value() string {
+	return c.value
 }
 
 func (c ImportFunctionResponseCodeType) MarshalJSON() ([]byte, error) {

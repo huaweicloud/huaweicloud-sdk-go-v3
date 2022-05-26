@@ -66,6 +66,10 @@ func GetCreateRecordRuleResponseRecordFormatsEnum() CreateRecordRuleResponseReco
 	}
 }
 
+func (c CreateRecordRuleResponseRecordFormats) Value() string {
+	return c.value
+}
+
 func (c CreateRecordRuleResponseRecordFormats) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -62,6 +62,10 @@ func GetApiPolicyMockRespEffectModeEnum() ApiPolicyMockRespEffectModeEnum {
 	}
 }
 
+func (c ApiPolicyMockRespEffectMode) Value() string {
+	return c.value
+}
+
 func (c ApiPolicyMockRespEffectMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

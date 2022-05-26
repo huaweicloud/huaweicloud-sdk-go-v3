@@ -60,6 +60,10 @@ func GetApiFuncCreateInvocationTypeEnum() ApiFuncCreateInvocationTypeEnum {
 	}
 }
 
+func (c ApiFuncCreateInvocationType) Value() string {
+	return c.value
+}
+
 func (c ApiFuncCreateInvocationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

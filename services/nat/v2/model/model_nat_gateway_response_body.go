@@ -82,6 +82,10 @@ func GetNatGatewayResponseBodySpecEnum() NatGatewayResponseBodySpecEnum {
 	}
 }
 
+func (c NatGatewayResponseBodySpec) Value() string {
+	return c.value
+}
+
 func (c NatGatewayResponseBodySpec) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -130,6 +134,10 @@ func GetNatGatewayResponseBodyStatusEnum() NatGatewayResponseBodyStatusEnum {
 			value: "INACTIVE",
 		},
 	}
+}
+
+func (c NatGatewayResponseBodyStatus) Value() string {
+	return c.value
 }
 
 func (c NatGatewayResponseBodyStatus) MarshalJSON() ([]byte, error) {

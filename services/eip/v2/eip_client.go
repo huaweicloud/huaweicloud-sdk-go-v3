@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/eip/v2/model"
 )
 
@@ -19,7 +19,7 @@ func EipClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 共享带宽插入弹性公网IP
+// AddPublicipsIntoSharedBandwidth 共享带宽插入弹性公网IP
 //
 // 共享带宽插入弹性公网IP。
 //
@@ -35,7 +35,13 @@ func (c *EipClient) AddPublicipsIntoSharedBandwidth(request *model.AddPublicipsI
 	}
 }
 
-// 批量创建共享带宽
+// AddPublicipsIntoSharedBandwidthInvoker 共享带宽插入弹性公网IP
+func (c *EipClient) AddPublicipsIntoSharedBandwidthInvoker(request *model.AddPublicipsIntoSharedBandwidthRequest) *AddPublicipsIntoSharedBandwidthInvoker {
+	requestDef := GenReqDefForAddPublicipsIntoSharedBandwidth()
+	return &AddPublicipsIntoSharedBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateSharedBandwidths 批量创建共享带宽
 //
 // 批量创建共享带宽。
 //
@@ -51,7 +57,13 @@ func (c *EipClient) BatchCreateSharedBandwidths(request *model.BatchCreateShared
 	}
 }
 
-// 创建共享带宽
+// BatchCreateSharedBandwidthsInvoker 批量创建共享带宽
+func (c *EipClient) BatchCreateSharedBandwidthsInvoker(request *model.BatchCreateSharedBandwidthsRequest) *BatchCreateSharedBandwidthsInvoker {
+	requestDef := GenReqDefForBatchCreateSharedBandwidths()
+	return &BatchCreateSharedBandwidthsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSharedBandwidth 创建共享带宽
 //
 // 创建共享带宽。
 //
@@ -67,7 +79,13 @@ func (c *EipClient) CreateSharedBandwidth(request *model.CreateSharedBandwidthRe
 	}
 }
 
-// 删除共享带宽
+// CreateSharedBandwidthInvoker 创建共享带宽
+func (c *EipClient) CreateSharedBandwidthInvoker(request *model.CreateSharedBandwidthRequest) *CreateSharedBandwidthInvoker {
+	requestDef := GenReqDefForCreateSharedBandwidth()
+	return &CreateSharedBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSharedBandwidth 删除共享带宽
 //
 // 删除共享带宽。
 //
@@ -83,7 +101,13 @@ func (c *EipClient) DeleteSharedBandwidth(request *model.DeleteSharedBandwidthRe
 	}
 }
 
-// 查询带宽列表
+// DeleteSharedBandwidthInvoker 删除共享带宽
+func (c *EipClient) DeleteSharedBandwidthInvoker(request *model.DeleteSharedBandwidthRequest) *DeleteSharedBandwidthInvoker {
+	requestDef := GenReqDefForDeleteSharedBandwidth()
+	return &DeleteSharedBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBandwidths 查询带宽列表
 //
 // 查询带宽列表。
 //
@@ -99,7 +123,13 @@ func (c *EipClient) ListBandwidths(request *model.ListBandwidthsRequest) (*model
 	}
 }
 
-// 查询配额接口
+// ListBandwidthsInvoker 查询带宽列表
+func (c *EipClient) ListBandwidthsInvoker(request *model.ListBandwidthsRequest) *ListBandwidthsInvoker {
+	requestDef := GenReqDefForListBandwidths()
+	return &ListBandwidthsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQuotas 查询配额接口
 //
 // 查询配额
 //
@@ -115,7 +145,13 @@ func (c *EipClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuo
 	}
 }
 
-// 共享带宽移除弹性公网IP
+// ListQuotasInvoker 查询配额接口
+func (c *EipClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuotasInvoker {
+	requestDef := GenReqDefForListQuotas()
+	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemovePublicipsFromSharedBandwidth 共享带宽移除弹性公网IP
 //
 // 共享带宽移除弹性公网IP。
 //
@@ -131,7 +167,13 @@ func (c *EipClient) RemovePublicipsFromSharedBandwidth(request *model.RemovePubl
 	}
 }
 
-// 查询带宽
+// RemovePublicipsFromSharedBandwidthInvoker 共享带宽移除弹性公网IP
+func (c *EipClient) RemovePublicipsFromSharedBandwidthInvoker(request *model.RemovePublicipsFromSharedBandwidthRequest) *RemovePublicipsFromSharedBandwidthInvoker {
+	requestDef := GenReqDefForRemovePublicipsFromSharedBandwidth()
+	return &RemovePublicipsFromSharedBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBandwidth 查询带宽
 //
 // 查询带宽
 //
@@ -147,7 +189,13 @@ func (c *EipClient) ShowBandwidth(request *model.ShowBandwidthRequest) (*model.S
 	}
 }
 
-// 更新带宽
+// ShowBandwidthInvoker 查询带宽
+func (c *EipClient) ShowBandwidthInvoker(request *model.ShowBandwidthRequest) *ShowBandwidthInvoker {
+	requestDef := GenReqDefForShowBandwidth()
+	return &ShowBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateBandwidth 更新带宽
 //
 // 更新带宽。
 //
@@ -163,7 +211,13 @@ func (c *EipClient) UpdateBandwidth(request *model.UpdateBandwidthRequest) (*mod
 	}
 }
 
-// 更新包周期带宽
+// UpdateBandwidthInvoker 更新带宽
+func (c *EipClient) UpdateBandwidthInvoker(request *model.UpdateBandwidthRequest) *UpdateBandwidthInvoker {
+	requestDef := GenReqDefForUpdateBandwidth()
+	return &UpdateBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePrePaidBandwidth 更新包周期带宽
 //
 // 更新带宽。
 //
@@ -179,7 +233,13 @@ func (c *EipClient) UpdatePrePaidBandwidth(request *model.UpdatePrePaidBandwidth
 	}
 }
 
-// 批量创建弹性公网IP资源标签
+// UpdatePrePaidBandwidthInvoker 更新包周期带宽
+func (c *EipClient) UpdatePrePaidBandwidthInvoker(request *model.UpdatePrePaidBandwidthRequest) *UpdatePrePaidBandwidthInvoker {
+	requestDef := GenReqDefForUpdatePrePaidBandwidth()
+	return &UpdatePrePaidBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreatePublicipTags 批量创建弹性公网IP资源标签
 //
 // 为指定的弹性公网IP资源实例批量添加标签。
 //
@@ -195,7 +255,13 @@ func (c *EipClient) BatchCreatePublicipTags(request *model.BatchCreatePublicipTa
 	}
 }
 
-// 批量删除弹性公网IP资源标签
+// BatchCreatePublicipTagsInvoker 批量创建弹性公网IP资源标签
+func (c *EipClient) BatchCreatePublicipTagsInvoker(request *model.BatchCreatePublicipTagsRequest) *BatchCreatePublicipTagsInvoker {
+	requestDef := GenReqDefForBatchCreatePublicipTags()
+	return &BatchCreatePublicipTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeletePublicipTags 批量删除弹性公网IP资源标签
 //
 // 为指定的弹性公网IP资源实例批量删除标签。
 //
@@ -211,7 +277,13 @@ func (c *EipClient) BatchDeletePublicipTags(request *model.BatchDeletePublicipTa
 	}
 }
 
-// 申请包周期弹性公网IP
+// BatchDeletePublicipTagsInvoker 批量删除弹性公网IP资源标签
+func (c *EipClient) BatchDeletePublicipTagsInvoker(request *model.BatchDeletePublicipTagsRequest) *BatchDeletePublicipTagsInvoker {
+	requestDef := GenReqDefForBatchDeletePublicipTags()
+	return &BatchDeletePublicipTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePrePaidPublicip 申请包周期弹性公网IP
 //
 // 申请包年包月的弹性公网IP。
 //
@@ -227,7 +299,13 @@ func (c *EipClient) CreatePrePaidPublicip(request *model.CreatePrePaidPublicipRe
 	}
 }
 
-// 申请弹性公网IP
+// CreatePrePaidPublicipInvoker 申请包周期弹性公网IP
+func (c *EipClient) CreatePrePaidPublicipInvoker(request *model.CreatePrePaidPublicipRequest) *CreatePrePaidPublicipInvoker {
+	requestDef := GenReqDefForCreatePrePaidPublicip()
+	return &CreatePrePaidPublicipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePublicip 申请弹性公网IP
 //
 // 申请弹性公网IP，支持IPv4和IPv6。
 //  弹性公网IP（Elastic IP）提供独立的公网IP资源，包括公网IP地址与公网出口带宽服务。可以与弹性云服务器、裸金属服务器、虚拟IP、弹性负载均衡、NAT网关等资源灵活地绑定及解绑。拥有多种灵活的计费方式，可以满足各种业务场景的需要。
@@ -244,7 +322,13 @@ func (c *EipClient) CreatePublicip(request *model.CreatePublicipRequest) (*model
 	}
 }
 
-// 创建弹性公网IP资源标签
+// CreatePublicipInvoker 申请弹性公网IP
+func (c *EipClient) CreatePublicipInvoker(request *model.CreatePublicipRequest) *CreatePublicipInvoker {
+	requestDef := GenReqDefForCreatePublicip()
+	return &CreatePublicipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePublicipTag 创建弹性公网IP资源标签
 //
 // 给指定弹性IP资源实例增加标签信息。
 //
@@ -260,7 +344,13 @@ func (c *EipClient) CreatePublicipTag(request *model.CreatePublicipTagRequest) (
 	}
 }
 
-// 删除弹性公网IP
+// CreatePublicipTagInvoker 创建弹性公网IP资源标签
+func (c *EipClient) CreatePublicipTagInvoker(request *model.CreatePublicipTagRequest) *CreatePublicipTagInvoker {
+	requestDef := GenReqDefForCreatePublicipTag()
+	return &CreatePublicipTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePublicip 删除弹性公网IP
 //
 // 删除弹性公网IP,绑定状态eip不允许直接删除。
 //
@@ -276,7 +366,13 @@ func (c *EipClient) DeletePublicip(request *model.DeletePublicipRequest) (*model
 	}
 }
 
-// 删除弹性公网IP的标签
+// DeletePublicipInvoker 删除弹性公网IP
+func (c *EipClient) DeletePublicipInvoker(request *model.DeletePublicipRequest) *DeletePublicipInvoker {
+	requestDef := GenReqDefForDeletePublicip()
+	return &DeletePublicipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePublicipTag 删除弹性公网IP的标签
 //
 // 删除指定弹性公网IP的标签信息。其中project_id是项目ID，publicip_id 是要操作的弹性公网IP的id。key是要删除标签的键。
 //
@@ -292,7 +388,13 @@ func (c *EipClient) DeletePublicipTag(request *model.DeletePublicipTagRequest) (
 	}
 }
 
-// 查询租户的弹性公网IP标签
+// DeletePublicipTagInvoker 删除弹性公网IP的标签
+func (c *EipClient) DeletePublicipTagInvoker(request *model.DeletePublicipTagRequest) *DeletePublicipTagInvoker {
+	requestDef := GenReqDefForDeletePublicipTag()
+	return &DeletePublicipTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPublicipTags 查询租户的弹性公网IP标签
 //
 // 查询租户在指定区域和实例类型的所有标签集合。
 //
@@ -308,7 +410,13 @@ func (c *EipClient) ListPublicipTags(request *model.ListPublicipTagsRequest) (*m
 	}
 }
 
-// 查询弹性公网IP列表
+// ListPublicipTagsInvoker 查询租户的弹性公网IP标签
+func (c *EipClient) ListPublicipTagsInvoker(request *model.ListPublicipTagsRequest) *ListPublicipTagsInvoker {
+	requestDef := GenReqDefForListPublicipTags()
+	return &ListPublicipTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPublicips 查询弹性公网IP列表
 //
 // 查询弹性公网IP列表
 //
@@ -324,7 +432,13 @@ func (c *EipClient) ListPublicips(request *model.ListPublicipsRequest) (*model.L
 	}
 }
 
-// 按标签查询弹性公网IP列表
+// ListPublicipsInvoker 查询弹性公网IP列表
+func (c *EipClient) ListPublicipsInvoker(request *model.ListPublicipsRequest) *ListPublicipsInvoker {
+	requestDef := GenReqDefForListPublicips()
+	return &ListPublicipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPublicipsByTags 按标签查询弹性公网IP列表
 //
 // 使用标签过滤弹性公网IP。
 //
@@ -340,7 +454,13 @@ func (c *EipClient) ListPublicipsByTags(request *model.ListPublicipsByTagsReques
 	}
 }
 
-// 查询弹性公网IP
+// ListPublicipsByTagsInvoker 按标签查询弹性公网IP列表
+func (c *EipClient) ListPublicipsByTagsInvoker(request *model.ListPublicipsByTagsRequest) *ListPublicipsByTagsInvoker {
+	requestDef := GenReqDefForListPublicipsByTags()
+	return &ListPublicipsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPublicip 查询弹性公网IP
 //
 // 查询指定的弹性公网IP。
 //
@@ -356,7 +476,13 @@ func (c *EipClient) ShowPublicip(request *model.ShowPublicipRequest) (*model.Sho
 	}
 }
 
-// 查询弹性公网IP的标签
+// ShowPublicipInvoker 查询弹性公网IP
+func (c *EipClient) ShowPublicipInvoker(request *model.ShowPublicipRequest) *ShowPublicipInvoker {
+	requestDef := GenReqDefForShowPublicip()
+	return &ShowPublicipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPublicipTags 查询弹性公网IP的标签
 //
 // 查询指定弹性IP实例的标签信息。
 //
@@ -372,7 +498,13 @@ func (c *EipClient) ShowPublicipTags(request *model.ShowPublicipTagsRequest) (*m
 	}
 }
 
-// 更新弹性公网IP
+// ShowPublicipTagsInvoker 查询弹性公网IP的标签
+func (c *EipClient) ShowPublicipTagsInvoker(request *model.ShowPublicipTagsRequest) *ShowPublicipTagsInvoker {
+	requestDef := GenReqDefForShowPublicipTags()
+	return &ShowPublicipTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePublicip 更新弹性公网IP
 //
 // 更新弹性公网IP，将弹性公网IP跟一个网卡绑定或者解绑定，转换IP地址版本类型。
 //
@@ -388,7 +520,13 @@ func (c *EipClient) UpdatePublicip(request *model.UpdatePublicipRequest) (*model
 	}
 }
 
-// 创建浮动IP
+// UpdatePublicipInvoker 更新弹性公网IP
+func (c *EipClient) UpdatePublicipInvoker(request *model.UpdatePublicipRequest) *UpdatePublicipInvoker {
+	requestDef := GenReqDefForUpdatePublicip()
+	return &UpdatePublicipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronCreateFloatingIp 创建浮动IP
 //
 // 创建浮动IP的外部网络UUID，请使用GET /v2.0/networks?router:external&#x3D;True或neutron net-external-list方式获取。
 //
@@ -404,7 +542,13 @@ func (c *EipClient) NeutronCreateFloatingIp(request *model.NeutronCreateFloating
 	}
 }
 
-// 删除浮动IP
+// NeutronCreateFloatingIpInvoker 创建浮动IP
+func (c *EipClient) NeutronCreateFloatingIpInvoker(request *model.NeutronCreateFloatingIpRequest) *NeutronCreateFloatingIpInvoker {
+	requestDef := GenReqDefForNeutronCreateFloatingIp()
+	return &NeutronCreateFloatingIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronDeleteFloatingIp 删除浮动IP
 //
 // 删除指定的浮动IP。
 //
@@ -420,7 +564,13 @@ func (c *EipClient) NeutronDeleteFloatingIp(request *model.NeutronDeleteFloating
 	}
 }
 
-// 查询浮动IP列表
+// NeutronDeleteFloatingIpInvoker 删除浮动IP
+func (c *EipClient) NeutronDeleteFloatingIpInvoker(request *model.NeutronDeleteFloatingIpRequest) *NeutronDeleteFloatingIpInvoker {
+	requestDef := GenReqDefForNeutronDeleteFloatingIp()
+	return &NeutronDeleteFloatingIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronListFloatingIps 查询浮动IP列表
 //
 // 查询提交请求的租户有权限操作的所有浮动IP地址。
 //
@@ -436,7 +586,13 @@ func (c *EipClient) NeutronListFloatingIps(request *model.NeutronListFloatingIps
 	}
 }
 
-// 查询浮动IP
+// NeutronListFloatingIpsInvoker 查询浮动IP列表
+func (c *EipClient) NeutronListFloatingIpsInvoker(request *model.NeutronListFloatingIpsRequest) *NeutronListFloatingIpsInvoker {
+	requestDef := GenReqDefForNeutronListFloatingIps()
+	return &NeutronListFloatingIpsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronShowFloatingIp 查询浮动IP
 //
 // 查询浮动IP详情，包括浮动IP状态，浮动IP所属路由器ID，浮动IP的外部网络ID等等。
 //
@@ -452,7 +608,13 @@ func (c *EipClient) NeutronShowFloatingIp(request *model.NeutronShowFloatingIpRe
 	}
 }
 
-// 更新浮动IP
+// NeutronShowFloatingIpInvoker 查询浮动IP
+func (c *EipClient) NeutronShowFloatingIpInvoker(request *model.NeutronShowFloatingIpRequest) *NeutronShowFloatingIpInvoker {
+	requestDef := GenReqDefForNeutronShowFloatingIp()
+	return &NeutronShowFloatingIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronUpdateFloatingIp 更新浮动IP
 //
 // 更新浮动IP。
 //  更新时需在URL中给出浮动IP地址的ID。
@@ -468,4 +630,10 @@ func (c *EipClient) NeutronUpdateFloatingIp(request *model.NeutronUpdateFloating
 	} else {
 		return resp.(*model.NeutronUpdateFloatingIpResponse), nil
 	}
+}
+
+// NeutronUpdateFloatingIpInvoker 更新浮动IP
+func (c *EipClient) NeutronUpdateFloatingIpInvoker(request *model.NeutronUpdateFloatingIpRequest) *NeutronUpdateFloatingIpInvoker {
+	requestDef := GenReqDefForNeutronUpdateFloatingIp()
+	return &NeutronUpdateFloatingIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

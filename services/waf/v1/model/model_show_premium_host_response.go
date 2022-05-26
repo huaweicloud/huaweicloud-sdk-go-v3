@@ -118,6 +118,10 @@ func GetShowPremiumHostResponseTlsEnum() ShowPremiumHostResponseTlsEnum {
 	}
 }
 
+func (c ShowPremiumHostResponseTls) Value() string {
+	return c.value
+}
+
 func (c ShowPremiumHostResponseTls) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -166,6 +170,10 @@ func GetShowPremiumHostResponseCipherEnum() ShowPremiumHostResponseCipherEnum {
 			value: "cipher_default",
 		},
 	}
+}
+
+func (c ShowPremiumHostResponseCipher) Value() string {
+	return c.value
 }
 
 func (c ShowPremiumHostResponseCipher) MarshalJSON() ([]byte, error) {

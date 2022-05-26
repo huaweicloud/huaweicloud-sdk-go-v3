@@ -47,6 +47,10 @@ func GetDisassociateServerVirtualIpOptionSubnetIdEnum() DisassociateServerVirtua
 	}
 }
 
+func (c DisassociateServerVirtualIpOptionSubnetId) Value() string {
+	return c.value
+}
+
 func (c DisassociateServerVirtualIpOptionSubnetId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -79,6 +83,10 @@ func GetDisassociateServerVirtualIpOptionIpAddressEnum() DisassociateServerVirtu
 			value: "",
 		},
 	}
+}
+
+func (c DisassociateServerVirtualIpOptionIpAddress) Value() string {
+	return c.value
 }
 
 func (c DisassociateServerVirtualIpOptionIpAddress) MarshalJSON() ([]byte, error) {

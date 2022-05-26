@@ -60,6 +60,10 @@ func GetUpdateDomainV2ResponseStatusEnum() UpdateDomainV2ResponseStatusEnum {
 	}
 }
 
+func (c UpdateDomainV2ResponseStatus) Value() int32 {
+	return c.value
+}
+
 func (c UpdateDomainV2ResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

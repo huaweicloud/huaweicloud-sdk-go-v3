@@ -47,6 +47,10 @@ func GetBatchShowParamsRequestXLanguageEnum() BatchShowParamsRequestXLanguageEnu
 	}
 }
 
+func (c BatchShowParamsRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c BatchShowParamsRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

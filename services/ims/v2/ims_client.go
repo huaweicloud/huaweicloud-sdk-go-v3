@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ims/v2/model"
 )
 
@@ -19,7 +19,7 @@ func ImsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 添加镜像标签
+// AddImageTag 添加镜像标签
 //
 // 该接口用于为指定镜像添加或更新指定的单个标签
 //
@@ -35,7 +35,13 @@ func (c *ImsClient) AddImageTag(request *model.AddImageTagRequest) (*model.AddIm
 	}
 }
 
-// 批量添加镜像成员
+// AddImageTagInvoker 添加镜像标签
+func (c *ImsClient) AddImageTagInvoker(request *model.AddImageTagRequest) *AddImageTagInvoker {
+	requestDef := GenReqDefForAddImageTag()
+	return &AddImageTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchAddMembers 批量添加镜像成员
 //
 // 该接口为扩展接口，主要用于镜像共享时用户将多个镜像共享给多个用户。
 // 该接口为异步接口，返回job_id说明任务下发成功，查询异步任务状态，如果是success说明任务执行成功，如果是failed说明任务执行失败。如何查询异步任务，请参见异步任务查询。
@@ -52,7 +58,13 @@ func (c *ImsClient) BatchAddMembers(request *model.BatchAddMembersRequest) (*mod
 	}
 }
 
-// 批量添加删除镜像标签
+// BatchAddMembersInvoker 批量添加镜像成员
+func (c *ImsClient) BatchAddMembersInvoker(request *model.BatchAddMembersRequest) *BatchAddMembersInvoker {
+	requestDef := GenReqDefForBatchAddMembers()
+	return &BatchAddMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchAddOrDeleteTags 批量添加删除镜像标签
 //
 // 该接口用于为指定镜像批量添加/更新、删除标签。
 //
@@ -68,7 +80,13 @@ func (c *ImsClient) BatchAddOrDeleteTags(request *model.BatchAddOrDeleteTagsRequ
 	}
 }
 
-// 批量删除镜像成员
+// BatchAddOrDeleteTagsInvoker 批量添加删除镜像标签
+func (c *ImsClient) BatchAddOrDeleteTagsInvoker(request *model.BatchAddOrDeleteTagsRequest) *BatchAddOrDeleteTagsInvoker {
+	requestDef := GenReqDefForBatchAddOrDeleteTags()
+	return &BatchAddOrDeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteMembers 批量删除镜像成员
 //
 // 该接口为扩展接口，主要用于取消镜像共享。
 // 该接口为异步接口，返回job_id说明任务下发成功，查询异步任务状态，如果是success说明任务执行成功，如果是failed说明任务执行失败。如何查询异步任务，请参见异步任务查询。
@@ -85,7 +103,13 @@ func (c *ImsClient) BatchDeleteMembers(request *model.BatchDeleteMembersRequest)
 	}
 }
 
-// 批量更新镜像成员状态
+// BatchDeleteMembersInvoker 批量删除镜像成员
+func (c *ImsClient) BatchDeleteMembersInvoker(request *model.BatchDeleteMembersRequest) *BatchDeleteMembersInvoker {
+	requestDef := GenReqDefForBatchDeleteMembers()
+	return &BatchDeleteMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateMembers 批量更新镜像成员状态
 //
 // 该接口为扩展接口，主要用于用户接受或者拒绝多个共享镜像时批量更新镜像成员的状态。
 // 该接口为异步接口，返回job_id说明任务下发成功，查询异步任务状态，如果是success说明任务执行成功，如果是failed说明任务执行失败。如何查询异步任务，请参见异步任务查询。
@@ -102,7 +126,13 @@ func (c *ImsClient) BatchUpdateMembers(request *model.BatchUpdateMembersRequest)
 	}
 }
 
-// 跨Region复制镜像
+// BatchUpdateMembersInvoker 批量更新镜像成员状态
+func (c *ImsClient) BatchUpdateMembersInvoker(request *model.BatchUpdateMembersRequest) *BatchUpdateMembersInvoker {
+	requestDef := GenReqDefForBatchUpdateMembers()
+	return &BatchUpdateMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CopyImageCrossRegion 跨Region复制镜像
 //
 // 该接口为扩展接口，用户在一个区域制作的私有镜像，可以通过跨Region复制镜像将镜像复制到其他区域，在其他区域发放相同类型的云服务器，帮助用户实现区域间的业务迁移。
 // 该接口为异步接口，返回job_id说明任务下发成功，查询异步任务状态，如果是success说明任务执行成功，如果是failed说明任务执行失败。
@@ -120,7 +150,13 @@ func (c *ImsClient) CopyImageCrossRegion(request *model.CopyImageCrossRegionRequ
 	}
 }
 
-// Region内复制镜像
+// CopyImageCrossRegionInvoker 跨Region复制镜像
+func (c *ImsClient) CopyImageCrossRegionInvoker(request *model.CopyImageCrossRegionRequest) *CopyImageCrossRegionInvoker {
+	requestDef := GenReqDefForCopyImageCrossRegion()
+	return &CopyImageCrossRegionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CopyImageInRegion Region内复制镜像
 //
 // 该接口为扩展接口，主要用于用户将一个已有镜像复制为另一个镜像。复制镜像时，可以更改镜像的加密等属性，以满足不同的场景。
 // 该接口为异步接口，返回job_id说明任务下发成功，查询异步任务状态，如果是success说明任务执行成功，如果是failed说明任务执行失败。如何查询异步任务，请参见异步任务查询。
@@ -137,7 +173,13 @@ func (c *ImsClient) CopyImageInRegion(request *model.CopyImageInRegionRequest) (
 	}
 }
 
-// 使用外部镜像文件制作数据镜像
+// CopyImageInRegionInvoker Region内复制镜像
+func (c *ImsClient) CopyImageInRegionInvoker(request *model.CopyImageInRegionRequest) *CopyImageInRegionInvoker {
+	requestDef := GenReqDefForCopyImageInRegion()
+	return &CopyImageInRegionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDataImage 使用外部镜像文件制作数据镜像
 //
 // 使用上传至OBS桶中的外部数据卷镜像文件制作数据镜像。作为异步接口，调用成功，只是说明后台收到了制作请求，镜像是否制作成功需要通过异步任务查询接口查询该任务的执行状态。具体请参考异步任务查询。
 //
@@ -153,7 +195,13 @@ func (c *ImsClient) CreateDataImage(request *model.CreateDataImageRequest) (*mod
 	}
 }
 
-// 制作镜像
+// CreateDataImageInvoker 使用外部镜像文件制作数据镜像
+func (c *ImsClient) CreateDataImageInvoker(request *model.CreateDataImageRequest) *CreateDataImageInvoker {
+	requestDef := GenReqDefForCreateDataImage()
+	return &CreateDataImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateImage 制作镜像
 //
 // 本接口用于制作私有镜像，支持：
 // - 使用云服务器制作私有镜像。
@@ -180,7 +228,13 @@ func (c *ImsClient) CreateImage(request *model.CreateImageRequest) (*model.Creat
 	}
 }
 
-// 增加或修改标签
+// CreateImageInvoker 制作镜像
+func (c *ImsClient) CreateImageInvoker(request *model.CreateImageRequest) *CreateImageInvoker {
+	requestDef := GenReqDefForCreateImage()
+	return &CreateImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateOrUpdateTags 增加或修改标签
 //
 // 该接口主要用于为某个镜像增加或修改一个自定义标签。通过自定义标签，用户可以将镜像进行分类。
 //
@@ -196,7 +250,13 @@ func (c *ImsClient) CreateOrUpdateTags(request *model.CreateOrUpdateTagsRequest)
 	}
 }
 
-// 制作整机镜像
+// CreateOrUpdateTagsInvoker 增加或修改标签
+func (c *ImsClient) CreateOrUpdateTagsInvoker(request *model.CreateOrUpdateTagsRequest) *CreateOrUpdateTagsInvoker {
+	requestDef := GenReqDefForCreateOrUpdateTags()
+	return &CreateOrUpdateTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateWholeImage 制作整机镜像
 //
 // 使用云服务器或者云服务器备份制作整机镜像。作为异步接口，调用成功，只是说明后台收到了制作整机镜像的请求，镜像是否制作成功需要通过异步任务查询接口查询该任务的执行状态，具体请参考异步任务查询。
 //
@@ -212,7 +272,13 @@ func (c *ImsClient) CreateWholeImage(request *model.CreateWholeImageRequest) (*m
 	}
 }
 
-// 删除镜像标签
+// CreateWholeImageInvoker 制作整机镜像
+func (c *ImsClient) CreateWholeImageInvoker(request *model.CreateWholeImageRequest) *CreateWholeImageInvoker {
+	requestDef := GenReqDefForCreateWholeImage()
+	return &CreateWholeImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteImageTag 删除镜像标签
 //
 // 该接口用于为镜像删除指定的标签
 //
@@ -228,7 +294,13 @@ func (c *ImsClient) DeleteImageTag(request *model.DeleteImageTagRequest) (*model
 	}
 }
 
-// 导出镜像
+// DeleteImageTagInvoker 删除镜像标签
+func (c *ImsClient) DeleteImageTagInvoker(request *model.DeleteImageTagRequest) *DeleteImageTagInvoker {
+	requestDef := GenReqDefForDeleteImageTag()
+	return &DeleteImageTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportImage 导出镜像
 //
 // 该接口为扩展接口，用于用户将自己的私有镜像导出到指定的OBS桶中。
 //
@@ -244,7 +316,13 @@ func (c *ImsClient) ExportImage(request *model.ExportImageRequest) (*model.Expor
 	}
 }
 
-// 镜像文件快速导入
+// ExportImageInvoker 导出镜像
+func (c *ImsClient) ExportImageInvoker(request *model.ExportImageRequest) *ExportImageInvoker {
+	requestDef := GenReqDefForExportImage()
+	return &ExportImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportImageQuick 镜像文件快速导入
 //
 // 使用上传至OBS桶中的超大外部镜像文件制作私有镜像，目前仅支持RAW或ZVHD2格式镜像文件。且要求镜像文件大小不能超过1TB。
 // 由于快速导入功能要求提前转换镜像文件格式为RAW或ZVHD2格式，因此镜像文件小于128GB时推荐您优先使用常规的创建私有镜像的方式。
@@ -262,7 +340,13 @@ func (c *ImsClient) ImportImageQuick(request *model.ImportImageQuickRequest) (*m
 	}
 }
 
-// 按标签查询镜像
+// ImportImageQuickInvoker 镜像文件快速导入
+func (c *ImsClient) ImportImageQuickInvoker(request *model.ImportImageQuickRequest) *ImportImageQuickInvoker {
+	requestDef := GenReqDefForImportImageQuick()
+	return &ImportImageQuickInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListImageByTags 按标签查询镜像
 //
 // 该接口用于按标签或其他条件对镜像进行过滤或者计数使用。
 //
@@ -278,7 +362,13 @@ func (c *ImsClient) ListImageByTags(request *model.ListImageByTagsRequest) (*mod
 	}
 }
 
-// 查询镜像标签
+// ListImageByTagsInvoker 按标签查询镜像
+func (c *ImsClient) ListImageByTagsInvoker(request *model.ListImageByTagsRequest) *ListImageByTagsInvoker {
+	requestDef := GenReqDefForListImageByTags()
+	return &ListImageByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListImageTags 查询镜像标签
 //
 // 该接口用于为查询指定镜像上的所有标签
 //
@@ -294,7 +384,13 @@ func (c *ImsClient) ListImageTags(request *model.ListImageTagsRequest) (*model.L
 	}
 }
 
-// 查询镜像列表
+// ListImageTagsInvoker 查询镜像标签
+func (c *ImsClient) ListImageTagsInvoker(request *model.ListImageTagsRequest) *ListImageTagsInvoker {
+	requestDef := GenReqDefForListImageTags()
+	return &ListImageTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListImages 查询镜像列表
 //
 // 根据不同条件查询镜像列表信息。
 // 可以在URI后面用‘?’和‘&amp;’添加不同的查询条件组合，请参考请求样例。
@@ -311,7 +407,13 @@ func (c *ImsClient) ListImages(request *model.ListImagesRequest) (*model.ListIma
 	}
 }
 
-// 查询租户所有镜像标签
+// ListImagesInvoker 查询镜像列表
+func (c *ImsClient) ListImagesInvoker(request *model.ListImagesRequest) *ListImagesInvoker {
+	requestDef := GenReqDefForListImages()
+	return &ListImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListImagesTags 查询租户所有镜像标签
 //
 // 该接口用于为查询租户的所有镜像上的标签。
 //
@@ -327,7 +429,13 @@ func (c *ImsClient) ListImagesTags(request *model.ListImagesTagsRequest) (*model
 	}
 }
 
-// 查询镜像支持的OS列表
+// ListImagesTagsInvoker 查询租户所有镜像标签
+func (c *ImsClient) ListImagesTagsInvoker(request *model.ListImagesTagsRequest) *ListImagesTagsInvoker {
+	requestDef := GenReqDefForListImagesTags()
+	return &ListImagesTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOsVersions 查询镜像支持的OS列表
 //
 // 查询当前区域弹性云服务器的OS兼容性列表。
 //
@@ -343,7 +451,13 @@ func (c *ImsClient) ListOsVersions(request *model.ListOsVersionsRequest) (*model
 	}
 }
 
-// 按条件查询租户镜像标签列表
+// ListOsVersionsInvoker 查询镜像支持的OS列表
+func (c *ImsClient) ListOsVersionsInvoker(request *model.ListOsVersionsRequest) *ListOsVersionsInvoker {
+	requestDef := GenReqDefForListOsVersions()
+	return &ListOsVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTags 按条件查询租户镜像标签列表
 //
 // 根据不同条件查询镜像标签列表信息。
 //
@@ -359,7 +473,13 @@ func (c *ImsClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsRes
 	}
 }
 
-// 注册镜像
+// ListTagsInvoker 按条件查询租户镜像标签列表
+func (c *ImsClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInvoker {
+	requestDef := GenReqDefForListTags()
+	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RegisterImage 注册镜像
 //
 // 该接口用于将镜像文件注册为云平台未初始化的私有镜像。
 // 使用该接口注册镜像的具体步骤如下：
@@ -381,7 +501,13 @@ func (c *ImsClient) RegisterImage(request *model.RegisterImageRequest) (*model.R
 	}
 }
 
-// 查询镜像配额
+// RegisterImageInvoker 注册镜像
+func (c *ImsClient) RegisterImageInvoker(request *model.RegisterImageRequest) *RegisterImageInvoker {
+	requestDef := GenReqDefForRegisterImage()
+	return &RegisterImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowImageQuota 查询镜像配额
 //
 // 该接口为扩展接口，主要用于查询租户在当前Region的私有镜像的配额数量。
 //
@@ -397,7 +523,13 @@ func (c *ImsClient) ShowImageQuota(request *model.ShowImageQuotaRequest) (*model
 	}
 }
 
-// 更新镜像信息
+// ShowImageQuotaInvoker 查询镜像配额
+func (c *ImsClient) ShowImageQuotaInvoker(request *model.ShowImageQuotaRequest) *ShowImageQuotaInvoker {
+	requestDef := GenReqDefForShowImageQuota()
+	return &ShowImageQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateImage 更新镜像信息
 //
 // 更新镜像信息接口，主要用于镜像属性的修改。当前仅支持可用（active）状态的镜像更新相关信息。
 //
@@ -413,7 +545,13 @@ func (c *ImsClient) UpdateImage(request *model.UpdateImageRequest) (*model.Updat
 	}
 }
 
-// 查询版本列表（OpenStack原生）
+// UpdateImageInvoker 更新镜像信息
+func (c *ImsClient) UpdateImageInvoker(request *model.UpdateImageRequest) *UpdateImageInvoker {
+	requestDef := GenReqDefForUpdateImage()
+	return &UpdateImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVersions 查询版本列表（OpenStack原生）
 //
 // 查询API的版本信息列表，包括API的版本兼容性、域名信息等。
 //
@@ -429,7 +567,13 @@ func (c *ImsClient) ListVersions(request *model.ListVersionsRequest) (*model.Lis
 	}
 }
 
-// 查询版本列表（OpenStack原生）
+// ListVersionsInvoker 查询版本列表（OpenStack原生）
+func (c *ImsClient) ListVersionsInvoker(request *model.ListVersionsRequest) *ListVersionsInvoker {
+	requestDef := GenReqDefForListVersions()
+	return &ListVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVersion 查询版本列表（OpenStack原生）
 //
 // 查询API的版本信息列表，包括API的版本兼容性、域名信息等。
 //
@@ -445,7 +589,13 @@ func (c *ImsClient) ShowVersion(request *model.ShowVersionRequest) (*model.ShowV
 	}
 }
 
-// 查询job状态
+// ShowVersionInvoker 查询版本列表（OpenStack原生）
+func (c *ImsClient) ShowVersionInvoker(request *model.ShowVersionRequest) *ShowVersionInvoker {
+	requestDef := GenReqDefForShowVersion()
+	return &ShowVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJob 查询job状态
 //
 // 该接口为扩展接口，主要用于查询异步接口执行情况，比如查询导出镜像任务的执行状态。
 //
@@ -461,7 +611,13 @@ func (c *ImsClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobRespon
 	}
 }
 
-// 添加镜像成员（OpenStack原生）
+// ShowJobInvoker 查询job状态
+func (c *ImsClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
+	requestDef := GenReqDefForShowJob()
+	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceAddImageMember 添加镜像成员（OpenStack原生）
 //
 // 用户共享镜像给其他用户时，使用该接口向该镜像成员中添加接受镜像用户的项目ID。
 //
@@ -477,7 +633,13 @@ func (c *ImsClient) GlanceAddImageMember(request *model.GlanceAddImageMemberRequ
 	}
 }
 
-// 创建镜像元数据（OpenStack原生）
+// GlanceAddImageMemberInvoker 添加镜像成员（OpenStack原生）
+func (c *ImsClient) GlanceAddImageMemberInvoker(request *model.GlanceAddImageMemberRequest) *GlanceAddImageMemberInvoker {
+	requestDef := GenReqDefForGlanceAddImageMember()
+	return &GlanceAddImageMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceCreateImageMetadata 创建镜像元数据（OpenStack原生）
 //
 // 创建镜像元数据。调用创建镜像元数据接口成功后，只是创建了镜像的元数据，镜像对应的实际镜像文件并不存在
 //
@@ -493,7 +655,13 @@ func (c *ImsClient) GlanceCreateImageMetadata(request *model.GlanceCreateImageMe
 	}
 }
 
-// 增加标签（OpenStack原生）
+// GlanceCreateImageMetadataInvoker 创建镜像元数据（OpenStack原生）
+func (c *ImsClient) GlanceCreateImageMetadataInvoker(request *model.GlanceCreateImageMetadataRequest) *GlanceCreateImageMetadataInvoker {
+	requestDef := GenReqDefForGlanceCreateImageMetadata()
+	return &GlanceCreateImageMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceCreateTag 增加标签（OpenStack原生）
 //
 // 该接口主要用于为某个镜像添加一个自定义标签。通过自定义标签，用户可以将镜像进行分类。
 //
@@ -509,7 +677,13 @@ func (c *ImsClient) GlanceCreateTag(request *model.GlanceCreateTagRequest) (*mod
 	}
 }
 
-// 删除镜像（OpenStack原生）
+// GlanceCreateTagInvoker 增加标签（OpenStack原生）
+func (c *ImsClient) GlanceCreateTagInvoker(request *model.GlanceCreateTagRequest) *GlanceCreateTagInvoker {
+	requestDef := GenReqDefForGlanceCreateTag()
+	return &GlanceCreateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceDeleteImage 删除镜像（OpenStack原生）
 //
 // 该接口主要用于删除镜像，用户可以通过该接口将自己的私有镜像删除。
 //
@@ -525,7 +699,13 @@ func (c *ImsClient) GlanceDeleteImage(request *model.GlanceDeleteImageRequest) (
 	}
 }
 
-// 删除指定的镜像成员（OpenStack原生）
+// GlanceDeleteImageInvoker 删除镜像（OpenStack原生）
+func (c *ImsClient) GlanceDeleteImageInvoker(request *model.GlanceDeleteImageRequest) *GlanceDeleteImageInvoker {
+	requestDef := GenReqDefForGlanceDeleteImage()
+	return &GlanceDeleteImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceDeleteImageMember 删除指定的镜像成员（OpenStack原生）
 //
 // 该接口用于取消对某个用户的镜像共享。
 //
@@ -541,7 +721,13 @@ func (c *ImsClient) GlanceDeleteImageMember(request *model.GlanceDeleteImageMemb
 	}
 }
 
-// 删除标签（OpenStack原生）
+// GlanceDeleteImageMemberInvoker 删除指定的镜像成员（OpenStack原生）
+func (c *ImsClient) GlanceDeleteImageMemberInvoker(request *model.GlanceDeleteImageMemberRequest) *GlanceDeleteImageMemberInvoker {
+	requestDef := GenReqDefForGlanceDeleteImageMember()
+	return &GlanceDeleteImageMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceDeleteTag 删除标签（OpenStack原生）
 //
 // 该接口主要用于删除某个镜像的自定义标签，通过该接口，用户可以将私有镜像中一些不用的标签删除。
 //
@@ -557,7 +743,13 @@ func (c *ImsClient) GlanceDeleteTag(request *model.GlanceDeleteTagRequest) (*mod
 	}
 }
 
-// 查询镜像成员列表视图（OpenStack原生）
+// GlanceDeleteTagInvoker 删除标签（OpenStack原生）
+func (c *ImsClient) GlanceDeleteTagInvoker(request *model.GlanceDeleteTagRequest) *GlanceDeleteTagInvoker {
+	requestDef := GenReqDefForGlanceDeleteTag()
+	return &GlanceDeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceListImageMemberSchemas 查询镜像成员列表视图（OpenStack原生）
 //
 // 该接口主要用于查询镜像成员列表视图，通过视图，用户可以了解到镜像成员包含哪些属性，同时也可以了解每个属性的数据类型。
 //
@@ -573,7 +765,13 @@ func (c *ImsClient) GlanceListImageMemberSchemas(request *model.GlanceListImageM
 	}
 }
 
-// 获取镜像成员列表（OpenStack原生）
+// GlanceListImageMemberSchemasInvoker 查询镜像成员列表视图（OpenStack原生）
+func (c *ImsClient) GlanceListImageMemberSchemasInvoker(request *model.GlanceListImageMemberSchemasRequest) *GlanceListImageMemberSchemasInvoker {
+	requestDef := GenReqDefForGlanceListImageMemberSchemas()
+	return &GlanceListImageMemberSchemasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceListImageMembers 获取镜像成员列表（OpenStack原生）
 //
 // 该接口用于共享镜像过程中，获取接受该镜像的成员列表。
 //
@@ -589,7 +787,13 @@ func (c *ImsClient) GlanceListImageMembers(request *model.GlanceListImageMembers
 	}
 }
 
-// 查询镜像列表视图（OpenStack原生）
+// GlanceListImageMembersInvoker 获取镜像成员列表（OpenStack原生）
+func (c *ImsClient) GlanceListImageMembersInvoker(request *model.GlanceListImageMembersRequest) *GlanceListImageMembersInvoker {
+	requestDef := GenReqDefForGlanceListImageMembers()
+	return &GlanceListImageMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceListImageSchemas 查询镜像列表视图（OpenStack原生）
 //
 // 该接口主要用于查询镜像列表视图，通过该接口用户可以了解到镜像列表的详细情况和数据结构。
 //
@@ -605,7 +809,13 @@ func (c *ImsClient) GlanceListImageSchemas(request *model.GlanceListImageSchemas
 	}
 }
 
-// 查询镜像列表（OpenStack原生）
+// GlanceListImageSchemasInvoker 查询镜像列表视图（OpenStack原生）
+func (c *ImsClient) GlanceListImageSchemasInvoker(request *model.GlanceListImageSchemasRequest) *GlanceListImageSchemasInvoker {
+	requestDef := GenReqDefForGlanceListImageSchemas()
+	return &GlanceListImageSchemasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceListImages 查询镜像列表（OpenStack原生）
 //
 // 获取镜像列表。
 // 使用本接口查询镜像列表时，需要使用分页查询才能返回全部的镜像列表。
@@ -625,7 +835,13 @@ func (c *ImsClient) GlanceListImages(request *model.GlanceListImagesRequest) (*m
 	}
 }
 
-// 查询镜像详情（OpenStack原生）
+// GlanceListImagesInvoker 查询镜像列表（OpenStack原生）
+func (c *ImsClient) GlanceListImagesInvoker(request *model.GlanceListImagesRequest) *GlanceListImagesInvoker {
+	requestDef := GenReqDefForGlanceListImages()
+	return &GlanceListImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceShowImage 查询镜像详情（OpenStack原生）
 //
 // 查询单个镜像详情，用户可以通过该接口查询单个私有或者公共镜像的详情
 //
@@ -641,7 +857,13 @@ func (c *ImsClient) GlanceShowImage(request *model.GlanceShowImageRequest) (*mod
 	}
 }
 
-// 获取镜像成员详情（OpenStack原生）
+// GlanceShowImageInvoker 查询镜像详情（OpenStack原生）
+func (c *ImsClient) GlanceShowImageInvoker(request *model.GlanceShowImageRequest) *GlanceShowImageInvoker {
+	requestDef := GenReqDefForGlanceShowImage()
+	return &GlanceShowImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceShowImageMember 获取镜像成员详情（OpenStack原生）
 //
 // 该接口主要用于镜像共享中查询某个镜像成员的详情。
 //
@@ -657,7 +879,13 @@ func (c *ImsClient) GlanceShowImageMember(request *model.GlanceShowImageMemberRe
 	}
 }
 
-// 查询镜像成员视图（OpenStack原生）
+// GlanceShowImageMemberInvoker 获取镜像成员详情（OpenStack原生）
+func (c *ImsClient) GlanceShowImageMemberInvoker(request *model.GlanceShowImageMemberRequest) *GlanceShowImageMemberInvoker {
+	requestDef := GenReqDefForGlanceShowImageMember()
+	return &GlanceShowImageMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceShowImageMemberSchemas 查询镜像成员视图（OpenStack原生）
 //
 // 该接口主要用于查询镜像成员视图，通过视图，用户可以了解到镜像成员包含哪些属性，同时也可以了解每个属性的数据类型。
 //
@@ -673,7 +901,13 @@ func (c *ImsClient) GlanceShowImageMemberSchemas(request *model.GlanceShowImageM
 	}
 }
 
-// 查询镜像视图（OpenStack原生）
+// GlanceShowImageMemberSchemasInvoker 查询镜像成员视图（OpenStack原生）
+func (c *ImsClient) GlanceShowImageMemberSchemasInvoker(request *model.GlanceShowImageMemberSchemasRequest) *GlanceShowImageMemberSchemasInvoker {
+	requestDef := GenReqDefForGlanceShowImageMemberSchemas()
+	return &GlanceShowImageMemberSchemasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceShowImageSchemas 查询镜像视图（OpenStack原生）
 //
 // 该接口主要用于查询镜像视图，通过视图，用户可以了解到镜像包含哪些属性，同时也可以了解每个属性的数据类型等。
 //
@@ -689,7 +923,13 @@ func (c *ImsClient) GlanceShowImageSchemas(request *model.GlanceShowImageSchemas
 	}
 }
 
-// 更新镜像信息（OpenStack原生）
+// GlanceShowImageSchemasInvoker 查询镜像视图（OpenStack原生）
+func (c *ImsClient) GlanceShowImageSchemasInvoker(request *model.GlanceShowImageSchemasRequest) *GlanceShowImageSchemasInvoker {
+	requestDef := GenReqDefForGlanceShowImageSchemas()
+	return &GlanceShowImageSchemasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceUpdateImage 更新镜像信息（OpenStack原生）
 //
 // 修改镜像信息
 //
@@ -705,7 +945,13 @@ func (c *ImsClient) GlanceUpdateImage(request *model.GlanceUpdateImageRequest) (
 	}
 }
 
-// 更新镜像成员状态（OpenStack原生）
+// GlanceUpdateImageInvoker 更新镜像信息（OpenStack原生）
+func (c *ImsClient) GlanceUpdateImageInvoker(request *model.GlanceUpdateImageRequest) *GlanceUpdateImageInvoker {
+	requestDef := GenReqDefForGlanceUpdateImage()
+	return &GlanceUpdateImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GlanceUpdateImageMember 更新镜像成员状态（OpenStack原生）
 //
 // 用户接受或者拒绝共享镜像时，使用该接口更新镜像成员的状态。
 //
@@ -719,4 +965,10 @@ func (c *ImsClient) GlanceUpdateImageMember(request *model.GlanceUpdateImageMemb
 	} else {
 		return resp.(*model.GlanceUpdateImageMemberResponse), nil
 	}
+}
+
+// GlanceUpdateImageMemberInvoker 更新镜像成员状态（OpenStack原生）
+func (c *ImsClient) GlanceUpdateImageMemberInvoker(request *model.GlanceUpdateImageMemberRequest) *GlanceUpdateImageMemberInvoker {
+	requestDef := GenReqDefForGlanceUpdateImageMember()
+	return &GlanceUpdateImageMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

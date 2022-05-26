@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cse/v1/model"
 )
 
@@ -19,7 +19,7 @@ func CseClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 创建微服务引擎专享版
+// CreateEngine 创建微服务引擎专享版
 //
 // 创建微服务引擎专享版。
 //
@@ -35,7 +35,13 @@ func (c *CseClient) CreateEngine(request *model.CreateEngineRequest) (*model.Cre
 	}
 }
 
-// 删除微服务引擎专享版
+// CreateEngineInvoker 创建微服务引擎专享版
+func (c *CseClient) CreateEngineInvoker(request *model.CreateEngineRequest) *CreateEngineInvoker {
+	requestDef := GenReqDefForCreateEngine()
+	return &CreateEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEngine 删除微服务引擎专享版
 //
 // 删除微服务引擎专享版。
 //
@@ -51,7 +57,13 @@ func (c *CseClient) DeleteEngine(request *model.DeleteEngineRequest) (*model.Del
 	}
 }
 
-// 导出kie配置
+// DeleteEngineInvoker 删除微服务引擎专享版
+func (c *CseClient) DeleteEngineInvoker(request *model.DeleteEngineRequest) *DeleteEngineInvoker {
+	requestDef := GenReqDefForDeleteEngine()
+	return &DeleteEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadKie 导出kie配置
 //
 // 导出kie配置
 //
@@ -67,7 +79,13 @@ func (c *CseClient) DownloadKie(request *model.DownloadKieRequest) (*model.Downl
 	}
 }
 
-// 查询微服务引擎列表
+// DownloadKieInvoker 导出kie配置
+func (c *CseClient) DownloadKieInvoker(request *model.DownloadKieRequest) *DownloadKieInvoker {
+	requestDef := GenReqDefForDownloadKie()
+	return &DownloadKieInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEngines 查询微服务引擎列表
 //
 // 查询微服务引擎列表。
 //
@@ -83,7 +101,13 @@ func (c *CseClient) ListEngines(request *model.ListEnginesRequest) (*model.ListE
 	}
 }
 
-// 查询微服务引擎专享版的规格列表
+// ListEnginesInvoker 查询微服务引擎列表
+func (c *CseClient) ListEnginesInvoker(request *model.ListEnginesRequest) *ListEnginesInvoker {
+	requestDef := GenReqDefForListEngines()
+	return &ListEnginesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFlavors 查询微服务引擎专享版的规格列表
 //
 // 查询微服务引擎专享版的规格列表。
 //
@@ -99,7 +123,13 @@ func (c *CseClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 	}
 }
 
-// 查询微服务引擎专享版详情
+// ListFlavorsInvoker 查询微服务引擎专享版的规格列表
+func (c *CseClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListFlavorsInvoker {
+	requestDef := GenReqDefForListFlavors()
+	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEngine 查询微服务引擎专享版详情
 //
 // 查询微服务引擎专享版详情
 //
@@ -115,7 +145,13 @@ func (c *CseClient) ShowEngine(request *model.ShowEngineRequest) (*model.ShowEng
 	}
 }
 
-// 查询微服务引擎任务详情
+// ShowEngineInvoker 查询微服务引擎专享版详情
+func (c *CseClient) ShowEngineInvoker(request *model.ShowEngineRequest) *ShowEngineInvoker {
+	requestDef := GenReqDefForShowEngine()
+	return &ShowEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEngineJob 查询微服务引擎任务详情
 //
 // 查询微服务引擎任务详情。
 //
@@ -131,7 +167,13 @@ func (c *CseClient) ShowEngineJob(request *model.ShowEngineJobRequest) (*model.S
 	}
 }
 
-// 导入kie配置
+// ShowEngineJobInvoker 查询微服务引擎任务详情
+func (c *CseClient) ShowEngineJobInvoker(request *model.ShowEngineJobRequest) *ShowEngineJobInvoker {
+	requestDef := GenReqDefForShowEngineJob()
+	return &ShowEngineJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadKie 导入kie配置
 //
 // 导入kie配置
 //
@@ -145,4 +187,10 @@ func (c *CseClient) UploadKie(request *model.UploadKieRequest) (*model.UploadKie
 	} else {
 		return resp.(*model.UploadKieResponse), nil
 	}
+}
+
+// UploadKieInvoker 导入kie配置
+func (c *CseClient) UploadKieInvoker(request *model.UploadKieRequest) *UploadKieInvoker {
+	requestDef := GenReqDefForUploadKie()
+	return &UploadKieInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -58,6 +58,10 @@ func GetHealthmonitorsInStatusRespTypeEnum() HealthmonitorsInStatusRespTypeEnum 
 	}
 }
 
+func (c HealthmonitorsInStatusRespType) Value() string {
+	return c.value
+}
+
 func (c HealthmonitorsInStatusRespType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -47,6 +47,10 @@ func GetBatchListProgressesRequestXLanguageEnum() BatchListProgressesRequestXLan
 	}
 }
 
+func (c BatchListProgressesRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c BatchListProgressesRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

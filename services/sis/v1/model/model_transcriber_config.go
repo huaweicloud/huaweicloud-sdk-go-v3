@@ -92,6 +92,10 @@ func GetTranscriberConfigAudioFormatEnum() TranscriberConfigAudioFormatEnum {
 	}
 }
 
+func (c TranscriberConfigAudioFormat) Value() string {
+	return c.value
+}
+
 func (c TranscriberConfigAudioFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -138,6 +142,10 @@ func GetTranscriberConfigPropertyEnum() TranscriberConfigPropertyEnum {
 	}
 }
 
+func (c TranscriberConfigProperty) Value() string {
+	return c.value
+}
+
 func (c TranscriberConfigProperty) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -174,6 +182,10 @@ func GetTranscriberConfigAddPuncEnum() TranscriberConfigAddPuncEnum {
 			value: "no",
 		},
 	}
+}
+
+func (c TranscriberConfigAddPunc) Value() string {
+	return c.value
 }
 
 func (c TranscriberConfigAddPunc) MarshalJSON() ([]byte, error) {
@@ -214,6 +226,10 @@ func GetTranscriberConfigDigitNormEnum() TranscriberConfigDigitNormEnum {
 	}
 }
 
+func (c TranscriberConfigDigitNorm) Value() string {
+	return c.value
+}
+
 func (c TranscriberConfigDigitNorm) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -250,6 +266,10 @@ func GetTranscriberConfigNeedWordInfoEnum() TranscriberConfigNeedWordInfoEnum {
 			value: "no",
 		},
 	}
+}
+
+func (c TranscriberConfigNeedWordInfo) Value() string {
+	return c.value
 }
 
 func (c TranscriberConfigNeedWordInfo) MarshalJSON() ([]byte, error) {

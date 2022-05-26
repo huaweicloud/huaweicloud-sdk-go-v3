@@ -66,6 +66,10 @@ func GetCloudConnectionRouteTypeEnum() CloudConnectionRouteTypeEnum {
 	}
 }
 
+func (c CloudConnectionRouteType) Value() string {
+	return c.value
+}
+
 func (c CloudConnectionRouteType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

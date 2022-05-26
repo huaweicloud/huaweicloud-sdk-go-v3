@@ -72,6 +72,10 @@ func GetUpdateAlarmRequestBodyAlarmTypeEnum() UpdateAlarmRequestBodyAlarmTypeEnu
 	}
 }
 
+func (c UpdateAlarmRequestBodyAlarmType) Value() string {
+	return c.value
+}
+
 func (c UpdateAlarmRequestBodyAlarmType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

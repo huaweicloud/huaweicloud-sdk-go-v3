@@ -71,6 +71,10 @@ func GetPrivacyResponseBodyCategoryEnum() PrivacyResponseBodyCategoryEnum {
 	}
 }
 
+func (c PrivacyResponseBodyCategory) Value() string {
+	return c.value
+}
+
 func (c PrivacyResponseBodyCategory) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

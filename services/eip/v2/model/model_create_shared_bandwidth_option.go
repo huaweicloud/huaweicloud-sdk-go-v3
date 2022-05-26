@@ -60,6 +60,10 @@ func GetCreateSharedBandwidthOptionChargeModeEnum() CreateSharedBandwidthOptionC
 	}
 }
 
+func (c CreateSharedBandwidthOptionChargeMode) Value() string {
+	return c.value
+}
+
 func (c CreateSharedBandwidthOptionChargeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

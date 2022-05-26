@@ -105,6 +105,10 @@ func GetShowQuotaRequestTypeEnum() ShowQuotaRequestTypeEnum {
 	}
 }
 
+func (c ShowQuotaRequestType) Value() string {
+	return c.value
+}
+
 func (c ShowQuotaRequestType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

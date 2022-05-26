@@ -71,6 +71,10 @@ func GetConfigurationParameterTypeEnum() ConfigurationParameterTypeEnum {
 	}
 }
 
+func (c ConfigurationParameterType) Value() string {
+	return c.value
+}
+
 func (c ConfigurationParameterType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

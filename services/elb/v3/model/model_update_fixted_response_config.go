@@ -63,6 +63,10 @@ func GetUpdateFixtedResponseConfigContentTypeEnum() UpdateFixtedResponseConfigCo
 	}
 }
 
+func (c UpdateFixtedResponseConfigContentType) Value() string {
+	return c.value
+}
+
 func (c UpdateFixtedResponseConfigContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

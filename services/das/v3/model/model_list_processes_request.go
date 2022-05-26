@@ -63,6 +63,10 @@ func GetListProcessesRequestXLanguageEnum() ListProcessesRequestXLanguageEnum {
 	}
 }
 
+func (c ListProcessesRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ListProcessesRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

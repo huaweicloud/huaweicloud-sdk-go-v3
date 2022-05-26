@@ -56,6 +56,10 @@ func GetNovaLinkRelEnum() NovaLinkRelEnum {
 	}
 }
 
+func (c NovaLinkRel) Value() string {
+	return c.value
+}
+
 func (c NovaLinkRel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

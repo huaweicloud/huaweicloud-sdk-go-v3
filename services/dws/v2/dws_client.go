@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dws/v2/model"
 )
 
@@ -19,7 +19,7 @@ func DwsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 创建集群
+// CreateCluster 创建集群
 //
 // 该接口用于创建集群。
 // 集群必须要运行在VPC之内，创建集群前，您需要先创建VPC，并获取VPC和子网的id。
@@ -37,7 +37,13 @@ func (c *DwsClient) CreateCluster(request *model.CreateClusterRequest) (*model.C
 	}
 }
 
-// 创建快照
+// CreateClusterInvoker 创建集群
+func (c *DwsClient) CreateClusterInvoker(request *model.CreateClusterRequest) *CreateClusterInvoker {
+	requestDef := GenReqDefForCreateCluster()
+	return &CreateClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSnapshot 创建快照
 //
 // 该接口用于为指定集群创建快照。
 //
@@ -53,7 +59,13 @@ func (c *DwsClient) CreateSnapshot(request *model.CreateSnapshotRequest) (*model
 	}
 }
 
-// 删除集群
+// CreateSnapshotInvoker 创建快照
+func (c *DwsClient) CreateSnapshotInvoker(request *model.CreateSnapshotRequest) *CreateSnapshotInvoker {
+	requestDef := GenReqDefForCreateSnapshot()
+	return &CreateSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCluster 删除集群
 //
 // 此接口用于删除集群。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
 //
@@ -69,7 +81,13 @@ func (c *DwsClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.D
 	}
 }
 
-// 删除快照
+// DeleteClusterInvoker 删除集群
+func (c *DwsClient) DeleteClusterInvoker(request *model.DeleteClusterRequest) *DeleteClusterInvoker {
+	requestDef := GenReqDefForDeleteCluster()
+	return &DeleteClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSnapshot 删除快照
 //
 // 该接口用于删除一个指定手动快照。
 //
@@ -85,7 +103,13 @@ func (c *DwsClient) DeleteSnapshot(request *model.DeleteSnapshotRequest) (*model
 	}
 }
 
-// 查询集群详情
+// DeleteSnapshotInvoker 删除快照
+func (c *DwsClient) DeleteSnapshotInvoker(request *model.DeleteSnapshotRequest) *DeleteSnapshotInvoker {
+	requestDef := GenReqDefForDeleteSnapshot()
+	return &DeleteSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClusterDetails 查询集群详情
 //
 // 该接口用于查询集群详情。
 //
@@ -101,7 +125,13 @@ func (c *DwsClient) ListClusterDetails(request *model.ListClusterDetailsRequest)
 	}
 }
 
-// 查询集群列表
+// ListClusterDetailsInvoker 查询集群详情
+func (c *DwsClient) ListClusterDetailsInvoker(request *model.ListClusterDetailsRequest) *ListClusterDetailsInvoker {
+	requestDef := GenReqDefForListClusterDetails()
+	return &ListClusterDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClusters 查询集群列表
 //
 // 该接口用于查询并显示集群列表
 //
@@ -117,7 +147,13 @@ func (c *DwsClient) ListClusters(request *model.ListClustersRequest) (*model.Lis
 	}
 }
 
-// 查询节点类型
+// ListClustersInvoker 查询集群列表
+func (c *DwsClient) ListClustersInvoker(request *model.ListClustersRequest) *ListClustersInvoker {
+	requestDef := GenReqDefForListClusters()
+	return &ListClustersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNodeTypes 查询节点类型
 //
 // 该接口用于查询所有GaussDB(DWS)服务支持的节点类型。
 //
@@ -133,7 +169,13 @@ func (c *DwsClient) ListNodeTypes(request *model.ListNodeTypesRequest) (*model.L
 	}
 }
 
-// 查询快照详情
+// ListNodeTypesInvoker 查询节点类型
+func (c *DwsClient) ListNodeTypesInvoker(request *model.ListNodeTypesRequest) *ListNodeTypesInvoker {
+	requestDef := GenReqDefForListNodeTypes()
+	return &ListNodeTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSnapshotDetails 查询快照详情
 //
 // 该接口用于使用快照ID查询快照详情。
 //
@@ -149,7 +191,13 @@ func (c *DwsClient) ListSnapshotDetails(request *model.ListSnapshotDetailsReques
 	}
 }
 
-// 查询快照列表
+// ListSnapshotDetailsInvoker 查询快照详情
+func (c *DwsClient) ListSnapshotDetailsInvoker(request *model.ListSnapshotDetailsRequest) *ListSnapshotDetailsInvoker {
+	requestDef := GenReqDefForListSnapshotDetails()
+	return &ListSnapshotDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSnapshots 查询快照列表
 //
 // 该接口用于查询快照列表。
 //
@@ -165,7 +213,13 @@ func (c *DwsClient) ListSnapshots(request *model.ListSnapshotsRequest) (*model.L
 	}
 }
 
-// 重置密码
+// ListSnapshotsInvoker 查询快照列表
+func (c *DwsClient) ListSnapshotsInvoker(request *model.ListSnapshotsRequest) *ListSnapshotsInvoker {
+	requestDef := GenReqDefForListSnapshots()
+	return &ListSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetPassword 重置密码
 //
 // 此接口用于重置集群管理员密码。
 //
@@ -181,7 +235,13 @@ func (c *DwsClient) ResetPassword(request *model.ResetPasswordRequest) (*model.R
 	}
 }
 
-// 扩容集群调整集群大小
+// ResetPasswordInvoker 重置密码
+func (c *DwsClient) ResetPasswordInvoker(request *model.ResetPasswordRequest) *ResetPasswordInvoker {
+	requestDef := GenReqDefForResetPassword()
+	return &ResetPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResizeCluster 扩容集群调整集群大小
 //
 // 此接口用于扩容集群。
 //
@@ -197,7 +257,13 @@ func (c *DwsClient) ResizeCluster(request *model.ResizeClusterRequest) (*model.R
 	}
 }
 
-// 重启集群
+// ResizeClusterInvoker 扩容集群调整集群大小
+func (c *DwsClient) ResizeClusterInvoker(request *model.ResizeClusterRequest) *ResizeClusterInvoker {
+	requestDef := GenReqDefForResizeCluster()
+	return &ResizeClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestartCluster 重启集群
 //
 // 此接口用于重启集群。
 //
@@ -213,7 +279,13 @@ func (c *DwsClient) RestartCluster(request *model.RestartClusterRequest) (*model
 	}
 }
 
-// 恢复集群
+// RestartClusterInvoker 重启集群
+func (c *DwsClient) RestartClusterInvoker(request *model.RestartClusterRequest) *RestartClusterInvoker {
+	requestDef := GenReqDefForRestartCluster()
+	return &RestartClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestoreCluster 恢复集群
 //
 // 该接口用于使用快照恢复集群。
 //
@@ -227,4 +299,10 @@ func (c *DwsClient) RestoreCluster(request *model.RestoreClusterRequest) (*model
 	} else {
 		return resp.(*model.RestoreClusterResponse), nil
 	}
+}
+
+// RestoreClusterInvoker 恢复集群
+func (c *DwsClient) RestoreClusterInvoker(request *model.RestoreClusterRequest) *RestoreClusterInvoker {
+	requestDef := GenReqDefForRestoreCluster()
+	return &RestoreClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -74,6 +74,10 @@ func GetCreateSignatureKeyV2ResponseSignTypeEnum() CreateSignatureKeyV2ResponseS
 	}
 }
 
+func (c CreateSignatureKeyV2ResponseSignType) Value() string {
+	return c.value
+}
+
 func (c CreateSignatureKeyV2ResponseSignType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -110,6 +114,10 @@ func GetCreateSignatureKeyV2ResponseSignAlgorithmEnum() CreateSignatureKeyV2Resp
 			value: "aes-256-cfb",
 		},
 	}
+}
+
+func (c CreateSignatureKeyV2ResponseSignAlgorithm) Value() string {
+	return c.value
 }
 
 func (c CreateSignatureKeyV2ResponseSignAlgorithm) MarshalJSON() ([]byte, error) {

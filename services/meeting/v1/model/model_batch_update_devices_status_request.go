@@ -53,6 +53,10 @@ func GetBatchUpdateDevicesStatusRequestValueEnum() BatchUpdateDevicesStatusReque
 	}
 }
 
+func (c BatchUpdateDevicesStatusRequestValue) Value() int32 {
+	return c.value
+}
+
 func (c BatchUpdateDevicesStatusRequestValue) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

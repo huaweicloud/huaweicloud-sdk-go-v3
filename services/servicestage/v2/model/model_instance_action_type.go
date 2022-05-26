@@ -42,6 +42,10 @@ func GetInstanceActionTypeEnum() InstanceActionTypeEnum {
 	}
 }
 
+func (c InstanceActionType) Value() string {
+	return c.value
+}
+
 func (c InstanceActionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

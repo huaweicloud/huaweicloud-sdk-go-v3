@@ -87,6 +87,10 @@ func GetNodeStatusPhaseEnum() NodeStatusPhaseEnum {
 	}
 }
 
+func (c NodeStatusPhase) Value() string {
+	return c.value
+}
+
 func (c NodeStatusPhase) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

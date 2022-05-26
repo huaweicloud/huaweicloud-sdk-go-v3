@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vas/v2/model"
 )
 
@@ -19,7 +19,7 @@ func VasClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 创建服务作业
+// CreateTasks 创建服务作业
 //
 // 该接口用于创建服务作业
 //
@@ -35,7 +35,13 @@ func (c *VasClient) CreateTasks(request *model.CreateTasksRequest) (*model.Creat
 	}
 }
 
-// 删除服务作业
+// CreateTasksInvoker 创建服务作业
+func (c *VasClient) CreateTasksInvoker(request *model.CreateTasksRequest) *CreateTasksInvoker {
+	requestDef := GenReqDefForCreateTasks()
+	return &CreateTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTask 删除服务作业
 //
 // 该接口用于删除服务作业
 //
@@ -51,7 +57,13 @@ func (c *VasClient) DeleteTask(request *model.DeleteTaskRequest) (*model.DeleteT
 	}
 }
 
-// 获取服务作业列表
+// DeleteTaskInvoker 删除服务作业
+func (c *VasClient) DeleteTaskInvoker(request *model.DeleteTaskRequest) *DeleteTaskInvoker {
+	requestDef := GenReqDefForDeleteTask()
+	return &DeleteTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTasksDetails 获取服务作业列表
 //
 // 该接口用于获取服务作业列表
 //
@@ -67,7 +79,13 @@ func (c *VasClient) ListTasksDetails(request *model.ListTasksDetailsRequest) (*m
 	}
 }
 
-// 查询服务作业
+// ListTasksDetailsInvoker 获取服务作业列表
+func (c *VasClient) ListTasksDetailsInvoker(request *model.ListTasksDetailsRequest) *ListTasksDetailsInvoker {
+	requestDef := GenReqDefForListTasksDetails()
+	return &ListTasksDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTask 查询服务作业
 //
 // 该接口用于查询服务作业
 //
@@ -83,7 +101,13 @@ func (c *VasClient) ShowTask(request *model.ShowTaskRequest) (*model.ShowTaskRes
 	}
 }
 
-// 启动服务作业
+// ShowTaskInvoker 查询服务作业
+func (c *VasClient) ShowTaskInvoker(request *model.ShowTaskRequest) *ShowTaskInvoker {
+	requestDef := GenReqDefForShowTask()
+	return &ShowTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartTask 启动服务作业
 //
 // 该接口用于启动服务作业
 //
@@ -99,7 +123,13 @@ func (c *VasClient) StartTask(request *model.StartTaskRequest) (*model.StartTask
 	}
 }
 
-// 停止服务作业
+// StartTaskInvoker 启动服务作业
+func (c *VasClient) StartTaskInvoker(request *model.StartTaskRequest) *StartTaskInvoker {
+	requestDef := GenReqDefForStartTask()
+	return &StartTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopTask 停止服务作业
 //
 // 该接口用于停止服务作业
 //
@@ -115,7 +145,13 @@ func (c *VasClient) StopTask(request *model.StopTaskRequest) (*model.StopTaskRes
 	}
 }
 
-// 更新服务作业
+// StopTaskInvoker 停止服务作业
+func (c *VasClient) StopTaskInvoker(request *model.StopTaskRequest) *StopTaskInvoker {
+	requestDef := GenReqDefForStopTask()
+	return &StopTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTask 更新服务作业
 //
 // 该接口用于更新服务作业
 //
@@ -129,4 +165,10 @@ func (c *VasClient) UpdateTask(request *model.UpdateTaskRequest) (*model.UpdateT
 	} else {
 		return resp.(*model.UpdateTaskResponse), nil
 	}
+}
+
+// UpdateTaskInvoker 更新服务作业
+func (c *VasClient) UpdateTaskInvoker(request *model.UpdateTaskRequest) *UpdateTaskInvoker {
+	requestDef := GenReqDefForUpdateTask()
+	return &UpdateTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

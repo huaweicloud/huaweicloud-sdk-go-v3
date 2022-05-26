@@ -55,6 +55,10 @@ func GetDisassociatePublicipsOptionAssociateInstanceTypeEnum() DisassociatePubli
 	}
 }
 
+func (c DisassociatePublicipsOptionAssociateInstanceType) Value() string {
+	return c.value
+}
+
 func (c DisassociatePublicipsOptionAssociateInstanceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

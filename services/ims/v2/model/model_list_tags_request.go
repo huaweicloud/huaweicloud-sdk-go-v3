@@ -91,6 +91,10 @@ func GetListTagsRequestImagetypeEnum() ListTagsRequestImagetypeEnum {
 	}
 }
 
+func (c ListTagsRequestImagetype) Value() string {
+	return c.value
+}
+
 func (c ListTagsRequestImagetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -141,6 +145,10 @@ func GetListTagsRequestStatusEnum() ListTagsRequestStatusEnum {
 	}
 }
 
+func (c ListTagsRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListTagsRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -181,6 +189,10 @@ func GetListTagsRequestOsTypeEnum() ListTagsRequestOsTypeEnum {
 			value: "Other",
 		},
 	}
+}
+
+func (c ListTagsRequestOsType) Value() string {
+	return c.value
 }
 
 func (c ListTagsRequestOsType) MarshalJSON() ([]byte, error) {
@@ -225,6 +237,10 @@ func GetListTagsRequestMemberStatusEnum() ListTagsRequestMemberStatusEnum {
 	}
 }
 
+func (c ListTagsRequestMemberStatus) Value() string {
+	return c.value
+}
+
 func (c ListTagsRequestMemberStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -267,6 +283,10 @@ func GetListTagsRequestVirtualEnvTypeEnum() ListTagsRequestVirtualEnvTypeEnum {
 	}
 }
 
+func (c ListTagsRequestVirtualEnvType) Value() string {
+	return c.value
+}
+
 func (c ListTagsRequestVirtualEnvType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -303,6 +323,10 @@ func GetListTagsRequestArchitectureEnum() ListTagsRequestArchitectureEnum {
 			value: "arm",
 		},
 	}
+}
+
+func (c ListTagsRequestArchitecture) Value() string {
+	return c.value
 }
 
 func (c ListTagsRequestArchitecture) MarshalJSON() ([]byte, error) {

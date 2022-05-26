@@ -103,6 +103,10 @@ func GetSourceServersResponseBodyOsTypeEnum() SourceServersResponseBodyOsTypeEnu
 	}
 }
 
+func (c SourceServersResponseBodyOsType) Value() string {
+	return c.value
+}
+
 func (c SourceServersResponseBodyOsType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -181,6 +185,10 @@ func GetSourceServersResponseBodyStateEnum() SourceServersResponseBodyStateEnum 
 	}
 }
 
+func (c SourceServersResponseBodyState) Value() string {
+	return c.value
+}
+
 func (c SourceServersResponseBodyState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -233,6 +241,10 @@ func GetSourceServersResponseBodyMigrationCycleEnum() SourceServersResponseBodyM
 			value: "syncing",
 		},
 	}
+}
+
+func (c SourceServersResponseBodyMigrationCycle) Value() string {
+	return c.value
 }
 
 func (c SourceServersResponseBodyMigrationCycle) MarshalJSON() ([]byte, error) {

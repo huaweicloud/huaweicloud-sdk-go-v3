@@ -149,6 +149,10 @@ func GetScalingGroupsScalingGroupStatusEnum() ScalingGroupsScalingGroupStatusEnu
 	}
 }
 
+func (c ScalingGroupsScalingGroupStatus) Value() string {
+	return c.value
+}
+
 func (c ScalingGroupsScalingGroupStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -185,6 +189,10 @@ func GetScalingGroupsHealthPeriodicAuditMethodEnum() ScalingGroupsHealthPeriodic
 			value: "NOVA_AUDIT",
 		},
 	}
+}
+
+func (c ScalingGroupsHealthPeriodicAuditMethod) Value() string {
+	return c.value
 }
 
 func (c ScalingGroupsHealthPeriodicAuditMethod) MarshalJSON() ([]byte, error) {
@@ -231,6 +239,10 @@ func GetScalingGroupsInstanceTerminatePolicyEnum() ScalingGroupsInstanceTerminat
 			value: "NEW_INSTANCE",
 		},
 	}
+}
+
+func (c ScalingGroupsInstanceTerminatePolicy) Value() string {
+	return c.value
 }
 
 func (c ScalingGroupsInstanceTerminatePolicy) MarshalJSON() ([]byte, error) {

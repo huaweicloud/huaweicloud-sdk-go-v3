@@ -54,6 +54,10 @@ func GetDeleteRepoTagRequestContentTypeEnum() DeleteRepoTagRequestContentTypeEnu
 	}
 }
 
+func (c DeleteRepoTagRequestContentType) Value() string {
+	return c.value
+}
+
 func (c DeleteRepoTagRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

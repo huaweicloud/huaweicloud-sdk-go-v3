@@ -79,6 +79,10 @@ func GetNetworkInstanceStatusEnum() NetworkInstanceStatusEnum {
 	}
 }
 
+func (c NetworkInstanceStatus) Value() string {
+	return c.value
+}
+
 func (c NetworkInstanceStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -119,6 +123,10 @@ func GetNetworkInstanceTypeEnum() NetworkInstanceTypeEnum {
 			value: "er",
 		},
 	}
+}
+
+func (c NetworkInstanceType) Value() string {
+	return c.value
 }
 
 func (c NetworkInstanceType) MarshalJSON() ([]byte, error) {

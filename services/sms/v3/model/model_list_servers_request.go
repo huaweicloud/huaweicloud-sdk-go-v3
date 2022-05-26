@@ -112,6 +112,10 @@ func GetListServersRequestStateEnum() ListServersRequestStateEnum {
 	}
 }
 
+func (c ListServersRequestState) Value() string {
+	return c.value
+}
+
 func (c ListServersRequestState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -164,6 +168,10 @@ func GetListServersRequestMigrationCycleEnum() ListServersRequestMigrationCycleE
 			value: "cutovered",
 		},
 	}
+}
+
+func (c ListServersRequestMigrationCycle) Value() string {
+	return c.value
 }
 
 func (c ListServersRequestMigrationCycle) MarshalJSON() ([]byte, error) {

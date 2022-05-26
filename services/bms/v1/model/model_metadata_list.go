@@ -80,6 +80,10 @@ func GetMetadataListChargingModeEnum() MetadataListChargingModeEnum {
 	}
 }
 
+func (c MetadataListChargingMode) Value() string {
+	return c.value
+}
+
 func (c MetadataListChargingMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -122,6 +126,10 @@ func GetMetadataListMeteringImagetypeEnum() MetadataListMeteringImagetypeEnum {
 	}
 }
 
+func (c MetadataListMeteringImagetype) Value() string {
+	return c.value
+}
+
 func (c MetadataListMeteringImagetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -160,6 +168,10 @@ func GetMetadataListOsTypeEnum() MetadataListOsTypeEnum {
 	}
 }
 
+func (c MetadataListOsType) Value() string {
+	return c.value
+}
+
 func (c MetadataListOsType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -196,6 +208,10 @@ func GetMetadataListOsBitEnum() MetadataListOsBitEnum {
 			value: "64",
 		},
 	}
+}
+
+func (c MetadataListOsBit) Value() string {
+	return c.value
 }
 
 func (c MetadataListOsBit) MarshalJSON() ([]byte, error) {

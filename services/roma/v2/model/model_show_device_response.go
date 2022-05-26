@@ -134,6 +134,10 @@ func GetShowDeviceResponseStatusEnum() ShowDeviceResponseStatusEnum {
 	}
 }
 
+func (c ShowDeviceResponseStatus) Value() int32 {
+	return c.value
+}
+
 func (c ShowDeviceResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -172,6 +176,10 @@ func GetShowDeviceResponseOnlineStatusEnum() ShowDeviceResponseOnlineStatusEnum 
 			value: 2,
 		},
 	}
+}
+
+func (c ShowDeviceResponseOnlineStatus) Value() int32 {
+	return c.value
 }
 
 func (c ShowDeviceResponseOnlineStatus) MarshalJSON() ([]byte, error) {
@@ -214,6 +222,10 @@ func GetShowDeviceResponseDeviceTypeEnum() ShowDeviceResponseDeviceTypeEnum {
 	}
 }
 
+func (c ShowDeviceResponseDeviceType) Value() int32 {
+	return c.value
+}
+
 func (c ShowDeviceResponseDeviceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -252,6 +264,10 @@ func GetShowDeviceResponsePluginIdEnum() ShowDeviceResponsePluginIdEnum {
 			value: 2,
 		},
 	}
+}
+
+func (c ShowDeviceResponsePluginId) Value() int32 {
+	return c.value
 }
 
 func (c ShowDeviceResponsePluginId) MarshalJSON() ([]byte, error) {

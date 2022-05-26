@@ -84,6 +84,10 @@ func GetServerAppInfoRolesEnum() ServerAppInfoRolesEnum {
 	}
 }
 
+func (c ServerAppInfoRoles) Value() string {
+	return c.value
+}
+
 func (c ServerAppInfoRoles) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

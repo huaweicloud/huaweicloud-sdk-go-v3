@@ -99,6 +99,10 @@ func GetListNatGatewayDnatRulesRequestStatusEnum() ListNatGatewayDnatRulesReques
 	}
 }
 
+func (c ListNatGatewayDnatRulesRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListNatGatewayDnatRulesRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

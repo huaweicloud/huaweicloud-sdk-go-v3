@@ -64,6 +64,10 @@ func GetPipelineCreationResultStatusEnum() PipelineCreationResultStatusEnum {
 	}
 }
 
+func (c PipelineCreationResultStatus) Value() string {
+	return c.value
+}
+
 func (c PipelineCreationResultStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

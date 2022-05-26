@@ -41,6 +41,10 @@ func GetPauseScalingPolicyOptionActionEnum() PauseScalingPolicyOptionActionEnum 
 	}
 }
 
+func (c PauseScalingPolicyOptionAction) Value() string {
+	return c.value
+}
+
 func (c PauseScalingPolicyOptionAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

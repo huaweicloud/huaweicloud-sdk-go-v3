@@ -95,6 +95,10 @@ func GetConfigAudioFormatEnum() ConfigAudioFormatEnum {
 	}
 }
 
+func (c ConfigAudioFormat) Value() string {
+	return c.value
+}
+
 func (c ConfigAudioFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -149,6 +153,10 @@ func GetConfigPropertyEnum() ConfigPropertyEnum {
 	}
 }
 
+func (c ConfigProperty) Value() string {
+	return c.value
+}
+
 func (c ConfigProperty) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -185,6 +193,10 @@ func GetConfigAddPuncEnum() ConfigAddPuncEnum {
 			value: "no",
 		},
 	}
+}
+
+func (c ConfigAddPunc) Value() string {
+	return c.value
 }
 
 func (c ConfigAddPunc) MarshalJSON() ([]byte, error) {
@@ -225,6 +237,10 @@ func GetConfigDigitNormEnum() ConfigDigitNormEnum {
 	}
 }
 
+func (c ConfigDigitNorm) Value() string {
+	return c.value
+}
+
 func (c ConfigDigitNorm) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -261,6 +277,10 @@ func GetConfigNeedWordInfoEnum() ConfigNeedWordInfoEnum {
 			value: "no",
 		},
 	}
+}
+
+func (c ConfigNeedWordInfo) Value() string {
+	return c.value
 }
 
 func (c ConfigNeedWordInfo) MarshalJSON() ([]byte, error) {

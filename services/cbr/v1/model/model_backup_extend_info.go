@@ -78,6 +78,10 @@ func GetBackupExtendInfoSupportedRestoreModeEnum() BackupExtendInfoSupportedRest
 	}
 }
 
+func (c BackupExtendInfoSupportedRestoreMode) Value() string {
+	return c.value
+}
+
 func (c BackupExtendInfoSupportedRestoreMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

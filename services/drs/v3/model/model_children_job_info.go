@@ -85,6 +85,10 @@ func GetChildrenJobInfoDbUseTypeEnum() ChildrenJobInfoDbUseTypeEnum {
 	}
 }
 
+func (c ChildrenJobInfoDbUseType) Value() string {
+	return c.value
+}
+
 func (c ChildrenJobInfoDbUseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -135,6 +139,10 @@ func GetChildrenJobInfoEngineTypeEnum() ChildrenJobInfoEngineTypeEnum {
 	}
 }
 
+func (c ChildrenJobInfoEngineType) Value() string {
+	return c.value
+}
+
 func (c ChildrenJobInfoEngineType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -175,6 +183,10 @@ func GetChildrenJobInfoJobDirectionEnum() ChildrenJobInfoJobDirectionEnum {
 			value: "no-dbs",
 		},
 	}
+}
+
+func (c ChildrenJobInfoJobDirection) Value() string {
+	return c.value
 }
 
 func (c ChildrenJobInfoJobDirection) MarshalJSON() ([]byte, error) {
@@ -219,6 +231,10 @@ func GetChildrenJobInfoNetTypeEnum() ChildrenJobInfoNetTypeEnum {
 	}
 }
 
+func (c ChildrenJobInfoNetType) Value() string {
+	return c.value
+}
+
 func (c ChildrenJobInfoNetType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -259,6 +275,10 @@ func GetChildrenJobInfoTaskTypeEnum() ChildrenJobInfoTaskTypeEnum {
 			value: "INCR_TRANS 增量",
 		},
 	}
+}
+
+func (c ChildrenJobInfoTaskType) Value() string {
+	return c.value
 }
 
 func (c ChildrenJobInfoTaskType) MarshalJSON() ([]byte, error) {

@@ -2,7 +2,7 @@ package v3
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/scm/v3/model"
 )
 
@@ -19,7 +19,7 @@ func ScmClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 删除证书
+// DeleteCertificate 删除证书
 //
 // 删除证书实例，即将证书资源从华为云系统中删除。
 //
@@ -35,7 +35,13 @@ func (c *ScmClient) DeleteCertificate(request *model.DeleteCertificateRequest) (
 	}
 }
 
-// 导出证书
+// DeleteCertificateInvoker 删除证书
+func (c *ScmClient) DeleteCertificateInvoker(request *model.DeleteCertificateRequest) *DeleteCertificateInvoker {
+	requestDef := GenReqDefForDeleteCertificate()
+	return &DeleteCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportCertificate 导出证书
 //
 // 导出证书。
 //
@@ -51,7 +57,13 @@ func (c *ScmClient) ExportCertificate(request *model.ExportCertificateRequest) (
 	}
 }
 
-// 导入证书
+// ExportCertificateInvoker 导出证书
+func (c *ScmClient) ExportCertificateInvoker(request *model.ExportCertificateRequest) *ExportCertificateInvoker {
+	requestDef := GenReqDefForExportCertificate()
+	return &ExportCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportCertificate 导入证书
 //
 // 导入证书到SCM服务管理。
 //
@@ -67,7 +79,13 @@ func (c *ScmClient) ImportCertificate(request *model.ImportCertificateRequest) (
 	}
 }
 
-// 查询证书列表
+// ImportCertificateInvoker 导入证书
+func (c *ScmClient) ImportCertificateInvoker(request *model.ImportCertificateRequest) *ImportCertificateInvoker {
+	requestDef := GenReqDefForImportCertificate()
+	return &ImportCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCertificates 查询证书列表
 //
 // 根据证书名称或绑定域名查询证书列表。
 //
@@ -83,7 +101,13 @@ func (c *ScmClient) ListCertificates(request *model.ListCertificatesRequest) (*m
 	}
 }
 
-// 推送证书
+// ListCertificatesInvoker 查询证书列表
+func (c *ScmClient) ListCertificatesInvoker(request *model.ListCertificatesRequest) *ListCertificatesInvoker {
+	requestDef := GenReqDefForListCertificates()
+	return &ListCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PushCertificate 推送证书
 //
 // 推送SSL证书到弹性负载均衡（Elastic Load Balance，简称ELB）、Web应用防火墙（Web Application Firewall，WAF）、CDN（Content Delivery Network，内容分发网络）等其它华为云产品中。
 //
@@ -99,7 +123,13 @@ func (c *ScmClient) PushCertificate(request *model.PushCertificateRequest) (*mod
 	}
 }
 
-// 获取证书详情
+// PushCertificateInvoker 推送证书
+func (c *ScmClient) PushCertificateInvoker(request *model.PushCertificateRequest) *PushCertificateInvoker {
+	requestDef := GenReqDefForPushCertificate()
+	return &PushCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCertificate 获取证书详情
 //
 // 查询某张证书的详细信息。
 //
@@ -113,4 +143,10 @@ func (c *ScmClient) ShowCertificate(request *model.ShowCertificateRequest) (*mod
 	} else {
 		return resp.(*model.ShowCertificateResponse), nil
 	}
+}
+
+// ShowCertificateInvoker 获取证书详情
+func (c *ScmClient) ShowCertificateInvoker(request *model.ShowCertificateRequest) *ShowCertificateInvoker {
+	requestDef := GenReqDefForShowCertificate()
+	return &ShowCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

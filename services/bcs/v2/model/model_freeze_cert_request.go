@@ -17,6 +17,8 @@ type FreezeCertRequest struct {
 
 	// orgName
 	OrgName string `json:"org_name"`
+
+	Body *FreezeCertRequestBody `json:"body,omitempty" type:"multipart"`
 }
 
 func (o FreezeCertRequest) String() string {

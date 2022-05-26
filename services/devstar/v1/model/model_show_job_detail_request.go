@@ -48,6 +48,10 @@ func GetShowJobDetailRequestXLanguageEnum() ShowJobDetailRequestXLanguageEnum {
 	}
 }
 
+func (c ShowJobDetailRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ShowJobDetailRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

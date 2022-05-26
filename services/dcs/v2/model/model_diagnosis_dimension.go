@@ -58,6 +58,10 @@ func GetDiagnosisDimensionNameEnum() DiagnosisDimensionNameEnum {
 	}
 }
 
+func (c DiagnosisDimensionName) Value() string {
+	return c.value
+}
+
 func (c DiagnosisDimensionName) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

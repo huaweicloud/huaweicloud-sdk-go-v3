@@ -92,6 +92,10 @@ func GetUpdateRequestThrottlingPolicyV2ResponseTimeUnitEnum() UpdateRequestThrot
 	}
 }
 
+func (c UpdateRequestThrottlingPolicyV2ResponseTimeUnit) Value() string {
+	return c.value
+}
+
 func (c UpdateRequestThrottlingPolicyV2ResponseTimeUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -129,6 +133,10 @@ func GetUpdateRequestThrottlingPolicyV2ResponseTypeEnum() UpdateRequestThrottlin
 	}
 }
 
+func (c UpdateRequestThrottlingPolicyV2ResponseType) Value() int32 {
+	return c.value
+}
+
 func (c UpdateRequestThrottlingPolicyV2ResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -164,6 +172,10 @@ func GetUpdateRequestThrottlingPolicyV2ResponseIsIncluSpecialThrottleEnum() Upda
 			value: 2,
 		},
 	}
+}
+
+func (c UpdateRequestThrottlingPolicyV2ResponseIsIncluSpecialThrottle) Value() int32 {
+	return c.value
 }
 
 func (c UpdateRequestThrottlingPolicyV2ResponseIsIncluSpecialThrottle) MarshalJSON() ([]byte, error) {

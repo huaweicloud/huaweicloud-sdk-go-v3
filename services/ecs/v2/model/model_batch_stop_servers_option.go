@@ -48,6 +48,10 @@ func GetBatchStopServersOptionTypeEnum() BatchStopServersOptionTypeEnum {
 	}
 }
 
+func (c BatchStopServersOptionType) Value() string {
+	return c.value
+}
+
 func (c BatchStopServersOptionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

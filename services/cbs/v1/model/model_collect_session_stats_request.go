@@ -61,6 +61,10 @@ func GetCollectSessionStatsRequestIntervalEnum() CollectSessionStatsRequestInter
 	}
 }
 
+func (c CollectSessionStatsRequestInterval) Value() string {
+	return c.value
+}
+
 func (c CollectSessionStatsRequestInterval) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -64,6 +64,10 @@ func GetCollectReplyRatesRequestIntervalEnum() CollectReplyRatesRequestIntervalE
 	}
 }
 
+func (c CollectReplyRatesRequestInterval) Value() string {
+	return c.value
+}
+
 func (c CollectReplyRatesRequestInterval) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

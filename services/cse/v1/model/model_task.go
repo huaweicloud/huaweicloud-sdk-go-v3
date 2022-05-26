@@ -97,6 +97,10 @@ func GetTaskTypeEnum() TaskTypeEnum {
 	}
 }
 
+func (c TaskType) Value() string {
+	return c.value
+}
+
 func (c TaskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -145,6 +149,10 @@ func GetTaskStatusEnum() TaskStatusEnum {
 			value: "Finished",
 		},
 	}
+}
+
+func (c TaskStatus) Value() string {
+	return c.value
 }
 
 func (c TaskStatus) MarshalJSON() ([]byte, error) {

@@ -57,6 +57,10 @@ func GetL7policiesInStatusRespActionEnum() L7policiesInStatusRespActionEnum {
 	}
 }
 
+func (c L7policiesInStatusRespAction) Value() string {
+	return c.value
+}
+
 func (c L7policiesInStatusRespAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

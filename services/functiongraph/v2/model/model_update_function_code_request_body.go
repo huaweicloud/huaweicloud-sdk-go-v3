@@ -63,6 +63,10 @@ func GetUpdateFunctionCodeRequestBodyCodeTypeEnum() UpdateFunctionCodeRequestBod
 	}
 }
 
+func (c UpdateFunctionCodeRequestBodyCodeType) Value() string {
+	return c.value
+}
+
 func (c UpdateFunctionCodeRequestBodyCodeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudtest/v1/model"
 )
 
@@ -19,7 +19,7 @@ func CloudtestClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 批量删除自定义测试服务类型用例
+// BatchDeleteTestCase 批量删除自定义测试服务类型用例
 //
 // 批量删除自定义测试服务类型用例
 //
@@ -35,7 +35,13 @@ func (c *CloudtestClient) BatchDeleteTestCase(request *model.BatchDeleteTestCase
 	}
 }
 
-// 项目下创建计划
+// BatchDeleteTestCaseInvoker 批量删除自定义测试服务类型用例
+func (c *CloudtestClient) BatchDeleteTestCaseInvoker(request *model.BatchDeleteTestCaseRequest) *BatchDeleteTestCaseInvoker {
+	requestDef := GenReqDefForBatchDeleteTestCase()
+	return &BatchDeleteTestCaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePlan 项目下创建计划
 //
 // 项目下创建计划
 //
@@ -51,7 +57,13 @@ func (c *CloudtestClient) CreatePlan(request *model.CreatePlanRequest) (*model.C
 	}
 }
 
-// 新测试类型服务注册到云测
+// CreatePlanInvoker 项目下创建计划
+func (c *CloudtestClient) CreatePlanInvoker(request *model.CreatePlanRequest) *CreatePlanInvoker {
+	requestDef := GenReqDefForCreatePlan()
+	return &CreatePlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateService 新测试类型服务注册到云测
 //
 // 通过接口CreateService注册成为云测的自定义服务。 注册完成后云测界面将会出现此自定义测试类型。
 //
@@ -67,7 +79,13 @@ func (c *CloudtestClient) CreateService(request *model.CreateServiceRequest) (*m
 	}
 }
 
-// 创建自定义测试服务类型用例
+// CreateServiceInvoker 新测试类型服务注册到云测
+func (c *CloudtestClient) CreateServiceInvoker(request *model.CreateServiceRequest) *CreateServiceInvoker {
+	requestDef := GenReqDefForCreateService()
+	return &CreateServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTestCase 创建自定义测试服务类型用例
 //
 // 创建自定义测试服务类型用例
 //
@@ -83,7 +101,13 @@ func (c *CloudtestClient) CreateTestCase(request *model.CreateTestCaseRequest) (
 	}
 }
 
-// 计划中批量添加测试用例
+// CreateTestCaseInvoker 创建自定义测试服务类型用例
+func (c *CloudtestClient) CreateTestCaseInvoker(request *model.CreateTestCaseRequest) *CreateTestCaseInvoker {
+	requestDef := GenReqDefForCreateTestCase()
+	return &CreateTestCaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTestCaseInPlan 计划中批量添加测试用例
 //
 // 计划中批量添加测试用例
 //
@@ -99,7 +123,13 @@ func (c *CloudtestClient) CreateTestCaseInPlan(request *model.CreateTestCaseInPl
 	}
 }
 
-// 删除已注册服务
+// CreateTestCaseInPlanInvoker 计划中批量添加测试用例
+func (c *CloudtestClient) CreateTestCaseInPlanInvoker(request *model.CreateTestCaseInPlanRequest) *CreateTestCaseInPlanInvoker {
+	requestDef := GenReqDefForCreateTestCaseInPlan()
+	return &CreateTestCaseInPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteService 删除已注册服务
 //
 // 删除已注册服务
 //
@@ -115,7 +145,13 @@ func (c *CloudtestClient) DeleteService(request *model.DeleteServiceRequest) (*m
 	}
 }
 
-// 批量执行测试用例
+// DeleteServiceInvoker 删除已注册服务
+func (c *CloudtestClient) DeleteServiceInvoker(request *model.DeleteServiceRequest) *DeleteServiceInvoker {
+	requestDef := GenReqDefForDeleteService()
+	return &DeleteServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunTestCase 批量执行测试用例
 //
 // 批量执行测试用例
 //
@@ -131,7 +167,13 @@ func (c *CloudtestClient) RunTestCase(request *model.RunTestCaseRequest) (*model
 	}
 }
 
-// 查询某个测试计划下的需求树
+// RunTestCaseInvoker 批量执行测试用例
+func (c *CloudtestClient) RunTestCaseInvoker(request *model.RunTestCaseRequest) *RunTestCaseInvoker {
+	requestDef := GenReqDefForRunTestCase()
+	return &RunTestCaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIssuesByPlanId 查询某个测试计划下的需求树
 //
 // 查询某个测试计划下的需求列表
 //
@@ -147,7 +189,13 @@ func (c *CloudtestClient) ShowIssuesByPlanId(request *model.ShowIssuesByPlanIdRe
 	}
 }
 
-// 查询某测试计划下的操作历史
+// ShowIssuesByPlanIdInvoker 查询某个测试计划下的需求树
+func (c *CloudtestClient) ShowIssuesByPlanIdInvoker(request *model.ShowIssuesByPlanIdRequest) *ShowIssuesByPlanIdInvoker {
+	requestDef := GenReqDefForShowIssuesByPlanId()
+	return &ShowIssuesByPlanIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPlanJournals 查询某测试计划下的操作历史
 //
 // 查询某测试计划下的操作历史
 //
@@ -163,7 +211,13 @@ func (c *CloudtestClient) ShowPlanJournals(request *model.ShowPlanJournalsReques
 	}
 }
 
-// 项目下查询测试计划列表v2
+// ShowPlanJournalsInvoker 查询某测试计划下的操作历史
+func (c *CloudtestClient) ShowPlanJournalsInvoker(request *model.ShowPlanJournalsRequest) *ShowPlanJournalsInvoker {
+	requestDef := GenReqDefForShowPlanJournals()
+	return &ShowPlanJournalsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPlanList 项目下查询测试计划列表v2
 //
 // 项目下查询测试计划列表v2
 //
@@ -179,7 +233,13 @@ func (c *CloudtestClient) ShowPlanList(request *model.ShowPlanListRequest) (*mod
 	}
 }
 
-// 项目下查询测试计划列表
+// ShowPlanListInvoker 项目下查询测试计划列表v2
+func (c *CloudtestClient) ShowPlanListInvoker(request *model.ShowPlanListRequest) *ShowPlanListInvoker {
+	requestDef := GenReqDefForShowPlanList()
+	return &ShowPlanListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPlans 项目下查询测试计划列表
 //
 // 项目下查询测试计划列表
 //
@@ -195,7 +255,13 @@ func (c *CloudtestClient) ShowPlans(request *model.ShowPlansRequest) (*model.Sho
 	}
 }
 
-// 用户获取自己当前已经注册的服务
+// ShowPlansInvoker 项目下查询测试计划列表
+func (c *CloudtestClient) ShowPlansInvoker(request *model.ShowPlansRequest) *ShowPlansInvoker {
+	requestDef := GenReqDefForShowPlans()
+	return &ShowPlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRegisterService 用户获取自己当前已经注册的服务
 //
 // 用户获取自己当前已经注册的服务
 //
@@ -211,7 +277,13 @@ func (c *CloudtestClient) ShowRegisterService(request *model.ShowRegisterService
 	}
 }
 
-// 获取测试用例详情
+// ShowRegisterServiceInvoker 用户获取自己当前已经注册的服务
+func (c *CloudtestClient) ShowRegisterServiceInvoker(request *model.ShowRegisterServiceRequest) *ShowRegisterServiceInvoker {
+	requestDef := GenReqDefForShowRegisterService()
+	return &ShowRegisterServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTestCaseDetail 获取测试用例详情
 //
 // 获取测试用例详情
 //
@@ -227,7 +299,13 @@ func (c *CloudtestClient) ShowTestCaseDetail(request *model.ShowTestCaseDetailRe
 	}
 }
 
-// 通过用例编号获取测试用例详情
+// ShowTestCaseDetailInvoker 获取测试用例详情
+func (c *CloudtestClient) ShowTestCaseDetailInvoker(request *model.ShowTestCaseDetailRequest) *ShowTestCaseDetailInvoker {
+	requestDef := GenReqDefForShowTestCaseDetail()
+	return &ShowTestCaseDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTestCaseDetailV2 通过用例编号获取测试用例详情
 //
 // 通过用例编号获取测试用例详情
 //
@@ -243,7 +321,13 @@ func (c *CloudtestClient) ShowTestCaseDetailV2(request *model.ShowTestCaseDetail
 	}
 }
 
-// 更新已注册服务
+// ShowTestCaseDetailV2Invoker 通过用例编号获取测试用例详情
+func (c *CloudtestClient) ShowTestCaseDetailV2Invoker(request *model.ShowTestCaseDetailV2Request) *ShowTestCaseDetailV2Invoker {
+	requestDef := GenReqDefForShowTestCaseDetailV2()
+	return &ShowTestCaseDetailV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateService 更新已注册服务
 //
 // 更新已注册服务
 //
@@ -259,7 +343,13 @@ func (c *CloudtestClient) UpdateService(request *model.UpdateServiceRequest) (*m
 	}
 }
 
-// 更新自定义测试服务类型用例
+// UpdateServiceInvoker 更新已注册服务
+func (c *CloudtestClient) UpdateServiceInvoker(request *model.UpdateServiceRequest) *UpdateServiceInvoker {
+	requestDef := GenReqDefForUpdateService()
+	return &UpdateServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTestCase 更新自定义测试服务类型用例
 //
 // 更新自定义测试服务类型用例
 //
@@ -275,7 +365,13 @@ func (c *CloudtestClient) UpdateTestCase(request *model.UpdateTestCaseRequest) (
 	}
 }
 
-// 批量更新测试用例结果
+// UpdateTestCaseInvoker 更新自定义测试服务类型用例
+func (c *CloudtestClient) UpdateTestCaseInvoker(request *model.UpdateTestCaseRequest) *UpdateTestCaseInvoker {
+	requestDef := GenReqDefForUpdateTestCase()
+	return &UpdateTestCaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTestCaseResult 批量更新测试用例结果
 //
 // 批量更新测试用例结果
 //
@@ -291,7 +387,13 @@ func (c *CloudtestClient) UpdateTestCaseResult(request *model.UpdateTestCaseResu
 	}
 }
 
-// 通过导入仓库中的文件生成接口测试套
+// UpdateTestCaseResultInvoker 批量更新测试用例结果
+func (c *CloudtestClient) UpdateTestCaseResultInvoker(request *model.UpdateTestCaseResultRequest) *UpdateTestCaseResultInvoker {
+	requestDef := GenReqDefForUpdateTestCaseResult()
+	return &UpdateTestCaseResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateApiTestSuiteByRepoFile 通过导入仓库中的文件生成接口测试套
 //
 // 通过导入仓库中的文件生成接口测试套
 //
@@ -307,7 +409,13 @@ func (c *CloudtestClient) CreateApiTestSuiteByRepoFile(request *model.CreateApiT
 	}
 }
 
-// 获取云测的环境参数分组列表
+// CreateApiTestSuiteByRepoFileInvoker 通过导入仓库中的文件生成接口测试套
+func (c *CloudtestClient) CreateApiTestSuiteByRepoFileInvoker(request *model.CreateApiTestSuiteByRepoFileRequest) *CreateApiTestSuiteByRepoFileInvoker {
+	requestDef := GenReqDefForCreateApiTestSuiteByRepoFile()
+	return &CreateApiTestSuiteByRepoFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEnvironments 获取云测的环境参数分组列表
 //
 // 获取云测的环境参数分组列表
 //
@@ -321,4 +429,10 @@ func (c *CloudtestClient) ListEnvironments(request *model.ListEnvironmentsReques
 	} else {
 		return resp.(*model.ListEnvironmentsResponse), nil
 	}
+}
+
+// ListEnvironmentsInvoker 获取云测的环境参数分组列表
+func (c *CloudtestClient) ListEnvironmentsInvoker(request *model.ListEnvironmentsRequest) *ListEnvironmentsInvoker {
+	requestDef := GenReqDefForListEnvironments()
+	return &ListEnvironmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

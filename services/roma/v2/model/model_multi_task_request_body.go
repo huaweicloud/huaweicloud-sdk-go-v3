@@ -65,6 +65,10 @@ func GetMultiTaskRequestBodyTaskTypeEnum() MultiTaskRequestBodyTaskTypeEnum {
 	}
 }
 
+func (c MultiTaskRequestBodyTaskType) Value() string {
+	return c.value
+}
+
 func (c MultiTaskRequestBodyTaskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -105,6 +109,10 @@ func GetMultiTaskRequestBodyOperationTypesEnum() MultiTaskRequestBodyOperationTy
 			value: "DELETE",
 		},
 	}
+}
+
+func (c MultiTaskRequestBodyOperationTypes) Value() string {
+	return c.value
 }
 
 func (c MultiTaskRequestBodyOperationTypes) MarshalJSON() ([]byte, error) {

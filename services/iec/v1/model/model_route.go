@@ -58,6 +58,10 @@ func GetRouteTypeEnum() RouteTypeEnum {
 	}
 }
 
+func (c RouteType) Value() string {
+	return c.value
+}
+
 func (c RouteType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

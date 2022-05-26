@@ -65,6 +65,10 @@ func GetBriefStructTemplateModelTemplateTypeEnum() BriefStructTemplateModelTempl
 	}
 }
 
+func (c BriefStructTemplateModelTemplateType) Value() string {
+	return c.value
+}
+
 func (c BriefStructTemplateModelTemplateType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

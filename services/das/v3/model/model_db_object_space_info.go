@@ -63,6 +63,10 @@ func GetDbObjectSpaceInfoObjectTypeEnum() DbObjectSpaceInfoObjectTypeEnum {
 	}
 }
 
+func (c DbObjectSpaceInfoObjectType) Value() string {
+	return c.value
+}
+
 func (c DbObjectSpaceInfoObjectType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

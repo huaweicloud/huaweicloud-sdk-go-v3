@@ -76,6 +76,10 @@ func GetKeywordsRequestConditionEnum() KeywordsRequestConditionEnum {
 	}
 }
 
+func (c KeywordsRequestCondition) Value() string {
+	return c.value
+}
+
 func (c KeywordsRequestCondition) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -108,6 +112,10 @@ func GetKeywordsRequestSearchTimeRangeUnitEnum() KeywordsRequestSearchTimeRangeU
 			value: "minute",
 		},
 	}
+}
+
+func (c KeywordsRequestSearchTimeRangeUnit) Value() string {
+	return c.value
 }
 
 func (c KeywordsRequestSearchTimeRangeUnit) MarshalJSON() ([]byte, error) {

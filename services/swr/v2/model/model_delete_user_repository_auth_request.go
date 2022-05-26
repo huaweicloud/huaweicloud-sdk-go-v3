@@ -53,6 +53,10 @@ func GetDeleteUserRepositoryAuthRequestContentTypeEnum() DeleteUserRepositoryAut
 	}
 }
 
+func (c DeleteUserRepositoryAuthRequestContentType) Value() string {
+	return c.value
+}
+
 func (c DeleteUserRepositoryAuthRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -48,6 +48,10 @@ func GetShowApplicationV3RequestXLanguageEnum() ShowApplicationV3RequestXLanguag
 	}
 }
 
+func (c ShowApplicationV3RequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ShowApplicationV3RequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

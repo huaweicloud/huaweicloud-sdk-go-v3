@@ -51,6 +51,10 @@ func GetShowUserRepositoryAuthRequestContentTypeEnum() ShowUserRepositoryAuthReq
 	}
 }
 
+func (c ShowUserRepositoryAuthRequestContentType) Value() string {
+	return c.value
+}
+
 func (c ShowUserRepositoryAuthRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

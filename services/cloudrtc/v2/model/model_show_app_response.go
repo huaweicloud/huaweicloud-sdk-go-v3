@@ -75,6 +75,10 @@ func GetShowAppResponseScopeEnum() ShowAppResponseScopeEnum {
 	}
 }
 
+func (c ShowAppResponseScope) Value() string {
+	return c.value
+}
+
 func (c ShowAppResponseScope) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

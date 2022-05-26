@@ -50,6 +50,10 @@ func GetThrottleSpecialCreateObjectTypeEnum() ThrottleSpecialCreateObjectTypeEnu
 	}
 }
 
+func (c ThrottleSpecialCreateObjectType) Value() string {
+	return c.value
+}
+
 func (c ThrottleSpecialCreateObjectType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

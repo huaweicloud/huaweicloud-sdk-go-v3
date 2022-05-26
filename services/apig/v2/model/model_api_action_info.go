@@ -53,6 +53,10 @@ func GetApiActionInfoActionEnum() ApiActionInfoActionEnum {
 	}
 }
 
+func (c ApiActionInfoAction) Value() string {
+	return c.value
+}
+
 func (c ApiActionInfoAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

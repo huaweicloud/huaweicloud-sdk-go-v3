@@ -108,6 +108,10 @@ func GetPremiumWafHostTlsEnum() PremiumWafHostTlsEnum {
 	}
 }
 
+func (c PremiumWafHostTls) Value() string {
+	return c.value
+}
+
 func (c PremiumWafHostTls) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -156,6 +160,10 @@ func GetPremiumWafHostCipherEnum() PremiumWafHostCipherEnum {
 			value: "cipher_default",
 		},
 	}
+}
+
+func (c PremiumWafHostCipher) Value() string {
+	return c.value
 }
 
 func (c PremiumWafHostCipher) MarshalJSON() ([]byte, error) {

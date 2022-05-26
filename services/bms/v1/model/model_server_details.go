@@ -180,6 +180,10 @@ func GetServerDetailsStatusEnum() ServerDetailsStatusEnum {
 	}
 }
 
+func (c ServerDetailsStatus) Value() string {
+	return c.value
+}
+
 func (c ServerDetailsStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -242,6 +246,10 @@ func GetServerDetailsOSEXTSTStaskStateEnum() ServerDetailsOSEXTSTStaskStateEnum 
 	}
 }
 
+func (c ServerDetailsOSEXTSTStaskState) Value() string {
+	return c.value
+}
+
 func (c ServerDetailsOSEXTSTStaskState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -288,6 +296,10 @@ func GetServerDetailsOSEXTSTSvmStateEnum() ServerDetailsOSEXTSTSvmStateEnum {
 	}
 }
 
+func (c ServerDetailsOSEXTSTSvmState) Value() string {
+	return c.value
+}
+
 func (c ServerDetailsOSEXTSTSvmState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -324,6 +336,10 @@ func GetServerDetailsOSDCFdiskConfigEnum() ServerDetailsOSDCFdiskConfigEnum {
 			value: "AUTO",
 		},
 	}
+}
+
+func (c ServerDetailsOSDCFdiskConfig) Value() string {
+	return c.value
 }
 
 func (c ServerDetailsOSDCFdiskConfig) MarshalJSON() ([]byte, error) {
@@ -370,6 +386,10 @@ func GetServerDetailsHostStatusEnum() ServerDetailsHostStatusEnum {
 			value: "MAINTENANCE",
 		},
 	}
+}
+
+func (c ServerDetailsHostStatus) Value() string {
+	return c.value
 }
 
 func (c ServerDetailsHostStatus) MarshalJSON() ([]byte, error) {

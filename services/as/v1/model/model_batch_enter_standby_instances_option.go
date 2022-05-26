@@ -54,6 +54,10 @@ func GetBatchEnterStandbyInstancesOptionInstanceDeleteEnum() BatchEnterStandbyIn
 	}
 }
 
+func (c BatchEnterStandbyInstancesOptionInstanceDelete) Value() string {
+	return c.value
+}
+
 func (c BatchEnterStandbyInstancesOptionInstanceDelete) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -86,6 +90,10 @@ func GetBatchEnterStandbyInstancesOptionActionEnum() BatchEnterStandbyInstancesO
 			value: "ENTER_STANDBY",
 		},
 	}
+}
+
+func (c BatchEnterStandbyInstancesOptionAction) Value() string {
+	return c.value
 }
 
 func (c BatchEnterStandbyInstancesOptionAction) MarshalJSON() ([]byte, error) {
@@ -124,6 +132,10 @@ func GetBatchEnterStandbyInstancesOptionInstanceAppendEnum() BatchEnterStandbyIn
 			value: "yes",
 		},
 	}
+}
+
+func (c BatchEnterStandbyInstancesOptionInstanceAppend) Value() string {
+	return c.value
 }
 
 func (c BatchEnterStandbyInstancesOptionInstanceAppend) MarshalJSON() ([]byte, error) {

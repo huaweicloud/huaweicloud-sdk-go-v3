@@ -48,6 +48,10 @@ func GetReqSetOrDeleteTagsActionEnum() ReqSetOrDeleteTagsActionEnum {
 	}
 }
 
+func (c ReqSetOrDeleteTagsAction) Value() string {
+	return c.value
+}
+
 func (c ReqSetOrDeleteTagsAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

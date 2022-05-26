@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/kafka/v2/model"
 )
 
@@ -19,7 +19,7 @@ func KafkaClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 批量添加或删除实例标签
+// BatchCreateOrDeleteKafkaTag 批量添加或删除实例标签
 //
 // 批量添加或删除实例标签。
 //
@@ -35,7 +35,13 @@ func (c *KafkaClient) BatchCreateOrDeleteKafkaTag(request *model.BatchCreateOrDe
 	}
 }
 
-// Kafka实例批量删除Topic
+// BatchCreateOrDeleteKafkaTagInvoker 批量添加或删除实例标签
+func (c *KafkaClient) BatchCreateOrDeleteKafkaTagInvoker(request *model.BatchCreateOrDeleteKafkaTagRequest) *BatchCreateOrDeleteKafkaTagInvoker {
+	requestDef := GenReqDefForBatchCreateOrDeleteKafkaTag()
+	return &BatchCreateOrDeleteKafkaTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteInstanceTopic Kafka实例批量删除Topic
 //
 // 该接口用于向Kafka实例批量删除Topic。
 //
@@ -51,7 +57,13 @@ func (c *KafkaClient) BatchDeleteInstanceTopic(request *model.BatchDeleteInstanc
 	}
 }
 
-// 批量删除用户
+// BatchDeleteInstanceTopicInvoker Kafka实例批量删除Topic
+func (c *KafkaClient) BatchDeleteInstanceTopicInvoker(request *model.BatchDeleteInstanceTopicRequest) *BatchDeleteInstanceTopicInvoker {
+	requestDef := GenReqDefForBatchDeleteInstanceTopic()
+	return &BatchDeleteInstanceTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteInstanceUsers 批量删除用户
 //
 // 批量删除Kafka实例的用户
 //
@@ -67,7 +79,13 @@ func (c *KafkaClient) BatchDeleteInstanceUsers(request *model.BatchDeleteInstanc
 	}
 }
 
-// 批量重启或删除实例
+// BatchDeleteInstanceUsersInvoker 批量删除用户
+func (c *KafkaClient) BatchDeleteInstanceUsersInvoker(request *model.BatchDeleteInstanceUsersRequest) *BatchDeleteInstanceUsersInvoker {
+	requestDef := GenReqDefForBatchDeleteInstanceUsers()
+	return &BatchDeleteInstanceUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchRestartOrDeleteInstances 批量重启或删除实例
 //
 // 批量重启或删除实例。
 //
@@ -87,7 +105,13 @@ func (c *KafkaClient) BatchRestartOrDeleteInstances(request *model.BatchRestartO
 	}
 }
 
-// 创建实例的转储节点
+// BatchRestartOrDeleteInstancesInvoker 批量重启或删除实例
+func (c *KafkaClient) BatchRestartOrDeleteInstancesInvoker(request *model.BatchRestartOrDeleteInstancesRequest) *BatchRestartOrDeleteInstancesInvoker {
+	requestDef := GenReqDefForBatchRestartOrDeleteInstances()
+	return &BatchRestartOrDeleteInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateConnector 创建实例的转储节点
 //
 // 创建实例的转储节点。
 //
@@ -105,7 +129,13 @@ func (c *KafkaClient) CreateConnector(request *model.CreateConnectorRequest) (*m
 	}
 }
 
-// Kafka实例创建Topic
+// CreateConnectorInvoker 创建实例的转储节点
+func (c *KafkaClient) CreateConnectorInvoker(request *model.CreateConnectorRequest) *CreateConnectorInvoker {
+	requestDef := GenReqDefForCreateConnector()
+	return &CreateConnectorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateInstanceTopic Kafka实例创建Topic
 //
 // 该接口用于向Kafka实例创建Topic。
 //
@@ -121,7 +151,13 @@ func (c *KafkaClient) CreateInstanceTopic(request *model.CreateInstanceTopicRequ
 	}
 }
 
-// 创建用户
+// CreateInstanceTopicInvoker Kafka实例创建Topic
+func (c *KafkaClient) CreateInstanceTopicInvoker(request *model.CreateInstanceTopicRequest) *CreateInstanceTopicInvoker {
+	requestDef := GenReqDefForCreateInstanceTopic()
+	return &CreateInstanceTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateInstanceUser 创建用户
 //
 // 创建Kafka实例的用户，用户可连接开启SASL的Kafka实例。
 //
@@ -137,7 +173,13 @@ func (c *KafkaClient) CreateInstanceUser(request *model.CreateInstanceUserReques
 	}
 }
 
-// 新增Kafka实例指定Topic分区
+// CreateInstanceUserInvoker 创建用户
+func (c *KafkaClient) CreateInstanceUserInvoker(request *model.CreateInstanceUserRequest) *CreateInstanceUserInvoker {
+	requestDef := GenReqDefForCreateInstanceUser()
+	return &CreateInstanceUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePartition 新增Kafka实例指定Topic分区
 //
 // 新增Kafka实例指定Topic分区。
 //
@@ -153,7 +195,13 @@ func (c *KafkaClient) CreatePartition(request *model.CreatePartitionRequest) (*m
 	}
 }
 
-// 创建实例（按需）
+// CreatePartitionInvoker 新增Kafka实例指定Topic分区
+func (c *KafkaClient) CreatePartitionInvoker(request *model.CreatePartitionRequest) *CreatePartitionInvoker {
+	requestDef := GenReqDefForCreatePartition()
+	return &CreatePartitionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePostPaidInstance 创建实例（按需）
 //
 // 创建实例，该接口创建的实例为按需计费的方式。
 //
@@ -169,7 +217,13 @@ func (c *KafkaClient) CreatePostPaidInstance(request *model.CreatePostPaidInstan
 	}
 }
 
-// 创建转储任务
+// CreatePostPaidInstanceInvoker 创建实例（按需）
+func (c *KafkaClient) CreatePostPaidInstanceInvoker(request *model.CreatePostPaidInstanceRequest) *CreatePostPaidInstanceInvoker {
+	requestDef := GenReqDefForCreatePostPaidInstance()
+	return &CreatePostPaidInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSinkTask 创建转储任务
 //
 // 创建转储任务。
 //
@@ -185,7 +239,13 @@ func (c *KafkaClient) CreateSinkTask(request *model.CreateSinkTaskRequest) (*mod
 	}
 }
 
-// 删除后台任务管理中的指定记录
+// CreateSinkTaskInvoker 创建转储任务
+func (c *KafkaClient) CreateSinkTaskInvoker(request *model.CreateSinkTaskRequest) *CreateSinkTaskInvoker {
+	requestDef := GenReqDefForCreateSinkTask()
+	return &CreateSinkTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteBackgroundTask 删除后台任务管理中的指定记录
 //
 // 删除后台任务管理中的指定记录。
 //
@@ -201,7 +261,13 @@ func (c *KafkaClient) DeleteBackgroundTask(request *model.DeleteBackgroundTaskRe
 	}
 }
 
-// 删除指定的实例
+// DeleteBackgroundTaskInvoker 删除后台任务管理中的指定记录
+func (c *KafkaClient) DeleteBackgroundTaskInvoker(request *model.DeleteBackgroundTaskRequest) *DeleteBackgroundTaskInvoker {
+	requestDef := GenReqDefForDeleteBackgroundTask()
+	return &DeleteBackgroundTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteInstance 删除指定的实例
 //
 // 删除指定的实例，释放该实例的所有资源。
 //
@@ -217,7 +283,13 @@ func (c *KafkaClient) DeleteInstance(request *model.DeleteInstanceRequest) (*mod
 	}
 }
 
-// 删除单个转储任务
+// DeleteInstanceInvoker 删除指定的实例
+func (c *KafkaClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) *DeleteInstanceInvoker {
+	requestDef := GenReqDefForDeleteInstance()
+	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSinkTask 删除单个转储任务
 //
 // 删除单个转储任务。
 //
@@ -233,7 +305,13 @@ func (c *KafkaClient) DeleteSinkTask(request *model.DeleteSinkTaskRequest) (*mod
 	}
 }
 
-// 查询可用区信息
+// DeleteSinkTaskInvoker 删除单个转储任务
+func (c *KafkaClient) DeleteSinkTaskInvoker(request *model.DeleteSinkTaskRequest) *DeleteSinkTaskInvoker {
+	requestDef := GenReqDefForDeleteSinkTask()
+	return &DeleteSinkTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAvailableZones 查询可用区信息
 //
 // 在创建实例时，需要配置实例所在的可用区ID，可通过该接口查询可用区的ID。
 //
@@ -249,7 +327,13 @@ func (c *KafkaClient) ListAvailableZones(request *model.ListAvailableZonesReques
 	}
 }
 
-// 查询实例的后台任务列表
+// ListAvailableZonesInvoker 查询可用区信息
+func (c *KafkaClient) ListAvailableZonesInvoker(request *model.ListAvailableZonesRequest) *ListAvailableZonesInvoker {
+	requestDef := GenReqDefForListAvailableZones()
+	return &ListAvailableZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBackgroundTasks 查询实例的后台任务列表
 //
 // 查询实例的后台任务列表。
 //
@@ -265,7 +349,13 @@ func (c *KafkaClient) ListBackgroundTasks(request *model.ListBackgroundTasksRequ
 	}
 }
 
-// 查询产品规格列表
+// ListBackgroundTasksInvoker 查询实例的后台任务列表
+func (c *KafkaClient) ListBackgroundTasksInvoker(request *model.ListBackgroundTasksRequest) *ListBackgroundTasksInvoker {
+	requestDef := GenReqDefForListBackgroundTasks()
+	return &ListBackgroundTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEngineProducts 查询产品规格列表
 //
 // 查询产品规格列表。
 //
@@ -281,7 +371,13 @@ func (c *KafkaClient) ListEngineProducts(request *model.ListEngineProductsReques
 	}
 }
 
-// Kafka实例查询Topic
+// ListEngineProductsInvoker 查询产品规格列表
+func (c *KafkaClient) ListEngineProductsInvoker(request *model.ListEngineProductsRequest) *ListEngineProductsInvoker {
+	requestDef := GenReqDefForListEngineProducts()
+	return &ListEngineProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceTopics Kafka实例查询Topic
 //
 // 该接口用于查询指定Kafka实例的Topic详情。
 //
@@ -297,7 +393,13 @@ func (c *KafkaClient) ListInstanceTopics(request *model.ListInstanceTopicsReques
 	}
 }
 
-// 查询所有实例列表
+// ListInstanceTopicsInvoker Kafka实例查询Topic
+func (c *KafkaClient) ListInstanceTopicsInvoker(request *model.ListInstanceTopicsRequest) *ListInstanceTopicsInvoker {
+	requestDef := GenReqDefForListInstanceTopics()
+	return &ListInstanceTopicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstances 查询所有实例列表
 //
 // 查询租户的实例列表，支持按照条件查询。
 //
@@ -313,7 +415,13 @@ func (c *KafkaClient) ListInstances(request *model.ListInstancesRequest) (*model
 	}
 }
 
-// 查询产品规格列表
+// ListInstancesInvoker 查询所有实例列表
+func (c *KafkaClient) ListInstancesInvoker(request *model.ListInstancesRequest) *ListInstancesInvoker {
+	requestDef := GenReqDefForListInstances()
+	return &ListInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProducts 查询产品规格列表
 //
 // 在创建kafka实例时，需要配置订购的产品ID（即product_id），可通过该接口查询产品规格。
 //
@@ -335,7 +443,13 @@ func (c *KafkaClient) ListProducts(request *model.ListProductsRequest) (*model.L
 	}
 }
 
-// 查询转储任务列表
+// ListProductsInvoker 查询产品规格列表
+func (c *KafkaClient) ListProductsInvoker(request *model.ListProductsRequest) *ListProductsInvoker {
+	requestDef := GenReqDefForListProducts()
+	return &ListProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSinkTasks 查询转储任务列表
 //
 // 查询转储任务列表。
 //
@@ -351,7 +465,13 @@ func (c *KafkaClient) ListSinkTasks(request *model.ListSinkTasksRequest) (*model
 	}
 }
 
-// 重置Manager密码
+// ListSinkTasksInvoker 查询转储任务列表
+func (c *KafkaClient) ListSinkTasksInvoker(request *model.ListSinkTasksRequest) *ListSinkTasksInvoker {
+	requestDef := GenReqDefForListSinkTasks()
+	return &ListSinkTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetManagerPassword 重置Manager密码
 //
 // 重置Manager密码。
 //
@@ -367,7 +487,13 @@ func (c *KafkaClient) ResetManagerPassword(request *model.ResetManagerPasswordRe
 	}
 }
 
-// 重置消费组消费进度到指定位置
+// ResetManagerPasswordInvoker 重置Manager密码
+func (c *KafkaClient) ResetManagerPasswordInvoker(request *model.ResetManagerPasswordRequest) *ResetManagerPasswordInvoker {
+	requestDef := GenReqDefForResetManagerPassword()
+	return &ResetManagerPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetMessageOffset 重置消费组消费进度到指定位置
 //
 // Kafka实例不支持在线重置消费进度。在执行重置消费进度之前，必须停止被重置消费组客户端。
 //
@@ -385,7 +511,13 @@ func (c *KafkaClient) ResetMessageOffset(request *model.ResetMessageOffsetReques
 	}
 }
 
-// 重置密码
+// ResetMessageOffsetInvoker 重置消费组消费进度到指定位置
+func (c *KafkaClient) ResetMessageOffsetInvoker(request *model.ResetMessageOffsetRequest) *ResetMessageOffsetInvoker {
+	requestDef := GenReqDefForResetMessageOffset()
+	return &ResetMessageOffsetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetPassword 重置密码
 //
 // 重置密码。
 //
@@ -401,7 +533,13 @@ func (c *KafkaClient) ResetPassword(request *model.ResetPasswordRequest) (*model
 	}
 }
 
-// 重置用户密码
+// ResetPasswordInvoker 重置密码
+func (c *KafkaClient) ResetPasswordInvoker(request *model.ResetPasswordRequest) *ResetPasswordInvoker {
+	requestDef := GenReqDefForResetPassword()
+	return &ResetPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetUserPasswrod 重置用户密码
 //
 // 重置用户密码
 //
@@ -417,7 +555,13 @@ func (c *KafkaClient) ResetUserPasswrod(request *model.ResetUserPasswrodRequest)
 	}
 }
 
-// 实例规格变更
+// ResetUserPasswrodInvoker 重置用户密码
+func (c *KafkaClient) ResetUserPasswrodInvoker(request *model.ResetUserPasswrodRequest) *ResetUserPasswrodInvoker {
+	requestDef := GenReqDefForResetUserPasswrod()
+	return &ResetUserPasswrodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResizeInstance 实例规格变更
 //
 // 实例规格变更。
 //
@@ -435,7 +579,13 @@ func (c *KafkaClient) ResizeInstance(request *model.ResizeInstanceRequest) (*mod
 	}
 }
 
-// 重启Manager
+// ResizeInstanceInvoker 实例规格变更
+func (c *KafkaClient) ResizeInstanceInvoker(request *model.ResizeInstanceRequest) *ResizeInstanceInvoker {
+	requestDef := GenReqDefForResizeInstance()
+	return &ResizeInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestartManager 重启Manager
 //
 // 重启Manager。
 //
@@ -451,7 +601,13 @@ func (c *KafkaClient) RestartManager(request *model.RestartManagerRequest) (*mod
 	}
 }
 
-// 查询后台任务管理中的指定记录
+// RestartManagerInvoker 重启Manager
+func (c *KafkaClient) RestartManagerInvoker(request *model.RestartManagerRequest) *RestartManagerInvoker {
+	requestDef := GenReqDefForRestartManager()
+	return &RestartManagerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBackgroundTask 查询后台任务管理中的指定记录
 //
 // 查询后台任务管理中的指定记录。
 //
@@ -467,7 +623,13 @@ func (c *KafkaClient) ShowBackgroundTask(request *model.ShowBackgroundTaskReques
 	}
 }
 
-// 查询实例在CES的监控层级关系
+// ShowBackgroundTaskInvoker 查询后台任务管理中的指定记录
+func (c *KafkaClient) ShowBackgroundTaskInvoker(request *model.ShowBackgroundTaskRequest) *ShowBackgroundTaskInvoker {
+	requestDef := GenReqDefForShowBackgroundTask()
+	return &ShowBackgroundTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCesHierarchy 查询实例在CES的监控层级关系
 //
 // 查询实例在CES的监控层级关系。
 //
@@ -483,7 +645,13 @@ func (c *KafkaClient) ShowCesHierarchy(request *model.ShowCesHierarchyRequest) (
 	}
 }
 
-// 查询Kafka集群元数据信息
+// ShowCesHierarchyInvoker 查询实例在CES的监控层级关系
+func (c *KafkaClient) ShowCesHierarchyInvoker(request *model.ShowCesHierarchyRequest) *ShowCesHierarchyInvoker {
+	requestDef := GenReqDefForShowCesHierarchy()
+	return &ShowCesHierarchyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCluster 查询Kafka集群元数据信息
 //
 // 查询Kafka集群元数据信息。
 //
@@ -499,7 +667,13 @@ func (c *KafkaClient) ShowCluster(request *model.ShowClusterRequest) (*model.Sho
 	}
 }
 
-// 查询Kafka实例的协调器信息
+// ShowClusterInvoker 查询Kafka集群元数据信息
+func (c *KafkaClient) ShowClusterInvoker(request *model.ShowClusterRequest) *ShowClusterInvoker {
+	requestDef := GenReqDefForShowCluster()
+	return &ShowClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCoordinators 查询Kafka实例的协调器信息
 //
 // 查询Kafka实例的协调器信息。
 //
@@ -515,7 +689,13 @@ func (c *KafkaClient) ShowCoordinators(request *model.ShowCoordinatorsRequest) (
 	}
 }
 
-// 查询消费组信息
+// ShowCoordinatorsInvoker 查询Kafka实例的协调器信息
+func (c *KafkaClient) ShowCoordinatorsInvoker(request *model.ShowCoordinatorsRequest) *ShowCoordinatorsInvoker {
+	requestDef := GenReqDefForShowCoordinators()
+	return &ShowCoordinatorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGroups 查询消费组信息
 //
 // 查询消费组信息。
 //
@@ -531,7 +711,13 @@ func (c *KafkaClient) ShowGroups(request *model.ShowGroupsRequest) (*model.ShowG
 	}
 }
 
-// 查询指定实例
+// ShowGroupsInvoker 查询消费组信息
+func (c *KafkaClient) ShowGroupsInvoker(request *model.ShowGroupsRequest) *ShowGroupsInvoker {
+	requestDef := GenReqDefForShowGroups()
+	return &ShowGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstance 查询指定实例
 //
 // 查询指定实例的详细信息。
 //
@@ -547,7 +733,13 @@ func (c *KafkaClient) ShowInstance(request *model.ShowInstanceRequest) (*model.S
 	}
 }
 
-// 查询实例的扩容规格列表
+// ShowInstanceInvoker 查询指定实例
+func (c *KafkaClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *ShowInstanceInvoker {
+	requestDef := GenReqDefForShowInstance()
+	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceExtendProductInfo 查询实例的扩容规格列表
 //
 // 查询实例的扩容规格列表。
 //
@@ -563,7 +755,13 @@ func (c *KafkaClient) ShowInstanceExtendProductInfo(request *model.ShowInstanceE
 	}
 }
 
-// 查询消息
+// ShowInstanceExtendProductInfoInvoker 查询实例的扩容规格列表
+func (c *KafkaClient) ShowInstanceExtendProductInfoInvoker(request *model.ShowInstanceExtendProductInfoRequest) *ShowInstanceExtendProductInfoInvoker {
+	requestDef := GenReqDefForShowInstanceExtendProductInfo()
+	return &ShowInstanceExtendProductInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceMessages 查询消息
 //
 // 查询消息的偏移量和消息内容。
 // 先根据时间戳查询消息的偏移量，再根据偏移量查询消息内容。
@@ -580,7 +778,13 @@ func (c *KafkaClient) ShowInstanceMessages(request *model.ShowInstanceMessagesRe
 	}
 }
 
-// 查询Kafka实例Topic详细信息
+// ShowInstanceMessagesInvoker 查询消息
+func (c *KafkaClient) ShowInstanceMessagesInvoker(request *model.ShowInstanceMessagesRequest) *ShowInstanceMessagesInvoker {
+	requestDef := GenReqDefForShowInstanceMessages()
+	return &ShowInstanceMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceTopicDetail 查询Kafka实例Topic详细信息
 //
 // 查询Kafka实例Topic详细信息。
 //
@@ -596,7 +800,13 @@ func (c *KafkaClient) ShowInstanceTopicDetail(request *model.ShowInstanceTopicDe
 	}
 }
 
-// 查询用户列表
+// ShowInstanceTopicDetailInvoker 查询Kafka实例Topic详细信息
+func (c *KafkaClient) ShowInstanceTopicDetailInvoker(request *model.ShowInstanceTopicDetailRequest) *ShowInstanceTopicDetailInvoker {
+	requestDef := GenReqDefForShowInstanceTopicDetail()
+	return &ShowInstanceTopicDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceUsers 查询用户列表
 //
 // 查询用户列表。
 //
@@ -614,7 +824,13 @@ func (c *KafkaClient) ShowInstanceUsers(request *model.ShowInstanceUsersRequest)
 	}
 }
 
-// 查询项目标签
+// ShowInstanceUsersInvoker 查询用户列表
+func (c *KafkaClient) ShowInstanceUsersInvoker(request *model.ShowInstanceUsersRequest) *ShowInstanceUsersInvoker {
+	requestDef := GenReqDefForShowInstanceUsers()
+	return &ShowInstanceUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKafkaProjectTags 查询项目标签
 //
 // 查询项目标签。
 //
@@ -630,7 +846,13 @@ func (c *KafkaClient) ShowKafkaProjectTags(request *model.ShowKafkaProjectTagsRe
 	}
 }
 
-// 查询实例标签
+// ShowKafkaProjectTagsInvoker 查询项目标签
+func (c *KafkaClient) ShowKafkaProjectTagsInvoker(request *model.ShowKafkaProjectTagsRequest) *ShowKafkaProjectTagsInvoker {
+	requestDef := GenReqDefForShowKafkaProjectTags()
+	return &ShowKafkaProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKafkaTags 查询实例标签
 //
 // 查询实例标签。
 //
@@ -646,7 +868,13 @@ func (c *KafkaClient) ShowKafkaTags(request *model.ShowKafkaTagsRequest) (*model
 	}
 }
 
-// 查询topic的磁盘存储情况
+// ShowKafkaTagsInvoker 查询实例标签
+func (c *KafkaClient) ShowKafkaTagsInvoker(request *model.ShowKafkaTagsRequest) *ShowKafkaTagsInvoker {
+	requestDef := GenReqDefForShowKafkaTags()
+	return &ShowKafkaTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKafkaTopicPartitionDiskusage 查询topic的磁盘存储情况
 //
 // 查询topic在Broker上磁盘占用情况。
 //
@@ -662,7 +890,13 @@ func (c *KafkaClient) ShowKafkaTopicPartitionDiskusage(request *model.ShowKafkaT
 	}
 }
 
-// 查询维护时间窗时间段
+// ShowKafkaTopicPartitionDiskusageInvoker 查询topic的磁盘存储情况
+func (c *KafkaClient) ShowKafkaTopicPartitionDiskusageInvoker(request *model.ShowKafkaTopicPartitionDiskusageRequest) *ShowKafkaTopicPartitionDiskusageInvoker {
+	requestDef := GenReqDefForShowKafkaTopicPartitionDiskusage()
+	return &ShowKafkaTopicPartitionDiskusageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMaintainWindows 查询维护时间窗时间段
 //
 // 查询维护时间窗开始时间和结束时间。
 //
@@ -678,7 +912,13 @@ func (c *KafkaClient) ShowMaintainWindows(request *model.ShowMaintainWindowsRequ
 	}
 }
 
-// 查询分区指定时间段的消息
+// ShowMaintainWindowsInvoker 查询维护时间窗时间段
+func (c *KafkaClient) ShowMaintainWindowsInvoker(request *model.ShowMaintainWindowsRequest) *ShowMaintainWindowsInvoker {
+	requestDef := GenReqDefForShowMaintainWindows()
+	return &ShowMaintainWindowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMessages 查询分区指定时间段的消息
 //
 // 查询分区指定时间段的消息。
 //
@@ -694,7 +934,13 @@ func (c *KafkaClient) ShowMessages(request *model.ShowMessagesRequest) (*model.S
 	}
 }
 
-// 查询分区最早消息的位置
+// ShowMessagesInvoker 查询分区指定时间段的消息
+func (c *KafkaClient) ShowMessagesInvoker(request *model.ShowMessagesRequest) *ShowMessagesInvoker {
+	requestDef := GenReqDefForShowMessages()
+	return &ShowMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPartitionBeginningMessage 查询分区最早消息的位置
 //
 // 查询分区最早消息的位置。
 //
@@ -710,7 +956,13 @@ func (c *KafkaClient) ShowPartitionBeginningMessage(request *model.ShowPartition
 	}
 }
 
-// 查询分区最新消息的位置
+// ShowPartitionBeginningMessageInvoker 查询分区最早消息的位置
+func (c *KafkaClient) ShowPartitionBeginningMessageInvoker(request *model.ShowPartitionBeginningMessageRequest) *ShowPartitionBeginningMessageInvoker {
+	requestDef := GenReqDefForShowPartitionBeginningMessage()
+	return &ShowPartitionBeginningMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPartitionEndMessage 查询分区最新消息的位置
 //
 // 查询分区最新消息的位置。
 //
@@ -726,7 +978,13 @@ func (c *KafkaClient) ShowPartitionEndMessage(request *model.ShowPartitionEndMes
 	}
 }
 
-// 查询分区指定偏移量的消息
+// ShowPartitionEndMessageInvoker 查询分区最新消息的位置
+func (c *KafkaClient) ShowPartitionEndMessageInvoker(request *model.ShowPartitionEndMessageRequest) *ShowPartitionEndMessageInvoker {
+	requestDef := GenReqDefForShowPartitionEndMessage()
+	return &ShowPartitionEndMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPartitionMessage 查询分区指定偏移量的消息
 //
 // 查询分区指定偏移量的消息。
 //
@@ -742,7 +1000,13 @@ func (c *KafkaClient) ShowPartitionMessage(request *model.ShowPartitionMessageRe
 	}
 }
 
-// 查询单个转储任务
+// ShowPartitionMessageInvoker 查询分区指定偏移量的消息
+func (c *KafkaClient) ShowPartitionMessageInvoker(request *model.ShowPartitionMessageRequest) *ShowPartitionMessageInvoker {
+	requestDef := GenReqDefForShowPartitionMessage()
+	return &ShowPartitionMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSinkTaskDetail 查询单个转储任务
 //
 // 查询单个转储任务。
 //
@@ -758,7 +1022,13 @@ func (c *KafkaClient) ShowSinkTaskDetail(request *model.ShowSinkTaskDetailReques
 	}
 }
 
-// 查询用户权限
+// ShowSinkTaskDetailInvoker 查询单个转储任务
+func (c *KafkaClient) ShowSinkTaskDetailInvoker(request *model.ShowSinkTaskDetailRequest) *ShowSinkTaskDetailInvoker {
+	requestDef := GenReqDefForShowSinkTaskDetail()
+	return &ShowSinkTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTopicAccessPolicy 查询用户权限
 //
 // 查询用户权限。
 //
@@ -776,7 +1046,13 @@ func (c *KafkaClient) ShowTopicAccessPolicy(request *model.ShowTopicAccessPolicy
 	}
 }
 
-// 修改实例信息
+// ShowTopicAccessPolicyInvoker 查询用户权限
+func (c *KafkaClient) ShowTopicAccessPolicyInvoker(request *model.ShowTopicAccessPolicyRequest) *ShowTopicAccessPolicyInvoker {
+	requestDef := GenReqDefForShowTopicAccessPolicy()
+	return &ShowTopicAccessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstance 修改实例信息
 //
 // 修改实例的名称和描述信息。
 //
@@ -792,7 +1068,13 @@ func (c *KafkaClient) UpdateInstance(request *model.UpdateInstanceRequest) (*mod
 	}
 }
 
-// 开启或关闭实例自动创建topic功能
+// UpdateInstanceInvoker 修改实例信息
+func (c *KafkaClient) UpdateInstanceInvoker(request *model.UpdateInstanceRequest) *UpdateInstanceInvoker {
+	requestDef := GenReqDefForUpdateInstance()
+	return &UpdateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceAutoCreateTopic 开启或关闭实例自动创建topic功能
 //
 // 开启或关闭实例自动创建topic功能。
 //
@@ -808,7 +1090,13 @@ func (c *KafkaClient) UpdateInstanceAutoCreateTopic(request *model.UpdateInstanc
 	}
 }
 
-// 修改实例跨VPC访问的内网IP
+// UpdateInstanceAutoCreateTopicInvoker 开启或关闭实例自动创建topic功能
+func (c *KafkaClient) UpdateInstanceAutoCreateTopicInvoker(request *model.UpdateInstanceAutoCreateTopicRequest) *UpdateInstanceAutoCreateTopicInvoker {
+	requestDef := GenReqDefForUpdateInstanceAutoCreateTopic()
+	return &UpdateInstanceAutoCreateTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceCrossVpcIp 修改实例跨VPC访问的内网IP
 //
 // 修改实例跨VPC访问的内网IP。
 //
@@ -824,7 +1112,13 @@ func (c *KafkaClient) UpdateInstanceCrossVpcIp(request *model.UpdateInstanceCros
 	}
 }
 
-// 修改Kafka实例Topic
+// UpdateInstanceCrossVpcIpInvoker 修改实例跨VPC访问的内网IP
+func (c *KafkaClient) UpdateInstanceCrossVpcIpInvoker(request *model.UpdateInstanceCrossVpcIpRequest) *UpdateInstanceCrossVpcIpInvoker {
+	requestDef := GenReqDefForUpdateInstanceCrossVpcIp()
+	return &UpdateInstanceCrossVpcIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceTopic 修改Kafka实例Topic
 //
 // 修改Kafka实例Topic
 //
@@ -840,7 +1134,13 @@ func (c *KafkaClient) UpdateInstanceTopic(request *model.UpdateInstanceTopicRequ
 	}
 }
 
-// 修改转储任务的配额
+// UpdateInstanceTopicInvoker 修改Kafka实例Topic
+func (c *KafkaClient) UpdateInstanceTopicInvoker(request *model.UpdateInstanceTopicRequest) *UpdateInstanceTopicInvoker {
+	requestDef := GenReqDefForUpdateInstanceTopic()
+	return &UpdateInstanceTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSinkTaskQuota 修改转储任务的配额
 //
 // 修改转储任务的配额。
 //
@@ -856,7 +1156,13 @@ func (c *KafkaClient) UpdateSinkTaskQuota(request *model.UpdateSinkTaskQuotaRequ
 	}
 }
 
-// 设置用户权限
+// UpdateSinkTaskQuotaInvoker 修改转储任务的配额
+func (c *KafkaClient) UpdateSinkTaskQuotaInvoker(request *model.UpdateSinkTaskQuotaRequest) *UpdateSinkTaskQuotaInvoker {
+	requestDef := GenReqDefForUpdateSinkTaskQuota()
+	return &UpdateSinkTaskQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTopicAccessPolicy 设置用户权限
 //
 // 设置用户权限。
 //
@@ -874,7 +1180,13 @@ func (c *KafkaClient) UpdateTopicAccessPolicy(request *model.UpdateTopicAccessPo
 	}
 }
 
-// 修改Kafka实例Topic分区的副本
+// UpdateTopicAccessPolicyInvoker 设置用户权限
+func (c *KafkaClient) UpdateTopicAccessPolicyInvoker(request *model.UpdateTopicAccessPolicyRequest) *UpdateTopicAccessPolicyInvoker {
+	requestDef := GenReqDefForUpdateTopicAccessPolicy()
+	return &UpdateTopicAccessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTopicReplica 修改Kafka实例Topic分区的副本
 //
 // 修改Kafka实例Topic分区的副本。
 //
@@ -888,4 +1200,10 @@ func (c *KafkaClient) UpdateTopicReplica(request *model.UpdateTopicReplicaReques
 	} else {
 		return resp.(*model.UpdateTopicReplicaResponse), nil
 	}
+}
+
+// UpdateTopicReplicaInvoker 修改Kafka实例Topic分区的副本
+func (c *KafkaClient) UpdateTopicReplicaInvoker(request *model.UpdateTopicReplicaRequest) *UpdateTopicReplicaInvoker {
+	requestDef := GenReqDefForUpdateTopicReplica()
+	return &UpdateTopicReplicaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

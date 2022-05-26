@@ -82,6 +82,10 @@ func GetFirewallRuleActionEnum() FirewallRuleActionEnum {
 	}
 }
 
+func (c FirewallRuleAction) Value() string {
+	return c.value
+}
+
 func (c FirewallRuleAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -122,6 +126,10 @@ func GetFirewallRuleOperateTypeEnum() FirewallRuleOperateTypeEnum {
 			value: "delete",
 		},
 	}
+}
+
+func (c FirewallRuleOperateType) Value() string {
+	return c.value
 }
 
 func (c FirewallRuleOperateType) MarshalJSON() ([]byte, error) {
@@ -168,6 +176,10 @@ func GetFirewallRuleProtocolEnum() FirewallRuleProtocolEnum {
 			value: "any ",
 		},
 	}
+}
+
+func (c FirewallRuleProtocol) Value() string {
+	return c.value
 }
 
 func (c FirewallRuleProtocol) MarshalJSON() ([]byte, error) {

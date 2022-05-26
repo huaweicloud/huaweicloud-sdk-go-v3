@@ -50,6 +50,10 @@ func GetPutUpdateVocabReqLanguageEnum() PutUpdateVocabReqLanguageEnum {
 	}
 }
 
+func (c PutUpdateVocabReqLanguage) Value() string {
+	return c.value
+}
+
 func (c PutUpdateVocabReqLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

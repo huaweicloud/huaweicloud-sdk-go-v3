@@ -44,6 +44,10 @@ func GetAspectSentimentRequestTypeEnum() AspectSentimentRequestTypeEnum {
 	}
 }
 
+func (c AspectSentimentRequestType) Value() int32 {
+	return c.value
+}
+
 func (c AspectSentimentRequestType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

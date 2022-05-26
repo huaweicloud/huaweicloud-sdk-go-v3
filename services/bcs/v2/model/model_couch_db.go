@@ -7,7 +7,7 @@ import (
 )
 
 // couchDB信息
-type Couchdb struct {
+type CouchDb struct {
 
 	// couchDB用户名
 	UserName string `json:"user_name"`
@@ -16,11 +16,11 @@ type Couchdb struct {
 	Password string `json:"password"`
 }
 
-func (o Couchdb) String() string {
+func (o CouchDb) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "Couchdb struct{}"
+		return "CouchDb struct{}"
 	}
 
-	return strings.Join([]string{"Couchdb", string(data)}, " ")
+	return strings.Join([]string{"CouchDb", string(data)}, " ")
 }

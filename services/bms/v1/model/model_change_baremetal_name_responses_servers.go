@@ -194,6 +194,10 @@ func GetChangeBaremetalNameResponsesServersStatusEnum() ChangeBaremetalNameRespo
 	}
 }
 
+func (c ChangeBaremetalNameResponsesServersStatus) Value() string {
+	return c.value
+}
+
 func (c ChangeBaremetalNameResponsesServersStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -230,6 +234,10 @@ func GetChangeBaremetalNameResponsesServersOSDCFdiskConfigEnum() ChangeBaremetal
 			value: "AUTO",
 		},
 	}
+}
+
+func (c ChangeBaremetalNameResponsesServersOSDCFdiskConfig) Value() string {
+	return c.value
 }
 
 func (c ChangeBaremetalNameResponsesServersOSDCFdiskConfig) MarshalJSON() ([]byte, error) {
@@ -294,6 +302,10 @@ func GetChangeBaremetalNameResponsesServersOSEXTSTStaskStateEnum() ChangeBaremet
 	}
 }
 
+func (c ChangeBaremetalNameResponsesServersOSEXTSTStaskState) Value() string {
+	return c.value
+}
+
 func (c ChangeBaremetalNameResponsesServersOSEXTSTStaskState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -340,6 +352,10 @@ func GetChangeBaremetalNameResponsesServersOSEXTSTSvmStateEnum() ChangeBaremetal
 	}
 }
 
+func (c ChangeBaremetalNameResponsesServersOSEXTSTSvmState) Value() string {
+	return c.value
+}
+
 func (c ChangeBaremetalNameResponsesServersOSEXTSTSvmState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -384,6 +400,10 @@ func GetChangeBaremetalNameResponsesServersHostStatusEnum() ChangeBaremetalNameR
 			value: "MAINTENANCE",
 		},
 	}
+}
+
+func (c ChangeBaremetalNameResponsesServersHostStatus) Value() string {
+	return c.value
 }
 
 func (c ChangeBaremetalNameResponsesServersHostStatus) MarshalJSON() ([]byte, error) {

@@ -46,6 +46,10 @@ func GetCreateScalingTagInfoRequestResourceTypeEnum() CreateScalingTagInfoReques
 	}
 }
 
+func (c CreateScalingTagInfoRequestResourceType) Value() string {
+	return c.value
+}
+
 func (c CreateScalingTagInfoRequestResourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

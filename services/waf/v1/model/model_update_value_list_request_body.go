@@ -86,6 +86,10 @@ func GetUpdateValueListRequestBodyTypeEnum() UpdateValueListRequestBodyTypeEnum 
 	}
 }
 
+func (c UpdateValueListRequestBodyType) Value() string {
+	return c.value
+}
+
 func (c UpdateValueListRequestBodyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

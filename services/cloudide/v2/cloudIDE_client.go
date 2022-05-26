@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudide/v2/model"
 )
 
@@ -19,7 +19,7 @@ func CloudIDEClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 设置ide实例对插件的授权
+// CreateExtensionAuthorization 设置ide实例对插件的授权
 //
 // 设置ide实例对插件的授权。同意、不同意、未知（下次重新询问）
 //
@@ -35,7 +35,13 @@ func (c *CloudIDEClient) CreateExtensionAuthorization(request *model.CreateExten
 	}
 }
 
-// 查询技术栈模板工程
+// CreateExtensionAuthorizationInvoker 设置ide实例对插件的授权
+func (c *CloudIDEClient) CreateExtensionAuthorizationInvoker(request *model.CreateExtensionAuthorizationRequest) *CreateExtensionAuthorizationInvoker {
+	requestDef := GenReqDefForCreateExtensionAuthorization()
+	return &CreateExtensionAuthorizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectTemplates 查询技术栈模板工程
 //
 // 查询技术栈模板工程
 //
@@ -51,7 +57,13 @@ func (c *CloudIDEClient) ListProjectTemplates(request *model.ListProjectTemplate
 	}
 }
 
-// 按region获取标签所有技术栈
+// ListProjectTemplatesInvoker 查询技术栈模板工程
+func (c *CloudIDEClient) ListProjectTemplatesInvoker(request *model.ListProjectTemplatesRequest) *ListProjectTemplatesInvoker {
+	requestDef := GenReqDefForListProjectTemplates()
+	return &ListProjectTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListStacks 按region获取标签所有技术栈
 //
 // 按region获取标签所有技术栈
 //
@@ -67,7 +79,13 @@ func (c *CloudIDEClient) ListStacks(request *model.ListStacksRequest) (*model.Li
 	}
 }
 
-// 查询当前帐号访问权限
+// ListStacksInvoker 按region获取标签所有技术栈
+func (c *CloudIDEClient) ListStacksInvoker(request *model.ListStacksRequest) *ListStacksInvoker {
+	requestDef := GenReqDefForListStacks()
+	return &ListStacksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAccountStatus 查询当前帐号访问权限
 //
 // 查询当前帐号访问权限
 //
@@ -83,7 +101,13 @@ func (c *CloudIDEClient) ShowAccountStatus(request *model.ShowAccountStatusReque
 	}
 }
 
-// 查询ide实例对插件的授权情况
+// ShowAccountStatusInvoker 查询当前帐号访问权限
+func (c *CloudIDEClient) ShowAccountStatusInvoker(request *model.ShowAccountStatusRequest) *ShowAccountStatusInvoker {
+	requestDef := GenReqDefForShowAccountStatus()
+	return &ShowAccountStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowExtensionAuthorization 查询ide实例对插件的授权情况
 //
 // 查询ide实例对插件的授权情况，同意授权的插件能在ide实例内携带登陆用户的token调用第三方服务
 //
@@ -99,7 +123,13 @@ func (c *CloudIDEClient) ShowExtensionAuthorization(request *model.ShowExtension
 	}
 }
 
-// 获取技术栈计费信息
+// ShowExtensionAuthorizationInvoker 查询ide实例对插件的授权情况
+func (c *CloudIDEClient) ShowExtensionAuthorizationInvoker(request *model.ShowExtensionAuthorizationRequest) *ShowExtensionAuthorizationInvoker {
+	requestDef := GenReqDefForShowExtensionAuthorization()
+	return &ShowExtensionAuthorizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPrice 获取技术栈计费信息
 //
 // 获取技术栈计费信息
 //
@@ -115,7 +145,13 @@ func (c *CloudIDEClient) ShowPrice(request *model.ShowPriceRequest) (*model.Show
 	}
 }
 
-// 查询用户是否有权限访问某个IDE实例
+// ShowPriceInvoker 获取技术栈计费信息
+func (c *CloudIDEClient) ShowPriceInvoker(request *model.ShowPriceRequest) *ShowPriceInvoker {
+	requestDef := GenReqDefForShowPrice()
+	return &ShowPriceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckInstanceAccess 查询用户是否有权限访问某个IDE实例
 //
 // 查询用户是否有权限访问某个IDE实例
 //
@@ -131,7 +167,13 @@ func (c *CloudIDEClient) CheckInstanceAccess(request *model.CheckInstanceAccessR
 	}
 }
 
-// 查询IDE实例名是否重复
+// CheckInstanceAccessInvoker 查询用户是否有权限访问某个IDE实例
+func (c *CloudIDEClient) CheckInstanceAccessInvoker(request *model.CheckInstanceAccessRequest) *CheckInstanceAccessInvoker {
+	requestDef := GenReqDefForCheckInstanceAccess()
+	return &CheckInstanceAccessInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckName 查询IDE实例名是否重复
 //
 // 查询IDE实例名是否重复
 //
@@ -147,7 +189,13 @@ func (c *CloudIDEClient) CheckName(request *model.CheckNameRequest) (*model.Chec
 	}
 }
 
-// 创建IDE实例
+// CheckNameInvoker 查询IDE实例名是否重复
+func (c *CloudIDEClient) CheckNameInvoker(request *model.CheckNameRequest) *CheckNameInvoker {
+	requestDef := GenReqDefForCheckName()
+	return &CheckNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateInstance 创建IDE实例
 //
 // 创建IDE实例
 //
@@ -163,7 +211,13 @@ func (c *CloudIDEClient) CreateInstance(request *model.CreateInstanceRequest) (*
 	}
 }
 
-// 外部第三方集成商创建IDE实例
+// CreateInstanceInvoker 创建IDE实例
+func (c *CloudIDEClient) CreateInstanceInvoker(request *model.CreateInstanceRequest) *CreateInstanceInvoker {
+	requestDef := GenReqDefForCreateInstance()
+	return &CreateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateInstanceBy3rd 外部第三方集成商创建IDE实例
 //
 // 创建IDE实例
 //
@@ -179,7 +233,13 @@ func (c *CloudIDEClient) CreateInstanceBy3rd(request *model.CreateInstanceBy3rdR
 	}
 }
 
-// 删除IDE实例
+// CreateInstanceBy3rdInvoker 外部第三方集成商创建IDE实例
+func (c *CloudIDEClient) CreateInstanceBy3rdInvoker(request *model.CreateInstanceBy3rdRequest) *CreateInstanceBy3rdInvoker {
+	requestDef := GenReqDefForCreateInstanceBy3rd()
+	return &CreateInstanceBy3rdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteInstance 删除IDE实例
 //
 // 删除IDE实例（同时删除磁盘数据）
 //
@@ -195,7 +255,13 @@ func (c *CloudIDEClient) DeleteInstance(request *model.DeleteInstanceRequest) (*
 	}
 }
 
-// 查询IDE实例列表
+// DeleteInstanceInvoker 删除IDE实例
+func (c *CloudIDEClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) *DeleteInstanceInvoker {
+	requestDef := GenReqDefForDeleteInstance()
+	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstances 查询IDE实例列表
 //
 // 查询IDE实例列表
 //
@@ -211,7 +277,13 @@ func (c *CloudIDEClient) ListInstances(request *model.ListInstancesRequest) (*mo
 	}
 }
 
-// 查询某个租户下的IDE实例列表
+// ListInstancesInvoker 查询IDE实例列表
+func (c *CloudIDEClient) ListInstancesInvoker(request *model.ListInstancesRequest) *ListInstancesInvoker {
+	requestDef := GenReqDefForListInstances()
+	return &ListInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOrgInstances 查询某个租户下的IDE实例列表
 //
 // 查询某个租户下的IDE实例列表
 //
@@ -227,7 +299,13 @@ func (c *CloudIDEClient) ListOrgInstances(request *model.ListOrgInstancesRequest
 	}
 }
 
-// 查询某个IDE实例
+// ListOrgInstancesInvoker 查询某个租户下的IDE实例列表
+func (c *CloudIDEClient) ListOrgInstancesInvoker(request *model.ListOrgInstancesRequest) *ListOrgInstancesInvoker {
+	requestDef := GenReqDefForListOrgInstances()
+	return &ListOrgInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstance 查询某个IDE实例
 //
 // 查询某个IDE实例
 //
@@ -243,7 +321,13 @@ func (c *CloudIDEClient) ShowInstance(request *model.ShowInstanceRequest) (*mode
 	}
 }
 
-// 启动IDE实例
+// ShowInstanceInvoker 查询某个IDE实例
+func (c *CloudIDEClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *ShowInstanceInvoker {
+	requestDef := GenReqDefForShowInstance()
+	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartInstance 启动IDE实例
 //
 // 启动IDE实例
 //
@@ -259,7 +343,13 @@ func (c *CloudIDEClient) StartInstance(request *model.StartInstanceRequest) (*mo
 	}
 }
 
-// 停止IDE实例
+// StartInstanceInvoker 启动IDE实例
+func (c *CloudIDEClient) StartInstanceInvoker(request *model.StartInstanceRequest) *StartInstanceInvoker {
+	requestDef := GenReqDefForStartInstance()
+	return &StartInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopInstance 停止IDE实例
 //
 // 停止IDE实例（不删除磁盘数据）
 //
@@ -275,7 +365,13 @@ func (c *CloudIDEClient) StopInstance(request *model.StopInstanceRequest) (*mode
 	}
 }
 
-// 修改IDE实例
+// StopInstanceInvoker 停止IDE实例
+func (c *CloudIDEClient) StopInstanceInvoker(request *model.StopInstanceRequest) *StopInstanceInvoker {
+	requestDef := GenReqDefForStopInstance()
+	return &StopInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstance 修改IDE实例
 //
 // 修改IDE实例
 //
@@ -291,7 +387,13 @@ func (c *CloudIDEClient) UpdateInstance(request *model.UpdateInstanceRequest) (*
 	}
 }
 
-// 刷新IDE实例活跃状态
+// UpdateInstanceInvoker 修改IDE实例
+func (c *CloudIDEClient) UpdateInstanceInvoker(request *model.UpdateInstanceRequest) *UpdateInstanceInvoker {
+	requestDef := GenReqDefForUpdateInstance()
+	return &UpdateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceActivity 刷新IDE实例活跃状态
 //
 // 刷新IDE实例活跃状态，超过该实例设置的过期时间后实例自动关闭。
 //
@@ -305,4 +407,10 @@ func (c *CloudIDEClient) UpdateInstanceActivity(request *model.UpdateInstanceAct
 	} else {
 		return resp.(*model.UpdateInstanceActivityResponse), nil
 	}
+}
+
+// UpdateInstanceActivityInvoker 刷新IDE实例活跃状态
+func (c *CloudIDEClient) UpdateInstanceActivityInvoker(request *model.UpdateInstanceActivityRequest) *UpdateInstanceActivityInvoker {
+	requestDef := GenReqDefForUpdateInstanceActivity()
+	return &UpdateInstanceActivityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

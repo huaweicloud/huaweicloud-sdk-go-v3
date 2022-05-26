@@ -48,6 +48,10 @@ func GetAccessConfigFormatMutilModeEnum() AccessConfigFormatMutilModeEnum {
 	}
 }
 
+func (c AccessConfigFormatMutilMode) Value() string {
+	return c.value
+}
+
 func (c AccessConfigFormatMutilMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

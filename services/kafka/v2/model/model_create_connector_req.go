@@ -58,6 +58,10 @@ func GetCreateConnectorReqSpecificationEnum() CreateConnectorReqSpecificationEnu
 	}
 }
 
+func (c CreateConnectorReqSpecification) Value() string {
+	return c.value
+}
+
 func (c CreateConnectorReqSpecification) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

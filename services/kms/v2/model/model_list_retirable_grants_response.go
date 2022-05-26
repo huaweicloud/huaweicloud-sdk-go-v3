@@ -52,6 +52,10 @@ func GetListRetirableGrantsResponseTruncatedEnum() ListRetirableGrantsResponseTr
 	}
 }
 
+func (c ListRetirableGrantsResponseTruncated) Value() string {
+	return c.value
+}
+
 func (c ListRetirableGrantsResponseTruncated) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

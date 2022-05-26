@@ -41,6 +41,10 @@ func GetOpenGaussChargeInfoChargeModeEnum() OpenGaussChargeInfoChargeModeEnum {
 	}
 }
 
+func (c OpenGaussChargeInfoChargeMode) Value() string {
+	return c.value
+}
+
 func (c OpenGaussChargeInfoChargeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

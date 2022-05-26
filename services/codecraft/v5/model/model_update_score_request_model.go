@@ -53,6 +53,10 @@ func GetUpdateScoreRequestModelStatusEnum() UpdateScoreRequestModelStatusEnum {
 	}
 }
 
+func (c UpdateScoreRequestModelStatus) Value() string {
+	return c.value
+}
+
 func (c UpdateScoreRequestModelStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

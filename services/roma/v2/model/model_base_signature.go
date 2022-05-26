@@ -64,6 +64,10 @@ func GetBaseSignatureSignTypeEnum() BaseSignatureSignTypeEnum {
 	}
 }
 
+func (c BaseSignatureSignType) Value() string {
+	return c.value
+}
+
 func (c BaseSignatureSignType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -100,6 +104,10 @@ func GetBaseSignatureSignAlgorithmEnum() BaseSignatureSignAlgorithmEnum {
 			value: "aes-256-cfb",
 		},
 	}
+}
+
+func (c BaseSignatureSignAlgorithm) Value() string {
+	return c.value
 }
 
 func (c BaseSignatureSignAlgorithm) MarshalJSON() ([]byte, error) {

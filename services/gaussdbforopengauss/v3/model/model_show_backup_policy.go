@@ -20,15 +20,6 @@ type ShowBackupPolicy struct {
 
 	// 差量备份周期配置。自动差量备份将每隔周期分钟执行。
 	DifferentialPriod *string `json:"differential_priod,omitempty"`
-
-	// 备份时备份数据上传OBS的速度，单位为MB/s。范围为0~1024MB/s，默认75MB/s，0MB/s表示不限速。
-	RateLimit *int32 `json:"rate_limit,omitempty"`
-
-	// 控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数，可设置范围为1~8192，默认64。
-	PrefetchBlock *int32 `json:"prefetch_block,omitempty"`
-
-	// 全量、差量备份时产生的备份文件会根据分片大小进行拆分，可设置范围为0~1024GB，设置需为4的倍数，默认4GB，0GB表示不限制大小。  取值范围：0 ~ 1024
-	FilesplitSize *int32 `json:"filesplit_size,omitempty"`
 }
 
 func (o ShowBackupPolicy) String() string {

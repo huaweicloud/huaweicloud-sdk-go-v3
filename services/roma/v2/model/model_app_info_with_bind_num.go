@@ -76,6 +76,10 @@ func GetAppInfoWithBindNumCreatorEnum() AppInfoWithBindNumCreatorEnum {
 	}
 }
 
+func (c AppInfoWithBindNumCreator) Value() string {
+	return c.value
+}
+
 func (c AppInfoWithBindNumCreator) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -108,6 +112,10 @@ func GetAppInfoWithBindNumStatusEnum() AppInfoWithBindNumStatusEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c AppInfoWithBindNumStatus) Value() int32 {
+	return c.value
 }
 
 func (c AppInfoWithBindNumStatus) MarshalJSON() ([]byte, error) {
@@ -146,6 +154,10 @@ func GetAppInfoWithBindNumAppTypeEnum() AppInfoWithBindNumAppTypeEnum {
 			value: "roma",
 		},
 	}
+}
+
+func (c AppInfoWithBindNumAppType) Value() string {
+	return c.value
 }
 
 func (c AppInfoWithBindNumAppType) MarshalJSON() ([]byte, error) {

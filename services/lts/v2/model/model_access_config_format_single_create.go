@@ -48,6 +48,10 @@ func GetAccessConfigFormatSingleCreateModeEnum() AccessConfigFormatSingleCreateM
 	}
 }
 
+func (c AccessConfigFormatSingleCreateMode) Value() string {
+	return c.value
+}
+
 func (c AccessConfigFormatSingleCreateMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

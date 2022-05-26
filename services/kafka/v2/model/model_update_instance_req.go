@@ -62,6 +62,10 @@ func GetUpdateInstanceReqRetentionPolicyEnum() UpdateInstanceReqRetentionPolicyE
 	}
 }
 
+func (c UpdateInstanceReqRetentionPolicy) Value() string {
+	return c.value
+}
+
 func (c UpdateInstanceReqRetentionPolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

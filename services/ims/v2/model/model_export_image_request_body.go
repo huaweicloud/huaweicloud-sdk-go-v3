@@ -59,6 +59,10 @@ func GetExportImageRequestBodyFileFormatEnum() ExportImageRequestBodyFileFormatE
 	}
 }
 
+func (c ExportImageRequestBodyFileFormat) Value() string {
+	return c.value
+}
+
 func (c ExportImageRequestBodyFileFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

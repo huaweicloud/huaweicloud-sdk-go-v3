@@ -85,6 +85,10 @@ func GetBackendApiReqProtocolEnum() BackendApiReqProtocolEnum {
 	}
 }
 
+func (c BackendApiReqProtocol) Value() string {
+	return c.value
+}
+
 func (c BackendApiReqProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -145,6 +149,10 @@ func GetBackendApiReqMethodEnum() BackendApiReqMethodEnum {
 			value: "ANY",
 		},
 	}
+}
+
+func (c BackendApiReqMethod) Value() string {
+	return c.value
 }
 
 func (c BackendApiReqMethod) MarshalJSON() ([]byte, error) {

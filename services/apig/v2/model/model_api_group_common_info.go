@@ -60,6 +60,10 @@ func GetApiGroupCommonInfoStatusEnum() ApiGroupCommonInfoStatusEnum {
 	}
 }
 
+func (c ApiGroupCommonInfoStatus) Value() int32 {
+	return c.value
+}
+
 func (c ApiGroupCommonInfoStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

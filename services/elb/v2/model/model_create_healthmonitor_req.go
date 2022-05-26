@@ -85,6 +85,10 @@ func GetCreateHealthmonitorReqTypeEnum() CreateHealthmonitorReqTypeEnum {
 	}
 }
 
+func (c CreateHealthmonitorReqType) Value() string {
+	return c.value
+}
+
 func (c CreateHealthmonitorReqType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

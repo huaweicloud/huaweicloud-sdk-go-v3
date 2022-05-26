@@ -51,6 +51,10 @@ func GetDeleteDatabaseRequestDeleteRdsDataEnum() DeleteDatabaseRequestDeleteRdsD
 	}
 }
 
+func (c DeleteDatabaseRequestDeleteRdsData) Value() string {
+	return c.value
+}
+
 func (c DeleteDatabaseRequestDeleteRdsData) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

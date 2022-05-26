@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/nat/v2/model"
 )
 
@@ -19,7 +19,7 @@ func NatClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 批量创建DNAT规则
+// BatchCreateNatGatewayDnatRules 批量创建DNAT规则
 //
 // 批量创建DNAT规则。
 //
@@ -35,7 +35,13 @@ func (c *NatClient) BatchCreateNatGatewayDnatRules(request *model.BatchCreateNat
 	}
 }
 
-// 创建DNAT规则
+// BatchCreateNatGatewayDnatRulesInvoker 批量创建DNAT规则
+func (c *NatClient) BatchCreateNatGatewayDnatRulesInvoker(request *model.BatchCreateNatGatewayDnatRulesRequest) *BatchCreateNatGatewayDnatRulesInvoker {
+	requestDef := GenReqDefForBatchCreateNatGatewayDnatRules()
+	return &BatchCreateNatGatewayDnatRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNatGatewayDnatRule 创建DNAT规则
 //
 // 创建DNAT规则。
 //
@@ -51,7 +57,13 @@ func (c *NatClient) CreateNatGatewayDnatRule(request *model.CreateNatGatewayDnat
 	}
 }
 
-// 删除DNAT规则
+// CreateNatGatewayDnatRuleInvoker 创建DNAT规则
+func (c *NatClient) CreateNatGatewayDnatRuleInvoker(request *model.CreateNatGatewayDnatRuleRequest) *CreateNatGatewayDnatRuleInvoker {
+	requestDef := GenReqDefForCreateNatGatewayDnatRule()
+	return &CreateNatGatewayDnatRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNatGatewayDnatRule 删除DNAT规则
 //
 // 删除指定的DNAT规则。
 //
@@ -67,7 +79,13 @@ func (c *NatClient) DeleteNatGatewayDnatRule(request *model.DeleteNatGatewayDnat
 	}
 }
 
-// 查询DNAT规则列表
+// DeleteNatGatewayDnatRuleInvoker 删除DNAT规则
+func (c *NatClient) DeleteNatGatewayDnatRuleInvoker(request *model.DeleteNatGatewayDnatRuleRequest) *DeleteNatGatewayDnatRuleInvoker {
+	requestDef := GenReqDefForDeleteNatGatewayDnatRule()
+	return &DeleteNatGatewayDnatRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNatGatewayDnatRules 查询DNAT规则列表
 //
 // 查询DNAT规则列表。
 //
@@ -83,7 +101,13 @@ func (c *NatClient) ListNatGatewayDnatRules(request *model.ListNatGatewayDnatRul
 	}
 }
 
-// 查询指定的DNAT规则详情
+// ListNatGatewayDnatRulesInvoker 查询DNAT规则列表
+func (c *NatClient) ListNatGatewayDnatRulesInvoker(request *model.ListNatGatewayDnatRulesRequest) *ListNatGatewayDnatRulesInvoker {
+	requestDef := GenReqDefForListNatGatewayDnatRules()
+	return &ListNatGatewayDnatRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNatGatewayDnatRule 查询指定的DNAT规则详情
 //
 // 查询指定的DNAT规则详情。
 //
@@ -99,7 +123,13 @@ func (c *NatClient) ShowNatGatewayDnatRule(request *model.ShowNatGatewayDnatRule
 	}
 }
 
-// 更新DNAT规则
+// ShowNatGatewayDnatRuleInvoker 查询指定的DNAT规则详情
+func (c *NatClient) ShowNatGatewayDnatRuleInvoker(request *model.ShowNatGatewayDnatRuleRequest) *ShowNatGatewayDnatRuleInvoker {
+	requestDef := GenReqDefForShowNatGatewayDnatRule()
+	return &ShowNatGatewayDnatRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNatGatewayDnatRule 更新DNAT规则
 //
 // 更新指定的DNAT规则。
 //
@@ -115,7 +145,13 @@ func (c *NatClient) UpdateNatGatewayDnatRule(request *model.UpdateNatGatewayDnat
 	}
 }
 
-// 创建公网NAT网关
+// UpdateNatGatewayDnatRuleInvoker 更新DNAT规则
+func (c *NatClient) UpdateNatGatewayDnatRuleInvoker(request *model.UpdateNatGatewayDnatRuleRequest) *UpdateNatGatewayDnatRuleInvoker {
+	requestDef := GenReqDefForUpdateNatGatewayDnatRule()
+	return &UpdateNatGatewayDnatRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNatGateway 创建公网NAT网关
 //
 // 创建公网NAT网关实例。
 //
@@ -131,7 +167,13 @@ func (c *NatClient) CreateNatGateway(request *model.CreateNatGatewayRequest) (*m
 	}
 }
 
-// 删除公网NAT网关
+// CreateNatGatewayInvoker 创建公网NAT网关
+func (c *NatClient) CreateNatGatewayInvoker(request *model.CreateNatGatewayRequest) *CreateNatGatewayInvoker {
+	requestDef := GenReqDefForCreateNatGateway()
+	return &CreateNatGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNatGateway 删除公网NAT网关
 //
 // 删除公网NAT网关实例。
 //
@@ -147,7 +189,13 @@ func (c *NatClient) DeleteNatGateway(request *model.DeleteNatGatewayRequest) (*m
 	}
 }
 
-// 查询公网NAT网关列表
+// DeleteNatGatewayInvoker 删除公网NAT网关
+func (c *NatClient) DeleteNatGatewayInvoker(request *model.DeleteNatGatewayRequest) *DeleteNatGatewayInvoker {
+	requestDef := GenReqDefForDeleteNatGateway()
+	return &DeleteNatGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNatGateways 查询公网NAT网关列表
 //
 // 查询公网NAT网关实例列表。
 //
@@ -163,7 +211,13 @@ func (c *NatClient) ListNatGateways(request *model.ListNatGatewaysRequest) (*mod
 	}
 }
 
-// 查询指定的公网NAT网关详情
+// ListNatGatewaysInvoker 查询公网NAT网关列表
+func (c *NatClient) ListNatGatewaysInvoker(request *model.ListNatGatewaysRequest) *ListNatGatewaysInvoker {
+	requestDef := GenReqDefForListNatGateways()
+	return &ListNatGatewaysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNatGateway 查询指定的公网NAT网关详情
 //
 // 查询指定的公网NAT网关实例详情。
 //
@@ -179,7 +233,13 @@ func (c *NatClient) ShowNatGateway(request *model.ShowNatGatewayRequest) (*model
 	}
 }
 
-// 更新公网NAT网关
+// ShowNatGatewayInvoker 查询指定的公网NAT网关详情
+func (c *NatClient) ShowNatGatewayInvoker(request *model.ShowNatGatewayRequest) *ShowNatGatewayInvoker {
+	requestDef := GenReqDefForShowNatGateway()
+	return &ShowNatGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNatGateway 更新公网NAT网关
 //
 // 更新公网NAT网关实例。
 //
@@ -195,7 +255,13 @@ func (c *NatClient) UpdateNatGateway(request *model.UpdateNatGatewayRequest) (*m
 	}
 }
 
-// 创建SNAT规则
+// UpdateNatGatewayInvoker 更新公网NAT网关
+func (c *NatClient) UpdateNatGatewayInvoker(request *model.UpdateNatGatewayRequest) *UpdateNatGatewayInvoker {
+	requestDef := GenReqDefForUpdateNatGateway()
+	return &UpdateNatGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNatGatewaySnatRule 创建SNAT规则
 //
 // 创建SNAT规则。
 //
@@ -211,7 +277,13 @@ func (c *NatClient) CreateNatGatewaySnatRule(request *model.CreateNatGatewaySnat
 	}
 }
 
-// 删除SNAT规则
+// CreateNatGatewaySnatRuleInvoker 创建SNAT规则
+func (c *NatClient) CreateNatGatewaySnatRuleInvoker(request *model.CreateNatGatewaySnatRuleRequest) *CreateNatGatewaySnatRuleInvoker {
+	requestDef := GenReqDefForCreateNatGatewaySnatRule()
+	return &CreateNatGatewaySnatRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNatGatewaySnatRule 删除SNAT规则
 //
 // 删除指定的SNAT规则。
 //
@@ -227,7 +299,13 @@ func (c *NatClient) DeleteNatGatewaySnatRule(request *model.DeleteNatGatewaySnat
 	}
 }
 
-// 查询SNAT规则列表
+// DeleteNatGatewaySnatRuleInvoker 删除SNAT规则
+func (c *NatClient) DeleteNatGatewaySnatRuleInvoker(request *model.DeleteNatGatewaySnatRuleRequest) *DeleteNatGatewaySnatRuleInvoker {
+	requestDef := GenReqDefForDeleteNatGatewaySnatRule()
+	return &DeleteNatGatewaySnatRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNatGatewaySnatRules 查询SNAT规则列表
 //
 // 查询SNAT规则列表。
 //
@@ -243,7 +321,13 @@ func (c *NatClient) ListNatGatewaySnatRules(request *model.ListNatGatewaySnatRul
 	}
 }
 
-// 查询指定的SNAT规则详情
+// ListNatGatewaySnatRulesInvoker 查询SNAT规则列表
+func (c *NatClient) ListNatGatewaySnatRulesInvoker(request *model.ListNatGatewaySnatRulesRequest) *ListNatGatewaySnatRulesInvoker {
+	requestDef := GenReqDefForListNatGatewaySnatRules()
+	return &ListNatGatewaySnatRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNatGatewaySnatRule 查询指定的SNAT规则详情
 //
 // 查询指定的SNAT规则详情。
 //
@@ -259,7 +343,13 @@ func (c *NatClient) ShowNatGatewaySnatRule(request *model.ShowNatGatewaySnatRule
 	}
 }
 
-// 更新SNAT规则
+// ShowNatGatewaySnatRuleInvoker 查询指定的SNAT规则详情
+func (c *NatClient) ShowNatGatewaySnatRuleInvoker(request *model.ShowNatGatewaySnatRuleRequest) *ShowNatGatewaySnatRuleInvoker {
+	requestDef := GenReqDefForShowNatGatewaySnatRule()
+	return &ShowNatGatewaySnatRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNatGatewaySnatRule 更新SNAT规则
 //
 // 更新指定的SNAT规则。
 //
@@ -273,4 +363,10 @@ func (c *NatClient) UpdateNatGatewaySnatRule(request *model.UpdateNatGatewaySnat
 	} else {
 		return resp.(*model.UpdateNatGatewaySnatRuleResponse), nil
 	}
+}
+
+// UpdateNatGatewaySnatRuleInvoker 更新SNAT规则
+func (c *NatClient) UpdateNatGatewaySnatRuleInvoker(request *model.UpdateNatGatewaySnatRuleRequest) *UpdateNatGatewaySnatRuleInvoker {
+	requestDef := GenReqDefForUpdateNatGatewaySnatRule()
+	return &UpdateNatGatewaySnatRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

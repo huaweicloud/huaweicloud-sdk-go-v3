@@ -88,6 +88,10 @@ func GetUpdateResponsePropertyResponseDataTypeEnum() UpdateResponsePropertyRespo
 	}
 }
 
+func (c UpdateResponsePropertyResponseDataType) Value() string {
+	return c.value
+}
+
 func (c UpdateResponsePropertyResponseDataType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -123,6 +127,10 @@ func GetUpdateResponsePropertyResponseRequiredEnum() UpdateResponsePropertyRespo
 			value: 1,
 		},
 	}
+}
+
+func (c UpdateResponsePropertyResponseRequired) Value() int32 {
+	return c.value
 }
 
 func (c UpdateResponsePropertyResponseRequired) MarshalJSON() ([]byte, error) {

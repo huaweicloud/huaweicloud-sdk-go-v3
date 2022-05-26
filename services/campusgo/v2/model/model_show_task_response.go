@@ -143,6 +143,10 @@ func GetShowTaskResponseStateEnum() ShowTaskResponseStateEnum {
 	}
 }
 
+func (c ShowTaskResponseState) Value() string {
+	return c.value
+}
+
 func (c ShowTaskResponseState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

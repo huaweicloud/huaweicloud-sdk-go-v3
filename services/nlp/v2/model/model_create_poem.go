@@ -56,6 +56,10 @@ func GetCreatePoemTypeEnum() CreatePoemTypeEnum {
 	}
 }
 
+func (c CreatePoemType) Value() int32 {
+	return c.value
+}
+
 func (c CreatePoemType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

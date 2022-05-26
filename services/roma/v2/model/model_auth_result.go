@@ -61,6 +61,10 @@ func GetAuthResultStatusEnum() AuthResultStatusEnum {
 	}
 }
 
+func (c AuthResultStatus) Value() string {
+	return c.value
+}
+
 func (c AuthResultStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -15,8 +15,10 @@ type CreateBlockchainCertByUserNameRequest struct {
 	// peer组织名称
 	OrgName string `json:"org_name"`
 
-	// 用户名称，字符串长度4-24，必须包含a-z，0-9，以小写字母开头，以小写字母或者数字结尾
+	// 用户名称，字符串长度4-24，仅支持小写字母和数字，以小写字母开头
 	UserName string `json:"user_name"`
+
+	Body *CreateBlockchainCertByUserNameRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateBlockchainCertByUserNameRequest) String() string {

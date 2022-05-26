@@ -66,6 +66,10 @@ func GetJobRecordsRecordTypeEnum() JobRecordsRecordTypeEnum {
 	}
 }
 
+func (c JobRecordsRecordType) Value() string {
+	return c.value
+}
+
 func (c JobRecordsRecordType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -102,6 +106,10 @@ func GetJobRecordsJobStatusEnum() JobRecordsJobStatusEnum {
 			value: "FAIL",
 		},
 	}
+}
+
+func (c JobRecordsJobStatus) Value() string {
+	return c.value
 }
 
 func (c JobRecordsJobStatus) MarshalJSON() ([]byte, error) {

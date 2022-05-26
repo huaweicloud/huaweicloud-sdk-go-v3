@@ -48,6 +48,10 @@ func GetBatchRebootSeversOptionTypeEnum() BatchRebootSeversOptionTypeEnum {
 	}
 }
 
+func (c BatchRebootSeversOptionType) Value() string {
+	return c.value
+}
+
 func (c BatchRebootSeversOptionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

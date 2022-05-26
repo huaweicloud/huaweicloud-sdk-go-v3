@@ -69,6 +69,10 @@ func GetVpcCreateBalanceStrategyEnum() VpcCreateBalanceStrategyEnum {
 	}
 }
 
+func (c VpcCreateBalanceStrategy) Value() int32 {
+	return c.value
+}
+
 func (c VpcCreateBalanceStrategy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -105,6 +109,10 @@ func GetVpcCreateMemberTypeEnum() VpcCreateMemberTypeEnum {
 			value: "ecs",
 		},
 	}
+}
+
+func (c VpcCreateMemberType) Value() string {
+	return c.value
 }
 
 func (c VpcCreateMemberType) MarshalJSON() ([]byte, error) {

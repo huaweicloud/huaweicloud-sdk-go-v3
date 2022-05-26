@@ -72,6 +72,10 @@ func GetListInstancesRequestTypeEnum() ListInstancesRequestTypeEnum {
 	}
 }
 
+func (c ListInstancesRequestType) Value() string {
+	return c.value
+}
+
 func (c ListInstancesRequestType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -104,6 +108,10 @@ func GetListInstancesRequestDatastoreTypeEnum() ListInstancesRequestDatastoreTyp
 			value: "GaussDB(for openGauss)",
 		},
 	}
+}
+
+func (c ListInstancesRequestDatastoreType) Value() string {
+	return c.value
 }
 
 func (c ListInstancesRequestDatastoreType) MarshalJSON() ([]byte, error) {

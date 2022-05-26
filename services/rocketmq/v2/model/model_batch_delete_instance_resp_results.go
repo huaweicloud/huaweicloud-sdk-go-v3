@@ -47,6 +47,10 @@ func GetBatchDeleteInstanceRespResultsResultEnum() BatchDeleteInstanceRespResult
 	}
 }
 
+func (c BatchDeleteInstanceRespResultsResult) Value() string {
+	return c.value
+}
+
 func (c BatchDeleteInstanceRespResultsResult) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -51,6 +51,10 @@ func GetPostMultiGainedSegmentResponseItemCopyTypeEnum() PostMultiGainedSegmentR
 	}
 }
 
+func (c PostMultiGainedSegmentResponseItemCopyType) Value() string {
+	return c.value
+}
+
 func (c PostMultiGainedSegmentResponseItemCopyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

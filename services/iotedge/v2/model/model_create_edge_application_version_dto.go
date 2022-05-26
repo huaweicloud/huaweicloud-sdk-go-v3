@@ -74,6 +74,10 @@ func GetCreateEdgeApplicationVersionDtoDeployTypeEnum() CreateEdgeApplicationVer
 	}
 }
 
+func (c CreateEdgeApplicationVersionDtoDeployType) Value() string {
+	return c.value
+}
+
 func (c CreateEdgeApplicationVersionDtoDeployType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

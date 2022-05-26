@@ -67,6 +67,10 @@ func GetPrecheckResultResultEnum() PrecheckResultResultEnum {
 	}
 }
 
+func (c PrecheckResultResult) Value() string {
+	return c.value
+}
+
 func (c PrecheckResultResult) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

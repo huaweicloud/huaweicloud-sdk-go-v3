@@ -60,6 +60,10 @@ func GetListEventDetailResponseEventTypeEnum() ListEventDetailResponseEventTypeE
 	}
 }
 
+func (c ListEventDetailResponseEventType) Value() string {
+	return c.value
+}
+
 func (c ListEventDetailResponseEventType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -44,6 +44,10 @@ func GetDocumentClassificationReqLangEnum() DocumentClassificationReqLangEnum {
 	}
 }
 
+func (c DocumentClassificationReqLang) Value() string {
+	return c.value
+}
+
 func (c DocumentClassificationReqLang) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

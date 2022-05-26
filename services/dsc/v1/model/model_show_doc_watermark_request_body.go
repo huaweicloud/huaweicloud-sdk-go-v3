@@ -94,6 +94,10 @@ func GetShowDocWatermarkRequestBodyDocTypeEnum() ShowDocWatermarkRequestBodyDocT
 	}
 }
 
+func (c ShowDocWatermarkRequestBodyDocType) Value() string {
+	return c.value
+}
+
 func (c ShowDocWatermarkRequestBodyDocType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -59,6 +59,10 @@ func GetUpdateAccessConfigResponseAccessConfigTypeEnum() UpdateAccessConfigRespo
 	}
 }
 
+func (c UpdateAccessConfigResponseAccessConfigType) Value() string {
+	return c.value
+}
+
 func (c UpdateAccessConfigResponseAccessConfigType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cbh/v1/model"
 )
 
@@ -19,7 +19,7 @@ func CbhClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 获取CBH实例列表
+// ListCbhInstance 获取CBH实例列表
 //
 // 获取CBH实例列表
 //
@@ -33,4 +33,10 @@ func (c *CbhClient) ListCbhInstance(request *model.ListCbhInstanceRequest) (*mod
 	} else {
 		return resp.(*model.ListCbhInstanceResponse), nil
 	}
+}
+
+// ListCbhInstanceInvoker 获取CBH实例列表
+func (c *CbhClient) ListCbhInstanceInvoker(request *model.ListCbhInstanceRequest) *ListCbhInstanceInvoker {
+	requestDef := GenReqDefForListCbhInstance()
+	return &ListCbhInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

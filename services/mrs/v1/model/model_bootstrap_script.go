@@ -65,6 +65,10 @@ func GetBootstrapScriptFailActionEnum() BootstrapScriptFailActionEnum {
 	}
 }
 
+func (c BootstrapScriptFailAction) Value() string {
+	return c.value
+}
+
 func (c BootstrapScriptFailAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -117,6 +121,10 @@ func GetBootstrapScriptActionStagesEnum() BootstrapScriptActionStagesEnum {
 			value: "AFTER_SCALE_OUT",
 		},
 	}
+}
+
+func (c BootstrapScriptActionStages) Value() string {
+	return c.value
 }
 
 func (c BootstrapScriptActionStages) MarshalJSON() ([]byte, error) {

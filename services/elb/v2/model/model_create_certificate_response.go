@@ -79,6 +79,10 @@ func GetCreateCertificateResponseTypeEnum() CreateCertificateResponseTypeEnum {
 	}
 }
 
+func (c CreateCertificateResponseType) Value() string {
+	return c.value
+}
+
 func (c CreateCertificateResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

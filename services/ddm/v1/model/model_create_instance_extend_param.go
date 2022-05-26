@@ -57,6 +57,10 @@ func GetCreateInstanceExtendParamChargeModeEnum() CreateInstanceExtendParamCharg
 	}
 }
 
+func (c CreateInstanceExtendParamChargeMode) Value() string {
+	return c.value
+}
+
 func (c CreateInstanceExtendParamChargeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -93,6 +97,10 @@ func GetCreateInstanceExtendParamPeriodTypeEnum() CreateInstanceExtendParamPerio
 			value: "year",
 		},
 	}
+}
+
+func (c CreateInstanceExtendParamPeriodType) Value() string {
+	return c.value
 }
 
 func (c CreateInstanceExtendParamPeriodType) MarshalJSON() ([]byte, error) {
@@ -133,6 +141,10 @@ func GetCreateInstanceExtendParamIsAutoRenewEnum() CreateInstanceExtendParamIsAu
 	}
 }
 
+func (c CreateInstanceExtendParamIsAutoRenew) Value() string {
+	return c.value
+}
+
 func (c CreateInstanceExtendParamIsAutoRenew) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -169,6 +181,10 @@ func GetCreateInstanceExtendParamIsAutoPayEnum() CreateInstanceExtendParamIsAuto
 			value: "false",
 		},
 	}
+}
+
+func (c CreateInstanceExtendParamIsAutoPay) Value() string {
+	return c.value
 }
 
 func (c CreateInstanceExtendParamIsAutoPay) MarshalJSON() ([]byte, error) {

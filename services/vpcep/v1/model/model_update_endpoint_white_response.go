@@ -97,6 +97,10 @@ func GetUpdateEndpointWhiteResponseServiceTypeEnum() UpdateEndpointWhiteResponse
 	}
 }
 
+func (c UpdateEndpointWhiteResponseServiceType) Value() string {
+	return c.value
+}
+
 func (c UpdateEndpointWhiteResponseServiceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -149,6 +153,10 @@ func GetUpdateEndpointWhiteResponseStatusEnum() UpdateEndpointWhiteResponseStatu
 			value: "deleting",
 		},
 	}
+}
+
+func (c UpdateEndpointWhiteResponseStatus) Value() string {
+	return c.value
 }
 
 func (c UpdateEndpointWhiteResponseStatus) MarshalJSON() ([]byte, error) {

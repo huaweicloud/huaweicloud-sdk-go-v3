@@ -64,6 +64,10 @@ func GetShowScanJobResultsRequestTypeEnum() ShowScanJobResultsRequestTypeEnum {
 	}
 }
 
+func (c ShowScanJobResultsRequestType) Value() string {
+	return c.value
+}
+
 func (c ShowScanJobResultsRequestType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

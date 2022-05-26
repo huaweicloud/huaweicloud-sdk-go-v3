@@ -57,6 +57,10 @@ func GetMysqlChargeInfoChargeModeEnum() MysqlChargeInfoChargeModeEnum {
 	}
 }
 
+func (c MysqlChargeInfoChargeMode) Value() string {
+	return c.value
+}
+
 func (c MysqlChargeInfoChargeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -93,6 +97,10 @@ func GetMysqlChargeInfoPeriodTypeEnum() MysqlChargeInfoPeriodTypeEnum {
 			value: "year",
 		},
 	}
+}
+
+func (c MysqlChargeInfoPeriodType) Value() string {
+	return c.value
 }
 
 func (c MysqlChargeInfoPeriodType) MarshalJSON() ([]byte, error) {

@@ -30,6 +30,9 @@ type ResizeInstanceBody struct {
 
 	// Redis 4.0或者5.0主备实例进行删除副本时必选，指定需要删除的节点ID，目前仅支持一次删除一个副本。  节点ID查询方法，请参考[查询分片信息](https://support.huaweicloud.com/api-dcs/ListGroupReplicationInfo.html)
 	NodeList *[]string `json:"node_list,omitempty"`
+
+	// 是否立即变更。默认值为true。 - true: 立即变更 - false: 可维护时间窗内进行变更
+	ExecuteImmediately *bool `json:"execute_immediately,omitempty"`
 }
 
 func (o ResizeInstanceBody) String() string {
@@ -59,6 +62,10 @@ func GetResizeInstanceBodyChangeTypeEnum() ResizeInstanceBodyChangeTypeEnum {
 			value: "deleteReplication",
 		},
 	}
+}
+
+func (c ResizeInstanceBodyChangeType) Value() string {
+	return c.value
 }
 
 func (c ResizeInstanceBodyChangeType) MarshalJSON() ([]byte, error) {

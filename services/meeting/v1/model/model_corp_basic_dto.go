@@ -75,6 +75,10 @@ func GetCorpBasicDtoLanguageEnum() CorpBasicDtoLanguageEnum {
 	}
 }
 
+func (c CorpBasicDtoLanguage) Value() string {
+	return c.value
+}
+
 func (c CorpBasicDtoLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

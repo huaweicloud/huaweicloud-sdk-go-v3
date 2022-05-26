@@ -174,6 +174,10 @@ func GetListRtcClientQosDetailsRequestMidEnum() ListRtcClientQosDetailsRequestMi
 	}
 }
 
+func (c ListRtcClientQosDetailsRequestMid) Value() string {
+	return c.value
+}
+
 func (c ListRtcClientQosDetailsRequestMid) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

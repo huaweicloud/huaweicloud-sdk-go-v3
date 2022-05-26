@@ -54,6 +54,10 @@ func GetBandwidthInfoRespBandwidthTypeEnum() BandwidthInfoRespBandwidthTypeEnum 
 	}
 }
 
+func (c BandwidthInfoRespBandwidthType) Value() string {
+	return c.value
+}
+
 func (c BandwidthInfoRespBandwidthType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

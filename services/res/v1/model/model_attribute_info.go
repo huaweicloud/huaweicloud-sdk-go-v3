@@ -51,6 +51,10 @@ func GetAttributeInfoNumStatisticsTypeEnum() AttributeInfoNumStatisticsTypeEnum 
 	}
 }
 
+func (c AttributeInfoNumStatisticsType) Value() string {
+	return c.value
+}
+
 func (c AttributeInfoNumStatisticsType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

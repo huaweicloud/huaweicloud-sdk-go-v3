@@ -66,6 +66,10 @@ func GetListDomainsRequestAuthStatusEnum() ListDomainsRequestAuthStatusEnum {
 	}
 }
 
+func (c ListDomainsRequestAuthStatus) Value() string {
+	return c.value
+}
+
 func (c ListDomainsRequestAuthStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

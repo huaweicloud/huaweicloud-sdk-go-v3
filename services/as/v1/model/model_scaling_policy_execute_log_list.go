@@ -90,6 +90,10 @@ func GetScalingPolicyExecuteLogListStatusEnum() ScalingPolicyExecuteLogListStatu
 	}
 }
 
+func (c ScalingPolicyExecuteLogListStatus) Value() string {
+	return c.value
+}
+
 func (c ScalingPolicyExecuteLogListStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -136,6 +140,10 @@ func GetScalingPolicyExecuteLogListExecuteTypeEnum() ScalingPolicyExecuteLogList
 	}
 }
 
+func (c ScalingPolicyExecuteLogListExecuteType) Value() string {
+	return c.value
+}
+
 func (c ScalingPolicyExecuteLogListExecuteType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -172,6 +180,10 @@ func GetScalingPolicyExecuteLogListScalingResourceTypeEnum() ScalingPolicyExecut
 			value: "BANDWIDTH",
 		},
 	}
+}
+
+func (c ScalingPolicyExecuteLogListScalingResourceType) Value() string {
+	return c.value
 }
 
 func (c ScalingPolicyExecuteLogListScalingResourceType) MarshalJSON() ([]byte, error) {
@@ -214,6 +226,10 @@ func GetScalingPolicyExecuteLogListTypeEnum() ScalingPolicyExecuteLogListTypeEnu
 			value: "SET",
 		},
 	}
+}
+
+func (c ScalingPolicyExecuteLogListType) Value() string {
+	return c.value
 }
 
 func (c ScalingPolicyExecuteLogListType) MarshalJSON() ([]byte, error) {

@@ -50,6 +50,10 @@ func GetPostCreateVocabReqLanguageEnum() PostCreateVocabReqLanguageEnum {
 	}
 }
 
+func (c PostCreateVocabReqLanguage) Value() string {
+	return c.value
+}
+
 func (c PostCreateVocabReqLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

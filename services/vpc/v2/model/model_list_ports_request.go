@@ -86,6 +86,10 @@ func GetListPortsRequestDeviceOwnerEnum() ListPortsRequestDeviceOwnerEnum {
 	}
 }
 
+func (c ListPortsRequestDeviceOwner) Value() string {
+	return c.value
+}
+
 func (c ListPortsRequestDeviceOwner) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -126,6 +130,10 @@ func GetListPortsRequestStatusEnum() ListPortsRequestStatusEnum {
 			value: "DOWN",
 		},
 	}
+}
+
+func (c ListPortsRequestStatus) Value() string {
+	return c.value
 }
 
 func (c ListPortsRequestStatus) MarshalJSON() ([]byte, error) {

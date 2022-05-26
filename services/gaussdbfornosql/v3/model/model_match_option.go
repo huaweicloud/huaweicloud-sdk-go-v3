@@ -47,6 +47,10 @@ func GetMatchOptionKeyEnum() MatchOptionKeyEnum {
 	}
 }
 
+func (c MatchOptionKey) Value() string {
+	return c.value
+}
+
 func (c MatchOptionKey) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

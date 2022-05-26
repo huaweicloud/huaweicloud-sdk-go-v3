@@ -44,6 +44,10 @@ func GetBatchCreateLoadbalancerTagsRequestBodyActionEnum() BatchCreateLoadbalanc
 	}
 }
 
+func (c BatchCreateLoadbalancerTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c BatchCreateLoadbalancerTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

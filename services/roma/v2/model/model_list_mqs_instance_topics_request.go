@@ -64,6 +64,10 @@ func GetListMqsInstanceTopicsRequestAccessPolicyEnum() ListMqsInstanceTopicsRequ
 	}
 }
 
+func (c ListMqsInstanceTopicsRequestAccessPolicy) Value() string {
+	return c.value
+}
+
 func (c ListMqsInstanceTopicsRequestAccessPolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

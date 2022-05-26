@@ -54,6 +54,10 @@ func GetBatchResumeScalingPoliciesOptionForceDeleteEnum() BatchResumeScalingPoli
 	}
 }
 
+func (c BatchResumeScalingPoliciesOptionForceDelete) Value() string {
+	return c.value
+}
+
 func (c BatchResumeScalingPoliciesOptionForceDelete) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -86,6 +90,10 @@ func GetBatchResumeScalingPoliciesOptionActionEnum() BatchResumeScalingPoliciesO
 			value: "resume",
 		},
 	}
+}
+
+func (c BatchResumeScalingPoliciesOptionAction) Value() string {
+	return c.value
 }
 
 func (c BatchResumeScalingPoliciesOptionAction) MarshalJSON() ([]byte, error) {

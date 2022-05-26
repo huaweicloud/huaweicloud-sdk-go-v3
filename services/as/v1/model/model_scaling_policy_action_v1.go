@@ -59,6 +59,10 @@ func GetScalingPolicyActionV1OperationEnum() ScalingPolicyActionV1OperationEnum 
 	}
 }
 
+func (c ScalingPolicyActionV1Operation) Value() string {
+	return c.value
+}
+
 func (c ScalingPolicyActionV1Operation) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

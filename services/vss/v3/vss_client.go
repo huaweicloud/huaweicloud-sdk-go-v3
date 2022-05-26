@@ -2,7 +2,7 @@ package v3
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vss/v3/model"
 )
 
@@ -19,7 +19,7 @@ func VssClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 认证域名资产
+// AuthorizeDomains 认证域名资产
 //
 // 认证租户的域名资产
 //
@@ -35,7 +35,13 @@ func (c *VssClient) AuthorizeDomains(request *model.AuthorizeDomainsRequest) (*m
 	}
 }
 
-// 创建域名资产
+// AuthorizeDomainsInvoker 认证域名资产
+func (c *VssClient) AuthorizeDomainsInvoker(request *model.AuthorizeDomainsRequest) *AuthorizeDomainsInvoker {
+	requestDef := GenReqDefForAuthorizeDomains()
+	return &AuthorizeDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDomains 创建域名资产
 //
 // 创建租户的域名资产
 //
@@ -51,7 +57,13 @@ func (c *VssClient) CreateDomains(request *model.CreateDomainsRequest) (*model.C
 	}
 }
 
-// 删除域名资产
+// CreateDomainsInvoker 创建域名资产
+func (c *VssClient) CreateDomainsInvoker(request *model.CreateDomainsRequest) *CreateDomainsInvoker {
+	requestDef := GenReqDefForCreateDomains()
+	return &CreateDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDomains 删除域名资产
 //
 // 删除租户的域名资产
 //
@@ -67,7 +79,13 @@ func (c *VssClient) DeleteDomains(request *model.DeleteDomainsRequest) (*model.D
 	}
 }
 
-// 获取域名资产
+// DeleteDomainsInvoker 删除域名资产
+func (c *VssClient) DeleteDomainsInvoker(request *model.DeleteDomainsRequest) *DeleteDomainsInvoker {
+	requestDef := GenReqDefForDeleteDomains()
+	return &DeleteDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDomains 获取域名资产
 //
 // 获取租户的所有域名资产
 //
@@ -83,7 +101,13 @@ func (c *VssClient) ListDomains(request *model.ListDomainsRequest) (*model.ListD
 	}
 }
 
-// 获取域名配置
+// ListDomainsInvoker 获取域名资产
+func (c *VssClient) ListDomainsInvoker(request *model.ListDomainsRequest) *ListDomainsInvoker {
+	requestDef := GenReqDefForListDomains()
+	return &ListDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainSettings 获取域名配置
 //
 // 获取域名登录配置
 //
@@ -99,7 +123,13 @@ func (c *VssClient) ShowDomainSettings(request *model.ShowDomainSettingsRequest)
 	}
 }
 
-// 更新域名配置
+// ShowDomainSettingsInvoker 获取域名配置
+func (c *VssClient) ShowDomainSettingsInvoker(request *model.ShowDomainSettingsRequest) *ShowDomainSettingsInvoker {
+	requestDef := GenReqDefForShowDomainSettings()
+	return &ShowDomainSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDomainSettings 更新域名配置
 //
 // 更新域名登录配置
 //
@@ -115,7 +145,13 @@ func (c *VssClient) UpdateDomainSettings(request *model.UpdateDomainSettingsRequ
 	}
 }
 
-// 获取业务风险扫描结果
+// UpdateDomainSettingsInvoker 更新域名配置
+func (c *VssClient) UpdateDomainSettingsInvoker(request *model.UpdateDomainSettingsRequest) *UpdateDomainSettingsInvoker {
+	requestDef := GenReqDefForUpdateDomainSettings()
+	return &UpdateDomainSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBusinessRisks 获取业务风险扫描结果
 //
 // 获取域名业务风险扫描结果
 //
@@ -131,7 +167,13 @@ func (c *VssClient) ListBusinessRisks(request *model.ListBusinessRisksRequest) (
 	}
 }
 
-// 获取端口扫描结果
+// ListBusinessRisksInvoker 获取业务风险扫描结果
+func (c *VssClient) ListBusinessRisksInvoker(request *model.ListBusinessRisksRequest) *ListBusinessRisksInvoker {
+	requestDef := GenReqDefForListBusinessRisks()
+	return &ListBusinessRisksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPortResults 获取端口扫描结果
 //
 // 获取域名端口扫描结果
 //
@@ -147,7 +189,13 @@ func (c *VssClient) ListPortResults(request *model.ListPortResultsRequest) (*mod
 	}
 }
 
-// 获取扫描结果
+// ListPortResultsInvoker 获取端口扫描结果
+func (c *VssClient) ListPortResultsInvoker(request *model.ListPortResultsRequest) *ListPortResultsInvoker {
+	requestDef := GenReqDefForListPortResults()
+	return &ListPortResultsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResults 获取扫描结果
 //
 // 获取域名漏洞扫描结果
 //
@@ -163,7 +211,13 @@ func (c *VssClient) ShowResults(request *model.ShowResultsRequest) (*model.ShowR
 	}
 }
 
-// 更新漏洞的误报状态
+// ShowResultsInvoker 获取扫描结果
+func (c *VssClient) ShowResultsInvoker(request *model.ShowResultsRequest) *ShowResultsInvoker {
+	requestDef := GenReqDefForShowResults()
+	return &ShowResultsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFalsePositive 更新漏洞的误报状态
 //
 // 更新域名扫描漏洞的误报状态
 //
@@ -179,7 +233,13 @@ func (c *VssClient) UpdateFalsePositive(request *model.UpdateFalsePositiveReques
 	}
 }
 
-// 取消或重启扫描任务
+// UpdateFalsePositiveInvoker 更新漏洞的误报状态
+func (c *VssClient) UpdateFalsePositiveInvoker(request *model.UpdateFalsePositiveRequest) *UpdateFalsePositiveInvoker {
+	requestDef := GenReqDefForUpdateFalsePositive()
+	return &UpdateFalsePositiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelTasks 取消或重启扫描任务
 //
 // 取消或重启域名漏洞扫描任务
 //
@@ -195,7 +255,13 @@ func (c *VssClient) CancelTasks(request *model.CancelTasksRequest) (*model.Cance
 	}
 }
 
-// 创建扫描任务并启动
+// CancelTasksInvoker 取消或重启扫描任务
+func (c *VssClient) CancelTasksInvoker(request *model.CancelTasksRequest) *CancelTasksInvoker {
+	requestDef := GenReqDefForCancelTasks()
+	return &CancelTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTasks 创建扫描任务并启动
 //
 // 创建域名漏洞扫描任务并启动
 //
@@ -211,7 +277,13 @@ func (c *VssClient) CreateTasks(request *model.CreateTasksRequest) (*model.Creat
 	}
 }
 
-// 获取域名的历史扫描任务
+// CreateTasksInvoker 创建扫描任务并启动
+func (c *VssClient) CreateTasksInvoker(request *model.CreateTasksRequest) *CreateTasksInvoker {
+	requestDef := GenReqDefForCreateTasks()
+	return &CreateTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTaskHistories 获取域名的历史扫描任务
 //
 // 获取域名漏洞扫描的历史扫描任务
 //
@@ -227,7 +299,13 @@ func (c *VssClient) ListTaskHistories(request *model.ListTaskHistoriesRequest) (
 	}
 }
 
-// 获取扫描任务详情
+// ListTaskHistoriesInvoker 获取域名的历史扫描任务
+func (c *VssClient) ListTaskHistoriesInvoker(request *model.ListTaskHistoriesRequest) *ListTaskHistoriesInvoker {
+	requestDef := GenReqDefForListTaskHistories()
+	return &ListTaskHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTasks 获取扫描任务详情
 //
 // 获取域名漏洞扫描任务详情
 //
@@ -241,4 +319,10 @@ func (c *VssClient) ShowTasks(request *model.ShowTasksRequest) (*model.ShowTasks
 	} else {
 		return resp.(*model.ShowTasksResponse), nil
 	}
+}
+
+// ShowTasksInvoker 获取扫描任务详情
+func (c *VssClient) ShowTasksInvoker(request *model.ShowTasksRequest) *ShowTasksInvoker {
+	requestDef := GenReqDefForShowTasks()
+	return &ShowTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

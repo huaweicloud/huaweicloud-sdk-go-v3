@@ -63,6 +63,10 @@ func GetExportSlowQueryLogsRequestXLanguageEnum() ExportSlowQueryLogsRequestXLan
 	}
 }
 
+func (c ExportSlowQueryLogsRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ExportSlowQueryLogsRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

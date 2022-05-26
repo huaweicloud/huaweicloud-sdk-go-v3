@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/sdrs/v1/model"
 )
 
@@ -19,7 +19,7 @@ func SdrsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 保护实例添加网卡
+// AddProtectedInstanceNic 保护实例添加网卡
 //
 // 给指定的保护实例添加网卡。
 //
@@ -35,7 +35,13 @@ func (c *SdrsClient) AddProtectedInstanceNic(request *model.AddProtectedInstance
 	}
 }
 
-// 添加保护实例标签
+// AddProtectedInstanceNicInvoker 保护实例添加网卡
+func (c *SdrsClient) AddProtectedInstanceNicInvoker(request *model.AddProtectedInstanceNicRequest) *AddProtectedInstanceNicInvoker {
+	requestDef := GenReqDefForAddProtectedInstanceNic()
+	return &AddProtectedInstanceNicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddProtectedInstanceTags 添加保护实例标签
 //
 // 一个保护实例上最多有10个标签。此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
 //
@@ -51,7 +57,13 @@ func (c *SdrsClient) AddProtectedInstanceTags(request *model.AddProtectedInstanc
 	}
 }
 
-// 保护实例挂载复制对
+// AddProtectedInstanceTagsInvoker 添加保护实例标签
+func (c *SdrsClient) AddProtectedInstanceTagsInvoker(request *model.AddProtectedInstanceTagsRequest) *AddProtectedInstanceTagsInvoker {
+	requestDef := GenReqDefForAddProtectedInstanceTags()
+	return &AddProtectedInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AttachProtectedInstanceReplication 保护实例挂载复制对
 //
 // 将指定的复制对挂载到指定的保护实例上。
 //
@@ -67,7 +79,13 @@ func (c *SdrsClient) AttachProtectedInstanceReplication(request *model.AttachPro
 	}
 }
 
-// 批量添加保护实例标签
+// AttachProtectedInstanceReplicationInvoker 保护实例挂载复制对
+func (c *SdrsClient) AttachProtectedInstanceReplicationInvoker(request *model.AttachProtectedInstanceReplicationRequest) *AttachProtectedInstanceReplicationInvoker {
+	requestDef := GenReqDefForAttachProtectedInstanceReplication()
+	return &AttachProtectedInstanceReplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchAddTags 批量添加保护实例标签
 //
 // 为指定保护实例批量添加或删除标签。一个资源上最多有10个标签。
 // 此接口为幂等接口：
@@ -86,7 +104,13 @@ func (c *SdrsClient) BatchAddTags(request *model.BatchAddTagsRequest) (*model.Ba
 	}
 }
 
-// 批量创建保护实例
+// BatchAddTagsInvoker 批量添加保护实例标签
+func (c *SdrsClient) BatchAddTagsInvoker(request *model.BatchAddTagsRequest) *BatchAddTagsInvoker {
+	requestDef := GenReqDefForBatchAddTags()
+	return &BatchAddTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateProtectedInstances 批量创建保护实例
 //
 // 典型场景：没有特殊操作场景
 // 接口功能：批量创建保护实例。保护实例创建完成后，系统默认容灾站点云服务器名称与生产站点云服务器名称相同，但ID不同。
@@ -103,7 +127,13 @@ func (c *SdrsClient) BatchCreateProtectedInstances(request *model.BatchCreatePro
 	}
 }
 
-// 批量删除保护实例
+// BatchCreateProtectedInstancesInvoker 批量创建保护实例
+func (c *SdrsClient) BatchCreateProtectedInstancesInvoker(request *model.BatchCreateProtectedInstancesRequest) *BatchCreateProtectedInstancesInvoker {
+	requestDef := GenReqDefForBatchCreateProtectedInstances()
+	return &BatchCreateProtectedInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteProtectedInstances 批量删除保护实例
 //
 // 典型场景：没有特殊操作场景
 // 接口功能：批量删除保护实例。
@@ -120,7 +150,13 @@ func (c *SdrsClient) BatchDeleteProtectedInstances(request *model.BatchDeletePro
 	}
 }
 
-// 批量删除保护实例标签
+// BatchDeleteProtectedInstancesInvoker 批量删除保护实例
+func (c *SdrsClient) BatchDeleteProtectedInstancesInvoker(request *model.BatchDeleteProtectedInstancesRequest) *BatchDeleteProtectedInstancesInvoker {
+	requestDef := GenReqDefForBatchDeleteProtectedInstances()
+	return &BatchDeleteProtectedInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteTags 批量删除保护实例标签
 //
 // 为指定保护实例批量删除标签。一个资源上最多有10个标签。
 // 此接口为幂等接口：
@@ -138,7 +174,13 @@ func (c *SdrsClient) BatchDeleteTags(request *model.BatchDeleteTagsRequest) (*mo
 	}
 }
 
-// 创建容灾演练
+// BatchDeleteTagsInvoker 批量删除保护实例标签
+func (c *SdrsClient) BatchDeleteTagsInvoker(request *model.BatchDeleteTagsRequest) *BatchDeleteTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteTags()
+	return &BatchDeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDisasterRecoveryDrill 创建容灾演练
 //
 // 创建容灾演练。
 //
@@ -154,7 +196,13 @@ func (c *SdrsClient) CreateDisasterRecoveryDrill(request *model.CreateDisasterRe
 	}
 }
 
-// 创建保护实例
+// CreateDisasterRecoveryDrillInvoker 创建容灾演练
+func (c *SdrsClient) CreateDisasterRecoveryDrillInvoker(request *model.CreateDisasterRecoveryDrillRequest) *CreateDisasterRecoveryDrillInvoker {
+	requestDef := GenReqDefForCreateDisasterRecoveryDrill()
+	return &CreateDisasterRecoveryDrillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProtectedInstance 创建保护实例
 //
 // 创建保护实例。保护实例创建完成后，系统默认容灾站点云服务器名称与生产站点云服务器名称相同，但ID不同。如果需要修改云服务器名称，请在保护实例详情页面单击云服务器名称，进入云服务器详情页面进行修改
 //
@@ -170,7 +218,13 @@ func (c *SdrsClient) CreateProtectedInstance(request *model.CreateProtectedInsta
 	}
 }
 
-// 创建保护组
+// CreateProtectedInstanceInvoker 创建保护实例
+func (c *SdrsClient) CreateProtectedInstanceInvoker(request *model.CreateProtectedInstanceRequest) *CreateProtectedInstanceInvoker {
+	requestDef := GenReqDefForCreateProtectedInstance()
+	return &CreateProtectedInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProtectionGroup 创建保护组
 //
 // 创建保护组。
 // 说明：
@@ -188,7 +242,13 @@ func (c *SdrsClient) CreateProtectionGroup(request *model.CreateProtectionGroupR
 	}
 }
 
-// 创建复制对
+// CreateProtectionGroupInvoker 创建保护组
+func (c *SdrsClient) CreateProtectionGroupInvoker(request *model.CreateProtectionGroupRequest) *CreateProtectionGroupInvoker {
+	requestDef := GenReqDefForCreateProtectionGroup()
+	return &CreateProtectionGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateReplication 创建复制对
 //
 // 创建复制对，并将其添加到指定的保护组中。
 //
@@ -204,7 +264,13 @@ func (c *SdrsClient) CreateReplication(request *model.CreateReplicationRequest) 
 	}
 }
 
-// 删除所有保护组失败任务
+// CreateReplicationInvoker 创建复制对
+func (c *SdrsClient) CreateReplicationInvoker(request *model.CreateReplicationRequest) *CreateReplicationInvoker {
+	requestDef := GenReqDefForCreateReplication()
+	return &CreateReplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAllServerGroupFailureJobs 删除所有保护组失败任务
 //
 // 删除所有保护组层级的失败任务，创建、删除保护组失败等。
 //
@@ -220,7 +286,13 @@ func (c *SdrsClient) DeleteAllServerGroupFailureJobs(request *model.DeleteAllSer
 	}
 }
 
-// 删除容灾演练
+// DeleteAllServerGroupFailureJobsInvoker 删除所有保护组失败任务
+func (c *SdrsClient) DeleteAllServerGroupFailureJobsInvoker(request *model.DeleteAllServerGroupFailureJobsRequest) *DeleteAllServerGroupFailureJobsInvoker {
+	requestDef := GenReqDefForDeleteAllServerGroupFailureJobs()
+	return &DeleteAllServerGroupFailureJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDisasterRecoveryDrill 删除容灾演练
 //
 // 删除指定的容灾演练。删除后：
 // 容灾演练服务器、容灾演练服务器上挂载的磁盘和网卡将被一并删除。
@@ -238,7 +310,13 @@ func (c *SdrsClient) DeleteDisasterRecoveryDrill(request *model.DeleteDisasterRe
 	}
 }
 
-// 删除单个失败任务
+// DeleteDisasterRecoveryDrillInvoker 删除容灾演练
+func (c *SdrsClient) DeleteDisasterRecoveryDrillInvoker(request *model.DeleteDisasterRecoveryDrillRequest) *DeleteDisasterRecoveryDrillInvoker {
+	requestDef := GenReqDefForDeleteDisasterRecoveryDrill()
+	return &DeleteDisasterRecoveryDrillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFailureJob 删除单个失败任务
 //
 // 删除单个失败任务。
 //
@@ -254,7 +332,13 @@ func (c *SdrsClient) DeleteFailureJob(request *model.DeleteFailureJobRequest) (*
 	}
 }
 
-// 删除保护实例
+// DeleteFailureJobInvoker 删除单个失败任务
+func (c *SdrsClient) DeleteFailureJobInvoker(request *model.DeleteFailureJobRequest) *DeleteFailureJobInvoker {
+	requestDef := GenReqDefForDeleteFailureJob()
+	return &DeleteFailureJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProtectedInstance 删除保护实例
 //
 // 删除指定的保护实例。
 //
@@ -270,7 +354,13 @@ func (c *SdrsClient) DeleteProtectedInstance(request *model.DeleteProtectedInsta
 	}
 }
 
-// 保护实例删除网卡
+// DeleteProtectedInstanceInvoker 删除保护实例
+func (c *SdrsClient) DeleteProtectedInstanceInvoker(request *model.DeleteProtectedInstanceRequest) *DeleteProtectedInstanceInvoker {
+	requestDef := GenReqDefForDeleteProtectedInstance()
+	return &DeleteProtectedInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProtectedInstanceNic 保护实例删除网卡
 //
 // 删除指定保护实例的指定网卡。
 //
@@ -286,7 +376,13 @@ func (c *SdrsClient) DeleteProtectedInstanceNic(request *model.DeleteProtectedIn
 	}
 }
 
-// 删除保护实例标签
+// DeleteProtectedInstanceNicInvoker 保护实例删除网卡
+func (c *SdrsClient) DeleteProtectedInstanceNicInvoker(request *model.DeleteProtectedInstanceNicRequest) *DeleteProtectedInstanceNicInvoker {
+	requestDef := GenReqDefForDeleteProtectedInstanceNic()
+	return &DeleteProtectedInstanceNicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProtectedInstanceTag 删除保护实例标签
 //
 // 幂等接口：删除时，不对标签字符集做校验，调用接口前必须要做encodeURI，服务端需要对接口URI做decodeURI。
 //  说明:请自行选择工具执行URI编码。
@@ -304,7 +400,13 @@ func (c *SdrsClient) DeleteProtectedInstanceTag(request *model.DeleteProtectedIn
 	}
 }
 
-// 删除保护组
+// DeleteProtectedInstanceTagInvoker 删除保护实例标签
+func (c *SdrsClient) DeleteProtectedInstanceTagInvoker(request *model.DeleteProtectedInstanceTagRequest) *DeleteProtectedInstanceTagInvoker {
+	requestDef := GenReqDefForDeleteProtectedInstanceTag()
+	return &DeleteProtectedInstanceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProtectionGroup 删除保护组
 //
 // 删除指定的保护组。
 //
@@ -320,7 +422,13 @@ func (c *SdrsClient) DeleteProtectionGroup(request *model.DeleteProtectionGroupR
 	}
 }
 
-// 删除复制对
+// DeleteProtectionGroupInvoker 删除保护组
+func (c *SdrsClient) DeleteProtectionGroupInvoker(request *model.DeleteProtectionGroupRequest) *DeleteProtectionGroupInvoker {
+	requestDef := GenReqDefForDeleteProtectionGroup()
+	return &DeleteProtectionGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteReplication 删除复制对
 //
 // 删除指定的复制对。
 //
@@ -336,7 +444,13 @@ func (c *SdrsClient) DeleteReplication(request *model.DeleteReplicationRequest) 
 	}
 }
 
-// 删除指定保护组内的所有失败任务
+// DeleteReplicationInvoker 删除复制对
+func (c *SdrsClient) DeleteReplicationInvoker(request *model.DeleteReplicationRequest) *DeleteReplicationInvoker {
+	requestDef := GenReqDefForDeleteReplication()
+	return &DeleteReplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteServerGroupFailureJobs 删除指定保护组内的所有失败任务
 //
 // 删除指定保护组内的所有失败任务，创建保护实例失败、创建复制对失败、删除保护实例失败、删除复制对失败等。
 //
@@ -352,7 +466,13 @@ func (c *SdrsClient) DeleteServerGroupFailureJobs(request *model.DeleteServerGro
 	}
 }
 
-// 保护实例卸载复制对
+// DeleteServerGroupFailureJobsInvoker 删除指定保护组内的所有失败任务
+func (c *SdrsClient) DeleteServerGroupFailureJobsInvoker(request *model.DeleteServerGroupFailureJobsRequest) *DeleteServerGroupFailureJobsInvoker {
+	requestDef := GenReqDefForDeleteServerGroupFailureJobs()
+	return &DeleteServerGroupFailureJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DetachProtectedInstanceReplication 保护实例卸载复制对
 //
 // 将指定的复制对从指定的保护实例上卸载。
 //
@@ -368,7 +488,13 @@ func (c *SdrsClient) DetachProtectedInstanceReplication(request *model.DetachPro
 	}
 }
 
-// 复制对扩容
+// DetachProtectedInstanceReplicationInvoker 保护实例卸载复制对
+func (c *SdrsClient) DetachProtectedInstanceReplicationInvoker(request *model.DetachProtectedInstanceReplicationRequest) *DetachProtectedInstanceReplicationInvoker {
+	requestDef := GenReqDefForDetachProtectedInstanceReplication()
+	return &DetachProtectedInstanceReplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExpandReplication 复制对扩容
 //
 // 对复制对包含的两个磁盘进行扩容操作。
 //
@@ -384,7 +510,13 @@ func (c *SdrsClient) ExpandReplication(request *model.ExpandReplicationRequest) 
 	}
 }
 
-// 查询双活域
+// ExpandReplicationInvoker 复制对扩容
+func (c *SdrsClient) ExpandReplicationInvoker(request *model.ExpandReplicationRequest) *ExpandReplicationInvoker {
+	requestDef := GenReqDefForExpandReplication()
+	return &ExpandReplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListActiveActiveDomains 查询双活域
 //
 // 查询双活域。双活域由本端存储设备、远端存储设备组成，通过双活域，应用服务器可以实现跨站点的数据访问。
 //
@@ -400,7 +532,13 @@ func (c *SdrsClient) ListActiveActiveDomains(request *model.ListActiveActiveDoma
 	}
 }
 
-// 查询容灾演练列表
+// ListActiveActiveDomainsInvoker 查询双活域
+func (c *SdrsClient) ListActiveActiveDomainsInvoker(request *model.ListActiveActiveDomainsRequest) *ListActiveActiveDomainsInvoker {
+	requestDef := GenReqDefForListActiveActiveDomains()
+	return &ListActiveActiveDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDisasterRecoveryDrills 查询容灾演练列表
 //
 // 查询指定保护组下的所有容灾演练列表，当未指定保护组时查询当前租户下的所有容灾演练列表。
 //
@@ -416,7 +554,13 @@ func (c *SdrsClient) ListDisasterRecoveryDrills(request *model.ListDisasterRecov
 	}
 }
 
-// 查询失败任务列表
+// ListDisasterRecoveryDrillsInvoker 查询容灾演练列表
+func (c *SdrsClient) ListDisasterRecoveryDrillsInvoker(request *model.ListDisasterRecoveryDrillsRequest) *ListDisasterRecoveryDrillsInvoker {
+	requestDef := GenReqDefForListDisasterRecoveryDrills()
+	return &ListDisasterRecoveryDrillsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFailureJobs 查询失败任务列表
 //
 // 查询所有保护组失败任务列表或者指定保护组下的所有失败任务列表。
 //
@@ -432,7 +576,13 @@ func (c *SdrsClient) ListFailureJobs(request *model.ListFailureJobsRequest) (*mo
 	}
 }
 
-// 查询保护实例标签
+// ListFailureJobsInvoker 查询失败任务列表
+func (c *SdrsClient) ListFailureJobsInvoker(request *model.ListFailureJobsRequest) *ListFailureJobsInvoker {
+	requestDef := GenReqDefForListFailureJobs()
+	return &ListFailureJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProtectedInstanceTags 查询保护实例标签
 //
 // 查询指定保护实例的标签信息。
 //
@@ -448,7 +598,13 @@ func (c *SdrsClient) ListProtectedInstanceTags(request *model.ListProtectedInsta
 	}
 }
 
-// 查询保护实例列表
+// ListProtectedInstanceTagsInvoker 查询保护实例标签
+func (c *SdrsClient) ListProtectedInstanceTagsInvoker(request *model.ListProtectedInstanceTagsRequest) *ListProtectedInstanceTagsInvoker {
+	requestDef := GenReqDefForListProtectedInstanceTags()
+	return &ListProtectedInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProtectedInstances 查询保护实例列表
 //
 // 查询当前租户下的所有保护实例列表。
 //
@@ -464,7 +620,13 @@ func (c *SdrsClient) ListProtectedInstances(request *model.ListProtectedInstance
 	}
 }
 
-// 通过标签查询保护实例
+// ListProtectedInstancesInvoker 查询保护实例列表
+func (c *SdrsClient) ListProtectedInstancesInvoker(request *model.ListProtectedInstancesRequest) *ListProtectedInstancesInvoker {
+	requestDef := GenReqDefForListProtectedInstances()
+	return &ListProtectedInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProtectedInstancesByTags 通过标签查询保护实例
 //
 // 使用标签过滤保护实例
 //
@@ -480,7 +642,13 @@ func (c *SdrsClient) ListProtectedInstancesByTags(request *model.ListProtectedIn
 	}
 }
 
-// 查询保护实例项目标签
+// ListProtectedInstancesByTagsInvoker 通过标签查询保护实例
+func (c *SdrsClient) ListProtectedInstancesByTagsInvoker(request *model.ListProtectedInstancesByTagsRequest) *ListProtectedInstancesByTagsInvoker {
+	requestDef := GenReqDefForListProtectedInstancesByTags()
+	return &ListProtectedInstancesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProtectedInstancesProjectTags 查询保护实例项目标签
 //
 // 查询租户在指定Project中保护实例的所有资源标签集合。
 //
@@ -496,7 +664,13 @@ func (c *SdrsClient) ListProtectedInstancesProjectTags(request *model.ListProtec
 	}
 }
 
-// 查询保护组列表
+// ListProtectedInstancesProjectTagsInvoker 查询保护实例项目标签
+func (c *SdrsClient) ListProtectedInstancesProjectTagsInvoker(request *model.ListProtectedInstancesProjectTagsRequest) *ListProtectedInstancesProjectTagsInvoker {
+	requestDef := GenReqDefForListProtectedInstancesProjectTags()
+	return &ListProtectedInstancesProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProtectionGroups 查询保护组列表
 //
 // 查询当前租户所有的保护组列表。
 //
@@ -512,7 +686,13 @@ func (c *SdrsClient) ListProtectionGroups(request *model.ListProtectionGroupsReq
 	}
 }
 
-// 查询复制对列表
+// ListProtectionGroupsInvoker 查询保护组列表
+func (c *SdrsClient) ListProtectionGroupsInvoker(request *model.ListProtectionGroupsRequest) *ListProtectionGroupsInvoker {
+	requestDef := GenReqDefForListProtectionGroups()
+	return &ListProtectionGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListReplications 查询复制对列表
 //
 // 查询指定保护组下的所有复制对列表，如果不给定指定保护组则查询当前租户下的所有复制对列表。
 //
@@ -528,7 +708,13 @@ func (c *SdrsClient) ListReplications(request *model.ListReplicationsRequest) (*
 	}
 }
 
-// 查询资源的RPO超标趋势记录列表
+// ListReplicationsInvoker 查询复制对列表
+func (c *SdrsClient) ListReplicationsInvoker(request *model.ListReplicationsRequest) *ListReplicationsInvoker {
+	requestDef := GenReqDefForListReplications()
+	return &ListReplicationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRpoStatistics 查询资源的RPO超标趋势记录列表
 //
 // 查询当前租户大屏显示中，资源的RPO超标趋势记录列表。
 //
@@ -544,7 +730,13 @@ func (c *SdrsClient) ListRpoStatistics(request *model.ListRpoStatisticsRequest) 
 	}
 }
 
-// 保护实例变更规格
+// ListRpoStatisticsInvoker 查询资源的RPO超标趋势记录列表
+func (c *SdrsClient) ListRpoStatisticsInvoker(request *model.ListRpoStatisticsRequest) *ListRpoStatisticsInvoker {
+	requestDef := GenReqDefForListRpoStatistics()
+	return &ListRpoStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResizeProtectedInstance 保护实例变更规格
 //
 // 变更指定保护实例中弹性云服务器的规格，包括：同时变更生产站点云服务器和容灾站点云服务器的规格。
 // 仅变更生产站点云服务器的规格，容灾站点云服务器规格不变。
@@ -565,7 +757,13 @@ func (c *SdrsClient) ResizeProtectedInstance(request *model.ResizeProtectedInsta
 	}
 }
 
-// 查询单个容灾演练详情
+// ResizeProtectedInstanceInvoker 保护实例变更规格
+func (c *SdrsClient) ResizeProtectedInstanceInvoker(request *model.ResizeProtectedInstanceRequest) *ResizeProtectedInstanceInvoker {
+	requestDef := GenReqDefForResizeProtectedInstance()
+	return &ResizeProtectedInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDisasterRecoveryDrill 查询单个容灾演练详情
 //
 // 查询单个容灾演练的详细信息。
 //
@@ -581,7 +779,13 @@ func (c *SdrsClient) ShowDisasterRecoveryDrill(request *model.ShowDisasterRecove
 	}
 }
 
-// 查询单个保护实例详情
+// ShowDisasterRecoveryDrillInvoker 查询单个容灾演练详情
+func (c *SdrsClient) ShowDisasterRecoveryDrillInvoker(request *model.ShowDisasterRecoveryDrillRequest) *ShowDisasterRecoveryDrillInvoker {
+	requestDef := GenReqDefForShowDisasterRecoveryDrill()
+	return &ShowDisasterRecoveryDrillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProtectedInstance 查询单个保护实例详情
 //
 // 查询单个保护实例的详细信息，如名称、ID等。
 //
@@ -597,7 +801,13 @@ func (c *SdrsClient) ShowProtectedInstance(request *model.ShowProtectedInstanceR
 	}
 }
 
-// 查询保护组详情
+// ShowProtectedInstanceInvoker 查询单个保护实例详情
+func (c *SdrsClient) ShowProtectedInstanceInvoker(request *model.ShowProtectedInstanceRequest) *ShowProtectedInstanceInvoker {
+	requestDef := GenReqDefForShowProtectedInstance()
+	return &ShowProtectedInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProtectionGroup 查询保护组详情
 //
 // 查询单个保护组的详细信息，如ID、名称等。
 //
@@ -613,7 +823,13 @@ func (c *SdrsClient) ShowProtectionGroup(request *model.ShowProtectionGroupReque
 	}
 }
 
-// 查询租户配额
+// ShowProtectionGroupInvoker 查询保护组详情
+func (c *SdrsClient) ShowProtectionGroupInvoker(request *model.ShowProtectionGroupRequest) *ShowProtectionGroupInvoker {
+	requestDef := GenReqDefForShowProtectionGroup()
+	return &ShowProtectionGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuota 查询租户配额
 //
 // 查询资源的配额相关信息。
 //
@@ -629,7 +845,13 @@ func (c *SdrsClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuot
 	}
 }
 
-// 查询单个复制对详情
+// ShowQuotaInvoker 查询租户配额
+func (c *SdrsClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuotaInvoker {
+	requestDef := GenReqDefForShowQuota()
+	return &ShowQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowReplication 查询单个复制对详情
 //
 // 查询单个复制对的详细信息。
 //
@@ -645,7 +867,13 @@ func (c *SdrsClient) ShowReplication(request *model.ShowReplicationRequest) (*mo
 	}
 }
 
-// 保护组故障切换
+// ShowReplicationInvoker 查询单个复制对详情
+func (c *SdrsClient) ShowReplicationInvoker(request *model.ShowReplicationRequest) *ShowReplicationInvoker {
+	requestDef := GenReqDefForShowReplication()
+	return &ShowReplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartFailoverProtectionGroup 保护组故障切换
 //
 // 当保护组的生产站点发生故障时，将保护组的生产站点切到当前的容灾站点，即另一端AZ，启用当前容灾站点的云硬盘以及云服务器等资源。
 // 故障切换完成之后，保护组的当前生产站点变成故障切换发生之前的容灾站点，且生产站点和容灾站点之间的数据已停止保护，必须调用5.4.6-保护组开启保护/重保护接口成功后，两端的数据才会重新被保护。
@@ -662,7 +890,13 @@ func (c *SdrsClient) StartFailoverProtectionGroup(request *model.StartFailoverPr
 	}
 }
 
-// 保护组开启保护/重保护
+// StartFailoverProtectionGroupInvoker 保护组故障切换
+func (c *SdrsClient) StartFailoverProtectionGroupInvoker(request *model.StartFailoverProtectionGroupRequest) *StartFailoverProtectionGroupInvoker {
+	requestDef := GenReqDefForStartFailoverProtectionGroup()
+	return &StartFailoverProtectionGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartProtectionGroup 保护组开启保护/重保护
 //
 // 对某一个保护组的“开启保护”或“重保护”操作。
 //
@@ -678,7 +912,13 @@ func (c *SdrsClient) StartProtectionGroup(request *model.StartProtectionGroupReq
 	}
 }
 
-// 保护组切换
+// StartProtectionGroupInvoker 保护组开启保护/重保护
+func (c *SdrsClient) StartProtectionGroupInvoker(request *model.StartProtectionGroupRequest) *StartProtectionGroupInvoker {
+	requestDef := GenReqDefForStartProtectionGroup()
+	return &StartProtectionGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartReverseProtectionGroup 保护组切换
 //
 // 对保护组进行切换操作，可以将保护组的当前生产站点，从创建保护组时指定的生产站点切换到创建保护组时指定的容灾站点，也可以从创建保护组时指定的容灾站点切换到创建保护组时指定的生产站点。切换后，生产站点和容灾站点的数据仍然处于被保护状态，只是复制方向与操作之前相反。
 //
@@ -694,7 +934,13 @@ func (c *SdrsClient) StartReverseProtectionGroup(request *model.StartReverseProt
 	}
 }
 
-// 保护组停止保护
+// StartReverseProtectionGroupInvoker 保护组切换
+func (c *SdrsClient) StartReverseProtectionGroupInvoker(request *model.StartReverseProtectionGroupRequest) *StartReverseProtectionGroupInvoker {
+	requestDef := GenReqDefForStartReverseProtectionGroup()
+	return &StartReverseProtectionGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopProtectionGroup 保护组停止保护
 //
 // 对某一个保护组的停止保护操作。
 //
@@ -710,7 +956,13 @@ func (c *SdrsClient) StopProtectionGroup(request *model.StopProtectionGroupReque
 	}
 }
 
-// 更新容灾演练名称
+// StopProtectionGroupInvoker 保护组停止保护
+func (c *SdrsClient) StopProtectionGroupInvoker(request *model.StopProtectionGroupRequest) *StopProtectionGroupInvoker {
+	requestDef := GenReqDefForStopProtectionGroup()
+	return &StopProtectionGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDisasterRecoveryDrillName 更新容灾演练名称
 //
 // 更新容灾演练的名称。
 //
@@ -726,7 +978,13 @@ func (c *SdrsClient) UpdateDisasterRecoveryDrillName(request *model.UpdateDisast
 	}
 }
 
-// 更新保护实例名称
+// UpdateDisasterRecoveryDrillNameInvoker 更新容灾演练名称
+func (c *SdrsClient) UpdateDisasterRecoveryDrillNameInvoker(request *model.UpdateDisasterRecoveryDrillNameRequest) *UpdateDisasterRecoveryDrillNameInvoker {
+	requestDef := GenReqDefForUpdateDisasterRecoveryDrillName()
+	return &UpdateDisasterRecoveryDrillNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProtectedInstanceName 更新保护实例名称
 //
 // 更新某一个保护实例的名称。
 //
@@ -742,7 +1000,13 @@ func (c *SdrsClient) UpdateProtectedInstanceName(request *model.UpdateProtectedI
 	}
 }
 
-// 更新保护组名称
+// UpdateProtectedInstanceNameInvoker 更新保护实例名称
+func (c *SdrsClient) UpdateProtectedInstanceNameInvoker(request *model.UpdateProtectedInstanceNameRequest) *UpdateProtectedInstanceNameInvoker {
+	requestDef := GenReqDefForUpdateProtectedInstanceName()
+	return &UpdateProtectedInstanceNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProtectionGroupName 更新保护组名称
 //
 // 更新某一个保护组的名称。
 //
@@ -758,7 +1022,13 @@ func (c *SdrsClient) UpdateProtectionGroupName(request *model.UpdateProtectionGr
 	}
 }
 
-// 更新复制对名称
+// UpdateProtectionGroupNameInvoker 更新保护组名称
+func (c *SdrsClient) UpdateProtectionGroupNameInvoker(request *model.UpdateProtectionGroupNameRequest) *UpdateProtectionGroupNameInvoker {
+	requestDef := GenReqDefForUpdateProtectionGroupName()
+	return &UpdateProtectionGroupNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateReplicationName 更新复制对名称
 //
 // 更新复制对名称。
 //
@@ -774,7 +1044,13 @@ func (c *SdrsClient) UpdateReplicationName(request *model.UpdateReplicationNameR
 	}
 }
 
-// 查询API版本信息
+// UpdateReplicationNameInvoker 更新复制对名称
+func (c *SdrsClient) UpdateReplicationNameInvoker(request *model.UpdateReplicationNameRequest) *UpdateReplicationNameInvoker {
+	requestDef := GenReqDefForUpdateReplicationName()
+	return &UpdateReplicationNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiVersions 查询API版本信息
 //
 // 查询存储容灾当前所有可用的版本信息列表。
 //
@@ -790,7 +1066,13 @@ func (c *SdrsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*mo
 	}
 }
 
-// 查询指定API版本信息
+// ListApiVersionsInvoker 查询API版本信息
+func (c *SdrsClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest) *ListApiVersionsInvoker {
+	requestDef := GenReqDefForListApiVersions()
+	return &ListApiVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSpecifiedApiVersion 查询指定API版本信息
 //
 // 查询存储容灾指定API版本信息。
 //
@@ -806,7 +1088,13 @@ func (c *SdrsClient) ShowSpecifiedApiVersion(request *model.ShowSpecifiedApiVers
 	}
 }
 
-// 查询job状态
+// ShowSpecifiedApiVersionInvoker 查询指定API版本信息
+func (c *SdrsClient) ShowSpecifiedApiVersionInvoker(request *model.ShowSpecifiedApiVersionRequest) *ShowSpecifiedApiVersionInvoker {
+	requestDef := GenReqDefForShowSpecifiedApiVersion()
+	return &ShowSpecifiedApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobStatus 查询job状态
 //
 // 查询job的执行状态。
 // 对于创建保护组、删除保护组、创建保护实例、删除保护实例、创建复制对、删除复制对等异步API，命令下发后，会返回job_id，通过job_id可以查询任务的执行状态。
@@ -821,4 +1109,10 @@ func (c *SdrsClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*model.
 	} else {
 		return resp.(*model.ShowJobStatusResponse), nil
 	}
+}
+
+// ShowJobStatusInvoker 查询job状态
+func (c *SdrsClient) ShowJobStatusInvoker(request *model.ShowJobStatusRequest) *ShowJobStatusInvoker {
+	requestDef := GenReqDefForShowJobStatus()
+	return &ShowJobStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

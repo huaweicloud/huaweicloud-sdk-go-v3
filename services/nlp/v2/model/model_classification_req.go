@@ -44,6 +44,10 @@ func GetClassificationReqDomainEnum() ClassificationReqDomainEnum {
 	}
 }
 
+func (c ClassificationReqDomain) Value() int32 {
+	return c.value
+}
+
 func (c ClassificationReqDomain) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

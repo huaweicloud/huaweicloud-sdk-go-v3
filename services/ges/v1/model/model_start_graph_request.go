@@ -46,6 +46,10 @@ func GetStartGraphRequestActionIdEnum() StartGraphRequestActionIdEnum {
 	}
 }
 
+func (c StartGraphRequestActionId) Value() string {
+	return c.value
+}
+
 func (c StartGraphRequestActionId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

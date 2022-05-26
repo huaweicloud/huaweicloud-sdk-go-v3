@@ -108,6 +108,10 @@ func GetUpdateScalingGroupOptionHealthPeriodicAuditMethodEnum() UpdateScalingGro
 	}
 }
 
+func (c UpdateScalingGroupOptionHealthPeriodicAuditMethod) Value() string {
+	return c.value
+}
+
 func (c UpdateScalingGroupOptionHealthPeriodicAuditMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -152,6 +156,10 @@ func GetUpdateScalingGroupOptionInstanceTerminatePolicyEnum() UpdateScalingGroup
 			value: "NEW_INSTANCE",
 		},
 	}
+}
+
+func (c UpdateScalingGroupOptionInstanceTerminatePolicy) Value() string {
+	return c.value
 }
 
 func (c UpdateScalingGroupOptionInstanceTerminatePolicy) MarshalJSON() ([]byte, error) {

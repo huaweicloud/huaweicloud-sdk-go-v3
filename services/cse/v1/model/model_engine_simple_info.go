@@ -116,6 +116,10 @@ func GetEngineSimpleInfoTypeEnum() EngineSimpleInfoTypeEnum {
 	}
 }
 
+func (c EngineSimpleInfoType) Value() string {
+	return c.value
+}
+
 func (c EngineSimpleInfoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -162,6 +166,10 @@ func GetEngineSimpleInfoFlavorEnum() EngineSimpleInfoFlavorEnum {
 	}
 }
 
+func (c EngineSimpleInfoFlavor) Value() string {
+	return c.value
+}
+
 func (c EngineSimpleInfoFlavor) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -198,6 +206,10 @@ func GetEngineSimpleInfoAuthTypeEnum() EngineSimpleInfoAuthTypeEnum {
 			value: "NONE",
 		},
 	}
+}
+
+func (c EngineSimpleInfoAuthType) Value() string {
+	return c.value
 }
 
 func (c EngineSimpleInfoAuthType) MarshalJSON() ([]byte, error) {
@@ -278,6 +290,10 @@ func GetEngineSimpleInfoStatusEnum() EngineSimpleInfoStatusEnum {
 	}
 }
 
+func (c EngineSimpleInfoStatus) Value() string {
+	return c.value
+}
+
 func (c EngineSimpleInfoStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -324,6 +340,10 @@ func GetEngineSimpleInfoEngineAdditionalActionsEnum() EngineSimpleInfoEngineAddi
 	}
 }
 
+func (c EngineSimpleInfoEngineAdditionalActions) Value() string {
+	return c.value
+}
+
 func (c EngineSimpleInfoEngineAdditionalActions) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -364,6 +384,10 @@ func GetEngineSimpleInfoSpecTypeEnum() EngineSimpleInfoSpecTypeEnum {
 			value: "SpringCloud",
 		},
 	}
+}
+
+func (c EngineSimpleInfoSpecType) Value() string {
+	return c.value
 }
 
 func (c EngineSimpleInfoSpecType) MarshalJSON() ([]byte, error) {

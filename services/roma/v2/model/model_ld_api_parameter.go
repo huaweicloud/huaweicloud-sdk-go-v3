@@ -61,6 +61,10 @@ func GetLdApiParameterInEnum() LdApiParameterInEnum {
 	}
 }
 
+func (c LdApiParameterIn) Value() string {
+	return c.value
+}
+
 func (c LdApiParameterIn) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

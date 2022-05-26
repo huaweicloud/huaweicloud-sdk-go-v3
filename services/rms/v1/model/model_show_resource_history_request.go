@@ -60,6 +60,10 @@ func GetShowResourceHistoryRequestChronologicalOrderEnum() ShowResourceHistoryRe
 	}
 }
 
+func (c ShowResourceHistoryRequestChronologicalOrder) Value() string {
+	return c.value
+}
+
 func (c ShowResourceHistoryRequestChronologicalOrder) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

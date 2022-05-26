@@ -48,6 +48,10 @@ func GetDeleteScalingGroupRequestForceDeleteEnum() DeleteScalingGroupRequestForc
 	}
 }
 
+func (c DeleteScalingGroupRequestForceDelete) Value() string {
+	return c.value
+}
+
 func (c DeleteScalingGroupRequestForceDelete) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

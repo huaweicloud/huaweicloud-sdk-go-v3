@@ -55,6 +55,10 @@ func GetUpdateBandwidthOptionChargeModeEnum() UpdateBandwidthOptionChargeModeEnu
 	}
 }
 
+func (c UpdateBandwidthOptionChargeMode) Value() string {
+	return c.value
+}
+
 func (c UpdateBandwidthOptionChargeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

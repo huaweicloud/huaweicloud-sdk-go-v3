@@ -48,6 +48,10 @@ func GetListQuotaDetailsRequestTypeEnum() ListQuotaDetailsRequestTypeEnum {
 	}
 }
 
+func (c ListQuotaDetailsRequestType) Value() string {
+	return c.value
+}
+
 func (c ListQuotaDetailsRequestType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

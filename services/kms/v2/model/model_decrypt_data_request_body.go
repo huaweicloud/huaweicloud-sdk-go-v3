@@ -57,6 +57,10 @@ func GetDecryptDataRequestBodyEncryptionAlgorithmEnum() DecryptDataRequestBodyEn
 	}
 }
 
+func (c DecryptDataRequestBodyEncryptionAlgorithm) Value() string {
+	return c.value
+}
+
 func (c DecryptDataRequestBodyEncryptionAlgorithm) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

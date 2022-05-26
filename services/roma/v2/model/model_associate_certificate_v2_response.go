@@ -66,6 +66,10 @@ func GetAssociateCertificateV2ResponseStatusEnum() AssociateCertificateV2Respons
 	}
 }
 
+func (c AssociateCertificateV2ResponseStatus) Value() int32 {
+	return c.value
+}
+
 func (c AssociateCertificateV2ResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

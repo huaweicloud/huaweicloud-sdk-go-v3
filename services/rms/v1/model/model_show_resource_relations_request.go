@@ -54,6 +54,10 @@ func GetShowResourceRelationsRequestDirectionEnum() ShowResourceRelationsRequest
 	}
 }
 
+func (c ShowResourceRelationsRequestDirection) Value() string {
+	return c.value
+}
+
 func (c ShowResourceRelationsRequestDirection) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

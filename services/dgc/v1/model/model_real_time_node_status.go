@@ -60,6 +60,10 @@ func GetRealTimeNodeStatusStatusEnum() RealTimeNodeStatusStatusEnum {
 	}
 }
 
+func (c RealTimeNodeStatusStatus) Value() string {
+	return c.value
+}
+
 func (c RealTimeNodeStatusStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -152,6 +156,10 @@ func GetRealTimeNodeStatusNodeTypeEnum() RealTimeNodeStatusNodeTypeEnum {
 			value: "DLISpark",
 		},
 	}
+}
+
+func (c RealTimeNodeStatusNodeType) Value() string {
+	return c.value
 }
 
 func (c RealTimeNodeStatusNodeType) MarshalJSON() ([]byte, error) {

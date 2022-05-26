@@ -71,6 +71,10 @@ func GetAudioConfigAudioFormatEnum() AudioConfigAudioFormatEnum {
 	}
 }
 
+func (c AudioConfigAudioFormat) Value() string {
+	return c.value
+}
+
 func (c AudioConfigAudioFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -103,6 +107,10 @@ func GetAudioConfigLanguageEnum() AudioConfigLanguageEnum {
 			value: "en_gb",
 		},
 	}
+}
+
+func (c AudioConfigLanguage) Value() string {
+	return c.value
 }
 
 func (c AudioConfigLanguage) MarshalJSON() ([]byte, error) {
@@ -141,6 +149,10 @@ func GetAudioConfigModeEnum() AudioConfigModeEnum {
 			value: "sentence",
 		},
 	}
+}
+
+func (c AudioConfigMode) Value() string {
+	return c.value
 }
 
 func (c AudioConfigMode) MarshalJSON() ([]byte, error) {

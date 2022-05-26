@@ -64,6 +64,10 @@ func GetShowProductTemplateResponseStatusEnum() ShowProductTemplateResponseStatu
 	}
 }
 
+func (c ShowProductTemplateResponseStatus) Value() int32 {
+	return c.value
+}
+
 func (c ShowProductTemplateResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

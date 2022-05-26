@@ -72,6 +72,10 @@ func GetNeutronUpdateFirewallRuleOptionActionEnum() NeutronUpdateFirewallRuleOpt
 	}
 }
 
+func (c NeutronUpdateFirewallRuleOptionAction) Value() string {
+	return c.value
+}
+
 func (c NeutronUpdateFirewallRuleOptionAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -256,6 +256,10 @@ func GetQueryJobRespStatusEnum() QueryJobRespStatusEnum {
 	}
 }
 
+func (c QueryJobRespStatus) Value() string {
+	return c.value
+}
+
 func (c QueryJobRespStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -296,6 +300,10 @@ func GetQueryJobRespTaskTypeEnum() QueryJobRespTaskTypeEnum {
 			value: "INCR_TRANS",
 		},
 	}
+}
+
+func (c QueryJobRespTaskType) Value() string {
+	return c.value
 }
 
 func (c QueryJobRespTaskType) MarshalJSON() ([]byte, error) {
@@ -340,6 +348,10 @@ func GetQueryJobRespNetTypeEnum() QueryJobRespNetTypeEnum {
 	}
 }
 
+func (c QueryJobRespNetType) Value() string {
+	return c.value
+}
+
 func (c QueryJobRespNetType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -380,6 +392,10 @@ func GetQueryJobRespJobDirectionEnum() QueryJobRespJobDirectionEnum {
 			value: "non-dbs",
 		},
 	}
+}
+
+func (c QueryJobRespJobDirection) Value() string {
+	return c.value
 }
 
 func (c QueryJobRespJobDirection) MarshalJSON() ([]byte, error) {
@@ -424,6 +440,10 @@ func GetQueryJobRespDbUseTypeEnum() QueryJobRespDbUseTypeEnum {
 	}
 }
 
+func (c QueryJobRespDbUseType) Value() string {
+	return c.value
+}
+
 func (c QueryJobRespDbUseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -466,6 +486,10 @@ func GetQueryJobRespConflictPolicyEnum() QueryJobRespConflictPolicyEnum {
 	}
 }
 
+func (c QueryJobRespConflictPolicy) Value() string {
+	return c.value
+}
+
 func (c QueryJobRespConflictPolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -506,6 +530,10 @@ func GetQueryJobRespSchemaTypeEnum() QueryJobRespSchemaTypeEnum {
 			value: "PGBaseBackup",
 		},
 	}
+}
+
+func (c QueryJobRespSchemaType) Value() string {
+	return c.value
 }
 
 func (c QueryJobRespSchemaType) MarshalJSON() ([]byte, error) {

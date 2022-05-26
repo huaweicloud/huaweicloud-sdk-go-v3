@@ -62,6 +62,10 @@ func GetPersistentVolumeClaimSpecAccessModesEnum() PersistentVolumeClaimSpecAcce
 	}
 }
 
+func (c PersistentVolumeClaimSpecAccessModes) Value() string {
+	return c.value
+}
+
 func (c PersistentVolumeClaimSpecAccessModes) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

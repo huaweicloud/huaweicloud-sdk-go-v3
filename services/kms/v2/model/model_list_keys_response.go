@@ -58,6 +58,10 @@ func GetListKeysResponseTruncatedEnum() ListKeysResponseTruncatedEnum {
 	}
 }
 
+func (c ListKeysResponseTruncated) Value() string {
+	return c.value
+}
+
 func (c ListKeysResponseTruncated) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

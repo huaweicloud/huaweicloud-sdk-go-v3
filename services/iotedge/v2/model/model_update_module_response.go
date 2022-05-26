@@ -93,6 +93,10 @@ func GetUpdateModuleResponseStateEnum() UpdateModuleResponseStateEnum {
 	}
 }
 
+func (c UpdateModuleResponseState) Value() string {
+	return c.value
+}
+
 func (c UpdateModuleResponseState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -135,6 +139,10 @@ func GetUpdateModuleResponseAppTypeEnum() UpdateModuleResponseAppTypeEnum {
 	}
 }
 
+func (c UpdateModuleResponseAppType) Value() string {
+	return c.value
+}
+
 func (c UpdateModuleResponseAppType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -175,6 +183,10 @@ func GetUpdateModuleResponseFunctionTypeEnum() UpdateModuleResponseFunctionTypeE
 			value: "ON_PREMISE_INTEGRATION",
 		},
 	}
+}
+
+func (c UpdateModuleResponseFunctionType) Value() string {
+	return c.value
 }
 
 func (c UpdateModuleResponseFunctionType) MarshalJSON() ([]byte, error) {

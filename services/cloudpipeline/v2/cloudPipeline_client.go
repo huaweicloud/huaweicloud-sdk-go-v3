@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudpipeline/v2/model"
 )
 
@@ -19,7 +19,7 @@ func CloudPipelineClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 批量获取流水线状态
+// BatchShowPipelinesStatus 批量获取流水线状态
 //
 // 批量获取流水线状态和阶段信息
 //
@@ -35,7 +35,13 @@ func (c *CloudPipelineClient) BatchShowPipelinesStatus(request *model.BatchShowP
 	}
 }
 
-// 基于模板快速创建流水线及流水线内任务
+// BatchShowPipelinesStatusInvoker 批量获取流水线状态
+func (c *CloudPipelineClient) BatchShowPipelinesStatusInvoker(request *model.BatchShowPipelinesStatusRequest) *BatchShowPipelinesStatusInvoker {
+	requestDef := GenReqDefForBatchShowPipelinesStatus()
+	return &BatchShowPipelinesStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePipelineByTemplate 基于模板快速创建流水线及流水线内任务
 //
 // 基于模板快速创建流水线及流水线内任务
 //
@@ -51,7 +57,13 @@ func (c *CloudPipelineClient) CreatePipelineByTemplate(request *model.CreatePipe
 	}
 }
 
-// 获取流水线列表接口
+// CreatePipelineByTemplateInvoker 基于模板快速创建流水线及流水线内任务
+func (c *CloudPipelineClient) CreatePipelineByTemplateInvoker(request *model.CreatePipelineByTemplateRequest) *CreatePipelineByTemplateInvoker {
+	requestDef := GenReqDefForCreatePipelineByTemplate()
+	return &CreatePipelineByTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPipelineSimpleInfo 获取流水线列表接口
 //
 // 获取流水线列表接口
 //
@@ -67,7 +79,13 @@ func (c *CloudPipelineClient) ListPipelineSimpleInfo(request *model.ListPipeline
 	}
 }
 
-// 获取项目下流水线执行状况
+// ListPipelineSimpleInfoInvoker 获取流水线列表接口
+func (c *CloudPipelineClient) ListPipelineSimpleInfoInvoker(request *model.ListPipelineSimpleInfoRequest) *ListPipelineSimpleInfoInvoker {
+	requestDef := GenReqDefForListPipelineSimpleInfo()
+	return &ListPipelineSimpleInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPipleineBuildResult 获取项目下流水线执行状况
 //
 // 获取项目下流水线执行状况
 //
@@ -83,7 +101,13 @@ func (c *CloudPipelineClient) ListPipleineBuildResult(request *model.ListPiplein
 	}
 }
 
-// 查询模板列表
+// ListPipleineBuildResultInvoker 获取项目下流水线执行状况
+func (c *CloudPipelineClient) ListPipleineBuildResultInvoker(request *model.ListPipleineBuildResultRequest) *ListPipleineBuildResultInvoker {
+	requestDef := GenReqDefForListPipleineBuildResult()
+	return &ListPipleineBuildResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTemplates 查询模板列表
 //
 // 查询模板列表，支持分页查询,支持模板名字模糊查询
 //
@@ -99,7 +123,13 @@ func (c *CloudPipelineClient) ListTemplates(request *model.ListTemplatesRequest)
 	}
 }
 
-// register注册Slave接口
+// ListTemplatesInvoker 查询模板列表
+func (c *CloudPipelineClient) ListTemplatesInvoker(request *model.ListTemplatesRequest) *ListTemplatesInvoker {
+	requestDef := GenReqDefForListTemplates()
+	return &ListTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RegisterAgent register注册Slave接口
 //
 // 注册创建Slave接口
 //
@@ -115,7 +145,13 @@ func (c *CloudPipelineClient) RegisterAgent(request *model.RegisterAgentRequest)
 	}
 }
 
-// 删除流水线
+// RegisterAgentInvoker register注册Slave接口
+func (c *CloudPipelineClient) RegisterAgentInvoker(request *model.RegisterAgentRequest) *RegisterAgentInvoker {
+	requestDef := GenReqDefForRegisterAgent()
+	return &RegisterAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemovePipeline 删除流水线
 //
 // 根据id删除流水线
 //
@@ -131,7 +167,13 @@ func (c *CloudPipelineClient) RemovePipeline(request *model.RemovePipelineReques
 	}
 }
 
-// Agent状态查询
+// RemovePipelineInvoker 删除流水线
+func (c *CloudPipelineClient) RemovePipelineInvoker(request *model.RemovePipelineRequest) *RemovePipelineInvoker {
+	requestDef := GenReqDefForRemovePipeline()
+	return &RemovePipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAgentStatus Agent状态查询
 //
 // Agent状态查询
 //
@@ -147,7 +189,13 @@ func (c *CloudPipelineClient) ShowAgentStatus(request *model.ShowAgentStatusRequ
 	}
 }
 
-// 检查流水线创建状态
+// ShowAgentStatusInvoker Agent状态查询
+func (c *CloudPipelineClient) ShowAgentStatusInvoker(request *model.ShowAgentStatusRequest) *ShowAgentStatusInvoker {
+	requestDef := GenReqDefForShowAgentStatus()
+	return &ShowAgentStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceStatus 检查流水线创建状态
 //
 // 检查流水线创建状态
 //
@@ -163,7 +211,13 @@ func (c *CloudPipelineClient) ShowInstanceStatus(request *model.ShowInstanceStat
 	}
 }
 
-// 获取流水线状态
+// ShowInstanceStatusInvoker 检查流水线创建状态
+func (c *CloudPipelineClient) ShowInstanceStatusInvoker(request *model.ShowInstanceStatusRequest) *ShowInstanceStatusInvoker {
+	requestDef := GenReqDefForShowInstanceStatus()
+	return &ShowInstanceStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPipleineStatus 获取流水线状态
 //
 // 获取流水线状态,阶段及任务信息
 //
@@ -179,7 +233,13 @@ func (c *CloudPipelineClient) ShowPipleineStatus(request *model.ShowPipleineStat
 	}
 }
 
-// 查询模板详情
+// ShowPipleineStatusInvoker 获取流水线状态
+func (c *CloudPipelineClient) ShowPipleineStatusInvoker(request *model.ShowPipleineStatusRequest) *ShowPipleineStatusInvoker {
+	requestDef := GenReqDefForShowPipleineStatus()
+	return &ShowPipleineStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTemplateDetail 查询模板详情
 //
 // 查询模板详情
 //
@@ -195,7 +255,13 @@ func (c *CloudPipelineClient) ShowTemplateDetail(request *model.ShowTemplateDeta
 	}
 }
 
-// 启动流水线
+// ShowTemplateDetailInvoker 查询模板详情
+func (c *CloudPipelineClient) ShowTemplateDetailInvoker(request *model.ShowTemplateDetailRequest) *ShowTemplateDetailInvoker {
+	requestDef := GenReqDefForShowTemplateDetail()
+	return &ShowTemplateDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartNewPipeline 启动流水线
 //
 // 启动流水线
 //
@@ -211,7 +277,13 @@ func (c *CloudPipelineClient) StartNewPipeline(request *model.StartNewPipelineRe
 	}
 }
 
-// 停止流水线
+// StartNewPipelineInvoker 启动流水线
+func (c *CloudPipelineClient) StartNewPipelineInvoker(request *model.StartNewPipelineRequest) *StartNewPipelineInvoker {
+	requestDef := GenReqDefForStartNewPipeline()
+	return &StartNewPipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopPipelineNew 停止流水线
 //
 // 停止流水线
 //
@@ -225,4 +297,10 @@ func (c *CloudPipelineClient) StopPipelineNew(request *model.StopPipelineNewRequ
 	} else {
 		return resp.(*model.StopPipelineNewResponse), nil
 	}
+}
+
+// StopPipelineNewInvoker 停止流水线
+func (c *CloudPipelineClient) StopPipelineNewInvoker(request *model.StopPipelineNewRequest) *StopPipelineNewInvoker {
+	requestDef := GenReqDefForStopPipelineNew()
+	return &StopPipelineNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

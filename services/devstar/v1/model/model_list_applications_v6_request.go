@@ -75,6 +75,10 @@ func GetListApplicationsV6RequestXLanguageEnum() ListApplicationsV6RequestXLangu
 	}
 }
 
+func (c ListApplicationsV6RequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ListApplicationsV6RequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -117,6 +121,10 @@ func GetListApplicationsV6RequestSortKeyEnum() ListApplicationsV6RequestSortKeyE
 	}
 }
 
+func (c ListApplicationsV6RequestSortKey) Value() string {
+	return c.value
+}
+
 func (c ListApplicationsV6RequestSortKey) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -153,6 +161,10 @@ func GetListApplicationsV6RequestSortDirEnum() ListApplicationsV6RequestSortDirE
 			value: "asc",
 		},
 	}
+}
+
+func (c ListApplicationsV6RequestSortDir) Value() string {
+	return c.value
 }
 
 func (c ListApplicationsV6RequestSortDir) MarshalJSON() ([]byte, error) {

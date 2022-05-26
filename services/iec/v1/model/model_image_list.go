@@ -141,6 +141,10 @@ func GetImageListStatusEnum() ImageListStatusEnum {
 	}
 }
 
+func (c ImageListStatus) Value() string {
+	return c.value
+}
+
 func (c ImageListStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -191,6 +195,10 @@ func GetImageListDiskFormatEnum() ImageListDiskFormatEnum {
 	}
 }
 
+func (c ImageListDiskFormat) Value() string {
+	return c.value
+}
+
 func (c ImageListDiskFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -227,6 +235,10 @@ func GetImageListImagetypeEnum() ImageListImagetypeEnum {
 			value: "private ",
 		},
 	}
+}
+
+func (c ImageListImagetype) Value() string {
+	return c.value
 }
 
 func (c ImageListImagetype) MarshalJSON() ([]byte, error) {
@@ -269,6 +281,10 @@ func GetImageListOsTypeEnum() ImageListOsTypeEnum {
 			value: "Other",
 		},
 	}
+}
+
+func (c ImageListOsType) Value() string {
+	return c.value
 }
 
 func (c ImageListOsType) MarshalJSON() ([]byte, error) {

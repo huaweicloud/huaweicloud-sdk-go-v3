@@ -54,6 +54,10 @@ func GetFileTranslationReqFromEnum() FileTranslationReqFromEnum {
 	}
 }
 
+func (c FileTranslationReqFrom) Value() string {
+	return c.value
+}
+
 func (c FileTranslationReqFrom) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -90,6 +94,10 @@ func GetFileTranslationReqToEnum() FileTranslationReqToEnum {
 			value: "en",
 		},
 	}
+}
+
+func (c FileTranslationReqTo) Value() string {
+	return c.value
 }
 
 func (c FileTranslationReqTo) MarshalJSON() ([]byte, error) {
@@ -132,6 +140,10 @@ func GetFileTranslationReqTypeEnum() FileTranslationReqTypeEnum {
 			value: "txt",
 		},
 	}
+}
+
+func (c FileTranslationReqType) Value() string {
+	return c.value
 }
 
 func (c FileTranslationReqType) MarshalJSON() ([]byte, error) {

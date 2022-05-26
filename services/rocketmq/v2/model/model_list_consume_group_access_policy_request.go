@@ -53,6 +53,10 @@ func GetListConsumeGroupAccessPolicyRequestEngineEnum() ListConsumeGroupAccessPo
 	}
 }
 
+func (c ListConsumeGroupAccessPolicyRequestEngine) Value() string {
+	return c.value
+}
+
 func (c ListConsumeGroupAccessPolicyRequestEngine) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

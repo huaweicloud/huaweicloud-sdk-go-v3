@@ -67,6 +67,10 @@ func GetBatchListEdgeAppVersionsRequestAiCardTypeEnum() BatchListEdgeAppVersions
 	}
 }
 
+func (c BatchListEdgeAppVersionsRequestAiCardType) Value() string {
+	return c.value
+}
+
 func (c BatchListEdgeAppVersionsRequestAiCardType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -109,6 +113,10 @@ func GetBatchListEdgeAppVersionsRequestArchEnum() BatchListEdgeAppVersionsReques
 	}
 }
 
+func (c BatchListEdgeAppVersionsRequestArch) Value() string {
+	return c.value
+}
+
 func (c BatchListEdgeAppVersionsRequestArch) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -149,6 +157,10 @@ func GetBatchListEdgeAppVersionsRequestStateEnum() BatchListEdgeAppVersionsReque
 			value: "OFF_SHELF",
 		},
 	}
+}
+
+func (c BatchListEdgeAppVersionsRequestState) Value() string {
+	return c.value
 }
 
 func (c BatchListEdgeAppVersionsRequestState) MarshalJSON() ([]byte, error) {

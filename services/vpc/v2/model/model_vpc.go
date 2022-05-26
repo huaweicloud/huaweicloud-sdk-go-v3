@@ -67,6 +67,10 @@ func GetVpcStatusEnum() VpcStatusEnum {
 	}
 }
 
+func (c VpcStatus) Value() string {
+	return c.value
+}
+
 func (c VpcStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

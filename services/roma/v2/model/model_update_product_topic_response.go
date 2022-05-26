@@ -60,6 +60,10 @@ func GetUpdateProductTopicResponsePermissionEnum() UpdateProductTopicResponsePer
 	}
 }
 
+func (c UpdateProductTopicResponsePermission) Value() int32 {
+	return c.value
+}
+
 func (c UpdateProductTopicResponsePermission) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

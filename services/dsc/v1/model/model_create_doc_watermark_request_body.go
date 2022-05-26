@@ -121,6 +121,10 @@ func GetCreateDocWatermarkRequestBodyDocTypeEnum() CreateDocWatermarkRequestBody
 	}
 }
 
+func (c CreateDocWatermarkRequestBodyDocType) Value() string {
+	return c.value
+}
+
 func (c CreateDocWatermarkRequestBodyDocType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -157,6 +161,10 @@ func GetCreateDocWatermarkRequestBodyVisibleTypeEnum() CreateDocWatermarkRequest
 			value: "IMAGE",
 		},
 	}
+}
+
+func (c CreateDocWatermarkRequestBodyVisibleType) Value() string {
+	return c.value
 }
 
 func (c CreateDocWatermarkRequestBodyVisibleType) MarshalJSON() ([]byte, error) {

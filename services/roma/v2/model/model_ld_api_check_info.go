@@ -56,6 +56,10 @@ func GetLdApiCheckInfoTypeEnum() LdApiCheckInfoTypeEnum {
 	}
 }
 
+func (c LdApiCheckInfoType) Value() string {
+	return c.value
+}
+
 func (c LdApiCheckInfoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -100,6 +104,10 @@ func GetLdApiCheckInfoLdApiMethodEnum() LdApiCheckInfoLdApiMethodEnum {
 			value: "DELETE",
 		},
 	}
+}
+
+func (c LdApiCheckInfoLdApiMethod) Value() string {
+	return c.value
 }
 
 func (c LdApiCheckInfoLdApiMethod) MarshalJSON() ([]byte, error) {

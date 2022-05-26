@@ -65,6 +65,10 @@ func GetDomainBodyBusinessTypeEnum() DomainBodyBusinessTypeEnum {
 	}
 }
 
+func (c DomainBodyBusinessType) Value() string {
+	return c.value
+}
+
 func (c DomainBodyBusinessType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -105,6 +109,10 @@ func GetDomainBodyServiceAreaEnum() DomainBodyServiceAreaEnum {
 			value: "global",
 		},
 	}
+}
+
+func (c DomainBodyServiceArea) Value() string {
+	return c.value
 }
 
 func (c DomainBodyServiceArea) MarshalJSON() ([]byte, error) {

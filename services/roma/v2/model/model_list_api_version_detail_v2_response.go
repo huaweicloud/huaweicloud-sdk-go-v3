@@ -180,6 +180,10 @@ func GetListApiVersionDetailV2ResponseTypeEnum() ListApiVersionDetailV2ResponseT
 	}
 }
 
+func (c ListApiVersionDetailV2ResponseType) Value() int32 {
+	return c.value
+}
+
 func (c ListApiVersionDetailV2ResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -220,6 +224,10 @@ func GetListApiVersionDetailV2ResponseReqProtocolEnum() ListApiVersionDetailV2Re
 			value: "BOTH",
 		},
 	}
+}
+
+func (c ListApiVersionDetailV2ResponseReqProtocol) Value() string {
+	return c.value
 }
 
 func (c ListApiVersionDetailV2ResponseReqProtocol) MarshalJSON() ([]byte, error) {
@@ -284,6 +292,10 @@ func GetListApiVersionDetailV2ResponseReqMethodEnum() ListApiVersionDetailV2Resp
 	}
 }
 
+func (c ListApiVersionDetailV2ResponseReqMethod) Value() string {
+	return c.value
+}
+
 func (c ListApiVersionDetailV2ResponseReqMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -330,6 +342,10 @@ func GetListApiVersionDetailV2ResponseAuthTypeEnum() ListApiVersionDetailV2Respo
 	}
 }
 
+func (c ListApiVersionDetailV2ResponseAuthType) Value() string {
+	return c.value
+}
+
 func (c ListApiVersionDetailV2ResponseAuthType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -366,6 +382,10 @@ func GetListApiVersionDetailV2ResponseMatchModeEnum() ListApiVersionDetailV2Resp
 			value: "NORMAL",
 		},
 	}
+}
+
+func (c ListApiVersionDetailV2ResponseMatchMode) Value() string {
+	return c.value
 }
 
 func (c ListApiVersionDetailV2ResponseMatchMode) MarshalJSON() ([]byte, error) {
@@ -408,6 +428,10 @@ func GetListApiVersionDetailV2ResponseBackendTypeEnum() ListApiVersionDetailV2Re
 			value: "MOCK",
 		},
 	}
+}
+
+func (c ListApiVersionDetailV2ResponseBackendType) Value() string {
+	return c.value
 }
 
 func (c ListApiVersionDetailV2ResponseBackendType) MarshalJSON() ([]byte, error) {
@@ -456,6 +480,10 @@ func GetListApiVersionDetailV2ResponseContentTypeEnum() ListApiVersionDetailV2Re
 	}
 }
 
+func (c ListApiVersionDetailV2ResponseContentType) Value() string {
+	return c.value
+}
+
 func (c ListApiVersionDetailV2ResponseContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -488,6 +516,10 @@ func GetListApiVersionDetailV2ResponseStatusEnum() ListApiVersionDetailV2Respons
 			value: 1,
 		},
 	}
+}
+
+func (c ListApiVersionDetailV2ResponseStatus) Value() int32 {
+	return c.value
 }
 
 func (c ListApiVersionDetailV2ResponseStatus) MarshalJSON() ([]byte, error) {

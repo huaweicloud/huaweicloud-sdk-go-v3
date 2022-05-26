@@ -78,6 +78,10 @@ func GetVaultResourceInstancesReqCloudTypeEnum() VaultResourceInstancesReqCloudT
 	}
 }
 
+func (c VaultResourceInstancesReqCloudType) Value() string {
+	return c.value
+}
+
 func (c VaultResourceInstancesReqCloudType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -114,6 +118,10 @@ func GetVaultResourceInstancesReqObjectTypeEnum() VaultResourceInstancesReqObjec
 			value: "disk",
 		},
 	}
+}
+
+func (c VaultResourceInstancesReqObjectType) Value() string {
+	return c.value
 }
 
 func (c VaultResourceInstancesReqObjectType) MarshalJSON() ([]byte, error) {

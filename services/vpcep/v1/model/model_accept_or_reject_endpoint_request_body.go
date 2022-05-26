@@ -48,6 +48,10 @@ func GetAcceptOrRejectEndpointRequestBodyActionEnum() AcceptOrRejectEndpointRequ
 	}
 }
 
+func (c AcceptOrRejectEndpointRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c AcceptOrRejectEndpointRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

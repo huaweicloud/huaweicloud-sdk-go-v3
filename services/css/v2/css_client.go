@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/css/v2/model"
 )
 
@@ -19,7 +19,7 @@ func CssClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 创建集群V2
+// CreateCluster 创建集群V2
 //
 // 该接口用于创建集群V2。
 //
@@ -35,7 +35,13 @@ func (c *CssClient) CreateCluster(request *model.CreateClusterRequest) (*model.C
 	}
 }
 
-// 重启集群V2
+// CreateClusterInvoker 创建集群V2
+func (c *CssClient) CreateClusterInvoker(request *model.CreateClusterRequest) *CreateClusterInvoker {
+	requestDef := GenReqDefForCreateCluster()
+	return &CreateClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestartCluster 重启集群V2
 //
 // 该接口用于重启集群。
 //
@@ -51,7 +57,13 @@ func (c *CssClient) RestartCluster(request *model.RestartClusterRequest) (*model
 	}
 }
 
-// 滚动重启
+// RestartClusterInvoker 重启集群V2
+func (c *CssClient) RestartClusterInvoker(request *model.RestartClusterRequest) *RestartClusterInvoker {
+	requestDef := GenReqDefForRestartCluster()
+	return &RestartClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RollingRestart 滚动重启
 //
 // 该接口用于滚动重启。
 //
@@ -67,7 +79,13 @@ func (c *CssClient) RollingRestart(request *model.RollingRestartRequest) (*model
 	}
 }
 
-// 开启自动创建快照功能
+// RollingRestartInvoker 滚动重启
+func (c *CssClient) RollingRestartInvoker(request *model.RollingRestartRequest) *RollingRestartInvoker {
+	requestDef := GenReqDefForRollingRestart()
+	return &RollingRestartInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartAutoCreateSnapshots 开启自动创建快照功能
 //
 // 该接口用于打开自动创建快照功能。
 //
@@ -83,7 +101,13 @@ func (c *CssClient) StartAutoCreateSnapshots(request *model.StartAutoCreateSnaps
 	}
 }
 
-// 关闭自动创建快照功能
+// StartAutoCreateSnapshotsInvoker 开启自动创建快照功能
+func (c *CssClient) StartAutoCreateSnapshotsInvoker(request *model.StartAutoCreateSnapshotsRequest) *StartAutoCreateSnapshotsInvoker {
+	requestDef := GenReqDefForStartAutoCreateSnapshots()
+	return &StartAutoCreateSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopAutoCreateSnapshots 关闭自动创建快照功能
 //
 // 该接口用于关闭自动创建快照功能。
 //
@@ -97,4 +121,10 @@ func (c *CssClient) StopAutoCreateSnapshots(request *model.StopAutoCreateSnapsho
 	} else {
 		return resp.(*model.StopAutoCreateSnapshotsResponse), nil
 	}
+}
+
+// StopAutoCreateSnapshotsInvoker 关闭自动创建快照功能
+func (c *CssClient) StopAutoCreateSnapshotsInvoker(request *model.StopAutoCreateSnapshotsRequest) *StopAutoCreateSnapshotsInvoker {
+	requestDef := GenReqDefForStopAutoCreateSnapshots()
+	return &StopAutoCreateSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

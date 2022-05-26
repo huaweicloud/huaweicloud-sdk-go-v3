@@ -48,6 +48,10 @@ func GetListPoliciesRequestOperationTypeEnum() ListPoliciesRequestOperationTypeE
 	}
 }
 
+func (c ListPoliciesRequestOperationType) Value() string {
+	return c.value
+}
+
 func (c ListPoliciesRequestOperationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

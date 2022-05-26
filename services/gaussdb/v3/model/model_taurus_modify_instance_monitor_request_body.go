@@ -47,6 +47,10 @@ func GetTaurusModifyInstanceMonitorRequestBodyPeriodEnum() TaurusModifyInstanceM
 	}
 }
 
+func (c TaurusModifyInstanceMonitorRequestBodyPeriod) Value() int32 {
+	return c.value
+}
+
 func (c TaurusModifyInstanceMonitorRequestBodyPeriod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

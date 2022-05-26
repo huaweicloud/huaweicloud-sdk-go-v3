@@ -50,6 +50,10 @@ func GetDependJobDependFailPolicyEnum() DependJobDependFailPolicyEnum {
 	}
 }
 
+func (c DependJobDependFailPolicy) Value() string {
+	return c.value
+}
+
 func (c DependJobDependFailPolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

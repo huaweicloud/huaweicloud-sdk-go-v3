@@ -122,7 +122,8 @@ func main() {
     * [4.1 异常处理](#41-异常处理-top)
 * [5. 故障处理](#5-故障处理-top)
     * [5.1 HTTP 监听器](#51-http监听器-top)
-* [6. 文件上传与下载](#5-文件上传与下载-top)
+* [6. 文件上传与下载](#6-文件上传与下载-top)
+* [7. 请求重试](#7-请求重试-top)
 
 ### 1. 客户端连接参数 [:top:](#用户手册-top)
 
@@ -481,5 +482,44 @@ func main() {
 			Build())
 
 	createImageWatermark(client)
+}
+```
+
+### 7. 请求重试 [:top:](#用户手册-top)
+
+当请求遇到网络异常或者流控场景的时候，通常需要对请求进行重试。Go SDK 提供了请求重试的入口，可用于请求方式为 `GET`
+的请求。如需使用重试，需要配置最大重试次数、重试条件和重试策略。其中，
+
+- _最大重试次数_：最大重试次数
+- _重试条件_：函数，根据上一次请求的返回情况给出是否需要重试
+- _重试策略_：每次重试前的等待时间，支持多种重试策略
+
+以 VPC 服务的 `ListVpcs` 接口为例，最多重试3次，服务端返回异常时进行重试，代码如下：
+
+``` go
+// 初始化同步客户端
+client := vpc.NewVpcClient(
+	vpc.VpcClientBuilder().
+		WithEndpoint("<input your endpoint>").
+		WithCredential(
+			basic.NewCredentialsBuilder().
+				WithAk("<input your ak>").
+				WithSk("<input your sk>").
+				WithProjectId("<input your project id>").
+				Build()).
+		Build())
+
+// 初始化请求
+request := &model.ListVpcsRequest{}
+
+// 发送请求，当请求异常时进行重试
+response, err := client.ListVpcsInvoker(request).WithRetry(3, func(i interface{}, err error) bool {
+	return err != nil
+}, new(retry.None)).Invoke()
+
+if err == nil {
+	fmt.Printf("%+v\n", response)
+} else {
+	fmt.Printf("%+v\n", err)
 }
 ```

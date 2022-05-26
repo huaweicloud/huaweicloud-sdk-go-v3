@@ -69,6 +69,10 @@ func GetListOpRecordRequestOperationStatusEnum() ListOpRecordRequestOperationSta
 	}
 }
 
+func (c ListOpRecordRequestOperationStatus) Value() string {
+	return c.value
+}
+
 func (c ListOpRecordRequestOperationStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -117,6 +121,10 @@ func GetListOpRecordRequestResourceTypeEnum() ListOpRecordRequestResourceTypeEnu
 			value: "PLUGIN03",
 		},
 	}
+}
+
+func (c ListOpRecordRequestResourceType) Value() string {
+	return c.value
 }
 
 func (c ListOpRecordRequestResourceType) MarshalJSON() ([]byte, error) {
@@ -179,6 +187,10 @@ func GetListOpRecordRequestOperationTypeEnum() ListOpRecordRequestOperationTypeE
 			value: "05",
 		},
 	}
+}
+
+func (c ListOpRecordRequestOperationType) Value() string {
+	return c.value
 }
 
 func (c ListOpRecordRequestOperationType) MarshalJSON() ([]byte, error) {

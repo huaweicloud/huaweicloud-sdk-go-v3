@@ -92,6 +92,10 @@ func GetPublicipPoolShowRespTypeEnum() PublicipPoolShowRespTypeEnum {
 	}
 }
 
+func (c PublicipPoolShowRespType) Value() string {
+	return c.value
+}
+
 func (c PublicipPoolShowRespType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -106,6 +106,10 @@ func GetUpdateParametersReqValuesCharacterSetServerEnum() UpdateParametersReqVal
 	}
 }
 
+func (c UpdateParametersReqValuesCharacterSetServer) Value() string {
+	return c.value
+}
+
 func (c UpdateParametersReqValuesCharacterSetServer) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -160,6 +164,10 @@ func GetUpdateParametersReqValuesCollationServerEnum() UpdateParametersReqValues
 	}
 }
 
+func (c UpdateParametersReqValuesCollationServer) Value() string {
+	return c.value
+}
+
 func (c UpdateParametersReqValuesCollationServer) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -202,6 +210,10 @@ func GetUpdateParametersReqValuesConcurrentExecutionLevelEnum() UpdateParameters
 	}
 }
 
+func (c UpdateParametersReqValuesConcurrentExecutionLevel) Value() string {
+	return c.value
+}
+
 func (c UpdateParametersReqValuesConcurrentExecutionLevel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -238,6 +250,10 @@ func GetUpdateParametersReqValuesEnableTableRecycleEnum() UpdateParametersReqVal
 			value: "ON",
 		},
 	}
+}
+
+func (c UpdateParametersReqValuesEnableTableRecycle) Value() string {
+	return c.value
 }
 
 func (c UpdateParametersReqValuesEnableTableRecycle) MarshalJSON() ([]byte, error) {
@@ -278,6 +294,10 @@ func GetUpdateParametersReqValuesInsertToLoadDataEnum() UpdateParametersReqValue
 	}
 }
 
+func (c UpdateParametersReqValuesInsertToLoadData) Value() string {
+	return c.value
+}
+
 func (c UpdateParametersReqValuesInsertToLoadData) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -314,6 +334,10 @@ func GetUpdateParametersReqValuesNotFromPushdownEnum() UpdateParametersReqValues
 			value: "ON",
 		},
 	}
+}
+
+func (c UpdateParametersReqValuesNotFromPushdown) Value() string {
+	return c.value
 }
 
 func (c UpdateParametersReqValuesNotFromPushdown) MarshalJSON() ([]byte, error) {
@@ -354,6 +378,10 @@ func GetUpdateParametersReqValuesSqlAuditEnum() UpdateParametersReqValuesSqlAudi
 	}
 }
 
+func (c UpdateParametersReqValuesSqlAudit) Value() string {
+	return c.value
+}
+
 func (c UpdateParametersReqValuesSqlAudit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -390,6 +418,10 @@ func GetUpdateParametersReqValuesSupportDdlBinlogHintEnum() UpdateParametersReqV
 			value: "ON",
 		},
 	}
+}
+
+func (c UpdateParametersReqValuesSupportDdlBinlogHint) Value() string {
+	return c.value
 }
 
 func (c UpdateParametersReqValuesSupportDdlBinlogHint) MarshalJSON() ([]byte, error) {
@@ -434,6 +466,10 @@ func GetUpdateParametersReqValuesTransactionPolicyEnum() UpdateParametersReqValu
 	}
 }
 
+func (c UpdateParametersReqValuesTransactionPolicy) Value() string {
+	return c.value
+}
+
 func (c UpdateParametersReqValuesTransactionPolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -470,6 +506,10 @@ func GetUpdateParametersReqValuesUltimateOptimizeEnum() UpdateParametersReqValue
 			value: "ON",
 		},
 	}
+}
+
+func (c UpdateParametersReqValuesUltimateOptimize) Value() string {
+	return c.value
 }
 
 func (c UpdateParametersReqValuesUltimateOptimize) MarshalJSON() ([]byte, error) {

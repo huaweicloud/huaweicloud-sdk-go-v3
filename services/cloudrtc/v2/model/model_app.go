@@ -72,6 +72,10 @@ func GetAppScopeEnum() AppScopeEnum {
 	}
 }
 
+func (c AppScope) Value() string {
+	return c.value
+}
+
 func (c AppScope) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

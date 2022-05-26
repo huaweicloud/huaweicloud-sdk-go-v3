@@ -111,6 +111,10 @@ func GetListSimCardsRequestOrderEnum() ListSimCardsRequestOrderEnum {
 	}
 }
 
+func (c ListSimCardsRequestOrder) Value() string {
+	return c.value
+}
+
 func (c ListSimCardsRequestOrder) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -159,6 +163,10 @@ func GetListSimCardsRequestSortEnum() ListSimCardsRequestSortEnum {
 			value: "expire_time",
 		},
 	}
+}
+
+func (c ListSimCardsRequestSort) Value() string {
+	return c.value
 }
 
 func (c ListSimCardsRequestSort) MarshalJSON() ([]byte, error) {

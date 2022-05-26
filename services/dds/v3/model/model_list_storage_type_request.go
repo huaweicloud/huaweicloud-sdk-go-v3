@@ -45,6 +45,10 @@ func GetListStorageTypeRequestEngineNameEnum() ListStorageTypeRequestEngineNameE
 	}
 }
 
+func (c ListStorageTypeRequestEngineName) Value() string {
+	return c.value
+}
+
 func (c ListStorageTypeRequestEngineName) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

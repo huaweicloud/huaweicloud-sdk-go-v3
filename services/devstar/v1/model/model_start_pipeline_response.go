@@ -49,6 +49,10 @@ func GetStartPipelineResponseResultEnum() StartPipelineResponseResultEnum {
 	}
 }
 
+func (c StartPipelineResponseResult) Value() string {
+	return c.value
+}
+
 func (c StartPipelineResponseResult) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -54,6 +54,10 @@ func GetListProjectsV4RequestXLanguageEnum() ListProjectsV4RequestXLanguageEnum 
 	}
 }
 
+func (c ListProjectsV4RequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ListProjectsV4RequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

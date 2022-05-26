@@ -95,6 +95,10 @@ func GetSrcNodeRespCloudTypeEnum() SrcNodeRespCloudTypeEnum {
 	}
 }
 
+func (c SrcNodeRespCloudType) Value() string {
+	return c.value
+}
+
 func (c SrcNodeRespCloudType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

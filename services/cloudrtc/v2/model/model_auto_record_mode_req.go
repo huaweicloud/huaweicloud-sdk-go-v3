@@ -48,6 +48,10 @@ func GetAutoRecordModeReqModeEnum() AutoRecordModeReqModeEnum {
 	}
 }
 
+func (c AutoRecordModeReqMode) Value() string {
+	return c.value
+}
+
 func (c AutoRecordModeReqMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

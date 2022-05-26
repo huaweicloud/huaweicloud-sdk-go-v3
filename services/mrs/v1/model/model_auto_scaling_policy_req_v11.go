@@ -42,6 +42,10 @@ func GetAutoScalingPolicyReqV11NodeGroupEnum() AutoScalingPolicyReqV11NodeGroupE
 	}
 }
 
+func (c AutoScalingPolicyReqV11NodeGroup) Value() string {
+	return c.value
+}
+
 func (c AutoScalingPolicyReqV11NodeGroup) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

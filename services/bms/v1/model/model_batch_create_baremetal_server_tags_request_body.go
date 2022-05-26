@@ -44,6 +44,10 @@ func GetBatchCreateBaremetalServerTagsRequestBodyActionEnum() BatchCreateBaremet
 	}
 }
 
+func (c BatchCreateBaremetalServerTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c BatchCreateBaremetalServerTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

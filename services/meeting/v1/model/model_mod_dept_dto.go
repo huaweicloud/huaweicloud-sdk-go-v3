@@ -70,6 +70,10 @@ func GetModDeptDtoInPermissionEnum() ModDeptDtoInPermissionEnum {
 	}
 }
 
+func (c ModDeptDtoInPermission) Value() string {
+	return c.value
+}
+
 func (c ModDeptDtoInPermission) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -114,6 +118,10 @@ func GetModDeptDtoOutPermissionEnum() ModDeptDtoOutPermissionEnum {
 			value: "DESIGNATED_DEPARTMENT",
 		},
 	}
+}
+
+func (c ModDeptDtoOutPermission) Value() string {
+	return c.value
 }
 
 func (c ModDeptDtoOutPermission) MarshalJSON() ([]byte, error) {

@@ -54,6 +54,10 @@ func GetOsExtendedVolumesInfoBootIndexEnum() OsExtendedVolumesInfoBootIndexEnum 
 	}
 }
 
+func (c OsExtendedVolumesInfoBootIndex) Value() string {
+	return c.value
+}
+
 func (c OsExtendedVolumesInfoBootIndex) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

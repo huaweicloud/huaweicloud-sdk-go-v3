@@ -54,6 +54,10 @@ func GetBatchUpdateMembersRequestBodyStatusEnum() BatchUpdateMembersRequestBodyS
 	}
 }
 
+func (c BatchUpdateMembersRequestBodyStatus) Value() string {
+	return c.value
+}
+
 func (c BatchUpdateMembersRequestBodyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

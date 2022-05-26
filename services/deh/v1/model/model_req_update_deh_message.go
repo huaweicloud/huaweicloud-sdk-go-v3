@@ -48,6 +48,10 @@ func GetReqUpdateDehMessageAutoPlacementEnum() ReqUpdateDehMessageAutoPlacementE
 	}
 }
 
+func (c ReqUpdateDehMessageAutoPlacement) Value() string {
+	return c.value
+}
+
 func (c ReqUpdateDehMessageAutoPlacement) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

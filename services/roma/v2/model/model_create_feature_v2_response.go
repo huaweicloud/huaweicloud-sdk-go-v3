@@ -172,6 +172,10 @@ func GetCreateFeatureV2ResponseNameEnum() CreateFeatureV2ResponseNameEnum {
 	}
 }
 
+func (c CreateFeatureV2ResponseName) Value() string {
+	return c.value
+}
+
 func (c CreateFeatureV2ResponseName) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

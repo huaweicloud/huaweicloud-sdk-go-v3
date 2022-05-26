@@ -45,6 +45,10 @@ func GetPolicyActionCategoryEnum() PolicyActionCategoryEnum {
 	}
 }
 
+func (c PolicyActionCategory) Value() string {
+	return c.value
+}
+
 func (c PolicyActionCategory) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

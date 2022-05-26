@@ -67,6 +67,10 @@ func GetCreateQueueReqQueueModeEnum() CreateQueueReqQueueModeEnum {
 	}
 }
 
+func (c CreateQueueReqQueueMode) Value() string {
+	return c.value
+}
+
 func (c CreateQueueReqQueueMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -103,6 +107,10 @@ func GetCreateQueueReqRedrivePolicyEnum() CreateQueueReqRedrivePolicyEnum {
 			value: "disable",
 		},
 	}
+}
+
+func (c CreateQueueReqRedrivePolicy) Value() string {
+	return c.value
 }
 
 func (c CreateQueueReqRedrivePolicy) MarshalJSON() ([]byte, error) {

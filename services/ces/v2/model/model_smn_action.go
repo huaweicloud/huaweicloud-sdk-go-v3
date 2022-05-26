@@ -63,6 +63,10 @@ func GetSmnActionTypeEnum() SmnActionTypeEnum {
 	}
 }
 
+func (c SmnActionType) Value() string {
+	return c.value
+}
+
 func (c SmnActionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -66,6 +66,10 @@ func GetReqListDehByTagsActionEnum() ReqListDehByTagsActionEnum {
 	}
 }
 
+func (c ReqListDehByTagsAction) Value() string {
+	return c.value
+}
+
 func (c ReqListDehByTagsAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

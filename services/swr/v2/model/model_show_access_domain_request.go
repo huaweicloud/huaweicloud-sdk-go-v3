@@ -54,6 +54,10 @@ func GetShowAccessDomainRequestContentTypeEnum() ShowAccessDomainRequestContentT
 	}
 }
 
+func (c ShowAccessDomainRequestContentType) Value() string {
+	return c.value
+}
+
 func (c ShowAccessDomainRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

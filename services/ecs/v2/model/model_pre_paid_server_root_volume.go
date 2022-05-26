@@ -79,6 +79,10 @@ func GetPrePaidServerRootVolumeVolumetypeEnum() PrePaidServerRootVolumeVolumetyp
 	}
 }
 
+func (c PrePaidServerRootVolumeVolumetype) Value() string {
+	return c.value
+}
+
 func (c PrePaidServerRootVolumeVolumetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -111,6 +115,10 @@ func GetPrePaidServerRootVolumeClusterTypeEnum() PrePaidServerRootVolumeClusterT
 			value: "DSS",
 		},
 	}
+}
+
+func (c PrePaidServerRootVolumeClusterType) Value() string {
+	return c.value
 }
 
 func (c PrePaidServerRootVolumeClusterType) MarshalJSON() ([]byte, error) {

@@ -91,6 +91,10 @@ func GetShowWorkflowExecutionResponseStatusEnum() ShowWorkflowExecutionResponseS
 	}
 }
 
+func (c ShowWorkflowExecutionResponseStatus) Value() string {
+	return c.value
+}
+
 func (c ShowWorkflowExecutionResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

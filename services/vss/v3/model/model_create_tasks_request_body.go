@@ -61,6 +61,10 @@ func GetCreateTasksRequestBodyTaskTypeEnum() CreateTasksRequestBodyTaskTypeEnum 
 	}
 }
 
+func (c CreateTasksRequestBodyTaskType) Value() string {
+	return c.value
+}
+
 func (c CreateTasksRequestBodyTaskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -105,6 +109,10 @@ func GetCreateTasksRequestBodyTaskPeriodEnum() CreateTasksRequestBodyTaskPeriodE
 			value: "everymonth",
 		},
 	}
+}
+
+func (c CreateTasksRequestBodyTaskPeriod) Value() string {
+	return c.value
 }
 
 func (c CreateTasksRequestBodyTaskPeriod) MarshalJSON() ([]byte, error) {

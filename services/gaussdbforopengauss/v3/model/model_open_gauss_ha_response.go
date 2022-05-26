@@ -51,6 +51,10 @@ func GetOpenGaussHaResponseModeEnum() OpenGaussHaResponseModeEnum {
 	}
 }
 
+func (c OpenGaussHaResponseMode) Value() string {
+	return c.value
+}
+
 func (c OpenGaussHaResponseMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -83,6 +87,10 @@ func GetOpenGaussHaResponseReplicationModeEnum() OpenGaussHaResponseReplicationM
 			value: "sync",
 		},
 	}
+}
+
+func (c OpenGaussHaResponseReplicationMode) Value() string {
+	return c.value
 }
 
 func (c OpenGaussHaResponseReplicationMode) MarshalJSON() ([]byte, error) {
@@ -121,6 +129,10 @@ func GetOpenGaussHaResponseConsistencyEnum() OpenGaussHaResponseConsistencyEnum 
 			value: "eventual",
 		},
 	}
+}
+
+func (c OpenGaussHaResponseConsistency) Value() string {
+	return c.value
 }
 
 func (c OpenGaussHaResponseConsistency) MarshalJSON() ([]byte, error) {

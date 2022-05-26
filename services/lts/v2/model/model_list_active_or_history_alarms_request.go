@@ -56,6 +56,10 @@ func GetListActiveOrHistoryAlarmsRequestTypeEnum() ListActiveOrHistoryAlarmsRequ
 	}
 }
 
+func (c ListActiveOrHistoryAlarmsRequestType) Value() string {
+	return c.value
+}
+
 func (c ListActiveOrHistoryAlarmsRequestType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

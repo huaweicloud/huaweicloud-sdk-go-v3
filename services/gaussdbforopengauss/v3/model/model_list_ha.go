@@ -48,6 +48,10 @@ func GetListHaConsistencyEnum() ListHaConsistencyEnum {
 	}
 }
 
+func (c ListHaConsistency) Value() string {
+	return c.value
+}
+
 func (c ListHaConsistency) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

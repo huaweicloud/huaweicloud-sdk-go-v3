@@ -54,6 +54,10 @@ func GetInstancesResponseInstancesVoResultArchEnum() InstancesResponseInstancesV
 	}
 }
 
+func (c InstancesResponseInstancesVoResultArch) Value() string {
+	return c.value
+}
+
 func (c InstancesResponseInstancesVoResultArch) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

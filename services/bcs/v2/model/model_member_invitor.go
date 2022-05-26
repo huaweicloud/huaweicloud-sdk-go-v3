@@ -9,10 +9,10 @@ import (
 // 联盟成员中的邀请方
 type MemberInvitor struct {
 
-	// 邀请方实例id
+	// 邀请方BCS服务实例id
 	InvitorBcsId *string `json:"invitor_bcs_id,omitempty"`
 
-	// 邀请方实例名称
+	// 邀请方BCS服务实例名称
 	InvitorBcsName *string `json:"invitor_bcs_name,omitempty"`
 
 	// 邀请方project id

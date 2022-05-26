@@ -47,6 +47,10 @@ func GetBatchUpdateJobRequestXLanguageEnum() BatchUpdateJobRequestXLanguageEnum 
 	}
 }
 
+func (c BatchUpdateJobRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c BatchUpdateJobRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

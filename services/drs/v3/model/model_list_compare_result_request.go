@@ -47,6 +47,10 @@ func GetListCompareResultRequestXLanguageEnum() ListCompareResultRequestXLanguag
 	}
 }
 
+func (c ListCompareResultRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ListCompareResultRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

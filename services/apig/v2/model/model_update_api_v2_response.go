@@ -171,6 +171,10 @@ func GetUpdateApiV2ResponseTypeEnum() UpdateApiV2ResponseTypeEnum {
 	}
 }
 
+func (c UpdateApiV2ResponseType) Value() int32 {
+	return c.value
+}
+
 func (c UpdateApiV2ResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -211,6 +215,10 @@ func GetUpdateApiV2ResponseReqProtocolEnum() UpdateApiV2ResponseReqProtocolEnum 
 			value: "BOTH",
 		},
 	}
+}
+
+func (c UpdateApiV2ResponseReqProtocol) Value() string {
+	return c.value
 }
 
 func (c UpdateApiV2ResponseReqProtocol) MarshalJSON() ([]byte, error) {
@@ -275,6 +283,10 @@ func GetUpdateApiV2ResponseReqMethodEnum() UpdateApiV2ResponseReqMethodEnum {
 	}
 }
 
+func (c UpdateApiV2ResponseReqMethod) Value() string {
+	return c.value
+}
+
 func (c UpdateApiV2ResponseReqMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -321,6 +333,10 @@ func GetUpdateApiV2ResponseAuthTypeEnum() UpdateApiV2ResponseAuthTypeEnum {
 	}
 }
 
+func (c UpdateApiV2ResponseAuthType) Value() string {
+	return c.value
+}
+
 func (c UpdateApiV2ResponseAuthType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -357,6 +373,10 @@ func GetUpdateApiV2ResponseMatchModeEnum() UpdateApiV2ResponseMatchModeEnum {
 			value: "NORMAL",
 		},
 	}
+}
+
+func (c UpdateApiV2ResponseMatchMode) Value() string {
+	return c.value
 }
 
 func (c UpdateApiV2ResponseMatchMode) MarshalJSON() ([]byte, error) {
@@ -399,6 +419,10 @@ func GetUpdateApiV2ResponseBackendTypeEnum() UpdateApiV2ResponseBackendTypeEnum 
 			value: "MOCK",
 		},
 	}
+}
+
+func (c UpdateApiV2ResponseBackendType) Value() string {
+	return c.value
 }
 
 func (c UpdateApiV2ResponseBackendType) MarshalJSON() ([]byte, error) {
@@ -445,6 +469,10 @@ func GetUpdateApiV2ResponseContentTypeEnum() UpdateApiV2ResponseContentTypeEnum 
 			value: "text/plain",
 		},
 	}
+}
+
+func (c UpdateApiV2ResponseContentType) Value() string {
+	return c.value
 }
 
 func (c UpdateApiV2ResponseContentType) MarshalJSON() ([]byte, error) {

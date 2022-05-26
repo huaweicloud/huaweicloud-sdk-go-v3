@@ -62,6 +62,10 @@ func GetListCloudConnectionsRequestStatusEnum() ListCloudConnectionsRequestStatu
 	}
 }
 
+func (c ListCloudConnectionsRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListCloudConnectionsRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

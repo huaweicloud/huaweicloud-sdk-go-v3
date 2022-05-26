@@ -60,6 +60,10 @@ func GetShowTopUrlRequestServiceAreaEnum() ShowTopUrlRequestServiceAreaEnum {
 	}
 }
 
+func (c ShowTopUrlRequestServiceArea) Value() string {
+	return c.value
+}
+
 func (c ShowTopUrlRequestServiceArea) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -96,6 +100,10 @@ func GetShowTopUrlRequestStatTypeEnum() ShowTopUrlRequestStatTypeEnum {
 			value: "req_num",
 		},
 	}
+}
+
+func (c ShowTopUrlRequestStatType) Value() string {
+	return c.value
 }
 
 func (c ShowTopUrlRequestStatType) MarshalJSON() ([]byte, error) {

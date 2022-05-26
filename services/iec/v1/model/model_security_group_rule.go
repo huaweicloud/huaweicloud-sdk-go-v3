@@ -78,6 +78,10 @@ func GetSecurityGroupRuleDirectionEnum() SecurityGroupRuleDirectionEnum {
 	}
 }
 
+func (c SecurityGroupRuleDirection) Value() string {
+	return c.value
+}
+
 func (c SecurityGroupRuleDirection) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -110,6 +114,10 @@ func GetSecurityGroupRuleEthertypeEnum() SecurityGroupRuleEthertypeEnum {
 			value: "IPv4",
 		},
 	}
+}
+
+func (c SecurityGroupRuleEthertype) Value() string {
+	return c.value
 }
 
 func (c SecurityGroupRuleEthertype) MarshalJSON() ([]byte, error) {

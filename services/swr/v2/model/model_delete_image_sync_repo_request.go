@@ -53,6 +53,10 @@ func GetDeleteImageSyncRepoRequestContentTypeEnum() DeleteImageSyncRepoRequestCo
 	}
 }
 
+func (c DeleteImageSyncRepoRequestContentType) Value() string {
+	return c.value
+}
+
 func (c DeleteImageSyncRepoRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

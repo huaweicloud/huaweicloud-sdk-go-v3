@@ -125,6 +125,10 @@ func GetObjectCompareResultOverviewObjectTypeEnum() ObjectCompareResultOverviewO
 	}
 }
 
+func (c ObjectCompareResultOverviewObjectType) Value() string {
+	return c.value
+}
+
 func (c ObjectCompareResultOverviewObjectType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -181,6 +185,10 @@ func GetObjectCompareResultOverviewObjectCompareResultEnum() ObjectCompareResult
 			value: "CAN_NOT_COMPARE-无法对比",
 		},
 	}
+}
+
+func (c ObjectCompareResultOverviewObjectCompareResult) Value() string {
+	return c.value
 }
 
 func (c ObjectCompareResultOverviewObjectCompareResult) MarshalJSON() ([]byte, error) {

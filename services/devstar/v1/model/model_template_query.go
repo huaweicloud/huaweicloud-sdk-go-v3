@@ -100,6 +100,10 @@ func GetTemplateQueryLabelEnum() TemplateQueryLabelEnum {
 	}
 }
 
+func (c TemplateQueryLabel) Value() string {
+	return c.value
+}
+
 func (c TemplateQueryLabel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

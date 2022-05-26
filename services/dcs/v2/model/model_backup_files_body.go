@@ -50,6 +50,10 @@ func GetBackupFilesBodyFileSourceEnum() BackupFilesBodyFileSourceEnum {
 	}
 }
 
+func (c BackupFilesBodyFileSource) Value() string {
+	return c.value
+}
+
 func (c BackupFilesBodyFileSource) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

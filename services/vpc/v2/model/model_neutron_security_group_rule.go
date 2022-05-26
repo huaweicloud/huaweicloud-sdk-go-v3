@@ -83,6 +83,10 @@ func GetNeutronSecurityGroupRuleDirectionEnum() NeutronSecurityGroupRuleDirectio
 	}
 }
 
+func (c NeutronSecurityGroupRuleDirection) Value() string {
+	return c.value
+}
+
 func (c NeutronSecurityGroupRuleDirection) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

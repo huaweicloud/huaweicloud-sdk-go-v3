@@ -44,6 +44,10 @@ func GetBandwidthConfigSharetypeEnum() BandwidthConfigSharetypeEnum {
 	}
 }
 
+func (c BandwidthConfigSharetype) Value() string {
+	return c.value
+}
+
 func (c BandwidthConfigSharetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

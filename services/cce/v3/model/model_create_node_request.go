@@ -46,6 +46,10 @@ func GetCreateNodeRequestNodepoolScaleUpEnum() CreateNodeRequestNodepoolScaleUpE
 	}
 }
 
+func (c CreateNodeRequestNodepoolScaleUp) Value() string {
+	return c.value
+}
+
 func (c CreateNodeRequestNodepoolScaleUp) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

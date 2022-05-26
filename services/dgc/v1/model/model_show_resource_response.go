@@ -60,6 +60,10 @@ func GetShowResourceResponseTypeEnum() ShowResourceResponseTypeEnum {
 	}
 }
 
+func (c ShowResourceResponseType) Value() string {
+	return c.value
+}
+
 func (c ShowResourceResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

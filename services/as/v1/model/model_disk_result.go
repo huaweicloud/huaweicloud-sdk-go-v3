@@ -74,6 +74,10 @@ func GetDiskResultVolumeTypeEnum() DiskResultVolumeTypeEnum {
 	}
 }
 
+func (c DiskResultVolumeType) Value() string {
+	return c.value
+}
+
 func (c DiskResultVolumeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -110,6 +114,10 @@ func GetDiskResultDiskTypeEnum() DiskResultDiskTypeEnum {
 			value: "DATA",
 		},
 	}
+}
+
+func (c DiskResultDiskType) Value() string {
+	return c.value
 }
 
 func (c DiskResultDiskType) MarshalJSON() ([]byte, error) {

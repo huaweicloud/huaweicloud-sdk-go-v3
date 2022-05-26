@@ -55,6 +55,10 @@ func GetSessionPersistenceTypeEnum() SessionPersistenceTypeEnum {
 	}
 }
 
+func (c SessionPersistenceType) Value() string {
+	return c.value
+}
+
 func (c SessionPersistenceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

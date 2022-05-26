@@ -181,6 +181,10 @@ func GetApiPolicyMockCreateStatusCodeEnum() ApiPolicyMockCreateStatusCodeEnum {
 	}
 }
 
+func (c ApiPolicyMockCreateStatusCode) Value() int32 {
+	return c.value
+}
+
 func (c ApiPolicyMockCreateStatusCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -217,6 +221,10 @@ func GetApiPolicyMockCreateEffectModeEnum() ApiPolicyMockCreateEffectModeEnum {
 			value: "ANY",
 		},
 	}
+}
+
+func (c ApiPolicyMockCreateEffectMode) Value() string {
+	return c.value
 }
 
 func (c ApiPolicyMockCreateEffectMode) MarshalJSON() ([]byte, error) {

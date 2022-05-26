@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudrtc/v2/model"
 )
 
@@ -19,7 +19,7 @@ func CloudRTCClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 创建应用
+// CreateApp 创建应用
 //
 // 调用此接口创建应用。
 //
@@ -35,7 +35,13 @@ func (c *CloudRTCClient) CreateApp(request *model.CreateAppRequest) (*model.Crea
 	}
 }
 
-// 启动单流任务
+// CreateAppInvoker 创建应用
+func (c *CloudRTCClient) CreateAppInvoker(request *model.CreateAppRequest) *CreateAppInvoker {
+	requestDef := GenReqDefForCreateApp()
+	return &CreateAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateIndividualStreamJob 启动单流任务
 //
 // 调用此接口接口启动单流任务。
 //
@@ -55,7 +61,13 @@ func (c *CloudRTCClient) CreateIndividualStreamJob(request *model.CreateIndividu
 	}
 }
 
-// 启动合流任务
+// CreateIndividualStreamJobInvoker 启动单流任务
+func (c *CloudRTCClient) CreateIndividualStreamJobInvoker(request *model.CreateIndividualStreamJobRequest) *CreateIndividualStreamJobInvoker {
+	requestDef := GenReqDefForCreateIndividualStreamJob()
+	return &CreateIndividualStreamJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMixJob 启动合流任务
 //
 // 调用此接口创建合流转码任务。
 //
@@ -87,7 +99,13 @@ func (c *CloudRTCClient) CreateMixJob(request *model.CreateMixJobRequest) (*mode
 	}
 }
 
-// 创建或更新录制规则
+// CreateMixJobInvoker 启动合流任务
+func (c *CloudRTCClient) CreateMixJobInvoker(request *model.CreateMixJobRequest) *CreateMixJobInvoker {
+	requestDef := GenReqDefForCreateMixJob()
+	return &CreateMixJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRecordRule 创建或更新录制规则
 //
 // 调用此接口创建或更新录制规则。
 //
@@ -106,7 +124,13 @@ func (c *CloudRTCClient) CreateRecordRule(request *model.CreateRecordRuleRequest
 	}
 }
 
-// 删除应用
+// CreateRecordRuleInvoker 创建或更新录制规则
+func (c *CloudRTCClient) CreateRecordRuleInvoker(request *model.CreateRecordRuleRequest) *CreateRecordRuleInvoker {
+	requestDef := GenReqDefForCreateRecordRule()
+	return &CreateRecordRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApp 删除应用
 //
 // 调用此接口删除单个应用。
 //
@@ -122,7 +146,13 @@ func (c *CloudRTCClient) DeleteApp(request *model.DeleteAppRequest) (*model.Dele
 	}
 }
 
-// 删除录制规则
+// DeleteAppInvoker 删除应用
+func (c *CloudRTCClient) DeleteAppInvoker(request *model.DeleteAppRequest) *DeleteAppInvoker {
+	requestDef := GenReqDefForDeleteApp()
+	return &DeleteAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRecordRule 删除录制规则
 //
 // 调用此接口删除录制规则，对于正在使用的录制规则，不允许删除。
 //
@@ -138,7 +168,13 @@ func (c *CloudRTCClient) DeleteRecordRule(request *model.DeleteRecordRuleRequest
 	}
 }
 
-// 查询应用列表
+// DeleteRecordRuleInvoker 删除录制规则
+func (c *CloudRTCClient) DeleteRecordRuleInvoker(request *model.DeleteRecordRuleRequest) *DeleteRecordRuleInvoker {
+	requestDef := GenReqDefForDeleteRecordRule()
+	return &DeleteRecordRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApps 查询应用列表
 //
 // 调用此接口查询应用列表。
 //
@@ -154,7 +190,13 @@ func (c *CloudRTCClient) ListApps(request *model.ListAppsRequest) (*model.ListAp
 	}
 }
 
-// 查询录制规则列表
+// ListAppsInvoker 查询应用列表
+func (c *CloudRTCClient) ListAppsInvoker(request *model.ListAppsRequest) *ListAppsInvoker {
+	requestDef := GenReqDefForListApps()
+	return &ListAppsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRecordRules 查询录制规则列表
 //
 // 调用此接口查询录制规则列表。
 //
@@ -170,7 +212,13 @@ func (c *CloudRTCClient) ListRecordRules(request *model.ListRecordRulesRequest) 
 	}
 }
 
-// 查询单个应用
+// ListRecordRulesInvoker 查询录制规则列表
+func (c *CloudRTCClient) ListRecordRulesInvoker(request *model.ListRecordRulesRequest) *ListRecordRulesInvoker {
+	requestDef := GenReqDefForListRecordRules()
+	return &ListRecordRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowApp 查询单个应用
 //
 // 调用此接口查询单个应用详情。
 //
@@ -186,7 +234,13 @@ func (c *CloudRTCClient) ShowApp(request *model.ShowAppRequest) (*model.ShowAppR
 	}
 }
 
-// 查询自动录制配置
+// ShowAppInvoker 查询单个应用
+func (c *CloudRTCClient) ShowAppInvoker(request *model.ShowAppRequest) *ShowAppInvoker {
+	requestDef := GenReqDefForShowApp()
+	return &ShowAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAutoRecord 查询自动录制配置
 //
 // 调用此接口查询自动录制配置
 //
@@ -202,7 +256,13 @@ func (c *CloudRTCClient) ShowAutoRecord(request *model.ShowAutoRecordRequest) (*
 	}
 }
 
-// 查询单流任务状态
+// ShowAutoRecordInvoker 查询自动录制配置
+func (c *CloudRTCClient) ShowAutoRecordInvoker(request *model.ShowAutoRecordRequest) *ShowAutoRecordInvoker {
+	requestDef := GenReqDefForShowAutoRecord()
+	return &ShowAutoRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIndividualStreamJob 查询单流任务状态
 //
 // 调用此接口查询单流任务状态。
 //
@@ -220,7 +280,13 @@ func (c *CloudRTCClient) ShowIndividualStreamJob(request *model.ShowIndividualSt
 	}
 }
 
-// 查询合流任务
+// ShowIndividualStreamJobInvoker 查询单流任务状态
+func (c *CloudRTCClient) ShowIndividualStreamJobInvoker(request *model.ShowIndividualStreamJobRequest) *ShowIndividualStreamJobInvoker {
+	requestDef := GenReqDefForShowIndividualStreamJob()
+	return &ShowIndividualStreamJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMixJob 查询合流任务
 //
 // 调用此接口查询合流转码任务状态。
 //
@@ -236,7 +302,13 @@ func (c *CloudRTCClient) ShowMixJob(request *model.ShowMixJobRequest) (*model.Sh
 	}
 }
 
-// 查询增值（录制）事件回调配置
+// ShowMixJobInvoker 查询合流任务
+func (c *CloudRTCClient) ShowMixJobInvoker(request *model.ShowMixJobRequest) *ShowMixJobInvoker {
+	requestDef := GenReqDefForShowMixJob()
+	return &ShowMixJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRecordCallback 查询增值（录制）事件回调配置
 //
 // 调用此接口查询增值（录制）事件回调配置
 //
@@ -252,7 +324,13 @@ func (c *CloudRTCClient) ShowRecordCallback(request *model.ShowRecordCallbackReq
 	}
 }
 
-// 查询录制规则
+// ShowRecordCallbackInvoker 查询增值（录制）事件回调配置
+func (c *CloudRTCClient) ShowRecordCallbackInvoker(request *model.ShowRecordCallbackRequest) *ShowRecordCallbackInvoker {
+	requestDef := GenReqDefForShowRecordCallback()
+	return &ShowRecordCallbackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRecordRule 查询录制规则
 //
 // 调用此接口查询指定录制规则。
 //
@@ -268,7 +346,13 @@ func (c *CloudRTCClient) ShowRecordRule(request *model.ShowRecordRuleRequest) (*
 	}
 }
 
-// 查询访问控制参数
+// ShowRecordRuleInvoker 查询录制规则
+func (c *CloudRTCClient) ShowRecordRuleInvoker(request *model.ShowRecordRuleRequest) *ShowRecordRuleInvoker {
+	requestDef := GenReqDefForShowRecordRule()
+	return &ShowRecordRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowUrlAuth 查询访问控制参数
 //
 // 查询应用鉴权配置参数
 //
@@ -284,7 +368,13 @@ func (c *CloudRTCClient) ShowUrlAuth(request *model.ShowUrlAuthRequest) (*model.
 	}
 }
 
-// 启用应用
+// ShowUrlAuthInvoker 查询访问控制参数
+func (c *CloudRTCClient) ShowUrlAuthInvoker(request *model.ShowUrlAuthRequest) *ShowUrlAuthInvoker {
+	requestDef := GenReqDefForShowUrlAuth()
+	return &ShowUrlAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartApp 启用应用
 //
 // 调用此接口启用单个应用。
 //
@@ -300,7 +390,13 @@ func (c *CloudRTCClient) StartApp(request *model.StartAppRequest) (*model.StartA
 	}
 }
 
-// 停用应用
+// StartAppInvoker 启用应用
+func (c *CloudRTCClient) StartAppInvoker(request *model.StartAppRequest) *StartAppInvoker {
+	requestDef := GenReqDefForStartApp()
+	return &StartAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopApp 停用应用
 //
 // 调用此接口停用单个应用。
 //
@@ -318,7 +414,13 @@ func (c *CloudRTCClient) StopApp(request *model.StopAppRequest) (*model.StopAppR
 	}
 }
 
-// 停止单流任务
+// StopAppInvoker 停用应用
+func (c *CloudRTCClient) StopAppInvoker(request *model.StopAppRequest) *StopAppInvoker {
+	requestDef := GenReqDefForStopApp()
+	return &StopAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopIndividualStreamJob 停止单流任务
 //
 // 调用此接口停止单流任务
 //
@@ -334,7 +436,13 @@ func (c *CloudRTCClient) StopIndividualStreamJob(request *model.StopIndividualSt
 	}
 }
 
-// 停止合流任务
+// StopIndividualStreamJobInvoker 停止单流任务
+func (c *CloudRTCClient) StopIndividualStreamJobInvoker(request *model.StopIndividualStreamJobRequest) *StopIndividualStreamJobInvoker {
+	requestDef := GenReqDefForStopIndividualStreamJob()
+	return &StopIndividualStreamJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopMixJob 停止合流任务
 //
 // 调用此接口停止已下发的合流转码任务。
 //
@@ -350,7 +458,13 @@ func (c *CloudRTCClient) StopMixJob(request *model.StopMixJobRequest) (*model.St
 	}
 }
 
-// 更新自动录制配置
+// StopMixJobInvoker 停止合流任务
+func (c *CloudRTCClient) StopMixJobInvoker(request *model.StopMixJobRequest) *StopMixJobInvoker {
+	requestDef := GenReqDefForStopMixJob()
+	return &StopMixJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAutoRecord 更新自动录制配置
 //
 // 更新自动录制配置，租户可以开启自动单流录制或者停用自动单流录制。
 //
@@ -366,7 +480,13 @@ func (c *CloudRTCClient) UpdateAutoRecord(request *model.UpdateAutoRecordRequest
 	}
 }
 
-// 修改合流任务
+// UpdateAutoRecordInvoker 更新自动录制配置
+func (c *CloudRTCClient) UpdateAutoRecordInvoker(request *model.UpdateAutoRecordRequest) *UpdateAutoRecordInvoker {
+	requestDef := GenReqDefForUpdateAutoRecord()
+	return &UpdateAutoRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMixJob 修改合流任务
 //
 // 调用此接口更新合流任务布局。
 //
@@ -382,7 +502,13 @@ func (c *CloudRTCClient) UpdateMixJob(request *model.UpdateMixJobRequest) (*mode
 	}
 }
 
-// RTC增值（录制）事件回调配置
+// UpdateMixJobInvoker 修改合流任务
+func (c *CloudRTCClient) UpdateMixJobInvoker(request *model.UpdateMixJobRequest) *UpdateMixJobInvoker {
+	requestDef := GenReqDefForUpdateMixJob()
+	return &UpdateMixJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRecordCallback RTC增值（录制）事件回调配置
 //
 // 调用此接口配置增值（录制）事件上报回调。
 //
@@ -402,7 +528,13 @@ func (c *CloudRTCClient) UpdateRecordCallback(request *model.UpdateRecordCallbac
 	}
 }
 
-// 更新录制规则
+// UpdateRecordCallbackInvoker RTC增值（录制）事件回调配置
+func (c *CloudRTCClient) UpdateRecordCallbackInvoker(request *model.UpdateRecordCallbackRequest) *UpdateRecordCallbackInvoker {
+	requestDef := GenReqDefForUpdateRecordCallback()
+	return &UpdateRecordCallbackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRecordRule 更新录制规则
 //
 // 调用此接口更新录制规则。
 //
@@ -418,7 +550,13 @@ func (c *CloudRTCClient) UpdateRecordRule(request *model.UpdateRecordRuleRequest
 	}
 }
 
-// 开关访问控制
+// UpdateRecordRuleInvoker 更新录制规则
+func (c *CloudRTCClient) UpdateRecordRuleInvoker(request *model.UpdateRecordRuleRequest) *UpdateRecordRuleInvoker {
+	requestDef := GenReqDefForUpdateRecordRule()
+	return &UpdateRecordRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateUrlAuth 开关访问控制
 //
 // 调用此接口开启或关闭URL鉴权。
 //
@@ -432,4 +570,10 @@ func (c *CloudRTCClient) UpdateUrlAuth(request *model.UpdateUrlAuthRequest) (*mo
 	} else {
 		return resp.(*model.UpdateUrlAuthResponse), nil
 	}
+}
+
+// UpdateUrlAuthInvoker 开关访问控制
+func (c *CloudRTCClient) UpdateUrlAuthInvoker(request *model.UpdateUrlAuthRequest) *UpdateUrlAuthInvoker {
+	requestDef := GenReqDefForUpdateUrlAuth()
+	return &UpdateUrlAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

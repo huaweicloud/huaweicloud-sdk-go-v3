@@ -56,6 +56,10 @@ func GetShowRedirectUrlRequestRepoTypeEnum() ShowRedirectUrlRequestRepoTypeEnum 
 	}
 }
 
+func (c ShowRedirectUrlRequestRepoType) Value() string {
+	return c.value
+}
+
 func (c ShowRedirectUrlRequestRepoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/mrs/v1/model"
 )
 
@@ -19,7 +19,7 @@ func MrsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 批量添加集群标签
+// BatchCreateClusterTags 批量添加集群标签
 //
 // 为指定集群批量添加标签。
 // 一个集群上最多有10个标签。
@@ -38,7 +38,13 @@ func (c *MrsClient) BatchCreateClusterTags(request *model.BatchCreateClusterTags
 	}
 }
 
-// 批量删除集群标签
+// BatchCreateClusterTagsInvoker 批量添加集群标签
+func (c *MrsClient) BatchCreateClusterTagsInvoker(request *model.BatchCreateClusterTagsRequest) *BatchCreateClusterTagsInvoker {
+	requestDef := GenReqDefForBatchCreateClusterTags()
+	return &BatchCreateClusterTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteClusterTags 批量删除集群标签
 //
 // 为指定集群批量删除标签。
 //
@@ -61,7 +67,13 @@ func (c *MrsClient) BatchDeleteClusterTags(request *model.BatchDeleteClusterTags
 	}
 }
 
-// 新增作业并执行
+// BatchDeleteClusterTagsInvoker 批量删除集群标签
+func (c *MrsClient) BatchDeleteClusterTagsInvoker(request *model.BatchDeleteClusterTagsRequest) *BatchDeleteClusterTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteClusterTags()
+	return &BatchDeleteClusterTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAndExecuteJob 新增作业并执行
 //
 // 在MRS集群中新增一个作业，并执行作业。该接口不兼容Sahara。
 // 集群ID可参考[查询集群列表](https://support.huaweicloud.com/api-mrs/ListClusters.html)接口获取。
@@ -78,7 +90,13 @@ func (c *MrsClient) CreateAndExecuteJob(request *model.CreateAndExecuteJobReques
 	}
 }
 
-// 创建集群并执行作业
+// CreateAndExecuteJobInvoker 新增作业并执行
+func (c *MrsClient) CreateAndExecuteJobInvoker(request *model.CreateAndExecuteJobRequest) *CreateAndExecuteJobInvoker {
+	requestDef := GenReqDefForCreateAndExecuteJob()
+	return &CreateAndExecuteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCluster 创建集群并执行作业
 //
 // 创建一个MRS集群，并在集群中提交一个作业。该接口不兼容Sahara。
 // 支持同一时间并发创建10个集群。
@@ -100,7 +118,13 @@ func (c *MrsClient) CreateCluster(request *model.CreateClusterRequest) (*model.C
 	}
 }
 
-// 给指定集群添加标签
+// CreateClusterInvoker 创建集群并执行作业
+func (c *MrsClient) CreateClusterInvoker(request *model.CreateClusterRequest) *CreateClusterInvoker {
+	requestDef := GenReqDefForCreateCluster()
+	return &CreateClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateClusterTag 给指定集群添加标签
 //
 // 为特定的集群添加一个tag。
 // 一个集群上最多有10个标签，此接口为幂等接口。添加标签时，如果创建的标签已经存在（key相同），则覆盖。
@@ -117,7 +141,13 @@ func (c *MrsClient) CreateClusterTag(request *model.CreateClusterTagRequest) (*m
 	}
 }
 
-// 配置弹性伸缩规则
+// CreateClusterTagInvoker 给指定集群添加标签
+func (c *MrsClient) CreateClusterTagInvoker(request *model.CreateClusterTagRequest) *CreateClusterTagInvoker {
+	requestDef := GenReqDefForCreateClusterTag()
+	return &CreateClusterTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateScalingPolicy 配置弹性伸缩规则
 //
 // 对弹性伸缩规则进行编辑。
 //
@@ -135,7 +165,13 @@ func (c *MrsClient) CreateScalingPolicy(request *model.CreateScalingPolicyReques
 	}
 }
 
-// 删除集群
+// CreateScalingPolicyInvoker 配置弹性伸缩规则
+func (c *MrsClient) CreateScalingPolicyInvoker(request *model.CreateScalingPolicyRequest) *CreateScalingPolicyInvoker {
+	requestDef := GenReqDefForCreateScalingPolicy()
+	return &CreateScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCluster 删除集群
 //
 // 数据完成处理分析后或者集群运行异常无法提供服务时可删除集群服务。该接口兼容Sahara。
 //
@@ -159,7 +195,13 @@ func (c *MrsClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.D
 	}
 }
 
-// 删除指定集群的标签
+// DeleteClusterInvoker 删除集群
+func (c *MrsClient) DeleteClusterInvoker(request *model.DeleteClusterRequest) *DeleteClusterInvoker {
+	requestDef := GenReqDefForDeleteCluster()
+	return &DeleteClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteClusterTag 删除指定集群的标签
 //
 // 删除特定集群的标签。
 //
@@ -175,7 +217,13 @@ func (c *MrsClient) DeleteClusterTag(request *model.DeleteClusterTagRequest) (*m
 	}
 }
 
-// 删除作业执行对象
+// DeleteClusterTagInvoker 删除指定集群的标签
+func (c *MrsClient) DeleteClusterTagInvoker(request *model.DeleteClusterTagRequest) *DeleteClusterTagInvoker {
+	requestDef := GenReqDefForDeleteClusterTag()
+	return &DeleteClusterTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteJobExecution 删除作业执行对象
 //
 // 删除指定的作业执行对象。该接口兼容Sahara。
 //
@@ -191,7 +239,13 @@ func (c *MrsClient) DeleteJobExecution(request *model.DeleteJobExecutionRequest)
 	}
 }
 
-// 查询所有标签
+// DeleteJobExecutionInvoker 删除作业执行对象
+func (c *MrsClient) DeleteJobExecutionInvoker(request *model.DeleteJobExecutionRequest) *DeleteJobExecutionInvoker {
+	requestDef := GenReqDefForDeleteJobExecution()
+	return &DeleteJobExecutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAllTags 查询所有标签
 //
 // 查询租户在指定Region下的所有标签集合 。
 //
@@ -207,7 +261,13 @@ func (c *MrsClient) ListAllTags(request *model.ListAllTagsRequest) (*model.ListA
 	}
 }
 
-// 查询指定集群的标签
+// ListAllTagsInvoker 查询所有标签
+func (c *MrsClient) ListAllTagsInvoker(request *model.ListAllTagsRequest) *ListAllTagsInvoker {
+	requestDef := GenReqDefForListAllTags()
+	return &ListAllTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClusterTags 查询指定集群的标签
 //
 // 查询指定集群的标签信息。
 //
@@ -223,7 +283,13 @@ func (c *MrsClient) ListClusterTags(request *model.ListClusterTagsRequest) (*mod
 	}
 }
 
-// 查询集群列表
+// ListClusterTagsInvoker 查询指定集群的标签
+func (c *MrsClient) ListClusterTagsInvoker(request *model.ListClusterTagsRequest) *ListClusterTagsInvoker {
+	requestDef := GenReqDefForListClusterTags()
+	return &ListClusterTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClusters 查询集群列表
 //
 // 查看用户创建的集群列表信息。该接口不兼容Sahara。
 //
@@ -239,7 +305,13 @@ func (c *MrsClient) ListClusters(request *model.ListClustersRequest) (*model.Lis
 	}
 }
 
-// 查询特定标签的集群列表
+// ListClustersInvoker 查询集群列表
+func (c *MrsClient) ListClustersInvoker(request *model.ListClustersRequest) *ListClustersInvoker {
+	requestDef := GenReqDefForListClusters()
+	return &ListClustersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClustersByTags 查询特定标签的集群列表
 //
 // 使用标签过滤集群。
 //
@@ -257,7 +329,13 @@ func (c *MrsClient) ListClustersByTags(request *model.ListClustersByTagsRequest)
 	}
 }
 
-// 查询作业exe对象列表
+// ListClustersByTagsInvoker 查询特定标签的集群列表
+func (c *MrsClient) ListClustersByTagsInvoker(request *model.ListClustersByTagsRequest) *ListClustersByTagsInvoker {
+	requestDef := GenReqDefForListClustersByTags()
+	return &ListClustersByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListExecuteJob 查询作业exe对象列表
 //
 // 查询所有作业的exe对象列表。该接口不兼容Sahara。
 //
@@ -273,7 +351,13 @@ func (c *MrsClient) ListExecuteJob(request *model.ListExecuteJobRequest) (*model
 	}
 }
 
-// 查询主机列表
+// ListExecuteJobInvoker 查询作业exe对象列表
+func (c *MrsClient) ListExecuteJobInvoker(request *model.ListExecuteJobRequest) *ListExecuteJobInvoker {
+	requestDef := GenReqDefForListExecuteJob()
+	return &ListExecuteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHosts 查询主机列表
 //
 // 该接口用于查询输入集群的主机列表详情。
 //
@@ -289,7 +373,13 @@ func (c *MrsClient) ListHosts(request *model.ListHostsRequest) (*model.ListHosts
 	}
 }
 
-// 查询集群详情
+// ListHostsInvoker 查询主机列表
+func (c *MrsClient) ListHostsInvoker(request *model.ListHostsRequest) *ListHostsInvoker {
+	requestDef := GenReqDefForListHosts()
+	return &ListHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClusterDetails 查询集群详情
 //
 // 查看指定集群的详细信息。该接口不兼容Sahara。
 //
@@ -305,7 +395,13 @@ func (c *MrsClient) ShowClusterDetails(request *model.ShowClusterDetailsRequest)
 	}
 }
 
-// 查询作业exe对象详情
+// ShowClusterDetailsInvoker 查询集群详情
+func (c *MrsClient) ShowClusterDetailsInvoker(request *model.ShowClusterDetailsRequest) *ShowClusterDetailsInvoker {
+	requestDef := GenReqDefForShowClusterDetails()
+	return &ShowClusterDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobExes 查询作业exe对象详情
 //
 // 查询指定作业的exe对象详细信息。该接口不兼容Sahara。
 //
@@ -321,7 +417,13 @@ func (c *MrsClient) ShowJobExes(request *model.ShowJobExesRequest) (*model.ShowJ
 	}
 }
 
-// 调整集群节点
+// ShowJobExesInvoker 查询作业exe对象详情
+func (c *MrsClient) ShowJobExesInvoker(request *model.ShowJobExesRequest) *ShowJobExesInvoker {
+	requestDef := GenReqDefForShowJobExes()
+	return &ShowJobExesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateClusterScaling 调整集群节点
 //
 // 创建集群后，扩容/缩容集群Core节点或者Task节点。MRS集群创建成功后不支持调整Master节点数量，即不支持扩缩容Master节点。该接口不兼容Sahara。
 // 处于running状态的集群才允许扩容/缩容，其他状态则不允许扩容/缩容。 集群状态和集群ID可参考[查询集群列表](https://support.huaweicloud.com/api-mrs/ListClusters.html)接口获取。
@@ -336,4 +438,10 @@ func (c *MrsClient) UpdateClusterScaling(request *model.UpdateClusterScalingRequ
 	} else {
 		return resp.(*model.UpdateClusterScalingResponse), nil
 	}
+}
+
+// UpdateClusterScalingInvoker 调整集群节点
+func (c *MrsClient) UpdateClusterScalingInvoker(request *model.UpdateClusterScalingRequest) *UpdateClusterScalingInvoker {
+	requestDef := GenReqDefForUpdateClusterScaling()
+	return &UpdateClusterScalingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

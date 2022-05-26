@@ -105,6 +105,10 @@ func GetLdApiScriptBaseDsTypeEnum() LdApiScriptBaseDsTypeEnum {
 	}
 }
 
+func (c LdApiScriptBaseDsType) Value() string {
+	return c.value
+}
+
 func (c LdApiScriptBaseDsType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

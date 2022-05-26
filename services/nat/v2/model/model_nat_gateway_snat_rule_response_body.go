@@ -96,6 +96,10 @@ func GetNatGatewaySnatRuleResponseBodyStatusEnum() NatGatewaySnatRuleResponseBod
 	}
 }
 
+func (c NatGatewaySnatRuleResponseBodyStatus) Value() string {
+	return c.value
+}
+
 func (c NatGatewaySnatRuleResponseBodyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

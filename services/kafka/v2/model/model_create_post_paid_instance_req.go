@@ -122,6 +122,10 @@ func GetCreatePostPaidInstanceReqEngineEnum() CreatePostPaidInstanceReqEngineEnu
 	}
 }
 
+func (c CreatePostPaidInstanceReqEngine) Value() string {
+	return c.value
+}
+
 func (c CreatePostPaidInstanceReqEngine) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -158,6 +162,10 @@ func GetCreatePostPaidInstanceReqEngineVersionEnum() CreatePostPaidInstanceReqEn
 			value: "2.3.0",
 		},
 	}
+}
+
+func (c CreatePostPaidInstanceReqEngineVersion) Value() string {
+	return c.value
 }
 
 func (c CreatePostPaidInstanceReqEngineVersion) MarshalJSON() ([]byte, error) {
@@ -206,6 +214,10 @@ func GetCreatePostPaidInstanceReqSpecificationEnum() CreatePostPaidInstanceReqSp
 	}
 }
 
+func (c CreatePostPaidInstanceReqSpecification) Value() string {
+	return c.value
+}
+
 func (c CreatePostPaidInstanceReqSpecification) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -246,6 +258,10 @@ func GetCreatePostPaidInstanceReqPartitionNumEnum() CreatePostPaidInstanceReqPar
 	}
 }
 
+func (c CreatePostPaidInstanceReqPartitionNum) Value() int32 {
+	return c.value
+}
+
 func (c CreatePostPaidInstanceReqPartitionNum) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -282,6 +298,10 @@ func GetCreatePostPaidInstanceReqRetentionPolicyEnum() CreatePostPaidInstanceReq
 			value: "produce_reject",
 		},
 	}
+}
+
+func (c CreatePostPaidInstanceReqRetentionPolicy) Value() string {
+	return c.value
 }
 
 func (c CreatePostPaidInstanceReqRetentionPolicy) MarshalJSON() ([]byte, error) {
@@ -324,6 +344,10 @@ func GetCreatePostPaidInstanceReqStorageSpecCodeEnum() CreatePostPaidInstanceReq
 			value: "dms.physical.storage.ultra",
 		},
 	}
+}
+
+func (c CreatePostPaidInstanceReqStorageSpecCode) Value() string {
+	return c.value
 }
 
 func (c CreatePostPaidInstanceReqStorageSpecCode) MarshalJSON() ([]byte, error) {

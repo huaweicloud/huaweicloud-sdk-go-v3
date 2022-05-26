@@ -97,6 +97,10 @@ func GetPublicipShowRespBandwidthShareTypeEnum() PublicipShowRespBandwidthShareT
 	}
 }
 
+func (c PublicipShowRespBandwidthShareType) Value() string {
+	return c.value
+}
+
 func (c PublicipShowRespBandwidthShareType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -179,6 +183,10 @@ func GetPublicipShowRespStatusEnum() PublicipShowRespStatusEnum {
 	}
 }
 
+func (c PublicipShowRespStatus) Value() string {
+	return c.value
+}
+
 func (c PublicipShowRespStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -214,6 +222,10 @@ func GetPublicipShowRespIpVersionEnum() PublicipShowRespIpVersionEnum {
 			value: 6,
 		},
 	}
+}
+
+func (c PublicipShowRespIpVersion) Value() int32 {
+	return c.value
 }
 
 func (c PublicipShowRespIpVersion) MarshalJSON() ([]byte, error) {

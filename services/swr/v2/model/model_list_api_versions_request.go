@@ -45,6 +45,10 @@ func GetListApiVersionsRequestContentTypeEnum() ListApiVersionsRequestContentTyp
 	}
 }
 
+func (c ListApiVersionsRequestContentType) Value() string {
+	return c.value
+}
+
 func (c ListApiVersionsRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

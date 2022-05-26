@@ -57,6 +57,10 @@ func GetListRetentionHistoriesRequestContentTypeEnum() ListRetentionHistoriesReq
 	}
 }
 
+func (c ListRetentionHistoriesRequestContentType) Value() string {
+	return c.value
+}
+
 func (c ListRetentionHistoriesRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

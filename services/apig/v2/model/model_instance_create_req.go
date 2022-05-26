@@ -110,6 +110,10 @@ func GetInstanceCreateReqSpecIdEnum() InstanceCreateReqSpecIdEnum {
 	}
 }
 
+func (c InstanceCreateReqSpecId) Value() string {
+	return c.value
+}
+
 func (c InstanceCreateReqSpecId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -146,6 +150,10 @@ func GetInstanceCreateReqLoadbalancerProviderEnum() InstanceCreateReqLoadbalance
 			value: "elb",
 		},
 	}
+}
+
+func (c InstanceCreateReqLoadbalancerProvider) Value() string {
+	return c.value
 }
 
 func (c InstanceCreateReqLoadbalancerProvider) MarshalJSON() ([]byte, error) {

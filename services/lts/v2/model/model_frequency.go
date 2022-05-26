@@ -71,6 +71,10 @@ func GetFrequencyTypeEnum() FrequencyTypeEnum {
 	}
 }
 
+func (c FrequencyType) Value() string {
+	return c.value
+}
+
 func (c FrequencyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -107,6 +111,10 @@ func GetFrequencyFixedRateUnitEnum() FrequencyFixedRateUnitEnum {
 			value: "hour",
 		},
 	}
+}
+
+func (c FrequencyFixedRateUnit) Value() string {
+	return c.value
 }
 
 func (c FrequencyFixedRateUnit) MarshalJSON() ([]byte, error) {

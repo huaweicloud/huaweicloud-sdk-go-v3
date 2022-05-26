@@ -90,6 +90,10 @@ func GetMetricAlarmsAlarmTypeEnum() MetricAlarmsAlarmTypeEnum {
 	}
 }
 
+func (c MetricAlarmsAlarmType) Value() string {
+	return c.value
+}
+
 func (c MetricAlarmsAlarmType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

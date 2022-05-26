@@ -67,6 +67,10 @@ func GetInterfaceAttachmentsPortStateEnum() InterfaceAttachmentsPortStateEnum {
 	}
 }
 
+func (c InterfaceAttachmentsPortState) Value() string {
+	return c.value
+}
+
 func (c InterfaceAttachmentsPortState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

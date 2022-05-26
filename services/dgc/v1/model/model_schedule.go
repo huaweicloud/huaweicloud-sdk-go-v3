@@ -50,6 +50,10 @@ func GetScheduleScheTypeEnum() ScheduleScheTypeEnum {
 	}
 }
 
+func (c ScheduleScheType) Value() string {
+	return c.value
+}
+
 func (c ScheduleScheType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

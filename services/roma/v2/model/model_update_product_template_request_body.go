@@ -49,6 +49,10 @@ func GetUpdateProductTemplateRequestBodyStatusEnum() UpdateProductTemplateReques
 	}
 }
 
+func (c UpdateProductTemplateRequestBodyStatus) Value() int32 {
+	return c.value
+}
+
 func (c UpdateProductTemplateRequestBodyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

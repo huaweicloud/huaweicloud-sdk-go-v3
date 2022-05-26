@@ -68,6 +68,10 @@ func GetGrantsGranteePrincipalTypeEnum() GrantsGranteePrincipalTypeEnum {
 	}
 }
 
+func (c GrantsGranteePrincipalType) Value() string {
+	return c.value
+}
+
 func (c GrantsGranteePrincipalType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

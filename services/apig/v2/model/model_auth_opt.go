@@ -45,6 +45,10 @@ func GetAuthOptAppCodeAuthTypeEnum() AuthOptAppCodeAuthTypeEnum {
 	}
 }
 
+func (c AuthOptAppCodeAuthType) Value() string {
+	return c.value
+}
+
 func (c AuthOptAppCodeAuthType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

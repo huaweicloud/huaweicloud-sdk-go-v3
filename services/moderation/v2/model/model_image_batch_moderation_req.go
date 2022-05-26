@@ -20,6 +20,15 @@ type ImageBatchModerationReq struct {
 
 	// - 结果过滤门限，只有置信度不低于此门限的结果才会呈现在detail的列表中，取值范围 0-1，当未设置此值时各个检测场景会使用各自的默认值。  - politics检测场景的默认值为0.95。  - terrorism检测场景的默认值为0。  - ad检测场景的默认值为0。  - 无特殊需求直接不传此参数或像示例中一样值设为空字符串即可。  > - 如果检测场景中的最高置信度也未达到threshold，则结果列表为空；反之threshold过小，则会使结果列表中内容过多。 > - threshold参数不支持porn场景筛选。 > -  threshold参数不会影响响应中的suggestion。
 	Threshold *float64 `json:"threshold,omitempty"`
+
+	// 图像审核规则名称，默认使用default规则。 审核规则的创建和使用请参见[配置审核规则](https://support.huaweicloud.com/api-moderation/moderation_03_0063.html)。
+	ModerationRule *string `json:"moderation_rule,omitempty"`
+
+	// 图文审核检测场景。当categories包含ad时，该参数生效。  当前支持的场景有系统场景和用户自定义场景: - 系统场景为：   - qr_code：二维码   - politics：涉政   - porn：涉黄   - ad：广告   - abuse：辱骂   - contraband：违禁品 - 用户自定义场景为：自定义黑名单词库。  自定义词库的创建和使用请参见[配置自定义词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html)。
+	AdCategories *[]string `json:"ad_categories,omitempty"`
+
+	// 是否返回ocr识别的结果。
+	ShowOcrText *bool `json:"show_ocr_text,omitempty"`
 }
 
 func (o ImageBatchModerationReq) String() string {
@@ -61,6 +70,10 @@ func GetImageBatchModerationReqCategoriesEnum() ImageBatchModerationReqCategorie
 			value: "all",
 		},
 	}
+}
+
+func (c ImageBatchModerationReqCategories) Value() string {
+	return c.value
 }
 
 func (c ImageBatchModerationReqCategories) MarshalJSON() ([]byte, error) {

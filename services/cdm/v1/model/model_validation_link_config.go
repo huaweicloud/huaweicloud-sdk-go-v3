@@ -47,6 +47,10 @@ func GetValidationLinkConfigStatusEnum() ValidationLinkConfigStatusEnum {
 	}
 }
 
+func (c ValidationLinkConfigStatus) Value() string {
+	return c.value
+}
+
 func (c ValidationLinkConfigStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

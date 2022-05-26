@@ -61,6 +61,10 @@ func GetDataVolumesVolumetypeEnum() DataVolumesVolumetypeEnum {
 	}
 }
 
+func (c DataVolumesVolumetype) Value() string {
+	return c.value
+}
+
 func (c DataVolumesVolumetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -93,6 +97,10 @@ func GetDataVolumesClusterTypeEnum() DataVolumesClusterTypeEnum {
 			value: "DSS",
 		},
 	}
+}
+
+func (c DataVolumesClusterType) Value() string {
+	return c.value
 }
 
 func (c DataVolumesClusterType) MarshalJSON() ([]byte, error) {

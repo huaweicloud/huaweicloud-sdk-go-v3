@@ -63,6 +63,10 @@ func GetListSlowlogRequestSortKeyEnum() ListSlowlogRequestSortKeyEnum {
 	}
 }
 
+func (c ListSlowlogRequestSortKey) Value() string {
+	return c.value
+}
+
 func (c ListSlowlogRequestSortKey) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -99,6 +103,10 @@ func GetListSlowlogRequestSortDirEnum() ListSlowlogRequestSortDirEnum {
 			value: "asc",
 		},
 	}
+}
+
+func (c ListSlowlogRequestSortDir) Value() string {
+	return c.value
 }
 
 func (c ListSlowlogRequestSortDir) MarshalJSON() ([]byte, error) {

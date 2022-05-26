@@ -68,6 +68,10 @@ func GetProtectablesRespStatusEnum() ProtectablesRespStatusEnum {
 	}
 }
 
+func (c ProtectablesRespStatus) Value() string {
+	return c.value
+}
+
 func (c ProtectablesRespStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

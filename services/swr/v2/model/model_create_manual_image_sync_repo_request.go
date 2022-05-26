@@ -53,6 +53,10 @@ func GetCreateManualImageSyncRepoRequestContentTypeEnum() CreateManualImageSyncR
 	}
 }
 
+func (c CreateManualImageSyncRepoRequestContentType) Value() string {
+	return c.value
+}
+
 func (c CreateManualImageSyncRepoRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -63,6 +63,10 @@ func GetGetHostGroupInfoHostGroupTypeEnum() GetHostGroupInfoHostGroupTypeEnum {
 	}
 }
 
+func (c GetHostGroupInfoHostGroupType) Value() string {
+	return c.value
+}
+
 func (c GetHostGroupInfoHostGroupType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

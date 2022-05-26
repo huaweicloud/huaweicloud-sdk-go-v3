@@ -78,6 +78,10 @@ func GetTaskTargetServerOsTypeEnum() TaskTargetServerOsTypeEnum {
 	}
 }
 
+func (c TaskTargetServerOsType) Value() string {
+	return c.value
+}
+
 func (c TaskTargetServerOsType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

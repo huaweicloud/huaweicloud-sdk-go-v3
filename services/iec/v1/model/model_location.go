@@ -70,6 +70,10 @@ func GetLocationOperatorEnum() LocationOperatorEnum {
 	}
 }
 
+func (c LocationOperator) Value() string {
+	return c.value
+}
+
 func (c LocationOperator) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

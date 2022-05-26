@@ -47,6 +47,10 @@ func GetBatchCheckResultsRequestXLanguageEnum() BatchCheckResultsRequestXLanguag
 	}
 }
 
+func (c BatchCheckResultsRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c BatchCheckResultsRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

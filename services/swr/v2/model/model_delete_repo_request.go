@@ -51,6 +51,10 @@ func GetDeleteRepoRequestContentTypeEnum() DeleteRepoRequestContentTypeEnum {
 	}
 }
 
+func (c DeleteRepoRequestContentType) Value() string {
+	return c.value
+}
+
 func (c DeleteRepoRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

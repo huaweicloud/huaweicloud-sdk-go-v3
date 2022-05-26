@@ -51,6 +51,10 @@ func GetSourceCdnRespProtocolEnum() SourceCdnRespProtocolEnum {
 	}
 }
 
+func (c SourceCdnRespProtocol) Value() string {
+	return c.value
+}
+
 func (c SourceCdnRespProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -107,6 +111,10 @@ func GetSourceCdnRespAuthenticationTypeEnum() SourceCdnRespAuthenticationTypeEnu
 			value: "AZURE_SAS_TOKEN",
 		},
 	}
+}
+
+func (c SourceCdnRespAuthenticationType) Value() string {
+	return c.value
 }
 
 func (c SourceCdnRespAuthenticationType) MarshalJSON() ([]byte, error) {

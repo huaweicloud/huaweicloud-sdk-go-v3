@@ -90,6 +90,10 @@ func GetPostPaidServerDataVolumeVolumetypeEnum() PostPaidServerDataVolumeVolumet
 	}
 }
 
+func (c PostPaidServerDataVolumeVolumetype) Value() string {
+	return c.value
+}
+
 func (c PostPaidServerDataVolumeVolumetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -122,6 +126,10 @@ func GetPostPaidServerDataVolumeClusterTypeEnum() PostPaidServerDataVolumeCluste
 			value: "DSS",
 		},
 	}
+}
+
+func (c PostPaidServerDataVolumeClusterType) Value() string {
+	return c.value
 }
 
 func (c PostPaidServerDataVolumeClusterType) MarshalJSON() ([]byte, error) {

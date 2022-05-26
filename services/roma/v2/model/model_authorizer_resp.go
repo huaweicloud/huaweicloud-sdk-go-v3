@@ -79,6 +79,10 @@ func GetAuthorizerRespTypeEnum() AuthorizerRespTypeEnum {
 	}
 }
 
+func (c AuthorizerRespType) Value() string {
+	return c.value
+}
+
 func (c AuthorizerRespType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -115,6 +119,10 @@ func GetAuthorizerRespAuthorizerTypeEnum() AuthorizerRespAuthorizerTypeEnum {
 			value: "FUNC",
 		},
 	}
+}
+
+func (c AuthorizerRespAuthorizerType) Value() string {
+	return c.value
 }
 
 func (c AuthorizerRespAuthorizerType) MarshalJSON() ([]byte, error) {

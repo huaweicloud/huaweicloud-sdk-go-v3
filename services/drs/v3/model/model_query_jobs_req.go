@@ -76,6 +76,10 @@ func GetQueryJobsReqDbUseTypeEnum() QueryJobsReqDbUseTypeEnum {
 	}
 }
 
+func (c QueryJobsReqDbUseType) Value() string {
+	return c.value
+}
+
 func (c QueryJobsReqDbUseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -118,6 +122,10 @@ func GetQueryJobsReqEngineTypeEnum() QueryJobsReqEngineTypeEnum {
 	}
 }
 
+func (c QueryJobsReqEngineType) Value() string {
+	return c.value
+}
+
 func (c QueryJobsReqEngineType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -158,6 +166,10 @@ func GetQueryJobsReqNetTypeEnum() QueryJobsReqNetTypeEnum {
 			value: "eip",
 		},
 	}
+}
+
+func (c QueryJobsReqNetType) Value() string {
+	return c.value
 }
 
 func (c QueryJobsReqNetType) MarshalJSON() ([]byte, error) {
@@ -276,6 +288,10 @@ func GetQueryJobsReqStatusEnum() QueryJobsReqStatusEnum {
 			value: "RELEASE_CHILD_TRANSFER_COMPLETE",
 		},
 	}
+}
+
+func (c QueryJobsReqStatus) Value() string {
+	return c.value
 }
 
 func (c QueryJobsReqStatus) MarshalJSON() ([]byte, error) {

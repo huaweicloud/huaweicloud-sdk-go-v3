@@ -67,6 +67,10 @@ func GetUpdateScalingV2PolicyOptionScalingResourceTypeEnum() UpdateScalingV2Poli
 	}
 }
 
+func (c UpdateScalingV2PolicyOptionScalingResourceType) Value() string {
+	return c.value
+}
+
 func (c UpdateScalingV2PolicyOptionScalingResourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -107,6 +111,10 @@ func GetUpdateScalingV2PolicyOptionScalingPolicyTypeEnum() UpdateScalingV2Policy
 			value: "RECURRENCE",
 		},
 	}
+}
+
+func (c UpdateScalingV2PolicyOptionScalingPolicyType) Value() string {
+	return c.value
 }
 
 func (c UpdateScalingV2PolicyOptionScalingPolicyType) MarshalJSON() ([]byte, error) {

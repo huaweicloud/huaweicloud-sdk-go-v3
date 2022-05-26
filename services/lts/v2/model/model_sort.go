@@ -47,6 +47,10 @@ func GetSortOrderEnum() SortOrderEnum {
 	}
 }
 
+func (c SortOrder) Value() string {
+	return c.value
+}
+
 func (c SortOrder) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

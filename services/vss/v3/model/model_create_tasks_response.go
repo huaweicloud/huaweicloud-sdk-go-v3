@@ -55,6 +55,10 @@ func GetCreateTasksResponseInfoCodeEnum() CreateTasksResponseInfoCodeEnum {
 	}
 }
 
+func (c CreateTasksResponseInfoCode) Value() string {
+	return c.value
+}
+
 func (c CreateTasksResponseInfoCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -103,6 +107,10 @@ func GetCreateTasksResponseTaskStatusEnum() CreateTasksResponseTaskStatusEnum {
 			value: "failure",
 		},
 	}
+}
+
+func (c CreateTasksResponseTaskStatus) Value() string {
+	return c.value
 }
 
 func (c CreateTasksResponseTaskStatus) MarshalJSON() ([]byte, error) {

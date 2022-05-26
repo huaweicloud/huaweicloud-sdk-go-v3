@@ -169,6 +169,10 @@ func GetApiInfoTypeEnum() ApiInfoTypeEnum {
 	}
 }
 
+func (c ApiInfoType) Value() int32 {
+	return c.value
+}
+
 func (c ApiInfoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -209,6 +213,10 @@ func GetApiInfoReqProtocolEnum() ApiInfoReqProtocolEnum {
 			value: "BOTH",
 		},
 	}
+}
+
+func (c ApiInfoReqProtocol) Value() string {
+	return c.value
 }
 
 func (c ApiInfoReqProtocol) MarshalJSON() ([]byte, error) {
@@ -273,6 +281,10 @@ func GetApiInfoReqMethodEnum() ApiInfoReqMethodEnum {
 	}
 }
 
+func (c ApiInfoReqMethod) Value() string {
+	return c.value
+}
+
 func (c ApiInfoReqMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -319,6 +331,10 @@ func GetApiInfoAuthTypeEnum() ApiInfoAuthTypeEnum {
 	}
 }
 
+func (c ApiInfoAuthType) Value() string {
+	return c.value
+}
+
 func (c ApiInfoAuthType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -355,6 +371,10 @@ func GetApiInfoMatchModeEnum() ApiInfoMatchModeEnum {
 			value: "NORMAL",
 		},
 	}
+}
+
+func (c ApiInfoMatchMode) Value() string {
+	return c.value
 }
 
 func (c ApiInfoMatchMode) MarshalJSON() ([]byte, error) {
@@ -397,6 +417,10 @@ func GetApiInfoBackendTypeEnum() ApiInfoBackendTypeEnum {
 			value: "MOCK",
 		},
 	}
+}
+
+func (c ApiInfoBackendType) Value() string {
+	return c.value
 }
 
 func (c ApiInfoBackendType) MarshalJSON() ([]byte, error) {
@@ -445,6 +469,10 @@ func GetApiInfoContentTypeEnum() ApiInfoContentTypeEnum {
 	}
 }
 
+func (c ApiInfoContentType) Value() string {
+	return c.value
+}
+
 func (c ApiInfoContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -477,6 +505,10 @@ func GetApiInfoStatusEnum() ApiInfoStatusEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c ApiInfoStatus) Value() int32 {
+	return c.value
 }
 
 func (c ApiInfoStatus) MarshalJSON() ([]byte, error) {

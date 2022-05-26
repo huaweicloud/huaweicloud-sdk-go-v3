@@ -90,6 +90,10 @@ func GetShowQueueResponseQueueModeEnum() ShowQueueResponseQueueModeEnum {
 	}
 }
 
+func (c ShowQueueResponseQueueMode) Value() string {
+	return c.value
+}
+
 func (c ShowQueueResponseQueueMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -126,6 +130,10 @@ func GetShowQueueResponseRedrivePolicyEnum() ShowQueueResponseRedrivePolicyEnum 
 			value: "disable",
 		},
 	}
+}
+
+func (c ShowQueueResponseRedrivePolicy) Value() string {
+	return c.value
 }
 
 func (c ShowQueueResponseRedrivePolicy) MarshalJSON() ([]byte, error) {

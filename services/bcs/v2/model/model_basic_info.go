@@ -11,7 +11,7 @@ type BasicInfo struct {
 	// BCS服务ID
 	Id *string `json:"id,omitempty"`
 
-	// BCS服务名
+	// 区块链服务名称，支持英文，数字，中文字符和中划线(-)，不能以中划线(-)开头，长度4-24个字符。
 	Name *string `json:"name,omitempty"`
 
 	// BCS服务版本信息

@@ -51,6 +51,10 @@ func GetUpdateListenerIpGroupOptionTypeEnum() UpdateListenerIpGroupOptionTypeEnu
 	}
 }
 
+func (c UpdateListenerIpGroupOptionType) Value() string {
+	return c.value
+}
+
 func (c UpdateListenerIpGroupOptionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

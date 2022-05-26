@@ -105,6 +105,10 @@ func GetTestEndPointNetTypeEnum() TestEndPointNetTypeEnum {
 	}
 }
 
+func (c TestEndPointNetType) Value() string {
+	return c.value
+}
+
 func (c TestEndPointNetType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -147,6 +151,10 @@ func GetTestEndPointDbTypeEnum() TestEndPointDbTypeEnum {
 	}
 }
 
+func (c TestEndPointDbType) Value() string {
+	return c.value
+}
+
 func (c TestEndPointDbType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -183,6 +191,10 @@ func GetTestEndPointEndPointTypeEnum() TestEndPointEndPointTypeEnum {
 			value: "ta",
 		},
 	}
+}
+
+func (c TestEndPointEndPointType) Value() string {
+	return c.value
 }
 
 func (c TestEndPointEndPointType) MarshalJSON() ([]byte, error) {

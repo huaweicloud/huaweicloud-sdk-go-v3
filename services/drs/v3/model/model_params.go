@@ -72,6 +72,10 @@ func GetParamsCompareResultEnum() ParamsCompareResultEnum {
 	}
 }
 
+func (c ParamsCompareResult) Value() string {
+	return c.value
+}
+
 func (c ParamsCompareResult) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -110,6 +114,10 @@ func GetParamsGroupEnum() ParamsGroupEnum {
 	}
 }
 
+func (c ParamsGroup) Value() string {
+	return c.value
+}
+
 func (c ParamsGroup) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -146,6 +154,10 @@ func GetParamsNeedRestartEnum() ParamsNeedRestartEnum {
 			value: "false",
 		},
 	}
+}
+
+func (c ParamsNeedRestart) Value() string {
+	return c.value
 }
 
 func (c ParamsNeedRestart) MarshalJSON() ([]byte, error) {

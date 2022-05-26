@@ -47,6 +47,10 @@ func GetBatchSwitchesRequestStatusEnum() BatchSwitchesRequestStatusEnum {
 	}
 }
 
+func (c BatchSwitchesRequestStatus) Value() string {
+	return c.value
+}
+
 func (c BatchSwitchesRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

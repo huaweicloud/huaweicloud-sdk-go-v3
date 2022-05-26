@@ -191,6 +191,10 @@ func GetDatasourceInfoDatasourceTypeEnum() DatasourceInfoDatasourceTypeEnum {
 	}
 }
 
+func (c DatasourceInfoDatasourceType) Value() string {
+	return c.value
+}
+
 func (c DatasourceInfoDatasourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

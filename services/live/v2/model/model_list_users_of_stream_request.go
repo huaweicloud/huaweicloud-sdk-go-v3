@@ -72,6 +72,10 @@ func GetListUsersOfStreamRequestProtocolEnum() ListUsersOfStreamRequestProtocolE
 	}
 }
 
+func (c ListUsersOfStreamRequestProtocol) Value() string {
+	return c.value
+}
+
 func (c ListUsersOfStreamRequestProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -107,6 +111,10 @@ func GetListUsersOfStreamRequestIntervalEnum() ListUsersOfStreamRequestIntervalE
 			value: 300,
 		},
 	}
+}
+
+func (c ListUsersOfStreamRequestInterval) Value() int32 {
+	return c.value
 }
 
 func (c ListUsersOfStreamRequestInterval) MarshalJSON() ([]byte, error) {

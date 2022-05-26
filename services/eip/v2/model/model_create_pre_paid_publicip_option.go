@@ -50,6 +50,10 @@ func GetCreatePrePaidPublicipOptionIpVersionEnum() CreatePrePaidPublicipOptionIp
 	}
 }
 
+func (c CreatePrePaidPublicipOptionIpVersion) Value() int32 {
+	return c.value
+}
+
 func (c CreatePrePaidPublicipOptionIpVersion) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

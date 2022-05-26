@@ -95,6 +95,10 @@ func GetListTasksRequestStateEnum() ListTasksRequestStateEnum {
 	}
 }
 
+func (c ListTasksRequestState) Value() string {
+	return c.value
+}
+
 func (c ListTasksRequestState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

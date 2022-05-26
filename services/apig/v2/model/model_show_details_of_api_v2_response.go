@@ -171,6 +171,10 @@ func GetShowDetailsOfApiV2ResponseTypeEnum() ShowDetailsOfApiV2ResponseTypeEnum 
 	}
 }
 
+func (c ShowDetailsOfApiV2ResponseType) Value() int32 {
+	return c.value
+}
+
 func (c ShowDetailsOfApiV2ResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -211,6 +215,10 @@ func GetShowDetailsOfApiV2ResponseReqProtocolEnum() ShowDetailsOfApiV2ResponseRe
 			value: "BOTH",
 		},
 	}
+}
+
+func (c ShowDetailsOfApiV2ResponseReqProtocol) Value() string {
+	return c.value
 }
 
 func (c ShowDetailsOfApiV2ResponseReqProtocol) MarshalJSON() ([]byte, error) {
@@ -275,6 +283,10 @@ func GetShowDetailsOfApiV2ResponseReqMethodEnum() ShowDetailsOfApiV2ResponseReqM
 	}
 }
 
+func (c ShowDetailsOfApiV2ResponseReqMethod) Value() string {
+	return c.value
+}
+
 func (c ShowDetailsOfApiV2ResponseReqMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -321,6 +333,10 @@ func GetShowDetailsOfApiV2ResponseAuthTypeEnum() ShowDetailsOfApiV2ResponseAuthT
 	}
 }
 
+func (c ShowDetailsOfApiV2ResponseAuthType) Value() string {
+	return c.value
+}
+
 func (c ShowDetailsOfApiV2ResponseAuthType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -357,6 +373,10 @@ func GetShowDetailsOfApiV2ResponseMatchModeEnum() ShowDetailsOfApiV2ResponseMatc
 			value: "NORMAL",
 		},
 	}
+}
+
+func (c ShowDetailsOfApiV2ResponseMatchMode) Value() string {
+	return c.value
 }
 
 func (c ShowDetailsOfApiV2ResponseMatchMode) MarshalJSON() ([]byte, error) {
@@ -399,6 +419,10 @@ func GetShowDetailsOfApiV2ResponseBackendTypeEnum() ShowDetailsOfApiV2ResponseBa
 			value: "MOCK",
 		},
 	}
+}
+
+func (c ShowDetailsOfApiV2ResponseBackendType) Value() string {
+	return c.value
 }
 
 func (c ShowDetailsOfApiV2ResponseBackendType) MarshalJSON() ([]byte, error) {
@@ -445,6 +469,10 @@ func GetShowDetailsOfApiV2ResponseContentTypeEnum() ShowDetailsOfApiV2ResponseCo
 			value: "text/plain",
 		},
 	}
+}
+
+func (c ShowDetailsOfApiV2ResponseContentType) Value() string {
+	return c.value
 }
 
 func (c ShowDetailsOfApiV2ResponseContentType) MarshalJSON() ([]byte, error) {

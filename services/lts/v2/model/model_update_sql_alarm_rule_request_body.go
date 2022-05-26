@@ -82,6 +82,10 @@ func GetUpdateSqlAlarmRuleRequestBodySqlAlarmLevelEnum() UpdateSqlAlarmRuleReque
 	}
 }
 
+func (c UpdateSqlAlarmRuleRequestBodySqlAlarmLevel) Value() string {
+	return c.value
+}
+
 func (c UpdateSqlAlarmRuleRequestBodySqlAlarmLevel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -123,6 +127,10 @@ func GetUpdateSqlAlarmRuleRequestBodySqlAlarmSendCodeEnum() UpdateSqlAlarmRuleRe
 			value: 3,
 		},
 	}
+}
+
+func (c UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode) Value() int32 {
+	return c.value
 }
 
 func (c UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode) MarshalJSON() ([]byte, error) {

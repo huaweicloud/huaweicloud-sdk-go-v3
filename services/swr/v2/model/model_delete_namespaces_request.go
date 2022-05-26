@@ -48,6 +48,10 @@ func GetDeleteNamespacesRequestContentTypeEnum() DeleteNamespacesRequestContentT
 	}
 }
 
+func (c DeleteNamespacesRequestContentType) Value() string {
+	return c.value
+}
+
 func (c DeleteNamespacesRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

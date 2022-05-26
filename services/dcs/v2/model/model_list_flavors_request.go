@@ -60,6 +60,10 @@ func GetListFlavorsRequestCpuTypeEnum() ListFlavorsRequestCpuTypeEnum {
 	}
 }
 
+func (c ListFlavorsRequestCpuType) Value() string {
+	return c.value
+}
+
 func (c ListFlavorsRequestCpuType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

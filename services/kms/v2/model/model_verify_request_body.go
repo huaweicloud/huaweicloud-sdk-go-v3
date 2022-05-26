@@ -91,6 +91,10 @@ func GetVerifyRequestBodySigningAlgorithmEnum() VerifyRequestBodySigningAlgorith
 	}
 }
 
+func (c VerifyRequestBodySigningAlgorithm) Value() string {
+	return c.value
+}
+
 func (c VerifyRequestBodySigningAlgorithm) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -127,6 +131,10 @@ func GetVerifyRequestBodyMessageTypeEnum() VerifyRequestBodyMessageTypeEnum {
 			value: "RAW",
 		},
 	}
+}
+
+func (c VerifyRequestBodyMessageType) Value() string {
+	return c.value
 }
 
 func (c VerifyRequestBodyMessageType) MarshalJSON() ([]byte, error) {

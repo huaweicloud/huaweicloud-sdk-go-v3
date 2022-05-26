@@ -61,6 +61,10 @@ func GetCreateNotificationRequestBodyTypeEnum() CreateNotificationRequestBodyTyp
 	}
 }
 
+func (c CreateNotificationRequestBodyType) Value() int32 {
+	return c.value
+}
+
 func (c CreateNotificationRequestBodyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -96,6 +100,10 @@ func GetCreateNotificationRequestBodyStatusEnum() CreateNotificationRequestBodyS
 			value: 1,
 		},
 	}
+}
+
+func (c CreateNotificationRequestBodyStatus) Value() int32 {
+	return c.value
 }
 
 func (c CreateNotificationRequestBodyStatus) MarshalJSON() ([]byte, error) {

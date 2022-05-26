@@ -47,6 +47,10 @@ func GetBatchSetSpeedRequestXLanguageEnum() BatchSetSpeedRequestXLanguageEnum {
 	}
 }
 
+func (c BatchSetSpeedRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c BatchSetSpeedRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

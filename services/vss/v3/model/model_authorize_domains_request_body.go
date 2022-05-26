@@ -47,6 +47,10 @@ func GetAuthorizeDomainsRequestBodyAuthModeEnum() AuthorizeDomainsRequestBodyAut
 	}
 }
 
+func (c AuthorizeDomainsRequestBodyAuthMode) Value() string {
+	return c.value
+}
+
 func (c AuthorizeDomainsRequestBodyAuthMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dbss/v1/model"
 )
 
@@ -19,7 +19,7 @@ func DbssClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 开启关闭Agent
+// SwitchAgent 开启关闭Agent
 //
 // 用于开启和关闭agent的功能，当开启后，开始抓取用户的访问信息。
 //
@@ -35,7 +35,13 @@ func (c *DbssClient) SwitchAgent(request *model.SwitchAgentRequest) (*model.Swit
 	}
 }
 
-// 开启关闭风险规则
+// SwitchAgentInvoker 开启关闭Agent
+func (c *DbssClient) SwitchAgentInvoker(request *model.SwitchAgentRequest) *SwitchAgentInvoker {
+	requestDef := GenReqDefForSwitchAgent()
+	return &SwitchAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchRiskRule 开启关闭风险规则
 //
 // 开启关闭风险规则
 //
@@ -49,4 +55,10 @@ func (c *DbssClient) SwitchRiskRule(request *model.SwitchRiskRuleRequest) (*mode
 	} else {
 		return resp.(*model.SwitchRiskRuleResponse), nil
 	}
+}
+
+// SwitchRiskRuleInvoker 开启关闭风险规则
+func (c *DbssClient) SwitchRiskRuleInvoker(request *model.SwitchRiskRuleRequest) *SwitchRiskRuleInvoker {
+	requestDef := GenReqDefForSwitchRiskRule()
+	return &SwitchRiskRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

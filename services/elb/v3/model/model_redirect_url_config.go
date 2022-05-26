@@ -64,6 +64,10 @@ func GetRedirectUrlConfigProtocolEnum() RedirectUrlConfigProtocolEnum {
 	}
 }
 
+func (c RedirectUrlConfigProtocol) Value() string {
+	return c.value
+}
+
 func (c RedirectUrlConfigProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -112,6 +116,10 @@ func GetRedirectUrlConfigStatusCodeEnum() RedirectUrlConfigStatusCodeEnum {
 			value: "308",
 		},
 	}
+}
+
+func (c RedirectUrlConfigStatusCode) Value() string {
+	return c.value
 }
 
 func (c RedirectUrlConfigStatusCode) MarshalJSON() ([]byte, error) {

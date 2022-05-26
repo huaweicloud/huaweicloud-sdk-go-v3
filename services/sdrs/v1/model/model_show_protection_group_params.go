@@ -117,6 +117,10 @@ func GetShowProtectionGroupParamsProtectedStatusEnum() ShowProtectionGroupParams
 	}
 }
 
+func (c ShowProtectionGroupParamsProtectedStatus) Value() string {
+	return c.value
+}
+
 func (c ShowProtectionGroupParamsProtectedStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -163,6 +167,10 @@ func GetShowProtectionGroupParamsReplicationStatusEnum() ShowProtectionGroupPara
 	}
 }
 
+func (c ShowProtectionGroupParamsReplicationStatus) Value() string {
+	return c.value
+}
+
 func (c ShowProtectionGroupParamsReplicationStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -205,6 +213,10 @@ func GetShowProtectionGroupParamsHealthStatusEnum() ShowProtectionGroupParamsHea
 	}
 }
 
+func (c ShowProtectionGroupParamsHealthStatus) Value() string {
+	return c.value
+}
+
 func (c ShowProtectionGroupParamsHealthStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -241,6 +253,10 @@ func GetShowProtectionGroupParamsProtectionTypeEnum() ShowProtectionGroupParamsP
 			value: "null",
 		},
 	}
+}
+
+func (c ShowProtectionGroupParamsProtectionType) Value() string {
+	return c.value
 }
 
 func (c ShowProtectionGroupParamsProtectionType) MarshalJSON() ([]byte, error) {

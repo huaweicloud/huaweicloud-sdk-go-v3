@@ -73,6 +73,10 @@ func GetListMonitorInfosRequestExecuteStatusEnum() ListMonitorInfosRequestExecut
 	}
 }
 
+func (c ListMonitorInfosRequestExecuteStatus) Value() string {
+	return c.value
+}
+
 func (c ListMonitorInfosRequestExecuteStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

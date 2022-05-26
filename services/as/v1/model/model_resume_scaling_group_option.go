@@ -41,6 +41,10 @@ func GetResumeScalingGroupOptionActionEnum() ResumeScalingGroupOptionActionEnum 
 	}
 }
 
+func (c ResumeScalingGroupOptionAction) Value() string {
+	return c.value
+}
+
 func (c ResumeScalingGroupOptionAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

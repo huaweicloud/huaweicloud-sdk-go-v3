@@ -57,6 +57,10 @@ func GetAnalysisInfoChannelEnum() AnalysisInfoChannelEnum {
 	}
 }
 
+func (c AnalysisInfoChannel) Value() string {
+	return c.value
+}
+
 func (c AnalysisInfoChannel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

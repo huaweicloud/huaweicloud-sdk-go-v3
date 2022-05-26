@@ -83,6 +83,10 @@ func GetProfileInfoNotifyStatusEnum() ProfileInfoNotifyStatusEnum {
 	}
 }
 
+func (c ProfileInfoNotifyStatus) Value() string {
+	return c.value
+}
+
 func (c ProfileInfoNotifyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -115,6 +119,10 @@ func GetProfileInfoCreateSourceEnum() ProfileInfoCreateSourceEnum {
 			value: "ecs",
 		},
 	}
+}
+
+func (c ProfileInfoCreateSource) Value() string {
+	return c.value
 }
 
 func (c ProfileInfoCreateSource) MarshalJSON() ([]byte, error) {
@@ -153,6 +161,10 @@ func GetProfileInfoFreezedStatusEnum() ProfileInfoFreezedStatusEnum {
 			value: "UNFREEZED",
 		},
 	}
+}
+
+func (c ProfileInfoFreezedStatus) Value() string {
+	return c.value
 }
 
 func (c ProfileInfoFreezedStatus) MarshalJSON() ([]byte, error) {

@@ -69,6 +69,10 @@ func GetListServiceConnectionsRequestSortKeyEnum() ListServiceConnectionsRequest
 	}
 }
 
+func (c ListServiceConnectionsRequestSortKey) Value() string {
+	return c.value
+}
+
 func (c ListServiceConnectionsRequestSortKey) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -105,6 +109,10 @@ func GetListServiceConnectionsRequestSortDirEnum() ListServiceConnectionsRequest
 			value: "desc",
 		},
 	}
+}
+
+func (c ListServiceConnectionsRequestSortDir) Value() string {
+	return c.value
 }
 
 func (c ListServiceConnectionsRequestSortDir) MarshalJSON() ([]byte, error) {

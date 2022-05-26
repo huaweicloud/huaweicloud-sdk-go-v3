@@ -101,6 +101,10 @@ func GetCreateJobReqDbUseTypeEnum() CreateJobReqDbUseTypeEnum {
 	}
 }
 
+func (c CreateJobReqDbUseType) Value() string {
+	return c.value
+}
+
 func (c CreateJobReqDbUseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -151,6 +155,10 @@ func GetCreateJobReqEngineTypeEnum() CreateJobReqEngineTypeEnum {
 	}
 }
 
+func (c CreateJobReqEngineType) Value() string {
+	return c.value
+}
+
 func (c CreateJobReqEngineType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -191,6 +199,10 @@ func GetCreateJobReqJobDirectionEnum() CreateJobReqJobDirectionEnum {
 			value: "non-dbs",
 		},
 	}
+}
+
+func (c CreateJobReqJobDirection) Value() string {
+	return c.value
 }
 
 func (c CreateJobReqJobDirection) MarshalJSON() ([]byte, error) {
@@ -235,6 +247,10 @@ func GetCreateJobReqNetTypeEnum() CreateJobReqNetTypeEnum {
 	}
 }
 
+func (c CreateJobReqNetType) Value() string {
+	return c.value
+}
+
 func (c CreateJobReqNetType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -267,6 +283,10 @@ func GetCreateJobReqNodeTypeEnum() CreateJobReqNodeTypeEnum {
 			value: "high",
 		},
 	}
+}
+
+func (c CreateJobReqNodeType) Value() string {
+	return c.value
 }
 
 func (c CreateJobReqNodeType) MarshalJSON() ([]byte, error) {
@@ -309,6 +329,10 @@ func GetCreateJobReqTaskTypeEnum() CreateJobReqTaskTypeEnum {
 			value: "INCR_TRANS",
 		},
 	}
+}
+
+func (c CreateJobReqTaskType) Value() string {
+	return c.value
 }
 
 func (c CreateJobReqTaskType) MarshalJSON() ([]byte, error) {

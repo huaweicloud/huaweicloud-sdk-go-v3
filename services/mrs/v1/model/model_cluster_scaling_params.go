@@ -67,6 +67,10 @@ func GetClusterScalingParamsScaleTypeEnum() ClusterScalingParamsScaleTypeEnum {
 	}
 }
 
+func (c ClusterScalingParamsScaleType) Value() string {
+	return c.value
+}
+
 func (c ClusterScalingParamsScaleType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

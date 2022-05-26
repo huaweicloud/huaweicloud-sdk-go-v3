@@ -84,6 +84,10 @@ func GetShowEngineJobResponseTypeEnum() ShowEngineJobResponseTypeEnum {
 	}
 }
 
+func (c ShowEngineJobResponseType) Value() string {
+	return c.value
+}
+
 func (c ShowEngineJobResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -132,6 +136,10 @@ func GetShowEngineJobResponseStatusEnum() ShowEngineJobResponseStatusEnum {
 			value: "Finished",
 		},
 	}
+}
+
+func (c ShowEngineJobResponseStatus) Value() string {
+	return c.value
 }
 
 func (c ShowEngineJobResponseStatus) MarshalJSON() ([]byte, error) {

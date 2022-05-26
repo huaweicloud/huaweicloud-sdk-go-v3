@@ -78,6 +78,10 @@ func GetImageDetectionReqCategoriesEnum() ImageDetectionReqCategoriesEnum {
 	}
 }
 
+func (c ImageDetectionReqCategories) Value() string {
+	return c.value
+}
+
 func (c ImageDetectionReqCategories) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -47,6 +47,10 @@ func GetPostMultiGrainedSegmentReqLangEnum() PostMultiGrainedSegmentReqLangEnum 
 	}
 }
 
+func (c PostMultiGrainedSegmentReqLang) Value() string {
+	return c.value
+}
+
 func (c PostMultiGrainedSegmentReqLang) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -85,6 +89,10 @@ func GetPostMultiGrainedSegmentReqGranularityEnum() PostMultiGrainedSegmentReqGr
 			value: 0,
 		},
 	}
+}
+
+func (c PostMultiGrainedSegmentReqGranularity) Value() int32 {
+	return c.value
 }
 
 func (c PostMultiGrainedSegmentReqGranularity) MarshalJSON() ([]byte, error) {

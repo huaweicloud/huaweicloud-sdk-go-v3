@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
 )
 
@@ -19,7 +19,7 @@ func VpcClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 接受对等连接请求
+// AcceptVpcPeering 接受对等连接请求
 //
 // 租户A名下的VPC申请和租户B的VPC建立对等连接，需要等待租户B接受该请求。此接口用于租户接受其他租户发起的对等连接请求。
 //
@@ -35,7 +35,13 @@ func (c *VpcClient) AcceptVpcPeering(request *model.AcceptVpcPeeringRequest) (*m
 	}
 }
 
-// 子网关联路由表
+// AcceptVpcPeeringInvoker 接受对等连接请求
+func (c *VpcClient) AcceptVpcPeeringInvoker(request *model.AcceptVpcPeeringRequest) *AcceptVpcPeeringInvoker {
+	requestDef := GenReqDefForAcceptVpcPeering()
+	return &AcceptVpcPeeringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateRouteTable 子网关联路由表
 //
 // 路由表关联子网。子网关联路由表A后，再关联B，不需要先跟路由表A解关联再关联路由表B
 //
@@ -51,7 +57,13 @@ func (c *VpcClient) AssociateRouteTable(request *model.AssociateRouteTableReques
 	}
 }
 
-// 批量创建子网资源标签
+// AssociateRouteTableInvoker 子网关联路由表
+func (c *VpcClient) AssociateRouteTableInvoker(request *model.AssociateRouteTableRequest) *AssociateRouteTableInvoker {
+	requestDef := GenReqDefForAssociateRouteTable()
+	return &AssociateRouteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateSubnetTags 批量创建子网资源标签
 //
 // 为指定的子网资源实例批量添加标签。
 // 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
@@ -68,7 +80,13 @@ func (c *VpcClient) BatchCreateSubnetTags(request *model.BatchCreateSubnetTagsRe
 	}
 }
 
-// 批量删除子网资源标签
+// BatchCreateSubnetTagsInvoker 批量创建子网资源标签
+func (c *VpcClient) BatchCreateSubnetTagsInvoker(request *model.BatchCreateSubnetTagsRequest) *BatchCreateSubnetTagsInvoker {
+	requestDef := GenReqDefForBatchCreateSubnetTags()
+	return &BatchCreateSubnetTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteSubnetTags 批量删除子网资源标签
 //
 // 为指定的子网资源实例批量删除标签
 // 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
@@ -85,7 +103,13 @@ func (c *VpcClient) BatchDeleteSubnetTags(request *model.BatchDeleteSubnetTagsRe
 	}
 }
 
-// 创建端口
+// BatchDeleteSubnetTagsInvoker 批量删除子网资源标签
+func (c *VpcClient) BatchDeleteSubnetTagsInvoker(request *model.BatchDeleteSubnetTagsRequest) *BatchDeleteSubnetTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteSubnetTags()
+	return &BatchDeleteSubnetTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePort 创建端口
 //
 // 创建端口。
 //
@@ -101,7 +125,13 @@ func (c *VpcClient) CreatePort(request *model.CreatePortRequest) (*model.CreateP
 	}
 }
 
-// 创建路由表
+// CreatePortInvoker 创建端口
+func (c *VpcClient) CreatePortInvoker(request *model.CreatePortRequest) *CreatePortInvoker {
+	requestDef := GenReqDefForCreatePort()
+	return &CreatePortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRouteTable 创建路由表
 //
 // 创建路由表
 //
@@ -117,7 +147,13 @@ func (c *VpcClient) CreateRouteTable(request *model.CreateRouteTableRequest) (*m
 	}
 }
 
-// 创建安全组
+// CreateRouteTableInvoker 创建路由表
+func (c *VpcClient) CreateRouteTableInvoker(request *model.CreateRouteTableRequest) *CreateRouteTableInvoker {
+	requestDef := GenReqDefForCreateRouteTable()
+	return &CreateRouteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSecurityGroup 创建安全组
 //
 // 创建安全组。
 //
@@ -133,7 +169,13 @@ func (c *VpcClient) CreateSecurityGroup(request *model.CreateSecurityGroupReques
 	}
 }
 
-// 创建安全组规则
+// CreateSecurityGroupInvoker 创建安全组
+func (c *VpcClient) CreateSecurityGroupInvoker(request *model.CreateSecurityGroupRequest) *CreateSecurityGroupInvoker {
+	requestDef := GenReqDefForCreateSecurityGroup()
+	return &CreateSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSecurityGroupRule 创建安全组规则
 //
 // 创建安全组规则。
 //
@@ -149,7 +191,13 @@ func (c *VpcClient) CreateSecurityGroupRule(request *model.CreateSecurityGroupRu
 	}
 }
 
-// 创建子网
+// CreateSecurityGroupRuleInvoker 创建安全组规则
+func (c *VpcClient) CreateSecurityGroupRuleInvoker(request *model.CreateSecurityGroupRuleRequest) *CreateSecurityGroupRuleInvoker {
+	requestDef := GenReqDefForCreateSecurityGroupRule()
+	return &CreateSecurityGroupRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSubnet 创建子网
 //
 // 创建子网。
 //
@@ -165,7 +213,13 @@ func (c *VpcClient) CreateSubnet(request *model.CreateSubnetRequest) (*model.Cre
 	}
 }
 
-// 创建子网资源标签
+// CreateSubnetInvoker 创建子网
+func (c *VpcClient) CreateSubnetInvoker(request *model.CreateSubnetRequest) *CreateSubnetInvoker {
+	requestDef := GenReqDefForCreateSubnet()
+	return &CreateSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSubnetTag 创建子网资源标签
 //
 // 给指定子网资源实例增加标签信息。
 // 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
@@ -182,7 +236,13 @@ func (c *VpcClient) CreateSubnetTag(request *model.CreateSubnetTagRequest) (*mod
 	}
 }
 
-// 创建对等连接
+// CreateSubnetTagInvoker 创建子网资源标签
+func (c *VpcClient) CreateSubnetTagInvoker(request *model.CreateSubnetTagRequest) *CreateSubnetTagInvoker {
+	requestDef := GenReqDefForCreateSubnetTag()
+	return &CreateSubnetTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVpcPeering 创建对等连接
 //
 // 创建对等连接。
 //
@@ -198,7 +258,13 @@ func (c *VpcClient) CreateVpcPeering(request *model.CreateVpcPeeringRequest) (*m
 	}
 }
 
-// 删除端口
+// CreateVpcPeeringInvoker 创建对等连接
+func (c *VpcClient) CreateVpcPeeringInvoker(request *model.CreateVpcPeeringRequest) *CreateVpcPeeringInvoker {
+	requestDef := GenReqDefForCreateVpcPeering()
+	return &CreateVpcPeeringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePort 删除端口
 //
 // 删除端口。
 //
@@ -214,7 +280,13 @@ func (c *VpcClient) DeletePort(request *model.DeletePortRequest) (*model.DeleteP
 	}
 }
 
-// 删除路由表
+// DeletePortInvoker 删除端口
+func (c *VpcClient) DeletePortInvoker(request *model.DeletePortRequest) *DeletePortInvoker {
+	requestDef := GenReqDefForDeletePort()
+	return &DeletePortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRouteTable 删除路由表
 //
 // 删除路由表
 //
@@ -230,7 +302,13 @@ func (c *VpcClient) DeleteRouteTable(request *model.DeleteRouteTableRequest) (*m
 	}
 }
 
-// 删除安全组
+// DeleteRouteTableInvoker 删除路由表
+func (c *VpcClient) DeleteRouteTableInvoker(request *model.DeleteRouteTableRequest) *DeleteRouteTableInvoker {
+	requestDef := GenReqDefForDeleteRouteTable()
+	return &DeleteRouteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSecurityGroup 删除安全组
 //
 // 删除安全组。
 //
@@ -246,7 +324,13 @@ func (c *VpcClient) DeleteSecurityGroup(request *model.DeleteSecurityGroupReques
 	}
 }
 
-// 删除安全组规则
+// DeleteSecurityGroupInvoker 删除安全组
+func (c *VpcClient) DeleteSecurityGroupInvoker(request *model.DeleteSecurityGroupRequest) *DeleteSecurityGroupInvoker {
+	requestDef := GenReqDefForDeleteSecurityGroup()
+	return &DeleteSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSecurityGroupRule 删除安全组规则
 //
 // 删除安全组规则。
 //
@@ -262,7 +346,13 @@ func (c *VpcClient) DeleteSecurityGroupRule(request *model.DeleteSecurityGroupRu
 	}
 }
 
-// 删除子网
+// DeleteSecurityGroupRuleInvoker 删除安全组规则
+func (c *VpcClient) DeleteSecurityGroupRuleInvoker(request *model.DeleteSecurityGroupRuleRequest) *DeleteSecurityGroupRuleInvoker {
+	requestDef := GenReqDefForDeleteSecurityGroupRule()
+	return &DeleteSecurityGroupRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSubnet 删除子网
 //
 // 删除子网
 //
@@ -278,7 +368,13 @@ func (c *VpcClient) DeleteSubnet(request *model.DeleteSubnetRequest) (*model.Del
 	}
 }
 
-// 删除子网资源标签
+// DeleteSubnetInvoker 删除子网
+func (c *VpcClient) DeleteSubnetInvoker(request *model.DeleteSubnetRequest) *DeleteSubnetInvoker {
+	requestDef := GenReqDefForDeleteSubnet()
+	return &DeleteSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSubnetTag 删除子网资源标签
 //
 // 删除指定子网资源实例的标签信息。
 // 该接口为幂等接口：删除的key不存在报404，Key不能为空或者空字符串
@@ -295,7 +391,13 @@ func (c *VpcClient) DeleteSubnetTag(request *model.DeleteSubnetTagRequest) (*mod
 	}
 }
 
-// 删除对等连接
+// DeleteSubnetTagInvoker 删除子网资源标签
+func (c *VpcClient) DeleteSubnetTagInvoker(request *model.DeleteSubnetTagRequest) *DeleteSubnetTagInvoker {
+	requestDef := GenReqDefForDeleteSubnetTag()
+	return &DeleteSubnetTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVpcPeering 删除对等连接
 //
 // 删除对等连接。
 // 可以在在本端或对端任何一端删除对等连接。
@@ -312,7 +414,13 @@ func (c *VpcClient) DeleteVpcPeering(request *model.DeleteVpcPeeringRequest) (*m
 	}
 }
 
-// 子网解关联路由表
+// DeleteVpcPeeringInvoker 删除对等连接
+func (c *VpcClient) DeleteVpcPeeringInvoker(request *model.DeleteVpcPeeringRequest) *DeleteVpcPeeringInvoker {
+	requestDef := GenReqDefForDeleteVpcPeering()
+	return &DeleteVpcPeeringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateRouteTable 子网解关联路由表
 //
 // 子网解关联路由表
 //
@@ -328,7 +436,13 @@ func (c *VpcClient) DisassociateRouteTable(request *model.DisassociateRouteTable
 	}
 }
 
-// 查询端口列表
+// DisassociateRouteTableInvoker 子网解关联路由表
+func (c *VpcClient) DisassociateRouteTableInvoker(request *model.DisassociateRouteTableRequest) *DisassociateRouteTableInvoker {
+	requestDef := GenReqDefForDisassociateRouteTable()
+	return &DisassociateRouteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPorts 查询端口列表
 //
 // 查询提交请求的租户的所有端口，单次查询最多返回2000条数据。
 //
@@ -344,7 +458,13 @@ func (c *VpcClient) ListPorts(request *model.ListPortsRequest) (*model.ListPorts
 	}
 }
 
-// 查询路由表列表
+// ListPortsInvoker 查询端口列表
+func (c *VpcClient) ListPortsInvoker(request *model.ListPortsRequest) *ListPortsInvoker {
+	requestDef := GenReqDefForListPorts()
+	return &ListPortsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRouteTables 查询路由表列表
 //
 // 查询提交请求的帐户的所有路由表列表，并根据过滤条件进行过滤
 //
@@ -360,7 +480,13 @@ func (c *VpcClient) ListRouteTables(request *model.ListRouteTablesRequest) (*mod
 	}
 }
 
-// 查询安全组规则列表
+// ListRouteTablesInvoker 查询路由表列表
+func (c *VpcClient) ListRouteTablesInvoker(request *model.ListRouteTablesRequest) *ListRouteTablesInvoker {
+	requestDef := GenReqDefForListRouteTables()
+	return &ListRouteTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecurityGroupRules 查询安全组规则列表
 //
 // 查询安全组规则列表。
 //
@@ -376,7 +502,13 @@ func (c *VpcClient) ListSecurityGroupRules(request *model.ListSecurityGroupRules
 	}
 }
 
-// 查询安全组列表
+// ListSecurityGroupRulesInvoker 查询安全组规则列表
+func (c *VpcClient) ListSecurityGroupRulesInvoker(request *model.ListSecurityGroupRulesRequest) *ListSecurityGroupRulesInvoker {
+	requestDef := GenReqDefForListSecurityGroupRules()
+	return &ListSecurityGroupRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecurityGroups 查询安全组列表
 //
 // 查询安全组列表
 //
@@ -392,7 +524,13 @@ func (c *VpcClient) ListSecurityGroups(request *model.ListSecurityGroupsRequest)
 	}
 }
 
-// 查询子网项目标签
+// ListSecurityGroupsInvoker 查询安全组列表
+func (c *VpcClient) ListSecurityGroupsInvoker(request *model.ListSecurityGroupsRequest) *ListSecurityGroupsInvoker {
+	requestDef := GenReqDefForListSecurityGroups()
+	return &ListSecurityGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubnetTags 查询子网项目标签
 //
 // 查询租户在指定区域和实例类型的所有标签集合
 //
@@ -408,7 +546,13 @@ func (c *VpcClient) ListSubnetTags(request *model.ListSubnetTagsRequest) (*model
 	}
 }
 
-// 查询子网列表
+// ListSubnetTagsInvoker 查询子网项目标签
+func (c *VpcClient) ListSubnetTagsInvoker(request *model.ListSubnetTagsRequest) *ListSubnetTagsInvoker {
+	requestDef := GenReqDefForListSubnetTags()
+	return &ListSubnetTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubnets 查询子网列表
 //
 // 查询子网列表
 //
@@ -424,7 +568,13 @@ func (c *VpcClient) ListSubnets(request *model.ListSubnetsRequest) (*model.ListS
 	}
 }
 
-// 查询子网资源实例
+// ListSubnetsInvoker 查询子网列表
+func (c *VpcClient) ListSubnetsInvoker(request *model.ListSubnetsRequest) *ListSubnetsInvoker {
+	requestDef := GenReqDefForListSubnets()
+	return &ListSubnetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubnetsByTags 查询子网资源实例
 //
 // 使用标签过滤实例
 //
@@ -440,7 +590,13 @@ func (c *VpcClient) ListSubnetsByTags(request *model.ListSubnetsByTagsRequest) (
 	}
 }
 
-// 查询对等连接列表
+// ListSubnetsByTagsInvoker 查询子网资源实例
+func (c *VpcClient) ListSubnetsByTagsInvoker(request *model.ListSubnetsByTagsRequest) *ListSubnetsByTagsInvoker {
+	requestDef := GenReqDefForListSubnetsByTags()
+	return &ListSubnetsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVpcPeerings 查询对等连接列表
 //
 // 查询提交请求的租户的所有对等连接。根据过滤条件进行过滤。
 //
@@ -456,7 +612,13 @@ func (c *VpcClient) ListVpcPeerings(request *model.ListVpcPeeringsRequest) (*mod
 	}
 }
 
-// 拒绝对等连接请求
+// ListVpcPeeringsInvoker 查询对等连接列表
+func (c *VpcClient) ListVpcPeeringsInvoker(request *model.ListVpcPeeringsRequest) *ListVpcPeeringsInvoker {
+	requestDef := GenReqDefForListVpcPeerings()
+	return &ListVpcPeeringsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RejectVpcPeering 拒绝对等连接请求
 //
 // 租户A名下的VPC申请和租户B的VPC建立对等连接，需要等待租户B接受该请求。此接口用于租户拒绝其他租户发起的对等连接请求。
 //
@@ -472,7 +634,13 @@ func (c *VpcClient) RejectVpcPeering(request *model.RejectVpcPeeringRequest) (*m
 	}
 }
 
-// 查询端口
+// RejectVpcPeeringInvoker 拒绝对等连接请求
+func (c *VpcClient) RejectVpcPeeringInvoker(request *model.RejectVpcPeeringRequest) *RejectVpcPeeringInvoker {
+	requestDef := GenReqDefForRejectVpcPeering()
+	return &RejectVpcPeeringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPort 查询端口
 //
 // 查询单个端口详情。
 //
@@ -488,7 +656,13 @@ func (c *VpcClient) ShowPort(request *model.ShowPortRequest) (*model.ShowPortRes
 	}
 }
 
-// 查询配额
+// ShowPortInvoker 查询端口
+func (c *VpcClient) ShowPortInvoker(request *model.ShowPortRequest) *ShowPortInvoker {
+	requestDef := GenReqDefForShowPort()
+	return &ShowPortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuota 查询配额
 //
 // 查询单租户在VPC服务下的网络资源配额，包括vpc配额、子网配额、安全组配额、安全组规则配额、弹性公网IP配额，vpn配额等。
 //
@@ -504,7 +678,13 @@ func (c *VpcClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuota
 	}
 }
 
-// 查询路由表
+// ShowQuotaInvoker 查询配额
+func (c *VpcClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuotaInvoker {
+	requestDef := GenReqDefForShowQuota()
+	return &ShowQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRouteTable 查询路由表
 //
 // 查询路由表详情
 //
@@ -520,7 +700,13 @@ func (c *VpcClient) ShowRouteTable(request *model.ShowRouteTableRequest) (*model
 	}
 }
 
-// 查询安全组
+// ShowRouteTableInvoker 查询路由表
+func (c *VpcClient) ShowRouteTableInvoker(request *model.ShowRouteTableRequest) *ShowRouteTableInvoker {
+	requestDef := GenReqDefForShowRouteTable()
+	return &ShowRouteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecurityGroup 查询安全组
 //
 // 查询单个安全组详情。
 //
@@ -536,7 +722,13 @@ func (c *VpcClient) ShowSecurityGroup(request *model.ShowSecurityGroupRequest) (
 	}
 }
 
-// 查询安全组规则
+// ShowSecurityGroupInvoker 查询安全组
+func (c *VpcClient) ShowSecurityGroupInvoker(request *model.ShowSecurityGroupRequest) *ShowSecurityGroupInvoker {
+	requestDef := GenReqDefForShowSecurityGroup()
+	return &ShowSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecurityGroupRule 查询安全组规则
 //
 // 查询单个安全组规则详情
 //
@@ -552,7 +744,13 @@ func (c *VpcClient) ShowSecurityGroupRule(request *model.ShowSecurityGroupRuleRe
 	}
 }
 
-// 查询子网
+// ShowSecurityGroupRuleInvoker 查询安全组规则
+func (c *VpcClient) ShowSecurityGroupRuleInvoker(request *model.ShowSecurityGroupRuleRequest) *ShowSecurityGroupRuleInvoker {
+	requestDef := GenReqDefForShowSecurityGroupRule()
+	return &ShowSecurityGroupRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSubnet 查询子网
 //
 // 查询子网详情。
 //
@@ -568,7 +766,13 @@ func (c *VpcClient) ShowSubnet(request *model.ShowSubnetRequest) (*model.ShowSub
 	}
 }
 
-// 查询子网资源标签
+// ShowSubnetInvoker 查询子网
+func (c *VpcClient) ShowSubnetInvoker(request *model.ShowSubnetRequest) *ShowSubnetInvoker {
+	requestDef := GenReqDefForShowSubnet()
+	return &ShowSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSubnetTags 查询子网资源标签
 //
 // 查询指定子网实例的标签信息。
 //
@@ -584,7 +788,13 @@ func (c *VpcClient) ShowSubnetTags(request *model.ShowSubnetTagsRequest) (*model
 	}
 }
 
-// 查询对等连接
+// ShowSubnetTagsInvoker 查询子网资源标签
+func (c *VpcClient) ShowSubnetTagsInvoker(request *model.ShowSubnetTagsRequest) *ShowSubnetTagsInvoker {
+	requestDef := GenReqDefForShowSubnetTags()
+	return &ShowSubnetTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVpcPeering 查询对等连接
 //
 // 查询对等连接详情。
 //
@@ -600,7 +810,13 @@ func (c *VpcClient) ShowVpcPeering(request *model.ShowVpcPeeringRequest) (*model
 	}
 }
 
-// 更新端口
+// ShowVpcPeeringInvoker 查询对等连接
+func (c *VpcClient) ShowVpcPeeringInvoker(request *model.ShowVpcPeeringRequest) *ShowVpcPeeringInvoker {
+	requestDef := GenReqDefForShowVpcPeering()
+	return &ShowVpcPeeringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePort 更新端口
 //
 // 更新端口。
 //
@@ -616,7 +832,13 @@ func (c *VpcClient) UpdatePort(request *model.UpdatePortRequest) (*model.UpdateP
 	}
 }
 
-// 更新路由表
+// UpdatePortInvoker 更新端口
+func (c *VpcClient) UpdatePortInvoker(request *model.UpdatePortRequest) *UpdatePortInvoker {
+	requestDef := GenReqDefForUpdatePort()
+	return &UpdatePortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRouteTable 更新路由表
 //
 // 更新路由表，包括可以更新路由表的名称，描述，以及新增、更新、删除路由条目
 //
@@ -632,7 +854,13 @@ func (c *VpcClient) UpdateRouteTable(request *model.UpdateRouteTableRequest) (*m
 	}
 }
 
-// 更新子网
+// UpdateRouteTableInvoker 更新路由表
+func (c *VpcClient) UpdateRouteTableInvoker(request *model.UpdateRouteTableRequest) *UpdateRouteTableInvoker {
+	requestDef := GenReqDefForUpdateRouteTable()
+	return &UpdateRouteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSubnet 更新子网
 //
 // 更新子网。
 //
@@ -648,7 +876,13 @@ func (c *VpcClient) UpdateSubnet(request *model.UpdateSubnetRequest) (*model.Upd
 	}
 }
 
-// 更新对等连接
+// UpdateSubnetInvoker 更新子网
+func (c *VpcClient) UpdateSubnetInvoker(request *model.UpdateSubnetRequest) *UpdateSubnetInvoker {
+	requestDef := GenReqDefForUpdateSubnet()
+	return &UpdateSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVpcPeering 更新对等连接
 //
 // 更新对等连接。
 //
@@ -664,7 +898,13 @@ func (c *VpcClient) UpdateVpcPeering(request *model.UpdateVpcPeeringRequest) (*m
 	}
 }
 
-// 申请私有IP
+// UpdateVpcPeeringInvoker 更新对等连接
+func (c *VpcClient) UpdateVpcPeeringInvoker(request *model.UpdateVpcPeeringRequest) *UpdateVpcPeeringInvoker {
+	requestDef := GenReqDefForUpdateVpcPeering()
+	return &UpdateVpcPeeringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePrivateip 申请私有IP
 //
 // 申请私有IP。
 //
@@ -680,7 +920,13 @@ func (c *VpcClient) CreatePrivateip(request *model.CreatePrivateipRequest) (*mod
 	}
 }
 
-// 删除私有IP
+// CreatePrivateipInvoker 申请私有IP
+func (c *VpcClient) CreatePrivateipInvoker(request *model.CreatePrivateipRequest) *CreatePrivateipInvoker {
+	requestDef := GenReqDefForCreatePrivateip()
+	return &CreatePrivateipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePrivateip 删除私有IP
 //
 // 删除私有IP。
 //
@@ -696,7 +942,13 @@ func (c *VpcClient) DeletePrivateip(request *model.DeletePrivateipRequest) (*mod
 	}
 }
 
-// 查询私有IP列表
+// DeletePrivateipInvoker 删除私有IP
+func (c *VpcClient) DeletePrivateipInvoker(request *model.DeletePrivateipRequest) *DeletePrivateipInvoker {
+	requestDef := GenReqDefForDeletePrivateip()
+	return &DeletePrivateipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPrivateips 查询私有IP列表
 //
 // 查询指定子网下的私有IP列表。
 //
@@ -712,7 +964,13 @@ func (c *VpcClient) ListPrivateips(request *model.ListPrivateipsRequest) (*model
 	}
 }
 
-// 查询网络IP使用情况
+// ListPrivateipsInvoker 查询私有IP列表
+func (c *VpcClient) ListPrivateipsInvoker(request *model.ListPrivateipsRequest) *ListPrivateipsInvoker {
+	requestDef := GenReqDefForListPrivateips()
+	return &ListPrivateipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNetworkIpAvailabilities 查询网络IP使用情况
 //
 // 显示一个指定网络中的IPv4地址使用情况。
 // 包括此网络中的IP总数以及已用IP总数，以及网络下每一个子网的IP地址总数和可用IP地址总数。
@@ -735,7 +993,13 @@ func (c *VpcClient) ShowNetworkIpAvailabilities(request *model.ShowNetworkIpAvai
 	}
 }
 
-// 查询私有IP
+// ShowNetworkIpAvailabilitiesInvoker 查询网络IP使用情况
+func (c *VpcClient) ShowNetworkIpAvailabilitiesInvoker(request *model.ShowNetworkIpAvailabilitiesRequest) *ShowNetworkIpAvailabilitiesInvoker {
+	requestDef := GenReqDefForShowNetworkIpAvailabilities()
+	return &ShowNetworkIpAvailabilitiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPrivateip 查询私有IP
 //
 // 指定ID查询私有IP。
 //
@@ -751,7 +1015,13 @@ func (c *VpcClient) ShowPrivateip(request *model.ShowPrivateipRequest) (*model.S
 	}
 }
 
-// 创建安全组
+// ShowPrivateipInvoker 查询私有IP
+func (c *VpcClient) ShowPrivateipInvoker(request *model.ShowPrivateipRequest) *ShowPrivateipInvoker {
+	requestDef := GenReqDefForShowPrivateip()
+	return &ShowPrivateipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronCreateSecurityGroup 创建安全组
 //
 // 创建安全组
 //
@@ -767,7 +1037,13 @@ func (c *VpcClient) NeutronCreateSecurityGroup(request *model.NeutronCreateSecur
 	}
 }
 
-// 创建安全组规则
+// NeutronCreateSecurityGroupInvoker 创建安全组
+func (c *VpcClient) NeutronCreateSecurityGroupInvoker(request *model.NeutronCreateSecurityGroupRequest) *NeutronCreateSecurityGroupInvoker {
+	requestDef := GenReqDefForNeutronCreateSecurityGroup()
+	return &NeutronCreateSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronCreateSecurityGroupRule 创建安全组规则
 //
 // 创建安全组规则
 //
@@ -783,7 +1059,13 @@ func (c *VpcClient) NeutronCreateSecurityGroupRule(request *model.NeutronCreateS
 	}
 }
 
-// 删除安全组
+// NeutronCreateSecurityGroupRuleInvoker 创建安全组规则
+func (c *VpcClient) NeutronCreateSecurityGroupRuleInvoker(request *model.NeutronCreateSecurityGroupRuleRequest) *NeutronCreateSecurityGroupRuleInvoker {
+	requestDef := GenReqDefForNeutronCreateSecurityGroupRule()
+	return &NeutronCreateSecurityGroupRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronDeleteSecurityGroup 删除安全组
 //
 // 删除安全组
 //
@@ -799,7 +1081,13 @@ func (c *VpcClient) NeutronDeleteSecurityGroup(request *model.NeutronDeleteSecur
 	}
 }
 
-// 删除安全组规则
+// NeutronDeleteSecurityGroupInvoker 删除安全组
+func (c *VpcClient) NeutronDeleteSecurityGroupInvoker(request *model.NeutronDeleteSecurityGroupRequest) *NeutronDeleteSecurityGroupInvoker {
+	requestDef := GenReqDefForNeutronDeleteSecurityGroup()
+	return &NeutronDeleteSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronDeleteSecurityGroupRule 删除安全组规则
 //
 // 删除安全组规则
 //
@@ -815,7 +1103,13 @@ func (c *VpcClient) NeutronDeleteSecurityGroupRule(request *model.NeutronDeleteS
 	}
 }
 
-// 查询安全组规则列表
+// NeutronDeleteSecurityGroupRuleInvoker 删除安全组规则
+func (c *VpcClient) NeutronDeleteSecurityGroupRuleInvoker(request *model.NeutronDeleteSecurityGroupRuleRequest) *NeutronDeleteSecurityGroupRuleInvoker {
+	requestDef := GenReqDefForNeutronDeleteSecurityGroupRule()
+	return &NeutronDeleteSecurityGroupRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronListSecurityGroupRules 查询安全组规则列表
 //
 // 查询提交请求的租户有权限查看的所有安全组规则。单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询
 //
@@ -831,7 +1125,13 @@ func (c *VpcClient) NeutronListSecurityGroupRules(request *model.NeutronListSecu
 	}
 }
 
-// 查询安全组列表
+// NeutronListSecurityGroupRulesInvoker 查询安全组规则列表
+func (c *VpcClient) NeutronListSecurityGroupRulesInvoker(request *model.NeutronListSecurityGroupRulesRequest) *NeutronListSecurityGroupRulesInvoker {
+	requestDef := GenReqDefForNeutronListSecurityGroupRules()
+	return &NeutronListSecurityGroupRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronListSecurityGroups 查询安全组列表
 //
 // 查询提交请求租户的所有安全组，单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询 。
 //
@@ -847,7 +1147,13 @@ func (c *VpcClient) NeutronListSecurityGroups(request *model.NeutronListSecurity
 	}
 }
 
-// 查询安全组
+// NeutronListSecurityGroupsInvoker 查询安全组列表
+func (c *VpcClient) NeutronListSecurityGroupsInvoker(request *model.NeutronListSecurityGroupsRequest) *NeutronListSecurityGroupsInvoker {
+	requestDef := GenReqDefForNeutronListSecurityGroups()
+	return &NeutronListSecurityGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronShowSecurityGroup 查询安全组
 //
 // 查询安全组详情
 //
@@ -863,7 +1169,13 @@ func (c *VpcClient) NeutronShowSecurityGroup(request *model.NeutronShowSecurityG
 	}
 }
 
-// 查询安全组规则
+// NeutronShowSecurityGroupInvoker 查询安全组
+func (c *VpcClient) NeutronShowSecurityGroupInvoker(request *model.NeutronShowSecurityGroupRequest) *NeutronShowSecurityGroupInvoker {
+	requestDef := GenReqDefForNeutronShowSecurityGroup()
+	return &NeutronShowSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronShowSecurityGroupRule 查询安全组规则
 //
 // 查询安全组规则详情。
 //
@@ -879,7 +1191,13 @@ func (c *VpcClient) NeutronShowSecurityGroupRule(request *model.NeutronShowSecur
 	}
 }
 
-// 更新安全组
+// NeutronShowSecurityGroupRuleInvoker 查询安全组规则
+func (c *VpcClient) NeutronShowSecurityGroupRuleInvoker(request *model.NeutronShowSecurityGroupRuleRequest) *NeutronShowSecurityGroupRuleInvoker {
+	requestDef := GenReqDefForNeutronShowSecurityGroupRule()
+	return &NeutronShowSecurityGroupRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronUpdateSecurityGroup 更新安全组
 //
 // 更新安全组
 //
@@ -895,7 +1213,13 @@ func (c *VpcClient) NeutronUpdateSecurityGroup(request *model.NeutronUpdateSecur
 	}
 }
 
-// 插入网络ACL规则
+// NeutronUpdateSecurityGroupInvoker 更新安全组
+func (c *VpcClient) NeutronUpdateSecurityGroupInvoker(request *model.NeutronUpdateSecurityGroupRequest) *NeutronUpdateSecurityGroupInvoker {
+	requestDef := GenReqDefForNeutronUpdateSecurityGroup()
+	return &NeutronUpdateSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronAddFirewallRule 插入网络ACL规则
 //
 // 插入一条网络ACL规则到某一网络ACL策略中。
 //
@@ -911,7 +1235,13 @@ func (c *VpcClient) NeutronAddFirewallRule(request *model.NeutronAddFirewallRule
 	}
 }
 
-// 创建网络ACL组
+// NeutronAddFirewallRuleInvoker 插入网络ACL规则
+func (c *VpcClient) NeutronAddFirewallRuleInvoker(request *model.NeutronAddFirewallRuleRequest) *NeutronAddFirewallRuleInvoker {
+	requestDef := GenReqDefForNeutronAddFirewallRule()
+	return &NeutronAddFirewallRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronCreateFirewallGroup 创建网络ACL组
 //
 // 创建网络ACL组
 //
@@ -927,7 +1257,13 @@ func (c *VpcClient) NeutronCreateFirewallGroup(request *model.NeutronCreateFirew
 	}
 }
 
-// 创建网络ACL策略
+// NeutronCreateFirewallGroupInvoker 创建网络ACL组
+func (c *VpcClient) NeutronCreateFirewallGroupInvoker(request *model.NeutronCreateFirewallGroupRequest) *NeutronCreateFirewallGroupInvoker {
+	requestDef := GenReqDefForNeutronCreateFirewallGroup()
+	return &NeutronCreateFirewallGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronCreateFirewallPolicy 创建网络ACL策略
 //
 // 创建网络ACL策略。
 //
@@ -943,7 +1279,13 @@ func (c *VpcClient) NeutronCreateFirewallPolicy(request *model.NeutronCreateFire
 	}
 }
 
-// 创建网络ACL规则
+// NeutronCreateFirewallPolicyInvoker 创建网络ACL策略
+func (c *VpcClient) NeutronCreateFirewallPolicyInvoker(request *model.NeutronCreateFirewallPolicyRequest) *NeutronCreateFirewallPolicyInvoker {
+	requestDef := GenReqDefForNeutronCreateFirewallPolicy()
+	return &NeutronCreateFirewallPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronCreateFirewallRule 创建网络ACL规则
 //
 // 创建网络ACL规则。
 //
@@ -959,7 +1301,13 @@ func (c *VpcClient) NeutronCreateFirewallRule(request *model.NeutronCreateFirewa
 	}
 }
 
-// 删除网络ACL组
+// NeutronCreateFirewallRuleInvoker 创建网络ACL规则
+func (c *VpcClient) NeutronCreateFirewallRuleInvoker(request *model.NeutronCreateFirewallRuleRequest) *NeutronCreateFirewallRuleInvoker {
+	requestDef := GenReqDefForNeutronCreateFirewallRule()
+	return &NeutronCreateFirewallRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronDeleteFirewallGroup 删除网络ACL组
 //
 // 删除网络ACL组
 //
@@ -975,7 +1323,13 @@ func (c *VpcClient) NeutronDeleteFirewallGroup(request *model.NeutronDeleteFirew
 	}
 }
 
-// 删除网络ACL策略
+// NeutronDeleteFirewallGroupInvoker 删除网络ACL组
+func (c *VpcClient) NeutronDeleteFirewallGroupInvoker(request *model.NeutronDeleteFirewallGroupRequest) *NeutronDeleteFirewallGroupInvoker {
+	requestDef := GenReqDefForNeutronDeleteFirewallGroup()
+	return &NeutronDeleteFirewallGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronDeleteFirewallPolicy 删除网络ACL策略
 //
 // 删除网络ACL策略。
 //
@@ -991,7 +1345,13 @@ func (c *VpcClient) NeutronDeleteFirewallPolicy(request *model.NeutronDeleteFire
 	}
 }
 
-// 删除网络ACL规则
+// NeutronDeleteFirewallPolicyInvoker 删除网络ACL策略
+func (c *VpcClient) NeutronDeleteFirewallPolicyInvoker(request *model.NeutronDeleteFirewallPolicyRequest) *NeutronDeleteFirewallPolicyInvoker {
+	requestDef := GenReqDefForNeutronDeleteFirewallPolicy()
+	return &NeutronDeleteFirewallPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronDeleteFirewallRule 删除网络ACL规则
 //
 // 删除网络ACL规则。
 //
@@ -1007,7 +1367,13 @@ func (c *VpcClient) NeutronDeleteFirewallRule(request *model.NeutronDeleteFirewa
 	}
 }
 
-// 查询所有网络ACL组
+// NeutronDeleteFirewallRuleInvoker 删除网络ACL规则
+func (c *VpcClient) NeutronDeleteFirewallRuleInvoker(request *model.NeutronDeleteFirewallRuleRequest) *NeutronDeleteFirewallRuleInvoker {
+	requestDef := GenReqDefForNeutronDeleteFirewallRule()
+	return &NeutronDeleteFirewallRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronListFirewallGroups 查询所有网络ACL组
 //
 // 查询提交请求的租户有权限操作的所有网络ACL组信息。单次查询最多返回2000条数据，超过2000后会返回分页标记。
 //
@@ -1023,7 +1389,13 @@ func (c *VpcClient) NeutronListFirewallGroups(request *model.NeutronListFirewall
 	}
 }
 
-// 查询所有网络ACL策略
+// NeutronListFirewallGroupsInvoker 查询所有网络ACL组
+func (c *VpcClient) NeutronListFirewallGroupsInvoker(request *model.NeutronListFirewallGroupsRequest) *NeutronListFirewallGroupsInvoker {
+	requestDef := GenReqDefForNeutronListFirewallGroups()
+	return &NeutronListFirewallGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronListFirewallPolicies 查询所有网络ACL策略
 //
 // 查询提交请求的租户有权限操作的所有网络ACL策略信息。单次查询最多返回2000条数据，超过2000后会返回分页标记。
 //
@@ -1039,7 +1411,13 @@ func (c *VpcClient) NeutronListFirewallPolicies(request *model.NeutronListFirewa
 	}
 }
 
-// 查询所有网络ACL规则
+// NeutronListFirewallPoliciesInvoker 查询所有网络ACL策略
+func (c *VpcClient) NeutronListFirewallPoliciesInvoker(request *model.NeutronListFirewallPoliciesRequest) *NeutronListFirewallPoliciesInvoker {
+	requestDef := GenReqDefForNeutronListFirewallPolicies()
+	return &NeutronListFirewallPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronListFirewallRules 查询所有网络ACL规则
 //
 // 查询提交请求的租户有权限操作的所有网络ACL规则信息。单次查询最多返回2000条数据，超过2000后会返回分页标记。
 //
@@ -1055,7 +1433,13 @@ func (c *VpcClient) NeutronListFirewallRules(request *model.NeutronListFirewallR
 	}
 }
 
-// 移除网络ACL规则
+// NeutronListFirewallRulesInvoker 查询所有网络ACL规则
+func (c *VpcClient) NeutronListFirewallRulesInvoker(request *model.NeutronListFirewallRulesRequest) *NeutronListFirewallRulesInvoker {
+	requestDef := GenReqDefForNeutronListFirewallRules()
+	return &NeutronListFirewallRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronRemoveFirewallRule 移除网络ACL规则
 //
 // 从某一网络ACL策略中移除一条网络ACL规则。
 //
@@ -1071,7 +1455,13 @@ func (c *VpcClient) NeutronRemoveFirewallRule(request *model.NeutronRemoveFirewa
 	}
 }
 
-// 查询特定网络ACL组详情
+// NeutronRemoveFirewallRuleInvoker 移除网络ACL规则
+func (c *VpcClient) NeutronRemoveFirewallRuleInvoker(request *model.NeutronRemoveFirewallRuleRequest) *NeutronRemoveFirewallRuleInvoker {
+	requestDef := GenReqDefForNeutronRemoveFirewallRule()
+	return &NeutronRemoveFirewallRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronShowFirewallGroup 查询特定网络ACL组详情
 //
 // 查询特定网络ACL组详情。
 //
@@ -1087,7 +1477,13 @@ func (c *VpcClient) NeutronShowFirewallGroup(request *model.NeutronShowFirewallG
 	}
 }
 
-// 查询特定网络ACL策略详情
+// NeutronShowFirewallGroupInvoker 查询特定网络ACL组详情
+func (c *VpcClient) NeutronShowFirewallGroupInvoker(request *model.NeutronShowFirewallGroupRequest) *NeutronShowFirewallGroupInvoker {
+	requestDef := GenReqDefForNeutronShowFirewallGroup()
+	return &NeutronShowFirewallGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronShowFirewallPolicy 查询特定网络ACL策略详情
 //
 // 查询特定网络ACL策略详情。
 //
@@ -1103,7 +1499,13 @@ func (c *VpcClient) NeutronShowFirewallPolicy(request *model.NeutronShowFirewall
 	}
 }
 
-// 查询特定网络ACL规则
+// NeutronShowFirewallPolicyInvoker 查询特定网络ACL策略详情
+func (c *VpcClient) NeutronShowFirewallPolicyInvoker(request *model.NeutronShowFirewallPolicyRequest) *NeutronShowFirewallPolicyInvoker {
+	requestDef := GenReqDefForNeutronShowFirewallPolicy()
+	return &NeutronShowFirewallPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronShowFirewallRule 查询特定网络ACL规则
 //
 // 查询特定网络ACL规则。
 //
@@ -1119,7 +1521,13 @@ func (c *VpcClient) NeutronShowFirewallRule(request *model.NeutronShowFirewallRu
 	}
 }
 
-// 更新网络ACL组
+// NeutronShowFirewallRuleInvoker 查询特定网络ACL规则
+func (c *VpcClient) NeutronShowFirewallRuleInvoker(request *model.NeutronShowFirewallRuleRequest) *NeutronShowFirewallRuleInvoker {
+	requestDef := GenReqDefForNeutronShowFirewallRule()
+	return &NeutronShowFirewallRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronUpdateFirewallGroup 更新网络ACL组
 //
 // 更新网络ACL组。
 //
@@ -1135,7 +1543,13 @@ func (c *VpcClient) NeutronUpdateFirewallGroup(request *model.NeutronUpdateFirew
 	}
 }
 
-// 更新网络ACL策略
+// NeutronUpdateFirewallGroupInvoker 更新网络ACL组
+func (c *VpcClient) NeutronUpdateFirewallGroupInvoker(request *model.NeutronUpdateFirewallGroupRequest) *NeutronUpdateFirewallGroupInvoker {
+	requestDef := GenReqDefForNeutronUpdateFirewallGroup()
+	return &NeutronUpdateFirewallGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronUpdateFirewallPolicy 更新网络ACL策略
 //
 // 更新网络ACL策略。
 //
@@ -1151,7 +1565,13 @@ func (c *VpcClient) NeutronUpdateFirewallPolicy(request *model.NeutronUpdateFire
 	}
 }
 
-// 更新网络ACL规则
+// NeutronUpdateFirewallPolicyInvoker 更新网络ACL策略
+func (c *VpcClient) NeutronUpdateFirewallPolicyInvoker(request *model.NeutronUpdateFirewallPolicyRequest) *NeutronUpdateFirewallPolicyInvoker {
+	requestDef := GenReqDefForNeutronUpdateFirewallPolicy()
+	return &NeutronUpdateFirewallPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronUpdateFirewallRule 更新网络ACL规则
 //
 // 更新网络ACL规则。
 //
@@ -1167,7 +1587,13 @@ func (c *VpcClient) NeutronUpdateFirewallRule(request *model.NeutronUpdateFirewa
 	}
 }
 
-// 批量创建VPC资源标签
+// NeutronUpdateFirewallRuleInvoker 更新网络ACL规则
+func (c *VpcClient) NeutronUpdateFirewallRuleInvoker(request *model.NeutronUpdateFirewallRuleRequest) *NeutronUpdateFirewallRuleInvoker {
+	requestDef := GenReqDefForNeutronUpdateFirewallRule()
+	return &NeutronUpdateFirewallRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateVpcTags 批量创建VPC资源标签
 //
 // 为指定的VPC资源实例批量添加标签。
 // 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
@@ -1184,7 +1610,13 @@ func (c *VpcClient) BatchCreateVpcTags(request *model.BatchCreateVpcTagsRequest)
 	}
 }
 
-// 批量删除VPC资源标签
+// BatchCreateVpcTagsInvoker 批量创建VPC资源标签
+func (c *VpcClient) BatchCreateVpcTagsInvoker(request *model.BatchCreateVpcTagsRequest) *BatchCreateVpcTagsInvoker {
+	requestDef := GenReqDefForBatchCreateVpcTags()
+	return &BatchCreateVpcTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteVpcTags 批量删除VPC资源标签
 //
 // 为指定的VPC资源实例批量删除标签。
 // 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
@@ -1201,7 +1633,13 @@ func (c *VpcClient) BatchDeleteVpcTags(request *model.BatchDeleteVpcTagsRequest)
 	}
 }
 
-// 创建VPC
+// BatchDeleteVpcTagsInvoker 批量删除VPC资源标签
+func (c *VpcClient) BatchDeleteVpcTagsInvoker(request *model.BatchDeleteVpcTagsRequest) *BatchDeleteVpcTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteVpcTags()
+	return &BatchDeleteVpcTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVpc 创建VPC
 //
 // 创建虚拟私有云。
 //
@@ -1217,7 +1655,13 @@ func (c *VpcClient) CreateVpc(request *model.CreateVpcRequest) (*model.CreateVpc
 	}
 }
 
-// 创建VPC资源标签
+// CreateVpcInvoker 创建VPC
+func (c *VpcClient) CreateVpcInvoker(request *model.CreateVpcRequest) *CreateVpcInvoker {
+	requestDef := GenReqDefForCreateVpc()
+	return &CreateVpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVpcResourceTag 创建VPC资源标签
 //
 // 给指定VPC资源实例增加标签信息
 // 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
@@ -1234,7 +1678,13 @@ func (c *VpcClient) CreateVpcResourceTag(request *model.CreateVpcResourceTagRequ
 	}
 }
 
-// 创建VPC路由
+// CreateVpcResourceTagInvoker 创建VPC资源标签
+func (c *VpcClient) CreateVpcResourceTagInvoker(request *model.CreateVpcResourceTagRequest) *CreateVpcResourceTagInvoker {
+	requestDef := GenReqDefForCreateVpcResourceTag()
+	return &CreateVpcResourceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVpcRoute 创建VPC路由
 //
 // 创建路由
 //
@@ -1250,7 +1700,13 @@ func (c *VpcClient) CreateVpcRoute(request *model.CreateVpcRouteRequest) (*model
 	}
 }
 
-// 删除VPC
+// CreateVpcRouteInvoker 创建VPC路由
+func (c *VpcClient) CreateVpcRouteInvoker(request *model.CreateVpcRouteRequest) *CreateVpcRouteInvoker {
+	requestDef := GenReqDefForCreateVpcRoute()
+	return &CreateVpcRouteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVpc 删除VPC
 //
 // 删除虚拟私有云。
 //
@@ -1266,7 +1722,13 @@ func (c *VpcClient) DeleteVpc(request *model.DeleteVpcRequest) (*model.DeleteVpc
 	}
 }
 
-// 删除VPC路由
+// DeleteVpcInvoker 删除VPC
+func (c *VpcClient) DeleteVpcInvoker(request *model.DeleteVpcRequest) *DeleteVpcInvoker {
+	requestDef := GenReqDefForDeleteVpc()
+	return &DeleteVpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVpcRoute 删除VPC路由
 //
 // 删除路由
 //
@@ -1282,7 +1744,13 @@ func (c *VpcClient) DeleteVpcRoute(request *model.DeleteVpcRouteRequest) (*model
 	}
 }
 
-// 删除VPC资源标签
+// DeleteVpcRouteInvoker 删除VPC路由
+func (c *VpcClient) DeleteVpcRouteInvoker(request *model.DeleteVpcRouteRequest) *DeleteVpcRouteInvoker {
+	requestDef := GenReqDefForDeleteVpcRoute()
+	return &DeleteVpcRouteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVpcTag 删除VPC资源标签
 //
 // 删除指定VPC资源实例的标签信息
 // 该接口为幂等接口：删除的key不存在报404，Key不能为空或者空字符串
@@ -1299,7 +1767,13 @@ func (c *VpcClient) DeleteVpcTag(request *model.DeleteVpcTagRequest) (*model.Del
 	}
 }
 
-// 查询VPC路由列表
+// DeleteVpcTagInvoker 删除VPC资源标签
+func (c *VpcClient) DeleteVpcTagInvoker(request *model.DeleteVpcTagRequest) *DeleteVpcTagInvoker {
+	requestDef := GenReqDefForDeleteVpcTag()
+	return &DeleteVpcTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVpcRoutes 查询VPC路由列表
 //
 // 查询提交请求的租户的所有路由列表，并根据过滤条件进行过滤。
 //
@@ -1315,7 +1789,13 @@ func (c *VpcClient) ListVpcRoutes(request *model.ListVpcRoutesRequest) (*model.L
 	}
 }
 
-// 查询VPC项目标签
+// ListVpcRoutesInvoker 查询VPC路由列表
+func (c *VpcClient) ListVpcRoutesInvoker(request *model.ListVpcRoutesRequest) *ListVpcRoutesInvoker {
+	requestDef := GenReqDefForListVpcRoutes()
+	return &ListVpcRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVpcTags 查询VPC项目标签
 //
 // 查询租户在指定区域和实例类型的所有标签集合
 //
@@ -1331,7 +1811,13 @@ func (c *VpcClient) ListVpcTags(request *model.ListVpcTagsRequest) (*model.ListV
 	}
 }
 
-// 查询VPC列表
+// ListVpcTagsInvoker 查询VPC项目标签
+func (c *VpcClient) ListVpcTagsInvoker(request *model.ListVpcTagsRequest) *ListVpcTagsInvoker {
+	requestDef := GenReqDefForListVpcTags()
+	return &ListVpcTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVpcs 查询VPC列表
 //
 // 查询虚拟私有云列表。
 //
@@ -1347,7 +1833,13 @@ func (c *VpcClient) ListVpcs(request *model.ListVpcsRequest) (*model.ListVpcsRes
 	}
 }
 
-// 查询VPC资源实例
+// ListVpcsInvoker 查询VPC列表
+func (c *VpcClient) ListVpcsInvoker(request *model.ListVpcsRequest) *ListVpcsInvoker {
+	requestDef := GenReqDefForListVpcs()
+	return &ListVpcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVpcsByTags 查询VPC资源实例
 //
 // 使用标签过滤实例。
 //
@@ -1363,7 +1855,13 @@ func (c *VpcClient) ListVpcsByTags(request *model.ListVpcsByTagsRequest) (*model
 	}
 }
 
-// 查询VPC
+// ListVpcsByTagsInvoker 查询VPC资源实例
+func (c *VpcClient) ListVpcsByTagsInvoker(request *model.ListVpcsByTagsRequest) *ListVpcsByTagsInvoker {
+	requestDef := GenReqDefForListVpcsByTags()
+	return &ListVpcsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVpc 查询VPC
 //
 // 查询虚拟私有云。
 //
@@ -1379,7 +1877,13 @@ func (c *VpcClient) ShowVpc(request *model.ShowVpcRequest) (*model.ShowVpcRespon
 	}
 }
 
-// 查询VPC路由
+// ShowVpcInvoker 查询VPC
+func (c *VpcClient) ShowVpcInvoker(request *model.ShowVpcRequest) *ShowVpcInvoker {
+	requestDef := GenReqDefForShowVpc()
+	return &ShowVpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVpcRoute 查询VPC路由
 //
 // 查询路由详情
 //
@@ -1395,7 +1899,13 @@ func (c *VpcClient) ShowVpcRoute(request *model.ShowVpcRouteRequest) (*model.Sho
 	}
 }
 
-// 查询VPC资源标签
+// ShowVpcRouteInvoker 查询VPC路由
+func (c *VpcClient) ShowVpcRouteInvoker(request *model.ShowVpcRouteRequest) *ShowVpcRouteInvoker {
+	requestDef := GenReqDefForShowVpcRoute()
+	return &ShowVpcRouteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVpcTags 查询VPC资源标签
 //
 // 查询指定VPC实例的标签信息
 //
@@ -1411,7 +1921,13 @@ func (c *VpcClient) ShowVpcTags(request *model.ShowVpcTagsRequest) (*model.ShowV
 	}
 }
 
-// 更新VPC
+// ShowVpcTagsInvoker 查询VPC资源标签
+func (c *VpcClient) ShowVpcTagsInvoker(request *model.ShowVpcTagsRequest) *ShowVpcTagsInvoker {
+	requestDef := GenReqDefForShowVpcTags()
+	return &ShowVpcTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVpc 更新VPC
 //
 // 更新虚拟私有云。
 //
@@ -1425,4 +1941,10 @@ func (c *VpcClient) UpdateVpc(request *model.UpdateVpcRequest) (*model.UpdateVpc
 	} else {
 		return resp.(*model.UpdateVpcResponse), nil
 	}
+}
+
+// UpdateVpcInvoker 更新VPC
+func (c *VpcClient) UpdateVpcInvoker(request *model.UpdateVpcRequest) *UpdateVpcInvoker {
+	requestDef := GenReqDefForUpdateVpc()
+	return &UpdateVpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -69,6 +69,10 @@ func GetListDomainTrafficDetailRequestProtocolEnum() ListDomainTrafficDetailRequ
 	}
 }
 
+func (c ListDomainTrafficDetailRequestProtocol) Value() string {
+	return c.value
+}
+
 func (c ListDomainTrafficDetailRequestProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

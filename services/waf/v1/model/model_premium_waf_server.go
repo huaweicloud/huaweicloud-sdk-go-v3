@@ -60,6 +60,10 @@ func GetPremiumWafServerFrontProtocolEnum() PremiumWafServerFrontProtocolEnum {
 	}
 }
 
+func (c PremiumWafServerFrontProtocol) Value() string {
+	return c.value
+}
+
 func (c PremiumWafServerFrontProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -98,6 +102,10 @@ func GetPremiumWafServerBackProtocolEnum() PremiumWafServerBackProtocolEnum {
 	}
 }
 
+func (c PremiumWafServerBackProtocol) Value() string {
+	return c.value
+}
+
 func (c PremiumWafServerBackProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -134,6 +142,10 @@ func GetPremiumWafServerTypeEnum() PremiumWafServerTypeEnum {
 			value: "ipv6",
 		},
 	}
+}
+
+func (c PremiumWafServerType) Value() string {
+	return c.value
 }
 
 func (c PremiumWafServerType) MarshalJSON() ([]byte, error) {

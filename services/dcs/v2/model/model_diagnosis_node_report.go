@@ -65,6 +65,10 @@ func GetDiagnosisNodeReportRoleEnum() DiagnosisNodeReportRoleEnum {
 	}
 }
 
+func (c DiagnosisNodeReportRole) Value() string {
+	return c.value
+}
+
 func (c DiagnosisNodeReportRole) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

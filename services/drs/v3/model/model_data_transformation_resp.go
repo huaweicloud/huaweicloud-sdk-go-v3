@@ -54,6 +54,10 @@ func GetDataTransformationRespStatusEnum() DataTransformationRespStatusEnum {
 	}
 }
 
+func (c DataTransformationRespStatus) Value() string {
+	return c.value
+}
+
 func (c DataTransformationRespStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

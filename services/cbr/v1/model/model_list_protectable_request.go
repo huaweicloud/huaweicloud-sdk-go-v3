@@ -66,6 +66,10 @@ func GetListProtectableRequestProtectableTypeEnum() ListProtectableRequestProtec
 	}
 }
 
+func (c ListProtectableRequestProtectableType) Value() string {
+	return c.value
+}
+
 func (c ListProtectableRequestProtectableType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

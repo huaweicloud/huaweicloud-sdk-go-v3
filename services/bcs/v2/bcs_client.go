@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/bcs/v2/model"
 )
 
@@ -19,7 +19,7 @@ func BcsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// peer节点加入通道
+// BatchAddPeersToChannel peer节点加入通道
 //
 // peer节点加入通道,目前仅支持往一个通道中加入peer
 //
@@ -35,7 +35,13 @@ func (c *BcsClient) BatchAddPeersToChannel(request *model.BatchAddPeersToChannel
 	}
 }
 
-// 创建通道
+// BatchAddPeersToChannelInvoker peer节点加入通道
+func (c *BcsClient) BatchAddPeersToChannelInvoker(request *model.BatchAddPeersToChannelRequest) *BatchAddPeersToChannelInvoker {
+	requestDef := GenReqDefForBatchAddPeersToChannel()
+	return &BatchAddPeersToChannelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateChannels 创建通道
 //
 // 创建通道
 //
@@ -51,7 +57,13 @@ func (c *BcsClient) BatchCreateChannels(request *model.BatchCreateChannelsReques
 	}
 }
 
-// 邀请联盟成员
+// BatchCreateChannelsInvoker 创建通道
+func (c *BcsClient) BatchCreateChannelsInvoker(request *model.BatchCreateChannelsRequest) *BatchCreateChannelsInvoker {
+	requestDef := GenReqDefForBatchCreateChannels()
+	return &BatchCreateChannelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchInviteMembersToChannel 邀请联盟成员
 //
 // 批量邀请联盟成员加入通道，此操作会向被邀请方发出邀请通知
 //
@@ -67,7 +79,13 @@ func (c *BcsClient) BatchInviteMembersToChannel(request *model.BatchInviteMember
 	}
 }
 
-// BCS组织退出某通道
+// BatchInviteMembersToChannelInvoker 邀请联盟成员
+func (c *BcsClient) BatchInviteMembersToChannelInvoker(request *model.BatchInviteMembersToChannelRequest) *BatchInviteMembersToChannelInvoker {
+	requestDef := GenReqDefForBatchInviteMembersToChannel()
+	return &BatchInviteMembersToChannelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchRemoveOrgsFromChannel BCS组织退出某通道
 //
 // 该接口用于BCS组织退出某通道。
 //
@@ -83,7 +101,35 @@ func (c *BcsClient) BatchRemoveOrgsFromChannel(request *model.BatchRemoveOrgsFro
 	}
 }
 
-// 生成用户证书
+// BatchRemoveOrgsFromChannelInvoker BCS组织退出某通道
+func (c *BcsClient) BatchRemoveOrgsFromChannelInvoker(request *model.BatchRemoveOrgsFromChannelRequest) *BatchRemoveOrgsFromChannelInvoker {
+	requestDef := GenReqDefForBatchRemoveOrgsFromChannel()
+	return &BatchRemoveOrgsFromChannelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchRemovePeersFromChannel BCS某个组织中的节点退出某通道
+//
+// 该接口用于BCS某个组织中的节点退出某通道。当节点为通道中最后一个节点时，需要使用组织退通道的接口来将通道中的最后一个节点退出。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *BcsClient) BatchRemovePeersFromChannel(request *model.BatchRemovePeersFromChannelRequest) (*model.BatchRemovePeersFromChannelResponse, error) {
+	requestDef := GenReqDefForBatchRemovePeersFromChannel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchRemovePeersFromChannelResponse), nil
+	}
+}
+
+// BatchRemovePeersFromChannelInvoker BCS某个组织中的节点退出某通道
+func (c *BcsClient) BatchRemovePeersFromChannelInvoker(request *model.BatchRemovePeersFromChannelRequest) *BatchRemovePeersFromChannelInvoker {
+	requestDef := GenReqDefForBatchRemovePeersFromChannel()
+	return &BatchRemovePeersFromChannelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateBlockchainCertByUserName 生成用户证书
 //
 // 通过用户名生成指定服务实例组织用户证书
 //
@@ -99,7 +145,13 @@ func (c *BcsClient) CreateBlockchainCertByUserName(request *model.CreateBlockcha
 	}
 }
 
-// 创建服务实例
+// CreateBlockchainCertByUserNameInvoker 生成用户证书
+func (c *BcsClient) CreateBlockchainCertByUserNameInvoker(request *model.CreateBlockchainCertByUserNameRequest) *CreateBlockchainCertByUserNameInvoker {
+	requestDef := GenReqDefForCreateBlockchainCertByUserName()
+	return &CreateBlockchainCertByUserNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNewBlockchain 创建服务实例
 //
 // 创建BCS服务实例,只支持按需创建
 //
@@ -115,7 +167,13 @@ func (c *BcsClient) CreateNewBlockchain(request *model.CreateNewBlockchainReques
 	}
 }
 
-// 删除服务实例
+// CreateNewBlockchainInvoker 创建服务实例
+func (c *BcsClient) CreateNewBlockchainInvoker(request *model.CreateNewBlockchainRequest) *CreateNewBlockchainInvoker {
+	requestDef := GenReqDefForCreateNewBlockchain()
+	return &CreateNewBlockchainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteBlockchain 删除服务实例
 //
 // 删除bcs实例。包周期实例不支持
 //
@@ -131,7 +189,35 @@ func (c *BcsClient) DeleteBlockchain(request *model.DeleteBlockchainRequest) (*m
 	}
 }
 
-// 删除邀请成员信息
+// DeleteBlockchainInvoker 删除服务实例
+func (c *BcsClient) DeleteBlockchainInvoker(request *model.DeleteBlockchainRequest) *DeleteBlockchainInvoker {
+	requestDef := GenReqDefForDeleteBlockchain()
+	return &DeleteBlockchainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteChannel BCS删除某个通道
+//
+// 该接口用于BCS删除某个通道。仅支持删除空通道
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *BcsClient) DeleteChannel(request *model.DeleteChannelRequest) (*model.DeleteChannelResponse, error) {
+	requestDef := GenReqDefForDeleteChannel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteChannelResponse), nil
+	}
+}
+
+// DeleteChannelInvoker BCS删除某个通道
+func (c *BcsClient) DeleteChannelInvoker(request *model.DeleteChannelRequest) *DeleteChannelInvoker {
+	requestDef := GenReqDefForDeleteChannel()
+	return &DeleteChannelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteMemberInvite 删除邀请成员信息
 //
 // 可通过此接口批量取消邀请或删除对已退出或拒绝加入或解散的成员邀请信息
 //
@@ -147,7 +233,13 @@ func (c *BcsClient) DeleteMemberInvite(request *model.DeleteMemberInviteRequest)
 	}
 }
 
-// 下载证书
+// DeleteMemberInviteInvoker 删除邀请成员信息
+func (c *BcsClient) DeleteMemberInviteInvoker(request *model.DeleteMemberInviteRequest) *DeleteMemberInviteInvoker {
+	requestDef := GenReqDefForDeleteMemberInvite()
+	return &DeleteMemberInviteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadBlockchainCert 下载证书
 //
 // 下载指定服务实例相关证书
 //
@@ -163,7 +255,13 @@ func (c *BcsClient) DownloadBlockchainCert(request *model.DownloadBlockchainCert
 	}
 }
 
-// 下载SDK配置
+// DownloadBlockchainCertInvoker 下载证书
+func (c *BcsClient) DownloadBlockchainCertInvoker(request *model.DownloadBlockchainCertRequest) *DownloadBlockchainCertInvoker {
+	requestDef := GenReqDefForDownloadBlockchainCert()
+	return &DownloadBlockchainCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadBlockchainSdkConfig 下载SDK配置
 //
 // 下载指定服务实例SDK配置文件
 //
@@ -179,7 +277,13 @@ func (c *BcsClient) DownloadBlockchainSdkConfig(request *model.DownloadBlockchai
 	}
 }
 
-// 冻结用户证书
+// DownloadBlockchainSdkConfigInvoker 下载SDK配置
+func (c *BcsClient) DownloadBlockchainSdkConfigInvoker(request *model.DownloadBlockchainSdkConfigRequest) *DownloadBlockchainSdkConfigInvoker {
+	requestDef := GenReqDefForDownloadBlockchainSdkConfig()
+	return &DownloadBlockchainSdkConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// FreezeCert 冻结用户证书
 //
 // 冻结指定服务实例组织用户证书，冻结后需等待半分钟到一分钟左右生效
 //
@@ -195,7 +299,13 @@ func (c *BcsClient) FreezeCert(request *model.FreezeCertRequest) (*model.FreezeC
 	}
 }
 
-// 处理联盟邀请
+// FreezeCertInvoker 冻结用户证书
+func (c *BcsClient) FreezeCertInvoker(request *model.FreezeCertRequest) *FreezeCertInvoker {
+	requestDef := GenReqDefForFreezeCert()
+	return &FreezeCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// HandleNotification 处理联盟邀请
 //
 // 处理联盟邀请
 //
@@ -211,7 +321,35 @@ func (c *BcsClient) HandleNotification(request *model.HandleNotificationRequest)
 	}
 }
 
-// 查询BCS服务实例监控数据
+// HandleNotificationInvoker 处理联盟邀请
+func (c *BcsClient) HandleNotificationInvoker(request *model.HandleNotificationRequest) *HandleNotificationInvoker {
+	requestDef := GenReqDefForHandleNotification()
+	return &HandleNotificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// HandleUnionMemberQuitList 被邀请方退出指定联盟
+//
+// 被邀请方退出联盟
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *BcsClient) HandleUnionMemberQuitList(request *model.HandleUnionMemberQuitListRequest) (*model.HandleUnionMemberQuitListResponse, error) {
+	requestDef := GenReqDefForHandleUnionMemberQuitList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.HandleUnionMemberQuitListResponse), nil
+	}
+}
+
+// HandleUnionMemberQuitListInvoker 被邀请方退出指定联盟
+func (c *BcsClient) HandleUnionMemberQuitListInvoker(request *model.HandleUnionMemberQuitListRequest) *HandleUnionMemberQuitListInvoker {
+	requestDef := GenReqDefForHandleUnionMemberQuitList()
+	return &HandleUnionMemberQuitListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBcsMetric 查询BCS服务实例监控数据
 //
 // 该接口用于查询BCS服务的监控数据，可以指定相应的指标名称。[目前不支持IEF节点](tag:hasief)
 //
@@ -227,7 +365,13 @@ func (c *BcsClient) ListBcsMetric(request *model.ListBcsMetricRequest) (*model.L
 	}
 }
 
-// 查询通道信息
+// ListBcsMetricInvoker 查询BCS服务实例监控数据
+func (c *BcsClient) ListBcsMetricInvoker(request *model.ListBcsMetricRequest) *ListBcsMetricInvoker {
+	requestDef := GenReqDefForListBcsMetric()
+	return &ListBcsMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBlockchainChannels 查询通道信息
 //
 // 查询指定服务实例通道信息
 //
@@ -243,7 +387,13 @@ func (c *BcsClient) ListBlockchainChannels(request *model.ListBlockchainChannels
 	}
 }
 
-// 查询服务实例列表
+// ListBlockchainChannelsInvoker 查询通道信息
+func (c *BcsClient) ListBlockchainChannelsInvoker(request *model.ListBlockchainChannelsRequest) *ListBlockchainChannelsInvoker {
+	requestDef := GenReqDefForListBlockchainChannels()
+	return &ListBlockchainChannelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBlockchains 查询服务实例列表
 //
 // 查询当前项目下所有服务实例的简要信息
 //
@@ -259,7 +409,13 @@ func (c *BcsClient) ListBlockchains(request *model.ListBlockchainsRequest) (*mod
 	}
 }
 
-// 查询BCS组织监控数据列表
+// ListBlockchainsInvoker 查询服务实例列表
+func (c *BcsClient) ListBlockchainsInvoker(request *model.ListBlockchainsRequest) *ListBlockchainsInvoker {
+	requestDef := GenReqDefForListBlockchains()
+	return &ListBlockchainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEntityMetric 查询BCS组织监控数据列表
 //
 // 该接口用于查询BCS组织的监控数据列表。
 //
@@ -275,7 +431,13 @@ func (c *BcsClient) ListEntityMetric(request *model.ListEntityMetricRequest) (*m
 	}
 }
 
-// 查询BCS组织实例监控数据详情
+// ListEntityMetricInvoker 查询BCS组织监控数据列表
+func (c *BcsClient) ListEntityMetricInvoker(request *model.ListEntityMetricRequest) *ListEntityMetricInvoker {
+	requestDef := GenReqDefForListEntityMetric()
+	return &ListEntityMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceMetric 查询BCS组织实例监控数据详情
 //
 // 该接口用于BCS组织实例监控数据详情。
 //
@@ -291,7 +453,13 @@ func (c *BcsClient) ListInstanceMetric(request *model.ListInstanceMetricRequest)
 	}
 }
 
-// 获取联盟成员列表
+// ListInstanceMetricInvoker 查询BCS组织实例监控数据详情
+func (c *BcsClient) ListInstanceMetricInvoker(request *model.ListInstanceMetricRequest) *ListInstanceMetricInvoker {
+	requestDef := GenReqDefForListInstanceMetric()
+	return &ListInstanceMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMembers 获取联盟成员列表
 //
 // 获取联盟成员列表
 //
@@ -307,7 +475,13 @@ func (c *BcsClient) ListMembers(request *model.ListMembersRequest) (*model.ListM
 	}
 }
 
-// 获取全部通知
+// ListMembersInvoker 获取联盟成员列表
+func (c *BcsClient) ListMembersInvoker(request *model.ListMembersRequest) *ListMembersInvoker {
+	requestDef := GenReqDefForListMembers()
+	return &ListMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNotifications 获取全部通知
 //
 // 获取全部通知
 //
@@ -323,7 +497,13 @@ func (c *BcsClient) ListNotifications(request *model.ListNotificationsRequest) (
 	}
 }
 
-// 查询异步操作结果
+// ListNotificationsInvoker 获取全部通知
+func (c *BcsClient) ListNotificationsInvoker(request *model.ListNotificationsRequest) *ListNotificationsInvoker {
+	requestDef := GenReqDefForListNotifications()
+	return &ListNotificationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOpRecord 查询异步操作结果
 //
 // 查询异步操作结果
 //
@@ -339,7 +519,13 @@ func (c *BcsClient) ListOpRecord(request *model.ListOpRecordRequest) (*model.Lis
 	}
 }
 
-// 查询配额
+// ListOpRecordInvoker 查询异步操作结果
+func (c *BcsClient) ListOpRecordInvoker(request *model.ListOpRecordRequest) *ListOpRecordInvoker {
+	requestDef := GenReqDefForListOpRecord()
+	return &ListOpRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQuotas 查询配额
 //
 // 查询当前项目下BCS服务所有资源的配额信息
 //
@@ -355,7 +541,13 @@ func (c *BcsClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuo
 	}
 }
 
-// 查询实例信息
+// ListQuotasInvoker 查询配额
+func (c *BcsClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuotasInvoker {
+	requestDef := GenReqDefForListQuotas()
+	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBlockchainDetail 查询实例信息
 //
 // 查询指定服务实例详细信息
 //
@@ -371,7 +563,13 @@ func (c *BcsClient) ShowBlockchainDetail(request *model.ShowBlockchainDetailRequ
 	}
 }
 
-// 查询规格
+// ShowBlockchainDetailInvoker 查询实例信息
+func (c *BcsClient) ShowBlockchainDetailInvoker(request *model.ShowBlockchainDetailRequest) *ShowBlockchainDetailInvoker {
+	requestDef := GenReqDefForShowBlockchainDetail()
+	return &ShowBlockchainDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBlockchainFlavors 查询规格
 //
 // 查询服务联盟链规格信息
 //
@@ -387,7 +585,13 @@ func (c *BcsClient) ShowBlockchainFlavors(request *model.ShowBlockchainFlavorsRe
 	}
 }
 
-// 查询节点信息
+// ShowBlockchainFlavorsInvoker 查询规格
+func (c *BcsClient) ShowBlockchainFlavorsInvoker(request *model.ShowBlockchainFlavorsRequest) *ShowBlockchainFlavorsInvoker {
+	requestDef := GenReqDefForShowBlockchainFlavors()
+	return &ShowBlockchainFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBlockchainNodes 查询节点信息
 //
 // 查询指定服务实例节点信息
 //
@@ -403,7 +607,13 @@ func (c *BcsClient) ShowBlockchainNodes(request *model.ShowBlockchainNodesReques
 	}
 }
 
-// 查询创建状态
+// ShowBlockchainNodesInvoker 查询节点信息
+func (c *BcsClient) ShowBlockchainNodesInvoker(request *model.ShowBlockchainNodesRequest) *ShowBlockchainNodesInvoker {
+	requestDef := GenReqDefForShowBlockchainNodes()
+	return &ShowBlockchainNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBlockchainStatus 查询创建状态
 //
 // 查询指定服务实例创建状态
 //
@@ -419,7 +629,13 @@ func (c *BcsClient) ShowBlockchainStatus(request *model.ShowBlockchainStatusRequ
 	}
 }
 
-// 解冻用户证书
+// ShowBlockchainStatusInvoker 查询创建状态
+func (c *BcsClient) ShowBlockchainStatusInvoker(request *model.ShowBlockchainStatusRequest) *ShowBlockchainStatusInvoker {
+	requestDef := GenReqDefForShowBlockchainStatus()
+	return &ShowBlockchainStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnfreezeCert 解冻用户证书
 //
 // 解冻指定服务实例组织用户证书，解冻后需等待半分钟到一分钟左右生效
 //
@@ -435,7 +651,13 @@ func (c *BcsClient) UnfreezeCert(request *model.UnfreezeCertRequest) (*model.Unf
 	}
 }
 
-// 修改服务实例
+// UnfreezeCertInvoker 解冻用户证书
+func (c *BcsClient) UnfreezeCertInvoker(request *model.UnfreezeCertRequest) *UnfreezeCertInvoker {
+	requestDef := GenReqDefForUnfreezeCert()
+	return &UnfreezeCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstance 修改服务实例
 //
 // 修改实例的节点、组织，目前仅支持添加、删除节点（IEF模式不支持添加、删除节点），添加、删除组织，共4种类型，每次操作只可以操作一种类型。此接口不支持包周期模式; 注意注册IEF节点时，IEF节点名称长度应该为4-24位的字符
 //
@@ -449,4 +671,10 @@ func (c *BcsClient) UpdateInstance(request *model.UpdateInstanceRequest) (*model
 	} else {
 		return resp.(*model.UpdateInstanceResponse), nil
 	}
+}
+
+// UpdateInstanceInvoker 修改服务实例
+func (c *BcsClient) UpdateInstanceInvoker(request *model.UpdateInstanceRequest) *UpdateInstanceInvoker {
+	requestDef := GenReqDefForUpdateInstance()
+	return &UpdateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

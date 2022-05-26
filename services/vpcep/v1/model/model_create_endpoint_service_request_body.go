@@ -76,6 +76,10 @@ func GetCreateEndpointServiceRequestBodyServerTypeEnum() CreateEndpointServiceRe
 	}
 }
 
+func (c CreateEndpointServiceRequestBodyServerType) Value() string {
+	return c.value
+}
+
 func (c CreateEndpointServiceRequestBodyServerType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -120,6 +124,10 @@ func GetCreateEndpointServiceRequestBodyTcpProxyEnum() CreateEndpointServiceRequ
 			value: "open",
 		},
 	}
+}
+
+func (c CreateEndpointServiceRequestBodyTcpProxy) Value() string {
+	return c.value
 }
 
 func (c CreateEndpointServiceRequestBodyTcpProxy) MarshalJSON() ([]byte, error) {

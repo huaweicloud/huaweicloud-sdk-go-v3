@@ -53,6 +53,10 @@ func GetCreatePublicipOptionIpVersionEnum() CreatePublicipOptionIpVersionEnum {
 	}
 }
 
+func (c CreatePublicipOptionIpVersion) Value() int32 {
+	return c.value
+}
+
 func (c CreatePublicipOptionIpVersion) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

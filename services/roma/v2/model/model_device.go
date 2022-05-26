@@ -132,6 +132,10 @@ func GetDeviceStatusEnum() DeviceStatusEnum {
 	}
 }
 
+func (c DeviceStatus) Value() int32 {
+	return c.value
+}
+
 func (c DeviceStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -170,6 +174,10 @@ func GetDeviceOnlineStatusEnum() DeviceOnlineStatusEnum {
 			value: 2,
 		},
 	}
+}
+
+func (c DeviceOnlineStatus) Value() int32 {
+	return c.value
 }
 
 func (c DeviceOnlineStatus) MarshalJSON() ([]byte, error) {
@@ -212,6 +220,10 @@ func GetDeviceDeviceTypeEnum() DeviceDeviceTypeEnum {
 	}
 }
 
+func (c DeviceDeviceType) Value() int32 {
+	return c.value
+}
+
 func (c DeviceDeviceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -250,6 +262,10 @@ func GetDevicePluginIdEnum() DevicePluginIdEnum {
 			value: 2,
 		},
 	}
+}
+
+func (c DevicePluginId) Value() int32 {
+	return c.value
 }
 
 func (c DevicePluginId) MarshalJSON() ([]byte, error) {

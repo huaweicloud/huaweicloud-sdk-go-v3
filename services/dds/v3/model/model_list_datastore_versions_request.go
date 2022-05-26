@@ -45,6 +45,10 @@ func GetListDatastoreVersionsRequestDatastoreNameEnum() ListDatastoreVersionsReq
 	}
 }
 
+func (c ListDatastoreVersionsRequestDatastoreName) Value() string {
+	return c.value
+}
+
 func (c ListDatastoreVersionsRequestDatastoreName) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

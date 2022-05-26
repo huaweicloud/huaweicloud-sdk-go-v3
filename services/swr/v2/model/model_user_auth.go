@@ -52,6 +52,10 @@ func GetUserAuthAuthEnum() UserAuthAuthEnum {
 	}
 }
 
+func (c UserAuthAuth) Value() int64 {
+	return c.value
+}
+
 func (c UserAuthAuth) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

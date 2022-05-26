@@ -53,6 +53,10 @@ func GetListApiVersionsResponseStatusEnum() ListApiVersionsResponseStatusEnum {
 	}
 }
 
+func (c ListApiVersionsResponseStatus) Value() string {
+	return c.value
+}
+
 func (c ListApiVersionsResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

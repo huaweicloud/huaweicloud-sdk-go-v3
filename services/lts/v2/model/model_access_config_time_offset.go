@@ -52,6 +52,10 @@ func GetAccessConfigTimeOffsetUnitEnum() AccessConfigTimeOffsetUnitEnum {
 	}
 }
 
+func (c AccessConfigTimeOffsetUnit) Value() string {
+	return c.value
+}
+
 func (c AccessConfigTimeOffsetUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -55,6 +55,10 @@ func GetUpdateImageRequestBodyOpEnum() UpdateImageRequestBodyOpEnum {
 	}
 }
 
+func (c UpdateImageRequestBodyOp) Value() string {
+	return c.value
+}
+
 func (c UpdateImageRequestBodyOp) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

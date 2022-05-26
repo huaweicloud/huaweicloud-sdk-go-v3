@@ -69,6 +69,10 @@ func GetQueryTagsOptionActionEnum() QueryTagsOptionActionEnum {
 	}
 }
 
+func (c QueryTagsOptionAction) Value() string {
+	return c.value
+}
+
 func (c QueryTagsOptionAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -86,6 +86,10 @@ func GetRespDedicatedHostAutoPlacementEnum() RespDedicatedHostAutoPlacementEnum 
 	}
 }
 
+func (c RespDedicatedHostAutoPlacement) Value() string {
+	return c.value
+}
+
 func (c RespDedicatedHostAutoPlacement) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -126,6 +130,10 @@ func GetRespDedicatedHostStateEnum() RespDedicatedHostStateEnum {
 			value: "fault",
 		},
 	}
+}
+
+func (c RespDedicatedHostState) Value() string {
+	return c.value
 }
 
 func (c RespDedicatedHostState) MarshalJSON() ([]byte, error) {

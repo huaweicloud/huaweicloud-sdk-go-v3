@@ -48,6 +48,10 @@ func GetShowNamespaceRequestContentTypeEnum() ShowNamespaceRequestContentTypeEnu
 	}
 }
 
+func (c ShowNamespaceRequestContentType) Value() string {
+	return c.value
+}
+
 func (c ShowNamespaceRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

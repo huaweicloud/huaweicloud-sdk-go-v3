@@ -70,6 +70,10 @@ func GetOptimizerTypeEnum() OptimizerTypeEnum {
 	}
 }
 
+func (c OptimizerType) Value() string {
+	return c.value
+}
+
 func (c OptimizerType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/swr/v2/model"
 )
 
@@ -19,7 +19,7 @@ func SwrClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 创建镜像自动同步任务
+// CreateImageSyncRepo 创建镜像自动同步任务
 //
 // 创建镜像自动同步任务
 //
@@ -35,7 +35,13 @@ func (c *SwrClient) CreateImageSyncRepo(request *model.CreateImageSyncRepoReques
 	}
 }
 
-// 手动同步镜像
+// CreateImageSyncRepoInvoker 创建镜像自动同步任务
+func (c *SwrClient) CreateImageSyncRepoInvoker(request *model.CreateImageSyncRepoRequest) *CreateImageSyncRepoInvoker {
+	requestDef := GenReqDefForCreateImageSyncRepo()
+	return &CreateImageSyncRepoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateManualImageSyncRepo 手动同步镜像
 //
 // 手动同步镜像
 //
@@ -51,7 +57,13 @@ func (c *SwrClient) CreateManualImageSyncRepo(request *model.CreateManualImageSy
 	}
 }
 
-// 创建组织
+// CreateManualImageSyncRepoInvoker 手动同步镜像
+func (c *SwrClient) CreateManualImageSyncRepoInvoker(request *model.CreateManualImageSyncRepoRequest) *CreateManualImageSyncRepoInvoker {
+	requestDef := GenReqDefForCreateManualImageSyncRepo()
+	return &CreateManualImageSyncRepoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNamespace 创建组织
 //
 // 创建组织
 //
@@ -67,7 +79,13 @@ func (c *SwrClient) CreateNamespace(request *model.CreateNamespaceRequest) (*mod
 	}
 }
 
-// 创建组织权限
+// CreateNamespaceInvoker 创建组织
+func (c *SwrClient) CreateNamespaceInvoker(request *model.CreateNamespaceRequest) *CreateNamespaceInvoker {
+	requestDef := GenReqDefForCreateNamespace()
+	return &CreateNamespaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNamespaceAuth 创建组织权限
 //
 // 创建组织权限
 //
@@ -83,7 +101,13 @@ func (c *SwrClient) CreateNamespaceAuth(request *model.CreateNamespaceAuthReques
 	}
 }
 
-// 在组织下创建镜像仓库
+// CreateNamespaceAuthInvoker 创建组织权限
+func (c *SwrClient) CreateNamespaceAuthInvoker(request *model.CreateNamespaceAuthRequest) *CreateNamespaceAuthInvoker {
+	requestDef := GenReqDefForCreateNamespaceAuth()
+	return &CreateNamespaceAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRepo 在组织下创建镜像仓库
 //
 // 在组织下创建镜像仓库。
 //
@@ -99,7 +123,13 @@ func (c *SwrClient) CreateRepo(request *model.CreateRepoRequest) (*model.CreateR
 	}
 }
 
-// 创建共享帐号
+// CreateRepoInvoker 在组织下创建镜像仓库
+func (c *SwrClient) CreateRepoInvoker(request *model.CreateRepoRequest) *CreateRepoInvoker {
+	requestDef := GenReqDefForCreateRepo()
+	return &CreateRepoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRepoDomains 创建共享帐号
 //
 // 创建共享帐号。镜像上传后，您可以共享私有镜像给其他帐号，并授予下载该镜像的权限。
 //
@@ -115,7 +145,13 @@ func (c *SwrClient) CreateRepoDomains(request *model.CreateRepoDomainsRequest) (
 	}
 }
 
-// 创建镜像老化规则
+// CreateRepoDomainsInvoker 创建共享帐号
+func (c *SwrClient) CreateRepoDomainsInvoker(request *model.CreateRepoDomainsRequest) *CreateRepoDomainsInvoker {
+	requestDef := GenReqDefForCreateRepoDomains()
+	return &CreateRepoDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRetention 创建镜像老化规则
 //
 // 创建镜像老化规则
 //
@@ -131,7 +167,13 @@ func (c *SwrClient) CreateRetention(request *model.CreateRetentionRequest) (*mod
 	}
 }
 
-// 生成临时登录指令
+// CreateRetentionInvoker 创建镜像老化规则
+func (c *SwrClient) CreateRetentionInvoker(request *model.CreateRetentionRequest) *CreateRetentionInvoker {
+	requestDef := GenReqDefForCreateRetention()
+	return &CreateRetentionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSecret 生成临时登录指令
 //
 // 调用该接口，通过获取响应消息头的X-Swr-Dockerlogin的值及响应消息体的host值，可生成临时登录指令。
 //
@@ -147,7 +189,13 @@ func (c *SwrClient) CreateSecret(request *model.CreateSecretRequest) (*model.Cre
 	}
 }
 
-// 创建触发器
+// CreateSecretInvoker 生成临时登录指令
+func (c *SwrClient) CreateSecretInvoker(request *model.CreateSecretRequest) *CreateSecretInvoker {
+	requestDef := GenReqDefForCreateSecret()
+	return &CreateSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTrigger 创建触发器
 //
 // 创建触发器
 //
@@ -163,7 +211,13 @@ func (c *SwrClient) CreateTrigger(request *model.CreateTriggerRequest) (*model.C
 	}
 }
 
-// 创建镜像权限
+// CreateTriggerInvoker 创建触发器
+func (c *SwrClient) CreateTriggerInvoker(request *model.CreateTriggerRequest) *CreateTriggerInvoker {
+	requestDef := GenReqDefForCreateTrigger()
+	return &CreateTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateUserRepositoryAuth 创建镜像权限
 //
 // 创建镜像权限
 //
@@ -179,7 +233,13 @@ func (c *SwrClient) CreateUserRepositoryAuth(request *model.CreateUserRepository
 	}
 }
 
-// 删除镜像自动同步任务
+// CreateUserRepositoryAuthInvoker 创建镜像权限
+func (c *SwrClient) CreateUserRepositoryAuthInvoker(request *model.CreateUserRepositoryAuthRequest) *CreateUserRepositoryAuthInvoker {
+	requestDef := GenReqDefForCreateUserRepositoryAuth()
+	return &CreateUserRepositoryAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteImageSyncRepo 删除镜像自动同步任务
 //
 // 删除镜像自动同步任务
 //
@@ -195,7 +255,13 @@ func (c *SwrClient) DeleteImageSyncRepo(request *model.DeleteImageSyncRepoReques
 	}
 }
 
-// 删除组织权限
+// DeleteImageSyncRepoInvoker 删除镜像自动同步任务
+func (c *SwrClient) DeleteImageSyncRepoInvoker(request *model.DeleteImageSyncRepoRequest) *DeleteImageSyncRepoInvoker {
+	requestDef := GenReqDefForDeleteImageSyncRepo()
+	return &DeleteImageSyncRepoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNamespaceAuth 删除组织权限
 //
 // 删除组织权限
 //
@@ -211,7 +277,13 @@ func (c *SwrClient) DeleteNamespaceAuth(request *model.DeleteNamespaceAuthReques
 	}
 }
 
-// 删除组织
+// DeleteNamespaceAuthInvoker 删除组织权限
+func (c *SwrClient) DeleteNamespaceAuthInvoker(request *model.DeleteNamespaceAuthRequest) *DeleteNamespaceAuthInvoker {
+	requestDef := GenReqDefForDeleteNamespaceAuth()
+	return &DeleteNamespaceAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNamespaces 删除组织
 //
 // 删除组织
 //
@@ -227,7 +299,13 @@ func (c *SwrClient) DeleteNamespaces(request *model.DeleteNamespacesRequest) (*m
 	}
 }
 
-// 删除组织下的镜像仓库
+// DeleteNamespacesInvoker 删除组织
+func (c *SwrClient) DeleteNamespacesInvoker(request *model.DeleteNamespacesRequest) *DeleteNamespacesInvoker {
+	requestDef := GenReqDefForDeleteNamespaces()
+	return &DeleteNamespacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRepo 删除组织下的镜像仓库
 //
 // 删除组织下的镜像仓库。
 //
@@ -243,7 +321,13 @@ func (c *SwrClient) DeleteRepo(request *model.DeleteRepoRequest) (*model.DeleteR
 	}
 }
 
-// 删除共享帐号
+// DeleteRepoInvoker 删除组织下的镜像仓库
+func (c *SwrClient) DeleteRepoInvoker(request *model.DeleteRepoRequest) *DeleteRepoInvoker {
+	requestDef := GenReqDefForDeleteRepo()
+	return &DeleteRepoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRepoDomains 删除共享帐号
 //
 // 删除共享帐号
 //
@@ -259,7 +343,13 @@ func (c *SwrClient) DeleteRepoDomains(request *model.DeleteRepoDomainsRequest) (
 	}
 }
 
-// 删除指定tag的镜像
+// DeleteRepoDomainsInvoker 删除共享帐号
+func (c *SwrClient) DeleteRepoDomainsInvoker(request *model.DeleteRepoDomainsRequest) *DeleteRepoDomainsInvoker {
+	requestDef := GenReqDefForDeleteRepoDomains()
+	return &DeleteRepoDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRepoTag 删除指定tag的镜像
 //
 // 删除镜像仓库中指定tag的镜像
 //
@@ -275,7 +365,13 @@ func (c *SwrClient) DeleteRepoTag(request *model.DeleteRepoTagRequest) (*model.D
 	}
 }
 
-// 删除镜像老化规则
+// DeleteRepoTagInvoker 删除指定tag的镜像
+func (c *SwrClient) DeleteRepoTagInvoker(request *model.DeleteRepoTagRequest) *DeleteRepoTagInvoker {
+	requestDef := GenReqDefForDeleteRepoTag()
+	return &DeleteRepoTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRetention 删除镜像老化规则
 //
 // 删除镜像老化规则
 //
@@ -291,7 +387,13 @@ func (c *SwrClient) DeleteRetention(request *model.DeleteRetentionRequest) (*mod
 	}
 }
 
-// 删除触发器
+// DeleteRetentionInvoker 删除镜像老化规则
+func (c *SwrClient) DeleteRetentionInvoker(request *model.DeleteRetentionRequest) *DeleteRetentionInvoker {
+	requestDef := GenReqDefForDeleteRetention()
+	return &DeleteRetentionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTrigger 删除触发器
 //
 // 删除触发器
 //
@@ -307,7 +409,13 @@ func (c *SwrClient) DeleteTrigger(request *model.DeleteTriggerRequest) (*model.D
 	}
 }
 
-// 删除镜像权限
+// DeleteTriggerInvoker 删除触发器
+func (c *SwrClient) DeleteTriggerInvoker(request *model.DeleteTriggerRequest) *DeleteTriggerInvoker {
+	requestDef := GenReqDefForDeleteTrigger()
+	return &DeleteTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteUserRepositoryAuth 删除镜像权限
 //
 // 删除镜像权限
 //
@@ -323,7 +431,13 @@ func (c *SwrClient) DeleteUserRepositoryAuth(request *model.DeleteUserRepository
 	}
 }
 
-// 获取镜像自动同步任务信息
+// DeleteUserRepositoryAuthInvoker 删除镜像权限
+func (c *SwrClient) DeleteUserRepositoryAuthInvoker(request *model.DeleteUserRepositoryAuthRequest) *DeleteUserRepositoryAuthInvoker {
+	requestDef := GenReqDefForDeleteUserRepositoryAuth()
+	return &DeleteUserRepositoryAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListImageAutoSyncReposDetails 获取镜像自动同步任务信息
 //
 // 获取镜像自动同步任务列表
 //
@@ -339,7 +453,13 @@ func (c *SwrClient) ListImageAutoSyncReposDetails(request *model.ListImageAutoSy
 	}
 }
 
-// 查询组织列表
+// ListImageAutoSyncReposDetailsInvoker 获取镜像自动同步任务信息
+func (c *SwrClient) ListImageAutoSyncReposDetailsInvoker(request *model.ListImageAutoSyncReposDetailsRequest) *ListImageAutoSyncReposDetailsInvoker {
+	requestDef := GenReqDefForListImageAutoSyncReposDetails()
+	return &ListImageAutoSyncReposDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNamespaces 查询组织列表
 //
 // 查询组织列表
 //
@@ -355,7 +475,13 @@ func (c *SwrClient) ListNamespaces(request *model.ListNamespacesRequest) (*model
 	}
 }
 
-// 获取配额信息
+// ListNamespacesInvoker 查询组织列表
+func (c *SwrClient) ListNamespacesInvoker(request *model.ListNamespacesRequest) *ListNamespacesInvoker {
+	requestDef := GenReqDefForListNamespaces()
+	return &ListNamespacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQuotas 获取配额信息
 //
 // 获取配额信息
 //
@@ -371,7 +497,13 @@ func (c *SwrClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuo
 	}
 }
 
-// 获取共享帐号列表
+// ListQuotasInvoker 获取配额信息
+func (c *SwrClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuotasInvoker {
+	requestDef := GenReqDefForListQuotas()
+	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRepoDomains 获取共享帐号列表
 //
 // 获取共享帐号列表
 //
@@ -387,7 +519,13 @@ func (c *SwrClient) ListRepoDomains(request *model.ListRepoDomainsRequest) (*mod
 	}
 }
 
-// 查询镜像仓库列表
+// ListRepoDomainsInvoker 获取共享帐号列表
+func (c *SwrClient) ListRepoDomainsInvoker(request *model.ListRepoDomainsRequest) *ListRepoDomainsInvoker {
+	requestDef := GenReqDefForListRepoDomains()
+	return &ListRepoDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListReposDetails 查询镜像仓库列表
 //
 // 查询镜像仓库列表
 //
@@ -403,7 +541,13 @@ func (c *SwrClient) ListReposDetails(request *model.ListReposDetailsRequest) (*m
 	}
 }
 
-// 查询镜像tag列表
+// ListReposDetailsInvoker 查询镜像仓库列表
+func (c *SwrClient) ListReposDetailsInvoker(request *model.ListReposDetailsRequest) *ListReposDetailsInvoker {
+	requestDef := GenReqDefForListReposDetails()
+	return &ListReposDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRepositoryTags 查询镜像tag列表
 //
 // 查询镜像tag列表
 //
@@ -419,7 +563,13 @@ func (c *SwrClient) ListRepositoryTags(request *model.ListRepositoryTagsRequest)
 	}
 }
 
-// 获取镜像老化记录
+// ListRepositoryTagsInvoker 查询镜像tag列表
+func (c *SwrClient) ListRepositoryTagsInvoker(request *model.ListRepositoryTagsRequest) *ListRepositoryTagsInvoker {
+	requestDef := GenReqDefForListRepositoryTags()
+	return &ListRepositoryTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRetentionHistories 获取镜像老化记录
 //
 // 获取镜像老化记录
 //
@@ -435,7 +585,13 @@ func (c *SwrClient) ListRetentionHistories(request *model.ListRetentionHistories
 	}
 }
 
-// 获取镜像老化规则列表
+// ListRetentionHistoriesInvoker 获取镜像老化记录
+func (c *SwrClient) ListRetentionHistoriesInvoker(request *model.ListRetentionHistoriesRequest) *ListRetentionHistoriesInvoker {
+	requestDef := GenReqDefForListRetentionHistories()
+	return &ListRetentionHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRetentions 获取镜像老化规则列表
 //
 // 获取镜像老化规则列表
 //
@@ -451,7 +607,13 @@ func (c *SwrClient) ListRetentions(request *model.ListRetentionsRequest) (*model
 	}
 }
 
-// 查询共享镜像列表
+// ListRetentionsInvoker 获取镜像老化规则列表
+func (c *SwrClient) ListRetentionsInvoker(request *model.ListRetentionsRequest) *ListRetentionsInvoker {
+	requestDef := GenReqDefForListRetentions()
+	return &ListRetentionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSharedReposDetails 查询共享镜像列表
 //
 // 查询共享镜像列表
 //
@@ -467,7 +629,13 @@ func (c *SwrClient) ListSharedReposDetails(request *model.ListSharedReposDetails
 	}
 }
 
-// 获取镜像仓库下的触发器列表
+// ListSharedReposDetailsInvoker 查询共享镜像列表
+func (c *SwrClient) ListSharedReposDetailsInvoker(request *model.ListSharedReposDetailsRequest) *ListSharedReposDetailsInvoker {
+	requestDef := GenReqDefForListSharedReposDetails()
+	return &ListSharedReposDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTriggersDetails 获取镜像仓库下的触发器列表
 //
 // 获取镜像仓库下的触发器列表
 //
@@ -483,7 +651,13 @@ func (c *SwrClient) ListTriggersDetails(request *model.ListTriggersDetailsReques
 	}
 }
 
-// 判断共享帐号是否存在
+// ListTriggersDetailsInvoker 获取镜像仓库下的触发器列表
+func (c *SwrClient) ListTriggersDetailsInvoker(request *model.ListTriggersDetailsRequest) *ListTriggersDetailsInvoker {
+	requestDef := GenReqDefForListTriggersDetails()
+	return &ListTriggersDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAccessDomain 判断共享帐号是否存在
 //
 // 判断共享租户是否存在
 //
@@ -499,7 +673,13 @@ func (c *SwrClient) ShowAccessDomain(request *model.ShowAccessDomainRequest) (*m
 	}
 }
 
-// 获取组织详情
+// ShowAccessDomainInvoker 判断共享帐号是否存在
+func (c *SwrClient) ShowAccessDomainInvoker(request *model.ShowAccessDomainRequest) *ShowAccessDomainInvoker {
+	requestDef := GenReqDefForShowAccessDomain()
+	return &ShowAccessDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNamespace 获取组织详情
 //
 // 获取组织详情
 //
@@ -515,7 +695,13 @@ func (c *SwrClient) ShowNamespace(request *model.ShowNamespaceRequest) (*model.S
 	}
 }
 
-// 查询组织权限
+// ShowNamespaceInvoker 获取组织详情
+func (c *SwrClient) ShowNamespaceInvoker(request *model.ShowNamespaceRequest) *ShowNamespaceInvoker {
+	requestDef := GenReqDefForShowNamespace()
+	return &ShowNamespaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNamespaceAuth 查询组织权限
 //
 // 查询组织权限
 //
@@ -531,7 +717,13 @@ func (c *SwrClient) ShowNamespaceAuth(request *model.ShowNamespaceAuthRequest) (
 	}
 }
 
-// 查询镜像仓库概要信息
+// ShowNamespaceAuthInvoker 查询组织权限
+func (c *SwrClient) ShowNamespaceAuthInvoker(request *model.ShowNamespaceAuthRequest) *ShowNamespaceAuthInvoker {
+	requestDef := GenReqDefForShowNamespaceAuth()
+	return &ShowNamespaceAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRepository 查询镜像仓库概要信息
 //
 // 查询镜像仓库概要信息
 //
@@ -547,7 +739,13 @@ func (c *SwrClient) ShowRepository(request *model.ShowRepositoryRequest) (*model
 	}
 }
 
-// 获取镜像老化规则记录
+// ShowRepositoryInvoker 查询镜像仓库概要信息
+func (c *SwrClient) ShowRepositoryInvoker(request *model.ShowRepositoryRequest) *ShowRepositoryInvoker {
+	requestDef := GenReqDefForShowRepository()
+	return &ShowRepositoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRetention 获取镜像老化规则记录
 //
 // 获取镜像老化规则记录
 //
@@ -563,7 +761,13 @@ func (c *SwrClient) ShowRetention(request *model.ShowRetentionRequest) (*model.S
 	}
 }
 
-// 获取镜像同步任务信息
+// ShowRetentionInvoker 获取镜像老化规则记录
+func (c *SwrClient) ShowRetentionInvoker(request *model.ShowRetentionRequest) *ShowRetentionInvoker {
+	requestDef := GenReqDefForShowRetention()
+	return &ShowRetentionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSyncJob 获取镜像同步任务信息
 //
 // 获取镜像同步任务信息
 //
@@ -579,7 +783,13 @@ func (c *SwrClient) ShowSyncJob(request *model.ShowSyncJobRequest) (*model.ShowS
 	}
 }
 
-// 获取触发器详情
+// ShowSyncJobInvoker 获取镜像同步任务信息
+func (c *SwrClient) ShowSyncJobInvoker(request *model.ShowSyncJobRequest) *ShowSyncJobInvoker {
+	requestDef := GenReqDefForShowSyncJob()
+	return &ShowSyncJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTrigger 获取触发器详情
 //
 // 获取触发器详情
 //
@@ -595,7 +805,13 @@ func (c *SwrClient) ShowTrigger(request *model.ShowTriggerRequest) (*model.ShowT
 	}
 }
 
-// 查询镜像权限
+// ShowTriggerInvoker 获取触发器详情
+func (c *SwrClient) ShowTriggerInvoker(request *model.ShowTriggerRequest) *ShowTriggerInvoker {
+	requestDef := GenReqDefForShowTrigger()
+	return &ShowTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowUserRepositoryAuth 查询镜像权限
 //
 // 查询镜像权限
 //
@@ -611,7 +827,13 @@ func (c *SwrClient) ShowUserRepositoryAuth(request *model.ShowUserRepositoryAuth
 	}
 }
 
-// 更新组织权限
+// ShowUserRepositoryAuthInvoker 查询镜像权限
+func (c *SwrClient) ShowUserRepositoryAuthInvoker(request *model.ShowUserRepositoryAuthRequest) *ShowUserRepositoryAuthInvoker {
+	requestDef := GenReqDefForShowUserRepositoryAuth()
+	return &ShowUserRepositoryAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNamespaceAuth 更新组织权限
 //
 // 更新组织权限
 //
@@ -627,7 +849,13 @@ func (c *SwrClient) UpdateNamespaceAuth(request *model.UpdateNamespaceAuthReques
 	}
 }
 
-// 更新镜像仓库的概要信息
+// UpdateNamespaceAuthInvoker 更新组织权限
+func (c *SwrClient) UpdateNamespaceAuthInvoker(request *model.UpdateNamespaceAuthRequest) *UpdateNamespaceAuthInvoker {
+	requestDef := GenReqDefForUpdateNamespaceAuth()
+	return &UpdateNamespaceAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRepo 更新镜像仓库的概要信息
 //
 // 更新租户命名空间下的镜像概要信息，包括镜像类型、是否公有、描述信息
 //
@@ -643,7 +871,13 @@ func (c *SwrClient) UpdateRepo(request *model.UpdateRepoRequest) (*model.UpdateR
 	}
 }
 
-// 更新共享帐号
+// UpdateRepoInvoker 更新镜像仓库的概要信息
+func (c *SwrClient) UpdateRepoInvoker(request *model.UpdateRepoRequest) *UpdateRepoInvoker {
+	requestDef := GenReqDefForUpdateRepo()
+	return &UpdateRepoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRepoDomains 更新共享帐号
 //
 // 更新共享帐号
 //
@@ -659,7 +893,13 @@ func (c *SwrClient) UpdateRepoDomains(request *model.UpdateRepoDomainsRequest) (
 	}
 }
 
-// 修改镜像老化规则
+// UpdateRepoDomainsInvoker 更新共享帐号
+func (c *SwrClient) UpdateRepoDomainsInvoker(request *model.UpdateRepoDomainsRequest) *UpdateRepoDomainsInvoker {
+	requestDef := GenReqDefForUpdateRepoDomains()
+	return &UpdateRepoDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRetention 修改镜像老化规则
 //
 // 修改镜像老化规则
 //
@@ -675,7 +915,13 @@ func (c *SwrClient) UpdateRetention(request *model.UpdateRetentionRequest) (*mod
 	}
 }
 
-// 更新触发器配置
+// UpdateRetentionInvoker 修改镜像老化规则
+func (c *SwrClient) UpdateRetentionInvoker(request *model.UpdateRetentionRequest) *UpdateRetentionInvoker {
+	requestDef := GenReqDefForUpdateRetention()
+	return &UpdateRetentionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTrigger 更新触发器配置
 //
 // 更新触发器配置
 //
@@ -691,7 +937,13 @@ func (c *SwrClient) UpdateTrigger(request *model.UpdateTriggerRequest) (*model.U
 	}
 }
 
-// 更新镜像权限
+// UpdateTriggerInvoker 更新触发器配置
+func (c *SwrClient) UpdateTriggerInvoker(request *model.UpdateTriggerRequest) *UpdateTriggerInvoker {
+	requestDef := GenReqDefForUpdateTrigger()
+	return &UpdateTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateUserRepositoryAuth 更新镜像权限
 //
 // 更新镜像权限
 //
@@ -707,7 +959,13 @@ func (c *SwrClient) UpdateUserRepositoryAuth(request *model.UpdateUserRepository
 	}
 }
 
-// 查询所有API版本信息
+// UpdateUserRepositoryAuthInvoker 更新镜像权限
+func (c *SwrClient) UpdateUserRepositoryAuthInvoker(request *model.UpdateUserRepositoryAuthRequest) *UpdateUserRepositoryAuthInvoker {
+	requestDef := GenReqDefForUpdateUserRepositoryAuth()
+	return &UpdateUserRepositoryAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiVersions 查询所有API版本信息
 //
 // 查询所有API版本信息
 //
@@ -723,7 +981,13 @@ func (c *SwrClient) ListApiVersions(request *model.ListApiVersionsRequest) (*mod
 	}
 }
 
-// 查询指定API版本信息
+// ListApiVersionsInvoker 查询所有API版本信息
+func (c *SwrClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest) *ListApiVersionsInvoker {
+	requestDef := GenReqDefForListApiVersions()
+	return &ListApiVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowApiVersion 查询指定API版本信息
 //
 // 查询指定API版本信息
 //
@@ -737,4 +1001,10 @@ func (c *SwrClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model
 	} else {
 		return resp.(*model.ShowApiVersionResponse), nil
 	}
+}
+
+// ShowApiVersionInvoker 查询指定API版本信息
+func (c *SwrClient) ShowApiVersionInvoker(request *model.ShowApiVersionRequest) *ShowApiVersionInvoker {
+	requestDef := GenReqDefForShowApiVersion()
+	return &ShowApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

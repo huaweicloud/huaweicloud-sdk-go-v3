@@ -85,6 +85,10 @@ func GetDiagnosisItemNameEnum() DiagnosisItemNameEnum {
 	}
 }
 
+func (c DiagnosisItemName) Value() string {
+	return c.value
+}
+
 func (c DiagnosisItemName) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -125,6 +129,10 @@ func GetDiagnosisItemResultEnum() DiagnosisItemResultEnum {
 			value: "normal",
 		},
 	}
+}
+
+func (c DiagnosisItemResult) Value() string {
+	return c.value
 }
 
 func (c DiagnosisItemResult) MarshalJSON() ([]byte, error) {

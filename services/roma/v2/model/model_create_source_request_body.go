@@ -55,6 +55,10 @@ func GetCreateSourceRequestBodyIsBase64Enum() CreateSourceRequestBodyIsBase64Enu
 	}
 }
 
+func (c CreateSourceRequestBodyIsBase64) Value() int32 {
+	return c.value
+}
+
 func (c CreateSourceRequestBodyIsBase64) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -90,6 +94,10 @@ func GetCreateSourceRequestBodyContainDeviceInfoEnum() CreateSourceRequestBodyCo
 			value: 1,
 		},
 	}
+}
+
+func (c CreateSourceRequestBodyContainDeviceInfo) Value() int32 {
+	return c.value
 }
 
 func (c CreateSourceRequestBodyContainDeviceInfo) MarshalJSON() ([]byte, error) {

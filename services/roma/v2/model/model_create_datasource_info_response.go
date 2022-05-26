@@ -213,6 +213,10 @@ func GetCreateDatasourceInfoResponseDatasourceTypeEnum() CreateDatasourceInfoRes
 	}
 }
 
+func (c CreateDatasourceInfoResponseDatasourceType) Value() string {
+	return c.value
+}
+
 func (c CreateDatasourceInfoResponseDatasourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -257,6 +261,10 @@ func GetCreateDatasourceInfoResponseAppPermissionEnum() CreateDatasourceInfoResp
 			value: "modify",
 		},
 	}
+}
+
+func (c CreateDatasourceInfoResponseAppPermission) Value() string {
+	return c.value
 }
 
 func (c CreateDatasourceInfoResponseAppPermission) MarshalJSON() ([]byte, error) {

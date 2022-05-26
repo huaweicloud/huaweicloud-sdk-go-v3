@@ -113,6 +113,10 @@ func GetKeyDetailsKeySpecEnum() KeyDetailsKeySpecEnum {
 	}
 }
 
+func (c KeyDetailsKeySpec) Value() string {
+	return c.value
+}
+
 func (c KeyDetailsKeySpec) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -151,6 +155,10 @@ func GetKeyDetailsKeyUsageEnum() KeyDetailsKeyUsageEnum {
 	}
 }
 
+func (c KeyDetailsKeyUsage) Value() string {
+	return c.value
+}
+
 func (c KeyDetailsKeyUsage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -187,6 +195,10 @@ func GetKeyDetailsOriginEnum() KeyDetailsOriginEnum {
 			value: "external",
 		},
 	}
+}
+
+func (c KeyDetailsOrigin) Value() string {
+	return c.value
 }
 
 func (c KeyDetailsOrigin) MarshalJSON() ([]byte, error) {

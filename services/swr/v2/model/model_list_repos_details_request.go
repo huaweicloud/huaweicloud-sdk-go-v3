@@ -57,6 +57,10 @@ func GetListReposDetailsRequestContentTypeEnum() ListReposDetailsRequestContentT
 	}
 }
 
+func (c ListReposDetailsRequestContentType) Value() string {
+	return c.value
+}
+
 func (c ListReposDetailsRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

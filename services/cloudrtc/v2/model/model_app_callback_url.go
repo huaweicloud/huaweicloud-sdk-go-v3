@@ -54,6 +54,10 @@ func GetAppCallbackUrlNotifyEventSubscriptionEnum() AppCallbackUrlNotifyEventSub
 	}
 }
 
+func (c AppCallbackUrlNotifyEventSubscription) Value() string {
+	return c.value
+}
+
 func (c AppCallbackUrlNotifyEventSubscription) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

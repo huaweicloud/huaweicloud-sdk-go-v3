@@ -80,6 +80,10 @@ func GetCreateAlarmRequestBodyAlarmTypeEnum() CreateAlarmRequestBodyAlarmTypeEnu
 	}
 }
 
+func (c CreateAlarmRequestBodyAlarmType) Value() string {
+	return c.value
+}
+
 func (c CreateAlarmRequestBodyAlarmType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

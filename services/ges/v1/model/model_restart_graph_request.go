@@ -44,6 +44,10 @@ func GetRestartGraphRequestActionIdEnum() RestartGraphRequestActionIdEnum {
 	}
 }
 
+func (c RestartGraphRequestActionId) Value() string {
+	return c.value
+}
+
 func (c RestartGraphRequestActionId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

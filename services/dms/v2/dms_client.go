@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dms/v2/model"
 )
 
@@ -19,7 +19,7 @@ func DmsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 批量添加或删除队列标签
+// BatchCreateOrDeleteQueueTag 批量添加或删除队列标签
 //
 // 批量添加或删除队列标签。
 //
@@ -35,7 +35,13 @@ func (c *DmsClient) BatchCreateOrDeleteQueueTag(request *model.BatchCreateOrDele
 	}
 }
 
-// 确认已消费指定消息
+// BatchCreateOrDeleteQueueTagInvoker 批量添加或删除队列标签
+func (c *DmsClient) BatchCreateOrDeleteQueueTagInvoker(request *model.BatchCreateOrDeleteQueueTagRequest) *BatchCreateOrDeleteQueueTagInvoker {
+	requestDef := GenReqDefForBatchCreateOrDeleteQueueTag()
+	return &BatchCreateOrDeleteQueueTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ConfirmConsumptionMessages 确认已消费指定消息
 //
 // 确认已经消费指定消息。
 //
@@ -59,7 +65,13 @@ func (c *DmsClient) ConfirmConsumptionMessages(request *model.ConfirmConsumption
 	}
 }
 
-// 确认已消费死信消息
+// ConfirmConsumptionMessagesInvoker 确认已消费指定消息
+func (c *DmsClient) ConfirmConsumptionMessagesInvoker(request *model.ConfirmConsumptionMessagesRequest) *ConfirmConsumptionMessagesInvoker {
+	requestDef := GenReqDefForConfirmConsumptionMessages()
+	return &ConfirmConsumptionMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ConfirmDeadLettersMessages 确认已消费死信消息
 //
 // 确认已经消费指定的死信消息。
 //
@@ -83,7 +95,13 @@ func (c *DmsClient) ConfirmDeadLettersMessages(request *model.ConfirmDeadLetters
 	}
 }
 
-// 消费死信消息
+// ConfirmDeadLettersMessagesInvoker 确认已消费死信消息
+func (c *DmsClient) ConfirmDeadLettersMessagesInvoker(request *model.ConfirmDeadLettersMessagesRequest) *ConfirmDeadLettersMessagesInvoker {
+	requestDef := GenReqDefForConfirmDeadLettersMessages()
+	return &ConfirmDeadLettersMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ConsumeDeadlettersMessage 消费死信消息
 //
 // 消费指定消费组产生的死信消息。可同时消费多条消息，每次消费的消息负载不超过512KB。
 //
@@ -101,7 +119,13 @@ func (c *DmsClient) ConsumeDeadlettersMessage(request *model.ConsumeDeadlettersM
 	}
 }
 
-// 消费消息
+// ConsumeDeadlettersMessageInvoker 消费死信消息
+func (c *DmsClient) ConsumeDeadlettersMessageInvoker(request *model.ConsumeDeadlettersMessageRequest) *ConsumeDeadlettersMessageInvoker {
+	requestDef := GenReqDefForConsumeDeadlettersMessage()
+	return &ConsumeDeadlettersMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ConsumeMessages 消费消息
 //
 // 消费指定队列中的消息。可同时消费多条消息，每次消费的消息负载不超过512KB。
 //
@@ -121,7 +145,13 @@ func (c *DmsClient) ConsumeMessages(request *model.ConsumeMessagesRequest) (*mod
 	}
 }
 
-// 创建消费组
+// ConsumeMessagesInvoker 消费消息
+func (c *DmsClient) ConsumeMessagesInvoker(request *model.ConsumeMessagesRequest) *ConsumeMessagesInvoker {
+	requestDef := GenReqDefForConsumeMessages()
+	return &ConsumeMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateConsumerGroup 创建消费组
 //
 // 创建消费组。
 //
@@ -141,7 +171,13 @@ func (c *DmsClient) CreateConsumerGroup(request *model.CreateConsumerGroupReques
 	}
 }
 
-// 创建队列
+// CreateConsumerGroupInvoker 创建消费组
+func (c *DmsClient) CreateConsumerGroupInvoker(request *model.CreateConsumerGroupRequest) *CreateConsumerGroupInvoker {
+	requestDef := GenReqDefForCreateConsumerGroup()
+	return &CreateConsumerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateQueue 创建队列
 //
 // 每个project_id默认只能创建30个队列。
 // &gt; 创建队列时系统内部完成初始化需要1-3秒，如果创建队列后立即进行操作，可能会导致生产消息、消费消息、查询队列详情、创建消费组和删除队列等操作失败。建议3秒后再操作该队列。
@@ -158,7 +194,13 @@ func (c *DmsClient) CreateQueue(request *model.CreateQueueRequest) (*model.Creat
 	}
 }
 
-// 删除指定队列
+// CreateQueueInvoker 创建队列
+func (c *DmsClient) CreateQueueInvoker(request *model.CreateQueueRequest) *CreateQueueInvoker {
+	requestDef := GenReqDefForCreateQueue()
+	return &CreateQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteQueue 删除指定队列
 //
 // 删除指定的队列。
 //
@@ -174,7 +216,13 @@ func (c *DmsClient) DeleteQueue(request *model.DeleteQueueRequest) (*model.Delet
 	}
 }
 
-// 删除指定消费组
+// DeleteQueueInvoker 删除指定队列
+func (c *DmsClient) DeleteQueueInvoker(request *model.DeleteQueueRequest) *DeleteQueueInvoker {
+	requestDef := GenReqDefForDeleteQueue()
+	return &DeleteQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSpecifiedConsumerGroup 删除指定消费组
 //
 // 删除指定消费组。
 //
@@ -190,7 +238,13 @@ func (c *DmsClient) DeleteSpecifiedConsumerGroup(request *model.DeleteSpecifiedC
 	}
 }
 
-// 查看指定队列的所有消费组
+// DeleteSpecifiedConsumerGroupInvoker 删除指定消费组
+func (c *DmsClient) DeleteSpecifiedConsumerGroupInvoker(request *model.DeleteSpecifiedConsumerGroupRequest) *DeleteSpecifiedConsumerGroupInvoker {
+	requestDef := GenReqDefForDeleteSpecifiedConsumerGroup()
+	return &DeleteSpecifiedConsumerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConsumerGroups 查看指定队列的所有消费组
 //
 // 获取指定队列的所有消费组。
 //
@@ -206,7 +260,13 @@ func (c *DmsClient) ListConsumerGroups(request *model.ListConsumerGroupsRequest)
 	}
 }
 
-// 查看所有队列
+// ListConsumerGroupsInvoker 查看指定队列的所有消费组
+func (c *DmsClient) ListConsumerGroupsInvoker(request *model.ListConsumerGroupsRequest) *ListConsumerGroupsInvoker {
+	requestDef := GenReqDefForListConsumerGroups()
+	return &ListConsumerGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQueues 查看所有队列
 //
 // 查看所有队列。
 //
@@ -222,7 +282,13 @@ func (c *DmsClient) ListQueues(request *model.ListQueuesRequest) (*model.ListQue
 	}
 }
 
-// 向指定队列发送消息
+// ListQueuesInvoker 查看所有队列
+func (c *DmsClient) ListQueuesInvoker(request *model.ListQueuesRequest) *ListQueuesInvoker {
+	requestDef := GenReqDefForListQueues()
+	return &ListQueuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SendMessages 向指定队列发送消息
 //
 // 向指定队列发送消息，可同时发送多条消息。
 //
@@ -242,7 +308,13 @@ func (c *DmsClient) SendMessages(request *model.SendMessagesRequest) (*model.Sen
 	}
 }
 
-// 查看指定队列
+// SendMessagesInvoker 向指定队列发送消息
+func (c *DmsClient) SendMessagesInvoker(request *model.SendMessagesRequest) *SendMessagesInvoker {
+	requestDef := GenReqDefForSendMessages()
+	return &SendMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQueue 查看指定队列
 //
 // 查看指定的队列。
 //
@@ -258,7 +330,13 @@ func (c *DmsClient) ShowQueue(request *model.ShowQueueRequest) (*model.ShowQueue
 	}
 }
 
-// 查询项目标签
+// ShowQueueInvoker 查看指定队列
+func (c *DmsClient) ShowQueueInvoker(request *model.ShowQueueRequest) *ShowQueueInvoker {
+	requestDef := GenReqDefForShowQueue()
+	return &ShowQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQueueProjectTags 查询项目标签
 //
 // 查询项目标签。
 //
@@ -274,7 +352,13 @@ func (c *DmsClient) ShowQueueProjectTags(request *model.ShowQueueProjectTagsRequ
 	}
 }
 
-// 查询队列标签
+// ShowQueueProjectTagsInvoker 查询项目标签
+func (c *DmsClient) ShowQueueProjectTagsInvoker(request *model.ShowQueueProjectTagsRequest) *ShowQueueProjectTagsInvoker {
+	requestDef := GenReqDefForShowQueueProjectTags()
+	return &ShowQueueProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQueueTags 查询队列标签
 //
 // 查询队列标签。
 //
@@ -290,7 +374,13 @@ func (c *DmsClient) ShowQueueTags(request *model.ShowQueueTagsRequest) (*model.S
 	}
 }
 
-// 查看租户配额
+// ShowQueueTagsInvoker 查询队列标签
+func (c *DmsClient) ShowQueueTagsInvoker(request *model.ShowQueueTagsRequest) *ShowQueueTagsInvoker {
+	requestDef := GenReqDefForShowQueueTags()
+	return &ShowQueueTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuotas 查看租户配额
 //
 // 查看当前项目的配额。
 //
@@ -304,4 +394,10 @@ func (c *DmsClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuo
 	} else {
 		return resp.(*model.ShowQuotasResponse), nil
 	}
+}
+
+// ShowQuotasInvoker 查看租户配额
+func (c *DmsClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuotasInvoker {
+	requestDef := GenReqDefForShowQuotas()
+	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

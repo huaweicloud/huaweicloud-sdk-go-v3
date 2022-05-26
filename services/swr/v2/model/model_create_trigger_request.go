@@ -53,6 +53,10 @@ func GetCreateTriggerRequestContentTypeEnum() CreateTriggerRequestContentTypeEnu
 	}
 }
 
+func (c CreateTriggerRequestContentType) Value() string {
+	return c.value
+}
+
 func (c CreateTriggerRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

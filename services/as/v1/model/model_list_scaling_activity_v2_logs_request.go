@@ -86,6 +86,10 @@ func GetListScalingActivityV2LogsRequestTypeEnum() ListScalingActivityV2LogsRequ
 	}
 }
 
+func (c ListScalingActivityV2LogsRequestType) Value() string {
+	return c.value
+}
+
 func (c ListScalingActivityV2LogsRequestType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -126,6 +130,10 @@ func GetListScalingActivityV2LogsRequestStatusEnum() ListScalingActivityV2LogsRe
 			value: "DOING",
 		},
 	}
+}
+
+func (c ListScalingActivityV2LogsRequestStatus) Value() string {
+	return c.value
 }
 
 func (c ListScalingActivityV2LogsRequestStatus) MarshalJSON() ([]byte, error) {

@@ -56,6 +56,10 @@ func GetBatchUpdateUserStatusRequestValueEnum() BatchUpdateUserStatusRequestValu
 	}
 }
 
+func (c BatchUpdateUserStatusRequestValue) Value() int32 {
+	return c.value
+}
+
 func (c BatchUpdateUserStatusRequestValue) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -76,6 +76,10 @@ func GetCreateSqlAlarmRuleRequestBodySqlAlarmLevelEnum() CreateSqlAlarmRuleReque
 	}
 }
 
+func (c CreateSqlAlarmRuleRequestBodySqlAlarmLevel) Value() string {
+	return c.value
+}
+
 func (c CreateSqlAlarmRuleRequestBodySqlAlarmLevel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -223,6 +223,10 @@ func GetGlanceShowImageResponseImageSourceTypeEnum() GlanceShowImageResponseImag
 	}
 }
 
+func (c GlanceShowImageResponseImageSourceType) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseImageSourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -265,6 +269,10 @@ func GetGlanceShowImageResponseImagetypeEnum() GlanceShowImageResponseImagetypeE
 	}
 }
 
+func (c GlanceShowImageResponseImagetype) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseImagetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -303,6 +311,10 @@ func GetGlanceShowImageResponseIsregisteredEnum() GlanceShowImageResponseIsregis
 	}
 }
 
+func (c GlanceShowImageResponseIsregistered) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseIsregistered) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -339,6 +351,10 @@ func GetGlanceShowImageResponseOsBitEnum() GlanceShowImageResponseOsBitEnum {
 			value: "64",
 		},
 	}
+}
+
+func (c GlanceShowImageResponseOsBit) Value() string {
+	return c.value
 }
 
 func (c GlanceShowImageResponseOsBit) MarshalJSON() ([]byte, error) {
@@ -381,6 +397,10 @@ func GetGlanceShowImageResponseOsTypeEnum() GlanceShowImageResponseOsTypeEnum {
 			value: "Other",
 		},
 	}
+}
+
+func (c GlanceShowImageResponseOsType) Value() string {
+	return c.value
 }
 
 func (c GlanceShowImageResponseOsType) MarshalJSON() ([]byte, error) {
@@ -461,6 +481,10 @@ func GetGlanceShowImageResponsePlatformEnum() GlanceShowImageResponsePlatformEnu
 	}
 }
 
+func (c GlanceShowImageResponsePlatform) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponsePlatform) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -509,6 +533,10 @@ func GetGlanceShowImageResponseDiskFormatEnum() GlanceShowImageResponseDiskForma
 			value: "zvhd2",
 		},
 	}
+}
+
+func (c GlanceShowImageResponseDiskFormat) Value() string {
+	return c.value
 }
 
 func (c GlanceShowImageResponseDiskFormat) MarshalJSON() ([]byte, error) {
@@ -561,6 +589,10 @@ func GetGlanceShowImageResponseStatusEnum() GlanceShowImageResponseStatusEnum {
 	}
 }
 
+func (c GlanceShowImageResponseStatus) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -601,6 +633,10 @@ func GetGlanceShowImageResponseVirtualEnvTypeEnum() GlanceShowImageResponseVirtu
 			value: "DataImage",
 		},
 	}
+}
+
+func (c GlanceShowImageResponseVirtualEnvType) Value() string {
+	return c.value
 }
 
 func (c GlanceShowImageResponseVirtualEnvType) MarshalJSON() ([]byte, error) {
@@ -645,6 +681,10 @@ func GetGlanceShowImageResponseVisibilityEnum() GlanceShowImageResponseVisibilit
 	}
 }
 
+func (c GlanceShowImageResponseVisibility) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseVisibility) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -681,6 +721,10 @@ func GetGlanceShowImageResponseSupportFcInjectEnum() GlanceShowImageResponseSupp
 			value: "false",
 		},
 	}
+}
+
+func (c GlanceShowImageResponseSupportFcInject) Value() string {
+	return c.value
 }
 
 func (c GlanceShowImageResponseSupportFcInject) MarshalJSON() ([]byte, error) {
@@ -721,6 +765,10 @@ func GetGlanceShowImageResponseHwFirmwareTypeEnum() GlanceShowImageResponseHwFir
 	}
 }
 
+func (c GlanceShowImageResponseHwFirmwareType) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseHwFirmwareType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -759,6 +807,10 @@ func GetGlanceShowImageResponseSupportArmEnum() GlanceShowImageResponseSupportAr
 	}
 }
 
+func (c GlanceShowImageResponseSupportArm) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseSupportArm) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -795,6 +847,10 @@ func GetGlanceShowImageResponseIsOffshelvedEnum() GlanceShowImageResponseIsOffsh
 			value: "false",
 		},
 	}
+}
+
+func (c GlanceShowImageResponseIsOffshelved) Value() string {
+	return c.value
 }
 
 func (c GlanceShowImageResponseIsOffshelved) MarshalJSON() ([]byte, error) {

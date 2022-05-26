@@ -57,6 +57,10 @@ func GetPrepaidChangeChargeModeOptionPeriodTypeEnum() PrepaidChangeChargeModeOpt
 	}
 }
 
+func (c PrepaidChangeChargeModeOptionPeriodType) Value() string {
+	return c.value
+}
+
 func (c PrepaidChangeChargeModeOptionPeriodType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

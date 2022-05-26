@@ -53,6 +53,10 @@ func GetModifyPwdEndPointEndPointTypeEnum() ModifyPwdEndPointEndPointTypeEnum {
 	}
 }
 
+func (c ModifyPwdEndPointEndPointType) Value() string {
+	return c.value
+}
+
 func (c ModifyPwdEndPointEndPointType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

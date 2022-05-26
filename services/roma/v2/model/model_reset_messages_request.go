@@ -46,6 +46,10 @@ func GetResetMessagesRequestActionIdEnum() ResetMessagesRequestActionIdEnum {
 	}
 }
 
+func (c ResetMessagesRequestActionId) Value() string {
+	return c.value
+}
+
 func (c ResetMessagesRequestActionId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

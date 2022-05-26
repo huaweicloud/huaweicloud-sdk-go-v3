@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/campusgo/v2/model"
 )
 
@@ -19,7 +19,7 @@ func CampusGoClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 创建服务作业
+// CreateTasks 创建服务作业
 //
 // 该接口用于创建服务作业
 //
@@ -35,7 +35,13 @@ func (c *CampusGoClient) CreateTasks(request *model.CreateTasksRequest) (*model.
 	}
 }
 
-// 删除服务作业
+// CreateTasksInvoker 创建服务作业
+func (c *CampusGoClient) CreateTasksInvoker(request *model.CreateTasksRequest) *CreateTasksInvoker {
+	requestDef := GenReqDefForCreateTasks()
+	return &CreateTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTask 删除服务作业
 //
 // 该接口用于删除服务作业
 //
@@ -51,7 +57,13 @@ func (c *CampusGoClient) DeleteTask(request *model.DeleteTaskRequest) (*model.De
 	}
 }
 
-// 获取服务作业列表
+// DeleteTaskInvoker 删除服务作业
+func (c *CampusGoClient) DeleteTaskInvoker(request *model.DeleteTaskRequest) *DeleteTaskInvoker {
+	requestDef := GenReqDefForDeleteTask()
+	return &DeleteTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTasksDetails 获取服务作业列表
 //
 // 该接口用于获取服务作业列表
 //
@@ -67,7 +79,13 @@ func (c *CampusGoClient) ListTasksDetails(request *model.ListTasksDetailsRequest
 	}
 }
 
-// 查询服务作业
+// ListTasksDetailsInvoker 获取服务作业列表
+func (c *CampusGoClient) ListTasksDetailsInvoker(request *model.ListTasksDetailsRequest) *ListTasksDetailsInvoker {
+	requestDef := GenReqDefForListTasksDetails()
+	return &ListTasksDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTask 查询服务作业
 //
 // 该接口用于查询服务作业
 //
@@ -81,4 +99,10 @@ func (c *CampusGoClient) ShowTask(request *model.ShowTaskRequest) (*model.ShowTa
 	} else {
 		return resp.(*model.ShowTaskResponse), nil
 	}
+}
+
+// ShowTaskInvoker 查询服务作业
+func (c *CampusGoClient) ShowTaskInvoker(request *model.ShowTaskRequest) *ShowTaskInvoker {
+	requestDef := GenReqDefForShowTask()
+	return &ShowTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

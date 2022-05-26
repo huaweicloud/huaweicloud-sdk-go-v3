@@ -47,6 +47,10 @@ func GetQueryMatchItemKeyEnum() QueryMatchItemKeyEnum {
 	}
 }
 
+func (c QueryMatchItemKey) Value() string {
+	return c.value
+}
+
 func (c QueryMatchItemKey) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

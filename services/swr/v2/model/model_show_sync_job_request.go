@@ -54,6 +54,10 @@ func GetShowSyncJobRequestContentTypeEnum() ShowSyncJobRequestContentTypeEnum {
 	}
 }
 
+func (c ShowSyncJobRequestContentType) Value() string {
+	return c.value
+}
+
 func (c ShowSyncJobRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

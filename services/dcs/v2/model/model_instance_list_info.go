@@ -121,6 +121,11 @@ type InstanceListInfo struct {
 
 	// 有资源的可用区编码。
 	AzCodes *[]string `json:"az_codes,omitempty"`
+
+	Features *Features `json:"features,omitempty"`
+
+	// 实例子状态。
+	SubStatus *string `json:"sub_status,omitempty"`
 }
 
 func (o InstanceListInfo) String() string {

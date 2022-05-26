@@ -58,6 +58,10 @@ func GetAccessConfigWindowsLogInfoCategorysEnum() AccessConfigWindowsLogInfoCate
 	}
 }
 
+func (c AccessConfigWindowsLogInfoCategorys) Value() string {
+	return c.value
+}
+
 func (c AccessConfigWindowsLogInfoCategorys) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -106,6 +110,10 @@ func GetAccessConfigWindowsLogInfoEventLevelEnum() AccessConfigWindowsLogInfoEve
 			value: "verbose",
 		},
 	}
+}
+
+func (c AccessConfigWindowsLogInfoEventLevel) Value() string {
+	return c.value
 }
 
 func (c AccessConfigWindowsLogInfoEventLevel) MarshalJSON() ([]byte, error) {

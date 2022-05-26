@@ -111,6 +111,10 @@ func GetGetHostListInfoHostStatusEnum() GetHostListInfoHostStatusEnum {
 	}
 }
 
+func (c GetHostListInfoHostStatus) Value() string {
+	return c.value
+}
+
 func (c GetHostListInfoHostStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -147,6 +151,10 @@ func GetGetHostListInfoHostTypeEnum() GetHostListInfoHostTypeEnum {
 			value: "windows",
 		},
 	}
+}
+
+func (c GetHostListInfoHostType) Value() string {
+	return c.value
 }
 
 func (c GetHostListInfoHostType) MarshalJSON() ([]byte, error) {

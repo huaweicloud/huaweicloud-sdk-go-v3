@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iotedge/v2/model"
 )
 
@@ -19,7 +19,7 @@ func IoTEdgeClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 创建边缘节点
+// CreateEdgeNode 创建边缘节点
 //
 // 创建边缘节点
 //
@@ -35,7 +35,13 @@ func (c *IoTEdgeClient) CreateEdgeNode(request *model.CreateEdgeNodeRequest) (*m
 	}
 }
 
-// 生成边缘节点安装命令
+// CreateEdgeNodeInvoker 创建边缘节点
+func (c *IoTEdgeClient) CreateEdgeNodeInvoker(request *model.CreateEdgeNodeRequest) *CreateEdgeNodeInvoker {
+	requestDef := GenReqDefForCreateEdgeNode()
+	return &CreateEdgeNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateInstallCmd 生成边缘节点安装命令
 //
 // 生成边缘节点安装命令，命令有效时间30分钟，超过后需要重新生成
 //
@@ -51,7 +57,13 @@ func (c *IoTEdgeClient) CreateInstallCmd(request *model.CreateInstallCmdRequest)
 	}
 }
 
-// 删除边缘节点
+// CreateInstallCmdInvoker 生成边缘节点安装命令
+func (c *IoTEdgeClient) CreateInstallCmdInvoker(request *model.CreateInstallCmdRequest) *CreateInstallCmdInvoker {
+	requestDef := GenReqDefForCreateInstallCmd()
+	return &CreateInstallCmdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEdgeNode 删除边缘节点
 //
 // 删除指定边缘节点
 //
@@ -67,7 +79,13 @@ func (c *IoTEdgeClient) DeleteEdgeNode(request *model.DeleteEdgeNodeRequest) (*m
 	}
 }
 
-// 查询边缘节点列表
+// DeleteEdgeNodeInvoker 删除边缘节点
+func (c *IoTEdgeClient) DeleteEdgeNodeInvoker(request *model.DeleteEdgeNodeRequest) *DeleteEdgeNodeInvoker {
+	requestDef := GenReqDefForDeleteEdgeNode()
+	return &DeleteEdgeNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEdgeNodes 查询边缘节点列表
 //
 // 查询边缘节点列表
 //
@@ -83,7 +101,13 @@ func (c *IoTEdgeClient) ListEdgeNodes(request *model.ListEdgeNodesRequest) (*mod
 	}
 }
 
-// 查询边缘节点详情
+// ListEdgeNodesInvoker 查询边缘节点列表
+func (c *IoTEdgeClient) ListEdgeNodesInvoker(request *model.ListEdgeNodesRequest) *ListEdgeNodesInvoker {
+	requestDef := GenReqDefForListEdgeNodes()
+	return &ListEdgeNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEdgeNode 查询边缘节点详情
 //
 // 查询边缘节点详情
 //
@@ -99,7 +123,13 @@ func (c *IoTEdgeClient) ShowEdgeNode(request *model.ShowEdgeNodeRequest) (*model
 	}
 }
 
-// 添加设备
+// ShowEdgeNodeInvoker 查询边缘节点详情
+func (c *IoTEdgeClient) ShowEdgeNodeInvoker(request *model.ShowEdgeNodeRequest) *ShowEdgeNodeInvoker {
+	requestDef := GenReqDefForShowEdgeNode()
+	return &ShowEdgeNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddDevice 添加设备
 //
 // 添加设备
 //
@@ -115,7 +145,13 @@ func (c *IoTEdgeClient) AddDevice(request *model.AddDeviceRequest) (*model.AddDe
 	}
 }
 
-// 批量修改子设备协议配置
+// AddDeviceInvoker 添加设备
+func (c *IoTEdgeClient) AddDeviceInvoker(request *model.AddDeviceRequest) *AddDeviceInvoker {
+	requestDef := GenReqDefForAddDevice()
+	return &AddDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateConfigs 批量修改子设备协议配置
 //
 // 批量修改产品关联的设备，传入product_id修改该产品下所有设备，传入device_id列表，根据device_id修改,两者互斥。
 //
@@ -131,7 +167,13 @@ func (c *IoTEdgeClient) BatchUpdateConfigs(request *model.BatchUpdateConfigsRequ
 	}
 }
 
-// 生成modbus协议设备接入码
+// BatchUpdateConfigsInvoker 批量修改子设备协议配置
+func (c *IoTEdgeClient) BatchUpdateConfigsInvoker(request *model.BatchUpdateConfigsRequest) *BatchUpdateConfigsInvoker {
+	requestDef := GenReqDefForBatchUpdateConfigs()
+	return &BatchUpdateConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAccessCode 生成modbus协议设备接入码
 //
 // 生成modbus协议设备接入码
 //
@@ -147,7 +189,13 @@ func (c *IoTEdgeClient) CreateAccessCode(request *model.CreateAccessCodeRequest)
 	}
 }
 
-// 删除设备
+// CreateAccessCodeInvoker 生成modbus协议设备接入码
+func (c *IoTEdgeClient) CreateAccessCodeInvoker(request *model.CreateAccessCodeRequest) *CreateAccessCodeInvoker {
+	requestDef := GenReqDefForCreateAccessCode()
+	return &CreateAccessCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDevice 删除设备
 //
 // 删除设备
 //
@@ -163,7 +211,13 @@ func (c *IoTEdgeClient) DeleteDevice(request *model.DeleteDeviceRequest) (*model
 	}
 }
 
-// 查询设备列表
+// DeleteDeviceInvoker 删除设备
+func (c *IoTEdgeClient) DeleteDeviceInvoker(request *model.DeleteDeviceRequest) *DeleteDeviceInvoker {
+	requestDef := GenReqDefForDeleteDevice()
+	return &DeleteDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDevices 查询设备列表
 //
 // 查询设备列表
 //
@@ -179,7 +233,13 @@ func (c *IoTEdgeClient) ListDevices(request *model.ListDevicesRequest) (*model.L
 	}
 }
 
-// 获取协议配置
+// ListDevicesInvoker 查询设备列表
+func (c *IoTEdgeClient) ListDevicesInvoker(request *model.ListDevicesRequest) *ListDevicesInvoker {
+	requestDef := GenReqDefForListDevices()
+	return &ListDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProductConfig 获取协议配置
 //
 // 获取协议配置
 //
@@ -195,7 +255,13 @@ func (c *IoTEdgeClient) ShowProductConfig(request *model.ShowProductConfigReques
 	}
 }
 
-// 获取协议映射文件
+// ShowProductConfigInvoker 获取协议配置
+func (c *IoTEdgeClient) ShowProductConfigInvoker(request *model.ShowProductConfigRequest) *ShowProductConfigInvoker {
+	requestDef := GenReqDefForShowProductConfig()
+	return &ShowProductConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProtocolMappings 获取协议映射文件
 //
 // 获取协议映射文件
 //
@@ -211,7 +277,13 @@ func (c *IoTEdgeClient) ShowProtocolMappings(request *model.ShowProtocolMappings
 	}
 }
 
-// 修改设备
+// ShowProtocolMappingsInvoker 获取协议映射文件
+func (c *IoTEdgeClient) ShowProtocolMappingsInvoker(request *model.ShowProtocolMappingsRequest) *ShowProtocolMappingsInvoker {
+	requestDef := GenReqDefForShowProtocolMappings()
+	return &ShowProtocolMappingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDevice 修改设备
 //
 // 修改设备
 //
@@ -227,7 +299,13 @@ func (c *IoTEdgeClient) UpdateDevice(request *model.UpdateDeviceRequest) (*model
 	}
 }
 
-// 上传协议映射文件
+// UpdateDeviceInvoker 修改设备
+func (c *IoTEdgeClient) UpdateDeviceInvoker(request *model.UpdateDeviceRequest) *UpdateDeviceInvoker {
+	requestDef := GenReqDefForUpdateDevice()
+	return &UpdateDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadProtocolMappings 上传协议映射文件
 //
 // 上传协议映射文件
 //
@@ -243,7 +321,13 @@ func (c *IoTEdgeClient) UploadProtocolMappings(request *model.UploadProtocolMapp
 	}
 }
 
-// 查询应用列表
+// UploadProtocolMappingsInvoker 上传协议映射文件
+func (c *IoTEdgeClient) UploadProtocolMappingsInvoker(request *model.UploadProtocolMappingsRequest) *UploadProtocolMappingsInvoker {
+	requestDef := GenReqDefForUploadProtocolMappings()
+	return &UploadProtocolMappingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchListEdgeApps 查询应用列表
 //
 // 查询应用列表
 //
@@ -259,7 +343,13 @@ func (c *IoTEdgeClient) BatchListEdgeApps(request *model.BatchListEdgeAppsReques
 	}
 }
 
-// 创建应用
+// BatchListEdgeAppsInvoker 查询应用列表
+func (c *IoTEdgeClient) BatchListEdgeAppsInvoker(request *model.BatchListEdgeAppsRequest) *BatchListEdgeAppsInvoker {
+	requestDef := GenReqDefForBatchListEdgeApps()
+	return &BatchListEdgeAppsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEdgeApp 创建应用
 //
 // 创建应用
 //
@@ -275,7 +365,13 @@ func (c *IoTEdgeClient) CreateEdgeApp(request *model.CreateEdgeAppRequest) (*mod
 	}
 }
 
-// 删除应用
+// CreateEdgeAppInvoker 创建应用
+func (c *IoTEdgeClient) CreateEdgeAppInvoker(request *model.CreateEdgeAppRequest) *CreateEdgeAppInvoker {
+	requestDef := GenReqDefForCreateEdgeApp()
+	return &CreateEdgeAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEdgeApp 删除应用
 //
 // 删除应用
 //
@@ -291,7 +387,13 @@ func (c *IoTEdgeClient) DeleteEdgeApp(request *model.DeleteEdgeAppRequest) (*mod
 	}
 }
 
-// 查询应用
+// DeleteEdgeAppInvoker 删除应用
+func (c *IoTEdgeClient) DeleteEdgeAppInvoker(request *model.DeleteEdgeAppRequest) *DeleteEdgeAppInvoker {
+	requestDef := GenReqDefForDeleteEdgeApp()
+	return &DeleteEdgeAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEdgeApp 查询应用
 //
 // 查询应用
 //
@@ -307,7 +409,13 @@ func (c *IoTEdgeClient) ShowEdgeApp(request *model.ShowEdgeAppRequest) (*model.S
 	}
 }
 
-// 查询应用版本列表
+// ShowEdgeAppInvoker 查询应用
+func (c *IoTEdgeClient) ShowEdgeAppInvoker(request *model.ShowEdgeAppRequest) *ShowEdgeAppInvoker {
+	requestDef := GenReqDefForShowEdgeApp()
+	return &ShowEdgeAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchListEdgeAppVersions 查询应用版本列表
 //
 // 查询应用版本列表
 //
@@ -323,7 +431,13 @@ func (c *IoTEdgeClient) BatchListEdgeAppVersions(request *model.BatchListEdgeApp
 	}
 }
 
-// 创建应用版本
+// BatchListEdgeAppVersionsInvoker 查询应用版本列表
+func (c *IoTEdgeClient) BatchListEdgeAppVersionsInvoker(request *model.BatchListEdgeAppVersionsRequest) *BatchListEdgeAppVersionsInvoker {
+	requestDef := GenReqDefForBatchListEdgeAppVersions()
+	return &BatchListEdgeAppVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEdgeApplicationVersion 创建应用版本
 //
 // 创建应用版本
 //
@@ -339,7 +453,13 @@ func (c *IoTEdgeClient) CreateEdgeApplicationVersion(request *model.CreateEdgeAp
 	}
 }
 
-// 删除应用版本
+// CreateEdgeApplicationVersionInvoker 创建应用版本
+func (c *IoTEdgeClient) CreateEdgeApplicationVersionInvoker(request *model.CreateEdgeApplicationVersionRequest) *CreateEdgeApplicationVersionInvoker {
+	requestDef := GenReqDefForCreateEdgeApplicationVersion()
+	return &CreateEdgeApplicationVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEdgeApplicationVersion 删除应用版本
 //
 // 删除应用版本
 //
@@ -355,7 +475,13 @@ func (c *IoTEdgeClient) DeleteEdgeApplicationVersion(request *model.DeleteEdgeAp
 	}
 }
 
-// 查询应用版本详情
+// DeleteEdgeApplicationVersionInvoker 删除应用版本
+func (c *IoTEdgeClient) DeleteEdgeApplicationVersionInvoker(request *model.DeleteEdgeApplicationVersionRequest) *DeleteEdgeApplicationVersionInvoker {
+	requestDef := GenReqDefForDeleteEdgeApplicationVersion()
+	return &DeleteEdgeApplicationVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEdgeApplicationVersion 查询应用版本详情
 //
 // 查询应用版本详情
 //
@@ -371,7 +497,13 @@ func (c *IoTEdgeClient) ShowEdgeApplicationVersion(request *model.ShowEdgeApplic
 	}
 }
 
-// 修改应用版本
+// ShowEdgeApplicationVersionInvoker 查询应用版本详情
+func (c *IoTEdgeClient) ShowEdgeApplicationVersionInvoker(request *model.ShowEdgeApplicationVersionRequest) *ShowEdgeApplicationVersionInvoker {
+	requestDef := GenReqDefForShowEdgeApplicationVersion()
+	return &ShowEdgeApplicationVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEdgeApplicationVersion 修改应用版本
 //
 // 修改应用版本
 //
@@ -387,7 +519,13 @@ func (c *IoTEdgeClient) UpdateEdgeApplicationVersion(request *model.UpdateEdgeAp
 	}
 }
 
-// 更新应用版本状态
+// UpdateEdgeApplicationVersionInvoker 修改应用版本
+func (c *IoTEdgeClient) UpdateEdgeApplicationVersionInvoker(request *model.UpdateEdgeApplicationVersionRequest) *UpdateEdgeApplicationVersionInvoker {
+	requestDef := GenReqDefForUpdateEdgeApplicationVersion()
+	return &UpdateEdgeApplicationVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEdgeApplicationVersionState 更新应用版本状态
 //
 // 更新应用版本状态。
 //
@@ -403,7 +541,13 @@ func (c *IoTEdgeClient) UpdateEdgeApplicationVersionState(request *model.UpdateE
 	}
 }
 
-// 在指定节点上创建外部实体
+// UpdateEdgeApplicationVersionStateInvoker 更新应用版本状态
+func (c *IoTEdgeClient) UpdateEdgeApplicationVersionStateInvoker(request *model.UpdateEdgeApplicationVersionStateRequest) *UpdateEdgeApplicationVersionStateInvoker {
+	requestDef := GenReqDefForUpdateEdgeApplicationVersionState()
+	return &UpdateEdgeApplicationVersionStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateExternalEntity 在指定节点上创建外部实体
 //
 // 用户通过在指定边缘节点上设置外部实体的接入信息
 //
@@ -419,7 +563,13 @@ func (c *IoTEdgeClient) CreateExternalEntity(request *model.CreateExternalEntity
 	}
 }
 
-// 删除指定节点下外部实体
+// CreateExternalEntityInvoker 在指定节点上创建外部实体
+func (c *IoTEdgeClient) CreateExternalEntityInvoker(request *model.CreateExternalEntityRequest) *CreateExternalEntityInvoker {
+	requestDef := GenReqDefForCreateExternalEntity()
+	return &CreateExternalEntityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteExternalEntity 删除指定节点下外部实体
 //
 // 删除节点下外部实体
 //
@@ -435,7 +585,13 @@ func (c *IoTEdgeClient) DeleteExternalEntity(request *model.DeleteExternalEntity
 	}
 }
 
-// 查询指定边缘节点下的外部实体
+// DeleteExternalEntityInvoker 删除指定节点下外部实体
+func (c *IoTEdgeClient) DeleteExternalEntityInvoker(request *model.DeleteExternalEntityRequest) *DeleteExternalEntityInvoker {
+	requestDef := GenReqDefForDeleteExternalEntity()
+	return &DeleteExternalEntityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListExternalEntity 查询指定边缘节点下的外部实体
 //
 // 用户在指定边缘节点上查询外部实体列表
 //
@@ -451,7 +607,13 @@ func (c *IoTEdgeClient) ListExternalEntity(request *model.ListExternalEntityRequ
 	}
 }
 
-// 查询指定节点下指定外部实体的详情
+// ListExternalEntityInvoker 查询指定边缘节点下的外部实体
+func (c *IoTEdgeClient) ListExternalEntityInvoker(request *model.ListExternalEntityRequest) *ListExternalEntityInvoker {
+	requestDef := GenReqDefForListExternalEntity()
+	return &ListExternalEntityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowExternalEntity 查询指定节点下指定外部实体的详情
 //
 // 查询指定节点下指定外部实体的详情
 //
@@ -467,7 +629,13 @@ func (c *IoTEdgeClient) ShowExternalEntity(request *model.ShowExternalEntityRequ
 	}
 }
 
-// 修改节点下指定的外部实体信息
+// ShowExternalEntityInvoker 查询指定节点下指定外部实体的详情
+func (c *IoTEdgeClient) ShowExternalEntityInvoker(request *model.ShowExternalEntityRequest) *ShowExternalEntityInvoker {
+	requestDef := GenReqDefForShowExternalEntity()
+	return &ShowExternalEntityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateExternalEntity 修改节点下指定的外部实体信息
 //
 // 用户通过在指定边缘节点上修改指定外部实体的接入信息
 //
@@ -483,7 +651,13 @@ func (c *IoTEdgeClient) UpdateExternalEntity(request *model.UpdateExternalEntity
 	}
 }
 
-// 查询边缘模块列表
+// UpdateExternalEntityInvoker 修改节点下指定的外部实体信息
+func (c *IoTEdgeClient) UpdateExternalEntityInvoker(request *model.UpdateExternalEntityRequest) *UpdateExternalEntityInvoker {
+	requestDef := GenReqDefForUpdateExternalEntity()
+	return &UpdateExternalEntityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchListModules 查询边缘模块列表
 //
 // 用户通过Console接口查询指定边缘节点上边缘模块列表
 //
@@ -499,7 +673,13 @@ func (c *IoTEdgeClient) BatchListModules(request *model.BatchListModulesRequest)
 	}
 }
 
-// 创建边缘模块
+// BatchListModulesInvoker 查询边缘模块列表
+func (c *IoTEdgeClient) BatchListModulesInvoker(request *model.BatchListModulesRequest) *BatchListModulesInvoker {
+	requestDef := GenReqDefForBatchListModules()
+	return &BatchListModulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateModule 创建边缘模块
 //
 // 用户通过Console接口在指定边缘节点上创建边缘模块
 //
@@ -515,7 +695,13 @@ func (c *IoTEdgeClient) CreateModule(request *model.CreateModuleRequest) (*model
 	}
 }
 
-// 删除边缘模块
+// CreateModuleInvoker 创建边缘模块
+func (c *IoTEdgeClient) CreateModuleInvoker(request *model.CreateModuleRequest) *CreateModuleInvoker {
+	requestDef := GenReqDefForCreateModule()
+	return &CreateModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteModule 删除边缘模块
 //
 // 用户通过过Console接口在指定边缘节点上删除边缘模块
 //
@@ -531,7 +717,13 @@ func (c *IoTEdgeClient) DeleteModule(request *model.DeleteModuleRequest) (*model
 	}
 }
 
-// 查询边缘模块
+// DeleteModuleInvoker 删除边缘模块
+func (c *IoTEdgeClient) DeleteModuleInvoker(request *model.DeleteModuleRequest) *DeleteModuleInvoker {
+	requestDef := GenReqDefForDeleteModule()
+	return &DeleteModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowModule 查询边缘模块
 //
 // 用户通过Console接口查询指定边缘节点上指定边缘模块
 //
@@ -547,7 +739,13 @@ func (c *IoTEdgeClient) ShowModule(request *model.ShowModuleRequest) (*model.Sho
 	}
 }
 
-// 修改边缘模块
+// ShowModuleInvoker 查询边缘模块
+func (c *IoTEdgeClient) ShowModuleInvoker(request *model.ShowModuleRequest) *ShowModuleInvoker {
+	requestDef := GenReqDefForShowModule()
+	return &ShowModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateModule 修改边缘模块
 //
 // 用户通过Console接口查询指定边缘节点上指定边缘模块
 //
@@ -563,7 +761,13 @@ func (c *IoTEdgeClient) UpdateModule(request *model.UpdateModuleRequest) (*model
 	}
 }
 
-// 查询边缘路由列表
+// UpdateModuleInvoker 修改边缘模块
+func (c *IoTEdgeClient) UpdateModuleInvoker(request *model.UpdateModuleRequest) *UpdateModuleInvoker {
+	requestDef := GenReqDefForUpdateModule()
+	return &UpdateModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRoutes 查询边缘路由列表
 //
 // 用户在指定边缘节点上查询边缘路由列表
 //
@@ -579,7 +783,13 @@ func (c *IoTEdgeClient) ListRoutes(request *model.ListRoutesRequest) (*model.Lis
 	}
 }
 
-// 设置边缘路由
+// ListRoutesInvoker 查询边缘路由列表
+func (c *IoTEdgeClient) ListRoutesInvoker(request *model.ListRoutesRequest) *ListRoutesInvoker {
+	requestDef := GenReqDefForListRoutes()
+	return &ListRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRoutes 设置边缘路由
 //
 // 用户通过在指定边缘节点上设置边缘路由
 //
@@ -595,7 +805,13 @@ func (c *IoTEdgeClient) UpdateRoutes(request *model.UpdateRoutesRequest) (*model
 	}
 }
 
-// 批量确认南向3rdIA配置项
+// UpdateRoutesInvoker 设置边缘路由
+func (c *IoTEdgeClient) UpdateRoutesInvoker(request *model.UpdateRoutesRequest) *UpdateRoutesInvoker {
+	requestDef := GenReqDefForUpdateRoutes()
+	return &UpdateRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchConfirmConfigsNew 批量确认南向3rdIA配置项
 //
 // 南向3rdIA对下发的配置项进行批量确认
 //
@@ -611,7 +827,13 @@ func (c *IoTEdgeClient) BatchConfirmConfigsNew(request *model.BatchConfirmConfig
 	}
 }
 
-// 批量导入南向3rdIA配置项
+// BatchConfirmConfigsNewInvoker 批量确认南向3rdIA配置项
+func (c *IoTEdgeClient) BatchConfirmConfigsNewInvoker(request *model.BatchConfirmConfigsNewRequest) *BatchConfirmConfigsNewInvoker {
+	requestDef := GenReqDefForBatchConfirmConfigsNew()
+	return &BatchConfirmConfigsNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchImportConfigs 批量导入南向3rdIA配置项
 //
 // 批量导入南向3rdIA配置项
 //
@@ -627,7 +849,13 @@ func (c *IoTEdgeClient) BatchImportConfigs(request *model.BatchImportConfigsRequ
 	}
 }
 
-// 删除南向3rdIA配置项
+// BatchImportConfigsInvoker 批量导入南向3rdIA配置项
+func (c *IoTEdgeClient) BatchImportConfigsInvoker(request *model.BatchImportConfigsRequest) *BatchImportConfigsInvoker {
+	requestDef := GenReqDefForBatchImportConfigs()
+	return &BatchImportConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteIaConfig 删除南向3rdIA配置项
 //
 // 删除南向3rdIA配置项
 //
@@ -643,7 +871,13 @@ func (c *IoTEdgeClient) DeleteIaConfig(request *model.DeleteIaConfigRequest) (*m
 	}
 }
 
-// 查询南向3rdIA配置项列表
+// DeleteIaConfigInvoker 删除南向3rdIA配置项
+func (c *IoTEdgeClient) DeleteIaConfigInvoker(request *model.DeleteIaConfigRequest) *DeleteIaConfigInvoker {
+	requestDef := GenReqDefForDeleteIaConfig()
+	return &DeleteIaConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIaConfigs 查询南向3rdIA配置项列表
 //
 // 查询南向3rdIA配置项列表
 //
@@ -659,7 +893,13 @@ func (c *IoTEdgeClient) ListIaConfigs(request *model.ListIaConfigsRequest) (*mod
 	}
 }
 
-// 查询南向3rdIA配置项详情
+// ListIaConfigsInvoker 查询南向3rdIA配置项列表
+func (c *IoTEdgeClient) ListIaConfigsInvoker(request *model.ListIaConfigsRequest) *ListIaConfigsInvoker {
+	requestDef := GenReqDefForListIaConfigs()
+	return &ListIaConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIaConfig 查询南向3rdIA配置项详情
 //
 // 查询南向3rdIA配置项详情
 //
@@ -675,7 +915,13 @@ func (c *IoTEdgeClient) ShowIaConfig(request *model.ShowIaConfigRequest) (*model
 	}
 }
 
-// 创建&amp;更新南向3rdIA配置项信息
+// ShowIaConfigInvoker 查询南向3rdIA配置项详情
+func (c *IoTEdgeClient) ShowIaConfigInvoker(request *model.ShowIaConfigRequest) *ShowIaConfigInvoker {
+	requestDef := GenReqDefForShowIaConfig()
+	return &ShowIaConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateIaConfig 创建&amp;更新南向3rdIA配置项信息
 //
 // 创建&amp;更新南向3rdIA配置项信息
 //
@@ -691,7 +937,13 @@ func (c *IoTEdgeClient) UpdateIaConfig(request *model.UpdateIaConfigRequest) (*m
 	}
 }
 
-// 授权北向NA信息到边缘节点
+// UpdateIaConfigInvoker 创建&amp;更新南向3rdIA配置项信息
+func (c *IoTEdgeClient) UpdateIaConfigInvoker(request *model.UpdateIaConfigRequest) *UpdateIaConfigInvoker {
+	requestDef := GenReqDefForUpdateIaConfig()
+	return &UpdateIaConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchAssociateNaToNodes 授权北向NA信息到边缘节点
 //
 // 批量授权北向NA信息到边缘节点。
 // 已授权的边缘节点上的南向IA应用，可以通过部署在边缘节点上的api网关访问北向NA提供的接口。
@@ -708,7 +960,13 @@ func (c *IoTEdgeClient) BatchAssociateNaToNodes(request *model.BatchAssociateNaT
 	}
 }
 
-// 删除北向NA信息
+// BatchAssociateNaToNodesInvoker 授权北向NA信息到边缘节点
+func (c *IoTEdgeClient) BatchAssociateNaToNodesInvoker(request *model.BatchAssociateNaToNodesRequest) *BatchAssociateNaToNodesInvoker {
+	requestDef := GenReqDefForBatchAssociateNaToNodes()
+	return &BatchAssociateNaToNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNa 删除北向NA信息
 //
 // 删除北向NA信息，如果有边缘节点已分配该NA信息，会通知到该边缘节点。
 //
@@ -724,7 +982,13 @@ func (c *IoTEdgeClient) DeleteNa(request *model.DeleteNaRequest) (*model.DeleteN
 	}
 }
 
-// 查询该北向NA信息的已分配节点
+// DeleteNaInvoker 删除北向NA信息
+func (c *IoTEdgeClient) DeleteNaInvoker(request *model.DeleteNaRequest) *DeleteNaInvoker {
+	requestDef := GenReqDefForDeleteNa()
+	return &DeleteNaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNaAuthorizedNodes 查询该北向NA信息的已分配节点
 //
 // 查询该北向NA信息的已分配节点
 //
@@ -740,7 +1004,13 @@ func (c *IoTEdgeClient) ListNaAuthorizedNodes(request *model.ListNaAuthorizedNod
 	}
 }
 
-// 查询北向NA信息列表
+// ListNaAuthorizedNodesInvoker 查询该北向NA信息的已分配节点
+func (c *IoTEdgeClient) ListNaAuthorizedNodesInvoker(request *model.ListNaAuthorizedNodesRequest) *ListNaAuthorizedNodesInvoker {
+	requestDef := GenReqDefForListNaAuthorizedNodes()
+	return &ListNaAuthorizedNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNas 查询北向NA信息列表
 //
 // 查询北向NA信息列表
 //
@@ -756,7 +1026,13 @@ func (c *IoTEdgeClient) ListNas(request *model.ListNasRequest) (*model.ListNasRe
 	}
 }
 
-// 查询北向NA信息详情
+// ListNasInvoker 查询北向NA信息列表
+func (c *IoTEdgeClient) ListNasInvoker(request *model.ListNasRequest) *ListNasInvoker {
+	requestDef := GenReqDefForListNas()
+	return &ListNasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNa 查询北向NA信息详情
 //
 // 查询北向NA信息详情
 //
@@ -772,7 +1048,13 @@ func (c *IoTEdgeClient) ShowNa(request *model.ShowNaRequest) (*model.ShowNaRespo
 	}
 }
 
-// 创建&amp;更新北向NA信息
+// ShowNaInvoker 查询北向NA信息详情
+func (c *IoTEdgeClient) ShowNaInvoker(request *model.ShowNaRequest) *ShowNaInvoker {
+	requestDef := GenReqDefForShowNa()
+	return &ShowNaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNa 创建&amp;更新北向NA信息
 //
 // 创建&amp;更新北向NA信息，当更新北向NA信息时，会通知到已分配该北向NA的所有边缘节点。
 //
@@ -786,4 +1068,10 @@ func (c *IoTEdgeClient) UpdateNa(request *model.UpdateNaRequest) (*model.UpdateN
 	} else {
 		return resp.(*model.UpdateNaResponse), nil
 	}
+}
+
+// UpdateNaInvoker 创建&amp;更新北向NA信息
+func (c *IoTEdgeClient) UpdateNaInvoker(request *model.UpdateNaRequest) *UpdateNaInvoker {
+	requestDef := GenReqDefForUpdateNa()
+	return &UpdateNaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

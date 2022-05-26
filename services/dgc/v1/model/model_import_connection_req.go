@@ -47,6 +47,10 @@ func GetImportConnectionReqSameNamePolicyEnum() ImportConnectionReqSameNamePolic
 	}
 }
 
+func (c ImportConnectionReqSameNamePolicy) Value() string {
+	return c.value
+}
+
 func (c ImportConnectionReqSameNamePolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

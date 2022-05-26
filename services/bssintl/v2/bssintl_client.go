@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/bssintl/v2/model"
 )
 
@@ -19,7 +19,7 @@ func BssintlClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 设置包年/包月资源自动续费
+// AutoRenewalResources 设置包年/包月资源自动续费
 //
 // 功能描述：客户可以设置包年/包月资源到期后转为按需资源计费
 //
@@ -35,7 +35,13 @@ func (c *BssintlClient) AutoRenewalResources(request *model.AutoRenewalResources
 	}
 }
 
-// 取消包年/包月资源自动续费
+// AutoRenewalResourcesInvoker 设置包年/包月资源自动续费
+func (c *BssintlClient) AutoRenewalResourcesInvoker(request *model.AutoRenewalResourcesRequest) *AutoRenewalResourcesInvoker {
+	requestDef := GenReqDefForAutoRenewalResources()
+	return &AutoRenewalResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelAutoRenewalResources 取消包年/包月资源自动续费
 //
 // 功能描述：取消包年/包月资源自动续费
 //
@@ -51,7 +57,13 @@ func (c *BssintlClient) CancelAutoRenewalResources(request *model.CancelAutoRene
 	}
 }
 
-// 取消待支付订单
+// CancelAutoRenewalResourcesInvoker 取消包年/包月资源自动续费
+func (c *BssintlClient) CancelAutoRenewalResourcesInvoker(request *model.CancelAutoRenewalResourcesRequest) *CancelAutoRenewalResourcesInvoker {
+	requestDef := GenReqDefForCancelAutoRenewalResources()
+	return &CancelAutoRenewalResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelCustomerOrder 取消待支付订单
 //
 // 功能描述：客户可以对待支付的订单进行取消操作
 //
@@ -67,7 +79,13 @@ func (c *BssintlClient) CancelCustomerOrder(request *model.CancelCustomerOrderRe
 	}
 }
 
-// 退订包年/包月资源
+// CancelCustomerOrderInvoker 取消待支付订单
+func (c *BssintlClient) CancelCustomerOrderInvoker(request *model.CancelCustomerOrderRequest) *CancelCustomerOrderInvoker {
+	requestDef := GenReqDefForCancelCustomerOrder()
+	return &CancelCustomerOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelResourcesSubscription 退订包年/包月资源
 //
 // 功能描述：客户购买包年/包月资源后，支持客户退订包年/包月实例。退订资源实例包括资源续费部分和当前正在使用的部分，退订后资源将无法使用
 //
@@ -83,7 +101,13 @@ func (c *BssintlClient) CancelResourcesSubscription(request *model.CancelResourc
 	}
 }
 
-// 申请实名认证变更
+// CancelResourcesSubscriptionInvoker 退订包年/包月资源
+func (c *BssintlClient) CancelResourcesSubscriptionInvoker(request *model.CancelResourcesSubscriptionRequest) *CancelResourcesSubscriptionInvoker {
+	requestDef := GenReqDefForCancelResourcesSubscription()
+	return &CancelResourcesSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeEnterpriseRealnameAuthentication 申请实名认证变更
 //
 // 功能描述：客户可以进行实名认证变更申请。
 //
@@ -99,7 +123,13 @@ func (c *BssintlClient) ChangeEnterpriseRealnameAuthentication(request *model.Ch
 	}
 }
 
-// 校验客户注册信息
+// ChangeEnterpriseRealnameAuthenticationInvoker 申请实名认证变更
+func (c *BssintlClient) ChangeEnterpriseRealnameAuthenticationInvoker(request *model.ChangeEnterpriseRealnameAuthenticationRequest) *ChangeEnterpriseRealnameAuthenticationInvoker {
+	requestDef := GenReqDefForChangeEnterpriseRealnameAuthentication()
+	return &ChangeEnterpriseRealnameAuthenticationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckUserIdentity 校验客户注册信息
 //
 // 功能描述：客户注册时可检查客户的登录名称、手机号或者邮箱是否可以用于注册。
 //
@@ -115,7 +145,13 @@ func (c *BssintlClient) CheckUserIdentity(request *model.CheckUserIdentityReques
 	}
 }
 
-// 申请企业实名认证
+// CheckUserIdentityInvoker 校验客户注册信息
+func (c *BssintlClient) CheckUserIdentityInvoker(request *model.CheckUserIdentityRequest) *CheckUserIdentityInvoker {
+	requestDef := GenReqDefForCheckUserIdentity()
+	return &CheckUserIdentityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEnterpriseRealnameAuthentication 申请企业实名认证
 //
 // 功能描述：企业客户可以进行企业实名认证申请。
 //
@@ -131,7 +167,13 @@ func (c *BssintlClient) CreateEnterpriseRealnameAuthentication(request *model.Cr
 	}
 }
 
-// 申请个人实名认证
+// CreateEnterpriseRealnameAuthenticationInvoker 申请企业实名认证
+func (c *BssintlClient) CreateEnterpriseRealnameAuthenticationInvoker(request *model.CreateEnterpriseRealnameAuthenticationRequest) *CreateEnterpriseRealnameAuthenticationInvoker {
+	requestDef := GenReqDefForCreateEnterpriseRealnameAuthentication()
+	return &CreateEnterpriseRealnameAuthenticationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePersonalRealnameAuth 申请个人实名认证
 //
 // 功能描述：个人客户可以进行个人实名认证申请。
 //
@@ -147,7 +189,13 @@ func (c *BssintlClient) CreatePersonalRealnameAuth(request *model.CreatePersonal
 	}
 }
 
-// 创建客户
+// CreatePersonalRealnameAuthInvoker 申请个人实名认证
+func (c *BssintlClient) CreatePersonalRealnameAuthInvoker(request *model.CreatePersonalRealnameAuthRequest) *CreatePersonalRealnameAuthInvoker {
+	requestDef := GenReqDefForCreatePersonalRealnameAuth()
+	return &CreatePersonalRealnameAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSubCustomer 创建客户
 //
 // 功能描述：在伙伴销售平台创建客户时同步创建华为云账号，并将客户在伙伴销售平台上的账号与华为云账号进行映射。同时，创建的华为云账号与伙伴账号关联绑定。华为云伙伴能力中心（一级经销商）可以注册精英服务商伙伴（二级经销商）的子客户。注册完成后，子客户可以自动和精英服务商伙伴绑定。
 //
@@ -163,7 +211,13 @@ func (c *BssintlClient) CreateSubCustomer(request *model.CreateSubCustomerReques
 	}
 }
 
-// 冻结客户账号
+// CreateSubCustomerInvoker 创建客户
+func (c *BssintlClient) CreateSubCustomerInvoker(request *model.CreateSubCustomerRequest) *CreateSubCustomerInvoker {
+	requestDef := GenReqDefForCreateSubCustomer()
+	return &CreateSubCustomerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// FreezeSubCustomers 冻结客户账号
 //
 // 功能描述：冻结伙伴子客户
 //
@@ -179,7 +233,13 @@ func (c *BssintlClient) FreezeSubCustomers(request *model.FreezeSubCustomersRequ
 	}
 }
 
-// 查询使用量单位进制
+// FreezeSubCustomersInvoker 冻结客户账号
+func (c *BssintlClient) FreezeSubCustomersInvoker(request *model.FreezeSubCustomersRequest) *FreezeSubCustomersInvoker {
+	requestDef := GenReqDefForFreezeSubCustomers()
+	return &FreezeSubCustomersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConversions 查询使用量单位进制
 //
 // 功能描述：伙伴在伙伴销售平台上查询使用量单位的进制转换信息，用于不同度量单位之间的转换。
 //
@@ -195,7 +255,13 @@ func (c *BssintlClient) ListConversions(request *model.ListConversionsRequest) (
 	}
 }
 
-// 查询客户按需资源列表
+// ListConversionsInvoker 查询使用量单位进制
+func (c *BssintlClient) ListConversionsInvoker(request *model.ListConversionsRequest) *ListConversionsInvoker {
+	requestDef := GenReqDefForListConversions()
+	return &ListConversionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCustomerOnDemandResources 查询客户按需资源列表
 //
 // 功能描述：客户在伙伴销售平台查询已开通的按需资源
 //
@@ -211,7 +277,13 @@ func (c *BssintlClient) ListCustomerOnDemandResources(request *model.ListCustome
 	}
 }
 
-// 查询订单列表
+// ListCustomerOnDemandResourcesInvoker 查询客户按需资源列表
+func (c *BssintlClient) ListCustomerOnDemandResourcesInvoker(request *model.ListCustomerOnDemandResourcesRequest) *ListCustomerOnDemandResourcesInvoker {
+	requestDef := GenReqDefForListCustomerOnDemandResources()
+	return &ListCustomerOnDemandResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCustomerOrders 查询订单列表
 //
 // 功能描述：客户购买包年包月资源后，可以查看待审核、处理中、已取消、已完成和待支付等状态的订单
 //
@@ -227,7 +299,13 @@ func (c *BssintlClient) ListCustomerOrders(request *model.ListCustomerOrdersRequ
 	}
 }
 
-// 查询资源详单
+// ListCustomerOrdersInvoker 查询订单列表
+func (c *BssintlClient) ListCustomerOrdersInvoker(request *model.ListCustomerOrdersRequest) *ListCustomerOrdersInvoker {
+	requestDef := GenReqDefForListCustomerOrders()
+	return &ListCustomerOrdersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCustomerselfResourceRecordDetails 查询资源详单
 //
 // 功能描述：客户在客户自建平台查询自己的资源详单，用于反映各类资源的消耗情况。
 //
@@ -243,7 +321,13 @@ func (c *BssintlClient) ListCustomerselfResourceRecordDetails(request *model.Lis
 	}
 }
 
-// 查询资源消费记录
+// ListCustomerselfResourceRecordDetailsInvoker 查询资源详单
+func (c *BssintlClient) ListCustomerselfResourceRecordDetailsInvoker(request *model.ListCustomerselfResourceRecordDetailsRequest) *ListCustomerselfResourceRecordDetailsInvoker {
+	requestDef := GenReqDefForListCustomerselfResourceRecordDetails()
+	return &ListCustomerselfResourceRecordDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCustomerselfResourceRecords 查询资源消费记录
 //
 // 功能描述：客户在客户自建平台查询每个资源的消费明细数据
 //
@@ -259,7 +343,13 @@ func (c *BssintlClient) ListCustomerselfResourceRecords(request *model.ListCusto
 	}
 }
 
-// 查询资源包列表
+// ListCustomerselfResourceRecordsInvoker 查询资源消费记录
+func (c *BssintlClient) ListCustomerselfResourceRecordsInvoker(request *model.ListCustomerselfResourceRecordsRequest) *ListCustomerselfResourceRecordsInvoker {
+	requestDef := GenReqDefForListCustomerselfResourceRecords()
+	return &ListCustomerselfResourceRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFreeResourceInfos 查询资源包列表
 //
 // 功能描述：客户在自建平台查询资源包列表。
 //
@@ -275,7 +365,13 @@ func (c *BssintlClient) ListFreeResourceInfos(request *model.ListFreeResourceInf
 	}
 }
 
-// 查询资源内使用量
+// ListFreeResourceInfosInvoker 查询资源包列表
+func (c *BssintlClient) ListFreeResourceInfosInvoker(request *model.ListFreeResourceInfosRequest) *ListFreeResourceInfosInvoker {
+	requestDef := GenReqDefForListFreeResourceInfos()
+	return &ListFreeResourceInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFreeResourceUsages 查询资源内使用量
 //
 // 功能描述：客户在自建平台查询客户自己的资源包列表
 //
@@ -291,7 +387,13 @@ func (c *BssintlClient) ListFreeResourceUsages(request *model.ListFreeResourceUs
 	}
 }
 
-// 查询发票列表
+// ListFreeResourceUsagesInvoker 查询资源内使用量
+func (c *BssintlClient) ListFreeResourceUsagesInvoker(request *model.ListFreeResourceUsagesRequest) *ListFreeResourceUsagesInvoker {
+	requestDef := GenReqDefForListFreeResourceUsages()
+	return &ListFreeResourceUsagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInvoices 查询发票列表
 //
 // 功能描述：查询发票列表
 //
@@ -307,7 +409,13 @@ func (c *BssintlClient) ListInvoices(request *model.ListInvoicesRequest) (*model
 	}
 }
 
-// 查询使用量单位列表
+// ListInvoicesInvoker 查询发票列表
+func (c *BssintlClient) ListInvoicesInvoker(request *model.ListInvoicesRequest) *ListInvoicesInvoker {
+	requestDef := GenReqDefForListInvoices()
+	return &ListInvoicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMeasureUnits 查询使用量单位列表
 //
 // 功能描述：伙伴在伙伴销售平台上查询资源使用量的度量单位及名称，度量单位类型等。
 //
@@ -323,7 +431,13 @@ func (c *BssintlClient) ListMeasureUnits(request *model.ListMeasureUnitsRequest)
 	}
 }
 
-// 查询消费汇总(客户)
+// ListMeasureUnitsInvoker 查询使用量单位列表
+func (c *BssintlClient) ListMeasureUnitsInvoker(request *model.ListMeasureUnitsRequest) *ListMeasureUnitsInvoker {
+	requestDef := GenReqDefForListMeasureUnits()
+	return &ListMeasureUnitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMonthlyExpenditures 查询消费汇总(客户)
 //
 // 功能描述：客户可以查询自身的消费汇总单的功能，消费按月汇总。
 //
@@ -339,7 +453,13 @@ func (c *BssintlClient) ListMonthlyExpenditures(request *model.ListMonthlyExpend
 	}
 }
 
-// 查询按需产品价格
+// ListMonthlyExpendituresInvoker 查询消费汇总(客户)
+func (c *BssintlClient) ListMonthlyExpendituresInvoker(request *model.ListMonthlyExpendituresRequest) *ListMonthlyExpendituresInvoker {
+	requestDef := GenReqDefForListMonthlyExpenditures()
+	return &ListMonthlyExpendituresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOnDemandResourceRatings 查询按需产品价格
 //
 // 功能描述：按需资源询价
 //
@@ -355,7 +475,13 @@ func (c *BssintlClient) ListOnDemandResourceRatings(request *model.ListOnDemandR
 	}
 }
 
-// 查询订单可用折扣
+// ListOnDemandResourceRatingsInvoker 查询按需产品价格
+func (c *BssintlClient) ListOnDemandResourceRatingsInvoker(request *model.ListOnDemandResourceRatingsRequest) *ListOnDemandResourceRatingsInvoker {
+	requestDef := GenReqDefForListOnDemandResourceRatings()
+	return &ListOnDemandResourceRatingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOrderDiscounts 查询订单可用折扣
 //
 // 功能描述：功能介绍客户在伙伴销售平台支付待支付订单时，查询可使用的折扣。只返回商务合同折扣和伙伴授权折扣客户在客户自建平台查看订单可用的优惠券列表。
 //
@@ -371,7 +497,13 @@ func (c *BssintlClient) ListOrderDiscounts(request *model.ListOrderDiscountsRequ
 	}
 }
 
-// 查询客户包年/包月资源列表
+// ListOrderDiscountsInvoker 查询订单可用折扣
+func (c *BssintlClient) ListOrderDiscountsInvoker(request *model.ListOrderDiscountsRequest) *ListOrderDiscountsInvoker {
+	requestDef := GenReqDefForListOrderDiscounts()
+	return &ListOrderDiscountsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPayPerUseCustomerResources 查询客户包年/包月资源列表
 //
 // 功能描述：客户在客户自建平台查询某个或所有的包年/包月资源
 //
@@ -387,7 +519,13 @@ func (c *BssintlClient) ListPayPerUseCustomerResources(request *model.ListPayPer
 	}
 }
 
-// 查询伙伴月度消费账单
+// ListPayPerUseCustomerResourcesInvoker 查询客户包年/包月资源列表
+func (c *BssintlClient) ListPayPerUseCustomerResourcesInvoker(request *model.ListPayPerUseCustomerResourcesRequest) *ListPayPerUseCustomerResourcesInvoker {
+	requestDef := GenReqDefForListPayPerUseCustomerResources()
+	return &ListPayPerUseCustomerResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPostpaidBillSum 查询伙伴月度消费账单
 //
 // 功能描述：伙伴可以查询伙伴月度消费账单
 //
@@ -403,7 +541,13 @@ func (c *BssintlClient) ListPostpaidBillSum(request *model.ListPostpaidBillSumRe
 	}
 }
 
-// 查询包年/包月产品价格
+// ListPostpaidBillSumInvoker 查询伙伴月度消费账单
+func (c *BssintlClient) ListPostpaidBillSumInvoker(request *model.ListPostpaidBillSumRequest) *ListPostpaidBillSumInvoker {
+	requestDef := GenReqDefForListPostpaidBillSum()
+	return &ListPostpaidBillSumInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRateOnPeriodDetail 查询包年/包月产品价格
 //
 // 功能描述：客户在自建平台按照条件查询包年/包月产品开通时候的价格
 //
@@ -419,7 +563,13 @@ func (c *BssintlClient) ListRateOnPeriodDetail(request *model.ListRateOnPeriodDe
 	}
 }
 
-// 查询资源类型列表
+// ListRateOnPeriodDetailInvoker 查询包年/包月产品价格
+func (c *BssintlClient) ListRateOnPeriodDetailInvoker(request *model.ListRateOnPeriodDetailRequest) *ListRateOnPeriodDetailInvoker {
+	requestDef := GenReqDefForListRateOnPeriodDetail()
+	return &ListRateOnPeriodDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourceTypes 查询资源类型列表
 //
 // 伙伴在伙伴销售平台查询资源类型的列表。
 //
@@ -435,7 +585,13 @@ func (c *BssintlClient) ListResourceTypes(request *model.ListResourceTypesReques
 	}
 }
 
-// 根据云服务类型查询资源列表
+// ListResourceTypesInvoker 查询资源类型列表
+func (c *BssintlClient) ListResourceTypesInvoker(request *model.ListResourceTypesRequest) *ListResourceTypesInvoker {
+	requestDef := GenReqDefForListResourceTypes()
+	return &ListResourceTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServiceResources 根据云服务类型查询资源列表
 //
 // 功能描述：伙伴在伙伴销售平台根据云服务类型查询关联的资源类型编码和名称，用于查询按需产品的价格或包年/包月产品的价格。
 //
@@ -451,7 +607,13 @@ func (c *BssintlClient) ListServiceResources(request *model.ListServiceResources
 	}
 }
 
-// 查询云服务类型列表
+// ListServiceResourcesInvoker 根据云服务类型查询资源列表
+func (c *BssintlClient) ListServiceResourcesInvoker(request *model.ListServiceResourcesRequest) *ListServiceResourcesInvoker {
+	requestDef := GenReqDefForListServiceResources()
+	return &ListServiceResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServiceTypes 查询云服务类型列表
 //
 // 伙伴在伙伴销售平台查询云服务类型的列表。
 //
@@ -467,7 +629,13 @@ func (c *BssintlClient) ListServiceTypes(request *model.ListServiceTypesRequest)
 	}
 }
 
-// 查询优惠券列表
+// ListServiceTypesInvoker 查询云服务类型列表
+func (c *BssintlClient) ListServiceTypesInvoker(request *model.ListServiceTypesRequest) *ListServiceTypesInvoker {
+	requestDef := GenReqDefForListServiceTypes()
+	return &ListServiceTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubCustomerCoupons 查询优惠券列表
 //
 // 功能描述：伙伴/客户可以查询自身的优惠券信息。
 //
@@ -483,7 +651,13 @@ func (c *BssintlClient) ListSubCustomerCoupons(request *model.ListSubCustomerCou
 	}
 }
 
-// 查询客户列表
+// ListSubCustomerCouponsInvoker 查询优惠券列表
+func (c *BssintlClient) ListSubCustomerCouponsInvoker(request *model.ListSubCustomerCouponsRequest) *ListSubCustomerCouponsInvoker {
+	requestDef := GenReqDefForListSubCustomerCoupons()
+	return &ListSubCustomerCouponsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubCustomers 查询客户列表
 //
 // 功能描述：伙伴可以查询合作伙伴的客户信息列表。
 //
@@ -499,7 +673,13 @@ func (c *BssintlClient) ListSubCustomers(request *model.ListSubCustomersRequest)
 	}
 }
 
-// 查询使用量类型列表
+// ListSubCustomersInvoker 查询客户列表
+func (c *BssintlClient) ListSubCustomersInvoker(request *model.ListSubCustomersRequest) *ListSubCustomersInvoker {
+	requestDef := GenReqDefForListSubCustomers()
+	return &ListSubCustomersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUsageTypes 查询使用量类型列表
 //
 // 功能描述：伙伴在伙伴销售平台查询资源的使用量类型列表。
 //
@@ -515,7 +695,13 @@ func (c *BssintlClient) ListUsageTypes(request *model.ListUsageTypesRequest) (*m
 	}
 }
 
-// 支付包年/包月产品订单
+// ListUsageTypesInvoker 查询使用量类型列表
+func (c *BssintlClient) ListUsageTypesInvoker(request *model.ListUsageTypesRequest) *ListUsageTypesInvoker {
+	requestDef := GenReqDefForListUsageTypes()
+	return &ListUsageTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PayOrders 支付包年/包月产品订单
 //
 // 功能描述：客户可以对待支付状态的包年/包月产品订单进行支付
 //
@@ -531,7 +717,13 @@ func (c *BssintlClient) PayOrders(request *model.PayOrdersRequest) (*model.PayOr
 	}
 }
 
-// 续订包年/包月资源
+// PayOrdersInvoker 支付包年/包月产品订单
+func (c *BssintlClient) PayOrdersInvoker(request *model.PayOrdersRequest) *PayOrdersInvoker {
+	requestDef := GenReqDefForPayOrders()
+	return &PayOrdersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RenewalResources 续订包年/包月资源
 //
 // 功能描述：客户的包年包/月资源即将到期时，可进行包年/包月资源的续订
 //
@@ -547,7 +739,13 @@ func (c *BssintlClient) RenewalResources(request *model.RenewalResourcesRequest)
 	}
 }
 
-// 发送验证码
+// RenewalResourcesInvoker 续订包年/包月资源
+func (c *BssintlClient) RenewalResourcesInvoker(request *model.RenewalResourcesRequest) *RenewalResourcesInvoker {
+	requestDef := GenReqDefForRenewalResources()
+	return &RenewalResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SendVerificationMessageCode 发送验证码
 //
 // 功能描述：客户注册时，如果填写了邮箱，可以向对应的邮箱发送注册验证码，校验信息的正确性。
 //
@@ -563,7 +761,13 @@ func (c *BssintlClient) SendVerificationMessageCode(request *model.SendVerificat
 	}
 }
 
-// 查询账户余额
+// SendVerificationMessageCodeInvoker 发送验证码
+func (c *BssintlClient) SendVerificationMessageCodeInvoker(request *model.SendVerificationMessageCodeRequest) *SendVerificationMessageCodeInvoker {
+	requestDef := GenReqDefForSendVerificationMessageCode()
+	return &SendVerificationMessageCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCustomerAccountBalances 查询账户余额
 //
 // 功能描述：客户可以查询自身的账户余额。
 //
@@ -579,7 +783,13 @@ func (c *BssintlClient) ShowCustomerAccountBalances(request *model.ShowCustomerA
 	}
 }
 
-// 查询订单详情
+// ShowCustomerAccountBalancesInvoker 查询账户余额
+func (c *BssintlClient) ShowCustomerAccountBalancesInvoker(request *model.ShowCustomerAccountBalancesRequest) *ShowCustomerAccountBalancesInvoker {
+	requestDef := GenReqDefForShowCustomerAccountBalances()
+	return &ShowCustomerAccountBalancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCustomerOrderDetails 查询订单详情
 //
 // 功能描述：客户可以查看订单详情
 //
@@ -595,7 +805,13 @@ func (c *BssintlClient) ShowCustomerOrderDetails(request *model.ShowCustomerOrde
 	}
 }
 
-// 查询实名认证审核结果
+// ShowCustomerOrderDetailsInvoker 查询订单详情
+func (c *BssintlClient) ShowCustomerOrderDetailsInvoker(request *model.ShowCustomerOrderDetailsRequest) *ShowCustomerOrderDetailsInvoker {
+	requestDef := GenReqDefForShowCustomerOrderDetails()
+	return &ShowCustomerOrderDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRealnameAuthenticationReviewResult 查询实名认证审核结果
 //
 // 功能描述：如果实名认证申请或实名认证变更申请的响应中，显示需要人工审核，使用该接口查询审核结果。
 //
@@ -611,7 +827,13 @@ func (c *BssintlClient) ShowRealnameAuthenticationReviewResult(request *model.Sh
 	}
 }
 
-// 查询退款订单的金额详情
+// ShowRealnameAuthenticationReviewResultInvoker 查询实名认证审核结果
+func (c *BssintlClient) ShowRealnameAuthenticationReviewResultInvoker(request *model.ShowRealnameAuthenticationReviewResultRequest) *ShowRealnameAuthenticationReviewResultInvoker {
+	requestDef := GenReqDefForShowRealnameAuthenticationReviewResult()
+	return &ShowRealnameAuthenticationReviewResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRefundOrderDetails 查询退款订单的金额详情
 //
 // 功能描述：客户在伙伴销售平台查询某次退订订单或者降配订单的退款金额来自哪些资源和对应订单
 //
@@ -627,7 +849,13 @@ func (c *BssintlClient) ShowRefundOrderDetails(request *model.ShowRefundOrderDet
 	}
 }
 
-// 查询客户预算
+// ShowRefundOrderDetailsInvoker 查询退款订单的金额详情
+func (c *BssintlClient) ShowRefundOrderDetailsInvoker(request *model.ShowRefundOrderDetailsRequest) *ShowRefundOrderDetailsInvoker {
+	requestDef := GenReqDefForShowRefundOrderDetails()
+	return &ShowRefundOrderDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSubCustomerBudget 查询客户预算
 //
 // 功能描述：查询客户预算
 //
@@ -643,7 +871,13 @@ func (c *BssintlClient) ShowSubCustomerBudget(request *model.ShowSubCustomerBudg
 	}
 }
 
-// 解冻客户账号
+// ShowSubCustomerBudgetInvoker 查询客户预算
+func (c *BssintlClient) ShowSubCustomerBudgetInvoker(request *model.ShowSubCustomerBudgetRequest) *ShowSubCustomerBudgetInvoker {
+	requestDef := GenReqDefForShowSubCustomerBudget()
+	return &ShowSubCustomerBudgetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnfreezeSubCustomers 解冻客户账号
 //
 // 功能描述：解冻伙伴子客户
 //
@@ -659,7 +893,13 @@ func (c *BssintlClient) UnfreezeSubCustomers(request *model.UnfreezeSubCustomers
 	}
 }
 
-// 设置或者取消包年/包月资源到期转按需
+// UnfreezeSubCustomersInvoker 解冻客户账号
+func (c *BssintlClient) UnfreezeSubCustomersInvoker(request *model.UnfreezeSubCustomersRequest) *UnfreezeSubCustomersInvoker {
+	requestDef := GenReqDefForUnfreezeSubCustomers()
+	return &UnfreezeSubCustomersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePeriodToOnDemand 设置或者取消包年/包月资源到期转按需
 //
 // 功能描述：客户可以设置包年/包月资源到期后转为按需资源计费。包年/包月计费模式到期后，按需的计费模式即生效
 //
@@ -675,7 +915,13 @@ func (c *BssintlClient) UpdatePeriodToOnDemand(request *model.UpdatePeriodToOnDe
 	}
 }
 
-// 设置客户预算
+// UpdatePeriodToOnDemandInvoker 设置或者取消包年/包月资源到期转按需
+func (c *BssintlClient) UpdatePeriodToOnDemandInvoker(request *model.UpdatePeriodToOnDemandRequest) *UpdatePeriodToOnDemandInvoker {
+	requestDef := GenReqDefForUpdatePeriodToOnDemand()
+	return &UpdatePeriodToOnDemandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSubCustomerBudget 设置客户预算
 //
 // 功能描述：设置客户预算
 //
@@ -689,4 +935,10 @@ func (c *BssintlClient) UpdateSubCustomerBudget(request *model.UpdateSubCustomer
 	} else {
 		return resp.(*model.UpdateSubCustomerBudgetResponse), nil
 	}
+}
+
+// UpdateSubCustomerBudgetInvoker 设置客户预算
+func (c *BssintlClient) UpdateSubCustomerBudgetInvoker(request *model.UpdateSubCustomerBudgetRequest) *UpdateSubCustomerBudgetInvoker {
+	requestDef := GenReqDefForUpdateSubCustomerBudget()
+	return &UpdateSubCustomerBudgetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

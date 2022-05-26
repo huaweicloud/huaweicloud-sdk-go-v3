@@ -107,6 +107,10 @@ func GetInstanceParamArchEnum() InstanceParamArchEnum {
 	}
 }
 
+func (c InstanceParamArch) Value() string {
+	return c.value
+}
+
 func (c InstanceParamArch) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -153,6 +157,10 @@ func GetInstanceParamCpuMemoryEnum() InstanceParamCpuMemoryEnum {
 	}
 }
 
+func (c InstanceParamCpuMemory) Value() string {
+	return c.value
+}
+
 func (c InstanceParamCpuMemory) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -193,6 +201,10 @@ func GetInstanceParamPvcQuantityEnum() InstanceParamPvcQuantityEnum {
 			value: "20GB",
 		},
 	}
+}
+
+func (c InstanceParamPvcQuantity) Value() string {
+	return c.value
 }
 
 func (c InstanceParamPvcQuantity) MarshalJSON() ([]byte, error) {

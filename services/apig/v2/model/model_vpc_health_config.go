@@ -78,6 +78,10 @@ func GetVpcHealthConfigProtocolEnum() VpcHealthConfigProtocolEnum {
 	}
 }
 
+func (c VpcHealthConfigProtocol) Value() string {
+	return c.value
+}
+
 func (c VpcHealthConfigProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -116,6 +120,10 @@ func GetVpcHealthConfigMethodEnum() VpcHealthConfigMethodEnum {
 	}
 }
 
+func (c VpcHealthConfigMethod) Value() string {
+	return c.value
+}
+
 func (c VpcHealthConfigMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -151,6 +159,10 @@ func GetVpcHealthConfigStatusEnum() VpcHealthConfigStatusEnum {
 			value: 2,
 		},
 	}
+}
+
+func (c VpcHealthConfigStatus) Value() int32 {
+	return c.value
 }
 
 func (c VpcHealthConfigStatus) MarshalJSON() ([]byte, error) {

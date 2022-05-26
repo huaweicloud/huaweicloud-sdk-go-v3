@@ -71,6 +71,10 @@ func GetPostPaidServerExtendParamInterruptionPolicyEnum() PostPaidServerExtendPa
 	}
 }
 
+func (c PostPaidServerExtendParamInterruptionPolicy) Value() string {
+	return c.value
+}
+
 func (c PostPaidServerExtendParamInterruptionPolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

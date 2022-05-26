@@ -68,6 +68,10 @@ func GetBootstrapScriptRespFailActionEnum() BootstrapScriptRespFailActionEnum {
 	}
 }
 
+func (c BootstrapScriptRespFailAction) Value() string {
+	return c.value
+}
+
 func (c BootstrapScriptRespFailAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

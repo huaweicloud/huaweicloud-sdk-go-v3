@@ -51,6 +51,10 @@ func GetPipelineDeleteStatusStatusEnum() PipelineDeleteStatusStatusEnum {
 	}
 }
 
+func (c PipelineDeleteStatusStatus) Value() string {
+	return c.value
+}
+
 func (c PipelineDeleteStatusStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

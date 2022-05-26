@@ -57,6 +57,10 @@ func GetPostPreCheckRespStatusEnum() PostPreCheckRespStatusEnum {
 	}
 }
 
+func (c PostPreCheckRespStatus) Value() string {
+	return c.value
+}
+
 func (c PostPreCheckRespStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -107,6 +107,10 @@ func GetStatisticsApiCycleEnum() StatisticsApiCycleEnum {
 	}
 }
 
+func (c StatisticsApiCycle) Value() string {
+	return c.value
+}
+
 func (c StatisticsApiCycle) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -142,6 +146,10 @@ func GetStatisticsApiStatusEnum() StatisticsApiStatusEnum {
 			value: 2,
 		},
 	}
+}
+
+func (c StatisticsApiStatus) Value() int32 {
+	return c.value
 }
 
 func (c StatisticsApiStatus) MarshalJSON() ([]byte, error) {

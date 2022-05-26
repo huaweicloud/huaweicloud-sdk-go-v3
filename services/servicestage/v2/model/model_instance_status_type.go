@@ -82,6 +82,10 @@ func GetInstanceStatusTypeEnum() InstanceStatusTypeEnum {
 	}
 }
 
+func (c InstanceStatusType) Value() string {
+	return c.value
+}
+
 func (c InstanceStatusType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

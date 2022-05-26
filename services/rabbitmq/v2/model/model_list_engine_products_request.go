@@ -44,6 +44,10 @@ func GetListEngineProductsRequestEngineEnum() ListEngineProductsRequestEngineEnu
 	}
 }
 
+func (c ListEngineProductsRequestEngine) Value() string {
+	return c.value
+}
+
 func (c ListEngineProductsRequestEngine) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

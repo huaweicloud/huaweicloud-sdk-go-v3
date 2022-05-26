@@ -48,6 +48,10 @@ func GetShowPipelineLastStatusV2RequestXLanguageEnum() ShowPipelineLastStatusV2R
 	}
 }
 
+func (c ShowPipelineLastStatusV2RequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ShowPipelineLastStatusV2RequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

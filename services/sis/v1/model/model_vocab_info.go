@@ -54,6 +54,10 @@ func GetVocabInfoLanguageEnum() VocabInfoLanguageEnum {
 	}
 }
 
+func (c VocabInfoLanguage) Value() string {
+	return c.value
+}
+
 func (c VocabInfoLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

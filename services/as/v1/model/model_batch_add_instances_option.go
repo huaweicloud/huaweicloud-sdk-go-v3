@@ -54,6 +54,10 @@ func GetBatchAddInstancesOptionInstanceDeleteEnum() BatchAddInstancesOptionInsta
 	}
 }
 
+func (c BatchAddInstancesOptionInstanceDelete) Value() string {
+	return c.value
+}
+
 func (c BatchAddInstancesOptionInstanceDelete) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -86,6 +90,10 @@ func GetBatchAddInstancesOptionActionEnum() BatchAddInstancesOptionActionEnum {
 			value: "ADD",
 		},
 	}
+}
+
+func (c BatchAddInstancesOptionAction) Value() string {
+	return c.value
 }
 
 func (c BatchAddInstancesOptionAction) MarshalJSON() ([]byte, error) {
@@ -124,6 +132,10 @@ func GetBatchAddInstancesOptionInstanceAppendEnum() BatchAddInstancesOptionInsta
 			value: "yes",
 		},
 	}
+}
+
+func (c BatchAddInstancesOptionInstanceAppend) Value() string {
+	return c.value
 }
 
 func (c BatchAddInstancesOptionInstanceAppend) MarshalJSON() ([]byte, error) {

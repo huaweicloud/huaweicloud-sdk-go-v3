@@ -73,6 +73,10 @@ func GetAppInfoCreatorEnum() AppInfoCreatorEnum {
 	}
 }
 
+func (c AppInfoCreator) Value() string {
+	return c.value
+}
+
 func (c AppInfoCreator) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -105,6 +109,10 @@ func GetAppInfoStatusEnum() AppInfoStatusEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c AppInfoStatus) Value() int32 {
+	return c.value
 }
 
 func (c AppInfoStatus) MarshalJSON() ([]byte, error) {
@@ -143,6 +151,10 @@ func GetAppInfoAppTypeEnum() AppInfoAppTypeEnum {
 			value: "roma",
 		},
 	}
+}
+
+func (c AppInfoAppType) Value() string {
+	return c.value
 }
 
 func (c AppInfoAppType) MarshalJSON() ([]byte, error) {

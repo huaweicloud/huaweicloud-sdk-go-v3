@@ -90,6 +90,10 @@ func GetShowTasksResponseBodyTaskTypeEnum() ShowTasksResponseBodyTaskTypeEnum {
 	}
 }
 
+func (c ShowTasksResponseBodyTaskType) Value() string {
+	return c.value
+}
+
 func (c ShowTasksResponseBodyTaskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -140,6 +144,10 @@ func GetShowTasksResponseBodyTaskStatusEnum() ShowTasksResponseBodyTaskStatusEnu
 	}
 }
 
+func (c ShowTasksResponseBodyTaskStatus) Value() string {
+	return c.value
+}
+
 func (c ShowTasksResponseBodyTaskStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -182,6 +190,10 @@ func GetShowTasksResponseBodyScheduleStatusEnum() ShowTasksResponseBodyScheduleS
 	}
 }
 
+func (c ShowTasksResponseBodyScheduleStatus) Value() string {
+	return c.value
+}
+
 func (c ShowTasksResponseBodyScheduleStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -222,6 +234,10 @@ func GetShowTasksResponseBodySafeLevelEnum() ShowTasksResponseBodySafeLevelEnum 
 			value: "highrisk",
 		},
 	}
+}
+
+func (c ShowTasksResponseBodySafeLevel) Value() string {
+	return c.value
 }
 
 func (c ShowTasksResponseBodySafeLevel) MarshalJSON() ([]byte, error) {

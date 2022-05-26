@@ -92,6 +92,10 @@ func GetAddonInstanceStatusStatusEnum() AddonInstanceStatusStatusEnum {
 	}
 }
 
+func (c AddonInstanceStatusStatus) Value() string {
+	return c.value
+}
+
 func (c AddonInstanceStatusStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

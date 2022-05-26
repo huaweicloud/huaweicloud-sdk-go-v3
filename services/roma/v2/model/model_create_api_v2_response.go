@@ -171,6 +171,10 @@ func GetCreateApiV2ResponseTypeEnum() CreateApiV2ResponseTypeEnum {
 	}
 }
 
+func (c CreateApiV2ResponseType) Value() int32 {
+	return c.value
+}
+
 func (c CreateApiV2ResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -211,6 +215,10 @@ func GetCreateApiV2ResponseReqProtocolEnum() CreateApiV2ResponseReqProtocolEnum 
 			value: "BOTH",
 		},
 	}
+}
+
+func (c CreateApiV2ResponseReqProtocol) Value() string {
+	return c.value
 }
 
 func (c CreateApiV2ResponseReqProtocol) MarshalJSON() ([]byte, error) {
@@ -275,6 +283,10 @@ func GetCreateApiV2ResponseReqMethodEnum() CreateApiV2ResponseReqMethodEnum {
 	}
 }
 
+func (c CreateApiV2ResponseReqMethod) Value() string {
+	return c.value
+}
+
 func (c CreateApiV2ResponseReqMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -321,6 +333,10 @@ func GetCreateApiV2ResponseAuthTypeEnum() CreateApiV2ResponseAuthTypeEnum {
 	}
 }
 
+func (c CreateApiV2ResponseAuthType) Value() string {
+	return c.value
+}
+
 func (c CreateApiV2ResponseAuthType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -357,6 +373,10 @@ func GetCreateApiV2ResponseMatchModeEnum() CreateApiV2ResponseMatchModeEnum {
 			value: "NORMAL",
 		},
 	}
+}
+
+func (c CreateApiV2ResponseMatchMode) Value() string {
+	return c.value
 }
 
 func (c CreateApiV2ResponseMatchMode) MarshalJSON() ([]byte, error) {
@@ -399,6 +419,10 @@ func GetCreateApiV2ResponseBackendTypeEnum() CreateApiV2ResponseBackendTypeEnum 
 			value: "MOCK",
 		},
 	}
+}
+
+func (c CreateApiV2ResponseBackendType) Value() string {
+	return c.value
 }
 
 func (c CreateApiV2ResponseBackendType) MarshalJSON() ([]byte, error) {
@@ -447,6 +471,10 @@ func GetCreateApiV2ResponseContentTypeEnum() CreateApiV2ResponseContentTypeEnum 
 	}
 }
 
+func (c CreateApiV2ResponseContentType) Value() string {
+	return c.value
+}
+
 func (c CreateApiV2ResponseContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -479,6 +507,10 @@ func GetCreateApiV2ResponseStatusEnum() CreateApiV2ResponseStatusEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c CreateApiV2ResponseStatus) Value() int32 {
+	return c.value
 }
 
 func (c CreateApiV2ResponseStatus) MarshalJSON() ([]byte, error) {

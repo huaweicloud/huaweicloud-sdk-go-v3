@@ -89,6 +89,10 @@ func GetSqlAlarmRuleRespListSqlAlarmLevelEnum() SqlAlarmRuleRespListSqlAlarmLeve
 	}
 }
 
+func (c SqlAlarmRuleRespListSqlAlarmLevel) Value() string {
+	return c.value
+}
+
 func (c SqlAlarmRuleRespListSqlAlarmLevel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -125,6 +129,10 @@ func GetSqlAlarmRuleRespListStatusEnum() SqlAlarmRuleRespListStatusEnum {
 			value: "STOPPING",
 		},
 	}
+}
+
+func (c SqlAlarmRuleRespListStatus) Value() string {
+	return c.value
 }
 
 func (c SqlAlarmRuleRespListStatus) MarshalJSON() ([]byte, error) {

@@ -44,6 +44,10 @@ func GetBatchDeleteVolumeTagsRequestBodyActionEnum() BatchDeleteVolumeTagsReques
 	}
 }
 
+func (c BatchDeleteVolumeTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c BatchDeleteVolumeTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

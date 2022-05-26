@@ -111,6 +111,10 @@ func GetEndpointDbTypeEnum() EndpointDbTypeEnum {
 	}
 }
 
+func (c EndpointDbType) Value() string {
+	return c.value
+}
+
 func (c EndpointDbType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -143,6 +147,10 @@ func GetEndpointClusterModeEnum() EndpointClusterModeEnum {
 			value: "Sharding4.0+",
 		},
 	}
+}
+
+func (c EndpointClusterMode) Value() string {
+	return c.value
 }
 
 func (c EndpointClusterMode) MarshalJSON() ([]byte, error) {

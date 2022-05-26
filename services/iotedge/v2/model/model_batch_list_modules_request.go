@@ -61,6 +61,10 @@ func GetBatchListModulesRequestAppTypeEnum() BatchListModulesRequestAppTypeEnum 
 	}
 }
 
+func (c BatchListModulesRequestAppType) Value() string {
+	return c.value
+}
+
 func (c BatchListModulesRequestAppType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -101,6 +105,10 @@ func GetBatchListModulesRequestFunctionTypeEnum() BatchListModulesRequestFunctio
 			value: "ON_PREMISE_INTEGRATION",
 		},
 	}
+}
+
+func (c BatchListModulesRequestFunctionType) Value() string {
+	return c.value
 }
 
 func (c BatchListModulesRequestFunctionType) MarshalJSON() ([]byte, error) {

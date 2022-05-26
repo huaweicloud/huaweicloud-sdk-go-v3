@@ -222,6 +222,10 @@ func GetGlanceShowImageResponseBodyImageSourceTypeEnum() GlanceShowImageResponse
 	}
 }
 
+func (c GlanceShowImageResponseBodyImageSourceType) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseBodyImageSourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -264,6 +268,10 @@ func GetGlanceShowImageResponseBodyImagetypeEnum() GlanceShowImageResponseBodyIm
 	}
 }
 
+func (c GlanceShowImageResponseBodyImagetype) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseBodyImagetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -302,6 +310,10 @@ func GetGlanceShowImageResponseBodyIsregisteredEnum() GlanceShowImageResponseBod
 	}
 }
 
+func (c GlanceShowImageResponseBodyIsregistered) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseBodyIsregistered) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -338,6 +350,10 @@ func GetGlanceShowImageResponseBodyOsBitEnum() GlanceShowImageResponseBodyOsBitE
 			value: "64",
 		},
 	}
+}
+
+func (c GlanceShowImageResponseBodyOsBit) Value() string {
+	return c.value
 }
 
 func (c GlanceShowImageResponseBodyOsBit) MarshalJSON() ([]byte, error) {
@@ -380,6 +396,10 @@ func GetGlanceShowImageResponseBodyOsTypeEnum() GlanceShowImageResponseBodyOsTyp
 			value: "Other",
 		},
 	}
+}
+
+func (c GlanceShowImageResponseBodyOsType) Value() string {
+	return c.value
 }
 
 func (c GlanceShowImageResponseBodyOsType) MarshalJSON() ([]byte, error) {
@@ -460,6 +480,10 @@ func GetGlanceShowImageResponseBodyPlatformEnum() GlanceShowImageResponseBodyPla
 	}
 }
 
+func (c GlanceShowImageResponseBodyPlatform) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseBodyPlatform) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -508,6 +532,10 @@ func GetGlanceShowImageResponseBodyDiskFormatEnum() GlanceShowImageResponseBodyD
 			value: "zvhd2",
 		},
 	}
+}
+
+func (c GlanceShowImageResponseBodyDiskFormat) Value() string {
+	return c.value
 }
 
 func (c GlanceShowImageResponseBodyDiskFormat) MarshalJSON() ([]byte, error) {
@@ -560,6 +588,10 @@ func GetGlanceShowImageResponseBodyStatusEnum() GlanceShowImageResponseBodyStatu
 	}
 }
 
+func (c GlanceShowImageResponseBodyStatus) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseBodyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -600,6 +632,10 @@ func GetGlanceShowImageResponseBodyVirtualEnvTypeEnum() GlanceShowImageResponseB
 			value: "DataImage",
 		},
 	}
+}
+
+func (c GlanceShowImageResponseBodyVirtualEnvType) Value() string {
+	return c.value
 }
 
 func (c GlanceShowImageResponseBodyVirtualEnvType) MarshalJSON() ([]byte, error) {
@@ -644,6 +680,10 @@ func GetGlanceShowImageResponseBodyVisibilityEnum() GlanceShowImageResponseBodyV
 	}
 }
 
+func (c GlanceShowImageResponseBodyVisibility) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseBodyVisibility) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -680,6 +720,10 @@ func GetGlanceShowImageResponseBodySupportFcInjectEnum() GlanceShowImageResponse
 			value: "false",
 		},
 	}
+}
+
+func (c GlanceShowImageResponseBodySupportFcInject) Value() string {
+	return c.value
 }
 
 func (c GlanceShowImageResponseBodySupportFcInject) MarshalJSON() ([]byte, error) {
@@ -720,6 +764,10 @@ func GetGlanceShowImageResponseBodyHwFirmwareTypeEnum() GlanceShowImageResponseB
 	}
 }
 
+func (c GlanceShowImageResponseBodyHwFirmwareType) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseBodyHwFirmwareType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -758,6 +806,10 @@ func GetGlanceShowImageResponseBodySupportArmEnum() GlanceShowImageResponseBodyS
 	}
 }
 
+func (c GlanceShowImageResponseBodySupportArm) Value() string {
+	return c.value
+}
+
 func (c GlanceShowImageResponseBodySupportArm) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -794,6 +846,10 @@ func GetGlanceShowImageResponseBodyIsOffshelvedEnum() GlanceShowImageResponseBod
 			value: "false",
 		},
 	}
+}
+
+func (c GlanceShowImageResponseBodyIsOffshelved) Value() string {
+	return c.value
 }
 
 func (c GlanceShowImageResponseBodyIsOffshelved) MarshalJSON() ([]byte, error) {

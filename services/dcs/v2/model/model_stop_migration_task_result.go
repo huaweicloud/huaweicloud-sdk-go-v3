@@ -47,6 +47,10 @@ func GetStopMigrationTaskResultResultEnum() StopMigrationTaskResultResultEnum {
 	}
 }
 
+func (c StopMigrationTaskResultResult) Value() string {
+	return c.value
+}
+
 func (c StopMigrationTaskResultResult) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

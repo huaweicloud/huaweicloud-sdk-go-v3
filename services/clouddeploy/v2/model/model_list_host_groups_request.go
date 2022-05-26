@@ -66,6 +66,10 @@ func GetListHostGroupsRequestOsEnum() ListHostGroupsRequestOsEnum {
 	}
 }
 
+func (c ListHostGroupsRequestOs) Value() string {
+	return c.value
+}
+
 func (c ListHostGroupsRequestOs) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -102,6 +106,10 @@ func GetListHostGroupsRequestSortDirEnum() ListHostGroupsRequestSortDirEnum {
 			value: "ASC",
 		},
 	}
+}
+
+func (c ListHostGroupsRequestSortDir) Value() string {
+	return c.value
 }
 
 func (c ListHostGroupsRequestSortDir) MarshalJSON() ([]byte, error) {

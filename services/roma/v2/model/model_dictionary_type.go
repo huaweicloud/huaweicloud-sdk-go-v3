@@ -30,6 +30,10 @@ func GetDictionaryTypeEnum() DictionaryTypeEnum {
 	}
 }
 
+func (c DictionaryType) Value() string {
+	return c.value
+}
+
 func (c DictionaryType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

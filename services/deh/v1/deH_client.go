@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/deh/v1/model"
 )
 
@@ -19,7 +19,7 @@ func DeHClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 批量添加专属主机标签
+// BatchCreateDedicatedHostTags 批量添加专属主机标签
 //
 // 为指定专属主机批量添加标签。
 //
@@ -37,7 +37,13 @@ func (c *DeHClient) BatchCreateDedicatedHostTags(request *model.BatchCreateDedic
 	}
 }
 
-// 批量删除专属主机标签
+// BatchCreateDedicatedHostTagsInvoker 批量添加专属主机标签
+func (c *DeHClient) BatchCreateDedicatedHostTagsInvoker(request *model.BatchCreateDedicatedHostTagsRequest) *BatchCreateDedicatedHostTagsInvoker {
+	requestDef := GenReqDefForBatchCreateDedicatedHostTags()
+	return &BatchCreateDedicatedHostTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteDedicatedHostTags 批量删除专属主机标签
 //
 // 批量删除指定专属主机标签。
 //
@@ -55,7 +61,13 @@ func (c *DeHClient) BatchDeleteDedicatedHostTags(request *model.BatchDeleteDedic
 	}
 }
 
-// 分配专属主机
+// BatchDeleteDedicatedHostTagsInvoker 批量删除专属主机标签
+func (c *DeHClient) BatchDeleteDedicatedHostTagsInvoker(request *model.BatchDeleteDedicatedHostTagsRequest) *BatchDeleteDedicatedHostTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteDedicatedHostTags()
+	return &BatchDeleteDedicatedHostTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDedicatedHost 分配专属主机
 //
 // 分配一台或多台专属主机，需要设置实例规格、所属AZ、数量等参数。
 //
@@ -71,7 +83,13 @@ func (c *DeHClient) CreateDedicatedHost(request *model.CreateDedicatedHostReques
 	}
 }
 
-// 释放专属主机
+// CreateDedicatedHostInvoker 分配专属主机
+func (c *DeHClient) CreateDedicatedHostInvoker(request *model.CreateDedicatedHostRequest) *CreateDedicatedHostInvoker {
+	requestDef := GenReqDefForCreateDedicatedHost()
+	return &CreateDedicatedHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDedicatedHost 释放专属主机
 //
 // 释放专属主机。
 //
@@ -87,7 +105,13 @@ func (c *DeHClient) DeleteDedicatedHost(request *model.DeleteDedicatedHostReques
 	}
 }
 
-// 查询可用的专属主机类型
+// DeleteDedicatedHostInvoker 释放专属主机
+func (c *DeHClient) DeleteDedicatedHostInvoker(request *model.DeleteDedicatedHostRequest) *DeleteDedicatedHostInvoker {
+	requestDef := GenReqDefForDeleteDedicatedHost()
+	return &DeleteDedicatedHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDedicatedHostTypes 查询可用的专属主机类型
 //
 // 查询某一AZ内可用的专属主机类型。
 //
@@ -103,7 +127,13 @@ func (c *DeHClient) ListDedicatedHostTypes(request *model.ListDedicatedHostTypes
 	}
 }
 
-// 查询专属主机列表
+// ListDedicatedHostTypesInvoker 查询可用的专属主机类型
+func (c *DeHClient) ListDedicatedHostTypesInvoker(request *model.ListDedicatedHostTypesRequest) *ListDedicatedHostTypesInvoker {
+	requestDef := GenReqDefForListDedicatedHostTypes()
+	return &ListDedicatedHostTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDedicatedHosts 查询专属主机列表
 //
 // 通过该接口查询专属主机列表。
 //
@@ -119,7 +149,13 @@ func (c *DeHClient) ListDedicatedHosts(request *model.ListDedicatedHostsRequest)
 	}
 }
 
-// 按标签查询专属主机列表
+// ListDedicatedHostsInvoker 查询专属主机列表
+func (c *DeHClient) ListDedicatedHostsInvoker(request *model.ListDedicatedHostsRequest) *ListDedicatedHostsInvoker {
+	requestDef := GenReqDefForListDedicatedHosts()
+	return &ListDedicatedHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDedicatedHostsByTags 按标签查询专属主机列表
 //
 // 使用标签过滤专属主机列表，并返回专属主机使用的所有标签。
 //
@@ -137,7 +173,13 @@ func (c *DeHClient) ListDedicatedHostsByTags(request *model.ListDedicatedHostsBy
 	}
 }
 
-// 查询专属主机上的云服务器
+// ListDedicatedHostsByTagsInvoker 按标签查询专属主机列表
+func (c *DeHClient) ListDedicatedHostsByTagsInvoker(request *model.ListDedicatedHostsByTagsRequest) *ListDedicatedHostsByTagsInvoker {
+	requestDef := GenReqDefForListDedicatedHostsByTags()
+	return &ListDedicatedHostsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServersDedicatedHost 查询专属主机上的云服务器
 //
 // 查询专属主机上已部署的云服务器信息。
 //
@@ -153,7 +195,13 @@ func (c *DeHClient) ListServersDedicatedHost(request *model.ListServersDedicated
 	}
 }
 
-// 查询专属主机详情
+// ListServersDedicatedHostInvoker 查询专属主机上的云服务器
+func (c *DeHClient) ListServersDedicatedHostInvoker(request *model.ListServersDedicatedHostRequest) *ListServersDedicatedHostInvoker {
+	requestDef := GenReqDefForListServersDedicatedHost()
+	return &ListServersDedicatedHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDedicatedHost 查询专属主机详情
 //
 // 查询某一台专属主机的详情。
 //
@@ -169,7 +217,13 @@ func (c *DeHClient) ShowDedicatedHost(request *model.ShowDedicatedHostRequest) (
 	}
 }
 
-// 查询指定专属主机标签
+// ShowDedicatedHostInvoker 查询专属主机详情
+func (c *DeHClient) ShowDedicatedHostInvoker(request *model.ShowDedicatedHostRequest) *ShowDedicatedHostInvoker {
+	requestDef := GenReqDefForShowDedicatedHost()
+	return &ShowDedicatedHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDedicatedHostTags 查询指定专属主机标签
 //
 // 查询指定专属主机的标签信息。
 //
@@ -187,7 +241,13 @@ func (c *DeHClient) ShowDedicatedHostTags(request *model.ShowDedicatedHostTagsRe
 	}
 }
 
-// 查询租户的专属主机配额
+// ShowDedicatedHostTagsInvoker 查询指定专属主机标签
+func (c *DeHClient) ShowDedicatedHostTagsInvoker(request *model.ShowDedicatedHostTagsRequest) *ShowDedicatedHostTagsInvoker {
+	requestDef := GenReqDefForShowDedicatedHostTags()
+	return &ShowDedicatedHostTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuotaSets 查询租户的专属主机配额
 //
 // 该接口用于查询租户的专属主机配额。
 //
@@ -203,7 +263,13 @@ func (c *DeHClient) ShowQuotaSets(request *model.ShowQuotaSetsRequest) (*model.S
 	}
 }
 
-// 更新专属主机属性
+// ShowQuotaSetsInvoker 查询租户的专属主机配额
+func (c *DeHClient) ShowQuotaSetsInvoker(request *model.ShowQuotaSetsRequest) *ShowQuotaSetsInvoker {
+	requestDef := GenReqDefForShowQuotaSets()
+	return &ShowQuotaSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDedicatedHost 更新专属主机属性
 //
 // 该接口用于变更专属主机的“auto_placement”和“name”属性。
 //
@@ -217,4 +283,10 @@ func (c *DeHClient) UpdateDedicatedHost(request *model.UpdateDedicatedHostReques
 	} else {
 		return resp.(*model.UpdateDedicatedHostResponse), nil
 	}
+}
+
+// UpdateDedicatedHostInvoker 更新专属主机属性
+func (c *DeHClient) UpdateDedicatedHostInvoker(request *model.UpdateDedicatedHostRequest) *UpdateDedicatedHostInvoker {
+	requestDef := GenReqDefForUpdateDedicatedHost()
+	return &UpdateDedicatedHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

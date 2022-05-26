@@ -79,6 +79,10 @@ func GetScriptInfoTypeEnum() ScriptInfoTypeEnum {
 	}
 }
 
+func (c ScriptInfoType) Value() string {
+	return c.value
+}
+
 func (c ScriptInfoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

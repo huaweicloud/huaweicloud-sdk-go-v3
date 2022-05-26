@@ -80,6 +80,10 @@ func GetListScalingInstancesRequestLifeCycleStateEnum() ListScalingInstancesRequ
 	}
 }
 
+func (c ListScalingInstancesRequestLifeCycleState) Value() string {
+	return c.value
+}
+
 func (c ListScalingInstancesRequestLifeCycleState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -122,6 +126,10 @@ func GetListScalingInstancesRequestHealthStatusEnum() ListScalingInstancesReques
 	}
 }
 
+func (c ListScalingInstancesRequestHealthStatus) Value() string {
+	return c.value
+}
+
 func (c ListScalingInstancesRequestHealthStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -158,6 +166,10 @@ func GetListScalingInstancesRequestProtectFromScalingDownEnum() ListScalingInsta
 			value: "false",
 		},
 	}
+}
+
+func (c ListScalingInstancesRequestProtectFromScalingDown) Value() string {
+	return c.value
 }
 
 func (c ListScalingInstancesRequestProtectFromScalingDown) MarshalJSON() ([]byte, error) {

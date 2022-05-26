@@ -92,6 +92,10 @@ func GetShowTasksResponseTaskTypeEnum() ShowTasksResponseTaskTypeEnum {
 	}
 }
 
+func (c ShowTasksResponseTaskType) Value() string {
+	return c.value
+}
+
 func (c ShowTasksResponseTaskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -142,6 +146,10 @@ func GetShowTasksResponseTaskStatusEnum() ShowTasksResponseTaskStatusEnum {
 	}
 }
 
+func (c ShowTasksResponseTaskStatus) Value() string {
+	return c.value
+}
+
 func (c ShowTasksResponseTaskStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -184,6 +192,10 @@ func GetShowTasksResponseScheduleStatusEnum() ShowTasksResponseScheduleStatusEnu
 	}
 }
 
+func (c ShowTasksResponseScheduleStatus) Value() string {
+	return c.value
+}
+
 func (c ShowTasksResponseScheduleStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -224,6 +236,10 @@ func GetShowTasksResponseSafeLevelEnum() ShowTasksResponseSafeLevelEnum {
 			value: "highrisk",
 		},
 	}
+}
+
+func (c ShowTasksResponseSafeLevel) Value() string {
+	return c.value
 }
 
 func (c ShowTasksResponseSafeLevel) MarshalJSON() ([]byte, error) {

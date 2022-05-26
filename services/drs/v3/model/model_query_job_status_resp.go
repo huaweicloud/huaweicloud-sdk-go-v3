@@ -134,6 +134,10 @@ func GetQueryJobStatusRespStatusEnum() QueryJobStatusRespStatusEnum {
 	}
 }
 
+func (c QueryJobStatusRespStatus) Value() string {
+	return c.value
+}
+
 func (c QueryJobStatusRespStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

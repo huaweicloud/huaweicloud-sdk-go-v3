@@ -51,6 +51,10 @@ func GetResizeInstanceReqNewSpecCodeEnum() ResizeInstanceReqNewSpecCodeEnum {
 	}
 }
 
+func (c ResizeInstanceReqNewSpecCode) Value() string {
+	return c.value
+}
+
 func (c ResizeInstanceReqNewSpecCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

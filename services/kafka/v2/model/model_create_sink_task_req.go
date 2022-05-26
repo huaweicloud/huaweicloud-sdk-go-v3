@@ -48,6 +48,10 @@ func GetCreateSinkTaskReqSourceTypeEnum() CreateSinkTaskReqSourceTypeEnum {
 	}
 }
 
+func (c CreateSinkTaskReqSourceType) Value() string {
+	return c.value
+}
+
 func (c CreateSinkTaskReqSourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -80,6 +84,10 @@ func GetCreateSinkTaskReqDestinationTypeEnum() CreateSinkTaskReqDestinationTypeE
 			value: "OBS",
 		},
 	}
+}
+
+func (c CreateSinkTaskReqDestinationType) Value() string {
+	return c.value
 }
 
 func (c CreateSinkTaskReqDestinationType) MarshalJSON() ([]byte, error) {

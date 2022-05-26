@@ -50,6 +50,10 @@ func GetRegisterDbUserRequestXLanguageEnum() RegisterDbUserRequestXLanguageEnum 
 	}
 }
 
+func (c RegisterDbUserRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c RegisterDbUserRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

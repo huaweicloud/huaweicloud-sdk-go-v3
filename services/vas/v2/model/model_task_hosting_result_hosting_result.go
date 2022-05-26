@@ -65,6 +65,10 @@ func GetTaskHostingResultHostingResultStatusEnum() TaskHostingResultHostingResul
 	}
 }
 
+func (c TaskHostingResultHostingResultStatus) Value() string {
+	return c.value
+}
+
 func (c TaskHostingResultHostingResultStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

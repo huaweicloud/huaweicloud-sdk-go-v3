@@ -92,6 +92,10 @@ func GetEdgeModuleRespDtoStateEnum() EdgeModuleRespDtoStateEnum {
 	}
 }
 
+func (c EdgeModuleRespDtoState) Value() string {
+	return c.value
+}
+
 func (c EdgeModuleRespDtoState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -134,6 +138,10 @@ func GetEdgeModuleRespDtoAppTypeEnum() EdgeModuleRespDtoAppTypeEnum {
 	}
 }
 
+func (c EdgeModuleRespDtoAppType) Value() string {
+	return c.value
+}
+
 func (c EdgeModuleRespDtoAppType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -174,6 +182,10 @@ func GetEdgeModuleRespDtoFunctionTypeEnum() EdgeModuleRespDtoFunctionTypeEnum {
 			value: "ON_PREMISE_INTEGRATION",
 		},
 	}
+}
+
+func (c EdgeModuleRespDtoFunctionType) Value() string {
+	return c.value
 }
 
 func (c EdgeModuleRespDtoFunctionType) MarshalJSON() ([]byte, error) {

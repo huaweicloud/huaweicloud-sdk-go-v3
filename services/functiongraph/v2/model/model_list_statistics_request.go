@@ -48,6 +48,10 @@ func GetListStatisticsRequestFilterEnum() ListStatisticsRequestFilterEnum {
 	}
 }
 
+func (c ListStatisticsRequestFilter) Value() string {
+	return c.value
+}
+
 func (c ListStatisticsRequestFilter) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

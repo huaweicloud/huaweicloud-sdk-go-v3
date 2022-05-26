@@ -45,6 +45,10 @@ func GetFollow302StatusRequestFollow302StatusEnum() Follow302StatusRequestFollow
 	}
 }
 
+func (c Follow302StatusRequestFollow302Status) Value() string {
+	return c.value
+}
+
 func (c Follow302StatusRequestFollow302Status) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

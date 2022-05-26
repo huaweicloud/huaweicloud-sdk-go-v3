@@ -61,6 +61,10 @@ func GetHealthCheckProtocolEnum() HealthCheckProtocolEnum {
 	}
 }
 
+func (c HealthCheckProtocol) Value() string {
+	return c.value
+}
+
 func (c HealthCheckProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

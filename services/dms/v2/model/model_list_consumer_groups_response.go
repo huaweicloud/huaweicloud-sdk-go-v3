@@ -55,6 +55,10 @@ func GetListConsumerGroupsResponseRedrivePolicyEnum() ListConsumerGroupsResponse
 	}
 }
 
+func (c ListConsumerGroupsResponseRedrivePolicy) Value() string {
+	return c.value
+}
+
 func (c ListConsumerGroupsResponseRedrivePolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

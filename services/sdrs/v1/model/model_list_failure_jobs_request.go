@@ -96,6 +96,10 @@ func GetListFailureJobsRequestFailureStatusEnum() ListFailureJobsRequestFailureS
 	}
 }
 
+func (c ListFailureJobsRequestFailureStatus) Value() string {
+	return c.value
+}
+
 func (c ListFailureJobsRequestFailureStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -140,6 +144,10 @@ func GetListFailureJobsRequestResourceTypeEnum() ListFailureJobsRequestResourceT
 			value: "disaster_recovery_drills",
 		},
 	}
+}
+
+func (c ListFailureJobsRequestResourceType) Value() string {
+	return c.value
 }
 
 func (c ListFailureJobsRequestResourceType) MarshalJSON() ([]byte, error) {

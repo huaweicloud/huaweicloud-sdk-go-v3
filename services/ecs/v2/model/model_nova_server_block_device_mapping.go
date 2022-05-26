@@ -77,6 +77,10 @@ func GetNovaServerBlockDeviceMappingSourceTypeEnum() NovaServerBlockDeviceMappin
 	}
 }
 
+func (c NovaServerBlockDeviceMappingSourceType) Value() string {
+	return c.value
+}
+
 func (c NovaServerBlockDeviceMappingSourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -109,6 +113,10 @@ func GetNovaServerBlockDeviceMappingDestinationTypeEnum() NovaServerBlockDeviceM
 			value: "volume",
 		},
 	}
+}
+
+func (c NovaServerBlockDeviceMappingDestinationType) Value() string {
+	return c.value
 }
 
 func (c NovaServerBlockDeviceMappingDestinationType) MarshalJSON() ([]byte, error) {

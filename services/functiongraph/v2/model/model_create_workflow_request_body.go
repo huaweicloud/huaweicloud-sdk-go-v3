@@ -74,6 +74,10 @@ func GetCreateWorkflowRequestBodyModeEnum() CreateWorkflowRequestBodyModeEnum {
 	}
 }
 
+func (c CreateWorkflowRequestBodyMode) Value() string {
+	return c.value
+}
+
 func (c CreateWorkflowRequestBodyMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

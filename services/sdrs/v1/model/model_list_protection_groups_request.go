@@ -68,6 +68,10 @@ func GetListProtectionGroupsRequestQueryTypeEnum() ListProtectionGroupsRequestQu
 	}
 }
 
+func (c ListProtectionGroupsRequestQueryType) Value() string {
+	return c.value
+}
+
 func (c ListProtectionGroupsRequestQueryType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

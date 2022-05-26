@@ -66,6 +66,10 @@ func GetServerDiskPartitionStyleEnum() ServerDiskPartitionStyleEnum {
 	}
 }
 
+func (c ServerDiskPartitionStyle) Value() string {
+	return c.value
+}
+
 func (c ServerDiskPartitionStyle) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -102,6 +106,10 @@ func GetServerDiskDeviceUseEnum() ServerDiskDeviceUseEnum {
 			value: "OS",
 		},
 	}
+}
+
+func (c ServerDiskDeviceUse) Value() string {
+	return c.value
 }
 
 func (c ServerDiskDeviceUse) MarshalJSON() ([]byte, error) {

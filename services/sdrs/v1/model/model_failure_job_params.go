@@ -68,6 +68,10 @@ func GetFailureJobParamsJobStatusEnum() FailureJobParamsJobStatusEnum {
 	}
 }
 
+func (c FailureJobParamsJobStatus) Value() string {
+	return c.value
+}
+
 func (c FailureJobParamsJobStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -142,6 +146,10 @@ func GetFailureJobParamsFailureStatusEnum() FailureJobParamsFailureStatusEnum {
 	}
 }
 
+func (c FailureJobParamsFailureStatus) Value() string {
+	return c.value
+}
+
 func (c FailureJobParamsFailureStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -186,6 +194,10 @@ func GetFailureJobParamsResourceTypeEnum() FailureJobParamsResourceTypeEnum {
 			value: "disaster_recovery_drills",
 		},
 	}
+}
+
+func (c FailureJobParamsResourceType) Value() string {
+	return c.value
 }
 
 func (c FailureJobParamsResourceType) MarshalJSON() ([]byte, error) {

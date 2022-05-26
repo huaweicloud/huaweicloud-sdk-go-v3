@@ -56,6 +56,10 @@ func GetApiConditionCreateSysParamNameEnum() ApiConditionCreateSysParamNameEnum 
 	}
 }
 
+func (c ApiConditionCreateSysParamName) Value() string {
+	return c.value
+}
+
 func (c ApiConditionCreateSysParamName) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -98,6 +102,10 @@ func GetApiConditionCreateConditionTypeEnum() ApiConditionCreateConditionTypeEnu
 	}
 }
 
+func (c ApiConditionCreateConditionType) Value() string {
+	return c.value
+}
+
 func (c ApiConditionCreateConditionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -134,6 +142,10 @@ func GetApiConditionCreateConditionOriginEnum() ApiConditionCreateConditionOrigi
 			value: "source",
 		},
 	}
+}
+
+func (c ApiConditionCreateConditionOrigin) Value() string {
+	return c.value
 }
 
 func (c ApiConditionCreateConditionOrigin) MarshalJSON() ([]byte, error) {

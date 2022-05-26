@@ -64,6 +64,10 @@ func GetTtsConfigAudioFormatEnum() TtsConfigAudioFormatEnum {
 	}
 }
 
+func (c TtsConfigAudioFormat) Value() string {
+	return c.value
+}
+
 func (c TtsConfigAudioFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -100,6 +104,10 @@ func GetTtsConfigSampleRateEnum() TtsConfigSampleRateEnum {
 			value: "8000",
 		},
 	}
+}
+
+func (c TtsConfigSampleRate) Value() string {
+	return c.value
 }
 
 func (c TtsConfigSampleRate) MarshalJSON() ([]byte, error) {
@@ -230,6 +238,10 @@ func GetTtsConfigPropertyEnum() TtsConfigPropertyEnum {
 			value: "chinese_huaxiaoxuan_literature",
 		},
 	}
+}
+
+func (c TtsConfigProperty) Value() string {
+	return c.value
 }
 
 func (c TtsConfigProperty) MarshalJSON() ([]byte, error) {

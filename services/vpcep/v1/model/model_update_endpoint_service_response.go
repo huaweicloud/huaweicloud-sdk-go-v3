@@ -98,6 +98,10 @@ func GetUpdateEndpointServiceResponseServerTypeEnum() UpdateEndpointServiceRespo
 	}
 }
 
+func (c UpdateEndpointServiceResponseServerType) Value() string {
+	return c.value
+}
+
 func (c UpdateEndpointServiceResponseServerType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -140,6 +144,10 @@ func GetUpdateEndpointServiceResponseStatusEnum() UpdateEndpointServiceResponseS
 	}
 }
 
+func (c UpdateEndpointServiceResponseStatus) Value() string {
+	return c.value
+}
+
 func (c UpdateEndpointServiceResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -176,6 +184,10 @@ func GetUpdateEndpointServiceResponseCidrTypeEnum() UpdateEndpointServiceRespons
 			value: "internal",
 		},
 	}
+}
+
+func (c UpdateEndpointServiceResponseCidrType) Value() string {
+	return c.value
 }
 
 func (c UpdateEndpointServiceResponseCidrType) MarshalJSON() ([]byte, error) {
@@ -222,6 +234,10 @@ func GetUpdateEndpointServiceResponseTcpProxyEnum() UpdateEndpointServiceRespons
 			value: "open",
 		},
 	}
+}
+
+func (c UpdateEndpointServiceResponseTcpProxy) Value() string {
+	return c.value
 }
 
 func (c UpdateEndpointServiceResponseTcpProxy) MarshalJSON() ([]byte, error) {

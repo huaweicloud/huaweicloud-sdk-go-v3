@@ -131,6 +131,10 @@ func GetNodeNodeTypeEnum() NodeNodeTypeEnum {
 	}
 }
 
+func (c NodeNodeType) Value() string {
+	return c.value
+}
+
 func (c NodeNodeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -171,6 +175,10 @@ func GetNodeFailPolicyEnum() NodeFailPolicyEnum {
 			value: "SUSPEND",
 		},
 	}
+}
+
+func (c NodeFailPolicy) Value() string {
+	return c.value
 }
 
 func (c NodeFailPolicy) MarshalJSON() ([]byte, error) {

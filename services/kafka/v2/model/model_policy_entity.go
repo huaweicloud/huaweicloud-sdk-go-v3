@@ -54,6 +54,10 @@ func GetPolicyEntityAccessPolicyEnum() PolicyEntityAccessPolicyEnum {
 	}
 }
 
+func (c PolicyEntityAccessPolicy) Value() string {
+	return c.value
+}
+
 func (c PolicyEntityAccessPolicy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

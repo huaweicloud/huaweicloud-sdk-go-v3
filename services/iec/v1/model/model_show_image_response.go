@@ -147,6 +147,10 @@ func GetShowImageResponseStatusEnum() ShowImageResponseStatusEnum {
 	}
 }
 
+func (c ShowImageResponseStatus) Value() string {
+	return c.value
+}
+
 func (c ShowImageResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -197,6 +201,10 @@ func GetShowImageResponseDiskFormatEnum() ShowImageResponseDiskFormatEnum {
 	}
 }
 
+func (c ShowImageResponseDiskFormat) Value() string {
+	return c.value
+}
+
 func (c ShowImageResponseDiskFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -233,6 +241,10 @@ func GetShowImageResponseImagetypeEnum() ShowImageResponseImagetypeEnum {
 			value: "private ",
 		},
 	}
+}
+
+func (c ShowImageResponseImagetype) Value() string {
+	return c.value
 }
 
 func (c ShowImageResponseImagetype) MarshalJSON() ([]byte, error) {
@@ -275,6 +287,10 @@ func GetShowImageResponseOsTypeEnum() ShowImageResponseOsTypeEnum {
 			value: "Other",
 		},
 	}
+}
+
+func (c ShowImageResponseOsType) Value() string {
+	return c.value
 }
 
 func (c ShowImageResponseOsType) MarshalJSON() ([]byte, error) {

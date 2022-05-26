@@ -80,6 +80,10 @@ func GetBillingCreateCloudTypeEnum() BillingCreateCloudTypeEnum {
 	}
 }
 
+func (c BillingCreateCloudType) Value() string {
+	return c.value
+}
+
 func (c BillingCreateCloudType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -116,6 +120,10 @@ func GetBillingCreateConsistentLevelEnum() BillingCreateConsistentLevelEnum {
 			value: "crash_consistent",
 		},
 	}
+}
+
+func (c BillingCreateConsistentLevel) Value() string {
+	return c.value
 }
 
 func (c BillingCreateConsistentLevel) MarshalJSON() ([]byte, error) {
@@ -160,6 +168,10 @@ func GetBillingCreateObjectTypeEnum() BillingCreateObjectTypeEnum {
 	}
 }
 
+func (c BillingCreateObjectType) Value() string {
+	return c.value
+}
+
 func (c BillingCreateObjectType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -196,6 +208,10 @@ func GetBillingCreateProtectTypeEnum() BillingCreateProtectTypeEnum {
 			value: "replication",
 		},
 	}
+}
+
+func (c BillingCreateProtectType) Value() string {
+	return c.value
 }
 
 func (c BillingCreateProtectType) MarshalJSON() ([]byte, error) {
@@ -236,6 +252,10 @@ func GetBillingCreateChargingModeEnum() BillingCreateChargingModeEnum {
 	}
 }
 
+func (c BillingCreateChargingMode) Value() string {
+	return c.value
+}
+
 func (c BillingCreateChargingMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -272,6 +292,10 @@ func GetBillingCreatePeriodTypeEnum() BillingCreatePeriodTypeEnum {
 			value: "month",
 		},
 	}
+}
+
+func (c BillingCreatePeriodType) Value() string {
+	return c.value
 }
 
 func (c BillingCreatePeriodType) MarshalJSON() ([]byte, error) {

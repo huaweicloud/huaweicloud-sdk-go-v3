@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/lts/v2/model"
 )
 
@@ -19,7 +19,7 @@ func LtsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 创建日志接入
+// CreateAccessConfig 创建日志接入
 //
 // 创建日志接入
 //
@@ -35,7 +35,13 @@ func (c *LtsClient) CreateAccessConfig(request *model.CreateAccessConfigRequest)
 	}
 }
 
-// 创建主机组
+// CreateAccessConfigInvoker 创建日志接入
+func (c *LtsClient) CreateAccessConfigInvoker(request *model.CreateAccessConfigRequest) *CreateAccessConfigInvoker {
+	requestDef := GenReqDefForCreateAccessConfig()
+	return &CreateAccessConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateHostGroup 创建主机组
 //
 // 创建主机组
 //
@@ -51,7 +57,13 @@ func (c *LtsClient) CreateHostGroup(request *model.CreateHostGroupRequest) (*mod
 	}
 }
 
-// 创建关键词告警规则
+// CreateHostGroupInvoker 创建主机组
+func (c *LtsClient) CreateHostGroupInvoker(request *model.CreateHostGroupRequest) *CreateHostGroupInvoker {
+	requestDef := GenReqDefForCreateHostGroup()
+	return &CreateHostGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateKeywordsAlarmRule 创建关键词告警规则
 //
 // 该接口用于创建关键词告警，目前每个帐户最多可以创建共200个关键词告警与SQL告警。
 //
@@ -67,7 +79,13 @@ func (c *LtsClient) CreateKeywordsAlarmRule(request *model.CreateKeywordsAlarmRu
 	}
 }
 
-// 创建日志转储（旧版）
+// CreateKeywordsAlarmRuleInvoker 创建关键词告警规则
+func (c *LtsClient) CreateKeywordsAlarmRuleInvoker(request *model.CreateKeywordsAlarmRuleRequest) *CreateKeywordsAlarmRuleInvoker {
+	requestDef := GenReqDefForCreateKeywordsAlarmRule()
+	return &CreateKeywordsAlarmRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateLogDumpObs 创建日志转储（旧版）
 //
 // 该接口用于将指定的一个或多个日志流的日志转储到OBS服务。
 //
@@ -83,7 +101,13 @@ func (c *LtsClient) CreateLogDumpObs(request *model.CreateLogDumpObsRequest) (*m
 	}
 }
 
-// 创建日志组
+// CreateLogDumpObsInvoker 创建日志转储（旧版）
+func (c *LtsClient) CreateLogDumpObsInvoker(request *model.CreateLogDumpObsRequest) *CreateLogDumpObsInvoker {
+	requestDef := GenReqDefForCreateLogDumpObs()
+	return &CreateLogDumpObsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateLogGroup 创建日志组
 //
 // 该接口用于创建一个日志组
 //
@@ -99,7 +123,13 @@ func (c *LtsClient) CreateLogGroup(request *model.CreateLogGroupRequest) (*model
 	}
 }
 
-// 创建日志流
+// CreateLogGroupInvoker 创建日志组
+func (c *LtsClient) CreateLogGroupInvoker(request *model.CreateLogGroupRequest) *CreateLogGroupInvoker {
+	requestDef := GenReqDefForCreateLogGroup()
+	return &CreateLogGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateLogStream 创建日志流
 //
 // 该接口用于创建某个指定日志组下的日志流
 //
@@ -115,7 +145,13 @@ func (c *LtsClient) CreateLogStream(request *model.CreateLogStreamRequest) (*mod
 	}
 }
 
-// 创建消息模板
+// CreateLogStreamInvoker 创建日志流
+func (c *LtsClient) CreateLogStreamInvoker(request *model.CreateLogStreamRequest) *CreateLogStreamInvoker {
+	requestDef := GenReqDefForCreateLogStream()
+	return &CreateLogStreamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNotificationTemplate 创建消息模板
 //
 // 该接口用于创建通知模板，目前每个帐户最多可以创建共100个通知模板，创建后名称不可修改。
 //
@@ -131,7 +167,13 @@ func (c *LtsClient) CreateNotificationTemplate(request *model.CreateNotification
 	}
 }
 
-// 通过结构化模板创建结构化配置（新）
+// CreateNotificationTemplateInvoker 创建消息模板
+func (c *LtsClient) CreateNotificationTemplateInvoker(request *model.CreateNotificationTemplateRequest) *CreateNotificationTemplateInvoker {
+	requestDef := GenReqDefForCreateNotificationTemplate()
+	return &CreateNotificationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateStructConfig 通过结构化模板创建结构化配置（新）
 //
 // 该接口通过结构化模板创建结构化配置。
 //
@@ -147,7 +189,13 @@ func (c *LtsClient) CreateStructConfig(request *model.CreateStructConfigRequest)
 	}
 }
 
-// 创建结构化配置
+// CreateStructConfigInvoker 通过结构化模板创建结构化配置（新）
+func (c *LtsClient) CreateStructConfigInvoker(request *model.CreateStructConfigRequest) *CreateStructConfigInvoker {
+	requestDef := GenReqDefForCreateStructConfig()
+	return &CreateStructConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateStructTemplate 创建结构化配置
 //
 // 该接口用于创建指定日志流下的结构化配置。
 //
@@ -163,7 +211,13 @@ func (c *LtsClient) CreateStructTemplate(request *model.CreateStructTemplateRequ
 	}
 }
 
-// 创建日志转储（新版）
+// CreateStructTemplateInvoker 创建结构化配置
+func (c *LtsClient) CreateStructTemplateInvoker(request *model.CreateStructTemplateRequest) *CreateStructTemplateInvoker {
+	requestDef := GenReqDefForCreateStructTemplate()
+	return &CreateStructTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTransfer 创建日志转储（新版）
 //
 // 该接口用于创建OBS转储，DIS转储，DMS转储。
 //
@@ -179,7 +233,13 @@ func (c *LtsClient) CreateTransfer(request *model.CreateTransferRequest) (*model
 	}
 }
 
-// 删除日志接入
+// CreateTransferInvoker 创建日志转储（新版）
+func (c *LtsClient) CreateTransferInvoker(request *model.CreateTransferRequest) *CreateTransferInvoker {
+	requestDef := GenReqDefForCreateTransfer()
+	return &CreateTransferInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAccessConfig 删除日志接入
 //
 // 删除日志接入
 //
@@ -195,7 +255,13 @@ func (c *LtsClient) DeleteAccessConfig(request *model.DeleteAccessConfigRequest)
 	}
 }
 
-// 删除活动告警
+// DeleteAccessConfigInvoker 删除日志接入
+func (c *LtsClient) DeleteAccessConfigInvoker(request *model.DeleteAccessConfigRequest) *DeleteAccessConfigInvoker {
+	requestDef := GenReqDefForDeleteAccessConfig()
+	return &DeleteAccessConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteActiveAlarms 删除活动告警
 //
 // 该接口用于删除活动告警
 //
@@ -211,7 +277,13 @@ func (c *LtsClient) DeleteActiveAlarms(request *model.DeleteActiveAlarmsRequest)
 	}
 }
 
-// 删除主机组
+// DeleteActiveAlarmsInvoker 删除活动告警
+func (c *LtsClient) DeleteActiveAlarmsInvoker(request *model.DeleteActiveAlarmsRequest) *DeleteActiveAlarmsInvoker {
+	requestDef := GenReqDefForDeleteActiveAlarms()
+	return &DeleteActiveAlarmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHostGroup 删除主机组
 //
 // 删除主机组
 //
@@ -227,7 +299,13 @@ func (c *LtsClient) DeleteHostGroup(request *model.DeleteHostGroupRequest) (*mod
 	}
 }
 
-// 删除关键词告警规则
+// DeleteHostGroupInvoker 删除主机组
+func (c *LtsClient) DeleteHostGroupInvoker(request *model.DeleteHostGroupRequest) *DeleteHostGroupInvoker {
+	requestDef := GenReqDefForDeleteHostGroup()
+	return &DeleteHostGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteKeywordsAlarmRule 删除关键词告警规则
 //
 // 该接口用于删除关键词告警。
 //
@@ -243,7 +321,13 @@ func (c *LtsClient) DeleteKeywordsAlarmRule(request *model.DeleteKeywordsAlarmRu
 	}
 }
 
-// 删除日志组
+// DeleteKeywordsAlarmRuleInvoker 删除关键词告警规则
+func (c *LtsClient) DeleteKeywordsAlarmRuleInvoker(request *model.DeleteKeywordsAlarmRuleRequest) *DeleteKeywordsAlarmRuleInvoker {
+	requestDef := GenReqDefForDeleteKeywordsAlarmRule()
+	return &DeleteKeywordsAlarmRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLogGroup 删除日志组
 //
 // 该接口用于删除指定日志组。当日志组中的日志流配置了日志转储，需要取消日志转储后才可删除。
 //
@@ -259,7 +343,13 @@ func (c *LtsClient) DeleteLogGroup(request *model.DeleteLogGroupRequest) (*model
 	}
 }
 
-// 删除日志流
+// DeleteLogGroupInvoker 删除日志组
+func (c *LtsClient) DeleteLogGroupInvoker(request *model.DeleteLogGroupRequest) *DeleteLogGroupInvoker {
+	requestDef := GenReqDefForDeleteLogGroup()
+	return &DeleteLogGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLogStream 删除日志流
 //
 // 该接口用于删除指定日志组下的指定日志流。当该日志流配置了日志转储，需要取消日志转储后才可删除。
 //
@@ -275,7 +365,13 @@ func (c *LtsClient) DeleteLogStream(request *model.DeleteLogStreamRequest) (*mod
 	}
 }
 
-// 删除消息模板
+// DeleteLogStreamInvoker 删除日志流
+func (c *LtsClient) DeleteLogStreamInvoker(request *model.DeleteLogStreamRequest) *DeleteLogStreamInvoker {
+	requestDef := GenReqDefForDeleteLogStream()
+	return &DeleteLogStreamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNotificationTemplate 删除消息模板
 //
 // 该接口用于删除通知模板。
 //
@@ -291,7 +387,13 @@ func (c *LtsClient) DeleteNotificationTemplate(request *model.DeleteNotification
 	}
 }
 
-// 删除结构化配置
+// DeleteNotificationTemplateInvoker 删除消息模板
+func (c *LtsClient) DeleteNotificationTemplateInvoker(request *model.DeleteNotificationTemplateRequest) *DeleteNotificationTemplateInvoker {
+	requestDef := GenReqDefForDeleteNotificationTemplate()
+	return &DeleteNotificationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteStructTemplate 删除结构化配置
 //
 // 该接口用于删除指定日志流下的结构化配置。
 //
@@ -307,7 +409,13 @@ func (c *LtsClient) DeleteStructTemplate(request *model.DeleteStructTemplateRequ
 	}
 }
 
-// 删除日志转储
+// DeleteStructTemplateInvoker 删除结构化配置
+func (c *LtsClient) DeleteStructTemplateInvoker(request *model.DeleteStructTemplateRequest) *DeleteStructTemplateInvoker {
+	requestDef := GenReqDefForDeleteStructTemplate()
+	return &DeleteStructTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTransfer 删除日志转储
 //
 // 该接口用于删除OBS转储，DIS转储，DMS转储。
 //
@@ -323,7 +431,13 @@ func (c *LtsClient) DeleteTransfer(request *model.DeleteTransferRequest) (*model
 	}
 }
 
-// 关闭超额采集开关
+// DeleteTransferInvoker 删除日志转储
+func (c *LtsClient) DeleteTransferInvoker(request *model.DeleteTransferRequest) *DeleteTransferInvoker {
+	requestDef := GenReqDefForDeleteTransfer()
+	return &DeleteTransferInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisableLogCollection 关闭超额采集开关
 //
 // 该接口用于将超额采集日志功能关闭。
 //
@@ -339,7 +453,13 @@ func (c *LtsClient) DisableLogCollection(request *model.DisableLogCollectionRequ
 	}
 }
 
-// 打开超额采集开关
+// DisableLogCollectionInvoker 关闭超额采集开关
+func (c *LtsClient) DisableLogCollectionInvoker(request *model.DisableLogCollectionRequest) *DisableLogCollectionInvoker {
+	requestDef := GenReqDefForDisableLogCollection()
+	return &DisableLogCollectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableLogCollection 打开超额采集开关
 //
 // 该接口用于将超额采集日志功能打开。
 //
@@ -355,7 +475,13 @@ func (c *LtsClient) EnableLogCollection(request *model.EnableLogCollectionReques
 	}
 }
 
-// 查询日志接入
+// EnableLogCollectionInvoker 打开超额采集开关
+func (c *LtsClient) EnableLogCollectionInvoker(request *model.EnableLogCollectionRequest) *EnableLogCollectionInvoker {
+	requestDef := GenReqDefForEnableLogCollection()
+	return &EnableLogCollectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAccessConfig 查询日志接入
 //
 // 查询日志接入列表
 //
@@ -371,7 +497,13 @@ func (c *LtsClient) ListAccessConfig(request *model.ListAccessConfigRequest) (*m
 	}
 }
 
-// 查询活动或历史告警列表
+// ListAccessConfigInvoker 查询日志接入
+func (c *LtsClient) ListAccessConfigInvoker(request *model.ListAccessConfigRequest) *ListAccessConfigInvoker {
+	requestDef := GenReqDefForListAccessConfig()
+	return &ListAccessConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListActiveOrHistoryAlarms 查询活动或历史告警列表
 //
 // 该接口用于查询告警列表
 //
@@ -387,7 +519,13 @@ func (c *LtsClient) ListActiveOrHistoryAlarms(request *model.ListActiveOrHistory
 	}
 }
 
-// 查询结构化模板简略列表
+// ListActiveOrHistoryAlarmsInvoker 查询活动或历史告警列表
+func (c *LtsClient) ListActiveOrHistoryAlarmsInvoker(request *model.ListActiveOrHistoryAlarmsRequest) *ListActiveOrHistoryAlarmsInvoker {
+	requestDef := GenReqDefForListActiveOrHistoryAlarms()
+	return &ListActiveOrHistoryAlarmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBreifStructTemplate 查询结构化模板简略列表
 //
 // 该接口用于查询结构化模板简略列表。
 //
@@ -403,7 +541,13 @@ func (c *LtsClient) ListBreifStructTemplate(request *model.ListBreifStructTempla
 	}
 }
 
-// 查询日志流图表
+// ListBreifStructTemplateInvoker 查询结构化模板简略列表
+func (c *LtsClient) ListBreifStructTemplateInvoker(request *model.ListBreifStructTemplateRequest) *ListBreifStructTemplateInvoker {
+	requestDef := GenReqDefForListBreifStructTemplate()
+	return &ListBreifStructTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCharts 查询日志流图表
 //
 // 该接口用于查询日志流图表
 //
@@ -419,7 +563,13 @@ func (c *LtsClient) ListCharts(request *model.ListChartsRequest) (*model.ListCha
 	}
 }
 
-// 查询主机信息
+// ListChartsInvoker 查询日志流图表
+func (c *LtsClient) ListChartsInvoker(request *model.ListChartsRequest) *ListChartsInvoker {
+	requestDef := GenReqDefForListCharts()
+	return &ListChartsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHost 查询主机信息
 //
 // 查询主机列表
 //
@@ -435,7 +585,13 @@ func (c *LtsClient) ListHost(request *model.ListHostRequest) (*model.ListHostRes
 	}
 }
 
-// 查询主机组
+// ListHostInvoker 查询主机信息
+func (c *LtsClient) ListHostInvoker(request *model.ListHostRequest) *ListHostInvoker {
+	requestDef := GenReqDefForListHost()
+	return &ListHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHostGroup 查询主机组
 //
 // 查询主机组列表
 //
@@ -451,7 +607,13 @@ func (c *LtsClient) ListHostGroup(request *model.ListHostGroupRequest) (*model.L
 	}
 }
 
-// 查询关键词告警规则
+// ListHostGroupInvoker 查询主机组
+func (c *LtsClient) ListHostGroupInvoker(request *model.ListHostGroupRequest) *ListHostGroupInvoker {
+	requestDef := GenReqDefForListHostGroup()
+	return &ListHostGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListKeywordsAlarmRules 查询关键词告警规则
 //
 // 该接口用于查询关键词告警。
 //
@@ -467,7 +629,13 @@ func (c *LtsClient) ListKeywordsAlarmRules(request *model.ListKeywordsAlarmRules
 	}
 }
 
-// 查询账号下所有日志组
+// ListKeywordsAlarmRulesInvoker 查询关键词告警规则
+func (c *LtsClient) ListKeywordsAlarmRulesInvoker(request *model.ListKeywordsAlarmRulesRequest) *ListKeywordsAlarmRulesInvoker {
+	requestDef := GenReqDefForListKeywordsAlarmRules()
+	return &ListKeywordsAlarmRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLogGroups 查询账号下所有日志组
 //
 // 该接口用于查询账号下所有日志组。
 //
@@ -483,7 +651,13 @@ func (c *LtsClient) ListLogGroups(request *model.ListLogGroupsRequest) (*model.L
 	}
 }
 
-// 查询日志直方图
+// ListLogGroupsInvoker 查询账号下所有日志组
+func (c *LtsClient) ListLogGroupsInvoker(request *model.ListLogGroupsRequest) *ListLogGroupsInvoker {
+	requestDef := GenReqDefForListLogGroups()
+	return &ListLogGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLogHistogram 查询日志直方图
 //
 // 查询关键词搜索条数
 //
@@ -499,7 +673,13 @@ func (c *LtsClient) ListLogHistogram(request *model.ListLogHistogramRequest) (*m
 	}
 }
 
-// 查询指定日志组下的所有日志流
+// ListLogHistogramInvoker 查询日志直方图
+func (c *LtsClient) ListLogHistogramInvoker(request *model.ListLogHistogramRequest) *ListLogHistogramInvoker {
+	requestDef := GenReqDefForListLogHistogram()
+	return &ListLogHistogramInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLogStream 查询指定日志组下的所有日志流
 //
 // 该接口用于查询指定日志组下的所有日志流信息。
 //
@@ -515,7 +695,13 @@ func (c *LtsClient) ListLogStream(request *model.ListLogStreamRequest) (*model.L
 	}
 }
 
-// 查询日志流信息
+// ListLogStreamInvoker 查询指定日志组下的所有日志流
+func (c *LtsClient) ListLogStreamInvoker(request *model.ListLogStreamRequest) *ListLogStreamInvoker {
+	requestDef := GenReqDefForListLogStream()
+	return &ListLogStreamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLogStreams 查询日志流信息
 //
 // 该接口用于查询LTS日志流信息。
 //
@@ -531,7 +717,13 @@ func (c *LtsClient) ListLogStreams(request *model.ListLogStreamsRequest) (*model
 	}
 }
 
-// 查询日志
+// ListLogStreamsInvoker 查询日志流信息
+func (c *LtsClient) ListLogStreamsInvoker(request *model.ListLogStreamsRequest) *ListLogStreamsInvoker {
+	requestDef := GenReqDefForListLogStreams()
+	return &ListLogStreamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLogs 查询日志
 //
 // 该接口用于查询指定日志流下的日志内容。
 //
@@ -547,7 +739,13 @@ func (c *LtsClient) ListLogs(request *model.ListLogsRequest) (*model.ListLogsRes
 	}
 }
 
-// 预览消息模板邮件格式
+// ListLogsInvoker 查询日志
+func (c *LtsClient) ListLogsInvoker(request *model.ListLogsRequest) *ListLogsInvoker {
+	requestDef := GenReqDefForListLogs()
+	return &ListLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNotificationTemplate 预览消息模板邮件格式
 //
 // 该接口用于预览通知模板邮件格式
 //
@@ -563,7 +761,13 @@ func (c *LtsClient) ListNotificationTemplate(request *model.ListNotificationTemp
 	}
 }
 
-// 查询消息模板
+// ListNotificationTemplateInvoker 预览消息模板邮件格式
+func (c *LtsClient) ListNotificationTemplateInvoker(request *model.ListNotificationTemplateRequest) *ListNotificationTemplateInvoker {
+	requestDef := GenReqDefForListNotificationTemplate()
+	return &ListNotificationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNotificationTemplates 查询消息模板
 //
 // 该接口用于查询通知模板。
 //
@@ -579,7 +783,13 @@ func (c *LtsClient) ListNotificationTemplates(request *model.ListNotificationTem
 	}
 }
 
-// 查询SMN主题
+// ListNotificationTemplatesInvoker 查询消息模板
+func (c *LtsClient) ListNotificationTemplatesInvoker(request *model.ListNotificationTemplatesRequest) *ListNotificationTemplatesInvoker {
+	requestDef := GenReqDefForListNotificationTemplates()
+	return &ListNotificationTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNotificationTopics 查询SMN主题
 //
 // 该接口用于查询SMN主题
 //
@@ -595,7 +805,13 @@ func (c *LtsClient) ListNotificationTopics(request *model.ListNotificationTopics
 	}
 }
 
-// 查询结构化日志
+// ListNotificationTopicsInvoker 查询SMN主题
+func (c *LtsClient) ListNotificationTopicsInvoker(request *model.ListNotificationTopicsRequest) *ListNotificationTopicsInvoker {
+	requestDef := GenReqDefForListNotificationTopics()
+	return &ListNotificationTopicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQueryStructuredLogs 查询结构化日志
 //
 // 该接口用于查询指定日志流下的结构化日志内容。
 //
@@ -611,7 +827,13 @@ func (c *LtsClient) ListQueryStructuredLogs(request *model.ListQueryStructuredLo
 	}
 }
 
-// 查询结构化模板
+// ListQueryStructuredLogsInvoker 查询结构化日志
+func (c *LtsClient) ListQueryStructuredLogsInvoker(request *model.ListQueryStructuredLogsRequest) *ListQueryStructuredLogsInvoker {
+	requestDef := GenReqDefForListQueryStructuredLogs()
+	return &ListQueryStructuredLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListStructTemplate 查询结构化模板
 //
 // 该接口用于查询结构化模板。
 //
@@ -627,7 +849,13 @@ func (c *LtsClient) ListStructTemplate(request *model.ListStructTemplateRequest)
 	}
 }
 
-// 查询结构化日志（新版）
+// ListStructTemplateInvoker 查询结构化模板
+func (c *LtsClient) ListStructTemplateInvoker(request *model.ListStructTemplateRequest) *ListStructTemplateInvoker {
+	requestDef := GenReqDefForListStructTemplate()
+	return &ListStructTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListStructuredLogsWithTimeRange 查询结构化日志（新版）
 //
 // 该接口用于查询指定日志流下的结构化日志内容（新版）。
 //
@@ -643,7 +871,13 @@ func (c *LtsClient) ListStructuredLogsWithTimeRange(request *model.ListStructure
 	}
 }
 
-// 查询日志转储
+// ListStructuredLogsWithTimeRangeInvoker 查询结构化日志（新版）
+func (c *LtsClient) ListStructuredLogsWithTimeRangeInvoker(request *model.ListStructuredLogsWithTimeRangeRequest) *ListStructuredLogsWithTimeRangeInvoker {
+	requestDef := GenReqDefForListStructuredLogsWithTimeRange()
+	return &ListStructuredLogsWithTimeRangeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTransfers 查询日志转储
 //
 // 该接口用于查询OBS转储，DIS转储，DMS转储配置。
 //
@@ -659,7 +893,13 @@ func (c *LtsClient) ListTransfers(request *model.ListTransfersRequest) (*model.L
 	}
 }
 
-// 注册DMS kafka实例
+// ListTransfersInvoker 查询日志转储
+func (c *LtsClient) ListTransfersInvoker(request *model.ListTransfersRequest) *ListTransfersInvoker {
+	requestDef := GenReqDefForListTransfers()
+	return &ListTransfersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RegisterDmsKafkaInstance 注册DMS kafka实例
 //
 // 该接口用于注册DMS kafka实例。
 //
@@ -675,7 +915,13 @@ func (c *LtsClient) RegisterDmsKafkaInstance(request *model.RegisterDmsKafkaInst
 	}
 }
 
-// 查询单个消息模板
+// RegisterDmsKafkaInstanceInvoker 注册DMS kafka实例
+func (c *LtsClient) RegisterDmsKafkaInstanceInvoker(request *model.RegisterDmsKafkaInstanceRequest) *RegisterDmsKafkaInstanceInvoker {
+	requestDef := GenReqDefForRegisterDmsKafkaInstance()
+	return &RegisterDmsKafkaInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNotificationTemplate 查询单个消息模板
 //
 // 该接口用于查询单个通知模板
 //
@@ -691,7 +937,13 @@ func (c *LtsClient) ShowNotificationTemplate(request *model.ShowNotificationTemp
 	}
 }
 
-// 查询结构化配置
+// ShowNotificationTemplateInvoker 查询单个消息模板
+func (c *LtsClient) ShowNotificationTemplateInvoker(request *model.ShowNotificationTemplateRequest) *ShowNotificationTemplateInvoker {
+	requestDef := GenReqDefForShowNotificationTemplate()
+	return &ShowNotificationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowStructTemplate 查询结构化配置
 //
 // 该接口用于查询指定日志流下的结构化配置内容。
 //
@@ -707,7 +959,13 @@ func (c *LtsClient) ShowStructTemplate(request *model.ShowStructTemplateRequest)
 	}
 }
 
-// 修改日志接入
+// ShowStructTemplateInvoker 查询结构化配置
+func (c *LtsClient) ShowStructTemplateInvoker(request *model.ShowStructTemplateRequest) *ShowStructTemplateInvoker {
+	requestDef := GenReqDefForShowStructTemplate()
+	return &ShowStructTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAccessConfig 修改日志接入
 //
 // 修改日志接入
 //
@@ -723,7 +981,13 @@ func (c *LtsClient) UpdateAccessConfig(request *model.UpdateAccessConfigRequest)
 	}
 }
 
-// 修改主机组
+// UpdateAccessConfigInvoker 修改日志接入
+func (c *LtsClient) UpdateAccessConfigInvoker(request *model.UpdateAccessConfigRequest) *UpdateAccessConfigInvoker {
+	requestDef := GenReqDefForUpdateAccessConfig()
+	return &UpdateAccessConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHostGroup 修改主机组
 //
 // 修改主机组
 //
@@ -739,7 +1003,13 @@ func (c *LtsClient) UpdateHostGroup(request *model.UpdateHostGroupRequest) (*mod
 	}
 }
 
-// 修改关键词告警规则
+// UpdateHostGroupInvoker 修改主机组
+func (c *LtsClient) UpdateHostGroupInvoker(request *model.UpdateHostGroupRequest) *UpdateHostGroupInvoker {
+	requestDef := GenReqDefForUpdateHostGroup()
+	return &UpdateHostGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateKeywordsAlarmRule 修改关键词告警规则
 //
 // 该接口用于修改关键词告警。
 //
@@ -755,7 +1025,13 @@ func (c *LtsClient) UpdateKeywordsAlarmRule(request *model.UpdateKeywordsAlarmRu
 	}
 }
 
-// 修改日志组
+// UpdateKeywordsAlarmRuleInvoker 修改关键词告警规则
+func (c *LtsClient) UpdateKeywordsAlarmRuleInvoker(request *model.UpdateKeywordsAlarmRuleRequest) *UpdateKeywordsAlarmRuleInvoker {
+	requestDef := GenReqDefForUpdateKeywordsAlarmRule()
+	return &UpdateKeywordsAlarmRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLogGroup 修改日志组
 //
 // 该接口用于修改指定日志组下的日志存储时长。
 //
@@ -771,7 +1047,13 @@ func (c *LtsClient) UpdateLogGroup(request *model.UpdateLogGroupRequest) (*model
 	}
 }
 
-// 修改消息模板
+// UpdateLogGroupInvoker 修改日志组
+func (c *LtsClient) UpdateLogGroupInvoker(request *model.UpdateLogGroupRequest) *UpdateLogGroupInvoker {
+	requestDef := GenReqDefForUpdateLogGroup()
+	return &UpdateLogGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNotificationTemplate 修改消息模板
 //
 // 该接口用于修改通知模板,根据名称进行修改。
 //
@@ -787,7 +1069,13 @@ func (c *LtsClient) UpdateNotificationTemplate(request *model.UpdateNotification
 	}
 }
 
-// 通过结构化模板修改结构化配置（新）
+// UpdateNotificationTemplateInvoker 修改消息模板
+func (c *LtsClient) UpdateNotificationTemplateInvoker(request *model.UpdateNotificationTemplateRequest) *UpdateNotificationTemplateInvoker {
+	requestDef := GenReqDefForUpdateNotificationTemplate()
+	return &UpdateNotificationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateStructConfig 通过结构化模板修改结构化配置（新）
 //
 // 该接口通过结构化模板修改结构化配置
 //
@@ -803,7 +1091,13 @@ func (c *LtsClient) UpdateStructConfig(request *model.UpdateStructConfigRequest)
 	}
 }
 
-// 修改结构化配置
+// UpdateStructConfigInvoker 通过结构化模板修改结构化配置（新）
+func (c *LtsClient) UpdateStructConfigInvoker(request *model.UpdateStructConfigRequest) *UpdateStructConfigInvoker {
+	requestDef := GenReqDefForUpdateStructConfig()
+	return &UpdateStructConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateStructTemplate 修改结构化配置
 //
 // 该接口用于修改指定日志流下的结构化配置。
 //
@@ -819,7 +1113,13 @@ func (c *LtsClient) UpdateStructTemplate(request *model.UpdateStructTemplateRequ
 	}
 }
 
-// 更新日志转储
+// UpdateStructTemplateInvoker 修改结构化配置
+func (c *LtsClient) UpdateStructTemplateInvoker(request *model.UpdateStructTemplateRequest) *UpdateStructTemplateInvoker {
+	requestDef := GenReqDefForUpdateStructTemplate()
+	return &UpdateStructTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTransfer 更新日志转储
 //
 // 该接口用于更新OBS转储，DIS转储，DMS转储。
 //
@@ -835,7 +1135,13 @@ func (c *LtsClient) UpdateTransfer(request *model.UpdateTransferRequest) (*model
 	}
 }
 
-// 创建接入规则
+// UpdateTransferInvoker 更新日志转储
+func (c *LtsClient) UpdateTransferInvoker(request *model.UpdateTransferRequest) *UpdateTransferInvoker {
+	requestDef := GenReqDefForUpdateTransfer()
+	return &UpdateTransferInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAomMappingRules 创建接入规则
 //
 // 该接口用于创建aom日志接入lts规则
 //
@@ -851,7 +1157,13 @@ func (c *LtsClient) CreateAomMappingRules(request *model.CreateAomMappingRulesRe
 	}
 }
 
-// 删除接入规则
+// CreateAomMappingRulesInvoker 创建接入规则
+func (c *LtsClient) CreateAomMappingRulesInvoker(request *model.CreateAomMappingRulesRequest) *CreateAomMappingRulesInvoker {
+	requestDef := GenReqDefForCreateAomMappingRules()
+	return &CreateAomMappingRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAomMappingRules 删除接入规则
 //
 // 该接口用于删除lts接入规则。
 //
@@ -867,7 +1179,13 @@ func (c *LtsClient) DeleteAomMappingRules(request *model.DeleteAomMappingRulesRe
 	}
 }
 
-// 查询单个接入规则
+// DeleteAomMappingRulesInvoker 删除接入规则
+func (c *LtsClient) DeleteAomMappingRulesInvoker(request *model.DeleteAomMappingRulesRequest) *DeleteAomMappingRulesInvoker {
+	requestDef := GenReqDefForDeleteAomMappingRules()
+	return &DeleteAomMappingRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAomMappingRule 查询单个接入规则
 //
 // 该接口用于查询单个aom日志接入lts
 //
@@ -883,7 +1201,13 @@ func (c *LtsClient) ShowAomMappingRule(request *model.ShowAomMappingRuleRequest)
 	}
 }
 
-// 查询所有接入规则
+// ShowAomMappingRuleInvoker 查询单个接入规则
+func (c *LtsClient) ShowAomMappingRuleInvoker(request *model.ShowAomMappingRuleRequest) *ShowAomMappingRuleInvoker {
+	requestDef := GenReqDefForShowAomMappingRule()
+	return &ShowAomMappingRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAomMappingRules 查询所有接入规则
 //
 // 该接口用于查询aom日志所有接入lts规则
 //
@@ -899,7 +1223,13 @@ func (c *LtsClient) ShowAomMappingRules(request *model.ShowAomMappingRulesReques
 	}
 }
 
-// 修改接入规则
+// ShowAomMappingRulesInvoker 查询所有接入规则
+func (c *LtsClient) ShowAomMappingRulesInvoker(request *model.ShowAomMappingRulesRequest) *ShowAomMappingRulesInvoker {
+	requestDef := GenReqDefForShowAomMappingRules()
+	return &ShowAomMappingRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAomMappingRules 修改接入规则
 //
 // 该接口用于修改接入规则
 //
@@ -915,7 +1245,13 @@ func (c *LtsClient) UpdateAomMappingRules(request *model.UpdateAomMappingRulesRe
 	}
 }
 
-// 创建SQL告警规则
+// UpdateAomMappingRulesInvoker 修改接入规则
+func (c *LtsClient) UpdateAomMappingRulesInvoker(request *model.UpdateAomMappingRulesRequest) *UpdateAomMappingRulesInvoker {
+	requestDef := GenReqDefForUpdateAomMappingRules()
+	return &UpdateAomMappingRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSqlAlarmRule 创建SQL告警规则
 //
 // 该接口用于创建SQL告警，目前每个帐户最多可以创建共200个关键词告警与SQL告警
 //
@@ -931,7 +1267,13 @@ func (c *LtsClient) CreateSqlAlarmRule(request *model.CreateSqlAlarmRuleRequest)
 	}
 }
 
-// 删除SQL告警规则
+// CreateSqlAlarmRuleInvoker 创建SQL告警规则
+func (c *LtsClient) CreateSqlAlarmRuleInvoker(request *model.CreateSqlAlarmRuleRequest) *CreateSqlAlarmRuleInvoker {
+	requestDef := GenReqDefForCreateSqlAlarmRule()
+	return &CreateSqlAlarmRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSqlAlarmRule 删除SQL告警规则
 //
 // 该接口用于删除SQL告警
 //
@@ -947,7 +1289,13 @@ func (c *LtsClient) DeleteSqlAlarmRule(request *model.DeleteSqlAlarmRuleRequest)
 	}
 }
 
-// 查询SQL告警规则
+// DeleteSqlAlarmRuleInvoker 删除SQL告警规则
+func (c *LtsClient) DeleteSqlAlarmRuleInvoker(request *model.DeleteSqlAlarmRuleRequest) *DeleteSqlAlarmRuleInvoker {
+	requestDef := GenReqDefForDeleteSqlAlarmRule()
+	return &DeleteSqlAlarmRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSqlAlarmRules 查询SQL告警规则
 //
 // 该接口用于查询SQL告警
 //
@@ -963,7 +1311,13 @@ func (c *LtsClient) ListSqlAlarmRules(request *model.ListSqlAlarmRulesRequest) (
 	}
 }
 
-// 切换告警规则状态
+// ListSqlAlarmRulesInvoker 查询SQL告警规则
+func (c *LtsClient) ListSqlAlarmRulesInvoker(request *model.ListSqlAlarmRulesRequest) *ListSqlAlarmRulesInvoker {
+	requestDef := GenReqDefForListSqlAlarmRules()
+	return &ListSqlAlarmRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAlarmRuleStatus 切换告警规则状态
 //
 // 改变告警规则状态
 //
@@ -979,7 +1333,13 @@ func (c *LtsClient) UpdateAlarmRuleStatus(request *model.UpdateAlarmRuleStatusRe
 	}
 }
 
-// 修改SQL告警规则
+// UpdateAlarmRuleStatusInvoker 切换告警规则状态
+func (c *LtsClient) UpdateAlarmRuleStatusInvoker(request *model.UpdateAlarmRuleStatusRequest) *UpdateAlarmRuleStatusInvoker {
+	requestDef := GenReqDefForUpdateAlarmRuleStatus()
+	return &UpdateAlarmRuleStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSqlAlarmRule 修改SQL告警规则
 //
 // 该接口用于修改SQL告警
 //
@@ -993,4 +1353,10 @@ func (c *LtsClient) UpdateSqlAlarmRule(request *model.UpdateSqlAlarmRuleRequest)
 	} else {
 		return resp.(*model.UpdateSqlAlarmRuleResponse), nil
 	}
+}
+
+// UpdateSqlAlarmRuleInvoker 修改SQL告警规则
+func (c *LtsClient) UpdateSqlAlarmRuleInvoker(request *model.UpdateSqlAlarmRuleRequest) *UpdateSqlAlarmRuleInvoker {
+	requestDef := GenReqDefForUpdateSqlAlarmRule()
+	return &UpdateSqlAlarmRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

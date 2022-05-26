@@ -43,6 +43,10 @@ func GetBatchCreateClusterTagsReqActionEnum() BatchCreateClusterTagsReqActionEnu
 	}
 }
 
+func (c BatchCreateClusterTagsReqAction) Value() string {
+	return c.value
+}
+
 func (c BatchCreateClusterTagsReqAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

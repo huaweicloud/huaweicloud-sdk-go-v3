@@ -58,6 +58,10 @@ func GetCreateEdgeApplicationRequestDtoFunctionTypeEnum() CreateEdgeApplicationR
 	}
 }
 
+func (c CreateEdgeApplicationRequestDtoFunctionType) Value() string {
+	return c.value
+}
+
 func (c CreateEdgeApplicationRequestDtoFunctionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

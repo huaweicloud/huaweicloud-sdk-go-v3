@@ -66,6 +66,10 @@ func GetListRepositoryTagsRequestContentTypeEnum() ListRepositoryTagsRequestCont
 	}
 }
 
+func (c ListRepositoryTagsRequestContentType) Value() string {
+	return c.value
+}
+
 func (c ListRepositoryTagsRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -102,6 +106,10 @@ func GetListRepositoryTagsRequestOrderTypeEnum() ListRepositoryTagsRequestOrderT
 			value: "asc",
 		},
 	}
+}
+
+func (c ListRepositoryTagsRequestOrderType) Value() string {
+	return c.value
 }
 
 func (c ListRepositoryTagsRequestOrderType) MarshalJSON() ([]byte, error) {

@@ -66,6 +66,10 @@ func GetUpdatePrivacyRuleResponseCategoryEnum() UpdatePrivacyRuleResponseCategor
 	}
 }
 
+func (c UpdatePrivacyRuleResponseCategory) Value() string {
+	return c.value
+}
+
 func (c UpdatePrivacyRuleResponseCategory) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

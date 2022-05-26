@@ -68,6 +68,10 @@ func GetModDeviceDtoPrjCodeModeEnum() ModDeviceDtoPrjCodeModeEnum {
 	}
 }
 
+func (c ModDeviceDtoPrjCodeMode) Value() int32 {
+	return c.value
+}
+
 func (c ModDeviceDtoPrjCodeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -103,6 +107,10 @@ func GetModDeviceDtoStatusEnum() ModDeviceDtoStatusEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c ModDeviceDtoStatus) Value() int32 {
+	return c.value
 }
 
 func (c ModDeviceDtoStatus) MarshalJSON() ([]byte, error) {

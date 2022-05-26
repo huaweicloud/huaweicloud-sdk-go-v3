@@ -77,6 +77,10 @@ func GetMixParamEncodeTemplateEnum() MixParamEncodeTemplateEnum {
 	}
 }
 
+func (c MixParamEncodeTemplate) Value() string {
+	return c.value
+}
+
 func (c MixParamEncodeTemplate) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

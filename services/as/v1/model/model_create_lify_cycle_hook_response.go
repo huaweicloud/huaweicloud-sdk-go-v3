@@ -67,6 +67,10 @@ func GetCreateLifyCycleHookResponseLifecycleHookTypeEnum() CreateLifyCycleHookRe
 	}
 }
 
+func (c CreateLifyCycleHookResponseLifecycleHookType) Value() string {
+	return c.value
+}
+
 func (c CreateLifyCycleHookResponseLifecycleHookType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -103,6 +107,10 @@ func GetCreateLifyCycleHookResponseDefaultResultEnum() CreateLifyCycleHookRespon
 			value: "CONTINUE",
 		},
 	}
+}
+
+func (c CreateLifyCycleHookResponseDefaultResult) Value() string {
+	return c.value
 }
 
 func (c CreateLifyCycleHookResponseDefaultResult) MarshalJSON() ([]byte, error) {

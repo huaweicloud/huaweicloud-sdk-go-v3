@@ -41,6 +41,10 @@ func GetResumeScalingPolicyOptionActionEnum() ResumeScalingPolicyOptionActionEnu
 	}
 }
 
+func (c ResumeScalingPolicyOptionAction) Value() string {
+	return c.value
+}
+
 func (c ResumeScalingPolicyOptionAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -18,7 +18,7 @@ type InvitationDetail struct {
 	// 邀请状态，可选：已退出（quit），等待中（waiting），已拒绝（reject），已解散（released），其他状态不允许删除
 	Status *InvitationDetailStatus `json:"status,omitempty"`
 
-	// 被邀请方bcs实例id
+	// 被邀请方bcs服务实例id
 	InvitedBcsId *string `json:"invited_bcs_id,omitempty"`
 }
 
@@ -57,6 +57,10 @@ func GetInvitationDetailStatusEnum() InvitationDetailStatusEnum {
 			value: "released",
 		},
 	}
+}
+
+func (c InvitationDetailStatus) Value() string {
+	return c.value
 }
 
 func (c InvitationDetailStatus) MarshalJSON() ([]byte, error) {

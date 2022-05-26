@@ -57,6 +57,10 @@ func GetShowNamespaceResponseAuthEnum() ShowNamespaceResponseAuthEnum {
 	}
 }
 
+func (c ShowNamespaceResponseAuth) Value() int32 {
+	return c.value
+}
+
 func (c ShowNamespaceResponseAuth) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

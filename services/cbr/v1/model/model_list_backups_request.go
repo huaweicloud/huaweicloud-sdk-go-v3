@@ -108,6 +108,10 @@ func GetListBackupsRequestImageTypeEnum() ListBackupsRequestImageTypeEnum {
 	}
 }
 
+func (c ListBackupsRequestImageType) Value() string {
+	return c.value
+}
+
 func (c ListBackupsRequestImageType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -144,6 +148,10 @@ func GetListBackupsRequestResourceTypeEnum() ListBackupsRequestResourceTypeEnum 
 			value: "OS::Nova::Server",
 		},
 	}
+}
+
+func (c ListBackupsRequestResourceType) Value() string {
+	return c.value
 }
 
 func (c ListBackupsRequestResourceType) MarshalJSON() ([]byte, error) {
@@ -208,6 +216,10 @@ func GetListBackupsRequestStatusEnum() ListBackupsRequestStatusEnum {
 	}
 }
 
+func (c ListBackupsRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListBackupsRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -250,6 +262,10 @@ func GetListBackupsRequestOwnTypeEnum() ListBackupsRequestOwnTypeEnum {
 	}
 }
 
+func (c ListBackupsRequestOwnType) Value() string {
+	return c.value
+}
+
 func (c ListBackupsRequestOwnType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -290,6 +306,10 @@ func GetListBackupsRequestMemberStatusEnum() ListBackupsRequestMemberStatusEnum 
 			value: "rejected",
 		},
 	}
+}
+
+func (c ListBackupsRequestMemberStatus) Value() string {
+	return c.value
 }
 
 func (c ListBackupsRequestMemberStatus) MarshalJSON() ([]byte, error) {

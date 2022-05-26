@@ -59,6 +59,10 @@ func GetShowOneTopicResponsePermissionEnum() ShowOneTopicResponsePermissionEnum 
 	}
 }
 
+func (c ShowOneTopicResponsePermission) Value() string {
+	return c.value
+}
+
 func (c ShowOneTopicResponsePermission) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

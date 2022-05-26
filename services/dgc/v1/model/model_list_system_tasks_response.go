@@ -62,6 +62,10 @@ func GetListSystemTasksResponseStatusEnum() ListSystemTasksResponseStatusEnum {
 	}
 }
 
+func (c ListSystemTasksResponseStatus) Value() string {
+	return c.value
+}
+
 func (c ListSystemTasksResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

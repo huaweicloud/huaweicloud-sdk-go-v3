@@ -57,6 +57,10 @@ func GetListSubnetsByTagsRequestBodyActionEnum() ListSubnetsByTagsRequestBodyAct
 	}
 }
 
+func (c ListSubnetsByTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c ListSubnetsByTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -43,6 +43,10 @@ func GetCreateSpaceAnalysisTaskBodyOperateEnum() CreateSpaceAnalysisTaskBodyOper
 	}
 }
 
+func (c CreateSpaceAnalysisTaskBodyOperate) Value() string {
+	return c.value
+}
+
 func (c CreateSpaceAnalysisTaskBodyOperate) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -79,6 +83,10 @@ func GetCreateSpaceAnalysisTaskBodyDatastoreTypeEnum() CreateSpaceAnalysisTaskBo
 			value: "GaussDB(for MySQL)",
 		},
 	}
+}
+
+func (c CreateSpaceAnalysisTaskBodyDatastoreType) Value() string {
+	return c.value
 }
 
 func (c CreateSpaceAnalysisTaskBodyDatastoreType) MarshalJSON() ([]byte, error) {

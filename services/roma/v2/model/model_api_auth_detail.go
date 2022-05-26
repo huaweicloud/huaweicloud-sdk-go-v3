@@ -120,6 +120,10 @@ func GetApiAuthDetailAuthMethodEnum() ApiAuthDetailAuthMethodEnum {
 	}
 }
 
+func (c ApiAuthDetailAuthMethod) Value() string {
+	return c.value
+}
+
 func (c ApiAuthDetailAuthMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -160,6 +164,10 @@ func GetApiAuthDetailAppAuthTypeEnum() ApiAuthDetailAppAuthTypeEnum {
 			value: "jwt",
 		},
 	}
+}
+
+func (c ApiAuthDetailAppAuthType) Value() string {
+	return c.value
 }
 
 func (c ApiAuthDetailAppAuthType) MarshalJSON() ([]byte, error) {

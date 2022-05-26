@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/hss/v1/model"
 )
 
@@ -19,7 +19,7 @@ func HssClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 查入侵事件列表
+// ListEvents 查入侵事件列表
 //
 // 查入侵事件列表
 //
@@ -35,7 +35,13 @@ func (c *HssClient) ListEvents(request *model.ListEventsRequest) (*model.ListEve
 	}
 }
 
-// 查询弹性云服务器状态列表
+// ListEventsInvoker 查入侵事件列表
+func (c *HssClient) ListEventsInvoker(request *model.ListEventsRequest) *ListEventsInvoker {
+	requestDef := GenReqDefForListEvents()
+	return &ListEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHosts 查询弹性云服务器状态列表
 //
 // 查询弹性云服务器状态列表
 //
@@ -49,4 +55,10 @@ func (c *HssClient) ListHosts(request *model.ListHostsRequest) (*model.ListHosts
 	} else {
 		return resp.(*model.ListHostsResponse), nil
 	}
+}
+
+// ListHostsInvoker 查询弹性云服务器状态列表
+func (c *HssClient) ListHostsInvoker(request *model.ListHostsRequest) *ListHostsInvoker {
+	requestDef := GenReqDefForListHosts()
+	return &ListHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -63,6 +63,10 @@ func GetRecordRuleRecordFormatsEnum() RecordRuleRecordFormatsEnum {
 	}
 }
 
+func (c RecordRuleRecordFormats) Value() string {
+	return c.value
+}
+
 func (c RecordRuleRecordFormats) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

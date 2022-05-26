@@ -63,6 +63,10 @@ func GetListErrorLogsRequestTypeEnum() ListErrorLogsRequestTypeEnum {
 	}
 }
 
+func (c ListErrorLogsRequestType) Value() string {
+	return c.value
+}
+
 func (c ListErrorLogsRequestType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

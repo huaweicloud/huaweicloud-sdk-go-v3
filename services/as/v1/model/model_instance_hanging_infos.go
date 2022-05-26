@@ -67,6 +67,10 @@ func GetInstanceHangingInfosLifecycleHookStatusEnum() InstanceHangingInfosLifecy
 	}
 }
 
+func (c InstanceHangingInfosLifecycleHookStatus) Value() string {
+	return c.value
+}
+
 func (c InstanceHangingInfosLifecycleHookStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -60,6 +60,10 @@ func GetUploadKieRequestOverrideEnum() UploadKieRequestOverrideEnum {
 	}
 }
 
+func (c UploadKieRequestOverride) Value() string {
+	return c.value
+}
+
 func (c UploadKieRequestOverride) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

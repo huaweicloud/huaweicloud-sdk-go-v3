@@ -44,6 +44,10 @@ func GetBatchCreateServerTagsRequestBodyActionEnum() BatchCreateServerTagsReques
 	}
 }
 
+func (c BatchCreateServerTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c BatchCreateServerTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -38,6 +38,10 @@ func GetSourceRepoTypeEnum() SourceRepoTypeEnum {
 	}
 }
 
+func (c SourceRepoType) Value() string {
+	return c.value
+}
+
 func (c SourceRepoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

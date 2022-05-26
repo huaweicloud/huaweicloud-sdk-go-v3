@@ -55,6 +55,10 @@ func GetDiskIntargetServerDeviceUseEnum() DiskIntargetServerDeviceUseEnum {
 	}
 }
 
+func (c DiskIntargetServerDeviceUse) Value() string {
+	return c.value
+}
+
 func (c DiskIntargetServerDeviceUse) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

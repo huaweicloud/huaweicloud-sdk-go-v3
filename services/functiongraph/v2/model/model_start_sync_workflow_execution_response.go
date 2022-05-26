@@ -65,6 +65,10 @@ func GetStartSyncWorkflowExecutionResponseStatusEnum() StartSyncWorkflowExecutio
 	}
 }
 
+func (c StartSyncWorkflowExecutionResponseStatus) Value() string {
+	return c.value
+}
+
 func (c StartSyncWorkflowExecutionResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

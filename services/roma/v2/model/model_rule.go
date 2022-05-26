@@ -83,6 +83,10 @@ func GetRuleStatusEnum() RuleStatusEnum {
 	}
 }
 
+func (c RuleStatus) Value() int32 {
+	return c.value
+}
+
 func (c RuleStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -118,6 +122,10 @@ func GetRuleDataParsingStatusEnum() RuleDataParsingStatusEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c RuleDataParsingStatus) Value() int32 {
+	return c.value
 }
 
 func (c RuleDataParsingStatus) MarshalJSON() ([]byte, error) {

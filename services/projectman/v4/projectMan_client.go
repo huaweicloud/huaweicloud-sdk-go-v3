@@ -2,7 +2,7 @@ package v4
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/projectman/v4/model"
 )
 
@@ -19,7 +19,7 @@ func ProjectManClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// AGC调用 当前用户申请加入项目
+// AddApplyJoinProjectForAgc AGC调用 当前用户申请加入项目
 //
 // AGC调用 当前用户申请加入项目, 申请的用户id写在header中
 //
@@ -35,7 +35,13 @@ func (c *ProjectManClient) AddApplyJoinProjectForAgc(request *model.AddApplyJoin
 	}
 }
 
-// 添加项目成员
+// AddApplyJoinProjectForAgcInvoker AGC调用 当前用户申请加入项目
+func (c *ProjectManClient) AddApplyJoinProjectForAgcInvoker(request *model.AddApplyJoinProjectForAgcRequest) *AddApplyJoinProjectForAgcInvoker {
+	requestDef := GenReqDefForAddApplyJoinProjectForAgc()
+	return &AddApplyJoinProjectForAgcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddMemberV4 添加项目成员
 //
 // 添加项目成员,可以添加跨租户成员
 //
@@ -51,7 +57,13 @@ func (c *ProjectManClient) AddMemberV4(request *model.AddMemberV4Request) (*mode
 	}
 }
 
-// 批量添加项目成员
+// AddMemberV4Invoker 添加项目成员
+func (c *ProjectManClient) AddMemberV4Invoker(request *model.AddMemberV4Request) *AddMemberV4Invoker {
+	requestDef := GenReqDefForAddMemberV4()
+	return &AddMemberV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchAddMembersV4 批量添加项目成员
 //
 // 批量添加项目成员，只能添加和项目创建者同一租户下的成员，不正确的用户id会略过，添加的用户超过权限的，默认角色设置为7
 //
@@ -67,7 +79,13 @@ func (c *ProjectManClient) BatchAddMembersV4(request *model.BatchAddMembersV4Req
 	}
 }
 
-// 批量删除项目成员
+// BatchAddMembersV4Invoker 批量添加项目成员
+func (c *ProjectManClient) BatchAddMembersV4Invoker(request *model.BatchAddMembersV4Request) *BatchAddMembersV4Invoker {
+	requestDef := GenReqDefForBatchAddMembersV4()
+	return &BatchAddMembersV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteMembersV4 批量删除项目成员
 //
 // 批量删除项目成员
 //
@@ -83,7 +101,13 @@ func (c *ProjectManClient) BatchDeleteMembersV4(request *model.BatchDeleteMember
 	}
 }
 
-// 更新子用户昵称
+// BatchDeleteMembersV4Invoker 批量删除项目成员
+func (c *ProjectManClient) BatchDeleteMembersV4Invoker(request *model.BatchDeleteMembersV4Request) *BatchDeleteMembersV4Invoker {
+	requestDef := GenReqDefForBatchDeleteMembersV4()
+	return &BatchDeleteMembersV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateChildNickNames 更新子用户昵称
 //
 // 拥有te_admin角色的用户可以更新其他用户的昵称
 //
@@ -99,7 +123,13 @@ func (c *ProjectManClient) BatchUpdateChildNickNames(request *model.BatchUpdateC
 	}
 }
 
-// 检查项目名称是否存在
+// BatchUpdateChildNickNamesInvoker 更新子用户昵称
+func (c *ProjectManClient) BatchUpdateChildNickNamesInvoker(request *model.BatchUpdateChildNickNamesRequest) *BatchUpdateChildNickNamesInvoker {
+	requestDef := GenReqDefForBatchUpdateChildNickNames()
+	return &BatchUpdateChildNickNamesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckProjectNameV4 检查项目名称是否存在
 //
 // 检查项目名称是否存在
 //
@@ -115,7 +145,13 @@ func (c *ProjectManClient) CheckProjectNameV4(request *model.CheckProjectNameV4R
 	}
 }
 
-// 创建项目
+// CheckProjectNameV4Invoker 检查项目名称是否存在
+func (c *ProjectManClient) CheckProjectNameV4Invoker(request *model.CheckProjectNameV4Request) *CheckProjectNameV4Invoker {
+	requestDef := GenReqDefForCheckProjectNameV4()
+	return &CheckProjectNameV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProjectV4 创建项目
 //
 // 创建项目
 //
@@ -131,7 +167,13 @@ func (c *ProjectManClient) CreateProjectV4(request *model.CreateProjectV4Request
 	}
 }
 
-// 删除项目
+// CreateProjectV4Invoker 创建项目
+func (c *ProjectManClient) CreateProjectV4Invoker(request *model.CreateProjectV4Request) *CreateProjectV4Invoker {
+	requestDef := GenReqDefForCreateProjectV4()
+	return &CreateProjectV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProjectV4 删除项目
 //
 // 删除项目
 //
@@ -147,7 +189,13 @@ func (c *ProjectManClient) DeleteProjectV4(request *model.DeleteProjectV4Request
 	}
 }
 
-// 获取租户没有加入的项目
+// DeleteProjectV4Invoker 删除项目
+func (c *ProjectManClient) DeleteProjectV4Invoker(request *model.DeleteProjectV4Request) *DeleteProjectV4Invoker {
+	requestDef := GenReqDefForDeleteProjectV4()
+	return &DeleteProjectV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDomainNotAddedProjectsV4 获取租户没有加入的项目
 //
 // 获取租户没有加入的项目
 //
@@ -163,7 +211,13 @@ func (c *ProjectManClient) ListDomainNotAddedProjectsV4(request *model.ListDomai
 	}
 }
 
-// 获取bug统计信息
+// ListDomainNotAddedProjectsV4Invoker 获取租户没有加入的项目
+func (c *ProjectManClient) ListDomainNotAddedProjectsV4Invoker(request *model.ListDomainNotAddedProjectsV4Request) *ListDomainNotAddedProjectsV4Invoker {
+	requestDef := GenReqDefForListDomainNotAddedProjectsV4()
+	return &ListDomainNotAddedProjectsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectBugStaticsV4 获取bug统计信息
 //
 // 获取bug统计信息，按模块统计
 //
@@ -179,7 +233,13 @@ func (c *ProjectManClient) ListProjectBugStaticsV4(request *model.ListProjectBug
 	}
 }
 
-// 获取需求统计信息
+// ListProjectBugStaticsV4Invoker 获取bug统计信息
+func (c *ProjectManClient) ListProjectBugStaticsV4Invoker(request *model.ListProjectBugStaticsV4Request) *ListProjectBugStaticsV4Invoker {
+	requestDef := GenReqDefForListProjectBugStaticsV4()
+	return &ListProjectBugStaticsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectDemandStaticV4 获取需求统计信息
 //
 // 获取需求统计信息
 //
@@ -195,7 +255,13 @@ func (c *ProjectManClient) ListProjectDemandStaticV4(request *model.ListProjectD
 	}
 }
 
-// 获取指定项目的成员用户列表
+// ListProjectDemandStaticV4Invoker 获取需求统计信息
+func (c *ProjectManClient) ListProjectDemandStaticV4Invoker(request *model.ListProjectDemandStaticV4Request) *ListProjectDemandStaticV4Invoker {
+	requestDef := GenReqDefForListProjectDemandStaticV4()
+	return &ListProjectDemandStaticV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectMembersV4 获取指定项目的成员用户列表
 //
 // 获取项目成员列表
 //
@@ -211,7 +277,13 @@ func (c *ProjectManClient) ListProjectMembersV4(request *model.ListProjectMember
 	}
 }
 
-// 查询项目列表
+// ListProjectMembersV4Invoker 获取指定项目的成员用户列表
+func (c *ProjectManClient) ListProjectMembersV4Invoker(request *model.ListProjectMembersV4Request) *ListProjectMembersV4Invoker {
+	requestDef := GenReqDefForListProjectMembersV4()
+	return &ListProjectMembersV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectsV4 查询项目列表
 //
 // 查询项目列表
 //
@@ -227,7 +299,13 @@ func (c *ProjectManClient) ListProjectsV4(request *model.ListProjectsV4Request) 
 	}
 }
 
-// 主动退出项目
+// ListProjectsV4Invoker 查询项目列表
+func (c *ProjectManClient) ListProjectsV4Invoker(request *model.ListProjectsV4Request) *ListProjectsV4Invoker {
+	requestDef := GenReqDefForListProjectsV4()
+	return &ListProjectsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveProject 主动退出项目
 //
 // 项目成员主动退出项目，项目创建者不能退出
 //
@@ -243,7 +321,13 @@ func (c *ProjectManClient) RemoveProject(request *model.RemoveProjectRequest) (*
 	}
 }
 
-// 查询缺陷密度
+// RemoveProjectInvoker 主动退出项目
+func (c *ProjectManClient) RemoveProjectInvoker(request *model.RemoveProjectRequest) *RemoveProjectInvoker {
+	requestDef := GenReqDefForRemoveProject()
+	return &RemoveProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBugDensityV2 查询缺陷密度
 //
 // 查询缺陷密度
 //
@@ -259,7 +343,13 @@ func (c *ProjectManClient) ShowBugDensityV2(request *model.ShowBugDensityV2Reque
 	}
 }
 
-// 查询人均bug
+// ShowBugDensityV2Invoker 查询缺陷密度
+func (c *ProjectManClient) ShowBugDensityV2Invoker(request *model.ShowBugDensityV2Request) *ShowBugDensityV2Invoker {
+	requestDef := GenReqDefForShowBugDensityV2()
+	return &ShowBugDensityV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBugsPerDeveloper 查询人均bug
 //
 // 查询人均bug
 //
@@ -275,7 +365,13 @@ func (c *ProjectManClient) ShowBugsPerDeveloper(request *model.ShowBugsPerDevelo
 	}
 }
 
-// 查询需求按时完成率
+// ShowBugsPerDeveloperInvoker 查询人均bug
+func (c *ProjectManClient) ShowBugsPerDeveloperInvoker(request *model.ShowBugsPerDeveloperRequest) *ShowBugsPerDeveloperInvoker {
+	requestDef := GenReqDefForShowBugsPerDeveloper()
+	return &ShowBugsPerDeveloperInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCompletionRate 查询需求按时完成率
 //
 // 查询需求按时完成率
 //
@@ -291,7 +387,13 @@ func (c *ProjectManClient) ShowCompletionRate(request *model.ShowCompletionRateR
 	}
 }
 
-// 获取当前用户信息
+// ShowCompletionRateInvoker 查询需求按时完成率
+func (c *ProjectManClient) ShowCompletionRateInvoker(request *model.ShowCompletionRateRequest) *ShowCompletionRateInvoker {
+	requestDef := GenReqDefForShowCompletionRate()
+	return &ShowCompletionRateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCurUserInfo 获取当前用户信息
 //
 // 获取当前用户信息
 //
@@ -307,7 +409,13 @@ func (c *ProjectManClient) ShowCurUserInfo(request *model.ShowCurUserInfoRequest
 	}
 }
 
-// 获取当前用户角色
+// ShowCurUserInfoInvoker 获取当前用户信息
+func (c *ProjectManClient) ShowCurUserInfoInvoker(request *model.ShowCurUserInfoRequest) *ShowCurUserInfoInvoker {
+	requestDef := GenReqDefForShowCurUserInfo()
+	return &ShowCurUserInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCurUserRole 获取当前用户角色
 //
 // 获取用户在项目中的角色
 //
@@ -323,7 +431,13 @@ func (c *ProjectManClient) ShowCurUserRole(request *model.ShowCurUserRoleRequest
 	}
 }
 
-// 获取项目详情
+// ShowCurUserRoleInvoker 获取当前用户角色
+func (c *ProjectManClient) ShowCurUserRoleInvoker(request *model.ShowCurUserRoleRequest) *ShowCurUserRoleInvoker {
+	requestDef := GenReqDefForShowCurUserRole()
+	return &ShowCurUserRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProjectInfoV4 获取项目详情
 //
 // 获取项目详情
 //
@@ -339,7 +453,13 @@ func (c *ProjectManClient) ShowProjectInfoV4(request *model.ShowProjectInfoV4Req
 	}
 }
 
-// 获取项目概览
+// ShowProjectInfoV4Invoker 获取项目详情
+func (c *ProjectManClient) ShowProjectInfoV4Invoker(request *model.ShowProjectInfoV4Request) *ShowProjectInfoV4Invoker {
+	requestDef := GenReqDefForShowProjectInfoV4()
+	return &ShowProjectInfoV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProjectSummaryV4 获取项目概览
 //
 // 获取项目概览
 //
@@ -355,7 +475,13 @@ func (c *ProjectManClient) ShowProjectSummaryV4(request *model.ShowProjectSummar
 	}
 }
 
-// 更新成员在项目中的角色
+// ShowProjectSummaryV4Invoker 获取项目概览
+func (c *ProjectManClient) ShowProjectSummaryV4Invoker(request *model.ShowProjectSummaryV4Request) *ShowProjectSummaryV4Invoker {
+	requestDef := GenReqDefForShowProjectSummaryV4()
+	return &ShowProjectSummaryV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMembesRoleV4 更新成员在项目中的角色
 //
 // 更新成员在项目中的角色
 //
@@ -371,7 +497,13 @@ func (c *ProjectManClient) UpdateMembesRoleV4(request *model.UpdateMembesRoleV4R
 	}
 }
 
-// 更新用户昵称
+// UpdateMembesRoleV4Invoker 更新成员在项目中的角色
+func (c *ProjectManClient) UpdateMembesRoleV4Invoker(request *model.UpdateMembesRoleV4Request) *UpdateMembesRoleV4Invoker {
+	requestDef := GenReqDefForUpdateMembesRoleV4()
+	return &UpdateMembesRoleV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNickNameV4 更新用户昵称
 //
 // 更新用户昵称
 //
@@ -387,7 +519,13 @@ func (c *ProjectManClient) UpdateNickNameV4(request *model.UpdateNickNameV4Reque
 	}
 }
 
-// 更新项目
+// UpdateNickNameV4Invoker 更新用户昵称
+func (c *ProjectManClient) UpdateNickNameV4Invoker(request *model.UpdateNickNameV4Request) *UpdateNickNameV4Invoker {
+	requestDef := GenReqDefForUpdateNickNameV4()
+	return &UpdateNickNameV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProjectV4 更新项目
 //
 // 更新项目
 //
@@ -403,7 +541,13 @@ func (c *ProjectManClient) UpdateProjectV4(request *model.UpdateProjectV4Request
 	}
 }
 
-// 批量删除工作项
+// UpdateProjectV4Invoker 更新项目
+func (c *ProjectManClient) UpdateProjectV4Invoker(request *model.UpdateProjectV4Request) *UpdateProjectV4Invoker {
+	requestDef := GenReqDefForUpdateProjectV4()
+	return &UpdateProjectV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteIssuesV4 批量删除工作项
 //
 // 批量删除工作项
 //
@@ -419,7 +563,13 @@ func (c *ProjectManClient) BatchDeleteIssuesV4(request *model.BatchDeleteIssuesV
 	}
 }
 
-// 批量删除项目的迭代
+// BatchDeleteIssuesV4Invoker 批量删除工作项
+func (c *ProjectManClient) BatchDeleteIssuesV4Invoker(request *model.BatchDeleteIssuesV4Request) *BatchDeleteIssuesV4Invoker {
+	requestDef := GenReqDefForBatchDeleteIssuesV4()
+	return &BatchDeleteIssuesV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteIterationsV4 批量删除项目的迭代
 //
 // 批量删除项目的迭代
 //
@@ -435,7 +585,13 @@ func (c *ProjectManClient) BatchDeleteIterationsV4(request *model.BatchDeleteIte
 	}
 }
 
-// 创建工作项类型自定义字段
+// BatchDeleteIterationsV4Invoker 批量删除项目的迭代
+func (c *ProjectManClient) BatchDeleteIterationsV4Invoker(request *model.BatchDeleteIterationsV4Request) *BatchDeleteIterationsV4Invoker {
+	requestDef := GenReqDefForBatchDeleteIterationsV4()
+	return &BatchDeleteIterationsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCustomfields 创建工作项类型自定义字段
 //
 // 创建工作项类型自定义字段
 //
@@ -451,7 +607,13 @@ func (c *ProjectManClient) CreateCustomfields(request *model.CreateCustomfieldsR
 	}
 }
 
-// 创建工作项
+// CreateCustomfieldsInvoker 创建工作项类型自定义字段
+func (c *ProjectManClient) CreateCustomfieldsInvoker(request *model.CreateCustomfieldsRequest) *CreateCustomfieldsInvoker {
+	requestDef := GenReqDefForCreateCustomfields()
+	return &CreateCustomfieldsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateIssueV4 创建工作项
 //
 // 创建工作项
 //
@@ -467,7 +629,13 @@ func (c *ProjectManClient) CreateIssueV4(request *model.CreateIssueV4Request) (*
 	}
 }
 
-// 创建Scrum项目迭代
+// CreateIssueV4Invoker 创建工作项
+func (c *ProjectManClient) CreateIssueV4Invoker(request *model.CreateIssueV4Request) *CreateIssueV4Invoker {
+	requestDef := GenReqDefForCreateIssueV4()
+	return &CreateIssueV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateIterationV4 创建Scrum项目迭代
 //
 // 创建Scrum项目迭代
 //
@@ -483,7 +651,13 @@ func (c *ProjectManClient) CreateIterationV4(request *model.CreateIterationV4Req
 	}
 }
 
-// 细粒度权限用户创建工作项
+// CreateIterationV4Invoker 创建Scrum项目迭代
+func (c *ProjectManClient) CreateIterationV4Invoker(request *model.CreateIterationV4Request) *CreateIterationV4Invoker {
+	requestDef := GenReqDefForCreateIterationV4()
+	return &CreateIterationV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSystemIssueV4 细粒度权限用户创建工作项
 //
 // 拥有IAM细粒度权限（projectmanConfig:systemSettingField:set）且在devcloud项目中有创建工作项的权限的用户可以设置工作项的创建者
 //
@@ -499,7 +673,13 @@ func (c *ProjectManClient) CreateSystemIssueV4(request *model.CreateSystemIssueV
 	}
 }
 
-// 删除工作项
+// CreateSystemIssueV4Invoker 细粒度权限用户创建工作项
+func (c *ProjectManClient) CreateSystemIssueV4Invoker(request *model.CreateSystemIssueV4Request) *CreateSystemIssueV4Invoker {
+	requestDef := GenReqDefForCreateSystemIssueV4()
+	return &CreateSystemIssueV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteIssueV4 删除工作项
 //
 // 删除工作项
 //
@@ -515,7 +695,13 @@ func (c *ProjectManClient) DeleteIssueV4(request *model.DeleteIssueV4Request) (*
 	}
 }
 
-// 删除项目迭代
+// DeleteIssueV4Invoker 删除工作项
+func (c *ProjectManClient) DeleteIssueV4Invoker(request *model.DeleteIssueV4Request) *DeleteIssueV4Invoker {
+	requestDef := GenReqDefForDeleteIssueV4()
+	return &DeleteIssueV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteIterationV4 删除项目迭代
 //
 // 删除项目迭代
 //
@@ -531,7 +717,13 @@ func (c *ProjectManClient) DeleteIterationV4(request *model.DeleteIterationV4Req
 	}
 }
 
-// 获取子工作项
+// DeleteIterationV4Invoker 删除项目迭代
+func (c *ProjectManClient) DeleteIterationV4Invoker(request *model.DeleteIterationV4Request) *DeleteIterationV4Invoker {
+	requestDef := GenReqDefForDeleteIterationV4()
+	return &DeleteIterationV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListChildIssuesV4 获取子工作项
 //
 // 获取子工作项
 //
@@ -547,7 +739,13 @@ func (c *ProjectManClient) ListChildIssuesV4(request *model.ListChildIssuesV4Req
 	}
 }
 
-// 获取指定工作项的评论列表
+// ListChildIssuesV4Invoker 获取子工作项
+func (c *ProjectManClient) ListChildIssuesV4Invoker(request *model.ListChildIssuesV4Request) *ListChildIssuesV4Invoker {
+	requestDef := GenReqDefForListChildIssuesV4()
+	return &ListChildIssuesV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIssueCommentsV4 获取指定工作项的评论列表
 //
 // 获取工作项的评论
 //
@@ -563,7 +761,13 @@ func (c *ProjectManClient) ListIssueCommentsV4(request *model.ListIssueCommentsV
 	}
 }
 
-// 获取工作项历史记录
+// ListIssueCommentsV4Invoker 获取指定工作项的评论列表
+func (c *ProjectManClient) ListIssueCommentsV4Invoker(request *model.ListIssueCommentsV4Request) *ListIssueCommentsV4Invoker {
+	requestDef := GenReqDefForListIssueCommentsV4()
+	return &ListIssueCommentsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIssueRecordsV4 获取工作项历史记录
 //
 // 获取工作项历史记录
 //
@@ -579,7 +783,13 @@ func (c *ProjectManClient) ListIssueRecordsV4(request *model.ListIssueRecordsV4R
 	}
 }
 
-// 高级查询工作项
+// ListIssueRecordsV4Invoker 获取工作项历史记录
+func (c *ProjectManClient) ListIssueRecordsV4Invoker(request *model.ListIssueRecordsV4Request) *ListIssueRecordsV4Invoker {
+	requestDef := GenReqDefForListIssueRecordsV4()
+	return &ListIssueRecordsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIssuesV4 高级查询工作项
 //
 // 根据筛选条件查询工作项
 //
@@ -595,7 +805,13 @@ func (c *ProjectManClient) ListIssuesV4(request *model.ListIssuesV4Request) (*mo
 	}
 }
 
-// 查看迭代历史记录
+// ListIssuesV4Invoker 高级查询工作项
+func (c *ProjectManClient) ListIssuesV4Invoker(request *model.ListIssuesV4Request) *ListIssuesV4Invoker {
+	requestDef := GenReqDefForListIssuesV4()
+	return &ListIssuesV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIterationHistories 查看迭代历史记录
 //
 // 查看迭代历史记录
 //
@@ -611,7 +827,13 @@ func (c *ProjectManClient) ListIterationHistories(request *model.ListIterationHi
 	}
 }
 
-// 获取指定项目的迭代列表
+// ListIterationHistoriesInvoker 查看迭代历史记录
+func (c *ProjectManClient) ListIterationHistoriesInvoker(request *model.ListIterationHistoriesRequest) *ListIterationHistoriesInvoker {
+	requestDef := GenReqDefForListIterationHistories()
+	return &ListIterationHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectIterationsV4 获取指定项目的迭代列表
 //
 // 获取项目迭代
 //
@@ -627,7 +849,13 @@ func (c *ProjectManClient) ListProjectIterationsV4(request *model.ListProjectIte
 	}
 }
 
-// 按用户查询工时（多项目）
+// ListProjectIterationsV4Invoker 获取指定项目的迭代列表
+func (c *ProjectManClient) ListProjectIterationsV4Invoker(request *model.ListProjectIterationsV4Request) *ListProjectIterationsV4Invoker {
+	requestDef := GenReqDefForListProjectIterationsV4()
+	return &ListProjectIterationsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectWorkHours 按用户查询工时（多项目）
 //
 // 按用户查询工时（多项目）
 //
@@ -643,7 +871,13 @@ func (c *ProjectManClient) ListProjectWorkHours(request *model.ListProjectWorkHo
 	}
 }
 
-// 获取工作项完成率
+// ListProjectWorkHoursInvoker 按用户查询工时（多项目）
+func (c *ProjectManClient) ListProjectWorkHoursInvoker(request *model.ListProjectWorkHoursRequest) *ListProjectWorkHoursInvoker {
+	requestDef := GenReqDefForListProjectWorkHours()
+	return &ListProjectWorkHoursInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIssueCompletionRate 获取工作项完成率
 //
 // 获取工作项的完成率
 //
@@ -659,7 +893,13 @@ func (c *ProjectManClient) ShowIssueCompletionRate(request *model.ShowIssueCompl
 	}
 }
 
-// 查询工作项详情
+// ShowIssueCompletionRateInvoker 获取工作项完成率
+func (c *ProjectManClient) ShowIssueCompletionRateInvoker(request *model.ShowIssueCompletionRateRequest) *ShowIssueCompletionRateInvoker {
+	requestDef := GenReqDefForShowIssueCompletionRate()
+	return &ShowIssueCompletionRateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIssueV4 查询工作项详情
 //
 // 查询工作项详情
 //
@@ -675,7 +915,13 @@ func (c *ProjectManClient) ShowIssueV4(request *model.ShowIssueV4Request) (*mode
 	}
 }
 
-// 查看迭代详情
+// ShowIssueV4Invoker 查询工作项详情
+func (c *ProjectManClient) ShowIssueV4Invoker(request *model.ShowIssueV4Request) *ShowIssueV4Invoker {
+	requestDef := GenReqDefForShowIssueV4()
+	return &ShowIssueV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIterationV4 查看迭代详情
 //
 // 查看迭代详情
 //
@@ -691,7 +937,13 @@ func (c *ProjectManClient) ShowIterationV4(request *model.ShowIterationV4Request
 	}
 }
 
-// 按用户查询工时（单项目）
+// ShowIterationV4Invoker 查看迭代详情
+func (c *ProjectManClient) ShowIterationV4Invoker(request *model.ShowIterationV4Request) *ShowIterationV4Invoker {
+	requestDef := GenReqDefForShowIterationV4()
+	return &ShowIterationV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProjectWorkHours 按用户查询工时（单项目）
 //
 // 按用户查询工时（单项目）
 //
@@ -707,7 +959,13 @@ func (c *ProjectManClient) ShowProjectWorkHours(request *model.ShowProjectWorkHo
 	}
 }
 
-// 更新工作项
+// ShowProjectWorkHoursInvoker 按用户查询工时（单项目）
+func (c *ProjectManClient) ShowProjectWorkHoursInvoker(request *model.ShowProjectWorkHoursRequest) *ShowProjectWorkHoursInvoker {
+	requestDef := GenReqDefForShowProjectWorkHours()
+	return &ShowProjectWorkHoursInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateIssueV4 更新工作项
 //
 // 更新工作项
 //
@@ -723,7 +981,13 @@ func (c *ProjectManClient) UpdateIssueV4(request *model.UpdateIssueV4Request) (*
 	}
 }
 
-// 更新Scrum项目迭代
+// UpdateIssueV4Invoker 更新工作项
+func (c *ProjectManClient) UpdateIssueV4Invoker(request *model.UpdateIssueV4Request) *UpdateIssueV4Invoker {
+	requestDef := GenReqDefForUpdateIssueV4()
+	return &UpdateIssueV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateIterationV4 更新Scrum项目迭代
 //
 // 更新Scrum项目迭代
 //
@@ -739,7 +1003,13 @@ func (c *ProjectManClient) UpdateIterationV4(request *model.UpdateIterationV4Req
 	}
 }
 
-// 上传图片
+// UpdateIterationV4Invoker 更新Scrum项目迭代
+func (c *ProjectManClient) UpdateIterationV4Invoker(request *model.UpdateIterationV4Request) *UpdateIterationV4Invoker {
+	requestDef := GenReqDefForUpdateIterationV4()
+	return &UpdateIterationV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadIssueImg 上传图片
 //
 // 上传图片
 //
@@ -753,4 +1023,10 @@ func (c *ProjectManClient) UploadIssueImg(request *model.UploadIssueImgRequest) 
 	} else {
 		return resp.(*model.UploadIssueImgResponse), nil
 	}
+}
+
+// UploadIssueImgInvoker 上传图片
+func (c *ProjectManClient) UploadIssueImgInvoker(request *model.UploadIssueImgRequest) *UploadIssueImgInvoker {
+	requestDef := GenReqDefForUploadIssueImg()
+	return &UploadIssueImgInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

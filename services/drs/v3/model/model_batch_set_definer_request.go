@@ -47,6 +47,10 @@ func GetBatchSetDefinerRequestXLanguageEnum() BatchSetDefinerRequestXLanguageEnu
 	}
 }
 
+func (c BatchSetDefinerRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c BatchSetDefinerRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

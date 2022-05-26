@@ -104,6 +104,10 @@ func GetShowApplicationV3ResponseDeployTypeEnum() ShowApplicationV3ResponseDeplo
 	}
 }
 
+func (c ShowApplicationV3ResponseDeployType) Value() string {
+	return c.value
+}
+
 func (c ShowApplicationV3ResponseDeployType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

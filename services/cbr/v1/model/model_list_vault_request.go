@@ -75,6 +75,10 @@ func GetListVaultRequestCloudTypeEnum() ListVaultRequestCloudTypeEnum {
 	}
 }
 
+func (c ListVaultRequestCloudType) Value() string {
+	return c.value
+}
+
 func (c ListVaultRequestCloudType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -111,6 +115,10 @@ func GetListVaultRequestProtectTypeEnum() ListVaultRequestProtectTypeEnum {
 			value: "replication",
 		},
 	}
+}
+
+func (c ListVaultRequestProtectType) Value() string {
+	return c.value
 }
 
 func (c ListVaultRequestProtectType) MarshalJSON() ([]byte, error) {

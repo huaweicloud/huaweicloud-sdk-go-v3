@@ -102,6 +102,10 @@ func GetGetHostListFilterHostStatusEnum() GetHostListFilterHostStatusEnum {
 	}
 }
 
+func (c GetHostListFilterHostStatus) Value() string {
+	return c.value
+}
+
 func (c GetHostListFilterHostStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -153,6 +153,10 @@ func GetApiInfoPerPageTypeEnum() ApiInfoPerPageTypeEnum {
 	}
 }
 
+func (c ApiInfoPerPageType) Value() int32 {
+	return c.value
+}
+
 func (c ApiInfoPerPageType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -193,6 +197,10 @@ func GetApiInfoPerPageReqProtocolEnum() ApiInfoPerPageReqProtocolEnum {
 			value: "BOTH",
 		},
 	}
+}
+
+func (c ApiInfoPerPageReqProtocol) Value() string {
+	return c.value
 }
 
 func (c ApiInfoPerPageReqProtocol) MarshalJSON() ([]byte, error) {
@@ -257,6 +265,10 @@ func GetApiInfoPerPageReqMethodEnum() ApiInfoPerPageReqMethodEnum {
 	}
 }
 
+func (c ApiInfoPerPageReqMethod) Value() string {
+	return c.value
+}
+
 func (c ApiInfoPerPageReqMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -303,6 +315,10 @@ func GetApiInfoPerPageAuthTypeEnum() ApiInfoPerPageAuthTypeEnum {
 	}
 }
 
+func (c ApiInfoPerPageAuthType) Value() string {
+	return c.value
+}
+
 func (c ApiInfoPerPageAuthType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -339,6 +355,10 @@ func GetApiInfoPerPageMatchModeEnum() ApiInfoPerPageMatchModeEnum {
 			value: "NORMAL",
 		},
 	}
+}
+
+func (c ApiInfoPerPageMatchMode) Value() string {
+	return c.value
 }
 
 func (c ApiInfoPerPageMatchMode) MarshalJSON() ([]byte, error) {
@@ -381,6 +401,10 @@ func GetApiInfoPerPageBackendTypeEnum() ApiInfoPerPageBackendTypeEnum {
 			value: "MOCK",
 		},
 	}
+}
+
+func (c ApiInfoPerPageBackendType) Value() string {
+	return c.value
 }
 
 func (c ApiInfoPerPageBackendType) MarshalJSON() ([]byte, error) {
@@ -427,6 +451,10 @@ func GetApiInfoPerPageContentTypeEnum() ApiInfoPerPageContentTypeEnum {
 			value: "text/plain",
 		},
 	}
+}
+
+func (c ApiInfoPerPageContentType) Value() string {
+	return c.value
 }
 
 func (c ApiInfoPerPageContentType) MarshalJSON() ([]byte, error) {

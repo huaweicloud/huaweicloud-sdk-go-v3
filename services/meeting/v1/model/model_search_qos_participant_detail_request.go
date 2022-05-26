@@ -54,6 +54,10 @@ func GetSearchQosParticipantDetailRequestConfTypeEnum() SearchQosParticipantDeta
 	}
 }
 
+func (c SearchQosParticipantDetailRequestConfType) Value() string {
+	return c.value
+}
+
 func (c SearchQosParticipantDetailRequestConfType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -98,6 +102,10 @@ func GetSearchQosParticipantDetailRequestQosTypeEnum() SearchQosParticipantDetai
 			value: "cpu",
 		},
 	}
+}
+
+func (c SearchQosParticipantDetailRequestQosType) Value() string {
+	return c.value
 }
 
 func (c SearchQosParticipantDetailRequestQosType) MarshalJSON() ([]byte, error) {

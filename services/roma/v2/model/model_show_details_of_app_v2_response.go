@@ -75,6 +75,10 @@ func GetShowDetailsOfAppV2ResponseCreatorEnum() ShowDetailsOfAppV2ResponseCreato
 	}
 }
 
+func (c ShowDetailsOfAppV2ResponseCreator) Value() string {
+	return c.value
+}
+
 func (c ShowDetailsOfAppV2ResponseCreator) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -107,6 +111,10 @@ func GetShowDetailsOfAppV2ResponseStatusEnum() ShowDetailsOfAppV2ResponseStatusE
 			value: 1,
 		},
 	}
+}
+
+func (c ShowDetailsOfAppV2ResponseStatus) Value() int32 {
+	return c.value
 }
 
 func (c ShowDetailsOfAppV2ResponseStatus) MarshalJSON() ([]byte, error) {
@@ -145,6 +153,10 @@ func GetShowDetailsOfAppV2ResponseAppTypeEnum() ShowDetailsOfAppV2ResponseAppTyp
 			value: "roma",
 		},
 	}
+}
+
+func (c ShowDetailsOfAppV2ResponseAppType) Value() string {
+	return c.value
 }
 
 func (c ShowDetailsOfAppV2ResponseAppType) MarshalJSON() ([]byte, error) {

@@ -48,6 +48,10 @@ func GetServersInfoTypeTypeEnum() ServersInfoTypeTypeEnum {
 	}
 }
 
+func (c ServersInfoTypeType) Value() string {
+	return c.value
+}
+
 func (c ServersInfoTypeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

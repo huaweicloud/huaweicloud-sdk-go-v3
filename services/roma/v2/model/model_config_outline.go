@@ -259,6 +259,10 @@ func GetConfigOutlineConfigNameEnum() ConfigOutlineConfigNameEnum {
 	}
 }
 
+func (c ConfigOutlineConfigName) Value() string {
+	return c.value
+}
+
 func (c ConfigOutlineConfigName) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

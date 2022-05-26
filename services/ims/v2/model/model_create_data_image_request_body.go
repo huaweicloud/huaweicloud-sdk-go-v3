@@ -69,6 +69,10 @@ func GetCreateDataImageRequestBodyOsTypeEnum() CreateDataImageRequestBodyOsTypeE
 	}
 }
 
+func (c CreateDataImageRequestBodyOsType) Value() string {
+	return c.value
+}
+
 func (c CreateDataImageRequestBodyOsType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

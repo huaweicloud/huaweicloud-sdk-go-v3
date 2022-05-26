@@ -92,6 +92,10 @@ func GetContentCompareDetailLineCompareResultEnum() ContentCompareDetailLineComp
 	}
 }
 
+func (c ContentCompareDetailLineCompareResult) Value() string {
+	return c.value
+}
+
 func (c ContentCompareDetailLineCompareResult) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -148,6 +152,10 @@ func GetContentCompareDetailContentCompareResultEnum() ContentCompareDetailConte
 			value: "CAN_NOT_COMPARE-无法对比",
 		},
 	}
+}
+
+func (c ContentCompareDetailContentCompareResult) Value() string {
+	return c.value
 }
 
 func (c ContentCompareDetailContentCompareResult) MarshalJSON() ([]byte, error) {

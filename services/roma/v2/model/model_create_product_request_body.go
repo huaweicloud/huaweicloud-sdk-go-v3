@@ -76,6 +76,10 @@ func GetCreateProductRequestBodyProductTypeEnum() CreateProductRequestBodyProduc
 	}
 }
 
+func (c CreateProductRequestBodyProductType) Value() int32 {
+	return c.value
+}
+
 func (c CreateProductRequestBodyProductType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -116,6 +120,10 @@ func GetCreateProductRequestBodyProtocolTypeEnum() CreateProductRequestBodyProto
 	}
 }
 
+func (c CreateProductRequestBodyProtocolType) Value() int32 {
+	return c.value
+}
+
 func (c CreateProductRequestBodyProtocolType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -151,6 +159,10 @@ func GetCreateProductRequestBodyDataFormatEnum() CreateProductRequestBodyDataFor
 			value: 1,
 		},
 	}
+}
+
+func (c CreateProductRequestBodyDataFormat) Value() int32 {
+	return c.value
 }
 
 func (c CreateProductRequestBodyDataFormat) MarshalJSON() ([]byte, error) {

@@ -54,6 +54,10 @@ func GetBatchRemoveInstancesOptionInstanceDeleteEnum() BatchRemoveInstancesOptio
 	}
 }
 
+func (c BatchRemoveInstancesOptionInstanceDelete) Value() string {
+	return c.value
+}
+
 func (c BatchRemoveInstancesOptionInstanceDelete) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -86,6 +90,10 @@ func GetBatchRemoveInstancesOptionActionEnum() BatchRemoveInstancesOptionActionE
 			value: "REMOVE",
 		},
 	}
+}
+
+func (c BatchRemoveInstancesOptionAction) Value() string {
+	return c.value
 }
 
 func (c BatchRemoveInstancesOptionAction) MarshalJSON() ([]byte, error) {
@@ -124,6 +132,10 @@ func GetBatchRemoveInstancesOptionInstanceAppendEnum() BatchRemoveInstancesOptio
 			value: "yes",
 		},
 	}
+}
+
+func (c BatchRemoveInstancesOptionInstanceAppend) Value() string {
+	return c.value
 }
 
 func (c BatchRemoveInstancesOptionInstanceAppend) MarshalJSON() ([]byte, error) {

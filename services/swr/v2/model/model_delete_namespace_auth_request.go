@@ -50,6 +50,10 @@ func GetDeleteNamespaceAuthRequestContentTypeEnum() DeleteNamespaceAuthRequestCo
 	}
 }
 
+func (c DeleteNamespaceAuthRequestContentType) Value() string {
+	return c.value
+}
+
 func (c DeleteNamespaceAuthRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

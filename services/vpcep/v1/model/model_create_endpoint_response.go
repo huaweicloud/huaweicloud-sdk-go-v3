@@ -97,6 +97,10 @@ func GetCreateEndpointResponseServiceTypeEnum() CreateEndpointResponseServiceTyp
 	}
 }
 
+func (c CreateEndpointResponseServiceType) Value() string {
+	return c.value
+}
+
 func (c CreateEndpointResponseServiceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -149,6 +153,10 @@ func GetCreateEndpointResponseStatusEnum() CreateEndpointResponseStatusEnum {
 			value: "deleting",
 		},
 	}
+}
+
+func (c CreateEndpointResponseStatus) Value() string {
+	return c.value
 }
 
 func (c CreateEndpointResponseStatus) MarshalJSON() ([]byte, error) {

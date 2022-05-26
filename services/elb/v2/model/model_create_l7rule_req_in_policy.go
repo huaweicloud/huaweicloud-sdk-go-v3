@@ -60,6 +60,10 @@ func GetCreateL7ruleReqInPolicyTypeEnum() CreateL7ruleReqInPolicyTypeEnum {
 	}
 }
 
+func (c CreateL7ruleReqInPolicyType) Value() string {
+	return c.value
+}
+
 func (c CreateL7ruleReqInPolicyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

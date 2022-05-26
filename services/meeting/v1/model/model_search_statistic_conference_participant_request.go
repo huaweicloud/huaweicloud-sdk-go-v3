@@ -60,6 +60,10 @@ func GetSearchStatisticConferenceParticipantRequestTimeUnitEnum() SearchStatisti
 	}
 }
 
+func (c SearchStatisticConferenceParticipantRequestTimeUnit) Value() string {
+	return c.value
+}
+
 func (c SearchStatisticConferenceParticipantRequestTimeUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -100,6 +104,10 @@ func GetSearchStatisticConferenceParticipantRequestCategoryEnum() SearchStatisti
 			value: "participant_type_info",
 		},
 	}
+}
+
+func (c SearchStatisticConferenceParticipantRequestCategory) Value() string {
+	return c.value
 }
 
 func (c SearchStatisticConferenceParticipantRequestCategory) MarshalJSON() ([]byte, error) {

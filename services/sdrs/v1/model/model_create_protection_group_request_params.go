@@ -59,6 +59,10 @@ func GetCreateProtectionGroupRequestParamsDrTypeEnum() CreateProtectionGroupRequ
 	}
 }
 
+func (c CreateProtectionGroupRequestParamsDrType) Value() string {
+	return c.value
+}
+
 func (c CreateProtectionGroupRequestParamsDrType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

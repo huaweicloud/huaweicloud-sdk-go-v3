@@ -68,6 +68,10 @@ func GetSqlRequestSearchTimeRangeUnitEnum() SqlRequestSearchTimeRangeUnitEnum {
 	}
 }
 
+func (c SqlRequestSearchTimeRangeUnit) Value() string {
+	return c.value
+}
+
 func (c SqlRequestSearchTimeRangeUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

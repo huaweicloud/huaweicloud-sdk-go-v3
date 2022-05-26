@@ -56,6 +56,10 @@ func GetAddressVersionEnum() AddressVersionEnum {
 	}
 }
 
+func (c AddressVersion) Value() int32 {
+	return c.value
+}
+
 func (c AddressVersion) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -92,6 +96,10 @@ func GetAddressOSEXTIPStypeEnum() AddressOSEXTIPStypeEnum {
 			value: "floating",
 		},
 	}
+}
+
+func (c AddressOSEXTIPStype) Value() string {
+	return c.value
 }
 
 func (c AddressOSEXTIPStype) MarshalJSON() ([]byte, error) {

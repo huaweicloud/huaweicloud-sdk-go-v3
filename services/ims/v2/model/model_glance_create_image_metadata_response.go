@@ -141,6 +141,10 @@ func GetGlanceCreateImageMetadataResponseDiskFormatEnum() GlanceCreateImageMetad
 	}
 }
 
+func (c GlanceCreateImageMetadataResponseDiskFormat) Value() string {
+	return c.value
+}
+
 func (c GlanceCreateImageMetadataResponseDiskFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -191,6 +195,10 @@ func GetGlanceCreateImageMetadataResponseStatusEnum() GlanceCreateImageMetadataR
 	}
 }
 
+func (c GlanceCreateImageMetadataResponseStatus) Value() string {
+	return c.value
+}
+
 func (c GlanceCreateImageMetadataResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -233,6 +241,10 @@ func GetGlanceCreateImageMetadataResponseOsTypeEnum() GlanceCreateImageMetadataR
 	}
 }
 
+func (c GlanceCreateImageMetadataResponseOsType) Value() string {
+	return c.value
+}
+
 func (c GlanceCreateImageMetadataResponseOsType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -269,6 +281,10 @@ func GetGlanceCreateImageMetadataResponseOsBitEnum() GlanceCreateImageMetadataRe
 			value: "64",
 		},
 	}
+}
+
+func (c GlanceCreateImageMetadataResponseOsBit) Value() string {
+	return c.value
 }
 
 func (c GlanceCreateImageMetadataResponseOsBit) MarshalJSON() ([]byte, error) {
@@ -311,6 +327,10 @@ func GetGlanceCreateImageMetadataResponseVirtualEnvTypeEnum() GlanceCreateImageM
 			value: "DataImage",
 		},
 	}
+}
+
+func (c GlanceCreateImageMetadataResponseVirtualEnvType) Value() string {
+	return c.value
 }
 
 func (c GlanceCreateImageMetadataResponseVirtualEnvType) MarshalJSON() ([]byte, error) {

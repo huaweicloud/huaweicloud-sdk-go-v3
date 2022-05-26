@@ -77,6 +77,10 @@ func GetAddDeviceDtoPrjCodeModeEnum() AddDeviceDtoPrjCodeModeEnum {
 	}
 }
 
+func (c AddDeviceDtoPrjCodeMode) Value() int32 {
+	return c.value
+}
+
 func (c AddDeviceDtoPrjCodeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -112,6 +116,10 @@ func GetAddDeviceDtoStatusEnum() AddDeviceDtoStatusEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c AddDeviceDtoStatus) Value() int32 {
+	return c.value
 }
 
 func (c AddDeviceDtoStatus) MarshalJSON() ([]byte, error) {

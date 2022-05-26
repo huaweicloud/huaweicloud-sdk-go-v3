@@ -44,6 +44,10 @@ func GetDependencyParserRequestLangEnum() DependencyParserRequestLangEnum {
 	}
 }
 
+func (c DependencyParserRequestLang) Value() string {
+	return c.value
+}
+
 func (c DependencyParserRequestLang) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

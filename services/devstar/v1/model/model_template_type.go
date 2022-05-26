@@ -53,6 +53,10 @@ func GetTemplateTypeEnum() TemplateTypeEnum {
 	}
 }
 
+func (c TemplateType) Value() string {
+	return c.value
+}
+
 func (c TemplateType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

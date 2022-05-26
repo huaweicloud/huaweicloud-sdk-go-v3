@@ -57,6 +57,10 @@ func GetBandWidthSharetypeEnum() BandWidthSharetypeEnum {
 	}
 }
 
+func (c BandWidthSharetype) Value() string {
+	return c.value
+}
+
 func (c BandWidthSharetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -93,6 +97,10 @@ func GetBandWidthChargemodeEnum() BandWidthChargemodeEnum {
 			value: "bandwidth",
 		},
 	}
+}
+
+func (c BandWidthChargemode) Value() string {
+	return c.value
 }
 
 func (c BandWidthChargemode) MarshalJSON() ([]byte, error) {

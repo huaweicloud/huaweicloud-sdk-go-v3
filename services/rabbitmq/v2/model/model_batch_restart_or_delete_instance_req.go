@@ -50,6 +50,10 @@ func GetBatchRestartOrDeleteInstanceReqActionEnum() BatchRestartOrDeleteInstance
 	}
 }
 
+func (c BatchRestartOrDeleteInstanceReqAction) Value() string {
+	return c.value
+}
+
 func (c BatchRestartOrDeleteInstanceReqAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -86,6 +90,10 @@ func GetBatchRestartOrDeleteInstanceReqAllFailureEnum() BatchRestartOrDeleteInst
 			value: "false",
 		},
 	}
+}
+
+func (c BatchRestartOrDeleteInstanceReqAllFailure) Value() string {
+	return c.value
 }
 
 func (c BatchRestartOrDeleteInstanceReqAllFailure) MarshalJSON() ([]byte, error) {

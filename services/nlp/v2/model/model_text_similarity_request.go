@@ -51,6 +51,10 @@ func GetTextSimilarityRequestLangEnum() TextSimilarityRequestLangEnum {
 	}
 }
 
+func (c TextSimilarityRequestLang) Value() string {
+	return c.value
+}
+
 func (c TextSimilarityRequestLang) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

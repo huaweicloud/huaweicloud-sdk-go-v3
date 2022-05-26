@@ -62,6 +62,10 @@ func GetListConfigurationsResponseConfigStatusEnum() ListConfigurationsResponseC
 	}
 }
 
+func (c ListConfigurationsResponseConfigStatus) Value() string {
+	return c.value
+}
+
 func (c ListConfigurationsResponseConfigStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

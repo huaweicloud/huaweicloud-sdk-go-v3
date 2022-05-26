@@ -68,6 +68,10 @@ func GetDatabaseInfoObjectTypeEnum() DatabaseInfoObjectTypeEnum {
 	}
 }
 
+func (c DatabaseInfoObjectType) Value() string {
+	return c.value
+}
+
 func (c DatabaseInfoObjectType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

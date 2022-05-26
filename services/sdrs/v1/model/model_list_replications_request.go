@@ -72,6 +72,10 @@ func GetListReplicationsRequestQueryTypeEnum() ListReplicationsRequestQueryTypeE
 	}
 }
 
+func (c ListReplicationsRequestQueryType) Value() string {
+	return c.value
+}
+
 func (c ListReplicationsRequestQueryType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

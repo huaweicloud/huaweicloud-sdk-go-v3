@@ -108,6 +108,10 @@ func GetOperationLogOperationTypeEnum() OperationLogOperationTypeEnum {
 	}
 }
 
+func (c OperationLogOperationType) Value() string {
+	return c.value
+}
+
 func (c OperationLogOperationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -160,6 +164,10 @@ func GetOperationLogStatusEnum() OperationLogStatusEnum {
 			value: "waiting",
 		},
 	}
+}
+
+func (c OperationLogStatus) Value() string {
+	return c.value
 }
 
 func (c OperationLogStatus) MarshalJSON() ([]byte, error) {

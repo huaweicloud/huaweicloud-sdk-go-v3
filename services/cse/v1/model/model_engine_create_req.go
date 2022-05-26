@@ -76,6 +76,10 @@ func GetEngineCreateReqPaymentEnum() EngineCreateReqPaymentEnum {
 	}
 }
 
+func (c EngineCreateReqPayment) Value() string {
+	return c.value
+}
+
 func (c EngineCreateReqPayment) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -122,6 +126,10 @@ func GetEngineCreateReqFlavorEnum() EngineCreateReqFlavorEnum {
 	}
 }
 
+func (c EngineCreateReqFlavor) Value() string {
+	return c.value
+}
+
 func (c EngineCreateReqFlavor) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -160,6 +168,10 @@ func GetEngineCreateReqAuthTypeEnum() EngineCreateReqAuthTypeEnum {
 	}
 }
 
+func (c EngineCreateReqAuthType) Value() string {
+	return c.value
+}
+
 func (c EngineCreateReqAuthType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -196,6 +208,10 @@ func GetEngineCreateReqSpecTypeEnum() EngineCreateReqSpecTypeEnum {
 			value: "CSE2",
 		},
 	}
+}
+
+func (c EngineCreateReqSpecType) Value() string {
+	return c.value
 }
 
 func (c EngineCreateReqSpecType) MarshalJSON() ([]byte, error) {

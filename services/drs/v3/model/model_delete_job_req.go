@@ -52,6 +52,10 @@ func GetDeleteJobReqDeleteTypeEnum() DeleteJobReqDeleteTypeEnum {
 	}
 }
 
+func (c DeleteJobReqDeleteType) Value() string {
+	return c.value
+}
+
 func (c DeleteJobReqDeleteType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

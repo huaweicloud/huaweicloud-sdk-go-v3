@@ -69,6 +69,10 @@ func GetListImageByTagsRequestBodyActionEnum() ListImageByTagsRequestBodyActionE
 	}
 }
 
+func (c ListImageByTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c ListImageByTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

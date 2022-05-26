@@ -57,6 +57,10 @@ func GetListPublicipsByTagsRequestBodyActionEnum() ListPublicipsByTagsRequestBod
 	}
 }
 
+func (c ListPublicipsByTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c ListPublicipsByTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -115,6 +115,10 @@ func GetPortDeviceOwnerEnum() PortDeviceOwnerEnum {
 	}
 }
 
+func (c PortDeviceOwner) Value() string {
+	return c.value
+}
+
 func (c PortDeviceOwner) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -155,6 +159,10 @@ func GetPortStatusEnum() PortStatusEnum {
 			value: "DOWN",
 		},
 	}
+}
+
+func (c PortStatus) Value() string {
+	return c.value
 }
 
 func (c PortStatus) MarshalJSON() ([]byte, error) {

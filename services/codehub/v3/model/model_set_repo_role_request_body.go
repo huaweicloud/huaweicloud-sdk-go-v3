@@ -46,6 +46,10 @@ func GetSetRepoRoleRequestBodyRoleEnum() SetRepoRoleRequestBodyRoleEnum {
 	}
 }
 
+func (c SetRepoRoleRequestBodyRole) Value() int32 {
+	return c.value
+}
+
 func (c SetRepoRoleRequestBodyRole) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

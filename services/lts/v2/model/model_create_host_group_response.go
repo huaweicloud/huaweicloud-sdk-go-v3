@@ -64,6 +64,10 @@ func GetCreateHostGroupResponseHostGroupTypeEnum() CreateHostGroupResponseHostGr
 	}
 }
 
+func (c CreateHostGroupResponseHostGroupType) Value() string {
+	return c.value
+}
+
 func (c CreateHostGroupResponseHostGroupType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

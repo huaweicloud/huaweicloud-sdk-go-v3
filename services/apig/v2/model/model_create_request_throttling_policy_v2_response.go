@@ -92,6 +92,10 @@ func GetCreateRequestThrottlingPolicyV2ResponseTimeUnitEnum() CreateRequestThrot
 	}
 }
 
+func (c CreateRequestThrottlingPolicyV2ResponseTimeUnit) Value() string {
+	return c.value
+}
+
 func (c CreateRequestThrottlingPolicyV2ResponseTimeUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -129,6 +133,10 @@ func GetCreateRequestThrottlingPolicyV2ResponseTypeEnum() CreateRequestThrottlin
 	}
 }
 
+func (c CreateRequestThrottlingPolicyV2ResponseType) Value() int32 {
+	return c.value
+}
+
 func (c CreateRequestThrottlingPolicyV2ResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -164,6 +172,10 @@ func GetCreateRequestThrottlingPolicyV2ResponseIsIncluSpecialThrottleEnum() Crea
 			value: 2,
 		},
 	}
+}
+
+func (c CreateRequestThrottlingPolicyV2ResponseIsIncluSpecialThrottle) Value() int32 {
+	return c.value
 }
 
 func (c CreateRequestThrottlingPolicyV2ResponseIsIncluSpecialThrottle) MarshalJSON() ([]byte, error) {

@@ -75,6 +75,10 @@ func GetListAllScalingV2PoliciesRequestScalingResourceTypeEnum() ListAllScalingV
 	}
 }
 
+func (c ListAllScalingV2PoliciesRequestScalingResourceType) Value() string {
+	return c.value
+}
+
 func (c ListAllScalingV2PoliciesRequestScalingResourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -115,6 +119,10 @@ func GetListAllScalingV2PoliciesRequestScalingPolicyTypeEnum() ListAllScalingV2P
 			value: "RECURRENCE",
 		},
 	}
+}
+
+func (c ListAllScalingV2PoliciesRequestScalingPolicyType) Value() string {
+	return c.value
 }
 
 func (c ListAllScalingV2PoliciesRequestScalingPolicyType) MarshalJSON() ([]byte, error) {
@@ -159,6 +167,10 @@ func GetListAllScalingV2PoliciesRequestSortByEnum() ListAllScalingV2PoliciesRequ
 	}
 }
 
+func (c ListAllScalingV2PoliciesRequestSortBy) Value() string {
+	return c.value
+}
+
 func (c ListAllScalingV2PoliciesRequestSortBy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -195,6 +207,10 @@ func GetListAllScalingV2PoliciesRequestOrderEnum() ListAllScalingV2PoliciesReque
 			value: "DESC",
 		},
 	}
+}
+
+func (c ListAllScalingV2PoliciesRequestOrder) Value() string {
+	return c.value
 }
 
 func (c ListAllScalingV2PoliciesRequestOrder) MarshalJSON() ([]byte, error) {

@@ -72,6 +72,10 @@ func GetBigkeysBodyTypeEnum() BigkeysBodyTypeEnum {
 	}
 }
 
+func (c BigkeysBodyType) Value() string {
+	return c.value
+}
+
 func (c BigkeysBodyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -99,6 +99,10 @@ func GetCreateIndividualStreamJobResponseVideoTypeEnum() CreateIndividualStreamJ
 	}
 }
 
+func (c CreateIndividualStreamJobResponseVideoType) Value() string {
+	return c.value
+}
+
 func (c CreateIndividualStreamJobResponseVideoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -145,6 +149,10 @@ func GetCreateIndividualStreamJobResponseSelectStreamTypeEnum() CreateIndividual
 	}
 }
 
+func (c CreateIndividualStreamJobResponseSelectStreamType) Value() string {
+	return c.value
+}
+
 func (c CreateIndividualStreamJobResponseSelectStreamType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -187,6 +195,10 @@ func GetCreateIndividualStreamJobResponseStateEnum() CreateIndividualStreamJobRe
 	}
 }
 
+func (c CreateIndividualStreamJobResponseState) Value() string {
+	return c.value
+}
+
 func (c CreateIndividualStreamJobResponseState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -227,6 +239,10 @@ func GetCreateIndividualStreamJobResponseStopReasonEnum() CreateIndividualStream
 			value: "INTERNAL_ERROR",
 		},
 	}
+}
+
+func (c CreateIndividualStreamJobResponseStopReason) Value() string {
+	return c.value
 }
 
 func (c CreateIndividualStreamJobResponseStopReason) MarshalJSON() ([]byte, error) {

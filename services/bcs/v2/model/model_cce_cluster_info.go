@@ -14,6 +14,9 @@ type CceClusterInfo struct {
 
 	// 集群名称
 	ClusterName string `json:"cluster_name"`
+
+	// 集群CPU架构类型：X86（VirtualMachine），ARM（ARM64）
+	ClusterPlatformType string `json:"cluster_platform_type"`
 }
 
 func (o CceClusterInfo) String() string {

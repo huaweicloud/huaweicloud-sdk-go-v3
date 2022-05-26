@@ -65,6 +65,10 @@ func GetQueryIaConfigResponseDtoStateEnum() QueryIaConfigResponseDtoStateEnum {
 	}
 }
 
+func (c QueryIaConfigResponseDtoState) Value() string {
+	return c.value
+}
+
 func (c QueryIaConfigResponseDtoState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -47,6 +47,10 @@ func GetPostDomainNerRequestLangEnum() PostDomainNerRequestLangEnum {
 	}
 }
 
+func (c PostDomainNerRequestLang) Value() string {
+	return c.value
+}
+
 func (c PostDomainNerRequestLang) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -87,6 +91,10 @@ func GetPostDomainNerRequestDomainEnum() PostDomainNerRequestDomainEnum {
 			value: "entertainment",
 		},
 	}
+}
+
+func (c PostDomainNerRequestDomain) Value() string {
+	return c.value
 }
 
 func (c PostDomainNerRequestDomain) MarshalJSON() ([]byte, error) {

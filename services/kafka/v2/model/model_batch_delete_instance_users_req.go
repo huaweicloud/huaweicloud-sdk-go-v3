@@ -43,6 +43,10 @@ func GetBatchDeleteInstanceUsersReqActionEnum() BatchDeleteInstanceUsersReqActio
 	}
 }
 
+func (c BatchDeleteInstanceUsersReqAction) Value() string {
+	return c.value
+}
+
 func (c BatchDeleteInstanceUsersReqAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -65,6 +65,10 @@ func GetMembersInStatusRespOperatingStatusEnum() MembersInStatusRespOperatingSta
 	}
 }
 
+func (c MembersInStatusRespOperatingStatus) Value() string {
+	return c.value
+}
+
 func (c MembersInStatusRespOperatingStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

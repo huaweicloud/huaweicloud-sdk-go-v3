@@ -53,6 +53,10 @@ func GetCreateRetentionRequestContentTypeEnum() CreateRetentionRequestContentTyp
 	}
 }
 
+func (c CreateRetentionRequestContentType) Value() string {
+	return c.value
+}
+
 func (c CreateRetentionRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

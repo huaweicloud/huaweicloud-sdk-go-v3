@@ -109,6 +109,10 @@ func GetListenerRespProtocolEnum() ListenerRespProtocolEnum {
 	}
 }
 
+func (c ListenerRespProtocol) Value() string {
+	return c.value
+}
+
 func (c ListenerRespProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -53,6 +53,10 @@ func GetGetHostGroupListFilterHostGroupTypeEnum() GetHostGroupListFilterHostGrou
 	}
 }
 
+func (c GetHostGroupListFilterHostGroupType) Value() string {
+	return c.value
+}
+
 func (c GetHostGroupListFilterHostGroupType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

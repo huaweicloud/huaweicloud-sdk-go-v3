@@ -56,6 +56,10 @@ func GetSubTaskStatusStatusEnum() SubTaskStatusStatusEnum {
 	}
 }
 
+func (c SubTaskStatusStatus) Value() string {
+	return c.value
+}
+
 func (c SubTaskStatusStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

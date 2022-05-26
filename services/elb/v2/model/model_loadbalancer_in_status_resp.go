@@ -72,6 +72,10 @@ func GetLoadbalancerInStatusRespOperatingStatusEnum() LoadbalancerInStatusRespOp
 	}
 }
 
+func (c LoadbalancerInStatusRespOperatingStatus) Value() string {
+	return c.value
+}
+
 func (c LoadbalancerInStatusRespOperatingStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -112,6 +116,10 @@ func GetLoadbalancerInStatusRespProvisioningStatusEnum() LoadbalancerInStatusRes
 			value: "ERROR",
 		},
 	}
+}
+
+func (c LoadbalancerInStatusRespProvisioningStatus) Value() string {
+	return c.value
 }
 
 func (c LoadbalancerInStatusRespProvisioningStatus) MarshalJSON() ([]byte, error) {

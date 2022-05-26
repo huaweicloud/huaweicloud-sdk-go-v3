@@ -78,6 +78,10 @@ func GetShowHotkeyTaskDetailsResponseStatusEnum() ShowHotkeyTaskDetailsResponseS
 	}
 }
 
+func (c ShowHotkeyTaskDetailsResponseStatus) Value() string {
+	return c.value
+}
+
 func (c ShowHotkeyTaskDetailsResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -114,6 +118,10 @@ func GetShowHotkeyTaskDetailsResponseScanTypeEnum() ShowHotkeyTaskDetailsRespons
 			value: "auto",
 		},
 	}
+}
+
+func (c ShowHotkeyTaskDetailsResponseScanType) Value() string {
+	return c.value
 }
 
 func (c ShowHotkeyTaskDetailsResponseScanType) MarshalJSON() ([]byte, error) {

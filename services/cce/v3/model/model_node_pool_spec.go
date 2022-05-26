@@ -57,6 +57,10 @@ func GetNodePoolSpecTypeEnum() NodePoolSpecTypeEnum {
 	}
 }
 
+func (c NodePoolSpecType) Value() string {
+	return c.value
+}
+
 func (c NodePoolSpecType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -88,6 +88,10 @@ func GetL7RuleTypeEnum() L7RuleTypeEnum {
 	}
 }
 
+func (c L7RuleType) Value() string {
+	return c.value
+}
+
 func (c L7RuleType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

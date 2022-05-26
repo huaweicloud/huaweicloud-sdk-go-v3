@@ -60,6 +60,10 @@ func GetPrivateipStatusEnum() PrivateipStatusEnum {
 	}
 }
 
+func (c PrivateipStatus) Value() string {
+	return c.value
+}
+
 func (c PrivateipStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -100,6 +104,10 @@ func GetPrivateipDeviceOwnerEnum() PrivateipDeviceOwnerEnum {
 			value: "compute:xxx",
 		},
 	}
+}
+
+func (c PrivateipDeviceOwner) Value() string {
+	return c.value
 }
 
 func (c PrivateipDeviceOwner) MarshalJSON() ([]byte, error) {

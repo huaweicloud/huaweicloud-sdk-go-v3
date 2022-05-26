@@ -54,6 +54,10 @@ func GetCreateCloudConnectionUsedSceneEnum() CreateCloudConnectionUsedSceneEnum 
 	}
 }
 
+func (c CreateCloudConnectionUsedScene) Value() string {
+	return c.value
+}
+
 func (c CreateCloudConnectionUsedScene) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

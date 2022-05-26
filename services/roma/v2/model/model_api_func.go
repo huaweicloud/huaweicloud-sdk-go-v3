@@ -71,6 +71,10 @@ func GetApiFuncInvocationTypeEnum() ApiFuncInvocationTypeEnum {
 	}
 }
 
+func (c ApiFuncInvocationType) Value() string {
+	return c.value
+}
+
 func (c ApiFuncInvocationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -103,6 +107,10 @@ func GetApiFuncStatusEnum() ApiFuncStatusEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c ApiFuncStatus) Value() int32 {
+	return c.value
 }
 
 func (c ApiFuncStatus) MarshalJSON() ([]byte, error) {

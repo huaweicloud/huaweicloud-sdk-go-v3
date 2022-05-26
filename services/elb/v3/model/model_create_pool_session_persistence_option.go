@@ -55,6 +55,10 @@ func GetCreatePoolSessionPersistenceOptionTypeEnum() CreatePoolSessionPersistenc
 	}
 }
 
+func (c CreatePoolSessionPersistenceOptionType) Value() string {
+	return c.value
+}
+
 func (c CreatePoolSessionPersistenceOptionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

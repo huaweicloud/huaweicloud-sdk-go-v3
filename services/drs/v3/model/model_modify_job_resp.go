@@ -54,6 +54,10 @@ func GetModifyJobRespStatusEnum() ModifyJobRespStatusEnum {
 	}
 }
 
+func (c ModifyJobRespStatus) Value() string {
+	return c.value
+}
+
 func (c ModifyJobRespStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

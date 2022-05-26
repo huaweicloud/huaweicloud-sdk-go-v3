@@ -58,6 +58,10 @@ func GetUpdateLocationCountryEnum() UpdateLocationCountryEnum {
 	}
 }
 
+func (c UpdateLocationCountry) Value() string {
+	return c.value
+}
+
 func (c UpdateLocationCountry) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

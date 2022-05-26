@@ -41,6 +41,10 @@ func GetEnableActionActionEnum() EnableActionActionEnum {
 	}
 }
 
+func (c EnableActionAction) Value() string {
+	return c.value
+}
+
 func (c EnableActionAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

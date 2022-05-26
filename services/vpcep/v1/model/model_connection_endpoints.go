@@ -79,6 +79,10 @@ func GetConnectionEndpointsStatusEnum() ConnectionEndpointsStatusEnum {
 	}
 }
 
+func (c ConnectionEndpointsStatus) Value() string {
+	return c.value
+}
+
 func (c ConnectionEndpointsStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

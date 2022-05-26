@@ -61,6 +61,10 @@ func GetTagFieldNewTypeEnum() TagFieldNewTypeEnum {
 	}
 }
 
+func (c TagFieldNewType) Value() string {
+	return c.value
+}
+
 func (c TagFieldNewType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

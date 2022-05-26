@@ -79,6 +79,10 @@ func GetThrottleBaseInfoTimeUnitEnum() ThrottleBaseInfoTimeUnitEnum {
 	}
 }
 
+func (c ThrottleBaseInfoTimeUnit) Value() string {
+	return c.value
+}
+
 func (c ThrottleBaseInfoTimeUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -114,6 +118,10 @@ func GetThrottleBaseInfoTypeEnum() ThrottleBaseInfoTypeEnum {
 			value: 2,
 		},
 	}
+}
+
+func (c ThrottleBaseInfoType) Value() int32 {
+	return c.value
 }
 
 func (c ThrottleBaseInfoType) MarshalJSON() ([]byte, error) {

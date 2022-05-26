@@ -78,6 +78,10 @@ func GetBatchListStructDetailRequestTypeEnum() BatchListStructDetailRequestTypeE
 	}
 }
 
+func (c BatchListStructDetailRequestType) Value() string {
+	return c.value
+}
+
 func (c BatchListStructDetailRequestType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -114,6 +118,10 @@ func GetBatchListStructDetailRequestXLanguageEnum() BatchListStructDetailRequest
 			value: "zh-cn",
 		},
 	}
+}
+
+func (c BatchListStructDetailRequestXLanguage) Value() string {
+	return c.value
 }
 
 func (c BatchListStructDetailRequestXLanguage) MarshalJSON() ([]byte, error) {

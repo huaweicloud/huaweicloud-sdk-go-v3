@@ -67,6 +67,10 @@ func GetUpdateLifeCycleHookResponseLifecycleHookTypeEnum() UpdateLifeCycleHookRe
 	}
 }
 
+func (c UpdateLifeCycleHookResponseLifecycleHookType) Value() string {
+	return c.value
+}
+
 func (c UpdateLifeCycleHookResponseLifecycleHookType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -103,6 +107,10 @@ func GetUpdateLifeCycleHookResponseDefaultResultEnum() UpdateLifeCycleHookRespon
 			value: "CONTINUE",
 		},
 	}
+}
+
+func (c UpdateLifeCycleHookResponseDefaultResult) Value() string {
+	return c.value
 }
 
 func (c UpdateLifeCycleHookResponseDefaultResult) MarshalJSON() ([]byte, error) {

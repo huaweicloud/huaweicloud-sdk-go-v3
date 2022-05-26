@@ -52,6 +52,10 @@ func GetUpdateSubnetResponseObjectStatusEnum() UpdateSubnetResponseObjectStatusE
 	}
 }
 
+func (c UpdateSubnetResponseObjectStatus) Value() string {
+	return c.value
+}
+
 func (c UpdateSubnetResponseObjectStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

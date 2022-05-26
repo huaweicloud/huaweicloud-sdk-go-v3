@@ -115,6 +115,10 @@ func GetUpdateDependencyRequestBodyRuntimeEnum() UpdateDependencyRequestBodyRunt
 	}
 }
 
+func (c UpdateDependencyRequestBodyRuntime) Value() string {
+	return c.value
+}
+
 func (c UpdateDependencyRequestBodyRuntime) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

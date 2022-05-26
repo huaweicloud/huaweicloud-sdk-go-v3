@@ -105,6 +105,10 @@ func GetTasksResponseBodyTypeEnum() TasksResponseBodyTypeEnum {
 	}
 }
 
+func (c TasksResponseBodyType) Value() string {
+	return c.value
+}
+
 func (c TasksResponseBodyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -141,6 +145,10 @@ func GetTasksResponseBodyOsTypeEnum() TasksResponseBodyOsTypeEnum {
 			value: "LINUX",
 		},
 	}
+}
+
+func (c TasksResponseBodyOsType) Value() string {
+	return c.value
 }
 
 func (c TasksResponseBodyOsType) MarshalJSON() ([]byte, error) {
@@ -181,6 +189,10 @@ func GetTasksResponseBodyPriorityEnum() TasksResponseBodyPriorityEnum {
 			value: 2,
 		},
 	}
+}
+
+func (c TasksResponseBodyPriority) Value() int32 {
+	return c.value
 }
 
 func (c TasksResponseBodyPriority) MarshalJSON() ([]byte, error) {
@@ -251,6 +263,10 @@ func GetTasksResponseBodyLogCollectStatusEnum() TasksResponseBodyLogCollectStatu
 			value: "WAIT_AGENT_RESET_ACL_ACK",
 		},
 	}
+}
+
+func (c TasksResponseBodyLogCollectStatus) Value() string {
+	return c.value
 }
 
 func (c TasksResponseBodyLogCollectStatus) MarshalJSON() ([]byte, error) {

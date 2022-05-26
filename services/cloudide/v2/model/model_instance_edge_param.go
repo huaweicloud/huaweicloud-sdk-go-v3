@@ -80,6 +80,10 @@ func GetInstanceEdgeParamArchEnum() InstanceEdgeParamArchEnum {
 	}
 }
 
+func (c InstanceEdgeParamArch) Value() string {
+	return c.value
+}
+
 func (c InstanceEdgeParamArch) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -126,6 +130,10 @@ func GetInstanceEdgeParamCpuMemoryEnum() InstanceEdgeParamCpuMemoryEnum {
 	}
 }
 
+func (c InstanceEdgeParamCpuMemory) Value() string {
+	return c.value
+}
+
 func (c InstanceEdgeParamCpuMemory) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -166,6 +174,10 @@ func GetInstanceEdgeParamPvcQuantityEnum() InstanceEdgeParamPvcQuantityEnum {
 			value: "20GB",
 		},
 	}
+}
+
+func (c InstanceEdgeParamPvcQuantity) Value() string {
+	return c.value
 }
 
 func (c InstanceEdgeParamPvcQuantity) MarshalJSON() ([]byte, error) {

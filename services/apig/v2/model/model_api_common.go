@@ -166,6 +166,10 @@ func GetApiCommonTypeEnum() ApiCommonTypeEnum {
 	}
 }
 
+func (c ApiCommonType) Value() int32 {
+	return c.value
+}
+
 func (c ApiCommonType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -206,6 +210,10 @@ func GetApiCommonReqProtocolEnum() ApiCommonReqProtocolEnum {
 			value: "BOTH",
 		},
 	}
+}
+
+func (c ApiCommonReqProtocol) Value() string {
+	return c.value
 }
 
 func (c ApiCommonReqProtocol) MarshalJSON() ([]byte, error) {
@@ -270,6 +278,10 @@ func GetApiCommonReqMethodEnum() ApiCommonReqMethodEnum {
 	}
 }
 
+func (c ApiCommonReqMethod) Value() string {
+	return c.value
+}
+
 func (c ApiCommonReqMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -316,6 +328,10 @@ func GetApiCommonAuthTypeEnum() ApiCommonAuthTypeEnum {
 	}
 }
 
+func (c ApiCommonAuthType) Value() string {
+	return c.value
+}
+
 func (c ApiCommonAuthType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -352,6 +368,10 @@ func GetApiCommonMatchModeEnum() ApiCommonMatchModeEnum {
 			value: "NORMAL",
 		},
 	}
+}
+
+func (c ApiCommonMatchMode) Value() string {
+	return c.value
 }
 
 func (c ApiCommonMatchMode) MarshalJSON() ([]byte, error) {
@@ -394,6 +414,10 @@ func GetApiCommonBackendTypeEnum() ApiCommonBackendTypeEnum {
 			value: "MOCK",
 		},
 	}
+}
+
+func (c ApiCommonBackendType) Value() string {
+	return c.value
 }
 
 func (c ApiCommonBackendType) MarshalJSON() ([]byte, error) {
@@ -440,6 +464,10 @@ func GetApiCommonContentTypeEnum() ApiCommonContentTypeEnum {
 			value: "text/plain",
 		},
 	}
+}
+
+func (c ApiCommonContentType) Value() string {
+	return c.value
 }
 
 func (c ApiCommonContentType) MarshalJSON() ([]byte, error) {

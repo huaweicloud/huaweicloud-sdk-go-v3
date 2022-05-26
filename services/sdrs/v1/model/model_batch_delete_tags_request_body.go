@@ -44,6 +44,10 @@ func GetBatchDeleteTagsRequestBodyActionEnum() BatchDeleteTagsRequestBodyActionE
 	}
 }
 
+func (c BatchDeleteTagsRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c BatchDeleteTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -150,6 +150,10 @@ func GetApiRespBaseInfoTypeEnum() ApiRespBaseInfoTypeEnum {
 	}
 }
 
+func (c ApiRespBaseInfoType) Value() int32 {
+	return c.value
+}
+
 func (c ApiRespBaseInfoType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -190,6 +194,10 @@ func GetApiRespBaseInfoReqProtocolEnum() ApiRespBaseInfoReqProtocolEnum {
 			value: "BOTH",
 		},
 	}
+}
+
+func (c ApiRespBaseInfoReqProtocol) Value() string {
+	return c.value
 }
 
 func (c ApiRespBaseInfoReqProtocol) MarshalJSON() ([]byte, error) {
@@ -254,6 +262,10 @@ func GetApiRespBaseInfoReqMethodEnum() ApiRespBaseInfoReqMethodEnum {
 	}
 }
 
+func (c ApiRespBaseInfoReqMethod) Value() string {
+	return c.value
+}
+
 func (c ApiRespBaseInfoReqMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -300,6 +312,10 @@ func GetApiRespBaseInfoAuthTypeEnum() ApiRespBaseInfoAuthTypeEnum {
 	}
 }
 
+func (c ApiRespBaseInfoAuthType) Value() string {
+	return c.value
+}
+
 func (c ApiRespBaseInfoAuthType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -336,6 +352,10 @@ func GetApiRespBaseInfoMatchModeEnum() ApiRespBaseInfoMatchModeEnum {
 			value: "NORMAL",
 		},
 	}
+}
+
+func (c ApiRespBaseInfoMatchMode) Value() string {
+	return c.value
 }
 
 func (c ApiRespBaseInfoMatchMode) MarshalJSON() ([]byte, error) {
@@ -378,6 +398,10 @@ func GetApiRespBaseInfoBackendTypeEnum() ApiRespBaseInfoBackendTypeEnum {
 			value: "MOCK",
 		},
 	}
+}
+
+func (c ApiRespBaseInfoBackendType) Value() string {
+	return c.value
 }
 
 func (c ApiRespBaseInfoBackendType) MarshalJSON() ([]byte, error) {
@@ -424,6 +448,10 @@ func GetApiRespBaseInfoContentTypeEnum() ApiRespBaseInfoContentTypeEnum {
 			value: "text/plain",
 		},
 	}
+}
+
+func (c ApiRespBaseInfoContentType) Value() string {
+	return c.value
 }
 
 func (c ApiRespBaseInfoContentType) MarshalJSON() ([]byte, error) {

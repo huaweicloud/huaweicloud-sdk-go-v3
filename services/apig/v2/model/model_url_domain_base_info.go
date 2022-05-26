@@ -58,6 +58,10 @@ func GetUrlDomainBaseInfoStatusEnum() UrlDomainBaseInfoStatusEnum {
 	}
 }
 
+func (c UrlDomainBaseInfoStatus) Value() int32 {
+	return c.value
+}
+
 func (c UrlDomainBaseInfoStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -66,6 +66,10 @@ func GetRestoreNewInstanceFlavorOptionTypeEnum() RestoreNewInstanceFlavorOptionT
 	}
 }
 
+func (c RestoreNewInstanceFlavorOptionType) Value() string {
+	return c.value
+}
+
 func (c RestoreNewInstanceFlavorOptionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

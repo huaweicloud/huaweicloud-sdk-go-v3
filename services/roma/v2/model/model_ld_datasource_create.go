@@ -102,6 +102,10 @@ func GetLdDatasourceCreateTypeEnum() LdDatasourceCreateTypeEnum {
 	}
 }
 
+func (c LdDatasourceCreateType) Value() string {
+	return c.value
+}
+
 func (c LdDatasourceCreateType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

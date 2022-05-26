@@ -56,6 +56,10 @@ func GetOpenMysqlProxyRequestBodyProxyModeEnum() OpenMysqlProxyRequestBodyProxyM
 	}
 }
 
+func (c OpenMysqlProxyRequestBodyProxyMode) Value() string {
+	return c.value
+}
+
 func (c OpenMysqlProxyRequestBodyProxyMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

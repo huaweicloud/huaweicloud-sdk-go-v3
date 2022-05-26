@@ -48,6 +48,10 @@ func GetShowApiVersionRequestContentTypeEnum() ShowApiVersionRequestContentTypeE
 	}
 }
 
+func (c ShowApiVersionRequestContentType) Value() string {
+	return c.value
+}
+
 func (c ShowApiVersionRequestContentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

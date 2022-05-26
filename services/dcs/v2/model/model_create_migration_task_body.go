@@ -63,6 +63,10 @@ func GetCreateMigrationTaskBodyMigrationTypeEnum() CreateMigrationTaskBodyMigrat
 	}
 }
 
+func (c CreateMigrationTaskBodyMigrationType) Value() string {
+	return c.value
+}
+
 func (c CreateMigrationTaskBodyMigrationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -101,6 +105,10 @@ func GetCreateMigrationTaskBodyMigrationMethodEnum() CreateMigrationTaskBodyMigr
 	}
 }
 
+func (c CreateMigrationTaskBodyMigrationMethod) Value() string {
+	return c.value
+}
+
 func (c CreateMigrationTaskBodyMigrationMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -137,6 +145,10 @@ func GetCreateMigrationTaskBodyNetworkTypeEnum() CreateMigrationTaskBodyNetworkT
 			value: "vpn",
 		},
 	}
+}
+
+func (c CreateMigrationTaskBodyNetworkType) Value() string {
+	return c.value
 }
 
 func (c CreateMigrationTaskBodyNetworkType) MarshalJSON() ([]byte, error) {

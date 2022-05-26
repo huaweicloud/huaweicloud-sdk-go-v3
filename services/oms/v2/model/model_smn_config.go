@@ -51,6 +51,10 @@ func GetSmnConfigLanguageEnum() SmnConfigLanguageEnum {
 	}
 }
 
+func (c SmnConfigLanguage) Value() string {
+	return c.value
+}
+
 func (c SmnConfigLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

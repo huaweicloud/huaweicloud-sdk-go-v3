@@ -106,6 +106,10 @@ func GetApiAuthInfoAppTypeEnum() ApiAuthInfoAppTypeEnum {
 	}
 }
 
+func (c ApiAuthInfoAppType) Value() string {
+	return c.value
+}
+
 func (c ApiAuthInfoAppType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -142,6 +146,10 @@ func GetApiAuthInfoAuthTunnelEnum() ApiAuthInfoAuthTunnelEnum {
 			value: "GREEN",
 		},
 	}
+}
+
+func (c ApiAuthInfoAuthTunnel) Value() string {
+	return c.value
 }
 
 func (c ApiAuthInfoAuthTunnel) MarshalJSON() ([]byte, error) {

@@ -70,6 +70,10 @@ func GetMemberStatusEnum() MemberStatusEnum {
 	}
 }
 
+func (c MemberStatus) Value() string {
+	return c.value
+}
+
 func (c MemberStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

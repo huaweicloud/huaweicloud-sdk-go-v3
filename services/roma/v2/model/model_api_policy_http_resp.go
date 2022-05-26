@@ -85,6 +85,10 @@ func GetApiPolicyHttpRespEffectModeEnum() ApiPolicyHttpRespEffectModeEnum {
 	}
 }
 
+func (c ApiPolicyHttpRespEffectMode) Value() string {
+	return c.value
+}
+
 func (c ApiPolicyHttpRespEffectMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -121,6 +125,10 @@ func GetApiPolicyHttpRespReqProtocolEnum() ApiPolicyHttpRespReqProtocolEnum {
 			value: "HTTPS",
 		},
 	}
+}
+
+func (c ApiPolicyHttpRespReqProtocol) Value() string {
+	return c.value
 }
 
 func (c ApiPolicyHttpRespReqProtocol) MarshalJSON() ([]byte, error) {
@@ -183,6 +191,10 @@ func GetApiPolicyHttpRespReqMethodEnum() ApiPolicyHttpRespReqMethodEnum {
 			value: "ANY",
 		},
 	}
+}
+
+func (c ApiPolicyHttpRespReqMethod) Value() string {
+	return c.value
 }
 
 func (c ApiPolicyHttpRespReqMethod) MarshalJSON() ([]byte, error) {

@@ -81,6 +81,10 @@ func GetCreateFunctionTriggerRequestBodyTriggerTypeCodeEnum() CreateFunctionTrig
 	}
 }
 
+func (c CreateFunctionTriggerRequestBodyTriggerTypeCode) Value() string {
+	return c.value
+}
+
 func (c CreateFunctionTriggerRequestBodyTriggerTypeCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -117,6 +121,10 @@ func GetCreateFunctionTriggerRequestBodyTriggerStatusEnum() CreateFunctionTrigge
 			value: "DISABLED",
 		},
 	}
+}
+
+func (c CreateFunctionTriggerRequestBodyTriggerStatus) Value() string {
+	return c.value
 }
 
 func (c CreateFunctionTriggerRequestBodyTriggerStatus) MarshalJSON() ([]byte, error) {

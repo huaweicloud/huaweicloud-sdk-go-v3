@@ -75,6 +75,10 @@ func GetListRunsRequestOrderEnum() ListRunsRequestOrderEnum {
 	}
 }
 
+func (c ListRunsRequestOrder) Value() string {
+	return c.value
+}
+
 func (c ListRunsRequestOrder) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

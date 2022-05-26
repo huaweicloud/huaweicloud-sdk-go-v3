@@ -67,6 +67,10 @@ func GetShowIaConfigResponseStateEnum() ShowIaConfigResponseStateEnum {
 	}
 }
 
+func (c ShowIaConfigResponseState) Value() string {
+	return c.value
+}
+
 func (c ShowIaConfigResponseState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

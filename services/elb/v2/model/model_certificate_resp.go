@@ -78,6 +78,10 @@ func GetCertificateRespTypeEnum() CertificateRespTypeEnum {
 	}
 }
 
+func (c CertificateRespType) Value() string {
+	return c.value
+}
+
 func (c CertificateRespType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

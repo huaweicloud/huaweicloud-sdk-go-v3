@@ -124,6 +124,10 @@ func GetListTasksDetailsRequestStateEnum() ListTasksDetailsRequestStateEnum {
 	}
 }
 
+func (c ListTasksDetailsRequestState) Value() string {
+	return c.value
+}
+
 func (c ListTasksDetailsRequestState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -176,6 +180,10 @@ func GetListTasksDetailsRequestOrderEnum() ListTasksDetailsRequestOrderEnum {
 			value: "updated_at:DESC",
 		},
 	}
+}
+
+func (c ListTasksDetailsRequestOrder) Value() string {
+	return c.value
 }
 
 func (c ListTasksDetailsRequestOrder) MarshalJSON() ([]byte, error) {

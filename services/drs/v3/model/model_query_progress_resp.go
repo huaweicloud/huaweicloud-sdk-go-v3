@@ -76,6 +76,10 @@ func GetQueryProgressRespTaskModeEnum() QueryProgressRespTaskModeEnum {
 	}
 }
 
+func (c QueryProgressRespTaskMode) Value() string {
+	return c.value
+}
+
 func (c QueryProgressRespTaskMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

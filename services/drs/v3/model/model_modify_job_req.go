@@ -97,6 +97,10 @@ func GetModifyJobReqTaskTypeEnum() ModifyJobReqTaskTypeEnum {
 	}
 }
 
+func (c ModifyJobReqTaskType) Value() string {
+	return c.value
+}
+
 func (c ModifyJobReqTaskType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -129,6 +133,10 @@ func GetModifyJobReqNodeTypeEnum() ModifyJobReqNodeTypeEnum {
 			value: "high",
 		},
 	}
+}
+
+func (c ModifyJobReqNodeType) Value() string {
+	return c.value
 }
 
 func (c ModifyJobReqNodeType) MarshalJSON() ([]byte, error) {
@@ -173,6 +181,10 @@ func GetModifyJobReqEngineTypeEnum() ModifyJobReqEngineTypeEnum {
 	}
 }
 
+func (c ModifyJobReqEngineType) Value() string {
+	return c.value
+}
+
 func (c ModifyJobReqEngineType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -213,6 +225,10 @@ func GetModifyJobReqNetTypeEnum() ModifyJobReqNetTypeEnum {
 			value: "eip",
 		},
 	}
+}
+
+func (c ModifyJobReqNetType) Value() string {
+	return c.value
 }
 
 func (c ModifyJobReqNetType) MarshalJSON() ([]byte, error) {
@@ -257,6 +273,10 @@ func GetModifyJobReqJobDirectionEnum() ModifyJobReqJobDirectionEnum {
 	}
 }
 
+func (c ModifyJobReqJobDirection) Value() string {
+	return c.value
+}
+
 func (c ModifyJobReqJobDirection) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -297,6 +317,10 @@ func GetModifyJobReqDbUseTypeEnum() ModifyJobReqDbUseTypeEnum {
 			value: "cloudDataGuard",
 		},
 	}
+}
+
+func (c ModifyJobReqDbUseType) Value() string {
+	return c.value
 }
 
 func (c ModifyJobReqDbUseType) MarshalJSON() ([]byte, error) {

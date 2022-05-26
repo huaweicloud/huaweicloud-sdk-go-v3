@@ -64,6 +64,10 @@ func GetUpdatePolicyRuleStatusRequestRuletypeEnum() UpdatePolicyRuleStatusReques
 	}
 }
 
+func (c UpdatePolicyRuleStatusRequestRuletype) Value() string {
+	return c.value
+}
+
 func (c UpdatePolicyRuleStatusRequestRuletype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

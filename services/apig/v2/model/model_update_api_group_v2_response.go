@@ -89,6 +89,10 @@ func GetUpdateApiGroupV2ResponseStatusEnum() UpdateApiGroupV2ResponseStatusEnum 
 	}
 }
 
+func (c UpdateApiGroupV2ResponseStatus) Value() int32 {
+	return c.value
+}
+
 func (c UpdateApiGroupV2ResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -86,6 +86,10 @@ func GetLtsStructTemplateInfoParseTypeEnum() LtsStructTemplateInfoParseTypeEnum 
 	}
 }
 
+func (c LtsStructTemplateInfoParseType) Value() string {
+	return c.value
+}
+
 func (c LtsStructTemplateInfoParseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

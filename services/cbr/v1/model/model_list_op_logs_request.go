@@ -102,6 +102,10 @@ func GetListOpLogsRequestOperationTypeEnum() ListOpLogsRequestOperationTypeEnum 
 	}
 }
 
+func (c ListOpLogsRequestOperationType) Value() string {
+	return c.value
+}
+
 func (c ListOpLogsRequestOperationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -154,6 +158,10 @@ func GetListOpLogsRequestStatusEnum() ListOpLogsRequestStatusEnum {
 			value: "waiting",
 		},
 	}
+}
+
+func (c ListOpLogsRequestStatus) Value() string {
+	return c.value
 }
 
 func (c ListOpLogsRequestStatus) MarshalJSON() ([]byte, error) {

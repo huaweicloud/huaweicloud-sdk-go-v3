@@ -75,6 +75,10 @@ func GetUpdateUserDetailReqBaseAuthorityEnum() UpdateUserDetailReqBaseAuthorityE
 	}
 }
 
+func (c UpdateUserDetailReqBaseAuthority) Value() string {
+	return c.value
+}
+
 func (c UpdateUserDetailReqBaseAuthority) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

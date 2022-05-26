@@ -47,6 +47,10 @@ func GetBatchOperateInstanceTagRequestBodyActionEnum() BatchOperateInstanceTagRe
 	}
 }
 
+func (c BatchOperateInstanceTagRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c BatchOperateInstanceTagRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

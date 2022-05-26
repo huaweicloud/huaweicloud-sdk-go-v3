@@ -73,6 +73,10 @@ func GetListInstancesRequestModeEnum() ListInstancesRequestModeEnum {
 	}
 }
 
+func (c ListInstancesRequestMode) Value() string {
+	return c.value
+}
+
 func (c ListInstancesRequestMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -109,6 +113,10 @@ func GetListInstancesRequestDatastoreTypeEnum() ListInstancesRequestDatastoreTyp
 			value: "DDS-Enhanced",
 		},
 	}
+}
+
+func (c ListInstancesRequestDatastoreType) Value() string {
+	return c.value
 }
 
 func (c ListInstancesRequestDatastoreType) MarshalJSON() ([]byte, error) {

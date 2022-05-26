@@ -131,6 +131,10 @@ func GetUpdateTaskSpeedReqSubtaskNameEnum() UpdateTaskSpeedReqSubtaskNameEnum {
 	}
 }
 
+func (c UpdateTaskSpeedReqSubtaskName) Value() string {
+	return c.value
+}
+
 func (c UpdateTaskSpeedReqSubtaskName) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

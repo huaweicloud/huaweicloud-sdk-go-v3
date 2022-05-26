@@ -54,6 +54,10 @@ func GetBatchPauseScalingPoliciesOptionForceDeleteEnum() BatchPauseScalingPolici
 	}
 }
 
+func (c BatchPauseScalingPoliciesOptionForceDelete) Value() string {
+	return c.value
+}
+
 func (c BatchPauseScalingPoliciesOptionForceDelete) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -86,6 +90,10 @@ func GetBatchPauseScalingPoliciesOptionActionEnum() BatchPauseScalingPoliciesOpt
 			value: "pause",
 		},
 	}
+}
+
+func (c BatchPauseScalingPoliciesOptionAction) Value() string {
+	return c.value
 }
 
 func (c BatchPauseScalingPoliciesOptionAction) MarshalJSON() ([]byte, error) {

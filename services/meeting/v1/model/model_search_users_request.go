@@ -83,6 +83,10 @@ func GetSearchUsersRequestAdminTypeEnum() SearchUsersRequestAdminTypeEnum {
 	}
 }
 
+func (c SearchUsersRequestAdminType) Value() int32 {
+	return c.value
+}
+
 func (c SearchUsersRequestAdminType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

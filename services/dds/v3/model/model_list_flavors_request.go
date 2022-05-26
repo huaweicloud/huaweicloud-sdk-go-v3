@@ -48,6 +48,10 @@ func GetListFlavorsRequestEngineNameEnum() ListFlavorsRequestEngineNameEnum {
 	}
 }
 
+func (c ListFlavorsRequestEngineName) Value() string {
+	return c.value
+}
+
 func (c ListFlavorsRequestEngineName) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

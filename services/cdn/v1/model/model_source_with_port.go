@@ -64,6 +64,10 @@ func GetSourceWithPortOriginTypeEnum() SourceWithPortOriginTypeEnum {
 	}
 }
 
+func (c SourceWithPortOriginType) Value() string {
+	return c.value
+}
+
 func (c SourceWithPortOriginType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

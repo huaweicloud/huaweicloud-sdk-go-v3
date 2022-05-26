@@ -51,6 +51,10 @@ func GetRemoveFromSharedBandwidthOptionChargeModeEnum() RemoveFromSharedBandwidt
 	}
 }
 
+func (c RemoveFromSharedBandwidthOptionChargeMode) Value() string {
+	return c.value
+}
+
 func (c RemoveFromSharedBandwidthOptionChargeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

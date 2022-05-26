@@ -60,6 +60,10 @@ func GetSubTemplateSubTypeEnum() SubTemplateSubTypeEnum {
 	}
 }
 
+func (c SubTemplateSubType) Value() string {
+	return c.value
+}
+
 func (c SubTemplateSubType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

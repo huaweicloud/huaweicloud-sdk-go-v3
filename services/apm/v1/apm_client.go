@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/apm/v1/model"
 )
 
@@ -19,7 +19,7 @@ func ApmClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 获取ak-sk
+// ListAkSk 获取ak-sk
 //
 // 获取该用户创建的aksk列表
 //
@@ -35,7 +35,13 @@ func (c *ApmClient) ListAkSk(request *model.ListAkSkRequest) (*model.ListAkSkRes
 	}
 }
 
-// 查询业务列表
+// ListAkSkInvoker 获取ak-sk
+func (c *ApmClient) ListAkSkInvoker(request *model.ListAkSkRequest) *ListAkSkInvoker {
+	requestDef := GenReqDefForListAkSk()
+	return &ListAkSkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBusiness 查询业务列表
 //
 // 该接口用于查询对应用户下的业务。
 //
@@ -51,7 +57,13 @@ func (c *ApmClient) ListBusiness(request *model.ListBusinessRequest) (*model.Lis
 	}
 }
 
-// 查询master地址
+// ListBusinessInvoker 查询业务列表
+func (c *ApmClient) ListBusinessInvoker(request *model.ListBusinessRequest) *ListBusinessInvoker {
+	requestDef := GenReqDefForListBusiness()
+	return &ListBusinessInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMasterAddress 查询master地址
 //
 // 根据region名称获取该名称下的master服务podlb地址信息
 //
@@ -65,4 +77,10 @@ func (c *ApmClient) ShowMasterAddress(request *model.ShowMasterAddressRequest) (
 	} else {
 		return resp.(*model.ShowMasterAddressResponse), nil
 	}
+}
+
+// ShowMasterAddressInvoker 查询master地址
+func (c *ApmClient) ShowMasterAddressInvoker(request *model.ShowMasterAddressRequest) *ShowMasterAddressInvoker {
+	requestDef := GenReqDefForShowMasterAddress()
+	return &ShowMasterAddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

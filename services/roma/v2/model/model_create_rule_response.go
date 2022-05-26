@@ -85,6 +85,10 @@ func GetCreateRuleResponseStatusEnum() CreateRuleResponseStatusEnum {
 	}
 }
 
+func (c CreateRuleResponseStatus) Value() int32 {
+	return c.value
+}
+
 func (c CreateRuleResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -120,6 +124,10 @@ func GetCreateRuleResponseDataParsingStatusEnum() CreateRuleResponseDataParsingS
 			value: 1,
 		},
 	}
+}
+
+func (c CreateRuleResponseDataParsingStatus) Value() int32 {
+	return c.value
 }
 
 func (c CreateRuleResponseDataParsingStatus) MarshalJSON() ([]byte, error) {

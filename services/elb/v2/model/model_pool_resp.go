@@ -84,6 +84,10 @@ func GetPoolRespProtocolEnum() PoolRespProtocolEnum {
 	}
 }
 
+func (c PoolRespProtocol) Value() string {
+	return c.value
+}
+
 func (c PoolRespProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -124,6 +128,10 @@ func GetPoolRespLbAlgorithmEnum() PoolRespLbAlgorithmEnum {
 			value: "SOURCE_IP",
 		},
 	}
+}
+
+func (c PoolRespLbAlgorithm) Value() string {
+	return c.value
 }
 
 func (c PoolRespLbAlgorithm) MarshalJSON() ([]byte, error) {

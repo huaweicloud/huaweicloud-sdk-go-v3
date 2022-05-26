@@ -73,6 +73,10 @@ func GetDestinationDestinationTypeEnum() DestinationDestinationTypeEnum {
 	}
 }
 
+func (c DestinationDestinationType) Value() int32 {
+	return c.value
+}
+
 func (c DestinationDestinationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

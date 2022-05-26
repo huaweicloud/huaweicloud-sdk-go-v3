@@ -48,6 +48,10 @@ func GetNovaServerSchedulerHintsTenancyEnum() NovaServerSchedulerHintsTenancyEnu
 	}
 }
 
+func (c NovaServerSchedulerHintsTenancy) Value() string {
+	return c.value
+}
+
 func (c NovaServerSchedulerHintsTenancy) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -66,6 +66,10 @@ func GetListSitesRequestVolumeTypeEnum() ListSitesRequestVolumeTypeEnum {
 	}
 }
 
+func (c ListSitesRequestVolumeType) Value() string {
+	return c.value
+}
+
 func (c ListSitesRequestVolumeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

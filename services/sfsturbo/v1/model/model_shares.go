@@ -101,6 +101,10 @@ func GetSharesPayModelEnum() SharesPayModelEnum {
 	}
 }
 
+func (c SharesPayModel) Value() string {
+	return c.value
+}
+
 func (c SharesPayModel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

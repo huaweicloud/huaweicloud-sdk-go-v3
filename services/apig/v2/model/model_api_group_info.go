@@ -87,6 +87,10 @@ func GetApiGroupInfoStatusEnum() ApiGroupInfoStatusEnum {
 	}
 }
 
+func (c ApiGroupInfoStatus) Value() int32 {
+	return c.value
+}
+
 func (c ApiGroupInfoStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

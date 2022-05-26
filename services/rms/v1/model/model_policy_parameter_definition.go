@@ -73,6 +73,10 @@ func GetPolicyParameterDefinitionTypeEnum() PolicyParameterDefinitionTypeEnum {
 	}
 }
 
+func (c PolicyParameterDefinitionType) Value() string {
+	return c.value
+}
+
 func (c PolicyParameterDefinitionType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

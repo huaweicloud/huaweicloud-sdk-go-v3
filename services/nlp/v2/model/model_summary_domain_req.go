@@ -53,6 +53,10 @@ func GetSummaryDomainReqLangEnum() SummaryDomainReqLangEnum {
 	}
 }
 
+func (c SummaryDomainReqLang) Value() string {
+	return c.value
+}
+
 func (c SummaryDomainReqLang) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -85,6 +89,10 @@ func GetSummaryDomainReqTypeEnum() SummaryDomainReqTypeEnum {
 			value: 0,
 		},
 	}
+}
+
+func (c SummaryDomainReqType) Value() int32 {
+	return c.value
 }
 
 func (c SummaryDomainReqType) MarshalJSON() ([]byte, error) {

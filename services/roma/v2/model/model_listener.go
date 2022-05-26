@@ -52,6 +52,10 @@ func GetListenerIpVersionEnum() ListenerIpVersionEnum {
 	}
 }
 
+func (c ListenerIpVersion) Value() int32 {
+	return c.value
+}
+
 func (c ListenerIpVersion) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

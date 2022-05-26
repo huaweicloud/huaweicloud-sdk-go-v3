@@ -108,6 +108,10 @@ func GetListEndpointInfoDetailsResponseServiceTypeEnum() ListEndpointInfoDetails
 	}
 }
 
+func (c ListEndpointInfoDetailsResponseServiceType) Value() string {
+	return c.value
+}
+
 func (c ListEndpointInfoDetailsResponseServiceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -162,6 +166,10 @@ func GetListEndpointInfoDetailsResponseStatusEnum() ListEndpointInfoDetailsRespo
 	}
 }
 
+func (c ListEndpointInfoDetailsResponseStatus) Value() string {
+	return c.value
+}
+
 func (c ListEndpointInfoDetailsResponseStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -198,6 +206,10 @@ func GetListEndpointInfoDetailsResponseEnableStatusEnum() ListEndpointInfoDetail
 			value: "disable",
 		},
 	}
+}
+
+func (c ListEndpointInfoDetailsResponseEnableStatus) Value() string {
+	return c.value
 }
 
 func (c ListEndpointInfoDetailsResponseEnableStatus) MarshalJSON() ([]byte, error) {

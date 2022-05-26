@@ -66,6 +66,10 @@ func GetRunJobTypeEnum() RunJobTypeEnum {
 	}
 }
 
+func (c RunJobType) Value() string {
+	return c.value
+}
+
 func (c RunJobType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

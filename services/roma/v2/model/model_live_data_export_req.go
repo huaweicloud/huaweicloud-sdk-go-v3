@@ -57,6 +57,10 @@ func GetLiveDataExportReqFormatEnum() LiveDataExportReqFormatEnum {
 	}
 }
 
+func (c LiveDataExportReqFormat) Value() string {
+	return c.value
+}
+
 func (c LiveDataExportReqFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

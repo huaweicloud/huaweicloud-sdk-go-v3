@@ -131,8 +131,16 @@ type ShowInstanceResponse struct {
 	// 集群实例的后端服务地址。
 	BackendAddrs *string `json:"backend_addrs,omitempty"`
 
+	Features *Features `json:"features,omitempty"`
+
 	DomainNameInfo *DomainNameInfo `json:"domain_name_info,omitempty"`
-	HttpStatusCode int             `json:"-"`
+
+	// 是否开启客户端ip透传。
+	TransparentClientIpEnable *bool `json:"transparent_client_ip_enable,omitempty"`
+
+	// 实例子状态。
+	SubStatus      *string `json:"sub_status,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowInstanceResponse) String() string {

@@ -89,6 +89,10 @@ func GetMigrationTaskListStatusEnum() MigrationTaskListStatusEnum {
 	}
 }
 
+func (c MigrationTaskListStatus) Value() string {
+	return c.value
+}
+
 func (c MigrationTaskListStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -127,6 +131,10 @@ func GetMigrationTaskListMigrationTypeEnum() MigrationTaskListMigrationTypeEnum 
 	}
 }
 
+func (c MigrationTaskListMigrationType) Value() string {
+	return c.value
+}
+
 func (c MigrationTaskListMigrationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -163,6 +171,10 @@ func GetMigrationTaskListMigrationMethodEnum() MigrationTaskListMigrationMethodE
 			value: "incremental_migration",
 		},
 	}
+}
+
+func (c MigrationTaskListMigrationMethod) Value() string {
+	return c.value
 }
 
 func (c MigrationTaskListMigrationMethod) MarshalJSON() ([]byte, error) {

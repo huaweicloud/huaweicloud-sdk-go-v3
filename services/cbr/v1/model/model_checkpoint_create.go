@@ -73,6 +73,10 @@ func GetCheckpointCreateStatusEnum() CheckpointCreateStatusEnum {
 	}
 }
 
+func (c CheckpointCreateStatus) Value() string {
+	return c.value
+}
+
 func (c CheckpointCreateStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

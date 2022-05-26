@@ -60,6 +60,10 @@ func GetFunctionApiBaseInfoInvocationTypeEnum() FunctionApiBaseInfoInvocationTyp
 	}
 }
 
+func (c FunctionApiBaseInfoInvocationType) Value() string {
+	return c.value
+}
+
 func (c FunctionApiBaseInfoInvocationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

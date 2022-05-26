@@ -75,6 +75,10 @@ func GetSpecSpecTypeEnum() SpecSpecTypeEnum {
 	}
 }
 
+func (c SpecSpecType) Value() string {
+	return c.value
+}
+
 func (c SpecSpecType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

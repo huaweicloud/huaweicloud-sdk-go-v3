@@ -50,6 +50,10 @@ func GetRuleTemplateEnum() RuleTemplateEnum {
 	}
 }
 
+func (c RuleTemplate) Value() string {
+	return c.value
+}
+
 func (c RuleTemplate) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

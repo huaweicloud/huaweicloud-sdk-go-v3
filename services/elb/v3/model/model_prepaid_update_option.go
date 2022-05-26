@@ -54,6 +54,10 @@ func GetPrepaidUpdateOptionChangeModeEnum() PrepaidUpdateOptionChangeModeEnum {
 	}
 }
 
+func (c PrepaidUpdateOptionChangeMode) Value() string {
+	return c.value
+}
+
 func (c PrepaidUpdateOptionChangeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -90,6 +94,10 @@ func GetPrepaidUpdateOptionPeriodTypeEnum() PrepaidUpdateOptionPeriodTypeEnum {
 			value: "year",
 		},
 	}
+}
+
+func (c PrepaidUpdateOptionPeriodType) Value() string {
+	return c.value
 }
 
 func (c PrepaidUpdateOptionPeriodType) MarshalJSON() ([]byte, error) {

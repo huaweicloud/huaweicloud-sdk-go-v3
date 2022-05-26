@@ -63,6 +63,10 @@ func GetListServicePermissionsDetailsRequestSortKeyEnum() ListServicePermissions
 	}
 }
 
+func (c ListServicePermissionsDetailsRequestSortKey) Value() string {
+	return c.value
+}
+
 func (c ListServicePermissionsDetailsRequestSortKey) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -99,6 +103,10 @@ func GetListServicePermissionsDetailsRequestSortDirEnum() ListServicePermissions
 			value: "desc",
 		},
 	}
+}
+
+func (c ListServicePermissionsDetailsRequestSortDir) Value() string {
+	return c.value
 }
 
 func (c ListServicePermissionsDetailsRequestSortDir) MarshalJSON() ([]byte, error) {

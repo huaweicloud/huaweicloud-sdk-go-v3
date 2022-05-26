@@ -21,7 +21,7 @@ type ImageTaggingReq struct {
 	// 置信度的阈值（0~100），低于此置信数的标签，将不会返回。  默认值：60。
 	Threshold *float32 `json:"threshold,omitempty"`
 
-	// 最多返回的tag数，默认值： 50
+	// 最多返回的tag数（最大为150），默认值： 50。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

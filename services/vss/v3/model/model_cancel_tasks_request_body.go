@@ -47,6 +47,10 @@ func GetCancelTasksRequestBodyActionEnum() CancelTasksRequestBodyActionEnum {
 	}
 }
 
+func (c CancelTasksRequestBodyAction) Value() string {
+	return c.value
+}
+
 func (c CancelTasksRequestBodyAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

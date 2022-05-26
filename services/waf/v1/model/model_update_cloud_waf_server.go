@@ -57,6 +57,10 @@ func GetUpdateCloudWafServerFrontProtocolEnum() UpdateCloudWafServerFrontProtoco
 	}
 }
 
+func (c UpdateCloudWafServerFrontProtocol) Value() string {
+	return c.value
+}
+
 func (c UpdateCloudWafServerFrontProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -95,6 +99,10 @@ func GetUpdateCloudWafServerBackProtocolEnum() UpdateCloudWafServerBackProtocolE
 	}
 }
 
+func (c UpdateCloudWafServerBackProtocol) Value() string {
+	return c.value
+}
+
 func (c UpdateCloudWafServerBackProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -131,6 +139,10 @@ func GetUpdateCloudWafServerTypeEnum() UpdateCloudWafServerTypeEnum {
 			value: "ipv6",
 		},
 	}
+}
+
+func (c UpdateCloudWafServerType) Value() string {
+	return c.value
 }
 
 func (c UpdateCloudWafServerType) MarshalJSON() ([]byte, error) {

@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ocr/v1/model"
 )
 
@@ -19,7 +19,7 @@ func OcrClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 智能分类识别
+// RecognizeAutoClassification 智能分类识别
 //
 // 检测定位图片上指定要识别的票证（票据、证件或其他文字载体），并对其进行结构化识别。接口以列表形式返回图片上要识别票证的位置坐标、结构化识别的内容以及对应的类别。
 //
@@ -39,7 +39,13 @@ func (c *OcrClient) RecognizeAutoClassification(request *model.RecognizeAutoClas
 	}
 }
 
-// 银行卡识别
+// RecognizeAutoClassificationInvoker 智能分类识别
+func (c *OcrClient) RecognizeAutoClassificationInvoker(request *model.RecognizeAutoClassificationRequest) *RecognizeAutoClassificationInvoker {
+	requestDef := GenReqDefForRecognizeAutoClassification()
+	return &RecognizeAutoClassificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeBankcard 银行卡识别
 //
 // 识别银行卡上的关键文字信息，并返回识别的结构化结果。
 //
@@ -59,7 +65,13 @@ func (c *OcrClient) RecognizeBankcard(request *model.RecognizeBankcardRequest) (
 	}
 }
 
-// 名片识别
+// RecognizeBankcardInvoker 银行卡识别
+func (c *OcrClient) RecognizeBankcardInvoker(request *model.RecognizeBankcardRequest) *RecognizeBankcardInvoker {
+	requestDef := GenReqDefForRecognizeBankcard()
+	return &RecognizeBankcardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeBusinessCard 名片识别
 //
 // 识别名片图片上的文字信息，并返回识别的结构化结果。支持对多种不同版式名片进行结构化信息提取。
 //
@@ -75,7 +87,13 @@ func (c *OcrClient) RecognizeBusinessCard(request *model.RecognizeBusinessCardRe
 	}
 }
 
-// 营业执照识别
+// RecognizeBusinessCardInvoker 名片识别
+func (c *OcrClient) RecognizeBusinessCardInvoker(request *model.RecognizeBusinessCardRequest) *RecognizeBusinessCardInvoker {
+	requestDef := GenReqDefForRecognizeBusinessCard()
+	return &RecognizeBusinessCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeBusinessLicense 营业执照识别
 //
 // 识别营业执照首页图片中的文字信息，并返回识别的结构化结果。
 //
@@ -95,7 +113,13 @@ func (c *OcrClient) RecognizeBusinessLicense(request *model.RecognizeBusinessLic
 	}
 }
 
-// 智利身份证识别
+// RecognizeBusinessLicenseInvoker 营业执照识别
+func (c *OcrClient) RecognizeBusinessLicenseInvoker(request *model.RecognizeBusinessLicenseRequest) *RecognizeBusinessLicenseInvoker {
+	requestDef := GenReqDefForRecognizeBusinessLicense()
+	return &RecognizeBusinessLicenseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeChileIdCard 智利身份证识别
 //
 // 识别智利身份证图片中的文字内容，并返回识别的结构化结果。
 //
@@ -111,7 +135,13 @@ func (c *OcrClient) RecognizeChileIdCard(request *model.RecognizeChileIdCardRequ
 	}
 }
 
-// 驾驶证识别
+// RecognizeChileIdCardInvoker 智利身份证识别
+func (c *OcrClient) RecognizeChileIdCardInvoker(request *model.RecognizeChileIdCardRequest) *RecognizeChileIdCardInvoker {
+	requestDef := GenReqDefForRecognizeChileIdCard()
+	return &RecognizeChileIdCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeDriverLicense 驾驶证识别
 //
 // 识别用户上传的驾驶证图片（或者用户提供的华为云上OBS的驾驶证图片文件的URL）中主页与副页的文字内容，并将识别的结果返回给用户。
 //
@@ -131,7 +161,13 @@ func (c *OcrClient) RecognizeDriverLicense(request *model.RecognizeDriverLicense
 	}
 }
 
-// 财务报表识别
+// RecognizeDriverLicenseInvoker 驾驶证识别
+func (c *OcrClient) RecognizeDriverLicenseInvoker(request *model.RecognizeDriverLicenseRequest) *RecognizeDriverLicenseInvoker {
+	requestDef := GenReqDefForRecognizeDriverLicense()
+	return &RecognizeDriverLicenseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeFinancialStatement 财务报表识别
 //
 // 识别用户上传的表格图片中的文字内容，并将识别的结果返回给用户。
 //
@@ -147,7 +183,13 @@ func (c *OcrClient) RecognizeFinancialStatement(request *model.RecognizeFinancia
 	}
 }
 
-// 飞机行程单识别
+// RecognizeFinancialStatementInvoker 财务报表识别
+func (c *OcrClient) RecognizeFinancialStatementInvoker(request *model.RecognizeFinancialStatementRequest) *RecognizeFinancialStatementInvoker {
+	requestDef := GenReqDefForRecognizeFinancialStatement()
+	return &RecognizeFinancialStatementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeFlightItinerary 飞机行程单识别
 //
 // 识别飞机行程单中的文字信息，并返回识别的结构化结果。
 //
@@ -167,7 +209,13 @@ func (c *OcrClient) RecognizeFlightItinerary(request *model.RecognizeFlightItine
 	}
 }
 
-// 通用表格识别
+// RecognizeFlightItineraryInvoker 飞机行程单识别
+func (c *OcrClient) RecognizeFlightItineraryInvoker(request *model.RecognizeFlightItineraryRequest) *RecognizeFlightItineraryInvoker {
+	requestDef := GenReqDefForRecognizeFlightItinerary()
+	return &RecognizeFlightItineraryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeGeneralTable 通用表格识别
 //
 // 识别用于识别用户上传的通用表格图片（或者用户提供的华为云上OBS的通用表格图片文件的URL）中的文字内容，并将识别的结果返回给用户。
 //
@@ -183,7 +231,13 @@ func (c *OcrClient) RecognizeGeneralTable(request *model.RecognizeGeneralTableRe
 	}
 }
 
-// 通用文字识别
+// RecognizeGeneralTableInvoker 通用表格识别
+func (c *OcrClient) RecognizeGeneralTableInvoker(request *model.RecognizeGeneralTableRequest) *RecognizeGeneralTableInvoker {
+	requestDef := GenReqDefForRecognizeGeneralTable()
+	return &RecognizeGeneralTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeGeneralText 通用文字识别
 //
 // 识别图片上的文字信息，返回识别的文字和坐标。支持扫描文件、电子文档、书籍、票据和表单等多种场景的文字识别。
 //
@@ -199,7 +253,13 @@ func (c *OcrClient) RecognizeGeneralText(request *model.RecognizeGeneralTextRequ
 	}
 }
 
-// 手写文字识别
+// RecognizeGeneralTextInvoker 通用文字识别
+func (c *OcrClient) RecognizeGeneralTextInvoker(request *model.RecognizeGeneralTextRequest) *RecognizeGeneralTextInvoker {
+	requestDef := GenReqDefForRecognizeGeneralText()
+	return &RecognizeGeneralTextInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeHandwriting 手写文字识别
 //
 // 识别文档中的手写文字信息，并将识别的结构化结果返回给用户。
 //
@@ -215,7 +275,13 @@ func (c *OcrClient) RecognizeHandwriting(request *model.RecognizeHandwritingRequ
 	}
 }
 
-// 防疫健康码识别
+// RecognizeHandwritingInvoker 手写文字识别
+func (c *OcrClient) RecognizeHandwritingInvoker(request *model.RecognizeHandwritingRequest) *RecognizeHandwritingInvoker {
+	requestDef := GenReqDefForRecognizeHandwriting()
+	return &RecognizeHandwritingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeHealthCode 防疫健康码识别
 //
 // 识别防疫健康码中的文字信息，并将识别的结构化结果返回给用户。
 //
@@ -231,7 +297,13 @@ func (c *OcrClient) RecognizeHealthCode(request *model.RecognizeHealthCodeReques
 	}
 }
 
-// 身份证识别
+// RecognizeHealthCodeInvoker 防疫健康码识别
+func (c *OcrClient) RecognizeHealthCodeInvoker(request *model.RecognizeHealthCodeRequest) *RecognizeHealthCodeInvoker {
+	requestDef := GenReqDefForRecognizeHealthCode()
+	return &RecognizeHealthCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeIdCard 身份证识别
 //
 // 识别身份证图片中的文字内容，并将识别的结果返回给用户。
 //
@@ -253,7 +325,13 @@ func (c *OcrClient) RecognizeIdCard(request *model.RecognizeIdCardRequest) (*mod
 	}
 }
 
-// 保险单识别
+// RecognizeIdCardInvoker 身份证识别
+func (c *OcrClient) RecognizeIdCardInvoker(request *model.RecognizeIdCardRequest) *RecognizeIdCardInvoker {
+	requestDef := GenReqDefForRecognizeIdCard()
+	return &RecognizeIdCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeInsurancePolicy 保险单识别
 //
 // 识别保险单图片上的文字信息，并将识别的结构化结果返回给用户。支持对多板式保险单的扫描图片及手机照片进行结构化信息提取。
 //
@@ -269,7 +347,13 @@ func (c *OcrClient) RecognizeInsurancePolicy(request *model.RecognizeInsurancePo
 	}
 }
 
-// 发票验真
+// RecognizeInsurancePolicyInvoker 保险单识别
+func (c *OcrClient) RecognizeInsurancePolicyInvoker(request *model.RecognizeInsurancePolicyRequest) *RecognizeInsurancePolicyInvoker {
+	requestDef := GenReqDefForRecognizeInsurancePolicy()
+	return &RecognizeInsurancePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeInvoiceVerification 发票验真
 //
 // 发票验真服务支持9种增值税发票的信息核验，包括增值税专用发票、增值税普通发票、增值税普通发票（卷式）、增值税电子专用发票、增值税电子普通发票、增值税电子普通发票（通行费）、二手车销售统一发票、机动车销售统一发票、区块链电子发票，支持返回票面的全部信息。该接口的使用限制请参见[约束与限制](https://support.huaweicloud.com/productdesc-ocr/ocr_01_0006.html)，详细使用指导请参见[OCR服务使用简介](https://support.huaweicloud.com/qs-ocr/ocr_05_0001.html)章节。
 //
@@ -285,7 +369,13 @@ func (c *OcrClient) RecognizeInvoiceVerification(request *model.RecognizeInvoice
 	}
 }
 
-// 车牌识别
+// RecognizeInvoiceVerificationInvoker 发票验真
+func (c *OcrClient) RecognizeInvoiceVerificationInvoker(request *model.RecognizeInvoiceVerificationRequest) *RecognizeInvoiceVerificationInvoker {
+	requestDef := GenReqDefForRecognizeInvoiceVerification()
+	return &RecognizeInvoiceVerificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeLicensePlate 车牌识别
 //
 // 识别输入图片中的车牌信息，并返回其坐标和内容。
 //
@@ -301,7 +391,13 @@ func (c *OcrClient) RecognizeLicensePlate(request *model.RecognizeLicensePlateRe
 	}
 }
 
-// 机动车销售发票识别
+// RecognizeLicensePlateInvoker 车牌识别
+func (c *OcrClient) RecognizeLicensePlateInvoker(request *model.RecognizeLicensePlateRequest) *RecognizeLicensePlateInvoker {
+	requestDef := GenReqDefForRecognizeLicensePlate()
+	return &RecognizeLicensePlateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeMvsInvoice 机动车销售发票识别
 //
 // 识别机动车销售发票图片中的文字内容，并将识别的结果返回给用户。
 //
@@ -323,7 +419,13 @@ func (c *OcrClient) RecognizeMvsInvoice(request *model.RecognizeMvsInvoiceReques
 	}
 }
 
-// 缅文驾驶证识别
+// RecognizeMvsInvoiceInvoker 机动车销售发票识别
+func (c *OcrClient) RecognizeMvsInvoiceInvoker(request *model.RecognizeMvsInvoiceRequest) *RecognizeMvsInvoiceInvoker {
+	requestDef := GenReqDefForRecognizeMvsInvoice()
+	return &RecognizeMvsInvoiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeMyanmarDriverLicense 缅文驾驶证识别
 //
 // 识别缅甸驾驶证中的文字信息，并返回识别的结构化结果。
 //
@@ -339,7 +441,13 @@ func (c *OcrClient) RecognizeMyanmarDriverLicense(request *model.RecognizeMyanma
 	}
 }
 
-// 缅文身份证识别
+// RecognizeMyanmarDriverLicenseInvoker 缅文驾驶证识别
+func (c *OcrClient) RecognizeMyanmarDriverLicenseInvoker(request *model.RecognizeMyanmarDriverLicenseRequest) *RecognizeMyanmarDriverLicenseInvoker {
+	requestDef := GenReqDefForRecognizeMyanmarDriverLicense()
+	return &RecognizeMyanmarDriverLicenseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeMyanmarIdcard 缅文身份证识别
 //
 // 识别缅文身份证中的文字信息，并返回识别的结构化结果。
 //
@@ -355,7 +463,13 @@ func (c *OcrClient) RecognizeMyanmarIdcard(request *model.RecognizeMyanmarIdcard
 	}
 }
 
-// 护照识别
+// RecognizeMyanmarIdcardInvoker 缅文身份证识别
+func (c *OcrClient) RecognizeMyanmarIdcardInvoker(request *model.RecognizeMyanmarIdcardRequest) *RecognizeMyanmarIdcardInvoker {
+	requestDef := GenReqDefForRecognizeMyanmarIdcard()
+	return &RecognizeMyanmarIdcardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizePassport 护照识别
 //
 // 识别用户上传的护照首页图片中的文字信息，并返回识别的结构化结果。当前版本支持中国护照的全字段识别。外国护照支持护照下方两行国际标准化的机读码识别，并可从中提取6-7个关键字段信息。
 //
@@ -375,7 +489,13 @@ func (c *OcrClient) RecognizePassport(request *model.RecognizePassportRequest) (
 	}
 }
 
-// 核酸检测记录
+// RecognizePassportInvoker 护照识别
+func (c *OcrClient) RecognizePassportInvoker(request *model.RecognizePassportRequest) *RecognizePassportInvoker {
+	requestDef := GenReqDefForRecognizePassport()
+	return &RecognizePassportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizePcrTestRecord 核酸检测记录
 //
 // 识别核酸检测记录中的文字信息，并将识别的结构化结果返回给用户。PCR，全称Polymerase chain reaction,即聚合酶链式反应.PCR-test也为大众所认知为新型冠状病毒核酸检测测试。
 //
@@ -391,7 +511,13 @@ func (c *OcrClient) RecognizePcrTestRecord(request *model.RecognizePcrTestRecord
 	}
 }
 
-// 从业资格证识别
+// RecognizePcrTestRecordInvoker 核酸检测记录
+func (c *OcrClient) RecognizePcrTestRecordInvoker(request *model.RecognizePcrTestRecordRequest) *RecognizePcrTestRecordInvoker {
+	requestDef := GenReqDefForRecognizePcrTestRecord()
+	return &RecognizePcrTestRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeQualificationCertificate 从业资格证识别
 //
 // 识别道路运输从业资格证上的关键文字信息，并返回识别的结构化结果。
 //
@@ -411,7 +537,13 @@ func (c *OcrClient) RecognizeQualificationCertificate(request *model.RecognizeQu
 	}
 }
 
-// 定额发票识别
+// RecognizeQualificationCertificateInvoker 从业资格证识别
+func (c *OcrClient) RecognizeQualificationCertificateInvoker(request *model.RecognizeQualificationCertificateRequest) *RecognizeQualificationCertificateInvoker {
+	requestDef := GenReqDefForRecognizeQualificationCertificate()
+	return &RecognizeQualificationCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeQuotaInvoice 定额发票识别
 //
 // 识别定额发票中的文字信息，并返回识别的结构化结果。
 //
@@ -431,7 +563,13 @@ func (c *OcrClient) RecognizeQuotaInvoice(request *model.RecognizeQuotaInvoiceRe
 	}
 }
 
-// 出租车发票识别
+// RecognizeQuotaInvoiceInvoker 定额发票识别
+func (c *OcrClient) RecognizeQuotaInvoiceInvoker(request *model.RecognizeQuotaInvoiceRequest) *RecognizeQuotaInvoiceInvoker {
+	requestDef := GenReqDefForRecognizeQuotaInvoice()
+	return &RecognizeQuotaInvoiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeTaxiInvoice 出租车发票识别
 //
 // 识别出租车发票中的文字信息，并返回识别的结构化结果。
 //
@@ -451,7 +589,13 @@ func (c *OcrClient) RecognizeTaxiInvoice(request *model.RecognizeTaxiInvoiceRequ
 	}
 }
 
-// 泰文身份证识别
+// RecognizeTaxiInvoiceInvoker 出租车发票识别
+func (c *OcrClient) RecognizeTaxiInvoiceInvoker(request *model.RecognizeTaxiInvoiceRequest) *RecognizeTaxiInvoiceInvoker {
+	requestDef := GenReqDefForRecognizeTaxiInvoice()
+	return &RecognizeTaxiInvoiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeThailandIdcard 泰文身份证识别
 //
 // 识别泰国身份证中的文字信息，并返回识别的结构化结果。
 //
@@ -467,7 +611,13 @@ func (c *OcrClient) RecognizeThailandIdcard(request *model.RecognizeThailandIdca
 	}
 }
 
-// 泰国车牌识别
+// RecognizeThailandIdcardInvoker 泰文身份证识别
+func (c *OcrClient) RecognizeThailandIdcardInvoker(request *model.RecognizeThailandIdcardRequest) *RecognizeThailandIdcardInvoker {
+	requestDef := GenReqDefForRecognizeThailandIdcard()
+	return &RecognizeThailandIdcardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeThailandLicensePlate 泰国车牌识别
 //
 // 识别泰国车牌图片中的车牌信息，并返回识别的结构化结果。
 //
@@ -483,7 +633,13 @@ func (c *OcrClient) RecognizeThailandLicensePlate(request *model.RecognizeThaila
 	}
 }
 
-// 车辆通行费发票识别
+// RecognizeThailandLicensePlateInvoker 泰国车牌识别
+func (c *OcrClient) RecognizeThailandLicensePlateInvoker(request *model.RecognizeThailandLicensePlateRequest) *RecognizeThailandLicensePlateInvoker {
+	requestDef := GenReqDefForRecognizeThailandLicensePlate()
+	return &RecognizeThailandLicensePlateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeTollInvoice 车辆通行费发票识别
 //
 // 识别车辆通行费发票中的文字信息，并返回识别的结构化结果。
 //
@@ -503,7 +659,13 @@ func (c *OcrClient) RecognizeTollInvoice(request *model.RecognizeTollInvoiceRequ
 	}
 }
 
-// 火车票识别
+// RecognizeTollInvoiceInvoker 车辆通行费发票识别
+func (c *OcrClient) RecognizeTollInvoiceInvoker(request *model.RecognizeTollInvoiceRequest) *RecognizeTollInvoiceInvoker {
+	requestDef := GenReqDefForRecognizeTollInvoice()
+	return &RecognizeTollInvoiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeTrainTicket 火车票识别
 //
 // 识别火车票中的文字信息，并返回识别的结构化结果。
 //
@@ -523,7 +685,13 @@ func (c *OcrClient) RecognizeTrainTicket(request *model.RecognizeTrainTicketRequ
 	}
 }
 
-// 道路运输证识别
+// RecognizeTrainTicketInvoker 火车票识别
+func (c *OcrClient) RecognizeTrainTicketInvoker(request *model.RecognizeTrainTicketRequest) *RecognizeTrainTicketInvoker {
+	requestDef := GenReqDefForRecognizeTrainTicket()
+	return &RecognizeTrainTicketInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeTransportationLicense 道路运输证识别
 //
 // 识别道路运输证首页中的文字信息，并返回识别的结构化结果。
 //
@@ -541,7 +709,13 @@ func (c *OcrClient) RecognizeTransportationLicense(request *model.RecognizeTrans
 	}
 }
 
-// 增值税发票识别
+// RecognizeTransportationLicenseInvoker 道路运输证识别
+func (c *OcrClient) RecognizeTransportationLicenseInvoker(request *model.RecognizeTransportationLicenseRequest) *RecognizeTransportationLicenseInvoker {
+	requestDef := GenReqDefForRecognizeTransportationLicense()
+	return &RecognizeTransportationLicenseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeVatInvoice 增值税发票识别
 //
 // 识别用户上传的增值税发票图片（或者用户提供的华为云上OBS的增值税发票图片文件的URL）中的文字内容，并将识别的结果返回给用户。
 //
@@ -563,7 +737,13 @@ func (c *OcrClient) RecognizeVatInvoice(request *model.RecognizeVatInvoiceReques
 	}
 }
 
-// 行驶证识别
+// RecognizeVatInvoiceInvoker 增值税发票识别
+func (c *OcrClient) RecognizeVatInvoiceInvoker(request *model.RecognizeVatInvoiceRequest) *RecognizeVatInvoiceInvoker {
+	requestDef := GenReqDefForRecognizeVatInvoice()
+	return &RecognizeVatInvoiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeVehicleLicense 行驶证识别
 //
 // 识别用户上传的行驶证图片（或者用户提供的华为云上OBS的行驶证图片文件的URL）中主页和副页的文字内容，并将识别的结果返回给用户。
 //
@@ -583,7 +763,13 @@ func (c *OcrClient) RecognizeVehicleLicense(request *model.RecognizeVehicleLicen
 	}
 }
 
-// 电子面单识别
+// RecognizeVehicleLicenseInvoker 行驶证识别
+func (c *OcrClient) RecognizeVehicleLicenseInvoker(request *model.RecognizeVehicleLicenseRequest) *RecognizeVehicleLicenseInvoker {
+	requestDef := GenReqDefForRecognizeVehicleLicense()
+	return &RecognizeVehicleLicenseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeWaybillElectronic 电子面单识别
 //
 // 识别用户上传的韵达电子面单图片中的文字内容，并将识别的结果以json格式返回给用户。
 //
@@ -599,7 +785,13 @@ func (c *OcrClient) RecognizeWaybillElectronic(request *model.RecognizeWaybillEl
 	}
 }
 
-// 网络图片识别
+// RecognizeWaybillElectronicInvoker 电子面单识别
+func (c *OcrClient) RecognizeWaybillElectronicInvoker(request *model.RecognizeWaybillElectronicRequest) *RecognizeWaybillElectronicInvoker {
+	requestDef := GenReqDefForRecognizeWaybillElectronic()
+	return &RecognizeWaybillElectronicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeWebImage 网络图片识别
 //
 // 识别网络图片中的文字内容，并返回识别的结构化结果。
 //
@@ -615,7 +807,13 @@ func (c *OcrClient) RecognizeWebImage(request *model.RecognizeWebImageRequest) (
 	}
 }
 
-// VIN码识别
+// RecognizeWebImageInvoker 网络图片识别
+func (c *OcrClient) RecognizeWebImageInvoker(request *model.RecognizeWebImageRequest) *RecognizeWebImageInvoker {
+	requestDef := GenReqDefForRecognizeWebImage()
+	return &RecognizeWebImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeVin VIN码识别
 //
 // 识别图片中的车架号信息，并将识别结果返回给用户。
 //
@@ -629,4 +827,10 @@ func (c *OcrClient) RecognizeVin(request *model.RecognizeVinRequest) (*model.Rec
 	} else {
 		return resp.(*model.RecognizeVinResponse), nil
 	}
+}
+
+// RecognizeVinInvoker VIN码识别
+func (c *OcrClient) RecognizeVinInvoker(request *model.RecognizeVinRequest) *RecognizeVinInvoker {
+	requestDef := GenReqDefForRecognizeVin()
+	return &RecognizeVinInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

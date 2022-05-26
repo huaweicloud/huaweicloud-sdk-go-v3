@@ -59,6 +59,10 @@ func GetRunCheckTaskJobsRequestStatusEnum() RunCheckTaskJobsRequestStatusEnum {
 	}
 }
 
+func (c RunCheckTaskJobsRequestStatus) Value() string {
+	return c.value
+}
+
 func (c RunCheckTaskJobsRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

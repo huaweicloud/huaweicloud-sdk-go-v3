@@ -45,6 +45,10 @@ func GetReverseProtectionGroupRequestParamsPriorityStationEnum() ReverseProtecti
 	}
 }
 
+func (c ReverseProtectionGroupRequestParamsPriorityStation) Value() string {
+	return c.value
+}
+
 func (c ReverseProtectionGroupRequestParamsPriorityStation) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

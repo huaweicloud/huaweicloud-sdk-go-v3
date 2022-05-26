@@ -93,6 +93,10 @@ func GetCreateModuleResponseStateEnum() CreateModuleResponseStateEnum {
 	}
 }
 
+func (c CreateModuleResponseState) Value() string {
+	return c.value
+}
+
 func (c CreateModuleResponseState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -135,6 +139,10 @@ func GetCreateModuleResponseAppTypeEnum() CreateModuleResponseAppTypeEnum {
 	}
 }
 
+func (c CreateModuleResponseAppType) Value() string {
+	return c.value
+}
+
 func (c CreateModuleResponseAppType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -175,6 +183,10 @@ func GetCreateModuleResponseFunctionTypeEnum() CreateModuleResponseFunctionTypeE
 			value: "ON_PREMISE_INTEGRATION",
 		},
 	}
+}
+
+func (c CreateModuleResponseFunctionType) Value() string {
+	return c.value
 }
 
 func (c CreateModuleResponseFunctionType) MarshalJSON() ([]byte, error) {

@@ -58,6 +58,10 @@ func GetCreateTransferRequestBodyLogTransferInfoLogTransferModeEnum() CreateTran
 	}
 }
 
+func (c CreateTransferRequestBodyLogTransferInfoLogTransferMode) Value() string {
+	return c.value
+}
+
 func (c CreateTransferRequestBodyLogTransferInfoLogTransferMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -94,6 +98,10 @@ func GetCreateTransferRequestBodyLogTransferInfoLogStorageFormatEnum() CreateTra
 			value: "RAW",
 		},
 	}
+}
+
+func (c CreateTransferRequestBodyLogTransferInfoLogStorageFormat) Value() string {
+	return c.value
 }
 
 func (c CreateTransferRequestBodyLogTransferInfoLogStorageFormat) MarshalJSON() ([]byte, error) {
@@ -136,6 +144,10 @@ func GetCreateTransferRequestBodyLogTransferInfoLogTransferStatusEnum() CreateTr
 			value: "EXCEPTION",
 		},
 	}
+}
+
+func (c CreateTransferRequestBodyLogTransferInfoLogTransferStatus) Value() string {
+	return c.value
 }
 
 func (c CreateTransferRequestBodyLogTransferInfoLogTransferStatus) MarshalJSON() ([]byte, error) {

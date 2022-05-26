@@ -44,6 +44,10 @@ func GetRangeStatusRequestRangeStatusEnum() RangeStatusRequestRangeStatusEnum {
 	}
 }
 
+func (c RangeStatusRequestRangeStatus) Value() string {
+	return c.value
+}
+
 func (c RangeStatusRequestRangeStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

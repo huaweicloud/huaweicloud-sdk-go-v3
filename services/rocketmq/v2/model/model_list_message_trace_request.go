@@ -47,6 +47,10 @@ func GetListMessageTraceRequestEngineEnum() ListMessageTraceRequestEngineEnum {
 	}
 }
 
+func (c ListMessageTraceRequestEngine) Value() string {
+	return c.value
+}
+
 func (c ListMessageTraceRequestEngine) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

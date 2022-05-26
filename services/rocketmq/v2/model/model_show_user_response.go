@@ -75,6 +75,10 @@ func GetShowUserResponseDefaultTopicPermEnum() ShowUserResponseDefaultTopicPermE
 	}
 }
 
+func (c ShowUserResponseDefaultTopicPerm) Value() string {
+	return c.value
+}
+
 func (c ShowUserResponseDefaultTopicPerm) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -119,6 +123,10 @@ func GetShowUserResponseDefaultGroupPermEnum() ShowUserResponseDefaultGroupPermE
 			value: "DENY",
 		},
 	}
+}
+
+func (c ShowUserResponseDefaultGroupPerm) Value() string {
+	return c.value
 }
 
 func (c ShowUserResponseDefaultGroupPerm) MarshalJSON() ([]byte, error) {

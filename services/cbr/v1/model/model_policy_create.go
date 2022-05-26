@@ -54,6 +54,10 @@ func GetPolicyCreateOperationTypeEnum() PolicyCreateOperationTypeEnum {
 	}
 }
 
+func (c PolicyCreateOperationType) Value() string {
+	return c.value
+}
+
 func (c PolicyCreateOperationType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

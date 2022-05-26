@@ -169,6 +169,10 @@ func GetCreateSecurityPolicyOptionCiphersEnum() CreateSecurityPolicyOptionCipher
 	}
 }
 
+func (c CreateSecurityPolicyOptionCiphers) Value() string {
+	return c.value
+}
+
 func (c CreateSecurityPolicyOptionCiphers) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

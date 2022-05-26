@@ -149,6 +149,10 @@ func GetEndpointVoDbTypeEnum() EndpointVoDbTypeEnum {
 	}
 }
 
+func (c EndpointVoDbType) Value() string {
+	return c.value
+}
+
 func (c EndpointVoDbType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -189,6 +193,10 @@ func GetEndpointVoMongoHaModeEnum() EndpointVoMongoHaModeEnum {
 			value: "ReplicaSingle 单节点",
 		},
 	}
+}
+
+func (c EndpointVoMongoHaMode) Value() string {
+	return c.value
 }
 
 func (c EndpointVoMongoHaMode) MarshalJSON() ([]byte, error) {
@@ -263,6 +271,10 @@ func GetEndpointVoClusterModeEnum() EndpointVoClusterModeEnum {
 			value: "Distributed 分布式taurus",
 		},
 	}
+}
+
+func (c EndpointVoClusterMode) Value() string {
+	return c.value
 }
 
 func (c EndpointVoClusterMode) MarshalJSON() ([]byte, error) {

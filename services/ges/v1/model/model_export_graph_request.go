@@ -46,6 +46,10 @@ func GetExportGraphRequestActionIdEnum() ExportGraphRequestActionIdEnum {
 	}
 }
 
+func (c ExportGraphRequestActionId) Value() string {
+	return c.value
+}
+
 func (c ExportGraphRequestActionId) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

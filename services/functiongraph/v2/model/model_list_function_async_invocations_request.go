@@ -71,6 +71,10 @@ func GetListFunctionAsyncInvocationsRequestStatusEnum() ListFunctionAsyncInvocat
 	}
 }
 
+func (c ListFunctionAsyncInvocationsRequestStatus) Value() string {
+	return c.value
+}
+
 func (c ListFunctionAsyncInvocationsRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

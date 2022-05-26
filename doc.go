@@ -1,2 +1,2 @@
-// This file is created for dependence ensure.
+// Package sdk_doc created for dependence ensure.
 package sdk_doc

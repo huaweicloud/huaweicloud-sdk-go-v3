@@ -86,6 +86,10 @@ func GetApiCheckInfoReqMethodEnum() ApiCheckInfoReqMethodEnum {
 	}
 }
 
+func (c ApiCheckInfoReqMethod) Value() string {
+	return c.value
+}
+
 func (c ApiCheckInfoReqMethod) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -122,6 +126,10 @@ func GetApiCheckInfoMatchModeEnum() ApiCheckInfoMatchModeEnum {
 			value: "NORMAL",
 		},
 	}
+}
+
+func (c ApiCheckInfoMatchMode) Value() string {
+	return c.value
 }
 
 func (c ApiCheckInfoMatchMode) MarshalJSON() ([]byte, error) {

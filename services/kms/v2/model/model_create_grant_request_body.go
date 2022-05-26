@@ -62,6 +62,10 @@ func GetCreateGrantRequestBodyGranteePrincipalTypeEnum() CreateGrantRequestBodyG
 	}
 }
 
+func (c CreateGrantRequestBodyGranteePrincipalType) Value() string {
+	return c.value
+}
+
 func (c CreateGrantRequestBodyGranteePrincipalType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

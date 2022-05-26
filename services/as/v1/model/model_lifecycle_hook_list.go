@@ -66,6 +66,10 @@ func GetLifecycleHookListLifecycleHookTypeEnum() LifecycleHookListLifecycleHookT
 	}
 }
 
+func (c LifecycleHookListLifecycleHookType) Value() string {
+	return c.value
+}
+
 func (c LifecycleHookListLifecycleHookType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -102,6 +106,10 @@ func GetLifecycleHookListDefaultResultEnum() LifecycleHookListDefaultResultEnum 
 			value: "CONTINUE",
 		},
 	}
+}
+
+func (c LifecycleHookListDefaultResult) Value() string {
+	return c.value
 }
 
 func (c LifecycleHookListDefaultResult) MarshalJSON() ([]byte, error) {

@@ -2,7 +2,7 @@ package v1
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/sis/v1/model"
 )
 
@@ -19,7 +19,7 @@ func SisClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 获取录音文件识别结果
+// CollectTranscriberJob 获取录音文件识别结果
 //
 // 该接口用于获取录音文件识别结果及识别状态。
 //
@@ -35,7 +35,13 @@ func (c *SisClient) CollectTranscriberJob(request *model.CollectTranscriberJobRe
 	}
 }
 
-// 创建热词表
+// CollectTranscriberJobInvoker 获取录音文件识别结果
+func (c *SisClient) CollectTranscriberJobInvoker(request *model.CollectTranscriberJobRequest) *CollectTranscriberJobInvoker {
+	requestDef := GenReqDefForCollectTranscriberJob()
+	return &CollectTranscriberJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVocabulary 创建热词表
 //
 // 新建一个热词表，创建成功返回id。每个用户限制创建10个热词表。
 //
@@ -51,7 +57,13 @@ func (c *SisClient) CreateVocabulary(request *model.CreateVocabularyRequest) (*m
 	}
 }
 
-// 删除热词表
+// CreateVocabularyInvoker 创建热词表
+func (c *SisClient) CreateVocabularyInvoker(request *model.CreateVocabularyRequest) *CreateVocabularyInvoker {
+	requestDef := GenReqDefForCreateVocabulary()
+	return &CreateVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVocabulary 删除热词表
 //
 // 通过热词表id删除热词表。
 //
@@ -67,7 +79,13 @@ func (c *SisClient) DeleteVocabulary(request *model.DeleteVocabularyRequest) (*m
 	}
 }
 
-// 提交录音文件识别任务
+// DeleteVocabularyInvoker 删除热词表
+func (c *SisClient) DeleteVocabularyInvoker(request *model.DeleteVocabularyRequest) *DeleteVocabularyInvoker {
+	requestDef := GenReqDefForDeleteVocabulary()
+	return &DeleteVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PushTranscriberJobs 提交录音文件识别任务
 //
 // **录音文件识别**
 // 录音文件识别接口，用于识别长录音文件，录音文件放在华为云OBS（对象存储服务）上。
@@ -92,7 +110,13 @@ func (c *SisClient) PushTranscriberJobs(request *model.PushTranscriberJobsReques
 	}
 }
 
-// 录音文件识别极速版
+// PushTranscriberJobsInvoker 提交录音文件识别任务
+func (c *SisClient) PushTranscriberJobsInvoker(request *model.PushTranscriberJobsRequest) *PushTranscriberJobsInvoker {
+	requestDef := GenReqDefForPushTranscriberJobs()
+	return &PushTranscriberJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeFlashAsr 录音文件识别极速版
 //
 // 极速版ASR(Restful API 接口, 适用于音频(文件大小&lt;&#x3D;100M,语音时长&lt;&#x3D;30分钟)文件的同步识别。
 // 此接口以POST方式一次性上传整个音频或从华为OBS中下载音频， 识别结果将在请求响应中即刻返回，用于语音文件极速转写，质检分析的离线场景。
@@ -109,7 +133,13 @@ func (c *SisClient) RecognizeFlashAsr(request *model.RecognizeFlashAsrRequest) (
 	}
 }
 
-// 一句话识别
+// RecognizeFlashAsrInvoker 录音文件识别极速版
+func (c *SisClient) RecognizeFlashAsrInvoker(request *model.RecognizeFlashAsrRequest) *RecognizeFlashAsrInvoker {
+	requestDef := GenReqDefForRecognizeFlashAsr()
+	return &RecognizeFlashAsrInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeShortAudio 一句话识别
 //
 // 一句话识别接口，用于短语音的同步识别。一次性上传整个音频，响应中即返回识别结果。
 //
@@ -125,7 +155,13 @@ func (c *SisClient) RecognizeShortAudio(request *model.RecognizeShortAudioReques
 	}
 }
 
-// 语音评测
+// RecognizeShortAudioInvoker 一句话识别
+func (c *SisClient) RecognizeShortAudioInvoker(request *model.RecognizeShortAudioRequest) *RecognizeShortAudioInvoker {
+	requestDef := GenReqDefForRecognizeShortAudio()
+	return &RecognizeShortAudioInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunAudioAssessment 语音评测
 //
 // 口语评测接口，基于一小段朗读语音和预期文本，评价朗读者发音质量。当前仅支持华北-北京四。
 //
@@ -141,7 +177,13 @@ func (c *SisClient) RunAudioAssessment(request *model.RunAudioAssessmentRequest)
 	}
 }
 
-// 多模态评测
+// RunAudioAssessmentInvoker 语音评测
+func (c *SisClient) RunAudioAssessmentInvoker(request *model.RunAudioAssessmentRequest) *RunAudioAssessmentInvoker {
+	requestDef := GenReqDefForRunAudioAssessment()
+	return &RunAudioAssessmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunMultiModalAssessment 多模态评测
 //
 // 多模态评测接口，根据朗读视频数据、视频对应的音频数据和试题文本，综合给出朗读者口语的评测分数。当前仅支持华北-北京四。
 //
@@ -157,7 +199,13 @@ func (c *SisClient) RunMultiModalAssessment(request *model.RunMultiModalAssessme
 	}
 }
 
-// 语音合成
+// RunMultiModalAssessmentInvoker 多模态评测
+func (c *SisClient) RunMultiModalAssessmentInvoker(request *model.RunMultiModalAssessmentRequest) *RunMultiModalAssessmentInvoker {
+	requestDef := GenReqDefForRunMultiModalAssessment()
+	return &RunMultiModalAssessmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunTts 语音合成
 //
 // 语音合成，是一种将文本转换成逼真语音的服务。用户通过实时访问和调用API获取语音合成结果，将用户输入的文字合成为音频。通过音色选择、自定义音量、语速，为企业和个人提供个性化的发音服务
 //
@@ -173,7 +221,13 @@ func (c *SisClient) RunTts(request *model.RunTtsRequest) (*model.RunTtsResponse,
 	}
 }
 
-// 查询热词表列表
+// RunTtsInvoker 语音合成
+func (c *SisClient) RunTtsInvoker(request *model.RunTtsRequest) *RunTtsInvoker {
+	requestDef := GenReqDefForRunTts()
+	return &RunTtsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVocabularies 查询热词表列表
 //
 // 查询用户所有热词表列表。
 //
@@ -189,7 +243,13 @@ func (c *SisClient) ShowVocabularies(request *model.ShowVocabulariesRequest) (*m
 	}
 }
 
-// 查询热词表信息
+// ShowVocabulariesInvoker 查询热词表列表
+func (c *SisClient) ShowVocabulariesInvoker(request *model.ShowVocabulariesRequest) *ShowVocabulariesInvoker {
+	requestDef := GenReqDefForShowVocabularies()
+	return &ShowVocabulariesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVocabulary 查询热词表信息
 //
 // 通过热词表id查询热词表的信息和内容。
 //
@@ -205,7 +265,13 @@ func (c *SisClient) ShowVocabulary(request *model.ShowVocabularyRequest) (*model
 	}
 }
 
-// 更新热词表
+// ShowVocabularyInvoker 查询热词表信息
+func (c *SisClient) ShowVocabularyInvoker(request *model.ShowVocabularyRequest) *ShowVocabularyInvoker {
+	requestDef := GenReqDefForShowVocabulary()
+	return &ShowVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVocabulary 更新热词表
 //
 // 更新一个热词表，更新成功返回id。
 //
@@ -219,4 +285,10 @@ func (c *SisClient) UpdateVocabulary(request *model.UpdateVocabularyRequest) (*m
 	} else {
 		return resp.(*model.UpdateVocabularyResponse), nil
 	}
+}
+
+// UpdateVocabularyInvoker 更新热词表
+func (c *SisClient) UpdateVocabularyInvoker(request *model.UpdateVocabularyRequest) *UpdateVocabularyInvoker {
+	requestDef := GenReqDefForUpdateVocabulary()
+	return &UpdateVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

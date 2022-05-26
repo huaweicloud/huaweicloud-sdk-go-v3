@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/osm/v2/model"
 )
 
@@ -19,7 +19,7 @@ func OsmClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 验证授权主机
+// CheckHosts 验证授权主机
 //
 // 验证授权主机密码是否正确
 //
@@ -35,7 +35,13 @@ func (c *OsmClient) CheckHosts(request *model.CheckHostsRequest) (*model.CheckHo
 	}
 }
 
-// 是否需要验证
+// CheckHostsInvoker 验证授权主机
+func (c *OsmClient) CheckHostsInvoker(request *model.CheckHostsRequest) *CheckHostsInvoker {
+	requestDef := GenReqDefForCheckHosts()
+	return &CheckHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckNeedVerify 是否需要验证
 //
 // 是否需要验证
 //
@@ -51,7 +57,13 @@ func (c *OsmClient) CheckNeedVerify(request *model.CheckNeedVerifyRequest) (*mod
 	}
 }
 
-// 验证联系方式
+// CheckNeedVerifyInvoker 是否需要验证
+func (c *OsmClient) CheckNeedVerifyInvoker(request *model.CheckNeedVerifyRequest) *CheckNeedVerifyInvoker {
+	requestDef := GenReqDefForCheckNeedVerify()
+	return &CheckNeedVerifyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckVerifyCodes 验证联系方式
 //
 // 验证联系方式
 //
@@ -67,7 +79,13 @@ func (c *OsmClient) CheckVerifyCodes(request *model.CheckVerifyCodesRequest) (*m
 	}
 }
 
-// 租户确认授权
+// CheckVerifyCodesInvoker 验证联系方式
+func (c *OsmClient) CheckVerifyCodesInvoker(request *model.CheckVerifyCodesRequest) *CheckVerifyCodesInvoker {
+	requestDef := GenReqDefForCheckVerifyCodes()
+	return &CheckVerifyCodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ConfirmAuthorizations 租户确认授权
 //
 // 租户确认授权
 //
@@ -83,7 +101,13 @@ func (c *OsmClient) ConfirmAuthorizations(request *model.ConfirmAuthorizationsRe
 	}
 }
 
-// 添加工单关联标签接口
+// ConfirmAuthorizationsInvoker 租户确认授权
+func (c *OsmClient) ConfirmAuthorizationsInvoker(request *model.ConfirmAuthorizationsRequest) *ConfirmAuthorizationsInvoker {
+	requestDef := GenReqDefForConfirmAuthorizations()
+	return &ConfirmAuthorizationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCaseLabels 添加工单关联标签接口
 //
 // 添加工单关联标签接口
 //
@@ -99,7 +123,13 @@ func (c *OsmClient) CreateCaseLabels(request *model.CreateCaseLabelsRequest) (*m
 	}
 }
 
-// 创建工单
+// CreateCaseLabelsInvoker 添加工单关联标签接口
+func (c *OsmClient) CreateCaseLabelsInvoker(request *model.CreateCaseLabelsRequest) *CreateCaseLabelsInvoker {
+	requestDef := GenReqDefForCreateCaseLabels()
+	return &CreateCaseLabelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCases 创建工单
 //
 // 创建工单
 //
@@ -115,7 +145,13 @@ func (c *OsmClient) CreateCases(request *model.CreateCasesRequest) (*model.Creat
 	}
 }
 
-// 创建标签
+// CreateCasesInvoker 创建工单
+func (c *OsmClient) CreateCasesInvoker(request *model.CreateCasesRequest) *CreateCasesInvoker {
+	requestDef := GenReqDefForCreateCases()
+	return &CreateCasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateLabels 创建标签
 //
 // 创建标签
 //
@@ -131,7 +167,13 @@ func (c *OsmClient) CreateLabels(request *model.CreateLabelsRequest) (*model.Cre
 	}
 }
 
-// 提交留言
+// CreateLabelsInvoker 创建标签
+func (c *OsmClient) CreateLabelsInvoker(request *model.CreateLabelsRequest) *CreateLabelsInvoker {
+	requestDef := GenReqDefForCreateLabels()
+	return &CreateLabelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMessages 提交留言
 //
 // 提交留言
 //
@@ -147,7 +189,13 @@ func (c *OsmClient) CreateMessages(request *model.CreateMessagesRequest) (*model
 	}
 }
 
-// 创建授权
+// CreateMessagesInvoker 提交留言
+func (c *OsmClient) CreateMessagesInvoker(request *model.CreateMessagesRequest) *CreateMessagesInvoker {
+	requestDef := GenReqDefForCreateMessages()
+	return &CreateMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePrivileges 创建授权
 //
 // 创建授权
 //
@@ -163,7 +211,13 @@ func (c *OsmClient) CreatePrivileges(request *model.CreatePrivilegesRequest) (*m
 	}
 }
 
-// 创建关联
+// CreatePrivilegesInvoker 创建授权
+func (c *OsmClient) CreatePrivilegesInvoker(request *model.CreatePrivilegesRequest) *CreatePrivilegesInvoker {
+	requestDef := GenReqDefForCreatePrivileges()
+	return &CreatePrivilegesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRelations 创建关联
 //
 // 创建关联，一个工单最多支持3个关联
 //
@@ -179,7 +233,13 @@ func (c *OsmClient) CreateRelations(request *model.CreateRelationsRequest) (*mod
 	}
 }
 
-// 提交评分
+// CreateRelationsInvoker 创建关联
+func (c *OsmClient) CreateRelationsInvoker(request *model.CreateRelationsRequest) *CreateRelationsInvoker {
+	requestDef := GenReqDefForCreateRelations()
+	return &CreateRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateScores 提交评分
 //
 // 提交评分
 //
@@ -195,7 +255,13 @@ func (c *OsmClient) CreateScores(request *model.CreateScoresRequest) (*model.Cre
 	}
 }
 
-// 删除附件
+// CreateScoresInvoker 提交评分
+func (c *OsmClient) CreateScoresInvoker(request *model.CreateScoresRequest) *CreateScoresInvoker {
+	requestDef := GenReqDefForCreateScores()
+	return &CreateScoresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAccessories 删除附件
 //
 // 删除附件
 //
@@ -211,7 +277,13 @@ func (c *OsmClient) DeleteAccessories(request *model.DeleteAccessoriesRequest) (
 	}
 }
 
-// 删除工单关联标签接口
+// DeleteAccessoriesInvoker 删除附件
+func (c *OsmClient) DeleteAccessoriesInvoker(request *model.DeleteAccessoriesRequest) *DeleteAccessoriesInvoker {
+	requestDef := GenReqDefForDeleteAccessories()
+	return &DeleteAccessoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCaseLabels 删除工单关联标签接口
 //
 // 删除指定工单关联标签接口
 //
@@ -227,7 +299,13 @@ func (c *OsmClient) DeleteCaseLabels(request *model.DeleteCaseLabelsRequest) (*m
 	}
 }
 
-// 删除标签
+// DeleteCaseLabelsInvoker 删除工单关联标签接口
+func (c *OsmClient) DeleteCaseLabelsInvoker(request *model.DeleteCaseLabelsRequest) *DeleteCaseLabelsInvoker {
+	requestDef := GenReqDefForDeleteCaseLabels()
+	return &DeleteCaseLabelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLabels 删除标签
 //
 // 删除标签，同时会删除工单与标签关联关系
 //
@@ -243,7 +321,13 @@ func (c *OsmClient) DeleteLabels(request *model.DeleteLabelsRequest) (*model.Del
 	}
 }
 
-// 删除关联
+// DeleteLabelsInvoker 删除标签
+func (c *OsmClient) DeleteLabelsInvoker(request *model.DeleteLabelsRequest) *DeleteLabelsInvoker {
+	requestDef := GenReqDefForDeleteLabels()
+	return &DeleteLabelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRelation 删除关联
 //
 // 删除关联
 //
@@ -259,7 +343,13 @@ func (c *OsmClient) DeleteRelation(request *model.DeleteRelationRequest) (*model
 	}
 }
 
-// 下载附件
+// DeleteRelationInvoker 删除关联
+func (c *OsmClient) DeleteRelationInvoker(request *model.DeleteRelationRequest) *DeleteRelationInvoker {
+	requestDef := GenReqDefForDeleteRelation()
+	return &DeleteRelationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadAccessories 下载附件
 //
 // 下载附件
 //
@@ -275,7 +365,13 @@ func (c *OsmClient) DownloadAccessories(request *model.DownloadAccessoriesReques
 	}
 }
 
-// 工单导出
+// DownloadAccessoriesInvoker 下载附件
+func (c *OsmClient) DownloadAccessoriesInvoker(request *model.DownloadAccessoriesRequest) *DownloadAccessoriesInvoker {
+	requestDef := GenReqDefForDownloadAccessories()
+	return &DownloadAccessoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadCases 工单导出
 //
 // 工单导出
 //
@@ -291,7 +387,13 @@ func (c *OsmClient) DownloadCases(request *model.DownloadCasesRequest) (*model.D
 	}
 }
 
-// 图片展示
+// DownloadCasesInvoker 工单导出
+func (c *OsmClient) DownloadCasesInvoker(request *model.DownloadCasesRequest) *DownloadCasesInvoker {
+	requestDef := GenReqDefForDownloadCases()
+	return &DownloadCasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadImages 图片展示
 //
 // 返回图片内容，用于页面直接展示
 //
@@ -307,7 +409,13 @@ func (c *OsmClient) DownloadImages(request *model.DownloadImagesRequest) (*model
 	}
 }
 
-// 查询委托
+// DownloadImagesInvoker 图片展示
+func (c *OsmClient) DownloadImagesInvoker(request *model.DownloadImagesRequest) *DownloadImagesInvoker {
+	requestDef := GenReqDefForDownloadImages()
+	return &DownloadImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAgencies 查询委托
 //
 // 查询委托
 //
@@ -323,7 +431,13 @@ func (c *OsmClient) ListAgencies(request *model.ListAgenciesRequest) (*model.Lis
 	}
 }
 
-// 查询国家码
+// ListAgenciesInvoker 查询委托
+func (c *OsmClient) ListAgenciesInvoker(request *model.ListAgenciesRequest) *ListAgenciesInvoker {
+	requestDef := GenReqDefForListAgencies()
+	return &ListAgenciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAreaCodes 查询国家码
 //
 // 查询国家码，用于提交工单页面填写联系方式使用
 //
@@ -339,7 +453,13 @@ func (c *OsmClient) ListAreaCodes(request *model.ListAreaCodesRequest) (*model.L
 	}
 }
 
-// 查看授权列表
+// ListAreaCodesInvoker 查询国家码
+func (c *OsmClient) ListAreaCodesInvoker(request *model.ListAreaCodesRequest) *ListAreaCodesInvoker {
+	requestDef := GenReqDefForListAreaCodes()
+	return &ListAreaCodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAuthorizations 查看授权列表
 //
 // 查询授权列表
 //
@@ -355,7 +475,13 @@ func (c *OsmClient) ListAuthorizations(request *model.ListAuthorizationsRequest)
 	}
 }
 
-// 查询工单类目列表
+// ListAuthorizationsInvoker 查看授权列表
+func (c *OsmClient) ListAuthorizationsInvoker(request *model.ListAuthorizationsRequest) *ListAuthorizationsInvoker {
+	requestDef := GenReqDefForListAuthorizations()
+	return &ListAuthorizationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCaseCategories 查询工单类目列表
 //
 // 查询工单类目列表
 //
@@ -371,7 +497,13 @@ func (c *OsmClient) ListCaseCategories(request *model.ListCaseCategoriesRequest)
 	}
 }
 
-// 查询工单抄送邮箱
+// ListCaseCategoriesInvoker 查询工单类目列表
+func (c *OsmClient) ListCaseCategoriesInvoker(request *model.ListCaseCategoriesRequest) *ListCaseCategoriesInvoker {
+	requestDef := GenReqDefForListCaseCategories()
+	return &ListCaseCategoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCaseCcEmails 查询工单抄送邮箱
 //
 // 查询工单抄送邮箱
 //
@@ -387,7 +519,13 @@ func (c *OsmClient) ListCaseCcEmails(request *model.ListCaseCcEmailsRequest) (*m
 	}
 }
 
-// 统计各状态工单数量
+// ListCaseCcEmailsInvoker 查询工单抄送邮箱
+func (c *OsmClient) ListCaseCcEmailsInvoker(request *model.ListCaseCcEmailsRequest) *ListCaseCcEmailsInvoker {
+	requestDef := GenReqDefForListCaseCcEmails()
+	return &ListCaseCcEmailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCaseCounts 统计各状态工单数量
 //
 // 统计各状态工单数量
 //
@@ -403,7 +541,13 @@ func (c *OsmClient) ListCaseCounts(request *model.ListCaseCountsRequest) (*model
 	}
 }
 
-// 查询工单关联标签接口
+// ListCaseCountsInvoker 统计各状态工单数量
+func (c *OsmClient) ListCaseCountsInvoker(request *model.ListCaseCountsRequest) *ListCaseCountsInvoker {
+	requestDef := GenReqDefForListCaseCounts()
+	return &ListCaseCountsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCaseLabels 查询工单关联标签接口
 //
 // 查询工单关联标签接口
 //
@@ -419,7 +563,13 @@ func (c *OsmClient) ListCaseLabels(request *model.ListCaseLabelsRequest) (*model
 	}
 }
 
-// 查询工单限制，比如抄送邮箱个数等
+// ListCaseLabelsInvoker 查询工单关联标签接口
+func (c *OsmClient) ListCaseLabelsInvoker(request *model.ListCaseLabelsRequest) *ListCaseLabelsInvoker {
+	requestDef := GenReqDefForListCaseLabels()
+	return &ListCaseLabelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCaseLimits 查询工单限制，比如抄送邮箱个数等
 //
 // 查询工单限制，比如抄送邮箱个数等
 //
@@ -435,7 +585,13 @@ func (c *OsmClient) ListCaseLimits(request *model.ListCaseLimitsRequest) (*model
 	}
 }
 
-// 查询工单操作日志
+// ListCaseLimitsInvoker 查询工单限制，比如抄送邮箱个数等
+func (c *OsmClient) ListCaseLimitsInvoker(request *model.ListCaseLimitsRequest) *ListCaseLimitsInvoker {
+	requestDef := GenReqDefForListCaseLimits()
+	return &ListCaseLimitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCaseOperateLogs 查询工单操作日志
 //
 // 查询工单操作日志
 //
@@ -451,7 +607,13 @@ func (c *OsmClient) ListCaseOperateLogs(request *model.ListCaseOperateLogsReques
 	}
 }
 
-// 查询工单配额
+// ListCaseOperateLogsInvoker 查询工单操作日志
+func (c *OsmClient) ListCaseOperateLogsInvoker(request *model.ListCaseOperateLogsRequest) *ListCaseOperateLogsInvoker {
+	requestDef := GenReqDefForListCaseOperateLogs()
+	return &ListCaseOperateLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCaseQuotas 查询工单配额
 //
 // 查询工单配额
 //
@@ -467,7 +629,13 @@ func (c *OsmClient) ListCaseQuotas(request *model.ListCaseQuotasRequest) (*model
 	}
 }
 
-// 查询问题类型对应模板
+// ListCaseQuotasInvoker 查询工单配额
+func (c *OsmClient) ListCaseQuotasInvoker(request *model.ListCaseQuotasRequest) *ListCaseQuotasInvoker {
+	requestDef := GenReqDefForListCaseQuotas()
+	return &ListCaseQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCaseTemplates 查询问题类型对应模板
 //
 // 查询问题类型对应模板
 //
@@ -483,7 +651,13 @@ func (c *OsmClient) ListCaseTemplates(request *model.ListCaseTemplatesRequest) (
 	}
 }
 
-// 查询工单列表接口
+// ListCaseTemplatesInvoker 查询问题类型对应模板
+func (c *OsmClient) ListCaseTemplatesInvoker(request *model.ListCaseTemplatesRequest) *ListCaseTemplatesInvoker {
+	requestDef := GenReqDefForListCaseTemplates()
+	return &ListCaseTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCases 查询工单列表接口
 //
 // 查询工单列表接口
 //
@@ -499,7 +673,13 @@ func (c *OsmClient) ListCases(request *model.ListCasesRequest) (*model.ListCases
 	}
 }
 
-// 查询附加参数
+// ListCasesInvoker 查询工单列表接口
+func (c *OsmClient) ListCasesInvoker(request *model.ListCasesRequest) *ListCasesInvoker {
+	requestDef := GenReqDefForListCases()
+	return &ListCasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListExtendsParams 查询附加参数
 //
 // 提单时，根据不同的产品或者问题类型，会存在不同的一些附加参数填写
 //
@@ -515,7 +695,13 @@ func (c *OsmClient) ListExtendsParams(request *model.ListExtendsParamsRequest) (
 	}
 }
 
-// 查询已验证的列表
+// ListExtendsParamsInvoker 查询附加参数
+func (c *OsmClient) ListExtendsParamsInvoker(request *model.ListExtendsParamsRequest) *ListExtendsParamsInvoker {
+	requestDef := GenReqDefForListExtendsParams()
+	return &ListExtendsParamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHasVerifiedContacts 查询已验证的列表
 //
 // 查询已验证的列表
 //
@@ -531,7 +717,13 @@ func (c *OsmClient) ListHasVerifiedContacts(request *model.ListHasVerifiedContac
 	}
 }
 
-// 查询堡垒机历史操作记录
+// ListHasVerifiedContactsInvoker 查询已验证的列表
+func (c *OsmClient) ListHasVerifiedContactsInvoker(request *model.ListHasVerifiedContactsRequest) *ListHasVerifiedContactsInvoker {
+	requestDef := GenReqDefForListHasVerifiedContacts()
+	return &ListHasVerifiedContactsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHistoryOperateLogs 查询堡垒机历史操作记录
 //
 // 查询堡垒机历史操作记录
 //
@@ -547,7 +739,13 @@ func (c *OsmClient) ListHistoryOperateLogs(request *model.ListHistoryOperateLogs
 	}
 }
 
-// 查询堡垒机历史会话列表
+// ListHistoryOperateLogsInvoker 查询堡垒机历史操作记录
+func (c *OsmClient) ListHistoryOperateLogsInvoker(request *model.ListHistoryOperateLogsRequest) *ListHistoryOperateLogsInvoker {
+	requestDef := GenReqDefForListHistoryOperateLogs()
+	return &ListHistoryOperateLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHistorySessions 查询堡垒机历史会话列表
 //
 // 查询堡垒机历史会话列
 //
@@ -563,7 +761,13 @@ func (c *OsmClient) ListHistorySessions(request *model.ListHistorySessionsReques
 	}
 }
 
-// 查询标签
+// ListHistorySessionsInvoker 查询堡垒机历史会话列表
+func (c *OsmClient) ListHistorySessionsInvoker(request *model.ListHistorySessionsRequest) *ListHistorySessionsInvoker {
+	requestDef := GenReqDefForListHistorySessions()
+	return &ListHistorySessionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLabels 查询标签
 //
 // 查询标签
 //
@@ -579,7 +783,13 @@ func (c *OsmClient) ListLabels(request *model.ListLabelsRequest) (*model.ListLab
 	}
 }
 
-// 查询留言
+// ListLabelsInvoker 查询标签
+func (c *OsmClient) ListLabelsInvoker(request *model.ListLabelsRequest) *ListLabelsInvoker {
+	requestDef := GenReqDefForListLabels()
+	return &ListLabelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMessages 查询留言
 //
 // 查询留言
 //
@@ -595,7 +805,13 @@ func (c *OsmClient) ListMessages(request *model.ListMessagesRequest) (*model.Lis
 	}
 }
 
-// 查询更多留言
+// ListMessagesInvoker 查询留言
+func (c *OsmClient) ListMessagesInvoker(request *model.ListMessagesRequest) *ListMessagesInvoker {
+	requestDef := GenReqDefForListMessages()
+	return &ListMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMoreInstantMessages 查询更多留言
 //
 // 查询更多留言
 //
@@ -611,7 +827,13 @@ func (c *OsmClient) ListMoreInstantMessages(request *model.ListMoreInstantMessag
 	}
 }
 
-// 轮询查询即时消息
+// ListMoreInstantMessagesInvoker 查询更多留言
+func (c *OsmClient) ListMoreInstantMessagesInvoker(request *model.ListMoreInstantMessagesRequest) *ListMoreInstantMessagesInvoker {
+	requestDef := GenReqDefForListMoreInstantMessages()
+	return &ListMoreInstantMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNewInstantMessages 轮询查询即时消息
 //
 // 轮询查询即时消息接口
 //
@@ -627,7 +849,13 @@ func (c *OsmClient) ListNewInstantMessages(request *model.ListNewInstantMessages
 	}
 }
 
-// 查询工单权限
+// ListNewInstantMessagesInvoker 轮询查询即时消息
+func (c *OsmClient) ListNewInstantMessagesInvoker(request *model.ListNewInstantMessagesRequest) *ListNewInstantMessagesInvoker {
+	requestDef := GenReqDefForListNewInstantMessages()
+	return &ListNewInstantMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPrivileges 查询工单权限
 //
 // 查询工单权限
 //
@@ -643,7 +871,13 @@ func (c *OsmClient) ListPrivileges(request *model.ListPrivilegesRequest) (*model
 	}
 }
 
-// 查询问题类型列表
+// ListPrivilegesInvoker 查询工单权限
+func (c *OsmClient) ListPrivilegesInvoker(request *model.ListPrivilegesRequest) *ListPrivilegesInvoker {
+	requestDef := GenReqDefForListPrivileges()
+	return &ListPrivilegesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProblemTypes 查询问题类型列表
 //
 // 提交工单时，选择产品类型之后选择对应的问题列表
 //
@@ -659,7 +893,13 @@ func (c *OsmClient) ListProblemTypes(request *model.ListProblemTypesRequest) (*m
 	}
 }
 
-// 查询产品类型列表
+// ListProblemTypesInvoker 查询问题类型列表
+func (c *OsmClient) ListProblemTypesInvoker(request *model.ListProblemTypesRequest) *ListProblemTypesInvoker {
+	requestDef := GenReqDefForListProblemTypes()
+	return &ListProblemTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProductCategories 查询产品类型列表
 //
 // 查询产品类型列表
 //
@@ -675,7 +915,13 @@ func (c *OsmClient) ListProductCategories(request *model.ListProductCategoriesRe
 	}
 }
 
-// 查询区域列表
+// ListProductCategoriesInvoker 查询产品类型列表
+func (c *OsmClient) ListProductCategoriesInvoker(request *model.ListProductCategoriesRequest) *ListProductCategoriesInvoker {
+	requestDef := GenReqDefForListProductCategories()
+	return &ListProductCategoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRegions 查询区域列表
 //
 // 查询区域列表
 //
@@ -691,7 +937,13 @@ func (c *OsmClient) ListRegions(request *model.ListRegionsRequest) (*model.ListR
 	}
 }
 
-// 查询关联工单
+// ListRegionsInvoker 查询区域列表
+func (c *OsmClient) ListRegionsInvoker(request *model.ListRegionsRequest) *ListRegionsInvoker {
+	requestDef := GenReqDefForListRegions()
+	return &ListRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRelation 查询关联工单
 //
 // 查询工单的关联，返回关联工单的简要信息
 //
@@ -707,7 +959,13 @@ func (c *OsmClient) ListRelation(request *model.ListRelationRequest) (*model.Lis
 	}
 }
 
-// 工单满意度分类列表
+// ListRelationInvoker 查询关联工单
+func (c *OsmClient) ListRelationInvoker(request *model.ListRelationRequest) *ListRelationInvoker {
+	requestDef := GenReqDefForListRelation()
+	return &ListRelationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSatisfactionDimensions 工单满意度分类列表
 //
 // 工单满意度分类列表
 //
@@ -723,7 +981,13 @@ func (c *OsmClient) ListSatisfactionDimensions(request *model.ListSatisfactionDi
 	}
 }
 
-// 查询问题严重性列表
+// ListSatisfactionDimensionsInvoker 工单满意度分类列表
+func (c *OsmClient) ListSatisfactionDimensionsInvoker(request *model.ListSatisfactionDimensionsRequest) *ListSatisfactionDimensionsInvoker {
+	requestDef := GenReqDefForListSatisfactionDimensions()
+	return &ListSatisfactionDimensionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSeverities 查询问题严重性列表
 //
 // 查询问题严重性列表
 //
@@ -739,7 +1003,13 @@ func (c *OsmClient) ListSeverities(request *model.ListSeveritiesRequest) (*model
 	}
 }
 
-// 查询子用户信息
+// ListSeveritiesInvoker 查询问题严重性列表
+func (c *OsmClient) ListSeveritiesInvoker(request *model.ListSeveritiesRequest) *ListSeveritiesInvoker {
+	requestDef := GenReqDefForListSeverities()
+	return &ListSeveritiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubCustomers 查询子用户信息
 //
 // 查询子用户信息
 //
@@ -755,7 +1025,13 @@ func (c *OsmClient) ListSubCustomers(request *model.ListSubCustomersRequest) (*m
 	}
 }
 
-// 查询堡垒机文件传输记录
+// ListSubCustomersInvoker 查询子用户信息
+func (c *OsmClient) ListSubCustomersInvoker(request *model.ListSubCustomersRequest) *ListSubCustomersInvoker {
+	requestDef := GenReqDefForListSubCustomers()
+	return &ListSubCustomersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTransportHistories 查询堡垒机文件传输记录
 //
 // 查询堡垒机文件传输记录
 //
@@ -771,7 +1047,13 @@ func (c *OsmClient) ListTransportHistories(request *model.ListTransportHistories
 	}
 }
 
-// 查询未读消息
+// ListTransportHistoriesInvoker 查询堡垒机文件传输记录
+func (c *OsmClient) ListTransportHistoriesInvoker(request *model.ListTransportHistoriesRequest) *ListTransportHistoriesInvoker {
+	requestDef := GenReqDefForListTransportHistories()
+	return &ListTransportHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUnreadNewInstantMessages 查询未读消息
 //
 // 查询未读消息
 //
@@ -787,7 +1069,13 @@ func (c *OsmClient) ListUnreadNewInstantMessages(request *model.ListUnreadNewIns
 	}
 }
 
-// 获取验证码
+// ListUnreadNewInstantMessagesInvoker 查询未读消息
+func (c *OsmClient) ListUnreadNewInstantMessagesInvoker(request *model.ListUnreadNewInstantMessagesRequest) *ListUnreadNewInstantMessagesInvoker {
+	requestDef := GenReqDefForListUnreadNewInstantMessages()
+	return &ListUnreadNewInstantMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SendVerifyCodes 获取验证码
 //
 // 获取验证码
 //
@@ -803,7 +1091,13 @@ func (c *OsmClient) SendVerifyCodes(request *model.SendVerifyCodesRequest) (*mod
 	}
 }
 
-// 附件限制
+// SendVerifyCodesInvoker 获取验证码
+func (c *OsmClient) SendVerifyCodesInvoker(request *model.SendVerifyCodesRequest) *SendVerifyCodesInvoker {
+	requestDef := GenReqDefForSendVerifyCodes()
+	return &SendVerifyCodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAccessoryLimits 附件限制
 //
 // 查询附件的一下限制，比如大小，数量，文件类型
 //
@@ -819,7 +1113,13 @@ func (c *OsmClient) ShowAccessoryLimits(request *model.ShowAccessoryLimitsReques
 	}
 }
 
-// 查询授权详情
+// ShowAccessoryLimitsInvoker 附件限制
+func (c *OsmClient) ShowAccessoryLimitsInvoker(request *model.ShowAccessoryLimitsRequest) *ShowAccessoryLimitsInvoker {
+	requestDef := GenReqDefForShowAccessoryLimits()
+	return &ShowAccessoryLimitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAuthorizationDetail 查询授权详情
 //
 // 查询授权详情
 //
@@ -835,7 +1135,13 @@ func (c *OsmClient) ShowAuthorizationDetail(request *model.ShowAuthorizationDeta
 	}
 }
 
-// 查询工单详情
+// ShowAuthorizationDetailInvoker 查询授权详情
+func (c *OsmClient) ShowAuthorizationDetailInvoker(request *model.ShowAuthorizationDetailRequest) *ShowAuthorizationDetailInvoker {
+	requestDef := GenReqDefForShowAuthorizationDetail()
+	return &ShowAuthorizationDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCaseDetail 查询工单详情
 //
 // 查询工单详情
 //
@@ -851,7 +1157,13 @@ func (c *OsmClient) ShowCaseDetail(request *model.ShowCaseDetailRequest) (*model
 	}
 }
 
-// 查询某个工单状态
+// ShowCaseDetailInvoker 查询工单详情
+func (c *OsmClient) ShowCaseDetailInvoker(request *model.ShowCaseDetailRequest) *ShowCaseDetailInvoker {
+	requestDef := GenReqDefForShowCaseDetail()
+	return &ShowCaseDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCaseStatus 查询某个工单状态
 //
 // 查询某个工单状态
 //
@@ -867,7 +1179,13 @@ func (c *OsmClient) ShowCaseStatus(request *model.ShowCaseStatusRequest) (*model
 	}
 }
 
-// 查询伙伴工单权限
+// ShowCaseStatusInvoker 查询某个工单状态
+func (c *OsmClient) ShowCaseStatusInvoker(request *model.ShowCaseStatusRequest) *ShowCaseStatusInvoker {
+	requestDef := GenReqDefForShowCaseStatus()
+	return &ShowCaseStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPartnersCasesPrivilege 查询伙伴工单权限
 //
 // 查询伙伴工单权限
 //
@@ -883,7 +1201,13 @@ func (c *OsmClient) ShowPartnersCasesPrivilege(request *model.ShowPartnersCasesP
 	}
 }
 
-// 查询关联伙伴服务信息
+// ShowPartnersCasesPrivilegeInvoker 查询伙伴工单权限
+func (c *OsmClient) ShowPartnersCasesPrivilegeInvoker(request *model.ShowPartnersCasesPrivilegeRequest) *ShowPartnersCasesPrivilegeInvoker {
+	requestDef := GenReqDefForShowPartnersCasesPrivilege()
+	return &ShowPartnersCasesPrivilegeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPartnersServiceInfo 查询关联伙伴服务信息
 //
 // 查询关联伙伴服务信息
 //
@@ -899,7 +1223,13 @@ func (c *OsmClient) ShowPartnersServiceInfo(request *model.ShowPartnersServiceIn
 	}
 }
 
-// 拒绝|撤销授权
+// ShowPartnersServiceInfoInvoker 查询关联伙伴服务信息
+func (c *OsmClient) ShowPartnersServiceInfoInvoker(request *model.ShowPartnersServiceInfoRequest) *ShowPartnersServiceInfoInvoker {
+	requestDef := GenReqDefForShowPartnersServiceInfo()
+	return &ShowPartnersServiceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAuthorizations 拒绝|撤销授权
 //
 // 拒绝|撤销授权
 //
@@ -915,7 +1245,13 @@ func (c *OsmClient) UpdateAuthorizations(request *model.UpdateAuthorizationsRequ
 	}
 }
 
-// 工单操作
+// UpdateAuthorizationsInvoker 拒绝|撤销授权
+func (c *OsmClient) UpdateAuthorizationsInvoker(request *model.UpdateAuthorizationsRequest) *UpdateAuthorizationsInvoker {
+	requestDef := GenReqDefForUpdateAuthorizations()
+	return &UpdateAuthorizationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCases 工单操作
 //
 // 工单操作
 //
@@ -931,7 +1267,13 @@ func (c *OsmClient) UpdateCases(request *model.UpdateCasesRequest) (*model.Updat
 	}
 }
 
-// 修改标签
+// UpdateCasesInvoker 工单操作
+func (c *OsmClient) UpdateCasesInvoker(request *model.UpdateCasesRequest) *UpdateCasesInvoker {
+	requestDef := GenReqDefForUpdateCases()
+	return &UpdateCasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLabels 修改标签
 //
 // 修改标签
 //
@@ -947,7 +1289,13 @@ func (c *OsmClient) UpdateLabels(request *model.UpdateLabelsRequest) (*model.Upd
 	}
 }
 
-// 设置消息已读
+// UpdateLabelsInvoker 修改标签
+func (c *OsmClient) UpdateLabelsInvoker(request *model.UpdateLabelsRequest) *UpdateLabelsInvoker {
+	requestDef := GenReqDefForUpdateLabels()
+	return &UpdateLabelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNewInstantMessagesRead 设置消息已读
 //
 // 设置消息已读
 //
@@ -963,7 +1311,13 @@ func (c *OsmClient) UpdateNewInstantMessagesRead(request *model.UpdateNewInstant
 	}
 }
 
-// 上传附件
+// UpdateNewInstantMessagesReadInvoker 设置消息已读
+func (c *OsmClient) UpdateNewInstantMessagesReadInvoker(request *model.UpdateNewInstantMessagesReadRequest) *UpdateNewInstantMessagesReadInvoker {
+	requestDef := GenReqDefForUpdateNewInstantMessagesRead()
+	return &UpdateNewInstantMessagesReadInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadJsonAccessories 上传附件
 //
 // 上传附件给SDK使用
 //
@@ -977,4 +1331,10 @@ func (c *OsmClient) UploadJsonAccessories(request *model.UploadJsonAccessoriesRe
 	} else {
 		return resp.(*model.UploadJsonAccessoriesResponse), nil
 	}
+}
+
+// UploadJsonAccessoriesInvoker 上传附件
+func (c *OsmClient) UploadJsonAccessoriesInvoker(request *model.UploadJsonAccessoriesRequest) *UploadJsonAccessoriesInvoker {
+	requestDef := GenReqDefForUploadJsonAccessories()
+	return &UploadJsonAccessoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

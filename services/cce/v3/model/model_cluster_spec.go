@@ -100,6 +100,10 @@ func GetClusterSpecCategoryEnum() ClusterSpecCategoryEnum {
 	}
 }
 
+func (c ClusterSpecCategory) Value() string {
+	return c.value
+}
+
 func (c ClusterSpecCategory) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -138,6 +142,10 @@ func GetClusterSpecTypeEnum() ClusterSpecTypeEnum {
 	}
 }
 
+func (c ClusterSpecType) Value() string {
+	return c.value
+}
+
 func (c ClusterSpecType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -174,6 +182,10 @@ func GetClusterSpecKubeProxyModeEnum() ClusterSpecKubeProxyModeEnum {
 			value: "ipvs",
 		},
 	}
+}
+
+func (c ClusterSpecKubeProxyMode) Value() string {
+	return c.value
 }
 
 func (c ClusterSpecKubeProxyMode) MarshalJSON() ([]byte, error) {

@@ -187,6 +187,10 @@ func GetApiMockStatusCodeEnum() ApiMockStatusCodeEnum {
 	}
 }
 
+func (c ApiMockStatusCode) Value() int32 {
+	return c.value
+}
+
 func (c ApiMockStatusCode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -219,6 +223,10 @@ func GetApiMockStatusEnum() ApiMockStatusEnum {
 			value: 1,
 		},
 	}
+}
+
+func (c ApiMockStatus) Value() int32 {
+	return c.value
 }
 
 func (c ApiMockStatus) MarshalJSON() ([]byte, error) {

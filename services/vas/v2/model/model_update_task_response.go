@@ -148,6 +148,10 @@ func GetUpdateTaskResponseStateEnum() UpdateTaskResponseStateEnum {
 	}
 }
 
+func (c UpdateTaskResponseState) Value() string {
+	return c.value
+}
+
 func (c UpdateTaskResponseState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -184,6 +188,10 @@ func GetUpdateTaskResponseTimingStatusEnum() UpdateTaskResponseTimingStatusEnum 
 			value: "INACTIVATED",
 		},
 	}
+}
+
+func (c UpdateTaskResponseTimingStatus) Value() string {
+	return c.value
 }
 
 func (c UpdateTaskResponseTimingStatus) MarshalJSON() ([]byte, error) {

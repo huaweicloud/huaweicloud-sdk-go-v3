@@ -15,10 +15,10 @@ type InvitorInfo struct {
 	// 邀请方用户名
 	InvitorName *string `json:"invitor_name,omitempty"`
 
-	// 邀请方的服务id
+	// 邀请方的BCS服务实例id
 	InvitorBcsId *string `json:"invitor_bcs_id,omitempty"`
 
-	// 邀请方的服务名
+	// 邀请方的BCS服务实例名
 	InvitorBcsName *string `json:"invitor_bcs_name,omitempty"`
 
 	// 邀请方的共识

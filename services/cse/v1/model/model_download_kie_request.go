@@ -52,6 +52,10 @@ func GetDownloadKieRequestMatchEnum() DownloadKieRequestMatchEnum {
 	}
 }
 
+func (c DownloadKieRequestMatch) Value() string {
+	return c.value
+}
+
 func (c DownloadKieRequestMatch) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

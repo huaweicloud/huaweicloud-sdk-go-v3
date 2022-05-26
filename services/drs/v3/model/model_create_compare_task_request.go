@@ -47,6 +47,10 @@ func GetCreateCompareTaskRequestXLanguageEnum() CreateCompareTaskRequestXLanguag
 	}
 }
 
+func (c CreateCompareTaskRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c CreateCompareTaskRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

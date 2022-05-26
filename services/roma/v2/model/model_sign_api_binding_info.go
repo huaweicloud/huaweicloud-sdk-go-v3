@@ -93,6 +93,10 @@ func GetSignApiBindingInfoSignTypeEnum() SignApiBindingInfoSignTypeEnum {
 	}
 }
 
+func (c SignApiBindingInfoSignType) Value() string {
+	return c.value
+}
+
 func (c SignApiBindingInfoSignType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

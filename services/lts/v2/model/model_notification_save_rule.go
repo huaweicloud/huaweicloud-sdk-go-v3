@@ -53,6 +53,10 @@ func GetNotificationSaveRuleLanguageEnum() NotificationSaveRuleLanguageEnum {
 	}
 }
 
+func (c NotificationSaveRuleLanguage) Value() string {
+	return c.value
+}
+
 func (c NotificationSaveRuleLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

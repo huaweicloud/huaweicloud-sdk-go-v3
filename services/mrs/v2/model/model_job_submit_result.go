@@ -47,6 +47,10 @@ func GetJobSubmitResultStateEnum() JobSubmitResultStateEnum {
 	}
 }
 
+func (c JobSubmitResultState) Value() string {
+	return c.value
+}
+
 func (c JobSubmitResultState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

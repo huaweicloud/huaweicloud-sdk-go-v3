@@ -81,6 +81,10 @@ func GetCompareTaskListCompareTaskStatusEnum() CompareTaskListCompareTaskStatusE
 	}
 }
 
+func (c CompareTaskListCompareTaskStatus) Value() string {
+	return c.value
+}
+
 func (c CompareTaskListCompareTaskStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

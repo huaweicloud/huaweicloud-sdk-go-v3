@@ -56,6 +56,10 @@ func GetListGroupsRequestUnitEnum() ListGroupsRequestUnitEnum {
 	}
 }
 
+func (c ListGroupsRequestUnit) Value() string {
+	return c.value
+}
+
 func (c ListGroupsRequestUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

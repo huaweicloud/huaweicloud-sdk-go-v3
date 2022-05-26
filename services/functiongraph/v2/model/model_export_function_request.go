@@ -54,6 +54,10 @@ func GetExportFunctionRequestTypeEnum() ExportFunctionRequestTypeEnum {
 	}
 }
 
+func (c ExportFunctionRequestType) Value() string {
+	return c.value
+}
+
 func (c ExportFunctionRequestType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -47,6 +47,10 @@ func GetBatchSetPolicyRequestXLanguageEnum() BatchSetPolicyRequestXLanguageEnum 
 	}
 }
 
+func (c BatchSetPolicyRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c BatchSetPolicyRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

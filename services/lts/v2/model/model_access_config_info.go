@@ -58,6 +58,10 @@ func GetAccessConfigInfoAccessConfigTypeEnum() AccessConfigInfoAccessConfigTypeE
 	}
 }
 
+func (c AccessConfigInfoAccessConfigType) Value() string {
+	return c.value
+}
+
 func (c AccessConfigInfoAccessConfigType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

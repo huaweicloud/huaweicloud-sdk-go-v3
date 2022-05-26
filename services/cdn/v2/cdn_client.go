@@ -2,7 +2,7 @@ package v2
 
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cdn/v2/model"
 )
 
@@ -19,7 +19,7 @@ func CdnClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// 查询域名统计区域运营商数据
+// ShowDomainLocationStats 查询域名统计区域运营商数据
 //
 // - 支持查询90天内的数据。
 // - 支持多指标同时查询，不超过5个。
@@ -39,7 +39,13 @@ func (c *CdnClient) ShowDomainLocationStats(request *model.ShowDomainLocationSta
 	}
 }
 
-// 查询域名统计基础数据
+// ShowDomainLocationStatsInvoker 查询域名统计区域运营商数据
+func (c *CdnClient) ShowDomainLocationStatsInvoker(request *model.ShowDomainLocationStatsRequest) *ShowDomainLocationStatsInvoker {
+	requestDef := GenReqDefForShowDomainLocationStats()
+	return &ShowDomainLocationStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainStats 查询域名统计基础数据
 //
 // - 支持查询90天内的数据。
 // - 支持多指标同时查询，不超过5个。
@@ -59,7 +65,13 @@ func (c *CdnClient) ShowDomainStats(request *model.ShowDomainStatsRequest) (*mod
 	}
 }
 
-// 查询TOP100 URL明细
+// ShowDomainStatsInvoker 查询域名统计基础数据
+func (c *CdnClient) ShowDomainStatsInvoker(request *model.ShowDomainStatsRequest) *ShowDomainStatsInvoker {
+	requestDef := GenReqDefForShowDomainStats()
+	return &ShowDomainStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTopUrl 查询TOP100 URL明细
 //
 // - 查询TOP100 URL明细。
 // - 支持查询90天内的数据。
@@ -78,4 +90,10 @@ func (c *CdnClient) ShowTopUrl(request *model.ShowTopUrlRequest) (*model.ShowTop
 	} else {
 		return resp.(*model.ShowTopUrlResponse), nil
 	}
+}
+
+// ShowTopUrlInvoker 查询TOP100 URL明细
+func (c *CdnClient) ShowTopUrlInvoker(request *model.ShowTopUrlRequest) *ShowTopUrlInvoker {
+	requestDef := GenReqDefForShowTopUrl()
+	return &ShowTopUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

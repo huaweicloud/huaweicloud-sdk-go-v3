@@ -57,6 +57,10 @@ func GetCreateTopicReqPermissionEnum() CreateTopicReqPermissionEnum {
 	}
 }
 
+func (c CreateTopicReqPermission) Value() string {
+	return c.value
+}
+
 func (c CreateTopicReqPermission) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

@@ -86,6 +86,10 @@ func GetCreateKeyRequestBodyKeySpecEnum() CreateKeyRequestBodyKeySpecEnum {
 	}
 }
 
+func (c CreateKeyRequestBodyKeySpec) Value() string {
+	return c.value
+}
+
 func (c CreateKeyRequestBodyKeySpec) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -124,6 +128,10 @@ func GetCreateKeyRequestBodyKeyUsageEnum() CreateKeyRequestBodyKeyUsageEnum {
 	}
 }
 
+func (c CreateKeyRequestBodyKeyUsage) Value() string {
+	return c.value
+}
+
 func (c CreateKeyRequestBodyKeyUsage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -160,6 +168,10 @@ func GetCreateKeyRequestBodyOriginEnum() CreateKeyRequestBodyOriginEnum {
 			value: "external",
 		},
 	}
+}
+
+func (c CreateKeyRequestBodyOrigin) Value() string {
+	return c.value
 }
 
 func (c CreateKeyRequestBodyOrigin) MarshalJSON() ([]byte, error) {

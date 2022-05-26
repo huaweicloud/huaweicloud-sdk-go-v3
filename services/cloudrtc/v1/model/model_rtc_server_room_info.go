@@ -62,6 +62,10 @@ func GetRtcServerRoomInfoStateEnum() RtcServerRoomInfoStateEnum {
 	}
 }
 
+func (c RtcServerRoomInfoState) Value() string {
+	return c.value
+}
+
 func (c RtcServerRoomInfoState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

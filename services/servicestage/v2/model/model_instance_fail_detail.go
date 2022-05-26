@@ -50,6 +50,10 @@ func GetInstanceFailDetailEnum() InstanceFailDetailEnum {
 	}
 }
 
+func (c InstanceFailDetail) Value() string {
+	return c.value
+}
+
 func (c InstanceFailDetail) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

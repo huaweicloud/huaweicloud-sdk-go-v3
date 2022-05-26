@@ -181,6 +181,10 @@ func GetConferenceInfoRoleEnum() ConferenceInfoRoleEnum {
 	}
 }
 
+func (c ConferenceInfoRole) Value() string {
+	return c.value
+}
+
 func (c ConferenceInfoRole) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -217,6 +221,10 @@ func GetConferenceInfoConfModeEnum() ConferenceInfoConfModeEnum {
 			value: "RTC",
 		},
 	}
+}
+
+func (c ConferenceInfoConfMode) Value() string {
+	return c.value
 }
 
 func (c ConferenceInfoConfMode) MarshalJSON() ([]byte, error) {

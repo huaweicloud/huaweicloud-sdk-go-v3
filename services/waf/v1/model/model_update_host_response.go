@@ -111,6 +111,10 @@ func GetUpdateHostResponseProtocolEnum() UpdateHostResponseProtocolEnum {
 	}
 }
 
+func (c UpdateHostResponseProtocol) Value() string {
+	return c.value
+}
+
 func (c UpdateHostResponseProtocol) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -155,6 +159,10 @@ func GetUpdateHostResponseTlsEnum() UpdateHostResponseTlsEnum {
 			value: "TLS v1.3",
 		},
 	}
+}
+
+func (c UpdateHostResponseTls) Value() string {
+	return c.value
 }
 
 func (c UpdateHostResponseTls) MarshalJSON() ([]byte, error) {
@@ -205,6 +213,10 @@ func GetUpdateHostResponseCipherEnum() UpdateHostResponseCipherEnum {
 			value: "cipher_default",
 		},
 	}
+}
+
+func (c UpdateHostResponseCipher) Value() string {
+	return c.value
 }
 
 func (c UpdateHostResponseCipher) MarshalJSON() ([]byte, error) {

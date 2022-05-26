@@ -77,6 +77,10 @@ func GetTaskInfoTaskStatusEnum() TaskInfoTaskStatusEnum {
 	}
 }
 
+func (c TaskInfoTaskStatus) Value() string {
+	return c.value
+}
+
 func (c TaskInfoTaskStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

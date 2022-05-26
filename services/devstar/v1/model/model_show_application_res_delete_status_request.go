@@ -48,6 +48,10 @@ func GetShowApplicationResDeleteStatusRequestXLanguageEnum() ShowApplicationResD
 	}
 }
 
+func (c ShowApplicationResDeleteStatusRequestXLanguage) Value() string {
+	return c.value
+}
+
 func (c ShowApplicationResDeleteStatusRequestXLanguage) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

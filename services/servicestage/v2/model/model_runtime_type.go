@@ -50,6 +50,10 @@ func GetRuntimeTypeEnum() RuntimeTypeEnum {
 	}
 }
 
+func (c RuntimeType) Value() string {
+	return c.value
+}
+
 func (c RuntimeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

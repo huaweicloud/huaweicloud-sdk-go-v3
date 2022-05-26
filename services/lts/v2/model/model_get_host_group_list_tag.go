@@ -48,6 +48,10 @@ func GetGetHostGroupListTagTagTypeEnum() GetHostGroupListTagTagTypeEnum {
 	}
 }
 
+func (c GetHostGroupListTagTagType) Value() string {
+	return c.value
+}
+
 func (c GetHostGroupListTagTagType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

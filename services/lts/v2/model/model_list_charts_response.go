@@ -82,6 +82,10 @@ func GetListChartsResponseTypeEnum() ListChartsResponseTypeEnum {
 	}
 }
 
+func (c ListChartsResponseType) Value() string {
+	return c.value
+}
+
 func (c ListChartsResponseType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

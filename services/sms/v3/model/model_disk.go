@@ -69,6 +69,10 @@ func GetDiskPartitionStyleEnum() DiskPartitionStyleEnum {
 	}
 }
 
+func (c DiskPartitionStyle) Value() string {
+	return c.value
+}
+
 func (c DiskPartitionStyle) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
@@ -105,6 +109,10 @@ func GetDiskDeviceUseEnum() DiskDeviceUseEnum {
 			value: "OS",
 		},
 	}
+}
+
+func (c DiskDeviceUse) Value() string {
+	return c.value
 }
 
 func (c DiskDeviceUse) MarshalJSON() ([]byte, error) {

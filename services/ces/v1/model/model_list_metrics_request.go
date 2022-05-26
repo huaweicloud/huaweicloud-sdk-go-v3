@@ -69,6 +69,10 @@ func GetListMetricsRequestOrderEnum() ListMetricsRequestOrderEnum {
 	}
 }
 
+func (c ListMetricsRequestOrder) Value() string {
+	return c.value
+}
+
 func (c ListMetricsRequestOrder) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

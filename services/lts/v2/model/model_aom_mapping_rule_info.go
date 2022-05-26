@@ -14,6 +14,9 @@ type AomMappingRuleInfo struct {
 	// 集群名称
 	ClusterName string `json:"cluster_name"`
 
+	// 日志流前缀
+	DeploymentsPrefix *string `json:"deployments_prefix,omitempty"`
+
 	// 工作负载
 	Deployments []string `json:"deployments"`
 

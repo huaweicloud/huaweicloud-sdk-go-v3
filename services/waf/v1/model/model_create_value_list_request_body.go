@@ -86,6 +86,10 @@ func GetCreateValueListRequestBodyTypeEnum() CreateValueListRequestBodyTypeEnum 
 	}
 }
 
+func (c CreateValueListRequestBodyType) Value() string {
+	return c.value
+}
+
 func (c CreateValueListRequestBodyType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }

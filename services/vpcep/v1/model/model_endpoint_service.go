@@ -60,6 +60,10 @@ func GetEndpointServiceServiceTypeEnum() EndpointServiceServiceTypeEnum {
 	}
 }
 
+func (c EndpointServiceServiceType) Value() string {
+	return c.value
+}
+
 func (c EndpointServiceServiceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
