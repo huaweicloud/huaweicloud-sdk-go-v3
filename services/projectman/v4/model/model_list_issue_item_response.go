@@ -24,8 +24,11 @@ type ListIssueItemResponse struct {
 
 	Creator *IssueUser `json:"creator,omitempty"`
 
-	// 自定义属性值
+	// 自定义属性值,不建议使用，建议参考new_custom_fields字段
 	CustomFields *[]CustomField `json:"custom_fields,omitempty"`
+
+	// 自定义属性值
+	NewCustomFields *[]NewCustomField `json:"new_custom_fields,omitempty"`
 
 	Developer *IssueUser `json:"developer,omitempty"`
 
@@ -60,7 +63,7 @@ type ListIssueItemResponse struct {
 
 	Status *IssueItemSfV4Status `json:"status,omitempty"`
 
-	Tracker *IssueItemSfV4Tracker `json:"tracker,omitempty"`
+	Tracker *CreateIssueResponseV4Tracker `json:"tracker,omitempty"`
 
 	// 更新时间 年-月-日 时:分:秒
 	UpdatedTime *string `json:"updated_time,omitempty"`

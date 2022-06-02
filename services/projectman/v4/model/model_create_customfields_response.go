@@ -24,7 +24,7 @@ type CreateCustomfieldsResponse struct {
 	// 项目ID
 	ProjectId *int32 `json:"project_id,omitempty"`
 
-	// 工作项类型id
+	// 工作项类型id 2任务/Task,3缺陷/Bug,5Epic,6Feature,7Story
 	TrackerId *int32 `json:"tracker_id,omitempty"`
 
 	// 系统字段名

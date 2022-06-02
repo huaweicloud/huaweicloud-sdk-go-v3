@@ -1,10 +1,11 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"strings"
 )
 
@@ -32,8 +33,8 @@ type NatGatewayResponseBody struct {
 	// 解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
 	AdminStateUp bool `json:"admin_state_up"`
 
-	// 公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
-	CreatedAt *sdktime.SdkTime `json:"created_at"`
+	// 公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+	CreatedAt string `json:"created_at"`
 
 	// VPC的id。
 	RouterId string `json:"router_id"`

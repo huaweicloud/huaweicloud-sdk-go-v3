@@ -305,6 +305,50 @@ func (c *ProjectManClient) ListProjectsV4Invoker(request *model.ListProjectsV4Re
 	return &ListProjectsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListWorkitemStatusRecordsV4 查询看板项目下工作项的状态历史记录
+//
+// 分页查询看板项目下工作项的状态历史记录
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) ListWorkitemStatusRecordsV4(request *model.ListWorkitemStatusRecordsV4Request) (*model.ListWorkitemStatusRecordsV4Response, error) {
+	requestDef := GenReqDefForListWorkitemStatusRecordsV4()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWorkitemStatusRecordsV4Response), nil
+	}
+}
+
+// ListWorkitemStatusRecordsV4Invoker 查询看板项目下工作项的状态历史记录
+func (c *ProjectManClient) ListWorkitemStatusRecordsV4Invoker(request *model.ListWorkitemStatusRecordsV4Request) *ListWorkitemStatusRecordsV4Invoker {
+	requestDef := GenReqDefForListWorkitemStatusRecordsV4()
+	return &ListWorkitemStatusRecordsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWorkitems 查询看板项目下的工作项
+//
+// 查询看板项目下的工作项
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) ListWorkitems(request *model.ListWorkitemsRequest) (*model.ListWorkitemsResponse, error) {
+	requestDef := GenReqDefForListWorkitems()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWorkitemsResponse), nil
+	}
+}
+
+// ListWorkitemsInvoker 查询看板项目下的工作项
+func (c *ProjectManClient) ListWorkitemsInvoker(request *model.ListWorkitemsRequest) *ListWorkitemsInvoker {
+	requestDef := GenReqDefForListWorkitems()
+	return &ListWorkitemsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RemoveProject 主动退出项目
 //
 // 项目成员主动退出项目，项目创建者不能退出
@@ -479,6 +523,28 @@ func (c *ProjectManClient) ShowProjectSummaryV4(request *model.ShowProjectSummar
 func (c *ProjectManClient) ShowProjectSummaryV4Invoker(request *model.ShowProjectSummaryV4Request) *ShowProjectSummaryV4Invoker {
 	requestDef := GenReqDefForShowProjectSummaryV4()
 	return &ShowProjectSummaryV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWorkItemWrokflowConfig 查询看板项目的工作项流转配置
+//
+// 查询看板项目的工作项流转配置
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) ShowWorkItemWrokflowConfig(request *model.ShowWorkItemWrokflowConfigRequest) (*model.ShowWorkItemWrokflowConfigResponse, error) {
+	requestDef := GenReqDefForShowWorkItemWrokflowConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWorkItemWrokflowConfigResponse), nil
+	}
+}
+
+// ShowWorkItemWrokflowConfigInvoker 查询看板项目的工作项流转配置
+func (c *ProjectManClient) ShowWorkItemWrokflowConfigInvoker(request *model.ShowWorkItemWrokflowConfigRequest) *ShowWorkItemWrokflowConfigInvoker {
+	requestDef := GenReqDefForShowWorkItemWrokflowConfig()
+	return &ShowWorkItemWrokflowConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateMembesRoleV4 更新成员在项目中的角色
@@ -723,6 +789,72 @@ func (c *ProjectManClient) DeleteIterationV4Invoker(request *model.DeleteIterati
 	return &DeleteIterationV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAssociatedIssues 查询当前工作项已经关联的工作项
+//
+// 查询当前工作项已经关联的工作项
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) ListAssociatedIssues(request *model.ListAssociatedIssuesRequest) (*model.ListAssociatedIssuesResponse, error) {
+	requestDef := GenReqDefForListAssociatedIssues()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAssociatedIssuesResponse), nil
+	}
+}
+
+// ListAssociatedIssuesInvoker 查询当前工作项已经关联的工作项
+func (c *ProjectManClient) ListAssociatedIssuesInvoker(request *model.ListAssociatedIssuesRequest) *ListAssociatedIssuesInvoker {
+	requestDef := GenReqDefForListAssociatedIssues()
+	return &ListAssociatedIssuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAssociatedTestCases 查询关联Wiki
+//
+// 查询关联Wiki
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) ListAssociatedTestCases(request *model.ListAssociatedTestCasesRequest) (*model.ListAssociatedTestCasesResponse, error) {
+	requestDef := GenReqDefForListAssociatedTestCases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAssociatedTestCasesResponse), nil
+	}
+}
+
+// ListAssociatedTestCasesInvoker 查询关联Wiki
+func (c *ProjectManClient) ListAssociatedTestCasesInvoker(request *model.ListAssociatedTestCasesRequest) *ListAssociatedTestCasesInvoker {
+	requestDef := GenReqDefForListAssociatedTestCases()
+	return &ListAssociatedTestCasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAssociatedWikis 查询当前工作项已经关联的关联Wiki
+//
+// 查询当前工作项已经关联的关联Wiki
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) ListAssociatedWikis(request *model.ListAssociatedWikisRequest) (*model.ListAssociatedWikisResponse, error) {
+	requestDef := GenReqDefForListAssociatedWikis()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAssociatedWikisResponse), nil
+	}
+}
+
+// ListAssociatedWikisInvoker 查询当前工作项已经关联的关联Wiki
+func (c *ProjectManClient) ListAssociatedWikisInvoker(request *model.ListAssociatedWikisRequest) *ListAssociatedWikisInvoker {
+	requestDef := GenReqDefForListAssociatedWikis()
+	return &ListAssociatedWikisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListChildIssuesV4 获取子工作项
 //
 // 获取子工作项
@@ -743,6 +875,28 @@ func (c *ProjectManClient) ListChildIssuesV4(request *model.ListChildIssuesV4Req
 func (c *ProjectManClient) ListChildIssuesV4Invoker(request *model.ListChildIssuesV4Request) *ListChildIssuesV4Invoker {
 	requestDef := GenReqDefForListChildIssuesV4()
 	return &ListChildIssuesV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIssueAssociatedCommits 查询当前工作项已经关联的代码提交记录 / 分支创建记录
+//
+// 查询当前工作项已经关联的代码提交记录 / 分支创建记录
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) ListIssueAssociatedCommits(request *model.ListIssueAssociatedCommitsRequest) (*model.ListIssueAssociatedCommitsResponse, error) {
+	requestDef := GenReqDefForListIssueAssociatedCommits()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIssueAssociatedCommitsResponse), nil
+	}
+}
+
+// ListIssueAssociatedCommitsInvoker 查询当前工作项已经关联的代码提交记录 / 分支创建记录
+func (c *ProjectManClient) ListIssueAssociatedCommitsInvoker(request *model.ListIssueAssociatedCommitsRequest) *ListIssueAssociatedCommitsInvoker {
+	requestDef := GenReqDefForListIssueAssociatedCommits()
+	return &ListIssueAssociatedCommitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListIssueCommentsV4 获取指定工作项的评论列表
@@ -767,6 +921,28 @@ func (c *ProjectManClient) ListIssueCommentsV4Invoker(request *model.ListIssueCo
 	return &ListIssueCommentsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListIssueCustomFields 查询Scrum工作项自定义字段
+//
+// 查询Scrum工作项自定义字段的可选列表,符合custom_fields或者names条件的都返回,2个值都不传，返回所有的自定义字段列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) ListIssueCustomFields(request *model.ListIssueCustomFieldsRequest) (*model.ListIssueCustomFieldsResponse, error) {
+	requestDef := GenReqDefForListIssueCustomFields()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIssueCustomFieldsResponse), nil
+	}
+}
+
+// ListIssueCustomFieldsInvoker 查询Scrum工作项自定义字段
+func (c *ProjectManClient) ListIssueCustomFieldsInvoker(request *model.ListIssueCustomFieldsRequest) *ListIssueCustomFieldsInvoker {
+	requestDef := GenReqDefForListIssueCustomFields()
+	return &ListIssueCustomFieldsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListIssueRecordsV4 获取工作项历史记录
 //
 // 获取工作项历史记录
@@ -787,6 +963,28 @@ func (c *ProjectManClient) ListIssueRecordsV4(request *model.ListIssueRecordsV4R
 func (c *ProjectManClient) ListIssueRecordsV4Invoker(request *model.ListIssueRecordsV4Request) *ListIssueRecordsV4Invoker {
 	requestDef := GenReqDefForListIssueRecordsV4()
 	return &ListIssueRecordsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIssuesSfV4 查询项目的工作项
+//
+// 工作项类型id, 分页参数，创建时间查询项目的工作项
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) ListIssuesSfV4(request *model.ListIssuesSfV4Request) (*model.ListIssuesSfV4Response, error) {
+	requestDef := GenReqDefForListIssuesSfV4()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIssuesSfV4Response), nil
+	}
+}
+
+// ListIssuesSfV4Invoker 查询项目的工作项
+func (c *ProjectManClient) ListIssuesSfV4Invoker(request *model.ListIssuesSfV4Request) *ListIssuesSfV4Invoker {
+	requestDef := GenReqDefForListIssuesSfV4()
+	return &ListIssuesSfV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListIssuesV4 高级查询工作项
@@ -831,6 +1029,28 @@ func (c *ProjectManClient) ListIterationHistories(request *model.ListIterationHi
 func (c *ProjectManClient) ListIterationHistoriesInvoker(request *model.ListIterationHistoriesRequest) *ListIterationHistoriesInvoker {
 	requestDef := GenReqDefForListIterationHistories()
 	return &ListIterationHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectIssuesRecordsV4 查询项目下所有工作项的历史记录
+//
+// 查询项目下所有工作项的历史记录
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) ListProjectIssuesRecordsV4(request *model.ListProjectIssuesRecordsV4Request) (*model.ListProjectIssuesRecordsV4Response, error) {
+	requestDef := GenReqDefForListProjectIssuesRecordsV4()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectIssuesRecordsV4Response), nil
+	}
+}
+
+// ListProjectIssuesRecordsV4Invoker 查询项目下所有工作项的历史记录
+func (c *ProjectManClient) ListProjectIssuesRecordsV4Invoker(request *model.ListProjectIssuesRecordsV4Request) *ListProjectIssuesRecordsV4Invoker {
+	requestDef := GenReqDefForListProjectIssuesRecordsV4()
+	return &ListProjectIssuesRecordsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListProjectIterationsV4 获取指定项目的迭代列表
@@ -919,6 +1139,28 @@ func (c *ProjectManClient) ShowIssueV4(request *model.ShowIssueV4Request) (*mode
 func (c *ProjectManClient) ShowIssueV4Invoker(request *model.ShowIssueV4Request) *ShowIssueV4Invoker {
 	requestDef := GenReqDefForShowIssueV4()
 	return &ShowIssueV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIssuesWrokFlowConfig 查询Scrum的工作项流转配置
+//
+// 查询Scrum的工作项流转配置
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) ShowIssuesWrokFlowConfig(request *model.ShowIssuesWrokFlowConfigRequest) (*model.ShowIssuesWrokFlowConfigResponse, error) {
+	requestDef := GenReqDefForShowIssuesWrokFlowConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIssuesWrokFlowConfigResponse), nil
+	}
+}
+
+// ShowIssuesWrokFlowConfigInvoker 查询Scrum的工作项流转配置
+func (c *ProjectManClient) ShowIssuesWrokFlowConfigInvoker(request *model.ShowIssuesWrokFlowConfigRequest) *ShowIssuesWrokFlowConfigInvoker {
+	requestDef := GenReqDefForShowIssuesWrokFlowConfig()
+	return &ShowIssuesWrokFlowConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowIterationV4 查看迭代详情

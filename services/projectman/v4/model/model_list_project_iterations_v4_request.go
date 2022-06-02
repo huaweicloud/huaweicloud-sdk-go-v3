@@ -9,7 +9,7 @@ import (
 // Request Object
 type ListProjectIterationsV4Request struct {
 
-	// devcloud的项目id
+	// devcloud项目的32位id
 	ProjectId string `json:"project_id"`
 
 	// 更新迭代的时间(查询的起始时间,查询的结束时间)

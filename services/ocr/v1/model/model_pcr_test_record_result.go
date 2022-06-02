@@ -21,8 +21,7 @@ type PcrTestRecordResult struct {
 	// 核酸检测结果，可选值包括：  - \"positive\",即阳性  - \"negative\",即阴性  - \"unknown\",未知
 	TestResult string `json:"test_result"`
 
-	// 各个字段的置信度
-	Confidence float32 `json:"confidence"`
+	Confidence *PcrTestRecordConfidence `json:"confidence"`
 
 	// 代表检测识别出来的文字块数目。
 	WordsBlockCount int32 `json:"words_block_count"`

@@ -9,7 +9,7 @@ import (
 // Request Object
 type ShowProjectInfoV4Request struct {
 
-	// devcloud的项目ID
+	// devcloud项目的32位id
 	ProjectId string `json:"project_id"`
 }
 

@@ -54,11 +54,14 @@ type IssueRequestV4 struct {
 	// 重要程度,   10 关键,   11 重要,   12 一般,   13 提示,
 	SeverityId *int32 `json:"severity_id,omitempty"`
 
-	// 状态   id, 开始   1, 进行中 2, 已解决 3, 测试中 4, 已关闭 5, 已解决 6,
+	// 状态   id, 新建   1, 进行中 2, 已解决 3, 测试中 4, 已关闭 5, 已解决 6,
 	StatusId *int32 `json:"status_id,omitempty"`
 
-	// 工作项类型,2任务/task,3缺陷/bug,5epic,6feature,7story
+	// 工作项类型,2任务/Task,3缺陷/Bug,5Epic,6Feature,7Story
 	TrackerId *int32 `json:"tracker_id,omitempty"`
+
+	// 用户自定义字段
+	NewCustomFields *[]NewCustomField `json:"new_custom_fields,omitempty"`
 }
 
 func (o IssueRequestV4) String() string {

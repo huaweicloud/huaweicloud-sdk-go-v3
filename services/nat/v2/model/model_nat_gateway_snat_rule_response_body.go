@@ -1,10 +1,11 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"strings"
 )
 
@@ -35,8 +36,8 @@ type NatGatewaySnatRuleResponseBody struct {
 	// 功能说明：SNAT规则的状态。
 	Status NatGatewaySnatRuleResponseBodyStatus `json:"status"`
 
-	// SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
-	CreatedAt *sdktime.SdkTime `json:"created_at"`
+	// SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+	CreatedAt string `json:"created_at"`
 
 	// 规则使用的网络id。与cidr参数二选一。
 	NetworkId string `json:"network_id"`

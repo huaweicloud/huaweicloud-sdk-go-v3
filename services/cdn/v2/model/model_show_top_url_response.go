@@ -13,8 +13,8 @@ type ShowTopUrlResponse struct {
 	ServiceArea *string `json:"service_area,omitempty"`
 
 	// 详情数据对象。
-	TopUrlSummary  *[]map[string]interface{} `json:"top_url_summary,omitempty"`
-	HttpStatusCode int                       `json:"-"`
+	TopUrlSummary  *[]TopUrlSummary `json:"top_url_summary,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ShowTopUrlResponse) String() string {

@@ -578,6 +578,10 @@ func GenReqDefForListFlavors() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SpecCode").
 		WithJsonTag("spec_code").
 		WithLocationType(def.Query))

@@ -1,10 +1,11 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"strings"
 )
 
@@ -56,8 +57,8 @@ type NatGatewayDnatRuleResponseBody struct {
 	// 协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
 	Protocol NatGatewayDnatRuleResponseBodyProtocol `json:"protocol"`
 
-	// DNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
-	CreatedAt *sdktime.SdkTime `json:"created_at"`
+	// DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+	CreatedAt string `json:"created_at"`
 }
 
 func (o NatGatewayDnatRuleResponseBody) String() string {

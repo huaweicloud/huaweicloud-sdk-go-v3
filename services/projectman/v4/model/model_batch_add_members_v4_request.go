@@ -9,7 +9,7 @@ import (
 // Request Object
 type BatchAddMembersV4Request struct {
 
-	// devcloud的项目id
+	// devcloud项目的32位id
 	ProjectId string `json:"project_id"`
 
 	Body *BatchAddMembersV4RequestBody `json:"body,omitempty"`

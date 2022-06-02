@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作项类型
+// 工作项类型， 2任务/Task,3缺陷/Bug,5Epic,6Feature,7Story
 type IssueItemSfV4Tracker struct {
 
 	// 类型id

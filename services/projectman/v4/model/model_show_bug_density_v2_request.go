@@ -9,7 +9,7 @@ import (
 // Request Object
 type ShowBugDensityV2Request struct {
 
-	// devcloud的项目ID
+	// devcloud项目的32位id
 	ProjectId string `json:"project_id"`
 
 	Body *MetricRequestV2 `json:"body,omitempty"`

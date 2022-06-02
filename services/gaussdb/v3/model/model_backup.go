@@ -18,7 +18,7 @@ type Backup struct {
 	Name *string `json:"name,omitempty"`
 
 	// 备份描述。
-	Descriprion *string `json:"descriprion,omitempty"`
+	Description *string `json:"description,omitempty"`
 
 	// 备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”，其中T指时间字段的开始；Z指时区偏移量。
 	BeginTime *string `json:"begin_time,omitempty"`

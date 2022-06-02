@@ -18,8 +18,14 @@ type HealthCodeResult struct {
 	// 健康码颜色，可选值包括： - \"green\" - \"yellow\" - \"red\" - \"gray\"
 	Color string `json:"color"`
 
-	// 各个字段的置信度
+	// 各个字段的置信度。
 	Confidence *interface{} `json:"confidence"`
+
+	// 代表检测识别出来的文字块数目。
+	WordsBlockCount int32 `json:"words_block_count"`
+
+	// 识别文字块列表，输出顺序从左到右，从上到下。
+	WordsBlockList []HealthCodeWordsBlockList `json:"words_block_list"`
 }
 
 func (o HealthCodeResult) String() string {

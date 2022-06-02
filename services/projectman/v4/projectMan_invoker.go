@@ -161,6 +161,30 @@ func (i *ListProjectsV4Invoker) Invoke() (*model.ListProjectsV4Response, error) 
 	}
 }
 
+type ListWorkitemStatusRecordsV4Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWorkitemStatusRecordsV4Invoker) Invoke() (*model.ListWorkitemStatusRecordsV4Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWorkitemStatusRecordsV4Response), nil
+	}
+}
+
+type ListWorkitemsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWorkitemsInvoker) Invoke() (*model.ListWorkitemsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWorkitemsResponse), nil
+	}
+}
+
 type RemoveProjectInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -254,6 +278,18 @@ func (i *ShowProjectSummaryV4Invoker) Invoke() (*model.ShowProjectSummaryV4Respo
 		return nil, err
 	} else {
 		return result.(*model.ShowProjectSummaryV4Response), nil
+	}
+}
+
+type ShowWorkItemWrokflowConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWorkItemWrokflowConfigInvoker) Invoke() (*model.ShowWorkItemWrokflowConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWorkItemWrokflowConfigResponse), nil
 	}
 }
 
@@ -389,6 +425,42 @@ func (i *DeleteIterationV4Invoker) Invoke() (*model.DeleteIterationV4Response, e
 	}
 }
 
+type ListAssociatedIssuesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAssociatedIssuesInvoker) Invoke() (*model.ListAssociatedIssuesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAssociatedIssuesResponse), nil
+	}
+}
+
+type ListAssociatedTestCasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAssociatedTestCasesInvoker) Invoke() (*model.ListAssociatedTestCasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAssociatedTestCasesResponse), nil
+	}
+}
+
+type ListAssociatedWikisInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAssociatedWikisInvoker) Invoke() (*model.ListAssociatedWikisResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAssociatedWikisResponse), nil
+	}
+}
+
 type ListChildIssuesV4Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -398,6 +470,18 @@ func (i *ListChildIssuesV4Invoker) Invoke() (*model.ListChildIssuesV4Response, e
 		return nil, err
 	} else {
 		return result.(*model.ListChildIssuesV4Response), nil
+	}
+}
+
+type ListIssueAssociatedCommitsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIssueAssociatedCommitsInvoker) Invoke() (*model.ListIssueAssociatedCommitsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIssueAssociatedCommitsResponse), nil
 	}
 }
 
@@ -413,6 +497,18 @@ func (i *ListIssueCommentsV4Invoker) Invoke() (*model.ListIssueCommentsV4Respons
 	}
 }
 
+type ListIssueCustomFieldsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIssueCustomFieldsInvoker) Invoke() (*model.ListIssueCustomFieldsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIssueCustomFieldsResponse), nil
+	}
+}
+
 type ListIssueRecordsV4Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -422,6 +518,18 @@ func (i *ListIssueRecordsV4Invoker) Invoke() (*model.ListIssueRecordsV4Response,
 		return nil, err
 	} else {
 		return result.(*model.ListIssueRecordsV4Response), nil
+	}
+}
+
+type ListIssuesSfV4Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIssuesSfV4Invoker) Invoke() (*model.ListIssuesSfV4Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIssuesSfV4Response), nil
 	}
 }
 
@@ -446,6 +554,18 @@ func (i *ListIterationHistoriesInvoker) Invoke() (*model.ListIterationHistoriesR
 		return nil, err
 	} else {
 		return result.(*model.ListIterationHistoriesResponse), nil
+	}
+}
+
+type ListProjectIssuesRecordsV4Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectIssuesRecordsV4Invoker) Invoke() (*model.ListProjectIssuesRecordsV4Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectIssuesRecordsV4Response), nil
 	}
 }
 
@@ -494,6 +614,18 @@ func (i *ShowIssueV4Invoker) Invoke() (*model.ShowIssueV4Response, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowIssueV4Response), nil
+	}
+}
+
+type ShowIssuesWrokFlowConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIssuesWrokFlowConfigInvoker) Invoke() (*model.ShowIssuesWrokFlowConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIssuesWrokFlowConfigResponse), nil
 	}
 }
 

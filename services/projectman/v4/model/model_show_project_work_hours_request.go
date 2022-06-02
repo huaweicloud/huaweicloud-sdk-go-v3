@@ -9,7 +9,7 @@ import (
 // Request Object
 type ShowProjectWorkHoursRequest struct {
 
-	// devcloud的项目id
+	// devcloud项目的32位id
 	ProjectId string `json:"project_id"`
 
 	Body *ShowProjectWorkHoursRequestBody `json:"body,omitempty"`

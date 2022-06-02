@@ -29,6 +29,18 @@ func (i *ChangeGaussMySqlInstanceSpecificationInvoker) Invoke() (*model.ChangeGa
 	}
 }
 
+type ChangeGaussMySqlProxySpecificationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeGaussMySqlProxySpecificationInvoker) Invoke() (*model.ChangeGaussMySqlProxySpecificationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeGaussMySqlProxySpecificationResponse), nil
+	}
+}
+
 type CreateGaussMySqlBackupInvoker struct {
 	*invoker.BaseInvoker
 }

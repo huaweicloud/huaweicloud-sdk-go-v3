@@ -14,6 +14,9 @@ type CustomField struct {
 
 	// 自定义属性对应的值
 	Value *string `json:"value,omitempty"`
+
+	// 自定义属性名
+	NewName *string `json:"new_name,omitempty"`
 }
 
 func (o CustomField) String() string {

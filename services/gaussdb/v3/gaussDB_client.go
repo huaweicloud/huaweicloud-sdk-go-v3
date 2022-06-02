@@ -63,6 +63,28 @@ func (c *GaussDBClient) ChangeGaussMySqlInstanceSpecificationInvoker(request *mo
 	return &ChangeGaussMySqlInstanceSpecificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeGaussMySqlProxySpecification 数据库代理规格变更
+//
+// 数据库代理规格变更。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) ChangeGaussMySqlProxySpecification(request *model.ChangeGaussMySqlProxySpecificationRequest) (*model.ChangeGaussMySqlProxySpecificationResponse, error) {
+	requestDef := GenReqDefForChangeGaussMySqlProxySpecification()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeGaussMySqlProxySpecificationResponse), nil
+	}
+}
+
+// ChangeGaussMySqlProxySpecificationInvoker 数据库代理规格变更
+func (c *GaussDBClient) ChangeGaussMySqlProxySpecificationInvoker(request *model.ChangeGaussMySqlProxySpecificationRequest) *ChangeGaussMySqlProxySpecificationInvoker {
+	requestDef := GenReqDefForChangeGaussMySqlProxySpecification()
+	return &ChangeGaussMySqlProxySpecificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateGaussMySqlBackup 创建手动备份
 //
 // 创建手动备份

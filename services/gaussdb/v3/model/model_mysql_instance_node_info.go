@@ -57,7 +57,7 @@ type MysqlInstanceNodeInfo struct {
 	NeedRestart *bool `json:"need_restart,omitempty"`
 
 	// 主备倒换优先级。
-	Priotiry *int32 `json:"priotiry,omitempty"`
+	Priority *int32 `json:"priority,omitempty"`
 }
 
 func (o MysqlInstanceNodeInfo) String() string {

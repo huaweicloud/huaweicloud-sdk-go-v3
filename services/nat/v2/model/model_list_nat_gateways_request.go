@@ -1,10 +1,11 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"strings"
 )
 
@@ -20,8 +21,8 @@ type ListNatGatewaysRequest struct {
 	// 公网NAT网关实例的描述，长度限制为255。
 	Description *string `json:"description,omitempty"`
 
-	// 公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+	// 公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
 	Name *string `json:"name,omitempty"`

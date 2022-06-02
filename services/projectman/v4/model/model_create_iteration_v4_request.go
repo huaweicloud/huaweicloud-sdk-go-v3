@@ -9,7 +9,7 @@ import (
 // Request Object
 type CreateIterationV4Request struct {
 
-	// devcloud的项目id
+	// devcloud项目的32位id
 	ProjectId string `json:"project_id"`
 
 	Body *CreateIterationRequestV4 `json:"body,omitempty"`

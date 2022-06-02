@@ -495,7 +495,7 @@ func (c *OcrClient) RecognizePassportInvoker(request *model.RecognizePassportReq
 	return &RecognizePassportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RecognizePcrTestRecord 核酸检测记录
+// RecognizePcrTestRecord 核酸检测记录识别
 //
 // 识别核酸检测记录中的文字信息，并将识别的结构化结果返回给用户。PCR，全称Polymerase chain reaction,即聚合酶链式反应.PCR-test也为大众所认知为新型冠状病毒核酸检测测试。
 //
@@ -511,7 +511,7 @@ func (c *OcrClient) RecognizePcrTestRecord(request *model.RecognizePcrTestRecord
 	}
 }
 
-// RecognizePcrTestRecordInvoker 核酸检测记录
+// RecognizePcrTestRecordInvoker 核酸检测记录识别
 func (c *OcrClient) RecognizePcrTestRecordInvoker(request *model.RecognizePcrTestRecordRequest) *RecognizePcrTestRecordInvoker {
 	requestDef := GenReqDefForRecognizePcrTestRecord()
 	return &RecognizePcrTestRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

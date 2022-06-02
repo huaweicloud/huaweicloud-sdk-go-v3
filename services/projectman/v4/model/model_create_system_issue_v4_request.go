@@ -9,7 +9,7 @@ import (
 // Request Object
 type CreateSystemIssueV4Request struct {
 
-	// devcloud的项目id
+	// devcloud项目的32位id
 	ProjectId string `json:"project_id"`
 
 	Body *CreateSystemIssueRequestV4 `json:"body,omitempty"`

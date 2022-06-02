@@ -9,7 +9,7 @@ import (
 // Request Object
 type ListProjectMembersV4Request struct {
 
-	// devcloud的项目id
+	// devcloud项目的32位id
 	ProjectId string `json:"project_id"`
 
 	// 分页索引，偏移量,offset是limit的整数倍，limit=10,offset=0,10,20...

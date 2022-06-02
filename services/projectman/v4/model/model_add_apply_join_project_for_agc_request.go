@@ -15,7 +15,7 @@ type AddApplyJoinProjectForAgcRequest struct {
 	// 用户id
 	UserId string `json:"User-Id"`
 
-	// devcloud的项目id
+	// devcloud项目的32位id
 	ProjectId string `json:"project_id"`
 }
 

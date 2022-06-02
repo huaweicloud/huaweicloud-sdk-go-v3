@@ -9,7 +9,7 @@ import (
 // Request Object
 type CreateCustomfieldsRequest struct {
 
-	// devcloud的项目ID
+	// devcloud项目的32位id
 	ProjectId string `json:"project_id"`
 
 	Body *CreateCustomfieldV1Req `json:"body,omitempty"`

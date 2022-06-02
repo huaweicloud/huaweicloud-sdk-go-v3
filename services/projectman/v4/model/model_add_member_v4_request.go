@@ -9,7 +9,7 @@ import (
 // Request Object
 type AddMemberV4Request struct {
 
-	// devcloud的项目id
+	// devcloud项目的32位id
 	ProjectId string `json:"project_id"`
 
 	Body *AddMemberRequestV4 `json:"body,omitempty"`

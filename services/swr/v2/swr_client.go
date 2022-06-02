@@ -21,7 +21,7 @@ func SwrClientBuilder() *http_client.HcHttpClientBuilder {
 
 // CreateImageSyncRepo 创建镜像自动同步任务
 //
-// 创建镜像自动同步任务
+// 创建镜像自动同步任务，帮助您把最新推送的镜像自动同步到其他区域镜像仓库内。 镜像自动同步帮助您把最新推送的镜像自动同步到其他区域镜像仓库内，后期镜像有更新时，目标仓库的镜像也会自动更新，但已有的镜像不会自动同步。已有镜像的同步需要手动操作，详情请参见手动同步镜像。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -43,7 +43,7 @@ func (c *SwrClient) CreateImageSyncRepoInvoker(request *model.CreateImageSyncRep
 
 // CreateManualImageSyncRepo 手动同步镜像
 //
-// 手动同步镜像
+// 对于镜像仓库已有的镜像，如果想在其他区域使用，需要手动触发镜像同步。 判断是否同步成功的方法如下：响应状态码为200，无报错信息，表示同步成功。通过SWR管理控制台或调用查询镜像仓库概要信息接口，在目标区域的目标组织下，若存在所同步的镜像版本表示同步成功。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -241,7 +241,7 @@ func (c *SwrClient) CreateUserRepositoryAuthInvoker(request *model.CreateUserRep
 
 // DeleteImageSyncRepo 删除镜像自动同步任务
 //
-// 删除镜像自动同步任务
+// 根据目标区域、目标组织删除指定的镜像自动同步任务。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -437,9 +437,9 @@ func (c *SwrClient) DeleteUserRepositoryAuthInvoker(request *model.DeleteUserRep
 	return &DeleteUserRepositoryAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListImageAutoSyncReposDetails 获取镜像自动同步任务信息
+// ListImageAutoSyncReposDetails 获取镜像自动同步任务列表
 //
-// 获取镜像自动同步任务列表
+// 获取为当前镜像仓库所创建的所有自动同步任务。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -453,7 +453,7 @@ func (c *SwrClient) ListImageAutoSyncReposDetails(request *model.ListImageAutoSy
 	}
 }
 
-// ListImageAutoSyncReposDetailsInvoker 获取镜像自动同步任务信息
+// ListImageAutoSyncReposDetailsInvoker 获取镜像自动同步任务列表
 func (c *SwrClient) ListImageAutoSyncReposDetailsInvoker(request *model.ListImageAutoSyncReposDetailsRequest) *ListImageAutoSyncReposDetailsInvoker {
 	requestDef := GenReqDefForListImageAutoSyncReposDetails()
 	return &ListImageAutoSyncReposDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -767,9 +767,9 @@ func (c *SwrClient) ShowRetentionInvoker(request *model.ShowRetentionRequest) *S
 	return &ShowRetentionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowSyncJob 获取镜像同步任务信息
+// ShowSyncJob 获取镜像自动同步任务信息
 //
-// 获取镜像同步任务信息
+// 创建镜像自动同步任务后，可以通过此接口查询该任务的状态，以判断是否同步成功。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -783,7 +783,7 @@ func (c *SwrClient) ShowSyncJob(request *model.ShowSyncJobRequest) (*model.ShowS
 	}
 }
 
-// ShowSyncJobInvoker 获取镜像同步任务信息
+// ShowSyncJobInvoker 获取镜像自动同步任务信息
 func (c *SwrClient) ShowSyncJobInvoker(request *model.ShowSyncJobRequest) *ShowSyncJobInvoker {
 	requestDef := GenReqDefForShowSyncJob()
 	return &ShowSyncJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

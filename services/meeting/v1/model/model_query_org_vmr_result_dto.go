@@ -24,12 +24,21 @@ type QueryOrgVmrResultDto struct {
 	// 云会议室套餐会议并发方数。
 	VmrPkgParties *int32 `json:"vmrPkgParties,omitempty"`
 
+	// 最大观众与会方数（仅网络研讨会有效）
+	MaxAudienceParties *int32 `json:"maxAudienceParties,omitempty"`
+
 	Member *IdMarkDto `json:"member,omitempty"`
 
 	Device *IdMarkDto `json:"device,omitempty"`
 
 	// 云会议室状态。 * 0：正常 * 1：冻结 * 2：未分配
 	Status *int32 `json:"status,omitempty"`
+
+	// 到期时间，utc时间戳
+	ExpireDate *int64 `json:"expireDate,omitempty"`
+
+	// 按次资源转商后，商用规格最大观众与会方数（仅网络研讨会有效）
+	CommercialMaxAudienceParties *int32 `json:"commercialMaxAudienceParties,omitempty"`
 }
 
 func (o QueryOrgVmrResultDto) String() string {

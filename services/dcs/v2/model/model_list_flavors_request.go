@@ -12,6 +12,9 @@ import (
 // Request Object
 type ListFlavorsRequest struct {
 
+	// 缓存实例ID，根据该字段可查询出实例可变更的规格
+	InstanceId *string `json:"instance_id,omitempty"`
+
 	// 产品规格编码。
 	SpecCode *string `json:"spec_code,omitempty"`
 

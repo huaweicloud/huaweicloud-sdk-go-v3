@@ -9,7 +9,7 @@ import (
 // Request Object
 type BatchDeleteMembersV4Request struct {
 
-	// devcloud的项目id
+	// devcloud项目的32位id
 	ProjectId string `json:"project_id"`
 
 	Body *BatchDeleteMembersV4RequestBody `json:"body,omitempty"`

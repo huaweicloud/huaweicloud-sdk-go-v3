@@ -1,10 +1,11 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"strings"
 )
 
@@ -32,8 +33,8 @@ type ListNatGatewaySnatRulesRequest struct {
 	// SNAT规则的描述，长度限制为255。
 	Description *string `json:"description,omitempty"`
 
-	// SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+	// SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 公网NAT网关实例的ID。
 	NatGatewayId *[]string `json:"nat_gateway_id,omitempty"`
