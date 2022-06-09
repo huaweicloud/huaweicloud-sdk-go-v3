@@ -17,6 +17,12 @@ type HostModel struct {
 	// 虚拟机IP地址
 	Ip *string `json:"ip,omitempty"`
 
+	// 可用区域
+	AvailabilityZoneId *string `json:"availability_zone_id,omitempty"`
+
+	// 标签列表信息
+	Tags *[]TagPlain `json:"tags,omitempty"`
+
 	// 虚拟机当前状态
 	Status *string `json:"status,omitempty"`
 

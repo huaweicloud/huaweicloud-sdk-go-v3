@@ -6,11 +6,10 @@ import (
 	"strings"
 )
 
-// 更新测试事件请求体。
 type UpdateEventRequestBody struct {
 
-	// 测试事件content。
-	Content *string `json:"content,omitempty"`
+	// 测试事件content,为json字符串
+	Content string `json:"content"`
 }
 
 func (o UpdateEventRequestBody) String() string {

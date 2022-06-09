@@ -13,7 +13,7 @@ type StartSyncWorkflowExecutionRequestBody struct {
 	Headers *interface{} `json:"headers,omitempty"`
 
 	// 定义函数执行时的入参，支持使用JSONPATH进行映射，以及指定默认值
-	Input *interface{} `json:"input,omitempty"`
+	Input *interface{} `json:"input"`
 }
 
 func (o StartSyncWorkflowExecutionRequestBody) String() string {

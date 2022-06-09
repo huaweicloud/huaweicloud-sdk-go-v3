@@ -12,6 +12,12 @@ type NodeExecutionDetail struct {
 	// 流程节点ID
 	NodeId *string `json:"node_id,omitempty"`
 
+	// 流程节点名称
+	NodeName *string `json:"node_name,omitempty"`
+
+	// 流程节点执行ID
+	ExecutionId *string `json:"execution_id,omitempty"`
+
 	// 节点执行记录
 	Executions *[]NodeExecution `json:"executions,omitempty"`
 }

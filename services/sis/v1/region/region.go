@@ -15,10 +15,18 @@ var staticFields = map[string]*region.Region{
 	"cn-east-3":  CN_EAST_3,
 }
 
+var provider = region.DefaultProviderChain("SIS")
+
 func ValueOf(regionId string) *region.Region {
 	if regionId == "" {
 		panic("unexpected empty parameter: regionId")
 	}
+
+	reg := provider.GetRegion(regionId)
+	if reg != nil {
+		return reg
+	}
+
 	if _, ok := staticFields[regionId]; ok {
 		return staticFields[regionId]
 	}

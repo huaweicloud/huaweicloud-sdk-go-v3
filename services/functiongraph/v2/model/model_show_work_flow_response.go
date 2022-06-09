@@ -24,6 +24,12 @@ type ShowWorkFlowResponse struct {
 	// 流程创建者
 	CreatedBy *string `json:"created_by,omitempty"`
 
+	// 快速函数流日志组ID，仅快速模式函数流且日志级别不为NONE时
+	LtsGroupId *string `json:"lts_group_id,omitempty"`
+
+	// 快速函数流日志流ID，仅快速模式函数流且日志级别不为NONE时返回。
+	LtsStreamId *string `json:"lts_stream_id,omitempty"`
+
 	Definition     *CreateWorkflowRequestBody `json:"definition,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }

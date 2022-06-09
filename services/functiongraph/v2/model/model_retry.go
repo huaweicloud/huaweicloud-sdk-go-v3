@@ -10,7 +10,7 @@ import (
 type Retry struct {
 
 	// 重试策略名称，在单个流程中，名称需要唯一
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 重试间隔，单位：秒。若不传，默认为1
 	Delay *int64 `json:"delay,omitempty"`

@@ -41,6 +41,138 @@ func (c *GslClient) ListProPricePlansInvoker(request *model.ListProPricePlansReq
 	return &ListProPricePlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchSetAttributes 批量设置自定义属性接口
+//
+// 批量设置自定义属性接口
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GslClient) BatchSetAttributes(request *model.BatchSetAttributesRequest) (*model.BatchSetAttributesResponse, error) {
+	requestDef := GenReqDefForBatchSetAttributes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchSetAttributesResponse), nil
+	}
+}
+
+// BatchSetAttributesInvoker 批量设置自定义属性接口
+func (c *GslClient) BatchSetAttributesInvoker(request *model.BatchSetAttributesRequest) *BatchSetAttributesInvoker {
+	requestDef := GenReqDefForBatchSetAttributes()
+	return &BatchSetAttributesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAttribute 用户新增自定义属性接口
+//
+// 用户新增自定义属性接口
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GslClient) CreateAttribute(request *model.CreateAttributeRequest) (*model.CreateAttributeResponse, error) {
+	requestDef := GenReqDefForCreateAttribute()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAttributeResponse), nil
+	}
+}
+
+// CreateAttributeInvoker 用户新增自定义属性接口
+func (c *GslClient) CreateAttributeInvoker(request *model.CreateAttributeRequest) *CreateAttributeInvoker {
+	requestDef := GenReqDefForCreateAttribute()
+	return &CreateAttributeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisableAttribute 停用自定义属性接口
+//
+// 停用自定义属性接口
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GslClient) DisableAttribute(request *model.DisableAttributeRequest) (*model.DisableAttributeResponse, error) {
+	requestDef := GenReqDefForDisableAttribute()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisableAttributeResponse), nil
+	}
+}
+
+// DisableAttributeInvoker 停用自定义属性接口
+func (c *GslClient) DisableAttributeInvoker(request *model.DisableAttributeRequest) *DisableAttributeInvoker {
+	requestDef := GenReqDefForDisableAttribute()
+	return &DisableAttributeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableAttribute 启用自定义属性接口
+//
+// 启用自定义属性接口
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GslClient) EnableAttribute(request *model.EnableAttributeRequest) (*model.EnableAttributeResponse, error) {
+	requestDef := GenReqDefForEnableAttribute()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableAttributeResponse), nil
+	}
+}
+
+// EnableAttributeInvoker 启用自定义属性接口
+func (c *GslClient) EnableAttributeInvoker(request *model.EnableAttributeRequest) *EnableAttributeInvoker {
+	requestDef := GenReqDefForEnableAttribute()
+	return &EnableAttributeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAttributes 查询自定义属性列表接口
+//
+// 查询自定义属性列表接口
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GslClient) ListAttributes(request *model.ListAttributesRequest) (*model.ListAttributesResponse, error) {
+	requestDef := GenReqDefForListAttributes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAttributesResponse), nil
+	}
+}
+
+// ListAttributesInvoker 查询自定义属性列表接口
+func (c *GslClient) ListAttributesInvoker(request *model.ListAttributesRequest) *ListAttributesInvoker {
+	requestDef := GenReqDefForListAttributes()
+	return &ListAttributesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAttribute 修改自定义属性接口
+//
+// 修改自定义属性接口
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GslClient) UpdateAttribute(request *model.UpdateAttributeRequest) (*model.UpdateAttributeResponse, error) {
+	requestDef := GenReqDefForUpdateAttribute()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAttributeResponse), nil
+	}
+}
+
+// UpdateAttributeInvoker 修改自定义属性接口
+func (c *GslClient) UpdateAttributeInvoker(request *model.UpdateAttributeRequest) *UpdateAttributeInvoker {
+	requestDef := GenReqDefForUpdateAttribute()
+	return &UpdateAttributeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteRealName 清除实名认证信息
 //
 // 清除实名认证信息，接口只支持电信卡调用
@@ -369,4 +501,92 @@ func (c *GslClient) ListSimPricePlans(request *model.ListSimPricePlansRequest) (
 func (c *GslClient) ListSimPricePlansInvoker(request *model.ListSimPricePlansRequest) *ListSimPricePlansInvoker {
 	requestDef := GenReqDefForListSimPricePlans()
 	return &ListSimPricePlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchSetTags 批量设置/取消设置标签接口
+//
+// 批量设置/取消设置标签接口
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GslClient) BatchSetTags(request *model.BatchSetTagsRequest) (*model.BatchSetTagsResponse, error) {
+	requestDef := GenReqDefForBatchSetTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchSetTagsResponse), nil
+	}
+}
+
+// BatchSetTagsInvoker 批量设置/取消设置标签接口
+func (c *GslClient) BatchSetTagsInvoker(request *model.BatchSetTagsRequest) *BatchSetTagsInvoker {
+	requestDef := GenReqDefForBatchSetTags()
+	return &BatchSetTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTag 用户添加标签
+//
+// 添加标签接口
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GslClient) CreateTag(request *model.CreateTagRequest) (*model.CreateTagResponse, error) {
+	requestDef := GenReqDefForCreateTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTagResponse), nil
+	}
+}
+
+// CreateTagInvoker 用户添加标签
+func (c *GslClient) CreateTagInvoker(request *model.CreateTagRequest) *CreateTagInvoker {
+	requestDef := GenReqDefForCreateTag()
+	return &CreateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTag 删除标签
+//
+// 删除标签
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GslClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
+	requestDef := GenReqDefForDeleteTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTagResponse), nil
+	}
+}
+
+// DeleteTagInvoker 删除标签
+func (c *GslClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTagInvoker {
+	requestDef := GenReqDefForDeleteTag()
+	return &DeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTags 查询标签列表
+//
+// 查询标签列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GslClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsResponse, error) {
+	requestDef := GenReqDefForListTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTagsResponse), nil
+	}
+}
+
+// ListTagsInvoker 查询标签列表
+func (c *GslClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInvoker {
+	requestDef := GenReqDefForListTags()
+	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

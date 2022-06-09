@@ -398,6 +398,10 @@ func GenReqDefForListFunctionAsyncInvocations() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Status").
 		WithJsonTag("status").
 		WithLocationType(def.Query))
@@ -533,6 +537,10 @@ func GenReqDefForListStatistics() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Period").
 		WithJsonTag("period").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Option").
+		WithJsonTag("option").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

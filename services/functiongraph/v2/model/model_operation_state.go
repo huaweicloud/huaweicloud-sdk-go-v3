@@ -13,19 +13,19 @@ import (
 type OperationState struct {
 
 	// 节点ID，需要在当前工作流中唯一
-	Id *string `json:"id,omitempty"`
+	Id string `json:"id"`
 
 	// 节点名称
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 节点类型
-	Type *OperationStateType `json:"type,omitempty"`
+	Type OperationStateType `json:"type"`
 
 	// 是否是结束节点
-	End *bool `json:"end,omitempty"`
+	End bool `json:"end"`
 
 	// 下一步骤节点ID
-	Transition *string `json:"transition,omitempty"`
+	Transition string `json:"transition"`
 
 	StateDataFilter *StateDataFilter `json:"state_data_filter,omitempty"`
 
@@ -33,7 +33,7 @@ type OperationState struct {
 	ActionMode *OperationStateActionMode `json:"action_mode,omitempty"`
 
 	// 节点中要执行的操作列表
-	Actions *[]Action `json:"actions,omitempty"`
+	Actions []Action `json:"actions"`
 
 	// 错误处理策略
 	OnErrors *[]OnError `json:"on_errors,omitempty"`

@@ -10,10 +10,10 @@ import (
 type Function struct {
 
 	// 函数名称，在单个流程中，名称需要唯一
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 函数调用URN
-	Operation *string `json:"operation,omitempty"`
+	Operation string `json:"operation"`
 
 	// 函数扩展属性，由用户自己定制
 	Metadata *interface{} `json:"metadata,omitempty"`

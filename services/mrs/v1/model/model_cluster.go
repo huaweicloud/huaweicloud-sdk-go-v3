@@ -83,6 +83,9 @@ type Cluster struct {
 	// 可用区域英文名称
 	AzCode *string `json:"azCode,omitempty"`
 
+	// 可用区域
+	AvailabilityZoneId *string `json:"availabilityZoneId,omitempty"`
+
 	// 实例ID。
 	InstanceId *string `json:"instanceId,omitempty"`
 

@@ -344,6 +344,12 @@ client := iam.NewIamClient(
 - Supported region list: af-south-1, ap-southeast-1, ap-southeast-2, ap-southeast-3, cn-east-2, cn-east-3, cn-north-1,
   cn-north-4, cn-south-1, cn-southwest-2, ru-northwest-2. You may get exception such as `Unsupported regionId` if your
   region don't in the list above.
+  
+- Automatically acquiring projectId/domainId will invoke the [KeystoneListProjects](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneListProjects) /[KeystoneListAuthDomains](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneListAuthDomains) interface of IAM service. The default iam enpoint is `https://iam.myhuaweicloud.com`, you can modify the endpoint in the following two ways:
+
+  - Credentials scope, `basic.NewCredentialsBuilder().WithIamEndpointOverride(iamEndpoint).Build()`
+  
+  - Global scope, configure the environment variable `HUAWEICLOUD_SDK_IAM_ENDPOINT`
 
 **Comparison of the two ways:**
 
@@ -351,6 +357,92 @@ client := iam.NewIamClient(
 | :---- | :---- | :---- |
 | Specified Endpoint | The API can be invoked successfully once it has been published in the environment. | You need to prepare projectId and endpoint yourself.
 | Specified Region | No need for projectId and endpoint, it supports automatic acquisition if you configure it in the right way. | The supported services and regions are limited.
+
+#### 3.3 Custom Configuration
+
+**Notice:** Supported since v0.0.92
+
+##### 3.3.1 IAM endpoint configuration
+
+Automatically acquiring projectId/domainId will invoke the [KeystoneListProjects](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneListProjects) /[KeystoneListAuthDomains](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneListAuthDomains) interface of IAM service. The default iam enpoint is `https://iam.myhuaweicloud.com`, you can modify the endpoint in the following two ways:
+
+###### 3.3.1.1 Global scope
+
+This configuration takes effect globally, specified by environment variable `HUAWEICLOUD_SDK_IAM_ENDPOINT`
+
+```
+//linux
+export HUAWEICLOUD_SDK_IAM_ENDPOINT=https://iam.cn-north-4.myhuaweicloud.com
+
+//windows
+set HUAWEICLOUD_SDK_IAM_ENDPOINT=https://iam.cn-north-4.myhuaweicloud.com
+```
+
+###### 3.3.1.2 Credentials scope
+
+This configuration is only valid for a credential, and it will override the global configuration
+
+```go
+import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+
+iamEndpoint := "https://iam.cn-north-4.myhuaweicloud.com"
+cred := basic.NewCredentialsBuilder().
+			WithAk(ak).
+			WithSk(sk).
+			WithIamEndpointOverride(iamEndpoint).
+			Build()
+```
+
+##### 3.3.2 Region configuration
+
+###### 3.3.2.1 Environment variable
+
+Specified by environment variable, the format is `HUAWEICLOUD_SDK_REGION_{SERIVCE_NAME}_{region_id}={endpoint}`
+
+```
+// Take ECS and IoTDA services as examples
+
+// linux
+export HUAWEICLOUD_SDK_REGION_ECS_cn-north-99=https://ecs.cn-north-99.myhuaweicloud.com
+export HUAWEICLOUD_SDK_REGION_IOTDA_ap-southwest-10=https://iotda.ap-southwest-10.myhuaweicloud.com
+
+// windows
+set HUAWEICLOUD_SDK_REGION_ECS_cn-north-99=https://ecs.cn-north-99.myhuaweicloud.com
+set HUAWEICLOUD_SDK_REGION_IOTDA_ap-southwest-10=https://iotda.ap-southwest-10.myhuaweicloud.com
+```
+
+###### 3.3.2.2 Profile
+
+The profile will be read from the user's home directory by default, linux`~/.huaweicloud/regions.yaml`,windows`C:\Users\USER_NAME\.huaweicloud\regions.yaml`,the default file may not exist, but if the file exists and the content format is incorrect, an exception will be thrown for parsing errors.
+
+The path to the profile can be modified by configuring the environment variable `HUAWEICLOUD_SDK_REGIONS_FILE`, like `HUAWEICLOUD_SDK_REGIONS_FILE=/tmp/my_regions.yml`
+
+The file content format is as follows:
+
+```yaml
+# Serivce name is case-insensitive
+ECS:
+  - id: 'cn-north-10'
+    endpoint: 'https://ecs.cn-north-10.myhuaweicloud.com'
+  - id: 'cn-north-11'
+    endpoint: 'https://ecs.cn-north-11.myhuaweicloud.com'
+IoTDA:
+  - id: 'ap-southwest-9'
+    endpoint: 'https://iotda.ap-southwest-9.myhuaweicloud.com'
+```
+
+###### 3.3.2.3 Region supply chain
+
+The default order is **environment variables -> profile -> region defined in SDK**, if the region is not found in the above ways, an exception will be thrown.
+
+```go
+import "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ecs/v2/region"
+
+var (
+	region1 = region.ValueOf("cn-north-10")
+	region2 = region.ValueOf("cn-north-11")
+)
+```
 
 ### 4. Send Requests and Handle Responses [:top:](#user-manual-top)
 

@@ -35,10 +35,18 @@ var staticFields = map[string]*region.Region{
 	"sa-brazil-1":    SA_BRAZIL_1,
 }
 
+var provider = region.DefaultProviderChain("EIP")
+
 func ValueOf(regionId string) *region.Region {
 	if regionId == "" {
 		panic("unexpected empty parameter: regionId")
 	}
+
+	reg := provider.GetRegion(regionId)
+	if reg != nil {
+		return reg
+	}
+
 	if _, ok := staticFields[regionId]; ok {
 		return staticFields[regionId]
 	}

@@ -29,7 +29,7 @@ type CreateFunctionResponse struct {
 	// 函数所属的分组Package，用于用户针对函数的自定义分组。
 	Package *string `json:"package,omitempty"`
 
-	// FunctionGraph函数的执行环境 支持Node.js6.10、Python2.7、Python3.6、Java8、Go1.8、Node.js 8.10、C#.NET Core 2.0、C#.NET Core 2.1、PHP7.3。 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 Java11、Nodejs14.18、Python3.9在type为v2时支持
+	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本
 	Runtime *CreateFunctionResponseRuntime `json:"runtime,omitempty"`
 
 	// 函数执行超时时间，超时函数将被强行停止，范围3～900秒
@@ -129,13 +129,13 @@ type CreateFunctionResponseRuntimeEnum struct {
 	NODE_JS14_18    CreateFunctionResponseRuntime
 	PYTHON2_7       CreateFunctionResponseRuntime
 	PYTHON3_6       CreateFunctionResponseRuntime
-	PYTHON3_9       CreateFunctionResponseRuntime
 	GO1_8           CreateFunctionResponseRuntime
 	GO1_X           CreateFunctionResponseRuntime
 	C__NET_CORE_2_0 CreateFunctionResponseRuntime
 	C__NET_CORE_2_1 CreateFunctionResponseRuntime
 	C__NET_CORE_3_1 CreateFunctionResponseRuntime
 	PHP7_3          CreateFunctionResponseRuntime
+	PYTHON3_9       CreateFunctionResponseRuntime
 }
 
 func GetCreateFunctionResponseRuntimeEnum() CreateFunctionResponseRuntimeEnum {
@@ -167,9 +167,6 @@ func GetCreateFunctionResponseRuntimeEnum() CreateFunctionResponseRuntimeEnum {
 		PYTHON3_6: CreateFunctionResponseRuntime{
 			value: "Python3.6",
 		},
-		PYTHON3_9: CreateFunctionResponseRuntime{
-			value: "Python3.9",
-		},
 		GO1_8: CreateFunctionResponseRuntime{
 			value: "Go1.8",
 		},
@@ -187,6 +184,9 @@ func GetCreateFunctionResponseRuntimeEnum() CreateFunctionResponseRuntimeEnum {
 		},
 		PHP7_3: CreateFunctionResponseRuntime{
 			value: "PHP7.3",
+		},
+		PYTHON3_9: CreateFunctionResponseRuntime{
+			value: "Python3.9",
 		},
 	}
 }

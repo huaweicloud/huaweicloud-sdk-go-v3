@@ -13,10 +13,10 @@ import (
 type Trigger struct {
 
 	// 触发器名称
-	TriggerName *string `json:"trigger_name,omitempty"`
+	TriggerName string `json:"trigger_name"`
 
 	// 触发器类型
-	TriggerType *TriggerTriggerType `json:"trigger_type,omitempty"`
+	TriggerType TriggerTriggerType `json:"trigger_type"`
 
 	// 是否启用
 	Enabled *bool `json:"enabled,omitempty"`

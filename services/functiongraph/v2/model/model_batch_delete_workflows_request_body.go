@@ -10,7 +10,7 @@ import (
 type BatchDeleteWorkflowsRequestBody struct {
 
 	// 流程URN列表
-	WorkflowUrns *[]string `json:"workflow_urns,omitempty"`
+	WorkflowUrns []string `json:"workflow_urns"`
 }
 
 func (o BatchDeleteWorkflowsRequestBody) String() string {

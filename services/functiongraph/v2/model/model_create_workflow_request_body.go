@@ -13,7 +13,7 @@ import (
 type CreateWorkflowRequestBody struct {
 
 	// 流程定义名称
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 流程定义描述
 	Description *string `json:"description,omitempty"`
@@ -22,19 +22,19 @@ type CreateWorkflowRequestBody struct {
 	Triggers *[]Trigger `json:"triggers,omitempty"`
 
 	// 流程开始节点ID
-	Start *string `json:"start,omitempty"`
+	Start string `json:"start"`
 
 	// 函数清单
-	Functions *[]Function `json:"functions,omitempty"`
+	Functions []Function `json:"functions"`
 
 	// 工作流节点清单，定义参考SleepState和OperationState
-	States *[]OperationState `json:"states,omitempty"`
+	States []OperationState `json:"states"`
 
 	// 工作流中的常量
-	Constants *interface{} `json:"constants,omitempty"`
+	Constants *interface{} `json:"constants"`
 
 	// 重试策略清单
-	Retries *[]Retry `json:"retries,omitempty"`
+	Retries []Retry `json:"retries"`
 
 	// 工作流模式，当前支持两种模式 NORMAL: 标准模式，普通模式面向普通的业务场景，支持长时间任务，支持执行历史持久化和查询，只支持异步调用 EXPRESS: 快速模式，快速模式面向业务执行时长较短，需要极致性能的场景，只支持流程执行时长低于5分钟的场景，不支持执行历史持久化，支持同步和异步调用 默认为标准模式
 	Mode *CreateWorkflowRequestBodyMode `json:"mode,omitempty"`

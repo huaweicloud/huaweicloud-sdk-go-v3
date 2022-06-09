@@ -29,6 +29,9 @@ type NodeExecution struct {
 
 	// 节点错误信息，仅在节点出错时非空
 	ErrorMessage *interface{} `json:"error_message,omitempty"`
+
+	// 流程节点请求ID
+	RequestId *string `json:"request_id,omitempty"`
 }
 
 func (o NodeExecution) String() string {

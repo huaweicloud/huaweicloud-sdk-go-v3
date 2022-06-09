@@ -20,6 +20,9 @@ type ListFunctionAsyncInvocationsRequest struct {
 	// 本次查询最大返回的数据条数，最大值500，默认值100
 	Limit *string `json:"limit,omitempty"`
 
+	// 本次查询起始位置，默认值0
+	Marker *string `json:"marker,omitempty"`
+
 	// 本次查询指定的异步调用状态，支持5种状态，如果不指定，则查询所有状态的调用记录 WAIT: 等待 RUNNING: 执行中 SUCCESS: 执行成功 FAIL: 执行失败 DISCARD: 请求丢弃
 	Status *ListFunctionAsyncInvocationsRequestStatus `json:"status,omitempty"`
 

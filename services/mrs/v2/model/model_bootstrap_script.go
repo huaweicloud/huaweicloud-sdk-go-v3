@@ -20,7 +20,7 @@ type BootstrapScript struct {
 	// 引导操作脚本参数。
 	Parameters *string `json:"parameters,omitempty"`
 
-	// 引导操作脚本所执行的节点类型，包含Master、Core和Task三种类型。
+	// 引导操作脚本所执行的节点组名称，包含Master、Core和Task三种类型节点组。
 	Nodes []string `json:"nodes"`
 
 	// 引导操作脚本是否只运行在主Master节点上。 缺省值为false，表示引导操作脚本可运行在所有Master节点上。
