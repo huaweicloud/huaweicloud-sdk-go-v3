@@ -9,13 +9,13 @@ import (
 // SMN通道设置对象
 type TrackerSmnChannelConfigBody struct {
 
-	// region id
+	// 区域id
 	RegionId string `json:"region_id"`
 
-	// project id
+	// 项目id
 	ProjectId string `json:"project_id"`
 
-	// SMN 主题urn
+	// SMN主题urn
 	TopicUrn string `json:"topic_urn"`
 }
 

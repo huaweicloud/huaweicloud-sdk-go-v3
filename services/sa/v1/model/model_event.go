@@ -26,7 +26,7 @@ type Event struct {
 	CreateTime string `json:"create_time"`
 
 	// 数据接收时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区。  是指事件数据被SA侧接收的时间，由SA接收时填写，产品上报数据时不用填写。
-	ArriveTime string `json:"arrive_time"`
+	ArriveTime *string `json:"arrive_time,omitempty"`
 
 	// 事件唯一标识，UUID格式。
 	EventId string `json:"event_id"`
@@ -71,7 +71,7 @@ type Event struct {
 	DataSourceFields *interface{} `json:"data_source_fields,omitempty"`
 
 	// 事件验证状态，标识事件的准确性。 Unknown – 未知，默认 True_positive – 确认 False_positive – 误报。
-	VerificationState string `json:"verification_state"`
+	VerificationState *string `json:"verification_state,omitempty"`
 
 	// 事件处理状态，New/Ignored/Resolved；默认New。
 	HandleStatus string `json:"handle_status"`

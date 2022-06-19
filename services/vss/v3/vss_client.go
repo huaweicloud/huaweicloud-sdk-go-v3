@@ -151,6 +151,50 @@ func (c *VssClient) UpdateDomainSettingsInvoker(request *model.UpdateDomainSetti
 	return &UpdateDomainSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DownloadTaskReport 下载域名扫描报告
+//
+// 下载域名扫描任务PDF报告
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *VssClient) DownloadTaskReport(request *model.DownloadTaskReportRequest) (*model.DownloadTaskReportResponse, error) {
+	requestDef := GenReqDefForDownloadTaskReport()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadTaskReportResponse), nil
+	}
+}
+
+// DownloadTaskReportInvoker 下载域名扫描报告
+func (c *VssClient) DownloadTaskReportInvoker(request *model.DownloadTaskReportRequest) *DownloadTaskReportInvoker {
+	requestDef := GenReqDefForDownloadTaskReport()
+	return &DownloadTaskReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteGenerateReport 生成域名扫描报告
+//
+// 生成域名扫描PDF报告
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *VssClient) ExecuteGenerateReport(request *model.ExecuteGenerateReportRequest) (*model.ExecuteGenerateReportResponse, error) {
+	requestDef := GenReqDefForExecuteGenerateReport()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteGenerateReportResponse), nil
+	}
+}
+
+// ExecuteGenerateReportInvoker 生成域名扫描报告
+func (c *VssClient) ExecuteGenerateReportInvoker(request *model.ExecuteGenerateReportRequest) *ExecuteGenerateReportInvoker {
+	requestDef := GenReqDefForExecuteGenerateReport()
+	return &ExecuteGenerateReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBusinessRisks 获取业务风险扫描结果
 //
 // 获取域名业务风险扫描结果
@@ -193,6 +237,28 @@ func (c *VssClient) ListPortResults(request *model.ListPortResultsRequest) (*mod
 func (c *VssClient) ListPortResultsInvoker(request *model.ListPortResultsRequest) *ListPortResultsInvoker {
 	requestDef := GenReqDefForListPortResults()
 	return &ListPortResultsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowReportStatus 获取域名扫描报告状态
+//
+// 获取域名扫描PDF报告生成状态
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *VssClient) ShowReportStatus(request *model.ShowReportStatusRequest) (*model.ShowReportStatusResponse, error) {
+	requestDef := GenReqDefForShowReportStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReportStatusResponse), nil
+	}
+}
+
+// ShowReportStatusInvoker 获取域名扫描报告状态
+func (c *VssClient) ShowReportStatusInvoker(request *model.ShowReportStatusRequest) *ShowReportStatusInvoker {
+	requestDef := GenReqDefForShowReportStatus()
+	return &ShowReportStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowResults 获取扫描结果

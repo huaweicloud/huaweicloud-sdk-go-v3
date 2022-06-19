@@ -113,8 +113,11 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
     * [2.2.2 Metadata](#222-Metadata)
   * [2.3 Credential supply chain](#23-credential-supply-chain)
 * [3. Client Initialization](#3-client-initialization-top)
-    * [3.1  Initialize client with specified Endpoint](#31-initialize-the-serviceclient-with-specified-endpoint-top)
-    * [3.2  Initialize client with specified Region](#32-initialize-the-serviceclient-with-specified-region-recommended-top)
+  * [3.1 Initialize client with specified Endpoint](#31-initialize-the-serviceclient-with-specified-endpoint-top)
+  * [3.2 Initialize client with specified Region](#32-initialize-the-serviceclient-with-specified-region-recommended-top)
+  * [3.3 Custom Configuration](#33-custom-configuration-top)
+    * [3.3.1 IAM endpoint configuration](#331-iam-endpoint-configuration-top)
+    * [3.3.2 Region configuration](#332-region-configuration-top)
 * [4. Send Request and Handle response](#4-send-requests-and-handle-responses-top)
     * [4.1  Exceptions](#41-exceptions-top)
 * [5. Troubleshooting](#5-troubleshooting-top)
@@ -397,18 +400,20 @@ cred := basic.NewCredentialsBuilder().
 
 ###### 3.3.2.1 Environment variable
 
-Specified by environment variable, the format is `HUAWEICLOUD_SDK_REGION_{SERIVCE_NAME}_{region_id}={endpoint}`
+Specified by environment variable, the format is `HUAWEICLOUD_SDK_REGION_{SERIVCE_NAME}_{REGION_ID}={endpoint}`
+
+Notice: the name of environment variable is UPPER-CASE, replacing hyphens with underscores.
 
 ```
 // Take ECS and IoTDA services as examples
 
 // linux
-export HUAWEICLOUD_SDK_REGION_ECS_cn-north-99=https://ecs.cn-north-99.myhuaweicloud.com
-export HUAWEICLOUD_SDK_REGION_IOTDA_ap-southwest-10=https://iotda.ap-southwest-10.myhuaweicloud.com
+export HUAWEICLOUD_SDK_REGION_ECS_CN_NORTH_99=https://ecs.cn-north-99.myhuaweicloud.com
+export HUAWEICLOUD_SDK_REGION_IOTDA_AP_SOUTHEAST_10=https://iotda.ap-southwest-10.myhuaweicloud.com
 
 // windows
-set HUAWEICLOUD_SDK_REGION_ECS_cn-north-99=https://ecs.cn-north-99.myhuaweicloud.com
-set HUAWEICLOUD_SDK_REGION_IOTDA_ap-southwest-10=https://iotda.ap-southwest-10.myhuaweicloud.com
+set HUAWEICLOUD_SDK_REGION_ECS_CN_NORTH_99=https://ecs.cn-north-99.myhuaweicloud.com
+set HUAWEICLOUD_SDK_REGION_IOTDA_AP_SOUTHEAST_10=https://iotda.ap-southwest-10.myhuaweicloud.com
 ```
 
 ###### 3.3.2.2 Profile

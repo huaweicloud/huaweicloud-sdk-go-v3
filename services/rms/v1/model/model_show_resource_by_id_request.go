@@ -9,10 +9,10 @@ import (
 // Request Object
 type ShowResourceByIdRequest struct {
 
-	// 云服务英文简写
+	// 云服务名称
 	Provider string `json:"provider"`
 
-	// 云服务资源类型名称
+	// 资源类型名称
 	Type string `json:"type"`
 
 	// 资源ID

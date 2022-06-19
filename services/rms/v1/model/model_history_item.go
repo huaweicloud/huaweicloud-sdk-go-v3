@@ -9,7 +9,7 @@ import (
 // 资源历史
 type HistoryItem struct {
 
-	// 租户id
+	// 用户id
 	DomainId *string `json:"domain_id,omitempty"`
 
 	// 资源id

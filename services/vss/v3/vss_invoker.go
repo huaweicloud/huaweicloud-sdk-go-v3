@@ -77,6 +77,30 @@ func (i *UpdateDomainSettingsInvoker) Invoke() (*model.UpdateDomainSettingsRespo
 	}
 }
 
+type DownloadTaskReportInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadTaskReportInvoker) Invoke() (*model.DownloadTaskReportResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadTaskReportResponse), nil
+	}
+}
+
+type ExecuteGenerateReportInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteGenerateReportInvoker) Invoke() (*model.ExecuteGenerateReportResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteGenerateReportResponse), nil
+	}
+}
+
 type ListBusinessRisksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,6 +122,18 @@ func (i *ListPortResultsInvoker) Invoke() (*model.ListPortResultsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListPortResultsResponse), nil
+	}
+}
+
+type ShowReportStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReportStatusInvoker) Invoke() (*model.ShowReportStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReportStatusResponse), nil
 	}
 }
 

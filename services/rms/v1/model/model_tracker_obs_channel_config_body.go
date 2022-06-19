@@ -12,7 +12,7 @@ type TrackerObsChannelConfigBody struct {
 	// OBS桶名称
 	BucketName string `json:"bucket_name"`
 
-	// region id
+	// 区域id
 	RegionId string `json:"region_id"`
 }
 

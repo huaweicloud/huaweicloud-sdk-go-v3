@@ -12,7 +12,7 @@ type PolicyFilterDefinition struct {
 	// 区域ID
 	RegionId *string `json:"region_id,omitempty"`
 
-	// 资源服务
+	// 云服务名称
 	ResourceProvider *string `json:"resource_provider,omitempty"`
 
 	// 资源类型

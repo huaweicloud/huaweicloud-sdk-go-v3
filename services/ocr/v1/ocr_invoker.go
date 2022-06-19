@@ -161,6 +161,18 @@ func (i *RecognizeIdCardInvoker) Invoke() (*model.RecognizeIdCardResponse, error
 	}
 }
 
+type RecognizeIdDocumentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeIdDocumentInvoker) Invoke() (*model.RecognizeIdDocumentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeIdDocumentResponse), nil
+	}
+}
+
 type RecognizeInsurancePolicyInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -185,6 +185,78 @@ func (i *UpdatePolicyAssignmentInvoker) Invoke() (*model.UpdatePolicyAssignmentR
 	}
 }
 
+type CreateStoredQueryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateStoredQueryInvoker) Invoke() (*model.CreateStoredQueryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateStoredQueryResponse), nil
+	}
+}
+
+type DeleteStoredQueryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteStoredQueryInvoker) Invoke() (*model.DeleteStoredQueryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteStoredQueryResponse), nil
+	}
+}
+
+type ListStoredQueriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStoredQueriesInvoker) Invoke() (*model.ListStoredQueriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStoredQueriesResponse), nil
+	}
+}
+
+type RunQueryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunQueryInvoker) Invoke() (*model.RunQueryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunQueryResponse), nil
+	}
+}
+
+type ShowStoredQueryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStoredQueryInvoker) Invoke() (*model.ShowStoredQueryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStoredQueryResponse), nil
+	}
+}
+
+type UpdateStoredQueryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateStoredQueryInvoker) Invoke() (*model.UpdateStoredQueryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateStoredQueryResponse), nil
+	}
+}
+
 type ListRegionsInvoker struct {
 	*invoker.BaseInvoker
 }

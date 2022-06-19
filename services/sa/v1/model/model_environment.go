@@ -9,10 +9,10 @@ import (
 type Environment struct {
 
 	// 环境供应商，HWCP/HWC/AWS/Azure/GCP等。
-	Type *string `json:"type,omitempty"`
+	Type string `json:"type"`
 
 	// 租户账号ID，用来标识事件所属租户。
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId string `json:"domain_id"`
 
 	// 租户项目ID，用来标识事件所属项目区域。
 	ProjectId *string `json:"project_id,omitempty"`

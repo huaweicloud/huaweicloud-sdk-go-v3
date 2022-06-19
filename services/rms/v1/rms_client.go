@@ -349,9 +349,141 @@ func (c *RmsClient) UpdatePolicyAssignmentInvoker(request *model.UpdatePolicyAss
 	return &UpdatePolicyAssignmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListRegions 查询租户可见的区域
+// CreateStoredQuery 创建高级查询
 //
-// 查询租户可见的区域
+// Create Resource Query Language
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RmsClient) CreateStoredQuery(request *model.CreateStoredQueryRequest) (*model.CreateStoredQueryResponse, error) {
+	requestDef := GenReqDefForCreateStoredQuery()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateStoredQueryResponse), nil
+	}
+}
+
+// CreateStoredQueryInvoker 创建高级查询
+func (c *RmsClient) CreateStoredQueryInvoker(request *model.CreateStoredQueryRequest) *CreateStoredQueryInvoker {
+	requestDef := GenReqDefForCreateStoredQuery()
+	return &CreateStoredQueryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteStoredQuery 删除资源查询
+//
+// Select resources by SQL
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RmsClient) DeleteStoredQuery(request *model.DeleteStoredQueryRequest) (*model.DeleteStoredQueryResponse, error) {
+	requestDef := GenReqDefForDeleteStoredQuery()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteStoredQueryResponse), nil
+	}
+}
+
+// DeleteStoredQueryInvoker 删除资源查询
+func (c *RmsClient) DeleteStoredQueryInvoker(request *model.DeleteStoredQueryRequest) *DeleteStoredQueryInvoker {
+	requestDef := GenReqDefForDeleteStoredQuery()
+	return &DeleteStoredQueryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListStoredQueries 列出高级查询
+//
+// List Resource Query Language
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RmsClient) ListStoredQueries(request *model.ListStoredQueriesRequest) (*model.ListStoredQueriesResponse, error) {
+	requestDef := GenReqDefForListStoredQueries()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListStoredQueriesResponse), nil
+	}
+}
+
+// ListStoredQueriesInvoker 列出高级查询
+func (c *RmsClient) ListStoredQueriesInvoker(request *model.ListStoredQueriesRequest) *ListStoredQueriesInvoker {
+	requestDef := GenReqDefForListStoredQueries()
+	return &ListStoredQueriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunQuery 运行高级查询
+//
+// Run Resource Query Language
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RmsClient) RunQuery(request *model.RunQueryRequest) (*model.RunQueryResponse, error) {
+	requestDef := GenReqDefForRunQuery()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunQueryResponse), nil
+	}
+}
+
+// RunQueryInvoker 运行高级查询
+func (c *RmsClient) RunQueryInvoker(request *model.RunQueryRequest) *RunQueryInvoker {
+	requestDef := GenReqDefForRunQuery()
+	return &RunQueryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowStoredQuery 查询单个高级查询
+//
+// Show Resource Query Language
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RmsClient) ShowStoredQuery(request *model.ShowStoredQueryRequest) (*model.ShowStoredQueryResponse, error) {
+	requestDef := GenReqDefForShowStoredQuery()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStoredQueryResponse), nil
+	}
+}
+
+// ShowStoredQueryInvoker 查询单个高级查询
+func (c *RmsClient) ShowStoredQueryInvoker(request *model.ShowStoredQueryRequest) *ShowStoredQueryInvoker {
+	requestDef := GenReqDefForShowStoredQuery()
+	return &ShowStoredQueryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateStoredQuery 更新单个高级查询
+//
+// Update Resource Query Language
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RmsClient) UpdateStoredQuery(request *model.UpdateStoredQueryRequest) (*model.UpdateStoredQueryResponse, error) {
+	requestDef := GenReqDefForUpdateStoredQuery()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateStoredQueryResponse), nil
+	}
+}
+
+// UpdateStoredQueryInvoker 更新单个高级查询
+func (c *RmsClient) UpdateStoredQueryInvoker(request *model.UpdateStoredQueryRequest) *UpdateStoredQueryInvoker {
+	requestDef := GenReqDefForUpdateStoredQuery()
+	return &UpdateStoredQueryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRegions 查询用户可见的区域
+//
+// 查询用户可见的区域
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -365,7 +497,7 @@ func (c *RmsClient) ListRegions(request *model.ListRegionsRequest) (*model.ListR
 	}
 }
 
-// ListRegionsInvoker 查询租户可见的区域
+// ListRegionsInvoker 查询用户可见的区域
 func (c *RmsClient) ListRegionsInvoker(request *model.ListRegionsRequest) *ListRegionsInvoker {
 	requestDef := GenReqDefForListRegions()
 	return &ListRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -395,7 +527,7 @@ func (c *RmsClient) ShowResourceRelationsInvoker(request *model.ShowResourceRela
 
 // ListAllResources 列举所有资源
 //
-// 返回当前租户下所有资源，需要当前用户有rms:resources:list权限。
+// 返回当前用户下所有资源，需要当前用户有rms:resources:list权限。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.

@@ -14,7 +14,7 @@ type Shares struct {
 	// SFS Turbo文件系统的版本号。
 	Version *string `json:"version,omitempty"`
 
-	// SFS Turbo文件系统可用容量，单位GB。
+	// SFS Turbo文件系统剩余容量，单位GB。
 	AvailCapacity *string `json:"avail_capacity,omitempty"`
 
 	// SFS Turbo文件系统所在可用区编码。
@@ -59,10 +59,10 @@ type Shares struct {
 	// SFS Turbo文件系统总容量，单位GB。
 	Size *string `json:"size,omitempty"`
 
-	// SFS Turbo文件系统的状态
+	// SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'400'表示已删除，'303'表示创建失败。
 	Status *string `json:"status,omitempty"`
 
-	// SFS Turbo文件系统的子状态
+	// SFS Turbo文件系统的子状态。'121'表示扩容中，'221'表示扩容成功，'321'表示扩容失败。
 	SubStatus *string `json:"sub_status,omitempty"`
 
 	// 用户指定的子网的网络ID。

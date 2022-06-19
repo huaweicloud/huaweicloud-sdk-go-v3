@@ -12,7 +12,7 @@ type ListCertificatesRequest struct {
 	// 每页条目数量，取值如下： - 10：每页显示10条证书信息。 - 20：每页显示20条证书信息。 - 50：每页显示50条证书信息。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 偏移量。取值范围为1~30。
+	// 偏移量。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 排序方式。根据排序参数sort_key进行排序，取值如下： - ASC：升序。 - DESC：降序。

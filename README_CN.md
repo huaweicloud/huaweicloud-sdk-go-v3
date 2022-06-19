@@ -389,18 +389,20 @@ cred := basic.NewCredentialsBuilder().
 
 ###### 3.3.2.1 环境变量
 
-通过环境变量配置，格式为`HUAWEICLOUD_SDK_REGION_{SERIVCE_NAME}_{region_id}={endpoint}`
+通过环境变量配置，格式为`HUAWEICLOUD_SDK_REGION_{SERIVCE_NAME}_{REGION_ID}={endpoint}`
+
+注：环境变量名全大写，中划线替换为下划线
 
 ```
 // 以ECS和IoTDA服务为例
 
 // linux
-export HUAWEICLOUD_SDK_REGION_ECS_cn-north-99=https://ecs.cn-north-99.myhuaweicloud.com
-export HUAWEICLOUD_SDK_REGION_IOTDA_ap-southwest-10=https://iotda.ap-southwest-10.myhuaweicloud.com
+export HUAWEICLOUD_SDK_REGION_ECS_CN_NORTH_99=https://ecs.cn-north-99.myhuaweicloud.com
+export HUAWEICLOUD_SDK_REGION_IOTDA_AP_SOUTHEAST_10=https://iotda.ap-southwest-10.myhuaweicloud.com
 
 // windows
-set HUAWEICLOUD_SDK_REGION_ECS_cn-north-99=https://ecs.cn-north-99.myhuaweicloud.com
-set HUAWEICLOUD_SDK_REGION_IOTDA_ap-southwest-10=https://iotda.ap-southwest-10.myhuaweicloud.com
+set HUAWEICLOUD_SDK_REGION_ECS_CN_NORTH_99=https://ecs.cn-north-99.myhuaweicloud.com
+set HUAWEICLOUD_SDK_REGION_IOTDA_AP_SOUTHEAST_10=https://iotda.ap-southwest-10.myhuaweicloud.com
 ```
 
 ###### 3.3.2.2 文件配置

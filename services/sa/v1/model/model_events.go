@@ -9,7 +9,7 @@ import (
 type Events struct {
 
 	// event 批量导入
-	Events *[]Event `json:"events,omitempty"`
+	Events []Event `json:"events"`
 }
 
 func (o Events) String() string {

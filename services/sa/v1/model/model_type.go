@@ -9,7 +9,7 @@ import (
 type Type struct {
 
 	// 事件所属业务领域标签，可选类别如下： attack – 攻击 vulnerability – 漏洞 compliance check – 合规检查 risk - 风险 public opinion - 舆情 illegal&violation - 违法违规 security bulletin - 公告
-	Business *string `json:"business,omitempty"`
+	Business string `json:"business"`
 
 	// 类别，推荐使用预定义的类型分类。
 	Category *string `json:"category,omitempty"`

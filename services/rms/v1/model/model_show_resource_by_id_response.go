@@ -21,13 +21,13 @@ type ShowResourceByIdResponse struct {
 	// 资源类型
 	Type *string `json:"type,omitempty"`
 
-	// region id
+	// 区域id
 	RegionId *string `json:"region_id,omitempty"`
 
-	// Openstack中的project id
+	// Openstack中的项目id
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// Openstack中的project名称
+	// Openstack中的项目名称
 	ProjectName *string `json:"project_name,omitempty"`
 
 	// 企业项目id
