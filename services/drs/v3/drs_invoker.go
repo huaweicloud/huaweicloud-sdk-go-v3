@@ -329,6 +329,18 @@ func (i *CreateCompareTaskInvoker) Invoke() (*model.CreateCompareTaskResponse, e
 	}
 }
 
+type ListAvailableZoneInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAvailableZoneInvoker) Invoke() (*model.ListAvailableZoneResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAvailableZoneResponse), nil
+	}
+}
+
 type ListCompareResultInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -398,5 +410,17 @@ func (i *UpdateParamsInvoker) Invoke() (*model.UpdateParamsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateParamsResponse), nil
+	}
+}
+
+type UpdateTuningParamsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTuningParamsInvoker) Invoke() (*model.UpdateTuningParamsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTuningParamsResponse), nil
 	}
 }

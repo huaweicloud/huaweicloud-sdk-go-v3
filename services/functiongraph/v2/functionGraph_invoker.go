@@ -29,6 +29,30 @@ func (i *AsyncInvokeReservedFunctionInvoker) Invoke() (*model.AsyncInvokeReserve
 	}
 }
 
+type BatchDeleteFunctionTriggersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteFunctionTriggersInvoker) Invoke() (*model.BatchDeleteFunctionTriggersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteFunctionTriggersResponse), nil
+	}
+}
+
+type BatchDeleteWorkflowsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteWorkflowsInvoker) Invoke() (*model.BatchDeleteWorkflowsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteWorkflowsResponse), nil
+	}
+}
+
 type CancelAsyncInvocationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -77,6 +101,18 @@ func (i *CreateFunctionInvoker) Invoke() (*model.CreateFunctionResponse, error) 
 	}
 }
 
+type CreateFunctionTriggerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFunctionTriggerInvoker) Invoke() (*model.CreateFunctionTriggerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFunctionTriggerResponse), nil
+	}
+}
+
 type CreateFunctionVersionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,6 +134,18 @@ func (i *CreateVersionAliasInvoker) Invoke() (*model.CreateVersionAliasResponse,
 		return nil, err
 	} else {
 		return result.(*model.CreateVersionAliasResponse), nil
+	}
+}
+
+type CreateWorkflowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateWorkflowInvoker) Invoke() (*model.CreateWorkflowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateWorkflowResponse), nil
 	}
 }
 
@@ -146,6 +194,18 @@ func (i *DeleteFunctionAsyncInvokeConfigInvoker) Invoke() (*model.DeleteFunction
 		return nil, err
 	} else {
 		return result.(*model.DeleteFunctionAsyncInvokeConfigResponse), nil
+	}
+}
+
+type DeleteFunctionTriggerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFunctionTriggerInvoker) Invoke() (*model.DeleteFunctionTriggerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFunctionTriggerResponse), nil
 	}
 }
 
@@ -269,6 +329,18 @@ func (i *ListFunctionStatisticsInvoker) Invoke() (*model.ListFunctionStatisticsR
 	}
 }
 
+type ListFunctionTriggersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFunctionTriggersInvoker) Invoke() (*model.ListFunctionTriggersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFunctionTriggersResponse), nil
+	}
+}
+
 type ListFunctionVersionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -326,6 +398,42 @@ func (i *ListVersionAliasesInvoker) Invoke() (*model.ListVersionAliasesResponse,
 		return nil, err
 	} else {
 		return result.(*model.ListVersionAliasesResponse), nil
+	}
+}
+
+type ListWorkflowExecutionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWorkflowExecutionsInvoker) Invoke() (*model.ListWorkflowExecutionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWorkflowExecutionsResponse), nil
+	}
+}
+
+type ListWorkflowsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWorkflowsInvoker) Invoke() (*model.ListWorkflowsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWorkflowsResponse), nil
+	}
+}
+
+type RetryWorkFlowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RetryWorkFlowInvoker) Invoke() (*model.RetryWorkFlowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RetryWorkFlowResponse), nil
 	}
 }
 
@@ -389,6 +497,18 @@ func (i *ShowFunctionConfigInvoker) Invoke() (*model.ShowFunctionConfigResponse,
 	}
 }
 
+type ShowFunctionTriggerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFunctionTriggerInvoker) Invoke() (*model.ShowFunctionTriggerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFunctionTriggerResponse), nil
+	}
+}
+
 type ShowLtsLogDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -398,6 +518,18 @@ func (i *ShowLtsLogDetailsInvoker) Invoke() (*model.ShowLtsLogDetailsResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowLtsLogDetailsResponse), nil
+	}
+}
+
+type ShowTenantMetricInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTenantMetricInvoker) Invoke() (*model.ShowTenantMetricResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTenantMetricResponse), nil
 	}
 }
 
@@ -422,6 +554,78 @@ func (i *ShowVersionAliasInvoker) Invoke() (*model.ShowVersionAliasResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowVersionAliasResponse), nil
+	}
+}
+
+type ShowWorkFlowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWorkFlowInvoker) Invoke() (*model.ShowWorkFlowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWorkFlowResponse), nil
+	}
+}
+
+type ShowWorkFlowMetricInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWorkFlowMetricInvoker) Invoke() (*model.ShowWorkFlowMetricResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWorkFlowMetricResponse), nil
+	}
+}
+
+type ShowWorkflowExecutionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWorkflowExecutionInvoker) Invoke() (*model.ShowWorkflowExecutionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWorkflowExecutionResponse), nil
+	}
+}
+
+type StartSyncWorkflowExecutionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartSyncWorkflowExecutionInvoker) Invoke() (*model.StartSyncWorkflowExecutionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartSyncWorkflowExecutionResponse), nil
+	}
+}
+
+type StartWorkflowExecutionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartWorkflowExecutionInvoker) Invoke() (*model.StartWorkflowExecutionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartWorkflowExecutionResponse), nil
+	}
+}
+
+type StopWorkFlowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopWorkFlowInvoker) Invoke() (*model.StopWorkFlowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopWorkFlowResponse), nil
 	}
 }
 
@@ -509,78 +713,6 @@ func (i *UpdateTracingInvoker) Invoke() (*model.UpdateTracingResponse, error) {
 	}
 }
 
-type UpdateVersionAliasInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateVersionAliasInvoker) Invoke() (*model.UpdateVersionAliasResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateVersionAliasResponse), nil
-	}
-}
-
-type BatchDeleteFunctionTriggersInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDeleteFunctionTriggersInvoker) Invoke() (*model.BatchDeleteFunctionTriggersResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDeleteFunctionTriggersResponse), nil
-	}
-}
-
-type CreateFunctionTriggerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateFunctionTriggerInvoker) Invoke() (*model.CreateFunctionTriggerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateFunctionTriggerResponse), nil
-	}
-}
-
-type DeleteFunctionTriggerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteFunctionTriggerInvoker) Invoke() (*model.DeleteFunctionTriggerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteFunctionTriggerResponse), nil
-	}
-}
-
-type ListFunctionTriggersInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListFunctionTriggersInvoker) Invoke() (*model.ListFunctionTriggersResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListFunctionTriggersResponse), nil
-	}
-}
-
-type ShowFunctionTriggerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowFunctionTriggerInvoker) Invoke() (*model.ShowFunctionTriggerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowFunctionTriggerResponse), nil
-	}
-}
-
 type UpdateTriggerInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -593,147 +725,15 @@ func (i *UpdateTriggerInvoker) Invoke() (*model.UpdateTriggerResponse, error) {
 	}
 }
 
-type BatchDeleteWorkflowsInvoker struct {
+type UpdateVersionAliasInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *BatchDeleteWorkflowsInvoker) Invoke() (*model.BatchDeleteWorkflowsResponse, error) {
+func (i *UpdateVersionAliasInvoker) Invoke() (*model.UpdateVersionAliasResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.BatchDeleteWorkflowsResponse), nil
-	}
-}
-
-type CreateWorkflowInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateWorkflowInvoker) Invoke() (*model.CreateWorkflowResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateWorkflowResponse), nil
-	}
-}
-
-type ListWorkflowExecutionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListWorkflowExecutionsInvoker) Invoke() (*model.ListWorkflowExecutionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListWorkflowExecutionsResponse), nil
-	}
-}
-
-type ListWorkflowsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListWorkflowsInvoker) Invoke() (*model.ListWorkflowsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListWorkflowsResponse), nil
-	}
-}
-
-type RetryWorkFlowInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RetryWorkFlowInvoker) Invoke() (*model.RetryWorkFlowResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RetryWorkFlowResponse), nil
-	}
-}
-
-type ShowTenantMetricInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowTenantMetricInvoker) Invoke() (*model.ShowTenantMetricResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowTenantMetricResponse), nil
-	}
-}
-
-type ShowWorkFlowInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowWorkFlowInvoker) Invoke() (*model.ShowWorkFlowResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowWorkFlowResponse), nil
-	}
-}
-
-type ShowWorkFlowMetricInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowWorkFlowMetricInvoker) Invoke() (*model.ShowWorkFlowMetricResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowWorkFlowMetricResponse), nil
-	}
-}
-
-type ShowWorkflowExecutionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowWorkflowExecutionInvoker) Invoke() (*model.ShowWorkflowExecutionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowWorkflowExecutionResponse), nil
-	}
-}
-
-type StartSyncWorkflowExecutionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StartSyncWorkflowExecutionInvoker) Invoke() (*model.StartSyncWorkflowExecutionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StartSyncWorkflowExecutionResponse), nil
-	}
-}
-
-type StartWorkflowExecutionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StartWorkflowExecutionInvoker) Invoke() (*model.StartWorkflowExecutionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StartWorkflowExecutionResponse), nil
-	}
-}
-
-type StopWorkFlowInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StopWorkFlowInvoker) Invoke() (*model.StopWorkFlowResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StopWorkFlowResponse), nil
+		return result.(*model.UpdateVersionAliasResponse), nil
 	}
 }
 

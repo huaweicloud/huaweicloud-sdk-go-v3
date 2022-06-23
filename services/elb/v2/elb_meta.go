@@ -695,6 +695,18 @@ func GenReqDefForListListeners() *def.HttpRequestDef {
 		WithJsonTag("description").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("LoadbalancerId").
+		WithJsonTag("loadbalancer_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConnectionLimit").
+		WithJsonTag("connection_limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AdminStateUp").
+		WithJsonTag("admin_state_up").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("DefaultPoolId").
 		WithJsonTag("default_pool_id").
 		WithLocationType(def.Query))
@@ -719,20 +731,16 @@ func GenReqDefForListListeners() *def.HttpRequestDef {
 		WithJsonTag("tls_ciphers_policy").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("MemberTimeout").
-		WithJsonTag("member_timeout").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ClientTimeout").
-		WithJsonTag("client_timeout").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("KeepaliveTimeout").
-		WithJsonTag("keepalive_timeout").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TlsContainerId").
 		WithJsonTag("tls_container_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Http2Enable").
+		WithJsonTag("http2_enable").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

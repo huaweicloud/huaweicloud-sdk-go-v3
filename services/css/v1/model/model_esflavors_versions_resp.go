@@ -9,11 +9,14 @@ import (
 // 引擎列表。
 type EsflavorsVersionsResp struct {
 
-	// 引擎版本，支持5.5.1、6.2.3、6.5.4、7.1.1、7.6.2、7.9.3。
+	// Esasticsearch引擎版本号。详细请参考CSS[支持的集群版本](css_03_0056.xml)。
 	Version *string `json:"version,omitempty"`
 
 	// 规格列表。
 	Flavors *[]EsflavorsVersionsFlavorsResp `json:"flavors,omitempty"`
+
+	// 实例类型，包括为ess、ess-cold、ess-master和ess-client。
+	Type *string `json:"type,omitempty"`
 }
 
 func (o EsflavorsVersionsResp) String() string {

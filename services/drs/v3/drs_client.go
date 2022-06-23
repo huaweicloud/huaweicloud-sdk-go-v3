@@ -555,7 +555,8 @@ func (c *DrsClient) BatchUpdateUserInvoker(request *model.BatchUpdateUserRequest
 
 // BatchValidateClustersConnections 批量测试连接-集群模式
 //
-// 批量测试连接（集群模式）。
+// - 批量测试连接（集群模式）。
+// - 主备任务测试连接
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -617,6 +618,28 @@ func (c *DrsClient) CreateCompareTask(request *model.CreateCompareTaskRequest) (
 func (c *DrsClient) CreateCompareTaskInvoker(request *model.CreateCompareTaskRequest) *CreateCompareTaskInvoker {
 	requestDef := GenReqDefForCreateCompareTask()
 	return &CreateCompareTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAvailableZone 查询规格未售罄的可用区
+//
+// 查询规格未售罄的可用区
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DrsClient) ListAvailableZone(request *model.ListAvailableZoneRequest) (*model.ListAvailableZoneResponse, error) {
+	requestDef := GenReqDefForListAvailableZone()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAvailableZoneResponse), nil
+	}
+}
+
+// ListAvailableZoneInvoker 查询规格未售罄的可用区
+func (c *DrsClient) ListAvailableZoneInvoker(request *model.ListAvailableZoneRequest) *ListAvailableZoneInvoker {
+	requestDef := GenReqDefForListAvailableZone()
+	return &ListAvailableZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListCompareResult 查询对比结果
@@ -749,4 +772,26 @@ func (c *DrsClient) UpdateParams(request *model.UpdateParamsRequest) (*model.Upd
 func (c *DrsClient) UpdateParamsInvoker(request *model.UpdateParamsRequest) *UpdateParamsInvoker {
 	requestDef := GenReqDefForUpdateParams()
 	return &UpdateParamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTuningParams 高级设置
+//
+// 修改调优参数的值。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DrsClient) UpdateTuningParams(request *model.UpdateTuningParamsRequest) (*model.UpdateTuningParamsResponse, error) {
+	requestDef := GenReqDefForUpdateTuningParams()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTuningParamsResponse), nil
+	}
+}
+
+// UpdateTuningParamsInvoker 高级设置
+func (c *DrsClient) UpdateTuningParamsInvoker(request *model.UpdateTuningParamsRequest) *UpdateTuningParamsInvoker {
+	requestDef := GenReqDefForUpdateTuningParams()
+	return &UpdateTuningParamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

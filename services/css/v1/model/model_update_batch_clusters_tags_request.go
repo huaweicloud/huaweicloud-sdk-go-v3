@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateBatchClustersTagsRequest struct {
 
-	// 指定待添加的集群ID。
+	// 指定批量添加标签的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *BatchAddOrDeleteTagOnClusterReq `json:"body,omitempty"`

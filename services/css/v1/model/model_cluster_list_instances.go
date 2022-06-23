@@ -26,6 +26,9 @@ type ClusterListInstances struct {
 
 	// 节点所属AZ信息。
 	AzCode *string `json:"azCode,omitempty"`
+
+	// 实例ip信息。
+	Ip *string `json:"ip,omitempty"`
 }
 
 func (o ClusterListInstances) String() string {

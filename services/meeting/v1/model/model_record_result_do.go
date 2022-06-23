@@ -41,6 +41,9 @@ type RecordResultDo struct {
 
 	// 录播文件是否可观看。
 	Available *bool `json:"available,omitempty"`
+
+	// * 录播鉴权方式，在录播类型为:录播、直播+录播时有效 * 0： 可通过链接观看/下载 * 1： 企业用户可观看/下载 * 2： 与会者可观看/下载
+	RecordAuthType *int32 `json:"recordAuthType,omitempty"`
 }
 
 func (o RecordResultDo) String() string {

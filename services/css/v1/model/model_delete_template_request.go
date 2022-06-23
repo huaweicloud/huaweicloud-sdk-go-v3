@@ -8,10 +8,6 @@ import (
 
 // Request Object
 type DeleteTemplateRequest struct {
-
-	// 指定待删除的集群ID。
-	ClusterId string `json:"cluster_id"`
-
 	Body *DeleteTemplateReq `json:"body,omitempty"`
 }
 

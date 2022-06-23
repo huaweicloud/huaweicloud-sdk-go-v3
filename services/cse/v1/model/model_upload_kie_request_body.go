@@ -14,7 +14,7 @@ import (
 type UploadKieRequestBody struct {
 
 	// 导入文件内容的格式必须为键值对映射，例如:{\"data\":[{\"key1\":\"value1\",\"key2\":\"value2\"}]}}
-	UploadFile *def.FilePart `json:"UploadFile"`
+	UploadFile *def.FilePart `json:"upload_file"`
 }
 
 func (o UploadKieRequestBody) String() string {

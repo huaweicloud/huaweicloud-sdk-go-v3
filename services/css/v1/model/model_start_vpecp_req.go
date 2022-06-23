@@ -8,8 +8,8 @@ import (
 
 type StartVpecpReq struct {
 
-	// 内网域名。
-	EndpointWithDnsName string `json:"endpointWithDnsName"`
+	// 开启终端节点。
+	EndpointWithDnsName bool `json:"endpointWithDnsName"`
 }
 
 func (o StartVpecpReq) String() string {

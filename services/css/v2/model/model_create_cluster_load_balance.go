@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群负载均衡信息。
+// 终端节点服务信息。
 type CreateClusterLoadBalance struct {
 
 	// 是否开启内网域名。

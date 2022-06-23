@@ -9,7 +9,7 @@ import (
 // Request Object
 type StopPipelineRequest struct {
 
-	// 指定待停止的集群ID。
+	// 指定停止pipeline的集群ID。
 	ClusterId string `json:"cluster_id"`
 }
 

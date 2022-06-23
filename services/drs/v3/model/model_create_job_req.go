@@ -66,6 +66,12 @@ type CreateJobReq struct {
 
 	// 任务处于异常状态一段时间后，将会自动结束，单位为天。(范围14-100)，不传默认为14天。
 	ExpiredDays *string `json:"expired_days,omitempty"`
+
+	// 主备任务主任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
+	MasterAz *string `json:"master_az,omitempty"`
+
+	// 主备任务备任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
+	SlaveAz *string `json:"slave_az,omitempty"`
 }
 
 func (o CreateJobReq) String() string {

@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateLogSettingRequest struct {
 
-	// 指定待更改的集群ID。
+	// 指定更改日志基础配置的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *UpdateLogSettingReq `json:"body,omitempty"`

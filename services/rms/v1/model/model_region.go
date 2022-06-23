@@ -12,7 +12,7 @@ type Region struct {
 	// 区域ID
 	RegionId *string `json:"region_id,omitempty"`
 
-	// 显示名称
+	// 区域显示名称
 	DisplayName *string `json:"display_name,omitempty"`
 }
 

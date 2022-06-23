@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateYmlsRequest struct {
 
-	// 指定待更改的集群ID。
+	// 指定修改参数配置的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *UpdateYmlsReq `json:"body,omitempty"`

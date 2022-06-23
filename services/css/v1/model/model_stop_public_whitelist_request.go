@@ -9,7 +9,7 @@ import (
 // Request Object
 type StopPublicWhitelistRequest struct {
 
-	// 指定查询集群ID。
+	// 指定关闭公网访问控制白名单集群ID。
 	ClusterId string `json:"cluster_id"`
 }
 

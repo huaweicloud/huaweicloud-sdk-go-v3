@@ -16,8 +16,7 @@ type CreateConfigurationRequestBody struct {
 
 	Datastore *CreateConfigurationDatastoreOption `json:"datastore"`
 
-	// 参数值对象，用户基于默认参数模板自定义的参数值。默认不修改参数值。
-	Values map[string]string `json:"values,omitempty"`
+	Values *CreateConfigurationValuesOption `json:"values,omitempty"`
 }
 
 func (o CreateConfigurationRequestBody) String() string {

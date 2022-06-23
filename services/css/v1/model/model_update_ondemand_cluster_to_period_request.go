@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateOndemandClusterToPeriodRequest struct {
 
-	// 指定待更改的集群ID。
+	// 指定待转包周期的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *PeriodReq `json:"body,omitempty"`

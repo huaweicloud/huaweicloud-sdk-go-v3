@@ -53,6 +53,9 @@ type SyncPolicyReq struct {
 
 	// PostgreSQL同步全量阶段是否使用快照模式导出，不填默认为false
 	ExportSnapshot *bool `json:"export_snapshot,omitempty"`
+
+	// 复制槽名称，gaussdbv5ha-to-kafka主备任务必填
+	SlotName *string `json:"slot_name,omitempty"`
 }
 
 func (o SyncPolicyReq) String() string {

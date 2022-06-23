@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateClusterResponse struct {
-	Schema         *CreateClusterResp `json:"schema,omitempty"`
+	Cluster        *CreateClusterResp `json:"cluster,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

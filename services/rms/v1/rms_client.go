@@ -351,7 +351,7 @@ func (c *RmsClient) UpdatePolicyAssignmentInvoker(request *model.UpdatePolicyAss
 
 // CreateStoredQuery 创建高级查询
 //
-// Create Resource Query Language
+// 创建新的高级查询
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -371,9 +371,9 @@ func (c *RmsClient) CreateStoredQueryInvoker(request *model.CreateStoredQueryReq
 	return &CreateStoredQueryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteStoredQuery 删除资源查询
+// DeleteStoredQuery 删除高级查询
 //
-// Select resources by SQL
+// 删除单个高级查询
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -387,7 +387,7 @@ func (c *RmsClient) DeleteStoredQuery(request *model.DeleteStoredQueryRequest) (
 	}
 }
 
-// DeleteStoredQueryInvoker 删除资源查询
+// DeleteStoredQueryInvoker 删除高级查询
 func (c *RmsClient) DeleteStoredQueryInvoker(request *model.DeleteStoredQueryRequest) *DeleteStoredQueryInvoker {
 	requestDef := GenReqDefForDeleteStoredQuery()
 	return &DeleteStoredQueryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -395,7 +395,7 @@ func (c *RmsClient) DeleteStoredQueryInvoker(request *model.DeleteStoredQueryReq
 
 // ListStoredQueries 列出高级查询
 //
-// List Resource Query Language
+// 列举所有高级查询
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -417,7 +417,7 @@ func (c *RmsClient) ListStoredQueriesInvoker(request *model.ListStoredQueriesReq
 
 // RunQuery 运行高级查询
 //
-// Run Resource Query Language
+// 执行高级查询
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -461,7 +461,7 @@ func (c *RmsClient) ShowStoredQueryInvoker(request *model.ShowStoredQueryRequest
 
 // UpdateStoredQuery 更新单个高级查询
 //
-// Update Resource Query Language
+// 更新自定义查询
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.

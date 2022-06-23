@@ -23,7 +23,7 @@ type StoredQuery struct {
 	// ResourceQL 创建时间
 	Created *string `json:"created,omitempty"`
 
-	// ResouerceQL 更新时间
+	// ResourceQL 更新时间
 	Updated *string `json:"updated,omitempty"`
 }
 

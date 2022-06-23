@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 弹性Ip信息
+// 公网访问信息。
 type CreateClusterPublicIpReq struct {
 	Eip *CreateClusterPublicEip `json:"eip"`
 

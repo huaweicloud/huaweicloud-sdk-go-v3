@@ -9,7 +9,7 @@ import (
 // Request Object
 type CreateCnfRequest struct {
 
-	// 指定待创建的集群ID。
+	// 指定创建配置文件的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *CreateCnfReq `json:"body,omitempty"`

@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateClusterNameRequest struct {
 
-	// 指定待更改的集群ID。
+	// 指定待更改集群名称的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *UpdateClusterNameReq `json:"body,omitempty"`

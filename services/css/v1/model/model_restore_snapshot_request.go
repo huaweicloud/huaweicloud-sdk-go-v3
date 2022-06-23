@@ -9,7 +9,7 @@ import (
 // Request Object
 type RestoreSnapshotRequest struct {
 
-	// 快照所属的集群ID。
+	// 恢复快照所属的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	// 快照ID。

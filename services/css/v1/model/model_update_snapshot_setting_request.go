@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateSnapshotSettingRequest struct {
 
-	// 指定待修改的集群ID。
+	// 指定待操作的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *UpdateSnapshotSettingReq `json:"body,omitempty"`

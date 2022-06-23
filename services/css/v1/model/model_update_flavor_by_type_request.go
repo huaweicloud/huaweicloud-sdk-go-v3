@@ -9,10 +9,10 @@ import (
 // Request Object
 type UpdateFlavorByTypeRequest struct {
 
-	// 指定待更改的集群ID。
+	// 指定待更改规格的集群ID。
 	ClusterId string `json:"cluster_id"`
 
-	// 指定待更改的集群节点类型。
+	// 指定待更改的集群节点类型。 - ess：数据节点。 - ess-cold：冷数据节点。 - ess-client：Client节点。 - ess-master：Master节点。
 	Types string `json:"types"`
 
 	Body *UpdateFlavorReq `json:"body,omitempty"`

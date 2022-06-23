@@ -17,7 +17,10 @@ type AuthorizeDomainsResponse struct {
 
 	// 返回的提示信息
 	InfoDescription *string `json:"info_description,omitempty"`
-	HttpStatusCode  int     `json:"-"`
+
+	// 域名认证使用须知
+	UsageNotice    *string `json:"usage_notice,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o AuthorizeDomainsResponse) String() string {

@@ -9,7 +9,7 @@ import (
 // Request Object
 type StopVpecpRequest struct {
 
-	// 指定待关闭的集群ID。
+	// 指定待关闭终端节点的集群ID。
 	ClusterId string `json:"cluster_id"`
 }
 

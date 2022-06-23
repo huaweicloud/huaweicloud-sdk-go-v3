@@ -14,8 +14,7 @@ type UpdateConfigurationRequestBody struct {
 	// 参数模板描述。最长256个字符，不支持!<>=&\"'特殊字符。默认为空。
 	Description *string `json:"description,omitempty"`
 
-	// 参数值对象，用户基于默认参数模板自定义的参数值。为空时不修改参数值。
-	Values map[string]string `json:"values,omitempty"`
+	Values *UpdateConfigurationValuesOption `json:"values,omitempty"`
 }
 
 func (o UpdateConfigurationRequestBody) String() string {

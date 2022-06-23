@@ -9,7 +9,7 @@ import (
 // Request Object
 type StartPublicWhitelistRequest struct {
 
-	// 指定查询集群ID。
+	// 指定开启公网访问控制白名单集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *StartPublicWhitelistReq `json:"body,omitempty"`

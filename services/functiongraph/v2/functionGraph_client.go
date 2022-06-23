@@ -64,6 +64,54 @@ func (c *FunctionGraphClient) AsyncInvokeReservedFunctionInvoker(request *model.
 	return &AsyncInvokeReservedFunctionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteFunctionTriggers 删除指定函数的所有触发器。
+//
+// 删除指定函数所有触发器设置。
+//
+// 在提供函数版本且非latest的情况下，删除对应函数版本的触发器。
+// 在提供函数别名的情况下，删除对应函数别名的触发器。
+// 在不提供函数版本（也不提供别名）或版本为latest的情况下，删除该函数所有的触发器（包括所有版本和别名）。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) BatchDeleteFunctionTriggers(request *model.BatchDeleteFunctionTriggersRequest) (*model.BatchDeleteFunctionTriggersResponse, error) {
+	requestDef := GenReqDefForBatchDeleteFunctionTriggers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteFunctionTriggersResponse), nil
+	}
+}
+
+// BatchDeleteFunctionTriggersInvoker 删除指定函数的所有触发器。
+func (c *FunctionGraphClient) BatchDeleteFunctionTriggersInvoker(request *model.BatchDeleteFunctionTriggersRequest) *BatchDeleteFunctionTriggersInvoker {
+	requestDef := GenReqDefForBatchDeleteFunctionTriggers()
+	return &BatchDeleteFunctionTriggersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteWorkflows 删除工作流列表
+//
+// 删除工作流列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) BatchDeleteWorkflows(request *model.BatchDeleteWorkflowsRequest) (*model.BatchDeleteWorkflowsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteWorkflows()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteWorkflowsResponse), nil
+	}
+}
+
+// BatchDeleteWorkflowsInvoker 删除工作流列表
+func (c *FunctionGraphClient) BatchDeleteWorkflowsInvoker(request *model.BatchDeleteWorkflowsRequest) *BatchDeleteWorkflowsInvoker {
+	requestDef := GenReqDefForBatchDeleteWorkflows()
+	return &BatchDeleteWorkflowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CancelAsyncInvocation 停止函数异步调用请求
 //
 // 停止函数异步调用请求
@@ -152,6 +200,32 @@ func (c *FunctionGraphClient) CreateFunctionInvoker(request *model.CreateFunctio
 	return &CreateFunctionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateFunctionTrigger 创建触发器。
+//
+// 创建触发器。
+//
+// - 可以创建的触发器类型包括TIMER、APIG、CTS、DDS、DMS、DIS、LTS、OBS、SMN、KAFKA。
+// - DDS和KAFKA触发器创建时默认为DISABLED状态，其他触发器默认为ACTIVE状态。
+// - TIMER、DDS、DMS、KAFKA、LTS触发器支持禁用，其他触发器不支持。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) CreateFunctionTrigger(request *model.CreateFunctionTriggerRequest) (*model.CreateFunctionTriggerResponse, error) {
+	requestDef := GenReqDefForCreateFunctionTrigger()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFunctionTriggerResponse), nil
+	}
+}
+
+// CreateFunctionTriggerInvoker 创建触发器。
+func (c *FunctionGraphClient) CreateFunctionTriggerInvoker(request *model.CreateFunctionTriggerRequest) *CreateFunctionTriggerInvoker {
+	requestDef := GenReqDefForCreateFunctionTrigger()
+	return &CreateFunctionTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateFunctionVersion 发布函数版本。
 //
 // 发布函数版本。
@@ -194,6 +268,28 @@ func (c *FunctionGraphClient) CreateVersionAlias(request *model.CreateVersionAli
 func (c *FunctionGraphClient) CreateVersionAliasInvoker(request *model.CreateVersionAliasRequest) *CreateVersionAliasInvoker {
 	requestDef := GenReqDefForCreateVersionAlias()
 	return &CreateVersionAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateWorkflow 创建工作流列表
+//
+// 创建工作流列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) CreateWorkflow(request *model.CreateWorkflowRequest) (*model.CreateWorkflowResponse, error) {
+	requestDef := GenReqDefForCreateWorkflow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateWorkflowResponse), nil
+	}
+}
+
+// CreateWorkflowInvoker 创建工作流列表
+func (c *FunctionGraphClient) CreateWorkflowInvoker(request *model.CreateWorkflowRequest) *CreateWorkflowInvoker {
+	requestDef := GenReqDefForCreateWorkflow()
+	return &CreateWorkflowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteDependency 删除依赖包
@@ -285,6 +381,28 @@ func (c *FunctionGraphClient) DeleteFunctionAsyncInvokeConfig(request *model.Del
 func (c *FunctionGraphClient) DeleteFunctionAsyncInvokeConfigInvoker(request *model.DeleteFunctionAsyncInvokeConfigRequest) *DeleteFunctionAsyncInvokeConfigInvoker {
 	requestDef := GenReqDefForDeleteFunctionAsyncInvokeConfig()
 	return &DeleteFunctionAsyncInvokeConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFunctionTrigger 删除触发器。
+//
+// 删除触发器。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) DeleteFunctionTrigger(request *model.DeleteFunctionTriggerRequest) (*model.DeleteFunctionTriggerResponse, error) {
+	requestDef := GenReqDefForDeleteFunctionTrigger()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFunctionTriggerResponse), nil
+	}
+}
+
+// DeleteFunctionTriggerInvoker 删除触发器。
+func (c *FunctionGraphClient) DeleteFunctionTriggerInvoker(request *model.DeleteFunctionTriggerRequest) *DeleteFunctionTriggerInvoker {
+	requestDef := GenReqDefForDeleteFunctionTrigger()
+	return &DeleteFunctionTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteVersionAlias 删除函数版本别名。
@@ -507,6 +625,28 @@ func (c *FunctionGraphClient) ListFunctionStatisticsInvoker(request *model.ListF
 	return &ListFunctionStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFunctionTriggers 获取指定函数的所有触发器。
+//
+// 获取指定函数的所有触发器设置。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) ListFunctionTriggers(request *model.ListFunctionTriggersRequest) (*model.ListFunctionTriggersResponse, error) {
+	requestDef := GenReqDefForListFunctionTriggers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFunctionTriggersResponse), nil
+	}
+}
+
+// ListFunctionTriggersInvoker 获取指定函数的所有触发器。
+func (c *FunctionGraphClient) ListFunctionTriggersInvoker(request *model.ListFunctionTriggersRequest) *ListFunctionTriggersInvoker {
+	requestDef := GenReqDefForListFunctionTriggers()
+	return &ListFunctionTriggersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFunctionVersions 获取指定函数的版本列表。
 //
 // 获取指定函数的版本列表。
@@ -620,6 +760,72 @@ func (c *FunctionGraphClient) ListVersionAliasesInvoker(request *model.ListVersi
 	return &ListVersionAliasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListWorkflowExecutions 获取指定函数流执行实例列表
+//
+// 获取指定函数流执行实例列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) ListWorkflowExecutions(request *model.ListWorkflowExecutionsRequest) (*model.ListWorkflowExecutionsResponse, error) {
+	requestDef := GenReqDefForListWorkflowExecutions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWorkflowExecutionsResponse), nil
+	}
+}
+
+// ListWorkflowExecutionsInvoker 获取指定函数流执行实例列表
+func (c *FunctionGraphClient) ListWorkflowExecutionsInvoker(request *model.ListWorkflowExecutionsRequest) *ListWorkflowExecutionsInvoker {
+	requestDef := GenReqDefForListWorkflowExecutions()
+	return &ListWorkflowExecutionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWorkflows 查询工作流列表
+//
+// 查询工作流列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) ListWorkflows(request *model.ListWorkflowsRequest) (*model.ListWorkflowsResponse, error) {
+	requestDef := GenReqDefForListWorkflows()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWorkflowsResponse), nil
+	}
+}
+
+// ListWorkflowsInvoker 查询工作流列表
+func (c *FunctionGraphClient) ListWorkflowsInvoker(request *model.ListWorkflowsRequest) *ListWorkflowsInvoker {
+	requestDef := GenReqDefForListWorkflows()
+	return &ListWorkflowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RetryWorkFlow 重试工作流
+//
+// 重试工作流
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) RetryWorkFlow(request *model.RetryWorkFlowRequest) (*model.RetryWorkFlowResponse, error) {
+	requestDef := GenReqDefForRetryWorkFlow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RetryWorkFlowResponse), nil
+	}
+}
+
+// RetryWorkFlowInvoker 重试工作流
+func (c *FunctionGraphClient) RetryWorkFlowInvoker(request *model.RetryWorkFlowRequest) *RetryWorkFlowInvoker {
+	requestDef := GenReqDefForRetryWorkFlow()
+	return &RetryWorkFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDependency 获取指定依赖包
 //
 // 获取指定依赖包。
@@ -730,6 +936,28 @@ func (c *FunctionGraphClient) ShowFunctionConfigInvoker(request *model.ShowFunct
 	return &ShowFunctionConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFunctionTrigger 获取指定触发器的信息。
+//
+// 获取特定触发器的信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowFunctionTrigger(request *model.ShowFunctionTriggerRequest) (*model.ShowFunctionTriggerResponse, error) {
+	requestDef := GenReqDefForShowFunctionTrigger()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFunctionTriggerResponse), nil
+	}
+}
+
+// ShowFunctionTriggerInvoker 获取指定触发器的信息。
+func (c *FunctionGraphClient) ShowFunctionTriggerInvoker(request *model.ShowFunctionTriggerRequest) *ShowFunctionTriggerInvoker {
+	requestDef := GenReqDefForShowFunctionTrigger()
+	return &ShowFunctionTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowLtsLogDetails 获取指定函数的lts日志组日志流配置。
 //
 // 获取指定函数的lts日志组日志流配置。
@@ -750,6 +978,28 @@ func (c *FunctionGraphClient) ShowLtsLogDetails(request *model.ShowLtsLogDetails
 func (c *FunctionGraphClient) ShowLtsLogDetailsInvoker(request *model.ShowLtsLogDetailsRequest) *ShowLtsLogDetailsInvoker {
 	requestDef := GenReqDefForShowLtsLogDetails()
 	return &ShowLtsLogDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTenantMetric 获取函数流指标
+//
+// 获取函数流指标
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowTenantMetric(request *model.ShowTenantMetricRequest) (*model.ShowTenantMetricResponse, error) {
+	requestDef := GenReqDefForShowTenantMetric()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTenantMetricResponse), nil
+	}
+}
+
+// ShowTenantMetricInvoker 获取函数流指标
+func (c *FunctionGraphClient) ShowTenantMetricInvoker(request *model.ShowTenantMetricRequest) *ShowTenantMetricInvoker {
+	requestDef := GenReqDefForShowTenantMetric()
+	return &ShowTenantMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowTracing 获取函数调用链配置
@@ -794,6 +1044,138 @@ func (c *FunctionGraphClient) ShowVersionAlias(request *model.ShowVersionAliasRe
 func (c *FunctionGraphClient) ShowVersionAliasInvoker(request *model.ShowVersionAliasRequest) *ShowVersionAliasInvoker {
 	requestDef := GenReqDefForShowVersionAlias()
 	return &ShowVersionAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWorkFlow 获取指定函数流实例
+//
+// 获取指定函数流实例
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowWorkFlow(request *model.ShowWorkFlowRequest) (*model.ShowWorkFlowResponse, error) {
+	requestDef := GenReqDefForShowWorkFlow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWorkFlowResponse), nil
+	}
+}
+
+// ShowWorkFlowInvoker 获取指定函数流实例
+func (c *FunctionGraphClient) ShowWorkFlowInvoker(request *model.ShowWorkFlowRequest) *ShowWorkFlowInvoker {
+	requestDef := GenReqDefForShowWorkFlow()
+	return &ShowWorkFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWorkFlowMetric 获取指定工作流指标
+//
+// 获取指定工作流指标
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowWorkFlowMetric(request *model.ShowWorkFlowMetricRequest) (*model.ShowWorkFlowMetricResponse, error) {
+	requestDef := GenReqDefForShowWorkFlowMetric()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWorkFlowMetricResponse), nil
+	}
+}
+
+// ShowWorkFlowMetricInvoker 获取指定工作流指标
+func (c *FunctionGraphClient) ShowWorkFlowMetricInvoker(request *model.ShowWorkFlowMetricRequest) *ShowWorkFlowMetricInvoker {
+	requestDef := GenReqDefForShowWorkFlowMetric()
+	return &ShowWorkFlowMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWorkflowExecution 获取指定函数流执行实例
+//
+// 获取指定函数流执行实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowWorkflowExecution(request *model.ShowWorkflowExecutionRequest) (*model.ShowWorkflowExecutionResponse, error) {
+	requestDef := GenReqDefForShowWorkflowExecution()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWorkflowExecutionResponse), nil
+	}
+}
+
+// ShowWorkflowExecutionInvoker 获取指定函数流执行实例
+func (c *FunctionGraphClient) ShowWorkflowExecutionInvoker(request *model.ShowWorkflowExecutionRequest) *ShowWorkflowExecutionInvoker {
+	requestDef := GenReqDefForShowWorkflowExecution()
+	return &ShowWorkflowExecutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartSyncWorkflowExecution 同步执行函数流
+//
+// 同步执行函数流
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) StartSyncWorkflowExecution(request *model.StartSyncWorkflowExecutionRequest) (*model.StartSyncWorkflowExecutionResponse, error) {
+	requestDef := GenReqDefForStartSyncWorkflowExecution()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartSyncWorkflowExecutionResponse), nil
+	}
+}
+
+// StartSyncWorkflowExecutionInvoker 同步执行函数流
+func (c *FunctionGraphClient) StartSyncWorkflowExecutionInvoker(request *model.StartSyncWorkflowExecutionRequest) *StartSyncWorkflowExecutionInvoker {
+	requestDef := GenReqDefForStartSyncWorkflowExecution()
+	return &StartSyncWorkflowExecutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartWorkflowExecution 开始执行函数流
+//
+// 开始执行函数流
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) StartWorkflowExecution(request *model.StartWorkflowExecutionRequest) (*model.StartWorkflowExecutionResponse, error) {
+	requestDef := GenReqDefForStartWorkflowExecution()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartWorkflowExecutionResponse), nil
+	}
+}
+
+// StartWorkflowExecutionInvoker 开始执行函数流
+func (c *FunctionGraphClient) StartWorkflowExecutionInvoker(request *model.StartWorkflowExecutionRequest) *StartWorkflowExecutionInvoker {
+	requestDef := GenReqDefForStartWorkflowExecution()
+	return &StartWorkflowExecutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopWorkFlow 停止工作流
+//
+// 停止工作流
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) StopWorkFlow(request *model.StopWorkFlowRequest) (*model.StopWorkFlowResponse, error) {
+	requestDef := GenReqDefForStopWorkFlow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopWorkFlowResponse), nil
+	}
+}
+
+// StopWorkFlowInvoker 停止工作流
+func (c *FunctionGraphClient) StopWorkFlowInvoker(request *model.StopWorkFlowRequest) *StopWorkFlowInvoker {
+	requestDef := GenReqDefForStopWorkFlow()
+	return &StopWorkFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDependency 更新依赖包指定依赖包
@@ -950,146 +1332,6 @@ func (c *FunctionGraphClient) UpdateTracingInvoker(request *model.UpdateTracingR
 	return &UpdateTracingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateVersionAlias 修改函数版本别名信息。
-//
-// 修改函数版本别名信息。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) UpdateVersionAlias(request *model.UpdateVersionAliasRequest) (*model.UpdateVersionAliasResponse, error) {
-	requestDef := GenReqDefForUpdateVersionAlias()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateVersionAliasResponse), nil
-	}
-}
-
-// UpdateVersionAliasInvoker 修改函数版本别名信息。
-func (c *FunctionGraphClient) UpdateVersionAliasInvoker(request *model.UpdateVersionAliasRequest) *UpdateVersionAliasInvoker {
-	requestDef := GenReqDefForUpdateVersionAlias()
-	return &UpdateVersionAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BatchDeleteFunctionTriggers 删除指定函数的所有触发器。
-//
-// 删除指定函数所有触发器设置。
-//
-// 在提供函数版本且非latest的情况下，删除对应函数版本的触发器。
-// 在提供函数别名的情况下，删除对应函数别名的触发器。
-// 在不提供函数版本（也不提供别名）或版本为latest的情况下，删除该函数所有的触发器（包括所有版本和别名）。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) BatchDeleteFunctionTriggers(request *model.BatchDeleteFunctionTriggersRequest) (*model.BatchDeleteFunctionTriggersResponse, error) {
-	requestDef := GenReqDefForBatchDeleteFunctionTriggers()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchDeleteFunctionTriggersResponse), nil
-	}
-}
-
-// BatchDeleteFunctionTriggersInvoker 删除指定函数的所有触发器。
-func (c *FunctionGraphClient) BatchDeleteFunctionTriggersInvoker(request *model.BatchDeleteFunctionTriggersRequest) *BatchDeleteFunctionTriggersInvoker {
-	requestDef := GenReqDefForBatchDeleteFunctionTriggers()
-	return &BatchDeleteFunctionTriggersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateFunctionTrigger 创建触发器。
-//
-// 创建触发器。
-//
-// - 可以创建的触发器类型包括TIMER、APIG、CTS、DDS、DMS、DIS、LTS、OBS、SMN、KAFKA。
-// - DDS和KAFKA触发器创建时默认为DISABLED状态，其他触发器默认为ACTIVE状态。
-// - TIMER、DDS、DMS、KAFKA、LTS触发器支持禁用，其他触发器不支持。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) CreateFunctionTrigger(request *model.CreateFunctionTriggerRequest) (*model.CreateFunctionTriggerResponse, error) {
-	requestDef := GenReqDefForCreateFunctionTrigger()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateFunctionTriggerResponse), nil
-	}
-}
-
-// CreateFunctionTriggerInvoker 创建触发器。
-func (c *FunctionGraphClient) CreateFunctionTriggerInvoker(request *model.CreateFunctionTriggerRequest) *CreateFunctionTriggerInvoker {
-	requestDef := GenReqDefForCreateFunctionTrigger()
-	return &CreateFunctionTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteFunctionTrigger 删除触发器。
-//
-// 删除触发器。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) DeleteFunctionTrigger(request *model.DeleteFunctionTriggerRequest) (*model.DeleteFunctionTriggerResponse, error) {
-	requestDef := GenReqDefForDeleteFunctionTrigger()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteFunctionTriggerResponse), nil
-	}
-}
-
-// DeleteFunctionTriggerInvoker 删除触发器。
-func (c *FunctionGraphClient) DeleteFunctionTriggerInvoker(request *model.DeleteFunctionTriggerRequest) *DeleteFunctionTriggerInvoker {
-	requestDef := GenReqDefForDeleteFunctionTrigger()
-	return &DeleteFunctionTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListFunctionTriggers 获取指定函数的所有触发器。
-//
-// 获取指定函数的所有触发器设置。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) ListFunctionTriggers(request *model.ListFunctionTriggersRequest) (*model.ListFunctionTriggersResponse, error) {
-	requestDef := GenReqDefForListFunctionTriggers()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListFunctionTriggersResponse), nil
-	}
-}
-
-// ListFunctionTriggersInvoker 获取指定函数的所有触发器。
-func (c *FunctionGraphClient) ListFunctionTriggersInvoker(request *model.ListFunctionTriggersRequest) *ListFunctionTriggersInvoker {
-	requestDef := GenReqDefForListFunctionTriggers()
-	return &ListFunctionTriggersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowFunctionTrigger 获取指定触发器的信息。
-//
-// 获取特定触发器的信息。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) ShowFunctionTrigger(request *model.ShowFunctionTriggerRequest) (*model.ShowFunctionTriggerResponse, error) {
-	requestDef := GenReqDefForShowFunctionTrigger()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowFunctionTriggerResponse), nil
-	}
-}
-
-// ShowFunctionTriggerInvoker 获取指定触发器的信息。
-func (c *FunctionGraphClient) ShowFunctionTriggerInvoker(request *model.ShowFunctionTriggerRequest) *ShowFunctionTriggerInvoker {
-	requestDef := GenReqDefForShowFunctionTrigger()
-	return &ShowFunctionTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // UpdateTrigger 更新触发器
 //
 // 更新触发器
@@ -1112,268 +1354,26 @@ func (c *FunctionGraphClient) UpdateTriggerInvoker(request *model.UpdateTriggerR
 	return &UpdateTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchDeleteWorkflows 删除工作流列表
+// UpdateVersionAlias 修改函数版本别名信息。
 //
-// 删除工作流列表
+// 修改函数版本别名信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) BatchDeleteWorkflows(request *model.BatchDeleteWorkflowsRequest) (*model.BatchDeleteWorkflowsResponse, error) {
-	requestDef := GenReqDefForBatchDeleteWorkflows()
+func (c *FunctionGraphClient) UpdateVersionAlias(request *model.UpdateVersionAliasRequest) (*model.UpdateVersionAliasResponse, error) {
+	requestDef := GenReqDefForUpdateVersionAlias()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.BatchDeleteWorkflowsResponse), nil
+		return resp.(*model.UpdateVersionAliasResponse), nil
 	}
 }
 
-// BatchDeleteWorkflowsInvoker 删除工作流列表
-func (c *FunctionGraphClient) BatchDeleteWorkflowsInvoker(request *model.BatchDeleteWorkflowsRequest) *BatchDeleteWorkflowsInvoker {
-	requestDef := GenReqDefForBatchDeleteWorkflows()
-	return &BatchDeleteWorkflowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateWorkflow 创建工作流列表
-//
-// 创建工作流列表
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) CreateWorkflow(request *model.CreateWorkflowRequest) (*model.CreateWorkflowResponse, error) {
-	requestDef := GenReqDefForCreateWorkflow()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateWorkflowResponse), nil
-	}
-}
-
-// CreateWorkflowInvoker 创建工作流列表
-func (c *FunctionGraphClient) CreateWorkflowInvoker(request *model.CreateWorkflowRequest) *CreateWorkflowInvoker {
-	requestDef := GenReqDefForCreateWorkflow()
-	return &CreateWorkflowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListWorkflowExecutions 获取指定函数流执行实例列表
-//
-// 获取指定函数流执行实例列表
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) ListWorkflowExecutions(request *model.ListWorkflowExecutionsRequest) (*model.ListWorkflowExecutionsResponse, error) {
-	requestDef := GenReqDefForListWorkflowExecutions()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListWorkflowExecutionsResponse), nil
-	}
-}
-
-// ListWorkflowExecutionsInvoker 获取指定函数流执行实例列表
-func (c *FunctionGraphClient) ListWorkflowExecutionsInvoker(request *model.ListWorkflowExecutionsRequest) *ListWorkflowExecutionsInvoker {
-	requestDef := GenReqDefForListWorkflowExecutions()
-	return &ListWorkflowExecutionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListWorkflows 查询工作流列表
-//
-// 查询工作流列表
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) ListWorkflows(request *model.ListWorkflowsRequest) (*model.ListWorkflowsResponse, error) {
-	requestDef := GenReqDefForListWorkflows()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListWorkflowsResponse), nil
-	}
-}
-
-// ListWorkflowsInvoker 查询工作流列表
-func (c *FunctionGraphClient) ListWorkflowsInvoker(request *model.ListWorkflowsRequest) *ListWorkflowsInvoker {
-	requestDef := GenReqDefForListWorkflows()
-	return &ListWorkflowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// RetryWorkFlow 重试工作流
-//
-// 重试工作流
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) RetryWorkFlow(request *model.RetryWorkFlowRequest) (*model.RetryWorkFlowResponse, error) {
-	requestDef := GenReqDefForRetryWorkFlow()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.RetryWorkFlowResponse), nil
-	}
-}
-
-// RetryWorkFlowInvoker 重试工作流
-func (c *FunctionGraphClient) RetryWorkFlowInvoker(request *model.RetryWorkFlowRequest) *RetryWorkFlowInvoker {
-	requestDef := GenReqDefForRetryWorkFlow()
-	return &RetryWorkFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowTenantMetric 获取函数流指标
-//
-// 获取函数流指标
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) ShowTenantMetric(request *model.ShowTenantMetricRequest) (*model.ShowTenantMetricResponse, error) {
-	requestDef := GenReqDefForShowTenantMetric()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowTenantMetricResponse), nil
-	}
-}
-
-// ShowTenantMetricInvoker 获取函数流指标
-func (c *FunctionGraphClient) ShowTenantMetricInvoker(request *model.ShowTenantMetricRequest) *ShowTenantMetricInvoker {
-	requestDef := GenReqDefForShowTenantMetric()
-	return &ShowTenantMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowWorkFlow 获取指定函数流实例
-//
-// 获取指定函数流实例
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) ShowWorkFlow(request *model.ShowWorkFlowRequest) (*model.ShowWorkFlowResponse, error) {
-	requestDef := GenReqDefForShowWorkFlow()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowWorkFlowResponse), nil
-	}
-}
-
-// ShowWorkFlowInvoker 获取指定函数流实例
-func (c *FunctionGraphClient) ShowWorkFlowInvoker(request *model.ShowWorkFlowRequest) *ShowWorkFlowInvoker {
-	requestDef := GenReqDefForShowWorkFlow()
-	return &ShowWorkFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowWorkFlowMetric 获取指定工作流指标
-//
-// 获取指定工作流指标
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) ShowWorkFlowMetric(request *model.ShowWorkFlowMetricRequest) (*model.ShowWorkFlowMetricResponse, error) {
-	requestDef := GenReqDefForShowWorkFlowMetric()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowWorkFlowMetricResponse), nil
-	}
-}
-
-// ShowWorkFlowMetricInvoker 获取指定工作流指标
-func (c *FunctionGraphClient) ShowWorkFlowMetricInvoker(request *model.ShowWorkFlowMetricRequest) *ShowWorkFlowMetricInvoker {
-	requestDef := GenReqDefForShowWorkFlowMetric()
-	return &ShowWorkFlowMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowWorkflowExecution 获取指定函数流执行实例
-//
-// 获取指定函数流执行实例。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) ShowWorkflowExecution(request *model.ShowWorkflowExecutionRequest) (*model.ShowWorkflowExecutionResponse, error) {
-	requestDef := GenReqDefForShowWorkflowExecution()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowWorkflowExecutionResponse), nil
-	}
-}
-
-// ShowWorkflowExecutionInvoker 获取指定函数流执行实例
-func (c *FunctionGraphClient) ShowWorkflowExecutionInvoker(request *model.ShowWorkflowExecutionRequest) *ShowWorkflowExecutionInvoker {
-	requestDef := GenReqDefForShowWorkflowExecution()
-	return &ShowWorkflowExecutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// StartSyncWorkflowExecution 同步执行函数流
-//
-// 同步执行函数流
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) StartSyncWorkflowExecution(request *model.StartSyncWorkflowExecutionRequest) (*model.StartSyncWorkflowExecutionResponse, error) {
-	requestDef := GenReqDefForStartSyncWorkflowExecution()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StartSyncWorkflowExecutionResponse), nil
-	}
-}
-
-// StartSyncWorkflowExecutionInvoker 同步执行函数流
-func (c *FunctionGraphClient) StartSyncWorkflowExecutionInvoker(request *model.StartSyncWorkflowExecutionRequest) *StartSyncWorkflowExecutionInvoker {
-	requestDef := GenReqDefForStartSyncWorkflowExecution()
-	return &StartSyncWorkflowExecutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// StartWorkflowExecution 开始执行函数流
-//
-// 开始执行函数流
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) StartWorkflowExecution(request *model.StartWorkflowExecutionRequest) (*model.StartWorkflowExecutionResponse, error) {
-	requestDef := GenReqDefForStartWorkflowExecution()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StartWorkflowExecutionResponse), nil
-	}
-}
-
-// StartWorkflowExecutionInvoker 开始执行函数流
-func (c *FunctionGraphClient) StartWorkflowExecutionInvoker(request *model.StartWorkflowExecutionRequest) *StartWorkflowExecutionInvoker {
-	requestDef := GenReqDefForStartWorkflowExecution()
-	return &StartWorkflowExecutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// StopWorkFlow 停止工作流
-//
-// 停止工作流
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) StopWorkFlow(request *model.StopWorkFlowRequest) (*model.StopWorkFlowResponse, error) {
-	requestDef := GenReqDefForStopWorkFlow()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StopWorkFlowResponse), nil
-	}
-}
-
-// StopWorkFlowInvoker 停止工作流
-func (c *FunctionGraphClient) StopWorkFlowInvoker(request *model.StopWorkFlowRequest) *StopWorkFlowInvoker {
-	requestDef := GenReqDefForStopWorkFlow()
-	return &StopWorkFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateVersionAliasInvoker 修改函数版本别名信息。
+func (c *FunctionGraphClient) UpdateVersionAliasInvoker(request *model.UpdateVersionAliasRequest) *UpdateVersionAliasInvoker {
+	requestDef := GenReqDefForUpdateVersionAlias()
+	return &UpdateVersionAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateWorkFlow 修改指定函数流实例

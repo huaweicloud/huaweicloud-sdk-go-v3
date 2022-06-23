@@ -9,7 +9,7 @@ import (
 // Request Object
 type StartLogsRequest struct {
 
-	// 指定待开启的集群ID。
+	// 指定开启日志的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *StartLogsReq `json:"body,omitempty"`

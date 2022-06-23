@@ -9,7 +9,7 @@ import (
 // Request Object
 type StopPublicKibanaWhitelistRequest struct {
 
-	// 指定待停止的集群ID。
+	// 指定关闭Kibana公网访问控制的集群ID。
 	ClusterId string `json:"cluster_id"`
 }
 

@@ -1270,8 +1270,8 @@ func GenReqDefForListQuotaDetails() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Type").
-		WithJsonTag("type").
+		WithName("QuotaKey").
+		WithJsonTag("quota_key").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

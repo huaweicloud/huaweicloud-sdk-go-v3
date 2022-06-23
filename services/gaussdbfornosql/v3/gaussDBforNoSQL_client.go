@@ -547,9 +547,9 @@ func (c *GaussDBforNoSQLClient) ShowConfigurationDetailInvoker(request *model.Sh
 	return &ShowConfigurationDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowInstanceConfiguration 获取指定实例的参数模板
+// ShowInstanceConfiguration 获取指定实例的参数
 //
-// 获取指定实例的参数模板。
+// 获取指定实例的参数信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -563,7 +563,7 @@ func (c *GaussDBforNoSQLClient) ShowInstanceConfiguration(request *model.ShowIns
 	}
 }
 
-// ShowInstanceConfigurationInvoker 获取指定实例的参数模板
+// ShowInstanceConfigurationInvoker 获取指定实例的参数
 func (c *GaussDBforNoSQLClient) ShowInstanceConfigurationInvoker(request *model.ShowInstanceConfigurationRequest) *ShowInstanceConfigurationInvoker {
 	requestDef := GenReqDefForShowInstanceConfiguration()
 	return &ShowInstanceConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

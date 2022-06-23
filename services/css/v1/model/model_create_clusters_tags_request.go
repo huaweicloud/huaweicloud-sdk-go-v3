@@ -9,7 +9,7 @@ import (
 // Request Object
 type CreateClustersTagsRequest struct {
 
-	// 指定待添加的集群ID。
+	// 指定待添加标签的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *TagReq `json:"body,omitempty"`

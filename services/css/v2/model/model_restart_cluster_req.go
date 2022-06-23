@@ -8,10 +8,10 @@ import (
 
 type RestartClusterReq struct {
 
-	// 操作角色
+	// 操作角色。参数范围： - node - role
 	Type string `json:"type"`
 
-	// 节点类型
+	// 操作参数。参数说明： - 当操作角色为node时，value为节点ID。 - 当操作角色为role时，value为节点类型(ess、ess-master、ess-client、ess-cold)。
 	Value string `json:"value"`
 }
 

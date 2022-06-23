@@ -21,6 +21,9 @@ type ListInstancesNodeResult struct {
 	// 节点角色。 该参数仅对GaussDB(for Mongo)引擎的副本集实例有效。
 	Role string `json:"role"`
 
+	// 节点所在的子网的ID。
+	SubnetId string `json:"subnet_id"`
+
 	// 节点内网IP。在弹性云服务器创建成功后参数值存在，否则，值为\"\"。
 	PrivateIp string `json:"private_ip"`
 

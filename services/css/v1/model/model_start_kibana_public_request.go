@@ -9,7 +9,7 @@ import (
 // Request Object
 type StartKibanaPublicRequest struct {
 
-	// 指定待开启的集群ID。
+	// 指定待开启kibana公网访问的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *StartKibanaPublicReq `json:"body,omitempty"`

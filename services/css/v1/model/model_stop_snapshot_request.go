@@ -9,7 +9,7 @@ import (
 // Request Object
 type StopSnapshotRequest struct {
 
-	// 快照所属的集群的ID。
+	// 停用快照所属的集群的ID。
 	ClusterId string `json:"cluster_id"`
 }
 

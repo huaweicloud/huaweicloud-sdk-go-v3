@@ -23,6 +23,12 @@ type PartAttendee struct {
 
 	// 默认值由会议AS定义，号码类型枚举如下： - normal: 软终端。 - telepresence: 智真。单屏、三屏智真均属此类。（预留字段） - terminal: 会议室或硬终端。 - outside: 外部与会人。 - mobile: 用户手机号码。 - telephone: 用户固定电话。（预留字段） - ideahub: ideahub。
 	Type *string `json:"type,omitempty"`
+
+	// 会议中的角色。默认为普通与会者。 - 0：普通与会者。 - 1：会议主持人。
+	Role *int32 `json:"role,omitempty"`
+
+	// 用户入会时是否需要自动静音。默认不静音。 - 0: 不需要静音。 - 1: 需要静音。
+	IsMute *int32 `json:"isMute,omitempty"`
 }
 
 func (o PartAttendee) String() string {

@@ -9,11 +9,11 @@ import (
 // 规格。
 type EsflavorsVersionsFlavorsResp struct {
 
-	// 实例的内存大小。单位GB。
-	Ram *int32 `json:"ram,omitempty"`
-
 	// 实例的CPU核数。
 	Cpu *int32 `json:"cpu,omitempty"`
+
+	// 实例的内存大小。单位GB。
+	Ram *int32 `json:"ram,omitempty"`
 
 	// 规格名称。
 	Name *string `json:"name,omitempty"`
@@ -23,6 +23,9 @@ type EsflavorsVersionsFlavorsResp struct {
 
 	// 实例的硬盘容量范围。
 	Diskrange *string `json:"diskrange,omitempty"`
+
+	// 可用区。
+	AvailableAZ *string `json:"availableAZ,omitempty"`
 
 	// 规格对应的ID。
 	FlavorId *string `json:"flavor_id,omitempty"`

@@ -9,7 +9,7 @@ import (
 // Request Object
 type StopLogsRequest struct {
 
-	// 指定待关闭的集群ID。
+	// 指定关闭日志的集群ID。
 	ClusterId string `json:"cluster_id"`
 }
 

@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdatePublicKibanaWhitelistRequest struct {
 
-	// 指定待更改的集群ID。
+	// 指定修改kibana的访问权限的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *UpdatePublicKibanaWhitelistReq `json:"body,omitempty"`

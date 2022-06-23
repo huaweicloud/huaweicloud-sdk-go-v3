@@ -9,7 +9,7 @@ import (
 // Request Object
 type RollingRestartRequest struct {
 
-	// 指定待查询的集群ID。
+	// 指定重启集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Body *RollingRestartReq `json:"body,omitempty"`
