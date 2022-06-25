@@ -30,6 +30,9 @@ type RestoreNewInstanceRequestBody struct {
 	// 磁盘加密时的密钥ID，严格UUID正则校验。 不传该参数时，表示不进行磁盘加密。
 	DiskEncryptionId *string `json:"disk_encryption_id,omitempty"`
 
+	// 参数组配置信息。
+	Configurations *[]RestoreNewInstanceConfigurationsOption `json:"configurations,omitempty"`
+
 	// 实例规格详情。
 	Flavor []RestoreNewInstanceFlavorOption `json:"flavor"`
 
@@ -48,6 +51,8 @@ type RestoreNewInstanceRequestBody struct {
 	ServerGroupPolicies *[]string `json:"server_group_policies,omitempty"`
 
 	RestorePoint *RestorePoint `json:"restore_point"`
+
+	ChargeInfo *ChargeInfoOption `json:"charge_info,omitempty"`
 }
 
 func (o RestoreNewInstanceRequestBody) String() string {

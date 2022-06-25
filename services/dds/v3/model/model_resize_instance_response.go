@@ -10,7 +10,10 @@ import (
 type ResizeInstanceResponse struct {
 
 	// 任务ID。
-	JobId          *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty"`
+
+	// 订单ID，仅变更包年包月实例的规格时返回该参数。
+	OrderId        *string `json:"order_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

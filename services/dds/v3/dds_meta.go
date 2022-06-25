@@ -123,6 +123,21 @@ func GenReqDefForCheckPassword() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateConfiguration() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/configurations").
+		WithResponse(new(model.CreateConfigurationResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateDatabaseRole() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -208,6 +223,22 @@ func GenReqDefForCreateManualBackup() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteConfiguration() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v3/{project_id}/configurations/{config_id}").
+		WithResponse(new(model.DeleteConfigurationResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConfigId").
+		WithJsonTag("config_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -461,6 +492,26 @@ func GenReqDefForListBackups() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Mode").
 		WithJsonTag("mode").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListConfigurations() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/configurations").
+		WithResponse(new(model.ListConfigurationsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -1226,6 +1277,22 @@ func GenReqDefForShowBackupPolicy() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowConfigurationParameter() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/configurations/{config_id}").
+		WithResponse(new(model.ShowConfigurationParameterResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConfigId").
+		WithJsonTag("config_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowConnectionStatistics() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1241,6 +1308,27 @@ func GenReqDefForShowConnectionStatistics() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NodeId").
 		WithJsonTag("node_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowEntityConfiguration() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/instances/{instance_id}/configurations").
+		WithResponse(new(model.ShowEntityConfigurationResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EntityId").
+		WithJsonTag("entity_id").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -1285,6 +1373,26 @@ func GenReqDefForShowShardingBalancer() *def.HttpRequestDef {
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForSwitchConfiguration() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/configurations/{config_id}/apply").
+		WithResponse(new(model.SwitchConfigurationResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConfigId").
+		WithJsonTag("config_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1351,6 +1459,46 @@ func GenReqDefForUpdateClientNetwork() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v3/{project_id}/instances/{instance_id}/client-network").
 		WithResponse(new(model.UpdateClientNetworkResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateConfigurationParameter() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/configurations/{config_id}").
+		WithResponse(new(model.UpdateConfigurationParameterResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConfigId").
+		WithJsonTag("config_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateEntityConfiguration() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/instances/{instance_id}/configurations").
+		WithResponse(new(model.UpdateEntityConfigurationResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

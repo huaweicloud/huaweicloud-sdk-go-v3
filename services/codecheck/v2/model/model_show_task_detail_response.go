@@ -72,6 +72,9 @@ type ShowTaskDetailResponse struct {
 	// 代码平均复杂度
 	CyclomaticComplexityPerMethod *string `json:"cyclomatic_complexity_per_method,omitempty"`
 
+	// 代码平均复杂度(文件)
+	CyclomaticComplexityPerFile *string `json:"cyclomatic_complexity_per_file,omitempty"`
+
 	// 致命问题数
 	CriticalCount *string `json:"critical_count,omitempty"`
 
@@ -88,8 +91,11 @@ type ShowTaskDetailResponse struct {
 	IsAccess *string `json:"is_access,omitempty"`
 
 	// 任务触发方式
-	TriggerType    *string `json:"trigger_type,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	TriggerType *string `json:"trigger_type,omitempty"`
+
+	// 文件重复率
+	FileDuplicationRatio *string `json:"file_duplication_ratio,omitempty"`
+	HttpStatusCode       int     `json:"-"`
 }
 
 func (o ShowTaskDetailResponse) String() string {

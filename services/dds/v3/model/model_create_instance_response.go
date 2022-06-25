@@ -47,6 +47,9 @@ type CreateInstanceResponse struct {
 	// 实例类型，与请求参数相同。
 	Mode *string `json:"mode,omitempty"`
 
+	// 参数组配置信息。
+	Configurations *[]CreateInstanceConfigurationsOption `json:"configurations,omitempty"`
+
 	// 实例规格详情，与请求参数相同。
 	Flavor *[]CreateInstanceFlavorOption `json:"flavor,omitempty"`
 
@@ -65,8 +68,13 @@ type CreateInstanceResponse struct {
 	JobId *string `json:"job_id,omitempty"`
 
 	// 标签列表，与请求参数相同。
-	Tags           *[]TagWithKeyValue `json:"tags,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	Tags *[]TagWithKeyValue `json:"tags,omitempty"`
+
+	// 创建实例的订单ID，仅创建包年包月实例时返回该参数。
+	OrderId *string `json:"order_id,omitempty"`
+
+	ChargeInfo     *ChargeInfoResult `json:"charge_info,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o CreateInstanceResponse) String() string {

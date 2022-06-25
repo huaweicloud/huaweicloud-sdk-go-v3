@@ -151,6 +151,28 @@ func (c *DdsClient) CheckPasswordInvoker(request *model.CheckPasswordRequest) *C
 	return &CheckPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateConfiguration 创建参数模板
+//
+// 创建参数模板。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) CreateConfiguration(request *model.CreateConfigurationRequest) (*model.CreateConfigurationResponse, error) {
+	requestDef := GenReqDefForCreateConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateConfigurationResponse), nil
+	}
+}
+
+// CreateConfigurationInvoker 创建参数模板
+func (c *DdsClient) CreateConfigurationInvoker(request *model.CreateConfigurationRequest) *CreateConfigurationInvoker {
+	requestDef := GenReqDefForCreateConfiguration()
+	return &CreateConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDatabaseRole 创建数据库角色
 //
 // 创建数据库角色。
@@ -259,6 +281,28 @@ func (c *DdsClient) CreateManualBackup(request *model.CreateManualBackupRequest)
 func (c *DdsClient) CreateManualBackupInvoker(request *model.CreateManualBackupRequest) *CreateManualBackupInvoker {
 	requestDef := GenReqDefForCreateManualBackup()
 	return &CreateManualBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteConfiguration 删除参数模板
+//
+// 删除参数模板。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) DeleteConfiguration(request *model.DeleteConfigurationRequest) (*model.DeleteConfigurationResponse, error) {
+	requestDef := GenReqDefForDeleteConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteConfigurationResponse), nil
+	}
+}
+
+// DeleteConfigurationInvoker 删除参数模板
+func (c *DdsClient) DeleteConfigurationInvoker(request *model.DeleteConfigurationRequest) *DeleteConfigurationInvoker {
+	requestDef := GenReqDefForDeleteConfiguration()
+	return &DeleteConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteDatabaseRole 删除数据库角色
@@ -501,6 +545,28 @@ func (c *DdsClient) ListBackups(request *model.ListBackupsRequest) (*model.ListB
 func (c *DdsClient) ListBackupsInvoker(request *model.ListBackupsRequest) *ListBackupsInvoker {
 	requestDef := GenReqDefForListBackups()
 	return &ListBackupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConfigurations 获取参数模板列表
+//
+// 获取参数模板列表，包括DDS数据库的所有默认参数模板和用户创建的参数模板。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ListConfigurations(request *model.ListConfigurationsRequest) (*model.ListConfigurationsResponse, error) {
+	requestDef := GenReqDefForListConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConfigurationsResponse), nil
+	}
+}
+
+// ListConfigurationsInvoker 获取参数模板列表
+func (c *DdsClient) ListConfigurationsInvoker(request *model.ListConfigurationsRequest) *ListConfigurationsInvoker {
+	requestDef := GenReqDefForListConfigurations()
+	return &ListConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDatabaseRoles 查询数据库角色列表
@@ -1185,6 +1251,28 @@ func (c *DdsClient) ShowBackupPolicyInvoker(request *model.ShowBackupPolicyReque
 	return &ShowBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowConfigurationParameter 获取参数模板的详情
+//
+// 获取参数模板的详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ShowConfigurationParameter(request *model.ShowConfigurationParameterRequest) (*model.ShowConfigurationParameterResponse, error) {
+	requestDef := GenReqDefForShowConfigurationParameter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConfigurationParameterResponse), nil
+	}
+}
+
+// ShowConfigurationParameterInvoker 获取参数模板的详情
+func (c *DdsClient) ShowConfigurationParameterInvoker(request *model.ShowConfigurationParameterRequest) *ShowConfigurationParameterInvoker {
+	requestDef := GenReqDefForShowConfigurationParameter()
+	return &ShowConfigurationParameterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowConnectionStatistics 查询实例连接数统计信息
 //
 // 查询客户端IP访问至DDS数据库实例的连接数统计信息。
@@ -1205,6 +1293,28 @@ func (c *DdsClient) ShowConnectionStatistics(request *model.ShowConnectionStatis
 func (c *DdsClient) ShowConnectionStatisticsInvoker(request *model.ShowConnectionStatisticsRequest) *ShowConnectionStatisticsInvoker {
 	requestDef := GenReqDefForShowConnectionStatistics()
 	return &ShowConnectionStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEntityConfiguration 获取指定实例的参数信息
+//
+// 获取指定实例的参数，可以是实例，组，节点的参数模板。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ShowEntityConfiguration(request *model.ShowEntityConfigurationRequest) (*model.ShowEntityConfigurationResponse, error) {
+	requestDef := GenReqDefForShowEntityConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEntityConfigurationResponse), nil
+	}
+}
+
+// ShowEntityConfigurationInvoker 获取指定实例的参数信息
+func (c *DdsClient) ShowEntityConfigurationInvoker(request *model.ShowEntityConfigurationRequest) *ShowEntityConfigurationInvoker {
+	requestDef := GenReqDefForShowEntityConfiguration()
+	return &ShowEntityConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowJobDetail 获取DDS任务中心指定ID的任务信息。
@@ -1271,6 +1381,28 @@ func (c *DdsClient) ShowShardingBalancer(request *model.ShowShardingBalancerRequ
 func (c *DdsClient) ShowShardingBalancerInvoker(request *model.ShowShardingBalancerRequest) *ShowShardingBalancerInvoker {
 	requestDef := GenReqDefForShowShardingBalancer()
 	return &ShowShardingBalancerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchConfiguration 应用参数模板
+//
+// 指定实例变更参数模板。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) SwitchConfiguration(request *model.SwitchConfigurationRequest) (*model.SwitchConfigurationResponse, error) {
+	requestDef := GenReqDefForSwitchConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchConfigurationResponse), nil
+	}
+}
+
+// SwitchConfigurationInvoker 应用参数模板
+func (c *DdsClient) SwitchConfigurationInvoker(request *model.SwitchConfigurationRequest) *SwitchConfigurationInvoker {
+	requestDef := GenReqDefForSwitchConfiguration()
+	return &SwitchConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchSlowlogDesensitization 设置慢日志明文开关
@@ -1359,6 +1491,50 @@ func (c *DdsClient) UpdateClientNetwork(request *model.UpdateClientNetworkReques
 func (c *DdsClient) UpdateClientNetworkInvoker(request *model.UpdateClientNetworkRequest) *UpdateClientNetworkInvoker {
 	requestDef := GenReqDefForUpdateClientNetwork()
 	return &UpdateClientNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateConfigurationParameter 修改参数模板
+//
+// 修改指定参数模板的参数信息，包括名称、描述、指定参数的值。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) UpdateConfigurationParameter(request *model.UpdateConfigurationParameterRequest) (*model.UpdateConfigurationParameterResponse, error) {
+	requestDef := GenReqDefForUpdateConfigurationParameter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateConfigurationParameterResponse), nil
+	}
+}
+
+// UpdateConfigurationParameterInvoker 修改参数模板
+func (c *DdsClient) UpdateConfigurationParameterInvoker(request *model.UpdateConfigurationParameterRequest) *UpdateConfigurationParameterInvoker {
+	requestDef := GenReqDefForUpdateConfigurationParameter()
+	return &UpdateConfigurationParameterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEntityConfiguration 修改指定实例的参数
+//
+// 修改指定实例的参数，可以是实例，组，节点的参数模板。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) UpdateEntityConfiguration(request *model.UpdateEntityConfigurationRequest) (*model.UpdateEntityConfigurationResponse, error) {
+	requestDef := GenReqDefForUpdateEntityConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEntityConfigurationResponse), nil
+	}
+}
+
+// UpdateEntityConfigurationInvoker 修改指定实例的参数
+func (c *DdsClient) UpdateEntityConfigurationInvoker(request *model.UpdateEntityConfigurationRequest) *UpdateEntityConfigurationInvoker {
+	requestDef := GenReqDefForUpdateEntityConfiguration()
+	return &UpdateEntityConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateInstanceName 修改实例名称

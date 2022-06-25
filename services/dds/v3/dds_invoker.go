@@ -77,6 +77,18 @@ func (i *CheckPasswordInvoker) Invoke() (*model.CheckPasswordResponse, error) {
 	}
 }
 
+type CreateConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateConfigurationInvoker) Invoke() (*model.CreateConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateConfigurationResponse), nil
+	}
+}
+
 type CreateDatabaseRoleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +146,18 @@ func (i *CreateManualBackupInvoker) Invoke() (*model.CreateManualBackupResponse,
 		return nil, err
 	} else {
 		return result.(*model.CreateManualBackupResponse), nil
+	}
+}
+
+type DeleteConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteConfigurationInvoker) Invoke() (*model.DeleteConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteConfigurationResponse), nil
 	}
 }
 
@@ -266,6 +290,18 @@ func (i *ListBackupsInvoker) Invoke() (*model.ListBackupsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListBackupsResponse), nil
+	}
+}
+
+type ListConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConfigurationsInvoker) Invoke() (*model.ListConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConfigurationsResponse), nil
 	}
 }
 
@@ -641,6 +677,18 @@ func (i *ShowBackupPolicyInvoker) Invoke() (*model.ShowBackupPolicyResponse, err
 	}
 }
 
+type ShowConfigurationParameterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConfigurationParameterInvoker) Invoke() (*model.ShowConfigurationParameterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConfigurationParameterResponse), nil
+	}
+}
+
 type ShowConnectionStatisticsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -650,6 +698,18 @@ func (i *ShowConnectionStatisticsInvoker) Invoke() (*model.ShowConnectionStatist
 		return nil, err
 	} else {
 		return result.(*model.ShowConnectionStatisticsResponse), nil
+	}
+}
+
+type ShowEntityConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEntityConfigurationInvoker) Invoke() (*model.ShowEntityConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEntityConfigurationResponse), nil
 	}
 }
 
@@ -686,6 +746,18 @@ func (i *ShowShardingBalancerInvoker) Invoke() (*model.ShowShardingBalancerRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowShardingBalancerResponse), nil
+	}
+}
+
+type SwitchConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchConfigurationInvoker) Invoke() (*model.SwitchConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchConfigurationResponse), nil
 	}
 }
 
@@ -734,6 +806,30 @@ func (i *UpdateClientNetworkInvoker) Invoke() (*model.UpdateClientNetworkRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateClientNetworkResponse), nil
+	}
+}
+
+type UpdateConfigurationParameterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateConfigurationParameterInvoker) Invoke() (*model.UpdateConfigurationParameterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateConfigurationParameterResponse), nil
+	}
+}
+
+type UpdateEntityConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEntityConfigurationInvoker) Invoke() (*model.UpdateEntityConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEntityConfigurationResponse), nil
 	}
 }
 

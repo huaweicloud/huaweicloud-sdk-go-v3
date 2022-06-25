@@ -41,6 +41,9 @@ type CreateInstanceRequestBody struct {
 	// 实例类型。支持集群、副本集、以及单节点。 取值   - Sharding   - ReplicaSet   - Single
 	Mode string `json:"mode"`
 
+	// 参数组配置信息。
+	Configurations *[]CreateInstanceConfigurationsOption `json:"configurations,omitempty"`
+
 	// 实例规格详情。
 	Flavor []CreateInstanceFlavorOption `json:"flavor"`
 
@@ -60,6 +63,8 @@ type CreateInstanceRequestBody struct {
 
 	// 标签列表。单个实例总标签数上限20个。
 	Tags *[]TagWithKeyValue `json:"tags,omitempty"`
+
+	ChargeInfo *ChargeInfoOption `json:"charge_info,omitempty"`
 }
 
 func (o CreateInstanceRequestBody) String() string {

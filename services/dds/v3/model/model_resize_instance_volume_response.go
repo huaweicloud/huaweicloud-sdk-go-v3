@@ -10,7 +10,10 @@ import (
 type ResizeInstanceVolumeResponse struct {
 
 	// 工作流ID。
-	JobId          *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty"`
+
+	// 订单ID，仅扩容包年包月实例的存储容量时返回该参数。
+	OrderId        *string `json:"order_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 
