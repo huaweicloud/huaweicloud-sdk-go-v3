@@ -8,43 +8,43 @@ import (
 
 // 访问配置，与access_protocol直接关联
 type AccessConfig struct {
-	ProtocolType *AccessConfigProtocolType `json:"protocol_type"`
+	ProtocolType *ValueInAttributes `json:"protocol_type"`
 
-	ProtocolName *AccessConfigProtocolName `json:"protocol_name,omitempty"`
+	ProtocolName *ValueInAttributes `json:"protocol_name,omitempty"`
 
-	SlaveId *AccessConfigSlaveId `json:"slave_id,omitempty"`
+	SlaveId *ValueInAttributes `json:"slave_id,omitempty"`
 
-	Ip *AccessConfigIp `json:"ip,omitempty"`
+	Ip *ValueInAttributes `json:"ip,omitempty"`
 
-	Port *AccessConfigPort `json:"port,omitempty"`
+	Port *ValueInAttributes `json:"port,omitempty"`
 
-	SerialPort *AccessConfigSerialPort `json:"serial_port,omitempty"`
+	SerialPort *ValueInAttributes `json:"serial_port,omitempty"`
 
-	BaudRate *AccessConfigBaudRate `json:"baud_rate,omitempty"`
+	BaudRate *ValueInAttributes `json:"baud_rate,omitempty"`
 
-	DataBits *AccessConfigDataBits `json:"data_bits,omitempty"`
+	DataBits *ValueInAttributes `json:"data_bits,omitempty"`
 
-	StopBits *AccessConfigStopBits `json:"stop_bits,omitempty"`
+	StopBits *ValueInAttributes `json:"stop_bits,omitempty"`
 
-	ParityBits *AccessConfigParityBits `json:"parity_bits,omitempty"`
+	ParityBits *ValueInAttributes `json:"parity_bits,omitempty"`
 
-	Url *AccessConfigUrl `json:"url,omitempty"`
+	Url *ValueInAttributes `json:"url,omitempty"`
 
-	SecMode *AccessConfigSecMode `json:"sec_mode,omitempty"`
+	SecMode *ValueInAttributes `json:"sec_mode,omitempty"`
 
-	SecPolicy *AccessConfigSecPolicy `json:"sec_policy,omitempty"`
+	SecPolicy *ValueInAttributes `json:"sec_policy,omitempty"`
 
-	AuthType *AccessConfigAuthType `json:"auth_type,omitempty"`
+	AuthType *ValueInAttributes `json:"auth_type,omitempty"`
 
-	Username *AccessConfigUsername `json:"username,omitempty"`
+	Username *ValueInAttributes `json:"username,omitempty"`
 
-	Password *AccessConfigPassword `json:"password,omitempty"`
+	Password *ValueInAttributes `json:"password,omitempty"`
 
-	PrivateKey *AccessConfigPrivateKey `json:"private_key,omitempty"`
+	PrivateKey *ValueInAttributes `json:"private_key,omitempty"`
 
-	Certificate *AccessConfigCertificate `json:"certificate,omitempty"`
+	Certificate *ValueInAttributes `json:"certificate,omitempty"`
 
-	Timeout *AccessConfigTimeout `json:"timeout,omitempty"`
+	Timeout *ValueInAttributes `json:"timeout,omitempty"`
 }
 
 func (o AccessConfig) String() string {

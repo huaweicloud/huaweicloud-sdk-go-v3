@@ -53,6 +53,18 @@ func (i *RecognizeBusinessLicenseInvoker) Invoke() (*model.RecognizeBusinessLice
 	}
 }
 
+type RecognizeCambodianIdCardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeCambodianIdCardInvoker) Invoke() (*model.RecognizeCambodianIdCardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeCambodianIdCardResponse), nil
+	}
+}
+
 type RecognizeChileIdCardInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,6 +86,18 @@ func (i *RecognizeDriverLicenseInvoker) Invoke() (*model.RecognizeDriverLicenseR
 		return nil, err
 	} else {
 		return result.(*model.RecognizeDriverLicenseResponse), nil
+	}
+}
+
+type RecognizeExitEntryPermitInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeExitEntryPermitInvoker) Invoke() (*model.RecognizeExitEntryPermitResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeExitEntryPermitResponse), nil
 	}
 }
 
@@ -149,6 +173,18 @@ func (i *RecognizeHealthCodeInvoker) Invoke() (*model.RecognizeHealthCodeRespons
 	}
 }
 
+type RecognizeHkIdCardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeHkIdCardInvoker) Invoke() (*model.RecognizeHkIdCardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeHkIdCardResponse), nil
+	}
+}
+
 type RecognizeIdCardInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,6 +242,18 @@ func (i *RecognizeLicensePlateInvoker) Invoke() (*model.RecognizeLicensePlateRes
 		return nil, err
 	} else {
 		return result.(*model.RecognizeLicensePlateResponse), nil
+	}
+}
+
+type RecognizeMainlandTravelPermitInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeMainlandTravelPermitInvoker) Invoke() (*model.RecognizeMainlandTravelPermitResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeMainlandTravelPermitResponse), nil
 	}
 }
 

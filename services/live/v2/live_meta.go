@@ -57,7 +57,7 @@ func GenReqDefForListAreaDetail() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -115,7 +115,7 @@ func GenReqDefForListBandwidthDetail() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -165,7 +165,7 @@ func GenReqDefForListDomainBandwidthPeak() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -219,7 +219,7 @@ func GenReqDefForListDomainTrafficDetail() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -269,7 +269,7 @@ func GenReqDefForListDomainTrafficSummary() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -315,7 +315,7 @@ func GenReqDefForListHistoryStreams() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -357,7 +357,7 @@ func GenReqDefForListQueryHttpCode() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -387,7 +387,7 @@ func GenReqDefForListRecordData() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -417,7 +417,7 @@ func GenReqDefForListSnapshotData() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -451,41 +451,7 @@ func GenReqDefForListTranscodeData() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
-		WithKindName("string").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListTranscodeTaskCount() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/stats/transcode/task-count").
-		WithResponse(new(model.ListTranscodeTaskCountResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PublishDomain").
-		WithJsonTag("publish_domain").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("App").
-		WithJsonTag("app").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("StartTime").
-		WithJsonTag("start_time").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EndTime").
-		WithJsonTag("end_time").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -543,7 +509,7 @@ func GenReqDefForListUsersOfStream() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -573,7 +539,7 @@ func GenReqDefForShowStreamCount() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -603,7 +569,7 @@ func GenReqDefForShowStreamPortrait() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -653,7 +619,7 @@ func GenReqDefForShowUpBandwidth() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -691,7 +657,7 @@ func GenReqDefForListSingleStreamBitrate() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -729,7 +695,7 @@ func GenReqDefForListSingleStreamDetail() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -767,7 +733,7 @@ func GenReqDefForListSingleStreamFramerate() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 

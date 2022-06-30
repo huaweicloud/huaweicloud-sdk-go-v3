@@ -28,6 +28,8 @@ type Configs struct {
 	ForceRedirect *ForceRedirectConfig `json:"force_redirect,omitempty"`
 
 	Compress *Compress `json:"compress,omitempty"`
+
+	CacheUrlParameterFilter *CacheUrlParameterFilter `json:"cache_url_parameter_filter,omitempty"`
 }
 
 func (o Configs) String() string {

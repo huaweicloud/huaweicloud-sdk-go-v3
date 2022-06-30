@@ -8,9 +8,9 @@ import (
 
 // 容器使用的资源
 type Resources struct {
-	Limits *ResourcesLimits `json:"limits,omitempty"`
+	Limits *LimitsRequests `json:"limits,omitempty"`
 
-	Requests *ResourcesRequests `json:"requests,omitempty"`
+	Requests *LimitsRequests `json:"requests,omitempty"`
 }
 
 func (o Resources) String() string {

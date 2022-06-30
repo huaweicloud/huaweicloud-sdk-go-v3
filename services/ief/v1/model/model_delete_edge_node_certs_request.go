@@ -12,7 +12,7 @@ type DeleteEdgeNodeCertsRequest struct {
 	// 边缘节点ID
 	NodeId string `json:"node_id"`
 
-	// 证书id
+	// 证书ID
 	CertId string `json:"cert_id"`
 
 	// 铂金版实例ID，专业版实例为空值

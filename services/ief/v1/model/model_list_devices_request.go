@@ -24,7 +24,7 @@ type ListDevicesRequest struct {
 	// 查询的起始位置，取值范围为非负整数，默认为0
 	Offset *string `json:"offset,omitempty"`
 
-	// 是否绑定到边缘节点，为“true”时返回所有已绑定到节点的设备列表，为“false”则返回未绑定节点的设备列表
+	// 是否绑定到边缘节点，为“true”时返回所有已绑定到节点的设备列表；为“false”则返回未绑定节点的设备列表。
 	IsBinding *string `json:"is_binding,omitempty"`
 
 	// 标签的key和value通过点连接， 多个标签通过逗号连接，如：tags=key1.value1,key2.value2

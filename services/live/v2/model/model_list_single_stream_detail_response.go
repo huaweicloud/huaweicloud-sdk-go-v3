@@ -27,7 +27,7 @@ type ListSingleStreamDetailResponse struct {
 	// 展示流音频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"audio_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         10,         17       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:06Z\",       \"data_list\": [         31,         33       ]     }   ]
 	AudioFramerate *[]StreamDetail `json:"audio_framerate,omitempty"`
 
-	XRequestId     *string `json:"X-request-id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

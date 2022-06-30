@@ -15,7 +15,7 @@ type Mqtt struct {
 	// 端口号。
 	Port int32 `json:"port"`
 
-	// 类型。 枚举值： - nic：网卡类型 - ip：IP类型
+	// 类型。枚举值： - nic：网卡类型 - ip：IP类型
 	Type string `json:"type"`
 }
 

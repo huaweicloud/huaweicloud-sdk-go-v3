@@ -77,6 +77,18 @@ func (i *ShowPriceInvoker) Invoke() (*model.ShowPriceResponse, error) {
 	}
 }
 
+type UploadExtensionFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadExtensionFileInvoker) Invoke() (*model.UploadExtensionFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadExtensionFileResponse), nil
+	}
+}
+
 type CheckInstanceAccessInvoker struct {
 	*invoker.BaseInvoker
 }

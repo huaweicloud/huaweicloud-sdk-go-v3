@@ -24,7 +24,7 @@ type CreateRecordSetWithLineReq struct {
 	Ttl *int32 `json:"ttl,omitempty"`
 
 	// 解析记录的值。不同类型解析记录对应的值的规则不同。
-	Records []string `json:"records"`
+	Records *[]string `json:"records,omitempty"`
 
 	// 解析线路ID
 	Line *string `json:"line,omitempty"`

@@ -70,6 +70,8 @@ type UpdatePremiumHostResponse struct {
 
 	TrafficMark *TrafficMark `json:"traffic_mark,omitempty"`
 
+	TimeoutConfig *TimeoutConfig `json:"timeout_config,omitempty"`
+
 	// 域名特殊标记
 	Flag map[string]string `json:"flag,omitempty"`
 

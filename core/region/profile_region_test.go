@@ -33,38 +33,16 @@ SERVICE:
     endpoint: 'https://service.region-id-1.myhuaweicloud.com'
 `
 
-func ProfileProviderTest(t *testing.T) {
-	// test new
-	p := NewProfileProvider(serviceName)
-	assert.Equal(t, &ProfileProvider{serviceName: strings.ToUpper(serviceName)}, p)
-	// get path
-	dir, err := os.UserHomeDir()
-	assert.Nil(t, err)
-	filename := "test_regions.yaml"
-	path := filepath.Join(dir, filename)
-	err = os.Setenv("HUAWEICLOUD_SDK_REGIONS_FILE", path)
-	assert.Nil(t, err)
-	// create profile
-	file, err := os.Create(path)
-	assert.Nil(t, err)
-	file.WriteString(regionStr)
-	file.Close()
-	defer os.Remove(path)
-	// test found
-	reg := p.GetRegion(regionId)
-	assert.Equal(t, reg, NewRegion(regionId, endpoint))
-}
-
 func TestNewProfileProvider(t *testing.T) {
 	p := NewProfileProvider(serviceName)
 	assert.Equal(t, &ProfileProvider{serviceName: strings.ToUpper(serviceName)}, p)
 }
 
-func TestProfileProvider_GetRegion1(t *testing.T) {
+func TestProfileProvider_GetRegion(t *testing.T) {
 	dir, err := os.UserHomeDir()
 	assert.Nil(t, err)
 	filename := "test_regions.yaml"
-	path := filepath.Join(dir, filename)
+	path := filepath.Join(dir, ".huaweicloud", filename)
 	err = os.Setenv("HUAWEICLOUD_SDK_REGIONS_FILE", path)
 	assert.Nil(t, err)
 

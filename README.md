@@ -99,19 +99,20 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
 ## User Manual [:top:](#huawei-cloud-go-software-development-kit-go-sdk)
 
 * [1. Client Configuration](#1-client-configuration-top)
-    * [1.1  Default Configuration](#11-default-configuration-top)
-    * [1.2  Network Proxy](#12-network-proxy-top)
-    * [1.3  Connection](#13-connection-top)
-    * [1.4  SSL Certification](#14-ssl-certification-top)
-    * [1.5  Custom Network Connection](#15-custom-network-connection-top)
+    * [1.1 Default Configuration](#11-default-configuration-top)
+    * [1.2 Network Proxy](#12-network-proxy-top)
+    * [1.3 Connection](#13-connection-top)
+    * [1.4 SSL Certification](#14-ssl-certification-top)
+    * [1.5 Custom Network Connection](#15-custom-network-connection-top)
 * [2. Credentials Configuration](#2-credentials-configuration-top)
-  * [2.1  Use Permanent AK&SK](#21-use-permanent-aksk-top)
-    * [2.1.1 Manually specify](#211-Manually-specify)
-    * [2.1.2 Environment variable](#212-Environment-variable)
-  * [2.2  Use Temporary AK&SK](#22-use-temporary-aksk-top)
-    * [2.2.1 Manually specify](#221-Manually-specify)
-    * [2.2.2 Metadata](#222-Metadata)
-  * [2.3 Credential supply chain](#23-credential-supply-chain)
+  * [2.1 Use Permanent AK&SK](#21-use-permanent-aksk-top)
+  * [2.2 Use Temporary AK&SK](#22-use-temporary-aksk-top)
+  * [2.3 Use IdpId&IdTokenFile](#23-use-idpididtokenfile-top)
+  * [2.4 Authentication Management](#24-authentication-management-top)
+    * [2.4.1 Environment Variables](#241-environment-variables-top)
+	* [2.4.2 Profile](#242-profile-top)
+	* [2.4.3 Metadata](#243-metadata-top)
+	* [2.4.4 Provider Chain](#244-provider-chain-top)
 * [3. Client Initialization](#3-client-initialization-top)
   * [3.1 Initialize client with specified Endpoint](#31-initialize-the-serviceclient-with-specified-endpoint-top)
   * [3.2 Initialize client with specified Region](#32-initialize-the-serviceclient-with-specified-region-recommended-top)
@@ -119,9 +120,9 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
     * [3.3.1 IAM endpoint configuration](#331-iam-endpoint-configuration-top)
     * [3.3.2 Region configuration](#332-region-configuration-top)
 * [4. Send Request and Handle response](#4-send-requests-and-handle-responses-top)
-    * [4.1  Exceptions](#41-exceptions-top)
-* [5. Troubleshooting](#5-troubleshooting-top)
-    * [5.1  Original HTTP Listener](#51-original-http-listener-top)
+    * [4.1 Exceptions](#41-exceptions-top)
+* [5.Troubleshooting](#5-troubleshooting-top)
+    * [5.1 Original HTTP Listener](#51-original-http-listener-top)
 * [6. Upload and download files](#6-upload-and-download-files-top)
 * [7. Retry For Request](#7-retry-for-request-top)
 
@@ -179,20 +180,20 @@ Global services contain BSS, DevStar, EPS, IAM, RMS.
 For `regional` services' authentication, projectId is required to initialize basic.NewCredentialsBuilder(). For `global`
 services' authentication, domainId is required to initialize global.NewCredentialsBuilder().
 
-`Parameter description`:
+The following authentications are supported:
+
+- permanent AK&SK
+- temporary AK&SK + SecurityToken
+- IdpId&IdTokenFile
+
+#### 2.1 Use Permanent AK&SK [:top:](#user-manual-top)
+
+**Parameter description**:
 
 - `ak` is the access key ID for your account.
 - `sk` is the secret access key for your account.
 - `projectId` is the ID of your project depending on your region which you want to operate.
 - `domainId` is the account ID of HUAWEI CLOUD.
-- `securityToken` is the security token when using temporary AK/SK.
-
-You could use permanent AK plus SK **or** use temporary AK plus SK plus SecurityToken to complete credentials'
-configuration.
-
-#### 2.1 Use Permanent AK&SK [:top:](#user-manual-top)
-
-##### 2.1.1 Manually specify
 
 ``` go
 // Regional Services
@@ -218,13 +219,7 @@ globalCredentials := global.NewCredentialsBuilder().
   to [3.2  Initialize client with specified Region](#32-initialize-the-serviceclient-with-specified-region-recommended-top)
   .
 
-##### 2.1.2 Environment variable
-
-Load ak, sk, projectId and domainId from environment variables `HUAWEICLOUD_SDK_AK`, `HUAWEICLOUD_SDK_SK`, `HUAWEICLOUD_SDK_PROJECT_ID` and `HUAWEICLOUD_SDK_DOMAIN_ID`.
-
 #### 2.2 Use Temporary AK&SK [:top:](#user-manual-top)
-
-##### 2.2.1 Manually specify
 
 It's required to obtain temporary access key, security key and security token first, which could be obtained through
 permanent access key and security key or through an agency.A temporary access key and securityToken are issued by the system to IAM users, and can be valid for 15 minutes to 24 hours.
@@ -236,6 +231,14 @@ corresponds to the method of `CreateTemporaryAccessKeyByToken` in IAM SDK.
 Obtaining a temporary access key and security token through an agency, you could refer to
 document: https://support.huaweicloud.com/en-us/api-iam/iam_04_0101.html . The API mentioned in the document above
 corresponds to the method of `CreateTemporaryAccessKeyByAgency` in IAM SDK.
+
+**Parameter description**:
+
+- `ak` is the access key ID for your account.
+- `sk` is the secret access key for your account.
+- `securityToken` is the security token when using temporary AK/SK.
+- `projectId` is the ID of your project depending on your region which you want to operate.
+- `domainId` is the account ID of HUAWEI CLOUD.
 
 ``` go
 // Regional Services
@@ -255,14 +258,12 @@ globalCredentials := global.NewCredentialsBuilder().
             Build()
 ```
 
-##### 2.2.2 Metadata
+In the following two cases, the temporary AK/SK and securitytoken will be obtained from the **metadata of the instance**:
 
-Get temporary AK/SK and securitytoken from instance's metadata. Refer to the [Obtaining Metadata](https://support.huaweicloud.com/intl/en-us/usermanual-ecs/ecs_03_0166.html) for more information.
+1. basic.Credentials or global.Credentials were not explicitly specified when creating the client.
+2. AK/SK was not explicitly specified when creating basic.Credentials or global.Credentials.
 
-In the following two cases, the credential information will be obtained from the metadata of the instance:
-
-1. basic.Credentials or global.Credentials were not manually specified when creating the client.
-2. AK/SK was not specified when creating basic.Credentials or global.Credentials.
+Refer to the [Obtaining Metadata](https://support.huaweicloud.com/intl/en-us/usermanual-ecs/ecs_03_0166.html) for more information.
 
 ```go
 // Regional Services
@@ -272,13 +273,262 @@ basicAuth := basic.NewCredentialsBuilder().WithProjectId(projectId).Build()
 globalAuth := global.NewCredentialsBuilder().WithDomainId(domainId).Build()
 ```
 
-#### 2.3 Credential supply chain
+#### 2.3 Use IdpId&IdTokenFile [:top:](#user-manual-top)
 
-Credential is loaded in the following order when creating a client:
+Obtain a federated identity authentication token using an OpenID Connect ID token, refer to the [Obtaining a Token with an OpenID Connect ID Token](https://support.huaweicloud.com/intl/en-us/api-iam/iam_13_0605.html)
 
-1. [Specify manually](#211-Manually-specify) basic.Credentials or global.Credentials.
-2. Not specified manually, loaded from [environment variables](#212-Environment-variable).
-3. Obtain temporary authentication information from the [metadata](#222-Metadata) of the instance.
+**Parameter description**:
+
+- `IdpId` Identity provider ID.
+- `IdTokenFile` Id token file path. Id token is constructed by the enterprise IdP to carry the identity information of federated users.
+- `projectId` is the ID of your project depending on your region which you want to operate.
+- `domainId` is the account ID of HUAWEI CLOUD.
+
+```go
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
+)
+
+// Regional service
+basicAuth := basic.NewCredentialsBuilder().
+	WithIdpId(idpId).
+	WithIdTokenFile(idTokenFile).
+	WithProjectId(projectId).
+	Build()
+
+// Global service
+globalAuth := global.NewCredentialsBuilder().
+	WithIdpId(idpId).
+	WithIdTokenFile(idTokenFile).
+	WithDomainId(domainId).
+	Build()
+```
+
+#### 2.4 Authentication Management [:top:](#user-manual-top)
+
+Getting Authentication from providers is supported since `v0.0.96`
+
+**Regional services** use `BasicCredentialXxxProvider`, **Global services** use `GlobalCredentialXxxProvider`
+
+##### 2.4.1 Environment Variables [:top:](#user-manual-top)
+
+**AK/SK Auth**
+
+| Environment Variables  |  Notice |
+| ------------ | ------------ |
+| HUAWEICLOUD_SDK_AK  | Required，AccessKey  |
+| HUAWEICLOUD_SDK_SK  |  Required，SecretKey |
+| HUAWEICLOUD_SDK_SECURITY_TOKEN  | Optional, this parameter needs to be specified when using temporary ak/sk  |
+| HUAWEICLOUD_SDK_PROJECT_ID  | Optional, used for regional services, required in multi-ProjectId scenarios  |
+| HUAWEICLOUD_SDK_DOMAIN_ID  | Optional, used for global services  |
+
+Configure environment variables:
+
+```
+// Linux
+export HUAWEICLOUD_SDK_AK=YOUR_AK
+export HUAWEICLOUD_SDK_SK=YOUR_SK
+
+// Windows
+set HUAWEICLOUD_SDK_AK=YOUR_AK
+set HUAWEICLOUD_SDK_SK=YOUR_SK
+```
+
+Get the credentials from configured environment variables:
+
+```go
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
+)
+
+// basic
+basicProvider := provider.BasicCredentialEnvProvider()
+basicCred, err := basicProvider.GetCredentials()
+
+// global
+globalProvider := provider.GlobalCredentialEnvProvider()
+globalCred, err := globalProvider.GetCredentials()
+```
+
+**IdpId/IdTokenFile Auth**
+
+| Environment Variables  |  Notice |
+| ------------ | ------------ |
+| HUAWEICLOUD_SDK_IDP_ID  | Required, identity provider Id |
+| HUAWEICLOUD_SDK_ID_TOKEN_FILE  |  Required, id token file path |
+| HUAWEICLOUD_SDK_PROJECT_ID  | For basic credentials, this parameter is required  |
+| HUAWEICLOUD_SDK_DOMAIN_ID  | For global credentials, this parameter is required  |
+
+Configure environment variables:
+
+```
+// Linux
+export HUAWEICLOUD_SDK_IDP_ID=YOUR_IDP_ID
+export HUAWEICLOUD_SDK_ID_TOKEN_FILE=/some_path/your_token_file
+export HUAWEICLOUD_SDK_PROJECT_ID=YOUR_PROJECT_ID // For basic credentials, this parameter is required
+export HUAWEICLOUD_SDK_DOMAIN_ID=YOUR_DOMAIN_ID // For global credentials, this parameter is required
+
+// Windows
+set HUAWEICLOUD_SDK_IDP_ID=YOUR_IDP_ID
+set HUAWEICLOUD_SDK_ID_TOKEN_FILE=/some_path/your_token_file
+set HUAWEICLOUD_SDK_PROJECT_ID=YOUR_PROJECT_ID // For basic credentials, this parameter is required
+set HUAWEICLOUD_SDK_DOMAIN_ID=YOUR_DOMAIN_ID // For global credentials, this parameter is required
+```
+
+Get the credentials from configured environment variables:
+
+```go
+import (
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
+)
+
+// basic
+basicProvider := provider.BasicCredentialEnvProvider()
+basicCred, err := basicProvider.GetCredentials()
+
+// global
+globalProvider := provider.GlobalCredentialEnvProvider()
+globalCred, err := globalProvider.GetCredentials()
+```
+
+##### 2.4.2 Profile [:top:](#user-manual-top)
+
+The profile will be read from the user's home directory by default, linux`~/.huaweicloud/credentials`,windows`C:\Users\USER_NAME\.huaweicloud\credentials`, the path to the profile can be modified by configuring the environment variable `HUAWEICLOUD_SDK_CREDENTIALS_FILE`
+
+**AK/SK Auth**
+
+| Configuration Parameters  |  Notice |
+| ------------ | ------------ |
+| ak  | Required，AccessKey  |
+| sk  |  Required，SecretKey |
+| security_token  | Optional, this parameter needs to be specified when using temporary ak/sk  |
+| project_id  | Optional, used for regional services, required in multi-ProjectId scenarios  |
+| domain_id  | Optional, used for global services  |
+| iam_endpoint  | optional, endpoint for authentication, default is `https://iam.myhuaweicloud.com` |
+
+The content of the profile is as follows:
+
+```ini
+[basic]
+ak = your_ak
+sk = your_sk
+
+[global]
+ak = your_ak
+sk = your_sk
+```
+
+Get the credentials from profile:
+
+```go
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
+)
+
+// basic
+basicProvider := provider.BasicCredentialProfileProvider()
+basicCred, err := basicProvider.GetCredentials()
+
+// global
+globalProvider := provider.GlobalCredentialProfileProvider()
+globalCred, err := globalProvider.GetCredentials()
+```
+
+**IdpId/IdTokenFile Auth**
+
+| Configuration Parameters  |  Notice |
+| ------------ | ------------ |
+| idp_id  | Required, identity provider Id |
+| id_token_file  |  Required, id token file path |
+| project_id  | For basic credentials, this parameter is required  |
+| domain_id  | For global credentials, this parameter is required  |
+| iam_endpoint  | optional, endpoint for authentication, default is `https://iam.myhuaweicloud.com` |
+
+The content of the profile is as follows:
+
+```ini
+[basic]
+idp_id = your_idp_id
+id_token_file = /some_path/your_token_file
+project_id = your_project_id
+
+[global]
+idp_id = your_idp_id
+id_token_file = /some_path/your_token_file
+domainId = your_domain_id
+```
+
+Get the credentials from profile:
+
+```go
+import (
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
+)
+
+// basic
+basicProvider := provider.BasicCredentialProfileProvider()
+basicCred, err := basicProvider.GetCredentials()
+
+// global
+globalProvider := provider.GlobalCredentialProfileProvider()
+globalCred, err := globalProvider.GetCredentials()
+```
+
+##### 2.4.3 Metadata [:top:](#user-manual-top)
+
+Get temporary AK/SK and securitytoken from instance's metadata. Refer to the [Obtaining Metadata](https://support.huaweicloud.com/intl/en-us/usermanual-ecs/ecs_03_0166.html) for more information.
+
+Manually obtain authentication from instance metadata:
+
+```go
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
+)
+
+// basic
+basicProvider := provider.BasicCredentialMetadataProvider()
+basicCred, err := basicProvider.GetCredentials()
+
+// global
+globalProvider := provider.GlobalCredentialMetadataProvider()
+globalCred, err := globalProvider.GetCredentials()
+```
+
+##### 2.4.4 Provider Chain [:top:](#user-manual-top)
+
+When creating a service client without credentials, try to load authentication in the order **Environment Variables -> Profile -> Metadata**
+
+Get authentication from provider chain:
+
+```go
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
+)
+
+// basic
+basicChain := provider.BasicCredentialProviderChain()
+basicCred, err := basicChain.GetCredentials()
+
+// global
+globalChain := provider.GlobalCredentialProviderChain()
+globalCred, err := globalChain.GetCredentials()
+```
+
+Custom credentials provider chain is supported:
+
+```go
+import (
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
+)
+
+providers := []provider.ICredentialProvider{
+    provider.BasicCredentialMetadataProvider(),
+    provider.BasicCredentialProfileProvider(),
+}
+chain := provider.NewCredentialProviderChain(providers)
+cred, err := chain.GetCredentials()
+```
 
 ### 3. Client Initialization [:top:](#user-manual-top)
 
@@ -468,8 +718,8 @@ if err == nil {
 
 #### 4.1 Exceptions [:top:](#user-manual-top)
 
-| Level 1 | Notice | 
-| :---- | :---- | 
+| Level 1 | Notice |
+| :---- | :---- |
 | ServiceResponseError | service response error |
 | url.Error | connect endpoint error |
 

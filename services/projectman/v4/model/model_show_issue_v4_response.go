@@ -29,7 +29,7 @@ type ShowIssueV4Response struct {
 	CustomFields *[]CustomField `json:"custom_fields,omitempty"`
 
 	// 自定义属性值
-	NewCustomFields *[]NewCustomField `json:"new_custom_fields,omitempty"`
+	NewCustomFields *[]IssueDetailCustomField `json:"new_custom_fields,omitempty"`
 
 	Developer *IssueUser `json:"developer,omitempty"`
 

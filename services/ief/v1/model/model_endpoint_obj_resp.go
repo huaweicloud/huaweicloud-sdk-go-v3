@@ -33,7 +33,7 @@ type EndpointObjResp struct {
 	// 端点的属性，端点需要对外展示的属性，示例： - dis: {\"domain_id\":\"user's domain id\"} - servicebus: {\"service_port\":8080} - apigw: {\"domain_id\":\"user's domain id\"}
 	Properties map[string]interface{} `json:"properties"`
 
-	// 端点类型 枚举值： - dis - servicebus - apigw
+	// 端点类型。枚举值： - dis - servicebus - apigw
 	Type string `json:"type"`
 
 	// 更新时间

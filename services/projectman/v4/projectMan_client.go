@@ -723,6 +723,28 @@ func (c *ProjectManClient) CreateIterationV4Invoker(request *model.CreateIterati
 	return &CreateIterationV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateProjectModule 创建项目的模块
+//
+// 查询项目的模块列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) CreateProjectModule(request *model.CreateProjectModuleRequest) (*model.CreateProjectModuleResponse, error) {
+	requestDef := GenReqDefForCreateProjectModule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateProjectModuleResponse), nil
+	}
+}
+
+// CreateProjectModuleInvoker 创建项目的模块
+func (c *ProjectManClient) CreateProjectModuleInvoker(request *model.CreateProjectModuleRequest) *CreateProjectModuleInvoker {
+	requestDef := GenReqDefForCreateProjectModule()
+	return &CreateProjectModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSystemIssueV4 细粒度权限用户创建工作项
 //
 // 拥有IAM细粒度权限（projectmanConfig:systemSettingField:set）且在devcloud项目中有创建工作项的权限的用户可以设置工作项的创建者
@@ -787,6 +809,28 @@ func (c *ProjectManClient) DeleteIterationV4(request *model.DeleteIterationV4Req
 func (c *ProjectManClient) DeleteIterationV4Invoker(request *model.DeleteIterationV4Request) *DeleteIterationV4Invoker {
 	requestDef := GenReqDefForDeleteIterationV4()
 	return &DeleteIterationV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProjectModule 删除项目的模块
+//
+// 删除项目的模块
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) DeleteProjectModule(request *model.DeleteProjectModuleRequest) (*model.DeleteProjectModuleResponse, error) {
+	requestDef := GenReqDefForDeleteProjectModule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteProjectModuleResponse), nil
+	}
+}
+
+// DeleteProjectModuleInvoker 删除项目的模块
+func (c *ProjectManClient) DeleteProjectModuleInvoker(request *model.DeleteProjectModuleRequest) *DeleteProjectModuleInvoker {
+	requestDef := GenReqDefForDeleteProjectModule()
+	return &DeleteProjectModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAssociatedIssues 查询当前工作项已经关联的工作项
@@ -1075,6 +1119,28 @@ func (c *ProjectManClient) ListProjectIterationsV4Invoker(request *model.ListPro
 	return &ListProjectIterationsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListProjectModules 查询项目的模块列表
+//
+// 查询项目的模块列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) ListProjectModules(request *model.ListProjectModulesRequest) (*model.ListProjectModulesResponse, error) {
+	requestDef := GenReqDefForListProjectModules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectModulesResponse), nil
+	}
+}
+
+// ListProjectModulesInvoker 查询项目的模块列表
+func (c *ProjectManClient) ListProjectModulesInvoker(request *model.ListProjectModulesRequest) *ListProjectModulesInvoker {
+	requestDef := GenReqDefForListProjectModules()
+	return &ListProjectModulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProjectWorkHours 按用户查询工时（多项目）
 //
 // 按用户查询工时（多项目）
@@ -1141,9 +1207,9 @@ func (c *ProjectManClient) ShowIssueV4Invoker(request *model.ShowIssueV4Request)
 	return &ShowIssueV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowIssuesWrokFlowConfig 查询Scrum的工作项流转配置
+// ShowIssuesWrokFlowConfig 查询Scrum项目的工作项流转配置
 //
-// 查询Scrum的工作项流转配置
+// 查询Scrum项目的工作项流转配置
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1157,7 +1223,7 @@ func (c *ProjectManClient) ShowIssuesWrokFlowConfig(request *model.ShowIssuesWro
 	}
 }
 
-// ShowIssuesWrokFlowConfigInvoker 查询Scrum的工作项流转配置
+// ShowIssuesWrokFlowConfigInvoker 查询Scrum项目的工作项流转配置
 func (c *ProjectManClient) ShowIssuesWrokFlowConfigInvoker(request *model.ShowIssuesWrokFlowConfigRequest) *ShowIssuesWrokFlowConfigInvoker {
 	requestDef := GenReqDefForShowIssuesWrokFlowConfig()
 	return &ShowIssuesWrokFlowConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1249,6 +1315,28 @@ func (c *ProjectManClient) UpdateIterationV4(request *model.UpdateIterationV4Req
 func (c *ProjectManClient) UpdateIterationV4Invoker(request *model.UpdateIterationV4Request) *UpdateIterationV4Invoker {
 	requestDef := GenReqDefForUpdateIterationV4()
 	return &UpdateIterationV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProjectModule 更新项目的模块
+//
+// 更新项目的模块
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) UpdateProjectModule(request *model.UpdateProjectModuleRequest) (*model.UpdateProjectModuleResponse, error) {
+	requestDef := GenReqDefForUpdateProjectModule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateProjectModuleResponse), nil
+	}
+}
+
+// UpdateProjectModuleInvoker 更新项目的模块
+func (c *ProjectManClient) UpdateProjectModuleInvoker(request *model.UpdateProjectModuleRequest) *UpdateProjectModuleInvoker {
+	requestDef := GenReqDefForUpdateProjectModule()
+	return &UpdateProjectModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UploadIssueImg 上传图片

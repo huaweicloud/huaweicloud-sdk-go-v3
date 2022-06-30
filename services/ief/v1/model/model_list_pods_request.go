@@ -9,13 +9,13 @@ import (
 // Request Object
 type ListPodsRequest struct {
 
-	// 指定节点查询应用实例, 可选， 与group_id、deployment_id、deployment_ids四选一
+	// 指定节点查询应用实例，可选， 与group_id、deployment_id、deployment_ids四选一
 	NodeId *string `json:"node_id,omitempty"`
 
 	// 指定节点组查询应用实例，可选，与node_id、deployment_id、deployment_ids四选一
 	GroupId *string `json:"group_id,omitempty"`
 
-	// 指定应用部署ID查询应用实例， 可选， 与node_id、group_id、deployment_ids四选一
+	// 指定应用部署ID查询应用实例，可选， 与node_id、group_id、deployment_ids四选一
 	DeploymentId *string `json:"deployment_id,omitempty"`
 
 	// 指定应用部署ID列表查询应用实例，多个ID使用逗号分隔，可选， 与node_id、group_id、deployment_id四选一

@@ -389,6 +389,18 @@ func (i *CreateIterationV4Invoker) Invoke() (*model.CreateIterationV4Response, e
 	}
 }
 
+type CreateProjectModuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateProjectModuleInvoker) Invoke() (*model.CreateProjectModuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateProjectModuleResponse), nil
+	}
+}
+
 type CreateSystemIssueV4Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -422,6 +434,18 @@ func (i *DeleteIterationV4Invoker) Invoke() (*model.DeleteIterationV4Response, e
 		return nil, err
 	} else {
 		return result.(*model.DeleteIterationV4Response), nil
+	}
+}
+
+type DeleteProjectModuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteProjectModuleInvoker) Invoke() (*model.DeleteProjectModuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteProjectModuleResponse), nil
 	}
 }
 
@@ -581,6 +605,18 @@ func (i *ListProjectIterationsV4Invoker) Invoke() (*model.ListProjectIterationsV
 	}
 }
 
+type ListProjectModulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectModulesInvoker) Invoke() (*model.ListProjectModulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectModulesResponse), nil
+	}
+}
+
 type ListProjectWorkHoursInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -674,6 +710,18 @@ func (i *UpdateIterationV4Invoker) Invoke() (*model.UpdateIterationV4Response, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateIterationV4Response), nil
+	}
+}
+
+type UpdateProjectModuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateProjectModuleInvoker) Invoke() (*model.UpdateProjectModuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateProjectModuleResponse), nil
 	}
 }
 

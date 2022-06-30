@@ -15,7 +15,7 @@ type ListTranscodeDataResponse struct {
 	// 指定时间区间内各转码规格转码时长总和。
 	SummaryList *[]TranscodeSummary `json:"summary_list,omitempty"`
 
-	XRequestId     *string `json:"X-request-id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

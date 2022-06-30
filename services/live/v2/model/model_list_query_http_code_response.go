@@ -12,7 +12,7 @@ type ListQueryHttpCodeResponse struct {
 	// 基于时间轴的状态码
 	DataSeries *[]HttpCodeSummary `json:"data_series,omitempty"`
 
-	XRequestId     *string `json:"X-request-id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

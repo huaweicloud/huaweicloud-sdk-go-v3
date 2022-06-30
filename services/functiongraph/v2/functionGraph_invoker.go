@@ -689,6 +689,18 @@ func (i *UpdateFunctionConfigInvoker) Invoke() (*model.UpdateFunctionConfigRespo
 	}
 }
 
+type UpdateFunctionMaxInstanceConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateFunctionMaxInstanceConfigInvoker) Invoke() (*model.UpdateFunctionMaxInstanceConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateFunctionMaxInstanceConfigResponse), nil
+	}
+}
+
 type UpdateFunctionReservedInstancesInvoker struct {
 	*invoker.BaseInvoker
 }

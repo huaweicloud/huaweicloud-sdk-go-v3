@@ -9,7 +9,7 @@ import (
 // 设备模板
 type DeviceTemplateUpdateDetail struct {
 
-	// 设备模板描述,最大长度255
+	// 设备模板描述，最大长度255
 	Description *string `json:"description,omitempty"`
 
 	// 终端设备静态属性，最多64个键值。

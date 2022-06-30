@@ -74,8 +74,19 @@ type UpdateHostResponse struct {
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
 	// 域名描述
-	Description    *string `json:"description,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Description *string `json:"description,omitempty"`
+
+	// 是否使用HTTP2
+	Http2Enable *bool `json:"http2_enable,omitempty"`
+
+	// 是否开启IPv6防护
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+
+	// 负载均衡算法
+	LbAlgorithm *string `json:"lb_algorithm,omitempty"`
+
+	TimeoutConfig  *TimeoutConfig `json:"timeout_config,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o UpdateHostResponse) String() string {

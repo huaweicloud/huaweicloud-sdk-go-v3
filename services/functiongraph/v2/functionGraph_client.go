@@ -1288,6 +1288,28 @@ func (c *FunctionGraphClient) UpdateFunctionConfigInvoker(request *model.UpdateF
 	return &UpdateFunctionConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateFunctionMaxInstanceConfig 更新函数最大实例数
+//
+// 更新函数最大实例数
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) UpdateFunctionMaxInstanceConfig(request *model.UpdateFunctionMaxInstanceConfigRequest) (*model.UpdateFunctionMaxInstanceConfigResponse, error) {
+	requestDef := GenReqDefForUpdateFunctionMaxInstanceConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFunctionMaxInstanceConfigResponse), nil
+	}
+}
+
+// UpdateFunctionMaxInstanceConfigInvoker 更新函数最大实例数
+func (c *FunctionGraphClient) UpdateFunctionMaxInstanceConfigInvoker(request *model.UpdateFunctionMaxInstanceConfigRequest) *UpdateFunctionMaxInstanceConfigInvoker {
+	requestDef := GenReqDefForUpdateFunctionMaxInstanceConfig()
+	return &UpdateFunctionMaxInstanceConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateFunctionReservedInstances 更新函数预留实例个数
 //
 // 为函数绑定预留实例

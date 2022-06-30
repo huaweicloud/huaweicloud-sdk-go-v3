@@ -1,4 +1,4 @@
-// Copyright 2020 Huawei Technologies Co.,Ltd.
+// Copyright 2022 Huawei Technologies Co.,Ltd.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -27,6 +27,9 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/signer"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
+	"io/ioutil"
+	"os"
 	"strings"
 	"time"
 )
@@ -35,6 +38,7 @@ const (
 	ProjectIdInHeader     = "X-Project-Id"
 	SecurityTokenInHeader = "X-Security-Token"
 	ContentTypeInHeader   = "Content-Type"
+	AuthTokenInHeader     = "X-Auth-Token"
 )
 
 var DefaultDerivedPredicate = auth.GetDefaultDerivedPredicate()
@@ -45,10 +49,13 @@ type Credentials struct {
 	SK               string
 	ProjectId        string
 	SecurityToken    string
+	IdpId            string
+	IdTokenFile      string
 	DerivedPredicate func(*request.DefaultHttpRequest) bool
 
 	derivedAuthServiceName string
 	regionId               string
+	authToken              string
 	expiredAt              int64
 }
 
@@ -88,8 +95,13 @@ func (s Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region st
 func (s Credentials) ProcessAuthRequest(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {
 	reqBuilder := req.Builder()
 
-	if s.NeedUpdate() {
-		err := s.UpdateCredential(client)
+	if s.needUpdateAuthToken() {
+		err := s.updateAuthTokenByIdToken(client)
+		if err != nil {
+			return nil, err
+		}
+	} else if s.needUpdateSecurityToken() {
+		err := s.UpdateSecurityTokenFromMetadata()
 		if err != nil {
 			return nil, err
 		}
@@ -99,6 +111,12 @@ func (s Credentials) ProcessAuthRequest(client *impl.DefaultHttpClient, req *req
 		reqBuilder = reqBuilder.
 			AddAutoFilledPathParam("project_id", s.ProjectId).
 			AddHeaderParam(ProjectIdInHeader, s.ProjectId)
+	}
+
+	if s.authToken != "" {
+		req := reqBuilder.Build()
+		req.AddHeaderParam(AuthTokenInHeader, s.authToken)
+		return req, nil
 	}
 
 	if s.SecurityToken != "" {
@@ -152,20 +170,18 @@ func (s Credentials) IsDerivedAuth(httpRequest *request.DefaultHttpRequest) bool
 	return s.DerivedPredicate(httpRequest)
 }
 
-func (s Credentials) NeedUpdate() bool {
-	if s.AK == "" || s.SK == "" {
+func (s Credentials) needUpdateSecurityToken() bool {
+	if s.AK == "" && s.SK == "" {
 		return true
 	}
-
 	if s.expiredAt == 0 {
 		return false
 	}
-
-	return s.expiredAt-time.Now().Unix() < 60
+	return s.SecurityToken != "" && s.expiredAt-time.Now().Unix() < 60
 }
 
-func (s *Credentials) UpdateCredential(client *impl.DefaultHttpClient) error {
-	credential, err := internal.GetTemporaryCredential(client)
+func (s *Credentials) UpdateSecurityTokenFromMetadata() error {
+	credential, err := internal.GetCredentialFromMetadata()
 	if err != nil {
 		return err
 	}
@@ -180,6 +196,54 @@ func (s *Credentials) UpdateCredential(client *impl.DefaultHttpClient) error {
 	s.expiredAt = location.Unix()
 
 	return nil
+}
+
+func (s *Credentials) needUpdateAuthToken() bool {
+	if s.IdpId == "" || s.IdTokenFile == "" {
+		return false
+	}
+	if s.authToken == "" {
+		return true
+	}
+	return s.expiredAt-time.Now().Unix() < 60
+}
+
+func (s *Credentials) updateAuthTokenByIdToken(client *impl.DefaultHttpClient) error {
+	idToken, err := s.getIdToken()
+	if err != nil {
+		return err
+	}
+
+	req := internal.GetProjectTokenWithIdTokenRequest(s.IamEndpoint, s.IdpId, idToken, s.ProjectId)
+	resp, err := internal.CreateTokenWithIdToken(client, req)
+	if err != nil {
+		return err
+	}
+
+	location, err := time.ParseInLocation(`2006-01-02T15:04:05Z`, resp.Token.ExpiresAt, time.UTC)
+	if err != nil {
+		return err
+	}
+	s.expiredAt = location.Unix()
+	s.authToken = resp.XSubjectToken
+	return nil
+}
+
+func (s *Credentials) getIdToken() (string, error) {
+	_, err := os.Stat(s.IdTokenFile)
+	if err != nil {
+		return "", err
+	}
+
+	bytes, err := ioutil.ReadFile(s.IdTokenFile)
+	if err != nil {
+		return "", err
+	}
+	idToken := string(bytes)
+	if idToken == "" {
+		return "", sdkerr.NewCredentialsTypeError("id token is empty")
+	}
+	return idToken, nil
 }
 
 type CredentialsBuilder struct {
@@ -222,6 +286,27 @@ func (builder *CredentialsBuilder) WithDerivedPredicate(derivedPredicate func(*r
 	return builder
 }
 
+func (builder *CredentialsBuilder) WithIdpId(idpId string) *CredentialsBuilder {
+	builder.Credentials.IdpId = idpId
+	return builder
+}
+
+func (builder *CredentialsBuilder) WithIdTokenFile(idTokenFile string) *CredentialsBuilder {
+	builder.Credentials.IdTokenFile = idTokenFile
+	return builder
+}
+
 func (builder *CredentialsBuilder) Build() Credentials {
+	if builder.Credentials.IdpId != "" || builder.Credentials.IdTokenFile != "" {
+		if builder.Credentials.IdpId == "" {
+			panic(sdkerr.NewCredentialsTypeError("IdpId is required when using IdpId&IdTokenFile"))
+		}
+		if builder.Credentials.IdTokenFile == "" {
+			panic(sdkerr.NewCredentialsTypeError("IdTokenFile is required when using IdpId&IdTokenFile"))
+		}
+		if builder.Credentials.ProjectId == "" {
+			panic(sdkerr.NewCredentialsTypeError("ProjectId is required when using IdpId&IdTokenFile"))
+		}
+	}
 	return builder.Credentials
 }

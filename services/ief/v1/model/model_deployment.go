@@ -15,7 +15,7 @@ type Deployment struct {
 	// 部署描述
 	Description *string `json:"description,omitempty"`
 
-	// 应用部署来源: 边缘市场(iem) or 自定义(userdefined)
+	// 应用部署来源：边缘市场（iem）或自定义()
 	Source *string `json:"source,omitempty"`
 
 	// 应用部署到指定节点组，与node_ids二选一

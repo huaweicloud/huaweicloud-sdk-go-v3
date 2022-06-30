@@ -679,6 +679,28 @@ func (c *WafClient) ListIgnoreRuleInvoker(request *model.ListIgnoreRuleRequest) 
 	return &ListIgnoreRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListOverviewsClassification 查询安全总览分类统计top信息
+//
+// 查询安全总览分类统计top信息，包含受攻击域名 、攻击源ip、受攻击URL、攻击来源区域、事件分布
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) ListOverviewsClassification(request *model.ListOverviewsClassificationRequest) (*model.ListOverviewsClassificationResponse, error) {
+	requestDef := GenReqDefForListOverviewsClassification()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOverviewsClassificationResponse), nil
+	}
+}
+
+// ListOverviewsClassificationInvoker 查询安全总览分类统计top信息
+func (c *WafClient) ListOverviewsClassificationInvoker(request *model.ListOverviewsClassificationRequest) *ListOverviewsClassificationInvoker {
+	requestDef := GenReqDefForListOverviewsClassification()
+	return &ListOverviewsClassificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListPolicy 查询防护策略列表
 //
 // 查询防护策略列表
@@ -767,9 +789,9 @@ func (c *WafClient) ListQpsTimelineInvoker(request *model.ListQpsTimelineRequest
 	return &ListQpsTimelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListStatistics 查询安全总览请求数据
+// ListStatistics 查询安全总览请求与攻击数量
 //
-// 查询安全总览请求数据
+// 查询安全总览请求与攻击数量
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -783,7 +805,7 @@ func (c *WafClient) ListStatistics(request *model.ListStatisticsRequest) (*model
 	}
 }
 
-// ListStatisticsInvoker 查询安全总览请求数据
+// ListStatisticsInvoker 查询安全总览请求与攻击数量
 func (c *WafClient) ListStatisticsInvoker(request *model.ListStatisticsRequest) *ListStatisticsInvoker {
 	requestDef := GenReqDefForListStatistics()
 	return &ListStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

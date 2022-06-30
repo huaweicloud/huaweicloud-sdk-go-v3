@@ -51,6 +51,8 @@ type CloudWafHostItem struct {
 
 	// 付费模式，目前只支持prePaid预付款模式
 	PaidType *CloudWafHostItemPaidType `json:"paid_type,omitempty"`
+
+	TimeoutConfig *TimeoutConfig `json:"timeout_config,omitempty"`
 }
 
 func (o CloudWafHostItem) String() string {

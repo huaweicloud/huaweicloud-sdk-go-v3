@@ -69,6 +69,8 @@ type PremiumWafHost struct {
 	Extend map[string]string `json:"extend,omitempty"`
 
 	TrafficMark *TrafficMark `json:"traffic_mark,omitempty"`
+
+	TimeoutConfig *TimeoutConfig `json:"timeout_config,omitempty"`
 }
 
 func (o PremiumWafHost) String() string {

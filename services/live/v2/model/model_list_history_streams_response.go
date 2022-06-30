@@ -15,7 +15,7 @@ type ListHistoryStreamsResponse struct {
 	// 总记录数。
 	Total *int32 `json:"total,omitempty"`
 
-	XRequestId     *string `json:"X-request-id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -8,9 +8,9 @@ import (
 
 // 探针配置
 type Probe struct {
-	Exec *ProbeExec `json:"exec,omitempty"`
+	Exec *Exec `json:"exec,omitempty"`
 
-	HttpGet *InstancesLivenessProbeHttpGet `json:"http_get,omitempty"`
+	HttpGet *HttpGetDetail `json:"http_get,omitempty"`
 
 	// 表示从工作负载启动后从多久开始探测，大于0且不大于3600的整数，默认为10
 	InitialDelaySeconds *int32 `json:"initial_delay_seconds,omitempty"`

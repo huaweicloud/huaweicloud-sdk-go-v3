@@ -15,7 +15,7 @@ type SendVerificationCodeV2Req struct {
 	Timeout *int32 `json:"timeout,omitempty"`
 
 	// 指定发送验证码的邮箱地址。
-	Email *string `json:"email,omitempty"`
+	Email string `json:"email"`
 
 	// 根据该参数的取值选择发送邮件验证码的语言。 zh-cn：中文en-us：英文
 	Lang *string `json:"lang,omitempty"`

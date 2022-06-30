@@ -15,7 +15,7 @@ type ListSnapshotDataResponse struct {
 	// 指定时间区间内截图数量总和。
 	Total *int64 `json:"total,omitempty"`
 
-	XRequestId     *string `json:"X-request-id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

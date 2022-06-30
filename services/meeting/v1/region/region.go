@@ -6,9 +6,11 @@ import (
 )
 
 var CN_NORTH_4 = region.NewRegion("cn-north-4", "https://api.meeting.huaweicloud.com")
+var AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1", "https://api-intl.meeting.huaweicloud.com")
 
 var staticFields = map[string]*region.Region{
-	"cn-north-4": CN_NORTH_4,
+	"cn-north-4":     CN_NORTH_4,
+	"ap-southeast-1": AP_SOUTHEAST_1,
 }
 
 var provider = region.DefaultProviderChain("MEETING")

@@ -14,7 +14,7 @@ type ContainerResp struct {
 	// 容器启动命令，字符总长度最大为65536。 command支持使用数组定义多条命令，但在IEF控制台界面只会显示第一条命令。
 	Command *[]string `json:"command,omitempty"`
 
-	// 容器名称，只允许英文小写字母、数字、中划线，最大长度32, 英文小写字母或数字开头和结尾
+	// 容器名称，只允许英文小写字母、数字、中划线，最大长度32， 英文小写字母或数字开头和结尾
 	Name string `json:"name"`
 
 	// 环境变量
@@ -50,7 +50,7 @@ type ContainerResp struct {
 	// 健康检查结果
 	IsReady *string `json:"is_ready,omitempty"`
 
-	// 是否启用特权容器,默认值false
+	// 是否启用特权容器，默认值false
 	Privileged *bool `json:"privileged,omitempty"`
 
 	// 容器ID
@@ -59,7 +59,7 @@ type ContainerResp struct {
 	// 容器状态
 	State *string `json:"state,omitempty"`
 
-	// npu类型，支持D310类型和D910类型。 - D310表示D310类型。 - D910表示D910类型。 - 不填表示为D310类型。
+	// NPU类型，支持D310类型和D910类型。 - D310表示D310类型。 - D910表示D910类型。 - 不填表示为D310类型。
 	NpuType *string `json:"npu_type,omitempty"`
 }
 

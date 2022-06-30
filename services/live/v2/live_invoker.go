@@ -125,18 +125,6 @@ func (i *ListTranscodeDataInvoker) Invoke() (*model.ListTranscodeDataResponse, e
 	}
 }
 
-type ListTranscodeTaskCountInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListTranscodeTaskCountInvoker) Invoke() (*model.ListTranscodeTaskCountResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListTranscodeTaskCountResponse), nil
-	}
-}
-
 type ListUsersOfStreamInvoker struct {
 	*invoker.BaseInvoker
 }

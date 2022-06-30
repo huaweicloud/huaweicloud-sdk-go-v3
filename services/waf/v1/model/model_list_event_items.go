@@ -12,7 +12,7 @@ type ListEventItems struct {
 	// 事件id
 	Id *string `json:"id,omitempty"`
 
-	// 次数
+	// 攻击发生时的时间戳(毫秒)
 	Time *int64 `json:"time,omitempty"`
 
 	// 策略id

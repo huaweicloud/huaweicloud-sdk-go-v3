@@ -15,7 +15,7 @@ type ValueInAttributes struct {
 	// 标识属性是否可选，默认为true
 	Optional *bool `json:"optional,omitempty"`
 
-	Metadata *ValueInPropertyVisitorsRegisterTypeMetadata `json:"metadata,omitempty"`
+	Metadata *Metadata `json:"metadata,omitempty"`
 }
 
 func (o ValueInAttributes) String() string {

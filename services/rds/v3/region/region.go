@@ -18,6 +18,7 @@ var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://rds.ap-southeas
 var RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2", "https://rds.ru-northwest-2.myhuaweicloud.com")
 var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://rds.sa-brazil-1.myhuaweicloud.com")
 var LA_NORTH_2 = region.NewRegion("la-north-2", "https://rds.la-north-2.myhuaweicloud.com")
+var CN_SOUTH_2 = region.NewRegion("cn-south-2", "https://rds.cn-south-2.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"af-south-1":     AF_SOUTH_1,
@@ -33,6 +34,7 @@ var staticFields = map[string]*region.Region{
 	"ru-northwest-2": RU_NORTHWEST_2,
 	"sa-brazil-1":    SA_BRAZIL_1,
 	"la-north-2":     LA_NORTH_2,
+	"cn-south-2":     CN_SOUTH_2,
 }
 
 var provider = region.DefaultProviderChain("RDS")

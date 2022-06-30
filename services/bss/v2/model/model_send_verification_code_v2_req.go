@@ -15,7 +15,7 @@ type SendVerificationCodeV2Req struct {
 	Timeout *int32 `json:"timeout,omitempty"`
 
 	// 指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
-	MobilePhone *string `json:"mobile_phone,omitempty"`
+	MobilePhone string `json:"mobile_phone"`
 
 	// 根据该参数的取值选择发送短信验证码的语言。 zh-cn：中文en-us：英文
 	Lang *string `json:"lang,omitempty"`

@@ -46,8 +46,10 @@ type ShowHostResponse struct {
 	Timestamp *int64 `json:"timestamp,omitempty"`
 
 	// 是否使用独享ip
-	ExclusiveIp    *bool `json:"exclusive_ip,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
+
+	TimeoutConfig  *TimeoutConfig `json:"timeout_config,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowHostResponse) String() string {

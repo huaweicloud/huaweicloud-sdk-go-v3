@@ -15,7 +15,7 @@ type Env struct {
 	// 环境变量的value，最大长度20480个字符。value、value_from和field_path必须三选一使用。
 	Value *string `json:"value,omitempty"`
 
-	ValueFrom *EnvValueFrom `json:"value_from,omitempty"`
+	ValueFrom *ValueFrom `json:"value_from,omitempty"`
 
 	// 该参数目前只支持赋值\"status.hostIP\"，即引用边缘节点的IP地址作为环境变量。
 	FieldPath *string `json:"field_path,omitempty"`

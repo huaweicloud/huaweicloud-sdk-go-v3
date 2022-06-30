@@ -353,7 +353,7 @@ func GenReqDefForListRecordContents() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("X-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -448,6 +448,12 @@ func GenReqDefForRunRecord() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

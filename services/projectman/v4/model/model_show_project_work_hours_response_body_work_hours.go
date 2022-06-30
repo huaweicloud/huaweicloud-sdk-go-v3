@@ -14,6 +14,9 @@ type ShowProjectWorkHoursResponseBodyWorkHours struct {
 	// 用户昵称
 	NickName *string `json:"nick_name,omitempty"`
 
+	// 用户id
+	UserId *string `json:"user_id,omitempty"`
+
 	// 用户名
 	UserName *string `json:"user_name,omitempty"`
 

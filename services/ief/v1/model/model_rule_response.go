@@ -24,7 +24,7 @@ type RuleResponse struct {
 	// 铂金版实例ID，如果为空则表示是专业版实例。
 	IefInstanceId *string `json:"ief_instance_id,omitempty"`
 
-	// 是否启用规则，默认为true(启用)
+	// 是否启用规则，默认为true（启用）
 	InUsing *bool `json:"in_using,omitempty"`
 
 	// 规则名称，只允许中文字符、英文字符、数字、下划线、中划线，最大长度64 同一个帐号中创建的规则名唯一

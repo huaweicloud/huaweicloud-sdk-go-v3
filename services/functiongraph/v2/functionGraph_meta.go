@@ -1176,6 +1176,26 @@ func GenReqDefForUpdateFunctionConfig() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdateFunctionMaxInstanceConfig() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/fgs/functions/{function_urn}/config-max-instance").
+		WithResponse(new(model.UpdateFunctionMaxInstanceConfigResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FunctionUrn").
+		WithJsonTag("function_urn").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateFunctionReservedInstances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).

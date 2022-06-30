@@ -15,7 +15,7 @@ type RuleConfig struct {
 	// 铂金版实例ID，如果为空则表示是专业版实例。
 	IefInstanceId *string `json:"ief_instance_id,omitempty"`
 
-	// 是否启用规则，默认为true(启用)
+	// 是否启用规则，默认为true（启用）
 	InUsing *bool `json:"in_using,omitempty"`
 
 	// 规则名称，只允许中文字符、英文字符、数字、下划线、中划线，最大长度64 同一个帐号中创建的规则名唯一
@@ -24,13 +24,13 @@ type RuleConfig struct {
 	// 源端点ID
 	Source string `json:"source"`
 
-	// 源端点资源。 示例： - rest: path取值需要为标准URI格式。 {\"path\":\"/a/b/c\"} - eventbus: {\"topic\": \"<project id>/nodes/<node id>/user/<租户自定义且满足eventbus topic要求的字符串>\",\"node_id\":\"<node id>\"}
+	// 源端点资源。示例： - rest: {\"path\":\"<standard uri format>\"} - eventbus: {\"topic\":\"<project id>/nodes/<node id>/user/<租户自定义且满足eventbus topic要求的字符串>\",\"node_id\":\"<node id>\"}
 	SourceResource map[string]string `json:"source_resource"`
 
 	// 目的端点ID
 	Target string `json:"target"`
 
-	// 目的端点资源，示例： - dis: {\"channel\": \"dis channel name\"} - servicebus: {\"path\": \"/request path\"} - apigw: {\"resource\": \"http://ssss.com\"} - eventbus: {\"topic\": \"/xxxx\"}
+	// 目的端点资源。示例： - dis: {\"channel\": \"dis channel name\"} - servicebus: {\"path\": \"/request path\"} - apigw: {\"resource\": \"http://ssss.com\"} - eventbus: {\"topic\": \"/xxxx\"}
 	TargetResource map[string]string `json:"target_resource"`
 }
 

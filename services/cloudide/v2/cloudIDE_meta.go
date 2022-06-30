@@ -109,6 +109,26 @@ func GenReqDefForShowPrice() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUploadExtensionFile() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/marketplace/file/plugin").
+		WithResponse(new(model.UploadExtensionFileResponse)).
+		WithContentType("multipart/form-data")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Official").
+		WithJsonTag("official").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCheckInstanceAccess() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

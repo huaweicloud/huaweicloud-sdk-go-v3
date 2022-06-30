@@ -22,7 +22,7 @@ package core
 import (
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/helper"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
@@ -84,14 +84,13 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 	defaultHttpClient := impl.NewDefaultHttpClient(builder.httpConfig)
 
 	if builder.credentials == nil {
-		builder.credentials = helper.LoadCredentialFromEnv(builder.CredentialsType[0])
+		p := provider.DefaultCredentialProviderChain(builder.CredentialsType[0])
+		credentials, err := p.GetCredentials()
+		if err != nil {
+			panic(err)
+		}
+		builder.credentials = credentials
 	}
-
-	cred, err := helper.ProcessCredential(defaultHttpClient, builder.CredentialsType[0], builder.credentials)
-	if err != nil {
-		panic(err)
-	}
-	builder.credentials = cred
 
 	match := false
 	givenCredentialsType := reflect.TypeOf(builder.credentials).String()

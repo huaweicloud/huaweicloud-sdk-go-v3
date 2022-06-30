@@ -15,7 +15,7 @@ type DeleteDeploymentRequest struct {
 	// 应用部署ID
 	DeploymentId string `json:"deployment_id"`
 
-	// 是否强制删除；默认为false。
+	// 是否强制删除。默认为false。
 	ForceDelete *string `json:"force_delete,omitempty"`
 }
 

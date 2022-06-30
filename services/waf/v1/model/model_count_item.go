@@ -14,6 +14,9 @@ type CountItem struct {
 
 	// 数量
 	Num *int32 `json:"num,omitempty"`
+
+	// 域名
+	Host *string `json:"host,omitempty"`
 }
 
 func (o CountItem) String() string {

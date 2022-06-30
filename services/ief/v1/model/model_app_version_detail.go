@@ -33,7 +33,7 @@ type AppVersionDetail struct {
 	// 卷配置
 	Volumes []Volumes `json:"volumes"`
 
-	Configs *AppVersionDetailConfigs `json:"configs,omitempty"`
+	Configs *AppConfigs `json:"configs,omitempty"`
 
 	Resources *Resources `json:"resources,omitempty"`
 
@@ -46,9 +46,9 @@ type AppVersionDetail struct {
 	// 参数
 	Args *[]string `json:"args,omitempty"`
 
-	LivenessProbe *AppVersionDetailLivenessProbe `json:"liveness_probe,omitempty"`
+	LivenessProbe *ProbeDetail `json:"liveness_probe,omitempty"`
 
-	ReadinessProbe *AppVersionDetailReadinessProbe `json:"readiness_probe,omitempty"`
+	ReadinessProbe *ProbeDetail `json:"readiness_probe,omitempty"`
 }
 
 func (o AppVersionDetail) String() string {

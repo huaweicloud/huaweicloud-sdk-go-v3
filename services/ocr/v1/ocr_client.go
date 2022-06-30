@@ -119,6 +119,28 @@ func (c *OcrClient) RecognizeBusinessLicenseInvoker(request *model.RecognizeBusi
 	return &RecognizeBusinessLicenseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RecognizeCambodianIdCard 柬文身份证识别
+//
+// 识别柬文身份证图片中的文字内容，并将识别的结构化结果返回给用户。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OcrClient) RecognizeCambodianIdCard(request *model.RecognizeCambodianIdCardRequest) (*model.RecognizeCambodianIdCardResponse, error) {
+	requestDef := GenReqDefForRecognizeCambodianIdCard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeCambodianIdCardResponse), nil
+	}
+}
+
+// RecognizeCambodianIdCardInvoker 柬文身份证识别
+func (c *OcrClient) RecognizeCambodianIdCardInvoker(request *model.RecognizeCambodianIdCardRequest) *RecognizeCambodianIdCardInvoker {
+	requestDef := GenReqDefForRecognizeCambodianIdCard()
+	return &RecognizeCambodianIdCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RecognizeChileIdCard 智利身份证识别
 //
 // 识别智利身份证图片中的文字内容，并返回识别的结构化结果。
@@ -165,6 +187,28 @@ func (c *OcrClient) RecognizeDriverLicense(request *model.RecognizeDriverLicense
 func (c *OcrClient) RecognizeDriverLicenseInvoker(request *model.RecognizeDriverLicenseRequest) *RecognizeDriverLicenseInvoker {
 	requestDef := GenReqDefForRecognizeDriverLicense()
 	return &RecognizeDriverLicenseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeExitEntryPermit 往来港澳台通行证识别
+//
+// 识别往来港澳台证件图片中的文字内容，并将识别的结构化结果返回给用户。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OcrClient) RecognizeExitEntryPermit(request *model.RecognizeExitEntryPermitRequest) (*model.RecognizeExitEntryPermitResponse, error) {
+	requestDef := GenReqDefForRecognizeExitEntryPermit()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeExitEntryPermitResponse), nil
+	}
+}
+
+// RecognizeExitEntryPermitInvoker 往来港澳台通行证识别
+func (c *OcrClient) RecognizeExitEntryPermitInvoker(request *model.RecognizeExitEntryPermitRequest) *RecognizeExitEntryPermitInvoker {
+	requestDef := GenReqDefForRecognizeExitEntryPermit()
+	return &RecognizeExitEntryPermitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RecognizeFinancialStatement 财务报表识别
@@ -303,6 +347,28 @@ func (c *OcrClient) RecognizeHealthCodeInvoker(request *model.RecognizeHealthCod
 	return &RecognizeHealthCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RecognizeHkIdCard 香港身份证识别
+//
+// 识别香港身份证中的文字内容，并将识别的结果返回给用户。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OcrClient) RecognizeHkIdCard(request *model.RecognizeHkIdCardRequest) (*model.RecognizeHkIdCardResponse, error) {
+	requestDef := GenReqDefForRecognizeHkIdCard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeHkIdCardResponse), nil
+	}
+}
+
+// RecognizeHkIdCardInvoker 香港身份证识别
+func (c *OcrClient) RecognizeHkIdCardInvoker(request *model.RecognizeHkIdCardRequest) *RecognizeHkIdCardInvoker {
+	requestDef := GenReqDefForRecognizeHkIdCard()
+	return &RecognizeHkIdCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RecognizeIdCard 身份证识别
 //
 // 识别身份证图片中的文字内容，并将识别的结果返回给用户。
@@ -434,6 +500,28 @@ func (c *OcrClient) RecognizeLicensePlate(request *model.RecognizeLicensePlateRe
 func (c *OcrClient) RecognizeLicensePlateInvoker(request *model.RecognizeLicensePlateRequest) *RecognizeLicensePlateInvoker {
 	requestDef := GenReqDefForRecognizeLicensePlate()
 	return &RecognizeLicensePlateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeMainlandTravelPermit 港澳台居民来往内地通行证识别
+//
+// 识别港澳居民来往内地通行证上的文字内容，并将识别的结构化结果返回给用户。支持港澳居民来往内地通行证和台湾居民来往内地通行证两种卡证。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OcrClient) RecognizeMainlandTravelPermit(request *model.RecognizeMainlandTravelPermitRequest) (*model.RecognizeMainlandTravelPermitResponse, error) {
+	requestDef := GenReqDefForRecognizeMainlandTravelPermit()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeMainlandTravelPermitResponse), nil
+	}
+}
+
+// RecognizeMainlandTravelPermitInvoker 港澳台居民来往内地通行证识别
+func (c *OcrClient) RecognizeMainlandTravelPermitInvoker(request *model.RecognizeMainlandTravelPermitRequest) *RecognizeMainlandTravelPermitInvoker {
+	requestDef := GenReqDefForRecognizeMainlandTravelPermit()
+	return &RecognizeMainlandTravelPermitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RecognizeMvsInvoice 机动车销售发票识别

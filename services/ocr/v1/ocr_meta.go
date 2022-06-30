@@ -67,6 +67,21 @@ func GenReqDefForRecognizeBusinessLicense() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRecognizeCambodianIdCard() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/ocr/cambodian-idcard").
+		WithResponse(new(model.RecognizeCambodianIdCardResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRecognizeChileIdCard() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -87,6 +102,21 @@ func GenReqDefForRecognizeDriverLicense() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/ocr/driver-license").
 		WithResponse(new(model.RecognizeDriverLicenseResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForRecognizeExitEntryPermit() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/ocr/exit-entry-permit").
+		WithResponse(new(model.RecognizeExitEntryPermitResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -187,6 +217,21 @@ func GenReqDefForRecognizeHealthCode() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRecognizeHkIdCard() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/ocr/hk-id-card").
+		WithResponse(new(model.RecognizeHkIdCardResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRecognizeIdCard() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -252,6 +297,21 @@ func GenReqDefForRecognizeLicensePlate() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/ocr/license-plate").
 		WithResponse(new(model.RecognizeLicensePlateResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForRecognizeMainlandTravelPermit() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/ocr/mainland-travel-permit").
+		WithResponse(new(model.RecognizeMainlandTravelPermitResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

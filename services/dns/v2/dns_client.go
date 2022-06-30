@@ -305,6 +305,52 @@ func (c *DnsClient) UpdatePtrRecordInvoker(request *model.UpdatePtrRecordRequest
 	return &UpdatePtrRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteRecordSetWithLine 批量删除某个Zone下的Record Set资源。
+//
+// 批量删除某个Zone下的Record Set资源，当删除的资源不存在时，则默认删除成功。
+// 响应结果中只包含本次实际删除的资源。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DnsClient) BatchDeleteRecordSetWithLine(request *model.BatchDeleteRecordSetWithLineRequest) (*model.BatchDeleteRecordSetWithLineResponse, error) {
+	requestDef := GenReqDefForBatchDeleteRecordSetWithLine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteRecordSetWithLineResponse), nil
+	}
+}
+
+// BatchDeleteRecordSetWithLineInvoker 批量删除某个Zone下的Record Set资源。
+func (c *DnsClient) BatchDeleteRecordSetWithLineInvoker(request *model.BatchDeleteRecordSetWithLineRequest) *BatchDeleteRecordSetWithLineInvoker {
+	requestDef := GenReqDefForBatchDeleteRecordSetWithLine()
+	return &BatchDeleteRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateRecordSetWithLine 批量修改RecordSet。
+//
+// 批量修改RecordSet。属于原子性操作，请求Record Set将全部完成修改，或不做任何修改。
+// 仅公网Zone支持。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DnsClient) BatchUpdateRecordSetWithLine(request *model.BatchUpdateRecordSetWithLineRequest) (*model.BatchUpdateRecordSetWithLineResponse, error) {
+	requestDef := GenReqDefForBatchUpdateRecordSetWithLine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateRecordSetWithLineResponse), nil
+	}
+}
+
+// BatchUpdateRecordSetWithLineInvoker 批量修改RecordSet。
+func (c *DnsClient) BatchUpdateRecordSetWithLineInvoker(request *model.BatchUpdateRecordSetWithLineRequest) *BatchUpdateRecordSetWithLineInvoker {
+	requestDef := GenReqDefForBatchUpdateRecordSetWithLine()
+	return &BatchUpdateRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateRecordSet 创建单个Record Set
 //
 // 创建单个Record Set
@@ -325,6 +371,28 @@ func (c *DnsClient) CreateRecordSet(request *model.CreateRecordSetRequest) (*mod
 func (c *DnsClient) CreateRecordSetInvoker(request *model.CreateRecordSetRequest) *CreateRecordSetInvoker {
 	requestDef := GenReqDefForCreateRecordSet()
 	return &CreateRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRecordSetWithBatchLines 批量线路创建RecordSet。仅公网Zone支持。
+//
+// 批量线路创建RecordSet。属于原子性操作，如果存在一个参数校验不通过，则创建失败。仅公网Zone支持。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DnsClient) CreateRecordSetWithBatchLines(request *model.CreateRecordSetWithBatchLinesRequest) (*model.CreateRecordSetWithBatchLinesResponse, error) {
+	requestDef := GenReqDefForCreateRecordSetWithBatchLines()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRecordSetWithBatchLinesResponse), nil
+	}
+}
+
+// CreateRecordSetWithBatchLinesInvoker 批量线路创建RecordSet。仅公网Zone支持。
+func (c *DnsClient) CreateRecordSetWithBatchLinesInvoker(request *model.CreateRecordSetWithBatchLinesRequest) *CreateRecordSetWithBatchLinesInvoker {
+	requestDef := GenReqDefForCreateRecordSetWithBatchLines()
+	return &CreateRecordSetWithBatchLinesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateRecordSetWithLine 创建单个Record Set，仅适用于公网DNS

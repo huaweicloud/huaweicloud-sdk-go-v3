@@ -899,6 +899,10 @@ func GenReqDefForListEdgeNodes() *def.HttpRequestDef {
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Sort").
+		WithJsonTag("sort").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("DeviceId").
 		WithJsonTag("device_id").
 		WithLocationType(def.Query))
@@ -909,6 +913,10 @@ func GenReqDefForListEdgeNodes() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppName").
 		WithJsonTag("app_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("State").
+		WithJsonTag("state").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Tags").

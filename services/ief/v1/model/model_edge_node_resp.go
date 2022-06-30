@@ -102,7 +102,7 @@ type EdgeNodeResp struct {
 	// 边缘节点是否开启NPU，true表示开启，false表示不开启，默认为false
 	EnableNpu bool `json:"enable_npu"`
 
-	// npu类型，支持D310类型和D910类型。 - D310表示D310类型。 - D910表示D910类型。 - 不填表示为D310类型。
+	// NPU类型，支持D310类型和D910类型。 - D310表示D310类型。 - D910表示D910类型。 - 不填表示为D310类型。
 	NpuType string `json:"npu_type"`
 
 	// 节点网卡和对应IP地址信息

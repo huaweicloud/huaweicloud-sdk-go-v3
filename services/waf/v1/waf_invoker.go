@@ -365,6 +365,18 @@ func (i *ListIgnoreRuleInvoker) Invoke() (*model.ListIgnoreRuleResponse, error) 
 	}
 }
 
+type ListOverviewsClassificationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOverviewsClassificationInvoker) Invoke() (*model.ListOverviewsClassificationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOverviewsClassificationResponse), nil
+	}
+}
+
 type ListPolicyInvoker struct {
 	*invoker.BaseInvoker
 }

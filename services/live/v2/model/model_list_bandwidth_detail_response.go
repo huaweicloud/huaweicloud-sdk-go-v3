@@ -12,7 +12,7 @@ type ListBandwidthDetailResponse struct {
 	// 采样数据列表
 	DataList *[]V2BandwidthData `json:"data_list,omitempty"`
 
-	XRequestId     *string `json:"X-request-id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

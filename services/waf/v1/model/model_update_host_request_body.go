@@ -29,6 +29,27 @@ type UpdateHostRequestBody struct {
 
 	// 加密套件（cipher_1，cipher_2，cipher_3，cipher_4，cipher_default）：  cipher_1： 加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!DES:!MD5:!PSK:!RC4:!kRSA:!SRP:!3DES:!DSS:!EXP:!CAMELLIA:@STRENGTH   cipher_2：加密算法为EECDH+AESGCM:EDH+AESGCM    cipher_3：加密算法为ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH    cipher_4：加密算法为ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!EDH    cipher_default： 加密算法为ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!AESGCM
 	Cipher *UpdateHostRequestBodyCipher `json:"cipher,omitempty"`
+
+	BlockPage *BlockPage `json:"block_page,omitempty"`
+
+	TrafficMark *TrafficMark `json:"traffic_mark,omitempty"`
+
+	// 域名特殊标识
+	Flag map[string]string `json:"flag,omitempty"`
+
+	// 可扩展字段
+	Extend map[string]string `json:"extend,omitempty"`
+
+	// 是否使用HTTP2
+	Http2Enable *bool `json:"http2_enable,omitempty"`
+
+	// 是否开启IPv6防护
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+
+	// 负载均衡算法
+	LbAlgorithm *string `json:"lb_algorithm,omitempty"`
+
+	TimeoutConfig *TimeoutConfig `json:"timeout_config,omitempty"`
 }
 
 func (o UpdateHostRequestBody) String() string {

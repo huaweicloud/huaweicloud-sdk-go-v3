@@ -27,7 +27,7 @@ type EdgeNode struct {
 	// 边缘节点是否开启NPU，true表示开启，false表示不开启，默认为false
 	EnableNpu *bool `json:"enable_npu,omitempty"`
 
-	// npu类型，支持D310类型和D910类型。 - D310表示D310类型。 - D910表示D910类型。 - 不填表示为D310类型。
+	// NPU类型，支持D310类型和D910类型。 - D310表示D310类型。 - D910表示D910类型。 - 不填表示为D310类型。
 	NpuType *string `json:"npu_type,omitempty"`
 
 	// 边缘节点属性，关联属性个数最多为32个
@@ -39,7 +39,7 @@ type EdgeNode struct {
 	// 边缘节点标签，标签个数最多为20个
 	Tags *[]NodeResTag `json:"tags,omitempty"`
 
-	MqttConfig *EdgeNodeMqttConfig `json:"mqtt_config,omitempty"`
+	MqttConfig *MqttConfigs `json:"mqtt_config,omitempty"`
 }
 
 func (o EdgeNode) String() string {

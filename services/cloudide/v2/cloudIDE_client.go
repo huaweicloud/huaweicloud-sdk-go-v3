@@ -151,6 +151,28 @@ func (c *CloudIDEClient) ShowPriceInvoker(request *model.ShowPriceRequest) *Show
 	return &ShowPriceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UploadExtensionFile 上传插件
+//
+// 上传插件
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudIDEClient) UploadExtensionFile(request *model.UploadExtensionFileRequest) (*model.UploadExtensionFileResponse, error) {
+	requestDef := GenReqDefForUploadExtensionFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadExtensionFileResponse), nil
+	}
+}
+
+// UploadExtensionFileInvoker 上传插件
+func (c *CloudIDEClient) UploadExtensionFileInvoker(request *model.UploadExtensionFileRequest) *UploadExtensionFileInvoker {
+	requestDef := GenReqDefForUploadExtensionFile()
+	return &UploadExtensionFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckInstanceAccess 查询用户是否有权限访问某个IDE实例
 //
 // 查询用户是否有权限访问某个IDE实例

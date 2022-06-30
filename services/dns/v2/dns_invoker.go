@@ -161,6 +161,30 @@ func (i *UpdatePtrRecordInvoker) Invoke() (*model.UpdatePtrRecordResponse, error
 	}
 }
 
+type BatchDeleteRecordSetWithLineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteRecordSetWithLineInvoker) Invoke() (*model.BatchDeleteRecordSetWithLineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteRecordSetWithLineResponse), nil
+	}
+}
+
+type BatchUpdateRecordSetWithLineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateRecordSetWithLineInvoker) Invoke() (*model.BatchUpdateRecordSetWithLineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateRecordSetWithLineResponse), nil
+	}
+}
+
 type CreateRecordSetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -170,6 +194,18 @@ func (i *CreateRecordSetInvoker) Invoke() (*model.CreateRecordSetResponse, error
 		return nil, err
 	} else {
 		return result.(*model.CreateRecordSetResponse), nil
+	}
+}
+
+type CreateRecordSetWithBatchLinesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRecordSetWithBatchLinesInvoker) Invoke() (*model.CreateRecordSetWithBatchLinesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRecordSetWithBatchLinesResponse), nil
 	}
 }
 

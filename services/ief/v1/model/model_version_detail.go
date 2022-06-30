@@ -21,9 +21,9 @@ type VersionDetail struct {
 	// 卷配置
 	Volumes *[]Volumes `json:"volumes,omitempty"`
 
-	Configs *VersionDetailConfigs `json:"configs,omitempty"`
+	Configs *AppConfigs `json:"configs,omitempty"`
 
-	Resources *VersionDetailResources `json:"resources,omitempty"`
+	Resources *Resources `json:"resources,omitempty"`
 
 	// 架构
 	Arch *string `json:"arch,omitempty"`
@@ -34,11 +34,11 @@ type VersionDetail struct {
 	// 参数
 	Args *[]string `json:"args,omitempty"`
 
-	LivenessProbe *AppVersionDetailLivenessProbe `json:"liveness_probe,omitempty"`
+	LivenessProbe *ProbeDetail `json:"liveness_probe,omitempty"`
 
-	ReadinessProbe *AppVersionDetailReadinessProbe `json:"readiness_probe,omitempty"`
+	ReadinessProbe *ProbeDetail `json:"readiness_probe,omitempty"`
 
-	// npu类型，支持D310类型和D910类型。 - D310表示D310类型。 - D910表示D910类型。 - 不填表示为D310类型。
+	// NPU类型，支持D310类型和D910类型。 - D310表示D310类型。 - D910表示D910类型。 - 不填表示为D310类型。
 	NpuType *string `json:"npu_type,omitempty"`
 }
 

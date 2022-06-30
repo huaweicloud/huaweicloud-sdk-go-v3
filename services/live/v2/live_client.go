@@ -247,32 +247,6 @@ func (c *LiveClient) ListTranscodeDataInvoker(request *model.ListTranscodeDataRe
 	return &ListTranscodeDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListTranscodeTaskCount 查询直播转码任务数接口
-//
-// 查询5分钟粒度的各档位转码任务数。
-//
-// 仅支持查询视频转码任务数。
-//
-// 最大查询跨度7天，最大查询周期90天。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *LiveClient) ListTranscodeTaskCount(request *model.ListTranscodeTaskCountRequest) (*model.ListTranscodeTaskCountResponse, error) {
-	requestDef := GenReqDefForListTranscodeTaskCount()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListTranscodeTaskCountResponse), nil
-	}
-}
-
-// ListTranscodeTaskCountInvoker 查询直播转码任务数接口
-func (c *LiveClient) ListTranscodeTaskCountInvoker(request *model.ListTranscodeTaskCountRequest) *ListTranscodeTaskCountInvoker {
-	requestDef := GenReqDefForListTranscodeTaskCount()
-	return &ListTranscodeTaskCountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListUsersOfStream 查询观众趋势接口
 //
 // 查询观众趋势。  最大查询跨度31天，最大查询周期一年。

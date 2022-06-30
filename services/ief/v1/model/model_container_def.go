@@ -8,7 +8,7 @@ import (
 
 type ContainerDef struct {
 
-	// 容器名称，只允许英文小写字母、数字、中划线，最大长度32, 英文小写字母或数字开头和结尾
+	// 容器名称，只允许英文小写字母、数字、中划线，最大长度32， 英文小写字母或数字开头和结尾
 	Name string `json:"name"`
 
 	// 容器镜像URL
@@ -41,7 +41,7 @@ type ContainerDef struct {
 	// 卷配置
 	Volumes *[]Volumes `json:"volumes,omitempty"`
 
-	// npu类型，支持D310类型和D910类型。 - D310表示D310类型。 - D910表示D910类型。 - 不填表示为D310类型。
+	// NPU类型，支持D310类型和D910类型。 - D310表示D310类型。 - D910表示D910类型。 - 不填表示为D310类型。
 	NpuType *string `json:"npu_type,omitempty"`
 }
 
