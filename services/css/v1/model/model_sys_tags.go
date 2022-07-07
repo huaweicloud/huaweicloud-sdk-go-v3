@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 预定义标签对象。
+// 系统标签对象。
 type SysTags struct {
 
 	// 标签名。

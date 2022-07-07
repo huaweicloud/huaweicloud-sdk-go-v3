@@ -9,7 +9,7 @@ import (
 // 公网带宽信息。
 type BindPublicReqEipBandWidth struct {
 
-	// 带宽大小。
+	// 带宽大小。单位：Mbit/s
 	Size int32 `json:"size"`
 }
 

@@ -14,6 +14,11 @@ type CreateEdgeModuleReqDto struct {
 
 	// 边缘应用版本
 	AppVersion string `json:"app_version"`
+
+	// 边缘模块名称
+	ModuleName *string `json:"module_name,omitempty"`
+
+	ContainerSettings *ContainerSettingsReqDto `json:"container_settings,omitempty"`
 }
 
 func (o CreateEdgeModuleReqDto) String() string {

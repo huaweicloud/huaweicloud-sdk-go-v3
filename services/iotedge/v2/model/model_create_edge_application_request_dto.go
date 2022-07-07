@@ -17,7 +17,7 @@ type CreateEdgeApplicationRequestDto struct {
 	// 应用描述
 	Description *string `json:"description,omitempty"`
 
-	// 功能类型,分为数据处理（DATA_PROCESSING）和协议解析（PROTOCOL_PARSING）和IT集成（ON_PREMISE_INTEGRATION），数据默认为DATA_PROCESSING，数据处理模块可以传输消息，协议解析为驱动类型，IT集成为部署南向3rdIA使用
+	// 功能类型,分为数据处理（DATA_PROCESSING）、协议解析（PROTOCOL_PARSING）、IT集成（ON_PREMISE_INTEGRATION）和混合应用（COMPOSITE_APPLICATION），数据默认为DATA_PROCESSING，数据处理模块可以传输消息，协议解析为驱动类型，IT集成为部署南向3rdIA使用，混合应用可同时实现数据处理和协议解析。
 	FunctionType *CreateEdgeApplicationRequestDtoFunctionType `json:"function_type,omitempty"`
 }
 
@@ -39,6 +39,8 @@ type CreateEdgeApplicationRequestDtoFunctionTypeEnum struct {
 	PROTOCOL_PARSING       CreateEdgeApplicationRequestDtoFunctionType
 	ON_PREMISE_INTEGRATION CreateEdgeApplicationRequestDtoFunctionType
 	GATEWAY_MANAGER        CreateEdgeApplicationRequestDtoFunctionType
+	COMPOSITE_APPLICATION  CreateEdgeApplicationRequestDtoFunctionType
+	DATA_COLLECTION        CreateEdgeApplicationRequestDtoFunctionType
 }
 
 func GetCreateEdgeApplicationRequestDtoFunctionTypeEnum() CreateEdgeApplicationRequestDtoFunctionTypeEnum {
@@ -54,6 +56,12 @@ func GetCreateEdgeApplicationRequestDtoFunctionTypeEnum() CreateEdgeApplicationR
 		},
 		GATEWAY_MANAGER: CreateEdgeApplicationRequestDtoFunctionType{
 			value: "GATEWAY_MANAGER",
+		},
+		COMPOSITE_APPLICATION: CreateEdgeApplicationRequestDtoFunctionType{
+			value: "COMPOSITE_APPLICATION",
+		},
+		DATA_COLLECTION: CreateEdgeApplicationRequestDtoFunctionType{
+			value: "DATA_COLLECTION",
 		},
 	}
 }

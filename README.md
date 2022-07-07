@@ -13,7 +13,7 @@ This document introduces how to obtain and use Huawei Cloud Go SDK.
 
 ## Requirements
 
-- To use Huawei Cloud Go SDK, you must have Huawei Cloud account as well as the Access Key and Secret key of the Huawei
+- To use Huawei Cloud Go SDK, you must have Huawei Cloud account as well as the Access Key (AK) and Secret key (SK) of the Huawei
   Cloud account. You can create an AccessKey in the Huawei Cloud console. For more information,
   see [My Credentials](https://support.huaweicloud.com/en-us/usermanual-ca/en-us_topic_0046606340.html).
 
@@ -91,6 +91,10 @@ func main() {
 }
 ```
 
+## Online Debugging
+
+[API Explorer](https://apiexplorer.developer.intl.huaweicloud.com/apiexplorer/overview) provides api retrieval and online debugging, supports full fast retrieval, visual debugging, help document viewing, and online consultation.
+
 ## Changelog
 
 Detailed changes for each released version are documented in
@@ -101,7 +105,7 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
 * [1. Client Configuration](#1-client-configuration-top)
     * [1.1 Default Configuration](#11-default-configuration-top)
     * [1.2 Network Proxy](#12-network-proxy-top)
-    * [1.3 Connection](#13-connection-top)
+    * [1.3 Timeout Configuration](#13-timeout-configuration-top)
     * [1.4 SSL Certification](#14-ssl-certification-top)
     * [1.5 Custom Network Connection](#15-custom-network-connection-top)
 * [2. Credentials Configuration](#2-credentials-configuration-top)
@@ -147,17 +151,17 @@ httpConfig.WithProxy(config.NewProxy().
     WithPassword("password"))))
 ```
 
-#### 1.3 Connection [:top:](#user-manual-top)
+#### 1.3 Timeout Configuration [:top:](#user-manual-top)
 
 ``` go
-// Seconds to wait for the server to send data before giving up
+// The default timeout is 120 seconds, which can be adjusted as needed
 httpConfig.WithTimeout(120);
 ```
 
 #### 1.4 SSL Certification [:top:](#user-manual-top)
 
 ``` go
-// Skip ssl certification checking while using https protocol if needed
+// Skip SSL certification checking while using https protocol if needed
 httpConfig.WithIgnoreSSLVerification(true);
 ```
 
@@ -177,8 +181,9 @@ There are two types of Huawei Cloud services, `regional` services and `global` s
 
 Global services contain BSS, DevStar, EPS, IAM, RMS.
 
-For `regional` services' authentication, projectId is required to initialize basic.NewCredentialsBuilder(). For `global`
-services' authentication, domainId is required to initialize global.NewCredentialsBuilder().
+For `regional` services' authentication, projectId is required to initialize basic.NewCredentialsBuilder(). 
+
+For `global` services' authentication, domainId is required to initialize global.NewCredentialsBuilder().
 
 The following authentications are supported:
 
@@ -193,7 +198,7 @@ The following authentications are supported:
 - `ak` is the access key ID for your account.
 - `sk` is the secret access key for your account.
 - `projectId` is the ID of your project depending on your region which you want to operate.
-- `domainId` is the account ID of HUAWEI CLOUD.
+- `domainId` is the account ID of Huawei Cloud.
 
 ``` go
 // Regional Services
@@ -221,14 +226,14 @@ globalCredentials := global.NewCredentialsBuilder().
 
 #### 2.2 Use Temporary AK&SK [:top:](#user-manual-top)
 
-It's required to obtain temporary access key, security key and security token first, which could be obtained through
-permanent access key and security key or through an agency.A temporary access key and securityToken are issued by the system to IAM users, and can be valid for 15 minutes to 24 hours.
+It's required to obtain temporary AK&SK and security token first, which could be obtained through
+permanent AK&SK or through an agency.A temporary access key and securityToken are issued by the system to IAM users, and can be valid for 15 minutes to 24 hours.
 
-Obtaining a temporary access key token through permanent access key and security key, you could refer to
+- Obtaining a temporary access key and security token through token, you could refer to
 document: https://support.huaweicloud.com/en-us/api-iam/iam_04_0002.html . The API mentioned in the document above
 corresponds to the method of `CreateTemporaryAccessKeyByToken` in IAM SDK.
 
-Obtaining a temporary access key and security token through an agency, you could refer to
+- Obtaining a temporary access key and security token through an agency, you could refer to
 document: https://support.huaweicloud.com/en-us/api-iam/iam_04_0101.html . The API mentioned in the document above
 corresponds to the method of `CreateTemporaryAccessKeyByAgency` in IAM SDK.
 
@@ -238,7 +243,7 @@ corresponds to the method of `CreateTemporaryAccessKeyByAgency` in IAM SDK.
 - `sk` is the secret access key for your account.
 - `securityToken` is the security token when using temporary AK/SK.
 - `projectId` is the ID of your project depending on your region which you want to operate.
-- `domainId` is the account ID of HUAWEI CLOUD.
+- `domainId` is the account ID of Huawei Cloud.
 
 ``` go
 // Regional Services
@@ -282,7 +287,7 @@ Obtain a federated identity authentication token using an OpenID Connect ID toke
 - `IdpId` Identity provider ID.
 - `IdTokenFile` Id token file path. Id token is constructed by the enterprise IdP to carry the identity information of federated users.
 - `projectId` is the ID of your project depending on your region which you want to operate.
-- `domainId` is the account ID of HUAWEI CLOUD.
+- `domainId` is the account ID of Huawei Cloud.
 
 ```go
 import (
@@ -597,12 +602,6 @@ client := iam.NewIamClient(
 - Supported region list: af-south-1, ap-southeast-1, ap-southeast-2, ap-southeast-3, cn-east-2, cn-east-3, cn-north-1,
   cn-north-4, cn-south-1, cn-southwest-2, ru-northwest-2. You may get exception such as `Unsupported regionId` if your
   region don't in the list above.
-  
-- Automatically acquiring projectId/domainId will invoke the [KeystoneListProjects](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneListProjects) /[KeystoneListAuthDomains](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneListAuthDomains) interface of IAM service. The default iam enpoint is `https://iam.myhuaweicloud.com`, you can modify the endpoint in the following two ways:
-
-  - Credentials scope, `basic.NewCredentialsBuilder().WithIamEndpointOverride(iamEndpoint).Build()`
-  
-  - Global scope, configure the environment variable `HUAWEICLOUD_SDK_IAM_ENDPOINT`
 
 **Comparison of the two ways:**
 
@@ -617,7 +616,7 @@ client := iam.NewIamClient(
 
 ##### 3.3.1 IAM endpoint configuration
 
-Automatically acquiring projectId/domainId will invoke the [KeystoneListProjects](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneListProjects) /[KeystoneListAuthDomains](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneListAuthDomains) interface of IAM service. The default iam enpoint is `https://iam.myhuaweicloud.com`, you can modify the endpoint in the following two ways:
+Automatically acquiring projectId/domainId will invoke the [KeystoneListProjects](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneListProjects) /[KeystoneListAuthDomains](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneListAuthDomains) interface of IAM service. The default iam endpoint is `https://iam.myhuaweicloud.com`, you can modify the endpoint in the following two ways:
 
 ###### 3.3.1.1 Global scope
 
@@ -668,7 +667,7 @@ set HUAWEICLOUD_SDK_REGION_IOTDA_AP_SOUTHEAST_10=https://iotda.ap-southwest-10.m
 
 ###### 3.3.2.2 Profile
 
-The profile will be read from the user's home directory by default, linux`~/.huaweicloud/regions.yaml`,windows`C:\Users\USER_NAME\.huaweicloud\regions.yaml`,the default file may not exist, but if the file exists and the content format is incorrect, an exception will be thrown for parsing errors.
+The profile will be read from the user's home directory by default, linux`~/.huaweicloud/regions.yaml`, windows`C:\Users\USER_NAME\.huaweicloud\regions.yaml`, the default file may not exist, but if the file exists and the content format is incorrect, an exception will be thrown for parsing errors.
 
 The path to the profile can be modified by configuring the environment variable `HUAWEICLOUD_SDK_REGIONS_FILE`, like `HUAWEICLOUD_SDK_REGIONS_FILE=/tmp/my_regions.yml`
 
@@ -843,7 +842,7 @@ func main() {
 ### 7. Retry For Request [:top:](#user-manual-top)
 
 When a request encounters a network exception or flow control on the interface, the request needs to be retried. The
-Java SDK provides the retry method for our users which could be used to the requests of `GET` HTTP method. 
+Go SDK provides the retry method for our users which could be used to the requests of `GET` HTTP method. 
 If you want to use the retry method, the following parameters are required:
 
 - _maxRetryTimes_: the max retry times

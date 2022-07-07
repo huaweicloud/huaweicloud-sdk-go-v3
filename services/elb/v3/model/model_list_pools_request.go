@@ -9,13 +9,13 @@ import (
 // Request Object
 type ListPoolsRequest struct {
 
-	// 上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+	// 上一页最后一条记录的ID。  使用说明：  - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
 	Marker *string `json:"marker,omitempty"`
 
 	// 每页返回的个数。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 分页的顺序，true表示从后往前分页，false表示从前往后分页，默认为false。使用说明：必须与limit一起使用。
+	// 是否反向查询，取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
 	PageReverse *bool `json:"page_reverse,omitempty"`
 
 	// 后端云服务器组的描述信息。  支持多值查询，查询条件格式：*description=xxx&description=xxx*。
@@ -39,13 +39,13 @@ type ListPoolsRequest struct {
 	// 后端云服务器组的后端协议。取值：TCP、UDP、HTTP、HTTPS和QUIC。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。
 	Protocol *[]string `json:"protocol,omitempty"`
 
-	// 后端云服务器组的负载均衡算法。  取值： 1、ROUND_ROBIN：加权轮询算法。 2、LEAST_CONNECTIONS：加权最少连接算法。 3、SOURCE_IP：源IP算法。 4、QUIC_CID：连接ID算法。  支持多值查询，查询条件格式：*lb_algorithm=xxx&lb_algorithm=xxx*。
+	// 后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  支持多值查询，查询条件格式：*lb_algorithm=xxx&lb_algorithm=xxx*。
 	LbAlgorithm *[]string `json:"lb_algorithm,omitempty"`
 
-	// 企业项目ID。  支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+	// 企业项目ID。不传时查询default企业项目\"0\"下的资源，鉴权按照default企业项目鉴权；如果传值，则传已存在的企业项目ID或all_granted_eps（表示查询所有企业项目）进行查询。   支持多值查询，查询条件格式：*enterprise_project_id=xxx&enterprise_project_id=xxx*。   [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 
-	// 后端云服务器组支持的IP版本。取值： [- 共享型LB下的pool：固定为v4； - 独享型LB下的pool：dualstack、v4。当该pool的协议为TCP/UDP/QUIC时，ip_version为dualstack，表示双栈。当协议为HTTP/HTTPS时，ip_version为v4。](tag:hws,hws_hk,ocb,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk-g42,dt,dt_test) [- dualstack: 当该pool的协议为TCP/UDP/QUIC时，ip_version为dualstack，表示双栈。 - v4: 当该pool的协议为HTTP/HTTPS时，ip_version为v4。](tag:hcso_dt) 支持多值查询，查询条件格式：*ip_version=xxx&ip_version=xxx*。
+	// 后端云服务器组支持的IP版本。  支持多值查询，查询条件格式：*ip_version=xxx&ip_version=xxx*。
 	IpVersion *[]string `json:"ip_version,omitempty"`
 
 	// 后端云服务器的IP地址。仅用于查询条件，不作为响应参数字段。  支持多值查询，查询条件格式：*member_address=xxx&member_address=xxx*。
@@ -62,6 +62,12 @@ type ListPoolsRequest struct {
 
 	// 后端云服务器ID。仅用于查询条件，不作为响应参数字段。  支持多值查询，查询条件格式：*member_instance_id=xxx&member_instance_id=xxx*。
 	MemberInstanceId *[]string `json:"member_instance_id,omitempty"`
+
+	// 后端云服务器组关联的虚拟私有云的ID。
+	VpcId *[]string `json:"vpc_id,omitempty"`
+
+	// 后端服务器组的类型。   取值：  - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。  - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。  - 空字符串（\"\"）：允许任意类型的后端
+	Type *[]string `json:"type,omitempty"`
 }
 
 func (o ListPoolsRequest) String() string {

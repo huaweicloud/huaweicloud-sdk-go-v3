@@ -9,7 +9,7 @@ import (
 // 集群信息。
 type CreateClusterRolesBody struct {
 
-	// 实例规格名称。例如，  - ess.spec-4u32g规格对应的取值范围为40GB～2560GB。 - ess.spec-8u64g规格对应的取值范围为80GB～5120GB。 - ess.spec-16u128g规格对应的取值范围为160GB～10240GB。
+	// 实例规格名称。可以使用[获取实例规格列表](ListFlavors.xml)的name属性确认当前拥有的规格信息。
 	FlavorRef string `json:"flavorRef"`
 
 	Volume *CreateClusterInstanceVolumeBody `json:"volume"`

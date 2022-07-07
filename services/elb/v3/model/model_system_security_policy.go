@@ -12,10 +12,10 @@ type SystemSecurityPolicy struct {
 	Name string `json:"name"`
 
 	// 系统安全策略的TLS协议列表。
-	Protocols []string `json:"protocols"`
+	Protocols string `json:"protocols"`
 
 	// 系统安全策略的加密套件列表。
-	Ciphers []string `json:"ciphers"`
+	Ciphers string `json:"ciphers"`
 
 	// 项目id。
 	ProjectId string `json:"project_id"`

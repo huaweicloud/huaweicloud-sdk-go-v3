@@ -15,10 +15,10 @@ type ShowAutoCreatePolicyResponse struct {
 	// 每天快照创建时刻。
 	Period *string `json:"period,omitempty"`
 
-	// 快照命名前缀。
+	// 快照命名前缀，需要用户自己手动输入。
 	Prefix *string `json:"prefix,omitempty"`
 
-	// 快照存放的OBS桶。
+	// 快照存放的OBS桶的桶名。
 	Bucket *string `json:"bucket,omitempty"`
 
 	// 快照在OBS桶中的存放路径。
@@ -27,7 +27,7 @@ type ShowAutoCreatePolicyResponse struct {
 	// 访问OBS桶用到的委托。
 	Agency *string `json:"agency,omitempty"`
 
-	// 是否开启自动创建快照策略。
+	// 是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
 	Enable         *string `json:"enable,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

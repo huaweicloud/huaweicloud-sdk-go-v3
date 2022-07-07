@@ -125,6 +125,7 @@ type ConfigPropertyEnum struct {
 	CHINESE_8K_COMMON    ConfigProperty
 	CHINESE_16K_COMMON   ConfigProperty
 	CHINESE_16K_GENERAL  ConfigProperty
+	CHINESE_16K_TRAVEL   ConfigProperty
 	SICHUAN_16K_COMMON   ConfigProperty
 	CANTONESE_16K_COMMON ConfigProperty
 	SHANGHAI_16K_COMMON  ConfigProperty
@@ -140,6 +141,9 @@ func GetConfigPropertyEnum() ConfigPropertyEnum {
 		},
 		CHINESE_16K_GENERAL: ConfigProperty{
 			value: "chinese_16k_general",
+		},
+		CHINESE_16K_TRAVEL: ConfigProperty{
+			value: "chinese_16k_travel",
 		},
 		SICHUAN_16K_COMMON: ConfigProperty{
 			value: "sichuan_16k_common",

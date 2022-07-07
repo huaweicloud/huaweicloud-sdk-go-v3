@@ -12,7 +12,7 @@ import (
 // Request Object
 type RecognizeFlashAsrRequest struct {
 
-	// 所使用的模型特征串。通常是 “语种_采样率_领域”的形式。 采样率需要与音频采样率保持一致。 当前支持如下模型特征串： chinese_8k_common chinese_16k_common
+	// 所使用的模型特征串。通常是 “语种_采样率_领域”的形式。 采样率需要与音频采样率保持一致。 当前支持如下模型特征串： chinese_8k_common chinese_16k_conversation
 	Property RecognizeFlashAsrRequestProperty `json:"property"`
 
 	// 音频格式，audio_format取值范围： wav,mp3,m4a,aac,opus
@@ -54,8 +54,8 @@ type RecognizeFlashAsrRequestProperty struct {
 }
 
 type RecognizeFlashAsrRequestPropertyEnum struct {
-	CHINESE_8K_COMMON  RecognizeFlashAsrRequestProperty
-	CHINESE_16K_COMMON RecognizeFlashAsrRequestProperty
+	CHINESE_8K_COMMON        RecognizeFlashAsrRequestProperty
+	CHINESE_16K_CONVERSATION RecognizeFlashAsrRequestProperty
 }
 
 func GetRecognizeFlashAsrRequestPropertyEnum() RecognizeFlashAsrRequestPropertyEnum {
@@ -63,8 +63,8 @@ func GetRecognizeFlashAsrRequestPropertyEnum() RecognizeFlashAsrRequestPropertyE
 		CHINESE_8K_COMMON: RecognizeFlashAsrRequestProperty{
 			value: "chinese_8k_common",
 		},
-		CHINESE_16K_COMMON: RecognizeFlashAsrRequestProperty{
-			value: "chinese_16k_common",
+		CHINESE_16K_CONVERSATION: RecognizeFlashAsrRequestProperty{
+			value: "chinese_16k_conversation",
 		},
 	}
 }

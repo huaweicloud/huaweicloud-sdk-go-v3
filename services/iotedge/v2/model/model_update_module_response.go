@@ -18,8 +18,11 @@ type UpdateModuleResponse struct {
 	// 应用版本
 	AppVersion *string `json:"app_version,omitempty"`
 
-	// 模块状态
+	// 模块运行状态
 	State *UpdateModuleResponseState `json:"state,omitempty"`
+
+	// 模块管控状态
+	ControlStatus *string `json:"control_status,omitempty"`
 
 	// 边缘节点（同deviceID）ID
 	NodeId *string `json:"node_id,omitempty"`
@@ -65,6 +68,8 @@ type UpdateModuleResponseStateEnum struct {
 	FAILED         UpdateModuleResponseState
 	SUCCEEDED      UpdateModuleResponseState
 	UNKNOWN        UpdateModuleResponseState
+	DELETE_SUCCESS UpdateModuleResponseState
+	STOPPED        UpdateModuleResponseState
 }
 
 func GetUpdateModuleResponseStateEnum() UpdateModuleResponseStateEnum {
@@ -89,6 +94,12 @@ func GetUpdateModuleResponseStateEnum() UpdateModuleResponseStateEnum {
 		},
 		UNKNOWN: UpdateModuleResponseState{
 			value: "UNKNOWN",
+		},
+		DELETE_SUCCESS: UpdateModuleResponseState{
+			value: "DELETE_SUCCESS",
+		},
+		STOPPED: UpdateModuleResponseState{
+			value: "STOPPED",
 		},
 	}
 }
@@ -169,6 +180,9 @@ type UpdateModuleResponseFunctionTypeEnum struct {
 	DATA_PROCESSING        UpdateModuleResponseFunctionType
 	PROTOCOL_PARSING       UpdateModuleResponseFunctionType
 	ON_PREMISE_INTEGRATION UpdateModuleResponseFunctionType
+	GATEWAY_MANAGER        UpdateModuleResponseFunctionType
+	COMPOSITE_APPLICATION  UpdateModuleResponseFunctionType
+	DATA_COLLECTION        UpdateModuleResponseFunctionType
 }
 
 func GetUpdateModuleResponseFunctionTypeEnum() UpdateModuleResponseFunctionTypeEnum {
@@ -181,6 +195,15 @@ func GetUpdateModuleResponseFunctionTypeEnum() UpdateModuleResponseFunctionTypeE
 		},
 		ON_PREMISE_INTEGRATION: UpdateModuleResponseFunctionType{
 			value: "ON_PREMISE_INTEGRATION",
+		},
+		GATEWAY_MANAGER: UpdateModuleResponseFunctionType{
+			value: "GATEWAY_MANAGER",
+		},
+		COMPOSITE_APPLICATION: UpdateModuleResponseFunctionType{
+			value: "COMPOSITE_APPLICATION",
+		},
+		DATA_COLLECTION: UpdateModuleResponseFunctionType{
+			value: "DATA_COLLECTION",
 		},
 	}
 }

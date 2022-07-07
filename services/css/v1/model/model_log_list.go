@@ -12,7 +12,7 @@ type LogList struct {
 	// 日志内容。
 	Content *string `json:"content,omitempty"`
 
-	// 日期。
+	// 当条日志记录时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
 	Date *string `json:"date,omitempty"`
 
 	// 日志级别。

@@ -15,8 +15,8 @@ type BatchListModulesResponse struct {
 	PageInfo *PageInfoDto `json:"page_info,omitempty"`
 
 	// 每页记录数
-	Modules        *[]EdgeModuleRespDto `json:"modules,omitempty"`
-	HttpStatusCode int                  `json:"-"`
+	Modules        *[]EdgeModuleDto `json:"modules,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o BatchListModulesResponse) String() string {

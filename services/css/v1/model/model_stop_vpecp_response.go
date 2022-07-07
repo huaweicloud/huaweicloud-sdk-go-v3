@@ -9,7 +9,7 @@ import (
 // Response Object
 type StopVpecpResponse struct {
 
-	// 操作行为：已关闭终端节点。
+	// 操作行为。固定为：deleteVpcepservice，表示已关闭终端节点。
 	Action         *string `json:"action,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

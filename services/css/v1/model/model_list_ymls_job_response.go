@@ -9,9 +9,9 @@ import (
 // Response Object
 type ListYmlsJobResponse struct {
 
-	// 配置列表。
-	ConfigList     *[]ConfigList `json:"configList,omitempty"`
-	HttpStatusCode int           `json:"-"`
+	// 历史修改配置列表。
+	Configurations *[]ConfigurationsRsp `json:"configurations,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o ListYmlsJobResponse) String() string {

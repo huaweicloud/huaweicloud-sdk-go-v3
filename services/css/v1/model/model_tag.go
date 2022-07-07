@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签对象。
+// 待添加的标签对象。
 type Tag struct {
 
 	// 标签名。

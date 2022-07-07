@@ -20,10 +20,10 @@ type Actions struct {
 	// 操作状态。
 	Status *string `json:"status,omitempty"`
 
-	// 更新时间。
+	// 更新时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
 	UpdateAt *string `json:"updateAt,omitempty"`
 
-	// 错误信息。
+	// 错误信息。当操作状态为success时该字段为null。
 	ErrorMsg *string `json:"errorMsg,omitempty"`
 
 	// 内容。

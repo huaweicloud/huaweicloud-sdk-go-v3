@@ -8,7 +8,7 @@ import (
 
 type StartKibanaPublicReq struct {
 
-	// 带宽。
+	// 带宽。单位：Mbit/s
 	EipSize int32 `json:"eipSize"`
 
 	ElbWhiteList *StartKibanaPublicReqElbWhitelist `json:"elbWhiteList"`

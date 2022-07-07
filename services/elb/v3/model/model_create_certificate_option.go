@@ -15,7 +15,7 @@ type CreateCertificateOption struct {
 	// 证书的管理状态。  不支持该字段，请勿使用。
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
-	// HTTPS协议使用的证书内容。 如果type为server_sm时，该字段填写SM签名证书内容。 取值范围：PEM编码格式。
+	// HTTPS协议使用的证书内容。 取值范围：PEM编码格式。 最大长度65536字符。 支持证书链，最大11层(含证书和证书链)。
 	Certificate string `json:"certificate"`
 
 	// 证书的描述。
@@ -27,23 +27,17 @@ type CreateCertificateOption struct {
 	// 证书的名称。
 	Name *string `json:"name,omitempty"`
 
-	// HTTPS协议使用的私钥。仅type为server或server_sm时有效。type为server或server_sm时必选。 如果type为server_sm时，该字段填写SM签名证书的私钥。 取值范围：PEM编码格式。
+	// HTTPS协议使用的私钥。当type为server时有效且必选。 取值范围：PEM编码格式。 最大长度8192字符。
 	PrivateKey *string `json:"private_key,omitempty"`
 
 	// 证书所在的项目ID。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// SSL证书的类型。分为服务器证书(server)、CA证书(client)和服务器SM双证书(server_sm)。 默认值：server
+	// SSL证书的类型。分为服务器证书(server)、CA证书(client)。 默认值：server
 	Type *CreateCertificateOptionType `json:"type,omitempty"`
 
 	// 证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-
-	// HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  使用说明： - 仅type为server_sm时有效且必选。
-	EncCertificate *string `json:"enc_certificate,omitempty"`
-
-	// HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  使用说明： - 仅type为server_sm时有效且必选。
-	EncPrivateKey *string `json:"enc_private_key,omitempty"`
 }
 
 func (o CreateCertificateOption) String() string {

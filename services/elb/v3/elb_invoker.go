@@ -137,6 +137,18 @@ func (i *CreateLogtankInvoker) Invoke() (*model.CreateLogtankResponse, error) {
 	}
 }
 
+type CreateMasterSlavePoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateMasterSlavePoolInvoker) Invoke() (*model.CreateMasterSlavePoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateMasterSlavePoolResponse), nil
+	}
+}
+
 type CreateMemberInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -254,6 +266,18 @@ func (i *DeleteLogtankInvoker) Invoke() (*model.DeleteLogtankResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteLogtankResponse), nil
+	}
+}
+
+type DeleteMasterSlavePoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteMasterSlavePoolInvoker) Invoke() (*model.DeleteMasterSlavePoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteMasterSlavePoolResponse), nil
 	}
 }
 
@@ -410,6 +434,18 @@ func (i *ListLogtanksInvoker) Invoke() (*model.ListLogtanksResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListLogtanksResponse), nil
+	}
+}
+
+type ListMasterSlavePoolsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMasterSlavePoolsInvoker) Invoke() (*model.ListMasterSlavePoolsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMasterSlavePoolsResponse), nil
 	}
 }
 
@@ -578,6 +614,18 @@ func (i *ShowLogtankInvoker) Invoke() (*model.ShowLogtankResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowLogtankResponse), nil
+	}
+}
+
+type ShowMasterSlavePoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMasterSlavePoolInvoker) Invoke() (*model.ShowMasterSlavePoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMasterSlavePoolResponse), nil
 	}
 }
 

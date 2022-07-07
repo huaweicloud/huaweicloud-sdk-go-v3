@@ -8,7 +8,7 @@
 
 欢迎使用华为云 Go SDK。
 
-华为云 Go SDK 让您无需关心请求细节即可快速使用弹性云服务器、虚拟私有云等多个华为云服务。
+华为云 Go SDK 让您无需关心请求细节即可快速使用弹性云服务器（ECS）、虚拟私有云（VPC）等多个华为云服务。
 
 这里将向您介绍如何获取并使用华为云 Go SDK 。
 
@@ -107,7 +107,7 @@ func main() {
     * [1.3 超时配置](#13-超时配置-top)
     * [1.4 SSL配置](#14-ssl-配置-top)
     * [1.5 自定义网络连接创建](#15-自定义网络连接创建-top)
-* [2. 客户端认证信息](#2-客户端认证信息-top)
+* [2. 认证信息配置](#2-认证信息配置-top)
   * [2.1 使用永久 AK 和 SK](#21-使用永久-ak-和-sk-top)
   * [2.2 使用临时 AK 和 SK](#22-使用临时-ak-和-sk-top)
   * [2.3 使用 IdpId 和 IdTokenFile](#23-使用-idpid-和-idtokenfile-top)
@@ -180,7 +180,9 @@ httpConfig.WithDialContext(DialContext)
 
 Global 级服务有 BSS、DevStar、EPS、IAM、RMS。
 
-Region 级服务使用 basic.NewCredentialsBuilder() 初始化，需要提供 projectId 。Global 级服务使用 global.NewCredentialsBuilder() 初始化，需要提供domainId 。
+Region 级服务使用 basic.NewCredentialsBuilder() 初始化，需要提供 projectId 。
+
+Global 级服务使用 global.NewCredentialsBuilder() 初始化，需要提供 domainId 。
 
 客户端认证方式支持以下几种：
 
@@ -232,7 +234,7 @@ globalAuth := global.NewCredentialsBuilder().
 
 - 通过委托授权获得可以参考文档：https://support.huaweicloud.com/api-iam/iam_04_0101.html ，对应 IAM SDK
   中的 `CreateTemporaryAccessKeyByAgency` 方法。
-  
+
 **认证参数说明**：
 
 - `ak` 华为云账号 Access Key
@@ -860,7 +862,7 @@ func main() {
 以 VPC 服务的 `ListVpcs` 接口为例，最多重试3次，服务端返回异常时进行重试，代码如下：
 
 ``` go
-// 初始化同步客户端
+// 初始化客户端
 client := vpc.NewVpcClient(
 	vpc.VpcClientBuilder().
 		WithEndpoint("<input your endpoint>").

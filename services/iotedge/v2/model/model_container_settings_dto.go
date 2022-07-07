@@ -19,6 +19,9 @@ type ContainerSettingsDto struct {
 	Volumes *[]VolumeDto `json:"volumes,omitempty"`
 
 	Resources *ResourceDto `json:"resources,omitempty"`
+
+	// 外挂设备配置
+	ExtDevices *[]ExtDevice `json:"ext_devices,omitempty"`
 }
 
 func (o ContainerSettingsDto) String() string {

@@ -32,10 +32,10 @@ type ListSnapshotBackupsResp struct {
 	// 快照状态。
 	Status *string `json:"status,omitempty"`
 
-	// 快照状态是否更新。
+	// 快照更新时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
 	Updated *string `json:"updated,omitempty"`
 
-	// “0”表示自动创建，“1”表示手动创建。
+	// 快照创建类型： - 0：表示自动创建。 - 1：表示手动创建。
 	BackupType *string `json:"backupType,omitempty"`
 
 	// 创建快照方式。
@@ -71,7 +71,7 @@ type ListSnapshotBackupsResp struct {
 	// 快照执行结束的时间戳。
 	EndTime *int64 `json:"endTime,omitempty"`
 
-	// 保存快照数据的桶。
+	// 保存快照数据的桶名。
 	BucketName *string `json:"bucketName,omitempty"`
 }
 

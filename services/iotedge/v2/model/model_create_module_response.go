@@ -18,8 +18,11 @@ type CreateModuleResponse struct {
 	// 应用版本
 	AppVersion *string `json:"app_version,omitempty"`
 
-	// 模块状态
+	// 模块运行状态
 	State *CreateModuleResponseState `json:"state,omitempty"`
+
+	// 模块管控状态
+	ControlStatus *string `json:"control_status,omitempty"`
 
 	// 边缘节点（同deviceID）ID
 	NodeId *string `json:"node_id,omitempty"`
@@ -40,8 +43,10 @@ type CreateModuleResponse struct {
 	AppType *CreateModuleResponseAppType `json:"app_type,omitempty"`
 
 	// 功能类型
-	FunctionType   *CreateModuleResponseFunctionType `json:"function_type,omitempty"`
-	HttpStatusCode int                               `json:"-"`
+	FunctionType *CreateModuleResponseFunctionType `json:"function_type,omitempty"`
+
+	ContainerSettings *ModuleContainerSettingsResDto `json:"container_settings,omitempty"`
+	HttpStatusCode    int                            `json:"-"`
 }
 
 func (o CreateModuleResponse) String() string {
@@ -65,6 +70,8 @@ type CreateModuleResponseStateEnum struct {
 	FAILED         CreateModuleResponseState
 	SUCCEEDED      CreateModuleResponseState
 	UNKNOWN        CreateModuleResponseState
+	DELETE_SUCCESS CreateModuleResponseState
+	STOPPED        CreateModuleResponseState
 }
 
 func GetCreateModuleResponseStateEnum() CreateModuleResponseStateEnum {
@@ -89,6 +96,12 @@ func GetCreateModuleResponseStateEnum() CreateModuleResponseStateEnum {
 		},
 		UNKNOWN: CreateModuleResponseState{
 			value: "UNKNOWN",
+		},
+		DELETE_SUCCESS: CreateModuleResponseState{
+			value: "DELETE_SUCCESS",
+		},
+		STOPPED: CreateModuleResponseState{
+			value: "STOPPED",
 		},
 	}
 }
@@ -169,6 +182,9 @@ type CreateModuleResponseFunctionTypeEnum struct {
 	DATA_PROCESSING        CreateModuleResponseFunctionType
 	PROTOCOL_PARSING       CreateModuleResponseFunctionType
 	ON_PREMISE_INTEGRATION CreateModuleResponseFunctionType
+	GATEWAY_MANAGER        CreateModuleResponseFunctionType
+	COMPOSITE_APPLICATION  CreateModuleResponseFunctionType
+	DATA_COLLECTION        CreateModuleResponseFunctionType
 }
 
 func GetCreateModuleResponseFunctionTypeEnum() CreateModuleResponseFunctionTypeEnum {
@@ -181,6 +197,15 @@ func GetCreateModuleResponseFunctionTypeEnum() CreateModuleResponseFunctionTypeE
 		},
 		ON_PREMISE_INTEGRATION: CreateModuleResponseFunctionType{
 			value: "ON_PREMISE_INTEGRATION",
+		},
+		GATEWAY_MANAGER: CreateModuleResponseFunctionType{
+			value: "GATEWAY_MANAGER",
+		},
+		COMPOSITE_APPLICATION: CreateModuleResponseFunctionType{
+			value: "COMPOSITE_APPLICATION",
+		},
+		DATA_COLLECTION: CreateModuleResponseFunctionType{
+			value: "DATA_COLLECTION",
 		},
 	}
 }

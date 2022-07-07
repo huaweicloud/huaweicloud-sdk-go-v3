@@ -29,6 +29,42 @@ func (i *ListBusinessInvoker) Invoke() (*model.ListBusinessResponse, error) {
 	}
 }
 
+type ListEnvMonitorItemInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEnvMonitorItemInvoker) Invoke() (*model.ListEnvMonitorItemResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEnvMonitorItemResponse), nil
+	}
+}
+
+type SaveMonitorItemConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SaveMonitorItemConfigInvoker) Invoke() (*model.SaveMonitorItemConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SaveMonitorItemConfigResponse), nil
+	}
+}
+
+type SearchApplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchApplicationInvoker) Invoke() (*model.SearchApplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchApplicationResponse), nil
+	}
+}
+
 type ShowMasterAddressInvoker struct {
 	*invoker.BaseInvoker
 }

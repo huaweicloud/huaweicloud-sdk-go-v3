@@ -158,6 +158,8 @@ type TtsConfigPropertyEnum struct {
 	CHINESE_HUAXIAOMIN_COMMON      TtsConfigProperty
 	CHINESE_HUANVXIA_LITERATURE    TtsConfigProperty
 	CHINESE_HUAXIAOXUAN_LITERATURE TtsConfigProperty
+	CHINESE_HUAXIAOMEI_COMMON      TtsConfigProperty
+	CHINESE_HUAXIAOFEI_COMMON      TtsConfigProperty
 }
 
 func GetTtsConfigPropertyEnum() TtsConfigPropertyEnum {
@@ -236,6 +238,12 @@ func GetTtsConfigPropertyEnum() TtsConfigPropertyEnum {
 		},
 		CHINESE_HUAXIAOXUAN_LITERATURE: TtsConfigProperty{
 			value: "chinese_huaxiaoxuan_literature",
+		},
+		CHINESE_HUAXIAOMEI_COMMON: TtsConfigProperty{
+			value: "chinese_huaxiaomei_common",
+		},
+		CHINESE_HUAXIAOFEI_COMMON: TtsConfigProperty{
+			value: "chinese_huaxiaofei_common",
 		},
 	}
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 弹性IP白名单信息。
+// 公网带宽信息。
 type CreateClusterPublicEip struct {
 	BandWidth *CreateClusterPublicEipSize `json:"bandWidth"`
 }

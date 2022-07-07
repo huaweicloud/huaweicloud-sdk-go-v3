@@ -21,7 +21,8 @@ type SecurityPolicy struct {
 	// 自定义安全策略的描述。
 	Description string `json:"description"`
 
-	Listeners *ListenerRef `json:"listeners"`
+	// 自定义安全策略关联的监听器。
+	Listeners []ListenerRef `json:"listeners"`
 
 	// 自定义安全策略的TLS协议列表。
 	Protocols []string `json:"protocols"`

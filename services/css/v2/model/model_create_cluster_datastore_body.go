@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// 数据搜索引擎类型。
+// 引擎类型，目前只支持elasticsearch。
 type CreateClusterDatastoreBody struct {
 
 	// CSS集群引擎版本号。详细请参考CSS[支持的集群版本](css_03_0056.xml)。
 	Version string `json:"version"`
 
-	// 引擎类型，支持elasticsearch和logstash。
+	// 引擎类型，支持elasticsearch。
 	Type string `json:"type"`
 }
 

@@ -174,10 +174,10 @@ func (s Credentials) needUpdateSecurityToken() bool {
 	if s.AK == "" && s.SK == "" {
 		return true
 	}
-	if s.expiredAt == 0 {
+	if s.expiredAt == 0 || s.SecurityToken == "" {
 		return false
 	}
-	return s.SecurityToken != "" && s.expiredAt-time.Now().Unix() < 60
+	return s.expiredAt-time.Now().Unix() < 60
 }
 
 func (s *Credentials) UpdateSecurityTokenFromMetadata() error {

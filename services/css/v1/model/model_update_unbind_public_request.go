@@ -11,6 +11,8 @@ type UpdateUnbindPublicRequest struct {
 
 	// 指定关闭公网访问集群ID。
 	ClusterId string `json:"cluster_id"`
+
+	Body *UnBindPublicReq `json:"body,omitempty"`
 }
 
 func (o UpdateUnbindPublicRequest) String() string {

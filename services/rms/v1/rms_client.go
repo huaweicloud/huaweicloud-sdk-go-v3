@@ -393,6 +393,28 @@ func (c *RmsClient) DeleteStoredQueryInvoker(request *model.DeleteStoredQueryReq
 	return &DeleteStoredQueryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSchemas 列举高级查询Schema
+//
+// List Schemas
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RmsClient) ListSchemas(request *model.ListSchemasRequest) (*model.ListSchemasResponse, error) {
+	requestDef := GenReqDefForListSchemas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSchemasResponse), nil
+	}
+}
+
+// ListSchemasInvoker 列举高级查询Schema
+func (c *RmsClient) ListSchemasInvoker(request *model.ListSchemasRequest) *ListSchemasInvoker {
+	requestDef := GenReqDefForListSchemas()
+	return &ListSchemasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListStoredQueries 列出高级查询
 //
 // 列举所有高级查询

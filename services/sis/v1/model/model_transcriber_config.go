@@ -123,6 +123,7 @@ type TranscriberConfigPropertyEnum struct {
 	CHINESE_16K_CONVERSATION TranscriberConfigProperty
 	CHINESE_8K_BANK          TranscriberConfigProperty
 	CHINESE_8K_INSURANCE     TranscriberConfigProperty
+	CHINESE_16K_MEDIA        TranscriberConfigProperty
 }
 
 func GetTranscriberConfigPropertyEnum() TranscriberConfigPropertyEnum {
@@ -138,6 +139,9 @@ func GetTranscriberConfigPropertyEnum() TranscriberConfigPropertyEnum {
 		},
 		CHINESE_8K_INSURANCE: TranscriberConfigProperty{
 			value: "chinese_8k_insurance",
+		},
+		CHINESE_16K_MEDIA: TranscriberConfigProperty{
+			value: "chinese_16k_media",
 		},
 	}
 }

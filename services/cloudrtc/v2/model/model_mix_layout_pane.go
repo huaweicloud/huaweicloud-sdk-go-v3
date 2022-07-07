@@ -38,6 +38,9 @@ type MixLayoutPane struct {
 
 	// 裁剪模式，自定义布局场景下填写本字段，支持两种模式：   - KEEP_RATIO_PADDING ：保持比例留边。   - KEEP_RATIO_CROP ：保持比例裁剪。
 	CropMode *MixLayoutPaneCropMode `json:"crop_mode,omitempty"`
+
+	// 填充策略，仅限屏幕共享模板(包括screen_share_right、screen_share_left)场景下填写本字段，支持两种模式：   - FIXED_USER ：固定用户填充。   - SHARED_SCREEN ：共享屏幕填充。
+	FillingPolicy *MixLayoutPaneFillingPolicy `json:"filling_policy,omitempty"`
 }
 
 func (o MixLayoutPane) String() string {
@@ -120,6 +123,48 @@ func (c MixLayoutPaneCropMode) MarshalJSON() ([]byte, error) {
 }
 
 func (c *MixLayoutPaneCropMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type MixLayoutPaneFillingPolicy struct {
+	value string
+}
+
+type MixLayoutPaneFillingPolicyEnum struct {
+	FIXED_USER    MixLayoutPaneFillingPolicy
+	SHARED_SCREEN MixLayoutPaneFillingPolicy
+}
+
+func GetMixLayoutPaneFillingPolicyEnum() MixLayoutPaneFillingPolicyEnum {
+	return MixLayoutPaneFillingPolicyEnum{
+		FIXED_USER: MixLayoutPaneFillingPolicy{
+			value: "FIXED_USER",
+		},
+		SHARED_SCREEN: MixLayoutPaneFillingPolicy{
+			value: "SHARED_SCREEN",
+		},
+	}
+}
+
+func (c MixLayoutPaneFillingPolicy) Value() string {
+	return c.value
+}
+
+func (c MixLayoutPaneFillingPolicy) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *MixLayoutPaneFillingPolicy) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

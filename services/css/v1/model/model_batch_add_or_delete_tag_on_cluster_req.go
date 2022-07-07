@@ -14,7 +14,7 @@ type BatchAddOrDeleteTagOnClusterReq struct {
 	// 标签列表。
 	Tags []Tag `json:"tags"`
 
-	// 标签列表。
+	// 系统标签列表。 - op_service权限可以访问，和tags二选一。 - 目前TMS调用时只包含一个resource_tag结构体 ，key固定为：_sys_enterprise_project_id。 - value是UUID或0,value为0表示默认企业项目。 - 现在仅支持create操作。
 	SysTags *[]SysTags `json:"sysTags,omitempty"`
 }
 

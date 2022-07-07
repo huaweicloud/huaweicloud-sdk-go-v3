@@ -209,6 +209,18 @@ func (i *DeleteStoredQueryInvoker) Invoke() (*model.DeleteStoredQueryResponse, e
 	}
 }
 
+type ListSchemasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSchemasInvoker) Invoke() (*model.ListSchemasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSchemasResponse), nil
+	}
+}
+
 type ListStoredQueriesInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -17,8 +17,14 @@ type CreateEdgeApplicationVersionDto struct {
 	// 应用描述
 	Description *string `json:"description,omitempty"`
 
+	// 应用集成的边缘升得快版本
+	SdkVersion *string `json:"sdk_version,omitempty"`
+
 	// 应用部署类型，分为docker容器部署类型和process进程部署类型，兼容之前数据，此字段可以为空，为空情况为docker类型
 	DeployType *CreateEdgeApplicationVersionDtoDeployType `json:"deploy_type,omitempty"`
+
+	// 是否允许部署多实例
+	DeployMultiInstance *bool `json:"deploy_multi_instance,omitempty"`
 
 	ContainerSettings *ContainerSettingsDto `json:"container_settings"`
 

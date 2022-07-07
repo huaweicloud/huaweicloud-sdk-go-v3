@@ -11,10 +11,10 @@ type StartLogsReq struct {
 	// IAM委托。
 	Agency string `json:"agency"`
 
-	// 备份路径。
+	// 日志在OBS桶中的备份路径。
 	LogBasePath string `json:"logBasePath"`
 
-	// OBS桶。
+	// 用于存储日志的OBS桶的桶名。
 	LogBucket string `json:"logBucket"`
 }
 

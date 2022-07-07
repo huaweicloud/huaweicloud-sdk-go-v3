@@ -91,6 +91,9 @@ type BatchListEdgeAppsRequestFunctionTypeEnum struct {
 	DATA_PROCESSING        BatchListEdgeAppsRequestFunctionType
 	PROTOCOL_PARSING       BatchListEdgeAppsRequestFunctionType
 	ON_PREMISE_INTEGRATION BatchListEdgeAppsRequestFunctionType
+	GATEWAY_MANAGER        BatchListEdgeAppsRequestFunctionType
+	COMPOSITE_APPLICATION  BatchListEdgeAppsRequestFunctionType
+	DATA_COLLECTION        BatchListEdgeAppsRequestFunctionType
 }
 
 func GetBatchListEdgeAppsRequestFunctionTypeEnum() BatchListEdgeAppsRequestFunctionTypeEnum {
@@ -103,6 +106,15 @@ func GetBatchListEdgeAppsRequestFunctionTypeEnum() BatchListEdgeAppsRequestFunct
 		},
 		ON_PREMISE_INTEGRATION: BatchListEdgeAppsRequestFunctionType{
 			value: "ON_PREMISE_INTEGRATION",
+		},
+		GATEWAY_MANAGER: BatchListEdgeAppsRequestFunctionType{
+			value: "GATEWAY_MANAGER",
+		},
+		COMPOSITE_APPLICATION: BatchListEdgeAppsRequestFunctionType{
+			value: "COMPOSITE_APPLICATION",
+		},
+		DATA_COLLECTION: BatchListEdgeAppsRequestFunctionType{
+			value: "DATA_COLLECTION",
 		},
 	}
 }

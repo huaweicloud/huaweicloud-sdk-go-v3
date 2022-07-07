@@ -9,7 +9,7 @@ import (
 // Kibana公网访问信息。
 type PublicKibanaRespBody struct {
 
-	// 带宽大小。
+	// 带宽大小。单位：Mbit/s
 	EipSize *int32 `json:"eipSize,omitempty"`
 
 	ElbWhiteList *KibanaElbWhiteListResp `json:"elbWhiteList,omitempty"`

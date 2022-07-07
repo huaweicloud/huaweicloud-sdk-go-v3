@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// 白名单信息。
+// kibana白名单信息。
 type CreateClusterPublicKibanaElbWhiteList struct {
 
-	// 白名单。
+	// 白名单。需要添加白名单的网段或ip，以逗号隔开，不可重复。
 	WhiteList string `json:"whiteList"`
 
-	// 是否开启访问控制。
+	// 是否开启kibana访问控制。
 	EnableWhiteList bool `json:"enableWhiteList"`
 }
 

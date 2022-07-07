@@ -13,8 +13,8 @@ type BatchDeleteMembersResponse struct {
 	RequestId *string `json:"request_id,omitempty"`
 
 	// 后端服务器对象列表。
-	Members        *[]BatchDeleteMemberState `json:"members,omitempty"`
-	HttpStatusCode int                       `json:"-"`
+	Members        *[]BatchDeleteMembersState `json:"members,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o BatchDeleteMembersResponse) String() string {

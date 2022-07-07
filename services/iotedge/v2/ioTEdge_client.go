@@ -151,50 +151,6 @@ func (c *IoTEdgeClient) AddDeviceInvoker(request *model.AddDeviceRequest) *AddDe
 	return &AddDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchUpdateConfigs 批量修改子设备协议配置
-//
-// 批量修改产品关联的设备，传入product_id修改该产品下所有设备，传入device_id列表，根据device_id修改,两者互斥。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *IoTEdgeClient) BatchUpdateConfigs(request *model.BatchUpdateConfigsRequest) (*model.BatchUpdateConfigsResponse, error) {
-	requestDef := GenReqDefForBatchUpdateConfigs()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchUpdateConfigsResponse), nil
-	}
-}
-
-// BatchUpdateConfigsInvoker 批量修改子设备协议配置
-func (c *IoTEdgeClient) BatchUpdateConfigsInvoker(request *model.BatchUpdateConfigsRequest) *BatchUpdateConfigsInvoker {
-	requestDef := GenReqDefForBatchUpdateConfigs()
-	return &BatchUpdateConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateAccessCode 生成modbus协议设备接入码
-//
-// 生成modbus协议设备接入码
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *IoTEdgeClient) CreateAccessCode(request *model.CreateAccessCodeRequest) (*model.CreateAccessCodeResponse, error) {
-	requestDef := GenReqDefForCreateAccessCode()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateAccessCodeResponse), nil
-	}
-}
-
-// CreateAccessCodeInvoker 生成modbus协议设备接入码
-func (c *IoTEdgeClient) CreateAccessCodeInvoker(request *model.CreateAccessCodeRequest) *CreateAccessCodeInvoker {
-	requestDef := GenReqDefForCreateAccessCode()
-	return &CreateAccessCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // DeleteDevice 删除设备
 //
 // 删除设备
@@ -261,28 +217,6 @@ func (c *IoTEdgeClient) ShowProductConfigInvoker(request *model.ShowProductConfi
 	return &ShowProductConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowProtocolMappings 获取协议映射文件
-//
-// 获取协议映射文件
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *IoTEdgeClient) ShowProtocolMappings(request *model.ShowProtocolMappingsRequest) (*model.ShowProtocolMappingsResponse, error) {
-	requestDef := GenReqDefForShowProtocolMappings()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowProtocolMappingsResponse), nil
-	}
-}
-
-// ShowProtocolMappingsInvoker 获取协议映射文件
-func (c *IoTEdgeClient) ShowProtocolMappingsInvoker(request *model.ShowProtocolMappingsRequest) *ShowProtocolMappingsInvoker {
-	requestDef := GenReqDefForShowProtocolMappings()
-	return &ShowProtocolMappingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // UpdateDevice 修改设备
 //
 // 修改设备
@@ -303,28 +237,6 @@ func (c *IoTEdgeClient) UpdateDevice(request *model.UpdateDeviceRequest) (*model
 func (c *IoTEdgeClient) UpdateDeviceInvoker(request *model.UpdateDeviceRequest) *UpdateDeviceInvoker {
 	requestDef := GenReqDefForUpdateDevice()
 	return &UpdateDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UploadProtocolMappings 上传协议映射文件
-//
-// 上传协议映射文件
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *IoTEdgeClient) UploadProtocolMappings(request *model.UploadProtocolMappingsRequest) (*model.UploadProtocolMappingsResponse, error) {
-	requestDef := GenReqDefForUploadProtocolMappings()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UploadProtocolMappingsResponse), nil
-	}
-}
-
-// UploadProtocolMappingsInvoker 上传协议映射文件
-func (c *IoTEdgeClient) UploadProtocolMappingsInvoker(request *model.UploadProtocolMappingsRequest) *UploadProtocolMappingsInvoker {
-	requestDef := GenReqDefForUploadProtocolMappings()
-	return &UploadProtocolMappingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchListEdgeApps 查询应用列表
@@ -611,28 +523,6 @@ func (c *IoTEdgeClient) ListExternalEntity(request *model.ListExternalEntityRequ
 func (c *IoTEdgeClient) ListExternalEntityInvoker(request *model.ListExternalEntityRequest) *ListExternalEntityInvoker {
 	requestDef := GenReqDefForListExternalEntity()
 	return &ListExternalEntityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowExternalEntity 查询指定节点下指定外部实体的详情
-//
-// 查询指定节点下指定外部实体的详情
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *IoTEdgeClient) ShowExternalEntity(request *model.ShowExternalEntityRequest) (*model.ShowExternalEntityResponse, error) {
-	requestDef := GenReqDefForShowExternalEntity()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowExternalEntityResponse), nil
-	}
-}
-
-// ShowExternalEntityInvoker 查询指定节点下指定外部实体的详情
-func (c *IoTEdgeClient) ShowExternalEntityInvoker(request *model.ShowExternalEntityRequest) *ShowExternalEntityInvoker {
-	requestDef := GenReqDefForShowExternalEntity()
-	return &ShowExternalEntityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateExternalEntity 修改节点下指定的外部实体信息

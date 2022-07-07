@@ -22,8 +22,11 @@ type CollectTranscriberJobResponse struct {
 	FinishTime *string `json:"finish_time,omitempty"`
 
 	// 转写结果, 多句结果的数组。
-	Segments       *[]Segment `json:"segments,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	Segments *[]Segment `json:"segments,omitempty"`
+
+	// 音频时长，单位ms
+	AudioDuration  *int32 `json:"audio_duration,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o CollectTranscriberJobResponse) String() string {

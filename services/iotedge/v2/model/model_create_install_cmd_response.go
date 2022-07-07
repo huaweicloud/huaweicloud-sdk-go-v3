@@ -9,7 +9,7 @@ import (
 // Response Object
 type CreateInstallCmdResponse struct {
 
-	// 标准版节点安装命令
+	// 标准版节点安装/升级命令
 	Cmd            *string `json:"cmd,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

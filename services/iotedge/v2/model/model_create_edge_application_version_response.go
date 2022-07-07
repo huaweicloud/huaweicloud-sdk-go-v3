@@ -21,8 +21,14 @@ type CreateEdgeApplicationVersionResponse struct {
 	// 部署类型docker|process
 	DeployType *string `json:"deploy_type,omitempty"`
 
+	// 是否允许部署多实例
+	DeployMultiInstance *bool `json:"deploy_multi_instance,omitempty"`
+
 	// 应用版本
 	Version *string `json:"version,omitempty"`
+
+	// 应用集成的边缘升得快版本
+	SdkVersion *string `json:"sdk_version,omitempty"`
 
 	// 应用描述
 	Description *string `json:"description,omitempty"`

@@ -18,7 +18,7 @@ type EsflavorsVersionsFlavorsResp struct {
 	// 规格名称。
 	Name *string `json:"name,omitempty"`
 
-	// 可用区域。
+	// 可用region。
 	Region *string `json:"region,omitempty"`
 
 	// 实例的硬盘容量范围。

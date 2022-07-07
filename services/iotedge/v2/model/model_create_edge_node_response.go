@@ -27,7 +27,7 @@ type CreateEdgeNodeResponse struct {
 	// 边缘节点关联的产品名称。
 	ProductName *string `json:"product_name,omitempty"`
 
-	// 边缘节点状态UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|UPGRADING
+	// 边缘节点状态UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|FROZEN
 	State *string `json:"state,omitempty"`
 
 	// 节点所属资源类型：advanced|standard
@@ -36,6 +36,8 @@ type CreateEdgeNodeResponse struct {
 	// 安装文件版本
 	InstallerVersion *string `json:"installer_version,omitempty"`
 
+	BasePath *BasePathDto `json:"base_path,omitempty"`
+
 	// 资源id列表，创建节点时需绑定已购买的资源包，可以叠加节点功能。
 	ResourceIds *[]string `json:"resource_ids,omitempty"`
 
@@ -43,7 +45,10 @@ type CreateEdgeNodeResponse struct {
 	Ips *[]string `json:"ips,omitempty"`
 
 	// 边缘节点创建时间
-	CreateTime     *string `json:"create_time,omitempty"`
+	CreateTime *string `json:"create_time,omitempty"`
+
+	// 注册节点网关配置
+	HardwareModel  *string `json:"hardware_model,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

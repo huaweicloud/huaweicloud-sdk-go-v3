@@ -12,10 +12,10 @@ import (
 // 创建负载均衡器的包周期信息，若传入该结构体，则创建包周期的LB
 type PrepaidCreateOption struct {
 
-	// 订购周期类型，仅在change_mode为delay时有效。取值： - month：月（默认）。 - year：年。
+	// 订购周期类型，当前支持包月和包年： month：月； year：年；
 	PeriodType PrepaidCreateOptionPeriodType `json:"period_type"`
 
-	// 订购周期数，仅在change_mode为delay时有效。取值： - period_type为month时，为[1,9]，默认1。 - period_type为year时，为[1,3]，默认1。
+	// 订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
 	PeriodNum *int32 `json:"period_num,omitempty"`
 
 	// 是否自动续订； true：自动续订 false：不自动续订

@@ -12,7 +12,7 @@ type ListDevicesRequest struct {
 	// 边缘节点ID
 	EdgeNodeId string `json:"edge_node_id"`
 
-	// 父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表节点下的
+	// 父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表查询网关直连设备
 	GatewayId *string `json:"gateway_id,omitempty"`
 
 	// 设备名称

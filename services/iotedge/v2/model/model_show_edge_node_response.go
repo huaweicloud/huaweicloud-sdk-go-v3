@@ -12,6 +12,8 @@ type ShowEdgeNodeResponse struct {
 	// 边缘节点在IEF的日志配置
 	LogConfigs *[]LogConfigDto `json:"log_configs,omitempty"`
 
+	HaConfig *HaConfigDto `json:"ha_config,omitempty"`
+
 	// 边缘节点Id
 	EdgeNodeId *string `json:"edge_node_id,omitempty"`
 
@@ -81,8 +83,11 @@ type ShowEdgeNodeResponse struct {
 	// 节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
 	StoragePeriod *int32 `json:"storage_period,omitempty"`
 
-	BasePath       *BasePathDto `json:"base_path,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	BasePath *BasePathDto `json:"base_path,omitempty"`
+
+	// 注册节点网关配置
+	HardwareModel  *string `json:"hardware_model,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowEdgeNodeResponse) String() string {

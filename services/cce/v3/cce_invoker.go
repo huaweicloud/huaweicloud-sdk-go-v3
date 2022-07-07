@@ -293,6 +293,18 @@ func (i *ShowClusterInvoker) Invoke() (*model.ShowClusterResponse, error) {
 	}
 }
 
+type ShowClusterEndpointsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterEndpointsInvoker) Invoke() (*model.ShowClusterEndpointsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterEndpointsResponse), nil
+	}
+}
+
 type ShowJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -365,6 +377,18 @@ func (i *UpdateClusterInvoker) Invoke() (*model.UpdateClusterResponse, error) {
 	}
 }
 
+type UpdateClusterEipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateClusterEipInvoker) Invoke() (*model.UpdateClusterEipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateClusterEipResponse), nil
+	}
+}
+
 type UpdateNodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -386,5 +410,17 @@ func (i *UpdateNodePoolInvoker) Invoke() (*model.UpdateNodePoolResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateNodePoolResponse), nil
+	}
+}
+
+type ShowVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVersionInvoker) Invoke() (*model.ShowVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVersionResponse), nil
 	}
 }

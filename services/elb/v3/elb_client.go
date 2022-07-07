@@ -85,7 +85,7 @@ func (c *ElbClient) BatchUpdatePoliciesPriorityInvoker(request *model.BatchUpdat
 	return &BatchUpdatePoliciesPriorityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ChangeLoadbalancerChargeMode 负载均衡器计费模式变更
+// ChangeLoadbalancerChargeMode 变更负载均衡器计费模式
 //
 // 负载均衡器计费模式变更，当前只支持按需计费转包周期计费。
 //
@@ -101,7 +101,7 @@ func (c *ElbClient) ChangeLoadbalancerChargeMode(request *model.ChangeLoadbalanc
 	}
 }
 
-// ChangeLoadbalancerChargeModeInvoker 负载均衡器计费模式变更
+// ChangeLoadbalancerChargeModeInvoker 变更负载均衡器计费模式
 func (c *ElbClient) ChangeLoadbalancerChargeModeInvoker(request *model.ChangeLoadbalancerChargeModeRequest) *ChangeLoadbalancerChargeModeInvoker {
 	requestDef := GenReqDefForChangeLoadbalancerChargeMode()
 	return &ChangeLoadbalancerChargeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -221,19 +221,26 @@ func (c *ElbClient) CreateListenerInvoker(request *model.CreateListenerRequest) 
 //
 // 创建负载均衡器。
 //
+//
 // 1.若要创建内网IPv4负载均衡器，则需要设置vip_subnet_cidr_id。
+//
 //
 // 2.若要创建公网IPv4负载均衡器，则需要设置publicip，以及设置vpc_id和vip_subnet_cidr_id这两个参数中的一个。
 //
+//
 // 3.若要绑定有已有公网IPv4地址，需要设置publicip_ids，以及设置vpc_id和vip_subnet_cidr_id这两个参数中的一个。
+//
 //
 // 4.若要创建内网双栈负载均衡器，则需要设置ipv6_vip_virsubnet_id。
 //
+//
 // 5.若要创建公网双栈负载均衡器，则需要设置ipv6_vip_virsubnet_id和ipv6_bandwidth。
+//
 //
 // 6.不支持绑定已有未使用的内网IPv4、内网IPv6或公网IPv6地址。
 //
-// [&gt;不支持创建IPv6地址负载均衡器](tag:dt,dt_test)
+//
+// [&gt; 不支持创建IPv6地址负载均衡器](tag:dt,dt_test)
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -273,6 +280,28 @@ func (c *ElbClient) CreateLogtank(request *model.CreateLogtankRequest) (*model.C
 func (c *ElbClient) CreateLogtankInvoker(request *model.CreateLogtankRequest) *CreateLogtankInvoker {
 	requestDef := GenReqDefForCreateLogtank()
 	return &CreateLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMasterSlavePool 创建主备后端服务器组
+//
+// 创建主备后端服务器组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ElbClient) CreateMasterSlavePool(request *model.CreateMasterSlavePoolRequest) (*model.CreateMasterSlavePoolResponse, error) {
+	requestDef := GenReqDefForCreateMasterSlavePool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateMasterSlavePoolResponse), nil
+	}
+}
+
+// CreateMasterSlavePoolInvoker 创建主备后端服务器组
+func (c *ElbClient) CreateMasterSlavePoolInvoker(request *model.CreateMasterSlavePoolRequest) *CreateMasterSlavePoolInvoker {
+	requestDef := GenReqDefForCreateMasterSlavePool()
+	return &CreateMasterSlavePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateMember 创建后端服务器
@@ -495,6 +524,28 @@ func (c *ElbClient) DeleteLogtankInvoker(request *model.DeleteLogtankRequest) *D
 	return &DeleteLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteMasterSlavePool 删除主备后端服务器组
+//
+// 删除主备后端服务器组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ElbClient) DeleteMasterSlavePool(request *model.DeleteMasterSlavePoolRequest) (*model.DeleteMasterSlavePoolResponse, error) {
+	requestDef := GenReqDefForDeleteMasterSlavePool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteMasterSlavePoolResponse), nil
+	}
+}
+
+// DeleteMasterSlavePoolInvoker 删除主备后端服务器组
+func (c *ElbClient) DeleteMasterSlavePoolInvoker(request *model.DeleteMasterSlavePoolRequest) *DeleteMasterSlavePoolInvoker {
+	requestDef := GenReqDefForDeleteMasterSlavePool()
+	return &DeleteMasterSlavePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteMember 删除后端服务器
 //
 // 删除后端服务器。
@@ -587,10 +638,11 @@ func (c *ElbClient) ListAllMembersInvoker(request *model.ListAllMembersRequest) 
 //
 // 返回租户创建LB时可使用的可用区集合列表情况。
 //
-// 默认情况下，会返回一个可用区集合。在（如创建LB）设置可用区时，填写的可用区必须包含在可用区集合中、为这个可用区集合的子集。
 //
-// [特殊场景下，部分客户要求负载均衡只能创建在指定可用区集合中，此时会返回客户定制的可用区集合。返回可用区集合可能为一个也可能为多个，比如列表有两个可用区集合[az1,az2],
-// [az2,az3]。在创建负载均衡器时，可以选择创建在多个可用区，但所选的多个可用区必须同属于其中一个可用区集合，如可以选az2和az3，但不能选择az1和az3。你可以选择多个可用区，只要这些可用区在一个子集中](tag:hws,ocb,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk-g42)
+// - 默认情况下，会返回一个可用区集合。在（如创建LB）设置可用区时，填写的可用区必须包含在可用区集合中、为这个可用区集合的子集。
+//
+//
+// - 特殊场景下，部分客户要求负载均衡只能创建在指定可用区集合中，此时会返回客户定制的可用区集合。返回可用区集合可能为一个也可能为多个，比如列表有两个可用区集合\\[az1,az2\\], \\[az2, az3\\]。在创建负载均衡器时，可以选择创建在多个可用区，但所选的多个可用区必须同属于其中一个可用区集合，如可以选az2和az3，但不能选择 az1和az3。你可以选择多个可用区，只要这些可用区在一个子集中
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -610,7 +662,7 @@ func (c *ElbClient) ListAvailabilityZonesInvoker(request *model.ListAvailability
 	return &ListAvailabilityZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListCertificates 证书列表
+// ListCertificates 查询证书列表
 //
 // 查询证书列表。
 //
@@ -626,7 +678,7 @@ func (c *ElbClient) ListCertificates(request *model.ListCertificatesRequest) (*m
 	}
 }
 
-// ListCertificatesInvoker 证书列表
+// ListCertificatesInvoker 查询证书列表
 func (c *ElbClient) ListCertificatesInvoker(request *model.ListCertificatesRequest) *ListCertificatesInvoker {
 	requestDef := GenReqDefForListCertificates()
 	return &ListCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -764,9 +816,9 @@ func (c *ElbClient) ListLoadBalancersInvoker(request *model.ListLoadBalancersReq
 	return &ListLoadBalancersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListLogtanks 云日志列表
+// ListLogtanks 查询云日志列表
 //
-// 云日志列表
+// 查询云日志列表
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -780,13 +832,35 @@ func (c *ElbClient) ListLogtanks(request *model.ListLogtanksRequest) (*model.Lis
 	}
 }
 
-// ListLogtanksInvoker 云日志列表
+// ListLogtanksInvoker 查询云日志列表
 func (c *ElbClient) ListLogtanksInvoker(request *model.ListLogtanksRequest) *ListLogtanksInvoker {
 	requestDef := GenReqDefForListLogtanks()
 	return &ListLogtanksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListMembers 后端服务器列表
+// ListMasterSlavePools 查询主备后端服务器组列表
+//
+// 主备后端服务器组列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ElbClient) ListMasterSlavePools(request *model.ListMasterSlavePoolsRequest) (*model.ListMasterSlavePoolsResponse, error) {
+	requestDef := GenReqDefForListMasterSlavePools()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMasterSlavePoolsResponse), nil
+	}
+}
+
+// ListMasterSlavePoolsInvoker 查询主备后端服务器组列表
+func (c *ElbClient) ListMasterSlavePoolsInvoker(request *model.ListMasterSlavePoolsRequest) *ListMasterSlavePoolsInvoker {
+	requestDef := GenReqDefForListMasterSlavePools()
+	return &ListMasterSlavePoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMembers 查询后端服务器列表
 //
 // Pool下的后端服务器列表。
 //
@@ -802,7 +876,7 @@ func (c *ElbClient) ListMembers(request *model.ListMembersRequest) (*model.ListM
 	}
 }
 
-// ListMembersInvoker 后端服务器列表
+// ListMembersInvoker 查询后端服务器列表
 func (c *ElbClient) ListMembersInvoker(request *model.ListMembersRequest) *ListMembersInvoker {
 	requestDef := GenReqDefForListMembers()
 	return &ListMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -898,7 +972,7 @@ func (c *ElbClient) ListSystemSecurityPoliciesInvoker(request *model.ListSystemS
 	return &ListSystemSecurityPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowCertificate 证书详情
+// ShowCertificate 查询证书详情
 //
 // 查询证书详情。
 //
@@ -914,7 +988,7 @@ func (c *ElbClient) ShowCertificate(request *model.ShowCertificateRequest) (*mod
 	}
 }
 
-// ShowCertificateInvoker 证书详情
+// ShowCertificateInvoker 查询证书详情
 func (c *ElbClient) ShowCertificateInvoker(request *model.ShowCertificateRequest) *ShowCertificateInvoker {
 	requestDef := GenReqDefForShowCertificate()
 	return &ShowCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1076,7 +1150,7 @@ func (c *ElbClient) ShowLoadBalancerStatusInvoker(request *model.ShowLoadBalance
 	return &ShowLoadBalancerStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowLogtank 云日志配置详情
+// ShowLogtank 查询云日志详情
 //
 // 云日志详情。
 //
@@ -1092,13 +1166,35 @@ func (c *ElbClient) ShowLogtank(request *model.ShowLogtankRequest) (*model.ShowL
 	}
 }
 
-// ShowLogtankInvoker 云日志配置详情
+// ShowLogtankInvoker 查询云日志详情
 func (c *ElbClient) ShowLogtankInvoker(request *model.ShowLogtankRequest) *ShowLogtankInvoker {
 	requestDef := GenReqDefForShowLogtank()
 	return &ShowLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowMember 后端服务器详情
+// ShowMasterSlavePool 查询主备后端服务器组详情
+//
+// 主备后端服务器组详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ElbClient) ShowMasterSlavePool(request *model.ShowMasterSlavePoolRequest) (*model.ShowMasterSlavePoolResponse, error) {
+	requestDef := GenReqDefForShowMasterSlavePool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMasterSlavePoolResponse), nil
+	}
+}
+
+// ShowMasterSlavePoolInvoker 查询主备后端服务器组详情
+func (c *ElbClient) ShowMasterSlavePoolInvoker(request *model.ShowMasterSlavePoolRequest) *ShowMasterSlavePoolInvoker {
+	requestDef := GenReqDefForShowMasterSlavePool()
+	return &ShowMasterSlavePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMember 查询后端服务器详情
 //
 // 后端服务器详情。
 //
@@ -1114,7 +1210,7 @@ func (c *ElbClient) ShowMember(request *model.ShowMemberRequest) (*model.ShowMem
 	}
 }
 
-// ShowMemberInvoker 后端服务器详情
+// ShowMemberInvoker 查询后端服务器详情
 func (c *ElbClient) ShowMemberInvoker(request *model.ShowMemberRequest) *ShowMemberInvoker {
 	requestDef := GenReqDefForShowMember()
 	return &ShowMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1142,7 +1238,7 @@ func (c *ElbClient) ShowPoolInvoker(request *model.ShowPoolRequest) *ShowPoolInv
 	return &ShowPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowQuota 查询配额
+// ShowQuota 查询配额详情
 //
 // 查询指定项目中负载均衡相关的各类资源的当前配额。
 //
@@ -1158,7 +1254,7 @@ func (c *ElbClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuota
 	}
 }
 
-// ShowQuotaInvoker 查询配额
+// ShowQuotaInvoker 查询配额详情
 func (c *ElbClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuotaInvoker {
 	requestDef := GenReqDefForShowQuota()
 	return &ShowQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1430,7 +1526,7 @@ func (c *ElbClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest
 
 // BatchDeleteIpList 删除IP地址组的IP列表项
 //
-// 批量删除IP地址组的IP列表项。
+// 批量删除IP地址组的IP列表信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1453,10 +1549,23 @@ func (c *ElbClient) BatchDeleteIpListInvoker(request *model.BatchDeleteIpListReq
 // CountPreoccupyIpNum 计算预占IP数
 //
 // 计算以下几种场景的预占用IP数量：
-// - 计算创建LB的第一个七层监听器后总占用IP数量：传入loadbalancer_id、l7_flavor_id为空、ip_target_enable不传或为false。
-// - 计算LB规格变更或开启跨VPC后总占用IP数量：传入参数loadbalancer_id，及l7_flavor_id不为空或ip_target_enable为true。
-// - 计算创建LB所需IP数量：传入参数availability_zone_id，及可选参数l7_flavor_id、ip_target_enable、ip_version，不能传loadbalancer_id。
-// &gt; 查询出的预占IP数大于等于最终实际占用的IP数。
+//
+// -
+// 计算创建LB的第一个七层监听器后总占用IP数量：传入loadbalancer_id、l7_flavor_id为空、ip_target_enable不传或为false。
+//
+// -
+// 计算LB规格变更或开启跨VPC后总占用IP数量：传入参数loadbalancer_id，及l7_flavor_id不为空或ip_target_enable为true。
+//
+// -
+// 计算创建LB所需IP数量：传入参数availability_zone_id，及可选参数l7_flavor_id、ip_target_enable、ip_version，不能传loadbalancer_id。
+//
+//
+// 说明：
+//
+//
+// - 计算出来的预占IP数大于等于最终实际占用的IP数。
+//
+// - 总占用IP数量，即整个LB所占用的IP数量。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1479,7 +1588,6 @@ func (c *ElbClient) CountPreoccupyIpNumInvoker(request *model.CountPreoccupyIpNu
 // CreateIpGroup 创建IP地址组
 //
 // 创建IP地址组。输入的ip可为ip地址或者CIDR子网，支持IPV4和IPV6。需要注意，0.0.0.0与0.0.0.0/32视为重复，0:0:0:0:0:0:0:1与::1与::1/128视为重复，会只保留其中一个写入。
-// [不支持IPv6，请勿传入IPv6地址。](tag:dt,dt_test)
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1568,7 +1676,6 @@ func (c *ElbClient) ShowIpGroupInvoker(request *model.ShowIpGroupRequest) *ShowI
 // UpdateIpGroup 更新IP地址组
 //
 // 更新IP地址组，只支持全量更新IP。即IP地址组中的ip_list将被全量覆盖，不在请求参数中的IP地址将被移除。输入的ip可为ip地址或者CIDR子网，支持IPV4和IPV6。需要注意，0.0.0.0与0.0.0.0/32视为重复，0:0:0:0:0:0:0:1与::1与::1/128视为重复，会只保留其中一个写入。
-// [不支持IPv6，请勿传入IPv6地址。](tag:dt,dt_test)
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.

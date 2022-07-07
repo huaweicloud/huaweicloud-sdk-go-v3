@@ -24,6 +24,9 @@ type NodeStatus struct {
 	// 节点主网卡私有网段IP地址。
 	PrivateIP *string `json:"privateIP,omitempty"`
 
+	// 节点主网卡私有网段IPv6地址。
+	PrivateIPv6IP *string `json:"privateIPv6IP,omitempty"`
+
 	// 节点弹性公网IP地址。如果ECS的数据没有实时同步，可在界面上通过“同步节点信息”手动进行更新。
 	PublicIP *string `json:"publicIP,omitempty"`
 

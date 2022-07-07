@@ -9,13 +9,13 @@ import (
 // Response Object
 type UpdateYmlsResponse struct {
 
-	// 返回值。
+	// 修改是否成功。 - true: 修改成功。 - false: 修改失败。
 	Acknowledged *bool `json:"acknowledged,omitempty"`
 
-	// 返回信息。
+	// 错误信息描述。当acknowledged为true时，该字段返回null。
 	ExternalMessage *string `json:"externalMessage,omitempty"`
 
-	// 返回错误信息。
+	// HTTTP错误信息。默认为null。
 	HttpErrorResponse *string `json:"httpErrorResponse,omitempty"`
 	HttpStatusCode    int     `json:"-"`
 }

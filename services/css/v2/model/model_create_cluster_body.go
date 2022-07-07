@@ -29,13 +29,13 @@ type CreateClusterBody struct {
 
 	Datastore *CreateClusterDatastoreBody `json:"datastore"`
 
-	// 是否开启认证，取值范围为true或false。默认关闭认证功能。当开启认证时，httpsEnable需要设置为true。  - true：表示集群开启认证。 - false：表示集群不开启认证。  >此参数只有6.5.4及之后版本支持。
+	// 是否开启认证，取值范围为true或false。默认关闭认证功能。  - true：表示集群开启认证。 - false：表示集群不开启认证。  >此参数只有6.5.4及之后版本支持。
 	AuthorityEnable *bool `json:"authorityEnable,omitempty"`
 
 	// 设置是否进行通信加密。取值范围为true或false。默认关闭通信加密功能。当httpsEnable设置为true时，authorityEnable字段需要设置为true。  - true：表示集群进行通信加密。 - false：表示集群不进行通信加密。  >此参数只有6.5.4及之后版本支持。
 	HttpsEnable *bool `json:"httpsEnable,omitempty"`
 
-	// 安全模式下集群管理员admin的密码，只有当authorityEnable设置为true时需要设置此参数。 - 参数范围：8~32个字符。 - 参数要求：密码至少包含大写字母，小写字母，数字、特殊字符四类中的三类，其中可输入的特殊字符为：~!@#$%&*()-_=|[{}];:,<.>/?
+	// 安全模式下集群管理员admin的密码，只有在创建集群时authorityEnable设置为true时需要设置此参数。。 - 参数范围：8~32个字符。 - 参数要求：密码至少包含大写字母，小写字母，数字、特殊字符四类中的三类，其中可输入的特殊字符为：~!@#$%&*()-_=|[{}];:,<.>/?
 	AdminPwd *string `json:"adminPwd,omitempty"`
 
 	PublicIPReq *CreateClusterPublicIpReq `json:"publicIPReq,omitempty"`
@@ -43,8 +43,6 @@ type CreateClusterBody struct {
 	LoadBalance *CreateClusterLoadBalance `json:"loadBalance,omitempty"`
 
 	PublicKibanaReq *CreateClusterPublicKibanaReq `json:"publicKibanaReq,omitempty"`
-
-	PayInfo *PayInfoBody `json:"payInfo,omitempty"`
 }
 
 func (o CreateClusterBody) String() string {

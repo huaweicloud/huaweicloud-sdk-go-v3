@@ -8,7 +8,7 @@ import (
 
 type UpdateVpcepConnectionReq struct {
 
-	// 期望的操作行为。
+	// 期望的操作行为。 - receive: 允许连接 - reject: 拒绝连接
 	Action string `json:"action"`
 
 	// 终端节点ID列表。

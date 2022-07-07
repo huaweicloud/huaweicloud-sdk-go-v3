@@ -14,6 +14,8 @@ type CreateInstallCmdRequest struct {
 
 	// 节点架构
 	Arch string `json:"arch"`
+
+	Body *CreateInstallCmdRequestDto `json:"body,omitempty"`
 }
 
 func (o CreateInstallCmdRequest) String() string {

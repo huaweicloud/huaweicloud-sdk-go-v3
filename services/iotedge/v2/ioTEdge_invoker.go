@@ -77,30 +77,6 @@ func (i *AddDeviceInvoker) Invoke() (*model.AddDeviceResponse, error) {
 	}
 }
 
-type BatchUpdateConfigsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdateConfigsInvoker) Invoke() (*model.BatchUpdateConfigsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdateConfigsResponse), nil
-	}
-}
-
-type CreateAccessCodeInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAccessCodeInvoker) Invoke() (*model.CreateAccessCodeResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAccessCodeResponse), nil
-	}
-}
-
 type DeleteDeviceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -137,18 +113,6 @@ func (i *ShowProductConfigInvoker) Invoke() (*model.ShowProductConfigResponse, e
 	}
 }
 
-type ShowProtocolMappingsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowProtocolMappingsInvoker) Invoke() (*model.ShowProtocolMappingsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowProtocolMappingsResponse), nil
-	}
-}
-
 type UpdateDeviceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -158,18 +122,6 @@ func (i *UpdateDeviceInvoker) Invoke() (*model.UpdateDeviceResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateDeviceResponse), nil
-	}
-}
-
-type UploadProtocolMappingsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UploadProtocolMappingsInvoker) Invoke() (*model.UploadProtocolMappingsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UploadProtocolMappingsResponse), nil
 	}
 }
 
@@ -326,18 +278,6 @@ func (i *ListExternalEntityInvoker) Invoke() (*model.ListExternalEntityResponse,
 		return nil, err
 	} else {
 		return result.(*model.ListExternalEntityResponse), nil
-	}
-}
-
-type ShowExternalEntityInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowExternalEntityInvoker) Invoke() (*model.ShowExternalEntityResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowExternalEntityResponse), nil
 	}
 }
 

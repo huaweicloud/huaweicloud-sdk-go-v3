@@ -10,7 +10,7 @@ import (
 type NodeNicSpec struct {
 	PrimaryNic *NicSpec `json:"primaryNic,omitempty"`
 
-	// 扩展网卡
+	// 扩展网卡 >创建节点池添加节点时不支持该参数。
 	ExtNics *[]NicSpec `json:"extNics,omitempty"`
 }
 

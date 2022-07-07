@@ -17,6 +17,8 @@ var AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2", "https://waf.ap-southeas
 var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://waf.ap-southeast-3.myhuaweicloud.com")
 var AF_SOUTH_1 = region.NewRegion("af-south-1", "https://waf.af-south-1.huaweicloud.com")
 var RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2", "https://waf.ru-northwest-2.myhuaweicloud.com")
+var CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2", "https://waf.cn-southwest-2.myhuaweicloud.com")
+var CN_NORTH_9 = region.NewRegion("cn-north-9", "https://waf.cn-north-9.myhuaweicloud.cn")
 
 var staticFields = map[string]*region.Region{
 	"cn-north-1":     CN_NORTH_1,
@@ -31,6 +33,8 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-3": AP_SOUTHEAST_3,
 	"af-south-1":     AF_SOUTH_1,
 	"ru-northwest-2": RU_NORTHWEST_2,
+	"cn-southwest-2": CN_SOUTHWEST_2,
+	"cn-north-9":     CN_NORTH_9,
 }
 
 var provider = region.DefaultProviderChain("WAF")

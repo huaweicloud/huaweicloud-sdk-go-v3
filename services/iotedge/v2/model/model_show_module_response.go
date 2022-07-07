@@ -18,8 +18,11 @@ type ShowModuleResponse struct {
 	// 应用版本
 	AppVersion *string `json:"app_version,omitempty"`
 
-	// 模块状态
+	// 模块运行状态
 	State *ShowModuleResponseState `json:"state,omitempty"`
+
+	// 模块管控状态
+	ControlStatus *string `json:"control_status,omitempty"`
 
 	// 边缘节点（同deviceID）ID
 	NodeId *string `json:"node_id,omitempty"`
@@ -40,8 +43,10 @@ type ShowModuleResponse struct {
 	AppType *ShowModuleResponseAppType `json:"app_type,omitempty"`
 
 	// 功能类型
-	FunctionType   *ShowModuleResponseFunctionType `json:"function_type,omitempty"`
-	HttpStatusCode int                             `json:"-"`
+	FunctionType *ShowModuleResponseFunctionType `json:"function_type,omitempty"`
+
+	ContainerSettings *ModuleContainerSettingsResDto `json:"container_settings,omitempty"`
+	HttpStatusCode    int                            `json:"-"`
 }
 
 func (o ShowModuleResponse) String() string {
@@ -65,6 +70,8 @@ type ShowModuleResponseStateEnum struct {
 	FAILED         ShowModuleResponseState
 	SUCCEEDED      ShowModuleResponseState
 	UNKNOWN        ShowModuleResponseState
+	DELETE_SUCCESS ShowModuleResponseState
+	STOPPED        ShowModuleResponseState
 }
 
 func GetShowModuleResponseStateEnum() ShowModuleResponseStateEnum {
@@ -89,6 +96,12 @@ func GetShowModuleResponseStateEnum() ShowModuleResponseStateEnum {
 		},
 		UNKNOWN: ShowModuleResponseState{
 			value: "UNKNOWN",
+		},
+		DELETE_SUCCESS: ShowModuleResponseState{
+			value: "DELETE_SUCCESS",
+		},
+		STOPPED: ShowModuleResponseState{
+			value: "STOPPED",
 		},
 	}
 }
@@ -169,6 +182,9 @@ type ShowModuleResponseFunctionTypeEnum struct {
 	DATA_PROCESSING        ShowModuleResponseFunctionType
 	PROTOCOL_PARSING       ShowModuleResponseFunctionType
 	ON_PREMISE_INTEGRATION ShowModuleResponseFunctionType
+	GATEWAY_MANAGER        ShowModuleResponseFunctionType
+	COMPOSITE_APPLICATION  ShowModuleResponseFunctionType
+	DATA_COLLECTION        ShowModuleResponseFunctionType
 }
 
 func GetShowModuleResponseFunctionTypeEnum() ShowModuleResponseFunctionTypeEnum {
@@ -181,6 +197,15 @@ func GetShowModuleResponseFunctionTypeEnum() ShowModuleResponseFunctionTypeEnum 
 		},
 		ON_PREMISE_INTEGRATION: ShowModuleResponseFunctionType{
 			value: "ON_PREMISE_INTEGRATION",
+		},
+		GATEWAY_MANAGER: ShowModuleResponseFunctionType{
+			value: "GATEWAY_MANAGER",
+		},
+		COMPOSITE_APPLICATION: ShowModuleResponseFunctionType{
+			value: "COMPOSITE_APPLICATION",
+		},
+		DATA_COLLECTION: ShowModuleResponseFunctionType{
+			value: "DATA_COLLECTION",
 		},
 	}
 }
