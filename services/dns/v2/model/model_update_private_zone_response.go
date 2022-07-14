@@ -53,7 +53,7 @@ type UpdatePrivateZoneResponse struct {
 	// 主从模式中，从DNS服务器用以获取DNS信息。
 	Masters *[]string `json:"masters,omitempty"`
 
-	//   Private zone关联的Router(VPC)信息
+	// 内网Zone关联的Router(VPC)信息
 	Routers        *[]RouterWithStatus `json:"routers,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

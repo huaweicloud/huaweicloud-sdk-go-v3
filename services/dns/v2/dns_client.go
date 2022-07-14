@@ -901,9 +901,9 @@ func (c *DnsClient) DeletePublicZoneInvoker(request *model.DeletePublicZoneReque
 	return &DeletePublicZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DisassociateRouter 在Private Zone上解关联VPC
+// DisassociateRouter 在内网Zone上解关联VPC
 //
-// 在Private Zone上解关联VPC
+// 在内网Zone上解关联VPC
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -917,7 +917,7 @@ func (c *DnsClient) DisassociateRouter(request *model.DisassociateRouterRequest)
 	}
 }
 
-// DisassociateRouterInvoker 在Private Zone上解关联VPC
+// DisassociateRouterInvoker 在内网Zone上解关联VPC
 func (c *DnsClient) DisassociateRouterInvoker(request *model.DisassociateRouterRequest) *DisassociateRouterInvoker {
 	requestDef := GenReqDefForDisassociateRouter()
 	return &DisassociateRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -989,9 +989,9 @@ func (c *DnsClient) ShowPrivateZoneInvoker(request *model.ShowPrivateZoneRequest
 	return &ShowPrivateZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPrivateZoneNameServer 查询内网Zone的名称服务器
+// ShowPrivateZoneNameServer 查询单个内网Zone的名称服务器
 //
-// 查询内网Zone的名称服务器
+// 查询单个内网Zone的名称服务器
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1005,7 +1005,7 @@ func (c *DnsClient) ShowPrivateZoneNameServer(request *model.ShowPrivateZoneName
 	}
 }
 
-// ShowPrivateZoneNameServerInvoker 查询内网Zone的名称服务器
+// ShowPrivateZoneNameServerInvoker 查询单个内网Zone的名称服务器
 func (c *DnsClient) ShowPrivateZoneNameServerInvoker(request *model.ShowPrivateZoneNameServerRequest) *ShowPrivateZoneNameServerInvoker {
 	requestDef := GenReqDefForShowPrivateZoneNameServer()
 	return &ShowPrivateZoneNameServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1055,9 +1055,9 @@ func (c *DnsClient) ShowPublicZoneNameServerInvoker(request *model.ShowPublicZon
 	return &ShowPublicZoneNameServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePrivateZone 修改单个Zone
+// UpdatePrivateZone 修改单个内网Zone
 //
-// 修改单个Zone
+// 修改单个内网Zone
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1071,15 +1071,15 @@ func (c *DnsClient) UpdatePrivateZone(request *model.UpdatePrivateZoneRequest) (
 	}
 }
 
-// UpdatePrivateZoneInvoker 修改单个Zone
+// UpdatePrivateZoneInvoker 修改单个内网Zone
 func (c *DnsClient) UpdatePrivateZoneInvoker(request *model.UpdatePrivateZoneRequest) *UpdatePrivateZoneInvoker {
 	requestDef := GenReqDefForUpdatePrivateZone()
 	return &UpdatePrivateZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePublicZone 修改单个Zone
+// UpdatePublicZone 修改单个公网Zone
 //
-// 修改单个Zone
+// 修改单个公网Zone
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1093,7 +1093,7 @@ func (c *DnsClient) UpdatePublicZone(request *model.UpdatePublicZoneRequest) (*m
 	}
 }
 
-// UpdatePublicZoneInvoker 修改单个Zone
+// UpdatePublicZoneInvoker 修改单个公网Zone
 func (c *DnsClient) UpdatePublicZoneInvoker(request *model.UpdatePublicZoneRequest) *UpdatePublicZoneInvoker {
 	requestDef := GenReqDefForUpdatePublicZone()
 	return &UpdatePublicZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

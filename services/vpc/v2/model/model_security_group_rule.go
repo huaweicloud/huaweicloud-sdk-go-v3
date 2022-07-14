@@ -39,6 +39,9 @@ type SecurityGroupRule struct {
 	// 功能说明：对端安全组ID 约束：和remote_ip_prefix互斥
 	RemoteGroupId string `json:"remote_group_id"`
 
+	// 功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
+	RemoteAddressGroupId *string `json:"remote_address_group_id,omitempty"`
+
 	// 安全组所属项目ID
 	TenantId string `json:"tenant_id"`
 }

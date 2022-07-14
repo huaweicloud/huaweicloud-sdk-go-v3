@@ -139,6 +139,12 @@ type NvlCostAnalysedBillDetail struct {
 
 	// 该字段为预留字段。
 	SubResourceName *string `json:"sub_resource_name,omitempty"`
+
+	// 成本标签。
+	EffectiveTagPairs *[]TagPair `json:"effective_tag_pairs,omitempty"`
+
+	// 成本单元。
+	CostUnitPairs *[]CostUnitPair `json:"cost_unit_pairs,omitempty"`
 }
 
 func (o NvlCostAnalysedBillDetail) String() string {

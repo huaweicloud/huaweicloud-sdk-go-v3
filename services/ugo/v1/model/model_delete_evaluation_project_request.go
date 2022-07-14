@@ -9,7 +9,7 @@ import (
 // Request Object
 type DeleteEvaluationProjectRequest struct {
 
-	// 评估项目ID
+	// 评估项目ID。
 	EvaluationProjectId string `json:"evaluation_project_id"`
 }
 

@@ -38,6 +38,9 @@ type NeutronSecurityGroupRule struct {
 	// 对端ip网段
 	RemoteIpPrefix string `json:"remote_ip_prefix"`
 
+	// 功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
+	RemoteAddressGroupId *string `json:"remote_address_group_id,omitempty"`
+
 	// 所属安全组ID
 	SecurityGroupId string `json:"security_group_id"`
 

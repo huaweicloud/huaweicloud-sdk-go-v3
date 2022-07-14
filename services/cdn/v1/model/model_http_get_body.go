@@ -23,6 +23,9 @@ type HttpGetBody struct {
 
 	// 是否使用HTTP2.0。（on：是，off：否）
 	Http2Status *string `json:"http2_status,omitempty"`
+
+	// 传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
+	TlsVersion *string `json:"tls_version,omitempty"`
 }
 
 func (o HttpGetBody) String() string {

@@ -139,7 +139,13 @@ type ShowInstanceResponse struct {
 	TransparentClientIpEnable *bool `json:"transparent_client_ip_enable,omitempty"`
 
 	// 实例子状态。
-	SubStatus      *string `json:"sub_status,omitempty"`
+	SubStatus *string `json:"sub_status,omitempty"`
+
+	// 实例标签键值。
+	Tags *[]ResourceTag `json:"tags,omitempty"`
+
+	// 实例CPU类型，通常为x86_64或aarch64
+	CpuType        *string `json:"cpu_type,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -134,6 +134,8 @@ func main() {
 #### 1.1 默认配置 [:top:](#用户手册-top)
 
 ``` go
+import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+
 // 使用默认配置
 httpConfig := config.DefaultHttpConfig()
 ```
@@ -294,8 +296,8 @@ globalAuth := global.NewCredentialsBuilder().WithDomainId(domainId).Build()
 
 **认证参数说明**：
 
-- `IdpId` 身份提供商ID
-- `IdTokenFile` 存放id_token的文件路径，id_token由企业IdP构建，携带联邦用户身份信息
+- `idpId` 身份提供商ID
+- `idTokenFile` 存放id_token的文件路径，id_token由企业IdP构建，携带联邦用户身份信息
 - `projectId` 云服务所在项目 ID ，根据你想操作的项目所属区域选择对应的项目 ID
 - `domainId` 华为云账号 ID
 

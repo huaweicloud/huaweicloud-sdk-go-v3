@@ -17,6 +17,30 @@ func (i *RunCelebrityRecognitionInvoker) Invoke() (*model.RunCelebrityRecognitio
 	}
 }
 
+type RunImageMainObjectDetectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunImageMainObjectDetectionInvoker) Invoke() (*model.RunImageMainObjectDetectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunImageMainObjectDetectionResponse), nil
+	}
+}
+
+type RunImageMediaTaggingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunImageMediaTaggingInvoker) Invoke() (*model.RunImageMediaTaggingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunImageMediaTaggingResponse), nil
+	}
+}
+
 type RunImageTaggingInvoker struct {
 	*invoker.BaseInvoker
 }

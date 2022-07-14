@@ -172,6 +172,9 @@ func (s Credentials) IsDerivedAuth(httpRequest *request.DefaultHttpRequest) bool
 }
 
 func (s Credentials) needUpdateSecurityToken() bool {
+	if s.authToken != "" {
+		return false
+	}
 	if s.AK == "" && s.SK == "" {
 		return true
 	}

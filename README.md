@@ -135,6 +135,8 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
 #### 1.1 Default Configuration [:top:](#user-manual-top)
 
 ``` go
+import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+
 // Use default configuration
 httpConfig := config.DefaultHttpConfig()
 ```
@@ -284,8 +286,8 @@ Obtain a federated identity authentication token using an OpenID Connect ID toke
 
 **Parameter description**:
 
-- `IdpId` Identity provider ID.
-- `IdTokenFile` Id token file path. Id token is constructed by the enterprise IdP to carry the identity information of federated users.
+- `idpId` Identity provider ID.
+- `idTokenFile` Id token file path. Id token is constructed by the enterprise IdP to carry the identity information of federated users.
 - `projectId` is the ID of your project depending on your region which you want to operate.
 - `domainId` is the account ID of Huawei Cloud.
 
