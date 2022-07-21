@@ -71,7 +71,7 @@ type StatisticsApi struct {
 	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
 
 	// 状态
-	Status *string `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty"`
 }
 
 func (o StatisticsApi) String() string {

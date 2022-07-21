@@ -185,6 +185,18 @@ func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 	}
 }
 
+type ShowInstanceStatusInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceStatusInfoInvoker) Invoke() (*model.ShowInstanceStatusInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceStatusInfoResponse), nil
+	}
+}
+
 type StartInstanceInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -58,6 +58,9 @@ func fillCommonAttrs(builder interface{}, common commonAttrs) error {
 		v = v.Elem()
 	}
 	v = v.FieldByName(credentialsAttr)
+	if v.Kind() == reflect.Ptr {
+		v = v.Elem()
+	}
 
 	if common.iamEndpoint != "" {
 		v.FieldByName(iamEndpointAttr).SetString(common.iamEndpoint)

@@ -41,6 +41,28 @@ func (c *ImageClient) RunCelebrityRecognitionInvoker(request *model.RunCelebrity
 	return &RunCelebrityRecognitionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RunImageDescription 图像描述
+//
+// 图像描述
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ImageClient) RunImageDescription(request *model.RunImageDescriptionRequest) (*model.RunImageDescriptionResponse, error) {
+	requestDef := GenReqDefForRunImageDescription()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunImageDescriptionResponse), nil
+	}
+}
+
+// RunImageDescriptionInvoker 图像描述
+func (c *ImageClient) RunImageDescriptionInvoker(request *model.RunImageDescriptionRequest) *RunImageDescriptionInvoker {
+	requestDef := GenReqDefForRunImageDescription()
+	return &RunImageDescriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunImageMainObjectDetection 图像主体识别
 //
 // 检测图像中的主要内容，返回主要内容的坐标信息，这里的主要内容包括两方面：bounding_box和main_object_box

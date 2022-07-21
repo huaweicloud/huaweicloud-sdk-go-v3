@@ -60,7 +60,7 @@ type Credentials struct {
 	expiredAt              int64
 }
 
-func (s Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) auth.ICredential {
+func (s *Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) auth.ICredential {
 	if s.DomainId != "" {
 		return s
 	}
@@ -92,7 +92,7 @@ func (s Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region st
 	return s
 }
 
-func (s Credentials) ProcessAuthRequest(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {
+func (s *Credentials) ProcessAuthRequest(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {
 	reqBuilder := req.Builder()
 
 	if s.needUpdateAuthToken() {
@@ -151,7 +151,7 @@ func (s Credentials) ProcessAuthRequest(client *impl.DefaultHttpClient, req *req
 	return req, nil
 }
 
-func (s Credentials) ProcessDerivedAuthParams(derivedAuthServiceName, regionId string) auth.ICredential {
+func (s *Credentials) ProcessDerivedAuthParams(derivedAuthServiceName, regionId string) auth.ICredential {
 	if s.derivedAuthServiceName == "" {
 		s.derivedAuthServiceName = derivedAuthServiceName
 	}
@@ -202,7 +202,7 @@ func (s *Credentials) UpdateSecurityTokenFromMetadata() error {
 	return nil
 }
 
-func (s *Credentials) needUpdateAuthToken() bool {
+func (s Credentials) needUpdateAuthToken() bool {
 	if s.IdpId == "" || s.IdTokenFile == "" {
 		return false
 	}
@@ -233,7 +233,7 @@ func (s *Credentials) updateAuthTokenByIdToken(client *impl.DefaultHttpClient) e
 	return nil
 }
 
-func (s *Credentials) getIdToken() (string, error) {
+func (s Credentials) getIdToken() (string, error) {
 	_, err := os.Stat(s.IdTokenFile)
 	if err != nil {
 		return "", err
@@ -251,11 +251,11 @@ func (s *Credentials) getIdToken() (string, error) {
 }
 
 type CredentialsBuilder struct {
-	Credentials Credentials
+	Credentials *Credentials
 }
 
 func NewCredentialsBuilder() *CredentialsBuilder {
-	return &CredentialsBuilder{Credentials: Credentials{
+	return &CredentialsBuilder{Credentials: &Credentials{
 		IamEndpoint: internal.GetIamEndpoint(),
 	}}
 }
@@ -300,7 +300,7 @@ func (builder *CredentialsBuilder) WithIdTokenFile(idTokenFile string) *Credenti
 	return builder
 }
 
-func (builder *CredentialsBuilder) Build() Credentials {
+func (builder *CredentialsBuilder) Build() *Credentials {
 	if builder.Credentials.IdpId != "" || builder.Credentials.IdTokenFile != "" {
 		if builder.Credentials.IdpId == "" {
 			panic(sdkerr.NewCredentialsTypeError("IdpId is required when using IdpId&IdTokenFile"))

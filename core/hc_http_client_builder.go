@@ -92,8 +92,12 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 		builder.credentials = credentials
 	}
 
+	t := reflect.TypeOf(builder.credentials)
+	if t.Kind() == reflect.Ptr {
+		t = t.Elem()
+	}
+	givenCredentialsType := t.String()
 	match := false
-	givenCredentialsType := reflect.TypeOf(builder.credentials).String()
 	for _, credentialsType := range builder.CredentialsType {
 		if credentialsType == givenCredentialsType {
 			match = true
@@ -102,15 +106,15 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 	}
 
 	if !match {
-		panic(fmt.Sprintf("Need credential type is %s, actually is %s", builder.CredentialsType, reflect.TypeOf(builder.credentials).String()))
+		panic(fmt.Sprintf("Need credential type is %s, actually is %s", builder.CredentialsType, givenCredentialsType))
 	}
 
 	if builder.region != nil {
 		builder.endpoint = builder.region.Endpoint
-		builder.credentials = builder.credentials.ProcessAuthParams(defaultHttpClient, builder.region.Id)
+		builder.credentials.ProcessAuthParams(defaultHttpClient, builder.region.Id)
 
 		if credential, ok := builder.credentials.(auth.IDerivedCredential); ok {
-			builder.credentials = credential.ProcessDerivedAuthParams(builder.derivedAuthServiceName, builder.region.Id)
+			credential.ProcessDerivedAuthParams(builder.derivedAuthServiceName, builder.region.Id)
 		}
 	}
 

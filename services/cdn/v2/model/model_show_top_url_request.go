@@ -24,7 +24,7 @@ type ShowTopUrlRequest struct {
 	// 服务区域：mainland_china(大陆)，outside_mainland_china(海外)，默认为mainland_china
 	ServiceArea *string `json:"service_area,omitempty"`
 
-	// 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+	// 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

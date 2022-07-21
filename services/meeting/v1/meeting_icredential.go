@@ -22,10 +22,11 @@ const (
 )
 
 type MeetingCredentials struct {
-	UserName      string
-	UserPassword  string
-	Token         *string
-	LastTokenDate *int64
+	UserName     string
+	UserPassword string
+
+	token         string
+	lastTokenDate int64
 }
 
 type MeetingAuthReqBody struct {
@@ -75,14 +76,14 @@ func GetResponseBody(resp *response.DefaultHttpResponse) ([]byte, error) {
 	return data, nil
 }
 
-func (s MeetingCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) auth.ICredential {
+func (s *MeetingCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) auth.ICredential {
 	return s
 }
 
-func (s MeetingCredentials) ProcessAuthRequest(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {
+func (s *MeetingCredentials) ProcessAuthRequest(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {
 	t := time.Now().Unix()
-	if s.Token != nil && *s.Token != "" && t < *s.LastTokenDate+AccessTokenValidTime {
-		req.AddHeaderParam(AccessTokenInHeader, *s.Token)
+	if s.token != "" && t < s.lastTokenDate+AccessTokenValidTime {
+		req.AddHeaderParam(AccessTokenInHeader, s.token)
 	} else {
 		accessTokenReq := s.BuildAccessTokenRequest(req.GetEndpoint())
 		accessTokenResp, err := client.SyncInvokeHttp(accessTokenReq)
@@ -100,22 +101,22 @@ func (s MeetingCredentials) ProcessAuthRequest(client *impl.DefaultHttpClient, r
 			return nil, err
 		}
 
-		s.LastTokenDate = &t
-		s.Token = &meetingAuthResInfo.AccessToken
+		s.lastTokenDate = t
+		s.token = meetingAuthResInfo.AccessToken
 
-		req.AddHeaderParam(AccessTokenInHeader, *s.Token)
+		req.AddHeaderParam(AccessTokenInHeader, s.token)
 	}
 
 	return req, nil
 }
 
 type MeetingCredentialsBuilder struct {
-	MeetingCredentials MeetingCredentials
+	MeetingCredentials *MeetingCredentials
 }
 
 func NewMeetingCredentialsBuilder() *MeetingCredentialsBuilder {
 
-	return &MeetingCredentialsBuilder{MeetingCredentials: MeetingCredentials{}}
+	return &MeetingCredentialsBuilder{MeetingCredentials: &MeetingCredentials{}}
 }
 
 func (builder *MeetingCredentialsBuilder) WithUserName(username string) *MeetingCredentialsBuilder {
@@ -128,6 +129,6 @@ func (builder *MeetingCredentialsBuilder) WithUserPassword(userPassword string) 
 	return builder
 }
 
-func (builder *MeetingCredentialsBuilder) Build() MeetingCredentials {
+func (builder *MeetingCredentialsBuilder) Build() *MeetingCredentials {
 	return builder.MeetingCredentials
 }

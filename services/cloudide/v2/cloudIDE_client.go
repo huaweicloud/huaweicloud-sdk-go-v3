@@ -349,6 +349,28 @@ func (c *CloudIDEClient) ShowInstanceInvoker(request *model.ShowInstanceRequest)
 	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowInstanceStatusInfo 查询某个IDE实例的状态
+//
+// 查询某个IDE实例的状态
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudIDEClient) ShowInstanceStatusInfo(request *model.ShowInstanceStatusInfoRequest) (*model.ShowInstanceStatusInfoResponse, error) {
+	requestDef := GenReqDefForShowInstanceStatusInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceStatusInfoResponse), nil
+	}
+}
+
+// ShowInstanceStatusInfoInvoker 查询某个IDE实例的状态
+func (c *CloudIDEClient) ShowInstanceStatusInfoInvoker(request *model.ShowInstanceStatusInfoRequest) *ShowInstanceStatusInfoInvoker {
+	requestDef := GenReqDefForShowInstanceStatusInfo()
+	return &ShowInstanceStatusInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StartInstance 启动IDE实例
 //
 // 启动IDE实例

@@ -26,14 +26,8 @@ type InstanceEdgeParam struct {
 	// 租户id（对应华为云帐号的domainId）
 	InstanceUserDomainId *string `json:"instance_user_domain_id,omitempty"`
 
-	// 用户租户名
-	InstanceUserDomainName *string `json:"instance_user_domain_name,omitempty"`
-
 	// 用户id
 	InstanceUserId *string `json:"instance_user_id,omitempty"`
-
-	// 用户名
-	InstanceUserName *string `json:"instance_user_name,omitempty"`
 
 	// 是否页面显示（以标签配置为准）
 	IsTemporary *bool `json:"is_temporary,omitempty"`

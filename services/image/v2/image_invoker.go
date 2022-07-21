@@ -17,6 +17,18 @@ func (i *RunCelebrityRecognitionInvoker) Invoke() (*model.RunCelebrityRecognitio
 	}
 }
 
+type RunImageDescriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunImageDescriptionInvoker) Invoke() (*model.RunImageDescriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunImageDescriptionResponse), nil
+	}
+}
+
 type RunImageMainObjectDetectionInvoker struct {
 	*invoker.BaseInvoker
 }
