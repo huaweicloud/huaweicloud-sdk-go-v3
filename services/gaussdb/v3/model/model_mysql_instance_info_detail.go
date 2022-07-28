@@ -29,13 +29,15 @@ type MysqlInstanceInfoDetail struct {
 	// 实例类型，取值为“Cluster”。
 	Type *string `json:"type,omitempty"`
 
+	ChargeInfo *MysqlInstanceChargeInfo `json:"charge_info,omitempty"`
+
 	// 节点个数。
 	NodeCount *int32 `json:"node_count,omitempty"`
 
-	Datastore *MysqlDatastore `json:"datastore,omitempty"`
+	Datastore *MysqlDatastoreWithKernelVersion `json:"datastore,omitempty"`
 
 	// 备份空间使用大小，单位为GB。
-	BackupUsedSpace *int64 `json:"backup_used_space,omitempty"`
+	BackupUsedSpace *float64 `json:"backup_used_space,omitempty"`
 
 	// 创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。说明：创建时返回值为空，数据库实例创建成功后该值不为空。
 	Created *string `json:"created,omitempty"`

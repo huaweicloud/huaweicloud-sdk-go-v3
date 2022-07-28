@@ -460,6 +460,28 @@ func (c *GaussDBClient) ResetGaussMySqlPasswordInvoker(request *model.ResetGauss
 	return &ResetGaussMySqlPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetGaussMySqlProxyWeight 设置读写分离权重
+//
+// 设置读写分离权重
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) SetGaussMySqlProxyWeight(request *model.SetGaussMySqlProxyWeightRequest) (*model.SetGaussMySqlProxyWeightResponse, error) {
+	requestDef := GenReqDefForSetGaussMySqlProxyWeight()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetGaussMySqlProxyWeightResponse), nil
+	}
+}
+
+// SetGaussMySqlProxyWeightInvoker 设置读写分离权重
+func (c *GaussDBClient) SetGaussMySqlProxyWeightInvoker(request *model.SetGaussMySqlProxyWeightRequest) *SetGaussMySqlProxyWeightInvoker {
+	requestDef := GenReqDefForSetGaussMySqlProxyWeight()
+	return &SetGaussMySqlProxyWeightInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetGaussMySqlQuotas 设置租户基于企业项目的资源配额
 //
 // 设置指定企业项目的资源配额。
@@ -502,6 +524,28 @@ func (c *GaussDBClient) ShowAuditLog(request *model.ShowAuditLogRequest) (*model
 func (c *GaussDBClient) ShowAuditLogInvoker(request *model.ShowAuditLogRequest) *ShowAuditLogInvoker {
 	requestDef := GenReqDefForShowAuditLog()
 	return &ShowAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDedicatedResourceInfo 查询专属资源信息详情
+//
+// 查询专属资源信息详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) ShowDedicatedResourceInfo(request *model.ShowDedicatedResourceInfoRequest) (*model.ShowDedicatedResourceInfoResponse, error) {
+	requestDef := GenReqDefForShowDedicatedResourceInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDedicatedResourceInfoResponse), nil
+	}
+}
+
+// ShowDedicatedResourceInfoInvoker 查询专属资源信息详情
+func (c *GaussDBClient) ShowDedicatedResourceInfoInvoker(request *model.ShowDedicatedResourceInfoRequest) *ShowDedicatedResourceInfoInvoker {
+	requestDef := GenReqDefForShowDedicatedResourceInfo()
+	return &ShowDedicatedResourceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowGaussMySqlBackupList 查询备份列表
@@ -616,7 +660,7 @@ func (c *GaussDBClient) ShowGaussMySqlInstanceInfoInvoker(request *model.ShowGau
 
 // ShowGaussMySqlJobInfo 获取指定ID的任务信息
 //
-// 获取指定ID的任务信息。
+// 获取GaussDB(for MySQL)任务中心指定ID的任务信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.

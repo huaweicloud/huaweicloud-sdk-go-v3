@@ -41,6 +41,9 @@ type MysqlInstanceNodeInfo struct {
 	// 更新时间，格式与\"created\"字段对应格式完全相同。说明：创建时返回值为空，数据库实例创建成功后该值不为空。
 	Updated *string `json:"updated,omitempty"`
 
+	// 规格ID。
+	FlavorId *string `json:"flavor_id,omitempty"`
+
 	// 规格码。
 	FlavorRef *string `json:"flavor_ref,omitempty"`
 

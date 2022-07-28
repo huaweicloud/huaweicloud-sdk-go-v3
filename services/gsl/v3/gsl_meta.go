@@ -401,6 +401,21 @@ func GenReqDefForSetSpeedValue() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowMonthUsages() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/sim-cards/month-usages").
+		WithResponse(new(model.ShowMonthUsagesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowRealNamed() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

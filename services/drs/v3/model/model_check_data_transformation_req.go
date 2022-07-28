@@ -12,8 +12,8 @@ type CheckDataTransformationReq struct {
 	// 任务id
 	JobId *string `json:"job_id,omitempty"`
 
-	// 对象信息
-	ObjectInfo []DatabaseObjectVo `json:"object_info"`
+	// 对象信息，生成加工规则时需要填写。
+	ObjectInfo *[]DatabaseObjectVo `json:"object_info,omitempty"`
 
 	TransformationInfo *TransformationInfo `json:"transformation_info"`
 

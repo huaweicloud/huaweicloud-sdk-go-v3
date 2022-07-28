@@ -31,6 +31,9 @@ type CreateKeyRequestBody struct {
 
 	// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
 	Sequence *string `json:"sequence,omitempty"`
+
+	// 密钥库ID，默认使用KMS默认密钥库
+	KeystoreId *string `json:"keystore_id,omitempty"`
 }
 
 func (o CreateKeyRequestBody) String() string {

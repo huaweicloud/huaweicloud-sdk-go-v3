@@ -209,6 +209,28 @@ func (c *KmsClient) CreateKeyInvoker(request *model.CreateKeyRequest) *CreateKey
 	return &CreateKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateKeyStore 创建专属密钥库
+//
+// - \&quot;创建租户专属密钥库，专属密钥库使用DHSM实例作为密钥的存储\&quot;
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *KmsClient) CreateKeyStore(request *model.CreateKeyStoreRequest) (*model.CreateKeyStoreResponse, error) {
+	requestDef := GenReqDefForCreateKeyStore()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateKeyStoreResponse), nil
+	}
+}
+
+// CreateKeyStoreInvoker 创建专属密钥库
+func (c *KmsClient) CreateKeyStoreInvoker(request *model.CreateKeyStoreRequest) *CreateKeyStoreInvoker {
+	requestDef := GenReqDefForCreateKeyStore()
+	return &CreateKeyStoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateKmsTag 添加密钥标签
 //
 // - 功能介绍：添加密钥标签。
@@ -365,6 +387,28 @@ func (c *KmsClient) DeleteKeyInvoker(request *model.DeleteKeyRequest) *DeleteKey
 	return &DeleteKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteKeyStore 删除专属密钥库
+//
+// 删除租户专属密钥库
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *KmsClient) DeleteKeyStore(request *model.DeleteKeyStoreRequest) (*model.DeleteKeyStoreResponse, error) {
+	requestDef := GenReqDefForDeleteKeyStore()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteKeyStoreResponse), nil
+	}
+}
+
+// DeleteKeyStoreInvoker 删除专属密钥库
+func (c *KmsClient) DeleteKeyStoreInvoker(request *model.DeleteKeyStoreRequest) *DeleteKeyStoreInvoker {
+	requestDef := GenReqDefForDeleteKeyStore()
+	return &DeleteKeyStoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteTag 删除密钥标签
 //
 // - 功能介绍：删除密钥标签。
@@ -432,6 +476,28 @@ func (c *KmsClient) DisableKeyRotationInvoker(request *model.DisableKeyRotationR
 	return &DisableKeyRotationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DisableKeyStore 禁用专属密钥库
+//
+// 禁用租户专属密钥库
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *KmsClient) DisableKeyStore(request *model.DisableKeyStoreRequest) (*model.DisableKeyStoreResponse, error) {
+	requestDef := GenReqDefForDisableKeyStore()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisableKeyStoreResponse), nil
+	}
+}
+
+// DisableKeyStoreInvoker 禁用专属密钥库
+func (c *KmsClient) DisableKeyStoreInvoker(request *model.DisableKeyStoreRequest) *DisableKeyStoreInvoker {
+	requestDef := GenReqDefForDisableKeyStore()
+	return &DisableKeyStoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // EnableKey 启用密钥
 //
 // - 功能介绍：启用密钥，密钥启用后才可以使用。
@@ -478,6 +544,28 @@ func (c *KmsClient) EnableKeyRotation(request *model.EnableKeyRotationRequest) (
 func (c *KmsClient) EnableKeyRotationInvoker(request *model.EnableKeyRotationRequest) *EnableKeyRotationInvoker {
 	requestDef := GenReqDefForEnableKeyRotation()
 	return &EnableKeyRotationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableKeyStore 启用专属密钥库
+//
+// 启用租户专属密钥库
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *KmsClient) EnableKeyStore(request *model.EnableKeyStoreRequest) (*model.EnableKeyStoreResponse, error) {
+	requestDef := GenReqDefForEnableKeyStore()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableKeyStoreResponse), nil
+	}
+}
+
+// EnableKeyStoreInvoker 启用专属密钥库
+func (c *KmsClient) EnableKeyStoreInvoker(request *model.EnableKeyStoreRequest) *EnableKeyStoreInvoker {
+	requestDef := GenReqDefForEnableKeyStore()
+	return &EnableKeyStoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // EncryptData 加密数据
@@ -590,6 +678,28 @@ func (c *KmsClient) ListKeyDetailInvoker(request *model.ListKeyDetailRequest) *L
 	return &ListKeyDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListKeyStores 查询专属密钥库列表
+//
+// 查询租户专属密钥库列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *KmsClient) ListKeyStores(request *model.ListKeyStoresRequest) (*model.ListKeyStoresResponse, error) {
+	requestDef := GenReqDefForListKeyStores()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListKeyStoresResponse), nil
+	}
+}
+
+// ListKeyStoresInvoker 查询专属密钥库列表
+func (c *KmsClient) ListKeyStoresInvoker(request *model.ListKeyStoresRequest) *ListKeyStoresInvoker {
+	requestDef := GenReqDefForListKeyStores()
+	return &ListKeyStoresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListKeys 查询密钥列表
 //
 // - 功能介绍：查询用户所有密钥列表。
@@ -698,6 +808,28 @@ func (c *KmsClient) ShowKeyRotationStatus(request *model.ShowKeyRotationStatusRe
 func (c *KmsClient) ShowKeyRotationStatusInvoker(request *model.ShowKeyRotationStatusRequest) *ShowKeyRotationStatusInvoker {
 	requestDef := GenReqDefForShowKeyRotationStatus()
 	return &ShowKeyRotationStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKeyStore 获取专属密钥库
+//
+// 获取租户专属密钥库
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *KmsClient) ShowKeyStore(request *model.ShowKeyStoreRequest) (*model.ShowKeyStoreResponse, error) {
+	requestDef := GenReqDefForShowKeyStore()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKeyStoreResponse), nil
+	}
+}
+
+// ShowKeyStoreInvoker 获取专属密钥库
+func (c *KmsClient) ShowKeyStoreInvoker(request *model.ShowKeyStoreRequest) *ShowKeyStoreInvoker {
+	requestDef := GenReqDefForShowKeyStore()
+	return &ShowKeyStoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowKmsTags 查询密钥标签

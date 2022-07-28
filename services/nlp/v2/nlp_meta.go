@@ -52,6 +52,21 @@ func GenReqDefForRunClassification() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRunConstituencyParser() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/nlp-fundamental/constituency-parser").
+		WithResponse(new(model.RunConstituencyParserResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRunDependencyParser() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

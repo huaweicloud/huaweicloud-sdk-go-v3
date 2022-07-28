@@ -43,7 +43,7 @@ type CreateNotificationOptionTopicSceneEnum struct {
 func GetCreateNotificationOptionTopicSceneEnum() CreateNotificationOptionTopicSceneEnum {
 	return CreateNotificationOptionTopicSceneEnum{
 		SCALING_UP: CreateNotificationOptionTopicScene{
-			value: "[SCALING_UP",
+			value: "SCALING_UP",
 		},
 		SCALING_UP_FAIL: CreateNotificationOptionTopicScene{
 			value: "SCALING_UP_FAIL",
@@ -55,7 +55,7 @@ func GetCreateNotificationOptionTopicSceneEnum() CreateNotificationOptionTopicSc
 			value: "SCALING_DOWN_FAIL",
 		},
 		SCALING_GROUP_ABNORMAL: CreateNotificationOptionTopicScene{
-			value: "SCALING_GROUP_ABNORMAL]",
+			value: "SCALING_GROUP_ABNORMAL",
 		},
 	}
 }

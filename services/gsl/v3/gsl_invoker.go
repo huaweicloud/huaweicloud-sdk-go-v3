@@ -173,6 +173,18 @@ func (i *SetSpeedValueInvoker) Invoke() (*model.SetSpeedValueResponse, error) {
 	}
 }
 
+type ShowMonthUsagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMonthUsagesInvoker) Invoke() (*model.ShowMonthUsagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMonthUsagesResponse), nil
+	}
+}
+
 type ShowRealNamedInvoker struct {
 	*invoker.BaseInvoker
 }

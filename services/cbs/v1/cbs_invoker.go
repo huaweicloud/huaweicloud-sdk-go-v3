@@ -65,18 +65,6 @@ func (i *CreateSessionInvoker) Invoke() (*model.CreateSessionResponse, error) {
 	}
 }
 
-type CreateTbSessionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateTbSessionInvoker) Invoke() (*model.CreateTbSessionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateTbSessionResponse), nil
-	}
-}
-
 type DeleteSessionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,18 +74,6 @@ func (i *DeleteSessionInvoker) Invoke() (*model.DeleteSessionResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteSessionResponse), nil
-	}
-}
-
-type DeleteTbSessionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteTbSessionInvoker) Invoke() (*model.DeleteTbSessionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteTbSessionResponse), nil
 	}
 }
 
@@ -122,18 +98,6 @@ func (i *ExecuteSessionInvoker) Invoke() (*model.ExecuteSessionResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ExecuteSessionResponse), nil
-	}
-}
-
-type ExecuteTbSessionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ExecuteTbSessionInvoker) Invoke() (*model.ExecuteTbSessionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ExecuteTbSessionResponse), nil
 	}
 }
 

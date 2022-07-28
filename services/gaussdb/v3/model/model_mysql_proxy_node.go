@@ -20,7 +20,7 @@ type MysqlProxyNode struct {
 	// 节点名称。
 	Name *string `json:"name,omitempty"`
 
-	// 节点读写分离权重。
+	// 节点读写分离读权重。
 	Weight *int32 `json:"weight,omitempty"`
 
 	// 可用区信息。

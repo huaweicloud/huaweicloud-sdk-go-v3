@@ -131,28 +131,6 @@ func (c *CbsClient) CreateSessionInvoker(request *model.CreateSessionRequest) *C
 	return &CreateSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateTbSession 发起会话
-//
-// 发起话务机器人会话。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *CbsClient) CreateTbSession(request *model.CreateTbSessionRequest) (*model.CreateTbSessionResponse, error) {
-	requestDef := GenReqDefForCreateTbSession()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateTbSessionResponse), nil
-	}
-}
-
-// CreateTbSessionInvoker 发起会话
-func (c *CbsClient) CreateTbSessionInvoker(request *model.CreateTbSessionRequest) *CreateTbSessionInvoker {
-	requestDef := GenReqDefForCreateTbSession()
-	return &CreateTbSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // DeleteSession 关闭会话
 //
 // 问答会话API由开启会话、处理会话、关闭会话三个接口组成。用户可通过调用该接口关闭会话。该接口即将下线，请优先使用问答机器人API接口进行调用。
@@ -173,28 +151,6 @@ func (c *CbsClient) DeleteSession(request *model.DeleteSessionRequest) (*model.D
 func (c *CbsClient) DeleteSessionInvoker(request *model.DeleteSessionRequest) *DeleteSessionInvoker {
 	requestDef := GenReqDefForDeleteSession()
 	return &DeleteSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteTbSession 结束会话
-//
-// 结束话务机器人会话。如果会话持续10分钟无会话请求则被清理。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *CbsClient) DeleteTbSession(request *model.DeleteTbSessionRequest) (*model.DeleteTbSessionResponse, error) {
-	requestDef := GenReqDefForDeleteTbSession()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteTbSessionResponse), nil
-	}
-}
-
-// DeleteTbSessionInvoker 结束会话
-func (c *CbsClient) DeleteTbSessionInvoker(request *model.DeleteTbSessionRequest) *DeleteTbSessionInvoker {
-	requestDef := GenReqDefForDeleteTbSession()
-	return &DeleteTbSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ExecuteQaChat 问答机器人会话
@@ -239,28 +195,6 @@ func (c *CbsClient) ExecuteSession(request *model.ExecuteSessionRequest) (*model
 func (c *CbsClient) ExecuteSessionInvoker(request *model.ExecuteSessionRequest) *ExecuteSessionInvoker {
 	requestDef := GenReqDefForExecuteSession()
 	return &ExecuteSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ExecuteTbSession 进行会话
-//
-// 进行话务机器人会话。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *CbsClient) ExecuteTbSession(request *model.ExecuteTbSessionRequest) (*model.ExecuteTbSessionResponse, error) {
-	requestDef := GenReqDefForExecuteTbSession()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ExecuteTbSessionResponse), nil
-	}
-}
-
-// ExecuteTbSessionInvoker 进行会话
-func (c *CbsClient) ExecuteTbSessionInvoker(request *model.ExecuteTbSessionRequest) *ExecuteTbSessionInvoker {
-	requestDef := GenReqDefForExecuteTbSession()
-	return &ExecuteTbSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSuggestions 获取问题提示

@@ -11,7 +11,7 @@ type MysqlProxyNodes struct {
 	// Proxy节点id。
 	Id *string `json:"id,omitempty"`
 
-	// Proxy节点状态。 取值范围：normal、abnormal、creating和deleted。
+	// Proxy节点状态。 取值范围：ACTIVE、ABNORMAL、BUILD和FAILED。
 	Status *string `json:"status,omitempty"`
 
 	// Proxy节点名称。

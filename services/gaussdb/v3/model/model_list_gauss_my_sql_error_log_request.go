@@ -27,7 +27,7 @@ type ListGaussMySqlErrorLogRequest struct {
 	// 查询记录数。默认为100，不能为负数，最小值为1，最大值为100
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 日志级别
+	// 日志级别。  取值范围：  - ALL - INFO - LOG - WARNING - ERROR - FATAL - PANIC - NOTE
 	Level *string `json:"level,omitempty"`
 
 	// 节点ID

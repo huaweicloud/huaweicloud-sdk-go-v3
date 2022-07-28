@@ -19,7 +19,7 @@ type AlarmNotifyInfo struct {
 	RpoDelay *int64 `json:"rpo_delay,omitempty"`
 
 	// 异常告警是否通知用户
-	AlarmToUser bool `json:"alarm_to_user"`
+	AlarmToUser *bool `json:"alarm_to_user,omitempty"`
 
 	// 收件方式与信息体
 	Subscriptions *[]SubscriptionInfo `json:"subscriptions,omitempty"`

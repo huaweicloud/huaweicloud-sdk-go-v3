@@ -19,28 +19,28 @@ type ModifyJobReq struct {
 	Description *string `json:"description,omitempty"`
 
 	// 任务名称，修改任务名称时必填
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
 	AlarmNotify *AlarmNotifyInfo `json:"alarm_notify,omitempty"`
 
 	// 任务模式，FULL_TRANS：全量；FULL_INCR_TRANS：全量+增量；INCR_TRANS：增量。
 	TaskType *ModifyJobReqTaskType `json:"task_type,omitempty"`
 
-	SourceEndpoint *Endpoint `json:"source_endpoint"`
+	SourceEndpoint *Endpoint `json:"source_endpoint,omitempty"`
 
-	TargetEndpoint *Endpoint `json:"target_endpoint"`
+	TargetEndpoint *Endpoint `json:"target_endpoint,omitempty"`
 
 	// node规格类型，测试连接之后修改调用时必填。
-	NodeType ModifyJobReqNodeType `json:"node_type"`
+	NodeType *ModifyJobReqNodeType `json:"node_type,omitempty"`
 
 	// 引擎类型，测试连接之后修改调用时必填。mysql：迁移，同步使用。mongodb：迁移使用。cloudDataGuard-mysql：灾备使用
-	EngineType ModifyJobReqEngineType `json:"engine_type"`
+	EngineType *ModifyJobReqEngineType `json:"engine_type,omitempty"`
 
 	// 网络类型，测试连接之后修改调用时必填。
-	NetType ModifyJobReqNetType `json:"net_type"`
+	NetType *ModifyJobReqNetType `json:"net_type,omitempty"`
 
 	// 保存数据库信息，测试连接之后修改调用时必填为true。
-	StoreDbInfo bool `json:"store_db_info"`
+	StoreDbInfo *bool `json:"store_db_info,omitempty"`
 
 	// 是否为重建任务。
 	IsRecreate *bool `json:"is_recreate,omitempty"`

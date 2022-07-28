@@ -101,6 +101,18 @@ func (i *CreateKeyInvoker) Invoke() (*model.CreateKeyResponse, error) {
 	}
 }
 
+type CreateKeyStoreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateKeyStoreInvoker) Invoke() (*model.CreateKeyStoreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateKeyStoreResponse), nil
+	}
+}
+
 type CreateKmsTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -185,6 +197,18 @@ func (i *DeleteKeyInvoker) Invoke() (*model.DeleteKeyResponse, error) {
 	}
 }
 
+type DeleteKeyStoreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteKeyStoreInvoker) Invoke() (*model.DeleteKeyStoreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteKeyStoreResponse), nil
+	}
+}
+
 type DeleteTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -221,6 +245,18 @@ func (i *DisableKeyRotationInvoker) Invoke() (*model.DisableKeyRotationResponse,
 	}
 }
 
+type DisableKeyStoreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisableKeyStoreInvoker) Invoke() (*model.DisableKeyStoreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisableKeyStoreResponse), nil
+	}
+}
+
 type EnableKeyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -242,6 +278,18 @@ func (i *EnableKeyRotationInvoker) Invoke() (*model.EnableKeyRotationResponse, e
 		return nil, err
 	} else {
 		return result.(*model.EnableKeyRotationResponse), nil
+	}
+}
+
+type EnableKeyStoreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableKeyStoreInvoker) Invoke() (*model.EnableKeyStoreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableKeyStoreResponse), nil
 	}
 }
 
@@ -305,6 +353,18 @@ func (i *ListKeyDetailInvoker) Invoke() (*model.ListKeyDetailResponse, error) {
 	}
 }
 
+type ListKeyStoresInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListKeyStoresInvoker) Invoke() (*model.ListKeyStoresResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListKeyStoresResponse), nil
+	}
+}
+
 type ListKeysInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -362,6 +422,18 @@ func (i *ShowKeyRotationStatusInvoker) Invoke() (*model.ShowKeyRotationStatusRes
 		return nil, err
 	} else {
 		return result.(*model.ShowKeyRotationStatusResponse), nil
+	}
+}
+
+type ShowKeyStoreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKeyStoreInvoker) Invoke() (*model.ShowKeyStoreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKeyStoreResponse), nil
 	}
 }
 

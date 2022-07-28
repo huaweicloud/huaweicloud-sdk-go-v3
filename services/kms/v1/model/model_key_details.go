@@ -58,6 +58,12 @@ type KeyDetails struct {
 
 	// 企业项目ID，默认为“0”。  - 对于开通企业项目的用户，表示资源处于默认企业项目下。  - 对于未开通企业项目的用户，表示资源未处于企业项目下。
 	SysEnterpriseProjectId *string `json:"sys_enterprise_project_id,omitempty"`
+
+	// 密钥库ID
+	KeystoreId *string `json:"keystore_id,omitempty"`
+
+	// 密钥在加密机中的标签
+	KeyLabel *string `json:"key_label,omitempty"`
 }
 
 func (o KeyDetails) String() string {

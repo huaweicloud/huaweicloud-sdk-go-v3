@@ -44,7 +44,7 @@ type MysqlInstanceRequest struct {
 	// 时区。默认时区为UTC。
 	TimeZone *string `json:"time_zone,omitempty"`
 
-	// 可用区类型,单可用区Single或多可用区multi。
+	// 可用区类型,单可用区single或多可用区multi。
 	AvailabilityZoneMode string `json:"availability_zone_mode"`
 
 	// 主可用区。

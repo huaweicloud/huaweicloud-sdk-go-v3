@@ -88,6 +88,29 @@ func (c *NlpClient) RunClassificationInvoker(request *model.RunClassificationReq
 	return &RunClassificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RunConstituencyParser 成分句法分析
+//
+// 识别句子中的成分以及成分之间的层次包含关系。
+// 在使用本API之前， 需要您完成服务申请， 具体操作流程请参见[申请服务](https://support.huaweicloud.com/api-nlp/nlp_03_0004.html)章节。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *NlpClient) RunConstituencyParser(request *model.RunConstituencyParserRequest) (*model.RunConstituencyParserResponse, error) {
+	requestDef := GenReqDefForRunConstituencyParser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunConstituencyParserResponse), nil
+	}
+}
+
+// RunConstituencyParserInvoker 成分句法分析
+func (c *NlpClient) RunConstituencyParserInvoker(request *model.RunConstituencyParserRequest) *RunConstituencyParserInvoker {
+	requestDef := GenReqDefForRunConstituencyParser()
+	return &RunConstituencyParserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunDependencyParser 依存句法分析
 //
 // 识别句子中词汇与词汇之间的相互依存关系。

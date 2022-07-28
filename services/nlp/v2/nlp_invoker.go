@@ -41,6 +41,18 @@ func (i *RunClassificationInvoker) Invoke() (*model.RunClassificationResponse, e
 	}
 }
 
+type RunConstituencyParserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunConstituencyParserInvoker) Invoke() (*model.RunConstituencyParserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunConstituencyParserResponse), nil
+	}
+}
+
 type RunDependencyParserInvoker struct {
 	*invoker.BaseInvoker
 }

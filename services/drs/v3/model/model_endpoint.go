@@ -12,8 +12,8 @@ import (
 // 数据库信息体
 type Endpoint struct {
 
-	// 数据库类型
-	DbType EndpointDbType `json:"db_type"`
+	// 数据库类型，测试连接之后修改调用时必填。
+	DbType *EndpointDbType `json:"db_type,omitempty"`
 
 	// 数据库所在可用区azCode
 	AzCode *string `json:"az_code,omitempty"`

@@ -19,7 +19,7 @@ type CollectHotQuestionsRequest struct {
 	EndTime *string `json:"end_time,omitempty"`
 
 	// 热点问题最多显示的个数，默认值为10，取值范围1-20。
-	Top *string `json:"top,omitempty"`
+	Top *int32 `json:"top,omitempty"`
 
 	// 热点问题所属的领域。如果指定领域为非空字符串则从指定领域中查询热点问题，否则从所有标准问题中查询热点问题。
 	Domain *string `json:"domain,omitempty"`

@@ -245,6 +245,18 @@ func (i *ResetGaussMySqlPasswordInvoker) Invoke() (*model.ResetGaussMySqlPasswor
 	}
 }
 
+type SetGaussMySqlProxyWeightInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetGaussMySqlProxyWeightInvoker) Invoke() (*model.SetGaussMySqlProxyWeightResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetGaussMySqlProxyWeightResponse), nil
+	}
+}
+
 type SetGaussMySqlQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -266,6 +278,18 @@ func (i *ShowAuditLogInvoker) Invoke() (*model.ShowAuditLogResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowAuditLogResponse), nil
+	}
+}
+
+type ShowDedicatedResourceInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDedicatedResourceInfoInvoker) Invoke() (*model.ShowDedicatedResourceInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDedicatedResourceInfoResponse), nil
 	}
 }
 

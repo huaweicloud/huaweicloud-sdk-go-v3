@@ -13,16 +13,16 @@ import (
 type DatabaseInfo struct {
 
 	// object_type为database时，为库名；object_type为table或者view时，字段值参考示例。
-	Id string `json:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// object_type为table或view时需要填写，为库名
 	ParentId *string `json:"parent_id,omitempty"`
 
 	// 类型
-	ObjectType DatabaseInfoObjectType `json:"object_type"`
+	ObjectType *DatabaseInfoObjectType `json:"object_type,omitempty"`
 
 	// 数据库对象名称，库名、表名、视图名
-	ObjectName string `json:"object_name"`
+	ObjectName *string `json:"object_name,omitempty"`
 
 	// 别名，映射的新名称。
 	ObjectAliasName *string `json:"object_alias_name,omitempty"`

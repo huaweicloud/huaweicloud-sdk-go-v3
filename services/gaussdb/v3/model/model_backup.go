@@ -23,10 +23,10 @@ type Backup struct {
 	// 备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”，其中T指时间字段的开始；Z指时区偏移量。
 	BeginTime *string `json:"begin_time,omitempty"`
 
-	// 备份状态
+	// 备份状态，取值： - BUILDING：备份中。 - COMPLETED：备份完成。 - FAILED：备份失败。 - AVAILABLE：备份可用。
 	Status *BackupStatus `json:"status,omitempty"`
 
-	// 备份类型，取值：
+	// 备份类型，取值： - manual：手动全量备份。
 	Type *BackupType `json:"type,omitempty"`
 
 	// 实例ID。
@@ -56,16 +56,16 @@ type BackupStatusEnum struct {
 func GetBackupStatusEnum() BackupStatusEnum {
 	return BackupStatusEnum{
 		BUILDING: BackupStatus{
-			value: "BUILDING：备份中。",
+			value: "BUILDING",
 		},
 		COMPLETED: BackupStatus{
-			value: "COMPLETED：备份完成。",
+			value: "COMPLETED",
 		},
 		FAILED: BackupStatus{
-			value: "FAILED：备份失败。",
+			value: "FAILED",
 		},
 		AVAILABLE: BackupStatus{
-			value: "AVAILABLE：备份可用。",
+			value: "AVAILABLE",
 		},
 	}
 }
@@ -103,7 +103,7 @@ type BackupTypeEnum struct {
 func GetBackupTypeEnum() BackupTypeEnum {
 	return BackupTypeEnum{
 		MANUAL: BackupType{
-			value: "manual：手动全量备份。",
+			value: "manual",
 		},
 	}
 }

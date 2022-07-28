@@ -327,6 +327,28 @@ func (c *GslClient) SetSpeedValueInvoker(request *model.SetSpeedValueRequest) *S
 	return &SetSpeedValueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowMonthUsages 月用量统计
+//
+// 设备月用量统计
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GslClient) ShowMonthUsages(request *model.ShowMonthUsagesRequest) (*model.ShowMonthUsagesResponse, error) {
+	requestDef := GenReqDefForShowMonthUsages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMonthUsagesResponse), nil
+	}
+}
+
+// ShowMonthUsagesInvoker 月用量统计
+func (c *GslClient) ShowMonthUsagesInvoker(request *model.ShowMonthUsagesRequest) *ShowMonthUsagesInvoker {
+	requestDef := GenReqDefForShowMonthUsages()
+	return &ShowMonthUsagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRealNamed 查询SIM卡实名认证信息
 //
 // 实时查询SIM卡实名认证信息。

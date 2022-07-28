@@ -11,7 +11,7 @@ type UpdateTaskRulesetItem struct {
 	// 规则集语言
 	Language string `json:"language"`
 
-	// 规则集ID
+	// 规则集ID,通过调用ListTaskRuleset接口，根据响应参数中的template_id获得
 	RuleSetId string `json:"rule_set_id"`
 
 	// 任务语言和规则集的关系是否启用，1是启用，0是未启用
