@@ -657,6 +657,28 @@ func (c *ProjectManClient) BatchDeleteIterationsV4Invoker(request *model.BatchDe
 	return &BatchDeleteIterationsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CancelProjectDomain 取消领域与项目的关联关系
+//
+// 取消领域与项目的关联关系
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) CancelProjectDomain(request *model.CancelProjectDomainRequest) (*model.CancelProjectDomainResponse, error) {
+	requestDef := GenReqDefForCancelProjectDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelProjectDomainResponse), nil
+	}
+}
+
+// CancelProjectDomainInvoker 取消领域与项目的关联关系
+func (c *ProjectManClient) CancelProjectDomainInvoker(request *model.CancelProjectDomainRequest) *CancelProjectDomainInvoker {
+	requestDef := GenReqDefForCancelProjectDomain()
+	return &CancelProjectDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCustomfields 创建工作项类型自定义字段
 //
 // 创建工作项类型自定义字段
@@ -721,6 +743,28 @@ func (c *ProjectManClient) CreateIterationV4(request *model.CreateIterationV4Req
 func (c *ProjectManClient) CreateIterationV4Invoker(request *model.CreateIterationV4Request) *CreateIterationV4Invoker {
 	requestDef := GenReqDefForCreateIterationV4()
 	return &CreateIterationV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProjectDomain 创建项目的领域
+//
+// 查询项目的领域列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) CreateProjectDomain(request *model.CreateProjectDomainRequest) (*model.CreateProjectDomainResponse, error) {
+	requestDef := GenReqDefForCreateProjectDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateProjectDomainResponse), nil
+	}
+}
+
+// CreateProjectDomainInvoker 创建项目的领域
+func (c *ProjectManClient) CreateProjectDomainInvoker(request *model.CreateProjectDomainRequest) *CreateProjectDomainInvoker {
+	requestDef := GenReqDefForCreateProjectDomain()
+	return &CreateProjectDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateProjectModule 创建项目的模块
@@ -1075,6 +1119,28 @@ func (c *ProjectManClient) ListIterationHistoriesInvoker(request *model.ListIter
 	return &ListIterationHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListProjectDomains 查询项目的领域列表
+//
+// 查询项目的领域列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) ListProjectDomains(request *model.ListProjectDomainsRequest) (*model.ListProjectDomainsResponse, error) {
+	requestDef := GenReqDefForListProjectDomains()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectDomainsResponse), nil
+	}
+}
+
+// ListProjectDomainsInvoker 查询项目的领域列表
+func (c *ProjectManClient) ListProjectDomainsInvoker(request *model.ListProjectDomainsRequest) *ListProjectDomainsInvoker {
+	requestDef := GenReqDefForListProjectDomains()
+	return &ListProjectDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProjectIssuesRecordsV4 查询项目下所有工作项的历史记录
 //
 // 查询项目下所有工作项的历史记录
@@ -1315,6 +1381,28 @@ func (c *ProjectManClient) UpdateIterationV4(request *model.UpdateIterationV4Req
 func (c *ProjectManClient) UpdateIterationV4Invoker(request *model.UpdateIterationV4Request) *UpdateIterationV4Invoker {
 	requestDef := GenReqDefForUpdateIterationV4()
 	return &UpdateIterationV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProjectDomain 更新项目的领域
+//
+// 更新项目的领域
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) UpdateProjectDomain(request *model.UpdateProjectDomainRequest) (*model.UpdateProjectDomainResponse, error) {
+	requestDef := GenReqDefForUpdateProjectDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateProjectDomainResponse), nil
+	}
+}
+
+// UpdateProjectDomainInvoker 更新项目的领域
+func (c *ProjectManClient) UpdateProjectDomainInvoker(request *model.UpdateProjectDomainRequest) *UpdateProjectDomainInvoker {
+	requestDef := GenReqDefForUpdateProjectDomain()
+	return &UpdateProjectDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateProjectModule 更新项目的模块

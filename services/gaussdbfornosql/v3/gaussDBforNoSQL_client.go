@@ -701,6 +701,28 @@ func (c *GaussDBforNoSQLClient) UpdateSecurityGroupInvoker(request *model.Update
 	return &UpdateSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpgradeDbVersion 数据库补丁升级
+//
+// 升级数据库补丁版本
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) UpgradeDbVersion(request *model.UpgradeDbVersionRequest) (*model.UpgradeDbVersionResponse, error) {
+	requestDef := GenReqDefForUpgradeDbVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeDbVersionResponse), nil
+	}
+}
+
+// UpgradeDbVersionInvoker 数据库补丁升级
+func (c *GaussDBforNoSQLClient) UpgradeDbVersionInvoker(request *model.UpgradeDbVersionRequest) *UpgradeDbVersionInvoker {
+	requestDef := GenReqDefForUpgradeDbVersion()
+	return &UpgradeDbVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListApiVersion 查询当前支持的API版本信息列表
 //
 // 查询当前支持的API版本信息列表。

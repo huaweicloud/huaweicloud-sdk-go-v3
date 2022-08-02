@@ -377,6 +377,18 @@ func (i *UpdateSecurityGroupInvoker) Invoke() (*model.UpdateSecurityGroupRespons
 	}
 }
 
+type UpgradeDbVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeDbVersionInvoker) Invoke() (*model.UpgradeDbVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeDbVersionResponse), nil
+	}
+}
+
 type ListApiVersionInvoker struct {
 	*invoker.BaseInvoker
 }

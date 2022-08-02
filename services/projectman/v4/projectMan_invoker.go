@@ -353,6 +353,18 @@ func (i *BatchDeleteIterationsV4Invoker) Invoke() (*model.BatchDeleteIterationsV
 	}
 }
 
+type CancelProjectDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelProjectDomainInvoker) Invoke() (*model.CancelProjectDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelProjectDomainResponse), nil
+	}
+}
+
 type CreateCustomfieldsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -386,6 +398,18 @@ func (i *CreateIterationV4Invoker) Invoke() (*model.CreateIterationV4Response, e
 		return nil, err
 	} else {
 		return result.(*model.CreateIterationV4Response), nil
+	}
+}
+
+type CreateProjectDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateProjectDomainInvoker) Invoke() (*model.CreateProjectDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateProjectDomainResponse), nil
 	}
 }
 
@@ -581,6 +605,18 @@ func (i *ListIterationHistoriesInvoker) Invoke() (*model.ListIterationHistoriesR
 	}
 }
 
+type ListProjectDomainsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectDomainsInvoker) Invoke() (*model.ListProjectDomainsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectDomainsResponse), nil
+	}
+}
+
 type ListProjectIssuesRecordsV4Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -710,6 +746,18 @@ func (i *UpdateIterationV4Invoker) Invoke() (*model.UpdateIterationV4Response, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateIterationV4Response), nil
+	}
+}
+
+type UpdateProjectDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateProjectDomainInvoker) Invoke() (*model.UpdateProjectDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateProjectDomainResponse), nil
 	}
 }
 

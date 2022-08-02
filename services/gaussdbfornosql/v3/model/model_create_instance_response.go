@@ -55,7 +55,7 @@ type CreateInstanceResponse struct {
 	// SSL开关选项，与请求参数相同。
 	SslOption *string `json:"ssl_option,omitempty"`
 
-	// 创建实例的工作流ID, 仅创建按需实例时会返回该参数。
+	// 创建实例的任务ID, 仅创建按需实例时会返回该参数。
 	JobId *string `json:"job_id,omitempty"`
 
 	// 创建实例的订单ID，仅创建包年包月时返回该参数。

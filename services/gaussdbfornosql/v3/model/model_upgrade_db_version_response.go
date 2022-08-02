@@ -7,18 +7,18 @@ import (
 )
 
 // Response Object
-type UpdateSecurityGroupResponse struct {
+type UpgradeDbVersionResponse struct {
 
 	// 任务ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 
-func (o UpdateSecurityGroupResponse) String() string {
+func (o UpgradeDbVersionResponse) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "UpdateSecurityGroupResponse struct{}"
+		return "UpgradeDbVersionResponse struct{}"
 	}
 
-	return strings.Join([]string{"UpdateSecurityGroupResponse", string(data)}, " ")
+	return strings.Join([]string{"UpgradeDbVersionResponse", string(data)}, " ")
 }

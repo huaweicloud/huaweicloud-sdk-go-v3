@@ -27,7 +27,7 @@ type ListGaussMySqlSlowLogRequest struct {
 	// 查询记录数。默认为100，不能为负数，最小值为1，最大值为100
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 语句类型，取空值，表示查询所有语句类型，也可指定如下日志类型：INSERT、UPDATE、SELECT、DELETE和CREATE
+	// 语句类型，取空值，表示查询所有语句类型，也可指定如下日志类型：INSERT、UPDATE、SELECT、DELETE、ALTER、DROP和CREATE
 	Type *string `json:"type,omitempty"`
 
 	// 节点ID

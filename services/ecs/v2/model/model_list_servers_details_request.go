@@ -18,7 +18,7 @@ type ListServersDetailsRequest struct {
 	// IPv4地址过滤结果，匹配规则为模糊匹配。
 	Ip *string `json:"ip,omitempty"`
 
-	// 查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
+	// 查询返回云服务器当前页面的大小。每页默认值是25，最多返回1000台云服务器的信息。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 云服务器名称，匹配规则为模糊匹配。

@@ -1,3 +1,60 @@
+# 0.0.101 2022-08-02
+
+### HuaweiCloud SDK GaussDB
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ShowGaussMySqlFlavors`新增响应参数 `flavors`
+  - 接口`ShowGaussMySqlInstanceInfo`新增响应参数 `instance`
+
+### HuaweiCloud SDK GaussDBforNoSQL
+
+- _新增特性_
+  - 支持接口`UpgradeDbVersion`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListInstances`新增响应参数 `patch_available`
+
+### HuaweiCloud SDK Image
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`RunImageDescription`移除请求参数 `language`
+
+### HuaweiCloud SDK Live
+
+- _新增特性_
+  - 支持接口`CreateRecordIndex`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK ProjectMan
+
+- _新增特性_
+  - 支持接口`CreateProjectDomain`、`ListProjectDomains`、`UpdateProjectDomain`、`CancelProjectDomain`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK SIS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`RecognizeShortAudio`请求参数`audio_format`新增枚举值`auto`
+
 # 0.0.100 2022-07-28
 
 ### HuaweiCloud SDK CBS
