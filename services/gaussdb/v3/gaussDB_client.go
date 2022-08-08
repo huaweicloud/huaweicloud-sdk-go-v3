@@ -921,3 +921,113 @@ func (c *GaussDBClient) UpdateInstanceMonitorInvoker(request *model.UpdateInstan
 	requestDef := GenReqDefForUpdateInstanceMonitor()
 	return &UpdateInstanceMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// DeleteSqlFilterRule 删除SQL限流规则
+//
+// 删除SQL限流规则
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) DeleteSqlFilterRule(request *model.DeleteSqlFilterRuleRequest) (*model.DeleteSqlFilterRuleResponse, error) {
+	requestDef := GenReqDefForDeleteSqlFilterRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSqlFilterRuleResponse), nil
+	}
+}
+
+// DeleteSqlFilterRuleInvoker 删除SQL限流规则
+func (c *GaussDBClient) DeleteSqlFilterRuleInvoker(request *model.DeleteSqlFilterRuleRequest) *DeleteSqlFilterRuleInvoker {
+	requestDef := GenReqDefForDeleteSqlFilterRule()
+	return &DeleteSqlFilterRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetSqlFilterRule 设置SQL限流规则
+//
+// 设置SQL限流规则
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) SetSqlFilterRule(request *model.SetSqlFilterRuleRequest) (*model.SetSqlFilterRuleResponse, error) {
+	requestDef := GenReqDefForSetSqlFilterRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetSqlFilterRuleResponse), nil
+	}
+}
+
+// SetSqlFilterRuleInvoker 设置SQL限流规则
+func (c *GaussDBClient) SetSqlFilterRuleInvoker(request *model.SetSqlFilterRuleRequest) *SetSqlFilterRuleInvoker {
+	requestDef := GenReqDefForSetSqlFilterRule()
+	return &SetSqlFilterRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSqlFilterControl 查询SQL限流开关状态
+//
+// 查询SQL限流开关状态
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) ShowSqlFilterControl(request *model.ShowSqlFilterControlRequest) (*model.ShowSqlFilterControlResponse, error) {
+	requestDef := GenReqDefForShowSqlFilterControl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSqlFilterControlResponse), nil
+	}
+}
+
+// ShowSqlFilterControlInvoker 查询SQL限流开关状态
+func (c *GaussDBClient) ShowSqlFilterControlInvoker(request *model.ShowSqlFilterControlRequest) *ShowSqlFilterControlInvoker {
+	requestDef := GenReqDefForShowSqlFilterControl()
+	return &ShowSqlFilterControlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSqlFilterRule 查询SQL限流规则
+//
+// 查询SQL限流规则
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) ShowSqlFilterRule(request *model.ShowSqlFilterRuleRequest) (*model.ShowSqlFilterRuleResponse, error) {
+	requestDef := GenReqDefForShowSqlFilterRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSqlFilterRuleResponse), nil
+	}
+}
+
+// ShowSqlFilterRuleInvoker 查询SQL限流规则
+func (c *GaussDBClient) ShowSqlFilterRuleInvoker(request *model.ShowSqlFilterRuleRequest) *ShowSqlFilterRuleInvoker {
+	requestDef := GenReqDefForShowSqlFilterRule()
+	return &ShowSqlFilterRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSqlFilterControl 开启或者关闭SQL限流
+//
+// 开启或者关闭SQL限流
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) UpdateSqlFilterControl(request *model.UpdateSqlFilterControlRequest) (*model.UpdateSqlFilterControlResponse, error) {
+	requestDef := GenReqDefForUpdateSqlFilterControl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSqlFilterControlResponse), nil
+	}
+}
+
+// UpdateSqlFilterControlInvoker 开启或者关闭SQL限流
+func (c *GaussDBClient) UpdateSqlFilterControlInvoker(request *model.UpdateSqlFilterControlRequest) *UpdateSqlFilterControlInvoker {
+	requestDef := GenReqDefForUpdateSqlFilterControl()
+	return &UpdateSqlFilterControlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

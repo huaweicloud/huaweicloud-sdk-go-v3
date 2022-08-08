@@ -1,3 +1,28 @@
+# 0.0.102 2022-08-08
+
+### HuaweiCloud SDK Core
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 修复枚举类型的查询参数拼接错误的问题
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK GaussDB
+
+- _新增特性_
+  - 支持以下接口:
+    - `UpdateSqlFilterControl`
+    - `ShowSqlFilterControl`
+    - `SetSqlFilterRule`
+    - `ShowSqlFilterRule`
+    - `DeleteSqlFilterRule`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
 # 0.0.101 2022-08-02
 
 ### HuaweiCloud SDK GaussDB

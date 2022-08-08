@@ -36,10 +36,10 @@ type ListNetworkInstancesRequest struct {
 	// 根据云连接实例ID过滤网络实例列表。
 	CloudConnectionId *[]string `json:"cloud_connection_id,omitempty"`
 
-	// 根据VPC或者VGW的ID过滤网络实例列表。
+	// 根据网络实例ID过滤网络实例列表。
 	InstanceId *[]string `json:"instance_id,omitempty"`
 
-	// 根据VPC或者VGW所在的Region过滤网络实例列表。
+	// 根据网络实例所在的Region过滤网络实例列表。
 	RegionId *[]string `json:"region_id,omitempty"`
 }
 

@@ -496,3 +496,63 @@ func (i *UpdateInstanceMonitorInvoker) Invoke() (*model.UpdateInstanceMonitorRes
 		return result.(*model.UpdateInstanceMonitorResponse), nil
 	}
 }
+
+type DeleteSqlFilterRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSqlFilterRuleInvoker) Invoke() (*model.DeleteSqlFilterRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSqlFilterRuleResponse), nil
+	}
+}
+
+type SetSqlFilterRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetSqlFilterRuleInvoker) Invoke() (*model.SetSqlFilterRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetSqlFilterRuleResponse), nil
+	}
+}
+
+type ShowSqlFilterControlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSqlFilterControlInvoker) Invoke() (*model.ShowSqlFilterControlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSqlFilterControlResponse), nil
+	}
+}
+
+type ShowSqlFilterRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSqlFilterRuleInvoker) Invoke() (*model.ShowSqlFilterRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSqlFilterRuleResponse), nil
+	}
+}
+
+type UpdateSqlFilterControlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSqlFilterControlInvoker) Invoke() (*model.UpdateSqlFilterControlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSqlFilterControlResponse), nil
+	}
+}

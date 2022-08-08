@@ -9,13 +9,13 @@ import (
 // 更新网络实例的详细信息。
 type UpdateNetworkInstance struct {
 
-	// 网络实例的名字。
+	// 网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
 	Name *string `json:"name,omitempty"`
 
-	// 网络实例的描述。
+	// 网络实例的描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
-	// VPC或者VGW发布的网段路由列表，ER场景不需要此字段。
+	// 网络实例发布的网段路由列表，ER场景此字段为空。
 	Cidrs *[]string `json:"cidrs,omitempty"`
 }
 

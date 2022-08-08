@@ -23,34 +23,34 @@ type NetworkInstance struct {
 	// 帐号ID。
 	DomainId *string `json:"domain_id,omitempty"`
 
-	// 网络实例的状态。ACTIVE：表示状态可用。
+	// 网络实例的状态。 - ACTIVE：处理成功。 - PENDING：处理中。 - ERROR：处理失败。
 	Status *NetworkInstanceStatus `json:"status,omitempty"`
 
-	// 网络实例的创建时间。
+	// 网络实例的创建时间。 UTC时间格式，yyyy-MM-ddTHH:mm:ss
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
-	// 网络实例的更新时间。
+	// 网络实例的更新时间。 UTC时间格式，yyyy-MM-ddTHH:mm:ss
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 
-	// 网络实例的类型。|- VPC：虚拟私有云。 VGW：虚拟网关。 ER：虚拟路由器。
+	// 网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。 - ER：企业路由器。
 	Type *NetworkInstanceType `json:"type,omitempty"`
 
 	// 云连接实例ID。
 	CloudConnectionId *string `json:"cloud_connection_id,omitempty"`
 
-	// VPC或者VGW的ID。
+	// 网络实例的ID。
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// VPC或者VGW所属账户ID。
+	// 网络实例所属账户ID。
 	InstanceDomainId *string `json:"instance_domain_id,omitempty"`
 
-	// VPC或者VGW所在Region的ID。
+	// 网络实例所在Region的ID。
 	RegionId *string `json:"region_id,omitempty"`
 
-	// VPC或者VGW所在租户的项目ID。
+	// 网络实例所在租户的项目ID。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// VPC或者VGW发布的网段路由列表。
+	// 网络实例发布的网段路由列表，ER场景此字段为空。
 	Cidrs *[]string `json:"cidrs,omitempty"`
 }
 

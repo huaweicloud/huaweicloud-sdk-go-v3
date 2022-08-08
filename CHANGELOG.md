@@ -1,3 +1,28 @@
+# 0.0.102 2022-08-08
+
+### HuaweiCloud SDK Core
+
+- _Features_
+  - None
+- _Bug Fix_
+  - Fix the problem of incorrect splicing of query parameters of enumeration types
+- _Change_
+  - None
+
+### HuaweiCloud SDK GaussDB
+
+- _Features_
+  - Support the interfaces:
+    - `UpdateSqlFilterControl`
+    - `ShowSqlFilterControl`
+    - `SetSqlFilterRule`
+    - `ShowSqlFilterRule`
+    - `DeleteSqlFilterRule`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
 # 0.0.101 2022-08-02
 
 ### HuaweiCloud SDK GaussDB

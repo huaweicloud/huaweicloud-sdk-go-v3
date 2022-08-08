@@ -32,13 +32,13 @@ type CloudConnection struct {
 	// 云连接实例的管理状态。
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
-	// 云连接实例的创建时间。
+	// 云连接实例的创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
-	// 云连接实例的更新时间。
+	// 云连接实例的更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 
-	// 云连接使用场景。|- VPC：虚拟私有云。 ER：虚拟路由器。
+	// 云连接使用场景。 - VPC：虚拟私有云。 - ER：企业路由器。
 	UsedScene *CloudConnectionUsedScene `json:"used_scene,omitempty"`
 
 	// 云连接实例关联网络实例的个数。

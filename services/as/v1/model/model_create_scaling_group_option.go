@@ -16,7 +16,7 @@ type CreateScalingGroupOption struct {
 	ScalingGroupName string `json:"scaling_group_name"`
 
 	// 伸缩配置ID，通过查询弹性伸缩配置列表接口获取。
-	ScalingConfigurationId *string `json:"scaling_configuration_id,omitempty"`
+	ScalingConfigurationId string `json:"scaling_configuration_id"`
 
 	// 期望实例数量，默认值为最小实例数。最小实例数<=期望实例数<=最大实例数
 	DesireInstanceNumber *int32 `json:"desire_instance_number,omitempty"`
