@@ -18,7 +18,7 @@ type ListEventItems struct {
 	// 策略id
 	Policyid *string `json:"policyid,omitempty"`
 
-	// 源ip
+	// 源ip，Web访问者的IP地址（攻击者IP地址）
 	Sip *string `json:"sip,omitempty"`
 
 	// 域名
@@ -35,6 +35,9 @@ type ListEventItems struct {
 
 	// 命中的载荷
 	Payload *string `json:"payload,omitempty"`
+
+	// 命中的载荷位置
+	PayloadLocation *string `json:"payload_location,omitempty"`
 
 	// 防护动作
 	Action *string `json:"action,omitempty"`

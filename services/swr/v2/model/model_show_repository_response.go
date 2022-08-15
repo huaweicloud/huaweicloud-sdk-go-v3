@@ -12,7 +12,7 @@ type ShowRepositoryResponse struct {
 	// 仓库编号
 	Id *int64 `json:"id,omitempty"`
 
-	// 命名空间编号
+	// 组织编号
 	NsId *int64 `json:"ns_id,omitempty"`
 
 	// 仓库名称

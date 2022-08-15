@@ -15,7 +15,7 @@ type ShowClusterRespClusterBrokers struct {
 	// 端口号。
 	Port *int32 `json:"port,omitempty"`
 
-	// 节点id。
+	// 节点ID。
 	BrokerId *string `json:"broker_id,omitempty"`
 
 	// 是否为contoller节点。

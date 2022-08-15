@@ -12,7 +12,7 @@ type ListPremiumHostResponse struct {
 	// 全部防护域名的数量
 	Total *int32 `json:"total,omitempty"`
 
-	// 详细的防护域名信息
+	// 详细的防护域名信息数组
 	Items          *[]SimplePremiumWafHost `json:"items,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

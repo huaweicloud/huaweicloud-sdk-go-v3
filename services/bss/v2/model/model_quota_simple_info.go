@@ -8,10 +8,10 @@ import (
 
 type QuotaSimpleInfo struct {
 
-	// 精英服务商ID。
+	// 云经销商ID。
 	Id string `json:"id"`
 
-	// 分配给精英服务商的代金券额度ID。
+	// 分配给云经销商的代金券额度ID。
 	QuotaId string `json:"quota_id"`
 }
 

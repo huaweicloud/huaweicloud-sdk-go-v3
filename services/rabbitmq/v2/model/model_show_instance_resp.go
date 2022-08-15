@@ -11,6 +11,12 @@ import (
 
 type ShowInstanceResp struct {
 
+	// 认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
+	AccessUser *string `json:"access_user,omitempty"`
+
+	// 代理个数。
+	BrokerNum *ShowInstanceRespBrokerNum `json:"broker_num,omitempty"`
+
 	// 实例名称。
 	Name *string `json:"name,omitempty"`
 
@@ -142,6 +148,53 @@ func (o ShowInstanceResp) String() string {
 	}
 
 	return strings.Join([]string{"ShowInstanceResp", string(data)}, " ")
+}
+
+type ShowInstanceRespBrokerNum struct {
+	value int32
+}
+
+type ShowInstanceRespBrokerNumEnum struct {
+	E_1 ShowInstanceRespBrokerNum
+	E_3 ShowInstanceRespBrokerNum
+	E_5 ShowInstanceRespBrokerNum
+	E_7 ShowInstanceRespBrokerNum
+}
+
+func GetShowInstanceRespBrokerNumEnum() ShowInstanceRespBrokerNumEnum {
+	return ShowInstanceRespBrokerNumEnum{
+		E_1: ShowInstanceRespBrokerNum{
+			value: 1,
+		}, E_3: ShowInstanceRespBrokerNum{
+			value: 3,
+		}, E_5: ShowInstanceRespBrokerNum{
+			value: 5,
+		}, E_7: ShowInstanceRespBrokerNum{
+			value: 7,
+		},
+	}
+}
+
+func (c ShowInstanceRespBrokerNum) Value() int32 {
+	return c.value
+}
+
+func (c ShowInstanceRespBrokerNum) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowInstanceRespBrokerNum) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }
 
 type ShowInstanceRespType struct {

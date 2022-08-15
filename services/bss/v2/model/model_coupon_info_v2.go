@@ -62,7 +62,7 @@ type CouponInfoV2 struct {
 	// 优惠券用途。
 	CouponUsage *string `json:"coupon_usage,omitempty"`
 
-	// 优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+	// 优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
 	CouponGroup *int32 `json:"coupon_group,omitempty"`
 }
 

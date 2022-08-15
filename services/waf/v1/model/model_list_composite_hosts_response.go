@@ -15,7 +15,7 @@ type ListCompositeHostsResponse struct {
 	// 云模式防护域名的数量
 	CloudTotal *int32 `json:"cloud_total,omitempty"`
 
-	// 独享防护域名的数量
+	// 独享模式防护域名的数量
 	PremiumTotal *int32 `json:"premium_total,omitempty"`
 
 	// 详细的防护域名信息

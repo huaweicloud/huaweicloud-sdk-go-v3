@@ -51,7 +51,7 @@ type Graph1 struct {
 	DataStoreVersion *string `json:"dataStoreVersion,omitempty"`
 
 	// 企业项目信息，如果未指定则不开启，默认不开启。
-	SysTags *[]SysTagsRes `json:"sys_tags,omitempty"`
+	SysTags *[]string `json:"sys_tags,omitempty"`
 
 	// 图的状态码。  - 100：准备中 - 200：运行中 - 201：升级中 - 202：导入中 - 203：回滚中 - 204：导出中 - 205：清空中 - 206：扩容准备中 - 207：扩容中 - 208：扩容回退中 - 300：故障 - 303：创建失败 - 400：被删除 - 800：已冻结 - 900：停止 - 901：停止中 - 920：启动中
 	Status *string `json:"status,omitempty"`
@@ -103,6 +103,21 @@ type Graph1 struct {
 
 	// 是否启用全文索引。
 	EnableFulltextIndex *bool `json:"enableFulltextIndex,omitempty"`
+
+	// 是否启用HyG，该参数只对千亿规格图生效
+	EnableHyG *bool `json:"enableHyG,omitempty"`
+
+	// 图实例私有网络访问物理地址列表。为了防止浮动IP切换造成业务闪断，我们推荐您通过轮询的方式使用物理IP访问图实例。
+	TrafficIpList *[]string `json:"trafficIpList,omitempty"`
+
+	// 图实例加密算法，取值为：  - generalCipher：国际算法 - SMcompatible：商密算法（兼容国际）
+	CryptAlgorithm *string `json:"cryptAlgorithm,omitempty"`
+
+	// 是否开启安全模式，开启安全模式会对性能有较大影响。
+	EnableHttps *bool `json:"enableHttps,omitempty"`
+
+	// 标签列表，每个标签用<key,value>键值对表示。
+	Tags *[]interface{} `json:"tags,omitempty"`
 }
 
 func (o Graph1) String() string {

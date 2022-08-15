@@ -9,10 +9,10 @@ import (
 // Response Object
 type ListAntitamperRuleResponse struct {
 
-	// 总条数
+	// 网页防篡改规则总条数
 	Total *int32 `json:"total,omitempty"`
 
-	// 规则
+	// 网页防篡改规则数组
 	Items          *[]AntiTamperRuleResponseBody `json:"items,omitempty"`
 	HttpStatusCode int                           `json:"-"`
 }

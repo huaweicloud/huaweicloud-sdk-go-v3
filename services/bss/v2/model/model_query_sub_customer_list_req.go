@@ -35,7 +35,7 @@ type QuerySubCustomerListReq struct {
 	// 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id，或者可以从创建客户接口的响应获取domain_id。
 	CustomerId *string `json:"customer_id,omitempty"`
 
-	// 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询精英服务商伙伴的子客户列表，必须携带该字段。
+	// 云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

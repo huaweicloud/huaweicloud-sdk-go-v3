@@ -8,10 +8,10 @@ import (
 
 type AdjustToIndirectPartnerReq struct {
 
-	// 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
+	// 云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
 	IndirectPartnerId string `json:"indirect_partner_id"`
 
-	// 华为云伙伴能力中心向精英服务商拨款的金额。 单位：元。取值大于0且精确到小数点后2位。
+	// 华为云总经销商向云经销商拨款的金额。 单位：元。取值大于0且精确到小数点后2位。
 	Amount float64 `json:"amount"`
 }
 

@@ -12,7 +12,7 @@ type ShowInstanceMessagesRequest struct {
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
-	// topic名称。
+	// Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
 	Topic string `json:"topic"`
 
 	// 是否按照时间排序。
@@ -24,7 +24,7 @@ type ShowInstanceMessagesRequest struct {
 	// 结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 分页大小。
+	// 分页大小。取值范围为0~50。
 	Limit *string `json:"limit,omitempty"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0。

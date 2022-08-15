@@ -43,7 +43,7 @@ func (c *KafkaClient) BatchCreateOrDeleteKafkaTagInvoker(request *model.BatchCre
 
 // BatchDeleteInstanceTopic Kafka实例批量删除Topic
 //
-// 该接口用于向Kafka实例批量删除Topic。
+// 该接口用于向Kafka实例批量删除Topic。批量删除多个消费组时，部分删除成功，部分失败，此时接口返回删除成功，并在返回中显示删除失败的消费组信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -65,7 +65,7 @@ func (c *KafkaClient) BatchDeleteInstanceTopicInvoker(request *model.BatchDelete
 
 // BatchDeleteInstanceUsers 批量删除用户
 //
-// 批量删除Kafka实例的用户
+// 批量删除Kafka实例的用户。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -201,9 +201,9 @@ func (c *KafkaClient) CreatePartitionInvoker(request *model.CreatePartitionReque
 	return &CreatePartitionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePostPaidInstance 创建实例（按需）
+// CreatePostPaidInstance 创建实例
 //
-// 创建实例，该接口创建的实例为按需计费的方式。
+// [创建按需计费类型的Kafka实例。](tag:hc,hk,hws,hws_hk,otc,hws_ocb,ctc,sbc,hk_sbc,cmcc)[创建kafka实例。](tag:ocb)
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -217,7 +217,7 @@ func (c *KafkaClient) CreatePostPaidInstance(request *model.CreatePostPaidInstan
 	}
 }
 
-// CreatePostPaidInstanceInvoker 创建实例（按需）
+// CreatePostPaidInstanceInvoker 创建实例
 func (c *KafkaClient) CreatePostPaidInstanceInvoker(request *model.CreatePostPaidInstanceRequest) *CreatePostPaidInstanceInvoker {
 	requestDef := GenReqDefForCreatePostPaidInstance()
 	return &CreatePostPaidInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -429,7 +429,7 @@ func (c *KafkaClient) ListInstancesInvoker(request *model.ListInstancesRequest) 
 //
 // 同时，unavailable_zones字段表示资源不足的可用区列表，如果为空，则表示所有可用区都有资源，如果不为空，则表示字段值的可用区没有资源。所以必须确保您购买的资源所在的可用区有资源，不在该字段列表内。
 //
-// 例如，响应消息中bandwidth字段为1200MB的记录，unavailable_zones字段包含cn-east-2b、cn-east-2a和cn-east-2d，表示在华东-上海2的可用区1、可用区2、可用区3都没有该资源。
+// [例如，响应消息中bandwidth字段为1200MB的记录，unavailable_zones字段包含cn-east-2b、cn-east-2a和cn-east-2d，表示在华东-上海2的可用区1、可用区2、可用区3都没有该资源。](tag:hc,hws)
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -497,7 +497,7 @@ func (c *KafkaClient) ResetManagerPasswordInvoker(request *model.ResetManagerPas
 //
 // Kafka实例不支持在线重置消费进度。在执行重置消费进度之前，必须停止被重置消费组客户端。
 //
-// &gt; 在停止被重置消费组客户端后，需要经过ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG配置的时间（默认10000毫秒），服务端才认为消费组客户端真正下线。
+// &gt; 停止待重置消费组客户端，然后等待一段时间（即ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG配置的时间，默认为1000毫秒）后，服务端才认为此消费组客户端已下线。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.

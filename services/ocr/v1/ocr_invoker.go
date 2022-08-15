@@ -245,6 +245,18 @@ func (i *RecognizeLicensePlateInvoker) Invoke() (*model.RecognizeLicensePlateRes
 	}
 }
 
+type RecognizeMacaoIdCardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeMacaoIdCardInvoker) Invoke() (*model.RecognizeMacaoIdCardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeMacaoIdCardResponse), nil
+	}
+}
+
 type RecognizeMainlandTravelPermitInvoker struct {
 	*invoker.BaseInvoker
 }

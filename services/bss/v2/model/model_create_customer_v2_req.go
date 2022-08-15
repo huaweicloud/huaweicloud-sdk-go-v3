@@ -29,10 +29,10 @@ type CreateCustomerV2Req struct {
 	// 是否关闭营销消息的发送： true：关闭false：不关闭（默认）
 	IsCloseMarketMs *string `json:"is_close_market_ms,omitempty"`
 
-	// 合作类型。 1：顾问销售。 仅支持1，如果不传递，默认会创建成代售模式的客户。
+	// 合作类型。 1：顾问销售。 不传递或传递非1的值，默认会创建成代售模式的客户。
 	CooperationType *string `json:"cooperation_type,omitempty"`
 
-	// 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
+	// 云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 
 	// 是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。

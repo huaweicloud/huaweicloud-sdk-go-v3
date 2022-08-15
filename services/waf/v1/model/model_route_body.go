@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// 修改路由body
+// 单个路由线路详细信息
 type RouteBody struct {
 
-	// cname后缀
+	// WAF集群的cname后缀
 	Cname *string `json:"cname,omitempty"`
 
-	// 名称
+	// WAF集群名称
 	Name *string `json:"name,omitempty"`
 
-	// 路由信息
+	// 防护域名源站服务器信息列表
 	Servers *[]RouteServerBody `json:"servers,omitempty"`
 }
 

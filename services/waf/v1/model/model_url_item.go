@@ -9,7 +9,7 @@ import (
 // 受攻击URL统计
 type UrlItem struct {
 
-	// 路径
+	// url路径
 	Key *string `json:"key,omitempty"`
 
 	// 数量

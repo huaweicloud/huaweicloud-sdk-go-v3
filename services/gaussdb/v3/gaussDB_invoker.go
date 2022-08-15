@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/gaussdb/v3/model"
 )
 
+type AddDatabasePermissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddDatabasePermissionInvoker) Invoke() (*model.AddDatabasePermissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddDatabasePermissionResponse), nil
+	}
+}
+
 type BatchTagActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -53,6 +65,30 @@ func (i *CreateGaussMySqlBackupInvoker) Invoke() (*model.CreateGaussMySqlBackupR
 	}
 }
 
+type CreateGaussMySqlDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGaussMySqlDatabaseInvoker) Invoke() (*model.CreateGaussMySqlDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGaussMySqlDatabaseResponse), nil
+	}
+}
+
+type CreateGaussMySqlDatabaseUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGaussMySqlDatabaseUserInvoker) Invoke() (*model.CreateGaussMySqlDatabaseUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGaussMySqlDatabaseUserResponse), nil
+	}
+}
+
 type CreateGaussMySqlInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,6 +122,42 @@ func (i *CreateGaussMySqlReadonlyNodeInvoker) Invoke() (*model.CreateGaussMySqlR
 		return nil, err
 	} else {
 		return result.(*model.CreateGaussMySqlReadonlyNodeResponse), nil
+	}
+}
+
+type DeleteDatabasePermissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDatabasePermissionInvoker) Invoke() (*model.DeleteDatabasePermissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDatabasePermissionResponse), nil
+	}
+}
+
+type DeleteGaussMySqlDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGaussMySqlDatabaseInvoker) Invoke() (*model.DeleteGaussMySqlDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGaussMySqlDatabaseResponse), nil
+	}
+}
+
+type DeleteGaussMySqlDatabaseUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGaussMySqlDatabaseUserInvoker) Invoke() (*model.DeleteGaussMySqlDatabaseUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGaussMySqlDatabaseUserResponse), nil
 	}
 }
 
@@ -161,6 +233,42 @@ func (i *ListGaussMySqlConfigurationsInvoker) Invoke() (*model.ListGaussMySqlCon
 	}
 }
 
+type ListGaussMySqlDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGaussMySqlDatabaseInvoker) Invoke() (*model.ListGaussMySqlDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGaussMySqlDatabaseResponse), nil
+	}
+}
+
+type ListGaussMySqlDatabaseCharsetsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGaussMySqlDatabaseCharsetsInvoker) Invoke() (*model.ListGaussMySqlDatabaseCharsetsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGaussMySqlDatabaseCharsetsResponse), nil
+	}
+}
+
+type ListGaussMySqlDatabaseUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGaussMySqlDatabaseUserInvoker) Invoke() (*model.ListGaussMySqlDatabaseUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGaussMySqlDatabaseUserResponse), nil
+	}
+}
+
 type ListGaussMySqlDedicatedResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -230,6 +338,18 @@ func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+type ResetGaussMySqlDatabasePasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetGaussMySqlDatabasePasswordInvoker) Invoke() (*model.ResetGaussMySqlDatabasePasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetGaussMySqlDatabasePasswordResponse), nil
 	}
 }
 

@@ -9,10 +9,10 @@ import (
 // Response Object
 type ListIgnoreRuleResponse struct {
 
-	// 该策略下误报屏蔽规则数量
+	// 该策略下全局白名单规则数量
 	Total *int32 `json:"total,omitempty"`
 
-	// 误报屏蔽规则对象列表
+	// 全局白名单规则信息数组
 	Items          *[]IgnoreRuleBody `json:"items,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

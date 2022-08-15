@@ -400,11 +400,6 @@ func GenReqDefForListInvoices() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("DomainId").
-		WithJsonTag("domain_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StartTime").
 		WithJsonTag("start_time").
 		WithLocationType(def.Query))
@@ -447,11 +442,6 @@ func GenReqDefForListMonthlyExpenditures() *def.HttpRequestDef {
 		WithPath("/v1.0/{domain_id}/customer/account-mgr/bill/monthly-sum").
 		WithResponse(new(model.ListMonthlyExpendituresResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("DomainId").
-		WithJsonTag("domain_id").
-		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Cycle").

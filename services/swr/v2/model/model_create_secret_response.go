@@ -10,8 +10,10 @@ import (
 type CreateSecretResponse struct {
 
 	// 认证信息
-	Auths          map[string]AuthInfo `json:"auths,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	Auths map[string]AuthInfo `json:"auths,omitempty"`
+
+	XSwrDockerlogin *string `json:"X-Swr-Dockerlogin,omitempty"`
+	HttpStatusCode  int     `json:"-"`
 }
 
 func (o CreateSecretResponse) String() string {

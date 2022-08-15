@@ -311,7 +311,7 @@ func (c *BssClient) CreatePostalInvoker(request *model.CreatePostalRequest) *Cre
 //
 // 在伙伴销售平台创建客户时同步创建华为云账号，并将客户在伙伴销售平台上的账号与华为云账号进行映射。同时，创建的华为云账号与伙伴账号关联绑定。
 //
-// 华为云伙伴能力中心（一级经销商）可以注册精英服务商伙伴（二级经销商）的子客户。注册完成后，子客户可以自动和精英服务商伙伴绑定。
+// 华为云总经销商（一级经销商）可以注册云经销商（二级经销商）的子客户。注册完成后，子客户可以自动和云经销商绑定。
 //
 // &gt;![](public_sys-resources/icon-caution.gif) **注意：**
 // &gt;-   调用该接口为客户创建华为云账号后，如果想从合作伙伴销售平台跳转至华为云官网，还需要进行SAML认证，具体请参见“[Web UI方式](https://support.huaweicloud.com/api-bpconsole/jac_00001.html)”中的“SAML认证”。
@@ -453,6 +453,28 @@ func (c *BssClient) ListConversionsInvoker(request *model.ListConversionsRequest
 	return &ListConversionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCosts 查询成本数据
+//
+// 客户在自建平台查询成本分析数据。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *BssClient) ListCosts(request *model.ListCostsRequest) (*model.ListCostsResponse, error) {
+	requestDef := GenReqDefForListCosts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCostsResponse), nil
+	}
+}
+
+// ListCostsInvoker 查询成本数据
+func (c *BssClient) ListCostsInvoker(request *model.ListCostsRequest) *ListCostsInvoker {
+	requestDef := GenReqDefForListCosts()
+	return &ListCostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCounties 查询区县信息
 //
 // 伙伴在伙伴销售平台上查询区县信息。
@@ -477,7 +499,7 @@ func (c *BssClient) ListCountiesInvoker(request *model.ListCountiesRequest) *Lis
 
 // ListCouponQuotasRecords 查询代金券额度的发放回收记录
 //
-// 华为云伙伴能力中心（一级经销商）可以查看给精英服务商（二级经销商）发放或回收代金券额度的操作记录。
+// 华为云总经销商（一级经销商）可以查看给云经销商（二级经销商）发放或回收代金券额度的操作记录。
 //
 // 一级经销商可以登录伙伴中心，进入“客户业务** **\\&gt; 代金券管理”，选择“代金券额度”页签，单击“操作记录”查看代金券额度的发放和回收记录。
 //
@@ -816,9 +838,9 @@ func (c *BssClient) ListIncentiveDiscountPoliciesInvoker(request *model.ListInce
 	return &ListIncentiveDiscountPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListIndirectPartners 查询精英服务商列表
+// ListIndirectPartners 查询云经销商列表
 //
-// 华为云伙伴能力中心（一级经销商）可以查询精英服务商（二级经销商）列表。
+// 华为云总经销商（一级经销商）可以查询云经销商（二级经销商）列表。
 //
 // 一级经销商在伙伴中心查询二级经销商列表的方式请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/dp_120210.html)。
 //
@@ -834,7 +856,7 @@ func (c *BssClient) ListIndirectPartners(request *model.ListIndirectPartnersRequ
 	}
 }
 
-// ListIndirectPartnersInvoker 查询精英服务商列表
+// ListIndirectPartnersInvoker 查询云经销商列表
 func (c *BssClient) ListIndirectPartnersInvoker(request *model.ListIndirectPartnersRequest) *ListIndirectPartnersInvoker {
 	requestDef := GenReqDefForListIndirectPartners()
 	return &ListIndirectPartnersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -842,7 +864,7 @@ func (c *BssClient) ListIndirectPartnersInvoker(request *model.ListIndirectPartn
 
 // ListIssuedCouponQuotas 查询已发放的代金券额度
 //
-// 华为云伙伴能力中心（一级经销商）可以查看发放给精英服务商（二级经销商）的代金券额度列表。
+// 华为云总经销商（一级经销商）可以查看发放给云经销商（二级经销商）的代金券额度列表。
 //
 // 一级经销商登录伙伴中心，进入“客户业务** **\\&gt; 代金券管理”，选择“已发放代金券额度”可查看代金券额度列表。
 //
@@ -1010,7 +1032,7 @@ func (c *BssClient) ListPartnerAccountChangeRecordsInvoker(request *model.ListPa
 
 // ListPartnerAdjustRecords 查询调账记录
 //
-// 伙伴在伙伴销售平台查询向客户及关联的精英服务商（二级经销商）拨款或回收的调账记录。
+// 伙伴在伙伴销售平台查询向客户及关联的云经销商（二级经销商）拨款或回收的调账记录。
 //
 // 伙伴登录伙伴中心，在“拨款”或“回收”页面，单击“调账记录”，可以查看一级经销商为二级经销商调账的记录。
 //
@@ -1032,9 +1054,9 @@ func (c *BssClient) ListPartnerAdjustRecordsInvoker(request *model.ListPartnerAd
 	return &ListPartnerAdjustRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPartnerBalances 查询伙伴账户余额
+// ListPartnerBalances 查询云经销商账户余额
 //
-// 合作伙伴可以查询伙伴的账户余额。
+// 华为云总经销商（一级经销商）可以查询关联的云经销商（二级经销商）的账户余额；云经销商伙伴可以查询自己的账户余额。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1048,7 +1070,7 @@ func (c *BssClient) ListPartnerBalances(request *model.ListPartnerBalancesReques
 	}
 }
 
-// ListPartnerBalancesInvoker 查询伙伴账户余额
+// ListPartnerBalancesInvoker 查询云经销商账户余额
 func (c *BssClient) ListPartnerBalancesInvoker(request *model.ListPartnerBalancesRequest) *ListPartnerBalancesInvoker {
 	requestDef := GenReqDefForListPartnerBalances()
 	return &ListPartnerBalancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1499,9 +1521,9 @@ func (c *BssClient) PayOrdersInvoker(request *model.PayOrdersRequest) *PayOrders
 	return &PayOrdersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ReclaimCouponQuotas 回收精英服务商的代金券额度
+// ReclaimCouponQuotas 回收云经销商的代金券额度
 //
-// 华为云伙伴能力中心（一级经销商）可以回收已发放给精英服务商（二级经销商）的代金券额度。
+// 华为云总经销商（一级经销商）可以回收已发放给云经销商（二级经销商）的代金券额度。
 //
 // 一级经销商在伙伴中心回收已发放给二级经销商的代金券额度请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/dp_120206.html)。
 //
@@ -1517,15 +1539,15 @@ func (c *BssClient) ReclaimCouponQuotas(request *model.ReclaimCouponQuotasReques
 	}
 }
 
-// ReclaimCouponQuotasInvoker 回收精英服务商的代金券额度
+// ReclaimCouponQuotasInvoker 回收云经销商的代金券额度
 func (c *BssClient) ReclaimCouponQuotasInvoker(request *model.ReclaimCouponQuotasRequest) *ReclaimCouponQuotasInvoker {
 	requestDef := GenReqDefForReclaimCouponQuotas()
 	return &ReclaimCouponQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ReclaimIndirectPartnerAccount 回收精英服务商账户拨款
+// ReclaimIndirectPartnerAccount 回收云经销商账户拨款
 //
-// 华为云伙伴能力中心（一级经销商）可以回收精英服务商（二级经销商）的账户余额。
+// 华为云总经销商（一级经销商）可以回收云经销商（二级经销商）的账户余额。
 //
 // 一级经销商在伙伴中心回收二级经销商账户拨款请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/dp_120205.html)。
 //
@@ -1541,7 +1563,7 @@ func (c *BssClient) ReclaimIndirectPartnerAccount(request *model.ReclaimIndirect
 	}
 }
 
-// ReclaimIndirectPartnerAccountInvoker 回收精英服务商账户拨款
+// ReclaimIndirectPartnerAccountInvoker 回收云经销商账户拨款
 func (c *BssClient) ReclaimIndirectPartnerAccountInvoker(request *model.ReclaimIndirectPartnerAccountRequest) *ReclaimIndirectPartnerAccountInvoker {
 	requestDef := GenReqDefForReclaimIndirectPartnerAccount()
 	return &ReclaimIndirectPartnerAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1843,9 +1865,9 @@ func (c *BssClient) ShowRefundOrderDetailsInvoker(request *model.ShowRefundOrder
 	return &ShowRefundOrderDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateCouponQuotas 向精英服务商发放代金券额度
+// UpdateCouponQuotas 向云经销商发放代金券额度
 //
-// 华为云伙伴能力中心（一级经销商）可以向精英服务商（二级经销商）发放代金券额度。
+// 华为云总经销商（一级经销商）可以向云经销商（二级经销商）发放代金券额度。
 //
 // 一级经销商在伙伴中心向二级经销商发放代金券额度请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/dp_120206.html)。
 //
@@ -1861,7 +1883,7 @@ func (c *BssClient) UpdateCouponQuotas(request *model.UpdateCouponQuotasRequest)
 	}
 }
 
-// UpdateCouponQuotasInvoker 向精英服务商发放代金券额度
+// UpdateCouponQuotasInvoker 向云经销商发放代金券额度
 func (c *BssClient) UpdateCouponQuotasInvoker(request *model.UpdateCouponQuotasRequest) *UpdateCouponQuotasInvoker {
 	requestDef := GenReqDefForUpdateCouponQuotas()
 	return &UpdateCouponQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1891,9 +1913,9 @@ func (c *BssClient) UpdateCustomerAccountAmountInvoker(request *model.UpdateCust
 	return &UpdateCustomerAccountAmountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateIndirectPartnerAccount 向精英服务商账户拨款
+// UpdateIndirectPartnerAccount 向云经销商账户拨款
 //
-// 华为云伙伴能力中心（一级经销商）可以向精英服务商（二级经销商）账户拨款。
+// 华为云总经销商（一级经销商）可以向云经销商（二级经销商）账户拨款。
 //
 // 一级经销商在伙伴中心向二级经销商拨款请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/dp_120205.html)。
 //
@@ -1909,7 +1931,7 @@ func (c *BssClient) UpdateIndirectPartnerAccount(request *model.UpdateIndirectPa
 	}
 }
 
-// UpdateIndirectPartnerAccountInvoker 向精英服务商账户拨款
+// UpdateIndirectPartnerAccountInvoker 向云经销商账户拨款
 func (c *BssClient) UpdateIndirectPartnerAccountInvoker(request *model.UpdateIndirectPartnerAccountRequest) *UpdateIndirectPartnerAccountInvoker {
 	requestDef := GenReqDefForUpdateIndirectPartnerAccount()
 	return &UpdateIndirectPartnerAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

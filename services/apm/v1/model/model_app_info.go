@@ -15,7 +15,7 @@ type AppInfo struct {
 	// 环境id
 	EnvId *int64 `json:"env_id,omitempty"`
 
-	// 应用名称
+	// 应用空名称
 	AppName *string `json:"app_name,omitempty"`
 
 	// 应用id

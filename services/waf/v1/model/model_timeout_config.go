@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// 超时配置
+// 超时配置，开启后不支持关闭
 type TimeoutConfig struct {
 
-	// 连接超时配置(秒)
+	// WAF连接源站超时配置
 	ConnectTimeout *int32 `json:"connect_timeout,omitempty"`
 
-	// 发送超时配置(秒)
+	// WAF发送请求到源站超时配置
 	SendTimeout *int32 `json:"send_timeout,omitempty"`
 
-	// 接收超时配置(秒)
+	// WAF接收源站响应超时配置
 	ReadTimeout *int32 `json:"read_timeout,omitempty"`
 }
 

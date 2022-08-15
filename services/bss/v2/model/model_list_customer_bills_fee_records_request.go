@@ -15,7 +15,7 @@ type ListCustomerBillsFeeRecordsRequest struct {
 	// 查询的流水账单所在账期，格式为YYYY-MM。
 	BillCycle string `json:"bill_cycle"`
 
-	// 服务商。1：华为云2：云市场为空时查询包含华为云和云市场在内的全部服务商。
+	// 服务商。1：华为云2：云商店为空时查询包含华为云和云商店在内的全部服务商。此参数不携带或携带值为空时，不作为筛选条件。
 	ProviderType *int32 `json:"provider_type,omitempty"`
 
 	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。

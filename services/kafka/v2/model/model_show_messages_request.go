@@ -12,7 +12,7 @@ type ShowMessagesRequest struct {
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
-	// Topic名称。
+	// Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
 	Topic string `json:"topic"`
 
 	// 查询起始时间，为unix时间戳格式，默认值为0。

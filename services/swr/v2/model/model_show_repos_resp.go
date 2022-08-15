@@ -50,7 +50,7 @@ type ShowReposResp struct {
 	// 租户名
 	DomainName string `json:"domain_name"`
 
-	// 租户的命名空间名称
+	// 租户的组织名称
 	Namespace string `json:"namespace"`
 
 	// 镜像版本列表

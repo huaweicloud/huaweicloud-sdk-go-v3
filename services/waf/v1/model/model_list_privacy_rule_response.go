@@ -12,7 +12,7 @@ type ListPrivacyRuleResponse struct {
 	// 规则条数
 	Total *int32 `json:"total,omitempty"`
 
-	// 规则
+	// 规则详情数组
 	Items          *[]PrivacyResponseBody `json:"items,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

@@ -8,7 +8,7 @@ import (
 
 type ShowRepoDomainsResponse struct {
 
-	// 命名空间
+	// 组织
 	Namespace string `json:"namespace"`
 
 	// 镜像仓库

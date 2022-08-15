@@ -41,6 +41,18 @@ func (i *CreatePostPaidInstanceInvoker) Invoke() (*model.CreatePostPaidInstanceR
 	}
 }
 
+type CreatePostPaidInstanceByEngineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePostPaidInstanceByEngineInvoker) Invoke() (*model.CreatePostPaidInstanceByEngineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePostPaidInstanceByEngineResponse), nil
+	}
+}
+
 type DeleteBackgroundTaskInvoker struct {
 	*invoker.BaseInvoker
 }

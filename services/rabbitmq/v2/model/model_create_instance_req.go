@@ -45,8 +45,11 @@ type CreateInstanceReq struct {
 	// 创建节点到指定且有资源的可用区ID。该参数不能为空数组或者数组的值为空。
 	AvailableZones []string `json:"available_zones"`
 
-	// 产品标识。
+	// 产品标识。  产品ID可以从**查询产品规格列表**接口查询。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
 	ProductId string `json:"product_id"`
+
+	// 代理个数。  当产品为单机类型，代理个数只能为1；当产品为集群类型，可选3、5、7个代理个数。  产品类型为single时:   - 1  产品类型为cluster时:   - 3   - 5   - 7
+	BrokerNum *CreateInstanceReqBrokerNum `json:"broker_num,omitempty"`
 
 	// 维护时间窗开始时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段。 - 开始时间必须为22:00、02:00、06:00、10:00、14:00和18:00。 - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00。
 	MaintainBegin *string `json:"maintain_begin,omitempty"`
@@ -63,7 +66,7 @@ type CreateInstanceReq struct {
 	// 是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
 	SslEnable *bool `json:"ssl_enable,omitempty"`
 
-	// 存储IO规格。  取值范围：   - dms.physical.storage.normal：   - dms.physical.storage.high   - dms.physical.storage.ultra
+	// 存储IO规格。  取值范围：   - dms.physical.storage.high.v2   - dms.physical.storage.ultra.v2   - dms.physical.storage.high.dss.v2   - dms.physical.storage.ultra.dss.v2
 	StorageSpecCode CreateInstanceReqStorageSpecCode `json:"storage_spec_code"`
 
 	// 企业项目ID。若为企业项目帐号，该参数必填。
@@ -158,26 +161,77 @@ func (c *CreateInstanceReqEngineVersion) UnmarshalJSON(b []byte) error {
 	}
 }
 
+type CreateInstanceReqBrokerNum struct {
+	value int32
+}
+
+type CreateInstanceReqBrokerNumEnum struct {
+	E_1 CreateInstanceReqBrokerNum
+	E_3 CreateInstanceReqBrokerNum
+	E_5 CreateInstanceReqBrokerNum
+	E_7 CreateInstanceReqBrokerNum
+}
+
+func GetCreateInstanceReqBrokerNumEnum() CreateInstanceReqBrokerNumEnum {
+	return CreateInstanceReqBrokerNumEnum{
+		E_1: CreateInstanceReqBrokerNum{
+			value: 1,
+		}, E_3: CreateInstanceReqBrokerNum{
+			value: 3,
+		}, E_5: CreateInstanceReqBrokerNum{
+			value: 5,
+		}, E_7: CreateInstanceReqBrokerNum{
+			value: 7,
+		},
+	}
+}
+
+func (c CreateInstanceReqBrokerNum) Value() int32 {
+	return c.value
+}
+
+func (c CreateInstanceReqBrokerNum) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateInstanceReqBrokerNum) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
 type CreateInstanceReqStorageSpecCode struct {
 	value string
 }
 
 type CreateInstanceReqStorageSpecCodeEnum struct {
-	DMS_PHYSICAL_STORAGE_NORMAL CreateInstanceReqStorageSpecCode
-	DMS_PHYSICAL_STORAGE_HIGH   CreateInstanceReqStorageSpecCode
-	DMS_PHYSICAL_STORAGE_ULTRA  CreateInstanceReqStorageSpecCode
+	DMS_PHYSICAL_STORAGE_HIGH_V2      CreateInstanceReqStorageSpecCode
+	DMS_PHYSICAL_STORAGE_ULTRA_V2     CreateInstanceReqStorageSpecCode
+	DMS_PHYSICAL_STORAGE_HIGH_DSS_V2  CreateInstanceReqStorageSpecCode
+	DMS_PHYSICAL_STORAGE_ULTRA_DSS_V2 CreateInstanceReqStorageSpecCode
 }
 
 func GetCreateInstanceReqStorageSpecCodeEnum() CreateInstanceReqStorageSpecCodeEnum {
 	return CreateInstanceReqStorageSpecCodeEnum{
-		DMS_PHYSICAL_STORAGE_NORMAL: CreateInstanceReqStorageSpecCode{
-			value: "dms.physical.storage.normal",
+		DMS_PHYSICAL_STORAGE_HIGH_V2: CreateInstanceReqStorageSpecCode{
+			value: "dms.physical.storage.high.v2",
 		},
-		DMS_PHYSICAL_STORAGE_HIGH: CreateInstanceReqStorageSpecCode{
-			value: "dms.physical.storage.high",
+		DMS_PHYSICAL_STORAGE_ULTRA_V2: CreateInstanceReqStorageSpecCode{
+			value: "dms.physical.storage.ultra.v2",
 		},
-		DMS_PHYSICAL_STORAGE_ULTRA: CreateInstanceReqStorageSpecCode{
-			value: "dms.physical.storage.ultra",
+		DMS_PHYSICAL_STORAGE_HIGH_DSS_V2: CreateInstanceReqStorageSpecCode{
+			value: "dms.physical.storage.high.dss.v2",
+		},
+		DMS_PHYSICAL_STORAGE_ULTRA_DSS_V2: CreateInstanceReqStorageSpecCode{
+			value: "dms.physical.storage.ultra.dss.v2",
 		},
 	}
 }

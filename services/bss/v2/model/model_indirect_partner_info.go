@@ -8,22 +8,22 @@ import (
 
 type IndirectPartnerInfo struct {
 
-	// 精英服务商ID。
+	// 云经销商ID。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 
-	// 精英服务商的手机号码。
+	// 云经销商的手机号码。
 	MobilePhone *string `json:"mobile_phone,omitempty"`
 
-	// 精英服务商的邮箱。
+	// 云经销商的邮箱。
 	Email *string `json:"email,omitempty"`
 
-	// 精英服务商的账户名。
+	// 云经销商的账户名。
 	AccountName *string `json:"account_name,omitempty"`
 
-	// 精英服务商的名称。
+	// 云经销商的名称。
 	Name *string `json:"name,omitempty"`
 
-	// 精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
+	// 云经销商关联华为云总经销商的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
 	AssociatedOn *string `json:"associated_on,omitempty"`
 
 	// 客户经理登录账户名。

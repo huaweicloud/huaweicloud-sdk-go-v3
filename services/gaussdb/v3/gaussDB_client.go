@@ -19,6 +19,28 @@ func GaussDBClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// AddDatabasePermission 授予数据库用户数据库权限
+//
+// 授予云数据库 GaussDB(for MySQL)实例数据库用户数据库权限
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) AddDatabasePermission(request *model.AddDatabasePermissionRequest) (*model.AddDatabasePermissionResponse, error) {
+	requestDef := GenReqDefForAddDatabasePermission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddDatabasePermissionResponse), nil
+	}
+}
+
+// AddDatabasePermissionInvoker 授予数据库用户数据库权限
+func (c *GaussDBClient) AddDatabasePermissionInvoker(request *model.AddDatabasePermissionRequest) *AddDatabasePermissionInvoker {
+	requestDef := GenReqDefForAddDatabasePermission()
+	return &AddDatabasePermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchTagAction 批量添加或删除标签
 //
 // 批量添加或删除指定实例的标签。
@@ -107,6 +129,50 @@ func (c *GaussDBClient) CreateGaussMySqlBackupInvoker(request *model.CreateGauss
 	return &CreateGaussMySqlBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateGaussMySqlDatabase 创建数据库
+//
+// 创建云数据库 GaussDB(for MySQL)实例数据库。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) CreateGaussMySqlDatabase(request *model.CreateGaussMySqlDatabaseRequest) (*model.CreateGaussMySqlDatabaseResponse, error) {
+	requestDef := GenReqDefForCreateGaussMySqlDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGaussMySqlDatabaseResponse), nil
+	}
+}
+
+// CreateGaussMySqlDatabaseInvoker 创建数据库
+func (c *GaussDBClient) CreateGaussMySqlDatabaseInvoker(request *model.CreateGaussMySqlDatabaseRequest) *CreateGaussMySqlDatabaseInvoker {
+	requestDef := GenReqDefForCreateGaussMySqlDatabase()
+	return &CreateGaussMySqlDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateGaussMySqlDatabaseUser 创建数据库用户
+//
+// 创建云数据库 GaussDB(for MySQL)实例数据库用户。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) CreateGaussMySqlDatabaseUser(request *model.CreateGaussMySqlDatabaseUserRequest) (*model.CreateGaussMySqlDatabaseUserResponse, error) {
+	requestDef := GenReqDefForCreateGaussMySqlDatabaseUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGaussMySqlDatabaseUserResponse), nil
+	}
+}
+
+// CreateGaussMySqlDatabaseUserInvoker 创建数据库用户
+func (c *GaussDBClient) CreateGaussMySqlDatabaseUserInvoker(request *model.CreateGaussMySqlDatabaseUserRequest) *CreateGaussMySqlDatabaseUserInvoker {
+	requestDef := GenReqDefForCreateGaussMySqlDatabaseUser()
+	return &CreateGaussMySqlDatabaseUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateGaussMySqlInstance 创建数据库实例
 //
 // 创建云数据库 GaussDB(for MySQL)实例。
@@ -171,6 +237,72 @@ func (c *GaussDBClient) CreateGaussMySqlReadonlyNode(request *model.CreateGaussM
 func (c *GaussDBClient) CreateGaussMySqlReadonlyNodeInvoker(request *model.CreateGaussMySqlReadonlyNodeRequest) *CreateGaussMySqlReadonlyNodeInvoker {
 	requestDef := GenReqDefForCreateGaussMySqlReadonlyNode()
 	return &CreateGaussMySqlReadonlyNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDatabasePermission 删除数据库用户的数据库权限
+//
+// 删除云数据库 GaussDB(for MySQL)实例数据库用户的数据库权限
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) DeleteDatabasePermission(request *model.DeleteDatabasePermissionRequest) (*model.DeleteDatabasePermissionResponse, error) {
+	requestDef := GenReqDefForDeleteDatabasePermission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDatabasePermissionResponse), nil
+	}
+}
+
+// DeleteDatabasePermissionInvoker 删除数据库用户的数据库权限
+func (c *GaussDBClient) DeleteDatabasePermissionInvoker(request *model.DeleteDatabasePermissionRequest) *DeleteDatabasePermissionInvoker {
+	requestDef := GenReqDefForDeleteDatabasePermission()
+	return &DeleteDatabasePermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGaussMySqlDatabase 删除数据库
+//
+// 删除云数据库 GaussDB(for MySQL)实例数据库。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) DeleteGaussMySqlDatabase(request *model.DeleteGaussMySqlDatabaseRequest) (*model.DeleteGaussMySqlDatabaseResponse, error) {
+	requestDef := GenReqDefForDeleteGaussMySqlDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGaussMySqlDatabaseResponse), nil
+	}
+}
+
+// DeleteGaussMySqlDatabaseInvoker 删除数据库
+func (c *GaussDBClient) DeleteGaussMySqlDatabaseInvoker(request *model.DeleteGaussMySqlDatabaseRequest) *DeleteGaussMySqlDatabaseInvoker {
+	requestDef := GenReqDefForDeleteGaussMySqlDatabase()
+	return &DeleteGaussMySqlDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGaussMySqlDatabaseUser 删除数据库用户
+//
+// 删除云数据库 GaussDB(for MySQL)实例数据库用户。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) DeleteGaussMySqlDatabaseUser(request *model.DeleteGaussMySqlDatabaseUserRequest) (*model.DeleteGaussMySqlDatabaseUserResponse, error) {
+	requestDef := GenReqDefForDeleteGaussMySqlDatabaseUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGaussMySqlDatabaseUserResponse), nil
+	}
+}
+
+// DeleteGaussMySqlDatabaseUserInvoker 删除数据库用户
+func (c *GaussDBClient) DeleteGaussMySqlDatabaseUserInvoker(request *model.DeleteGaussMySqlDatabaseUserRequest) *DeleteGaussMySqlDatabaseUserInvoker {
+	requestDef := GenReqDefForDeleteGaussMySqlDatabaseUser()
+	return &DeleteGaussMySqlDatabaseUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteGaussMySqlInstance 删除实例
@@ -306,6 +438,72 @@ func (c *GaussDBClient) ListGaussMySqlConfigurationsInvoker(request *model.ListG
 	return &ListGaussMySqlConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListGaussMySqlDatabase 查询数据库列表
+//
+// 查询 GaussDB(for MySQL)实例数据库。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) ListGaussMySqlDatabase(request *model.ListGaussMySqlDatabaseRequest) (*model.ListGaussMySqlDatabaseResponse, error) {
+	requestDef := GenReqDefForListGaussMySqlDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGaussMySqlDatabaseResponse), nil
+	}
+}
+
+// ListGaussMySqlDatabaseInvoker 查询数据库列表
+func (c *GaussDBClient) ListGaussMySqlDatabaseInvoker(request *model.ListGaussMySqlDatabaseRequest) *ListGaussMySqlDatabaseInvoker {
+	requestDef := GenReqDefForListGaussMySqlDatabase()
+	return &ListGaussMySqlDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGaussMySqlDatabaseCharsets 查询数据库可用字符集
+//
+// 查询云数据库 GaussDB(for MySQL)实例数据库可用字符集。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) ListGaussMySqlDatabaseCharsets(request *model.ListGaussMySqlDatabaseCharsetsRequest) (*model.ListGaussMySqlDatabaseCharsetsResponse, error) {
+	requestDef := GenReqDefForListGaussMySqlDatabaseCharsets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGaussMySqlDatabaseCharsetsResponse), nil
+	}
+}
+
+// ListGaussMySqlDatabaseCharsetsInvoker 查询数据库可用字符集
+func (c *GaussDBClient) ListGaussMySqlDatabaseCharsetsInvoker(request *model.ListGaussMySqlDatabaseCharsetsRequest) *ListGaussMySqlDatabaseCharsetsInvoker {
+	requestDef := GenReqDefForListGaussMySqlDatabaseCharsets()
+	return &ListGaussMySqlDatabaseCharsetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGaussMySqlDatabaseUser 查询数据库用户
+//
+// 查询云数据库 GaussDB(for MySQL)实例数据库用户。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) ListGaussMySqlDatabaseUser(request *model.ListGaussMySqlDatabaseUserRequest) (*model.ListGaussMySqlDatabaseUserResponse, error) {
+	requestDef := GenReqDefForListGaussMySqlDatabaseUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGaussMySqlDatabaseUserResponse), nil
+	}
+}
+
+// ListGaussMySqlDatabaseUserInvoker 查询数据库用户
+func (c *GaussDBClient) ListGaussMySqlDatabaseUserInvoker(request *model.ListGaussMySqlDatabaseUserRequest) *ListGaussMySqlDatabaseUserInvoker {
+	requestDef := GenReqDefForListGaussMySqlDatabaseUser()
+	return &ListGaussMySqlDatabaseUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListGaussMySqlDedicatedResources 查询专属资源池列表
 //
 // 获取专属资源池列表，包括用户开通的所有专属资源池信息。
@@ -436,6 +634,28 @@ func (c *GaussDBClient) ListProjectTags(request *model.ListProjectTagsRequest) (
 func (c *GaussDBClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest) *ListProjectTagsInvoker {
 	requestDef := GenReqDefForListProjectTags()
 	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetGaussMySqlDatabasePassword 修改数据库用户密码
+//
+// 修改云数据库 GaussDB(for MySQL)实例数据库用户密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) ResetGaussMySqlDatabasePassword(request *model.ResetGaussMySqlDatabasePasswordRequest) (*model.ResetGaussMySqlDatabasePasswordResponse, error) {
+	requestDef := GenReqDefForResetGaussMySqlDatabasePassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetGaussMySqlDatabasePasswordResponse), nil
+	}
+}
+
+// ResetGaussMySqlDatabasePasswordInvoker 修改数据库用户密码
+func (c *GaussDBClient) ResetGaussMySqlDatabasePasswordInvoker(request *model.ResetGaussMySqlDatabasePasswordRequest) *ResetGaussMySqlDatabasePasswordInvoker {
+	requestDef := GenReqDefForResetGaussMySqlDatabasePassword()
+	return &ResetGaussMySqlDatabasePasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ResetGaussMySqlPassword 重置数据库密码

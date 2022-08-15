@@ -21,11 +21,8 @@ type ListRetentionHistoriesRequest struct {
 	// 镜像仓库名称
 	Repository string `json:"repository"`
 
-	// 起始索引。**注意：offset和limit参数需要配套使用**
-	Offset *string `json:"offset,omitempty"`
-
-	// 返回条数。**注意：offset和limit参数需要配套使用**
-	Limit *string `json:"limit,omitempty"`
+	// 应填写 limit::{limit}|offset::{offset}, 其中{limit}为返回条数,{offset}为起始索引, 注意：offset和limit参数需要配套使用
+	Filter *string `json:"filter,omitempty"`
 }
 
 func (o ListRetentionHistoriesRequest) String() string {

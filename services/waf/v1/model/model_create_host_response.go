@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -24,8 +27,11 @@ type CreateHostResponse struct {
 	// 域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
 	ProtectStatus *int32 `json:"protect_status,omitempty"`
 
-	// 接入状态
+	// 域名接入状态，0表示未接入，1表示已接入
 	AccessStatus *int32 `json:"access_status,omitempty"`
+
+	// LB负载均衡，仅专业版（原企业版）和铂金版（原旗舰版）支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+	LbAlgorithm *CreateHostResponseLbAlgorithm `json:"lb_algorithm,omitempty"`
 
 	// 返回的客户端协议类型
 	Protocol *string `json:"protocol,omitempty"`
@@ -36,23 +42,31 @@ type CreateHostResponse struct {
 	// 证书名称
 	Certificatename *string `json:"certificatename,omitempty"`
 
-	// 源站信息
+	// 防护域名的源站服务器配置信息
 	Server *[]CloudWafServer `json:"server,omitempty"`
 
-	Flag *Flag `json:"flag,omitempty"`
-
-	// 是否开启了代理
+	// 防护域名是否使用代理   - false：不使用代理   - true：使用代理
 	Proxy *bool `json:"proxy,omitempty"`
 
 	// 创建防护域名的时间
 	Timestamp *int64 `json:"timestamp,omitempty"`
 
-	// 是否使用独享ip
+	// 是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
-	// 是否支持http2
-	Http2Enable    *bool `json:"http2_enable,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	// 网站名称，对应WAF控制台域名详情中的网站名称
+	WebTag *string `json:"web_tag,omitempty"`
+
+	// 是否支持http2   - true：表示支持http2   - false：表示不支持http2
+	Http2Enable *bool `json:"http2_enable,omitempty"`
+
+	BlockPage *BlockPage `json:"block_page,omitempty"`
+
+	Flag *Flag `json:"flag,omitempty"`
+
+	// 扩展字段，用于保存防护域名的一些配置信息。
+	Extend         map[string]string `json:"extend,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o CreateHostResponse) String() string {
@@ -62,4 +76,50 @@ func (o CreateHostResponse) String() string {
 	}
 
 	return strings.Join([]string{"CreateHostResponse", string(data)}, " ")
+}
+
+type CreateHostResponseLbAlgorithm struct {
+	value string
+}
+
+type CreateHostResponseLbAlgorithmEnum struct {
+	IP_HASH      CreateHostResponseLbAlgorithm
+	ROUND_ROBIN  CreateHostResponseLbAlgorithm
+	SESSION_HASH CreateHostResponseLbAlgorithm
+}
+
+func GetCreateHostResponseLbAlgorithmEnum() CreateHostResponseLbAlgorithmEnum {
+	return CreateHostResponseLbAlgorithmEnum{
+		IP_HASH: CreateHostResponseLbAlgorithm{
+			value: "ip_hash",
+		},
+		ROUND_ROBIN: CreateHostResponseLbAlgorithm{
+			value: "round_robin",
+		},
+		SESSION_HASH: CreateHostResponseLbAlgorithm{
+			value: "session_hash",
+		},
+	}
+}
+
+func (c CreateHostResponseLbAlgorithm) Value() string {
+	return c.value
+}
+
+func (c CreateHostResponseLbAlgorithm) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateHostResponseLbAlgorithm) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

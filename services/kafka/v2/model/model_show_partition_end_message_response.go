@@ -16,7 +16,7 @@ type ShowPartitionEndMessageResponse struct {
 	Partition *int32 `json:"partition,omitempty"`
 
 	// 最新消息位置。
-	MessageOffset *int32 `json:"message_offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 生产消息的时间。 格式为Unix时间戳。单位为毫秒。
 	Timestamp      *int64 `json:"timestamp,omitempty"`

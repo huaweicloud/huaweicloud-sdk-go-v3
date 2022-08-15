@@ -21,13 +21,10 @@ type UpdateValueListResponse struct {
 	// 引用表描述
 	Description *string `json:"description,omitempty"`
 
-	// 引用表时间戳
-	Timestamp *int64 `json:"timestamp,omitempty"`
-
 	// 引用表的值
 	Values *[]string `json:"values,omitempty"`
 
-	// 引用表来源：  - 1:表示来源于用户手动创建  - 2:表示来源于moduleX自动创建
+	// 引用表来源：  - 1:表示来源于用户手动创建  - 2:表示来源于智能访问控制自动创建
 	Producer       *int32 `json:"producer,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

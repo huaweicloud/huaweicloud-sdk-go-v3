@@ -32,6 +32,9 @@ type ListEnginePropertiesEntity struct {
 
 	// 每个Broker的最大TPS。
 	MaxTpsPerBroker *string `json:"max_tps_per_broker,omitempty"`
+
+	// product_id的别名。
+	ProductAlias *string `json:"product_alias,omitempty"`
 }
 
 func (o ListEnginePropertiesEntity) String() string {

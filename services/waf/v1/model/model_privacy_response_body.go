@@ -24,14 +24,17 @@ type PrivacyResponseBody struct {
 	// 规则状态，0：关闭，1：开启
 	Status *int32 `json:"status,omitempty"`
 
-	// 隐私屏蔽规则应用的url
+	// 隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
 	Url *string `json:"url,omitempty"`
 
-	// 屏蔽字段
+	// 屏蔽字段   - Params：请求参数   - Cookie：根据Cookie区分的Web访问者   - Header：自定义HTTP首部   - Form：表单参数
 	Category *PrivacyResponseBodyCategory `json:"category,omitempty"`
 
-	// 屏蔽字段名
+	// 屏蔽字段名，根据“屏蔽字段”设置字段名，被屏蔽的字段将不会出现在日志中。
 	Index *string `json:"index,omitempty"`
+
+	// 规则描述，可选参数，设置该规则的备注信息。
+	Description *string `json:"description,omitempty"`
 }
 
 func (o PrivacyResponseBody) String() string {

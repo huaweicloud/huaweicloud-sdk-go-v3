@@ -307,6 +307,21 @@ func GenReqDefForRecognizeLicensePlate() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRecognizeMacaoIdCard() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/ocr/macao-id-card").
+		WithResponse(new(model.RecognizeMacaoIdCardResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRecognizeMainlandTravelPermit() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

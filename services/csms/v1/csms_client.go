@@ -199,6 +199,28 @@ func (c *CsmsClient) DeleteSecretTagInvoker(request *model.DeleteSecretTagReques
 	return &DeleteSecretTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DownloadSecretBlob 下载凭据备份
+//
+// 下载指定凭据的备份文件
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CsmsClient) DownloadSecretBlob(request *model.DownloadSecretBlobRequest) (*model.DownloadSecretBlobResponse, error) {
+	requestDef := GenReqDefForDownloadSecretBlob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadSecretBlobResponse), nil
+	}
+}
+
+// DownloadSecretBlobInvoker 下载凭据备份
+func (c *CsmsClient) DownloadSecretBlobInvoker(request *model.DownloadSecretBlobRequest) *DownloadSecretBlobInvoker {
+	requestDef := GenReqDefForDownloadSecretBlob()
+	return &DownloadSecretBlobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProjectSecretsTags 查询项目标签
 //
 // - 功能介绍：查询用户在指定项目下的所有凭据标签集合。
@@ -378,7 +400,7 @@ func (c *CsmsClient) ShowSecretStageInvoker(request *model.ShowSecretStageReques
 // ShowSecretVersion 查询凭据的版本与凭据值
 //
 // 查询指定凭据版本的信息和版本中的明文凭据值，只能查询ENABLED状态的凭据。
-// 通过/v1/{project_id}/secrets/{secret_id}/versions/latest可访问凭据最新版本的凭据值。
+// 通过/v1/{project_id}/secrets/{secret_name}/versions/latest （即将当前接口URL中的{version_id}赋值为latest）可访问凭据最新版本的凭据值。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -440,4 +462,26 @@ func (c *CsmsClient) UpdateSecretStage(request *model.UpdateSecretStageRequest) 
 func (c *CsmsClient) UpdateSecretStageInvoker(request *model.UpdateSecretStageRequest) *UpdateSecretStageInvoker {
 	requestDef := GenReqDefForUpdateSecretStage()
 	return &UpdateSecretStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadSecretBlob 恢复凭据对象
+//
+// 通过上传凭据备份文件，恢复凭据对象
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CsmsClient) UploadSecretBlob(request *model.UploadSecretBlobRequest) (*model.UploadSecretBlobResponse, error) {
+	requestDef := GenReqDefForUploadSecretBlob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadSecretBlobResponse), nil
+	}
+}
+
+// UploadSecretBlobInvoker 恢复凭据对象
+func (c *CsmsClient) UploadSecretBlobInvoker(request *model.UploadSecretBlobRequest) *UploadSecretBlobInvoker {
+	requestDef := GenReqDefForUploadSecretBlob()
+	return &UploadSecretBlobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

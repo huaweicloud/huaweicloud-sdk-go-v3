@@ -101,6 +101,18 @@ func (i *DeleteSecretTagInvoker) Invoke() (*model.DeleteSecretTagResponse, error
 	}
 }
 
+type DownloadSecretBlobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadSecretBlobInvoker) Invoke() (*model.DownloadSecretBlobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadSecretBlobResponse), nil
+	}
+}
+
 type ListProjectSecretsTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -230,5 +242,17 @@ func (i *UpdateSecretStageInvoker) Invoke() (*model.UpdateSecretStageResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateSecretStageResponse), nil
+	}
+}
+
+type UploadSecretBlobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadSecretBlobInvoker) Invoke() (*model.UploadSecretBlobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadSecretBlobResponse), nil
 	}
 }

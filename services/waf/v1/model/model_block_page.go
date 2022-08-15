@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警页面
+// 告警页面配置参数，用于配置“自定义”或者“重定向”页面
 type BlockPage struct {
 
 	// 模板名称
@@ -14,7 +14,7 @@ type BlockPage struct {
 
 	CustomPage *CustomPage `json:"custom_page,omitempty"`
 
-	// 重定向URL
+	// “重定向”页面URL
 	RedirectUrl *string `json:"redirect_url,omitempty"`
 }
 

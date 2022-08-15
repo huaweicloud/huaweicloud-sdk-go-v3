@@ -24,9 +24,6 @@ type ImageDetectionReq struct {
 	// 检测场景:  - politics：是否涉及政治人物的检测。  - terrorism：是否包含涉政暴恐元素的检测。  - porn：是否包含涉黄内容元素的检测。  - ad：是否包含广告的检测（公测特性）。  - all：包含politics、terrorism和porn三种场景的检测。  可通过配置上述场景，来完对应场景元素的检测。  为空或无此参数表示politics和terrorism都检测，但不包含porn场景。  > 每个检测场景的检测次数会分类统计。
 	Categories *[]ImageDetectionReqCategories `json:"categories,omitempty"`
 
-	// 检测场景: ad场景自定义词库，配置方式同文本审核自定义词库配置方式
-	AdGlossaries *[]string `json:"ad_glossaries,omitempty"`
-
 	// 图文审核检测场景。当categories包含ad时，该参数生效。 当前支持的场景有系统场景和用户自定义场景： - 系统场景为：   - qr_code：二维码   - politics：涉政   - porn：涉黄   - ad：广告   - abuse：辱骂   - contraband：违禁品 - 用户自定义场景为：自定义黑名单词库。   > 自定义词库的创建和使用请参见[配置自定义词库](https://support.huaweicloud.com/api-moderation/moderation_03_0020.html)。
 	AdCategories *[]string `json:"ad_categories,omitempty"`
 

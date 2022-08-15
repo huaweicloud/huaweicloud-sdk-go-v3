@@ -20,9 +20,6 @@ type ListMonthlyExpendituresRequest struct {
 
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterpriseProjectId,omitempty"`
-
-	// 用户的标识，由IAM统一分配
-	DomainId string `json:"domain_id"`
 }
 
 func (o ListMonthlyExpendituresRequest) String() string {

@@ -12,48 +12,42 @@ import (
 // 修改独享模式域名的请求
 type UpdatePremiumHostRequestBody struct {
 
-	// 是否使用代理
+	// 防护域名是否使用代理   - false：不使用代理   - true：使用代理
 	Proxy *bool `json:"proxy,omitempty"`
 
-	// https证书id，通过查询证书列表接口（ListCertificates）接口获取证书id
+	// 证书id，通过查询证书列表接口（ListCertificates）接口获取证书id   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
 	Certificateid *string `json:"certificateid,omitempty"`
 
-	// https证书名称，通过查询证书列表接口（ListCertificates）接口获取证书id
+	// 证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
 	Certificatename *string `json:"certificatename,omitempty"`
 
-	// 支持最低的TLS版本
+	// 配置的最低TLS版本（TLS v1.0/TLS v1.1/TLS v1.2）,默认为TLS v1.0版本，对于低于最低TLS版本的请求，将无法正常访问网站
 	Tls *UpdatePremiumHostRequestBodyTls `json:"tls,omitempty"`
 
-	// 加密套件（cipher_1，cipher_2，cipher_3，cipher_4，cipher_default）：  cipher_1： 加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!DES:!MD5:!PSK:!RC4:!kRSA:!SRP:!3DES:!DSS:!EXP:!CAMELLIA:@STRENGTH   cipher_2：加密算法为EECDH+AESGCM:EDH+AESGCM    cipher_3：加密算法为ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH    cipher_4：加密算法为ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!EDH    cipher_default： 加密算法为ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!AESGCM
+	// 加密套件（cipher_1，cipher_2，cipher_3，cipher_4，cipher_default）：  - cipher_1： 加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!DES:!MD5:!PSK:!RC4:!kRSA:!SRP:!3DES:!DSS:!EXP:!CAMELLIA:@STRENGTH   - cipher_2：加密算法为EECDH+AESGCM:EDH+AESGCM   - cipher_3：加密算法为ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH   - cipher_4：加密算法为ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!EDH   - cipher_default： 加密算法为ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!AESGCM
 	Cipher *UpdatePremiumHostRequestBodyCipher `json:"cipher,omitempty"`
 
 	// 独享模式特殊域名模式（仅特殊模式需要，如elb）
 	Mode *string `json:"mode,omitempty"`
 
-	// 是否锁定
+	// 预留参数，用于后期设计冻结域名，解锁域名功能，目前暂不支持
 	Locked *int32 `json:"locked,omitempty"`
 
-	// 防护状态
+	// 域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
 	ProtectStatus *int32 `json:"protect_status,omitempty"`
 
-	// 接入状态
+	// 域名接入状态，0表示未接入，1表示已接入
 	AccessStatus *int32 `json:"access_status,omitempty"`
 
 	// 时间戳
 	Timestamp *int32 `json:"timestamp,omitempty"`
 
-	// 域名关联的组ID（仅特殊模式需要，如elb）
+	// 特殊模式域名所属独享引擎组（仅特殊模式需要，如elb）
 	PoolIds *[]string `json:"pool_ids,omitempty"`
 
 	BlockPage *BlockPage `json:"block_page,omitempty"`
 
 	TrafficMark *TrafficMark `json:"traffic_mark,omitempty"`
-
-	// 域名特殊标识
-	Flag map[string]string `json:"flag,omitempty"`
-
-	// 可扩展字段
-	Extend map[string]string `json:"extend,omitempty"`
 
 	CircuitBreaker *CircuitBreaker `json:"circuit_breaker,omitempty"`
 

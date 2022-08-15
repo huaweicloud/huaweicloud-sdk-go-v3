@@ -21,6 +21,9 @@ type ShowInstanceResponse struct {
 	// 版本。
 	EngineVersion *string `json:"engine_version,omitempty"`
 
+	// 实例描述。
+	Description *string `json:"description,omitempty"`
+
 	// 实例规格。
 	Specification *string `json:"specification,omitempty"`
 
@@ -39,7 +42,7 @@ type ShowInstanceResponse struct {
 	// 实例连接端口。
 	Port *int32 `json:"port,omitempty"`
 
-	// 实例的状态。
+	// 实例的状态。 [详细状态说明见[实例状态说明](https://support.huaweicloud.com/api-kafka/kafka-api-180514012.html)。](tag:hws)[详细状态说明见[实例状态说明](https://support.huaweicloud.com/intl/zh-cn/api-kafka/kafka-api-180514012.html)。](tag:hws_hk)
 	Status *string `json:"status,omitempty"`
 
 	// 实例ID。
@@ -66,6 +69,9 @@ type ShowInstanceResponse struct {
 	// 用户名。
 	UserName *string `json:"user_name,omitempty"`
 
+	// 实例访问用户名。
+	AccessUser *string `json:"access_user,omitempty"`
+
 	// 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
 	OrderId *string `json:"order_id,omitempty"`
 
@@ -78,11 +84,17 @@ type ShowInstanceResponse struct {
 	// 实例是否开启公网访问功能。 - true：开启 - false：未开启
 	EnablePublicip *bool `json:"enable_publicip,omitempty"`
 
-	// Kafka实例的KafkaManager连接地址。
+	// Kafka实例的Kafka Manager连接地址。
 	ManagementConnectAddress *string `json:"management_connect_address,omitempty"`
 
 	// 是否开启安全认证。 - true：开启 - false：未开启
 	SslEnable *bool `json:"ssl_enable,omitempty"`
+
+	// 是否开启双向认证。
+	SslTwoWayEnable *bool `json:"ssl_two_way_enable,omitempty"`
+
+	// 是否能够证书替换。
+	CertReplaced *bool `json:"cert_replaced,omitempty"`
 
 	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
@@ -138,7 +150,7 @@ type ShowInstanceResponse struct {
 	// Kafka公网开启状态。
 	KafkaPublicStatus *string `json:"kafka_public_status,omitempty"`
 
-	// 公网带宽。
+	// kafka公网访问带宽。
 	PublicBandwidth *int32 `json:"public_bandwidth,omitempty"`
 
 	// 登录Kafka Manager的用户名。
@@ -156,7 +168,7 @@ type ShowInstanceResponse struct {
 	// IPv6的连接地址。
 	Ipv6ConnectAddresses *[]string `json:"ipv6_connect_addresses,omitempty"`
 
-	// 是否开启转储。
+	// 是否开启转储。新规格产品暂不支持开启转储。
 	ConnectorEnable *bool `json:"connector_enable,omitempty"`
 
 	// 转储任务ID。
@@ -167,6 +179,9 @@ type ShowInstanceResponse struct {
 
 	// Kafka rest连接地址。
 	RestConnectAddress *string `json:"rest_connect_address,omitempty"`
+
+	// kafka公网访问带宽。待删除版本。
+	PublicBoundwidth *int32 `json:"public_boundwidth,omitempty"`
 
 	// 是否开启消息查询功能。
 	MessageQueryInstEnable *bool `json:"message_query_inst_enable,omitempty"`
@@ -180,6 +195,9 @@ type ShowInstanceResponse struct {
 	// 是否开启消息轨迹功能。
 	TraceEnable *bool `json:"trace_enable,omitempty"`
 
+	// 是否开启代理。
+	AgentEnable *bool `json:"agent_enable,omitempty"`
+
 	// 租户侧连接地址。
 	PodConnectAddress *string `json:"pod_connect_address,omitempty"`
 
@@ -191,6 +209,18 @@ type ShowInstanceResponse struct {
 
 	// 云监控版本。
 	CesVersion *string `json:"ces_version,omitempty"`
+
+	// 区分实例什么时候开启的公网访问：true,actived,closed,false。
+	PublicAccessEnabled *string `json:"public_access_enabled,omitempty"`
+
+	// 节点数。
+	NodeNum *int32 `json:"node_num,omitempty"`
+
+	// 是否启用新规格计费。
+	NewSpecBillingEnable *bool `json:"new_spec_billing_enable,omitempty"`
+
+	// 节点数量。
+	BrokerNum *int32 `json:"broker_num,omitempty"`
 
 	// 标签列表。
 	Tags *[]TagEntity `json:"tags,omitempty"`

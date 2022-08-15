@@ -21,20 +21,23 @@ type ListRepositoryTagsRequest struct {
 	// 镜像仓库名称
 	Repository string `json:"repository"`
 
-	// 起始索引。**注意：offset和limit参数需要配套使用**
-	Offset *string `json:"offset,omitempty"`
-
-	// 返回条数。**注意：offset和limit参数需要配套使用*
+	// 返回条数。注意：offset和limit参数需要配套使用。
 	Limit *string `json:"limit,omitempty"`
 
-	// 按列排序，可设置为updated_at（按更新时间排序）
+	// 起始索引。注意：offset和limit参数需要配套使用。
+	Offset *string `json:"offset,omitempty"`
+
+	// 按列排序，可设置为updated_at（按更新时间排序）。注意：order_column和order_type参数需要配套使用。
 	OrderColumn *string `json:"order_column,omitempty"`
 
-	// 排序类型，可设置为desc（降序）、asc（升序）
-	OrderType *ListRepositoryTagsRequestOrderType `json:"order_type,omitempty"`
+	// 排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
+	OrderType *string `json:"order_type,omitempty"`
 
-	// 镜像版本名
+	// 镜像版本名。
 	Tag *string `json:"tag,omitempty"`
+
+	// 应填写 offset::{offset}|limit::{limit}|order_column::{order_column}|order_type::{order_type}|tag::{tag} ,其中{limit}为返回条数,{offset}为起始索引,注意：offset和limit参数需要配套使用。 {order_column}为按列排序，可设置为updated_at（按更新时间排序）,{order_type}为排序类型，可设置为desc（降序）、asc（升序），{tag}为镜像版本名。
+	Filter *string `json:"filter,omitempty"`
 }
 
 func (o ListRepositoryTagsRequest) String() string {
@@ -75,48 +78,6 @@ func (c ListRepositoryTagsRequestContentType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListRepositoryTagsRequestContentType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type ListRepositoryTagsRequestOrderType struct {
-	value string
-}
-
-type ListRepositoryTagsRequestOrderTypeEnum struct {
-	DESC ListRepositoryTagsRequestOrderType
-	ASC  ListRepositoryTagsRequestOrderType
-}
-
-func GetListRepositoryTagsRequestOrderTypeEnum() ListRepositoryTagsRequestOrderTypeEnum {
-	return ListRepositoryTagsRequestOrderTypeEnum{
-		DESC: ListRepositoryTagsRequestOrderType{
-			value: "desc",
-		},
-		ASC: ListRepositoryTagsRequestOrderType{
-			value: "asc",
-		},
-	}
-}
-
-func (c ListRepositoryTagsRequestOrderType) Value() string {
-	return c.value
-}
-
-func (c ListRepositoryTagsRequestOrderType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ListRepositoryTagsRequestOrderType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

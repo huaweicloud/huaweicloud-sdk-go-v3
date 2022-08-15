@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 选项
+// 防护策略检测模块开关选项，如是否开启Web基础防护等
 type PolicyOption struct {
 
 	// 基础防护是否开启
@@ -15,7 +15,7 @@ type PolicyOption struct {
 	// 常规检测是否开启
 	Common *bool `json:"common,omitempty"`
 
-	// 反爬虫是否开启
+	// 预留参数，改参数值一直为true，用户可忽略该参数值
 	Crawler *bool `json:"crawler,omitempty"`
 
 	// 搜索engine是否开启
@@ -57,7 +57,7 @@ type PolicyOption struct {
 	// 防敏感信息泄露规则是否开启
 	Antileakage *bool `json:"antileakage,omitempty"`
 
-	// 防网络机器人攻击是否开启
+	// 网站反爬虫总开关是否开启
 	BotEnable *bool `json:"bot_enable,omitempty"`
 
 	// modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。

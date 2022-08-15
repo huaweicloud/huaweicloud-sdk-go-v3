@@ -24,7 +24,7 @@ type DeleteHostResponse struct {
 	// WAF部署模式，默认是1，目前仅支持反代模式
 	Type *int32 `json:"type,omitempty"`
 
-	// 是否开启了代理
+	// 防护域名是否使用代理    - false：不使用代理   - true：使用代理
 	Proxy *bool `json:"proxy,omitempty"`
 
 	Flag *Flag `json:"flag,omitempty"`
@@ -47,12 +47,15 @@ type DeleteHostResponse struct {
 	// 接入状态，0： 未接入，1：已接入
 	AccessStatus *int32 `json:"access_status,omitempty"`
 
-	// 是否使用独享ip
+	// 是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
 	// 套餐付费模式，目前只支持prePaid预付款模式
-	PaidType       *DeleteHostResponsePaidType `json:"paid_type,omitempty"`
-	HttpStatusCode int                         `json:"-"`
+	PaidType *DeleteHostResponsePaidType `json:"paid_type,omitempty"`
+
+	// 网站名称，对应WAF控制台域名详情中的网站名称
+	WebTag         *string `json:"web_tag,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteHostResponse) String() string {

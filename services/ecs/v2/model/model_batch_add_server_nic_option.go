@@ -9,7 +9,7 @@ import (
 //
 type BatchAddServerNicOption struct {
 
-	// 云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。 指定subnet_id时不能再指定port_id参数。
+	// 云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
 	SubnetId string `json:"subnet_id"`
 
 	// 添加网卡的安全组信息

@@ -10,8 +10,10 @@ import (
 type ListRepositoryTagsResponse struct {
 
 	// 镜像tag列表
-	Body           *[]ShowReposTagResp `json:"body,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	Body *[]ShowReposTagResp `json:"body,omitempty"`
+
+	ContentRange   *string `json:"Content-Range,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListRepositoryTagsResponse) String() string {

@@ -9,9 +9,9 @@ import (
 // Response Object
 type ListBandwidthTimelineResponse struct {
 
-	// 安全统计的时间线
-	Body           *[]StatisticsTimelineItem `json:"body,omitempty"`
-	HttpStatusCode int                       `json:"-"`
+	// 安全统计的带宽时间线数据
+	Body           *[]BandwidthStatisticsTimelineItem `json:"body,omitempty"`
+	HttpStatusCode int                                `json:"-"`
 }
 
 func (o ListBandwidthTimelineResponse) String() string {

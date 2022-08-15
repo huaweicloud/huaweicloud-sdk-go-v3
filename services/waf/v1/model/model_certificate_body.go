@@ -14,12 +14,6 @@ type CertificateBody struct {
 	// 证书名
 	Name string `json:"name"`
 
-	// 证书文件，PEM编码
-	Content *string `json:"content,omitempty"`
-
-	// 证书私钥，PEM编码
-	Key *string `json:"key,omitempty"`
-
 	// 证书过期时间戳
 	ExpireTime *int64 `json:"expire_time,omitempty"`
 

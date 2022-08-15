@@ -19,12 +19,12 @@ type ListQpsTimelineRequest struct {
 	To int64 `json:"to"`
 
 	// 域名id数组，通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id
-	Hosts *string `json:"hosts,omitempty"`
+	Hosts *[]string `json:"hosts,omitempty"`
 
-	// 独享实例实例id（仅实例化模式涉及）
-	Instances *string `json:"instances,omitempty"`
+	// 要查询引擎实例列表（仅独享或者ELB实例化模式涉及）
+	Instances *[]string `json:"instances,omitempty"`
 
-	// 展示维度，需要按天展示时传\"DAY\"
+	// 展示维度，按天展示时传\"DAY\"；默认不传，按照分钟展示
 	GroupBy *string `json:"group_by,omitempty"`
 }
 

@@ -19,7 +19,7 @@ type ShowInstanceExtendProductInfoRequest struct {
 	Type ShowInstanceExtendProductInfoRequestType `json:"type"`
 
 	// 消息引擎的类型。当前支持的类型为kafka。
-	Engine *string `json:"engine,omitempty"`
+	Engine ShowInstanceExtendProductInfoRequestEngine `json:"engine"`
 }
 
 func (o ShowInstanceExtendProductInfoRequest) String() string {
@@ -68,6 +68,44 @@ func (c ShowInstanceExtendProductInfoRequestType) MarshalJSON() ([]byte, error) 
 }
 
 func (c *ShowInstanceExtendProductInfoRequestType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowInstanceExtendProductInfoRequestEngine struct {
+	value string
+}
+
+type ShowInstanceExtendProductInfoRequestEngineEnum struct {
+	KAFKA ShowInstanceExtendProductInfoRequestEngine
+}
+
+func GetShowInstanceExtendProductInfoRequestEngineEnum() ShowInstanceExtendProductInfoRequestEngineEnum {
+	return ShowInstanceExtendProductInfoRequestEngineEnum{
+		KAFKA: ShowInstanceExtendProductInfoRequestEngine{
+			value: "kafka",
+		},
+	}
+}
+
+func (c ShowInstanceExtendProductInfoRequestEngine) Value() string {
+	return c.value
+}
+
+func (c ShowInstanceExtendProductInfoRequestEngine) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowInstanceExtendProductInfoRequestEngine) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

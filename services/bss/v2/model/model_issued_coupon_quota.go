@@ -44,16 +44,16 @@ type IssuedCouponQuota struct {
 	// 代金券额度上的限制属性，具体参见表3。
 	LimitInfos *[]QuotaLimitInfo `json:"limit_infos,omitempty"`
 
-	// 精英服务商ID。
+	// 云经销商ID。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 
-	// 精英服务商账号名。
+	// 云经销商账号名。
 	IndirectPartnerAccountName *string `json:"indirect_partner_account_name,omitempty"`
 
-	// 精英服务商名称。
+	// 云经销商名称。
 	IndirectPartnerName *string `json:"indirect_partner_name,omitempty"`
 
-	// 父额度ID，即华为云伙伴能力中心用于发放给精英服务商代金券额度的额度ID。
+	// 父额度ID，即华为云总经销商用于发放给云经销商代金券额度的额度ID。
 	ParentQuotaId *string `json:"parent_quota_id,omitempty"`
 }
 

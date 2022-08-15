@@ -9,10 +9,10 @@ import (
 	"strings"
 )
 
-// 操作
+// 防护动作
 type PolicyAction struct {
 
-	// 防护等级（log为仅记录、block为拦截）
+	// web基础防护动作（log为仅记录、block为拦截）
 	Category *PolicyActionCategory `json:"category,omitempty"`
 }
 

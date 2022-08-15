@@ -209,6 +209,18 @@ func (i *ListConversionsInvoker) Invoke() (*model.ListConversionsResponse, error
 	}
 }
 
+type ListCostsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCostsInvoker) Invoke() (*model.ListCostsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCostsResponse), nil
+	}
+}
+
 type ListCountiesInvoker struct {
 	*invoker.BaseInvoker
 }

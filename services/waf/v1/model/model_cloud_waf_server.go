@@ -9,19 +9,22 @@ import (
 	"strings"
 )
 
-// 服务器配置
+// 防护域名的源站服务器配置信息
 type CloudWafServer struct {
 
-	// 对外协议
+	// 客户端请求访问防护域名源站服务器的协议
 	FrontProtocol CloudWafServerFrontProtocol `json:"front_protocol"`
 
-	// 源站协议
+	// WAF转发客户端请求到防护域名源站服务器的协议
 	BackProtocol CloudWafServerBackProtocol `json:"back_protocol"`
 
-	// 源站地址
+	// 源站权重，负载均衡算法将按该权重将请求分配给源站，默认值是1，云模式的冗余字段
+	Weight *int32 `json:"weight,omitempty"`
+
+	// 客户端访问的源站服务器的IP地址
 	Address string `json:"address"`
 
-	// 源站端口
+	// WAF转发客户端请求到源站服务的业务端口
 	Port int32 `json:"port"`
 
 	// 源站地址为ipv4或ipv6

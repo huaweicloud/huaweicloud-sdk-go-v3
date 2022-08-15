@@ -9,20 +9,23 @@ import (
 	"strings"
 )
 
-// WAF支持的认证项
+// 特殊标识，用于前端使用
 type Flag struct {
 
-	// true:通过pci_3ds标准认证,false:未通过pci_3ds标准认证
+	// 是否开启pci_3ds合规认证   - true：开启   - false：不开启
 	Pci3ds *FlagPci3ds `json:"pci_3ds,omitempty"`
 
-	// true:通过pci_dss标准认证,false:未通过pci_dss标准认证
+	// 是否开启pci_dss合规认证   - true：开启   - false：不开启
 	PciDss *FlagPciDss `json:"pci_dss,omitempty"`
 
 	// old：代表域名使用的老的cname，new：代表域名使用新的cname
 	Cname *FlagCname `json:"cname,omitempty"`
 
-	// true：WAF支持多可用区容灾,false：WAF不支持多可用区容灾
+	// 域名是否开启ipv6   - true：支持   - false：不支持
 	IsDualAz *FlagIsDualAz `json:"is_dual_az,omitempty"`
+
+	// 域名是否开启ipv6   - true：支持   - false：不支持
+	Ipv6 *FlagIpv6 `json:"ipv6,omitempty"`
 }
 
 func (o Flag) String() string {
@@ -189,6 +192,48 @@ func (c FlagIsDualAz) MarshalJSON() ([]byte, error) {
 }
 
 func (c *FlagIsDualAz) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type FlagIpv6 struct {
+	value string
+}
+
+type FlagIpv6Enum struct {
+	TRUE  FlagIpv6
+	FALSE FlagIpv6
+}
+
+func GetFlagIpv6Enum() FlagIpv6Enum {
+	return FlagIpv6Enum{
+		TRUE: FlagIpv6{
+			value: "true",
+		},
+		FALSE: FlagIpv6{
+			value: "false",
+		},
+	}
+}
+
+func (c FlagIpv6) Value() string {
+	return c.value
+}
+
+func (c FlagIpv6) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *FlagIpv6) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

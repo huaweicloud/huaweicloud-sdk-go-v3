@@ -24,13 +24,16 @@ type CreatePostPaidInstanceReq struct {
 	// 消息引擎的版本。取值填写为：1.1.0和2.3.0。
 	EngineVersion CreatePostPaidInstanceReqEngineVersion `json:"engine_version"`
 
-	// Kafka实例的基准带宽，表示单位时间内传送的最大数据量，单位MB。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
-	Specification CreatePostPaidInstanceReqSpecification `json:"specification"`
+	// [新规格实例：Kafka实例业务TPS规格，取值范围：   - c6.2u4g.cluster   - c6.4u8g.cluster   - c6.8u16g.cluster   - c6.12u24g.cluster   - c6.16u32g.cluster  老规格实例：](tag:hc,hk) Kafka实例的基准带宽，表示单位时间内传送的最大数据量，单位MB。取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
+	Specification *CreatePostPaidInstanceReqSpecification `json:"specification,omitempty"`
 
-	// 消息存储空间，单位GB。   - Kafka实例规格为100MB时，存储空间取值范围600GB ~ 90000GB。   - Kafka实例规格为300MB时，存储空间取值范围1200GB ~ 90000GB。   - Kafka实例规格为600MB时，存储空间取值范围2400GB ~ 90000GB。   - Kafka实例规格为1200MB，存储空间取值范围4800GB ~ 90000GB。
+	// 代理个数。 [老规格实例此参数无需设置。 新规格实例取值范围：3 ~ 30。](tag:hc,hk)  [此参数无需设置](tag:hws,hws_hk,otc,ocb,hws_ocb,ctc,sbc,hk_sbc,cmcc)
+	BrokerNum *int32 `json:"broker_num,omitempty"`
+
+	// 消息存储空间，单位GB。   - Kafka实例规格为100MB时，存储空间取值范围600GB ~ 90000GB。   - Kafka实例规格为300MB时，存储空间取值范围1200GB ~ 90000GB。   - Kafka实例规格为600MB时，存储空间取值范围2400GB ~ 90000GB。   - Kafka实例规格为1200MB，存储空间取值范围4800GB ~ 90000GB   [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围600GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围1200GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围2400GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围3600GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围4800GB ~ 900000GB。](tag:hc,hk)
 	StorageSpace int32 `json:"storage_space"`
 
-	// Kafka实例的最大分区数量。   - 参数specification为100MB时，取值300   - 参数specification为300MB时，取值900   - 参数specification为600MB时，取值1800   - 参数specification为1200MB时，取值1800
+	// Kafka实例的最大分区数量。   - 参数specification为100MB时，取值300   - 参数specification为300MB时，取值900   - 参数specification为600MB时，取值1800   - 参数specification为1200MB时，取值1800    [新规格实例此参数无需设置，每种规格对应的分区数上限参考：https://support.huaweicloud.com/productdesc-kafka/Kafka-specification.html](tag:hc,hk)   [新规格实例此参数无需设置，每种规格对应的分区数上限参考：https://support.huaweicloud.com/intl/zh-cn/productdesc-kafka/Kafka-specification.html](tag:hws,hws_hk)
 	PartitionNum *CreatePostPaidInstanceReqPartitionNum `json:"partition_num,omitempty"`
 
 	// 当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
@@ -51,7 +54,7 @@ type CreatePostPaidInstanceReq struct {
 	// 创建节点到指定且有资源的可用区ID。该参数不能为空数组或者数组的值为空。 创建Kafka实例，支持节点部署在1个或3个及3个以上的可用区。在为节点指定可用区时，用逗号分隔开。
 	AvailableZones []string `json:"available_zones"`
 
-	// 产品标识。
+	// 产品ID。 产品ID可以从**查询产品规格列表**接口查询到，不同局点的产品ID的格式可能不同。 一种是包含字母的产品ID，例如：c6.2u4g.cluster；另一种是全数字格式的产品ID，例如：00300-30308-0--0。
 	ProductId string `json:"product_id"`
 
 	// 表示登录Kafka Manager的用户名。只能由英文字母、数字、中划线组成，长度为4~64的字符。
@@ -69,13 +72,13 @@ type CreatePostPaidInstanceReq struct {
 	// 是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
 	EnablePublicip *bool `json:"enable_publicip,omitempty"`
 
-	// 表示公网带宽，单位是Mbit/s。 取值范围： - Kafka实例规格为100MB时，公网带宽取值范围3到900，且必须为实例节点个数的倍数。 - Kafka实例规格为300MB时，公网带宽取值范围3到900，且必须为实例节点个数的倍数。 - Kafka实例规格为600MB时，公网带宽取值范围4到1200，且必须为实例节点个数的倍数。 - Kafka实例规格为1200MB时，公网带宽取值范围8到2400，且必须为实例节点个数的倍数。
+	// 表示公网带宽，单位是Mbit/s。  [取值范围： - Kafka实例规格为100MB时，公网带宽取值范围3到900，且必须为实例节点个数的倍数。 - Kafka实例规格为300MB时，公网带宽取值范围3到900，且必须为实例节点个数的倍数。 - Kafka实例规格为600MB时，公网带宽取值范围4到1200，且必须为实例节点个数的倍数。 - Kafka实例规格为1200MB时，公网带宽取值范围8到2400，且必须为实例节点个数的倍数。](tag:hws,hws_hk,otc,ocb,hws_ocb,ctc,sbc,hk_sbc,cmcc) [老规格实例取值范围： - Kafka实例规格为100MB时，公网带宽取值范围3到900，且必须为实例节点个数的倍数。 - Kafka实例规格为300MB时，公网带宽取值范围3到900，且必须为实例节点个数的倍数。 - Kafka实例规格为600MB时，公网带宽取值范围4到1200，且必须为实例节点个数的倍数。 - Kafka实例规格为1200MB时，公网带宽取值范围8到2400，且必须为实例节点个数的倍数。  新规格实例取值范围： - Kafka实例规格为c6.2u4g.cluster时，公网带宽取值范围3到250，且必须为实例节点个数的倍数。 - Kafka实例规格为c6.4u8g.cluster时，公网带宽取值范围3到500，且必须为实例节点个数的倍数。 - Kafka实例规格为c6.8u16g.cluster时，公网带宽取值范围4到1000，且必须为实例节点个数的倍数。 - Kafka实例规格为c6.12u24g.cluster时，公网带宽取值范围8到1500，且必须为实例节点个数的倍数。 - Kafka实例规格为c6.16u32g.cluster时，公网带宽取值范围8到2000，且必须为实例节点个数的倍数。](tag:hc,hk)
 	PublicBandwidth *int32 `json:"public_bandwidth,omitempty"`
 
 	// 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
 	PublicipId *string `json:"publicip_id,omitempty"`
 
-	// 是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
+	// 是否打开SSL加密访问。  实例创建后将不支持动态开启和关闭。  - true：打开SSL加密访问。 - false：不打开SSL加密访问。
 	SslEnable *bool `json:"ssl_enable,omitempty"`
 
 	// 磁盘的容量到达容量阈值后，对于消息的处理策略。  取值如下： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。
@@ -84,10 +87,10 @@ type CreatePostPaidInstanceReq struct {
 	// 是否开启消息转储功能。  默认不开启消息转储。
 	ConnectorEnable *bool `json:"connector_enable,omitempty"`
 
-	// 是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。
+	// 是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
 	EnableAutoTopic *bool `json:"enable_auto_topic,omitempty"`
 
-	// 存储IO规格。 取值范围：   - 参数specification为100MB时，取值dms.physical.storage.high或者dms.physical.storage.ultra   - 参数specification为300MB时，取值dms.physical.storage.high或者dms.physical.storage.ultra   - 参数specification为600MB时，取值dms.physical.storage.ultra   - 参数specification为1200MB时，取值dms.physical.storage.ultra存储IO规格。如何选择磁盘类型请参考磁盘类型及性能介绍。
+	// 存储IO规格。 [新老规格的实例的存储IO规格不相同，创建实例请选择对应的存储IO规格。 新规格实例取值范围：   - dms.physical.storage.high.v2：使用高IO的磁盘类型。   - dms.physical.storage.ultra.v2：使用超高IO的磁盘类型。  老规格实例取值范围：](tag:hc,hk)   - 参数specification为100MB时，取值dms.physical.storage.high或者dms.physical.storage.ultra   - 参数specification为300MB时，取值dms.physical.storage.high或者dms.physical.storage.ultra   - 参数specification为600MB时，取值dms.physical.storage.ultra   - 参数specification为1200MB时，取值dms.physical.storage.ultra存储IO规格。如何选择磁盘类型请参考磁盘类型及性能介绍。
 	StorageSpecCode CreatePostPaidInstanceReqStorageSpecCode `json:"storage_spec_code"`
 
 	// 企业项目ID。若为企业项目帐号，该参数必填。
@@ -191,10 +194,15 @@ type CreatePostPaidInstanceReqSpecification struct {
 }
 
 type CreatePostPaidInstanceReqSpecificationEnum struct {
-	E_100_MB  CreatePostPaidInstanceReqSpecification
-	E_300_MB  CreatePostPaidInstanceReqSpecification
-	E_600_MB  CreatePostPaidInstanceReqSpecification
-	E_1200_MB CreatePostPaidInstanceReqSpecification
+	E_100_MB          CreatePostPaidInstanceReqSpecification
+	E_300_MB          CreatePostPaidInstanceReqSpecification
+	E_600_MB          CreatePostPaidInstanceReqSpecification
+	E_1200_MB         CreatePostPaidInstanceReqSpecification
+	C6_2U4G_CLUSTER   CreatePostPaidInstanceReqSpecification
+	C6_4U8G_CLUSTER   CreatePostPaidInstanceReqSpecification
+	C6_8U16G_CLUSTER  CreatePostPaidInstanceReqSpecification
+	C6_12U24G_CLUSTER CreatePostPaidInstanceReqSpecification
+	C6_16U32G_CLUSTER CreatePostPaidInstanceReqSpecification
 }
 
 func GetCreatePostPaidInstanceReqSpecificationEnum() CreatePostPaidInstanceReqSpecificationEnum {
@@ -210,6 +218,21 @@ func GetCreatePostPaidInstanceReqSpecificationEnum() CreatePostPaidInstanceReqSp
 		},
 		E_1200_MB: CreatePostPaidInstanceReqSpecification{
 			value: "1200MB",
+		},
+		C6_2U4G_CLUSTER: CreatePostPaidInstanceReqSpecification{
+			value: "c6.2u4g.cluster",
+		},
+		C6_4U8G_CLUSTER: CreatePostPaidInstanceReqSpecification{
+			value: "c6.4u8g.cluster",
+		},
+		C6_8U16G_CLUSTER: CreatePostPaidInstanceReqSpecification{
+			value: "c6.8u16g.cluster",
+		},
+		C6_12U24G_CLUSTER: CreatePostPaidInstanceReqSpecification{
+			value: "c6.12u24g.cluster",
+		},
+		C6_16U32G_CLUSTER: CreatePostPaidInstanceReqSpecification{
+			value: "c6.16u32g.cluster",
 		},
 	}
 }
@@ -241,19 +264,34 @@ type CreatePostPaidInstanceReqPartitionNum struct {
 }
 
 type CreatePostPaidInstanceReqPartitionNumEnum struct {
+	E_250  CreatePostPaidInstanceReqPartitionNum
 	E_300  CreatePostPaidInstanceReqPartitionNum
+	E_500  CreatePostPaidInstanceReqPartitionNum
 	E_900  CreatePostPaidInstanceReqPartitionNum
+	E_1000 CreatePostPaidInstanceReqPartitionNum
+	E_1500 CreatePostPaidInstanceReqPartitionNum
 	E_1800 CreatePostPaidInstanceReqPartitionNum
+	E_2000 CreatePostPaidInstanceReqPartitionNum
 }
 
 func GetCreatePostPaidInstanceReqPartitionNumEnum() CreatePostPaidInstanceReqPartitionNumEnum {
 	return CreatePostPaidInstanceReqPartitionNumEnum{
-		E_300: CreatePostPaidInstanceReqPartitionNum{
+		E_250: CreatePostPaidInstanceReqPartitionNum{
+			value: 250,
+		}, E_300: CreatePostPaidInstanceReqPartitionNum{
 			value: 300,
+		}, E_500: CreatePostPaidInstanceReqPartitionNum{
+			value: 500,
 		}, E_900: CreatePostPaidInstanceReqPartitionNum{
 			value: 900,
+		}, E_1000: CreatePostPaidInstanceReqPartitionNum{
+			value: 1000,
+		}, E_1500: CreatePostPaidInstanceReqPartitionNum{
+			value: 1500,
 		}, E_1800: CreatePostPaidInstanceReqPartitionNum{
 			value: 1800,
+		}, E_2000: CreatePostPaidInstanceReqPartitionNum{
+			value: 2000,
 		},
 	}
 }
@@ -327,13 +365,21 @@ type CreatePostPaidInstanceReqStorageSpecCode struct {
 }
 
 type CreatePostPaidInstanceReqStorageSpecCodeEnum struct {
-	DMS_PHYSICAL_STORAGE_NORMAL CreatePostPaidInstanceReqStorageSpecCode
-	DMS_PHYSICAL_STORAGE_HIGH   CreatePostPaidInstanceReqStorageSpecCode
-	DMS_PHYSICAL_STORAGE_ULTRA  CreatePostPaidInstanceReqStorageSpecCode
+	DMS_PHYSICAL_STORAGE_HIGH_V2  CreatePostPaidInstanceReqStorageSpecCode
+	DMS_PHYSICAL_STORAGE_ULTRA_V2 CreatePostPaidInstanceReqStorageSpecCode
+	DMS_PHYSICAL_STORAGE_NORMAL   CreatePostPaidInstanceReqStorageSpecCode
+	DMS_PHYSICAL_STORAGE_HIGH     CreatePostPaidInstanceReqStorageSpecCode
+	DMS_PHYSICAL_STORAGE_ULTRA    CreatePostPaidInstanceReqStorageSpecCode
 }
 
 func GetCreatePostPaidInstanceReqStorageSpecCodeEnum() CreatePostPaidInstanceReqStorageSpecCodeEnum {
 	return CreatePostPaidInstanceReqStorageSpecCodeEnum{
+		DMS_PHYSICAL_STORAGE_HIGH_V2: CreatePostPaidInstanceReqStorageSpecCode{
+			value: "dms.physical.storage.high.v2",
+		},
+		DMS_PHYSICAL_STORAGE_ULTRA_V2: CreatePostPaidInstanceReqStorageSpecCode{
+			value: "dms.physical.storage.ultra.v2",
+		},
 		DMS_PHYSICAL_STORAGE_NORMAL: CreatePostPaidInstanceReqStorageSpecCode{
 			value: "dms.physical.storage.normal",
 		},

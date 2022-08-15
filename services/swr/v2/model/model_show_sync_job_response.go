@@ -8,8 +8,10 @@ import (
 
 // Response Object
 type ShowSyncJobResponse struct {
-	Body           *[]SyncJob `json:"body,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	Body *[]SyncJob `json:"body,omitempty"`
+
+	ContentRange   *string `json:"Content-Range,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowSyncJobResponse) String() string {

@@ -15,78 +15,88 @@ type UpdateHostResponse struct {
 	// 域名id
 	Id *string `json:"id,omitempty"`
 
-	// 策略id
-	Policyid *string `json:"policyid,omitempty"`
-
 	// 创建的云模式防护域名
 	Hostname *string `json:"hostname,omitempty"`
 
-	// 账户id
+	// 防护域名的防护策略id
+	Policyid *string `json:"policyid,omitempty"`
+
+	// 帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
 	Domainid *string `json:"domainid,omitempty"`
 
-	// cname前缀
-	AccessCode *string `json:"access_code,omitempty"`
+	// 项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
+	Projectid *string `json:"projectid,omitempty"`
 
-	// 后端协议类型
-	Protocol *UpdateHostResponseProtocol `json:"protocol,omitempty"`
+	// 企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 源站信息
+	// 后端包含的协议类型：HTTPS、HTTP、HTTP&HTTPS
+	Protocol *string `json:"protocol,omitempty"`
+
+	// 防护域名的源站服务器配置信息
 	Server *[]CloudWafServer `json:"server,omitempty"`
 
-	// 证书id，通过查询证书列表接口（ListCertificates）接口获取证书id
-	Certificateid *string `json:"certificateid,omitempty"`
-
-	// 证书名，通过查询证书列表接口（ListCertificates）接口获取证书id
-	Certificatename *string `json:"certificatename,omitempty"`
-
-	// 是否开启了代理
+	// 防护域名是否使用代理   - false：不使用代理   - true：使用代理
 	Proxy *bool `json:"proxy,omitempty"`
-
-	// 锁定状态,默认为0
-	Locked *int32 `json:"locked,omitempty"`
 
 	// 域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
 	ProtectStatus *int32 `json:"protect_status,omitempty"`
 
-	// 接入状态
+	// 域名接入状态，0表示未接入，1表示已接入
 	AccessStatus *int32 `json:"access_status,omitempty"`
 
-	// 创建防护域名的时间
+	// cname前缀
+	AccessCode *string `json:"access_code,omitempty"`
+
+	// 预留参数，用于后期设计冻结域名，解锁域名功能，目前暂不支持
+	Locked *int32 `json:"locked,omitempty"`
+
+	// 创建防护域名的时间戳（毫秒）
 	Timestamp *int64 `json:"timestamp,omitempty"`
 
-	// ssl协议版本
+	// https证书id
+	Certificateid *string `json:"certificateid,omitempty"`
+
+	// 证书名称
+	Certificatename *string `json:"certificatename,omitempty"`
+
+	// 配置的最低TLS版本（TLS v1.0/TLS v1.1/TLS v1.2）,默认为TLS v1.0版本，对于低于最低TLS版本的请求，将无法正常访问网站
 	Tls *UpdateHostResponseTls `json:"tls,omitempty"`
 
-	// 加密套件（cipher_1，cipher_2，cipher_3，cipher_4，cipher_default）：  cipher_1： 加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!DES:!MD5:!PSK:!RC4:!kRSA:!SRP:!3DES:!DSS:!EXP:!CAMELLIA:@STRENGTH   cipher_2：加密算法为EECDH+AESGCM:EDH+AESGCM    cipher_3：加密算法为ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH    cipher_4：加密算法为ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!EDH    cipher_default： 加密算法为ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!AESGCM
+	// 加密套件（cipher_1，cipher_2，cipher_3，cipher_4，cipher_default）：  - cipher_1： 加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!DES:!MD5:!PSK:!RC4:!kRSA:!SRP:!3DES:!DSS:!EXP:!CAMELLIA:@STRENGTH   - cipher_2：加密算法为EECDH+AESGCM:EDH+AESGCM   - cipher_3：加密算法为ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH   - cipher_4：加密算法为ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!EDH   - cipher_default： 加密算法为ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!AESGCM
 	Cipher *UpdateHostResponseCipher `json:"cipher,omitempty"`
-
-	// 企业项目ID
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	BlockPage *BlockPage `json:"block_page,omitempty"`
 
-	// 域名名称
-	WebTag *bool `json:"web_tag,omitempty"`
+	// 扩展字段，用于保存防护域名的一些配置信息。
+	Extend map[string]string `json:"extend,omitempty"`
+
+	// 网站名称，对应WAF控制台域名详情中的网站名称
+	WebTag *string `json:"web_tag,omitempty"`
+
+	TrafficMark *TrafficMark `json:"traffic_mark,omitempty"`
+
+	CircuitBreaker *CircuitBreaker `json:"circuit_breaker,omitempty"`
+
+	// LB负载均衡，仅专业版（原企业版）和铂金版（原旗舰版）支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+	LbAlgorithm *UpdateHostResponseLbAlgorithm `json:"lb_algorithm,omitempty"`
+
+	TimeoutConfig *TimeoutConfig `json:"timeout_config,omitempty"`
 
 	Flag *Flag `json:"flag,omitempty"`
 
-	// 是否使用独享ip
-	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
-
-	// 域名描述
+	// 网站备注
 	Description *string `json:"description,omitempty"`
 
-	// 是否使用HTTP2
+	// 是否支持http2   - true：表示支持http2   - false：表示不支持http2
 	Http2Enable *bool `json:"http2_enable,omitempty"`
 
-	// 是否开启IPv6防护
-	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+	// 是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
-	// 负载均衡算法
-	LbAlgorithm *string `json:"lb_algorithm,omitempty"`
-
-	TimeoutConfig  *TimeoutConfig `json:"timeout_config,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	// 接入进度，仅用于新版console(前端)使用
+	AccessProgress *[]AccessProgress `json:"access_progress,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o UpdateHostResponse) String() string {
@@ -96,52 +106,6 @@ func (o UpdateHostResponse) String() string {
 	}
 
 	return strings.Join([]string{"UpdateHostResponse", string(data)}, " ")
-}
-
-type UpdateHostResponseProtocol struct {
-	value string
-}
-
-type UpdateHostResponseProtocolEnum struct {
-	HTTPS     UpdateHostResponseProtocol
-	HTTP      UpdateHostResponseProtocol
-	HTTPHTTPS UpdateHostResponseProtocol
-}
-
-func GetUpdateHostResponseProtocolEnum() UpdateHostResponseProtocolEnum {
-	return UpdateHostResponseProtocolEnum{
-		HTTPS: UpdateHostResponseProtocol{
-			value: "HTTPS",
-		},
-		HTTP: UpdateHostResponseProtocol{
-			value: "HTTP",
-		},
-		HTTPHTTPS: UpdateHostResponseProtocol{
-			value: "HTTP&HTTPS",
-		},
-	}
-}
-
-func (c UpdateHostResponseProtocol) Value() string {
-	return c.value
-}
-
-func (c UpdateHostResponseProtocol) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *UpdateHostResponseProtocol) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }
 
 type UpdateHostResponseTls struct {
@@ -235,6 +199,52 @@ func (c UpdateHostResponseCipher) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateHostResponseCipher) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type UpdateHostResponseLbAlgorithm struct {
+	value string
+}
+
+type UpdateHostResponseLbAlgorithmEnum struct {
+	IP_HASH      UpdateHostResponseLbAlgorithm
+	ROUND_ROBIN  UpdateHostResponseLbAlgorithm
+	SESSION_HASH UpdateHostResponseLbAlgorithm
+}
+
+func GetUpdateHostResponseLbAlgorithmEnum() UpdateHostResponseLbAlgorithmEnum {
+	return UpdateHostResponseLbAlgorithmEnum{
+		IP_HASH: UpdateHostResponseLbAlgorithm{
+			value: "ip_hash",
+		},
+		ROUND_ROBIN: UpdateHostResponseLbAlgorithm{
+			value: "round_robin",
+		},
+		SESSION_HASH: UpdateHostResponseLbAlgorithm{
+			value: "session_hash",
+		},
+	}
+}
+
+func (c UpdateHostResponseLbAlgorithm) Value() string {
+	return c.value
+}
+
+func (c UpdateHostResponseLbAlgorithm) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateHostResponseLbAlgorithm) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

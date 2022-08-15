@@ -89,6 +89,28 @@ func (c *RabbitMQClient) CreatePostPaidInstanceInvoker(request *model.CreatePost
 	return &CreatePostPaidInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePostPaidInstanceByEngine 创建实例(按需)
+//
+// 创建实例，该接口创建的实例为按需计费的方式。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RabbitMQClient) CreatePostPaidInstanceByEngine(request *model.CreatePostPaidInstanceByEngineRequest) (*model.CreatePostPaidInstanceByEngineResponse, error) {
+	requestDef := GenReqDefForCreatePostPaidInstanceByEngine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePostPaidInstanceByEngineResponse), nil
+	}
+}
+
+// CreatePostPaidInstanceByEngineInvoker 创建实例(按需)
+func (c *RabbitMQClient) CreatePostPaidInstanceByEngineInvoker(request *model.CreatePostPaidInstanceByEngineRequest) *CreatePostPaidInstanceByEngineInvoker {
+	requestDef := GenReqDefForCreatePostPaidInstanceByEngine()
+	return &CreatePostPaidInstanceByEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteBackgroundTask 删除后台任务管理中的指定记录
 //
 // 删除后台任务管理中的指定记录。

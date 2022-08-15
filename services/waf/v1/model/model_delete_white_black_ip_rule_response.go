@@ -31,8 +31,10 @@ type DeleteWhiteBlackIpRuleResponse struct {
 	Addr *string `json:"addr,omitempty"`
 
 	// 防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
-	White          *int32 `json:"white,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	White *int32 `json:"white,omitempty"`
+
+	IpGroup        *IpGroup `json:"ip_group,omitempty"`
+	HttpStatusCode int      `json:"-"`
 }
 
 func (o DeleteWhiteBlackIpRuleResponse) String() string {

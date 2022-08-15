@@ -15,7 +15,7 @@ type DomainItem struct {
 	// 数量
 	Num *int32 `json:"num,omitempty"`
 
-	// 网站名称
+	// 网站名称，对应WAF控制台域名详情中的网站名称
 	WebTag *string `json:"web_tag,omitempty"`
 }
 
