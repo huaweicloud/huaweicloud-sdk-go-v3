@@ -31,6 +31,9 @@ type QuerySubCustomerListReq struct {
 
 	// 关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
 	AssociatedOnEnd *string `json:"associated_on_end,omitempty"`
+
+	// 云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 
 func (o QuerySubCustomerListReq) String() string {

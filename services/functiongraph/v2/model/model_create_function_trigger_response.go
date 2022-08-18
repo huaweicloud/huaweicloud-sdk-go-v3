@@ -17,7 +17,7 @@ type CreateFunctionTriggerResponse struct {
 	// 触发器类型。  - TIMER: \"定时触发器。\" - APIG: \"APIG触发器。\" - CTS: \"云审计服务触发器。\" - DDS: \"文档数据库服务触发器。\" - DMS: \"分布式服务触发器。\" - DIS: \"数据接入服务触发器。\" - LTS: \"云日志服务触发器。\" - OBS: \"对象存储触发器。\" - SMN: \"消息通知服务触发器。\" - KAFKA: \"专享版消息通知服务触发器。\"
 	TriggerTypeCode *CreateFunctionTriggerResponseTriggerTypeCode `json:"trigger_type_code,omitempty"`
 
-	// \"触发器状态\"  - ACTIVE: 启用状态。 - DISABLED: 禁用状态。
+	// \"触发器状态\"  - ACTIVE: 启用状态。 - DISABLE: 禁用状态。
 	TriggerStatus *CreateFunctionTriggerResponseTriggerStatus `json:"trigger_status,omitempty"`
 
 	// 触发器源事件。
@@ -45,16 +45,22 @@ type CreateFunctionTriggerResponseTriggerTypeCode struct {
 }
 
 type CreateFunctionTriggerResponseTriggerTypeCodeEnum struct {
-	TIMER CreateFunctionTriggerResponseTriggerTypeCode
-	APIG  CreateFunctionTriggerResponseTriggerTypeCode
-	CTS   CreateFunctionTriggerResponseTriggerTypeCode
-	DDS   CreateFunctionTriggerResponseTriggerTypeCode
-	DMS   CreateFunctionTriggerResponseTriggerTypeCode
-	DIS   CreateFunctionTriggerResponseTriggerTypeCode
-	LTS   CreateFunctionTriggerResponseTriggerTypeCode
-	OBS   CreateFunctionTriggerResponseTriggerTypeCode
-	SMN   CreateFunctionTriggerResponseTriggerTypeCode
-	KAFKA CreateFunctionTriggerResponseTriggerTypeCode
+	TIMER            CreateFunctionTriggerResponseTriggerTypeCode
+	APIG             CreateFunctionTriggerResponseTriggerTypeCode
+	CTS              CreateFunctionTriggerResponseTriggerTypeCode
+	DDS              CreateFunctionTriggerResponseTriggerTypeCode
+	DMS              CreateFunctionTriggerResponseTriggerTypeCode
+	DIS              CreateFunctionTriggerResponseTriggerTypeCode
+	LTS              CreateFunctionTriggerResponseTriggerTypeCode
+	OBS              CreateFunctionTriggerResponseTriggerTypeCode
+	SMN              CreateFunctionTriggerResponseTriggerTypeCode
+	KAFKA            CreateFunctionTriggerResponseTriggerTypeCode
+	RABBITMQ         CreateFunctionTriggerResponseTriggerTypeCode
+	DEDICATEDGATEWAY CreateFunctionTriggerResponseTriggerTypeCode
+	OPENSOURCEKAFKA  CreateFunctionTriggerResponseTriggerTypeCode
+	APIC             CreateFunctionTriggerResponseTriggerTypeCode
+	GAUSSMONGO       CreateFunctionTriggerResponseTriggerTypeCode
+	EVENTGRID        CreateFunctionTriggerResponseTriggerTypeCode
 }
 
 func GetCreateFunctionTriggerResponseTriggerTypeCodeEnum() CreateFunctionTriggerResponseTriggerTypeCodeEnum {
@@ -89,6 +95,24 @@ func GetCreateFunctionTriggerResponseTriggerTypeCodeEnum() CreateFunctionTrigger
 		KAFKA: CreateFunctionTriggerResponseTriggerTypeCode{
 			value: "KAFKA",
 		},
+		RABBITMQ: CreateFunctionTriggerResponseTriggerTypeCode{
+			value: "RABBITMQ",
+		},
+		DEDICATEDGATEWAY: CreateFunctionTriggerResponseTriggerTypeCode{
+			value: "DEDICATEDGATEWAY",
+		},
+		OPENSOURCEKAFKA: CreateFunctionTriggerResponseTriggerTypeCode{
+			value: "OPENSOURCEKAFKA",
+		},
+		APIC: CreateFunctionTriggerResponseTriggerTypeCode{
+			value: "APIC",
+		},
+		GAUSSMONGO: CreateFunctionTriggerResponseTriggerTypeCode{
+			value: "GAUSSMONGO",
+		},
+		EVENTGRID: CreateFunctionTriggerResponseTriggerTypeCode{
+			value: "EVENTGRID",
+		},
 	}
 }
 
@@ -119,8 +143,8 @@ type CreateFunctionTriggerResponseTriggerStatus struct {
 }
 
 type CreateFunctionTriggerResponseTriggerStatusEnum struct {
-	ACTIVE   CreateFunctionTriggerResponseTriggerStatus
-	DISABLED CreateFunctionTriggerResponseTriggerStatus
+	ACTIVE  CreateFunctionTriggerResponseTriggerStatus
+	DISABLE CreateFunctionTriggerResponseTriggerStatus
 }
 
 func GetCreateFunctionTriggerResponseTriggerStatusEnum() CreateFunctionTriggerResponseTriggerStatusEnum {
@@ -128,8 +152,8 @@ func GetCreateFunctionTriggerResponseTriggerStatusEnum() CreateFunctionTriggerRe
 		ACTIVE: CreateFunctionTriggerResponseTriggerStatus{
 			value: "ACTIVE",
 		},
-		DISABLED: CreateFunctionTriggerResponseTriggerStatus{
-			value: "DISABLED",
+		DISABLE: CreateFunctionTriggerResponseTriggerStatus{
+			value: "DISABLE",
 		},
 	}
 }

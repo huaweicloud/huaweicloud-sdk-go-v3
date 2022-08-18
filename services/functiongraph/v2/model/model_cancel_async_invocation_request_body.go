@@ -12,7 +12,7 @@ import (
 type CancelAsyncInvocationRequestBody struct {
 
 	// 被停止的请求id
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId string `json:"request_id"`
 
 	// 停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接杀死runtime。
 	Type *CancelAsyncInvocationRequestBodyType `json:"type,omitempty"`

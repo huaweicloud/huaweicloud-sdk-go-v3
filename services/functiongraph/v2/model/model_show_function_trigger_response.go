@@ -17,7 +17,7 @@ type ShowFunctionTriggerResponse struct {
 	// 触发器类型。  - TIMER: \"定时触发器。\" - APIG: \"APIG触发器。\" - CTS: \"云审计服务触发器。\" - DDS: \"文档数据库服务触发器。\" - DMS: \"分布式服务触发器。\" - DIS: \"数据接入服务触发器。\" - LTS: \"云日志服务触发器。\" - OBS: \"对象存储触发器。\" - SMN: \"消息通知服务触发器。\" - KAFKA: \"专享版消息通知服务触发器。\"
 	TriggerTypeCode *ShowFunctionTriggerResponseTriggerTypeCode `json:"trigger_type_code,omitempty"`
 
-	// \"触发器状态\"  - ACTIVE: 启用状态。 - DISABLED: 禁用状态。
+	// \"触发器状态\"  - ACTIVE: 启用状态。 - DISABLE: 禁用状态。
 	TriggerStatus *ShowFunctionTriggerResponseTriggerStatus `json:"trigger_status,omitempty"`
 
 	// 触发器源事件。
@@ -45,16 +45,22 @@ type ShowFunctionTriggerResponseTriggerTypeCode struct {
 }
 
 type ShowFunctionTriggerResponseTriggerTypeCodeEnum struct {
-	TIMER ShowFunctionTriggerResponseTriggerTypeCode
-	APIG  ShowFunctionTriggerResponseTriggerTypeCode
-	CTS   ShowFunctionTriggerResponseTriggerTypeCode
-	DDS   ShowFunctionTriggerResponseTriggerTypeCode
-	DMS   ShowFunctionTriggerResponseTriggerTypeCode
-	DIS   ShowFunctionTriggerResponseTriggerTypeCode
-	LTS   ShowFunctionTriggerResponseTriggerTypeCode
-	OBS   ShowFunctionTriggerResponseTriggerTypeCode
-	SMN   ShowFunctionTriggerResponseTriggerTypeCode
-	KAFKA ShowFunctionTriggerResponseTriggerTypeCode
+	TIMER            ShowFunctionTriggerResponseTriggerTypeCode
+	APIG             ShowFunctionTriggerResponseTriggerTypeCode
+	CTS              ShowFunctionTriggerResponseTriggerTypeCode
+	DDS              ShowFunctionTriggerResponseTriggerTypeCode
+	DMS              ShowFunctionTriggerResponseTriggerTypeCode
+	DIS              ShowFunctionTriggerResponseTriggerTypeCode
+	LTS              ShowFunctionTriggerResponseTriggerTypeCode
+	OBS              ShowFunctionTriggerResponseTriggerTypeCode
+	SMN              ShowFunctionTriggerResponseTriggerTypeCode
+	KAFKA            ShowFunctionTriggerResponseTriggerTypeCode
+	RABBITMQ         ShowFunctionTriggerResponseTriggerTypeCode
+	DEDICATEDGATEWAY ShowFunctionTriggerResponseTriggerTypeCode
+	OPENSOURCEKAFKA  ShowFunctionTriggerResponseTriggerTypeCode
+	APIC             ShowFunctionTriggerResponseTriggerTypeCode
+	GAUSSMONGO       ShowFunctionTriggerResponseTriggerTypeCode
+	EVENTGRID        ShowFunctionTriggerResponseTriggerTypeCode
 }
 
 func GetShowFunctionTriggerResponseTriggerTypeCodeEnum() ShowFunctionTriggerResponseTriggerTypeCodeEnum {
@@ -89,6 +95,24 @@ func GetShowFunctionTriggerResponseTriggerTypeCodeEnum() ShowFunctionTriggerResp
 		KAFKA: ShowFunctionTriggerResponseTriggerTypeCode{
 			value: "KAFKA",
 		},
+		RABBITMQ: ShowFunctionTriggerResponseTriggerTypeCode{
+			value: "RABBITMQ",
+		},
+		DEDICATEDGATEWAY: ShowFunctionTriggerResponseTriggerTypeCode{
+			value: "DEDICATEDGATEWAY",
+		},
+		OPENSOURCEKAFKA: ShowFunctionTriggerResponseTriggerTypeCode{
+			value: "OPENSOURCEKAFKA",
+		},
+		APIC: ShowFunctionTriggerResponseTriggerTypeCode{
+			value: "APIC",
+		},
+		GAUSSMONGO: ShowFunctionTriggerResponseTriggerTypeCode{
+			value: "GAUSSMONGO",
+		},
+		EVENTGRID: ShowFunctionTriggerResponseTriggerTypeCode{
+			value: "EVENTGRID",
+		},
 	}
 }
 
@@ -119,8 +143,8 @@ type ShowFunctionTriggerResponseTriggerStatus struct {
 }
 
 type ShowFunctionTriggerResponseTriggerStatusEnum struct {
-	ACTIVE   ShowFunctionTriggerResponseTriggerStatus
-	DISABLED ShowFunctionTriggerResponseTriggerStatus
+	ACTIVE  ShowFunctionTriggerResponseTriggerStatus
+	DISABLE ShowFunctionTriggerResponseTriggerStatus
 }
 
 func GetShowFunctionTriggerResponseTriggerStatusEnum() ShowFunctionTriggerResponseTriggerStatusEnum {
@@ -128,8 +152,8 @@ func GetShowFunctionTriggerResponseTriggerStatusEnum() ShowFunctionTriggerRespon
 		ACTIVE: ShowFunctionTriggerResponseTriggerStatus{
 			value: "ACTIVE",
 		},
-		DISABLED: ShowFunctionTriggerResponseTriggerStatus{
-			value: "DISABLED",
+		DISABLE: ShowFunctionTriggerResponseTriggerStatus{
+			value: "DISABLE",
 		},
 	}
 }

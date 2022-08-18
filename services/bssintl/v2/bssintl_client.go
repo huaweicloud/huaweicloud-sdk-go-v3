@@ -261,6 +261,28 @@ func (c *BssintlClient) ListConversionsInvoker(request *model.ListConversionsReq
 	return &ListConversionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCosts 查询成本数据
+//
+// 客户在自建平台查询成本分析数据。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *BssintlClient) ListCosts(request *model.ListCostsRequest) (*model.ListCostsResponse, error) {
+	requestDef := GenReqDefForListCosts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCostsResponse), nil
+	}
+}
+
+// ListCostsInvoker 查询成本数据
+func (c *BssintlClient) ListCostsInvoker(request *model.ListCostsRequest) *ListCostsInvoker {
+	requestDef := GenReqDefForListCosts()
+	return &ListCostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCustomerOnDemandResources 查询客户按需资源列表
 //
 // 功能描述：客户在伙伴销售平台查询已开通的按需资源
@@ -391,6 +413,30 @@ func (c *BssintlClient) ListFreeResourceUsages(request *model.ListFreeResourceUs
 func (c *BssintlClient) ListFreeResourceUsagesInvoker(request *model.ListFreeResourceUsagesRequest) *ListFreeResourceUsagesInvoker {
 	requestDef := GenReqDefForListFreeResourceUsages()
 	return &ListFreeResourceUsagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIndirectPartners 查询云经销商列表
+//
+// 华为云总经销商（一级经销商）可以查询云经销商（二级经销商）列表。
+//
+// 一级经销商在伙伴中心查询二级经销商列表的方式请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/dp_120210.html)。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *BssintlClient) ListIndirectPartners(request *model.ListIndirectPartnersRequest) (*model.ListIndirectPartnersResponse, error) {
+	requestDef := GenReqDefForListIndirectPartners()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIndirectPartnersResponse), nil
+	}
+}
+
+// ListIndirectPartnersInvoker 查询云经销商列表
+func (c *BssintlClient) ListIndirectPartnersInvoker(request *model.ListIndirectPartnersRequest) *ListIndirectPartnersInvoker {
+	requestDef := GenReqDefForListIndirectPartners()
+	return &ListIndirectPartnersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInvoices 查询发票列表

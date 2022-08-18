@@ -10,8 +10,8 @@ import (
 type ListWorkflowExecutionsResponse struct {
 
 	// 流程执行信息列表
-	Executions     *[]ListWorkflowExecutionResult `json:"executions,omitempty"`
-	HttpStatusCode int                            `json:"-"`
+	Executions     *[]FlowExecutionBrief `json:"executions,omitempty"`
+	HttpStatusCode int                   `json:"-"`
 }
 
 func (o ListWorkflowExecutionsResponse) String() string {

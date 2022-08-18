@@ -14,6 +14,9 @@ type ShowWorkflowExecutionRequest struct {
 
 	// 函数流执行实例ID
 	ExecutionId string `json:"execution_id"`
+
+	// 获取函数流执行详情完整输出值
+	XGetWorkflowFullHistoryData *bool `json:"X-Get-Workflow-Full-History-Data,omitempty"`
 }
 
 func (o ShowWorkflowExecutionRequest) String() string {

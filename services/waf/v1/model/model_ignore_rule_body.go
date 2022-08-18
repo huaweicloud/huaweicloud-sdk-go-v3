@@ -39,7 +39,7 @@ type IgnoreRuleBody struct {
 	Conditions *[]Condition `json:"conditions,omitempty"`
 
 	// 防护域名或防护网站
-	Domains *[]string `json:"domains,omitempty"`
+	Domain *[]string `json:"domain,omitempty"`
 
 	// 高级配置项
 	Advanced *[]Advanced `json:"advanced,omitempty"`

@@ -12,7 +12,7 @@ import (
 type UpdateTriggerRequestBody struct {
 
 	// 触发器状态
-	TriggerStatus UpdateTriggerRequestBodyTriggerStatus `json:"trigger_status"`
+	TriggerStatus *UpdateTriggerRequestBodyTriggerStatus `json:"trigger_status,omitempty"`
 }
 
 func (o UpdateTriggerRequestBody) String() string {
@@ -29,8 +29,8 @@ type UpdateTriggerRequestBodyTriggerStatus struct {
 }
 
 type UpdateTriggerRequestBodyTriggerStatusEnum struct {
-	ACTIVE   UpdateTriggerRequestBodyTriggerStatus
-	DISABLED UpdateTriggerRequestBodyTriggerStatus
+	ACTIVE  UpdateTriggerRequestBodyTriggerStatus
+	DISABLE UpdateTriggerRequestBodyTriggerStatus
 }
 
 func GetUpdateTriggerRequestBodyTriggerStatusEnum() UpdateTriggerRequestBodyTriggerStatusEnum {
@@ -38,8 +38,8 @@ func GetUpdateTriggerRequestBodyTriggerStatusEnum() UpdateTriggerRequestBodyTrig
 		ACTIVE: UpdateTriggerRequestBodyTriggerStatus{
 			value: "ACTIVE",
 		},
-		DISABLED: UpdateTriggerRequestBodyTriggerStatus{
-			value: "DISABLED",
+		DISABLE: UpdateTriggerRequestBodyTriggerStatus{
+			value: "DISABLE",
 		},
 	}
 }

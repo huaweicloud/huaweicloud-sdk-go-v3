@@ -12,7 +12,16 @@ import (
 // 函数执行节点信息
 type OperationState struct {
 
-	// 节点ID，需要在当前工作流中唯一
+	// Action执行模式，支持串行，并行两种模式，默认串行
+	ActionMode *OperationStateActionMode `json:"action_mode,omitempty"`
+
+	// 节点中要执行的操作列表
+	Actions []Action `json:"actions"`
+
+	// 错误处理策略
+	OnErrors *[]OnError `json:"on_errors,omitempty"`
+
+	// 节点ID，需要在当前函数流中唯一
 	Id string `json:"id"`
 
 	// 节点名称
@@ -29,14 +38,8 @@ type OperationState struct {
 
 	StateDataFilter *StateDataFilter `json:"state_data_filter,omitempty"`
 
-	// Action执行模式，支持串行，并行两种模式，默认串行
-	ActionMode *OperationStateActionMode `json:"action_mode,omitempty"`
-
-	// 节点中要执行的操作列表
-	Actions []Action `json:"actions"`
-
-	// 错误处理策略
-	OnErrors *[]OnError `json:"on_errors,omitempty"`
+	// 时间等待节点等待时间（秒）,节点类型为Sleep时为必填，节点类型不为Sleep时无效
+	Duration *int64 `json:"duration,omitempty"`
 }
 
 func (o OperationState) String() string {
@@ -46,6 +49,48 @@ func (o OperationState) String() string {
 	}
 
 	return strings.Join([]string{"OperationState", string(data)}, " ")
+}
+
+type OperationStateActionMode struct {
+	value string
+}
+
+type OperationStateActionModeEnum struct {
+	SEQUENTIAL OperationStateActionMode
+	PARALLEL   OperationStateActionMode
+}
+
+func GetOperationStateActionModeEnum() OperationStateActionModeEnum {
+	return OperationStateActionModeEnum{
+		SEQUENTIAL: OperationStateActionMode{
+			value: "sequential",
+		},
+		PARALLEL: OperationStateActionMode{
+			value: "parallel",
+		},
+	}
+}
+
+func (c OperationStateActionMode) Value() string {
+	return c.value
+}
+
+func (c OperationStateActionMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *OperationStateActionMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type OperationStateType struct {
@@ -81,48 +126,6 @@ func (c OperationStateType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *OperationStateType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type OperationStateActionMode struct {
-	value string
-}
-
-type OperationStateActionModeEnum struct {
-	SEQUENTIAL OperationStateActionMode
-	PARALLEL   OperationStateActionMode
-}
-
-func GetOperationStateActionModeEnum() OperationStateActionModeEnum {
-	return OperationStateActionModeEnum{
-		SEQUENTIAL: OperationStateActionMode{
-			value: "sequential",
-		},
-		PARALLEL: OperationStateActionMode{
-			value: "parallel",
-		},
-	}
-}
-
-func (c OperationStateActionMode) Value() string {
-	return c.value
-}
-
-func (c OperationStateActionMode) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *OperationStateActionMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

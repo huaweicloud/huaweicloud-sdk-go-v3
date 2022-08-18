@@ -118,7 +118,15 @@ type ShowFunctionConfigResponse struct {
 
 	// 是否允许动态内存配置
 	EnableDynamicMemory *bool `json:"enable_dynamic_memory,omitempty"`
-	HttpStatusCode      int   `json:"-"`
+
+	// 是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+	IsStatefulFunction *bool `json:"is_stateful_function,omitempty"`
+
+	// 是否允许在请求头中添加鉴权信息
+	EnableAuthInHeader *bool `json:"enable_auth_in_header,omitempty"`
+
+	CustomImage    *CustomImage `json:"custom_image,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ShowFunctionConfigResponse) String() string {

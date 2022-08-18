@@ -15,7 +15,7 @@ type ListSubcustomerMonthlyBillsRequest struct {
 	// 消费时间。格式固定为YYYY-MM。示例：2018-08
 	Cycle string `json:"cycle"`
 
-	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0000001256679455.html)接口获取。
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0000001256679455.html)接口获取。此参数不携带或携带值为空时，不作为筛选条件。
 	CloudServiceType *string `json:"cloud_service_type,omitempty"`
 
 	// 计费模式。1：包年/包月3：按需
@@ -27,7 +27,7 @@ type ListSubcustomerMonthlyBillsRequest struct {
 	// 每页个数。默认值为10。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 账单类型。0：消费1：退订2：华为核销
+	// 账单类型。0：消费1：退订2：华为核销 此参数不携带或携带值为空时，不作为筛选条件。
 	BillType *string `json:"bill_type,omitempty"`
 
 	// 云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询云经销商伙伴的子客户的消费汇总账单，必须携带该字段。除此之外，此参数不做处理。

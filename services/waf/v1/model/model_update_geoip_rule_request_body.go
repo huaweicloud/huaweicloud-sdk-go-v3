@@ -17,6 +17,9 @@ type UpdateGeoipRuleRequestBody struct {
 
 	// 防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
 	White int32 `json:"white"`
+
+	// 规则描述
+	Description *string `json:"description,omitempty"`
 }
 
 func (o UpdateGeoipRuleRequestBody) String() string {

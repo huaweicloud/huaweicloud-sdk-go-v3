@@ -9,6 +9,9 @@ import (
 // Response Object
 type ShowLtsLogDetailsResponse struct {
 
+	// 日志组名称
+	GroupName *string `json:"group_name,omitempty"`
+
 	// 日志组id
 	GroupId *string `json:"group_id,omitempty"`
 

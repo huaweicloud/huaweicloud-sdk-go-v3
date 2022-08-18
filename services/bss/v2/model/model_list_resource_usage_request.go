@@ -12,7 +12,7 @@ type ListResourceUsageRequest struct {
 	// 语言。en_US：英文；zh_CN：中文。默认：zh_CN：中文
 	XLanguage *string `json:"X-Language,omitempty"`
 
-	// 账期，格式为yyyy-MM。
+	// 账期，东八区时间，格式为yyyy-MM。
 	BillCycle string `json:"bill_cycle"`
 
 	// 云服务类型，当前仅支持：hws.service.type.cdn：内容分发网络,hws.service.type.obs：对象存储服务

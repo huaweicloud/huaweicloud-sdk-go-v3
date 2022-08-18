@@ -9,35 +9,40 @@ import (
 	"strings"
 )
 
-// 依赖包信息。
 type ListDependenciesResult struct {
 
-	// 依赖包ID。
+	// 依赖包ID
 	Id string `json:"id"`
 
-	// 依赖包拥有者。
+	// 依赖包拥有者，public标识为公共依赖包
 	Owner string `json:"owner"`
 
-	// 依赖包在obs的存储地址。
+	// 依赖包在obs的存储地址
 	Link string `json:"link"`
 
-	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本
+	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Nodejs10.16: Nodejs语言10.16版本。 Nodejs12.13: Nodejs语言12.13版本。 Nodejs14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本
 	Runtime ListDependenciesResultRuntime `json:"runtime"`
 
-	// 依赖包唯一标志。
+	// 依赖包唯一标志
 	Etag string `json:"etag"`
 
-	// 依赖包大小。
+	// 依赖包大小
 	Size int64 `json:"size"`
 
-	// 依赖包名。
+	// 依赖包名
 	Name string `json:"name"`
+
+	// 依赖包文件名
+	FileName *string `json:"file_name,omitempty"`
 
 	// 依赖包描述。
 	Description *string `json:"description,omitempty"`
 
-	// 依赖包文件名。
-	FileName *string `json:"file_name,omitempty"`
+	// 依赖包版本号
+	Version *int64 `json:"version,omitempty"`
+
+	// 依赖包更新时间
+	LastModified *int64 `json:"last_modified,omitempty"`
 }
 
 func (o ListDependenciesResult) String() string {

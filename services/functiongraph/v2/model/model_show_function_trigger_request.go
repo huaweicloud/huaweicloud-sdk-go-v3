@@ -15,8 +15,10 @@ type ShowFunctionTriggerRequest struct {
 	// 函数的URN，详细解释见FunctionGraph函数模型的描述。
 	FunctionUrn string `json:"function_urn"`
 
+	// 触发器类型代码。
 	TriggerTypeCode ShowFunctionTriggerRequestTriggerTypeCode `json:"trigger_type_code"`
 
+	// 触发器编码。
 	TriggerId string `json:"trigger_id"`
 }
 
@@ -34,16 +36,22 @@ type ShowFunctionTriggerRequestTriggerTypeCode struct {
 }
 
 type ShowFunctionTriggerRequestTriggerTypeCodeEnum struct {
-	TIMER ShowFunctionTriggerRequestTriggerTypeCode
-	APIG  ShowFunctionTriggerRequestTriggerTypeCode
-	CTS   ShowFunctionTriggerRequestTriggerTypeCode
-	DDS   ShowFunctionTriggerRequestTriggerTypeCode
-	DMS   ShowFunctionTriggerRequestTriggerTypeCode
-	DIS   ShowFunctionTriggerRequestTriggerTypeCode
-	LTS   ShowFunctionTriggerRequestTriggerTypeCode
-	OBS   ShowFunctionTriggerRequestTriggerTypeCode
-	SMN   ShowFunctionTriggerRequestTriggerTypeCode
-	KAFKA ShowFunctionTriggerRequestTriggerTypeCode
+	TIMER            ShowFunctionTriggerRequestTriggerTypeCode
+	APIG             ShowFunctionTriggerRequestTriggerTypeCode
+	CTS              ShowFunctionTriggerRequestTriggerTypeCode
+	DDS              ShowFunctionTriggerRequestTriggerTypeCode
+	DMS              ShowFunctionTriggerRequestTriggerTypeCode
+	DIS              ShowFunctionTriggerRequestTriggerTypeCode
+	LTS              ShowFunctionTriggerRequestTriggerTypeCode
+	OBS              ShowFunctionTriggerRequestTriggerTypeCode
+	SMN              ShowFunctionTriggerRequestTriggerTypeCode
+	KAFKA            ShowFunctionTriggerRequestTriggerTypeCode
+	RABBITMQ         ShowFunctionTriggerRequestTriggerTypeCode
+	DEDICATEDGATEWAY ShowFunctionTriggerRequestTriggerTypeCode
+	OPENSOURCEKAFKA  ShowFunctionTriggerRequestTriggerTypeCode
+	APIC             ShowFunctionTriggerRequestTriggerTypeCode
+	GAUSSMONGO       ShowFunctionTriggerRequestTriggerTypeCode
+	EVENTGRID        ShowFunctionTriggerRequestTriggerTypeCode
 }
 
 func GetShowFunctionTriggerRequestTriggerTypeCodeEnum() ShowFunctionTriggerRequestTriggerTypeCodeEnum {
@@ -77,6 +85,24 @@ func GetShowFunctionTriggerRequestTriggerTypeCodeEnum() ShowFunctionTriggerReque
 		},
 		KAFKA: ShowFunctionTriggerRequestTriggerTypeCode{
 			value: "KAFKA",
+		},
+		RABBITMQ: ShowFunctionTriggerRequestTriggerTypeCode{
+			value: "RABBITMQ",
+		},
+		DEDICATEDGATEWAY: ShowFunctionTriggerRequestTriggerTypeCode{
+			value: "DEDICATEDGATEWAY",
+		},
+		OPENSOURCEKAFKA: ShowFunctionTriggerRequestTriggerTypeCode{
+			value: "OPENSOURCEKAFKA",
+		},
+		APIC: ShowFunctionTriggerRequestTriggerTypeCode{
+			value: "APIC",
+		},
+		GAUSSMONGO: ShowFunctionTriggerRequestTriggerTypeCode{
+			value: "GAUSSMONGO",
+		},
+		EVENTGRID: ShowFunctionTriggerRequestTriggerTypeCode{
+			value: "EVENTGRID",
 		},
 	}
 }

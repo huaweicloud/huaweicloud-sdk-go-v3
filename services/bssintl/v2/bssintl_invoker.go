@@ -137,6 +137,18 @@ func (i *ListConversionsInvoker) Invoke() (*model.ListConversionsResponse, error
 	}
 }
 
+type ListCostsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCostsInvoker) Invoke() (*model.ListCostsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCostsResponse), nil
+	}
+}
+
 type ListCustomerOnDemandResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,6 +218,18 @@ func (i *ListFreeResourceUsagesInvoker) Invoke() (*model.ListFreeResourceUsagesR
 		return nil, err
 	} else {
 		return result.(*model.ListFreeResourceUsagesResponse), nil
+	}
+}
+
+type ListIndirectPartnersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIndirectPartnersInvoker) Invoke() (*model.ListIndirectPartnersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIndirectPartnersResponse), nil
 	}
 }
 

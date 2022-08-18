@@ -1,0 +1,78 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
+	"strings"
+)
+
+type SubscriptionTarget struct {
+
+	// 订阅目标ID，需保证全局唯一，由小写字母、数字、中划线组成，必须字母或数字开头，长度为32~64字符。  创建订阅目标场景时，指定ID作为待创建的订阅目标对象ID，未指定时由系统自动生成。
+	Id *string `json:"id,omitempty"`
+
+	// 订阅的事件目标名称
+	Name string `json:"name"`
+
+	// 订阅的事件目标的提供方类型
+	ProviderType SubscriptionTargetProviderType `json:"provider_type"`
+
+	// 订阅的事件目标参数列表，该字段序列化后总长度不超过1024字节。
+	Detail *interface{} `json:"detail,omitempty"`
+
+	Transform *SubscriptionTargetTransform `json:"transform"`
+}
+
+func (o SubscriptionTarget) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "SubscriptionTarget struct{}"
+	}
+
+	return strings.Join([]string{"SubscriptionTarget", string(data)}, " ")
+}
+
+type SubscriptionTargetProviderType struct {
+	value string
+}
+
+type SubscriptionTargetProviderTypeEnum struct {
+	CUSTOM   SubscriptionTargetProviderType
+	OFFICIAL SubscriptionTargetProviderType
+}
+
+func GetSubscriptionTargetProviderTypeEnum() SubscriptionTargetProviderTypeEnum {
+	return SubscriptionTargetProviderTypeEnum{
+		CUSTOM: SubscriptionTargetProviderType{
+			value: "CUSTOM",
+		},
+		OFFICIAL: SubscriptionTargetProviderType{
+			value: "OFFICIAL",
+		},
+	}
+}
+
+func (c SubscriptionTargetProviderType) Value() string {
+	return c.value
+}
+
+func (c SubscriptionTargetProviderType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SubscriptionTargetProviderType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}

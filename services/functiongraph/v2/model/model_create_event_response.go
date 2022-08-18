@@ -13,13 +13,7 @@ type CreateEventResponse struct {
 	Id *string `json:"id,omitempty"`
 
 	// 测试事件名称。
-	Name *string `json:"name,omitempty"`
-
-	// 测试事件content。
-	Content *string `json:"content,omitempty"`
-
-	// 上次修改的时间。
-	LastModified   float32 `json:"last_modified,omitempty"`
+	Name           *string `json:"name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

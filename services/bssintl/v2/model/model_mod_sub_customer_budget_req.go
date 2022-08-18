@@ -16,6 +16,9 @@ type ModSubCustomerBudgetReq struct {
 
 	// 是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
 	CancelPartnerFrozen *string `json:"cancel_partner_frozen,omitempty"`
+
+	// 云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 
 func (o ModSubCustomerBudgetReq) String() string {

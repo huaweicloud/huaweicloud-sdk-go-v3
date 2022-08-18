@@ -8,7 +8,7 @@ import (
 
 type StatUsageInfo struct {
 
-	// 统计时间点，格式为YYYY-MM-DDTHH:MM:SSZ，UTC时间。
+	// 统计时间点，UTC时间，格式为YYYY-MM-DDTHH:MM:SSZ。
 	StatTime *string `json:"stat_time,omitempty"`
 
 	// 保底带宽。  说明： 该字段为预留值，当前始终为空；当场景为95增强时才返回数值。

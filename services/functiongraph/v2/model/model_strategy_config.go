@@ -9,11 +9,11 @@ import (
 // 函数策略配置。
 type StrategyConfig struct {
 
-	// 0：函数被禁用;-1：函数被启用。
+	// 单函数最大实例数，v1取值0和-1，v2取值-1到1000
 	Concurrency int32 `json:"concurrency"`
 
-	// 函数并发数
-	ConcurrentNum *int32 `json:"concurrent_num,omitempty"`
+	// 单实例最大并发数，v2版本才支持，取值-1到200000
+	ConcurrentNum int32 `json:"concurrent_num"`
 }
 
 func (o StrategyConfig) String() string {

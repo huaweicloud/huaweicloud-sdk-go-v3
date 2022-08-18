@@ -23,13 +23,13 @@ type AddPostalReq struct {
 	// 邮寄详细地址。
 	Address string `json:"address"`
 
-	// 邮寄地址所在邮编。
+	// 邮寄地址所在邮编。 此参数不携带或携带值为null时，不赋值。
 	Zipcode *string `json:"zipcode,omitempty"`
 
 	// 手机号码，不带国家码。
 	MobilePhone string `json:"mobile_phone"`
 
-	// 是否默认地址，默认为0。 1：默认地址0：非默认地址
+	// 是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
 	IsDefault *int32 `json:"is_default,omitempty"`
 }
 

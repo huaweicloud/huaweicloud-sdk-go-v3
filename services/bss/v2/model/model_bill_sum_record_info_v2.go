@@ -8,7 +8,7 @@ import (
 
 type BillSumRecordInfoV2 struct {
 
-	// 消费汇总数据所在账期，格式：YYYY-MM。
+	// 消费汇总数据所在账期，东八区时间，格式：YYYY-MM。
 	BillCycle *string `json:"bill_cycle,omitempty"`
 
 	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。

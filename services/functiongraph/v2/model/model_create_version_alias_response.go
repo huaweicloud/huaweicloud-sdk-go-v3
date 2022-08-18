@@ -26,7 +26,7 @@ type CreateVersionAliasResponse struct {
 	AliasUrn *string `json:"alias_urn,omitempty"`
 
 	// 灰度版本信息
-	AdditionalVersionWeights map[string]int32 `json:"additional_version_weights,omitempty"`
+	AdditionalVersionWeights map[string]int64 `json:"additional_version_weights,omitempty"`
 	HttpStatusCode           int              `json:"-"`
 }
 

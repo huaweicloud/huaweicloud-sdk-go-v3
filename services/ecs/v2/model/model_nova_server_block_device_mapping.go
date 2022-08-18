@@ -16,7 +16,7 @@ type NovaServerBlockDeviceMapping struct {
 	SourceType NovaServerBlockDeviceMappingSourceType `json:"source_type"`
 
 	// 卷设备的目标类型，当前仅支持volume类型。  - volume：卷。 - local：本地文件，当前不支持该类型。
-	DestinationType *NovaServerBlockDeviceMappingDestinationType `json:"destination_type,omitempty"`
+	DestinationType NovaServerBlockDeviceMappingDestinationType `json:"destination_type"`
 
 	// local文件系统格式，例如：swap, ext4。  当前不支持该功能。
 	GuestFormat *string `json:"guest_format,omitempty"`

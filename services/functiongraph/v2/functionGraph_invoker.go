@@ -269,6 +269,18 @@ func (i *InvokeFunctionInvoker) Invoke() (*model.InvokeFunctionResponse, error) 
 	}
 }
 
+type ListAsyncInvocationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAsyncInvocationsInvoker) Invoke() (*model.ListAsyncInvocationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAsyncInvocationsResponse), nil
+	}
+}
+
 type ListDependenciesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -290,18 +302,6 @@ func (i *ListEventsInvoker) Invoke() (*model.ListEventsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListEventsResponse), nil
-	}
-}
-
-type ListFunctionAsyncInvocationsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListFunctionAsyncInvocationsInvoker) Invoke() (*model.ListFunctionAsyncInvocationsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListFunctionAsyncInvocationsResponse), nil
 	}
 }
 
@@ -401,6 +401,18 @@ func (i *ListVersionAliasesInvoker) Invoke() (*model.ListVersionAliasesResponse,
 	}
 }
 
+type ListWorkflowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWorkflowInvoker) Invoke() (*model.ListWorkflowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWorkflowResponse), nil
+	}
+}
+
 type ListWorkflowExecutionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -410,18 +422,6 @@ func (i *ListWorkflowExecutionsInvoker) Invoke() (*model.ListWorkflowExecutionsR
 		return nil, err
 	} else {
 		return result.(*model.ListWorkflowExecutionsResponse), nil
-	}
-}
-
-type ListWorkflowsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListWorkflowsInvoker) Invoke() (*model.ListWorkflowsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListWorkflowsResponse), nil
 	}
 }
 
@@ -437,15 +437,15 @@ func (i *RetryWorkFlowInvoker) Invoke() (*model.RetryWorkFlowResponse, error) {
 	}
 }
 
-type ShowDependencyInvoker struct {
+type ShowDependcyInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowDependencyInvoker) Invoke() (*model.ShowDependencyResponse, error) {
+func (i *ShowDependcyInvoker) Invoke() (*model.ShowDependcyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowDependencyResponse), nil
+		return result.(*model.ShowDependcyResponse), nil
 	}
 }
 
@@ -629,15 +629,15 @@ func (i *StopWorkFlowInvoker) Invoke() (*model.StopWorkFlowResponse, error) {
 	}
 }
 
-type UpdateDependencyInvoker struct {
+type UpdateDependcyInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdateDependencyInvoker) Invoke() (*model.UpdateDependencyResponse, error) {
+func (i *UpdateDependcyInvoker) Invoke() (*model.UpdateDependcyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdateDependencyResponse), nil
+		return result.(*model.UpdateDependcyResponse), nil
 	}
 }
 
@@ -701,15 +701,15 @@ func (i *UpdateFunctionMaxInstanceConfigInvoker) Invoke() (*model.UpdateFunction
 	}
 }
 
-type UpdateFunctionReservedInstancesInvoker struct {
+type UpdateFunctionReservedInstancesCountInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdateFunctionReservedInstancesInvoker) Invoke() (*model.UpdateFunctionReservedInstancesResponse, error) {
+func (i *UpdateFunctionReservedInstancesCountInvoker) Invoke() (*model.UpdateFunctionReservedInstancesCountResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdateFunctionReservedInstancesResponse), nil
+		return result.(*model.UpdateFunctionReservedInstancesCountResponse), nil
 	}
 }
 

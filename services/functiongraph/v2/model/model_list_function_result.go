@@ -111,6 +111,9 @@ type ListFunctionResult struct {
 
 	// v2表示为公测版本,v1为原来版本。
 	Type *ListFunctionResultType `json:"type,omitempty"`
+
+	// 函数最近1天内执行失败的次数。
+	FailCount *int32 `json:"fail_count,omitempty"`
 }
 
 func (o ListFunctionResult) String() string {

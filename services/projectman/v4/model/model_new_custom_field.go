@@ -12,6 +12,9 @@ type NewCustomField struct {
 	// 自定义字段
 	CustomField *string `json:"custom_field,omitempty"`
 
+	// 自定义字段名称
+	FieldName *string `json:"field_name,omitempty"`
+
 	// 自定义属性对应的值，多个值以英文逗号区分开
 	Value *string `json:"value,omitempty"`
 }

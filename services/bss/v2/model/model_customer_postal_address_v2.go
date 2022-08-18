@@ -38,7 +38,7 @@ type CustomerPostalAddressV2 struct {
 	// 手机号码，不带国家码。
 	MobilePhone *string `json:"mobile_phone,omitempty"`
 
-	// 是否默认地址，默认为0。 1：默认地址0：非默认地址
+	// 是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
 	IsDefault *int32 `json:"is_default,omitempty"`
 }
 

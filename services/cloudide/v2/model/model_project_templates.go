@@ -36,6 +36,9 @@ type ProjectTemplates struct {
 
 	// 模板id
 	TemplateId *int64 `json:"template_id,omitempty"`
+
+	// cpu架构
+	Arch *string `json:"arch,omitempty"`
 }
 
 func (o ProjectTemplates) String() string {

@@ -29,6 +29,18 @@ func (i *BatchTagActionInvoker) Invoke() (*model.BatchTagActionResponse, error) 
 	}
 }
 
+type CheckDisasterRecoveryOperationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckDisasterRecoveryOperationInvoker) Invoke() (*model.CheckDisasterRecoveryOperationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckDisasterRecoveryOperationResponse), nil
+	}
+}
+
 type CreateConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -38,6 +50,18 @@ func (i *CreateConfigurationInvoker) Invoke() (*model.CreateConfigurationRespons
 		return nil, err
 	} else {
 		return result.(*model.CreateConfigurationResponse), nil
+	}
+}
+
+type CreateDisasterRecoveryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDisasterRecoveryInvoker) Invoke() (*model.CreateDisasterRecoveryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDisasterRecoveryResponse), nil
 	}
 }
 
@@ -62,6 +86,18 @@ func (i *DeleteConfigurationInvoker) Invoke() (*model.DeleteConfigurationRespons
 		return nil, err
 	} else {
 		return result.(*model.DeleteConfigurationResponse), nil
+	}
+}
+
+type DeleteDisasterRecoveryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDisasterRecoveryInvoker) Invoke() (*model.DeleteDisasterRecoveryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDisasterRecoveryResponse), nil
 	}
 }
 

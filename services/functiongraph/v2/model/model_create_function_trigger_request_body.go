@@ -21,7 +21,7 @@ type CreateFunctionTriggerRequestBody struct {
 	EventTypeCode *string `json:"event_type_code,omitempty"`
 
 	// 事件结构体。
-	EventData *interface{} `json:"event_data"`
+	EventData map[string]string `json:"event_data"`
 }
 
 func (o CreateFunctionTriggerRequestBody) String() string {
@@ -38,15 +38,22 @@ type CreateFunctionTriggerRequestBodyTriggerTypeCode struct {
 }
 
 type CreateFunctionTriggerRequestBodyTriggerTypeCodeEnum struct {
-	TIMER CreateFunctionTriggerRequestBodyTriggerTypeCode
-	APIG  CreateFunctionTriggerRequestBodyTriggerTypeCode
-	CTS   CreateFunctionTriggerRequestBodyTriggerTypeCode
-	DDS   CreateFunctionTriggerRequestBodyTriggerTypeCode
-	DMS   CreateFunctionTriggerRequestBodyTriggerTypeCode
-	DIS   CreateFunctionTriggerRequestBodyTriggerTypeCode
-	LTS   CreateFunctionTriggerRequestBodyTriggerTypeCode
-	OBS   CreateFunctionTriggerRequestBodyTriggerTypeCode
-	KAFKA CreateFunctionTriggerRequestBodyTriggerTypeCode
+	TIMER            CreateFunctionTriggerRequestBodyTriggerTypeCode
+	APIG             CreateFunctionTriggerRequestBodyTriggerTypeCode
+	CTS              CreateFunctionTriggerRequestBodyTriggerTypeCode
+	DDS              CreateFunctionTriggerRequestBodyTriggerTypeCode
+	DMS              CreateFunctionTriggerRequestBodyTriggerTypeCode
+	DIS              CreateFunctionTriggerRequestBodyTriggerTypeCode
+	LTS              CreateFunctionTriggerRequestBodyTriggerTypeCode
+	OBS              CreateFunctionTriggerRequestBodyTriggerTypeCode
+	SMN              CreateFunctionTriggerRequestBodyTriggerTypeCode
+	KAFKA            CreateFunctionTriggerRequestBodyTriggerTypeCode
+	RABBITMQ         CreateFunctionTriggerRequestBodyTriggerTypeCode
+	DEDICATEDGATEWAY CreateFunctionTriggerRequestBodyTriggerTypeCode
+	OPENSOURCEKAFKA  CreateFunctionTriggerRequestBodyTriggerTypeCode
+	APIC             CreateFunctionTriggerRequestBodyTriggerTypeCode
+	GAUSSMONGO       CreateFunctionTriggerRequestBodyTriggerTypeCode
+	EVENTGRID        CreateFunctionTriggerRequestBodyTriggerTypeCode
 }
 
 func GetCreateFunctionTriggerRequestBodyTriggerTypeCodeEnum() CreateFunctionTriggerRequestBodyTriggerTypeCodeEnum {
@@ -75,8 +82,29 @@ func GetCreateFunctionTriggerRequestBodyTriggerTypeCodeEnum() CreateFunctionTrig
 		OBS: CreateFunctionTriggerRequestBodyTriggerTypeCode{
 			value: "OBS",
 		},
+		SMN: CreateFunctionTriggerRequestBodyTriggerTypeCode{
+			value: "SMN",
+		},
 		KAFKA: CreateFunctionTriggerRequestBodyTriggerTypeCode{
 			value: "KAFKA",
+		},
+		RABBITMQ: CreateFunctionTriggerRequestBodyTriggerTypeCode{
+			value: "RABBITMQ",
+		},
+		DEDICATEDGATEWAY: CreateFunctionTriggerRequestBodyTriggerTypeCode{
+			value: "DEDICATEDGATEWAY",
+		},
+		OPENSOURCEKAFKA: CreateFunctionTriggerRequestBodyTriggerTypeCode{
+			value: "OPENSOURCEKAFKA",
+		},
+		APIC: CreateFunctionTriggerRequestBodyTriggerTypeCode{
+			value: "APIC",
+		},
+		GAUSSMONGO: CreateFunctionTriggerRequestBodyTriggerTypeCode{
+			value: "GAUSSMONGO",
+		},
+		EVENTGRID: CreateFunctionTriggerRequestBodyTriggerTypeCode{
+			value: "EVENTGRID",
 		},
 	}
 }

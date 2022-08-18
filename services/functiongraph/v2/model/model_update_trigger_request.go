@@ -38,16 +38,22 @@ type UpdateTriggerRequestTriggerTypeCode struct {
 }
 
 type UpdateTriggerRequestTriggerTypeCodeEnum struct {
-	TIMER UpdateTriggerRequestTriggerTypeCode
-	APIG  UpdateTriggerRequestTriggerTypeCode
-	CTS   UpdateTriggerRequestTriggerTypeCode
-	DDS   UpdateTriggerRequestTriggerTypeCode
-	DMS   UpdateTriggerRequestTriggerTypeCode
-	DIS   UpdateTriggerRequestTriggerTypeCode
-	LTS   UpdateTriggerRequestTriggerTypeCode
-	OBS   UpdateTriggerRequestTriggerTypeCode
-	SMN   UpdateTriggerRequestTriggerTypeCode
-	KAFKA UpdateTriggerRequestTriggerTypeCode
+	TIMER            UpdateTriggerRequestTriggerTypeCode
+	APIG             UpdateTriggerRequestTriggerTypeCode
+	CTS              UpdateTriggerRequestTriggerTypeCode
+	DDS              UpdateTriggerRequestTriggerTypeCode
+	DMS              UpdateTriggerRequestTriggerTypeCode
+	DIS              UpdateTriggerRequestTriggerTypeCode
+	LTS              UpdateTriggerRequestTriggerTypeCode
+	OBS              UpdateTriggerRequestTriggerTypeCode
+	SMN              UpdateTriggerRequestTriggerTypeCode
+	KAFKA            UpdateTriggerRequestTriggerTypeCode
+	RABBITMQ         UpdateTriggerRequestTriggerTypeCode
+	DEDICATEDGATEWAY UpdateTriggerRequestTriggerTypeCode
+	OPENSOURCEKAFKA  UpdateTriggerRequestTriggerTypeCode
+	APIC             UpdateTriggerRequestTriggerTypeCode
+	GAUSSMONGO       UpdateTriggerRequestTriggerTypeCode
+	EVENTGRID        UpdateTriggerRequestTriggerTypeCode
 }
 
 func GetUpdateTriggerRequestTriggerTypeCodeEnum() UpdateTriggerRequestTriggerTypeCodeEnum {
@@ -81,6 +87,24 @@ func GetUpdateTriggerRequestTriggerTypeCodeEnum() UpdateTriggerRequestTriggerTyp
 		},
 		KAFKA: UpdateTriggerRequestTriggerTypeCode{
 			value: "KAFKA",
+		},
+		RABBITMQ: UpdateTriggerRequestTriggerTypeCode{
+			value: "RABBITMQ",
+		},
+		DEDICATEDGATEWAY: UpdateTriggerRequestTriggerTypeCode{
+			value: "DEDICATEDGATEWAY",
+		},
+		OPENSOURCEKAFKA: UpdateTriggerRequestTriggerTypeCode{
+			value: "OPENSOURCEKAFKA",
+		},
+		APIC: UpdateTriggerRequestTriggerTypeCode{
+			value: "APIC",
+		},
+		GAUSSMONGO: UpdateTriggerRequestTriggerTypeCode{
+			value: "GAUSSMONGO",
+		},
+		EVENTGRID: UpdateTriggerRequestTriggerTypeCode{
+			value: "EVENTGRID",
 		},
 	}
 }

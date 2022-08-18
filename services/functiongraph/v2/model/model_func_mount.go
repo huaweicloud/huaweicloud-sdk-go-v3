@@ -16,7 +16,7 @@ type FuncMount struct {
 	MountResource string `json:"mount_resource"`
 
 	// 远端挂载路径（例如192.168.0.12:/data），如果mount_type为ecs，必选。
-	MountSharePath string `json:"mount_share_path"`
+	MountSharePath *string `json:"mount_share_path,omitempty"`
 
 	// 函数访问路径，func_mounts非空时必选。
 	LocalMountPath string `json:"local_mount_path"`

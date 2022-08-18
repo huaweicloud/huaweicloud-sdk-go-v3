@@ -12,7 +12,7 @@ import (
 // Response Object
 type StartSyncWorkflowExecutionResponse struct {
 
-	// 错误码
+	// 流程实例ID
 	ExecutionId *string `json:"execution_id,omitempty"`
 
 	// 流程执行最终状态

@@ -12,6 +12,9 @@ type GeOIpItem struct {
 	// 规则id
 	Id *string `json:"id,omitempty"`
 
+	// 策略id
+	Policyid *string `json:"policyid,omitempty"`
+
 	// 地理位置控制规则名称
 	Name *string `json:"name,omitempty"`
 

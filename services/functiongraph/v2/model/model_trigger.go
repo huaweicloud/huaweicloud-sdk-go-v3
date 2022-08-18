@@ -15,10 +15,10 @@ type Trigger struct {
 	// 触发器名称
 	TriggerName string `json:"trigger_name"`
 
-	// 触发器类型
+	// 触发器类型 FLOWTIMER：定时触发器 SMN：SMN触发器 APIG：APIG触发器(共享版) APIG_DE：APIG触发器(专享版) OBS：OBS触发器
 	TriggerType TriggerTriggerType `json:"trigger_type"`
 
-	// 是否启用
+	// 是否启用触发器
 	Enabled *bool `json:"enabled,omitempty"`
 
 	TriggerConfig *ObsTriggerConfig `json:"trigger_config,omitempty"`
@@ -39,6 +39,9 @@ type TriggerTriggerType struct {
 
 type TriggerTriggerTypeEnum struct {
 	FLOWTIMER TriggerTriggerType
+	SMN       TriggerTriggerType
+	APIG      TriggerTriggerType
+	APIG_DE   TriggerTriggerType
 	OBS       TriggerTriggerType
 }
 
@@ -46,6 +49,15 @@ func GetTriggerTriggerTypeEnum() TriggerTriggerTypeEnum {
 	return TriggerTriggerTypeEnum{
 		FLOWTIMER: TriggerTriggerType{
 			value: "FLOWTIMER",
+		},
+		SMN: TriggerTriggerType{
+			value: "SMN",
+		},
+		APIG: TriggerTriggerType{
+			value: "APIG",
+		},
+		APIG_DE: TriggerTriggerType{
+			value: "APIG_DE",
 		},
 		OBS: TriggerTriggerType{
 			value: "OBS",

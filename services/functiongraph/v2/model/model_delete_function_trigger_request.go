@@ -36,16 +36,22 @@ type DeleteFunctionTriggerRequestTriggerTypeCode struct {
 }
 
 type DeleteFunctionTriggerRequestTriggerTypeCodeEnum struct {
-	TIMER DeleteFunctionTriggerRequestTriggerTypeCode
-	APIG  DeleteFunctionTriggerRequestTriggerTypeCode
-	CTS   DeleteFunctionTriggerRequestTriggerTypeCode
-	DDS   DeleteFunctionTriggerRequestTriggerTypeCode
-	DMS   DeleteFunctionTriggerRequestTriggerTypeCode
-	DIS   DeleteFunctionTriggerRequestTriggerTypeCode
-	LTS   DeleteFunctionTriggerRequestTriggerTypeCode
-	OBS   DeleteFunctionTriggerRequestTriggerTypeCode
-	SMN   DeleteFunctionTriggerRequestTriggerTypeCode
-	KAFKA DeleteFunctionTriggerRequestTriggerTypeCode
+	TIMER            DeleteFunctionTriggerRequestTriggerTypeCode
+	APIG             DeleteFunctionTriggerRequestTriggerTypeCode
+	CTS              DeleteFunctionTriggerRequestTriggerTypeCode
+	DDS              DeleteFunctionTriggerRequestTriggerTypeCode
+	DMS              DeleteFunctionTriggerRequestTriggerTypeCode
+	DIS              DeleteFunctionTriggerRequestTriggerTypeCode
+	LTS              DeleteFunctionTriggerRequestTriggerTypeCode
+	OBS              DeleteFunctionTriggerRequestTriggerTypeCode
+	SMN              DeleteFunctionTriggerRequestTriggerTypeCode
+	KAFKA            DeleteFunctionTriggerRequestTriggerTypeCode
+	RABBITMQ         DeleteFunctionTriggerRequestTriggerTypeCode
+	DEDICATEDGATEWAY DeleteFunctionTriggerRequestTriggerTypeCode
+	OPENSOURCEKAFKA  DeleteFunctionTriggerRequestTriggerTypeCode
+	APIC             DeleteFunctionTriggerRequestTriggerTypeCode
+	GAUSSMONGO       DeleteFunctionTriggerRequestTriggerTypeCode
+	EVENTGRID        DeleteFunctionTriggerRequestTriggerTypeCode
 }
 
 func GetDeleteFunctionTriggerRequestTriggerTypeCodeEnum() DeleteFunctionTriggerRequestTriggerTypeCodeEnum {
@@ -79,6 +85,24 @@ func GetDeleteFunctionTriggerRequestTriggerTypeCodeEnum() DeleteFunctionTriggerR
 		},
 		KAFKA: DeleteFunctionTriggerRequestTriggerTypeCode{
 			value: "KAFKA",
+		},
+		RABBITMQ: DeleteFunctionTriggerRequestTriggerTypeCode{
+			value: "RABBITMQ",
+		},
+		DEDICATEDGATEWAY: DeleteFunctionTriggerRequestTriggerTypeCode{
+			value: "DEDICATEDGATEWAY",
+		},
+		OPENSOURCEKAFKA: DeleteFunctionTriggerRequestTriggerTypeCode{
+			value: "OPENSOURCEKAFKA",
+		},
+		APIC: DeleteFunctionTriggerRequestTriggerTypeCode{
+			value: "APIC",
+		},
+		GAUSSMONGO: DeleteFunctionTriggerRequestTriggerTypeCode{
+			value: "GAUSSMONGO",
+		},
+		EVENTGRID: DeleteFunctionTriggerRequestTriggerTypeCode{
+			value: "EVENTGRID",
 		},
 	}
 }

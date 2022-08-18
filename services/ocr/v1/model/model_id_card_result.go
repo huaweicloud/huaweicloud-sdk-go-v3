@@ -40,6 +40,9 @@ type IdCardResult struct {
 
 	// 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
 	TextLocation *interface{} `json:"text_location,omitempty"`
+
+	// 判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
+	DetectReproduceResult *bool `json:"detect_reproduce_result,omitempty"`
 }
 
 func (o IdCardResult) String() string {

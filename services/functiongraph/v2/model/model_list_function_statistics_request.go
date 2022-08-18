@@ -3,9 +3,6 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -16,7 +13,7 @@ type ListFunctionStatisticsRequest struct {
 	FuncUrn string `json:"func_urn"`
 
 	// 获取最近多少分钟内函数执行的指标。
-	Period ListFunctionStatisticsRequestPeriod `json:"period"`
+	Period string `json:"period"`
 }
 
 func (o ListFunctionStatisticsRequest) String() string {
@@ -26,50 +23,4 @@ func (o ListFunctionStatisticsRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListFunctionStatisticsRequest", string(data)}, " ")
-}
-
-type ListFunctionStatisticsRequestPeriod struct {
-	value string
-}
-
-type ListFunctionStatisticsRequestPeriodEnum struct {
-	E_5  ListFunctionStatisticsRequestPeriod
-	E_15 ListFunctionStatisticsRequestPeriod
-	E_60 ListFunctionStatisticsRequestPeriod
-}
-
-func GetListFunctionStatisticsRequestPeriodEnum() ListFunctionStatisticsRequestPeriodEnum {
-	return ListFunctionStatisticsRequestPeriodEnum{
-		E_5: ListFunctionStatisticsRequestPeriod{
-			value: "5",
-		},
-		E_15: ListFunctionStatisticsRequestPeriod{
-			value: "15",
-		},
-		E_60: ListFunctionStatisticsRequestPeriod{
-			value: "60",
-		},
-	}
-}
-
-func (c ListFunctionStatisticsRequestPeriod) Value() string {
-	return c.value
-}
-
-func (c ListFunctionStatisticsRequestPeriod) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ListFunctionStatisticsRequestPeriod) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

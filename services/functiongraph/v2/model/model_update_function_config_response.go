@@ -120,8 +120,13 @@ type UpdateFunctionConfigResponse struct {
 	IsStatefulFunction *bool `json:"is_stateful_function,omitempty"`
 
 	// 函数配置的需要支持域名解析的内网域名。
-	DomainNames    *string `json:"domain_names,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	DomainNames *string `json:"domain_names,omitempty"`
+
+	// 是否允许在请求头中添加鉴权信息
+	EnableAuthInHeader *bool `json:"enable_auth_in_header,omitempty"`
+
+	CustomImage    *CustomImage `json:"custom_image,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o UpdateFunctionConfigResponse) String() string {

@@ -39,7 +39,7 @@ type ListSubCustomerCouponsRequest struct {
 	// 发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
 	SourceId *string `json:"source_id,omitempty"`
 
-	// 云经销商（二级经销商）ID。华为云总经销商（一级经销商）查询云经销商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
+	// 云经销商（二级经销商）ID。华为云总经销商（一级经销商）查询云经销商名下的优惠券时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己的优惠券列表。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 

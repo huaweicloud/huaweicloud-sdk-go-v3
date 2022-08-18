@@ -1,0 +1,27 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// Response Object
+type ShowBandwidthDetailResponse struct {
+
+	// 请求的唯一标识ID
+	RequestId string `json:"request_id"`
+
+	// 带宽信息
+	BandWidths     []interface{} `json:"band_widths"`
+	HttpStatusCode int           `json:"-"`
+}
+
+func (o ShowBandwidthDetailResponse) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ShowBandwidthDetailResponse struct{}"
+	}
+
+	return strings.Join([]string{"ShowBandwidthDetailResponse", string(data)}, " ")
+}

@@ -377,6 +377,18 @@ func (i *ListServerTagsInvoker) Invoke() (*model.ListServerTagsResponse, error) 
 	}
 }
 
+type ListServersByTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListServersByTagInvoker) Invoke() (*model.ListServersByTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListServersByTagResponse), nil
+	}
+}
+
 type ListServersDetailsInvoker struct {
 	*invoker.BaseInvoker
 }

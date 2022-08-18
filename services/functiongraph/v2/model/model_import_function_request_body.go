@@ -20,6 +20,9 @@ type ImportFunctionRequestBody struct {
 
 	// 函数代码。代码必须要进行base64编码
 	FileCode string `json:"file_code"`
+
+	// 应用名称，默认为default
+	Package *string `json:"package,omitempty"`
 }
 
 func (o ImportFunctionRequestBody) String() string {

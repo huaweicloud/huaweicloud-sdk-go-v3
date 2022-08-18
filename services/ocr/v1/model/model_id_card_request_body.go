@@ -23,6 +23,9 @@ type IdCardRequestBody struct {
 
 	// 识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
 	ReturnTextLocation *bool `json:"return_text_location,omitempty"`
+
+	// 返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否经过翻拍  - false：不返回身份证图像是否经过翻拍
+	DetectReproduce *bool `json:"detect_reproduce,omitempty"`
 }
 
 func (o IdCardRequestBody) String() string {

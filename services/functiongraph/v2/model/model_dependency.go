@@ -12,9 +12,6 @@ import (
 // 函数依赖包结构。
 type Dependency struct {
 
-	// 依赖包id。
-	Id string `json:"id"`
-
 	// 依赖包属主的domainId。
 	Owner string `json:"owner"`
 

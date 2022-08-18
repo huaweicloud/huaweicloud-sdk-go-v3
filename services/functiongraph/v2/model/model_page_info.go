@@ -6,16 +6,15 @@ import (
 	"strings"
 )
 
-// 分页结构体。
 type PageInfo struct {
 
-	// 返回下一页查询地址。
+	// 下一次读取位置
 	NextMarker int64 `json:"next_marker"`
 
-	// 返回前一页查询地址。
+	// 上一次读取位置
 	PreviousMarker int64 `json:"previous_marker"`
 
-	// 本页返回条目数量。
+	// 当前页总数
 	CurrentCount int64 `json:"current_count"`
 }
 
