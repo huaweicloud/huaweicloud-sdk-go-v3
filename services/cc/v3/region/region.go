@@ -6,9 +6,11 @@ import (
 )
 
 var CN_NORTH_4 = region.NewRegion("cn-north-4", "https://cc.myhuaweicloud.com")
+var CN_NORTH_1 = region.NewRegion("cn-north-1", "https://ccaas.cn-north-1.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"cn-north-4": CN_NORTH_4,
+	"cn-north-1": CN_NORTH_1,
 }
 
 var provider = region.DefaultProviderChain("CC")
