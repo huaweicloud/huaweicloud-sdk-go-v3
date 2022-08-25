@@ -20,6 +20,8 @@ type CdmCreateClusterReqCluster struct {
 
 	Datastore *Datastore `json:"datastore,omitempty"`
 
+	ExtendedProperties *ExtendedProperties `json:"extended_properties,omitempty"`
+
 	// 定时关机的时间，定时关机时系统不会等待未完成的作业执行完成
 	ScheduleOffTime *string `json:"scheduleOffTime,omitempty"`
 

@@ -20,6 +20,9 @@ type WebImageRequestBody struct {
 
 	// 结构化数据提取参数列表，目前只支持联系人信息、图像宽高，其入参值分别为\"contact_info\"，\"image_size\"，若该字段为空列表或缺失该字段，默认不提取。
 	ExtractType *[]string `json:"extract_type,omitempty"`
+
+	// 为Boolean类型，若不传该字段，默认不检测切片字体，为True时，将检测切片的字体类型，并返回最相似的5种字体名称。
+	DetectFont *bool `json:"detect_font,omitempty"`
 }
 
 func (o WebImageRequestBody) String() string {

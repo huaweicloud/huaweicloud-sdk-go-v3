@@ -67,8 +67,6 @@ type UpdateSecurityPolicyOptionCiphersEnum struct {
 	TLS_CHACHA20_POLY1305_SHA256  UpdateSecurityPolicyOptionCiphers
 	TLS_AES_128_CCM_SHA256        UpdateSecurityPolicyOptionCiphers
 	TLS_AES_128_CCM_8_SHA256      UpdateSecurityPolicyOptionCiphers
-	ECC_SM4_SM3                   UpdateSecurityPolicyOptionCiphers
-	ECDHE_SM4_SM3                 UpdateSecurityPolicyOptionCiphers
 }
 
 func GetUpdateSecurityPolicyOptionCiphersEnum() UpdateSecurityPolicyOptionCiphersEnum {
@@ -156,12 +154,6 @@ func GetUpdateSecurityPolicyOptionCiphersEnum() UpdateSecurityPolicyOptionCipher
 		},
 		TLS_AES_128_CCM_8_SHA256: UpdateSecurityPolicyOptionCiphers{
 			value: "TLS_AES_128_CCM_8_SHA256",
-		},
-		ECC_SM4_SM3: UpdateSecurityPolicyOptionCiphers{
-			value: "ECC-SM4-SM3",
-		},
-		ECDHE_SM4_SM3: UpdateSecurityPolicyOptionCiphers{
-			value: "ECDHE-SM4-SM3",
 		},
 	}
 }

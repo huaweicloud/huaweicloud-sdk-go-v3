@@ -102,7 +102,7 @@ type LoadBalancer struct {
 	// 负载均衡器绑定的global eip。只支持绑定一个global eip。
 	GlobalEips []GlobalEipInfo `json:"global_eips"`
 
-	// 下联面子网网络ID列表。可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets  响应参数中的id得到。  [  若不指定该字段，则会在当前负载均衡器所在的VPC中任意选一个子网，优选双栈网络。](tag:hws,hws_hk,ocb,tlf,ctc,hcs,sbc,g42,tm,cmcc,hk_g42,mix,hk_sbc,hws_ocb,fcs)   若指定多个下联面子网，则按顺序优先使用第一个子网来为负载均衡器下联面端口分配ip地址。   下联面子网必须属于该LB所在的VPC。
+	// 下联面子网的网络ID列表。
 	ElbVirsubnetIds []string `json:"elb_virsubnet_ids"`
 
 	// 下联面子网类型 - ipv4：ipv4 - dualstack：双栈
@@ -123,6 +123,9 @@ type LoadBalancer struct {
 
 	// LB所属AZ组
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
+
+	// WAF故障时的流量处理策略。discard:丢弃，forward: 转发到后端（默认）   使用说明：只有绑定了waf的LB实例，该字段才会生效。
+	WafFailureAction *string `json:"waf_failure_action,omitempty"`
 }
 
 func (o LoadBalancer) String() string {

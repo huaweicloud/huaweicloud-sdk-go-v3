@@ -92,11 +92,17 @@ type Job struct {
 	// 执行_更新_日期。
 	ExecuteUpdateDate *int64 `json:"execute_update_date,omitempty"`
 
-	// 写入行数
+	// 写入数据行数
 	WriteRows *int32 `json:"write_rows,omitempty"`
 
+	// 写入行数
+	RowsWritten *int32 `json:"rows_written,omitempty"`
+
+	// 读取的行数
+	RowsRead *int64 `json:"rows_read,omitempty"`
+
 	// 写入文件数
-	FilesWritte *int32 `json:"files_writte,omitempty"`
+	FilesWritten *int32 `json:"files_written,omitempty"`
 
 	// 是否增量
 	IsIncrementing *bool `json:"is_incrementing,omitempty"`

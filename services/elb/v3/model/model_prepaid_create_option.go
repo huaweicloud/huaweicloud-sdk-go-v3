@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建负载均衡器的包周期信息，若传入该结构体，则创建包周期的LB
+// 创建负载均衡器的包周期信息，若传入该结构体，则创建包周期的LB。  [不支持该字段，请勿使用](tag:dt,dt_test,hcso_dt)
 type PrepaidCreateOption struct {
 
 	// 订购周期类型，当前支持包月和包年： month：月； year：年；

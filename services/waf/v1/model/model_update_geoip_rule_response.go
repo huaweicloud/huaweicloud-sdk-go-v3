@@ -15,6 +15,9 @@ type UpdateGeoipRuleResponse struct {
 	// 地理位置控制规则名称
 	Name *string `json:"name,omitempty"`
 
+	// 描述
+	Description *string `json:"description,omitempty"`
+
 	// 策略id
 	Policyid *string `json:"policyid,omitempty"`
 

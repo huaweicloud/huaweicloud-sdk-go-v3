@@ -282,28 +282,6 @@ func (c *ElbClient) CreateLogtankInvoker(request *model.CreateLogtankRequest) *C
 	return &CreateLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateMasterSlavePool 创建主备后端服务器组
-//
-// 创建主备后端服务器组。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *ElbClient) CreateMasterSlavePool(request *model.CreateMasterSlavePoolRequest) (*model.CreateMasterSlavePoolResponse, error) {
-	requestDef := GenReqDefForCreateMasterSlavePool()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateMasterSlavePoolResponse), nil
-	}
-}
-
-// CreateMasterSlavePoolInvoker 创建主备后端服务器组
-func (c *ElbClient) CreateMasterSlavePoolInvoker(request *model.CreateMasterSlavePoolRequest) *CreateMasterSlavePoolInvoker {
-	requestDef := GenReqDefForCreateMasterSlavePool()
-	return &CreateMasterSlavePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateMember 创建后端服务器
 //
 // 创建后端服务器。
@@ -522,28 +500,6 @@ func (c *ElbClient) DeleteLogtank(request *model.DeleteLogtankRequest) (*model.D
 func (c *ElbClient) DeleteLogtankInvoker(request *model.DeleteLogtankRequest) *DeleteLogtankInvoker {
 	requestDef := GenReqDefForDeleteLogtank()
 	return &DeleteLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteMasterSlavePool 删除主备后端服务器组
-//
-// 删除主备后端服务器组。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *ElbClient) DeleteMasterSlavePool(request *model.DeleteMasterSlavePoolRequest) (*model.DeleteMasterSlavePoolResponse, error) {
-	requestDef := GenReqDefForDeleteMasterSlavePool()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteMasterSlavePoolResponse), nil
-	}
-}
-
-// DeleteMasterSlavePoolInvoker 删除主备后端服务器组
-func (c *ElbClient) DeleteMasterSlavePoolInvoker(request *model.DeleteMasterSlavePoolRequest) *DeleteMasterSlavePoolInvoker {
-	requestDef := GenReqDefForDeleteMasterSlavePool()
-	return &DeleteMasterSlavePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteMember 删除后端服务器
@@ -836,28 +792,6 @@ func (c *ElbClient) ListLogtanks(request *model.ListLogtanksRequest) (*model.Lis
 func (c *ElbClient) ListLogtanksInvoker(request *model.ListLogtanksRequest) *ListLogtanksInvoker {
 	requestDef := GenReqDefForListLogtanks()
 	return &ListLogtanksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListMasterSlavePools 查询主备后端服务器组列表
-//
-// 主备后端服务器组列表。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *ElbClient) ListMasterSlavePools(request *model.ListMasterSlavePoolsRequest) (*model.ListMasterSlavePoolsResponse, error) {
-	requestDef := GenReqDefForListMasterSlavePools()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListMasterSlavePoolsResponse), nil
-	}
-}
-
-// ListMasterSlavePoolsInvoker 查询主备后端服务器组列表
-func (c *ElbClient) ListMasterSlavePoolsInvoker(request *model.ListMasterSlavePoolsRequest) *ListMasterSlavePoolsInvoker {
-	requestDef := GenReqDefForListMasterSlavePools()
-	return &ListMasterSlavePoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListMembers 查询后端服务器列表
@@ -1170,28 +1104,6 @@ func (c *ElbClient) ShowLogtank(request *model.ShowLogtankRequest) (*model.ShowL
 func (c *ElbClient) ShowLogtankInvoker(request *model.ShowLogtankRequest) *ShowLogtankInvoker {
 	requestDef := GenReqDefForShowLogtank()
 	return &ShowLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowMasterSlavePool 查询主备后端服务器组详情
-//
-// 主备后端服务器组详情。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *ElbClient) ShowMasterSlavePool(request *model.ShowMasterSlavePoolRequest) (*model.ShowMasterSlavePoolResponse, error) {
-	requestDef := GenReqDefForShowMasterSlavePool()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowMasterSlavePoolResponse), nil
-	}
-}
-
-// ShowMasterSlavePoolInvoker 查询主备后端服务器组详情
-func (c *ElbClient) ShowMasterSlavePoolInvoker(request *model.ShowMasterSlavePoolRequest) *ShowMasterSlavePoolInvoker {
-	requestDef := GenReqDefForShowMasterSlavePool()
-	return &ShowMasterSlavePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMember 查询后端服务器详情

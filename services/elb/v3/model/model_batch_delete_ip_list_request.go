@@ -12,7 +12,7 @@ type BatchDeleteIpListRequest struct {
 	// IP地址组ID。
 	IpgroupId string `json:"ipgroup_id"`
 
-	Body *BatchDeleteIpGroupIpListRequestBody `json:"body,omitempty"`
+	Body *BatchDeleteIpListRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchDeleteIpListRequest) String() string {

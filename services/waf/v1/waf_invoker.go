@@ -425,6 +425,18 @@ func (i *ListQpsTimelineInvoker) Invoke() (*model.ListQpsTimelineResponse, error
 	}
 }
 
+type ListRequestTimelineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRequestTimelineInvoker) Invoke() (*model.ListRequestTimelineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRequestTimelineResponse), nil
+	}
+}
+
 type ListStatisticsInvoker struct {
 	*invoker.BaseInvoker
 }

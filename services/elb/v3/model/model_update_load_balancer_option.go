@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -47,6 +50,9 @@ type UpdateLoadBalancerOption struct {
 	PrepaidOptions *PrepaidUpdateOption `json:"prepaid_options,omitempty"`
 
 	Autoscaling *UpdateLoadbalancerAutoscalingOption `json:"autoscaling,omitempty"`
+
+	// WAF故障时的流量处理策略。discard:丢弃，forward: 转发到后端（默认）   使用说明：只有绑定了waf的LB实例，该字段才会生效。
+	WafFailureAction *UpdateLoadBalancerOptionWafFailureAction `json:"waf_failure_action,omitempty"`
 }
 
 func (o UpdateLoadBalancerOption) String() string {
@@ -56,4 +62,46 @@ func (o UpdateLoadBalancerOption) String() string {
 	}
 
 	return strings.Join([]string{"UpdateLoadBalancerOption", string(data)}, " ")
+}
+
+type UpdateLoadBalancerOptionWafFailureAction struct {
+	value string
+}
+
+type UpdateLoadBalancerOptionWafFailureActionEnum struct {
+	DISCARD UpdateLoadBalancerOptionWafFailureAction
+	FORWARD UpdateLoadBalancerOptionWafFailureAction
+}
+
+func GetUpdateLoadBalancerOptionWafFailureActionEnum() UpdateLoadBalancerOptionWafFailureActionEnum {
+	return UpdateLoadBalancerOptionWafFailureActionEnum{
+		DISCARD: UpdateLoadBalancerOptionWafFailureAction{
+			value: "discard",
+		},
+		FORWARD: UpdateLoadBalancerOptionWafFailureAction{
+			value: "forward",
+		},
+	}
+}
+
+func (c UpdateLoadBalancerOptionWafFailureAction) Value() string {
+	return c.value
+}
+
+func (c UpdateLoadBalancerOptionWafFailureAction) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateLoadBalancerOptionWafFailureAction) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

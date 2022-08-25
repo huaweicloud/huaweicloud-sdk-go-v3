@@ -1241,6 +1241,18 @@ func (i *SearchQueryScaleFlavorsInvoker) Invoke() (*model.SearchQueryScaleFlavor
 	}
 }
 
+type SetDatabaseUserPrivilegeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetDatabaseUserPrivilegeInvoker) Invoke() (*model.SetDatabaseUserPrivilegeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetDatabaseUserPrivilegeResponse), nil
+	}
+}
+
 type SetPostgresqlDbUserPwdInvoker struct {
 	*invoker.BaseInvoker
 }

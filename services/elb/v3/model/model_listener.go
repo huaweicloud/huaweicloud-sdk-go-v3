@@ -56,6 +56,9 @@ type Listener struct {
 	// 监听器使用的SNI证书（带域名的服务器证书）ID列表。  使用说明： - 列表对应的所有SNI证书的域名不允许存在重复。 - 列表对应的所有SNI证书的域名总数不超过30。
 	SniContainerRefs []string `json:"sni_container_refs"`
 
+	// 监听器使用的SNI证书泛域名匹配方式。 longest_suffix表示最长尾缀匹配，wildcard表示标准域名分级匹配。 默认为wildcard。
+	SniMatchAlgo string `json:"sni_match_algo"`
+
 	// 标签列表。
 	Tags []Tag `json:"tags"`
 

@@ -61,7 +61,7 @@ type Pool struct {
 	// 后端云服务器组关联的虚拟私有云的ID。
 	VpcId string `json:"vpc_id"`
 
-	// 后端服务器组的类型。   取值：  - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。  - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。  - 空字符串：允许任意类型的后端
+	// 后端服务器组的类型。   取值：  - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。  - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。  - 空字符串（\"\"）：允许任意类型的后端
 	Type string `json:"type"`
 }
 

@@ -44,6 +44,12 @@ type CertificateInfo struct {
 
 	// 证书所在项目ID。
 	ProjectId string `json:"project_id"`
+
+	// HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
+	EncCertificate *string `json:"enc_certificate,omitempty"`
+
+	// HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
+	EncPrivateKey *string `json:"enc_private_key,omitempty"`
 }
 
 func (o CertificateInfo) String() string {

@@ -38,7 +38,7 @@ type InstanceConfig struct {
 	Metadata *VmMetaData `json:"metadata,omitempty"`
 
 	// 安全组信息。使用vpc_id通过查询VPC服务安全组列表接口获取，详见《虚拟私有云API参考》的“查询安全组列表”。当伸缩配置和伸缩组同时指定安全组时，将以伸缩配置中的安全组为准；当伸缩配置和伸缩组都没有指定安全组时，将使用默认安全组。为了使用灵活性更高，推荐在伸缩配置中指定安全组。
-	SecurityGroups []SecurityGroups `json:"security_groups"`
+	SecurityGroups *[]SecurityGroups `json:"security_groups,omitempty"`
 
 	// 云服务器组ID。
 	ServerGroupId *string `json:"server_group_id,omitempty"`

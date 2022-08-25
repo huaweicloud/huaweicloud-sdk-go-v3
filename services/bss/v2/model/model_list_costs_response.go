@@ -9,7 +9,7 @@ import (
 // Response Object
 type ListCostsResponse struct {
 
-	// 货币。 USD：美元
+	// 货币。 CNY：人民币
 	Currency *string `json:"currency,omitempty"`
 
 	// 总条数。

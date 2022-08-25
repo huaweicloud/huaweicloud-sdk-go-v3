@@ -70,8 +70,6 @@ type CreateSecurityPolicyOptionCiphersEnum struct {
 	TLS_CHACHA20_POLY1305_SHA256  CreateSecurityPolicyOptionCiphers
 	TLS_AES_128_CCM_SHA256        CreateSecurityPolicyOptionCiphers
 	TLS_AES_128_CCM_8_SHA256      CreateSecurityPolicyOptionCiphers
-	ECC_SM4_SM3                   CreateSecurityPolicyOptionCiphers
-	ECDHE_SM4_SM3                 CreateSecurityPolicyOptionCiphers
 }
 
 func GetCreateSecurityPolicyOptionCiphersEnum() CreateSecurityPolicyOptionCiphersEnum {
@@ -159,12 +157,6 @@ func GetCreateSecurityPolicyOptionCiphersEnum() CreateSecurityPolicyOptionCipher
 		},
 		TLS_AES_128_CCM_8_SHA256: CreateSecurityPolicyOptionCiphers{
 			value: "TLS_AES_128_CCM_8_SHA256",
-		},
-		ECC_SM4_SM3: CreateSecurityPolicyOptionCiphers{
-			value: "ECC-SM4-SM3",
-		},
-		ECDHE_SM4_SM3: CreateSecurityPolicyOptionCiphers{
-			value: "ECDHE-SM4-SM3",
 		},
 	}
 }

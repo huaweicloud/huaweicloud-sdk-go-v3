@@ -2294,6 +2294,28 @@ func (c *RdsClient) SearchQueryScaleFlavorsInvoker(request *model.SearchQuerySca
 	return &SearchQueryScaleFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetDatabaseUserPrivilege 设置数据库用户权限
+//
+// 设置数据库用户权限：只读或可读写。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RdsClient) SetDatabaseUserPrivilege(request *model.SetDatabaseUserPrivilegeRequest) (*model.SetDatabaseUserPrivilegeResponse, error) {
+	requestDef := GenReqDefForSetDatabaseUserPrivilege()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetDatabaseUserPrivilegeResponse), nil
+	}
+}
+
+// SetDatabaseUserPrivilegeInvoker 设置数据库用户权限
+func (c *RdsClient) SetDatabaseUserPrivilegeInvoker(request *model.SetDatabaseUserPrivilegeRequest) *SetDatabaseUserPrivilegeInvoker {
+	requestDef := GenReqDefForSetDatabaseUserPrivilege()
+	return &SetDatabaseUserPrivilegeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetPostgresqlDbUserPwd 重置数据库帐号密码
 //
 // 重置指定数据库帐号的密码。

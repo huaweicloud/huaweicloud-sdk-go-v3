@@ -53,6 +53,9 @@ type ListMembersRequest struct {
 
 	// 后端云服务器的类型。取值： - ip：跨VPC的member。 - instance：关联到ECS的member。  支持多值查询，查询条件格式：*member_type=xxx&member_type=xxx*。
 	MemberType *[]string `json:"member_type,omitempty"`
+
+	// member关联的ECS实例ID，空表示跨VPC场景的member。  支持多值查询，查询条件格式：*instance_id=xxx&instance_id=xxx*。
+	InstanceId *[]string `json:"instance_id,omitempty"`
 }
 
 func (o ListMembersRequest) String() string {

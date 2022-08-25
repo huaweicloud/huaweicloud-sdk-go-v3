@@ -50,6 +50,12 @@ type WebImageWordsBlockList struct {
 
 	// 传入contact_info时的返回，详细地址（不含省市区）。
 	DetailAddress *string `json:"detail_address,omitempty"`
+
+	// 文字块所属字体类型，列表形式，表示与文字块的文字最接近的字体类型。
+	FontList *[]string `json:"font_list,omitempty"`
+
+	// 文字块所属字体类型的概率，列表形式，与font_list一一对应，表示文字块的文字属于某种字体类型的概率。
+	FontScores *[]float32 `json:"font_scores,omitempty"`
 }
 
 func (o WebImageWordsBlockList) String() string {

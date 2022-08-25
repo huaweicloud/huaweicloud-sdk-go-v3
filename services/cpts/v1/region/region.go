@@ -15,6 +15,8 @@ var AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1", "https://cpts.ap-southea
 var AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2", "https://cpts.ap-southeast-2.myhuaweicloud.com")
 var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://cpts.ap-southeast-3.myhuaweicloud.com")
 var AF_SOUTH_1 = region.NewRegion("af-south-1", "https://cpts.af-south-1.myhuaweicloud.com")
+var LA_SOUTH_2 = region.NewRegion("la-south-2", "https://cpts.la-south-2.myhuaweicloud.com")
+var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://cpts.sa-brazil-1.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"cn-north-1":     CN_NORTH_1,
@@ -27,6 +29,8 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-2": AP_SOUTHEAST_2,
 	"ap-southeast-3": AP_SOUTHEAST_3,
 	"af-south-1":     AF_SOUTH_1,
+	"la-south-2":     LA_SOUTH_2,
+	"sa-brazil-1":    SA_BRAZIL_1,
 }
 
 var provider = region.DefaultProviderChain("CPTS")
