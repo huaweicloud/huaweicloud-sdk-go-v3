@@ -18,6 +18,9 @@ type PostPaidServer struct {
 	// 待创建云服务器所在的可用分区，需要指定可用分区（AZ）的名称。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
+	// 是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
+	BatchCreateInMultiAz *bool `json:"batch_create_in_multi_az,omitempty"`
+
 	// 创建云服务器数量。  约束：  - 不传该字段时默认取值为1。 - 租户的配额足够时，最大值为500。
 	Count *int32 `json:"count,omitempty"`
 

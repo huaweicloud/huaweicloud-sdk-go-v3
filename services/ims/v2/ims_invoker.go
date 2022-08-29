@@ -269,6 +269,30 @@ func (i *ShowImageQuotaInvoker) Invoke() (*model.ShowImageQuotaResponse, error) 
 	}
 }
 
+type ShowJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobResponse), nil
+	}
+}
+
+type ShowJobProgressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobProgressInvoker) Invoke() (*model.ShowJobProgressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobProgressResponse), nil
+	}
+}
+
 type UpdateImageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -302,18 +326,6 @@ func (i *ShowVersionInvoker) Invoke() (*model.ShowVersionResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowVersionResponse), nil
-	}
-}
-
-type ShowJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowJobResponse), nil
 	}
 }
 

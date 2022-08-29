@@ -2024,6 +2024,28 @@ func (c *RdsClient) SetDbUserPwdInvoker(request *model.SetDbUserPwdRequest) *Set
 	return &SetDbUserPwdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetReadOnlySwitch 设置数据库用户只读参数
+//
+// 根据业务需求，设置数据库用户只读
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RdsClient) SetReadOnlySwitch(request *model.SetReadOnlySwitchRequest) (*model.SetReadOnlySwitchResponse, error) {
+	requestDef := GenReqDefForSetReadOnlySwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetReadOnlySwitchResponse), nil
+	}
+}
+
+// SetReadOnlySwitchInvoker 设置数据库用户只读参数
+func (c *RdsClient) SetReadOnlySwitchInvoker(request *model.SetReadOnlySwitchRequest) *SetReadOnlySwitchInvoker {
+	requestDef := GenReqDefForSetReadOnlySwitch()
+	return &SetReadOnlySwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateDatabase 修改指定实例的数据库备注
 //
 // 修改指定实例中的数据库备注。
